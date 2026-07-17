@@ -1,0 +1,43 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\agents_test\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (63 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\agents_test\output\AmbspergTraun1991\AmbspergTraun1991.csv  (63 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 63
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                63     63  1.000
+  measurementMethod             0     16  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic         63     63  1.000
+  measurementRemarks            0      0    n/a
+  sex                          63     63  1.000
+  lifeStage                    63     63  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  feeding group                                    16    16   
+  microhabitat found                               30    30   
+  nesting group                                    17    17   
