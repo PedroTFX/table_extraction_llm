@@ -1,0 +1,22 @@
+{
+  "TDF fragment pairs": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains sample identifiers or comparison labels, not a measurement, taxon, or location."
+  },
+  "Pseudo-F": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The values represent the calculated F-statistic from a statistical test (a numeric result)."
+  },
+  "df(residual)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides statistical parameters (degrees of freedom), which are measurement values."
+  },
+  "p": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The values represent the p-value from a statistical test, serving as a numeric result."
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "\\ufeffCity": {
+    "field": "verbatimLocality",
+    "value_column": false,
+    "reasoning": "The column contains the name of a city where sampling occurred."
+  },
+  "Location": {
+    "field": "verbatimLocality",
+    "value_column": false,
+    "reasoning": "This represents a specific named site or location within the study area.",
+    "category": null,
+    "reasoning_relevance": "Not present in text. The paper specifies the city names directly."
+  },
+  "Management": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the land-use/habitat type where the organism was found (e.g., urban farm).",
+    "category": null,
+    "reasoning_relevance": "Not mentioned in the provided text regarding data collection or analysis."
+  },
+  "Date": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is temporal metadata about the observation event.",
+    "category": null,
+    "reasoning_relevance": "The study specifies sampling periods (May–October 2016), not individual dates."
+  },
+  "Month": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is temporal metadata about the observation event.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "Used as a proxy for overall climate and interacting fixed effects in the linear model.",
+    "value_type": "categorical"
+  },
+  "Day": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is temporal metadata about the observation event.",
+    "category": null,
+    "reasoning_relevance": "Not mentioned in text; sampling was done every two weeks from April to October 2016."
+  },
+  "Year": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is temporal metadata about the observation event.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "Used for climate data extraction (2015–2016) and study period (2016).",
+    "value_type": "numeric"
+  },
+  "Intertegular.d": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures a specific physical trait of the organism (intertegular distance).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measured as the space between wing joints, used as a proxy for overall body size.",
+    "value_type": "numeric",
+    "canonicalType": "Intertegular.d"
+  },
+  "Head.w": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures a specific physical trait of the organism (head width).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measured extensively and used solely as a proxy for H. ligatus body size.",
+    "value_type": "numeric",
+    "canonicalType": "Head.w"
+  },
+  "I.D.": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is an individual identifier for the specimen.",
+    "category": null,
+    "reasoning_relevance": "Not present in text; 'Intertegular distance' is the specific measurement name."
+  },
+  "Neighborhood": {
+    "field": "verbatimLocality",
+    "value_column": false,
+    "reasoning": "The column specifies a geographic location (neighborhood) where sampling occurred.",
+    "category": null,
+    "reasoning_relevance": "The study focuses on city-level comparisons rather than neighborhood specifics."
+  },
+  "Garden.area": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is an environmental/site variable describing the garden size, not an insect trait or locality.",
+    "category": null,
+    "reasoning_relevance": "Not mentioned in text; gardens were described as having 'relatively similar size'."
+  },
+  "Med.Income.scaled": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a socio-economic site variable (median income).",
+    "category": null,
+    "reasoning_relevance": "No mention of median income or scaled economic data in the provided text."
+  },
+  "City.med.income": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a socio-economic site variable (city median income).",
+    "category": null,
+    "reasoning_relevance": "No mention of city-level median income in the provided text."
+  },
+  "Percent.income": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a demographic/site variable.",
+    "category": null,
+    "reasoning_relevance": "Not mentioned in the provided text regarding urban environmental factors."
+  },
+  "popdens": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a population density site variable.",
+    "category": null,
+    "reasoning_relevance": "No mention of population density data used or collected in this study."
+  },
+  "DDG_15": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is an environmental/climatic measurement (Growing Degree Days).",
+    "category": null,
+    "reasoning_relevance": "The text mentions CGDD (cumulative growing degree days) but not DDG_15 specifically."
+  },
+  "DDG_16": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is an environmental/climatic measurement.",
+    "category": null,
+    "reasoning_relevance": "The text mentions CGDD for 2015–2016, but does not specify a column named DDG_16."
+  },
+  "CV_15": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a statistical variable (Coefficient of Variation).",
+    "category": null,
+    "reasoning_relevance": "No mention of coefficient of variation (CV) data in the provided text."
+  },
+  "CV_16": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a statistical variable.",
+    "category": null,
+    "reasoning_relevance": "No mention of coefficient of variation (CV) data in the provided text."
+  },
+  "scaled.garden": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is an environmental/site variable (scaled garden area).",
+    "category": null,
+    "reasoning_relevance": "Not mentioned in text; garden characteristics were described qualitatively."
+  },
+  "income": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a categorical socio-economic site variable.",
+    "category": null,
+    "reasoning_relevance": "No mention of income data used or collected in the study."
+  },
+  "PGDD": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is an environmental/climatic measurement (Growing Degree Days).",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The text discusses Growing Degree Days (CGDD) as a climatic factor influencing body size.",
+    "value_type": "numeric"
+  },
+  "15Temp": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is an environmental/climatic measurement.",
+    "category": null,
+    "reasoning_relevance": "No mention of specific temperature metrics labeled '15Temp' in the provided text."
+  },
+  "﻿City": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The study compares body size variation across three distinct urban cities: Chicago, Detroit, and Saint Louis.",
+    "value_type": "categorical"
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Halictus ligatus",
+    "reasoning": "The study quantifies body size variation in Halictus ligatus across three different urban cities.",
+    "decided_by": "llm",
+    "candidates": [
+      {
+        "name": "Halictus ligatus",
+        "mentions": 13,
+        "abbrev_mentions": 26,
+        "score": 146
+      },
+      {
+        "name": "Halicus ligatus",
+        "mentions": 1,
+        "abbrev_mentions": 26,
+        "score": 134
+      },
+      {
+        "name": "Chicago and",
+        "mentions": 8,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Detroit and",
+        "mentions": 7,
+        "abbrev_mentions": 0,
+        "score": 7
+      }
+    ]
+  }
+}

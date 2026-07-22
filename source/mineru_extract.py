@@ -115,8 +115,32 @@ def ensure_markdown(path, **kw):
 # Spreadsheet / CSV -> HTML <table> (the shape text_manager.get_tables expects)
 # ---------------------------------------------------------------------------
 
+def _trim_trailing_empty(rows):
+    """Drop wholly-empty trailing rows and trailing columns.
+
+    openpyxl's iter_rows returns the sheet's used-range, which usually extends
+    below and to the right of the real data (blank cells Excel still tracks).
+    Emitting a <tr>/<td> for each bloats the embedded table for no content, so
+    strip trailing blanks. Interior blanks are left alone (they may separate
+    sub-tables); only the trailing padding is removed."""
+    def empty(c):
+        return c is None or str(c).strip() == ""
+
+    grid = [list(r) for r in rows if r is not None]
+    while grid and all(empty(c) for c in grid[-1]):
+        grid.pop()
+    if not grid:
+        return []
+    last_col = -1
+    for r in grid:
+        for i, c in enumerate(r):
+            if not empty(c):
+                last_col = max(last_col, i)
+    return [r[:last_col + 1] for r in grid]
+
+
 def _rows_to_html_table(rows):
-    rows = [list(r) for r in rows if r is not None]
+    rows = _trim_trailing_empty(rows)
     if not rows:
         return ""
     width = max(len(r) for r in rows)
@@ -321,8 +345,7 @@ if __name__ == "__main__":
     import sys
 
     # Default base; override by passing a folder path as the first non-flag arg.
-    DEFAULT_BASE = ("C:/Users/Pedro Trindade/Documents/github"
-                    "/agents_test/data/un_processed_papers")
+    DEFAULT_BASE = ("../data/un_processed_papers")
 
     args = sys.argv[1:]
     do_clean = "--clean" in args        # wipe generated markdown first, then rebuild

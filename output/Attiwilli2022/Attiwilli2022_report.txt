@@ -1,0 +1,63 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Attiwilli2022\Attiwilli2022.xlsx  (30 rows)
+PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (36 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body mass' -> ' Body mass '
+  'Proboscis length' -> 'Proboscis length '
+  'Wing length' -> 'Wing length '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 30
+  spurious, in scope  : 36   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 30 MISSED ROWS MISSED
+  species not in prediction                  30
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
+     gt 'Hesperiidae '                      ~1.00~  pred 'Hesperiidae(n=45)'   x6
+     gt 'Lycaenidae'                        ~1.00~  pred 'Lycaenidae(n=50)'   x6
+     gt 'Nymphalidae '                      ~1.00~  pred 'Nymphalidae(n=100)'   x6
+     gt 'Papilionidae'                      ~1.00~  pred 'Papilionidae(n=26)'   x6
+     gt 'Pieridae'                          ~1.00~  pred 'Pieridae(n=30)'   x6
+  -> 5 species mismatches explain 30 of 30 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Attiwilli2022_misses.csv, Attiwilli2022_misses_summary.json (30 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body mass                                        10    12   Δ+2 (split?)
+  proboscis length                                 10    12   Δ+2 (split?)
+  wing length                                      10    12   Δ+2 (split?)

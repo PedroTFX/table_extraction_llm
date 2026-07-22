@@ -2,68 +2,68 @@
   "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column lists the specific insect taxa (species) being studied.",
+    "reasoning": "Contains the full scientific name (taxon) of the insect being studied.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The study records and identifies 16 termite species, classifying the organisms."
+    "reasoning_relevance": "The text records specific species names and classifications, which are discrete biological traits."
   },
   "Direct search (n = 80)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures abundance/count derived from a direct search method. Statistic inferred as mean.",
+    "reasoning": "Measures a quantitative attribute (count/rate) derived from a specific sampling method.",
     "category": null,
-    "reasoning_relevance": "This column represents a sample size or count of observations, which is excluded."
+    "reasoning_relevance": "This column likely contains sample sizes or counts of sampling effort, not biological data."
   },
   "Baits (n = 16 )": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures abundance/count found using bait traps. Statistic inferred as mean.",
+    "reasoning": "Measures a quantitative attribute (count/rate) observed under an experimental condition.",
     "category": null,
-    "reasoning_relevance": "This column represents a sample size or count of observations, which is excluded."
+    "reasoning_relevance": "The inclusion of 'n=' indicates this is a count of samples/treatments rather than biological data."
   },
   "Total (n = 96)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the total observed count or abundance of the organism. Statistic inferred as mean.",
+    "reasoning": "Represents the total measured count or rate for the organism across all methods.",
     "category": null,
-    "reasoning_relevance": "This column represents the total number of samples collected, an experimental parameter."
+    "reasoning_relevance": "This column represents the total sample size (n=), which is explicitly excluded from valid categories."
   },
   "Feeding group": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a biological trait (feeding classification) of the organism.",
+    "reasoning": "Describes a specific biological characteristic (feeding type) of the insect taxon.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Termites were classified into feeding groups like soil feeders or wood/soil interface feeders.",
+    "reasoning_relevance": "The text classifies termites into discrete feeding groups like soil, wood, and polyphagous feeders.",
     "value_type": "categorical",
     "canonicalType": "Feeding group",
     "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The study assesses termite diversity, abundance, feeding groups, and nesting habits by observing them in their natural habitat (Charles Darwin National Park) using direct search and bait sampling protocols on living or recently active individuals.",
-    "measurementMethod": "Direct search and bait sampling protocol",
-    "measurementMethod_reasoning": "The study employed two primary methods: 1) Direct searches involved randomly selecting four 50x50 m sites and searching various microhabitats (mounds, dead wood, soil) for one hour per site. 2) Bait sampling utilized a composite protocol with soaked toilet paper rolls and stakes placed along parallel transects at specific intervals, with inspections conducted at 3, 6, and 10 weeks."
+    "basisOfRecord_reasoning": "The data on feeding groups are derived from field observations of termite behavior and habitat preference, specifically through direct searches and bait sampling (in situ observations). Feeding habits are behavioral/ecological traits.",
+    "measurementMethod": "Classification based on in situ observations and established literature",
+    "measurementMethod_reasoning": "The feeding groups were assigned by classifying the species based on their observed feeding behavior during direct searches or bait sampling, referencing existing knowledge of Australian termite ecology (e.g., soil feeders, wood/soil interface feeders, grass harvesters)."
   },
   "Nesting group": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a biological trait (nest type/classification) of the organism.",
+    "reasoning": "Describes a specific ecological characteristic (nest type) of the insect taxon.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The study recorded nesting habits such as epigeal, hypogeal, and arboreal nests.",
+    "reasoning_relevance": "Termites are classified by their nesting habits: hypogeal, epigeal, wood, or arboreal.",
     "value_type": "categorical",
     "canonicalType": "Nesting group",
     "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The study focuses on documenting termite community structure, diversity, nesting habits, and feeding groups based on direct searches and bait sampling protocols in the field. These are ecological observations of live organisms in their natural microhabitats (mounds, dead wood, soil), even though some specimens were collected for identification.",
-    "measurementMethod": "Direct search protocol involving standardized searching of four 50x50 m sites across various microhabitats (epigeal/intermediate mounds, foraging trails, standing and lying dead wood, carton sheeting, soil beneath rotten wood), combined with a composite bait sampling protocol using soaked toilet paper rolls and stakes placed along parallel transect lines at two random sites. Inspections were conducted at 3, 6, and 10 weeks.",
-    "measurementMethod_reasoning": "The text explicitly details the methodology used to collect data on termite abundance, nesting habits, and feeding groups, including site selection (4 x 50x50 m for direct search; 2 sites for bait), specific microhabitats searched, and standardized sampling techniques (direct search duration/person-hours and composite bait types/timing)."
+    "basisOfRecord_reasoning": "The study focuses on documenting termite assemblages, species diversity, frequency of occurrence, and functional groups (feeding/nesting habits). These are ecological and behavioral traits derived from field surveys (direct search and bait sampling), which constitute a human observation of the organism's state in its environment. While specimens were collected for identification, the primary data points—occurrence, nesting habit, and feeding group assignment—are based on observing live activity or physical evidence of behavior.",
+    "measurementMethod": "Termite sampling was conducted using two protocols: Direct searches and Bait sampling. Direct searches involved randomly selecting four 50m x 50m sites and searching various microhabitats (e.g., epigeal/intermediate mounds, standing/lying dead wood, soil beneath rotten wood) for one hour per site. Bait sampling utilized composite baits (soaked toilet paper rolls and stakes) placed along transect lines at 5m spacing, with inspections conducted over three time points (3, 6, and 10 weeks).",
+    "measurementMethod_reasoning": null
   },
   "Microhabitat found": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Identifies the specific ecological location or habitat where the organism was observed.",
+    "reasoning": "Describes the specific environmental location where the organism was observed.",
     "category": "Behavioral observation",
-    "reasoning_relevance": "Termites were encountered in specific locations like mounds or lying dead wood.",
+    "reasoning_relevance": "The text records where termites were observed (e.g., mounds, dead wood, soil).",
     "value_type": "categorical",
     "canonicalType": "Microhabitat found",
     "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The study involved actively searching for termites in their natural environment across various microhabitats (mounds, dead wood, soil surface, arboreal nests) and using bait sampling to observe termite activity. This constitutes observing the live organism's presence and location in situ.",
-    "measurementMethod": "Systematic direct search protocol conducted at 50x50m sites, including examination of epigeal mounds, standing and lying dead wood, carton sheeting, soil beneath rotten wood, foraging trails, arboreal nests, and standardized bait placement (paper rolls/stakes).",
-    "measurementMethod_reasoning": "The text details a specific methodology: random selection of 4 x 50x50m sites followed by systematic searching for termites in defined microhabitats. This includes both direct visual inspection of various nesting/feeding locations and the use of standardized bait sampling protocols (paper rolls and stakes) to detect activity."
+    "basisOfRecord_reasoning": "The study records where termites were found (e.g., in epigeal mounds, lying dead wood, soil beneath rotten wood) and their nesting habits within specific microhabitats. This constitutes a natural history/ecological observation of live organisms in situ.",
+    "measurementMethod": "Direct search protocol across defined microhabitats (mounds, standing/lying dead wood, carton sheeting, soil beneath rotten wood) and standardized bait sampling using paper rolls and stakes placed along transects.",
+    "measurementMethod_reasoning": "The text explicitly details the methodology: 'direct search and bait sampling protocol was used to sample mounds, standing and lying dead wood litter, soil and arboreal nest microhabitats.' The direct searches were conducted at randomly selected 50x50 m sites using trained personnel."
   }
 }

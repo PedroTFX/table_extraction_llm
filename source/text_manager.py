@@ -1,8 +1,128 @@
+import html as _html
 import re
 import openpyxl
 
 
+# --- HTML markup normalisation -------------------------------------------------
+# MinerU emits a grab-bag of inline/block HTML inside and around tables. Only the
+# table-structural tags (<td>/<th>/<tr>/<table>) are handled specially elsewhere;
+# everything else is normalised here so no tag name or entity leaks into the text
+# a later non-alphanumeric clean would mangle (e.g. '<sup></sup>' -> 'sup sup').
+_COMMENT_RE = re.compile(r'<!--.*?-->', re.DOTALL)          # <!-- Complementary: X -->
+_BR_RE = re.compile(r'<br\s*/?>', re.IGNORECASE)            # line break -> space
+# Block-level boundaries inside a cell also become a space so words don't glue.
+_BLOCK_RE = re.compile(r'</?(?:p|div|li|ul|ol|blockquote|h[1-6])[^>]*>',
+                       re.IGNORECASE)
+_VOID_RE = re.compile(r'<(?:img|hr|input|source|col)[^>]*>', re.IGNORECASE)  # no text
+# Any remaining inline tag (<sup>, <sub>, <b>, <i>, <em>, <strong>, <span>,
+# <font>, <a>, <mark>, <small>, <u>, <thead>/<tbody> wrappers, ...): drop the tag
+# but KEEP its inner content. '<' not starting a tag (e.g. '<0.05') is left alone.
+_TAG_RE = re.compile(r'</?[A-Za-z][^>]*>')
+
+
+def strip_html_markup(text: str) -> str:
+    """Remove non-table HTML markup while preserving the visible text.
+
+    Order matters: comments and void elements go first (no content to keep);
+    <br> and block tags become spaces (avoid gluing 'material<br>(obs)' into
+    'material(obs)'); remaining inline tags are dropped keeping content; finally
+    HTML entities are unescaped ('&lt;' -> '<', '&amp;' -> '&', '&nbsp;' -> space)
+    so values like p '&lt;0.001' match their ground-truth form."""
+    text = _COMMENT_RE.sub('', text)
+    text = _VOID_RE.sub('', text)
+    text = _BR_RE.sub(' ', text)
+    text = _BLOCK_RE.sub(' ', text)
+    text = _TAG_RE.sub('', text)
+    text = _html.unescape(text)
+    text = text.replace('\xa0', ' ')
+    return text
+
+
+# Inline formatting tags only — NOT the table-structural ones. Used where the
+# text must keep its <table>/<tr>/<td> layout (e.g. scanning the raw paper for
+# abbreviation definitions): stripping <td> there would glue adjacent cells and
+# invent spurious words.
+_INLINE_TAG_RE = re.compile(
+    r'</?(?:sup|sub|b|i|em|strong|span|font|u|mark|small|big|s|strike|abbr|'
+    r'cite|q|code|kbd|samp|var|time|a|label)\b[^>]*>',
+    re.IGNORECASE)
+
+
+def strip_inline_markup(text: str) -> str:
+    """Like strip_html_markup but PRESERVES table tags (<table>/<tr>/<td>/<th>).
+
+    For raw text whose table layout still matters: removes inline formatting
+    (<sup>, <sub>, <b>, <a>, …) and unescapes entities so a '<sup>' can't survive
+    as the literal word 'sup' (e.g. 'mandible<sup></sup> length (ML)' -> 'mandible
+    length (ML)'), without collapsing table cells into one another."""
+    text = _COMMENT_RE.sub('', text)
+    text = _BR_RE.sub(' ', text)
+    text = _INLINE_TAG_RE.sub('', text)
+    text = _html.unescape(text)
+    return text.replace('\xa0', ' ')
+
+
+_TR_RE = re.compile(r'<tr[^>]*>(.*?)</tr>', re.DOTALL | re.IGNORECASE)
+_CELL_RE = re.compile(r'<(td|th)([^>]*)>(.*?)</(?:td|th)>', re.DOTALL | re.IGNORECASE)
+
+
+def _rowspan_of(attrs):
+    m = re.search(r'rowspan\s*=\s*["\']?(\d+)', attrs, re.IGNORECASE)
+    try:
+        return max(1, int(m.group(1))) if m else 1
+    except (TypeError, ValueError):
+        return 1
+
+
+def expand_rowspans(table_html):
+    """Rewrite a <table> so every rowspan is made explicit: a cell with
+    rowspan=N is copied DOWN into the N-1 rows it covers.
+
+    Why only rowspan (not colspan): the per-row pipe conversion below drops the
+    covered cells, so a row under a rowspan loses that cell and every cell to its
+    right shifts left — the identifier disappears and values land in the wrong
+    columns (e.g. a family name spanning a 'Mean' and a 'Range' row leaves the
+    Range row headerless). Carrying the value down restores alignment.
+
+    colspan is deliberately left as a single cell: parse_table treats a lone
+    populated cell as a band/section row (_is_group_row), which is how full-width
+    'colspan' banners are meant to read. Forward-filling colspan would turn a
+    banner into a full data row and break that detection.
+
+    Rowspans in leading grouping columns (the common case) are handled exactly;
+    a rowspan in a trailing column of a short row may still shift, which no real
+    table in the corpus does.
+    """
+    rows = _TR_RE.findall(table_html)
+    if not rows:
+        return table_html
+    carry = {}                         # col -> [rows_remaining, value]
+    out = ["<table>"]
+    for r in rows:
+        cells = [(re.sub(r'\s+', ' ', inner).strip(), _rowspan_of(attrs))
+                 for _tag, attrs, inner in _CELL_RE.findall(r)]
+        row, col, ci = [], 0, 0
+        while ci < len(cells) or (col in carry and carry[col][0] > 0):
+            if col in carry and carry[col][0] > 0:      # a rowspan covers this col
+                row.append(carry[col][1])
+                carry[col][0] -= 1
+                col += 1
+                continue
+            val, rs = cells[ci]
+            ci += 1
+            row.append(val)
+            if rs > 1:
+                carry[col] = [rs - 1, val]
+            col += 1
+        out.append("<tr>" + "".join(f"<td>{c}</td>" for c in row) + "</tr>")
+    out.append("</table>")
+    return "\n".join(out)
+
+
 def clean_tables(text):
+    # Make rowspans explicit BEFORE the per-row flattening below, which would
+    # otherwise drop the covered cells and misalign every row under a rowspan.
+    text = expand_rowspans(text)
     # Collapse whitespace (incl. newlines) INSIDE each cell first, so a <td>/<th>
     # containing line breaks (e.g. "Nesting material\n\n(own observation)")
     # doesn't get split into bogus extra rows when <tr> becomes a newline.
@@ -22,6 +142,10 @@ def clean_tables(text):
     text = re.sub(r'</(?:td|th)>', ' | ', text)
     text = re.sub(r'<table[^>]*>', '', text)
     text = re.sub(r'</table>', '', text)
+    # Normalise everything else MinerU may have left in the cells: inline tags
+    # (<sup>, <sub>, <b>, ...), <br>/blocks -> space, comments/images dropped,
+    # and HTML entities unescaped. See strip_html_markup.
+    text = strip_html_markup(text)
     return text
 
 def get_tables(text):
@@ -114,6 +238,10 @@ def get_text(text, size):
 
         text = re.sub(r'\$([^$]+)\$', humanize_math, text)
         text = re.sub(r'[†‡§¶]', '', text)
+        # Prose from MinerU carries the same inline HTML/entities as tables
+        # (<sup> footnote markers, &amp;, &nbsp;, <br>); normalise them so the
+        # tag agents don't see 'sup'/'&amp;' noise.
+        text = strip_html_markup(text)
         text = re.sub(r' +', ' ', text)
         return text.strip()
     

@@ -1,0 +1,50 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Cajaiba2022\Cajaiba2022.xlsx  (255 rows)
+PREDICTION   : ..\output\Cajaiba2022\Cajaiba2022.csv  (917 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 255
+  missed (FN)         : 0
+  spurious, in scope  : 7   <- GT covers this trait: real errors
+  spurious, out of scope: 655   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.278 / 1.000 / 0.435   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.973 / 1.000 / 0.986   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            655
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               255    255  1.000
+  measurementMethod             0    255  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic        255    255  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0    255  0.000  <-- low
+  lifeStage                   255    255  1.000
+  caste                         0    255  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    255  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    255  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  forest specialists-15                             0   131   PRED-ONLY
+  forest specialists-5                              0   131   PRED-ONLY
+  agriculture                                       0   131   PRED-ONLY
+  ecosystem specificity                           131   131   
+  pastures for livestock                            0   131   PRED-ONLY
+  primary forest                                    0   131   PRED-ONLY
+  trophic type                                    124   131   Δ+7 (split?)

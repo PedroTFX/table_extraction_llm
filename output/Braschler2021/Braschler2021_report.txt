@@ -1,0 +1,68 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Braschler2021\Braschler2021.xlsx  (511 rows)
+PREDICTION   : ..\output\Braschler2021\Braschler2021.csv  (480 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Body size' -> 'Body size '
+  'Dry tolerant' -> 'Drought Resistance'
+  'Habitat generalist' -> 'Habitat Generalist'
+  'Main food' -> 'Main Food'
+  'Main nest stratum' -> 'Main Nest Stratum'
+  'Micro-habitat preference' -> 'Microhabitat Preference'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 455
+  missed (FN)         : 56
+  spurious, in scope  : 25   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.948 / 0.890 / 0.918   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.948 / 0.890 / 0.918   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.890   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    455  0.000  <-- low
+  measurementMethod             0     88  0.000  <-- low
+  measurementUnit               0    169  0.000  <-- low
+  measurementStatistic        286    455  0.629
+  measurementRemarks            0      0    n/a
+  sex                         315    455  0.692
+  lifeStage                   370    455  0.813
+  caste                         0     84  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    455  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 56 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             56
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Colony Founding Mode'             x28
+     'Number of the Queens'             x28
+  -> 2 missing traits explain 56 of 56 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Braschler2021_misses.csv, Braschler2021_misses_summary.json (56 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       113   113   
+  colony founding mode                             28     0   GT-ONLY
+  drought resistance                               88   113   Δ+25 (split?)
+  main food                                        28    28   
+  habitat generalist                              113   113   
+  main nest stratum                                28    28   
+  microhabitat preference                          85    85   
+  number of the queens                             28     0   GT-ONLY

@@ -1,0 +1,73 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Beyer2021\Beyer2021.xlsx  (206 rows)
+PREDICTION   : ..\output\Beyer2021\Beyer2021.csv  (300 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'foraging preference' -> 'Foraging preference'
+  'intertegular distance' -> 'Intertegular Distance'
+  'relative tongue length' -> 'Relative Tonghe Length'
+  'sociality' -> 'Sociality'
+  'tongue length' -> 'Tongue Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 163
+  missed (FN)         : 43
+  spurious, in scope  : 62   <- GT covers this trait: real errors
+  spurious, out of scope: 75   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.543 / 0.791 / 0.644   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.724 / 0.791 / 0.756   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.791   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             75
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                75    163  0.460  <-- low
+  measurementMethod             0    136  0.000  <-- low
+  measurementUnit              66     75  0.880
+  measurementStatistic         75    163  0.460  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          61    163  0.374  <-- low
+  lifeStage                   102    163  0.626
+  caste                         0    102  0.000  <-- low
+  sampleSizeValue               9     18  0.500
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    163  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    163  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 43 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       43
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'species not known to collect pollen from fabaceae' ->  'not known to collect pollen from fabaceae' x34
+     'long'                       ->  '8.87'                       x1
+     'short'                      ->  '4.3'                        x1
+     'short'                      ->  '4.39'                       x1
+     'long'                       ->  '5.66'                       x1
+     'long'                       ->  '5.58'                       x1
+  -> 6 substitutions explain 39 of 43 misses (91%) — systematic, not scattered
+
+  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (43 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  tongue length category                            0     9   PRED-ONLY
+  density                                           0    66   PRED-ONLY
+  intertegular distance                            57    75   Δ+18 (split?)
+  foraging preference                              61    66   Δ+5 (split?)
+  relative tonghe length                            9     9   
+  tongue length                                    18     9   Δ-9 (split?)
+  sociality                                        61    66   Δ+5 (split?)

@@ -1,0 +1,58 @@
+{
+  "Response": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column names the biological property or trait being measured (e.g., 'Body size').",
+    "category": null,
+    "reasoning_relevance": "This column represents the dependent variable in a statistical model, not biological data."
+  },
+  "Fixed effects": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "The values represent an insect taxon or taxonomic group ('Macropterous spp.') used as a factor.",
+    "category": null,
+    "reasoning_relevance": "These are independent variables used in statistical models, not recorded biological traits or measurements."
+  },
+  "Estimate": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the calculated numerical result (the effect size) of the measurement.",
+    "category": null,
+    "reasoning_relevance": "This is a calculated coefficient from a GLMM model, representing an effect size rather than raw data."
+  },
+  "Std. Error": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is a statistical measure quantifying the uncertainty or variability of the estimate.",
+    "category": null,
+    "reasoning_relevance": "Standard error is a statistical measure of variability in the estimate, not biological data."
+  },
+  "t value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides a calculated test statistic (t-value) for significance.",
+    "category": null,
+    "reasoning_relevance": "This is a calculated test statistic used for hypothesis testing, not recorded biological data."
+  },
+  "P value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is the statistical measure of probability used to assess significance.",
+    "category": null,
+    "reasoning_relevance": "The P value indicates statistical significance and does not represent measured biological traits or observations."
+  },
+  "F(1,188)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides a calculated test statistic (F-statistic) for variance analysis.",
+    "category": null,
+    "reasoning_relevance": "This is an F-statistic from a GLM test, used for statistical inference rather than data recording."
+  },
+  "P value (1)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is the statistical measure of probability used to assess significance.",
+    "category": null,
+    "reasoning_relevance": "The P value indicates statistical significance and does not represent measured biological traits or observations."
+  }
+}

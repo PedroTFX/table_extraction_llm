@@ -1,0 +1,46 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Brant2021\Brant2021.xlsx  (480 rows)
+PREDICTION   : ..\output\Brant2021\Brant2021.csv  (480 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Head.w' -> 'head width'
+  'Intertegular.d' -> 'intertegular distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 480
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    480  0.000  <-- low
+  measurementMethod             0    480  0.000  <-- low
+  measurementUnit               0    480  0.000  <-- low
+  measurementStatistic          0    480  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         480    480  1.000
+  lifeStage                   480    480  1.000
+  caste                       480    480  1.000
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    480  0.000  <-- low
+  verbatimLocality              0    480  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    480  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    480  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  intertegular distance                           240   240   
+  head width                                      240   240   

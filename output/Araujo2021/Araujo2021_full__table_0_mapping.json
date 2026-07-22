@@ -1,37 +1,17 @@
 {
   "identifier": {
-    "field": null,
+    "field": "definitionTerm",
     "value_column": false,
-    "reasoning": "This column serves as a row label or index for the response variables."
+    "reasoning": "This column acts as a key or code defining the specific measurement variable."
   },
   "PF (reference level)": {
-    "field": "measurementType",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Defines the reference measurement type and provides quantitative values with associated statistics."
+    "reasoning": "This column holds the quantitative measurements and associated statistical estimates for the variables defined in 'identifier'."
   },
-  "PA vs. PF": {
-    "field": "measurementStatistic",
-    "value_column": false,
-    "reasoning": "Contains statistical test results (t/z-values) comparing PA to PF."
-  },
-  "TR vs. PF": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "The column is empty and provides no data for mapping."
-  },
-  "FR vs. PF": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "The column is empty and provides no data for mapping."
-  },
-  "MR vs. PF": {
+  "Bee functional diversity": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Contains statistical measures (Estimate ± SE) representing the comparison result between MR and PF."
-  },
-  "NR vs. PF": {
-    "field": "measurementStatistic",
-    "value_column": false,
-    "reasoning": "Contains statistical test results (t/z-values) comparing NR to PF."
+    "reasoning": "The values represent statistical outcomes (t/z-values) or comparative metrics of the analysis."
   }
 }

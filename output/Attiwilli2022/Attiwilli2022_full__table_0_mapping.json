@@ -1,0 +1,40 @@
+{
+  "identifier": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains taxonomic names (insect families) identifying the organisms.",
+    "category": null,
+    "reasoning_relevance": "Not mentioned as a data column; if it refers to unique IDs, it is an invalid category."
+  },
+  "Ecotone": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Numerical code representing a specific sampling location or habitat type.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The paper classifies species into habitat preference categories including 'ecotone'.",
+    "value_type": "categorical"
+  },
+  "Forest": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Numerical code representing a specific sampling location or habitat type.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The paper classifies species into habitat preference categories including 'forest'.",
+    "value_type": "categorical"
+  },
+  "Open": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Numerical code representing a specific sampling location or habitat type.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The paper classifies species into habitat preference categories including 'open'.",
+    "value_type": "categorical"
+  },
+  "Total": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the total count or abundance of the organism in that category.",
+    "category": null,
+    "reasoning_relevance": "Likely represents a total count or sample size, which is an invalid category."
+  }
+}

@@ -1,0 +1,45 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Batista2024\Batista2024.xlsx  (174 rows)
+PREDICTION   : ..\output\Batista2024\Batista2024.csv  (174 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Wings fully developed' -> 'Wings fully developed '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 174
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               174    174  1.000
+  measurementMethod             0     87  0.000  <-- low
+  measurementUnit               0    174  0.000  <-- low
+  measurementStatistic         87    174  0.500
+  measurementRemarks            0      0    n/a
+  sex                         174    174  1.000
+  lifeStage                   174    174  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    174  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  wings fully developed                            87    87   
+  medium length                                    87    87   

@@ -1,0 +1,65 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Brasil2024\Brasil2024.xlsx  (25 rows)
+PREDICTION   : ..\output\Brasil2024\Brasil2024.csv  (44 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 25
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 44   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             44
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 25 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             25
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Diet'                             x5
+     'Nesting'                          x5
+     'Sociality'                        x5
+     'Voltinism'                        x5
+     'Body size'                        x5
+  -> 5 missing traits explain 25 of 25 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Brasil2024_misses.csv, Brasil2024_misses_summary.json (25 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size or body size x urbanization             5    39   Δ+34 (split?)
+  diet                                              5     0   GT-ONLY
+  functional traits                                 0     5   PRED-ONLY
+  nesting                                           5     0   GT-ONLY
+  sociality                                         5     0   GT-ONLY
+  voltinism                                         5     0   GT-ONLY
+  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)

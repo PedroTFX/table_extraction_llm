@@ -2,60 +2,96 @@
   "Bee species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains scientific names of bee species/taxa.",
+    "reasoning": "Contains taxonomic names of insect taxa (bees).",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The text mentions compiling ecological traits of all recorded bee species."
+    "reasoning_relevance": "Used to characterize functional composition of bee communities."
   },
   "Left wing length (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a specific physical trait (wing length) in millimeters for the bee.",
+    "reasoning": "Defines a specific physical trait measured on the organism.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Wing length is explicitly listed as a morphological trait evaluated for bees and wasps.",
+    "reasoning_relevance": "Listed as a specific morphological trait evaluated for bees.",
     "value_type": "numeric",
-    "canonicalType": "Left wing length"
+    "canonicalType": "Left wing length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The text states that after the insects emerged from the trap nests, they were pinned and identified in the laboratory. Morphological measurements like wing length are taken on these collected/preserved specimens.",
+    "measurementMethod": "Measurements of insect body parts were made on a millimeter scale using Leica Application Suite software version 2.0.",
+    "measurementMethod_reasoning": "The text explicitly details the tools and method used for measuring insect traits: 'The measurements of the insect’s body parts were made on a millimetre scale, using Leica Application Suite software version 2.0.'",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement was taken 'on a millimetre scale'.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "While the study later calculates weighted community means for functional indices, the raw data point extracted (Left wing length) is an individual morphological trait measured on one insect."
   },
   "ITS (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a specific physical trait (ITS) in millimeters for the bee.",
+    "reasoning": "Defines a specific physical trait measured on the organism.",
     "category": null,
     "reasoning_relevance": "not present in text"
   },
   "Left posterior tibia length (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a specific physical trait (tibia length) in millimeters for the bee.",
+    "reasoning": "Defines a specific physical trait measured on the organism.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Posterior tibia length is listed as a morphological trait measured for bees and wasps.",
+    "reasoning_relevance": "Explicitly listed as a measured functional/morphological trait for bees.",
     "value_type": "numeric",
-    "canonicalType": "Left posterior tibia length"
+    "canonicalType": "Left posterior tibia length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement of posterior tibia length is a morphological trait taken from insects collected in trap nests and subsequently pinned and measured in the laboratory.",
+    "measurementMethod": "Measurement of insect body parts (posterior tibia) using a millimetre scale and Leica Application Suite software version 2.0.",
+    "measurementMethod_reasoning": "The text explicitly states that measurements of the insect's body parts were made on a millimeter scale, utilizing specific software.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement is specified as 'Left posterior tibia length (mm)' and confirmed in the text that measurements were taken on a millimetre scale.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "For continuous traits like posterior tibia length, the study computed the trait average as the weighted community mean of the trait values across all species in the community using the dbFD function."
   },
   "Nesting material (own observation)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific materials used by the bee for its nest construction.",
+    "reasoning": "Describes a biological characteristic or habitat preference of the organism.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Nesting materials are evaluated as functional traits reflecting specialization on resources.",
+    "reasoning_relevance": "Evaluated as a functional trait reflecting specialization on resources.",
     "value_type": "categorical",
-    "canonicalType": "Nesting material"
+    "canonicalType": "Nesting material",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected cavity-nesting bees and wasps using trap nests (wood blocks) in the field. After emergence, the insects were pinned, identified, and their functional traits—including nesting material—were quantified based on observations of the cells built within these specimens.",
+    "measurementMethod": "Observation of nest structure/cell construction materials within trap-nest samples",
+    "measurementMethod_reasoning": "The study used standardized trap nests (wood blocks with drilled holes) to sample cavity-nesting bees and wasps. The nesting material trait was determined by observing the resources utilized for constructing the cells built inside these traps, which were then analyzed in the laboratory.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   },
   "Tongue length (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a specific physical trait (tongue length) in millimeters for the bee.",
+    "reasoning": "Defines a specific physical trait measured on the organism.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Tongue length is listed as a morphological trait used to determine food preferences.",
+    "reasoning_relevance": "Listed as a specific morphological trait related to food preferences.",
     "value_type": "numeric",
-    "canonicalType": "Tongue length"
+    "canonicalType": "Tongue length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurements were taken on insects that had emerged and were subsequently pinned, indicating they were collected and preserved for morphological analysis.",
+    "measurementMethod": "Direct measurement of the insect's body parts using a millimetre scale and Leica Application Suite software.",
+    "measurementMethod_reasoning": "The text explicitly states: 'The measurements of the insect’s body parts were made on a millimetre scale, using Leica Application Suite software version 2.0.'",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement was taken on a millimetre scale and the trait is defined as 'Tongue length (mm)'.",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "For species with more than 20 females, researchers randomly selected 20 individuals to take measurements of all traits cited above. These individual measurements are used later to calculate community trait averages (weighted means)."
   },
   "Pollen transport (reference)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific method/location used by the bee for pollen transport.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The text evaluates pollen-carrying structures, which relate to the amount of pollen transported.",
+    "reasoning": "Describes an observable behavioral or functional trait of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Refers to 'pollen-carrying structures,' an anatomical feature measured for bees.",
     "value_type": "categorical",
-    "canonicalType": "Pollen transport"
+    "canonicalType": "Pollen transport",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement of 'pollen-carrying structures' is a physical/morphological trait evaluated on individual insects (bees) that were collected using trap nests, pinned, and analyzed in the laboratory after emergence.",
+    "measurementMethod": "Measurement of pollen-carrying structures on preserved specimens",
+    "measurementMethod_reasoning": "The functional traits for bee species, including 'pollen-carrying structures', were determined based on measurements taken from individual insects (bees) that were collected via trap nests and subsequently analyzed in the laboratory.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   }
 }

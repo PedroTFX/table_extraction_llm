@@ -96,6 +96,10 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
 
     # 3) measurement-level (column) tags — only those the plan routed to 'column'
     print("\n[3/5] Measurement-level tags...")
+    # Page-fragments of one table share a schema and a mapping, so tag ONCE per
+    # distinct header set and copy the result to its fragments (see map_and_group).
+    import copy as _copy
+    tag_cache: dict = {}
     for table in tables:
         tid = table_id(table)
         if tid not in mappings:
@@ -106,7 +110,14 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
         if _identifier_column(table, mappings[tid]) is None:
             print(f"  skip tags for {tid} — no identifier column (not specimen data)")
             continue
-        mappings[tid] = get_measurement_level_tags(mappings[tid], chunks, allowed_tags=column_tags)
+        sig = tuple(table.header_names)
+        if sig in tag_cache:
+            mappings[tid] = _copy.deepcopy(tag_cache[sig])
+            print(f"  reuse tags for {tid} — same schema as an earlier table")
+        else:
+            mappings[tid] = get_measurement_level_tags(
+                mappings[tid], chunks, allowed_tags=column_tags)
+            tag_cache[sig] = mappings[tid]
         (Path(out_dir) / f"{tid}_mapping.json").write_text(
             json.dumps(mappings[tid], indent=2, ensure_ascii=False), encoding="utf-8")
 

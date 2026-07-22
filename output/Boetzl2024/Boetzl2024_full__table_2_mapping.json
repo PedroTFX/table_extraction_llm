@@ -1,0 +1,57 @@
+{
+  "Study ID": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains unique study identifiers and does not describe an insect or location."
+  },
+  "country": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values are geographic locations where the sampling occurred."
+  },
+  "region": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values represent specific sub-regions or states of the sampling location."
+  },
+  "year": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column records temporal metadata about the study event, not an organism trait or location."
+  },
+  "months": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column provides temporal context for the sampling but is not a measurement type or locality."
+  },
+  "crop types": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "These values describe the land-use and vegetation where samples were collected."
+  },
+  "adjacent habitat classes": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This describes the microhabitat or surrounding environment of the sampling location."
+  },
+  "study sites": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "These are specific site codes or identifiers for where observations were made."
+  },
+  "maximal distance [m]": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is a measurement of the study setup/variable, not an organism trait or location."
+  },
+  "trapping days (per trap)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This describes the sampling method and effort used in the study."
+  },
+  "reference": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains bibliographic citations for the source of the data."
+  }
+}

@@ -1,0 +1,106 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\CamargoVanegas2024\CamargoVanegas2024.xlsx  (2017 rows)
+PREDICTION   : ..\output\CamargoVanegas2024\CamargoVanegas2024.csv  (2864 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'eye length' -> 'Eye length'
+  'femur length' -> 'Femur length'
+  'head length' -> 'Head length'
+  'head width' -> 'Head width'
+  'mandible length' -> 'Mandible length'
+  'mandible length Mean' -> 'mandible length'
+  'scape length' -> 'Scape length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 261
+  missed (FN)         : 1756
+  spurious, in scope  : 882   <- GT covers this trait: real errors
+  spurious, out of scope: 1721   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.091 / 0.129 / 0.107   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.228 / 0.129 / 0.165   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.129   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1721
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    261  0.000  <-- low
+  measurementMethod             0    139  0.000  <-- low
+  measurementUnit               0    261  0.000  <-- low
+  measurementStatistic          1    261  0.004  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    261  0.000  <-- low
+  lifeStage                   261    261  1.000
+  caste                         0    261  0.000  <-- low
+  sampleSizeValue               0    261  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    261  0.000  <-- low
+  verbatimLocality              0    261  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    261  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    261  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1756 MISSED ROWS MISSED
+  species not in prediction                  17
+  species present, trait missing            376
+  species+trait present, value differs     1363
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.543'                      ->  '-'                          x4
+     '0.587'                      ->  '-'                          x3
+     '0.006'                      ->  '0.008'                      x3
+     '0.217'                      ->  '0.674'                      x2
+     '0'                          ->  '0.228'                      x2
+     '0'                          ->  '0.203'                      x2
+  -> 6 substitutions explain 16 of 1756 misses (1%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'N2 Ants'                            (nothing similar in the prediction)   x6
+     gt 'N3 Ants'                           ~0.57~  pred 'Camponotus sp. 3'   x6
+     gt 'N1 Ants'                           ~0.57~  pred 'Camponotus sp. 1'   x5
+  -> 3 species mismatches explain 17 of 1756 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Interocular distance'             x250
+     'Eye length'                       x21
+     'Femur length'                     x21
+     'Head length'                      x21
+     'Head width'                       x21
+     'Scape length'                     x21
+  -> 6 missing traits explain 355 of 1756 misses (20%) — scattered; no single cause
+
+  full miss detail saved -> CamargoVanegas2024_misses.csv, CamargoVanegas2024_misses_summary.json (1756 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  interocular distance or distance                250   143   Δ-107 (split?)
+  distance mean                                     0   142   PRED-ONLY
+  funcional equitability                            3     0   GT-ONLY
+  eye length                                      250   143   Δ-107 (split?)
+  eye length mean                                   0   142   PRED-ONLY
+  femur length                                    250   143   Δ-107 (split?)
+  femur length mean                                 0   142   PRED-ONLY
+  functional redundancy or functional groups        3   146   Δ+143 (split?)
+  functional space                                  3     0   GT-ONLY
+  habitat                                           6     0   GT-ONLY
+  head length                                     250   143   Δ-107 (split?)
+  head length mean                                  0   142   PRED-ONLY
+  head width mean                                   0   142   PRED-ONLY
+  head width                                      250   143   Δ-107 (split?)
+  mandible length                                 252   285   Δ+33 (split?)
+  scape length mean                                 0   142   PRED-ONLY
+  weber length mean                                 0   142   PRED-ONLY
+  scape length                                    250   143   Δ-107 (split?)
+  weber length                                    250   143   Δ-107 (split?)
+  n1                                                0   146   PRED-ONLY
+  n2                                                0   146   PRED-ONLY
+  n3                                                0   146   PRED-ONLY
+  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)

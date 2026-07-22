@@ -1,0 +1,49 @@
+{
+  "Acrocerid": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insect species (genus and species).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This column lists specific fly species, which are discrete classifications."
+  },
+  "Source": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Refers to the source or citation of the data, not an organism property.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "The text indicates this summarizes data from 'laboratory or field rearings'.",
+    "value_type": "categorical"
+  },
+  "Pupation duration (mean days ± SEM)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological trait measured for the organism: pupation duration.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This records a quantitative physical/biological measurement of time.",
+    "value_type": "numeric",
+    "canonicalType": "Pupation duration",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement concerns a life history trait (pupation duration) which involves observing and tracking the developmental process of pupae/larvae in the field or shortly after collection to determine eclosion dates.",
+    "measurementMethod": "Tracking pupal development until emergence",
+    "measurementMethod_reasoning": "The text states that 'Pupae were taken from the field into the lab 10–15 days after pupation to determine eclosion dates accurately,' indicating a method of monitoring developmental stages and recording time elapsed until emergence.",
+    "measurementUnit": "days",
+    "measurementUnit_reasoning": "The measurement is explicitly stated as 'Pupation duration' and Table 2 refers to the unit in days.",
+    "measurementStatistic": "mean ± SE",
+    "measurementStatistic_reasoning": "Table 2 specifies '(SEM = standard error of the mean)' for the pupation duration data, and Figure 10 plots 'Mean duration'."
+  },
+  "n": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Represents sample size or count, which is not a defined template field here.",
+    "category": null,
+    "reasoning_relevance": "The column represents sample size, which is excluded by the guidelines."
+  },
+  "Lab or field; mean temp. °C (if available)": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Indicates the location where the observation/measurement was conducted (Laboratory).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This records a quantitative physical measurement of ambient temperature.",
+    "value_type": "categorical"
+  }
+}

@@ -1,0 +1,81 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Arnan2012\Arnan2012.xlsx  (361 rows)
+PREDICTION   : ..\output\Arnan2012\Arnan2012.csv  (390 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Critical thermal maximum' -> 'Critical Thermal Maximum'
+  'Maximal activity temperature' -> 'Maximum Activity Temperature'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 240
+  missed (FN)         : 121
+  spurious, in scope  : 90   <- GT covers this trait: real errors
+  spurious, out of scope: 60   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.615 / 0.665 / 0.639   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.727 / 0.665 / 0.695   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.665   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             60
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                60    240  0.250  <-- low
+  measurementMethod             0    210  0.000  <-- low
+  measurementUnit               0    180  0.000  <-- low
+  measurementStatistic         60    240  0.250  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         180    240  0.750
+  lifeStage                   210    240  0.875
+  caste                         0     60  0.000  <-- low
+  sampleSizeValue               0     30  0.000  <-- low
+  sampleSizeUnit                0     30  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    240  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 121 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             31
+  species+trait present, value differs       90
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'larvae in the nests during the whole year' ->  'larvae within the nests during the whole year' x22
+     'hundreds'                   ->  'hundreds of workers'        x17
+     'none'                       ->  'none (only defense of the nest)' x16
+     'food and/or territory'      ->  'defense of food or territory (foraging area)' x14
+     'thousands'                  ->  'thousands of workers'       x10
+     'larvae in the nests from march to september' ->  'larvae within the nests from march to september' x8
+  -> 6 substitutions explain 87 of 121 misses (72%) — systematic, not scattered
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Length'                      x31
+  -> 1 missing trait explains 31 of 121 misses (26%) — scattered; no single cause
+
+  full miss detail saved -> Arnan2012_misses.csv, Arnan2012_misses_summary.json (121 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  maximum activity temperature                     30    30   
+  month of peak activity                           30    30   
+  number workers/bait                               0    30   PRED-ONLY
+  body length or worker length                     31    30   Δ-1 (split?)
+  brood cycle                                      30    30   
+  n nests per colony                               30    30   
+  n queens per colony                              30    30   
+  colony population                                30    30   
+  critical thermal maximum                         30    30   
+  daily rhythm                                     30    30   
+  defense of resources                             30    30   
+  main food resource                               30    30   
+  polymorphism                                     30    30   
+  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)

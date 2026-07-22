@@ -1,0 +1,22 @@
+{
+  "identifier": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains sample IDs or abbreviations, not insect taxa, locations, or measurable traits."
+  },
+  "Burn status": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header describes a measured property (the state of burn) observed for the organism/site."
+  },
+  "Site age": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures an environmental characteristic (age) of the sampling site, which is a property measured alongside the organism."
+  },
+  "Year": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "The year represents temporal metadata about the observation event, not a biological trait or location."
+  }
+}

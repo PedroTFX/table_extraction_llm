@@ -19,12 +19,18 @@ import re
 import sys
 from pathlib import Path
 
-# Regexes tolerant of the report layout (extra spaces, etc.)
-RE_PRF = re.compile(
-    r"precision/recall/F1\s*:\s*([\d.]+)\s*/\s*([\d.]+)\s*/\s*([\d.]+)"
+# Regexes tolerant of the report layout (extra spaces, etc.). Newest report
+# format only: the STRICT/SCOPED P/R/F1 split and 'spurious, in scope'. Regenerate
+# stale reports with `python evaluate.py --all` if they show as unparsed.
+RE_PRF_SCOPED = re.compile(
+    r"SCOPED\s+P/R/F1\s*:\s*([\d.]+)\s*/\s*([\d.]+)\s*/\s*([\d.]+)"
+)
+RE_PRF_STRICT = re.compile(
+    r"STRICT\s+P/R/F1\s*:\s*([\d.]+)\s*/\s*([\d.]+)\s*/\s*([\d.]+)"
 )
 RE_TP = re.compile(r"matched \(TP\)\s*:\s*(\d+)")
-RE_FP = re.compile(r"spurious \(FP\)\s*:\s*(\d+)")
+# 'spurious, in scope' is the scoped FP (matches the SCOPED precision).
+RE_FP = re.compile(r"spurious,\s*in scope\s*:\s*(\d+)")
 RE_FN = re.compile(r"missed \(FN\)\s*:\s*(\d+)")
 RE_GT = re.compile(r"GROUND TRUTH\s*:.*?\((\d+)\s*rows\)")
 RE_PRED = re.compile(r"PREDICTION\s*:.*?\((\d+)\s*rows\)")
@@ -48,7 +54,7 @@ def parse_report(path: Path) -> dict:
             return default
         return cast(m.group(1)) if cast else m.group(1)
 
-    prf = RE_PRF.search(text)
+    prf = RE_PRF_SCOPED.search(text) or RE_PRF_STRICT.search(text)
     precision = float(prf.group(1)) if prf else None
     recall = float(prf.group(2)) if prf else None
     f1 = float(prf.group(3)) if prf else None

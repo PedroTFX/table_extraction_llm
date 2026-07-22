@@ -271,6 +271,11 @@ Valid categories for a worth-recording column:
 - "Categorical biological trait" — discrete classifications of the organism's biology
 - "Morphological measurement" — physical/anatomical measurements
 - "Behavioral observation" — recorded behaviors or where/how the organism was observed
+- "Measurement-type key" — a column whose CELLS are the NAMES of the traits being
+  measured (e.g. a "Trait" or "Variable" column whose values are "body mass",
+  "head length", "Elytra length"), paired with a SEPARATE column that holds the
+  values. The cells say WHAT was measured; they are not themselves a measurement
+  value. Use this ONLY when another column in the same table holds the values.
 
 If the column does not fit any of these categories, return null.
 Examples that do NOT fit: percentages of occurrence, sample sizes (n=, N=),

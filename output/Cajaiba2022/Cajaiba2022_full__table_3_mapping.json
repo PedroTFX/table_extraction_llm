@@ -1,0 +1,100 @@
+{
+  "Morphospecies/Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insect specimens.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The text records the total number of species and their classification."
+  },
+  "PF": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured trait or score assigned to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It classifies the ecosystem as Primary Forest, defined by long-term lack of disturbance.",
+    "value_type": "categorical",
+    "canonicalType": "Primary Forest",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data on ant communities (abundance, richness, functional traits) were obtained by collecting physical specimens using pitfall traps and manual litter sampling techniques. These collected individuals were then screened, manually extracted, preserved in a 70% ethanol solution for identification, and subsequently analyzed.",
+    "measurementMethod": "Ants were sampled using pitfall traps (13 cm diameter, 19 cm deep) installed for 48 hours during rainy, intermediate, and dry seasons. Manual collections involved scraping the litter and upper soil layer at random points ($1m^2$). Specimens were preserved in a 70% ethanol solution, identified according to taxonomic keys, and classified into functional groups (ES_FT: Forest specialists, etc.; TT_FT: Epigaeic predators, etc.). Functional diversity metrics (FRic, FEve, FRed) were calculated using the dbFD function within R software.",
+    "measurementMethod_reasoning": null
+  },
+  "FS-15": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured trait or score assigned to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It classifies the ecosystem as Secondary Forest with 15 years of recovery.",
+    "value_type": "categorical",
+    "canonicalType": "forest specialists-15",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data on the functional traits (ES_FT and TT_FT) of ants in SF-15 were derived from physical specimens collected using pitfall traps and litter collection techniques. These individuals were manually extracted, preserved in 70% ethanol, and identified before their functional characteristics could be assessed.",
+    "measurementMethod": "Ants (Formicidae) were sampled using a combination of pitfall traps (21 per location, installed for 48h) and manual litter collection (10 random points of 1m²). Specimens were preserved in 70% ethanol and identified taxonomically. Functional diversity was subsequently estimated using metrics including Functional Richness (FRic), Functional Evenness (FEve), and Functional Redundancy (FRed).",
+    "measurementMethod_reasoning": null
+  },
+  "FS-5": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured trait or score assigned to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It classifies the ecosystem as Secondary Forest with 5 years of recovery.",
+    "value_type": "categorical",
+    "canonicalType": "forest specialists-5",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study monitors ant communities (epigaeic and leaf-litter ants) within specific ecosystem types, including Secondary Forest with 5 years of recovery (SF-5). The data collected pertains to the abundance, richness, and functional traits of these organisms in their natural habitat, which constitutes a behavioral/ecological observation.",
+    "measurementMethod": "Ant communities were sampled using pitfall traps (3 per location for 48 hours) and manual litter collection techniques (10 random sampling points of $1\text{ m}^2$ with $100\text{ m}$ distance between them). The collected specimens were screened, identified to the genus/species level, and analyzed for functional traits (Ecosystem Specificity Functional Trait - ES_FT; Trophic Type Functional Trait - TT_FT), including richness, abundance, Functional Richness (FRic), Functional Evenness (FEve), and Functional Redundancy (FRed).",
+    "measurementMethod_reasoning": "The methodology explicitly details the sampling protocols for both pitfall traps and manual litter collection used to assess ant communities within the SF-5 ecosystem."
+  },
+  "AG": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured trait or score assigned to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It classifies the ecosystem as Agriculture, specifically cocoa plantations.",
+    "value_type": "categorical",
+    "canonicalType": "Agriculture",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study measures the functional diversity and community composition of ant assemblages (ecological/natural history traits) within different ecosystems, including agricultural areas (AG). Although physical specimens were collected and preserved for identification, the measurement itself is an ecological assessment of a living organism's presence and distribution in its habitat rather than a morphological trait measured on a dead specimen.",
+    "measurementMethod": "Pitfall traps and manual leaf-litter collection techniques (adapted from the Ants of the Leaf Litter protocol)",
+    "measurementMethod_reasoning": "The text explicitly states that individuals were collected using 'pitfall traps' and 'manual collections (litter sampling)'. Pitfall traps consisted of 13 cm diameter containers, baited with sardines and banana. Manual collections involved selecting random points of $1m^2$ and gently scraping the upper layer of loose soil/litter. The methodology was an adaptation of the standardized Ants of the Leaf Litter protocol (Agosti & Alonso, 2000)."
+  },
+  "PA": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured trait or score assigned to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It classifies the ecosystem as Pastures for livestock.",
+    "value_type": "categorical",
+    "canonicalType": "Pastures for livestock",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data regarding ant functional traits (ES_FT and TT_FT) in Pastures (PA) were derived from individuals collected using pitfall traps and litter collection techniques. These specimens were manually extracted, preserved in 70% ethanol solution, and identified for trait analysis, fitting the definition of measuring characteristics based on a collected/preserved specimen.",
+    "measurementMethod": "Ant sampling was conducted using pitfall traps (baited with sardines and banana) and manual litter collection techniques across different seasons. Functional diversity metrics (FRic, FEve, FRed) were calculated by classifying ants into Ecosystem Specificity (ES_FT) and Trophic Type (TT_FT) categories. Statistical comparisons between ecosystems were performed using Generalized Linear Mixed Models (GLMMs), Permutational Multivariate Analysis of Variance (PERMANOVA), and Non-metric Multidimensional Scaling (NMDS).",
+    "measurementMethod_reasoning": null
+  },
+  "Trophic type": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological characteristic of the insect's feeding strategy.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Ants were classified into discrete functional groups like cryptic predators or omnivores.",
+    "value_type": "categorical",
+    "canonicalType": "Trophic type",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting ant specimens using pitfall traps and manual litter sampling, which were then extracted manually from the samples, preserved in 70% ethanol solution, and identified/classified in a laboratory setting. Since the trophic type is determined based on these collected and preserved individuals, it qualifies as PreservedSpecimen.",
+    "measurementMethod": "Ants were classified into specific Trophic Type functional groups (e.g., cryptic predators, epigaeic omnivores) using taxonomic keys and reference collections after being manually extracted from pitfall traps or litter samples collected via the 'Ants of the Leaf Litter' protocol adaptation.",
+    "measurementMethod_reasoning": "The trophic type was determined by classifying ants into predefined functional categories (CP, CO, EP, EO, etc.). The methodology involved collecting specimens using standardized methods (pitfall traps and manual litter sampling) followed by laboratory screening and identification to genus level before assigning the Trophic Type based on established taxonomic keys."
+  },
+  "Ecosystem specificity": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the specific ecological niche or habitat preference of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Species were divided into categories such as forest specialists or ecosystem generalists.",
+    "value_type": "categorical",
+    "canonicalType": "Ecosystem specificity",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement of Ecosystem Specificity Functional Traits (ES_FT) involves quantifying the abundance and richness of ant functional groups derived from physical collection methods (pitfall traps and manual litter sampling). These specimens were collected, preserved in 70% ethanol for identification, and then analyzed to determine their ecological traits.",
+    "measurementMethod": "Pitfall trapping and manual leaf-litter collection techniques were used to sample epigaeic and leaf-litter ant communities. Specimens were subsequently screened in the laboratory, preserved in 70% ethanol, identified taxonomically, and classified into Ecosystem Specificity Functional Traits (ES_FT) categories such as Forest specialists (FS), Open environment specialists (OS), etc.",
+    "measurementMethod_reasoning": null
+  }
+}

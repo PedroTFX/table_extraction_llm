@@ -1,0 +1,73 @@
+{
+  "species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the specific taxonomic name of the insect taxon for each record.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The text records species richness and identifies specific wild bee species."
+  },
+  "density": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Density is a measurement describing the abundance or count of the organism in the sample area.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Density is recorded by counting the number of flower-visiting bees during transect walks.",
+    "value_type": "numeric",
+    "canonicalType": "density",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The wild bee densities were determined through field surveys using variable transect walks conducted in semi-natural habitats (SNH), which constitutes a direct observation of live organisms.",
+    "measurementMethod": "Six variable transect walks (50 m x 5 m, 5 min. excluding handling time) were conducted within the most attractive flower rich SNH in each study landscape.",
+    "measurementMethod_reasoning": "The text explicitly describes the sampling protocol used to capture wild bees and calculate density.",
+    "measurementUnit": "individuals / (250 m² * 5 min)",
+    "measurementUnit_reasoning": "The response variables for density were defined as 'density of non-Bombus wild bees (per 250 m² transect area and 5 min)'.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The results report densities using phrases like 'on average 1.6 times more bumblebees' and the statistical analysis (GLMM) is used to compare mean density across different landscape treatments."
+  },
+  "ITD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "ITD represents a specific measurable trait (Inter-Trial Distance) for the insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Intertegular distance (ITD) was measured as a measure of body size in workers.",
+    "value_type": "numeric",
+    "canonicalType": "intertegular distance",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "ITD is a morphological measurement of body size taken from collected wild bee individuals (worker individuals per species) using specialized equipment, which falls under the definition of measuring physical traits on specimens.",
+    "measurementMethod": "Connected microscope and Labscope Imaging Software (ZEISS)",
+    "measurementMethod_reasoning": "The text explicitly states: 'For all ITD and tongue measurements, we used a connected microscope and the Labscope Imaging Software (ZEISS).'",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "While the unit is not explicitly stated in the provided text for ITD values, intertegular distance (ITD) is a standard morphological measurement of insect body size typically recorded in millimeters (mm).",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The study analyzed functional trait composition using Community Weighted Means (CWM) for ITD, which represents the average or mean size across the community."
+  },
+  "foraging preference": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names a behavioral characteristic or observed trait of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Wild bees were categorized based on whether they collect pollen from Fabaceae.",
+    "value_type": "categorical",
+    "canonicalType": "foraging preference",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The foraging preference trait was not determined by direct observation during the current study's transect walks, but rather 'extracted from the literature (Westrich 2018)'. Since it is a behavioral/ecological trait derived from existing knowledge about wild bee species, HumanObservation is the most appropriate classification.",
+    "measurementMethod": "Extraction of foraging preference data from published literature (Westrich 2018), categorizing bees into Fabaceae foragers and non-Fabaceae exploiters.",
+    "measurementMethod_reasoning": "The text explicitly states that 'Foraging preference... was extracted from the literature (Westrich 2018)'. This citation serves as the protocol/method for determining this specific functional trait.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "sociality": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Sociality is an observable state or characteristic describing the insect's social structure.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Wild bees were grouped into social and solitary categories for analysis.",
+    "value_type": "categorical",
+    "canonicalType": "sociality",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The sociality of wild bees (grouped into social and solitary categories) was not measured directly during the field sampling or on preserved specimens in this study. Instead, the information was 'extracted from the literature' (Westrich 2018), which constitutes a record derived from existing knowledge rather than direct observation or measurement.",
+    "measurementMethod": "Extracted from literature (Westrich 2018)",
+    "measurementMethod_reasoning": "The text explicitly states that 'Foraging preference and sociality information were extracted from the literature (Westrich 2018) (Table S3)'.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  }
+}

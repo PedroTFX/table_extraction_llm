@@ -1,0 +1,47 @@
+{
+  "Response variable": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names the dependent biological trait being measured: Bumblebee density."
+  },
+  "Model": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Refers to the statistical model used (m.bb1), not an organism or location."
+  },
+  "Explanatory variable": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are independent variables/factors in a regression model, not traits of the insect."
+  },
+  "Estimate": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the calculated coefficient or value for each explanatory variable."
+  },
+  "Std.Error": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the standard error of the estimate, a statistical measure of variability."
+  },
+  "lower CI": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the lower bound of the confidence interval, a statistical range."
+  },
+  "upper CI": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the upper bound of the confidence interval, a statistical range."
+  },
+  "z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the z-score or test statistic used to assess significance."
+  },
+  "P": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the p-value, a statistical measure of probability/significance."
+  }
+}

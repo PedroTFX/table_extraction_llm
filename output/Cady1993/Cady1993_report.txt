@@ -1,0 +1,65 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Cady1993\Cady1993.xlsx  (16 rows)
+PREDICTION   : ..\output\Cady1993\Cady1993.csv  (22 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Host spider' -> 'Host spider(s)'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 16
+  spurious, in scope  : 22   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 16 MISSED ROWS MISSED
+  species not in prediction                  15
+  species present, trait missing              0
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'anyphaena californica'      ->  'anyphaena californica(banks' x1
+  -> 1 substitution explains 1 of 16 misses (6%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (9 distinct), closest predicted name:
+     gt 'Ogcodes pallidipennis'             ~0.80~  pred 'Ogcodes pallidipennis (Loew, 1866)'   x4
+     gt 'Ogcodes borealis'                  ~0.82~  pred 'Ogcodes borealis Cole, 1919'   x3
+     gt 'Acrocera bimaculata'               ~0.79~  pred 'Acrocera bimaculata (Loew, 1866)'   x2
+     gt 'Exetasis eickstedtae'              ~0.71~  pred 'Exetasis eickstedtaeSchlinger, 1972'   x1
+     gt 'Turbopsebius sulphuripes'          ~0.77~  pred 'Turbopsebius sulphuripesLoew, 1869'   x1
+     gt 'Ogcodes eugonatus'                 ~0.80~  pred 'Ogcodes eugonatus (Loew, 1872)'   x1
+  -> 6 species mismatches explain 12 of 16 misses (75%) — systematic, not scattered
+
+  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (16 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pupation duration                                 8     8   
+  host spider(s)                                    8    14   Δ+6 (split?)

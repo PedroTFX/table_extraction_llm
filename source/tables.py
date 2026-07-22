@@ -267,22 +267,28 @@ def _defuse_repeated_header(cells, columns, min_frac=0.6):
 
 
 def _salvage_identifier_columns(columns, body_rows, ncols):
-    """Rescue a blank-header column that actually holds identifiers.
+    """Rescue a blank-header column that actually holds the row identifiers.
 
-    MinerU sometimes drops a table's top-left corner cell, so the species/taxa
-    column arrives with an empty header; _build_columns marks it synthetic and
-    the rest of the pipeline ignores it — silently discarding the column the
-    whole extraction keys on. A real identifier column is structurally distinct
-    from an incidental blank spacer: its values are mostly present, mostly
-    non-numeric text, and highly distinct (one taxon per row).
+    A well-formed table names its key column ('Species', 'Taxon', ...), but MinerU
+    often drops that top-left header cell, so the column arrives blank-headered,
+    is marked synthetic, and is silently discarded — even though its cells ARE the
+    identifiers. We recover it STRUCTURALLY, without knowing what the values mean:
+    the identifier is the row-LABEL column — the leftmost synthetic column whose
+    cells are populated and mostly text, as opposed to the numeric value columns
+    to its right.
 
-    This runs BEFORE record assembly and anchor selection, judging each synthetic
-    column straight from the raw body cells, and un-marks the first column that
-    qualifies so it becomes the anchor and reaches mapping. Only the `synthetic`
-    flag flips — no column is renamed or moved."""
+    Distinctness is deliberately NOT required. A real key repeats whenever rows
+    are grouped — a family spanning 'Mean' and 'Range' sub-rows (a rowspan), a
+    genus heading several species — and the old 'mostly distinct' test threw those
+    away. Text-vs-numeric is the honest signal for label-vs-value; position
+    (leftmost) resolves which text column is the primary key when a secondary
+    label column (e.g. a 'Mean'/'Range' dimension) is also present, per table
+    convention. That secondary column is left for the mapper to interpret.
+
+    Runs BEFORE record assembly/anchor selection; flips only the `synthetic` flag."""
     for col in columns:
         if not col.synthetic:
-            return                         # a real identifier already exists
+            return                         # a real (header-named) identifier exists
         vals = []
         for cells in body_rows:
             v = cells[col.index].strip() if col.index < len(cells) else ""
@@ -291,20 +297,22 @@ def _salvage_identifier_columns(columns, body_rows, ncols):
         if len(nonempty) < max(2, len(vals) // 2):
             continue                       # too sparse to be the identifier
         nonnumeric = sum(1 for v in nonempty if not _looks_numeric(v))
-        distinct = len(set(nonempty))
-        if nonnumeric / len(nonempty) >= 0.7 and distinct / len(nonempty) >= 0.7:
-            col.synthetic = False
-            # give it a real, neutral name so (a) the LLM mapper doesn't see a
-            # literal '__col0' header and (b) it can't be mistaken for a meta key
-            # (record meta uses '_'-prefixed keys). Disambiguate on the off chance
-            # 'identifier' already exists.
-            existing = {c.name for c in columns if c is not col}
-            new_name = "identifier"
-            k = 2
-            while new_name in existing:
-                new_name = f"identifier ({k})"; k += 1
-            col.name = new_name
-            return
+        if nonnumeric / len(nonempty) < 0.7:
+            continue                       # mostly numbers -> a value column, not labels
+        if len(set(nonempty)) < 2:
+            continue                       # a single repeated constant is not an identifier
+        col.synthetic = False
+        # give it a real, neutral name so (a) the LLM mapper doesn't see a
+        # literal '__col0' header and (b) it can't be mistaken for a meta key
+        # (record meta uses '_'-prefixed keys). Disambiguate on the off chance
+        # 'identifier' already exists.
+        existing = {c.name for c in columns if c is not col}
+        new_name = "identifier"
+        k = 2
+        while new_name in existing:
+            new_name = f"identifier ({k})"; k += 1
+        col.name = new_name
+        return
 
 
 def _find_header_line(lines):
@@ -332,34 +340,156 @@ def _find_header_line(lines):
     return 0
 
 
+_BINOMIAL_RE = re.compile(r"\b([A-Z][a-z]{2,})\s+([a-z]{3,})\b")
+_ABBREV_BINOMIAL_RE = re.compile(r"\b([A-Z])\.\s*([a-z]{3,})\b")
+
+
+def find_binomial_candidates(text: str, top: int = 8) -> list:
+    """Rank 'Genus species' candidates in a paper's text, deterministically.
+
+    For a single-species paper the study organism never appears in a table
+    column — it is stated in the title/abstract and then referred to throughout —
+    so the tables have no identifier column and are dropped. This recovers the
+    candidates so a later step can attribute the tables to a species.
+
+    Nothing is hardcoded and no species list is consulted; ranking uses three
+    signals that any paper provides:
+
+      * ABBREVIATION SUPPORT (weighted heaviest) — a real binomial gets written
+        out once and abbreviated after: 'Halictus ligatus' ... 'H. ligatus'. An
+        accidental capitalised word pair ('The following') is never abbreviated
+        that way, so this alone separates species from prose noise.
+      * FREQUENCY — the study organism is mentioned repeatedly.
+      * HEAD POSITION — title/abstract mentions count extra.
+
+    Returns [{name, mentions, abbrev_mentions, score}] best first.
+    """
+    if not text:
+        return []
+    counts: dict = {}
+    for m in _BINOMIAL_RE.finditer(text):
+        key = (m.group(1), m.group(2))
+        counts[key] = counts.get(key, 0) + 1
+    abbrev: dict = {}
+    for m in _ABBREV_BINOMIAL_RE.finditer(text):
+        key = (m.group(1), m.group(2))
+        abbrev[key] = abbrev.get(key, 0) + 1
+
+    head = text[:3000].lower()
+    scored = []
+    for (genus, epithet), n in counts.items():
+        ab = abbrev.get((genus[0], epithet), 0)
+        score = n + 5 * ab + (3 if f"{genus.lower()} {epithet}" in head else 0)
+        scored.append((score, n, ab, f"{genus} {epithet}"))
+    scored.sort(key=lambda x: (-x[0], -x[1], x[3]))
+    return [{"name": nm, "mentions": n, "abbrev_mentions": ab, "score": sc}
+            for sc, n, ab, nm in scored[:top]]
+
+
+def _numeric_profile(rows: list, ncols: int) -> list:
+    """Which column positions are predominantly numeric across these rows."""
+    prof = []
+    for c in range(ncols):
+        vals = [r[c] for r in rows if c < len(r) and str(r[c]).strip()]
+        if not vals:
+            prof.append(False)
+            continue
+        prof.append(sum(_looks_numeric(v) for v in vals) >= len(vals) * 0.7)
+    return prof
+
+
+def is_headerless_continuation(prev: "Table", raw_text: str) -> bool:
+    """True if `raw_text` is the CONTINUATION of `prev` across a page break, with
+    no header of its own.
+
+    A long species table split over pages arrives as several <table> blocks, and
+    the later blocks usually do not repeat the header — they start straight at a
+    data row ('Paradromius linearis | 4 | 3 | carnivorous | 4.5'). parse_table
+    would take that first species as the header, losing it AND giving the fragment
+    a nonsense schema that never groups with its parent, so every species in the
+    fragment silently disappears.
+
+    Detection is deterministic and deliberately conservative — all must hold:
+      1. same column count as `prev` (allowing a trailing-pipe off-by-one);
+      2. `prev` has at least one column that is numeric in its DATA — the
+         signature we can test the fragment's first row against;
+      3. the fragment's first row is numeric in those same positions, i.e. it
+         reads as DATA, not as labels (a real header puts text in those columns);
+      4. the first row does NOT reuse `prev`'s header vocabulary — that would be
+         a REPEATED header, which the parser already handles, not a continuation.
+    """
+    if prev is None or not prev.columns:
+        return False
+    lines = [l for l in (ln.strip() for ln in raw_text.strip().splitlines()) if l]
+    if not lines:
+        return False
+
+    ncols = len(prev.columns)
+    first = _split_row(lines[0])
+    if abs(len(first) - ncols) > 1:                    # (1) width must match
+        return False
+    first = (first + [""] * ncols)[:ncols]
+
+    prev_rows = [[str(r.get(c.name, "")) for c in prev.columns]
+                 for r in prev.data_records()]
+    if not prev_rows:
+        return False
+    prof = _numeric_profile(prev_rows, ncols)
+    if not any(prof):                                  # (2) need a numeric signature
+        return False
+
+    for c, isnum in enumerate(prof):                   # (3) first row must be data
+        if isnum and first[c].strip() and not _looks_numeric(first[c]):
+            return False
+
+    hdr_tokens = {w for col in prev.columns
+                  for w in re.findall(r"[a-z]+", col.name.lower())}
+    row_tokens = [w for v in first for w in re.findall(r"[a-z]+", str(v).lower())]
+    if row_tokens and hdr_tokens:                      # (4) not a repeated header
+        if sum(w in hdr_tokens for w in row_tokens) / len(row_tokens) >= 0.6:
+            return False
+    return True
+
+
 def parse_table(table: str, source: Optional[str] = None, table_index: int = 0,
-                merge_subheaders: bool = True) -> Table:
+                merge_subheaders: bool = True,
+                header_override: Optional[list] = None) -> Table:
     """Parse one cleaned pipe-table into a fully-aligned :class:`Table`.
 
     Tolerant of: trailing pipes, ragged rows (short rows pad with '', long rows
     truncate), blank/merged header cells, footnote markers and nbsp in headers.
     If ``merge_subheaders`` and the second row is a units/continuation row (e.g.
     '| (mm) | (mm) |'), it is folded into the header instead of becoming data.
+
+    ``header_override`` supplies the header from OUTSIDE the text, for a page
+    continuation fragment that carries no header of its own (see
+    is_headerless_continuation). Every line is then treated as data, so the first
+    species is not eaten as a header row.
     """
     lines = [l for l in (ln.strip() for ln in table.strip().splitlines()) if l]
     if not lines:
         return Table(columns=[], raw=table, source=source, table_index=table_index)
 
-    hdr_i = _find_header_line(lines)
-    if hdr_i > 0:
-        lines = lines[hdr_i:]                          # drop caption/blank rows above header
-    columns = _build_columns(_split_row(lines[0]))
-    ncols = len(columns)
+    if header_override:
+        columns = _build_columns(list(header_override))
+        ncols = len(columns)
+        body_start = 0                                 # no header line to consume
+    else:
+        hdr_i = _find_header_line(lines)
+        if hdr_i > 0:
+            lines = lines[hdr_i:]                      # drop caption/blank rows above header
+        columns = _build_columns(_split_row(lines[0]))
+        ncols = len(columns)
 
-    body_start = 1
-    if merge_subheaders and len(lines) > 1:
-        sub = _split_row(lines[1])
-        sub = sub + [""] * (ncols - len(sub)) if len(sub) < ncols else sub
-        if _looks_like_subheader(sub, columns):
-            columns = _merge_header(columns, sub)
-            body_start = 2          # consume the units row
-            # rebuild lookups now that names changed
-            columns = list(columns)
+        body_start = 1
+        if merge_subheaders and len(lines) > 1:
+            sub = _split_row(lines[1])
+            sub = sub + [""] * (ncols - len(sub)) if len(sub) < ncols else sub
+            if _looks_like_subheader(sub, columns):
+                columns = _merge_header(columns, sub)
+                body_start = 2          # consume the units row
+                # rebuild lookups now that names changed
+                columns = list(columns)
 
     # Rescue a dropped-corner identifier column before choosing the anchor, so
     # the anchor lands on the real identifier rather than the next column over.
@@ -580,9 +710,20 @@ def _schwartz_hearst(short: str, long: str) -> Optional[str]:
 
 
 def _abbrev_from_term_paren(token: str, text: str) -> Optional[str]:
-    """Shape: 'full term (ABBR)'  e.g. 'intertegular distance (ITD)'."""
+    """Shape: 'full term (ABBR)'  e.g. 'intertegular distance (ITD)'.
+
+    The term is the phrase IMMEDIATELY before '(ABBR)'. In a methods sentence that
+    lists many pairs — 'scape length (SL), femur length (FL), ...' — the window
+    must not reach back across the previous clause, or Schwartz-Hearst matches a
+    garbled span crossing the earlier abbreviation ('femur length' bleeding into
+    '...scape length SL ... femur length'). So cut the context at the last
+    clause/paren boundary before the match."""
     for m in re.finditer(r"\(\s*" + re.escape(token) + r"\s*\)", text):
-        words = re.findall(r"[A-Za-z][A-Za-z\-]*", text[:m.start()])
+        context = text[:m.start()]
+        cut = max((context.rfind(ch) for ch in ",;.:()"), default=-1)
+        if cut != -1:
+            context = context[cut + 1:]            # keep only the current clause
+        words = re.findall(r"[A-Za-z][A-Za-z\-]*", context)
         if not words:
             continue
         window = " ".join(words[-(2 * len(token) + 5):])
@@ -637,6 +778,11 @@ def find_abbreviation_definitions(text: str, tokens: Iterable[str]) -> dict:
     out: dict = {}
     if not text:
         return out
+    # The raw paper still has inline HTML (<sup> footnote markers, entities); the
+    # word-extraction below would otherwise pick up a tag name as a word — e.g.
+    # 'mandible<sup></sup> length (ML)' resolving ML to 'mandible sup sup length'.
+    from text_manager import strip_inline_markup
+    text = strip_inline_markup(text)
     for token in dict.fromkeys(t for t in tokens if t):
         for shape_name, fn in _ABBREV_SHAPES:
             term = fn(token, text)

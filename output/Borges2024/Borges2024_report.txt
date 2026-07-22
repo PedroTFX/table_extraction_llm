@@ -1,0 +1,73 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Borges2024\Borges2024.xlsx  (23 rows)
+PREDICTION   : ..\output\Borges2024\Borges2024.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 23
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 23 MISSED ROWS MISSED
+  species not in prediction                  23
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Scymnus nubilus'                    (nothing similar in the prediction)   x23
+  -> 1 species mismatch explains 23 of 23 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Borges2024_misses.csv, Borges2024_misses_summary.json (23 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  fecundity when fed aphis fabae                    1     0   GT-ONLY
+  female weight when fed aphis fabae                1     0   GT-ONLY
+  fertility when fed aphis fabae                    1     0   GT-ONLY
+  immature survival when fed aphis fabae            1     0   GT-ONLY
+  immature development time when fed aphis fabae    1     0   GT-ONLY
+  incubation time when fed aphis fabae              1     0   GT-ONLY
+  male weight when fed aphis fabae                  1     0   GT-ONLY
+  oviposition period when fed aphis fabae           1     0   GT-ONLY
+  pre-oviposition time when fed aphis fabae         1     0   GT-ONLY
+  oviposition rate when fed aphis fabae             1     0   GT-ONLY
+  fecundity when fed myzus persicae                 1     0   GT-ONLY
+  female weight when fed myzus persicae             1     0   GT-ONLY
+  fertility when fed myzus persicae                 1     0   GT-ONLY
+  immature survival when fed myzus persicae         1     0   GT-ONLY
+  immature development time when fed myzus persicae    1     0   GT-ONLY
+  incubation time when fed myzus persicae           1     0   GT-ONLY
+  male weight when fed myzus persicae               1     0   GT-ONLY
+  oviposition period when fed myzus persicae        1     0   GT-ONLY
+  pre-oviposition time when fed myzus persicae      1     0   GT-ONLY
+  oviposition rate when fed myzus persicae          1     0   GT-ONLY
+  sex ratio when fed myzus persicae                 2     0   GT-ONLY
+  locality                                          1     0   GT-ONLY

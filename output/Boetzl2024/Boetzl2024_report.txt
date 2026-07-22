@@ -1,0 +1,70 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Boetzl2024\Boetzl_2024.xlsx  (482 rows)
+PREDICTION   : ..\output\Boetzl2024\Boetzl2024.csv  (423 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'mean body size [mm]' -> 'body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 280
+  missed (FN)         : 202
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 141   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.662 / 0.581 / 0.619   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.993 / 0.581 / 0.733   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.581   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            141
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    280  0.000  <-- low
+  measurementMethod             0    280  0.000  <-- low
+  measurementUnit             141    141  1.000
+  measurementStatistic        280    280  1.000
+  measurementRemarks            0      0    n/a
+  sex                         280    280  1.000
+  lifeStage                   280    280  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    280  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 202 MISSED ROWS MISSED
+  species not in prediction                 200
+  species present, trait missing              0
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'carnivorous'                ->  'granivorous'                x1
+     'granivorous'                ->  'carnivorous'                x1
+  -> 2 substitutions explain 2 of 202 misses (1%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (100 distinct), closest predicted name:
+     gt 'Carabus monilis'                   ~0.75~  pred 'Carabus coriaceus'   x2
+     gt 'Carabus nemoralis'                 ~0.77~  pred 'Carabus auratus'   x2
+     gt 'Carabus problematicus'             ~0.80~  pred 'Carabus auratus'   x2
+     gt 'Carabus purpurascens'              ~0.78~  pred 'Carabus auratus'   x2
+     gt 'Carabus ulrichii'                  ~0.75~  pred 'Carabus auratus'   x2
+     gt 'Carabus violaceus'                 ~0.83~  pred 'Carabus coriaceus'   x2
+  -> 6 species mismatches explain 12 of 202 misses (6%) — scattered; no single cause
+
+  full miss detail saved -> Boetzl2024_misses.csv, Boetzl2024_misses_summary.json (202 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       241   141   Δ-100 (split?)
+  diet                                            241   141   Δ-100 (split?)
+  total individuals                                 0   141   PRED-ONLY

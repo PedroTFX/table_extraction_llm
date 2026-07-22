@@ -34,9 +34,14 @@ Usage
 """
 
 import argparse
+import contextlib
 import csv
+import io
+import json
 import re
+import traceback
 import unicodedata
+from pathlib import Path
 from collections import Counter, defaultdict
 from decimal import Decimal, InvalidOperation
 
@@ -383,7 +388,11 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
         print(f"  {col:<24} {agree:>6} {total:>6} {acc_s:>6}{flag}")
 
     # --- WHY the misses missed, instead of a sample to read by eye ---
-    print_failure_attribution(missing, pred, decode)
+    # Save the COMPLETE miss breakdown next to the prediction CSV (same folder,
+    # same stem): <stem>_misses.csv and <stem>_misses_summary.json.
+    from pathlib import Path as _Path
+    detail_stem = str(_Path(pred_path).with_suffix("")) if pred_path else None
+    print_failure_attribution(missing, pred, decode, detail_path=detail_stem)
 
     # --- measurementType coverage breakdown (very useful diagnostic) ---
     print_type_coverage(gt, pred, decode)
@@ -398,8 +407,11 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
     }
 
 
-def print_failure_attribution(missing, pred, decode, top=6):
-    """Say WHY each missed row missed, instead of printing rows to eyeball.
+F_ID, F_TYPE, F_VAL = "verbatimIdentification", "measurementType", "measurementValue"
+
+
+def attribute_misses(missing, pred, decode):
+    """Categorize every missed GT row by WHICH axis it failed on.
 
     A row is keyed on (species, type, value), so a miss failed on exactly one of
     those axes, and which one is computable:
@@ -408,16 +420,10 @@ def print_failure_attribution(missing, pred, decode, top=6):
         species there, that trait not extracted   -> trait axis
         species+trait there, value disagrees      -> value axis
 
-    Then the dominant pattern on each axis is named and counted. Every zero-score
-    paper investigated by hand so far turned out to be ONE systematic
-    substitution repeated N times ('predator'->'Carnivorous' x43, 'Yes'->
-    'macropterous' x87, 'Aphaenogaster ashmeadi' vs the same name with a footnote
-    asterisk), so the question worth answering automatically is "is this one bug
-    or a hundred?" — the percentage on the verdict line answers it.
+    Returns a dict with the aggregate counters AND a complete per-row list, so
+    both the console summary and the saved files draw from the same computation
+    (no risk of the printed top-6 and the saved file disagreeing).
     """
-    if not missing:
-        return
-    F_ID, F_TYPE, F_VAL = "verbatimIdentification", "measurementType", "measurementValue"
     n = lambda r, f: normalize_value(r.get(f, ""), decode)
 
     pred_species = {n(r, F_ID) for r in pred}
@@ -432,18 +438,126 @@ def print_failure_attribution(missing, pred, decode, top=6):
     sub_value = Counter()      # (gt_value, pred_value) -> count
     sub_species = Counter()    # gt_species -> count      (absent from pred)
     sub_trait = Counter()      # (species-less) gt_type -> count
+    rows = []                  # one entry per missed row, fully attributed
     for r in missing:
         s, t, v = n(r, F_ID), n(r, F_TYPE), n(r, F_VAL)
+        gid, gtype, gval = r.get(F_ID, ""), r.get(F_TYPE, ""), r.get(F_VAL, "")
         if s not in pred_species:
             causes["species not in prediction"] += 1
-            sub_species[r.get(F_ID, "")] += 1
+            sub_species[gid] += 1
+            rows.append({"cause": "species not in prediction",
+                         "verbatimIdentification": gid, "measurementType": gtype,
+                         "measurementValue": gval, "pred_collision_value": ""})
         elif t not in pred_types_of[s]:
             causes["species present, trait missing"] += 1
-            sub_trait[r.get(F_TYPE, "")] += 1
+            sub_trait[gtype] += 1
+            rows.append({"cause": "species present, trait missing",
+                         "verbatimIdentification": gid, "measurementType": gtype,
+                         "measurementValue": gval, "pred_collision_value": ""})
         else:
             causes["species+trait present, value differs"] += 1
             got = pred_values_of[(s, t)]
-            sub_value[(v, got[0] if got else "")] += 1
+            pred_v = got[0] if got else ""
+            sub_value[(v, pred_v)] += 1
+            rows.append({"cause": "species+trait present, value differs",
+                         "verbatimIdentification": gid, "measurementType": gtype,
+                         "measurementValue": gval, "pred_collision_value": pred_v})
+
+    return {"causes": causes, "sub_value": sub_value, "sub_species": sub_species,
+            "sub_trait": sub_trait, "rows": rows, "pred_species": pred_species}
+
+
+def _closest_pred_species(name, preds):
+    """Best-matching predicted species name and its similarity, or ('', 0.0)."""
+    best, score = "", 0.0
+    for p in preds:
+        sc = _type_sim(name, p)
+        if sc > score:
+            best, score = p, sc
+    return best, score
+
+
+def write_failure_details(attr, pred, path):
+    """Write EVERY missed row (not just the printed top-6) to two files:
+
+      <path>_misses.csv          one row per miss, tagged with its cause and,
+                                 for species misses, the closest predicted name
+      <path>_misses_summary.json the full untruncated counters (every value
+                                 substitution, every absent species, every
+                                 missing trait), most-frequent first
+
+    `path` is a stem (no extension); the suffixes above are appended.
+    """
+    from pathlib import Path
+    rows = attr["rows"]
+    preds = sorted({r.get(F_ID, "") for r in pred})
+
+    # cache closest-name lookup per distinct gt species (the expensive part).
+    # Below the console's 0.55 threshold there is no plausible match, so store a
+    # blank rather than a misleading low-scoring name.
+    NEAR = 0.55
+    closest = {}
+    for r in rows:
+        if r["cause"] == "species not in prediction":
+            gid = r["verbatimIdentification"]
+            if gid not in closest:
+                best, score = _closest_pred_species(gid, preds)
+                closest[gid] = (best, score) if score >= NEAR else ("", score)
+
+    csv_path = f"{path}_misses.csv"
+    with open(csv_path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=[
+            "cause", "verbatimIdentification", "measurementType",
+            "measurementValue", "pred_collision_value",
+            "closest_pred_species", "closest_score"])
+        w.writeheader()
+        for r in rows:
+            best, score = ("", "")
+            if r["cause"] == "species not in prediction":
+                b, s = closest.get(r["verbatimIdentification"], ("", 0.0))
+                best, score = b, f"{s:.2f}"
+            w.writerow({**r, "closest_pred_species": best, "closest_score": score})
+
+    summary = {
+        "total_missed": len(rows),
+        "causes": dict(attr["causes"]),
+        "value_substitutions": [
+            {"gt": g, "pred": p, "count": c}
+            for (g, p), c in attr["sub_value"].most_common()],
+        "species_absent": [
+            {"gt_species": name, "count": c,
+             "closest_pred_species": closest.get(name, ("", 0.0))[0],
+             "closest_score": round(closest.get(name, ("", 0.0))[1], 3)}
+            for name, c in attr["sub_species"].most_common()],
+        "traits_missing": [
+            {"measurementType": name, "count": c}
+            for name, c in attr["sub_trait"].most_common()],
+    }
+    json_path = f"{path}_misses_summary.json"
+    Path(json_path).write_text(json.dumps(summary, indent=2, ensure_ascii=False),
+                               encoding="utf-8")
+    print(f"\n  full miss detail saved -> {Path(csv_path).name}, "
+          f"{Path(json_path).name} ({len(rows)} row(s))")
+
+
+def print_failure_attribution(missing, pred, decode, top=6, detail_path=None):
+    """Say WHY each missed row missed, instead of printing rows to eyeball.
+
+    The console shows the dominant pattern on each axis (top `top`) and a verdict
+    line answering "is this one bug or a hundred?". If `detail_path` is given, the
+    COMPLETE, untruncated breakdown is also saved via write_failure_details.
+
+    Every zero-score paper investigated by hand so far turned out to be ONE
+    systematic substitution repeated N times ('predator'->'Carnivorous' x43,
+    'Yes'->'macropterous' x87, 'Aphaenogaster ashmeadi' vs the same name with a
+    footnote asterisk), so the verdict percentage answers whether it's systematic.
+    """
+    if not missing:
+        return
+    attr = attribute_misses(missing, pred, decode)
+    causes = attr["causes"]
+    sub_value, sub_species, sub_trait = (attr["sub_value"], attr["sub_species"],
+                                         attr["sub_trait"])
 
     total = len(missing)
     print(f"\nWHY THE {total} MISSED ROWS MISSED")
@@ -474,11 +588,7 @@ def print_failure_attribution(missing, pred, decode, top=6):
               f"({len(sub_species)} distinct), closest predicted name:")
         preds = sorted({r.get(F_ID, "") for r in pred})
         for name, c in sub_species.most_common(top):
-            best, score = "", 0.0
-            for p in preds:
-                sc = _type_sim(name, p)
-                if sc > score:
-                    best, score = p, sc
+            best, score = _closest_pred_species(name, preds)
             near = (f"  ~{score:.2f}~  pred {best!r}" if score >= 0.55
                     else "   (nothing similar in the prediction)")
             print(f"     gt {name!r:34}{near}   x{c}")
@@ -489,6 +599,10 @@ def print_failure_attribution(missing, pred, decode, top=6):
         for name, c in sub_trait.most_common(top):
             print(f"     {name!r:34} x{c}")
         verdict("missing trait", "missing traits", sub_trait)
+
+    # Everything above is truncated to `top`. Save the COMPLETE breakdown too.
+    if detail_path:
+        write_failure_details(attr, pred, detail_path)
 
 
 def print_type_coverage(gt, pred, decode, sim_threshold=0.55):
@@ -547,10 +661,104 @@ def print_type_coverage(gt, pred, decode, sim_threshold=0.55):
               "readability; credited only if the semantic matcher merges them)")
 
 
+def evaluate_all(papers_root, output_root, key_fields, decode, *,
+                 semantic=True, use_llm=True, scope="measurementType"):
+    """Re-run evaluation over every already-extracted paper (no pipeline).
+
+    For each output/<paper>/<paper>.csv, find the matching ground-truth xlsx in
+    that paper's SOURCE folder, evaluate, write <paper>_report.txt (+ the
+    *_misses* files), and collect a per-paper row. Rewrites <output>/summary.csv.
+
+    Mirrors run_all.py's evaluation step, so its numbers match summary.csv.
+    """
+    from mineru_extract import classify_folder   # lazy: only --all needs it
+
+    papers_root, output_root = Path(papers_root), Path(output_root)
+    if not output_root.is_dir():
+        raise SystemExit(f"output dir not found: {output_root.resolve()}")
+
+    papers = sorted(d.name for d in output_root.iterdir()
+                    if d.is_dir() and (d / f"{d.name}.csv").exists())
+    if not papers:
+        raise SystemExit(f"no paper CSVs found under {output_root}")
+
+    print(f"Re-evaluating {len(papers)} paper(s) under {output_root}  "
+          f"(semantic={semantic}, use_llm={use_llm}, decode={decode})\n")
+
+    def ground_truth_for(paper):
+        folder = papers_root / paper
+        if not folder.is_dir():
+            return None
+        try:
+            _, results_path, _ = classify_folder(folder)
+        except Exception:
+            return None
+        return str(results_path) if results_path else None
+
+    summary = []
+    for paper in papers:
+        out_csv = output_root / paper / f"{paper}.csv"
+        report = output_root / paper / f"{paper}_report.txt"
+        try:
+            gt = ground_truth_for(paper)
+            if not gt or not Path(gt).exists():
+                print(f"  SKIP {paper}: no ground-truth xlsx")
+                summary.append({"paper": paper, "precision": "", "recall": "",
+                                "f1": "", "status": "no_ground_truth"})
+                continue
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                metrics = evaluate(str(out_csv), gt, key_fields, decode,
+                                   semantic=semantic, use_llm=use_llm, scope=scope)
+            report.write_text(buf.getvalue(), encoding="utf-8")
+            p, r, f = metrics["row"]
+            print(f"  OK   {paper:<28} P/R/F1 = {p:.3f}/{r:.3f}/{f:.3f}"
+                  f"  -> {report.name}")
+            summary.append({"paper": paper, "precision": round(p, 3),
+                            "recall": round(r, 3), "f1": round(f, 3),
+                            "status": "ok"})
+        except Exception as e:
+            print(f"  FAIL {paper}: {e}")
+            traceback.print_exc()
+            summary.append({"paper": paper, "precision": "", "recall": "",
+                            "f1": "", "status": f"FAIL: {e}"})
+
+    summary_path = output_root / "summary.csv"
+    with open(summary_path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["paper", "precision", "recall",
+                                           "f1", "status"])
+        w.writeheader()
+        w.writerows(summary)
+
+    ok = [s for s in summary if s["status"] == "ok"]
+    print("\n" + "=" * 70)
+    print(f"DONE. {len(summary)} paper(s). Summary -> {summary_path}")
+    if ok:
+        print(f"Evaluated {len(ok)} paper(s); mean F1 = "
+              f"{sum(s['f1'] for s in ok) / len(ok):.3f}")
+    print("=" * 70)
+    return summary
+
+
+# Defaults for --all mode; kept in sync with run_all.py.
+DEFAULT_PAPERS = "../data/un_processed_papers"
+DEFAULT_OUTPUT = "../output"
+
+
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser()
-    ap.add_argument("pred", help="prediction CSV (your output)")
-    ap.add_argument("gt", help="ground-truth xlsx")
+    ap = argparse.ArgumentParser(
+        description="Evaluate a prediction CSV against ground truth, or --all "
+                    "to re-evaluate every already-extracted paper.")
+    ap.add_argument("pred", nargs="?", help="prediction CSV (your output)")
+    ap.add_argument("gt", nargs="?", help="ground-truth xlsx")
+    ap.add_argument("--all", action="store_true",
+                    help="batch mode: re-evaluate every output/<paper>/<paper>.csv "
+                         "against its ground-truth xlsx and rewrite summary.csv "
+                         "(ignores the pred/gt positionals)")
+    ap.add_argument("--papers", default=DEFAULT_PAPERS,
+                    help="[--all] papers source root, for locating ground-truth xlsx")
+    ap.add_argument("--output", default=DEFAULT_OUTPUT,
+                    help="[--all] output root holding <paper>/<paper>.csv")
     ap.add_argument("--decode", action="store_true",
                     help="apply legend code -> term decoding before comparison")
     ap.add_argument("--key", nargs="+", default=DEFAULT_KEY,
@@ -558,15 +766,28 @@ if __name__ == "__main__":
     ap.add_argument("--semantic-types", action="store_true",
                     help="remap predicted measurementType names onto the "
                          "ground-truth wording for the same trait before matching")
+    ap.add_argument("--no-semantic", action="store_true",
+                    help="[--all] disable semantic remapping (on by default in "
+                         "--all, to match the pipeline / summary.csv)")
     ap.add_argument("--scope", default="measurementType", choices=SCOPE_CHOICES,
                     help="which predicted rows GT is entitled to judge. "
                          "'measurementType' (default): a row whose trait GT never "
                          "records is out-of-scope, not a false positive. "
                          "'none': strict, every extra row is a false positive.")
     ap.add_argument("--no-llm", action="store_true",
-                    help="with --semantic-types, use the deterministic pass only "
+                    help="with semantic remapping, use the deterministic pass only "
                          "(no Ollama calls)")
     args = ap.parse_args()
-    evaluate(args.pred, args.gt, args.key, args.decode,
-             semantic=args.semantic_types, use_llm=not args.no_llm,
-             scope=args.scope)
+
+    if args.all:
+        # In batch mode semantic remapping is ON by default (matches run_all.py);
+        # --no-semantic turns it off.
+        evaluate_all(args.papers, args.output, args.key, args.decode,
+                     semantic=not args.no_semantic, use_llm=not args.no_llm,
+                     scope=args.scope)
+    else:
+        if not args.pred or not args.gt:
+            ap.error("pred and gt are required unless --all is given")
+        evaluate(args.pred, args.gt, args.key, args.decode,
+                 semantic=args.semantic_types, use_llm=not args.no_llm,
+                 scope=args.scope)

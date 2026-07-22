@@ -1,0 +1,59 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the taxonomic names of the insects studied in the record.",
+    "category": "null",
+    "reasoning_relevance": "The column likely serves as a taxonomic identifier rather than a measurable biological trait."
+  },
+  "Body size (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "It defines a physical property measured for the organism: body length in millimeters.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The text explicitly states that body size was measured in millimeters for various invertebrate groups.",
+    "value_type": "numeric",
+    "canonicalType": "Body size",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "Micro-habitat preference": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This names an ecological trait or preference observed for the insect regarding its habitat.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "This trait is used to calculate functional diversity based on the species' recorded preferences.",
+    "value_type": "categorical",
+    "canonicalType": "Micro-habitat preference",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study involves observing and sampling live organisms (ants and rove beetles) in their natural environment (domestic gardens) along an urbanization gradient to measure ecological traits like functional diversity, generalist proportion, and habitat preferences. This falls under the definition of HumanObservation for behavioral/ecological/natural-history traits.",
+    "measurementMethod": "Field surveys using pitfall traps (5.8 cm diameter) and hay bait traps placed in the grassland areas of domestic gardens along a rural–urban gradient, operated multiple times over 7 days during summer 2018.",
+    "measurementMethod_reasoning": "The text specifies that for surveying ground-dwelling invertebrates including ants and rove beetles, 'We used pitfall traps (plastic beakers, 5.8 cm diameter, containing saltwater as a preservative, that were buried flush with the ground) and hay bait traps (moist hay in coarse plastic netting placed in direct contact with the ground)' to sample all groups. Five of each trap type were placed in the grassland of every garden."
+  },
+  "Dry tolerant": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "It names a physiological characteristic or tolerance assessed for the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Species were divided into those showing a preference for dry conditions or moist/wet ones.",
+    "value_type": "categorical",
+    "canonicalType": "Dry tolerant",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data on dry tolerance (preference for dry conditions) were derived from a field survey conducted in 35 domestic gardens along an urbanization gradient, where ground-dwelling invertebrates (ants and rove beetles) were sampled using pitfall traps and hay bait traps. This constitutes observing live organisms in situ.",
+    "measurementMethod": "Classification based on species' known or observed microhabitat preferences",
+    "measurementMethod_reasoning": "The study determined the proportion of dry-adapted species by classifying sampled invertebrate groups (ants and rove beetles) into those showing a preference for dry conditions versus moist/wet conditions, utilizing morphological and life-history traits recorded in Table 1."
+  },
+  "Habitat generalist": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This names an ecological classification or behavioral trait assessed for the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The study classified species as habitat generalists or specialists based on their biology.",
+    "value_type": "categorical",
+    "canonicalType": "Habitat generalist",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The determination of whether a species is a 'habitat generalist' is an ecological classification based on the observed traits and habitat preferences of living organisms (ground-dwelling invertebrates) surveyed in their natural environment (domestic gardens). This falls under behavioral/ecological trait assessment, which aligns with HumanObservation.",
+    "measurementMethod": "Classification of species into 'habitat generalist' or 'specialist' categories based on recorded traits and microhabitat preferences derived from field surveys.",
+    "measurementMethod_reasoning": "The study divided species into habitat generalists and specialists (Section 2.3). This classification was based on the morphological and life-history traits, as well as the microhabitat preference of the invertebrate groups collected during the field surveys using pitfall traps and hay bait traps."
+  }
+}

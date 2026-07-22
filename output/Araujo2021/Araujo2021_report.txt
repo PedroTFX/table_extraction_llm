@@ -1,0 +1,78 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Araujo2021\Araujo2021.xlsx  (273 rows)
+PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (195 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 29
+  missed (FN)         : 244
+  spurious, in scope  : 166   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.149 / 0.106 / 0.124   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.149 / 0.106 / 0.124   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.106   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                24     29  0.828
+  measurementMethod             0     27  0.000  <-- low
+  measurementUnit              18     29  0.621
+  measurementStatistic         16     29  0.552
+  measurementRemarks            0      0    n/a
+  sex                          11     29  0.379  <-- low
+  lifeStage                    18     29  0.621
+  caste                         0     18  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     29  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 244 MISSED ROWS MISSED
+  species not in prediction                 224
+  species present, trait missing             14
+  species+trait present, value differs        6
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2025-01-02 00:00:00'        ->  '1.2'                        x2
+     'leg scopa'                  ->  'leg_scopa'                  x2
+     '2025-08-07 00:00:00'        ->  '8.7'                        x1
+     'plant parts'                ->  'plant_parts'                x1
+  -> 4 substitutions explain 6 of 244 misses (2%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (32 distinct), closest predicted name:
+     gt 'Andrena vilhenae'                  ~0.85~  pred 'A. vilhenae'   x7
+     gt 'Centris analis'                    ~0.68~  pred 'C. analis'   x7
+     gt 'Centris tarsata'                   ~0.67~  pred 'C. tarsata'   x7
+     gt 'Centris trigonoides'               ~0.67~  pred 'C. trigonoides'   x7
+     gt 'Euglossa cognata'                  ~0.62~  pred 'E. cognata'   x7
+     gt 'Euglossa despecta'                 ~0.65~  pred 'E. despecta'   x7
+  -> 6 species mismatches explain 42 of 244 misses (17%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Size'                        x7
+     'Elevation'                        x7
+  -> 2 missing traits explain 14 of 244 misses (6%) — scattered; no single cause
+
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (244 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        39     0   GT-ONLY
+  larval diet                                      25    25   
+  elevation                                        39     0   GT-ONLY
+  left posterior tibia length                      14    14   
+  left wing length                                 39    39   
+  left mandibula                                   25    25   
+  left tibia posterior                             25    25   
+  tongue length                                    14    14   
+  nesting material                                 39    39   
+  pollen transport                                 14    14   

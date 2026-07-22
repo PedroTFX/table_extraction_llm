@@ -25,8 +25,8 @@ from evaluate import evaluate, DEFAULT_KEY
 from mineru_extract import classify_folder
 
 # --- paths -----------------------------------------------------------------
-BASE = Path("C:/Users/Pedro Trindade/Documents/github/agents_test/data/un_processed_papers")
-OUTPUT_DIR = Path("C:/Users/Pedro Trindade/Documents/github/agents_test/output")
+BASE = Path("../data/un_processed_papers")
+OUTPUT_DIR = Path("../output")
 
 DECODE_EVAL = False     # values are already decoded by the pipeline
 SEMANTIC_EVAL = True    # remap predicted measurementType names onto GT wording

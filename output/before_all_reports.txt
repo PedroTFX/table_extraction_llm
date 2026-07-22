@@ -1,0 +1,695 @@
+######################################################################
+# AmbspergTraun1991_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (63 rows)
+PREDICTION   : ..\output\AmbspergTraun1991\AmbspergTraun1991.csv  (63 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 63
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                63     63  1.000
+  measurementMethod             0     16  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic         63     63  1.000
+  measurementRemarks            0      0    n/a
+  sex                          63     63  1.000
+  lifeStage                    63     63  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  feeding group                                    16    16   
+  microhabitat found                               30    30   
+  nesting group                                    17    17   
+
+
+######################################################################
+# Araujo2021_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Araujo2021\Araujo2021.xlsx  (273 rows)
+PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (195 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 29
+  missed (FN)         : 244
+  spurious, in scope  : 166   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.149 / 0.106 / 0.124   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.149 / 0.106 / 0.124   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.106   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                24     29  0.828
+  measurementMethod             0     27  0.000  <-- low
+  measurementUnit              18     29  0.621
+  measurementStatistic         16     29  0.552
+  measurementRemarks            0      0    n/a
+  sex                          11     29  0.379  <-- low
+  lifeStage                    18     29  0.621
+  caste                         0     18  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     29  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 244 MISSED ROWS MISSED
+  species not in prediction                 224
+  species present, trait missing             14
+  species+trait present, value differs        6
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2025-01-02 00:00:00'        ->  '1.2'                        x2
+     'leg scopa'                  ->  'leg_scopa'                  x2
+     '2025-08-07 00:00:00'        ->  '8.7'                        x1
+     'plant parts'                ->  'plant_parts'                x1
+  -> 4 substitutions explain 6 of 244 misses (2%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (32 distinct), closest predicted name:
+     gt 'Andrena vilhenae'                  ~0.85~  pred 'A. vilhenae'   x7
+     gt 'Centris analis'                    ~0.68~  pred 'C. analis'   x7
+     gt 'Centris tarsata'                   ~0.67~  pred 'C. tarsata'   x7
+     gt 'Centris trigonoides'               ~0.67~  pred 'C. trigonoides'   x7
+     gt 'Euglossa cognata'                  ~0.62~  pred 'E. cognata'   x7
+     gt 'Euglossa despecta'                 ~0.65~  pred 'E. despecta'   x7
+  -> 6 species mismatches explain 42 of 244 misses (17%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Size'                        x7
+     'Elevation'                        x7
+  -> 2 missing traits explain 14 of 244 misses (6%) — scattered; no single cause
+
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (244 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        39     0   GT-ONLY
+  larval diet                                      25    25   
+  elevation                                        39     0   GT-ONLY
+  left posterior tibia length                      14    14   
+  left wing length                                 39    39   
+  left mandibula                                   25    25   
+  left tibia posterior                             25    25   
+  tongue length                                    14    14   
+  nesting material                                 39    39   
+  pollen transport                                 14    14   
+
+
+######################################################################
+# Arnan2012_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Arnan2012\Arnan2012.xlsx  (361 rows)
+PREDICTION   : ..\output\Arnan2012\Arnan2012.csv  (390 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Critical thermal maximum' -> 'Critical Thermal Maximum'
+  'Maximal activity temperature' -> 'Maximum Activity Temperature'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 240
+  missed (FN)         : 121
+  spurious, in scope  : 90   <- GT covers this trait: real errors
+  spurious, out of scope: 60   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.615 / 0.665 / 0.639   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.727 / 0.665 / 0.695   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.665   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             60
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                60    240  0.250  <-- low
+  measurementMethod             0    210  0.000  <-- low
+  measurementUnit               0    180  0.000  <-- low
+  measurementStatistic         60    240  0.250  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         180    240  0.750
+  lifeStage                   210    240  0.875
+  caste                         0     60  0.000  <-- low
+  sampleSizeValue               0     30  0.000  <-- low
+  sampleSizeUnit                0     30  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    240  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 121 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             31
+  species+trait present, value differs       90
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'larvae in the nests during the whole year' ->  'larvae within the nests during the whole year' x22
+     'hundreds'                   ->  'hundreds of workers'        x17
+     'none'                       ->  'none (only defense of the nest)' x16
+     'food and/or territory'      ->  'defense of food or territory (foraging area)' x14
+     'thousands'                  ->  'thousands of workers'       x10
+     'larvae in the nests from march to september' ->  'larvae within the nests from march to september' x8
+  -> 6 substitutions explain 87 of 121 misses (72%) — systematic, not scattered
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Length'                      x31
+  -> 1 missing trait explains 31 of 121 misses (26%) — scattered; no single cause
+
+  full miss detail saved -> Arnan2012_misses.csv, Arnan2012_misses_summary.json (121 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  maximum activity temperature                     30    30   
+  month of peak activity                           30    30   
+  number workers/bait                               0    30   PRED-ONLY
+  body length or worker length                     31    30   Δ-1 (split?)
+  brood cycle                                      30    30   
+  n nests per colony                               30    30   
+  n queens per colony                              30    30   
+  colony population                                30    30   
+  critical thermal maximum                         30    30   
+  daily rhythm                                     30    30   
+  defense of resources                             30    30   
+  main food resource                               30    30   
+  polymorphism                                     30    30   
+  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)
+
+
+######################################################################
+# Attiwilli2022_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Attiwilli2022\Attiwilli2022.xlsx  (30 rows)
+PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (36 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body mass' -> ' Body mass '
+  'Proboscis length' -> 'Proboscis length '
+  'Wing length' -> 'Wing length '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 30
+  spurious, in scope  : 36   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 30 MISSED ROWS MISSED
+  species not in prediction                  30
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
+     gt 'Hesperiidae '                      ~1.00~  pred 'Hesperiidae(n=45)'   x6
+     gt 'Lycaenidae'                        ~1.00~  pred 'Lycaenidae(n=50)'   x6
+     gt 'Nymphalidae '                      ~1.00~  pred 'Nymphalidae(n=100)'   x6
+     gt 'Papilionidae'                      ~1.00~  pred 'Papilionidae(n=26)'   x6
+     gt 'Pieridae'                          ~1.00~  pred 'Pieridae(n=30)'   x6
+  -> 5 species mismatches explain 30 of 30 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Attiwilli2022_misses.csv, Attiwilli2022_misses_summary.json (30 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body mass                                        10    12   Δ+2 (split?)
+  proboscis length                                 10    12   Δ+2 (split?)
+  wing length                                      10    12   Δ+2 (split?)
+
+
+######################################################################
+# Baine2024_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Baine2024\Baine2024.xlsx  (97 rows)
+PREDICTION   : ..\output\Baine2024\Baine2024.csv  (5 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 97
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 5   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              5
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 97 MISSED ROWS MISSED
+  species not in prediction                  97
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (4 distinct), closest predicted name:
+     gt 'Aciurina luminaria'                 (nothing similar in the prediction)   x94
+     gt 'A. bigeloviae'                      (nothing similar in the prediction)   x1
+     gt 'A. maculata'                        (nothing similar in the prediction)   x1
+     gt 'A. trixa'                           (nothing similar in the prediction)   x1
+  -> 4 species mismatches explain 97 of 97 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Baine2024_misses.csv, Baine2024_misses_summary.json (97 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abdomen color                                     1     0   GT-ONLY
+  color of abdomen                                  4     0   GT-ONLY
+  abdomen glans color                               1     0   GT-ONLY
+  abdomen color ranges                              1     0   GT-ONLY
+  acrostichal                                       1     0   GT-ONLY
+  aculeus size                                      2     0   GT-ONLY
+  intra-alar color                                  1     0   GT-ONLY
+  postsutural supra-alar                            1     0   GT-ONLY
+  presutral supra-alar                              1     0   GT-ONLY
+  presence of dark stripe in anal cell              1     0   GT-ONLY
+  anepisternal color                                1     0   GT-ONLY
+  antenna color                                     1     0   GT-ONLY
+  subscutellum anterior half color                  1     0   GT-ONLY
+  subapical band extension                          1     0   GT-ONLY
+  number of vertical bands in cell c                1     0   GT-ONLY
+  basal marginal spot in cell m size                1     0   GT-ONLY
+  basal scutella color                              1     0   GT-ONLY
+  body color                                        1     0   GT-ONLY
+  body length                                       3     0   GT-ONLY
+  body morphology                                   1     0   GT-ONLY
+  body segmentacion                                 1     0   GT-ONLY
+  size of hyaline spot in cell br                   1     0   GT-ONLY
+  tarsal claw color                                 1     0   GT-ONLY
+  compound eye color                                1     0   GT-ONLY
+  costa color                                       1     0   GT-ONLY
+  color of the region surrounding crossvein r-m     1     0   GT-ONLY
+  scutum and dorsal portions of pleura color        1     0   GT-ONLY
+  epandrium color                                   1     0   GT-ONLY
+  eversible membrane color                          1     0   GT-ONLY
+  subscutellum posterior half color                 1     0   GT-ONLY
+  halteres color                                    1     0   GT-ONLY
+  head color                                        1     0   GT-ONLY
+  narrow interocular margin color                   1     0   GT-ONLY
+  katepisternal color                               1     0   GT-ONLY
+  legs color                                        1     0   GT-ONLY
+  subscutellum mediotergit color                    1     0   GT-ONLY
+  mouth color                                       1     0   GT-ONLY
+  notopleural color                                 1     0   GT-ONLY
+  oviscape color                                    1     0   GT-ONLY
+  ventral part of pleura color                      1     0   GT-ONLY
+  posterior spiracular plate rimae color            1     0   GT-ONLY
+  postalar color                                    1     0   GT-ONLY
+  postpronota color                                 1     0   GT-ONLY
+  proctiger color                                   1     0   GT-ONLY
+  scutellum color                                   1     0   GT-ONLY
+  setae color                                       1     0   GT-ONLY
+  setulae color                                     1     0   GT-ONLY
+  surstylus color                                   1     0   GT-ONLY
+  wing color                                        1     0   GT-ONLY
+  prensisetae combination                           1     0   GT-ONLY
+  most common parasitoid                            1     0   GT-ONLY
+  latest date of emergence                          1     0   GT-ONLY
+  mean latitudinal diameter                         1     0   GT-ONLY
+  postsutural dorsocentral                          1     0   GT-ONLY
+  egg laying spot                                   1     0   GT-ONLY
+  period of emergence                               1     0   GT-ONLY
+  forefemur setae morphology                        1     0   GT-ONLY
+  number of frontal setae                           1     0   GT-ONLY
+  gall shape                                        1     0   GT-ONLY
+  gall size                                         1     0   GT-ONLY
+  gall surface                                      1     0   GT-ONLY
+  genitalia structures tips                         1     0   GT-ONLY
+  geographical range                                9     0   GT-ONLY
+  gnathocephalon morphology                         1     0   GT-ONLY
+  host plant habitat                                1     0   GT-ONLY
+  host plant locality                               1     0   GT-ONLY
+  host plant                                        1     0   GT-ONLY
+  narrow interocular margin surface                 1     0   GT-ONLY
+  puparium length                                   2     0   GT-ONLY
+  wing length or wing pattern character             1     5   Δ+4 (split?)
+  number of marginal spots in r                     1     0   GT-ONLY
+  mouth structure                                   1     0   GT-ONLY
+  notopleural number                                1     0   GT-ONLY
+  number of ocellar setae                           1     0   GT-ONLY
+  number of orbital setae                           1     0   GT-ONLY
+  posterior spiracular plate rimae number           1     0   GT-ONLY
+  pupation period                                   1     0   GT-ONLY
+  phallus size                                      2     0   GT-ONLY
+  ventral thoracic pleura                           1     0   GT-ONLY
+  puparium width                                    2     0   GT-ONLY
+  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)
+
+
+######################################################################
+# Barber2017_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Barber2017\Barber2017.xlsx  (268 rows)
+PREDICTION   : ..\output\Barber2017\Barber2017.csv  (280 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'bodylength' -> 'Body Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 263
+  missed (FN)         : 5
+  spurious, in scope  : 17   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.939 / 0.981 / 0.960   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.939 / 0.981 / 0.960   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.981   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               263    263  1.000
+  measurementMethod             0    158  0.000  <-- low
+  measurementUnit              55    263  0.209  <-- low
+  measurementStatistic         55    263  0.209  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         263    263  1.000
+  lifeStage                   263    263  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    263  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    263  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 5 MISSED ROWS MISSED
+  species not in prediction                   5
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Amara crassispina/ neoscotica/cupreolata\ncupreolata'  ~1.00~  pred 'Amara crassispina/neoscotica/cupreolata'   x5
+  -> 1 species mismatch explains 5 of 5 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Barber2017_misses.csv, Barber2017_misses_summary.json (5 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  activity time                                    55    56   Δ+1 (split?)
+  body length                                      56    56   
+  breeding season                                  50    56   Δ+6 (split?)
+  diet                                             51    56   Δ+5 (split?)
+  wing morphology                                  56    56   
+
+
+######################################################################
+# Batista2024_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Batista2024\Batista2024.xlsx  (174 rows)
+PREDICTION   : ..\output\Batista2024\Batista2024.csv  (174 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Wings fully developed' -> 'Wings fully developed '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 174
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               174    174  1.000
+  measurementMethod             0     87  0.000  <-- low
+  measurementUnit               0    174  0.000  <-- low
+  measurementStatistic         87    174  0.500
+  measurementRemarks            0      0    n/a
+  sex                         174    174  1.000
+  lifeStage                   174    174  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    174  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  wings fully developed                            87    87   
+  medium length                                    87    87   
+
+
+######################################################################
+# Beyer2021_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Beyer2021\Beyer2021.xlsx  (206 rows)
+PREDICTION   : ..\output\Beyer2021\Beyer2021.csv  (300 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'foraging preference' -> 'Foraging preference'
+  'intertegular distance' -> 'Intertegular Distance'
+  'relative tongue length' -> 'Relative Tonghe Length'
+  'sociality' -> 'Sociality'
+  'tongue length' -> 'Tongue Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 163
+  missed (FN)         : 43
+  spurious, in scope  : 62   <- GT covers this trait: real errors
+  spurious, out of scope: 75   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.543 / 0.791 / 0.644   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.724 / 0.791 / 0.756   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.791   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             75
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                75    163  0.460  <-- low
+  measurementMethod             0    136  0.000  <-- low
+  measurementUnit              66     75  0.880
+  measurementStatistic         75    163  0.460  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          61    163  0.374  <-- low
+  lifeStage                   102    163  0.626
+  caste                         0    102  0.000  <-- low
+  sampleSizeValue               9     18  0.500
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    163  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    163  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 43 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       43
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'species not known to collect pollen from fabaceae' ->  'not known to collect pollen from fabaceae' x34
+     'long'                       ->  '8.87'                       x1
+     'short'                      ->  '4.3'                        x1
+     'short'                      ->  '4.39'                       x1
+     'long'                       ->  '5.66'                       x1
+     'long'                       ->  '5.58'                       x1
+  -> 6 substitutions explain 39 of 43 misses (91%) — systematic, not scattered
+
+  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (43 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  tongue length category                            0     9   PRED-ONLY
+  density                                           0    66   PRED-ONLY
+  intertegular distance                            57    75   Δ+18 (split?)
+  foraging preference                              61    66   Δ+5 (split?)
+  relative tonghe length                            9     9   
+  tongue length                                    18     9   Δ-9 (split?)
+  sociality                                        61    66   Δ+5 (split?)
+
+
+######################################################################
+# Boetzl2024_report.txt
+######################################################################
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Boetzl2024\Boetzl_2024.xlsx  (482 rows)
+PREDICTION   : ..\output\Boetzl2024\Boetzl2024.csv  (423 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'mean body size [mm]' -> 'body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 280
+  missed (FN)         : 202
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 141   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.662 / 0.581 / 0.619   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.993 / 0.581 / 0.733   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.581   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            141
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    280  0.000  <-- low
+  measurementMethod             0    280  0.000  <-- low
+  measurementUnit             141    141  1.000
+  measurementStatistic        280    280  1.000
+  measurementRemarks            0      0    n/a
+  sex                         280    280  1.000
+  lifeStage                   280    280  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    280  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 202 MISSED ROWS MISSED
+  species not in prediction                 200
+  species present, trait missing              0
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'carnivorous'                ->  'granivorous'                x1
+     'granivorous'                ->  'carnivorous'                x1
+  -> 2 substitutions explain 2 of 202 misses (1%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (100 distinct), closest predicted name:
+     gt 'Carabus monilis'                   ~0.75~  pred 'Carabus coriaceus'   x2
+     gt 'Carabus nemoralis'                 ~0.77~  pred 'Carabus auratus'   x2
+     gt 'Carabus problematicus'             ~0.80~  pred 'Carabus auratus'   x2
+     gt 'Carabus purpurascens'              ~0.78~  pred 'Carabus auratus'   x2
+     gt 'Carabus ulrichii'                  ~0.75~  pred 'Carabus auratus'   x2
+     gt 'Carabus violaceus'                 ~0.83~  pred 'Carabus coriaceus'   x2
+  -> 6 species mismatches explain 12 of 202 misses (6%) — scattered; no single cause
+
+  full miss detail saved -> Boetzl2024_misses.csv, Boetzl2024_misses_summary.json (202 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       241   141   Δ-100 (split?)
+  diet                                            241   141   Δ-100 (split?)
+  total individuals                                 0   141   PRED-ONLY
+
+

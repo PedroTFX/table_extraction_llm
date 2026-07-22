@@ -1,0 +1,102 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the scientific names of the insect taxa (ants).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The study records and classifies all native plant species and seven invertebrate groups."
+  },
+  "Body size (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header describes a measured physical property of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Body length/size is measured in mm for various invertebrates, used as a dependent variable.",
+    "value_type": "numeric",
+    "canonicalType": "Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting ground-dwelling invertebrate specimens (ants, rove beetles, etc.) from domestic gardens to measure their morphological traits, including body size.",
+    "measurementMethod": "Measurement of body size/length using calipers or similar tools on collected specimens.",
+    "measurementMethod_reasoning": "The text indicates that for various invertebrate groups, 'body size is measured in a different way' (Table 1), and specifically mentions measuring adult length for woodlice and extended body length for slugs. This implies direct measurement of physical traits from the sampled individuals.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The text specifies that body size was measured in 'mean adult length in mm' (for woodlice) and '(extended body length in mm)' (for slugs), establishing millimeters as the standard unit.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The results describe trends where 'Body size increased with distance to city center for... ants, and rove beetles,' indicating that the reported values represent the average or typical body size of these species within their respective groups across the urbanization gradient."
+  },
+  "Main food": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column specifies the diet or feeding preference of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The text mentions that the groups cover a wide range of feeding strategies.",
+    "value_type": "categorical",
+    "canonicalType": "Main food",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "Main nest stratum": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the microhabitat where the organism nests (nest location).",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Microhabitat preference and habitat types are recorded for species in gardens.",
+    "value_type": "categorical",
+    "canonicalType": "Main nest stratum",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting ground-dwelling invertebrates (ants and rove beetles) using pitfall traps and hay bait traps, followed by counting individuals to determine abundance and measuring traits like body size. Since the data is derived from captured specimens in a field setting, it qualifies as measurements taken off collected/preserved specimens.",
+    "measurementMethod": "Pitfall traps (plastic beakers with saltwater preservative) and hay bait traps (moist hay in coarse plastic netting placed in direct contact with the ground). Five of each were placed in the grassland of every garden.",
+    "measurementMethod_reasoning": "The text explicitly details the sampling protocol used for surveying these invertebrate groups: 'We used pitfall traps (plastic beakers, 5.8 cm diameter, containing saltwater as a preservative, that were buried flush with the ground) and hay bait traps (moist hay in coarse plastic netting placed in direct contact with the ground; Tuf et al., 2015) to sample all groups.' This describes the method used to collect the specimens for analysis.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "Colony founding mode": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a biological characteristic describing how the colony was established.",
+    "category": null,
+    "reasoning_relevance": "not present in text"
+  },
+  "Number of queens": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes a specific reproductive trait or social structure of the organism.",
+    "category": null,
+    "reasoning_relevance": "not present in text"
+  },
+  "Dry tolerant": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is an observed biological characteristic (trait) of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Species are divided into those showing a preference for dry conditions.",
+    "value_type": "categorical",
+    "canonicalType": "Dry tolerant",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "Habitat generalist": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes an ecological classification or trait of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Species were divided into habitat generalists and specialists based on their traits.",
+    "value_type": "categorical",
+    "canonicalType": "Habitat generalist",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  }
+}

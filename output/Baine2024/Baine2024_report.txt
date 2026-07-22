@@ -1,0 +1,138 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Baine2024\Baine2024.xlsx  (97 rows)
+PREDICTION   : ..\output\Baine2024\Baine2024.csv  (5 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 97
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 5   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              5
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 97 MISSED ROWS MISSED
+  species not in prediction                  97
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (4 distinct), closest predicted name:
+     gt 'Aciurina luminaria'                 (nothing similar in the prediction)   x94
+     gt 'A. bigeloviae'                      (nothing similar in the prediction)   x1
+     gt 'A. maculata'                        (nothing similar in the prediction)   x1
+     gt 'A. trixa'                           (nothing similar in the prediction)   x1
+  -> 4 species mismatches explain 97 of 97 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Baine2024_misses.csv, Baine2024_misses_summary.json (97 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abdomen color                                     1     0   GT-ONLY
+  color of abdomen                                  4     0   GT-ONLY
+  abdomen glans color                               1     0   GT-ONLY
+  abdomen color ranges                              1     0   GT-ONLY
+  acrostichal                                       1     0   GT-ONLY
+  aculeus size                                      2     0   GT-ONLY
+  intra-alar color                                  1     0   GT-ONLY
+  postsutural supra-alar                            1     0   GT-ONLY
+  presutral supra-alar                              1     0   GT-ONLY
+  presence of dark stripe in anal cell              1     0   GT-ONLY
+  anepisternal color                                1     0   GT-ONLY
+  antenna color                                     1     0   GT-ONLY
+  subscutellum anterior half color                  1     0   GT-ONLY
+  subapical band extension                          1     0   GT-ONLY
+  number of vertical bands in cell c                1     0   GT-ONLY
+  basal marginal spot in cell m size                1     0   GT-ONLY
+  basal scutella color                              1     0   GT-ONLY
+  body color                                        1     0   GT-ONLY
+  body length                                       3     0   GT-ONLY
+  body morphology                                   1     0   GT-ONLY
+  body segmentacion                                 1     0   GT-ONLY
+  size of hyaline spot in cell br                   1     0   GT-ONLY
+  tarsal claw color                                 1     0   GT-ONLY
+  compound eye color                                1     0   GT-ONLY
+  costa color                                       1     0   GT-ONLY
+  color of the region surrounding crossvein r-m     1     0   GT-ONLY
+  scutum and dorsal portions of pleura color        1     0   GT-ONLY
+  epandrium color                                   1     0   GT-ONLY
+  eversible membrane color                          1     0   GT-ONLY
+  subscutellum posterior half color                 1     0   GT-ONLY
+  halteres color                                    1     0   GT-ONLY
+  head color                                        1     0   GT-ONLY
+  narrow interocular margin color                   1     0   GT-ONLY
+  katepisternal color                               1     0   GT-ONLY
+  legs color                                        1     0   GT-ONLY
+  subscutellum mediotergit color                    1     0   GT-ONLY
+  mouth color                                       1     0   GT-ONLY
+  notopleural color                                 1     0   GT-ONLY
+  oviscape color                                    1     0   GT-ONLY
+  ventral part of pleura color                      1     0   GT-ONLY
+  posterior spiracular plate rimae color            1     0   GT-ONLY
+  postalar color                                    1     0   GT-ONLY
+  postpronota color                                 1     0   GT-ONLY
+  proctiger color                                   1     0   GT-ONLY
+  scutellum color                                   1     0   GT-ONLY
+  setae color                                       1     0   GT-ONLY
+  setulae color                                     1     0   GT-ONLY
+  surstylus color                                   1     0   GT-ONLY
+  wing color                                        1     0   GT-ONLY
+  prensisetae combination                           1     0   GT-ONLY
+  most common parasitoid                            1     0   GT-ONLY
+  latest date of emergence                          1     0   GT-ONLY
+  mean latitudinal diameter                         1     0   GT-ONLY
+  postsutural dorsocentral                          1     0   GT-ONLY
+  egg laying spot                                   1     0   GT-ONLY
+  period of emergence                               1     0   GT-ONLY
+  forefemur setae morphology                        1     0   GT-ONLY
+  number of frontal setae                           1     0   GT-ONLY
+  gall shape                                        1     0   GT-ONLY
+  gall size                                         1     0   GT-ONLY
+  gall surface                                      1     0   GT-ONLY
+  genitalia structures tips                         1     0   GT-ONLY
+  geographical range                                9     0   GT-ONLY
+  gnathocephalon morphology                         1     0   GT-ONLY
+  host plant habitat                                1     0   GT-ONLY
+  host plant locality                               1     0   GT-ONLY
+  host plant                                        1     0   GT-ONLY
+  narrow interocular margin surface                 1     0   GT-ONLY
+  puparium length                                   2     0   GT-ONLY
+  wing length or wing pattern character             1     5   Δ+4 (split?)
+  number of marginal spots in r                     1     0   GT-ONLY
+  mouth structure                                   1     0   GT-ONLY
+  notopleural number                                1     0   GT-ONLY
+  number of ocellar setae                           1     0   GT-ONLY
+  number of orbital setae                           1     0   GT-ONLY
+  posterior spiracular plate rimae number           1     0   GT-ONLY
+  pupation period                                   1     0   GT-ONLY
+  phallus size                                      2     0   GT-ONLY
+  ventral thoracic pleura                           1     0   GT-ONLY
+  puparium width                                    2     0   GT-ONLY
+  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)

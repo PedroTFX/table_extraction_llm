@@ -1,0 +1,62 @@
+{
+  "Models": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column lists statistical model identifiers (e.g., m.bb), not organism names or locations."
+  },
+  "Response variable": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "The header defines the biological property being measured for the organisms (e.g., density, richness)."
+  },
+  "Response variable (1)": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header describes the specific measurement type or dependent variable used in the analysis."
+  },
+  "FB": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The cells contain numerical results (e.g., 0.96) which are the measured values of the response variables."
+  },
+  "run": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The cells hold statistical output or estimates for specific model runs."
+  },
+  "FC": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains numerical results derived from the models."
+  },
+  "LD": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The cells contain statistical values (e.g., 0.25) representing model outputs."
+  },
+  "OSR": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds numerical results or estimates from the analysis."
+  },
+  "SNH": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The cells contain statistical values (e.g., 0.24) representing model outputs."
+  },
+  "FB:run": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains numerical results from the interaction between FB and run models."
+  },
+  "run: SNH": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "The cells contain statistical values representing model outputs for this specific interaction."
+  },
+  "FB:FC": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds numerical results from the interaction between FB and FC models."
+  }
+}

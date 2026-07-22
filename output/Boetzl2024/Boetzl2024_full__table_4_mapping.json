@@ -1,0 +1,63 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "The column lists the scientific names (taxa) of the insects studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The text lists 241 species and uses specific names like Carabus monilis."
+  },
+  "total individuals": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the total count or abundance of the organism observed in a sample.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "The study recorded a total of 345,603 carabid individuals across the datasets.",
+    "value_type": "numeric",
+    "canonicalType": "total individuals",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The carabid individuals were collected in situ within crop fields using pitfall traps (as indicated by Figure 1 caption and methodology), which constitutes a human observation/collection of living organisms.",
+    "measurementMethod": "Pitfall trapping across multiple published datasets",
+    "measurementMethod_reasoning": "The data was originally collected using pitfall traps in various field settings. The current measurement is derived from the synthesis and harmonization of 28 existing published datasets, which utilized this method.",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "The value represents a total number of individuals (345,603).",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "This figure represents the aggregated total count of all carabid individuals across all analyzed datasets and study sites in this synthesis."
+  },
+  "number of sampling plots with occurrence": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Records the number of distinct locations where the species was found during sampling.",
+    "category": null,
+    "reasoning_relevance": "This is a measure of spatial extent and sample size (2768 unique plots)."
+  },
+  "diet": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the feeding habits or trophic level (what the organism eats).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Diet preference was classified as granivorous, omnivorous, or carnivorous.",
+    "value_type": "categorical",
+    "canonicalType": "diet",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The diet classification (granivorous, omnivorous, carnivorous) is not determined by direct observation of individual beetles during the field sampling described in the study (pitfall trapping). Instead, these functional traits are derived from external sources, specifically 'the database carabids.org' and monographies/previous studies on carabid functional traits, which constitutes a human-curated record based on existing knowledge.",
+    "measurementMethod": "Functional Trait Classification using external databases and literature",
+    "measurementMethod_reasoning": "The diet preferences (granivorous, omnivorous, carnivorous) were obtained from the database carabids.org (extracted in spring of 2019), monographies, and previous studies on carabid functional traits."
+  },
+  "mean body size [mm]": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the average physical dimension of the insect's body.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Mean body size was obtained from a database and used to define three size classes.",
+    "value_type": "numeric",
+    "canonicalType": "mean body size [mm]",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "Body size is a morphological trait measured on collected specimens (carabid beetles) and sourced from existing scientific literature/databases.",
+    "measurementMethod": "Data extracted from the carabids.org database, monographies, and previous studies on carabid functional traits.",
+    "measurementMethod_reasoning": "The text explicitly states that mean body size was obtained from 'the database carabids.org (extracted in spring of 2019) [40], monographies as well as from previous studies on carabid functional traits'.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The target column specifies the unit as 'mean body size [mm]'.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The text refers to this measurement as 'mean body size' and Table S5 provides a single representative value for each species, indicating an average."
+  }
+}
