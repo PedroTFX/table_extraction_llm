@@ -18,6 +18,8 @@ from pathlib import Path
 import re
 from glob import glob
 
+from tables import split_multivalue
+
 COLUMNS = [
     "basisOfRecord", "verbatimIdentification", "measurementType",
     "measurementMethod", "measurementValue\xa0", "measurementUnit",
@@ -35,6 +37,12 @@ JSON_KEY = {
 }
 
 COLUMN_LEVEL_TAGS = ["basisOfRecord", "measurementMethod", "measurementUnit", "measurementStatistic"]
+
+# Not an output column — a column-level fact about the VALUES (set by
+# table_to_data.classify_value_types) that decides whether a comma in a cell
+# separates list items or belongs to the value. Carried through the lookup so the
+# split below is made per column, not per cell.
+VALUE_SEMANTIC_KEYS = ["multi_value"]
 
 # Legend codes -> expanded terms. Edit per-paper; keep keys lowercase.
 VALUE_DECODE = {
@@ -55,7 +63,20 @@ def is_empty_like(v):
 
 
 def clean_type(t):
-    return FOOTNOTE_RE.sub("", str(t)).replace("\xa0", " ").strip()
+    """Normalise a measurementType for output.
+
+    Besides stripping footnote markers and non-breaking spaces, this replaces the
+    snake_case the pipeline sometimes emits ('larvae_on_softwood_trees') with
+    spaces ('larvae on softwood trees'). Underscores are a machine artifact — a
+    human reading the CSV, and the volunteers' own wording, use spaces — so they
+    should never reach the output. Hyphens between word characters are treated the
+    same ('mosses-lichens' -> 'mosses lichens'); a hyphen inside a number or code
+    (a range like '3-5', 'CO-2') is left alone.
+    """
+    s = FOOTNOTE_RE.sub("", str(t)).replace("\xa0", " ")
+    s = s.replace("_", " ")
+    s = re.sub(r"(?<=[A-Za-z])-(?=[A-Za-z])", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def decode_value(v, decode):
@@ -88,6 +109,9 @@ def build_column_lookup(mapping_paths):
                 if tag == "measurementMethod" and looks_like_protocol(val):
                     continue
                 col_tags[tag] = val
+            for key_ in VALUE_SEMANTIC_KEYS:
+                if col_data.get(key_) is not None:
+                    col_tags[key_] = col_data[key_]
             if col_tags:
                 key = col_data.get("canonicalType") or header
                 lookup[clean_type(key)] = col_tags
@@ -103,10 +127,15 @@ def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol):
             m_type = clean_type(measurement.get("measurementType", ""))
             value = measurement.get("measurementValue", "")
 
-            if isinstance(value, str) and "," in value:
-                values = [v.strip() for v in value.split(",") if v.strip()]
-            else:
-                values = [value]
+            # One measurement may hold several values ('W, S, P' -> three rows).
+            # A comma alone does not mean a list: it is also part of a taxonomic
+            # authority ('Coras montanus (Emerton, 1890a)'), a decimal, or a
+            # thousands separator. Ask the column first — the mapping recorded
+            # whether THIS column's cells behave like lists — and fall back to a
+            # bracket/quote/digit-aware read of the cell when the column is
+            # unknown (measurementTypes that never reached a mapping).
+            values = split_multivalue(
+                value, allow=column_lookup.get(m_type, {}).get("multi_value"))
 
             for v in values:
                 row = {col: "" for col in COLUMNS}

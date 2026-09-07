@@ -20,7 +20,9 @@ from urllib import request as _rq
 from text_manager import get_text
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
-MODEL = "gemma4:e4b-it-qat"
+# MODEL = "gemma4:e4b-it-qat"
+MODEL = "gemma4:e2b"
+# MODEL = "granite4.2:3b"
 OLLAMA_URL = "http://localhost:11434/api/chat"
 
 
@@ -269,6 +271,8 @@ def loads_salvaging(content: str) -> dict:
 COLUMN_CATEGORIES = """
 Valid categories for a worth-recording column:
 - "Categorical biological trait" — discrete classifications of the organism's biology
+  (e.g. colour, pattern, sociality, activity mode, habitat type — a fixed set of
+  named states)
 - "Morphological measurement" — physical/anatomical measurements
 - "Behavioral observation" — recorded behaviors or where/how the organism was observed
 - "Measurement-type key" — a column whose CELLS are the NAMES of the traits being
@@ -283,44 +287,74 @@ p-values, statistical indices, citations, identifiers.
 """
 
 
-def column_relevance_msg_builder_all(columns, text):
+def column_relevance_msg_builder_all(columns, text, samples=None):
+    samples = samples or {}
+    # Show the model what each column actually CONTAINS. A column's own name and a
+    # few of its cell values are the primary evidence for what it records; the
+    # prose is only supporting context. Papers routinely ship traits in a data
+    # table (often a supplement) without ever discussing them in the body, so a
+    # trait column must not be rejected merely for being absent from the text.
+    col_lines = []
+    for c in columns:
+        vals = samples.get(c) or []
+        if vals:
+            shown = ", ".join(repr(v) for v in vals[:6])
+            col_lines.append(f'- "{c}"  (example values: {shown})')
+        else:
+            col_lines.append(f'- "{c}"')
+    col_block = "\n".join(col_lines)
+
     system = f"""You analyze scientific papers and decide whether each table column
 records data worth keeping in a biological database.
 
 {COLUMN_CATEGORIES}
 
-The columns being evaluated are: {columns}
+Decide category from WHAT THE COLUMN IS: its name and its example values are the
+primary evidence. A column's presence in a data table is itself a record of that
+variable, so judge it on its own name and values — a discrete set of named states
+(colours, patterns, modes, habitat classes) is a categorical trait, numbers with
+a unit are a measurement — REGARDLESS of whether the prose happens to mention it.
 
-Your task: read the text and decide, for each column, whether it fits one of
-the valid categories based on what the paper says about it.
+The paper text is CONTEXT that can help you tell a real trait from a statistic or
+an identifier (e.g. it may reveal that a numeric column is a p-value, or that a
+code column is a site ID). Do NOT require a column to be named in the text. Only
+return null when the column, judged on its name and values, does not fit any
+valid category — a statistic, a count, a citation, an identifier, an index.
+
+The columns being evaluated are:
+{col_block}
 
 Return a JSON object keyed by column name, with this format:
 {{
     "<column1>": {{
         "category": "<one of the categories, or null if not relevant>",
-        "reasoning": "<brief explanation based on the text>"
+        "reasoning": "<brief explanation from the column's name/values, and text if useful>"
     }},
     "<column2>": {{ ... }}
 }}
 
-Keep the reasoning to AT MOST 15 words, focused on textual evidence.
-If the text does not mention a column, return null for category and say
-"not present in text"."""
-    user = f"Here is the text:\n{text}"
+Keep the reasoning to AT MOST 15 words.
+Return null ONLY for columns that are genuinely not biological data (statistics,
+counts, identifiers, citations)."""
+    user = f"Here is the paper text for context:\n{text}"
     return [{"role": "system", "content": system},
             {"role": "user", "content": user}]
 
 
-def agent_define_columns_relevance(columns, paper_text, llm=None):
+def agent_define_columns_relevance(columns, paper_text, llm=None, samples=None):
     """Run relevance for ALL columns in one pass, then (if chunked) judge.
-    If no llm is supplied, context is sized to each prompt automatically."""
+    If no llm is supplied, context is sized to each prompt automatically.
+
+    `samples`: optional {column: [example cell values]} so the model can judge a
+    column by its contents, not only its name and the prose."""
     chunks = get_text(paper_text, len(paper_text))
     merged = "\n\n".join(c["content"] for c in chunks)
     chunks = [{"content": merged}]
 
     per_column = {col: [] for col in columns}
     for chunk in chunks:
-        messages = column_relevance_msg_builder_all(columns, chunk["content"])
+        messages = column_relevance_msg_builder_all(columns, chunk["content"],
+                                                    samples=samples)
         try:
             content = (llm.invoke(messages).content if llm else
                        invoke_sized(messages))
@@ -346,10 +380,11 @@ the column "{col}" represents data worth recording in a biological database.
 
 {COLUMN_CATEGORIES}
 
-Combine all chunk results. The strongest positive evidence wins.
-A column is relevant if any chunk found genuine evidence that the paper records
-this data per species/specimen. Generic background mentions do NOT count, and
-citations to other studies should be ignored.
+Combine all chunk results. The strongest positive evidence wins. A column is
+relevant if it is a biological trait/measurement/observation judged by its name
+and values — it does NOT need to be discussed in the prose, since traits are
+often recorded in a data table without being mentioned in the body. Only reject
+a column that is a statistic, count, identifier, or citation.
 
 Return a JSON object:
 {{

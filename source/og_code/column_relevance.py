@@ -19,7 +19,8 @@ from pathlib import Path
 from text_manager import get_text
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
-MODEL = "gemma4:e4b-it-qat"
+MODEL = "gemma4:e2b"
+# MODEL = "gemma4:e4b-it-qat"
 
 
 @lru_cache(maxsize=None)

@@ -26,7 +26,8 @@ from tables import Table, parse_table, clean_text, find_abbreviation_definitions
 from text_manager import get_tables, xlsx_to_table, csv_to_table
 from column_relevance import agent_define_columns_relevance, make_llm, invoke_sized
 
-MODEL = "gemma4:e4b-it-qat"
+MODEL = "gemma4:e2b"
+# MODEL = "gemma4:e4b-it-qat"
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
 MAP_FIELDS = ["verbatimIdentification", "measurementType",

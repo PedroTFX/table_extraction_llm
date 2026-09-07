@@ -24,13 +24,18 @@ from pathlib import Path
 from typing import Iterable, Optional
 
 from tables import (Table, parse_table, clean_text, find_abbreviation_definitions,
-                    find_binomial_candidates,
-                    is_headerless_continuation)
+                    find_binomial_candidates, looks_multivalue_column,
+                    is_headerless_continuation,
+                    detect_transposed, transpose_table)
 from text_manager import get_tables, xlsx_to_table, csv_to_table
 from column_relevance import (agent_define_columns_relevance, make_llm,
                               invoke_sized, loads_salvaging)
+from repair_mapping import repair_mapping
+from long_format import detect_long_in_table, _decode_key
 
-MODEL = "gemma4:e4b-it-qat"
+# MODEL = "gemma4:e4b-it-qat"
+MODEL = "gemma4:e2b"
+
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
 # The ONE place to add/remove a mappable tag. Each name needs a matching
@@ -98,7 +103,7 @@ def _field_descriptions_block(fields=MAP_FIELDS) -> str:
 # Table collection across the whole document set (paper + complementary files)
 # ---------------------------------------------------------------------------
 
-def tables_from_text(text: str, source: str) -> list[Table]:
+def tables_from_text(text: str, source: str, llm=None) -> list[Table]:
     """Parse every <table> in a document, joining page-continuation fragments.
 
     A long table split across pages arrives as several <table> blocks and the
@@ -123,13 +128,24 @@ def tables_from_text(text: str, source: str) -> list[Table]:
             print(f"    [continuation] table #{i} has no header — inherited from "
                   f"#{parent.table_index}, {len(tbl.data_records())} row(s) recovered")
         else:
-            tbl = parse_table(raw, source=source, table_index=i)
+            # Full-replacement header finding: the LLM reads the first rows and
+            # says which is the header. Falls back to row 0 on any failure.
+            hp = _header_plan_for(raw, llm=llm)
+            tbl = parse_table(raw, source=source, table_index=i, header_rows=hp)
             parent = tbl                     # this one owns its header
         out.append(tbl)
     return out
 
 
-def collect_tables(sources: Iterable) -> list[Table]:
+def _header_plan_for(raw_grid: str, llm=None) -> dict:
+    """Compute the {header_rows, join} plan for one raw pipe-grid via the LLM
+    header-finder. Isolated so callers stay simple and the finder can be tested
+    on its own."""
+    lines = [l for l in (ln.strip() for ln in raw_grid.strip().splitlines()) if l]
+    return agent_find_header(lines, llm=llm)
+
+
+def collect_tables(sources: Iterable, llm=None) -> list[Table]:
     """Gather tables from a list of files, tagged with provenance.
 
     Supported: .md/.html/.htm/.txt (MinerU output, may hold several tables),
@@ -142,15 +158,58 @@ def collect_tables(sources: Iterable) -> list[Table]:
         ext = p.suffix.lower()
         if ext in {".md", ".html", ".htm", ".txt"}:
             text = p.read_text(encoding="utf-8", errors="replace")
-            out.extend(tables_from_text(text, source=p.name))
+            out.extend(tables_from_text(text, source=p.name, llm=llm))
         elif ext in {".xlsx", ".xls"}:
-            out.append(parse_table(xlsx_to_table(str(p)), source=p.name, table_index=0))
+            raw = xlsx_to_table(str(p))
+            out.append(parse_table(raw, source=p.name, table_index=0,
+                                   header_rows=_header_plan_for(raw, llm=llm)))
         elif ext in {".csv", ".tsv"}:
             text = p.read_text(encoding="utf-8", errors="replace")
-            out.append(parse_table(csv_to_table(text), source=p.name, table_index=0))
+            raw = csv_to_table(text)
+            out.append(parse_table(raw, source=p.name, table_index=0,
+                                   header_rows=_header_plan_for(raw, llm=llm)))
         else:
             print(f"  (skipping unsupported file type: {p.name})")
     return out
+
+
+def maybe_transpose(table: Table):
+    """Rotate a species-in-header table; leave every other table untouched.
+
+    Returns (table, evidence). Safety is by construction: the rotation is only
+    applied when :func:`detect_transposed` sees taxon names along the header AND
+    not down the first column, and the result is checked to still hold every
+    populated cell before it is accepted. If anything is lost — a ragged row, a
+    trait label that collided — the original is kept, because a table the mapper
+    drops is a recoverable miss whereas a table it silently corrupts is not.
+    """
+    try:
+        verdict, ev = detect_transposed(table)
+    except Exception as e:                       # never let this stop a run
+        print(f"    orientation check failed for {table_id(table)}: {e}")
+        return table, {"reason": f"error: {e}"}
+    if not verdict:
+        return table, ev
+
+    rotated = transpose_table(table)
+
+    # Cell-count guard: rotation must preserve the populated data cells.
+    def _cells(t):
+        return sorted(clean_text(v) for r in t.data_records()
+                      for k, v in r.items()
+                      if not k.startswith("_") and str(v or "").strip())
+
+    before, after = _cells(table), _cells(rotated)
+    if len(after) < len(before):
+        print(f"    transpose: discarded for {table_id(table)} — would lose "
+              f"{len(before) - len(after)} cell(s); keeping original orientation")
+        return table, {**ev, "reason": "rejected: cell loss"}
+
+    print(f"    transpose: {table_id(table)} rotated — {len(rotated.data_records())} "
+          f"species x {len(rotated.header_names) - 1} trait(s) "
+          f"(header {ev['header_frac']:.0%} taxon-like, first column "
+          f"{ev['body_frac']:.0%})")
+    return rotated, ev
 
 
 def table_id(table: Table) -> str:
@@ -200,6 +259,147 @@ def _data_cell_multiset(table: Table) -> "Counter":
     return bag
 
 
+def _preview_split_row(line: str) -> list:
+    """Split a pipe line into cells for the header preview (trailing/leading pipe
+    tolerant). Kept local so this module doesn't reach into tables' internals."""
+    parts = [c.strip() for c in line.split("|")]
+    if parts and parts[0] == "":
+        parts = parts[1:]
+    if parts and parts[-1] == "":
+        parts = parts[:-1]
+    return parts
+
+
+def agent_find_header(grid_lines: list, llm=None, preview_rows: int = 4) -> dict:
+    """Ask the model which of the first few rows form the column header.
+
+    REPLACES the deterministic header heuristics (banner-skip, units-row merge,
+    numeric-header detection). The model reads the top `preview_rows` rows, shown
+    as a NUMBERED list, and answers which row numbers are the header — a choice
+    among a small visible set (0,1,2,3), never an index it had to count to, so a
+    weak model stays reliable.
+
+    It classifies rows it can see; it never rewrites a value. The returned indices
+    are used by the CODE to read the actual header cells, so no header text ever
+    comes from the model.
+
+    Returns {"header_rows": [i, ...], "join": bool}. On any LLM error or unusable
+    reply, returns {"header_rows": [0], "join": False} — the naive default — so a
+    down model degrades to 'row 0 is the header', never a crash.
+    """
+    # Decision — trust the model. Header selection is the LLM's job (this agent
+    # REPLACED the old deterministic heuristics on purpose). We deliberately do
+    # NOT add a deterministic caption/banner floor here: if a small model mispicks
+    # — e.g. takes the 'Table S1. ...' caption as the header and pushes the real
+    # 'Species | ...' row into the data — we want that to SHOW, and to fix it in
+    # the prompt (see the CAPTION trap above) or the model, not to paper over it
+    # with per-shape rules that don't generalise ('Table S1' today, 'Appendix 2'
+    # tomorrow). So the default below stays naive: row 0. It is reached only when
+    # the LLM is genuinely unavailable or returns nothing usable; in this
+    # deployment the model is always present, so this is a last resort, not a
+    # routine path. If it ever fires on a captioned table it WILL pick the caption
+    # — that misparse is the intended visible signal to revisit, not a silent bug.
+    default = {"header_rows": [0], "join": False}
+    if not grid_lines:
+        return default
+
+    preview = grid_lines[:preview_rows]
+    shown = "\n".join(f"row {i}: {ln}" for i, ln in enumerate(preview))
+
+    system = (
+        "You identify the HEADER of a data table from a scientific paper. You are "
+        "shown the first few rows, each labelled 'row N:', cells separated by "
+        "' | '. Decide which row(s) name the columns (e.g. 'Species | Body length "
+        "| Feeding group').\n\n"
+        "Traps:\n"
+        "- A CAPTION/TITLE names the whole table, not its columns ('Table S1. All "
+        "functional traits...', 'Table 3 Overview of species'). It is usually one "
+        "long cell with the rest of the row empty and sits ABOVE the header. It is "
+        "never the header; the header is the row just below it. Judge this by "
+        "meaning, not by the word 'Table' — 'Table S1', 'Appendix 2', or a title "
+        "in another language are all captions.\n"
+        "- A BANNER repeats one label across the width ('Traits | Traits | "
+        "Traits', or 'Morphological trait' filling every column). It is NOT the "
+        "header; the real header is the row just below it.\n"
+        "- A STACKED header spans two rows: a grouping label on top ('Successional "
+        "stages') over the real names below ('G | H | C'). Then BOTH rows are the "
+        "header and should be joined.\n"
+        "- A DATA row holds mostly numbers or specimen names; never the header.\n\n"
+        "Answer ONLY JSON: {\"header_rows\": [<row numbers>], \"join\": "
+        "true|false}. 'join' is true only when header_rows has more than one row "
+        "to combine. Do not rewrite any text; only give row numbers."
+    )
+    user = "Rows:\n" + shown
+
+    try:
+        content = (llm.invoke([{"role": "system", "content": system},
+                               {"role": "user", "content": user}]).content
+                   if llm else
+                   invoke_sized([{"role": "system", "content": system},
+                                 {"role": "user", "content": user}]))
+        out = loads_salvaging(content)
+    except Exception as e:
+        print(f"    [header] LLM unavailable ({type(e).__name__}); row 0 default")
+        return default
+
+    rows = out.get("header_rows") if isinstance(out, dict) else None
+    if not isinstance(rows, list) or not rows:
+        return default
+    clean = sorted({r for r in rows if isinstance(r, int) and 0 <= r < len(preview)})
+    if not clean:
+        return default
+    return {"header_rows": clean, "join": bool(out.get("join")) and len(clean) > 1}
+
+
+def _header_is_degenerate(header_names) -> bool:
+    """Does this header show the collapsed-banner signature?
+
+    True when the real column names were lost to a spanning label, which leaves
+    one of these fingerprints in the parsed header:
+      * DEDUP SUFFIXES — the same base repeated as 'X', 'X (1)', 'X (2)'... (what
+        a single banner name becomes when forward-filled across N columns);
+      * ONE LABEL REPEATED — the non-identifier headers are all the same string
+        ('Traits | Traits | Traits');
+      * NUMERIC HEADERS — the header row is mostly numbers, i.e. a data row got
+        taken as the header;
+      * PLACEHOLDER NAMES — mostly 'colN'/'identifier' fallbacks, meaning no real
+        header was found.
+
+    A normal header ('Species | Body length | Wing width') matches none of these,
+    so a clean table is never eligible for the LLM rewrite. Judged on the
+    non-identifier columns (index 1+), since the id column legitimately varies.
+    """
+    hs = [str(h or "").strip() for h in header_names]
+    if len(hs) < 2:
+        return False
+    body = hs[1:]
+    nonempty = [h for h in body if h]
+    if not nonempty:
+        return True
+
+    # dedup suffixes: strip a trailing ' (k)' and see if the bases collapse
+    bases = [re.sub(r"\s*\(\d+\)\s*$", "", h) for h in nonempty]
+    if len(set(bases)) == 1 and len(nonempty) >= 3:
+        return True
+
+    # one label repeated verbatim
+    if len(set(nonempty)) == 1 and len(nonempty) >= 3:
+        return True
+
+    # mostly numeric headers (a data row misread as the header)
+    numeric = sum(1 for h in nonempty if re.match(r"^[-+]?[\d.,]+%?$", h))
+    if numeric >= max(2, len(nonempty) * 0.6):
+        return True
+
+    # mostly placeholder fallbacks
+    placeholder = sum(1 for h in nonempty
+                      if re.match(r"^(col\d+|identifier|column\d+)$", h, re.I))
+    if placeholder >= max(2, len(nonempty) * 0.6):
+        return True
+
+    return False
+
+
 def agent_decompose_table(table: Table, paper_text: str, llm=None) -> list[Table]:
     """Return a list of clean sub-tables for `table`. If the table is already
     clean (a simple identifier x trait grid) the agent returns it unchanged and
@@ -214,16 +414,20 @@ def agent_decompose_table(table: Table, paper_text: str, llm=None) -> list[Table
 
     # Option 3 — salvage mode only: if the table ALREADY has a column that looks
     # like a usable identifier (mostly non-numeric organism-name-ish text, with a
-    # non-blank header), it is a clean identifier x trait grid and must NOT be
-    # decomposed. Decomposition exists to rescue banded tables whose identifier is
-    # missing/blank-headered; running it on clean tables only risks corruption.
-    for col in table.columns:
-        if getattr(col, "synthetic", False):
-            continue
-        if not (col.name or "").strip():
-            continue  # blank header -> not a clean identifier, allow decomposition
-        if _looks_like_identifier_column(table, col.name):
-            return [table]
+    # non-blank header) AND its header is not degenerate, it is a clean
+    # identifier x trait grid and must NOT be decomposed. Decomposition exists to
+    # rescue banded tables whose identifier is missing/blank-headered, OR whose
+    # real column names were lost to a spanning banner (a degenerate header — see
+    # _header_is_degenerate); a table with a good identifier but a collapsed
+    # header still needs the rewrite, so we do NOT skip it.
+    if not _header_is_degenerate(table.header_names):
+        for col in table.columns:
+            if getattr(col, "synthetic", False):
+                continue
+            if not (col.name or "").strip():
+                continue  # blank header -> not a clean identifier, allow decomposition
+            if _looks_like_identifier_column(table, col.name):
+                return [table]
 
     system = (
         "You normalize the STRUCTURE of a data table. You are given one raw "
@@ -281,11 +485,20 @@ def agent_decompose_table(table: Table, paper_text: str, llm=None) -> list[Table
     if not subs:
         return [table]
 
-    # Option 1 — only accept a genuine SPLIT. If the agent returned a single
-    # sub-table, it did not actually decompose anything (it just rewrote the
-    # table, which risks corrupting headers, e.g. appending ' ---' junk or
-    # renaming columns). In that case keep the ORIGINAL table untouched.
-    if len(subs) < 2:
+    # Accept a single-table rewrite ONLY when it repairs a degenerate header —
+    # the collapsed-banner family, where a spanning label overwrote the real
+    # column names (every trait becomes 'Traits'/'Traits (1)'/'Morphological
+    # trait (2)'...). That is not a split, so the len<2 rule below would discard
+    # the fix; but it is exactly what the agent is meant to correct. A rewrite is
+    # allowed through when the ORIGINAL header is degenerate and the NEW one is
+    # not — never for a table whose header was already fine (which protects clean
+    # tables from being churned).
+    if len(subs) == 1 and _header_is_degenerate(table.header_names) \
+            and not _header_is_degenerate(subs[0].header_names):
+        # data-preservation still applies below; fall through to that check by
+        # NOT returning here, but skip the len<2 discard.
+        pass
+    elif len(subs) < 2:
         return [table]
 
     # DATA-PRESERVATION GUARD: the union of sub-table data cells must contain
@@ -304,8 +517,11 @@ def agent_decompose_table(table: Table, paper_text: str, llm=None) -> list[Table
         return [table]
 
     if len(subs) == 1 and _data_cell_multiset(subs[0]) == orig and \
-            len(subs[0].columns) == len(table.columns):
-        # effectively unchanged
+            len(subs[0].columns) == len(table.columns) and \
+            not (_header_is_degenerate(table.header_names)
+                 and not _header_is_degenerate(subs[0].header_names)):
+        # effectively unchanged — unless the rewrite fixed a degenerate header
+        # (same data, same width, but real column names now), which we keep.
         return [table]
 
     print(f"    decompose: {table_id(table)} -> {len(subs)} clean sub-table(s)")
@@ -352,10 +568,17 @@ def classify_value_types(table: Table, mapping: dict) -> dict:
         # cells are just the author's shorthand CODES (0/1 for absent/present,
         # sociality, etc.), not measurements. Type it categorical so the legend
         # decoder is allowed to expand those codes; 'numeric' would gate it out.
+        values = [v for v in table.column_values(header) if v != ""]
+        # Does this column hold LISTS ('W, S, P') or single values that merely
+        # contain a comma ('Coras montanus (Emerton, 1890a)')? Only the whole
+        # column can answer that, and only here is the whole column in scope —
+        # to_output sees one cell at a time and, splitting on any comma, cut a
+        # host-spider name in half at its authority citation. Recorded on the
+        # mapping so the split decision downstream is column-wide, not per-cell.
+        m["multi_value"] = looks_multivalue_column(values)
         if m.get("category") == "Categorical biological trait":
             m["value_type"] = "categorical"
             continue
-        values = [v for v in table.column_values(header) if v != ""]
         if not values:
             m["value_type"] = "categorical"
             continue
@@ -435,8 +658,24 @@ def enrich_with_relevance(table: Table, mapping: dict, paper_text: str) -> dict:
     so stats/summary tables with no taxon column never pay for it. Mutates and
     returns `mapping`."""
     headers = table.header_names
+    # A few example cell values per column let the relevance agent judge a column
+    # by its CONTENTS, not just its name and the prose — decisive for trait
+    # columns the paper never discusses (e.g. a supplement's 'wing_pigment_color'
+    # with values 'amber'/'hyaline'/'black').
+    samples = {}
+    for h in headers:
+        vals = []
+        seen = set()
+        for v in table.column_values(h):
+            v = (v or "").strip()
+            if v and v.lower() not in seen:
+                seen.add(v.lower())
+                vals.append(v)
+            if len(vals) >= 6:
+                break
+        samples[h] = vals
     start = time.perf_counter()
-    relevance = agent_define_columns_relevance(headers, paper_text)
+    relevance = agent_define_columns_relevance(headers, paper_text, samples=samples)
     print(f"  relevance check: {time.perf_counter() - start:.1f}s")
     for header, rel in relevance.items():
         if header in mapping and isinstance(mapping[header], dict):
@@ -521,6 +760,37 @@ def _identifier_column(table: Table, mapping: dict) -> Optional[str]:
     return cols[0] if cols else None
 
 
+_ID_PARENS = re.compile(r"\([^()]*\)")
+
+
+def strip_identifier_parentheticals(name: str) -> str:
+    """Drop every parenthesised group, and its contents, from a taxon name.
+
+    Everything papers put in brackets after a name is metadata about the record
+    rather than part of the name itself, and none of it belongs in
+    verbatimIdentification:
+
+        'Hesperiidae(n=45)'                    -> 'Hesperiidae'
+        'Ogcodes pallidipennis (Loew, 1866)'   -> 'Ogcodes pallidipennis'
+        'Xylocopa frontalis (Olivier)'          -> 'Xylocopa frontalis'
+        'Bombus terrestris (n = 12, reared)'    -> 'Bombus terrestris'
+
+    Applied repeatedly so nested brackets go too, then whitespace and dangling
+    punctuation are tidied. A sample size lost here is not lost from the record —
+    sampleSizeValue is its own field — and a taxonomic authority is recoverable
+    from the paper, whereas a name carrying either one matches nothing.
+    """
+    s = str(name or "")
+    prev = None
+    while prev != s:                       # nested brackets need more than one pass
+        prev = s
+        s = _ID_PARENS.sub(" ", s)
+    # an unclosed bracket ('Bombus terrestris (Linnaeus' ) would otherwise survive
+    s = re.sub(r"[\(\)\[\]]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s.strip(" ,;:-")
+
+
 def _join_identifier(parts) -> str:
     """Join the identifier columns of one row into a single taxon name WITHOUT
     repeating the genus (or subgenus).
@@ -540,10 +810,15 @@ def _join_identifier(parts) -> str:
 
     Distinct tokens are untouched (Fiedler's 'Acrodipsas' + 'aurata', a real
     subgenus, 'sp.'), so split binomials still rebuild correctly.
+
+    Parenthesised groups are removed FIRST (see
+    strip_identifier_parentheticals): an authority like '(Loew, 1866)' would
+    otherwise contribute tokens to the dedup passes and end up in the name.
     """
+    parts = [strip_identifier_parentheticals(p) for p in parts]
     parts = [p.strip() for p in parts if p and p.strip()]
     if len(parts) <= 1:
-        return parts[0] if parts else ""
+        return _drop_leading_family((parts[0] if parts else "").split())
 
     def norm(s):
         return re.sub(r"\s+", " ", s.replace(".", " ")).strip().lower()
@@ -564,7 +839,49 @@ def _join_identifier(parts) -> str:
         if key not in seen:
             seen.add(key)
             out.append(tok)
-    return " ".join(out)
+
+    return _drop_leading_family(out)
+
+
+# Family/superfamily/subfamily rank suffixes. A family name also tends to be
+# ALL CAPS in these tables, whereas a genus and a subgenus are Title-case — that
+# case difference is what tells 'FAMILY Genus epithet' apart from a genuine
+# 'Genus Subgenus epithet'.
+_FAMILY_SUFFIX = re.compile(r"(?:idae|inae|ini|oidea|aceae|idea)$", re.IGNORECASE)
+
+
+def _looks_like_family(tok: str) -> bool:
+    """A family-rank name: ALL CAPS (len>=4, so it isn't an abbreviation like
+    'NA') or a recognisable family suffix. Handles a truncated 'MELANDRYID'
+    (wrapped '-AE' lost) via the all-caps test, since the suffix is gone."""
+    return (tok.isupper() and len(tok) >= 4) or bool(_FAMILY_SUFFIX.search(tok))
+
+
+def _drop_leading_family(tokens) -> str:
+    """Drop a FAMILY joined onto the front of a binomial, KEEPING the subgenus.
+
+    A family column joined onto the species column yields 'FAMILY Genus epithet'
+    (e.g. 'MELANDRYID Abdera affinis'). The family is not part of the name the
+    ground truth records, so it is removed here -> 'Abdera affinis'. A family is
+    detected by rank — ALL CAPS (also catching a line-wrapped 'MELANDRYID' that
+    lost its '-AE') or a family suffix — and only dropped when a Title-case genus
+    follows it, so 'MELANDRYIDAE sp.' (no genus) keeps the family as its identifier.
+
+    The SUBGENUS is deliberately KEPT. An unbracketed subgenus ('Agabus Ilybius
+    affinis', from a 'Genus (Subgenus) epithet' whose brackets MinerU dropped) is
+    left intact as the most complete extraction. Collapsing it to the bare
+    binomial is a MATCH-TIME concern, and the evaluator already handles it:
+    species_match tolerates the extra word and remap_pred_species relabels the
+    name onto the ground-truth binomial. So keeping it here loses no matches and
+    preserves information the old drop-heuristic discarded (and which it
+    mistakenly applied to genera in the family case).
+    """
+    if len(tokens) < 2:
+        return " ".join(tokens)
+    first, second = tokens[0], tokens[1]
+    if _looks_like_family(first) and second[:1].isupper() and not second.isupper():
+        return " ".join(tokens[1:])          # drop family; keep genus (+subgenus) + epithet
+    return " ".join(tokens)
 
 
 def agent_table_species(table: Table, candidates: list, paper_text: str,
@@ -703,6 +1020,13 @@ def add_table_to_grouped(table: Table, mapping: dict, grouped: dict,
 
         for col_name, m in kept:
             value = rec.get(col_name, "")
+            # The extracted value is kept VERBATIM — including a taxon name's
+            # authority/family ('Schizocosa rovneriUetz & Dondale,1979
+            # (Lycosidae)'). Splitting a glued authority deterministically risks
+            # dropping real information (a morphospecies letter 'sp. A', an
+            # internal-capital epithet), so we do not mutate it here. The
+            # evaluator instead judges such value differences as trivial in its
+            # severity pass, and the CSV carries the faithful full name.
             meas = {
                 "measurementType": m.get("canonicalType", col_name),
                 "measurementValue": value if value != "" else None,
@@ -987,6 +1311,55 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
           f"from LLM: {llm_keys or 'none'}]")
     return mappings
 
+def add_long_table_to_grouped(table: Table, mapping: dict, grouped: dict,
+                              longspec: dict, fallback_species: Optional[str] = None,
+                              decode: Optional[dict] = None) -> dict:
+    """Emit records from a LONG/TIDY table, where each ROW is already one
+    measurement: the measurementType is the value of the trait-name column and
+    the value is the paired measurement column (Noriega2023: Species | ... |
+    Trait | Measurement). The wide path (add_table_to_grouped) can't read this —
+    it would map Trait/Measurement as two columns and never expand the rows.
+
+    `longspec` = {'type_col', 'value_col'} from long_format.detect_long_in_table.
+    `decode` optionally maps a trait code (case-folded) to a full name; unknown
+    codes pass through verbatim.
+    """
+    type_col = table.resolve(longspec["type_col"])
+    value_col = table.resolve(longspec["value_col"])
+    if type_col is None or value_col is None:
+        return grouped
+    id_cols = _identifier_columns(table, mapping)
+    if not id_cols and not fallback_species:
+        print(f"    skip long table {table.source}#{table.table_index} — "
+              f"no identifier column and no paper-level species")
+        return grouped
+    dmap = {_decode_key(k): v for k, v in (decode or {}).items()}
+
+    n = 0
+    for rec in table.data_records():
+        species = (_join_identifier(rec.get(c, "") for c in id_cols) if id_cols
+                   else fallback_species)
+        if not species:
+            continue
+        code = (rec.get(type_col.name, "") or "").strip()
+        value = (rec.get(value_col.name, "") or "").strip()
+        if not code or value == "":
+            continue
+        mtype = dmap.get(_decode_key(code), code)
+        entry = grouped.setdefault(species, {
+            "verbatimIdentification": species,
+            "measurements": [],
+        })
+        entry["measurements"].append({
+            "measurementType": mtype,
+            "measurementValue": value,
+        })
+        n += 1
+    print(f"    [long] {table.source}#{table.table_index}: {n} record(s) from "
+          f"tidy table (type='{type_col.name}', value='{value_col.name}')")
+    return grouped
+
+
 def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -> dict:
     """Merge every mapped table into one species-keyed structure.
 
@@ -999,7 +1372,15 @@ def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -
     for table in tables:
         tid = table_id(table)
         mapping = mappings.get(tid)
-        if mapping:
+        if not mapping:
+            continue
+        # A tidy/long table (trait-name column + value column) is read row-wise;
+        # everything else goes through the normal wide path.
+        longspec = detect_long_in_table(table)
+        if longspec:
+            add_long_table_to_grouped(table, mapping, grouped, longspec,
+                                      fallback_species=fallback_species.get(tid))
+        else:
             add_table_to_grouped(table, mapping, grouped,
                                  fallback_species=fallback_species.get(tid))
     return grouped
@@ -1070,7 +1451,11 @@ def resolve_paper_species(tables: list, mappings: dict, paper_text: str,
         print(f"    {c['name']!r:<34} full={c['mentions']:<4} "
               f"abbreviated={c['abbrev_mentions']:<4} score={c['score']}")
 
-    verdict = agent_resolve_paper_species(cands, paper_text, llm=llm)
+    # The tables' own headers are strong role evidence: a species that shows up
+    # as a column header or treatment label is a condition, not the subject.
+    headers = [", ".join(t.header_names) for t, _ in mapped if t.header_names]
+    verdict = agent_resolve_paper_species(cands, paper_text,
+                                          table_headers=headers, llm=llm)
 
     if verdict is None:
         # No usable LLM verdict -> deterministic fallback, on ABBREVIATION
@@ -1130,27 +1515,43 @@ def _paper_species_entry(species: str, verdict: Optional[dict]) -> dict:
         "value": species,
         "reasoning": v.get("reasoning") or "(no reasoning recorded)",
         "decided_by": v.get("decided_by", "unknown"),
+        # What the OTHER binomials in the paper were judged to be (diet, host,
+        # cited comparison...). This is the audit trail for the risky call: if a
+        # species that was really measured got filed as 'diet', the rows keyed to
+        # the wrong organism are explained here rather than being a mystery.
+        "roles": v.get("roles", {}),
         "candidates": v.get("candidates", []),
     }
 
 
 def agent_resolve_paper_species(candidates: list, paper_text: str,
-                                llm=None) -> Optional[dict]:
-    """One call per paper: is this a single-species study, and of WHICH species?
+                                table_headers=None, llm=None) -> Optional[dict]:
+    """One call per paper: whose measurements are in these tables?
 
-    The model both decides and picks, but only from `candidates` — the binomials
-    the deterministic scan actually found in the text. A name outside that list is
-    rejected, so the model cannot invent an organism the paper never names; it is
-    choosing among evidence, not generating.
+    NOT "does the paper mention one species" — that question is too coarse and
+    got Ferreira wrong. A paper naming three binomials can still measure exactly
+    one of them: 'Scymnus nubilus fed on Aphis fabae or Myzus persicae' measures
+    the predator, while the two aphids are the DIET, i.e. a treatment level. Asked
+    "is this a single-species study?" a model correctly answers no, and the
+    tables — all of them measurements of the predator — get dropped.
 
-    It is given the evidence behind each candidate (full mentions, abbreviated
-    mentions, score) because that is the signal a bare excerpt hides: the study
-    organism is the one written out once and abbreviated thereafter, while a
-    frequently-cited comparison taxon is not.
+    So the model is asked to assign a ROLE to every candidate (measured subject /
+    diet / prey / host / parasite / habitat / cited-comparison) and to name the
+    one that is MEASURED. The safety valve is unchanged in effect: if two
+    candidates are both measured subjects, the answer is null and nothing is
+    attributed — which is still the right outcome when identifier detection has
+    quietly failed on a genuinely multi-species table.
 
-    Returns {single_species, species, reasoning, decided_by} — or None if the call
-    failed or the reply was unusable, which tells the caller to fall back to the
-    deterministic test rather than guess.
+    The model picks only from `candidates` — the binomials the deterministic scan
+    actually found — so it chooses among evidence rather than generating a name.
+    It also sees the mention/abbreviation counts (the study organism is written
+    out once and abbreviated thereafter) and the tables' COLUMN HEADERS, which
+    often settle the role question outright: a species appearing as a column
+    header or a treatment label is a condition, not a subject.
+
+    Returns {single_species, species, roles, reasoning, decided_by} — or None if
+    the call failed or the reply was unusable, which tells the caller to fall back
+    to the deterministic test rather than guess.
     """
     names = [c["name"] for c in candidates[:5]]
     evidence = "\n".join(
@@ -1158,33 +1559,48 @@ def agent_resolve_paper_species(candidates: list, paper_text: str,
         f'abbreviated ("{c["name"][0]}. {c["name"].split()[-1]}") '
         f'{c["abbrev_mentions"]}x'
         for c in candidates[:5])
+    headers_block = ""
+    if table_headers:
+        shown = "\n".join(f"- table {i}: {h}" for i, h in enumerate(table_headers))
+        headers_block = f"""
+Column headers of the paper's tables (none of them names a species — that is why
+you are being asked). A candidate that appears here, or as a treatment/group
+label, is a CONDITION of the experiment, not its subject:
+{shown}
+"""
 
-    prompt = f"""You are deciding whether a biological paper reports measurements
-for a SINGLE study species, and if so which one.
+    prompt = f"""A biological paper's tables report measurements, but no table has
+a species column. Your task: identify WHICH species those measurements are OF, or
+say that they are not all of one species.
 
-None of the paper's tables has a species column, which happens for two very
-different reasons:
-  (a) the paper studies ONE species, named in the title/abstract and referred to
-      throughout, so no table needs to repeat it;
-  (b) the paper studies MANY species and the species column simply failed to be
-      detected.
-Telling (a) from (b) is the whole task. If the text compares species, lists
-several study organisms, or reports per-species results, answer false.
+A paper commonly names several species while measuring only one. The others
+appear in supporting roles:
+  - diet / prey / food source (e.g. "<predator> fed on <prey species>")
+  - host plant, host animal, or parasite
+  - a species compared against only by citing other papers
+  - the source of a habitat or nest the subject occupies
+None of those are measured. The measured subject is the organism whose body,
+behaviour, survival, development or performance the numbers describe.
+
+Answer with null ONLY when the measurements themselves span more than one
+species — the paper reports per-species results for two or more organisms it
+measured. In that case attributing one name would be wrong.
 
 Candidate names found in the text, with how they are used:
 {evidence}
 
-A name that is written out once and then abbreviated many times is being used as
-THE study organism. A name mentioned often but never abbreviated is usually a
-cited or compared taxon, not the subject.
-
+A name written out once and then abbreviated many times is being used as a
+principal organism. Abbreviation alone does not make it the MEASURED one — a
+diet species gets abbreviated too — so use the text.
+{headers_block}
 Paper text (excerpt):
 {paper_text[:8000]}
 
-Answer JSON only, choosing "species" from this list exactly as written {names},
-or null if the paper is not a single-species study:
-{{"single_species": true|false, "species": "<name or null>",
-  "reasoning": "<at most 25 words, citing what in the text decided it>"}}"""
+Answer JSON only. "species" must be copied exactly from {names}, or be null.
+Give a role for every candidate you can place.
+{{"species": "<name or null>",
+  "roles": {{"<candidate name>": "measured subject|diet|prey|host|parasite|habitat|cited comparison|unclear"}},
+  "reasoning": "<at most 25 words: what the measurements are of, and what the other names are doing>"}}"""
 
     try:
         content = (llm.invoke(prompt).content if llm else invoke_sized(prompt))
@@ -1193,27 +1609,32 @@ or null if the paper is not a single-species study:
         print(f"    [species] LLM call failed ({type(e).__name__}: {e}); "
               f"falling back to the deterministic test")
         return None
-    if not isinstance(out, dict) or "single_species" not in out:
+    if not isinstance(out, dict) or "species" not in out:
         print(f"    [species] unusable reply {str(out)[:120]!r}; "
               f"falling back to the deterministic test")
         return None
 
-    single = bool(out.get("single_species"))
     species = str(out.get("species") or "").strip()
+    # 'null species' IS the multi-species verdict now — there is no separate
+    # boolean for the model to contradict itself with.
+    single = bool(species) and species.lower() not in {"null", "none"}
+    roles = out.get("roles") if isinstance(out.get("roles"), dict) else {}
     reasoning = str(out.get("reasoning") or "").strip()
 
     if single and species not in names:
         # Refuse a name the text scan never found: that is generation, not choice.
         print(f"    [species] rejected {species!r} — not among the candidates "
               f"{names}; leaving unattributed")
-        return {"single_species": False, "species": None,
+        return {"single_species": False, "species": None, "roles": roles,
                 "reasoning": f"model proposed {species!r}, which is not a "
                              f"binomial found in the paper text",
                 "decided_by": "llm-rejected"}
 
-    print(f"    [species] single_species={single} species={species or None!r} "
-          f"({reasoning})")
-    return {"single_species": single, "species": species or None,
+    if roles:
+        print("    [species] roles: " + ", ".join(
+            f"{k} = {v}" for k, v in list(roles.items())[:5]))
+    print(f"    [species] measured subject = {species or None!r} ({reasoning})")
+    return {"single_species": single, "species": species or None, "roles": roles,
             "reasoning": reasoning or "(model gave no reasoning)",
             "decided_by": "llm"}
 
@@ -1225,8 +1646,21 @@ or null if the paper is not a single-species study:
 def map_and_group(sources, paper_text, out_dir=".", llm=None):
     out_dir = Path(out_dir)
     sources = list(sources)
-    tables = collect_tables(sources)
+    tables = collect_tables(sources, llm=llm)
     print(f"Collected {len(tables)} table(s) from {len(sources)} file(s)")
+
+    # Orientation pass: some papers publish the TRANSPOSE — species across the
+    # header, traits down the first column. To the mapper that is
+    # indistinguishable from a stats table (no header names a species), so every
+    # such table is dropped as "not specimen data" and the paper yields nothing.
+    # Rotating here, before anything else looks at the header, means the rest of
+    # the pipeline never has to know: it sees an ordinary identifier x trait grid.
+    print("  Checking table orientation (transposed tables)...")
+    oriented: list[Table] = []
+    for table in tables:
+        rotated, ev = maybe_transpose(table)
+        oriented.append(rotated)
+    tables = oriented
 
     # Structural decomposition pass: rewrite banded/multi-section tables into
     # clean identifier x trait sub-tables BEFORE mapping. Clean tables pass
@@ -1283,6 +1717,18 @@ def map_and_group(sources, paper_text, out_dir=".", llm=None):
                   f"no identifier column (not specimen data)")
         else:
             enrich_with_relevance(rep, mapping, paper_text)
+
+    # Recover trait columns the mapper CATEGORIZED as measurements but left with
+    # field=None because its field-assignment reply truncated on a wide table
+    # (Raine2018: 21 of 31 columns, ~35k rows, dropped silently). Runs AFTER
+    # relevance (so 'category' is populated) and BEFORE canonicalize (so the
+    # recovered columns also get a canonicalType). See repair_mapping.
+    for sig in order:
+        _, n_fix = repair_mapping(rep_mapping[sig])
+        if n_fix:
+            rep = groups[sig][0]
+            print(f"    repaired {n_fix} truncated field(s) in "
+                  f"{rep.source}#{rep.table_index}")
 
     # canonicalize measurementType names once, over the representative mappings
     # (they already contain every distinct header, so the glossary is complete)

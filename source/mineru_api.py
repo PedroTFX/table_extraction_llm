@@ -39,17 +39,23 @@ def _headers(token: str) -> dict:
 
 def request_upload_urls(token: str, names: list[str], *,
                         model: str = "vlm", language: str = "en",
-                        enable_table: bool = True) -> tuple[str, list[str]]:
-    """Ask the API for presigned upload URLs. Returns (batch_id, [upload_urls])."""
+                        enable_table: bool = True,
+                        ocr: bool = False) -> tuple[str, list[str]]:
+    """Ask the API for presigned upload URLs. Returns (batch_id, [upload_urls]).
+
+    ``ocr`` sets is_ocr per file. Default False: born-digital papers have a real
+    text layer, and forcing OCR rasterizes the page and re-reads it geometrically,
+    which splits multi-line headers into separate rows and merges tightly-spaced
+    columns. Set True ONLY for papers whose tables MinerU cropped to images
+    instead of transcribing (see scan_tables 'TABLES AS IMAGES') — there, an
+    imperfect OCR transcription beats a table the pipeline cannot read at all.
+    """
     payload = {
         "enable_formula": True,
         "enable_table": enable_table,
         "language": language,
         "model_version": model,   # "MinerU-HTML" = HTML/table-optimized backend
-        # is_ocr=False: these papers are born-digital (real text layer). Forcing
-        # OCR rasterizes the page and re-reads it geometrically, which splits
-        # multi-line headers into separate rows and merges tightly-spaced columns.
-        "files": [{"name": n, "is_ocr": False} for n in names],
+        "files": [{"name": n, "is_ocr": ocr} for n in names],
     }
     r = httpx.post(f"{BASE}/file-urls/batch", headers=_headers(token),
                    json=payload, timeout=60)
@@ -108,13 +114,13 @@ def download_markdown(result: dict) -> str | None:
 
 
 def extract_one(path, token: str, *, model: str = "vlm",
-                language: str = "en") -> str | None:
+                language: str = "en", ocr: bool = False) -> str | None:
     """Convert ONE local PDF/image to markdown via the hosted API and return the
     markdown text (or None on failure). Convenience wrapper around the batch flow
     used by mineru_extract.doc_to_markdown."""
     path = Path(path)
     batch_id, urls = request_upload_urls(
-        token, [path.name], model=model, language=language)
+        token, [path.name], model=model, language=language, ocr=ocr)
     upload_file(urls[0], path)
     results = poll_batch(token, batch_id)
     res = next((r for r in results
@@ -127,10 +133,11 @@ def extract_one(path, token: str, *, model: str = "vlm",
 
 
 def process(paths: list[Path], token: str, out_dir: Path | None,
-            model: str, language: str) -> None:
+            model: str, language: str, ocr: bool = False) -> None:
     names = [p.name for p in paths]
-    print(f"Requesting upload URLs for {len(names)} file(s)...")
-    batch_id, urls = request_upload_urls(token, names, model=model, language=language)
+    print(f"Requesting upload URLs for {len(names)} file(s)... (ocr={ocr})")
+    batch_id, urls = request_upload_urls(token, names, model=model,
+                                         language=language, ocr=ocr)
     print(f"batch_id = {batch_id}")
 
     for p, u in zip(paths, urls):
@@ -168,6 +175,9 @@ def main():
     ap.add_argument("--model", default="vlm", choices=["vlm", "pipeline"],
                     help="extraction backend (default vlm = high accuracy)")
     ap.add_argument("--language", default="en")
+    ap.add_argument("--ocr", action="store_true",
+                    help="force is_ocr=True (for papers whose tables MinerU "
+                         "cropped to images; default off = use the text layer)")
     args = ap.parse_args()
 
     token = os.environ.get("MINERU_TOKEN")
@@ -187,7 +197,8 @@ def main():
     # API allows batches; keep it simple and chunk to <=200 files per batch
     CH = 100
     for i in range(0, len(paths), CH):
-        process(paths[i:i + CH], token, out_dir, args.model, args.language)
+        process(paths[i:i + CH], token, out_dir, args.model, args.language,
+                ocr=args.ocr)
 
 
 if __name__ == "__main__":

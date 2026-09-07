@@ -33,7 +33,7 @@ SEMANTIC_EVAL = True    # remap predicted measurementType names onto GT wording
 USE_LLM_EVAL = True     # allow the LLM confirm pass (needs Ollama); False = det. only
 
 
-def main(only_paper=None):
+def main(only_paper=None, evaluate_results=True, resume=False):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     if only_paper:
         target = BASE / only_paper
@@ -57,6 +57,16 @@ def main(only_paper=None):
         print("=" * 70)
         print(f"PAPER: {paper}")
         print("=" * 70)
+
+        # --resume: a non-empty output CSV means run_pipeline finished this paper
+        # (write_output_csv is its last step), so skip past it. NOTE: this treats
+        # ANY existing CSV as done, so only use it to continue an interrupted run —
+        # not to re-do papers whose CSVs are stale from an earlier run.
+        if resume and out_csv.exists() and out_csv.stat().st_size > 0:
+            print(f"  [skip] {out_csv.name} already exists — resuming past it")
+            summary.append({"paper": paper, "precision": "", "recall": "",
+                            "f1": "", "status": "skipped_resume"})
+            continue
 
         try:
             # 1) use the ALREADY-BUILT combined markdown (do NOT re-run mineru)
@@ -83,7 +93,11 @@ def main(only_paper=None):
 
             # 3) evaluate against the results xlsx (if present), capturing the
             #    printed report to a file and the metrics to the summary
-            if results_xlsx and Path(results_xlsx).exists():
+            if not evaluate_results:
+                print("  (evaluation disabled via --no-eval)")
+                summary.append({"paper": paper, "precision": "", "recall": "",
+                                "f1": "", "status": "extracted_only"})
+            elif results_xlsx and Path(results_xlsx).exists():
                 buf = io.StringIO()
                 with contextlib.redirect_stdout(buf):
                     metrics = evaluate(str(out_csv), results_xlsx, DEFAULT_KEY,
@@ -125,7 +139,13 @@ def main(only_paper=None):
 
 if __name__ == "__main__":
     import sys
-    # Optional: a single paper (folder) name to process, e.g.
-    #   python run_all.py Araujo2021
-    only = sys.argv[1] if len(sys.argv) > 1 else None
-    main(only_paper=only)
+    # Optional args (any order):
+    #   a single paper (folder) name to process, e.g.  python run_all.py Araujo2021
+    #   --no-eval  extract only; skip scoring against the results xlsx
+    #   --resume   skip papers that already have a non-empty output CSV
+    argv = sys.argv[1:]
+    no_eval = "--no-eval" in argv
+    resume = "--resume" in argv
+    positional = [a for a in argv if not a.startswith("-")]
+    only = positional[0] if positional else None
+    main(only_paper=only, evaluate_results=not no_eval, resume=resume)

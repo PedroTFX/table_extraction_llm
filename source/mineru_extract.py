@@ -4,11 +4,18 @@ paper folder (main paper + complementary files) into ONE markdown the existing
 pipeline can run on, while keeping the volunteer "results" spreadsheet aside as
 ground truth.
 
-Why the CLI: the package was renamed magic-pdf -> mineru and the in-process API
-keeps shifting, whereas `mineru -p IN -o OUT` is stable. MinerU's CLI accepts
-pdf/image/docx/pptx; we route those through it. xlsx/csv are embedded as HTML
-<table> blocks instead (lossless via openpyxl/csv) because MinerU's layout/OCR
-stage mangles dense numeric data sheets.
+Routing by type: pdf/image/pptx go straight to MinerU. Word documents (.doc and
+.docx) are RENDERED TO PDF first (Microsoft Word if available, else LibreOffice)
+and then run through MinerU — legacy .doc has no python-docx reader, and some
+.docx with complex layouts extract poorly, so a PDF render is more robust. (The
+old python-docx path is still available via docx_to_markdown / DOCX_VIA_PDF=False,
+and reads .docx tables exactly.) xlsx/csv are embedded as HTML <table> blocks
+(lossless via openpyxl/csv) because MinerU's layout/OCR stage mangles dense
+numeric data sheets.
+
+Note on fidelity: LibreOffice headless can mangle complex tables (see
+docx_vs_pdf_audit) — Microsoft Word via docx2pdf renders them faithfully and is
+preferred when present.
 
 File roles inside a paper folder (folder is named after the paper):
   - main paper   : the non-_S document (PDF preferred)
@@ -38,8 +45,18 @@ import openpyxl
 
 # Types MinerU converts to markdown.
 MINERU_DOC_EXTS = {".pdf", ".pptx", ".png", ".jpg", ".jpeg"}
-# docx is extracted directly with python-docx (its tables are real tables, not OCR).
-DOCX_EXTS = {".docx"}
+# Word documents (legacy .doc + .docx). By default these are RENDERED TO PDF and
+# then run through MinerU (see DOCX_VIA_PDF / office_to_markdown). Legacy .doc has
+# no python-docx path at all, and some .docx with complex layouts extract poorly;
+# rendering to PDF first is more robust for those.
+WORD_EXTS = {".doc", ".docx"}
+
+# Route .doc/.docx through PDF + MinerU (True) instead of python-docx extraction
+# (False). python-docx reads .docx tables EXACTLY (no OCR) and stays available via
+# docx_to_markdown, but cannot open .doc and struggles on some layouts. Note that
+# legacy .doc is ALWAYS sent via PDF regardless of this flag — python-docx can't
+# read it. Set False to revert .docx (only) to the python-docx path.
+DOCX_VIA_PDF = True
 # Types embedded directly as HTML tables (read losslessly, not via MinerU).
 NATIVE_TABLE_EXTS = {".xlsx", ".xls", ".csv", ".tsv"}
 # Already text/markup.
@@ -77,6 +94,16 @@ def doc_to_markdown(doc_path, backend="vlm", lang="en", force=False, extra_args=
         print(f"  [mineru-api] cached: {target.name}")
         return target
 
+    md_text = _mineru_markdown_for(doc_path, backend=backend, lang=lang)
+    target.write_text(md_text, encoding="utf-8")
+    print(f"  [mineru-api] wrote: {target.name}  ({len(md_text)} chars)")
+    return target
+
+
+def _mineru_markdown_for(doc_path, backend="vlm", lang="en") -> str:
+    """Run MinerU's hosted v4 API on ONE pdf/image and return the markdown TEXT
+    (no file written). Shared by doc_to_markdown (writes X.pdf.md next to the
+    source) and office_to_markdown (runs on a temp PDF, writes X.docx.md)."""
     import mineru_api  # local module: hosted v4 client
 
     token = os.environ.get("MINERU_TOKEN")
@@ -86,27 +113,145 @@ def doc_to_markdown(doc_path, backend="vlm", lang="en", force=False, extra_args=
             "https://mineru.net/apiManage/token and set MINERU_TOKEN.")
 
     model = "vlm" if backend not in ("pipeline",) else "pipeline"
-    print(f"  [mineru-api] converting {doc_path.name} (model={model}, lang={lang})")
+    print(f"  [mineru-api] converting {Path(doc_path).name} (model={model}, lang={lang})")
     md_text = mineru_api.extract_one(
-        doc_path, token, model=model, language=(lang or "en"))
+        Path(doc_path), token, model=model, language=(lang or "en"))
     if md_text is None:
-        raise RuntimeError(f"hosted API returned no markdown for {doc_path.name}")
-    target.write_text(md_text, encoding="utf-8")
-    print(f"  [mineru-api] wrote: {target.name}  ({len(md_text)} chars)")
-    return target
+        raise RuntimeError(
+            f"hosted API returned no markdown for {Path(doc_path).name}")
+    return md_text
 
 
 def pdf_to_markdown(pdf_path, **kw):           # backwards-compatible alias
     return doc_to_markdown(pdf_path, **kw)
 
 
+def _find_soffice(verbose: bool = False):
+    """Locate a LibreOffice/soffice executable for docx->pdf. Honours the
+    SOFFICE_PATH env var first, then PATH, then common install locations."""
+    tried = []
+    env = os.environ.get("SOFFICE_PATH")
+    if env:
+        tried.append(env)
+        if Path(env).exists():
+            return env
+    for name in ("soffice", "libreoffice", "soffice.exe", "libreoffice.exe"):
+        p = shutil.which(name)
+        tried.append(f"PATH:{name}")
+        if p:
+            return p
+    candidates = [
+        r"C:\Program Files\LibreOffice\program\soffice.exe",
+        r"C:\Program Files (x86)\LibreOffice\program\soffice.exe",
+        "/Applications/LibreOffice.app/Contents/MacOS/soffice",
+        "/usr/bin/soffice", "/usr/bin/libreoffice",
+    ]
+    for c in candidates:
+        tried.append(c)
+        if Path(c).exists():
+            return c
+    if verbose:
+        print("  [soffice] not found. Looked in:")
+        for t in tried:
+            print(f"      - {t}")
+        print("  If LibreOffice is installed elsewhere, set SOFFICE_PATH to the "
+              "full path of soffice(.exe).")
+    return None
+
+
+def _office_to_pdf(src: Path, out_dir: Path, prefer: str = "word"):
+    """Render a .doc/.docx to PDF in ``out_dir``. Returns the pdf Path or None.
+
+    Converter order matters (see docx_vs_pdf_audit): Microsoft Word (via
+    docx2pdf/COM) renders complex tables FAITHFULLY, while LibreOffice headless
+    has been observed to mangle them — rotating a narrow first column into
+    per-letter vertical text and losing the grid. So Word is tried first and
+    LibreOffice is the fallback; ``prefer='libre'`` forces the old order.
+    """
+    src = Path(src)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    target = out_dir / (src.stem + ".pdf")
+    if target.exists():
+        return target
+
+    def _via_word():
+        try:
+            from docx2pdf import convert          # Word COM automation (Win/mac)
+            convert(str(src), str(target))
+            return target if target.exists() else None
+        except Exception as e:
+            print(f"    [pdf] Word/docx2pdf unavailable or failed: {type(e).__name__}")
+            return None
+
+    def _via_libre():
+        soffice = _find_soffice()
+        if not soffice:
+            return None
+        try:
+            subprocess.run(
+                [soffice, "--headless", "--convert-to", "pdf",
+                 "--outdir", str(out_dir), str(src)],
+                check=True, capture_output=True, timeout=180,
+                env={**os.environ, "HOME": str(out_dir)})
+            return target if target.exists() else None
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+            print(f"    [pdf] soffice failed on {src.name}: {e}")
+            return None
+
+    chain = [_via_word, _via_libre] if prefer == "word" else [_via_libre, _via_word]
+    for conv in chain:
+        r = conv()
+        if r:
+            return r
+    return None
+
+
+def office_to_markdown(path, backend="vlm", lang="en", force=False,
+                       prefer="word", **_ignored):
+    """Convert a .doc/.docx to Markdown by rendering it to PDF first, then running
+    MinerU's hosted API on that PDF.
+
+    The intermediate PDF is written to a TEMP dir, never into the paper folder —
+    a stray sibling .pdf would otherwise be mis-picked as a source (or even the
+    main paper) by classify_folder. The markdown is named after the ORIGINAL file
+    (X.docx -> X.docx.md), matching the rest of the pipeline and clean_markdowns,
+    and is cached (reused unless force=True).
+    """
+    path = Path(path).resolve()
+    if not path.exists():
+        raise FileNotFoundError(path)
+
+    target = path.parent / (path.name + ".md")     # X.docx -> X.docx.md
+    if target.exists() and not force:
+        print(f"  [office->pdf] cached: {target.name}")
+        return target
+
+    with tempfile.TemporaryDirectory() as tmp:
+        pdf = _office_to_pdf(path, Path(tmp), prefer=prefer)
+        if pdf is None:
+            raise RuntimeError(
+                f"could not convert {path.name} to PDF. Install Microsoft Word "
+                "(docx2pdf) or LibreOffice; if LibreOffice is not on PATH set "
+                "SOFFICE_PATH to soffice(.exe).")
+        print(f"  [office->pdf] {path.name} -> {pdf.name} (temp); running MinerU...")
+        md_text = _mineru_markdown_for(pdf, backend=backend, lang=lang)
+
+    target.write_text(md_text, encoding="utf-8")
+    print(f"  [office->pdf] wrote: {target.name}  ({len(md_text)} chars)")
+    return target
+
+
 def ensure_markdown(path, **kw):
-    """docx -> .md via python-docx; pdf/pptx/image -> .md via MinerU;
-    xlsx/csv/md/html -> unchanged."""
+    """.doc/.docx -> .md via PDF + MinerU (or python-docx if DOCX_VIA_PDF=False);
+    pdf/pptx/image -> .md via MinerU; xlsx/csv/md/html -> unchanged."""
     p = Path(path)
-    if p.suffix.lower() in DOCX_EXTS:
-        return docx_to_markdown(p)          # MinerU kwargs don't apply
-    if p.suffix.lower() in MINERU_DOC_EXTS:
+    ext = p.suffix.lower()
+    if ext in WORD_EXTS:
+        # legacy .doc has no python-docx reader, so it always goes via PDF
+        if DOCX_VIA_PDF or ext == ".doc":
+            return office_to_markdown(p, **kw)
+        return docx_to_markdown(p)          # python-docx (exact tables), .docx only
+    if ext in MINERU_DOC_EXTS:
         return doc_to_markdown(p, **kw)
     return p
 
@@ -154,14 +299,57 @@ def _rows_to_html_table(rows):
     return "\n".join(out)
 
 
+def _repair_date_ratio(value):
+    """Undo Excel's auto-conversion of a typed 'month.day' ratio into a date.
+
+    Some complementary spreadsheets were typed into General-format cells, so a
+    value like '3.15' was interpreted as 15 March and stored as a date. This
+    reverses that: a datetime -> the float month.day (day zero-padded to two
+    places, matching the two-decimal convention those columns use: '1.08', not
+    '1.8').
+
+    Returns the repaired float, or None if `value` is not a datetime (caller
+    leaves the cell untouched). NOTE: this assumes every datetime in these
+    complementary sheets is a corrupted ratio, never a real calendar date — which
+    held for the papers checked (Fontanilla2019). If a sheet has a genuine date
+    column, guard or disable this via REPAIR_DATE_RATIOS.
+    """
+    from datetime import datetime, date
+    if not isinstance(value, (datetime, date)):
+        return None
+    return float(f"{value.month}.{value.day:02d}")
+
+
+# Turn the per-paper date repair on/off. On by default because the corrupted
+# ratios otherwise reach the model as dates ('2019-03-15') and never match GT.
+REPAIR_DATE_RATIOS = True
+
+
 def xlsx_to_html_tables(xlsx_path):
     wb = openpyxl.load_workbook(xlsx_path, data_only=True)
     blocks = []
+    repaired = 0
     for ws in wb.worksheets:
         rows = list(ws.iter_rows(values_only=True))
+        if REPAIR_DATE_RATIOS:
+            fixed_rows = []
+            for r in rows:
+                new_r = []
+                for c in r:
+                    rc = _repair_date_ratio(c) if REPAIR_DATE_RATIOS else None
+                    if rc is not None:
+                        new_r.append(rc)
+                        repaired += 1
+                    else:
+                        new_r.append(c)
+                fixed_rows.append(tuple(new_r))
+            rows = fixed_rows
         if any(any(c is not None for c in r) for r in rows):
             heading = f"### {ws.title}" if ws.title else ""
             blocks.append((heading + "\n" + _rows_to_html_table(rows)).strip())
+    if repaired:
+        print(f"  [xlsx] repaired {repaired} date-corrupted ratio cell(s) in "
+              f"{Path(xlsx_path).name}")
     return blocks
 
 
@@ -233,7 +421,7 @@ def classify_folder(folder):
     folder = Path(folder)
     files = [f for f in folder.iterdir()
              if f.is_file() and f.suffix.lower() in
-             (MINERU_DOC_EXTS | DOCX_EXTS | NATIVE_TABLE_EXTS | TEXT_EXTS)
+             (MINERU_DOC_EXTS | WORD_EXTS | NATIVE_TABLE_EXTS | TEXT_EXTS)
              and f.suffix.lower() != ".md"]      # ignore produced markdown
 
     # main: a pdf/html, non-_S preferred, pdf preferred
@@ -270,7 +458,7 @@ def prepare_document_set(folder, force=False, backend="vlm", lang="en"):
     main_md = ensure_markdown(main, force=force, backend=backend, lang=lang)
     comps = []
     for c in complementary:
-        if c.suffix.lower() in (DOCX_EXTS | MINERU_DOC_EXTS):
+        if c.suffix.lower() in (WORD_EXTS | MINERU_DOC_EXTS):
             comps.append(str(ensure_markdown(c, force=force, backend=backend, lang=lang)))
         else:                                   # xlsx/csv/text -> kept as-is
             comps.append(str(c))
@@ -318,7 +506,7 @@ def clean_markdowns(base, dry_run=True):
     """
     base = Path(base)
     suffixes = tuple(f"{e}.md" for e in
-                     (MINERU_DOC_EXTS | DOCX_EXTS))   # e.g. '.pdf.md', '.docx.md'
+                     (MINERU_DOC_EXTS | WORD_EXTS))   # e.g. '.pdf.md', '.docx.md'
     victims = [p for p in base.rglob("*.md")
                if p.name.endswith(suffixes) or p.name.endswith("_full.md")]
 

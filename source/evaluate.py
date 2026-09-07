@@ -41,8 +41,15 @@ import json
 import re
 import traceback
 import unicodedata
+from itertools import combinations
 from pathlib import Path
 from collections import Counter, defaultdict
+
+try:
+    from column_relevance import invoke_sized, loads_salvaging
+except Exception:                       # evaluator must run even without Ollama deps
+    invoke_sized = None
+    loads_salvaging = None
 from decimal import Decimal, InvalidOperation
 
 import openpyxl
@@ -84,6 +91,253 @@ COLUMNS = [
 # Columns that form the identity of a row for matching. measurementValue is the
 # payload, so the natural key is "which trait of which species, with what value".
 DEFAULT_KEY = ["verbatimIdentification", "measurementType", "measurementValue"]
+
+# ---------------------------------------------------------------------------
+# Scoring categories — edit freely
+# ---------------------------------------------------------------------------
+# Each entry is one SCORE reported side by side: a name and the fields a
+# predicted row must get right to count as a match. Adding a field can only
+# lower the score (more must agree), so the sets read as increasing strictness
+# and the drop between them tells you which field is costing you rows.
+#
+# To add or remove a category, edit this dict; to change which ones a run
+# reports, edit ACTIVE_KEY_SETS (or pass key_sets= to evaluate()).
+KEY_SETS = {
+    # what the trait record IS: which trait of which species, and its value
+    "core": ["verbatimIdentification", "measurementType", "measurementValue"],
+    # the same, plus the descriptive tags the volunteers fill in
+    "tags": ["basisOfRecord", "verbatimIdentification", "measurementType",
+             "measurementValue", "measurementStatistic", "sex", "lifeStage"],
+}
+
+# Which categories every run prints. "core" stays first: it is the headline.
+ACTIVE_KEY_SETS = ["core", "tags"]
+
+# Whether the misses CSV is annotated with an LLM-judged severity + reasoning
+# (score-neutral diagnostic). Off = no LLM calls in the evaluator.
+ASSESS_MISS_SEVERITY = True
+
+# ---------------------------------------------------------------------------
+# Taxon-name comparison
+# ---------------------------------------------------------------------------
+# Volunteers and the pipeline write the same organism differently. The
+# differences are almost never in the WORDS — they are extra classification
+# tokens, a duplicated genus, an authority, or an abbreviated genus:
+#
+#   'Calopteryx aequabilis'  vs  'Calopteryx.aequabilis Calopteryx aequabilis
+#                                 Calopterygidae Zygoptera'   (+family, +suborder)
+#   'Anthophora californica' vs  'Anthophora Anthophoroides californica' (+subgenus)
+#   'Andrena vilhenae'       vs  'A. vilhenae'                (abbreviated genus)
+#
+# So names are compared as SETS OF WORDS, not as strings and not by character
+# similarity: an anagram or a near-spelling is not a match, while the same words
+# plus a family name is. Rank words (family/order/suborder) are dropped outright
+# because they classify the organism rather than name it.
+# Rank-name endings, deliberately restricted to suffixes that do not occur as
+# ordinary species epithets. 'acea'/'odea' were removed: they matched real
+# epithets ('ochracea', 'rosacea', 'violacea'), dropping the epithet and making
+# the species unmatchable. Family is '-aceae' (Rosaceae), not '-acea'.
+_RANK_SUFFIX = re.compile(
+    r"(idae|inae|aceae|oidea|ptera|formes|morpha|ales)$")
+# Words that qualify a name without identifying it.
+_TAXON_NOISE = {
+    "sp", "spp", "ssp", "subsp", "var", "cf", "aff", "nr", "morph",
+    "complex", "group", "sensu", "lato", "stricto", "indet", "unknown",
+    "undetermined", "nov", "novum", "et", "al",
+}
+
+
+def species_tokens(name) -> frozenset:
+    """The identifying words of a taxon name, lowercased, order-independent.
+
+    Drops parentheticals (authorities, sample sizes), splits on any punctuation
+    so 'Calopteryx.aequabilis' becomes two words, removes rank words and
+    qualifiers, and de-duplicates — so a repeated genus collapses instead of
+    counting twice.
+
+    Glued author citations are un-glued FIRST. Extraction sometimes runs the
+    taxonomic authority straight onto the epithet with no space
+    ('eickstedtaeSchlinger, 1972', 'sulphuripesLoew') or runs the status marker
+    on ('kenneisp. nov.'). Left alone, 'eickstedtae' and 'eickstedtaeschlinger'
+    are different tokens and the same species fails to match. Splitting at the
+    lowercase->UPPERCASE boundary (and before a run-on 'sp.'/'ssp.') restores the
+    epithet as its own token; the author words then fall away exactly like a
+    spaced authority does. This is done ONLY for comparison — the name written to
+    verbatimIdentification is never changed, so the authority stays in the data.
+    """
+    s = unicodedata.normalize("NFKD", str(name or "")).encode("ascii", "ignore").decode()
+    s = re.sub(r"\([^)]*\)", " ", s)
+    s = re.sub(r"\bn\s*=\s*\d+", " ", s, flags=re.I)
+    # un-glue 'epithetAuthor' -> 'epithet Author' while the case boundary is still
+    # visible (i.e. before lowercasing)
+    s = re.sub(r"([a-z])([A-Z])", r"\1 \2", s)
+    # un-glue a run-on status marker: 'kenneisp. nov.' -> 'kennei sp. nov.'
+    s = re.sub(r"([a-z]{3,})(sp{1,2}\.?\s*nov)", r"\1 \2", s, flags=re.I)
+    s = s.lower()
+    toks = [t for t in re.split(r"[^a-z0-9]+", s) if t]
+    kept, ranks = set(), set()
+    for t in toks:
+        if t in _TAXON_NOISE:
+            continue
+        if t.isdigit():
+            continue                     # a stray authority year ('1972')
+        if len(t) > 3 and _RANK_SUFFIX.search(t):
+            ranks.add(t)                 # Calopterygidae, Zygoptera, Halictinae
+            continue
+        kept.add(t)
+    # Rank words are dropped only when they are EXTRA. A record identified to
+    # family level ('Hesperiidae') is named by its rank word, and discarding it
+    # would leave nothing to compare.
+    return frozenset(kept or ranks)
+
+
+def species_match(a, b) -> bool:
+    """Do two taxon names denote the same organism?
+
+    True when one name's words are all present in the other's. Extra words are
+    tolerated on either side, which is the whole point: a prediction carrying a
+    subgenus, family and suborder still matches the bare binomial.
+
+    Two guards stop that tolerance from over-matching:
+      * a ONE-WORD name must match exactly. Otherwise 'Andrena' would be
+        credited as 'Andrena vilhenae' — a genus is not one of its species.
+      * a single-letter word may stand in for a longer word beginning with that
+        letter ('a' ~ 'andrena'), but every other word must still match exactly,
+        so 'A. vilhenae' resolves on the epithet rather than on the initial.
+    """
+    ta, tb = species_tokens(a), species_tokens(b)
+    if not ta or not tb:
+        return False
+    if ta == tb:
+        return True
+    small, large = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+    if len(small) < 2:
+        return False                     # genus/family alone must match exactly
+    if small <= large:
+        return True
+
+    # Abbreviation-tolerant pass, tried in BOTH directions: which side holds the
+    # abbreviation is an accident of who wrote the name.
+    def _abbrev_ok(x, y):
+        missing, extra = x - y, y - x
+        if len(missing) != 1 or not extra:
+            return False
+        m = next(iter(missing))
+        return len(m) == 1 and any(e.startswith(m) for e in extra)
+
+    if _abbrev_ok(ta, tb) or _abbrev_ok(tb, ta):
+        return True
+
+    # OCR-typo-tolerant pass. Extraction from a rasterized page drops or doubles
+    # single letters in the epithet: 'Ataenius'/'Atenius', 'jelski'/'jelskii',
+    # 'Dorymyrex'/'Dorymyrmex', 'appenninicus'/'apenninicus'. Every one of these
+    # has ALL tokens equal except ONE, and that one differs by a single-character
+    # edit. Accept exactly that case, under strict guards so it can never merge
+    # two real taxa:
+    #   * exactly one token differs on each side (all others match exactly), so
+    #     'Aphodius sp1' vs 'Aphodius sp2' is NOT touched here — that reduces to
+    #     the two differing tokens 'sp1'/'sp2' and is handled by the length gate;
+    #   * the differing tokens are >=6 chars, so short morphospecies codes
+    #     ('sp1'/'sp2', 'fs-5'/'fs-15') and initials never qualify;
+    #   * edit distance exactly 1, so 'forewing'/'hindwing' (distance 4) is safe.
+    return _ocr_typo_ok(ta, tb)
+
+
+def _edit_distance_le1(a: str, b: str) -> bool:
+    """True iff `a` and `b` are within one insertion/deletion/substitution.
+    Cheap early exits on length; no full DP needed for a threshold of 1."""
+    if a == b:
+        return True
+    la, lb = len(a), len(b)
+    if abs(la - lb) > 1:
+        return False
+    if la == lb:                              # at most one substitution
+        return sum(x != y for x, y in zip(a, b)) == 1
+    # lengths differ by 1: b must be a with one char inserted (try both orders)
+    short, long = (a, b) if la < lb else (b, a)
+    i = j = edits = 0
+    while i < len(short) and j < len(long):
+        if short[i] == long[j]:
+            i += 1; j += 1
+        else:
+            edits += 1
+            if edits > 1:
+                return False
+            j += 1                            # skip the inserted char in `long`
+    return True
+
+
+def _ocr_typo_ok(ta: frozenset, tb: frozenset) -> bool:
+    """Match names identical except for a single one-character OCR slip in one
+    token. See species_match for the guards this enforces."""
+    common = ta & tb
+    da, db = ta - common, tb - common
+    if len(da) != 1 or len(db) != 1:          # exactly one token differs each side
+        return False
+    wa, wb = next(iter(da)), next(iter(db))
+    if len(wa) < 6 or len(wb) < 6:            # never on short morphospecies codes
+        return False
+    return _edit_distance_le1(wa, wb)
+
+
+def remap_pred_species(gt_rows, pred_rows):
+    """Rewrite each predicted verbatimIdentification to the ground-truth wording
+    for the SAME organism, so the exact key match credits it.
+
+    Same design as remap_pred_types, and for the same reason: the score and every
+    diagnostic downstream then read one decision instead of forming two opinions.
+    A predicted name is only ever rewritten to a GT name it MATCHES, so this
+    cannot move rows between different organisms.
+
+    Returns (rows, mapping, unmapped) where `unmapped` explains every predicted
+    name that was left alone — an unexplained non-match is what made a whole
+    genus look absent from the prediction when the names were in fact present.
+    """
+    gt_counts = Counter(r.get("verbatimIdentification", "") for r in gt_rows
+                        if str(r.get("verbatimIdentification", "")).strip())
+    gt_names = sorted(gt_counts)
+    pred_names = sorted({r.get("verbatimIdentification", "") for r in pred_rows
+                         if str(r.get("verbatimIdentification", "")).strip()})
+    exact = {normalize_value(g) for g in gt_names}
+
+    mapping, unmapped = {}, []
+    for p in pred_names:
+        if normalize_value(p) in exact:
+            continue                                  # already agrees
+        hits = [g for g in gt_names if species_match(p, g)]
+        if not hits:
+            unmapped.append((p, "no ground-truth name denotes this organism"))
+            continue
+        if len(hits) == 1:
+            mapping[p] = hits[0]
+            continue
+        # Several candidates. If they all denote the SAME organism — two spellings
+        # of one name, e.g. '(Linnaeus 1761)' and '(Linnaeus, 1761)' — then any of
+        # them is the right target and the most frequent is the safest choice.
+        # Only candidates that disagree with EACH OTHER are a real ambiguity.
+        if all(species_match(a, b) for a, b in combinations(hits, 2)):
+            # Prefer the candidate whose WORDS are closest to the prediction's:
+            # a bare binomial should resolve to the same name plus an authority
+            # (no word difference once the bracket is dropped) rather than to a
+            # subspecies, which adds a word. Frequency in GT breaks remaining ties.
+            pt = species_tokens(p)
+            mapping[p] = min(hits, key=lambda g: (len(pt ^ species_tokens(g)),
+                                                  -gt_counts[g], len(g)))
+            continue
+        unmapped.append(
+            (p, f"matches {len(hits)} different organisms, cannot choose: "
+                f"{', '.join(repr(h) for h in hits[:4])}"))
+
+    if not mapping:
+        return pred_rows, {}, unmapped
+    out = []
+    for r in pred_rows:
+        nm = r.get("verbatimIdentification", "")
+        if nm in mapping:
+            r = {**r, "verbatimIdentification": mapping[nm]}
+        out.append(r)
+    return out, mapping, unmapped
+
 
 # Optional: legend codes -> expanded terms the volunteers used. Opt-in (--decode).
 # Keyed by (normalized) measurementType is overkill here since codes are shared,
@@ -223,7 +477,21 @@ def remap_pred_types(gt_rows, pred_rows, use_llm=True):
     if not gt_types or not pred_types:
         return pred_rows, {}
 
-    type_map = build_type_map(gt_types, pred_types, use_llm=use_llm)
+    try:
+        type_map, report = build_type_map(gt_types, pred_types, use_llm=use_llm,
+                                          return_report=True)
+    except TypeError:                     # older matcher without return_report
+        type_map, report = build_type_map(gt_types, pred_types, use_llm=use_llm), {}
+
+    # Say out loud what the matcher could NOT resolve, and why. A silently
+    # failing LLM used to look identical to a confident "these are different
+    # traits", which is how a name could read as near-identical in the coverage
+    # table and as a 100% miss in the score with nothing to explain the gap.
+    if report.get("llm_error"):
+        print(f"  [semantic] LLM confirm pass unavailable ({report['llm_error']}) "
+              f"— deterministic passes only")
+    for p, g, why in report.get("llm_rejected", [])[:10]:
+        print(f"  [semantic] left unmatched: {p!r} vs {g!r} ({why})")
     # keep only pairs that actually change the string (raw-identical pairs are
     # no-ops and just clutter the diagnostic)
     nontrivial = {p: g for p, g in type_map.items() if p != g}
@@ -308,14 +576,111 @@ def prf(tp, fp, fn):
     return p, r, f
 
 
+def score_key_set(gt_rows, pred_rows, fields, decode, scope_sets=None):
+    """Precision/recall/F1 for one scoring category.
+
+    Uses the SAME matcher and the SAME scoping as the headline score, so a
+    category row cannot disagree with the headline about what counts as a false
+    positive. Without the scoping, a paper whose ground truth covers only some of
+    the traits it mentions shows a low precision here and 1.000 above — the same
+    prediction, two verdicts.
+
+    Returns (p, r, f, (tp, fp_scoped, fn), fp_all): both precisions are available,
+    the scoped one for the score and the raw one to show what was set aside.
+    """
+    matched, missing, extra = match_rows(gt_rows, pred_rows, fields, decode)
+    in_scope = extra
+    if scope_sets:
+        in_scope, _out = partition_extra(extra, scope_sets, decode)
+    tp, fn = len(matched), len(missing)
+    p, r, f = prf(tp, len(in_scope), fn)
+    return p, r, f, (tp, len(in_scope), fn), len(extra)
+
+
+def _tag_coverage(matched, fields, decode):
+    """Of the matched rows, how many actually had a value to agree ON for the
+    fields this category adds?
+
+    A category built from tags can be satisfied trivially: if GT and prediction
+    are BOTH blank in a field, the key matches and nothing was verified. This
+    reports the share of matched rows where at least one added field was
+    populated on both sides, so an identical score between two categories can be
+    read correctly — either the tags genuinely agree, or there were no tags.
+    """
+    core = set(KEY_SETS.get("core", []))
+    added = [f for f in fields if f not in core]
+    if not added or not matched:
+        return None
+    informative = 0
+    for g, p in matched:
+        if any(normalize_value(g.get(f, ""), decode)
+               and normalize_value(p.get(f, ""), decode) for f in added):
+            informative += 1
+    return informative, len(matched), added
+
+
+def print_key_set_scores(gt, pred, decode, names=None, scope_sets=None,
+                         matched=None):
+    """Score each active category side by side.
+
+    Reading it: every category adds fields to the one before, and adding a field
+    can only lose matches, so the DROP between two rows is attributable to the
+    fields that were added — which is the number you want when deciding what to
+    fix next.
+    """
+    names = names or ACTIVE_KEY_SETS
+    print("\nSCORES BY CATEGORY")
+    print(f"  {'category':<10} {'P':>6} {'R':>6} {'F1':>6}  {'TP':>5} {'FP':>5} {'FN':>5}   key")
+    out = {}
+    prev_f = None
+    for name in names:
+        fields = KEY_SETS.get(name)
+        if not fields:
+            print(f"  {name:<10} (unknown category — not in KEY_SETS)")
+            continue
+        p, r, f, (tp, fp, fn), fp_all = score_key_set(
+            gt, pred, fields, decode, scope_sets)
+        out[name] = (p, r, f)
+        short = "+".join(_short_field(x) for x in fields)
+        print(f"  {name:<10} {p:>6.3f} {r:>6.3f} {f:>6.3f}  {tp:>5} {fp:>5} {fn:>5}   {short}")
+        if fp_all != fp:
+            print(f"  {'':<10} ({fp_all - fp} more spurious row(s) set aside as "
+                  f"out-of-scope; strict P would be {tp / (tp + fp_all):.3f})")
+        if prev_f is not None:
+            print(f"  {'':<10} (F1 {f - prev_f:+.3f} vs previous)")
+        cov = _tag_coverage(matched, fields, decode) if matched else None
+        if cov:
+            informative, total, added = cov
+            if informative < total:
+                print(f"  {'':<10} note: only {informative}/{total} matched row(s) "
+                      f"had any of {'/'.join(_short_field(a) for a in added)} "
+                      f"populated on both sides — the rest agree by being empty")
+        prev_f = f
+    return out
+
+
+def _short_field(f):
+    """Compact field label for the key column of the score table."""
+    return {"verbatimIdentification": "id", "measurementType": "type",
+            "measurementValue": "value", "measurementStatistic": "stat",
+            "basisOfRecord": "basis", "lifeStage": "stage"}.get(f, f)
+
+
 def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=True,
-             scope="measurementType"):
+             scope="measurementType", key_sets=None, match_species=True):
     gt = load_xlsx(gt_path)
     pred = load_csv(pred_path)
 
     type_map = {}
     if semantic:
         pred, type_map = remap_pred_types(gt, pred, use_llm=use_llm)
+
+    # Taxon names are reconciled BEFORE matching, and before any diagnostic runs,
+    # so the score and every breakdown below agree on which organism a row is
+    # about (the same reason measurementType is remapped first).
+    species_map, species_unmapped = {}, []
+    if match_species:
+        pred, species_map, species_unmapped = remap_pred_species(gt, pred)
 
     matched, missing, extra = match_rows(gt, pred, key_fields, decode)
 
@@ -325,6 +690,18 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
     print(f"KEY          : {key_fields}   decode={decode}  semantic={semantic}")
     print(f"SCOPE        : {scope}")
     print("=" * 64)
+
+    if species_map:
+        print(f"\nTAXON NAME REMAP (pred -> gt, {len(species_map)} pair(s))")
+        for p, g in sorted(species_map.items()):
+            print(f"  {p!r} -> {g!r}")
+    if species_unmapped:
+        # Every predicted name left alone, and why. A silent non-match here reads
+        # downstream as 'species not in prediction', which is a very different
+        # diagnosis from 'the name was there but could not be paired'.
+        print(f"\nTAXON NAMES LEFT UNMAPPED ({len(species_unmapped)})")
+        for nm, why in sorted(species_unmapped):
+            print(f"  {nm!r}: {why}")
 
     if type_map:
         print(f"\nSEMANTIC measurementType REMAP (pred -> gt, {len(type_map)} pair(s))")
@@ -397,6 +774,10 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
     # --- measurementType coverage breakdown (very useful diagnostic) ---
     print_type_coverage(gt, pred, decode)
 
+    # --- scores by category (modular; see KEY_SETS / ACTIVE_KEY_SETS) ---
+    by_key_set = print_key_set_scores(gt, pred, decode, key_sets,
+                                      scope_sets=scope_sets, matched=matched)
+
     return {
         "row": (p_sc, r_sc, f_sc),          # headline: scoped
         "row_strict": (p_all, r_all, f_all),
@@ -404,6 +785,8 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
         "n_out_of_scope": len(out_of_scope),
         "n_in_scope_fp": fp_scoped,
         "fields": field_stats,
+        "by_key_set": by_key_set,
+        "species_map": species_map,
     }
 
 
@@ -433,9 +816,10 @@ def attribute_misses(missing, pred, decode):
         s, t = n(r, F_ID), n(r, F_TYPE)
         pred_types_of[s].add(t)
         pred_values_of[(s, t)].append(n(r, F_VAL))
+    pred_valueset_of = {k: set(v) for k, v in pred_values_of.items()}
 
     causes = Counter()
-    sub_value = Counter()      # (gt_value, pred_value) -> count
+    sub_value = Counter()      # (gt_value, pred_value) -> count  (TRUE mismatches)
     sub_species = Counter()    # gt_species -> count      (absent from pred)
     sub_trait = Counter()      # (species-less) gt_type -> count
     rows = []                  # one entry per missed row, fully attributed
@@ -454,6 +838,16 @@ def attribute_misses(missing, pred, decode):
             rows.append({"cause": "species present, trait missing",
                          "verbatimIdentification": gid, "measurementType": gtype,
                          "measurementValue": gval, "pred_collision_value": ""})
+        elif v in pred_valueset_of.get((s, t), ()):
+            # The species, the trait, AND this exact value all exist in the
+            # prediction — GT simply has more rows carrying it than the pipeline
+            # reproduced (e.g. many specimens measured 0.01). This is a specimen-
+            # count shortfall, NOT a value substitution; recording it as
+            # '0.01 -> 0.01' made a decode ghost out of an extraction gap.
+            causes["value present, extra GT copies not reproduced"] += 1
+            rows.append({"cause": "value present, extra GT copies not reproduced",
+                         "verbatimIdentification": gid, "measurementType": gtype,
+                         "measurementValue": gval, "pred_collision_value": gval})
         else:
             causes["species+trait present, value differs"] += 1
             got = pred_values_of[(s, t)]
@@ -475,6 +869,121 @@ def _closest_pred_species(name, preds):
         if sc > score:
             best, score = p, sc
     return best, score
+
+
+def _deterministic_severity(row):
+    """Cheap severity for the misses whose reason needs no model.
+
+    Returns (severity, reasoning) or None to defer to the LLM. Only the clearest
+    cases are decided here: a species genuinely absent with no near neighbour is
+    severe; a value miss where prediction had nothing is a plain omission. The
+    ambiguous ones — a value that is arguably the same thing worded differently —
+    are what the LLM is for, so they return None.
+    """
+    cause = row.get("cause", "")
+    gval = str(row.get("measurementValue", "")).strip()
+    pval = str(row.get("pred_collision_value", "")).strip()
+    if cause == "species not in prediction":
+        return None                      # let the LLM judge vs the closest name
+    if cause == "species present, trait missing":
+        return ("moderate", "the trait was not extracted for this species")
+    if cause == "species+trait present, value differs":
+        if not pval:
+            return ("moderate", "no value was predicted for this trait")
+        # else defer: is the difference trivial (units/authority/wording) or real?
+        return None
+    return None
+
+
+_SEVERITY_SYSTEM = (
+    "You grade how SEVERE each extraction miss is, comparing what the ground "
+    "truth expected to what the pipeline predicted for the SAME species and "
+    "trait. You are grading severity only — you do NOT change any score.\n\n"
+    "Severity levels:\n"
+    "- trivial: same meaning, cosmetic difference only (a taxonomic authority or "
+    "family in the predicted value, '(Lycosidae)', 'Uetz & Dondale 1979'; "
+    "punctuation; units written differently; '±' spacing; 1 vs 1.0).\n"
+    "- minor: same quantity/category but a small real difference (rounding, a "
+    "unit conversion, a near-synonym).\n"
+    "- moderate: related but not clearly the same (a different measure of the "
+    "same structure, a partial value).\n"
+    "- severe: wrong — a different species, a different trait, or an unrelated "
+    "value (GT 'Coras montanus' vs pred 'Pardosa sp.').\n\n"
+    "For each numbered item answer with its number, a severity, and a reason of "
+    "at most 15 words. Answer ONLY JSON: "
+    "{\"items\": [{\"n\": <int>, \"severity\": \"trivial|minor|moderate|severe\", "
+    "\"reasoning\": \"...\"}]}"
+)
+
+
+def _assess_severity_batch(items, llm=None):
+    """Grade one batch of deferred misses. `items` is a list of dicts with n,
+    gt_value, pred_value, measurementType, gt_species. Returns {n: (sev, why)}."""
+    lines = []
+    for it in items:
+        lines.append(
+            f'{it["n"]}. species "{it["gt_species"]}", trait '
+            f'"{it["measurementType"]}": ground truth = "{it["gt_value"]}", '
+            f'predicted = "{it["pred_value"] or "(nothing)"}"')
+    user = "Items:\n" + "\n".join(lines)
+    try:
+        content = (llm.invoke([{"role": "system", "content": _SEVERITY_SYSTEM},
+                               {"role": "user", "content": user}]).content
+                   if llm else
+                   invoke_sized([{"role": "system", "content": _SEVERITY_SYSTEM},
+                                 {"role": "user", "content": user}]))
+        out = loads_salvaging(content)
+    except Exception as e:
+        print(f"  [severity] batch unavailable ({type(e).__name__}); left blank")
+        return {}
+    got = {}
+    for entry in (out.get("items") or []) if isinstance(out, dict) else []:
+        try:
+            n = int(entry["n"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        sev = str(entry.get("severity", "")).strip().lower()
+        if sev not in {"trivial", "minor", "moderate", "severe"}:
+            continue
+        got[n] = (sev, str(entry.get("reasoning", "")).strip()[:200])
+    return got
+
+
+def assess_miss_severity(rows, use_llm=True, batch_size=20):
+    """Annotate each miss row with severity + reasoning IN PLACE.
+
+    Never touches the score — this runs after matching, only to explain the
+    misses. Deterministic labels are applied first (free); the ambiguous ones are
+    batched to the LLM. If the LLM is unavailable, those rows get a blank severity
+    and '(not assessed)', and everything still writes.
+    """
+    deferred = []
+    for i, r in enumerate(rows):
+        det = _deterministic_severity(r)
+        if det is not None:
+            r["severity"], r["reasoning"] = det
+        else:
+            r["severity"], r["reasoning"] = "", "(not assessed)"
+            deferred.append(i)
+
+    if not use_llm or invoke_sized is None or not deferred:
+        return rows
+
+    print(f"  [severity] assessing {len(deferred)} ambiguous miss(es) "
+          f"in {(len(deferred) + batch_size - 1) // batch_size} batch(es)...")
+    for start in range(0, len(deferred), batch_size):
+        idxs = deferred[start:start + batch_size]
+        items = [{"n": k,
+                  "gt_species": rows[k].get("verbatimIdentification", ""),
+                  "measurementType": rows[k].get("measurementType", ""),
+                  "gt_value": rows[k].get("measurementValue", ""),
+                  "pred_value": rows[k].get("pred_collision_value", "")}
+                 for k in idxs]
+        graded = _assess_severity_batch(items, llm=None)
+        for k in idxs:
+            if k in graded:
+                rows[k]["severity"], rows[k]["reasoning"] = graded[k]
+    return rows
 
 
 def write_failure_details(attr, pred, path):
@@ -505,18 +1014,25 @@ def write_failure_details(attr, pred, path):
                 closest[gid] = (best, score) if score >= NEAR else ("", score)
 
     csv_path = f"{path}_misses.csv"
+    # Annotate misses with severity + reasoning (score-neutral; see
+    # assess_miss_severity). Controlled by the module flag so a batch run can turn
+    # it off.
+    assess_miss_severity(rows, use_llm=ASSESS_MISS_SEVERITY)
     with open(csv_path, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=[
             "cause", "verbatimIdentification", "measurementType",
             "measurementValue", "pred_collision_value",
-            "closest_pred_species", "closest_score"])
+            "closest_pred_species", "closest_score",
+            "severity", "reasoning"])
         w.writeheader()
         for r in rows:
             best, score = ("", "")
             if r["cause"] == "species not in prediction":
                 b, s = closest.get(r["verbatimIdentification"], ("", 0.0))
                 best, score = b, f"{s:.2f}"
-            w.writerow({**r, "closest_pred_species": best, "closest_score": score})
+            w.writerow({**r, "closest_pred_species": best, "closest_score": score,
+                        "severity": r.get("severity", ""),
+                        "reasoning": r.get("reasoning", "")})
 
     summary = {
         "total_missed": len(rows),
@@ -606,44 +1122,28 @@ def print_failure_attribution(missing, pred, decode, top=6, detail_path=None):
 
 
 def print_type_coverage(gt, pred, decode, sim_threshold=0.55):
-    """measurementType coverage with wording variants merged inline.
+    """measurementType coverage — a VIEW OF THE SCORE, never a second opinion.
 
-    A GT-side type and a PRED-side type that look like the SAME trait under
-    different wording (e.g. 'ecosystem specificity' vs 'ecosystem specifity',
-    'tongue length' vs 'mean tongue length') are shown on ONE row, joined by
-    'or', with the gt count from the gt-side name and the pred count from the
-    pred-side name — so a trait that IS covered on both sides but worded
-    differently reads as covered instead of as a miss + a spurious.
+    This table used to run its own similarity pass and merge any GT/pred pair
+    scoring above 0.55 onto one row joined by 'or'. Because the scorer used a
+    different rule, a trait could read as fully covered here and as a 100% miss
+    three lines earlier in the failure breakdown — the same names, two verdicts.
 
-    Only cross-side pairs merge (a gt-only name with a pred-only name); two
-    same-side names that happen to look alike (e.g. 'fs-15' and 'fs-5', both
-    pred-only) are never merged, since those are genuinely different traits.
-    A row joined by 'or' is a diagnostic view only — it is credited in the score
-    solely when the semantic matcher actually merges the two names.
+    Now `pred` arrives ALREADY REMAPPED by the semantic matcher, so any pair the
+    scorer accepted has the same string on both sides and lands on one row by
+    construction. Nothing is merged here. What used to be silently merged is
+    listed separately as UNRESOLVED NEAR-MISSES: names that look alike but were
+    NOT credited, which is the actionable list — either the matcher needs a rule
+    for them or they really are different traits.
+
+    (Similarity is still used, but only to decide what to SHOW in that section.
+    It never affects a count.)
     """
     gt_types = Counter(normalize_value(r["measurementType"], decode) for r in gt)
     pred_types = Counter(normalize_value(r["measurementType"], decode) for r in pred)
 
-    gt_only = [t for t in gt_types if not pred_types.get(t)]
-    pred_only = [t for t in pred_types if not gt_types.get(t)]
-
-    # greedy cross-side pairing, best similarity first, 1:1
-    cand = sorted(((_type_sim(g, p), g, p) for g in gt_only for p in pred_only),
-                  reverse=True)
-    used_g, used_p, merges = set(), set(), []
-    for s, g, p in cand:
-        if s < sim_threshold or g in used_g or p in used_p:
-            continue
-        used_g.add(g); used_p.add(p); merges.append((g, p))
-
     rows = []          # (sort_key, label, gt, pred, note)
-    for g, p in merges:
-        gc, pc = gt_types[g], pred_types[p]
-        note = "" if gc == pc else f"\u0394{pc - gc:+d} (split?)"
-        rows.append((_type_key(g), f"{g} or {p}", gc, pc, note))
     for t in set(gt_types) | set(pred_types):
-        if t in used_g or t in used_p:
-            continue
         gc, pc = gt_types.get(t, 0), pred_types.get(t, 0)
         if gc and pc:
             note = "" if gc == pc else f"\u0394{pc - gc:+d} (split?)"
@@ -656,13 +1156,73 @@ def print_type_coverage(gt, pred, decode, sim_threshold=0.55):
     print(f"  {'measurementType':<46} {'gt':>4} {'pred':>5}   note")
     for _, label, gc, pc, note in rows:
         print(f"  {label:<46} {gc:>4} {pc:>5}   {note}")
-    if merges:
-        print("  (rows joined by 'or' are near-identical wording merged for "
-              "readability; credited only if the semantic matcher merges them)")
+
+    # Near-misses the matcher did NOT accept — shown as unresolved, not merged.
+    gt_only = [t for t in gt_types if not pred_types.get(t)]
+    pred_only = [t for t in pred_types if not gt_types.get(t)]
+    near = sorted(((_type_sim(g, p), g, p) for g in gt_only for p in pred_only),
+                  reverse=True)
+    seen_g, seen_p, shown = set(), set(), []
+    for s, g, p in near:
+        if s < sim_threshold or g in seen_g or p in seen_p:
+            continue
+        seen_g.add(g); seen_p.add(p); shown.append((s, g, p))
+    if shown:
+        print("\n  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these "
+              "cost you both a miss and a spurious row)")
+        for s, g, p in shown[:15]:
+            print(f"    gt {g!r:34} vs pred {p!r:34} sim={s:.2f}")
+
+
+def _metrics_from_report(report_path):
+    """Recover (precision, recall, f1) from a saved <paper>_report.txt.
+
+    The report is the stdout of evaluate(), which prints the headline scoped
+    score as 'SCOPED  P/R/F1 : p / r / f' — the same triple stored in
+    summary.csv. Lets --skip-existing reuse a finished paper's score straight
+    from its report, so skipping works even when summary.csv is missing or stale
+    (e.g. after an interrupted batch). Returns None if the file is unreadable or
+    the line isn't found (older/different report format), so the caller falls
+    back to re-evaluating rather than inventing a number.
+    """
+    try:
+        text = Path(report_path).read_text(encoding="utf-8")
+    except OSError:
+        return None
+    m = re.search(r"SCOPED\s+P/R/F1\s*:\s*"
+                  r"([0-9.]+)\s*/\s*([0-9.]+)\s*/\s*([0-9.]+)", text)
+    if not m:
+        return None
+    try:
+        return float(m.group(1)), float(m.group(2)), float(m.group(3))
+    except ValueError:
+        return None
+
+
+def _load_prior_summary(summary_path):
+    """Read an existing summary.csv into {paper: row}, or {} if absent/unreadable.
+
+    Used by --skip-existing to carry a skipped paper's already-computed metrics
+    forward, so skipping a paper does not drop it from the rewritten summary.csv
+    (or from the mean-F1 line).
+    """
+    if not Path(summary_path).exists():
+        return {}
+    prior = {}
+    try:
+        with open(summary_path, "r", newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                paper = row.get("paper")
+                if paper:
+                    prior[paper] = row
+    except (OSError, csv.Error):
+        return {}
+    return prior
 
 
 def evaluate_all(papers_root, output_root, key_fields, decode, *,
-                 semantic=True, use_llm=True, scope="measurementType"):
+                 semantic=True, use_llm=True, scope="measurementType",
+                 key_sets=None, match_species=True, skip_existing=False):
     """Re-run evaluation over every already-extracted paper (no pipeline).
 
     For each output/<paper>/<paper>.csv, find the matching ground-truth xlsx in
@@ -670,6 +1230,15 @@ def evaluate_all(papers_root, output_root, key_fields, decode, *,
     *_misses* files), and collect a per-paper row. Rewrites <output>/summary.csv.
 
     Mirrors run_all.py's evaluation step, so its numbers match summary.csv.
+
+    skip_existing: when True, a paper that already has a <paper>_report.txt AND a
+    row in the current summary.csv is left untouched — its prior metrics are
+    carried forward into the rewritten summary and no evaluation (and no LLM
+    call) runs for it. A paper whose report is missing, or that has no prior
+    summary row to reuse, is always (re-)evaluated, so the summary can never end
+    up with a skipped-but-scoreless paper. Papers whose prior status was not
+    'ok' (e.g. a past FAIL or no_ground_truth) are also retried rather than
+    skipped.
     """
     from mineru_extract import classify_folder   # lazy: only --all needs it
 
@@ -682,8 +1251,13 @@ def evaluate_all(papers_root, output_root, key_fields, decode, *,
     if not papers:
         raise SystemExit(f"no paper CSVs found under {output_root}")
 
+    # For --skip-existing: prior metrics to carry forward for untouched papers.
+    prior_summary = _load_prior_summary(output_root / "summary.csv") \
+        if skip_existing else {}
+
     print(f"Re-evaluating {len(papers)} paper(s) under {output_root}  "
-          f"(semantic={semantic}, use_llm={use_llm}, decode={decode})\n")
+          f"(semantic={semantic}, use_llm={use_llm}, decode={decode}, "
+          f"skip_existing={skip_existing})\n")
 
     def ground_truth_for(paper):
         folder = papers_root / paper
@@ -696,9 +1270,43 @@ def evaluate_all(papers_root, output_root, key_fields, decode, *,
         return str(results_path) if results_path else None
 
     summary = []
+    n_skipped = 0
     for paper in papers:
         out_csv = output_root / paper / f"{paper}.csv"
         report = output_root / paper / f"{paper}_report.txt"
+
+        # --skip-existing: a paper counts as done when its <paper>_report.txt
+        # exists — that is the artifact a finished evaluation leaves behind. The
+        # score for the rewritten summary.csv is recovered without re-running:
+        # first from an 'ok' row in the OLD summary.csv (fast, exact), else parsed
+        # from the report itself. Keying on the report (not summary.csv) is what
+        # makes this resume an interrupted batch: after a stop, the reports of
+        # finished papers exist even though summary.csv was never written. Only if
+        # NEITHER source yields a score do we fall through and re-evaluate, so a
+        # skipped paper can never land in summary.csv without its numbers.
+        if skip_existing and report.exists():
+            prev = prior_summary.get(paper)
+            if prev and prev.get("status") == "ok":
+                summary.append(prev)
+                n_skipped += 1
+                print(f"  SKIP {paper:<28} already evaluated "
+                      f"(P/R/F1 = {prev.get('precision','')}/"
+                      f"{prev.get('recall','')}/{prev.get('f1','')})  [summary]")
+                continue
+            m = _metrics_from_report(report)
+            if m:
+                p, r, f = m
+                summary.append({"paper": paper, "precision": round(p, 3),
+                                "recall": round(r, 3), "f1": round(f, 3),
+                                "status": "ok"})
+                n_skipped += 1
+                print(f"  SKIP {paper:<28} already evaluated "
+                      f"(P/R/F1 = {p:.3f}/{r:.3f}/{f:.3f})  [report]")
+                continue
+            # report exists but no score recoverable -> re-evaluate below.
+            print(f"  ...  {paper:<28} report present but score unreadable; "
+                  f"re-evaluating")
+
         try:
             gt = ground_truth_for(paper)
             if not gt or not Path(gt).exists():
@@ -709,7 +1317,8 @@ def evaluate_all(papers_root, output_root, key_fields, decode, *,
             buf = io.StringIO()
             with contextlib.redirect_stdout(buf):
                 metrics = evaluate(str(out_csv), gt, key_fields, decode,
-                                   semantic=semantic, use_llm=use_llm, scope=scope)
+                                   semantic=semantic, use_llm=use_llm, scope=scope,
+                                   key_sets=key_sets, match_species=match_species)
             report.write_text(buf.getvalue(), encoding="utf-8")
             p, r, f = metrics["row"]
             print(f"  OK   {paper:<28} P/R/F1 = {p:.3f}/{r:.3f}/{f:.3f}"
@@ -731,11 +1340,21 @@ def evaluate_all(papers_root, output_root, key_fields, decode, *,
         w.writerows(summary)
 
     ok = [s for s in summary if s["status"] == "ok"]
+    # Rows carried forward by --skip-existing come from the CSV as strings; the
+    # freshly-evaluated rows hold floats. Coerce so the mean covers both.
+    def _f1(s):
+        try:
+            return float(s["f1"])
+        except (TypeError, ValueError):
+            return None
+    f1s = [v for v in (_f1(s) for s in ok) if v is not None]
     print("\n" + "=" * 70)
-    print(f"DONE. {len(summary)} paper(s). Summary -> {summary_path}")
-    if ok:
-        print(f"Evaluated {len(ok)} paper(s); mean F1 = "
-              f"{sum(s['f1'] for s in ok) / len(ok):.3f}")
+    done = f"DONE. {len(summary)} paper(s)."
+    if skip_existing:
+        done += f" ({n_skipped} skipped, {len(summary) - n_skipped} evaluated)"
+    print(f"{done} Summary -> {summary_path}")
+    if f1s:
+        print(f"Scored {len(f1s)} paper(s); mean F1 = {sum(f1s) / len(f1s):.3f}")
     print("=" * 70)
     return summary
 
@@ -745,12 +1364,31 @@ DEFAULT_PAPERS = "../data/un_processed_papers"
 DEFAULT_OUTPUT = "../output"
 
 
+def _paper_ground_truth(paper, papers_root):
+    """Locate a paper's ground-truth xlsx from its SOURCE folder — the same way
+    --all does (classify_folder picks the results spreadsheet). Returns a path
+    string, or None if the folder or the spreadsheet is missing."""
+    from mineru_extract import classify_folder   # lazy: only paper modes need it
+    folder = Path(papers_root) / paper
+    if not folder.is_dir():
+        return None
+    try:
+        _, results_path, _ = classify_folder(folder)
+    except Exception:
+        return None
+    return str(results_path) if results_path else None
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(
         description="Evaluate a prediction CSV against ground truth, or --all "
                     "to re-evaluate every already-extracted paper.")
-    ap.add_argument("pred", nargs="?", help="prediction CSV (your output)")
-    ap.add_argument("gt", nargs="?", help="ground-truth xlsx")
+    ap.add_argument("pred", nargs="?",
+                    help="prediction CSV, OR just a paper name (resolves "
+                         "<--output>/<paper>/<paper>.csv and its ground-truth "
+                         "xlsx automatically)")
+    ap.add_argument("gt", nargs="?", help="ground-truth xlsx (omit when the "
+                                          "first argument is a paper name)")
     ap.add_argument("--all", action="store_true",
                     help="batch mode: re-evaluate every output/<paper>/<paper>.csv "
                          "against its ground-truth xlsx and rewrite summary.csv "
@@ -777,6 +1415,21 @@ if __name__ == "__main__":
     ap.add_argument("--no-llm", action="store_true",
                     help="with semantic remapping, use the deterministic pass only "
                          "(no Ollama calls)")
+    ap.add_argument("--key-sets", nargs="+", default=None,
+                    metavar="NAME",
+                    help=f"which scoring categories to report. Available: "
+                         f"{', '.join(KEY_SETS)} (default: {', '.join(ACTIVE_KEY_SETS)}). "
+                         f"Edit KEY_SETS in evaluate.py to add your own.")
+    ap.add_argument("--no-species-match", action="store_true",
+                    help="require verbatimIdentification to match exactly, instead "
+                         "of treating names with extra classification words "
+                         "(subgenus/family/suborder) or an abbreviated genus as equal")
+    ap.add_argument("--skip-existing", action="store_true",
+                    help="[--all] skip any paper that already has a "
+                         "<paper>_report.txt and an 'ok' row in summary.csv; its "
+                         "prior score is carried forward. Papers with no report or "
+                         "no reusable score are still evaluated. Use to resume an "
+                         "interrupted batch without redoing finished papers.")
     args = ap.parse_args()
 
     if args.all:
@@ -784,10 +1437,46 @@ if __name__ == "__main__":
         # --no-semantic turns it off.
         evaluate_all(args.papers, args.output, args.key, args.decode,
                      semantic=not args.no_semantic, use_llm=not args.no_llm,
-                     scope=args.scope)
+                     scope=args.scope, key_sets=args.key_sets,
+                     match_species=not args.no_species_match,
+                     skip_existing=args.skip_existing)
     else:
-        if not args.pred or not args.gt:
-            ap.error("pred and gt are required unless --all is given")
-        evaluate(args.pred, args.gt, args.key, args.decode,
-                 semantic=args.semantic_types, use_llm=not args.no_llm,
-                 scope=args.scope)
+        # Two single-paper modes:
+        #   python evaluate.py PAPER             -> resolve CSV + GT from the
+        #       standard dirs (--output / --papers), evaluate, write the report.
+        #       Mirrors --all for one paper (semantic ON unless --no-semantic);
+        #       does NOT rewrite the aggregate summary.csv.
+        #   python evaluate.py PRED.csv GT.xlsx  -> explicit paths (original;
+        #       semantic OFF unless --semantic-types).
+        if args.pred and not args.gt:
+            paper = args.pred
+            out_csv = Path(args.output) / paper / f"{paper}.csv"
+            if not out_csv.exists():
+                ap.error(f"no prediction CSV for '{paper}': {out_csv} not found. "
+                         f"Give a paper name (resolved under --output "
+                         f"{args.output}) or explicit PRED.csv GT.xlsx paths.")
+            gt = _paper_ground_truth(paper, args.papers)
+            if not gt or not Path(gt).exists():
+                ap.error(f"found {out_csv} but no ground-truth xlsx for '{paper}' "
+                         f"under {Path(args.papers) / paper} — is the source "
+                         f"folder present in --papers?")
+            print(f"Evaluating '{paper}'\n  pred: {out_csv}\n  gt:   {gt}\n")
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                metrics = evaluate(str(out_csv), gt, args.key, args.decode,
+                                   semantic=not args.no_semantic,
+                                   use_llm=not args.no_llm, scope=args.scope,
+                                   key_sets=args.key_sets,
+                                   match_species=not args.no_species_match)
+            report = Path(args.output) / paper / f"{paper}_report.txt"
+            report.write_text(buf.getvalue(), encoding="utf-8")
+            print(buf.getvalue())
+            p, r, f = metrics["row"]
+            print(f"  -> P/R/F1 = {p:.3f}/{r:.3f}/{f:.3f}   report: {report}")
+        elif not args.pred or not args.gt:
+            ap.error("give a paper name, or PRED.csv and GT.xlsx, or --all")
+        else:
+            evaluate(args.pred, args.gt, args.key, args.decode,
+                     semantic=args.semantic_types, use_llm=not args.no_llm,
+                     scope=args.scope, key_sets=args.key_sets,
+                     match_species=not args.no_species_match)

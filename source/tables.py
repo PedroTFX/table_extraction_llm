@@ -336,8 +336,34 @@ def _find_header_line(lines):
         # caption/title: a single cell (often long prose) among empties
         if len(nonempty) == 1 and (len(cs) > 2 or len(nonempty[0]) >= 80):
             continue                                   # caption row -> skip
+        # full-width BANNER: the populated cells other than the identifier column
+        # are all the SAME label spanning the row (a section title like 'Traits'
+        # or 'Morphological trait' that a converter emits as one colspan or N
+        # identical <td>s). Taking it as the header makes every value column that
+        # one label and pushes the REAL header down into the data. Skip it so the
+        # true header below is chosen. The identifier cell (column 0) is excluded
+        # from the sameness test because a real table names its id column there
+        # ('Species') right beside the banner. Require >=3 identical trait cells
+        # and a non-numeric label so a data row of repeated values is never a
+        # banner.
+        # The identifier cell (column 0) is excluded from the sameness test ONLY
+        # when it differs from the banner label — a real table names its id column
+        # ('Species') beside the banner. When column 0 IS the banner label
+        # (Espinosa's 'Traits | Traits | Traits'), keep it in the test.
+        if len(nonempty) > 1 and cs and cs[0].strip() and cs[0].strip() != nonempty[1]:
+            banner_cells = nonempty[1:]
+        else:
+            banner_cells = nonempty
+        if (len(banner_cells) >= 3 and len(set(banner_cells)) == 1
+                and not _looks_numeric(banner_cells[0])
+                and i + 1 < n and len([c for c in cells(i + 1) if c]) >= 2):
+            continue                                   # banner row -> skip
         return i                                       # first dense row = header
     return 0
+
+
+def _looks_numeric(s: str) -> bool:
+    return bool(re.match(r"^[-+]?[\d.,]+\s*%?$", str(s).strip()))
 
 
 _BINOMIAL_RE = re.compile(r"\b([A-Z][a-z]{2,})\s+([a-z]{3,})\b")
@@ -442,6 +468,19 @@ def is_headerless_continuation(prev: "Table", raw_text: str) -> bool:
         if isnum and first[c].strip() and not _looks_numeric(first[c]):
             return False
 
+    # (3b) ...and it must POSITIVELY carry data: at least one of prev's numeric
+    # columns holds a real number in this first row. Condition (3) only rejects a
+    # NON-numeric value in a numeric column; an EMPTY one slips through, so a row
+    # that is blank across the numeric columns — a caption ('Table S1. ...'), a
+    # section band, a blank separator — passes (3) vacuously and the whole block
+    # gets mis-attached as a continuation. That is exactly how Uemori2022's Table
+    # S1 (its own species table, first row the caption) was swallowed by the
+    # preceding stats table and every species lost. A genuine continuation starts
+    # on a real data row and clears this trivially.
+    if not any(isnum and c < len(first) and _looks_numeric(first[c])
+               for c, isnum in enumerate(prof)):
+        return False
+
     hdr_tokens = {w for col in prev.columns
                   for w in re.findall(r"[a-z]+", col.name.lower())}
     row_tokens = [w for v in first for w in re.findall(r"[a-z]+", str(v).lower())]
@@ -453,7 +492,8 @@ def is_headerless_continuation(prev: "Table", raw_text: str) -> bool:
 
 def parse_table(table: str, source: Optional[str] = None, table_index: int = 0,
                 merge_subheaders: bool = True,
-                header_override: Optional[list] = None) -> Table:
+                header_override: Optional[list] = None,
+                header_rows: Optional[dict] = None) -> Table:
     """Parse one cleaned pipe-table into a fully-aligned :class:`Table`.
 
     Tolerant of: trailing pipes, ragged rows (short rows pad with '', long rows
@@ -474,6 +514,30 @@ def parse_table(table: str, source: Optional[str] = None, table_index: int = 0,
         columns = _build_columns(list(header_override))
         ncols = len(columns)
         body_start = 0                                 # no header line to consume
+    elif header_rows and header_rows.get("header_rows"):
+        # LLM-driven header selection (full replacement of the deterministic
+        # finder). `header_rows` is {"header_rows": [i,...], "join": bool} with
+        # indices into `lines`. The CODE reads the cells at those rows and builds
+        # the header; the model supplied only the row numbers, never any text.
+        idxs = [i for i in header_rows["header_rows"] if 0 <= i < len(lines)]
+        if not idxs:
+            idxs = [0]
+        first = min(idxs)
+        if header_rows.get("join") and len(idxs) > 1:
+            # vertical-join the selected header rows per column
+            rows_cells = [_split_row(lines[i]) for i in idxs]
+            width = max(len(r) for r in rows_cells)
+            joined = []
+            for c in range(width):
+                parts = [r[c] for r in rows_cells if c < len(r) and r[c].strip()]
+                joined.append(" ".join(parts))
+            columns = _build_columns(joined)
+        else:
+            # single header row = the LAST selected row (banner rows above it are
+            # dropped); everything above the header is caption/banner, skipped.
+            columns = _build_columns(_split_row(lines[max(idxs)]))
+        ncols = len(columns)
+        body_start = max(idxs) + 1
     else:
         hdr_i = _find_header_line(lines)
         if hdr_i > 0:
@@ -790,3 +854,332 @@ def find_abbreviation_definitions(text: str, tokens: Iterable[str]) -> dict:
                 out[token] = {"term": term, "shape": shape_name}
                 break
     return out
+
+# ---------------------------------------------------------------------------
+# Multi-value cells
+# ---------------------------------------------------------------------------
+# A cell may hold a LIST ('W, S, P' — three legend codes) or a single value that
+# merely CONTAINS a comma ('Coras montanus (Emerton, 1890a) (Agelenidae)' — one
+# host spider, with a taxonomic authority). Splitting the second produces two
+# half-rows, each with a fragment of a name as its measurementValue.
+#
+# Nothing here knows about taxonomy. Two general facts do the work:
+#   * a comma inside brackets or quotes is part of the enclosed expression, not a
+#     separator — true of authorities, ranges, and parenthetical asides alike;
+#   * a comma between digits with no space is a decimal/thousands separator.
+# And one column-level fact: a real list column shows the pattern in MANY of its
+# cells, while a stray internal comma shows up in one or two.
+
+_OPENERS = {"(": ")", "[": "]", "{": "}"}
+_QUOTES = {'"', "'", "\u201c", "\u201d", "\u2018", "\u2019"}
+_CLOSE_FOR = {v: k for k, v in _OPENERS.items()}
+
+
+def _separator_positions(s: str) -> list:
+    """Indices of commas that are genuine separators: at bracket depth 0, not
+    inside quotes, and not sitting between two digits."""
+    out, stack, quote = [], [], None
+    for i, ch in enumerate(s):
+        if quote is not None:
+            if ch == quote or (quote in "\u201c\u2018" and ch in "\u201d\u2019"):
+                quote = None
+            continue
+        if ch in _QUOTES:
+            quote = ch
+            continue
+        if ch in _OPENERS:
+            stack.append(ch)
+            continue
+        if ch in _CLOSE_FOR:
+            if stack and stack[-1] == _CLOSE_FOR[ch]:
+                stack.pop()
+            continue
+        if ch != ",":
+            continue
+        if stack:
+            continue                                  # inside (...) / [...] / {...}
+        if (i and s[i - 1].isdigit()
+                and i + 1 < len(s) and s[i + 1].isdigit()):
+            continue                                  # 1,200  or  3,5
+        out.append(i)
+    return out
+
+
+def split_multivalue(value, allow=None) -> list:
+    """Split a cell into its list items, or return it whole.
+
+    ``allow`` is the column-level verdict from ``looks_multivalue_column``:
+    True/False to force, None (unknown) to decide from the cell alone. Even when
+    forced True the bracket/quote/digit rules still apply — a list column may
+    well hold items that each contain an internal comma.
+
+    Never returns an empty list, and never returns parts that are empty or
+    whitespace: if the split would produce one, the value is kept intact (a
+    trailing comma is punctuation, not a second item).
+    """
+    if not isinstance(value, str) or "," not in value or allow is False:
+        return [value]
+    cuts = _separator_positions(value)
+    if not cuts:
+        return [value]
+    parts, prev = [], 0
+    for i in cuts:
+        parts.append(value[prev:i])
+        prev = i + 1
+    parts.append(value[prev:])
+    parts = [p.strip() for p in parts]
+    if any(not p for p in parts):
+        return [value.strip()]
+    return parts
+
+
+# Function words that appear in free-text DESCRIPTIONS ('carton nests in
+# cavities', 'galleries on tree trunks and branches') but not in value-lists or
+# legend codes ('W, S, P'; 'H, M, A'). Their presence across a column is what
+# tells a multi-clause description (whose commas are prose punctuation) apart
+# from a real list (whose commas separate items). It is a GRAMMAR signal, not a
+# length threshold: a genuine multi-word list ('standing dead wood, lying dead
+# wood') has long fragments too, but carries no connectives, so it is not caught.
+_PROSE_CONNECTIVES = re.compile(
+    r"\b(?:in|on|under|over|above|below|against|at|with|within|into|onto|"
+    r"of|the|a|an|and|or|near|between|among|through|around|beneath|"
+    r"from|to|by|for)\b", re.IGNORECASE)
+
+
+def _looks_like_prose_column(populated, prose_fraction: float = 0.5) -> bool:
+    """True when a column holds free-text descriptions, so its commas must NOT be
+    treated as list separators. Two structural signals:
+
+      * SEMICOLONS — a column that uses ';' anywhere is using it as the item
+        separator, which makes every ',' intra-clause punctuation.
+      * CONNECTIVES — most cells carry prepositions/articles ('in', 'on',
+        'against', 'the'): the grammar of prose. Legend codes and value-lists
+        carry none, so this stays False for them even when a list item happens
+        to be multi-word.
+    """
+    if any(";" in v for v in populated):
+        return True
+    hits = sum(1 for v in populated if _PROSE_CONNECTIVES.search(v))
+    return hits >= max(1, len(populated) * prose_fraction)
+
+
+def looks_multivalue_column(values, min_fraction: float = 0.3) -> bool:
+    """Does this COLUMN hold lists?
+
+    Decided over the whole column, which is the only place the answer is visible:
+    a legend-coded trait column splits in cell after cell, whereas a name column
+    has one or two cells whose comma is internal.
+
+    Two ways to qualify, because a fraction alone is not enough:
+
+      1. RECURRENCE OF THE PATTERN — the split shows up in a fraction of the
+         populated cells. Strong evidence, and a single unusual cell can never
+         reach it.
+
+      2. RECURRENCE OF THE PARTS — a cell splits into parts, and at least one of
+         those parts appears elsewhere in the SAME column as a value on its own.
+         This rescues the common real case that (1) misses: a legend-coded column
+         where only ONE species carries two codes ('H, M(o)' among cells of 'H',
+         'M', 'A', 'S'). 'H' standing alone elsewhere proves the comma separates
+         two of this column's own values rather than sitting inside one.
+         It stays safe on name columns: splitting 'Coras montanus, Emerton 1890'
+         yields parts that appear nowhere else as values, so it is not a list.
+
+    Prose guard: a description column (e.g. nest architecture, 'large, triangular
+    carton nests, polydomous') carries a comma in nearly every cell and would
+    otherwise trip rule 1, shredding each description at its commas. Such columns
+    are detected first (grammar, not length — see _looks_like_prose_column) and
+    excluded before the positive rules run.
+    """
+    populated = [v for v in values if isinstance(v, str) and v.strip()]
+    if not populated:
+        return False
+
+    if _looks_like_prose_column(populated):
+        return False
+
+    split_parts = {}
+    for v in populated:
+        parts = split_multivalue(v)
+        if len(parts) > 1:
+            split_parts[v] = parts
+    if not split_parts:
+        return False
+
+    if len(split_parts) >= max(2, len(populated) * min_fraction):
+        return True
+
+    def key(s):
+        return clean_text(s).casefold()
+
+    singles = {key(v) for v in populated if v not in split_parts}
+    return any(key(p) in singles
+               for parts in split_parts.values() for p in parts)
+
+
+# ---------------------------------------------------------------------------
+# Transposed ("horizontal") tables: species across the HEADER, traits down the
+# first column
+# ---------------------------------------------------------------------------
+# The pipeline assumes one row per specimen: an identifier column plus trait
+# columns. Papers also publish the transpose — traits as rows, one column per
+# species — which is structurally identical to a stats table as far as the
+# mapper is concerned: no header cell names a species, so no identifier column is
+# found, every table is dropped as "not specimen data", and the paper yields zero
+# rows. Rotating the grid before mapping turns it back into the shape every later
+# stage already handles, so nothing downstream changes.
+#
+# Detection is COMPARATIVE, not absolute: measure how taxon-like the header is
+# against how taxon-like the first column is, and rotate only when the header
+# clearly wins. That is what makes it safe — in a normal table the first column
+# holds the species and the header holds traits, so the same test says "no" for
+# the same reason it says "yes" here.
+
+# Second word of an apparent binomial that is really a measurement noun. Without
+# this, 'Body length' and 'Wing width' parse as Genus+epithet and a perfectly
+# normal header would be judged a list of species.
+_TRAIT_WORDS = {
+    "length", "width", "height", "depth", "mass", "weight", "size", "count",
+    "number", "ratio", "index", "area", "volume", "diameter", "circumference",
+    "color", "colour", "type", "group", "range", "mean", "median", "mode",
+    "min", "max", "minimum", "maximum", "total", "density", "duration", "time",
+    "date", "rate", "score", "level", "stage", "class", "value", "distance",
+    "breadth", "span", "load", "cover", "richness", "abundance", "biomass",
+    "activity", "behavior", "behaviour", "season", "period", "temperature",
+    "humidity", "treatment", "site", "plot", "sample", "diet", "guild",
+    "status", "location", "position", "shape", "pattern", "form", "state",
+    "error", "estimate", "deviation", "variance", "interval", "limit",
+    "sociality", "voltinism", "nesting", "specificity", "openness", "extent",
+    "placement", "symmetry", "hair", "pigment", "trait", "traits", "means",
+}
+
+_TAXON_BINOMIAL = re.compile(r"^[A-Z][a-z]{2,}\s+([a-z]{3,})\b")
+_TAXON_ABBREV = re.compile(r"^[A-Z]\.\s*([a-z]{3,})\b")
+_TAXON_SP = re.compile(r"^[A-Z][a-z]{2,}\s+sp{1,2}\.?\b", re.IGNORECASE)
+# Family/order/suborder endings — a single capitalised word is a taxon name only
+# if it carries one of these, which is what keeps 'Chicago' and 'Detroit' out.
+_TAXON_RANK = re.compile(
+    r"^[A-Z][a-z]{3,}(idae|inae|aceae|ini|oidea|ptera|formes|morpha|"
+    r"odea|acea|ales)\b")
+_PARENS = re.compile(r"\([^)]*\)")
+_NEQ = re.compile(r"\bn\s*=\s*\d+", re.IGNORECASE)
+
+
+def looks_like_taxon(s: object) -> bool:
+    """Does this string name an organism (species, genus sp., or family/order)?
+
+    Tolerant of the decoration real headers carry: a trailing sample size
+    ('Hesperiidae(n=45)'), a taxonomic authority or subgenus in brackets
+    ('Ogcodes pallidipennis (Loew, 1866)'), and abbreviated genera ('A. vilhenae'
+    after the paper has written it out once).
+
+    Deliberately NOT a taxonomy lookup — no name list is consulted, only shape,
+    so it works on species the corpus has never seen. The one shape that needs
+    excluding is Capitalised+lowercase where the second word is a measurement
+    noun, since 'Body length' is indistinguishable from 'Genus species' by shape
+    alone.
+    """
+    s = str(s or "").strip()
+    if not s:
+        return False
+    s = _NEQ.sub(" ", _PARENS.sub(" ", s))
+    s = re.sub(r"\s+", " ", s).strip(" ,;:")
+    if not s:
+        return False
+    if _TAXON_RANK.match(s) or _TAXON_SP.match(s):
+        return True
+    for rx in (_TAXON_BINOMIAL, _TAXON_ABBREV):
+        m = rx.match(s)
+        if m and m.group(1).lower() not in _TRAIT_WORDS:
+            return True
+    return False
+
+
+def taxon_fraction(values) -> float:
+    """Fraction of populated values that name an organism."""
+    vals = [v for v in values if str(v or "").strip()]
+    if not vals:
+        return 0.0
+    return sum(looks_like_taxon(v) for v in vals) / len(vals)
+
+
+def detect_transposed(table, min_header_frac: float = 0.6,
+                      max_body_frac: float = 0.3, min_species_cols: int = 2):
+    """Is this table rotated — species in the header, traits in the first column?
+
+    Returns (verdict, evidence). The verdict needs BOTH halves of the comparison:
+    the header (excluding its first cell) must be mostly taxon names AND the
+    first column must be mostly not, so a normal specimen table can never
+    qualify. `evidence` is returned either way for logging and for an optional
+    LLM tie-break on the ambiguous middle.
+    """
+    cols = list(table.columns)
+    recs = table.data_records()
+    ev = {"header_frac": 0.0, "body_frac": 0.0, "n_species_cols": 0,
+          "reason": ""}
+    if len(cols) < 1 + min_species_cols or not recs:
+        ev["reason"] = "too few columns or no data rows"
+        return False, ev
+
+    header_cells = [c.name for c in cols[1:]]
+    first_col_values = [r.get(cols[0].name, "") for r in recs]
+
+    ev["header_frac"] = taxon_fraction(header_cells)
+    ev["body_frac"] = taxon_fraction(first_col_values)
+    ev["n_species_cols"] = sum(looks_like_taxon(h) for h in header_cells)
+
+    if ev["header_frac"] < min_header_frac:
+        ev["reason"] = "header is not mostly taxon names"
+        return False, ev
+    if ev["body_frac"] > max_body_frac:
+        ev["reason"] = "first column also looks like taxa — orientation unclear"
+        return False, ev
+    if ev["n_species_cols"] < min_species_cols:
+        ev["reason"] = "fewer than two species columns"
+        return False, ev
+    ev["reason"] = "header names species, first column does not"
+    return True, ev
+
+
+def _pipe_safe(v: object) -> str:
+    """A cell about to be written into a pipe table: no '|' (it would invent a
+    column) and no newlines."""
+    return re.sub(r"\s+", " ", str(v or "").replace("|", "/")).strip()
+
+
+def transpose_table(table, identifier_header: str = "Species"):
+    """Rotate a species-in-header table into one row per species.
+
+    Rebuilds the grid as pipe text and re-parses it with :func:`parse_table`
+    rather than hand-assembling Columns and records, so the rotated table is
+    constructed by exactly the same code path as every other table (units-row
+    folding, ragged padding, group-row flags) and cannot drift from it.
+    Provenance (source, table_index) is preserved so ``table_id`` is unchanged
+    and per-table mapping files keep their names.
+
+    Trait names come from the first column and become the new headers; duplicates
+    are suffixed rather than merged, because two rows with the same label are two
+    distinct measurements (e.g. a 'Mean' and a 'Range' row both labelled 'Body
+    length') and collapsing them would silently drop one.
+    """
+    cols = list(table.columns)
+    recs = table.data_records()
+    if not cols or not recs:
+        return table
+
+    first, others = cols[0], cols[1:]
+
+    trait_names, seen = [], {}
+    for i, r in enumerate(recs):
+        name = _pipe_safe(r.get(first.name, "")) or f"trait{i + 1}"
+        n = seen.get(name, 0) + 1
+        seen[name] = n
+        trait_names.append(name if n == 1 else f"{name} ({n})")
+
+    lines = [" | ".join([identifier_header] + trait_names)]
+    for c in others:
+        row = [_pipe_safe(c.name)] + [_pipe_safe(r.get(c.name, "")) for r in recs]
+        lines.append(" | ".join(row))
+
+    return parse_table("\n".join(lines), source=table.source,
+                       table_index=table.table_index)

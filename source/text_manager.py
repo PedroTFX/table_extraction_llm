@@ -74,24 +74,36 @@ def _rowspan_of(attrs):
         return 1
 
 
+def _colspan_of(attrs):
+    m = re.search(r'colspan\s*=\s*["\']?(\d+)', attrs, re.IGNORECASE)
+    try:
+        return max(1, int(m.group(1))) if m else 1
+    except (TypeError, ValueError):
+        return 1
+
+
 def expand_rowspans(table_html):
-    """Rewrite a <table> so every rowspan is made explicit: a cell with
-    rowspan=N is copied DOWN into the N-1 rows it covers.
+    """Rewrite a <table> so rowspans AND multi-row group-header colspans are made
+    explicit, keeping every row's columns aligned with the data below.
 
-    Why only rowspan (not colspan): the per-row pipe conversion below drops the
-    covered cells, so a row under a rowspan loses that cell and every cell to its
-    right shifts left — the identifier disappears and values land in the wrong
-    columns (e.g. a family name spanning a 'Mean' and a 'Range' row leaves the
-    Range row headerless). Carrying the value down restores alignment.
+    rowspan: a cell with rowspan=N is copied DOWN into the N-1 rows it covers.
+    Without this, the per-row pipe conversion below drops the covered cells, so a
+    row under a rowspan loses that cell and everything to its right shifts left.
 
-    colspan is deliberately left as a single cell: parse_table treats a lone
-    populated cell as a band/section row (_is_group_row), which is how full-width
-    'colspan' banners are meant to read. Forward-filling colspan would turn a
-    banner into a full data row and break that detection.
+    colspan: a GROUP-HEADER colspan (a cell with text that spans several — but not
+    all — columns, sitting above a sub-header row, e.g. 'Latitude' over
+    max/min/range) is FORWARD-FILLED across the columns it covers, so its
+    sub-columns line up with the data. This is essential when such a group sits
+    beside a rowspan column: carrying the rowspan down uses column positions, and
+    if the colspan group still counts as one column those positions are wrong —
+    the rowspan lands several columns too far left and every value is misattributed
+    (the Geraghty2007 failure: Body size read the Latitude-range column, etc.).
 
-    Rowspans in leading grouping columns (the common case) are handled exactly;
-    a rowspan in a trailing column of a short row may still shift, which no real
-    table in the corpus does.
+    Two colspans are deliberately NOT widened, so section detection still works:
+      * an EMPTY colspan (e.g. 'Family:' + <td colspan=9></td>) — a full-width
+        banner; left as a lone cell so it reads as a section/group row;
+      * a colspan that is the row's ONLY cell — a title/caption band, not a group
+        header, so widening it would fabricate a full data row.
     """
     rows = _TR_RE.findall(table_html)
     if not rows:
@@ -99,7 +111,7 @@ def expand_rowspans(table_html):
     carry = {}                         # col -> [rows_remaining, value]
     out = ["<table>"]
     for r in rows:
-        cells = [(re.sub(r'\s+', ' ', inner).strip(), _rowspan_of(attrs))
+        cells = [(re.sub(r'\s+', ' ', inner).strip(), _rowspan_of(attrs), _colspan_of(attrs))
                  for _tag, attrs, inner in _CELL_RE.findall(r)]
         row, col, ci = [], 0, 0
         while ci < len(cells) or (col in carry and carry[col][0] > 0):
@@ -108,12 +120,15 @@ def expand_rowspans(table_html):
                 carry[col][0] -= 1
                 col += 1
                 continue
-            val, rs = cells[ci]
+            val, rs, cs = cells[ci]
             ci += 1
-            row.append(val)
-            if rs > 1:
-                carry[col] = [rs - 1, val]
-            col += 1
+            # widen a group-header colspan; leave empty/whole-row colspans alone
+            span = cs if (val and cs > 1 and len(cells) > 1) else 1
+            for _ in range(span):
+                row.append(val)
+                if rs > 1:
+                    carry[col] = [rs - 1, val]
+                col += 1
         out.append("<tr>" + "".join(f"<td>{c}</td>" for c in row) + "</tr>")
     out.append("</table>")
     return "\n".join(out)
