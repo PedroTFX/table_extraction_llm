@@ -1,29 +1,30 @@
 {
   "Wing pattern character": {
     "field": "measurementType",
-    "value_column": true,
-    "reasoning": "The header describes a characteristic of the organism (wing pattern classification).",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The paper defines specific wing characters and measurements (e.g., brL, C3) used for identification.",
+    "value_column": false,
+    "reasoning": "This header defines the specific morphological trait or characteristic being observed.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values (C1, C2, C3) represent discrete classifications of wing patterns.",
+    "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Wing pattern character",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The wing patterns and morphometric measurements were taken from adult flies that were collected, preserved (in 100% EtOH), or pinned, as detailed in the Materials and methods section.",
-    "measurementMethod": "Wings were removed from specimens, mounted on glass slides using Euparal mounting medium, and imaged with an Axiocam 208 color camera mounted on a Stemi 508 microscope. Standardized proxy measurements for wing width and length (including brL, rrL, rrH, mrL) and three categorical observations (C1, C2, C3) were taken using ZEN 3.6 blue edition software, following the methodology described by Baleba et al. (2019).",
+    "basisOfRecord_reasoning": "The wing pattern characters and morphometric measurements were taken from adult flies that were preserved in 100% EtOH and subsequently examined as pinned specimens.",
+    "measurementMethod": "Wing measurements and character observations were performed on preserved adult specimens. Wings were carefully removed, mounted on glass slides using Euparal, and photographed using an Axiocam 208 color camera mounted on a Stemi 508 microscope. Measurements (e.g., brL, rrL, rrH, mrL) and categorical observations (C1, C2, C3) were taken using ZEN 3.6 blue edition, following the standardized proxy measurements described by Baleba et al. (2019).",
     "measurementMethod_reasoning": null
   },
   "A. bigeloviae ~ Type III": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column identifies the insect taxon A. bigeloviae and provides associated measurement data.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "This column likely classifies specimens based on defined species or morphotype categories."
+    "reasoning": "The header contains the taxonomic name of the insect being measured.",
+    "category": null,
+    "reasoning_relevance": "The values are statistical indices (Chi-squared, p-values), not biological data."
   },
   "A. trixa ~ Type III": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column identifies the insect taxon A. trixa and provides associated measurement data.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "This column represents a classification of an organism relative to specific morphological types."
+    "reasoning": "The header contains the taxonomic name of the insect being measured.",
+    "category": null,
+    "reasoning_relevance": "The values are statistical indices (Chi-squared, p-values), not biological data."
   }
 }

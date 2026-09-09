@@ -1,0 +1,53 @@
+{
+  "identifier": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insects (e.g., Cyclotermes sp.).",
+    "category": null,
+    "reasoning_relevance": "These are scientific names used to identify the species, not biological data."
+  },
+  "Max. lifespan": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the biological trait (maximum lifespan) being measured for the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records the maximum duration of life for the organism, a measurement of time.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "measurementStatistic": "maximum",
+    "canonicalType": "lifespan",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The text states that most lifespan data comes from 'queens reared in the laboratory,' indicating that the organisms were alive and maintained under controlled conditions during the measurement period.",
+    "measurementMethod": "Observation of lifespan in laboratory-reared queens",
+    "measurementMethod_reasoning": "The lifespan was determined by observing the queens in a laboratory setting until death or the end of the study period. The text notes that these estimates reflect lifespan under laboratory conditions."
+  },
+  "Mean lifespan": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the biological trait (mean lifespan) being measured for the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records the average duration of life for the organism, a measurement of time.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "measurementStatistic": "mean",
+    "canonicalType": "lifespan",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The text explicitly states that 'most data come from queens reared in the laboratory,' indicating that the organisms were maintained under controlled conditions, fitting the definition of LivingSpecimen.",
+    "measurementMethod": "Lifespan was determined by rearing queens in a laboratory setting.",
+    "measurementMethod_reasoning": "The measurement method is based on the experimental conditions described in the results section, where queens were 'reared in the laboratory' to estimate their lifespan."
+  },
+  "Ref.": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains citation numbers, which are metadata, not scientific data.",
+    "category": null,
+    "reasoning_relevance": "These are reference numbers/citations to external literature."
+  },
+  "Comments": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Provides contextual notes or source information, not a measurable trait or location.",
+    "category": null,
+    "reasoning_relevance": "This column contains observational metadata and context, not a biological trait or measurement."
+  }
+}

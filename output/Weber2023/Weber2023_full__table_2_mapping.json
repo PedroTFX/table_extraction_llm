@@ -1,0 +1,60 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the specific insect taxon names (species).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists specific scientific names of wild bee species, representing a discrete biological classification."
+  },
+  "Total Abundance": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the numerical count (abundance) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This column records the quantitative count of individuals observed in the study area.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Size group": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes a physical characteristic (size) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values ('small', 'medium', 'large') are discrete classifications based on physical size.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Size group",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected wild bees using pan traps and explicitly states that 'Bees were pinned, labelled and identified to species level.' The traits analyzed (body size, nesting behavior, pollen-collecting behavior) are derived from these physical specimens.",
+    "measurementMethod": "Pan trapping (three different colors, 23 cm diameter, 2.3 L volume) followed by specimen identification and categorization of traits (body size, nesting behavior, pollen-collecting behavior).",
+    "measurementMethod_reasoning": "The primary method for collecting the data on bee traits and abundance was the use of pan traps. The subsequent analysis involved pinning, identifying the specimens to species level, and grouping them according to their observed traits (body size, nesting behavior, and pollen-collecting behavior)."
+  },
+  "Foraging habit": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the feeding behavior (foraging habit) of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values ('polylectic', 'oligolectic', 'parasitic') are discrete classifications of the bee's feeding behavior.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Foraging habit",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The foraging habit (pollen-collecting behavior) is a behavioral/ecological trait (polylectic, oligolectic, parasitic) assigned to the wild bees based on their species identification and known characteristics, which constitutes a natural-history observation.",
+    "measurementMethod": "Classification of species based on known pollen-collecting behavior (polylectic, oligolectic, parasitic), referencing taxonomic literature (e.g., Westrich 2018, Scheuchl and Willner 2016).",
+    "measurementMethod_reasoning": "The study groups bees by their pollen-collecting behavior (polylectic, oligolectic, parasitic). The text explicitly states that information on these species traits was taken from specific literature (Westrich 2018, Scheuchl and Willner 2016)."
+  },
+  "Nesting habit": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes a biological trait regarding where the organism nests.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values ('below-ground', 'above-ground', 'parasitic') are discrete classifications of the bee's nesting behavior.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nesting habit",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The nesting habit is a behavioral/ecological trait of the wild bees. The text indicates that information on these species traits (including nesting and pollen-collecting behavior) was taken from established taxonomic literature and resources (Westrich, 2018; Amiet et al., 2001, 2010, 2014; Scheuchl and Willner, 2016), which constitutes a human observation of known species characteristics.",
+    "measurementMethod": "Information on bee species traits were taken from Westrich (2018) and missing information completed with Amiet et al. (2001, 2010, 2014) (body size), Scheuchl and Willner (2016) (nesting and pollen-collecting behaviour), and Hagen and Aichhorn (2003) (nesting behaviour of bumble bees).",
+    "measurementMethod_reasoning": "The nesting habit was not observed directly during the current study's sampling but was assigned based on existing taxonomic knowledge and literature cited in the 'Species traits' section of the paper."
+  }
+}

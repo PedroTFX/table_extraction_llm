@@ -1,0 +1,99 @@
+{
+  "paper": "GibbParr2013",
+  "has_full_md": true,
+  "supplementary": [],
+  "ground_truth": [
+    "GibbParr2013.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "GibbParr2013_full.md",
+      "n_tables": 3,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "GibbParr2013_full.md",
+      "table_index": 0,
+      "n_rows": 18,
+      "n_cols": 5,
+      "header": [
+        "source",
+        "Weber's L",
+        "femur L",
+        "Pronotum W",
+        "eye position"
+      ],
+      "identifier": {
+        "column": null,
+        "taxon_fraction": 0.0,
+        "passes_structural": false,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    },
+    {
+      "source": "GibbParr2013_full.md",
+      "table_index": 1,
+      "n_rows": 3,
+      "n_cols": 5,
+      "header": [
+        "source",
+        "Weber's L",
+        "femur L",
+        "pronotum W",
+        "eye position"
+      ],
+      "identifier": {
+        "column": null,
+        "taxon_fraction": 0.0,
+        "passes_structural": false,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    },
+    {
+      "source": "GibbParr2013_full.md",
+      "table_index": 2,
+      "n_rows": 102,
+      "n_cols": 10,
+      "header": [
+        "Species",
+        "Habitat",
+        "Habitat (1)",
+        "Morphological trait",
+        "Morphological trait (1)",
+        "Morphological trait (2)",
+        "Morphological trait (3)",
+        "Morphological trait (4)",
+        "Morphological trait (5)",
+        "Morphological trait (6)"
+      ],
+      "identifier": {
+        "column": "Species",
+        "taxon_fraction": 0.971,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    }
+  ],
+  "error": null,
+  "n_tables": 3,
+  "n_identifier_tables": 1,
+  "n_identifier_tables_markdown": 1,
+  "n_identifier_tables_supplementary": 0,
+  "n_transposed_tables": 0,
+  "n_rows_total": 123,
+  "n_distinct_species": 53,
+  "would_yield_rows": true,
+  "would_yield_rows_if_supplements_passed": true,
+  "verdict": "OK — 1 identifier table(s) in the markdown; a 0-row result is downstream (LLM mapping / relevance gate / grouping), not here"
+}

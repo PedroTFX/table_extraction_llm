@@ -1,22 +1,17 @@
 {
-  "EcosystemS": {
+  "Ecosystems": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The column describes the landscape or land-use type where sampling occurred."
+    "reasoning": "Describes the landscape/land-use where sampling occurred (e.g., 'Primary forest')."
   },
   "N. areas": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This appears to be a sample identifier or count of units; it does not fit any defined field (ID, trait, place)."
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains numeric values representing a measurement or count (e.g., '02')."
   },
   "Characteristics": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "The header describes the environmental characteristics and habitat where the organism was found."
-  },
-  "Ecosystems": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Provides detailed descriptions of the habitat/vegetation where sampling took place."
   }
 }

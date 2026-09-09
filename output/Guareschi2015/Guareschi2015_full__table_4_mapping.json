@@ -1,0 +1,37 @@
+{
+  "identifier": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains sample identifiers or labels, not organism names, locations, or traits."
+  },
+  "Threshold": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains numerical parameters or limits used in the study, not organism traits."
+  },
+  "NC": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds numerical data representing a count or quantity of samples/individuals."
+  },
+  "Protected": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names the measured trait; the cells contain the measured value and statistic."
+  },
+  "Unprotected": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names the measured trait; the cells contain the measured value and statistic."
+  },
+  "W-statistic": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains a statistical test result (W-statistic), not an organism measurement."
+  },
+  "P": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains a p-value, which is a result of statistical analysis."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "Family": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic family name, which is an insect taxon identifier.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Lists discrete taxonomic classifications of bee families."
+  },
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the full taxonomic name of the insect species as it appeared in the source.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Lists specific taxonomic names of bee species."
+  },
+  "ITD (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines a specific physical measurement (Inter-Tarsal Distance) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Intertegular distance (ITD) is a physical measurement of the bee.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "intertegular distance",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "ITD is a morphological measurement (body size) taken on individual bee specimens.",
+    "measurementMethod": "Measuring intertegular distance (ITD) for up to ten individuals of each species and scaling the measurements according to an established ITD-to-mass relationship (Cane1987).",
+    "measurementMethod_reasoning": "The text explicitly states the method used to calculate body mass, which relies on measuring ITD on up to ten individuals.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The column name 'ITD (mm)' indicates the unit, and ITD is a standard morphological measurement for bees typically recorded in millimeters.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "ITD is measured on individual specimens (up to ten individuals per species), representing a single observation per individual used in the analysis."
+  },
+  "Nest loc.": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the location where the organism nests, which is a biological property.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's nesting location (above or below ground).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nest loc.",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The nest location (above ground vs. below ground) is a functional trait of the bee species. The text states that this information was obtained by 'compiling existing trait information from primary resources (Pardee2018;TableS3)', meaning it is a record of a characteristic derived from literature rather than a direct measurement taken during the current study.",
+    "measurementMethod": "Compilation of existing trait information from primary resources (Pardee2018; Table S3)",
+    "measurementMethod_reasoning": "The nest location was determined by compiling existing trait information from primary resources, specifically citing Pardee (2018) and Table S3."
+  },
+  "Overw. stage": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the developmental stage of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's overwintering life stage.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Overw. stage",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The overwintering stage is a functional trait (life history characteristic) that was not measured directly during the field study. Instead, it was compiled from existing trait information and primary resources, which falls under the definition of HumanObservation for ecological/biological traits.",
+    "measurementMethod": "Compilation of existing trait information from primary resources and literature (e.g., Pardee 2018; Table S3)",
+    "measurementMethod_reasoning": "The methods section explicitly states that the overwintering stage was obtained by 'compiling existing trait information from primary resources (Pardee2018;TableS3)' and that some traits were 'inferred from other species in the same genera'."
+  },
+  "#": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the count or number of individuals observed in the sample.",
+    "category": null,
+    "reasoning_relevance": "This column records the sample size (number of individuals)."
+  },
+  "Em. points": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured score or count of a specific trait.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Represents the measured phenophase value (emergence timing).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Em. points",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement concerns bee phenology (emergence, peak, and senescence), which are ecological/behavioral traits. The data was collected through biweekly bee abundance surveys using pan traps in the field, representing observations of live organisms in their natural habitat.",
+    "measurementMethod": "Generalized Additive Models (GAMs) applied to abundance time-series data to estimate the 5th, 50th, and 95th percentiles (emergence, peak, senescence) of the foraging population distribution.",
+    "measurementMethod_reasoning": "The study explicitly states that to estimate phenophases from sparse time-series data, they used a novel application of Generalized Additive Models (GAMs) to calculate the first 5%, middle, and last 5% of the abundance distribution, corresponding to the three phenophases.",
+    "measurementUnit": "days",
+    "measurementUnit_reasoning": "The phenophase estimates (emergence, peak, senescence) are reported as Day-of-Year (DOY) values, which are measured in days.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The results section reports the 'mean emergence day-of-year across all years, sites, and species' and similar means for peak and senescence."
+  },
+  "Peak points": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured score or count of a specific trait.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Represents the measured phenophase value (peak timing).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Peak points",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The peak timing is derived from biweekly bee abundance surveys conducted using pan traps, which represents an ecological observation of live organisms in the field.",
+    "measurementMethod": "Generalized Additive Models (GAMs) applied to abundance time-series data to predict the date of maximum abundance",
+    "measurementMethod_reasoning": "The researchers used a novel application of Generalized Additive Models (GAMs) to estimate the peak timing by calculating the predicted date of the maximum of the model fit, specifically designed to handle sparse time-series data.",
+    "measurementUnit": "days",
+    "measurementUnit_reasoning": "The peak timing is expressed as a Day of Year (DOY), which is measured in days.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The reported peak timing (e.g., 'mean peak was 10 July 21 days') is the average calculated across the study period."
+  },
+  "Sen. points Reference": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains bibliographic citations, which are metadata, not measurements or traits.",
+    "category": null,
+    "reasoning_relevance": "Contains citations and references to external literature."
+  }
+}

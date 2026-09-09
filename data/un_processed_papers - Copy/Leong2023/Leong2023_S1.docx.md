@@ -1,0 +1,138 @@
+Supporting information
+
+Table S1. Functional hypotheses of morphological and thermal traits.
+
+<table>
+<tr><td>Trait &amp; Measurement</td><td>Hypothesized link to habitat conversion</td></tr>
+<tr><td>Body size WL Weber’s Length
+Diagonal length of mesosoma length</td><td>Responds to the habitat complexity, i.e. the size-grain hypothesis (Kaspari &amp; Weiser, 1999); food recourse type and its richness  (Silva &amp; Brandao, 2010); heat loss rate about the body size and ambient temperature (Bergmann, 1848).</td></tr>
+<tr><td>REW Relative Eye Width
+Maximum width for the eyes corrected by body size (Eye width / Weber’s length)</td><td>Responds to the habitat complexity and allows to detect their predator and prey  (Silva &amp; Brandao, 2010).</td></tr>
+<tr><td>REP Relative Eye Position
+(Head width – Interocular distance) / Head length</td><td>Responds to the visual ability and diet preference, and species with larger REP are determined as visual predators (Schofield et al., 2016; Sosiak &amp; Barden, 2020).</td></tr>
+<tr><td>RFL Relative hind leg Femur Length
+Maximum length for the femur of high legs corrected by body size (Eye width / Weber’s length)</td><td>Determines mobility in terms of foraging for recourses, escaping from predators and heat shock, aggregating for ants (Grevé et al., 2019).</td></tr>
+<tr><td>RSL Relative Scape Length
+Maximum length for the first antenna corrected by body size (Scape length / Weber’s length)</td><td>Determines the searching and navigating abilities in responding different niches and adapting different habitats (Silva &amp; Brandao, 2010).</td></tr>
+<tr><td>RMS Relative Mandible Size
+Mandible length / head width</td><td>Responds to diet preference of ant predator and environment complexity where should have more species with larger RMS in complex forest habitat due to the foraging specialization hypothesis (Guilherme et al., 2019).</td></tr>
+<tr><td>CTmax
+Critical Thermal maximum</td><td>Responds to the ambient temperature and determines species performance in function of temperature (Lutterschmidt &amp; Hutchison, 1997).</td></tr>
+</table>
+
+Table S2. Functional traits of species. Abbreviation of traits: CTmax, Critical Thermal maximum; WL, Weber’s length; RMS, relative mandible size; REP, relative eye position; REW, relative eye width corrected by body size; RSL, relative scape length corrected by body size; RHF, relative hind femur length corrected by body size.
+
+<table>
+<tr><td>Species</td><td>Habitat</td><td>N_ctmax</td><td>CTmax</td><td>WL</td><td>RMS</td><td>REP</td><td>REW</td><td>RSL</td><td>RHF</td></tr>
+<tr><td>Aenictus sp. cf parahuonicus</td><td>forest</td><td>10</td><td>43.60</td><td>1.25</td><td>0.52</td><td>NA</td><td>NA</td><td>0.52</td><td>0.77</td></tr>
+<tr><td>Aenictus parahuonicus</td><td>forest</td><td>10</td><td>44.33</td><td>1.21</td><td>0.49</td><td>NA</td><td>NA</td><td>0.49</td><td>0.90</td></tr>
+<tr><td>Anoplolepis gracilipes</td><td>forest</td><td>15</td><td>48.60</td><td>1.71</td><td>0.56</td><td>0.18</td><td>0.14</td><td>1.03</td><td>1.44</td></tr>
+<tr><td>Carebara sp. 1</td><td>forest</td><td>10</td><td>45.90</td><td>0.39</td><td>0.44</td><td>0.08</td><td>0.06</td><td>0.59</td><td>0.60</td></tr>
+<tr><td>Carebara sp. 2</td><td>forest</td><td>10</td><td>47.90</td><td>0.95</td><td>0.62</td><td>0.07</td><td>0.14</td><td>0.76</td><td>0.99</td></tr>
+<tr><td>Crematogaster sp. 1</td><td>forest</td><td>10</td><td>51.70</td><td>0.49</td><td>0.48</td><td>0.14</td><td>0.21</td><td>0.68</td><td>2.41</td></tr>
+<tr><td>Ectomomyrmex astutus</td><td>forest</td><td>10</td><td>47.00</td><td>4.14</td><td>0.72</td><td>0.21</td><td>0.11</td><td>0.54</td><td>0.63</td></tr>
+<tr><td>Euprenolepis sp. cf procera</td><td>forest</td><td>23</td><td>45.70</td><td>1.48</td><td>0.56</td><td>0.37</td><td>0.20</td><td>1.10</td><td>1.12</td></tr>
+<tr><td>Leptogenys sp. 1</td><td>forest</td><td>10</td><td>43.80</td><td>2.47</td><td>0.73</td><td>0.22</td><td>0.14</td><td>0.70</td><td>0.83</td></tr>
+<tr><td>Lophomyrmex bedoti</td><td>forest</td><td>10</td><td>44.20</td><td>0.96</td><td>0.48</td><td>0.11</td><td>0.15</td><td>0.65</td><td>0.70</td></tr>
+<tr><td>Monomorium sp. 1</td><td>forest</td><td>10</td><td>47.30</td><td>0.42</td><td>0.55</td><td>0.09</td><td>0.14</td><td>0.59</td><td>0.60</td></tr>
+<tr><td>Nylanderia sp. 1</td><td>forest</td><td>20</td><td>46.20</td><td>0.56</td><td>0.48</td><td>0.25</td><td>0.18</td><td>0.91</td><td>0.82</td></tr>
+<tr><td>Odontomachus sp. 1</td><td>forest</td><td>18</td><td>43.22</td><td>3.08</td><td>0.81</td><td>0.19</td><td>0.12</td><td>0.84</td><td>0.88</td></tr>
+<tr><td>Odontoponera denticulata</td><td>forest</td><td>18</td><td>46.50</td><td>3.55</td><td>0.57</td><td>0.23</td><td>0.12</td><td>0.53</td><td>0.68</td></tr>
+<tr><td>Pheidole sp. 1</td><td>forest</td><td>45</td><td>45.58</td><td>1.56</td><td>0.71</td><td>0.16</td><td>0.15</td><td>1.11</td><td>1.39</td></tr>
+<tr><td>Pheidole sp. 2</td><td>forest</td><td>12</td><td>41.83</td><td>0.63</td><td>0.56</td><td>0.16</td><td>0.14</td><td>0.72</td><td>0.76</td></tr>
+<tr><td>Pheidole sp. 3</td><td>forest</td><td>10</td><td>45.30</td><td>0.47</td><td>0.62</td><td>0.16</td><td>0.20</td><td>0.74</td><td>0.79</td></tr>
+<tr><td>Pheidole sp. 4</td><td>forest</td><td>10</td><td>45.20</td><td>0.94</td><td>0.66</td><td>0.20</td><td>0.18</td><td>0.91</td><td>0.94</td></tr>
+<tr><td>Tetramorium sp. 1 obesum group</td><td>forest</td><td>15</td><td>46.40</td><td>0.74</td><td>0.57</td><td>0.14</td><td>0.19</td><td>0.53</td><td>0.61</td></tr>
+<tr><td>Anochetus graeffei</td><td>plantation</td><td>14</td><td>44.71</td><td>1.30</td><td>0.60</td><td>0.24</td><td>0.12</td><td>0.56</td><td>0.59</td></tr>
+<tr><td>Anoplolepis gracilipes</td><td>plantation</td><td>19</td><td>49.32</td><td>1.71</td><td>0.56</td><td>0.18</td><td>0.14</td><td>1.03</td><td>1.44</td></tr>
+<tr><td>Camponotus sp. 1 brown</td><td>plantation</td><td>15</td><td>48.40</td><td>2.65</td><td>0.52</td><td>0.26</td><td>0.19</td><td>0.97</td><td>1.00</td></tr>
+<tr><td>Camponotus sp. 2 dark</td><td>plantation</td><td>3</td><td>50.00</td><td>2.62</td><td>0.52</td><td>0.24</td><td>0.16</td><td>0.85</td><td>1.00</td></tr>
+<tr><td>Diacamma sp. rugosum complex</td><td>plantation</td><td>7</td><td>51.29</td><td>3.42</td><td>0.72</td><td>0.25</td><td>0.18</td><td>0.75</td><td>0.84</td></tr>
+<tr><td>Euponera sharpi</td><td>plantation</td><td>13</td><td>44.69</td><td>1.55</td><td>0.64</td><td>0.14</td><td>0.05</td><td>0.46</td><td>0.57</td></tr>
+<tr><td>Stictoponera sp. cf binghamii</td><td>plantation</td><td>14</td><td>46.07</td><td>1.55</td><td>0.58</td><td>0.10</td><td>0.13</td><td>0.55</td><td>0.63</td></tr>
+<tr><td>Stictoponera sp.</td><td>plantation</td><td>10</td><td>46.00</td><td>1.54</td><td>0.55</td><td>0.19</td><td>0.15</td><td>0.54</td><td>0.69</td></tr>
+<tr><td>Lepisiota sp. cf rothneyi</td><td>plantation</td><td>12</td><td>55.33</td><td>0.83</td><td>0.51</td><td>0.34</td><td>0.23</td><td>0.80</td><td>0.85</td></tr>
+<tr><td>Odontoponera denticulata</td><td>plantation</td><td>10</td><td>47.60</td><td>3.55</td><td>0.57</td><td>0.23</td><td>0.12</td><td>0.53</td><td>0.68</td></tr>
+<tr><td>Tetramorium sp. 2 obesum group</td><td>plantation</td><td>10</td><td>44.90</td><td>0.70</td><td>0.47</td><td>0.17</td><td>0.21</td><td>0.63</td><td>0.76</td></tr>
+</table>
+
+Table S3. Results of regression models using land-use as the predictor at multiple levels. Ordinary least squares (OLS) models.
+
+<table>
+<tr><td></td><td>Estimate</td><td>SE</td><td>DF</td><td>p-value</td><td>R2</td></tr>
+<tr><td>WL</td><td>0.1976</td><td>0.1098</td><td>28</td><td>0.0826</td><td>0.1037</td></tr>
+<tr><td>RMS</td><td>-0.0104</td><td>0.0250</td><td>28</td><td>0.6790</td><td>0.0062</td></tr>
+<tr><td>REP</td><td>0.1043</td><td>0.0676</td><td>26</td><td>0.1350</td><td>0.0839</td></tr>
+<tr><td>RSL</td><td>-0.0217</td><td>0.0438</td><td>28</td><td>0.6240</td><td>0.0087</td></tr>
+<tr><td>RHF</td><td>-0.0433</td><td>0.0542</td><td>28</td><td>0.4310</td><td>0.0223</td></tr>
+<tr><td>REW</td><td>-0.0046</td><td>0.0578</td><td>26</td><td>0.9370</td><td>0.0002</td></tr>
+</table>
+
+Table S4. Results from principal component analysis (PCA). The eigenvalues, proportion of inertia explained by each of the first three components (PC1, 2, 3) and trait loadings are presented for three functional trait space (both land-use types, forest and rubber plantation only). Abbreviations as in Table S1.
+
+<table>
+<tr><td></td><td>PC1</td><td>PC2</td><td>PC3</td></tr>
+<tr><td>Both habitats</td><td></td><td></td><td></td></tr>
+<tr><td>Eigenvalue</td><td>1.9778</td><td>1.3736</td><td>0.8039</td></tr>
+<tr><td>Proportion Explained</td><td>39.5552</td><td>27.4728</td><td>16.0783</td></tr>
+<tr><td>Cumulative Proportion</td><td>39.5552</td><td>67.0280</td><td>83.1063</td></tr>
+<tr><td>CTmax</td><td>0.3155</td><td>0.7348</td><td>-0.4224</td></tr>
+<tr><td>WL</td><td>0.7707</td><td>-0.3977</td><td>-0.3583</td></tr>
+<tr><td>RMS</td><td>0.6102</td><td>-0.6111</td><td>0.2268</td></tr>
+<tr><td>REP</td><td>0.7981</td><td>0.2342</td><td>-0.0945</td></tr>
+<tr><td>RSL</td><td>0.5242</td><td>0.4973</td><td>0.6608</td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td>Forest</td><td></td><td></td><td></td></tr>
+<tr><td>Eigenvalue</td><td>2.2262</td><td>1.1482</td><td>0.8151</td></tr>
+<tr><td>Proportion Explained</td><td>44.5230</td><td>22.9638</td><td>16.3022</td></tr>
+<tr><td>Cumulative Proportion</td><td>44.5230</td><td>67.4868</td><td>83.7891</td></tr>
+<tr><td>CTmax</td><td>-0.3265</td><td>0.6586</td><td>0.6736</td></tr>
+<tr><td>WL</td><td>0.7954</td><td>-0.2921</td><td>0.4381</td></tr>
+<tr><td>RMS</td><td>0.8132</td><td>-0.1420</td><td>0.1179</td></tr>
+<tr><td>REP</td><td>0.7699</td><td>0.2729</td><td>-0.0458</td></tr>
+<tr><td>RSL</td><td>0.4826</td><td>0.7311</td><td>-0.3918</td></tr>
+<tr><td></td><td></td><td></td><td></td></tr>
+<tr><td>Rubber plantation</td><td>Rubber plantation</td><td></td><td></td></tr>
+<tr><td>Eigenvalue</td><td>2.2800</td><td>1.5252</td><td>0.5722</td></tr>
+<tr><td>Proportion Explained</td><td>45.6003</td><td>30.5043</td><td>11.4436</td></tr>
+<tr><td>Cumulative Proportion</td><td>45.6003</td><td>76.1046</td><td>87.5482</td></tr>
+<tr><td>CTmax</td><td>0.8896</td><td>0.0788</td><td>0.1766</td></tr>
+<tr><td>WL</td><td>0.2153</td><td>0.8550</td><td>-0.3559</td></tr>
+<tr><td>RMS</td><td>-0.2085</td><td>0.8811</td><td>0.2688</td></tr>
+<tr><td>REP</td><td>0.8230</td><td>0.0228</td><td>0.4054</td></tr>
+<tr><td>RSL</td><td>0.8494</td><td>-0.1050</td><td>-0.4216</td></tr>
+</table>
+
+Figure S1. (a) - (d) Sampling area in southern Thailand. Environmental factors measured in the field: (e) air temperature (T air), (f) ground temperature (T ground), (g) humidity, (h) canopy openness (CanO) and (i) depth of leaf litter (DepthLL). Modified t-test and spatial autocorrelations between (j) air and ground temperature, (k) canopy openness and ground temperature and (l) air temperature and humidity. Red and blue color in figures represent forest and rubber plantation respectively, the same in the following figures. Asterisks indicate statistical significance (*** : p < 0.001, ns not significant).
+
+Figure S2. Analytical flow diagram of this study for the trait-based approaches of ant assemblages between rubber plantations and forests in Thailand. Abbreviation: T air, air temperature; T ground, ground temperature; Morphol. trait, morphological traits; SD, standard deviation; CTmax, Critical Thermal maximum; FTS, functional trait space; PCA, principal component analysis; PC, principle component.
+
+Figure S3. Conspecific Critical Thermal maximum (CTmax) in different habitats for (a) Anoplolepis gracilipes and (b) Odontoponera denticulata. Trait Probability Density (TPD) of CTmax of (c) A. gracilipes and (d) O. denticulata. Purple color represents the overlapped TPD of populations in forests and in rubber plantations. The functional dissimilarity (Dissim), Functional Richness (FRic) and Functional Evenness (FEve) in TPD of CTmax of two habitats are also showed on the graphs. Asterisks indicate statistical significance (*** p < 0.001, * p < 0.05) from nonparametric Mann-Whitney U test.
+
+Figure S4. Intraspecific variation of Critical Thermal maximum (CTmax) of ant assemblages in forest and rubber plantation. (a) Functional Richness (FRic) and (b) Functional Evenness (FEve) based on Trait Probability Density (TPD) of CTmax in species level and (c-d) their relationship with average value of CTmax. Values are log-transformed to reduce heteroscedasticity in correlation analysis. R2 and p-value are shown, asterisk indicates statistical significance (* p < 0.05; ns not significant).
+
+Figure S5. Pairwise correlation coefficients between all functional traits. Correlation strength is shown by colours and sizes of squares at the top right; coefficient values are presented at the bottom left. WL, Weber’s length; RMS, relative mandible size; CTmax, Critical Thermal maximum; RSL, relative scape length corrected by body size; RHF, relative hind femur length corrected by body size; REP, relative eye position; REW, relative eye width corrected by body size. RHF and REW are highly correlated with other traits and thus excluded in the principal component analyses.
+
+Figure S6. Six morphological traits of ant assemblages from forest and rubber plantation. Asterisks indicate statistical significance (* p < 0.05, ns not significant).
+
+Figure S7. Scree plot for the principal component analysis (FTS1). The first three dimensions represent over 80% of variances.
+
+Figure S8. Density distribution of p-value from permutational multivariate analysis of variance between two ant assemblages on the first and third principal components (i.e. PC1 and PC3) by randomly rarefied forest species assemblages for 1000 times. Red dashed line indicates the p-value of observed variance which is not under-estimated due to the variation of species richness comparing to the null variance controlled for species richness (p = 0.29).
+
+References
+
+Bergmann, C. (1848) Über die Verhältnisse der Wärmeökonomie der Thiere zu ihrer Grösse. Gottinger Studien, 3, 595-708.
+
+Grevé, M.E., Bláha, S., Teuber, J., Rothmaier, M., & Feldhaar, H. (2019) The effect of ground surface rugosity on ant running speed is species-specific rather than size dependent. Insectes Sociaux, 66, 355-364.
+
+Guilherme, D.R., Souza, J.L.P., Franklin, E., Pequeno, P.A.C.L., Chagas, A.C.d., & Baccaro, F.B. (2019) Can environmental complexity predict functional trait composition of ground-dwelling ant assemblages? A test across the Amazon Basin. Acta Oecologica, 99, 103434.
+
+Kaspari, M. & Weiser, M. (1999) The size–grain hypothesis and interspecific scaling in ants. Functional Ecology, 13, 530-538.
+
+Lutterschmidt, W.I. & Hutchison, V.H. (1997) The critical thermal maximum: history and critique. Canadian Journal of Zoology, 75, 1561-1574.
+
+Schofield, S.F., Bishop, T.R., & Parr, C.L. (2016) Morphological characteristics of ant assemblages (Hymenoptera: Formicidae) differ among contrasting biomes. Myrmecological News, 23, 123-137.
+
+Silva, R.R. & Brandao, C.R.F. (2010) Morphological patterns and community organization in leaf-litter ant assemblages. Ecological Monographs, 80, 107-124.
+
+Sosiak, C.E. & Barden, P. (2020) Multidimensional trait morphology predicts ecology across ant lineages. Functional Ecology, 35, 139-152.

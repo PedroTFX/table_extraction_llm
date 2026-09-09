@@ -1,32 +1,52 @@
 {
-  "Variable": {
+  "(a) Parasite richness": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header names the specific biological property or trait being measured (e.g., Parasite richness)."
+    "reasoning": "Measures the number of parasites, a biological property of the organism."
   },
-  "Pasture": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This column represents a land-use/habitat type where sampling occurred."
+  "(b) Parasitism (%)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the percentage of parasitism, a biological trait of the organism."
   },
-  "Teak reforestation": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This column represents a specific habitat or vegetation type used as the sampling location."
+  "(c) H2'": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a statistical measure of diversity (H2'), a biological property."
   },
-  "Ficus reforestation": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This column represents a specific habitat or vegetation type used as the sampling location."
+  "(d) Connectance": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the connectance of interactions, a biological property of the organism."
   },
-  "Mixed reforestation": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This column represents a specific habitat or vegetation type used as the sampling location."
+  "(e) Diversity of interactions": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the diversity of interactions, a biological property of the organism."
   },
-  "Secondary regeneration": {
-    "field": "verbatimLocality",
+  "(f) Niche overlap": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures niche overlap, a biological property of the organism."
+  },
+  "(g) Compartments": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the number of compartments, a biological property of the organism."
+  },
+  "(h) Nestedness": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures nestedness, a biological property of the organism."
+  },
+  "(i) Pairwise Permanova": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a statistical test result (Permanova), a measurement of the data."
+  },
+  "Species": {
+    "field": null,
     "value_column": false,
-    "reasoning": "This column represents a land-use/habitat type where sampling occurred."
+    "reasoning": "This column lists treatment/habitat names, not insect taxa."
   }
 }

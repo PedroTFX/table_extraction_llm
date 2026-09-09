@@ -2,21 +2,88 @@
   "species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "The column contains scientific names of insect taxa as they appeared in the source.",
+    "reasoning": "Contains the taxonomic names of the insects studied.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The paper identifies and studies five specific wild bee species, which are discrete classifications."
+    "reasoning_relevance": "These are discrete classifications of the wild bee species studied."
   },
-  "Functional traits": {
+  "Date of changing season": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Represents the date of observation, not a biological trait or location.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the specific date when a seasonal change was observed.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Date of changing season"
+  },
+  "Functional traits Diet": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header describes biological properties (traits) measured or observed for the organism.",
+    "reasoning": "Describes the insect's feeding behavior (diet type).",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "These include defined characteristics like diet (oligolectic/polylectic), nesting biology, social behavior, and voltinism.",
+    "reasoning_relevance": "Classifies the bee's feeding strategy (Polylectic or Oligolectic).",
+    "multi_value": false,
     "value_type": "categorical",
-    "canonicalType": "Functional traits",
+    "canonicalType": "Functional traits Diet",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The dietary traits (oligolectic or polylectic) were not measured directly from the sampled bees during the study. Instead, the text states that these traits were 'assigned for each bee species based on primary literature on their natural history,' indicating the data was derived from existing scientific records and literature.",
+    "measurementMethod": "Classification of diet as oligolectic or polylectic based on primary literature on species' natural history.",
+    "measurementMethod_reasoning": "The diet was categorized as either oligolectic (feeding on a few specific plant species) or polylectic (feeding on a wide variety of plant species), and this classification was based on reviewing existing scientific literature regarding the species' natural history."
+  },
+  "Nesting": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the insect's nesting location or microhabitat.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's nesting location (Ground or Cavity).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nesting",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The study measures physical functional traits such as body size (Intertegular Distance) and wing wear on collected bee specimens. While some traits like diet or social behavior are assigned based on literature, the primary data collection involves capturing and examining preserved individuals.",
-    "measurementMethod": "Body size was measured using Intertegular Distance (ITD), defined as the distance between each tegulae in millimeters, utilizing a stereo microscope. Wing wear was quantified by classifying damage on wing margins using a scale from zero (no damage) to five (entire outer margin worn). Traits such as diet, nesting biology, social behavior, and voltinism were assigned based on established primary literature regarding the natural history of each species.",
-    "measurementMethod_reasoning": "The text explicitly details the protocols for measuring body size (ITD via stereo microscope) and wing wear (0-5 damage scale), while noting that other functional traits are derived from existing scientific knowledge."
+    "basisOfRecord_reasoning": "The study measures physical traits (body size and wing wear) and demographic traits (abundance and sex ratio) of wild bee individuals collected using pan traps, blue vane traps, and sweep netting. Since morphological measurements (Intertegular Distance and wing wear) were taken on collected specimens, the data is based on preserved/collected specimens.",
+    "measurementMethod": "Body size was measured using the intertegular distance (ITD) in millimeters using a stereo microscope (Nikon SMZ1270). Wing wear was quantified by classifying damage on wing margins on a scale from zero (no damage) to five (entire margin worn). Abundance and sex ratio were determined through sampling using pan traps, blue vane traps, and sweep netting across different urbanization levels.",
+    "measurementMethod_reasoning": "The text explicitly details the protocols for measuring body size (ITD using a stereo microscope) and wing wear (damage classification scale 0-5). It also specifies the collection methods (pan traps, blue vane traps, sweep netting) used to determine abundance and sex ratio."
+  },
+  "Sociality": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the insect's social structure or behavior.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's social structure (Solitary or Social).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Sociality",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The sociality trait (solitary or eusocial) is a functional characteristic of the species, not a measurement taken during the specific field sampling. The paper explicitly states that these traits were 'assigned for each bee species based on primary literature on their natural history,' which constitutes a record derived from human observation and existing scientific knowledge.",
+    "measurementMethod": "Assignment based on literature review of species' natural history",
+    "measurementMethod_reasoning": "The study did not measure sociality directly in the field; instead, the trait was assigned to each species based on existing scientific literature regarding their natural history (e.g., 'Traits for diet, nesting, social behavior, and voltinism were assigned for each bee species based on primary literature on their natural history')."
+  },
+  "Voltinism": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the insect's reproductive cycle or generation pattern.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the number of reproductive cycles per year (Bivoltine or Univoltine).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Voltinism",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Voltinism (univoltine/bivoltine) is a natural history/phenological trait of the species. The text explicitly states that these traits were assigned based on primary literature on the species' natural history, which constitutes a form of human observation/data compilation from existing records.",
+    "measurementMethod": "Assignment based on primary literature on natural history",
+    "measurementMethod_reasoning": "The study did not measure voltinism directly from the sampled individuals but assigned the trait (univoltine or bivoltine) to each species based on existing scientific literature regarding their life cycles and phenology."
+  },
+  "Body size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical characteristic of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the morphological measurement (Intertegular distance) into categories (Small or Large).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size measurements (Intertegular Distance, ITD) were taken from wild bee specimens collected and observed using a stereo microscope, indicating measurements on a physical, collected specimen.",
+    "measurementMethod": "Intertegular distance (ITD) measured in millimeters using a stereo microscope (Nikon SMZ1270)",
+    "measurementMethod_reasoning": "The methods section explicitly states: 'Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).'"
   }
 }

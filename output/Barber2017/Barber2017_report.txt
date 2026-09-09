@@ -1,32 +1,35 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Barber2017\Barber2017.xlsx  (268 rows)
 PREDICTION   : ..\output\Barber2017\Barber2017.csv  (280 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Amara crassispina/neoscotica/cupreolata' -> 'Amara crassispina/ neoscotica/cupreolata\ncupreolata'
+
+measurementType REMAP (pred -> gt, 1 pair(s))
   'bodylength' -> 'Body Length'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 263
-  missed (FN)         : 5
-  spurious, in scope  : 17   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+  matched (TP)          : 268
+  missed (FN)           : 0
+  spurious, in scope    : 12   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1      : 0.939 / 0.981 / 0.960   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.939 / 0.981 / 0.960   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.981   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1        : 0.957 / 1.000 / 0.978
+  SCOPED  P/R/F1        : 0.957 / 1.000 / 0.978
+  RECALL (GT coverage)  : 1.000
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord               263    263  1.000
-  measurementMethod             0    158  0.000  <-- low
-  measurementUnit              55    263  0.209  <-- low
-  measurementStatistic         55    263  0.209  <-- low
+  basisOfRecord               162    268  0.604
+  measurementMethod             0    268  0.000  <-- low
+  measurementUnit              56    268  0.209  <-- low
+  measurementStatistic         56    268  0.209  <-- low
   measurementRemarks            0      0    n/a
-  sex                         263    263  1.000
-  lifeStage                   263    263  1.000
+  sex                         268    268  1.000
+  lifeStage                   268    268  1.000
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -34,21 +37,10 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   samplingProtocol              0      0    n/a
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0    263  0.000  <-- low
+  verbatimEventDate             0    268  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    263  0.000  <-- low
+  associatedReferences          0    268  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 5 MISSED ROWS MISSED
-  species not in prediction                   5
-  species present, trait missing              0
-  species+trait present, value differs        0
-
-  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
-     gt 'Amara crassispina/ neoscotica/cupreolata\ncupreolata'  ~1.00~  pred 'Amara crassispina/neoscotica/cupreolata'   x5
-  -> 1 species mismatch explains 5 of 5 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Barber2017_misses.csv, Barber2017_misses_summary.json (5 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -57,3 +49,9 @@ measurementType COVERAGE
   breeding season                                  50    56   Δ+6 (split?)
   diet                                             51    56   Δ+5 (split?)
   wing morphology                                  56    56   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.957  1.000  0.978    268    12     0   id+type+value
+  tags        0.200  0.209  0.204     56   224   212   basis+id+type+value+stat+sex+stage
+             (F1 -0.774 vs previous)

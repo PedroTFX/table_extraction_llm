@@ -1,0 +1,51 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the taxonomic names of the insect species.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists the taxonomic names of the wild bee species studied."
+  },
+  "Montreal": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column represents the count or abundance of the species in Montreal.",
+    "category": null,
+    "reasoning_relevance": "The numerical values likely represent identifiers or counts, which are not biological traits."
+  },
+  "Quebec": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column represents the count or abundance of the species in Quebec.",
+    "category": null,
+    "reasoning_relevance": "The numerical values likely represent identifiers or counts, which are not biological traits."
+  },
+  "Native or exotic": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column describes a biological trait (native or exotic status) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This is a discrete classification of the species' origin (Native or Exotic).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Native or exotic",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting wild bee specimens using pan traps and sweep nets. These specimens were subsequently 'washed, processed, pinned and identified to the lowest taxonomic level.' Furthermore, morphological traits (inter-tegular distance/body size) were measured on these preserved specimens using a digital calliper.",
+    "measurementMethod": "Wild bees were collected using colored pan traps (400 ml plastic bowls filled with soapy water, retrieved after 48 hours) and active sweep netting (10 min collection with a 45 cm diameter net). Morphological traits, specifically inter-tegular distance (ITD), were measured on five female specimens of each species using a digital calliper (precision=0.01mm).",
+    "measurementMethod_reasoning": null
+  },
+  "Pollen specificity": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column describes a biological trait (pollen specificity) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This column records a discrete functional trait of the bee species.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Pollen specificity",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Pollen specificity (pollen specialization) is a functional/ecological trait of the wild bee species (e.g., oligolectic or polylectic). This trait is not measured directly from the physical specimen (like body size) but is assigned based on existing knowledge and literature regarding the species' behavior and diet, which falls under the definition of a behavioral/ecological trait observed or documented by humans.",
+    "measurementMethod": "Functional trait database compilation based on primary literature and researcher expertise",
+    "measurementMethod_reasoning": "The text explicitly states that the trait attributes (including pollen specialization) were 'allocated based on the primary literature (Ascher & Pickering, 2014), and on researcher expertise when published information for a particular species was unavailable.' This indicates the method used to determine the trait values."
+  }
+}

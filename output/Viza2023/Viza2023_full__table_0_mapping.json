@@ -1,0 +1,23 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the organisms studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists scientific names, which are discrete classifications of the organism."
+  },
+  "Presences": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines the measurement (count of observed individuals).",
+    "category": null,
+    "reasoning_relevance": "This column records counts of occurrences, which functions as a sample size or abundance metric."
+  },
+  "Absences": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines the measurement (count of unobserved individuals).",
+    "category": null,
+    "reasoning_relevance": "This column records counts of non-occurrences, which functions as a sample size or abundance metric."
+  }
+}

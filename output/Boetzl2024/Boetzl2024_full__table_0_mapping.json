@@ -2,16 +2,16 @@
   "Reference": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains scientific citations, which are source identifiers rather than data fields."
+    "reasoning": "This column contains full scientific citations, which is metadata, not a data field."
   },
   "data received after request": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This is a status indicator regarding data availability and does not describe the organism or its measurements."
+    "value_column": false,
+    "reasoning": "This column tracks the status of data acquisition, not a scientific measurement or identification."
   },
   "data included after review": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This column tracks whether data was accepted for inclusion, making it administrative metadata."
+    "value_column": false,
+    "reasoning": "This column tracks the status of data inclusion, not a scientific measurement or identification."
   }
 }

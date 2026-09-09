@@ -1,0 +1,30 @@
+{
+  "Bee species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insect species studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists discrete classifications of the organism's species."
+  },
+  "Plant Family": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the plant family associated with the bee, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists discrete classifications of the plant families visited.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Plant Family",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The plant family (Asteraceae/non-Asteraceae) was determined based on the location where the bees were collected while foraging in the field, which constitutes an ecological/behavioral observation of a live organism in situ.",
+    "measurementMethod": "Observation of foraging location to determine the plant family (Asteraceae or non-Asteraceae).",
+    "measurementMethod_reasoning": "The text explicitly states that the plant family was evaluated 'on which the bee was collected' while foraging, and characterized as either Asteraceae or non-Asteraceae."
+  },
+  "n": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the count of the observed insect specimens (number of individuals).",
+    "category": null,
+    "reasoning_relevance": "This column represents sample sizes or counts, which are not worth keeping."
+  }
+}

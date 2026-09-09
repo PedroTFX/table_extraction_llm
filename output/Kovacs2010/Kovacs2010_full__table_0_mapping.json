@@ -1,0 +1,107 @@
+{
+  "Trait Trait": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Defines the specific biological characteristic or trait being measured.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column lists the names of the traits being measured, paired with measurement values.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trait Trait"
+  },
+  "Workers n": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the sample size (count) of workers used for the measurement.",
+    "category": null,
+    "reasoning_relevance": "This column records sample size (n), which is not a biological trait or measurement."
+  },
+  "Workers Mean ± SD": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the mean measurement value and its associated standard deviation.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This column records physical/anatomical measurements (mean size and standard deviation).",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Workers CV": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Coefficient of Variation (CV) for the worker measurements.",
+    "category": null,
+    "reasoning_relevance": "This column records the coefficient of variation, which is a statistical index, not a measurement."
+  },
+  "Gynes n": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the sample size (count) of gynes used for the measurement.",
+    "category": null,
+    "reasoning_relevance": "This column records sample size (n), which is not a biological trait or measurement."
+  },
+  "Gynes Mean ± SD": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the mean measurement value and its associated standard deviation for gynes.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This column records physical/anatomical measurements (mean size and standard deviation).",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Gynes CV": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Coefficient of Variation (CV) for the gynes measurements.",
+    "category": null,
+    "reasoning_relevance": "This column records the coefficient of variation, which is a statistical index, not a measurement."
+  },
+  "Between castes t Between castes t": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the t-statistic comparing measurements between worker and gynes castes.",
+    "category": null,
+    "reasoning_relevance": "This column records Student's t-test values, which are statistical indices."
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Vespula maculifrons",
+    "reasoning": "All measurements (traits like thorax length and caste dimorphism) are taken from the social wasp Vespula maculifrons.",
+    "decided_by": "llm",
+    "roles": {
+      "Vespula maculifrons": "measured subject",
+      "Thorax length": "measured subject",
+      "Thorax width": "measured subject",
+      "Caste dimorphism": "measured subject",
+      "Ecology and": "unclear"
+    },
+    "candidates": [
+      {
+        "name": "Vespula maculifrons",
+        "mentions": 14,
+        "abbrev_mentions": 9,
+        "score": 62
+      },
+      {
+        "name": "Thorax length",
+        "mentions": 5,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Thorax width",
+        "mentions": 5,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Caste dimorphism",
+        "mentions": 3,
+        "abbrev_mentions": 0,
+        "score": 6
+      }
+    ]
+  }
+}

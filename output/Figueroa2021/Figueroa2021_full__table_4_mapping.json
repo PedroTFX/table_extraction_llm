@@ -1,0 +1,51 @@
+{
+  "Pathogen": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This column identifies the pathogen, which is not an insect taxon, locality, or measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications of the biological agents (pathogens) being studied.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Pathogen",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected bees in the field while they were foraging and immediately preserved them (placed on dry ice and stored at -80 °C) for subsequent analysis. Pathogen presence was determined by screening the gut and other tissues of these collected and preserved specimens using PCR.",
+    "measurementMethod": "Polymerase Chain Reaction (PCR) screening of bee gut and tissue DNA using established primers (Table S3)",
+    "measurementMethod_reasoning": "The researchers screened for the presence of three pathogens (trypanosomes, Nosema ceranae, and neogregarines) by extracting DNA from bee tissues (gut, fat body, and Malpighian tubules) and using PCR primers to detect the pathogens."
+  },
+  "Contrast": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the organisms (including insect taxa) being compared in the study.",
+    "category": null,
+    "reasoning_relevance": "These are labels for statistical comparisons between groups, not biological data."
+  },
+  "Estimate": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the primary numeric result or measurement of the comparison.",
+    "category": null,
+    "reasoning_relevance": "These are calculated statistical indices (e.g., odds ratios), not raw measurements."
+  },
+  "SE": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the Standard Error (SE) associated with the estimate.",
+    "category": null,
+    "reasoning_relevance": "These are statistical measures of variability (Standard Error), not biological data."
+  },
+  "z ratio": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the z ratio, which is a statistical measure of the result.",
+    "category": null,
+    "reasoning_relevance": "These are statistical indices used to determine significance."
+  },
+  "P value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the P value, a statistical measure of significance.",
+    "category": null,
+    "reasoning_relevance": "These are statistical indices used to determine significance."
+  }
+}

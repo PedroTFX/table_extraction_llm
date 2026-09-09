@@ -1,0 +1,51 @@
+{
+  "paper": "Quicke2023",
+  "has_full_md": true,
+  "supplementary": [],
+  "ground_truth": [
+    "Quicke2023.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "Quicke2023_full.md",
+      "n_tables": 1,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "Quicke2023_full.md",
+      "table_index": 0,
+      "n_rows": 39,
+      "n_cols": 6,
+      "header": [
+        "Taxon",
+        "Provenance",
+        "BOLD process ID",
+        "BOLD BIN",
+        "GenBank accession number",
+        "GenBank accession number (1)"
+      ],
+      "identifier": {
+        "column": "Taxon",
+        "taxon_fraction": 0.949,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    }
+  ],
+  "error": null,
+  "n_tables": 1,
+  "n_identifier_tables": 1,
+  "n_identifier_tables_markdown": 1,
+  "n_identifier_tables_supplementary": 0,
+  "n_transposed_tables": 0,
+  "n_rows_total": 39,
+  "n_distinct_species": 36,
+  "would_yield_rows": true,
+  "would_yield_rows_if_supplements_passed": true,
+  "verdict": "OK — 1 identifier table(s) in the markdown; a 0-row result is downstream (LLM mapping / relevance gate / grouping), not here"
+}

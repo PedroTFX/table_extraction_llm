@@ -1,0 +1,79 @@
+{
+  "identifier": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column appears to be a sample size or grouping identifier, not a required template field.",
+    "category": null,
+    "reasoning_relevance": "This column contains taxonomic names and codes, which function as identifiers, not biological traits or measurements."
+  },
+  "Specise": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the scientific name and authorship of the insect taxon.",
+    "category": null,
+    "reasoning_relevance": "This column lists scientific names of species, which are taxonomic identifiers, not measurable biological traits."
+  },
+  "Body size (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical property measured for the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This column records a physical measurement (size) of the organism with units (mm).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size was measured on individual carabid specimens captured using pitfall traps and preserved in alcohol.",
+    "measurementMethod": "Distance from the tip of the mandibles to the end of the abdomen, measured with a Vernier Caliper.",
+    "measurementMethod_reasoning": "The text explicitly states the measurement protocol: 'The body size of each individual specimen, measured as the distance from the tip of the mandibles to the end of the abdomen, was recorded with a precision of 1 mm using a Vernier Caliper.'",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement was recorded with a precision of 1 mm.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "The body size was recorded for each individual specimen."
+  },
+  "Annual crops": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Describes the land-use/vegetation type where sampling occurred.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The values are quantitative measurements (counts or area) of the habitat type.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Perennial crops": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Describes the land-use/vegetation type where sampling occurred.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The values are quantitative measurements (counts or area) of the habitat type.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Semi-natural habitats": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Describes the land-use/vegetation type where sampling occurred.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The values are quantitative measurements (counts or area) of the habitat type.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "trophic level": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological trait (what the organism is) of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This column provides discrete classifications of the organism's feeding biology (e.g., Predatory, Non-predatory).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "trophic level",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The trophic level (feeding trait/guild) is determined by classifying the collected ground beetle specimens (Carabidae) based on their predominantly observed feeding traits (predatory, omnivorous, or herbivorous) throughout their lifetime. Since the data is derived from specimens captured using pitfall traps and preserved in alcohol, it qualifies as a measurement taken from a preserved specimen.",
+    "measurementMethod": "Classification based on predominantly observed feeding traits (predatory, omnivorous, or herbivorous) throughout the lifetime of the carabid species.",
+    "measurementMethod_reasoning": "The text explicitly states that 'Carabid species were divided into strictly predatory and “other” (herbivorous and omnivorous) species according to their predominantly feeding traits throughout their lifetime.' This classification serves as the method for assigning the trophic level.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  }
+}

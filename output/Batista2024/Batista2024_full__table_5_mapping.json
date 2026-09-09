@@ -1,39 +1,79 @@
 {
-  "Species": {
+  "Species Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains taxonomic names of insects (e.g., Brachinus distans).",
+    "reasoning": "Contains the taxonomic names of the insect species.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The study taxonomically identified 62 species belonging to 32 genera."
+    "reasoning_relevance": "These are scientific names of ground beetles, representing a discrete biological classification."
   },
-  "Grassland habitats": {
-    "field": "verbatimLocality",
+  "Grassland habitats Dry period": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the habitat/vegetation type where sampling occurred.",
+    "reasoning": "Describes the specific habitat/condition where the organism was measured.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The text classifies habitat types, including 'grasslands (open savannas)' and 'transitional forests'.",
-    "value_type": "categorical"
+    "reasoning_relevance": "The binary values ('1', '0') indicate the presence or absence of the habitat.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Grassland habitats Dry period",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data was collected through field sampling using pitfall traps to capture ground beetles in their natural habitat (open savanna/grassland) during the dry period. This constitutes a natural history/ecological observation of live organisms in situ.",
+    "measurementMethod": "Pitfall traps were deployed at 25 sampling sites within the grassland habitat type. Beetle collections were conducted over ten-day periods. Environmental variables (Canopy Area, Herbaceous Cover, Shrub Cover, etc.) were assessed at each site to calculate the Shelter Index (SI) as a proxy for habitat shelter.",
+    "measurementMethod_reasoning": null,
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   },
-  "Grassland habitats (1)": {
-    "field": "verbatimLocality",
+  "Grassland habitats Interm-Wet": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific habitat or vegetation condition of the sample location.",
-    "category": null,
-    "reasoning_relevance": "not present in text"
+    "reasoning": "Describes the specific habitat/condition where the organism was measured.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The integer values represent a count or abundance of organisms in the habitat.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Grassland habitats Interm-Wet",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement (Alpha diversity, activity-density, and functional diversity) is an ecological trait derived from field sampling (pitfall traps) of live organisms in their natural habitat (open savanna/grassland), which constitutes a natural history observation.",
+    "measurementMethod": "Pitfall trapping and calculation of Alpha diversity (S) and Alpha-functional diversity (Alpha-FD) using statistical packages (RBAT, FD)",
+    "measurementMethod_reasoning": "The study used pitfall traps to sample ground beetles in the grassland habitat. The ecological metrics (N, S, Alpha-FD) were then calculated using specific R packages (RBAT and FD) to quantify the community structure and traits.",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "Alpha diversity (S) and activity-density (N) are measured as counts of individuals or species abundance. For functional diversity, the unit is often an index, but 'count' serves as the general unit for abundance metrics.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The data was analyzed using Generalized Linear Mixed Models (GLMMs), which typically report mean estimates (Est.) for the response variables (N, S, Alpha-FD) across the sampled sites and periods."
   },
-  "Forested habitats": {
-    "field": "verbatimLocality",
+  "Forested habitats Dry period": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the habitat/vegetation type where sampling occurred.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The study evaluated communities across habitat types like 'miombo forests' and 'mixed forests'.",
-    "value_type": "categorical"
+    "reasoning": "Describes the specific habitat/condition where the organism was measured.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The integer values represent a count or abundance of organisms in the habitat.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Forested habitats Dry period",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The ground beetles were collected using pitfall traps during the dry season and subsequently preserved in absolute ethanol for taxonomic identification and morphological measurement.",
+    "measurementMethod": "Pitfall trapping combined with standardized assessment of habitat variables (Canopy Area, Shrub Cover, Litter, etc.) and calculation of the Shelter Index (SI).",
+    "measurementMethod_reasoning": "The study used pitfall traps to sample ground beetles and assessed environmental variables (CA, BS, HC, HH, SC, L) at each site to calculate the Shelter Index (SI), which serves as a proxy for habitat shelter.",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "The primary ecological measurements reported (e.g., ground beetle activity-density (N) and Alpha-diversity (S)) are counts of individuals or species within the sampled area.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The results report significant effects and trends (e.g., 'higher N values of ground beetles were significantly explained by the distance gradient'), indicating that the data analyzed and presented are based on mean values derived from the GLM/GLMM models."
   },
-  "Forested habitats (1)": {
-    "field": "verbatimLocality",
+  "Forested habitats Interm-Wet": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific habitat or vegetation condition of the sample location.",
-    "category": null,
-    "reasoning_relevance": "not present in text"
+    "reasoning": "Describes the specific habitat/condition where the organism was measured.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The integer values represent a count or abundance of organisms in the habitat.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Forested habitats Interm-Wet",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study measured specific morphological traits (average body size and wing typology) of ground beetles (Carabidae). These measurements were taken after the beetles were collected using pitfall traps and preserved in absolute ethanol for taxonomic identification and trait analysis.",
+    "measurementMethod": "Pitfall trapping followed by morphological measurement of preserved specimens",
+    "measurementMethod_reasoning": "Ground beetle communities were sampled using pitfall traps set up at various sites. The collected specimens were preserved in absolute ethanol, and species traits (body size and wing typology) were determined through direct morphological measurement of these preserved specimens.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The text explicitly states that average body size (species length) was measured in mm (Table S2).",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The study analyzed community trait values (e.g., average body size) and functional diversity (Alpha-FD), which are typically reported as means or averages across the sampled sites and time periods (Intermediate and Wet sampling periods)."
   }
 }

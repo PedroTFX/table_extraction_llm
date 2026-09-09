@@ -1,60 +1,71 @@
 {
-  "total_missed": 43,
+  "total_missed": 67,
   "causes": {
-    "species+trait present, value differs": 43
+    "species present, trait missing": 9,
+    "species not in prediction": 24,
+    "species+trait present, value differs": 34
   },
   "value_substitutions": [
     {
       "gt": "species not known to collect pollen from fabaceae",
-      "pred": "not known to collect pollen from fabaceae",
+      "pred": "species not known to exploit fabaceae",
       "count": 34
-    },
-    {
-      "gt": "long",
-      "pred": "8.87",
-      "count": 1
-    },
-    {
-      "gt": "short",
-      "pred": "4.3",
-      "count": 1
-    },
-    {
-      "gt": "short",
-      "pred": "4.39",
-      "count": 1
-    },
-    {
-      "gt": "long",
-      "pred": "5.66",
-      "count": 1
-    },
-    {
-      "gt": "long",
-      "pred": "5.58",
-      "count": 1
-    },
-    {
-      "gt": "short",
-      "pred": "4.53",
-      "count": 1
-    },
-    {
-      "gt": "long",
-      "pred": "5.08",
-      "count": 1
-    },
-    {
-      "gt": "long",
-      "pred": "4.56",
-      "count": 1
-    },
-    {
-      "gt": "short",
-      "pred": "4.8",
-      "count": 1
     }
   ],
-  "species_absent": [],
-  "traits_missing": []
+  "species_absent": [
+    {
+      "gt_species": "Bombus muscorum (Linnaeus 1758)",
+      "count": 3,
+      "closest_pred_species": "Halictus tumulorum (Linnaeus 1758)",
+      "closest_score": 0.754
+    },
+    {
+      "gt_species": "Bombus pratorum (Linnaeus 1761)",
+      "count": 3,
+      "closest_pred_species": "Halictus tumulorum (Linnaeus 1758)",
+      "closest_score": 0.656
+    },
+    {
+      "gt_species": "Bombus hortorum (Linnaeus 1761)",
+      "count": 3,
+      "closest_pred_species": "Bombus terrestris (Linnaeus 1758) complex",
+      "closest_score": 0.618
+    },
+    {
+      "gt_species": "Bombus hypnorum (Linnaeus 1758)",
+      "count": 3,
+      "closest_pred_species": "Bombus terrestris (Linnaeus 1758) complex",
+      "closest_score": 0.647
+    },
+    {
+      "gt_species": "Bombus sylvarum (Linnaeus 1761)",
+      "count": 3,
+      "closest_pred_species": "Osmia bicornis (Linnaeus 1758)",
+      "closest_score": 0.632
+    },
+    {
+      "gt_species": "Bombus pascuorum (Scopoli 1763)",
+      "count": 3,
+      "closest_pred_species": "Lasioglossum calceatum (Scopoli 1763)",
+      "closest_score": 0.625
+    },
+    {
+      "gt_species": "Bombus lapidarius (Linnaeus 1758)",
+      "count": 3,
+      "closest_pred_species": "Chelostoma florisomne (Linnaeus 1758)",
+      "closest_score": 0.636
+    },
+    {
+      "gt_species": "Bombus ruderarius (Müller 1765)",
+      "count": 3,
+      "closest_pred_species": "Bombus terrestris (Linnaeus 1758) complex",
+      "closest_score": 0.618
+    }
+  ],
+  "traits_missing": [
+    {
+      "measurementType": "Relative Tonghe Length",
+      "count": 9
+    }
+  ]
 }

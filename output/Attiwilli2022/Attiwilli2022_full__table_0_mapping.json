@@ -2,39 +2,42 @@
   "identifier": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains taxonomic names (insect families) identifying the organisms.",
-    "category": null,
-    "reasoning_relevance": "Not mentioned as a data column; if it refers to unique IDs, it is an invalid category."
+    "reasoning": "Contains insect family names (Hesperiidae, Lycaenidae, etc.), which are taxonomic identifiers.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values are names of butterfly families, which are discrete taxonomic classifications."
   },
   "Ecotone": {
-    "field": "verbatimLocality",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Numerical code representing a specific sampling location or habitat type.",
+    "reasoning": "Represents a numerical count or measurement associated with the ecotone habitat.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The paper classifies species into habitat preference categories including 'ecotone'.",
+    "reasoning_relevance": "The column represents a discrete classification of the organism's habitat preference, coded numerically.",
+    "multi_value": false,
     "value_type": "categorical"
   },
   "Forest": {
-    "field": "verbatimLocality",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Numerical code representing a specific sampling location or habitat type.",
+    "reasoning": "Represents a numerical count or measurement associated with the forest habitat.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The paper classifies species into habitat preference categories including 'forest'.",
+    "reasoning_relevance": "The column represents a discrete classification of the organism's habitat preference, coded numerically.",
+    "multi_value": false,
     "value_type": "categorical"
   },
   "Open": {
-    "field": "verbatimLocality",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Numerical code representing a specific sampling location or habitat type.",
+    "reasoning": "Represents a numerical count or measurement associated with the open habitat.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The paper classifies species into habitat preference categories including 'open'.",
+    "reasoning_relevance": "The column represents a discrete classification of the organism's habitat preference, coded numerically.",
+    "multi_value": false,
     "value_type": "categorical"
   },
   "Total": {
-    "field": "measurementType",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Represents the total count or abundance of the organism in that category.",
+    "reasoning": "Represents the total count or measurement across all defined categories.",
     "category": null,
-    "reasoning_relevance": "Likely represents a total count or sample size, which is an invalid category."
+    "reasoning_relevance": "The values represent counts or sample sizes, which are not considered biological data worth keeping."
   }
 }

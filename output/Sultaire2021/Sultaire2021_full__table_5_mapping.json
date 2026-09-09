@@ -1,0 +1,87 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the full scientific names of the insect taxa.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete names of biological entities (species) classified by taxonomy."
+  },
+  "Species Abbr": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Provides an abbreviated identifier for the insect taxon.",
+    "category": null,
+    "reasoning_relevance": "This is a species identifier or code, not a biological trait or measurement."
+  },
+  "Body length (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the physical length of the organism in millimeters.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This is a physical/anatomical measurement of the organism, including units (mm).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body length was measured on individual carabid beetle specimens collected via pitfall traps.",
+    "measurementMethod": "Measurement using a Nikon SMZ1270 stereomicroscope, defined as the longest distance from the base of the mandibles to the posterior of the elytra or abdomen (excluding genitalia).",
+    "measurementMethod_reasoning": "The text explicitly details the instrument (Nikon SMZ1270) and the precise anatomical definition used for the measurement.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The text specifies the unit as (mm) when describing the measurement.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The results section reports the average body length by species (e.g., 'average body length by species was 11 mm'), indicating that the trait value reported for a species is the mean of the sampled individuals."
+  },
+  "Mandible Length/Width": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the length and width of the insect's mandibles.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This is a physical/anatomical measurement of the organism's mouthparts.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Mandible Length/Width",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurements (mandible length and width) were taken from individual carabid beetles collected and subsequently deposited as voucher specimens in a research collection.",
+    "measurementMethod": "Measurement using a Nikon SMZ1270 stereomicroscope, quantifying mandible length from the hinge to the tip and mandible width at the hinge (joint) of attachment on individual specimens.",
+    "measurementMethod_reasoning": "The text explicitly details the use of a Nikon stereomicroscope and provides precise definitions for how mandible length and width were measured on the specimens.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The text specifies that both mandible length and mandible width were measured in millimeters (mm).",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "The measurements were taken directly from individual beetles (random samples of five individuals per species, or all individuals if fewer than five were collected), representing a direct measurement of a single unit."
+  },
+  "Disp PCoA": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a statistical measure (Disp PCoA) derived from the organism's data.",
+    "category": null,
+    "reasoning_relevance": "PCoA is a statistical index derived from trait analysis, not a raw biological measurement."
+  },
+  "Individuals": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the count or number of individuals observed for that taxon.",
+    "category": null,
+    "reasoning_relevance": "This column records sample size (count of individuals), which is not a biological trait."
+  },
+  "Blocks": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Represents a sampling unit (block) and is not a measurement of the organism.",
+    "category": null,
+    "reasoning_relevance": "This is an experimental unit identifier, not a biological trait or measurement."
+  },
+  "Stands": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Represents a sampling unit (stand) and is not a measurement of the organism.",
+    "category": null,
+    "reasoning_relevance": "This is an experimental unit identifier, not a biological trait or measurement."
+  },
+  "Samples": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Represents the total number of samples taken and is not a measurement of the organism.",
+    "category": null,
+    "reasoning_relevance": "This column records sample size, which is not a biological trait or measurement."
+  }
+}

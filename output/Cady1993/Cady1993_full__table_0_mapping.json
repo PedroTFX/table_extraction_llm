@@ -2,37 +2,31 @@
   "Acrocerid": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the scientific names and taxonomic identifiers of the primary insect species.",
+    "reasoning": "This column lists the scientific names (taxa) of the primary insect subject.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the specific species of acrocerid fly being studied."
+    "reasoning_relevance": "The column lists the scientific names of the acrocerid species."
   },
   "Host spider(s)": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Describes a biological characteristic (the host/prey association) of the organism.",
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the scientific names (taxa) of the associated host organisms.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the discrete taxonomic classification of the host spider.",
-    "value_type": "categorical",
-    "canonicalType": "Host spider",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The data for the host spiders is primarily derived from extensive field research and detailed laboratory observations of their behaviors, ecology, and physical characteristics (e.g., web building, movement patterns, reaction to parasitism). Since these records focus on behavioral/ecological traits rather than just morphological measurements taken from preserved specimens, HumanObservation is the most appropriate classification.",
-    "measurementMethod": "Field and Laboratory Behavioral Observation",
-    "measurementMethod_reasoning": "The host spider data was collected through extensive field research (e.g., on sandstone cliffs in eastern Tennessee) to observe natural behaviors and interactions, supplemented by controlled laboratory observations of behavioral changes in infected or uninfected specimens."
+    "reasoning_relevance": "The column lists the scientific names of the host spider species."
   },
   "Location/date/collector": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "Records the geographic location and associated sampling event details.",
+    "reasoning": "This column specifies the geographic location, date, and collector of the sampling event.",
     "category": "Behavioral observation",
-    "reasoning_relevance": "Provides distribution records, including where and when observations occurred.",
+    "reasoning_relevance": "It records the geographical location, date, and collector of the specimens.",
+    "multi_value": false,
     "value_type": "categorical"
   },
   "Notes": {
     "field": null,
-    "value_column": false,
-    "reasoning": "Contains general observational notes and context not fitting defined fields.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "Contains qualitative descriptions of observed behaviors or physical characteristics.",
-    "value_type": "categorical"
+    "value_column": true,
+    "reasoning": "This column contains unstructured descriptive notes and metadata, not a defined measurement or location.",
+    "category": null,
+    "reasoning_relevance": "The column contains unstructured text, citations, and miscellaneous context not fitting defined categories."
   }
 }

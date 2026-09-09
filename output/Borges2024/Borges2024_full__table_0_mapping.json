@@ -1,7 +1,72 @@
 {
-  "Prey Species": {
+  "Prey Species Predator Biological Trait": {
     "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This column names the specific biological trait or property being measured.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "This column lists the names of the biological traits (variables) being measured.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Prey Species Predator Biological Trait"
+  },
+  "A. fabae": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column describes the diet or feeding preference of the organism being studied."
+    "reasoning": "This column contains the measured data (mean ± SD) for the A. fabae taxon.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The cells contain quantitative measurements of biological traits (e.g., time, proportion, count).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "M. persicae": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains the measured data (mean ± SD) for the M. persicae taxon.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The cells contain quantitative measurements of biological traits (e.g., time, proportion, count).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Scymnus nubilus",
+    "reasoning": "The paper measures the life history traits and demographic performance of the predator Scymnus nubilus when fed different prey.",
+    "decided_by": "llm",
+    "roles": {
+      "Aphis fabae": "prey",
+      "Myzus persicae": "prey",
+      "Scymnus nubilus": "measured subject",
+      "Scymnu nubilus": "measured subject",
+      "Aphis gossypii": "cited comparison"
+    },
+    "candidates": [
+      {
+        "name": "Aphis fabae",
+        "mentions": 7,
+        "abbrev_mentions": 21,
+        "score": 115
+      },
+      {
+        "name": "Myzus persicae",
+        "mentions": 11,
+        "abbrev_mentions": 17,
+        "score": 99
+      },
+      {
+        "name": "Scymnus nubilus",
+        "mentions": 14,
+        "abbrev_mentions": 14,
+        "score": 87
+      },
+      {
+        "name": "Scymnu nubilus",
+        "mentions": 1,
+        "abbrev_mentions": 14,
+        "score": 71
+      }
+    ]
   }
 }

@@ -1,0 +1,389 @@
+O R I G I N A L A R T I C L E
+
+Ecological Roya Entomology
+
+# Linking disturbances in neotropical landscapes with ecosystem functional traits: A preliminary assessment using epigaeic and leaf-litter ant communities
+
+Reinaldo Lucas Cajaiba<sup>1,2</sup> Antonio Maria Luis Crespi <sup>6</sup>
+
+<sup>1</sup>Laboratory of Ecology and Conservation, Federal Institute of Education, Science and Technology of Maranhao, Buriticupu, Brazil˜ <sup>2</sup>Laboratory of Applied Ecology, CITAB— Centre for the Research and Technology of Agro-Environment and Biological Sciences, Institute for Innovation, Capacity Building and Sustainability of Agri-food Production (Inov4Agro), University of Trás-os-Montes e Alto Douro, Vila Real, Portugal <sup>3</sup>Federal Institute of Education, Science and Technology of Pará, Itaituba, Brazil <sup>4</sup>Laboratory of Ecology and Evolution, University of Taquari Valley, Lajeado, Brazil <sup>5</sup>Campus da Auga, University of Vigo, Ourense, Spain <sup>6</sup>HVR Herbarium, University of Trás-os-Montes e Alto Douro Botanical Garden, Vila Real, Portugal
+
+## Correspondence
+
+Reinaldo Lucas Cajaiba, Laboratory of Ecology and Conservation, Federal Institute of Education, Science and Technology of Maranhao, Buriticupu 65393-000, Brazil.˜ Email: reinaldocajaiba@hotmail.com
+
+## Funding information
+
+Foundation for Science and Technology; Coordenaçao de Aperfeiçoamento de Pessoal˜ de Nível Superior; Conselho Nacional de Desenvolvimento Científico e Tecnologico
+
+Associate Editor: Ezequiel González
+
+Wully Barreto da Silva<sup>3,4</sup> | Darinka Costa Gonzalez<sup>5</sup> | Mário Santos<sup>1,2</sup> | Eduardo Périco<sup>4</sup>
+
+## Abstract
+
+1. Environmental stressors and changes in land use have led to rapid and dramatic species losses and a reduction in associated ecosystem services. 2. Functional diversity has increasingly been suggested as an alternative for evaluating anthropogenic disturbances and restoration programs because it reflects different aspects of the relationship between biological diversity, ecosystem functioning and environmental constraints. 3. Ants are important components of terrestrial food webs and a key group associated with diverse interactions and ecosystem processes. 4. Additionally, their sensitiveness and rapid response to environmental changes pave the way for their use as informative metrics for monitoring several processes that threaten biodiversity and ecosystem services. 5. Consequently, ants’ functional diversity might be considered leading edge indicators to assess ecosystem changes to ongoing anthropogenic disturbances. 6. The purpose of this study was to gauge the usefulness of epigaeic and leaf-litter ants’ functional responses towards measuring ecosystem degradation (and/or restoration) in the Brazilian Amazon. 7. Our results demonstrate that functional traits exhibited sensitivity to ongoing changes, as well as different responses to specific environmental disturbances. 8. Communities supporting ants with specialised functional traits associated with pristine ecosystems suffered high species loss and were correlated with specific anthropogenic stressors. 9. The results obtained pinpoint the importance of pristine ecosystems for conserving unique functional attributes and biodiversity in neotropical forest landscapes. 10. We highlight the significance of further studies in this scope to guide environmental managers and practitioners in applying the best policies for integrated neotropical landscapes conservation, considering the competing interests of farmers, foresters and conservationists, but also the unpredictable effects of local and regional environmental changes.
+
+## K E Y W O R D S
+
+Forest degradation, Formicidae, functional groups, invertebrates conservation, land use change
+
+## INTRODUCTION
+
+Neotropical forest landscapes play a significant role in regulating regional and global ecosystem services (Cajaiba et al., 2020; Gibson et al., 2011; Hubbell et al., 2008) and support much of the world’s biodiversity (Brown, 2014). Furthermore, they are considered to be one of the most threatened biodiversity hotspots (Koch et al., 2013; Myers et al., 2000). However, pristine and old growth forests have experienced continuous degradation and substitution by anthropogenic land uses during the past decades (Kim et al., 2015), meaning that their future is particularly bleak (Lovejoy & Nobre, 2018). One of the main threats is forest logging, linked with the expansion of roads and urban areas, as well as the conversion of forests into pastures and agriculture (Edwards et al., 2014; Gibbs et al., 2010). Additionally, the introduction of exotic species (Ferreira et al., 2016), wildfires, and fragmentation further degrade the remnant forests (Laurance et al., 2014). Habitat loss and degradation remain the primary causes of biodiversity loss (Gibson et al., 2011), threatening the sustainability of ecosystem functions and services, with severe consequences for human livelihoods and well-being (Mclean et al., 2019; Smith & Myers, 2018).
+
+Considering the actual rate of changes, the need for integrative and informative metrics for assessing the impact of anthropogenic practices on forest landscapes and the success of secondary fores regeneration is crucial (Cajaiba et al., 2020). Biodiversity loss in the tropics is often assessed using surrogates linked to species richness and taxonomic metrics, that is, species composition, abundance, diversity and turnover (Davies et al., 2020; Edwards et al., 2014). However, these metrics do not account for the differential role of species and therefore may underestimate the true functional loss that is occurring (Cadotte et al., 2011; Díaz et al., 2007; Mouillot et al., 2013). Actually, species’ functional identities are more closely related to ecological processes and ecosystem functions than taxonomic identities (Biswas et al., 2016; Derhé et al., 2018). Functional diversity (FD) has been increasingly suggested for evaluating anthropogenic disturbances and restoration programs (Cadotte et al., 2011; Montoya et al., 2012), since it can reflect divergent aspects of the relationship between bio logical diversity, ecosystem functioning and environmental constraints (Díaz & Cabido, 2001; Mouchet et al., 2010; Mumme et al., 2015). In addition, it expresses the degree of functional dissimilarities among species (i.e., how they use resources) (Barragán et al., 2011). FD uses species morphology, life history traits, feeding guild, breeding characteristics and ecological niches to evaluate community responses to disturbance and habitat change (Derhé et al., 2018; Mason et al., 2013; Mumme et al., 2015). The incorporation of FD metrics in restoration studies is of utmost importance for measuring effectiveness of management actions and supporting adaptative decisionmaking processes (Audino et al., 2014; Cadotte et al., 2011; Montoya et al., 2012). Despite this recognition, literature on FD trends in neotropical forest landscapes is scarce and mostly local (Audino et al., 2014; Cajaiba et al., 2020).
+
+Ecological indicators are a pragmatic approach to assess and communicate structural and functional changes in forest landscapes (Cajaiba, Périco, Caron, Dalzochio, Silva, & Santos, 2017; Cajaiba, Périco, da Silva, Leote, & Santos, 2018; Vandewalle et al., 2010). Indicators are particularly relevant in highly diverse (and in many cases remote) tropical regions (Audino et al., 2014), where it is considered unfeasible to monitor most species and locations (Cajaiba, Périco, da Silva, Vieira, et al., 2018; Raine et al., 2019). Ants (Insecta: Formicidae), one of the most abundant, ubiquitous, diverse and functionally divergent groups of organisms, are especially suited for this task: in tropical ecosystems ants represent up to 80% of animal biomass (Philpott & Armbrecht, 2006). Ants contribute significantly to several ecosystem services (Arnan et al., 2013; Rocha-Ortega et al., 2018), such as pest control, weed control and soil/nutrient dynamics (Eggleton, 2020; Sanabria et al., 2014). Moreover, ants’ behaviour and trophic position are of paramount importance within dissimilar functional groups in tropical forests (Philpott & Armbrecht, 2006). Several works have demonstrated that composition of ant communities is linked to ecosystems structure, and turnover occurs even under mild anthropogenic pressures (Andersen et al., 2006; Vasconcelos et al., 2000). Therefore, if ant communities are considered surrogates of diverse ecological pressures (Leal et al., 2012), studying ant FD could be a complementary method to assess the effects of land use on ecosystem processes (Andersen & Majer, 2004; Tiede et al., 2017).
+
+In the Brazilian Amazon, there is a gap in data and evidence on the responses of ant functional diversity to ongoing land use and management changes, and by addressing these issues we attempt to build a framework of reference, gauging its effectiveness as ecological indicators of disturbance. New insights into functional diversity responses to ecosystem degradation and/or recovery could provide standards guiding the most efficient conservation management actions, particularly relevant for a data-deficient and fast-changing regions. The significant rates of land cover change and disturbance will test the usefulness of epigaeic and leaf-litter ants’ (from hereafter ants) functional responses for measuring ecosystem degradation. For that, ecosystems within a disturbance gradient, including areas of primary forest, secondary forest in different stages of recovery, and highly altered food production areas (cocoa plantations and pastures) were monitored. Specifically, we hypothesised that primary forests encompass multifunctional attributes whilst the other ecosystems involve subsets of the former functionality. Particularly, we were interested in answering the following questions: (i) Does the functional composition of ant assemblages change along the disturbance gradient? (ii) Can we identify functional traits associated with specific ecosystems? (iii) Are secondary forests functional surrogates of primary forests?
+
+# MATERIALS AND METHODS
+
+## Study area
+
+Our study was carried out in the municipality of Uruará, in the north of the Pará state, within the Brazilian Amazon (Figure S1, Supplementary Material). The regional landscape, dominated by ombrophilos rainforests (circa 64% of the area) (Cajaiba et al., 2016) is changing as a result of the combined effects of intensive forest logging along with large increases in the area occupied by cattle-ranching and agriculture (mostly cocoa - Theobroma cacao L. and banana - Musa sp.) (Cajaiba et al., 2017). According to Köppen classification, the climate is considered a tropical monsoon climate (Am), with an average temperature of 25.6C, the humidity of 87% (Peel et al., 2007), and precipitation of around 17,000 mm per year, across well-defined seasons (rainy, dry, and intermediate).
+
+The dominant land uses (here referred to as “ecosystems”) present in the region were chosen and classified using remote sensing, interviews with local residents, and on-site visits. The selected land uses were: (i) Primary Forest (PF), little or no disturbance for at least eighty years; (ii) Secondary Forest (SF-15), 15 years of recovery from anthropogenic disturbance; (iii) Secondary Forest (SF-5), 5 years of recovery from anthropogenic disturbance; (iv) Agriculture (AG), cocoa plantations (Theobroma cacao), and (v) Pastures for livestock (PA) (information on the ecosystems sampled is given in Table S1, Supplementary Material). Two areas were monitored per ecosystem, with a minimum distance of 24 km from each other.
+
+## Epigaeic and leaf-litter ant sampling
+
+Individuals were collected using pitfall traps and litter collection techniques, during each of the rainy (February/March), intermediate (June), and dry (September/October) seasons, to increase the completeness of sampling while integrating possible differences in the activity patterns of species (Cajaiba et al., 2017). In each of the 10 monitored areas, seven randomly chosen locations were selected, with a minimum distance of 150 meters from each other and a minimum distance of 150 meters from ecotones (da Silva et al., 2021). Within each location, three pitfall traps were installed: two baited (sardines and banana), and one non-baited, 10 m apart, totaling 21 pitfall traps. Each trap remained installed for 48 h, with the protocol being repeated in all areas and periods of collection, totaling a sampling effort of 630 traps. Each sampled point was registered with a GPS unit (Garmin 12; Garmin International, Olathe, KS), and permanently marked with adhesive tape, so that the next samples could be located at the same point or very close. The pitfall traps consisted of 13 cm in diameter and 19 cm deep, containing approximately 350 ml of solution (water, coarse salt for preserving dead animals, and neutral detergent to break the surface tension of the water) and covered by a suspended roof to prevent rainwater from entering.
+
+For the manual collections (litter sampling), 10 random sampling points of $1 \mathsf { m } ^ { 2 } ,$ , with a distance of 100 m between them, were selected in each sampled area and sampling period (1 1 m—total of 300 sampled points). At each collection point, the litter and only the upper layer of the loose soil were scraped gently with a metal spatula, to include those ants in the samples that fell from the litter during the collection procedure (da Silva et al., 2021). We refrained from simply separating the litter and the soil, considering that if the litter is removed, ants can escape and hide in the topsoil (Cajaiba, Périco, Dalzochio, da Silva, Bastos, et al., 2017). Each soil and litter sample was placed in a tightly closed tissue bag and kept in an insulated box.
+
+All specimens were screened in the laboratory, with detailed searches focusing on the leaves, branches and soil. Individuals were extracted manually, preserved in a 70% ethanol solution, and identified according to taxonomic keys (Baccaro et al., 2015; Bolton, 1994; Fernández & Palácio, 2003) and reference collections, in the Laboratory of Ecology and Conservation, Federal Institute of Education, Science and Technology of Maranhao. This methodology was an˜ adaptation of the techniques of the standardised Ants of the Leaf Litter” (ALL) protocol (Agosti & Alonso, 2000), considering the high variability in the samples’ moisture (seasons and ecosystems) and its possible effects on the completeness of ant extraction (Delsinnea & Arias-Penna, 2012).
+
+## Environmental variables monitoring
+
+Fifteen environmental variables with potential influence on ant communities and ecosystem functioning were assessed at each location. These were: temperature (T), humidity (H), precipitation (P), circumference at breast height (CBH), circumference at ankle height (CAH), canopy cover (CC), richness of plants (RP), abundance of plants (AP), tree density (TD), richness of shrubs (RS), abundance of shrubs (AS), percentage of exposed soil (PES), percentage of vegetation cover (GC), percentage of leaf litter cover (LLC), height of leaf litter (HLL). Information concerning the methods associated with each variable is provided in Table S2, Supplementary material.
+
+## Functional diversity
+
+Functional diversity of ant assemblages was outlined taking into consideration traits that ultimately reflect ecological niches variegation (Sosiak & Barden, 2021). Explicitly, ecosystem specificity functional trait (ES\_FT) and trophic type functional trait (TT\_FT) were considered, given the link with explicit functions in the ecosystems (Delabie et al., 2000; Groc et al., 2014; Silvestre & Silva, 2001) (Table S2, Supplementary material). Species were divided between forest specialists (FS), open and semi-open environment specialists (OS), forest generalists (FG) and ecosystem generalists (EG), within the ES\_FT categories (Melliger et al., 2018). On the other hand, ants were classified into cryptic predators (CP), cryptic omnivores (CO), epigaeic predators (EP), epigaeic omnivores (EO), arboreal dominants (AD), arboreal subordinates (AS), opportunists (OP), army ants (AA), leaf-cutting Attini (LA) and non-leaf-cutting Attini (NA) within the TT\_FT categories (Table S3, Supplementary material) (Leal et al., 2012). For the ants that were not identified to the species level, the classification was based on information available for the genus.
+
+## Statistical analysis
+
+Before any statistical interpretation, we pooled the data from the three pitfall traps’ (i.e., the banana, sardine and non-baited traps) at each point and period of the year (rainy, dry and intermediate), which we entitled as samples. Additionally, data from the manual collection (litter sampling) were grouped with data from pitfall collections, since we did not intend to evaluate the different collection methods, but to increase the probability of capturing the largest number of ant species that forage on the surface of the soil. Sample statistical independence was gauged after evaluating their spatial autocorrelation in relation to ant composition, using Moran’s I Analysis. We used the resulting values of composi tion for a Principal Components Analysis (PCA), where the first axis was used as a response variable to Moran’s I, with coordinate variables for 10 different distance classes. The global Moran’s I analysis detected no statistically significant spatial structure of the taxonomic composition for any distance class (Moran’s $I = - 0 . 3 9 ; p = 0 . 1 6 )$
+
+In order to discriminate the functional traits richness and abundance between ecosystems, Generalised Linear Mixed Models (GLMM) with a Poisson distribution (for richness) and a Gaussian distribution, with identify link function, were fitted by including “sampled sites” as random factors. Subsequently, pairwise contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure) were performed to detect possible differences among ecosystems (Crawley, 2010). In order to homogenise the variances and normalise the residues the abundance was transformed by log(x + 1).
+
+Complementarily, functional diversity was estimated using Functional richness (FRic), Functional evenness (FEve) and functional redundancy (FRed) (De Bello et al., 2007; Laliberté & Legendre, 2010; Mason et al., 2013; Mouchet et al., 2010; Villéger et al., 2008). FRic values represent the volume occupied by the species of the community in the space of functional traits and is measured as a convex hull volume (is not weighted by abundance); FEve describes the distribution of species within the trait space, combining distribution of species traits and evenness of species relative abundances, representing the evenness of species abundance distribution in the functional space; FRed is defined as the extent to which a community is “saturated” with species with similar traits. If FRed is zero, all species are functionally different. By contrast, if redundancy is at a maximum (i.e., 1), all species are functionally identical. Functional diversity analyses were performed with the dbFD function using the FD package (Laliberté et al., 2014) of the R software (version 3.2.4) (R Core Team, 2016).
+
+To assess the effects of ecosystem types on the functional diversity - FD (functional richness-FRic, functional evenness-FEve, and functional redundancy-FRed), Generalised Linear Mixed Models (GLMM), using Gaussian error distributions with identity link function, were fitted by including “sampled sites” as a random factors in the models. Subsequently, pairwise contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure) were performed to detect possible differences among ecosystems (Crawley, 2010). In order to homogenise the variances and normalise the residues the abundance was transformed by $\mathsf { l o g } ( \mathsf { x } + 1 ) .$ GLMM analyses were performed with the lme4 package (Bates et al., 2015), the vegan package (Oksanen et al., 2013) and multcomp package (Hothorn et al., 2008) all within program R 3.2.4 (R Core Team, 2016).
+
+A one-way Permutational Multivariate Analysis of Variance (PERMANOVA) was used to examine the effects of ecosystem the Functional Diversity (FD), namely by a discrimination of the composition of functional traits. To complement PERMANOVA results, a Non-Metric Multidimensional Scaling (NMDS) analysis was implemented. Because certain samples exhibited high dominance of one or more species, abundance data was log-transformed (log $( \mathsf { x } + \mathsf { 1 } ) )$ to downweigh the most abundant species and allow rare species to exert more influence on distance calculation (Clarke & Warwick, 2001). (Clarke & Warwick, 2001). Environmental variables were fitted to the two first axes of ordination by the envfit function of the Vegan package (Oksanen et al., 2018) of R 3.2.4 program (R Core Team, 2016). PER-MANOVA and NMDS were performed using the Vegan package (Oksanen et al., 2013). In order to reduce possible bias associated with correlated explanatory variables, a non-parametric correlation was performed to select the least correlated variables previously to the NMDS (Spearman’s rho <0.75) (Graham, 2003). This procedure selected the following environmental variables: temperature (T), humidity (H), canopy cover (CC), percentage of exposed soil (PES), percentage of leaf litter cover (LLC) and richness of shrubs (RS). This procedure was able to determine which ants’ functional groups were associated with the vegetation characteristics presented in the different monitored ecosystems. Bray–Curtis similarity index was used within PERMANOVA and NMDS, with 999 permutations (Clarke & Warwick, 2001).
+
+![](images/7b4157774b4ba780013723f7be1c7b90201378705b5815fed42a45bb00ba3c9f.jpg)
+
+(b)  
+![](images/f0a8f01323407ed8f3ab951ef7aa3ffe926f844ad972502c64dbd09485571690.jpg)
+
+F I G U R E 1 Box-plot comparisons for (a) abundance and (b) richness of ecosystem specificity functional traits. The values followed by different letters are significantly different according to paired contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure). FS, Forest specialists; FG, Forest generalists; EG, ecosystem generalists; OS, open and semi-open environment specialists
+
+![](images/2a31c177e9ebc14725a18ece8b066ec96708c164c43a0056ca9447fc0a30d36a.jpg)
+
+![](images/b705d9518993f3cda75b926a1d6ae3f7a2a3aff3d7fe0731aaca2aa54d454758.jpg)
+
+(b)  
+![](images/fdd06772b77cb0da0affcd1b47814f061909d32ff2a56bc5040fe23bab18ba06.jpg)
+
+![](images/968ecd216206472ec32cc8f18c0d1ccc1f3eba4dc1ce5d1b4940558da16c4205.jpg)
+
+![](images/09096339bf78bab8a15418c8406660f7f0cf1153785324a3e525a0caaca93de3.jpg)
+
+![](images/d9fed0171e00063f4ad918c5802ace340ae68520af5832ae39dca0ba9ecae9b2.jpg)  
+F I G U R E 2 Box-plot comparisons for (a) abundance and (b) richness of “ecosystem specificity” functional groups between ecosystems. The values followed by different letters are significantly different according to paired contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure). PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Detailed information on predictor variables’ estimates (estimate), standard error (SE) for fixed effects and standard deviation (SD) for random effects, Z values, and associated p values are depicted in Supplementary Table S5
+
+(a)  
+![](images/eba188e57147c5321e1cdff340565bdcaa764bee6902c9eadd84b57017f7744c.jpg)  
+(b)
+
+![](images/ce6e4741351ec1b31fd1aed911729e3bcbf241d0b810a1eebf568f231959e75c.jpg)  
+F I G U R E 3 Box-plot comparisons for (a) abundance and (b) richness of “trophic type” functional traits. The values followed by different letters are significantly different according to paired contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure). CP, cryptic predators; CO, cryptic omnivores; EP, Epigaeic predators; EO, Epigaeic omnivores; AD, arboreal dominants; AS, arboreal subordinates; OP, opportunists; LA, leaf-cutting Attini; NA, non-leaf-cutting Attini
+
+## RESULTS
+
+A total of 9727 ant specimens, distributed within 32 genera and 131 species were recorded in our study (Supplementary Material, Table S4). Among the Ecosystem specificity functional traits (ES\_FT),
+
+Ecosystem generalists (EG) with 8894 individuals and 63 species, followed by Forest specialists (FS), with 515 individuals and 48 species, reached the highest diversities. Forest generalists (FG) with 201 individuals and 11 species and Open and semi-open environment specialists (OS) with 125 individuals and 8 species were the least diverse categories. Statistically significant differences in abundance for the ES\_FT were encountered (GLMM, 59.43, p < 0.001) (Figure 1a), with the exception of Forest generalists (FG) and Open and semi-open environment specialists (OS) (Figure 1a, pairwise comparisons using Z-tests). Moreover, statistically significant differences in richness for the ES\_FT were detected (GLLM, 22.19, p < 0.01), except between FS and FG (Figure 1b, pairwise comparisons using Z-tests).
+
+When the functional characteristics of the trophic type (ES\_FT) were compared between the different ecosystems, statistically significant differences for Forest generalists abundance were found, namely by attaining significantly higher values in primary forest (PF) (Figure 2a). On the other hand, statistical significant differences for richness were detected for Forest specialists and Forest generalists, that attained higher values in PF and secondary forest with 5 years of regeneration (SF-15), respectively, (GLMM with pairwise contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure) are shown in Figure 2a,b).
+
+(a)  
+![](images/69e3fa8091be97f621e59b270137c6f48eb60ef1bc163ecaaf6516fa64e707fd.jpg)  
+F I G U R E 4 Box-plot comparisons for (a) abundance and (b) richness of trophic level functional groups between ecosystems. The values followed by different letters are significantly different according to paired contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure). PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Detailed information on predictor variables’ estimates (estimate), standard error (SE) for fixed effects and standard deviation (SD) for random effects, Z values, and associated p values are depicted in Supplementary Table S5
+
+Among the trophic type functional traits (TT\_FT), Epigaeic omnivores (EO), comprising 4441 individuals and 37 species, followed by Epigaeic predators (EP) with 1748 individuals and 18 species, dominated in terms of abundance and richness. Conversely, Cryptic predators (CP) with 12 individuals and five species and Leaf-cutting Attini (LA) and Arboreal dominants (AD) (73 and 74 individuals and seven and five species, respectively) were less abundant and relatively poorer in diversity. Statistically significant differences in abundance (GLMM, 31.43, p < 0.001) and richness (GLMM, 11.77, p < 0.0001) of TT\_FT were detected (Figure 3a,b): Epigaeic predators (EP) and Epigaeic omnivores (EO) exhibited higher abundances, when compared to the other $\Pi \_ { \mathsf { F T } }$ , while Cryptic predators (CP), Leaf-cutting Attini (LA), and Nonleaf-cutting Attini (NA) presented lower abundances (Figure 3a). The richness of Epigaeic omnivores (EO) was statistically significant higher when compared to the other TT\_FT (p < 0.01). On the other hand, Cryptic predators (CP), Arboreal dominants (AD), Opportunists (OP), and Leaf-cutting Attini (LA) presented statistically significant lower richness when compared to the other TT\_FT (Figure 3b).
+
+When the functional characteristics of the trophic type (TT\_FT) were compared between ecosystems, Cryptic omnivores and Cryptic predators were the only groups without statistically significant differences in abundance and richness. Arboreal dominants, Arboreal subordinates, Leaf-cutting Attini and non-leaf-cutting Attini captures attained particularly low abundances and richness in disturbed
+
+(b)
+
+(a)  
+![](images/67497bcac354d230b4b873228347c06f4b166e70ba7fbd85e214f5c207f7bfc0.jpg)
+
+![](images/150dd74e7b8c3e6e0c73a0fe15cc54cdb04e461bab4f093fa47273d49ae11fae.jpg)  
+F I G U R E 5 Non-metric multidimensional scaling (NMDS) depicting functional traits of ant assemblages in accordance with their distribution among ecosystems (using bray–Curtis similarity). (a) Ecosystem specificity; (a) trophic type. PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Variables: T, temperature; H, humidity; CC, canopy cover; PES, percentage of exposed soil; LLC, percentage of leaf litter cover; RS, richness of shrubs
+
+ecosystems. Cryptic predators were absent in AG and PA while Opportunists presented lower richness in PF. GLMM with pairwise contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure) are shown in Figure 4.
+
+For both, Ecosystem specificity (ES\_FT) and Trophic type (TT\_FT), the composition of functional traits presented statistically significant differences (Figure 5). The gradient of disturbance is reproduced by the patterns observed, with primary forests (PF), pasture (PA) and agriculture (AG) in extreme positions on the NMDS, secondary forests of 5 years of regeneration (SF-5) in an intermediate position, overlapping both the pristine and highly impacted systems. In addition, a superimposition of PF and secondary forests with 15 years of regeneration (SF-15) is depicted, indicating similarities between their trait assemblages (Figure 5a,b). Concerning the ecosystem specificity functional trait (ES\_FT), Open and semi-open environment specialists and Ecosystem generalists were positively linked with disturbed ecosystems and the environmental variables temperature and exposed soil (Figure 5a). Within the trophic type functional traits (TT\_FT), Leafcutting Attini, Cryptic predators, Arboreal subordinates and Epigaeic predators were positively related with less disturbed ecosystems and the environmental variables humidity, canopy cover and richness of shrubs. On the other hand, Non-leaf-cutting Attini, Opportunists, Epigaeic omnivores and Cryptic omnivores were linked to disturbed ecosystems plus temperature and exposed soil (Figure 5b). In both analysed functional traits (ES\_FT and TT\_FT), the Permutational Multivariate Analysis of Variance (PERMANOVA) confirmed the differences depicted by the NMDSs: the composition of trait assemblages showed significant differences between all ecosystems (ES\_FT: Permanova F = 15.09, p < 0.001; TT\_FT: Permanova F = 23.16, p < 0.001), reinforced by the dissimilarity between all pairwise comparisons (Table S6, Supplementary material).
+
+(a)  
+(b)  
+![](images/dc77289309ece421662a7408af86b850b6020795aa2e81b15bd52c40ce40a5c7.jpg)
+
+![](images/214807fc118f4f98e4a3b062844c072dbdd8e51254dcf7e92e14fb163fd41581.jpg)
+
+(c)  
+![](images/a3777d6028087de229f6e9e6700976ec5720cd28653f760331605b641b60b677.jpg)  
+F I G U R E 6 Box-plot comparisons for (a) functional richness, (b) functional evenness and (c) functional redundancy for the different ecosystems considered. The values followed by different letters are significantly different according to paired contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure). PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Detailed information on predictor variables’ estimates (estimate) standard error (SE) for fixed effects and standard deviation (SD) for random effects, Z values, and associated P values are depicted in Supplementary Table S5
+
+Functional richness (FRic) depicted statistically significant differences among ecosystems (GLMM, 10.12, p < 0.001): PF superior to all ecosystems and SF-15 to the remaining ones; SF-5 and AG, with nonsignificant differences from each other, were positioned in an intermediate rank (lower than PF and SF-15 an higher than PA); PA showed the lowest FRic (Figure 6a). Functional evenness (FEve) also showed statistically significant differences among ecosystems (GLMM, 15.29, p < 0.01): PF and SF displayed significantly higher values than the other ecosystems, while the reduction in FEve values follows the gradient of disturbance (SF15 > AG > PA) (Figure 6b). Functional redundancy (FRed) also showed statistically significant differences among ecosystems (GLMM,
+
+7.23, p < 0.05). The highest values of functional redundancy were recorded for PF; in contrast, PA presented the lowest values for FRed, while SF-15, SF-5 and AG had intermediate values of functional redundancy, not differing from each other (Figure 6c). GLMM with pairwise contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure) are shown in Figure 6.
+
+## DISCUSSION
+
+Functional diversity trends in neotropical landscapes translate biodiversity into changing attributes to influence resilience and ecosystem functioning (Apolinário et al., 2019; Philpott & Armbrecht, 2006). The diverse roles and ubiquity of ants contribute to highlighting their potential as functional indicators (Tiede et al., 2017). The preliminary results presented here, indicating a cutback in the functional spectrum matching the gradient of disturbance, corroborates this idea. The trends observed here concur with other works focusing on the Amazon (Fernandes et al., 2021; Fontenele & Schmidt, 2021), other Brazilian biomes (Leal et al., 2012; Martello et al., 2018), but also other regions of the world (González et al., 2018). We found that dissimilar patterns and responses were displayed by specific versus generalist functional traits, for example, specialised traits were particularly eroded in assemblages of disturbed ecosystems while generalist traits seem unscathed. Indeed, apart from attributes such as richness within each functional trait (or even the presence/absence of a particular functional trait), abundance patterns were noticeably specialised. This was evident here, with the specialist cryptic predators, arboreal dominants, leaf-cutting Attini, but also with the generalists who have increased their abundance in degraded ecosystems assemblages (e.g. Ecosystem generalists, Opportunists, Cryptic omnivores) (Delabie et al., 2000; Silvestre & Silva, 2001).
+
+The FD metrics evaluated in the present study (i.e., FRic, FEve and FRed) demonstrated differences between ecosystems, and these differences can be explained by several factors, such as abundance, species richness and composition, in addition to specific environmental conditions and habitat characteristics (e.g. temperature, food, competition, leaf-litter accumulation, …), as described in previous studies (de la Mora et al., 2013; Tiede et al., 2017). We also conclude that disturbed areas were associated with low functional redundancy: even secondary forests with 15 years of regeneration (SF-15) were not able to recover the functional redundancy of pristine forests, indicating that the functional traits expressed were less common, and only a few taxa occupied the available functional space. Low functional redundancy, aroused from few taxa occupying the available functional space (with few common traits shared) might indicate vulnerability to future anthropogenic disturbance (Gammal et al., 2020). It has been proposed that the greater the number of taxa and traits expressed in an ecosystem (i.e., functionality), the greater probability of taxa and traits to persisting and maintaining ecosystems’ resilience (Murillo et al., 2020; Warring et al., 2016).
+
+We also found that certain functional characteristics were related to predominant variables of each ecosystem. For example, pristine ecosystems have greater canopy cover, soil litter accumulation and plant diversity, and these variables positively influenced specialised functional groups, such as forest specialists, non-leaf-cutting Attini and cryptic predators. On the other hand, the higher functional richness and functional redundancy were particularly related with specific ecosystems within the landscape (da Silva et al., 2022). Both are inter linked, for example, cattle trampling in grassland areas contributes to soil compaction, resulting in reduced pathways through the litter layer, hiding surfaces and diversity of food sources. Additionally, reduced vegetation cover affects the maintenance of water balances of ant species (da Silva et al., 2022). Thus, our results are consistent with those observed in other systems, where reduced complexity (especially those ecosystems without tree canopy cover) has been associated with reduced ant diversity and functionality (e.g. Mauda et al., 2018; Pacheco & Vasconcelos, 2012).
+
+Trait changes also modify ecosystem processes and services (González et al., 2018), with repercussions on the ability to recover and patterns of recovery of degraded ecosystems. Specialised traits are considered essential to regulate processes such as nutrient recycling, plant competition and control of herbivorous species (Gomes et al., 2019), whereas non-specialised traits with higher tolerance range, flexibility in nesting requirements and generalised diets can only partially overcome these ecosystem services. Nevertheless, nonspecialists are able to quickly recolonise disturbed systems (Leal et al., 2012), exhibiting rapid and successful recruitment and resource use (Arnan et al., 2017).
+
+Human activities reduce structural complexity and transform resource opportunities as well as microclimatic and abiotic conditions for ants (Groc et al., 2014). The primary forest myrmecofauna, largely characterised by specialised competitive traits, tend to be replaced by omnivorous and generalist traits favoured by novel niches (Apolinário et al., 2019; García-Martínez et al., 2015). Trampling by livestock, agricultural machinery and vegetation control cause additional simplification of ecosystems, inevitably limiting the range of available niches (da Silva et al., 2022). Cocoa plantations are an exception to this situation probably due to the nature of this agroforestry system, which provides a habitat that is similar to secondary forests in environmental conditions and structure, namely tree canopy cover, understory layer and litter accumulation (da Silva et al., 2018).
+
+## Implications for neotropical landscape management and final remarks
+
+Our approach represents a useful contribution to understanding the relevance of trait assemblage responses through a representative gradient of the structural and land use/land cover changes dynamics under very complex and variable regional conditions. Disturbed ecosystems’ conditions facilitate the colonisation of generalist traits and filtered the occurrence and richness of specialised traits (Santoandré et al., 2019). This is probably related with a contraction in several ecosystem services, such as nutrient cycling or pest control, resulting in possible undesirable effects on human populations (García-Martínez et al., 2015).
+
+We have also demonstrated that secondary forests retained a high trait diversity (Rocha-Ortega et al., 2018), and might provide refuges for recolonising adjacent ecosystems while contributing significantly to fundamental ecosystem services within the landscape (César et al., 2021). Even if secondary forests are able to preserve ecosystem functions such as nutrient cycling and carbon storage (Ostertag et al., 2008), other attributes such as biodiversity may take a longer time to recover because most specialist traits are highly depend on complex dispersion and habitat selection processes (da Silva et al., 2018; Lennox et al., 2018), which suggests likely changes in the ecosystem functions that will be performed by these dominant taxa in disturbed habitats (Luke et al., 2014). This outcome should guide policies aimed at managing and protecting secondary forests (Rocha-Ortega et al., 2018), especially in regions where most pristine forests are scarce or inexistent. On the other hand, remnant primary forests, by the diversity of traits encompassed and the concomitant homeostatic landscape functions related, should be strictly protected (García-Martínez et al., 2015). Moreover, pristine ecosystems are fundamental for conservation purposes, holding higher diversity, functionality and exclusive species.
+
+Despite the limitations of our study, which only focused on epigaeic and leaf-litter ants, the methodology proposed is applicable to other type of ecosystems affected by gradients of changes. In this perspective, this study represents a useful contribution for the holistic understanding of the role of ants and their assemblage responses as surrogates of other taxa. We suggest that in future studies, other collection methods should be used to address different aspects of ant communities that inhabit different strata (Bestelmeyer et al., 2000; Tista & Fiedler, 2011). For example, the study of canopy ants might provide a comprehensive picture of the effects of human activities on forest integrity and functionality (Santoandré et al., 2019). In addition, we emphasise the need to study other areas with different levels of disturbance, over an extended period, to verify the feasibility of using the trait diversity of ants as a guideline to monitor the state of Neo tropical landscapes.
+
+## ACKNOWLEDGEMENTS
+
+This research was supported by European Investment Funds by FEDER/COMPETE/POCI– Operational Competitiveness and Internationalisation Programme, under Project POCI-01-0145-FEDER-006958, National Funds by FCT—Portuguese Foundation for Science and Technology, under the project UIDB/04033/2020 and INTER-ACT, Integrative Research in Environment, Agro-Chains and Technology, Project Norte 2020 45/2015/02. WBS thank the Coordenaçao˜ de Aperfeiçoamento de Pessoal de Nível Superior, Brazil through a doctorate fellowship (Finance Code 001). EP thanks Conselho Nacional de Desenvolvimento Científico e Tecnologico, Brazil for the research grant (Research Productivity n 307303/2019-5).
+
+## CONFLICT OF INTEREST
+
+The authors declare no conflicts of interest.
+
+## DATA AVAILABILITY STATEMENT
+
+Data sharing is not applicable to this article as no new data were created or analyzed in this study.
+
+## ORCID
+
+Reinaldo Lucas Cajaiba https://orcid.org/0000-0003-0176-9201
+
+## REFERENCES
+
+Agosti, D. & Alonso, L.E. (2000) The a.L.L. protocol. A standard protocol for the collection of ground–dwelling ants. In: Agosti, D., Majer, J.D., Alonso, L.E. & Schultz, T.R. (Eds.) Ants: standard methods for measur ing and monitoring biodiversity. Smithsonian Institution Press, pp. 204–206.
+
+Andersen, A.N., Hertog, T. & Woinarski, J.C.Z. (2006) Long-term fire exclu sion and ant community structure in an Australian tropical savanna: congruence with vegetation succession. Journal of Biogeography, 33, 823–832.
+
+Andersen, A.N. & Majer, J.D. (2004) Ants show the way down under: invertebrates as bioindicators in land management. Frontiers in Ecol ogy and the Environment, 2, 291–298.
+
+Arnan, X., Cerdá, X. & Retana, J. (2017) Relationships among taxonomic, functional, and phylogenetic ant diversity across the biogeographic regions of Europe. Ecography, 40, 448–457.
+
+Arnan, X., Cerdá, X., Rodrigo, A. & Retana, J. (2013) Response of ant func tional composition to fire. EcographyEcography, 36, 1182–1192.
+
+Audino, L.D., Louzada, J. & Comita, L. (2014) Dung beetles as indicators of tropical forest restoration success: is it possible to recover species and functional diversity? Biological Conservation, 169, 248–257.
+
+Baccaro, F.B., Feitosa, R.M., Fernandez, F., Fernandes, I.O., Izzo, T.J., Souza, J.L.P. et al. (2015) Guia para os gêneros de formigas do Brasil. Editora INPA. Editora INPA.
+
+Barragán, F., Moreno, C.E., Escobar, F., Halffter, G. & Navarrete, D. (2011) Negative impacts of human land use on dung beetle functional diver sity. PLoS One, 6, e17976.
+
+Bates, D., Mächler, M., Bolker, B.M. & Walker, S.C. (2015) Fitting linear mixed-effects models using lme4. Journal of Statistical Software, 67, 1–48.
+
+Bestelmeyer, B., Agosti, D., Alonso, L. & Delabie, J.H.C. (2000) Field tech niques for the study of ground-dwelling ants: an overview,
+
+description and evaluation. In: Agosti, D., Majer, J.D., Alonso, L. & Schultz, T.R. (Eds.) Ants: standard methods for measuring and monitoring biodiversity. Smithsonian Institutions Press, pp. 122–144.
+
+Biswas, S.R., Mallik, A.U., Braithwaite, N.T. & Wagner, H.H. (2016) A conceptual framework for the spatial analysis of functional trait diversity. Oikos, 125, 192–200.
+
+Bolton, B. (1994) Identification guide to the ant genera of the world. Harvard University Press. Available from: http://antbase.org/ants/publications/ 20978/20978.pdf
+
+Brown, J.H. (2014) Why are there so many species in the tropics? Journal of Biogeography, 41, 8–22.
+
+Cadotte, M.W., Carscadden, K. & Mirotchnick, N. (2011) Beyond species: functional diversity and the maintenance of ecological processes and services. Journal of Applied Ecology, 48, 1079–1087.
+
+Cajaiba, R.L., Cabral, J.A. & Santos, M. (2016) A minimal invasive method to forecast the effects of anthropogenic disturbance on tropical cave beetle communities. Neotropical Entomology, 45, 139–147.
+
+Cajaiba, R.L., Périco, E., Caron, E., Dalzochio, M.S., da Silva, W.B. & Santos, M. (2017) Are disturbance gradients in neotropical ecosystems detected using rove beetles? A case study in the Brazilian Amazon. Forest Ecology and Management, 405, 319–327.
+
+Cajaiba, R.L., Périco, E., da Silva, W.B., Caron, E., Buss, B.C., Dalzochio, M. et al. (2020) Are primary forests irreplaceable for sustaining Neotropical landscapes’ biodiversity and functioning? Contributions for restoration using ecological indicators. Land Degradation and Development, 31, 508–517.
+
+Cajaiba, R.L., Périco, E., da Silva, W.B., Leote, P. & Santos, M. (2018) Are small dung beetles (Aphodiinae) useful for monitoring neotropical forests’ ecological status? Lessons from a preliminary case study in the Brazilian Amazon. Forest Ecology and Management, 429, 115–123.
+
+Cajaiba, R.L., Périco, E., da Silva, W.B., Vieira, T.B., Dalzochio, M.S., Bastos, R. et al. (2018) How informative is the response of ground Beetles (Coleoptera: Carabidae) assemblages to anthropogenic land use changes? Insights for ecological status assessments from a case study in the Neotropics. Science of the Total Environment, 636, 1219–1227.
+
+Cajaiba, R.L., Périco, E., Dalzochio, M.S., da Silva, W.B., Bastos, R., Cabral, J.A. et al. (2017) Does the composition of Scarabaeidae (Coleoptera) communities reflect the extent of land use changes in the Brazilian Amazon? Ecological Indicators, 74, 285–294.
+
+César, R.G., Moreno, V.D.S., Coletta, G.D., Schweizer, D., Chazdon, R.L., Barlow, J. et al. (2021) It is not just about time: agricultural practices and surrounding forest cover affect secondary forest recovery in agricultural landscapes. Biotropica, 53, 496–508.
+
+Clarke, K.R. & Warwick, R.M. (2001) Change in marine communities: an approach to statistical analysis and interpretation, 2nd edition. Plymouth: PRIMER-E, Ltd., Plymouth Marine Laboratory.
+
+Crawley, M.J. (2010) The R book, 2nd edition. Chichester: A John Wiley & Sons Ltd.
+
+Apolinário, L.D.C.M.H., Almeida, A.A.D., Queiroz, J.M., Vargas, A.B. &<sup>^</sup> Almeida, F.S. (2019) Diversity and guilds of ants in different landuse systems in Rio de Janeiro state, Brazil. Floresta e Ambiente, 26, e20171152.
+
+da Silva, W.B., Cajaiba, R.L. & Périco, E. (2021) Ant diversity sampling in the Brazilian Amazon: a comparison of litter collection and pitfall trapping. Revista de Biologia Tropical, 69, 865–872.
+
+da Silva, W.B., Cajaiba, R.L., Santos, M. & Périco, E. (2022) Effectiveness of ant communities to detect anthropogenic disturbance in Neotropical forest landscapes: a case study in the Brazilian Amazon. Biodiversity and Conservation, 31, 211–226.
+
+da Silva, W.B., Périco, E., Dalzochio, M.S., Santos, M. & Cajaiba, R.L. (2018) Are litterfall and litter decomposition processes indicators of forest regeneration in the neotropics? Insights from a case study in the Brazilian Amazon. Forest Ecology and Management, 429, 189–197.
+
+Davies, R.W., Edwards, D.P. & Edwards, F.A. (2020) Secondary tropical forests recover dung beetle functional diversity and trait composition. Animal Conservation, 23, 617–627.
+
+De Bello, F., Leps, J., Lavorel, S. & Moretti, M. (2007) Importance of spe-ˇ cies abundance for assessment of trait composition: an example based on pollinator communities. Community Ecology, 8, 163–170.
+
+de la Mora, A., Murnen, C.J. & Philpott, S.M. (2013) Local and landscape drivers of biodiversity of four groups of ants in coffee landscapes. Biodiversity and Conservation, 22, 871–888.
+
+Delabie, J.H.C., Agosti, D. & Nascimento, I.C. (2000) Field techniques for the study of ground-living ants: an overview, description, and evaluation. In: Agosti, D., Majer, J.D., Alonso, L. & Schultz, T. (Eds.) Sampling ground-dwelling ants: case studies from the world’ rain forests. Perth: School of Environmental Biology, pp. 59–69.
+
+Delsinnea, T.D. & Arias-Penna, T.M. (2012) Influence of leaf litter moisture on the efficiency of the Winkler method for extracting ants. Journal of Insect Science, 12, 1–13.
+
+Derhé, M.A., Murphy, H.T., Preece, N.D., Lawes, M.J. & Menéndez, R. (2018) Recovery of mammal diversity in tropical forests: a functional approach to measuring restoration. Restoration Ecology, 26, 778–786.
+
+Díaz, S. & Cabido, M. (2001) Vive la diff é rence: plant functional diversity matters to ecosystem processes. Trends in Ecology and Evolution, 16, 646–655.
+
+Díaz, S., Lavorel, S., de Bello, F., Quétier, F., Grigulis, K. & Robson, T.M. (2007) Incorporating plant functional diversity effects in ecosystem service assessments. Proceedings of the National Academy of Sciences of the United States of America, 104, 20689.
+
+Edwards, F.A., Edwards, D.P., Larsen, T.H., Hsu, W.W., Benedick, S., Chung, A. et al. (2014) Does logging and forest conversion to oil palm agriculture alter functional diversity in a biodiversity hotspot? Anima Conservation, 17, 163–173.
+
+Eggleton, P. (2020) The state of the world’s insects. Annual Review of Envi ronment and Resources, 45, 61–82.
+
+Fernandes, G.W., Lana, T.C., Ribas, C.R., Schoereder, J.H., Solar, R., Cordeiro, E.G. et al. (2021) Changes in epigaeic ant assemblage structure in the Amazon during successional processes after bauxite min ing. Sociobiology, 68, 1–11.
+
+Fernández, F. & Palácio, E. (2003) Claves para las subfamilias y géneros. In: Fernández, F. (Ed.) Introduccion a las hormigas de la region Neotropical . Instituto de Investigacion de Recursos Biol ogicos Alexander Von Humboldt, pp. 233–260. Available from: http://antbase.org/ants/ publications/20978/20978.pdf
+
+Ferreira, L.V., Parolin, P., Matos, D.C.L., Cunha, D.A., Chaves, P.P. & Neckel, S.O. (2016) The effect of exotic grass Urochloa decumbens (Stapf) R.D.Webster (Poaceae) in the reduction of species richness and change of floristic composition of natural regeneration in the Floresta Nacional de Carajás, Brazil. Anais da Academia Brasileira de Ciencias, 88, 589–597.
+
+Fontenele, L.K. & Schmidt, F.A. (2021) Forest - pasture shifting alters the assemblages of seed - removing ants in southwestern Brazilian Amazon. Journal of Insect Conservation, 25, 213–220.
+
+Gammal, J., Hewitt, J., Norkko, J., Norkko, A. & Thrush, S. (2020) Does the use of biological traits predict a smooth landscape of ecosystem functioning? Ecology and Evolution, 10, 10395–10407.
+
+García-Martínez, M., Martínez-Tlapa, D.L., Pérez-Toledo, G.R., Quiroz-Robledo, L.N., Castaño-Meneses, G., Laborde, J. et al. (2015) Taxonomic, species and functional group diversity of ants in a tropical anthropogenic landscape. Tropical Conservation Science, 8, 1017– 1032.
+
+Gibbs, H.K., Ruesch, A.S., Achard, F., Clayton, M.K., Holmgren, P., Ramankutty, N. et al. (2010) Tropical forests were the primary sources of new agricultural land in the 1980 s and 1990 s. Proceed ings of the National Academy of Sciences of the United States of America, 107, 16732-16737
+
+Gibson, L., Lee, T.M., Koh, L.P., Brook, B.W., Gardner, T.A., Barlow, J. et al. (2011) Primary forests are irreplaceable for sustaining tropical biodiversity. Nature, 478, 378–381.
+
+Gomes, M.A., Melo, A.S., Vieira, M.V. & Rocha, C.F.D. (2019) Habitat amount drives the functional diversity and nestedness of anuran communities in an Atlantic Forest fragmented landscape. Biotropica, 51, 874–884.
+
+González, E., Buffa, L., Defago, M.T., Molina, S.I., Salvo, A. & Valladares, G. (2018) Something is lost and something is gained: loss and replacement of species and functional groups in ant communities at fragmented forests. Landscape Ecology, 33, 2089–2102.
+
+Graham, M.H. (2003) Confronting multicollinearity in ecological multiple regression. Ecology, 84, 2809–2815.
+
+Groc, S., Delabie, J.H.C., Fernández, F., Leponce, M., Orivel, J., Silvestre, R. et al. (2014) Leaf-litter ant communities (hymenoptera: Formicidae) in a pristine Guianese rain-forest: stable functional structure versus high species turnover leaf-litter ant communities (hymenoptera: Formicidae) in a pristine Guianese rain- forest: stable fu. Myrmecological News, 19, 43–51.
+
+Hothorn, T., Bretz, F. & Westfall, P. (2008) Simultaneous inference in general parametric models. Biometrical Journal, 50, 346–363.
+
+Hubbell, S.P., He, F., Condit, R., Borda-de-Agua, L., Kellner, J. & ter Steege, H. (2008) How many tree species are there in the Amazon and how many of them will go extinct? Proceedings of the National Academy of Sciences, 105, 11498–11504.
+
+Kim, D., Sexton, J.O. & Townshend, J.R. (2015) Accelerated deforestation in the humid tropics from the 1990 s to the 2000 s. Geophysical Research Letters, 42, 3495–3501.
+
+Koch, N.M., Martins, S.M.D.A., Lucheta, F. & Müller, S.C. (2013) Functional diversity and traits assembly patterns of lichens as indicators of successional stages in a tropical rainforest. Ecological Indicators, 34, 22–30.
+
+Laliberté, E. & Legendre, P. (2010) A distance-based framework for measuring functional diversity from multiple traits. Ecology, 91, 299–305.
+
+Laliberté, E., Legendre, P. & Shipley, B. (2014) FD: measuring functional diversity from multiple traits, and other tools for functional ecology. R Package Version, 1–12.
+
+Laurance, W.F., Sayer, J. & Cassman, K.G. (2014) Agricultural expansion and its impacts on tropical nature. Trends in Ecology and Evolution, 29, 107–116.
+
+Leal, I.R., Filgueiras, B., Gomes, J., Iannuzzi, L. & Andersen, A.N. (2012) Effects of habitat fragmentation on ant richness and functional composition in Brazilian Atlantic forest. Biodiversity and Conservation, 21, 1687–1701.
+
+Lennox, G.D., Gardner, T.A., Thomson, J.R., Ferreira, J., Berenguer, E., Lees, A.C. et al. (2018) Second rate or a second chance? Assessing biomass and biodiversity recovery in regenerating Amazonian forests. Global Change Biology, 24, 5680–5694.
+
+Lovejoy, T.E. & Nobre, C. (2018) Amazon tipping point. Science. Advances, 4, 1–2.
+
+Luke, S.H., Fayle, T.M., Eggleton, P., Turner, E.C. & Davies, R.G. (2014) Functional structure of ant and termite assemblages in old growth forest, logged forest and oil palm plantation in Malaysian Borneo. Biodiversisty and Conservation, 23, 2817–2832.
+
+Martello, F., De Bello, F., De Castro Morini, M.S., Silva, R.R., De Souza-Campana, D.R., Ribeiro, M.C. et al. (2018) Homogenization and impoverishment of taxonomic and functional diversity of ants in eucalyptus plantations. Scientific Reports, 8, 1–11.
+
+Mason, N.W.H., De Bello, F., Mouillot, D., Pavoine, S. & Dray, S. (2013) A guide for using functional diversity indices to reveal changes in assembly processes along ecological gradients. Journal of Vegetation Science, 24, 794–806.
+
+Mauda, E.V., Joseph, G.S. & Seymour, C.L. (2018) Changes in landuse alter ant diversity, assemblage composition and dominant functional
+
+groups in African savannas. Biodiversity and Conservation, 27, 947–965.
+
+Mclean, M., Mouillot, D., Auber, A., Graham, N.A.J., Houk, P., Villéger, S. et al. (2019) Trait structure and redundancy determine sensitivity to disturbance in marine fish communities. Global Change Biology, 25, 3424–3437.
+
+Melliger, R.L., Braschler, B., Rusterholz, H. & Baur, B. (2018) Diverse effects of degree of urbanisation and forest size on species richness and functional diversity of plants, and ground surface-active ants and spiders. PLoS One, 13, e0199245.
+
+Montoya, D., Rogers, L. & Memmott, J. (2012) Emerging perspectives in the restoration of biodiversity-based ecosystem services. Trends in Ecology and Evolution, 27, 666–672.
+
+Mouchet, M.A., Villéger, S., Mason, N.W.H. & Mouillot, D. (2010) Functional diversity measures: an overview of their redundancy and thei ability to discriminate community assembly rules. Functional Ecology, 24, 867–876.
+
+Mouillot, D., Graham, N.A.J., Villéger, S., Mason, N.W.H. & Bellwood, D.R. (2013) A functional approach reveals community responses to distur bances. Trends in Ecology and Evolution, 28, 167–177.
+
+Mumme, S., Jochum, M., Brose, U., Haneda, N.F. & Barnes, A.D. (2015) Functional diversity and stability of litter-invertebrate communities following land-use change in Sumatra, Indonesia. Biological Conserva tion, 191, 750–758.
+
+Murillo, F.J., Weigel, B., Bouchard Marmen, M. & Kenchington, E. (2020) Marine epibenthic functional diversity on Flemish cap (north-West Atlantic)—identifying trait responses to the environment and map ping ecosystem functions. Diversity and Distributions, 26, 460–478.
+
+Myers, N., Mittermeier, R., Mittermeier, C., Fonseca, G. & Kent, J. (2000) Biodiversity hotspots for conservation priorities. Nature, 403, 853–858.
+
+Oksanen, J., Blanchet, F.G., Kindt, R., Legen-, P., Minchin, P.R., Hara, R.B. O. et al. (2018) Community Ecology Package. R Package Version. http://mirror.bjtu.edu.cn/cran/web/packages/vegan/vegan.pdf
+
+Oksanen, J., Blanchet, F.G., Kindt, R., Legendre, P., Minchin, P.R., O’Hara, R.B. et al. (2013) Vegan: community ecology package. R Package. http://cran.r-project.org/
+
+Ostertag, R., Marín-Spiotta, E., Silver, W.L. & Schulten, J. (2008) Litterfall and decomposition in relation to soil carbon pools along a secondary forest chronosequence in Puerto Rico. Ecosystems, 11, 701–714.
+
+Pacheco, R. & Vasconcelos, H.L. (2012) Habitat diversity enhances ant diversity in a naturally heterogeneous Brazilian landscape. Biodiver sity and Conservation, 21, 797–809.
+
+Peel, M.C., Finlayson, R.L. & McMahon, T.A. (2007) Updated world map of the Köppen-Geiger climate classification. Hydrology and Earth System Sciences, 11, 1633–1644.
+
+Philpott, S.M. & Armbrecht, I. (2006) Biodiversity in tropical agroforests and the ecological role of ants and ant diversity in predatory function. Ecological Entomology, 31, 369–377.
+
+R Core Team. (2016) R: a language and environment for statistical comput ing. https://www.r-project.org
+
+Raine, E.H., Slade, E.M. & Raine, E.H. (2019) Dung beetle—mammal associ ations: methods, research trends and future directions. Proceedings of the Royal Society B: Biological Sciences, 286, 1–9.
+
+Rocha-ortega, M., Arnan, X., Ribeiro-Neto, J.D., Leal, I.R., Favila, M.E. & Martínez-ramos, M. (2018) Taxonomic and functional ant diversity along a secondary successional gradient in a tropical forest. Biotro pica, 50, 290–301.
+
+Sanabria, C., Lavelle, P. & Fonte, S.J. (2014) Ants as indicators of soil-based ecosystem services in agroecosystems of the Colombian llanos. Applied Soil Ecology, 84, 24–30.
+
+Santoandré, S., Filloy, J., Zurita, G.A. & Bellocq, M.I. (2019) Taxonomic and functional B-diversity of ants along tree plantation chronosequences differ between contrasting biomes. Basic and Applied Ecology, 41, 1–12.
+
+Silvestre, R. & Silva, R.R. (2001) Guildas de formigas da Estaçao Ecol˜ ogica Jataí, Luiz Antônio—SP: sugestões para aplicaçao do modelo de guil-˜ das como bio-indicadores ambientais. Biotemas, 14, 37–69.
+
+Smith, M.R. & Myers, S.S. (2018) Impact of anthropogenic CO<sub>2</sub> emissions on global human nutrition. Nature Climate Change, 8, 834–839.
+
+Sosiak, C.E. & Barden, P. (2021) Multidimensional trait morphology predicts ecology across ant lineages. Functional Ecology, 35, 139–152.
+
+Tiede, Y., Schlautmann, J., Donoso, D.A., Wallis, C.I.B., Bendix, J., Brandl, R. et al. (2017) Ants as indicators of environmental change and ecosystem processes. Ecological Indicators, 83, 527–537.
+
+Tista, M. & Fiedler, K. (2011) How to evaluate and reduce sampling effort for ants. Journal of Insect Conservation, 15, 547–559.
+
+Vandewalle, M., de Bello, F., Berg, M.P., Bolger, T., Dolédec, S., Dubs, F. et al. (2010) Functional traits as indicators of biodiversity response to land use changes across ecosystems and organisms. Biodiversity and Conservation, 19, 2921–2947.
+
+Vasconcelos, H.L., Vilhena, J.M.S. & Caliri, G.J.A. (2000) Responses of ants to selective logging of a central Amazonian forest. Journal of Applied Ecology, 37, 508–514.
+
+Villéger, S., Mason, N.W.H. & Mouillot, D. (2008) New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology, 89, 2290–2301.
+
+Warring, B., Cardoso, F.C.G., Marques, M.C.M. & Varassin, I.G. (2016) Functional diversity of reproductive traits increases across succession in the Atlantic forest. Rodriguesia, 67, 321–333.
+
+## SUPPORTING INFORMATION
+
+Additional supporting information can be found online in the Supporting Information section at the end of this article.
+
+Data S1: Figure S1. Study region of municipality of Uruará, state Pará, northern Brazil. Location of the sampling sites per ecosystem: PF, Primary Forest; SF-15, Secondary forest with 15 years of regeneration; SF-5, Secondary forest with 5 years of regeneration; AG, Agriculture; PA, Pasture
+
+Table S1. Generic characteristics of the ecosystems sampled in the municipality of Uruará, state Pará, northern Brazil. Adapted from Darinka et al. (2021), Cajaiba, Périco, da Silva, Vieira, et al. (2018)
+
+Table S2. Specification of the methodology used for monitoring the environmental variables associate with the ecosystems studied
+
+Table S3. Description of functional traits used in this study
+
+Table S4. Total number of species (and morphospecies) of ants in the different ecosystems studied in the Brazilian Amazon, and its classification in “Trophic type” and “Ecosystem specificity”. PF, primary forest; SF-15, Secondary forest (15 years of regeneration); SF-5, Secondary forest (5 years of regeneration); AG, Agriculture (Cocoa); PA, Pasture
+
+Table S5. Summary of Generalized Linear Mixed-effects Models (GLMMs) relating the response variables Abundance and Richness of the functional traits Ecosystem specificity and Trophic type and Functional diversity (Functional richness - FRic, Functional evenness - FEve and functional redundancy - FRed) to diverse predictor variables. Codes explanation: standard error (SE) for fixed effects and standard deviation (SD) for Random effects, Z values (Z-value), and associated probability values (p-values). $R ^ { 2 } { \mathsf { m } } ,$ , marginal $R ^ { 2 } ; R ^ { 2 } { \mathsf C } ,$ conditional $R ^ { 2 } ,$ Ecosystem: PF, Primary forest; SF-15, Secondary forest (15 years of regeneration); SF-5, Secondary forest (5 years of regeneration); AG, Agriculture (Cocoa); PA, Pasture
+
+Table S6. PERMANOVA results (based on Bray-Curtis similarity) comparing the composition of Functional groups of ants between ecosystems (ES\_FT, Permanova F = 15.09, p < 0.001; TT\_FT, Permanova F = 23.16, p < 0.001). The values highlighted in gray correspond to the significance test (p-value). PF, Primary Forest; SF-15, Secondary forest with 15 years of regeneration; SF-5, Secondary forest with 5 years of regeneration; AG, Agriculture; PA, Pasture
+
+How to cite this article: Cajaiba, R.L., da Silva, W.B., Gonzalez, D.C., Crespi, A.M.L., Santos, M. & Périco, E. (2023) Linking disturbances in neotropical landscapes with ecosystem functional traits: A preliminary assessment using epigaeic and leaf-litter ant communities. Ecological Entomology, 48(2), 186–198. Available from: https://doi.org/10.1111/een.13213

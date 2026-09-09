@@ -1,0 +1,37 @@
+{
+  "Group": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This column contains arbitrary grouping labels (A, B) and does not fit any defined template field.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents a discrete functional classification (e.g., Group A, Group B) derived from measured traits.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Group",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The functional groups are defined by a combination of traits. While behavioral traits (like horizontal displacement and nesting) are observed in the field (HumanObservation), the core physical traits used to define the groups (Size, Prothorax height, Anterior tibia area, Wing load, Mesotibia ratio) were measured on collected individuals (30 individuals of each species were measured), which constitutes a PreservedSpecimen record.",
+    "measurementMethod": "Measurement of morphological traits (size defined as the sum of pronotal and elytra lengths, prothorax height, anterior tibia area, wing load as the ratio of wing area to size/length, and mesotibia ratio as the ratio of apical middle tibia width to middle tibia length); observation of behavioral traits (generalism using Levin's niche breadth, horizontal displacement, nest building, and ball or pear-shaped nest formation); and phenological traits obtained from literature.",
+    "measurementMethod_reasoning": "The study utilized specific protocols for measuring physical traits, including defining size as the sum of pronotal and elytra lengths, measuring prothorax height, anterior tibia area, wing load (ratio of wing area to size/length), and mesotibia ratio (ratio of apical middle tibia width to middle tibia length). Behavioral traits were assessed through observation (e.g., horizontal displacement, nest building), and phenological traits were sourced from existing literature."
+  },
+  "Group characteristics": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header describes biological traits and behaviors of the organisms, making it a measurement type.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes discrete combinations of behavioral and phenological traits defining functional groups.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Group characteristics",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting 25,278 individuals of dung beetles using baited pitfall traps. Morphological traits (size, prothorax height, tibia area, wing load, mesotibia ratio) were measured on these collected individuals, and vouchers were deposited in a museum collection, indicating the data is based on preserved specimens.",
+    "measurementMethod": "Collection using baited pitfall traps (50g of human feces or rotting bovine spleen) for 48 hours, followed by morphological measurements (size as sum of pronotal and elytra lengths, prothorax height, anterior tibia area, wing load, and mesotibia ratio) on individual specimens. Behavioral and phenological traits were derived from literature and phylogenetic analysis.",
+    "measurementMethod_reasoning": "The methodology describes the use of baited pitfall traps for collection and specifies detailed protocols for measuring morphological traits (e.g., 'size was defined by adding pronotal and elytra lengths', 'Wing load, measured as the ratio between wing area and size/length'). Behavioral and phenological traits were obtained through literature review and phylogenetic approaches."
+  },
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the taxonomic names of the insects studied in the record.",
+    "category": null,
+    "reasoning_relevance": "Species names function as identifiers, which are explicitly excluded from valid categories."
+  }
+}

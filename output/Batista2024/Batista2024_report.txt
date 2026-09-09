@@ -1,32 +1,48 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Batista2024\Batista2024.xlsx  (174 rows)
-PREDICTION   : ..\output\Batista2024\Batista2024.csv  (174 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Batista2024\Batista2024.csv  (155 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+TAXON NAMES LEFT UNMAPPED (4)
+  'Apotomus sp.2': no ground-truth string denotes this
+  'Chlaenius dusaultii diagramus': no ground-truth string denotes this
+  'Macropterous spp.': no ground-truth string denotes this
+  'Tachys sp.1': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 1 pair(s))
   'Wings fully developed' -> 'Wings fully developed '
 
-ROW-LEVEL (key match)
-  matched (TP)        : 174
-  missed (FN)         : 0
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+measurementType LEFT UNMAPPED (5)
+  'Forested habitats Dry period': no ground-truth string denotes this
+  'Forested habitats Interm Wet': no ground-truth string denotes this
+  'Grassland habitats Dry period': no ground-truth string denotes this
+  'Grassland habitats Interm Wet': no ground-truth string denotes this
+  'Response Response': no ground-truth string denotes this
 
-  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+ROW-LEVEL (key match)
+  matched (TP)          : 76
+  missed (FN)           : 98
+  spurious, in scope    : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 77   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.490 / 0.437 / 0.462
+  SCOPED  P/R/F1        : 0.974 / 0.437 / 0.603
+  RECALL (GT coverage)  : 0.437
+
+  out-of-scope rows by uncovered field:
+    measurementType                             77
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord               174    174  1.000
-  measurementMethod             0     87  0.000  <-- low
-  measurementUnit               0    174  0.000  <-- low
-  measurementStatistic         87    174  0.500
+  basisOfRecord                76     76  1.000
+  measurementMethod             0     38  0.000  <-- low
+  measurementUnit               0     76  0.000  <-- low
+  measurementStatistic          0     76  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                         174    174  1.000
-  lifeStage                   174    174  1.000
+  sex                          76     76  1.000
+  lifeStage                    76     76  1.000
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -36,10 +52,43 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    174  0.000  <-- low
+  associatedReferences          0     76  0.000  <-- low
   externalLink                  0      0    n/a
+
+WHY THE 98 MISSED ROWS MISSED
+  species not in prediction                            88
+  species present, trait missing                       10
+
+  SPECIES IN GT BUT NOT IN PREDICTION (44 distinct), closest predicted name:
+     gt 'Melaenus elegans'                  ~0.56~  pred 'Brachinus laetus'   x2
+     gt 'Elaphropus haemorrhoidalis'         (nothing similar in the prediction)   x2
+     gt 'Chlaenius dusaultii diagraphus'    ~0.95~  pred 'Chlaenius dusaultii diagramus'   x2
+     gt 'Triaenogenius carinulatus carinulatus'  ~0.57~  pred 'Apristus latipennis latipennis'   x2
+     gt 'Prothymidia angusticollis'         ~0.58~  pred 'Apotomus annulaticornis'   x2
+     gt 'Megacephala asperata'              ~0.56~  pred 'Anthia alternata'   x2
+  -> 6 species mismatches explain 12 of 98 misses (12%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Medium length'                    x5
+     'Wings fully developed '           x5
+  -> 2 missing traits explain 10 of 98 misses (10%) — scattered; no single cause
+
+  full miss detail saved -> Batista2024_misses.csv, Batista2024_misses_summary.json (98 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  wings fully developed                            87    87   
-  medium length                                    87    87   
+  wings fully developed                            87    39   Δ-48 (split?)
+  forested habitats dry period                      0    19   PRED-ONLY
+  grassland habitats dry period                     0    19   PRED-ONLY
+  forested habitats interm wet                      0    19   PRED-ONLY
+  grassland habitats interm wet                     0    19   PRED-ONLY
+  medium length                                    87    39   Δ-48 (split?)
+  response response                                 0     1   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.974  0.437  0.603     76     2    98   id+type+value
+             (77 more spurious row(s) out-of-scope; strict P would be 0.490)
+  tags        0.000  0.000  0.000      0    78   174   basis+id+type+value+stat+sex+stage
+             (77 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.603 vs previous)

@@ -1,22 +1,32 @@
 {
   "identifier": {
-    "field": "definitionTerm",
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column defines the subject or group being measured in the analysis."
+    "reasoning": "Contains names of insect families (Hesperiidae, Lycaenidae, etc.) which are higher taxonomic levels.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Contains discrete classifications like butterfly families (e.g., Lycaenidae) and habitat types."
   },
   "Estimate mean ± SE": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Contains the primary calculated measurement values (mean $\\pm$ SE)."
+    "reasoning": "The header explicitly defines the statistical measure used for the measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents numerical estimates of biological traits or response indices (e.g., body mass, aversion index).",
+    "multi_value": false,
+    "value_type": "numeric"
   },
   "t-statistic": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a statistical test result, not a measurement or standard statistic."
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds a specific statistical test result (t-statistic).",
+    "category": null,
+    "reasoning_relevance": "This is a statistical index used for hypothesis testing, not biological data."
   },
   "p": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is the p-value, an analytical output for significance testing."
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the p-value, which is a statistical measure of significance.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical probability value, not a biological measurement or trait."
   }
 }

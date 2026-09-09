@@ -1,0 +1,134 @@
+{
+  "Colony": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains colony identifiers, which are grouping variables, not organism names or locations.",
+    "category": null,
+    "reasoning_relevance": "This column serves as a sample identifier for the colony, not a biological trait or measurement."
+  },
+  "Individual": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains individual identifiers (e.g., W1), which are not taxonomic names or locations.",
+    "category": null,
+    "reasoning_relevance": "This column is an identifier for a specific wasp individual."
+  },
+  "Caste": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This column describes a biological classification (caste), not a measurable physical property or a taxon.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the discrete classification of the organism's social phenotype (worker or gyne).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Caste"
+  },
+  "Patriline": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains lineage identifiers, which are not taxonomic names or locations.",
+    "category": null,
+    "reasoning_relevance": "This column is an identifier for the genetic lineage of the individual."
+  },
+  "LIST2004": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names a measured property (LIST2004), and the cells contain the corresponding measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values representing a physical or anatomical measurement of the wasp.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "LIST2004"
+  },
+  "LIST2013": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names a measured property (LIST2013), and the cells contain the corresponding measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values representing a physical or anatomical measurement of the wasp.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "LIST2013"
+  },
+  "LIST2003": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names a measured property (LIST2003), and the cells contain the corresponding measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values representing a physical or anatomical measurement of the wasp.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "LIST2003"
+  },
+  "RUFA19": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names a measured property (RUFA19), and the cells contain the corresponding measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values representing a physical or anatomical measurement of the wasp.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "RUFA19"
+  },
+  "LIST2020": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names a measured property (LIST2020), and the cells contain the corresponding measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values representing a physical or anatomical measurement of the wasp.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "LIST2020"
+  },
+  "VMA6": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header names a measured property (VMA6), and the cells contain the corresponding measurement value.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values representing a physical or anatomical measurement of the wasp.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "VMA6"
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Vespula maculifrons",
+    "reasoning": "Vespula maculifrons is the measured subject, as the study examines its morphological traits and caste variation.",
+    "decided_by": "llm",
+    "roles": {
+      "Genetic and": "unclear",
+      "Caste dimorphism": "unclear",
+      "Individuals within": "unclear",
+      "Most traits": "unclear"
+    },
+    "candidates": [
+      {
+        "name": "Vespula maculifrons",
+        "mentions": 12,
+        "abbrev_mentions": 31,
+        "score": 170
+      },
+      {
+        "name": "Genetic and",
+        "mentions": 1,
+        "abbrev_mentions": 1,
+        "score": 9
+      },
+      {
+        "name": "Caste dimorphism",
+        "mentions": 2,
+        "abbrev_mentions": 0,
+        "score": 5
+      },
+      {
+        "name": "Individuals within",
+        "mentions": 2,
+        "abbrev_mentions": 0,
+        "score": 5
+      }
+    ]
+  }
+}

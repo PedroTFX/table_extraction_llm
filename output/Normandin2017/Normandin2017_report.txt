@@ -1,0 +1,303 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Normandin2017\Normandin2017.xlsx  (1389 rows)
+PREDICTION   : ..\output\Normandin2017\Normandin2017.csv  (1800 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 170 pair(s))
+  'Agapostemon virescens' -> 'A.VIRESCENS'
+  'Andrena algida Smith, 1853' -> 'A.ALGIDA'
+  'Andrena alleghaniensis Viereck, 1907' -> 'A.ALLEGHANIENSIS'
+  'Andrena asteris Robertson, 1891' -> 'A.ASTERIS'
+  'Andrena bisalicis Viereck, 1908' -> 'A.BISALICIS'
+  'Andrena brevipalpis Cockerell, 1930' -> 'A.BREVIPALPIS'
+  'Andrena carlini Cockerell, 1901' -> 'A.CARLINI'
+  'Andrena ceanothi Viereck, 1917' -> 'A.CEANOTHI'
+  'Andrena chromotricha Cockerell, 1899' -> 'A.CHROMOTRICHA'
+  'Andrena clarkella' -> 'A.CLARKELLA'
+  'Andrena commoda Smith, 1879' -> 'A.COMMODA'
+  'Andrena cressonii cressonii Robertson, 1891' -> 'A.CRESSONII'
+  'Andrena distans Provancher, 1888' -> 'A.DISTANS'
+  'Andrena dunningi Cockerell, 1898' -> 'A.DUNNINGI'
+  'Andrena erigeniae Robertson, 1891' -> 'A.ERIGENIAE*'
+  'Andrena erythrogaster' -> 'A.ERYTHROGASTER'
+  'Andrena erythronii Robertson, 1891' -> 'A.ERYTHRONII'
+  'Andrena forbesii Robertson, 1895' -> 'A.FORBESII'
+  'Andrena fragilis Smith, 1853' -> 'A.FRAGILIS'
+  'Andrena frigida Smith, 1853' -> 'A.FRIGIDA*'
+  'Andrena geranii Robertson, 1891' -> 'A.GERANII'
+  'Andrena hippotes Robertson, 1895' -> 'A.HIPPOTES'
+  'Andrena hirticincta Provancher, 1888' -> 'A.HIRTICINCTA'
+  'Andrena imitatrix Cresson, 1872' -> 'A.IMITATRIX'
+  'Andrena integra Smith, 1853' -> 'A.INTEGRA'
+  'Andrena mandibularis Robertson, 1892' -> 'A.MANDIBULARIS*'
+  'Andrena miserabilis Cresson, 1872' -> 'A.MISERABILIS'
+  'Andrena nigrae Robertson, 1905' -> 'A.NIGRAE'
+  'Andrena nivalis Smith, 1853' -> 'A.NIVALIS'
+  'Andrena nubecula Smith, 1853' -> 'A.NUBECULA'
+  'Andrena perplexa Smith, 1853' -> 'A.PERPLEXA*'
+  'Andrena persimulata Viereck, 1917' -> 'A.PERSIMULATA'
+  'Andrena platyparia Robertson, 1895' -> 'A.PLATYPARIA'
+  'Andrena regularis Malloch, 1917' -> 'A.REGULARIS'
+  'Andrena rufosignata Cockerell, 1902' -> 'A.RUFOSIGNATA'
+  'Andrena rugosa Robertson, 1891' -> 'A.RUGOSA'
+  'Andrena sigmundi Cockerell, 1902' -> 'A.SIGMUNDI'
+  'Andrena simplex Smith, 1853' -> 'A.SIMPLEX'
+  'Andrena vicina Smith, 1853' -> 'A.VICINA'
+  'Andrena wheeleri Graenicher, 1904' -> 'A.WHEELERI'
+  'Andrena wilkella' -> 'A.WILKELLA'
+  'Anthidium florentinum Fabricius, 1775' -> 'A.FLORENTINUM'
+  'Anthidium manicatum Linnaeus, 1758' -> 'A.MANICATUM'
+  'Anthidium oblongatum' -> 'A.OBLONGATUM'
+  'Anthophora terminalis Cresson, 1869' -> 'A.TERMINALIS'
+  'Apis mellifera Linnaeus, 1758' -> 'APIS.MELLIFERA'
+  'Augochlora pura pura' -> 'A.PURA'
+  'Augochlorella aurata' -> 'A.AURATA'
+  'Augochloropsis metallica' -> 'A.METALLICA'
+  'Bombus bimaculatus Cresson, 1863' -> 'B.BIMACULATUS'
+  'Bombus borealis Kirby, 1837' -> 'B.BOREALIS'
+  'Bombus citrinus' -> 'B.CITRINUS'
+  'Bombus fervidus' -> 'B.FERVIDUS'
+  'Bombus griseocollis' -> 'B.GRISEOCOLLIS'
+  'Bombus impatiens Cresson, 1863' -> 'B.IMPATIENS'
+  'Bombus perplexus Cresson, 1863' -> 'B.PERPLEXUS'
+  'Bombus rufocinctus Cresson, 1863' -> 'B.RUFOCINCTUS'
+  'Bombus ternarius Say, 1837' -> 'B.TERNARIUS'
+  'Bombus terricola Kirby, 1837' -> 'B.TERRICOLA'
+  'Bombus vagans vagans Smith, 1854' -> 'B.VAGANS'
+  'Calliopsis andreniformis Smith, 1853' -> 'C.ANDRENIFORMIS'
+  'Ceratina calcarata Robertson, 1900' -> 'C.CALCARATA'
+  'Ceratina dupla Say, 1837' -> 'C.DUPLA'
+  'Chelostoma campanularum' -> 'C.CAMPANULARUM'
+  'Chelostoma philadelphi' -> 'C.PHILADELPHI'
+  'Chelostoma rapunculi' -> 'C.RAPUNCULI'
+  'Coelioxys octodentata Say, 1824' -> 'C.OCTODENTATA'
+  'Coelioxys porterae Cockerell, 1900' -> 'C.PORTERAE'
+  'Colletes simulans Cresson, 1868' -> 'C.SIMULANS'
+  'Halictus confusus confusus Smith, 1853' -> 'H.CONFUSUS'
+  'Halictus ligatus Say, 1837' -> 'H.LIGATUS'
+  'Halictus rubicundus' -> 'H.RUBICUNDUS'
+  'Heriades carinata Cresson, 1864' -> 'H.CARINATA'
+  'Heriades leavitti Crawford, 1913' -> 'H.LEAVITTI'
+  'Holcopasites calliopsidis' -> 'H.CALLIOPSIDIS'
+  'Hoplitis anthocopoides Schenck, 1853' -> 'H.ANTHOCOPOIDES'
+  'Hoplitis pilosifrons' -> 'H.PILOSIFRONS'
+  'Hoplitis producta producta' -> 'H.PRODUCTA'
+  'Hoplitis spoliata' -> 'H.SPOLIATA'
+  'Hylaeus affinis' -> 'H.AFFINIS'
+  'Hylaeus annulatus' -> 'H.ANNULATUS'
+  'Hylaeus basalis' -> 'H.BASALIS'
+  'Hylaeus communis Nylander, 1852' -> 'H.COMMUNIS'
+  'Hylaeus hyalinatus Smith, 1842' -> 'H.HYALINATUS'
+  'Hylaeus leptocephalus' -> 'H.LEPTOCEPHALUS'
+  'Hylaeus mesillae' -> 'H.MESILLAE'
+  'Hylaeus modestus Say, 1837' -> 'H.MODESTUS'
+  'Hylaeus nelumbonis' -> 'H.NELUMBONIS'
+  'Hylaeus punctatus' -> 'H.PUNCTATUS'
+  'Lasioglossum abanci' -> 'L.ABANCI'
+  'Lasioglossum asteris' -> 'L.ASTERIS'
+  'Lasioglossum cephalotes' -> 'L.CEPHALOTES'
+  'Lasioglossum cinctipes' -> 'L.CINCTIPES'
+  'Lasioglossum comagenense' -> 'L.COMAGENENSE'
+  'Lasioglossum coriaceum' -> 'L.CORIACEUM'
+  'Lasioglossum cressonii' -> 'L.CRESSONII'
+  'Lasioglossum dreisbachi' -> 'L.DREISBACHI'
+  'Lasioglossum ephialtum Gibbs, 2010' -> 'L.EPHIALTUM'
+  'Lasioglossum foxii' -> 'L.FOXII'
+  'Lasioglossum hitchensi Gibbs, 2012' -> 'L.HITCHENSI'
+  'Lasioglossum imitatum' -> 'L.IMITATUM'
+  'Lasioglossum laevissimum' -> 'L.LAEVISSIMUM'
+  'Lasioglossum leucocomum' -> 'L.LEUCOCOMUM'
+  'Lasioglossum leucozonium' -> 'L.LEUCOZONIUM'
+  'Lasioglossum lineatulum' -> 'L.LINEATULUM'
+  'Lasioglossum macoupinense' -> 'L.MACOUPINENSE'
+  'Lasioglossum nigroviride' -> 'L.NIGROVIRIDE'
+  'Lasioglossum oblongum' -> 'L.OBLONGUM'
+  'Lasioglossum oenotherae' -> 'L.OENOTHERAE'
+  'Lasioglossum perpunctatum' -> 'L.PERPUNCTATUM'
+  'Lasioglossum pilosum' -> 'L.PILOSUM'
+  'Lasioglossum planatum' -> 'L.PLANATUM'
+  'Lasioglossum sagax' -> 'L.SAGAX'
+  'Lasioglossum subversans' -> 'L.SUBVERSANS'
+  'Lasioglossum tenax' -> 'L.TENAX'
+  'Lasioglossum trigeminum Gibbs, 2011' -> 'L.TRIGEMINUM'
+  'Lasioglossum versans' -> 'L.VERSANS'
+  'Lasioglossum versatum' -> 'L.VERSATUM'
+  'Lasioglossum viridatum' -> 'L.VIRIDATUM'
+  'Lasioglossum zephyrum' -> 'L.ZEPHYRUM'
+  'Lasioglossum zonulum' -> 'L.ZONULUM'
+  'Macropis nuda' -> 'M.NUDA'
+  'Megachile brevis Say, 1837' -> 'M.BREVIS'
+  'Megachile campanulae' -> 'M.CAMPANULAE'
+  'Megachile centuncularis' -> 'M.CENTUNCULARIS'
+  'Megachile frigida Smith, 1853' -> 'M.FRIGIDA'
+  'Megachile gemula Cresson, 1878' -> 'M.GEMULA'
+  'Megachile inermis Provancher, 1888' -> 'M.INERMIS'
+  'Megachile lapponica Thomson, 1872' -> 'M.LAPPONICA'
+  'Megachile latimanus Say, 1823' -> 'M.LATIMANUS'
+  'Megachile mendica Cresson, 1878' -> 'M.MENDICA'
+  'Megachile pugnata Say, 1837' -> 'M.PUGNATA'
+  'Megachile relativa Cresson, 1878' -> 'M.RELATIVA'
+  'Megachile rotundata' -> 'M.ROTUNDATA'
+  'Megachile texana Cresson, 1878' -> 'M.TEXANA'
+  'Melissodes desponsa Smith, 1854' -> 'M.DESPONSA'
+  'Melissodes illata Lovell & Cockerell, 1906' -> 'M.ILLATA'
+  'Melissodes subillata LaBerge, 1961' -> 'M.SUBILLATA'
+  'Melissodes trinodis Robertson, 1901' -> 'M.TRINODIS'
+  'Mellisodes druriella' -> 'M.DRURIELLA'
+  'Nomada bethunei Cockerell, 1903' -> 'N.BETHUNEI'
+  'Nomada cressonii Robertson, 1893' -> 'N.CRESSONII'
+  'Nomada denticulata Robertson, 1902' -> 'N.DENTICULATA'
+  'Nomada maculata Cresson, 1863' -> 'N.MACULATA'
+  'Nomada parva Robertson, 1900' -> 'N.PARVA'
+  'Nomada pygmaea Cresson, 1963' -> 'N.PYGMAEA'
+  'Nomada vicina Cresson, 1863' -> 'N.VICINA'
+  'Osmia albiventris Cresson, 1864' -> 'O.ALBIVENTRIS'
+  'Osmia atriventris Cresson, 1864' -> 'O.ATRIVENTRIS'
+  'Osmia bucephala Cresson, 1864' -> 'O.BUCEPHALA'
+  'Osmia caerulescens Linnaeus, 1758' -> 'O.CAERULESCENS'
+  'Osmia conjuncta Cresson, 1864' -> 'O.CONJUNCTA'
+  'Osmia lignaria Say, 1837' -> 'O.LIGNARIA'
+  'Osmia pumila Cresson, 1864' -> 'O.PUMILA'
+  'Osmia simillima Smith, 1853' -> 'O.SIMILLIMA'
+  'Osmia taurus Smith, 1873' -> 'O.TAURUS'
+  'Osmia tersula Cockerell, 1912' -> 'O.TERSULA'
+  'Peponapis pruinosa' -> 'P.PRUINOSA'
+  'Perdita octomaculata' -> 'P.OCTOMACULATA'
+  'Pseudopanurgus andrenoides' -> 'P.ANDRENOIDES'
+  'Pseudopanurgus parvus' -> 'P.PARVUS'
+  'Sphecodes carolinus Mitchell, 1956' -> 'S.CAROLINUS'
+  'Sphecodes clematidis Robertson, 1897' -> 'S.CLEMATIDIS'
+  'Sphecodes confertus Say, 1837' -> 'S.CONFERTUS'
+  'Sphecodes dichrous Smith, 1853' -> 'S.DICHROUS'
+  'Sphecodes mandibularis Cresson, 1872' -> 'S.MANDIBULARIS'
+  'Sphecodes ranunculi Robertson, 1897' -> 'S.RANUNCULI'
+  'Sphecodes solonis Graenicher, 1911' -> 'S.SOLONIS'
+  'Triepeolus obliteratus Graenicher, 1911' -> 'T.OBLITERATUS'
+  'Triepeolus pectoralis' -> 'T.PECTORALIS'
+
+TAXON NAMES LEFT UNMAPPED (30)
+  'Agapostemon texanus Cresson, 1872': no ground-truth string denotes this
+  'Andrena crataegi Robertson, 1893': no ground-truth string denotes this
+  'Andrena milwaukeensis Graenicher, 1903': no ground-truth string denotes this
+  'Andrena morrisonella Viereck, 1917': no ground-truth string denotes this
+  'Andrena nassonii Robertson, 1895': no ground-truth string denotes this
+  'Andrena robertsonii Dalla Torre, 1896': no ground-truth string denotes this
+  'Andrena spiraeana Robertson, 1895': no ground-truth string denotes this
+  'Andrena w-scripta Viereck, 1904': no ground-truth string denotes this
+  'Andrena ziziae Robertson, 1891': no ground-truth string denotes this
+  'Ceratina mikmaqi Rehan & Sheffield, 2011': no ground-truth string denotes this
+  'Colletes americanus Cresson, 1868': no ground-truth string denotes this
+  'Epeolus scutellaris Say, 1824': no ground-truth string denotes this
+  'Lasioglossum athabascense': no ground-truth string denotes this
+  'Lasioglossum birkmanni': no ground-truth string denotes this
+  'Lasioglossum coeruleum': no ground-truth string denotes this
+  'Lasioglossum heterognathum': no ground-truth string denotes this
+  'Lasioglossum inconditum': no ground-truth string denotes this
+  'Lasioglossum isawsum Gibbs, 2011': no ground-truth string denotes this
+  'Lasioglossum michiganense': no ground-truth string denotes this
+  'Lasioglossum paradmirandum': no ground-truth string denotes this
+  'Lasioglossum quebecense': no ground-truth string denotes this
+  'Lasioglossum smilacinae': no ground-truth string denotes this
+  'Lasioglossum taylorae Gibbs, 2010': no ground-truth string denotes this
+  'Lasioglossum tegulare': no ground-truth string denotes this
+  'Megachile melanophaea Smith, 1853': no ground-truth string denotes this
+  'Nomada luteoloides Robertson, 1895': no ground-truth string denotes this
+  'Pseudopanurgus helianthi Mitchell, 1960': no ground-truth string denotes this
+  'Sphecodes cressonii': no ground-truth string denotes this
+  'Triepeolus remigatus': no ground-truth string denotes this
+  'Xylocopa virginica Linnaeus, 1771': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 4 pair(s))
+  'Nesting' -> 'Nesting Behaviour'
+  'Pollen' -> 'Pollen Transportation'
+  'Tongue' -> 'Tongue Length'
+  'inter tegular distance' -> 'Intertegular Distance'
+
+measurementType LEFT UNMAPPED (4)
+  'Native or exotic': no ground-truth string denotes this
+  'Pollen specificity': no ground-truth string denotes this
+  'Season': no ground-truth string denotes this
+  'Social': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 946
+  missed (FN)           : 443
+  spurious, in scope    : 54   <- GT covers this trait: real errors
+  spurious, out of scope: 800   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.526 / 0.681 / 0.593
+  SCOPED  P/R/F1        : 0.946 / 0.681 / 0.792
+  RECALL (GT coverage)  : 0.681
+
+  out-of-scope rows by uncovered field:
+    measurementType                            800
+
+FUZZY VALUE MATCHES (103 accepted beyond exact/numeric)
+  subset         103
+  sample:
+    [subset] gt 'Leg&body' == pred 'Leg and body'
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               197    946  0.208  <-- low
+  measurementMethod             0    946  0.000  <-- low
+  measurementUnit             197    946  0.208  <-- low
+  measurementStatistic        197    946  0.208  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    946  0.000  <-- low
+  lifeStage                   946    946  1.000
+  caste                         0    946  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      3  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    946  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 443 MISSED ROWS MISSED
+  species present, trait missing                      395
+  species+trait present, value differs                 48
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'underside:abdomen'          ->  'underside'                  x35
+     'legsonly'                   ->  'legs only'                  x12
+     'socialparasite'             ->  'social parasite'            x1
+  -> 3 substitutions explain 48 of 443 misses (11%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Sociality'                        x198
+     'Seasonal Activity'                x197
+  -> 2 missing traits explain 395 of 443 misses (89%) — systematic, not scattered
+
+  full miss detail saved -> Normandin2017_misses.csv, Normandin2017_misses_summary.json (443 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  seasonal activity                               197     0   GT-ONLY
+  nesting behaviour                               200   200   
+  intertegular distance                           197   200   Δ+3 (split?)
+  native or exotic                                  0   200   PRED-ONLY
+  lecty                                           199   200   Δ+1 (split?)
+  tongue length                                   199   200   Δ+1 (split?)
+  pollen specificity                                0   200   PRED-ONLY
+  pollen transportation                           199   200   Δ+1 (split?)
+  season                                            0   200   PRED-ONLY
+  social                                            0   200   PRED-ONLY
+  sociality                                       198     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'sociality'                        vs pred 'social'                           sim=0.80
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.946  0.681  0.792    946    54   443   id+type+value
+             (800 more spurious row(s) out-of-scope; strict P would be 0.526)
+  tags        0.000  0.000  0.000      0  1000  1389   basis+id+type+value+stat+sex+stage
+             (800 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.792 vs previous)

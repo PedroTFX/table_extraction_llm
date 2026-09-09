@@ -1,65 +1,70 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Brasil2024\Brasil2024.xlsx  (25 rows)
-PREDICTION   : ..\output\Brasil2024\Brasil2024.csv  (44 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Brasil2024\Brasil2024.csv  (37 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 0
-  missed (FN)         : 25
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 44   <- GT never covers this trait: nothing to score against
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Eucera pruinosa' -> 'Eucera (Peponapis) pruinosa'
 
-  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+TAXON NAMES LEFT UNMAPPED (1)
+  'species': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body size x urbanization' -> 'Body size'
+  'Functional traits Diet' -> 'Diet'
+
+measurementType LEFT UNMAPPED (1)
+  'Date of changing season': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 25
+  missed (FN)           : 0
+  spurious, in scope    : 7   <- GT covers this trait: real errors
+  spurious, out of scope: 5   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.676 / 1.000 / 0.806
+  SCOPED  P/R/F1        : 0.781 / 1.000 / 0.877
+  RECALL (GT coverage)  : 1.000
 
   out-of-scope rows by uncovered field:
-    measurementType                             44
+    measurementType                              5
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0      0    n/a
-  measurementMethod             0      0    n/a
+  basisOfRecord                 0     25  0.000  <-- low
+  measurementMethod             0     20  0.000  <-- low
   measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  measurementStatistic         25     25  1.000
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
+  sex                          25     25  1.000
+  lifeStage                    10     25  0.400  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0      0    n/a
+  samplingProtocol              0     25  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0     25  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
+  associatedReferences          0     25  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 25 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing             25
-  species+trait present, value differs        0
-
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Diet'                             x5
-     'Nesting'                          x5
-     'Sociality'                        x5
-     'Voltinism'                        x5
-     'Body size'                        x5
-  -> 5 missing traits explain 25 of 25 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Brasil2024_misses.csv, Brasil2024_misses_summary.json (25 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  body size or body size x urbanization             5    39   Δ+34 (split?)
-  diet                                              5     0   GT-ONLY
-  functional traits                                 0     5   PRED-ONLY
-  nesting                                           5     0   GT-ONLY
-  sociality                                         5     0   GT-ONLY
-  voltinism                                         5     0   GT-ONLY
-  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)
+  body size                                         5    12   Δ+7 (split?)
+  date of changing season                           0     5   PRED-ONLY
+  diet                                              5     5   
+  nesting                                           5     5   
+  sociality                                         5     5   
+  voltinism                                         5     5   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.781  1.000  0.877     25     7     0   id+type+value
+             (5 more spurious row(s) out-of-scope; strict P would be 0.676)
+  tags        0.000  0.000  0.000      0    32    25   basis+id+type+value+stat+sex+stage
+             (5 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.877 vs previous)

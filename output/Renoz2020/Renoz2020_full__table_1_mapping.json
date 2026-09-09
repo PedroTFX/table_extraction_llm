@@ -1,0 +1,102 @@
+{
+  "Colony ID": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is an arbitrary record identifier, not a measurement, location, or taxon.",
+    "category": null,
+    "reasoning_relevance": "This is a unique identifier for the sample colony, not a biological trait."
+  },
+  "Sampling date": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column records a date, which is not a measurement, location, or organism identity.",
+    "category": null,
+    "reasoning_relevance": "This is a temporal metadata record, not a biological trait or measurement."
+  },
+  "Collection site": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "These values represent the specific geographic locations where the sampling occurred.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the discrete geographical location (habitat) where the aphids were sampled.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Aphid species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains the taxonomic name of the insect (Aphid) being studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the organism's biology by its species name."
+  },
+  "Host plant species": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the host/feeding preference of the organism, a biological trait, not a location or insect name.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the organism's biology by the species of its host plant.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Host plant species",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement concerns the presence of facultative bacterial symbionts (an ecological/biological trait) in aphids collected from citrus orchards in northern Tunisia. Although the aphids were collected in the field, the measurement is an observation of the organism's state (symbiont presence) in its natural environment, which falls under HumanObservation for ecological traits.",
+    "measurementMethod": "DNA extraction followed by PCR targeting the 16S rRNA gene using specific primers (Table 1), with subsequent sequencing and BLAST validation.",
+    "measurementMethod_reasoning": "The methodology section details that DNA was extracted from the collected aphids, and the presence of the targeted symbionts (Arsenophonus, S. symbiotica, R. insecticola, and H. defensa) was screened using PCR assays amplifying a partial region of the 16S rRNA gene. The results were validated through sequencing and BLAST analysis."
+  },
+  "Arsenophonus": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This indicates the presence or absence of a non-insect factor (symbiont) associated with the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the presence (+) or absence (-) of the facultative symbiont.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Arsenophonus",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data on Arsenophonus prevalence was obtained by analyzing DNA extracted from aphid specimens that were collected and preserved in 95% ethanol.",
+    "measurementMethod": "PCR targeting the 16S rRNA gene",
+    "measurementMethod_reasoning": "The presence of Arsenophonus was determined by screening the collected aphid specimens using PCR assays to amplify a partial region of the 16S rRNA gene."
+  },
+  "S. symbiotica": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This indicates the presence or absence of a non-insect factor (symbiont) associated with the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the presence (+) or absence (-) of the facultative symbiont.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "S. symbiotica",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement (presence of the symbiont) was obtained by analyzing DNA extracted from aphid specimens collected and preserved in 95% ethanol.",
+    "measurementMethod": "PCR targeting the 16S rRNA gene",
+    "measurementMethod_reasoning": "The study screened for the facultative symbiont S. symbiotica by extracting DNA from the collected aphids and amplifying a partial region of the 16S rRNA gene using specific primers (PCR assays)."
+  },
+  "R. insecticola": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This indicates the presence or absence of a non-insect factor (symbiont) associated with the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the presence (+) or absence (-) of the facultative symbiont.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "R. insecticola",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurements (prevalence of R. insecticola) were obtained from aphids collected in the field and preserved in 95% ethanol, which are then analyzed using molecular techniques (PCR) on the specimens.",
+    "measurementMethod": "PCR amplification of a partial region of the 16S rRNA gene using specific primers (Table 1).",
+    "measurementMethod_reasoning": "The text explicitly states that the researchers screened each specimen for the facultative symbiont species R. insecticola by amplifying a partial region of the 16S rRNA gene using specific primers and performing PCR assays."
+  },
+  "H. defensa": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This indicates the presence or absence of a non-insect factor (symbiont) associated with the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the presence (+) or absence (-) of the facultative symbiont.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "H. defensa",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement involves analyzing the presence of a bacterial symbiont (H. defensa) in aphid specimens that were collected, preserved in 95% ethanol, and subsequently used for DNA extraction and molecular screening.",
+    "measurementMethod": "DNA extraction using DNeasy Blood & Tissue Kit (QIAGEN), followed by PCR amplification of a partial region of the 16S rRNA gene using specific primers (Table 1), and subsequent sequencing and validation via BLAST on GenBank.",
+    "measurementMethod_reasoning": "The methodology describes the molecular protocol used to detect the symbiont: DNA extraction, PCR targeting the 16S rRNA gene, and sequencing/BLAST validation."
+  }
+}

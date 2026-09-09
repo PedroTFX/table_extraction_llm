@@ -1,0 +1,176 @@
+{
+  "Year_set": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains temporal metadata (year) and does not fit any defined field.",
+    "category": null,
+    "reasoning_relevance": "Represents a temporal identifier (date) rather than a biological trait or measurement."
+  },
+  "Month_set": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains temporal metadata (month) and does not fit any defined field.",
+    "category": null,
+    "reasoning_relevance": "Represents a temporal identifier (date) rather than a biological trait or measurement."
+  },
+  "Day_set": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains temporal metadata (day) and does not fit any defined field.",
+    "category": null,
+    "reasoning_relevance": "Represents a temporal identifier (date) rather than a biological trait or measurement."
+  },
+  "Plot": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column identifies specific sampling sites or plots (e.g., BKL, 13K, House).",
+    "category": null,
+    "reasoning_relevance": "Likely a location identifier or index, not a biological trait or measurement."
+  },
+  "beetles' pop.": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column provides the geographic location where the sampling occurred (e.g., Mt. Hehuan, Wulai).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the specific population or location of the beetles (e.g., Wulailai, Mt. Hehuan).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "expplace": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column provides the geographic location where the sampling occurred (e.g., Mt. Hehuan, Wulai).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the geographical location or habitat type (e.g., Wulai, Mt. Hehuan).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "burying or not": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines a biological trait (burying behavior) being measured for the organism.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records a binary observation of the beetle's behavior (burying or not).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "burying or not"
+  },
+  "breeding or not": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines a biological trait (breeding status) being measured for the organism.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records a binary observation of the beetle's behavior (breeding or not).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "breeding or not"
+  },
+  "Year_set (1)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains temporal metadata (year) and does not fit any defined field.",
+    "category": null,
+    "reasoning_relevance": "Represents a temporal identifier (date) rather than a biological trait or measurement."
+  },
+  "Month_set (1)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains temporal metadata (month) and does not fit any defined field.",
+    "category": null,
+    "reasoning_relevance": "Represents a temporal identifier (date) rather than a biological trait or measurement."
+  },
+  "Day_set (1)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains temporal metadata (day) and does not fit any defined field.",
+    "category": null,
+    "reasoning_relevance": "Represents a temporal identifier (date) rather than a biological trait or measurement."
+  },
+  "Plot (1)": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column identifies specific sampling sites or plots (e.g., 2.0, 3.0, 4.0).",
+    "category": null,
+    "reasoning_relevance": "Likely a location identifier or index, not a biological trait or measurement."
+  },
+  "expplace (1)": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column provides the geographic location where the sampling occurred (e.g., Wulai).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the geographical location or habitat type (e.g., Wulai, Mt. Hehuan).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "beetles' pop. (1)": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column provides the geographic location where the sampling occurred (e.g., Wulailai).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the specific population or location of the beetles (e.g., Wulailai, Mt. Hehuan).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "burying or not (1)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines a biological trait (burying behavior) being measured for the organism.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records a binary observation of the beetle's behavior (burying or not).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "burying or not"
+  },
+  "breeding or not (1)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines a biological trait (breeding status) being measured for the organism.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records a binary observation of the beetle's behavior (breeding or not).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "breeding or not"
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Nicrophorus nepalensis",
+    "reasoning": "The paper measures the thermal tolerance and reproductive photoperiodism of Nicrophorus nepalensis across various populations.",
+    "decided_by": "llm",
+    "roles": {
+      "Nicrophorus nepalensis": "measured subject",
+      "Hehuan and": "habitat",
+      "Wulai and": "habitat",
+      "Wulai population": "habitat",
+      "Common garden": "condition"
+    },
+    "candidates": [
+      {
+        "name": "Nicrophorus nepalensis",
+        "mentions": 3,
+        "abbrev_mentions": 12,
+        "score": 66
+      },
+      {
+        "name": "Hehuan and",
+        "mentions": 7,
+        "abbrev_mentions": 0,
+        "score": 7
+      },
+      {
+        "name": "Wulai and",
+        "mentions": 6,
+        "abbrev_mentions": 0,
+        "score": 6
+      },
+      {
+        "name": "Wulai population",
+        "mentions": 6,
+        "abbrev_mentions": 0,
+        "score": 6
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "Hoverfly species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the hoverfly species.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists the specific species names of the hoverflies observed."
+  },
+  "Caught individuals": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "Represents the number of individuals caught, which is a sample size, not a biological trait.",
+    "category": null,
+    "reasoning_relevance": "This column records the sample size (count of individuals caught)."
+  },
+  "Body size (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the physical size of the organism in millimeters.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "It is a physical measurement of the organism's body size in millimeters.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body size",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The text explicitly states that functional traits, including body size, were 'derived from literature (Table 1)' rather than being measured directly on the specimens collected in the current study. Therefore, the measurement is an external record.",
+    "measurementMethod": "Body size measured from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen for wild bees, and from head to the end of the abdomen for hoverflies.",
+    "measurementMethod_reasoning": "The text provides specific anatomical instructions for measuring body size for both wild bees and hoverflies.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "Although the text does not explicitly state the unit, 'mm' is the standard unit for measuring the body size of insects.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "The body size is used as a characteristic (a trait) of a specific species or group, representing a single recorded value for that trait, rather than a statistical summary (like mean or SD) of multiple measurements."
+  },
+  "Active flight time (number of months)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the duration of active flight in months.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "It records the duration of a specific biological activity (active flight time).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Active flight time",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The trait 'Active flight time' is a functional/ecological trait derived from literature, which typically involves observations of live organisms in their natural or controlled environment.",
+    "measurementMethod": "Functional trait derived from literature",
+    "measurementMethod_reasoning": "The text explicitly states that functional traits, including active flight time, were derived for each pollinator species from existing literature (Table 1).",
+    "measurementUnit": "months",
+    "measurementUnit_reasoning": "The unit is specified in the column header: 'Active flight time (number of months)'.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "Active flight time is a characteristic of an individual species (or taxon) used as a functional trait in the study, representing a single recorded value for that species."
+  },
+  "Migratory status": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Indicates the migratory status of the individual (0 or 1).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It is a discrete classification of the organism's migratory status.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Migratory status",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Migratory status is a behavioral/ecological trait. The text states that this trait was derived from literature (Speight et al. 2013), classifying it as a characteristic based on existing knowledge rather than a direct measurement from a preserved specimen or a live observation during the study.",
+    "measurementMethod": "Derived from literature (Speight et al. 2013)",
+    "measurementMethod_reasoning": "The text explicitly states that the migratory status for hoverflies was derived from the literature, citing Speight et al. (2013).",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "Larval foodtype": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the type of food consumed by the larvae.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "It classifies the type of food consumed during the larval stage.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Larval foodtype",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  }
+}

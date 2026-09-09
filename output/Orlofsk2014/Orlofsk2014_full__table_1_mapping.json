@@ -1,0 +1,54 @@
+{
+  "Taxon": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains names of insect taxa (genera/families).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Lists taxonomic names (genera/families) representing discrete biological classifications."
+  },
+  "Mean": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the average value of the measured trait.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the average body size (a continuous measurement) of the taxon.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "SD": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Standard Deviation of the measurement.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the standard deviation of the body size measurement.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "CV": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Coefficient of Variation (a statistical measure).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the coefficient of variation, a statistical measure of size variability.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Min": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the minimum observed value (a statistical measure).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the minimum measured body size for the taxon.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Max": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the maximum observed value (a statistical measure).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the maximum measured body size for the taxon.",
+    "multi_value": false,
+    "value_type": "numeric"
+  }
+}

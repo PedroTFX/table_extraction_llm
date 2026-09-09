@@ -1,42 +1,42 @@
 {
   "model": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This header refers to a statistical or ecological model used in the analysis."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header describes the specific biological property or trait being measured (e.g., activity density)."
   },
   "crop / habitat": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column specifies the environment or land-use where sampling occurred."
+    "reasoning": "The header describes the environmental context or habitat where the measurement was taken."
   },
   "median estimate": {
-    "field": "measurementStatistic",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The median is a statistical measure used to summarize the primary measurement value."
+    "reasoning": "This column holds the primary numerical or categorical result of the measurement."
   },
   "95% CI": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This represents the 95% Confidence Interval, a statistical range for the estimate."
+    "reasoning": "This header specifies a statistical measure (Confidence Interval) associated with the estimate."
   },
   "median change per 10 m [%]": {
-    "field": "measurementType",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This defines the specific property or rate of change being measured for the organism."
+    "reasoning": "This column holds a specific calculated measurement value (rate of change)."
   },
   "95% CI change per 10 m [%]": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is the statistical confidence interval associated with the measurement type."
+    "reasoning": "This header specifies a statistical measure (Confidence Interval) for the rate of change."
   },
   "probability of positive slope [%]": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This represents a calculated probability or likelihood derived from the model results."
+    "reasoning": "This column holds a statistical measure (probability) derived from the model."
   },
   "probability of negative slope [%]": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This represents a calculated probability or likelihood derived from the model results."
+    "reasoning": "This column holds a statistical measure (probability) derived from the model."
   }
 }

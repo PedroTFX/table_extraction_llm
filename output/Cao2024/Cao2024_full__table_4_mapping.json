@@ -1,0 +1,65 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names (genera/species) of the insects studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are taxonomic classifications (genus/species types) representing discrete biological identities."
+  },
+  "Morphological type": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a specific physical or morphological classification of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications of physical/anatomical characteristics (morphological types).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Morphological type",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The morphological types were determined by extracting and identifying chironomid head capsules from wet sediment samples, which constitutes a preserved specimen.",
+    "measurementMethod": "Chironomid head capsules were extracted from wet sediment samples and identified to genus/species type level under a microscope of 400 magnification using the taxonomy of Brooks et al (2007), with reference to Epler (2001) and Tang (2006). Functional traits (including morphological types) were then assigned based on these identifications and supplementary trait databases (e.g., Mandaville 2002, Wang and Wang 2011, Serra et al. 2016).",
+    "measurementMethod_reasoning": null
+  },
+  "Functional feeding guild": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the feeding behavior or ecological role of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications of the organism's biological function (feeding strategy).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Functional feeding guild",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The functional feeding guild was determined based on chironomid head capsules extracted from wet sediment samples, which are preserved specimens collected during the study.",
+    "measurementMethod": "Chironomid head capsules were extracted from wet sediment samples and identified to genus/species type level using a microscope (400x magnification). Functional traits, including feeding guilds, were then assigned based on established taxonomic and trait databases (Mandaville, 2002; Wang and Wang, 2011; Saulino et al., 2017; Heino, 2008; Antczak-Orlewska et al., 2021; Serra et al., 2016).",
+    "measurementMethod_reasoning": null
+  },
+  "Body size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical characteristic (size) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications of a physical/anatomical measurement (size categories).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size measurements were taken from chironomid larvae extracted from wet sediment samples and identified under a microscope, indicating they were measured on collected and preserved specimens.",
+    "measurementMethod": "Physical measurement of chironomid larvae/head capsules extracted from sediment samples, categorized into four functional trait categories (including body size) based on morphological analysis.",
+    "measurementMethod_reasoning": "The body size data (e.g., '41 % of individuals exceeded 10 mm, but no individuals were smaller than 2.5 mm') was derived from the physical characteristics of chironomid larvae extracted from sediment samples, following the standard taxonomic approach recommended by Brooks et al (2007)."
+  },
+  "Locomotion": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a behavioral trait (how the organism moves).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications of the organism's biological movement mode.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Locomotion",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study analyzes chironomid functional traits, which were derived from head capsules extracted from wet sediment samples and identified to genus/species type level. This indicates the data is based on physical, collected specimens.",
+    "measurementMethod": "Functional trait analysis based on established databases (Mandaville, Serra et al., etc.) applied to identified chironomid specimens.",
+    "measurementMethod_reasoning": "The locomotion type is one of four functional traits analyzed. The text states that 'The taxon trait information... was obtained from Mandaville (2002), Wang and Wang (2011), Saulino et al. (2017), Heino (2008) and Antczak-Orlewska et al. (2021) and is complemented by European Chironomidae taxa published in Serra et al. (2016).'"
+  }
+}

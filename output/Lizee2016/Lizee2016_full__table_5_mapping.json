@@ -1,0 +1,65 @@
+{
+  "identifier": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column identifies the subject of the study, though it is a descriptive phrase, not a specific taxon.",
+    "category": null,
+    "reasoning_relevance": "These are descriptive labels or titles of data sets, functioning as identifiers rather than biological traits."
+  },
+  "Larval diet": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological property of the organism: what it eats (polyphagous/oligophagous).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These values classify the feeding habits (resource breadth) of the larvae.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Larval diet",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data regarding larval diet (represented by larval resource breadth and host-plant specificity) was derived from observing and characterizing butterfly species in their natural habitat (urban parks) during field surveys.",
+    "measurementMethod": "Functional classification based on larval resource breadth and host-plant specificity (Kitahara and Fujii, 1994, 1997)",
+    "measurementMethod_reasoning": "The paper explicitly states that species were characterized 'following the functional classification of Kitahara and Fujii (1994, 1997)' and that this classification was based on 'resource utilisation patterns by species' and 'larval resource breadth (range of host-plant species used by larvae)' to define functional groups (TS, TG, RS, SeG)."
+  },
+  "Voltinism": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological property of the organism: the number of generations per year.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These values classify the number of generations per year, a discrete biological trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Voltinism",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data was collected through butterfly surveys conducted in urban public parks (in situ) during specific sampling periods (2008 and 2010), involving the recording of individuals crossing transects. This constitutes a direct observation of live organisms.",
+    "measurementMethod": "Classification based on the functional traits proposed by Kitahara and Fujii (1994, 1997), specifically determining the number of generations per year for each recorded species.",
+    "measurementMethod_reasoning": "The text explicitly states that species were classified based on two representative traits: larval resource breadth and voltinism (number of generations per year), following the functional classification established by Kitahara and Fujii (1994, 1997)."
+  },
+  "Functional group": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes an ecological classification or property of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications (TS, TG, RS, SeG) based on biological traits.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Functional group",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study involves surveying butterfly communities (ecological/natural-history traits) in their natural habitat (urban public parks) using field transects, which constitutes a human observation of live organisms in situ.",
+    "measurementMethod": "Linear surveys (transects) of 25x10 m, recording all individuals crossing the area during 5 min, followed by functional classification based on Kitahara and Fujii (1994, 1997).",
+    "measurementMethod_reasoning": "The methodology describes the specific sampling technique used: linear surveys (transects) of a defined size (25x10 m) with a fixed observation time (5 min) to record individuals. The subsequent characterization of these recorded species is based on the functional classification proposed by Kitahara and Fujii (1994, 1997)."
+  },
+  "% of individual in urban parks": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the relative abundance or presence of the organism in a specific habitat.",
+    "category": null,
+    "reasoning_relevance": "This column records percentages of occurrence, which are excluded from valid categories."
+  },
+  "% of individual in calcareous massifs": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the relative abundance or presence of the organism in a specific habitat.",
+    "category": null,
+    "reasoning_relevance": "This column records percentages of occurrence, which are excluded from valid categories."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "paper": "Wijas2021",
+  "has_full_md": true,
+  "supplementary": [],
+  "ground_truth": [
+    "Wijas2021.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "Wijas2021_full.md",
+      "n_tables": 2,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "Wijas2021_full.md",
+      "table_index": 0,
+      "n_rows": 5,
+      "n_cols": 5,
+      "header": [
+        "identifier",
+        "Grass feeding(%)",
+        "Wood feeding(%)",
+        "Litter feeding(%)",
+        "Dung feeding(%)"
+      ],
+      "identifier": {
+        "column": "identifier",
+        "taxon_fraction": 0.6,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "first column also looks like taxa — orientation unclear",
+      "would_yield_rows": true
+    },
+    {
+      "source": "Wijas2021_full.md",
+      "table_index": 1,
+      "n_rows": 8,
+      "n_cols": 9,
+      "header": [
+        "Parameters",
+        "Estimated species richness",
+        "Observed species richness",
+        "Functional evenness",
+        "Functional richness",
+        "% Clay",
+        "NPP",
+        "Precipitation",
+        "Temperature"
+      ],
+      "identifier": {
+        "column": "Parameters",
+        "taxon_fraction": 0.375,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    }
+  ],
+  "error": null,
+  "n_tables": 2,
+  "n_identifier_tables": 1,
+  "n_identifier_tables_markdown": 1,
+  "n_identifier_tables_supplementary": 0,
+  "n_transposed_tables": 0,
+  "n_rows_total": 13,
+  "n_distinct_species": 3,
+  "would_yield_rows": true,
+  "would_yield_rows_if_supplements_passed": true,
+  "verdict": "OK — 1 identifier table(s) in the markdown; a 0-row result is downstream (LLM mapping / relevance gate / grouping), not here"
+}

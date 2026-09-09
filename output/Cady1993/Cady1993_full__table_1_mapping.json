@@ -2,48 +2,58 @@
   "Acrocerid": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the taxonomic names of the insect species (genus and species).",
+    "reasoning": "This column lists the scientific names of the insect taxa studied.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "This column lists specific fly species, which are discrete classifications."
+    "reasoning_relevance": "The column lists the scientific names of the fly species being studied."
   },
   "Source": {
     "field": null,
     "value_column": false,
-    "reasoning": "Refers to the source or citation of the data, not an organism property.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "The text indicates this summarizes data from 'laboratory or field rearings'.",
-    "value_type": "categorical"
+    "reasoning": "This column contains publication citations, which are metadata, not organism traits or locations.",
+    "category": null,
+    "reasoning_relevance": "This column contains citations and identifiers for data provenance."
   },
   "Pupation duration (mean days ± SEM)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a biological trait measured for the organism: pupation duration.",
+    "reasoning": "The header defines the biological trait (pupation duration) being measured.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "This records a quantitative physical/biological measurement of time.",
+    "reasoning_relevance": "This column records a quantitative measurement of time (mean days).",
+    "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Pupation duration",
     "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The measurement concerns a life history trait (pupation duration) which involves observing and tracking the developmental process of pupae/larvae in the field or shortly after collection to determine eclosion dates.",
-    "measurementMethod": "Tracking pupal development until emergence",
-    "measurementMethod_reasoning": "The text states that 'Pupae were taken from the field into the lab 10–15 days after pupation to determine eclosion dates accurately,' indicating a method of monitoring developmental stages and recording time elapsed until emergence.",
+    "basisOfRecord_reasoning": "Pupation duration is a natural history/life cycle trait observed in the field, making HumanObservation the appropriate basis of record.",
+    "measurementMethod": "Observation of pupae in the field followed by laboratory monitoring of eclosion dates to determine pupation duration.",
+    "measurementMethod_reasoning": "The text states that pupae were taken from the field and monitored in the lab to determine eclosion dates, which is used to calculate the pupation duration.",
     "measurementUnit": "days",
-    "measurementUnit_reasoning": "The measurement is explicitly stated as 'Pupation duration' and Table 2 refers to the unit in days.",
+    "measurementUnit_reasoning": "The column header and Table 2 specify the unit as days.",
     "measurementStatistic": "mean ± SE",
-    "measurementStatistic_reasoning": "Table 2 specifies '(SEM = standard error of the mean)' for the pupation duration data, and Figure 10 plots 'Mean duration'."
+    "measurementStatistic_reasoning": "The column header and Table 2 explicitly state that the data represents the mean pupation duration with the standard error of the mean (SEM)."
   },
   "n": {
     "field": null,
-    "value_column": false,
-    "reasoning": "Represents sample size or count, which is not a defined template field here.",
+    "value_column": true,
+    "reasoning": "This column represents the sample size (count) of individuals used in the study.",
     "category": null,
-    "reasoning_relevance": "The column represents sample size, which is excluded by the guidelines."
+    "reasoning_relevance": "This column records the sample size, which is not a biological trait or measurement."
   },
   "Lab or field; mean temp. °C (if available)": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Indicates the location where the observation/measurement was conducted (Laboratory).",
+    "reasoning": "The header describes the environmental condition (Lab/Field) under which the measurement was taken.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "This records a quantitative physical measurement of ambient temperature.",
-    "value_type": "categorical"
+    "reasoning_relevance": "This column records a quantitative measurement of ambient temperature.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Lab or field; mean temp. °C",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement relates to the pupation duration and its correlation with ambient temperature, which are ecological and natural history traits observed in the field. The text describes pupae being taken from the field and monitored for eclosion, fitting the definition of a human observation of a natural process.",
+    "measurementMethod": "Monitoring pupation duration in the field and correlating it with ambient temperature records.",
+    "measurementMethod_reasoning": "The data presented in Figure 10 is derived from observing the pupae in the field and subsequently monitoring their development (pupation duration) until eclosion. This duration is then correlated with the ambient temperature recorded at the location of the observation.",
+    "measurementUnit": "days",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean ± SE",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   }
 }

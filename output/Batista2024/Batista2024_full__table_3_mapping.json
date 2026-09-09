@@ -2,38 +2,44 @@
   "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "The column contains scientific names of insect taxa.",
+    "reasoning": "Contains the taxonomic names of the insect species observed in the record.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The text mentions taxonomic identification of 62 species belonging to 32 genera."
+    "reasoning_relevance": "The column lists specific species names, which are discrete biological classifications of the organism."
   },
   "Wings fully developed": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header describes a biological characteristic or state observed in the organism.",
+    "reasoning": "Describes a biological trait (wing development) observed in the organism.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Wing typology is classified as macropterous (fully developed) or brachypterous/apterous.",
+    "reasoning_relevance": "This is a discrete classification (Yes/No) of a specific biological trait (wing development).",
+    "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Wings fully developed",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The study involved collecting ground beetles using pitfall traps, preserving them in absolute ethanol for taxonomic identification, and then determining species traits (including wing typology) through direct morphological measurement of these preserved specimens.",
-    "measurementMethod": "Direct morphological examination of collected/preserved beetle specimens to classify hind wings as macropterous (fully developed), brachypterous, or apterous.",
-    "measurementMethod_reasoning": "The text explicitly states that information on species traits was gathered 'by direct morphological measurement of the specimens' after they were preserved in ethanol. This method allowed researchers to determine wing typology.",
+    "basisOfRecord_reasoning": "The trait 'Wings fully developed' (wing typology: macropterous vs. brachypterous/apterous) is a morphological characteristic. The text states that information on species traits was collected 'by direct morphological measurement of the specimens' or 'collected from literature specific of each species... and/or confirmed/extracted from the actual specimens' (Table S2). Since the trait is based on the physical characteristics of the beetles, it falls under PreservedSpecimen.",
+    "measurementMethod": "Direct morphological assessment of wing development (macropterous vs. brachypterous/apterous), confirmed either by direct measurement on specimens or by literature review (Serrano et al., 2023).",
+    "measurementMethod_reasoning": "The measurement method is the qualitative assessment of wing typology (fully developed hind wings vs. reduced/absent wings). The text specifies that this was done through 'direct morphological measurement of the specimens' or by referencing existing data in the literature (Serrano et al., 2023).",
     "measurementUnit": "cm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   },
   "Medium length (cm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header names a specific physical property being measured for the insect.",
+    "reasoning": "Defines the measured property (length) and its unit (cm).",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The study measured average body size, specifically species length in mm.",
+    "reasoning_relevance": "The column contains numerical values representing a physical measurement (length) with a unit.",
+    "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Medium length",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement refers to body size (length), which is a morphological/physical trait measured on collected specimens, as indicated by the text stating that information on species traits was gathered through 'direct morphological measurement of the specimens'.",
-    "measurementMethod": "Direct morphological measurement",
-    "measurementMethod_reasoning": "The text explicitly mentions that for collecting species traits (including body size), researchers used 'direct morphological measurement of the specimens' and also consulted literature.",
+    "basisOfRecord_reasoning": "The measurement is the body size of ground beetles, which is a morphological trait measured on specimens (either directly measured or extracted from specimens/literature).",
+    "measurementMethod": "Direct morphological measurement of body size (length)",
+    "measurementMethod_reasoning": "The text states that information on species traits was collected from literature and by direct morphological measurement of the specimens, and Table S2 lists body size (cm) for various species.",
     "measurementUnit": "cm",
-    "measurementUnit_reasoning": "Although the main body size measurements discussed in the abstract use mm, Table S2 confirms that body size traits are listed in cm. Since the prompt specifies 'Medium length (cm)', this unit is used."
+    "measurementUnit_reasoning": "The table title explicitly states that the body size is measured in centimeters (cm).",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "The values listed in Table S2 are individual measurements of specific species' body sizes."
   }
 }

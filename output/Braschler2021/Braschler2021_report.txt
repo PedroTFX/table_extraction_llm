@@ -1,38 +1,128 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Braschler2021\Braschler2021.xlsx  (511 rows)
-PREDICTION   : ..\output\Braschler2021\Braschler2021.csv  (480 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Braschler2021\Braschler2021.csv  (536 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+TAXON NAME REMAP (pred -> gt, 81 pair(s))
+  'Acrotona muscorum' -> 'Acrotona muscorum (Brisout de Barneville, 1860)'
+  'Acrotona parens' -> 'Acrotona parens (Mulsant & Rey, 1852)'
+  'Aleochara bipustulata' -> 'Aleochara bipustulata (Linnaeus,1761)'
+  'Amischa analis' -> 'Amischa analis (Gravenhorst, 1802)'
+  'Amischa nigrofusca' -> 'Amischa nigrofusca (Stephens, 1832)'
+  'Anotylus clypeonitens' -> 'Anotylus clypeonitens (Pandellé, 1867)'
+  'Anotylus complanatus' -> 'Anotylus complanatus (Erichson, 1839)'
+  'Anotylus hamatus' -> 'Anotylus hamatus (Fairmaire & Laboulbene, 1856)'
+  'Anotylus sculpturatus Gravenhorst, 1806' -> 'Anotylus sculpturatus Gravenhorst, 1806)'
+  'Astenus lyonessius' -> 'Astenus lyonessius (Joy, 1908)'
+  'Atheta aeneicollis' -> 'Atheta aeneicollis (Sharp, 1869)'
+  'Atheta amicula' -> 'Atheta amicula (Stephens, 1832)'
+  'Atheta cauta' -> 'Atheta cauta (Erichson, 1837)'
+  'Atheta coriaria' -> 'Atheta coriaria (Kraatz, 1856)'
+  'Atheta crassicornis' -> 'Atheta crassicornis (Fabricius, 1793)'
+  'Atheta fungi' -> 'Atheta fungi (Gravenhorst, 1806)'
+  'Atheta gagatina' -> 'Atheta gagatina (Baudi, 1848)'
+  'Atheta inquinula' -> 'Atheta inquinula (Gravenhorst, 1802)'
+  'Atheta laticollis' -> 'Atheta laticollis (J.F. Stephens, 1832)'
+  'Atheta longicornis' -> 'Atheta longicornis (Gravenhorst, 1802)'
+  'Atheta oblita' -> 'Atheta oblita (Erichson, 1839)'
+  'Atheta pallidicornis' -> 'Atheta pallidicornis (Thomson, 1856)'
+  'Atheta palustris' -> 'Atheta palustris (H. Kiesenwetter, 1844)'
+  'Atheta sordidula' -> 'Atheta sordidula (Erichson, 1837)'
+  'Bisnius sordidus' -> 'Bisnius sordidus (Gravenhorst, 1802)'
+  'Camponotus fallax' -> 'Camponotus fallax (Nylander, 1856)'
+  'Carpelimus corticinus' -> 'Carpelimus corticinus (Gravenhorst, 1806)'
+  'Carpelimus punctatellus' -> 'Carpelimus punctatellus (Erichson, 1840)'
+  'Carpelimus rivularis' -> 'Carpelimus rivularis (Motschulsky, 1860)'
+  'Colobopsis truncata' -> 'Colobopsis truncata (Spinola, 1808)'
+  'Cordalia obscura' -> 'Cordalia obscura (Gravenhorst, 1802)'
+  'Dinaraea angustula' -> 'Dinaraea angustula (Gyllenhal, 1810)'
+  'Dolichoderus quadripunctatus' -> 'Dolichoderus quadripunctatus (Linnaeus, 1771)'
+  'Drusilla canaliculata' -> 'Drusilla canaliculata (Fabricius, 1787)'
+  'Falagrioma thoracica' -> 'Falagrioma thoracica (Stephens, 1832)'
+  'Gabrius breviventer' -> 'Gabrius breviventer (Sperk, 1835)'
+  'Gabrius nigritulus' -> 'Gabrius nigritulus (Gravenhorst, 1802)'
+  'Gyrohypnus fracticornis' -> 'Gyrohypnus fracticornis (O. Muller, 1776)'
+  'Ischnosoma splendidum' -> 'Ischnosoma splendidum (Gravenhorst, 1806)'
+  'Lasius brunneus' -> 'Lasius brunneus (Latreille, 1798)'
+  'Lasius distinguendus' -> 'Lasius distinguendus (Emery, 1916)'
+  'Lasius emarginatus' -> 'Lasius emarginatus (Olivier, 1792)'
+  'Lasius flavus' -> 'Lasius flavus (Fabricius, 1781)'
+  'Lasius fuliginosus' -> 'Lasius fuliginosus (Latreille, 1798)'
+  'Lasius niger' -> 'Lasius niger (Linnaeus, 1758)'
+  'Liogluta longiuscula' -> 'Liogluta longiuscula (Gravenhorst, 1802)'
+  'Metopsia clypeata' -> 'Metopsia clypeata (Müller, P.W.J., 1821)'
+  'Myrmecina graminicola' -> 'Myrmecina graminicola (Latreille, 1802)'
+  'Myrmecocephalus concinnus' -> 'Myrmecocephalus concinnus (Erichson, 1839)'
+  'Myrmica rubra' -> 'Myrmica rubra (Linnaeus, 1758)'
+  'Nehemitropia lividipennis' -> 'Nehemitropia lividipennis (Mannerheim, 1830)'
+  'Omalium rivulare' -> 'Omalium rivulare (Paykull, 1789)'
+  'Oxypoda brachyptera' -> 'Oxypoda brachyptera (J.F. Stephens, 1832)'
+  'Oxypoda opaca' -> 'Oxypoda opaca (Gravenhorst, 1802)'
+  'Pella limbata' -> 'Pella limbata (Paykull, 1789)'
+  'Philonthus carbonarius' -> 'Philonthus carbonarius (Gravenhorst, 1802)'
+  'Philonthus debilis' -> 'Philonthus debilis (Gravenhorst, 1802)'
+  'Platydracus stercorarius' -> 'Platydracus stercorarius (Olivier, 1795)'
+  'Platystethus nitens' -> 'Platystethus nitens (Sahlberg, 1832)'
+  'Ponera coarctata' -> 'Ponera coarctata (Latreille, 1802)'
+  'Proteinus brachypterus' -> 'Proteinus brachypterus (Fabricius, 1792)'
+  'Quedius levicollis' -> 'Quedius levicollis (Brullé, 1832)'
+  'Quedius nitipennis' -> 'Quedius nitipennis (Stephens, 1833)'
+  'Quedius semiaeneus' -> 'Quedius semiaeneus (Stephens, 1833)'
+  'Rabigus pullus' -> 'Rabigus pullus (Nordmann, 1837)'
+  'Rugilus orbiculatus' -> 'Rugilus orbiculatus (Paykull, 1789)'
+  'Rugilus similis' -> 'Rugilus similis (Erichson, 1839)'
+  'Solenopsis fugax' -> 'Solenopsis fugax (Latreille, 1798)'
+  'Stenus impressus' -> 'Stenus impressus (Germar, 1824)'
+  'Sunius bicolor' -> 'Sunius bicolor (Olivier, 1795)'
+  'Tachinus rufipes' -> 'Tachinus rufipes (Linnaeus, 1758)'
+  'Tachyporus chrysomelinus' -> 'Tachyporus chrysomelinus (Linné, 1758)'
+  'Tachyporus dispar' -> 'Tachyporus dispar (Paykull, 1789)'
+  'Tasgius ater' -> 'Tasgius ater (Gravenhorst, 1802)'
+  'Temnothorax affinis' -> 'Temnothorax affinis (Mayr, 1855)'
+  'Temnothorax corticalis' -> 'Temnothorax corticalis (Schenck, 1852)'
+  'Temnothorax nylanderi' -> 'Temnothorax nylanderi (Förster, 1850)'
+  'Temnothorax unifasciatus' -> 'Temnothorax unifasciatus (Latreille, 1798)'
+  'Tetralaucopora longitarsis' -> 'Tetralaucopora longitarsis (Erichson, 1837)'
+  'Tetramorium cf. caespitum' -> 'Tetramorium cf. caespitum (Linnaeus, 1758)'
+  'Xantholinus linearis' -> 'Xantholinus linearis (Olivier, 1795)'
+
+measurementType REMAP (pred -> gt, 6 pair(s))
   'Body size' -> 'Body size '
-  'Dry tolerant' -> 'Drought Resistance'
+  'Colony founding mode' -> 'Colony Founding Mode'
   'Habitat generalist' -> 'Habitat Generalist'
   'Main food' -> 'Main Food'
   'Main nest stratum' -> 'Main Nest Stratum'
-  'Micro-habitat preference' -> 'Microhabitat Preference'
+  'Number of queens' -> 'Number of the Queens'
+
+measurementType LEFT UNMAPPED (2)
+  'Dry tolerant': no ground-truth string denotes this
+  'Micro habitat preference': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
-  matched (TP)        : 455
-  missed (FN)         : 56
-  spurious, in scope  : 25   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+  matched (TP)          : 338
+  missed (FN)           : 173
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 198   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1      : 0.948 / 0.890 / 0.918   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.948 / 0.890 / 0.918   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.890   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1        : 0.631 / 0.661 / 0.646
+  SCOPED  P/R/F1        : 1.000 / 0.661 / 0.796
+  RECALL (GT coverage)  : 0.661
+
+  out-of-scope rows by uncovered field:
+    measurementType                            198
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0    455  0.000  <-- low
-  measurementMethod             0     88  0.000  <-- low
-  measurementUnit               0    169  0.000  <-- low
-  measurementStatistic        286    455  0.629
+  basisOfRecord                 0    338  0.000  <-- low
+  measurementMethod             0    226  0.000  <-- low
+  measurementUnit               0    113  0.000  <-- low
+  measurementStatistic        225    338  0.666
   measurementRemarks            0      0    n/a
-  sex                         315    455  0.692
-  lifeStage                   370    455  0.813
-  caste                         0     84  0.000  <-- low
+  sex                         170    338  0.503
+  lifeStage                   253    338  0.749
+  caste                         0    140  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
@@ -41,28 +131,39 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    455  0.000  <-- low
+  associatedReferences          0    338  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 56 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing             56
-  species+trait present, value differs        0
+WHY THE 173 MISSED ROWS MISSED
+  species present, trait missing                      173
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Colony Founding Mode'             x28
-     'Number of the Queens'             x28
-  -> 2 missing traits explain 56 of 56 misses (100%) — systematic, not scattered
+     'Drought Resistance'               x88
+     'Microhabitat Preference'          x85
+  -> 2 missing traits explain 173 of 173 misses (100%) — systematic, not scattered
 
-  full miss detail saved -> Braschler2021_misses.csv, Braschler2021_misses_summary.json (56 row(s))
+  full miss detail saved -> Braschler2021_misses.csv, Braschler2021_misses_summary.json (173 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   body size                                       113   113   
-  colony founding mode                             28     0   GT-ONLY
-  drought resistance                               88   113   Δ+25 (split?)
+  colony founding mode                             28    28   
+  drought resistance                               88     0   GT-ONLY
+  dry tolerant                                      0   113   PRED-ONLY
   main food                                        28    28   
   habitat generalist                              113   113   
+  micro habitat preference                          0    85   PRED-ONLY
   main nest stratum                                28    28   
-  microhabitat preference                          85    85   
-  number of the queens                             28     0   GT-ONLY
+  microhabitat preference                          85     0   GT-ONLY
+  number of the queens                             28    28   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'microhabitat preference'          vs pred 'micro habitat preference'         sim=0.77
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.661  0.796    338     0   173   id+type+value
+             (198 more spurious row(s) out-of-scope; strict P would be 0.631)
+  tags        0.000  0.000  0.000      0   338   511   basis+id+type+value+stat+sex+stage
+             (198 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.796 vs previous)

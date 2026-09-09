@@ -1,0 +1,95 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Ibarra2021\Ibarra2021.xlsx  (368 rows)
+PREDICTION   : ..\output\Ibarra2021\Ibarra2021.csv  (340 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Pyrractonema obscura' -> 'Pyractonema obscura'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Enneboeus baeck-stroemi': no ground-truth string denotes this
+  'Pyrractonema sp.': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body weight (mg)a' -> 'Body weight'
+  'Habitat use guild' -> 'Habitat-use guild'
+
+measurementType LEFT UNMAPPED (1)
+  'length (mm) ± standard deviation': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 222
+  missed (FN)           : 146
+  spurious, in scope    : 33   <- GT covers this trait: real errors
+  spurious, out of scope: 85   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.653 / 0.603 / 0.627
+  SCOPED  P/R/F1        : 0.871 / 0.603 / 0.713
+  RECALL (GT coverage)  : 0.603
+
+  out-of-scope rows by uncovered field:
+    measurementType                             85
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                83    222  0.374  <-- low
+  measurementMethod             0    139  0.000  <-- low
+  measurementUnit              83     83  1.000
+  measurementStatistic        139    222  0.626
+  measurementRemarks            0      0    n/a
+  sex                         222    222  1.000
+  lifeStage                   158    222  0.712
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    222  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 146 MISSED ROWS MISSED
+  species not in prediction                             9
+  species present, trait missing                       83
+  species+trait present, value differs                 54
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'arboreal'                   ->  'arboreal/ geophilous'       x10
+     'geophilous'                 ->  'arboreal/ geophilous'       x10
+     'flower'                     ->  'arboreal/flower'            x4
+     'arboreal'                   ->  'arboreal/flower'            x4
+     'pollinivorous'              ->  'pollinivorous/saprophagous' x4
+     'saprophagous'               ->  'pollinivorous/saprophagous' x4
+  -> 6 substitutions explain 36 of 146 misses (25%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (2 distinct), closest predicted name:
+     gt 'Pyractonema sp.'                   ~0.97~  pred 'Pyrractonema sp.'   x5
+     gt 'Enneboeus baeckstroemi'            ~0.67~  pred 'Enneboeus baeck-stroemi'   x4
+  -> 2 species mismatches explain 9 of 146 misses (6%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Length'                      x83
+  -> 1 missing trait explains 83 of 146 misses (57%) — scattered; no single cause
+
+  full miss detail saved -> Ibarra2021_misses.csv, Ibarra2021_misses_summary.json (146 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      85     0   GT-ONLY
+  body weight                                      85    85   
+  length (mm) ± standard deviation                  0    85   PRED-ONLY
+  main foraging guild                              93    85   Δ-8 (split?)
+  habitat-use guild                               105    85   Δ-20 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.871  0.603  0.713    222    33   146   id+type+value
+             (85 more spurious row(s) out-of-scope; strict P would be 0.653)
+  tags        0.000  0.000  0.000      0   255   368   basis+id+type+value+stat+sex+stage
+             (85 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.713 vs previous)

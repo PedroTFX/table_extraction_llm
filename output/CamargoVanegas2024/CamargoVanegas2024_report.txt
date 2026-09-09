@@ -1,106 +1,202 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\CamargoVanegas2024\CamargoVanegas2024.xlsx  (2017 rows)
-PREDICTION   : ..\output\CamargoVanegas2024\CamargoVanegas2024.csv  (2864 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\CamargoVanegas2024\CamargoVanegas2024.csv  (2418 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
-  'eye length' -> 'Eye length'
-  'femur length' -> 'Femur length'
-  'head length' -> 'Head length'
-  'head width' -> 'Head width'
-  'mandible length' -> 'Mandible length'
-  'mandible length Mean' -> 'mandible length'
-  'scape length' -> 'Scape length'
+TAXON NAME REMAP (pred -> gt, 78 pair(s))
+  'Acropyga smithii Forel, 1893' -> 'Acropyga smithii'
+  'Alfaria minuta Emery, 1896' -> 'Alfaria minuta'
+  'Anochetus diegensis Forel, 1912' -> 'Anochetus diegensis'
+  'Anochetus inermis André, 1889' -> 'Anochetus inermis'
+  'Apterostigma pilosum Mayr, 1865' -> 'Apterostigma pilosum'
+  'Brachymyrmex aphidicola Forel, 1909' -> 'Brachymyrmex aphidicola'
+  'Brachymyrmex minutus Forel, 1893' -> 'Brachymyrmex minutus'
+  'Camponotus sp. 4' -> 'Camponotus sp. 1'
+  'Camponotus sp. 5' -> 'Camponotus sp. 1'
+  'Camponotus sp. 6' -> 'Camponotus sp. 1'
+  'Carebara audita Fernández, 2004' -> 'Carebara audita'
+  'Carebara brevipilosa Fernández, 2004' -> 'Carebara brevipilosa'
+  'Carebara globularia Fernández, 2004' -> 'Carebara globularia'
+  'Crematogaster brasiliensis Mayr, 1878' -> 'Crematogaster brasiliensis'
+  'Crematogaster carinata Mayr, 1862' -> 'Crematogaster carinata'
+  'Crematogaster erecta Mayr, 1866' -> 'Crematogaster erecta'
+  'Crematogaster flavosensitiva Longino, 2003' -> 'Crematogaster flavosensitiva'
+  'Crematogaster limata Smith, 1858' -> 'Crematogaster limata'
+  'Crematogaster nigropilosa Mayr, 1870' -> 'Crematogaster nigropilosa'
+  'Crematogaster obscurata Emery, 1895' -> 'Crematogaster obscurata'
+  'Crematogaster stolii' -> 'Crematogaster stollii'
+  'Crematogaster stollii Forel, 1885' -> 'Crematogaster stollii'
+  'Cyphomyrmex costatus Mann, 1922' -> 'Cyphomyrmex costatus'
+  'Cyphomyrmex minutus Mayr, 1862' -> 'Cyphomyrmex minutus'
+  'Discothyrea humilis Weber, 1939' -> 'Discothyrea humilis'
+  'Discothyrea neotropica Bruch, 1919' -> 'Discothyrea neotropica'
+  'Discothyrea testacea Roger, 1863' -> 'Discothyrea testacea'
+  'Eurhopalothrix pilulifera Brown and Kempf, 1960' -> 'Eurhopalothrix pilulifera'
+  'Gnamptogenys boliviensis Lattke, 1995' -> 'Gnamptogenys boliviensis'
+  'Hylomyrna columbica' -> 'Hylomyrma columbica'
+  'Labidus praedator' -> 'Labidus predator'
+  'Lachnomyrmex scrobiculatus Wheeler, 1910' -> 'Lachnomyrmex scrobiculatus'
+  'Leptogenys ritae Forel, 1899' -> 'Leptogenys ritae'
+  'Megalomyrmex drifti Kempf, 1961' -> 'Megalomyrmex drifti'
+  'Megalomyrmex incisus Smith, 1947' -> 'Megalomyrmex incisus'
+  'Megalomyrmex longinoi Boudinot et al., 2013' -> 'Megalomyrmex longinoi'
+  'Megalomyrmex silvestrii Wheeler, 1909' -> 'Megalomyrmex silvestrii'
+  'Myrmicocrypta urichi Weber, 1937' -> 'Myrmicocrypta urichi'
+  'Odontomachus bauri Emery, 1892' -> 'Odontomachus bauri'
+  'Odontomachus laticeps Roger, 1861' -> 'Odontomachus laticeps'
+  'Odontomachus opaciventris Forel, 1899' -> 'Odontomachus opaciventris'
+  'Pachycondyla impressa' -> 'Pachycondyla Impressa'
+  'Pheidole biconstricta Mayr, 1870' -> 'Pheidole biconstricta'
+  'Pheidole fimbriata Roger, 1863' -> 'Pheidole fimbriata'
+  'Pheidole flavens Roger, 1863' -> 'Pheidole flavens'
+  'Pheidole mendicula Wheeler, 1925' -> 'Pheidole mendicula'
+  'Pheidole pugnax Dalla Torre, 1892' -> 'Pheidole pugnax'
+  'Pheidole subarmata Mayr, 1884' -> 'Pheidole subarmata'
+  'Pheidole susannae Forel, 1886' -> 'Pheidole susannae'
+  'Pheidole synarmata Wilson, 2003' -> 'Pheidole synarmata'
+  'Pheidole transversostriata Mayr, 1887' -> 'Pheidole transversostriata'
+  'Pheidole zeteki Smith, 1947' -> 'Pheidole zeteki'
+  'Pogonomyrmex mayri Forel, 1899' -> 'Pogonomyrmex mayri'
+  'Probolomyrmex boliviensis Mann, 1923' -> 'Probolomyrmex boliviensis'
+  'Proceratium catio de Andrade, 2003' -> 'Proceratium catio'
+  'Rasopone pluviselva Longino & Branstetter, 2020' -> 'Rasopone pluviselva'
+  'Rogeria belti Mann, 1922' -> 'Rogeria belti'
+  'Rogeria ciliosa Kugler, 1994' -> 'Rogeria ciliosa'
+  'Rogeria curvipubens Emery, 1894' -> 'Rogeria curvipubens'
+  'Rogeria foreli Emery, 1894' -> 'Rogeria foreli'
+  'Sericomyrmex amabilis Wheeler, 1925' -> 'Sericomyrmex amabilis'
+  'Solenopsis azteca Forel, 1893' -> 'Solenopsis azteca'
+  'Solenopsis picea Emery, 1896' -> 'Solenopsis picea'
+  'Stegomyrmex manni Smith, 1946' -> 'Stegomyrmex manni'
+  'Strumigenys biolleyi Forel, 1908' -> 'Strumigenys biolleyi'
+  'Strumigenys cordovensis Mayr, 1887' -> 'Strumigenys cordovensis'
+  'Strumigenys deltisquama Brown, 1957' -> 'Strumigenys deltisquama'
+  'Strumigenys denticulata Mayr, 1887' -> 'Strumigenys denticulata'
+  'Strumigenys dyseides Bolton, 2000' -> 'Strumigenys dyseides'
+  'Strumigenys eggersi Emery, 1890' -> 'Strumigenys eggersi'
+  'Strumigenys elongata Roger, 1863' -> 'Strumigenys elongata'
+  'Strumigenys fridericimuelleri Forel, 1886' -> 'Strumigenys fridericimuelleri'
+  'Strumigenys lanuginosa Wheeler, 1905' -> 'Strumigenys lanuginosa'
+  'Strumigenys marginiventris Santschi, 1931' -> 'Strumigenys marginiventris'
+  'Strumigenys subedentata Mayr, 1887' -> 'Strumigenys subedentata'
+  'Tapinoma ramulorum Emery, 1896' -> 'Tapinoma ramulorum'
+  'Thaumatomyrmex atrox Weber, 1939' -> 'Thaumatomyrmex atrox'
+  'Thaumatomyrmex zeteki Smith, 1944' -> 'Thaumatomyrmex zeteki'
+
+TAXON NAMES LEFT UNMAPPED (19)
+  'Apterostigma dentigerum Wheeler, 1925': no ground-truth string denotes this
+  'Apterostigma pariense Lattke, 1997': no ground-truth string denotes this
+  'Atta colombica Guérin-Méneville, 1844': no ground-truth string denotes this
+  'Camponotussp. 7': no ground-truth string denotes this
+  'Cephalotes varians': no ground-truth string denotes this
+  'Discothyrea sp. 4': no ground-truth string denotes this
+  'Hylomyrmacolumbica': no ground-truth string denotes this
+  'Lachnomyrmexscrobiculatus': no ground-truth string denotes this
+  'Mayaponeraconstricta': no ground-truth string denotes this
+  'Megalomyrmexdrifti': no ground-truth string denotes this
+  'Megalomyrmexincisus': no ground-truth string denotes this
+  'Megalomyrmexlonginoi': no ground-truth string denotes this
+  'Megalomyrmexsilvestrii': no ground-truth string denotes this
+  'Monomoriumfloricola': no ground-truth string denotes this
+  'Mycetomoelleriussp. 1': no ground-truth string denotes this
+  'Mycocepuruscurvispinosus': no ground-truth string denotes this
+  'Mycoepurus curvispinosus Mackay, 1998': no ground-truth string denotes this
+  'Myrmicocrypta sp. 2': no ground-truth string denotes this
+  'Paratrachymyrmexirmgardae': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 8 pair(s))
+  'Weber length Mean' -> 'Weber length'
+  'distance Mean' -> 'Interocular distance'
+  'eye length Mean' -> 'Eye length'
+  'femur length Mean' -> 'Femur length'
+  'head length Mean' -> 'Head length'
+  'head width Mean' -> 'Head width'
+  'mandible length Mean' -> 'Mandible length'
+  'scape length Mean' -> 'Scape length'
+
+measurementType LEFT UNMAPPED (1)
+  'Functional Groups': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
-  matched (TP)        : 261
-  missed (FN)         : 1756
-  spurious, in scope  : 882   <- GT covers this trait: real errors
-  spurious, out of scope: 1721   <- GT never covers this trait: nothing to score against
+  matched (TP)          : 1109
+  missed (FN)           : 908
+  spurious, in scope    : 1163   <- GT covers this trait: real errors
+  spurious, out of scope: 146   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1      : 0.091 / 0.129 / 0.107   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.228 / 0.129 / 0.165   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.129   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1        : 0.459 / 0.550 / 0.500
+  SCOPED  P/R/F1        : 0.488 / 0.550 / 0.517
+  RECALL (GT coverage)  : 0.550
 
   out-of-scope rows by uncovered field:
-    measurementType                           1721
+    measurementType                            146
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0    261  0.000  <-- low
-  measurementMethod             0    139  0.000  <-- low
-  measurementUnit               0    261  0.000  <-- low
-  measurementStatistic          1    261  0.004  <-- low
+  basisOfRecord                 0   1109  0.000  <-- low
+  measurementMethod             0   1109  0.000  <-- low
+  measurementUnit               0   1109  0.000  <-- low
+  measurementStatistic         19   1109  0.017  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    261  0.000  <-- low
-  lifeStage                   261    261  1.000
-  caste                         0    261  0.000  <-- low
-  sampleSizeValue               0    261  0.000  <-- low
+  sex                           0   1109  0.000  <-- low
+  lifeStage                  1109   1109  1.000
+  caste                         0   1109  0.000  <-- low
+  sampleSizeValue               0   1109  0.000  <-- low
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    261  0.000  <-- low
-  verbatimLocality              0    261  0.000  <-- low
+  samplingProtocol              0   1109  0.000  <-- low
+  verbatimLocality              0   1109  0.000  <-- low
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0    261  0.000  <-- low
+  verbatimEventDate             0   1109  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    261  0.000  <-- low
+  associatedReferences          0   1109  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 1756 MISSED ROWS MISSED
-  species not in prediction                  17
-  species present, trait missing            376
-  species+trait present, value differs     1363
+WHY THE 908 MISSED ROWS MISSED
+  species not in prediction                            17
+  species+trait present, value differs                891
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '0.543'                      ->  '-'                          x4
-     '0.587'                      ->  '-'                          x3
-     '0.006'                      ->  '0.008'                      x3
-     '0.217'                      ->  '0.674'                      x2
-     '0'                          ->  '0.228'                      x2
-     '0'                          ->  '0.203'                      x2
-  -> 6 substitutions explain 16 of 1756 misses (1%) — scattered; no single cause
+     '0'                          ->  '0.022'                      x3
+     '0.008'                      ->  '0.081'                      x2
+     '0.013'                      ->  '0.073'                      x2
+     '0'                          ->  '0.587'                      x2
+     '0.015'                      ->  '0.598'                      x2
+     '0.63'                       ->  ''                           x2
+  -> 6 substitutions explain 13 of 908 misses (1%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'N3 Ants'                            (nothing similar in the prediction)   x6
      gt 'N2 Ants'                            (nothing similar in the prediction)   x6
-     gt 'N3 Ants'                           ~0.57~  pred 'Camponotus sp. 3'   x6
-     gt 'N1 Ants'                           ~0.57~  pred 'Camponotus sp. 1'   x5
-  -> 3 species mismatches explain 17 of 1756 misses (1%) — scattered; no single cause
+     gt 'N1 Ants'                            (nothing similar in the prediction)   x5
+  -> 3 species mismatches explain 17 of 908 misses (2%) — scattered; no single cause
 
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Interocular distance'             x250
-     'Eye length'                       x21
-     'Femur length'                     x21
-     'Head length'                      x21
-     'Head width'                       x21
-     'Scape length'                     x21
-  -> 6 missing traits explain 355 of 1756 misses (20%) — scattered; no single cause
-
-  full miss detail saved -> CamargoVanegas2024_misses.csv, CamargoVanegas2024_misses_summary.json (1756 row(s))
+  full miss detail saved -> CamargoVanegas2024_misses.csv, CamargoVanegas2024_misses_summary.json (908 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  interocular distance or distance                250   143   Δ-107 (split?)
-  distance mean                                     0   142   PRED-ONLY
+  interocular distance                            250   284   Δ+34 (split?)
   funcional equitability                            3     0   GT-ONLY
-  eye length                                      250   143   Δ-107 (split?)
-  eye length mean                                   0   142   PRED-ONLY
-  femur length                                    250   143   Δ-107 (split?)
-  femur length mean                                 0   142   PRED-ONLY
-  functional redundancy or functional groups        3   146   Δ+143 (split?)
+  eye length                                      250   284   Δ+34 (split?)
+  femur length                                    250   284   Δ+34 (split?)
+  functional groups                                 0   146   PRED-ONLY
+  functional redundancy                             3     0   GT-ONLY
   functional space                                  3     0   GT-ONLY
   habitat                                           6     0   GT-ONLY
-  head length                                     250   143   Δ-107 (split?)
-  head length mean                                  0   142   PRED-ONLY
-  head width mean                                   0   142   PRED-ONLY
-  head width                                      250   143   Δ-107 (split?)
-  mandible length                                 252   285   Δ+33 (split?)
-  scape length mean                                 0   142   PRED-ONLY
-  weber length mean                                 0   142   PRED-ONLY
-  scape length                                    250   143   Δ-107 (split?)
-  weber length                                    250   143   Δ-107 (split?)
-  n1                                                0   146   PRED-ONLY
-  n2                                                0   146   PRED-ONLY
-  n3                                                0   146   PRED-ONLY
-  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)
+  head length                                     250   284   Δ+34 (split?)
+  head width                                      250   284   Δ+34 (split?)
+  mandible length                                 252   284   Δ+32 (split?)
+  scape length                                    250   284   Δ+34 (split?)
+  weber length                                    250   284   Δ+34 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'functional space'                 vs pred 'functional groups'                sim=0.73
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.488  0.550  0.517   1109  1163   908   id+type+value
+             (146 more spurious row(s) out-of-scope; strict P would be 0.459)
+  tags        0.000  0.000  0.000      0  2272  2017   basis+id+type+value+stat+sex+stage
+             (146 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.517 vs previous)

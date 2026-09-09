@@ -1,0 +1,32 @@
+{
+  "Pathogen": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column identifies the biological agent (Trypanosomes), not the insect, location, or measurement."
+  },
+  "Functional trait": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header names the specific biological property or characteristic being measured (e.g., Bee size)."
+  },
+  "Estimate": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains the primary calculated result or measurement value for the trait."
+  },
+  "SE": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "SE stands for Standard Error, which is a specific statistical measure of the measurement."
+  },
+  "z": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column contains the Z-score, a specific statistical test result."
+  },
+  "P": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column contains the P-value, a specific statistical measure of significance."
+  }
+}

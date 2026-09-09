@@ -1,0 +1,74 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Lizee2016\Lizee2016.xlsx  (147 rows)
+PREDICTION   : ..\output\Lizee2016\Lizee2016.csv  (241 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Most abundant species in calcareous massifs in 2008': no ground-truth string denotes this
+  'Most abundant species in urban parks in 2008': no ground-truth string denotes this
+
+measurementType LEFT UNMAPPED (2)
+  'Specialization rank': no ground-truth string denotes this
+  'Species occurrence': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 99
+  missed (FN)           : 48
+  spurious, in scope    : 60   <- GT covers this trait: real errors
+  spurious, out of scope: 82   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.411 / 0.673 / 0.510
+  SCOPED  P/R/F1        : 0.623 / 0.673 / 0.647
+  RECALL (GT coverage)  : 0.673
+
+  out-of-scope rows by uncovered field:
+    measurementType                             82
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0     99  0.000  <-- low
+  measurementMethod             0     17  0.000  <-- low
+  measurementUnit               0     99  0.000  <-- low
+  measurementStatistic          0     99  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          99     99  1.000
+  lifeStage                    41     99  0.414  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     99  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 48 MISSED ROWS MISSED
+  species+trait present, value differs                 48
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'univoltine'                 ->  'uni- or bivoltine'          x24
+     'bivoltine'                  ->  'uni- or bivoltine'          x24
+  -> 2 substitutions explain 48 of 48 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Lizee2016_misses.csv, Lizee2016_misses_summary.json (48 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  larval diet                                      41    53   Δ+12 (split?)
+  functional group                                 41    53   Δ+12 (split?)
+  species occurrence                                0    41   PRED-ONLY
+  specialization rank                               0    41   PRED-ONLY
+  voltinism                                        65    53   Δ-12 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.623  0.673  0.647     99    60    48   id+type+value
+             (82 more spurious row(s) out-of-scope; strict P would be 0.411)
+  tags        0.000  0.000  0.000      0   159   147   basis+id+type+value+stat+sex+stage
+             (82 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.647 vs previous)

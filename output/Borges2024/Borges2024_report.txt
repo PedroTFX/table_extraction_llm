@@ -1,19 +1,26 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Borges2024\Borges2024.xlsx  (23 rows)
-PREDICTION   : ..\output\Borges2024\Borges2024.csv  (0 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Borges2024\Borges2024.csv  (16 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 0
-  missed (FN)         : 23
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+measurementType LEFT UNMAPPED (2)
+  'Population Growth Parameters': no ground-truth string denotes this
+  'Prey Species Predator Biological Trait': no ground-truth string denotes this
 
-  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+ROW-LEVEL (key match)
+  matched (TP)          : 0
+  missed (FN)           : 23
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 16   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
+  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
+  RECALL (GT coverage)  : 0.000
+
+  out-of-scope rows by uncovered field:
+    measurementType                             16
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
@@ -37,13 +44,16 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   externalLink                  0      0    n/a
 
 WHY THE 23 MISSED ROWS MISSED
-  species not in prediction                  23
-  species present, trait missing              0
-  species+trait present, value differs        0
+  species present, trait missing                       23
 
-  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
-     gt 'Scymnus nubilus'                    (nothing similar in the prediction)   x23
-  -> 1 species mismatch explains 23 of 23 misses (100%) — systematic, not scattered
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Sex ratio when fed Myzus persicae' x2
+     'Incubation time when fed Myzus persicae' x1
+     'Fertility when fed Myzus persicae' x1
+     'Oviposition rate when fed Aphis fabae' x1
+     'Female weight when fed Myzus persicae' x1
+     'Oviposition period when fed Myzus persicae' x1
+  -> 6 missing traits explain 7 of 23 misses (30%) — scattered; no single cause
 
   full miss detail saved -> Borges2024_misses.csv, Borges2024_misses_summary.json (23 row(s))
 
@@ -59,6 +69,7 @@ measurementType COVERAGE
   oviposition period when fed aphis fabae           1     0   GT-ONLY
   pre-oviposition time when fed aphis fabae         1     0   GT-ONLY
   oviposition rate when fed aphis fabae             1     0   GT-ONLY
+  prey species predator biological trait            0    11   PRED-ONLY
   fecundity when fed myzus persicae                 1     0   GT-ONLY
   female weight when fed myzus persicae             1     0   GT-ONLY
   fertility when fed myzus persicae                 1     0   GT-ONLY
@@ -70,4 +81,13 @@ measurementType COVERAGE
   pre-oviposition time when fed myzus persicae      1     0   GT-ONLY
   oviposition rate when fed myzus persicae          1     0   GT-ONLY
   sex ratio when fed myzus persicae                 2     0   GT-ONLY
+  population growth parameters                      0     5   PRED-ONLY
   locality                                          1     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0    23   id+type+value
+             (16 more spurious row(s) out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0    23   basis+id+type+value+stat+sex+stage
+             (16 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

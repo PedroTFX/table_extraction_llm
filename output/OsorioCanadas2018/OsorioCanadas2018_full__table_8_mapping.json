@@ -1,0 +1,93 @@
+{
+  "Parasitoid species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the specific taxonomic names of the insect species.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the specific taxonomic identity of the parasitoid organism."
+  },
+  "Order / Infraclass": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Lists the taxonomic Order/Infraclass, which is a fixed characteristic of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Provides a discrete classification of the organism's biological order or infraclass.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Order / Infraclass",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting nests (containing hosts and parasitoids) in paper tubes/cavities, transporting them to the laboratory, and subsequently dissecting the contents to record the identity and number of the organisms. This constitutes measurement based on preserved specimens.",
+    "measurementMethod": "Trap-nesting using drilled wood blocks with paper tubes, followed by laboratory dissection and recording of species identity, abundance, and functional traits. Network metrics (generality, vulnerability, interaction evenness, and specialization index H_2) were calculated based on the observed interactions.",
+    "measurementMethod_reasoning": "The methodology describes the use of trap-nesting stations (drilled wood blocks with paper tubes) to sample the community. Data collection involved biweekly visits and subsequent laboratory dissection of the collected nests to determine species richness, abundance, and functional traits. Network metrics were derived from the observed host-parasitoid interactions."
+  },
+  "Parasitic behaviour": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Describes the specific parasitic or predatory behavior of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the recorded behavior or role of the organism (e.g., parasitoid, predator).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Parasitic behaviour",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement (percent parasitism) is a behavioral/ecological trait (interaction between host and parasitoid). Although the nests were collected and processed in the laboratory, the measurement itself is an observation of the state of the interaction (parasitism) within the collected sample, which falls under the category of ecological/behavioral observation.",
+    "measurementMethod": "Sampling of cavity-nesting tubes (paper tubes) from the field, followed by laboratory dissection and counting of parasitized cells to calculate percent parasitism.",
+    "measurementMethod_reasoning": "The text describes the protocol for obtaining data: nests were sampled in paper tubes, maintained through winter, and then dissected in the laboratory to record the number and identity of hosts and parasitoids, which allowed for the calculation of percent parasitism."
+  },
+  "Body size length (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Measures the physical length of the organism in millimeters.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a physical measurement (length) with units (mm).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Body size length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size measurements (or the proxy measurement, cavity diameter) were obtained from nests/tubes containing the host insects, which were collected, preserved, and later dissected in the laboratory.",
+    "measurementMethod": "Measurement of the diameter of pre-established paper tubes (cavities) used by the host insects (CNBW) in trap-nesting stations.",
+    "measurementMethod_reasoning": "The study used trap-nesting stations with paper tubes of specific diameters (2 to 8 mm). The body size of the hosts was inferred or measured based on the diameter of the cavities they utilized for nesting."
+  },
+  "Wintering stage": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Describes the developmental or life stage of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the discrete biological state or developmental stage of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Wintering stage",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The wintering stage data is derived from examining the contents (hosts and parasitoids) of collected nests (vouchers/specimens) that were stored in an unheated unit for wintering and subsequently dissected in the following spring.",
+    "measurementMethod": "Nests were sampled during the active season, stored in an unheated unit (2–10°C) for wintering, and then dissected in the following spring to identify the hosts and parasitoids present.",
+    "measurementMethod_reasoning": "The text explicitly details the protocol for obtaining data on seasonality and functional traits: 'Tubes containing nests were taken to the laboratory and kept at room temperature 20–25˚C until end October, when they were transferred to an unheated storage unit (2–10˚C) for wintering. In the following spring, tubes were again exposed to room temperature (22–25˚C) to stimulate development. Then, tubes were dissected and their contents (number and identity of hosts and parasitoids) recorded.'"
+  },
+  "Voltinism": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Describes the number of generations the organism undergoes per year.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the discrete life cycle pattern (e.g., multivoltine, univoltine).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Voltinism",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "Voltinism is a functional trait (life cycle characteristic) of the host and parasitoid species. The data was obtained by sampling nests, collecting the hosts and parasitoids, and recording their identity and traits in the laboratory, which constitutes measurement off a collected/preserved specimen.",
+    "measurementMethod": "Functional traits were compiled for each host and parasitoid species, including voltinism, based on descriptions and methodology provided in S1 and S2 Tables.",
+    "measurementMethod_reasoning": "The text explicitly states that hosts and parasitoids were characterized based on five functional traits, including voltinism. The specific methodology for these traits is referenced in the Supporting Information (S1 and S2 Tables)."
+  },
+  "Gregariousness": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Describes the social behavior (solitary or gregarious) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the discrete social behavior of the organism (e.g., gregarious, solitary).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Gregariousness",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected nests (tubes) containing hosts and parasitoids, which were then taken to the laboratory, stored, and subsequently dissected to record the identity and traits (including gregariousness) of the insects. This constitutes measurement from preserved specimens.",
+    "measurementMethod": "Description and methodology provided in S1 and S3 Tables",
+    "measurementMethod_reasoning": "The text explicitly states that parasitoids were characterized based on five functional traits, including gregariousness, and refers the reader to 'S1 and S3 Tables' for the specific description and methodology used to determine this trait."
+  }
+}

@@ -1,0 +1,805 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Chichorro2022\Chichorro2022.xlsx  (620 rows)
+PREDICTION   : ..\output\Chichorro2022\Chichorro2022.csv  (14064 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Papilio caiguanabus Heraclides' -> 'Papilio caiguanabus'
+  'Papilio himeros Heraclides' -> 'Papilio himeros'
+
+TAXON NAMES LEFT UNMAPPED (699)
+  'Abida vasconica': no ground-truth string denotes this
+  'Abies concolor': no ground-truth string denotes this
+  'Abies numidica': no ground-truth string denotes this
+  'Acacia asepala': no ground-truth string denotes this
+  'Acacia octonervia': no ground-truth string denotes this
+  'Acacia phlebopetala': no ground-truth string denotes this
+  'Acanthixalus spinosus': no ground-truth string denotes this
+  'Acanthodactylus blanci': no ground-truth string denotes this
+  'Acanthodactylus mechriguensis': no ground-truth string denotes this
+  'Acaulon mediterraneum': no ground-truth string denotes this
+  'Acrantophis madagascariensis': no ground-truth string denotes this
+  'Actinella arridens': no ground-truth string denotes this
+  'Adesmia sanjuanensis': no ground-truth string denotes this
+  'Adiantum viridimontanum': no ground-truth string denotes this
+  'Aegilops peregrina': no ground-truth string denotes this
+  'Aeschynomene gracilis': no ground-truth string denotes this
+  'Afrocarpus falcatus': no ground-truth string denotes this
+  'Afrocarpus gracilior': no ground-truth string denotes this
+  'Agathis borneensis': no ground-truth string denotes this
+  'Agathis ovata': no ground-truth string denotes this
+  'Agathis silbae': no ground-truth string denotes this
+  'Agathylla sulcosa': no ground-truth string denotes this
+  'Agave bracteosa': no ground-truth string denotes this
+  'Agave moranii': no ground-truth string denotes this
+  'Agave victoriae-reginae': no ground-truth string denotes this
+  'Agricola pallidus': no ground-truth string denotes this
+  'Ahaetulla fasciolata': no ground-truth string denotes this
+  'Albinaria evelynae': no ground-truth string denotes this
+  'Albinaria rechingeri': no ground-truth string denotes this
+  'Alburnus akili': no ground-truth string denotes this
+  'Alburnus heckeli': no ground-truth string denotes this
+  'Alcolapia grahami': no ground-truth string denotes this
+  'Alectroenas sganzini': no ground-truth string denotes this
+  'Alinda atanasovi': no ground-truth string denotes this
+  'Alinda vratzatica': no ground-truth string denotes this
+  'Allium czelghauricum': no ground-truth string denotes this
+  'Aloe bussei': no ground-truth string denotes this
+  'Aloe elegantissima': no ground-truth string denotes this
+  'Aloe eumassawana': no ground-truth string denotes this
+  'Aloe mcloughlinii': no ground-truth string denotes this
+  'Alosa volgensis': no ground-truth string denotes this
+  'Ambystoma laterale': no ground-truth string denotes this
+  'Amerotyphlops stadelmani': no ground-truth string denotes this
+  'Amphorella tuberculata': no ground-truth string denotes this
+  'Amytornis housei': no ground-truth string denotes this
+  'Anablepsoides lungi': no ground-truth string denotes this
+  'Angraecum compactum': no ground-truth string denotes this
+  'Ansonia siamensis': no ground-truth string denotes this
+  'Anthurium tenuicaule': no ground-truth string denotes this
+  'Aphelocoma coerulescens': no ground-truth string denotes this
+  'Apomys zambalensis': no ground-truth string denotes this
+  'Araucaria nemorosa': no ground-truth string denotes this
+  'Argna valsabina': no ground-truth string denotes this
+  'Arisaema yunnanense': no ground-truth string denotes this
+  'Aristelliger lar': no ground-truth string denotes this
+  'Arthroleptella subvoce': no ground-truth string denotes this
+  'Aspalathus pendula': no ground-truth string denotes this
+  'Asplenium aureum majoricum': no ground-truth string denotes this
+  'Asplenium chengkouense': no ground-truth string denotes this
+  'Asplenium hobdyi': no ground-truth string denotes this
+  'Asplenium morobense': no ground-truth string denotes this
+  'Asplenium pocsii': no ground-truth string denotes this
+  'Asplenium underwoodii': no ground-truth string denotes this
+  'Asplenium wilfordii': no ground-truth string denotes this
+  'Asterella saccata': no ground-truth string denotes this
+  'Astragalus acetabulosus': no ground-truth string denotes this
+  'Astragalus kolymensis': no ground-truth string denotes this
+  'Astragalus leucolobus': no ground-truth string denotes this
+  'Astragalus nitidiflorus': no ground-truth string denotes this
+  'Astragalus schmolliae': no ground-truth string denotes this
+  'Astragalus setosulus': no ground-truth string denotes this
+  'Astragalus sinuatus': no ground-truth string denotes this
+  'Astragalus tremolsianus': no ground-truth string denotes this
+  'Austrolebias viarius': no ground-truth string denotes this
+  'Avena canariensis': no ground-truth string denotes this
+  'Aythya australis': no ground-truth string denotes this
+  'Baphia puguensis': no ground-truth string denotes this
+  'Basiliscus': no ground-truth string denotes this
+  'Basselinia humboldtiana': no ground-truth string denotes this
+  'Basselinia pancheri': no ground-truth string denotes this
+  'Batis molitor': no ground-truth string denotes this
+  'Batrachoseps campi': no ground-truth string denotes this
+  'Batrachoseps robustus': no ground-truth string denotes this
+  'Bauhinia excelsa': no ground-truth string denotes this
+  'Bauhinia merrilliana': no ground-truth string denotes this
+  'Bitis peringueyi': no ground-truth string denotes this
+  'Blechnum confusum': no ground-truth string denotes this
+  'Blechnum discolor': no ground-truth string denotes this
+  'Blechnum eburneum': no ground-truth string denotes this
+  'Blechnum hastatum': no ground-truth string denotes this
+  'Blechnum ryanii': no ground-truth string denotes this
+  'Bletia ensifolia': no ground-truth string denotes this
+  'Blotiella coriacea': no ground-truth string denotes this
+  'Bolitoglossa odonnelli': no ground-truth string denotes this
+  'Boophis tampoka': no ground-truth string denotes this
+  'Boromys offella': no ground-truth string denotes this
+  'Bossiaea pulchella': no ground-truth string denotes this
+  'Bostrychia bocagei': no ground-truth string denotes this
+  'Brachythecium buchananii': no ground-truth string denotes this
+  'Brachythecium campestre': no ground-truth string denotes this
+  'Brachyurophis roperi': no ground-truth string denotes this
+  'Brookesia antakarana': no ground-truth string denotes this
+  'Brookesia lineata': no ground-truth string denotes this
+  'Bryum dichotomum': no ground-truth string denotes this
+  'Bulbophyllum cateorum': no ground-truth string denotes this
+  'Bulbophyllum decarhopalon': no ground-truth string denotes this
+  'Bulbophyllum hiljeae': no ground-truth string denotes this
+  'Calamanthus campestris': no ground-truth string denotes this
+  'Calcarius pictus': no ground-truth string denotes this
+  'Calliergon giganteum': no ground-truth string denotes this
+  'Callitris preissii': no ground-truth string denotes this
+  'Calotriton asper': no ground-truth string denotes this
+  'Calumma peyrierasi': no ground-truth string denotes this
+  'Calymperes erosum': no ground-truth string denotes this
+  'Campyloneurum oxypholis': no ground-truth string denotes this
+  'Campylopus fragilis': no ground-truth string denotes this
+  'Capra caucasica': no ground-truth string denotes this
+  'Caracara lutosa': no ground-truth string denotes this
+  'Carex collifera': no ground-truth string denotes this
+  'Carpitalpa arendsi': no ground-truth string denotes this
+  'Caseolus subcalliferus': no ground-truth string denotes this
+  'Centrocercus minimus': no ground-truth string denotes this
+  'Centromerus anoculus': no ground-truth string denotes this
+  'Centromerus sexoculatus': no ground-truth string denotes this
+  'Centromerus variegatus': no ground-truth string denotes this
+  'Cepaea vindobonensis': no ground-truth string denotes this
+  'Cephaloziella polystratosa': no ground-truth string denotes this
+  'Ceratinopsis infuscata': no ground-truth string denotes this
+  'Chaerephon aloysiisabaudiae': no ground-truth string denotes this
+  'Chamaeangis thomensis': no ground-truth string denotes this
+  'Charadrius montanus': no ground-truth string denotes this
+  'Chilostoma dochii': no ground-truth string denotes this
+  'Chlorostilbon bracei': no ground-truth string denotes this
+  'Choerophryne brunhildae': no ground-truth string denotes this
+  'Christella wailele': no ground-truth string denotes this
+  'Clinosperma macrocarpa': no ground-truth string denotes this
+  'Cnemaspis ornata': no ground-truth string denotes this
+  'Cochlostoma achaicum': no ground-truth string denotes this
+  'Codringtonia intusplicata': no ground-truth string denotes this
+  'Coendou prehensilis': no ground-truth string denotes this
+  'Collocalia linchi': no ground-truth string denotes this
+  'Columba jouyi': no ground-truth string denotes this
+  'Columbina cyanopis': no ground-truth string denotes this
+  'Conopsis megalodon': no ground-truth string denotes this
+  'Cophixalus exiguus': no ground-truth string denotes this
+  'Cophotis dumbara': no ground-truth string denotes this
+  'Coregonus trybomi': no ground-truth string denotes this
+  'Corydoras weitzmani': no ground-truth string denotes this
+  'Craugastor escoces': no ground-truth string denotes this
+  'Crepidomanes barnardianum': no ground-truth string denotes this
+  'Crocidura beatus': no ground-truth string denotes this
+  'Crotalaria ledermannii': no ground-truth string denotes this
+  'Crotalaria peltieri': no ground-truth string denotes this
+  'Cryptotis nigrescens': no ground-truth string denotes this
+  'Ctenitis dolphinensis': no ground-truth string denotes this
+  'Ctenitis humida': no ground-truth string denotes this
+  'Ctenitis sumbawensis': no ground-truth string denotes this
+  'Ctenopteris spongiosa': no ground-truth string denotes this
+  'Ctenopteris torulosa': no ground-truth string denotes this
+  'Cupressus guadalupensis': no ground-truth string denotes this
+  'Cupressus sargentii': no ground-truth string denotes this
+  'Cyanochen cyanoptera NA': no ground-truth string denotes this
+  'Cyathea williamsii': no ground-truth string denotes this
+  'Cycas arnhemica': no ground-truth string denotes this
+  'Cycas chamaoensis': no ground-truth string denotes this
+  'Cycas macrocarpa': no ground-truth string denotes this
+  'Cycas media': no ground-truth string denotes this
+  'Cycas ophiolitica': no ground-truth string denotes this
+  'Cycas tansachana': no ground-truth string denotes this
+  'Cyclocheilichthys armatus': no ground-truth string denotes this
+  'Cyclura onchiopsis': no ground-truth string denotes this
+  'Cynocephalus volans': no ground-truth string denotes this
+  'Cynodontium gracilescens': no ground-truth string denotes this
+  'Cyprinodon radiosus': no ground-truth string denotes this
+  'Cypripedium palangshanense': no ground-truth string denotes this
+  'Cyrtomium caryotideum': no ground-truth string denotes this
+  'Cyrtomium nephrolepioides': no ground-truth string denotes this
+  'Dacrydium ericioides': no ground-truth string denotes this
+  'Dacrydium gibbsiae': no ground-truth string denotes this
+  'Dalbergia peishaensis': no ground-truth string denotes this
+  'Dalea obovata': no ground-truth string denotes this
+  'Darevskia saxicola': no ground-truth string denotes this
+  'Dendragapus obscurus': no ground-truth string denotes this
+  'Dendrocopos leucopterus': no ground-truth string denotes this
+  'Dendrophidion nuchale': no ground-truth string denotes this
+  'Dendropsophus soaresi': no ground-truth string denotes this
+  'Derris polyantha': no ground-truth string denotes this
+  'Desmognathus ocoee': no ground-truth string denotes this
+  'Desmognathus orestes': no ground-truth string denotes this
+  'Dicranopteris clemensiae': no ground-truth string denotes this
+  'Dicrostonyx hudsonius': no ground-truth string denotes this
+  'Dicrostonyx nelsoni': no ground-truth string denotes this
+  'Diellia leucostegioides': no ground-truth string denotes this
+  'Dioon tomasellii': no ground-truth string denotes this
+  'Diplazium lonchophyllum': no ground-truth string denotes this
+  'Diplazium stoliczkae': no ground-truth string denotes this
+  'Dipodomys elator': no ground-truth string denotes this
+  'Dipoenata longitarsis': no ground-truth string denotes this
+  'Disperis elaphoceras': no ground-truth string denotes this
+  'Distichium inclinatum': no ground-truth string denotes this
+  'Diuris byronensis': no ground-truth string denotes this
+  'Doraegopis boeoticus': no ground-truth string denotes this
+  'Drepanocladus lycopodioides': no ground-truth string denotes this
+  'Dryopteris tsugiwoi': no ground-truth string denotes this
+  'Dysdera aneris': no ground-truth string denotes this
+  'Dysdera coiffaiti': no ground-truth string denotes this
+  'Dysdera diversa': no ground-truth string denotes this
+  'Dysdera portisancti': no ground-truth string denotes this
+  'Ectopistes migratorius': no ground-truth string denotes this
+  'Eirenis coronella': no ground-truth string denotes this
+  'Elaphoglossum aemulum': no ground-truth string denotes this
+  'Elaphoglossum velongum': no ground-truth string denotes this
+  'Eleiotis rottleri': no ground-truth string denotes this
+  'Eleotris aquadulcis': no ground-truth string denotes this
+  'Emballonura dianae': no ground-truth string denotes this
+  'Emoia boettgeri': no ground-truth string denotes this
+  'Encalypta ciliata': no ground-truth string denotes this
+  'Encephalartos cycadifolius': no ground-truth string denotes this
+  'Encephalartos friderici-guilielmi': no ground-truth string denotes this
+  'Encephalartos kisambo': no ground-truth string denotes this
+  'Encephalartos princeps': no ground-truth string denotes this
+  'Encephalartos relictus': no ground-truth string denotes this
+  'Encephalartos turneri': no ground-truth string denotes this
+  'Endogemma caespiticia': no ground-truth string denotes this
+  'Engraulicypris brevianalis': no ground-truth string denotes this
+  'Enyalioides praestabilis': no ground-truth string denotes this
+  'Ephedra aspera': no ground-truth string denotes this
+  'Ephedra tweediana': no ground-truth string denotes this
+  'Epidendrum montserratense': no ground-truth string denotes this
+  'Episoriculus fumidus': no ground-truth string denotes this
+  'Eragrostis coarctata': no ground-truth string denotes this
+  'Eremias strauchi': no ground-truth string denotes this
+  'Eremurus bucharicus': no ground-truth string denotes this
+  'Eria carinata': no ground-truth string denotes this
+  'Eriosema raynaliorum': no ground-truth string denotes this
+  'Erythrolamprus festae': no ground-truth string denotes this
+  'Erythropitta palliceps': no ground-truth string denotes this
+  'Erythrostemon phyllanthoides': no ground-truth string denotes this
+  'Etheostoma inscriptum': no ground-truth string denotes this
+  'Etheostoma sellare': no ground-truth string denotes this
+  'Etlingera heyneana': no ground-truth string denotes this
+  'Euphonia affinis': no ground-truth string denotes this
+  'Eurycea sosorum': no ground-truth string denotes this
+  'Fejervarya iskandari': no ground-truth string denotes this
+  'Fissidens microstictus': no ground-truth string denotes this
+  'Fissidens pusillus': no ground-truth string denotes this
+  'Fordia splendidissima': no ground-truth string denotes this
+  'Forpus xanthops': no ground-truth string denotes this
+  'Fossombronia leucoxantha': no ground-truth string denotes this
+  'Frontinellina dearmata': no ground-truth string denotes this
+  'Frontiphantes fulgurenotatus': no ground-truth string denotes this
+  'Frullania parvistipula': no ground-truth string denotes this
+  'Furcifer belalandaensis': no ground-truth string denotes this
+  'Gagea graeca': no ground-truth string denotes this
+  'Galago gallarum': no ground-truth string denotes this
+  'Galaxias depressiceps': no ground-truth string denotes this
+  'Galaxias fuscus': no ground-truth string denotes this
+  'Galaxias prognathus': no ground-truth string denotes this
+  'Gambusia clarkhubbsi': no ground-truth string denotes this
+  'Garrulax courtoisi': no ground-truth string denotes this
+  'Gastrolobium brevipes': no ground-truth string denotes this
+  'Gazella arabica': no ground-truth string denotes this
+  'Genetta johnstoni': no ground-truth string denotes this
+  'Genista ferox': no ground-truth string denotes this
+  'Gibbulinella dealbata': no ground-truth string denotes this
+  'Globba siamensis': no ground-truth string denotes this
+  'Glossolepis multisquamata': no ground-truth string denotes this
+  'Glyptemys muhlenbergii': no ground-truth string denotes this
+  'Gnetum pendulum': no ground-truth string denotes this
+  'Gnetum schwackeanum': no ground-truth string denotes this
+  'Gnetum ula': no ground-truth string denotes this
+  'Gobiomorphus basalis': no ground-truth string denotes this
+  'Gobiomorphus breviceps': no ground-truth string denotes this
+  'Gracixalus supercornutus': no ground-truth string denotes this
+  'Gracula robusta': no ground-truth string denotes this
+  'Grammitis dorsipila': no ground-truth string denotes this
+  'Graptemys barbouri': no ground-truth string denotes this
+  'Graptemys caglei': no ground-truth string denotes this
+  'Grimmia atrata': no ground-truth string denotes this
+  'Grus japonensis': no ground-truth string denotes this
+  'Gymnocolea borealis': no ground-truth string denotes this
+  'Gymnomitrion obtusum': no ground-truth string denotes this
+  'Gyralina candida': no ground-truth string denotes this
+  'Gyralina tsatsae': no ground-truth string denotes this
+  'Habenaria petromedusa': no ground-truth string denotes this
+  'Habromys schmidlyi': no ground-truth string denotes this
+  'Hahnia insulana': no ground-truth string denotes this
+  'Haplochromis brownae': no ground-truth string denotes this
+  'Hedysarum alpinum': no ground-truth string denotes this
+  'Helicopsis striata': no ground-truth string denotes this
+  'Helictochloa levis': no ground-truth string denotes this
+  'Hemidactylus aaronbaueri': no ground-truth string denotes this
+  'Hemidactylus albofasciatus': no ground-truth string denotes this
+  'Herzogiella striatella': no ground-truth string denotes this
+  'Heterogemma capitata': no ground-truth string denotes this
+  'Hexalectris revoluta': no ground-truth string denotes this
+  'Hexalectris warnockii': no ground-truth string denotes this
+  'Hipposideros durgadasi': no ground-truth string denotes this
+  'Hipposideros lamottei': no ground-truth string denotes this
+  'Hogna heeri': no ground-truth string denotes this
+  'Hogna ingens': no ground-truth string denotes this
+  'Hogna insularum': no ground-truth string denotes this
+  'Hogna maderiana': no ground-truth string denotes this
+  'Hogna schmitzi': no ground-truth string denotes this
+  'Homaloptera montana': no ground-truth string denotes this
+  'Hookeria lucens': no ground-truth string denotes this
+  'Hyalinobatrachium ruedai': no ground-truth string denotes this
+  'Hygroamblystegium humile': no ground-truth string denotes this
+  'Hylaeamys megacephalus': no ground-truth string denotes this
+  'Hymenophyllum moorei': no ground-truth string denotes this
+  'Hynobius nigrescens': no ground-truth string denotes this
+  'Hynobius okiensis': no ground-truth string denotes this
+  'Hynobius sonani': no ground-truth string denotes this
+  'Hypnophila polita': no ground-truth string denotes this
+  'Hypnum plicatulum': no ground-truth string denotes this
+  'Hypsilurus macrolepis': no ground-truth string denotes this
+  'Ichthyborus quadrilineatus': no ground-truth string denotes this
+  'Icterus melanopsis': no ground-truth string denotes this
+  'Imbribryum muehlenbeckii': no ground-truth string denotes this
+  'Imparfinis cochabambae': no ground-truth string denotes this
+  'Incilius tacanensis': no ground-truth string denotes this
+  'Indigofera ionii': no ground-truth string denotes this
+  'Indigofera paracapitata': no ground-truth string denotes this
+  'Inga brachystachys': no ground-truth string denotes this
+  'Ingerophrynus claviger': no ground-truth string denotes this
+  'Iranodon gorganensis': no ground-truth string denotes this
+  'Isoetes coreana': no ground-truth string denotes this
+  'Isoetes maritima': no ground-truth string denotes this
+  'Isoetes prototypus': no ground-truth string denotes this
+  'Isothrix negrensis': no ground-truth string denotes this
+  'Isotropis cuneifolia': no ground-truth string denotes this
+  'Ixobrychus novaezelandiae': no ground-truth string denotes this
+  'Jacksonia sericea': no ground-truth string denotes this
+  'Jungermannia exsertifolia': no ground-truth string denotes this
+  'Juniperus komarovii': no ground-truth string denotes this
+  'Juniperus rigida': no ground-truth string denotes this
+  'Kennedia retrorsa': no ground-truth string denotes this
+  'Kiaeria riparia': no ground-truth string denotes this
+  'Knodus megalops': no ground-truth string denotes this
+  'Labiobarbus siamensis': no ground-truth string denotes this
+  'Laburnum alpinum': no ground-truth string denotes this
+  'Lagopus leucura': no ground-truth string denotes this
+  'Lampedusa imitatrix': no ground-truth string denotes this
+  'Laniarius luehderi': no ground-truth string denotes this
+  'Lankascincus deignani': no ground-truth string denotes this
+  'Larix gmelinii': no ground-truth string denotes this
+  'Larix lyallii': no ground-truth string denotes this
+  'Lasiorhinus krefftii': no ground-truth string denotes this
+  'Lastreopsis silvestris': no ground-truth string denotes this
+  'Lathys affinis': no ground-truth string denotes this
+  'Lecanopteris darnaedii': no ground-truth string denotes this
+  'Leiostyla cassidula': no ground-truth string denotes this
+  'Leiostyla lamellosa': no ground-truth string denotes this
+  'Lemniscia galeata': no ground-truth string denotes this
+  'Leontocebus tripartitus': no ground-truth string denotes this
+  'Lepanthes mucronata': no ground-truth string denotes this
+  'Lepidothamnus fonkii': no ground-truth string denotes this
+  'Lepilemur mittermeieri': no ground-truth string denotes this
+  'Leptaxis nivosa': no ground-truth string denotes this
+  'Lepthyphantes impudicus': no ground-truth string denotes this
+  'Lepthyphantes lundbladi': no ground-truth string denotes this
+  'Lepthyphantes mauli': no ground-truth string denotes this
+  'Leptobrachella heteropus': no ground-truth string denotes this
+  'Leptodon smithii': no ground-truth string denotes this
+  'Leptodontium styriacum': no ground-truth string denotes this
+  'Leptoscyphus cuneifolius': no ground-truth string denotes this
+  'Leptoscyphus porphyrius': no ground-truth string denotes this
+  'Lerista ips': no ground-truth string denotes this
+  'Lethrinops christyi': no ground-truth string denotes this
+  'Limnonectes ibanorum': no ground-truth string denotes this
+  'Limnonectes palavanensis': no ground-truth string denotes this
+  'Linaria flavirostris': no ground-truth string denotes this
+  'Lindholmiola pirinensis': no ground-truth string denotes this
+  'Lindsaea gueriniana': no ground-truth string denotes this
+  'Lindsaea jamesonioides': no ground-truth string denotes this
+  'Lindsaea pallida': no ground-truth string denotes this
+  'Lindsaea tetragona': no ground-truth string denotes this
+  'Liparis glaucescens': no ground-truth string denotes this
+  'Lithobates fisheri': no ground-truth string denotes this
+  'Lithobates subaquavocalis': no ground-truth string denotes this
+  'Litoria myola': no ground-truth string denotes this
+  'Litoria nigrofrenata': no ground-truth string denotes this
+  'Litoria rheocola': no ground-truth string denotes this
+  'Litoria subglandulosa': no ground-truth string denotes this
+  'Lomariopsis congoensis': no ground-truth string denotes this
+  'Lupinus microcarpus': no ground-truth string denotes this
+  'Lycopodiella cernua': no ground-truth string denotes this
+  'Lygodactylus keniensis': no ground-truth string denotes this
+  'Macaca sinica': no ground-truth string denotes this
+  'Macaroeris desertensis': no ground-truth string denotes this
+  'Macarophaeus cultior': no ground-truth string denotes this
+  'Macrolobium pendulum': no ground-truth string denotes this
+  'Macropygia phasianella': no ground-truth string denotes this
+  'Macrozamia diplomera': no ground-truth string denotes this
+  'Macrozamia riedlei': no ground-truth string denotes this
+  'Madascincus mouroundavae': no ground-truth string denotes this
+  'Madoqua saltiana': no ground-truth string denotes this
+  'Malaxis bayardii': no ground-truth string denotes this
+  'Mannia fragrans': no ground-truth string denotes this
+  'Mantidactylus paidroa': no ground-truth string denotes this
+  'Marina parryi': no ground-truth string denotes this
+  'Marmorosphax boulinda': no ground-truth string denotes this
+  'Marmorosphax kaala': no ground-truth string denotes this
+  'Marsilea quadrata': no ground-truth string denotes this
+  'Mascarinus mascarin': no ground-truth string denotes this
+  'Mayrornis lessoni': no ground-truth string denotes this
+  'Medicago heyniana': no ground-truth string denotes this
+  'Medicago truncatula': no ground-truth string denotes this
+  'Meesia triquetra': no ground-truth string denotes this
+  'Melanitta stejnegeri': no ground-truth string denotes this
+  'Melanocorypha calandra': no ground-truth string denotes this
+  'Melitograis gilolensis': no ground-truth string denotes this
+  'Menidia audens': no ground-truth string denotes this
+  'Mesiotelus maderianus': no ground-truth string denotes this
+  'Meta barreti': no ground-truth string denotes this
+  'Meta stridulans': no ground-truth string denotes this
+  'Metafruticicola zonella': no ground-truth string denotes this
+  'Metzgeria violacea': no ground-truth string denotes this
+  'Microtus brachycercus': no ground-truth string denotes this
+  'Microtus chrotorrhinus': no ground-truth string denotes this
+  'Millettia glaucescens': no ground-truth string denotes this
+  'Mimosa wherryana': no ground-truth string denotes this
+  'Mixophyes fasciolatus': no ground-truth string denotes this
+  'Mnium blyttii': no ground-truth string denotes this
+  'Mogurnda variegata': no ground-truth string denotes this
+  'Mohria nudiuscula': no ground-truth string denotes this
+  'Monacha frequens': no ground-truth string denotes this
+  'Monacha solidior': no ground-truth string denotes this
+  'Monnina haughtii': no ground-truth string denotes this
+  'Montenegrina laxa': no ground-truth string denotes this
+  'Montenegrina sporadica': no ground-truth string denotes this
+  'Montenegrina subcristata': no ground-truth string denotes this
+  'Montivipera wagneri': no ground-truth string denotes this
+  'Mormyrops curtus': no ground-truth string denotes this
+  'Muhlenbergia watsoniana': no ground-truth string denotes this
+  'Mundulea viridis': no ground-truth string denotes this
+  'Muscisaxicola griseus': no ground-truth string denotes this
+  'Myiophobus fasciatus': no ground-truth string denotes this
+  'Myospalax psilurus': no ground-truth string denotes this
+  'Myotis austroriparius': no ground-truth string denotes this
+  'Myotis sodalis': no ground-truth string denotes this
+  'Napaeopsis mennoi': no ground-truth string denotes this
+  'Napaeus variatus': no ground-truth string denotes this
+  'Narcissus eugeniae': no ground-truth string denotes this
+  'Nectophrynoides asperginis': no ground-truth string denotes this
+  'Nemacheilus guentheri': no ground-truth string denotes this
+  'Neobatrachus aquilonius': no ground-truth string denotes this
+  'Neochanna rekohua': no ground-truth string denotes this
+  'Neotamias speciosus': no ground-truth string denotes this
+  'Nephrolepis abrupta': no ground-truth string denotes this
+  'Nerodia cyclopion': no ground-truth string denotes this
+  'Neusticomys mussoi': no ground-truth string denotes this
+  'Nilssonia nigricans': no ground-truth string denotes this
+  'Ninox punctulata': no ground-truth string denotes this
+  'Nobregaea latinervis': no ground-truth string denotes this
+  'Nomascus hainanus': no ground-truth string denotes this
+  'Nothobranchius polli': no ground-truth string denotes this
+  'Notomys macrotis': no ground-truth string denotes this
+  'Notropis baileyi': no ground-truth string denotes this
+  'Notropis hudsonius': no ground-truth string denotes this
+  'Notropis hypsilepis': no ground-truth string denotes this
+  'Noturus gyrinus': no ground-truth string denotes this
+  'Nowellia curvifolia': no ground-truth string denotes this
+  'Obelus moratus': no ground-truth string denotes this
+  'Oecobius selvagensis': no ground-truth string denotes this
+  'Oestophora silvae': no ground-truth string denotes this
+  'Olneya tesota': no ground-truth string denotes this
+  'Ompok weberi NA': no ground-truth string denotes this
+  'Orculella aragonica': no ground-truth string denotes this
+  'Orthotrichum pellucidum': no ground-truth string denotes this
+  'Osornophryne talipes': no ground-truth string denotes this
+  'Otidiphaps insularis': no ground-truth string denotes this
+  'Otonyctomys hatti': no ground-truth string denotes this
+  'Otus brookii': no ground-truth string denotes this
+  'Ovatella vulcani': no ground-truth string denotes this
+  'Oxychilus cellarius': no ground-truth string denotes this
+  'Oxychilus draparnaudi': no ground-truth string denotes this
+  'Oxychilus pilula': no ground-truth string denotes this
+  'Oxychilus pityusanus': no ground-truth string denotes this
+  'Oxychilus spectabilis': no ground-truth string denotes this
+  'Oxyrrhynchium speciosum': no ground-truth string denotes this
+  'Pachycephala lanioides': no ground-truth string denotes this
+  'Pachychilon pictum': no ground-truth string denotes this
+  'Palmorchis trilobulata': no ground-truth string denotes this
+  'Panaqolus gnomus': no ground-truth string denotes this
+  'Papillifera solida': no ground-truth string denotes this
+  'Parkia panurensis': no ground-truth string denotes this
+  'Paspalum distortum': no ground-truth string denotes this
+  'Pedilochilus papuanus': no ground-truth string denotes this
+  'Pellorneum palustre': no ground-truth string denotes this
+  'Pelobates varaldii': no ground-truth string denotes this
+  'Pelophylax kurtmuelleri': no ground-truth string denotes this
+  'Peromyscus pembertoni': no ground-truth string denotes this
+  'Peromyscus pseudocrinitus': no ground-truth string denotes this
+  'Peromyscus sejugis': no ground-truth string denotes this
+  'Petromyscus barbouri': no ground-truth string denotes this
+  'Phacochoerus africanus': no ground-truth string denotes this
+  'Phalaenopsis hainanensis': no ground-truth string denotes this
+  'Phaseolus lignosus': no ground-truth string denotes this
+  'Phaseolus rimbachii': no ground-truth string denotes this
+  'Philodromus insulanus': no ground-truth string denotes this
+  'Phisalixella arctifasciata': no ground-truth string denotes this
+  'Pholcus madeirensis': no ground-truth string denotes this
+  'Pholcus parvus': no ground-truth string denotes this
+  'Pholcus silvai': no ground-truth string denotes this
+  'Phoniscus atrox': no ground-truth string denotes this
+  'Phragmipedium sargentianum': no ground-truth string denotes this
+  'Phrynobatrachus tokba': no ground-truth string denotes this
+  'Phrynocephalus saidalievi': no ground-truth string denotes this
+  'Phrynosoma douglasii': no ground-truth string denotes this
+  'Phyllodactylus hispaniolae': no ground-truth string denotes this
+  'Phyllomedusa boliviana': no ground-truth string denotes this
+  'Phyllomyias urichi': no ground-truth string denotes this
+  'Phylloscopus olivaceus': no ground-truth string denotes this
+  'Phyllotis definitus': no ground-truth string denotes this
+  'Phyllurus kabikabi': no ground-truth string denotes this
+  'Picea purpurea': no ground-truth string denotes this
+  'Picea torano': no ground-truth string denotes this
+  'Pinanga subruminata': no ground-truth string denotes this
+  'Pinus canariensis': no ground-truth string denotes this
+  'Pinus cubensis': no ground-truth string denotes this
+  'Pinus fenzeliana': no ground-truth string denotes this
+  'Pinus luchuensis': no ground-truth string denotes this
+  'Pinus squamata': no ground-truth string denotes this
+  'Pinus taeda': no ground-truth string denotes this
+  'Pinus thunbergii': no ground-truth string denotes this
+  'Pinus virginiana': no ground-truth string denotes this
+  'Pipistrellus murrayi': no ground-truth string denotes this
+  'Plagiochila asplenioides': no ground-truth string denotes this
+  'Plagiochila bifaria': no ground-truth string denotes this
+  'Planigale gilesi': no ground-truth string denotes this
+  'Plasteurhynchium striatulum': no ground-truth string denotes this
+  'Platyplectrum spenceri': no ground-truth string denotes this
+  'Platysepalum scaberulum': no ground-truth string denotes this
+  'Platytropius siamensis': no ground-truth string denotes this
+  'Plectrohyla tecunumani': no ground-truth string denotes this
+  'Plesioneuron rigidilobum': no ground-truth string denotes this
+  'Plestiodon multivirgatus': no ground-truth string denotes this
+  'Plethodon angusticlavius': no ground-truth string denotes this
+  'Plethodon montanus': no ground-truth string denotes this
+  'Plethodontohyla tuberata': no ground-truth string denotes this
+  'Podocarpus celatus': no ground-truth string denotes this
+  'Podocarpus glomeratus': no ground-truth string denotes this
+  'Podocarpus milanjianus': no ground-truth string denotes this
+  'Podocarpus urbanii': no ground-truth string denotes this
+  'Podolobium ilicifolium': no ground-truth string denotes this
+  'Poecile hudsonicus': no ground-truth string denotes this
+  'Poecile rufescens': no ground-truth string denotes this
+  'Pohlia beringiensis': no ground-truth string denotes this
+  'Pohlia vexans': no ground-truth string denotes this
+  'Polystichum speciosissimum': no ground-truth string denotes this
+  'Potamosilurus latirostris': no ground-truth string denotes this
+  'Prionops gabela': no ground-truth string denotes this
+  'Pristidactylus casuhatiensis': no ground-truth string denotes this
+  'Pristimantis gaigei': no ground-truth string denotes this
+  'Pristimantis ridens': no ground-truth string denotes this
+  'Procapra gutturosa': no ground-truth string denotes this
+  'Prolagus sardus': no ground-truth string denotes this
+  'Pseudemys gorzugi NA': no ground-truth string denotes this
+  'Pseudocampylaea lowii': no ground-truth string denotes this
+  'Pseudolaubuca hotaya': no ground-truth string denotes this
+  'Pseudomys bolami': no ground-truth string denotes this
+  'Pseudomys hermannsburgensis': no ground-truth string denotes this
+  'Pseudophilautus leucorhinus': no ground-truth string denotes this
+  'Pseudophoxinus antalyae': no ground-truth string denotes this
+  'Pseudotocinclus tietensis': no ground-truth string denotes this
+  'Pseudotropheus fuscus': no ground-truth string denotes this
+  'Pterodroma magentae': no ground-truth string denotes this
+  'Pteropus poliocephalus': no ground-truth string denotes this
+  'Pterygoneurum kozlovii': no ground-truth string denotes this
+  'Ptychochromis onilahy': no ground-truth string denotes this
+  'Ptychostomum demissum': no ground-truth string denotes this
+  'Ptychostomum longisetum': no ground-truth string denotes this
+  'Puccinellia arctica': no ground-truth string denotes this
+  'Pyrrosia costata': no ground-truth string denotes this
+  'Pyxicephalus edulis': no ground-truth string denotes this
+  'Rana asiatica': no ground-truth string denotes this
+  'Rana graeca': no ground-truth string denotes this
+  'Ravenea hypoleuca': no ground-truth string denotes this
+  'Rhinolophus ferrumequinum': no ground-truth string denotes this
+  'Rhinophis sanguineus': no ground-truth string denotes this
+  'Rhizosomichthys totae': no ground-truth string denotes this
+  'Rhodonessa caryophyllacea': no ground-truth string denotes this
+  'Rhynchosia falconeri': no ground-truth string denotes this
+  'Rhynchostegium riparioides': no ground-truth string denotes this
+  'Riccia crustata': no ground-truth string denotes this
+  'Rimator danjoui': no ground-truth string denotes this
+  'Ripkeniella petrophila': no ground-truth string denotes this
+  'Romulea engleri': no ground-truth string denotes this
+  'Rugathodes madeirensis': no ground-truth string denotes this
+  'Saiga tatarica': no ground-truth string denotes this
+  'Salamandra algira': no ground-truth string denotes this
+  'Salea anamallayana': no ground-truth string denotes this
+  'Salmo marmoratus': no ground-truth string denotes this
+  'Sarothrura lugens': no ground-truth string denotes this
+  'Sauroglossum nitidum': no ground-truth string denotes this
+  'Saxicola dacotiae': no ground-truth string denotes this
+  'Scaphiophryne boribory': no ground-truth string denotes this
+  'Scaphirhynchus suttkusi': no ground-truth string denotes this
+  'Scardinius acarnanicus': no ground-truth string denotes this
+  'Scelotes guentheri': no ground-truth string denotes this
+  'Schistidium echinatum': no ground-truth string denotes this
+  'Schizothorax nepalensis': no ground-truth string denotes this
+  'Schizothorax progastus': no ground-truth string denotes this
+  'Scolopax mira': no ground-truth string denotes this
+  'Scotognapha paivani': no ground-truth string denotes this
+  'Scutiger mammatus': no ground-truth string denotes this
+  'Securidaca leiocarpa': no ground-truth string denotes this
+  'Selliguea engleri': no ground-truth string denotes this
+  'Serianthes nelsonii': no ground-truth string denotes this
+  'Setopagis parvula': no ground-truth string denotes this
+  'Sicista betulina': no ground-truth string denotes this
+  'Silurus triostegus': no ground-truth string denotes this
+  'Sminthopsis dolichura': no ground-truth string denotes this
+  'Solenostoma handelii': no ground-truth string denotes this
+  'Sophora rubriflora': no ground-truth string denotes this
+  'Spalax graecus': no ground-truth string denotes this
+  'Speculanas specularis': no ground-truth string denotes this
+  'Spelaeodiscus unidentatus': no ground-truth string denotes this
+  'Spermophorides selvagensis': no ground-truth string denotes this
+  'Sphagnum annulatum': no ground-truth string denotes this
+  'Sphagnum tundrae': no ground-truth string denotes this
+  'Sphagnum warnstorfii': no ground-truth string denotes this
+  'Spiranthes infernalis': no ground-truth string denotes this
+  'Spiranthes parksii': no ground-truth string denotes this
+  'Stegnogramma latipinna': no ground-truth string denotes this
+  'Stenodactylus doriae': no ground-truth string denotes this
+  'Sternotherus depressus': no ground-truth string denotes this
+  'Storeria occipitomaculata': no ground-truth string denotes this
+  'Strigilodelima pentheri': no ground-truth string denotes this
+  'Striolata': no ground-truth string denotes this
+  'Sturisomatichthys frenatus': no ground-truth string denotes this
+  'Swartzia dolichopoda': no ground-truth string denotes this
+  'Symposiachrus ateralbus': no ground-truth string denotes this
+  'Tadehagi rodgeri': no ground-truth string denotes this
+  'Taenitis interrupta': no ground-truth string denotes this
+  'Taudactylus diurnus': no ground-truth string denotes this
+  'Taxus brevifolia': no ground-truth string denotes this
+  'Taxus floridana': no ground-truth string denotes this
+  'Tectaria pseudosinuata': no ground-truth string denotes this
+  'Tectaria repanda': no ground-truth string denotes this
+  'Tephrosia marginella': no ground-truth string denotes this
+  'Teratoscincus bedriagai': no ground-truth string denotes this
+  'Thamnophis ordinoides': no ground-truth string denotes this
+  'Thuja sutchuenensis': no ground-truth string denotes this
+  'Thylogale lanatus': no ground-truth string denotes this
+  'Tinca': no ground-truth string denotes this
+  'Tomentypnum nitens': no ground-truth string denotes this
+  'Tomopterna wambensis': no ground-truth string denotes this
+  'Torreya taxifolia': no ground-truth string denotes this
+  'Tortella flavovirens': no ground-truth string denotes this
+  'Toxabramis houdemeri': no ground-truth string denotes this
+  'Trachypteris drakeana Elaphoglossum kivuense': no ground-truth string denotes this
+  'Trematodon perssoniorum': no ground-truth string denotes this
+  'Treron permagnus': no ground-truth string denotes this
+  'Tribolonotus pseudoponceleti': no ground-truth string denotes this
+  'Trichoglottis tenuis': no ground-truth string denotes this
+  'Trichoglottis winkleri': no ground-truth string denotes this
+  'Trichomanes exiguum': no ground-truth string denotes this
+  'Trichomanes lenormandii': no ground-truth string denotes this
+  'Trichomycterus longibarbatus': no ground-truth string denotes this
+  'Trifolium angustifolium': no ground-truth string denotes this
+  'Trogloneta madeirensis': no ground-truth string denotes this
+  'Tupaia tana': no ground-truth string denotes this
+  'Turinyphia maderiana': no ground-truth string denotes this
+  'Tympanocryptis fortescuensis': no ground-truth string denotes this
+  'Typhochrestus madeirensis': no ground-truth string denotes this
+  'Tyrrhenaria ceratina': no ground-truth string denotes this
+  'Ulota rehmannii': no ground-truth string denotes this
+  'Uromys neobritannicus': no ground-truth string denotes this
+  'Uropeltis macrolepis': no ground-truth string denotes this
+  'Vanda hindsii': no ground-truth string denotes this
+  'Varanus finschi': no ground-truth string denotes this
+  'Varecia rubra': no ground-truth string denotes this
+  'Varicorhinus beso': no ground-truth string denotes this
+  'Verschaffeltia splendida': no ground-truth string denotes this
+  'Vidua raricola': no ground-truth string denotes this
+  'Vipera lotievi': no ground-truth string denotes this
+  'Vitrea illyrica': no ground-truth string denotes this
+  'Vitrea olympica': no ground-truth string denotes this
+  'Vitrea schuetti': no ground-truth string denotes this
+  'Vitrea storchi': no ground-truth string denotes this
+  'Vriesea arpocalyx': no ground-truth string denotes this
+  'Vriesea penduliscapa': no ground-truth string denotes this
+  'Widdringtonia cedarbergensis': no ground-truth string denotes this
+  'Wollemia nobilis': no ground-truth string denotes this
+  'Xanthophryne tigerina': no ground-truth string denotes this
+  'Xerocrassa nyeli': no ground-truth string denotes this
+  'Xerotricha gasulli': no ground-truth string denotes this
+  'Xyris bracteata': no ground-truth string denotes this
+  'Xysticus grohi': no ground-truth string denotes this
+  'Zamia inermis': no ground-truth string denotes this
+  'Zamia katzeriana': no ground-truth string denotes this
+  'Zimirina lepida': no ground-truth string denotes this
+  'Zonites astakidae': no ground-truth string denotes this
+  'Zonites santoriniensis': no ground-truth string denotes this
+  'Zonites sariae': no ground-truth string denotes this
+  'Zonites siphnicus': no ground-truth string denotes this
+  'Zygophlebia werffii': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 9 pair(s))
+  'ALTITUDE MAX FINAL' -> 'Altitude'
+  'ALTITUDE MIN FINAL' -> 'Altitude'
+  'BODY SIZE FINAL' -> 'Body Size'
+  'DIET BREADTH FINAL' -> 'Diet Breadth'
+  'DISPERSAL ABILITY FINAL' -> 'Dispersal Ability'
+  'FECUNDITY FINAL' -> 'Fecundity'
+  'GENERATION LENGTH FINAL' -> 'Generation Length'
+  'MICROHABITAT FINAL' -> 'Microhabitat'
+  'OFFSPRING SIZE FINAL' -> 'Offspring Size'
+
+measurementType LEFT UNMAPPED (7)
+  'GEOGRAPHICAL RANGE SIZE FINAL': no ground-truth string denotes this
+  'HABITAT BREADTH FINAL': no ground-truth string denotes this
+  'HABITAT CONVERSION FINAL': no ground-truth string denotes this
+  'HFP2009 FINAL': no ground-truth string denotes this
+  'HUMAN FOOTPRINT FINAL': no ground-truth string denotes this
+  'TROPHIC LEVEL FINAL': no ground-truth string denotes this
+  'dHFP FINAL': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 483
+  missed (FN)           : 137
+  spurious, in scope    : 7428   <- GT covers this trait: real errors
+  spurious, out of scope: 6153   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.034 / 0.779 / 0.066
+  SCOPED  P/R/F1        : 0.061 / 0.779 / 0.113
+  RECALL (GT coverage)  : 0.779
+
+  out-of-scope rows by uncovered field:
+    measurementType                           6153
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    483  0.000  <-- low
+  measurementMethod             0    483  0.000  <-- low
+  measurementUnit               0    406  0.000  <-- low
+  measurementStatistic          0    483  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         483    483  1.000
+  lifeStage                   289    483  0.598
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    483  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 137 MISSED ROWS MISSED
+  species+trait present, value differs                137
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'flightless'                 ->  '1'                          x43
+     'terricolous'                ->  '2'                          x27
+     'graminicolous/forbicolous'  ->  '3'                          x17
+     'winged'                     ->  '3'                          x15
+     'oligophagous'               ->  '2'                          x12
+     'arbusticolous'              ->  '4'                          x8
+  -> 6 substitutions explain 122 of 137 misses (89%) — systematic, not scattered
+
+  full miss detail saved -> Chichorro2022_misses.csv, Chichorro2022_misses_summary.json (137 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  dispersal ability                               120   879   Δ+759 (split?)
+  altitude                                        177  1758   Δ+1581 (split?)
+  body size                                       177   879   Δ+702 (split?)
+  diet breadth                                     17   879   Δ+862 (split?)
+  habitat breadth final                             0   879   PRED-ONLY
+  habitat conversion final                          0   879   PRED-ONLY
+  dhfp final                                        0   879   PRED-ONLY
+  fecundity                                         1   879   Δ+878 (split?)
+  human footprint final                             0   879   PRED-ONLY
+  geographical range size final                     0   879   PRED-ONLY
+  hfp2009 final                                     0   879   PRED-ONLY
+  trophic level final                               0   879   PRED-ONLY
+  generation length                                16   879   Δ+863 (split?)
+  microhabitat                                     60   879   Δ+819 (split?)
+  offspring size                                   52   879   Δ+827 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.061  0.779  0.113    483  7428   137   id+type+value
+             (6153 more spurious row(s) out-of-scope; strict P would be 0.034)
+  tags        0.000  0.000  0.000      0  7911   620   basis+id+type+value+stat+sex+stage
+             (6153 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.113 vs previous)

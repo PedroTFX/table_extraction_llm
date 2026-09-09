@@ -1,0 +1,122 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Gomez2022\Gomez2022.xlsx  (1014 rows)
+PREDICTION   : ..\output\Gomez2022\Gomez2022.csv  (26 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (26)
+  '0.21–0.22 0.20–0.27': no ground-truth string denotes this
+  '0.22–0.23 0.23–0.26': no ground-truth string denotes this
+  '0.29–0.31 0.24–0.38': no ground-truth string denotes this
+  '0.29–0.31 0.33–0.39': no ground-truth string denotes this
+  '0.36–0.38 0.33–0.41': no ground-truth string denotes this
+  '0.43–0.48 0.42–0.61': no ground-truth string denotes this
+  '0.45–0.47 0.53–0.64': no ground-truth string denotes this
+  '0.4–0.41 0.37–0.5': no ground-truth string denotes this
+  '0.74–0.78 0.81–1.03': no ground-truth string denotes this
+  '0.85–0.89 0.90–1.11': no ground-truth string denotes this
+  '1.03–1.08 1.06–1.17': no ground-truth string denotes this
+  '1.44–1.51 1.67–1.84': no ground-truth string denotes this
+  '1.47–1.56 1.40–1.74': no ground-truth string denotes this
+  '1.65–1.75 2.0–2.28': no ground-truth string denotes this
+  '1.78–1.98 1.94–2.23': no ground-truth string denotes this
+  '124–126 139–166': no ground-truth string denotes this
+  '12–14 11–13': no ground-truth string denotes this
+  '17–18 11–18': no ground-truth string denotes this
+  '210–224 204–235': no ground-truth string denotes this
+  '28–28 22–28': no ground-truth string denotes this
+  '45–45 39–47': no ground-truth string denotes this
+  '51–51 43–50': no ground-truth string denotes this
+  '58–62 47–61': no ground-truth string denotes this
+  '62–62 51–56': no ground-truth string denotes this
+  '86–87 76–90': no ground-truth string denotes this
+  '88–93 98–104': no ground-truth string denotes this
+
+measurementType LEFT UNMAPPED (1)
+  'identifier': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 0
+  missed (FN)           : 1014
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 26   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
+  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
+  RECALL (GT coverage)  : 0.000
+
+  out-of-scope rows by uncovered field:
+    measurementType                             26
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1014 MISSED ROWS MISSED
+  species not in prediction                          1014
+
+  SPECIES IN GT BUT NOT IN PREDICTION (11 distinct), closest predicted name:
+     gt 'Pheidole darwini'                   (nothing similar in the prediction)   x104
+     gt 'Pheidole batrachorum'               (nothing similar in the prediction)   x104
+     gt 'Pheidole pulchella'                 (nothing similar in the prediction)   x104
+     gt 'Pheidole semidea'                   (nothing similar in the prediction)   x104
+     gt 'Pheidole dae'                       (nothing similar in the prediction)   x104
+     gt 'Pheidole klaman'                    (nothing similar in the prediction)   x104
+  -> 6 species mismatches explain 624 of 1014 misses (62%) — systematic, not scattered
+
+  full miss detail saved -> Gomez2022_misses.csv, Gomez2022_misses_summary.json (1014 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  cephalic index                                   39     0   GT-ONLY
+  eye index                                        39     0   GT-ONLY
+  eye length                                       39     0   GT-ONLY
+  head length                                      39     0   GT-ONLY
+  head width                                       39     0   GT-ONLY
+  petiolar node height                             39     0   GT-ONLY
+  postpetiole height                               39     0   GT-ONLY
+  propodeal spine length.i                         39     0   GT-ONLY
+  identifier                                        0    26   PRED-ONLY
+  postpetiole length index.                        39     0   GT-ONLY
+  mandible index                                   39     0   GT-ONLY
+  metafemur index                                  39     0   GT-ONLY
+  petiole index                                    39     0   GT-ONLY
+  postpetiole index                                39     0   GT-ONLY
+  pronotal width index.                            39     0   GT-ONLY
+  scape index                                      39     0   GT-ONLY
+  mandible length                                  39     0   GT-ONLY
+  metafemur length                                 39     0   GT-ONLY
+  petiole length                                   39     0   GT-ONLY
+  postpetiole length                               39     0   GT-ONLY
+  propodeal spine length.                          39     0   GT-ONLY
+  weber's length                                   39     0   GT-ONLY
+  scape length                                     39     0   GT-ONLY
+  petiolar node width                              39     0   GT-ONLY
+  postpetiole width                                78     0   GT-ONLY
+  pronotal width                                   39     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0  1014   id+type+value
+             (26 more spurious row(s) out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0  1014   basis+id+type+value+stat+sex+stage
+             (26 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

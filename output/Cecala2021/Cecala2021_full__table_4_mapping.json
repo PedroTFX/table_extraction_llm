@@ -1,0 +1,51 @@
+{
+  "identifier": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insect taxa (e.g., Peponapis, Svastra).",
+    "category": null,
+    "reasoning_relevance": "These are scientific names of bee taxa, serving as unique identifiers for the organisms."
+  },
+  "specialist[2]": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the ecological role or specialization of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's diet breadth into discrete functional categories (e.g., generalist, specialist).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "specialist[2]",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study measures functional traits (diet breadth, nesting location, social organization) of wild bees in their natural/semi-natural habitat (plant nurseries). These traits are behavioral and ecological in nature, making HumanObservation the appropriate basis of record, as the data represents an occurrence of a live organism in situ.",
+    "measurementMethod": "Wild bee assemblages were sampled using blue vane traps and sweep nets within 15-m radius circular plots in plant nurseries. Bees were identified to species (or morphotaxa) using published keys and reference collections, and their functional traits (diet breadth, nesting location, and social organization) were categorized based on taxonomic literature (e.g., Michener, 2007; Ascher & Pickering, 2017).",
+    "measurementMethod_reasoning": "The methodology describes the specific protocols used for collecting the organisms (vane traps and sweep nets) and the subsequent process of determining the measured characteristics (functional traits) through identification and classification based on established taxonomic literature."
+  },
+  "below ground[7]": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the lifestyle or microhabitat of the insect (e.g., below ground).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's nesting location into discrete categories (e.g., below ground, cavity).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "below ground[7]",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data on nesting location (including 'below-ground nesters') were collected by observing and collecting wild bees in the field (nurseries) using blue vane traps and sweep nets. Nesting location is a natural-history/ecological trait, which falls under HumanObservation, as the bees were observed while active and foraging.",
+    "measurementMethod": "Collection of wild bees using blue vane traps and sweep nets, followed by species identification and classification based on known nesting ecology (above-ground, below-ground, or cleptoparasite).",
+    "measurementMethod_reasoning": "The study used two primary methods to collect bees: blue vane traps (deployed for 72 hours) and sweep netting (30 minutes per observer). The nesting location trait was determined by identifying the collected species and classifying them according to their known biological behavior: 'below-ground nesters (soil excavators and burrow renters)', 'above-ground nesters', or 'cleptoparasites'."
+  },
+  "solitary[12]": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the social behavior or lifestyle of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the bee's social organization into discrete functional categories (e.g., solitary, eusocial).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "solitary[12]",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The functional trait of social organization (including solitary status) is a behavioral/ecological trait. The data was obtained by collecting wild bees in the field (using sweep nets and vane traps) and then classifying them based on their observed or inferred ecological characteristics, which falls under HumanObservation.",
+    "measurementMethod": "Classification based on taxonomic keys and literature (e.g., Buchholz & Egerer, 2020)",
+    "measurementMethod_reasoning": "The study classified social organization (solitary, eusocial, cleptoparasite) by referencing published literature and taxonomic keys (Michener, 2007; Buchholz & Egerer, 2020). If specific data were unavailable for a taxon, traits were assigned based on those of its congeners."
+  }
+}

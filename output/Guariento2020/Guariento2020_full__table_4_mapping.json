@@ -1,0 +1,172 @@
+{
+  "ProcessID": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is a unique internal record identifier, not scientific data.",
+    "category": null,
+    "reasoning_relevance": "This is a unique identifier for a data processing record, not biological data."
+  },
+  "SampleID": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is a unique sample identifier, not scientific data.",
+    "category": null,
+    "reasoning_relevance": "This is a unique identifier for a sample, not a biological trait or measurement."
+  },
+  "BIN": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is a barcode/identification code, not a scientific data field.",
+    "category": null,
+    "reasoning_relevance": "This is a unique identifier for a barcode sequence, not biological data."
+  },
+  "Family": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a taxonomic classification, not the specific insect name required for verbatimIdentification.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biology (taxonomic rank).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Family",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study relies on field observations of live organisms (moths) in their natural habitat (riparian forests) using automated light traps. The measurements involve ecological traits and community structure derived from these in situ observations, fitting the definition of HumanObservation for ecological/behavioral traits.",
+    "measurementMethod": "Moths were collected using automated light traps (15 W tubes) placed 1 m above ground under a closed forest canopy, run for approximately 6 hours at dusk, once a month over two annual cycles (2006–2008). Ecological traits were assembled for 448 species from faunal monographs and databases. Phylogenetic trees were reconstructed using COI barcodes obtained from the Barcode of Life Datasystems (BOLD) and analyzed using RAxML and BEAST.",
+    "measurementMethod_reasoning": "The methodology describes the specific protocols used for data collection (light-trapping parameters), trait data acquisition (assembly from literature/databases), and phylogenetic analysis (COI barcoding and Bayesian tree reconstruction)."
+  },
+  "Subfamily": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a taxonomic classification, not the specific insect name required for verbatimIdentification.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biology (taxonomic rank).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Subfamily",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data (species counts, functional traits, and phylogenetic information) were derived from moths collected and identified using automated light traps at 28 field sites. The specimens were physically collected and subsequently analyzed for traits and DNA sequences.",
+    "measurementMethod": "Moths were collected using automated light traps (15 W tubes) at 28 sites in lowland forest stands along three rivers in easternmost Austria (2006–2008). Species were identified to species level. Functional traits (27 traits) were assembled from literature and databases. Phylogenetic trees were reconstructed using COI barcode sequences obtained from BOLD. Diversity metrics (SD, FD, PD) and community-weighted means (CWMs) were calculated using specific R packages (SpadeR, FD, pez, picante) and analyzed using two-way ANOVAs.",
+    "measurementMethod_reasoning": null
+  },
+  "Genus": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a taxonomic classification, not the specific insect name required for verbatimIdentification.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biology (taxonomic rank).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Genus",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurements (species diversity, functional diversity, and phylogenetic diversity) are based on the ecological traits and community composition of moths observed in their natural habitat using automated light traps. This constitutes a record of the state of the organism (moths) at a specific place and time (the sampling event), which aligns with the definition of HumanObservation for ecological/natural-history traits.",
+    "measurementMethod": "Moth community data collected via automated light traps (28 sites) including species abundance, 27 ecological traits (larval and adult niche), and COI DNA barcodes. Diversity metrics (SD, FD, PD) were calculated using specific R packages ('SpadeR', 'FD', 'pez', 'picante') after phylogenetic trees were reconstructed using RAxML and BEAST.",
+    "measurementMethod_reasoning": "The methodology describes the entire process: data collection (automated light traps), data types (abundance, 27 traits, COI barcodes), and the computational protocols used for analysis (R packages for diversity metrics, RAxML/BEAST for phylogeny)."
+  },
+  "Name in BOLD": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains the full taxonomic name of the insect as it appeared in the source.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biology (scientific name)."
+  },
+  "Name in Truxa 2012": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains an alternative taxonomic name for the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biology (scientific name)."
+  },
+  "Replacement for": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a metadata field indicating replacement status.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biology (scientific name).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Replacement for",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study involves collecting moth communities using automated light traps in the field (riparian forest stands) to assess ecological traits and diversity metrics. Since the data represents the state of the organism (moth community) observed in situ, and the measurements are ecological/community-based (diversity, functional traits, phylogenetic relatedness), HumanObservation is the most appropriate classification.",
+    "measurementMethod": "Moths were sampled using automated light traps at 28 sites. Species traits were compiled from literature and faunal monographs. Phylogenetic trees were reconstructed using COI barcodes obtained from the Barcode of Life Datasystems (BOLD). Diversity and functional metrics were calculated using specific R packages (SpadeR, FD, pez, picante) and analyzed using two-way ANOVAs and PCA.",
+    "measurementMethod_reasoning": null
+  },
+  "Collectors": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This lists the person who collected the specimen, not a scientific measurement.",
+    "category": null,
+    "reasoning_relevance": "This is metadata about the person who collected the sample, not a biological trait."
+  },
+  "Lat": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This is a geographic coordinate defining the sampling location.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A physical measurement (geographical coordinate) of the sample location.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Lon": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This is a geographic coordinate defining the sampling location.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A physical measurement (geographical coordinate) of the sample location.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Elevation (m)": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This is a measurement of the sampling location's altitude.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A physical measurement of the sample location.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Country": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This specifies the country where the sampling occurred.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the sample's geographical location.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Province/State": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This specifies the sub-regional location of the sampling event.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the sample's geographical location.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Region": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This specifies the regional location of the sampling event.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the sample's geographical location.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Sector": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This is a specific site code or area descriptor for the sampling location.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the sample's geographical location.",
+    "multi_value": true,
+    "value_type": "categorical"
+  },
+  "Exact Site": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This provides a detailed description of the sampling location.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the sample's geographical location.",
+    "multi_value": true,
+    "value_type": "categorical"
+  }
+}

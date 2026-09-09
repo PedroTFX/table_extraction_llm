@@ -1,0 +1,153 @@
+{
+  "a. population": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values ('Mt. Lala', 'Amami') represent geographic locations or sampling sites.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's origin based on mountain range names.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "experimental ID": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is a unique identifier for the experiment, not a biological measurement or taxon.",
+    "category": null,
+    "reasoning_relevance": "This is a unique identifier for the experiment, not a biological trait or measurement."
+  },
+  "photoperiod": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header describes an environmental condition or treatment applied to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the light/dark cycle condition (long or short).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "photoperiod"
+  },
+  "bury or not": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a binary observation (state) regarding the organism's behavior.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Binary observation of the behavior of burying the carcass (1.0 or 0.0).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "bury or not"
+  },
+  "b. beetle's ID": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are specimen identifiers, not taxonomic names of the insect.",
+    "category": null,
+    "reasoning_relevance": "This is a unique identifier for the individual beetle."
+  },
+  "photoperiod (1)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header describes an environmental condition or treatment applied to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the light/dark cycle condition (long or short).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "photoperiod"
+  },
+  "day after emergence": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a biological trait (age) measured for the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of time elapsed since a biological event (emergence).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "day after emergence"
+  },
+  "standardized ovary": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a physical measurement (size/volume) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the physical size/weight of an anatomical structure.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "standardized ovary"
+  },
+  "c. nest": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the microhabitat or nesting location of the organism.",
+    "category": null,
+    "reasoning_relevance": "This is an identifier for the nest location, not a biological trait or measurement."
+  },
+  "temperature": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes an environmental condition or treatment applied to the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the environmental temperature.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "temperature"
+  },
+  "population": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values ('Amami') represent a specific geographic location or study site.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's origin based on mountain range names.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "burying": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a binary observation (state) regarding the organism's behavior.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Binary observation of the behavior of burying the carcass (1.0 or 0.0).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "burying"
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Nicrophorus nepalensis",
+    "reasoning": "The paper measures the thermal tolerance and reproductive photoperiodism of Nicrophorus nepalensis across various populations.",
+    "decided_by": "llm",
+    "roles": {
+      "Nicrophorus nepalensis": "measured subject",
+      "Hehuan and": "habitat",
+      "Wulai and": "habitat",
+      "Wulai population": "habitat",
+      "Common garden": "condition"
+    },
+    "candidates": [
+      {
+        "name": "Nicrophorus nepalensis",
+        "mentions": 3,
+        "abbrev_mentions": 12,
+        "score": 66
+      },
+      {
+        "name": "Hehuan and",
+        "mentions": 7,
+        "abbrev_mentions": 0,
+        "score": 7
+      },
+      {
+        "name": "Wulai and",
+        "mentions": 6,
+        "abbrev_mentions": 0,
+        "score": 6
+      },
+      {
+        "name": "Wulai population",
+        "mentions": 6,
+        "abbrev_mentions": 0,
+        "score": 6
+      }
+    ]
+  }
+}

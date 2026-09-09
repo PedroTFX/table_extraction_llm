@@ -1,0 +1,367 @@
+# Incorporating continuous trait variation into biomonitoring assessments by measuring and assigning trait values to individuals or taxa
+
+JESSICA M. ORLOFSKE\* AND DONALD J. BAIRD<sup>†</sup>
+
+\*Canadian Rivers Institute & Department of Biology, University of New Brunswick, Fredericton, NB, Canada
+
+<sup>†</sup>Environment Canada, Canadian Rivers Institute & Department of Biology, University of New Brunswick, Fredericton, NB, Canada
+
+## SUMMARY
+
+1. Traits-based analyses of insect assemblages support biomonitoring programme objectives. To date, however, few traits-based metrics have demonstrated the degree of sensitivity or discriminatory power required by biomonitoring programmes. Trait information used for analyses is typically based on static descriptions of dynamic communities and is attributed only to taxonomic units. Given that traits can vary even among specimens from the same species, quantifying trait variation and its consequences could be essential for successful traits-based biomonitoring.
+
+2. Here, we study the consequences of measuring trait expression among individual specimens versus assigning trait states from published databases at the taxon level (genus or family) for the interpretation of trait patterns within aquatic insect assemblages. Specifically, do database body size trait states accurately reflect measured body size values of aquatic insects collected in biomonitoring samples and should body size data be aggregated at the taxon level or assessed at the specimen level to detect differences among sites?
+
+3. We assessed body size, a continuous trait linked to fundamental organism properties and ecological function, for four orders of aquatic insects: Ephemeroptera, Plecoptera, Trichoptera and Odonata. Invertebrate samples were collected from the Miramichi River basin (New Brunswick, Canada) according to the Canadian Aquatic Biomonitoring Network method.
+
+4. Concordance between measured specimen sizes and published trait states was poor; 55% of taxa expressed body sizes considerably smaller or larger than assigned database states. Recalibration of size classes based on specimen measurements yielded three size classes that facilitated detection of assemblage-aggregated size differences among reference sites. Measured body size trait values were able to distinguish these differences in community structure, while values derived from databases yielded erroneous patterns in the size structure among sites.
+
+5. Gaining accurate ecological insights from traits-based biomonitoring may require assessing trait properties at the scale of individual specimens. The benefits of this approach, however, should be balanced against additional effort required in the context of specific study or programme objectives.
+
+Keywords: aquatic insects, body size, intra-taxon trait variation, phenotypic plasticity, traits-based biomonitoring
+
+## Introduction
+
+As a result of ongoing global perturbations due to anthropogenic stressors, fresh waters are among the most significantly threatened ecosystems on the planet (Allan, 2004; Vor€ osmarty€ et al., 2010). Worldwide, biomonitoring programmes have been developed to detect ecosystem degradation, prioritise conservation areas and evaluate restoration progress. In addition to taxonomic data, the morphological and physiological properties of benthic macroinvertebrate assemblages – traits – can be used to assess ecological condition (Bonada et al., 2006; Menezes, Baird & Soares, 2010; Statzner & B^eche, 2010). Traits describe measurable, heritable characteristics of individuals that contribute to organism fitness (McGill et al., 2006). Trait information can support the assessment of ecological integrity by characterising ecosystem function and structure, providing mechanistic explanations and earlier detection of environmental change, which can be compared consistently among different biogeographic locations (Pollard & Yuan, 2010; Culp et al., 2011).
+
+The application of traits-based analyses has been tested and reviewed for freshwater systems threatened by various environmental stressors (Menezes et al., 2010; Statzner & B^eche, 2010; Brooks, Chessman & Haeusler, 2011; Dol-edec, Phillips & Townsend, 2011). A few studies have demonstrated predictable traits-metric responses to natural gradients or anthropogenic stressors (Dol-edec & Statzner, 1994; Townsend, Dol-edec & Scarsbrook, 1997; Statzner, Dol-edec & Hugueny, 2004; Finn & Poff, 2005; Verberk, Siepel & Esselink, 2008b; Larsen & Ormerod, 2010; Pollard & Yuan, 2010). Several of these and other studies provide examples of trait responses that differ from the a priori predictions derived from hypothesised mechanisms of response (Resh et al., 1994: Lamouroux. Dolédec & Gavraud, 2004: Bonada, Rieradevall & Prat. 2007; Tullos et al., 2009; Brooks et al., 2011; Dol-edec et al., 2011; Feio & Dol-edec, 2012; Zuellig & Schmidt, 2012). The development of a posteriori explanations for unexpected trait patterns limits synthesis and application (Resh et al., 1994; Verberk, Siepel & Esselink, 2008a; Statzner & B^eche, 2010). Thus, despite considerable effor to develop effective traits-based methods (Clarke et al., 2006; Verdonschot & Moog, 2006; Carlson, Johnson & McKie, 2012), traits-based metrics have not been fully integrated into many established biomonitoring programmes, with a few exceptions (Feio & Dol-edec, 2012). Multi-metric indices often use selected traits (Mondy et al., 2012), but such indices suffer from limited geographic scope and can vary according to system and stressor (Ruaro & Gubiani, 2013). Multivariate reference condition approach models (e.g. RIVPACS, Moss et al., 1987; Wright, Furse & Moss, 1998; Clarke, Wright & Fruse, 2003; Armanini et al., 2013; AUSRIVAS, Smith et al., 1999; Davies, 2000) used by several national biomonitoring programmes still rely primarily on taxonomic rather than trait data, but recent work by Feio & Dol-edec (2012) supports the inclusion of trait information into these types of analyses.
+
+An obstacle to the effective performance of traits-based metrics to detect and diagnose meaningful change could be how trait properties are defined and applied to community data. Trait information on aquatic invertebrates is available in publicly accessible databases (e.g.
+
+US Environmental Protection Agency Freshwater Biologi cal Traits Database, http://www.epa.gov/ncea/global/ traits/; the Taxa and Autecology Database for Freshwater Organisms, http://www.freshwaterecology.info; and Tachet, Bournaud & Richoux, 1991; Usseglio-Polatera et al., 2000a,b). Trait databases include information on a variety of organismal traits, such as size, shape, functional feeding group, respiration mode as well as many other morphological, behavioural and ecological characteristics. Each trait possesses multiple modalities or states, for example, size is often partitioned into states such as small, medium and large. Trait state records for a taxon are usu ally based on published taxonomic accounts, reports and selected studies that have been compiled from numerous sources (Vieira et al., 2006). These types of records are often restricted to only a few populations with detailed morphological data provided by examination of a subset of voucher specimens, although efforts to gather additional data are ongoing (e.g. freshwaterecology.info). The resulting trait data matrix may be geographically restricted and has not been independently or empirically vetted for actual aquatic invertebrate communities in a biomonitoring context. Merritt, Cummins & Berg (2008) suggest caution in using such broadly generalised trait information in their highly cited taxonomic treatment of North American aquatic insects. Additionally, several methods can be used to link trait data to taxon occur rence. These methods include binary trait selection based on geographic constraints (Horrigan & Baird, 2008), majority designation based on trait occurrence in component lower taxonomic groups (Tullos et al., 2009) and analytical procedures such as ‘fuzzy-coding’ (Chevenet, Dol-edec & Chessel, 1994; Dol-edec, Statzner & Bournaud, 1999) and taxon-weighting (Monaghan & Soares, 2013). All of these methods attribute trait states at the taxon level regardless of whether the trait state is expressed by the organism collected.
+
+Aquatic insect assemblages are composed of many taxa, themselves represented by mixtures of ages and developmental stages which may possess different habitat requirements, trophic positions, behaviours or ecological functions (Hynes, 1976; Peckarsky, 1982; Moreira & Peckarsky, 1994; Hanquet et al., 2004; Reich & Downes, 2004; Sagnes, M-erigoux & P-eru, 2008). Thus, effectively summarising the traits of these assemblages is challeng ing. Some organismal traits are discontinuous or discrete, such as respiratory mode, mode of feeding or trophic position. These categorical traits might seem easier to characterise, but may not be mutually exclusive for many taxa across all life stages. Continuously varying phenotypic characters, such as body size, are notoriously difficult to categorise in a concise or consistent fashion. Predictable ontogenetic variation and phenotypic plasticity that enables organisms to adapt to local conditions can contribute to high natural variability and result in taxontrait mismatches. These discrepancies may obscure linkages between stressors and summarised trait states or metrics, particularly if a significant proportion of the individuals grouped within a taxon do not possess the assigned trait state. Thus, representing these variables as discrete trait states may not adequately represent natural assemblages (Verberk, van Noordwijk & Hildrew, 2013). Higher resolution trait information may be required to achieve biomonitoring objectives.
+
+Traits-based biomonitoring methods could be used to detect environmental degradation before a change in taxonomic composition occurs, but only when traits composition is disconnected from taxonomic composition. When traits are assigned per taxon, trait composition is inescapably linked to taxonomic composition and therefore may not have greater discriminatory power over current taxonomic metrics. Examining traits at the specimen level, uncoupling trait data from taxonomic identity, allows traits to be used to provide an independent assessment of site condition. Thus, traits-based biomonitoring requires identification of appropriate criteria to apply trait information to community data.
+
+Body size strongly mediates ecological function and is linked to physiological properties (e.g. metabolism, fecundity) and life history characteristics (e.g. dispersal), which determine species performance in different habitats (Brown, 1995; Gayraud et al., 2003; Robson, Barmuta & Fairweather, 2005; McGill et al., 2006; Dol-edec & Statzner, 2008; Chown & Gaston, 2010). The body size distribution of a community is ecologically informative (Woodward & Hildrew, 2002; Woodward et al., 2005; Hildrew, Raffaelli & Edmonds-Brown, 2007) and can be used to compare similar habitats (Robson et al., 2005). Since body size among individuals of the same taxon can differ by orders of magnitude within and across habitats (Brown, 1995), it is prudent to quantify variation in body size before arbitrarily assigning trait information to a taxon or specimen.
+
+Intra-taxon trait variability, including body size, has important implications for biomonitoring studies. Continuous traits can be measured rather than summarised into discrete categories and assessed independently of taxonomic data when applied to individuals. This approach could add discriminatory power to compare ecological condition across sites. Therefore, we examine an important continuous trait, body size, from an empirical perspective and assess its concordance with current trait database values. We investigate whether body size trait states listed in databases accurately represent the body size values of aquatic insects collected for biomonitoring and whether attributing body size information to individuals provides a better characterisation of community size structure among reference sites. We propose that development of traits-based analyses of aquatic insect assemblages can benefit from a careful examination of individual trait expression at the scale of individuals to account for variability in trait data.
+
+## Methods
+
+## Study area
+
+Benthic invertebrate collection sites were located in the Miramichi River basin (New Brunswick, Canada). The Miramichi basin is located entirely in the province of New Brunswick and occupies an area of 13 800 km<sup>2</sup>, which drains into the Gulf of St. Lawrence (Swansburg et al., 2004). Three reference sites were selected to provide a gradient of flow and substratum conditions (Table 1). Samples were obtained from one location on the South Branch Renous River (SBREN) and two locations on the Dungarvon River (Fig. 1); one sample was taken approximately 23.4 km upstream (mid-stream, DUNMR) of the second sampling location (downstream, DUNDS). Reference sites were classified according to Canadian Aquatic Biomonitoring Network (CABIN) criteria as assessed in 2010 (Environment Canada, 2012).
+
+## Aquatic insect sampling
+
+Benthic macroinvertebrate samples were collected using a three-minute kick-net (mesh size 400 lm) procedure according to the CABIN protocol (Environment Canada, 2012). This approach provides an integrated sample across the primary microhabitats available in each reach. Samples were collected in late autumn (2 November 2007) in accordance with the CABIN protocol to coincide with stable, wadeable flow levels and maximise collection of mature or near-mature aquatic insect larvae for many Canadian river systems (Environment Canada, 2012). Samples were preserved in 10% buffered formalin for 24–48 h to fix biological tissues and prevent specimen distortion (Leuven, Brock & Van Druten, 1985; Stoffels, Karbe & Paterson, 2003). Following formalin treatment, samples were transferred to 70% ethanol for storage, sorting and identification.
+
+Table 1 Summary of water chemistry and channel characteristics obtained during biomonitoring sampling at three locations in the Miramichi Basin on 2 November 2007. Water chemistry parameters were obtained using a YSI multiparameter probe. Channel characteristics describe the stream profile used for the determination of discharge (SonTek Flowtracker) following benthic sample collection. Median percent embeddedness is given for the area used for benthic sampling. Average and maximum substratum (cobble) size is also provided
+
+<table><tr><td rowspan="2"></td><td colspan="3">Site</td></tr><tr><td>South Branch Renous</td><td>Dungarvon Downstream</td><td>Dungarvon Mid-Reach</td></tr><tr><td>Abbrev.</td><td>SBREN</td><td>DUNDS</td><td>DUNMR</td></tr><tr><td>Latitude</td><td>46.79287</td><td>46.81393</td><td>46.70777</td></tr><tr><td>Longitude</td><td>-66.48058</td><td>-65.91795</td><td>-66.15686</td></tr><tr><td colspan="4">Water chemistry parameters</td></tr><tr><td>Temp. (°C)</td><td>3.59</td><td>6.60</td><td>5.42</td></tr><tr><td>Dissolved oxygen (mg/L)</td><td>13.32</td><td>16.56</td><td>14.82</td></tr><tr><td>Conductivity (μS/cm)</td><td>36</td><td>26</td><td>38</td></tr><tr><td>pH</td><td>7.25</td><td>6.96</td><td>6.39</td></tr><tr><td colspan="4">Channel characteristics</td></tr><tr><td colspan="4">Depth (cm)</td></tr><tr><td>Mean</td><td>33.5</td><td>42.5</td><td>33.1</td></tr><tr><td>Max.</td><td>48</td><td>67</td><td>56</td></tr><tr><td colspan="4">Velocity (m/s)</td></tr><tr><td>Mean</td><td>0.32</td><td>0.56</td><td>0.63</td></tr><tr><td>Max.</td><td>0.49</td><td>0.71</td><td>0.81</td></tr><tr><td colspan="4">Width (m)</td></tr><tr><td>Bankfull</td><td>33.3</td><td>42.3</td><td>34.4</td></tr><tr><td>Wetted</td><td>21.7</td><td>28.0</td><td>24.7</td></tr><tr><td>Discharge (m3/s)</td><td>2.34</td><td>6.64</td><td>5.12</td></tr><tr><td colspan="4">Substratum variables</td></tr><tr><td>Embeddedness (%)</td><td>0</td><td>0.2</td><td>0.15</td></tr><tr><td colspan="4">Size (cm)</td></tr><tr><td>Mean</td><td>11.6</td><td>6.6</td><td>9.4</td></tr><tr><td>Max.</td><td>24</td><td>11</td><td>19</td></tr></table>
+
+## Specimen processing
+
+We extracted our target taxa, Ephemeroptera, Plecoptera, Trichoptera and Odonata (EPTO), from each sample. Preserved material was used to replicate the standard biomonitoring sample workflow and represents the majority of material available for trait assessment. The use of preserved material reduced handling time to maximise the number of specimens used for the analysis. Any damaged, distorted or aberrant specimens caused by abrasion with substratum material during sample collection and processing or the effects of the preservation procedure were removed (<5% of the total specimens retrieved for this analysis). The remaining specimens were identified to the lowest possible taxonomic level (family or genus; Merritt et al., 2008) and digitally photographed with the aid of a stereomicroscope (Leica Mz 16 A with attached 10446261 0.639 extension tube, Wetzlar, Germany; Q Imaging MicroPublisher 5.0 RTV, Surrey, BC, Canada).
+
+![](images/210bb9549179360c50f7386b6bfad011c00ce8ba3a61b0346b9aed1025993faf.jpg)
+
+![](images/6513d09e12c3b26732fcdab65195c62f5cb616d944795f36f4e651b8fea21c8f.jpg)  
+Fig. 1 Map of New Brunswick, Canada, indicating three benthic invertebrate sampling locations in the Miramichi River basin used in this study.
+
+We used total body length (anterior margin of the head to posterior tip of the last abdominal segment) as our proxy of body size. Lengths were measured from the calibrated digital photographs of the preserved material using AutoMontage Pro software (Syncroscopy; Synoptics Ltd., Cambridge, U.K.).
+
+## Evaluating database body size trait states correspondence to measured body size values
+
+Body size is a continuous trait that is categorised in different ways among aquatic invertebrate trait databases: maximal body size with seven trait states (Usseglio-Polatera et al., 2000a,b), body size with four trait states (Vieira et al., 2006) and body size at maturity with three trait states (Poff et al., 2006; USEPA database). We compared our measured body size values to the trait states provided by the USEPA Freshwater Biological Traits Database: small < 9000 lm; medium 9000–16 000 lm; large > 16 000 lm; http://www.epa.gov/ncea/global/ traits/, accessed April 2012). Currently, the USEPA database represents the most comprehensive trait database for North American aquatic invertebrate taxa and describes taxa known to occur in our Canadian samples. The application of these database states ensures the most appropriate trait classification for our taxa as trait information from other databases covering different geographic regions may not be appropriate for North American taxa and introduce another source of potential misclassification.
+
+Higher taxonomic resolution (i.e. species) could reduce intra-taxon size variation and potentially alter trait state assignment, although it is worth noting that this level of taxonomic identification cannot be achieved consistently across all instars (Orlofske & Baird, 2013). Therefore, it was necessary to summarise database body size trait states for each taxon identified from our samples at either the family or genus level. Family-level trait state assignments were based on trait records from genera only found in Atlantic Canada based on CABIN database records (http://www.ec.gc.ca/rcba-cabin/ default.asp?lang=En&n=4A1D6389-1, accessed April 2012).
+
+Body size information was available for all but one taxon, resulting in exclusion of <1% of specimens collected (n = 44). Correspondence of measured body size values to database trait state was assessed for each taxon by comparing the median body size measurement to the range for the database body size trait states. If the median body size for the taxon fell outside the bounds of the database range, the record was considered a misclassification. Similarly, we compared the maximum body size for each taxon to the corresponding database range because the database values are expected to reflect maximum larval size prior to maturation. We tallied the number of specimens that were not properly classified to illustrate the severity of the data mismatches.
+
+## Classification of body size trait states based on measured trait data
+
+We sought to refine the body size trait states using measured body size distributions. Body size distributions were visualised to determine natural breaks using kernel density estimates generated from the size measurements of the aquatic insect specimens. Body size classes, comparable to the body size trait states available in the trait database, were tested with a k-means cluster analysis preformed for one to seven potential groupings (Maechler et al., 2012). The cluster analysis identified the sizes that occurred with the highest frequency among our measurements of the insect populations. The optimal number of groups and group membership for measured size classes were determined using explained variance of alternative grouping structures and visualisation of the slope of the elbow criterion (PAM function). We selected the number of partitions in the data that maximised the variance explained by the clustering algorithm without overfitting the data into more size classes that would not significantly increase explained variance. Once the number of groups was selected, the median and upper and lower bounds were calculated. Each individual specimen was classified into a single size class. Each taxon was assigned a size class based on the highest frequency of constituent specimens within a particular size class. The reclassified data were used to compare how well the alternative classification schemes represented the size structure of the sites.
+
+## Testing specimen size or database body size trait states to detect differences among reference sites
+
+A nonparametric Kruskal–Wallis test and subsequent Tukey-like multiple comparisons (Aho, 2011) were used to compare the measured body size distribution among the three reference sites. The rank test was more appropriate for evaluating this objective since we were evaluating similar non-normal data distributions with less emphasis on differences among means. However, a one-way ANOVA on logarithmically transformed data produced concordant results for a comparison of the body size median at each site. A chi-squared test was used to compare the proportions of body size trait states and measured size classes among sites. All calculations were carried out in the R programming environment (R Development Core Team, 2012; R Studio, 2012).
+
+## Results
+
+The three biomonitoring samples yielded 4723 intact specimens for body size measurement. Identifications included 28 families and 44 genera, with nine specimens retained at the order level (Trichoptera and Plecoptera). A total of 66 unique ‘lowest taxonomic units’ occurred among the samples (see Appendix S1 in Supporting Information).
+
+Evaluating database body size trait state correspondence to measured trait values
+
+The median size for more than half of the taxa (\~55%, 35/64) did not correspond to their assigned trait database state (Fig. 2). Only one of the misclassified taxa,
+
+![](images/fba3f00d6538570609377695f2f87e5406fecefc0bfed74915ab6893b4395214.jpg)  
+Fig. 2 Boxplot of body size variation for 64 aquatic insect taxa for three typical biomonitoring samples collected from three stream reaches in the Miramichi River basin, Canada, on 2 November 2007. The grey boxes represent the USEPA trait database body size trait state for each taxon. Taxa are arranged by size within each USEPA trait database body size state category: small (<9000 lm), medium (9000–16 000 lm) and large (>16 000 lm).
+
+Cheumatopsyche, had a median size that exceeded its database body size range. The median size for all other misclassified taxa occurred below the expected range (Fig. 2). The size distributions of many taxa possessed a high degree of natural variability as demonstrated by the interquartile range, which spans more than one trait state for four taxa: Dolophilodes, Cheumatopsyche, Paragnetina and Pteronarcys (Fig. 2, see Appendix S2 in Supporting Information). In a few cases (e.g. Hydropsyche and
+
+Isonychia), the size distribution of the taxon approaches the boundaries for the corresponding trait database state, but do not attain the threshold. One appropriately classified taxon, Dolophilodes, has a distribution aggregated at the upper boundary of its designated trait database range.
+
+The maximum size for larval specimens also produced a similar number of misclassifications for trait database states (\~53%, 34/64). Classification based on the maximum size allowed a few taxa to achieve their designated trait database range (Hydropsyche and Isonychia), however, three additional taxa exceeded the upper boundary of their expected trait database range (Dolophilodes, Paragnetina and Hydropsychidae; Appendix S2).
+
+The classification of individual specimens into trait database states paralleled the results of the taxonomic analysis. Overall, 44% (2061/4670) of specimens possessed sizes that were either above or below the designated range for the trait database state attributed by their taxonomic identity. The highest proportion of misclassified specimens (\~97%, 1751/1798) occurred for the state representing the medium body size trait state (9000–16 000 lm). In this case, the majority of specimens were smaller than expected, however, two specimens within Paragentina (Plecoptera) exceeded their expected size range. The lowest proportion of erroneous specimen records occurred for the small body size trait state (<9000 lm), and all the misclassifications were specimens larger than the bounds for the trait state range (\~0.5%, 14/2559), including specimens within the Trichopteran genera Cheumatopsyche and Dolophilodes. Conversely, the inaccurate specimen records for the large body size trait state (>16 000) were all specimens that failed to achieve the size threshold for the category (\~95%, 296/313).
+
+## Classification of body size trait states based on measured trait data
+
+Cluster analysis revealed three primary size groups within the data set. These three size classes maximised the cumulative variance explained. Partitioning the size distribution into more size classes did not contribute significantly to the explained variance in the analysis. Therefore, we partitioned the continuous EPTO body size distribution into three size ranges (<3725 lm, 3726– 10 000 lm and >10 000 lm) based on the size ranges of each of the size clusters (Fig. 3). Each of these categories is an equivalent order of magnitude to the trait database size trait states, but is shifted towards lower values to appropriately reflect the abundance of smaller specimens and taxa encountered in our biomonitoring samples.
+
+Testing specimen size or database body size trait states to detect differences among reference sites
+
+Measured trait data were used to describe patterns in assemblage size structure among the three reference sites. The body size distribution generated by the measurement data was bimodal and skewed towards smaller body sizes for each site (Fig. 3). Significant differences in the frequency of organism sizes were observed among sites (K = 427.8, d.f. = 2, $P < 0 . 0 0 0 1 )$ with post hoc analyses indicating that all site comparisons were different. SBERN had the smallest specimens and the highest overall density of small specimens followed by DUNDS and finally DUNMR, which also had a slightly higher density of larger specimen (Fig. 3).
+
+We compared three methods that can be used to describe the body size structure of the assemblage – trait database body size trait states – small (<9000 lm), medium (9000–16 000 lm), large (>16 000 lm) size classes applied to taxa as fixed states and measured specimens using our estimated size classes: 1: <3725 lm, 2: 3726– 10 000 lm and 3: >10 000 lm (Fig. 4). By applying the trait database states to our data set, the proportion of database states differs among sites (Fig. 4a), but does not reflect the actual size distribution (Fig. 3). The proportion of trait state medium is artificially inflated at DUNMR and the proportion of trait state small is reduced for SBREN (Fig. 4a). All three sites possess a higher proportion of trait state large than occurred in the data (Fig. 4a). Our estimated, rescaled size classes applied to taxonomic groups as states demonstrate slight improvement over database states (Fig. 4b). Size classes correct the proportion of size class one (<3725 lm) observed for DUNMR and SBREN. The rescaled size classes also provide a more accurate proportion of size class two (3726–10 000 lm) for DUNMR and size class three (>10 000 lm) for all sites, but fail to discriminate differences between DUNMR and DUNDS (Fig. 4b). Classifying individual specimens based on size using the rescaled size classes retained the structure of size distribution pattern at each site, and differences among sites were observed (Fig. 4c). SBREN has the highest proportion of size class one (<3725 lm), DUNMR has the highest proportion of size class two (3726– 10 000 lm) and three (>10 000 lm), and DUNDS is intermediate (Fig. 4c).
+
+![](images/04e405197dd51a6793d0c69145f481f50d4fe8d68247bc54c9ea1dfe0d891bc5.jpg)  
+Fig. 3 Kernel density plot of EPTO body size distribution for each New Brunswick stream site partitioned into three size ranges (<3725 lm, 3726–10 000 lm and >10 000 lm) based on a cluster analysis procedure. Distribution of EPTO body size varies significantly by site. EPTO, Ephemeroptera, Plecoptera, Trichoptera and Odonata
+
+![](images/562b398b4b81883d5ef1fc2e1d7bde129f4f892d9aa4bcfd48df9eab881decae.jpg)
+
+(b)  
+![](images/143f86ce2d7b36c8952b4d2a616c3c6e887c2207a96d2b6d20108b4e4b95e596.jpg)
+
+(c)  
+![](images/ac4331255a66bb6c0dc31827d7a9faabffe2af067bd9149e9b8239e1a3f20bdc.jpg)  
+Fig. 4 Size structure of sites summarised as (a) trait database states applied to taxa, (b) size classes applied to taxa and (c) size classes applied to individuals. Each categorisation method offers a different assessment of the body size structure of the sites. Size classes applied to individuals provide the closest approximation to the continuous size distributions for each of the sites.
+
+## Discussion
+
+Body size is a fundamental organismal property that varies at the individual level, and examination of community size information can reveal important spatial and temporal patterns (Robson et al., 2005; Chown & Gaston, 2010). Identifying the most appropriate scale to collect and analyse community size information can enhance determination of site condition and habitat suitability. We evaluated the efficacy of separating a continuous trait, body size, into discrete categories and applying body size categories to aquatic insect taxonomic groups or individual specimens to infer site properties from biomonitoring data.
+
+## Methods for summarising continuous trait information for biomonitoring
+
+Traits are expressed by individual organisms, can be measured and should relate to organism fitness (McGill et al., 2006), yet the primary applications of trait information for biomonitoring using aquatic insects rely on traits, both continuous and discrete, summarised into states. Trait states may incorrectly portray the trait expressed by the organism, resulting in a mismatch between the actual trait value and the database values used for analysis and interpretation. We demonstrate this potential source of error by comparing our measurements of body sizes to North American trait database states for key aquatic insects found in our samples. Body size trait states defined in several trait databases are based on the maximum size achieved by aquatic insects during the larval stage. This can systematically overestimate the size range of individuals within composite biomonitoring samples. Aquatic insects, like their terrestrial counterparts, grow through multiple orders of magnitude during their development (Chown & Gaston, 2010; Woods, 2013) and exhibit type 3 mortality (sensu Pinder, Wiener & Smith, 1978), resulting in greater numbers of individuals of initial larval stages relative to the number surviving to adulthood (Birch, 1948). Other organismal traits such as phenology, voltinism and emergence synchrony may also contribute to the overall size variability of the aquatic insects collected in biomonitoring samples (Huryn & Wallace, 2000). These properties of aquatic insect populations make it more likely for specimens, which are smaller than their projected maximum size, to dominate biomonitoring samples. This prediction is evident in our samples as <1% of misclassified specimens exceeded their expected body size trait state range; all of the remaining misclassified specimens were smaller than estimated by the trait database states. The interpretation of conventional database body size trait states for biomonitoring may misinform aquatic insect assemblage structure and inferences of habitat conditions.
+
+Rescaled body size classes or trait states may improve data quality for traits-based biomonitoring approaches. We partitioned continuous body size measurements into size classes that more accurately reflect aquatic insect assemblage size structure. The modified size ranges represent the body sizes present in the sample rather than the expected body size of mature larvae, but can be applied in the same types of analyses as conventional trait states. Our reclassification, however, is limited to four orders of aquatic insects. A comprehensive analysis of the entire benthic macroinvertebrate community would extend beyond the scope of the present study and may suggest additional modifications to both the number of categories and the specific size ranges for revised body size trait states.
+
+Although additional data may be useful for establishing more meaningful trait states for body size, any classification scheme for a continuous trait, such as body size, may fail to adequately represent the trait properties of the biological assemblage and restrict inference (Verberk et al., 2013). The body size distribution of a sample can be used directly as the response variable for site assessment.
+
+Observing patterns in body size can lead to the development of specific hypotheses to aid in site assessment and contribute to stressor diagnosis at impacted sites. For example, body size has been proposed as a potential indicator of global climate change impacts (Parmesan, 2006; Gardner et al., 2011; Forster, Hirst & Atkinson, 2012). Therefore, improved data resolution on body size patterns may be useful as a signal of climate-induced community changes which precede phenological shifts and range modifications while simultaneously influencing other traits such as emergence synchrony (Harper & Peckarsky, 2006) and voltinism (Braune et al., 2008). These patterns, as well as other differences among sites, might only be observed reliably when size is evaluated as a continuous variable.
+
+Conventional traits-based approaches attribute trait information to each taxon observed in a sample. This practice treats all individuals of a taxon as equivalent and even with improved trait state definitions may not fully account for intra-taxon variability. However, by measuring traits, such as size, for individual specimens, the data is a realistic accounting of organism status, condition and functional role at a site. These data can be more easily quantified, classified and subjected to more rigorous statistical tests. Moreover, the scope of trait data is not restricted by the availability of trait database records. Measuring trait data at the individual level also makes it possible to consider trait data independent of taxonomic identity, reducing barriers due to taxonomy and biogeography. Recent literature exploring specimenlevel patterns in ecotoxicological and ecophysiological traits of aquatic insects supports measuring traits at an individual level, rather than aggregating traits at the taxon level, to substantially improve interpretation of trait–stressor relationships (Rubach et al., 2012) or evaluate ecophysiological properties (Back & King, 2013). Indeed, only in community analyses of invertebrate samples is routine evaluation of individual specimens an issue due to vast quantities of specimens and high diversity causing taxonomic complications and time constraints (Orlofske & Baird, 2013). The assessment of physical measurements of plant and vertebrate traits for a variety of ecological studies is more common (e.g. Cornelissen et al., 2003 for plants; Adams, Brown & Goede, 1993 for fish).
+
+## Comparing performance of different trait summary approaches
+
+The primary objective of many biomonitoring programmes is to distinguish patterns among sites that are indicative of environmental condition or change (Rosenberg & Resh, 1993). We evaluated the performance of conventional database body size trait states and our size classes applied to taxonomic units or individual specimens to detect meaningful patterns among references sites. In our analysis, applying the trait states or size ranges from the North American trait database (i.e. USEPA database) failed to appropriately characterise the size structure of the aquatic insect community among reference sites. Similar size discrepancies may occur with other trait databases, although these could not be explored, since our data were restricted to North American sites. Our rescaled size classes applied to taxonomic groups improved data resolution to characterise the body size structure of the aquatic insect assemblage, but did not account for intra-taxon variability. As a result, patterns at the site scale remained highly skewed. In contrast, classifying each individual based on measured size provided a more consistent and informative description of size trends, both within and between sites. Either of these summarising methods provided a good approximation of body size as a continuous variable – the standard to which we compared each method. We conclude that measuring continuous traits, such as body size, at the individual specimen level, provides biologically relevant and ecologically informative trait information to support site comparisons.
+
+Patterns in body size may relate to different environmental conditions among our sites. For reference sites, these differences likely relate to variation in physical habitat parameters, including temperature, hydraulic complexity and flow regime, which may impact aquatic insect growth rates (Ward, 1992; Huryn & Wallace, 2000). Limited data on these and other parameters were available for evaluating site conditions for these samples; however, subsequent work on these sites has confirmed natural variation in hydrologic and hydraulic properties consistent with the body size patterns observed (J. M. Orlofske and D. J. Baird, unpublished data).
+
+Trait information, especially at the specimen level, can elucidate site-level responses or conditions. Empirical support for measuring body size, such as our study, will encourage the development of more efficient methods for collecting size information from bulk aquatic biomonitoring samples to provide more effective discrimination of natural variation among sites or habitats impacted by current or predicted environmental stressors.
+
+## Considerations for traits-based biomonitoring
+
+The collection and processing of biomonitoring samples can be expensive and time-consuming. Trait determination, such as size measurement, adds to time and labour considerations as well as methodological processing requirements for biomonitoring programmes. Fresh biological material may be more appropriate for the determination of specimen size, as some types of preservation may cause specimen shrinkage. Yet, preserved material provides many practical advantages for efficient specimen identification and measurement and is standard practice for many biomonitoring protocols (Carter & Resh, 2001). Therefore, any future integration of direct trait assessment, including size, would probably need to accommodate sample preservation. Our results indicate that any specimen shrinkage attributable to preservation is probably minimal, as selected individuals of several taxonomic groups achieved or even exceeded their estimated mature larval size based on trait database values. Many of the specimens that did not achieve their expected trait database state were considerably smaller than expected, and it is unlikely that this is due to the effect of preservative alone. Declaration in individual studies and annotation of trait database records of whether size values were determined on fresh or preserved material along with the type of preservation used would allow for cross-validation and comparison.
+
+The resolution and applicability of both trait and taxonomic data must be evaluated in the context of biomonitoring, because traditional traits-based approaches link trait database states to taxonomic determinations. Higher resolution taxonomic information (e.g. species level) can improve the quality of inference from biomonitoring data (Lenant & Resh, 2001), but it is difficult to achieve given reasonable constraints on processing times, taxonomic expertise and specimen maturity (Bailey, Norris & Reynoldson, 2001; Mueller, Pander & Geist, 2013; Orlofske & Baird, 2013). Therefore, taxonomic data resolved at the genus or family level are common for many biomonitoring applications (Carter & Resh, 2001). Trait database states summarised for each coarser level (family or genus), regardless of trait attribution methodology, may increase variability or noise, because each coarser level describes an increasingly larger number of constituent taxa that may have different growth trajectories or maxima. The coupling of trait and taxonomic information can obscure actual sample properties, since trait information applied to a taxon, even at the species level, may still misrepresent the actual properties (e.g. size) of the specimens occurring in the biomonitoring sample. Assessing the traits of individual specimens provides accurate trait information for the sample and can be analysed independently of taxonomic data, as we demonstrate in this study (e.g. Fig. 4c). Balancing the practical aspects of both taxonomic and trait resolution of data requires a thorough understanding of the assumptions inherent in each classification step for both taxonomic and trait data.
+
+Trait databases are valuable repositories of functional character information on aquatic insect ecology that contribute to the creation of enhanced biomonitoring techniques. However, the existence of trait databases does not mean that researchers and practitioners should assume that these data are the most appropriate measures for every trait. Trait measurement data can support the definition of trait states that are more representative of specimens collected for routine biomonitoring, fill gaps in the trait records for many taxa and validate trait data from multiple sources (Fitzsimmons, 2013). Different forms of trait data could be incorporated into trait databases and used for comparative assessments, including means, medians, ranges or quartiles. Refinement to many traits, such as body size, could be accomplished using measurement data accumulated by dynamic, semantic trait databases (Baird et al., 2011). This process of compiling trait data already occurs for some trait databases (e.g. freshwaterecology.info). Development of traits-based biomonitoring tools that are both precise and reliable will be more successful with an increased investment towards the collection of highquality trait data and metadata to be used in analyses and biomonitoring applications (Baird et al., 2011).
+
+Prioritisation of programme or study objectives and budgetary considerations may determine whether it is beneficial to assess continuous trait data at the scale of individual specimens or whether trait and taxon categories can be applied. It may not be necessary or appropriate to evaluate detailed size information for every instance of biomonitoring data collection. Coarse descriptions of sites using trait database states may be sufficient for the initial characterisation of site status or to expedite surveys on many sites, but stressor diagnosis and enhanced prediction for changes in site condition may benefit from more detailed trait information (Culp et al., 2011). It is essential that project managers and researchers understand the trade-offs between effort and benefit with assumptions inherent in trait data collection to select the appropriate level of data resolution. Improved techniques and technology will enable more cost- and time-effective application of trait assessment for biomonitoring, and further research will refine recommendations for when trait measurement can support programme objectives and develop protocols for consistent trait assessment (Cornelissen et al., 2003).
+
+Direct trait measurement data may provide greater ecological information than trait states alone, improving our ability to determine ecological condition from traitsbased biomonitoring and linking community dynamics and other ecological properties (Bolnick et al., 2011).
+
+Thus, actual data values may provide better inputs to enhance stressor-specific predictive models than trait states (Verberk et al., 2013). A standard workflow to process biomonitoring samples, which incorporates measured trait data (Ramsay et al., 1997), could be developed to provide reliable, standardised, comparable trait data for traits-metrics development and eventually site classification and stressor diagnosis. The establishment of next-generation databases that incorporate direct trait measurement data from studies or monitoring programmes could provide additional data for future applications and meta-analysis (Baird et al., 2011). Realising the full benefits of traits-based biomonitoring depends on evaluating trait properties and accounting for natural organismal variability while balancing additional time and financial cost in the context of specific study objectives.
+
+## Acknowledgments
+
+We thank Colin Curry for supplying the invertebrate samples, Kristie Heard and Adam Bliss for assistance with taxonomic identifications and photography, Dr. Wendy Monk for producing site maps, Christopher Tyrrell for R programming assistance and Sarah Orlofske for reviewing earlier drafts of the manuscript. We appreciate the effort of reviewers and editorial staff to improve the quality of this manuscript. We acknowledge funding support from the New Brunswick Museum Florence M. Christie Research Grant in the Natural Sciences to J.M.O., National Sciences and Engineering Research Council of Canada Discovery Grant to D.J.B and Environment Canada program funds. The authors declare no conflict of interest.
+
+## References
+
+Adams S.M., Brown A.M. & Goede R.W. (1993) A quantitative health assessment index for rapid evaluation of fish condition in the field. Transactions of the American Fisheries Society, 122, 63–73.
+
+Aho K. (2011) Asbio: A Collection of Statistical Tools for Biologists. R package version 0.3-40. Available at: http://cran. r-project.org/package=asbio
+
+Allan J.D. (2004) Landscapes and riverscapes: the influence of land use on stream ecosystems. Annual Review of Ecology, Evolution, and Systematics, 35, 257–284.
+
+Armanini D.G., Monk W.A., Carter L., Cote D. & Baird D.J. (2013) Towards generalised reference condition models for environmental assessment: a case study of rivers in Atlantic Canada. Environmental Monitoring and Assessment, 185, 6247–6259.
+
+Back J.A. & King R.S. (2013) Sex and size matter: ontogenetic patterns of nutrient content of aquatic insects. Freshwater Science, 32, 837–848.
+
+Bailey R.C., Norris R.H. & Reynoldson T.B. (2001) Taxonomic resolution of benthic macroinvertebrate communities in bioassessments. Journal of the North American Benthological Society, 20, 280–286.
+
+Baird D.J., Baker C.J.O., Brua R.B., Hajibabaei M., McNicol K., Pascoe T.J. et al. (2011) Toward a knowledge infrastructure for traits-based ecological risk assessment. Integrated Environmental Assessment and Management, 7, 209–215.
+
+Birch L.C. (1948) The intrinsic rate of natural increase of an insect population. Journal of Animal Ecology, 17, 15–26.
+
+Bolnick D.I., Amarasekare P., Araujo M.S., B- urger R.,€ Levine J.M., Novak M. et al. (2011) Why intraspecific trait variation matters in community ecology. Trends in Ecology & Evolution, 26, 183–192.
+
+Bonada N., Prat N., Resh V.H. & Statzner B. (2006) Developments in aquatic insect biomonitoring: a comparative analysis of recent approaches. Annual Review of Entomology, 51, 495–523.
+
+Bonada N., Rieradevall M. & Prat N. (2007) Macroinvertebrate community structure and biological traits related to flow permanence in a Mediterranean river network. Hydrobiologia, 589, 91–106.
+
+Braune E., Richter O., Sondgerath D. & Suhling F. (2008)€ Voltinism flexibility of a riverine dragonfly along thermal gradients. Global Change Biology, 14, 470–482.
+
+Brooks A.J., Chessman B.C. & Haeusler T. (2011) Macroinvertebrate traits distinguish unregulated rivers subject to water abstraction. Journal of the North American Benthological Society, 30, 419–435.
+
+Brown J.H. (1995) Macroecology. University of Chicago Press, Chicago.
+
+Carlson P.E., Johnson R.K. & McKie B.G. (2012) Optimizing stream bioassessment: habitat, season, and the impacts of land use on benthic macroinvertebrates. Hydrobiologia, 704, 363–373.
+
+Carter J.L. & Resh V.H. (2001) After site selection and before data analysis: sampling, sorting, and laboratory procedures used in stream benthic macroinvertebrate monitoring programs by USA state agencies. Journal of the North American Benthological Society, 20, 658–682.
+
+Chevenet F., Dol-edec S. & Chessel D. (1994) A fuzzy coding approach for the analysis of long-term ecological data. Freshwater Biology, 31, 295–309.
+
+Chown S.L. & Gaston K.J. (2010) Body size variation in insects: a macroecological perspective. Biological Reviews, 85, 139–169.
+
+Clarke R.T., Davy-Bowker J., Sandin L., Friberg N., Johnson R.K. & Bis B. (2006) Estimates and comparisons of the effects of sampling variation using “national” macroinvertebrate sampling protocols on the precision of metrics used to assess ecological status. Hydrobiologia, 566, 477– 503.
+
+Clarke R.T., Wright J.F. & Fruse M.T. (2003) RIVPACS models for predicting the expected macroinvertebrate fauna and assessing the ecological quality of rivers. Ecological Modeling, 160, 219–233.
+
+Cornelissen J.H.C., Lavorel S., Garnier E., D-ıaz S., Buchmann N., Gurvich D.E. et al. (2003) A handbook of protocols for standardised and easy measurement of plant functional traits worldwide. Australian Journal of Botany, 51, 335–380.
+
+Culp J.M., Armanini D.G., Dunbar M.J., Orlofske J.M., Poff N.L., Pollard A.I. et al. (2011) Incorporating traits in aquatic biomonitoring to enhance causal diagnosis and prediction. Integrated Environmental Assessment and Management, 7, 187–197.
+
+Davies P.E. (2000) Development of a national river bioassessment system (AusRivAS) in Australia. In: Assessing the Biological Quality of Freshwaters: RIVPACS and Other Techniques (Eds J.F. Wright, D.W. Sutcliffe & M.T. Furse ), pp. 113–124. Freshwater Biological Association, Ambleside.
+
+Dol-edec S., Phillips N. & Townsend C. (2011) Invertebrate community responses to land use at a broad spatial scale: trait and taxonomic measures compared in New Zealand rivers. Freshwater Biology, 56, 1670–1688.
+
+Dol-edec S. & Statzner B. (1994) Theoretical habitat templets, species traits, and species richness: 548 plant and animal species in the Upper Rhone River and its floodplain.^ Freshwater Biology, 31, 523–538.
+
+Dol-edec S. & Statzner B. (2008) Invertebrate traits for the biomonitoring of large European rivers: an assessment of specific types of human impact. Freshwater Biology, 53, 617–634.
+
+Dol-edec S., Statzner B. & Bournaud M. (1999) Species traits for future biomonitoring across ecoregions: patterns along a human-impacted river. Freshwater Biology, 42, 737–758.
+
+Environment Canada (2012) Canadian Aquatic Biomonitoring Network Field Manual: Wadeable Streams. Environment Canada, Ottawa, ON. 52 pp.
+
+Feio M.J. & Dol-edec S. (2012) Integration of invertebrate traits into predictive models for indirect assessment of stream functional integrity: a case study in Portugal. Ecological Indicators, 15, 236–247.
+
+Finn D.S. & Poff N.L. (2005) Variability and convergence in benthic communities along the longitudinal gradients of four physically similar Rocky Mountain streams. Freshwater Biology, 50, 243–261.
+
+Fitzsimmons J.M. (2013) How consistent are trait data between sources? A quantitative assessment. Oikos, 122, 1350–1356.
+
+Forster J., Hirst A.G. & Atkinson D. (2012) Warminginduced reductions in body size are greater in aquatic than terrestrial species. Proceedings of the National Academy of Sciences of the United States of America, 109, 19310–19314.
+
+Gardner J.L., Peters A., Kearney M.R., Joseph L. & Heinsohn R. (2011) Declining body size: a third universal
+
+response to warming? Trends in Ecology & Evolution, 26, 285–291.
+
+Gayraud S., Statzner B., Bady P., Haybachp A., Scholl F.,€ Usseglio-Polatera P. et al. (2003) Invertebrate traits for the biomonitoring of large European rivers: an initial assessment of alternative metrics. Freshwater Biology, 48, 2045– 2064.
+
+Hanquet D., Legalle M., Garbage S. & C-er-eghino R. (2004) Ontogenetic microhabitat shifts in stream invertebrates with different biological traits. Archiv fur Hydrobiologie € , 160, 329–346.
+
+Harper M.P. & Peckarsky B.L. (2006) Emergence cues of a mayfly in a high-altitude stream ecosystem: potential response to climate change. Ecological Applications, 16, 612–621.
+
+Hildrew A.G., Raffaelli D.G. & Edmonds-Brown R. (2007) Body Size: The Structure and Function of Aquatic Ecosystems. Cambridge University Press, Cambridge.
+
+Horrigan N. & Baird D.J. (2008) Trait patterns of aquatic insects across gradients of flow-related factors: a multivariate analysis of Canadian national data. Canadian Journal of Fisheries and Aquatic Science, 65, 670–680.
+
+Huryn A.D. & Wallace J.B. (2000) Life history and production of stream insects. Annual Review of Entomology, 45, 83–110.
+
+Hynes H.B.N. (1976) Biology of Plecoptera. Annual Review of Entomology, 21, 135–153.
+
+Lamouroux N., Dol-edec S. & Gayraud S. (2004) Biological traits of stream macroinvertebrate communities: effects of microhabitat, reach, and basin filters. Journal of the North American Benthological Society, 23, 449–466.
+
+Larsen S. & Ormerod S.J. (2010) Combined effects of habitat modification on trait composition and species nestedness in river invertebrates. Biological Conservation, 143, 2638– 2646.
+
+Lenant D.R. & Resh V.H. (2001) Taxonomy and stream ecology – the benefits of genus- and species-level identifications. Journal of the North American Benthological Society, 20, 287–298.
+
+Leuven R.S.E.W., Brock T.C.M. & Van Druten H.A.M. (1985) Effects of preservation on dry- and ash-free dry weight biomass of some common aquatic macro-invertebrates. Hydrobiologia, 159, 151–159.
+
+Maechler M., Rousseeuw P., Struyf A., Hubert M. & Hornik K. (2012) Cluster: Cluster Analysis Basics and Extensions, R package version 1.14.2.
+
+McGill B.J., Enquist B.J., Weiher E. & Westoby M. (2006) Rebuilding community ecology from functional traits. Trends in Ecology & Evolution, 21, 178–185.
+
+Menezes S., Baird D.J. & Soares A.M.V.M. (2010) Beyond taxonomy: a review of macroinvertebrate trait-based community descriptors as tools for freshwater biomonitoring. Journal of Applied Ecology, 47, 711–719.
+
+Merritt R.W., Cummins W. & Berg M.B. (eds) (2008) An Introduction to the Aquatic Insects of North America, 4th
+
+edn. Kendall/Hunt Publishing Company, Dubuque, Iowa.
+
+Monaghan K.A. & Soares A.M.V.M. (2013) Improving the accuracy of aquatic macroinvertebrate trait assignment – the importance of taxon-weighting. Canadian Journal of Fisheries and Aquatic Science, 10, 1–10.
+
+Mondy C.P., Villeneuve B., Archaimbault V. & Usseglio-Polatera P. (2012) A new macroinvertebrate-based multimetric index (I M ) to evaluate ecological quality of French wadeable streams fulfilling the WFD demands: a taxonomical and trait approach. Ecological Indicators, 18, 452–467.
+
+Moreira G.R.P. & Peckarsky B.L. (1994) Multiple developmental pathways of Agnetina capitata (Plecoptera: Perlidae) in a temperate forest stream. Journal of the North American Benthological Society, 13, 19–29.
+
+Moss D., Furse M.T., Wright J.F. & Armitage P.D. (1987) The prediction of the macro-invertebrate fauna of unpolluted running-water sites in Great Britain using environmental variables. Freshwater Biology, 17, 41–52.
+
+Mueller M., Pander J. & Geist J. (2013) Taxonomic sufficiency in freshwater ecosystems: effects of taxonomic resolution, functional traits, and data transformation. Freshwater Science, 32, 762–778.
+
+Orlofske J.M. & Baird D.J. (2013) The tiny mayfly in the room: implications of size-dependent invertebrate taxonomic identification for biomonitoring data properties. Aquatic Ecology, 47, 481–494.
+
+Parmesan C. (2006) Ecological and evolutionary responses to recent climate change. Annual Review of Ecology, Evolution, and Systematics, 37, 637–669.
+
+Peckarsky B.L. (1982) Aquatic insect predator-prey relations. BioScience, 32, 261–266.
+
+Pinder J.E., Wiener J.G. & Smith M.H. (1978) The Weibull distribution: a new method of summarizing survivorship data. Ecology, 59, 175–179.
+
+Poff N.L., Olden J.D., Vieira N.K.M., Finn D.S., Simmons M.P. & Kondratieff B.C. (2006) Functional trait niches of North American lotic insects: trait-based ecological applications in light of phylogenetic relationships. Journal of the North American Benthological Society, 25, 730–755.
+
+Pollard A.I. & Yuan L.L. (2010) Assessing the consistency of response metrics of the invertebrate benthos: a comparison of trait- and identity-based measures. Freshwater Biology, 55, 1420–1429.
+
+R Development Core Team (2012) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing. Version 2.14.2. Vienna, Austria. ISBN 3-900051-07-0, Available at: http://www.R-project.org/.
+
+R Studio (2012) Studio: Integrated Development Environment for R (version 0.96.304). Available at: http://www.rstudio. org/.
+
+Ramsay P.M., Rundle S.D., Attrill M.J., Uttley M.G., Williams P.R., Elsmere P.S. et al. (1997) A rapid method for estimating biomass size spectra of benthic metazoan com-
+
+munities. Canadian Journal of Fisheries and Aquatic Science, 54, 1716–1724.
+
+Reich P. & Downes B.J. (2004) Relating larval distributions to patterns of oviposition: evidence from lotic hydrobiosid caddisflies. Freshwater Biology, 49, 1423–1436.
+
+Resh V.H., Hildrew A.G., Statzner B. & Townsend C.R. (1994) Theoretical habitat templets, species traits, and species richness: a synthesis of long-term ecological research on the Upper Rhone River in the context of con-^ currently developed ecological theory. Freshwater Biology, 31, 539–554.
+
+Robson B.J., Barmuta L.A. & Fairweather P.G. (2005) Methodological and conceptual issues in the search for a relationship between animal body-size distributions and benthic habitat architecture. Marine and Freshwater Research, 56, 1–11.
+
+Rosenberg D.M. & Resh V.H. (1993) Freshwater Biomonitoring and Benthic Macroinvertebrates. Chapman & Hall, New York.
+
+Ruaro R. & Gubiani E.A. (2013) A scientometric assessment<sup>-</sup> of 30 years of the Index of Biotic Integrity in aquatic ecosystems: applications and main flaws. Ecological Indicators, 29, 105–110.
+
+Rubach M.N., Baird D.J., Boerwinkel M.-C., Maund S.J., Roessink I. & Van den Brink P.J. (2012) Species traits as predictors for intrinsic sensitivity of aquatic invertebrates to the insecticide chlorpyrifos. Ecotoxicology, 21, 2088– 2101.
+
+Sagnes P., M-erigoux S. & P-eru N. (2008) Hydraulic habitat use with respect to body size of aquatic insect larvae: case of six species from a French Mediterranean type stream. Limnologica, 38, 23–33.
+
+Smith M.J., Kay W.R., Edwards D.H.D., Papas P.J., Richardson K., St J. et al. (1999) AusRivAs: using macroinvertebrates to assess ecological condition of rivers in Western Australia. Freshwater Biology, 41, 269–282.
+
+Statzner B. & B^eche L.A. (2010) Can biological invertebrate traits resolve effects of multiple stressors on running water ecosystems? Freshwater Biology, 55, 80–119.
+
+Statzner B., Dol-edec S. & Hugueny B. (2004) Biological trait composition of European stream invertebrate communities: assessing the effects of various trait filter types. Ecography, 27, 470–488.
+
+Stoffels R.J., Karbe S. & Paterson R.A. (2003) Length-mass models for some common New Zealand littoral-benthic macroinvertebrates, with a note on within-taxon variability in parameter values among published models. New Zealand Journal of Marine and Freshwater Research, 37, 449–460.
+
+Swansburg E., El-Jabi N., Caissie D. & Chaput G. (2004) Hydrometeorological trends in the Miramichi River, Canada: implications for Atlantic Salmon Growth. North American Journal of Fisheries Management, 24, 561–576.
+
+Tachet H., Bournaud M. & Richoux P. (1991) Introduction a l’ -etude des macroinvert-ebr-es des eaux douces (syst-ematique
+
+-el-ementaire et apercu -ecologique). Universit-e Lyon I & Association Francaise de Limnologie (eds), CRDP, Lyon.
+
+Townsend C.R., Dol-edec S. & Scarsbrook M. (1997) Species traits in relation to temporal and spatial heterogeneity in streams: a test of habitat templet. Freshwater Biology, 37, 367–387.
+
+Tullos D.D., Penrose D.L., Jennings G.D. & Cope W.G. (2009) Analysis of functional traits in reconfigured channels: implications for the bioassessment and disturbance of river restoration. Journal of the North American Benthological Society, 28, 80–92.
+
+Usseglio-Polatera P., Bournaud M., Richoux P. & Tachet H. (2000a) Biological and ecological traits of benthic freshwater macroinvertebrates: relationships and definition of groups with similar traits. Freshwater Biology, 43, 175–205.
+
+Usseglio-Polatera P., Bournaud M., Richoux P. & Tachet H. (2000b) Biomonitoring through biological traits of benthic macroinvertebrates: how to use species trait databases? Hydrobiologia, 422/423, 153–162.
+
+Verberk W.C.E.P., Siepel H. & Esselink H. (2008a) Life-history strategies in freshwater macroinvertebrates. Freshwater Biology, 53, 1722–1738.
+
+Verberk W.C.E.P., Siepel H. & Esselink H. (2008b) Applying life-history strategies for freshwater macroinvertebrates to lentic waters. Freshwater Biology, 53, 1739–1753.
+
+Verberk W.C.E.P., van Noordwijk C.G.E. & Hildrew A.G. (2013) Delivering on a promise: integrating species traits to transform descriptive community ecology into a predictive science. Freshwater Science, 32, 531–547.
+
+Verdonschot P.F.M. & Moog O. (2006) Tools for assessing European streams with macroinvertebrates: major results and conclusions from the STAR project. Hydrobiologia, 566, 299–309.
+
+Vieira N.K.M., Poff N.L., Carlisle D.M., Moulton S.R. II, Koski M. & Kondratieff B.C. (2006) A Database of Lotic Invertebrate Traits for North America, Report Manuscript. United States Geological Survey, Reston, VA.
+
+Vor€ osmarty C.J., Mcintyre P.B., Gessner M.O., Dudgeon D.,€ Prusevich A., Green P. et al. (2010) Global threats to
+
+human water security and river biodiversity. Nature, 467, 555–561.
+
+Ward J.V. (1992) Aquatic Insect Ecology, Biology and Habitat. Wiley, New York.
+
+Woods H.A. (2013) Ontogenetic changes in the body temperature of an insect herbivore. Functional Ecology. doi: 10.1111/1365-2435.12124.
+
+Woodward G., Ebenman B., Emmerson M., Montoya J.M., Olesen J.M., Valido A. et al. (2005) Body size in ecological networks. Trends in Ecology and Evolution, 20, 402–409.
+
+Woodward G. & Hildrew A.G. (2002) Body-size determinants of niche overlap and intraguild predation within a complex food web. Journal of Animal Ecology, 71, 1063– 1074.
+
+Wright J.F., Furse M.T. & Moss D. (1998) River classification using invertebrates: RIVPACS applications. Aquatic Conservation: Marine and Freshwater Ecosystems, 8, 617–631.
+
+Zuellig R.E. & Schmidt T.S. (2012) Characterizing invertebrate traits in wadeable streams of the contiguous US: differences among ecoregions and land uses. Freshwater Science, 31, 1042–1056.
+
+## Supporting Information
+
+Additional Supporting Information may be found in the online version of this article:
+
+Appendix S1. Abundance data and USEPA body size trait state information for aquatic insect specimens identified to lowest taxonomic level observed from three sites in the Miramichi River basin, Canada, collected on 2 November 2007.
+
+Appendix S2. Taxon size summary, including mean, standard deviation (SD), coefficient of variation (CV), minimum size and maximum size by site and all sites combined (total).
+
+(Manuscript accepted 03 November 2013)

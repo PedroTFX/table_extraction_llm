@@ -1,0 +1,95 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Korosi2022\Korosi2022.xlsx  (624 rows)
+PREDICTION   : ..\output\Korosi2022\Korosi2022.csv  (624 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+measurementType LEFT UNMAPPED (3)
+  'Habitat breadth': no ground-truth string denotes this
+  'Overw. stage': no ground-truth string denotes this
+  'number of used habitat subtypes': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 236
+  missed (FN)           : 388
+  spurious, in scope    : 76   <- GT covers this trait: real errors
+  spurious, out of scope: 312   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.378 / 0.378 / 0.378
+  SCOPED  P/R/F1        : 0.756 / 0.378 / 0.504
+  RECALL (GT coverage)  : 0.378
+
+  out-of-scope rows by uncovered field:
+    measurementType                            312
+
+FUZZY VALUE MATCHES (17 accepted beyond exact/numeric)
+  typo            17
+  sample:
+    [typo] gt 'Poliphagous' == pred 'Polyphagous'
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                81    236  0.343  <-- low
+  measurementMethod             0    161  0.000  <-- low
+  measurementUnit               0    155  0.000  <-- low
+  measurementStatistic          0    236  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         236    236  1.000
+  lifeStage                    80    236  0.339  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    236  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 388 MISSED ROWS MISSED
+  species present, trait missing                      312
+  species+trait present, value differs                 76
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2.05'                       ->  '2.5'                        x27
+     'narrowly oligophagous'      ->  'narrowing oligophagous'     x23
+     '1.05'                       ->  '1.5'                        x22
+     '1.05'                       ->  '1'                          x2
+     '3.05'                       ->  '3.5'                        x2
+  -> 5 substitutions explain 76 of 388 misses (20%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Number of Subhabitats'            x104
+     'Overwintering stage'              x104
+     'Number of Habitats'               x104
+  -> 3 missing traits explain 312 of 388 misses (80%) — systematic, not scattered
+
+  full miss detail saved -> Korosi2022_misses.csv, Korosi2022_misses_summary.json (388 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  habitat breadth                                   0   104   PRED-ONLY
+  larval diet                                     104   104   
+  number of used habitat subtypes                   0   104   PRED-ONLY
+  number of habitats                              104     0   GT-ONLY
+  mobility                                        104   104   
+  number of subhabitats                           104     0   GT-ONLY
+  overw. stage                                      0   104   PRED-ONLY
+  overwintering stage                             104     0   GT-ONLY
+  voltinism                                       104   104   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'number of habitats'               vs pred 'number of used habitat subtypes'  sim=0.65
+    gt 'number of subhabitats'            vs pred 'habitat breadth'                  sim=0.61
+    gt 'overwintering stage'              vs pred 'overw. stage'                     sim=0.56
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.756  0.378  0.504    236    76   388   id+type+value
+             (312 more spurious row(s) out-of-scope; strict P would be 0.378)
+  tags        0.000  0.000  0.000      0   312   624   basis+id+type+value+stat+sex+stage
+             (312 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.504 vs previous)

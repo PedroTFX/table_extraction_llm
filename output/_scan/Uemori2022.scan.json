@@ -1,0 +1,154 @@
+{
+  "paper": "Uemori2022",
+  "has_full_md": true,
+  "supplementary": [
+    "Uemori2022_S1.xlsx"
+  ],
+  "ground_truth": [
+    "Uemori2022.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "Uemori2022_full.md",
+      "n_tables": 4,
+      "error": null
+    },
+    {
+      "file": "Uemori2022_S1.xlsx",
+      "n_tables": 1,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "Uemori2022_full.md",
+      "table_index": 0,
+      "n_rows": 14,
+      "n_cols": 3,
+      "header": [
+        "Elevation (m)",
+        "Dominant tree",
+        "Understory vegetation"
+      ],
+      "identifier": {
+        "column": "Dominant tree",
+        "taxon_fraction": 0.429,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": true,
+      "transpose_reason": "header names species, first column does not",
+      "would_yield_rows": false
+    },
+    {
+      "source": "Uemori2022_full.md",
+      "table_index": 1,
+      "n_rows": 7,
+      "n_cols": 4,
+      "header": [
+        "Trait",
+        "Definition of value",
+        "Expected change with increasing elevation",
+        "Reference"
+      ],
+      "identifier": {
+        "column": "Trait",
+        "taxon_fraction": 0.143,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    },
+    {
+      "source": "Uemori2022_full.md",
+      "table_index": 2,
+      "n_rows": 18,
+      "n_cols": 9,
+      "header": [
+        "identifier",
+        "All Aculeata",
+        "All Aculeata (1)",
+        "Pollinator",
+        "Pollinator (1)",
+        "Predator",
+        "Predator (1)",
+        "Parasitoid",
+        "Parasitoid (1)"
+      ],
+      "identifier": {
+        "column": "identifier",
+        "taxon_fraction": 0.176,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    },
+    {
+      "source": "Uemori2022_full.md",
+      "table_index": 3,
+      "n_rows": 62,
+      "n_cols": 9,
+      "header": [
+        "Species",
+        "Trophic level",
+        "Flight duraiton",
+        "Body size",
+        "Elevational range",
+        "Nesting position",
+        "Soil dependence",
+        "Distribution index",
+        "Feeding guild"
+      ],
+      "identifier": {
+        "column": "Species",
+        "taxon_fraction": 1.0,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    },
+    {
+      "source": "Uemori2022_S1.xlsx",
+      "table_index": 0,
+      "n_rows": 62,
+      "n_cols": 9,
+      "header": [
+        "Species",
+        "Trophic level",
+        "Flight duraiton",
+        "Body size",
+        "Elevational range",
+        "Nesting position",
+        "Soil dependence",
+        "Distribution index",
+        "Feeding guild"
+      ],
+      "identifier": {
+        "column": "Species",
+        "taxon_fraction": 1.0,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    }
+  ],
+  "error": null,
+  "n_tables": 5,
+  "n_identifier_tables": 2,
+  "n_identifier_tables_markdown": 1,
+  "n_identifier_tables_supplementary": 1,
+  "n_transposed_tables": 1,
+  "n_rows_total": 163,
+  "n_distinct_species": 62,
+  "would_yield_rows": true,
+  "would_yield_rows_if_supplements_passed": true,
+  "verdict": "OK — 1 identifier table(s) in the markdown; a 0-row result is downstream (LLM mapping / relevance gate / grouping), not here"
+}

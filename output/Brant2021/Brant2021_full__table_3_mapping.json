@@ -1,42 +1,37 @@
 {
   "Coefficients:": {
-    "field": null,
+    "field": "definitionTerm",
     "value_column": false,
-    "reasoning": "This column lists statistical variables (predictors) used in the model, not organism names or locations."
+    "reasoning": "This column lists the predictor variables (e.g., Month July, City Detroit) in the statistical model."
   },
   "Estimate": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "These are the calculated coefficients/results of the regression analysis for each variable."
+    "reasoning": "This column holds the calculated coefficient values (effect size) from the regression model."
   },
   "Std. Error": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column provides the standard error associated with the estimated coefficient values."
+    "reasoning": "This column provides the standard error associated with the coefficient estimates."
   },
   "t Value": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "These are calculated t-statistics used to test the significance of the coefficients."
-  },
-  "Pr(> t)": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column contains p-values, which are statistical results derived from the model."
-  },
-  "t": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "The sample data shows this column is empty or unused in this output format."
-  },
-  ")": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column appears to be an empty placeholder and does not contain relevant data."
+    "reasoning": "This column contains the calculated t-statistic for the respective coefficient."
   },
   "Pr(>": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the p-value, indicating statistical significance of the coefficient."
+  },
+  "t": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column is intended for statistical values (e.g., confidence intervals) but is empty in the sample."
+  },
+  ")": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column is intended for statistical values (e.g., confidence intervals) but is empty in the sample."
   }
 }

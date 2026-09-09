@@ -1,0 +1,548 @@
+Figure S1. Study region of municipality of Uruará, state Pará, northern Brazil. Location of the sampling sites per ecosystem: PF= Primary Forest; SF-15= Secondary forest with 15 years of regeneration; SF-5= Secondary forest with 5 years of regeneration; AG= Agriculture; PA= Pasture.
+
+Table S1 Generic characteristics of the ecosystems sampled in the municipality of Uruará, state Pará, northern Brazil. Adapted from Darinka et al. 2021; Cajaiba et al. 2018
+
+<table>
+<tr><td>Ecosystems</td><td>N. areas</td><td>Characteristics</td></tr>
+<tr><td>Primary forest – PF</td><td>02</td><td>Composed of vegetation whose facies is an upper canopy formed mainly by green trees, with crowns that touch each other, creating a dense and enclosed canopy all year round. In this ecosystem no traces of anthropic action were verified (for example, trails, residues, fires, selective cutting of wood, agricultural activities, among others). Characterized also by a high amount of litter, which contributes to the maintenance and fertility of the soil, and serves as food and shelter for several animal species (Da Silva et al., 2018)</td></tr>
+<tr><td>Secondary forest – SF-15 (vegetation with 15 years of regeneration)</td><td>02</td><td>A secondary forest (or second-growth forest) is a forest or woodland area that has been re-grown after abandonment of agriculture. Biological diversity gradually increases if there are primary remnants to supply seeds. The average height of the trees is over 12 meters and the average diameter is over 14 centimeters. This type of forest arises from natural succession of vegetation, resulting from abandonment after a period of use, a very common action in the Amazon region (Vieira et al., 2008), considered an understory, presents dense vegetation, with an intermediate size, greater than 3 meters of height and also with a high amount of litter on the ground (Da Silva et al., 2018).</td></tr>
+<tr><td>Secondary forest –SF-5 (vegetation with five years of regeneration)</td><td>02</td><td>This type of forest is an embryonic stage of plant succession and consequently presents a simple plant composition, therefore, with little canopy coverage. These environments have high soil temperature and acidity, little accumulated litter, and a greater presence of shrubs (Da Silva, et al., 2018).The average height of trees is no more than four meters and the diameter of the main trees can reach eight centimeters This phase typically lasts up to six years and in some cases up to ten years, depending on soil quality and / or seed bank..</td></tr>
+<tr><td>Agriculture – AG (cocoa plantations)</td><td>02</td><td>Agroecosystem represented by areas planted with cacao crops (Theobroma cacao L.) in the form of monocultures. Vegetation can reach 5 to 8m in height, with a closed canopy and a large amount of litter and old trunks. Due to the constant cleaning process, there is little presence of shrubs (Santos et al., 2015).</td></tr>
+<tr><td>Pasture for extensive livestock – PA</td><td>02</td><td>Forest vegetation consisting predominantly of exotic grasses, namely of the genus Brachiaria spp, used for extensive livestock farming (e.g., raising cattle). This environment is characterized by a high incidence of sunlight, soil compacted by cattle trampling, and absence of litter accumulation in the soil (Falcão et al., 2015).</td></tr>
+</table>
+
+Da Silva, WB; Périco, E; Dalzochio, MS; Santos, M; Cajaiba, RL. (2018). Are litterfall and litter decomposition processes indicators of forest regeneration in the neotropics? Insights from a case study in the Brazilian Amazon. Forest Ecology and Management, v. 429, p. 189-197.
+
+Falcão, JCF; Dáttilo, W.; Izzo, TJ. (2015). Efficiency of different planted forests in recovering biodiversity and ecological interactions in Brazilian Amazon. Forest Ecology and Management, 339, p. 105–111.
+
+Santos, JRM; Mariano, CSF; Martins, LCB; Lacau, LSR; Delabie, JHC. (2015). Assembleias de formigas epigeias (Hymenoptera: Formicidae) em um cacaual e remanescente de floresta da Amazônia Oriental, Brasil. Agrotrópica 27, p. 149 -160.
+
+Vieira, ICG; Toledo, PM; Silva, JMC; Higuchi, H. (2008). Deforestation and threats to the biodiversity of Amazonia. Brazilian Journal of Biology, 68, p. 949-956.
+
+Table S2 Specification of the methodology used for monitoring the environmental variables associate with the ecosystems studied.
+
+<table>
+<tr><td>Variables</td><td>Specification</td><td>Monitoring Methodology</td></tr>
+<tr><td>Temperature – T</td><td>Celsius (ºC)</td><td>Measured during the traps installation and removal with a portable weather station (model Oregon Scientific WMR200A).</td></tr>
+<tr><td>Humidity – H</td><td>Humidity (%)</td><td>Measured during the traps installation and removal with a portable weather station (model Oregon Scientific WMR200A).</td></tr>
+<tr><td>Precipitation – P</td><td>Precipitation (mm)</td><td>Measured during the traps installation and removal with a portable weather station (model Oregon Scientific WMR200A).</td></tr>
+<tr><td>Circumference at Breast Height – CBH</td><td>Centimeters (cm)</td><td>Trunk diameter was taken at breast height (1.3 m) for the trees.</td></tr>
+<tr><td>Circumference at Ankle Height - CAH</td><td>Centimeters (cm)</td><td>The diameter was measured at the ankle height (CAH = 0.1 m) for the shrubs.</td></tr>
+<tr><td>Canopy Cover – CC</td><td>Percentage (%)</td><td>Calculated with a convex spherical densiometer (D) Lemmon and assigned the following classes: 0–5%, 6–25%, 26–50%, 51–75%, 76–95% and 96–100%</td></tr>
+<tr><td>Richness of Plants – RP</td><td>Number of Plant Species/ m2</td><td>The number of tree species was counted in an area of 100 m2 (10 x 10 m) in the vicinity of each pitfall trap.</td></tr>
+<tr><td>Abundance of Plants –AP</td><td>Number of Plants/ m2</td><td>The number of tree was counted in an area of 100 m2 (10 x 10 m) in the vicinity of each pitfall trap.</td></tr>
+<tr><td>Richness of Shrubs – RS</td><td>Number of Species of Shrubs/ m2</td><td>The number of shrubs species was counted in an area of 100 m2 (10 x 10 m) in the vicinity of each pitfall trap.</td></tr>
+<tr><td>Abundance of Shrubs – AS</td><td>Number of Shrubs/ m2</td><td>The number of shrubs was counted in an area of 100 m2 (10 x 10 m) in the vicinity of each pitfall trap.</td></tr>
+<tr><td>Percentage of Exposed Soil</td><td>Percentage (%)/ m2</td><td>The percentage exposed soil in each quadrant was estimated in different percentage classes (0-5, 6-25, 26-50, 51-75, 76-95, 96-100%)</td></tr>
+<tr><td>percentage of vegetation cover – GC</td><td>Percentage (%)/ m2</td><td>The percentage green cover (vegetation up to 1 m height) in each quadrant was estimated in different percentage classes (0-5, 6-25, 26-50, 51-75, 76-95, 96-100%)</td></tr>
+<tr><td>percentage of leaf litter cover – LLC</td><td>Percentage (%)</td><td>The percentage of litter in each quadrant was estimated in different percentage classes (0-5, 6-25, 26-50, 51-75, 76-95, 96-100%).</td></tr>
+<tr><td>Height of Leaf Litter – HLL</td><td>Centimeters (cm)</td><td>Litter height was measured using a ruler at five points inside the square (near each corner and in the center)</td></tr>
+</table>
+
+Table S3 Description of functional traits used in this study.
+
+<table>
+<tr><td>Functional traits</td><td>Trait specificity</td><td>Description</td></tr>
+<tr><td>Ecosystem specificity (ES_FT)</td><td>Forest specialists (FS)</td><td>Species exclusively captured in primary (PF) or secondary forests (SF).</td></tr>
+<tr><td>Ecosystem specificity (ES_FT)</td><td>Open and semi-open environment specialists (OS)</td><td>Species exclusively captured in pastures (PA) and cocoa agroforests (AG).</td></tr>
+<tr><td>Ecosystem specificity (ES_FT)</td><td>Forest generalists (FG)</td><td>Species captured in forests (PF and SF)</td></tr>
+<tr><td>Ecosystem specificity (ES_FT)</td><td>Ecosystem generalists (EG)</td><td>Species captured in all ecosystems</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Cryptic Predators (CP)</td><td>Small species that nest primarily in the soil, leaf and rotting logs, where they specialize on living arthropods or their eggs</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Cryptic Omnivores (CO)</td><td>Small species nesting within the soil, leaf and rotting logs, where they are generalist predators and scavengers</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Epigaeic Predators (EP)</td><td>Medium-to large-sized species that forage on the litter surface and are specialist predators of other arthropods</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Epigaeic Omnivores (EO)</td><td>Medium-to large-sized species that forage on the litter surface and are generalist predators and scavengers</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Arboreal Dominants (AD)</td><td>Highly active and aggressive species with large colony sizes, nesting in trees</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Arboreal Subordinates (AS)</td><td>Other tree-nesting species</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td></td><td>unspecialized and poorly competitive, ruderal species</td></tr>
+<tr><td>Trophic type (TT_FT)</td><td>Army Ants (AA)</td><td>Highly aggressive, nomadic species with legionary recruitment</td></tr>
+<tr><td></td><td>Leaf-cutting Attini (LA)</td><td>Highly active and aggressive, polymorphic species with large colony sizes that use leaves to cultivate a symbiotic fungus</td></tr>
+<tr><td></td><td>Non leaf-cutting Attini (NA)</td><td>Monomorphic, non-aggressive species with small colony sizes that use other organic material to cultivate a symbiotic fungus</td></tr>
+<tr><td></td><td>Opportunists (OP)</td><td>Species considered omnivorous and opportunistic feeders, which harvest plant exudates, scavenge, and capture live prey as these are encountered.</td></tr>
+</table>
+
+Table S4 Total number of species (and morphospecies) of ants in the different ecosystems studied in the Brazilian Amazon, and its classification in "Trophic type" and "Ecosystem specificity”. PF = primary forest; SF-15 = Secondary forest (15 years of regeneration); SF-5 = Secondary forest (5 years of regeneration); AG = Agriculture (Cocoa); PA = Pasture.
+
+<table>
+<tr><td>Morphospecies/Species</td><td>PF</td><td>FS-15</td><td>FS-5</td><td>AG</td><td>PA</td><td>Trophic type</td><td>Ecosystem specificity</td></tr>
+<tr><td>Acromyrmex sp1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Leaf-cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Acromyrmex sp2</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>Leaf-cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Acromyrmex sp3</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>Leaf-cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Anochetus sp1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Anochetus sp2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Anochetus sp3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Apterostigma sp1</td><td>5</td><td>2</td><td>0</td><td>0</td><td>0</td><td>Non-Leaf-Cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Apterostigma sp2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Non-Leaf-Cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Apterostigma sp3</td><td>6</td><td>16</td><td>0</td><td>0</td><td>0</td><td>Non-Leaf-Cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Apterostigma sp4</td><td>6</td><td>9</td><td>0</td><td>0</td><td>0</td><td>Non-Leaf-Cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Apterostigma urichii</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Non-Leaf-Cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Atta cephalotes</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>Leaf-cutting Attini</td><td>Open specialists</td></tr>
+<tr><td>Atta sexdens</td><td>3</td><td>4</td><td>7</td><td>0</td><td>5</td><td>Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Atta sp1</td><td>17</td><td>0</td><td>0</td><td>6</td><td>0</td><td>Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Atta sp2</td><td>21</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Leaf-cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Azteca alfari</td><td>2</td><td>4</td><td>0</td><td>0</td><td>0</td><td>Arboreal Subordinates</td><td>Forest specialists</td></tr>
+<tr><td>Azteca sp</td><td>108</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Arboreal Subordinates</td><td>Forest specialists</td></tr>
+<tr><td>Brachymyrmex brevicornis</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>Opportunists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Brachymyrmex sp1</td><td>111</td><td>55</td><td>11</td><td>7</td><td>3</td><td>Opportunists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Brachymyrmex sp2</td><td>0</td><td>31</td><td>0</td><td>0</td><td>0</td><td>Opportunists</td><td>Forest specialists</td></tr>
+<tr><td>Camponotus cingulatus</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Camponotus melanoticus</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>Epigaeic Omnivores</td><td>Open specialists</td></tr>
+<tr><td>Camponotus sanctaefidei</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Camponotus senex</td><td>6</td><td>3</td><td>4</td><td>2</td><td>58</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Camponotus sexguttatus</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Camponotus sp1</td><td>1</td><td>7</td><td>2</td><td>31</td><td>0</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Camponotus sp2</td><td>19</td><td>5</td><td>13</td><td>82</td><td>0</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Camponotus sp3</td><td>1</td><td>13</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Camponotus sp4</td><td>21</td><td>1</td><td>15</td><td>12</td><td>4</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Camponotus sp5</td><td>388</td><td>139</td><td>82</td><td>23</td><td>1</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Camponotus sp6</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Camponotus substitutus</td><td>0</td><td>2</td><td>0</td><td>39</td><td>0</td><td>Epigaeic Omnivores</td><td>Open specialists</td></tr>
+<tr><td>Carebara sp</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>Cryptic Omnivores</td><td>Forest generalists</td></tr>
+<tr><td>Carebara urichi</td><td>29</td><td>4</td><td>1</td><td>2</td><td>1</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Cephalotes cordatus</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>Arboreal Subordinates</td><td>Forest specialists</td></tr>
+<tr><td>Cephalotes pusillus</td><td>1</td><td>0</td><td>0</td><td>0</td><td>3</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Cephalotes sp</td><td>0</td><td>7</td><td>0</td><td>9</td><td>0</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Crematogaster sp1</td><td>21</td><td>16</td><td>0</td><td>6</td><td>0</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Crematogaster sp4</td><td>22</td><td>14</td><td>8</td><td>7</td><td>3</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Crematogaster sp6</td><td>22</td><td>11</td><td>21</td><td>3</td><td>12</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Crematogaster limata</td><td>99</td><td>23</td><td>12</td><td>9</td><td>5</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Crematogaster victima</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>Arboreal Subordinates</td><td>Open specialists</td></tr>
+<tr><td>Cyphomyrmex laevigatus</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Cyphomyrmex major</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Cyphomyrmex sp</td><td>0</td><td>0</td><td>0</td><td>0</td><td>17</td><td>Non Leaf-cutting Attini</td><td>Open specialists</td></tr>
+<tr><td>Cyphomyrmex sp1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Dinoponera gigantea</td><td>133</td><td>58</td><td>28</td><td>19</td><td>3</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Dinoponera quadriceps</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Dolichoderus gagates</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>Arboreal Dominants</td><td>Forest generalists</td></tr>
+<tr><td>Dolichoderus sp1</td><td>9</td><td>3</td><td>7</td><td>5</td><td>9</td><td>Arboreal Dominants</td><td>Ecosystem generalists</td></tr>
+<tr><td>Dolichoderus sp2</td><td>5</td><td>2</td><td>2</td><td>3</td><td>11</td><td>Arboreal Dominants</td><td>Ecosystem generalists</td></tr>
+<tr><td>Dolichoderus sp5</td><td>2</td><td>0</td><td>6</td><td>2</td><td>0</td><td>Arboreal Dominants</td><td>Ecosystem generalists</td></tr>
+<tr><td>Dolichoderus sp6</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>Arboreal Dominants</td><td>Forest specialists</td></tr>
+<tr><td>Dorymyrmex sp</td><td>0</td><td>0</td><td>2</td><td>5</td><td>0</td><td>Opportunists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Ectatomma brunneum</td><td>44</td><td>34</td><td>19</td><td>28</td><td>154</td><td>Opportunists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Ectatomma lugens</td><td>371</td><td>209</td><td>0</td><td>71</td><td>1</td><td>Opportunists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Ectatomma sp</td><td>40</td><td>19</td><td>12</td><td>33</td><td>1</td><td>Opportunists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Gnamptogenys moelleri</td><td>46</td><td>21</td><td>15</td><td>9</td><td>54</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Gnamptogenys striatula</td><td>38</td><td>0</td><td>2</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest generalists</td></tr>
+<tr><td>Gnamptogenys rastrata</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>Epigaeic Omnivores</td><td>Open specialists</td></tr>
+<tr><td>Gnamptogenys sp1</td><td>9</td><td>5</td><td>3</td><td>1</td><td>0</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Gnamptogenys sp2</td><td>4</td><td>0</td><td>2</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest generalists</td></tr>
+<tr><td>Leptogenys arcuata</td><td>2</td><td>0</td><td>0</td><td>3</td><td>0</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Leptogenys dasygyna</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>Epigaeic Predators</td><td>Open specialists</td></tr>
+<tr><td>Leptogenys sp</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Myrmicocrypta foreli</td><td>0</td><td>11</td><td>2</td><td>0</td><td>0</td><td>Non Leaf-Cutting Attini</td><td>Forest generalists</td></tr>
+<tr><td>Myrmicocrypta sp1</td><td>2</td><td>8</td><td>0</td><td>0</td><td>0</td><td>Non Leaf-Cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Myrmicocrypta sp2</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td><td>Non Leaf-Cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Odontomachus bauri</td><td>43</td><td>12</td><td>9</td><td>12</td><td>11</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Odontomachus brunneus</td><td>16</td><td>31</td><td>37</td><td>19</td><td>2</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Odontomachus haematodus</td><td>118</td><td>76</td><td>11</td><td>4</td><td>1</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Odontomachus meinerti</td><td>13</td><td>31</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Odontomachus sp</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pachycondyla crassinoda</td><td>200</td><td>89</td><td>16</td><td>12</td><td>15</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pachycondyla harpax</td><td>159</td><td>311</td><td>69</td><td>48</td><td>52</td><td>Epigaeic Predators</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pachycondyla striata</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest generalists</td></tr>
+<tr><td>Pachycondyla sp1</td><td>43</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Pachycondyla sp2</td><td>9</td><td>13</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Paraponera clavata</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Unclassified</td><td>Forest specialists</td></tr>
+<tr><td>Paraponera sp</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Unclassified</td><td>Forest specialists</td></tr>
+<tr><td>Paratrechina longicornis</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>Cryptic Omnivores</td><td>Forest generalists</td></tr>
+<tr><td>Paratrechina sp</td><td>9</td><td>2</td><td>1</td><td>0</td><td>1</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp1</td><td>13</td><td>39</td><td>59</td><td>11</td><td>7</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp2</td><td>113</td><td>65</td><td>16</td><td>41</td><td>69</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp3</td><td>42</td><td>11</td><td>27</td><td>67</td><td>56</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp4</td><td>10</td><td>29</td><td>79</td><td>194</td><td>107</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp5</td><td>15</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Pheidole sp6</td><td>37</td><td>56</td><td>37</td><td>103</td><td>107</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp7</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Epigaeic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Pheidole sp8</td><td>0</td><td>0</td><td>0</td><td>54</td><td>0</td><td>Epigaeic Omnivores</td><td>Open specialists</td></tr>
+<tr><td>Pheidole sp9</td><td>5</td><td>0</td><td>0</td><td>0</td><td>39</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp10</td><td>8</td><td>12</td><td>19</td><td>21</td><td>17</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp11</td><td>16</td><td>12</td><td>9</td><td>6</td><td>4</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp12</td><td>11</td><td>3</td><td>16</td><td>15</td><td>10</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp13</td><td>77</td><td>44</td><td>40</td><td>95</td><td>86</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp14</td><td>13</td><td>12</td><td>38</td><td>21</td><td>9</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp15</td><td>37</td><td>18</td><td>14</td><td>13</td><td>8</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp16</td><td>41</td><td>26</td><td>24</td><td>16</td><td>12</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp17</td><td>273</td><td>12</td><td>67</td><td>33</td><td>12</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pheidole sp18</td><td>26</td><td>49</td><td>37</td><td>15</td><td>13</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Piatythyrea sp1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Unclassified</td><td>Forest specialists</td></tr>
+<tr><td>Piatythyrea sp2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>Unclassified</td><td>Forest specialists</td></tr>
+<tr><td>Prionopelta punctulata</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>Cryptic Predators</td><td>Forest generalists</td></tr>
+<tr><td>Pseudomyrmex sp1</td><td>1</td><td>17</td><td>7</td><td>3</td><td>12</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pseudomyrmex sp2</td><td>16</td><td>6</td><td>11</td><td>33</td><td>5</td><td>Arboreal Subordinates</td><td>Ecosystem generalists</td></tr>
+<tr><td>Pseudomyrmex sp5</td><td>3</td><td>0</td><td>3</td><td>0</td><td>0</td><td>Arboreal Subordinates</td><td>Forest generalists</td></tr>
+<tr><td>Sericomyrmex parvulus</td><td>11</td><td>7</td><td>0</td><td>0</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Sericomyrmex sp1</td><td>14</td><td>11</td><td>0</td><td>0</td><td>1</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Sericomyrmex sp2</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Sericomyrmex sp3</td><td>6</td><td>0</td><td>0</td><td>1</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp1</td><td>37</td><td>62</td><td>12</td><td>12</td><td>16</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp2</td><td>15</td><td>9</td><td>3</td><td>45</td><td>33</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp3</td><td>7</td><td>15</td><td>27</td><td>37</td><td>45</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp4</td><td>28</td><td>18</td><td>32</td><td>34</td><td>13</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp5</td><td>18</td><td>9</td><td>11</td><td>19</td><td>44</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp6</td><td>111</td><td>12</td><td>5</td><td>4</td><td>14</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp7</td><td>8</td><td>16</td><td>22</td><td>27</td><td>31</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp8</td><td>18</td><td>17</td><td>0</td><td>0</td><td>0</td><td>Cryptic Omnivores</td><td>Forest specialists</td></tr>
+<tr><td>Solenopsis sp9</td><td>93</td><td>32</td><td>23</td><td>21</td><td>30</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Solenopsis sp10</td><td>5</td><td>3</td><td>2</td><td>4</td><td>29</td><td>Cryptic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Strumigenys eggersi</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>Cryptic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Strumigenys louisianae</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>Cryptic Predators</td><td>Forest generalists</td></tr>
+<tr><td>Strumigenys urrhobia</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>Cryptic Predators</td><td>Forest specialists</td></tr>
+<tr><td>Tapinoma sp1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>Unclassified</td><td>Ecosystem generalists</td></tr>
+<tr><td>Tapinoma sp2</td><td>7</td><td>3</td><td>3</td><td>0</td><td>1</td><td>Unclassified</td><td>Ecosystem generalists</td></tr>
+<tr><td>Tapinoma sp3</td><td>53</td><td>16</td><td>48</td><td>0</td><td>0</td><td>Unclassified</td><td>Forest generalists</td></tr>
+<tr><td>Trachymyrmex bugnioni</td><td>12</td><td>8</td><td>0</td><td>0</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Forest specialists</td></tr>
+<tr><td>Trachymyrmex sp1</td><td>4</td><td>5</td><td>3</td><td>1</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Trachymyrmex sp2</td><td>5</td><td>3</td><td>33</td><td>0</td><td>0</td><td>Non Leaf-cutting Attini</td><td>Ecosystem generalists</td></tr>
+<tr><td>Wasmania sp1</td><td>63</td><td>13</td><td>76</td><td>34</td><td>26</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+<tr><td>Wasmania sp2</td><td>81</td><td>11</td><td>15</td><td>13</td><td>9</td><td>Epigaeic Omnivores</td><td>Ecosystem generalists</td></tr>
+</table>
+
+Table S5. Summary of Generalized Linear Mixed-effects Models (GLMMs) relating the response variables Abundance and Richness of the functional traits Ecosystem specificity and Trophic type and Functional diversity (Functional richness - FRic, Functional evenness - FEve and functional redundancy - FRed) to diverse predictor variables. Codes explanation: standard error (SE) for fixed effects and standard deviation (SD) for Random effects, Z values (Z-value), and associated probability values (P-values). R2m, marginal R2; R2c, conditional R2. Ecosystem: PF: Primary forest, SF-15: Secondary forest (15 years of regeneration), SF-5: Secondary forest (5 years of regeneration), AG: Agriculture (Cocoa), PA: Pasture.
+
+<table>
+<tr><td>Table A - Comparisons for Abundance and Richness of &quot;Ecosystem specificity&quot; functional traits</td><td>Table A - Comparisons for Abundance and Richness of &quot;Ecosystem specificity&quot; functional traits</td><td>Table A - Comparisons for Abundance and Richness of &quot;Ecosystem specificity&quot; functional traits</td><td>Table A - Comparisons for Abundance and Richness of &quot;Ecosystem specificity&quot; functional traits</td><td>Table A - Comparisons for Abundance and Richness of &quot;Ecosystem specificity&quot; functional traits</td><td>Table A - Comparisons for Abundance and Richness of &quot;Ecosystem specificity&quot; functional traits</td></tr>
+<tr><td>Abundance</td><td>Abundance</td><td>Abundance</td><td>Abundance</td><td>Abundance</td><td>Abundance</td></tr>
+<tr><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.776)</td><td>Intercept</td><td>9.002</td><td>1.121</td><td>2.694</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>0.671</td><td>0.220</td><td>1.291</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>SF-15</td><td>0.298</td><td>0.021</td><td>1.001</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>AG</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>PA</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.446)</td><td>Sampled sites</td><td></td><td>0.832</td><td></td><td></td></tr>
+<tr><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.016)</td><td>Intercept</td><td>-1.002</td><td>1.098</td><td>-0.102</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>0.591</td><td>0.014</td><td>0.555</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>0.666</td><td>0.111</td><td>1.001</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>AG</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>PA</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.002)</td><td>Sampled sites</td><td></td><td>0.072</td><td></td><td></td></tr>
+<tr><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.017)</td><td>Intercept</td><td>1.002</td><td>0.331</td><td>1.014</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>SF-15</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>SF-5</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>AG</td><td>0.096</td><td>0.001</td><td>1.001</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>1.001</td><td>0.019</td><td>0.888</td><td>&gt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.139)</td><td>Sampled sites</td><td></td><td>0.650</td><td></td><td></td></tr>
+<tr><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.141)</td><td>Intercept</td><td>1.992</td><td>2.008</td><td>0.027</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>0.171</td><td>0.001</td><td>0.232</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>-1.008</td><td>1.120</td><td>-0.592</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>0.331</td><td>0.071</td><td>1.084</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>0.211</td><td>1.001</td><td>0.109</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>0.991</td><td>1.012</td><td>0.546</td><td>&gt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.104)</td><td>Sampled sites</td><td></td><td>0.414</td><td></td><td></td></tr>
+<tr><td>Richness</td><td>Richness</td><td>Richness</td><td>Richness</td><td>Richness</td><td>Richness</td></tr>
+<tr><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td><td>Forest generalists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.224)</td><td>Intercept</td><td>3.002</td><td>0.121</td><td>2.694</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>1.071</td><td>0.220</td><td>2.291</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>0.917</td><td>0.021</td><td>0.044</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>0.100</td><td>0.032</td><td>0.772</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>PA</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.198)</td><td>Sampled sites</td><td></td><td>0.371</td><td></td><td></td></tr>
+<tr><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td><td>Forest specialists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.611)</td><td>Intercept</td><td>-12.002</td><td>3.098</td><td>-4.102</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>3.671</td><td>1.321</td><td>2.001</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>1.847</td><td>0.712</td><td>0.204</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>AG</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>PA</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.201)</td><td>Sampled sites</td><td></td><td>0.504</td><td></td><td></td></tr>
+<tr><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td><td>Open and semi-open environment specialists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.198)</td><td>Intercept</td><td>1.502</td><td>0.331</td><td>1.014</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>SF-15</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>SF-5</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>AG</td><td>0.096</td><td>0.001</td><td>2.001</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>1.001</td><td>0.019</td><td>0.888</td><td>&gt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.088)</td><td>Sampled sites</td><td></td><td>0.050</td><td></td><td></td></tr>
+<tr><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td><td>Ecosystem generalists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z value</td><td>P value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.098)</td><td>Intercept</td><td>0.781</td><td>1.014</td><td>0.029</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>0.987</td><td>2.421</td><td>0.215</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>-1.018</td><td>0.721</td><td>-0.571</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>0.239</td><td>0.211</td><td>0.198</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>2.211</td><td>1.371</td><td>0.078</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>0.491</td><td>0.112</td><td>0.344</td><td>&gt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.146)</td><td>Sampled sites</td><td></td><td>0.316</td><td></td><td></td></tr>
+<tr><td>Table B - Comparisons for Abundance and Richness of &quot;Trophic type&quot; functional traits.</td><td>Table B - Comparisons for Abundance and Richness of &quot;Trophic type&quot; functional traits.</td><td>Table B - Comparisons for Abundance and Richness of &quot;Trophic type&quot; functional traits.</td><td>Table B - Comparisons for Abundance and Richness of &quot;Trophic type&quot; functional traits.</td><td>Table B - Comparisons for Abundance and Richness of &quot;Trophic type&quot; functional traits.</td><td>Table B - Comparisons for Abundance and Richness of &quot;Trophic type&quot; functional traits.</td></tr>
+<tr><td>Abundance</td><td>Abundance</td><td>Abundance</td><td>Abundance</td><td>Abundance</td><td>Abundance</td></tr>
+<tr><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.031)</td><td>Intercept</td><td>-2.053</td><td>1.077</td><td>-0.094</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>-1.970</td><td>0.407</td><td>-0.395</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>0.340</td><td>0.197</td><td>0.182</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>1.012</td><td>0.331</td><td>0.654</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>PA</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.111)</td><td>Sampled sites</td><td></td><td>0.602</td><td></td><td></td></tr>
+<tr><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.103)</td><td>Intercept</td><td>-7.053</td><td>2.077</td><td>-3.004</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>-3.970</td><td>0.407</td><td>-1.395</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>1.340</td><td>0.197</td><td>1.082</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>1.012</td><td>0.33</td><td>1.654</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>-1.171</td><td>0.557</td><td>-0.171</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-3.098</td><td>0.098</td><td>-0.166</td><td>&gt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.202)</td><td>Sampled sites</td><td></td><td>0.199</td><td></td><td></td></tr>
+<tr><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.106)</td><td>Intercept</td><td>1.221</td><td>0.002</td><td>0.098</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>-2.981</td><td>0.154</td><td>-2.104</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>-2.054</td><td>0.098</td><td>-3.712</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>0.112</td><td>0.166</td><td>0.614</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>1.611</td><td>1.009</td><td>2.986</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>5.013</td><td>0.717</td><td>7.098</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.244)</td><td>Sampled sites</td><td></td><td>0.127</td><td></td><td></td></tr>
+<tr><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.335)</td><td>Intercept</td><td>1.012</td><td>0.33</td><td>1.654</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>1.171</td><td>0.557</td><td>0.171</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>3.098</td><td>0.098</td><td>0.166</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>-0.771</td><td>0.544</td><td>-0.303</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>-3.970</td><td>0.407</td><td>-1.395</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-1.340</td><td>0.197</td><td>-1.082</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.251)</td><td>Sampled sites</td><td></td><td>0.586</td><td></td><td></td></tr>
+<tr><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.401)</td><td>Intercept</td><td>5.310</td><td>0.061</td><td>2.964</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>1.891</td><td>0.177</td><td>5.068</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>2.254</td><td>0.033</td><td>1.996</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>SF-5</td><td>-3.470</td><td>0.003</td><td>-4.007</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>AG</td><td>1.679</td><td>0.908</td><td>2.220</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PA</td><td>-2.887</td><td>1.021</td><td>-1.001</td><td>&lt;0.01</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.199)</td><td>Sampled sites</td><td></td><td>0.826</td><td></td><td></td></tr>
+<tr><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.216)</td><td>Intercept</td><td>-4.540</td><td>2.002</td><td>-3.964</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>-1.866</td><td>0. 582</td><td>-0.299</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>3.212</td><td>1.042</td><td>4.016</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>2.047</td><td>1.003</td><td>1.198</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>1.001</td><td>1.008</td><td>1.229</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>PA</td><td>-0.122</td><td>0.004</td><td>-1.900</td><td>&lt;0.001</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.231)</td><td>Sampled sites</td><td></td><td>0.232</td><td></td><td></td></tr>
+<tr><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.432)</td><td>Intercept</td><td>-7.945</td><td>1.961</td><td>-5.571</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>-3.265</td><td>0.570</td><td>-0.572</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>5.621</td><td>1.021</td><td>7.670</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>3.582</td><td>0.982</td><td>2.288</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>1.751</td><td>0.987</td><td>2.347</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-0.213</td><td>0.039</td><td>-3.629</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.209)</td><td>Sampled sites</td><td></td><td>0.801</td><td></td><td></td></tr>
+<tr><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.510)</td><td>Intercept</td><td>5.219</td><td>0.944</td><td>5.481</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>1.495</td><td>0.170</td><td>3.572</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>5.382</td><td>0.213</td><td>8.190</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>3.582</td><td>0.982</td><td>2.288</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>0.281</td><td>0.017</td><td>1.307</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-0.213</td><td>0.120</td><td>-1.029</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.119)</td><td>Sampled sites</td><td></td><td>0.692</td><td></td><td></td></tr>
+<tr><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.198)</td><td>Intercept</td><td>3.017</td><td>1.414</td><td>2.409</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>-0.986</td><td>0.070</td><td>-4.101</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>1.013</td><td>0.201</td><td>1.004</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>5.582</td><td>1.022</td><td>4.018</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>1.212</td><td>1.016</td><td>2.614</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>PA</td><td>1.001</td><td>2.020</td><td>3.041</td><td>&lt;0.01</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.432)</td><td>Sampled sites</td><td></td><td>0.402</td><td></td><td></td></tr>
+<tr><td>Richness</td><td>Richness</td><td>Richness</td><td>Richness</td><td>Richness</td><td>Richness</td></tr>
+<tr><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td><td>Cryptic Predators</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.100)</td><td>Intercept</td><td>0.153</td><td>1.077</td><td>1.005</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>0.133</td><td>0.011</td><td>0.026</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>0.110</td><td>0.097</td><td>0.098</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>0.012</td><td>0.241</td><td>0.049</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td></td><td>PA</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.066)</td><td>Sampled sites</td><td></td><td>0.102</td><td></td><td></td></tr>
+<tr><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td><td>Cryptic Omnivores</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.013)</td><td>Intercept</td><td>-0.553</td><td>1.033</td><td>-1.004</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>-1.091</td><td>0.007</td><td>-0.395</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-15</td><td>2.340</td><td>0.017</td><td>0.098</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>0.121</td><td>0.27</td><td>1.004</td><td>&gt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>-3.340</td><td>0.057</td><td>-2.171</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>0.078</td><td>1.098</td><td>- 2.104</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.311)</td><td>Sampled sites</td><td></td><td>0.201</td><td></td><td></td></tr>
+<tr><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td><td>Epigaeic Omnivores</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.396)</td><td>Intercept</td><td>3.208</td><td>1.902</td><td>5.117</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>3.074</td><td>1.045</td><td>4.001</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>-1.000</td><td>0.107</td><td>-1.024</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>2.112</td><td>0.704</td><td>1.510</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>1.007</td><td>0.630</td><td>0.014</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>0.981</td><td>1.009</td><td>4.001</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.306)</td><td>Sampled sites</td><td></td><td>0.609</td><td></td><td></td></tr>
+<tr><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td><td>Epigaeic Predators</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.341)</td><td>Intercept</td><td>7.039</td><td>2.493</td><td>2.559</td><td>&lt;0.0001</td></tr>
+<tr><td></td><td>PF</td><td>3.063</td><td>1.007</td><td>2.143</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>1.501</td><td>0.798</td><td>0.166</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>2.653</td><td>1.004</td><td>2.100</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>-0.900</td><td>1.147</td><td>-1.091</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>0.340</td><td>0.102</td><td>2.028</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.209)</td><td>Sampled sites</td><td></td><td>0.716</td><td></td><td></td></tr>
+<tr><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td><td>Arboreal Dominants</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.681)</td><td>Intercept</td><td>3.472</td><td>0.518</td><td>2.581</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>1.186</td><td>1.733</td><td>2.683</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>2.286</td><td>0.372</td><td>1.611</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>SF-5</td><td>-2.579</td><td>0.167</td><td>-1.643</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>AG</td><td>2.101</td><td>0.581</td><td>1.733</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PA</td><td>1.801</td><td>0.704</td><td>0.981</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.101)</td><td>Sampled sites</td><td></td><td>0.704</td><td></td><td></td></tr>
+<tr><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td><td>Arboreal Subordinates</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.591)</td><td>Intercept</td><td>5.997</td><td>3.033</td><td>7.751</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>1.737</td><td>1.832</td><td>1.579</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>SF-15</td><td>2.217</td><td>0.123</td><td>2.912</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>1.234</td><td>1.074</td><td>1.507</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>1.048</td><td>0.198</td><td>0.401</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-1.392</td><td>1.014</td><td>-0.508</td><td>&gt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.186)</td><td>Sampled sites</td><td></td><td>0.600</td><td></td><td></td></tr>
+<tr><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td><td>Leaf-cutting Attini</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.600)</td><td>Intercept</td><td>3.722</td><td>1.525</td><td>4.501</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>5.294</td><td>1.248</td><td>0.997</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>2.442</td><td>0.799</td><td>1.009</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>2.049</td><td>0.702</td><td>1.836</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>-0.836</td><td>0.516</td><td>-1.171</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-0.607</td><td>1.030</td><td>-0.475</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.017)</td><td>Sampled sites</td><td></td><td>0.466</td><td></td><td></td></tr>
+<tr><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td><td>Non-leaf-cutting Attini</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.510)</td><td>Intercept</td><td>2.433</td><td>0.199</td><td>0.747</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>2.021</td><td>0.091</td><td>1.225</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>1.283</td><td>0.718</td><td>2.366</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>2.272</td><td>1.014</td><td>1.364</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>0.727</td><td>0.882</td><td>0.602</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-0.213</td><td>0.120</td><td>-1.029</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.119)</td><td>Sampled sites</td><td></td><td>0.692</td><td></td><td></td></tr>
+<tr><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td><td>Opportunists</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.307)</td><td>Intercept</td><td>0.903</td><td>0.221</td><td>2.091</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>-3.171</td><td>1.002</td><td>-4.001</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>SF-15</td><td>-2.516</td><td>1.414</td><td>-1.012</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>0.105</td><td>0.019</td><td>0.961</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>0.072</td><td>1.001</td><td>1.401</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>1.003</td><td>0.711</td><td>0.997</td><td>&lt;0.05</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.211)</td><td>Sampled sites</td><td></td><td>0.711</td><td></td><td></td></tr>
+<tr><td>Table C - Comparisons for Functional Diversity for the different ecosystems considered</td><td>Table C - Comparisons for Functional Diversity for the different ecosystems considered</td><td>Table C - Comparisons for Functional Diversity for the different ecosystems considered</td><td>Table C - Comparisons for Functional Diversity for the different ecosystems considered</td><td>Table C - Comparisons for Functional Diversity for the different ecosystems considered</td><td>Table C - Comparisons for Functional Diversity for the different ecosystems considered</td></tr>
+<tr><td>Functional richness</td><td>Functional richness</td><td>Functional richness</td><td>Functional richness</td><td>Functional richness</td><td>Functional richness</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.811)</td><td>Intercept</td><td>-14.020</td><td>4.044</td><td>-10.096</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>PF</td><td>-4.255</td><td>1.706</td><td>-6.694</td><td>&lt;0.0001</td></tr>
+<tr><td></td><td>SF-15</td><td>2.137</td><td>1.007</td><td>3.221</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>2.122</td><td>0.541</td><td>4.110</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>AG</td><td>0.641</td><td>1.032</td><td>0.981</td><td>&lt;0.001</td></tr>
+<tr><td></td><td>PA</td><td>-1.995</td><td>1.881</td><td>-5.371</td><td>&lt;0.01</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.467)</td><td>Sampled sites</td><td></td><td>0.901</td><td></td><td></td></tr>
+<tr><td>Functional evenness</td><td>Functional evenness</td><td>Functional evenness</td><td>Functional evenness</td><td>Functional evenness</td><td>Functional evenness</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.656)</td><td>Intercept</td><td>-8.001</td><td>2.201</td><td>-3.002</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PF</td><td>1.379</td><td>2.001</td><td>1.476</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>3.254</td><td>2.011</td><td>0.640</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-5</td><td>-0.926</td><td>1.058</td><td>-0.902</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>AG</td><td>-1.042</td><td>0.938</td><td>-1.000</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>PA</td><td>3.661</td><td>2.004</td><td>6.902</td><td>&lt;0.001</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.328)</td><td>Sampled sites</td><td></td><td>0.341</td><td></td><td></td></tr>
+<tr><td>Functional redundancy</td><td>Functional redundancy</td><td>Functional redundancy</td><td>Functional redundancy</td><td>Functional redundancy</td><td>Functional redundancy</td></tr>
+<tr><td>Response variable</td><td>Predictor variable</td><td>Estimate</td><td>SE/SD</td><td>Z-value</td><td>P-value</td></tr>
+<tr><td>Fixed effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2m = 0.656)</td><td>Intercept</td><td>3.774</td><td>6.403</td><td>9.202</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PF</td><td>2.679</td><td>1.832</td><td>5.411</td><td>&lt;0.01</td></tr>
+<tr><td></td><td>SF-15</td><td>-2.313</td><td>0.188</td><td>-2.481</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>SF-5</td><td>5.547</td><td>0.631</td><td>4.647</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>AG</td><td>4.247</td><td>3.266</td><td>5.271</td><td>&lt;0.05</td></tr>
+<tr><td></td><td>PA</td><td>-0.345</td><td>1.463</td><td>-3.017</td><td>&lt;0.01</td></tr>
+<tr><td>Random effects</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>(R2c–R2m = 0.186)</td><td>Sampled sites</td><td></td><td>0.359</td><td></td><td></td></tr>
+</table>
+
+Table S6 PERMANOVA results (based on Bray-Curtis similarity) comparing the composition of Functional groups of ants between ecosystems (ES_FT: Permanova F = 15.09, P <0.001; TT_FT: Permanova F = 23.16, P <0.001). The values highlighted in gray correspond to the significance test (p-value). PF= Primary Forest; SF-15= Secondary forest with 15 years of regeneration; SF-5= Secondary forest with 5 years of regeneration; AG= Agriculture; PA= Pasture.
+
+<table>
+<tr><td>ES_FT: Ecosystem specificity</td><td>ES_FT: Ecosystem specificity</td><td>ES_FT: Ecosystem specificity</td><td>ES_FT: Ecosystem specificity</td><td>ES_FT: Ecosystem specificity</td><td>ES_FT: Ecosystem specificity</td></tr>
+<tr><td></td><td>PF</td><td>SF-15</td><td>SF-5</td><td>AG</td><td>PA</td></tr>
+<tr><td>PF</td><td>-</td><td>0.001</td><td>0.0001</td><td>0.0001</td><td>0.0001</td></tr>
+<tr><td>SF-15</td><td>13.44</td><td>-</td><td>0.001</td><td>0.001</td><td>0.001</td></tr>
+<tr><td>SF-5</td><td>19.67</td><td>11.13</td><td>-</td><td>0.05</td><td>0.01</td></tr>
+<tr><td>AG</td><td>35.23</td><td>9.13</td><td>7.21</td><td>-</td><td>0.05</td></tr>
+<tr><td>PA</td><td>33.52</td><td>23.11</td><td>8.98</td><td>8.15</td><td>-</td></tr>
+<tr><td>TT_FT: Trophic type</td><td>TT_FT: Trophic type</td><td>TT_FT: Trophic type</td><td>TT_FT: Trophic type</td><td>TT_FT: Trophic type</td><td>TT_FT: Trophic type</td></tr>
+<tr><td></td><td>PF</td><td>SF-15</td><td>SF-5</td><td>AG</td><td>PA</td></tr>
+<tr><td>PF</td><td>-</td><td>0.001</td><td>0.0001</td><td>0.0001</td><td>0.0001</td></tr>
+<tr><td>SF-15</td><td>11.79</td><td>-</td><td>0.001</td><td>0.001</td><td>0.001</td></tr>
+<tr><td>SF-5</td><td>13.23</td><td>9.13</td><td>-</td><td>0.05</td><td>0.01</td></tr>
+<tr><td>AG</td><td>24.17</td><td>11.23</td><td>6.12</td><td>-</td><td>0.05</td></tr>
+<tr><td>PA</td><td>21.88</td><td>21.33</td><td>7.21</td><td>5.15</td><td>-</td></tr>
+</table>

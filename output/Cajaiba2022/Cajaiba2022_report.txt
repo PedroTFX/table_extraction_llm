@@ -1,22 +1,19 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Cajaiba2022\Cajaiba2022.xlsx  (255 rows)
-PREDICTION   : ..\output\Cajaiba2022\Cajaiba2022.csv  (917 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Cajaiba2022\Cajaiba2022.csv  (262 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
 ROW-LEVEL (key match)
-  matched (TP)        : 255
-  missed (FN)         : 0
-  spurious, in scope  : 7   <- GT covers this trait: real errors
-  spurious, out of scope: 655   <- GT never covers this trait: nothing to score against
+  matched (TP)          : 255
+  missed (FN)           : 0
+  spurious, in scope    : 7   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1      : 0.278 / 1.000 / 0.435   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.973 / 1.000 / 0.986   (out-of-scope rows excluded)
-  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
-
-  out-of-scope rows by uncovered field:
-    measurementType                            655
+  STRICT  P/R/F1        : 0.973 / 1.000 / 0.986
+  SCOPED  P/R/F1        : 0.973 / 1.000 / 0.986
+  RECALL (GT coverage)  : 1.000
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
@@ -41,10 +38,11 @@ FIELD-LEVEL ACCURACY (on matched rows only)
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  forest specialists-15                             0   131   PRED-ONLY
-  forest specialists-5                              0   131   PRED-ONLY
-  agriculture                                       0   131   PRED-ONLY
   ecosystem specificity                           131   131   
-  pastures for livestock                            0   131   PRED-ONLY
-  primary forest                                    0   131   PRED-ONLY
   trophic type                                    124   131   Δ+7 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.973  1.000  0.986    255     7     0   id+type+value
+  tags        0.000  0.000  0.000      0   262   255   basis+id+type+value+stat+sex+stage
+             (F1 -0.986 vs previous)

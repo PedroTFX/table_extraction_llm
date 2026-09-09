@@ -20,8 +20,8 @@ from urllib import request as _rq
 from text_manager import get_text
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
-# MODEL = "gemma4:e4b-it-qat"
-MODEL = "gemma4:e2b"
+MODEL = "gemma4:e4b-it-qat"
+# MODEL = "gemma4:e2b"
 # MODEL = "granite4.2:3b"
 OLLAMA_URL = "http://localhost:11434/api/chat"
 

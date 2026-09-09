@@ -1,30 +1,77 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Araujo2021\Araujo2021.xlsx  (273 rows)
-PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (195 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (220 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 29
-  missed (FN)         : 244
-  spurious, in scope  : 166   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+TAXON NAME REMAP (pred -> gt, 31 pair(s))
+  'A. vilhenae' -> 'Andrena vilhenae'
+  'C. analis' -> 'Centris analis'
+  'C. tarsata' -> 'Centris tarsata'
+  'C. trigonoides' -> 'Centris trigonoides'
+  'E. cognata' -> 'Euglossa cognata'
+  'E. despecta' -> 'Euglossa despecta'
+  'E. modestior' -> 'Euglossa modestior'
+  'E. towsendi' -> 'Euglossa towsendi'
+  'M. angulosa' -> 'Monobia angulosa'
+  'M. brasiliensis' -> 'Megachile brasiliensis'
+  'M. chrysosarus' -> 'Megachile chrysosarus'
+  'M. sejuncta' -> 'Megachile sejuncta'
+  'M. turpis' -> 'Megachile turpis'
+  'P. agile' -> 'Polistes agile'
+  'P. alessandroi' -> 'Polistes alessandroi'
+  'P. argentipilis' -> 'Podalonia argentipilis'
+  'P. brevithorax' -> 'Pachodynerus brevithorax'
+  'P. egregium' -> 'Polistes egregium'
+  'P. foxii' -> 'Polistes foxii'
+  'P. gianelli' -> 'Pristaulacus gianelli'
+  'P. goryanum' -> 'Polistes goryanum'
+  'P. grandis' -> 'Pisonia grandis'
+  'P. nasidens' -> 'Polistes nasidens'
+  'P. rufipes' -> 'Polistes rufipes'
+  'P. surinama' -> 'Polistes surinama'
+  'T. nitidum' -> 'Trypoxylon nitidum'
+  'T. punctivertex' -> 'Trypoxylon punctivertex'
+  'T. xanthandrum' -> 'Trypoxylon xanthandrum'
+  'T.lactitarse' -> 'Trypoxylon lactitarse'
+  'Z. proximus' -> 'Zeta proximus'
+  'Z. smithii' -> 'Zeta smithii'
 
-  STRICT  P/R/F1      : 0.149 / 0.106 / 0.124   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.149 / 0.106 / 0.124   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.106   <- 'how much of the GT did we get' — extras cannot affect this
+TAXON NAMES LEFT UNMAPPED (1)
+  'P. guadulpensis': no ground-truth string denotes this
+
+measurementType LEFT UNMAPPED (1)
+  'ITS': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 173
+  missed (FN)           : 100
+  spurious, in scope    : 8   <- GT covers this trait: real errors
+  spurious, out of scope: 39   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.786 / 0.634 / 0.702
+  SCOPED  P/R/F1        : 0.956 / 0.634 / 0.762
+  RECALL (GT coverage)  : 0.634
+
+  out-of-scope rows by uncovered field:
+    measurementType                             39
+
+FUZZY VALUE MATCHES (5 accepted beyond exact/numeric)
+  subset           5
+  sample:
+    [subset] gt 'plant parts' == pred 'plant_parts'
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                24     29  0.828
-  measurementMethod             0     27  0.000  <-- low
-  measurementUnit              18     29  0.621
-  measurementStatistic         16     29  0.552
+  basisOfRecord               111    173  0.642
+  measurementMethod             0    125  0.000  <-- low
+  measurementUnit             111    173  0.642
+  measurementStatistic         98    173  0.566
   measurementRemarks            0      0    n/a
-  sex                          11     29  0.379  <-- low
-  lifeStage                    18     29  0.621
-  caste                         0     18  0.000  <-- low
+  sex                          62    173  0.358  <-- low
+  lifeStage                   111    173  0.642
+  caste                         0    111  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
@@ -33,46 +80,49 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     29  0.000  <-- low
+  associatedReferences          0    173  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 244 MISSED ROWS MISSED
-  species not in prediction                 224
-  species present, trait missing             14
-  species+trait present, value differs        6
+WHY THE 100 MISSED ROWS MISSED
+  species not in prediction                             7
+  species present, trait missing                       90
+  species+trait present, value differs                  3
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2025-01-02 00:00:00'        ->  '1.2'                        x2
-     'leg scopa'                  ->  'leg_scopa'                  x2
-     '2025-08-07 00:00:00'        ->  '8.7'                        x1
-     'plant parts'                ->  'plant_parts'                x1
-  -> 4 substitutions explain 6 of 244 misses (2%) — scattered; no single cause
+     '1.02'                       ->  '1.2'                        x2
+     '8.07'                       ->  '8.7'                        x1
+  -> 2 substitutions explain 3 of 100 misses (3%) — scattered; no single cause
 
-  SPECIES IN GT BUT NOT IN PREDICTION (32 distinct), closest predicted name:
-     gt 'Andrena vilhenae'                  ~0.85~  pred 'A. vilhenae'   x7
-     gt 'Centris analis'                    ~0.68~  pred 'C. analis'   x7
-     gt 'Centris tarsata'                   ~0.67~  pred 'C. tarsata'   x7
-     gt 'Centris trigonoides'               ~0.67~  pred 'C. trigonoides'   x7
-     gt 'Euglossa cognata'                  ~0.62~  pred 'E. cognata'   x7
-     gt 'Euglossa despecta'                 ~0.65~  pred 'E. despecta'   x7
-  -> 6 species mismatches explain 42 of 244 misses (17%) — scattered; no single cause
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Polistes guadeloupensis'           ~0.70~  pred 'P. guadulpensis'   x7
+  -> 1 species mismatch explains 7 of 100 misses (7%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Body Size'                        x7
-     'Elevation'                        x7
-  -> 2 missing traits explain 14 of 244 misses (6%) — scattered; no single cause
+     'Body Size'                        x38
+     'Elevation'                        x38
+     'Pollen transport'                 x14
+  -> 3 missing traits explain 90 of 100 misses (90%) — systematic, not scattered
 
-  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (244 row(s))
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (100 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   body size                                        39     0   GT-ONLY
   larval diet                                      25    25   
   elevation                                        39     0   GT-ONLY
+  its                                               0    39   PRED-ONLY
   left posterior tibia length                      14    14   
   left wing length                                 39    39   
   left mandibula                                   25    25   
   left tibia posterior                             25    25   
   tongue length                                    14    14   
   nesting material                                 39    39   
-  pollen transport                                 14    14   
+  pollen transport                                 14     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.956  0.634  0.762    173     8   100   id+type+value
+             (39 more spurious row(s) out-of-scope; strict P would be 0.786)
+  tags        0.000  0.000  0.000      0   181   273   basis+id+type+value+stat+sex+stage
+             (39 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.762 vs previous)

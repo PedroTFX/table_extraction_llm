@@ -1,0 +1,1092 @@
+{
+  "Group Group": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists taxonomic ranks (e.g., Mammals) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies organisms into discrete biological groups (e.g., Mammals, Birds).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Kingdom Kingdom": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists taxonomic ranks (e.g., ANIMALIA) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biological kingdom (e.g., ANIMALIA).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Phylum Phylum": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists taxonomic ranks (e.g., CHORDATA) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biological phylum (e.g., CHORDATA).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Class Class": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists taxonomic ranks (e.g., MAMMALIA) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biological class (e.g., MAMMALIA).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Order Order": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists taxonomic ranks (e.g., CETARTIODACTYLA) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biological order (e.g., CETARTIODACTYLA).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Family Family": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists taxonomic ranks (e.g., SUIDAE) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biological family (e.g., SUIDAE).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Genus Genus": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column provides the genus name, which is a taxonomic identifier for the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biological genus (e.g., Phacochoerus)."
+  },
+  "IUCNName IUCNName": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column provides the full scientific name, which is a taxonomic identifier for the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents the scientific name of the species, a fixed biological identifier."
+  },
+  "NCBIName NCBIName": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column provides the scientific name, which is a taxonomic identifier for the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents the scientific name of the species, a fixed biological identifier."
+  },
+  "Status Status": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides conservation status (e.g., LC) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the species' conservation status (e.g., LC, CR).",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "CRITERIA Criteria short": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides criteria for status and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the criteria used for the conservation status.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "YEAR_PUB Year published": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides publication year and is not a measurement.",
+    "category": null,
+    "reasoning_relevance": "This is a publication date, not a biological trait or measurement."
+  },
+  "Realm Realm": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists a high-level classification (e.g., Afrotropic) and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's biogeographical realm.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "IUCN_RAW_THREATS RawThreats": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists threat codes and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "A list of discrete threat categories associated with the species.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "IUCN_THREATS IUCNThreats": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists threat codes and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "A list of discrete threat categories associated with the species.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "IUCN_THREATS_CATEG IUCNThreatCateg": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists threat categories and is not a measurement."
+  },
+  "IUCN_N_THREATS IUCNThreatNum": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column lists the number of threats and is not a measurement.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "A discrete count or classification of threat numbers.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "BODY_SIZE _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the body size of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A physical measurement of the organism's body size.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "BODY_SIZE _FINAL",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The text states that trait data were compiled from the literature, including existing trait databases and original species descriptions, and in some cases, measurements of photographs of pinned or herbarium specimens (Section 2.2). Since body size is a morphological trait measured on specimens or derived from species records, PreservedSpecimen is the appropriate basis.",
+    "measurementMethod": "Trait data compiled from literature and databases, using proxies such as body length for birds, and general body size measurements for other taxa.",
+    "measurementMethod_reasoning": "The study quantified body size using various proxies depending on the taxon (e.g., body length for birds) and compiled this data from existing trait databases, literature, and species descriptions (Section 2.2).",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "Body size is used as a continuous independent variable (trait value) in a generalized linear mixed model (GLMM) to predict extinction risk. The measurement value itself is the individual trait measurement, not a summary statistic like a mean or median of the trait across the entire dataset."
+  },
+  "proxy": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'proportion of range...').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "OFFSPRING_SIZE _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the size of the organism's offspring.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A measurement of the size of the organism's offspring.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "OFFSPRING_SIZE _FINAL",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The text states that trait data were compiled from literature, databases, and in some cases, measurements of photographs of pinned or herbarium specimens. Since offspring size is a morphological/life-history trait, and the data collection involved utilizing measurements from preserved specimens, PreservedSpecimen is the most appropriate basis of record.",
+    "measurementMethod": "Relative metric of offspring size: residuals of a regression between log(offspring size) and log(body size) within all taxa.",
+    "measurementMethod_reasoning": "The text explicitly defines the method used for this trait: 'Because offspring size is positively correlated with body size, we used a relative metric of offspring size instead: the residuals of a regression between log(offspring size) and log(body size) within all taxa.'"
+  },
+  "proxy (1)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'birth weight').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (1)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (1)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (1)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": true,
+    "value_type": "categorical"
+  },
+  "reference (1)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "FECUNDITY _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the fecundity (reproductive output) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A measurement of the reproductive output (number of offspring).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "FECUNDITY _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Fecundity is a life-history trait (a natural history characteristic of the species). Although the data was compiled from existing literature and databases, the trait itself represents a recorded biological state of the organism, which falls under the scope of HumanObservation for ecological/natural-history traits.",
+    "measurementMethod": "Compilation of existing trait databases and literature",
+    "measurementMethod_reasoning": "The text explicitly states that trait data were compiled from various sources, including existing trait databases (e.g., Billerman et al., 2022; Froese and Pauly, 2022), original species descriptions (BHL, 2022), and measurements from photographs of pinned or herbarium specimens."
+  },
+  "proxy (2)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'litter size').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (2)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (2)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (2)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (2)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "GENERATION_LENGTH _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the generation length (longevity) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A measurement of the time required for one generation.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "GENERATION_LENGTH _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Generation length is a life-history trait (a natural-history trait). Since the data for this trait was compiled from existing literature, trait databases, and original species descriptions rather than being measured directly from a preserved specimen or observed in situ by the researchers, it is classified as a HumanObservation record.",
+    "measurementMethod": "Compilation of existing trait databases and literature (e.g., Billerman et al., 2022; Froese and Pauly, 2022; IUCN, 2021)",
+    "measurementMethod_reasoning": "The study explicitly states in Section 2.2 that trait data, including generation length, were compiled from the literature, existing trait databases, and guides."
+  },
+  "proxy (3)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'maximum longevity').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (3)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (3)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (3)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (3)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "DIET_BREADTH _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the diet breadth of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Measures the range of food types eaten, a discrete ecological trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "DIET_BREADTH _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Diet breadth is an ecological/behavioral trait (what an organism eats). The data was compiled from literature, trait databases, and species descriptions, representing a documented characteristic of the organism rather than a physical measurement taken directly from a preserved specimen.",
+    "measurementMethod": "Number of diet types ingested by a species",
+    "measurementMethod_reasoning": "The text specifies that for almost all taxa considered, the proxy used to measure diet breadth was 'the number of diet types ingested by a species'."
+  },
+  "proxy (4)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'number of feeding categories').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (4)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (4)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (4)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (4)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "TROPHIC_LEVEL _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the trophic level of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the organism's trophic position (e.g., 1.0, 2.0).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "TROPHIC_LEVEL _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Trophic level is an ecological trait describing the feeding position of an organism. According to the rules, behavioral/ecological/natural-history traits should be tagged as HumanObservation, as the data is derived from existing literature and databases rather than direct observation of a living specimen or measurement on a preserved specimen.",
+    "measurementMethod": "Compilation of existing ecological trait data from databases and literature",
+    "measurementMethod_reasoning": "The text explicitly states that 'Trait data were compiled from the literature, including existing trait databases and guides (Billerman et al., 2022; Froese and Pauly, 2022; IUCN, 2021; Meiri, 2018; Myhrvold et al., 2015; Oliveira et al., 2017; Tobias et al., 2022; Uetz and Hoˇsek, 2022; Wilman et al., 2014), original species descriptions (BHL, 2022; Cigliano et al., 2022) and in some cases also measurements of photographs of pinned or herbarium specimens...'"
+  },
+  "proxy (5)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'herbivorous/omnivorous').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (5)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (5)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (5)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (5)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "DISPERSAL_ABILITY _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the dispersal ability of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the organism's dispersal ability.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "DISPERSAL_ABILITY _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Dispersal ability is an ecological/behavioral trait. The text states that trait data were compiled from the literature, including existing trait databases, guides, and original species descriptions, rather than being measured directly from specimens collected or observed by the authors during the study.",
+    "measurementMethod": "Dispersal ability was measured using different proxies depending on the taxon: for spiders, it was an ordinal trait reflecting the propensity to balloon; for plants, it was a continuous trait of seed size.",
+    "measurementMethod_reasoning": "The text explicitly details the proxies used for dispersal ability, noting that it was an ordinal trait reflecting the propensity to balloon in spiders and a continuous trait of seed size in plants."
+  },
+  "proxy (6)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'hand-wing index').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (6)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (6)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (6)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (6)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "MICROHABITAT _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the microhabitat of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "A discrete classification of the organism's microhabitat (e.g., 2.0, 5.0).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "MICROHABITAT _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Microhabitat verticality is an ecological trait describing the natural environment and vertical range of a species (e.g., from soil to canopy). Since this is an observation of a live organism's ecological state rather than a measurement taken directly from a preserved specimen, it is classified as HumanObservation.",
+    "measurementMethod": "Compilation of data from existing trait databases and literature, specifically measuring the vertical range of the species' occurrence (e.g., soil to canopy).",
+    "measurementMethod_reasoning": "The text states that trait data, including microhabitat, were 'compiled from the literature, including existing trait databases and guides' and 'original species descriptions.' The trait itself is defined as 'microhabitat verticality, from soil to canopy species,' indicating the method used to quantify the vertical extent of the species' habitat."
+  },
+  "proxy (7)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'Foraging verticality').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (7)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (7)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (7)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (7)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "HABITAT_BREADTH _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the habitat breadth of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the organism's habitat breadth.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "HABITAT_BREADTH _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Habitat breadth is an ecological/specialization trait. The data was compiled from literature, trait databases, and species descriptions, which constitutes a record derived from human observation and documentation of the species' characteristics.",
+    "measurementMethod": "Compilation of existing ecological trait data (proxies) from literature, trait databases, and species descriptions.",
+    "measurementMethod_reasoning": "The text states that trait data were compiled from various sources including existing trait databases, guides, original species descriptions, and literature, using proxies for the trait.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The study uses a meta-analytic approach to synthesize outcomes across taxa, calculating 'overall effect sizes' (based on slope parameters) for each trait. The final reported values represent the mean effect size derived from these meta-analyses."
+  },
+  "proxy (8)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'nr of IUCN habitats').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (8)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (8)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (8)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (8)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "ALTITUDE_MIN _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the minimum altitude of occurrence.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A physical measurement of the minimum altitude of occurrence.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "ALTITUDE_MIN _FINAL"
+  },
+  "proxy (9)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'minimum altitude of occurrence').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (9)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (9)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (9)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (9)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "ALTITUDE_MAX _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the maximum altitude of occurrence.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A physical measurement of the maximum altitude of occurrence.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "ALTITUDE_MAX _FINAL",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The data analyzed (altitudinal range) is a species-level trait derived from existing ecological records and databases (literature, IUCN, etc.) rather than a direct physical measurement of a single preserved specimen or a live organism observed in situ. Since it represents the state/range of the species, Occurrence is the most appropriate classification.",
+    "measurementMethod": "Altitudinal range (vertical extent of species distribution), often used as a proxy for climatic range, calculated and analyzed using residuals of a regression between log(altitudinal range) and log(geographical range size).",
+    "measurementMethod_reasoning": "The text specifies that altitudinal range was selected as a trait (a proxy for climatic range) and that the analysis utilized the residuals of a regression between log(altitudinal range) and log(geographical range size) to quantify this trait for statistical modeling."
+  },
+  "proxy (10)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'maximum altitude of occurrence').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (10)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (10)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (10)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (10)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "HFP2009 _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the mean index of human footprint in 2009.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the human footprint index.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "HFP2009 _FINAL",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study analyzes biological traits (e.g., body size, fecundity, diet breadth) which are physical/morphological characteristics. The text explicitly states that trait data were compiled from literature, databases, original species descriptions, and in some cases, measurements of 'pinned or herbarium specimens,' indicating the data originates from preserved specimens or their descriptions.",
+    "measurementMethod": "Meta-analysis of trait data compiled from literature and databases, analyzed using generalized linear mixed models (GLMMs) and fixed-effects meta-analyses.",
+    "measurementMethod_reasoning": "The methodology involves compiling trait data from various sources (databases, literature, original species descriptions) and then applying statistical methods: 'fitted a bivariate generalized linear mixed model (glmm)' to calculate relationships within taxa, and 'ran fixed-effects meta-analyses' to summarize these relationships across groups."
+  },
+  "proxy (11)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'mean index of human footprint').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (11)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (11)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (11)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (11)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "dHFP _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the change in human footprint between 2009 and 1993.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the change in human footprint.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "dHFP _FINAL",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study analyzes various biological traits (morphological and life-history) of species. The text explicitly states that trait data were compiled from literature, including original species descriptions and measurements taken from 'pinned or herbarium specimens' (holotype or paratype), which aligns with the definition of PreservedSpecimen.",
+    "measurementMethod": "Trait data were compiled from existing trait databases and literature (e.g., Billerman et al., 2022; Froese and Pauly, 2022; IUCN, 2021; Myhrvold et al., 2015; Uetz and Hoˇsek, 2022), original species descriptions (BHL, 2022), and direct measurements from preserved specimens. When data were missing, values from closely related species or genus/family averages were used (imputation). Data were log-transformed to ensure a near-normal distribution before being analyzed using generalized linear mixed models (GLMM) and meta-analyses.",
+    "measurementMethod_reasoning": null
+  },
+  "proxy (12)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'change in mean human footprint').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (12)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (12)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (12)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (12)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "GEOGRAPHICAL_RANGE_SIZE _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the geographical range size of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the species' geographical range size.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "GEOGRAPHICAL_RANGE_SIZE _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study compiles trait data from existing literature, trait databases, and IUCN Red List assessments. Geographical range size is typically derived from occurrence records or literature descriptions, which constitutes a human observation of the organism's state/range without direct measurement by the researchers in the field."
+  },
+  "proxy (13)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'extent of occurrence').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (13)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (13)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (13)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (13)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "HUMAN_FOOTPRINT _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the median human footprint within the species range.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the human footprint index.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "HUMAN_FOOTPRINT _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study analyzes various biological traits (e.g., body size, fecundity, habitat breadth) which are characteristics of the species. While some traits are morphological and may originate from preserved specimens, the data used in this meta-analysis were compiled from existing trait databases, literature, and guides, which constitutes a human observation/record of the species' characteristics.",
+    "measurementMethod": "Compilation and standardization of biological traits (including proxies) from existing databases and literature, followed by generalized linear-mixed models (GLMM) to estimate the relationship between the trait and extinction risk.",
+    "measurementMethod_reasoning": "The methodology involved selecting candidate traits, often using different 'proxies' for each trait across various taxa, and compiling this data from literature and databases. These traits were then used as independent variables in a generalized linear-mixed model (glmm) to estimate the slope parameter of the regression between the trait and extinction risk."
+  },
+  "proxy (14)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'median human footprint').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (14)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (14)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (14)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (14)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "HABITAT_CONVERSION _FINAL": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the proportion of range with human footprint 4 or higher.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of habitat conversion.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "HABITAT_CONVERSION _FINAL",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data used in this study (biological traits and extinction risk status) are compiled from existing literature, trait databases, and the IUCN Red List of Threatened Species. These sources represent records derived from human observation, documentation, and assessment, rather than direct measurements of living or preserved specimens in the field for the purpose of this specific study.",
+    "measurementMethod": "Generalized linear-mixed model (GLMM) and fixed-effects meta-analysis",
+    "measurementMethod_reasoning": "The study uses generalized linear-mixed models (GLMMs) to fit the relationship between the biological traits (independent variables) and the extinction risk (binary response variable). The overall consistency of these relationships across different taxa is then investigated using fixed-effects meta-analyses."
+  },
+  "proxy (15)": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column describes the proxy or method used to determine the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the type of trait being measured (e.g., 'proportion of range with human footprint').",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "unit_or_levels (15)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides units of measurement, not a measurement itself.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the unit or levels of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "resolution (15)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column specifies the scope of the measurement (e.g., species) and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the taxonomic resolution of the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "comments (15)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides notes and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes contextual notes about the measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "reference (15)": {
+    "field": "null",
+    "value_column": false,
+    "reasoning": "This column provides source references and is not a measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column name describes the source of the measurement data.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "IUCN_THREATS_CATEG IUCNThreatCategs": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  }
+}

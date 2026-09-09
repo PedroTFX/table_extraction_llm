@@ -1,0 +1,77 @@
+{
+  "paper": "Renoz2020",
+  "has_full_md": true,
+  "supplementary": [],
+  "ground_truth": [
+    "Renoz2020.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "Renoz2020_full.md",
+      "n_tables": 2,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "Renoz2020_full.md",
+      "table_index": 0,
+      "n_rows": 4,
+      "n_cols": 6,
+      "header": [
+        "Gene",
+        "Product",
+        "Primers (5′–3′)",
+        "Tm",
+        "Fragment size (bp)",
+        "References"
+      ],
+      "identifier": {
+        "column": "Gene",
+        "taxon_fraction": 1.0,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    },
+    {
+      "source": "Renoz2020_full.md",
+      "table_index": 1,
+      "n_rows": 68,
+      "n_cols": 9,
+      "header": [
+        "Colony ID",
+        "Sampling date",
+        "Collection site",
+        "Aphid species",
+        "Host plant species",
+        "Arsenophonus",
+        "S. symbiotica",
+        "R. insecticola",
+        "H. defensa"
+      ],
+      "identifier": {
+        "column": "Aphid species",
+        "taxon_fraction": 1.0,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    }
+  ],
+  "error": null,
+  "n_tables": 2,
+  "n_identifier_tables": 2,
+  "n_identifier_tables_markdown": 2,
+  "n_identifier_tables_supplementary": 0,
+  "n_transposed_tables": 0,
+  "n_rows_total": 72,
+  "n_distinct_species": 6,
+  "would_yield_rows": true,
+  "would_yield_rows_if_supplements_passed": true,
+  "verdict": "OK — 2 identifier table(s) in the markdown; a 0-row result is downstream (LLM mapping / relevance gate / grouping), not here"
+}

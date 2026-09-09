@@ -1,0 +1,312 @@
+SUPPLEMEntary material
+
+Table S1. Sampling points, treatment, coordinates, sampling year, impact index, and distance (m) from the nearest pit to the streams sampled in the Carajás National Forest. Sampling 1 (September/October 2015). Sampling 2 (October/November 2016), Sampling 3 (October 2017).
+
+<table>
+<tr><td>Sampling point (stream)</td><td>Treatment</td><td>Coordinates</td><td>Coordinates</td><td>Year</td><td>Impact Index</td><td>Distance from the nearest mining pit (m)</td><td>Average area of nearest mining pit (m2)*</td></tr>
+<tr><td>Sampling point (stream)</td><td>Treatment</td><td>X</td><td>Y</td><td>Year</td><td>Impact Index</td><td>Distance from the nearest mining pit (m)</td><td>Average area of nearest mining pit (m2)*</td></tr>
+<tr><td>CONT-01AG</td><td>Preserved</td><td>589329.9</td><td>9318463.1</td><td>2015</td><td>0.501</td><td>8399.5</td><td>22,166,106</td></tr>
+<tr><td>CONT-02AG</td><td>Preserved</td><td>592535</td><td>9316425.5</td><td>2015</td><td>0.345</td><td>9653.1</td><td>22,166,106</td></tr>
+<tr><td>CONT-03AG</td><td>Preserved</td><td>596393.6</td><td>9315166.1</td><td>2015</td><td>0.267</td><td>10186.8</td><td>22,166,106</td></tr>
+<tr><td>CONT-04AG</td><td>Preserved</td><td>591046.9</td><td>9323168.5</td><td>2015</td><td>1.926</td><td>3914.9</td><td>22,166,106</td></tr>
+<tr><td>CS11-01AG</td><td>Preserved</td><td>565199.5</td><td>9300429.1</td><td>2015</td><td>0.156</td><td>10549.8</td><td>13,388,681</td></tr>
+<tr><td>CS11-02AG</td><td>Preserved</td><td>562222.4</td><td>9299915.4</td><td>2015</td><td>0.118</td><td>12448.6</td><td>13,388,681</td></tr>
+<tr><td>CS11-03AG</td><td>Preserved</td><td>563492.4</td><td>9297517.6</td><td>2015</td><td>0.161</td><td>10092.4</td><td>13,388,681</td></tr>
+<tr><td>CS11-05AG</td><td>Preserved</td><td>561918.6</td><td>9296287.3</td><td>2015</td><td>0.136</td><td>11034.2</td><td>13,388,681</td></tr>
+<tr><td>MANG-01AG</td><td>Altered</td><td>574393.7</td><td>9325717.3</td><td>2015</td><td>37.851</td><td>471.3</td><td>8,376,965</td></tr>
+<tr><td>MANG-02AG</td><td>Altered</td><td>576608.2</td><td>9322851.8</td><td>2015</td><td>44.584</td><td>434.3</td><td>8,376,965</td></tr>
+<tr><td>MANG-03AG</td><td>Altered</td><td>579584.8</td><td>9324979.1</td><td>2015</td><td>152.184</td><td>234.8</td><td>8,376,965</td></tr>
+<tr><td>MANG-04AG</td><td>Altered</td><td>578537.1</td><td>9328622.4</td><td>2015</td><td>84.466</td><td>315.4</td><td>8,376,965</td></tr>
+<tr><td>N4-01AG</td><td>Altered</td><td>588245.5</td><td>9325868.8</td><td>2015</td><td>7.688</td><td>1751.1</td><td>22,166,106</td></tr>
+<tr><td>N4-02AG</td><td>Altered</td><td>592794.4</td><td>9325607.8</td><td>2015</td><td>10.898</td><td>1654.8</td><td>22,166,106</td></tr>
+<tr><td>N4-03AG-R</td><td>Altered</td><td>592125.1</td><td>9324559.8</td><td>2015</td><td>4.092</td><td>2697</td><td>22,166,106</td></tr>
+<tr><td>N4-04AG</td><td>Altered</td><td>588546.3</td><td>9328361.8</td><td>2015</td><td>16.558</td><td>1175.2</td><td>22,166,106</td></tr>
+<tr><td>N5-01AG</td><td>Altered</td><td>595263.1</td><td>9325711.9</td><td>2015</td><td>31.584</td><td>563</td><td>9,156,887</td></tr>
+<tr><td>N5-02AG</td><td>Altered</td><td>595874.3</td><td>9324910.2</td><td>2015</td><td>32.508</td><td>543.7</td><td>9,156,887</td></tr>
+<tr><td>N5-03AG</td><td>Altered</td><td>598104.8</td><td>9326712</td><td>2015</td><td>14.866</td><td>821.2</td><td>9,156,887</td></tr>
+<tr><td>N5-04AG</td><td>Altered</td><td>598200</td><td>9327196.2</td><td>2015</td><td>9.623</td><td>1051.2</td><td>9,156,887</td></tr>
+<tr><td>S11D-01AG</td><td>Altered</td><td>575669</td><td>9294108.2</td><td>2015</td><td>16.958</td><td>889.4</td><td>13,388,681</td></tr>
+<tr><td>S11D-02AG</td><td>Altered</td><td>573089.5</td><td>9295355.1</td><td>2015</td><td>2.376</td><td>2391.2</td><td>13,388,681</td></tr>
+<tr><td>S11D-04AG</td><td>Preserved</td><td>569783.3</td><td>9294713.7</td><td>2015</td><td>1.277</td><td>3277.6</td><td>13,388,681</td></tr>
+<tr><td>S11D-05AG</td><td>Preserved</td><td>566035.4</td><td>9290842.1</td><td>2015</td><td>0.355</td><td>6351.4</td><td>13,388,681</td></tr>
+<tr><td>CONT-01AG</td><td>Preserved</td><td>589329.9</td><td>9318463.1</td><td>2016</td><td>0.796</td><td>6662.4</td><td>26,124,097</td></tr>
+<tr><td>CONT-02AG</td><td>Preserved</td><td>592535</td><td>9316425.5</td><td>2016</td><td>0.56</td><td>8176.1</td><td>26,124,097</td></tr>
+<tr><td>CONT-03AG</td><td>Preserved</td><td>596393.6</td><td>9315166.1</td><td>2016</td><td>0.386</td><td>10022.5</td><td>26,124,097</td></tr>
+<tr><td>CONT-04AG</td><td>Altered</td><td>591046.9</td><td>9323168.5</td><td>2016</td><td>10.019</td><td>1664.8</td><td>26,124,097</td></tr>
+<tr><td>CS11-01AG</td><td>Preserved</td><td>565199.5</td><td>9300429.1</td><td>2016</td><td>0.163</td><td>10549.8</td><td>13,569,335</td></tr>
+<tr><td>CS11-02AG</td><td>Preserved</td><td>562222.4</td><td>9299915.4</td><td>2016</td><td>0.124</td><td>12448.6</td><td>13,569,335</td></tr>
+<tr><td>CS11-03AG</td><td>Preserved</td><td>563492.4</td><td>9297517.6</td><td>2016</td><td>0.167</td><td>10092.4</td><td>13,569,335</td></tr>
+<tr><td>CS11-05AG</td><td>Preserved</td><td>561918.6</td><td>9296287.3</td><td>2016</td><td>0.142</td><td>11034.2</td><td>13,569,335</td></tr>
+<tr><td>MANG-01AG</td><td>Altered</td><td>574393.7</td><td>9325717.3</td><td>2016</td><td>38.702</td><td>471.3</td><td>8,560,023</td></tr>
+<tr><td>MANG-02AG</td><td>Altered</td><td>576608.2</td><td>9322851.8</td><td>2016</td><td>45.591</td><td>434.3</td><td>8,560,023</td></tr>
+<tr><td>MANG-03AG</td><td>Altered</td><td>579584.8</td><td>9324979.1</td><td>2016</td><td>155.573</td><td>234.8</td><td>8,560,023</td></tr>
+<tr><td>MANG-04AG</td><td>Altered</td><td>578537.1</td><td>9328622.4</td><td>2016</td><td>86.347</td><td>315.4</td><td>8,560,023</td></tr>
+<tr><td>N4-01AG</td><td>Altered</td><td>588245.5</td><td>9325868.8</td><td>2016</td><td>18.65</td><td>1200.7</td><td>26,124,097</td></tr>
+<tr><td>N4-02AG</td><td>Altered</td><td>592794.4</td><td>9325607.8</td><td>2016</td><td>47.772</td><td>778.7</td><td>26,124,097</td></tr>
+<tr><td>N4-03AG-R</td><td>Altered</td><td>592125.1</td><td>9324559.8</td><td>2016</td><td>5226.311</td><td>70.7</td><td>26,124,097</td></tr>
+<tr><td>N4-04AG</td><td>Altered</td><td>588546.3</td><td>9328361.8</td><td>2016</td><td>40.605</td><td>807.6</td><td>26,124,097</td></tr>
+<tr><td>N5-01AG</td><td>Altered</td><td>595263.1</td><td>9325711.9</td><td>2016</td><td>43.312</td><td>502.9</td><td>10,122,325</td></tr>
+<tr><td>N5-02AG</td><td>Altered</td><td>595874.3</td><td>9324910.2</td><td>2016</td><td>54.948</td><td>437.1</td><td>10,122,325</td></tr>
+<tr><td>N5-03AG</td><td>Altered</td><td>598104.8</td><td>9326712</td><td>2016</td><td>16.943</td><td>818.7</td><td>10,122,325</td></tr>
+<tr><td>N5-04AG</td><td>Altered</td><td>598200</td><td>9327196.2</td><td>2016</td><td>11.157</td><td>1048.8</td><td>10,122,325</td></tr>
+<tr><td>S11D-01AG</td><td>Altered</td><td>575669</td><td>9294108.2</td><td>2016</td><td>17.192</td><td>889.4</td><td>13,569,335</td></tr>
+<tr><td>S11D-02AG</td><td>Altered</td><td>573089.5</td><td>9295355.1</td><td>2016</td><td>2.413</td><td>2391.2</td><td>13,569,335</td></tr>
+<tr><td>S11D-04AG</td><td>Preserved</td><td>569783.3</td><td>9294713.7</td><td>2016</td><td>1.299</td><td>3277.6</td><td>13,569,335</td></tr>
+<tr><td>S11D-05AG</td><td>Preserved</td><td>566035.4</td><td>9290842.1</td><td>2016</td><td>0.364</td><td>6351.4</td><td>13,569,335</td></tr>
+<tr><td>CONT-01AG</td><td>Preserved</td><td>589329.9</td><td>9318463.1</td><td>2017</td><td>0.842</td><td>6501.4</td><td>26,619,508</td></tr>
+<tr><td>CONT-02AG</td><td>Preserved</td><td>592535</td><td>9316425.5</td><td>2017</td><td>0.571</td><td>8176.1</td><td>26,619,508</td></tr>
+<tr><td>CONT-03AG</td><td>Preserved</td><td>596393.6</td><td>9315166.1</td><td>2017</td><td>0.393</td><td>10022.5</td><td>26,619,508</td></tr>
+<tr><td>CONT-04AG</td><td>Altered</td><td>591046.9</td><td>9323168.5</td><td>2017</td><td>10.205</td><td>1664.8</td><td>26,619,508</td></tr>
+<tr><td>CS11-01AG</td><td>Preserved</td><td>565199.5</td><td>9300429.1</td><td>2017</td><td>0.172</td><td>10549.7</td><td>14,437,368</td></tr>
+<tr><td>CS11-02AG</td><td>Preserved</td><td>562222.4</td><td>9299915.4</td><td>2017</td><td>0.13</td><td>12448.2</td><td>14,437,368</td></tr>
+<tr><td>CS11-03AG</td><td>Preserved</td><td>563492.4</td><td>9297517.6</td><td>2017</td><td>0.176</td><td>10091.8</td><td>14,437,368</td></tr>
+<tr><td>CS11-05AG</td><td>Preserved</td><td>561918.6</td><td>9296287.3</td><td>2017</td><td>0.15</td><td>11033.5</td><td>14,437,368</td></tr>
+<tr><td>MANG-01AG</td><td>Altered</td><td>574393.7</td><td>9325717.3</td><td>2017</td><td>40.56</td><td>469.7</td><td>8,912,352</td></tr>
+<tr><td>MANG-02AG</td><td>Altered</td><td>576608.2</td><td>9322851.8</td><td>2017</td><td>47.464</td><td>434.3</td><td>8,912,352</td></tr>
+<tr><td>MANG-03AG</td><td>Altered</td><td>579584.8</td><td>9324979.1</td><td>2017</td><td>161.969</td><td>234.8</td><td>8,912,352</td></tr>
+<tr><td>MANG-04AG</td><td>Altered</td><td>578537.1</td><td>9328622.4</td><td>2017</td><td>89.895</td><td>315.4</td><td>8,912,352</td></tr>
+<tr><td>N4-01AG</td><td>Altered</td><td>588245.5</td><td>9325868.8</td><td>2017</td><td>20.889</td><td>1143.7</td><td>26,619,508</td></tr>
+<tr><td>N4-02AG</td><td>Altered</td><td>592794.4</td><td>9325607.8</td><td>2017</td><td>48.616</td><td>778.7</td><td>26,619,508</td></tr>
+<tr><td>N4-03AG-R</td><td>Altered</td><td>592125.1</td><td>9324559.8</td><td>2017</td><td>5325.405</td><td>70.7</td><td>26,619,508</td></tr>
+<tr><td>N4-04AG</td><td>Altered</td><td>588546.3</td><td>9328361.8</td><td>2017</td><td>46.973</td><td>757.4</td><td>26,619,508</td></tr>
+<tr><td>N5-01AG</td><td>Altered</td><td>595263.1</td><td>9325711.9</td><td>2017</td><td>59.439</td><td>430.9</td><td>10,175,423</td></tr>
+<tr><td>N5-02AG</td><td>Altered</td><td>595874.3</td><td>9324910.2</td><td>2017</td><td>55.719</td><td>437.1</td><td>10,175,423</td></tr>
+<tr><td>N5-03AG</td><td>Altered</td><td>598104.8</td><td>9326712</td><td>2017</td><td>17.059</td><td>818.7</td><td>10,175,423</td></tr>
+<tr><td>N5-04AG</td><td>Altered</td><td>598200</td><td>9327196.2</td><td>2017</td><td>11.243</td><td>1048.8</td><td>10,175,423</td></tr>
+<tr><td>S11D-01AG</td><td>Altered</td><td>575669</td><td>9294108.2</td><td>2017</td><td>18.291</td><td>889.4</td><td>14,437,368</td></tr>
+<tr><td>S11D-02AG</td><td>Altered</td><td>573089.5</td><td>9295355.1</td><td>2017</td><td>2.566</td><td>2391.2</td><td>14,437,368</td></tr>
+<tr><td>S11D-04AG</td><td>Preserved</td><td>569783.3</td><td>9294713.7</td><td>2017</td><td>1.381</td><td>3277.3</td><td>14,437,368</td></tr>
+<tr><td>S11D-05AG</td><td>Preserved</td><td>566035.4</td><td>9290842.1</td><td>2017</td><td>0.386</td><td>6350.6</td><td>14,437,368</td></tr>
+</table>
+
+*Area calculated for the reference month of collection in each year.
+
+Table S2.  Functional traits used to build the functional matrix of the Ephemeroptera genera.
+
+<table>
+<tr><td>Type</td><td>Functional trait</td><td>Quantitative</td><td>Qualitative</td><td>Binary</td><td>Category</td><td>Function</td><td>References</td></tr>
+<tr><td>Ecology</td><td>Functional Feeding Group (FFG)</td><td></td><td>x</td><td></td><td>Collector</td><td>Balance in the food chain</td><td>Merritt and Cummins, 1996, Cummins et al., 2005, Shimano et al., 2012, Cruz, Salles and Hamada, 2013, Brasil et al., 2014, Dedieu et al., 2015.</td></tr>
+<tr><td>Ecology</td><td>Functional Feeding Group (FFG)</td><td></td><td>x</td><td></td><td>Filterer</td><td></td><td>Merritt and Cummins, 1996, Cummins et al., 2005, Shimano et al., 2012, Cruz, Salles and Hamada, 2013, Brasil et al., 2014, Dedieu et al., 2015.</td></tr>
+<tr><td>Ecology</td><td>Functional Feeding Group (FFG)</td><td></td><td>x</td><td></td><td>Scraper</td><td></td><td>Merritt and Cummins, 1996, Cummins et al., 2005, Shimano et al., 2012, Cruz, Salles and Hamada, 2013, Brasil et al., 2014, Dedieu et al., 2015.</td></tr>
+<tr><td>Ecology</td><td>Functional Feeding Group (FFG)</td><td></td><td>x</td><td></td><td>Predator</td><td></td><td>Merritt and Cummins, 1996, Cummins et al., 2005, Shimano et al., 2012, Cruz, Salles and Hamada, 2013, Brasil et al., 2014, Dedieu et al., 2015.</td></tr>
+<tr><td>Ecology</td><td>Functional Feeding Group (FFG)</td><td></td><td>x</td><td></td><td>Cutter</td><td></td><td>Merritt and Cummins, 1996, Cummins et al., 2005, Shimano et al., 2012, Cruz, Salles and Hamada, 2013, Brasil et al., 2014, Dedieu et al., 2015.</td></tr>
+<tr><td>Ecology</td><td>Presence of opercular gill</td><td></td><td></td><td></td><td>1</td><td>Habitat Resilience, Breathing, Protection</td><td>Domínguez et al., 2006, Zhou &amp; Zheng., 2010. Salles et al., 2018.</td></tr>
+<tr><td>Ecology</td><td>Presence of opercular gill</td><td></td><td></td><td>x</td><td>0</td><td>Habitat Resilience, Breathing, Protection</td><td>Domínguez et al., 2006, Zhou &amp; Zheng., 2010. Salles et al., 2018.</td></tr>
+<tr><td>Morphology</td><td>Head size</td><td>x
+
+x</td><td></td><td></td><td>Length</td><td>Feeding</td><td>Merritt and Cummins, 1996, Goncalves et al, 2003, Shimano et al., 201, Domínguez et al., 2006, Salles et al., 2018.</td></tr>
+<tr><td>Morphology</td><td>Head size</td><td>x
+
+x</td><td></td><td></td><td>Width</td><td>Feeding</td><td>Merritt and Cummins, 1996, Goncalves et al, 2003, Shimano et al., 201, Domínguez et al., 2006, Salles et al., 2018.</td></tr>
+<tr><td>Morphology</td><td>Size of the mesonotum</td><td>x</td><td></td><td></td><td>Width</td><td>Life cycle (development of the alar weave); nymph size</td><td>Domínguez et al., 2006, Flowers &amp; De La Rosa, 2010, Salles et al., 2018.</td></tr>
+</table>
+
+Table S3. Table of morphological (quantitative) and ecological (qualitative) traits of Ephemeroptera genera used in the data analysis; opercular gill (og), nog: non-opercular gill size.
+
+<table>
+<tr><td>Traits</td><td>Traits</td><td>Traits</td><td>Traits</td><td>Traits</td><td>Traits</td></tr>
+<tr><td>Genus</td><td>Size of the mesonotum (mm)</td><td>Length head size (mm)</td><td>Width head size (mm)</td><td>Presence of opercular gill</td><td>Feeding group</td></tr>
+<tr><td>Amanahyphes</td><td>10.927</td><td>10.639</td><td>12.916</td><td>og</td><td>Collector</td></tr>
+<tr><td>Americabaetis</td><td>17.641</td><td>16.960</td><td>13.551</td><td>nog</td><td>Collector</td></tr>
+<tr><td>Askola</td><td>15.268</td><td>17.863</td><td>17.789</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Baetodes</td><td>18.086</td><td>17.966</td><td>16.062</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Brasilocaenis</td><td>10.979</td><td>0.718</td><td>10.089</td><td>og</td><td>Scraper</td></tr>
+<tr><td>Caenis</td><td>15.424</td><td>0.6335</td><td>11.103</td><td>og</td><td>Scraper</td></tr>
+<tr><td>Callibaetis</td><td>26.752</td><td>24.865</td><td>16.135</td><td>nog</td><td>Collector</td></tr>
+<tr><td>Callibaetoides</td><td>13.321</td><td>0.9958</td><td>12.417</td><td>nog</td><td>Collector</td></tr>
+<tr><td>Campylocia</td><td>50.676</td><td>35.543</td><td>39.238</td><td>nog</td><td>Collector</td></tr>
+<tr><td>Cloeodes</td><td>15.588</td><td>17.956</td><td>13.045</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Farrodes</td><td>12.613</td><td>16.843</td><td>17.962</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Fittkaulus</td><td>12.350</td><td>18.333</td><td>17.538</td><td>nog</td><td>Filterer</td></tr>
+<tr><td>Hagenulopsis</td><td>11.781</td><td>15.836</td><td>15.489</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Hydrosmilodon</td><td>28.275</td><td>34.915</td><td>39.132</td><td>nog</td><td>Filterer</td></tr>
+<tr><td>Leptohyphes</td><td>15.827</td><td>12.812</td><td>17.736</td><td>og</td><td>Collector</td></tr>
+<tr><td>Miroculis</td><td>14.309</td><td>18.704</td><td>20.258</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Paracloeodes</td><td>24.072</td><td>12.634</td><td>18.363</td><td>nog</td><td>Collector</td></tr>
+<tr><td>Paramaka</td><td>25.768</td><td>29.620</td><td>33.622</td><td>nog</td><td>Filterer</td></tr>
+<tr><td>Simothraulopsis</td><td>22.461</td><td>27.761</td><td>24.526</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Terpides</td><td>15.304</td><td>13.502</td><td>16.671</td><td>nog</td><td>Filterer</td></tr>
+<tr><td>Thraulodes</td><td>22.046</td><td>20.062</td><td>24.583</td><td>nog</td><td>Scraper</td></tr>
+<tr><td>Traverhyphes</td><td>23.971</td><td>11.882</td><td>17.749</td><td>og</td><td>Collector</td></tr>
+<tr><td>Tricorythodes</td><td>16.765</td><td>0.9332</td><td>13.513</td><td>og</td><td>Collector</td></tr>
+<tr><td>Tricorythopsis</td><td>22.291</td><td>11.860</td><td>18.027</td><td>og</td><td>Collector</td></tr>
+<tr><td>Ulmeritoides</td><td>13.773</td><td>13.085</td><td>16.575</td><td>nog</td><td>Filterer</td></tr>
+<tr><td>Waltzoyphius</td><td>15.969</td><td>14.910</td><td>11.333</td><td>nog</td><td>Collector</td></tr>
+<tr><td>Zelusia</td><td>13.818</td><td>0.8606</td><td>10.305</td><td>nog</td><td>Collector</td></tr>
+</table>
+
+Table S4. List of genera used in functional beta diversity analysis.
+
+<table>
+<tr><td>Genus</td><td>Abundance/Streams</td><td>Abundance/Streams</td><td>Abundance/Streams</td></tr>
+<tr><td>Genus</td><td>Altered</td><td>Preserved</td><td>Total</td></tr>
+<tr><td>Amanahyphes Salles &amp; Molineri, 2006</td><td>14</td><td>3</td><td>17</td></tr>
+<tr><td>Americabaetis Kluge, 1992</td><td>29</td><td>14</td><td>43</td></tr>
+<tr><td>Askola Peters, 1969</td><td>13</td><td>18</td><td>31</td></tr>
+<tr><td>Baetodes Needham &amp; Murphy, 1924</td><td>19</td><td>18</td><td>37</td></tr>
+<tr><td>Brasilocaenis Malzacher, 1986</td><td>12</td><td>7</td><td>19</td></tr>
+<tr><td>Caenis Malzacher, 1986</td><td>59</td><td>12</td><td>71</td></tr>
+<tr><td>Callibaetis Eaton, 1881</td><td>13</td><td>1</td><td>14</td></tr>
+<tr><td>Callibaetoides Cruz, Salles &amp; Hamada, 2013</td><td>6</td><td>2</td><td>8</td></tr>
+<tr><td>Campylocia Needham &amp; Murphy, 1924</td><td>16</td><td>10</td><td>26</td></tr>
+<tr><td>Cloeodes Traver, 1938</td><td>92</td><td>59</td><td>151</td></tr>
+<tr><td>Farrodes Peters, 1971</td><td>2</td><td>0</td><td>2</td></tr>
+<tr><td>Fittkaulus Savage &amp; Peters, 1978</td><td>217</td><td>130</td><td>347</td></tr>
+<tr><td>Hagenulopsis Ulmer, 1920</td><td>1</td><td>4</td><td>5</td></tr>
+<tr><td>Hydrosmilodon Flowers &amp; Domínguez, 1992</td><td>95</td><td>49</td><td>144</td></tr>
+<tr><td>Leptohyphes Ulmer, 1919</td><td>21</td><td>3</td><td>24</td></tr>
+<tr><td>Miroculis Edmunds, 1963</td><td>396</td><td>243</td><td>639</td></tr>
+<tr><td>Paracloeodes Day, 1955</td><td>12</td><td>3</td><td>15</td></tr>
+<tr><td>Paramaka Savage &amp; Domínguez, 1992</td><td>44</td><td>48</td><td>92</td></tr>
+<tr><td>Simothraulopsis Demoulin, 1966</td><td>16</td><td>4</td><td>20</td></tr>
+<tr><td>Terpides Demoulin, 1966</td><td>23</td><td>35</td><td>58</td></tr>
+<tr><td>Thraulodes Ulmer, 1920</td><td>4</td><td>8</td><td>12</td></tr>
+<tr><td>Traverhyphes Molineri, 2001</td><td>37</td><td>9</td><td>46</td></tr>
+<tr><td>Tricorythodes Ulmer, 1920</td><td>7</td><td>22</td><td>29</td></tr>
+<tr><td>Tricorythopsis Traver, 1958</td><td>10</td><td>1</td><td>11</td></tr>
+<tr><td>Ulmeritoides Traver, 1959</td><td>33</td><td>54</td><td>87</td></tr>
+<tr><td>Waltzoyphius Lugo-Ortiz&amp; Mccafferty, 1995</td><td>5</td><td>2</td><td>7</td></tr>
+<tr><td>Zelusia Lugo-Ortiz &amp; Mccafferty, 1998</td><td>134</td><td>64</td><td>198</td></tr>
+<tr><td>Overall Total</td><td>1330</td><td>823</td><td>2153</td></tr>
+</table>
+
+Table S5- Principal Components Analysis (PCA) results indicating the variables and scores relationships, variance explanation (%) and eigenvalues for principal components 1 and 2.
+
+<table>
+<tr><td>Variable</td><td>PC1</td><td>PC2</td></tr>
+<tr><td>Conductivity</td><td>0.340</td><td>-0.898</td></tr>
+<tr><td>COD</td><td>-0.123</td><td>-0.052</td></tr>
+<tr><td>ItonTot</td><td>0.650</td><td>0.215</td></tr>
+<tr><td>PhosphoTot</td><td>0.034</td><td>-0.231</td></tr>
+<tr><td>MangTot</td><td>0.461</td><td>-0.078</td></tr>
+<tr><td>Nitrate</td><td>-0.314</td><td>-0.041</td></tr>
+<tr><td>OxygenDis</td><td>-0.028</td><td>-0.077</td></tr>
+<tr><td>pH</td><td>0.079</td><td>0.248</td></tr>
+<tr><td>SolidTot</td><td>0.358</td><td>-0.886</td></tr>
+<tr><td>Temperature</td><td>0.683</td><td>0.052</td></tr>
+<tr><td>Turbidity</td><td>0.725</td><td>0.410</td></tr>
+<tr><td>Impact.Index</td><td>0.636</td><td>0.242</td></tr>
+<tr><td>%Explanation</td><td>19.977</td><td>16.653</td></tr>
+<tr><td>Eigenvalues</td><td>2.359</td><td>1.967</td></tr>
+</table>
+
+Table S6. Subset of predictor variables (environmental and spatial dataset) selected by forward selection for explaining the community structure of mayflies in sampled streams.
+
+<table>
+<tr><td>Matrix</td><td>Variable</td><td>Accum. R2cum</td><td>Accum. R2adj</td><td>F</td><td>p</td></tr>
+<tr><td>Environment</td><td>Impact Index</td><td>0.0351</td><td>0.0193</td><td>2.2222</td><td>0.0003</td></tr>
+<tr><td>Environment</td><td>Temperature</td><td>0.0730</td><td>0.0421</td><td>2.4512</td><td>0.0001</td></tr>
+<tr><td>Environment</td><td>Dissolved oxygen</td><td>0.0976</td><td>0.0517</td><td>1.6069</td><td>0.0253</td></tr>
+<tr><td>Space</td><td>MEM2</td><td>0.0467</td><td>0.0310</td><td>2.9861</td><td>0.0000</td></tr>
+<tr><td>Space</td><td>MEM9</td><td>0.0838</td><td>0.0532</td><td>2.4284</td><td>0.0001</td></tr>
+<tr><td>Space</td><td>MEM7</td><td>0.1194</td><td>0.0747</td><td>2.3915</td><td>0.0001</td></tr>
+<tr><td>Space</td><td>MEM1</td><td>0.1533</td><td>0.0949</td><td>2.3213</td><td>0.0001</td></tr>
+<tr><td>Space</td><td>MEM4</td><td>0.1812</td><td>0.1093</td><td>1.9376</td><td>0.0028</td></tr>
+<tr><td>Space</td><td>MEM3</td><td>0.2056</td><td>0.1204</td><td>1.7199</td><td>0.0124</td></tr>
+</table>
+
+Table S7. Partial distance-based RDA loadings for models in which environmental and spatial variables selected by forward selection are significative.
+
+<table>
+<tr><td>Partition</td><td>Variable</td><td>Fβsor</td><td>Fβsor</td><td>Fβness</td><td>Fβness</td></tr>
+<tr><td>Partition</td><td>Variable</td><td>dbRDA 1</td><td>dbRDA 2</td><td>dbRDA 1</td><td>dbRDA 2</td></tr>
+<tr><td>Environment</td><td>Dissolved oxygen</td><td>-0.056</td><td>-0.005</td><td>-0.056</td><td>0.295</td></tr>
+<tr><td>Environment</td><td>Temperature</td><td>0.408</td><td>0.126</td><td>0.430</td><td>-0.041</td></tr>
+<tr><td>Environment</td><td>Impact Index</td><td>-0.145</td><td>0.271</td><td>-0.177</td><td>-0.007</td></tr>
+<tr><td>Space</td><td>MEM1</td><td>-0.253</td><td>0.174</td><td>-</td><td>-</td></tr>
+<tr><td>Space</td><td>MEM2</td><td>0.038</td><td>0.024</td><td>-</td><td>-</td></tr>
+<tr><td>Space</td><td>MEM3</td><td>-0.226</td><td>-0.252</td><td>-</td><td>-</td></tr>
+<tr><td>Space</td><td>MEM4</td><td>-0.094</td><td>0.218</td><td>-</td><td>-</td></tr>
+<tr><td>Space</td><td>MEM7</td><td>0.244</td><td>0.281</td><td>-</td><td>-</td></tr>
+<tr><td>Space</td><td>MEM9</td><td>0.337</td><td>-0.160</td><td>-</td><td>-</td></tr>
+</table>
+
+Table S8. Results of Fourth-corner analysis showing the relationships between environmental variables and traits for Ephemeroptera genera. Environmental variables: electrical conductivity (Cond), chemical oxygen demand (COD), total iron (Irontot), total phosphorus (Phosphotot), total manganese (Mangtot), nitrate, dissolved oxygen (Oxygendis), temperature (Temp), total solids (SolidTot), pH and turbidity. Functional characteristics: tc1 (head length size), tc2 (head width), tm (mesonotum size), gt= trophic guild, scraper, collector, filterer, opercular gill (og), non-opercular gill (nog).
+
+<table>
+<tr><td>Item</td><td>Environmental  variables</td><td>Traits</td><td>Observed</td><td>Std. deviation observed</td><td>p</td></tr>
+<tr><td>1</td><td>Cond</td><td>tm</td><td>0.022</td><td>0.793</td><td>0.429</td></tr>
+<tr><td>2</td><td>COD</td><td>tm</td><td>0.001</td><td>0.105</td><td>0.905</td></tr>
+<tr><td>3</td><td>IronTot</td><td>tm</td><td>-0.013</td><td>-0.358</td><td>0.729</td></tr>
+<tr><td>4</td><td>PhosphoTot</td><td>tm</td><td>-0.020</td><td>-0.606</td><td>0.546</td></tr>
+<tr><td>5</td><td>Mangtot</td><td>tm</td><td>-0.034</td><td>-0.830</td><td>0.438</td></tr>
+<tr><td>6</td><td>Nitrate</td><td>tm</td><td>-0.031</td><td>-0.950</td><td>0.337</td></tr>
+<tr><td>7</td><td>OxyDis</td><td>tm</td><td>-0.032</td><td>-0.838</td><td>0.405</td></tr>
+<tr><td>8</td><td>pH</td><td>tm</td><td>0.057</td><td>1.793</td><td>0.070</td></tr>
+<tr><td>9</td><td>TDS</td><td>tm</td><td>-0.019</td><td>-0.504</td><td>0.617</td></tr>
+<tr><td>10</td><td>Temperature</td><td>tm</td><td>-0.026</td><td>-0.740</td><td>0.472</td></tr>
+<tr><td>11</td><td>Turbidity</td><td>tm</td><td>-0.010</td><td>-0.287</td><td>0.782</td></tr>
+<tr><td>12</td><td>ImpactIndex</td><td>tm</td><td>-0.012</td><td>-0.312</td><td>0.767</td></tr>
+<tr><td>13</td><td>Cond</td><td>tc1</td><td>0.020</td><td>0.671</td><td>0.495</td></tr>
+<tr><td>14</td><td>COD</td><td>tc1</td><td>0.011</td><td>0.354</td><td>0.703</td></tr>
+<tr><td>15</td><td>IronTot</td><td>tc1</td><td>-0.038</td><td>-1.174</td><td>0.255</td></tr>
+<tr><td>16</td><td>PhosphoTot</td><td>tc1</td><td>0.000</td><td>0.021</td><td>0.988</td></tr>
+<tr><td>17</td><td>Mangtot</td><td>tc1</td><td>-0.053</td><td>-1.286</td><td>0.201</td></tr>
+<tr><td>18</td><td>Nitrate</td><td>tc1</td><td>-0.036</td><td>-1.147</td><td>0.264</td></tr>
+<tr><td>19</td><td>OxyDis</td><td>tc1</td><td>-0.060</td><td>-1.666</td><td>0.103</td></tr>
+<tr><td>20</td><td>pH</td><td>tc1</td><td>0.022</td><td>0.647</td><td>0.521</td></tr>
+<tr><td>21</td><td>TDS</td><td>tc1</td><td>-0.010</td><td>-0.210</td><td>0.828</td></tr>
+<tr><td>22</td><td>Temperature</td><td>tc1</td><td>0.018</td><td>0.541</td><td>0.594</td></tr>
+<tr><td>23</td><td>Turbidity</td><td>tc1</td><td>-0.040</td><td>-1.079</td><td>0.265</td></tr>
+<tr><td>24</td><td>ImpactIndex</td><td>tc1</td><td>-0.028</td><td>-0.844</td><td>0.436</td></tr>
+<tr><td>25</td><td>Cond</td><td>tc2</td><td>0.019</td><td>0.652</td><td>0.515</td></tr>
+<tr><td>26</td><td>COD</td><td>tc2</td><td>0.008</td><td>0.281</td><td>0.789</td></tr>
+<tr><td>27</td><td>IronTot</td><td>tc2</td><td>-0.007</td><td>-0.183</td><td>0.839</td></tr>
+<tr><td>28</td><td>PhosphoTot</td><td>tc2</td><td>-0.017</td><td>-0.473</td><td>0.639</td></tr>
+<tr><td>29</td><td>Mangtot</td><td>tc2</td><td>-0.053</td><td>-1.266</td><td>0.215</td></tr>
+<tr><td>30</td><td>Nitrate</td><td>tc2</td><td>-0.032</td><td>-1.007</td><td>0.326</td></tr>
+<tr><td>31</td><td>OxyDis</td><td>tc2</td><td>-0.044</td><td>-1.192</td><td>0.231</td></tr>
+<tr><td>32</td><td>pH</td><td>tc2</td><td>0.016</td><td>0.457</td><td>0.645</td></tr>
+<tr><td>33</td><td>TDS</td><td>tc2</td><td>-0.013</td><td>-0.287</td><td>0.784</td></tr>
+<tr><td>34</td><td>Temperature</td><td>tc2</td><td>-0.005</td><td>-0.127</td><td>0.897</td></tr>
+<tr><td>35</td><td>Turbidity</td><td>tc2</td><td>-0.013</td><td>-0.333</td><td>0.776</td></tr>
+<tr><td>36</td><td>ImpactIndex</td><td>tc2</td><td>-0.005</td><td>-0.061</td><td>0.956</td></tr>
+<tr><td>37</td><td>Cond</td><td>op.gills</td><td>-0.009</td><td>-0.174</td><td>0.866</td></tr>
+<tr><td>38</td><td>COD</td><td>op.gills</td><td>0.015</td><td>0.460</td><td>0.693</td></tr>
+<tr><td>39</td><td>IronTot</td><td>op.gills</td><td>0.092</td><td>2.178</td><td>0.020</td></tr>
+<tr><td>40</td><td>PhosphoTot</td><td>op.gills</td><td>-0.055</td><td>-1.275</td><td>0.207</td></tr>
+<tr><td>41</td><td>Mangtot</td><td>op.gills</td><td>0.007</td><td>0.189</td><td>0.884</td></tr>
+<tr><td>42</td><td>Nitrate</td><td>op.gills</td><td>0.003</td><td>0.127</td><td>0.900</td></tr>
+<tr><td>43</td><td>OxyDis</td><td>op.gills</td><td>0.104</td><td>2.402</td><td>0.014</td></tr>
+<tr><td>44</td><td>pH</td><td>op.gills</td><td>0.011</td><td>0.246</td><td>0.791</td></tr>
+<tr><td>45</td><td>TDS</td><td>op.gills</td><td>0.006</td><td>0.195</td><td>0.846</td></tr>
+<tr><td>46</td><td>Temperature</td><td>op.gills</td><td>-0.051</td><td>-1.161</td><td>0.238</td></tr>
+<tr><td>47</td><td>Turbidity</td><td>op.gills</td><td>0.114</td><td>2.792</td><td>0.005</td></tr>
+<tr><td>48</td><td>ImpactIndex</td><td>op.gills</td><td>0.097</td><td>2.485</td><td>0.020</td></tr>
+<tr><td>49</td><td>Cond</td><td>Collector</td><td>0.023</td><td>0.670</td><td>0.537</td></tr>
+<tr><td>50</td><td>COD</td><td>Collector</td><td>-0.032</td><td>-0.833</td><td>0.392</td></tr>
+<tr><td>51</td><td>IronTot</td><td>Collector</td><td>0.022</td><td>0.636</td><td>0.547</td></tr>
+<tr><td>52</td><td>PhosphoTot</td><td>Collector</td><td>-0.042</td><td>-1.196</td><td>0.226</td></tr>
+<tr><td>53</td><td>Mangtot</td><td>Collector</td><td>0.039</td><td>0.913</td><td>0.404</td></tr>
+<tr><td>54</td><td>Nitrate</td><td>Collector</td><td>-0.024</td><td>-0.705</td><td>0.494</td></tr>
+<tr><td>55</td><td>OxyDis</td><td>Collector</td><td>0.044</td><td>1.255</td><td>0.209</td></tr>
+<tr><td>56</td><td>pH</td><td>Collector</td><td>0.042</td><td>1.187</td><td>0.232</td></tr>
+<tr><td>57</td><td>TDS</td><td>Collector</td><td>0.007</td><td>0.202</td><td>0.849</td></tr>
+<tr><td>58</td><td>Temperature</td><td>Collector</td><td>-0.022</td><td>-0.620</td><td>0.530</td></tr>
+<tr><td>59</td><td>Turbidity</td><td>Collector</td><td>0.061</td><td>1.692</td><td>0.102</td></tr>
+<tr><td>60</td><td>ImpactIndex</td><td>Collector</td><td>0.038</td><td>1.057</td><td>0.282</td></tr>
+<tr><td>61</td><td>Cond</td><td>Scraper</td><td>-0.033</td><td>-1.021</td><td>0.332</td></tr>
+<tr><td>62</td><td>COD</td><td>Scraper</td><td>0.039</td><td>1.179</td><td>0.257</td></tr>
+<tr><td>63</td><td>IronTot</td><td>Scraper</td><td>0.003</td><td>0.058</td><td>0.944</td></tr>
+<tr><td>64</td><td>PhosphoTot</td><td>Scraper</td><td>0.057</td><td>1.744</td><td>0.076</td></tr>
+<tr><td>65</td><td>Mangtot</td><td>Scraper</td><td>0.045</td><td>1.089</td><td>0.307</td></tr>
+<tr><td>66</td><td>Nitrate</td><td>Scraper</td><td>0.021</td><td>0.662</td><td>0.518</td></tr>
+<tr><td>67</td><td>OxyDis</td><td>Scraper</td><td>-0.008</td><td>-0.252</td><td>0.805</td></tr>
+<tr><td>68</td><td>pH</td><td>Scraper</td><td>-0.001</td><td>-0.028</td><td>0.972</td></tr>
+<tr><td>69</td><td>TDS</td><td>Scraper</td><td>-0.013</td><td>-0.395</td><td>0.735</td></tr>
+<tr><td>70</td><td>Temperature</td><td>Scraper</td><td>0.010</td><td>0.314</td><td>0.773</td></tr>
+<tr><td>71</td><td>Turbidity</td><td>Scraper</td><td>-0.061</td><td>-1.833</td><td>0.059</td></tr>
+<tr><td>72</td><td>ImpactIndex</td><td>Scraper</td><td>-0.039</td><td>-1.232</td><td>0.259</td></tr>
+<tr><td>73</td><td>Cond</td><td>Filterer</td><td>0.012</td><td>0.401</td><td>0.701</td></tr>
+<tr><td>74</td><td>COD</td><td>Filterer</td><td>-0.011</td><td>-0.341</td><td>0.729</td></tr>
+<tr><td>75</td><td>IronTot</td><td>Filterer</td><td>-0.023</td><td>-0.677</td><td>0.521</td></tr>
+<tr><td>76</td><td>PhosphoTot</td><td>Filterer</td><td>-0.020</td><td>-0.592</td><td>0.585</td></tr>
+<tr><td>77</td><td>Mangtot</td><td>Filterer</td><td>-0.082</td><td>-2.040</td><td>0.028</td></tr>
+<tr><td>78</td><td>Nitrate</td><td>Filterer</td><td>0.001</td><td>-0.010</td><td>0.994</td></tr>
+<tr><td>79</td><td>OxyDis</td><td>Filterer</td><td>-0.033</td><td>-0.947</td><td>0.353</td></tr>
+<tr><td>80</td><td>pH</td><td>Filterer</td><td>-0.037</td><td>-1.152</td><td>0.256</td></tr>
+<tr><td>81</td><td>TDS</td><td>Filterer</td><td>0.006</td><td>0.206</td><td>0.845</td></tr>
+<tr><td>82</td><td>Temperature</td><td>Filterer</td><td>0.010</td><td>0.311</td><td>0.743</td></tr>
+<tr><td>83</td><td>Turbidity</td><td>Filterer</td><td>0.006</td><td>0.131</td><td>0.896</td></tr>
+<tr><td>84</td><td>ImpactIndex</td><td>Filterer</td><td>0.005</td><td>0.106</td><td>0.910</td></tr>
+</table>

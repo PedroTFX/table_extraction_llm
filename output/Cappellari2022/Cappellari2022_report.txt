@@ -1,0 +1,94 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Cappellari2022\Cappellari2022.xlsx  (975 rows)
+PREDICTION   : ..\output\Cappellari2022\Cappellari2022.csv  (1330 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Hopitis adunca' -> 'Hoplitis adunca'
+  'Hopitis villosa' -> 'Hoplitis villosa'
+
+TAXON NAMES LEFT UNMAPPED (16)
+  'Andrenidae': no ground-truth string denotes this
+  'Apidae': no ground-truth string denotes this
+  'Cimbicidae': no ground-truth string denotes this
+  'Colletidae': no ground-truth string denotes this
+  'Conopidae': no ground-truth string denotes this
+  'Crabronidae': no ground-truth string denotes this
+  'Halictidae': no ground-truth string denotes this
+  'Hopitis sp. 1': no ground-truth string denotes this
+  'Megachilidae': no ground-truth string denotes this
+  'Megalodontesidae': no ground-truth string denotes this
+  'Melittidae': no ground-truth string denotes this
+  'Scoliidae': no ground-truth string denotes this
+  'Syrphidae': no ground-truth string denotes this
+  'Tachinidae': no ground-truth string denotes this
+  'Tenthredinidae': no ground-truth string denotes this
+  'Vespidae': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body' -> 'Body size'
+  'Foraging' -> 'Foraging range '
+  'Proboscis' -> 'Proboscis length'
+
+measurementType LEFT UNMAPPED (1)
+  'Family': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 972
+  missed (FN)           : 3
+  spurious, in scope    : 33   <- GT covers this trait: real errors
+  spurious, out of scope: 325   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.731 / 0.997 / 0.843
+  SCOPED  P/R/F1        : 0.967 / 0.997 / 0.982
+  RECALL (GT coverage)  : 0.997
+
+  out-of-scope rows by uncovered field:
+    measurementType                            325
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               648    972  0.667
+  measurementMethod             0    324  0.000  <-- low
+  measurementUnit             648    972  0.667
+  measurementStatistic        324    972  0.333  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    972  0.000  <-- low
+  lifeStage                   972    972  1.000
+  caste                         0    972  0.000  <-- low
+  sampleSizeValue               0    972  0.000  <-- low
+  sampleSizeUnit                0    972  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    972  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    972  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 3 MISSED ROWS MISSED
+  species not in prediction                             3
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Hoplitis sp. 1'                    ~0.96~  pred 'Hopitis sp. 1'   x3
+  -> 1 species mismatch explains 3 of 3 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Cappellari2022_misses.csv, Cappellari2022_misses_summary.json (3 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       325   340   Δ+15 (split?)
+  family                                            0   325   PRED-ONLY
+  foraging range                                  325   325   
+  proboscis length                                325   340   Δ+15 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.967  0.997  0.982    972    33     3   id+type+value
+             (325 more spurious row(s) out-of-scope; strict P would be 0.731)
+  tags        0.000  0.000  0.000      0  1005   975   basis+id+type+value+stat+sex+stage
+             (325 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.982 vs previous)

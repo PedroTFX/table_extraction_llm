@@ -1,22 +1,22 @@
 {
   "Trait": {
-    "field": "definitionTerm",
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column lists the variable names or concepts being defined in the glossary."
+    "reasoning": "This column names the biological property or characteristic being measured."
   },
   "Category": {
     "field": "definitionText",
-    "value_column": false,
-    "reasoning": "This column provides the human-readable definition or classification of the term listed in 'Trait'."
+    "value_column": true,
+    "reasoning": "This column provides the human-readable description or classification for the defined trait."
   },
   "Codes": {
     "field": "definitionTerm",
-    "value_column": false,
-    "reasoning": "These are short codes used to represent the defined terms (e.g., CG for Collector-gatherers)."
+    "value_column": true,
+    "reasoning": "This column contains the short variable names or codes used to represent the trait."
   },
   "Main References": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column provides source citations and does not define a measurement or term."
+    "reasoning": "This column contains citation metadata and does not map to any defined field."
   }
 }

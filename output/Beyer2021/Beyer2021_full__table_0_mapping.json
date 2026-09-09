@@ -2,46 +2,46 @@
   "Response variable": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a measured biological property of the organism (density or richness)."
+    "reasoning": "This header names the biological property (density, richness) being measured for the organism."
   },
   "Model": {
     "field": null,
     "value_column": false,
-    "reasoning": "This is an internal statistical identifier for the model used."
+    "reasoning": "This column contains identifiers for the statistical models used, not organism data."
   },
   "df": {
     "field": null,
-    "value_column": true,
-    "reasoning": "Degrees of freedom are a statistical parameter, not a measurement or trait."
+    "value_column": false,
+    "reasoning": "This column represents degrees of freedom, a statistical parameter."
   },
   "BIC": {
     "field": null,
-    "value_column": true,
-    "reasoning": "Bayesian Information Criterion is a statistical metric for model selection."
+    "value_column": false,
+    "reasoning": "This column contains the Bayesian Information Criterion, a statistical measure."
   },
   "DeltaBIC": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This represents the difference between two BIC scores (statistical comparison)."
+    "value_column": false,
+    "reasoning": "This column contains the difference in BIC, a statistical measure."
   },
   "BIC weight": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This is a statistical weighting factor assigned to models."
+    "value_column": false,
+    "reasoning": "This column contains the weight assigned to the model, a statistical parameter."
   },
   "Explanatory variables": {
     "field": null,
     "value_column": false,
-    "reasoning": "These are independent study parameters or covariates, not organism traits."
+    "reasoning": "This column lists the independent variables used in the statistical model."
   },
   "$R_{m}^{2}$": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This is a statistical metric (coefficient of determination) for model fit."
+    "value_column": false,
+    "reasoning": "This column contains the Marginal R-squared, a statistical measure of model fit."
   },
   "$R_{c}^{2}$": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This is a statistical metric (corrected coefficient of determination)."
+    "value_column": false,
+    "reasoning": "This column contains the Conditional R-squared, a statistical measure of model fit."
   }
 }

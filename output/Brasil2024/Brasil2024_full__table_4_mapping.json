@@ -2,21 +2,21 @@
   "Site": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "These labels define the sampling context or experimental condition where data was collected."
+    "reasoning": "Represents the sampling location or condition (Low, Medium, High)."
   },
   "% of males": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header describes a biological characteristic (proportion) measured for the organism."
+    "reasoning": "Describes a biological trait measured for the organism (proportion of males)."
   },
   "chisquare (χ2)": {
-    "field": null,
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is a statistical test result and does not describe an insect trait or location."
+    "reasoning": "Represents a statistical test result (chi-square value)."
   },
   "p-value": {
-    "field": null,
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is a statistical measure of significance, not a biological measurement or locality."
+    "reasoning": "Represents a statistical measure (probability value)."
   }
 }

@@ -1,0 +1,121 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Habustova2017\Habustova2017.xlsx  (430 rows)
+PREDICTION   : ..\output\Habustova2017\Habustova2017.csv  (762 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Treachus quadristriatus' -> 'Trechus quadristriatus'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Brachinus explondes': no ground-truth string denotes this
+  'Harpalus significornis': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 5 pair(s))
+  'Body Size' -> 'Body size'
+  'Breeding Period' -> 'Breeding period'
+  'Food Specialization' -> 'Food specialization'
+  'Habitat Affinity' -> 'Habitat affinity'
+  'Humidity Affinity' -> 'Humidity affinity'
+
+measurementType LEFT UNMAPPED (9)
+  'B': no ground-truth string denotes this
+  'Carnivorous': no ground-truth string denotes this
+  'Hygrophilous': no ground-truth string denotes this
+  'Incidence': no ground-truth string denotes this
+  'Least concern': no ground-truth string denotes this
+  'Open biotopes': no ground-truth string denotes this
+  'Spring': no ground-truth string denotes this
+  'Total Total': no ground-truth string denotes this
+  'Tribe Tribe': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 245
+  missed (FN)           : 185
+  spurious, in scope    : 250   <- GT covers this trait: real errors
+  spurious, out of scope: 267   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.322 / 0.570 / 0.411
+  SCOPED  P/R/F1        : 0.495 / 0.570 / 0.530
+  RECALL (GT coverage)  : 0.570
+
+  out-of-scope rows by uncovered field:
+    measurementType                            267
+
+FUZZY VALUE MATCHES (79 accepted beyond exact/numeric)
+  subset          60
+  initialism      19
+  sample:
+    [subset] gt ' 11–21.9 ' == pred '11–21.9 mm'
+    [subset] gt '6–10.9' == pred '6–10.9 mm'
+    [initialism] gt '˂5.9' == pred '<5.9 mm'
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               161    245  0.657
+  measurementMethod             0    165  0.000  <-- low
+  measurementUnit               0     79  0.000  <-- low
+  measurementStatistic        166    245  0.678
+  measurementRemarks            0      0    n/a
+  sex                         245    245  1.000
+  lifeStage                   245    245  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    245  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 185 MISSED ROWS MISSED
+  species present, trait missing                       15
+  species+trait present, value differs                170
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'open biotopes'              ->  'preferring open areas'      x41
+     'eurytopic'                  ->  'adaptable to various environmental conditions' x40
+     'hygrophilous'               ->  'preferring moist places'    x33
+     'silvicolous'                ->  'preferring woodlands'       x19
+     'xerophilous'                ->  'preferring dry environmental conditions' x18
+     'mesophilous'                ->  'preferring intermediate or moderate environmental conditions, avoiding extremes of moisture or dryness' x15
+  -> 6 substitutions explain 166 of 185 misses (90%) — systematic, not scattered
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Food specialization'              x3
+     'Habitat affinity'                 x3
+     'Breeding period'                  x3
+     'Humidity affinity'                x3
+     'Body size'                        x3
+  -> 5 missing traits explain 15 of 185 misses (8%) — scattered; no single cause
+
+  full miss detail saved -> Habustova2017_misses.csv, Habustova2017_misses_summary.json (185 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  habitat affinity                                 86    99   Δ+13 (split?)
+  humidity affinity                                86    99   Δ+13 (split?)
+  b                                                 0     2   PRED-ONLY
+  open biotopes                                     0     2   PRED-ONLY
+  body size                                        86    99   Δ+13 (split?)
+  breeding period                                  86    99   Δ+13 (split?)
+  carnivorous                                       0     2   PRED-ONLY
+  least concern                                     0     2   PRED-ONLY
+  food specialization                              86    99   Δ+13 (split?)
+  hygrophilous                                      0     2   PRED-ONLY
+  incidence                                         0    83   PRED-ONLY
+  spring                                            0     2   PRED-ONLY
+  total total                                       0    86   PRED-ONLY
+  tribe tribe                                       0    86   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.495  0.570  0.530    245   250   185   id+type+value
+             (267 more spurious row(s) out-of-scope; strict P would be 0.322)
+  tags        0.166  0.191  0.177     82   413   348   basis+id+type+value+stat+sex+stage
+             (267 more spurious row(s) out-of-scope; strict P would be 0.108)
+             (F1 -0.352 vs previous)

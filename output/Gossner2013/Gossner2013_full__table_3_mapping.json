@@ -1,0 +1,66 @@
+{
+  "Family": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic family name of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents discrete taxonomic classifications of the organism's biology."
+  },
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the specific species name of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents discrete taxonomic classifications of the organism's biology."
+  },
+  "Body size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical characteristic (size) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A numerical measurement of a physical/anatomical trait of the beetle.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "Body size is a morphological trait measured from collected saproxylic beetle specimens obtained via flight-interception traps and other sampling techniques.",
+    "measurementMethod": "Direct measurement of body size from collected specimens",
+    "measurementMethod_reasoning": "The body size trait was compiled from information gathered during the sampling of saproxylic beetles, as indicated by the reference to 'species trait body size (mm)' in the supporting information.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The text explicitly states that the species trait body size is measured in millimeters (mm) in Appendix S3-1.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The study reports the 'mean body size' of the beetle assemblages and species, indicating that the average size was calculated across the sampled individuals."
+  },
+  "Diamete r": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical characteristic (diameter) of the organism.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "Deca y": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical characteristic (decay/size) of the organism.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "Canopy cover": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Quantifies a specific environmental or habitat characteristic observed.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A numerical measurement of a physical/environmental characteristic of the forest.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Canopy cover",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The canopy cover data for the species is compiled from existing literature and compilations (Moller, 2009) regarding where the species is known to occur, rather than being a direct measurement taken during the current study.",
+    "measurementMethod": "Classification based on existing literature/compilations (Moller, 2009), categorized as open, semiopen, or closed (or sunny, semi-sunny, shady).",
+    "measurementMethod_reasoning": "The canopy cover trait was derived from a compilation of existing data (Moller, 2009) and classified into three categories: open, semiopen, and closed (or sunny, semi-sunny, and shady).",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "The value represents the assigned niche position or trait value for a specific species based on its occurrence across the defined categories.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  }
+}

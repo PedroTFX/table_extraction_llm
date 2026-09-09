@@ -1,26 +1,22 @@
 {
-  "species": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "The column contains taxonomic names of insects like Agapostemon sericeus.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The text identifies five specific wild bee species studied, which are discrete classifications."
-  },
-  "Body size x urbanization": {
+  "Enviroment:Trait": {
     "field": "measurementType",
+    "value_column": false,
+    "reasoning": "These are the names of the biological traits or variables being tested in the statistical model."
+  },
+  "interaction coefficient": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "The header describes a biological property or trait measured for the organism (e.g., Body size).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This column records physical measurements (like ITD) or derived categories of body size related to urban levels.",
-    "value_type": "numeric",
-    "canonicalType": "Body size x urbanization",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "Body size (Intertegular Distance, ITD) is a morphological trait measured using a stereo microscope on wild bee specimens collected from various sites.",
-    "measurementMethod": "Intertegular distance (ITD) measured with a stereo microscope",
-    "measurementMethod_reasoning": "The text explicitly states: 'Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement unit used for body size is millimeters.",
-    "measurementStatistic": "mean ± SD",
-    "measurementStatistic_reasoning": "Body size data (ITD) was analyzed using ANOVA and t-tests, with results presented as means ($\bar{x}$) accompanied by standard errors in the figures. Therefore, 'mean ± SD' is used to represent the statistical summary of these measurements."
+    "reasoning": "This is a statistical measure (the coefficient) quantifying the relationship between variables."
+  },
+  "wald value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is a statistical test value (Wald statistic) used to assess the significance of the trait."
+  },
+  "Pr(>wald)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is a statistical measure (p-value) indicating the probability of the observed result."
   }
 }

@@ -2,21 +2,51 @@
   "identifier": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column names the biological metric or trait being measured (e.g., Abundance, Diversity)."
+    "reasoning": "This column names the biological metrics or traits being measured (e.g., Species richness)."
   },
-  "Site age": {
-    "field": "measurementType",
+  "Site age χ²": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The header describes a measurable characteristic of the sampling site/environment."
+    "reasoning": "This column contains the calculated chi-squared statistical test results."
   },
-  "Burn status": {
-    "field": "measurementType",
+  "Site age P": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column measures an environmental condition or trait associated with the study location."
+    "reasoning": "This column contains the associated p-values for the site age statistical test."
   },
-  "Year": {
+  "Burn status χ²": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains the calculated chi-squared statistical test results for burn status."
+  },
+  "Burn status P": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains the associated p-values for the burn status statistical test."
+  },
+  "Year χ²": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains the calculated chi-squared statistical test results for the year."
+  },
+  "Year P": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column contains the associated p-values for the year statistical test."
+  },
+  "Site age $\\chi^2$": {
     "field": null,
     "value_column": false,
-    "reasoning": "The year is temporal metadata and does not fit any defined field (taxon, locality, measurement type)."
+    "reasoning": "no mapping returned (response truncated)"
+  },
+  "Burn status $\\chi^2$": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)"
+  },
+  "Year $\\chi^2$": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)"
   }
 }

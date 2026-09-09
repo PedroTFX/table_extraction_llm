@@ -1,0 +1,136 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Guareschi2015\Guareschi2015.xlsx  (1738 rows)
+PREDICTION   : ..\output\Guareschi2015\Guareschi2015.csv  (3160 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+measurementType LEFT UNMAPPED (38)
+  '3': no ground-truth string denotes this
+  '4': no ground-truth string denotes this
+  'A 1': no ground-truth string denotes this
+  'A 2': no ground-truth string denotes this
+  'A 3': no ground-truth string denotes this
+  'A 4': no ground-truth string denotes this
+  'B 1': no ground-truth string denotes this
+  'B 2': no ground-truth string denotes this
+  'C 1': no ground-truth string denotes this
+  'C 2': no ground-truth string denotes this
+  'D 1': no ground-truth string denotes this
+  'D 2': no ground-truth string denotes this
+  'D 3': no ground-truth string denotes this
+  'E 1': no ground-truth string denotes this
+  'E 2': no ground-truth string denotes this
+  'E 3': no ground-truth string denotes this
+  'F 1': no ground-truth string denotes this
+  'F 2': no ground-truth string denotes this
+  'G 1': no ground-truth string denotes this
+  'G 3': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 0
+  missed (FN)           : 1738
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 3160   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
+  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
+  RECALL (GT coverage)  : 0.000
+
+  out-of-scope rows by uncovered field:
+    measurementType                           3160
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1738 MISSED ROWS MISSED
+  species present, trait missing                     1738
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Locomotion and substrate relation' x234
+     'Aquatic stages'                   x206
+     'Food'                             x202
+     'Respiration'                      x186
+     'Dispersal'                        x181
+     'Feeding habits'                   x166
+  -> 6 missing traits explain 1175 of 1738 misses (68%) — systematic, not scattered
+
+  full miss detail saved -> Guareschi2015_misses.csv, Guareschi2015_misses_summary.json (1738 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  a 1                                               0    79   PRED-ONLY
+  b 1                                               0    79   PRED-ONLY
+  c 1                                               0    79   PRED-ONLY
+  d 1                                               0    79   PRED-ONLY
+  e 1                                               0    79   PRED-ONLY
+  f 1                                               0    79   PRED-ONLY
+  g 1                                               0    79   PRED-ONLY
+  h 1                                               0    79   PRED-ONLY
+  i 1                                               0    79   PRED-ONLY
+  j 1                                               0    79   PRED-ONLY
+  k 1                                               0    79   PRED-ONLY
+  a 2                                               0    79   PRED-ONLY
+  b 2                                               0    79   PRED-ONLY
+  c 2                                               0    79   PRED-ONLY
+  d 2                                               0    79   PRED-ONLY
+  e 2                                               0    79   PRED-ONLY
+  f 2                                               0    79   PRED-ONLY
+  h 2                                               0   158   PRED-ONLY
+  i 2                                               0    79   PRED-ONLY
+  j 2                                               0    79   PRED-ONLY
+  k 2                                               0    79   PRED-ONLY
+  3                                                 0    79   PRED-ONLY
+  a 3                                               0    79   PRED-ONLY
+  d 3                                               0    79   PRED-ONLY
+  e 3                                               0    79   PRED-ONLY
+  g 3                                               0    79   PRED-ONLY
+  h 3                                               0    79   PRED-ONLY
+  i 3                                               0    79   PRED-ONLY
+  j 3                                               0    79   PRED-ONLY
+  4                                                 0    79   PRED-ONLY
+  a 4                                               0    79   PRED-ONLY
+  h 4                                               0    79   PRED-ONLY
+  j 4                                               0   158   PRED-ONLY
+  i 5                                               0    79   PRED-ONLY
+  j 5                                               0    79   PRED-ONLY
+  j 6                                               0    79   PRED-ONLY
+  j 7                                               0    79   PRED-ONLY
+  k 8                                               0    79   PRED-ONLY
+  aquatic stages                                  206     0   GT-ONLY
+  life cycle duration                             139     0   GT-ONLY
+  potential number of reproduction cycles per year  136     0   GT-ONLY
+  dispersal                                       181     0   GT-ONLY
+  feeding habits                                  166     0   GT-ONLY
+  food                                            202     0   GT-ONLY
+  resistance form                                 100     0   GT-ONLY
+  locomotion and substrate relation               234     0   GT-ONLY
+  maximal size                                    107     0   GT-ONLY
+  reproduction                                     81     0   GT-ONLY
+  respiration                                     186     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0  1738   id+type+value
+             (3160 more spurious row(s) out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0  1738   basis+id+type+value+stat+sex+stage
+             (3160 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

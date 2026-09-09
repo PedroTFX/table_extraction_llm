@@ -1,0 +1,102 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\GibbParr2013\GibbParr2013.xlsx  (414 rows)
+PREDICTION   : ..\output\GibbParr2013\GibbParr2013.csv  (707 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Ochetellussp. A': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 5 pair(s))
+  'Morphological trait eye position' -> 'Eye position '
+  'Morphological trait femur length' -> 'Femur length'
+  'Morphological trait head length' -> 'Head length'
+  'Morphological trait head width behind the eyes' -> 'Head width behind the eyes'
+  'Morphological trait pronotum width' -> 'Pronotum width'
+
+measurementType LEFT UNMAPPED (2)
+  'Morphological trait Weber s length': no ground-truth string denotes this
+  'Morphological trait head with between the eyes': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 76
+  missed (FN)           : 338
+  spurious, in scope    : 429   <- GT covers this trait: real errors
+  spurious, out of scope: 202   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.107 / 0.184 / 0.136
+  SCOPED  P/R/F1        : 0.150 / 0.184 / 0.165
+  RECALL (GT coverage)  : 0.184
+
+  out-of-scope rows by uncovered field:
+    measurementType                            202
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                76     76  1.000
+  measurementMethod             0     70  0.000  <-- low
+  measurementUnit              76     76  1.000
+  measurementStatistic          6     76  0.079  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     76  0.000  <-- low
+  lifeStage                    76     76  1.000
+  caste                         0     76  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0     76  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     76  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 338 MISSED ROWS MISSED
+  species not in prediction                             7
+  species present, trait missing                      115
+  species+trait present, value differs                216
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.07'                       ->  '0'                          x7
+     '0.37'                       ->  '0.3'                        x6
+     '0.34'                       ->  '0.3'                        x4
+     '0.51'                       ->  '0.5'                        x4
+     '0.36'                       ->  '0.3'                        x4
+     '0.63'                       ->  '0.6'                        x4
+  -> 6 substitutions explain 29 of 338 misses (9%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Ochetellus sp. A'                  ~0.96~  pred 'Ochetellussp. A'   x7
+  -> 1 species mismatch explains 7 of 338 misses (2%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Weber’s length'                   x59
+     'Head width between the eyes'      x56
+  -> 2 missing traits explain 115 of 338 misses (34%) — scattered; no single cause
+
+  full miss detail saved -> GibbParr2013_misses.csv, GibbParr2013_misses_summary.json (338 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  head width behind the eyes                       60   101   Δ+41 (split?)
+  morphological trait head with between the eyes    0   101   PRED-ONLY
+  head width between the eyes                      57     0   GT-ONLY
+  eye position                                     57   101   Δ+44 (split?)
+  femur length                                     60   101   Δ+41 (split?)
+  head length                                      60   101   Δ+41 (split?)
+  morphological trait weber s length                0   101   PRED-ONLY
+  weber’s length                                   60     0   GT-ONLY
+  pronotum width                                   60   101   Δ+41 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'head width between the eyes'      vs pred 'morphological trait head with between the eyes' sim=0.68
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.150  0.184  0.165     76   429   338   id+type+value
+             (202 more spurious row(s) out-of-scope; strict P would be 0.107)
+  tags        0.000  0.000  0.000      0   505   414   basis+id+type+value+stat+sex+stage
+             (202 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.165 vs previous)

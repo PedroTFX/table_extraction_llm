@@ -1,100 +1,87 @@
 {
-  "Species": {
-    "field": "verbatimIdentification",
+  "Year/session": {
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "Contains scientific names of insect taxa (e.g., Acupalpus partiarius).",
-    "category": null,
-    "reasoning_relevance": "The species name is a taxonomic identifier and does not fit the specified data categories."
+    "reasoning": "The header names the temporal context of the observation."
   },
-  "Wing morphology": {
+  "Days": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a physical characteristic or trait observed on the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Described as discrete classifications (macropterous, brachypterous, dimorphic) of physical form.",
-    "value_type": "categorical",
-    "canonicalType": "Wing morphology",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "Wing morphology is a morphological/physical trait of ground beetles. Although the values were sourced from literature in this study, they represent measurements taken on specimens (likely preserved) documented in prior scientific works.",
-    "measurementMethod": "Values were obtained by reviewing published literature and expert keys for ground beetle morphology (Larochelle and Larivie`re 2003; Bousquet 2010), classifying the wing type as macropterous, brachypterous, or dimorphic.",
-    "measurementMethod_reasoning": "The text explicitly states that trait values were obtained from literature sources (Larochelle and Larivie`re 2003; Bousquet 2010) to define the morphological state of wing morphology.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "The header names the duration of the sampling session."
   },
-  "Breeding season": {
+  "AG": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "States an ecological fact about the timing of the organism's life cycle.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Recorded phenological data classifying when the organism reproduces.",
-    "value_type": "categorical",
-    "canonicalType": "Breeding season",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "Breeding season is a phenological (natural history) trait of ground beetles, which falls under HumanObservation according to the provided rules for behavioral/ecological traits. Although the data was sourced from literature rather than direct observation by the current researchers, it represents an existing natural history record.",
-    "measurementMethod": "Values were obtained from published literature (Larochelle and Larivie`re 2003; Bousquet 2010).",
-    "measurementMethod_reasoning": "The text explicitly states that the trait values for breeding season were 'obtained... from literature' to populate their functional trait framework.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "The header represents a specific measured trait or count."
   },
-  "Diet": {
+  "HF": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the feeding habits or trophic level of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies feeding habits into discrete categories (phytophagous, carnivorous, omnivorous).",
-    "value_type": "categorical",
-    "canonicalType": "Diet",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "Diet (phytophagous, carnivorous, omnivorous) is an ecological/behavioral trait. Although the values were compiled from existing literature rather than direct observation during this specific study's trapping sessions, it represents a record of the organism's natural history and feeding habits.",
-    "measurementMethod": "Trait data was obtained from published literature (Larochelle and Larivie`re 2003; Bousquet 2010) following the framework established by Fountain-Jones et al. (2015).",
-    "measurementMethod_reasoning": "The text explicitly states that trait values, including adult diet, were 'obtained from literature' using specific cited sources to define the traits for each species.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "The header represents a specific measured trait or count."
   },
-  "Activity time": {
+  "HN": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "States a behavioral trait regarding when the organism is active.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the organism's activity pattern as a discrete classification.",
-    "value_type": "categorical",
-    "canonicalType": "Activity time",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "Activity time (nocturnal, diurnal) is an ecological/behavioral trait describing when an organism is active. According to the rules, behavioral or ecological traits fall under HumanObservation.",
-    "measurementMethod": "Data obtained from published literature",
-    "measurementMethod_reasoning": "The text explicitly states that for all five identified traits (including activity time), values were 'obtained... from literature' citing sources like Larochelle and Larivie`re 2003; Bousquet 2010.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "The header represents a specific measured trait or count."
   },
-  "Mean bodylength (mm)": {
+  "L": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Defines a quantitative physical property measured for the organism. Statistic is 'mean'.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "A physical/anatomical measurement of the beetle in millimeters.",
-    "value_type": "numeric",
-    "measurementStatistic": "mean",
-    "canonicalType": "bodylength",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "Body length is a morphological/physical trait. Although the values were sourced from literature, they represent measurements taken on preserved specimens described in published works.",
-    "measurementMethod": "Midpoint of published range",
-    "measurementMethod_reasoning": "The text explicitly states that body length was obtained by taking the midpoint of ranges provided in existing scientific literature for each species documented in the study.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement is defined as 'Mean bodylength (mm)' and standard biological practice for beetle measurements suggests millimeters, which aligns with the context of published ranges used."
+    "reasoning": "The header represents a specific measured trait or count."
   },
-  "Species number": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column represents record metadata or sample count, not an insect trait.",
-    "category": null,
-    "reasoning_relevance": "This column likely records abundance or counts, which does not fit the defined categories."
+  "SB": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "CCW": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "HW": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "CCE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "FC": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "TC": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "SF": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "HLP": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "WH": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "MU": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
+  },
+  "MR": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header represents a specific measured trait or count."
   }
 }

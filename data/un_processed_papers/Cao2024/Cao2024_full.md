@@ -1,0 +1,801 @@
+# Using functional traits of chironomids to determine habitat changes in subtropical wetlands
+
+Yanmin Cao <sup>a,b,c,\*</sup>, Peter G. Langdon <sup>b</sup>, Shengman Shen <sup>a</sup>, Hui Li <sup>a</sup>, Deng Pan
+
+<sup>a</sup> College of Resources and Environment, South-Central Minzu University, Wuhan 430074, China
+
+<sup>b</sup> School of Geography and Environmental Science, University of Southampton, Southampton SO17 1BJ, UK
+
+<sup>c</sup> Hubei Key Laboratory of Critical Zone Evolution, School of Geography and Information Engineering, China University of Geosciences, Wuhan 430078, China
+
+## A R T I C L E I N F O
+
+Keywords: Functional trait Chironomidae Peatlands Water level fluctuations Organic matter
+
+## A B S T R A C T
+
+Ecosystem functions in wetlands are increasingly degrading under the multiple stresses of climate change and human disturbances. Traditional wetland bioassessment is usually based on taxonomic approaches but this approach has limitations. To explore the effectiveness of functional traits in response to environmental changes, we compared the traditional taxonomic composition of chironomid communities with a trait-based approach in a subtropical subalpine wetland (Central China) spanning a wide habitat gradient from dry peatland to inundated peatland pools. The results revealed that 57 % of functional trait groups but only 38 % of taxonomic groups examined were significantly different between diverse peatland habitats. Sphagnum moss hummocks were generally inhabited by larvae of collector-gatherers, small body-sized individuals and sprawlers, while peatland pools supported a high abundance of shredders, large body-sized larvae and burrowers. Ecotones had more niche opportunities and hence possessed high taxonomic and functional diversity. Ordination analyses indicated that three similar environmental variables (loss-on-ignition (LOI), depth to water table (DWT) and K<sup>+</sup>) were the most powerful explanations of the chironomid variability in both taxonomic and functional trait compositions. LOI and DWT interacted strongly and were the dominant controls on both taxonomic and trait communities. Our research demonstrated that functional trait groups of chironomids are more robust and sensitive than taxonomybased approaches to habitat changes, and therefore could be an alternative approach for the bioassessment of aquatic ecosystem functioning and palaeo-studies in wetlands.
+
+## 1. Introduction
+
+Major changes in wetlands such as shrinking and degradation due to global climate change and anthropogenic drivers have occurred in recent decades (Xi et al., 2021). Such impacts are likely to degrade the ecosystem functions and services in carbon sequestration, water purification, food supply, flood control, biodiversity conservation and recreation (Hu et al., 2017; Xi et al., 2021). Knowledge of wetland functions and development processes is of crucial importance for wetland con servation and restoration. Increasingly numbers of aquatic bioindicators, such as benthic macroinvertebrates (Morse et al., 2007; Cai et al., 2023), zooplankton (Zebral et al., 2021) and algae (Peng et al., 2023) in rivers and lakes, as well as testate amoebae in peatlands (Mitchell et al., 2000; Qin et al., 2021), are explored and commonly used in the assessment of modern and past environment and ecological functions.
+
+Environmental bioassessments have traditionally been conducted using taxonomic structures including community composition and diversity (Wentzky et al., 2020; Belle et al., 2022). Taxonomic approaches are capable of predicting changes in biotic communities produced by habitat conditions and environmental change, but may not always align with ecosystem functioning which primarily relies on functional characteristics of species (Nevalainen et al., 2015). Function is undoubtedly a key component of ecosystem behavior, like resilience, which would likely be altered with human impacts (Bellwood et al., 2019). Better ways to explore functionality are therefore crucial to understand the response of ecosystems to multiple stressors. Functional trait approaches have provided new ways to assess ecosystem functioning across spatial and temporal scales (Dawson et al., 2021; Haase et al., 2023). Several studies have reported that both taxonomic compositions and functional traits were sensitive to environmental change, but interpretations were not straightforward, highlighting the importance of their combination in exploring environment-biota relationships comprehensively (Luoto and Ojala, 2018; Piano et al., 2020; Li et al., 2019). While trait approaches are considered to have relatively stable relationships with environments, taxonomic compositions may vary considerably due to biogeographic factors and taxonomic accuracy (Dol´edec et al., 2011). As such, functional trait approaches are increasingly used to provide a deeper understanding of response mechanisms of biota to environmental change (Adeleye et al., 2023).
+
+Chironomids are prominent aquatic insects having a wide geographic distribution and outstanding capacity to resist unfavorable conditions such as extreme temperature, hydraulic changes, trophic status and substrates (Armitage et al., 2012). The larvae are highly sensitive to environmental change and typically show clear differences in community assemblages between different habitats (Brooks et al., 2007). These advantages allow chironomids (including their subfossil remains) to serve as excellent bioindicators in biological monitoring and proxies in the environmental reconstruction of aquatic systems (Armitage et al., 2012). However, the usage of taxonomy-based measures can be problematic, as outlined above, and they can vary markedly across relatively small scales (Radkova et al., 2014; Canedo-Argüelles ˜ et al., 2020). Insufficient taxonomic resolution can obscure the true biotic structure and environmental status. This problem can be magnified in large scale comparative studies, which are essential in modeling and forecasting ecological responses to future global changes (Bonada et al., 2007). Nevertheless, chironomid larvae play a crucial role in ecosystem functional processes, serving as a key node in food-web structures and biogeochemical cycles by influencing nutrient and pollutant exchanges (Kivila ¨ et al., 2019; Gautreau et al., 2023). Given the challenges with taxonomic approaches, we focus here on functional traits and functional diversity of chironomids and their role in modern bioassessment and inference of environmental history, with a novel focus on peatlands.
+
+We selected the Dajiuhu Wetland for this study. The wetland is sit uated in the Shennongjia Forest region in Central China. It shows a high heterogeneity in habitat conditions and spans a gradient of Sphagnum moss peatlands, natural and artificial ditches, seasonal and temporary ponds, as well as artificial peatland pools. The wetland is of importance in maintaining biodiversity and regional water supply, and has been listed in UNESCO’s World Network of Biosphere Reserves since the 1990 s and designated as a wetland of international importance under the Ramsar Convention in 2014. Hence the knowledge of its changes in habitat conditions and ecosystem functions would enhance wetland conservation and sustainable resource management. Here we investigated the taxonomic and functional trait structure (composition and diversity) of chironomid communities along a habitat gradient from arid Sphagnum moss peatlands to permanent peatland pools and verified their consistency in temporal responses to environmental changes based on a short peat core. We aimed to (1) detect the differences of chironomid community composition (both taxonomic and functional trait) between different types of habitats; (2) assess the effectiveness of taxonomic and functional trait-based measures in identifying habitat types in complex aquatic systems; and (3) determine the environmental parameters driving faunal community composition. We hypothesized that the functional traits of chironomid communities would be robust in responding to habitat variations and could be an alternative approach for contemporary bioassessment and palaeo-studies in peatland-shallow lake complexes like the Dajiuhu Wetland.
+
+## 2. Material and methods
+
+## 2.1. Study area
+
+The Dajiuhu National Wetland Park lies in the mountainous area of the western Shennongjia Forest region in central China. It belongs to a closed alpine karst basin with an area of 16 $\mathrm { k m } ^ { 2 }$ and an altitude of 1700–1760 m a.s.l.. The region belongs to the East Asian Monsoon climate zone and is characterized by a mid-latitude subalpine humid climate. The current mean annual temperature is $\sim 7 . 2 ^ { \circ } \mathrm { C }$ and annual precipitation is 1560 mm with maximum rainfall of 3000 mm, whilst the annual evaporation varies from 500 to 800 mm (Li et al., 2013). Cool and high humidity conditions support peatland accumulation and have led to a large coverage of thick peat (average peat coverage of 50 %) in the Dajiuhu Wetland (Zhang, 1982). The Dajiuhu Wetland has been designated as an internationally important wetland under the Ramsar Convention since 2014. It is also of vital importance in water conservation for the middle route of the South to North Water Diversion Project in China (Du et al., 2008). As a hotspot of biodiversity and a key ecotone for regional ecological security, the bioassessment of ecosystem health and functions for the Dajiuhu Wetland is becoming increasingly necessary, especially with the spectre of increased future climate change.
+
+## 2.2. Material and laboratory analyses
+
+We collected a total of 44 surface sediment samples in November 2019 (12 samples), September 2020 (19 samples) and July 2021 (13 samples), respectively (Fig. 1). These sampling sites occurred along a water-level gradient across diverse habitats including Sphagnum moss hummocks and hollows, ditches, temporary or seasonal ponds, and peatland pools. Hummocks and hollows are two distinct growth forms of Sphagnum moss; the former has a higher height of moss growth above the water table than the latter. Ditches here refer to flowing or still streams, and ponds are very shallow (<1 m) and small-sized (generally less than $1 0 \mathrm { m } ^ { 2 } )$ depressions, and store temporary water during the wet season or after rain in the dry season. Open water areas with permanent water in the wetland are classified into peatland pools in the present study (Supplementary Fig. 1). At each site, depth to water table (DWT) was measured using a meter ruler. Portable electrodes (Hach HQ40d portable multi-meter, Hach Company, Loveland, CO, USA) were employed to measure other environmental parameters in situ, including pH (Hach HQ40d multi, PHC201), conductivity (Hach HQ40d multi, CDC401), oxidation–reduction potential (ORP; Hach HQ40d multi, MTC101), dissolved oxygen and water temperature (Hach HQ40d multi, LDO101). To collect water samples, a hole was dug at arid hummock sites, or a water sampler was used for peatland pools with relatively deep water (maximum of \~ 1.5 m in depth). For peaty habitats (both hum mocks and hollows), surface peat samples were collected manually, while for inundated sites, surface sediments were retrieved using a 1/32 $\mathrm { m } ^ { 2 }$ Ekman grab. Between 5 and 12 samples for each habitat were collected (Fig. 1; Table 1).
+
+In the laboratory, concentrations of major cations $( \mathrm { K } ^ { + } , \mathrm { N a } ^ { + } , \mathrm { M g } ^ { 2 + }$ and $\mathsf { C a } ^ { 2 + } )$ were measured using inductively coupled plasma-atomic emission spectrometry (ICP-AES; Leeman Labs Profile, Leeman Labs, Hudson, NH, USA) and morphological phosphorus $\mathrm { ( P O _ { 4 } - P ) }$ and nitrogen $\mathrm { ( N O _ { 3 ^ { - } N } , \ N H _ { 4 } \mathrm { - } N }$ and ${ \tt N O } _ { 2 } { \tt - N } )$ in water samples were quantified by a continuous flow autoanalyzer (Skalar San Plus, Skalar Inc., Breda, The Netherlands), with the detection limit of $1 0 ~ \mu \mathrm { g } ~ \mathrm { L } ^ { - 1 }$ for $\mathrm { N H } _ { 4 } – \mathrm { N }$ and 1 µg $\mathrm { L } ^ { - 1 }$ for the other three anions. An elemental analyzer (Vario EL cube, Elementary, Hanau, Germany) was used to determine the contents of total organic carbon (TOC) and total nitrogen (TN). Weight-loss-onignition (LOI) was calculated after the sediments were burned for 2 h at 550℃.
+
+Chironomid head capsules were extracted from wet sediment samples following the standard approach recommended by Brooks et al (2007) and identified to genus/species type level under a microscope of 400 magnification using the taxonomy of Brooks et al (2007), with reference to Epler (2001) and Tang (2006). The criterion of 50 minimum identifiable whole head capsules per sample was satisfied to conduct subsequent analyses. To compare the temporal responses of taxonomic and functional trait compositions of chironomid communities to peatland development, chironomids were analysed from a peat core named YLC (Yangluchang Core; 51 cm-length), which was collected from the peatland central area (Fig. 1C). The chronology and biota data (taxonomy) for the core has previously been published by Hou et al. (2022), which discussed the sensitivity of chironomid communities to regional climate-driven changes. Relative abundances of subfamilies and genera in all surface and peat core samples were calculated. Only taxonomic groups with abundances exceeding 2 % and occurring in at least two samples were used in ordination analyses.
+
+![](images/a6d03008581fadee1592a5d74b1b4b0710b06b0c987479c0f4da146f5ee4ac8c.jpg)  
+Fig. 1. Geographical locations and elevations of the Shennongjia Forestry District (A), the Dajiuhu Wetland (B) and sites of the YLC (Yangluchang Core) peat core and surface samples along diverse habitats (C).
+
+## 2.3. Functional traits of chironomids
+
+Functional traits for all chironomid taxa in both surface and peat core samples were represented by four traits with 28 categories including feeding guilds (5 categories), morphological types (16 categories), body size (4 categories) and locomotion type (4 categories) in the present study (Table 2). All selected traits are sensitive and responsive to habitat changes (Serra et al., 2016). The taxon trait information (Supplementary Table 1) was obtained from Mandaville (2002), Wang and Wang (2011), Saulino et al. (2017), Heino (2008) and Antczak-Orlewska et al. (2021) and is complemented by European Chironomidae taxa published in Serra et al. (2016).
+
+## 2.4. Data analyses
+
+The taxonomic and functional diversity of chironomid communitie in the surface sediments was measured by different indices. Species richness, Pielou’s evenness and Shannon-Wiener index were combined to assess different facets of biodiversity. Three primary components of functional diversity were also used to measure different aspects of functional characteristics of chironomids: functional richness (FRic), functional evenness (FEve) and functional divergence (FDiv). FRic is the range of functional strategies within an assemblage (Martins et al., 2021), measuring how much niche space is filled (Schleuter et al., 2010). FEve is equivalent to species evenness and describes the evenness of abundance distributions in niche space. Low FEve means the niche space the community encompassed was underutilized (Mason et al., 2005). FDiv relates to how abundance is distributed within the volume of functional trait space occupied by species (i.e. niche differentiation) (Vill´eger et al., 2008). A community with high FDiv is more efficient in resource use and will likely lead to better ecosystem functioning (Mason
+
+et al., 2005; Larentis et al., 2022).
+
+Due to non-normality of taxonomic and functional trait data, we conducted non-parametric Kruskal-Wallis rank sum tests to check whether significant differences in compositions existed between the five different habitats. Dunn’s paired comparison test (Dunn, 1964) was then used to identify the pairs of habitats having significant differences in each taxonomic component and functional trait group. The calculations of taxonomic diversity were conducted in Past 2.03 (Hammer et al., 2001), and functional diversity and Dunn’s test were performed in R using the packages of ‘FD’ (Lalibert´e et al., 2014) and ‘FSA’ (Ogle et al., 2020).
+
+For ordination analysis, principal components analysis (PCA) was first conducted to map the variability of environmental parameters between different habitats. Distance-based redundancy analysis (dbRDA; Legendre and Anderson, 1999) was then performed as the constrained ordination method to explore the relationships of biotic (taxonomic and functional trait) compositions and environmental variables. Bray-Curtis dissimilarity was chosen to calculate sample distances on the basis of a relative abundance matrix of chironomids during the principal coordi nate analysis (PCoA) prior to the dbRDA. Forward selection with 999 permutations of environmental factors was used to select a minimum set of significant (p < 0.05) variables. To determine the relative importance of DWT, which was hypothesized to be a vital factor in shaping habitats and their biotic communities, variation partitioning analysis (VPA; Borcard, 1992; Legendre and Legendre, 1998) was conducted. For chironomids in the sediment core, we used the first PCA axis scores to depict the historical changes in taxonomic and functional trait compositions with climate change. All multivariate analyses were conducted in CANOCO version 5 (Smilauer ˇ and Lepˇs, 2014).
+
+## 3. Results
+
+## 3.1. Environmental characteristics of different habitats
+
+DWT and LOI displayed a large gradient of habitat conditions among sampling sites. Sphagnum moss hummocks had a mean DWT value of 6.7 cm, representing extremely dry conditions, whereas sites in peatland pools had a mean water depth of 74.3 cm. LOI in the 44 sampling sites ranged from 4.6 % to 88.7 % with the mean values ranging from 12.2 % to 67.8 % from pools to arid Sphagnum hummocks respectively. Among peatland samples, three sites showed unexpectedly low LOI values: one sample from a Sphagnum moss hummock (29.6 % of LOI) and two from hollows (20 % and 8 % of LOI, respectively). TOC and TN, which also represent primary production, changed in a similar trend to LOI across different habitats. Sphagnum hollows in the peatland showed the highest acidity (mean pH of 5.58), but lowest ion concentrations (mean conductivity of 25.74 μS cm<sup>−</sup> <sup>1</sup>). The details of ranges and averages for major environmental parameters in different habitats are given in Table 1.
+
+Table 1  
+Basic characteristics of different habitats. The values are ranges of environ mental parameters and their mean values (in the parentheses) of samples from each habitat.
+
+<table><tr><td>Habitat</td><td>Hummock</td><td>Hollow</td><td>Ditch</td><td>Pond</td><td>Peatland pool</td></tr><tr><td>Sample code</td><td>Hu 1–10</td><td>Ho11–19</td><td>Di 20–27</td><td>Po 28–32</td><td>Pl 33–44</td></tr><tr><td>DWT (cm)</td><td>0.00 ~11.00(6.70)</td><td>-42.00~ -1.00(-16.22)</td><td>-62.00~ -5.00(-31.75)</td><td>-70.00~ -9.00(-25.20)</td><td>-147.00~ -22.00(-74.33)</td></tr><tr><td>LOI (%)</td><td>29.67 ~88.66(67.81)</td><td>8.73 ~79.47(58.71)</td><td>9.09 ~86.85(30.21)</td><td>8.38 ~62.39(24.77)</td><td>4.59 ~30.59(12.16)</td></tr><tr><td>pH</td><td>4.94 ~7.54 (5.78)</td><td>4.82 ~6.71(5.58)</td><td>5.59 ~7.56(6.39)</td><td>5.94 ~7.16(6.73)</td><td>6.59 ~8.96(7.40)</td></tr><tr><td>Conductivity $(\mu S cm^{-1})$ </td><td>20.34 ~128.00(56.44)</td><td>9.31 ~85.30(25.74)</td><td>14.19 ~88.50(41.30)</td><td>20.18 ~81.60(52.84)</td><td>65.30 ~151.10(91.06)</td></tr><tr><td>ORP (mV)</td><td>-19.90 ~272.50(140.82)</td><td>128.80~ 280.00(207.51)</td><td>96.50 ~231.50(174.29)</td><td>73.00 ~240.50(155.08)</td><td>87.40 ~213.80(156.24)</td></tr><tr><td>DO  $(mg L^{-1})$ </td><td>0.56 ~7.12 (2.53)</td><td>3.18 ~10.84(6.35)</td><td>0.55 ~9.51(5.50)</td><td>4.61 ~9.40(7.27)</td><td>4.65 ~11.73(7.89)</td></tr><tr><td>TOC  $(g kg^{-1})$ </td><td>146.21 ~390.71(310.83)</td><td>62.98 ~383.13(283.68)</td><td>31.73 ~401.68(142.95)</td><td>27.12 ~316.10(114.98)</td><td>12.09 ~143.11(47.29)</td></tr><tr><td>TN  $(g kg^{-1})$ </td><td>11.66 ~24.20(19.24)</td><td>3.91 ~26.35(19.39)</td><td>3.22 ~27.50(10.48)</td><td>3.07 ~21.74(8.74)</td><td>1.33 ~8.34(4.33)</td></tr><tr><td>C/N</td><td>14.64 ~29.47(19.02)</td><td>13.93 ~19.68(17.48)</td><td>11.26 ~20.24(15.22)</td><td>10.30 ~16.96(13.93)</td><td>9.35 ~20.02(11.92)</td></tr><tr><td> $K^{+} (mg L^{-1})$ </td><td>0.27 ~1.90 (1.06)</td><td>0.00 ~1.33(0.44)</td><td>0.00 ~1.20(0.57)</td><td>1.03 ~1.88(1.22)</td><td>0.28 ~1.34(0.85)</td></tr><tr><td> $Ca^{2+} (mg L^{-1})$ </td><td>1.48 ~13.35(3.85)</td><td>1.08 ~10.71(2.76)</td><td>-0.09 ~14.15(4.46)</td><td>0.99 ~8.30(3.98)</td><td>8.44 ~16.28(10.34)</td></tr><tr><td> $Na^{+} (mg L^{-1})$ </td><td>0.22 ~1.90 (0.59)</td><td>0.51 ~3.02(1.32)</td><td>0.40 ~2.59(1.24)</td><td>0.47 ~0.75(0.61)</td><td>0.41 ~4.46(1.29)</td></tr><tr><td> $Mg^{2+} (mg L^{-1})$ </td><td>0.17 ~1.50 (0.50)</td><td>0.20 ~1.14(0.43)</td><td>0.03 ~1.32(0.54)</td><td>0.21 ~0.92(0.51)</td><td>1.01 ~2.13(1.52)</td></tr><tr><td> $NO_{3}-N (mg L^{-1})$ </td><td>0.01 ~0.15 (0.05)</td><td>0.01 ~0.50(0.11)</td><td>0.01 ~0.55(0.12)</td><td>0.00 ~0.09(0.04)</td><td>0.00 ~0.33(0.08)</td></tr><tr><td> $NH_{4}^{+}-N (mg L^{-1})$ </td><td>0.00 ~1.73 (0.20)</td><td>0.00 ~0.46(0.13)</td><td>0.00 ~0.25(0.13)</td><td>0.04 ~0.15(0.11)</td><td>0.00 ~0.78(0.18)</td></tr><tr><td> $NO_{2}-N (mg L^{-1})$ </td><td>0.00 ~1.26 (0.37)</td><td>0.00 ~0.19(0.04)</td><td>0.00 ~0.09(0.01)</td><td>0.00 ~0.01(0.00)</td><td>0.00 ~0.21(0.04)</td></tr><tr><td> $PO_{4}-P (mg L^{-1})$ </td><td>0.00 ~0.08 (0.01)</td><td>0.00 ~0.01(0.00)</td><td>0.00 ~0.01(0.00)</td><td>0.01 ~0.02(0.01)</td><td>0.00 ~0.01(0.00)</td></tr></table>
+
+The PCA of environmental parameters showed that multiple surface samples overlap (Fig. 2), which was expected given that a large proportion of sites were sampled from transitional zones adjoining different habitats. Clear divergence existed between samples from peatland hummocks and pools, indicating their contrasting environmental conditions. The first two axes of the PCA explained 51 % of total variation, with the first axis explaining 35.7 % and the second one explaining 15.3 %. The first axis was highly positively correlated with water pH and cations $( \mathrm { M g } ^ { 2 + }$ and $\mathsf { C a } ^ { 2 + } )$ , and negatively correlated with LOI and DWT. The second axis showed a gradient associated with high concentrations of $\mathrm { N a ^ { + } }$ and low concentrations of $\mathrm { K } ^ { + }$
+
+Table 2  
+Categories and respective code of four traits used in this study.
+
+<table><tr><td>Trait</td><td>Category</td><td>Codes</td><td>Main References</td></tr><tr><td rowspan="5">Functional feeding guild</td><td>Collector-gatherers</td><td>CG</td><td rowspan="5">Mandaville (2002); Serra et al. (2016)</td></tr><tr><td>Collector-filterers</td><td>CF</td></tr><tr><td>Shredders</td><td>Shr</td></tr><tr><td>Predators</td><td>Prd</td></tr><tr><td>Scrapers</td><td>Scr</td></tr><tr><td>Morphological type</td><td>1-16 proposed by Antczak-Orlewska et al. (2021)</td><td>M1-M16</td><td>Antczak-Orlewska et al. (2021)</td></tr><tr><td rowspan="3">Body size</td><td>&lt;5 mm</td><td>Size 1</td><td rowspan="3">Wang and Wang (2011); Serra et al. (2016)</td></tr><tr><td>&gt;5-10 mm</td><td>Size 2</td></tr><tr><td>&gt;10 mm</td><td>Size 3</td></tr><tr><td rowspan="4">Locomotion</td><td>Burrower</td><td>Burrower</td><td rowspan="4">Saulino et al. (2017); Canedo-Arguelles et al. (2016); Heino (2008); Serra et al. (2016)</td></tr><tr><td>Sprawler</td><td>Sprawler</td></tr><tr><td>Climber</td><td>Climber</td></tr><tr><td>Clinger</td><td>Clinger</td></tr></table>
+
+## 3.2. Taxonomic composition and diversity
+
+A total of 4792 head capsules (HCs) belonging to 52 genera of four subfamilies (Tanypodinae, Chironominae, Orthocladiinae and Diamesinae) were picked from 44 surface samples (Fig. 3). Chironominae were the most abundant subfamily occupying 57.3 % of all HCs on average, followed by Orthocladiinae (40.1 %). At the genus-level, Polypedilum showed the largest percentage abundance mean value (17.1 %), and other dominant genera were Limnophyes (16.3 %), Psilometriocnemus (10.1 %), Chironomus (6.9 %), Neozavrelia (5.7 %), Tribelos (5.3 %) and Pseudosmittia (5.1 %).
+
+The community composition in Sphagnum hummocks was clearly different from other habitats. The dominant taxa were terrestrial/semiterrestrial chironomids, such as Psilometriocnemus (26.6 %), Limnophyes (21.9 %), Neozavrelia (16.9 %) and Pseudosmittia (16.5 %) (Fig. 3). Pseudorthocladius also displayed an increase in its frequency and abundance compared with other habitats. Aquatic chironomid genera were almost absent in these relatively arid hummock samples. Sphagnum hollow samples were characterized by the coexistence of abundant semiterrestrial taxa, such as Psilometriocnemus (11.9 %) and Tribelos (11.1 %), and aquatic taxa such as P. nubeculosum (18.1 %). Although Limnophyes (17.6 %) was dominant in ditches and ponds, other terrestrial/semiterrestrial taxa such as Psilometriocnemus (4.9 %), Neozavrelia (2.1 %), Tribelos (4.8 %), Pseudosmittia (1.9 %) and Pseudorthocladius (0.8 %) were reduced in their frequency of abundance. Typical aquatic taxa, such as Chironomus and Polypedilum, occupied pool habitats with relatively high water-levels (22–147 cm in depth). Limnophyes abundances were reduced, and other semi-terrestrial genera were almost absent.
+
+The Kruskal-Wallis rank sum test results suggested that significant differences were shown by three subfamilies/tribes (60 % of all subfamilies/tribes) and 20 genera (38 %) between diverse habitats (Figs. 4 and 5). The relative abundance of Chironomini rose with the water-level in different habitats (Fig. 4), while Orthocladiinae showed an inverse relationship (Fig. 5). Polypedilum contributed most to the variation of Chironomini, while Psilometriocnemus explained the most variation of Orthocladiinae.
+
+HC density ranged from 4 to 114 individuals $\mathbf { g } ^ { - 1 }$ and showed insignificant differences between the five habitats (Fig. 6A). Taxonomic richness (Taxa S) and diversity (Shannon H) in arid peatland samples were significantly lower than in other inundated habitats (Fig. 6B1 and B2). Ditches supported the most diverse assemblages, with 25 different genera on average, varying from 5 to 47 in each sample. Pools provided habitats for 21 genera while Sphagnum hummocks supported 8 genera on average.
+
+![](images/03ece652600ce55a2b4c18dd62f6d5e1e118fa97c404effe79024b8542e2d614.jpg)  
+Fig. 2. Biplot of principal component analysis (PCA) showing the environmental differences between five different habitats from all the surface samples.
+
+![](images/7becdb5c4f53d5901a3ac407ccc8624d2ed5dd8eff6b3d51c23762c8a00cac62.jpg)  
+Fig. 3. Percentage abundance of chironomid taxa in different habitats (samples in each habitat were ordered based on DWT, so the driest samples are at the top, and the wettest at the base). The five habitats were abbreviated as follows: Hu-Sphagnum hummock; Ho-Sphagnum hollow; Di-ditch; Po-pond; Pl-pool.
+
+## 3.3. Functional trait structure
+
+For functional traits, M15 was the most common morphological type and the abundance was 34.6 % on average. Collector-gatherers (CG) was the most common functional feeding group, and sprawlers occupied nearly 40 % across four habit types. The body size of chironomid larvae in this study was generally medium to large. 41 % of individuals exceeded 10 mm, but no individuals were smaller than 2.5 mm.
+
+Significant differences between the five habitats were shown in 16 functional traits (57 %) verified by Kruskal-Wallis rank sum tests (Figs. 7 and 8). All five functional feeding groups displayed distinct differences between Sphagnum hummocks and pools (Fig. 7A1-A5). CG occupied nearly 97 % of larvae in Sphagnum hummocks, while shredders (Shr) (43.6 %) was the most dominant feeding group within pools. M15 showed a generally declining tendency with water-level but M3 showed the reverse pattern (Fig. 7B7 and B1). Body size increased, but sprawlers decreased gradually with water-level increases (Fig. 8). Similar to taxonomic richness, ditches supported more diverse functional groups indicated by FRic (Fig. 6C2). Dissimilar to FRic, FEve and FDiv failed to show significant differences between the five habitats (Fig. 6C1 and C3).
+
+C  
+![](images/4ccbb020a77cc5528c86f449f779f57a40a87719e5dfef1dfb9669779cc38172.jpg)
+
+![](images/feab8653042a271c11da6ffb336ef98464a759be8fd3d14523fac3c6ae4e9727.jpg)
+
+![](images/e3cb897d12cc43061d4bb039012019a7371179332d564bda5d1c471be1c0122a.jpg)
+
+![](images/22c4022d28a51f300f306211fce98c263a7b6071fad48209420b9447b5944b49.jpg)
+
+![](images/1b4b0c404bd8b5a9d842ff9acc57a93193b4a4fe07f16be6de6589e6d84bd87d.jpg)
+
+![](images/c2173fa09949df54ff1bedd729449429e4a80f8bf0a95a4a1993377fdf69f6c1.jpg)  
+Fig. 4. Box-Whisker plots of relative abundance of the tribe Chironomini (A) and the dominant genera (B-F) belonging to the subfamily Chironominae. The upmost, lowest and median line on the box represented the maximum, minimum and median abundance of each genus, respectively. Letters (i.e. a and b) on the bar indicated the significance between habitats tested by Kruskal-Wallis multiple comparisons.
+
+![](images/16aa4f626ebbb8a2543b88bd28f84488699e3b7006c175f082228078e5effd33.jpg)
+
+![](images/88107279261e5492e1275c674e9e407f21a007c09d78a2ffb015e3bba1d8f035.jpg)
+
+![](images/baeef903873ca2b7263b86539dafbb7af35d5f1590f794d087b53f1137ba35d9.jpg)
+
+![](images/dd8b969869f96321b4aa3d1d55880c51d06c44ef8502542b0d1ff0e2fbfd235f.jpg)  
+Fig. 5. Box-Whisker plots of relative abundance of the subfamily Orthocladiinae (A) and the dominant genera (B-D) having significant differences between habitats. Lines and lower-case letters in the plots are similar to Fig. 4.
+
+![](images/7c5ef0e1165a7f720e52cbc144b1f86d3e162dccb6b074ecdeb8ba565fa93fee.jpg)
+
+![](images/a76d5106467be0adb6b66aa02b132246222e0a5b81cb9be638ee8137412f4b4b.jpg)
+
+![](images/c8349135f2f368b6bca5240878a78fcb7e3d937a8918f24877b68e934a9ef468.jpg)
+
+![](images/17b6b0653bde59fdcdca0cf232d807ab097c23c982ecd75b8f23b2a2c7835c0e.jpg)
+
+![](images/477fb68a2e468cb54a6a0dfb4ebe9ae43839cde73d36bc5a2f5003ca61f7c166.jpg)
+
+![](images/fc99b589e5ee96b6e134f522f16019ead3b3543c1b8c03eae001d6d782fc384b.jpg)  
+Fig. 6. Box-Whisker plots of HC density (A), taxonomic (B1-B2) and functional (C1-C3) diversity. Lines and lower-case letters in the plots are similar to Fig. 4.
+
+![](images/c5e651265bfd1ccfebfb603b2f719e9bb8d83eab1c3b1e8941a9c3d7b0d7eb13.jpg)
+
+![](images/f7502920c476ee56a604fffa2f077f81d7d29bfc79457e7fdc9e38d8a9e4e529.jpg)
+
+![](images/564ee34201062154f8b61737e6a8b857cc4f83e9d17350548fd27a65782d11c1.jpg)
+
+![](images/02c194d5cfd39b907d1f9dc556c41d40b0edb22503c526bf83dcb5da5d045ed0.jpg)
+
+![](images/c1086daf3b4b671de61a1bfbb9142b025c930bcc32fbb0a198c844e0426cec60.jpg)
+
+![](images/26f394a431c7ee825773eb3c06305afe8cd88630a5db9389819fa272ccf84c46.jpg)
+
+![](images/d53da59e38a14124379e92c85d5731aa1ceb522c537c82e0cbf609d53493f21b.jpg)
+
+![](images/5198da0d22ae47a5c6fc2eefdcd175b48a250ac0746e2a6ce7994ae4c87334f2.jpg)
+
+![](images/f0ac0e13c8224d0354ffb5921683046acf3412fb68ff262034f28676514cdd4f.jpg)
+
+![](images/8e7ffa617c104245f4bfb1536a94d5f9327d02f99fe16dac36fcb7b6a8de322d.jpg)
+
+![](images/b0708d26b80422741646ed87ca3baa1d97ce0c3fd4e592bacdc14530c808b9d1.jpg)
+
+![](images/f19f33226dc5d0ecce1a1da7db7185248de6a0ad6ceb29081176881ea3492f3d.jpg)  
+Fig. 7. Box-Whisker plots of percentages of functional traits showing significant differences between habitats. A1-A5 represents the traits of functional feeding groups and B1-B7 are trait groups of morphological type. Lines and lower-case letters in the plots are similar to Fig. 4.
+
+D  
+![](images/32bfc7a1512e20044b1056eae318eb89c3afc961379762b2635b984469e207a0.jpg)
+
+![](images/45fb8c739f87b8bc29bff988cb01dfbcd114964d0b1d84f391fa118b549e056a.jpg)
+
+![](images/bccce52eab57d2346e2743f93ab5d2704b3feaa8e8976d8e18820870274c2202.jpg)
+
+![](images/7338921e96ff16957481e81488803a60973184fd273b5d0de9bbe0a09de8d1f3.jpg)  
+Fig. 8. Box-Whisker plots of percentages of trait groups for body size (A-B) and locomotion type (C-D) showing significant differences between habitats. Lines and lower-case letters in the plots are similar to Fig. 4.
+
+## 3.4. Environmental factors controlling taxonomic and functional trait structures
+
+The dbRDA results revealed three significant environmental variables (i.e. LOI, DWT and K<sup>+</sup>) for both community characterizations (taxonomic and trait compositions), capturing around 39 % of the total variation in chironomid communities (Fig. 9). For the taxonomic community, VPA suggested the unique effect of LOI and DWT was 10.8 % and 4.0 %, respectively, and their combined effect was 14.8 % (Fig. 10A). Similar results were shown for functional trait composition. Strong interactions also existed between LOI and DWT and occupied 18.5 % of functional trait variation. However, the unique effect was only 9.5 % for LOI and 5.5 % for DWT (Fig. 10B).
+
+![](images/f67fa0108fe4fc5dd6be2853b924a122f93ff95a6a98a2431fae9cf384be353c.jpg)
+
+## 3.5. Taxonomy and traits in the YLC peat core
+
+For taxonomic compositions, chironomids throughout the whole core were dominated by Psilometriocnemus, Pseudosmittia, Limnophyes and Polypedilum (details in Hou et al. (2022)). Major trait categories of chironomids are shown in Fig. 11. PCs between taxonomic and different trait compositions displayed significantly negative or positive relationships, indicating their synchronous responses to past environmental changes.
+
+![](images/c853cb817abfee5070be5e6fd26f8a9fa53cf8c64a46078a9126b0b5c4b96c14.jpg)  
+Fig. 9. Dbrda biplots of samples and significant environmental parameters based on taxonomic (a) and functional trait (b) compositions of chironomid communities.
+
+![](images/c22a63cbe496b8041ae9f0364d3380f3d8e4ec1fffe8e19c387bb5ddef57a157.jpg)
+
+![](images/d57d7748257e4d3bc69f1d5d62b4ec4fae6c2f0012386941051dd26990aba6a2.jpg)  
+Fig. 10. Variation partitioning analyses revealed the unique and shared variations (%) of three significant environmental factors on taxonomic (A) and functional trait (B) compositions.
+
+![](images/13fec2a7866b89301ff4f1d63154a8f25684c8130f99411a806ab6fe074fe160.jpg)  
+Fig. 11. Stratigraphy of major taxonomic and trait components of chironomid communities in the YLC peat core, and scores of the PC1 axis and the relations between traits and taxonomy-based PCs. Statistically significant relationships with a p value less than 0.05 or 0.01 were represented by symbol \* and \*\*, respectively. The period covered with a grey bar has no data.
+
+## 4. Discussion
+
+## 4.1. Environmental variables influencing the chironomid community
+
+Ordination analyses produced similar results for taxonomic compo sition and functional traits, showing that LOI, DWT and K<sup>+</sup> were the most important environmental factors controlling chironomid communities. LOI showed large discrepancies between different habitats. Peatlands store sequestered carbon and generally display a relatively high organic content (Leifeld and Menichetti, 2018) and hence it was unexpected that there were three sampling sites having very low LOI values. Two of them were located near ditches, which flow from sandy areas surrounding the basin and carry high mineral content, explaining the relatively low organic matter of the nearby sites. It has been widely reported that organic matter (measured as DOC, TOC or LOI) and/or substrate type is an important control of chironomid communities in lakes (Larocque et al., 2006; Nyman et al., 2005; Luoto et al., 2016), streams (Entrekin et al., 2007), rivers (Syrovatka ´ and Brabec, 2006; Leszczynska ´ et al., 2019) as well as peatlands (Van Duinen et al., 2006). The quantity of organic matter is crucial to zoobenthos biomass and community composition as it provides both food supply and habitats for organisms (Luoto et al., 2016). Organic matter exclusion in freshwater ecosystems would lead to decreased chironomid abundances and an altered chironomid community assemblage (Entrekin et al., 2007). Nevertheless, a high organic matter content is often accompanied with low pH, poor light and depleted hypolimnetic oxygen (Luoto et al., 2016; Premke et al., 2010), which might exert an inhibitory effect to the survival of zoobenthos. Substrate quality determines the feeding behaviours of invertebrates (Henriques-Oliveira et al., 2003) and collectorgatherers are often found in high humic habitats, while collectorfilterers prefer relatively low organic content (Kivil¨a et al., 2019). Shredders generally feed on coarse particulate organic matter (CPOM > 1 mm), such as leaf litter and woody debris. However, in our study, this feeding group mainly consisted of the aquatic genus Polypedilum, for which algae are an important part of the diet (Henriques-Oliveira et al., 2003), and therefore they were abundant in pool habitats in the Dajiuhu Wetland. As mouthpart evolution is strongly impacted by feeding ecology, morphological traits are thought to be dependent on feeding traits and serve as a good surrogate for habitat changes (Antczak-Orlewska et al., 2021).The M14 morphological type are mainly composed of taxa preferring algal-rich conditions (e.g. P. nubeculosum type), and are thus abundant in inundated habitats. M15 is a morphological type having narrow or foot-shaped ventromental plates and mainly consisted of collector-gatherers adapted to semi-terrestrial environments such as Psilometriocnemus, Pseudosmittia, Limnophyes and Pseudorthocladius, and therefore showed an opposite distribution to the M14 morphological type. For body size, habitats with high-quality food supply are undoubtedly prone to support large individuals to improve their competitiveness and survive in relatively stable conditions like peatland pools here (Iglesias et al., 2012).
+
+Water level is an important environmental filter for biotic commu nities in both taxonomic and functional trait compositions (Canedo-˜ Argüelles et al., 2016). Chironomid taxonomic compositions showed distinctive variations along the water depth gradient in the current study, in agreement with the relatively limited chironomid work on peatlands (Cao et al., 2019). Semi-terrestrial species (i.e. Psilometriocnemus, Pseudosmittia, Neozavrelia, Pseudorthocladius and Tribelos) are found in dry moss peats whereas lacustrine taxa (i.e. Polypedilum, Glyptotendipes and Chironomus) live predominantly in inundated habitats like pools. This finding might encourage the usage of a taxonomybased approach of chironomids in tracking the long time-scale history of peatland ontogeny, as peatlands might experience several complex wet-dry transition phases during peat accumulation (Morris et al., 2015). For traits, our results were consistent with other reports in that collectors (especially gatherers) and sprawlers were abundant in intermittent or perennial drought habitats (Canedo-Argüelles ˜ et al., 2016; Jovem-Azevˆedo et al., 2019). Conversely, shredders generally show a lack of drought resistance (Bazzanti et al., 2009), as Sphagnum hummocks with continuous drought could be less suitable for shredders to colonize. Drought undoubtedly acted as an ecological filter of body size, as small individuals are commonly found in extreme environments suffering relatively high levels of disturbance (Gomes et al., 2018). Reduced body size allows a high rate of reproduction and growth, as well as a relatively high capacity to surviving disturbances (Bonada et al., 2007).
+
+An orthogonal relationship was identified between $\mathrm { K } ^ { + }$ and variables of LOI and DWT (Fig. 12), suggesting that $\mathrm { K } ^ { + }$ is independent of the other two parameters, and hence it may be related to the mineral type that is influencing the chironomid communities. Potassium mostly exists in the lattice of aluminosilicate minerals (mainly feldspars and micas) in the form of ions, but it is generally difficult to be released naturally. The catchment area of the Dajiuhu Wetland is mostly composed of
+
+![](images/4c9225d638b4f624ae6af4a35aaae92c1c74e299f721d17cefc902dca6912473.jpg)  
+\* p<=0.05 \*\* p<=0.01 \*\*\* p<=0.001
+
+Fig. 12. Spearman correlations between different environmental variables.
+
+limestones and dolomites, with a few sandstones and shales in the west (Du et al., 2008). Significant positive relationships were detected between $\mathrm { K } ^ { + }$ and $\mathrm { { C a } } ^ { 2 + }$ , as well as $\mathrm { M g } ^ { 2 + }$ (Fig. 12), revealing their possible similar sources, indicating that potassium might be released during bedrock decomposition. Potassic fertilizer is increasingly needed in agricultural cultivation in the form of water-soluble salts such as KCl (Skorina and Allanore, 2015). Massive ditches were dug, and natural peatlands were reclaimed in the Dajiuhu basin since the 1980 s to promote local agricultural economic development (Zhou et al., 2017). Agricultural activities within and around the Dajiuhu Wetland might contribute to the potassium supply via running water and/or aeolian transport. The significance of $\mathrm { K } ^ { + }$ for chironomid communities could be through a range of related processes. Ionic balance is important for chironomid communities, of which $\mathrm { K } ^ { + }$ has a role (Jonusaite et al., 2011) and indirect processes will also be important, such as via substrate shaping through moss growth (Clymo and Hayward, 1982; Rydin and Jeglum, 2013; Cao et al., 2019). Potassium deficiency may trigger hypokalemia for specific taxa and threaten their survival (Belowitz et al., 2014), and it also shapes functional trait communities (Antczak-Orlewska et al., 2021). Shredders in our study are positively associated with $\mathrm { K } ^ { + }$ , and they were mainly dominated by mining taxa, such as Endochironomus, Glyptochironomus and Polypedilum. These larvae commonly live in lacustrine habitats with coarse organic detritus (Bijlmakers, 1983) containing a mixture of rotten plant and animal material which is therefore likely enriched in potassium (Belowitz and O’Donnell, 2013).
+
+The transverse zones between pools and Sphagnum moss hummocks in our study supported diverse taxonomic and trait compositions. Edge effects were especially pronounced in ditch habitats since they exhibited the highest abundance, as well as taxonomic and functional diversity of chironomid communities. Natural ecotones possess various habitats and provide more niche opportunities for diverse species assemblages with different functional traits (Kark, 2013), highlighting the vital importance of ecotones in biodiversity maintenance.
+
+## 4.2. Functional traits are robust in relation to habitat change
+
+Increasing numbers of studies have shown that biotic trait composition is more sensitive to environmental variations than traditiona taxonomic structures (Jiang et al., 2019; Paiva et al., 2023), and as such could be a useful bioindicator (Paiva et al., 2023). This aligns with our study as it showed that in total half of all functional trait categories were sensitive to habitat changes, while only 38 % of traditional taxonomic compositions were. At the temporal scale, five categories of traits showed consistent and synchronous trends. This reveals that each trait could provide an independent functional response to environmental change (Fig. 9), and hence these traits could be used to infer changes in environment and ecosystem functions. It would be more beneficial to comparative analysis across studies (both modern bioassessment and paleoenvironmental studies) than the taxonomy-based approach, in which the influence of biogeographic factors and biological interactions within communities on taxonomic structures (Heino and Tolonen, 2017) should be considered. Moreover, taxonomic compositional changes could reveal the replacement and gain or loss of species (Mayfield et al., 2022), but traits can reveal changes in ecosystem functions under disturbance, which is conducive to ecosystem management (Haase et al., 2023). Our results indicate that the trait composition of chironomid communities has a robust response to environmental change at spatiotemporal scales.
+
+## 4.3. Conclusions and implications for bioassessment and paleoenvironmental reconstruction
+
+Our study showed that more chironomid functional trait categorie compared to taxonomic assemblages could be used to recognise habitat changes at spatial scales. This result was also verified by sedimentary
+
+Kark, S., 2013. Effects of ecotones on biodiversity. Encyclopedia of Biodiversity 142, 1.
+
+data, which record the response of biotic communities to environmental change across temporal scales. Both taxonomic and functional trait communities were primarily controlled by sedimentary organic matter content, depth to water table and K<sup>+</sup>. We therefore conclude that a functional trait-based approach could be a good alternative to a traditional taxonomy-based approach in identifying the response of chironomid assemblages to wetland development. Considering the limitations of taxonomic identification accuracy, especially in peat samples, chironomid functional trait composition is strongly recommended to serve as a surrogate in assessments of environments and ecosystem functions, as well as in palaeo-studies in a range of wetlands.
+
+## CRediT authorship contribution statement
+
+Yanmin Cao: Writing – review & editing, Writing – original draft, Investigation, Funding acquisition, Conceptualization. Peter G. Langdon: Writing – review & editing. Shengman Shen: Writing – review & editing, Methodology. Hui Li: Resources, Investigation. Deng Pan: Writing – review & editing, Methodology.
+
+## Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+## Data availability
+
+Data will be made available on request.
+
+## Acknowledgements
+
+We acknowledge Chen Xu, Hou Guilin, Ge Wenlong and Peng Jia for their kind help with their field and laboratory assistance. This work was supported by the National Natural Science Foundation of China (42271165) and the Fundamental Research Funds for the Central Uni versities, South-Central Minzu University (CZQ23009). Y. Cao was supported by the China Scholarship Council (grant number 202008420139). We thank the very helpful reviewer and editorial comments in shaping this manuscript.
+
+## Appendix A. Supplementary data
+
+Supplementary data to this article can be found online at https://doi. org/10.1016/j.ecolind.2024.111656.
+
+## References
+
+Adeleye, M.A., Haberle, S.G., Gallagher, R., Andrew, S.C., Herbert, A., 2023. Changing plant functional diversity over the last 12,000 years provides perspectives for tracking future changes in vegetation communities. Nat. Ecol. Evol. 7, 224–235.
+
+Antczak-Orlewska, O., Płociennik, ´ M., Sobczyk, R., Okupny, D., Stachowicz-Rybka, R., Rzodkiewicz, M., Sicinski, ´ J., Mroczkowska, A., Krąpiec, M., Słowinski, ´ M., Kittel, P., 2021. Chironomidae Morphological Types and Functional Feeding Groups as a Habitat Complexity Vestige. 8, 583831.
+
+Armitage, P.D., Pinder, L., Cranston, P., 2012. The Chironomidae: biology and ecology of non-biting midges. Springer Science & Business Media, Dordrecht.
+
+Bazzanti, M., Della Bella, V., Grezzi, F., 2009. Functional characteristics of macroinvertebrate communities in Mediterranean ponds (Central Italy): Influence of water permanence and mesohabitat type. Ann. Limnol. - Int. J. Lim. 45, 29–39.
+
+Belle, S., Klaus, F., Gonz´alez Sagrario, M.d.l.A., ´ Vrede, T., Goedkoop, W., 2022. Unravelling chironomid biodiversity response to climate change in subarctic lakes across temporal and spatial scales. Hydrobiologia 849, 2621–2633.
+
+Bellwood, D.R., Streit, R.P., Brandl, S.J., Tebbett, S.B., 2019. The meaning of the term ‘function in ecology: A coral reef perspective. Funct. Ecol. 33, 948 961.
+
+Belowitz, R., Leonard, E.M., O’Donnell, M.J., 2014. Effects of exposure to high concentrations of waterborne Tlon K and Tl concentrations in Chironomus riparius larvae. Comp. Biochem. Physiol. C: Toxicol. Pharmacol. 166, 59 64.
+
+Belowitz, R., O’Donnell, M.J., 2013. Ion-selective microelectrode measurements of Tl+ and K+ transport by the gut and associated epithelia in Chironomus riparius. Aquat. Toxicol. 138 139, 70 80.
+
+Bijlmakers, L., 1983. De verspreiding en oecologie van chironomide larven (Chironomidae: Diptera). Twee Vennen in De Omgeving Van Oisterwijk (n.br.). K.U. Nijmegen, Versl.
+
+Bonada, N., Dol´edec, S., Statzner, B., 2007. Taxonomic and biological trait differences of stream macroinvertebrate communities between mediterranean and temperate regions: implications for future climatic scenarios. Glob. Chang. Biol. 13, 1658–1671.
+
+Borcard, D., 1992. Partialling out the spatial component of ecological variation. Ecology 71, 1045 1055.
+
+Brooks, S.J., Langdon, P., Heiri, O., 2007. The identification and use of Palaearctic Chironomidae larvae in palaeoecology., QRA Technical Guide No. 10. Quaternary Research Association, London.
+
+Cai, Y., Dong, R., Kattel, G., Zhang, Y., Peng, K., Gong, Z., 2023. Macroinvertebrate diversity and ecosystem functioning across the eutrophication gradients of the middle and lower reaches of Yangtze River lakes (China). Ecol. Evol. 13, e9751.
+
+Canedo-Argüelles, ˜ M., Bogan, M.T., Lytle, D.A., Prat, N., 2016. Are Chironomidae (Diptera) good indicators of water scarcity? Dryland streams as a case study. Ecol Ind. 71, 155–162.
+
+Canedo-Argüelles, ˜ M., Guti´errez-C´anovas, C., Acosta, R., Castro-Lopez, ´ D., Cid, N., Fortuno, ˜ P., Munn´e, A., Múrria, C., Piment˜ao, A.R., Sarremejane, R., Soria, M., Tarrats, P., Verkaik, I., Prat, N., Bonada, N., 2020. As time goes by: 20 years of changes in the aquatic macroinvertebrate metacommunity of Mediterranean rive networks. J. Biogeogr. 47, 1861–1874.
+
+Cao, Y., Langdon, P.G., Yan, Y., Wang, S., Zheng, Z., Zhang, Z., 2019. Chironomid communities from subalpine peatlands in subtropical China as indicators of environmental change. J. Paleolimnol. 62, 165–179.
+
+Clymo, R., Hayward, P., 1982. The ecology of Sphagnum, Bryophyte ecology. Springer, Dordrecht.
+
+Dawson, S.K., Carmona, C.P., Gonz´alez-Su´arez, M., Jonsson, ¨ M., Chichorro, F., Mallen-Cooper, M., Melero, Y., Moor, H., Simaika, J.P., Duthie, A.B., 2021. The traits of “trait ecologists”: An analysis of the use of trait and functional trait terminology. Ecol. Evol. 11, 16434–16445.
+
+Dol´edec, S., Phillips, N., Townsend, C., 2011. Invertebrate community responses to land use at a broad spatial scale: trait and taxonomic measures compared in New Zealand rivers. Freshwater Biol 56, 1670 1688
+
+Du, Y., Cai, S.M., Wang, X.L., He, B.Y., Xu, G.L., Jiang, M.X., Xue, H.P., Xiao, F., 2008 Environmental background and ecological restoration of the Dajiuhu sub-alpine wetland in Mt. Shennongjia. Resour. Environ. Yangtze Basin 17 (6), 915–919 in Chinese.
+
+Dunn, O.J., 1964. Multiple Comparisons Using Rank Sums. Technometrics 6, 241–252. Entrekin, S.A., Wallace, J.B., Eggert, S.L., 2007. The response of Chironomidae (Diptera) to a long-term exclusion of terrestrial organic matter. Hydrobiologia 575, 401 413.
+
+Epler, J.H. 2001. Identification manual for the larval Chironomidae (Diptera) of North and South Carolina. North Carolina Department of Environment and Natural Resources, Division of Water Quality.
+
+Gautreau, E., Volatier, L., Nogaro, G., Gouze, E., Marmonier, P., Mermillod-Blondin, F., 2023. Interactions between microbial activity and bioturbation modes of benthic invertebrates determine nutrient releases from reservoir sediments. Freshwater Biol. 68, 245 259.
+
+Gomes, W.I.A., Jovem-Azevˆedo, D.d.S., Paiva, F.F., Milesi, S.V., Molozzi, J., 2018 Functional attributes of Chironomidae for detecting anthropogenic impacts on reservoirs: A biomonitoring approach. Ecol. Ind. 93, 404–410.
+
+Haase, P., Bowler, D.E., Baker, N.J., et al., 2023. The recovery of European freshwater biodiversity has come to a halt. Nature 620, 582–588.
+
+Hammer, Ø., Harper, D.A.T., Ryan, P.D., 2001. PAST: paleontological statistics software package for education and data analysis. Palaeontol. Electron. 4, 9.
+
+Heino, J., Tolonen, K.T., 2017. Ecological drivers of multiple facets of beta diversity in a lentic macroinvertebrate metacommunity. Limnol. Oceanogr. 62, 2431 2444.
+
+Henriques-Oliveira, A.L., Nessimian, J.L., Dorvill´e, L.F.M., 2003. Feeding habits of Chironomid larvae (Insecta: Diptera) from a stream in the Floresta da Tijuca, Rio de Janeiro, Brazil. Braz. J. Biol. 63, 269 281.
+
+Hou, G.L., Cao, Y.M., Tian, W.L., Deng, P., Shen, S.M., Chen, X., 2022. Response of chironomid assemblages to the changes of wetness in Dajiuhu Peatland of Hube Province during the past 400 years. J. Lake Sci. 34, 1030–1042 in Chinese.
+
+Hu, S., Niu, Z., Chen, Y., Li, L., Zhang, H., 2017. Global wetlands: Potential distribution, wetland loss, and status. Sci. Total Environ. 586, 319 327.
+
+Iglesias, S., Tracy, C., Bedford, G., Christian, K., 2012. Habitat differences in body size and shape of the Australian agamid lizard, Lophognathus temporalis. J. Herpetol. 46, 297–303.
+
+Jiang, X., Pan, B., Song, Z., Xie, Z., 2019. Do functional traits of chironomid assemblages respond more readily to eutrophication than taxonomic composition in Chinese floodplain lakes? Ecol. Ind. 103, 355–362.
+
+Jonusaite, S., Kelly, S.P., Donini, A., 2011. The physiological response of larval Chironomus riparius (Meigen) to abrupt brackish water exposure. J. Comp. Physiol. B 181, 343 352.
+
+Jovem-Azevˆedo, D., Bezerra-Neto, J.F., Azevˆedo, E.L., Gomes, W.I.A., Molozzi, J., Feio, M.J., 2019. Dipteran assemblages as functional indicators of extreme droughts. J. Arid Environ. 164, 12 22.
+
+Kivil¨a, E.H., Luoto, T.P., Rantala, M.V., Kiljunen, M., Rautio, M., Nevalainen, L., 2019. Environmental controls on benthic food web functions and carbon resource use in
+
+Lalibert´e, E., Legendre, P., Shipley, B., Laliberte, ́ M.E., 2014. Measuring functional diversity from multiple traits, and other tools for functional ecology. R Package FD.
+
+Larentis, C., Pavanelli, C.S., Delariva, R.L., 2022. Do environmental conditions modulated by land use drive fish functional diversity in streams? Hydrobiologia 849, 4465–4483.
+
+Larocque, I., Pienitz, R., Rolland, N., 2006. Factors influencing the distribution of chironomids in lakes distributed along a latitudinal gradient in northwestern Quebec, Canada. Can. J. Fish. Aquat. Sci. 63, 1286–1297.
+
+Legendre, P., Anderson, M.J., 1999. Distance-based redundancy analysis: testing multispecies responses in multifactorial ecological experiments. Ecol. Monogr. 69, 1–24.
+
+Legendre, P., Legendre, L., 1998. Numerical ecology, 2nd ed. Elsevier, Amsterdam.
+
+Leifeld, J., Menichetti, L., 2018. The underappreciated potential of peatlands in global climate change mitigation strategies. Nat. Commun. 9, 1071.
+
+Leszczynska, ´ J., Grzybkowska, M., Głowacki, Ł., Dukowska, M., 2019. Environmental Variables Influencing Chironomid Assemblages (Diptera: Chironomidae) in Lowland Rivers of Central Poland. Environ. Entomol. 48, 988–997.
+
+Li, Z., Wang, J., Liu, Z., Meng, X., Heino, J., Jiang, X., Xiong, X., Jiang, X., Xie, Z., 2019. Different responses of taxonomic and functional structures of stream macroinvertebrate communities to local stressors and regional factors in a subtropical biodiversity hotspot. Sci. Total Environ. 655, 1288–1300.
+
+Li, J., Zheng, Z., Huang, K., Yang, S., Chase, B., Valsecchi, V., Carr´e, M., Cheddadi, R., 2013. Vegetation changes during the past 40,000 years in Central China from a long fossil record. Quat. Int. 310, 221–226.
+
+Luoto, T.P., Ojala, A.E.K., 2018. Controls of climate, catchment erosion and biological production on long-term community and functional changes of chironomids in High Arctic lakes (Svalbard). Palaeogeogr. Palaeoclimatol. Palaeoecol. 505, 63–72.
+
+Luoto, T.P., Rantala, M.V., Galkin, A., Rautio, M., Nevalainen, L., 2016. Environmental determinants of chironomid communities in remote northern lakes across the treeline – Implications for climate change assessments. Ecol. Ind. 61, 991–999.
+
+Mandaville, S., 2002. Benthic macroinvertebrates in freshwaters: Taxa tolerance values, metrics, and protocols. Soil Water Conservation Society of Metro Halifax, Nova Scotia.
+
+Martins, I., Castro, D.M.P., Macedo, D.R., Hughes, R.M., Callisto, M., 2021. Anthropogenic impacts influence the functional traits of Chironomidae (Diptera) assemblages in a neotropical savanna river basin. Aquat. Ecol. 55, 1081–1095.
+
+Mason, N.W.H., Mouillot, D., Lee, W.G., Wilson, J.B., 2005. Functional richness, functional evenness and functional divergence: the primary components of functional diversity. Oikos 111, 112 118.
+
+Mayfield, R.J., Dearing, J.A., Doncaster, C.P., Langdon, P.G., 2022. Stability of chironomid community structure during historic climatic and environmental change in subarctic Alaska. Limnol. Oceanogr. 67, S444–S460.
+
+Mitchell, E.A.D., Buttler, A., Grosvernier, P., Rydin, H., Albinsson, C., Greenup, A.L., Heijmans, M.M.P.D., Hoosbeek, M.R., Saarinen, T., 2000. Relationships among testate amoebae (Protozoa), vegetation and water chemistry in five Sphagnum dominated peatlands in Europe. New Phytol. 145, 95 106.
+
+Morris, P.J., Baird, A.J., Young, D.M., Swindles, G.T., 2015. Untangling climate signals from autogenic changes in long-term peatland development. Geophys. Res. Lett. 42, 10,788–710,797.
+
+Morse, J.C., Bae, Y.J., Munkhjargal, G., Sangpradub, N., Tanida, K., Vshivkova, T.S., Wang, B., Yang, L., Yule, C.M., 2007. Freshwater biomonitoring with macroinvertebrates in East Asia. Front. Ecol. Environ. 5, 33 42.
+
+Nevalainen, L., Luoto, T.P., Manca, M., Weisse, T., 2015. A paleolimnological perspective on aquatic biodiversity in Austrian mountain lakes. Aquat. Sci. 77, 59–69.
+
+Nyman, M., Korhola, A., Brooks, S.J., 2005. The distribution and diversity of Chironomidae (Insecta: Diptera) in western Finnish Lapland, with special emphasis on shallow lakes. Glob. Ecol. Biogeogr. 14, 137 153.
+
+Ogle, D., Wheeler, P., Dinno, A., 2020. FSA: fisheries stock analysis. R package version. Champman & Hall/CRC, Boca Raton, p. 30.
+
+Paiva, F.F., Melo, D.B.D., Dolbeth, M., Molozzi, J., 2023. Functional threshold responses of benthic macroinvertebrates to environmental stressors in reservoirs. J. Environ. Manage. 329, 116970.
+
+Peng, J., Zeng, L., Huang, X., Chen, X., 2023. Climate, atmospheric deposition and catchment process interact to trigger recent diatom community reorganization in alpine lakes of the eastern monsoonal region of China. Quaternary Sci Rev 310, 108131.
+
+Piano, E., Doretto, A., Mammola, S., Falasco, E., Fenoglio, S., Bona, F., 2020. Taxonomic and functional homogenisation of macroinvertebrate communities in recently intermittent Alpine watercourses. Freshwater Biol 65, 2096–2107.
+
+Premke, K., Karlsson, J., Steger, K., Gudasz, C., von Wachenfeldt, E., Tranvik, L.J., 2010. Stable isotope analysis of benthic fauna and their food sources in boreal lakes. J. N. Am. Benthol. Soc. 29, 1339 1348.
+
+Qin, Y., Li, H., Mazei, Y., Kurina, I., Swindles, G.T., Bobrov, A., Tsyganov, A.N., Gu, Y., Huang, X., Xue, J., Lamentowicz, M., Marcisz, K., Roland, T., Payne, R.J., Mitchell, E. A.D., Xie, S., 2021. Developing a continental-scale testate amoeba hydrological transfer function for Asian peatlands. Quaternary Sci Rev 258, 106868.
+
+Radkova, V., Syrovatka, V., Bojkova, J., Schenkova, J., Kroupalova, V., Horsak, M., 2014. The importance of species replacement and richness differences in small-scale diversity patterns of aquatic macroinvertebrates in spring fens. Limnologica 47, 52–61.
+
+Rydin, H., Jeglum, J.K., 2013. The biology of peatlands, 2e. Oxford University Press Oxford.
+
+Saulino, H.H., Leite-Rossi, L.A., Trivinho-Strixino, S., 2017. The effect of small reservoirs on chironomid diversity and trait composition in Savanna streams: evidence for Serial Discontinuity Concept. Hydrobiologia 793, 109–119.
+
+Schleuter, D., Daufresne, M., Massol, F., Argillier, C., 2010. A user’s guide to functional diversity indices. Ecol. Monogr. 80, 469–484.
+
+Serra, S.R.Q., Cobo, F., Graça, M.A.S., Dol´edec, S., Feio, M.J., 2016. Synthesising the trait information of European Chironomidae (Insecta: Diptera): Towards a new database. Ecol. Ind. 61, 282–292.
+
+Skorina, T., Allanore, A., 2015. Aqueous alteration of potassium-bearing aluminosilicate minerals: from mechanism to processing. Green Chem. 17, 2123–2136.
+
+Smilauer, ˇ P., Lepˇs, J., 2014. Multivariate Analysis ofEcological Data Using CANOCO 5. Cambridge University Press, Cambridge.
+
+Syrov´atka, V., Brabec, K., 2006. Effects of physical factors on chironomid larvae distribution and community structure at a mesohabitat scale. Internationale Vereinigung Für Theoretische Und Angewandte Limnologie: Verhandlungen 29 (4), 1845–1848.
+
+Tang, H.Q., 2006. Biosystematic study on the chironomid larvae in China (Diptera: Chironomidae). Nankai University, Tianjin. Ph. D thesis (in Chinese).
+
+Van Duinen, G., Vermonden, K., Brock, A., Leuven, R., Smolders, A., Van Der Velde, G., Verberk, W., Esselink, H., 2006. Basal food sources for the invertebrate food web in nutrient poor and nutrient enriched raised bog pools. Proc. Section Exp. Appl. Entomol.-Netherlands Entomological Society 17, 37.
+
+Vill´eger, S., Mason, N.W.H., Mouillot, D., 2008. New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology 89, 2290 2301.
+
+Wang, J.C., Wang, X.H., 2011. Chironomidae larval in North China. China Yanshi Press, Beijing.
+
+Wentzky, V.C., Tittel, J., Jager, ¨ C.G., Bruggeman, J., Rinke, K., 2020. Seasonal succession of functional traits in phytoplankton communities and their interaction with trophic state. J. Ecol. 108, 1649 1663.
+
+Xi, Y., Peng, S., Ciais, P., Chen, Y., 2021. Future impacts of climate change on inland Ramsar wetlands. Nat. Clim. Chang. 11, 45–51.
+
+Zebral, Y.D., Righi, B.D.P., Anni, I.S.A., Escarrone, A.L.V., Roza, M., Vieira, C.E.D., Costa, P.G., Bianchini, A., 2021. Pollution levels and biomarker responses in zooplankton from three hydrographic regions of southern Brazil: An integrated approach for water quality monitoring. J. Environ. Chem. Eng. 9, 106180.
+
+Zhang, Z.Z., 1982. The formation and distribution of bog in Shenongjia. J. Northeast Normal University (nat. Sci.) 1, 95e103 in Chinese.
+
+Zhou, W.C., Shen, Y.H., Cui, H.X., Zhang, Z.Q., Yang, J.Y., 2017. The countermeasures for protection and management of Dajiu Lake Wetland in Shennongjia. Wetland Sci. Manage. 13 (2), 34–37 in Chinese.
+
+
+
+<!-- ===== Complementary: Cao2024.docx.md ===== -->
+
+
+journal homepage: www.elsevier.com/locate/ecolind
+
+Original Articles
+
+# Using functional traits of chironomids to determine habitat changes in subtropical wetlands
+
+Yanmin Cao <sup>a,b,c,\*</sup>, Peter G. Langdon <sup>b</sup>, Shengman Shen <sup>a</sup>, Hui Li <sup>a</sup>, Deng Pan <sup>a</sup> a College of Resources
+
+and Environment, South-Central Minzu University, Wuhan 430074, China School of Geography and Environmental Science, University of Southampton,
+
+Southampton SO17 1BJ, UK Hubei Key Laboratory of Critical Zone Evolution, School of Geography and Information Engineering, China University of Geosciences, Wuhan 430078, China
+
+## ARTICLE INFO
+
+Keywords: Functional traits Chironomidae Peatlands Water level fluctuations Organic matter
+
+research demonstrated that functional trait groups of chironomids are more robust and sensitive than taxonomy based approaches to habitat changes, and therefore could be an alternative approach for the bioassessment of aquatic ecosystem functioning and palaeo-studies in wetlands
+
+## 1. Introduction ABSTRACT
+
+Ecosystem functions in wetlands are increasingly degrading under the multiple stresses of climate change and human disturbances. Traditional wetland bioassessment is usually based on taxonomic approaches but this approach has limitations. To explore the efectiveness of functional traits in response to environmental changes, we compared the traditional taxonomic composition of chironomid communities with a trait-based approach in a subtropical subalpine wetland (Central China) spanning a wide habitat gradient from dry peatland to inundated peatland pools. The results revealed that 57 % of functional trait groups but only 38 % of taxonomic groups examined were significantly diferent between diverse peatland habitats. Sphagnum moss hummocks were generally inhabited by larvae of collector-gatherers, small body-sized individuals and sprawlers, while peatland pools supported a high abundance of shredders, large body-sized larvae and burrowers. Ecotones had more niche opportunities and hence possessed high taxonomic and functional diversity. Ordination analyses indicated that three similar environmental variables (loss-on-ignition (LOI), depth to water table (DWT) and $\operatorname { K } ^ { + } )$ were the most powerful explanations of the chironomid variability in both taxonomic and functional trait compositions. LOI and DWT interacted strongly and were the dominant controls on both taxonomic and trait communities. Our
+
+Environmental bioassessments have traditionally been conducted using taxonomic structures including community composition and di
+
+Major changes in wetlands such as shrinking and degradation due to global climate change and anthropogenic drivers have occurred in recent decades (Xi et al., 2021). Such impacts are likely to degrade the ecosystem functions and services in carbon sequestration, water purifi cation, food supply, flood control, biodiversity conservation and recre ation (Hu et al., 2017; Xi et al., 2021). Knowledge of wetland functions and development processes is of crucial importance for wetland con servation and restoration. Increasingly numbers of aquatic bio indicators, such as benthic macroinvertebrates (Morse et al., 2007; Cai et al., 2023), zooplankton (Zebral et al., 2021) and algae (Peng et ${ \mathrm { a l . } } ,$ 2023) in rivers and lakes, as well as testate amoebae in peatlands (Mitchell et al., 2000; Qin et al., 2021), are explored and commonly used in the assessment of modern and past environment and ecological functions.
+
+versity (Wentzky et al., 2020; Belle et al., 2022). Taxonomic approaches are capable of predicting changes in biotic communities produced by habitat conditions and environmental change, but may not always align with ecosystem functioning which primarily relies on functional char acteristics of species (Nevalainen et al., 2015). Function is undoubtedly a key component of ecosystem behavior, like resilience, which would likely be altered with human impacts (Bellwood et al., 2019). Better ways to explore functionality are therefore crucial to understand the response of ecosystems to multiple stressors. Functional trait approaches have provided new ways to assess ecosystem functioning across spatial and temporal scales (Dawson et al., 2021; Haase et al., 2023). Several studies have reported that both taxonomic compositions and functional traits were sensitive to environmental change, but interpretations were not straightforward, highlighting the importance of their combination in
+
+\* Corresponding author at: College of Resources and Environment, South-Central Minzu University, Wuhan 430074, China. Email address: ymcao@scuec.edu.cn (Y. Cao).
+
+https://doi.org/10.1016/j.ecolind.2024.111656
+
+Received 20 October 2023; Received in revised form 23 January 2024; Accepted 24 January 2024
+
+Available online 2 February 2024
+
+1470-160X/© 2024 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+Y. Cao et al.
+
+exploring environment-biota relationships comprehensively (Luoto and Ojala, 2018; Piano et al., 2020; Li et al., 2019). While trait approaches are considered to have relatively stable relationships with environ ments, taxonomic compositions may vary considerably due to biogeo graphic factors and taxonomic accuracy (Dol´edec et al., 2011). As such, functional trait approaches are increasingly used to provide a deeper understanding of response mechanisms of biota to environmental change (Adeleye et al., 2023).
+
+Chironomids are prominent aquatic insects having a wide geographic distribution and outstanding capacity to resist unfavorable conditions such as extreme temperature, hydraulic changes, trophic status and substrates (Armitage et al., 2012). The larvae are highly sensitive to environmental change and typically show clear diferences in community assemblages between diferent habitats (Brooks et al., 2007). These advantages allow chironomids (including their subfossil remains) to serve as excellent bioindicators in biological monitoring and proxies in the environmental reconstruction of aquatic systems (Armit age et al., 2012). However, the usage of taxonomy-based measures can be problematic, as outlined above, and they can vary markedly across relatively small scales (Radkova et al., 2014; Canedo-Argüelles ˜ et al., 2020). Insuficient taxonomic resolution can obscure the true biotic structure and environmental status. This problem can be magnified in large scale comparative studies, which are essential in modeling and forecasting ecological responses to future global changes (Bonada et al., 2007). Nevertheless, chironomid larvae play a crucial role in ecosystem functional processes, serving as a key node in food-web structures and biogeochemical cycles by influencing nutrient and pollutant exchanges (Kivila ¨ et al., 2019; Gautreau et al., 2023). Given the challenges with taxonomic approaches, we focus here on functional traits and functional diversity of chironomids and their role in modern bioassessment and inference of environmental history, with a novel focus on peatlands.
+
+We selected the Dajiuhu Wetland for this study. The wetland is sit uated in the Shennongjia Forest region in Central China. It shows a high heterogeneity in habitat conditions and spans a gradient of Sphagnum moss peatlands, natural and artificial ditches, seasonal and temporary ponds, as well as artificial peatland pools. The wetland is of importance in maintaining biodiversity and regional water supply, and has been listed in UNESCO’s World Network of Biosphere Reserves since the 1990 s and designated as a wetland of international importance under the Ramsar Convention in 2014. Hence the knowledge of its changes in habitat conditions and ecosystem functions would enhance wetland conservation and sustainable resource management. Here we investi gated the taxonomic and functional trait structure (composition and diversity) of chironomid communities along a habitat gradient from arid Sphagnum moss peatlands to permanent peatland pools and verified their consistency in temporal responses to environmental changes based on a short peat core. We aimed to (1) detect the diferences of chiron omid community composition (both taxonomic and functional trait) between diferent types of habitats; (2) assess the efectiveness of taxonomic and functional trait-based measures in identifying habitat types in complex aquatic systems; and (3) determine the environmental parameters driving faunal community composition. We hypothesized that the functional traits of chironomid communities would be robust in responding to habitat variations and could be an alternative approach for contemporary bioassessment and palaeo-studies in peatland-shallow lake complexes like the Dajiuhu Wetland.
+
+## 2. Material and methods
+
+## 2.1. Study area
+
+The Dajiuhu National Wetland Park lies in the mountainous area of the western Shennongjia Forest region in central China. It belongs to a 2 closed alpine karst basin with an area of 16 km and an altitude of 1700 –1760 m a.s.l.. The region belongs to the East Asian Monsoon climate zone and is characterized by a mid-latitude subalpine humid
+
+climate. The current mean annual temperature is \~ 7.2℃ and annual precipitation is 1560 mm with maximum rainfall of 3000 mm, whilst the annual evaporation varies from 500 to 800 mm (Li et al., 2013). Cool and high humidity conditions support peatland accumulation and have led to a large coverage of thick peat (average peat coverage of 50 %) in the Dajiuhu Wetland (Zhang, 1982). The Dajiuhu Wetland has been designated as an internationally important wetland under the Ramsar Convention since 2014. It is also of vital importance in water conser
+
+vation for the middle route of the South to North Water Diversion Project in China (Du et al., 2008). As a hotspot of biodiversity and a key ecotone for regional ecological security, the bioassessment of ecosystem health and functions for the Dajiuhu Wetland is becoming increasingly necessary, especially with the spectre of increased future climate change.
+
+## 2.2. Material and laboratory analyses
+
+We collected a total of 44 surface sediment samples in November 2019 (12 samples), September 2020 (19 samples) and July 2021 (13 samples), respectively (Fig. 1). These sampling sites occurred along a water-level gradient across diverse habitats including Sphagnum moss hummocks and hollows, ditches, temporary or seasonal ponds, and peatland pools. Hummocks and hollows are two distinct growth forms of Sphagnum moss; the former has a higher height of moss growth above the water table than the latter. Ditches here refer to flowing or still streams, and ponds are very shallow (<1 m) and small-sized (generally less than $1 0 \mathrm { m } ^ { 2 } )$ depressions, and store temporary water during the wet season or after rain in the dry season. Open water areas with permanent water in the wetland are classified into peatland pools in the present study (Supplementary Fig. 1). At each site, depth to water table (DWT) was measured using a meter ruler. Portable electrodes (Hach HQ40d portable multi-meter, Hach Company, Loveland, CO, USA) were employed to measure other environmental parameters in situ, including pH (Hach HQ40d multi, PHC201), conductivity (Hach HQ40d multi, CDC401), oxidation–reduction potential (ORP; Hach HQ40d multi, MTC101), dissolved oxygen and water temperature (Hach HQ40d multi, LDO101). To collect water samples, a hole was dug at arid hummock sites, or a water sampler was used for peatland pools with relatively deep water (maximum of \~ 1.5 m in depth). For peaty habitats (both hum mocks and hollows), surface peat samples were collected manually, while for inundated sites, surface sediments were retrieved using a 1/32 $\mathbf { m } ^ { 2 }$ Ekman grab. Between 5 and 12 samples for each habitat were collected (Fig. 1; Table 1).
+
+In the laboratory, concentrations of major cations $\mathrm { ( K ^ { + } , N a ^ { + } , M g ^ { 2 + } }$ and $\mathsf { C a } ^ { 2 + } )$ were measured using inductively coupled plasma-atomic emission spectrometry (ICP-AES; Leeman Labs Profile, Leeman Labs, Hudson, NH, USA) and morphological phosphorus $( \mathrm { P O } _ { 4 } – \mathrm { P } )$ and nitrogen $\mathrm { ( N O _ { 3 ^ { - N } } , \ N H _ { 4 ^ { - N } } }$ and ${ \tt N O } _ { 2 } – { \tt N } )$ in water samples were quantified by a continuous flow autoanalyzer (Skalar San Plus, Skalar Inc., Breda, The Netherlands), with the detection limit of 10 $\mu \mathrm { g } \mathrm { L } ^ { - 1 }$ for $\mathrm { N H } _ { 4 } { \cdot }$ N and 1 µg $\mathrm { L } ^ { - 1 }$ for the other three anions. An elemental analyzer (Vario EL cube, Elementary, Hanau, Germany) was used to determine the contents of total organic carbon (TOC) and total nitrogen (TN). Weight-loss-on ignition (LOI) was calculated after the sediments were burned for 2 h at 550℃.
+
+and identified to genus/species type level under a microscope of 400 magnification using the taxonomy of Brooks et al (2007), with reference to Epler (2001) and Tang (2006). The criterion of 50 minimum identifiable whole head capsules per sample was satisfied to conduct subsequent analyses. To compare the temporal responses of taxonomic and functional trait compositions of chironomid communities to peat land development, chironomids were analysed from a peat core named YLC (Yangluchang Core; 51 cm-length), which was collected from the peatland central area (Fig. 1C). The chronology and biota data
+
+Basic characteristics of diferent habitats. The values are ranges of environ menta parameters and their mean values (in the parentheses) of samples from
+
+(taxonomy) for the core has previously been published by Hou et al. (2022), which discussed the sensitivity of chironomid communities to regional climate-driven changes. Relative abundances of subfamilies and genera in all surface and peat core samples were calculated. Only taxonomic groups with abundances exceeding 2 % and occurring in at least two samples were used in ordination analyses.
+
+## 2.3. Functional traits of chironomids
+
+Functional traits for all chironomid taxa in both surface and peat core samples were represented by four traits with 28 categories including feeding guilds (5 categories), morphological types (16 categories), body size (4 categories) and locomotion type (4 categories) in the present study (Table 2). All selected traits are sensitive and responsive to habitat changes (Serra et al., 2016). The taxon trait information (Supplementary Table 1) was obtained from Mandaville (2002), Wang and Wang (2011), Saulino et al. (2017), Heino (2008) and Antczak-Orlewska et al. (2021) and is complemented by European Chironomidae taxa published in Serra et al. (2016).
+
+## 2.4. Data analyses
+
+The taxonomic and functional diversity of chironomid communities in the surface sediments was measured by diferent indices. Species richness, Pielou’s evenness and Shannon-Wiener index were combined to assess diferent facets of biodiversity. Three primary components of functional diversity were also used to measure diferent aspects of functional characteristics of chironomids: functional richness (FRic), functional evenness (FEve) and functional divergence (FDiv). FRic is the range of functional strategies within an assemblage (Martins et al., 2021), measuring how much niche space is filled (Schleuter et al., 2010). FEve is equivalent to species evenness and describes the evenness of abundance distributions in niche space. Low FEve means the niche space the community encompassed was underutilized (Mason et al., 2005). FDiv relates to how abundance is distributed within the volume of functional trait space occupied by species (i.e. niche diferentiation) (Vill´eger et al., 2008). A community with high FDiv is more eficient in resource use and will likely lead to better ecosystem functioning (Mason
+
+et al., 2005; Larentis et al., 2022).
+
+Due to non-normality of taxonomic and functional trait data, we conducted non-parametric Kruskal-Wallis rank sum tests to check whether significant diferences in compositions existed between the five diferent habitats. Dunn’s paired comparison test (Dunn, 1964) was then used to identify the pairs of habitats having significant diferences in each taxonomic component and functional trait group. The calculations of taxonomic diversity were conducted in Past 2.03 (Hammer et al., 2001), and functional diversity and Dunn’s test were performed in R using the packages of ‘FD’ (Lalibert´e et al., 2014) and ‘FSA’ (Ogle et al., 2020).
+
+## Y. Cao et al.
+
+For ordination analysis, principal components analysis (PCA) was first conducted to map the variability of environmental parameters be tween diferent habitats. Distance-based redundancy analysis (dbRDA; Legendre and Anderson, 1999) was then performed as the constrained ordination method to explore the relationships of biotic (taxonomic and functional trait) compositions and environmental variables. Bray-Curtis dissimilarity was chosen to calculate sample distances on the basis of a relative abundance matrix of chironomids during the principal coordi nate analysis (PCoA) prior to the dbRDA. Forward selection with 999 permutations of environmental factors was used to select a minimum set of significant (p < 0.05) variables. To determine the relative importance of DWT, which was hypothesized to be a vital factor in shaping habitats and their biotic communities, variation partitioning analysis (VPA; Borcard, 1992; Legendre and Legendre, 1998) was conducted. For chi ronomids in the sediment core, we used the first PCA axis scores to depict the historical changes in taxonomic and functional trait compo sitions with climate change. All
+
+multivariate analyses were conducted in <sub>CANOCO</sub> <sub>version</sub> <sub>5</sub> <sub>(Smilauer</sub> and Lepˇs, 2014).
+
+## 3. Results
+
+## 3.1. Environmental characteristics of diferent habitats
+
+DWT and LOI displayed a large gradient of habitat conditions among sampling sites. Sphagnum moss hummocks had a mean DWT value of 6.7 cm, representing extremely dry conditions, whereas sites in peatland pools had a mean water depth of 74.3 cm. LOI in the 44 sampling sites
+
+Ecological Indicators 159 (2024) 111656
+
+Categories and respective code of four traits used in this study. Trait Category Codes Main References
+
+Functional feeding guild
+
+<table><tr><td colspan="2">Sample code Hu 1–10 Ho 11–19</td><td colspan="4">Di 20–27 Po 28–32 Pl 33–44</td><td colspan="2">Collector-filterers CF Shredders Shr Predators Prd</td></tr><tr><td>DWT (cm) 0.00 ~</td><td>-42.00</td><td>-62.00</td><td>-70.00</td><td colspan="2">-147.00</td><td>Morphological</td><td>Scrapers Scr</td></tr><tr><td>11.00</td><td>LOI (%) 29.67 ~</td><td>8.73 ~</td><td>9.09 ~</td><td>~ -22.00 (-74.33)</td><td>type</td><td>Antczak-Orlewska et</td><td>Orlewska et al.</td></tr><tr><td>(6.70)</td><td>~ -1.00 (-16.22)</td><td>~ -5.00 (-31.75)</td><td>~ -9.00 (-25.20)</td><td>4.59 ~</td><td>1–16 proposed by</td><td>al. (2021)</td><td>(2021)</td></tr><tr><td></td><td></td><td></td><td>8.38 ~</td><td></td><td></td><td>M1-M16 Antczak-</td><td></td></tr></table>
+
+88.66
+
+(67.81)
+
+<table><tr><td>Conductivity(μS cm-1) 20.34 ~</td><td>(5.58)128.00(56.44)</td><td>(6.39)ORP (mV) - 19.90 ~9.31 ~ 85.30 (25.74)</td><td>(6.73)128.8014.19 ~ 88.50(41.30) 96.50 ~</td><td>(6.73)20.18 ~ 81.60(52.84) 73.00 ~65.30 ~ 151.10</td><td>(6.73)Sprawler Sprawler ClimberClimber87.40 ~(91.06) Clinger Clinger</td><td>(6.73)Sprawler Sprawler ClimberClimber87.40 ~(91.06) Clinger Clinger</td><td>(6.73)Sprawler Sprawler ClimberClimber87.40 ~(91.06) Clinger Clinger</td><td></td><td></td></tr><tr><td>272.50(140.82)DO (mg L-1) 0.56 ~ 7.12(2.53)</td><td>(19.39) 13.93 ~ 19.68(17.48) 0.00 ~ 1.33(0.44)1.08 ~ 10.71(2.76)</td><td>3.07 ~ 21.74(8.74)10.30 ~ 16.96(13.93) 1.03 ~ 1.88(1.22)</td><td>indicating their contrasting environmental conditions. The first two axes of the PCA explained 51 % of total variation, with the first axis explaining 35.7 % and the second one explaining 15.3 %. The first axis was highly positively correlated with water pH and cations (Mg2+and Ca2+), and negatively correlated with LOI and DWT. The second axis showed a gradient associated with high concentrations of Na+and low concentrations of K+.</td><td>3.2. Taxonomic composition and diversityA total of 4792 head capsules (HCs) belonging to 52 genera of four subfamilies (Tanypodinae, Chironominae, Orthocladiinae and Dia mesinae) were picked from 44 surface samples (Fig. 3). Chironominae were the most abundant subfamily occupying 57.3 % of all HCs on average, followed by Orthocladiinae (40.1%). At the genus-level, Pol ypedilum showed the largest percentage</td><td>3.2. Taxonomic composition and diversityA total of 4792 head capsules (HCs) belonging to 52 genera of four subfamilies (Tanypodinae, Chironominae, Orthocladiinae and Dia mesinae) were picked from 44 surface samples (Fig. 3). Chironominae were the most abundant subfamily occupying 57.3 % of all HCs on average, followedby Orthocladiinae (40.1%). At the genus-level, Pol ypedilum showed the largest percentage</td><td>abundance mean value (17.1 %), and other dominant genera were Limnophyes (16.3 %), Psilome triocnemus (10.1 %), Chironomus (6.9 %), Neozavrelia (5.7 %), Tribelos (5.3 %) and Pseudosmittia (5.1 %).The community composition in Sphagnum hummocks was clearly different from other habitats. The dominant taxa were terrestrial/semi terrestrial chironomids, such as Psilometriocnemus (26.6 %), Limnophyes</td><td></td><td></td><td></td></tr><tr><td>TOC (g kg-1) 146.21 ~ 390.71(310.83)TN (g kg-1) 11.66 ~ 24.20(19.24)C/N 14.64 ~ 29.47(19.02)K+(mg L-1) 0.27 ~ 1.90(1.06)Ca2+(mg L-1) 1.48 ~ 13.35(3.85)Na+(mg L-1) 0.22 ~ 1.90(0.59)Mg2+(mg L-1) 0.17 ~ 1.50(0.50)0.01 ~NO3-N (mg L ~ 280.00 (207.51) 3.18 ~ 10.84(6.35)62.98 ~ 383.13 (283.68)3.91 ~ 26.35</td><td>0.51 ~ 3.02(1.32)0.20 ~ 1.14(0.43)0.01 ~231.50 (174.29) 0.55 ~9.51(5.50)31.73 ~ 401.68 (142.95)3.22 ~ 27.50(10.48) 11.26 ~ 20.24(15.22) 0.00 ~ 1.20(0.57)- 0.09 ~ 14.15(4.46)0.40 ~ 2.59(1.24)0.03 ~ 1.32(0.54)0.01 ~240.50 (155.08) 4.61 ~9.40(7.27)27.12 ~ 316.10 (114.98)</td><td>(156.24) 4.65 ~11.73(7.89)12.09 ~ 143.11 (47.29)1.33 ~ 8.34(4.33)9.35 ~ 20.02(11.92) 0.28 ~ 1.34(0.85)8.44 ~ 16.28(10.34) 0.41 ~ 4.46(1.29)1.01 ~ 2.13(1.52)0.00 ~hummocks and pools,</td><td>and Pseudosmittia absent in these (16.5 %) (Fig. 3). relatively arid Pseudorthocladius hummock samples. and aquatic taxa also displayed an Sphagnum hollow samples were characterized by the (%). Although dance compared coexistence of abundant semi (%) was dominant in aquatic chironomid terrestrial taxa, such ditches and ponds, genera were almost as Psilometriocnemus other</td><td>(11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.9 %) and (11.</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td> $^{1)}$ NH4+-N (mg L-1)</td><td>1.26 (0.37)0.00 ~0.08 (0.01)0.50(0.11) 0.00 ~ 0.46(0.13) 0.00 ~ 0.19(0.04) 0.00 ~ 0.01(0.00)0.55(0.12) 0.00 ~ 0.25(0.13) 0.00 ~ 0.09(0.01) 0.00 ~ 0.01(0.00)</td><td>0.09(0.04) 0.04 ~ 0.15(0.11) 0.00 ~ 0.01(0.00) 0.01 ~ 0.020.33(0.08) 0.00 ~ 0.78(0.18) 0.00 ~ 0.21(0.04) 0.00 ~ 0.01(0.00)</td><td>(16.5 %) (Fig. 3). relatively arid Pseudorthocladius hummock samples. and aquatic taxa also displayed an Sphagnum hollow samples were characterized by the (%). Although dance compared coexistence of abundant semi (%) was dominant in aquatic chironomid terrestrial taxa, such ditches and ponds, genera were almost as Psilometriocnemus other</td><td>(11.9 %) and (11.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %); (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12.9 %) and (12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; (12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12, 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12,12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12;12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12; 12;</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td></tr><tr><td>PO4-P (mg L-1)0.15 (0.05)</td><td>0.55(0.12) 0.00 ~ 0.25(0.13) 0.00 ~ 0.09(0.01) 0.00 ~ 0.01(0.00)</td><td>0.33(0.08) 0.00 ~ 0.78(0.18) 0.00 ~ 0.21(0.04) 0.00 ~ 0.01(0.00)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td></td><td></td></tr><tr><td>0.00 ~1.73 (0.20)</td><td>0.55(0.12) 0.00 ~ 0.25(0.13) 0.00 ~ 0.09(0.01) 0.00 ~ 0.01(0.00)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td></td><td></td></tr><tr><td>0.00 ~</td><td>0.55(0.12) 0.00 ~ 0.25(0.13) 0.00 ~ 0.09(0.01) 0.00 ~ 0.01(0.00)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(6.73)</td><td>(7.8%)</td><td></td><td></td></tr></table>
+
+ranged from 4.6 % to 88.7 % with the mean values ranging from 12.2 % to 67.8 % from pools to arid Sphagnum hummocks respectively. Among peatland samples, three sites showed unexpectedly low LOI values: one sample from a Sphagnum moss hummock (29.6 % of LOI) and two from hollows (20 % and 8 % of LOI, respectively). TOC and TN, which also represent primary production, changed in a similar trend to LOI across diferent habitats. Sphagnum hollows in the peatland showed the highest acidity (mean pH of 5.58), but lowest ion concentrations (mean con
+
+ductivity of 25.74 μS cm<sup>−</sup> ). The details of ranges and averages for major environmental parameters in diferent habitats are given in Table 1. The PCA of environmental parameters showed that multiple surface samples overlap (Fig. 2), which was expected given that a large pro portion of sites were sampled from transitional zones adjoining diferent habitats. Clear divergence existed between samples from peatland
+
+were reduced in their frequency of abundance. Typical aquatic taxa, such as Chironomus and Polypedilum, occupied pool habitats with rela tively high water-levels (22–147 cm in depth). Limnophyes abundances were reduced, and other semi-terrestrial genera were almost absent. The Kruskal-Wallis rank sum test results suggested that significant diferences were shown by three subfamilies/tribes (60 % of all sub families/tribes) and 20 genera (38 %) between diverse habitats (Figs. 4 and 5). The relative abundance of Chironomini rose with the waterlevel in diferent habitats (Fig. 4), while Orthocladiinae showed an inverse relationship (Fig. 5). Polypedilum contributed most to the variation of Chironomini, while Psilometriocnemus explained the most variation of Orthocladiinae.
+
+nificant diferences between the five habitats (Fig. 6A). Taxonomic richness (Taxa S) and diversity (Shannon H) in arid peatland samples
+
+Fig. 2. Biplot of principal component analysis (PCA) showing the environmental diferences between five diferent habitats from all the surface samples.
+
+Fig. 3. Percentage abundance of chironomid taxa in diferent habitats (samples in each habitat were ordered based on DWT, so the driest samples are at the top, and the wettest at the base). The five habitats were abbreviated as follows: Hu-Sphagnum hummock; Ho-Sphagnum hollow; Di-ditch; Po-pond; Pl-pool.
+
+were significantly lower than in other inundated habitats (Fig. 6B1 and B2). Ditches supported the most diverse assemblages, with 25 diferent genera on average, varying from 5 to 47 in each sample. Pools provided habitats for 21 genera while Sphagnum hummocks supported 8 genera on average.
+
+## 3.3. Functional trait structure
+
+For functional traits, M15 was the most common morphological type and the abundance was 34.6 % on average. Collector-gatherers (CG)
+
+was the most common functional feeding group, and sprawlers occupied nearly 40 % across four habit types. The body size of chironomid larvae
+
+in this study was generally medium to large. 41 % of individuals exceeded 10 mm, but no individuals were smaller than 2.5 mm. Significant diferences between the five habitats were shown in 16 functional traits (57 %) verified by Kruskal-Wallis rank sum tests (Figs. 7 and 8). All five functional feeding groups displayed distinct diferences between Sphagnum hummocks and pools (Fig. 7A1-A5). CG occupied nearly 97 % of larvae in Sphagnum hummocks, while
+
+Y. Cao et al.
+
+Fig. 4. Box-Whisker plots of relative abundance of the tribe Chironomini (A) and the dominant genera (B-F) belonging to the subfamily Chironominae. The upmost, lowest and median line on the box represented the maximum, minimum and median abundance of each genus, respectively. Letters (i.e. a and b) on the bar indicated the significance between habitats tested by Kruskal-Wallis multiple comparisons.
+
+Fig. 6. Box-Whisker plots of HC density (A), taxonomic (B1-B2) and functional (C1-C3) diversity. Lines and lower-case letters in the plots are similar to Fig. 4.
+
+Fig. 8. Box-Whisker plots of percentages of trait groups for body size (A-B) and locomotion type (C-D) showing significant diferences between habitats. Lines and lower-case letters in the plots are similar to Fig. 4.
+
+indicated by FRic (Fig. 6C2). Dissimilar to FRic, FEve and FDiv failed to show significant diferences between the five habitats (Fig. 6C1 and C3).
+
+## 3.4. Environmental factors controlling taxonomic and functional trait structures
+
+The dbRDA results revealed three significant environmental vari ables (i.e. LOI, DWT and K ) for both community characterizations (taxonomic and trait compositions), capturing around 39 % of the total variation in chironomid communities (Fig. 9). For the taxonomic com munity, VPA suggested the unique efect of LOI and DWT was 10.8 % and 4.0 %, respectively, and their combined efect was 14.8 % (Fig. 10A). Similar results were shown for functional trait composition. Strong interactions also existed between LOI and DWT and occupied 18.5 % of functional trait variation. However, the unique efect was only 9.5 % for LOI and 5.5 % for DWT (Fig. 10B).
+
+## 3.5. Taxonomy and traits in the YLC peat core
+
+For taxonomic compositions, chironomids throughout the whole core were dominated by Psilometriocnemus, Pseudosmittia, Limnophye and Polypedilum (details in Hou et al. (2022)). Major trait categories of
+
+Fig. 10. Variation partitioning analyses revealed the unique and shared variations (%) of three significant environmental factors on taxonomic (A) and functional trait (B) compositions.
+
+Fig. 11. Stratigraphy of major taxonomic and trait components of chironomid communities in the YLC peat core, and scores of the PC1 axis and the relations between traits and taxonomy-based PCs. Statistically significant relationships with a p value less than 0.05 or 0.01 were represented by symbol \* and \*\*, respectively. The period covered with a grey bar has no data.
+
+chironomids are shown in Fig. 11. PCs between taxonomic and diferent trait compositions displayed significantly negative or positive relation ships, indicating their synchronous responses to past environmental changes.
+
+## 4. Discussion
+
+## 4.1. Environmental variables influencing the chironomid community
+
+Ordination analyses produced similar results for taxonomic compo sition and functional traits, showing that LOI, DWT and K<sup>+</sup> were the most important environmental factors controlling chironomid commu
+
+nities. LOI showed large discrepancies between diferent habitats. Peatlands store sequestered carbon and generally display a relatively high organic content (Leifeld and Menichetti, 2018) and hence it was
+
+unexpected that there were three sampling sites having very low LOI values. Two of them were located near ditches, which flow from sandy areas surrounding the basin and carry high mineral content, explaining
+
+the relatively low organic matter of the nearby sites. It has been widely reported that organic matter (measured as DOC, TOC or LOI)
+
+and/or substrate type is an important control of chironomid
+
+communities in
+
+lakes (Larocque et al., 2006; Nyman et al., 2005; Luoto et al., 2016), streams (Entrekin et al., 2007), rivers (Syrovatka ´ and Brabec, 2006; Leszczynska ´ et al., 2019) as well as peatlands (Van Duinen et al., 2006). The quantity of organic matter is crucial to zoobenthos biomass and community composition as it provides both food supply and habitats for organisms (Luoto et al., 2016). Organic matter exclusion in freshwater ecosystems would lead to decreased chironomid abundances and an altered chironomid community assemblage (Entrekin et al.,
+
+2007). Nevertheless, a high organic matter content is often accompanied with low pH, poor light and depleted hypolimnetic oxygen (Luoto et al., 2016; Premke et al., 2010), which might exert an inhibitory efect to the survival of zoobenthos. Substrate quality determines the feeding be haviours of invertebrates (Henriques-Oliveira et al., 2003) and collector
+
+gatherers are often found in high humic habitats, while collector
+
+## Y. Cao et al.
+
+ecology, morphological traits are thought to be dependent on feeding traits and serve as a good surrogate for habitat changes (Antczak Orlewska et al., 2021).The M14 morphological type are mainly composed of taxa preferring algal-rich conditions (e.g. P. nubeculosum type), and are thus abundant in inundated habitats. M15 is a morpho logical type having narrow or foot-shaped ventromental plates and mainly consisted of collector-gatherers adapted to semi-terrestrial en vironments such as Psilometriocnemus, Pseudosmittia, Limnophyes and Pseudorthocladius, and therefore showed an opposite distribution to the M14 morphological type. For body size, habitats with high-quality food supply are undoubtedly prone to support large individuals to improve their competitiveness and survive in relatively stable conditions like peatland pools here (Iglesias et al., 2012).
+
+Water level is an important environmental filter for biotic commu nities in both taxonomic and functional trait compositions (Canedo-Argüelles et al., 2016). Chironomid taxonomic compositions showed distinctive variations along the water depth gradient in the current study, in agreement with the relatively limited chironomid work on peatlands (Cao et al., 2019). Semi-terrestrial species (i.e. Psilome triocnemus, Pseudosmittia, Neozavrelia, Pseudorthocladius and Tribelos) are found in dry moss peats whereas lacustrine taxa (i.e. Polypedilum, Glyptotendipes and Chironomus) live predominantly in inundated hab tats like pools. This finding might encourage the usage of a taxonomy based approach of chironomids in tracking the long time-scale history of peatland ontogeny, as peatlands might experience several complex wet-dry transition phases during peat accumulation (Morris et al., 2015). For traits, our results were consistent with other reports in that collectors (especially gatherers) and sprawlers were abundant in inter mittent or perennial drought habitats (Canedo-Argüelles ˜ et al., 2016; Jovem-Azevˆedo et al., 2019). Conversely, shredders generally show a lack of drought resistance (Bazzanti et al., 2009), as Sphagnum hum mocks with continuous drought could be less suitable for shredders to colonize. Drought undoubtedly acted as an ecological filter of body size, as small individuals are commonly found in extreme environments sufering relatively high levels of disturbance (Gomes et al., 2018). Reduced body size allows a high rate of reproduction and growth, as well as a relatively high capacity to surviving disturbances (Bonada et al., 2007).
+
+An orthogonal relationship was identified between $\mathrm { K } ^ { + }$ and variables of LOI and DWT (Fig. 12), suggesting that $\mathrm { K } ^ { + }$ is independent of the other two parameters, and hence it may be related to the mineral type that is influencing the chironomid communities. Potassium mostly exists in the lattice of aluminosilicate minerals (mainly feldspars and micas) in the filterers prefer relatively low organic content (Kivil¨a et al., 2019). Shredders generally feed on coarse particulate organic matter (CPOM > 1 mm), such as leaf litter and woody debris. However, in our study, this feeding group mainly consisted of the aquatic genus Polypedilum, for which algae are an important part of the diet (Henriques-Oliveira et al., 2003), and therefore they were abundant in pool habitats in the Dajiuhu Wetland. As mouthpart evolution is strongly impacted by feeding
+
+9
+
+Ecological Indicators 159 (2024) 111656
+
+form of ions, but it is generally dificult to be released naturally. The catchment area of the Dajiuhu Wetland is mostly composed of
+
+limestones and dolomites, with a few sandstones and shales in the west (Du et al., 2008). Significant positive relationships were detected be tween $\mathrm { K } ^ { + }$ and $\mathsf { C a } ^ { 2 + }$ , as well as ${ \mathrm { M g } } ^ { 2 + }$ (Fig. 12), revealing their possible similar sources, indicating that potassium might be released during bedrock decomposition. Potassic fertilizer is increasingly needed in agricultural cultivation in the form of water-soluble salts such as KCl (Skorina and Allanore, 2015). Massive ditches were dug, and natural peatlands were reclaimed in the Dajiuhu basin since the 1980 s to pro
+
+mote local agricultural economic development (Zhou et al., 2017). Agricultural activities within and around the Dajiuhu Wetland might contribute to the potassium supply via running water and/or aeolian transport. The significance of $\mathrm { K } ^ { + }$ for chironomid communities could be through a range of related processes. Ionic balance is important for chironomid communities, of which $\mathrm { K } ^ { + }$ has a role (Jonusaite et al., 2011) and indirect processes will also be important, such as via substrate shaping through moss growth (Clymo and Hayward, 1982; Rydin and Jeglum, 2013; Cao et al., 2019). Potassium deficiency may trigger hy pokalemia for specific taxa and threaten their survival (Belowitz et al., 2014), and it also shapes functional trait communities (Antczak Orlewska et al., 2021). Shredders in our study are positively associated with $\mathrm { K ^ { + } } .$ , and they were mainly dominated by mining taxa, such as Endochironomus, Glyptochironomus and Polypedilum. These larvae commonly live in lacustrine habitats with coarse organic detritus (Bijl makers, 1983) containing a mixture of rotten plant and animal material which is therefore likely enriched in potassium (Belowitz and O’Don nell, 2013).
+
+The transverse zones between pools and Sphagnum moss hummocks in our study supported diverse taxonomic and trait compositions. Edge efects were especially pronounced in ditch habitats since they exhibited the highest abundance, as well as taxonomic and functional diversity of chironomid communities. Natural ecotones possess various habitats and provide more niche opportunities for diverse species assemblages with diferent functional traits (Kark, 2013), highlighting the vital impor tance of ecotones in biodiversity maintenance.
+
+## 4.2. Functional traits are robust in relation to habitat change
+
+Increasing numbers of studies have shown that biotic trait compo sition is more sensitive to environmental variations than traditional taxonomic structures (Jiang et al., 2019; Paiva et al., 2023), and as such could be a useful bioindicator (Paiva et al., 2023). This aligns with our
+
+## Y. Cao et al.
+
+data, which record the response of biotic communities to environmental change across temporal scales. Both taxonomic and functional trait communities were primarily controlled by sedimentary organic matter content, depth to water table and K<sup>+</sup>. We therefore conclude that a functional trait-based approach could be a good alternative to a tradi tional taxonomy-based approach in identifying the response of chiron omid assemblages to wetland development. Considering the limitations of taxonomic identification accuracy, especially in peat samples, chironomid functional trait composition is strongly recommended to serve as a surrogate in assessments of environments and ecosystem functions, as well as in palaeo-studies in a range of wetlands.
+
+## CRediT authorship contribution statement
+
+Yanmin Cao: Writing – review & editing, Writing – original draft, Investigation, Funding acquisition, Conceptualization. Peter G. Lang don: Writing – review & editing. Shengman Shen: Writing – review & editing, Methodology. Hui Li: Resources, Investigation. Deng Pan: Writing – review & editing, Methodology.
+
+## Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+## Data availability
+
+Data will be made available on request.
+
+## Acknowledgements
+
+We acknowledge Chen Xu, Hou Guilin, Ge Wenlong and Peng Jia for their kind help with their field and laboratory assistance. This work was supported by the National Natural Science Foundation of China (42271165) and the Fundamental Research Funds for the Central Uni versities, South-Central Minzu University (CZQ23009). Y. Cao was supported by the China Scholarship Council (grant number 202008420139). We thank the very helpful reviewer and editorial
+
+Ecological Indicators 159 (2024) 111656
+
+comments in shaping this manuscript.
+
+## Appendix A. Supplementary data
+
+Supplementary data to this article can be found online at https://doi. org/10.1016/j.ecolind.2024.111656.
+
+## References
+
+Adeleye, M.A., Haberle, S.G., Gallagher, R., Andrew, S.C., Herbert, A., 2023. Changing plant functional diversity over the last 12,000 years provides perspectives for trackin future changes in vegetation communities. Nat. Ecol. Evol. 7, 224–235.
+
+Antczak-Orlewska, O., Płociennik, ´ M., Sobczyk, R., Okupny, D., Stachowicz-Rybka, R., Rzodkiewicz, M., Sicinski, ´ J., Mroczkowska, A., Krąpiec, M., Słowinski, ´ M., Kittel, P., 2021. Chironomidae Morphological Types and Functional Feeding Groups as a Habitat Complexity Vestige. 8, 583831.
+
+Armitage, P.D., Pinder, L., Cranston, P., 2012. The Chironomidae: biology and ecolog of non-biting midges. Springer Science & Business Media, Dordrecht. Bazzanti, M., Della Bella, V., Grezzi, F., 2009. Functional characteristics of macroinvertebrate communities in Mediterranean ponds (Central Italy): Influence of water permanence and mesohabitat type. Ann. Limnol. - Int. J. Lim. 45, 29–39. Belle, S., Klaus, F., Gonz
+
+´<sub>alez</sub> <sub>Sagrario,</sub> <sub>M.d.l.A.,</sub> Vrede, T., Goedkoop, W., 2022. Unravelling chironomid biodiversity response to climate change in subarctic lakes across temporal and spatial scales. Hydrobiologia 849, 2621–2633. Bellwood, D.R., Streit, R.P., Brandl, S.J., Tebbett, S.B., 2019. The meaning of the term ‘function’ in ecology: A coral reef perspective. Funct. Ecol. 33, 948–961. Belowitz, R., Leonard, E.M., O’Donnell, M.J., 2014. Efects of exposure to high concentrations of waterborne Tl on K and Tl concentrations in Chironomus riparius larvae. Comp. Biochem. Physiol. C: Toxicol. Pharmacol. 166, 59–64. Belowitz, R., O’Donnell, M.J., 2013. Ion-selective microelectrode measurements of Tl+ and K+ transport by the gut and associated epithelia in Chironomus riparius. Aquat. Toxicol. 138–139, 70–80.
+
+Bijlmakers, L., 1983. De verspreiding en oecologie van chironomide larven (Chironomidae: Diptera). Twee Vennen in De Omgeving Van Oisterwijk (n.br.). K.U. Nijmegen, Versl.
+
+Bonada, N., Dol´edec, S., Statzner, B., 2007. Taxonomic and biological trait diference of stream macroinvertebrate communities between mediterranean and temperate regions: implications for future climatic scenarios. Glob. Chang. Biol. 13, 1658– 1671.
+
+Borcard, D., 1992. Partialling out the spatial component of ecological variation. Ecology 71, 1045–1055.
+
+Brooks, S.J., Langdon, P., Heiri, O., 2007. The identification and use of Palaearctic Chironomidae larvae in palaeoecology., QRA Technical Guide No. 10. Quaternary Research Association, London.
+
+Cai, Y., Dong, R., Kattel, G., Zhang, Y., Peng, K., Gong, Z., 2023. Macroinvertebrate diversity and ecosystem functioning across the eutrophication gradients of the middle and lower reaches of Yangtze River lakes (China). Ecol. Evol. 13, e9751.
+
+Canedo-Argüelles, ˜ M., Bogan, M.T., Lytle, D.A., Prat, N., 2016. Are Chironomidae (Diptera) good indicators of water scarcity? Dryland streams as a case study. Ecol
+
+Ind. 71, 155–162.
+
+Canedo-Argüelles, ˜ M., Guti´errez-C´anovas, C., Acosta, R., Castro-Lopez, ´ D., Cid, N., Fortuno, ˜ P., Munn´e, A., Múrria, C., Piment˜ao, A.R., Sarremejane, R., Soria, M., Tarrats, P., Verkaik, I., Prat, N., Bonada, N., 2020. As time goes by: 20 years of changes in the aquatic macroinvertebrate metacommunity of Mediterranean river networks. J. Biogeogr. 47, 1861–1874.
+
+Cao, Y., Langdon, P.G., Yan, Y., Wang, S., Zheng, Z., Zhang, Z., 2019. Chironomid communities from subalpine peatlands in subtropical China as indicators of environmental change. J. Paleolimnol. 62, 165–179.
+
+Clymo, R., Hayward, P., 1982. The ecology of Sphagnum, Bryophyte ecology. Springer, Dordrecht.
+
+Dawson, S.K., Carmona, C.P., Gonz´alez-Su´arez, M., Jonsson, ¨ M., Chichorro, F., Mallen Cooper, M., Melero, Y., Moor, H., Simaika, J.P., Duthie, A.B., 2021. The traits of “trait ecologists”: An analysis of the use of trait and functional trait terminology. Ecol. Evol. 11, 16434–16445.
+
+Dol´edec, S., Phillips, N., Townsend, C., 2011. Invertebrate community responses to land use at a broad spatial scale: trait and taxonomic measures compared in New Zealand rivers. Freshwater Biol 56, 1670–1688.
+
+Du, Y., Cai, S.M., Wang, X.L., He, B.Y., Xu, G.L., Jiang, M.X., Xue, H.P., Xiao, F., 2008 Environmental background and ecological restoration of the Dajiuhu sub-alpine wetland in Mt. Shennongjia. Resour. Environ. Yangtze Basin 17 (6), 915–919 in Chinese.
+
+Dunn, O.J., 1964. Multiple Comparisons Using Rank Sums. Technometrics 6, 241–252. Entrekin, S.A., Wallace, J.B., Eggert, S.L., 2007. The response of Chironomidae (Diptera) to a long-term exclusion of terrestrial organic matter. Hydrobiologia 575,
+
+and South Carolina. North Carolina Department of Environment and Natural Resources, Division of Water Quality.
+
+Gautreau, E., Volatier, L., Nogaro, G., Gouze, E., Marmonier, P., Mermillod-Blondin, F., 2023. Interactions between microbial activity and bioturbation modes of benthic invertebrates determine nutrient releases from reservoir sediments. Freshwater Biol. 68, 245–259.
+
+Gomes, W.I.A., Jovem-Azevˆedo, D.d.S., Paiva, F.F., Milesi, S.V., Molozzi, J., 2018. Functional attributes of Chironomidae for detecting anthropogenic impacts on reservoirs: A biomonitoring approach. Ecol. Ind. 93, 404–410.
+
+## Y. Cao et al.
+
+Larentis, C., Pavanelli, C.S., Delariva, R.L., 2022. Do environmental conditions modulated by land use drive fish functional diversity in streams? Hydrobiologia 849, 4465–4483.
+
+Larocque, I., Pienitz, R., Rolland, N., 2006. Factors influencing the distribution of chironomids in lakes distributed along a latitudinal gradient in northwestern Quebec, Canada. Can. J. Fish. Aquat. Sci. 63, 1286–1297.
+
+Legendre, P., Anderson, M.J., 1999. Distance-based redundancy analysis: testing multispecies responses in multifactorial ecological experiments. Ecol. Monogr. 69, 1–24.
+
+Legendre, P., Legendre, L., 1998. Numerical ecology, 2nd ed. Elsevier, Amsterdam. Leifeld, J., Menichetti, L., 2018. The underappreciated potential of peatlands in global climate change mitigation strategies. Nat. Commun. 9, 1071.
+
+Leszczynska, ´ J., Grzybkowska, M., Głowacki, Ł., Dukowska, M., 2019. Environmental Variables Influencing Chironomid Assemblages (Diptera: Chironomidae) in Lowland Rivers of Central Poland. Environ. Entomol. 48, 988–997.
+
+Li, Z., Wang, J., Liu, Z., Meng, X., Heino, J., Jiang, X., Xiong, X., Jiang, X., Xie, Z., 2019. Diferent responses of taxonomic and functional structures of stream macroinvertebrate communities to local stressors and regional factors in a subtropical biodiversity hotspot. Sci. Total Environ. 655, 1288–1300.
+
+Li, J., Zheng, Z., Huang, K., Yang, S., Chase, B., Valsecchi, V., Carr ´e, M., Cheddadi, R., 2013. Vegetation changes during the past 40,000 years in Central China from a long fossil record. Quat. Int. 310, 221–226.
+
+Luoto, T.P., Ojala, A.E.K., 2018. Controls of climate, catchment erosion and biological production on long-term community and functional changes of chironomids in High Arctic lakes (Svalbard). Palaeogeogr. Palaeoclimatol. Palaeoecol. 505, 63–72.
+
+Luoto, T.P., Rantala, M.V., Galkin, A., Rautio, M., Nevalainen, L., 2016. Environmental determinants of chironomid communities in remote northern lakes across the treeline – Implications for climate change assessments. Ecol. Ind. 61, 991–999.
+
+Mandaville, S., 2002. Benthic macroinvertebrates in freshwaters: Taxa tolerance values, metrics, and protocols. Soil & Water Conservation Society of Metro Halifax, Nova Scotia.
+
+Haase, P., Bowler, D.E., Baker, N.J., et al., 2023. The recovery of European freshwater biodiversity has come to a halt. Nature 620, 582–588.
+
+Hammer, Ø., Harper, D.A.T., Ryan, P.D., 2001. PAST: paleontological statistic software package for education and data analysis. Palaeontol. Electron. 4, 9. Heino, J., 2008. Patterns of functional biodiversity and function-environment relationships in lake littoral macroinvertebrates. Limnol. Oceanogr. 53, 1446–1455. Heino, J.,
+
+Tolonen, K.T., 2017. Ecological drivers of multiple facets of beta diversity in a lentic macroinvertebrate metacommunity. Limnol. Oceanogr. 62, 2431–2444. Henriques-
+
+Oliveira, A.L., Nessimian, J.L., Dorvill´e, L.F.M., 2003. Feeding habits of Chironomid larvae (Insecta: Diptera) from a stream in the Floresta da Tijuca, Rio de Janeiro, Brazil. Braz. J. Biol. 63, 269–281.
+
+Hou, G.L., Cao, Y.M., Tian, W.L., Deng, P., Shen, S.M., Chen, X., 2022. Response of chironomid assemblages to the changes of wetness in Dajiuhu Peatland of Hube Province during the past 400 years. J. Lake Sci. 34, 1030–1042 in Chinese.
+
+Hu, S., Niu, Z., Chen, Y., Li, L., Zhang, H., 2017. Global wetlands: Potential distribution, wetland loss, and status. Sci. Total Environ. 586, 319–327.
+
+Iglesias, S., Tracy, C., Bedford, G., Christian, K., 2012. Habitat diferences in body size and shape of the Australian agamid lizard, Lophognathus temporalis. J. Herpetol. 46, 297–303.
+
+Jiang, X., Pan, B., Song, Z., Xie, Z., 2019. Do functional traits of chironomid assemblages respond more readily to eutrophication than taxonomic composition in Chinese floodplain lakes? Ecol. Ind. 103, 355–362.
+
+Jonusaite, S., Kelly, S.P., Donini, A., 2011. The physiological response of larval Chironomus riparius (Meigen) to abrupt brackish water exposure. J. Comp. Physiol. B 181, 343–352.
+
+Jovem-Azevˆedo, D., Bezerra-Neto, J.F., Azevˆedo, E.L., Gomes, W.I.A., Molozzi, J., Feio, M.J., 2019. Dipteran assemblages as functional indicators of extreme droughts. J. Arid Environ. 164, 12–22.
+
+Kark, S., 2013. Efects of ecotones on biodiversity. Encyclopedia of Biodiversity 142, 1. Kivil¨a, E.H., Luoto, T.P., Rantala, M.V., Kiljunen, M., Rautio, M., Nevalainen, L., 2019. Environmental controls on benthic food web functions and carbon resource use in subarctic lakes. Freshwater Biol 64, 643–658
+
+<sup>Lalibert´</sup>e, E., Legendre, P., Shipley, B., Laliberte, <sup>M.E.,</sup> <sup>2014.</sup> <sup>Measuring</sup> <sup>functional</sup> diversity from multiple traits, and other tools for functional ecology. R Package FD.
+
+## 11
+
+Ecological Indicators 159 (2024) 111656
+
+Martins, I., Castro, D.M.P., Macedo, D.R., Hughes, R.M., Callisto, M., 2021. Anthropogenic impacts influence the functional traits of Chironomidae (Diptera) assemblages in a neotropical savanna river basin. Aquat. Ecol. 55, 1081–1095.
+
+Mason, N.W.H., Mouillot, D., Lee, W.G., Wilson, J.B., 2005. Functional richness, functional evenness and functional divergence: the primary components of functional diversity. Oikos 111, 112–118.
+
+Mayfield, R.J., Dearing, J.A., Doncaster, C.P., Langdon, P.G., 2022. Stability of chironomid community structure during historic climatic and environmenta change in subarctic Alaska. Limnol. Oceanogr. 67, S444–S460.
+
+Mitchell, E.A.D., Buttler, A., Grosvernier, P., Rydin, H., Albinsson, C., Greenup, A.L., Heijmans, M.M.P.D., Hoosbeek, M.R., Saarinen, T., 2000. Relationships among testate amoebae (Protozoa), vegetation and water chemistry in five Sphagnum dominated peatlands in Europe. New Phytol. 145, 95–106.
+
+Morris, P.J., Baird, A.J., Young, D.M., Swindles, G.T., 2015. Untangling climate signals from autogenic changes in long-term peatland development. Geophys. Res. Lett. 42 10,788–710,797.
+
+Morse, J.C., Bae, Y.J., Munkhjargal, G., Sangpradub, N., Tanida, K., Vshivkova, T.S., Wang, B., Yang, L., Yule, C.M., 2007. Freshwater biomonitoring with macroinvertebrates in East Asia. Front. Ecol. Environ. 5, 33–42.
+
+Nevalainen, L., Luoto, T.P., Manca, M., Weisse, T., 2015. A paleolimnological perspective on aquatic biodiversity in Austrian mountain lakes. Aquat. Sci. 77, 59–69.
+
+Nyman, M., Korhola, A., Brooks, S.J., 2005. The distribution and diversity o Chironomidae (Insecta: Diptera) in western Finnish Lapland, with special emphasis on shallow lakes. Glob. Ecol. Biogeogr. 14, 137–153.
+
+Ogle, D., Wheeler, P., Dinno, A., 2020. FSA: fisheries stock analysis. R package version. Champman & Hall/CRC, Boca Raton, p. 30.
+
+Paiva, F.F., Melo, D.B.D., Dolbeth, M., Molozzi, J., 2023. Functional threshold responses of benthic macroinvertebrates to environmental stressors in reservoirs. J. Environ. Manage. 329, 116970.
+
+Peng, J., Zeng, L., Huang, X., Chen, X., 2023. Climate, atmospheric deposition and catchment process interact to trigger recent diatom community reorganization in
+
+alpine lakes of the eastern monsoonal region of China. Quaternary Sci Rev 310, 108131.
+
+Piano, E., Doretto, A., Mammola, S., Falasco, E., Fenoglio, S., Bona, F., 2020. Taxonomic and functional homogenisation of macroinvertebrate communities in recently intermittent Alpine watercourses. Freshwater Biol 65, 2096–2107.
+
+Premke, K., Karlsson, J., Steger, K., Gudasz, C., von Wachenfeldt, E., Tranvik, L.J., 2010. Stable isotope analysis of benthic fauna and their food sources in boreal lakes. J. N. Am. Benthol. Soc. 29, 1339–1348.
+
+Qin, Y., Li, H., Mazei, Y., Kurina, I., Swindles, G.T., Bobrov, A., Tsyganov, A.N., Gu, Y., Huang, X., Xue, J., Lamentowicz, M., Marcisz, K., Roland, T., Payne, R.J., Mitchell, E. A.D., Xie, S., 2021. Developing a continental-scale testate amoeba hydrological transfer function for Asian peatlands. Quaternary Sci Rev 258, 106868.
+
+Radkova, V., Syrovatka, V., Bojkova, J., Schenkova, J., Kroupalova, V., Horsak, M., 2014. The importance of species replacement and richness diferences in small scale diversity patterns of aquatic macroinvertebrates in spring fens. Limnologica 47, 52–61.
+
+Rydin, H., Jeglum, J.K., 2013. The biology of peatlands, 2e. Oxford University Press, Oxford.
+
+Saulino, H.H., Leite-Rossi, L.A., Trivinho-Strixino, S., 2017. The efect of small reservoirs on chironomid diversity and trait composition in Savanna streams: evidence for Serial Discontinuity Concept. Hydrobiologia 793, 109–119.
+
+Schleuter, D., Daufresne, M., Massol, F., Argillier, C., 2010. A user’s guide to functiona diversity indices. Ecol. Monogr. 80, 469–484.
+
+Serra, S.R.Q., Cobo, F., Graça, M.A.S., Dol´edec, S., Feio, M.J., 2016. Synthesising the trait information of European Chironomidae (Insecta: Diptera): Towards a new database. Ecol. Ind. 61, 282–292.
+
+Skorina, T., Allanore, A., 2015. Aqueous alteration of potassium-bearing
+
+aluminosilicate minerals: from mechanism to processing. Green Chem. 17, 2123–
+
+2136. <sub>Smilauer,</sub> P., Lepˇs, J., 2014. Multivariate Analysis ofEcological Data Using
+
+CANOCO 5. Cambridge University Press, Cambridge.
+
+Syrov´atka, V., Brabec, K., 2006. Efects of physical factors on chironomid larvae distribution and community structure at a mesohabitat scale. Internationale Vereinigung Für Theoretische Und Angewandte Limnologie: Verhandlungen 29 (4), 1845–1848.
+
+Tang, H.Q., 2006. Biosystematic study on the chironomid larvae in China (Diptera: Chironomidae). Nankai University, Tianjin. Ph. D thesis (in Chinese). Van Duinen, G., Vermonden, K., Brock, A., Leuven, R., Smolders, A., Van Der Velde, G., Verberk, W.,
+
+Esselink, H., 2006. Basal food sources for the invertebrate food web in nutrient poor and nutrient enriched raised bog pools. Proc. Section Exp. Appl. Entomol.-Netherlands Entomological Society 17, 37.
+
+Vill´eger, S., Mason, N.W.H., Mouillot, D., 2008. New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology 89, 2290–2301.
+
+Wang, J.C., Wang, X.H., 2011. Chironomidae larval in North China. China Yanshi Press, Beijing.
+
+Wentzky, V.C., Tittel, J., Jager, ¨ C.G., Bruggeman, J., Rinke, K., 2020. Seasonal succession of functional traits in phytoplankton communities and their interaction with trophic state. J. Ecol. 108, 1649–1663.
+
+Xi, Y., Peng, S., Ciais, P., Chen, Y., 2021. Future impacts of climate change on inland Ramsar wetlands. Nat. Clim. Chang. 11, 45–51.
+
+Zebral, Y.D., Righi, B.D.P., Anni, I.S.A., Escarrone, A.L.V., Roza, M., Vieira, C.E.D., Costa, P.G., Bianchini, A., 2021. Pollution levels and biomarker responses in zooplankton from three hydrographic regions of southern Brazil: An integrated approach for water quality monitoring. J. Environ. Chem. Eng. 9, 106180.
+
+Zhang, Z.Z., 1982. The formation and distribution of bog in Shenongjia. J. Northeas Normal University (nat. Sci.) 1, 95e103 in Chinese.
+
+Zhou, W.C., Shen, Y.H., Cui, H.X., Zhang, Z.Q., Yang, J.Y., 2017. The countermeasures for protection and management of Dajiu Lake Wetland in Shennongjia. Wetland Sci. Manage. 13 (2), 34–37 in Chinese.
+
+
+
+<!-- ===== Complementary: Cao2024_S1.docx.md ===== -->
+
+
+Supplementary Table 1 Traits of species encountered in surface and peat core samples from the Dajiuhu Wetland.
+
+<table><tr><td>Species</td><td>Morphological type</td><td>Functional feeding guild</td><td>Body size</td><td>Locomotion</td></tr><tr><td>Ablabesmyia</td><td>M11</td><td>Prd</td><td>size3</td><td>Sprawler</td></tr><tr><td>Brillia</td><td>M6</td><td>Shr</td><td>size2</td><td>Sprawler</td></tr><tr><td>Chaetocladius dentiforceps-type</td><td>M2</td><td>CG</td><td>size3</td><td>Sprawler</td></tr><tr><td>Chironomini</td><td>M3</td><td>CG</td><td>size1</td><td>Burrower</td></tr><tr><td>Chironomus anthracinus-type</td><td>M3</td><td>CG</td><td>size3</td><td>Burrower</td></tr><tr><td>Chironomus plumosus-type</td><td>M3</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Cladopelma laccophila-type</td><td>M4</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Cladopelma lateralis-type</td><td>M4</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Cladotanytarsus mancus-type1</td><td>M5</td><td>CF</td><td>Size2</td><td>Burrower</td></tr><tr><td>Cladotanytarsus mancus-type2</td><td>M5</td><td>CF</td><td>Size2</td><td>Burrower</td></tr><tr><td>Corynoneura edwardsi-type</td><td>M6</td><td>CG</td><td>Size1</td><td>Sprawler</td></tr><tr><td>Corynoneura</td><td>M6</td><td>CG</td><td>Size1</td><td>Sprawler</td></tr><tr><td>Cricotopus cylindraceus-type</td><td>M7</td><td>Shr</td><td>Size2</td><td>Burrower</td></tr><tr><td>Cricotopus sylvestris-type</td><td>M8</td><td>Scr</td><td>Size2</td><td>Burrower</td></tr><tr><td>Diamesa</td><td>M8</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Dicrotendipes nervosus-type</td><td>M10</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Dicrotendipes notatus-type</td><td>M10</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Einfeldia dissidens-type</td><td>M3</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Einfeldia natchitocheae-type</td><td>M10</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Endochironomus albipennis-type</td><td>M12</td><td>Shr</td><td>Size3</td><td>Burrower</td></tr><tr><td>Endochironomus impar-type</td><td>M12</td><td>Shr</td><td>Size3</td><td>Burrower</td></tr><tr><td>Endochironomus tendens-type</td><td>M12</td><td>Shr</td><td>Size2</td><td>Burrower</td></tr><tr><td>Eukiefferiella claripennis-type</td><td>M6</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Eukiefferiella fittkaui-type</td><td>M6</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Glyptotendipes barbipes-type</td><td>M3</td><td>Shr</td><td>Size2</td><td>Burrower</td></tr><tr><td>Glyptotendipes pallens-type</td><td>M3</td><td>Shr</td><td>Size3</td><td>Burrower</td></tr><tr><td>Harnischia</td><td>M14</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Heterotrissocladius marcidus-type</td><td>M2</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Hydrobaenus conformis-type</td><td>M2</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Krenopelopia</td><td>M11</td><td>Prd</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Limnophyes</td><td>M15</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Macropelopia</td><td>M11</td><td>Prd</td><td>Size3</td><td>Sprawler</td></tr><tr><td>Metriocnemus fuscipes-type</td><td>M2</td><td>CF</td><td>Size2</td><td>Burrower</td></tr><tr><td>Metriocnemus terrester-type</td><td>M8</td><td>CF</td><td>Size2</td><td>Burrower</td></tr><tr><td>Microchironomus tener-type</td><td>M3</td><td>CG</td><td>Size2</td><td>Burrower</td></tr><tr><td>Micropsectra atrofasciata-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Micropsectra contracta-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Micropsectra insignilobus-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Micropsectra junci-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Micropsectra pallidula-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Micropsectra radilias-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Microtendipes pedellus-type</td><td>M13</td><td>CF</td><td>Size3</td><td>Clinger</td></tr><tr><td>Nanocladius branchicolus-type</td><td>M2</td><td>Prd</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Neozavrelia</td><td>M5</td><td>CG</td><td>Size1</td><td>Climber</td></tr><tr><td>Parachironomus varus-type</td><td>M3</td><td>Prd</td><td>Size3</td><td>Sprawler</td></tr><tr><td>Paramerina</td><td>M11</td><td>Prd</td><td>Size1</td><td>Sprawler</td></tr><tr><td>Parametriocnemus</td><td>M15</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Paratanytarsus penicillatus-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Burrower</td></tr><tr><td>Paratendipes albimanus-type</td><td>M13</td><td>CG</td><td>Size2</td><td>Burrower</td></tr><tr><td>Paratendipes nudisquama-type</td><td>M13</td><td>CG</td><td>Size2</td><td>Burrower</td></tr><tr><td>Phaenopsectra flavipes-type</td><td>M12</td><td>CG</td><td>Size2</td><td>Clinger</td></tr><tr><td>Phaenopsectra typeA</td><td>M12</td><td>Scr</td><td>Size2</td><td>Clinger</td></tr><tr><td>Polypedilum bergi-type</td><td>M12</td><td>Shr</td><td>Size2</td><td>Climber</td></tr><tr><td>Polypedilum nubeculosum-type</td><td>M14</td><td>Shr</td><td>Size2</td><td>Climber</td></tr><tr><td>Polypedilum nubifer-type</td><td>M14</td><td>Shr</td><td>Size2</td><td>Climber</td></tr><tr><td>Polypedilum sordens-type</td><td>M12</td><td>Shr</td><td>Size2</td><td>Climber</td></tr><tr><td>Procladius</td><td>M11</td><td>Prd</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Proposilocerus akamusi-type</td><td>M1</td><td>CG</td><td>Size2</td><td>Burrower</td></tr><tr><td>Psectrocladius sordidellus-type</td><td>M2</td><td>Shr</td><td>Size3</td><td>Sprawler</td></tr><tr><td>Pseudorthocladius</td><td>M15</td><td>CG</td><td>Size2</td><td>Burrower</td></tr><tr><td>Pseudosmittia</td><td>M15</td><td>CG</td><td>Size1</td><td>Sprawler</td></tr><tr><td>Psilometriocnemus</td><td>M15</td><td>CG</td><td>Size1</td><td>Sprawler</td></tr><tr><td>Rheocricotopus effusus-type</td><td>M6</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Rheocricotopus fucipes-type</td><td>M6</td><td>CG</td><td>Size2</td><td>Sprawler</td></tr><tr><td>Rheotanytarsus</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Sergentia coracina-type</td><td>M12</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Sergentia longiventris-type</td><td>M12</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Smittia</td><td>M15</td><td>CG</td><td>Size2</td><td>Burrower</td></tr><tr><td>Stempellinella-Zavrelia</td><td>M16</td><td>CF</td><td>Size1</td><td>Burrower</td></tr><tr><td>Stictochironomus</td><td>M12</td><td>CG</td><td>Size3</td><td>Burrower</td></tr><tr><td>Symposiocladius</td><td>M6</td><td>Prd</td><td>Size1</td><td>Burrower</td></tr><tr><td>Synorthocladius</td><td>M6</td><td>Scr</td><td>Size1</td><td>Climber</td></tr><tr><td>Tanypus</td><td>M9</td><td>CG</td><td>Size3</td><td>Climber</td></tr><tr><td>Tanytarsini</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Tanytarsus chinyensis-type1</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Tanytarsus mendax-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Tanytarsus pallidicornis-type</td><td>M5</td><td>CF</td><td>Size2</td><td>Climber</td></tr><tr><td>Thienemanniella</td><td>M6</td><td>CG</td><td>Size1</td><td>Sprawler</td></tr><tr><td>Tribelos</td><td>M12</td><td>CG</td><td>Size3</td><td>Burrower</td></tr></table>

@@ -1,0 +1,106 @@
+{
+  "Subfamily: species Subfamily: species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains the taxonomic names of the insect species.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the specific species and subfamily classification of the ant."
+  },
+  "Latitude maximum": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This header describes the geographic location (latitude) of the sampling event.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a geographic coordinate measurement (latitude).",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Latitude minimum": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This header describes the geographic location (latitude) of the sampling event.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a geographic coordinate measurement (latitude).",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Latitude range": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This header describes the geographic location (latitude range) of the sampling event.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records the calculated range of latitudinal distribution.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Elevation maximum": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This header describes the geographic location (maximum elevation) of the sampling event.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a geographic coordinate measurement (elevation).",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Elevation minimum": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This header describes the geographic location (minimum elevation) of the sampling event.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a geographic coordinate measurement (elevation).",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Elevation range": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This header describes the geographic location (elevation range) of the sampling event.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records the calculated range of elevational distribution.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Body size (mm) Body size (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header measures a biological trait (body size) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a physical measurement (Weber's Length) of the ant.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body size (mm) Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size was measured on six randomly selected individuals of each species, implying the use of collected and preserved specimens (voucher specimens are stored in the ant collection).",
+    "measurementMethod": "Weber's Length (distance from the anterodorsal margin of the pronotum to the posteroventral margin of the propodeum)",
+    "measurementMethod_reasoning": "The text explicitly states that body size was estimated by measuring Weber's Length, referencing Brown (1953).",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement was taken in millimeters (mm), as indicated in the figure caption and text.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The measurement was taken on six randomly selected individuals for each species. Although not explicitly stated, in macroecological studies, the reported value for a species typically represents the mean of the sampled individuals."
+  },
+  "Colony size Colony size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header measures a biological trait (colony size) of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a count of workers, used as an estimate of colony size.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Colony size Colony size",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Colony size is estimated by counting the number of workers (sub-units) within the colony, which is an ecological/social trait observed or recorded in the field/literature, not a morphological measurement on a preserved specimen.",
+    "measurementMethod": "Average number of workers per colony",
+    "measurementMethod_reasoning": "The text explicitly states: 'We used the average number of workers as an estimate of colony size.'",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "The colony size is measured as the number of workers/individuals.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "The colony size value provided for each species represents a single measurement (or average estimate) for that specific species, used as a data point in the regression analysis."
+  },
+  "Source Source": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains citation metadata, not a measurement, location, or organism trait.",
+    "category": null,
+    "reasoning_relevance": "This column contains citations and data provenance, not biological data."
+  }
+}

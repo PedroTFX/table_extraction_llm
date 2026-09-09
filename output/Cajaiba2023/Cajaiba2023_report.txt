@@ -1,66 +1,77 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Cajaiba2023\Cajaiba2023.xlsx  (255 rows)
 PREDICTION   : ..\output\Cajaiba2023\Cajaiba2023.csv  (917 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 110
-  missed (FN)         : 145
-  spurious, in scope  : 21   <- GT covers this trait: real errors
-  spurious, out of scope: 786   <- GT never covers this trait: nothing to score against
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Atta cephalotes' -> 'Atta cephalotes '
 
-  STRICT  P/R/F1      : 0.120 / 0.431 / 0.188   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.840 / 0.431 / 0.570   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.431   <- 'how much of the GT did we get' — extras cannot affect this
+measurementType REMAP (pred -> gt, 1 pair(s))
+  'Ecosystem specificity' -> 'Ecosystem specifity'
+
+measurementType LEFT UNMAPPED (5)
+  'Agriculture': no ground-truth string denotes this
+  'Pastures for livestock': no ground-truth string denotes this
+  'Primary Forest': no ground-truth string denotes this
+  'forest specialists-15': no ground-truth string denotes this
+  'forest specialists-5': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 255
+  missed (FN)           : 0
+  spurious, in scope    : 7   <- GT covers this trait: real errors
+  spurious, out of scope: 655   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.278 / 1.000 / 0.435
+  SCOPED  P/R/F1        : 0.973 / 1.000 / 0.986
+  RECALL (GT coverage)  : 1.000
 
   out-of-scope rows by uncovered field:
-    measurementType                            786
+    measurementType                            655
+
+FUZZY VALUE MATCHES (14 accepted beyond exact/numeric)
+  subset          14
+  sample:
+    [subset] gt 'Non-leaf-cutting Attini' == pred 'Non Leaf-Cutting Attini'
+    [subset] gt 'Non-leaf-cutting Attini' == pred 'Non Leaf-cutting Attini'
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0    110  0.000  <-- low
-  measurementMethod             0    110  0.000  <-- low
+  basisOfRecord                 0    255  0.000  <-- low
+  measurementMethod             0    255  0.000  <-- low
   measurementUnit               0      0    n/a
-  measurementStatistic        110    110  1.000
-  measurementRemarks            0    110  0.000  <-- low
-  sex                           0    110  0.000  <-- low
-  lifeStage                   110    110  1.000
-  caste                         0    110  0.000  <-- low
+  measurementStatistic        255    255  1.000
+  measurementRemarks            0    255  0.000  <-- low
+  sex                           1    255  0.004  <-- low
+  lifeStage                   124    255  0.486  <-- low
+  caste                         0    255  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    110  0.000  <-- low
+  samplingProtocol              0    255  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    110  0.000  <-- low
+  associatedReferences          0    255  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 145 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing            131
-  species+trait present, value differs       14
-
-  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     'non-leaf-cutting attini'    ->  'non leaf-cutting attini'    x14
-  -> 1 substitution explains 14 of 145 misses (10%) — scattered; no single cause
-
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Ecosystem specifity'              x131
-  -> 1 missing trait explains 131 of 145 misses (90%) — systematic, not scattered
-
-  full miss detail saved -> Cajaiba2023_misses.csv, Cajaiba2023_misses_summary.json (145 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   forest specialists-15                             0   131   PRED-ONLY
   forest specialists-5                              0   131   PRED-ONLY
   agriculture                                       0   131   PRED-ONLY
-  ecosystem specifity or ecosystem specificity    131   131   
+  ecosystem specifity                             131   131   
   pastures for livestock                            0   131   PRED-ONLY
   primary forest                                    0   131   PRED-ONLY
   trophic type                                    124   131   Δ+7 (split?)
-  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.973  1.000  0.986    255     7     0   id+type+value
+             (655 more spurious row(s) out-of-scope; strict P would be 0.278)
+  tags        0.000  0.000  0.000      0   262   255   basis+id+type+value+stat+sex+stage
+             (655 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.986 vs previous)

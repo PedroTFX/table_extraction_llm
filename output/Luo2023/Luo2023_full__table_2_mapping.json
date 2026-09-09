@@ -1,0 +1,70 @@
+{
+  "Park": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values are specific named sites or locations where sampling occurred.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists specific urban parks, representing the habitat type or location of the ant population.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Unique Volume (%)": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header names the specific biological property or trait being measured.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "This column records the percentage of total morphospace volume uniquely occupied by a population.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Unique Volume"
+  },
+  "P-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the statistical measure (p-value) associated with the data.",
+    "category": null,
+    "reasoning_relevance": "P-values are statistical indices used to assess significance, not biological data."
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Pheidole nodus",
+    "reasoning": "The paper explicitly states it examined functional traits and morphological variation in populations of Pheidole nodus.",
+    "decided_by": "llm",
+    "roles": {
+      "Pheidole nodus": "measured subject",
+      "Ecology and": "unclear",
+      "Academic editor": "unclear",
+      "Considering ants": "unclear",
+      "Convex hull": "unclear"
+    },
+    "candidates": [
+      {
+        "name": "Pheidole nodus",
+        "mentions": 3,
+        "abbrev_mentions": 11,
+        "score": 61
+      },
+      {
+        "name": "Ecology and",
+        "mentions": 4,
+        "abbrev_mentions": 0,
+        "score": 4
+      },
+      {
+        "name": "Academic editor",
+        "mentions": 1,
+        "abbrev_mentions": 0,
+        "score": 4
+      },
+      {
+        "name": "Considering ants",
+        "mentions": 1,
+        "abbrev_mentions": 0,
+        "score": 4
+      }
+    ]
+  }
+}

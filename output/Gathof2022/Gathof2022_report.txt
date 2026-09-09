@@ -1,0 +1,102 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Gathof2022\Gathof2022.xlsx  (640 rows)
+PREDICTION   : ..\output\Gathof2022\Gathof2022.csv  (654 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 26 pair(s))
+  'Cheilosia vernalis' -> 'Cheilosia vernalis '
+  'Chrysotoxum bicinctum' -> 'Chrysotoxum bicinctum '
+  'Chrysotoxum festivum' -> 'Chrysotoxum festivum '
+  'Dasysyrphus albostriatus' -> 'Dasysyrphus albostriatus '
+  'Didea intermedia' -> 'Didea intermedia '
+  'Episyrphus balteatus' -> 'Episyrphus balteatus '
+  'Eristalinus sepulchralis' -> 'Eristalinus sepulchralis '
+  'Eristalis abusiva' -> 'Eristalis abusiva '
+  'Eristalis arbustorum' -> 'Eristalis arbustorum '
+  'Eristalis intricaria' -> 'Eristalis intricaria '
+  'Eristalis similis' -> 'Eristalis similis '
+  'Eristalis tenax' -> 'Eristalis tenax '
+  'Ferdinandea cuprea' -> 'Ferdinandea cuprea '
+  'Helophilus trivittatus' -> 'Helophilus trivittatus '
+  'Melanostoma mellinum' -> 'Melanostoma mellinum '
+  'Melanostoma scalare' -> 'Melanostoma scalare '
+  'Merodon equestris' -> 'Merodon equestris '
+  'Myathropa florea' -> 'Myathropa florea '
+  'Pipiza festiva' -> 'Pipiza festiva '
+  'Scaeva selenitica' -> 'Scaeva selenitica '
+  'Sericomyia silentis' -> 'Sericomyia silentis '
+  'Sphaerophoria batava' -> 'Sphaerophoria batava '
+  'Sphaerophoria scripta' -> 'Sphaerophoria scripta '
+  'Syrphus ribesii' -> 'Syrphus ribesii '
+  'Syrphus vitripennis' -> 'Syrphus vitripennis '
+  'Xylota segnis' -> 'Xylota segnis '
+
+measurementType REMAP (pred -> gt, 5 pair(s))
+  'Active Flight Time' -> 'Active flight time (number of months) '
+  'Active flight time' -> 'Active flight time (number of months) '
+  'Bodysize' -> 'Body size'
+  'Larval foodtype' -> 'Larval foodtype '
+  'Migratory status' -> 'Migratory status '
+
+ROW-LEVEL (key match)
+  matched (TP)          : 518
+  missed (FN)           : 122
+  spurious, in scope    : 136   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.792 / 0.809 / 0.801
+  SCOPED  P/R/F1        : 0.792 / 0.809 / 0.801
+  RECALL (GT coverage)  : 0.809
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               106    518  0.205  <-- low
+  measurementMethod             0    350  0.000  <-- low
+  measurementUnit              31    487  0.064  <-- low
+  measurementStatistic          0    518  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         411    518  0.793
+  lifeStage                   381    518  0.736
+  caste                         0    213  0.000  <-- low
+  sampleSizeValue               0    518  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    518  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 122 MISSED ROWS MISSED
+  species+trait present, value differs                122
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'endogeic'                   ->  'belowground nesting'        x48
+     'hypergeic'                  ->  'aboveground nesting'        x26
+     'no'                         ->  '0'                          x18
+     'yes'                        ->  '1'                          x13
+     'endogeic'                   ->  'belowground nesting / aboveground nesting' x9
+     'hypergeic'                  ->  'belowground nesting / aboveground nesting' x8
+  -> 6 substitutions explain 122 of 122 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Gathof2022_misses.csv, Gathof2022_misses_summary.json (122 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  active flight time (number of months)           137   137   
+  nesting behavior                                115   106   Δ-9 (split?)
+  body size                                       137   137   
+  diet                                             83   106   Δ+23 (split?)
+  larval foodtype                                  31    31   
+  migratory status                                 31    31   
+  sociality                                       106   106   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.792  0.809  0.801    518   136   122   id+type+value
+  tags        0.000  0.000  0.000      0   654   640   basis+id+type+value+stat+sex+stage
+             (F1 -0.801 vs previous)

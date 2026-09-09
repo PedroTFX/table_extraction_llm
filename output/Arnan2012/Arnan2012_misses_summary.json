@@ -1,14 +1,19 @@
 {
-  "total_missed": 121,
+  "total_missed": 178,
   "causes": {
-    "species present, trait missing": 31,
-    "species+trait present, value differs": 90
+    "species+trait present, value differs": 147,
+    "species present, trait missing": 31
   },
   "value_substitutions": [
     {
-      "gt": "larvae in the nests during the whole year",
-      "pred": "larvae within the nests during the whole year",
-      "count": 22
+      "gt": "monogyny",
+      "pred": "only one queen",
+      "count": 24
+    },
+    {
+      "gt": "monodomy",
+      "pred": "only one nest",
+      "count": 24
     },
     {
       "gt": "hundreds",
@@ -17,12 +22,17 @@
     },
     {
       "gt": "none",
-      "pred": "none (only defense of the nest)",
+      "pred": "none (only defence of the nest)",
       "count": 16
     },
     {
       "gt": "food and/or territory",
-      "pred": "defense of food or territory (foraging area)",
+      "pred": "defence of food or territory (foraging area)",
+      "count": 14
+    },
+    {
+      "gt": "insects",
+      "pred": "scavenger species",
       "count": 14
     },
     {
@@ -31,14 +41,29 @@
       "count": 10
     },
     {
-      "gt": "larvae in the nests from march to september",
-      "pred": "larvae within the nests from march to september",
+      "gt": "nectar",
+      "pred": "nectar-eating species",
       "count": 8
     },
     {
-      "gt": "tens of thousands",
-      "pred": "tens of thousands of workers",
-      "count": 3
+      "gt": "polygyny",
+      "pred": "more than one queen",
+      "count": 6
+    },
+    {
+      "gt": "polydomy",
+      "pred": "more than one nest",
+      "count": 6
+    },
+    {
+      "gt": "honeydew",
+      "pred": "aphid-tending species",
+      "count": 4
+    },
+    {
+      "gt": "seeds",
+      "pred": "granivorous species",
+      "count": 4
     }
   ],
   "species_absent": [],

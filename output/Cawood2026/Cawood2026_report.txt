@@ -1,0 +1,85 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Cawood2026\Cawood_2026.xlsx  (327 rows)
+PREDICTION   : ..\output\Cawood2026\Cawood2026.csv  (140 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Messor denticornis Leptogenys castanea': matches 2 different targets: 'Leptogenys castanea', 'Messor denticornis'
+
+ROW-LEVEL (key match)
+  matched (TP)          : 110
+  missed (FN)           : 217
+  spurious, in scope    : 30   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.786 / 0.336 / 0.471
+  SCOPED  P/R/F1        : 0.786 / 0.336 / 0.471
+  RECALL (GT coverage)  : 0.336
+
+FUZZY VALUE MATCHES (3 accepted beyond exact/numeric)
+  subset           3
+  sample:
+    [subset] gt 'Dark brown' == pred 'Dark brown Light'
+    [subset] gt 'Light brown' == pred 'brown Light'
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               110    110  1.000
+  measurementMethod             0    110  0.000  <-- low
+  measurementUnit              38     57  0.667
+  measurementStatistic         76    110  0.691
+  measurementRemarks            0      0    n/a
+  sex                         110    110  1.000
+  lifeStage                    91    110  0.827
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    110  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 217 MISSED ROWS MISSED
+  species not in prediction                           194
+  species+trait present, value differs                 23
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'shallow wrinkles'           ->  '2'                          x11
+     'smooth cuticle'             ->  '1'                          x8
+     'light brown'                ->  'brown'                      x3
+     'black'                      ->  'black light'                x1
+  -> 4 substitutions explain 23 of 217 misses (11%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (12 distinct), closest predicted name:
+     gt 'Chrysomelidae'                      (nothing similar in the prediction)   x44
+     gt 'Carabidae'                         ~0.58~  pred 'Pheidole caffra'   x36
+     gt 'Scarabaeidae'                      ~0.59~  pred 'Pheidole caffra'   x32
+     gt 'Curculionidae'                      (nothing similar in the prediction)   x24
+     gt 'Mordellidae'                        (nothing similar in the prediction)   x12
+     gt 'Melyridae'                          (nothing similar in the prediction)   x12
+  -> 6 species mismatches explain 160 of 217 misses (74%) — systematic, not scattered
+
+  full miss detail saved -> Cawood2026_misses.csv, Cawood2026_misses_summary.json (217 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      66    20   Δ-46 (split?)
+  colour                                           66    20   Δ-46 (split?)
+  dispersal                                        66    20   Δ-46 (split?)
+  feeding guild                                    45     0   GT-ONLY
+  nesting type                                     21    20   Δ-1 (split?)
+  no. of spines                                    21    20   Δ-1 (split?)
+  pilosity                                         21    20   Δ-1 (split?)
+  sculpturing                                      21    20   Δ-1 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.786  0.336  0.471    110    30   217   id+type+value
+  tags        0.543  0.232  0.325     76    64   251   basis+id+type+value+stat+sex+stage
+             (F1 -0.146 vs previous)

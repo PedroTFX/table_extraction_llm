@@ -1,0 +1,138 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Forrest2015\Forrest2015.xlsx  (827 rows)
+PREDICTION   : ..\output\Forrest2015\Forrest2015.csv  (1372 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 19 pair(s))
+  'Eucera actuosa' -> 'Eucera (Synhalonia) actuosa'
+  'Eucera amsinckiae' -> 'Eucera (Synhalonia) amsinckiae'
+  'Eucera frater' -> 'Eucera (Synhalonia) frater'
+  'Eucera lunata' -> 'Eucera (Synhalonia) lunata'
+  'Eucera stretchii' -> 'Eucera (Synhalonia) stretchii'
+  'Eucera virgata' -> 'Eucera (Synhalonia) virgata'
+  'Lasioglossum mellipes' -> 'Lasioglossum (Lasioglossum) mellipes'
+  'Lasioglossum sp.' -> 'Lasioglossum (Evylaeus) sp.'
+  'Lasioglossum sp. "red abd."' -> 'Lasioglossum (Evylaeus) sp. "red abd."'
+  'Lasioglossum sp. A' -> 'Lasioglossum (Evylaeus) sp. A'
+  'Lasioglossum sp. B' -> 'Lasioglossum (Dialictus) sp. B'
+  'Lasioglossum sp. C' -> 'Lasioglossum (Evylaeus) sp. C'
+  'Lasioglossum sp. D' -> 'Lasioglossum (Evylaeus) sp. D'
+  'Lasioglossum sp. E' -> 'Lasioglossum (Evylaeus) sp. E'
+  'Lasioglossum sp. F' -> 'Lasioglossum (Evylaeus) sp. F'
+  'Lasioglossum sp. G' -> 'Lasioglossum (Evylaeus) sp. G'
+  'Lasioglossum sp. I' -> 'Lasioglossum (Evylaeus) sp. I'
+  'Lasioglossum tegulariforme' -> 'Lasioglossum (Dialictus) tegulariforme'
+  'Lasioglossum titusi' -> 'Lasioglossum (Lasioglossum) titusi'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'incompletum': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 2 pair(s))
+  'Flight- season duration' -> 'Flight season duration'
+  'Inter- tegular distance' -> 'Intertegular distance'
+
+measurementType LEFT UNMAPPED (8)
+  'NA': no ground-truth string denotes this
+  'Nest location': no ground-truth string denotes this
+  'at natural sites': no ground-truth string denotes this
+  'below': no ground-truth string denotes this
+  'day of year of flight season': no ground-truth string denotes this
+  'on conventional farms': no ground-truth string denotes this
+  'on organic farms': no ground-truth string denotes this
+  'parasite': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 427
+  missed (FN)           : 400
+  spurious, in scope    : 253   <- GT covers this trait: real errors
+  spurious, out of scope: 692   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.311 / 0.516 / 0.388
+  SCOPED  P/R/F1        : 0.628 / 0.516 / 0.567
+  RECALL (GT coverage)  : 0.516
+
+  out-of-scope rows by uncovered field:
+    measurementType                            692
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord               131    427  0.307  <-- low
+  measurementMethod             0    427  0.000  <-- low
+  measurementUnit             131    174  0.753
+  measurementStatistic        384    427  0.899
+  measurementRemarks            0      0    n/a
+  sex                         296    427  0.693
+  lifeStage                   296    427  0.693
+  caste                         0    296  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    427  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 400 MISSED ROWS MISSED
+  species not in prediction                            32
+  species present, trait missing                      254
+  species+trait present, value differs                114
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'polylectic'                 ->  'poly'                       x83
+     'oligolectic'                ->  'oligo'                      x31
+  -> 2 substitutions explain 114 of 400 misses (28%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (6 distinct), closest predicted name:
+     gt 'Lasioglossum (Dialictus) incompletum'  ~0.72~  pred 'Lasioglossum (Dialictus) sp. B'   x7
+     gt 'Lasioglossum (Evylaeus) sp. B'     ~0.96~  pred 'Lasioglossum (Evylaeus) sp. C'   x6
+     gt 'Lasioglossum (Dialictus) sp. F'    ~0.93~  pred 'Lasioglossum (Dialictus) sp. B'   x6
+     gt 'Lasioglossum (Dialictus) sp. C'    ~0.96~  pred 'Lasioglossum (Dialictus) sp. B'   x6
+     gt 'Lasioglossum (Dialictus) sp. E'    ~0.93~  pred 'Lasioglossum (Dialictus) sp. B'   x5
+     gt 'Triepeolus sp. 1'                  ~0.58~  pred 'Triepeolus timberlakeii'   x2
+  -> 6 species mismatches explain 32 of 400 misses (8%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Nesting location '                x128
+     'Flight season median date'        x116
+     'Intertegular distance'            x3
+     'Sociality/ parasitic'             x3
+     'Flight season duration'           x2
+     'Lecty'                            x1
+  -> 6 missing traits explain 253 of 400 misses (63%) — systematic, not scattered
+
+  full miss detail saved -> Forrest2015_misses.csv, Forrest2015_misses_summary.json (400 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  nesting behaviour                               128   136   Δ+8 (split?)
+  below                                             0     3   PRED-ONLY
+  on conventional farms                             0   136   PRED-ONLY
+  flight season median date                       120     0   GT-ONLY
+  day of year of flight season                      0   136   PRED-ONLY
+  intertegular distance                           139   136   Δ-3 (split?)
+  flight season duration                           46   136   Δ+90 (split?)
+  on organic farms                                  0   136   PRED-ONLY
+  lecty                                           120   136   Δ+16 (split?)
+  nest location                                     0   136   PRED-ONLY
+  nesting location                                134     0   GT-ONLY
+  na                                                0     6   PRED-ONLY
+  at natural sites                                  0   136   PRED-ONLY
+  parasite                                          0     3   PRED-ONLY
+  sociality/ parasitic                            140   136   Δ-4 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'nesting location'                 vs pred 'nest location'                    sim=0.90
+    gt 'flight season median date'        vs pred 'day of year of flight season'     sim=0.68
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.628  0.516  0.567    427   253   400   id+type+value
+             (692 more spurious row(s) out-of-scope; strict P would be 0.311)
+  tags        0.193  0.158  0.174    131   549   696   basis+id+type+value+stat+sex+stage
+             (692 more spurious row(s) out-of-scope; strict P would be 0.095)
+             (F1 -0.393 vs previous)

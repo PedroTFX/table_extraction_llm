@@ -2,21 +2,21 @@
   "identifier": {
     "field": "definitionTerm",
     "value_column": true,
-    "reasoning": "This column lists the variable names or codes being defined in the glossary."
+    "reasoning": "This column lists the variable names or codes being defined in the dictionary."
   },
   "Unit": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This column provides units of measure and does not fit any specific mapping field."
+    "value_column": false,
+    "reasoning": "This column provides the unit of measurement, which is metadata, not a definition or value."
   },
   "Transformation for $analyses^a$": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This column specifies statistical transformation methods used for data analysis."
+    "value_column": false,
+    "reasoning": "This column describes the statistical transformation applied to the data, not the definition."
   },
   "Description": {
     "field": "definitionText",
     "value_column": true,
-    "reasoning": "It provides the human-readable definition or explanation for the corresponding identifier term."
+    "reasoning": "This column provides the detailed, human-readable definition of the variable."
   }
 }

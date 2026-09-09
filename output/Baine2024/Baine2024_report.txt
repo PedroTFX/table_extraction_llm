@@ -1,22 +1,30 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Baine2024\Baine2024.xlsx  (97 rows)
-PREDICTION   : ..\output\Baine2024\Baine2024.csv  (5 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+PREDICTION   : ..\output\Baine2024\Baine2024.csv  (3 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 0
-  missed (FN)         : 97
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 5   <- GT never covers this trait: nothing to score against
+TAXON NAMES LEFT UNMAPPED (3)
+  '$\\chi^{2} = 47.28, df 2, p < 0.0001$ NS': no ground-truth string denotes this
+  '$\\chi^{2} = 50.22, df 1, p < 0.0001$ 36.29,': no ground-truth string denotes this
+  '$\\chi^{2} = 68, df 1, p < 0.0001$ 65.33,': no ground-truth string denotes this
 
-  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+measurementType LEFT UNMAPPED (1)
+  'Wing pattern character': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 0
+  missed (FN)           : 97
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 3   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
+  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
+  RECALL (GT coverage)  : 0.000
 
   out-of-scope rows by uncovered field:
-    measurementType                              5
+    measurementType                              3
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
@@ -40,15 +48,13 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   externalLink                  0      0    n/a
 
 WHY THE 97 MISSED ROWS MISSED
-  species not in prediction                  97
-  species present, trait missing              0
-  species+trait present, value differs        0
+  species not in prediction                            97
 
   SPECIES IN GT BUT NOT IN PREDICTION (4 distinct), closest predicted name:
      gt 'Aciurina luminaria'                 (nothing similar in the prediction)   x94
-     gt 'A. bigeloviae'                      (nothing similar in the prediction)   x1
-     gt 'A. maculata'                        (nothing similar in the prediction)   x1
      gt 'A. trixa'                           (nothing similar in the prediction)   x1
+     gt 'A. maculata'                        (nothing similar in the prediction)   x1
+     gt 'A. bigeloviae'                      (nothing similar in the prediction)   x1
   -> 4 species mismatches explain 97 of 97 misses (100%) — systematic, not scattered
 
   full miss detail saved -> Baine2024_misses.csv, Baine2024_misses_summary.json (97 row(s))
@@ -77,6 +83,7 @@ measurementType COVERAGE
   body morphology                                   1     0   GT-ONLY
   body segmentacion                                 1     0   GT-ONLY
   size of hyaline spot in cell br                   1     0   GT-ONLY
+  wing pattern character                            0     3   PRED-ONLY
   tarsal claw color                                 1     0   GT-ONLY
   compound eye color                                1     0   GT-ONLY
   costa color                                       1     0   GT-ONLY
@@ -124,7 +131,7 @@ measurementType COVERAGE
   host plant                                        1     0   GT-ONLY
   narrow interocular margin surface                 1     0   GT-ONLY
   puparium length                                   2     0   GT-ONLY
-  wing length or wing pattern character             1     5   Δ+4 (split?)
+  wing length                                       1     0   GT-ONLY
   number of marginal spots in r                     1     0   GT-ONLY
   mouth structure                                   1     0   GT-ONLY
   notopleural number                                1     0   GT-ONLY
@@ -135,4 +142,11 @@ measurementType COVERAGE
   phallus size                                      2     0   GT-ONLY
   ventral thoracic pleura                           1     0   GT-ONLY
   puparium width                                    2     0   GT-ONLY
-  (rows joined by 'or' are near-identical wording merged for readability; credited only if the semantic matcher merges them)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0    97   id+type+value
+             (3 more spurious row(s) out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0    97   basis+id+type+value+stat+sex+stage
+             (3 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

@@ -2,16 +2,67 @@
   "Population Growth Parameters": {
     "field": "measurementType",
     "value_column": false,
-    "reasoning": "This header names the specific biological properties being measured (e.g., growth rate, generation time)."
+    "reasoning": "This header names the biological property (growth parameters) being measured for the organisms.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Contains quantitative demographic metrics like intrinsic rate of increase (r_m) and doubling time (DT).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Population Growth Parameters"
   },
   "A. fabae": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "The values are measurements for a plant species; it is not an insect taxon or locality."
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This is the taxonomic name of the insect species whose data is presented.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Contains quantitative measurements of biological traits (e.g., fecundity, development time) under this diet."
   },
   "M. persicae": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This header identifies the specific insect taxon (aphid) whose measurements are recorded in this column."
+    "reasoning": "This is the taxonomic name of the insect species whose data is presented.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Contains quantitative measurements of biological traits (e.g., fecundity, development time) under this diet."
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Scymnus nubilus",
+    "reasoning": "The paper measures the life history traits and demographic performance of the predator Scymnus nubilus when fed different prey.",
+    "decided_by": "llm",
+    "roles": {
+      "Aphis fabae": "prey",
+      "Myzus persicae": "prey",
+      "Scymnus nubilus": "measured subject",
+      "Scymnu nubilus": "measured subject",
+      "Aphis gossypii": "cited comparison"
+    },
+    "candidates": [
+      {
+        "name": "Aphis fabae",
+        "mentions": 7,
+        "abbrev_mentions": 21,
+        "score": 115
+      },
+      {
+        "name": "Myzus persicae",
+        "mentions": 11,
+        "abbrev_mentions": 17,
+        "score": 99
+      },
+      {
+        "name": "Scymnus nubilus",
+        "mentions": 14,
+        "abbrev_mentions": 14,
+        "score": 87
+      },
+      {
+        "name": "Scymnu nubilus",
+        "mentions": 1,
+        "abbrev_mentions": 14,
+        "score": 71
+      }
+    ]
   }
 }

@@ -1,0 +1,27 @@
+{
+  "Predictor": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This column lists the names of the variables or traits being modeled (e.g., Body Mass)."
+  },
+  "Slope": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the calculated regression coefficients, which are the primary numerical results of the model."
+  },
+  "SE": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Standard Error (SE) associated with the slope estimates."
+  },
+  "z": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Z-score used to test the statistical significance of the slope."
+  },
+  "P": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the P-value, indicating the statistical significance of the predictor."
+  }
+}

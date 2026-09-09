@@ -1,0 +1,113 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Cao2024\Cao2024.xlsx  (421 rows)
+PREDICTION   : ..\output\Cao2024\Cao2024.csv  (328 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Chaetocladius dentiforceps-type' -> 'Chaetocladius dentiforceps-type\n\n'
+  'Paratanytarsus penicillatus-type' -> 'Paratanytarsus penicillatus-type\n\n'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Antczak-Orlewska et Orlewska al.': no ground-truth string denotes this
+  'al.': no ground-truth string denotes this
+
+measurementType LEFT UNMAPPED (6)
+  'Di 20–27 Po 28–32 Pl 33–44 -147.00': no ground-truth string denotes this
+  'Di 20–27 Po 28–32 Pl 33–44 -62.00': no ground-truth string denotes this
+  'Di 20–27 Po 28–32 Pl 33–44 -70.00': no ground-truth string denotes this
+  'Morphological type': no ground-truth string denotes this
+  'Sample code Hu 1–10 Ho 11–19 -42.00': no ground-truth string denotes this
+  'Sample code Hu 1–10 Ho 11–19 depth to water table (cm) 0.00 ~': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 135
+  missed (FN)           : 286
+  spurious, in scope    : 102   <- GT covers this trait: real errors
+  spurious, out of scope: 91   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.412 / 0.321 / 0.360
+  SCOPED  P/R/F1        : 0.570 / 0.321 / 0.410
+  RECALL (GT coverage)  : 0.321
+
+  out-of-scope rows by uncovered field:
+    measurementType                             91
+
+FUZZY VALUE MATCHES (56 accepted beyond exact/numeric)
+  initialism      56
+  sample:
+    [initialism] gt 'Collector-gatherers' == pred 'CG'
+    [initialism] gt 'Collector-filterers' == pred 'CF'
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    135  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic        135    135  1.000
+  measurementRemarks            0      0    n/a
+  sex                         135    135  1.000
+  lifeStage                   135    135  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    135  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 286 MISSED ROWS MISSED
+  species present, trait missing                      184
+  species+trait present, value differs                102
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '>5–10'                      ->  'size2'                      x49
+     '>10'                        ->  'size3'                      x19
+     'shredders'                  ->  'shr'                        x12
+     '<5'                         ->  'size1'                      x11
+     'predators'                  ->  'prd'                        x7
+     'scrapers'                   ->  'scr'                        x3
+  -> 6 substitutions explain 101 of 286 misses (35%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Plate type'                       x62
+     'Teeth type'                       x58
+     'Mentum ratio'                     x52
+     'Ventral type'                     x11
+     'Mentum type'                      x1
+  -> 5 missing traits explain 184 of 286 misses (64%) — systematic, not scattered
+
+  full miss detail saved -> Cao2024_misses.csv, Cao2024_misses_summary.json (286 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  sample code hu 1–10 ho 11–19 depth to water table (cm) 0.00 ~    0     2   PRED-ONLY
+  sample code hu 1–10 ho 11–19 -42.00               0     2   PRED-ONLY
+  di 20–27 po 28–32 pl 33–44 -147.00                0     4   PRED-ONLY
+  di 20–27 po 28–32 pl 33–44 -62.00                 0     2   PRED-ONLY
+  di 20–27 po 28–32 pl 33–44 -70.00                 0     2   PRED-ONLY
+  body size                                        79    79   
+  functional feeding guild                         79    79   
+  locomotion                                       79    79   
+  mentum ratio                                     52     0   GT-ONLY
+  mentum type                                       1     0   GT-ONLY
+  morphological type                                0    79   PRED-ONLY
+  plate type                                       62     0   GT-ONLY
+  teeth type                                       58     0   GT-ONLY
+  ventral type                                     11     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'plate type'                       vs pred 'morphological type'               sim=0.57
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.570  0.321  0.410    135   102   286   id+type+value
+             (91 more spurious row(s) out-of-scope; strict P would be 0.412)
+  tags        0.000  0.000  0.000      0   237   421   basis+id+type+value+stat+sex+stage
+             (91 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.410 vs previous)

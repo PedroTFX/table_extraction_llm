@@ -1,0 +1,100 @@
+{
+  "Callistini": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains taxonomic names (Tribe/Subfamily) identifying the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are taxonomic classifications (tribes) of the beetle species."
+  },
+  "Chlaenius nitidulus (Schrank, 1781)": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains specific insect species names (binomial/genus) identifying the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are scientific names representing discrete species classifications."
+  },
+  "Least concern": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the conservation status, which is a biological property of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This is a discrete classification of the organism's conservation status.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Least concern",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting carabid beetles using pitfall traps, which were then stored in 70% ethanol for identification and analysis. This constitutes a measurement based on a collected and preserved specimen.",
+    "measurementMethod": "Pitfall trapping (9-cm diameter, 0.5–1 volume) supplied with 300 mL 10% NaCl and 2–3 drops of detergent, exposed for 7 days.",
+    "measurementMethod_reasoning": "The primary method used to collect the carabid specimens for abundance and trait analysis was the pitfall trapping technique, with specific details provided in the Materials and Methods section."
+  },
+  "B": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a categorical code representing a measured trait or classification of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These values represent discrete body size categories (e.g., 11–21.9 mm).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "B",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected carabid beetles using pitfall traps, stored them in 70% ethanol, and identified them to the species level. Since the organisms were collected and preserved for subsequent measurement of traits and abundance, they qualify as PreservedSpecimen.",
+    "measurementMethod": "Pitfall trapping (9-cm diameter, 0.5–1 volume) supplied with 10% NaCl and detergent, exposed for 7 days, followed by species identification and determination of functional traits (body size, habitat, breeding period, food specialization).",
+    "measurementMethod_reasoning": "The methodology explicitly details the use of pitfall traps (9-cm diameter, 0.5–1 volume) with specific attractants (10% NaCl and detergent) and exposure times (7 days). The subsequent analysis involved identifying the captured specimens to the species level and determining various functional traits, which constitutes the measurement protocol."
+  },
+  "Open biotopes": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the habitat or environment where the organism is found (microhabitat).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This describes the habitat type, which is a discrete classification.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Open biotopes",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The trait 'Open biotopes' is a functional trait (habitat preference) of the carabid beetles. Since this is an ecological/natural-history trait determined from captured individuals in the field, it falls under HumanObservation, as opposed to a physical measurement of a preserved specimen.",
+    "measurementMethod": "Determination of functional traits (including habitat affinity) for captured carabid species",
+    "measurementMethod_reasoning": "The text states that 'Body size, humidity, habitat affinities, breeding period... were determined for each species' (Section 5.2), indicating that the habitat preference ('Open biotopes') was classified as part of the species' functional traits based on the field collection and identification process."
+  },
+  "Hygrophilous": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's ecological preference regarding moisture.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These describe humidity affinity, a discrete classification of habitat preference.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Hygrophilous",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data on the hygrophilous nature of the carabids was derived from specimens captured using pitfall traps and subsequently identified and analyzed (Section 5.2). Since the measurement is based on a physical specimen collected and preserved (stored in 70% ethanol), it qualifies as a PreservedSpecimen.",
+    "measurementMethod": "Determination of functional trait (humidity affinity) from collected specimens",
+    "measurementMethod_reasoning": "The text states that 'humidity, habitat affinities... were determined for each species' (Section 5.2). The classification 'Hygrophilous' (preferring moist places) is a functional trait assigned to the species based on the characteristics of the collected specimens, rather than a specific physical measurement like body size."
+  },
+  "Spring": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the time of activity or observation for the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This records the breeding period, a discrete classification of life history.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Spring",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting carabid beetles using pitfall traps, storing them in 70% ethanol for identification, and measuring physical traits (like body size) and functional traits (like habitat affinity and breeding period) on these preserved specimens.",
+    "measurementMethod": "Pitfall trapping (9-cm diameter, 0.5–1 volume) using 300 mL 10% NaCl and 2–3 drops of detergent, followed by identification to species level and determination of functional traits (body size, habitat, breeding period, and food specialization) on preserved specimens stored in 70% ethanol.",
+    "measurementMethod_reasoning": "The methodology section (5.2) details the use of pitfall traps with specific attractants (10% NaCl and detergent) and the subsequent processing of the captured specimens (storage in 70% ethanol) for detailed ecological and morphological analysis."
+  },
+  "Carnivorous": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's diet or feeding habit.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This describes the food specialization, a discrete biological trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Carnivorous",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected and preserved carabid specimens (stored in 70% ethanol) and determined various traits, including food specialization, for these individuals. Since the measurement of food specialization (which classifies species as carnivorous or omnivorous) is based on data derived from these collected and preserved specimens, the basis of record is PreservedSpecimen.",
+    "measurementMethod": "Food specialization determination based on species identification and functional classification",
+    "measurementMethod_reasoning": "The text states that 'food specialization' was determined for each species (Section 5.2). While the specific protocol (e.g., gut content analysis) is not detailed, the determination of whether a species is carnivorous or omnivorous relies on its established functional classification and diet, which is a standard ecological assessment performed on identified specimens."
+  }
+}

@@ -1,27 +1,37 @@
 {
   "repsonse": {
-    "field": "definitionTerm",
-    "value_column": true,
-    "reasoning": "This column defines the dependent variable or response in the statistical model."
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column describes a statistical model component ('constant'), not an insect, location, or trait."
+  },
+  "repsonse (1)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column describes a statistical model component ('slope'), not a measurement of the organism."
+  },
+  "repsonse (2)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are independent variables or treatments (e.g., 'crop.maize'), not the insect or the sampling location."
   },
   "parameter": {
-    "field": "definitionTerm",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column defines the independent variables or factors being tested in the model."
+    "reasoning": "This column holds the calculated statistical parameter (coefficient) from the model."
   },
   "estimate": {
-    "field": "definitionTerm",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the calculated coefficient (the estimated effect) for each parameter."
+    "reasoning": "This column holds the primary calculated estimate (the main result) of the statistical model."
   },
   "95% CI lower bound": {
-    "field": "definitionTerm",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This defines the lower boundary of the 95% confidence interval around the estimate."
+    "reasoning": "This column provides a specific numerical value representing the lower bound of the confidence interval."
   },
   "95% CI upper bound": {
-    "field": "definitionTerm",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This defines the upper boundary of the 95% confidence interval around the estimate."
+    "reasoning": "This column provides a specific numerical value representing the upper bound of the confidence interval."
   }
 }

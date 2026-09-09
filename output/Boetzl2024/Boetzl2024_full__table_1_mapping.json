@@ -2,56 +2,56 @@
   "Study ID": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains unique study identifiers, not biological data."
+    "reasoning": "This is a unique identifier, not a measurement, location, or organism."
   },
   "country": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The values represent the country where sampling occurred."
+    "reasoning": "It specifies the country where the sampling took place."
   },
   "region": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The values are regional subdivisions of the study location."
+    "reasoning": "It specifies the regional locality where the sampling occurred."
   },
   "year": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains temporal data (years), not a biological trait or location."
+    "reasoning": "This is a temporal variable, not a measurement of the organism or a location."
   },
   "months": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains temporal data (months/dates)."
+    "reasoning": "This is a temporal variable, not a measurement of the organism or a location."
   },
   "crop types": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "These describe the land-use or vegetation type where sampling took place."
+    "reasoning": "It describes the land-use/habitat where the sampling was conducted."
   },
   "adjacent habitat classes": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This describes the environmental setting/habitat used as a location descriptor for sampling."
+    "reasoning": "It describes the specific habitat/vegetation where the sampling was conducted."
   },
   "study sites": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "These are specific named or coded locations where observations were made."
+    "reasoning": "It identifies the specific study sites where observations were made."
   },
   "maximal distance [m]": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This measures a physical variable (distance) related to the study area/organism's range."
+    "reasoning": "It measures a specific distance property related to the study setup."
   },
   "trapping days": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This represents sampling effort or duration, not an organism trait or location."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "It measures the duration of the sampling effort."
   },
   "reference": {
     "field": null,
     "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
+    "reasoning": "This is a citation, not a measurement, location, or organism."
   }
 }

@@ -1,0 +1,51 @@
+{
+  "Taxon": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the organisms studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "These are discrete classifications of the organism's biological group (e.g., Collembola, Formicidae)."
+  },
+  "Trait": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Names the specific biological property or characteristic being measured.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "This column lists the names of the traits being measured (e.g., Body size, Eye size).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trait",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting soil arthropods (ants and springtails) using pitfall traps, aspirators, and Tullgren-Berlese extraction. Morphological traits (body length, femur length, integument color) were measured directly on these collected and preserved specimens using a dissecting microscope and image analysis. While some ecological traits were derived from literature, the physical measurements and the basis for the functional traits are rooted in the collected specimens.",
+    "measurementMethod": "Sampling involved pitfall trapping (4 cups per site, filled with 60% ethylene glycol for 7 days), direct collection using an aspirator within a 1 m² quadrat (10 min), and Tullgren-Berlese extraction from 1 L of soil (10 x 100 ml subsamples) for 7 days. Morphological measurements (body length, femur length) were taken using a Leica MZ7s dissecting microscope. Ant integument color was determined using HSV estimates extracted from photos using paint.NET. For ants, traits like eye size and feeding strategy were derived from the literature (Table S3); for springtails, body length was measured in the lab, and other traits were determined using previous work and verified by a taxonomic expert (CJS).",
+    "measurementMethod_reasoning": null
+  },
+  "Description": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Provides contextual information about the trait, not a data point or definition.",
+    "category": null,
+    "reasoning_relevance": "This column contains narrative text describing correlations and ecological significance, not data."
+  },
+  "Measurement": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "Describes the data format (continuous/categorical) used for the measurement.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "This column specifies the type of data recorded (e.g., Continuous (mm), Categorical), acting as a key.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Measurement",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting soil arthropods (ants and springtails) using pitfall traps, aspirators, and Tullgren-Berlese extraction from soil samples. Morphological traits (body length, femur length, integument color, eye size, etc.) were measured on these collected specimens using a dissecting microscope or analyzed from photographs, fitting the definition of measurements taken on preserved/collected specimens.",
+    "measurementMethod": "Arthropods were collected using pitfall traps (4 cups, 300 ml, 9.5 cm diameter, 8 cm deep, filled with 60% ethylene glycol) and direct aspiration within 1 m² quadrats. Soil arthropods were further extracted using the Tullgren-Berlese technique from 1 L of soil. Morphological traits (body length, femur length, integument color) were measured using a Leica MZ7s dissecting microscope or analyzed via HSV estimates from photos. Functional traits were derived from literature and verified by taxonomic experts. Environmental variables (soil compaction, moisture, pH) were recorded using a soil penetrometer and a soil moisture and pH meter.",
+    "measurementMethod_reasoning": null
+  },
+  "Reference": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "Provides the scientific citation or source for the measurement.",
+    "category": null,
+    "reasoning_relevance": "This column contains citations to external literature."
+  }
+}

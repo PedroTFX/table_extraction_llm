@@ -1,184 +1,233 @@
 {
   "\\ufeffCity": {
     "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "The column contains the name of a city where sampling occurred."
+    "value_column": true,
+    "reasoning": "Specifies the city where the sampling occurred."
   },
   "Location": {
     "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This represents a specific named site or location within the study area.",
-    "category": null,
-    "reasoning_relevance": "Not present in text. The paper specifies the city names directly."
+    "value_column": true,
+    "reasoning": "Specifies the specific sampling location or site name.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the specific habitat or site where the observation occurred.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
   "Management": {
-    "field": "measurementType",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "Describes the land-use/habitat type where the organism was found (e.g., urban farm).",
-    "category": null,
-    "reasoning_relevance": "Not mentioned in the provided text regarding data collection or analysis."
+    "reasoning": "Describes the land-use/habitat where the sample was taken.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of how the garden or site is managed.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
   "Date": {
     "field": null,
     "value_column": false,
-    "reasoning": "This is temporal metadata about the observation event.",
+    "reasoning": "Temporal metadata, not a required field.",
     "category": null,
-    "reasoning_relevance": "The study specifies sampling periods (May–October 2016), not individual dates."
+    "reasoning_relevance": "This is a timestamp identifier, not a biological trait or measurement."
   },
   "Month": {
-    "field": null,
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This is temporal metadata about the observation event.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "Used as a proxy for overall climate and interacting fixed effects in the linear model.",
-    "value_type": "categorical"
+    "reasoning": "Temporal metadata, not a required field.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the time of observation.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Month"
   },
   "Day": {
     "field": null,
     "value_column": false,
-    "reasoning": "This is temporal metadata about the observation event.",
+    "reasoning": "Temporal metadata, not a required field.",
     "category": null,
-    "reasoning_relevance": "Not mentioned in text; sampling was done every two weeks from April to October 2016."
+    "reasoning_relevance": "This is a numerical identifier for the day."
   },
   "Year": {
     "field": null,
     "value_column": false,
-    "reasoning": "This is temporal metadata about the observation event.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "Used for climate data extraction (2015–2016) and study period (2016).",
-    "value_type": "numeric"
+    "reasoning": "Temporal metadata, not a required field.",
+    "category": null,
+    "reasoning_relevance": "This is a numerical identifier for the year."
   },
   "Intertegular.d": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a specific physical trait of the organism (intertegular distance).",
+    "reasoning": "It is a measurement of a physical trait of the organism.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Measured as the space between wing joints, used as a proxy for overall body size.",
+    "reasoning_relevance": "A physical measurement of the distance between wing joints.",
+    "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Intertegular.d"
   },
   "Head.w": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a specific physical trait of the organism (head width).",
+    "reasoning": "It is a measurement of a physical trait of the organism.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Measured extensively and used solely as a proxy for H. ligatus body size.",
+    "reasoning_relevance": "A physical measurement of the width of the bee's head.",
+    "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Head.w"
   },
   "I.D.": {
     "field": null,
     "value_column": false,
-    "reasoning": "This is an individual identifier for the specimen.",
+    "reasoning": "This is an individual identifier, not a measurement or taxon.",
     "category": null,
-    "reasoning_relevance": "Not present in text; 'Intertegular distance' is the specific measurement name."
+    "reasoning_relevance": "This is a unique identifier for the individual specimen."
   },
   "Neighborhood": {
     "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "The column specifies a geographic location (neighborhood) where sampling occurred.",
-    "category": null,
-    "reasoning_relevance": "The study focuses on city-level comparisons rather than neighborhood specifics."
+    "value_column": true,
+    "reasoning": "Specifies a localized area where the observation occurred.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of the local urban area.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
   "Garden.area": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is an environmental/site variable describing the garden size, not an insect trait or locality.",
-    "category": null,
-    "reasoning_relevance": "Not mentioned in text; gardens were described as having 'relatively similar size'."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a site variable (area), not a measurement of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the garden's physical area.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Garden.area"
   },
   "Med.Income.scaled": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a socio-economic site variable (median income).",
-    "category": null,
-    "reasoning_relevance": "No mention of median income or scaled economic data in the provided text."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a socio-economic site variable.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of scaled median income.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Med.Income.scaled"
   },
   "City.med.income": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a socio-economic site variable (city median income).",
-    "category": null,
-    "reasoning_relevance": "No mention of city-level median income in the provided text."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a socio-economic site variable.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of median income.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "City.med.income"
   },
   "Percent.income": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a demographic/site variable.",
-    "category": null,
-    "reasoning_relevance": "Not mentioned in the provided text regarding urban environmental factors."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a socio-economic site variable.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of income percentage.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Percent.income"
   },
   "popdens": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a population density site variable.",
-    "category": null,
-    "reasoning_relevance": "No mention of population density data used or collected in this study."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a site variable (population density).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of population density.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "popdens"
   },
   "DDG_15": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is an environmental/climatic measurement (Growing Degree Days).",
-    "category": null,
-    "reasoning_relevance": "The text mentions CGDD (cumulative growing degree days) but not DDG_15 specifically."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is an environmental site variable (Degree Days).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of Growing Degree Days.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "DDG_15"
   },
   "DDG_16": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is an environmental/climatic measurement.",
-    "category": null,
-    "reasoning_relevance": "The text mentions CGDD for 2015–2016, but does not specify a column named DDG_16."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is an environmental site variable (Degree Days).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of Growing Degree Days.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "DDG_16"
   },
   "CV_15": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a statistical variable (Coefficient of Variation).",
-    "category": null,
-    "reasoning_relevance": "No mention of coefficient of variation (CV) data in the provided text."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a site variable (Coefficient of Variation).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the coefficient of variation.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "CV_15"
   },
   "CV_16": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a statistical variable.",
-    "category": null,
-    "reasoning_relevance": "No mention of coefficient of variation (CV) data in the provided text."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a site variable (Coefficient of Variation).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of the coefficient of variation.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "CV_16"
   },
   "scaled.garden": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is an environmental/site variable (scaled garden area).",
-    "category": null,
-    "reasoning_relevance": "Not mentioned in text; garden characteristics were described qualitatively."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a site variable (scaled garden area).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of scaled garden area.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "scaled.garden"
   },
   "income": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is a categorical socio-economic site variable.",
-    "category": null,
-    "reasoning_relevance": "No mention of income data used or collected in the study."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is a categorical site variable.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Discrete classification of income level (low, med, high).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "income"
   },
   "PGDD": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is an environmental/climatic measurement (Growing Degree Days).",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The text discusses Growing Degree Days (CGDD) as a climatic factor influencing body size.",
-    "value_type": "numeric"
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is an environmental site variable (Growing Degree Days).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of Growing Degree Days.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "PGDD"
   },
   "15Temp": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This is an environmental/climatic measurement.",
-    "category": null,
-    "reasoning_relevance": "No mention of specific temperature metrics labeled '15Temp' in the provided text."
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This is an environmental site variable (Temperature).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "A quantitative measurement of temperature.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "15Temp"
   },
   "﻿City": {
-    "field": null,
+    "field": "measurementType",
     "value_column": false,
     "reasoning": "no mapping returned (response truncated)",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The study compares body size variation across three distinct urban cities: Chicago, Detroit, and Saint Louis.",
-    "value_type": "categorical"
+    "reasoning_relevance": "Discrete classification of the urban environment where the bee was sampled.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "﻿City"
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -186,20 +235,27 @@
     "scope": "paper",
     "column": null,
     "value": "Halictus ligatus",
-    "reasoning": "The study quantifies body size variation in Halictus ligatus across three different urban cities.",
+    "reasoning": "The study measures body size variation in the sweat bee Halictus ligatus across different urban environments.",
     "decided_by": "llm",
+    "roles": {
+      "Halictus ligatus": "measured subject",
+      "Halicus ligatus": "measured subject",
+      "Chicago and": "habitat",
+      "Detroit and": "habitat",
+      "The results": "unclear"
+    },
     "candidates": [
       {
         "name": "Halictus ligatus",
         "mentions": 13,
-        "abbrev_mentions": 26,
-        "score": 146
+        "abbrev_mentions": 27,
+        "score": 151
       },
       {
         "name": "Halicus ligatus",
         "mentions": 1,
-        "abbrev_mentions": 26,
-        "score": 134
+        "abbrev_mentions": 27,
+        "score": 139
       },
       {
         "name": "Chicago and",
@@ -209,9 +265,9 @@
       },
       {
         "name": "Detroit and",
-        "mentions": 7,
+        "mentions": 8,
         "abbrev_mentions": 0,
-        "score": 7
+        "score": 8
       }
     ]
   }

@@ -1,22 +1,27 @@
 {
-  "response": {
+  "richness (omnivorous)[models with and without P. cupreus]": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values describe the biological property being measured or counted (e.g., richness, activity density)."
+    "reasoning": "This header describes a measured ecological metric (richness) related to the organism's diet."
   },
-  "constant effect": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical model variables and predictors, not organism names, locations, or traits."
+  "distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header describes the environmental and sampling context variables used for the study."
   },
-  "varying effect": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column describes the mathematical structure of the statistical model (e.g., '1 + distance')."
+  "1 + distance": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a variable name representing a measured distance or spatial characteristic."
   },
-  "family": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is an organizational label or study grouping, not a geographic location or insect taxon."
+  "study/site": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This column identifies the specific geographic location or study site where sampling occurred."
+  },
+  "Poisson (log)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the statistical model used to analyze the measurement data."
   }
 }

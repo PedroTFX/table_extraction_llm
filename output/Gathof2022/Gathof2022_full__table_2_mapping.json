@@ -1,0 +1,25 @@
+{
+  "B": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Column is empty and lacks context to assign a specific field.",
+    "category": null,
+    "reasoning_relevance": "The column name 'B' is too ambiguous and lacks context to determine if it represents biological data."
+  },
+  "Urbanisation": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Describes the environmental context or land-use where the sampling occurred.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column records discrete classifications (low, medium, high) of the urban environment.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "Wild bee indicator species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic name of the insect species.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists specific species names, which are discrete classifications of the organism's biology."
+  }
+}

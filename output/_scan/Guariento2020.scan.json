@@ -1,0 +1,73 @@
+{
+  "paper": "Guariento2020",
+  "has_full_md": true,
+  "supplementary": [],
+  "ground_truth": [
+    "Guariento2020.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "Guariento2020_full.md",
+      "n_tables": 2,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "Guariento2020_full.md",
+      "table_index": 0,
+      "n_rows": 23,
+      "n_cols": 6,
+      "header": [
+        "Diversity measure",
+        "Code",
+        "F (region)",
+        "p (region)",
+        "F (flood nested in region)",
+        "p (flood nested in region)"
+      ],
+      "identifier": {
+        "column": "Diversity measure",
+        "taxon_fraction": 0.174,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    },
+    {
+      "source": "Guariento2020_full.md",
+      "table_index": 1,
+      "n_rows": 27,
+      "n_cols": 5,
+      "header": [
+        "Trait",
+        "F (region) df = 2",
+        "p (region)",
+        "F (flood nested in region); df = 3",
+        "p (flood nested in region)"
+      ],
+      "identifier": {
+        "column": "Trait",
+        "taxon_fraction": 0.333,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    }
+  ],
+  "error": null,
+  "n_tables": 2,
+  "n_identifier_tables": 0,
+  "n_identifier_tables_markdown": 0,
+  "n_identifier_tables_supplementary": 0,
+  "n_transposed_tables": 0,
+  "n_rows_total": 50,
+  "n_distinct_species": 0,
+  "would_yield_rows": false,
+  "would_yield_rows_if_supplements_passed": false,
+  "verdict": "identifier column NOT found in any table — all look like stats/summary tables, or the taxon column wasn't recognised"
+}

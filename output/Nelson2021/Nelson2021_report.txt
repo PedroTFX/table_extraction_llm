@@ -1,0 +1,80 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Nelson2021\Nelson_2021.xlsx  (191 rows)
+PREDICTION   : ..\output\Nelson2021\Nelson2021.csv  (418 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'age': no ground-truth string denotes this
+  'bison': no ground-truth string denotes this
+  'burn': no ground-truth string denotes this
+
+measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body size community weighted means F' -> 'size'
+
+measurementType LEFT UNMAPPED (7)
+  'Age': no ground-truth string denotes this
+  'Bison': no ground-truth string denotes this
+  'Brachypterous proportion F': no ground-truth string denotes this
+  'Carnivorous proportion F': no ground-truth string denotes this
+  'Fire': no ground-truth string denotes this
+  'Range': no ground-truth string denotes this
+  '± 1 s.d.': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 191
+  missed (FN)           : 0
+  spurious, in scope    : 15   <- GT covers this trait: real errors
+  spurious, out of scope: 212   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.457 / 1.000 / 0.627
+  SCOPED  P/R/F1        : 0.927 / 1.000 / 0.962
+  RECALL (GT coverage)  : 1.000
+
+  out-of-scope rows by uncovered field:
+    measurementType                            212
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    191  0.000  <-- low
+  measurementMethod            40    191  0.209  <-- low
+  measurementUnit              40    191  0.209  <-- low
+  measurementStatistic         40    191  0.209  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         191    191  1.000
+  lifeStage                   191    191  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    191  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  ± 1 s.d.                                          0    40   PRED-ONLY
+  activity                                         38    40   Δ+2 (split?)
+  age                                               0    40   PRED-ONLY
+  bison                                             0    40   PRED-ONLY
+  brachypterous proportion f                        0     6   PRED-ONLY
+  carnivorous proportion f                          0     6   PRED-ONLY
+  diet                                             33    40   Δ+7 (split?)
+  fire                                              0    40   PRED-ONLY
+  range                                             0    40   PRED-ONLY
+  season                                           40    40   
+  size                                             40    46   Δ+6 (split?)
+  wingtype                                         40    40   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.927  1.000  0.962    191    15     0   id+type+value
+             (212 more spurious row(s) out-of-scope; strict P would be 0.457)
+  tags        0.000  0.000  0.000      0   206   191   basis+id+type+value+stat+sex+stage
+             (212 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.962 vs previous)

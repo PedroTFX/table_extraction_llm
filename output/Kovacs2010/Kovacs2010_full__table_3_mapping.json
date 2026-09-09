@@ -1,0 +1,89 @@
+{
+  "Trait Trait": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header names the specific biological trait (e.g., Thorax width) being measured.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The column contains names of physical traits (e.g., 'Thorax width', 'Mass') that are measured in a separate data column.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trait Trait"
+  },
+  "Workers k ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the quantitative measurement (mean ± SE) for the worker caste.",
+    "category": null,
+    "reasoning_relevance": "This is an allometric coefficient (k) with standard error, which functions as a statistical index."
+  },
+  "Workers Isometry (t)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column reports the statistical significance (t-value) associated with the worker trait.",
+    "category": null,
+    "reasoning_relevance": "This column contains Student's t-test values, which are statistical indices."
+  },
+  "Gynes k ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the quantitative measurement (mean ± SE) for the gynes caste.",
+    "category": null,
+    "reasoning_relevance": "This is an allometric coefficient (k) with standard error, which functions as a statistical index."
+  },
+  "Gynes Isometry (t)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column reports the statistical significance (t-value) associated with the gynes trait.",
+    "category": null,
+    "reasoning_relevance": "This column contains Student's t-test values, which are statistical indices."
+  },
+  "Castes (t) Castes (t)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column reports the statistical significance (t-value) associated with the castes trait.",
+    "category": null,
+    "reasoning_relevance": "The values are statistical test results (t-ratios) comparing traits between castes."
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Vespula maculifrons",
+    "reasoning": "All measurements (traits like thorax length and caste dimorphism) are taken from the social wasp Vespula maculifrons.",
+    "decided_by": "llm",
+    "roles": {
+      "Vespula maculifrons": "measured subject",
+      "Thorax length": "measured subject",
+      "Thorax width": "measured subject",
+      "Caste dimorphism": "measured subject",
+      "Ecology and": "unclear"
+    },
+    "candidates": [
+      {
+        "name": "Vespula maculifrons",
+        "mentions": 14,
+        "abbrev_mentions": 9,
+        "score": 62
+      },
+      {
+        "name": "Thorax length",
+        "mentions": 5,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Thorax width",
+        "mentions": 5,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Caste dimorphism",
+        "mentions": 3,
+        "abbrev_mentions": 0,
+        "score": 6
+      }
+    ]
+  }
+}

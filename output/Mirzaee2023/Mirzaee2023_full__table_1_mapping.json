@@ -1,0 +1,101 @@
+{
+  "Ootheca": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column appears to be a sample identifier or grouping variable, not a measurement or taxon.",
+    "category": null,
+    "reasoning_relevance": "Contains statistical indices (Mean, SD) and sample identifiers, not biological data."
+  },
+  "Width (mm)": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header defines the measured property (width) of the ootheca.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a physical measurement (width) with units (mm).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Width"
+  },
+  "Length (mm)": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header defines the measured property (length) of the ootheca.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a physical measurement (length) with units (mm).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Length"
+  },
+  "Incubation duration (days)": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header defines the measured property (incubation duration) of the ootheca.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a measurement of a biological process (incubation duration) with units (days).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Incubation duration"
+  },
+  "n eggs": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header defines the measured count (number of eggs) of the ootheca.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a count of biological entities (number of eggs) per ootheca.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "n eggs"
+  },
+  "n hatched nymphs": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header defines the measured count (number of hatched nymphs) of the ootheca.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a count of biological entities (number of hatched nymphs).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "n hatched nymphs"
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Nilomantis floweri",
+    "reasoning": "The paper focuses on the life history, morphology, and biogeography of Nilomantis floweri. Other names are cited, geographic locations, or subsets of the measured species.",
+    "decided_by": "llm",
+    "roles": {
+      "Nilomantis floweri": "measured subject",
+      "Roy and": "cited comparison",
+      "Cryptomantis tenella": "unclear",
+      "Iran and": "habitat",
+      "Iranian populations": "unclear"
+    },
+    "candidates": [
+      {
+        "name": "Nilomantis floweri",
+        "mentions": 18,
+        "abbrev_mentions": 55,
+        "score": 296
+      },
+      {
+        "name": "Roy and",
+        "mentions": 13,
+        "abbrev_mentions": 0,
+        "score": 13
+      },
+      {
+        "name": "Cryptomantis tenella",
+        "mentions": 2,
+        "abbrev_mentions": 2,
+        "score": 12
+      },
+      {
+        "name": "Iran and",
+        "mentions": 4,
+        "abbrev_mentions": 0,
+        "score": 7
+      }
+    ]
+  }
+}

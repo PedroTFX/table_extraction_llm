@@ -2,31 +2,31 @@
   "identifier": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains sample or group identifiers ('N', 'S'), not insect taxa."
+    "reasoning": "This column contains row identifiers or group codes, not insect taxa or geographic locations."
   },
   "Fixed effects": {
     "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Describes a biological trait or variable being tested (e.g., 'Body size')."
+    "value_column": false,
+    "reasoning": "This column names the independent variables or properties (e.g., 'Body size') being measured."
   },
   "Est.": {
-    "field": "measurementType",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Names the specific property or relationship measured for the organism."
+    "reasoning": "This column holds the calculated estimate (coefficient) for the fixed effect."
   },
   "SE": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents the Standard Error (SE) of the estimate."
+    "reasoning": "This column provides the Standard Error (SE), a specific statistical measure of uncertainty."
   },
   "Z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is a statistical test value used to assess significance."
+    "reasoning": "This column provides the Z-value, a specific statistical test statistic."
   },
   "p value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents the probability value (p-value) from the statistical test."
+    "reasoning": "This column provides the p-value, a specific statistical measure of significance."
   }
 }

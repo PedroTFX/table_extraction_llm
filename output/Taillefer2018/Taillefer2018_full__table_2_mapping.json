@@ -1,0 +1,59 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insects studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Lists the taxonomic classification of the organisms studied (e.g., family and species names)."
+  },
+  "Number of individuals": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the count or abundance of the sampled individuals.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the count or abundance of individuals observed in a sample.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Number of individuals",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The Diptera individuals were collected using pan traps and sweeping, preserved in 95% ethanol, dried, and pinned, indicating they were measured from collected/preserved specimens.",
+    "measurementMethod": "Pan traps and sweeping",
+    "measurementMethod_reasoning": "The methodology describes the collection process: 'Sampling was conducted weekly for six weeks... with pan traps and sweeping on an area of 30 m x 30 m in the centre of each wetland if accessible. Three transects of four pan traps were placed 10 m apart on a 30-m transect in the centre of each site... Sweep samples were collected on three transects of 20 m in each site.'",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "The measurement refers to the number of Diptera individuals (specimens) collected.",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "The reported values (e.g., 196 to 1645 individuals per site) represent a direct count of individuals found in a specific sampling event or site, rather than a calculated mean or median across multiple samples."
+  },
+  "Significant Association": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the habitat or ecological association where the insect was found.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the habitat type or the association between different wetland classes.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Significant Association",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involved collecting Diptera specimens using pan traps and sweeping in wetland habitats. These specimens were preserved in 95% ethanol or dried/pinned for subsequent taxonomic identification and morphological trait measurement, fitting the definition of a PreservedSpecimen.",
+    "measurementMethod": "Pan traps and sweeping were used to collect Diptera specimens in wetland habitats. Specimens were preserved in 95% ethanol or dried/pinned for subsequent taxonomic identification and morphological trait measurement.",
+    "measurementMethod_reasoning": "The methodology explicitly states that sampling was conducted using pan traps and sweeping. The collection and preservation protocols (95% ethanol, hexamethyldisilazane, pinning) are detailed, defining the method used to obtain the data.",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "single observation",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "IndVal": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a specific measured value or index for the organism.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical index derived from indicator species analysis, not a raw measurement or trait."
+  },
+  "P-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the statistical significance of the measurement or association.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical measure of significance, which is not a biological data point."
+  }
+}

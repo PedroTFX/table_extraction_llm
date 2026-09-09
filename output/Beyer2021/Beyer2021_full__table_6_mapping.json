@@ -2,46 +2,46 @@
   "Response variable": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header names the dependent biological trait being measured: Bumblebee density."
+    "reasoning": "This header names the dependent variable or trait being measured in the model."
   },
   "Model": {
     "field": null,
     "value_column": false,
-    "reasoning": "Refers to the statistical model used (m.bb1), not an organism or location."
+    "reasoning": "This column contains statistical model identifiers, not biological data."
   },
   "Explanatory variable": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "These are independent variables/factors in a regression model, not traits of the insect."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names the independent variables or predictors being measured."
   },
   "Estimate": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the calculated coefficient or value for each explanatory variable."
+    "reasoning": "This column holds the calculated coefficient or value of the measurement."
   },
   "Std.Error": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents the standard error of the estimate, a statistical measure of variability."
+    "reasoning": "This column provides the standard error, a statistical measure of the estimate."
   },
   "lower CI": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the lower bound of the confidence interval, a statistical range."
+    "reasoning": "This column provides the lower bound of the confidence interval, a statistical measure."
   },
   "upper CI": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the upper bound of the confidence interval, a statistical range."
+    "reasoning": "This column provides the upper bound of the confidence interval, a statistical measure."
   },
   "z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents the z-score or test statistic used to assess significance."
+    "reasoning": "This column provides the z-score, a statistical measure of the estimate."
   },
   "P": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column holds the p-value, a statistical measure of probability/significance."
+    "reasoning": "This column provides the p-value, a statistical measure of significance."
   }
 }

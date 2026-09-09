@@ -1,0 +1,88 @@
+{
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic names of the insects studied.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists specific scientific names of the organisms studied."
+  },
+  "Total Abundance": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the count (abundance) of the organism in the sample.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "The column records the count of individuals collected in a sample.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "Body Size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a physical characteristic (body size) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column uses discrete codes (A, B, C, D) to classify physical size ranges.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Body Size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The text states that the carabids were 'stored in 70% ethanol' before being identified and measured, indicating that the body size measurement was taken from a collected and preserved specimen.",
+    "measurementMethod": "Body size (mid-range) was determined and categorized into four bins: A: >22 mm, B: 11–21.9 mm, C: 6–10.9 mm, and D: <5.9 mm.",
+    "measurementMethod_reasoning": "The measurement method is explicitly defined in the supplementary materials (Table S3) as the 'mid-range' of the body size, which was then classified into four specific size categories (A, B, C, D)."
+  },
+  "Habitat Affinity": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the preferred habitat or ecological niche of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists fixed classifications of preferred habitat types.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Habitat Affinity",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting carabid beetles using pitfall traps, storing them in 70% ethanol, and then determining morphological traits (body size) and ecological/functional traits (habitat, food specialization) from these captured and preserved specimens.",
+    "measurementMethod": "Pitfall trapping (9-cm diameter, 0.5–1 volume) using 10% NaCl and detergent (or ethylene glycol and water 1:1) for 7 days, followed by species identification and determination of functional traits (body size, habitat, breeding period, food specialization) from preserved specimens in 70% ethanol.",
+    "measurementMethod_reasoning": "The text explicitly details the use of pitfall traps with specific solutions and exposure times (7 days) for collection, and the subsequent process of storing specimens in 70% ethanol for identification and trait determination."
+  },
+  "Humidity Affinity": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the organism's preference or tolerance for humidity.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists fixed classifications of moisture preference.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Humidity Affinity",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement of humidity affinity is based on functional traits determined for individual carabid beetles that were captured using pitfall traps and subsequently stored in 70% ethanol for identification and analysis.",
+    "measurementMethod": "Pitfall trapping (using 10% NaCl and detergent or ethylene glycol and water 1:1) followed by species identification and determination of functional traits (humidity affinity) based on ecological classification (e.g., hygrophilous, mesophilous, xerophilous).",
+    "measurementMethod_reasoning": "The study used pitfall traps to collect carabids. After collection, the species were identified and their functional traits, including humidity affinity (e.g., hygrophilous, mesophilous, xerophilous), were determined for each species."
+  },
+  "Breeding Period": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the time of year when the organism reproduces.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column records discrete classifications of when the organism reproduces.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Breeding Period",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The breeding period is a natural history/ecological trait of the carabid beetles. Although the specimens were preserved in ethanol, the determination of this life history trait is considered a natural history observation based on the species' known life cycle or observed behavior in the field, fitting the definition of HumanObservation for ecological traits.",
+    "measurementMethod": "Determination of breeding period for each species based on captured specimens and associated data (as detailed in Table S3 and referenced in [52, 53, 54]).",
+    "measurementMethod_reasoning": "The text explicitly states that 'breeding period [52]' was determined for each species captured in the field trials. This determination relies on the identification of the species and the application of established knowledge or observation regarding their life cycle."
+  },
+  "Food Specialization": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the dietary specialization of the insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists discrete classifications of the organism's diet.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Food Specialization",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "Food specialization is a biological/ecological trait determined for specific species (carabid beetles) that were captured, identified, and preserved (stored in 70% ethanol) during the study.",
+    "measurementMethod": "Determination of food specialization for each species based on captured specimens (Table S3, Supplementary Materials).",
+    "measurementMethod_reasoning": "The text states that food specialization was determined for each species (Table S3). While the specific protocol is not detailed in the main text, the determination relies on the analysis of captured specimens, referencing established literature on carabid diet (e.g., Larochelle, 1990, cited as [23])."
+  }
+}

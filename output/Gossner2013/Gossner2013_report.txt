@@ -1,0 +1,85 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Gossner2013\Gossner2013.xlsx  (3008 rows)
+PREDICTION   : ..\output\Gossner2013\Gossner2013.csv  (1502 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 18 pair(s))
+  'Anobium inexpectatum' -> 'Anobium inexspectatum'
+  'BOSTRICHIDA E Bostrichus capucinus' -> 'Bostrichus capucinus'
+  'BOSTRICHIDA E Xylopertha retusa' -> 'Xylopertha retusa'
+  'BOTHRIDERID AE Oxylaemus cylindricus' -> 'Oxylaemus cylindricus'
+  'BOTHRIDERID AE Oxylaemus variolosus' -> 'Oxylaemus variolosus'
+  'BOTHRIDERID AE Teredus cylindricus' -> 'Teredus cylindricus'
+  'Choragus sheppardii' -> 'Choragus sheppardi'
+  'Cis lineatocibratus' -> 'Cis lineatocribratus'
+  'MELANDRYID AE Hallomenus binotatus' -> 'Hallomenus binotatus'
+  'MELANDRYID AE Mycetoma suturale' -> 'Mycetoma suturale'
+  'MELANDRYID AE Orchesia luteipalpis' -> 'Orchesia luteipalpis'
+  'MELANDRYID AE Orchesia micans' -> 'Orchesia micans'
+  'MELANDRYID AE Orchesia minor' -> 'Orchesia minor'
+  'NOSODENDRID AE Nosodendron fasciculare' -> 'Nosodendron fasciculare'
+  'RHIPIPHORIDA E Pelecotoma fennica' -> 'Pelecotoma fennica'
+  'Scolytus' -> 'Scolytus scolytus'
+  'TROGOSSITIDA E Nemosoma elongatum' -> 'Nemosoma elongatum'
+  'TROGOSSITIDA E Tenebroides fuscus' -> 'Tenebroides fuscus'
+
+ROW-LEVEL (key match)
+  matched (TP)          : 1502
+  missed (FN)           : 1506
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 1.000 / 0.499 / 0.666
+  SCOPED  P/R/F1        : 1.000 / 0.499 / 0.666
+  RECALL (GT coverage)  : 0.499
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0   1502  0.000  <-- low
+  measurementMethod             0    751  0.000  <-- low
+  measurementUnit             751   1502  0.500
+  measurementStatistic        751   1502  0.500
+  measurementRemarks            0      0    n/a
+  sex                        1502   1502  1.000
+  lifeStage                  1502   1502  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1502  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1506 MISSED ROWS MISSED
+  species not in prediction                             4
+  species present, trait missing                     1502
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Acallocrates denticollis'          ~0.63~  pred 'Acalles micros'   x4
+  -> 1 species mismatch explains 4 of 1506 misses (0%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Diameter'                         x751
+     'Dead-wood decay'                  x751
+  -> 2 missing traits explain 1502 of 1506 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Gossner2013_misses.csv, Gossner2013_misses_summary.json (1506 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       752   751   Δ-1 (split?)
+  canopy cover                                    752   751   Δ-1 (split?)
+  dead-wood decay                                 752     0   GT-ONLY
+  diameter                                        752     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.499  0.666   1502     0  1506   id+type+value
+  tags        0.000  0.000  0.000      0  1502  3008   basis+id+type+value+stat+sex+stage
+             (F1 -0.666 vs previous)

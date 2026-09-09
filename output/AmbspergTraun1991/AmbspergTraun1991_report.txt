@@ -1,29 +1,49 @@
 ================================================================
-GROUND TRUTH : ..\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (63 rows)
-PREDICTION   : ..\output\AmbspergTraun1991\AmbspergTraun1991.csv  (63 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+GROUND TRUTH : ..\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (60 rows)
+PREDICTION   : ..\output\AmbspergTraun1991\AmbspergTraun1991.csv  (111 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 63
-  missed (FN)         : 0
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+TAXON NAME REMAP (pred -> gt, 10 pair(s))
+  'Amitermes perelegans' -> 'Amitermes perelegans (Hill)'
+  'Ephelotermes taylori' -> 'Ephelotermes taylori (Hill)'
+  'Heterotermes vagus' -> 'Heterotermes vagus (Hill)'
+  'Heterotermes venustus' -> 'Heterotermes venustus (Hill)'
+  'Macrognathotermes sunteri' -> 'Macrognathotermes sunteri (Hill)'
+  'Microcerotermes serratus' -> 'Microcerotermes serratus (Froggatt)'
+  'Nasutitermes eucalypti' -> 'Nasutitermes eucalypti (Mjöberg)'
+  'Nasutitermes graveolus' -> 'Nasutitermes graveolus (Hill)'
+  'Nasutitermes longipennis' -> 'Nasutitermes longipennis (Hill)'
+  'Schedorhinotermes actuosus' -> 'Schedorhinotermes actuosus (Hill)'
 
-  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+measurementType LEFT UNMAPPED (3)
+  'Baits': no ground-truth string denotes this
+  'Direct search': no ground-truth string denotes this
+  'Total': no ground-truth string denotes this
+
+ROW-LEVEL (key match)
+  matched (TP)          : 59
+  missed (FN)           : 1
+  spurious, in scope    : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 48   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.532 / 0.983 / 0.690
+  SCOPED  P/R/F1        : 0.937 / 0.983 / 0.959
+  RECALL (GT coverage)  : 0.983
+
+  out-of-scope rows by uncovered field:
+    measurementType                             48
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                63     63  1.000
-  measurementMethod             0     16  0.000  <-- low
+  basisOfRecord                59     59  1.000
+  measurementMethod             0      0    n/a
   measurementUnit               0      0    n/a
-  measurementStatistic         63     63  1.000
+  measurementStatistic         59     59  1.000
   measurementRemarks            0      0    n/a
-  sex                          63     63  1.000
-  lifeStage                    63     63  1.000
+  sex                          59     59  1.000
+  lifeStage                    59     59  1.000
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -33,11 +53,31 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
+  associatedReferences          0     59  0.000  <-- low
   externalLink                  0      0    n/a
+
+WHY THE 1 MISSED ROWS MISSED
+  species+trait present, value differs                  1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'mound'                      ->  'hypogeal'                   x1
+  -> 1 substitution explains 1 of 1 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> AmbspergTraun1991_misses.csv, AmbspergTraun1991_misses_summary.json (1 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
+  baits                                             0    16   PRED-ONLY
+  direct search                                     0    16   PRED-ONLY
   feeding group                                    16    16   
-  microhabitat found                               30    30   
-  nesting group                                    17    17   
+  microhabitat found                               28    30   Δ+2 (split?)
+  nesting group                                    16    17   Δ+1 (split?)
+  total                                             0    16   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.937  0.983  0.959     59     4     1   id+type+value
+             (48 more spurious row(s) out-of-scope; strict P would be 0.532)
+  tags        0.937  0.983  0.959     59     4     1   basis+id+type+value+stat+sex+stage
+             (48 more spurious row(s) out-of-scope; strict P would be 0.532)
+             (F1 +0.000 vs previous)

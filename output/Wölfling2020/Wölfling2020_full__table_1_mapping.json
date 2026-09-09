@@ -1,0 +1,32 @@
+{
+  "identifier": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This column names the biological trait or variable being analyzed in the study."
+  },
+  "t-value/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the calculated test statistic (t or z value) for the measurement."
+  },
+  "P-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the probability value (p-value) associated with the statistical test."
+  },
+  "Regression coefficient β": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the regression coefficient (beta) quantifying the relationship."
+  },
+  "Marginal $R^{2}$": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the marginal R-squared value, indicating variance explained."
+  },
+  "Conditional $R^{2}$": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the conditional R-squared value, indicating variance explained."
+  }
+}

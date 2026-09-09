@@ -1,27 +1,32 @@
 {
-  "Plant family/genus": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This column lists the names of plant families or genera being observed."
+  "Site_ID": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "These are site codes used to identify the specific sampling location."
   },
-  "High": {
+  "Intensity": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a count (frequency) for observations in the 'High' category."
+    "reasoning": "This header describes a measured property or condition of the sampling event."
   },
-  "Medium": {
+  "Plant_rich": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a count (frequency) for observations in the 'Medium' category."
+    "reasoning": "The header defines the measured property (plant richness) for the organism/site."
   },
-  "Low": {
+  "Perc_shrub": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a count (frequency) for observations in the 'Low' category."
+    "reasoning": "The header defines the measured property (percentage of shrub cover)."
   },
-  "Grand Total": {
+  "Perc_grass": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents the total count or sample size across all categories."
+    "reasoning": "The header defines the measured property (percentage of grass cover)."
+  },
+  "Perc_tree": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header defines the measured property (percentage of tree cover)."
   }
 }

@@ -1,0 +1,97 @@
+{
+  "Triepeolus sp. 1": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains scientific names of insect taxa (e.g., Triepeolus timberlakeii).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Contains scientific names of bee species, which is a discrete biological classification."
+  },
+  "1": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Numeric values representing a measured characteristic of the organism.",
+    "category": null,
+    "reasoning_relevance": "The value '1' suggests an index, count, or identifier, which is not a biological trait or measurement."
+  },
+  "UK": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Contains location identifiers (e.g., UK) where sampling occurred.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values like '1.71' and '182.5' represent physical measurements of the organism.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "UK (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Numeric values representing a measured characteristic of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Numeric values like '1.71' and '182.5' represent physical measurements of the organism.",
+    "multi_value": false,
+    "value_type": "numeric"
+  },
+  "NA": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Numeric values representing a measured characteristic of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Values like 'parasite' and 'poly' are discrete classifications of life history traits.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "below": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a relative condition or position of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Indicates nesting location (below-ground vs. above-ground), a discrete biological trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "below",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study involves field sampling and observation of live bees (netting bees visiting flowers for 2 hours) to record behavioral and ecological traits (phenology, nesting location, sociality). While morphological traits (body size) were measured from collected specimens, the overall data collection method is based on systematic field sampling and observation of the bee community in its natural and agricultural habitats.",
+    "measurementMethod": "Systematic field sampling using netting during 2-hour periods at each site. Ecological traits (nesting location, phenology, sociality) were recorded during site visits. Morphological traits (body size) were measured from collected specimens. Floral resources and nesting substrate availability were quantified using standardized quadrats and transects (e.g., counting trees, shrubs, stems, and dead wood).",
+    "measurementMethod_reasoning": null
+  },
+  "NA (1)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological trait or behavior of the organism (e.g., excavate).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes nest construction behavior (e.g., 'excavate'), a discrete biological trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "NA",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data was collected by systematically netting bees observed visiting flowers in the field (on farms and natural habitats) over defined time periods (2-hour periods on 8 dates per site). While some specimens were handled for identification and trait measurement (e.g., body size), the primary data collection method for species abundance and behavioral traits (like nesting location and phenology) relies on observing live organisms in their natural or semi-natural environment.",
+    "measurementMethod": "Systematic netting of bees visiting flowers during 2-hour periods (1 hour morning, 1 hour afternoon) on eight dates per site. Bee identification followed Ascher & Pickering (2012). Trait data, including body size (mean intertegular distance of five haphazardly selected females), nesting location, and phenology, were collected using specific field protocols, including subsequent surveys of nesting substrates (modified from Potts et al. 2005).",
+    "measurementMethod_reasoning": null
+  },
+  "parasite": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the social or ecological state of the organism (e.g., solitary).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the organism's life history or social status (e.g., 'solitary', 'parasite').",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "parasite",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "NA (2)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes a biological trait or characteristic of the organism (e.g., poly).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Contains discrete classifications of life history traits like 'parasite' or 'poly'.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "NA",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study involves observing and sampling bee communities in their natural and agricultural habitats (in situ). The data collected includes species abundance, life-history traits (like nesting location, sociality, and phenology), and foraging behavior, which are all derived from field observations (netting bees visiting flowers) and subsequent field measurements of habitat characteristics (nesting substrates).",
+    "measurementMethod": "Systematic netting of bees visiting flowers during 2-hour observation periods (1 hour morning, 1 hour afternoon) while moving systematically throughout the site. Nesting substrates were quantified using standardized transects and quadrats to record the number of trees, shrubs, dead stems, and percentage cover of bare ground and dead wood.",
+    "measurementMethod_reasoning": "The methodology describes a specific protocol for bee collection (systematic netting during 2-hour periods) and a detailed protocol for quantifying nesting habitat (using 100m transects and 1m2 quadrats to count trees, shrubs, stems, and bare ground cover)."
+  }
+}

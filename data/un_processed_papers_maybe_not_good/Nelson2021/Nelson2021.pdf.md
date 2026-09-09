@@ -1,0 +1,340 @@
+# Reintroduced grazers and prescribed <sup>fi</sup>re effects on beetle assemblage structure and function in restored grasslands
+
+MELISSA NELSON,<sup>1</sup> SHERYL C. HOSLER,<sup>1,2</sup> FABIAN A. BOETZL ,<sup>3</sup> HOLLY P. JONES ,<sup>1,4</sup> AND NICHOLAS A. BARBER <sup>1,5,6</sup>
+
+<sup>1</sup>Department of Biological Sciences, Northern Illinois University, 155 Castle Dr. DeKalb, Chicago, Illinois 60115 USA <sup>2</sup>Department of Biology, University of Illinois Chicago, Chicago, Illinois 60607 USA
+
+<sup>3</sup>Department of Animal Ecology and Tropical Biology, Biocenter, University of W€urzburg, Am Hubland,97074W€urzburg, Germany <sup>4</sup>Institute for the Study of the Environment, Sustainability, and Energy, Northern Illinois University, 155 Castle Dr. DeKalb, Chicago, Illinois 60115 USA
+
+<sup>5</sup>Department of Biology, San Diego State University, 5500 Campanile Drive, San Diego, California 92182 USA
+
+Citation: Nelson, M., S. C. Hosler, F. A. Boetzl, H. P. Jones, and N. A. Barber. 2021. Reintroduced grazer and prescribed fire effects on beetle assemblage structure and function in restored grasslands. Ecologica Applications 31(1):e02217. 10.1002/eap.2217
+
+Abstract. Ecological restoration seeks to reestablish functioning ecosystems, but planning and evaluation often focus on taxonomic community structure and neglect consumers and their functional roles. The functional trait composition of insect assemblages, which make up the majority of animal diversity in many systems, can reveal how they are affected by restora tion management and the consequences for ecosystem function. We sampled ground beetle (Coleoptera: Carabidae) assemblages in restored tallgrass prairies varying in management with prescribed fire and reintroduced American bison (Bison bison) to describe their taxonomic and functional trait structure. We also measured seed and arthropod predation to relate manage ment, beetle assemblage characteristics, and function, and to test if function is maximized by trait diversity, dominant trait values, or beetle abundance. Beetle assemblages primarily varied with restoration age, declining over time in richness and both taxonomic and functional diver sity, but bison presence also influenced taxonomic composition. Prescribed fire reduced seed predation in summer and arthropod predation in fall. Although seed predation was unrelated to beetle assemblages, arthropod predation was greater in sites with higher abundances of car nivorous ground beetles. The relatively weak impacts of fire and bison on functional assem blage structure is a promising sign that these management disturbances, aimed at supporting a diverse native plant community, are not detrimental to beetle assemblages. The significance of reduced predator function following prescribed fire will depend on the restoration context and whether seed or arthropod predation relates to management goals.
+
+Key words: Carabidae; functional diversity; functional trait; insect community; predation; tallgras prairie.
+
+## INTRODUCTION
+
+A goal of ecological restoration is to reestablish ecosystem function, but in many cases evaluations of restoration activities primarily focus on community taxonomic diversity or composition, overlooking the functional structure of communities (Rey Benayas et al. 2009, Suding 2011, McDonald et al. 2016, Brudvig et al. 2017, Jones et al. 2018). Examining functional trait values and diversity in the communities of restored ecosystems may provide novel information about the impacts and successes of restoration management activities beyond what species identities alone can provide. Functional traits are the characteristics of an organism that determine its response to an environment or effect on a given ecosystem function (Violle et al. 2007), and the importance of trait-based perspectives to explain rela tionships between biodiversity and ecosystem function are widely recognized (Hooper et al. 2005, Cadotte et al. 2011, Cardinale et al. 2012).
+
+Another potential shortcoming in restoration assessments is a focus on plants at the exclusion of othe organisms. Management actions in restored habitats are often limited to plant communities even though animal make important contributions to functions such as predation, herbivory, and decomposition (Losey and Vaughan 2006, McAlpine et al. 2016). In particular, insect communities may represent the majority of animal species diversity in a restored habitat and they support critical functions as predators, prey, decomposers, pollinators, seed dispersers, ecosystem engineers, and other roles (Weisser and Siemann 2008). Nonetheless, insects are often overlooked in ecological restoration planning and assessment, although attention to pollinator communities has increased (Wodika and Baer 2015, Griffin et al. 2017, Tonietto et al. 2017, Luong et al. 2019, Montoya-Pfeiffer et al. 2019). A more complete understanding of functional restoration will require ecologists to examine insect community responses to restoration and management activities.
+
+In restored grasslands, grazing and fire are two important disturbances that are used by land managers to mimic historical disturbance regimes (Packard and Mutel 2005, Bowles and Jones 2013). Both grazing mammals and prescribed fire cause environmental variation that can shape the taxonomic and functional structure of plant (Collins et al. 1998, Coppedge and Shaw 1998, Towne et al. 2005, Collins and Smith 2006, Spasojevic et al. 2010) and consumer communities (Vogel et al. 2007, Powell 2008, Ricketts and Sandercock 2016). Grassland plant communities also undergo succession following restoration activities, leading to changes in plant diversity and structure over time that influence diversity and composition of insects and other consumers. Ground beetles (Coleoptera: Carabidae) are a diverse insect family present in most terrestrial ecosystems worldwide, including grasslands, where they can fill important functional roles as predators of seeds and other arthropods (Lovei and Sunderland 1996, Vanbergen et al. 2005, McCravy and Lundgren 2011). Ground beetles have been used as indicators of land use changes and environmental effects because their assemblage diversity and composition respond to environmental variation (Rainio and Niemel€a 2003, Langor and Spence 2006, Barber et al. 2017b). These assemblage responses to habitat management and environmental variation, and resulting changes in beetles’ predatory impacts, are determined in large part by the functional traits of species in the assemblages (Gerisch 2014, Bargmann et al. 2016, Barber et al. 2017b).
+
+One outstanding question in the role of functional traits and ecosystem function is whether functions are promoted by a diversity of trait values, by dominance of a particular trait value, or simply by the abundance of organisms contributing to the function regardless of their traits (Gagic et al. 2015). In the first case, complementarity of multiple trait values, reflected in multivariate functional diversity, may result in greater function (Hillebrand and Matthiessen 2009). In the second scenario, communities in which species with a particular value of a trait (or small number of traits) are more abundant will have the greatest function because this trait is directly tied to the function of interest (Garnier et al. 2004). These can be described with mean trait values in a community or the proportion of individuals in the community possessing that trait value. Finally, if trait diversity or differences in trait identity between species are unimportant, and all species contribute to function similarly, then total abundance or biomass of the community will predict function (Gagic et al. 2015). If ecosystem restoration and management activities drive variation in the abundance and functional trait structure of ground beetle communities, then restorations present an opportunity to test this basic ecological question and help reveal the mechanism underlying these trait–function relationships.
+
+Here we investigated the impacts of fire and grazing management in restored tallgrass prairies on the functional trait structure and predation effects of ground beetles. We described ground beetle assemblages from both taxonomic and functional trait perspectives, and we measured seed and arthropod predation. Working in restorations that vary in age, presence of bison, and recent fire history allowed us to address two objectives. First, we documented how restoration characteristics shape grassland beetle communities from taxonomic and functional perspectives. Second, because we quantified both functional trait diversity and community trait proportions, we additionally evaluated whether predator functions are best predicted by trait diversity, particular trait values, or the overall abundance of ground beetles. In this way, we use restoration ecology to inform general ecological knowledge on consumer trait–function relationships (Palmer et al. 1997).
+
+## METHODS
+
+## Study site
+
+This study was part of the Restoring Function in Grassland Ecosystems (ReFuGE) project and took place at Nachusa Grasslands, a 1,500-ha ecological restoration project consisting largely of restored and remnant tall grass prairie in Lee and Ogle Counties, Illinois, USA. Restoration activities generally consist of seeding a diverse mix of native forbs and grasses into former agricultural fields (corn–soy rotation). Sites receive prescribed fire in early spring or late fall, with most sites burned every 2–3 yr (see Hansen and Gibson [2014] for more details). American bison (Bison bison) were reintroduced to a portion of the site in October 2014. In 2018, when this study took place, there were 132 bison, including calves born in 2018, in the 600 contiguous and connected hectares to which bison had access (0.22 bison/ha, or 0.196 animal units/ha accounting for variation in age and sex).
+
+We selected 15 restored prairies that ranged from 3 to 31 yr since planting in the study year. We also selected two prairie remnants, sites that were never converted to agricultural fields and maintain prairie plant communities, but were likely grazed prior to the 1980s. We estab lished $2 2 ~ 6 0 ~ \times ~ 6 0$ m research grids for pitfall trapping and/or predator assays in these sites, with some sites having two or three grids (Table 1). Sites were 5.6–20.6 ha in area and were separated from each other by 0.1– 5.0 km. Nachusa exists within an agricultural matrix, and most sites are adjacent to both row crops (corn or soybean) and other restored or remnant prairie. Seven of the restorations and one remnant were inside the 600-ha bison unit, enclosed by a fence, in which bison move freely. All other sites have no bison present, and there are no cattle or other livestock at Nachusa. Bison or bison dung were observed in all sites within the bison unit during our study. In 2018, eight of the restoration grids and both remnants received prescribed burns, and another burned when a neighbor’s lawnmower caught on fire and the fire spread through most of the restoration (a prescribed fire 2 d later burned the remainder of the site). All fires occurred between 4 March and 17 April 2018. The remaining restorations had not been burned since 2016 or 2017. Because prescribed fires are applied to entire sites, and because bison have freedom to access all of the sites in the bison unit, management treatments occur at significantly larger scales than our sampling areas. This ensures that bison, fire, and age characteristics of each site apply to the sampling area of our pitfall trap arrays (see ’Beetle sampling’ below).
+
+TABLE 1. Characteristics of restored and remnant prairie study sites.
+
+<table><tr><td>Site</td><td>Age (yr)</td><td>Bison</td><td>Fire</td></tr><tr><td>Crew15†</td><td>3</td><td>N</td><td>Y</td></tr><tr><td>HF</td><td>5</td><td>Y</td><td>Y</td></tr><tr><td>HPN</td><td>6</td><td>Y</td><td>N</td></tr><tr><td>LOW</td><td>7</td><td>Y</td><td>N</td></tr><tr><td>SB</td><td>9</td><td>N</td><td>N</td></tr><tr><td>SBEE</td><td>9</td><td>N</td><td>N</td></tr><tr><td>SBEW</td><td>9</td><td>N</td><td>N</td></tr><tr><td>CCW</td><td>10</td><td>N</td><td>Y</td></tr><tr><td>CCWE</td><td>10</td><td>N</td><td>Y</td></tr><tr><td>HPW</td><td>10</td><td>Y</td><td>Y</td></tr><tr><td>FC</td><td>12</td><td>N</td><td>Y</td></tr><tr><td>CCE</td><td>11</td><td>N</td><td>N</td></tr><tr><td>CCEE</td><td>11</td><td>N</td><td>N</td></tr><tr><td>SFW†</td><td>16</td><td>N</td><td>Y</td></tr><tr><td>TC</td><td>16</td><td>N</td><td>Y</td></tr><tr><td>TCE</td><td>16</td><td>N</td><td>Y</td></tr><tr><td>HLP</td><td>17</td><td>Y</td><td>Y</td></tr><tr><td>SF</td><td>17</td><td>N</td><td>N</td></tr><tr><td>WH</td><td>26</td><td>Y</td><td>N</td></tr><tr><td>MU</td><td>31</td><td>Y</td><td>Y</td></tr><tr><td>MUR</td><td>Remnant</td><td>Y</td><td>Y</td></tr><tr><td>TCR</td><td>Remnant</td><td>N</td><td>Y</td></tr></table>
+
+Note: Age indicates number of growing seasons since a site was restored, bison indicates the presence (Y) or absence (N) of reintroduced bison, and fire indicates if the site received prescribed fire since the previous growing season (i.e., in the spring prior to the 2018 study season).  
+† Restorations not included in ground beetle sampling but used for predator assays.
+
+## Beetle sampling
+
+We used pitfall traps to sample ground-dwelling arthropods in spring, summer, and fall on 18 of the restorations and both remnants. The restorations included four with bison and prescribed fire in the study year, three with only bison, six with only fire, and five with neither bison nor fire (Table 1). We installed two trap arrays, each consisting of five pitfall traps, at two opposite corners of each research grid, with traps in each array spaced 5 m apart and the center of the arrays separated by 99 m. Traps were 12.1 cm deep and openings were 9.5 cm diameter. We baited the center trap in each array with fresh bison dung as part of a related study of dung beetles (Hosler et al., in press). We half-filled each trap with a 1:1 mixture of propylene glycol and water and covered it with wire mesh (2.5-cm openings) to exclude vertebrates. We opened traps 23 May–12 June, 9–16 July, and 14–21 September and pooled the contents of the 10 traps per site in each sampling session.
+
+We sorted ground beetles from other arthropods and identified them to species or morphospecies using keys for Carabidae (Ciegler 2000, Arnett et al. 2002, Bousquet 2010). We selected traits related to beetle fecundity, foraging capability, dispersal, and resource usage (Fountain-Jones et al. 2015, Brousseau et al. 2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al. 2001, Kotze et al. 2003, Larochelle and Larivi-ere 2003, Barbaro and Halder 2009, Brooks et al. 2012, Fountain-Jones et al. 2015, Barber et al. 2017b; Appendix S1: Table S1).
+
+## Predation assays
+
+We estimated predator function by measuring seed and arthropod predation in all sites, including the two restorations not used for beetle sampling (Table 1). To measure seed predation, we placed prairie plant seeds in a petri dish with a thin layer of sand to replicate natural soil conditions. Following Zirbel et al. (2017), we used 20 seeds of four prairie plant species (Desmodium canadensis, Sorgastrum nutans, Rudbeckia hirta, and Monarda fistulosa). We placed five dishes, covered with a wire cage to exclude mammals and birds, on the ground 10 m apart along a 40-m transect on 10 July. After 48 h, we collected and air-dried dishes for a minimum of 48 h before counting the remaining number of seeds and calculating the average number of remaining seeds for the five dishes in each site.
+
+We measured arthropod predation by securing four wax worm larvae (Galleria mellonella, Lepidoptera: Pyralidae) to a petri dish and added a thin layer of sand, again following Zirbel et al. (2017). Lepidoptera larvae are common prey items of carnivorous ground beetles (Larochelle and Larivi-ere 2003). As in the seed predation assay, we placed five dishes in the same locations as the seed predation dishes and covered them with wire cages. We collected the dishes after 24 h and recorded waxworm fates. Because some wax worms were partially consumed, we estimated remaining wax worms to the nearest quarter (i.e., fully consumed wax worms = 0 remaining, half-consumed = 0.5 remaining, etc.) and calculated the average wax worms remaining for each site. We carried out arthropod predation assays on 12 July and 14 September, concurrent with the July and September trapping sessions.
+
+## Taxonomic and functional trait community metrics
+
+Ground beetle and other ground-dwelling arthropod densities determined from pitfall traps usually are expressed as “activity densities,” which acknowledges that capture rates incorporate both abundance and activity of arthropods in the trap area (Thomas et al. 1998). We calculated activity density and rarefied species richness using ChaoRichness() in the iNEXT package of R (Chao et al. 2014) because species accumulation curves indicated rarefaction was justified (Appendix S1: Fig. S1). To describe functional trait diversity, we calculated four complementary metrics from the trait values of species in each assemblage. These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al. 2005, Villeger et al. 2008, Laliberte and Legendre 2010, Mouillot et al. 2013). FRic represents the range of functional trait values within the niche space, while FEve describes the distribution of species within that space (Mason et al. 2005). FDiv measures how much of a community is represented by individuals belonging to species with more extreme trait combinations, and FDis reflects how much species in a community differ from the center of multivariate trait space (Mouillot et al. 2013). FEve, FDis, and FDiv were weighted by species abundance (i.e., activity density). For the assemblage at each research grid, we calculated community-weighted means (CWMs) for body size, our only continuous trait, and the proportion of individuals with a trait value for the other categorical traits.
+
+## Analysis
+
+We determined how restoration characteristics affected ground beetle activity density (total, herbivore/ omnivore, and carnivore), rarefied richness, and functional diversity metrics using linear models with bison (present/absent), prescribed burn (present/absent in study year), and restoration age (years since planting) as independent variables. We did not include interactions in models because of the limited number of restorations studied. We excluded remnants from these models because they do not have an age and because their edaphic characteristics and management histories are so different from restorations, but we depict them in figures for comparison. Activity density, FRic, and FEve were log-transformed to meet assumptions of normality and homoscedasticity. Fixed factors were evaluated with F tests using Type II tests in the Anova() function of the car package (Fox et al. 2007) in R. To examine taxonomic composition of beetle assemblages, we used distance-based redundancy analysis (dbRDA, Legendre and Anderson 1999) based on Bray-Curtis distances of species’ activity densities using the R package vegan (Oksanen et al. 2013), with the same explanatory variables and activity densities each species standardized to proportion of the assemblage so each assemblage summed to 1. We evaluated bison, fire, and age using permutational Type II marginal tests with 9,999 permutations.
+
+To understand how restoration characteristics affected the individual traits of each community, we analyzed body size CWM (a continuous trait), and the proportion of individuals in each community with particular categorical trait values: brachypterous wing morphology, carnivorous diet, spring phenology, and diurnal activity. Body size was analyzed with a linear model as above, while the proportions were analyzed using binomial generalized linear models (GLMs). All binomial models were overdispersed, so we specified quasibinomial error distribution. Fixed factors were the same and evaluated as above.
+
+We related seed- and arthropod-predator function to restoration characteristics and the ground beetle communities in two ways. First, we analyzed how predation varied with bison, prescribed burns, and restoration age using binomial GLMs. The seed predation assay and both arthropod predation assay sessions were each analyzed with a separate model, and fixed factors were evaluated with Type II tests. Next, we determined if predation rates were predicted by ground beetle assemblage structure (including remnants, but not the two restorations in which beetles were not sampled) by relat ing predation rates to total beetle activity density, rarefied richness, each functional diversity metric, or individual traits (body size CWM or proportion of individual trait categories). Each beetle community characteristic was included as a fixed factor in a model, and models were compared using $\mathrm { { A I C } _ { c } . }$ For the seed predation candidate model set, trait categories included proportions that were brachypterous, spring active, herbivore/omnivore, and diurnal, as well as the activity density of just herbivores/omnivores. Strict herbivores generally made up a very small proportion of the communities, so we combined them with omnivores (many of which are primarily seed-eating species). For arthropod predation candidate models, the same trait categories were included, except that proportion and activity density of carnivores was substituted for herbivores/omnivores. Community characteristics were calculated from trapping session-specific captures; that is, the July seed predation and arthropod predation assays were analyzed using the July trapping session captures, and the September arthropod predation assay was analyzed using the September trapping session captures. Each model set also included a null (intercept only) model.
+
+## RESULTS
+
+We captured 3,214 ground beetles of 40 species or morphospecies in restorations, plus an additional 432 beetles of 21 species in the two remnants (no species were unique to remnants). Five species represented >75% of the individuals captured in restorations: Cyclotrachelus seximpressus, C. sodalist, Chlaenius platyderus, Pterostichus permundus, and Cicindela sexguttata (Table S8). Ground beetle assemblages were primarily shaped by restoration age, with some effects of bison presence and no detected changes due to prescribed burns. Activity density increased with restoration age, and rarefied richness declined with age, but both were unaffected by bison or prescribed burns (Appendix S1: Table S2, Fig. 1). Shannon diversity declined with age but was also reduced in sites with bison present (Fig. 1). Taxonomic composition of beetle assemblages was significantly related to both age and bison presence (Appendix S1: Table S4, Fig. 2). Three of the four metrics of functional diversity (FRic, FEve, and FDis) declined with restoration age, but bison and prescribed burns did not affect functional diversity (Fig. 1).
+
+Restoration age also shaped ground beetle community functional trait composition (Appendix S1: Table S3). Older restorations had beetles with greater size (body size CWM) and communities with a greater proportion of brachypterous, carnivorous, and nocturnal species (Fig. 3). Older restorations also had fewer spring-active species than younger restorations, and spring-active beetles were marginally reduced following prescribed burns (Fig. 3).
+
+Seed and arthropod predation were unaffected by restoration age or bison presence, but predation rates were lower in sites that had received prescribed fire, although the effect was marginally significant in the first arthropod predation assay (Appendix S1: Table S5, Fig. 4A–C). The top-ranked seed predation model was the null model (Appendix S1: Table S6); although $\Delta \mathrm { A I C _ { c } }$ was <2 for the model containing rarefied richness, there was no significant relationship between seed predation and richness $( F _ { 1 , 1 8 } = 2 . 5 0 , P = 0 . 1 3 1 )$ . Similarly, the null model was the top-ranked for the first predation assay (Appendix S1: Table S6); the proportion of spring-active beetles model was second $( \Delta \mathrm { A I C } _ { \mathrm { c } } < 2 )$ but non-significant $( F _ { 1 , 1 8 } = 2 . 4 3 , P = 0 . 1 3 6 )$ . However, for the second predation assay, the top models as carnivore activity density, with proportion carnivores and total activity density third and fourth (after the null model, all $\Delta \mathrm { A I C } _ { \mathrm { c } } < 2 )$ , and together these three models accounted for 0.507 of model weights (Appendix S1: Table S6). Because carnivores made up the majority of beetles in the trapping session, carnivore activity density and total activity density were highly correlated $( r = 0 . 9 7 7 )$ , so these models were very similar. Removing the total activity density model from the candidate model set increased the weight of the other two models. Arthropod predation significantly increased with greater September carnivore activity density $( F _ { 1 , 1 8 } = 4 . 4 2 $ $P < 0 . 0 5 0 $ Fig. 4D). Further, September carnivore activity density was significantly higher in sites that received prescribed fire (Appendix S1: Table S7).
+
+## DISCUSSION
+
+We examined ground beetle assemblages in restored grasslands from taxonomic and functional trait perspectives. Diversity, composition, and functional structure of the assemblage was most strongly related to restoration age, mirroring the vegetation changes that take place in the decades after a prairie is replanted. The presence of reintroduced bison changed taxonomic composition and reduced diversity of beetles but had little impact on functional trait structure or predatory function. On the other hand, there were few effects of prescribed fire on the assemblage as a whole, but there were significant effects on both seed and arthropod predation. Although only one measure of function (fall arthropod predation) was related to the ground beetle community, results did not support the hypothesis that function is maximized by trait diversity.
+
+## Ground beetle assemblage
+
+The reintroduction of bison led to changes in the taxonomic composition of ground beetle communities, with a significantly different assemblage structure compared to sites where restoration management has proceeded without bison. For example, Chlaenius platyderus was more predominant in bison sites, while Anisodactylus rusticus, Pterostichus melanarius, and P. stygicus were more likely to occur in sites without bison. Shannon diversity was also lower with bison, although the magnitude of this effect was quite small. However, these differences in taxonomic composition and diversity were mostly unrelated to the traits we examined, with the exception of diet. Carnivorous beetles generally made up a smaller proportion of the community in bison sites, a pattern that may have been driven in part by the higher abundance of C. platyderus, which eat both animal and plant material, and lower abundances of the carnivorous Pterostichus species identified above (Larochelle and Larivi-ere 2003). Grazing and other disturbances affect ground beetle composition in similar habitats: high- vs. low-intensity grazing resulted in significantly different species composition in shrublands (Kaltsas et al. 2013).
+
+![](images/9724e918a243cb22dd5af6367cfc5532b72566d6bf156da6f1526afcc99a048f.jpg)
+
+![](images/80c7e85037f7553c877694ce7c86dae1f31ef69fe0cf59735694acc6786ae0ed.jpg)
+
+![](images/c92a38c9ccb10106e780773164573540cea3a81cac777d2c3ed3431b6fdf9f4a.jpg)
+
+![](images/c76cbef33c55118c5aeede5a62133135e7360c59dba741816a66f26dd4668680.jpg)
+
+![](images/5f800eb27796b5292864e624c46ad692307c6920093b561fc4fdc8a760829ad2.jpg)
+
+![](images/b689f7da5675b89c870d016e0c5215c1ff53abf9535ba4e47b9cf4d56cb7d113.jpg)  
+Restoration age (yr)  
+FIG. 1. Patterns of ground beetle assemblage taxonomic and functional trait diversity. Each point represents a site and, in pane E, sites with bison present are indicated by open points and the dashed line. In all figures, triangles are remnant prairie sites for comparison. For statistical results, see Appendix S1: Table S2. FRic, functional richness; FEve, functional evenness; FDis, func tional dispersion.
+
+The same study also found that abundance and diversity were starkly reduced under high grazing pressure. The relatively low density of bison at our sites likely represents much lower grazing pressure, and we do not see such strong effects on activity density or Shannon diversity. Fewer carnivorous beetles align with findings that plant- and seed-eating ground beetles are more common under disturbances (Ribera et al. 2001); bison might be increasing the relative proportion of herbivorous species if seed production of some plants is greate following grazing on competitors (Damhoureyeh and Hartnett 1997). It is also possible that bison activity reduced the abundance of arthropod prey for carnivorous beetles, as in seminatural grasslands where cattle grazing significantly reduced butterfly and moth abundances (Poyry et al. 2004) or arid meadows where€ insects were significantly less abundant when exposed to grazing by cattle, elk, and deer (Rambo and Faeth 1999). But other investigations of bison grazing in North American tallgrass prairies have generally found the opposite pattern: overall arthropod abundances increase with bison presence (Joern 2004, 2005, Moran 2014).
+
+Restoragion age (yr)  
+![](images/a4354e21c522df48f5151b0a4d696ba47b56e11c1f4461b8edb8531f91f2b63e.jpg)
+
+On the other hand, prescribed fire had little impact on ground beetle assemblages from either taxonomic or functional trait perspectives. The only trait measurement related to fire was phenology: spring-active beetles made up a smaller proportion of the overall community in sites that had received fire prior to the growing season in which sampling occurred. Burns occurred in March and April, and trapping commenced in late May. The most immediate impact of prescribed fire is the near-total elimination of aboveground thatch, in contrast to unburned sites where dead plant material is present and frequently standing >1 m in height. By the time trapping began, however, new vegetation growth was approximately 0.5 m high. Spring-active species could have been directly reduced by fire mortality (Harper et al. 2000,
+
+FIG. 2. Results of distance-based redundancy analysis (dbRDA) of ground beetle assemblages in restored prairies. Circles represent sites with bison, squares are sites without bison, and ellipses are 1 SD. Circles and squares with heavier outline are sites that received prescribed fire. Numbers in each point are the age of the restoration in years. For statistical results, see Appendix S1: Table S4.  
+![](images/b780d8f0bdefc60f63460c5980392b9344093db2235c6362977f2027d1d9222d.jpg)
+
+![](images/63ea86368e14d22c431ebea7075b6f66cec34f0d38d0a30df11c75a01208fc85.jpg)
+
+![](images/9388ffec659439b90902bf8d67c0c05c9ecec2078a5d81a980e13fb9dccd7a2f.jpg)
+
+![](images/24d2941a4de459b36058e1a4382b69bf0fd0bdddc58a6418ded640cb0f9c0b59.jpg)
+
+![](images/a102554f94f762333db4657e95b772eeb9077001c852aeadc68f66499bb6d33b.jpg)  
+FIG. 3. Patterns of individual traits of ground beetle assemblages. Each point represents a site. In panel B, sites that received prescribed fire in the previous year are indicated by open points and the dashed line; in panel E, sites with bison present are indicated by open points and the dashed line. In all figures, triangles are remnant prairie sites for comparison. In panels B–E, lines represent predicted relationships with age based on binomial models, back-transformed from logits to proportions of the assemblage. For statistical results, see Appendix S1: Table S3. CMW, community-weighted mean.
+
+![](images/e3b0032d578153327aadbca40dcaa40d5159c7337f522175526a54cd64488e27.jpg)
+
+![](images/055a06936402896b801dbe6508d52ace71c52906798f561c0106a734fb123e71.jpg)
+
+![](images/7d5f3c230e3b9ba3c41b85434c3b6f81ccc5eda87c0ff1065554efc0ca8b0818.jpg)
+
+![](images/73a622f19c9e123b5ee8dfd1f46a4a74300f6f88917af8fc320eb8dbe7dc9ae7.jpg)  
+FIG. 4. Results of (A) seed and (B) fall arthropod predation assays, and (C, D) relationships with carnivorous beetle activit density. Each point represents a site, and triangles are remnant prairie sites. For statistical results, see Appendix S1: Tables S5–S7 and Results.
+
+Panzer 2002), although ground-dwelling arthropods might be more likely to find safe refuge during a fire than those diapausing within plant tissues. Species overwintering as larvae or pupae in the soil would also likely be protected from fires. Prescribed fire increased ground beetle abundance and richness, but reduced diversity and evenness, in a smaller-scale restored tallgrass prairie (Larsen and Williams 1999), but the adjacency of unburned patches may have facilitated these higher abundances. We identified one other impact of fire on trait patterns when examining possible mechanisms for increased arthropod predation in fall (see ’Predator function’ below). The activity density of carnivorous beetles was significantly lower in burned sites even though fires took place at least five months earlier. This could be related to reduced spring-active arthropods if it results in lower prey availability for carnivores or directly kills individuals of species that have a long activity period (i.e., reproducing early in the year but active through the fall).
+
+Overall fire and bison management, which mostly is focused on plants in these restored tallgrass prairies, is not having negative impacts on ground beetle assemblages. That is, neither management action is causing severe declines in density or diversity. Given the necessity of fire to maintain grassland physiognomy by suppressing woody plants and to limit the spread of problematic exotic weeds (Packard and Mutel 2005), and the poten tial of bison grazing to enhance floristic diversity (Elson and Hartnett 2017), this is a promising sign that prairie restoration management may support (or at least not diminish) consumer taxonomic and functional diversity. Management disturbances can be detrimental to largebodied ground beetles (Ribera et al. 2001), and earlier surveys at this same study site suggested that prescribed fire may have negatively affected large species (Barber et al. 2017b), but we find no such pattern here. Rather, community-weighted mean body size significantly increases as restorations get older, which may be a sign of recovery from a legacy of agricultural disturbances. Because large body size and a brachypterous (wingless) state commonly co-occur in the species we document, the recovery of these larger, dispersal-limited species is likely to take time.
+
+Time, the number of years since restoration occurred at a site, was the dominant driver in the structure of this beetle assemblage, and these effects were evident in both taxonomic and functional trait measurements. Although activity density increased with age, such that higher abundances of beetles generally occurred in older restorations, almost all measures of taxonomic and functional diversity declined. Older restorations were dominated by a smaller number of species, reducing Shannon diversity, and the common trait values of these dominant species caused declines in three of the four metrics of functional diversity. A decline in functional richness is consistent with previous results (Barber et al. 2017b) and expected when species richness declines because there are likely to be fewer trait combinations present. But this earlier work found no relationship between restoration age and functional evenness or dispersion, as well as an increase in functional divergence, while the two former metrics declined sharply in the present study. The earlier work sampled this chronosequence in just the first few years of growth for the youngest sites when they were characterized by high abundances of ruderal species such as Harpalus pensylvanicus, Poecilus chalcites, and Notiobia spp. All of these species were rare in the current study, where the youngest site was 5 yr old. Here we find strong evidence that the ground beetle assemblages in mature, established restorations continue to lose trait diversity. Animal functional diversity can be supported by plant and habitat heterogeneity. Patchy disturbances that create this heterogeneity may increase functional diversity, which then declines over time as habitats become more homogenous (Sitters et al. 2016). Similarly, the loss of beetle functional diversity in our study might be in part due to the transition from newly established prairie restorations to older sites with reduced plant diversity and heterogeneity (Hansen and Gibson 2014, Barber et al. 2017a).
+
+Restoration age also could interact with bison presence or prescribed fire such that management disturbances have different impacts on older vs. young restorations, although the limited sample size of our landscape-scale study precluded statistical analysis of these potential interactions. Greater bison impacts might be predicted in older restorations where grasses are more dominant because grasses are their preferred forage (Knapp et al. 1999). But bison probably respond more strongly to fire, selecting recently burned areas for grazing regardless of age because of the availability of palatable new growth (Fuhlendorf and Engle 2004). Because fires are prescribed by managers across sites of all ages, this would tend to distribute bison among different-aged restorations and reduce bison–age interactions. Bison and non-bison sites differed in beetle taxonomic composition (Fig. 2), but the differences appear weaker among older restorations. If, over the long term, bison impacts increase plant diversity and vegetation heterogeneity relative to older bison-free restorations, this might be reflected in the taxonomic or functional diversity of beetles, resulting in wider divergence of beetle community composition between bison and non-bison sites.
+
+Ground beetles in older prairie restorations are predominantly larger-bodied, flightless, nocturnal carnivores, and they are more likely to be active late in the season or all season long. A lag in colonization by brachypterous, flightless species, is expected due to lim ited dispersal and previously has been documented here and elsewhere (Holliday 1991, Schirmel et al. 2012, Woodcock et al. 2012, Barber et al. 2017b). Thus there may be a prolonged colonization credit (i.e., the opposite of extinction debt; Cristofoli et al. 2010, Jackson and Sax 2010) for some species as restored prairies become suitable habitat for these beetle species but they have not yet colonized them or established sustained populations. These colonizations partially offset the diversity losses of species that are not maintained in mature prairie restorations. Given that bison reintroduction occurred relatively recently at the study sites (2–3 yr prior to our sampling), a similar process may occur for species adapted to the heterogeneity that bison create through grazing, wallowing, and other activities (Knapp et al. 1999). Poyry et al. (2005) suggest that 5 yr post-initia- € tion might not be long enough for grazing-dependent Lepidoptera species to colonize, and these species generally are better dispersers than many ground beetles. Future monitoring of restorations with bison will be needed to determine if these grazers can support species that would not otherwise be present at this site.
+
+We also surveyed ground beetles in two prairie remnants that had never been converted into row crops. Although both experienced some livestock grazing in the past, grazing ceased in the early 1980s, until bison were allowed access to one of the remnants in early 2016 (2 yr before our study). Ground beetle assemblages in remnants differed from those in the oldest restorations in several ways. These differences are unsurprising because these remnants have different physical and biotic characteristics (Hansen and Gibson 2014): like many prairie remnants in the eastern tallgrass prairie region (Corbett and Anderson 2006), they occur on rocky slopes, which likely is the reason they were not converted to row crop agriculture during the 19th or 20th centuries, and have different plant communities (Hansen and Gibson 2014, Barak et al. 2017). Although remnant habitats are often used as references for restoration planning, these differences, combined with the overall extreme rarity of prairie remnants in the upper Midwest (Anderson 1991, Samson and Knopf 1994), limits their applicability as references. Nonetheless, the trajectory of taxonomic and functional trait characteristics of ground beetle assemblages across the chronosequence suggests those in older restorations will diverge from those in remnants as richness, Shannon diversity, and functional diversity fall short of the remnants. Remnant beetle assemblages are more similar to mid-aged restorations, particularly with more small-bodied and macropterous species. These patterns could be partly skewed by the limited availability of restorations >25 yr old; in particular, it will be important to monitor restorations with bison to determine if the heterogeneity they create in mid-aged restorations sustains beetle diversity in the coming years or enhances the depleted diversity in these oldest restorations. A similar potential positive impact of bison on plant diversity was the motivation for their reintroduction.
+
+## Predator function
+
+We assayed seed and arthropod predation to determine if ground beetle assemblage characteristics predict predation rates and test the hypotheses that predation rate are maximized by functional diversity, particular trait values, or overall abundance of the organisms contributing to the function. In this case, functional diversity was unrelated to predator function in all three of the predation assays, so we found no support for the hypothesis that trait complementarity increases function (Hillebrand and Matthiessen 2009, Gagic et al. 2015). However, there also was no evidence that ground beetle assemblage structure affected seed predation or summer arthropod predation. Other ground-dwelling arthropods, such as ants, may also be important contributors to predation, masking any effects specific to ground beetles. Seed predation rate was reduced by fire, a result that matches a similar experiment in remnant tallgrass prairie (Reed et al. 2004) but differs from Zirbel et al. (2017), who found no effects of fire frequency on seed predation. The open habitat resulting from fires is expected to facilitate ground-foraging ants and other arthropods, so reduced seed predation might be due to frequent prescribed fire that reduces ant colony abundance (Reed et al. 2004). But fire generally does not affect ant abundance in prairie (Nemec 2014) and may even increase it (Panzer 2002), so it is unclear whether ants are driving these predation patterns. We echo the call by Nemec (2014) for focused studies on prairie ant contributions to ecosystem function and interactions with other prairie invertebrates.
+
+Fall arthropod predation was also reduced by prescribed fire, but unlike either previous predation assay, it was correlated with ground beetle assemblages. Predation on waxworm larvae was greater where carnivorous beetle activity density, and the resulting proportion of the total community these beetles represent, was higher. Because most beetle species documented during the fall sampling session were carnivorous, total activity density was also a strong predictor of arthropod predation. For this reason, our results do not clearly support either the hypothesis that function is maximized by a particular trait value (Garnier et al. 2004), or the hypothesis that function is driven by total abundance or biomass. Combining omnivorous and carnivorous species to create an index of “potential carnivore” activity density or proportion does not clarify this because it encompasses almost all beetles in fall and most in summer. The general results of both predator assays were not changed by this alternative approach. Prescribed fire also reduced carnivore activity density in fall, and this measure of the ground beetle assemblage was significantly positively correlated with waxworm predation. This indicate that ground beetles likely are important contributors to arthropod predation rates late in the growing season. Reduced carnivore abundances, and reduced predation, could have additional consequences outside of restorations if these species also support biological control of pests in adjacent agricultural fields (Blitzer et al. 2012).
+
+## CONCLUSIONS
+
+The assemblage structure of a diverse insect family, ground beetles, shifts in tallgrass prairie restorations along with the successional changes exhibited by plant communities in these same habitats. Two important management activities, prescribed fire and reintroduced bison, further influence the taxonomic and functional trait characteristics of these assemblages, although the impacts of bison were more apparent, especially for overall composition. Neither management activity caused severe reductions in ground beetle diversity and there is potential for bison to enhance diversity in the future, which supports ongoing efforts to introduce bison to additional grassland habitats across North America (Fox et al. 2012, Allred et al. 2013). Prescribed fire did reduce two ecosystem functions, seed predation in summer and arthropod predation in fall. Whether these effects are important for restorations may depend on management concerns. For example, insects can account for the majority of seed predation in new prairie restorations (Linabury et al. 2019), so if increased seed establishment is a management objective, this may need to be balanced with the necessity of fire for weed and woody plant suppression.
+
+## ACKNOWLEDGMENT
+
+We thank the staff at Nachusa Grasslands, especially B. Kleiman, C. Considine, and E. Bach, and members of the Barber Lab and Jones Lab who assisted in field and lab work. This material is based upon work supported by the National Science Foundation under Grant NSF-DEB 1647502, Friends of Nachusa Grasslands, Prairie Biotic Research, Inc., and the Northern Illinois University Office of Student Engagement and Experiential Learning. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+## LITERATURE CITED
+
+Allred, B. W., S. D. Fuhlendorf, T. J. Hovick, R. Dwayne Elmore, D. M. Engle, and A. Joern. 2013. Conservation implications of native and introduced ungulates in a changing climate. Global Change Biology 19:1875–1883.
+
+Anderson, R. C. 1991. Illinois prairies: a historical perspective. Pages 384–391 in L. M. Page and M. R. Jeffords, editor. Our living heritage: the biological resources of Illinois. Illinois Natural History Survey, Champaign, Illinois, USA.
+
+Arnett, R. H., M. C. Thomas, P. E. Skelley, and J. H. Frank. 2002. American beetles, Volume II: Polyphaga: Scarabaeoidea through Curculionoidea. First edition. CRC Press, Boca Raton, Florida, USA.
+
+Barak, R. S., E. W. Williams, A. L. Hipp, M. L. Bowles, G. M. Carr, R. Sherman, and D. J. Larkin. 2017. Restored tallgrass prairies have reduced phylogenetic diversity compared with remnants. Journal of Applied Ecology 54:1080–1090.
+
+Barbaro, L., and I. V. Halder. 2009. Linking bird, carabid beetle and butterfly life-history traits to habitat fragmentation in mosaic landscapes. Ecography 32:321–333.
+
+Barber, N. A., H. P. Jones, M. R. Duvall, W. P. Wysocki, M. J. Hansen, and D. J. Gibson. 2017a. Phylogenetic diversity is maintained despite richness losses over time in restored tallgrass prairie plant communities. Journal of Applied Ecology 54:137–144.
+
+Barber, N. A., K. A. Lamagdeleine-Dent, J. E. Willand, H. P. Jones, and K. W. McCravy. 2017b. Species and functional trait re-assembly of ground beetle communities in restored grasslands. Biodiversity and Conservation 26:3481–3498.
+
+Bargmann, T., E. Heegaard, B. A. Hatteland, J. D. Chipperfield, and J.-A. Grytnes. 2016. Species trait selection along a prescribed fire chronosequence. Insect Conservation and Diversity 9:446–455.
+
+Blitzer, E. J., C. F. Dormann, A. Holzschuh, A.-M. Klein, T. A. Rand, and T. Tscharntke. 2012. Spillover of functionally important organisms between managed and natural habitats. Agriculture, Ecosystems & Environment 146:34–43.
+
+Bousquet, Y. 2010. Illustrated identification guide to adults and larvae of Northeastern North America ground beetles. Pensoft Pub, Sofia, Bulgaria.
+
+Bowles, M. L., and M. D. Jones. 2013. Repeated burning of eastern tallgrass prairie increases richness and diversity, stabilizing late successional vegetation. Ecological Applications 23:464–478.
+
+Brooks, D. R., J. Storkey, S. J. Clark, L. G. Firbank, S. Petit, and I. P. Woiwod. 2012. Trophic links between functional groups of arable plants and beetles are stable at a national scale. Journal of Animal Ecology 81:4–13.
+
+Brousseau, P.-M., D. Gravel, and I. Tanya Handa. 2018. Traitmatching and phylogeny as predictors of predator-prey interactions involving ground beetles. Functional Ecology 32:192–202.
+
+Brudvig, L. A., R. S. Barak, J. T. Bauer, T. T. Caughlin, D. C. Laughlin, L. Larios, J. W. Matthews, K. L. Stuble, N. E. Turley, and C. R. Zirbel. 2017. Interpreting variation to advance predictive restoration science. Journal of Applied Ecology 54:1018–1027.
+
+Cadotte, M. W., K. Carscadden, and N. Mirotchnick. 2011. Beyond species: functional diversity and the maintenance of ecological processes and services. Journal of Applied Ecology 48:1079–1087.
+
+Cardinale, B. J., J. E. Duffy, A. Gonzalez, D. U. Hooper, C. Perrings, P. Venail, A. Narwani, G. M. Mace, D. Tilman, and D. A. Wardle. 2012. Biodiversity loss and its impact on humanity. Nature 486:59–67.
+
+Chao, A., N. J. Gotelli, T. C. Hsieh, E. L. Sander, K. H. Ma, R. K. Colwell, and A. M. Ellison. 2014. Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84:45–67.
+
+Ciegler, J. C. 2000. Ground beetles and wrinkled bark beetles of South Carolina: (Coleoptera: Geadephaga: Carabidae and
+
+Rhysodidae). Clemson University, Clemon, South Carolina, USA.
+
+Collins, S. L., A. K. Knapp, J. M. Briggs, J. M. Blair, and E. M. Steinauer. 1998. Modulation of diversity by grazing and mowing in native tallgrass prairie. Science 280:745–747.
+
+Collins, S. L., and M. D. Smith. 2006. Scale-dependent interaction of fire and grazing on community heterogeneity in tall grass prairie. Ecology 87:2058–2067.
+
+Coppedge, B. R., and J. H. Shaw. 1998. Bison grazing patterns on seasonally burned tallgrass prairie. Journal of Range Management 51:258–264.
+
+Corbett, E., and R. C. Anderson. 2006. Landscape analysis of Illinois and Wisconsin remnant prairies. Journal of the Torrey Botanical Society 133:267–279.
+
+Cristofoli, S., J. Piqueray, M. Dufr^ene, J.-P. Bizoux, and G. Mahy. 2010. Colonization credit in restored wet heathlands. Restoration Ecology 18:645–655.
+
+Damhoureyeh, S. A., and D. C. Hartnett. 1997. Effects of bison and cattle on growth, reproduction, and abundances of five tallgrass prairie forbs. American Journal of Botany 84:1719– 1728.
+
+Elson, A., and D. C. Hartnett. 2017. Bison increase the growth and reproduction of forbs in tallgrass prairie. American Midland Naturalist 178:245–260.
+
+Fountain-Jones, N. M., S. C. Baker, and G. J. Jordan. 2015. Moving beyond the guild concept: developing a practical functional trait framework for terrestrial beetles. Ecological Entomology 40:1–13.
+
+Fox, J., G. G. Friendly, S. Graves, R. Heiberger, G. Monette, H. Nilsson, B. Ripley, S. Weisberg, M. J. Fox, and M. Suggests 2007. The car package. R Foundation for Statistical Computing, Vienna, Austria. https://cran.r-project.org/web/package s/car/index.html
+
+Fox, T. A., C. H. Hugenholtz, D. Bender, and C. C. Gates. 2012. Can bison play a role in conserving habitat for endangered sandhills species in Canada? Biodiversity and conservation 21:1441–1455.
+
+Fuhlendorf, S. D., and D. M. Engle. 2004. Application of the fire–grazing interaction to restore a shifting mosaic on tallgrass prairie. Journal of Applied Ecology 41:604–614.
+
+Gagic, V., I. Bartomeus, T. Jonsson, A. Taylor, C. Winqvist, C. Fischer, E. M. Slade, I. Steffan-Dewenter, M. Emmerson, and S. G. Potts 2015. Functional identity and diversity of animals predict ecosystem functioning better than species-based indices. Proceedings of the Royal Society B 282:20142620
+
+Garnier, E., J. Cortez, G. Bill-es, M.-L. Navas, C. Roumet, M. Debussche, G. Laurent, A. Blanchard, D. Aubry, and A. Bell mann. 2004. Plant functional markers capture ecosystem properties during secondary succession. Ecology 85:2630– 2637.
+
+Gerisch, M.. 2014. Non-random patterns of functional redundancy revealed in ground beetle communities facing an extreme flood event. Functional Ecology 28:1504–1512.
+
+Griffin, S. R., B. Bruninga-Socolar, M. A. Kerr, J. Gibbs, and R. Winfree. 2017. Wild bee community change over a 26-year chronosequence of restored tallgrass prairie. Restoration Ecology 25:650–660.
+
+Hansen, M. J., and D. J. Gibson. 2014. Use of multiple criteria in an ecological assessment of a prairie restoration chronosequence. Applied Vegetation Science 17:63–73.
+
+Harper, M. G., C. H. Dietrich, R. L. Larimore, and P. A. Tessene. 2000. Effects of prescribed fire on prairie arthropods: an enclosure study. Natural Areas Journal 20:325–335.
+
+Hillebrand, H., and B. Matthiessen. 2009. Biodiversity in a complex world: consolidation and progress in functional biodiversity research. Ecology Letters 12:1405–1419.
+
+Holliday, N. J. 1991. Species responses of carabid beetles (Coleoptera: Carabidae) during post-fire regeneration of boreal forest. Canadian Entomologist 123:1369–1389.
+
+Hooper, D. U., F. S. Chapin, J. J. Ewel, A. Hector, P. Inchausti, S. Lavorel, J. H. Lawton, D. M. Lodge, M. Loreau, and S. Naeem. 2005. Effects of biodiversity on ecosystem functioning: a consensus of current knowledge. Ecological Monographs 75:3–35.
+
+Hosler, S. P., H. P. Jones, M. Nelson, and N. A. Barber. Management actions shape dung beetle community structure and functional traits in restored tallgrass prairie. Ecological Entomology, in press.
+
+Jackson, S. T., and D. F. Sax. 2010. Balancing biodiversity in a changing environment: extinction debt, immigration credit and species turnover. Trends in Ecology & Evolution 25:153– 160.
+
+Joern, A. 2004. Variation in Grasshopper (Acrididae) densities in response to fire frequency and bison grazing in tallgrass prairie. Environmental Entomology 33:1617–1625.
+
+Joern, A. 2005. Disturbance by fire frequency and bison grazing modulate grasshopper assemblages in tallgrass prairie. Ecology 86:861–873.
+
+Jones, H. P., P. C. Jones, E. B. Barbier, R. C. Blackburn, J. M. R. Benayas, K. D. Holl, M. McCrackin, P. Meli, D. Montoya, and D. M. Mateos. 2018. Restoration and repair of Earth’s damaged ecosystems. Proceedings of the Royal Society B 285:20172577.
+
+Kaltsas, D., A. Trichas, K. Kougioumoutzis, and M. Chatzaki. 2013. Ground beetles respond to grazing at assemblage level, rather than species-specifically: the case of Cretan shrublands. Journal of Insect Conservation 17:681–697
+
+Knapp, A. K., J. M. Blair, J. M. Briggs, S. L. Collins, D. C. Hartnett, L. C. Johnson, and E. G. Towne. 1999. The keystone role of bison in North American tallgrass prairie. BioScience 49:39–50.
+
+Kotze, D. J., J. Niemel€a, R. B. O’Hara, and H. Turin. 2003. Testing abundance-range size relationships in European carabid beetles (Coleoptera, Carabidae). Ecography 26:553–566.
+
+Laliberte, E., and P. Legendre. 2010. A distance-based framework for measuring functional diversity from multiple traits. Ecology 91:299–305.
+
+Langor, D. W., and J. R. Spence. 2006. Arthropods as ecologica indicators of sustainability in Canadian forests. Forestry Chronicle 82:344–350.
+
+Larochelle, A., and M.-C. Larivi-ere. 2003. Natural history of the ground-beetles (Coleoptera: Carabidae) of America north of Mexico. Pensoft Publishers, Sofia, Bulgaria
+
+Larsen, K. J., and J. B. Williams. 1999. Influence of fire and trapping effort on ground beetles in a reconstructed tallgrass prairie. Prairie Naturalist 31:75–86.
+
+Legendre, P., and M. J. Anderson. 1999. Distance-based redundancy analysis: testing multispecies responses in multifactorial ecological experiments. Ecological Monographs 69:1–24.
+
+Linabury, M. C., N. E. Turley, and L. A. Brudvig. 2019. Insects remove more seeds than mammals in first-year prairie restorations. Restoration Ecology 27:1300–1306.
+
+Losey, J. E., and M. Vaughan. 2006. The economic value of ecological services provided by insects. BioScience 56:311–323.
+
+Lovei, G. L., and K. D. Sunderland. 1996. Ecology and behavior of ground beetles (Coleoptera: Carabidae). Annua Review of Entomology 41:231–256.
+
+Luong, J. C., P. L. Turner, C. N. Phillipson, and K. C. Seltmann. 2019. Local grassland restoration affects insect communities. Ecological Entomology 44:471–479.
+
+Mason, N. W., D. Mouillot, W. G. Lee, and J. B. Wilson. 2005. Functional richness, functional evenness and functiona
+
+divergence: the primary components of functional diversity Oikos 111:112–118.
+
+McAlpine, C. et al 2016. Integrating plant- and animal-based perspectives for more effective restoration of biodiversity Frontiers in Ecology and the Environment 14:37–45.
+
+McCravy, K. W., and J. G. Lundgren. 2011. Carabid beetles (Coleoptera: Carabidae) of the Midwestern United States: a review and synthesis of recent research. Terrestrial Arthropod Reviews 4:63–94.
+
+McDonald, T., G. D. Gann, J. Johnson, and K. W. Dixon. 2016. International standards for the practice of ecological restoration—including principles and key concepts. Society for Ecological Restoration, Washington, D.C., USA.
+
+Montoya-Pfeiffer, P. M., R. R. Rodrigues, and I. A. dos Santos 2019. Bee pollinator functional responses and functiona effects in restored tropical forests. Ecological Applications 30: e02054.
+
+Moran, M. D.. 2014. Bison grazing increases arthropod abundance and diversity in a Tallgrass Prairie. Environmenta Entomology 43:1174–1184.
+
+Mouillot, D., N. A. Graham, S. Villeger, N. W. Mason, and D. R. Bellwood. 2013. A functional approach reveals community responses to disturbances. Trends in Ecology & Evolution 28:167–177.
+
+Nemec, K. T.. 2014. Tallgrass prairie ants: their species composition, ecological roles, and response to management. Journa of Insect Conservation 18:509–521.
+
+Oksanen, J., F. G. Blanchet, R. Kindt, P. Legendre, P. R. Minchin, R. B. O’Hara, G. L. Simpson, P. Solymos, M. H. H. Stevens, and H. Wagner. 2013. Package vegan. Community ecology package, version 2. https://cran.r-project.org/web/pac kages/vegan/index.htm
+
+Packard, S., and C. F. Mutel 2005. The tallgrass restoration handbook: for prairies, savannas, and woodlands. Island Press, Washington, DC, USA.
+
+Palmer, M. A., R. F. Ambrose, and N. L. R. Poff. 1997. Ecological theory and community restoration ecology. Restoration Ecology 5:291–300.
+
+Panzer, R. 2002. Compatibility of prescribed burning with the conservation of insects in small, isolated prairie reserves Conservation Biology 16:1296–1307.
+
+Powell, A. F. 2008. Responses of breeding birds in tallgrass prairie to fire and cattle grazing. Journal of Field Ornitholog 79:41–52.
+
+Poyry, J., S. Lindgren, J. Salminen, and M. Kuussaari. 2004. € Restoration of butterfly and moth communities in semi-natural grasslands by cattle grazing. Ecological Applications 14:1656–1670.
+
+Poyry, J., S. Lindgren, J. Salminen, and M. Kuussaari. 2005. € Responses of butterfly and moth species to restored cattle grazing in semi-natural grasslands. Biological Conservation 122:465–478.
+
+Rainio, J., and J. Niemel€a. 2003. Ground beetles (Coleoptera: Carabidae) as bioindicators. Biodiversity & Conservation 12:487–506.
+
+Rambo, J. L., and S. H. Faeth. 1999. Effect of vertebrate grazing on plant and insect community structure. Conservation Biology 13:1047–1054.
+
+Reed, A. W., G. A. Kaufman, and D. W. Kaufman. 2004. Influence of fire, topography, and consumer abundance on seed predation in tallgrass prairie. Canadian Journal of Zoolog 82:1459–1467.
+
+Rey Benayas, J. M., A. C. Newton, A. Diaz, and J. M. Bullock 2009. Enhancement of biodiversity and ecosystem services by ecological restoration: a meta-analysis. Science 325:1121– 1124.
+
+Ribera, I., S. Doledec, I. S. Downie, and G. N. Foster. 2001. Effect of land disturbance and stress on species traits of ground beetle assemblages. Ecology 82:1112–1129.
+
+Ricketts, A. M., and B. K. Sandercock. 2016. Patch-burn grazing increases habitat heterogeneity and biodiversity of small mammals in managed rangelands. Ecosphere 7:e01431.
+
+Samson, F., and F. Knopf. 1994. Prairie conservation in North America. BioScience 44:418–421.
+
+Schirmel, J., I. Blindow, and S. Buchholz. 2012. Life-history trait and functional diversity patterns of ground beetles and spiders along a coastal heathland successional gradient. Basic and Applied Ecology 13:606–614.
+
+Sitters, H., J. Di Stefano, F. Christie, M. Swan, and A. York. 2016. Bird functional diversity decreases with time since disturbance: Does patchy prescribed fire enhance ecosystem function? Ecological Applications 26:115–127.
+
+Spasojevic, M. J., R. J. Aicher, G. R. Koch, E. S. Marquardt, N. Mirotchnick, T. G. Troxler, and S. L. Collins. 2010. Fire and grazing in a mesic tallgrass prairie: impacts on plant species and functional traits. Ecology 91:1651–1659.
+
+Suding, K. N.. 2011. Toward an era of restoration in ecology: successes, failures, and opportunities ahead. Annual Review of Ecology, Evolution, and Systematics 42:465–487.
+
+Thomas, C. F. G., L. Parkinson, and E. J. P. Marshall. 1998. Isolating the components of activity-density for the carabid beetle Pterostichus melanarius in farmland. Oecologia 116:103–112.
+
+Tonietto, R. K., J. S. Ascher, and D. J. Larkin. 2017. Bee communities along a prairie restoration chronosequence: similar abundance and diversity, distinct composition. Ecological Applications 27:705–717.
+
+Towne, E. G., D. C. Hartnett, and R. C. Cochran. 2005. Vegetation trends in tallgrass prairie from bison and cattle grazing. Ecological Applications 15:1550–1559.
+
+Vanbergen, A. J., B. A. Woodcock, A. D. Watt, and J. Niemel€a. 2005. Effect of land-use heterogeneity on carabid communities at the landscape scale. Ecography 28:3–16.
+
+Villeger, S., N. W. Mason, and D. Mouillot. 2008. New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology 89:2290–2301.
+
+Violle, C., M.-L. Navas, D. Vile, E. Kazakou, C. Fortunel, I. Hummel, and E. Garnier. 2007. Let the concept of trait be functional! Oikos 116:882–892.
+
+Vogel, J. A., D. M. Debinski, R. R. Koford, and J. R. Miller. 2007. Butterfly responses to prairie restoration through fire and grazing. Biological Conservation 140:78–90.
+
+Weisser, W. W., and E. Siemann, editor. 2008. The various effects of insects on ecosystem functioning. Pages 3–24. Insects and ecosystem function. Springer, New York, New York, USA.
+
+Wodika, B. R., and S. G. Baer. 2015. If we build it, will they colonize? A test of the field of dreams paradigm with soil macroinvertebrate communities. Applied Soil Ecology 91:80– 89.
+
+Woodcock, B. A., J. M. Bullock, S. R. Mortimer, and R. F. Pywell. 2012. Limiting factors in the restoration of UK grassland beetle assemblages. Biological Conservation 146:136– 143.
+
+Zirbel, C. R., T. Bassett, E. Grman, and L. A. Brudvig. 2017. Plant functional traits and environmental conditions shape community assembly and ecosystem functioning during restoration. Journal of Applied Ecology 54:1070–1079.

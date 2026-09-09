@@ -1,58 +1,65 @@
 {
-  "Response": {
+  "Response Response": {
     "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This column names the biological property or trait being measured (e.g., 'Body size').",
-    "category": null,
-    "reasoning_relevance": "This column represents the dependent variable in a statistical model, not biological data."
+    "value_column": false,
+    "reasoning": "This header names the biological property (Body size) that was measured for the organism.",
+    "category": "Measurement-type key",
+    "reasoning_relevance": "The example value 'Body size' names the trait being measured, indicating a measurement key.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Response Response",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study measured specific morphological traits of ground beetles, namely average body size (species length) and wing typology (macropterous vs. brachypterous/apterous). These measurements were taken from specimens that were collected and preserved in absolute ethanol, classifying the data as being derived from preserved specimens.",
+    "measurementMethod": "Pitfall traps (plastic vials filled with 5% ethylene glycol) were used to sample ground beetles across 100 sites (25 per habitat type) during the dry season (October 25th to November 15th, 2019). Morphological traits (body size and wing typology) were determined by direct measurement of the collected and preserved specimens.",
+    "measurementMethod_reasoning": null
   },
-  "Fixed effects": {
+  "Fixed effects Fixed effects": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "The values represent an insect taxon or taxonomic group ('Macropterous spp.') used as a factor.",
-    "category": null,
-    "reasoning_relevance": "These are independent variables used in statistical models, not recorded biological traits or measurements."
+    "reasoning": "This column identifies the insect taxon (Macropterous spp.) whose measurements are being reported.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The example value 'Macropterous spp.' is a discrete classification of the organism's wing type."
   },
-  "Estimate": {
+  "Estimate e": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the calculated numerical result (the effect size) of the measurement.",
+    "reasoning": "This column holds the estimated numerical value for the response variable.",
     "category": null,
-    "reasoning_relevance": "This is a calculated coefficient from a GLMM model, representing an effect size rather than raw data."
+    "reasoning_relevance": "This is a statistical estimate of a coefficient, not a biological measurement or trait."
   },
-  "Std. Error": {
+  "Estimate Std. Error": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is a statistical measure quantifying the uncertainty or variability of the estimate.",
+    "reasoning": "This column provides the standard error associated with the estimate.",
     "category": null,
-    "reasoning_relevance": "Standard error is a statistical measure of variability in the estimate, not biological data."
+    "reasoning_relevance": "This is a statistical measure of the variability of the estimate."
   },
-  "t value": {
+  "Estimate t value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides a calculated test statistic (t-value) for significance.",
+    "reasoning": "This column provides the calculated t-statistic for the measurement.",
     "category": null,
-    "reasoning_relevance": "This is a calculated test statistic used for hypothesis testing, not recorded biological data."
+    "reasoning_relevance": "This is a statistical index (t-statistic) used for hypothesis testing."
   },
-  "P value": {
+  "Estimate P value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is the statistical measure of probability used to assess significance.",
+    "reasoning": "This column provides the p-value indicating statistical significance.",
     "category": null,
-    "reasoning_relevance": "The P value indicates statistical significance and does not represent measured biological traits or observations."
+    "reasoning_relevance": "This is a statistical index (p-value) used to determine significance."
   },
-  "F(1,188)": {
+  "Estimate $F_{(1,188)}$": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides a calculated test statistic (F-statistic) for variance analysis.",
+    "reasoning": "This column provides the calculated F-statistic for the analysis.",
     "category": null,
-    "reasoning_relevance": "This is an F-statistic from a GLM test, used for statistical inference rather than data recording."
+    "reasoning_relevance": "This is a statistical index (F-statistic) used in ANOVA/GLM analysis."
   },
-  "P value (1)": {
+  "Estimate P value (1)": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This is the statistical measure of probability used to assess significance.",
+    "reasoning": "This column provides the p-value for the second statistical test.",
     "category": null,
-    "reasoning_relevance": "The P value indicates statistical significance and does not represent measured biological traits or observations."
+    "reasoning_relevance": "This is a statistical index (p-value) used to determine significance."
   }
 }

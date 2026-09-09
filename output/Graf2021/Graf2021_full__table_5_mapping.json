@@ -1,0 +1,51 @@
+{
+  "Bee species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the specific insect taxon (bee species) for each record.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The column lists specific scientific names of bee species, which is a discrete classification of the organism."
+  },
+  "Behavior": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names a characteristic (behavior) being observed in the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values (SO, P_E, A_E, CL) represent discrete classifications of the bee's social behavior.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Behavior",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The functional traits (behavior, nesting preference, and trophic specialization) are ecological and behavioral characteristics of the wild bees observed and collected in the field. These traits are determined by classifying the specimens based on their observed life history and characteristics, which constitutes a human observation of the organism's state.",
+    "measurementMethod": "Classification based on established biological information (Martins et al. 2013; Michener 2007) applied to collected specimens to determine behavior, nesting preference, and trophic specialization.",
+    "measurementMethod_reasoning": "The text explicitly states that functional groups were identified using the classification of Martins et al. (2013) and biological information summarized in Michener (2007). The specific methods for categorization included separating bees into solitary/eusocial groups (behavior), ground-nesters/above-ground nesters (nesting preference), and specialists/generalists (trophic specialization)."
+  },
+  "Nesting site": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names a characteristic (nesting site/microhabitat) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values (G, A, NA) represent discrete classifications of where the bee nests.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nesting site",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Nesting preference is a behavioral/ecological trait. The researchers classified the collected bees based on where they were found nesting (in the soil or above ground/in cavities), which constitutes a human observation of a natural history trait.",
+    "measurementMethod": "Classification of collected specimens based on observed nesting location (soil vs. above ground/cavities/other substrates)",
+    "measurementMethod_reasoning": "The study defined nesting preferences by separating bees into 'ground-nesters' (nesting in the soil) and those that nest 'above ground' (exposed nests, cavities, and other substrates) during the sampling process."
+  },
+  "Feeding habit": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names a characteristic (feeding habit/diet) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values (GE, S, NA) represent discrete classifications of the bee's trophic specialization.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Feeding habit",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The functional traits, including trophic specialization (specialist/generalist), were determined by collecting, preserving, and identifying wild bee specimens. The classification of these traits relies on examining the physical specimens and applying established biological classifications (Martins et al. 2013; Michener 2007).",
+    "measurementMethod": "Classification based on Martins et al. (2013) and Michener (2007) using the functional trait scheme (S) specialist and (GE) generalist.",
+    "measurementMethod_reasoning": "The text explicitly states that functional groups, including trophic specialization, were identified using the classification of Martins et al. (2013) and biological information summarized in Michener (2007). The specific categories used were 'specialist' (S) and 'generalist' (GE), as detailed in Online Resource 5."
+  }
+}

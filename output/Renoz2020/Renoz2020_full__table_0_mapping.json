@@ -1,0 +1,32 @@
+{
+  "Gene": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "The values are names of bacterial species, not insect taxa, so they do not fit verbatimIdentification."
+  },
+  "Product": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This describes the molecular target (Ribosomal RNA) of the assay, not a measurable trait of the organism."
+  },
+  "Primers (5′–3′)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are specific laboratory reagents/protocols used in the experiment."
+  },
+  "Tm": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This is a specific assay parameter (melting temperature), not a biological measurement of the organism."
+  },
+  "Fragment size (bp)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This header names the specific molecular property (fragment size) being measured for the organism."
+  },
+  "References": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column contains citation metadata, not a measurement, trait, or location."
+  }
+}

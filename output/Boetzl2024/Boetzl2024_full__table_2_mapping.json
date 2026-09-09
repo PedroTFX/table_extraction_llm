@@ -2,56 +2,56 @@
   "Study ID": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains unique study identifiers and does not describe an insect or location."
+    "reasoning": "This is a unique identifier, not a measurement, location, or organism."
   },
   "country": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The values are geographic locations where the sampling occurred."
+    "reasoning": "It specifies the country where the sampling or observation occurred."
   },
   "region": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The values represent specific sub-regions or states of the sampling location."
+    "reasoning": "It specifies the regional location where the sampling or observation occurred."
   },
   "year": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column records temporal metadata about the study event, not an organism trait or location."
+    "reasoning": "This is a temporal metadata field, not a measurement or location."
   },
   "months": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column provides temporal context for the sampling but is not a measurement type or locality."
+    "reasoning": "This is a temporal metadata field, not a measurement or location."
   },
   "crop types": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "These values describe the land-use and vegetation where samples were collected."
+    "reasoning": "It describes the land-use or vegetation type where sampling took place."
   },
   "adjacent habitat classes": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This describes the microhabitat or surrounding environment of the sampling location."
+    "reasoning": "It describes the habitat type where the sampling took place."
   },
   "study sites": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "These are specific site codes or identifiers for where observations were made."
+    "reasoning": "It identifies the specific sampling site or plot code."
   },
   "maximal distance [m]": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a measurement of the study setup/variable, not an organism trait or location."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a measured property (distance) of the study setup."
   },
   "trapping days (per trap)": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This describes the sampling method and effort used in the study."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a measured parameter (duration) of the sampling effort."
   },
   "reference": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains bibliographic citations for the source of the data."
+    "reasoning": "This is a citation, not a measurement, location, or organism."
   }
 }

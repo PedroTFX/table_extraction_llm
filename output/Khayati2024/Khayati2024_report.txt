@@ -1,0 +1,88 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Khayati2024\Khayati2024.xlsx  (459 rows)
+PREDICTION   : ..\output\Khayati2024\Khayati2024.csv  (495 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Aphaenogaster gemella' -> 'Aphaenogaster gemella '
+  'Crematogaster scutellaris' -> 'Crematogaster scutellaris '
+
+measurementType REMAP (pred -> gt, 5 pair(s))
+  'Colony foundation' -> 'Colony foundation '
+  'Insects' -> 'Food Type: Insects'
+  'Liquid' -> 'Food Type: Liquid'
+  'Seeds' -> 'Food Type: Seeds'
+  'Worker body size' -> 'Worker body size '
+
+ROW-LEVEL (key match)
+  matched (TP)          : 388
+  missed (FN)           : 71
+  spurious, in scope    : 107   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.784 / 0.845 / 0.813
+  SCOPED  P/R/F1        : 0.784 / 0.845 / 0.813
+  RECALL (GT coverage)  : 0.845
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                 0    388  0.000  <-- low
+  measurementMethod             0     70  0.000  <-- low
+  measurementUnit               0    127  0.000  <-- low
+  measurementStatistic        129    388  0.332  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         109    388  0.281  <-- low
+  lifeStage                   312    388  0.804
+  caste                       205    388  0.528
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    388  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 71 MISSED ROWS MISSED
+  species present, trait missing                       45
+  species+trait present, value differs                 26
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '3.02'                       ->  '3.2'                        x4
+     '3.01'                       ->  '3.1'                        x2
+     '2.07'                       ->  '2.7'                        x2
+     '7.09'                       ->  '7.9'                        x1
+     '3.04'                       ->  '3.4'                        x1
+     '3.09'                       ->  '3.9'                        x1
+  -> 6 substitutions explain 11 of 71 misses (15%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     ''                                 x45
+  -> 1 missing trait explains 45 of 71 misses (63%) — systematic, not scattered
+
+  full miss detail saved -> Khayati2024_misses.csv, Khayati2024_misses_summary.json (71 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   45     0   GT-ONLY
+  worker body size                                 43    45   Δ+2 (split?)
+  colony foundation                                33    45   Δ+12 (split?)
+  colony size                                      31    45   Δ+14 (split?)
+  diurnality                                       33    45   Δ+12 (split?)
+  food type: insects                               35    45   Δ+10 (split?)
+  food type: liquid                                35    45   Δ+10 (split?)
+  food type: seeds                                 35    45   Δ+10 (split?)
+  foraging strategy                                43    45   Δ+2 (split?)
+  nesting site                                     45    45   
+  number of queens                                 41    45   Δ+4 (split?)
+  worker polymorphism                              40    45   Δ+5 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.784  0.845  0.813    388   107    71   id+type+value
+  tags        0.000  0.000  0.000      0   495   459   basis+id+type+value+stat+sex+stage
+             (F1 -0.813 vs previous)

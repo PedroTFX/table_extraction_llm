@@ -1,17 +1,67 @@
 {
-  "identifier": {
+  "Response variables": {
     "field": "definitionTerm",
     "value_column": false,
-    "reasoning": "This column acts as a key or code defining the specific measurement variable."
+    "reasoning": "This column lists the specific variables or traits being defined/measured."
   },
-  "PF (reference level)": {
+  "PF (reference level) PF (reference level) Estimate ± SE": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the quantitative measurements and associated statistical estimates for the variables defined in 'identifier'."
+    "reasoning": "Contains the calculated estimate and standard error for the measured trait."
   },
-  "Bee functional diversity": {
+  "PF (reference level) PF (reference level) t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "The values represent statistical outcomes (t/z-values) or comparative metrics of the analysis."
+    "reasoning": "Provides the statistical test result (t/z-value) associated with the measurement."
+  },
+  "Bee functional diversity PA vs. PF Estimate ± SE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+  },
+  "Bee functional diversity PA vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Provides the statistical test result (t/z-value) for the PA vs. PF comparison."
+  },
+  "Bee functional diversity TR vs. PF Estimate ± SE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+  },
+  "Bee functional diversity TR vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Provides the statistical test result (t/z-value) for the TR vs. PF comparison."
+  },
+  "Bee functional diversity FR vs. PF Estimate ± SE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+  },
+  "Bee functional diversity FR vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Provides the statistical test result (t/z-value) for the FR vs. PF comparison."
+  },
+  "Bee functional diversity MR vs. PF Estimate ± SE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+  },
+  "Bee functional diversity MR vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Provides the statistical test result (t/z-value) for the MR vs. PF comparison."
+  },
+  "Bee functional diversity NR vs. PF Estimate ± SE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+  },
+  "Bee functional diversity NR vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Provides the statistical test result (t/z-value) for the NR vs. PF comparison."
   }
 }

@@ -1,0 +1,59 @@
+{
+  "Species name": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column lists the specific insect species names (taxa).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the organism into specific taxonomic species."
+  },
+  "Nesting location": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the microhabitat or location of the organism's nest.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the organism's nesting behavior into fixed states.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nesting location",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Nesting location is a behavioral/ecological trait. The study separated wild bee species into 'above-ground' and 'below-ground' nesting categories based on their known nesting habits, which constitutes a natural-history observation.",
+    "measurementMethod": "Wild bee species were categorized into above-ground and below-ground nesting types based on their known nesting habits (see Appendix 2).",
+    "measurementMethod_reasoning": "The text explicitly states that the researchers separated wild bee species into two categories (above- and below-ground nesting) and sorted them based on these nesting location types.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "Female body size (mm)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This names the specific physical trait being measured (body size).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a physical measurement of the female bee with units.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Female body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size measurements were taken from wild bee specimens collected using pan traps and subsequently measured under a microscope.",
+    "measurementMethod": "Intertegular distance (ITD) measured using a microscope (Nikon SMZ745T) and an Industrial Digital Camera (20MP Sony Exmor CMOS Sensor), scaled in ImageView.",
+    "measurementMethod_reasoning": "The text explicitly states that the body size of an individual was measured as the intertegular distance (ITD), which is the distance between the bases of the two wings on the bee’s thorax. The equipment used for this measurement is also detailed.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement is of body size (ITD), and the requested unit is mm, which is the standard unit for this measurement.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The text specifies that interspecific body size was measured as the 'average body size for each species' and that the analysis focused on the 'average abundance-based body size of pollinators in the community'."
+  },
+  "Consolidated farmland": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the type of habitat or land-use associated with the specimen.",
+    "category": null,
+    "reasoning_relevance": "This is a landscape/environmental variable, not a biological trait of the organism."
+  },
+  "Traditional farmland": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the type of habitat or land-use associated with the specimen.",
+    "category": null,
+    "reasoning_relevance": "This is a landscape/environmental variable, not a biological trait of the organism."
+  }
+}

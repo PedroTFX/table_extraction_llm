@@ -2,61 +2,56 @@
   "Models": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column lists statistical model identifiers (e.g., m.bb), not organism names or locations."
+    "reasoning": "This column contains model identifiers, not insect taxa, locations, or measurement properties."
   },
   "Response variable": {
     "field": "measurementType",
     "value_column": false,
-    "reasoning": "The header defines the biological property being measured for the organisms (e.g., density, richness)."
-  },
-  "Response variable (1)": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header describes the specific measurement type or dependent variable used in the analysis."
+    "reasoning": "This header names the property (e.g., density, richness) that was measured or modeled."
   },
   "FB": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The cells contain numerical results (e.g., 0.96) which are the measured values of the response variables."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "run": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The cells hold statistical output or estimates for specific model runs."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "FC": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column contains numerical results derived from the models."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "LD": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The cells contain statistical values (e.g., 0.25) representing model outputs."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "OSR": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds numerical results or estimates from the analysis."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "SNH": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The cells contain statistical values (e.g., 0.24) representing model outputs."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "FB:run": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column contains numerical results from the interaction between FB and run models."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "run: SNH": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "The cells contain statistical values representing model outputs for this specific interaction."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   },
   "FB:FC": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds numerical results from the interaction between FB and FC models."
+    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
   }
 }

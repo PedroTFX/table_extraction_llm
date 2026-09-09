@@ -1,0 +1,90 @@
+================================================================
+GROUND TRUTH : ..\data\un_processed_papers\Geraghty2007\Geraghty2007.xlsx  (280 rows)
+PREDICTION   : ..\output\Geraghty2007\Geraghty2007.csv  (70 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 19 pair(s))
+  'Aphaenogaster fulva ROGER, 1863' -> 'Aphaenogaster fulva'
+  'Aphaenogaster rudis ENZMANN, 1947' -> 'Aphaenogaster rudis'
+  'Brachymyrmex depilis EMERY, 1893' -> 'Brachymyrmex depilis'
+  'Camponotus americanus MAYR, 1862' -> 'Camponotus americanus'
+  'Camponotus chromaiodes BOLTON, 2000' -> 'Camponotus chromaiodes'
+  'Camponotus nearcticus EMERY, 1893' -> 'Camponotus nearcticus'
+  'Camponotus subbarbatus EMERY, 1893' -> 'Camponotus subbarbatus'
+  'Crematogaster minutissima MAYR, 1870' -> 'Crematogaster minutissima'
+  'Formica subsericea SAY, 1836' -> 'Formica subsericea'
+  'Myrmecina americana EMERY, 1895' -> 'Myrmecina americana'
+  'Myrmica latifrons STÄRCKE, 1927' -> 'Myrmica latifrons'
+  'Myrmica pinetorum WHEELER, 1905' -> 'Myrmica pinetorum'
+  'Myrmica punctiventris ROGER, 1863' -> 'Myrmica punctiventris'
+  'Myrmica spatulata SMITH, 1930' -> 'Myrmica spatulata'
+  'Ponera pennsylvanica BUCKLEY, 1866' -> 'Ponera pennsylvanica'
+  'Stenamma diecki EMERY, 1895' -> 'Stenamma diecki'
+  'Stenamma impar FOREL, 1901' -> 'Stenamma impar'
+  'Stenamma meridionale SMITH, 1957' -> 'Stenamma meridionale'
+  'Stenamma schmitti WHEELER, 1903' -> 'Stenamma schmitti'
+
+measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body size (mm) Body size' -> 'Body size'
+  'Colony size Colony size' -> 'Colony size'
+
+ROW-LEVEL (key match)
+  matched (TP)          : 69
+  missed (FN)           : 211
+  spurious, in scope    : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+
+  STRICT  P/R/F1        : 0.986 / 0.246 / 0.394
+  SCOPED  P/R/F1        : 0.986 / 0.246 / 0.394
+  RECALL (GT coverage)  : 0.246
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc
+  basisOfRecord                34     69  0.493  <-- low
+  measurementMethod             0     69  0.000  <-- low
+  measurementUnit              34     69  0.493  <-- low
+  measurementStatistic         34     69  0.493  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     69  0.000  <-- low
+  lifeStage                    69     69  1.000
+  caste                         0     69  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0     69  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     69  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 211 MISSED ROWS MISSED
+  species present, trait missing                      210
+  species+trait present, value differs                  1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '9.01'                       ->  '1.09'                       x1
+  -> 1 substitution explains 1 of 211 misses (0%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Elevation'                        x105
+     'Latitude'                         x105
+  -> 2 missing traits explain 210 of 211 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Geraghty2007_misses.csv, Geraghty2007_misses_summary.json (211 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        35    35   
+  colony size                                      35    35   
+  elevation                                       105     0   GT-ONLY
+  latitude                                        105     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.986  0.246  0.394     69     1   211   id+type+value
+  tags        0.000  0.000  0.000      0    70   280   basis+id+type+value+stat+sex+stage
+             (F1 -0.394 vs previous)

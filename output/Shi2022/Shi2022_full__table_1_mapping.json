@@ -1,0 +1,39 @@
+{
+  "identifier": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the scientific names of the insect taxa studied.",
+    "category": null,
+    "reasoning_relevance": "These are scientific names used to identify species, not biological traits or measurements."
+  },
+  "Model type": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "Describes the statistical model used, not an organism's trait or location.",
+    "category": null,
+    "reasoning_relevance": "This is a methodological classification of the statistical model used, not biological data."
+  },
+  "SNH": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the numerical results of a measurement (e.g., effect size).",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the proportion of semi-natural habitat, a quantifiable environmental measurement.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "CS": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the numerical results of a measurement (e.g., effect size).",
+    "category": null,
+    "reasoning_relevance": "These values are statistical coefficients from a model, including p-values, not raw biological data."
+  },
+  "SNH*CS": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the numerical results of a measurement (e.g., interaction effect).",
+    "category": null,
+    "reasoning_relevance": "This represents a statistical interaction term coefficient, not a biological measurement or trait."
+  }
+}

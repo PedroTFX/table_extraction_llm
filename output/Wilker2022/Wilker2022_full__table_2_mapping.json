@@ -1,0 +1,52 @@
+{
+  "Nest": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Identifies the specific sampling unit or site code where the observation occurred.",
+    "category": null,
+    "reasoning_relevance": "The values are identifiers for specific nest locations, not biological traits or measurements."
+  },
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Contains the taxonomic name of the insect species observed.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "This column records the discrete classification of the ant species."
+  },
+  "Time_r": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured property (time or count) of the observation event.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "This column records the quantitative measurement of time taken for diaspore removal.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Time_r",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The measurement records the time taken for live ants to perform a behavioral action (diaspore removal) in a field experiment (Cerrado sensu stricto).",
+    "measurementMethod": "Time taken for ants to transport artificial diaspores from the sampling point to the nest.",
+    "measurementMethod_reasoning": "The text explicitly defines removal time as 'the time that the ants (with solitary behaviour or in groups) took to transport the artificial diaspore from the sampling point to the nest.'",
+    "measurementUnit": "s",
+    "measurementUnit_reasoning": "Table S1 specifies the unit for 'time_r' as seconds (s).",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The text states that for each ant species, they calculated the 'mean removal time' in each of the 15 experimental areas."
+  },
+  "N_removal": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the condition or stage of the sampling/treatment applied to the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "The values classify the removal event by its sequence (first, second, or last).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "N_removal",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data for diaspore removal (N_removal) are based on observing the behavior of live ants in their natural habitat (Cerrado sensu stricto) as they interact with artificial diaspores. This falls under the category of behavioral/ecological traits observed in situ.",
+    "measurementMethod": "Standardized artificial diaspores (0.03 g beads coated with an attractive paste) were deposited at a sampling point, and the time of diaspore discovery, removal time, distance, removal strategy, and number of diaspores transported to the nest were recorded.",
+    "measurementMethod_reasoning": "The study explicitly used artificial diaspores (0.03 g beads and an attractive paste) to standardize the sampling process and measure the behavioral metrics (discovery time, removal time, number removed) of the ants.",
+    "measurementUnit": "s",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  }
+}

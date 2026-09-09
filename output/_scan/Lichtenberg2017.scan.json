@@ -1,0 +1,94 @@
+{
+  "paper": "Lichtenberg2017",
+  "has_full_md": true,
+  "supplementary": [],
+  "ground_truth": [
+    "Lichtenberg2017.xlsx"
+  ],
+  "sources": [
+    {
+      "file": "Lichtenberg2017_full.md",
+      "n_tables": 3,
+      "error": null
+    }
+  ],
+  "tables": [
+    {
+      "source": "Lichtenberg2017_full.md",
+      "table_index": 0,
+      "n_rows": 0,
+      "n_cols": 1,
+      "header": [
+        "CColony size represents a species' average."
+      ],
+      "identifier": {
+        "column": null,
+        "taxon_fraction": 0.0,
+        "passes_structural": false,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "too few columns or no data rows",
+      "would_yield_rows": false
+    },
+    {
+      "source": "Lichtenberg2017_full.md",
+      "table_index": 1,
+      "n_rows": 18,
+      "n_cols": 9,
+      "header": [
+        "Species",
+        "Name in Brosi (2009) $^{A}$",
+        "Head width (mm) $^{B}$",
+        "Colony size (# workers) $^{C}$",
+        "Diet breadth $^{z}$",
+        "Group foraging? $^{D}$",
+        "Nests in ground? $^{E}$",
+        "Inquiline nesting? $^{E}$",
+        "Nests in man-made structures? $^{E}$"
+      ],
+      "identifier": {
+        "column": "Species",
+        "taxon_fraction": 1.0,
+        "passes_structural": true,
+        "qualifies": true
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": true
+    },
+    {
+      "source": "Lichtenberg2017_full.md",
+      "table_index": 2,
+      "n_rows": 21,
+      "n_cols": 5,
+      "header": [
+        "Covariate",
+        "w",
+        "Predicted coefficient (±SE)",
+        "z",
+        "p-value"
+      ],
+      "identifier": {
+        "column": "Covariate",
+        "taxon_fraction": 0.238,
+        "passes_structural": true,
+        "qualifies": false
+      },
+      "transposed": false,
+      "transpose_reason": "header is not mostly taxon names",
+      "would_yield_rows": false
+    }
+  ],
+  "error": null,
+  "n_tables": 3,
+  "n_identifier_tables": 1,
+  "n_identifier_tables_markdown": 1,
+  "n_identifier_tables_supplementary": 0,
+  "n_transposed_tables": 0,
+  "n_rows_total": 39,
+  "n_distinct_species": 18,
+  "would_yield_rows": true,
+  "would_yield_rows_if_supplements_passed": true,
+  "verdict": "OK — 1 identifier table(s) in the markdown; a 0-row result is downstream (LLM mapping / relevance gate / grouping), not here"
+}
