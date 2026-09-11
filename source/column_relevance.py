@@ -20,8 +20,8 @@ from urllib import request as _rq
 from text_manager import get_text
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
-MODEL = "gemma4:e4b-it-qat"
-# MODEL = "gemma4:e2b"
+# MODEL = "gemma4:e4b-it-qat"   # more accurate, but ~2x slower per call
+MODEL = "gemma4:e2b"            # faster; used by every extraction agent (llm=None path)
 # MODEL = "granite4.2:3b"
 OLLAMA_URL = "http://localhost:11434/api/chat"
 
@@ -269,21 +269,44 @@ def loads_salvaging(content: str) -> dict:
 
 
 COLUMN_CATEGORIES = """
-Valid categories for a worth-recording column:
-- "Categorical biological trait" — discrete classifications of the organism's biology
-  (e.g. colour, pattern, sociality, activity mode, habitat type — a fixed set of
-  named states)
-- "Morphological measurement" — physical/anatomical measurements
-- "Behavioral observation" — recorded behaviors or where/how the organism was observed
+A worth-recording column describes THE ORGANISM ITSELF — an attribute of the
+specimen or taxon (its body, biology, or behaviour). Valid categories:
+- "Categorical biological trait" — a discrete named state of the organism's
+  BIOLOGY, ECOLOGY or BEHAVIOUR (e.g. colour, pattern, sociality, caste,
+  diel/activity mode, feeding guild, nesting type — a fixed set of named states).
+  This is NOT the organism's taxonomic classification: a column of taxonomic ranks
+  (Family, Order, Suborder, Genus, Subgenus, Tribe, Subfamily) names the
+  specimen's IDENTITY, not a trait — return null for it.
+- "Morphological measurement" — a measured physical/anatomical dimension OF THE
+  ORGANISM (e.g. body length, head width, intertegular distance, wing length,
+  tongue length, body mass)
+- "Behavioral observation" — a recorded behaviour of the organism, or how/where it
+  was observed behaving
 - "Measurement-type key" — a column whose CELLS are the NAMES of the traits being
   measured (e.g. a "Trait" or "Variable" column whose values are "body mass",
   "head length", "Elytra length"), paired with a SEPARATE column that holds the
   values. The cells say WHAT was measured; they are not themselves a measurement
   value. Use this ONLY when another column in the same table holds the values.
 
-If the column does not fit any of these categories, return null.
-Examples that do NOT fit: percentages of occurrence, sample sizes (n=, N=),
-p-values, statistical indices, citations, identifiers.
+Return null when the column is NOT an attribute of the organism — when it describes
+the PLACE, ENVIRONMENT, TIME, or STUDY the specimen was sampled in rather than the
+specimen. The decisive test: does the value describe the organism, or the
+conditions where it was found? Only the organism is a trait. A number with a unit
+is NOT automatically a morphological measurement — a temperature, an area, or an
+income carries a unit too. Return null for, among others:
+- environment / climate: temperature, precipitation, humidity, degree-days
+  (GDD / DDG / PGDD), NPP, elevation, soil or clay %, land cover
+- geography / site: coordinates, latitude/longitude, site or garden or plot area,
+  distances (a place name that locates the sample is verbatimLocality, not a trait)
+- human / socioeconomic: median income, population density, GDP, management,
+  urbanisation
+- time: date, day, month, year, season
+- effort / counts / abundance: number of sites, sample size (n=, N=), richness, counts
+- statistics / indices: mean, SD, CV, standard error, t / Z / F, p-value,
+  confidence interval, estimate, coefficient, citations, identifiers
+- taxonomic rank / identity: a column naming the organism's classification
+  (Family, Order, Suborder, Genus, Subgenus, Tribe, Subfamily, taxon authorship)
+  is the specimen's IDENTITY, not a trait measured or observed on it — return null
 """
 
 
@@ -334,8 +357,9 @@ Return a JSON object keyed by column name, with this format:
 }}
 
 Keep the reasoning to AT MOST 15 words.
-Return null ONLY for columns that are genuinely not biological data (statistics,
-counts, identifiers, citations)."""
+Return null for any column that is not an attribute of the organism itself —
+including environment/climate, geography/site, human/socioeconomic, time,
+effort/counts, and statistics/identifiers/citations."""
     user = f"Here is the paper text for context:\n{text}"
     return [{"role": "system", "content": system},
             {"role": "user", "content": user}]
