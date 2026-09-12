@@ -23,7 +23,9 @@ TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
 # MODEL = "gemma4:e4b-it-qat"   # more accurate, but ~2x slower per call
 MODEL = "gemma4:e2b"            # faster; used by every extraction agent (llm=None path)
 # MODEL = "granite4.2:3b"
-OLLAMA_URL = "http://localhost:11434/api/chat"
+OLLAMA_URL = "http://127.0.0.1:11434/api/chat"   # 127.0.0.1, not localhost: on some
+# hosts localhost resolves to IPv6 ::1 while Ollama listens only on IPv4, so
+# urllib gets ECONNREFUSED (curl happens to fall through to IPv4).
 
 
 @lru_cache(maxsize=None)

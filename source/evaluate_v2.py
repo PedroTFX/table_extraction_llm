@@ -974,7 +974,7 @@ def _llm_grade_severity(rows, idxs, batch_size):
     the evaluator needs no pipeline import; any failure leaves rows unchanged."""
     import json as _json
     from urllib import request as _rq
-    url = "http://localhost:11434/api/chat"
+    url = "http://127.0.0.1:11434/api/chat"   # 127.0.0.1, not localhost (IPv6 ::1 refuses)
     model = "gemma4:e2b"
     out = {}
     for start in range(0, len(idxs), batch_size):

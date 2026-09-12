@@ -27,7 +27,7 @@ import unicodedata
 from difflib import SequenceMatcher
 from urllib import request as _rq
 
-OLLAMA_URL = "http://localhost:11434/api/chat"
+OLLAMA_URL = "http://127.0.0.1:11434/api/chat"   # 127.0.0.1, not localhost (IPv6 ::1 refuses)
 OLLAMA_MODEL = "gemma4:e2b"
 
 _UNIT_PAREN = re.compile(r"\((?:[^()]*\b(?:mm|cm|m|km|g|kg|mg|mm2|°c|%|count|n|df)\b[^()]*)\)", re.I)
