@@ -624,6 +624,8 @@ Map a column to the field that best fits its VALUES. A place (country, region,
 site, habitat/vegetation type) is a verbatimLocality, not a verbatimIdentification
 — only organism names belong in verbatimIdentification. Do not force a non-taxon
 column into verbatimIdentification just because its values are text and unique.
+The field descriptions above define measurementType vs measurementValue (a wide
+trait column is a measurementType even when its cells are numbers).
 Return ONLY a JSON object keyed by header name."""
 
     print(f"  Mapping table {table.source}#{table.table_index} ({len(headers)} cols)")
@@ -633,6 +635,16 @@ Return ONLY a JSON object keyed by header name."""
     # cut off, so there is no budget to estimate here.
     content = (llm.invoke(prompt).content if llm else invoke_sized(prompt))
     mapping = loads_salvaging(content)
+    if not isinstance(mapping, dict):
+        mapping = {}
+    # A smaller model sometimes maps a header to a bare string ("measurementType")
+    # instead of the {field, value_column, ...} object. Coerce any non-dict entry
+    # to an unmapped column so every downstream `.get()` on a mapping entry is safe.
+    for h, v in list(mapping.items()):
+        if not isinstance(v, dict):
+            mapping[h] = {"field": (v if isinstance(v, str) and v in MAP_FIELDS else None),
+                          "value_column": False,
+                          "reasoning": "coerced from a non-object mapper reply"}
     missing = [h for h in headers if h not in mapping]
     if missing:
         # A salvaged (truncated) reply loses its trailing columns. Fill them as
@@ -997,13 +1009,35 @@ def add_table_to_grouped(table: Table, mapping: dict, grouped: dict,
               f"identifier present but no relevant trait columns; not specimen data")
         return grouped
 
-    for rec in table.data_records():
+    # Iterate ALL records (not just data_records) so the parser's group/subheader
+    # rows stay in view: in a BANDED taxonomic list the genus sits alone on such a
+    # row and the species beneath it carry only the epithet ('Agapostemon' / then
+    # 'sericeus', 'virescens'). We read the genus off the band row and rebuild the
+    # full binomial for the rows below it; the band row itself is not emitted.
+    band_genus = None          # genus carried down from a section-header row
+    for rec in table.records:
         # join the identifier parts for THIS row (genus + species -> binomial),
         # dropping duplicated genus/subgenus and dotted-code twins (see
         # _join_identifier) so the name matches the plain binomial. With no
         # identifier column at all, the paper-level species applies to every row.
-        species = (_join_identifier(rec.get(c, "") for c in id_cols) if id_cols
-                   else fallback_species)
+        if id_cols:
+            species = _join_identifier(rec.get(c, "") for c in id_cols)
+            if rec.get("_is_group_row"):
+                # a lone genus heading its species — remember it, emit nothing
+                if species and species[:1].isupper() and len(species.split()) == 1:
+                    band_genus = species
+                continue
+            # Under an active band, a lone epithet (incl. a glued authority like
+            # 'abruptaSay') is only the species half; prepend the genus and keep
+            # just the leading lowercase run as the epithet (drops the authority).
+            if band_genus and species[:1].islower():
+                m = re.match(r"[^\WA-Z\d_]+", species)
+                epithet = m.group(0) if m else species
+                species = f"{band_genus} {epithet}"
+        else:
+            if rec.get("_is_group_row"):
+                continue
+            species = fallback_species
         if not species:
             continue
         entry = grouped.setdefault(species, {
@@ -1144,6 +1178,88 @@ def _is_acronym(k: str) -> bool:
     return uppers >= 2 and uppers >= lowers
 
 
+def _looks_cryptic_code(header: str) -> bool:
+    """True for a dataset COLUMN CODE that a reader can't take at face value —
+    'WingsHR', 'Volt', 'Tmean', 'T95L', 'Flight_Months', 'hp'. These come from
+    supplement spreadsheets and must be interpreted from the paper, whereas a
+    plain header ('Body length (mm)', 'Tongue Length') is already the trait name.
+
+    Cryptic = no internal space (after dropping a trailing unit paren) AND a
+    STRONG machine-code signal: an underscore, an embedded digit, or a camelCase
+    boundary (lower->UPPER). We deliberately do NOT treat a plain short word as
+    cryptic — a short jargon label ('Lecty', 'Mass', 'Volt') is often exactly the
+    term the ground truth uses, so rewriting it would break a match that already
+    worked. Plain multi-word headers always have a space and are never cryptic."""
+    if not isinstance(header, str):
+        return False
+    h = re.sub(r"\s*\([^()]*\)\s*$", "", header).strip()   # drop a trailing unit
+    if not h or " " in h:
+        return False
+    has_underscore = "_" in h
+    has_digit = any(c.isdigit() for c in h)
+    camel = any(h[i].islower() and h[i + 1].isupper() for i in range(len(h) - 1))
+    return has_underscore or has_digit or camel
+
+
+def agent_humanize_cryptic_types(headers: list, paper_text: str, llm=None) -> dict:
+    """Ask the LLM to name cryptic dataset codes from the paper's methods.
+
+    Only the codes flagged by _looks_cryptic_code are sent; a plain header is
+    already its own trait name and is never rewritten. The model returns
+    {code: human-readable trait name} grounded in the paper's own wording; a code
+    it cannot place (or one that is already an ordinary word) is returned
+    unchanged and dropped by the caller. This is the ONE place the model is
+    allowed to reword a header, and only for codes a reader could not interpret."""
+    cryptic = [h for h in headers if _looks_cryptic_code(h)]
+    if not cryptic:
+        return {}
+    system = (
+        "You are given cryptic COLUMN CODES from one scientific paper's dataset "
+        "and the paper's text. For each code, return a short human-readable trait "
+        "name (2-5 words) for WHAT that column records, grounded in the paper's "
+        "methods and its own wording. Examples of the reasoning: a code 'Volt' in "
+        "a paper that discusses 'voltinism' -> 'voltinism'; 'Flight_Months' where "
+        "the methods say 'number of months during which adults occur' -> 'number "
+        "of months adults fly'; 'hp' where the text says 'number of host plant "
+        "genera' -> 'number of host plant genera'.\n\n"
+        "RULES:\n"
+        "- Use only meanings the paper's text supports; never invent a trait.\n"
+        "- If a code is already an ordinary English trait word, or you cannot tell "
+        "what it means from the text, return it UNCHANGED.\n"
+        "- Return ONLY a JSON object {\"<code>\": \"<trait name>\", ...} for the "
+        "codes given, nothing else."
+    )
+    # The codes are defined in the methods, which sit early in the paper; send a
+    # bounded slice so this second whole-paper pass stays fast (the full text can
+    # be 100k+ chars, which times the small model out).
+    text = paper_text[:20000]
+    user = ("Codes:\n" + json.dumps(cryptic, ensure_ascii=False, indent=2)
+            + "\n\nPaper text:\n" + text)
+    try:
+        content = (llm.invoke([{"role": "system", "content": system},
+                               {"role": "user", "content": user}]).content
+                   if llm else
+                   invoke_sized([{"role": "system", "content": system},
+                                 {"role": "user", "content": user}]))
+        parsed = loads_salvaging(content)
+    except Exception as ex:
+        # Humanization is a best-effort enhancement; never let it fail the paper.
+        print(f"  humanize: skipped ({type(ex).__name__}); keeping raw codes")
+        return {}
+    if not isinstance(parsed, dict):
+        return {}
+    # Keep only real, changed, multi-informative names (a bare echo or a value
+    # that is itself still cryptic is dropped, so nothing gets worse).
+    out = {}
+    for code in cryptic:
+        name = parsed.get(code)
+        if (isinstance(name, str) and name.strip()
+                and name.strip().lower() != code.strip().lower()
+                and not _looks_cryptic_code(name.strip())):
+            out[code] = name.strip()
+    return out
+
+
 def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=None) -> dict:
     """One whole-paper LLM call that does the measurementType name-cleanup AND
     the statistic detection in a single place (no separate regex pass).
@@ -1277,6 +1393,13 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
     # Deterministic, paper-verbatim seeds win over anything the LLM proposed.
     glossary.update(seed_glossary)
 
+    # Cryptic supplement codes ('WingsHR', 'Volt', 'Flight_Months', 'hp') are not
+    # abbreviations the glossary catches (nothing in the text says 'WingsHR =
+    # ...'), yet they are unreadable as trait names. Have the LLM name them from
+    # the methods prose; only the codes _looks_cryptic_code flags are touched, so
+    # plain headers on other papers are never reworded.
+    humanized = agent_humanize_cryptic_types(headers, paper_text, llm=llm)
+
     n = 0
     n_stat = 0
     for mapping in mappings.values():
@@ -1286,6 +1409,10 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
             if not (m.get("field") == "measurementType" and m.get("category") is not None):
                 continue
             expanded = _apply_glossary(header, glossary)
+            # If the glossary left a cryptic code unchanged, fall back to the
+            # LLM-humanized name (grounded in the methods) so 'WingsHR' -> 'wingspan'.
+            if expanded == header and header in humanized:
+                expanded = humanized[header]
             info = columns.get(header) if isinstance(columns.get(header), dict) else {}
             stat = _normalize_statistic(info.get("statistic"))
             token = info.get("token")

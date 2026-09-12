@@ -20,8 +20,8 @@ from urllib import request as _rq
 from text_manager import get_text
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
-MODEL = "gemma4:e4b-it-qat"
-# MODEL = "gemma4:e2b"
+# MODEL = "gemma4:e4b-it-qat"   # more accurate, but ~2x slower per call
+MODEL = "gemma4:e2b"            # faster; used by every extraction agent (llm=None path)
 # MODEL = "granite4.2:3b"
 OLLAMA_URL = "http://localhost:11434/api/chat"
 
@@ -268,22 +268,39 @@ def loads_salvaging(content: str) -> dict:
         return out
 
 
-COLUMN_CATEGORIES = """
-Valid categories for a worth-recording column:
-- "Categorical biological trait" — discrete classifications of the organism's biology
-  (e.g. colour, pattern, sociality, activity mode, habitat type — a fixed set of
-  named states)
-- "Morphological measurement" — physical/anatomical measurements
-- "Behavioral observation" — recorded behaviors or where/how the organism was observed
-- "Measurement-type key" — a column whose CELLS are the NAMES of the traits being
-  measured (e.g. a "Trait" or "Variable" column whose values are "body mass",
-  "head length", "Elytra length"), paired with a SEPARATE column that holds the
-  values. The cells say WHAT was measured; they are not themselves a measurement
-  value. Use this ONLY when another column in the same table holds the values.
+def _template_def(field: str) -> str:
+    """The canonical definition of one template field, read from
+    template_descriptions/<field>.md — the SAME text the table mapper injects, so
+    the two agents share one source of truth and cannot drift."""
+    p = TEMPLATE_DIR / f"{field}.md"
+    return p.read_text(encoding="utf-8").strip() if p.exists() else ""
 
-If the column does not fit any of these categories, return null.
-Examples that do NOT fit: percentages of occurrence, sample sizes (n=, N=),
-p-values, statistical indices, citations, identifiers.
+
+# What COUNTS as a trait (a measurementType) — organism vs site, the wide-table
+# rule, the environment/abundance/taxonomic-rank exclusions — lives once in
+# template_descriptions/measurementType.md and is pulled in here. This module adds
+# ONLY the relevance-specific CATEGORY labels the model must choose among; edit the
+# definition in the .md, not here.
+COLUMN_CATEGORIES = f"""
+The single test is whether a column is a measurementType — a trait of the
+organism. Here is its definition, INCLUDING everything that does NOT qualify:
+
+<measurementType definition>
+{_template_def("measurementType")}
+</measurementType definition>
+
+A column that qualifies gets ONE of these category labels:
+- "Categorical biological trait" — a discrete named state of the organism's
+  biology/ecology/behaviour (colour, pattern, sociality, caste, activity mode,
+  feeding guild, nesting type, the habitat class it occupies).
+- "Morphological measurement" — a measured physical/anatomical dimension of the
+  organism (body length, head width, wing length, tongue length, body mass).
+- "Behavioral observation" — a recorded behaviour of the organism, or how/where it
+  was observed behaving.
+- "Trait-name column" — a column whose CELLS are literally the NAMES of traits
+  (values like "body mass", "head length", "wingspan"), paired with a SEPARATE
+  values column in the same table. Use ONLY when the cells are trait names AND
+  another column holds the numbers — never for a numeric or coded data column.
 """
 
 
@@ -309,17 +326,32 @@ records data worth keeping in a biological database.
 
 {COLUMN_CATEGORIES}
 
-Decide category from WHAT THE COLUMN IS: its name and its example values are the
-primary evidence. A column's presence in a data table is itself a record of that
-variable, so judge it on its own name and values — a discrete set of named states
-(colours, patterns, modes, habitat classes) is a categorical trait, numbers with
-a unit are a measurement — REGARDLESS of whether the prose happens to mention it.
+For EACH column, judge it by its own name and example values (the paper text is
+only context — a real trait need not be mentioned in the prose). Work in this
+order against the definition above:
 
-The paper text is CONTEXT that can help you tell a real trait from a statistic or
-an identifier (e.g. it may reveal that a numeric column is a p-value, or that a
-code column is a site ID). Do NOT require a column to be named in the text. Only
-return null when the column, judged on its name and values, does not fit any
-valid category — a statistic, a count, a citation, an identifier, an index.
+1. FIRST look for a reason the column does NOT concur with the definition — one of
+   the cases its "NOT a measurementType" list names:
+     - a place / locality, or where the study worked (site, plot, transect);
+     - a site condition: temperature, precipitation, wind, degree-days, elevation,
+       distance to X, % sealed area, plant richness;
+     - a human/socioeconomic or land-use variable of the site: income, population
+       density, management, urbanisation;
+     - an abundance or sample size: density, counts, n;
+     - a statistic or derived index: SD, CV, p-value, a correlation or genetic-
+       differentiation index (Gst, Dst, Fst), a diversity index, a principal-
+       component score (PC1, PC2);
+     - a sampling method; a taxonomic rank (Family, Genus, ...) or authorship.
+   If one applies, set "category" to null and make "reasoning" that specific reason
+   (e.g. "site climate variable", "genetic-differentiation index", "PC score",
+   "taxonomic rank", "sampling statistic").
+2. ONLY if no exclusion applies does the column qualify — then give it the fitting
+   category from the list, with a one-line reason.
+
+A number with a unit is NOT automatically a trait: a site temperature, a wind
+speed, a distance, a p-value and a genetic index all carry numbers, and each
+matches an exclusion above. When you cannot point to a concrete reason the column
+qualifies, prefer null — in a wide dataset most columns are not traits.
 
 The columns being evaluated are:
 {col_block}
@@ -334,8 +366,7 @@ Return a JSON object keyed by column name, with this format:
 }}
 
 Keep the reasoning to AT MOST 15 words.
-Return null ONLY for columns that are genuinely not biological data (statistics,
-counts, identifiers, citations)."""
+Return null for any column that is not a measurementType per the definition above."""
     user = f"Here is the paper text for context:\n{text}"
     return [{"role": "system", "content": system},
             {"role": "user", "content": user}]
