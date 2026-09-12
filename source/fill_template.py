@@ -599,17 +599,25 @@ def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, ll
         col_codes = collect_categorical_codes(table, mapping)
         llm_legends = agent_normalize_legends(col_codes, hints, chunks, llm=llm)
 
+        # The grouped measurements carry the CANONICAL type name (canonicalize
+        # renames e.g. 'FG' -> 'functional groups'), but col_codes/hints are keyed
+        # by the raw header. Key the legend by the canonicalType so it matches the
+        # measurementType looked up at rewrite time below; otherwise a decoded
+        # legend is silently never applied whenever the type was renamed.
+        canon_of = {clean_text(h): clean_text(m.get("canonicalType") or h)
+                    for h, m in mapping.items()}
+
         # merge: LLM wins, fall back to deterministic footnote term
         legend_by_col = {}
         for c, codes in col_codes.items():
             merged = dict(hints.get(c, {}))
             merged.update(llm_legends.get(c, {}))   # LLM overrides footnote casing/wording
             if merged:
-                legend_by_col[c] = merged
+                legend_by_col[canon_of.get(c, c)] = merged
 
         # persist resolved legends into the mapping for traceability
         for header, m in mapping.items():
-            leg = legend_by_col.get(clean_text(header))
+            leg = legend_by_col.get(clean_text(m.get("canonicalType") or header))
             if leg:
                 m["valueDecode"] = leg
 
