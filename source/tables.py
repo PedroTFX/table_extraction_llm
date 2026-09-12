@@ -530,7 +530,18 @@ def parse_table(table: str, source: Optional[str] = None, table_index: int = 0,
             joined = []
             for c in range(width):
                 parts = [r[c] for r in rows_cells if c < len(r) and r[c].strip()]
-                joined.append(" ".join(parts))
+                # A cell with rowspan>1 was copied DOWN into every header row it
+                # covers (see expand_rowspans), so a spanning label like 'Species'
+                # or 'FG' arrives as ['FG','FG','FG'] and must collapse to one —
+                # otherwise the header becomes 'FG FG FG' (-> 'functional groups
+                # functional groups'). Drop a part that repeats the one kept before
+                # it; a genuine hierarchy ('CDR' / 'Herbaceous' / 'DR', all
+                # distinct) is preserved.
+                deduped = []
+                for part in parts:
+                    if not deduped or deduped[-1].strip().lower() != part.strip().lower():
+                        deduped.append(part)
+                joined.append(" ".join(deduped))
             columns = _build_columns(joined)
         else:
             # single header row = the LAST selected row (banner rows above it are
