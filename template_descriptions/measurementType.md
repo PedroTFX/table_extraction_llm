@@ -2,6 +2,13 @@ The NAME of one property measured, scored or observed FOR THE ORGANISM: what it
 IS, HAS, DOES, or WHERE IT LIVES. E.g. body length (or ITS), diet, sociality,
 obligate myrmecophile, activity time, foraging preference, microhabitat.
 
+A biotic ASSOCIATION of the organism is also a measurementType — its host, prey,
+host plant, food plant, symbiont, or associated species — EVEN THOUGH the cell
+value is another organism's name ("Host spider(s)" = "Coras montanus", "Host
+plant" = "Quercus robur"). The record's FOCAL organism is the verbatimIdentification;
+the associated organism named by a "host"/"prey"/"host plant" column is this
+trait's VALUE, not a second identifier.
+
 TEST — read the column as "<organism> has <header> = <cell>". If that states a
 fact about the organism's biology, the HEADER is the measurementType and the
 cell is merely its value: "beetle has Mean bodylength (mm) = 7.7", so "Mean

@@ -294,7 +294,10 @@ organism. Here is its definition, INCLUDING everything that does NOT qualify:
 A column that qualifies gets ONE of these category labels:
 - "Categorical biological trait" — a discrete named state of the organism's
   biology/ecology/behaviour (colour, pattern, sociality, caste, activity mode,
-  feeding guild, nesting type, the habitat class it occupies).
+  feeding guild, nesting type, the habitat class it occupies), OR a biotic
+  association of the organism — its host, prey, host/food plant, or symbiont,
+  where the cell value names the associated organism (a "Host spider(s)", "Host
+  plant" or "Prey" column). The focal organism stays the verbatimIdentification.
 - "Morphological measurement" — a measured physical/anatomical dimension of the
   organism (body length, head width, wing length, tongue length, body mass).
 - "Behavioral observation" — a recorded behaviour of the organism, or how/where it
