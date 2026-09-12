@@ -268,54 +268,39 @@ def loads_salvaging(content: str) -> dict:
         return out
 
 
-COLUMN_CATEGORIES = """
-A worth-recording column describes THE ORGANISM ITSELF — an attribute of the
-specimen or taxon (its body, biology, or behaviour). Valid categories:
+def _template_def(field: str) -> str:
+    """The canonical definition of one template field, read from
+    template_descriptions/<field>.md — the SAME text the table mapper injects, so
+    the two agents share one source of truth and cannot drift."""
+    p = TEMPLATE_DIR / f"{field}.md"
+    return p.read_text(encoding="utf-8").strip() if p.exists() else ""
+
+
+# What COUNTS as a trait (a measurementType) — organism vs site, the wide-table
+# rule, the environment/abundance/taxonomic-rank exclusions — lives once in
+# template_descriptions/measurementType.md and is pulled in here. This module adds
+# ONLY the relevance-specific CATEGORY labels the model must choose among; edit the
+# definition in the .md, not here.
+COLUMN_CATEGORIES = f"""
+The single test is whether a column is a measurementType — a trait of the
+organism. Here is its definition, INCLUDING everything that does NOT qualify:
+
+<measurementType definition>
+{_template_def("measurementType")}
+</measurementType definition>
+
+A column that qualifies gets ONE of these category labels:
 - "Categorical biological trait" — a discrete named state of the organism's
-  BIOLOGY, ECOLOGY or BEHAVIOUR (e.g. colour, pattern, sociality, caste,
-  diel/activity mode, feeding guild, nesting type — a fixed set of named states).
-  This is NOT the organism's taxonomic classification: a column of taxonomic ranks
-  (Family, Order, Suborder, Genus, Subgenus, Tribe, Subfamily) names the
-  specimen's IDENTITY, not a trait — return null for it.
-- "Morphological measurement" — a measured physical/anatomical dimension OF THE
-  ORGANISM (e.g. body length, head width, intertegular distance, wing length,
-  tongue length, body mass)
+  biology/ecology/behaviour (colour, pattern, sociality, caste, activity mode,
+  feeding guild, nesting type, the habitat class it occupies).
+- "Morphological measurement" — a measured physical/anatomical dimension of the
+  organism (body length, head width, wing length, tongue length, body mass).
 - "Behavioral observation" — a recorded behaviour of the organism, or how/where it
-  was observed behaving
-- "Measurement-type key" — a column whose CELLS are the NAMES of the traits being
-  measured (e.g. a "Trait" or "Variable" column whose values are "body mass",
-  "head length", "Elytra length"), paired with a SEPARATE column that holds the
-  values. The cells say WHAT was measured; they are not themselves a measurement
-  value. Use this ONLY when another column in the same table holds the values.
-
-Return null when the column is NOT an attribute of the organism — when it describes
-the PLACE, ENVIRONMENT, TIME, or STUDY the specimen was sampled in rather than the
-specimen. The decisive test: does the value describe the organism, or the
-conditions where it was found? Only the organism is a trait. A number with a unit
-is NOT automatically a morphological measurement — a temperature, an area, or an
-income carries a unit too.
-
-But a climatic, spatial, or temporal quantity that is a property OF THE ORGANISM
-is itself a trait and must be KEPT: the species' own thermal or precipitation
-tolerance, its climatic niche or range, its phenology (flight period, months
-active, emergence timing), or its voltinism. The reject list below is about the
-RAW CONDITIONS OF THE SAMPLING SITE, not a tolerance/niche/timing attributed to
-the species. Return null for, among others:
-- site environment / climate: the sampling site's temperature, precipitation,
-  humidity, degree-days (GDD / DDG / PGDD), NPP, soil or clay % (NOT the species'
-  own thermal/precipitation tolerance or climatic niche, which are traits)
-- geography / site: coordinates, latitude/longitude, elevation of the site, site
-  or garden or plot area, distances (a place name that locates the sample is
-  verbatimLocality, not a trait)
-- human / socioeconomic: median income, population density, GDP, management,
-  urbanisation
-- time: date, day, month, year, season
-- effort / counts / abundance: number of sites, sample size (n=, N=), richness, counts
-- statistics / indices: mean, SD, CV, standard error, t / Z / F, p-value,
-  confidence interval, estimate, coefficient, citations, identifiers
-- taxonomic rank / identity: a column naming the organism's classification
-  (Family, Order, Suborder, Genus, Subgenus, Tribe, Subfamily, taxon authorship)
-  is the specimen's IDENTITY, not a trait measured or observed on it — return null
+  was observed behaving.
+- "Trait-name column" — a column whose CELLS are literally the NAMES of traits
+  (values like "body mass", "head length", "wingspan"), paired with a SEPARATE
+  values column in the same table. Use ONLY when the cells are trait names AND
+  another column holds the numbers — never for a numeric or coded data column.
 """
 
 
@@ -341,17 +326,32 @@ records data worth keeping in a biological database.
 
 {COLUMN_CATEGORIES}
 
-Decide category from WHAT THE COLUMN IS: its name and its example values are the
-primary evidence. A column's presence in a data table is itself a record of that
-variable, so judge it on its own name and values — a discrete set of named states
-(colours, patterns, modes, habitat classes) is a categorical trait, numbers with
-a unit are a measurement — REGARDLESS of whether the prose happens to mention it.
+For EACH column, judge it by its own name and example values (the paper text is
+only context — a real trait need not be mentioned in the prose). Work in this
+order against the definition above:
 
-The paper text is CONTEXT that can help you tell a real trait from a statistic or
-an identifier (e.g. it may reveal that a numeric column is a p-value, or that a
-code column is a site ID). Do NOT require a column to be named in the text. Only
-return null when the column, judged on its name and values, does not fit any
-valid category — a statistic, a count, a citation, an identifier, an index.
+1. FIRST look for a reason the column does NOT concur with the definition — one of
+   the cases its "NOT a measurementType" list names:
+     - a place / locality, or where the study worked (site, plot, transect);
+     - a site condition: temperature, precipitation, wind, degree-days, elevation,
+       distance to X, % sealed area, plant richness;
+     - a human/socioeconomic or land-use variable of the site: income, population
+       density, management, urbanisation;
+     - an abundance or sample size: density, counts, n;
+     - a statistic or derived index: SD, CV, p-value, a correlation or genetic-
+       differentiation index (Gst, Dst, Fst), a diversity index, a principal-
+       component score (PC1, PC2);
+     - a sampling method; a taxonomic rank (Family, Genus, ...) or authorship.
+   If one applies, set "category" to null and make "reasoning" that specific reason
+   (e.g. "site climate variable", "genetic-differentiation index", "PC score",
+   "taxonomic rank", "sampling statistic").
+2. ONLY if no exclusion applies does the column qualify — then give it the fitting
+   category from the list, with a one-line reason.
+
+A number with a unit is NOT automatically a trait: a site temperature, a wind
+speed, a distance, a p-value and a genetic index all carry numbers, and each
+matches an exclusion above. When you cannot point to a concrete reason the column
+qualifies, prefer null — in a wide dataset most columns are not traits.
 
 The columns being evaluated are:
 {col_block}
@@ -366,9 +366,7 @@ Return a JSON object keyed by column name, with this format:
 }}
 
 Keep the reasoning to AT MOST 15 words.
-Return null for any column that is not an attribute of the organism itself —
-including environment/climate, geography/site, human/socioeconomic, time,
-effort/counts, and statistics/identifiers/citations."""
+Return null for any column that is not a measurementType per the definition above."""
     user = f"Here is the paper text for context:\n{text}"
     return [{"role": "system", "content": system},
             {"role": "user", "content": user}]

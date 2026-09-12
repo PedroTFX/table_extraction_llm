@@ -624,21 +624,8 @@ Map a column to the field that best fits its VALUES. A place (country, region,
 site, habitat/vegetation type) is a verbatimLocality, not a verbatimIdentification
 — only organism names belong in verbatimIdentification. Do not force a non-taxon
 column into verbatimIdentification just because its values are text and unique.
-
-measurementType vs measurementValue — read the table's SHAPE:
-- WIDE table (the usual case): the first column identifies the organism and EACH
-  other column's HEADER names a distinct trait/variable, with that trait's values
-  in its cells (e.g. 'Body length (mm)', 'WingsHR', 'Volt', 'Tmean' each holding
-  numbers). Map every such trait column to field="measurementType" (its header IS
-  the trait name; its cells are the values) with value_column=true. Do NOT map
-  these to measurementValue.
-- LONG/tidy table only: exactly one column whose CELLS are trait NAMES
-  ("body mass", "wingspan") paired with ONE dedicated column of the numbers. Only
-  in that shape does a column get field="measurementValue" (the dedicated value
-  column) and the names column field="measurementType".
-So use measurementValue ONLY for a single dedicated value column paired with a
-trait-name column; in a wide table there is no such column and each trait is a
-measurementType.
+The field descriptions above define measurementType vs measurementValue (a wide
+trait column is a measurementType even when its cells are numbers).
 Return ONLY a JSON object keyed by header name."""
 
     print(f"  Mapping table {table.source}#{table.table_index} ({len(headers)} cols)")
