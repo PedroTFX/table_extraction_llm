@@ -75,7 +75,11 @@ def main(only_paper=None, evaluate_results=True, resume=False):
                 raise FileNotFoundError(
                     f"{full_md.name} not found — run mineru_extract.py first")
 
-            # the results xlsx is needed for evaluation; find it via classify_folder
+            # the results xlsx is needed for evaluation; find it via classify_folder.
+            # NOTE: mineru_extract already folds every complementary source (incl.
+            # xlsx/csv supplements, embedded as HTML tables) into <paper>_full.md,
+            # so the md IS the complete source — do NOT also pass the supplements
+            # here or their tables get counted twice.
             try:
                 _, results_path, _ = classify_folder(folder)
                 results_xlsx = str(results_path) if results_path else None

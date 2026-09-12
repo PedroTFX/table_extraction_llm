@@ -293,11 +293,20 @@ the PLACE, ENVIRONMENT, TIME, or STUDY the specimen was sampled in rather than t
 specimen. The decisive test: does the value describe the organism, or the
 conditions where it was found? Only the organism is a trait. A number with a unit
 is NOT automatically a morphological measurement — a temperature, an area, or an
-income carries a unit too. Return null for, among others:
-- environment / climate: temperature, precipitation, humidity, degree-days
-  (GDD / DDG / PGDD), NPP, elevation, soil or clay %, land cover
-- geography / site: coordinates, latitude/longitude, site or garden or plot area,
-  distances (a place name that locates the sample is verbatimLocality, not a trait)
+income carries a unit too.
+
+But a climatic, spatial, or temporal quantity that is a property OF THE ORGANISM
+is itself a trait and must be KEPT: the species' own thermal or precipitation
+tolerance, its climatic niche or range, its phenology (flight period, months
+active, emergence timing), or its voltinism. The reject list below is about the
+RAW CONDITIONS OF THE SAMPLING SITE, not a tolerance/niche/timing attributed to
+the species. Return null for, among others:
+- site environment / climate: the sampling site's temperature, precipitation,
+  humidity, degree-days (GDD / DDG / PGDD), NPP, soil or clay % (NOT the species'
+  own thermal/precipitation tolerance or climatic niche, which are traits)
+- geography / site: coordinates, latitude/longitude, elevation of the site, site
+  or garden or plot area, distances (a place name that locates the sample is
+  verbatimLocality, not a trait)
 - human / socioeconomic: median income, population density, GDP, management,
   urbanisation
 - time: date, day, month, year, season

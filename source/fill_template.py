@@ -168,6 +168,11 @@ def get_measurement_level_tags(table_mapping, paper_chunks, llm=None, allowed_ta
         print(f"  column '{header}' ({'cat' if is_categorical else 'num'}) -> {tags}")
         results = agent_define_multi_tags(f"the column '{header}'", tags, paper_chunks, llm=llm)
         for tag, result in results.items():
+            # A smaller local model sometimes returns null (or a bare string) for
+            # a tag instead of the {value, reasoning} object; skip those rather
+            # than crashing on result.get().
+            if not isinstance(result, dict):
+                continue
             value = result.get("value")
             if not _is_empty_like(value):
                 mapping[tag] = value
