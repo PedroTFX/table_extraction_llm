@@ -1,103 +1,48 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Brant2021\Brant2021.xlsx  (480 rows)
-PREDICTION   : ..\output\Brant2021\Brant2021.csv  (4080 rows)
+PREDICTION   : ..\output\Brant2021\Brant2021.csv  (480 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-measurementType LEFT UNMAPPED (17)
-  '15Temp': no ground-truth string denotes this
-  'CV 15': no ground-truth string denotes this
-  'CV 16': no ground-truth string denotes this
-  'City.med.income': no ground-truth string denotes this
-  'DDG 15': no ground-truth string denotes this
-  'DDG 16': no ground-truth string denotes this
-  'Garden.area': no ground-truth string denotes this
-  'Head.w': no ground-truth string denotes this
-  'Intertegular.d': no ground-truth string denotes this
-  'Med.Income.scaled': no ground-truth string denotes this
-  'Month': no ground-truth string denotes this
-  'PGDD': no ground-truth string denotes this
-  'Percent.income': no ground-truth string denotes this
-  'income': no ground-truth string denotes this
-  'popdens': no ground-truth string denotes this
-  'scaled.garden': no ground-truth string denotes this
-  '\ufeffCity': no ground-truth string denotes this
-
 ROW-LEVEL (key match)
-  matched (TP)          : 0
-  missed (FN)           : 480
+  matched (TP)          : 480
+  missed (FN)           : 0
   spurious, in scope    : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 4080   <- GT never covers it: nothing to score against
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
-  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
-  RECALL (GT coverage)  : 0.000
-
-  out-of-scope rows by uncovered field:
-    measurementType                           4080
+  STRICT  P/R/F1        : 1.000 / 1.000 / 1.000
+  SCOPED  P/R/F1        : 1.000 / 1.000 / 1.000
+  RECALL (GT coverage)  : 1.000
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0      0    n/a
-  measurementMethod             0      0    n/a
-  measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  basisOfRecord                 0    480  0.000  <-- low
+  measurementMethod             0    480  0.000  <-- low
+  measurementUnit               0    480  0.000  <-- low
+  measurementStatistic          0    480  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
-  caste                         0      0    n/a
+  sex                         480    480  1.000
+  lifeStage                   480    480  1.000
+  caste                         0    480  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a
+  samplingProtocol              0    480  0.000  <-- low
+  verbatimLocality              0    480  0.000  <-- low
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0    480  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
+  associatedReferences          0    480  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 480 MISSED ROWS MISSED
-  species present, trait missing                      480
-
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'head width'                       x240
-     'intertegular distance'            x240
-  -> 2 missing traits explain 480 of 480 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Brant2021_misses.csv, Brant2021_misses_summary.json (480 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  cv 15                                             0   240   PRED-ONLY
-  ddg 15                                            0   240   PRED-ONLY
-  15temp                                            0   240   PRED-ONLY
-  cv 16                                             0   240   PRED-ONLY
-  ddg 16                                            0   240   PRED-ONLY
-  garden.area                                       0   240   PRED-ONLY
-  ﻿city                                             0   240   PRED-ONLY
-  city.med.income                                   0   240   PRED-ONLY
-  intertegular.d                                    0   240   PRED-ONLY
-  intertegular distance                           240     0   GT-ONLY
-  scaled.garden                                     0   240   PRED-ONLY
-  head.w                                            0   240   PRED-ONLY
-  head width                                      240     0   GT-ONLY
-  income                                            0   240   PRED-ONLY
-  med.income.scaled                                 0   240   PRED-ONLY
-  percent.income                                    0   240   PRED-ONLY
-  month                                             0   240   PRED-ONLY
-  pgdd                                              0   240   PRED-ONLY
-  popdens                                           0   240   PRED-ONLY
-
-  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
-    gt 'intertegular distance'            vs pred 'intertegular.d'                   sim=0.80
-    gt 'head width'                       vs pred 'head.w'                           sim=0.75
+  intertegular distance                           240   240   
+  head width                                      240   240   
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     0   480   id+type+value
-             (4080 more spurious row(s) out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0     0   480   basis+id+type+value+stat+sex+stage
-             (4080 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 +0.000 vs previous)
+  core        1.000  1.000  1.000    480     0     0   id+type+value
+  tags        0.000  0.000  0.000      0   480   480   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)

@@ -1,22 +1,22 @@
 {
   "Factor": {
-    "field": "definitionTerm",
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column lists the independent variables or factors being tested in the statistical model."
+    "reasoning": "The factor names describe the experimental differences or groupings, not organism traits."
   },
   "Pseudo-F": {
-    "field": "definitionTerm",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the F-statistic, which is a statistical measure of the factor's effect."
+    "reasoning": "Pseudo-F is a statistical index used to test differences between groups."
   },
   "df(residual)": {
-    "field": "definitionTerm",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column defines the degrees of freedom used for the residual error in the statistical test."
+    "reasoning": "df(residual) is a statistical measure of degrees of freedom for the model."
   },
   "p": {
-    "field": "definitionTerm",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the p-value, indicating the statistical significance of the factor."
+    "reasoning": "p is the statistical significance value for the observed differences."
   }
 }

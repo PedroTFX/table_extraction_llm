@@ -1,37 +1,114 @@
 {
   "Coefficients:": {
-    "field": "definitionTerm",
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column lists the predictor variables (e.g., Month July, City Detroit) in the statistical model."
+    "reasoning": "These are regression coefficients, representing the relationship between variables.",
+    "category": null,
+    "reasoning_relevance": "Represents statistical coefficients from a model, not a biological trait."
   },
   "Estimate": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the calculated coefficient values (effect size) from the regression model."
+    "reasoning": "These are the estimated values (coefficients) from the statistical model.",
+    "category": null,
+    "reasoning_relevance": "Represents a statistical estimate from the model, not a biological trait."
   },
   "Std. Error": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the standard error associated with the coefficient estimates."
+    "reasoning": "This is the standard error associated with the estimates.",
+    "category": null,
+    "reasoning_relevance": "Represents a statistical error measure, not a biological trait."
   },
   "t Value": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column contains the calculated t-statistic for the respective coefficient."
+    "reasoning": "This is the t-statistic used for hypothesis testing.",
+    "category": null,
+    "reasoning_relevance": "Represents a test statistic, which is excluded by definition."
   },
   "Pr(>": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column holds the p-value, indicating statistical significance of the coefficient."
+    "reasoning": "This is the p-value for the hypothesis test.",
+    "category": null,
+    "reasoning_relevance": "Represents a p-value, which is excluded by definition."
   },
   "t": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column is intended for statistical values (e.g., confidence intervals) but is empty in the sample."
+    "reasoning": "This is the t-value, a statistical measure.",
+    "category": null,
+    "reasoning_relevance": "Represents a test statistic, which is excluded by definition."
   },
   ")": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column is intended for statistical values (e.g., confidence intervals) but is empty in the sample."
+    "reasoning": "This represents the degrees of freedom for the test.",
+    "category": null,
+    "reasoning_relevance": "Represents a closing parenthesis for the statistical output."
+  },
+  "Month July": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a temporal variable used in the model."
+  },
+  "Month June": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a temporal variable used in the model."
+  },
+  "Month May": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a temporal variable used in the model."
+  },
+  "Month Sep Oct": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a temporal variable used in the model."
+  },
+  "City Detroit": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "This specifies the geographic location of the study."
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Halictus ligatus",
+    "reasoning": "The measurements quantify body size variation in female Halictus ligatus sweat bees across three different cities.",
+    "decided_by": "llm",
+    "roles": {
+      "Halictus ligatus": "measured subject"
+    },
+    "candidates": [
+      {
+        "name": "Halictus ligatus",
+        "mentions": 13,
+        "abbrev_mentions": 27,
+        "score": 151
+      },
+      {
+        "name": "Halicus ligatus",
+        "mentions": 1,
+        "abbrev_mentions": 27,
+        "score": 139
+      },
+      {
+        "name": "Chicago and",
+        "mentions": 8,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Detroit and",
+        "mentions": 8,
+        "abbrev_mentions": 0,
+        "score": 8
+      }
+    ]
   }
 }

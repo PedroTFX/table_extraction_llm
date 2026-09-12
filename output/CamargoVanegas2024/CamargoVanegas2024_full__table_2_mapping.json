@@ -2,49 +2,43 @@
   "Taxa": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the taxonomic names of the insects studied.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the scientific name of the ant species, which is a discrete biological classification."
+    "reasoning": "The column contains the taxonomic identification of the focal insect organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Lists specific species identifications, which are measurements of the organism's identity."
   },
   "Functional Groups": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "Represents functional classifications, not a measurement or location.",
+    "value_column": true,
+    "reasoning": "This column describes a biological classification trait of the organism.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Records discrete classifications of the ant's ecological role (e.g., AO, SO, SSP).",
+    "reasoning_relevance": "Represents a classification of the ant community's functional structure.",
     "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Functional Groups",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The functional groups are derived from the morphological traits of ant species collected from the leaf litter in the study areas. Since the ants were collected, measured, and analyzed, the data is based on preserved specimens.",
-    "measurementMethod": "Functional groups were identified based on the measurement of eight specific morphological traits (e.g., head length, mandible length, Weber length) of the ant species using a dual-axis micrometer stage. These traits were then used to classify the species into functional groups (e.g., SO, AO, DP) according to established taxonomic and functional ecology protocols.",
-    "measurementMethod_reasoning": "The study explicitly states that morphological traits were used to calculate functional diversity and that the functional groups were identified based on these traits. The measurement tool used was a dual-axis micrometer stage."
+    "basisOfRecord": "Functional groups identified within ant communities across different TDF fragments (N1, N2, N3)",
+    "basisOfRecord_reasoning": "The record pertains to the spatial and temporal variation of functional groups found in leaf-litter-associated ant communities across the studied TDF fragments. The study identified 20 functional groups and analyzed their distribution and richness across these fragments.",
+    "measurementMethod": "Integration of functional analysis with taxonomic assessment of ants, based on morphological traits and community structure.",
+    "measurementMethod_reasoning": "The functional groups were derived by evaluating functional traits (morphological traits) and assessing the resulting community structure (taxonomic diversity and functional diversity). The abstract states that functional groups were evaluated using 'diversity data and morphofunctional traits,' and Section 3.4 details the composition of these groups based on species richness and functional roles (e.g., epigeal/litter/small hypogeal omnivores, arboreal omnivores, dacetine predators)."
   },
   "N1": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Contains numeric data points representing measurements for the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a quantitative measurement (e.g., diversity index or abundance) recorded at site N1.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "N1 represents a measured trait or count for the focal organism.",
+    "category": null,
+    "reasoning_relevance": "Represents a spatial fragment identifier, not a trait of the organism."
   },
   "N2": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Contains numeric data points representing measurements for the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a quantitative measurement (e.g., diversity index or abundance) recorded at site N2.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "N2 represents a measured trait or count for the focal organism.",
+    "category": null,
+    "reasoning_relevance": "Represents a spatial fragment identifier, not a trait of the organism."
   },
   "N3": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Contains numeric data points representing measurements for the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a quantitative measurement (e.g., diversity index or abundance) recorded at site N3.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "N3 represents a measured trait or count for the focal organism.",
+    "category": null,
+    "reasoning_relevance": "Represents a spatial fragment identifier, not a trait of the organism."
   }
 }

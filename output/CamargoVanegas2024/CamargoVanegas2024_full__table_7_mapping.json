@@ -1,37 +1,47 @@
 {
   "TDF fragments": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "Identifies the sampling unit or location code (N1, N2, N3)."
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are specimen identifiers, not insect taxa, locations, or measurements."
   },
   "Season": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "Describes the temporal condition of the sampling event (Rainy/Dry)."
+    "field": null,
+    "value_column": false,
+    "reasoning": "This describes the sampling condition, not an organism trait or location."
   },
   "SR": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measured ecological property (SR)."
+    "measurementValue": "57",
+    "measurementStatistic": "single observation",
+    "reasoning": "SR is a raw measurement associated with the TDF fragments."
   },
   "LCI": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measured ecological property (LCI)."
+    "measurementValue": "45.95",
+    "measurementStatistic": "single observation",
+    "reasoning": "LCI is a measured value associated with the specimen."
   },
   "UCI": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measured ecological property (UCI)."
+    "measurementValue": "68.05",
+    "measurementStatistic": "single observation",
+    "reasoning": "UCI is a measured value associated with the specimen."
   },
   "Chao-1": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measured ecological property (Chao-1)."
+    "measurementValue": "75",
+    "measurementStatistic": "single observation",
+    "reasoning": "Chao-1 is a measured index associated with the specimen."
   },
   "$\\hat{C}m$": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measured ecological property ($σm$)."
+    "measurementValue": "0.96",
+    "measurementStatistic": "single observation",
+    "reasoning": "$\\hat{C}m$ is a measured value associated with the specimen."
   }
 }

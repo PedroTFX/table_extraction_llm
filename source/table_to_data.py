@@ -1079,7 +1079,16 @@ def add_table_to_grouped(table: Table, mapping: dict, grouped: dict,
                 sv = (rec.get(size_col, "") or "").strip()
                 if sv:
                     meas["sampleSizeValue"] = sv
-            entry["measurements"].append(meas)
+            # Skip an exact duplicate: some papers print the SAME table twice (a
+            # body table and its folded CSV supplement — CamargoVanegas' Species|N|
+            # HL Mean|HL SD... appears once with a two-row header and once
+            # pre-flattened). They share a schema, so the fragment collector keeps
+            # both and every measurement lands twice. A measurement identical in
+            # type, value, statistic AND every row qualifier is indistinguishable
+            # data, so one copy is kept. Genuine page-split fragments differ by row
+            # (different species/values) and are unaffected.
+            if meas not in entry["measurements"]:
+                entry["measurements"].append(meas)
     return grouped
 
 
@@ -1149,6 +1158,58 @@ def _strip_leading_token(text: str, token: str) -> Optional[str]:
     return rest or None
 
 
+def _strip_trailing_token(text: str, token: str) -> Optional[str]:
+    """If `text` ends with `token` as a whole token (case-insensitive), return
+    `text` with that trailing token \u2014 and any immediately preceding separator or
+    'of' \u2014 removed; else None. Mirror of _strip_leading_token for a SUFFIX
+    statistic ('Head length Mean' -> 'Head length', 'body size SD' -> 'body
+    size'). Whole-token, so a trait that merely CONTAINS the word is untouched;
+    the caller gates this on the mapper having already flagged the column as a
+    statistic column."""
+    token = (token or "").strip()
+    if not token:
+        return None
+    m = re.search(r"(?<![\w])" + re.escape(token) + r"\s*$", text, flags=re.IGNORECASE)
+    if not m:
+        return None
+    rest = text[:m.start()]
+    rest = re.sub(r"(\s*\bof\b|[-\u2013\u2014:,(\s])+$", "", rest, flags=re.IGNORECASE).strip()
+    return rest or None
+
+
+def _split_trailing_statistic(text: str):
+    """If `text` ends in a statistic word ('Head length Mean', 'DI SD', 'body
+    size standard deviation'), return (base_name, statistic_word); else None.
+    Checks the last two words first so multi-word statistics ('standard
+    deviation') win over their last word."""
+    if not isinstance(text, str):
+        return None
+    words = text.split()
+    if not words:
+        return None
+    for cand in (" ".join(words[-2:]), words[-1]):
+        if _normalize_statistic(cand):
+            base = _strip_trailing_token(text, cand)
+            if base:
+                return base, cand
+    return None
+
+
+def _stat_split_bases(headers) -> set:
+    """Bases shared by >=2 columns whose header ends in a statistic word \u2014 the
+    signature of a mean/SD-style split ('HL Mean' | 'HL SD' | 'HW Mean' | 'HW
+    SD'). Only for such corroborated bases do we strip the trailing statistic
+    from a trait name, so a lone trait that merely ends in a stat-like word
+    ('home range', 'locomotion mode') is never touched."""
+    from collections import Counter
+    counts = Counter()
+    for h in headers:
+        split = _split_trailing_statistic(h)
+        if split:
+            counts[split[0].strip().lower()] += 1
+    return {b for b, n in counts.items() if n >= 2}
+
+
 _SAMPLE_SIZE_RE = re.compile(
     r"^(n|nº|no\.?)$|sample\s*size|number\s+of\b|no\.?\s+of\b|\bcount\b|\bn\s*=",
     re.IGNORECASE,
@@ -1185,11 +1246,13 @@ def _looks_cryptic_code(header: str) -> bool:
     plain header ('Body length (mm)', 'Tongue Length') is already the trait name.
 
     Cryptic = no internal space (after dropping a trailing unit paren) AND a
-    STRONG machine-code signal: an underscore, an embedded digit, or a camelCase
-    boundary (lower->UPPER). We deliberately do NOT treat a plain short word as
-    cryptic — a short jargon label ('Lecty', 'Mass', 'Volt') is often exactly the
-    term the ground truth uses, so rewriting it would break a match that already
-    worked. Plain multi-word headers always have a space and are never cryptic."""
+    STRONG machine-code signal: an underscore, an embedded digit, a camelCase
+    boundary (lower->UPPER), or a dot-separated abbreviation ('Head.w',
+    'Intertegular.d' — an R data.frame column dump). We deliberately do NOT treat
+    a plain short word as cryptic — a short jargon label ('Lecty', 'Mass',
+    'Volt') is often exactly the term the ground truth uses, so rewriting it would
+    break a match that already worked. Plain multi-word headers always have a
+    space and are never cryptic."""
     if not isinstance(header, str):
         return False
     h = re.sub(r"\s*\([^()]*\)\s*$", "", header).strip()   # drop a trailing unit
@@ -1198,7 +1261,11 @@ def _looks_cryptic_code(header: str) -> bool:
     has_underscore = "_" in h
     has_digit = any(c.isdigit() for c in h)
     camel = any(h[i].islower() and h[i + 1].isupper() for i in range(len(h) - 1))
-    return has_underscore or has_digit or camel
+    # A dot joining two letter tokens is an R-style abbreviation code
+    # ('Head.w' = head width, 'Intertegular.d' = intertegular distance), never a
+    # plain trait name; a decimal ('3.5') is caught by has_digit instead.
+    has_dot_code = bool(re.search(r"[A-Za-z]\.[A-Za-z]", h))
+    return has_underscore or has_digit or camel or has_dot_code
 
 
 def agent_humanize_cryptic_types(headers: list, paper_text: str, llm=None) -> dict:
@@ -1405,6 +1472,38 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
     for mapping in mappings.values():
         # one sample-size column per table, linked to that table's aggregates
         size_col = _find_sample_size_column(mapping)
+        # bases that appear with >=2 statistic suffixes in THIS table (HL Mean /
+        # HL SD) — the corroboration for stripping a trailing statistic below
+        split_bases = _stat_split_bases(mapping.keys())
+        # Promote statistic-companion columns ('HL SD' next to 'HL Mean') to their
+        # OWN measurement. The mapper tends to file them as measurementStatistic,
+        # which makes add_table_to_grouped copy the SD *number* into the mean
+        # row's statistic field. Instead, give each the sibling mean column's
+        # relevance category so the keep-gate accepts it; the main loop below then
+        # canonicalizes it to the base trait name and sets a proper statistic
+        # LABEL ('standard deviation') from its header suffix.
+        if split_bases:
+            sib_cat = {}
+            for h, mm in mapping.items():
+                if not isinstance(mm, dict):
+                    continue
+                sp = _split_trailing_statistic(h)
+                if (sp and mm.get("field") == "measurementType"
+                        and mm.get("category") is not None):
+                    sib_cat.setdefault(sp[0].strip().lower(), mm.get("category"))
+            for h, mm in mapping.items():
+                if not isinstance(mm, dict) or mm.get("field") == "measurementType":
+                    continue
+                sp = _split_trailing_statistic(h)
+                if not sp or sp[0].strip().lower() not in split_bases:
+                    continue
+                cat = sib_cat.get(sp[0].strip().lower())
+                if cat is None:
+                    continue
+                mm["field"] = "measurementType"
+                mm["category"] = cat
+                print(f"    promoted stat-companion '{h}' -> its own "
+                      f"measurement (statistic={_normalize_statistic(sp[1])!r})")
         for header, m in mapping.items():
             if not (m.get("field") == "measurementType" and m.get("category") is not None):
                 continue
@@ -1428,6 +1527,28 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
                     if size_col:
                         m["sampleSizeColumn"] = size_col
                     n_stat += 1
+            # Trailing statistic suffix ('Head length Mean' -> 'head length',
+            # 'DI SD' -> 'distance'): common in R-exported morphometric tables
+            # (HL Mean | HL SD | HW Mean | HW SD ...). Strip it only when the RAW
+            # header's base is one this table repeats with >=2 statistic suffixes
+            # (split_bases) — that corroborates the suffix is a statistic and not
+            # part of a trait name that merely ends in a stat-like word ('home
+            # range', 'locomotion mode'). Keeps the trait name aligned with the
+            # plain-value version of the same table and with the ground truth.
+            if canonical == expanded:
+                raw_split = _split_trailing_statistic(header)
+                if raw_split and raw_split[0].strip().lower() in split_bases:
+                    exp_split = _split_trailing_statistic(expanded)
+                    if exp_split:
+                        canonical = exp_split[0]
+                        # Fill the statistic LABEL deterministically from the
+                        # header suffix ('Mean'->mean, 'SD'->standard deviation),
+                        # overriding any noisy value the mapper guessed. Free and
+                        # exact — no model call.
+                        m["measurementStatistic"] = _normalize_statistic(raw_split[1])
+                        if size_col:
+                            m["sampleSizeColumn"] = size_col
+                        n_stat += 1
             m["canonicalType"] = canonical
             if canonical != header:
                 n += 1
