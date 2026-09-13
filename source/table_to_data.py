@@ -26,7 +26,8 @@ from typing import Iterable, Optional
 from tables import (Table, parse_table, clean_text, find_abbreviation_definitions,
                     find_binomial_candidates, looks_multivalue_column,
                     is_headerless_continuation,
-                    detect_transposed, transpose_table)
+                    detect_transposed, transpose_table,
+                    looks_like_taxon, taxon_fraction)
 from text_manager import get_tables, xlsx_to_table, csv_to_table
 from column_relevance import (agent_define_columns_relevance, make_llm,
                               invoke_sized, loads_salvaging)
@@ -1608,6 +1609,161 @@ def add_long_table_to_grouped(table: Table, mapping: dict, grouped: dict,
     return grouped
 
 
+_TRAIT_LABEL_RE = re.compile(
+    r"\b(traits?|characters?|variables?|parameters?|measurements?|metrics?|"
+    r"morphometr\w*)\b", re.IGNORECASE)
+
+
+def _traitish(v: str) -> bool:
+    """A first-column cell that reads like a TRAIT NAME, not a taxon, a bare
+    number, or a blank — used to recognise a traits-in-rows table."""
+    v = clean_text(v)
+    if not v:
+        return False
+    if looks_like_taxon(v):
+        return False
+    return not re.fullmatch(r"[\d.,%±()/\s–—+-]+", v)
+
+
+def detect_trait_rows_table(table: Table, fallback_species: Optional[str]):
+    """Traits-in-ROWS: the first column lists trait names and the OTHER columns
+    are experimental conditions / castes / groups (Kovacs' Workers|Gynes, Borges'
+    prey diets, Kovacs2008's colonies A-F). The focal organism is named at PAPER
+    level (in prose), never in a column — so this only fires for a single-species
+    paper (fallback_species present), letting the melt below attribute every cell
+    to that one organism.
+
+    Returns (verdict, reason). Guards, in order:
+      - need a paper-level species and a >=2x2 grid;
+      - the OTHER column headers must NOT be taxa (else it is a normal or a
+        rotate case, handled elsewhere);
+      - the first column must read as trait names — by its HEADER word ('Trait',
+        'Character', 'Variable', ...) or by its VALUES being mostly trait-like;
+      - REJECT a correlation/comparison MATRIX, where the other headers repeat the
+        first column's own trait labels (Kovacs' trait x trait matrices) — melting
+        those would emit correlations as measurements.
+    """
+    if not fallback_species:
+        return False, "no paper-level species"
+    cols = list(table.columns)
+    recs = [r for r in table.data_records() if not r.get("_is_group_row")]
+    if len(cols) < 2 or len(recs) < 2:
+        return False, "grid too small"
+    col0 = cols[0]
+    # value columns = every non-first REAL column (drop the synthetic paper-species
+    # column the resolver injects, and any blank-header synthetic column).
+    value_cols = [c for c in cols[1:]
+                  if not c.synthetic and c.name != PAPER_SPECIES_KEY]
+    others = [c.name for c in value_cols]
+    if not others:
+        return False, "no value columns"
+    # NOTE: we do NOT reject when the other headers look like taxa. A single-
+    # species paper (fallback_species set) has exactly one focal organism, named
+    # at paper level; any taxa in the OTHER columns are therefore conditions
+    # (Borges' prey diets A. fabae / M. persicae), not the subject.
+    vals = [clean_text(r.get(col0.name, "")) for r in recs]
+    vals = [v for v in vals if v]
+    if not vals:
+        return False, "empty first column"
+    # correlation/comparison matrix: the other headers echo the trait labels
+    val_set = {v.lower() for v in vals}
+    other_set = {clean_text(o).lower() for o in others if clean_text(o)}
+    if other_set:
+        overlap = len(val_set & other_set) / len(other_set)
+        if overlap >= 0.5:
+            return False, "trait x trait matrix (other headers echo the rows)"
+    header_signal = bool(_TRAIT_LABEL_RE.search(clean_text(col0.name)))
+    val_signal = sum(_traitish(v) for v in vals) / len(vals) >= 0.7
+    if header_signal or val_signal:
+        return True, ("first-column header names a trait" if header_signal
+                      else "first-column values are trait-like")
+    return False, "first column is not trait-like"
+
+
+_MEAN_WORD_RE = re.compile(r"\b(mean|median|average|avg)\b", re.IGNORECASE)
+_SKIP_STAT_RE = re.compile(
+    r"\b(cv|sd|se|sem|std|stdev|variance|isometr\w*|dimorphism|correlation|"
+    r"slope|error)\b", re.IGNORECASE)
+_SIZE_LAST = {"n", "no", "no.", "count"}
+_TEST_LAST = {"t", "p", "f", "z"}
+
+
+def _classify_value_column(name: str):
+    """Classify a condition/value column of a traits-in-rows table.
+
+    Returns (kind, statistic, condition):
+      - 'value'  a real measurement column. `condition` (caste/diet/group) is
+        recorded as sampleTreatment; `statistic` is set for a mean/median column.
+      - 'skip'   a sample-size ('n'), dispersion ('CV'/'SD'/'SE') or test
+        statistic ('Between castes t') column — not a primary measurement.
+    A column whose header carries no statistic word is a plain condition
+    (Borges' prey diet, Kovacs' colony) and is kept as a measurement."""
+    raw = clean_text(name)
+    words = raw.split()
+    if _MEAN_WORD_RE.search(raw):
+        cond = _MEAN_WORD_RE.split(raw)[0].strip(" ±:;-–—()")
+        stat = "median" if re.search(r"median", raw, re.I) else "mean"
+        return "value", stat, cond
+    if _SKIP_STAT_RE.search(raw):
+        return "skip", None, None
+    last = words[-1].lower() if words else ""
+    if last in _SIZE_LAST:
+        return "skip", None, None
+    # single-letter test statistics (t/p/F) only when they trail a multi-word
+    # header ('Between castes t'); a lone 'F' is a colony/group label, kept.
+    if last in _TEST_LAST and len(words) > 1:
+        return "skip", None, None
+    return "value", None, raw
+
+
+def add_trait_rows_table_to_grouped(table: Table, grouped: dict,
+                                    fallback_species: str) -> dict:
+    """Melt a traits-in-ROWS table onto the paper-level species: every cell
+    becomes one measurement (type = the row's trait, value = the cell). When
+    there is more than one value column, each column is a CONDITION/caste/group,
+    recorded as sampleTreatment so the reading stays attributable. Deterministic
+    and mapper-free: the trait names are already human-readable in the first
+    column, so no glossary/relevance pass is needed."""
+    cols = list(table.columns)
+    col0 = cols[0]
+    raw_value_cols = [c for c in cols[1:]
+                      if not c.synthetic and c.name != PAPER_SPECIES_KEY]
+    # classify each column: keep measurements (mean/plain condition), drop
+    # sample-size / dispersion / test-statistic columns.
+    kept = []
+    for c in raw_value_cols:
+        kind, stat, cond = _classify_value_column(c.name)
+        if kind == "value":
+            kept.append((c, stat, cond))
+    single = len(kept) == 1
+    entry = grouped.setdefault(fallback_species, {
+        "verbatimIdentification": fallback_species, "measurements": []})
+    n = 0
+    for rec in table.data_records():
+        if rec.get("_is_group_row"):
+            continue
+        trait = clean_text(rec.get(col0.name, ""))
+        if not _traitish(trait):
+            continue
+        for c, stat, cond in kept:
+            value = (rec.get(c.name, "") or "").strip()
+            if not value:
+                continue
+            meas = {"measurementType": trait, "measurementValue": value}
+            if stat:
+                meas["measurementStatistic"] = stat
+            # record the condition (caste/diet/group) unless it is the sole
+            # column and carries no distinguishing label
+            if cond and not (single and not stat):
+                meas["sampleTreatment"] = cond
+            if meas not in entry["measurements"]:
+                entry["measurements"].append(meas)
+                n += 1
+    print(f"    [trait-rows] {table_id(table)}: {n} measurement(s) melted onto "
+          f"{fallback_species!r} ({len(kept)}/{len(raw_value_cols)} value col(s) kept)")
+    return grouped
+
+
 def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -> dict:
     """Merge every mapped table into one species-keyed structure.
 
@@ -1622,15 +1778,24 @@ def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -
         mapping = mappings.get(tid)
         if not mapping:
             continue
+        fb = fallback_species.get(tid)
+        # Traits-in-ROWS with a paper-level species (Kovacs, Borges): the first
+        # column is the trait, the other columns are conditions/castes. Melt it
+        # onto the one organism. Checked FIRST — this orientation is invisible to
+        # both the long detector and the wide path (they'd read a condition as the
+        # species or a trait as a value).
+        tr_ok, tr_reason = detect_trait_rows_table(table, fb)
+        if tr_ok:
+            add_trait_rows_table_to_grouped(table, grouped, fallback_species=fb)
+            continue
         # A tidy/long table (trait-name column + value column) is read row-wise;
         # everything else goes through the normal wide path.
         longspec = detect_long_in_table(table)
         if longspec:
             add_long_table_to_grouped(table, mapping, grouped, longspec,
-                                      fallback_species=fallback_species.get(tid))
+                                      fallback_species=fb)
         else:
-            add_table_to_grouped(table, mapping, grouped,
-                                 fallback_species=fallback_species.get(tid))
+            add_table_to_grouped(table, mapping, grouped, fallback_species=fb)
     return grouped
 
 

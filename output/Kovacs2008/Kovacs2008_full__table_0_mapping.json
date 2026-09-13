@@ -1,65 +1,65 @@
 {
-  "Trait Trait": {
+  "Trait": {
     "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column names the specific biological trait or property being measured.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The column lists the names of morphological traits (e.g., 'Thorax width'), not the measured values themselves.",
+    "reasoning": "The header names the property being measured, defining the trait of the organism.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "The column names the specific morphological traits being measured.",
     "multi_value": false,
     "value_type": "categorical",
-    "canonicalType": "Trait Trait"
+    "canonicalType": "Trait"
   },
   "Colony-of-origin A": {
-    "field": "measurementValue",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This column contains the measured values and associated statistical data for the traits.",
+    "reasoning": "This column identifies the specific colony origin, acting as a sampling location.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain numerical measurements (e.g., $3.67 \text{ mm} \text{ or } \text{mg}$) of biological traits.",
+    "reasoning_relevance": "Represents the measured size/mass of the organism from a specific colony.",
     "multi_value": false,
     "value_type": "categorical"
   },
   "Colony-of-origin B": {
-    "field": "measurementValue",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This column contains the measured values and associated statistical data for the traits.",
+    "reasoning": "This column identifies the specific colony origin, acting as a sampling location.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain numerical measurements (e.g., $3.50 \text{ mm} \text{ or } \text{mg}$) of biological traits.",
+    "reasoning_relevance": "Represents the measured size/mass of the organism from a specific colony.",
     "multi_value": false,
     "value_type": "categorical"
   },
   "Colony-of-origin C": {
-    "field": "measurementValue",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This column contains the measured values and associated statistical data for the traits.",
+    "reasoning": "This column identifies the specific colony origin, acting as a sampling location.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain numerical measurements (e.g., $2.73 \text{ mm} \text{ or } \text{mg}$) of biological traits.",
+    "reasoning_relevance": "Represents the measured size/mass of the organism from a specific colony.",
     "multi_value": false,
     "value_type": "categorical"
   },
   "Colony-of-origin D": {
-    "field": "measurementValue",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This column contains the measured values and associated statistical data for the traits.",
+    "reasoning": "This column identifies the specific colony origin, acting as a sampling location.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain numerical measurements (e.g., $3.11 \text{ mm} \text{ or } \text{mg}$) of biological traits.",
+    "reasoning_relevance": "Represents the measured size/mass of the organism from a specific colony.",
     "multi_value": false,
     "value_type": "categorical"
   },
   "Colony-of-origin E": {
-    "field": "measurementValue",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This column contains the measured values and associated statistical data for the traits.",
+    "reasoning": "This column identifies the specific colony origin, acting as a sampling location.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain numerical measurements (e.g., $2.55 \text{ mm} \text{ or } \text{mg}$) of biological traits.",
+    "reasoning_relevance": "Represents the measured size/mass of the organism from a specific colony.",
     "multi_value": false,
     "value_type": "categorical"
   },
   "Colony-of-origin F": {
-    "field": "measurementValue",
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This column contains the measured values and associated statistical data for the traits.",
+    "reasoning": "This column identifies the specific colony origin, acting as a sampling location.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain numerical measurements (e.g., $2.33 \text{ mm} \text{ or } \text{mg}$) of biological traits.",
+    "reasoning_relevance": "Represents the measured size/mass of the organism from a specific colony.",
     "multi_value": false,
     "value_type": "categorical"
   },
@@ -69,14 +69,12 @@
     "scope": "paper",
     "column": null,
     "value": "Vespula maculifrons",
-    "reasoning": "The study investigates mating success and morphological traits of Vespula maculifrons. Other candidates are not mentioned or are variables/conditions.",
+    "reasoning": "The study investigates mating success in Vespula maculifrons, and measurements are of this single species.",
     "decided_by": "llm",
     "roles": {
       "Vespula maculifrons": "measured subject",
-      "Pogonomyrmex occidentalis": "unclear",
-      "Lasius niger": "unclear",
-      "Males from": "condition",
-      "Size and": "condition"
+      "Males from": "measured subject",
+      "Size and": "measured trait"
     },
     "candidates": [
       {

@@ -1,27 +1,30 @@
 {
   "Population Growth Parameters": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header names the biological property (growth parameters) being measured for the organisms.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Contains quantitative demographic metrics like intrinsic rate of increase (r_m) and doubling time (DT).",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Population Growth Parameters"
+    "value_column": true,
+    "reasoning": "Header describes mathematical parameters of population dynamics, which are measured traits.",
+    "category": null,
+    "reasoning_relevance": "These are derived statistics, not direct measurements of the organism's traits."
   },
   "A. fabae": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "This is the taxonomic name of the insect species whose data is presented.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Contains quantitative measurements of biological traits (e.g., fecundity, development time) under this diet."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Column contains numerical estimates of population growth parameters for the focal insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the associated prey species (biotic association).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "A. fabae"
   },
   "M. persicae": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "This is the taxonomic name of the insect species whose data is presented.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Contains quantitative measurements of biological traits (e.g., fecundity, development time) under this diet."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Column contains numerical estimates of population growth parameters for the focal insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the associated prey species (biotic association).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "M. persicae"
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -29,14 +32,12 @@
     "scope": "paper",
     "column": null,
     "value": "Scymnus nubilus",
-    "reasoning": "The paper measures the life history traits and demographic performance of the predator Scymnus nubilus when fed different prey.",
+    "reasoning": "The measurements describe the performance of the predator Scymnus nubilus based on the aphid diets provided.",
     "decided_by": "llm",
     "roles": {
-      "Aphis fabae": "prey",
-      "Myzus persicae": "prey",
       "Scymnus nubilus": "measured subject",
-      "Scymnu nubilus": "measured subject",
-      "Aphis gossypii": "cited comparison"
+      "Aphis fabae": "diet",
+      "Myzus persicae": "diet"
     },
     "candidates": [
       {

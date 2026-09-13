@@ -1,48 +1,48 @@
 {
-  "Trait Trait": {
+  "Trait": {
     "field": "measurementType",
     "value_column": false,
-    "reasoning": "This header names the specific biological trait (e.g., Thorax width) being measured.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The column contains names of physical traits (e.g., 'Thorax width', 'Mass') that are measured in a separate data column.",
+    "reasoning": "The header names the specific property being measured for the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Names of specific physical dimensions measured for the organism.",
     "multi_value": false,
     "value_type": "categorical",
-    "canonicalType": "Trait Trait"
+    "canonicalType": "Trait"
   },
   "Workers k ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the quantitative measurement (mean ± SE) for the worker caste.",
+    "reasoning": "This column contains the measured value and its associated standard error.",
     "category": null,
-    "reasoning_relevance": "This is an allometric coefficient (k) with standard error, which functions as a statistical index."
+    "reasoning_relevance": "This is a statistical index (k) and standard error, which are derived statistics."
   },
   "Workers Isometry (t)": {
-    "field": "measurementStatistic",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column reports the statistical significance (t-value) associated with the worker trait.",
+    "reasoning": "This column contains the measured isometry value and its associated statistical test result.",
     "category": null,
-    "reasoning_relevance": "This column contains Student's t-test values, which are statistical indices."
+    "reasoning_relevance": "This is a statistical test result (t-value) comparing allometric relationships."
   },
   "Gynes k ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the quantitative measurement (mean ± SE) for the gynes caste.",
+    "reasoning": "This column contains the measured value and its associated standard error.",
     "category": null,
-    "reasoning_relevance": "This is an allometric coefficient (k) with standard error, which functions as a statistical index."
+    "reasoning_relevance": "This is a statistical index (k) and standard error, which are derived statistics."
   },
   "Gynes Isometry (t)": {
-    "field": "measurementStatistic",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column reports the statistical significance (t-value) associated with the gynes trait.",
+    "reasoning": "This column contains the measured isometry value and its associated statistical test result.",
     "category": null,
-    "reasoning_relevance": "This column contains Student's t-test values, which are statistical indices."
+    "reasoning_relevance": "This is a statistical test result (t-value) comparing allometric relationships."
   },
-  "Castes (t) Castes (t)": {
-    "field": "measurementStatistic",
+  "Castes (t)": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column reports the statistical significance (t-value) associated with the castes trait.",
+    "reasoning": "This column contains the measured caste value and its associated statistical test result.",
     "category": null,
-    "reasoning_relevance": "The values are statistical test results (t-ratios) comparing traits between castes."
+    "reasoning_relevance": "This is a statistical test result (t-value) comparing caste differences."
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -50,7 +50,7 @@
     "scope": "paper",
     "column": null,
     "value": "Vespula maculifrons",
-    "reasoning": "All measurements (traits like thorax length and caste dimorphism) are taken from the social wasp Vespula maculifrons.",
+    "reasoning": "The measurements describe morphological traits and caste dimorphism of the single social wasp species studied.",
     "decided_by": "llm",
     "roles": {
       "Vespula maculifrons": "measured subject",

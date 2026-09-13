@@ -1,19 +1,20 @@
 {
   "Trait": {
-    "field": "definitionTerm",
-    "value_column": false,
-    "reasoning": "This column lists the codes/labels for the measured morphological traits.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The column lists abbreviations (e.g., TW, TL) for the morphological traits measured.",
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "The header labels the specific morphological trait being measured for the insect.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Cells contain the names of traits, paired with separate values.",
     "multi_value": false,
-    "value_type": "categorical"
+    "value_type": "categorical",
+    "canonicalType": "Trait"
   },
   "TW": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Total Width, a physical property of the organism.",
+    "reasoning": "TW represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents thorax width, a physical/anatomical measurement of the wasp.",
+    "reasoning_relevance": "Measures the thorax width, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Thorax width"
@@ -21,9 +22,9 @@
   "TL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Total Length, a physical property of the organism.",
+    "reasoning": "TL represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents thorax length, a physical/anatomical measurement of the wasp.",
+    "reasoning_relevance": "Measures the thorax length, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "thorax length"
@@ -31,9 +32,9 @@
   "HTL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Head-to-Thorax Length, a physical property of the organism.",
+    "reasoning": "HTL represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents head-to-thorax length, a physical/anatomical measurement of the wasp.",
+    "reasoning_relevance": "Measures the head-to-thorax length, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Head to end of thorax length"
@@ -41,19 +42,19 @@
   "T3L": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Third Segment Length, a physical property of the organism.",
+    "reasoning": "T3L represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the length of the third tergum, a physical/anatomical measurement.",
+    "reasoning_relevance": "Measures the length of the third tergum, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
-    "canonicalType": "T3L"
+    "canonicalType": "length of the third tergum"
   },
   "GL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Gaster Length, a physical property of the organism.",
+    "reasoning": "GL represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents gaster length, a physical/anatomical measurement of the wasp.",
+    "reasoning_relevance": "Measures the gaster length, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "gaster length"
@@ -61,9 +62,9 @@
   "AL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Abdomen Length, a physical property of the organism.",
+    "reasoning": "AL represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents mean antennal length, a physical/anatomical measurement of the wasp.",
+    "reasoning_relevance": "Measures the mean antennal length, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "antennal length"
@@ -71,9 +72,9 @@
   "BL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Body Length, a physical property of the organism.",
+    "reasoning": "BL represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents total body length, a physical/anatomical measurement of the wasp.",
+    "reasoning_relevance": "Measures the total body length, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "body length"
@@ -81,9 +82,9 @@
   "CL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Clypeus Length, a physical property of the organism.",
+    "reasoning": "CL represents a measured trait, likely a specific body length or dimension.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the length of the distal cell on the right wing, a physical measurement.",
+    "reasoning_relevance": "Measures the length of the distal cell, a physical dimension of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "cell length"
@@ -91,9 +92,9 @@
   "Mass": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measurement of Mass, a physical property of the organism.",
+    "reasoning": "Mass represents a measured trait, likely the total body mass.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the dry mass of the individual, a physical/anatomical measurement.",
+    "reasoning_relevance": "Measures the dry mass of the individuals, a physical dimension.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Mass"
@@ -104,14 +105,12 @@
     "scope": "paper",
     "column": null,
     "value": "Vespula maculifrons",
-    "reasoning": "The study investigates mating success and morphological traits of Vespula maculifrons. Other candidates are not mentioned or are variables/conditions.",
+    "reasoning": "The study investigates mating success in Vespula maculifrons, and measurements are of this single species.",
     "decided_by": "llm",
     "roles": {
       "Vespula maculifrons": "measured subject",
-      "Pogonomyrmex occidentalis": "unclear",
-      "Lasius niger": "unclear",
-      "Males from": "condition",
-      "Size and": "condition"
+      "Males from": "measured subject",
+      "Size and": "measured trait"
     },
     "candidates": [
       {

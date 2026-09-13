@@ -1,60 +1,90 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Kovacs2008\Kovacs2008.xlsx  (81 rows)
-PREDICTION   : ..\output\Kovacs2008\Kovacs2008.csv  (99 rows)
+PREDICTION   : ..\output\Kovacs2008\Kovacs2008.csv  (168 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-measurementType REMAP (pred -> gt, 7 pair(s))
+measurementType REMAP (pred -> gt, 14 pair(s))
+  'Antennal length (AL)*' -> 'Antennal length '
+  'Gaster length (GL)*' -> 'Gaster length  '
+  'Head to end of thorax length (HTL)*' -> 'Head to end of thorax length'
   'Mass' -> 'Mass '
+  'Mass*' -> 'Mass '
+  'Tergum 3 length (T3L)*' -> 'Tergum 3 length'
+  'Thorax length (TL)*' -> 'Thorax length '
   'Thorax width' -> 'Thorax width  '
+  'Thorax width (TW)*' -> 'Thorax width  '
   'antennal length' -> 'Antennal length '
   'body length' -> 'Total body length '
   'cell length' -> 'Distal cell length '
   'gaster length' -> 'Gaster length  '
   'thorax length' -> 'Thorax length '
 
-measurementType LEFT UNMAPPED (2)
-  'T3L': no ground-truth string denotes this
-  'Trait Trait': no ground-truth string denotes this
+measurementType LEFT UNMAPPED (10)
+  'AL': no ground-truth string denotes this
+  'BL*': no ground-truth string denotes this
+  'CL': no ground-truth string denotes this
+  'GL*': no ground-truth string denotes this
+  'HTL*': no ground-truth string denotes this
+  'T3L*': no ground-truth string denotes this
+  'TL*': no ground-truth string denotes this
+  'TW*': no ground-truth string denotes this
+  'Trait': no ground-truth string denotes this
+  'length of the third tergum': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
-  matched (TP)          : 0
-  missed (FN)           : 81
-  spurious, in scope    : 72   <- GT covers this trait: real errors
-  spurious, out of scope: 27   <- GT never covers it: nothing to score against
+  matched (TP)          : 26
+  missed (FN)           : 55
+  spurious, in scope    : 85   <- GT covers this trait: real errors
+  spurious, out of scope: 57   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
-  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
-  RECALL (GT coverage)  : 0.000
+  STRICT  P/R/F1        : 0.155 / 0.321 / 0.209
+  SCOPED  P/R/F1        : 0.234 / 0.321 / 0.271
+  RECALL (GT coverage)  : 0.321
 
   out-of-scope rows by uncovered field:
-    measurementType                             27
+    measurementType                             57
+
+FUZZY VALUE MATCHES (26 accepted beyond exact/numeric)
+  subset          26
+  sample:
+    [subset] gt '2.73 ± 0.09 ' == pred '$2.73^2 \\pm 0.09$'
+    [subset] gt '3.11 ± 0.08 ' == pred '$3.11^1 \\pm 0.08$'
+    [subset] gt '2.55 ± 0.08 ' == pred '$2.55^{2,3} \\pm 0.08$'
+    [subset] gt '8.10 ± 0.17 ' == pred '$8.10^{2,3} \\pm 0.17$'
+    [subset] gt '8.86 ± 0.14 ' == pred '$8.86^1 \\pm 0.14$'
+    [subset] gt '8.27 ± 0.15 ' == pred '$8.27^2 \\pm 0.15$'
+    [subset] gt '7.76 ± 0.13 ' == pred '$7.76^{2,3} \\pm 0.13$'
+    [subset] gt '8.00 ± 0.10 ' == pred '$8.00^1 \\pm 0.10$'
+    [subset] gt '7.96 ± 0.13 ' == pred '$7.96^{1,2} \\pm 0.13$'
+    [subset] gt ' 1.54 ± 0.04 ' == pred '$1.54^2 \\pm 0.04$'
+    [subset] gt '1.83 ± 0.04 ' == pred '$1.83^1 \\pm 0.04$'
+    [subset] gt '1.61 ± 0.04 ' == pred '$1.61^2 \\pm 0.04$'
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0      0    n/a
+  basisOfRecord                 0     26  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  measurementUnit               0     26  0.000  <-- low
+  measurementStatistic          0     26  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
-  caste                         0      0    n/a
+  sex                           0     26  0.000  <-- low
+  lifeStage                    26     26  1.000
+  caste                         0     26  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
-  sampleTreatment               0      0    n/a
+  sampleTreatment               0     26  0.000  <-- low
   samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a
+  verbatimLocality              0     26  0.000  <-- low
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0     26  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
+  associatedReferences          0     26  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 81 MISSED ROWS MISSED
-  species present, trait missing                        9
-  species+trait present, value differs                 72
+WHY THE 55 MISSED ROWS MISSED
+  species+trait present, value differs                 55
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      '3.67 ± 0.05'                ->  '-'                          x1
@@ -62,33 +92,37 @@ WHY THE 81 MISSED ROWS MISSED
      '3.42 ± 0.06'                ->  '-'                          x1
      '3.62 ± 0.05'                ->  '-'                          x1
      '3.48 ± 0.04'                ->  '-'                          x1
-     '2.73 ± 0.09'                ->  '-'                          x1
-  -> 6 substitutions explain 6 of 81 misses (7%) — scattered; no single cause
+     '2.333 ± 0.07'               ->  '-'                          x1
+  -> 6 substitutions explain 6 of 55 misses (11%) — scattered; no single cause
 
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Tergum 3 length'                  x9
-  -> 1 missing trait explains 9 of 81 misses (11%) — scattered; no single cause
-
-  full miss detail saved -> Kovacs2008_misses.csv, Kovacs2008_misses_summary.json (81 row(s))
+  full miss detail saved -> Kovacs2008_misses.csv, Kovacs2008_misses_summary.json (55 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  tergum 3 length                                   9     0   GT-ONLY
-  antennal length                                   9     9   
+  tergum 3 length                                   9     5   Δ-4 (split?)
+  al                                                0     5   PRED-ONLY
+  antennal length                                   9    13   Δ+4 (split?)
+  bl*                                               0     5   PRED-ONLY
   total body length                                 9     9   
   distal cell length                                9     9   
-  head to end of thorax length                      9     9   
-  gaster length                                     9     9   
-  thorax length                                     9     9   
-  mass                                              9     9   
-  t3l                                               0     9   PRED-ONLY
-  thorax width                                      9     9   
-  trait trait                                       0    18   PRED-ONLY
+  cl                                                0     5   PRED-ONLY
+  head to end of thorax length                      9    14   Δ+5 (split?)
+  gaster length                                     9    14   Δ+5 (split?)
+  gl*                                               0     5   PRED-ONLY
+  htl*                                              0     5   PRED-ONLY
+  length of the third tergum                        0     8   PRED-ONLY
+  thorax length                                     9    14   Δ+5 (split?)
+  mass                                              9    19   Δ+10 (split?)
+  t3l*                                              0     5   PRED-ONLY
+  thorax width                                      9    14   Δ+5 (split?)
+  tl*                                               0     5   PRED-ONLY
+  trait                                             0     9   PRED-ONLY
+  tw*                                               0     5   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0    72    81   id+type+value
-             (27 more spurious row(s) out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0    72    81   basis+id+type+value+stat+sex+stage
-             (27 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 +0.000 vs previous)
+  core        0.234  0.321  0.271     26    85    55   id+type+value
+             (57 more spurious row(s) out-of-scope; strict P would be 0.155)
+  tags        0.000  0.000  0.000      0   111    81   basis+id+type+value+stat+sex+stage
+             (57 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.271 vs previous)

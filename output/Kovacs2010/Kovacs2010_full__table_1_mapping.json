@@ -1,27 +1,27 @@
 {
   "Trait": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "Names the specific biological property or characteristic being measured.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The column lists the names of specific physical traits (e.g., 'Thorax width', 'Mass') being measured.",
+    "value_column": true,
+    "reasoning": "The header names the specific biological property being measured for the insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Names specific physical dimensions measured on the organism.",
     "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Trait"
   },
   "Intercaste correlation ± SE": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Defines the type of measurement (correlation) and includes the statistical measure (± SE).",
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
     "category": null,
-    "reasoning_relevance": "This column records statistical indices (correlation coefficients) and standard errors, not biological data."
+    "reasoning_relevance": "This is a statistical correlation value, not a trait of the organism."
   },
   "Caste dimorphism ± SE": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Defines the type of measurement (dimorphism) and includes the statistical measure (± SE).",
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
     "category": null,
-    "reasoning_relevance": "This column records a calculated index of relative difference between castes, which is a statistical measure."
+    "reasoning_relevance": "This is a derived statistical measure of phenotypic difference."
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -29,7 +29,7 @@
     "scope": "paper",
     "column": null,
     "value": "Vespula maculifrons",
-    "reasoning": "All measurements (traits like thorax length and caste dimorphism) are taken from the social wasp Vespula maculifrons.",
+    "reasoning": "The measurements describe morphological traits and caste dimorphism of the single social wasp species studied.",
     "decided_by": "llm",
     "roles": {
       "Vespula maculifrons": "measured subject",

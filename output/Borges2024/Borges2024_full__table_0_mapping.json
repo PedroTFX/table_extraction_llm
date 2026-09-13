@@ -1,31 +1,33 @@
 {
-  "Prey Species Predator Biological Trait": {
+  "Predator Biological Trait": {
     "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column names the specific biological trait or property being measured.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "This column lists the names of the biological traits (variables) being measured.",
+    "reasoning": "Header names the biological trait being measured for the focal insects.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records life history traits of the predator organism.",
     "multi_value": false,
     "value_type": "categorical",
-    "canonicalType": "Prey Species Predator Biological Trait"
+    "canonicalType": "Predator Biological Trait"
   },
   "A. fabae": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains the measured data (mean ± SD) for the A. fabae taxon.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain quantitative measurements of biological traits (e.g., time, proportion, count).",
+    "reasoning": "Column names the trait; cells contain the measured values for A. fabae.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the biotic association (host plant) for the predator.",
     "multi_value": false,
-    "value_type": "categorical"
+    "value_type": "categorical",
+    "canonicalType": "A. fabae"
   },
   "M. persicae": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains the measured data (mean ± SD) for the M. persicae taxon.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "The cells contain quantitative measurements of biological traits (e.g., time, proportion, count).",
+    "reasoning": "Column names the trait; cells contain the measured values for M. persicae.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the biotic association (prey) for the predator.",
     "multi_value": false,
-    "value_type": "categorical"
+    "value_type": "categorical",
+    "canonicalType": "M. persicae"
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -33,14 +35,12 @@
     "scope": "paper",
     "column": null,
     "value": "Scymnus nubilus",
-    "reasoning": "The paper measures the life history traits and demographic performance of the predator Scymnus nubilus when fed different prey.",
+    "reasoning": "The measurements describe the performance of the predator Scymnus nubilus based on the aphid diets provided.",
     "decided_by": "llm",
     "roles": {
-      "Aphis fabae": "prey",
-      "Myzus persicae": "prey",
       "Scymnus nubilus": "measured subject",
-      "Scymnu nubilus": "measured subject",
-      "Aphis gossypii": "cited comparison"
+      "Aphis fabae": "diet",
+      "Myzus persicae": "diet"
     },
     "candidates": [
       {

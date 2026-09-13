@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Kovacs2010\kovacs2010.xlsx  (10 rows)
-PREDICTION   : ..\output\Kovacs2010\Kovacs2010.csv  (40 rows)
+PREDICTION   : ..\output\Kovacs2010\Kovacs2010.csv  (41 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
@@ -12,72 +12,66 @@ measurementType REMAP (pred -> gt, 5 pair(s))
   'Thorax length' -> 'Thorax length '
   'Thorax width' -> 'Thorax width '
 
-measurementType LEFT UNMAPPED (2)
+measurementType LEFT UNMAPPED (1)
   'Trait': no ground-truth string denotes this
-  'Trait Trait': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
-  matched (TP)          : 0
-  missed (FN)           : 10
-  spurious, in scope    : 25   <- GT covers this trait: real errors
-  spurious, out of scope: 15   <- GT never covers it: nothing to score against
+  matched (TP)          : 8
+  missed (FN)           : 2
+  spurious, in scope    : 28   <- GT covers this trait: real errors
+  spurious, out of scope: 5   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
-  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
-  RECALL (GT coverage)  : 0.000
+  STRICT  P/R/F1        : 0.195 / 0.800 / 0.314
+  SCOPED  P/R/F1        : 0.222 / 0.800 / 0.348
+  RECALL (GT coverage)  : 0.800
 
   out-of-scope rows by uncovered field:
-    measurementType                             15
+    measurementType                              5
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0      0    n/a
+  basisOfRecord                 0      8  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  measurementUnit               0      8  0.000  <-- low
+  measurementStatistic          0      8  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
-  caste                         0      0    n/a
-  sampleSizeValue               0      0    n/a
-  sampleSizeUnit                0      0    n/a
-  sampleTreatment               0      0    n/a
+  sex                           8      8  1.000
+  lifeStage                     8      8  1.000
+  caste                         0      8  0.000  <-- low
+  sampleSizeValue               0      8  0.000  <-- low
+  sampleSizeUnit                0      8  0.000  <-- low
+  sampleTreatment               0      8  0.000  <-- low
   samplingProtocol              0      0    n/a
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0      8  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
+  associatedReferences          0      8  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 10 MISSED ROWS MISSED
-  species+trait present, value differs                 10
+WHY THE 2 MISSED ROWS MISSED
+  species+trait present, value differs                  2
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2.31 ± 0.24'                ->  ''                           x1
-     '3.61 ± 0.18'                ->  ''                           x1
-     '3.65 ± 0.37'                ->  '0.39'                       x1
-     '5.49 ± 0.33'                ->  '0.39'                       x1
      '1.66 ± 0.22'                ->  '0.26'                       x1
      '2.82 ± 0.35'                ->  '0.26'                       x1
-  -> 6 substitutions explain 6 of 10 misses (60%) — systematic, not scattered
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
 
-  full miss detail saved -> Kovacs2010_misses.csv, Kovacs2010_misses_summary.json (10 row(s))
+  full miss detail saved -> Kovacs2010_misses.csv, Kovacs2010_misses_summary.json (2 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  gaster length                                     2     5   Δ+3 (split?)
+  gaster length                                     2     8   Δ+6 (split?)
   third tergum length                               2     5   Δ+3 (split?)
-  thorax length                                     2     5   Δ+3 (split?)
-  mass                                              2     5   Δ+3 (split?)
-  thorax width                                      2     5   Δ+3 (split?)
+  thorax length                                     2     8   Δ+6 (split?)
+  mass                                              2     7   Δ+5 (split?)
+  thorax width                                      2     8   Δ+6 (split?)
   trait                                             0     5   PRED-ONLY
-  trait trait                                       0    10   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0    25    10   id+type+value
-             (15 more spurious row(s) out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0    25    10   basis+id+type+value+stat+sex+stage
-             (15 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 +0.000 vs previous)
+  core        0.222  0.800  0.348      8    28     2   id+type+value
+             (5 more spurious row(s) out-of-scope; strict P would be 0.195)
+  tags        0.000  0.000  0.000      0    36    10   basis+id+type+value+stat+sex+stage
+             (5 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 -0.348 vs previous)
