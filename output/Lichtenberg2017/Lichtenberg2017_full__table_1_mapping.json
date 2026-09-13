@@ -2,104 +2,111 @@
   "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the taxonomic name of the insect species.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Lists specific species names, classifying the organism."
+    "reasoning": "This column provides the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "This is the organism's identity, not a measured trait."
   },
-  "Name in Brosi (2009) $^A$": {
+  "Name in Brosi (2009)": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the taxonomic name of the insect species as referenced in the source."
+    "reasoning": "This column provides a synonym for the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "This is another organism's identity, not a measured trait."
   },
-  "Head width (mm) $^B$": {
+  "Head width (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a physical characteristic of the organism."
+    "reasoning": "Measures the morphological trait of the insect's head width.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical/anatomical dimension of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Head width",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data concerns morphological traits (head width) of stingless bee species, which are measurements taken from specimens (as indicated by the context of trait-based analysis and the mention of pinned and identified specimens in the methods section).",
+    "measurementMethod": "Measurement of head width derived from morphological assessment of stingless bee specimens (likely using calipers or microscopy, as implied by the context of trait measurement in biological studies).",
+    "measurementMethod_reasoning": "The text states that head width is a selected trait used in the analysis (Section 2.2) and that the data is presented in Table 1 and S2. Although the exact protocol is not detailed, the context of trait-based ecology studies on insects implies that these measurements are morphological traits derived from the collected specimens."
   },
-  "Colony size (# workers) $^C$": {
+  "Colony size (# workers)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the size of the organism's colony."
+    "reasoning": "Measures the abundance of the insect colony.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical/anatomical dimension of the organism's colony.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Colony size",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The data refers to the colony sizes of stingless bees, which are living organisms maintained in the study context. This is a measurement of a biological trait of the community.",
+    "measurementMethod": "Direct counting of the average number of workers in the colonies.",
+    "measurementMethod_reasoning": "The text explicitly states that 'colony size (average number of workers)' was selected as a trait to be analyzed (Section 2.2). The range provided (less than 100 to over 10,000 individuals) is derived from literature references, implying that the researchers used direct observation or counting of the workers in the colonies to establish this trait distribution."
   },
-  "Diet breadth $^z$": {
+  "Diet breadth": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the dietary range of the organism."
+    "reasoning": "Measures the breadth of the insect's diet/feeding association.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents a measured trait related to foraging strategy.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Diet breadth",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Diet breadth is a behavioral/ecological trait describing how a bee forages on food sources. The study characterizes this trait based on foraging strategies and literature, fitting the definition of a behavioral or ecological trait.",
+    "measurementMethod": "Data used from congeneric Brazilian stingless bees (Biesmeijer & Slaa, 2006); characterized using descriptions of bees foraging on natural food sources (citations in Table 1).",
+    "measurementMethod_reasoning": null
   },
-  "Group foraging? $^D$": {
+  "Group foraging?": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a behavioral trait of the organism."
+    "reasoning": "Measures the observed foraging behavior or group association.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records a recorded foraging strategy or behavior.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Group foraging?",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The trait 'group foraging' is a behavioral/ecological trait derived from classifying how stingless bee colonies forage (in large groups at the same spatial location vs. solitary individuals at different spatial patches), which falls under the definition of HumanObservation (behaviour/ecology).",
+    "measurementMethod": "Categorization based on spatial foraging location relative to nestmates and food sources (e.g., species whose colonies can forage in large groups at the same spatial location were categorized as group foraging, and those whose workers forage as solitary individuals at different spatial patches were categorized as solitary foraging).",
+    "measurementMethod_reasoning": "The text explicitly describes the method used to categorize the foraging strategies: 'Species whose colonies can forage in large groups at the same spatial location (typically the same mass-flowering tree) were categorized as group foraging, and those whose workers forage as solitary individuals at different spatial patches were categorized as solitary foraging.'"
   },
-  "Nests in ground? $^E$": {
+  "Nests in ground?": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the nesting location/habitat of the organism."
+    "reasoning": "Measures the presence or absence of nests in the ground habitat.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records a categorical nesting habit of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nests in ground?",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data concerns whether stingless bee species nest in the ground. This is a behavioral/ecological trait related to habitat use, which falls under the definition of HumanObservation (nesting material, foraging, activity time, phenology).",
+    "measurementMethod": "Categorization based on reported presence/absence of nesting types (ground-nesting, inquiline nesting, nesting in man-made structures) for each species.",
+    "measurementMethod_reasoning": "The text explicitly states that for the three nesting variables, species were categorized as 'yes/no' based on reported instances of the relevant nest type."
   },
-  "Inquiline nesting? $^E$": {
+  "Inquiline nesting?": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures a behavioral trait regarding nesting."
+    "reasoning": "Measures the presence or absence of inquiline nesting behavior.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records a categorical nesting habit of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Inquiline nesting?",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "Inquiline nesting (nesting in other species’ nests) is a behavioural/ecological trait used to characterize the stingless bee species. According to the guidelines, behavioural/ecological/natural-history traits are tagged as HumanObservation.",
+    "measurementMethod": "Categorization based on reported instances (yes/no)",
+    "measurementMethod_reasoning": "The text explicitly states that for the nesting variables, species were categorized as 'yes' or 'no' if at least one instance of the relevant nest type had been reported, indicating a qualitative assessment based on existing data or reports."
   },
-  "Nests in man-made structures? $^E$": {
+  "Nests in man-made structures?": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the nesting location/habitat of the organism."
-  },
-  "Name in Brosi (2009) $^{A}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Head width (mm) $^{B}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Colony size (# workers) $^{C}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Diet breadth $^{z}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Group foraging? $^{D}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Nests in ground? $^{E}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Inquiline nesting? $^{E}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Nests in man-made structures? $^{E}$": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)",
-    "category": null,
-    "reasoning_relevance": "not found in text"
+    "reasoning": "Measures the presence or absence of nests in man-made structures.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records a categorical nesting habit of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nests in man-made structures?",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data records the presence or absence of specific nesting types (including 'nesting in man-made structures') for stingless bee species. This is a behavioral/ecological trait derived from reported instances, fitting the definition of HumanObservation."
   }
 }

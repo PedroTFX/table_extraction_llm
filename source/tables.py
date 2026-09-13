@@ -32,6 +32,7 @@ from typing import Iterable, Optional
 
 # Footnote markers + the U+FFFD replacement char MinerU emits on bad bytes.
 _FOOTNOTE_RE = re.compile(r"[\u2020\u2021\u00a7\u00b6\uFFFD]")  # † ‡ § ¶ �
+_LATEX_FOOTNOTE_RE = re.compile(r"\s*\$\s*\^\s*\{?[A-Za-z0-9,;\s]{1,8}\}?\s*\$")
 _WS_RE = re.compile(r"\s+")
 
 
@@ -40,7 +41,8 @@ def clean_text(s: object) -> str:
     whitespace. Used for *matching*; the raw text is preserved separately."""
     if s is None:
         return ""
-    s = _FOOTNOTE_RE.sub("", str(s)).replace("\xa0", " ")
+    s = _LATEX_FOOTNOTE_RE.sub("", str(s))
+    s = _FOOTNOTE_RE.sub("", s).replace("\xa0", " ")
     return _WS_RE.sub(" ", s).strip()
 
 

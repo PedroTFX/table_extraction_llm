@@ -1,27 +1,27 @@
 {
   "Covariate": {
-    "field": "measurementType",
+    "field": null,
     "value_column": false,
-    "reasoning": "These are the names of the variables or traits being measured/modeled."
+    "reasoning": "These are independent variables/traits, not measurements of the focal insect."
   },
   "w": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column holds the estimated coefficient (the measurement value) for the covariate."
+    "reasoning": "This column holds weights/coefficients, not biological measurements."
   },
   "Predicted coefficient (±SE)": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the primary measurement value (coefficient) and its standard error."
+    "reasoning": "These are statistical model results, not measurements of the organism."
   },
   "z": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column holds the z-score, which is a statistical measurement derived from the data."
+    "reasoning": "This is a test statistic, not a measured trait of the insect."
   },
   "p-value": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column holds the p-value, a statistical measure of significance."
+    "reasoning": "This is a statistical probability, not a biological measurement."
   }
 }
