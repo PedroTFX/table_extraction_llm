@@ -1117,16 +1117,18 @@ def _apply_glossary(header: str, glossary: dict) -> str:
 # judgement is the LLM's, with the paper in view. There is deliberately no
 # header-matching statistic dictionary anywhere; that approach mis-split real
 # trait names like 'Range size'.
+# Output forms match the ground-truth convention: dispersion measures are the
+# ABBREVIATIONS 'SD'/'SE' (never 'standard deviation'), min/max stay short.
 _STATISTIC_VOCAB = {
     "mean": "mean", "average": "mean", "avg": "mean", "x̄": "mean",
     "median": "median",
     "mode": "mode",
-    "sd": "standard deviation", "std": "standard deviation",
-    "stdev": "standard deviation", "standard deviation": "standard deviation",
-    "se": "standard error", "sem": "standard error",
-    "standard error": "standard error",
-    "min": "minimum", "minimum": "minimum",
-    "max": "maximum", "maximum": "maximum",
+    "sd": "SD", "std": "SD",
+    "stdev": "SD", "standard deviation": "SD",
+    "se": "SE", "sem": "SE",
+    "standard error": "SE",
+    "min": "min", "minimum": "min",
+    "max": "max", "maximum": "max",
     "range": "range",
     "sum": "sum", "total": "sum",
     "count": "count",

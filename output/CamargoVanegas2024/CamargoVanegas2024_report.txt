@@ -136,7 +136,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                 0   1987  0.000  <-- low
   measurementMethod             0   1487  0.000  <-- low
   measurementUnit               0   1987  0.000  <-- low
-  measurementStatistic        968   1987  0.487  <-- low
+  measurementStatistic       1827   1987  0.919
   measurementRemarks            0      0    n/a
   sex                           0   1987  0.000  <-- low
   lifeStage                  1987   1987  1.000
@@ -157,17 +157,17 @@ WHY THE 30 MISSED ROWS MISSED
   species+trait present, value differs                 13
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '1.174'                      ->  ''                           x1
-     '0.821'                      ->  ''                           x1
-     '0.63'                       ->  ''                           x1
-     '0.398'                      ->  '2.225'                      x1
+     '1.524'                      ->  ''                           x1
+     '0.94'                       ->  '0.944'                      x1
+     '0.804'                      ->  ''                           x1
      '0.87'                       ->  ''                           x1
-     '0.581'                      ->  ''                           x1
+     '0.0572'                     ->  '2.05'                       x1
+     '0.821'                      ->  ''                           x1
   -> 6 substitutions explain 6 of 30 misses (20%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
-     gt 'N2 Ants'                            (nothing similar in the prediction)   x6
      gt 'N3 Ants'                            (nothing similar in the prediction)   x6
+     gt 'N2 Ants'                            (nothing similar in the prediction)   x6
      gt 'N1 Ants'                            (nothing similar in the prediction)   x5
   -> 3 species mismatches explain 17 of 30 misses (57%) — scattered; no single cause
 

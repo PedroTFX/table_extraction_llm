@@ -62,6 +62,39 @@ def is_empty_like(v):
     return v is None or str(v).strip().lower() in EMPTY_LIKE
 
 
+# Fold free-form statistic labels (from the LLM tag step or a mapper) onto the
+# ground-truth vocabulary. Only known synonyms are rewritten; an already-canonical
+# term (mean, mode, min, max, range, count, median, SD, SE, individual, mean ± SD)
+# passes through untouched, so a specific GT term the model got right is kept.
+_STAT_SYNONYMS = {
+    "standard deviation": "SD", "std": "SD", "stdev": "SD", "std dev": "SD",
+    "standard error": "SE", "sem": "SE", "std error": "SE",
+    "average": "mean", "avg": "mean",
+    "single observation": "individual", "single measurement": "individual",
+    "single specimen": "individual", "one individual": "individual",
+    "single value": "individual", "observation": "individual",
+    "minimum": "min", "maximum": "max",
+}
+
+
+def normalize_statistic_out(s):
+    """Map a statistic label onto the GT vocabulary (synonyms only)."""
+    if not s:
+        return s
+    return _STAT_SYNONYMS.get(str(s).strip().lower(), str(s).strip())
+
+
+_NUMERIC_VALUE_RE = re.compile(r"^[<>~≈±]?\s*-?\d")
+
+
+def _looks_numeric_value(v) -> bool:
+    """A measurementValue that reads as a number (optionally a comparator/±
+    prefix). Used to pick the measurementStatistic default: the ground truth
+    labels a bare numeric reading 'individual' (a single-specimen measurement)
+    and a categorical state 'mode'."""
+    return bool(_NUMERIC_VALUE_RE.match(str(v).strip()))
+
+
 def clean_type(t):
     """Normalise a measurementType for output.
 
@@ -170,10 +203,25 @@ def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol):
                         row["samplingProtocol"] = row["measurementMethod"]
                     row["measurementMethod"] = ""
 
+                # fold a free-form statistic label onto the GT vocabulary
+                # (single observation -> individual, standard deviation -> SD)
+                if row.get("measurementStatistic"):
+                    row["measurementStatistic"] = normalize_statistic_out(
+                        row["measurementStatistic"])
+
                 # defaults for constant fields (override empty-like values too)
                 for col, default in defaults.items():
                     if is_empty_like(row.get(col)):
-                        row[col] = default
+                        # measurementStatistic default is value-aware: a bare
+                        # numeric reading is a single-specimen 'individual'
+                        # measurement in the ground truth, only a categorical
+                        # state defaults to 'mode'.
+                        if col == "measurementStatistic":
+                            row[col] = ("individual"
+                                        if _looks_numeric_value(row.get("measurementValue"))
+                                        else default)
+                        else:
+                            row[col] = default
 
                 rows.append(row)
     return rows
