@@ -2,31 +2,32 @@
   "Acrocerid": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column lists the scientific names (taxa) of the primary insect subject.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column lists the scientific names of the acrocerid species."
+    "reasoning": "This column contains the taxonomic identification of the focal insect specimen.",
+    "category": null,
+    "reasoning_relevance": "This is the specimen's identity, not a measured trait or observation."
   },
   "Host spider(s)": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "This column lists the scientific names (taxa) of the associated host organisms.",
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column names the associated organism (host/prey), which is a biotic association trait.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The column lists the scientific names of the host spider species."
+    "reasoning_relevance": "Names the associated host spider, a biotic association.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Host spider"
   },
   "Location/date/collector": {
     "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "This column specifies the geographic location, date, and collector of the sampling event.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "It records the geographical location, date, and collector of the specimens.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "value_column": false,
+    "reasoning": "This column specifies the exact place and date where sampling or observation occurred.",
+    "category": null,
+    "reasoning_relevance": "This is metadata about the sampling site, not an organism trait."
   },
   "Notes": {
-    "field": null,
-    "value_column": true,
-    "reasoning": "This column contains unstructured descriptive notes and metadata, not a defined measurement or location.",
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "This column provides context regarding specimen handling and range notes.",
     "category": null,
-    "reasoning_relevance": "The column contains unstructured text, citations, and miscellaneous context not fitting defined categories."
+    "reasoning_relevance": "This is descriptive text, not a measurement, behavior, or trait."
   }
 }

@@ -38,7 +38,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
   basisOfRecord                25     25  1.000
   measurementMethod             0     25  0.000  <-- low
-  measurementUnit              25     25  1.000
+  measurementUnit               0     25  0.000  <-- low
   measurementStatistic          0     25  0.000  <-- low
   measurementRemarks            0      0    n/a
   sex                           0     25  0.000  <-- low
@@ -59,12 +59,12 @@ WHY THE 6 MISSED ROWS MISSED
   species not in prediction                             6
 
   SPECIES IN GT BUT NOT IN PREDICTION (6 distinct), closest predicted name:
-     gt 'Lasioglossum (Dialictus) sp. 3'    ~0.96~  pred 'Lasioglossum (Dialictus) sp. 4'   x1
-     gt 'Halictus (Seladonia) sp.'          ~0.65~  pred 'Halictus sp. 1'   x1
      gt 'Lasioglossum (s. str) sp. 2'       ~0.69~  pred 'Lasioglossum (Evylaeus) sp. 2'   x1
      gt 'Lasioglossum (Evylaeus) sp. 1'     ~0.96~  pred 'Lasioglossum (Evylaeus) sp. 2'   x1
      gt 'Lasioglossum (Dialictus) sp. 2'    ~0.96~  pred 'Lasioglossum (Dialictus) sp. 4'   x1
      gt 'Lasioglossum (s. str) sp. 1'       ~0.68~  pred 'Lasioglossum (Dialictus) sp.1'   x1
+     gt 'Halictus (Seladonia) sp.'          ~0.65~  pred 'Halictus sp. 1'   x1
+     gt 'Lasioglossum (Dialictus) sp. 3'    ~0.96~  pred 'Lasioglossum (Dialictus) sp. 4'   x1
   -> 6 species mismatches explain 6 of 6 misses (100%) — systematic, not scattered
 
   full miss detail saved -> Gonzalez2016_misses.csv, Gonzalez2016_misses_summary.json (6 row(s))

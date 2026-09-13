@@ -2,46 +2,36 @@
   "TDF fragments": {
     "field": null,
     "value_column": false,
-    "reasoning": "These are specimen identifiers, not insect taxa, locations, or measurements."
+    "reasoning": "These are specimen identifiers, not insect taxon names or locality."
   },
   "Season": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This describes the sampling condition, not an organism trait or location."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Describes the environmental condition of the sampling event."
   },
   "SR": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "57",
-    "measurementStatistic": "single observation",
-    "reasoning": "SR is a raw measurement associated with the TDF fragments."
+    "reasoning": "Represents a measured numerical value related to the sample or environment."
   },
   "LCI": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "45.95",
-    "measurementStatistic": "single observation",
-    "reasoning": "LCI is a measured value associated with the specimen."
+    "reasoning": "Represents a measured numerical value related to the sample or environment."
   },
   "UCI": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "68.05",
-    "measurementStatistic": "single observation",
-    "reasoning": "UCI is a measured value associated with the specimen."
+    "reasoning": "Represents a measured numerical value related to the sample or environment."
   },
   "Chao-1": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "75",
-    "measurementStatistic": "single observation",
-    "reasoning": "Chao-1 is a measured index associated with the specimen."
+    "reasoning": "Represents a measured diversity index for the community."
   },
   "$\\hat{C}m$": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "0.96",
-    "measurementStatistic": "single observation",
-    "reasoning": "$\\hat{C}m$ is a measured value associated with the specimen."
+    "reasoning": "Represents a measured community composition metric."
   }
 }

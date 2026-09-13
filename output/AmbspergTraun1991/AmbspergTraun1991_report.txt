@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (60 rows)
-PREDICTION   : ..\output\AmbspergTraun1991\AmbspergTraun1991.csv  (111 rows)
+PREDICTION   : ..\output\AmbspergTraun1991\AmbspergTraun1991.csv  (63 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
@@ -17,28 +17,20 @@ TAXON NAME REMAP (pred -> gt, 10 pair(s))
   'Nasutitermes longipennis' -> 'Nasutitermes longipennis (Hill)'
   'Schedorhinotermes actuosus' -> 'Schedorhinotermes actuosus (Hill)'
 
-measurementType LEFT UNMAPPED (3)
-  'Baits': no ground-truth string denotes this
-  'Direct search': no ground-truth string denotes this
-  'Total': no ground-truth string denotes this
-
 ROW-LEVEL (key match)
   matched (TP)          : 59
   missed (FN)           : 1
   spurious, in scope    : 4   <- GT covers this trait: real errors
-  spurious, out of scope: 48   <- GT never covers it: nothing to score against
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.532 / 0.983 / 0.690
+  STRICT  P/R/F1        : 0.937 / 0.983 / 0.959
   SCOPED  P/R/F1        : 0.937 / 0.983 / 0.959
   RECALL (GT coverage)  : 0.983
 
-  out-of-scope rows by uncovered field:
-    measurementType                             48
-
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                59     59  1.000
-  measurementMethod             0      0    n/a
+  basisOfRecord                31     59  0.525
+  measurementMethod             0     16  0.000  <-- low
   measurementUnit               0      0    n/a
   measurementStatistic         59     59  1.000
   measurementRemarks            0      0    n/a
@@ -67,17 +59,12 @@ WHY THE 1 MISSED ROWS MISSED
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  baits                                             0    16   PRED-ONLY
-  direct search                                     0    16   PRED-ONLY
   feeding group                                    16    16   
   microhabitat found                               28    30   Δ+2 (split?)
   nesting group                                    16    17   Δ+1 (split?)
-  total                                             0    16   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.937  0.983  0.959     59     4     1   id+type+value
-             (48 more spurious row(s) out-of-scope; strict P would be 0.532)
-  tags        0.937  0.983  0.959     59     4     1   basis+id+type+value+stat+sex+stage
-             (48 more spurious row(s) out-of-scope; strict P would be 0.532)
-             (F1 +0.000 vs previous)
+  tags        0.492  0.517  0.504     31    32    29   basis+id+type+value+stat+sex+stage
+             (F1 -0.455 vs previous)

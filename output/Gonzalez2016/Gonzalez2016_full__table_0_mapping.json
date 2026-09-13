@@ -2,40 +2,42 @@
   "Bee taxa": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column lists the specific insect taxa (species or genus) being measured.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "This column lists the specific species or taxa of the bees observed."
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "Represents the identity of the organism, not a measured trait value."
   },
   "Intertegular distance (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header names the specific physical trait (Intertegular distance) being measured.",
+    "measurementValue": "3.50",
+    "measurementStatistic": "individual",
+    "reasoning": "The column measures a specific physical trait of the insect.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "This is a physical measurement of the bee's body size in millimeters.",
+    "reasoning_relevance": "Measures a physical dimension (distance) of the bee specimens.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Intertegular distance",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement was taken on specimens that were collected, pinned, and measured using a stereomicroscope, indicating morphological measurement on a preserved specimen.",
-    "measurementMethod": "Measurement of minimum intertegular distance using an ocular micrometer on a Leica S6E stereomicroscope.",
-    "measurementMethod_reasoning": "The text explicitly states: 'We pinned all specimens and estimated their body size by measuring the minimum intertegular distance (Cane 1987) with an ocular micrometer on a Leica S6E stereomicroscope.'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement is defined as intertegular distance (mm) and the results section provides values in mm (e.g., 2.29mm, 1.61mm).",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The results report 'average intertegular distance' for both the community level and for the specific species Lasioglossum malachurum, indicating the use of the mean."
+    "basisOfRecord_reasoning": "The measurement is taken from pinned specimens collected in the field, which falls under morphological traits (body size/distance).",
+    "measurementMethod": "Measuring the minimum intertegular distance using an ocular micrometer on a Leica S6E stereomicroscope (Cane 1987).",
+    "measurementMethod_reasoning": "The methods section explicitly states that specimens were measured using an ocular micrometer."
   },
   "Ground": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This describes the microhabitat or location of the observation/organism.",
+    "measurementValue": "0",
+    "measurementStatistic": "individual",
+    "reasoning": "The column describes the location or substrate of the measurement.",
     "category": null,
-    "reasoning_relevance": "The values appear to be identifiers for specific sampling locations or traps."
+    "reasoning_relevance": "Names a sampling location, which is not a measurementType."
   },
   "Elevated": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This describes a specific environmental or behavioral characteristic of the organism.",
+    "measurementValue": "1",
+    "measurementStatistic": "individual",
+    "reasoning": "The column measures the elevation of the sampling location.",
     "category": null,
-    "reasoning_relevance": "The values appear to be numerical codes or identifiers for sampling locations."
+    "reasoning_relevance": "Names a sampling location, which is not a measurementType."
   }
 }
