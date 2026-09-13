@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Geraghty2007\Geraghty2007.xlsx  (280 rows)
-PREDICTION   : ..\output\Geraghty2007\Geraghty2007.csv  (70 rows)
+PREDICTION   : ..\output\Geraghty2007\Geraghty2007.csv  (280 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
@@ -26,65 +26,60 @@ TAXON NAME REMAP (pred -> gt, 19 pair(s))
   'Stenamma meridionale SMITH, 1957' -> 'Stenamma meridionale'
   'Stenamma schmitti WHEELER, 1903' -> 'Stenamma schmitti'
 
-measurementType REMAP (pred -> gt, 2 pair(s))
-  'Body size (mm) Body size' -> 'Body size'
-  'Colony size Colony size' -> 'Colony size'
-
 ROW-LEVEL (key match)
-  matched (TP)          : 69
-  missed (FN)           : 211
-  spurious, in scope    : 1   <- GT covers this trait: real errors
+  matched (TP)          : 267
+  missed (FN)           : 13
+  spurious, in scope    : 13   <- GT covers this trait: real errors
   spurious, out of scope: 0   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.986 / 0.246 / 0.394
-  SCOPED  P/R/F1        : 0.986 / 0.246 / 0.394
-  RECALL (GT coverage)  : 0.246
+  STRICT  P/R/F1        : 0.954 / 0.954 / 0.954
+  SCOPED  P/R/F1        : 0.954 / 0.954 / 0.954
+  RECALL (GT coverage)  : 0.954
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                34     69  0.493  <-- low
-  measurementMethod             0     69  0.000  <-- low
-  measurementUnit              34     69  0.493  <-- low
-  measurementStatistic         34     69  0.493  <-- low
+  basisOfRecord                34    267  0.127  <-- low
+  measurementMethod             0    234  0.000  <-- low
+  measurementUnit              34    267  0.127  <-- low
+  measurementStatistic        127    267  0.476  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0     69  0.000  <-- low
-  lifeStage                    69     69  1.000
+  sex                         198    267  0.742
+  lifeStage                    69    267  0.258  <-- low
   caste                         0     69  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
-  verbatimLocality              0     69  0.000  <-- low
+  verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     69  0.000  <-- low
+  associatedReferences          0    267  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 211 MISSED ROWS MISSED
-  species present, trait missing                      210
-  species+trait present, value differs                  1
+WHY THE 13 MISSED ROWS MISSED
+  species+trait present, value differs                 13
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '9.01'                       ->  '1.09'                       x1
-  -> 1 substitution explains 1 of 211 misses (0%) — scattered; no single cause
+     '3.13'                       ->  '45.57'                      x1
+     '7.27'                       ->  '46.69'                      x1
+     '8.29'                       ->  '46.69'                      x1
+     '6.28'                       ->  '41.65'                      x1
+     '5.13'                       ->  '41.65'                      x1
+     '7.18'                       ->  '42.56'                      x1
+  -> 6 substitutions explain 6 of 13 misses (46%) — scattered; no single cause
 
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Elevation'                        x105
-     'Latitude'                         x105
-  -> 2 missing traits explain 210 of 211 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Geraghty2007_misses.csv, Geraghty2007_misses_summary.json (211 row(s))
+  full miss detail saved -> Geraghty2007_misses.csv, Geraghty2007_misses_summary.json (13 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   body size                                        35    35   
   colony size                                      35    35   
-  elevation                                       105     0   GT-ONLY
-  latitude                                        105     0   GT-ONLY
+  elevation                                       105   105   
+  latitude                                        105   105   
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.986  0.246  0.394     69     1   211   id+type+value
-  tags        0.000  0.000  0.000      0    70   280   basis+id+type+value+stat+sex+stage
-             (F1 -0.394 vs previous)
+  core        0.954  0.954  0.954    267    13    13   id+type+value
+  tags        0.000  0.000  0.000      0   280   280   basis+id+type+value+stat+sex+stage
+             (F1 -0.954 vs previous)

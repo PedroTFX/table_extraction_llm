@@ -2,29 +2,50 @@
   "Carebara acutispina": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the taxonomic names of the insect taxa being studied.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column contains scientific names of ant species, which are discrete classifications of the organism's biology."
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "This is the verbatim identification of the focal organism, not a measured trait."
   },
   "X": {
-    "field": null,
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Generic placeholder header; no information provided about the measurement.",
-    "category": null,
-    "reasoning_relevance": "The column name and example value are generic placeholders and do not represent biological data."
+    "reasoning": "This column indicates the presence or absence of the focal insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents morphological traits like Weber's length or relative eye length.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "X",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The text states that ant specimens that represented different species or morphospecies were pinned, indicating they were collected and preserved for study.",
+    "measurementMethod": "Measurements taken by AMF under a microscope with a calibrated eyepiece micrometer.",
+    "measurementMethod_reasoning": "Section 2.3 explicitly states that the five functional traits (WL, RelEL, RelSL, RelML, RelHL) were computed using measurements taken by AMF using a microscope and a calibrated eyepiece micrometer."
   },
   "X (1)": {
-    "field": null,
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Generic placeholder header; no information provided about the measurement.",
-    "category": null,
-    "reasoning_relevance": "The column name and example value are generic placeholders and do not represent biological data."
+    "reasoning": "This column represents a measured trait or observation for the focal insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents morphological traits measured for the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "X",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data involves morphological measurements (Weber’s length, relative eye length, etc.) of ant specimens collected from the field and measured, classifying them as preserved specimens for morphological analysis.",
+    "measurementMethod": "Measurements were taken by AMF under a microscope with a calibrated eyepiece micrometer to determine five functional traits (Weber’s length (WL), relative eye length (RelEL), relative scape length (RelSL), relative mandible length (RelML), and relative hindleg length (RelHL)).",
+    "measurementMethod_reasoning": null
   },
   "X (2)": {
-    "field": null,
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Generic placeholder header; no information provided about the measurement.",
-    "category": null,
-    "reasoning_relevance": "The column name and example value are generic placeholders and do not represent biological data."
+    "reasoning": "This column represents a measured trait or observation for the focal insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents morphological traits measured for the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "X",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting ants and pinning specimens that represented different species or morphospecies at each elevational band, indicating that the data records are based on collected and preserved physical specimens.",
+    "measurementMethod": "Measurements of Weber’s length (WL), relative eye length (RelEL), relative scape length (RelSL), relative mandible length (RelML), and relative hindleg length (RelHL) were taken by AMF under a microscope with a calibrated eyepiece micrometer. Relative traits were calculated based on these measurements (e.g., RelEL = EL/WL).",
+    "measurementMethod_reasoning": null
   }
 }
