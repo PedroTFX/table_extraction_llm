@@ -1198,6 +1198,16 @@ def _split_trailing_statistic(text: str):
     return None
 
 
+def _stat_fraction(values) -> float:
+    """Fraction of non-empty values that are statistic labels (Minimum, Mean,
+    SD, ...). A first column that is mostly these is a STATISTIC axis, not a
+    trait axis — the traits are then the column headers."""
+    vals = [clean_text(v) for v in values if clean_text(v)]
+    if not vals:
+        return 0.0
+    return sum(1 for v in vals if _normalize_statistic(v)) / len(vals)
+
+
 def _stat_split_bases(headers) -> set:
     """Bases shared by >=2 columns whose header ends in a statistic word \u2014 the
     signature of a mean/SD-style split ('HL Mean' | 'HL SD' | 'HW Mean' | 'HW
@@ -1730,20 +1740,43 @@ def add_trait_rows_table_to_grouped(table: Table, grouped: dict,
     col0 = cols[0]
     raw_value_cols = [c for c in cols[1:]
                       if not c.synthetic and c.name != PAPER_SPECIES_KEY]
-    # classify each column: keep measurements (mean/plain condition), drop
-    # sample-size / dispersion / test-statistic columns.
+    recs = [r for r in table.data_records() if not r.get("_is_group_row")]
+    entry = grouped.setdefault(fallback_species, {
+        "verbatimIdentification": fallback_species, "measurements": []})
+
+    # Orientation B: the first column is a STATISTIC axis (Parameter: Minimum,
+    # Maximum, Mean, Median), so the COLUMN HEADERS are the traits. Emit
+    # type = column header, value = cell, statistic = the row's stat label.
+    if _stat_fraction(clean_text(r.get(col0.name, "")) for r in recs) >= 0.6:
+        n = 0
+        for rec in recs:
+            stat = _normalize_statistic(clean_text(rec.get(col0.name, "")))
+            for c in raw_value_cols:
+                value = (rec.get(c.name, "") or "").strip()
+                if not value:
+                    continue
+                meas = {"measurementType": clean_text(c.name),
+                        "measurementValue": value}
+                if stat:
+                    meas["measurementStatistic"] = stat
+                if meas not in entry["measurements"]:
+                    entry["measurements"].append(meas)
+                    n += 1
+        print(f"    [trait-rows/stat-axis] {table_id(table)}: {n} measurement(s) "
+              f"melted onto {fallback_species!r} (cols are traits)")
+        return grouped
+
+    # Orientation A: the first column is the TRAIT axis; other columns are
+    # conditions. classify each column: keep measurements (mean/plain condition),
+    # drop sample-size / dispersion / test-statistic columns.
     kept = []
     for c in raw_value_cols:
         kind, stat, cond = _classify_value_column(c.name)
         if kind == "value":
             kept.append((c, stat, cond))
     single = len(kept) == 1
-    entry = grouped.setdefault(fallback_species, {
-        "verbatimIdentification": fallback_species, "measurements": []})
     n = 0
-    for rec in table.data_records():
-        if rec.get("_is_group_row"):
-            continue
+    for rec in recs:
         trait = clean_text(rec.get(col0.name, ""))
         if not _traitish(trait):
             continue

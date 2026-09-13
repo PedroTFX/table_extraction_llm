@@ -1,29 +1,30 @@
 {
   "Parameter": {
-    "field": "measurementStatistic",
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column defines the statistical measure (Minimum, Mean, etc.) applied to the data.",
+    "reasoning": "This column defines the type of statistic being reported for the measurements.",
     "category": null,
-    "reasoning_relevance": "These are statistical indices (mean, median, etc.), not biological traits or measurements."
+    "reasoning_relevance": "Describes statistical summarization, not a biological trait of the organism."
   },
   "Total flight time (s)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header names the specific biological trait or property being measured.",
+    "reasoning": "This column names the trait being measured (flight time) for the organism.",
     "category": "Behavioral observation",
-    "reasoning_relevance": "This records the duration of a recorded behavior (flight time) in seconds.",
+    "reasoning_relevance": "Measures the duration of flight, a behavioral outcome of the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Total flight time"
   },
   "No. bouts": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column holds the count of observations or events associated with the measurement.",
+    "reasoning": "This column names the count of observation bouts for the organism.",
     "category": "Behavioral observation",
-    "reasoning_relevance": "This records the number of recorded flight events (take-offs) observed.",
+    "reasoning_relevance": "Counts the number of flight events, an observed behavior.",
     "multi_value": false,
-    "value_type": "numeric"
+    "value_type": "numeric",
+    "canonicalType": "No. bouts"
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -31,14 +32,10 @@
     "scope": "paper",
     "column": null,
     "value": "Drosophila suzukii",
-    "reasoning": "The study focuses entirely on measuring the flight behavior (duration, distance, velocity) of Drosophila suzukii.",
+    "reasoning": "The study explicitly focuses on determining the flight behavior of Drosophila suzukii using the flight assays.",
     "decided_by": "llm",
     "roles": {
-      "Drosophila suzukii": "measured subject",
-      "Agrilus planipennis": "unclear",
-      "Tethered flight": "condition",
-      "The flight": "condition",
-      "Drosophila melanogaster": "unclear"
+      "Drosophila suzukii": "measured subject"
     },
     "candidates": [
       {

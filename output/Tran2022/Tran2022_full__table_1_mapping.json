@@ -1,17 +1,17 @@
 {
   "Parameter": {
     "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column specifies the statistical measure (Minimum, Mean, etc.) applied to the data.",
+    "value_column": false,
+    "reasoning": "The header specifies the statistical measure (Min, Median, Mean, Max) applied to the measurements.",
     "category": null,
-    "reasoning_relevance": "These are statistical indices (Mean, Median, etc.), not biological data."
+    "reasoning_relevance": "This column contains statistical descriptors (Mean, Median) not organism traits."
   },
   "Distance (m)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header defines the measured trait (Distance) and includes the unit (m).",
+    "reasoning": "Measures the distance traveled by the focal insect during flight bouts.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "This is a quantitative measurement of physical distance traveled, including units.",
+    "reasoning_relevance": "Measures the physical distance flown by the organism.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Distance"
@@ -19,9 +19,9 @@
   "Total flight time (s)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header defines the measured trait (Total flight time) and includes the unit (s).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This is a quantitative measurement of physical performance (duration), including units.",
+    "reasoning": "Measures the total time taken for the flight bouts.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the duration of the organism's flight behavior.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Total flight time"
@@ -29,9 +29,9 @@
   "Velocity (m/s)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header defines the measured trait (Velocity) and includes the unit (m/s).",
+    "reasoning": "Measures the speed of the flight bouts.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "This is a quantitative measurement of physical performance (speed), including units.",
+    "reasoning_relevance": "Measures the speed of the organism's flight.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "Velocity"
@@ -39,9 +39,9 @@
   "No. bouts": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header defines the measured trait (Number of bouts).",
+    "reasoning": "Measures the number of flight bouts observed.",
     "category": "Behavioral observation",
-    "reasoning_relevance": "This records the count of discrete behavioral events (take-offs) observed.",
+    "reasoning_relevance": "Records the number of flight events observed.",
     "multi_value": false,
     "value_type": "numeric",
     "canonicalType": "No. bouts"
@@ -52,14 +52,10 @@
     "scope": "paper",
     "column": null,
     "value": "Drosophila suzukii",
-    "reasoning": "The study focuses entirely on measuring the flight behavior (duration, distance, velocity) of Drosophila suzukii.",
+    "reasoning": "The study explicitly focuses on determining the flight behavior of Drosophila suzukii using the flight assays.",
     "decided_by": "llm",
     "roles": {
-      "Drosophila suzukii": "measured subject",
-      "Agrilus planipennis": "unclear",
-      "Tethered flight": "condition",
-      "The flight": "condition",
-      "Drosophila melanogaster": "unclear"
+      "Drosophila suzukii": "measured subject"
     },
     "candidates": [
       {
