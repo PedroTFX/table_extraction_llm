@@ -1,68 +1,116 @@
+<!-- page 1 of 11 -->
+
+Journal of Applied Ecology
+
+British Ecological Society
+
+Journal of Applied Ecology 2016, 53, 1714–1724
+
+doi: 10.1111/1365-2664.12728
+
 # Measuring the success of reforestation for restoring biodiversity and ecosystem functioning
 
-Mia A. Derhe<sup>1,2</sup>\*, Helen Murphy<sup>2</sup>, Geoff Monteith<sup>3</sup> and Rosa Menendez
+Mia A. Derhe<sup>1,2</sup>\*, Helen Murphy<sup>2</sup>, Geoff Monteith<sup>3</sup> and Rosa Menendez  1
 
 <sup>1</sup>Lancaster Environment Centre, Lancaster University, Bailrigg, Lancaster LA1 4YQ, UK; <sup>2</sup>CSIRO, Tropical Forest Research Centre, PO Box 780, Atherton, Qld 4883, Australia; and <sup>3</sup>Queensland Museum, PO Box 3300, South Brisbane BC, Qld 4101, Australia
 
 ## Summary
 
 1. Effective assessment of the success of ecological restoration projects is critical in justifying the use of restoration in natural resource management as well as improving best practice. One of the main goals of ecological restoration is the recovery of ecosystem function, yet most researchers assume that increasing species and or functional diversity equates with restoration of ecosystem function, rather than empirically demonstrating these mechanistic relationships.
-
 2. In this study, we assess how dung beetle species diversity, community composition, functional diversity and ecological functions vary along a restoration chronosequence and compare restored areas with reference (rain forest) and degraded (pasture) systems. We also directly investigate the dung beetle diversity – ecosystem functioning relationship in the context of ecological rain forest restoration by testing the predictive power of traditional taxonomic indices and functional diversity metrics for functionality.
-
 3. Species richness, abundance, biomass and functional richness all increased with restoration age, with the oldest restoration sites being most similar to rain forest, whereas functional evenness and functional divergence decreased with restoration age. Community composition in the restored areas was clearly progressing towards the rain forest sites and deviating from the pasture sites with increasing restoration age.
-
 4. Secondary seed dispersal rates increased with restoration age, but there was only a weak positive relationship between dung removal and soil excavation and restoration age. Biodiversity metrics explained 47–74% of the variation in functions mediated by dung beetles; however, functional trait-based indices provided greater explanatory power of functionality than traditional species-based metrics.
-
-5. Synthesis and applications. Our results provide empirical evidence on the potential of tropical forest restoration to mitigate biodiversity losses, recovering not only faunal species diver sity, but also functional diversity and ecosystem functions in a relatively short period of time. We also demonstrate that functional trait-based metrics are better predictors of functionality than traditional species-based metrics but that the relationship between restoration age, diversity and ecosystem functioning is not straightforward and depends on the functions, traits and metrics used.
+5. Synthesis and applications. Our results provide empirical evidence on the potential of tropical forest restoration to mitigate biodiversity losses, recovering not only faunal species diversity, but also functional diversity and ecosystem functions in a relatively short period of time. We also demonstrate that functional trait-based metrics are better predictors of functionality than traditional species-based metrics but that the relationship between restoration age, diversity and ecosystem functioning is not straightforward and depends on the functions, traits and metrics used.
 
 Key-words: dung beetles, ecological restoration, ecosystem function, functional diversity, functional traits, reforestation, Scarabaeinae, trait-based metrics, tropical forest, wet tropics
 
 ## Introduction
 
-Tropical forests provide significant local, regional and global human benefits through the provision of economic goods and ecosystem services, including storing more than half the world’s carbon (Pan et al. 2011). Despite this recognition, forest loss continues to increase, particularly in the tropics (Kim, Sexton & Townshend 2015). Ecological restoration, both within and outside protected areas, is being increasingly applied world-wide and is regarded as a major strategy for reversing or mitigating tropical biodiversity losses and improving the provision of ecosystem services (Holl & Aide 2011). A popular method of ecological forest restoration is reforestation, which is the re-establishment of native tree cover to land previously cleared of rain forest (Lamb, Erskine & Parrotta 2005).
+Tropical forests provide significant local, regional and global human benefits through the provision of economic
 
-A combination of vegetation structure, faunal and floral species diversity/composition and ecosystem function has been suggested as a minimum set of attributes to assess the success of restoration projects (Ruiz-Jaen & Aide 2005; Wortley, Hero & Howes 2013). However, whilst the trajectory of vegetation structure and diversity following restoration is relatively well understood, there has been limited research on faunal recovery (Majer 2009). Additionally, a key attribute set out by the Society for Ecological Restoration to determine when restoration has been accomplished is that all functional groups necessary for the continued development and/or stability of the restored ecosystem are represented or have the potential to colonize (Shackelford et al. 2013). Nonetheless, studies investigating the effect of restoration on functional diversity are few and far between. Recently, efforts have been made to bridge this gap: Audino, Louzada & Comita (2014) examined the response of dung beetle species diversity, composition and functional diversity to restoration of Atlantic forest in Brazil, showing that species composition but not functional diversity increased with restoration age. Despite these recent advances, there remains a distinct lack of research directly quantifying the recovery of ecosystem functioning alongside species and functional diversity recovery (Brudvig 2011; Montoya, Rogers & Memmott 2012). Functional trait information and diversity indices complement traditional taxonomic-based indices and when used together with assessments of ecological functions can provide comprehensive evaluations of the success of restoration projects (Cadotte, Carscadden & Mirotchnick 2011; Montoya, Rogers & Memmott 2012). It is also valuable to quantify how restored diversity simultaneously influences a suite of ecosystem functions and whether the effect of diversity on multiple functions is different from its effect on individual functions.
+goods and ecosystem services, including storing more than half the world’s carbon (Pan et al. 2011). Despite this recognition, forest loss continues to increase, particularly in the tropics (Kim, Sexton & Townshend 2015). Ecological restoration, both within and outside protected areas, is being increasingly applied world-wide and is regarded as a major strategy for reversing or mitigating tropical
+
+<small><span class="docvortex-page-footnote" data-block-type="page_footnote" style="color:#6b7280">\*Correspondence author. E-mail: m.derhe@lancaster.ac.uk</span></small>
+
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society
+
+<!-- page 2 of 11 -->
+
+Restoration of biodiversity and functionality
+
+1715
+
+biodiversity losses and improving the provision of ecosystem services (Holl & Aide 2011). A popular method of ecological forest restoration is reforestation, which is the re-establishment of native tree cover to land previously cleared of rain forest (Lamb, Erskine & Parrotta 2005).
+
+A combination of vegetation structure, faunal and floral species diversity/composition and ecosystem function has been suggested as a minimum set of attributes to assess the success of restoration projects (Ruiz-Jaen & Aide 2005; Wortley, Hero & Howes 2013). However, whilst the trajectory of vegetation structure and diversity following restoration is relatively well understood, there has been limited research on faunal recovery (Majer 2009). Additionally, a key attribute set out by the Society for Ecological Restoration to determine when restoration has been accomplished is that all functional groups necessary for the continued development and/or stability of the restored ecosystem are represented or have the potential to colonize (Shackelford et al. 2013). Nonetheless, studies investigating the effect of restoration on functional diversity are few and far between. Recently, efforts have been made to bridge this gap: Audino, Louzada & Comita (2014) examined the response of dung beetle species diversity, composition and functional diversity to restoration of Atlantic forest in Brazil, showing that species composition but not functional diversity increased with restoration age. Despite these recent advances, there remains a dis tinct lack of research directly quantifying the recovery of ecosystem functioning alongside species and functional diversity recovery (Brudvig 2011; Montoya, Rogers & Memmott 2012). Functional trait information and diversity indices complement traditional taxonomic-based indices and when used together with assessments of ecological functions can provide comprehensive evaluations of the success of restoration projects (Cadotte, Carscadden & Mirotchnick 2011; Montoya, Rogers & Memmott 2012). It is also valuable to quantify how restored diversity simultaneously influences a suite of ecosystem functions and whether the effect of diversity on multiple functions is different from its effect on individual functions.
 
 Our study aims to address this knowledge gap by directly measuring the response of dung beetle-mediated ecosystem functions and dung beetle diversity to ecological restoration of tropical forests and examines the mechanistic link between biodiversity recovery and functional recovery, using individual functions and an index of multifunctionality.
 
-Dung beetles (Scarabaeidae: Scarabaeinae) are regarded as excellent bioindicators as they are diverse, taxonomically well-characterized and are often considered a proxy for other taxonomic groups (Bicknell et al. 2014). They are particularly suitable for investigating the consequences of habitat recovery as they are stenotopic and thus intrinsically sensitive to alterations in environmental conditions (Nichols et al. 2007). Dung beetles are also mediators of key ecosystem functions important to forest dynamics, such as dung decomposition, secondary seed dispersal, soil bioturbation and nutrient cycling (Nichols et al. 2008). Tunnelling and dung burial by dung beetles relocates nutrient-rich organic material, instigates micro-organismal and chemical changes in the upper soil layers, aerates soils, improves water penetration and prevents nutrient loss (Brown et al. 2010). As dung beetles break down faecal matter and distribute it into the soil, they also relocate seeds from the point at which they were deposited through defecation by other animals (secondary seed dispersal), which increases seed survival (Andresen & Levey 2004; Nichols et al. 2008).
+Dung beetles (Scarabaeidae: Scarabaeinae) are regarded as excellent bioindicators as they are diverse, taxonomically well-characterized and are often considered a proxy for other taxonomic groups (Bicknell et al. 2014). They are particularly suitable for investigating the consequences of habitat recovery as they are stenotopic and thus intrinsically sensitive to alterations in environmental conditions (Nichols et al. 2007). Dung beetles are also mediators of key ecosystem functions important to forest dynamics,
 
-In this study, we investigate the effect of tropical forest restoration on the recovery of taxonomic and functional diversity of dung beetles, and on the ecosystem functions they mediate, in one of the world’s most irreplaceable protected areas, the Wet Tropics World Heritage Area of Australia. To evaluate restoration success, we used a chronosequence approach of restored sites, as well as degraded and target reference systems, to examine patterns of dung beetle community assembly and functional recovery. In particular, we examine (i) whether increasing time since restoration leads to an increase in species diversity and a more rain forest-like community structure; (ii) whether increasing time since restoration leads to an increase in functional diversity and functional efficiency; and (iii) the relationship between biodiversity and ecosys tem functioning in ecologically restored sites.
+such as dung decomposition, secondary seed dispersal, soil bioturbation and nutrient cycling (Nichols et al. 2008). Tunnelling and dung burial by dung beetles relocates nutrient-rich organic material, instigates micro-organismal and chemical changes in the upper soil layers, aerates soils, improves water penetration and prevents nutrient loss (Brown et al. 2010). As dung beetles break down faecal matter and distribute it into the soil, they also relocate seeds from the point at which they were deposited through defecation by other animals (secondary seed dispersal), which increases seed survival (Andresen & Levey 2004; Nichols et al. 2008).
+
+In this study, we investigate the effect of tropical forest restoration on the recovery of taxonomic and functional diversity of dung beetles, and on the ecosystem functions they mediate, in one of the world’s most irreplaceable protected areas, the Wet Tropics World Heritage Area of Australia. To evaluate restoration success, we used a chronosequence approach of restored sites, as well as degraded and target reference systems, to examine patterns of dung beetle community assembly and functional recovery. In particular, we examine (i) whether increasing time since restoration leads to an increase in species diversity and a more rain forest-like community structure; (ii) whether increasing time since restoration leads to an increase in functional diversity and functional efficiency; and (iii) the relationship between biodiversity and ecosystem functioning in ecologically restored sites.
 
 ## Materials and methods
 
 ## STUDY AREA
 
-The study took place on the Atherton Tableland in the Wet Tropics bioregion, a hilly, mid-elevation (500–900 m) plateau in north-east Queensland, Australia (approximately 17°- 17°300 S, 145°300- 145°450 E). Mean annual rainfall is 1300–3000 mm and is distinctly seasonal. The climate is predominantly humid subtropical with temperatures of 10 2–29 °C and rain forests are mostly complex notophyll to mesophyll vine forest (Bureau of Meteorology 2016). Most rain forests on the Tableland were cleared for agriculture 80–100 years ago, although small patches of remnant rain forest remain, and large (>3000 ha) tracts of unfragmented rain forest survive on steeper hillsides. In recent decades, there has been an expansion of rain forest restoration projects, with a high diversity (10–100+ species) of native rain forest trees and shrubs planted at high densities (ca. 3000–6000 stems ha<sup>1</sup>), in small (<5 ha) patches and strips, mainly in riparian areas (Goosem & Tucker 2013). The resulting landscape is a mosaic of livestock pasture, croplands, urban settlements, remnant rain forest, natural regrowth and replanted forests.
+The study took place on the Atherton Tableland in the Wet Tropics bioregion, a hilly, mid-elevation (500–900 m) plateau in north-east Queensland, Australia (approximately 17°- 17°30<sup>0</sup> S, 145°30<sup>0</sup>- 145°45<sup>0</sup> E). Mean annual rainfall is 1300–3000 mm and is distinctly seasonal. The climate is predominantly humid subtropical with temperatures of 10-2–29 °C and rain forests are mostly complex notophyll to mesophyll vine forest (Bureau of Meteorology 2016). Most rain forests on the Tableland were cleared for agriculture 80–100 years ago, although small patches of remnant rain forest remain, and large (>3000 ha) tracts of unfragmented rain forest survive on steeper hillsides. In recent decades, there has been an expansion of rain forest restoration projects, with a high diversity (10–100+ species) of native rain forest trees and shrubs planted at high densities (ca. 3000–6000 stems ha<sup>1</sup>), in small (<5 ha) patches and strips, mainly in riparian areas (Goosem & Tucker 2013). The resulting landscape is a mosaic of livestock pasture, croplands, urban settlements, remnant rain forest, natural regrowth and replanted forests.
 
 ## STUDY DESIGN
 
-Twelve restoration sites of varying ages were selected: 2 years (n = 2), 3 years (n = 1), 5 years (n = 1), 9 years (n = 1), 11 years (n = 2), 12 years (n = 1), 15 years (n = 2), 16 years (n = 1) and 17 years (n = 1). These restoration sites were categorized into young (0–5 years), mid-age (6–12 years) and old (13–17 years) restoration categories. All restoration sites were previously grazed pasture. We considered remnant rain forest patches as the reference target sites, representing the desired endpoint of restoration $( n = 4 )$ and ungrazed, abandoned (for between 3 and 10 years) pasture on previously cleared rain forest land as the reference degraded sites $( n = 4 ) .$ , representing the starting point of restoration. Sample sites were set up in four blocks within the landscape (Fig. S1, Supporting Information), with each block containing one site of each of the three restoration categories and starting and reference sites: pasture, young restoration planting, mid-age restoration planting, old restoration planting and rain forest. Blocks were selected to represent the maximum variation in topographic, climatic and geological parameters in the landscape so all sites within a block were similar in these parameters. Sites were separated by >300 m and blocks by >1 5 km. All restoration and degraded pasture sites were of similar size and shape (1– 4 ha) and were 200–1000 m from intact rain forest, connected through restored and remnant corridors. All rain forest reference sites were at least 300 ha in size.
+Twelve restoration sites of varying ages were selected: 2 years (n = 2), 3 years (n = 1), 5 years (n = 1), 9 years (n = 1), 11 years (n = 2), 12 years (n = 1), 15 years (n = 2), 16 years (n = 1) and 17 years (n = 1). These restoration sites were categorized into
 
-## DUNG BEETLE COMMUNITY SAMPLING
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
+
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+<!-- page 3 of 11 -->
+
+1716
+
+M. A. Derhe et al.
+
+young (0–5 years), mid-age (6–12 years) and old (13–17 years) restoration categories. All restoration sites were previously grazed pasture. We considered remnant rain forest patches as the reference target sites, representing the desired endpoint of restoration $( n = 4 )$ and ungrazed, abandoned (for between 3 and 10 years) pasture on previously cleared rain forest land as the reference degraded sites $( n = 4 ) ,$ representing the starting point of restoration. Sample sites were set up in four blocks within the landscape (Fig. S1, Supporting Information), with each block containing one site of each of the three restoration categories and starting and reference sites: pasture, young restoration planting, mid-age restoration planting, old restoration planting and rain forest. Blocks were selected to represent the maximum variation in topographic, climatic and geological parameters in the landscape so all sites within a block were similar in these parameters. Sites were separated by >300 m and blocks by >1-5 km. All restoration and degraded pasture sites were of similar size and shape (1–4 ha) and were 200–1000 m from intact rain forest, connected through restored and remnant corridors. All rain forest reference sites were at least 300 ha in size.
+
+## DUNG BEETLE COMM UNITY SAMPLING
 
 Sampling was conducted twice during the wet season: January– February and May–June 2014. In each site during each sampling period, we placed four sampling points 10 m apart along a linear transect. At each sampling point, we installed one standardized baited pitfall trap (Spector & Forsyth 1998) filled with c. 100 mL of a 50:50 propylene glycol: water mixture and a few drops of detergent to sample dung beetles (Coleoptera: Scarabaeidae: Scarabaeinae). Traps were baited alternately with agile wallaby (Macropus agilis [Gould]) dung and rotting mushrooms to attract a wider range of native species, as several species in the study area show specialization to either mammalian dung or mushroom bait (Hill 1996). Traps were placed at a minimum of 20 m from the edge. Traps were opened in the morning between 07:00 and 10:00 and left in the field for 5 days. Beetles were identified to species level using voucher specimens and expert knowledge of one of the authors (G. M.). Voucher collections are lodged at the CSIRO Tropical Forest Research Centre in Atherton, Australia.
 
 ## DUNG BEETLE FUNCTIONS
 
-Three dung beetle functions (dung removal, secondary seed dispersal and soil excavation) were measured using experimental dung baits set-up in each site. Experiments were conducted during the wet season in January–February 2014 and were set up at least 4 days before dung beetle sampling took place. A small plot, c. 30 cm in diameter, was established at each sampling point. In the centre of each plot, a 50-g ball of agile wallaby dung was placed (four balls per site in total). Within each dung ball, 30 round plastic beads were placed, to act as seed mimics. Plastic seed mimics were used rather than real seeds to prevent possible seed predation (Slade et al. 2007). We used seed mimics of 4 mm, since the majority of mammal-dispersed fleshy-fruited seeds in the study area are ≤4 mm (Westcott et al. 2008). The dung ball was surrounded by a wire mesh cylinder (grid size: 2 cm; height: 10 cm; diameter: 11 cm) with a plastic plate roof, allowing beetles to access the dung and avoiding interference by vertebrates. Dung balls were placed in the field between 07:00 and 10:00 and the remains were collected after 48 h. Any soil or dung beetles in the remaining dung were removed and all seed mimics present in the dung were removed and counted. The remaining dung was ovendried at $6 0 ~ ^ { \circ } \mathrm { C }$ until a constant weight was achieved. Dung ball controls (50 g wet mass; n = 20) were used to calculate the ratio of wet to dry dung mass and the mean dry mass of the control dung balls was taken as the starting dry mass for all experimental dung balls, enabling the amount of dung removed from each dung ball to be estimated. Loose soil around and beneath the experimental dung balls was collected and oven-dried at $7 0 ~ ^ { \circ } \mathrm { C }$ until a constant weight was achieved, to determine the amount of soil excavated by dung beetles. We assumed that plastic seed mimics absent from the dung remaining on the soil surface had been dispersed by dung beetles and we used this as our measure of seed dispersal.
+Three dung beetle functions (dung removal, secondary seed dispersal and soil excavation) were measured using experimental dung baits set-up in each site. Experiments were conducted during the wet season in January–February 2014 and were set up at least 4 days before dung beetle sampling took place. A small plot, c. 30 cm in diameter, was established at each sampling point. In the centre of each plot, a 50-g ball of agile wallaby dung was placed (four balls per site in total). Within each dung ball, 30 round plastic beads were placed, to act as seed mimics. Plastic seed mimics were used rather than real seeds to prevent possible seed predation (Slade et al. 2007). We used seed mimics of 4 mm, since the majority of mammal-dispersed fleshy-fruited seeds in the study area are ≤4 mm (Westcott et al. 2008). The dung ball was surrounded by a wire mesh cylinder (grid size: 2 cm; height: 10 cm; diameter: 11 cm) with a plastic plate roof, allowing beetles to access the dung and avoiding interference by vertebrates. Dung balls were placed in the field between 07:00 and 10:00 and the remains were collected after 48 h. Any soil or dung beetles in the
+
+remaining dung were removed and all seed mimics present in the dung were removed and counted. The remaining dung was ovendried at $6 0 ~ ^ { \circ } \mathrm { C }$ until a constant weight was achieved. Dung ball controls (50 g wet mass; n = 20) were used to calculate the ratio of wet to dry dung mass and the mean dry mass of the control dung balls was taken as the starting dry mass for all experimental dung balls, enabling the amount of dung removed from each dung ball to be estimated. Loose soil around and beneath the experimental dung balls was collected and oven-dried at $7 0 ~ ^ { \circ } \mathrm { C }$ until a constant weight was achieved, to determine the amount of soil excavated by dung beetles. We assumed that plastic seed mimics absent from the dung remaining on the soil surface had been dispersed by dung beetles and we used this as our measure of seed dispersal.
 
 ## DUNG BEETLE FUNCTIONAL TRAITS
 
 Five main functional traits that could directly influence the measured functions were examined: behavioural guild (tunnelers or rollers), diel activity (nocturnal or diurnal), body mass, diet preference (dung, mushroom or both) and diet breadth (number of bait types a species is attracted to). Details of functional trait determination are in Supporting Information (Table S1, Appendix S1).
 
-The ‘FD’ package for (R Core Team 2014) was used to calculate four complementary measures of functional diversity which describe a different functional aspect of biological communities: (i) functional richness (FRic) is the range of traits in a community quantified by the volume of functional trait space occupied; (ii) functional evenness (FEve), which summarizes how species abundances are distributed throughout the occupied functional trait space; (iii) functional divergence (FDiv), which describes the variation in the distribution of species abundances with respect to the centre of functional trait space (an abundance weighted centroid; Villeger, Mason & Mouillot 2008); and (iv) functional dispersion (FDis), which indicates the distribution of abundances in functional trait space relative to an abundance weighted centroid, and the volume of space occupied (Laliberte & Legendre 2010).
+The ‘FD’ package for R (R Core Team 2014) was used to calculate four complementary measures of functional diversity which describe a different functional aspect of biological communities: (i) functional richness (FRic) is the range of traits in a community quantified by the volume of functional trait space occupied; (ii) functional evenness (FEve), which summarizes how species abundances are distributed throughout the occupied functional trait space; (iii) functional divergence (FDiv), which describes the variation in the distribution of species abundances with respect to the centre of functional trait space (an abundance weighted centroid; Villeger, Mason & Mouillot 2008); and (iv) functional dispersion (FDis), which indicates the distribution of abundances in functional trait space relative to an abundance weighted centroid, and the volume of space occupied (Laliberte & Legendre 2010).
 
 ## DATA ANALYSIS
 
 Statistical analyses were carried out using R version 3.1.1 (R Core Team 2014). Data from both trapping rounds and from the four sampling points in each site were pooled, as these were not independent. To assess the completeness of our dung beetle survey for rain forest, pasture and each restoration category, we generated sample-based species accumulation curves, with 95% confidence intervals and we also calculated the mean of four commonly used abundance-based species richness estimators (ACE, CHAO1, JACK1 and Bootstrap), from 999 randomizations of observed species richness, using ESTIMATES v. 9.1.0 (Colwell 2013).
 
-For each site, we calculate observed and estimated species richness, species diversity (Shannon–Wiener index) and species evenness (Pielou’s evenness index). To test for correlations among dung beetle functions, we used Pearson’s product–moment correlation coefficient. To test for effects of restoration age and habitat category on dung beetle species diversity and composition, functional diversity and ecosystem functions, we used generalized linear mixed effects models (glmm) with block as a random effect. The statistical significance of the predictor variable in each glmm was tested with analysis of variance (ANOVA). We performed a contrast analysis on the glmms with habitat category as a predictor, by obtaining confidence intervals using parametric bootstrapping to determine whether the response variables differed among rain forest, pasture and restoration categories. Appropriate error structures were applied for all models (Table S2).
+For each site, we calculate observed and estimated species richness, species diversity (Shannon–Wiener index) and species evenness (Pielou’s evenness index). To test for correlations among dung beetle functions, we used Pearson’s product–moment correlation coefficient. To test for effects of restoration age and habitat category on dung beetle species diversity and composition, functional diversity and ecosystem functions, we used generalized linear mixed effects models (glmm) with block as a random effect. The statistical significance of the predictor variable in each glmm
+
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
+
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+<!-- page 4 of 11 -->
+
+Restoration of biodiversity and functionality
+
+1717
+
+was tested with analysis of variance (ANOVA). We performed a contrast analysis on the glmms with habitat category as a predic tor, by obtaining confidence intervals using parametric bootstrapping to determine whether the response variables differed among rain forest, pasture and restoration categories. Appropriate error structures were applied for all models (Table S2).
 
 To assess whether restoration sites are progressing towards or diverging from the degraded and reference sites in terms of species composition, we used a non-metric multidimensional scaling (nMDS) ordination analysis based on Bray–Curtis pairwise distances using standardized and square-root-transformed abundance data. To test for differences in Bray–Curtis similarity to rain forest and pasture among restoration categories, we used a permutational multivariate analysis of variance (ADONIS). We used glmms to explore the relationship between restoration age and Bray–Curtis similarity to rain forest and pasture.
 
-We used an information-theoretic approach to evaluate the relationships between relevant dung beetle community attributes (species richness, number of individuals, biomass, FRic, FEve, FDiv and FDis) and the three ecological functions. We also calculated a multifunctionality variable (sensu Mouillot et al. 2011) as the mean value of the three functions (dung removal, soil excavation and seed dispersal) after standardizing each function (mean of 0 and standard deviation of 1) in order to give them the same weight. Data from the first round of trapping only (January–February 2014) were used as this was conducted during the same time period as the functional manipulations. Outliers were identified using Cleveland dotplots, followed up with Cook’s distance and removed from the analysis (n = 1). Gaussian glmms were fitted to each of the relevant community attributes as well as null models (see Table S3 for model structures). The Akaike’s information criterion corrected for small sample size (AIC ) was used to evaluate models, by comparing the differences in AIC for each model with respect to the AIC of the best candidate model (Burnham & Anderson 2002). Based on the relative likelihoods of the different models, Akaike weights (w ) were calculated to determine the weight of evidence in favour of each model being the best model in the set of candidate models, using the MUMIN package in R (Burnham & Anderson 2002).
+We used an information-theoretic approach to evaluate the relationships between relevant dung beetle community attributes (species richness, number of individuals, biomass, FRic, FEve, FDiv and FDis) and the three ecological functions. We also calculated a multifunctionality variable (sensu Mouillot et al. 2011) as the mean value of the three functions (dung removal, soil excavation and seed dispersal) after standardizing each function (mean of 0 and standard deviation of 1) in order to give them the same weight. Data from the first round of trapping only (January–February 2014) were used as this was conducted during the same time period as the functional manipulations. Outliers were identified using Cleveland dotplots, followed up with Cook’s distance and removed from the analysis (n = 1). Gaussian glmms were fitted to each of the relevant community attributes as well as null models (see Table S3 for model structures). The Akaike’s information criterion corrected for small sample size (AIC<sub>c</sub>) was used to evaluate models, by comparing the differences in AIC<sub>c</sub> for each model with respect to the AIC<sub>c</sub> of the best candidate model (Burnham & Anderson 2002). Based on the relative likelihoods of the different models, Akaike weights (w<sub>i</sub>) were calculated to determine the weight of evidence in favour of each model being the best model in the set of candidate models, using the MUMIN package in R (Burnham & Anderson 2002).
 
 ## Results
 
@@ -72,53 +120,65 @@ A total of 3317 individuals from 39 dung beetle species in eight genera were rec
 
 Lewis 2011; Braga et al. 2013), we retained these metrics in the analyses.
 
-Observed species richness $( \chi ^ { 2 } = 1 1 . 7 7 ; P < 0 . 0 0 1 ; \mathrm { F i g . }$ 1a), estimated species richness $( \chi ^ { 2 } = 9 { \cdot } 8 0 ; ~ P = 0 { \cdot } 0 0 2 ; ~ \mathrm { F i g . ~ 1 b } )$ number of individuals $( \chi ^ { 2 } = 2 3 . 9 8 ; P < 0 . 0 0 1 ; \mathrm { F i g . }$ 1c) and biomass $( \chi ^ { 2 } = 6 { \cdot } 4 9 ; P = 0 { \cdot } 0 1 1 ; \mathrm { F i g }$ . 1d) all showed a significant positive relationship with restoration age. Shannon– Wiener species diversity $( \chi ^ { 2 } = 3 . 6 4 ; P = 0 . 0 5 6 ;$ Fig. 1e) and Pielou’s species evenness $( \chi ^ { 2 } = 0 . 4 0 ; P = 0 { \cdot } 5 2 6 )$ did not vary with restoration age. Observed species richness $( \chi ^ { 2 } = 5 1 \cdot 6 ;$ $\mathrm { d . f . } = 4 ; \quad P < 0 { \cdot } 0 0 1$ ; Fig. 1f), number of individuals $( \chi ^ { 2 } = 9 1 { \cdot } 1 0 ; \mathrm { d . f . } = 4 ; P < 0 { \cdot } 0 0 1 ;$ ; Fig. 1h) and species diversity (Shannon index; $\chi ^ { 2 } = 2 2 { \cdot } 3 1 ; \mathrm { d . f . } = 4 ; P < 0 { \cdot } 0 0 1 ; \mathrm { F i g . } ~ 1$ j) were highest in rain forest and lowest in pasture and young restoration. Biomass $( \chi ^ { 2 } = 9 1 { \cdot } 1 0 ; ~ \mathrm { d . f . } = 4 ; ~ P < 0 { \cdot } 0 0 1 ;$ Fig. 1i) and estimated species richness $( \chi ^ { 2 } = 2 3 . 5 7 ; \mathrm { d . f . } = 4 ;$ $P < 0 { \cdot } 0 0 1 .$ ; Fig. 1g) were lowest in pasture and young restoration and highest in mid-restoration, old restoration and rain forest. Species evenness did not differ among rain forest, pasture and restoration categories $( \chi ^ { 2 } = 3 { \cdot } 3 6 ;$ $\mathrm { d . f . } = 4 ; P = 0 { \cdot } 5 0 0 )$
+Observed species richness $\chi^{2}=11 \cdot 77; P<0 \cdot 001;  Fig.$ 1a), estimated species richness $\chi^{2}=9 \cdot 80; P=0 \cdot 002;  Fig.  1 b$ number of individuals $\chi^{2}=23 \cdot 98; P<0 \cdot 001; Fig.$ 1c) and biomass $\chi^{2}=6 \cdot 49; P=0 \cdot 011;  Fig$ . 1d) all showed a significant positive relationship with restoration age. Shannon– Wiener species diversity $\chi^{2}=3 \cdot 64; P=0 \cdot 056;$ Fig. 1e) and Pielou’s species evenness $\chi^{2}=0 \cdot 40; P=0 \cdot 526$ did not vary with restoration age. Observed species richness $( \chi ^ { 2 } = 5 1 { \cdot } 6 ;$ $df. = 4; \quad P < 0 \cdot 001;$ ; Fig. 1f), number of individuals $\chi^{2}=91 \cdot 10; \mathrm{d.f.}=4; P<0 \cdot 001$ ; Fig. 1h) and species diversity (Shannon index; $\chi^{2}=22 \cdot 31; \mathrm{d.f.}=4; P<0 \cdot 001; \mathrm{Fig.~1j}$ ) were highest in rain forest and lowest in pasture and young restoration. Biomass $\chi^{2}=91 \cdot 10; \quad \mathrm{d.f.}=4; \quad P<0 \cdot 001;$ Fig. 1i) and estimated species richness $\chi^{2}=23 \cdot 57; \mathrm{d.f.}=4;$ $P \leq 0 . 0 0 1 ;$ ; Fig. 1g) were lowest in pasture and young restoration and highest in mid-restoration, old restoration and rain forest. Species evenness did not differ among rain forest, pasture and restoration categories $( \chi^{2} = 3 \cdot 36 ;$ $\mathrm{d.f.} = 4; P = 0.500$
 
 ## COMMUNITY COMPOSITION
 
-Species composition (Bray–Curtis pairwise distances) differed significantly among rain forest, pasture and restoration categories (ADONIS: $r ^ { 2 } = 0 { \cdot } 3 6 , \mathrm { ~ d . f . } = 4 , P = 0 { \cdot } 0 0 3 ;$ Fig. 2; Table S5). The nMDS ordination represented 72 5% of the assemblage dissimilarity and showed that the restoration sites are clearly progressing towards the rain forest reference sites and deviating from the pasture reference sites with increasing restoration age (Fig. 2). There was a significant positive relationship between restoration age and Bray–Curtis similarity to rain forest $( \chi ^ { 2 } = 8 { \cdot } 0 3 ; P = 0 { \cdot } 0 0 5 ;$ Fig. S4a), with the highest similar ity value occurring in an old restoration site (0 511). Bray–Curtis similarity to rain forest varied by restoration category $( \chi ^ { 2 } = 3 4 { \cdot } 3 8 ; P < 0 { \cdot } 0 0 1 ; \mathrm { F i g . S 4 c } )$ , with the highest values in mid-stage and old restoration. Bray–Curtis similarity to pasture did not vary with restoration age (v<sup>2</sup> = 0 83; P = 0 363; Fig. S4b) or category $( \chi ^ { 2 } = 0 { \cdot } 8 3 ;$ P = 0 842; Fig. S4d).
+Species composition (Bray–Curtis pairwise distances) differed significantly among rain forest, pasture and restoration categories (ADONIS: $r^{2}=0 \cdot 36,\;\;\mathrm{d.f.}=4,\;\;P=0 \cdot 003;$ Fig. 2; Table S5). The nMDS ordination represented 72-5% of the assemblage dissimilarity and showed that the restoration sites are clearly progressing towards the rain forest reference sites and deviating from the pasture reference sites with increasing restoration age (Fig. 2). There was a significant positive relationship between restoration age and Bray–Curtis similarity to rain forest $\chi^{2}=8 \cdot 03; P=0 \cdot 005;$ Fig. S4a), with the highest similarity value occurring in an old restoration site (0-511). Bray–Curtis similarity to rain forest varied by restoration category $\chi^{2}=34.38;\;P<0.001;\;Fig. S4c$ , with the highest values in mid-stage and old restoration. Bray–Curtis similarity to pasture did not vary with restoration age (v<sup>2</sup> = 0-83; P = 0-363; Fig. S4b) or category $( \chi^{2} = 0 \cdot 83 ;$ P = 0-842; Fig. S4d).
 
 ## FUNCTIONAL DIVERSITY
 
-Functional richness increased significantly with restoration age $( \chi ^ { 2 } = 9 . 5 4 , P = 0 . 0 0 2 ;$ ; Fig. 3a) and differed among rain forest, pasture and restoration categories $( \chi ^ { 2 } = 3 2 { \cdot } 1 1 .$ d.f. = 4, P < 0 001; Fig. 3e), with the highest functional richness in old restoration and rain forest and the lowest in pasture. Restoration age had a negative effect on functional evenness $( \chi ^ { 2 } = 8 . 4 2 , P = 0 . 0 0 4 ;$ ; Fig. 3b) and functional divergence $( \chi ^ { 2 } = 6 { \cdot } 6 1 , \ P = 0 { \cdot } 0 1 1 ; \ \mathrm { F i g . } \ 3 \mathrm { c } )$ , but had no effect on functional dispersion $( \chi ^ { 2 } = 1 . 6 5 , ~ P = 0 { \cdot } 2 0 0 ;$ Fig. 3d). Functional dispersion differed significantly among rain forest, pasture and restoration categories $( \chi ^ { 2 } = 1 0 { \cdot } 9 4 , \mathrm { d . f . } = 4 , P = 0 { \cdot } 0 2 8 ; \mathrm { F i g }$ . 3h), with the highest
+Functional richness increased significantly with restoration age $\chi^{2}=9.54,\ P=0.002;$ Fig. 3a) and differed among rain forest, pasture and restoration categories $( \chi^{2} = 32 \cdot 11 ,$ d.f. = 4, P < 0-001; Fig. 3e), with the highest functional richness in old restoration and rain forest and the lowest in pasture. Restoration age had a negative effect on functional evenness $\chi^{2}=8 \cdot 42, P=0 \cdot 004;$ Fig. 3b) and functional divergence $\chi^{2}=6 \cdot 61, P=0 \cdot 011;  Fig.  3 c$ , but had no effect on functional dispersion $\chi^{2}=1 \cdot 65, P=0 \cdot 200;$ Fig. 3d). Functional dispersion differed significantly among rain forest, pasture and restoration categories $\chi^{2}=10 \cdot 94,\; \mathrm{d.f.}=4,\; P=0 \cdot 028;\; \mathrm{Fig}$ . 3h), with the highest
 
-![](images/0ea79a04d31318c3c426da1c194475cb639220c010f1ad60331baa467f03654c.jpg)
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
 
-(b)  
-![](images/5f22a574b6e227cb7ff369941394377755ab562037a9fb8b7d36448bcd0ec1fb.jpg)
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
-![](images/0a40cdfec9703b09c2e9e4fbce7a3aa5d1d56dd0af5f95501ddb74494ab17d94.jpg)
+<!-- page 5 of 11 -->
 
-![](images/0e2df4d6853d25cd1f45a7a500d6cd889e635386e6128511b11a1f4bbed80220.jpg)
+1718
 
-![](images/72441276f05fa93afc31c7054bf902f37878baab40c31d26ab6b8f2a94902c7a.jpg)
+M. A. Derhe et al.
 
-![](images/489d784637b9fc1f440844691600763d475b6d87d6424c0332c713dac563ddc0.jpg)
+![Image block](doc:f0c69a6/tier:advanced/page:5/block:3)
 
-![](images/abee859eac14f17fc699ed891615a8947e51a70fe9324cdf773526036c09e35f.jpg)
+Fig. 1. Relationship between restoration age and observed and estimated species richness, number of individuals, biomass and species diversity (Shannon index; a–e). $\mathrm { M e a n } \pm \mathrm { S E }$ observed and estimated species richness, number of individuals, biomass and species diversity in the different habitat categories (f–j). P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; $\mathrm{RF} = \min$ forest. Unlike letters indicate significant differences (P < 0-05).
 
-![](images/420d0dd84e15b1b11835a011c82a73eed851e542392707f7157d3beb5673a7d6.jpg)  
-Fig. 1. Relationship between restoration age and observed and estimated species richness, number of individuals, biomass and species diversity (Shannon index; a–e). $\mathbf { M e a n } \pm \mathbf { S E }$ observed and estimated species richness, number of individuals, biomass and species diversity in the different habitat categories (f–j). P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; ${ \mathrm { R F } } = { \mathrm { r a i n } }$ forest. Unlike letters indicate significant differences (P < 0 05).
-
-![](images/edff1f5c6104cec959b972fcba9d9a8bfbf897b7bd1b768412b25562bba1dcdf.jpg)
-
-![](images/024e57f905ba1f4379f419d1f31cec8b74b8613e2b3f088d930f5c4c917b9008.jpg)  
-values in rain forest. Functional evenness $( \chi ^ { 2 } = 6 . 2 9 $ ${ \mathrm { d . f . } } = 4 .$ , P = 0 178; Fig. 3f) or functional divergence $( \chi ^ { 2 } = 2 { \cdot } 5 0$ , d.f. = 4, P = 0 644; Fig. 3g) did not differ among rain forest, pasture and restoration categories.
+values in rain forest. Functional evenness $( \chi ^ { 2 } = 6 { \cdot } 2 9 ,$ $\mathrm { d . f . } = 4 ,$ P = 0-178; Fig. 3f) or functional divergence $( \chi ^ { 2 } = 2 { \cdot } 5 0$ , d.f. = 4, P = 0-644; Fig. 3g) did not differ among rain forest, pasture and restoration categories.
 
 ## ECOSYSTEM FUNCTIONS
 
-As expected, dung removal was positively correlated with both the amount of soil excavated $( r = 0 . 7 3 ; \ P < 0 . 0 0 1 )$ and secondary seed dispersal $( r = 0 . 9 5 ; ~ P < 0 . 0 0 1 )$ ), as the former two functions are a direct consequence of the latter. Soil excavation was also positively correlated with seed dispersal $( r = 0 . 8 1 ; P < 0 . 0 0 1 )$
+As expected, dung removal was positively correlated with both the amount of soil excavated $(r = 0.73; P < 0.001)$ and secondary seed dispersal $(r = 0.95; P < 0.001)$ , as the
 
-Seed dispersal was positively influenced by restoration age $( \chi ^ { 2 } = 5 { \cdot } 4 6 , P = 0 { \cdot } 0 1 9 ;$ Fig. 4b) and was highest in rain forest and the lowest in pasture and young restoration $( \chi ^ { 2 } = 1 0 { \cdot } 6 1$ , d.f. = 4, P = 0 031; Fig. 4f). There was no relationship between restoration age and dung removal $( \chi ^ { 2 } = 2 . 8 5 , P = 0 . 0 9 2 ; \mathrm { F i g . ~ 4 a ) }$ , soil excavation $( \chi ^ { 2 } = 0 { \cdot } 5 1$ $P = 0 { \cdot } 4 7 7 ;$ Fig. 4c) or multifunctionality $( \chi ^ { 2 } = 1 . 3 6 ,$
+former two functions are a direct consequence of the latter. Soil excavation was also positively correlated with seed dispersal $(r = 0 \cdot 81;   P < 0 \cdot 001)$
 
-![](images/ded1e431a005e223893a86234b1b800530414e6b935f8f9a219d1cbb5e5e4d7e.jpg)  
+Seed dispersal was positively influenced by restoration age $\chi^{2}=5 \cdot 46, P=0 \cdot 019;$ Fig. 4b) and was highest in rain forest and the lowest in pasture and young restoration $( \chi ^ { 2 } = 1 0 { \cdot } 6 1$ , d.f. = 4, P = 0-031; Fig. 4f). There was no relationship between restoration age and dung removal $\chi^{2}=2 \cdot 85,\; P=0 \cdot 092;\;  Fig.  4a$ , soil excavation $( \chi ^ { 2 } = 0 { \cdot } 5 1$ $P = 0.477;$ Fig. 4c) or multifunctionality $( \chi ^ { 2 } = 1 { \cdot } 3 6 ,$
+
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
+
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+<!-- page 6 of 11 -->
+
+Restoration of biodiversity and functionality
+
+1719
+
+| Series | MDS axis 1 (range) | MDS axis 2 (range) |
+| --- | --- | --- |
+| Pasture | -0.3~0.6 | -0.5~0.1 |
+| Young restoration | -0.3~0.6 | -0.7~0.0 |
+| Mid restoration | -0.4~0.2 | -0.2~0.6 |
+| Old restoration | -0.4~0.3 | -0.3~0.6 |
+| Rainforest | -0.5~-0.1 | -0.2~0.2 |
+
 Fig. 2. Non-metric multidimensional scaling ordination of community assemblages between the different habitat categories (pasture, young reforestation, mid-reforestation, old reforestation and rain forest) at the site scale, based on square-root-transformed, standardized abundance data $( r ^ { 2 } = 0 { \cdot } 7 3 )$
 
-$P = 0 { \cdot } 2 4 4 ;$ Fig. 4d); however, dung removal varied significantly among rain forest, pasture and restoration categories $( \chi ^ { 2 } = 1 3 . 4 1$ , d.f. = 4, P = 0 009; Fig. 4e) with the lowest dung removal in young restoration. Multifunctionality was lowest in pasture and highest in rain forest $( \chi ^ { 2 } = 9 . 7 2 $ , d.f. = 4, P = 0 045; Fig. 4h). Soil excavation did not vary among rain forest, pasture and restoration categories $( \chi ^ { 2 } = 1 { \cdot } 3 7 , \mathrm { d . f . } = 4 , P = 0 { \cdot } 8 4 9 ; \mathrm { F i g . } 4 \mathrm { g ) }$
+$P = 0 \cdot 244;$ Fig. 4d); however, dung removal varied significantly among rain forest, pasture and restoration categories $( \chi ^ { 2 } = 1 3 { \cdot } 4 1$ , d.f. = 4, P = 0-009; Fig. 4e) with the lowest dung removal in young restoration. Multifunctionality was lowest in pasture and highest in rain forest $( \chi ^ { 2 } = 9 { \cdot } 7 2 ,$ d.f. = 4, P = 0-045; Fig. 4h). Soil excavation did not vary among rain forest, pasture and restoration categories $\chi^{2}=1.37,\;\mathrm{d.f.}=4,\;P=0.849;\;\mathrm{Fig.}\;4\mathrm{g}$
 
 ## EFFECT OF DIVERSITY ON DUNG BEETLE-MEDIATED FUNCTIONS
 
-The global models containing all biodiversity metrics and the random effect (‘block’; Table S6) explained 47–74% of the variation in functional efficiency (multifunctionality $R ^ { 2 } = 0 . 4 7 4$ ; dung removal $R ^ { 2 } = 0 { \cdot } 7 0 4 ;$ secondary seed dispersal $R ^ { 2 } = 0 { \cdot } 7 3 8 ;$ soil excavation $R ^ { 2 } = 0 { \cdot } 7 4 4 )$ FDis, FDiv and FEve were the best predictors of multifunctionality, dung removal, seed dispersal and soil excavation (Table S6). However, there was very little difference in the strength of evidence between models including FDis, FDiv or FEve (Table S6), indicating that these three functional diversity metrics are the best predictors of dung beetle functionality, with FDis and FEve having a positive effect on multifunctionality, but FDiv having a negative effect (Fig. 5).
+The global models containing all biodiversity metrics and the random effect (‘block’; Table S6) explained 47–74% of the variation in functional efficiency (multifunctionality $R ^ { 2 } = 0 { \cdot } 4 7 4 ;$ dung removal $R^{2} = 0 \cdot 704;$ secondary seed dispersal $R^{2} = 0 \cdot 738;$ soil excavation $R ^ { 2 } = 0 . 7 4 4 )$ FDis, FDiv and FEve were the best predictors of multifunctionality, dung removal, seed dispersal and soil excavation (Table S6). However, there was very little difference in the strength of evidence between models including FDis, FDiv or FEve (Table S6), indicating that these three functional diversity metrics are the best predictors of dung beetle functionality, with FDis and FEve having a positive effect on multifunctionality, but FDiv having a negative effect (Fig. 5).
 
 ## Discussion
 
@@ -128,200 +188,170 @@ The patterns in species and functional recovery reported here show that restorat
 
 We found a marked increase in species richness, number of individuals and biomass of dung beetles in the restored sites, in accordance with similar studies (Barnes et al. 2014; Hernandez et al. 2014). These patterns suggest that the carrying capacity of restored sites is higher than that of degraded pasture, but is still limited compared to rain forest. Restored sites were found to be progressing towards rain forest and deviating from pasture sites in terms of dung beetle community composition, with increasing restoration age (Figs 2 and S4), confirming patterns found by similar studies (Grimbacher & Catterall 2007; Audino, Louzada & Comita 2014). We found a clear shift from pasture-like to more rain forest-like dung beetle communities after around 5 years since planting, which corresponds with the age at which canopy closure occurs (Goosem & Tucker 2013) and may be driven by canopy development (Grimbacher & Catterall 2007). Indeed, vegetation structure is believed to be a main factor determining dung beetle community structure in tropical rain forests (Davis et al. 2002). The recovery of dung beetle communities in older restoration sites may also be partly due to an increase in colonization opportunities as restoration sites get older.
 
-Species diversity and evenness did not vary with restoration age, which is likely an artefact of the relatively high levels of species diversity and evenness in the mid stage restoration sites. This may be caused by intermediate levels of disturbance in the mid-stage restoration sites (in that they are less disturbed than pasture and young restoration sites, but are not as established as old restoration sites). Disturbance strongly influences patterns of species diversity, resulting in maximum species diversity levels often occurring at intermediate levels of disturbance (Connell 1978).
+Species diversity and evenness did not vary with restoration age, which is likely an artefact of the relatively high levels of species diversity and evenness in the midstage restoration sites. This may be caused by intermediate levels of disturbance in the mid-stage restoration sites (in that they are less disturbed than pasture and young restoration sites, but are not as established as old restoration sites). Disturbance strongly influences patterns of species diversity, resulting in maximum species diversity levels often occurring at intermediate levels of disturbance (Connell 1978).
 
 ## FUNCTIONAL DIVERSITY
 
 We demonstrated an increase in functional richness (FRic) with restoration age, supporting previous studies showing a negative relationship between FRic and habitat modification and disturbance (Barragan et al. 2011; Edwards et al. 2014). However, our findings contrast with those of Audino, Louzada & Comita (2014) who found that dung beetle FRic was lower in restored sites than in pasture. The discrepancies in these findings may be due to landscape context, functional trait (particularly body size) differences between Neotropical and Australian dung beetles, the presence of native grassland dung beetle species in the Neotropics (and the absence of such species in the Australian Wet Tropics), differences in community assembly patterns between the regions, differences in environmental factors or differences in restoration techniques and management leading to slower functional diversity recovery in the Neotropical sites.
 
-The increased FRic we report in restored sites indicates the recovery of forest species that fill vacant functional (Mouchet et al. 2010). Pakeman (2011) suggests that low levels of FEve can be indicative of sites with little disturbance, where competition may be important in structuring the community, whereas in habitats where competition is low, such as highly disturbed areas, FEve can be high (even though FRic is low). Functional divergence (FDiv) also decreased with restoration age, that is a low degree of niche differentiation, and thus high resource competition in the restoration sites indicating that further habitat filtering is occurring. FDis did not vary by site age and was slightly lower in old restoration than in mid-stage restoration sites (as was the case for FEve and FDiv), which suggests that niche complementarity is not enhancing species occurrences (Mason et al. 2013), but that competition is the key driver of community structure in older restoration sites. Despite the potentially high levels of competition in older restoration sites indicated by slightly lower FEve and high FRic, the higher species richness at these sites suggests that older restoration sites contain more resources to enable competitive groups to coexist.
+The increased FRic we report in restored sites indicates the recovery of forest species that fill vacant functional
 
-(a)  
-![](images/764cf0926a602dc20a4d6161235d883347fc4afdd9d22112bce7bd7045790abf.jpg)
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
 
-![](images/21920de622ce7c5d417014c65e95f5a540b85a7a882620382eb619566784f7bf.jpg)
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
-![](images/c1a45b2b1fe48b34831810d9dfc28e46b4bd812a17b07c84fad37407cf69ff53.jpg)
+<!-- page 7 of 11 -->
 
-![](images/32e70b48dbf5fd8d17e9daa10f216b8590e0448f8e27df9254d1ee058a49db96.jpg)
+1720
 
-![](images/b4d490af529e44bb81bf07abe7ab9edb81ca13e0e86003fbc69cceb86e62865b.jpg)
+M. A. Derhe et al.
 
-(g)  
-![](images/d4a21eef37e7e31a3edd3b286da39cab439fd64be9d840b741bb8e731cafa876.jpg)
+![Image block](doc:f0c69a6/tier:advanced/page:7/block:3)
 
-![](images/f023a6a248e36ffd26ec84972aa773a1d5f401fd1b5f0a09cf65e942b3df11a8.jpg)
+Fig. 3. Relationship between restoration age and functional richness, functional evenness, functional divergence and functional dispersion (a–d). $\mathrm { M e a n \pm S E }$ functional richness, functional evenness, functional divergence and functional dispersion in the different habitat categories (e–h). P = pasture; YR = young restoration; $\mathrm{MR} = \mathrm{mid}$ -age restoration; $\mathrm { O R } =$ old restoration; RF = rain forest. Unlike letters indicate significant differences $(P < 0.05)$
 
-![](images/68a2fb768422790769dbabf677b7aee5e4e2a93f269c0c363b4e020618a531d3.jpg)  
-Fig. 3. Relationship between restoration age and functional richness, functional evenness, functional divergence and functional dispersion (a-d) $\mathbf { M e a n } \pm \mathbf { S E }$ functional richness, functional evenness, functional divergence and functional dispersion in the different habitat categories (e–h). P = pasture; YR = young restoration; $\mathbf { M R } = \mathbf { m i d }$ -age restoration; $\mathrm { O R } =$ old restoration; RF = rain forest. Unlike letters indicate significant differences $( P < 0 . 0 5 )$  
 niches that are not present in the pasture sites. A greater range of functional traits in restored sites could represent complementarity of resource use, resulting in a higher amount of resources being used and thus stronger effects of diversity on ecosystem functioning (Dı́ az & Cabido 2001). Furthermore, greater functional richness increases the likelihood that some species will respond differently to variable conditions and perturbations (e.g. habitat disturbance, extreme climatic events) which contributes to the maintenance of long-term ecosystem functioning and increased ecosystem stability (Dı́ az & Cabido 2001). Contrary to expectations from studies reporting a decrease in functional evenness (FEve) with increasing disturbance levels (Gerisch et al. 2012; Mouillot et al. 2013), we found a decrease in FEve with restoration age. Low FEve in restored sites indicates a concentration of species abundances along a small part of the functional trait gradient, that is the dominant species are similar in trait values, possibly indicating a high degree of habitat filtering
 
-(a)  
-![](images/ea69c27122cb4821187c3e727fcdaee7140dc63931699bd4c2c8df7ffe12084f.jpg)
+(Mouchet et al. 2010). Pakeman (2011) suggests that low levels of FEve can be indicative of sites with little disturbance, where competition may be important in structuring the community, whereas in habitats where competition is low, such as highly disturbed areas, FEve can be high (even though FRic is low). Functional divergence (FDiv) also decreased with restoration age, that is a low degree of niche differentiation, and thus high resource competition in the restoration sites indicating that further habitat filtering is occurring. FDis did not vary by site age and was slightly lower in old restoration than in mid-stage restoration sites (as was the case for FEve and FDiv), which suggests that niche complementarity is not enhancing species occurrences (Mason et al. 2013), but that competition is the key driver of community structure in older restoration sites. Despite the potentially high levels of competition in older restoration sites indicated by slightly lower FEve and high FRic, the higher species richness at these sites suggests that older
 
-![](images/08116d85b44cd4f47522f35e270f6ac06a1a82d8a88334d51b2a743fc2b2d4fb.jpg)
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
 
-![](images/28d05e911f9aa98d9a5f0155a2caf9a5ef88d9053f735fe38c43c676cf9e8f02.jpg)
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
-![](images/ba8800c60e6f5b925a5d4454282d0c665ae279cbbf48944f67e0990366f25cba.jpg)
+<!-- page 8 of 11 -->
 
-(c)  
-![](images/2b885281932c50acaabec716d162dad3a19673f7be42d54209608d604726400e.jpg)
+Restoration of biodiversity and functionality
 
-(g)  
-![](images/d4cae062436ccbf32c91a11a9d1925aa2ff48f257ada178639bf6e35b2ef3d15.jpg)  
-(h)
+1721
 
-Fig. 4. Relationship between restoration age and proportion of seeds dispersed, amount of dung removed, amount of soil excavated and multifunctionality (a–d). $\mathbf { M e a n } \pm \mathbf { S E }$ proportion of seeds dispersed, amount of dung removed, amount of soil excavated and multifunctionality in the different habitat categories (e–h). ${ \mathrm { P } } = { \mathrm { p a s } } -$ ture; $\mathrm { Y } \mathrm { R } = \mathrm { y } \mathrm { o u n g }$ restoration: MR = midage restoration; $\mathrm { O R } = \mathrm { o l d }$ restoration; RF = rain forest. Unlike letters indicate significant differences $( P < 0 . 0 5 )$  
-![](images/4f3ec4d44045368a48a9a029665bb1e4f45ae3022dd39d7a0959ae694543603c.jpg)
+![Image block](doc:f0c69a6/tier:advanced/page:8/block:3)
 
-![](images/7997599bd35237af2ab9f3c13213dc527be32e38b62d2398ed30462555faee19.jpg)  
-diversity recovery, which may be an artefact of the slightly elevated levels of functionality in mid-stage restoration sites. The higher levels of FDis (and less markedly, FEve) in mid-stage restoration sites are suggestive of more niche complementarity and less competition between functional groups. Thus, in mid-stage restoration sites, increased niche differentiation may be causing increased functioning.
+Fig. 4. Relationship between restoration age and proportion of seeds dispersed, amount of dung removed, amount of soil excavated and multifunctionality (a–d). $\mathrm { M e a n \pm S E }$ proportion of seeds dispersed, amount of dung removed, amount of soil excavated and multifunctionality in the different habitat categories (e–h). $\mathrm { P = p a s - }$ ture; $\mathrm{VR} = \mathrm{Young}$ restoration; MR = midage restoration; $\mathrm { O R } = \mathrm { o l d }$ restoration; RF = rain forest. Unlike letters indicate significant differences $(P < 0.05)$
+
+restoration sites contain more resources to enable competitive groups to coexist.
 
 ## FUNCTIONAL EFFICIENCY
 
 Community attribute changes are somewhat mirrored by changes in ecological functions, as there was a positive relationship between secondary seed dispersal and restoration age and a weak positive relationship between dung removal and soil excavation and restoration age (non-significant). The increase in dung beetle-mediated secondary seed dispersal in older restoration sites likely benefits seed survival and establishment (Nichols et al. 2007) which may have a positive impact on plant recruitment and successional recovery of restoration plantings. Our findings are supported by previous studies reporting lower dung removal, dung decomposition and seed burial rates in disturbed and deforested habitats, compared with continuous, undisturbed forest (Horgan 2005; Braga et al. 2013). Nevertheless, ecological function recovery was slower than
 
+diversity recovery, which may be an artefact of the slightly elevated levels of functionality in mid-stage restoration sites. The higher levels of FDis (and less markedly, FEve) in mid-stage restoration sites are suggestive of more niche complementarity and less competition between functional groups. Thus, in mid-stage restoration sites, increased niche differentiation may be causing increased functioning.
+
 ## EFFECT OF DIVERSITY ON DUNG BEETLE-MEDIATED FUNCTIONS
 
-Biodiversity metrics explained a fair amount (47–74%) of the variation in functionality. Overall, traditional speciesbased diversity metrics had a positive relationship with functionality. However, functional trait-based indices provided greater explanatory power of functionality than species richness or abundance and had an overall negative relationship with functionality. The best predictor of functionality was functional divergence (FDiv) which had a negative effect on functioning, implying that a dominance of one or a few similar traits were maximizing functioning in the communities. This can happen when species are not equally important in their contributions to ecosystem processes, and a few key species with particularly important traits account for a large fraction of ecosystem functioning (Dı́ az & Cabido 2001). In particular, large-bodied tunnelers have been shown to make the largest contribution to functional efficiency and are generally better competitors (Slade, Mann & Lewis 2011; Nervo et al. 2014).
+Biodiversity metrics explained a fair amount (47–74%) of the variation in functionality. Overall, traditional speciesbased diversity metrics had a positive relationship with functionality. However, functional trait-based indices provided greater explanatory power of functionality than species richness or abundance and had an overall negative relationship with functionality. The best predictor of functionality was functional divergence (FDiv) which had a
 
-![](images/75317371e086727631887df2ff4b0ab4215c299c82b0f43b5a0593317139166f.jpg)
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
 
-![](images/31155d2f59a5da75fc62816174027bc800d37bccd857d18446d8527b7e9101dc.jpg)
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
-![](images/ee5ef7f6f1f4811e1bbea66ba11a258c07e7b6ef2b06cde262cdfd0a1412c5c5.jpg)
+<!-- page 9 of 11 -->
 
-![](images/81899c6a1abcdb6772777c827c32d4a6707515b1d3bfb6f5f527851be5a08936.jpg)
+1722
 
-![](images/ea5ab0f721e2ec73e02024c37440a7e6802606933d722c8a28c1b19d2d0627a1.jpg)
+M. A. Derhe et al.
 
-![](images/2a785c545ae2c8813fbc2db553e28103adf0138fa6d49af56da82b6a97c2182e.jpg)
+![Image block](doc:f0c69a6/tier:advanced/page:9/block:3)
 
-![](images/0486502057b524a68dfe1a1a0b205b77a1c0424eef33c23f358e9426267b8cf9.jpg)  
 Fig. 5. The effect of seven different dung beetle community attributes on multifunctionality (a–g). Models were generalized linear mixed effect models with Gaussian error distributions.
+
+negative effect on functioning, implying that a dominance of one or a few similar traits were maximizing functioning in the communities. This can happen when species are not equally important in their contributions to ecosystem processes, and a few key species with particularly important traits account for a large fraction of ecosystem functioning (Dı́ az & Cabido 2001). In particular, large-bodied tunnelers have been shown to make the largest contribution to functional efficiency and are generally better competitors (Slade, Mann & Lewis 2011; Nervo et al. 2014).
 
 Two main hypotheses have been proposed to explain the role of diversity in ecosystem resource dynamics (Dı́ az & Cabido 2001; Loreau & Hector 2001). The ‘niche complementarity effect’ occurs when increasing diversity results in a greater range of functional traits (higher FRic), providing opportunities for more efficient resource use. Several studies have shown facilitatory effects in the interaction of dung beetle traits resulting in increased ecosystem functioning (Slade et al. 2007; Nervo et al. 2014; Menendez, Webb & Orwin 2016). In contrast, the ‘selection effect’ occurs when increasing diversity results in a higher probability of the presence of species with particularly important traits, which can dominate ecosystem functioning, as is likely to be the case in this study, since functional divergence has a negative effect on functionality. The overall negative relationship between functional diversity metrics and functionality reported here demonstrates the complexity of biodiversity–functioning relationships and the variability in the predictive power of different species and functional trait metrics.
 
-Functional trait-based metrics capture differences in species’ morphology, life-history traits and ecological niches which affect community responses to disturbance (Gerisch et al. 2012), and consequently changes to ecosystem function, extinction risk and community reassembly processes. Furthermore, the mechanisms driving high functioning levels vary among the traits, functions and taxa considered (Gagic et al. 2015), as well as the environmental context (Steudel et al. 2012; Griffiths et al. 2014), and traditional taxonomic indices do not capture these complexities. As a consequence, traditional species diversity measures could potentially misjudge the true response of biodiversity and functioning to land-use change, disturbance and ecological restoration (Mouillot et al. 2013; da Silva & Hernandez 2015). The idiosyncratic patterns between dung beetle-mediated function and diversity recovery demonstrate that the relationship between restoration age, taxonomic diversity, functional diversity and ecosystem functions is not always predictable and so inferences made about ecosystem functioning based on a taxonomic approach can be problematic. However, the greater explanatory power of functional diversity metrics to predict ecosystem functioning further highlights the importance of incorporating functional trait information and measures of ecological functions when assessing the effectiveness of ecological restoration.
+Functional trait-based metrics capture differences in species’ morphology, life-history traits and ecological niches which affect community responses to disturbance (Gerisch et al. 2012), and consequently changes to ecosystem
+
+function, extinction risk and community reassembly processes. Furthermore, the mechanisms driving high functioning levels vary among the traits, functions and taxa considered (Gagic et al. 2015), as well as the environmental context (Steudel et al. 2012; Griffiths et al. 2014), and traditional taxonomic indices do not capture these complexities. As a consequence, traditional species diversity measures could potentially misjudge the true response of biodiversity and functioning to land-use change, disturbance and ecological restoration (Mouillot et al. 2013; da Silva & Hernandez 2015). The idiosyncratic patterns between dung beetle-mediated function and diversity recovery demonstrate that the relationship between restoration age, taxonomic diversity, functional diversity and ecosystem functions is not always predictable and so inferences made about ecosystem functioning based on a taxonomic approach can be problematic. However, the greater explanatory power of functional diversity metrics to predict ecosystem functioning further highlights the importance of incorporating functional trait information and measures of ecological functions when assessing the effectiveness of ecological restoration.
 
 ## Acknowledgements
 
-We gratefully thank all the landowners who allowed us unlimited access to their properties, without which this study would not have been possible. We would like to dedicate this work to the memory of Ian Freeman. We thank Trees for Evelyn and Atherton Tablelands (TREAT). Tablelands Regional Council nursery and QPWS Lake Eacham nursery, in particular Pete Snodgrass and Nick Stevens. We are also grateful to Mark Miller for fieldwork and statistical support, Penny van Oosterzee and Noel Preece for general advice and support and two anonymous reviewers for their comments. M.D. was funded by a studentship from the National Environment Research Council (U.K.) and R.M. by Australian Research Council Linkage project (LP0989161).
+We gratefully thank all the landowners who allowed us unlimited access to their properties, without which this study would not have been possible. We would like to dedicate this work to the memory of Ian Freeman. We thank Trees for Evelyn and Atherton Tablelands (TREAT), Tablelands Regional Council nursery and QPWS Lake Eacham nursery, in particular Pete Snodgrass and Nick Stevens. We are also grateful to Mark Miller for fieldwork and statistical support, Penny van Oosterzee and Noel Preece for general advice and support and two anonymous reviewers for their comments. M.D. was funded by a studentship from the National Environment Research Council (U.K.) and R.M. by Australian Research Council Linkage project (LP0989161).
+
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
+
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+<!-- page 10 of 11 -->
+
+Restoration of biodiversity and functionality
+
+1723
 
 ## Data accessibility
 
-Dung beetle community sampling and function data are available from the Dryad Digital Repository http://dx.doi.org/10.5061/dryad.63c7b (Derhe et al. 2016).
+Dung beetle community sampling and function data are available from the Dryad Digital Repository [http://dx.doi.org/10.5061/dryad.63c7b](http://dx.doi.org/10.5061/dryad.63c7b) (Derhe et al. 2016).
 
 ## References
 
-Andresen, E. & Levey, D.J. (2004) Effects of dung and seed size on secondary dispersal. seed predation. and seedling establishment of rain forest trees. Oecologia, 139, 45–54.
+- Andresen, E. & Levey, D.J. (2004) Effects of dung and seed size on secondary dispersal, seed predation, and seedling establishment of rain forest trees. Oecologia, 139, 45–54.
+- Audino, L.D., Louzada, J. & Comita, L. (2014) Dung beetles as indicators of tropical forest restoration success: is it possible to recover species and functional diversity? Biological Conservation, 169, 248–257.
+- Barnes, A.D., Emberson, R.M., Chapman, H.M., Krell, F.-T. & Didham, R.K. (2014) Matrix habitat restoration alters dung beetle species responses across tropical forest edges. Biological Conservation, 170, 28–37.
+- Barragan, F., Moreno, C.E., Escobar, F., Halffter, G. & Navarrete, D. (2011) Negative impacts of human land use on dung beetle functional diversity. PLoS ONE, 6, e17976.
+- Bicknell, J.E., Phelps, S.P., Davies, R.G., Mann, D.J., Struebig, M.J. & Davies, Z.G. (2014) Dung beetles as indicators for rapid impact assessments: evaluating best practice forestry in the neotropics. Ecological Indicators, 43, 154–161.
+- Braga, R.F., Korasaki, V., Andresen, E. & Louzada, J. (2013) Dung beetle community and functions along a habitat-disturbance gradient in the Amazon: a rapid assessment of ecological functions associated to biodiversity. PLoS ONE, 8, e57786.
+- Brown, J., Scholtz, C.H., Janeau, J.-L., Grellier, S. & Podwojewski, P. (2010) Dung beetles (Coleoptera: Scarabaeidae) can improve soil hydrological properties. Applied Soil Ecology, 46, 9–16.
+- Brudvig, L.A. (2011) The restoration of biodiversity: where has research been and where does it need to go? American Journal of Botany, 98, 549–558.
+- Bureau of Meteorology (2016) Climate Data Online – Daily Rainfall, Atherton Solar Crescent. Commonwealth of Australia, Bureau of Meteorology, Melbourne, Vic., Australia.
+- Burnham, K.P. & Anderson, D.R. (2002) Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach. Springer Science & Business Media, Springer-Verlag, New York, USA.
+- Cadotte, M.W., Carscadden, K. & Mirotchnick, N. (2011) Beyond species: functional diversity and the maintenance of ecological processes and services. Journal of Applied Ecology, 48, 1079–1087.
+- Colwell, R.K. (2013) EstimateS: Statistical estimation of species richness and shared species from samples.
+- Connell, J.H. (1978) Diversity in tropical rain forests and coral reefs. Science, 199, 1302–1310.
+- Davis, A.L., Van Aarde, R.J., Scholtz, C.H. & Delport, J.H. (2002) Increasing representation of localized dung beetles across a chronosequence of regenerating vegetation and natural dune forest in South Africa. Global Ecology and Biogeography, 11, 191–209.
+- Derhe, M.A., Murphy, H., Monteith, G. & Menendez, R. (2016) Data from: Measuring the success of reforestation for restoring biodiversity and ecosystem functioning. Dryad Digital Repository, [http://dx.doi.org/10.5061/dryad.63c7b](http://dx.doi.org/10.5061/dryad.63c7b).
+- Dı́ az, S. & Cabido, M. (2001) Vive la difference: plant functional diversity matters to ecosystem processes. Trends in Ecology & Evolution, 16, 646–655.
+- Edwards, F., Edwards, D., Larsen, T., Hsu, W., Benedick, S., Chung, A., Vun Khen, C., Wilcove, D. & Hamer, K. (2014) Does logging and forest conversion to oil palm agriculture alter functional diversity in a biodiversity hotspot? Animal Conservation, 17, 163–173.
+- Gagic, V., Bartomeus, I., Jonsson, T., Taylor, A., Winqvist, C., Fischer, C. et al. (2015) Functional identity and diversity of animals predict ecosystem functioning better than species-based indices. Proceedings of the Royal Society of London B: Biological Sciences, 282, 20142620.
+- Gerisch, M., Agostinelli, V., Henle, K. & Dziock, F. (2012) More species, but all do the same: contrasting effects of flood disturbance on ground beetle functional and species diversity. Oikos, 121, 508–515.
+- Goosem, S. & Tucker, N.I.J. (2013) Repairing the Rainforest, 2nd edn. Wet Tropics Management Authority and Biotropica Australia Pty. Ltd., Cairns, Qld, Australia.
+- Griffiths, H.M., Louzada, J., Bardgett, R.D., Beiroz, W., Franca, F., Tregidgo, D. & Barlow, J. (2014) Biodiversity and environmental context
 
-Audino, L.D., Louzada, J. & Comita, L. (2014) Dung beetles as indicators of tropical forest restoration success: is it possible to recover species and functional diversity? Biological Conservation, 169, 248–257.
+- predict dung beetle mediated seed dispersal in a tropical forest field experiment. Ecology, 9, 1607–1619.
+- Grimbacher, P.S. & Catterall, C.P. (2007) How much do site age, habitat structure and spatial isolation influence the restoration of rainforest beetle species assemblages? Biological Conservation, 135, 107–118.
+- Hernandez, M.I.M., Barreto, P.S.C.S., Costa, V.H., Creao-Duarte, A.J. & Favila, M.E. (2014) Response of a dung beetle assemblage along a reforestation gradient in Restinga forest. Journal of Insect Conservation, 18, 539–546.
+- Hill, C.J. (1996) Habitat specificity and food preferences of an assemblage of tropical Australian dung beetles. Journal of Tropical Ecology, 12, 449–460.
+- Holl, K.D. & Aide, T.M. (2011) When and where to actively restore ecosystems? Forest Ecology and Management, 261, 1558–1563.
+- Horgan, F.G. (2005) Effects of deforestation on diversity, biomass and function of dung beetles on the eastern slopes of the Peruvian Andes. Forest Ecology and Management, 216, 117–133.
+- Kim, D.H., Sexton, J.O. & Townshend, J.R. (2015) Accelerated deforestation in the humid tropics from the 1990s to the 2000s. Geophysical Research Letters, 42, 3495–3501.
+- Laliberte, E. & Legendre, P. (2010) A distance-based framework for measuring functional diversity from multiple traits. Ecology, 91, 299–305.
+- Lamb, D., Erskine, P.D. & Parrotta, J.A. (2005) Restoration of degraded tropical forest landscapes. Science, 310, 1628–1632.
+- Loreau, M. & Hector, A. (2001) Partitioning selection and complementarity in biodiversity experiments. Nature, 412, 72–76.
+- Majer, J.D. (2009) Animals in the restoration process—progressing the trends. Restoration Ecology, 17, 315–319.
+- Mason, N.W., Bello, F., Mouillot, D., Pavoine, S. & Dray, S. (2013) A guide for using functional diversity indices to reveal changes in assembly processes along ecological gradients. Journal of Vegetation Science, 24, 794–806.
+- Menendez, R., Webb, P. & Orwin, K.H. (2016) Complementarity of dung beetle species with different functional behaviours influence dung–soil carbon cycling. Soil Biology and Biochemistry, 92, 142–148.
+- Montoya, D., Rogers, L. & Memmott, J. (2012) Emerging perspectives in the restoration of biodiversity-based ecosystem services. Trends in Ecology & Evolution, 27, 666–672.
+- Mouchet, M.A., Villeger, S., Mason, N.W. & Mouillot, D. (2010) Functional diversity measures: an overview of their redundancy and their ability to discriminate community assembly rules. Functional Ecology, 24, 867–876.
+- Mouillot, D., Villeger, S., Scherer-Lorenzen, M. & Mason, N.W.H. (2011) Functional structure of biological communities predicts ecosystem multifunctionality. PLoS ONE, 6, e17476.
+- Mouillot, D., Graham, N.A., Villeger, S., Mason, N.W. & Bellwood, D.R. (2013) A functional approach reveals community responses to disturbances. Trends in Ecology & Evolution, 28, 167–177.
+- Nervo, B., Tocco, C., Caprio, E., Palestrini, C. & Rolando, A. (2014) The effects of body mass on dung removal efficiency in dung beetles.
+- Nichols, E., Larsen, T., Spector, S., Davis, A.L., Escobar, F., Favila, M. & Vulinec, K. (2007) Global dung beetle response to tropical forest modification and fragmentation: a quantitative literature review and meta-analysis. Biological Conservation, 137, 1–19.
+- Nichols, E., Spector, S., Louzada, J., Larsen, T., Amezquita, S., Favila, M. & Network, T.S.R. (2008) Ecological functions and ecosystem services provided by Scarabaeinae dung beetles. Biological Conservation, 141, 1461–1474.
+- Pakeman, R.J. (2011) Functional diversity indices reveal the impacts of land use intensification on plant community assembly. Journal of Ecology, 99, 1143–1151.
+- Pan, Y., Birdsey, R.A., Fang, J., Houghton, R., Kauppi, P.E., Kurz, W.A. et al. (2011) A large and persistent carbon sink in the world’s forests. Science, 333, 988–993.
+- R Core Team (2014) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria.
+- Ruiz-Jaen, M.C. & Aide, M.T. (2005) Restoration success: how is it being measured? Restoration Ecology, 13, 569–577.
+- Shackelford, N., Hobbs, R.J., Burgar, J.M., Erickson, T.E., Fontaine, J.B., Laliberte, E., Ramalho, C.E., Perring, M.P. & Standish, R.J. (2013) Primed for change: developing ecological restoration for the 21st century. Restoration Ecology, 21, 297–304.
+- da Silva, P.G. & Hernandez, M. (2015) Scale-dependence of processes structuring dung beetle metacommunities using functional diversity and community deconstruction approaches. PLoS ONE, 10, e0123030.
 
-Barnes, A.D., Emberson, R.M., Chapman, H.M., Krell, F.-T. & Didham, R.K. (2014) Matrix habitat restoration alters dung beetle species responses across tropical forest edges. Biological Conservation, 170, 28–37.
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
 
-Barragan, F., Moreno, C.E., Escobar, F., Halffter, G. & Navarrete, D. (2011) Negative impacts of human land use on dung beetle functional diversity. PLoS ONE, 6, e17976.
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
-Bicknell, J.E., Phelps, S.P., Davies, R.G., Mann, D.J., Struebig, M.J. & Davies, Z.G. (2014) Dung beetles as indicators for rapid impact assessments: evaluating best practice forestry in the neotropics. Ecological Indicators, 43, 154–161.
+<!-- page 11 of 11 -->
 
-Braga, R.F., Korasaki, V., Andresen, E. & Louzada, J. (2013) Dung beetle community and functions along a habitat-disturbance gradient in the Amazon: a rapid assessment of ecological functions associated to biodiversity. PLoS ONE, 8, e57786
+1724
 
-Brown, J., Scholtz, C.H., Janeau, J.-L., Grellier, S. & Podwojewski, P. (2010) Dung beetles (Coleoptera: Scarabaeidae) can improve soil hydrological properties. Applied Soil Ecology, 46, 9–16.
+M. A. Derhe et al.
 
-Brudvig, L.A. (2011) The restoration of biodiversity: where has research been and where does it need to go? American Journal of Botany, 98, 549–558.
+- Slade, E.M., Mann, D.J. & Lewis, O.T. (2011) Biodiversity and ecosystem function of tropical forest dung beetles under contrasting logging regimes. Biological Conservation, 144, 166–174.
+- Slade, E.M., Mann, D.J., Villanueva, J.F. & Lewis, O.T. (2007) Experimental evidence for the effects of dung beetle functional group richness and composition on ecosystem function in a tropical forest. Journal of Animal Ecology, 76, 1094–1104.
+- Spector, S. & Forsyth, A.B. (1998) Indicator taxa for biodiversity assessment in the vanishing tropics. Conservation Biology, 1, 181–209.
+- Steudel, B., Hector, A., Friedl, T., Lofke, C., Lorenz, M., Wesche, M. & € Kessler, M. (2012) Biodiversity effects on ecosystem functioning change along environmental stress gradients. Ecology Letters, 15, 1397–1405.
+- Villeger, S., Mason, N.W. & Mouillot, D. (2008) New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology, 89, 2290–2301.
+- Westcott, D.A., Dennis, A.J., Bradford, M.G., Harrington, G.N. & McKeown, A. (2008) Seed dispersal processes in Australia’s tropical rainforests. Living in a Dynamic Tropical Forest Landscape (eds N.E. Stork & S.M. Turton), pp. 210–223. Blackwell Publishing Ltd, Oxford, UK.
+- Wortley, L., Hero, J.M. & Howes, M. (2013) Evaluating ecological restoration success: a review of the literature. Restoration Ecology, 21, 537–543.
 
-Bureau of Meteorology (2016) Climate Data Online – Daily Rainfall, Atherton Solar Crescent. Commonwealth of Australia, Bureau of Meteorology, Melbourne, Vic., Australia.
+Received 6 February 2016; accepted 23 June 2016
 
-Burnham, K.P. & Anderson, D.R. (2002) Model Selection and Multimode Inference: A Practical Information-Theoretic Approach. Springer Science & Business Media, Springer-Verlag, New York, USA.
-
-Cadotte, M.W., Carscadden, K. & Mirotchnick, N. (2011) Beyond species: functional diversity and the maintenance of ecological processes and services. Journal of Applied Ecology, 48, 1079–1087.
-
-Colwell, R.K. (2013) EstimateS: Statistical estimation of species richness and shared species from samples.
-
-Connell, J.H. (1978) Diversity in tropical rain forests and coral reefs. Science, 199, 1302–1310.
-
-Davis, A.L., Van Aarde, R.J., Scholtz, C.H. & Delport, J.H. (2002) Increasing representation of localized dung beetles across a chronosequence of regenerating vegetation and natural dune forest in South Africa. Global Ecology and Biogeography, 11, 191–209.
-
-Derhe, M.A., Murphy, H., Monteith, G. & Menendez, R. 2016) Data from: Measuring the success of reforestation for restoring biodiversity and ecosystem functioning. Dryad Digital Repository, http://dx.doi.org/ 10.5061/dryad.63c7b.
-
-Dı́ az, S. & Cabido, M. (2001) Vive la difference: plant functional diversity matters to ecosystem processes. Trends in Ecology & Evolution, 16, 646– 655.
-
-Edwards, F., Edwards, D., Larsen, T., Hsu, W., Benedick, S., Chung, A., Vun Khen, C., Wilcove, D. & Hamer, K. (2014) Does logging and forest conversion to oil palm agriculture alter functional diversity in a biodiversity hotspot? Animal Conservation, 17, 163–173.
-
-Gagic, V., Bartomeus, I., Jonsson, T., Taylor, A., Winqvist, C., Fischer, C. et al. (2015) Functional identity and diversity of animals predict ecosystem functioning better than species-based indices. Proceedings of the Royal Society of London B: Biological Sciences, 282, 20142620.
-
-Gerisch, M., Agostinelli, V., Henle, K. & Dziock, F. (2012) More species, but all do the same: contrasting effects of flood disturbance on ground beetle functional and species diversity. Oikos, 121, 508–515.
-
-Goosem, S. & Tucker, N.I.J. (2013) Repairing the Rainforest, 2nd edn. Wet Tropics Management Authority and Biotropica Australia Pty. Ltd., Cairns, Qld, Australia.
-
-Griffiths, H.M., Louzada, J., Bardgett, R.D., Beiroz, W., Franca, F., Tregidgo, D. & Barlow, J. (2014) Biodiversity and environmental context
-
-predict dung beetle mediated seed dispersal in a tropical forest field experiment. Ecology, 9, 1607–1619.
-
-Grimbacher, P.S. & Catterall, C.P. (2007) How much do site age, habitat structure and spatial isolation influence the restoration of rainforest bee tle species assemblages? Biological Conservation, 135, 107–118.
-
-Hernandez, M.I.M., Barreto, P.S.C.S., Costa, V.H., Creao-Duarte, A.J. & Favila, M.E. (2014) Response of a dung beetle assemblage along a reforestation gradient in Restinga forest. Journal of Insect Conservation, 18, 539–546.
-
-Hill, C.J. (1996) Habitat specificity and food preferences of an assemblage of tropical Australian dung beetles. Journal of Tropical Ecology, 12, 449–460.
-
-Holl, K.D. & Aide, T.M. (2011) When and where to actively restore ecosystems? Forest Ecology and Management, 261, 1558–1563.
-
-Horgan, F.G. (2005) Effects of deforestation on diversity, biomass and function of dung beetles on the eastern slopes of the Peruvian Andes. Forest Ecology and Management, 216, 117–133.
-
-Kim, D.H., Sexton, J.O. & Townshend, J.R. (2015) Accelerated deforestation in the humid tropics from the 1990s to the 2000s. Geophysical Research Letters, 42, 3495–3501.
-
-Laliberte, E. & Legendre, P. (2010) A distance-based framework for measuring functional diversity from multiple traits. Ecology, 91, 299–305.
-
-Lamb, D., Erskine, P.D. & Parrotta, J.A. (2005) Restoration of degraded tropical forest landscapes. Science, 310, 1628–1632.
-
-Loreau, M. & Hector, A. (2001) Partitioning selection and complementarity in biodiversity experiments. Nature, 412, 72–76.
-
-Majer, J.D. (2009) Animals in the restoration process—progressing the trends. Restoration Ecology, 17, 315–319.
-
-Mason, N.W., Bello, F., Mouillot, D., Pavoine, S. & Dray, S. (2013) A guide for using functional diversity indices to reveal changes in assembl processes along ecological gradients. Journal of Vegetation Science, 24, 794–806.
-
-Menendez, R., Webb, P. & Orwin, K.H. (2016) Complementarity of dung beetle species with different functional behaviours influence dung–soil carbon cvcling. Soil Biology and Biochemistry, 92, 142–148.
-
-Montoya, D., Rogers, L. & Memmott, J. (2012) Emerging perspectives in the restoration of biodiversity-based ecosystem services. Trends in Ecology & Evolution, 27, 666–672.
-
-Mouchet, M.A., Villeger, S., Mason, N.W. & Mouillot, D. (2010) Functional diversity measures: an overview of their redundancy and their ability to discriminate community assembly rules. Functional Ecology, 24.867–876
-
-Mouillot, D., Villeger, S., Scherer-Lorenzen, M. & Mason, N.W.H. (2011) Functional structure of biological communities predicts ecosystem mul tifunctionality. PLoS ONE, , e17476.
-
-Mouillot, D., Graham, N.A., Villeger, S., Mason, N.W. & Bellwood, D.R. (2013) A functional approach reveals community responses to disturbances. Trends in Ecology & Evolution, 28, 167–177.
-
-Nervo, B., Tocco, C., Caprio, E., Palestrini, C. & Rolando, A. (2014) The effects of body mass on dung removal efficiency in dung beetles.
-
-Nichols, E., Larsen, T., Spector, S., Davis, A.L., Escobar, F., Favila, M. & Vulinec, K. (2007) Global dung beetle response to tropical forest modification and fragmentation: a quantitative literature review and meta-analysis. Biological Conservation, 137, 1–19.
-
-Nichols, E., Spector, S., Louzada, J., Larsen, T., Amezquita, S., Favila, M. & Network, T.S.R. (2008) Ecological functions and ecosystem services provided by Scarabaeinae dung beetles. Biological Conservation, 141, 1461–1474.
-
-Pakeman, R.J. (2011) Functional diversity indices reveal the impacts of land use intensification on plant community assembly. Journal of Ecology, 99, 1143–1151.
-
-Pan, Y., Birdsey, R.A., Fang, J., Houghton, R., Kauppi, P.E., Kurz, W.A. et al. (2011) A large and persistent carbon sink in the world’s forests. Science, 333, 988–993.
-
-R Core Team (2014) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria.
-
-Ruiz-Jaen, M.C. & Aide, M.T. (2005) Restoration success: how is it being measured? Restoration Ecology, 13, 569–577.
-
-Shackelford, N., Hobbs, R.J., Burgar, J.M., Erickson, T.E., Fontaine, J.B., Laliberte, E., Ramalho, C.E., Perring, M.P. & Standish, R.J. (2013) Primed for change: developing ecological restoration for the 21st century. Restoration Ecology, 21, 297–304.
-
-da Silva, P.G. & Hernandez, M. (2015) Scale-dependence of processes structuring dung beetle metacommunities using functional diversity and community deconstruction approaches. PLoS ONE, , e0123030.
-
-Slade, E.M., Mann, D.J. & Lewis, O.T. (2011) Biodiversity and ecosystem function of tropical forest dung beetles under contrasting logging regimes. Biological Conservation, 144, 166–174.
-
-Slade, E.M., Mann, D.J., Villanueva, J.F. & Lewis, O.T. (2007) Experimental evidence for the effects of dung beetle functional group richness and composition on ecosystem function in a tropical forest. Journal of Animal Ecology, 76, 1094–1104.
-
-Spector, S. & Forsyth, A.B. (1998) Indicator taxa for biodiversity assessment in the vanishing tropics. Conservation Biology, 1, 181–209.
-
-Steudel, B., Hector, A., Friedl, T., Lofke, C., Lorenz, M., Wesche, M. &€ Kessler, M. (2012) Biodiversity effects on ecosystem functioning change along environmental stress gradients. Ecology Letters, 15, 1397–1405.
-
-Villeger, S., Mason, N.W. & Mouillot, D. (2008) New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology, 89, 2290–2301.
-
-Westcott, D.A., Dennis, A.J., Bradford, M.G., Harrington, G.N. & McKeown, A. (2008) Seed dispersal processes in Australia’s tropical rainforests. Living in a Dynamic Tropical Forest Landscape (eds N.E. Stork & S.M. Turton), pp. 210–223. Blackwell Publishing Ltd, Oxford, UK.
-
-Wortley, L., Hero, J.M. & Howes, M. (2013) Evaluating ecological restoration success: a review of the literature. Restoration Ecology, 21, 537–543.
+Handling Editor: Marc Cadotte
 
 ## Supporting Information
 
@@ -329,7 +359,7 @@ Additional Supporting Information may be found in the online version of this art
 
 Fig. S1. Study area map.
 
-S1 Functional trait values.
+Table S1. Functional trait values.
 
 Appendix S1. Functional trait assignment methods.
 
@@ -349,80 +379,177 @@ Fig. S4. Bray–Curtis similarity values.
 
 Table S6. Model summary of the effect of diversity on multifunctionality.
 
+© 2016 The Authors. Journal of Applied Ecology © 2016 British Ecological Society, Journal of Applied Ecology, 53, 1714–1724
+
+13652664, 2016, 6, Downloaded from https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12728 by Faculdade Medicina De Lisboa, Wiley Online Library on [05/11/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
 
 
 <!-- ===== Complementary: Derhe2016_S1.docx.md ===== -->
 
 
-Supporting Information  
-![](images/510791138e2fe0e3751b8e7748785bb283896bd5218ea4a83b2aadf3c7f40eab.jpg)  
-Figure S1 Map of the study area, showing the 20 study sites and areas of cleared forest, Eucalypt forest and rainforest. Each site comprised four sampling points (pitfall traps) for the measurement of community attributes and four experimental dung baits for the measurement of ecosystem functions.
+<!-- page 1 of 5 -->
 
-Table S1 Abundance of each species and their assigned functional trait values, including the habitat category within which the majority of individuals were recorded (‘habitat preference’): P= pasture; YR= young restoration; MR= mid-age restoration; OR= old restoration; RF = rainforest.
+**Supporting Information**
 
-<table><tr><td>Species</td><td>Taxonomic authority</td><td>Abundance</td><td>Body mass (mg)</td><td>Behavioural guild</td><td>Diel activity</td><td>Diet preference</td><td>Diet breadth</td><td>Habitat preference</td></tr><tr><td>Amphistomus complanatus</td><td>Matthews (1974)</td><td>333</td><td>9.60</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>YR; MR; OR; RF</td></tr><tr><td>Amphistomus NQ3</td><td>NA</td><td>235</td><td>18.31</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Amphistomus NQ4</td><td>NA</td><td>18</td><td>3.21</td><td>Rollers</td><td>NA</td><td>Dung</td><td>2</td><td>OR; RF</td></tr><tr><td>Amphistomus NQ5</td><td>NA</td><td>302</td><td>1.55</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>OR; RF</td></tr><tr><td>Amphistomus pygmaeus</td><td>Matthews (1974)</td><td>7</td><td>3.30</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Aptenocanthon winyar</td><td>Storey &amp; Monteith (2000)</td><td>4</td><td>9.00</td><td>Rollers</td><td>NA</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Boletoscapter cornutus</td><td>Matthews (1974)</td><td>68</td><td>8.50</td><td>Rollers</td><td>Nocturnal</td><td>Mushroom</td><td>1</td><td>MR; OR; RF</td></tr><tr><td>Coptodactyla depressa</td><td>Matthews (1976)</td><td>409</td><td>51.25</td><td>Tunnelers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>MR; OR; RF</td></tr><tr><td>Coptodactyla onitoides</td><td>Matthews (1976)</td><td>79</td><td>76.80</td><td>Tunnelers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>MR; OR</td></tr><tr><td>Demarziella interrupta</td><td>Matthews (1976)</td><td>27</td><td>2.95</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>P</td></tr><tr><td>Lepanus globulus</td><td>Matthews (1974)</td><td>11</td><td>4.43</td><td>Rollers</td><td>NA</td><td>Both</td><td>2</td><td>RF</td></tr><tr><td>Lepanus latheticus</td><td>Matthews (1974)</td><td>10</td><td>0.70</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>Lepanus nitidus (large)</td><td>Matthews (1974)</td><td>13</td><td>3.50</td><td>Rollers</td><td>Diurnal</td><td>Both</td><td>2</td><td>RF</td></tr><tr><td>Lepanus nitidus (small)</td><td>Matthews (1974)</td><td>115</td><td>1.40</td><td>Rollers</td><td>Diurnal</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>Lepanus NQ11</td><td>NA</td><td>1</td><td>0.70</td><td>Rollers</td><td>NA</td><td>NA</td><td>NA</td><td>OR</td></tr><tr><td>Lepanus NQ3</td><td>NA</td><td>3</td><td>0.75</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>Lepanus NQ5</td><td>NA</td><td>1</td><td>0.87</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>NA</td><td>RF</td></tr><tr><td>Lepanus palumensis</td><td>Matthews (1974)</td><td>1</td><td>0.80</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>1</td><td>RF</td></tr><tr><td>Lepanus villosus</td><td>Matthews (1974)</td><td>12</td><td>0.65</td><td>Rollers</td><td>Diurnal</td><td>Mushroom</td><td>1</td><td>RF</td></tr><tr><td>Onthophagus bornemisszanus</td><td>Matthews (1972)</td><td>2</td><td>20.00</td><td>Tunnelers</td><td>NA</td><td>NA</td><td>NA</td><td>P</td></tr><tr><td>Onthophagus bundara</td><td>Storey &amp; Weir (1990)</td><td>1</td><td>1.29</td><td>Tunnelers</td><td>NA</td><td>NA</td><td>NA</td><td>RF</td></tr><tr><td>Onthophagus capelliformis</td><td>Matthews (1972)</td><td>113</td><td>25.47</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>YR; MR; OR; RF</td></tr><tr><td>Onthophagus capella</td><td>Matthews (1972)</td><td>17</td><td>52.95</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>P; YR</td></tr><tr><td>Onthophagus cuniculus</td><td>Matthews (1972)</td><td>31</td><td>19.70</td><td>Tunnelers</td><td>Diurnal</td><td>Mushroom</td><td>2</td><td>P; YR</td></tr><tr><td>Onthophagus darlingtoni</td><td>Matthews (1972)</td><td>3</td><td>15.62</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Onthophagus dicranocerus</td><td>Matthews (1972)</td><td>18</td><td>31.04</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR; OR; RF</td></tr><tr><td>Onthophagus gulmarri</td><td>Matthews (1972)</td><td>4</td><td>9.00</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR; RF</td></tr><tr><td>Onthophagus millamilla</td><td>Matthews (1972)</td><td>59</td><td>4.38</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>2</td><td>MR; OR; RF</td></tr><tr><td>Onthophagus mundill</td><td>Matthews (1972)</td><td>1</td><td>61.00</td><td>Tunnelers</td><td>Nocturnal</td><td>NA</td><td>NA</td><td>RF</td></tr><tr><td>Onthophagus nigriventris</td><td>D'Orbigny (1902)</td><td>2</td><td>38.31</td><td>Tunnelers</td><td>Diurnal</td><td>NA</td><td>NA</td><td>OR</td></tr><tr><td>Onthophagus paluma</td><td>Matthews (1972)</td><td>1</td><td>28.50</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>P</td></tr><tr><td>Onthophagus rubicundulus</td><td>Matthews (1972)</td><td>15</td><td>1.86</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Onthophagus semimetallicus</td><td>Matthews (1972)</td><td>12</td><td>12.0</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR</td></tr><tr><td>Onthophagus wagamen</td><td>Matthews (1972)</td><td>62</td><td>5.70</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Onthophagus waminda</td><td>Matthews (1972)</td><td>84</td><td>1.93</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>YR; MR; OR; RF</td></tr><tr><td>Onthophagus yungaburra</td><td>Matthews (1972)</td><td>136</td><td>2.57</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Temnoplectron aeneopiceum</td><td>Matthews (1974)</td><td>1</td><td>4.56</td><td>Rollers</td><td>Nocturnal</td><td>Unknown</td><td>1</td><td>RF</td></tr><tr><td>Temnoplectron bornemisszai</td><td>Matthews (1974)</td><td>18</td><td>63.50</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Temnoplectron politulum</td><td>Matthews (1974)</td><td>387</td><td>18.56</td><td>Rollers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>OR; RF</td></tr></table>
+![Image block](doc:180203f/tier:flash/page:1/block:2)
 
-## Appendix S1 Functional trait assignment methods
+**Figure S1** Map of the study area, showing the 20 study sites and areas of cleared forest, Eucalypt forest and rainforest. Each site comprised four sampling points (pitfall traps) for the measurement of community attributes and four experimental dung baits for the measurement of ecosystem functions.
+
+<!-- page 2 of 5 -->
+
+**Table S1** Abundance of each species and their assigned functional trait values, including the habitat category within which the majority of individuals were recorded (‘habitat preference’): P= pasture; YR= young restoration; MR= mid-age restoration; OR= old restoration; RF = rainforest.
+
+| **Species** | **Taxonomic authority** | **Abundance** | **Body mass (mg)** | **Behavioural guild** | **Diel activity** | **Diet preference** | **Diet breadth** | **Habitat preference** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| *Amphistomus complanatus* | Matthews (1974) | 333 | 9.60 | Rollers | Nocturnal | Dung | 2 | YR; MR; OR; RF |
+| *Amphistomus NQ3* | NA | 235 | 18.31 | Rollers | Nocturnal | Dung | 2 | RF |
+| *Amphistomus NQ4* | NA | 18 | 3.21 | Rollers | NA | Dung | 2 | OR; RF |
+| *Amphistomus NQ5* | NA | 302 | 1.55 | Rollers | Nocturnal | Dung | 2 | OR; RF |
+| *Amphistomus pygmaeus* | Matthews (1974) | 7 | 3.30 | Rollers | Nocturnal | Dung | 1 | RF |
+| *Aptenocanthon winyar* | Storey &amp; Monteith (2000) | 4 | 9.00 | Rollers | NA | Dung | 1 | RF |
+| *Boletoscapter cornutus* | Matthews (1974) | 68 | 8.50 | Rollers | Nocturnal | Mushroom | 1 | MR; OR; RF |
+| *Coptodactyla depressa* | Matthews (1976) | 409 | 51.25 | Tunnelers | Nocturnal | Both | 2 | MR; OR; RF |
+| *Coptodactyla onitoides* | Matthews (1976) | 79 | 76.80 | Tunnelers | Nocturnal | Both | 2 | MR; OR |
+| *Demarziella interrupta* | Matthews (1976) | 27 | 2.95 | Tunnelers | Nocturnal | Dung | 2 | P |
+| *Lepanus globulus* | Matthews (1974) | 11 | 4.43 | Rollers | NA | Both | 2 | RF |
+| *Lepanus latheticus* | Matthews (1974) | 10 | 0.70 | Rollers | NA | Mushroom | 2 | RF |
+| *Lepanus nitidus (large)* | Matthews (1974) | 13 | 3.50 | Rollers | Diurnal | Both | 2 | RF |
+| *Lepanus nitidus (small)* | Matthews (1974) | 115 | 1.40 | Rollers | Diurnal | Mushroom | 2 | RF |
+| *Lepanus NQ11* | NA | 1 | 0.70 | Rollers | NA | NA | NA | OR |
+| *Lepanus NQ3* | NA | 3 | 0.75 | Rollers | NA | Mushroom | 2 | RF |
+| *Lepanus NQ5* | NA | 1 | 0.87 | Rollers | NA | Mushroom | NA | RF |
+| *Lepanus palumensis* | Matthews (1974) | 1 | 0.80 | Rollers | NA | Mushroom | 1 | RF |
+| *Lepanus villosus* | Matthews (1974) | 12 | 0.65 | Rollers | Diurnal | Mushroom | 1 | RF |
+| *Onthophagus bornemisszanus* | Matthews (1972) | 2 | 20.00 | Tunnelers | NA | NA | NA | P |
+| *Onthophagus bundara* | Storey &amp; Weir (1990) | 1 | 1.29 | Tunnelers | NA | NA | NA | RF |
+| *Onthophagus capelliformis* | Matthews (1972) | 113 | 25.47 | Tunnelers | Nocturnal | Dung | 1 | YR; MR; OR; RF |
+| *Onthophagus capella* | Matthews (1972) | 17 | 52.95 | Tunnelers | Nocturnal | Dung | 1 | P; YR |
+| *Onthophagus cuniculus* | Matthews (1972) | 31 | 19.70 | Tunnelers | Diurnal | Mushroom | 2 | P; YR |
+| *Onthophagus darlingtoni* | Matthews (1972) | 3 | 15.62 | Tunnelers | Nocturnal | Dung | 2 | RF |
+| *Onthophagus dicranocerus* | Matthews (1972) | 18 | 31.04 | Tunnelers | Nocturnal | Dung | 1 | MR; OR; RF |
+| *Onthophagus gulmarri* | Matthews (1972) | 4 | 9.00 | Tunnelers | Nocturnal | Dung | 1 | MR; RF |
+| *Onthophagus millamilla* | Matthews (1972) | 59 | 4.38 | Tunnelers | Diurnal | Dung | 2 | MR; OR; RF |
+| *Onthophagus mundill* | Matthews (1972) | 1 | 61.00 | Tunnelers | Nocturnal | NA | NA | RF |
+| *Onthophagus nigriventris* | D'Orbigny (1902) | 2 | 38.31 | Tunnelers | Diurnal | NA | NA | OR |
+| *Onthophagus paluma* | Matthews (1972) | 1 | 28.50 | Tunnelers | Diurnal | Dung | 1 | P |
+| *Onthophagus rubicundulus* | Matthews (1972) | 15 | 1.86 | Tunnelers | Diurnal | Dung | 2 | RF |
+| *Onthophagus semimetallicus* | Matthews (1972) | 12 | 12.0 | Tunnelers | Nocturnal | Dung | 1 | MR |
+| *Onthophagus wagamen* | Matthews (1972) | 62 | 5.70 | Tunnelers | Diurnal | Dung | 1 | RF |
+| *Onthophagus waminda* | Matthews (1972) | 84 | 1.93 | Tunnelers | Diurnal | Dung | 1 | YR; MR; OR; RF |
+| *Onthophagus yungaburra* | Matthews (1972) | 136 | 2.57 | Tunnelers | Diurnal | Dung | 1 | RF |
+| *Temnoplectron aeneopiceum* | Matthews (1974) | 1 | 4.56 | Rollers | Nocturnal | Unknown | 1 | RF |
+| *Temnoplectron bornemisszai* | Matthews (1974) | 18 | 63.50 | Rollers | Nocturnal | Dung | 2 | RF |
+| *Temnoplectron politulum* | Matthews (1974) | 387 | 18.56 | Rollers | Nocturnal | Both | 2 | OR; RF |
+
+<!-- page 3 of 5 -->
+
+**Appendix S1** Functional trait assignment methods
 
 Where information on a species was unavailable, NAs were used. This was necessary for eight species for diet preference and breadth, and for ten species for diel activity and behavioural guild. In order to calculate functional diversity metrics, traits were given equal weighting and species were weighted by their relative abundance. Sample sites for which there were less than three species recorded (n=4) were excluded from any analysis involving the functional diversity metrics, because functional diversity indices cannot be calculated from less than three species.
 
-## Behavioural guild, diel activity and body mass
+*Behavioural guild, diel activity and body mass*
 
-Information on species’ behavioural guilds and diel activity was obtained from the literature (Matthews 1972, 1974, 1976, Storey and Weir 1989, Storey and Monteith 2000) and from observations conducted by the authors (MD, GM and RM). Dung beetles were classified according to their resource relocation behaviour into either tunnelers, which bury dung directly beneath the dung pile; and rollers, which transport and bury dung some distance away from the dung pile (Hanski and Cambefort 1991). To calculate body mass, 1-20 specimens (unknown sex) of each species were dried in a forced draught oven at $6 0 ^ { \circ } \mathrm { C }$ to a constant weight, and weighed using a 0.0001 g precision balance.
+Information on species’ behavioural guilds and diel activity was obtained from the literature (Matthews 1972, 1974, 1976, Storey and Weir 1989, Storey and Monteith 2000) and from observations conducted by the authors (MD, GM and RM). Dung beetles were classified according to their resource relocation behaviour into either tunnelers, which bury dung directly beneath the dung pile; and rollers, which transport and bury dung some distance away from the dung pile (Hanski and Cambefort 1991). To calculate body mass, 1-20 specimens (unknown sex) of each species were dried in a forced draught oven at 60°C to a constant weight, and weighed using a 0.0001 g precision balance.
 
-## Diet preference and breadth
+*Diet preference and breadth*
 
-Diet preference was investigated using traps alternately baited with wallaby dung (n = 80 traps) and mushrooms (n = 80 traps). Trap design was identical for traps baited with both bait types. We used the proportion of individuals of each species attracted to a certain bait to determine bait specificity. Species of which >80% individuals were recorded in traps baited with dung were categorised as ‘dung specialists’; species of which >80% individuals were recorded in traps baited with mushroom were categorised as ‘mushroom specialists’; and species of which 25-75% individuals were recorded in traps baited with dung were categorised as ‘diet generalists’. Diet breadth was calculated as the number of bait types that a species was attracted to (species caught in both dung and mushroom baited traps = 2; species caught only in either dung or mushroom = 1). The minimum number of individuals of each species required to calculate diet preference and breadth was n = 3. Information on diet preference and breadth has important implications for resource partitioning between functional groups.
+Diet preference was investigated using traps alternately baited with wallaby dung (*n* = 80 traps) and mushrooms (*n* = 80 traps). Trap design was identical for traps baited with both bait types. We used the proportion of individuals of each species attracted to a certain bait to determine bait specificity. Species of which >80% individuals were recorded in traps baited with dung were categorised as ‘dung specialists’; species of which >80% individuals were recorded in traps baited with mushroom were categorised as ‘mushroom specialists’; and species of which 25-75% individuals were recorded in traps baited with dung were categorised as ‘diet generalists’. Diet breadth was calculated as the number of bait types that a species was attracted to (species caught in both dung and mushroom baited traps = 2; species caught only in either dung or mushroom = 1). The minimum number of individuals of each species required to calculate diet preference and breadth was n = 3. Information on diet preference and breadth has important implications for resource partitioning between functional groups.
 
-Table S2 Structure of generalised linear mixed models for determining the effects of restoration age and habitat category on species, functional diversity and community metrics and ecological functions.
+<!-- page 4 of 5 -->
 
-<table><tr><td rowspan="2">Response variable</td><td colspan="3">Fixed effect: Restoration age</td><td colspan="3">Fixed effect: Habitat category</td></tr><tr><td>Random effect(s)</td><td>Error distribution</td><td>Transformation</td><td>Random effect(s)</td><td>Error distribution</td><td>Transformation</td></tr><tr><td colspan="7">Species metrics</td></tr><tr><td>Species richness</td><td>Block</td><td>Poisson</td><td></td><td>Block</td><td>Poisson</td><td></td></tr><tr><td>Abundance</td><td>Block</td><td>Negative binomial</td><td></td><td>Block</td><td>Negative binomial</td><td></td></tr><tr><td>Biomass</td><td>Block</td><td>Gamma (log link)</td><td></td><td>Block</td><td>Gaussian</td><td> $\log_{10}$ </td></tr><tr><td>Species diversity</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Rarefied species richness</td><td>Block</td><td>Gaussian</td><td>sqrt</td><td>Block</td><td>Gaussian</td><td>sqrt</td></tr><tr><td>Estimated species richness</td><td>Block</td><td>Negative binomial</td><td></td><td>Block</td><td>Gaussian</td><td>sqrt</td></tr><tr><td>Species evenness</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td colspan="7">Functional diversity metrics</td></tr><tr><td>Functional richness</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Functional evenness</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Functional divergence</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Functional dispersion</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td colspan="7">Community metrics</td></tr><tr><td>Bray-Curtis similarity to Pasture/ Rainforest</td><td>Block</td><td>Beta</td><td></td><td>Block</td><td>Beta</td><td></td></tr><tr><td colspan="7">Ecological functions</td></tr><tr><td>Dung removal</td><td>Block</td><td>Gaussian</td><td> $\log_{10}$ </td><td>Block</td><td>Gaussian</td><td> $\log_{10}$ </td></tr><tr><td>Seed dispersal</td><td>Block</td><td>Beta</td><td></td><td>Block</td><td>Beta</td><td></td></tr><tr><td>Soil excavation</td><td>Block</td><td>Gamma (log link)</td><td></td><td>Block</td><td>Gamma (log link)</td><td></td></tr><tr><td>Multifunctionality</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr></table>
+**Table S2** Structure of generalised linear mixed models for determining the effects of restoration age and habitat category on species, functional diversity and community metrics and ecological functions.
 
-Table S3 Structure of global models for determining the effects of species richness (SpRic), abundance (Abun), biomass (Biom), functional richness (FRic), functional evenness (FEve), functional dispersion (FDis) and functional divergence (FDiv) on dung removal (Dung), seeds dispersal (Seeds), soil excavation (Soil) and multifunctionality (Multi).
+<table><tr><td></td><td></td><td colspan="3"><p><strong>Fixed effect: Restoration age</strong></p></td><td></td><td colspan="3"><p><strong>Fixed effect: Habitat category</strong></p></td></tr><tr><td><p><strong>Response variable</strong></p></td><td></td><td><p><strong>Random effect(s)</strong></p></td><td><p><strong>Error distribution</strong></p></td><td><p><strong>Transformation</strong></p></td><td></td><td><p><strong>Random effect(s)</strong></p></td><td><p><strong>Error distribution</strong></p></td><td><p><strong>Transformation</strong></p></td></tr><tr><td><p><strong>Species metrics</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Species richness</p></td><td></td><td><p>Block</p></td><td><p>Poisson</p></td><td></td><td></td><td><p>Block</p></td><td><p>Poisson</p></td><td></td></tr><tr><td><p>Abundance</p></td><td></td><td><p>Block</p></td><td><p>Negative binomial</p></td><td></td><td></td><td><p>Block</p></td><td><p>Negative binomial</p></td><td></td></tr><tr><td><p>Biomass</p></td><td></td><td><p>Block</p></td><td><p>Gamma (log link) </p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>log<sub>10</sub></p></td></tr><tr><td><p>Species diversity</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Rarefied species richness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>sqrt</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>sqrt</p></td></tr><tr><td><p>Estimated species richness</p></td><td></td><td><p>Block</p></td><td><p>Negative binomial</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>sqrt</p></td></tr><tr><td><p>Species evenness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p><strong>Functional diversity metrics</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Functional richness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Functional evenness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Functional divergence</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Functional dispersion</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p><strong>Community metrics</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Bray-Curtis similarity to Pasture/ Rainforest</p></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td></tr><tr><td><p><strong>Ecological functions</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Dung removal</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>log<sub>10</sub></p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>log<sub>10</sub></p></td></tr><tr><td><p>Seed dispersal</p></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td></tr><tr><td><p>Soil excavation</p></td><td></td><td><p>Block</p></td><td><p>Gamma (log link) </p></td><td></td><td></td><td><p>Block</p></td><td><p>Gamma (log link) </p></td><td></td></tr><tr><td><p>Multifunctionality</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr></table>
 
-<table><tr><td>Global model</td><td>Model</td><td>Random effect(s)</td></tr><tr><td>log(Dung) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>log(Seeds) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>log(Soil) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>Multi ~ SpRic + Abun + Biom + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr></table>
+<!-- page 5 of 5 -->
+
+**Table S3** Structure of global models for determining the effects of species richness (SpRic), abundance (Abun), biomass (Biom), functional richness (FRic), functional evenness (FEve), functional dispersion (FDis) and functional divergence (FDiv) on dung removal (Dung), seeds dispersal (Seeds), soil excavation (Soil) and multifunctionality (Multi). 
+
+| **Global model** | **Model** | **Random effect(s)** |
+| --- | --- | --- |
+| log(Dung) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
+| log(Seeds) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
+| log(Soil) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
+| Multi ~ SpRic + Abun + Biom + FRic + FEve + FDis + FDiv | lmm | Block |
 
 \*Number of individuals (abundance) and biomass were square root transformed to satisfy assumptions of normality
 
-Table S4 Summary of total abundance, observed (Sobs) and estimated (Sest) species richness, and proportion of species detected (Sobs / Sest) in each habitat category. Superscripts represent pairwise differences at the $P \leq$ 0.05 level.
+<a id="_Ref424123611"></a>
+**Table S4** Summary of total abundance, observed (Sobs) and estimated (Sest) species richness, and proportion of species detected (Sobs / Sest) in each habitat category. Superscripts represent pairwise differences at the *P* ≤ 0.05 level.
 
-<table><tr><td>Measure</td><td>Pasture</td><td>Young restoration</td><td>Mid restoration</td><td>Old restoration</td><td>Rainforest</td></tr><tr><td>Abundance</td><td> $78^a$ </td><td> $138^a$ </td><td> $537^b$ </td><td> $957^{bc}$ </td><td> $1607^c$ </td></tr><tr><td>Sobs</td><td> $7^a$ </td><td> $11^a$ </td><td> $20^b$ </td><td> $22^b$ </td><td> $32^c$ </td></tr><tr><td>Sest</td><td> $8.97^a$ </td><td> $13.56^a$ </td><td> $28.20^b$ </td><td> $32.48^b$ </td><td> $37.70^b$ </td></tr><tr><td>Sobs/ Sest</td><td> $0.78^a$ </td><td> $0.81^a$ </td><td> $0.71^a$ </td><td> $0.68^a$ </td><td> $0.85^a$ </td></tr></table>
+| **Measure** | **Pasture** | **Young restoration** | **Mid restoration** | **Old restoration** | **Rainforest** |
+| --- | --- | --- | --- | --- | --- |
+| Abundance | 78<sup>a</sup> | 138<sup>a</sup> | 537<sup>b</sup> | 957<sup>bc</sup> | 1607<sup>c</sup> |
+| Sobs | 7<sup>a</sup> | 11<sup>a</sup> | 20<sup>b</sup> | 22<sup>b</sup> | 32<sup>c</sup> |
+| Sest | 8.97<sup>a</sup> | 13.56<sup>a</sup> | 28.20<sup>b</sup> | 32.48<sup>b</sup> | 37.70<sup>b</sup> |
+| Sobs/ Sest | 0.78<sup>a</sup> | 0.81<sup>a</sup> | 0.71<sup>a</sup> | 0.68<sup>a</sup> | 0.85<sup>a</sup> |
 
-![](images/2df50e822f75ad6c468fcff2dcd9a23d771d19d5ff3059909f70117da42487bb.jpg)  
-Figure S2 Species accumulation curves constructed using sample-based rarefaction curves for pasture, rainforest and the three restoration categories (scaled to show the number of individuals). Dashed line represents 95% confidence interval (CI) of rainforest.
+![Image block](doc:180203f/tier:flash/page:5/block:6)
 
-![](images/b06d874c13d5be41b26abb346c9216b77c9cc19eb26c27f2692db9d6d2a286e7.jpg)  
-Figure S3 Associations between dung beetle community attributes: bivariate plots (lower panels), distributions (diagonal), and Pearson’s ρ (upper panels).
+**Figure S2** Species accumulation curves  constructed using sample-based rarefaction curves for pasture, rainforest and the three restoration categories (scaled to show the number of individuals). Dashed line represents 95% confidence interval (CI) of rainforest.
 
-Table S5 Pairwise comparisons of Bray Curtis assemblage similarity between different habitat categories. P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Asterisks indicate significant differences between categories at the 0.05 level. Degrees of freedom in all models = 1.
+![Image block](doc:180203f/tier:flash/page:5/block:8)
 
-<table><tr><td rowspan="2"></td><td colspan="2">P</td><td colspan="2">YR</td><td colspan="2">MR</td><td colspan="2">OR</td></tr><tr><td> $R^2$ </td><td>Pr(&gt;F)</td><td> $R^2$ </td><td>Pr(&gt;F)</td><td> $R^2$ </td><td>Pr(&gt;F)</td><td> $R^2$ </td><td>Pr(&gt;F)</td></tr><tr><td rowspan="3">YR</td><td>0.1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>4</td><td>0.472</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>0.4</td><td>0.033</td><td>0.2</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td rowspan="2">MR</td><td>1</td><td>*</td><td>3</td><td>0.076</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>0.3</td><td>0.029</td><td>0.1</td><td></td><td>0.0</td><td></td><td></td><td></td></tr><tr><td rowspan="2">OR</td><td>6</td><td>*</td><td>8</td><td>0.266</td><td>5</td><td>0.824</td><td>-</td><td>-</td></tr><tr><td>0.5</td><td>0.023</td><td>0.2</td><td>0.025</td><td>0.2</td><td></td><td>0.1</td><td></td></tr><tr><td>RF</td><td>1</td><td>*</td><td>6</td><td>*</td><td>1</td><td>0.250</td><td>4</td><td>0.502</td></tr></table>
+**Figure S3** Associations between dung beetle community attributes: bivariate plots (lower panels), distributions (diagonal), and Pearson’s ρ (upper panels).
 
-![](images/d06242f566e910f16e5d232cdbceae13f8f7b0296f0d2e87d6fd1f6f8e9c1acf.jpg)
+**Table S5** Pairwise comparisons of Bray Curtis assemblage similarity between different habitat categories. P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Asterisks indicate significant differences between categories at the 0.05 level. Degrees of freedom in all models = 1.
 
-![](images/751d78b3fff6d83a7b72da7f6f9b6c70babad97fb35c26e4cee2b5bec69a7b2a.jpg)
+<table><tr><td><p> </p></td><td colspan="2"><p><strong>P</strong></p></td><td><p><strong> </strong></p></td><td colspan="2"><p><strong>YR</strong></p></td><td><p><strong> </strong></p></td><td colspan="2"><p><strong>MR</strong></p></td><td><p><strong> </strong></p></td><td colspan="2"><p><strong>OR</strong></p></td></tr><tr><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td></tr><tr><td><p><strong>YR</strong></p></td><td><p>0.14</p></td><td><p>0.472</p></td><td><p> </p></td><td><p>-</p></td><td><p>-</p></td><td><p> </p></td><td><p>-</p></td><td><p>-</p></td><td><p> </p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p><strong>MR</strong></p></td><td><p>0.41</p></td><td><p>0.033*</p></td><td></td><td><p>0.23</p></td><td><p>0.076</p></td><td></td><td><p>-</p></td><td><p>-</p></td><td></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p><strong>OR</strong></p></td><td><p>0.36</p></td><td><p>0.029*</p></td><td></td><td><p>0.18</p></td><td><p>0.266</p></td><td></td><td><p>0.05</p></td><td><p>0.824</p></td><td></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p><strong>RF</strong></p></td><td><p>0.51</p></td><td><p>0.023*</p></td><td></td><td><p>0.26</p></td><td><p>0.025*</p></td><td></td><td><p>0.21</p></td><td><p>0.250</p></td><td></td><td><p>0.14</p></td><td><p>0.502</p></td></tr></table>
 
-![](images/7c6864461cefdcd81ec38517afff2d94a139a3b093ad28f98d436911098a0c35.jpg)
+![Image block](doc:180203f/tier:flash/page:5/block:12)
 
-![](images/264d480652e68f8179890ce0eb55131bc88d38727811b57b875df55b60cf1463.jpg)  
-Figure S4 Relationship between restoration age and dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture (a-b). Mean ± SE dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture in the different habitat categories (c-d). P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Unlike letters indicate significant differences (P <0.05).
+**Figure S4** Relationship between restoration age and dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture (a-b). Mean ± SE dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture in the different habitat categories (c-d). P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Unlike letters indicate significant differences (P <0.05).
 
-Table S6 Support for generalized linear mixed models predicting multifunctionality, dung removal, seed dispersal and soil excavation in relation to dung beetle community attributes and functional diversity metrics.
+**Table S6** Support for generalized linear mixed models predicting multifunctionality, dung removal, seed dispersal and soil excavation in relation to dung beetle community attributes and functional diversity metrics.
 
-<table><tr><td>Predictor</td><td>log(L)</td><td> $\Delta AIC_c$ </td><td> $w_i$ </td></tr><tr><td colspan="4">Multifunctionality</td></tr><tr><td>FDiv</td><td>-17.04</td><td>0.00</td><td>0.309</td></tr><tr><td>FDis</td><td>-17.08</td><td>0.08</td><td>0.297</td></tr><tr><td>FEve</td><td>-17.37</td><td>0.66</td><td>0.223</td></tr><tr><td>Biomass</td><td>-18.02</td><td>1.95</td><td>0.116</td></tr><tr><td>FRic</td><td>-19.05</td><td>4.02</td><td>0.041</td></tr><tr><td>Abundance</td><td>-20.51</td><td>6.93</td><td>0.01</td></tr><tr><td>Species richness</td><td>-21.34</td><td>8.59</td><td>0.004</td></tr><tr><td colspan="4">Dung removal</td></tr><tr><td>FDis</td><td>-12.54</td><td>0.00</td><td>0.568</td></tr><tr><td>FEve</td><td>-13.83</td><td>2.57</td><td>0.157</td></tr><tr><td>FDiv</td><td>-13.86</td><td>2.65</td><td>0.151</td></tr><tr><td>Biomass</td><td>-14.78</td><td>4.49</td><td>0.060</td></tr><tr><td>FRic</td><td>-14.95</td><td>4.82</td><td>0.051</td></tr><tr><td>Abundance</td><td>-16.90</td><td>8.71</td><td>0.007</td></tr><tr><td>Species richness</td><td>-17.06</td><td>9.04</td><td>0.006</td></tr><tr><td colspan="4">Seed dispersal</td></tr><tr><td>FDis</td><td>-12.59</td><td>0.00</td><td>0.401</td></tr><tr><td>FDiv</td><td>-13.13</td><td>1.07</td><td>0.235</td></tr><tr><td>FEve</td><td>-13.41</td><td>1.64</td><td>0.176</td></tr><tr><td>Biomass</td><td>-13.85</td><td>2.52</td><td>0.114</td></tr><tr><td>FRic</td><td>-14.63</td><td>4.07</td><td>0.053</td></tr><tr><td>Abundance</td><td>-16.02</td><td>6.86</td><td>0.013</td></tr><tr><td>Species richness</td><td>-16.46</td><td>7.73</td><td>0.008</td></tr><tr><td colspan="4">Soil excavation</td></tr><tr><td>FDis</td><td>-16.23</td><td>0.00</td><td>0.432</td></tr><tr><td>FDiv</td><td>-16.56</td><td>0.66</td><td>0.310</td></tr><tr><td>FEve</td><td>-17.40</td><td>2.34</td><td>0.134</td></tr><tr><td>FRic</td><td>-17.84</td><td>3.21</td><td>0.087</td></tr><tr><td>Biomass</td><td>-18.83</td><td>5.19</td><td>0.032</td></tr><tr><td>Abundance</td><td>-20.97</td><td>9.49</td><td>0.004</td></tr><tr><td>Species richness</td><td>-21.68</td><td>10.90</td><td>0.002</td></tr></table>
+| **Predictor** | **log(L)** | **ΔAIC**<em><strong><sub>c</sub></strong></em> | ***w***<em><strong><sub>i</sub></strong></em> |
+| --- | --- | --- | --- |
+| Multifunctionality |  |  |  |
+| FDiv | -17.04 | 0.00 | 0.309 |
+| FDis | -17.08 | 0.08 | 0.297 |
+| FEve | -17.37 | 0.66 | 0.223 |
+| Biomass | -18.02 | 1.95 | 0.116 |
+| FRic | -19.05 | 4.02 | 0.041 |
+| Abundance | -20.51 | 6.93 | 0.01 |
+| Species richness | -21.34 | 8.59 | 0.004 |
+| Dung removal |  |  |  |
+| FDis | -12.54 | 0.00 | 0.568 |
+| FEve | -13.83 | 2.57 | 0.157 |
+| FDiv | -13.86 | 2.65 | 0.151 |
+| Biomass | -14.78 | 4.49 | 0.060 |
+| FRic | -14.95 | 4.82 | 0.051 |
+| Abundance | -16.90 | 8.71 | 0.007 |
+| Species richness | -17.06 | 9.04 | 0.006 |
+| Seed dispersal |  |  |  |
+| FDis | -12.59 | 0.00 | 0.401 |
+| FDiv | -13.13 | 1.07 | 0.235 |
+| FEve | -13.41 | 1.64 | 0.176 |
+| Biomass | -13.85 | 2.52 | 0.114 |
+| FRic | -14.63 | 4.07 | 0.053 |
+| Abundance | -16.02 | 6.86 | 0.013 |
+| Species richness | -16.46 | 7.73 | 0.008 |
+| Soil excavation |  |  |  |
+| FDis | -16.23 | 0.00 | 0.432 |
+| FDiv | -16.56 | 0.66 | 0.310 |
+| FEve | -17.40 | 2.34 | 0.134 |
+| FRic | -17.84 | 3.21 | 0.087 |
+| Biomass | -18.83 | 5.19 | 0.032 |
+| Abundance | -20.97 | 9.49 | 0.004 |
+| Species richness | -21.68 | 10.90 | 0.002 |
 
-\* Abundance and Biomass were square root transformed to satisfy assumptions of normality. Block was included as a random effect in each model $( \mathtt { n } = 2 0$ sites). There were 4 parameters in each model and 5 degrees of freedom. log(L) is the log likelihood; $\Delta \mathsf { A I C } _ { c }$ is the difference between the $\mathrm { A I C } _ { c }$ of each model and that of the top model; and w<sub>i</sub> is the Akaike weight.
+\* Abundance and Biomass were square root transformed to satisfy assumptions of normality. Block was included as a random effect in each model (n = 20 sites). There were 4 parameters in each model and 5 degrees of freedom. log(L) is the log likelihood; ΔAIC<em><sub>c</sub></em> is the difference between the AIC<em><sub>c</sub></em> of each model and that of the top model; and *w*<em><sub>i</sub></em> is the Akaike weight.
 
-## Literature cited
+**Literature cited**
 
 Hanski, I., and Y. Cambefort. 1991. Dung Beetle Ecology. Princeton University Press, Princeton.
 
 Matthews. 1972. A revision of the scarabaeine dung beetles of Australia. I. Tribe Onthophagini. Australian Journal of Zoology:1-330.
 
-Matthews. 1974. A revision of the scarabaeine dung beetles of Australia. II. Tribe Scarabaeini. Australian Journal of Zoology Supplementary Series No. 24:1-220.
+Matthews. 1974. A revision of the scarabaeine dung beetles of Australia. II. Tribe Scarabaeini. Australian Journal of Zoology **Supplementary Series No. 24**:1-220.
 
 Matthews. 1976. A revision of the scarabaeine dung beetles of Australia. III. Tribe Coprini. Australian Journal of Zoology:1-52.
 
-Storey, R. I., and G. B. Monteith. 2000. Five new species of Aptenocanthon Matthews (Coleoptera: Scarabaeidae: Scarabaeinae) from tropical Australia, with notes on distribution. Memoirs of the Queensland Museum 49-6:349-358.
+Storey, R. I., and G. B. Monteith. 2000. Five new species of Aptenocanthon Matthews (Coleoptera: Scarabaeidae: Scarabaeinae) from tropical Australia, with notes on distribution. Memoirs of the Queensland Museum **49-6**:349-358.
 
-Storey, R. I., and T. A. Weir. 1989. New species of Onthophagus Latreille (Coleoptera : Scarabaeidae) from Australia. Invertebrate Taxonomy 3:783–815.
+Storey, R. I., and T. A. Weir. 1989. New species of Onthophagus Latreille (Coleoptera : Scarabaeidae) from Australia. Invertebrate Taxonomy **3**:783–815.

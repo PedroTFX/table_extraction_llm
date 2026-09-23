@@ -4,18 +4,19 @@ paper folder (main paper + complementary files) into ONE markdown the existing
 pipeline can run on, while keeping the volunteer "results" spreadsheet aside as
 ground truth.
 
-Routing by type: pdf/image/pptx go straight to MinerU. Word documents (.doc and
-.docx) are RENDERED TO PDF first (Microsoft Word if available, else LibreOffice)
-and then run through MinerU — legacy .doc has no python-docx reader, and some
-.docx with complex layouts extract poorly, so a PDF render is more robust. (The
-old python-docx path is still available via docx_to_markdown / DOCX_VIA_PDF=False,
-and reads .docx tables exactly.) xlsx/csv are embedded as HTML <table> blocks
-(lossless via openpyxl/csv) because MinerU's layout/OCR stage mangles dense
-numeric data sheets.
+Routing by type: MinerU 4.x reads Office documents natively, so pdf/image/pptx,
+Word (.doc/.docx) AND spreadsheets (.xlsx/.xls) all go STRAIGHT to MinerU — no
+more docx->PDF render step. csv/tsv are still embedded as HTML <table> blocks
+(lossless via csv) because MinerU has no native csv reader.
 
-Note on fidelity: LibreOffice headless can mangle complex tables (see
-docx_vs_pdf_audit) — Microsoft Word via docx2pdf renders them faithfully and is
-preferred when present.
+Escape hatches (see the flags below): set DOCX_VIA_PDF=True to revert Word to the
+old render-to-PDF path (Microsoft Word/docx2pdf, else LibreOffice), or
+XLSX_VIA_MINERU=False to revert spreadsheets to the lossless openpyxl HTML embed.
+The python-docx exact-table reader also remains available via docx_to_markdown.
+
+Note on the PDF fallback's fidelity: LibreOffice headless can mangle complex
+tables (see docx_vs_pdf_audit) — Microsoft Word via docx2pdf renders them
+faithfully and is preferred when present.
 
 File roles inside a paper folder (folder is named after the paper):
   - main paper   : the non-_S document (PDF preferred)
@@ -43,22 +44,27 @@ from pathlib import Path
 
 import openpyxl
 
-# Types MinerU converts to markdown.
+# Types MinerU converts to markdown natively (MinerU 4.x reads Office files too).
 MINERU_DOC_EXTS = {".pdf", ".pptx", ".png", ".jpg", ".jpeg"}
-# Word documents (legacy .doc + .docx). By default these are RENDERED TO PDF and
-# then run through MinerU (see DOCX_VIA_PDF / office_to_markdown). Legacy .doc has
-# no python-docx path at all, and some .docx with complex layouts extract poorly;
-# rendering to PDF first is more robust for those.
+# Word documents (legacy .doc + .docx). By default these go STRAIGHT to MinerU 4.x
+# (which reads .docx/.doc natively); set DOCX_VIA_PDF=True to revert to the old
+# render-to-PDF path (see office_to_markdown).
 WORD_EXTS = {".doc", ".docx"}
+# Spreadsheets. By default sent to MinerU 4.x (XLSX_VIA_MINERU); set that False to
+# revert to the lossless openpyxl HTML embed (see xlsx_to_html_tables).
+SPREADSHEET_EXTS = {".xlsx", ".xls"}
 
-# Route .doc/.docx through PDF + MinerU (True) instead of python-docx extraction
-# (False). python-docx reads .docx tables EXACTLY (no OCR) and stays available via
-# docx_to_markdown, but cannot open .doc and struggles on some layouts. Note that
-# legacy .doc is ALWAYS sent via PDF regardless of this flag — python-docx can't
-# read it. Set False to revert .docx (only) to the python-docx path.
-DOCX_VIA_PDF = True
+# Revert .doc/.docx to the old render-to-PDF + MinerU path (True) instead of
+# feeding them to MinerU 4.x directly (False, the default now that MinerU reads
+# Word natively). The python-docx exact-table reader also stays available via
+# docx_to_markdown.
+DOCX_VIA_PDF = False
+# Send .xlsx/.xls to MinerU 4.x (True, default) or fall back to the lossless
+# openpyxl HTML embed (False). The embed path also runs the date-ratio repair
+# (see xlsx_to_html_tables / REPAIR_DATE_RATIOS), which MinerU does not.
+XLSX_VIA_MINERU = True
 # Types embedded directly as HTML tables (read losslessly, not via MinerU).
-NATIVE_TABLE_EXTS = {".xlsx", ".xls", ".csv", ".tsv"}
+NATIVE_TABLE_EXTS = {".csv", ".tsv"}
 # Already text/markup.
 TEXT_EXTS = {".md", ".html", ".htm", ".txt"}
 # Types eligible to be the MAIN document (never docx/pptx — those are always
@@ -100,26 +106,77 @@ def doc_to_markdown(doc_path, backend="vlm", lang="en", force=False, extra_args=
     return target
 
 
+def _mineru_exe() -> str:
+    """Path to the MinerU 4.x CLI in the project's isolated venv (overridable)."""
+    env = os.environ.get("MINERU_EXE")
+    if env:
+        return env
+    repo = Path(__file__).resolve().parent.parent
+    exe = repo / ".mineru_venv" / "Scripts" / "mineru.exe"
+    return str(exe) if exe.exists() else "mineru"
+
+
+def _mineru_workdir() -> str:
+    """Scratch cwd for MinerU processes: the server drops its `blobs/` cache in
+    its working directory, so keep that out of the repo root / source/."""
+    d = Path(__file__).resolve().parent.parent / "bin"
+    d.mkdir(exist_ok=True)
+    return str(d)
+
+
+def _ensure_mineru_server(exe: str) -> None:
+    """Start the local managed parse-server if it isn't already up (idempotent)."""
+    try:
+        subprocess.run([exe, "server", "start"], capture_output=True, timeout=120,
+                       cwd=_mineru_workdir())
+    except Exception:
+        pass
+
+
 def _mineru_markdown_for(doc_path, backend="vlm", lang="en") -> str:
-    """Run MinerU's hosted v4 API on ONE pdf/image and return the markdown TEXT
-    (no file written). Shared by doc_to_markdown (writes X.pdf.md next to the
-    source) and office_to_markdown (runs on a temp PDF, writes X.docx.md)."""
-    import mineru_api  # local module: hosted v4 client
+    """Run the LOCAL MinerU 4.x (advanced tier) on ONE pdf/image and return the
+    markdown TEXT (no file written next to the source).
 
-    token = os.environ.get("MINERU_TOKEN")
-    if not token:
-        raise RuntimeError(
-            "MINERU_TOKEN is not set. Get a token at "
-            "https://mineru.net/apiManage/token and set MINERU_TOKEN.")
-
-    model = "vlm" if backend not in ("pipeline",) else "pipeline"
-    print(f"  [mineru-api] converting {Path(doc_path).name} (model={model}, lang={lang})")
-    md_text = mineru_api.extract_one(
-        Path(doc_path), token, model=model, language=(lang or "en"))
-    if md_text is None:
-        raise RuntimeError(
-            f"hosted API returned no markdown for {Path(doc_path).name}")
-    return md_text
+    Uses the CLI in the project's .mineru_venv, talking to the managed local
+    parse-server. The advanced/VLM tier gives clean figure/table SEPARATION —
+    charts are emitted as images, not poured into <table> blocks — which is why
+    this replaced the older hosted-API path. Tier is overridable via MINERU_TIER.
+    """
+    exe = _mineru_exe()
+    ext = Path(doc_path).suffix.lower()
+    # advanced/VLM tier is PDF/image-only; Office files (docx/xlsx/pptx) must use
+    # the 'flash' tier and parse the whole document (no --pages).
+    is_pdf_or_image = ext in {".pdf", ".png", ".jpg", ".jpeg"}
+    default_tier = "advanced" if is_pdf_or_image else "flash"
+    tier = os.environ.get("MINERU_TIER", default_tier)
+    if not is_pdf_or_image:
+        tier = "flash"          # advanced/other tiers are rejected for Office files
+    _ensure_mineru_server(exe)
+    print(f"  [mineru-local] converting {Path(doc_path).name} (tier={tier}, lang={lang})")
+    page_args = ["--pages", "all"] if ext == ".pdf" else []
+    # The server can hand back a PARTIAL result (only the pages done so far —
+    # e.g. Oliveira2022_S1.docx came back as page 1 of 4, losing the table).
+    # Check the `<!-- page N of M -->` markers and re-ask until all M pages are
+    # in; a still-partial result raises so Word files fall back to the PDF path.
+    for attempt in range(1, 4):
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "out.md"
+            r = subprocess.run(
+                [exe, "parse", str(Path(doc_path).resolve()), "--tier", tier, *page_args,
+                 "--wait", "1800", "-o", str(out)],
+                capture_output=True, text=True, timeout=2400, cwd=_mineru_workdir())
+            if r.returncode != 0 or not out.exists():
+                raise RuntimeError(
+                    f"local MinerU failed for {Path(doc_path).name}: "
+                    f"{(r.stderr or r.stdout or '').strip()[-300:]}")
+            text = out.read_text(encoding="utf-8", errors="replace")
+        marks = [(int(n), int(m)) for n, m in
+                 re.findall(r"<!--\s*page\s+(\d+)\s+of\s+(\d+)\s*-->", text)]
+        if not marks or len({n for n, _ in marks}) >= marks[0][1]:
+            return text
+        print(f"  [mineru-local] partial result for {Path(doc_path).name} "
+              f"({len({n for n, _ in marks})}/{marks[0][1]} pages), retry {attempt}")
+    raise RuntimeError(f"MinerU returned an incomplete parse for {Path(doc_path).name}")
 
 
 def pdf_to_markdown(pdf_path, **kw):           # backwards-compatible alias
@@ -242,15 +299,26 @@ def office_to_markdown(path, backend="vlm", lang="en", force=False,
 
 
 def ensure_markdown(path, **kw):
-    """.doc/.docx -> .md via PDF + MinerU (or python-docx if DOCX_VIA_PDF=False);
-    pdf/pptx/image -> .md via MinerU; xlsx/csv/md/html -> unchanged."""
+    """pdf/pptx/image/doc/docx/xlsx/xls -> .md via MinerU 4.x; csv/md/html ->
+    unchanged. Set DOCX_VIA_PDF=True to route Word via render-to-PDF, or
+    XLSX_VIA_MINERU=False to keep spreadsheets as the openpyxl HTML embed."""
     p = Path(path)
     ext = p.suffix.lower()
     if ext in WORD_EXTS:
-        # legacy .doc has no python-docx reader, so it always goes via PDF
-        if DOCX_VIA_PDF or ext == ".doc":
+        if DOCX_VIA_PDF:
             return office_to_markdown(p, **kw)
-        return docx_to_markdown(p)          # python-docx (exact tables), .docx only
+        try:
+            return doc_to_markdown(p, **kw)     # MinerU 4.x reads Word natively
+        except Exception as e:
+            # MinerU can choke on some .docx (e.g. Google-Docs heading anchors).
+            # Fall back to rendering the doc to PDF and running MinerU's advanced
+            # tier on that PDF (office_to_markdown -> _mineru_markdown_for picks
+            # 'advanced' for the .pdf input).
+            print(f"  [word] MinerU failed on {p.name} ({type(e).__name__}); "
+                  f"rendering to PDF and retrying with advanced tier")
+            return office_to_markdown(p, **kw)
+    if ext in SPREADSHEET_EXTS and XLSX_VIA_MINERU:
+        return doc_to_markdown(p, **kw)     # MinerU 4.x reads spreadsheets natively
     if ext in MINERU_DOC_EXTS:
         return doc_to_markdown(p, **kw)
     return p
@@ -421,7 +489,8 @@ def classify_folder(folder):
     folder = Path(folder)
     files = [f for f in folder.iterdir()
              if f.is_file() and f.suffix.lower() in
-             (MINERU_DOC_EXTS | WORD_EXTS | NATIVE_TABLE_EXTS | TEXT_EXTS)
+             (MINERU_DOC_EXTS | WORD_EXTS | SPREADSHEET_EXTS
+              | NATIVE_TABLE_EXTS | TEXT_EXTS)
              and f.suffix.lower() != ".md"]      # ignore produced markdown
 
     # main: a pdf/html, non-_S preferred, pdf preferred
@@ -456,11 +525,13 @@ def prepare_document_set(folder, force=False, backend="vlm", lang="en"):
           f"complementary={[c.name for c in complementary]}")
 
     main_md = ensure_markdown(main, force=force, backend=backend, lang=lang)
+    convertible = WORD_EXTS | MINERU_DOC_EXTS | (
+        SPREADSHEET_EXTS if XLSX_VIA_MINERU else set())
     comps = []
     for c in complementary:
-        if c.suffix.lower() in (WORD_EXTS | MINERU_DOC_EXTS):
+        if c.suffix.lower() in convertible:
             comps.append(str(ensure_markdown(c, force=force, backend=backend, lang=lang)))
-        else:                                   # xlsx/csv/text -> kept as-is
+        else:                                   # csv/text (or xlsx if embedding) -> as-is
             comps.append(str(c))
     return str(main_md), comps, (str(results) if results else None)
 
@@ -506,7 +577,8 @@ def clean_markdowns(base, dry_run=True):
     """
     base = Path(base)
     suffixes = tuple(f"{e}.md" for e in
-                     (MINERU_DOC_EXTS | WORD_EXTS))   # e.g. '.pdf.md', '.docx.md'
+                     (MINERU_DOC_EXTS | WORD_EXTS
+                      | SPREADSHEET_EXTS))   # e.g. '.pdf.md', '.docx.md', '.xlsx.md'
     victims = [p for p in base.rglob("*.md")
                if p.name.endswith(suffixes) or p.name.endswith("_full.md")]
 
