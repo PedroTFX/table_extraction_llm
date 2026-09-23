@@ -1,72 +1,175 @@
 {
-  "Predator Biological Trait": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "Header names the biological trait being measured for the focal insects.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records life history traits of the predator organism.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Predator Biological Trait"
-  },
-  "A. fabae": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Column names the trait; cells contain the measured values for A. fabae.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Names the biotic association (host plant) for the predator.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "A. fabae"
-  },
-  "M. persicae": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Column names the trait; cells contain the measured values for M. persicae.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Names the biotic association (prey) for the predator.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "M. persicae"
-  },
-  "__paperSpecies__": {
+  "Species": {
     "field": "verbatimIdentification",
-    "category": null,
-    "scope": "paper",
-    "column": null,
-    "value": "Scymnus nubilus",
-    "reasoning": "The measurements describe the performance of the predator Scymnus nubilus based on the aphid diets provided.",
-    "decided_by": "llm",
-    "roles": {
-      "Scymnus nubilus": "measured subject",
-      "Aphis fabae": "diet",
-      "Myzus persicae": "diet"
-    },
-    "candidates": [
-      {
-        "name": "Aphis fabae",
-        "mentions": 7,
-        "abbrev_mentions": 21,
-        "score": 115
-      },
-      {
-        "name": "Myzus persicae",
-        "mentions": 11,
-        "abbrev_mentions": 17,
-        "score": 99
-      },
-      {
-        "name": "Scymnus nubilus",
-        "mentions": 14,
-        "abbrev_mentions": 14,
-        "score": 87
-      },
-      {
-        "name": "Scymnu nubilus",
-        "mentions": 1,
-        "abbrev_mentions": 14,
-        "score": 71
-      }
-    ]
+    "value_column": false,
+    "reasoning": "This column provides the taxonomic identification of the focal insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the organism's specific biological name."
+  },
+  "Incubation time (days)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "4.2 ± 0.1 a (30)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the time required for incubation, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the time taken for a biological process (incubation).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Incubation time",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The measurement concerns the development time of *Scymnus nubilus* larvae, which are living organisms being reared in a controlled environment, thus classifying the record as a LivingSpecimen.",
+    "measurementMethod": "Monitoring larval development in controlled laboratory conditions by daily checking of boxes and noting developmental stages using exuviae as an indicator of molting.",
+    "measurementMethod_reasoning": "The text describes the methodology used to determine the development time: 'To monitor larval development and survival, the boxes were checked daily and the developmental stage was noted, using exuviae as an indicator of molting, until the emergence of the adults.'"
+  },
+  "Immature development time (days)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "11.3 ± 0.1 b (37)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the time required for immature development, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the time taken for development.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Immature development time",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The measurement concerns the life history traits (immature development time) of the ladybird predator (*Scymnus nubilus*) which were reared in a controlled laboratory setting, classifying them as living specimens during the experimental phase.",
+    "measurementMethod": "Rearing the ladybirds on single-aphid diets (*A. fabae* or *M. persicae*) and monitoring the time until emergence, followed by comparison using the Mann–Whitney (MW) test.",
+    "measurementMethod_reasoning": "The text describes the methodology where ladybirds were reared on single-aphid diets, and the resulting immature development times were compared statistically using the Mann–Whitney test."
+  },
+  "Immature survival (proportion)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "0.97 a (37/38)",
+    "measurementStatistic": "mean",
+    "reasoning": "Measures the proportion of immature individuals that survived, reported as a mean.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the proportion of survival during development.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Immature survival",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The data concerns the survival of ladybird larvae that were reared in controlled laboratory conditions, classifying them as living specimens maintained during the experiment.",
+    "measurementMethod": "Chi-square test",
+    "measurementMethod_reasoning": "The survival rate of the immature individuals was compared between the two single-aphid diets using a Chi-square test, as explicitly stated in the results section."
+  },
+  "Pre-oviposition time (days)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "4.2 ± 0.2 a (13)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the time elapsed before oviposition, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the time taken before oviposition.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Pre-oviposition time",
+    "basisOfRecord": "Pre-oviposition time",
+    "basisOfRecord_reasoning": "The data record pertains to the time elapsed before the ladybird females started laying eggs (pre-oviposition time).",
+    "measurementMethod": "Checking the boxes from the previous day for the presence of eggs.",
+    "measurementMethod_reasoning": "The text explicitly states: 'Every day, the adults were transferred to new boxes... and the boxes from the previous day were checked for the presence of eggs to determine the pre-oviposition time.'"
+  },
+  "Fecundity (n. of eggs)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "1052.9 ± 98.8 a (10)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the total number of eggs laid, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the number of eggs laid by the female.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Fecundity",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data concerns the number of eggs laid by the ladybird females, which is a behavioral/reproductive trait observed in a live organism under experimental conditions.",
+    "measurementMethod": "The number of eggs laid per female was counted daily.",
+    "measurementMethod_reasoning": "The text explicitly states that the number of eggs laid per female was counted daily to determine fecundity."
+  },
+  "Fertility (n. of fertile eggs)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "859.3 ± 88.7 a (10)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the number of fertile eggs, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the number of fertile eggs produced.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Fertility",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The data concerns the reproductive performance (fecundity, net reproductive rate) of the ladybird predators (Scymnus nubilus) maintained in a laboratory setting, which are living organisms.",
+    "measurementMethod": "Rearing ladybirds on single-aphid diets (A. fabae or M. persicae) and counting eggs laid daily, followed by inspection of eggs laid to determine the number of hatched larvae, embryonated eggs (fertile eggs with unsuccessful hatching), and infertile eggs.",
+    "measurementMethod_reasoning": "The method involves rearing the predators on specific diets and then monitoring the laying of eggs and inspecting them to categorize the resulting eggs (fertile vs. infertile) to assess fecundity and demographic parameters."
+  },
+  "Oviposition rate (n. of eggs/day)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "15.4 ± 1.2 a (10)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the rate of egg laying per day, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the rate of egg laying per day.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Oviposition rate",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The oviposition rate is a measure of reproductive behavior (laying eggs) observed in the live predator organisms (Scymnus nubilus). This falls under the behavioural/ecological/natural-history trait category.",
+    "measurementMethod": "Daily counting of the number of eggs laid per female.",
+    "measurementMethod_reasoning": "The text explicitly states: 'After the females started laying, the number of eggs laid per female was counted daily.' This describes the direct method used to determine the oviposition rate."
+  },
+  "Oviposition period (days)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "72.9 ± 9.4 a (10)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the total duration of the oviposition period, including standard deviation and context.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the total duration of the oviposition period.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Oviposition period",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The oviposition period is a behavioral trait related to reproduction timing, which falls under the category of behavioural/ecological traits (HumanObservation).",
+    "measurementMethod": "T-tests were performed to compare the oviposition period of *S. nubilus* fed *A. fabae* or *M. persicae*.",
+    "measurementMethod_reasoning": "The text explicitly states that T-tests were used to compare the 'oviposition period' between the two treatment groups, indicating the statistical method used for this measurement."
+  },
+  "Female weight (mg)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "1.21 ± 0.02 a (25)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the weight of the female, including standard deviation and context.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records the physical mass of the female organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Female weight"
+  },
+  "Male weight (mg)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "0.97 ± 0.02 a (11)",
+    "measurementStatistic": "mean ± SD",
+    "reasoning": "Measures the weight of the male, including standard deviation and context.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records the physical mass of the male organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Male weight"
+  },
+  "Sex ratio (% F:M)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "67.5 * (25:12)",
+    "measurementStatistic": "individual",
+    "reasoning": "Reports the ratio of sexes, which is an individual characteristic.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the ratio of sexes in the population.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Sex ratio",
+    "measurementMethod": "Sex ratios were obtained from the parental population instead of progeny, determined by sexing the adults using simple external morphological characteristics (males having a light-colored head, females having a dark-colored head). These ratios were then used in statistical analysis (exact binomial tests).",
+    "measurementMethod_reasoning": null
   }
 }

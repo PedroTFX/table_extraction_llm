@@ -13,6 +13,7 @@ Refactor notes
 from __future__ import annotations
 
 import json
+import os
 from functools import lru_cache
 from pathlib import Path
 from urllib import request as _rq
@@ -26,6 +27,11 @@ MODEL = "gemma4:e2b"            # faster; used by every extraction agent (llm=No
 OLLAMA_URL = "http://127.0.0.1:11434/api/chat"   # 127.0.0.1, not localhost: on some
 # hosts localhost resolves to IPv6 ::1 while Ollama listens only on IPv4, so
 # urllib gets ECONNREFUSED (curl happens to fall through to IPv4).
+
+# Max characters of paper prose fed to the column-relevance call. Bounds the
+# prompt so a very large paper can't force a huge num_ctx that hangs the local
+# model (see agent_define_columns_relevance). ~16k chars ≈ 5k tokens.
+RELEVANCE_CONTEXT_CHARS = 16000
 
 
 @lru_cache(maxsize=None)
@@ -63,7 +69,16 @@ def ollama_chat(prompt, num_ctx: int, model: str = MODEL,
 
     No langchain: the request that goes out is exactly the one printed by
     probe_json_mode.py, which is the request that demonstrably works.
+
+    The per-call timeout can be capped via the OLLAMA_TIMEOUT env var so a batch
+    run does not lose 10 minutes to a single model that hangs on a huge prompt.
     """
+    _env_to = os.environ.get("OLLAMA_TIMEOUT")
+    if _env_to:
+        try:
+            timeout = min(timeout, int(_env_to))
+        except ValueError:
+            pass
     body = {
         "model": model,
         "messages": _to_messages(prompt),
@@ -383,6 +398,14 @@ def agent_define_columns_relevance(columns, paper_text, llm=None, samples=None):
 
     `samples`: optional {column: [example cell values]} so the model can judge a
     column by its contents, not only its name and the prose."""
+    # Cap the prose context. Relevance is judged from the column NAMES + sample
+    # VALUES first; the paper text is only secondary context. Feeding an entire
+    # large paper (e.g. Fondjo2024 ~128k chars ≈ 42k tokens) forces a huge num_ctx
+    # and can hang the local model for >10 min on a single call. The head of the
+    # paper — abstract, methods, trait definitions, first tables — carries the
+    # signal a relevance judgment needs, so bound it to keep the call fast.
+    if len(paper_text) > RELEVANCE_CONTEXT_CHARS:
+        paper_text = paper_text[:RELEVANCE_CONTEXT_CHARS]
     chunks = get_text(paper_text, len(paper_text))
     merged = "\n\n".join(c["content"] for c in chunks)
     chunks = [{"content": merged}]

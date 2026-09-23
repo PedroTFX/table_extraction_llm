@@ -1,57 +1,135 @@
 {
-  "Study ID": {
-    "field": null,
+  "identifier": {
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This is a unique identifier, not a measurement, location, or organism."
+    "reasoning": "This column serves as the unique label or identifier for the specimen group.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Cells contain literal names of traits, paired with separate values."
   },
-  "country": {
-    "field": "verbatimLocality",
+  "predominantly carnivorous species species richness number": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "It specifies the country where the sampling or observation occurred."
+    "reasoning": "This is a numeric count of species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the count of species richness for a specific feeding guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "region": {
-    "field": "verbatimLocality",
+  "predominantly carnivorous species species richness percentage": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "It specifies the regional location where the sampling or observation occurred."
+    "reasoning": "This is a percentage representing species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the percentage of species richness for a specific feeding guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "year": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a temporal metadata field, not a measurement or location."
-  },
-  "months": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a temporal metadata field, not a measurement or location."
-  },
-  "crop types": {
-    "field": "verbatimLocality",
+  "predominantly carnivorous species individuals number": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "It describes the land-use or vegetation type where sampling took place."
+    "reasoning": "This is a numeric count of individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the total number of individuals for a specific feeding guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "adjacent habitat classes": {
-    "field": "verbatimLocality",
+  "predominantly carnivorous species individuals percentage": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "It describes the habitat type where the sampling took place."
+    "reasoning": "This is a percentage representing individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the percentage of individuals for a specific feeding guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "study sites": {
-    "field": "verbatimLocality",
+  "omnivorous species species richness number": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "It identifies the specific sampling site or plot code."
+    "reasoning": "This is a numeric count of species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the count of species richness for the omnivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "maximal distance [m]": {
-    "field": "measurementType",
+  "omnivorous species species richness percentage": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This is a measured property (distance) of the study setup."
+    "reasoning": "This is a percentage representing species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the percentage of species richness for the omnivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "trapping days (per trap)": {
-    "field": "measurementType",
+  "omnivorous species individuals number": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This is a measured parameter (duration) of the sampling effort."
+    "reasoning": "This is a numeric count of individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the total number of individuals for the omnivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
   },
-  "reference": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a citation, not a measurement, location, or organism."
+  "omnivorous species individuals percentage": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is a percentage representing individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the percentage of individuals for the omnivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "predominantly granivorous species species richness number": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is a numeric count of species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the count of species richness for the granivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "predominantly granivorous species species richness percentage": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is a percentage representing species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the percentage of species richness for the granivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "predominantly granivorous species individuals number": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is a numeric count of individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the total number of individuals for the granivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "predominantly granivorous species individuals percentage": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is a percentage representing individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the percentage of individuals for the granivorous guild.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "overall species richness": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is the total count of overall species richness.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the total species richness across the entire assemblage.",
+    "multi_value": false,
+    "value_type": "categorical"
+  },
+  "overall individuals": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This is the total count of overall individuals.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Records the total number of individuals across the entire assemblage.",
+    "multi_value": false,
+    "value_type": "categorical"
   }
 }

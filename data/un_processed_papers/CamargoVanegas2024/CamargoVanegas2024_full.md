@@ -1,32 +1,78 @@
+<!-- page 1 of 24 -->
+
+大
+
+diversity
+
+MDPY
+
 Article
 
 # The Taxonomic and Functional Diversity of Leaf-Litter Dwelling Ants in the Tropical Dry Forest of the Colombian Caribbean
 
-Jose Camargo-Vanegas , Sebastian de la Hoz-Pedraza , Hubert Sierra-Chamorro and Roberto J. Guerrero \*
+**Jose Camargo-Vanegas , Sebastian de la Hoz-Pedraza , Hubert Sierra-Chamorro and Roberto J. Guerrero \***
 
-Universidad del Magdalena, Santa Marta 470003, Colombia; josecamargojv@unimagdalena.edu.co (J.C.-V.); sebastianhozp@unimagdalena.edu.co (S.d.l.H.-P.); hubertsierraac@unimagdalena.edu.co (H.S.-C.) Correspondence: rguerrero@unimagdalena.edu.co
+Universidad del Magdalena, Santa Marta 470003, Colombia; josecamargojv@unimagdalena.edu.co (J.C.-V.); sebastianhozp@unimagdalena.edu.co (S.d.l.H.-P.); hubertsierraac@unimagdalena.edu.co (H.S.-C.)
 
-![](images/87e916a0bc917ece326cf9d5d5ceff4adca4038a4685bcce41684a18a604ae00.jpg)
+\* Correspondence: rguerrero@unimagdalena.edu.co
+
+**Abstract:** There have been few advances in understanding the organization and dynamics of ants in tropical dry forests. The latter are a seriously threatened ecosystem, and ants are important indicators of diversity, disturbance, and restoration in forest ecosystems. Using diversity data and morphofunctional traits, we evaluated the spatial and temporal variation of taxonomic and functional ant groups; in addition, we explored the variation in functional traits and diversity among communities. Ants were sampled during the dry and rainy seasons using mini-Winkler bags. A total of 9 subfamilies, 57 genera, and 146 species were collected. Ant species composition and richness varied both spatially (75 to 119 species) and temporally (121 and 127 species). The fragments from N2 and N3 showed higher diversity than those from N1. The dissimilarity among all areas was moderate (50–60%), mainly attributable to species turnover processes (77%). Twenty functional groups were identified. The N3 fragments had the highest functional diversity, with lower resistance to species loss, while the N1 and N2 fragments reduced functional diversity and increased similarity among species. Our results highlight the importance of integrating a functional analysis with the taxonomic assessment of ants as an important contribution to understanding the organization and dynamics of this community of insects that inhabit the tropical dry forest.
+
+![Image block](doc:86c3fb9/tier:advanced/page:1/block:10)
+
+## check for updates
+
+**Citation:** Camargo-Vanegas, J.;
+
+de la Hoz-Pedraza, S.;
+
+Sierra-Chamorro, H.; Guerrero, R.J.
+
+The Taxonomic and Functional
+
+Diversity of Leaf-Litter Dwelling Ants
+
+in the Tropical Dry Forest of the
+
+Colombian Caribbean. Diversity **2024**,
+
+16, 687. [https://doi.org/10.3390/](https://doi.org/10.3390/d16110687)
+
+[d16110687](https://doi.org/10.3390/d16110687)
 
 Academic Editors: Merav Seifan and Luc Legal
 
-Citation: Camargo-Vanegas, J.; de la Hoz-Pedraza, S.; Sierra-Chamorro, H.; Guerrero, R.J. The Taxonomic and Functional Diversity of Leaf-Litter Dwelling Ants in the Tropical Dry Forest of the Colombian Caribbean. Diversity 2024, 16, 687. https://doi.org/10.3390/ d16110687
+Received: 19 August 2024
 
-Received: 19 August 2024 Revised: 24 October 2024 Accepted: 30 October 2024 Published: 11 November 2024
+Revised: 24 October 2024
 
-![](images/c56971d80c2b777073d1145a720d706c19d79fb5833ce81c3d8bea29f57751ea.jpg)
+Accepted: 30 October 2024
 
-Abstract: There have been few advances in understanding the organization and dynamics of ants in tropical dry forests. The latter are a seriously threatened ecosystem, and ants are important indicators of diversity, disturbance, and restoration in forest ecosystems. Using diversity data and morphofunctional traits, we evaluated the spatial and temporal variation of taxonomic and functional ant groups; in addition, we explored the variation in functional traits and diversity among communities. Ants were sampled during the dry and rainy seasons using mini-Winkler bags. A total of 9 subfamilies, 57 genera, and 146 species were collected. Ant species composition and richness varied both spatially (75 to 119 species) and temporally (121 and 127 species). The fragments from N2 and N3 showed higher diversity than those from N1. The dissimilarity among all areas was moderate (50–60%), mainly attributable to species turnover processes (77%). Twenty functional groups were identified. The N3 fragments had the highest functional diversity, with lower resistance to species loss, while the N1 and N2 fragments reduced functional diversity and increased similarity among species. Our results highlight the importance of integrating a functional analysis with the taxonomic assessment of ants as an important contribution to understanding the organization and dynamics of this community of insects that inhabit the tropical dry forest.
+Published: 11 November 2024
 
-Copyright: © 2024 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/).
+![Image block](doc:86c3fb9/tier:advanced/page:1/block:26)
 
-Keywords: functional groups; functional homogenization; spatial differentiation; species richness; species turnover
+**Copyright:** © 2024 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license ([https://creativecommons.org/licenses/by/](https://creativecommons.org/licenses/by/4.0/)4.0/).
+
+**Keywords:** functional groups; functional homogenization; spatial differentiation; species richness; species turnover
 
 ## 1. Introduction
 
 The tropical dry forest (TDF) is defined as an ecosystem with low humidity and precipitation, which is distributed in the lowlands of tropical and subtropical regions [1,2]. Its most distinctive characteristic is the marked seasonality that generates a wide variety of morphological, physiological, and behavioral responses in the organisms that inhabit it, favoring the development of a high biological diversity and high levels of endemism, in addition to sustaining the interaction of processes and services that directly or indirectly sustain this ecosystem [1]. In Colombia, the TDF is one of the most threatened ecosystems, the latter resulting from the development of multiple anthropogenic activities, such as the expansion of the agricultural frontier, livestock production, and human settlement [3,4], which have increased the deterioration of the functionality and services that this terrestrial ecosystem provides [5].
 
-The Colombian Caribbean presents the largest extension of TDF (417,838 ha) with the highest proportion in Cesar, Bolívar, and Magdalena [1,6]. In the west of this region, fragments of TDF are found in the Montes de María (MM) and the Serranía de Piojo (SP); the first ones are located between the departments of Bolívar and Sucre, while the latter are in the department of Atlántico. These fragments are surrounded by grasslands, agricultural crops, bread plantations, and forests in succession. The drastic reduction and rapid transformation of the TDF have led to a loss of biological diversity at all scales, directly affecting the ecological processes that ensure the functionality of the ecosystem and therefore the services it provides to society, such as carbon capture, nutrient cycling, soil protection from erosion, water regulation, among others [1,7,8].
+The Colombian Caribbean presents the largest extension of TDF (417,838 ha) with the highest proportion in Cesar, Bolívar, and Magdalena [1,6]. In the west of this region, fragments of TDF are found in the Montes de María (MM) and the Serranía de Piojo (SP); the first ones are located between the departments of Bolívar and Sucre, while the latter are in the department of Atlántico. These fragments are surrounded by grasslands, agricultural crops, bread plantations, and forests in succession. The drastic reduction and rapid transformation of the TDF have led to a loss of biological diversity at all scales, directly affecting the ecological processes that ensure the functionality of the ecosystem
+
+Diversity 2024, 16, 687. [https://doi.org/10.3390/d16110687](https://doi.org/10.3390/d16110687)
+
+[https://www.mdpi.com/journal/diversity](https://www.mdpi.com/journal/diversity)
+
+<!-- page 2 of 24 -->
+
+Diversity 2024, 16, 687
+
+2 of 23
+
+and therefore the services it provides to society, such as carbon capture, nutrient cycling, soil protection from erosion, water regulation, among others [1,7,8].
 
 Ants are among the biotic elements of the TDF ecosystem that can suffer the negative effects of the loss of vegetation cover (canopy reduction and decreased leaf-litter production). These social insects constitute one of the most important groups of insects at an ecological level because they participate in a wide variety of processes, such as the dispersal and elimination of seeds, predation, the incorporation of nutrients into the soil system, and the establishment of vegetation [9–11]. Furthermore, the ecological qualities of ants, such as high specialization, ecological fidelity, environmental sensitivity, and high abundance [11–13], allow for the study of their communities to be very useful for the evaluation of changes in terrestrial environments [14,15], positioning them as important indicators of the diversity, disturbance, and restoration of forest ecosystems [11]. Despite this multiplicity of functions and ecological contribution to the ecosystem, there is little progress in understanding the organization and dynamics of ant communities in the TDF ecosystem. Therefore, it is necessary to integrate information from the different dimensions of diversity by adding the attributes of the species (i.e., identity, abundance) and their influence on ecosystem functions (i.e., traits, functional groups) [16].
 
@@ -36,7 +82,15 @@ Functional traits can be classified into hard traits and soft traits. Hard trait
 
 Integrating morphological traits into community categorization assumes that species with similar traits perform similar functions in their community or might be exposed to similar environmental filters [30]. However, it is important that the information underlying the traits can be linked to aspects of natural history (e.g., functional groups) to provide a complete picture of an organism’s role in the ecosystem [26,30].
 
-In the Neotropical region, mainly Brazil, studies on ants in TDF ecosystems have been conducted to evaluate how seasonal and successional effects of vegetation influence community structure [35,36]. Likewise, several studies have demonstrated a positive relationship between taxonomic and functional diversity along gradients of forest succession and land use changes [26,37]. In Colombia, studies on TDF ants are mainly concentrated in the western and southwestern regions of the Colombian territory [38–42], while few studies on taxonomic diversity in ants in the TDF of the Caribbean region have been oriented to the generation of taxonomic inventories and diversity assessments [43–46], and only a couple of cases have studied the functional structure of ant communities [47,48]. The lack of information combined with the high curatorial liability of the material (e.g., low taxonomic resolution, a scarcity of resources with associated metadata, a lack of a large reference collection, and the digitalization of the information) have not allowed for progress in the understanding of the different levels of the diversity of ants, undermining the usefulness of the data and, consequently, limiting the understanding of ecological patterns and processes at local and regional scales in the TDF.
+In the Neotropical region, mainly Brazil, studies on ants in TDF ecosystems have been conducted to evaluate how seasonal and successional effects of vegetation influence community structure [35,36]. Likewise, several studies have demonstrated a positive rela-
+
+<!-- page 3 of 24 -->
+
+Diversity 2024, 16, 687
+
+3 of 23
+
+tionship between taxonomic and functional diversity along gradients of forest succession and land use changes [26,37]. In Colombia, studies on TDF ants are mainly concentrated in the western and southwestern regions of the Colombian territory [38–42], while few studies on taxonomic diversity in ants in the TDF of the Caribbean region have been oriented to the generation of taxonomic inventories and diversity assessments [43–46], and only a couple of cases have studied the functional structure of ant communities [47,48]. The lack of information combined with the high curatorial liability of the material (e.g., low taxonomic resolution, a scarcity of resources with associated metadata, a lack of a large reference collection, and the digitalization of the information) have not allowed for progress in the understanding of the different levels of the diversity of ants, undermining the usefulness of the data and, consequently, limiting the understanding of ecological patterns and processes at local and regional scales in the TDF.
 
 In this work, we evaluate the spatial and temporal variation in taxonomic diversity and functional groups of ants in tropical dry forest fragments distributed in the northwestern Colombian Caribbean. In addition, we explore the variation in functional traits and diversity among ant communities that inhabit the different fragments. This information allows us to advance in the understanding of the organization and dynamics of ants in the TDF.
 
@@ -44,30 +98,50 @@ In this work, we evaluate the spatial and temporal variation in taxonomic divers
 
 ## 2.1. Study Area
 
-This study was carried out at six sites with TDF fragments distributed in three areas (Figure 1): (1) TDF fragments in Atlántico into Serranía de Piojó (SP); (2) TDF fragments in Bolívar; and (3) TDF fragments in Sucre into the Montes de María (MM) and Serranía de Piojó (SP). The Montes de María subregion is composed of a mountain system with numerous bodies of water, which shape the climatic regime from dry to humid, with temperatures between $2 6 ^ { \circ } \mathrm { C }$ and $3 0 ^ { \circ } \mathrm { C }$ , average rainfall of 1500 mm, and relative humidity between 75% and 85% [49]. On the other hand, the department of Atlántico presents an enclave of low mountains that corresponds to the district of the Serranía de Piojó. The latter has a tropical climate of the steppe and savannah, with both semi-arid and semi-dry features, with average annual temperatures above 24 <sup>◦</sup>C and an average annual rainfall of 1200 mm. The Montes de María subregion and the Serranía de Piojó district have extensions of TDF that belong to the biogeographic province of the Peri-Caribbean arid belt [50].
+This study was carried out at six sites with TDF fragments distributed in three areas (Figure 1): (1) TDF fragments in Atlántico into Serranía de Piojó (SP); (2) TDF fragments in Bolívar; and (3) TDF fragments in Sucre into the Montes de María (MM) and Serranía de Piojó (SP). The Montes de María subregion is composed of a mountain system with numerous bodies of water, which shape the climatic regime from dry to humid, with temperatures between $2 6 \; ^ { \circ } \mathrm { C }$ and $3 0 \; ^ { \circ } \mathrm { C } ,$ , average rainfall of 1500 mm, and relative humidity between 75% and 85% [49]. On the other hand, the department of Atlántico presents an enclave of low mountains that corresponds to the district of the Serranía de Piojó. The latter has a tropical climate of the steppe and savannah, with both semi-arid and semi-dry features, with average annual temperatures above 24 ◦C and an average annual rainfall of 1200 mm. The Montes de María subregion and the Serranía de Piojó district have extensions of TDF that belong to the biogeographic province of the Peri-Caribbean arid belt [50].
 
-Study areas:
+## Study areas:
 
-1. TDF fragments in Atlántico (hereafter N1): (a) Luriza Integrated Management Regional District (10.75198 N, −75.03075). This is an area declared protected for preser vation, conservation, and restoration of dry forest, with an extension of 837 ha. (b) “Palmar del Titi” Integrated Management Regional District (10.65405 N, −75.18625 W). It is a remnant of dry forest with an area of 2622 ha, with a good state of conservation, gallery forests, and secondary vegetation.
-
+1. TDF fragments in Atlántico (hereafter N1): (a) Luriza Integrated Management Regional District (10.75198 N, −75.03075). This is an area declared protected for preservation, conservation, and restoration of dry forest, with an extension of 837 ha. (b) “Palmar del Titi” Integrated Management Regional District (10.65405 N, −75.18625 W). It is a remnant of dry forest with an area of 2622 ha, with a good state of conservation, gallery forests, and secondary vegetation.
 2. TDF fragments in Bolívar (hereafter N2): (a) Los Colorados Flora and Fauna Sanctuary (9.925380 N, −75.18625). It is an area declared protected for conservation and considered the best-preserved fragment of tropical dry forest in the Colombian Caribbean, with an area of 1000 ha. (b) Brasilar tropical dry forest reserve (9.908608 N, −75.187768). It is a permanent plot of dry forest, which has gallery forests and secondary vegetation.
-
 3. TDF fragments in Sucre (hereafter N3): (a) Caracolí Civil Society Nature Reserve (9.59892 N, −75.32990). It is a tropical dry forest reserve with an area of 132 ha. (b) Serranía de Coraza and Montes de María Protective Reserve (9.52169, −75.39577). This reserve presents remnants of dry forest with an area of 6730 ha.
 
-![](images/b0d7ae43c93ecd841620febaccb8e42a6e4fde3e32971c023df1246825d51a50.jpg)  
-<sup>Figure</sup> <sup>1.</sup> <sup>A</sup> <sup>map</sup> <sup>showing</sup> <sup>sampling</sup> <sup>sites</sup> <sup>of</sup> <sup>tropical</sup> <sup>dry</sup> <sup>forest</sup> <sup>in</sup> <sup>the</sup> <sup>northwest</sup> <sup>of</sup> <sup>the</sup> <sup>Colombian</sup> Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Caribbean. N1a: Luriza Integrated Regional Management District; N1b: “Palmar del Titi” Integrated <sup>Tropical</sup> <sup>Dry</sup> <sup>Forest</sup> <sup>Reserve;</sup> <sup>N3a:</sup> <sup>“CARACOLÍ”</sup> <sup>Civil</sup> <sup>Society</sup> <sup>Nature</sup> <sup>Reserve;</sup> <sup>N3b:</sup> <sup>Coraza</sup> <sup>and</sup> Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Troptributed both in the study area and in adjacent regions. ical Dry Forest Reserve; N3a: “CARACOLÍ” Civil Society Nature Reserve; N3b: Coraza and Montes de María Protective Reserve. The green polygons correspond to dry forest fragments distributed both in the study area and in adjacent regions.
+<!-- page 4 of 24 -->
 
-## <sub>vation,</sub> <sub>conservation,</sub>2.2. Ants Sampling
+Diversity 2024, 16, 687
 
-<sup>Palmar</sup> <sup>del</sup> <sup>Titi”</sup> <sup>Integrated</sup> <sup>Management</sup> <sup>Regional</sup> <sup>District</sup> <sup>(10.65405</sup> <sup>N,</sup> <sup>−75.18625</sup> Two samplings were carried out in each of the six sites distributed to the northwestern Colombian Caribbean. Sampling was carried out between the period of October–December 2. TDF fragments in Bolívar (hereafter N2): (a) Los Colorados Flora and Fauna Sanctu-2022 and the period of March–April 2023, covering the months of high (October–December) <sup>ary</sup> <sup>(9.925380</sup> <sup>N,</sup> <sup>−75.18625).</sup> <sup>It</sup> <sup>is</sup> <sup>an</sup> <sup>area</sup> <sup>declared</sup> <sup>protected</sup> <sup>for</sup> <sup>conservation</sup> <sup>and</sup> <sup>con-</sup>and low rainfall (March–April), that is, two sampling events at each site. The choice of <sub>bean,</sub> <sub>with</sub> <sub>an</sub> <sub>area</sub> <sub>of</sub> <sub>1000</sub> <sub>ha.</sub> <sub>(b)</sub> <sub>Brasilar</sub> <sub>tropical</sub> <sub>dry</sub> <sub>forest</sub> <sub>reserve</sub> <sub>(9.908608</sub> <sub>N,</sub> capture method and the number of sampling units were based on the recommendations <sup>−75.187768).</sup> <sup>It</sup> <sup>is</sup> <sup>a</sup> <sup>permanent</sup> <sup>plot</sup> <sup>of</sup> <sup>dry</sup> <sup>forest,</sup> <sup>which</sup> <sup>has</sup> <sup>gallery</sup> <sup>forests</sup> <sup>and</sup> <sup>sec-</sup>established in [51]. At each sampling site, two linear transects of 100 m were established. <sup>ondary</sup> <sup>vegetation.</sup> In each of these transects, ten 1 m<sup>2</sup> quadrants were located and separated from each other (9.59892 N, −75.32990). It is a tropical dry forest reserve with an area of 132 ha. (b) by 10 m. The collected leaf litter was sifted from each quadrant and placed in mini-Winkler <sup>Serranía</sup> <sup>de</sup> <sup>Coraza</sup> <sup>and</sup> <sup>Montes</sup> <sup>de</sup> <sup>María</sup> <sup>Protective</sup> <sup>Reserve</sup> <sup>(9.52169,</sup> <sup>−75.39577).</sup> bags, and each sample was placed inside independent mini-Winkler bags for 48 h. Forty samples were collected per site. Ants and other arthropods were collected in Whirl-pak<sup>®</sup> 2.2. Ants Sampling bags with 96% ethanol and their respective labels.
+4 of 23
 
-<sup>wo</sup> <sup>samplings</sup> <sup>were</sup> <sup>carried</sup> <sup>out</sup> <sup>in</sup> <sup>each</sup> <sup>of</sup> <sup>the</sup> <sup>six</sup> <sup>sites</sup> <sup>distributed</sup> <sup>to</sup> <sup>the</sup> <sup>northwest-</sup>The ants and other arthropods collected in this study are covered by collection permit <sup>ern</sup> <sup>Colombian</sup> <sup>Caribbean.</sup> <sup>Sampling</sup> <sup>was</sup> <sup>carried</sup> <sup>out</sup> <sup>between</sup> <sup>the</sup> <sup>period</sup> <sup>of</sup> <sup>October–De-</sup>No. 1293 of 2013 granted to the University of Magdalena. The material collected from December) and low rainfall (March–April), that is, two sampling events at each site. The this work was deposited in the Biological Collections of the Universidad del Magdalena CBUMAG (RNC No. 207).
+| Site | Latitude (N) | Longitude (W) |
+| --- | --- | --- |
+| N1a | ~10.65 | ~75.2 |
+| N1b | ~10.8 | ~74.9 |
+| N2a | ~9.9 | ~75.3 |
+| N2b | ~9.9 | ~75.1 |
+| N3a | ~9.6 | ~75.3 |
+| N3b | ~9.55 | ~75.4 |
+
+Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Caribbean. N1a: Luriza Integrated Regional Management District; N1b: “Palmar del Titi” Integrated Tropical Dry Forest Reserve; N3a: “CARACOL ” Civil Society Nature Reserve; N3b: Coraza and Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Trop tributed both in the study area and in adjacent regions. ical Dry Forest Reserve; N3a: “CARACOLÍ” Civil Society Nature Reserve; N3b: Coraza and Montes de María Protective Reserve. The green polygons correspond to dry forest fragments distributed both 1. TDF f  A lá (h f 1in the study area and in adjacent regions.
+
+## vation, conservation,2.2. Ants Sampling
+
+almar del Titi” Integrated Management Regional District (10.65405 N, −75.18625 Two samplings were carried out in each of the six sites distributed to the northwestern vation, gallery forests, and secondary vegetation. Colombian Caribbean. Sampling was carried out between the period of October–December 2. TDF fragments in Bolívar (hereafter N2): (a) Los Colorados Flora and Fauna Sanctu-2022 and the period of March–April 2023, covering the months of high (October–December) ary (9.925380 N, −75.18625). It is an area declared protected for conservation and con-and low rainfall (March–April), that is, two sampling events at each site. The choice of bean, with an area of 1000 ha. (b) Brasilar tropical dry forest reserve (9.908608 N, capture method and the number of sampling units were based on the recommendations −75.187768). It is a permanent plot of dry forest, which has gallery forests and sec-established in [51]. At each sampling site, two linear transects of 100 m were established..In each of these transects, ten 1 m2 quadrants were located and separated from each other (9.59892 N, −75.32990). It is a tropical dry forest reserve with an area of 132 ha. (b) by 10 m. The collected leaf litter was sifted from each quadrant and placed in mini-Winkler Serranía de Coraza and Montes de María Protective Reserve (9.52169, −75.39577). bags, and each sample was placed inside independent mini-Winkler bags for 48 h. Forty samples were collected per site. Ants and other arthropods were collected in Whirl-pak® 2.2. Ants Sampling bags with 96% ethanol and their respective labels.
+
+wo samplings were carried out in each of the six sites distributed to the northwest-The ants and other arthropods collected in this study are covered by collection permit ern Colombian Caribbean. Sampling was carried out between the period of October–De-No. 1293 of 2013 granted to the University of Magdalena. The material collected from December) and low rainfall (March–April), that is, two sampling events at each site. The this work was deposited in the Biological Collections of the Universidad del Magdalena CBUMAG (RNC No. 207).
 
 ## 2.3. Data Analysis
 
-Geographically close sites within their respective areas were analyzed together, considering the similarity in species richness and composition values (Figure S1; Table S1). Alpha diversity was estimated using the effective number of species from the Hill series (<sup>q</sup>D) [52], corresponding to the integration of species richness and relative abundance to diversity measures performed by [53]. Three values of q were used: order 0 (<sup>0</sup>D, species richness), 1 (<sup>1</sup>D, effective number of common species); and 2 (<sup>2</sup>D, effective number of dominant species) [54]. The variation of the assemblage structure was analyzed based on the shape of the range–abundance curves for ants on the litter [48]. The relative abundance of the ant species was measured as the capture frequency for each of the species, considering the arrangement of the number of litter samples in each site [48].
+Geographically close sites within their respective areas were analyzed together, considering the similarity in species richness and composition values (Figure S1; Table S1). Alpha diversity was estimated using the effective number of species from the Hill series (q<sub>D</sub>) [52], corresponding to the integration of species richness and relative abundance to diversity measures performed by [53]. Three values of q were used: order 0 (0<sub>D</sub>, species richness), 1 (1<sub>D</sub>, effective number of common species); and 2 (2<sub>D</sub>, effective number of dominant species) [54]. The variation of the assemblage structure was analyzed based on the shape of the range–abundance curves for ants on the litter [48]. The relative abundance of the ant species was measured as the capture frequency for each of the species, considering the arrangement of the number of litter samples in each site [48].
 
-Estimates and comparisons of diversity were made between the different assemblages under the same or similar sampling coverage (Cm).<sup>ˆ</sup> Cm corresponds to values from 0 to 1;<sup>ˆ</sup> the closer the value is to unity, there is a high representativeness of the sampled species in relation to the total community [55]. For appropriate ecological diversity comparisons, it is important that the Cm values are similar between the areas analyzed [<sup>ˆ</sup> 55,56]. For incidence-based diversity comparisons, 95% confidence intervals (95% CI) were used; non-overlapping intervals indicate significant differences [57,58]. Calculations of Cm and<sup>ˆ</sup> q-order diversity and their CIs were performed using the “iNEXT” package in R 4.4.1 software [54].
+Estimates and comparisons of diversity were made between the different assemblages under the same or similar sampling coverage (Cm). ˆ Cm corresponds to values from 0 to 1; ˆ
+
+<!-- page 5 of 24 -->
+
+Diversity 2024, 16, 687
+
+5 of 23
+
+the closer the value is to unity, there is a high representativeness of the sampled species in relation to the total community [55]. For appropriate ecological diversity comparisons, it is important that the Cm values are similar between the areas analyzed [ ˆ 55,56]. For incidence-based diversity comparisons, 95% confidence intervals (95% CI) were used; non-overlapping intervals indicate significant differences [57,58]. Calculations of Cm and ˆ q-order diversity and their CIs were performed using the “iNEXT” package in R 4.4.1 software [54].
 
 To establish spatial and temporal variation trends in the ant community, non-metric multidimensional scaling (nMDS) analysis was used based on the Bray–Curtis similarity index, using capture incidence or frequency as a measure of ant species abundance. To determine statistical differences between areas and sampling times, a multivariate analysis of variance based on permutations (Permanova) was performed, with a statistical significance level of 0.05, followed by a pairwise adonis post hoc analysis using the Bray–Curtis distance. The calculations were performed with the “betapart” package in the R software [59].
 
@@ -81,7 +155,22 @@ Eight functionally important traits in ants were selected, which have been widel
 
 Table 1. Morphological traits used to calculate functional diversity and their ecological significance for leaf-litter-associated ant communities in study area.
 
-<table><tr><td>Morphological Trait</td><td>Abbreviation</td><td>Functional Importance</td></tr><tr><td>Head length</td><td>HL</td><td>Related to the body size of the ant workers [65].</td></tr><tr><td>Head width</td><td>HW</td><td>Related to the size of the spaces through which ants can pass [66] and to the mandibular musculature. Wider heads have larger mandibular muscles allowing the capture of larger prey [67].</td></tr><tr><td>Mandible length</td><td>ML</td><td>Indicates the type of diet since longer mandibles would indicate more predatory behavior [68]; likewise, longer mandibles could allow for the capture of larger prey [34].</td></tr><tr><td>Eye length</td><td>EL</td><td>Related to the foraging period. It could also indicate the behavior in the search for food [38].</td></tr><tr><td>Interocular distance</td><td>ID</td><td>Related to hunting strategies [34] and habitat complexity [69].</td></tr><tr><td>Scape length</td><td>SL</td><td>Related to sensory capabilities: longer antennal scapes facilitate the tracking of pheromone trails [32].</td></tr><tr><td>Femur length</td><td>FL</td><td>Related to foraging speed, which reflects habitat complexity [70]. It may also be related to food quality in some specialist groups [32].</td></tr><tr><td>Weber length</td><td>WL</td><td>Indicative of body size, which can be related to the amount and type of resource exploited [22]. Body size can influence the microhabitats in which species forage [65]. Large-bodied ants typically forage in open conditions on the soil surface, while smaller species may occupy smaller spaces in enclosed microhabitats in leaf litter and soil [32,40].</td></tr></table>
+| Morphological Trait | Abbreviation | Functional Importance |
+| --- | --- | --- |
+| Head length | HL | Related to the body size of the ant workers [65]. |
+| Head width | HW | Related to the size of the spaces through which ants can pass [66] and to the mandibular musculature. Wider heads have larger mandibular muscles allowing the capture of larger prey [67]. |
+| Mandible length | ML | Indicates the type of diet since longer mandibles would indicate more predatory behavior [68]; likewise, longer mandibles could allow for the capture of larger prey [34]. |
+| Eye length | EL | Related to the foraging period. It could also indicate the behavior in the search for food [38]. |
+| Interocular distance | ID | Related to hunting strategies [34] and habitat complexity [69]. |
+| Scape length | SL | Related to sensory capabilities: longer antennal scapes facilitate the tracking of pheromone trails [32]. |
+| Femur length | FL | Related to foraging speed, which reflects habitat complexity [70]. It may also be related to food quality in some specialist groups [32]. |
+| Weber length | WL | Indicative of body size, which can be related to the amount and type of resource exploited [22]. Body size can influence the microhabitats in which species forage [65]. Large-bodied ants typically forage in open conditions on the soil surface, while smaller species may occupy smaller spaces in enclosed microhabitats in leaf litter and soil [32,40]. |
+
+<!-- page 6 of 24 -->
+
+Diversity 2024, 16, 687
+
+6 of 23
 
 Between one and twelve individuals per species (average = 4 individuals/species) were measured. Based on this, a greater variation within each trait was guaranteed for the most frequent species; in this way, 26 species were represented by 12 individuals, 29 species by 8 individuals, and 87 species by 4 or fewer individuals. Mean ± standard deviation (SD) of all morphological traits can be found in Table S2. Considering that morphometric traits show a strong correlation with body size, the relative measurements of each trait were determined by dividing its value by the Weber length as an approximation of the body size of each species [71]. For the analysis of the functional diversity of ant communities in the TDF fragments in each area, only the workers of each species were considered. In the case of Pheidole species, only the minor workers were measured. The species Cephalotes varians (Smith, 1876), Camponotus sp. 4, Camponotus sp. 5, and Camponotus sp. 6 were excluded from the analysis since only major workers were collected. Measurements were made with a dual-axis micrometer stage with output in 0.001 mm increments, but those ones were approximated to 0.01 mm due to the variable orientation of the specimens.
 
@@ -97,99 +186,294 @@ For the ant community inhabiting the TDF fragments in each area, we estimated (1
 
 A total of 30,080 individuals distributed in 9 subfamilies, 57 genera, and 146 species were collected. The subfamilies Myrmicinae, Ponerinae, and Formicinae contributed 83% of the ant richness (Figure 2). The genera with the highest number of species were Pheidole (19 species) and Strumigenys (12 species), while 24 genera were represented by a single species (Appendix A).
 
-Solenopsis azteca Forel, 1893, was the species with the highest capture frequency (87.5%) followed by a group of six species between 50 and 76%, such as Octostruma amrishi (Makhan, 2007); Pheidoleflavens Roger, 1863; and Strumigenys eggersi Emery, 1890. Around 79 species were in the range of 2 to 49%, within which are Hypoponera opacior (Forel, 1893), Pachycondyla harpax (Fabricius, 1804), and Mayaponera arhuaca (Forel, 1901). Finally, 60 species were considered rare, with frequencies below 2% (Appendix A).
+Solenopsis azteca Forel, 1893, was the species with the highest capture frequency (87.5%) followed by a group of six species between 50 and 76%, such as Octostruma amrishi (Makhan, 2007); Pheidole flavens Roger, 1863; and Strumigenys eggersi Emery, 1890. Around 79 species were in the range of 2 to 49%, within which are Hypoponera opacior (Forel, 1893), Pachycondyla harpax (Fabricius, 1804), and Mayaponera arhuaca (Forel, 1901). Finally, 60 species were considered rare, with frequencies below 2% (Appendix A).
 
 Sampling coverage ranged from 0.92 to 0.96, with the lowest values occurring during the dry season. Estimates indicate that increasing the number of samples could result in collecting 11 to 41 additional species (Table S3).
 
-![](images/8658c415b24d7e5473deaec9bc062ee9111f0e1ddaea398564f33d303bf15dcb.jpg)  
+<!-- page 7 of 24 -->
+
+Diversity 2024, 16, 687
+
+7 of 23 single
+
+| Category | N1 | N2 | N3 |
+| --- | --- | --- | --- |
+| Myrmicinae | ~52 | ~66 | ~75 |
+| Ponerinae | ~11 | ~18 | ~15 |
+| Formicinae | ~2 | ~9 | ~11 |
+| Ectatomminae | ~2 | ~3 | ~5 |
+| Proceratilinae | ~2 | ~4 | ~4 |
+| Dorylinae | ~3 | ~3 | ~3 |
+| Pseudomymecinae | ~2 | ~3 | ~2 |
+| Dolichoderinae | ~1 | ~2 | ~3 |
+| Amblyoponinae | 0 | ~1 | 0 |
+
 Figure 2. Number of ant species by subfamilies (horizontal axis) for TDF fragments in each area of Figure 2. Number of ant species by subfamilies (horizontal axis) for TDF fragments in each area of the northwestern Colombian Caribbean.the northwestern Colombian Caribbean.
 
-## 3.2. Alpha Diversity
+## l3.2. Alpha Diversity
 
-<sub>%)</sub> <sub>followed</sub> <sub>by</sub> <sub>a</sub> <sub>group</sub> <sub>of</sub> <sub>six</sub> <sub>species</sub> <sub>between</sub> <sub>50</sub> <sub>and</sub> <sub>76%,</sub> <sub>such</sub> <sub>as</sub> <sub>Octostruma</sub> <sub>amrishi</sub>Species richness values are similar between both climatic periods, with 127 species recorded in the rainy season and 121 in the dry season; however, there was a notableW 8 of 25 decrease in the density of individuals collected between both seasons: 19,589 individuals were collected in the rainy season and 10,491 in the dry season.2. Alpha Diversity
+%) followed by a group of six species between 50 and 76%, such as Octostruma amrishiSpecies richness values are similar between both climatic periods, with 127 species (Makhan, 2007); Pheidole flavens Roger, 1863; and Strumigenys eggersi Emery, 1890. Around recorded in the rainy season and 121 in the dry season; however, there was a notable 8 of 25 79 s ecies were in the ran e of 2 to 49%, within which are H o onera o acior (Forel, 1893)decrease in the density of individuals collected between both seasons: 19,589 individuals Pach cond la har ax (Fabricius, 1804), and Ma a onera arhuaca (Fwere collected in the rainy season and 10,491 in the dry season.2. Alpha Diversity
 
-Ant richness (<sup>0</sup>D) varied spatially and temporally. According to the 95% CI (Table S3),ies richness values are similar between both climatic periods, with 127 species <sup>0</sup>D in N1 (57 rainy season and 59 in dry season) and N2 (80 in rainy season and 85 in dry<sup>corded</sup> <sup>in</sup> <sup>the</sup> <sup>rainy</sup> <sup>season</sup> <sup>and</sup> <sup>121</sup> <sup>in</sup> <sup>the</sup> <sup>dry</sup> <sup>season;</sup> <sup>however,</sup> <sup>there</sup> <sup>was</sup> <sup>a</sup> <sup>notable</sup> <sup>de-</sup> season) did not show a marked difference between both climatic periods, contrasting withere collected in the rainy season and 10,491 in the dry season. N3 (103 in rainy season and 73 in dry season). The highest species diversity was found in<sup>Ant</sup> <sup>richness</sup> <sup>( D)</sup> <sup>varied</sup> <sup>spatially</sup> <sup>and</sup> <sup>temporally.</sup> <sup>According</sup> <sup>to</sup> <sup>the</sup> <sup>95%</sup> <sup>CI</sup> <sup>(Table</sup> N3 and N2; those from N1 showed the lowest in both climatic periods (Figure 3a). Thisry season) did not show a marked difference between both climatic periods, contrasting trend is also observed for the <sup>1</sup>D and <sup>2</sup>D diversity orders in both climatic periods. In the dry<sup>ith</sup> <sup>N3</sup> <sup>(103</sup> <sup>in</sup> <sup>rainy</sup> <sup>season</sup> <sup>and</sup> <sup>73</sup> <sup>in</sup> <sup>dry</sup> <sup>season).</sup> <sup>The</sup> <sup>highest</sup> <sup>species</sup> <sup>diversity</sup> <sup>was</sup> season, N3 decreased their magnitudes in all three diversity orders, showing differencesa). This trend is also observed for the <sup>1</sup>D and <sup>2</sup>D diversity orders in both climatic periods. with respect to N1 (Figure 3). <sup>the</sup> <sup>dry</sup> <sup>season,</sup> <sup>N3</sup> <sup>decreased</sup> <sup>their</sup> <sup>magnitu</sup>
+were considered rare, with fre uencies below 2% (A endix A)Ant richness (0D) varied spatially and temporally. According to the 95% CI (Table S3),ies richness values are similar between both climatic periods, with 127 species Sampling coverage ranged from 0.92 to 0.96, with the lowest values occurring during 0D in N1 (57 rainy season and 59 in dry season) and N2 (80 in rainy season and 85 in drycorded in the rainy season and 121 in the dry season; however, there was a notable de- i th d it f i di id l ll t d b t b th : 19,589 i di id l h d . E i i di h i i h b f l ld l iseason) did not show a marked difference between both climatic periods, contrasting withere collected in the rainy season and 10,491 in the dry season. ll i 11  41 ddi i l i (T bl S3N3 (103 in rainy season and 73 in dry season). The highest species diversity was found inp y  p y. g 0D i N1 (57 i  d 59 i d ) d N2 (80 i i  d 85 i N3 and N2; those from N1 showed the lowest in both climatic periods (Figure 3a). Thisy season) did not show a marked difference between both climatic periods, contrasting trend is also observed for the 1D and 2D diversity orders in both climatic periods. In the dryy     y ).  g p y und in N3 and N2; those from N1 showed the lowest in both climatic periods (Figure season, N3 decreased their magnitudes in all three diversity orders, showing differences). This trend is also observed for the 1D and 2D diversity orders in both climatic periods. with respect to N1 (Figure 3).,ff ith t t N1 (Fi 3
 
-![](images/f1fa1426189cf1179a2053986d1f0bc5777791053be33236fec01960ad3ac820.jpg)  
+![Image block](doc:86c3fb9/tier:advanced/page:7/block:8)
+
 Figure 3. Cont.
 
-![](images/aca2a5afeefb5f72b7c3c5fc55e629c0d5d87efc7c70330d33492a0e6a95892b.jpg)  
-ea. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Figure 3. Diversity expressed as the effective number of ant species (<sup>q</sup>D) in TDF fragments in each <sup>nfidence</sup> <sup>intervals</sup> <sup>(CI)</sup> <sup>of</sup> <sup>each</sup> <sup>of</sup> <sup>the</sup> <sup>measurements.</sup> area. (a) Richness (<sup>0</sup>D); (b) common species (<sup>1</sup>D); (c) dominant species (<sup>2</sup>D). The bars indicate the Rank–abundance curves of ant species for the studied areas show few vconfidence intervals (CI) of each of the measurements.
+<!-- page 8 of 24 -->
 
-<sub>Rank–abundance curves of ant species for the studied areas show few very frequent</sub>ies (Figure 4). A total of seven species are considered frequent, which correspond to <sub>ith</sub> <sub>capture</sub> <sub>frequencies</sub> <sub>between</sub> <sub>50</sub> <sub>and</sub> <sub>82.5%.</sub> <sub>On</sub> <sub>the</sub> <sub>other</sub> <sub>hand,</sub> <sub>79</sub> <sub>species</sub> <sub>are</sub> <sub>rare</sub> <sub>species (Figure 4). A total of seven species are considered frequent, which correspond</sub>Solenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponera <sub>equencies</sub> <sub>equal</sub> <sub>to</sub> <sub>or</sub> <sub>less</sub> <sub>than</sub> <sub>2%,</sub> <sub>such</sub> <sub>as</sub> <sub>Alfaria</sub> <sub>minuta</sub> <sub>Emery,</sub> <sub>1896;</sub> <sub>Mycocepurus</sub> <sub>to</sub> <sub>Solenopsis</sub> <sub>azteca,</sub> <sub>Octostruma</sub> <sub>amrishi,</sub> <sub>Strumigenys</sub> <sub>eggersi,</sub> <sub>Pheidole</sub> <sub>flavens,</sub> <sub>Hypoponera</sub><sup>opacior,</sup> <sup>Solenopsis</sup> <sup>geminata</sup> <sup>(Fabricius,</sup> <sup>1804),</sup> <sup>and</sup> <sup>Nylanderia</sup> <sup>guatemalensis</sup> <sup>(Forel,</sup> <sup>1885),</sup> <sup>rvispinosus</sup> <sup>Mackay,</sup> <sup>1998;</sup> <sup>Proceratium</sup> <sup>catio</sup> <sup>Andrade,</sup> <sup>2003;</sup> <sup>Gnamptogenys</sup> <sup>boliviensis</sup> opacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885),<sup>with</sup> <sup>capture</sup> <sup>frequencies</sup> <sup>between</sup> <sup>50</sup> <sup>and</sup> <sup>82.5%.</sup> <sup>On</sup> <sup>the</sup> <sup>other</sup> <sup>hand,</sup> <sup>79</sup> <sup>species</sup> <sup>are</sup> <sup>rare</sup> <sub>with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare</sub>(with capture frequencies less than 50%), and 60 are considered very rare, with capture (with capture frequencies less than 50%), and 60 are considered very rare, with capture<sup>frequencies</sup> <sup>equal</sup> <sup>to</sup> <sup>or</sup> <sup>less</sup> <sup>than</sup> <sup>2%,</sup> <sup>such</sup> <sup>as</sup> <sup>Alfaria</sup> <sup>minuta</sup> <sup>Emery,</sup> <sup>1896;</sup> <sup>Mycocepurus</sup> <sub>frequencies</sub> <sub>equal</sub> <sub>to</sub> <sub>or</sub> <sub>less</sub> <sub>than</sub> <sub>2%,</sub> <sub>such</sub> <sub>as</sub> <sub>Alfaria</sub> <sub>minuta</sub> <sub>Emery,</sub> <sub>1896;</sub> <sub>Mycocepurus</sub>curvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis curvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis Lattke,<sup>Lattke,</sup> <sup>1995;</sup> <sup>Acropyga</sup> <sup>fuhrmanni</sup> <sup>(Forel,</sup> <sup>1914);</sup> <sup>and</sup> <sup>Rogeria</sup> <sup>curvipubens</sup> <sup>Emery,</sup> <sup>1894</sup> <sup>(Ap-</sup> 1995; Acropygafuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Appendix A).<sup>pendix</sup> <sup>A).</sup>
+Diversity 2024, 16, 687
 
-![](images/83634a687b10bf10e9d50c6a3f604b30d75e2a457670186cffca8449397dcb14.jpg)  
-Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abun dance) for the ant assemblage in the TDF fragments in each area. The names of the species with the dance) for the ant assemblage in the TDF fragments in each area. The names of the species with the highest capture frequency (≥50%) are shown. highest capture frequency (≥50%) are shown.
+8 of 23
 
-## 3.3. Spatial and Temporal Variation and Beta Diversity in the Ant Community
+| Category | Condition | Diversity (2D) |
+| --- | --- | --- |
+| N1 | Rainy | ~28 |
+| N2 | Rainy | ~34 |
+| N3 | Rainy | ~48 |
+| N1 | Dry | ~23 |
+| N2 | Dry | ~35 |
+| N3 | Dry | ~30 |
 
-Variations in the composition and abundance of ants living in the leaf litter in the studied areas are associated with differences between the spatial scale (Pseudo- $\operatorname { F } _ { 1 , 9 } = 2 . 4 6 ;$ $p = 0 . 0 0 3 )$ ) and climatic periods $( \mathrm { P s e u d o  – F } _ { 1 , 6 } = 2 . 1 8 ; p = 0 . 0 2 6 7 )$ (Table S4). The ordination analysis clearly shows separation in community composition at N3, whereas N1 and N2 showed overlap (Figure 5). Pairwise comparisons between areas showed significant differences between $\mathrm { N 1 - N 3 } \ ( \mathrm { P s e u d o - F } _ { 1 , 6 } = 3 . 3 0 ; p = 0 . 0 0 3 4 )$ and $\mathrm { N } 2 \mathrm { - N } 3 \left( \mathrm { P s e u d o - F } _ { 1 , 6 } = 1 . 8 4 \right)$ $p = 0 . 0 0 2 9 )$ (Table S5).
+ea. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Figure 3. Diversity expressed as the effective number of ant species (qD) in TDF fragments in each. ( )  ( ); ( )   ( ); ( )   ( ). nfidence intervals (CI) of each of the measurements. area. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Rank–abundance curves of ant species for the studied areas show few vconfidence intervals (CI) of each of the measurements.
 
-![](images/2cdc6325b9d1fc111f59e97af84fdc9e46dacf49d01286d75a7155974f32bc4f.jpg)  
-Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-litter associated ant community in the studied areas. Letters in numbers are defined in the study area section. D corresponds to the dry season, while R is the rainy seasection. D corresponds to the dry season, while R is the rainy season.
+olenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885), Rank–abundance curves of ant species for the studied areas show few very frequentes (Figure 4). A total of seven species are considered frequent, which correspond to ith capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare species (Figure 4). A total of seven species are considered frequent, which correspondSolenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponera equencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepurus to Solenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponeraopacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885), rvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis opacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885),with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare endix A). with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare(with capture frequencies less than 50%), and 60 are considered very rare, with capture (with capture frequencies less than 50%), and 60 are considered very rare, with capturefrequencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepurus frequencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepuruscurvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis curvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis Lattke,Lattke, 1995; Acropyga fuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Ap-1995; Acropyga fuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Appendix A).pendix A).
 
-The analysis of beta diversity (βjac) between the TDF fragments in each arc showsn. For both seasons, turnover is the main component that explains th a moderate differentiation between 50 and 60% of dissimilarity between both climatic seasons; in general, higher dissimilarity values were found in the dry season than in the rainy season. For both seasons, turnover is the main component that explains the variation <sub>in</sub> <sub>the</sub> <sub>composition</sub> <sub>of</sub> <sub>the</sub> <sub>ants.</sub> <sub>In</sub> <sub>the</sub> <sub>dry</sub> <sub>season,</sub> <sub>turnover</sub> <sub>was</sub> <sub>76%</sub> <sub>for</sub> <sub>N1-N2,</sub> <sub>88%</sub> <sub>for</sub>mong the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3 <sup>the</sup> <sup>composition</sup> <sup>of</sup> <sup>the</sup> <sup>ants.</sup> <sup>In</sup> <sup>the</sup> <sup>dry</sup> <sup>season,</sup> <sup>turnover</sup> <sup>was</sup> <sup>76%</sup> <sup>for</sup> <sup>N1-N2,</sup> <sup>88%</sup> <sup>fo</sup>N1-N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74estedness values were recorded among N1-N3 (46%) in the rainy season, N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74 t<sub>to 77% among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. The</sub> <sup>among</sup> <sup>the</sup> <sup>TDF</sup> <sup>fragments</sup> <sup>from</sup> <sup>N1-N2</sup> <sup>and</sup> <sup>N2-N3</sup> <sup>and</sup> <sup>54%</sup> <sup>among</sup> <sup>N1-N3.</sup> <sup>The</sup> <sup>hi</sup>highest nestedness values were recorded among N1-N3 (46%) in the rainy season, while in nestedness values were recorded among N1-N3 (46%) in the rainy sethe dry season, nestedness ranged between 9 and 24% (Figure 6) (Table S6).
+| Species | N1 (Abundance relative) | N2 (Abundance relative) | N3 (Abundance relative) |
+| :--- | :--- | :--- | :--- |
+| Solenopsis azteka | ~82 | ~79 | ~87 |
+| Pheidole flavens | ~56 | ~74 | — |
+| Strumigenys eggersi | ~50 | ~56 | — |
+| Octostruma amrishi | ~41 | ~48 | — |
+| Octostruma amrishi | ~39 | ~45 | — |
+| Solenopsis geminata | ~37 | ~42 | — |
+| Pheidole flavens | ~36 | ~40 | — |
+| N2 | ~35 | ~38 | — |
+| N2 | ~34 | ~36 | — |
+| N2 | ~33 | ~34 | — |
+| N2 | ~32 | ~32 | — |
+| N2 | ~31 | ~30 | — |
+| N2 | ~30 | ~28 | — |
+| N2 | ~29 | ~26 | — |
+| N2 | ~28 | ~24 | — |
+| N2 | ~27 | ~22 | — |
+| N2 | ~26 | ~20 | — |
+| N2 | ~25 | ~18 | — |
+| N2 | ~24 | ~16 | — |
+| N2 | ~23 | ~14 | — |
+| N2 | ~22 | ~12 | — |
+| N2 | ~21 | ~10 | — |
+| N2 | ~20 | ~8 | — |
+| N2 | ~19 | ~6 | — |
+| N2 | ~18 | ~4 | — |
+| N2 | ~17 | ~2 | — |
+| N2 | ~16 | ~1 | — |
+| N2 | ~15 | ~0 | — |
+| N2 | ~14 | ~0 | — |
+| N2 | ~13 | ~0 | — |
+| N2 | ~12 | ~0 | — |
+| N2 | ~11 | ~0 | — |
+| N2 | ~10 | ~0 | — |
+| N2 | ~9 | ~0 | — |
+| N2 | ~8 | ~0 | — |
+| N2 | ~7 | ~0 | — |
+| N2 | ~6 | ~0 | — |
+| N2 | ~5 | ~0 | — |
+| N2 | ~4 | ~0 | — |
+| N2 | ~3 | ~0 | — |
+| N2 | ~2 | ~0 | — |
+| N2 | ~1 | ~0 | — |
+| N2 | ~0 | ~0 | — |
+| N3 | — | — | ~87 |
+| N3 | — | — | ~76 |
+| N3 | — | — | ~51 |
+| N3 | — | — | ~47 |
+| N3 | — | — | ~41 |
+| N3 | — | — | ~40 |
+| N3 | — | — | ~38 |
+| N3 | — | — | ~36 |
+| N3 | — | — | ~34 |
+| N3 | — | — | ~32 |
+| N3 | — | — | ~30 |
+| N3 | — | — | ~28 |
+| N3 | — | — | ~26 |
+| N3 | — | — | ~24 |
+| N3 | — | — | ~22 |
+| N3 | — | — | ~20 |
+| N3 | — | — | ~18 |
+| N3 | — | — | ~16 |
+| N3 | — | — | ~14 |
+| N3 | — | — | ~12 |
+| N3 | — | — | ~10 |
+| N3 | — | — | ~8 |
+| N3 | — | — | ~6 |
+| N3 | — | — | ~4 |
+| N3 | — | — | ~2 |
+| N3 | — | — | ~1 |
+| N3 | — | — | ~0 |
 
-![](images/8639ec8d5608f63701a8c129fc7098a8b3e4c807238449bf7f3b8a680f2d8b4e.jpg)  
-(a)  
+Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abun-Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abundance) for the ant assemblage in the TDF fragments in each area. The names of the species with the dance) for the ant assemblage in the TDF fragments in each area. The names of the species with the highest capture frequency (≥50%) are shown. highest capture frequency (≥50%) are shown.
+
+## 3.3. S i l d T l V i i d B Di i i h A C i3.3. Spatial and Temporal Variation and Beta Diversity in the Ant Community
+
+Variations in the composition and abundance of ants living in the leaf litter in the studied areas are associated with differences between the spatial scale (Pseudo- $-F _{1,9}=2.46;$ $p = 0 . 0 0 3 )$ and climatic periods $( \mathrm { P s e u d o - F } _ { 1 , 6 } = 2 . 1 8 ; p = 0 . 0 2 6 7 )$ (Table S4). The ordination analysis clearly shows separation in community composition at N3, whereas N1 and N2 showed overlap (Figure 5). Pairwise comparisons between areas showed significant differences between $N1-N3  ( Pseudo-F _{1,6} = 3.30; p = 0.0034)$ and $N2-N3  ( Pseudo-F _{1,6} = 1.84)$ $p = 0 . 0 0 2 9 )$ (Table S5).
+
+<!-- page 9 of 24 -->
+
+Diversity 2024, 16, 687
+
+9 of 23 6 = 1.8
+
+| Series | nMDS1 (range) | nMDS2 (range) |
+| --- | --- | --- |
+| N1 | ~0.35 ~0.45 | ~0.25 ~0.65 |
+| N2 | ~0.35 ~0.75 | ~0.05 ~0.45 |
+| N3 | ~0.55 ~0.95 | ~0.45 ~0.95 |
+
+Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-litter-Th l i f b t di it ( ) b t th TDF f t i associated ant community in the studied areas. Letters in numbers are defined in the studassociated ant community in the studied areas. Letters in numbers are defined in the study area section. D corresponds to the dry season, while R is the rainy seasection. D corresponds to the dry season, while R is the rainy season.
+
+The analysis of beta diversity (βjac) between the TDF fragments in each arc showsn. For both seasons, turnover is the main component that explains th a moderate differentiation between 50 and 60% of dissimilarity between both climaticf h . I h d ,   76% f N1-N2 seasons; in general, higher dissimilarity values were found in the dry season than in the,rainy season. For both seasons, turnover is the main component that explains the variation,  %  - . g  y ,   g.   ,     p  pin the composition of the ants. In the dry season, turnover was 76% for N1-N2, 88% formong the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3 the composition of the ants. In the dry season, turnover was 76% for N1-N2, 88% foN1-N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74estedness values were recorded among N1-N3 (46%) in the rainy season, N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74 toto 77% among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. Thet d d b t 9 d 24% (Fi 6) (T bl S6 among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. The hihighest nestedness values were recorded among N1-N3 (46%) in the rainy season, while in nestedness values were recorded among N1-N3 (46%) in the rainy sethe dry season, nestedness ranged between 9 and 24% (Figure 6) (Table S6).
+
+| Category | \(\beta\)jac | \(\beta\)jtu | \(\beta\)jne |
+| --- | --- | --- | --- |
+| N2 - N3 | ~0.50 | ~0.38 | ~0.12 |
+| N1 - N3 | ~0.60 | ~0.32 | ~0.27 |
+| N1 - N2 | ~0.56 | ~0.41 | ~0.14 |
+
 Figure 6. Cont.
 
-![](images/d71db4e147c176e7c2d947c417efd470c87bec6610ec6637f2eb2fd42535f07f.jpg)  
-(b)  
-igure 6. Partition of beta diversity (βjac) into its turnover (βjtu) and nestedness (βjnFigure 6. Partition of beta diversity (βjac) into its turnover (βjtu) and nestedness (βjne) components<sup>Figure</sup> <sup>6.</sup> <sup>Partition</sup> <sup>of</sup> <sup>beta</sup> <sup>diversity</sup> <sup>(βjac)</sup> <sup>into</sup> <sup>its</sup> <sup>turnover</sup> <sup>(βjtu)</sup> <sup>and</sup> <sup>nestedness</sup> <sup>(βjne)</sup> <sup>components</sup> etween pairs of sites in each area based on the Jaccard index. (a) Rainy season; <sup>b</sup>etween pairs o<sup>f</sup> sites in eac<sup>h</sup> area <sup>b</sup>ase<sup>d</sup> on t<sup>h</sup>e Jaccar<sup>d</sup> in<sup>d</sup>ex. <sup>(</sup>a<sup>)</sup> Rainy season; <sup>(b) d</sup>ry season.
+<!-- page 10 of 24 -->
+
+Diversity 2024, 16, 687
+
+10 of 23
+
+| Category | \(\beta\)jac | \(\beta\)jtu | \(\beta\)jne |
+| --- | --- | --- | --- |
+| N2 - N3 | ~0.58 | ~0.53 | ~0.06 |
+| N1 - N3 | ~0.60 | ~0.53 | ~0.08 |
+| N1 - N2 | ~0.59 | ~0.45 | ~0.15 |
+
+(b)
+
+igure 6. Partition of beta diversity (βjac) into its turnover (βjtu) and nestedness (βjnFigure 6. Partition of beta diversity (βjac) into its turnover (βjtu) and nestedness (βjne) components.     ( )    ( )   ( ) p etween pairs of sites in each area based on the Jaccard index. (a) Rainy season; (between pairs of sites in each area based on the Jaccard index. (a) Rainy season; (b) dry season.
 
 ## 3.4. Functional Groups3.4. Functional Groups
 
-unctional Groups <sub>Twenty functional groups were identified: eighteen were recorded in N1, nineteen inTwenty</sub> <sub>functional</sub> <sub>groups</sub> <sub>were</sub> <sub>identified:</sub> <sub>eighteen</sub> <sub>were</sub> <sub>recorded</sub> <sub>in</sub> <sub>N1,</sub> <sub>nineteen</sub> <sub>in</sub> Twenty functional groups were identified: eighteen were recorded in NN3, and twenty in N2. The predominant functional groups in terms of species richness<sup>N3,</sup> <sup>and</sup> <sup>twenty</sup> <sup>in</sup> <sup>N2.</sup> <sup>The</sup> <sup>predominant</sup> <sup>functional</sup> <sup>groups</sup> <sup>in</sup> <sup>terms</sup> <sup>of</sup> <sup>species</sup> <sup>richness</sup> correspond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omni-correspond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omnivores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richnessvores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richness of functional groups between the rainy and dry seasons.of functional groups between the rainy and dry seasons.
+p Twenty functional groups were identified: eighteen were recorded in N1, nineteen inTwenty functional groups were identified: eighteen were recorded in N1, nineteen in Twenty functional groups were identified: eighteen were recorded in NN3, and twenty in N2. The predominant functional groups in terms of species richnessN3, and twenty in N2. The predominant functional groups in terms of species richness d   2. Th d f l    fcorrespond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omni-correspond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omnivores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richnessvores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richness p  p g / / p gof functional groups between the rainy and dry seasons.of functional groups between the rainy and dry seasons.
 
-![](images/686cd7dd086d8244318738273af537bf0d28e111bfeeae6dd441bd0bad0ff9a7.jpg)  
+| Category | N1 (%) | N2 (%) | N3 (%) |
+| :--- | :--- | :--- | :--- |
+| Exclusive homopteran dependent (EHD) | 0 | ~50 | ~50 |
+| Medium-sized litter/hypogieic generalist predator (MLP) | 0 | ~40 | ~60 |
+| Soil-specialized isopoda forager/predator (SSI) | ~33 | ~37 | ~29 |
+| Mass predators or nomads (MPN) | ~51 | ~49 | 0 |
+| Soil-specialized millipede predator (SSM) | ~25 | ~55 | ~25 |
+| Dacetini predator with static prehensile mandibles (DPSM) | ~25 | ~30 | ~55 |
+| Fungus leaf-cutter agriculture (LCA) | ~34 | ~36 | ~32 |
+| Soil specialized forager/predator (SSP) | ~14 | ~48 | ~40 |
+| Army Ants (AA) | ~29 | ~31 | ~37 |
+| Small epigeic/litter/hypogieic generalist predator (SLP) | ~29 | ~31 | ~37 |
+| Fungus-generalized higher-agriculture (FGHA) | ~23 | ~48 | ~25 |
+| Fungus lower-agriculture (FLA) | ~23 | ~36 | ~39 |
+| Arboreous/soil omnivore (ASO) | ~15 | ~40 | ~55 |
+| Large/medium-sized arboreous generalist predator (LAP) | ~25 | ~35 | ~35 |
+| Fungus yeast agriculture (FYA) | ~30 | ~30 | ~30 |
+| Medium-sized litter/hypogieic omnivore (MLO) | ~18 | ~40 | ~42 |
+| Large epigeic generalist predator (LEP) | ~27 | ~45 | ~28 |
+| Dacetine Predator (DP) | ~28 | ~36 | ~34 |
+| Arboreous Omnivore (AO) | ~41 | ~26 | ~33 |
+| Small epigcic/litter/hypogieic omnivore (SO) | ~25 | ~40 | ~35 |
+
 Figure 7. The spatial variation in the functional groups recorded in the TDF fragments in each Figure 7. The spatial variation in the functional groups recorded in the TDF fragments in each area.
 
 ## 3.5. Functional Traits
 
-unctional Traits Among the eight morphofunctional traits analyzed (Figure 8), only ML presented differences in CWM values between the studied areas (Figure 8c). The mean values of the mandible length of the ant community in N3 showed differences with those of the ants that inhabit in N2 (0.653 mm ± 0.096 and 536 mm ± 0.019, respectively) $( \mathrm { F } _ { 1 , 9 } = 5 . 0 3 1 ; p = 0 . 0 4 7 )$ but not with those of the ant community in the fragments from N1 $( \mathrm { F } _ { 1 , 9 } = 5 . 0 3 1 ; p = 0 . 0 6 1 )$ On the other hand, the average values of the mandible length between N1 and N2 did not show significant differences $( \mathrm { F } _ { 1 , 9 } = 5 . 0 3 1 ; p = 0 . 9 8 7 )$ (Table S7).
+unctional Traits Among the eight morphofunctional traits analyzed (Figure 8), only ML presented A h i h h f i l i l d (Fi 8), l ML ddifferences in CWM values between the studied areas (Figure 8c). The mean values of the ff   l  h   ( ). h  l f hmandible length of the ant community in N3 showed differences with those of the ants that i r 7. Th ti l i ti i th f ti l  dd bl l h f h    N3 h d d ffinhabit in N2 (0.653 mm ± 0.096 and 536 mm ± 0.019, respectively) $( \mathbb { F } _ { 1 , 9 } = 5 . 0 3 1 ; p = 0 . 0 4 7 )$ but not with those of the ant community in the fragments from N1 $( \mathbb { F } _ { 1 , 9 } = 5 . 0 3 1 ;   p = 0 . 0 6 1 )$ On the other hand, the average values of the mandible length between N1 and N2 did not show significant differences $( \mathbb { F } _ { 1 , 9 } = 5 . 0 3 1 ;   p = 0 . 9 8 7 )$ (Table S7).
 
-![](images/639fbf7325063c4a2600d3acc2a4c428875eeee4dfae826f1a1316cf76981593.jpg)
+<!-- page 11 of 24 -->
 
-(a)  
-![](images/ea244bf54e09c92e296caa0e0cd34a9754cd2715ababf4478e9be9f098e9fb8a.jpg)  
-(e)
+Diversity 2024, 16, 687 y , ,
 
-![](images/ec8cc2ee98ea3d920c49faeec8f584f3b7a5582cf6265a6978bdc3865d26c311.jpg)
+11 of 23
 
-(b)  
-![](images/f95eae055a4e388254961933b6468310be611c380d6cad57a56e934e4a1c4e90.jpg)
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:3)
 
-![](images/c21530789b4bdf5f45b59af8d3c6344e6f7642d12c96aaa2787c98a19dde646a.jpg)
+(a)
 
-(f)  
-(c)  
-![](images/67d0eb174809e2ade9e54a5a7f72cdd367e3bf59ed75e40703dcc18c6967e8d1.jpg)
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:5)
 
-![](images/29c1a54ff1c42ba9a1d6162517d7e345c550ce6caa1eb90880a74d348b50be35.jpg)
+(b)
 
-(g)  
-(d)  
-![](images/2f259a3b47fc56d46801d90d755774fc496cc2b4c2ca382a4e44e9ffcdb4e0e6.jpg)  
-(h)  
-igure 8. The functional trait weighted mean (CWM) of the eight functional traits of the ant com-Figure 8. The functional trait weighted mean (CWM) of the eight functional traits of the ant com munities located in the TDF fragments in each area: (a) head length (HL); (b) head width (HW); (c) <sub>munities located in the TDF fragments in each area: (a) head length (HL); (b) head width (HW);</sub> <sup>mandible</sup> <sup>length</sup> <sup>(ML);</sup> <sup>(d)</sup> <sup>eye</sup> <sup>length</sup> <sup>(EL);</sup> <sup>(e)</sup> <sup>interocular</sup> <sup>distance</sup> <sup>(DI);</sup> <sup>(f)</sup> <sup>scape</sup> <sup>length</sup> <sup>(SL);</sup> <sup>(g)</sup> <sub>(c) mandible length (ML); (d) eye length (EL); (e) interocular distance (DI); (f) scape length (SL);</sub> <sup>emur</sup> <sup>length</sup> <sup>(FL);</sup> <sup>and</sup> <sup>(h)</sup> <sup>Weber</sup> <sup>length</sup> <sup>(WL).</sup> <sup>In</sup> <sup>each</sup> <sup>graph,</sup> <sup>the</sup> <sup>different</sup> <sup>letters</sup> <sup>associated</sup> <sup>with</sup> (g) femur length (FL); and (h) Weber length (WL). In each graph, the different letters associated with the TDF fragments represent significant differences in the CWM values evaluated by Tukey’s post hoc analysis. All morphometric traits are expressed in mm. The boxes represent the interquartile range between the first and third quartiles (25th and 75th percentile, respectively), and the horizontal line indicates the median. The whiskers represent the maximum and minimum values. The solid<sup>ible</sup> <sup>length</sup> <sup>(ML);</sup> <sup>(d)</sup> <sup>eye</sup> <sup>length</sup> <sup>(EL);</sup> <sup>(e)</sup> <sup>interocular</sup> <sup>distance</sup> <sup>(DI);</sup> <sup>(f)</sup> <sup>scape</sup> <sup>length</sup> <sup>(SL);</sup> <sup>(g)</sup> dots represent outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3.
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:7)
 
-## Functional Diversitye between the first and third qu
-
-The functional space occupied by the ant community showed an increase in N3 $( 4 2 . 7 \pm 2 1 . 3 ) $ by approximately five orders of magnitude relative to N2 $( 9 . 8 9 \pm 8 . 2 2 ) $ $( \mathrm { F } _ { 1 , 9 } ~ = ~ 8 . 8 6 ; ~ p ~ = ~ 0 . 0 1 8 )$ and seven orders of magnitude relative to N1 $( 5 . 8 6 ~ \pm ~ 5 . 6 8 )$ $( \mathrm { F } _ { 1 , 9 } = 8 . 8 6 ; p = 0 . 0 1 0 )$ (Figure 9a). Functional equitability values did not show significant differences among the TDF fragments in each area18) and seven orders of magnitude relative to N1 (5.86 ± 5.68) (F = 8. $( 0 . 6 5 \pm 0 . 0 4 3 6$ <sup>2;</sup> for $\mathrm { N } 3 ; 0 . 6 5 2 \pm 0 . 0 3 6$ <sup>for</sup> <sub>for</sub>ure 9 $\mathrm { N } 2 ;$ <sup>(F1,9</sup> and<sup>nctio</sup> $0 . 6 1 8 \pm 0 . 0 4 8$ 93) (Fig<sub>for N1)ues</sub> <sub>did</sub> <sub>n</sub> $( \mathrm { F } _ { 1 , 9 } = 0 . 7 6 ; p = 0 . 4 9 3 )$ significant reduction in functional <sub>(Figure 9b). N3 showed a significantes</sub> <sub>among</sub> <sub>the</sub> <sup>redundancy</sup> <sup>values</sup> <sup>(0.757</sup> <sup>±</sup> <sup>0.0136)</sup> <sup>compare</sup><sub>reduction in functional redundancy values</sub> <sup>fragments</sup> <sup>in</sup> <sup>each</sup> <sup>area</sup> <sup>(0.65</sup> <sup>±</sup> <sup>0.0436</sup> <sup>for</sup> <sup>N3;</sup> <sup>0.652</sup> <sup>±</sup> <sup>0.036</sup> $( 0 . 7 5 7 \pm 0 . 0 1 3 6 )$ 1 (0.781 ± 0.004) (F1,9 = 7.87; <sub>compared to those from N1</sub>048 (0.781 ± 0.004) $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 0 1 0 )$ and N2 (0.775 ± 0.005) $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 4 3 0 )$ differ-<sub>, while</sub> nces (F1,9 = 7.87; p = 0.646) (Figure<sub>N1 and N2 showed no differences.010)</sub> <sub>and</sub> <sub>N2</sub> <sub>(0.775</sub> <sub>±</sub> <sub>0.005)</sub> <sub>(F1,9</sub> <sub>=</sub> <sub>7.87;</sub> <sub>p</sub> <sub>=</sub> <sub>0.4</sub> $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 6 4 6 )$ ed a significant increase in Rao’s <sub>(Figure 9c). Finally, N3 showed a</sub> <sub>no</sub> <sub>differ-</sub> significant increase in<sup>s</sup> <sup>(F1,9</sup> <sup>=</sup> <sup>7.87;</sup> <sup>p</sup> <sup>=</sup> <sup>0.646)</sup> <sup>(Figur</sup> $\mathrm { R a o ^ { \prime } s Q }$ <sup>d</sup> <sup>to</sup> <sup>those</sup> <sup>from</sup> <sup>N2</sup> <sup>(4.9</sup> <sup>±</sup> <sup>0.22)</sup> <sup>(F1,9</sup> <sup>=</sup> <sup>9.64;</sup> <sup>p</sup> <sup>=</sup> <sup>0.0</sup>values (6.21 ± 0.92) compared to those from N2<sup>y,</sup> <sup>N3</sup> <sup>showed</sup> <sup>a</sup> <sup>significant</sup> <sup>increase</sup> <sup>in</sup> <sup>Rao’s</sup> $( 4 . 9 \pm 0 . 2 2 ) $ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ; p = 0 . 0 2 1 )$ <sup>64;</sup> <sup>p</sup> <sup>=</sup> <sub>and N1</sub> $( 4 . 5 8 \pm 0 . 1 9 4 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ; \mathrm { p } = 0 . 0 0 6 ) .$ <sup>ents</sup> <sup>from</sup> <sup>N1</sup> <sup>and</sup> <sup>N2</sup> ; on the other hand, the <sup>howed</sup> <sup>no</sup> <sup>differences</sup> <sup>(F1,9</sup> <sup>=</sup> <sup>7.87;</sup> <sup>p</sup> <sup>=</sup> <sup>0.713)</sup> <sup>(Fig</sup>fragments from N1 and N2 showed no differencesed no differences (F1,9 = 7.87; p = 0.713) (Figure 9d) (Table S8). $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 7 1 3 )$ (Figure 9d) (Table S8).
-
-![](images/9d120c093441c2e94b9a7f6396cde022dd87d48850c56c018b037d3c10e91f99.jpg)
-
-![](images/4bd45ed3f9da848dd586d8c45a524a20ef8747a48cf649c7e5a624f699b41800.jpg)
-
-(a)  
-![](images/8d4f46e19a3a5004d27d762ffe25672428cdb01c8ec01b92f2dc4d717f308f8e.jpg)  
 (c)
 
-(b)  
-![](images/327ac94660f391e925195a35d29df80eaeeb0fb21d2568ff53833b5a8c96b779.jpg)  
-(d)  
-Figure 9. Estimated functional diversity indices for ant communities located in the TDF fragments in <sup>y</sup> <sup>(Fred);</sup> <sup>and</sup> <sup>(d)</sup> <sup>Rao’s</sup> <sup>quadratic</sup> <sup>entropy</sup> <sup>(Rao’s</sup> <sup>Q).</sup> <sup>In</sup> <sup>each</sup> <sup>graph,</sup> <sup>the</sup> <sup>different</sup> <sup>letters</sup> <sup>associ-</sup>each area. (a) Functional richness (FRic); (b) functional evenness (FEve); (c) functional redundancy (Fred); and (d) Rao’s quadratic entropy (Rao’s Q). In each graph, the different letters associated with the TDF fragments represent significant differences in the values of each index evaluated by Tukey’s Figure 9. Estimated functional diversity indices for ant communities located in the TDF fragments post hoc analysis. The boxes represent the interquartile range between the first and third quartiles <sup>n</sup> <sup>each</sup> <sup>area.</sup> <sup>(a)</sup> <sup>Functional</sup> <sup>richness</sup> <sup>(FRic);</sup> <sup>(b)</sup> <sup>functional</sup> <sup>evenness</sup> <sup>(FEve);</sup> <sup>(c)</sup> <sup>functional</sup> <sup>redun-</sup>(25th and 75th percentile, respectively), and the horizontal line indicates the median. The whiskers dancy (Fred); and (d) Rao’s quadratic entropy (Rao’s Q). In each graph, the different letters associ-<sub>represent the maximum and minimum values. The solid dots represent outliers. Orange boxes: N1;</sub> Green boxes: N2; Blue boxes: N3.
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:9)
+
+(d)
+
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:11)
+
+(e)
+
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:13)
+
+(f)
+
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:15)
+
+(g)
+
+![Image block](doc:86c3fb9/tier:advanced/page:11/block:17)
+
+(h)
+
+igure 8. The functional trait weighted mean (CWM) of the eight functional traits of the ant com-Figure 8. The functional trait weighted mean (CWM) of the eight functional traits of the ant communities located in the TDF fragments in each area: (a) head length (HL); (b) head width (HW); (c) munities located in the TDF fragments in each area: (a) head length (HL); (b) head width (HW);b) ( ) (d) mandible length (ML); (d) eye length (EL); (e) interocular distance (DI); (f) scape length (SL); (g) (c) mandible length (ML); (d) eye length (EL); (e) interocular distance (DI); (f) scape length (SL); g ( );  ( )  g ( ).   g p , (g) femur length (FL); and (h) Weber length (WL). In each graph, the different letters associated with the TDF fragments represent significant differences in the CWM values evaluated by Tukey’s post hoc analysis. All morphometric traits are expressed in mm. The boxes represent the interquartile l li i di t th di . Th hi k t th i d i i l . Th lidrange between the first and third quartiles (25th and 75th percentile, respectively), and the horizontalti l t d i th TDF f t i h : ( ) h d l th (HL); (b) h d idth (HW ots represent outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3. line indicates the median. The whiskers represent the maximum and minimum values. The solidible length (ML); (d) eye length (EL); (e) interocular distance (DI); (f) scape length (SL); (g) dots represent outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3.DF f t t i ifi t diff i th CWM l l t d b T k ’ t
+
+## Functional Diversity between the first and third qu
+
+The functional space occupied by the ant community showed an increase in N3nt outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3. $( 4 2 . 7 \pm 2 1 . 3 )$ by approximately five orders of magnitude relative to N2 $( 9 . 8 9   \pm   8 . 2 2 )$ $( \mathbb { F } _ { 1 , 9 }   =   8 . 8 6 ;     p   =   0 . 0 1 8 )$ ,and seven orders of magnitude relative to N1 $( 5 . 8 6   \pm   5 . 6 8 )$ $( \mathbb { F } _ { 1 , 9 } = 8 . 8 6 ;   p = 0 . 0 1 0 )$ (Figure 9a). Functional equitability values did not show signifi-..  .  ; .cant differences among the TDF fragments in each area18) and seven orders of magnitude relative to N1 (5.86 ± 5.68) (F1,9 = 8.8 $( 0 . 6 5 \pm 0 . 0 4 3 6$ for $\mathrm { N } 3 ; 0 . 6 5 2 \pm 0 . 0 3 6$ forre 9 $\mathrm { N } 2 ;$ ,andnctio $0 . 6 1 8 \pm 0 . 0 4 8$ gfor N1)ues did n $( \mathbb { F } _ { 1 , 9 } = 0 . 7 6 ; p = 0 . 4 9 3 )$ g  (Figure 9b). N3 showed a significants among the y  ( .  . ) preduction in functional redundancy valuesg    ( .  .  ; .  . $( 0 . 7 5 7 \pm 0 . 0 1 3 6 )$ .  . ,  . compared to those from N1.(0.781 ± 0.004)ndancy values (0.75 $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 0 1 0 )$ . ; p  . ),and N2 (0.775 ± 0.005)from N1 (0.781 ± 0.004) (F1,9 = $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 4 3 0 )$ , while 1,9  . ; p  . ) ( gN1 and N2 showed no differences.010) and N2 (0.775 ± 0.005) (F1,9 = 7.87; p = 0.43 $( \mathbb { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 6 4 6 )$ g  (Figure 9c). Finally, N3 showed a no differ-.  .significant increase in1,9  . ; p  . ) ( g $\operatorname { R a o ^ { \prime } s } \mathbf { Q }$ .  . ) ( 1,9  . ; p  . values (6.21 ± 0.92) compared to those from N2y, N3 showed a significant increase in Rao’s $( 4 . 9 \pm 0 . 2 2 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ;   p = 0 . 0 2 1 )$ 64; p = and N106);  th $( 4 . 5 8 \pm 0 . 1 9 4 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ;   \mathrm { p } = 0 . 0 0 6 ) ,$ on the other hand, the howed no differences (F1,9 = 7.87; p = 0.713) (Figfragments from N1 and N2 showed no differencesed no differences (F1,9 = 7.87; p = 0.713) (Figure 9d) (Table S8). $( \mathbb { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 7 1 3 )$ (Figure 9d) (Table S8).
+
+| Category | Q1 | Q2 (Median) | Q3 | IQR |
+| --- | --- | --- | --- | --- |
+| Orange | ~3 | ~4 | ~7 | ~4 |
+| Green | ~4 | ~9 | ~15 | ~11 |
+| Blue | ~28 | ~38 | ~53 | ~35 |
+
+(a)
+
+| Category | Q1 | Q2 (Median) | Q3 |
+| --- | --- | --- | --- |
+| Orange | ~0.594 | ~0.612 | ~0.639 |
+| Green | ~0.635 | ~0.658 | ~0.679 |
+| Blue | ~0.630 | ~0.650 | ~0.678 |
+
+(b)
+
+| Category | Q1 | Q2 (Median) | Q3 |
+| --- | --- | --- | --- |
+| Orange | ~0.776 | ~0.780 | ~0.784 |
+| Green | ~0.771 | ~0.775 | ~0.779 |
+| Blue | ~0.746 | ~0.756 | ~0.767 |
+
+(c)
+
+| Category | Q1 | Q2 (Median) | Q3 |
+| --- | --- | --- | --- |
+| Orange | ~4.35 | ~4.55 | ~4.70 |
+| Green | ~4.80 | ~4.90 | ~5.00 |
+| Blue | ~5.45 | ~6.20 | ~7.00 |
+
+(d)
+
+ch area. (a) Functional richness (FRic); (b) functional evenness (FEve); (c) functional redun-Figure 9. Estimated functional diversity indices for ant communities located in the TDF fragments in (Fred); and (d) Rao’s quadratic entropy (Rao’s Q). In each graph, the different letters associ-each area. (a) Functional richness (FRic); (b) functional evenness (FEve); (c) functional redundancy key’s post hoc analysis. The boxes represent the interquartile range between the first and third (Fred); and (d) Rao’s quadratic entropy (Rao’s Q). In each graph, the different letters associated with the TDF fragments represent significant differences in the values of each index evaluated by Tukey’s igure 9. Estimated functional diversity indices for ant communities located in the TDF fragments post hoc analysis. The boxes represent the interquartile range between the first and third quartiles n each area. (a) Functional richness (FRic); (b) functional evenness (FEve); (c) functional redun-(25th and 75th percentile, respectively), and the horizontal line indicates the median. The whiskers y ( );  ( ) ’ q py ( ’ ).   g p ,represent the maximum and minimum values. The solid dots represent outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3.
+
+<!-- page 12 of 24 -->
+
+Diversity 2024, 16, 687
+
+12 of 23
 
 ## 4. Discussion
 
@@ -203,9 +487,17 @@ Sampling coverage values interpreted in terms of completeness were high in all s
 
 ## 4.2. Alpha Diversity
 
-In this study, diversity expressed as the effective number of species $( ^ { 0 } \mathrm { D } )$ showed a variable pattern at spatial and temporal levels. N2 and N3 recorded higher values of species richness compared to N1. This trend is consistent for common species (<sup>1</sup>D) and dominant species $( \mathrm { \dot { ^ { 2 } D } } )$ in both climatic seasons. However, variations in richness between climatic seasons were only marked in N3. The results of this study contrast with other assessments of ant diversity in the Colombian Caribbean. In the departments of La Guajira and Magdalena, a high variation in ant richness has been recorded at a spatial level, without being influenced by climatic seasons [40,43], while in the department of N1, the variation in richness is mostly explained by climatic seasons [41]. The variation in species richness between the TDF fragments among different areas could be associated with the heterogeneity and vegetation cover of the evaluated fragments, which consequently determine the contribution of leaf litter to the system [44,82]. Some results show that species-rich ant communities are associated with heterogeneous forests $( \mathrm { e . g . }$ , developed vegetation cover, abundant leaf litter) due to a greater availability of food resources and nesting sites for the coexistence of a greater number of ant species [83–86].
+In this study, diversity expressed as the effective number of species $( ^ { 0 } \mathrm { D } )$ showed a variable pattern at spatial and temporal levels. N2 and N3 recorded higher values of species richness compared to N1. This trend is consistent for common species (1<sub>D</sub>) and dominant species $( \hat { 2 } \mathrm { D } )$ in both climatic seasons. However, variations in richness between climatic seasons were only marked in N3. The results of this study contrast with other assessments of ant diversity in the Colombian Caribbean. In the departments of La Guajira and Magdalena, a high variation in ant richness has been recorded at a spatial level, without being influenced by climatic seasons [40,43], while in the department of N1, the variation in richness is mostly explained by climatic seasons [41]. The variation in species richness between the TDF fragments among different areas could be associated with the heterogeneity and vegetation cover of the evaluated fragments, which consequently determine the contribution of leaf litter to the system [44,82]. Some results show that species-rich ant communities are associated with heterogeneous forests $( \mathbf { e . g . } ,$ , developed vegetation cover, abundant leaf litter) due to a greater availability of food resources and nesting sites for the coexistence of a greater number of ant species [83–86].
 
-The structure of the ant community in the TDF fragments in each area is represented by a low proportion of dominant species and a high proportion of uncommon and rare species. Solenopsis azteca was the most numerically dominant species in all studied areas. The dominance of Solenopsis azteca could be explained by the nesting and foraging preferences of this species, as its generalist and opportunistic behavior allows it to take advantage of a greater variety of food resources in the leaf litter [60,87]. Another numerically dominant species is Octostruma amrishi, which recorded higher capture frequency values in N2 and N3 compared to the fragments of N1. Ants of the Octostruma genus are part of the cryptic myrmicines, so they are not usually recorded in high abundances in studies of ant diversity [88]. The high dominance of Octostruma amrishi is likely associated with the presence of habitats with high vegetation cover, with the presence of a deeper layer of leaf litter, which may favor the settlement of specialized species [89] as well as a wide variety of small arthropods on which they feed [27]. The other abundant species include Strumigenys eggersi, Pheidole flavens, Hypoponera opacior, Solenopsis geminata, and Nylanderia guatemalensis.
+The structure of the ant community in the TDF fragments in each area is represented by a low proportion of dominant species and a high proportion of uncommon and rare species. Solenopsis azteca was the most numerically dominant species in all studied areas. The
+
+<!-- page 13 of 24 -->
+
+Diversity 2024, 16, 687
+
+13 of 23
+
+dominance of Solenopsis azteca could be explained by the nesting and foraging preferences of this species, as its generalist and opportunistic behavior allows it to take advantage of a greater variety of food resources in the leaf litter [60,87]. Another numerically dominant species is Octostruma amrishi, which recorded higher capture frequency values in N2 and N3 compared to the fragments of N1. Ants of the Octostruma genus are part of the cryptic myrmicines, so they are not usually recorded in high abundances in studies of ant diversity [88]. The high dominance of Octostruma amrishi is likely associated with the presence of habitats with high vegetation cover, with the presence of a deeper layer of leaf litter, which may favor the settlement of specialized species [89] as well as a wide variety of small arthropods on which they feed [27]. The other abundant species include Strumigenys eggersi, Pheidole flavens, Hypoponera opacior, Solenopsis geminata, and Nylanderia guatemalensis.
 
 ## 4.3. Spatial and Temporal Variation and Beta Diversity in the Ant Community
 
@@ -217,9 +509,15 @@ High levels of beta diversity are a feature maintained in the TDF even at small 
 
 A total of 52 species are shared among the studied areas, which may be related to the similarity of ant communities within the same type of landscape [46,97]. Furthermore, one-third of the total identified species correspond to unique or exclusive species distributed throughout the study area, which underlines the importance of research at local and regional scales (Figure S2). This information constitutes an important input for the understanding of ecological patterns and processes at local and regional scales in the TDF.
 
+<!-- page 14 of 24 -->
+
+Diversity 2024, 16, 687
+
+14 of 23
+
 ## 4.4. Functional Groups
 
-The functional groups with the highest species richness were consistent throughout the studied areas, highlighting the small-sized epigeal omnivores (SO) with species of the genera Pheidole, Solenopsis, Rogeria, Carebara, Pogonomyrmex, and Wasmannia. Species belonging to this group are generalists and opportunists, allowing them to take advantage of a greater variety of food resources and adapt to less favorable environmental condi tions [27]. The groups of arboreal omnivores (AO) and dacetine predators (DP) were also important in terms of species richness among the studied areas; the arboreal omnivores (AO) included species from the genera Crematogaster, Cephalotes, Dolichoderus, Monomorium, Nesomyrmex, and Azteca. These species have generalist habits, whereas the majority of the species occupy the arboreal stratum, being able to nest in dead branches and actively forage in the leaf litter [27]. Dacetine predatory ants (DP) were represented by species of the genera Strumigenys, Rhopalothrix, and Eurhopalothrix, genera exclusive to leaf litter that feed on a wide variety of small arthropods [92]. The results highlight the importance of leaf litter as a microhabitat that offers a high availability of food resources and nesting sites that determine the taxonomic and functional structure of ant communities [90,91,98,99].
+The functional groups with the highest species richness were consistent throughout the studied areas, highlighting the small-sized epigeal omnivores (SO) with species of the genera Pheidole, Solenopsis, Rogeria, Carebara, Pogonomyrmex, and Wasmannia. Species belonging to this group are generalists and opportunists, allowing them to take advantage of a greater variety of food resources and adapt to less favorable environmental conditions [27]. The groups of arboreal omnivores (AO) and dacetine predators (DP) were also important in terms of species richness among the studied areas; the arboreal omnivores (AO) included species from the genera Crematogaster, Cephalotes, Dolichoderus, Monomorium, Nesomyrmex, and Azteca. These species have generalist habits, whereas the majority of the species occupy the arboreal stratum, being able to nest in dead branches and actively forage in the leaf litter [27]. Dacetine predatory ants (DP) were represented by species of the genera Strumigenys, Rhopalothrix, and Eurhopalothrix, genera exclusive to leaf litter that feed on a wide variety of small arthropods [92]. The results highlight the importance of leaf litter as a microhabitat that offers a high availability of food resources and nesting sites that determine the taxonomic and functional structure of ant communities [90,91,98,99].
 
 The set of functional groups in all studied areas reflect a great variability in the resources available for the establishment of numerous species of ants with different trophic requirements (herbivores, omnivores, predators, specialists). The results of this study show a homogeneous distribution of functional groups throughout the study area, where a total of 17 functional groups were shared between the TDF fragments, suggesting that despite the differences in the taxonomic composition of the ant communities, the functions performed by the species in a fragment can be assumed by other ecologically similar species in another one [48].
 
@@ -229,7 +527,15 @@ The results suggest that mean mandible length values were higher in ants from N3
 
 ## Functional Diversity
 
-The components of functional diversity, richness (Fric), and Rao’s quadratic entropy (Rao’s Q) showed a similar trend to that of taxonomic diversity, with higher values in N3. The high values of functional richness in N3 indicate a greater diversity of functional traits and, consequently, an increase in the capacity of the ant community to develop more efficient functions in the leaf litter derived from a greater partition of the avail able resources and the occupation of a larger volume in the functional space [105,106]. The latter is supported by the high Rao’s Q values, suggesting greater functional dif ferences between species in these fragments. The high Rao’s Q values in N3 could be related to a higher proportion of rare species (36 species) compared to N1 and N2 (14 and 26 species, respectively), indicating a more diverse community with functionally different species [102,107].
+The components of functional diversity, richness (Fric), and Rao’s quadratic entropy (Rao’s Q) showed a similar trend to that of taxonomic diversity, with higher values in N3. The high values of functional richness in N3 indicate a greater diversity of functional traits and, consequently, an increase in the capacity of the ant community to develop
+
+<!-- page 15 of 24 -->
+
+Diversity 2024, 16, 687
+
+15 of 23
+
+more efficient functions in the leaf litter derived from a greater partition of the available resources and the occupation of a larger volume in the functional space [105,106]. The latter is supported by the high Rao’s Q values, suggesting greater functional differences between species in these fragments. The high Rao’s Q values in N3 could be related to a higher proportion of rare species (36 species) compared to N1 and N2 (14 and 26 species, respectively), indicating a more diverse community with functionally different species [102,107].
 
 We found that N3 had a large amount of morphofunctional space (FRic = 42.7), but the functional redundancy decreased, suggesting that the ant community in these fragments could be less resistant to species loss [64,106–108]. A higher proportion of unique species has been directly linked to lower community resilience [105]. In this sense, species such as Alfaria minuta; Eurhopalothrix pilulifera Brown and Kempf, 1960; Holcoponera strigata (Norton, 1868); Hylomyrma columbica (Forel, 1912); Lachnomyrmex scrobiculatus Wheeler, 1910; Proceratium catio; and Rasopone pluviselva are shown as functionally different units from their respective traits, presenting different mechanisms for the use of resources [19,108]. The loss of these species could mean the reduction of functions intrinsically associated with the habitability resource of ants [27]. In contrast, ant communities in N1 and N2 occupy similar functional spaces (FRic) with a greater similarity between species (Rao’s Q) favoring functional homogenization processes as well as a lower vulnerability of the community (i.e., higher values of functional redundancy, Fred). These results are like the pattern observed in the analysis of spatial variation, suggesting that the similarity in the taxonomic composition of the species is also supported by the presence of shared functional traits between both fragments, indicating greater resistance.
 
@@ -239,33 +545,57 @@ The taxonomic diversity of leaf-litter-associated ants in the studied areas show
 
 The patterns of taxonomic alpha diversity and functional diversity as well as beta diversity and functional groups underline the importance of integrating the functional analysis of ant communities with the taxonomic assessment of species since each component reveals different aspects within the ecosystem. The results of this study contribute to a better understanding of the organization and dynamics of ant communities as well as ecological patterns and processes at local and regional scales in the TDF.
 
-Supplementary Materials: The following supporting information can be downloaded at: https:// www.mdpi.com/article/10.3390/d16110687/s1, This section provides information about the effective number of ant species (Figure S1), species richness (Figure S2) and values of beta diversity components (Table S1) in the tropical dry forest sampling sites. Also included are the values of the functional traits analysed in the species (Table S2) and summaries of several statistical tests applied to the samples ( bl )
+**Supplementary Materials:** The following supporting information can be downloaded at: [https:// www.mdpi.com/article/10.3390/d16110687/s1](https://www.mdpi.com/article/10.3390/d16110687/s1), This section provides information about the effective number of ant species (Figure S1), species richness (Figure S2) and values of beta diversity components (Table S1) in the tropical dry forest sampling sites. Also included are the values of the functional traits analysed in the species (Table S2) and summaries of several statistical tests applied to the samples (Tables S3–S8).
 
-Author Contributions: R.J.G. and J.C.-V. contributed equally to the conceptualization and development of this study. The sampling design and field work were carried out by J.C.-V., R.J.G., H.S.-C. and S.d.l.H.-P. The taxonomic identification of the ants was carried out by J.C.-V., H.S.-C. and S.d.l.H.-P., while the validation was carried out by R.J.G.; data curation and analysis of the information were carried out by J.C.-V., S.d.l.H.-P. and H.S.-C. J.C.-V. prepared the first draft of the manuscript. R.J.G., H.S.-C. and S.d.l.H.-P. reviewed and edited the final version of the manuscript. R.J.G. over saw obtaining funds for this study. All authors have read and agreed to the published version of the manuscript.
+<!-- page 16 of 24 -->
 
-Funding: This study was funded by Ministerio de Ciencia, Tecnología e Innovación de Colombia (Minciencias), Universidad del Atlántico, and Universidad del Magdalena through contingent recov ery financing contract No. 80740-157-2021 (Programas Conectando Conocimiento 2019). The APC was funded by Minciencias and Universidad del Magdalena.
+Diversity 2024, 16, 687
 
-Institutional Review Board Statement: Not applicable.
+16 of 23
 
-Data Availability Statement: The data presented in this study are openly available in [repositoryname e.g., SIB Colombia] at [https://doi.org/10.15472/gyakqs] (accessed on 2 August 2024).
+**Author Contributions:** R.J.G. and J.C.-V. contributed equally to the conceptualization and development of this study. The sampling design and field work were carried out by J.C.-V., R.J.G., H.S.-C. and S.d.l.H.-P. The taxonomic identification of the ants was carried out by J.C.-V., H.S.-C. and S.d.l.H.-P., while the validation was carried out by R.J.G.; data curation and analysis of the information were carried out by J.C.-V., S.d.l.H.-P. and H.S.-C. J.C.-V. prepared the first draft of the manuscript. R.J.G., H.S.-C. and S.d.l.H.-P. reviewed and edited the final version of the manuscript. R.J.G. oversaw obtaining funds for this study. All authors have read and agreed to the published version of the manuscript.
 
-Acknowledgments: We thank the people and institutions that allowed us to access the TDF within their farms, Juan Manuel de la Hoz (Parcela Brasilar); National Parks in the Los Colorados Flora and Fauna Sanctuary; Guadel Muñoz (Palmar del Titi); Gabriel Utria (Vereda Luriza); Cesar Álvarez and Alberto Leones (Caracolí) and Rafa Romero (La Reserva Protectora Coraza); and Grupo de Investigación de Insectos Neotropicales and Centro de Colecciones Científicas—Universidad del Magdalena, for all the logistical support. Professors José Vergara, Lina María Ramos, César Tamaris, and Bladimir Zúñiga provided advice for the development of the ecological analyses carried out.
+**Funding:** This study was funded by Ministerio de Ciencia, Tecnología e Innovación de Colombia (Minciencias), Universidad del Atlántico, and Universidad del Magdalena through contingent recovery financing contract No. 80740-157-2021 (Programas Conectando Conocimiento 2019). The APC was funded by Minciencias and Universidad del Magdalena.
 
-Conflicts of Interest: The authors declare no conflicts of interest. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results.
+**Institutional Review Board Statement:** Not applicable.
+
+**Data Availability Statement:** The data presented in this study are openly available in [repositoryname e.g., SIB Colombia] at [[https://doi.org/10.15472/gyakqs](https://doi.org/10.15472/gyakqs)] (accessed on 2 August 2024).
+
+**Acknowledgments:** We thank the people and institutions that allowed us to access the TDF within their farms, Juan Manuel de la Hoz (Parcela Brasilar); National Parks in the Los Colorados Flora and Fauna Sanctuary; Guadel Muñoz (Palmar del Titi); Gabriel Utria (Vereda Luriza); Cesar Álvarez and Alberto Leones (Caracolí) and Rafa Romero (La Reserva Protectora Coraza); and Grupo de Investigación de Insectos Neotropicales and Centro de Colecciones Científicas—Universidad del Magdalena, for all the logistical support. Professors José Vergara, Lina María Ramos, César Tamaris, and Bladimir Zúñiga provided advice for the development of the ecological analyses carried out.
+
+**Conflicts of Interest:** The authors declare no conflicts of interest. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results.
 
 ## Appendix A
 
-Table A1. List of species collected in the tropical dry forest fragments. The number indicates the frequency of captures in percentage (%). The asterisk symbol indicates species with new records for each department (\*) and new records for the country (\*\*). The functional groups correspond to small epigeic/litter/hypogeic omnivore (SO); arboreous omnivore (AO); dacetine predator (DP); large epigeic generalist predator (LEP); medium-sized litter/hypogeic omnivore (MLO); fungus yeast agriculture (FYA); large/medium-sized arboreous generalist predator (LAP); fungus lower agriculture (FLA); fungus-generalized higher-agriculture (FGHA); small epigeic/litter/hypogeic generalist predator (SLP); army ants (AA); soil-specialized forager/predator (SSP); fungus leaf-cutter agriculture (LCA); Dacetini predator with static prehensile mandibles (DPSM); soil-specialized milli pede predator (SSM); mass predators or nomads (MPN); soil-specialized isopoda forager/predator (SSI); arboreous/soil omnivore (ASO); medium-sized litter/hypogeic generalist predator (MLP); and exclusive homopteran dependent (EHD).
+**Table A1.** List of species collected in the tropical dry forest fragments. The number indicates the frequency of captures in percentage (%). The asterisk symbol indicates species with new records for each department (\*) and new records for the country (\*\*). The functional groups correspond to small epigeic/litter/hypogeic omnivore (SO); arboreous omnivore (AO); dacetine predator (DP); large epigeic generalist predator (LEP); medium-sized litter/hypogeic omnivore (MLO); fungus yeast agriculture (FYA); large/medium-sized arboreous generalist predator (LAP); fungus lower agriculture (FLA); fungus-generalized higher-agriculture (FGHA); small epigeic/litter/hypogeic generalist predator (SLP); army ants (AA); soil-specialized forager/predator (SSP); fungus leaf-cutter agriculture (LCA); Dacetini predator with static prehensile mandibles (DPSM); soil-specialized milli pede predator (SSM); mass predators or nomads (MPN); soil-specialized isopoda forager/predator (SSI); arboreous/soil omnivore (ASO); medium-sized litter/hypogeic generalist predator (MLP); and exclusive homopteran dependent (EHD).
 
-<table><tr><td>Taxa</td><td>Functional Groups</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td colspan="5">Amblyoponinae</td></tr><tr><td>Prionopelta antillana (Forel, 1909)</td><td>SSP</td><td></td><td>1.25*</td><td></td></tr><tr><td colspan="5">Dolichoderinae</td></tr><tr><td>Azteca sp. 1</td><td></td><td></td><td></td><td>1.25</td></tr><tr><td>Dolichoderus bispinosus (Olivier, 1792)</td><td>AO</td><td></td><td></td><td>2.5</td></tr><tr><td>Dolichoderus sp. 2</td><td>AO</td><td></td><td>1.25</td><td></td></tr><tr><td>Tapinoma ramulorum Emery, 1896</td><td>SO</td><td>1.25*</td><td>6.25*</td><td>3.75</td></tr><tr><td colspan="5">Dorylinae</td></tr><tr><td>Labidus coecus (Latreille, 1802)</td><td>AA</td><td>6.25</td><td>1.25</td><td>1.25*</td></tr><tr><td>Labidus praedator (Smith, 1858)</td><td>AA</td><td>2.5*</td><td>2.5</td><td>5*</td></tr><tr><td>Nomamyrmex esenbeckii</td><td>AA</td><td></td><td></td><td>1.25*</td></tr><tr><td>Syscia sp. 1</td><td>MPN</td><td>3.75*</td><td>2.5*</td><td></td></tr></table>
+<table><tr><td>Taxa</td><td>Functional Groups</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td colspan="5">Amblyoponinae</td></tr><tr><td>Prionopelta antillana (Forel, 1909)</td><td>SSP</td><td></td><td>1.25 *</td><td></td></tr><tr><td colspan="5">Dolichoderinae</td></tr><tr><td>Azteca sp. 1</td><td></td><td></td><td></td><td>1.25</td></tr><tr><td>Dolichoderus bispinosus (Olivier, 1792)</td><td>AO</td><td></td><td></td><td>2.5</td></tr><tr><td>Dolichoderus sp. 2</td><td>AO</td><td></td><td>1.25</td><td></td></tr><tr><td>Tapinoma ramulorum Emery, 1896</td><td>SO</td><td>1.25 *</td><td>6.25 *</td><td>3.75</td></tr><tr><td colspan="5">Dorylinae</td></tr><tr><td>Labidus coecus (Latreille, 1802)</td><td>AA</td><td>6.25</td><td>1.25</td><td>1.25 *</td></tr><tr><td>Labidus praedator (Smith, 1858)</td><td>AA</td><td>2.5 *</td><td>2.5</td><td>5 *</td></tr><tr><td>Nomamyrmex esenbeckii</td><td>AA</td><td></td><td></td><td>1.25 *</td></tr><tr><td>Syscia sp. 1</td><td>MPN</td><td>3.75 *</td><td>2.5 *</td><td></td></tr></table>
+
+<!-- page 17 of 24 -->
+
+Diversity 2024, 16, 687
+
+17 of 23
 
 Table A1. Cont.
 
-<table><tr><td>Taxa</td><td>Functional Groups</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td colspan="5">Ectatomminae</td></tr><tr><td>Alfaria minuta Emery, 1896</td><td>SLP</td><td></td><td></td><td>5*</td></tr><tr><td>Ectatomma ruidum (Roger, 1860)</td><td>LEP</td><td>13.75</td><td>2.5</td><td>1.25</td></tr><tr><td>Ectatomma tuberculatum (Olivier, 1792)</td><td>LAP</td><td>1.25</td><td></td><td>1.25*</td></tr><tr><td>Gnamptogenys boliviensis Lattke, 1995</td><td>SLP</td><td></td><td>2.5**</td><td>3.75**</td></tr><tr><td>Gnamptogenys sp. 2</td><td>SLP</td><td></td><td>1.25</td><td></td></tr><tr><td>Holcoponera strigata (Norton, 1868)</td><td>SLP</td><td></td><td></td><td>8.75*</td></tr><tr><td colspan="5">Forminicinae</td></tr><tr><td>Acropyga fuhrmanni (Forel, 1914)</td><td>EHD</td><td></td><td>3.75*</td><td>5*</td></tr><tr><td>Acropyga smithii Forel, 1893</td><td>EHD</td><td></td><td>1.25*</td><td>1.25*</td></tr><tr><td>Brachymyrmex aphidicola Forel, 1909</td><td>ASO</td><td></td><td>5*</td><td>1.25*</td></tr><tr><td>Brachymyrmex minutus Forel, 1893</td><td>ASO</td><td></td><td></td><td>7.5*</td></tr><tr><td>Camponotus sp. 1</td><td>ASO</td><td></td><td>2.5</td><td>1.25</td></tr><tr><td>Camponotus sp. 3</td><td>ASO</td><td></td><td>5</td><td>5</td></tr><tr><td>Camponotus sp. 4</td><td>ASO</td><td>2.5</td><td></td><td>2.5</td></tr><tr><td>Camponotus sp. 5</td><td>ASO</td><td></td><td>1.25</td><td>1.25</td></tr><tr><td>Camponotus sp. 6</td><td>ASO</td><td></td><td></td><td>1.25</td></tr><tr><td>Camponotus sp. 7</td><td>ASO</td><td></td><td></td><td>1.25</td></tr><tr><td>Camponotus striatus (Smith, 1862)</td><td>ASO</td><td></td><td>2.5*</td><td></td></tr><tr><td>Nylanderia guatemalensis (Forel, 1885)</td><td>MLO</td><td>30*</td><td>40*</td><td>51.25*</td></tr><tr><td colspan="5">Myrmicinae</td></tr><tr><td>Acromyrmex santschii (Forel, 1912)</td><td>LCA</td><td>10</td><td></td><td>1.25</td></tr><tr><td>Adelomyrmex myops (Wheeler, 1910)</td><td>SSP</td><td></td><td>2.5</td><td>8.75*</td></tr><tr><td>Apterostigma dentigerum Wheeler, 1925</td><td>FLA</td><td></td><td></td><td>1.25*</td></tr><tr><td>Apterostigma pariense Lattke, 1997</td><td>FLA</td><td></td><td></td><td>1.25**</td></tr><tr><td>Apterostigma pilosum Mayr, 1865</td><td>FLA</td><td>3.75*</td><td>16.25*</td><td>6.25*</td></tr><tr><td>Atta colombica Guérin-Méneville, 1844</td><td>LCA</td><td></td><td>3.75</td><td></td></tr><tr><td>Carebara audita Fernández, 2004</td><td>SO</td><td></td><td>2.5*</td><td></td></tr><tr><td>Carebara brevipilosa Fernández, 2004</td><td>SO</td><td></td><td>10</td><td>12.5*</td></tr><tr><td>Carebara globularia Fernández, 2004</td><td>SO</td><td>11.25*</td><td>3.75*</td><td>23.75*</td></tr><tr><td>Carebara striata (Xu, 2003)</td><td>SO</td><td></td><td>8.75*</td><td>11.25*</td></tr><tr><td>Carebara urichi (Wheeler, 1922)</td><td>SO</td><td></td><td>2.5*</td><td></td></tr><tr><td>Cephalotes atratus (Linnaeus, 1758)</td><td>AO</td><td>1.25</td><td></td><td></td></tr><tr><td>Cephalotes columbicus (Forel, 1912)</td><td>AO</td><td></td><td></td><td>1.25*</td></tr><tr><td>Cephalotes complanatus (Guérin-Méneville, 1844)</td><td>AO</td><td>2.5*</td><td></td><td></td></tr><tr><td>Cephalotes porrasi (Wheeler, 1942)</td><td>AO</td><td>1.25*</td><td></td><td></td></tr><tr><td>Cephalotes varians (Smith, 1876)</td><td>AO</td><td></td><td></td><td>1.25*</td></tr><tr><td>Crematogaster brasiliensis Mayr, 1878</td><td>AO</td><td>6.25*</td><td>5*</td><td>1.25*</td></tr><tr><td>Crematogaster carinata Mayr, 1862</td><td>AO</td><td></td><td></td><td>1.25*</td></tr><tr><td>Crematogaster erecta Mayr, 1866</td><td>AO</td><td>2.5*</td><td>2.5*</td><td></td></tr><tr><td>Crematogaster flavosensitiva Longino, 2003</td><td>AO</td><td>2.5*</td><td></td><td>31.25*</td></tr><tr><td>Crematogaster limata Smith, 1858</td><td>AO</td><td>20*</td><td>23.75*</td><td>11.25*</td></tr><tr><td>Crematogaster nigropilosa Mayr, 1870</td><td>AO</td><td>2.5*</td><td>1.25*</td><td>28.75*</td></tr><tr><td>Crematogaster obscurata Emery, 1895</td><td>AO</td><td>3.75*</td><td></td><td>3.75*</td></tr><tr><td>Crematogaster stollii Forel, 1885</td><td>AO</td><td>1.25*</td><td></td><td></td></tr><tr><td>Cyphomyrmex costatus Mann, 1922</td><td>FYA</td><td>3.75*</td><td>7.5*</td><td>8.75*</td></tr><tr><td>Cyphomyrmex minutus Mayr, 1862</td><td>FYA</td><td>35*</td><td>41.25*</td><td>47.5*</td></tr><tr><td>Cyphomyrmex rimosus (Spinola, 1851)</td><td>FYA</td><td>16.25*</td><td>5</td><td>2.5*</td></tr><tr><td>Cyphomyrmex sp. 4</td><td>FYA</td><td></td><td></td><td>1.25</td></tr><tr><td>Eurhopalothrix pilulifera Brown and Kempf, 1960</td><td>DP</td><td></td><td></td><td>2.5*</td></tr><tr><td>Hylomyrna columbica (Forel, 1912)</td><td>MLO</td><td></td><td></td><td>18.75*</td></tr><tr><td>Lachnomyrmex scrobiculatus Wheeler, 1910</td><td>MLO</td><td></td><td></td><td>2.5*</td></tr><tr><td>Megalomyrmex drifti Kempf, 1961</td><td>MLO</td><td></td><td>18.75</td><td>2.5*</td></tr><tr><td>Megalomyrmex incisus Smith, 1947</td><td>MLO</td><td></td><td>2.5</td><td>5*</td></tr><tr><td>Megalomyrmex longinoi Boudinot et al., 2013</td><td>MLO</td><td></td><td>2.5**</td><td>1.25**</td></tr><tr><td>Megalomyrmex silvestrii Wheeler, 1909</td><td>MLO</td><td>10*</td><td>12.5</td><td>1.25*</td></tr><tr><td>Monomorium floricola (Jerdon, 1851)</td><td>AO</td><td>2.5*</td><td>6.25*</td><td>30*</td></tr></table>
+<table><tr><td>Taxa</td><td>Functional Groups</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td colspan="5">Ectatomminae</td></tr><tr><td>Alfaria minuta Emery, 1896</td><td>SLP</td><td></td><td></td><td>5*</td></tr><tr><td>Ectatoma ruidum (Roger, 1860)</td><td>LEP</td><td>13.75</td><td>2.5</td><td>1.25</td></tr><tr><td>Ectatoma tuberculatum (Olivier, 1792)</td><td>LAP</td><td>1.25</td><td></td><td>1.25*</td></tr><tr><td>Gnamptogenys boliviensis Lattke, 1995</td><td>SLP</td><td></td><td>2.5**</td><td>3.75**</td></tr><tr><td>Gnamptogenys sp. 2</td><td>SLP</td><td></td><td>1.25</td><td></td></tr><tr><td>Holcoponera strigata (Norton, 1868)</td><td>SLP</td><td></td><td></td><td>8.75*</td></tr><tr><td colspan="5">Forminicinae</td></tr><tr><td>Acropyga fuhrmanni (Forel, 1914)</td><td>EHD</td><td></td><td>3.75*</td><td>5*</td></tr><tr><td>Acropyga smithii Forel, 1893</td><td>EHD</td><td></td><td>1.25*</td><td>1.25*</td></tr><tr><td>Brachymyrmex aphidicola Forel, 1909</td><td>ASO</td><td></td><td>5*</td><td>1.25*</td></tr><tr><td>Brachymyrmex minutus Forel, 1893</td><td>ASO</td><td></td><td></td><td>7.5*</td></tr><tr><td>Camponotus sp. 1</td><td>ASO</td><td></td><td>2.5</td><td>1.25</td></tr><tr><td>Camponotus sp. 3</td><td>ASO</td><td></td><td>5</td><td>5</td></tr><tr><td>Camponotus sp. 4</td><td>ASO</td><td>2.5</td><td></td><td>2.5</td></tr><tr><td>Camponotus sp. 5</td><td>ASO</td><td></td><td>1.25</td><td>1.25</td></tr><tr><td>Camponotus sp. 6</td><td>ASO</td><td></td><td></td><td>1.25</td></tr><tr><td>Camponotus sp. 7</td><td>ASO</td><td></td><td></td><td>1.25</td></tr><tr><td>Camponotus striatus (Smith, 1862)</td><td>ASO</td><td></td><td>2.5*</td><td></td></tr><tr><td>Nylanderia guatemalensis (Forel, 1885)</td><td>MLO</td><td>30*</td><td>40*</td><td>51.25*</td></tr><tr><td colspan="5">Myrmicinae</td></tr><tr><td>Acromyrmex santschii (Forel, 1912)</td><td>LCA</td><td>10</td><td></td><td>1.25</td></tr><tr><td>Adelomyrmex myops (Wheeler, 1910)</td><td>SSP</td><td></td><td>2.5</td><td>8.75*</td></tr><tr><td>Apterostigma dentigerum Wheeler, 1925</td><td>FLA</td><td></td><td></td><td>1.25*</td></tr><tr><td>Apterostigma pariiense Lattke, 1997</td><td>FLA</td><td></td><td></td><td>1.25**</td></tr><tr><td>Apterostigma pilosum Mayr, 1865</td><td>FLA</td><td>3.75*</td><td>16.25*</td><td>6.25*</td></tr><tr><td>Atta colombica Guérin-Méneville, 1844</td><td>LCA</td><td></td><td>3.75</td><td></td></tr><tr><td>Carebara audita Fernández, 2004</td><td>SO</td><td></td><td>2.5*</td><td></td></tr><tr><td>Carebara brevipilosa Fernández, 2004</td><td>SO</td><td></td><td>10</td><td>12.5*</td></tr><tr><td>Carebara globularia Fernández, 2004</td><td>SO</td><td>11.25*</td><td>3.75*</td><td>23.75*</td></tr><tr><td>Carebara striata (Xu, 2003)</td><td>SO</td><td></td><td>8.75*</td><td>11.25*</td></tr><tr><td>Carebara urichi (Wheeler, 1922)</td><td>SO</td><td></td><td>2.5*</td><td></td></tr><tr><td>Cephalotes atratus (Linnaeus, 1758)</td><td>AO</td><td>1.25</td><td></td><td></td></tr><tr><td>Cephalotes columbicus (Forel, 1912)</td><td>AO</td><td></td><td></td><td>1.25*</td></tr><tr><td>Cephalotes complanatus (Guérin-Méneville, 1844)</td><td>AO</td><td>2.5*</td><td></td><td></td></tr><tr><td>Cephalotes porrasi (Wheeler, 1942)</td><td>AO</td><td>1.25*</td><td></td><td></td></tr><tr><td>Cephalotes varians (Smith, 1876)</td><td>AO</td><td></td><td></td><td>1.25*</td></tr><tr><td>Crematogaster brasiliensis Mayr, 1878</td><td>AO</td><td>6.25*</td><td>5*</td><td>1.25*</td></tr><tr><td>Crematogaster carinata Mayr, 1862</td><td>AO</td><td></td><td></td><td>1.25*</td></tr><tr><td>Crematogaster erecta Mayr, 1866</td><td>AO</td><td>2.5*</td><td>2.5*</td><td></td></tr><tr><td>Crematogaster flavosensitiva Longino, 2003</td><td>AO</td><td>2.5*</td><td></td><td>31.25*</td></tr><tr><td>Crematogaster limata Smith, 1858</td><td>AO</td><td>20*</td><td>23.75*</td><td>11.25*</td></tr><tr><td>Crematogaster nigropilosa Mayr, 1870</td><td>AO</td><td>2.5*</td><td>1.25*</td><td>28.75*</td></tr><tr><td>Crematogaster obscurata Emery, 1895</td><td>AO</td><td>3.75*</td><td></td><td>3.75*</td></tr><tr><td>Crematogaster stollii Forel, 1885</td><td>AO</td><td>1.25*</td><td></td><td></td></tr><tr><td>Cyphomyrmex costatus Mann, 1922</td><td>FYA</td><td>3.75*</td><td>7.5*</td><td>8.75*</td></tr><tr><td>Cyphomyrmex minutus Mayr, 1862</td><td>FYA</td><td>35*</td><td>41.25*</td><td>47.5*</td></tr><tr><td>Cyphomyrmex rimosus (Spinola, 1851)</td><td>FYA</td><td>16.25*</td><td>5</td><td>2.5*</td></tr><tr><td>Cyphomyrmex sp. 4</td><td>FYA</td><td></td><td></td><td>1.25</td></tr><tr><td>Eurhopalothrix pilulifera Brown and Kempf, 1960</td><td>DP</td><td></td><td></td><td>2.5*</td></tr><tr><td>Hylomyrna columbica (Forel, 1912)</td><td>MLO</td><td></td><td></td><td>18.75*</td></tr><tr><td>Lachnomyrmex scrobiculatus Wheeler, 1910</td><td>MLO</td><td></td><td></td><td>2.5*</td></tr><tr><td>Megalomyrmex drifti Kempf, 1961</td><td>MLO</td><td></td><td>18.75</td><td>2.5*</td></tr><tr><td>Megalomyrmex incisus Smith, 1947</td><td>MLO</td><td></td><td>2.5</td><td>5*</td></tr><tr><td>Megalomyrmex longinoi Boudinot et al., 2013</td><td>MLO</td><td></td><td>2.5**</td><td>1.25**</td></tr><tr><td>Megalomyrmex silvestrii Wheeler, 1909</td><td>MLO</td><td>10*</td><td>12.5</td><td>1.25*</td></tr><tr><td>Monomorium floricola (Jerdon, 1851)</td><td>AO</td><td>2.5*</td><td>6.25*</td><td>30*</td></tr></table>
+
+<!-- page 18 of 24 -->
+
+Diversity 2024, 16, 687
+
+18 of 23
 
 Table A1. Cont.
 
-<table><tr><td>Taxa</td><td>Functional Groups</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td>Mycetomoellerius sp. 1</td><td>FLA</td><td></td><td>1.25</td><td></td></tr><tr><td>Mycoepurus curvispinosus Mackay, 1998</td><td>FLA</td><td></td><td>10*</td><td></td></tr><tr><td>Myrmicocrypta sp. 2</td><td>FLA</td><td></td><td></td><td>1.25*</td></tr><tr><td>Myrmicocrypta urichi Weber, 1937</td><td>FLA</td><td>7.5*</td><td>5*</td><td></td></tr><tr><td>Nesomyrmex sp. 1</td><td>AO</td><td>1.25*</td><td></td><td></td></tr><tr><td>Octostruma amrishi (Makhan, 2007)</td><td>DPSM</td><td>50*</td><td>73.75*</td><td>76.25*</td></tr><tr><td>Octostruma iheringi (Emery, 1888)</td><td>DPSM</td><td></td><td></td><td>8.75*</td></tr><tr><td>Paratrachymyrmex bugnioni (Forel, 1912)</td><td>FGHA</td><td>3.75</td><td>2.5*</td><td>8.75*</td></tr><tr><td>Paratrachymyrmex cornetzi (Forel, 1912)</td><td>FGHA</td><td></td><td>2.5*</td><td>1.25*</td></tr><tr><td>Paratrachymyrmex irmgardae (Forel, 1912)</td><td>FGHA</td><td>11.25*</td><td></td><td></td></tr><tr><td>Pheidole biconstricta Mayr, 1870</td><td>SO</td><td></td><td>2.5*</td><td>2.5*</td></tr><tr><td>Pheidole fimbriata Roger, 1863</td><td>SO</td><td></td><td>1.25*</td><td>1.25*</td></tr><tr><td>Pheidole flavens Roger, 1863</td><td>SO</td><td>56.25*</td><td>55*</td><td>40*</td></tr><tr><td>Pheidole mendicula Wheeler, 1925</td><td>SO</td><td>38.75*</td><td>48.75*</td><td>25*</td></tr><tr><td>Pheidole pugnax Dalla Torre, 1892</td><td>SO</td><td>48.75*</td><td>45*</td><td>26.25*</td></tr><tr><td>Pheidole subarmata Mayr, 1884</td><td>SO</td><td>7.5*</td><td>12.5*</td><td>23.75*</td></tr><tr><td>Pheidole susannae Forel, 1886</td><td>SO</td><td>2.5*</td><td>2.5*</td><td>1.25*</td></tr><tr><td>Pheidole synarmata Wilson, 2003</td><td>SO</td><td>2.5*</td><td>21.25*</td><td>10*</td></tr><tr><td>Pheidole transversostriata Mayr, 1887</td><td>SO</td><td>2.5*</td><td>1.25*</td><td>1.25*</td></tr><tr><td>Pheidole zeteki Smith, 1947</td><td>SO</td><td>16.25*</td><td>5*</td><td>37.5*</td></tr><tr><td>Pheidole sp. 1</td><td>SO</td><td>3.75</td><td>26.25</td><td>12.5*</td></tr><tr><td>Pheidole sp. 2</td><td>SO</td><td></td><td>12.5</td><td>8.75*</td></tr><tr><td>Pheidole sp. 4</td><td>SO</td><td>3.75</td><td>1.25</td><td>12.5*</td></tr><tr><td>Pheidole sp. 5</td><td>SO</td><td></td><td>5</td><td>2.5*</td></tr><tr><td>Pheidole sp. 9</td><td>SO</td><td></td><td>2.5</td><td>2.5*</td></tr><tr><td>Pheidole sp. 12</td><td>SO</td><td></td><td>5</td><td>2.5*</td></tr><tr><td>Pheidole sp. 13</td><td>SO</td><td></td><td>16.25</td><td>20*</td></tr><tr><td>Pheidole sp. 17</td><td>SO</td><td>1.25</td><td></td><td>1.25*</td></tr><tr><td>Pheidole sp. 18</td><td>SO</td><td></td><td></td><td>20*</td></tr><tr><td>Pogonomyrmex mayri Forel, 1899</td><td>SO</td><td>10</td><td>1.25</td><td>6.25</td></tr><tr><td>Rhopalothrix isthmica (Weber, 1941)</td><td>DP</td><td></td><td>1.25*</td><td></td></tr><tr><td>Rogeria belti Mann, 1922</td><td>SO</td><td>1.25*</td><td>12.5*</td><td>12.5*</td></tr><tr><td>Rogeria ciliosa Kugler, 1994</td><td>SO</td><td></td><td></td><td>1.25**</td></tr><tr><td>Rogeria curvipubens Emery, 1894</td><td>SO</td><td>5*</td><td>11.25*</td><td>15*</td></tr><tr><td>Rogeria foreli Emery, 1894</td><td>SO</td><td>36.25*</td><td>28.75*</td><td>2.5*</td></tr><tr><td>Sericomyrmex amabilis Wheeler, 1925</td><td>FGHA</td><td></td><td>5*</td><td>5*</td></tr><tr><td>Solenopsis azteca Forel, 1893</td><td>SO</td><td>82.5*</td><td>78.75*</td><td>87.5*</td></tr><tr><td>Solenopsis geminata (Fabricius, 1804)</td><td>SO</td><td>50</td><td>18.75</td><td>21.25*</td></tr><tr><td>Solenopsis picea Emery, 1896</td><td>SO</td><td>20*</td><td>26.25*</td><td>41.25*</td></tr><tr><td>Stegomyrmex manni Smith, 1946</td><td>SSP</td><td></td><td>1.25*</td><td>1.25*</td></tr><tr><td>Strumigenys biolleyi Forel, 1908</td><td>DP</td><td></td><td>1.25*</td><td></td></tr><tr><td>Strumigenys cordovensis Mayr, 1887</td><td>DP</td><td></td><td>2.5*</td><td>7.5*</td></tr><tr><td>Strumigenys deltisquama Brown, 1957</td><td>DP</td><td>41.25*</td><td>21.25</td><td>17.5</td></tr><tr><td>Strumigenys denticulata Mayr, 1887</td><td>DP</td><td>1.25*</td><td></td><td>40</td></tr><tr><td>Strumigenys dyseides Bolton, 2000</td><td>DP</td><td>1.25*</td><td></td><td>2.5*</td></tr><tr><td>Strumigenys eggersi Emery, 1890</td><td>DP</td><td>55*</td><td>56.25</td><td>37.5*</td></tr><tr><td>Strumigenys elongata Roger, 1863</td><td>DP</td><td>35*</td><td>43.75</td><td>40</td></tr><tr><td>Strumigenys fridericimuelleri Forel, 1886</td><td>DP</td><td>22.5*</td><td>7.5*</td><td>33.75*</td></tr><tr><td>Strumigenys lanuginosa Wheeler, 1905</td><td>DP</td><td>5*</td><td>11.25*</td><td>3.75*</td></tr><tr><td>Strumigenys marginiventris Santschi, 1931</td><td>DP</td><td>15*</td><td>1.25</td><td>10</td></tr><tr><td>Strumigenys subedentata Mayr, 1887</td><td>DP</td><td></td><td>2.5</td><td>6.25*</td></tr><tr><td>Strumigenys zeteki (Brown, 1959)</td><td>DP</td><td>2.5*</td><td>40*</td><td>3.75*</td></tr><tr><td>Trichomyrmex destructor (Jerdon, 1851)</td><td>ASO</td><td>3.75</td><td>2.5</td><td>8.75*</td></tr><tr><td>Wasmannia auropunctata (Roger, 1863)</td><td>SO</td><td>28.75*</td><td>28.75</td><td>38.75*</td></tr><tr><td colspan="5">Ponerinae</td></tr><tr><td>Anochetus diegensis Forel, 1912</td><td>MLO</td><td></td><td>21.25</td><td>21.25*</td></tr><tr><td>Anochetus inermis André, 1889</td><td>MLO</td><td>11.25*</td><td>1.25</td><td></td></tr><tr><td>Hypoponera opacior (Forel, 1893)</td><td>SLP</td><td>28.75*</td><td>56.25*</td><td>33.75*</td></tr></table>
+<table><tr><td>Taxa</td><td>Functional Groups</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td>Mycetomoellerius sp. 1</td><td>FLA</td><td></td><td>1.25</td><td></td></tr><tr><td>Mycocepurus curvispinosus Mackay, 1998</td><td>FLA</td><td></td><td>10*</td><td></td></tr><tr><td>Myrmicocrypta sp. 2</td><td>FLA</td><td></td><td></td><td>1.25*</td></tr><tr><td>Myrmicocrypta urichi Weber, 1937</td><td>FLA</td><td>7.5*</td><td>5*</td><td></td></tr><tr><td>Nesomyrmex sp. 1</td><td>AO</td><td>1.25*</td><td></td><td></td></tr><tr><td>Octostruma amrishi (Makhan, 2007)</td><td>DPSM</td><td>50*</td><td>73.75*</td><td>76.25*</td></tr><tr><td>Octostruma iheringi (Emery, 1888)</td><td>DPSM</td><td></td><td></td><td>8.75*</td></tr><tr><td>Paratrachymyrmex bugnioni (Forel, 1912)</td><td>FGHA</td><td>3.75</td><td>2.5*</td><td>8.75*</td></tr><tr><td>Paratrachymyrmex cornetzi (Forel, 1912)</td><td>FGHA</td><td></td><td>2.5*</td><td>1.25*</td></tr><tr><td>Paratrachymyrmex irmgardae (Forel, 1912)</td><td>FGHA</td><td>11.25*</td><td></td><td></td></tr><tr><td>Pheidole biconstricta Mayr, 1870</td><td>SO</td><td></td><td>2.5*</td><td>2.5*</td></tr><tr><td>Pheidole fimbriata Roger, 1863</td><td>SO</td><td></td><td>1.25*</td><td>1.25*</td></tr><tr><td>Pheidole flavens Roger, 1863</td><td>SO</td><td>56.25*</td><td>55*</td><td>40*</td></tr><tr><td>Pheidole mendicula Wheeler, 1925</td><td>SO</td><td>38.75*</td><td>48.75*</td><td>25*</td></tr><tr><td>Pheidole pugnax Dalla Torre, 1892</td><td>SO</td><td>48.75*</td><td>45*</td><td>26.25*</td></tr><tr><td>Pheidole subarmata Mayr, 1884</td><td>SO</td><td>7.5*</td><td>12.5*</td><td>23.75*</td></tr><tr><td>Pheidole susannae Forel, 1886</td><td>SO</td><td>2.5*</td><td>2.5*</td><td>1.25*</td></tr><tr><td>Pheidole synarmata Wilson, 2003</td><td>SO</td><td>2.5*</td><td>21.25*</td><td>10*</td></tr><tr><td>Pheidole transversostriata Mayr, 1887</td><td>SO</td><td>2.5*</td><td>1.25*</td><td>1.25*</td></tr><tr><td>Pheidole zeteki Smith, 1947</td><td>SO</td><td>16.25*</td><td>5*</td><td>37.5*</td></tr><tr><td>Pheidole sp. 1</td><td>SO</td><td>3.75</td><td>26.25</td><td>12.5*</td></tr><tr><td>Pheidole sp. 2</td><td>SO</td><td></td><td>12.5</td><td>8.75*</td></tr><tr><td>Pheidole sp. 4</td><td>SO</td><td>3.75</td><td>1.25</td><td>12.5*</td></tr><tr><td>Pheidole sp. 5</td><td>SO</td><td></td><td>5</td><td>2.5*</td></tr><tr><td>Pheidole sp. 9</td><td>SO</td><td></td><td>2.5</td><td>2.5*</td></tr><tr><td>Pheidole sp. 12</td><td>SO</td><td></td><td>5</td><td>2.5*</td></tr><tr><td>Pheidole sp. 13</td><td>SO</td><td></td><td>16.25</td><td>20*</td></tr><tr><td>Pheidole sp. 17</td><td>SO</td><td>1.25</td><td></td><td>1.25*</td></tr><tr><td>Pheidole sp. 18</td><td>SO</td><td></td><td></td><td>20*</td></tr><tr><td>Pogonomyrmex mayri Forel, 1899</td><td>SO</td><td>10</td><td>1.25</td><td>6.25</td></tr><tr><td>Rhopalothrix isthmica (Weber, 1941)</td><td>DP</td><td></td><td>1.25*</td><td></td></tr><tr><td>Rogeria belti Mann, 1922</td><td>SO</td><td>1.25*</td><td>12.5*</td><td>12.5*</td></tr><tr><td>Rogeria ciliosa Kugler, 1994</td><td>SO</td><td></td><td></td><td>1.25**</td></tr><tr><td>Rogeria curvipubens Emery, 1894</td><td>SO</td><td>5*</td><td>11.25*</td><td>15*</td></tr><tr><td>Rogeria foreli Emery, 1894</td><td>SO</td><td>36.25*</td><td>28.75*</td><td>2.5*</td></tr><tr><td>Sericomyrmex amabilis Wheeler, 1925</td><td>FGHA</td><td></td><td>5*</td><td>5*</td></tr><tr><td>Solenopsis azteca Forel, 1893</td><td>SO</td><td>82.5*</td><td>78.75*</td><td>87.5*</td></tr><tr><td>Solenopsis geminata (Fabricius, 1804)</td><td>SO</td><td>50</td><td>18.75</td><td>21.25*</td></tr><tr><td>Solenopsis picea Emery, 1896</td><td>SO</td><td>20*</td><td>26.25*</td><td>41.25*</td></tr><tr><td>Stegomyrmex manni Smith, 1946</td><td>SSP</td><td></td><td>1.25*</td><td>1.25*</td></tr><tr><td>Strumigenys biolleyi Forel, 1908</td><td>DP</td><td></td><td>1.25*</td><td></td></tr><tr><td>Strumigenys cordovensis Mayr, 1887</td><td>DP</td><td></td><td>2.5*</td><td>7.5*</td></tr><tr><td>Strumigenys deltisquama Brown, 1957</td><td>DP</td><td>41.25*</td><td>21.25</td><td>17.5</td></tr><tr><td>Strumigenys denticulata Mayr, 1887</td><td>DP</td><td>1.25*</td><td></td><td>40</td></tr><tr><td>Strumigenys dyseides Bolton, 2000</td><td>DP</td><td>1.25*</td><td></td><td>2.5*</td></tr><tr><td>Strumigenys eggersi Emery, 1890</td><td>DP</td><td>55*</td><td>56.25</td><td>37.5*</td></tr><tr><td>Strumigenys elongata Roger, 1863</td><td>DP</td><td>35*</td><td>43.75</td><td>40</td></tr><tr><td>Strumigenys fridericimuelleri Forel, 1886</td><td>DP</td><td>22.5*</td><td>7.5*</td><td>33.75*</td></tr><tr><td>Strumigenys lanuginosa Wheeler, 1905</td><td>DP</td><td>5*</td><td>11.25*</td><td>3.75*</td></tr><tr><td>Strumigenys marginiventris Santschi, 1931</td><td>DP</td><td>15*</td><td>1.25</td><td>10</td></tr><tr><td>Strumigenys subedentata Mayr, 1887</td><td>DP</td><td></td><td>2.5</td><td>6.25*</td></tr><tr><td>Strumigenys zeteki (Brown, 1959)</td><td>DP</td><td>2.5*</td><td>40*</td><td>3.75*</td></tr><tr><td>Trichomyrmex destructor (Jerdon, 1851)</td><td>ASO</td><td>3.75</td><td>2.5</td><td>8.75*</td></tr><tr><td>Wasmannia auropunctata (Roger, 1863)</td><td>SO</td><td>28.75*</td><td>28.75</td><td>38.75*</td></tr><tr><td colspan="5">Ponerinae</td></tr><tr><td>Anochetus diegensis Forel, 1912</td><td>MLO</td><td></td><td>21.25</td><td>21.25*</td></tr><tr><td>Anochetus inermis André, 1889</td><td>MLO</td><td>11.25*</td><td>1.25</td><td></td></tr><tr><td>Hypoponera opacior (Forel, 1893)</td><td>SLP</td><td>28.75*</td><td>56.25*</td><td>33.75*</td></tr></table>
+
+<!-- page 19 of 24 -->
+
+Diversity 2024, 16, 687
+
+19 of 23
 
 Table A1. Cont.
 
@@ -273,247 +603,354 @@ Table A1. Cont.
 
 ## References
 
-1. Pizano, C.; Cabrera, M.; García, H. Bosque seco tropical en Colombia; generalidades y contexto. In El Bosque Seco Tropical en Colombia; Pizano, C., García, H., Eds.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt (IAvH): Bogotá, Colombia, 2014; pp. 36–47.
-
+Pizano, C.; Cabrera, M.; García, H. Bosque seco tropical en Colombia; generalidades y contexto. In El Bosque Seco Tropical en Colombia; Pizano, C., García, H., Eds.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt (IAvH): Bogotá, Colombia, 2014; pp. 36–47.
 2. Ulloa-Delgado, G. Aspectos Ecológicos del Bosque Seco Tropical en el Caribe Colombiano; Tropenbos Internacional Colombia y Fondo Patrimonio Natural: Bogotá, Colombia, 2016; pp. 5–56.
-
-3. Janzen, D.H. Management of Habitat Fragments in a Tropical Dry Forest: Growth. Ann. Mo. Bot. Gard. 1988, 75, 105–116. [CrossRef]
-
-4. Zuluaga, L. Evaluación Estructural del Ecosistema Bosque Seco Tropical en el Municipio de El Carmen de Bolívar (Bolívar) y Determinación de sus Beneficios Ecosistémicos. Master’s Thesis, Universidad de Manizales, Manizales, Colombia, 23 January 2016. Available online: https://ridum.umanizales.edu.co/xmlui/handle/20.500.12746/2576 (accessed on 20 March 2024)
-
-5. Portillo-Quintero, C.A.; Sánchez-Azofeifa, G.A. Extent and conservation of tropical dry forests in the Americas. Biol. Conserv. 2010, 143, 144–155. [CrossRef]
-
+3. Janzen, D.H. Management of Habitat Fragments in a Tropical Dry Forest: Growth. Ann. Mo. Bot. Gard. 1988, 75, 105–116. [[CrossRef](https://doi.org/10.2307/2399468)]
+4. Zuluaga, L. Evaluación Estructural del Ecosistema Bosque Seco Tropical en el Municipio de El Carmen de Bolívar (Bolívar) y Determinación de sus Beneficios Ecosistémicos. Master’s Thesis, Universidad de Manizales, Manizales, Colombia, 23 January 2016. Available online: [https://ridum.umanizales.edu.co/xmlui/handle/20.500.12746/2576](https://ridum.umanizales.edu.co/xmlui/handle/20.500.12746/2576) (accessed on 20 March 2024).
+5. Portillo-Quintero, C.A.; Sánchez-Azofeifa, G.A. Extent and conservation of tropical dry forests in the Americas. Biol. Conserv. 2010, 143, 144–155. [[CrossRef](https://doi.org/10.1016/j.biocon.2009.09.020)]
 6. García, H.; González-M, R. Bosque Seco Colombia: Biodiversidad y Gestión; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt: Bogotá, Colombia, 2019; p. 8.
-
-7. Franco-Maass, S.; Regil-Gracía, H.H.; Ordóñez-Díaz, J.A. Dinámica de perturbación-recuperación de las zonas forestales en el Parque Nacional Nevado de Toluca. Madera y Bosques 2006, 12, 17–28. [CrossRef]
-
+7. Franco-Maass, S.; Regil-Gracía, H.H.; Ordóñez-Díaz, J.A. Dinámica de perturbación-recuperación de las zonas forestales en el Parque Nacional Nevado de Toluca. Madera y Bosques 2006, 12, 17–28. [[CrossRef](https://doi.org/10.21829/myb.2006.1211247)]
 8. Martínez, N.J.; Cañas, L.M.; Rangel, J.L.; Barraza, J.; Montes, J.; Blanco, O.R. Fich. Bol. Mus. Entomol. U. Valle 2010, 11, 21–30.
+9. Agosti, D.; Alonso, L.E. The ALL Protocol: A standard protocol for the collection of ground-dwelling ants. In Ants: Standard Methods for Measuring and Monitoring Biodiversity; Agosti, D., Majer, J.D., Alonso, L.E., Schultz, T.R., Eds.; Smithsonian Institution Press: Washington, DC, USA, 2000; pp. 204–206.
+10. Folgarait, P.J. Ant biodiversity and its relationship to ecosystem functioning: A review. Biod. Cons. 1998, 7, 1221–1244. [[CrossRef](https://doi.org/10.1023/A:1008891901953)]
+11. Hölldobler, B.; Wilson, E.O. Ecology and Behavior of the primitive cryptobiotic ant Prionopelta amabilis (Hymenoptera: Formicidae). Insectes Sociaux 1986, 33, 45–58. [[CrossRef](https://doi.org/10.1007/BF02224034)]
+12. Andersen, A.N. Sampling communities of ground-foraging ants: Pitfall catches compared with quadrat counts in an Australian tropical savanna. Aust. J. Ecol. 1991, 16, 273–279. [[CrossRef](https://doi.org/10.1111/j.1442-9993.1991.tb01054.x)]
 
-9. Agosti, D.; Alonso, L.E. The ALL Protocol: A standard protocol for the collection of ground-dwelling ants. In Ants: Standard Methodsfor Measuring and Monitoring Biodiversity; Agosti, D., Majer, J.D., Alonso, L.E., Schultz, T.R., Eds.; Smithsonian Institution Press: Washington, DC, USA, 2000; pp. 204–206.
+<!-- page 20 of 24 -->
 
-10. Folgarait, P.J. Ant biodiversity and its relationship to ecosystem functioning: A review. Biod. Cons. 1998, 7, 1221–1244. [CrossRef]
+Diversity 2024, 16, 687
 
-11. Hölldobler, B.; Wilson, E.O. Ecology and Behavior of the primitive cryptobiotic ant Prionopelta amabilis (Hymenoptera: Formicidae). Insectes Sociaux 1986, 33, 45–58. [CrossRef]
+20 of 23
 
-12. Andersen, A.N. Sampling communities of ground-foraging ants: Pitfall catches compared with quadrat counts in an Australian tropical savanna. Aust. J. Ecol. 1991, 16, 273–279. [CrossRef]
-
-13. Underwood, E.C.; Fisher, B.L. The role of ants in conservation monitoring: If, when, and how. Biol. Conserv. 2006, 132, 166–182. [CrossRef]
-
+13. Underwood, E.C.; Fisher, B.L. The role of ants in conservation monitoring: If, when, and how. Biol. Conserv. 2006, 132, 166–182. [[CrossRef](https://doi.org/10.1016/j.biocon.2006.03.022)]
 14. Kaspari, M.; Majer, J.D. Using ants to monitor environmental change. In Ants: Standard Methods for Measuring Y Monitoring Biodiversity; Agosti, J., Majer, J.D., Alonso, L., Schultz, T.R., Eds.; Smithsonian Institution: Washington, DC, USA, 2000; pp. 89–98.
-
-15. Schultz, T.R.; McGlynn, T.P. The interactions of ants with others organisms. In Ants: Standard Methodsfor Measuring y Monitoring Biodiversity; Agosti, J., Majer, J.D., Alonso, L., Schultz, T.R., Eds.; Smithsonian Institution: Washington, DC, USA, 2000; pp. 35–44.
-
+15. Schultz, T.R.; McGlynn, T.P. The interactions of ants with others organisms. In Ants: Standard Methods for Measuring y Monitoring Biodiversity; Agosti, J., Majer, J.D., Alonso, L., Schultz, T.R., Eds.; Smithsonian Institution: Washington, DC, USA, 2000; pp. 35–44.
 16. Moreno, C. La Biodiversidad en un Mundo Cambiante: Fundamentos Teóricos y Metodológicos para su Estudio; Universidad Autónoma del Estado de Hidalgo y Libermex: Ciudad de México, México, 2019.
-
-17. Pey, B.; Nahmani, J.; Auclerc, A.; Capowiez, Y.; Cluzeau, D.; Cortet, J.; Decaëns, J.; Deharveng, L.; Dubs, F.; Joimel, S.; et al. Current use of and future needs for soil invertebrate functional traits in community ecology. Basic Appl. Ecol. 2014, 15, 194–206. [CrossRef]
-
-18. Wong, M.K.L.; Guénard, B.; Lewis, O.T. Trait-based ecology of terrestrial arthropods. Biol. Rev. 2019, 94, 999–1022. [CrossRef]
-
-19. Cadotte, M.W.; Carscadden, K.; Mirotchnick, N. Beyond species: Functional diversity and the maintenance of ecological processes and services. J. Appl. Ecol. 2011, 48, 1079–1087. [CrossRef]
-
-20. Díaz, S.; Cabido, M. Vive la différence: Plant functional diversity matters to ecosystem processes. Trends Ecol. Evol. 2001, 16, 646–655. [CrossRef]
-
-21. Lohbeck, M.; Poorter, L.; Paz, H.; Pla, L.; van Breugel, M.; Martínez-Ramos, M.; Bongers, F. Functional diversity changes during tropical forest succession. Perspect. Plant Ecol. Evol. Syst. 2012, 14, 89–96. [CrossRef]
-
-22. Yates, M.L.; Andrew, N.R.; Binns, M.; Gibb, H. Morphological traits: Predictable responses to macrohabitats across a 300 km scale. PeerJ 2014, 2, 1–20. [CrossRef]
-
+17. Pey, B.; Nahmani, J.; Auclerc, A.; Capowiez, Y.; Cluzeau, D.; Cortet, J.; Decaëns, J.; Deharveng, L.; Dubs, F.; Joimel, S.; et al. Current use of and future needs for soil invertebrate functional traits in community ecology. Basic Appl. Ecol. 2014, 15, 194–206. [[CrossRef](https://doi.org/10.1016/j.baae.2014.03.007)]
+18. Wong, M.K.L.; Guénard, B.; Lewis, O.T. Trait-based ecology of terrestrial arthropods. Biol. Rev. 2019, 94, 999–1022. [[CrossRef](https://doi.org/10.1111/brv.12488)]
+19. Cadotte, M.W.; Carscadden, K.; Mirotchnick, N. Beyond species: Functional diversity and the maintenance of ecological processes and services. J. Appl. Ecol. 2011, 48, 1079–1087. [[CrossRef](https://doi.org/10.1111/j.1365-2664.2011.02048.x)]
+20. Díaz, S.; Cabido, M. Vive la différence: Plant functional diversity matters to ecosystem processes. Trends Ecol. Evol. 2001, 16, 646–655. [[CrossRef](https://doi.org/10.1016/S0169-5347%2801%2902283-2)]
+21. Lohbeck, M.; Poorter, L.; Paz, H.; Pla, L.; van Breugel, M.; Martínez-Ramos, M.; Bongers, F. Functional diversity changes during tropical forest succession. Perspect. Plant Ecol. Evol. Syst. 2012, 14, 89–96. [[CrossRef](https://doi.org/10.1016/j.ppees.2011.10.002)]
+22. Yates, M.L.; Andrew, N.R.; Binns, M.; Gibb, H. Morphological traits: Predictable responses to macrohabitats across a 300 km scale. PeerJ 2014, 2, 1–20. [[CrossRef](https://doi.org/10.7717/peerj.271)]
 23. Rocha, F.; Bogar, A.; Ibañez Weemaels, A.; Jiaxin, H.; Liang, M.; Park, C.; Lee, R.H.; Khan, S.A.; Han, S.; NG, Y.L.; et al. Two sides of the same coin? Ants are ecosystem engineers and providers of ecosystem services. Myrmecol. News. 2024, 34, 129–157.
-
-24. Elizalde, L.; Arbetman, M.; Arnan, X.; Eggleton, P.; Leal, I.R.; Lescano, M.N.; Saez, A.; Werenkraut, V.; Pirk, G.I. The ecosystem services provided by social insects: Traits, management tools and knowledge gaps. Biol. Rev. 2020, 95, 1418–1441. [CrossRef] [PubMed]
-
-25. Bihn, J.H.; Gebauer, G.; Brandl, R. Loss of functional diversity of ant assemblages in secondary tropical forests. Ecology 2010, 91, 782–792. [CrossRef]
-
-26. Silva, R.; Brandão, C. Morphological patterns and community organization in leaf-litter ant assemblages. Ecol. Monogr. 2010, 80, 107–124. [CrossRef]
-
-27. Brandão, C.R.; Silva, R.R.; Delabie, J.H. Neotropical Ants (Hymenoptera) Functional Groups: Nutritional and Applied Implications. In Insect Bioecology and Nutritionfor Integrated Pest Management; Panizzi, A., Parra, J.R., Eds.; CRC Press: Boca Raton, FL, USA, 2012; pp. 231–254. [CrossRef]
-
-28. Violle, C.; Navas, M.L.; Vile, D.; Kazakou, E.; Fortunel, C.; Hummel, I.; Garnier, E. Let the concept of trait be functional! Oikos 2007, 116, 882–892. [CrossRef]
-
-29. Westoby, M.; Wright, I.J. Land-plant ecology on the basis of functional traits. Trends Ecol. Evol. 2006, 21, 261–268. [CrossRef]
-
-30. Drager, K.I.; Rivera, M.D.; Gibson, J.C.; Ruzi, S.A.; Hanisch, P.E.; Achury, R.; Suarez, A.V. Testing the predictive value of functiona traits in diverse ant communities. Ecol. Evol. 2023, 13, e10000. [CrossRef] [PubMed]
-
-31. Wiescher, P.T.; Pearce-Duvet, J.M.; Feener, D.H. Assembling an ant community: Species functional traits reflect environmental filtering. Oecologia 2012, 169, 1063–1074. [CrossRef]
-
-32. Weiser, M.D.; Kaspari, M. Ecological morphospace of New World ants. Ecol. Entomol. 2006, 31, 131–142. [CrossRef]
-
-33. Kaspari, M.; Weiser, M.D. The size–grain hypothesis and interspecific scaling in ants. Funct. Ecol. 1999, 13, 530–538. [CrossRef]
-
+24. Elizalde, L.; Arbetman, M.; Arnan, X.; Eggleton, P.; Leal, I.R.; Lescano, M.N.; Saez, A.; Werenkraut, V.; Pirk, G.I. The ecosystem services provided by social insects: Traits, management tools and knowledge gaps. Biol. Rev. 2020, 95, 1418–1441. [[CrossRef](https://doi.org/10.1111/brv.12616)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/32525288)]
+25. Bihn, J.H.; Gebauer, G.; Brandl, R. Loss of functional diversity of ant assemblages in secondary tropical forests. Ecology 2010, 91, 782–792. [[CrossRef](https://doi.org/10.1890/08-1276.1)]
+26. Silva, R.; Brandão, C. Morphological patterns and community organization in leaf-litter ant assemblages. Ecol. Monogr. 2010, 80, 107–124. [[CrossRef](https://doi.org/10.1890/08-1298.1)]
+27. Brandão, C.R.; Silva, R.R.; Delabie, J.H. Neotropical Ants (Hymenoptera) Functional Groups: Nutritional and Applied Implications. In Insect Bioecology and Nutrition for Integrated Pest Management; Panizzi, A., Parra, J.R., Eds.; CRC Press: Boca Raton, FL, USA, 2012; pp. 231–254. [[CrossRef](https://doi.org/10.1201/b11713-13)]
+28. Violle, C.; Navas, M.L.; Vile, D.; Kazakou, E.; Fortunel, C.; Hummel, I.; Garnier, E. Let the concept of trait be functional! Oikos 2007, 116, 882–892. [[CrossRef](https://doi.org/10.1111/j.0030-1299.2007.15559.x)]
+29. Westoby, M.; Wright, I.J. Land-plant ecology on the basis of functional traits. Trends Ecol. Evol. 2006, 21, 261–268. [[CrossRef](https://doi.org/10.1016/j.tree.2006.02.004)]
+30. Drager, K.I.; Rivera, M.D.; Gibson, J.C.; Ruzi, S.A.; Hanisch, P.E.; Achury, R.; Suarez, A.V. Testing the predictive value of functional traits in diverse ant communities. Ecol. Evol. 2023, 13, e10000. [[CrossRef](https://doi.org/10.1002/ece3.10000)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/37091559)]
+31. Wiescher, P.T.; Pearce-Duvet, J.M.; Feener, D.H. Assembling an ant community: Species functional traits reflect environmental filtering. Oecologia 2012, 169, 1063–1074. [[CrossRef](https://doi.org/10.1007/s00442-012-2262-7)]
+32. Weiser, M.D.; Kaspari, M. Ecological morphospace of New World ants. Ecol. Entomol. 2006, 31, 131–142. [[CrossRef](https://doi.org/10.1111/j.0307-6946.2006.00759.x)]
+33. Kaspari, M.; Weiser, M.D. The size–grain hypothesis and interspecific scaling in ants. Funct. Ecol. 1999, 13, 530–538. [[CrossRef](https://doi.org/10.1046/j.1365-2435.1999.00343.x)]
 34. Fowler, H.G.; Forti, L.C.; Brandão, C.R.; Delabie, J.H.; Vasconcelos, H.L. Ecología nutricional de formigas. In Ecologia Nutricional Insetos; Oanizzi, A.R., Parra, J.R., Eds.; Manole: Brasil, Brazil, 1991; pp. 131–223.
-
-35. Marques, T.; Espírito-Santo, M.M.; Schoereder, J.H. Ant Assemblage Structure in a Secondary Tropical Dry Forest: The Role of Ecological Succession and Seasonality. Sociobiology 2017, 64, 261–275. [CrossRef]
-
-36. Silva, L.; Souza, M.; Solar, R.R.C.; Neves, F.S. Ant diversity in Brazilian tropical dry forests across multiple vegetation domains. Environ. Res. Lett. 2017, 12, 035002. [CrossRef]
-
-37. de Menezes, A.S.; Schmidt, F.A. Mechanisms of species coexistence and functional diversity of ant assemblages in forest and pasture habitats in southwestern Brazilian Amazon. Sociobiology 2020, 67, 33–40. [CrossRef]
-
-38. Armbrecht, I.; Chacón, P. Rareza y Diversidad de Hormigas en Fragmentos de Bosque Seco Colombianos y sus Matrices. Biotropica 1999, 31, 646–653. [CrossRef]
-
+35. Marques, T.; Espírito-Santo, M.M.; Schoereder, J.H. Ant Assemblage Structure in a Secondary Tropical Dry Forest: The Role of Ecological Succession and Seasonality. Sociobiology 2017, 64, 261–275. [[CrossRef](https://doi.org/10.13102/sociobiology.v64i3.1276)]
+36. Silva, L.; Souza, M.; Solar, R.R.C.; Neves, F.S. Ant diversity in Brazilian tropical dry forests across multiple vegetation domains. Environ. Res. Lett. 2017, 12, 035002. [[CrossRef](https://doi.org/10.1088/1748-9326/aa5f2a)]
+37. de Menezes, A.S.; Schmidt, F.A. Mechanisms of species coexistence and functional diversity of ant assemblages in forest and pasture habitats in southwestern Brazilian Amazon. Sociobiology 2020, 67, 33–40. [[CrossRef](https://doi.org/10.13102/sociobiology.v67i1.4552)]
+38. Armbrecht, I.; Chacón, P. Rareza y Diversidad de Hormigas en Fragmentos de Bosque Seco Colombianos y sus Matrices. Biotropica 1999, 31, 646–653. [[CrossRef](https://doi.org/10.1111/j.1744-7429.1999.tb00413.x)]
 39. Armbrecht, I.; Tischer, I.; Chacón, P. Nested subsets and partition patterns in ant assemblages (Hymenoptera, Formicidae) of Colombian dry forest fragments. Pan-Pac. Entomol. 2001, 77, 196–209.
-
 40. Arcila-Cardona, A.; Osorio, A.M.; Bermúdez, C.; Chacón de Ulloa, P. Diversidad de hormigas cazadoras asociadas a los elementos del paisaje del bosque seco. In Sistemática, Biogeografía y Conservación de las Hormigas Cazadoras de Colombia; Jiménez, E., Fernández, F., Arias, T., Lozano-Zambrano, F., Eds.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt: Bogotá, Colombia, 2008; pp. 531–552.
-
 41. Chacón de Ulloa, P.; Osorio-García, A.M.; Achury, R.; Bermúdez-Rivas, C. Hormigas (Hymenoptera: Formicidae) del Bosque seco Tropical (Bs-T) de la cuenca alta del río Cauca, Colombia. Biota Colomb. 2012, 13, 165–181.
 
-42. Gallego-Ropero, M.C.; Salguero, B. Ensamblaje de hormigas del bosque seco tropical, jardín botánico de Cali. Colomb. For. 2015, 18, 139–150. [CrossRef]
+<!-- page 21 of 24 -->
 
-43. Dix, O.; Martínez, J.; Fernández, C. Contribución al conocimiento de la mirmecofauna en el municipio de San Antero, cordoba, Colombia. Rev. Colomb. Entomol. 2005, 31, 97–103. [CrossRef]
+Diversity 2024, 16, 687
 
-44. Domínguez, Y.; Fontalvo, L.; Guitérrez, L.C. Composición y distribución espacio-temporal de las hormigas cazadoras (Formicidae: Grupos Poneroide y Ectatomminoide) en tres fragmentos de bosque seco tropical del departamento del Atlántico, Colombia. In Sistemática, Biogeografía y Conservación de las Hormigas Cazadoras de Colombia; Jiménez, E., Fernández, F., Arias, T.M., Lozano Zambrano, F., Eds.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt: Bogotá, Colombia, 2007; pp. 497–512.
+21 of 23
 
+42. Gallego-Ropero, M.C.; Salguero, B. Ensamblaje de hormigas del bosque seco tropical, jardín botánico de Cali. Colomb. For. 2015, 18, 139–150. [[CrossRef](https://doi.org/10.14483/udistrital.jour.colomb.for.2015.1.a08)]
+43. Dix, O.; Martínez, J.; Fernández, C. Contribución al conocimiento de la mirmecofauna en el municipio de San Antero, cordoba, Colombia. Rev. Colomb. Entomol. 2005, 31, 97–103. [[CrossRef](https://doi.org/10.25100/socolen.v31i1.9423)]
+44. Domínguez, Y.; Fontalvo, L.; Guitérrez, L.C. Composición y distribución espacio-temporal de las hormigas cazadoras (Formicidae: Grupos Poneroide y Ectatomminoide) en tres fragmentos de bosque seco tropical del departamento del Atlántico, Colombia. In Sistemática, Biogeografía y Conservación de las Hormigas Cazadoras de Colombia; Jiménez, E., Fernández, F., Arias, T.M., Lozano-Zambrano, F., Eds.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt: Bogotá, Colombia, 2007; pp. 497–512.
 45. Fontalvo-Rodríguez, L.; Solís-Medina, C. Ensamblaje de hormigas (Hymenoptera: Formicidae) en fragmentos de bosque seco en el complejo carbonífero el Cerrejón (La Guajira, Colombia). Rev. Introp. 2009, 4, 5–15.
-
 46. Simanca-Fontalvo, R.; Fajardo-Herrera, R.J. Fauna de hormigas (Hymenoptera: Formicidae) en dos remanentes de Bosque Seco Tropical (Bs-T) en Corrales de San Luis, Atlantico, Colombia. Bol. Mus. Entomol. U. Valle 2013, 14, 1.
-
-47. Domínguez-Haydar, Y.; Armbrecht, I. Response of Ants and Their Seed Removal in Rehabilitation Areas and Forests at El Cerrejón Coal Mine in Colombia. Restor. Ecol. 2011, 19, 178–184. [CrossRef]
-
-48. Ramos Ortega, L.; Guerrero, R. Spatial Turnover and Functional Redundancy in the Ants of Urban Fragments of Tropical Dry Forest. Diversity 2023, 15, 880. [CrossRef]
-
+47. Domínguez-Haydar, Y.; Armbrecht, I. Response of Ants and Their Seed Removal in Rehabilitation Areas and Forests at El Cerrejón Coal Mine in Colombia. Restor. Ecol. 2011, 19, 178–184. [[CrossRef](https://doi.org/10.1111/j.1526-100X.2010.00735.x)]
+48. Ramos Ortega, L.; Guerrero, R. Spatial Turnover and Functional Redundancy in the Ants of Urban Fragments of Tropical Dry Forest. Diversity 2023, 15, 880. [[CrossRef](https://doi.org/10.3390/d15070880)]
 49. Aguilera-Díaz, M.M. Montes de María: Una subregión de economía campesina y empresarial. Documentos de Trabajo Sobre Economía Regional y Urbana 2013, 195.
-
 50. Hernández, C.; Hurtado, G.; Ortíz, Q.; Walscbulger, C. Unidades biogeográficas de Colombia. In La Diversidad Biológica de Iberoamérica; Halffter, G., Ed.; Acta Zoológica Mexicana: Ciudad de México, Mexico, 1992; Volume 1, pp. 100–115.
-
 51. Guerrero, R.; Delsinne, T.; Dekoninck, W. Métodos de recolección y curadurías. In Hormigas de Colombia; Fernández, F., Guerrero, R., Delsinne, T., Eds.; Universidad Nacional de Colombia: Bogotá, Colombia, 2019; pp. 319–369.
+52. Jost, L. Entropy and diversity. Oikos 2006, 113, 363–375. [[CrossRef](https://doi.org/10.1111/j.2006.0030-1299.14714.x)]
+53. Hill, M.O. Diversity and Evenness: A Unifying Notation and Its Consequences. Ecology 1973, 54, 427–432. [[CrossRef](https://doi.org/10.2307/1934352)]
+54. Hsieh, T.C.; Ma, K.H.; Chao, A. iNEXT: An R package for rarefaction and extrapolation of species diversity (Hill numbers). Methods Ecol. Evol. 2016, 7, 1451–1456. [[CrossRef](https://doi.org/10.1111/2041-210X.12613)]
+55. Chao, A.; Jost, L. Coverage-based rarefaction and extrapolation: Standardizing samples by completeness rather than size. Ecology 2012, 93, 2533–2547. [[CrossRef](https://doi.org/10.1890/11-1952.1)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/23431585)]
+56. Cultid, C.; Escobar, F. Pautas para la estimación y comparación estadística de la diversidad biológica (q<sub>D</sub>). In La Biodiversidad en un Mundo Cambiante: Fundamentos Teóricos y Metodológicos Para su Estudio; Moreno, C., Ed.; Universidad Autónoma del Estado de Hidalgo: Pachuca de Soto, Mexico, 2019; pp. 175–202.
+57. Schenker, N.; Gentleman, J.F. On judging the significance of differences by examining the overlap between confidence intervals. Am. Stat. 2001, 55, 182–186. [[CrossRef](https://doi.org/10.1198/000313001317097960)]
+58. Chao, A.; Gotelli, N.; Hsieh, T.C.; Sander, E.; Ma, K.H.; Colwell, R.; Ellison, A. Rarefaction and extrapolation with Hill numbers: A framework for sampling and estimation in species diversity studies. Ecol. Monogr. 2014, 84, 45–67. [[CrossRef](https://doi.org/10.1890/13-0133.1)]
+59. Baselga, A.; Orme, C.D. Betapart: An R package for the study of beta diversity. Methods Ecol. Evol. 2012, 3, 808–812. [[CrossRef](https://doi.org/10.1111/j.2041-210X.2012.00224.x)]
+60. Baselga, A. Partitioning the turnover and nestedness components of beta diversity. Glob. Ecol. Biogeogr. 2010, 19, 134–143. [[CrossRef](https://doi.org/10.1111/j.1466-8238.2009.00490.x)]
+61. Branstetter, M.G.; Ješovnik, A.; Sosa-Calvo, J.; Lloyd, M.W.; Faircloth, B.C.; Brady, S.G.; Schultz, T.R. Dry habitats were crucibles of domestication in the evolution of agriculture in ants. Proc. R. Soc. Biol. 2017, 284, 20170095. [[CrossRef](https://doi.org/10.1098/rspb.2017.0095)]
+62. Koch, E.B.A.; dos Santos, J.R.M.; Nascimento, I.C.; Delabie, J.H.C. Comparative evaluation of taxonomic and functional diversities of leaf-litter ants of the Brazilian Atlantic Forest. Turk. J. Zool. 2019, 43, 437–546. [[CrossRef](https://doi.org/10.3906/zoo-1811-7)]
+63. Moretti, M.; Dias, A.T.; de Bello, F.; Altermatt, F.; Chown, S.L.; Azcárate, F.M.; Bell, J.R.; Fournier, B.; Hedde, M.; Hortal, J.; et al. Handbook of protocols for standardized measurement of terrestrial invertebrate functional traits. Funct. Ecol. 2017, 31, 558–567. [[CrossRef](https://doi.org/10.1111/1365-2435.12776)]
+64. Martello, F.; De Bello, F.; De Castro Morini, M.S.; Silva, R.R.; De Souza-Campana, D.R.; Ribeiro, M.C.; Carmona, C.P. Homogenization and impoverishment of taxonomic and functional diversity of ants in Eucalyptus plantations. Sci. Rep. 2018, 8, 3266. [[CrossRef](https://doi.org/10.1038/s41598-018-20823-1)]
+65. Parr, C.L.; Dunn, R.R.; Sanders, N.J.; Weiser, M.D.; Photakis, M.; Bishop, T.R.; Fitzpatrick, M.C.; Arnan, X.; Baccaro, F.; Brandão, C.R.F.; et al. GlobalAnts: A new database on the geography of ant traits (Hymenoptera: Formicidae). Insect Conserv. Diver. 2017, 10, 5–20. [[CrossRef](https://doi.org/10.1111/icad.12211)]
+66. Sarty, M.; Abbott, K.L.; Lester, P.J. Habitat complexity facilitates coexistence in a tropical ant community. Oecologia 2006, 149, 465–473. [[CrossRef](https://doi.org/10.1007/s00442-006-0453-9)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/16763839)]
+67. Kaspari, M. Body size and microclimate use in Neotropical granivorous ants. Oecologia 1993, 96, 500–507. [[CrossRef](https://doi.org/10.1007/BF00320507)]
+68. Gibb, H.; Cunningham, S.A. Restoration of trophic structure in an assemblage of omnivores, Considering a revegetation chronosequence. J. Appl. Ecol. 2013, 50, 449–458. [[CrossRef](https://doi.org/10.1111/1365-2664.12054)]
+69. Gibb, H.; Parr, C.L. Does Structural Complexity Determine the Morphology of Assemblages? An Experimental Test on Three Continents. PLoS ONE 2013, 8, e64005. [[CrossRef](https://doi.org/10.1371/journal.pone.0064005)]
 
-52. Jost, L. Entropy and diversity. Oikos 2006, 113, 363–375. [CrossRef]
+<!-- page 22 of 24 -->
 
-53. Hill, M.O. Diversity and Evenness: A Unifying Notation and Its Consequences. Ecology 1973, 54, 427–432. [CrossRef]
+Diversity 2024, 16, 687
 
-54. Hsieh, T.C.; Ma, K.H.; Chao, A. iNEXT: An R package for rarefaction and extrapolation of species diversity (Hill numbers). Methods Ecol. Evol. 2016, 7, 1451–1456. [CrossRef]
+22 of 23
 
-55. Chao, A.; Jost, L. Coverage-based rarefaction and extrapolation: Standardizing samples by completeness rather than size. Ecology 2012, 93, 2533–2547. [CrossRef] [PubMed]
-
-56. Cultid, C.; Escobar, F. Pautas para la estimación y comparación estadística de la diversidad biológica (<sup>q</sup>D). In La Biodiversidad en un Mundo Cambiante: Fundamentos Teóricos y Metodológicos Para su Estudio; Moreno, C., Ed.; Universidad Autónoma del Estado de Hidalgo: Pachuca de Soto, Mexico, 2019; pp. 175–202.
-
-57. Schenker, N.; Gentleman, J.F. On judging the significance of differences by examining the overlap between confidence intervals. Am. Stat. 2001, 55, 182–186. [CrossRef]
-
-58. Chao, A.; Gotelli, N.; Hsieh, T.C.; Sander, E.; Ma, K.H.; Colwell, R.; Ellison, A. Rarefaction and extrapolation with Hill numbers: A framework for sampling and estimation in species diversity studies. Ecol. Monogr. 2014, 84, 45–67. [CrossRef]
-
-59. Baselga, A.; Orme, C.D. Betapart: An R package for the study of beta diversity. Methods Ecol. Evol. 2012, 3, 808–812. [CrossRef]
-
-60. Baselga, A. Partitioning the turnover and nestedness components of beta diversity. Glob. Ecol. Biogeogr. 2010, 19, 134–143. [CrossRef]
-
-61.Branstetter. M.G.: Ješoynik. A.: Sosa-Calvo. L: Llovd. M.W.: Faircloth. B.C.: Brady. S.G.: Schultz. T.R. Dry habitats were crucibles of domestication in the evolution of agriculture in ants. Proc. R. Soc. Biol. 2017, 284, 20170095. [CrossRef]
-
-62. Koch, E.B.A.; dos Santos, J.R.M.; Nascimento, I.C.; Delabie, J.H.C. Comparative evaluation of taxonomic and functional diversities of leaf-litter ants of the Brazilian Atlantic Forest. Turk. J. Zool. 2019, 43, 437–546. [CrossRef]
-
-63. Moretti, M.; Dias, A.T.; de Bello, F.; Altermatt, F.; Chown, S.L.; Azcárate, F.M.; Bell, J.R.; Fournier, B.; Hedde, M.; Hortal, J.; et al. Handbook of protocols for standardized measurement of terrestrial invertebrate functional traits. Funct. Ecol. 2017, 31, 558–567. [CrossRef]
-
-64. Martello, F.; De Bello, F.; De Castro Morini, M.S.; Silva, R.R.; De Souza-Campana, D.R.; Ribeiro, M.C.; Carmona, C.P. Homoge nization and impoverishment of taxonomic and functional diversity of ants in Eucalyptus plantations. Sci. Rep. 2018, 8, 3266. [CrossRef]
-
-65. Parr, C.L.; Dunn, R.R.; Sanders, N.J.; Weiser, M.D.; Photakis, M.; Bishop, T.R.; Fitzpatrick, M.C.; Arnan, X.; Baccaro, F.; Brandão, C.R.F.; et al. GlobalAnts: A new database on the geography of ant traits (Hymenoptera: Formicidae). Insect Conserv. Diver. 2017, 10, 5–20. [CrossRef]
-
-66. Sarty, M.; Abbott, K.L.; Lester, P.J. Habitat complexity facilitates coexistence in a tropical ant community. Oecologia 2006, 149, 465–473. [CrossRef] [PubMed]
-
-67. Kaspari, M. Body size and microclimate use in Neotropical granivorous ants. Oecologia 1993, 96, 500–507. [CrossRef]
-
-68. Gibb, H.; Cunningham, S.A. Restoration of trophic structure in an assemblage of omnivores, Considering a revegetation chronosequence. J. Appl. Ecol. 2013, 50, 449–458. [CrossRef]
-
-69. Gibb, H.; Parr, C.L. Does Structural Complexity Determine the Morphology of Assemblages? An Experimental Test on Three Continents. PLoS ONE 2013, 8, e64005. [CrossRef]
-
-70. Feener, D.H.; Lighton, J.R.; Bartholomew, G.A. Curvilinear Allometry, Energetics and Foraging Ecology: A Comparison of Leaf-Cutting Ants and Army Ants. Funct. Ecol. 1988, 2, 509–520. [CrossRef]
-
-71. Gibb, H.; Stoklosa, J.; Warton, D.I.; Brown, A.M.; Andrew, N.R.; Cunningham, S.A. Does morphology predict trophic position and habitat use of ant species and assemblages? Oecologia 2015, 177, 519–531. [CrossRef] [PubMed]
-
-72. Garnier, E.; Cortez, J.; Billès, G.; Navas, M.L.; Roumet, C.; Debussche, M.; Laurent, G.; Blanchard, A.; Aubry, D.; Bellmann, A.; et al. Plant functional markers capture ecosystem properties during secondary succession. Ecology 2004, 85, 2630–2637. [CrossRef]
-
-73. Almeida, R.P.; Teresa, F.B.; Camarota, F.; Izzo, T.J.; Silva, R.R.; Andrade-Silva, J.; de Arruda, F.V. The role of morphological traits in predicting the functional ecology of arboreal and ground ants in the Cerrado–Amazon transition. Oecologia 2023, 201, 199–212. [CrossRef] [PubMed]
-
-74. Vasconcelos, H.L.; Neves, K.C.; Vieira, J.; Carvalho, R.L. Land use intensification has extensive effects on the functional and phylogenetic diversity of neotropical ant communities. Biodivers. Conserv. 2024, 33, 2487–2502. [CrossRef]
-
+70. Feener, D.H.; Lighton, J.R.; Bartholomew, G.A. Curvilinear Allometry, Energetics and Foraging Ecology: A Comparison of Leaf-Cutting Ants and Army Ants. Funct. Ecol. 1988, 2, 509–520. [[CrossRef](https://doi.org/10.2307/2389394)]
+71. Gibb, H.; Stoklosa, J.; Warton, D.I.; Brown, A.M.; Andrew, N.R.; Cunningham, S.A. Does morphology predict trophic position and habitat use of ant species and assemblages? Oecologia 2015, 177, 519–531. [[CrossRef](https://doi.org/10.1007/s00442-014-3101-9)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/25288056)]
+72. Garnier, E.; Cortez, J.; Billès, G.; Navas, M.L.; Roumet, C.; Debussche, M.; Laurent, G.; Blanchard, A.; Aubry, D.; Bellmann, A.; et al. Plant functional markers capture ecosystem properties during secondary succession. Ecology 2004, 85, 2630–2637. [[CrossRef](https://doi.org/10.1890/03-0799)]
+73. Almeida, R.P.; Teresa, F.B.; Camarota, F.; Izzo, T.J.; Silva, R.R.; Andrade-Silva, J.; de Arruda, F.V. The role of morphological traits in predicting the functional ecology of arboreal and ground ants in the Cerrado–Amazon transition. Oecologia 2023, 201, 199–212. [[CrossRef](https://doi.org/10.1007/s00442-022-05304-7)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/36520222)]
+74. Vasconcelos, H.L.; Neves, K.C.; Vieira, J.; Carvalho, R.L. Land use intensification has extensive effects on the functional and phylogenetic diversity of neotropical ant communities. Biodivers. Conserv. 2024, 33, 2487–2502. [[CrossRef](https://doi.org/10.1007/s10531-024-02866-1)]
 75. Casanoves, F.; Pla, L.; Di Rienzo, J.A. Valoración y Análisis de la Diversidad Funcional y su Relación con los Servicios Ecosistémicos; Serie Técnica Informe Técnico; Centro Agronómico Tropical de Investigación y Enseñanza (CATIE): Turrialba, Costa Rica, 2011; pp. 1–85.
-
 76. Oksanen, J.; Kindt, R.; Legendre, P.; O’Hara, B.; Stevens, M.H.; Oksanen, M.J.; Suggests, M. The vegan package. Community Ecol. Package 2007, 10, 631–637.
-
-77. Fernández, F.; Guerrero, R.J.; Sánchez-Restrepo, A.F. Systematics and diversity of Neotropical ants. Rev. Col. Entomol. 2021, 47, e11082. [CrossRef]
-
-78. Fernández, F.; Guerrero, R.; Delsinne, T. Hormigas de Colombia; Universidad Nacional de Colombia: Bogotá, Colombia, 2019; pp. 387–1113. [CrossRef]
-
+77. Fernández, F.; Guerrero, R.J.; Sánchez-Restrepo, A.F. Systematics and diversity of Neotropical ants. Rev. Col. Entomol. 2021, 47, e11082. [[CrossRef](https://doi.org/10.25100/socolen.v47i1.11082)]
+78. Fernández, F.; Guerrero, R.; Delsinne, T. Hormigas de Colombia; Universidad Nacional de Colombia: Bogotá, Colombia, 2019; pp. 387–1113. [[CrossRef](https://doi.org/10.21676/9789587837650)]
 79. Fernández, F.; Guerrero, R.; Delsinne, T. (Eds.) Filogenia y sistemática de las hormigas neotropicales. In Hormigas de Colombia; Universidad Nacional de Colombia: Bogotá, Colombia, 2019; pp. 57–89.
-
-80. García, E.I.; Tocora, M.C.; Fiorentino, G.; Escárraga, M.E.; Fernández, F.; Guerrero, R.J. Nuevos registros de hormigas (Hy menoptera: Formicidae) para Colombia. Biota Neotrop. 2020, 20, e20201088.
-
-81. Ward, P.S.; Brady, S.G.; Fisher, B.L.; Schultz, T.R. The evolution of myrmicine ants: Phylogeny and biogeography of a hyperdiverse ant clade (Hymenoptera: Formicidae). Syst. Entomol. 2015, 40, 61–81. [CrossRef]
-
-82. Pennington, T.; Lavin, M.; Oliveira-Filho, A. Woody plant diversity, evolution, and ecology in the tropics: Perspectives from seasonally dry tropical forests. Annu. Rev. Ecol. Evol. Syst. 2009, 40, 437–457. [CrossRef]
-
-83. Corro, E.J.; Ahuatzin, D.A.; Jaimes, A.A.; Favila, M.E.; Ribeiro, M.C.; López-Acosta, J.C.; Dáttilo, W. Forest cover and landscape heterogeneity shape ant–plant co-occurrence networks in human-dominated tropical rainforests. Landsc. Ecol. 2019, 34, 93–104. [CrossRef]
-
-84. Hethcoat, M.G.; King, B.J.; Fernández, F.; Ortiz-Sepúlveda, C.M.; Achiardi, F.C.; Edwards, F.A.; Medina, C.; Gilroy, J.J.; Haugaasen, T.; Edwards, D.P. The impact of secondary forest regeneration on ground-dwelling ant communities in the Tropical Andes. Oecologia 2019, 191, 475–482. [CrossRef] [PubMed]
-
-85. Kuchenbecker, J.; Cuevas-Reyes, P.; Fagundes, M. Community structure of ants (Hymenoptera: Formicidae) in an open habitat: The importance of environmental heterogeneity and interspecific interactions. Rev. Mex. Biodiver. 2022, 93, e933900. [CrossRef]
-
-86. Siqueira, E.L.; Silva, R.R. Taxonomic and morphological diversity of the ground-dwelling ant fauna in Eastern Amazonian grasslands. Acta Oecologica 2021, 110, 103693. [CrossRef]
-
-87. Delsinne, T.; Sonet, G.; Nagy, Z.T.; Wauters, N.; Jacquemin, J.; Leponce, M. High species turnover of the ant genus Solenopsis (Hymenoptera: Formicidae) along an altitudinal gradient in the Ecuadorian Andes, indicated by a combined DNA sequencing and morphological approach. Invert. Syst. 2012, 26, 457–469. [CrossRef]
-
-88. Longino, J.T. A revision of the ant genus Octostruma Forel 1912 (Hymenoptera, Formicidae). Zootaxa 2013, 3699, 1–61. [CrossRef]
-
-89. Calle, Z.; Henao-Gallego, N.; Giraldo, C.; Armbrecht, I. A comparison of vegetation and ground-dwelling ants in abandoned and restored gullies and landslide surfaces in the Western Colombian Andes. Restor. Ecol. 2013, 21, 729–735. [CrossRef]
-
-90. Chanatásig-Vaca, C.; Huerta Lwanga, E.; Rojas Fernández, P.; Ponce-Mendoza, A.; Mendoza Vega, J.; Morón Ríos, A.; Van der Waal, H.; Dzib-Castilo, B. Efecto del uso de suelo en las hormigas (Formicidae: Hymenoptera) de Tikinmul, Campeche, México. Acta Zool. Mex. 2011, 27, 4441–4461. [CrossRef]
-
-91. Silva, P.; Bieber, A.; Corrêa, M.; Leal, I. Do leaf-litter attributes affect the richness of leaf-litter ants? Neotrop. Entomol. 2011, 40, 542–547. [PubMed]
-
+80. García, E.I.; Tocora, M.C.; Fiorentino, G.; Escárraga, M.E.; Fernández, F.; Guerrero, R.J. Nuevos registros de hormigas (Hymenoptera: Formicidae) para Colombia. Biota Neotrop. 2020, 20, e20201088.
+81. Ward, P.S.; Brady, S.G.; Fisher, B.L.; Schultz, T.R. The evolution of myrmicine ants: Phylogeny and biogeography of a hyperdiverse ant clade (Hymenoptera: Formicidae). Syst. Entomol. 2015, 40, 61–81. [[CrossRef](https://doi.org/10.1111/syen.12090)]
+82. Pennington, T.; Lavin, M.; Oliveira-Filho, A. Woody plant diversity, evolution, and ecology in the tropics: Perspectives from seasonally dry tropical forests. Annu. Rev. Ecol. Evol. Syst. 2009, 40, 437–457. [[CrossRef](https://doi.org/10.1146/annurev.ecolsys.110308.120327)]
+83. Corro, E.J.; Ahuatzin, D.A.; Jaimes, A.A.; Favila, M.E.; Ribeiro, M.C.; López-Acosta, J.C.; Dáttilo, W. Forest cover and landscape heterogeneity shape ant–plant co-occurrence networks in human-dominated tropical rainforests. Landsc. Ecol. 2019, 34, 93–104. [[CrossRef](https://doi.org/10.1007/s10980-018-0747-4)]
+84. Hethcoat, M.G.; King, B.J.; Fernández, F.; Ortiz-Sepúlveda, C.M.; Achiardi, F.C.; Edwards, F.A.; Medina, C.; Gilroy, J.J.; Haugaasen, T.; Edwards, D.P. The impact of secondary forest regeneration on ground-dwelling ant communities in the Tropical Andes. Oecologia 2019, 191, 475–482. [[CrossRef](https://doi.org/10.1007/s00442-019-04497-8)] [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/31485850)]
+85. Kuchenbecker, J.; Cuevas-Reyes, P.; Fagundes, M. Community structure of ants (Hymenoptera: Formicidae) in an open habitat: The importance of environmental heterogeneity and interspecific interactions. Rev. Mex. Biodiver. 2022, 93, e933900. [[CrossRef](https://doi.org/10.22201/ib.20078706e.2022.93.3900)]
+86. Siqueira, E.L.; Silva, R.R. Taxonomic and morphological diversity of the ground-dwelling ant fauna in Eastern Amazonian grasslands. Acta Oecologica 2021, 110, 103693. [[CrossRef](https://doi.org/10.1016/j.actao.2020.103693)]
+87. Delsinne, T.; Sonet, G.; Nagy, Z.T.; Wauters, N.; Jacquemin, J.; Leponce, M. High species turnover of the ant genus Solenopsis (Hymenoptera: Formicidae) along an altitudinal gradient in the Ecuadorian Andes, indicated by a combined DNA sequencing and morphological approach. Invert. Syst. 2012, 26, 457–469. [[CrossRef](https://doi.org/10.1071/IS12030)]
+88. Longino, J.T. A revision of the ant genus Octostruma Forel 1912 (Hymenoptera, Formicidae). Zootaxa 2013, 3699, 1–61. [[CrossRef](https://doi.org/10.11646/zootaxa.3699.1.1)]
+89. Calle, Z.; Henao-Gallego, N.; Giraldo, C.; Armbrecht, I. A comparison of vegetation and ground-dwelling ants in abandoned and restored gullies and landslide surfaces in the Western Colombian Andes. Restor. Ecol. 2013, 21, 729–735. [[CrossRef](https://doi.org/10.1111/rec.12001)]
+90. Chanatásig-Vaca, C.; Huerta Lwanga, E.; Rojas Fernández, P.; Ponce-Mendoza, A.; Mendoza Vega, J.; Morón Ríos, A.; Van der Waal, H.; Dzib-Castilo, B. Efecto del uso de suelo en las hormigas (Formicidae: Hymenoptera) de Tikinmul, Campeche, México. Acta Zool. Mex. 2011, 27, 4441–4461. [[CrossRef](https://doi.org/10.21829/azm.2011.272764)]
+91. Silva, P.; Bieber, A.; Corrêa, M.; Leal, I. Do leaf-litter attributes affect the richness of leaf-litter ants? Neotrop. Entomol. 2011, 40, 542–547. [[PubMed](https://www.ncbi.nlm.nih.gov/pubmed/22068939)]
 92. Mesa-s, L.; Santamaría, M.; García, H.; Aguilar-Cano, J. Catálogo de biodiversidad de la región caribe. In Serie Planeación Ambiental para la Conservación de la Biodiversidad en Áreas Operativas de Ecopetrol, 3rd ed.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt—Ecopetrol S.A: Bogotá, Colombia, 2016.
-
 93. De La Vega, G.J.; Schilman, P.E. La importancia de la fisiología en la distribución geográfica de los insectos. Rev. Soc. Entomol Arg. 2015, 74, 101–108.
-
-94. Giweta, M. Role of litter production and its decomposition, and factors affecting the processes in a tropical forest ecosystem: A review. I. Ecol. Environ. 2020. 44. 11. [CrossRefl
-
-95. Pennington, R.; Prado, D.E.; Pendry, C.A. Neotropical seasonally dry forests and Quaternary vegetation changes. J. Biogeogr. 2000, 27, 261–273. [CrossRef]
-
+94. Giweta, M. Role of litter production and its decomposition, and factors affecting the processes in a tropical forest ecosystem: A review. J. Ecol. Environ. 2020, 44, 11. [[CrossRef](https://doi.org/10.1186/s41610-020-0151-2)]
+95. Pennington, R.; Prado, D.E.; Pendry, C.A. Neotropical seasonally dry forests and Quaternary vegetation changes. J. Biogeogr. 2000, 27, 261–273. [[CrossRef](https://doi.org/10.1046/j.1365-2699.2000.00397.x)]
 96. Dirzo, R. Seasonally Dry Tropical Forests: Ecology and Conservation; Island Press: Washington, DC, USA, 2011; pp. 1–408.
 
-97. Angulo, E.; Boulay, R.; Ruano, F.; Tinaut, A.; Cerdá, X. Anthropogenic impacts in protected areas: Assessing the efficiency of conservation efforts using Mediterranean ant communities. PeerJ 2016, 4, e2773. [CrossRef]
+<!-- page 23 of 24 -->
 
+Diversity 2024, 16, 687
+
+23 of 23
+
+97. Angulo, E.; Boulay, R.; Ruano, F.; Tinaut, A.; Cerdá, X. Anthropogenic impacts in protected areas: Assessing the efficiency of conservation efforts using Mediterranean ant communities. PeerJ 2016, 4, e2773. [[CrossRef](https://doi.org/10.7717/peerj.2773)]
 98. Fernández, F.; y Sendoya, S. Synonymic list of neotropical ants (Hymenoptera: Formicidae). Biot. Col. 2004, 5, 3–105.
-
 99. Kaspari, M.; O’Donnell, S. High rates of army ant raids in the Neotropics and implications for ant colony and community structure. Evol. Ecol. Res. 2003, 5, 933–939.
-
-100. Abadía, J.C.; Bermúdez, C.; Lozano-Zambrano, F.H.; Chacón, P. Hormigas cazadoras en un paisaje subandino de Colombia: Riqueza, composición y especies indicadoras. Rev. Col. Ent. 2010, 36, 127–134. [CrossRef]
-
+100. Abadía, J.C.; Bermúdez, C.; Lozano-Zambrano, F.H.; Chacón, P. Hormigas cazadoras en un paisaje subandino de Colombia: Riqueza, composición y especies indicadoras. Rev. Col. Ent. 2010, 36, 127–134. [[CrossRef](https://doi.org/10.25100/socolen.v36i1.9132)]
 101. Chacón de Ulloa, P.; Armbrecht, I.; Lozano-Zambrano, F.; Jiménez, E.; Fernández, F.; Arias, T.M. Aspectos de la ecología de hormigas cazadoras en bosques secos colombianos. In Sistemática, Biogeografía y Conservación de las Hormigas Cazadoras de Colombia; Jiménez, E., Fernández, F., Arias, T., Lozano-Zambrano, F., Eds.; Instituto de Investigación de Recursos Biológicos Alexander von Humboldt: Bogotá, Colombia, 2008; pp. 513–531.
-
 102. Jiménez, B.; De la Rosa, N.; Naranjo, D.; Bustillo, R.; Parra, J.; Villalba, I.; Buelvas, C.; Pacheco, E.; Arrieta, J.; Castro, C.; et al. Plan de Manejo del Santuario de Flora y Fauna Los Colorados 2018–2023; Parques Nacionales Naturales de Colombia: Bogotá, Colombia, 2018.
-
 103. Bustos, J.; Ulloa-Chacón, P. Mirmecofauna y perturbación en un bosque de niebla neotropical (Reserva Natural Hato Viejo, Valle del Cauca, Colombia). Rev. Biol. Trop. 1996, 44, 259–266.
-
-104. Rivera, L.; Armbrecht, I. Diversidad de tres gremios de hormigas en cafetales de sombra, de sol y bosques de Risaralda. Rev. Col. Entomol. 2005, 31, 89–96. [CrossRef]
-
-105. Mason, N.W.; MacGillivray, K.; Steel, J.B.; Wilson, J.B. An index of functional diversity. J. Veg. Sci. 2003, 14, 571–578. [CrossRef]
-
-106. Carmona, C.P.; Guerrero, I.; Morales, M.B.; Oñate, J.J.; Peco, B. Assessing vulnerability of functional diversity to species loss: A case study in Mediterranean agricultural systems. Funct. Ecol. 2017, 31, 427–435. [CrossRef]
-
-107. Ricotta, C.; de Bello, F.; Moretti, M.; Caccianiga, M.; Cerabolini, B.E.; Pavoine, S. Measuring the functional redundancy of biological communities: A quantitative guide. Methods Ecol. Evol. 2016, 7, 1386–1395. [CrossRef]
-
+104. Rivera, L.; Armbrecht, I. Diversidad de tres gremios de hormigas en cafetales de sombra, de sol y bosques de Risaralda. Rev. Col. Entomol. 2005, 31, 89–96. [[CrossRef](https://doi.org/10.25100/socolen.v31i1.9422)]
+105. Mason, N.W.; MacGillivray, K.; Steel, J.B.; Wilson, J.B. An index of functional diversity. J. Veg. Sci. 2003, 14, 571–578. [[CrossRef](https://doi.org/10.1111/j.1654-1103.2003.tb02184.x)]
+106. Carmona, C.P.; Guerrero, I.; Morales, M.B.; Oñate, J.J.; Peco, B. Assessing vulnerability of functional diversity to species loss: A case study in Mediterranean agricultural systems. Funct. Ecol. 2017, 31, 427–435. [[CrossRef](https://doi.org/10.1111/1365-2435.12709)]
+107. Ricotta, C.; de Bello, F.; Moretti, M.; Caccianiga, M.; Cerabolini, B.E.; Pavoine, S. Measuring the functional redundancy of biological communities: A quantitative guide. Methods Ecol. Evol. 2016, 7, 1386–1395. [[CrossRef](https://doi.org/10.1111/2041-210X.12604)]
 108. Leps, J.; de Bello, F.; Lavorel, S.; Berman, S. Quantifying and interpreting functional diversity of natural communities: Practical considerations matter. Preslia 2006, 78, 481–501.
 
-Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+**Disclaimer/Publisher’s Note:** The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
 
-Co<sub>py</sub>ri<sub>g</sub>ht of Diversit<sub>y</sub> ( 1 42428 1 8) is the <sub>p</sub>ro<sub>p</sub>ert<sub>y</sub> of MDPI and its content ma<sub>y</sub> not be co<sub>p</sub>ied <sub>or ema</sub>il<sub>e</sub>d t<sub>o mu</sub>lti<sub>p</sub>l<sub>e s</sub>it<sub>es or pos</sub>t<sub>e</sub>d t<sub>o a</sub> li<sub>s</sub>t<sub>serv w</sub>ith<sub>ou</sub>t th<sub>e copyr</sub>i<sub>g</sub>ht h<sub>o</sub>ld<sub>er</sub><sup>'</sup><sub>s express</sub> <sub>wr</sub>itt<sub>en perm</sub>i<sub>ss</sub>i<sub>on</sub> H<sub>owever users may pr</sub>i<sub>n</sub>t d<sub>own</sub>l<sub>oa</sub>d <sub>or ema</sub>il <sub>ar</sub>ti<sub>c</sub>l<sub>es</sub> f<sub>or</sub> i<sub>n</sub>di<sub>v</sub>id<sub>ua</sub>l <sub>use</sub>
+<!-- page 24 of 24 -->
+
+Copyright of Diversity ( 1 4242 8 1 8) is the property of MDPI and its content may not be copied or emailed to multiple sites or po sted to a listserv without the copyright holder' s expres s written permis sion. However, users may print, download, or email articles for individual use .
 
 
 
 <!-- ===== Complementary: CamargoVanegas2024_S1.pdf.md ===== -->
 
 
+<!-- page 1 of 15 -->
+
 ## Supplementary Material
 
-Figure S1. Diversity expressed as the effective number of ant species in the six tropical dry forest sampling sites. The bars indicate the confidence intervals (CI) of each of the measurements. N1a: Distrito Regional de Manejo Integrado Luriza; N1b: Distrito Regional de Manejo integrado “Palmar del Titi”; N2a: Santuario de Flora y Fauna Los Colorados; N2b: Parcela Brasilar Bosque Seco Tropical; N3a: Reserva Natural de la Sociedad Civil "CARACOLÍ"; N3b: Reserva Protectora de Coraza y Montes de María.
+**Figure S1.** Diversity expressed as the effective number of ant species in the six tropical dry forest sampling sites. The bars indicate the confidence intervals (CI) of each of the measurements. N1a: Distrito Regional de Manejo Integrado Luriza; N1b: Distrito Regional de Manejo integrado “Palmar del Titi”; N2a: Santuario de Flora y Fauna Los Colorados; N2b: Parcela Brasilar Bosque Seco Tropical; N3a: Reserva Natural de la Sociedad Civil "CARACOLÍ"; N3b: Reserva Protectora de Coraza y Montes de María.
 
-![](images/f40006583e3f1c2819877508c444da8cdde48a44cebdf725a8d3eb925c29fb6d.jpg)
+| Category | Mean Riqueza | Error Range |
+| --- | --- | --- |
+| N1a | ~64 | 55~73 |
+| N1b | ~57 | 45~69 |
+| N2a | ~74 | 63~85 |
+| N2b | ~89 | 79~99 |
+| N3a | ~92 | 79~105 |
+| N3b | ~85 | 72~98 |
 
-![](images/ff8f25561b5e77a6f12c3c121ac30d09267678cd80e82d3bed23349b5b97736b.jpg)  
+<!-- page 2 of 15 -->
+
+| Region | Value |
+| --- | --- |
+| N1 | 7 |
+| N2 | 14 |
+| N3 | 23 |
+| N1 & N2 | 7 |
+| N1 & N3 | 9 |
+| N2 & N3 | 34 |
+| N1 & N2 & N3 | 52 |
+
 Figure S2. Ant species richness among the TDF fragments studied.
+
+<!-- page 3 of 15 -->
 
 Table S1. Beta diversity and its turnover (below the diagonal) and nestedness (above the diagonal) components between sampling sites. Values close to 1 correspond to a greater difference explained by the turnover or nestedness component between sites. The value of the main diagonal (values in bold) is the species richness at each site. N1a: Distrito Regional de Manejo Integrado Luriza; N1b: Distrito Regional de Manejo integrado “Palmar del Titi”; N2a: Santuario de Flora y Fauna Los Colorados; N2b: Parcela Brasilar Bosque Seco Tropical; N3a: Reserva Natural de la Sociedad Civil "CARACOLÍ"; N3b: Reserva Protectora de Coraza y Montes de María.
 
 <table><tr><td>TDF Fragments</td><td>Sampling site</td><td>N1a</td><td>N1b</td><td>N2a</td><td>N2b</td><td>N3a</td><td>N3b</td></tr><tr><td rowspan="2">N1</td><td>N1a</td><td>65</td><td>0.074</td><td>0.052</td><td>0.102</td><td>0.117</td><td>0.104</td></tr><tr><td>N1b</td><td>0.298</td><td>57</td><td>0.106</td><td>0.163</td><td>0.191</td><td>0.175</td></tr><tr><td rowspan="2">N2</td><td>N2a</td><td>0.452</td><td>0.438</td><td>74</td><td>0.391</td><td>0.082</td><td>0.057</td></tr><tr><td>N2b</td><td>0.522</td><td>0.459</td><td>0.085</td><td>89</td><td>0.015</td><td>0.013</td></tr><tr><td rowspan="2">N3</td><td>N3a</td><td>0.505</td><td>0.416</td><td>0.474</td><td>0.411</td><td>92</td><td>0.027</td></tr><tr><td>N3b</td><td>0.47</td><td>0.394</td><td>0.474</td><td>0.491</td><td>0.464</td><td>86</td></tr></table>
 
+<!-- page 4 of 15 -->
+
 Table S2. Number of individuals measured (N). means and standard deviation (SD) of the eight traits used.
 
-<table><tr><td rowspan="2">Species</td><td rowspan="2">N</td><td colspan="2">HL</td><td colspan="2">HW</td><td colspan="2">ML</td><td colspan="2">SL</td><td colspan="2">EL</td><td colspan="2">DI</td><td colspan="2">FL</td><td colspan="2">WL</td></tr><tr><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td></tr><tr><td>Acromyrmex santschii</td><td>4</td><td>1.237</td><td>0.356</td><td>1.369</td><td>0.471</td><td>0.945</td><td>0.45</td><td>1.123</td><td>0.482</td><td>0.196</td><td>0.095</td><td>1.28</td><td>0.446</td><td>1.855</td><td>0.748</td><td>1.685</td><td>0.499</td></tr><tr><td>Acropyga fuhrmanni</td><td>4</td><td>0.453</td><td>0.023</td><td>0.462</td><td>0.014</td><td>0.341</td><td>0.067</td><td>0.331</td><td>0.03</td><td>0.037</td><td>0.006</td><td>0.396</td><td>0.05</td><td>0.366</td><td>0.017</td><td>0.525</td><td>0.007</td></tr><tr><td>Acropyga smithii</td><td>4</td><td>0.348</td><td>0.006</td><td>0.369</td><td>0.006</td><td>0.262</td><td>0.045</td><td>0.201</td><td>0.013</td><td>0.019</td><td>0.012</td><td>0.228</td><td>0.038</td><td>0.194</td><td>0.006</td><td>0.395</td><td>0.015</td></tr><tr><td>Adelomyrmex myops</td><td>4</td><td>0.616</td><td>0.033</td><td>0.558</td><td>0.025</td><td>0.348</td><td>0.038</td><td>0.37</td><td>0</td><td>0.04</td><td>0.006</td><td>0.529</td><td>0.091</td><td>0.431</td><td>0.023</td><td>0.616</td><td>0.033</td></tr><tr><td>Alfaria minuta</td><td>4</td><td>1.008</td><td>0.019</td><td>0.898</td><td>0.083</td><td>0.777</td><td>0.084</td><td>0.69</td><td>0.285</td><td>0.081</td><td>0.008</td><td>0.786</td><td>0.18</td><td>0.897</td><td>0.084</td><td>1.324</td><td>0.126</td></tr><tr><td>Anochetus diegensis</td><td>8</td><td>1.253</td><td>0.027</td><td>1.079</td><td>0.027</td><td>0.771</td><td>0.041</td><td>0.971</td><td>0.132</td><td>0.16</td><td>0.011</td><td>0.873</td><td>0.095</td><td>1.138</td><td>0.039</td><td>1.628</td><td>0.029</td></tr><tr><td>Anochetus inermis</td><td>4</td><td>1.116</td><td>0.052</td><td>0.976</td><td>0.044</td><td>0.675</td><td>0.026</td><td>0.924</td><td>0.228</td><td>0.198</td><td>0.014</td><td>0.762</td><td>0.064</td><td>1.092</td><td>0.083</td><td>1.572</td><td>0.103</td></tr><tr><td>Apterostigma dentrigerum</td><td>1</td><td>1.174</td><td>-</td><td>0.891</td><td>-</td><td>0.674</td><td>-</td><td>1.261</td><td>-</td><td>0.217</td><td>-</td><td>0.891</td><td>-</td><td>2</td><td>-</td><td>2</td><td>-</td></tr><tr><td>Apterostigma pilosum</td><td>8</td><td>0.864</td><td>0.042</td><td>0.683</td><td>0.063</td><td>0.532</td><td>0.061</td><td>0.626</td><td>0.16</td><td>0.139</td><td>0.014</td><td>0.665</td><td>0.096</td><td>1.128</td><td>0.056</td><td>1.302</td><td>0.014</td></tr><tr><td>Apterostygma pariense</td><td>1</td><td>1.174</td><td>-</td><td>0.87</td><td>-</td><td>0.674</td><td>-</td><td>1.152</td><td>-</td><td>0.217</td><td>-</td><td>0.804</td><td>-</td><td>1.957</td><td>-</td><td>1.913</td><td>-</td></tr><tr><td>Atta columbica</td><td>1</td><td>1.5</td><td>-</td><td>1.535</td><td>-</td><td>1.371</td><td>-</td><td>0.613</td><td>-</td><td>0.248</td><td>-</td><td>1.412</td><td>-</td><td>2.1</td><td>-</td><td>1.707</td><td>-</td></tr><tr><td>Azteca sp. 1</td><td>1</td><td>0.78</td><td>-</td><td>0.743</td><td>-</td><td>0.489</td><td>-</td><td>0.2</td><td>-</td><td>0.157</td><td>-</td><td>0.613</td><td>-</td><td>0.527</td><td>-</td><td>0.89</td><td>-</td></tr><tr><td>Brachymyrmex aphidicola</td><td>4</td><td>0.418</td><td>0.007</td><td>0.374</td><td>0.004</td><td>0.254</td><td>0.033</td><td>0.253</td><td>0.114</td><td>0.093</td><td>0.006</td><td>0.421</td><td>0.089</td><td>0.442</td><td>0.006</td><td>0.439</td><td>0.004</td></tr><tr><td>Brachymyrmex minutus</td><td>4</td><td>0.28</td><td>0.004</td><td>0.324</td><td>0.003</td><td>0.194</td><td>0.059</td><td>0.256</td><td>0.16</td><td>0.082</td><td>0.007</td><td>0.301</td><td>0.088</td><td>0.388</td><td>0.004</td><td>0.345</td><td>0.004</td></tr><tr><td>Camponotus sp. 1</td><td>3</td><td>1.112</td><td>0.004</td><td>1.048</td><td>0.007</td><td>0.578</td><td>0.11</td><td>0.851</td><td>0.488</td><td>0.394</td><td>0.004</td><td>0.928</td><td>0.39</td><td>1.287</td><td>0.007</td><td>1.674</td><td>0</td></tr><tr><td>Camponotus sp. 3</td><td>3</td><td>1.117</td><td>0.007</td><td>1.045</td><td>0.016</td><td>0.624</td><td>0.083</td><td>0.715</td><td>0.407</td><td>0.389</td><td>0.028</td><td>1.067</td><td>0.277</td><td>1.302</td><td>0.019</td><td>1.661</td><td>0.05</td></tr><tr><td>Camponotussp. 7</td><td>1</td><td>1.486</td><td>-</td><td>1.255</td><td>-</td><td>1.08</td><td>-</td><td>0.53</td><td>-</td><td>0.287</td><td>-</td><td>2</td><td>-</td><td>1.524</td><td>-</td><td>1.813</td><td>-</td></tr><tr><td>Camponotus striatus</td><td>1</td><td>0.739</td><td>-</td><td>0.696</td><td>-</td><td>0.326</td><td>-</td><td>0.761</td><td>-</td><td>0.217</td><td>-</td><td>0.565</td><td>-</td><td>0.717</td><td>-</td><td>0.978</td><td>-</td></tr><tr><td>Carebara audita</td><td>4</td><td>0.348</td><td>0.001</td><td>0.287</td><td>0.006</td><td>0.199</td><td>0.097</td><td>0.154</td><td>0.028</td><td>0.022</td><td>0</td><td>0.219</td><td>0.059</td><td>0.176</td><td>0.004</td><td>0.284</td><td>0.002</td></tr><tr><td>Carebara brevipilosa</td><td>8</td><td>0.44</td><td>0.026</td><td>0.421</td><td>0.016</td><td>0.277</td><td>0.021</td><td>0.307</td><td>0.014</td><td>0.011</td><td>0</td><td>0.405</td><td>0.021</td><td>0.326</td><td>0.018</td><td>0.497</td><td>0.019</td></tr><tr><td>Carebara globularia</td><td>8</td><td>0.303</td><td>0.005</td><td>0.236</td><td>0.012</td><td>0.185</td><td>0.041</td><td>0.148</td><td>0.007</td><td>0.014</td><td>0.016</td><td>0.072</td><td>0.079</td><td>0.134</td><td>0.014</td><td>0.279</td><td>0.011</td></tr><tr><td>Carebara striata</td><td>4</td><td>0.348</td><td>0</td><td>0.304</td><td>0</td><td>0.145</td><td>0.013</td><td>0.188</td><td>0.013</td><td>0.022</td><td>0</td><td>0.279</td><td>0.017</td><td>0.17</td><td>0.006</td><td>0.326</td><td>0.022</td></tr><tr><td>Carebara urichi</td><td>1</td><td>0.464</td><td>-</td><td>0.445</td><td>-</td><td>0.432</td><td>-</td><td>0.297</td><td>-</td><td>0.002</td><td>-</td><td>0.321</td><td>-</td><td>0.342</td><td>-</td><td>0.517</td><td>-</td></tr><tr><td>Cephalotes atratus</td><td>1</td><td>2.461</td><td>-</td><td>3.341</td><td>-</td><td>3.11</td><td>-</td><td>0.68</td><td>-</td><td>0.7</td><td>-</td><td>0.987</td><td>-</td><td>3.425</td><td>-</td><td>3.343</td><td>-</td></tr><tr><td>Cephalotes columbicus</td><td>1</td><td>1.313</td><td>-</td><td>1.455</td><td>-</td><td>1.455</td><td>-</td><td>0.178</td><td>-</td><td>0.36</td><td>-</td><td>0.53</td><td>-</td><td>0.78</td><td>-</td><td>1.135</td><td>-</td></tr><tr><td>Cephalotes complanatus</td><td>1</td><td>1.61</td><td>-</td><td>2.16</td><td>-</td><td>1.9</td><td>-</td><td>0.255</td><td>-</td><td>0.508</td><td>-</td><td>0.435</td><td>-</td><td>1.4</td><td>-</td><td>1.9</td><td>-</td></tr><tr><td>Cephalotes porrasi</td><td>1</td><td>1.087</td><td>-</td><td>1.217</td><td>-</td><td>0.326</td><td>-</td><td>0.522</td><td>-</td><td>0.239</td><td>-</td><td>0.978</td><td>-</td><td>0.63</td><td>-</td><td>1.109</td><td>-</td></tr><tr><td>Crematogaster brasiliensis</td><td>8</td><td>0.675</td><td>0.004</td><td>0.698</td><td>0.006</td><td>0.542</td><td>0.13</td><td>0.433</td><td>0.161</td><td>0.154</td><td>0.006</td><td>0.661</td><td>0.035</td><td>1.001</td><td>0.012</td><td>0.806</td><td>0.008</td></tr><tr><td>Crematogaster carinata</td><td>1</td><td>0.671</td><td>-</td><td>0.665</td><td>-</td><td>0.586</td><td>-</td><td>0.326</td><td>-</td><td>0.15</td><td>-</td><td>0.645</td><td>-</td><td>0.778</td><td>-</td><td>0.775</td><td>-</td></tr><tr><td>Crematogaster erecta</td><td>4</td><td>0.541</td><td>0.004</td><td>0.587</td><td>0</td><td>0.412</td><td>0.152</td><td>0.356</td><td>0.081</td><td>0.13</td><td>0.001</td><td>0.466</td><td>0.079</td><td>0.543</td><td>0</td><td>0.582</td><td>0.006</td></tr><tr><td>Crematogaster flavosensitiva</td><td>4</td><td>0.577</td><td>0.018</td><td>0.523</td><td>0.007</td><td>0.372</td><td>0.094</td><td>0.408</td><td>0.133</td><td>0.156</td><td>0.012</td><td>0.477</td><td>0.038</td><td>0.566</td><td>0.032</td><td>0.594</td><td>0.013</td></tr><tr><td>Crematogaster limata</td><td>12</td><td>0.707</td><td>0.095</td><td>0.708</td><td>0.082</td><td>0.446</td><td>0.12</td><td>0.58</td><td>0.226</td><td>0.168</td><td>0.037</td><td>0.648</td><td>0.072</td><td>0.811</td><td>0.107</td><td>0.83</td><td>0.129</td></tr><tr><td>Crematogaster nigropilosa</td><td>8</td><td>0.659</td><td>0.037</td><td>0.65</td><td>0.026</td><td>0.489</td><td>0.126</td><td>0.509</td><td>0.162</td><td>0.159</td><td>0.017</td><td>0.667</td><td>0.082</td><td>0.778</td><td>0.012</td><td>0.768</td><td>0.014</td></tr><tr><td>Crematogaster obscurata</td><td>4</td><td>0.56</td><td>0.015</td><td>0.538</td><td>0.023</td><td>0.415</td><td>0.077</td><td>0.242</td><td>0.126</td><td>0.144</td><td>0.013</td><td>0.436</td><td>0.053</td><td>0.464</td><td>0.022</td><td>0.554</td><td>0.031</td></tr><tr><td>Crematogaster stolii</td><td>1</td><td>0.957</td><td>-</td><td>1.087</td><td>-</td><td>0.543</td><td>-</td><td>0.652</td><td>-</td><td>0.217</td><td>-</td><td>1.022</td><td>-</td><td>0.804</td><td>-</td><td>1.152</td><td>-</td></tr><tr><td>Cyphomyrmex costatus</td><td>12</td><td>0.545</td><td>0.034</td><td>0.455</td><td>0.044</td><td>0.395</td><td>0.027</td><td>0.225</td><td>0.045</td><td>0.104</td><td>0.009</td><td>0.322</td><td>0.011</td><td>0.527</td><td>0.085</td><td>0.667</td><td>0.022</td></tr><tr><td>Cyphomyrmex minutus</td><td>12</td><td>0.605</td><td>0.037</td><td>0.569</td><td>0.032</td><td>0.286</td><td>0.088</td><td>0.416</td><td>0.097</td><td>0.123</td><td>0.011</td><td>0.426</td><td>0.03</td><td>0.593</td><td>0.045</td><td>0.746</td><td>0.032</td></tr><tr><td>Cyphomyrmex rimosus</td><td>8</td><td>0.65</td><td>0.032</td><td>0.557</td><td>0.065</td><td>0.372</td><td>0.096</td><td>0.378</td><td>0.143</td><td>0.144</td><td>0.018</td><td>0.544</td><td>0.068</td><td>0.696</td><td>0.046</td><td>0.798</td><td>0.042</td></tr><tr><td>Cyphomyrmex sp. 4</td><td>4</td><td>0.587</td><td>0</td><td>0.552</td><td>0</td><td>0.428</td><td>0</td><td>0.251</td><td>0</td><td>0.112</td><td>0</td><td>0.445</td><td>0</td><td>0.534</td><td>0</td><td>0.715</td><td>0</td></tr><tr><td>Discothyrea humilis</td><td>4</td><td>0.368</td><td>0.003</td><td>0.302</td><td>0.003</td><td>0.195</td><td>0.092</td><td>0.162</td><td>0.048</td><td>0.019</td><td>0.004</td><td>0.227</td><td>0.048</td><td>0.215</td><td>0.003</td><td>0.39</td><td>0.002</td></tr><tr><td>Discothyrea neotropica</td><td>4</td><td>0.5</td><td>0</td><td>0.442</td><td>0.013</td><td>0.188</td><td>0.013</td><td>0.261</td><td>0.022</td><td>0.022</td><td>0</td><td>0.362</td><td>0.013</td><td>0.297</td><td>0.013</td><td>0.558</td><td>0.013</td></tr><tr><td>Discothyrea testacea</td><td>4</td><td>0.453</td><td>0.006</td><td>0.41</td><td>0.005</td><td>0.272</td><td>0.077</td><td>0.228</td><td>0.019</td><td>0.019</td><td>0.005</td><td>0.32</td><td>0.086</td><td>0.235</td><td>0.008</td><td>0.453</td><td>0.007</td></tr><tr><td>Dolichoderus bispinosus</td><td>1</td><td>1.655</td><td>-</td><td>1.724</td><td>-</td><td>0.828</td><td>-</td><td>1.517</td><td>-</td><td>0.345</td><td>-</td><td>1.034</td><td>-</td><td>1.862</td><td>-</td><td>2</td><td>-</td></tr><tr><td>Dolichoderus sp. 2</td><td>1</td><td>1.78</td><td>-</td><td>1.859</td><td>-</td><td>1.107</td><td>-</td><td>0.36</td><td>-</td><td>0.439</td><td>-</td><td>1.317</td><td>-</td><td>1.699</td><td>-</td><td>1.566</td><td>-</td></tr><tr><td>Ectatomma ruidum</td><td>8</td><td>1.744</td><td>0.068</td><td>1.622</td><td>0.254</td><td>1.088</td><td>0.191</td><td>1.518</td><td>0.168</td><td>0.45</td><td>0.041</td><td>1.294</td><td>0.29</td><td>2.277</td><td>0.277</td><td>2.776</td><td>0.143</td></tr><tr><td>Ectatomma tuberculatum</td><td>4</td><td>2.337</td><td>0.01</td><td>1.852</td><td>0.014</td><td>1.753</td><td>0.057</td><td>2.029</td><td>0.349</td><td>0.54</td><td>0.017</td><td>1.993</td><td>0.38</td><td>3.094</td><td>0.014</td><td>3.718</td><td>0.009</td></tr><tr><td>Eurhopalothrix pilulifera</td><td>1</td><td>0.565</td><td>-</td><td>0.543</td><td>-</td><td>0.152</td><td>-</td><td>0.326</td><td>-</td><td>0.022</td><td>-</td><td>0.391</td><td>-</td><td>0.435</td><td>-</td><td>0.587</td><td>-</td></tr><tr><td>Gnamptogenys boliviensis</td><td>4</td><td>0.688</td><td>0.007</td><td>0.671</td><td>0.004</td><td>0.619</td><td>0.047</td><td>0.541</td><td>0.035</td><td>0.105</td><td>0.005</td><td>0.543</td><td>0.094</td><td>0.54</td><td>0.003</td><td>1.086</td><td>0.001</td></tr><tr><td>Gnamptogenys sp. 2</td><td>4</td><td>0.7</td><td>0.006</td><td>0.547</td><td>0.015</td><td>0.542</td><td>0.001</td><td>0.319</td><td>0.027</td><td>0.051</td><td>0.001</td><td>0.359</td><td>0.011</td><td>0.458</td><td>0.037</td><td>0.888</td><td>0.017</td></tr><tr><td>Holcoponera strigata</td><td>4</td><td>1.121</td><td>0.202</td><td>1.017</td><td>0.269</td><td>0.809</td><td>0.314</td><td>0.717</td><td>0.307</td><td>0.246</td><td>0.102</td><td>0.944</td><td>0.321</td><td>1.265</td><td>0.222</td><td>1.616</td><td>0.348</td></tr><tr><td>Hylomyrmacolumbica</td><td>4</td><td>0.891</td><td>-</td><td>0.87</td><td>-</td><td>0.609</td><td>-</td><td>0.63</td><td>-</td><td>0.217</td><td>-</td><td>0.783</td><td>-</td><td>0.804</td><td>-</td><td>1.174</td><td>-</td></tr><tr><td>Hypoponera opacior</td><td>12</td><td>0.722</td><td>0.046</td><td>0.614</td><td>0.054</td><td>0.419</td><td>0.122</td><td>0.501</td><td>0.135</td><td>0.04</td><td>0.008</td><td>0.559</td><td>0.059</td><td>0.636</td><td>0.091</td><td>1.048</td><td>0.107</td></tr><tr><td>Hypoponera trigona</td><td>12</td><td>0.638</td><td>0.01</td><td>0.506</td><td>0.007</td><td>0.443</td><td>0.009</td><td>0.268</td><td>0.008</td><td>0.03</td><td>0.005</td><td>0.443</td><td>0.01</td><td>0.662</td><td>0.01</td><td>0.83</td><td>0.006</td></tr><tr><td>Labidus coecus</td><td>3</td><td>0.947</td><td>0.089</td><td>0.888</td><td>0.135</td><td>0.675</td><td>0.154</td><td>0.624</td><td>0.061</td><td>0.037</td><td>0.012</td><td>0.752</td><td>0.085</td><td>1.073</td><td>0.125</td><td>1.289</td><td>0.148</td></tr><tr><td>Labidus predator</td><td>8</td><td>1.439</td><td>0.01</td><td>1.309</td><td>0.008</td><td>1.027</td><td>0.015</td><td>1.044</td><td>0.053</td><td>0.043</td><td>0.007</td><td>1.136</td><td>0.057</td><td>2.072</td><td>0.009</td><td>2.07</td><td>0.01</td></tr><tr><td>Lachnomyrmexscrobiculatus</td><td>1</td><td>0.739</td><td>-</td><td>0.739</td><td>-</td><td>0.37</td><td>-</td><td>0.457</td><td>-</td><td>0.152</td><td>-</td><td>0.652</td><td>-</td><td>0.63</td><td>-</td><td>0.87</td><td>-</td></tr><tr><td>Leptogenys ritae</td><td>12</td><td>0.769</td><td>0.027</td><td>0.539</td><td>0.021</td><td>0.411</td><td>0.069</td><td>0.569</td><td>0.111</td><td>0.099</td><td>0.014</td><td>0.536</td><td>0.071</td><td>0.639</td><td>0.035</td><td>1.106</td><td>0.06</td></tr><tr><td>Mayaponera arhuaca</td><td>8</td><td>1.247</td><td>0.084</td><td>1.127</td><td>0.035</td><td>0.898</td><td>0.101</td><td>0.963</td><td>0.065</td><td>0.159</td><td>0.022</td><td>1.004</td><td>0.047</td><td>1.183</td><td>0.035</td><td>1.814</td><td>0.079</td></tr><tr><td>Mayaponeraconstricta</td><td>8</td><td>1.55</td><td>0.014</td><td>1.265</td><td>0.075</td><td>1.061</td><td>0.102</td><td>1.436</td><td>0.256</td><td>0.291</td><td>0.008</td><td>1.164</td><td>0.343</td><td>1.838</td><td>0.047</td><td>2.508</td><td>0.075</td></tr><tr><td>Megalomyrmexdrifti</td><td>4</td><td>0.567</td><td>0.057</td><td>0.453</td><td>0.041</td><td>0.319</td><td>0.054</td><td>0.334</td><td>0.156</td><td>0.132</td><td>0.02</td><td>0.366</td><td>0.059</td><td>0.463</td><td>0.051</td><td>0.69</td><td>0.118</td></tr><tr><td>Megalomyrmexincisus</td><td>4</td><td>0.696</td><td>0</td><td>0.598</td><td>0.015</td><td>0.402</td><td>0.015</td><td>0.598</td><td>0.015</td><td>0.196</td><td>0</td><td>0.5</td><td>0.031</td><td>0.772</td><td>0.046</td><td>0.935</td><td>0.031</td></tr><tr><td>Megalomyrmexlonginoi</td><td>4</td><td>0.582</td><td>0.007</td><td>0.475</td><td>0.005</td><td>0.322</td><td>0.036</td><td>0.55</td><td>0.298</td><td>0.181</td><td>0.005</td><td>0.531</td><td>0.32</td><td>0.738</td><td>0.002</td><td>0.802</td><td>0.004</td></tr><tr><td>Megalomyrmexsilvestrii</td><td>8</td><td>0.767</td><td>0.022</td><td>0.596</td><td>0.037</td><td>0.423</td><td>0.026</td><td>0.848</td><td>0.262</td><td>0.209</td><td>0.01</td><td>0.571</td><td>0.233</td><td>1.001</td><td>0.024</td><td>1.162</td><td>0.02</td></tr><tr><td>Monomoriumfloricola</td><td>3</td><td>0.42</td><td>0.048</td><td>0.337</td><td>0.03</td><td>0.232</td><td>0.058</td><td>0.263</td><td>0.101</td><td>0.073</td><td>0.013</td><td>0.312</td><td>0.026</td><td>0.285</td><td>0.059</td><td>0.451</td><td>0.04</td></tr><tr><td>Mycetomoelleriussp. 1</td><td>1</td><td>0.602</td><td>-</td><td>0.605</td><td>-</td><td>0.556</td><td>-</td><td>0.432</td><td>-</td><td>0.102</td><td>-</td><td>0.469</td><td>-</td><td>0.581</td><td>-</td><td>0.821</td><td>-</td></tr><tr><td>Mycocepuruscurvispinosus</td><td>4</td><td>0.645</td><td>0.021</td><td>0.614</td><td>0.01</td><td>0.523</td><td>0.093</td><td>0.47</td><td>0.021</td><td>0.109</td><td>0.007</td><td>0.531</td><td>0.042</td><td>0.562</td><td>0.012</td><td>0.824</td><td>0.012</td></tr><tr><td>Myrmicocripta sp. 2</td><td>1</td><td>0.761</td><td>-</td><td>0.63</td><td>-</td><td>0.413</td><td>-</td><td>0.63</td><td>-</td><td>0.065</td><td>-</td><td>0.587</td><td>-</td><td>0.696</td><td>-</td><td>0.913</td><td>-</td></tr><tr><td>Myrmicocrypta urichi</td><td>8</td><td>0.693</td><td>0.017</td><td>0.553</td><td>0.013</td><td>0.371</td><td>0.037</td><td>0.517</td><td>0.134</td><td>0.097</td><td>0.011</td><td>0.517</td><td>0.091</td><td>0.722</td><td>0.042</td><td>0.865</td><td>0.031</td></tr><tr><td>Neoponera apicalis</td><td>3</td><td>2.486</td><td>0.004</td><td>2.139</td><td>0.002</td><td>1.763</td><td>0.432</td><td>2.418</td><td>0.482</td><td>0.828</td><td>0</td><td>2.105</td><td>0.928</td><td>3.659</td><td>0.006</td><td>4.209</td><td>0.004</td></tr><tr><td>Neoponera carinulata</td><td>4</td><td>1.499</td><td>0.016</td><td>1.383</td><td>0.006</td><td>1.092</td><td>0.025</td><td>1.293</td><td>0.148</td><td>0.448</td><td>0.03</td><td>1.159</td><td>0.199</td><td>1.638</td><td>0.017</td><td>2.293</td><td>0.016</td></tr><tr><td>Neoponera verenae</td><td>1</td><td>2.463</td><td>-</td><td>2.119</td><td>-</td><td>1.413</td><td>-</td><td>2.044</td><td>-</td><td>0.818</td><td>-</td><td>2.729</td><td>-</td><td>3.631</td><td>-</td><td>4.176</td><td>-</td></tr><tr><td>Nesomyrmex sp. 1</td><td>1</td><td>0.866</td><td>-</td><td>0.778</td><td>-</td><td>0.685</td><td>-</td><td>0.228</td><td>-</td><td>0.187</td><td>-</td><td>0.434</td><td>-</td><td>0.67</td><td>-</td><td>0.907</td><td>-</td></tr><tr><td>Nomamyrmex esenbeckii</td><td>1</td><td>1.437</td><td>-</td><td>1.333</td><td>-</td><td>1.022</td><td>-</td><td>0.462</td><td>-</td><td>0.083</td><td>-</td><td>0.797</td><td>-</td><td>1.531</td><td>-</td><td>2.054</td><td>-</td></tr><tr><td>Nylanderia guatemalensis</td><td>12</td><td>0.609</td><td>0.028</td><td>0.501</td><td>0.026</td><td>0.311</td><td>0.026</td><td>0.576</td><td>0.26</td><td>0.147</td><td>0.013</td><td>0.381</td><td>0.128</td><td>0.708</td><td>0.043</td><td>0.771</td><td>0.061</td></tr><tr><td>Octostruma amrishi</td><td>12</td><td>0.525</td><td>0.034</td><td>0.559</td><td>0.045</td><td>0.245</td><td>0.14</td><td>0.248</td><td>0.061</td><td>0.046</td><td>0.008</td><td>0.433</td><td>0.109</td><td>0.381</td><td>0.051</td><td>0.573</td><td>0.08</td></tr><tr><td>Octostruma iheringi</td><td>4</td><td>0.589</td><td>0.004</td><td>0.653</td><td>0.008</td><td>0.541</td><td>0.008</td><td>0.176</td><td>0.006</td><td>0.065</td><td>0.008</td><td>0.326</td><td>0.006</td><td>0.433</td><td>0.005</td><td>0.739</td><td>0.006</td></tr><tr><td>Odontomachus bauri</td><td>4</td><td>2.472</td><td>0.029</td><td>1.809</td><td>0.192</td><td>1.395</td><td>0.107</td><td>1.598</td><td>0.723</td><td>0.441</td><td>0.058</td><td>2.225</td><td>0.308</td><td>2.628</td><td>0.148</td><td>2.555</td><td>0.382</td></tr><tr><td>Odontomachus brunneus</td><td>4</td><td>2.114</td><td>0.055</td><td>1.612</td><td>0.045</td><td>1.192</td><td>0.004</td><td>1.236</td><td>0.417</td><td>0.289</td><td>0.028</td><td>1.52</td><td>0.199</td><td>1.99</td><td>0.023</td><td>2.073</td><td>0.236</td></tr><tr><td>Odontomachus laticeps</td><td>4</td><td>2.446</td><td>0.013</td><td>1.717</td><td>0.008</td><td>1.326</td><td>0.006</td><td>1.262</td><td>0.014</td><td>0.402</td><td>0.007</td><td>2.35</td><td>0.009</td><td>2.544</td><td>0.007</td><td>2.369</td><td>0.004</td></tr><tr><td>Odontomachus opaciventris</td><td>12</td><td>2.767</td><td>0.43</td><td>2.144</td><td>0.274</td><td>1.668</td><td>0.216</td><td>2.399</td><td>0.733</td><td>0.504</td><td>0.084</td><td>2.05</td><td>0.572</td><td>2.965</td><td>0.4</td><td>3.38</td><td>0.412</td></tr><tr><td>Pachycondyla harpax</td><td>12</td><td>1.928</td><td>0.101</td><td>1.828</td><td>0.105</td><td>1.412</td><td>0.274</td><td>1.344</td><td>0.225</td><td>0.394</td><td>0.065</td><td>1.501</td><td>0.09</td><td>1.757</td><td>0.167</td><td>2.926</td><td>0.229</td></tr><tr><td>Pachycondyla Impressa</td><td>8</td><td>2.991</td><td>0.055</td><td>2.843</td><td>0.067</td><td>1.981</td><td>0.211</td><td>2.141</td><td>0.342</td><td>0.543</td><td>0.03</td><td>2.245</td><td>0.099</td><td>2.796</td><td>0.083</td><td>4.107</td><td>0.055</td></tr><tr><td>Paratrachymyrmex bugnioni</td><td>8</td><td>0.777</td><td>0.076</td><td>0.735</td><td>0.075</td><td>0.491</td><td>0.047</td><td>0.56</td><td>0.17</td><td>0.128</td><td>0.011</td><td>0.652</td><td>0.1</td><td>0.911</td><td>0.135</td><td>1.08</td><td>0.125</td></tr><tr><td>Paratrachymyrmex cornetzi</td><td>4</td><td>0.92</td><td>0.012</td><td>0.942</td><td>0.012</td><td>0.699</td><td>0.105</td><td>0.767</td><td>0.126</td><td>0.142</td><td>0.011</td><td>0.803</td><td>0.02</td><td>1.206</td><td>0.029</td><td>1.38</td><td>0.066</td></tr><tr><td>Paratrachymyrmexirmgardae</td><td>4</td><td>0.805</td><td>0.158</td><td>0.788</td><td>0.214</td><td>0.685</td><td>0.173</td><td>0.433</td><td>0.262</td><td>0.124</td><td>0.023</td><td>0.672</td><td>0.192</td><td>0.968</td><td>0.355</td><td>1.118</td><td>0.418</td></tr><tr><td>Pheidole biconstricta</td><td>4</td><td>0.768</td><td>0.146</td><td>0.681</td><td>0.131</td><td>0.5</td><td>0.078</td><td>0.777</td><td>0.557</td><td>0.166</td><td>0.035</td><td>0.65</td><td>0.082</td><td>1.015</td><td>0.389</td><td>1.01</td><td>0.312</td></tr><tr><td>Pheidole distorta</td><td>1</td><td>0.565</td><td>-</td><td>0.587</td><td>-</td><td>0.413</td><td>-</td><td>0.543</td><td>-</td><td>0.13</td><td>-</td><td>0.587</td><td>-</td><td>0.609</td><td>-</td><td>0.674</td><td>-</td></tr><tr><td>Pheidole fimbriata</td><td>4</td><td>0.848</td><td>0</td><td>0.826</td><td>0.001</td><td>0.717</td><td>0.123</td><td>0.775</td><td>0.195</td><td>0.067</td><td>0.003</td><td>0.858</td><td>0.075</td><td>1.045</td><td>0.002</td><td>1.11</td><td>0.002</td></tr><tr><td>Pheidole flavens</td><td>12</td><td>0.439</td><td>0.032</td><td>0.385</td><td>0.022</td><td>0.266</td><td>0.044</td><td>0.315</td><td>0.072</td><td>0.081</td><td>0.008</td><td>0.345</td><td>0.03</td><td>0.335</td><td>0.034</td><td>0.463</td><td>0.027</td></tr><tr><td>Pheidole mendicula</td><td>12</td><td>0.392</td><td>0.021</td><td>0.384</td><td>0.019</td><td>0.272</td><td>0.069</td><td>0.283</td><td>0.05</td><td>0.079</td><td>0.01</td><td>0.349</td><td>0.025</td><td>0.298</td><td>0.013</td><td>0.419</td><td>0.013</td></tr><tr><td>Pheidole pugnax</td><td>12</td><td>0.66</td><td>0.024</td><td>0.617</td><td>0.029</td><td>0.463</td><td>0.092</td><td>0.636</td><td>0.179</td><td>0.148</td><td>0.024</td><td>0.598</td><td>0.086</td><td>0.732</td><td>0.203</td><td>0.851</td><td>0.046</td></tr><tr><td>Pheidole sp. 1</td><td>12</td><td>0.663</td><td>0.014</td><td>0.634</td><td>0.006</td><td>0.549</td><td>0.009</td><td>0.265</td><td>0.019</td><td>0.108</td><td>0.002</td><td>0.578</td><td>0.008</td><td>0.806</td><td>0.013</td><td>0.786</td><td>0.009</td></tr><tr><td>Pheidole sp. 12</td><td>8</td><td>0.482</td><td>0.007</td><td>0.461</td><td>0.005</td><td>0.438</td><td>0.007</td><td>0.329</td><td>0.003</td><td>0.086</td><td>0.007</td><td>0.415</td><td>0.007</td><td>0.436</td><td>0.006</td><td>0.546</td><td>0.006</td></tr><tr><td>Pheidole sp. 13</td><td>8</td><td>0.482</td><td>0.007</td><td>0.418</td><td>0.009</td><td>0.395</td><td>0.007</td><td>0.267</td><td>0.008</td><td>0.091</td><td>0.007</td><td>0.396</td><td>0.005</td><td>0.396</td><td>0.006</td><td>0.507</td><td>0.007</td></tr><tr><td>Pheidole sp. 17</td><td>3</td><td>0.661</td><td>0.047</td><td>0.594</td><td>0.119</td><td>0.431</td><td>0.074</td><td>0.72</td><td>0.259</td><td>0.11</td><td>0.002</td><td>0.59</td><td>0.254</td><td>0.907</td><td>0.062</td><td>0.935</td><td>0.043</td></tr><tr><td>Pheidole sp. 18</td><td>3</td><td>0.478</td><td>0.031</td><td>0.435</td><td>0.031</td><td>0.272</td><td>0.015</td><td>0.522</td><td>0.061</td><td>0.087</td><td>0</td><td>0.391</td><td>0.031</td><td>0.511</td><td>0.046</td><td>0.576</td><td>0.015</td></tr><tr><td>Pheidole sp. 2</td><td>8</td><td>0.803</td><td>0.007</td><td>0.694</td><td>0.008</td><td>0.628</td><td>0.011</td><td>0.431</td><td>0.006</td><td>0.195</td><td>0.01</td><td>1.058</td><td>0.008</td><td>1.106</td><td>0.009</td><td>1.107</td><td>0.002</td></tr><tr><td>Pheidole sp. 4</td><td>8</td><td>0.494</td><td>0.021</td><td>0.442</td><td>0.013</td><td>0.307</td><td>0.044</td><td>0.446</td><td>0.107</td><td>0.099</td><td>0.011</td><td>0.436</td><td>0.065</td><td>0.507</td><td>0.044</td><td>0.594</td><td>0.018</td></tr><tr><td>Pheidole sp. 5</td><td>8</td><td>0.512</td><td>0.039</td><td>0.472</td><td>0.014</td><td>0.4</td><td>0.065</td><td>0.397</td><td>0.071</td><td>0.085</td><td>0.002</td><td>0.465</td><td>0.045</td><td>0.504</td><td>0.033</td><td>0.612</td><td>0.005</td></tr><tr><td>Pheidole sp. 9</td><td>8</td><td>0.55</td><td>0.004</td><td>0.516</td><td>0.005</td><td>0.448</td><td>0.008</td><td>0.336</td><td>0.005</td><td>0.119</td><td>0.006</td><td>0.424</td><td>0.007</td><td>0.47</td><td>0.005</td><td>0.596</td><td>0.006</td></tr><tr><td>Pheidole subarmata</td><td>12</td><td>0.498</td><td>0.022</td><td>0.458</td><td>0.024</td><td>0.365</td><td>0.069</td><td>0.377</td><td>0.07</td><td>0.113</td><td>0.005</td><td>0.425</td><td>0.03</td><td>0.494</td><td>0.029</td><td>0.621</td><td>0.05</td></tr><tr><td>Pheidole susannae</td><td>4</td><td>0.659</td><td>0.008</td><td>0.517</td><td>0.002</td><td>0.439</td><td>0.005</td><td>0.251</td><td>0.007</td><td>0.134</td><td>0.007</td><td>0.807</td><td>0.014</td><td>1.034</td><td>0.069</td><td>0.795</td><td>0.006</td></tr><tr><td>Pheidole synarmata</td><td>4</td><td>0.513</td><td>0.041</td><td>0.473</td><td>0.033</td><td>0.354</td><td>0.056</td><td>0.392</td><td>0.042</td><td>0.099</td><td>0.014</td><td>0.425</td><td>0.011</td><td>0.441</td><td>0.021</td><td>0.566</td><td>0.026</td></tr><tr><td>Pheidole transversostriata</td><td>4</td><td>0.501</td><td>0.176</td><td>0.426</td><td>0.111</td><td>0.355</td><td>0.124</td><td>0.246</td><td>0.06</td><td>0.068</td><td>0.01</td><td>0.292</td><td>0.062</td><td>0.371</td><td>0.086</td><td>0.465</td><td>0.055</td></tr><tr><td>Pheidole zeteki</td><td>12</td><td>0.404</td><td>0.025</td><td>0.374</td><td>0.018</td><td>0.222</td><td>0.024</td><td>0.309</td><td>0.036</td><td>0.078</td><td>0.019</td><td>0.335</td><td>0.019</td><td>0.326</td><td>0.031</td><td>0.422</td><td>0.052</td></tr><tr><td>Pogonomyrmex mayri</td><td>8</td><td>1.985</td><td>0.064</td><td>1.742</td><td>0.034</td><td>1.189</td><td>0.227</td><td>1.535</td><td>0.334</td><td>0.274</td><td>0.003</td><td>1.569</td><td>0.067</td><td>2.363</td><td>0.034</td><td>2.294</td><td>0.034</td></tr><tr><td>Prionopelta antillana</td><td>1</td><td>0.509</td><td>-</td><td>0.447</td><td>-</td><td>0.44</td><td>-</td><td>0.107</td><td>-</td><td>0.029</td><td>-</td><td>0.265</td><td>-</td><td>0.475</td><td>-</td><td>0.667</td><td>-</td></tr><tr><td>Probolomyrmex boliviensis</td><td>2</td><td>0.75</td><td>0.046</td><td>0.446</td><td>0.015</td><td>0.228</td><td>0.015</td><td>0.554</td><td>0.015</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.641</td><td>0.046</td><td>1.054</td><td>0.077</td></tr><tr><td>Proceratium catio</td><td>1</td><td>0.609</td><td>-</td><td>0.587</td><td>-</td><td>0.348</td><td>-</td><td>0.413</td><td>-</td><td>0.022</td><td>-</td><td>0.543</td><td>-</td><td>0.413</td><td>-</td><td>0.739</td><td>-</td></tr><tr><td>Pseudomyrmex boopis</td><td>1</td><td>1.217</td><td>-</td><td>1</td><td>-</td><td>0.587</td><td>-</td><td>0.609</td><td>-</td><td>0.804</td><td>-</td><td>0.696</td><td>-</td><td>1.13</td><td>-</td><td>1.652</td><td>-</td></tr><tr><td>Pseudomyrmex mordax</td><td>1</td><td>0.989</td><td>-</td><td>0.913</td><td>-</td><td>0.467</td><td>-</td><td>0.391</td><td>-</td><td>0.413</td><td>-</td><td>0.674</td><td>-</td><td>0.761</td><td>-</td><td>1.37</td><td>-</td></tr><tr><td>Pseudomyrmex simplex</td><td>4</td><td>1.223</td><td>0.007</td><td>1.004</td><td>0.01</td><td>0.701</td><td>0.011</td><td>0.591</td><td>0.006</td><td>0.809</td><td>0.008</td><td>0.612</td><td>0.011</td><td>1.137</td><td>0.01</td><td>1.659</td><td>0.012</td></tr><tr><td>Pseudomyrmex sp. 4</td><td>1</td><td>1.976</td><td>-</td><td>1.62</td><td>-</td><td>0.93</td><td>-</td><td>0.41</td><td>-</td><td>1.198</td><td>-</td><td>0.92</td><td>-</td><td>1.852</td><td>-</td><td>2.756</td><td>-</td></tr><tr><td>Rasopone pluviselva</td><td>1</td><td>1.261</td><td>-</td><td>1.152</td><td>-</td><td>0.761</td><td>-</td><td>0.891</td><td>-</td><td>0.152</td><td>-</td><td>0.978</td><td>-</td><td>0.87</td><td>-</td><td>1.739</td><td>-</td></tr><tr><td>Rhopalothrix isthmica</td><td>1</td><td>0.566</td><td>-</td><td>0.551</td><td>-</td><td>0.393</td><td>-</td><td>0.157</td><td>-</td><td>0.026</td><td>-</td><td>0.328</td><td>-</td><td>0.445</td><td>-</td><td>0.593</td><td>-</td></tr><tr><td>Rogeria belti</td><td>8</td><td>0.607</td><td>0.11</td><td>0.521</td><td>0.103</td><td>0.421</td><td>0.144</td><td>0.275</td><td>0.086</td><td>0.078</td><td>0.011</td><td>0.406</td><td>0.072</td><td>0.446</td><td>0.085</td><td>0.588</td><td>0.081</td></tr><tr><td>Rogeria ciliosa</td><td>1</td><td>0.63</td><td>-</td><td>0.543</td><td>-</td><td>0.348</td><td>-</td><td>0.478</td><td>-</td><td>0.065</td><td>-</td><td>0.5</td><td>-</td><td>0.5</td><td>-</td><td>0.717</td><td>-</td></tr><tr><td>Rogeria curvipubens</td><td>12</td><td>0.528</td><td>0.022</td><td>0.449</td><td>0.015</td><td>0.319</td><td>0.093</td><td>0.316</td><td>0.044</td><td>0.058</td><td>0.009</td><td>0.384</td><td>0.031</td><td>0.359</td><td>0.027</td><td>0.542</td><td>0.02</td></tr><tr><td>Rogeria foreli</td><td>8</td><td>0.628</td><td>0.032</td><td>0.542</td><td>0.044</td><td>0.349</td><td>0.043</td><td>0.401</td><td>0.068</td><td>0.073</td><td>0.013</td><td>0.483</td><td>0.055</td><td>0.501</td><td>0.002</td><td>0.676</td><td>0.047</td></tr><tr><td>Sericomyrmex amabilis</td><td>4</td><td>1.087</td><td>0.061</td><td>1.261</td><td>0.061</td><td>0.707</td><td>0.015</td><td>0.815</td><td>0.015</td><td>0.185</td><td>0.015</td><td>1.033</td><td>0.015</td><td>1.196</td><td>0.154</td><td>1.565</td><td>0.031</td></tr><tr><td>Solenopsis azteca</td><td>12</td><td>0.34</td><td>0.043</td><td>0.281</td><td>0.024</td><td>0.19</td><td>0.04</td><td>0.245</td><td>0.07</td><td>0.03</td><td>0.012</td><td>0.275</td><td>0.054</td><td>0.217</td><td>0.022</td><td>0.357</td><td>0.031</td></tr><tr><td>Solenopsis geminata</td><td>12</td><td>0.557</td><td>0.011</td><td>0.551</td><td>0.012</td><td>0.498</td><td>0.004</td><td>0.17</td><td>0.004</td><td>0.101</td><td>0.005</td><td>0.519</td><td>0.007</td><td>0.587</td><td>0.014</td><td>0.635</td><td>0.031</td></tr><tr><td>Solenopsis picea</td><td>12</td><td>0.474</td><td>0.011</td><td>0.406</td><td>0.029</td><td>0.394</td><td>0.025</td><td>0.099</td><td>0.002</td><td>0.045</td><td>0.004</td><td>0.254</td><td>0.024</td><td>0.351</td><td>0.006</td><td>0.457</td><td>0.013</td></tr><tr><td>Stegomyrmex manni</td><td>2</td><td>1.339</td><td>0.289</td><td>1.237</td><td>0.25</td><td>0.859</td><td>0.108</td><td>0.753</td><td>0.257</td><td>0.107</td><td>0.002</td><td>0.918</td><td>0.177</td><td>1.17</td><td>0.067</td><td>1.716</td><td>0.125</td></tr><tr><td>Strumigenys biolleyi</td><td>1</td><td>0.674</td><td>-</td><td>0.543</td><td>-</td><td>0.391</td><td>-</td><td>0.413</td><td>-</td><td>0.087</td><td>-</td><td>0.326</td><td>-</td><td>0.522</td><td>-</td><td>0.696</td><td>-</td></tr><tr><td>Strumigenys cordovensis</td><td>4</td><td>0.826</td><td>0.022</td><td>0.638</td><td>0.013</td><td>4.543</td><td>6.269</td><td>0.688</td><td>0.033</td><td>0.072</td><td>0.013</td><td>0.377</td><td>0.013</td><td>0.775</td><td>0.025</td><td>0.841</td><td>0.025</td></tr><tr><td>Strumigenys deltisquama</td><td>12</td><td>0.634</td><td>0.098</td><td>0.625</td><td>0.14</td><td>0.357</td><td>0.033</td><td>0.312</td><td>0.023</td><td>0.059</td><td>0.009</td><td>0.337</td><td>0.118</td><td>0.419</td><td>0.047</td><td>0.638</td><td>0.111</td></tr><tr><td>Strumigenys denticulata</td><td>4</td><td>0.465</td><td>0.007</td><td>0.354</td><td>0.006</td><td>1.597</td><td>1.063</td><td>0.343</td><td>0.052</td><td>0.189</td><td>0.145</td><td>0.262</td><td>0.039</td><td>0.308</td><td>0.003</td><td>0.482</td><td>0.003</td></tr><tr><td>Strumigenys dyseides</td><td>4</td><td>0.391</td><td>0</td><td>0.326</td><td>0</td><td>0.227</td><td>0.014</td><td>0.238</td><td>0.032</td><td>0.025</td><td>0.004</td><td>0.246</td><td>0.01</td><td>0.285</td><td>0.003</td><td>0.432</td><td>0.003</td></tr><tr><td>Strumigenys eggersi</td><td>12</td><td>0.442</td><td>0.011</td><td>0.362</td><td>0.009</td><td>0.266</td><td>0.035</td><td>0.248</td><td>0.032</td><td>0.044</td><td>0.002</td><td>0.21</td><td>0.009</td><td>0.269</td><td>0.017</td><td>0.451</td><td>0.016</td></tr><tr><td>Strumigenys elongata</td><td>12</td><td>0.587</td><td>0.014</td><td>0.446</td><td>0.012</td><td>0.319</td><td>0.011</td><td>0.377</td><td>0.011</td><td>0.043</td><td>0</td><td>0.268</td><td>0.011</td><td>0.428</td><td>0.011</td><td>0.554</td><td>0.012</td></tr><tr><td>Strumigenys fridericimuelleri</td><td>12</td><td>0.47</td><td>0.011</td><td>0.34</td><td>0.011</td><td>0.151</td><td>0.034</td><td>0.192</td><td>0.033</td><td>0.043</td><td>0.001</td><td>0.188</td><td>0.026</td><td>0.274</td><td>0.038</td><td>0.462</td><td>0.045</td></tr><tr><td>Strumigenys lanuginosa</td><td>12</td><td>0.62</td><td>0.038</td><td>0.484</td><td>0.021</td><td>0.375</td><td>0.011</td><td>0.342</td><td>0.011</td><td>0.06</td><td>0.011</td><td>0.288</td><td>0.011</td><td>0.473</td><td>0.033</td><td>0.674</td><td>0.031</td></tr><tr><td>Strumigenys marginiventris</td><td>8</td><td>0.742</td><td>0.03</td><td>0.555</td><td>0.109</td><td>0.505</td><td>0.1</td><td>0.554</td><td>0.034</td><td>0.083</td><td>0.01</td><td>0.384</td><td>0.082</td><td>0.548</td><td>0.035</td><td>0.732</td><td>0.019</td></tr><tr><td>Strumigenys subedentata</td><td>4</td><td>0.494</td><td>0.024</td><td>0.421</td><td>0.012</td><td>0.293</td><td>0.011</td><td>0.273</td><td>0.011</td><td>0.051</td><td>0.012</td><td>0.267</td><td>0.013</td><td>0.362</td><td>0.026</td><td>0.523</td><td>0.037</td></tr><tr><td>Strumigenys zeteki</td><td>8</td><td>0.488</td><td>0.022</td><td>0.352</td><td>0.012</td><td>0.211</td><td>0.03</td><td>0.194</td><td>0.016</td><td>0.041</td><td>0.004</td><td>0.162</td><td>0.026</td><td>0.314</td><td>0.021</td><td>0.547</td><td>0.049</td></tr><tr><td>Syscia sp. 1</td><td>3</td><td>0.686</td><td>0.027</td><td>0.557</td><td>0.026</td><td>0.203</td><td>0.176</td><td>0.366</td><td>0.102</td><td>0</td><td>0</td><td>0.105</td><td>0.182</td><td>0.35</td><td>0.303</td><td>0.884</td><td>0.067</td></tr><tr><td>Tapinoma ramulorum</td><td>1</td><td>0.488</td><td>-</td><td>0.411</td><td>-</td><td>0.273</td><td>-</td><td>0.121</td><td>-</td><td>0.089</td><td>-</td><td>0.427</td><td>-</td><td>0.435</td><td>-</td><td>0.488</td><td>-</td></tr><tr><td>Thaumatomyrmex atrox</td><td>4</td><td>0.687</td><td>0.004</td><td>0.712</td><td>0.006</td><td>0.631</td><td>0.006</td><td>0.672</td><td>0.006</td><td>0.227</td><td>0.006</td><td>0.578</td><td>0.001</td><td>0.713</td><td>0.005</td><td>1.145</td><td>0.006</td></tr><tr><td>Thaumatomyrmex zeteki</td><td>8</td><td>0.67</td><td>0.045</td><td>0.681</td><td>0.034</td><td>0.644</td><td>0.024</td><td>0.567</td><td>0.067</td><td>0.2</td><td>0.02</td><td>0.577</td><td>0.028</td><td>0.687</td><td>0.024</td><td>1.121</td><td>0.023</td></tr><tr><td>Trichomyrmex destructor</td><td>8</td><td>0.685</td><td>0.003</td><td>0.603</td><td>0.003</td><td>0.525</td><td>0.003</td><td>0.167</td><td>0.004</td><td>0.09</td><td>0.003</td><td>0.502</td><td>0.004</td><td>0.53</td><td>0.004</td><td>0.674</td><td>0.004</td></tr><tr><td>Wasmannia auropunctata</td><td>12</td><td>0.458</td><td>0.014</td><td>0.409</td><td>0.021</td><td>0.236</td><td>0.057</td><td>0.345</td><td>0.072</td><td>0.094</td><td>0.005</td><td>0.355</td><td>0.009</td><td>0.358</td><td>0.096</td><td>0.476</td><td>0.015</td></tr></table>
+<table><tr><td rowspan="2">Species</td><td rowspan="2">N</td><td colspan="2">HL</td><td colspan="2">HW</td><td colspan="2">ML</td><td colspan="2">SL</td><td colspan="2">EL</td><td colspan="2">DI</td><td colspan="2">FL</td><td colspan="2">WL</td></tr><tr><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td><td>Mean</td><td>SD</td></tr><tr><td>Acromyrmex santschii</td><td>4</td><td>1.237</td><td>0.356</td><td>1.369</td><td>0.471</td><td>0.945</td><td>0.45</td><td>1.123</td><td>0.482</td><td>0.196</td><td>0.095</td><td>1.28</td><td>0.446</td><td>1.855</td><td>0.748</td><td>1.685</td><td>0.499</td></tr><tr><td>Acropyga fuhrmanni</td><td>4</td><td>0.453</td><td>0.023</td><td>0.462</td><td>0.014</td><td>0.341</td><td>0.067</td><td>0.331</td><td>0.03</td><td>0.037</td><td>0.006</td><td>0.396</td><td>0.05</td><td>0.366</td><td>0.017</td><td>0.525</td><td>0.007</td></tr><tr><td>Acropyga smithii</td><td>4</td><td>0.348</td><td>0.006</td><td>0.369</td><td>0.006</td><td>0.262</td><td>0.045</td><td>0.201</td><td>0.013</td><td>0.019</td><td>0.012</td><td>0.228</td><td>0.038</td><td>0.194</td><td>0.006</td><td>0.395</td><td>0.015</td></tr><tr><td>Adelomyrmex myops</td><td>4</td><td>0.616</td><td>0.033</td><td>0.558</td><td>0.025</td><td>0.348</td><td>0.038</td><td>0.37</td><td>0</td><td>0.04</td><td>0.006</td><td>0.529</td><td>0.091</td><td>0.431</td><td>0.023</td><td>0.616</td><td>0.033</td></tr><tr><td>Alfaria minuta</td><td>4</td><td>1.008</td><td>0.019</td><td>0.898</td><td>0.083</td><td>0.777</td><td>0.084</td><td>0.69</td><td>0.285</td><td>0.081</td><td>0.008</td><td>0.786</td><td>0.18</td><td>0.897</td><td>0.084</td><td>1.324</td><td>0.126</td></tr><tr><td>Anochetus diegensis</td><td>8</td><td>1.253</td><td>0.027</td><td>1.079</td><td>0.027</td><td>0.771</td><td>0.041</td><td>0.971</td><td>0.132</td><td>0.16</td><td>0.011</td><td>0.873</td><td>0.095</td><td>1.138</td><td>0.039</td><td>1.628</td><td>0.029</td></tr><tr><td>Anochetus inermis</td><td>4</td><td>1.116</td><td>0.052</td><td>0.976</td><td>0.044</td><td>0.675</td><td>0.026</td><td>0.924</td><td>0.228</td><td>0.198</td><td>0.014</td><td>0.762</td><td>0.064</td><td>1.092</td><td>0.083</td><td>1.572</td><td>0.103</td></tr><tr><td>Apterostigma dentrigerum</td><td>1</td><td>1.174</td><td>-</td><td>0.891</td><td>-</td><td>0.674</td><td>-</td><td>1.261</td><td>-</td><td>0.217</td><td>-</td><td>0.891</td><td>-</td><td>2</td><td>-</td><td>2</td><td>-</td></tr><tr><td>Apterostigma pilosum</td><td>8</td><td>0.864</td><td>0.042</td><td>0.683</td><td>0.063</td><td>0.532</td><td>0.061</td><td>0.626</td><td>0.16</td><td>0.139</td><td>0.014</td><td>0.665</td><td>0.096</td><td>1.128</td><td>0.056</td><td>1.302</td><td>0.014</td></tr><tr><td>Apterostigma pariiense</td><td>1</td><td>1.174</td><td>-</td><td>0.87</td><td>-</td><td>0.674</td><td>-</td><td>1.152</td><td>-</td><td>0.217</td><td>-</td><td>0.804</td><td>-</td><td>1.957</td><td>-</td><td>1.913</td><td>-</td></tr><tr><td>Atta columbica</td><td>1</td><td>1.5</td><td>-</td><td>1.535</td><td>-</td><td>1.371</td><td>-</td><td>0.613</td><td>-</td><td>0.248</td><td>-</td><td>1.412</td><td>-</td><td>2.1</td><td>-</td><td>1.707</td><td>-</td></tr><tr><td>Azteca sp. 1</td><td>1</td><td>0.78</td><td>-</td><td>0.743</td><td>-</td><td>0.489</td><td>-</td><td>0.2</td><td>-</td><td>0.157</td><td>-</td><td>0.613</td><td>-</td><td>0.527</td><td>-</td><td>0.89</td><td>-</td></tr><tr><td>Brachymyrmex aphidicola</td><td>4</td><td>0.418</td><td>0.007</td><td>0.374</td><td>0.004</td><td>0.254</td><td>0.033</td><td>0.253</td><td>0.114</td><td>0.093</td><td>0.006</td><td>0.421</td><td>0.089</td><td>0.442</td><td>0.006</td><td>0.439</td><td>0.004</td></tr><tr><td>Brachymyrmex minutus</td><td>4</td><td>0.28</td><td>0.004</td><td>0.324</td><td>0.003</td><td>0.194</td><td>0.059</td><td>0.256</td><td>0.16</td><td>0.082</td><td>0.007</td><td>0.301</td><td>0.088</td><td>0.388</td><td>0.004</td><td>0.345</td><td>0.004</td></tr><tr><td>Camponotus sp. 1</td><td>3</td><td>1.112</td><td>0.004</td><td>1.048</td><td>0.007</td><td>0.578</td><td>0.11</td><td>0.851</td><td>0.488</td><td>0.394</td><td>0.004</td><td>0.928</td><td>0.39</td><td>1.287</td><td>0.007</td><td>1.674</td><td>0</td></tr><tr><td>Camponotus sp. 3</td><td>3</td><td>1.117</td><td>0.007</td><td>1.045</td><td>0.016</td><td>0.624</td><td>0.083</td><td>0.715</td><td>0.407</td><td>0.389</td><td>0.028</td><td>1.067</td><td>0.277</td><td>1.302</td><td>0.019</td><td>1.661</td><td>0.05</td></tr></table>
+
+<!-- page 5 of 15 -->
+
+| Camponotus sp. 7 | 1 | 1.486 | - | 1.255 | - | 1.08 | - | 0.53 | - | 0.287 | - | 2 | - | 1.524 | - | 1.813 | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Camponotus striatus | 1 | 0.739 | - | 0.696 | - | 0.326 | - | 0.761 | - | 0.217 | - | 0.565 | - | 0.717 | - | 0.978 | - |
+| Carebara audita | 4 | 0.348 | 0.001 | 0.287 | 0.006 | 0.199 | 0.097 | 0.154 | 0.028 | 0.022 | 0 | 0.219 | 0.059 | 0.176 | 0.004 | 0.284 | 0.002 |
+| Carebara brevipilosa | 8 | 0.44 | 0.026 | 0.421 | 0.016 | 0.277 | 0.021 | 0.307 | 0.014 | 0.011 | 0 | 0.405 | 0.021 | 0.326 | 0.018 | 0.497 | 0.019 |
+| Carebara globularia | 8 | 0.303 | 0.005 | 0.236 | 0.012 | 0.185 | 0.041 | 0.148 | 0.007 | 0.014 | 0.016 | 0.072 | 0.079 | 0.134 | 0.014 | 0.279 | 0.011 |
+| Carebara striata | 4 | 0.348 | 0 | 0.304 | 0 | 0.145 | 0.013 | 0.188 | 0.013 | 0.022 | 0 | 0.279 | 0.017 | 0.17 | 0.006 | 0.326 | 0.022 |
+| Carebara urichi | 1 | 0.464 | - | 0.445 | - | 0.432 | - | 0.297 | - | 0.002 | - | 0.321 | - | 0.342 | - | 0.517 | - |
+| Cephalotes atratus | 1 | 2.461 | - | 3.341 | - | 3.11 | - | 0.68 | - | 0.7 | - | 0.987 | - | 3.425 | - | 3.343 | - |
+| Cephalotes columbicus | 1 | 1.313 | - | 1.455 | - | 1.455 | - | 0.178 | - | 0.36 | - | 0.53 | - | 0.78 | - | 1.135 | - |
+| Cephalotes complanatus | 1 | 1.61 | - | 2.16 | - | 1.9 | - | 0.255 | - | 0.508 | - | 0.435 | - | 1.4 | - | 1.9 | - |
+| Cephalotes porrasi | 1 | 1.087 | - | 1.217 | - | 0.326 | - | 0.522 | - | 0.239 | - | 0.978 | - | 0.63 | - | 1.109 | - |
+| Crematogaster brasiliensis | 8 | 0.675 | 0.004 | 0.698 | 0.006 | 0.542 | 0.13 | 0.433 | 0.161 | 0.154 | 0.006 | 0.661 | 0.035 | 1.001 | 0.012 | 0.806 | 0.008 |
+| Crematogaster carinata | 1 | 0.671 | - | 0.665 | - | 0.586 | - | 0.326 | - | 0.15 | - | 0.645 | - | 0.778 | - | 0.775 | - |
+| Crematogaster erecta | 4 | 0.541 | 0.004 | 0.587 | 0 | 0.412 | 0.152 | 0.356 | 0.081 | 0.13 | 0.001 | 0.466 | 0.079 | 0.543 | 0 | 0.582 | 0.006 |
+| Crematogaster flavosensitiva | 4 | 0.577 | 0.018 | 0.523 | 0.007 | 0.372 | 0.094 | 0.408 | 0.133 | 0.156 | 0.012 | 0.477 | 0.038 | 0.566 | 0.032 | 0.594 | 0.013 |
+| Crematogaster limata | 12 | 0.707 | 0.095 | 0.708 | 0.082 | 0.446 | 0.12 | 0.58 | 0.226 | 0.168 | 0.037 | 0.648 | 0.072 | 0.811 | 0.107 | 0.83 | 0.129 |
+| Crematogaster nigropilosa | 8 | 0.659 | 0.037 | 0.65 | 0.026 | 0.489 | 0.126 | 0.509 | 0.162 | 0.159 | 0.017 | 0.667 | 0.082 | 0.778 | 0.012 | 0.768 | 0.014 |
+
+<!-- page 6 of 15 -->
+
+| Crematogaster obscurata | 4 | 0.56 | 0.015 | 0.538 | 0.023 | 0.415 | 0.077 | 0.242 | 0.126 | 0.144 | 0.013 | 0.436 | 0.053 | 0.464 | 0.022 | 0.554 | 0.031 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Crematogaster stollii | 1 | 0.957 | - | 1.087 | - | 0.543 | - | 0.652 | - | 0.217 | - | 1.022 | - | 0.804 | - | 1.152 | - |
+| Cyphomyrmex costatus | 12 | 0.545 | 0.034 | 0.455 | 0.044 | 0.395 | 0.027 | 0.225 | 0.045 | 0.104 | 0.009 | 0.322 | 0.011 | 0.527 | 0.085 | 0.667 | 0.022 |
+| Cyphomyrmex minutus | 12 | 0.605 | 0.037 | 0.569 | 0.032 | 0.286 | 0.088 | 0.416 | 0.097 | 0.123 | 0.011 | 0.426 | 0.03 | 0.593 | 0.045 | 0.746 | 0.032 |
+| Cyphomyrmex rimosus | 8 | 0.65 | 0.032 | 0.557 | 0.065 | 0.372 | 0.096 | 0.378 | 0.143 | 0.144 | 0.018 | 0.544 | 0.068 | 0.696 | 0.046 | 0.798 | 0.042 |
+| Cyphomyrmex sp. 4 | 4 | 0.587 | 0 | 0.552 | 0 | 0.428 | 0 | 0.251 | 0 | 0.112 | 0 | 0.445 | 0 | 0.534 | 0 | 0.715 | 0 |
+| Discothyrea humilis | 4 | 0.368 | 0.003 | 0.302 | 0.003 | 0.195 | 0.092 | 0.162 | 0.048 | 0.019 | 0.004 | 0.227 | 0.048 | 0.215 | 0.003 | 0.39 | 0.002 |
+| Discothyrea neotropica | 4 | 0.5 | 0 | 0.442 | 0.013 | 0.188 | 0.013 | 0.261 | 0.022 | 0.022 | 0 | 0.362 | 0.013 | 0.297 | 0.013 | 0.558 | 0.013 |
+| Discothyrea testacea | 4 | 0.453 | 0.006 | 0.41 | 0.005 | 0.272 | 0.077 | 0.228 | 0.019 | 0.019 | 0.005 | 0.32 | 0.086 | 0.235 | 0.008 | 0.453 | 0.007 |
+| Dolichoderus bispinosus | 1 | 1.655 | - | 1.724 | - | 0.828 | - | 1.517 | - | 0.345 | - | 1.034 | - | 1.862 | - | 2 | - |
+| Dolichoderus sp. 2 | 1 | 1.78 | - | 1.859 | - | 1.107 | - | 0.36 | - | 0.439 | - | 1.317 | - | 1.699 | - | 1.566 | - |
+| Ectatomma ruidum | 8 | 1.744 | 0.068 | 1.622 | 0.254 | 1.088 | 0.191 | 1.518 | 0.168 | 0.45 | 0.041 | 1.294 | 0.29 | 2.277 | 0.277 | 2.776 | 0.143 |
+| Ectatomma tuberculatum | 4 | 2.337 | 0.01 | 1.852 | 0.014 | 1.753 | 0.057 | 2.029 | 0.349 | 0.54 | 0.017 | 1.993 | 0.38 | 3.094 | 0.014 | 3.718 | 0.009 |
+| Eurhopalothrix pilulifera | 1 | 0.565 | - | 0.543 | - | 0.152 | - | 0.326 | - | 0.022 | - | 0.391 | - | 0.435 | - | 0.587 | - |
+| Gnamptogenys boliviensis | 4 | 0.688 | 0.007 | 0.671 | 0.004 | 0.619 | 0.047 | 0.541 | 0.035 | 0.105 | 0.005 | 0.543 | 0.094 | 0.54 | 0.003 | 1.086 | 0.001 |
+| Gnamptogenys sp. 2 | 4 | 0.7 | 0.006 | 0.547 | 0.015 | 0.542 | 0.001 | 0.319 | 0.027 | 0.051 | 0.001 | 0.359 | 0.011 | 0.458 | 0.037 | 0.888 | 0.017 |
+| Holcoponera strigata | 4 | 1.121 | 0.202 | 1.017 | 0.269 | 0.809 | 0.314 | 0.717 | 0.307 | 0.246 | 0.102 | 0.944 | 0.321 | 1.265 | 0.222 | 1.616 | 0.348 |
+
+<!-- page 7 of 15 -->
+
+| Hylomyrmacolumbica | 4 | 0.891 | - | 0.87 | - | 0.609 | - | 0.63 | - | 0.217 | - | 0.783 | - | 0.804 | - | 1.174 | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Hypoponera opacior | 12 | 0.722 | 0.046 | 0.614 | 0.054 | 0.419 | 0.122 | 0.501 | 0.135 | 0.04 | 0.008 | 0.559 | 0.059 | 0.636 | 0.091 | 1.048 | 0.107 |
+| Hypoponera trigona | 12 | 0.638 | 0.01 | 0.506 | 0.007 | 0.443 | 0.009 | 0.268 | 0.008 | 0.03 | 0.005 | 0.443 | 0.01 | 0.662 | 0.01 | 0.83 | 0.006 |
+| Labidus coecus | 3 | 0.947 | 0.089 | 0.888 | 0.135 | 0.675 | 0.154 | 0.624 | 0.061 | 0.037 | 0.012 | 0.752 | 0.085 | 1.073 | 0.125 | 1.289 | 0.148 |
+| Labidus predator | 8 | 1.439 | 0.01 | 1.309 | 0.008 | 1.027 | 0.015 | 1.044 | 0.053 | 0.043 | 0.007 | 1.136 | 0.057 | 2.072 | 0.009 | 2.07 | 0.01 |
+| Lachnomyrmexscrobiculatus | 1 | 0.739 | - | 0.739 | - | 0.37 | - | 0.457 | - | 0.152 | - | 0.652 | - | 0.63 | - | 0.87 | - |
+| Leptogenys ritae | 12 | 0.769 | 0.027 | 0.539 | 0.021 | 0.411 | 0.069 | 0.569 | 0.111 | 0.099 | 0.014 | 0.536 | 0.071 | 0.639 | 0.035 | 1.106 | 0.06 |
+| Mayaponera arhuaca | 8 | 1.247 | 0.084 | 1.127 | 0.035 | 0.898 | 0.101 | 0.963 | 0.065 | 0.159 | 0.022 | 1.004 | 0.047 | 1.183 | 0.035 | 1.814 | 0.079 |
+| Mayaponeraconstricta | 8 | 1.55 | 0.014 | 1.265 | 0.075 | 1.061 | 0.102 | 1.436 | 0.256 | 0.291 | 0.008 | 1.164 | 0.343 | 1.838 | 0.047 | 2.508 | 0.075 |
+| Megalomyrmexdrifti | 4 | 0.567 | 0.057 | 0.453 | 0.041 | 0.319 | 0.054 | 0.334 | 0.156 | 0.132 | 0.02 | 0.366 | 0.059 | 0.463 | 0.051 | 0.69 | 0.118 |
+| Megalomyrmexincisus | 4 | 0.696 | 0 | 0.598 | 0.015 | 0.402 | 0.015 | 0.598 | 0.015 | 0.196 | 0 | 0.5 | 0.031 | 0.772 | 0.046 | 0.935 | 0.031 |
+| Megalomyrmexlonginoi | 4 | 0.582 | 0.007 | 0.475 | 0.005 | 0.322 | 0.036 | 0.55 | 0.298 | 0.181 | 0.005 | 0.531 | 0.32 | 0.738 | 0.002 | 0.802 | 0.004 |
+| Megalomyrmexsilvestrii | 8 | 0.767 | 0.022 | 0.596 | 0.037 | 0.423 | 0.026 | 0.848 | 0.262 | 0.209 | 0.01 | 0.571 | 0.233 | 1.001 | 0.024 | 1.162 | 0.02 |
+| Monomoriumfloricola | 3 | 0.42 | 0.048 | 0.337 | 0.03 | 0.232 | 0.058 | 0.263 | 0.101 | 0.073 | 0.013 | 0.312 | 0.026 | 0.285 | 0.059 | 0.451 | 0.04 |
+| Mycetomoelleriussp. 1 | 1 | 0.602 | - | 0.605 | - | 0.556 | - | 0.432 | - | 0.102 | - | 0.469 | - | 0.581 | - | 0.821 | - |
+| Mycocepuruscurvispinosus | 4 | 0.645 | 0.021 | 0.614 | 0.01 | 0.523 | 0.093 | 0.47 | 0.021 | 0.109 | 0.007 | 0.531 | 0.042 | 0.562 | 0.012 | 0.824 | 0.012 |
+
+<!-- page 8 of 15 -->
+
+| Myrmicocrypta sp. 2 | 1 | 0.761 | - | 0.63 | - | 0.413 | - | 0.63 | - | 0.065 | - | 0.587 | - | 0.696 | - | 0.913 | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Myrmicocrypta urichi | 8 | 0.693 | 0.017 | 0.553 | 0.013 | 0.371 | 0.037 | 0.517 | 0.134 | 0.097 | 0.011 | 0.517 | 0.091 | 0.722 | 0.042 | 0.865 | 0.031 |
+| Neoponera apicalis | 3 | 2.486 | 0.004 | 2.139 | 0.002 | 1.763 | 0.432 | 2.418 | 0.482 | 0.828 | 0 | 2.105 | 0.928 | 3.659 | 0.006 | 4.209 | 0.004 |
+| Neoponera carinulata | 4 | 1.499 | 0.016 | 1.383 | 0.006 | 1.092 | 0.025 | 1.293 | 0.148 | 0.448 | 0.03 | 1.159 | 0.199 | 1.638 | 0.017 | 2.293 | 0.016 |
+| Neoponera verenae | 1 | 2.463 | - | 2.119 | - | 1.413 | - | 2.044 | - | 0.818 | - | 2.729 | - | 3.631 | - | 4.176 | - |
+| Nesomyrmex sp. 1 | 1 | 0.866 | - | 0.778 | - | 0.685 | - | 0.228 | - | 0.187 | - | 0.434 | - | 0.67 | - | 0.907 | - |
+| Nomamyrmex esenbeckii | 1 | 1.437 | - | 1.333 | - | 1.022 | - | 0.462 | - | 0.083 | - | 0.797 | - | 1.531 | - | 2.054 | - |
+| Nylanderia guatemalensis | 12 | 0.609 | 0.028 | 0.501 | 0.026 | 0.311 | 0.026 | 0.576 | 0.26 | 0.147 | 0.013 | 0.381 | 0.128 | 0.708 | 0.043 | 0.771 | 0.061 |
+| Octostruma amrishi | 12 | 0.525 | 0.034 | 0.559 | 0.045 | 0.245 | 0.14 | 0.248 | 0.061 | 0.046 | 0.008 | 0.433 | 0.109 | 0.381 | 0.051 | 0.573 | 0.08 |
+| Octostruma iheringi | 4 | 0.589 | 0.004 | 0.653 | 0.008 | 0.541 | 0.008 | 0.176 | 0.006 | 0.065 | 0.008 | 0.326 | 0.006 | 0.433 | 0.005 | 0.739 | 0.006 |
+| Odontomachus bauri | 4 | 2.472 | 0.029 | 1.809 | 0.192 | 1.395 | 0.107 | 1.598 | 0.723 | 0.441 | 0.058 | 2.225 | 0.308 | 2.628 | 0.148 | 2.555 | 0.382 |
+| Odontomachus brunneus | 4 | 2.114 | 0.055 | 1.612 | 0.045 | 1.192 | 0.004 | 1.236 | 0.417 | 0.289 | 0.028 | 1.52 | 0.199 | 1.99 | 0.023 | 2.073 | 0.236 |
+| Odontomachus laticeps | 4 | 2.446 | 0.013 | 1.717 | 0.008 | 1.326 | 0.006 | 1.262 | 0.014 | 0.402 | 0.007 | 2.35 | 0.009 | 2.544 | 0.007 | 2.369 | 0.004 |
+| Odontomachus opaciventris | 12 | 2.767 | 0.43 | 2.144 | 0.274 | 1.668 | 0.216 | 2.399 | 0.733 | 0.504 | 0.084 | 2.05 | 0.572 | 2.965 | 0.4 | 3.38 | 0.412 |
+| Pachycondyla harpax | 12 | 1.928 | 0.101 | 1.828 | 0.105 | 1.412 | 0.274 | 1.344 | 0.225 | 0.394 | 0.065 | 1.501 | 0.09 | 1.757 | 0.167 | 2.926 | 0.229 |
+| Pachycondyla Impressa | 8 | 2.991 | 0.055 | 2.843 | 0.067 | 1.981 | 0.211 | 2.141 | 0.342 | 0.543 | 0.03 | 2.245 | 0.099 | 2.796 | 0.083 | 4.107 | 0.055 |
+| Paratrachymyrmex bugnioni | 8 | 0.777 | 0.076 | 0.735 | 0.075 | 0.491 | 0.047 | 0.56 | 0.17 | 0.128 | 0.011 | 0.652 | 0.1 | 0.911 | 0.135 | 1.08 | 0.125 |
+
+<!-- page 9 of 15 -->
+
+| Paratrachymyrmex cornetzi | 4 | 0.92 | 0.012 | 0.942 | 0.012 | 0.699 | 0.105 | 0.767 | 0.126 | 0.142 | 0.011 | 0.803 | 0.02 | 1.206 | 0.029 | 1.38 | 0.066 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Paratrachymyrmex irmgardae | 4 | 0.805 | 0.158 | 0.788 | 0.214 | 0.685 | 0.173 | 0.433 | 0.262 | 0.124 | 0.023 | 0.672 | 0.192 | 0.968 | 0.355 | 1.118 | 0.418 |
+| Pheidole biconstricta | 4 | 0.768 | 0.146 | 0.681 | 0.131 | 0.5 | 0.078 | 0.777 | 0.557 | 0.166 | 0.035 | 0.65 | 0.082 | 1.015 | 0.389 | 1.01 | 0.312 |
+| Pheidole distorta | 1 | 0.565 | - | 0.587 | - | 0.413 | - | 0.543 | - | 0.13 | - | 0.587 | - | 0.609 | - | 0.674 | - |
+| Pheidole fimbriata | 4 | 0.848 | 0 | 0.826 | 0.001 | 0.717 | 0.123 | 0.775 | 0.195 | 0.067 | 0.003 | 0.858 | 0.075 | 1.045 | 0.002 | 1.11 | 0.002 |
+| Pheidole flavens | 12 | 0.439 | 0.032 | 0.385 | 0.022 | 0.266 | 0.044 | 0.315 | 0.072 | 0.081 | 0.008 | 0.345 | 0.03 | 0.335 | 0.034 | 0.463 | 0.027 |
+| Pheidole mendicula | 12 | 0.392 | 0.021 | 0.384 | 0.019 | 0.272 | 0.069 | 0.283 | 0.05 | 0.079 | 0.01 | 0.349 | 0.025 | 0.298 | 0.013 | 0.419 | 0.013 |
+| Pheidole pugnax | 12 | 0.66 | 0.024 | 0.617 | 0.029 | 0.463 | 0.092 | 0.636 | 0.179 | 0.148 | 0.024 | 0.598 | 0.086 | 0.732 | 0.203 | 0.851 | 0.046 |
+| Pheidole sp. 1 | 12 | 0.663 | 0.014 | 0.634 | 0.006 | 0.549 | 0.009 | 0.265 | 0.019 | 0.108 | 0.002 | 0.578 | 0.008 | 0.806 | 0.013 | 0.786 | 0.009 |
+| Pheidole sp. 12 | 8 | 0.482 | 0.007 | 0.461 | 0.005 | 0.438 | 0.007 | 0.329 | 0.003 | 0.086 | 0.007 | 0.415 | 0.007 | 0.436 | 0.006 | 0.546 | 0.006 |
+| Pheidole sp. 13 | 8 | 0.482 | 0.007 | 0.418 | 0.009 | 0.395 | 0.007 | 0.267 | 0.008 | 0.091 | 0.007 | 0.396 | 0.005 | 0.396 | 0.006 | 0.507 | 0.007 |
+| Pheidole sp. 17 | 3 | 0.661 | 0.047 | 0.594 | 0.119 | 0.431 | 0.074 | 0.72 | 0.259 | 0.11 | 0.002 | 0.59 | 0.254 | 0.907 | 0.062 | 0.935 | 0.043 |
+| Pheidole sp. 18 | 3 | 0.478 | 0.031 | 0.435 | 0.031 | 0.272 | 0.015 | 0.522 | 0.061 | 0.087 | 0 | 0.391 | 0.031 | 0.511 | 0.046 | 0.576 | 0.015 |
+| Pheidole sp. 2 | 8 | 0.803 | 0.007 | 0.694 | 0.008 | 0.628 | 0.011 | 0.431 | 0.006 | 0.195 | 0.01 | 1.058 | 0.008 | 1.106 | 0.009 | 1.107 | 0.002 |
+| Pheidole sp. 4 | 8 | 0.494 | 0.021 | 0.442 | 0.013 | 0.307 | 0.044 | 0.446 | 0.107 | 0.099 | 0.011 | 0.436 | 0.065 | 0.507 | 0.044 | 0.594 | 0.018 |
+| Pheidole sp. 5 | 8 | 0.512 | 0.039 | 0.472 | 0.014 | 0.4 | 0.065 | 0.397 | 0.071 | 0.085 | 0.002 | 0.465 | 0.045 | 0.504 | 0.033 | 0.612 | 0.005 |
+| Pheidole sp. 9 | 8 | 0.55 | 0.004 | 0.516 | 0.005 | 0.448 | 0.008 | 0.336 | 0.005 | 0.119 | 0.006 | 0.424 | 0.007 | 0.47 | 0.005 | 0.596 | 0.006 |
+| Pheidole subarmata | 12 | 0.498 | 0.022 | 0.458 | 0.024 | 0.365 | 0.069 | 0.377 | 0.07 | 0.113 | 0.005 | 0.425 | 0.03 | 0.494 | 0.029 | 0.621 | 0.05 |
+| Pheidole susannae | 4 | 0.659 | 0.008 | 0.517 | 0.002 | 0.439 | 0.005 | 0.251 | 0.007 | 0.134 | 0.007 | 0.807 | 0.014 | 1.034 | 0.069 | 0.795 | 0.006 |
+
+<!-- page 10 of 15 -->
+
+| Pheidole synarmata | 4 | 0.513 | 0.041 | 0.473 | 0.033 | 0.354 | 0.056 | 0.392 | 0.042 | 0.099 | 0.014 | 0.425 | 0.011 | 0.441 | 0.021 | 0.566 | 0.026 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Pheidole transversostriata | 4 | 0.501 | 0.176 | 0.426 | 0.111 | 0.355 | 0.124 | 0.246 | 0.06 | 0.068 | 0.01 | 0.292 | 0.062 | 0.371 | 0.086 | 0.465 | 0.055 |
+| Pheidole zeteki | 12 | 0.404 | 0.025 | 0.374 | 0.018 | 0.222 | 0.024 | 0.309 | 0.036 | 0.078 | 0.019 | 0.335 | 0.019 | 0.326 | 0.031 | 0.422 | 0.052 |
+| Pogonomyrmex mayri | 8 | 1.985 | 0.064 | 1.742 | 0.034 | 1.189 | 0.227 | 1.535 | 0.334 | 0.274 | 0.003 | 1.569 | 0.067 | 2.363 | 0.034 | 2.294 | 0.034 |
+| Prionopelta antillana | 1 | 0.509 | - | 0.447 | - | 0.44 | - | 0.107 | - | 0.029 | - | 0.265 | - | 0.475 | - | 0.667 | - |
+| Probolomyrmex boliviensis | 2 | 0.75 | 0.046 | 0.446 | 0.015 | 0.228 | 0.015 | 0.554 | 0.015 | 0 | 0 | 0 | 0 | 0.641 | 0.046 | 1.054 | 0.077 |
+| Proceratium catio | 1 | 0.609 | - | 0.587 | - | 0.348 | - | 0.413 | - | 0.022 | - | 0.543 | - | 0.413 | - | 0.739 | - |
+| Pseudomyrmex boopis | 1 | 1.217 | - | 1 | - | 0.587 | - | 0.609 | - | 0.804 | - | 0.696 | - | 1.13 | - | 1.652 | - |
+| Pseudomyrmex mordax | 1 | 0.989 | - | 0.913 | - | 0.467 | - | 0.391 | - | 0.413 | - | 0.674 | - | 0.761 | - | 1.37 | - |
+| Pseudomyrmex simplex | 4 | 1.223 | 0.007 | 1.004 | 0.01 | 0.701 | 0.011 | 0.591 | 0.006 | 0.809 | 0.008 | 0.612 | 0.011 | 1.137 | 0.01 | 1.659 | 0.012 |
+| Pseudomyrmex sp. 4 | 1 | 1.976 | - | 1.62 | - | 0.93 | - | 0.41 | - | 1.198 | - | 0.92 | - | 1.852 | - | 2.756 | - |
+| Rasopone pluviselva | 1 | 1.261 | - | 1.152 | - | 0.761 | - | 0.891 | - | 0.152 | - | 0.978 | - | 0.87 | - | 1.739 | - |
+| Rhopalothrix isthmica | 1 | 0.566 | - | 0.551 | - | 0.393 | - | 0.157 | - | 0.026 | - | 0.328 | - | 0.445 | - | 0.593 | - |
+| Rogeria belti | 8 | 0.607 | 0.11 | 0.521 | 0.103 | 0.421 | 0.144 | 0.275 | 0.086 | 0.078 | 0.011 | 0.406 | 0.072 | 0.446 | 0.085 | 0.588 | 0.081 |
+| Rogeria ciliosa | 1 | 0.63 | - | 0.543 | - | 0.348 | - | 0.478 | - | 0.065 | - | 0.5 | - | 0.5 | - | 0.717 | - |
+| Rogeria curvipubens | 12 | 0.528 | 0.022 | 0.449 | 0.015 | 0.319 | 0.093 | 0.316 | 0.044 | 0.058 | 0.009 | 0.384 | 0.031 | 0.359 | 0.027 | 0.542 | 0.02 |
+| Rogeria foreli | 8 | 0.628 | 0.032 | 0.542 | 0.044 | 0.349 | 0.043 | 0.401 | 0.068 | 0.073 | 0.013 | 0.483 | 0.055 | 0.501 | 0.002 | 0.676 | 0.047 |
+| Sericomyrmex amabilis | 4 | 1.087 | 0.061 | 1.261 | 0.061 | 0.707 | 0.015 | 0.815 | 0.015 | 0.185 | 0.015 | 1.033 | 0.015 | 1.196 | 0.154 | 1.565 | 0.031 |
+
+<!-- page 11 of 15 -->
+
+| Solenopsis azteca | 12 | 0.34 | 0.043 | 0.281 | 0.024 | 0.19 | 0.04 | 0.245 | 0.07 | 0.03 | 0.012 | 0.275 | 0.054 | 0.217 | 0.022 | 0.357 | 0.031 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Solenopsis geminata | 12 | 0.557 | 0.011 | 0.551 | 0.012 | 0.498 | 0.004 | 0.17 | 0.004 | 0.101 | 0.005 | 0.519 | 0.007 | 0.587 | 0.014 | 0.635 | 0.031 |
+| Solenopsis picea | 12 | 0.474 | 0.011 | 0.406 | 0.029 | 0.394 | 0.025 | 0.099 | 0.002 | 0.045 | 0.004 | 0.254 | 0.024 | 0.351 | 0.006 | 0.457 | 0.013 |
+| Stegomyrmex manni | 2 | 1.339 | 0.289 | 1.237 | 0.25 | 0.859 | 0.108 | 0.753 | 0.257 | 0.107 | 0.002 | 0.918 | 0.177 | 1.17 | 0.067 | 1.716 | 0.125 |
+| Strumigenys biolleyi | 1 | 0.674 | - | 0.543 | - | 0.391 | - | 0.413 | - | 0.087 | - | 0.326 | - | 0.522 | - | 0.696 | - |
+| Strumigenys cordovensis | 4 | 0.826 | 0.022 | 0.638 | 0.013 | 4.543 | 6.269 | 0.688 | 0.033 | 0.072 | 0.013 | 0.377 | 0.013 | 0.775 | 0.025 | 0.841 | 0.025 |
+| Strumigenys deltisquama | 12 | 0.634 | 0.098 | 0.625 | 0.14 | 0.357 | 0.033 | 0.312 | 0.023 | 0.059 | 0.009 | 0.337 | 0.118 | 0.419 | 0.047 | 0.638 | 0.111 |
+| Strumigenys denticulata | 4 | 0.465 | 0.007 | 0.354 | 0.006 | 1.597 | 1.063 | 0.343 | 0.052 | 0.189 | 0.145 | 0.262 | 0.039 | 0.308 | 0.003 | 0.482 | 0.003 |
+| Strumigenys dyseides | 4 | 0.391 | 0 | 0.326 | 0 | 0.227 | 0.014 | 0.238 | 0.032 | 0.025 | 0.004 | 0.246 | 0.01 | 0.285 | 0.003 | 0.432 | 0.003 |
+| Strumigenys eggersi | 12 | 0.442 | 0.011 | 0.362 | 0.009 | 0.266 | 0.035 | 0.248 | 0.032 | 0.044 | 0.002 | 0.21 | 0.009 | 0.269 | 0.017 | 0.451 | 0.016 |
+| Strumigenys elongata | 12 | 0.587 | 0.014 | 0.446 | 0.012 | 0.319 | 0.011 | 0.377 | 0.011 | 0.043 | 0 | 0.268 | 0.011 | 0.428 | 0.011 | 0.554 | 0.012 |
+| Strumigenys fridericimuelleri | 12 | 0.47 | 0.011 | 0.34 | 0.011 | 0.151 | 0.034 | 0.192 | 0.033 | 0.043 | 0.001 | 0.188 | 0.026 | 0.274 | 0.038 | 0.462 | 0.045 |
+| Strumigenys lanuginosa | 12 | 0.62 | 0.038 | 0.484 | 0.021 | 0.375 | 0.011 | 0.342 | 0.011 | 0.06 | 0.011 | 0.288 | 0.011 | 0.473 | 0.033 | 0.674 | 0.031 |
+| Strumigenys marginiventris | 8 | 0.742 | 0.03 | 0.555 | 0.109 | 0.505 | 0.1 | 0.554 | 0.034 | 0.083 | 0.01 | 0.384 | 0.082 | 0.548 | 0.035 | 0.732 | 0.019 |
+| Strumigenys subedentata | 4 | 0.494 | 0.024 | 0.421 | 0.012 | 0.293 | 0.011 | 0.273 | 0.011 | 0.051 | 0.012 | 0.267 | 0.013 | 0.362 | 0.026 | 0.523 | 0.037 |
+| Strumigenys zeteki | 8 | 0.488 | 0.022 | 0.352 | 0.012 | 0.211 | 0.03 | 0.194 | 0.016 | 0.041 | 0.004 | 0.162 | 0.026 | 0.314 | 0.021 | 0.547 | 0.049 |
+| Syscia sp. 1 | 3 | 0.686 | 0.027 | 0.557 | 0.026 | 0.203 | 0.176 | 0.366 | 0.102 | 0 | 0 | 0.105 | 0.182 | 0.35 | 0.303 | 0.884 | 0.067 |
+
+<!-- page 12 of 15 -->
+
+| Tapinoma ramulorum | 1 | 0.488 | - | 0.411 | - | 0.273 | - | 0.121 | - | 0.089 | - | 0.427 | - | 0.435 | - | 0.488 | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Thaumatomyrmex atrox | 4 | 0.687 | 0.004 | 0.712 | 0.006 | 0.631 | 0.006 | 0.672 | 0.006 | 0.227 | 0.006 | 0.578 | 0.001 | 0.713 | 0.005 | 1.145 | 0.006 |
+| Thaumatomyrmex zeteki | 8 | 0.67 | 0.045 | 0.681 | 0.034 | 0.644 | 0.024 | 0.567 | 0.067 | 0.2 | 0.02 | 0.577 | 0.028 | 0.687 | 0.024 | 1.121 | 0.023 |
+| Trichomyrmex destructor | 8 | 0.685 | 0.003 | 0.603 | 0.003 | 0.525 | 0.003 | 0.167 | 0.004 | 0.09 | 0.003 | 0.502 | 0.004 | 0.53 | 0.004 | 0.674 | 0.004 |
+| Wasmannia auropunctata | 12 | 0.458 | 0.014 | 0.409 | 0.021 | 0.236 | 0.057 | 0.345 | 0.072 | 0.094 | 0.005 | 0.355 | 0.009 | 0.358 | 0.096 | 0.476 | 0.015 |
+
+<!-- page 13 of 15 -->
 
 Table S3. Summary of the interpolation and extrapolation analysis for the calculation of sampling coverage and estimation of q-order diversity in the TDF fragments in the studied departments. SR: Species richness; LCL: lower confidence interval; UCI: upper confidence interval; CI: 95% confidence intervals; Chao-1: Number of species expected with the estimator proposed by Chao1; Ĉm= estimated sampling coverage for the TDF.
 
@@ -521,23 +958,43 @@ Table S3. Summary of the interpolation and extrapolation analysis for the calcul
 
 Table S4. Permutation-based multivariate analysis of variance (PERMANOVA) between the temporal and spatial factors in the TDF fragments (N= 999). df: Degrees of freedom. The asterisk indicates statistical differences.
 
-<table><tr><td>Factor</td><td>Pseudo-F</td><td>df(residual)</td><td>p</td></tr><tr><td>Temporal differencie (Climate period)</td><td>2.183</td><td>1(6)</td><td>0.0267*</td></tr><tr><td>Spatial difference (TDF Fragments)</td><td>2.467</td><td>2(6)</td><td>0.003**</td></tr><tr><td>Difference (Climate period/ TDF Fragments)</td><td>0.885</td><td>2(6)</td><td>0.594</td></tr></table>
+| Factor | Pseudo-F | df(residual) | p |
+| --- | --- | --- | --- |
+| Temporal diferencia (Climate period) | 2.183 | 1(6) | 0.0267* |
+| Spatial difference (TDF Fragments) | 2.467 | 2(6) | 0.003** |
+| Difference (Climate period/ TDF Fragments) | 0.885 | 2(6) | 0.594 |
+
+<!-- page 14 of 15 -->
 
 Table S5. Pairwise Adonis test using the Bray-Curtis distance for comparisons between departments. df: Degrees of freedom
 
-<table><tr><td>TDF fragment pairs</td><td>Pseudo-F</td><td>df(residual)</td><td>p</td></tr><tr><td>N1 vs N2</td><td>1.65</td><td>1(6)</td><td>0.167</td></tr><tr><td>N1 vs N3</td><td>3.30</td><td>1(6)</td><td>0.034</td></tr><tr><td>N2 vs N3</td><td>1.84</td><td>1(6)</td><td>0.029</td></tr></table>
+| TDF fragment pairs | Pseudo-F | df(residual) | p |
+| --- | --- | --- | --- |
+| N1 vs N2 | 1.65 | 1(6) | 0.167 |
+| N1 vs N3 | 3.30 | 1(6) | 0.034 |
+| N2 vs N3 | 1.84 | 1(6) | 0.029 |
 
 Table S6. Percentage contribution of each component to beta diversity for the TDF fragment pairs evaluated in each climatic season.
 
 <table><tr><td>Climatic season</td><td>TDF fragment pairs</td><td>% Total Beta (βjac)</td><td>% Species turnover (βjtu)</td><td>% Nestedness (βjne)</td></tr><tr><td rowspan="3">Rainy</td><td>N1-N2</td><td>56</td><td>74</td><td>25</td></tr><tr><td>N1-N3</td><td>60</td><td>54</td><td>46</td></tr><tr><td>N2-N3</td><td>50</td><td>77</td><td>23</td></tr><tr><td rowspan="3">Dry</td><td>N1-N2</td><td>59</td><td>76</td><td>24</td></tr><tr><td>N1-N3</td><td>60</td><td>88</td><td>12</td></tr><tr><td>N2-N3</td><td>58</td><td>91</td><td>9</td></tr></table>
 
+<!-- page 15 of 15 -->
+
 Table S7. Community Weighted Mean (CWM) p-values for eight functional traits of ant communities across TDF fragments evaluated by Tukey post-hoc analysis at a significance level of 0.05 Abbreviations as in Table 1.
 
-<table><tr><td>TDF fragment pairs</td><td>HL</td><td>HW</td><td>ID</td><td>ML</td><td>EL</td><td>SL</td><td>FL</td><td>WL</td></tr><tr><td>N1-N2</td><td>0.571</td><td>0.061</td><td>0.999</td><td>0.987</td><td>0.884</td><td>0.109</td><td>0.993</td><td>0.578</td></tr><tr><td>N1-N3</td><td>0.975</td><td>0.781</td><td>0.859</td><td>0.061</td><td>0.321</td><td>0.925</td><td>0.929</td><td>0.487</td></tr><tr><td>N2-N3</td><td>0.079</td><td>0.173</td><td>0.851</td><td>0.047</td><td>0.166</td><td>0.061</td><td>0.965</td><td>0.121</td></tr></table>
+| TDF fragment pairs | HL | HW | ID | ML | EL | SL | FL | WL |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| N1-N2 | 0.571 | 0.061 | 0.999 | 0.987 | 0.884 | 0.109 | 0.993 | 0.578 |
+| N1-N3 | 0.975 | 0.781 | 0.859 | 0.061 | 0.321 | 0.925 | 0.929 | 0.487 |
+| N2-N3 | 0.079 | 0.173 | 0.851 | 0.047 | 0.166 | 0.061 | 0.965 | 0.121 |
 
 Table S8. p-values of the estimated functional diversity indices for ant communities among the TDF fragments evaluated by Tukey post-hoc analysis with a significance level of 0.05. Functional richness (FRic), functional evenness (FEve), functional redundancy (Fred) and Rao's quadratic entropy (QRao) were estimated.
 
-<table><tr><td>TDF fragment pairs</td><td>Fric</td><td>Feve</td><td>Fred</td><td>QRao</td></tr><tr><td>N1-N2</td><td>0.9085</td><td>0.5422</td><td>0.6467</td><td>0.7135</td></tr><tr><td>N1-N3</td><td>0.0100</td><td>0.5655</td><td>0.0106</td><td>0.0064</td></tr><tr><td>N2-N3</td><td>0.0189</td><td>0.9991</td><td>0.0430</td><td>0.0213</td></tr></table>
+| TDF fragment pairs | Fric | Feve | Fred | QRao |
+| --- | --- | --- | --- | --- |
+| N1-N2 | 0.9085 | 0.5422 | 0.6467 | 0.7135 |
+| N1-N3 | 0.0100 | 0.5655 | 0.0106 | 0.0064 |
+| N2-N3 | 0.0189 | 0.9991 | 0.0430 | 0.0213 |
 
 
 

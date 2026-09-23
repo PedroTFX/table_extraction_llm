@@ -1,37 +1,32 @@
 {
   "repsonse": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column describes a statistical model component ('constant'), not an insect, location, or trait."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Reponese is a categorical trait being measured or observed."
   },
   "repsonse (1)": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column describes a statistical model component ('slope'), not a measurement of the organism."
-  },
-  "repsonse (2)": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "These are independent variables or treatments (e.g., 'crop.maize'), not the insect or the sampling location."
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
   },
   "parameter": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column holds the calculated statistical parameter (coefficient) from the model."
+    "reasoning": "Parameter defines the independent variable or treatment applied."
   },
   "estimate": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the primary calculated estimate (the main result) of the statistical model."
+    "reasoning": "Estimate is the calculated result of the measurement."
   },
   "95% CI lower bound": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column provides a specific numerical value representing the lower bound of the confidence interval."
+    "reasoning": "Lower bound is the calculated confidence interval boundary."
   },
   "95% CI upper bound": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column provides a specific numerical value representing the upper bound of the confidence interval."
+    "reasoning": "Upper bound is the calculated confidence interval boundary."
   }
 }

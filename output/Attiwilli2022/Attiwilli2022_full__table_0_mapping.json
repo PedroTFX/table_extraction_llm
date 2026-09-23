@@ -1,43 +1,30 @@
 {
-  "identifier": {
+  "Body mass": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains insect family names (Hesperiidae, Lycaenidae, etc.), which are taxonomic identifiers.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The values are names of butterfly families, which are discrete taxonomic classifications."
+    "reasoning": "Values are taxonomic groups (families), not specific insect species.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "It is a measured physical dimension of the organism."
   },
-  "Ecotone": {
-    "field": "measurementValue",
+  "Estimate mean ± SE": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a numerical count or measurement associated with the ecotone habitat.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column represents a discrete classification of the organism's habitat preference, coded numerically.",
-    "multi_value": false,
-    "value_type": "categorical"
-  },
-  "Forest": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Represents a numerical count or measurement associated with the forest habitat.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column represents a discrete classification of the organism's habitat preference, coded numerically.",
-    "multi_value": false,
-    "value_type": "categorical"
-  },
-  "Open": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Represents a numerical count or measurement associated with the open habitat.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column represents a discrete classification of the organism's habitat preference, coded numerically.",
-    "multi_value": false,
-    "value_type": "categorical"
-  },
-  "Total": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Represents the total count or measurement across all defined categories.",
+    "reasoning": "Header names the trait; cells provide the estimated mean and standard error.",
     "category": null,
-    "reasoning_relevance": "The values represent counts or sample sizes, which are not considered biological data worth keeping."
+    "reasoning_relevance": "This is a derived statistic, not a trait of the organism."
+  },
+  "t-statistic": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the statistical test result for the comparison.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical test result, not a biological trait."
+  },
+  "p": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the probability value associated with the t-statistic.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result, not a biological trait."
   }
 }

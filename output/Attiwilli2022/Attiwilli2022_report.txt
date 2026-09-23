@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Attiwilli2022\Attiwilli2022.xlsx  (30 rows)
-PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (36 rows)
+PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (15 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
@@ -9,69 +9,69 @@ TAXON NAME REMAP (pred -> gt, 2 pair(s))
   'Hesperiidae' -> 'Hesperiidae '
   'Nymphalidae' -> 'Nymphalidae '
 
-TAXON NAMES LEFT UNMAPPED (1)
-  'Pooled': no ground-truth string denotes this
-
-measurementType REMAP (pred -> gt, 3 pair(s))
-  'Body mass' -> ' Body mass '
-  'Proboscis length' -> 'Proboscis length '
-  'Wing length' -> 'Wing length '
+measurementType LEFT UNMAPPED (3)
+  'Ecotone': no ground-truth string denotes this
+  'Forest': no ground-truth string denotes this
+  'Open': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
-  matched (TP)          : 30
-  missed (FN)           : 0
-  spurious, in scope    : 6   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+  matched (TP)          : 0
+  missed (FN)           : 30
+  spurious, in scope    : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 15   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.833 / 1.000 / 0.909
-  SCOPED  P/R/F1        : 0.833 / 1.000 / 0.909
-  RECALL (GT coverage)  : 1.000
+  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
+  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
+  RECALL (GT coverage)  : 0.000
 
-FUZZY VALUE MATCHES (15 accepted beyond exact/numeric)
-  subset          15
-  sample:
-    [subset] gt '30.8 ± 8.13 ' == pred '30.8 (8.13)'
-    [subset] gt '18 ± 4.30 ' == pred '18 (4.30)'
-    [subset] gt '21.2 ± 8.35 ' == pred '21.2 (8.35)'
-    [subset] gt '45.5 ± 45.32 ' == pred '45.5 (45.32)'
-    [subset] gt '32.7 ± 8.62 ' == pred '32.7 (8.62)'
-    [subset] gt '110.5 ± 88.64 ' == pred '110.5 (88.64)'
-    [subset] gt '6.1 ± 1.40 ' == pred '6.1 (1.40)'
-    [subset] gt '91.1 ± 61.29 ' == pred '91.1 (61.29)'
-    [subset] gt '52.1 ± 11.65 ' == pred '52.1 (11.65)'
-    [subset] gt '13.9 ± 5.92 ' == pred '13.9 (5.92)'
-    [subset] gt '174.2 ± 139.13 ' == pred '174.2 (139.13)'
-    [subset] gt '18 ± 9.57 ' == pred '18 (9.57)'
+  out-of-scope rows by uncovered field:
+    measurementType                             15
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                30     30  1.000
-  measurementMethod             0     20  0.000  <-- low
-  measurementUnit              30     30  1.000
-  measurementStatistic          5     30  0.167  <-- low
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
   measurementRemarks            0      0    n/a
-  sex                          30     30  1.000
-  lifeStage                    30     30  1.000
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
   caste                         0      0    n/a
-  sampleSizeValue               0     30  0.000  <-- low
-  sampleSizeUnit                0     30  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0     30  0.000  <-- low
+  samplingProtocol              0      0    n/a
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0     30  0.000  <-- low
+  verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     30  0.000  <-- low
+  associatedReferences          0      0    n/a
   externalLink                  0      0    n/a
+
+WHY THE 30 MISSED ROWS MISSED
+  species present, trait missing                       30
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Wing length '                     x10
+     ' Body mass '                      x10
+     'Proboscis length '                x10
+  -> 3 missing traits explain 30 of 30 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Attiwilli2022_misses.csv, Attiwilli2022_misses_summary.json (30 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  body mass                                        10    12   Δ+2 (split?)
-  proboscis length                                 10    12   Δ+2 (split?)
-  wing length                                      10    12   Δ+2 (split?)
+  body mass                                        10     0   GT-ONLY
+  ecotone                                           0     5   PRED-ONLY
+  forest                                            0     5   PRED-ONLY
+  proboscis length                                 10     0   GT-ONLY
+  wing length                                      10     0   GT-ONLY
+  open                                              0     5   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.833  1.000  0.909     30     6     0   id+type+value
-  tags        0.139  0.167  0.152      5    31    25   basis+id+type+value+stat+sex+stage
-             (F1 -0.758 vs previous)
+  core        0.000  0.000  0.000      0     0    30   id+type+value
+             (15 more spurious row(s) out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0    30   basis+id+type+value+stat+sex+stage
+             (15 more spurious row(s) out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

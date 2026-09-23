@@ -1,67 +1,97 @@
 {
-  "Response variables": {
-    "field": "definitionTerm",
-    "value_column": false,
-    "reasoning": "This column lists the specific variables or traits being defined/measured."
-  },
-  "PF (reference level) PF (reference level) Estimate ± SE": {
+  "PF (reference level) Estimate ± SE": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Contains the calculated estimate and standard error for the measured trait."
+    "reasoning": "This column provides the estimated reference level and its associated standard error for the statistical test."
   },
-  "PF (reference level) PF (reference level) t/z-value": {
-    "field": "measurementStatistic",
+  "PF (reference level) t/z-value": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Provides the statistical test result (t/z-value) associated with the measurement."
+    "reasoning": "This column provides the t-statistic value for the reference level comparison."
   },
-  "Bee functional diversity PA vs. PF Estimate ± SE": {
+  "PA vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference and standard error for the comparison."
+  },
+  "PA vs. PF t/z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the t-statistic value for the comparison between PA and PF."
+  },
+  "TR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference and standard error for the comparison."
+  },
+  "TR vs. PF t/z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the t-statistic value for the comparison between TR and PF."
+  },
+  "FR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference and standard error for the comparison."
+  },
+  "FR vs. PF t/z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the t-statistic value for the comparison between FR and PF."
+  },
+  "MR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference and standard error for the comparison."
+  },
+  "MR vs. PF t/z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the t-statistic value for the comparison between MR and PF."
+  },
+  "NR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference and standard error for the comparison."
+  },
+  "NR vs. PF t/z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the t-statistic value for the comparison between NR and PF."
+  },
+  "Response variables": {
+    "field": "measurementType",
+    "value_column": false,
+    "reasoning": "This header defines the traits being measured, not a measurement itself."
+  },
+  "(a) FDis": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+    "reasoning": "FDis is a statistical measure of genetic differentiation, a trait of the population."
   },
-  "Bee functional diversity PA vs. PF t/z-value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Provides the statistical test result (t/z-value) for the PA vs. PF comparison."
-  },
-  "Bee functional diversity TR vs. PF Estimate ± SE": {
+  "(b) FRic": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+    "reasoning": "FRic is a statistical measure of genetic flow, a trait of the population."
   },
-  "Bee functional diversity TR vs. PF t/z-value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Provides the statistical test result (t/z-value) for the TR vs. PF comparison."
-  },
-  "Bee functional diversity FR vs. PF Estimate ± SE": {
+  "(c) Wing length": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+    "reasoning": "Wing length is a morphometric trait measured on the insect."
   },
-  "Bee functional diversity FR vs. PF t/z-value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Provides the statistical test result (t/z-value) for the FR vs. PF comparison."
-  },
-  "Bee functional diversity MR vs. PF Estimate ± SE": {
+  "(d) Body size": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+    "reasoning": "Body size is a morphometric trait measured on the insect."
   },
-  "Bee functional diversity MR vs. PF t/z-value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Provides the statistical test result (t/z-value) for the MR vs. PF comparison."
-  },
-  "Bee functional diversity NR vs. PF Estimate ± SE": {
+  "(e) Posterior tibia length": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the specific measurement (Estimate ± SE) for a functional diversity comparison."
+    "reasoning": "Posterior tibia length is a morphometric trait measured on the insect."
   },
-  "Bee functional diversity NR vs. PF t/z-value": {
-    "field": "measurementStatistic",
+  "(f) Tongue length": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Provides the statistical test result (t/z-value) for the NR vs. PF comparison."
+    "reasoning": "Tongue length is a morphometric trait measured on the insect."
   }
 }

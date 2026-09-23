@@ -1,57 +1,17 @@
 {
-  "Study ID": {
+  "Crop type": {
     "field": null,
     "value_column": false,
-    "reasoning": "This is a unique identifier, not a measurement, location, or organism."
+    "reasoning": "This column describes the plant material studied, not the insect or location."
   },
-  "country": {
+  "Adjacent habitat type": {
     "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "It specifies the country where the sampling took place."
-  },
-  "region": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "It specifies the regional locality where the sampling occurred."
-  },
-  "year": {
-    "field": null,
     "value_column": false,
-    "reasoning": "This is a temporal variable, not a measurement of the organism or a location."
+    "reasoning": "This describes the land-use/habitat where sampling occurred."
   },
-  "months": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a temporal variable, not a measurement of the organism or a location."
-  },
-  "crop types": {
-    "field": "verbatimLocality",
+  "Number of sites": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "It describes the land-use/habitat where the sampling was conducted."
-  },
-  "adjacent habitat classes": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "It describes the specific habitat/vegetation where the sampling was conducted."
-  },
-  "study sites": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "It identifies the specific study sites where observations were made."
-  },
-  "maximal distance [m]": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "It measures a specific distance property related to the study setup."
-  },
-  "trapping days": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "It measures the duration of the sampling effort."
-  },
-  "reference": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a citation, not a measurement, location, or organism."
+    "reasoning": "This is a count of sampling locations, which is a measured quantity."
   }
 }

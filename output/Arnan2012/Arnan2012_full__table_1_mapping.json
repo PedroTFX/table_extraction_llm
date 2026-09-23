@@ -1,17 +1,100 @@
 {
-  "Life trait": {
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains the taxonomic identification of the focal insect organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the focal organism; a core biological entity."
+  },
+  "Defense of resources": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column names the biological property or characteristic being measured for the organism."
+    "measurementValue": "2",
+    "reasoning": "This measures the insect's defense strategy or resource defense level.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the observed behavior/interaction of the ant species.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Defense of resources",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The data in Table 1 describes the characteristics of specific study sites (geographical location, vegetation type, ant community structure) which are treated as specific occurrences within the study area.",
+    "measurementMethod": "Observation/Site description",
+    "measurementMethod_reasoning": "The data in Table 1 is derived from describing the physical characteristics of the study sites and the ant community structure observed at those sites.",
+    "measurementUnit": "%",
+    "measurementUnit_reasoning": "The values for 'Tree cover (%)' and '% ant fauna in this study' are expressed as percentages.",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "The values listed in Table 1 correspond to specific, distinct sites, representing individual measurements for each site."
   },
-  "Statistical test": {
-    "field": "measurementMethod",
-    "value_column": false,
-    "reasoning": "This describes the statistical protocol used to analyze the data."
-  },
-  "Significance": {
-    "field": "measurementStatistic",
+  "Mean Number workers/bait": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column holds the statistical outcome (p-value) derived from the analysis."
+    "measurementValue": "40",
+    "measurementStatistic": "mean",
+    "reasoning": "This measures the average number of workers or bait associated with the focal insect.",
+    "category": "Abundance",
+    "reasoning_relevance": "Records the abundance of the organism relative to the bait.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Number workers/bait",
+    "basisOfRecord": "Number of ants feeding at baits",
+    "basisOfRecord_reasoning": "The data record pertains to the count of ants observed feeding at baits, which is used to determine behavioral dominance.",
+    "measurementMethod": "Observation of interspecific interactions at baits during 24-h sampling periods",
+    "measurementMethod_reasoning": "The method involves noting the number of ants from different species feeding at each bait during the sampling periods (spring and summer).",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "The text states that 'the number of ants... were noted', indicating a count."
+  },
+  "Daily rhythm": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "CN",
+    "reasoning": "This describes the daily activity pattern or rhythm of the organism.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the observed daily behavioral pattern of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Daily rhythm",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The study analyzes life traits related to ecological and behavioural characteristics of ant species, and determines behavioral dominance based on observing interspecific interactions. These are characteristics derived from observing living organisms in their environment.",
+    "measurementMethod": "Pitfall traps were used to determine ant abundance in each site. Behavioral dominance was determined by observing interspecific interactions at baits and calculating a dominance index (sensu Fellers).",
+    "measurementMethod_reasoning": "The text explicitly details the methods used for data collection: pitfall trapping for abundance and observation of interactions for dominance."
+  },
+  "Month of peak activity": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "September",
+    "reasoning": "This records the month when the organism exhibits peak activity.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the observed temporal behavior of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Month of peak activity",
+    "basisOfRecord": "Activity period of most Mediterranean ant species",
+    "basisOfRecord_reasoning": "The text refers to the sampling periods as 'two contrasting periods within the usual activity period of most Mediterranean ant species,' which establishes the context for the observed activity timing.",
+    "measurementMethod": "Traps were operated for 4–6 days during mid-May (spring period) and repeated in mid-July (summer period).",
+    "measurementMethod_reasoning": "This describes the protocol used to sample the ant communities, defining the temporal context of the activity observation."
+  },
+  "CTM (ºC)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "40",
+    "reasoning": "This measures the mean ambient temperature of the sampling site.",
+    "category": null,
+    "reasoning_relevance": "This is a site condition, not an organism's trait."
+  },
+  "MAT (ºC)": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "20",
+    "reasoning": "This measures the mean ambient temperature of the sampling site.",
+    "category": null,
+    "reasoning_relevance": "This is a site condition, not an organism's trait."
+  },
+  "Phylogeny code": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "BBB",
+    "reasoning": "This records the phylogenetic classification code for the species.",
+    "category": null,
+    "reasoning_relevance": "This is a taxonomic rank, not a measured trait."
   }
 }

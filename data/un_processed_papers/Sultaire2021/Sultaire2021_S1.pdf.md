@@ -1,11 +1,29 @@
-Supporting information. Effects of varying retention tree patterns on ground beetle (Coleoptera: Carabidae) taxonomic and functional diversity. Sean M. Sultaire, Andrew J. Kroll, Jake Verschuyl, Douglas A. Landis, Gary J. Roloff. Ecosphere
+<!-- page 1 of 7 -->
 
-## Appendix S1. Supplemental tables and figures cited in the manuscript
+**Supporting information.** Effects of varying retention tree patterns on ground beetle
 
-Table S1: Mean climate and elevation (m) for each experimental block, northwest Oregon and southwestern Washington, USA, 2017-2018.  
+(Coleoptera: Carabidae) taxonomic and functional diversity. Sean M. Sultaire, Andrew J. Kroll, Jake Verschuyl, Douglas A. Landis, Gary J. Roloff. Ecosphere
+
+**Appendix S1.** Supplemental tables and figures cited in the manuscript
+
+Table S1: Mean climate and elevation (m) for each experimental block, northwest Oregon and southwestern Washington, USA, 2017-2018.
+
 Climate variables are PRISM 30-year annual averages with temperature in °C and precipitation in mm. Numbering corresponds to Figure 1.
 
-<table><tr><td>Block</td><td>MeanPrecip</td><td>MaxTemp</td><td>MnTemp</td><td>Elevation</td></tr><tr><td>1</td><td>1893.19</td><td>16.37</td><td>10.83</td><td>296.83</td></tr><tr><td>2</td><td>2646.71</td><td>15.07</td><td>10.1</td><td>74.01</td></tr><tr><td>3</td><td>1939.23</td><td>14.2</td><td>9.27</td><td>606.14</td></tr><tr><td>4</td><td>1834.91</td><td>14.82</td><td>9.71</td><td>335.79</td></tr><tr><td>5</td><td>2493.58</td><td>13.15</td><td>8.37</td><td>785.61</td></tr><tr><td>6</td><td>1797.8</td><td>15.01</td><td>9.6</td><td>431.96</td></tr><tr><td>7</td><td>2733.67</td><td>12.54</td><td>8.18</td><td>758.57</td></tr><tr><td>8</td><td>2552.58</td><td>13.52</td><td>8.35</td><td>868.27</td></tr><tr><td>9</td><td>1989.52</td><td>15.71</td><td>10.94</td><td>159.05</td></tr><tr><td>10</td><td>3525.35</td><td>14.12</td><td>9.32</td><td>646.13</td></tr></table>
+| Block | MeanPrecip | MaxTemp | MnTemp | Elevation |
+| --- | --- | --- | --- | --- |
+| 1 | 1893.19 | 16.37 | 10.83 | 296.83 |
+| 2 | 2646.71 | 15.07 | 10.1 | 74.01 |
+| 3 | 1939.23 | 14.2 | 9.27 | 606.14 |
+| 4 | 1834.91 | 14.82 | 9.71 | 335.79 |
+| 5 | 2493.58 | 13.15 | 8.37 | 785.61 |
+| 6 | 1797.8 | 15.01 | 9.6 | 431.96 |
+| 7 | 2733.67 | 12.54 | 8.18 | 758.57 |
+| 8 | 2552.58 | 13.52 | 8.35 | 868.27 |
+| 9 | 1989.52 | 15.71 | 10.94 | 159.05 |
+| 10 | 3525.35 | 14.12 | 9.32 | 646.13 |
+
+<!-- page 2 of 7 -->
 
 Table S2: Summary of pitfall trapping effort and carabid beetle captures by retention treatment and year, northwest Oregon and southwestern Washington, USA, 2017-2018. Traps = number of pitfall traps collected (average), Individuals = number of individual carabids (average), Species = number of carabid species (average), Species/Trap Sample = average carabid species per collected trap, and Individuals/Trap Sample = average number of individuals per collected trap.
 
@@ -13,9 +31,72 @@ Table S2: Summary of pitfall trapping effort and carabid beetle captures by rete
 
 <sup>a</sup>RA= Riparian Aggregated, UA = Upland Aggregated, S = Split, SS = Split with Snags, DS = dispersed with snags
 
-<table><tr><td>Species</td><td>Species Abbr</td><td>Body length (mm)</td><td>Mandible Length/Width</td><td>Disp PCoA</td><td>Individuals</td><td>Blocks</td><td>Stands</td><td>Samples</td></tr><tr><td>Agonum muelleri</td><td>AGMU</td><td>8.28</td><td>1.15</td><td>-0.41</td><td>4</td><td>2</td><td>3</td><td>4</td></tr><tr><td>Amara conflata</td><td>AMCO</td><td>9.95</td><td>0.86</td><td>-0.40</td><td>181</td><td>10</td><td>24</td><td>67</td></tr><tr><td>Amara impuncticollis</td><td>AMIM</td><td>7.79</td><td>0.79</td><td>-0.41</td><td>245</td><td>8</td><td>18</td><td>55</td></tr><tr><td>Amara obesa</td><td>AMOB</td><td>11.57</td><td>1.03</td><td>-0.06</td><td>2</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Amara patruelis</td><td>AMPA</td><td>7.97</td><td>0.85</td><td>-0.42</td><td>68</td><td>9</td><td>17</td><td>27</td></tr><tr><td>Amara sanjuanensis</td><td>AMSA</td><td>7.64</td><td>0.94</td><td>-0.42</td><td>12</td><td>5</td><td>7</td><td>10</td></tr><tr><td>Amara spp</td><td>AMSP</td><td>6.06</td><td>0.98</td><td>-0.46</td><td>5</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Anisodactylus binotatus</td><td>ANBI</td><td>11.65</td><td>0.83</td><td>-0.36</td><td>18</td><td>5</td><td>7</td><td>11</td></tr><tr><td>Calathus fuscipes</td><td>CAFU</td><td>11.87</td><td>1.06</td><td>-0.05</td><td>69</td><td>5</td><td>8</td><td>21</td></tr><tr><td>Carabus nemoralis</td><td>CANE</td><td>22.83</td><td>1.29</td><td>0.34</td><td>10</td><td>2</td><td>2</td><td>4</td></tr><tr><td>Carabus taedatus</td><td>CATA</td><td>20.38</td><td>1.19</td><td>0.42</td><td>162</td><td>2</td><td>10</td><td>84</td></tr><tr><td>Cychrus tuberculatus</td><td>CATU</td><td>20.97</td><td>1.42</td><td>0.42</td><td>243</td><td>10</td><td>41</td><td>171</td></tr><tr><td>Harpalus affinis</td><td>HAAF</td><td>11.02</td><td>0.89</td><td>-0.38</td><td>75</td><td>2</td><td>4</td><td>13</td></tr><tr><td>Harpalus animosus</td><td>HAAN</td><td>12.78</td><td>0.84</td><td>-0.34</td><td>63</td><td>4</td><td>8</td><td>37</td></tr><tr><td>Harpalus cordifer</td><td>HACO</td><td>8.39</td><td>0.82</td><td>-0.07</td><td>168</td><td>10</td><td>28</td><td>94</td></tr><tr><td>Harpalus spp</td><td>HASP</td><td>9.40</td><td>0.86</td><td>-0.07</td><td>467</td><td>10</td><td>44</td><td>245</td></tr><tr><td>Lebia viridis</td><td>LEVI</td><td>4.00</td><td>0.95</td><td>-0.47</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Leistus ferruginosus</td><td>LEFE</td><td>8.96</td><td>0.56</td><td>-0.36</td><td>10</td><td>5</td><td>8</td><td>9</td></tr><tr><td>Microlestes nigrinnis</td><td>MINI</td><td>2.83</td><td>0.81</td><td>-0.10</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Nebria brevicollis</td><td>NEBR</td><td>11.31</td><td>0.80</td><td>-0.34</td><td>16</td><td>9</td><td>10</td><td>12</td></tr><tr><td>Notiophilus sylvaticus</td><td>NOSY</td><td>4.88</td><td>0.89</td><td>-0.09</td><td>19</td><td>9</td><td>15</td><td>18</td></tr><tr><td>Omus audouini</td><td>OMAU</td><td>15.13</td><td>1.09</td><td>0.27</td><td>940</td><td>4</td><td>10</td><td>90</td></tr><tr><td>Omus dejeani</td><td>OMDE</td><td>19.52</td><td>1.07</td><td>0.35</td><td>1050</td><td>8</td><td>33</td><td>383</td></tr><tr><td>Platynus ovipennis</td><td>PLOV</td><td>10.89</td><td>1.04</td><td>0.18</td><td>7</td><td>5</td><td>6</td><td>7</td></tr><tr><td>Promecognathus crassus</td><td>PRCR</td><td>11.77</td><td>1.49</td><td>0.16</td><td>127</td><td>9</td><td>24</td><td>90</td></tr><tr><td>Pterostichus adstrictus</td><td>PTAD</td><td>11.49</td><td>1.12</td><td>-0.37</td><td>6</td><td>1</td><td>2</td><td>5</td></tr><tr><td>Pterostichus algidus</td><td>PTAM</td><td>13.08</td><td>1.03</td><td>0.18</td><td>2296</td><td>10</td><td>37</td><td>421</td></tr><tr><td>Pterostichus amethystinus</td><td>PTAM</td><td>12.93</td><td>0.98</td><td>0.18</td><td>45</td><td>6</td><td>20</td><td>43</td></tr><tr><td>Pterostichus crenicollis</td><td>PTCR</td><td>17.29</td><td>1.14</td><td>0.27</td><td>46</td><td>7</td><td>9</td><td>31</td></tr><tr><td>Pterostichus herculaneus</td><td>PTHE</td><td>14.06</td><td>0.99</td><td>0.12</td><td>666</td><td>6</td><td>23</td><td>272</td></tr><tr><td>Pterostichus infernalis</td><td>PTIN</td><td>9.17</td><td>1.08</td><td>0.13</td><td>384</td><td>3</td><td>14</td><td>147</td></tr><tr><td>Pterostichus lama</td><td>PTLA</td><td>23.30</td><td>1.03</td><td>0.40</td><td>529</td><td>10</td><td>44</td><td>336</td></tr><tr><td>Pterostichus nigracaeruleus</td><td>PTNI</td><td>11.02</td><td>1.19</td><td>0.13</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Pterostichus pumilis</td><td>PTPU</td><td>8.41</td><td>1.13</td><td>0.13</td><td>523</td><td>7</td><td>34</td><td>246</td></tr><tr><td>Pterostichus rothi</td><td>PTRO</td><td>10.16</td><td>1.17</td><td>0.13</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Pterostichus spp</td><td>PTSP</td><td>12.63</td><td>1.07</td><td>0.15</td><td>19</td><td>8</td><td>13</td><td>16</td></tr><tr><td>Scaphinotus angulatus</td><td>SCAL</td><td>17.54</td><td>1.82</td><td>0.34</td><td>9</td><td>5</td><td>7</td><td>9</td></tr><tr><td>Scaphinotus angusticollis</td><td>SCAN</td><td>19.88</td><td>1.42</td><td>0.46</td><td>940</td><td>8</td><td>20</td><td>152</td></tr><tr><td>Scaphinotus marginatus</td><td>SCMA</td><td>12.73</td><td>1.67</td><td>0.26</td><td>124</td><td>8</td><td>24</td><td>78</td></tr><tr><td>Syntomus americanus</td><td>SYAM</td><td>2.91</td><td>0.96</td><td>-0.10</td><td>54</td><td>10</td><td>20</td><td>39</td></tr><tr><td>Tanystoma sulcata</td><td>TASU</td><td>10.67</td><td>1.02</td><td>0.14</td><td>2</td><td>1</td><td>2</td><td>2</td></tr><tr><td>Trachypachus holmbergi</td><td>TRHO</td><td>4.61</td><td>0.71</td><td>-0.47</td><td>1230</td><td>10</td><td>39</td><td>268</td></tr><tr><td>Unknown1</td><td>NA</td><td>3.03</td><td>0.98</td><td>NA</td><td>2</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Unknown2</td><td>NA</td><td>5.64</td><td>0.91</td><td>-0.46</td><td>3</td><td>1</td><td>1</td><td>2</td></tr><tr><td>Unknown3</td><td>NA</td><td>2.77</td><td>1.07</td><td>-0.50</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Unknown5</td><td>NA</td><td>4.85</td><td>0.86</td><td>-0.50</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Zacotus mathewsi</td><td>ZAMA</td><td>15.13</td><td>0.99</td><td>0.19</td><td>367</td><td>10</td><td>35</td><td>186</td></tr></table>
+<!-- page 3 of 7 -->
 
-![](images/3dc36537693324b619b43a0ac8069bbfdb3c2f12035393f46e57391e009119f8.jpg)
+| Species | Species Abbr | Body length (mm) | Mandible Length/Width | Disp PCoA | Individuals | Blocks | Stands | Samples |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Agonum muelleri | AGMU | 8.28 | 1.15 | -0.41 | 4 | 2 | 3 | 4 |
+| Amara conflata | AMCO | 9.95 | 0.86 | -0.40 | 181 | 10 | 24 | 67 |
+| Amara impuncticollis | AMIM | 7.79 | 0.79 | -0.41 | 245 | 8 | 18 | 55 |
+| Amara obesa | AMOB | 11.57 | 1.03 | -0.06 | 2 | 1 | 1 | 1 |
+| Amara patruelis | AMPA | 7.97 | 0.85 | -0.42 | 68 | 9 | 17 | 27 |
+| Amara sanjuanensis | AMSA | 7.64 | 0.94 | -0.42 | 12 | 5 | 7 | 10 |
+| Amara spp | AMSP | 6.06 | 0.98 | -0.46 | 5 | 2 | 2 | 2 |
+| Anisodactylus binotatus | ANBI | 11.65 | 0.83 | -0.36 | 18 | 5 | 7 | 11 |
+| Calathus fuscipes | CAFU | 11.87 | 1.06 | -0.05 | 69 | 5 | 8 | 21 |
+| Carabus nemoralis | CANE | 22.83 | 1.29 | 0.34 | 10 | 2 | 2 | 4 |
+| Carabus taedatus | CATA | 20.38 | 1.19 | 0.42 | 162 | 2 | 10 | 84 |
+| Cychrus tuberculatus | CATU | 20.97 | 1.42 | 0.42 | 243 | 10 | 41 | 171 |
+| Harpalus affinis | HAAF | 11.02 | 0.89 | -0.38 | 75 | 2 | 4 | 13 |
+| Harpalus animosus | HAAN | 12.78 | 0.84 | -0.34 | 63 | 4 | 8 | 37 |
 
-![](images/d5ec0cdbe7c58bbff299076cff852d9c5df11b2c76805d671ab190324c776173.jpg)  
+<!-- page 4 of 7 -->
+
+| Harpalus cordifer | HACO | 8.39 | 0.82 | -0.07 | 168 | 10 | 28 | 94 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Harpalus spp | HASP | 9.40 | 0.86 | -0.07 | 467 | 10 | 44 | 245 |
+| Lebia viridis | LEVI | 4.00 | 0.95 | -0.47 | 1 | 1 | 1 | 1 |
+| Leistus ferruginosus | LEFE | 8.96 | 0.56 | -0.36 | 10 | 5 | 8 | 9 |
+| Microlestes nigrinnis | MINI | 2.83 | 0.81 | -0.10 | 1 | 1 | 1 | 1 |
+| Nebria brevicollis | NEBR | 11.31 | 0.80 | -0.34 | 16 | 9 | 10 | 12 |
+| Notiophilus sylvaticus | NOSY | 4.88 | 0.89 | -0.09 | 19 | 9 | 15 | 18 |
+| Omus audouini | OMAU | 15.13 | 1.09 | 0.27 | 940 | 4 | 10 | 90 |
+| Omus dejeani | OMDE | 19.52 | 1.07 | 0.35 | 1050 | 8 | 33 | 383 |
+| Platynus ovipennis | PLOV | 10.89 | 1.04 | 0.18 | 7 | 5 | 6 | 7 |
+| Promecognathus crassus | PRCR | 11.77 | 1.49 | 0.16 | 127 | 9 | 24 | 90 |
+| Pterostichus adstrictus | PTAD | 11.49 | 1.12 | -0.37 | 6 | 1 | 2 | 5 |
+| Pterostichus algidus | PTAM | 13.08 | 1.03 | 0.18 | 2296 | 10 | 37 | 421 |
+| Pterostichus amethystinus | PTAM | 12.93 | 0.98 | 0.18 | 45 | 6 | 20 | 43 |
+| Pterostichus crenicollis | PTCR | 17.29 | 1.14 | 0.27 | 46 | 7 | 9 | 31 |
+| Pterostichus herculaneus | PTHE | 14.06 | 0.99 | 0.12 | 666 | 6 | 23 | 272 |
+
+<!-- page 5 of 7 -->
+
+| Pterostichus infernalis | PTIN | 9.17 | 1.08 | 0.13 | 384 | 3 | 14 | 147 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Pterostichus lama | PTLA | 23.30 | 1.03 | 0.40 | 529 | 10 | 44 | 336 |
+| Pterostichus nigracaeruleus | PTNI | 11.02 | 1.19 | 0.13 | 1 | 1 | 1 | 1 |
+| Pterostichus pumilis | PTPU | 8.41 | 1.13 | 0.13 | 523 | 7 | 34 | 246 |
+| Pterostichus rothi | PTRO | 10.16 | 1.17 | 0.13 | 2 | 2 | 2 | 2 |
+| Pterostichus spp | PTSP | 12.63 | 1.07 | 0.15 | 19 | 8 | 13 | 16 |
+| Scaphinotus angulatus | SCAL | 17.54 | 1.82 | 0.34 | 9 | 5 | 7 | 9 |
+| Scaphinotus angusticollis | SCAN | 19.88 | 1.42 | 0.46 | 940 | 8 | 20 | 152 |
+| Scaphinotus marginatus | SCMA | 12.73 | 1.67 | 0.26 | 124 | 8 | 24 | 78 |
+| Syntomus americanus | SYAM | 2.91 | 0.96 | -0.10 | 54 | 10 | 20 | 39 |
+| Tanystoma sulcata | TASU | 10.67 | 1.02 | 0.14 | 2 | 1 | 2 | 2 |
+| Trachypachus holmbergi | TRHO | 4.61 | 0.71 | -0.47 | 1230 | 10 | 39 | 268 |
+| Unknown1 | NA | 3.03 | 0.98 | NA | 2 | 1 | 1 | 1 |
+| Unknown2 | NA | 5.64 | 0.91 | -0.46 | 3 | 1 | 1 | 2 |
+| Unknown3 | NA | 2.77 | 1.07 | -0.50 | 1 | 1 | 1 | 1 |
+
+<!-- page 6 of 7 -->
+
+| Unknown5 | NA | 4.85 | 0.86 | -0.50 | 1 | 1 | 1 | 1 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Zacotus mathewsi | ZAMA | 15.13 | 0.99 | 0.19 | 367 | 10 | 35 | 186 |
+
+<!-- page 7 of 7 -->
+
+![Image block](doc:52925d0/tier:advanced/page:7/block:1)
+
 Figure S1: A) Functional dendrogram and B) NMDS ordination for all carabid species and morphospecies sampled in 50 clearcut treatment stands, northwest Oregon and southwestern Washington, USA, 2017-2018. Dendrogram and ordination were constructed from pairwise dissimilarity between each species based on body length, mandible length to width ratio, wing type, and leg length based on Gower’s distance.

@@ -1,27 +1,216 @@
 {
-  "Cities": {
+  "﻿City": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The values represent the geographic locations where the statistical comparison was made."
+    "reasoning": "This is the name of the city where the sampling occurred.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   },
-  "Diff": {
-    "field": "measurementValue",
+  "Location": {
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The values represent the calculated difference between the two locations."
+    "reasoning": "This specifies the general location or study area.",
+    "category": null,
+    "reasoning_relevance": "A specific place name, not a trait of the organism."
   },
-  "Lwr": {
-    "field": "measurementValue",
+  "Management": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values represent the lower bound of the calculated statistical difference."
+    "reasoning": "Describes the land-use or habitat management context.",
+    "category": null,
+    "reasoning_relevance": "Describes the context of the garden, not a direct biological trait."
   },
-  "Upr": {
-    "field": "measurementValue",
+  "Date": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values represent the upper bound of the calculated statistical difference."
+    "reasoning": "Records the date of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Temporal quantity of the study, not an organism trait."
   },
-  "p-Value": {
-    "field": "measurementValue",
+  "Month": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values represent the statistical significance (p-value) of the observed difference."
+    "reasoning": "Records the month of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Temporal quantity of the study, not an organism trait."
+  },
+  "Day": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Records the day of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Temporal quantity of the study, not an organism trait."
+  },
+  "Year": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Records the year of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Temporal quantity of the study, not an organism trait."
+  },
+  "Intertegular.d": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured morphometric trait of the insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures an anatomical dimension used as a proxy for body size.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Intertegular distance"
+  },
+  "Head.w": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured morphometric trait of the insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical dimension used as a proxy for body size.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Head width"
+  },
+  "I.D.": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This is the unique identifier for the focal insect specimen.",
+    "category": null,
+    "reasoning_relevance": "Specimen identity, which is not a measured trait."
+  },
+  "Neighborhood": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Specifies a specific neighborhood within the sampling location.",
+    "category": null,
+    "reasoning_relevance": "A specific place name, not a trait of the organism."
+  },
+  "Garden.area": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured area property of the site.",
+    "category": null,
+    "reasoning_relevance": "A site variable, measuring the physical area of the garden."
+  },
+  "Med.Income.scaled": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured socioeconomic variable of the site.",
+    "category": null,
+    "reasoning_relevance": "A human/socioeconomic variable of the site."
+  },
+  "City.med.income": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured socioeconomic variable of the site.",
+    "category": null,
+    "reasoning_relevance": "A human/socioeconomic variable of the site."
+  },
+  "Percent.income": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured socioeconomic variable of the site.",
+    "category": null,
+    "reasoning_relevance": "A human/socioeconomic variable of the site."
+  },
+  "popdens": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a measured population density variable of the site.",
+    "category": null,
+    "reasoning_relevance": "Abundance/sample size, not a trait of the organism."
+  },
+  "DDG_15": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a calculated environmental variable (Degree-Days).",
+    "category": null,
+    "reasoning_relevance": "Site climatic variable, not the organism's own tolerance."
+  },
+  "DDG_16": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a calculated environmental variable (Degree-Days).",
+    "category": null,
+    "reasoning_relevance": "Site climatic variable, not the organism's own tolerance."
+  },
+  "CV_15": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Coefficient of Variation for the 15-day period.",
+    "category": null,
+    "reasoning_relevance": "A statistic or derived index, not a measured trait."
+  },
+  "CV_16": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "Represents the Coefficient of Variation for the 16-day period.",
+    "category": null,
+    "reasoning_relevance": "A statistic or derived index, not a measured trait."
+  },
+  "scaled.garden": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a scaled measurement property of the garden area.",
+    "category": null,
+    "reasoning_relevance": "A site variable, measuring the physical area of the garden."
+  },
+  "income": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a categorical socioeconomic variable (e.g., low).",
+    "category": null,
+    "reasoning_relevance": "A human/socioeconomic variable of the site."
+  },
+  "PGDD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents a calculated environmental variable (PGDD).",
+    "category": null,
+    "reasoning_relevance": "A statistic or derived index, not a measured trait."
+  },
+  "15Temp": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the measured temperature condition at the site.",
+    "category": null,
+    "reasoning_relevance": "Site climatic variable, not the organism's own tolerance."
+  },
+  "__paperSpecies__": {
+    "field": "verbatimIdentification",
+    "category": null,
+    "scope": "paper",
+    "column": null,
+    "value": "Halictus ligatus",
+    "reasoning": "The measurements quantify body size variation in *Halictus ligatus* sweat bees across three cities.",
+    "decided_by": "llm",
+    "roles": {
+      "Halictus ligatus": "measured subject",
+      "Chicago and": "habitat",
+      "Detroit and": "habitat"
+    },
+    "candidates": [
+      {
+        "name": "Halictus ligatus",
+        "mentions": 13,
+        "abbrev_mentions": 29,
+        "score": 161
+      },
+      {
+        "name": "Halicus ligatus",
+        "mentions": 1,
+        "abbrev_mentions": 29,
+        "score": 146
+      },
+      {
+        "name": "Chicago and",
+        "mentions": 8,
+        "abbrev_mentions": 0,
+        "score": 8
+      },
+      {
+        "name": "Image block",
+        "mentions": 5,
+        "abbrev_mentions": 0,
+        "score": 8
+      }
+    ]
   }
 }

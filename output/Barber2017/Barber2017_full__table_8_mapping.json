@@ -1,105 +1,121 @@
 {
-  "Species": {
+  "identifier": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column contains the specific taxonomic names of the insects.",
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
     "category": null,
-    "reasoning_relevance": "This column lists scientific names, which function as taxonomic identifiers."
+    "reasoning_relevance": "Specimen identity, not a measured trait."
   },
-  "Wing morphology": {
-    "field": "measurementType",
+  "Site": {
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This header describes a physical characteristic (trait) of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Values like 'macropterous' and 'brachypterous' are discrete classifications of a physical trait.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Wing morphology",
-    "basisOfRecord": "PlainExamplesForHumanObservation",
-    "basisOfRecord_reasoning": "The text explicitly states that the values for wing morphology (macropterous, brachypterous, dimorphic) were 'obtained... from literature (Larochelle and Larivie`re 2003; Bousquet 2010)' rather than being measured directly on the specimens collected in the current study.",
-    "measurementMethod": "Trait data extracted from existing literature (Larochelle and Larivie`re 2003; Bousquet 2010)",
-    "measurementMethod_reasoning": "The methodology section specifies that the researchers obtained the trait values for wing morphology by consulting published literature and taxonomic keys.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
-  },
-  "Breeding season": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This header describes a biological characteristic (when the organism breeds).",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Values like 'spring' and 'autumn' are discrete classifications of a phenological trait.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Breeding season",
-    "basisOfRecord": "Occurrence",
-    "basisOfRecord_reasoning": "The breeding season data was not collected directly from the current study's observations or specimens. Instead, the text explicitly states that the trait values were 'obtained values for each species documented in the study from literature (Larochelle and Larivie`re 2003; Bousquet 2010)', meaning it is a record derived from existing published data.",
-    "measurementMethod": "Data extracted from published literature (Larochelle and Larivie`re 2003; Bousquet 2010)",
-    "measurementMethod_reasoning": "The breeding season was identified as a phenological trait and the text specifies that the values were obtained from existing literature sources.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
-  },
-  "Diet": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This header describes the feeding habit or functional group of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Values like 'predator' and 'phytophagous' are discrete classifications of a trophic trait.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Diet",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The adult diet (phytophagous, carnivorous, omnivorous) is a natural history trait. The text explicitly states that the values for this trait were obtained 'from literature' (Larochelle and Larivie`re 2003; Bousquet 2010), meaning the data was not collected through direct observation or measurement during the study, but rather referenced from existing knowledge.",
-    "measurementMethod": "Trait values obtained from literature (Larochelle and Larivie`re 2003; Bousquet 2010)",
-    "measurementMethod_reasoning": "The diet trait was not measured in the field but was sourced from published literature and taxonomic keys for the identified species.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
-  },
-  "Activity time": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This header describes the temporal behavior of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Values like 'nocturnal' and 'diurnal' are discrete classifications of an ecological trait.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Activity time",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The trait 'Activity time' is an ecological/behavioral trait (nocturnal, diurnal). The text explicitly states that the values for this trait were obtained from existing literature (Larochelle and Larivie`re 2003; Bousquet 2010), meaning the data is a secondary record of an observation made by previous researchers, not a direct observation by the current study authors.",
-    "measurementMethod": "Trait values were obtained from published literature (Larochelle and Larivie`re 2003; Bousquet 2010).",
-    "measurementMethod_reasoning": "The text specifies that the trait values were sourced from literature, citing Larochelle and Larivie`re (2003) and Bousquet (2010) as the sources for the trait data.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
-  },
-  "Mean bodylength (mm)": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This header names a specific physical measurement taken on the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This column records a physical measurement with units (mm).",
-    "multi_value": false,
-    "value_type": "numeric",
-    "measurementStatistic": "mean",
-    "canonicalType": "bodylength",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "Body length is a morphological trait. Although the values were obtained from literature (Larochelle and Larivie`re 2003; Bousquet 2010), morphological measurements of species traits are typically derived from preserved specimens.",
-    "measurementMethod": "Community-weighted mean (CWM) of body length, using the midpoint of the published range for individual species.",
-    "measurementMethod_reasoning": "The text explicitly states that body length values were obtained from literature as the 'midpoint of published range' and were used to calculate the 'community-weighted mean (CWM) of body length' for the analysis.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement unit is specified in the column header and is standard for body length measurements."
-  },
-  "Species number": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This column records a count of the organism in the sample.",
+    "reasoning": "This column specifies the place where sampling or observation occurred.",
     "category": null,
-    "reasoning_relevance": "This appears to be an index or a count, which are not biological traits."
+    "reasoning_relevance": "Represents the study year, not an organism trait."
+  },
+  "AG": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "AG likely represents a site code or specific location identifier.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "HF": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "HF likely represents a site code or specific location identifier.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "HN": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "HN likely represents a site code or specific location identifier.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "L": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "L likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "SB": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "SB likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "HW": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "HW likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "CCW": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "CCW likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "CCE": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "CCE likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "FC": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "FC likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "TC": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "TC likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "SF": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "SF likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "HLP": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "HLP likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "WH": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "WH likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "MU": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "MU likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
+  },
+  "MR": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "MR likely represents a measurement or index related to the specimen.",
+    "category": null,
+    "reasoning_relevance": "Site code, not an organism trait."
   }
 }

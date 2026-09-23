@@ -1,48 +1,257 @@
-Supporting Information. Nelson, M., S.C. Hosler, F.A. Boetzl, H.P. Jones, and N.A. Barber. 2020. Reintroduced grazers and prescribed fire effects on beetle assemblage structure and function in restored grasslands. Ecological Applications.
+<!-- page 1 of 12 -->
 
-Appendix S1. Ground beetle traits, captures, and statistical results tables.
+**Supporting Information.** Nelson, M., S.C. Hosler, F.A. Boetzl, H.P. Jones, and N.A. Barber. 2020. Reintroduced grazers and prescribed fire effects on beetle assemblage structure and function in restored grasslands. Ecological Applications.
+
+**Appendix S1.** Ground beetle traits, captures, and statistical results tables.
+
+<!-- page 2 of 12 -->
 
 Table S1. Trait values for ground beetle species collected. Size is body length in mm.
 
-<table><tr><td>species</td><td>wingtype</td><td>season</td><td>diet</td><td>activity</td><td>size</td></tr><tr><td>Agonum muelleri</td><td>macropterous</td><td>all</td><td>carnivore</td><td>diurnal</td><td>8.4</td></tr><tr><td>Amara angustata/angustatoides</td><td>macropterous</td><td>spring</td><td>herbivore</td><td>diurnal</td><td>6.6</td></tr><tr><td>Amara crassispina</td><td>macropterous</td><td>all</td><td>unknown</td><td>unknown</td><td>8</td></tr><tr><td>Amara familiaris</td><td>macropterous</td><td>all</td><td>omnivore</td><td>diurnal</td><td>6.4</td></tr><tr><td>Amara obesa</td><td>dimorphic</td><td>fall</td><td>carnivore</td><td>nocturnal</td><td>11</td></tr><tr><td>Amara rubrica/musculis</td><td>macropterous</td><td>fall</td><td>herbivore</td><td>diurnal</td><td>5.6</td></tr><tr><td>Amara turbata</td><td>macropterous</td><td>spring</td><td>unknown</td><td>unknown</td><td>9.2</td></tr><tr><td>Anisodactylus harrisii</td><td>macropterous</td><td>all</td><td>omnivore</td><td>nocturnal</td><td>11.8</td></tr><tr><td>Anisodactylus ovularis</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>11.3</td></tr><tr><td>Anisodactylus rusticus</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>10</td></tr><tr><td>Bembidinii sp. 1</td><td>macropterous</td><td>spring</td><td>unknown</td><td>diurnal</td><td>2.5</td></tr><tr><td>Bembidion sp. 1</td><td>macropterous</td><td>spring</td><td>carnivore</td><td>diurnal</td><td>2.2</td></tr><tr><td>Calathus gregarius</td><td>dimorphic</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>9.3</td></tr><tr><td>Calathus opaculus</td><td>macropterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>9.3</td></tr><tr><td>Chlaenius platyderus</td><td>brachypterous</td><td>all</td><td>omnivore</td><td>nocturnal</td><td>14.7</td></tr><tr><td>Chlaenius tomentosus</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>15.3</td></tr><tr><td>Cicindela punctulata</td><td>macropterous</td><td>fall</td><td>carnivore</td><td>diurnal</td><td>12.5</td></tr><tr><td>Cicindela sexguttata</td><td>macropterous</td><td>spring</td><td>carnivore</td><td>diurnal</td><td>12</td></tr><tr><td>Cyclotrachelus seximpressus</td><td>brachypterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>16.5</td></tr><tr><td>Cyclotrachelus sodalis</td><td>brachypterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>16.3</td></tr><tr><td>Dicaelus elongatus</td><td>brachypterous</td><td>spring</td><td>carnivore</td><td>nocturnal</td><td>17</td></tr><tr><td>Dicheirotrichus cognatus</td><td>macropterous</td><td>all</td><td>omnivore</td><td>nocturnal</td><td>4.4</td></tr><tr><td>Diplocheila obtusa</td><td>macropterous</td><td>all</td><td>omnivore</td><td>nocturnal</td><td>10.7</td></tr><tr><td>Galerita janus</td><td>macropterous</td><td>all</td><td>omnivore</td><td>nocturnal</td><td>19.5</td></tr><tr><td>Harpalus caliginosus</td><td>macropterous</td><td>fall</td><td>omnivore</td><td>cathemeral</td><td>26</td></tr><tr><td>Harpalus herbivagus/somnulentus</td><td>macropterous</td><td>fall</td><td>omnivore</td><td>nocturnal</td><td>9.7</td></tr><tr><td>Harpalus pensylvanicus</td><td>macropterous</td><td>fall</td><td>omnivore</td><td>nocturnal</td><td>12.7</td></tr><tr><td>Harpalus rubripes</td><td>macropterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>10.4</td></tr><tr><td>Notiobia sayi</td><td>macropterous</td><td>all</td><td>unknown</td><td>nocturnal</td><td>10</td></tr><tr><td>Notiobia terminata</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>9.7</td></tr><tr><td>Notiophilus semistriatus</td><td>dimorphic</td><td>all</td><td>unknown</td><td>diurnal</td><td>5.1</td></tr><tr><td>Ophonus puncticeps</td><td>macropterous</td><td>fall</td><td>herbivore</td><td>nocturnal</td><td>7.8</td></tr><tr><td>Poecilus chalcites</td><td>macropterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>11.8</td></tr><tr><td>Poecilus lucublandus</td><td>macropterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>11.5</td></tr><tr><td>Pterostichus commutabilis</td><td>macropterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>7.8</td></tr><tr><td>Pterostichus melanarius</td><td>dimorphic</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>15.5</td></tr><tr><td>Pterostichus permundus</td><td>brachypterous</td><td>all</td><td>carnivore</td><td>nocturnal</td><td>15</td></tr><tr><td>Pterostichus stygicus</td><td>brachypterous</td><td>fall</td><td>carnivore</td><td>nocturnal</td><td>15.3</td></tr><tr><td>Selenophorus ellipticus/granarius</td><td>macropterous</td><td>all</td><td>unknown</td><td>nocturnal</td><td>5.9</td></tr><tr><td>Selenophorus opalinus</td><td>macropterous</td><td>all</td><td>unknown</td><td>nocturnal</td><td>10</td></tr></table>
+| species | wingtype | season | diet | activity | size |
+| --- | --- | --- | --- | --- | --- |
+| Agonum muelleri | macropterous | all | carnivore | diurnal | 8.4 |
+| Amara angustata/angustatoides | macropterous | spring | herbivore | diurnal | 6.6 |
+| Amara crassispina | macropterous | all | unknown | unknown | 8 |
+| Amara familiaris | macropterous | all | omnivore | diurnal | 6.4 |
+| Amara obesa | dimorphic | fall | carnivore | nocturnal | 11 |
+| Amara rubrica/musculis | macropterous | fall | herbivore | diurnal | 5.6 |
+| Amara turbata | macropterous | spring | unknown | unknown | 9.2 |
+| Anisodactylus harrisii | macropterous | all | omnivore | nocturnal | 11.8 |
+| Anisodactylus ovularis | macropterous | spring | omnivore | nocturnal | 11.3 |
+| Anisodactylus rusticus | macropterous | spring | omnivore | nocturnal | 10 |
+| Bembidinii sp. 1 | macropterous | spring | unknown | diurnal | 2.5 |
+| Bembidion sp. 1 | macropterous | spring | carnivore | diurnal | 2.2 |
+| Calathus gregarius | dimorphic | all | carnivore | nocturnal | 9.3 |
+| Calathus opaculus | macropterous | all | carnivore | nocturnal | 9.3 |
+| Chlaenius platyderus | brachypterous | all | omnivore | nocturnal | 14.7 |
+| Chlaenius tomentosus | macropterous | spring | omnivore | nocturnal | 15.3 |
+| Cicindela punctulata | macropterous | fall | carnivore | diurnal | 12.5 |
+| Cicindela sexguttata | macropterous | spring | carnivore | diurnal | 12 |
+| Cyclotrachelus seximpressus | brachypterous | all | carnivore | nocturnal | 16.5 |
+| Cyclotrachelus sodalis | brachypterous | all | carnivore | nocturnal | 16.3 |
+| Dicaelus elongatus | brachypterous | spring | carnivore | nocturnal | 17 |
+| Dicheirotrichus cognatus | macropterous | all | omnivore | nocturnal | 4.4 |
+| Diplocheila obtusa | macropterous | all | omnivore | nocturnal | 10.7 |
+| Galerita janus | macropterous | all | omnivore | nocturnal | 19.5 |
+| Harpalus caliginosus | macropterous | fall | omnivore | cathemeral | 26 |
+| Harpalus herbivagus/ somnulentus | macropterous | fall | omnivore | nocturnal | 9.7 |
+| Harpalus pensylvanicus | macropterous | fall | omnivore | nocturnal | 12.7 |
+| Harpalus rubripes | macropterous | all | carnivore | nocturnal | 10.4 |
+| Notiobia sayi | macropterous | all | unknown | nocturnal | 10 |
+| Notiobia terminata | macropterous | spring | omnivore | nocturnal | 9.7 |
+| Notiophilus semistriatus | dimorphic | all | unknown | diurnal | 5.1 |
+| Ophonus puncticeps | macropterous | fall | herbivore | nocturnal | 7.8 |
+| Poecilus chalcites | macropterous | all | carnivore | nocturnal | 11.8 |
+| Poecilus lucublandus | macropterous | all | carnivore | nocturnal | 11.5 |
+| Pterostichus commutabilis | macropterous | all | carnivore | nocturnal | 7.8 |
+| Pterostichus melanarius | dimorphic | all | carnivore | nocturnal | 15.5 |
+| Pterostichus permundus | brachypterous | all | carnivore | nocturnal | 15 |
+| Pterostichus stygicus | brachypterous | fall | carnivore | nocturnal | 15.3 |
+| Selenophorus ellipticus/granarius | macropterous | all | unknown | nocturnal | 5.9 |
+| Selenophorus opalinus | macropterous | all | unknown | nocturnal | 10 |
+
+2
+
+<!-- page 3 of 12 -->
 
 Table S2. Results of analysis of restoration characteristics effects on community taxonomic and functional diversity metrics. Degrees of freedom = 1,14 for all F-tests.
 
-<table><tr><td rowspan="2"></td><td colspan="2">Activity density</td><td colspan="2">Rarefied richness</td><td colspan="2">Shannon diversity</td><td rowspan="2"></td><td rowspan="2"></td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>2.09</td><td>0.170</td><td>0.00</td><td>0.987</td><td>5.51</td><td>0.034</td><td></td><td></td></tr><tr><td>burn</td><td>2.01</td><td>0.178</td><td>0.68</td><td>0.425</td><td>0.20</td><td>0.659</td><td></td><td></td></tr><tr><td>age</td><td>10.96</td><td>0.005</td><td>4.60</td><td>0.050</td><td>37.83</td><td>&lt;0.001</td><td></td><td></td></tr><tr><td></td><td colspan="2">adj.  $R^2$ = 0.507</td><td colspan="2">adj.  $R^2$ = 0.164</td><td colspan="2">adj.  $R^2$ = 0.751</td><td></td><td></td></tr><tr><td rowspan="2"></td><td colspan="2">FRic</td><td colspan="2">FEve</td><td colspan="2">FDiv</td><td colspan="2">FDis</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.15</td><td>0.708</td><td>0.27</td><td>0.609</td><td>0.42</td><td>0.525</td><td>1.21</td><td>0.290</td></tr><tr><td>burn</td><td>0.10</td><td>0.758</td><td>0.46</td><td>0.508</td><td>0.01</td><td>0.911</td><td>0.05</td><td>0.822</td></tr><tr><td>age</td><td>29.17</td><td>&lt;0.001</td><td>5.14</td><td>0.040</td><td>0.01</td><td>0.940</td><td>22.57</td><td>&lt;0.001</td></tr><tr><td></td><td colspan="2">adj.  $R^2$ = 0.640</td><td colspan="2">adj.  $R^2$ = 0.162</td><td colspan="2">adj.  $R^2$ = 0.000</td><td colspan="2">adj.  $R^2$ = 0.549</td></tr></table>
+<table><tr><td rowspan="2"></td><td colspan="2">Activity density</td><td colspan="2">Rarefied richness</td><td colspan="2">Shannon diversity</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>2.09</td><td>0.170</td><td>0.00</td><td>0.987</td><td>5.51</td><td>0.034</td></tr><tr><td>burn</td><td>2.01</td><td>0.178</td><td>0.68</td><td>0.425</td><td>0.20</td><td>0.659</td></tr><tr><td>age</td><td>10.96</td><td>0.005</td><td>4.60</td><td>0.050</td><td>37.83</td><td>&lt;0.001</td></tr><tr><td></td><td colspan="2">adj.  $R^2$ = 0.507</td><td colspan="2">adj.  $R^2$ = 0.164</td><td colspan="2">adj.  $R^2$ = 0.751</td></tr></table>
+
+<table><tr><td rowspan="2"></td><td colspan="2">FRic</td><td colspan="2">FEve</td><td colspan="2">FDiv</td><td colspan="2">FDis</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.15</td><td>0.708</td><td>0.27</td><td>0.609</td><td>0.42</td><td>0.525</td><td>1.21</td><td>0.290</td></tr><tr><td>burn</td><td>0.10</td><td>0.758</td><td>0.46</td><td>0.508</td><td>0.01</td><td>0.911</td><td>0.05</td><td>0.822</td></tr><tr><td>age</td><td>29.17</td><td>&lt;0.001</td><td>5.14</td><td>0.040</td><td>0.01</td><td>0.940</td><td>22.57</td><td>&lt;0.001</td></tr><tr><td></td><td colspan="2">adj.  $R^2$ = 0.640</td><td colspan="2">adj.  $R^2$ = 0.162</td><td colspan="2">adj.  $R^2$ = 0.000</td><td colspan="2">adj.  $R^2$ = 0.549</td></tr></table>
+
+3
+
+<!-- page 4 of 12 -->
 
 Table S3. Results of analysis of restoration characteristics effects on individual traits in communities. Models analyzing trait proportions were binomial GLMs, so no $R ^ { 2 }$ is reported. Degrees of freedom = 1,14 for all F-tests.
 
-<table><tr><td rowspan="2"></td><td colspan="2">Body size CWM</td><td colspan="2">Brachypterous proportion</td><td colspan="2">Carnivorous proportion</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.18</td><td>0.679</td><td>0.31</td><td>0.589</td><td>7.21</td><td>0.018</td></tr><tr><td>burn</td><td>2.56</td><td>0.132</td><td>1.90</td><td>0.190</td><td>2.34</td><td>0.148</td></tr><tr><td>age</td><td>10.27</td><td>0.006</td><td>28.74</td><td>&lt;0.001</td><td>7.64</td><td>0.015</td></tr><tr><td colspan="7">adj.  $R^2$ = 0.417</td></tr><tr><td rowspan="2"></td><td colspan="2">Spring proportion</td><td colspan="2">Diurnal proportion</td><td rowspan="2"></td><td rowspan="2"></td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>2.09</td><td>0.170</td><td>0.21</td><td>0.657</td><td></td><td></td></tr><tr><td>burn</td><td>4.32</td><td>0.056</td><td>1.59</td><td>0.228</td><td></td><td></td></tr><tr><td>age</td><td>17.62</td><td>&lt;0.001</td><td>8.38</td><td>0.012</td><td></td><td></td></tr></table>
+<table><tr><td rowspan="2"></td><td colspan="2">Body size CWM</td><td colspan="2">Brachypterous proportion</td><td colspan="2">Carnivorous proportion</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.18</td><td>0.679</td><td>0.31</td><td>0.589</td><td>7.21</td><td>0.018</td></tr><tr><td>burn</td><td>2.56</td><td>0.132</td><td>1.90</td><td>0.190</td><td>2.34</td><td>0.148</td></tr><tr><td>age</td><td>10.27</td><td>0.006</td><td>28.74</td><td>&lt;0.001</td><td>7.64</td><td>0.015</td></tr><tr><td colspan="7">adj.  $R^2 = 0.417$ </td></tr></table>
+
+<table><tr><td rowspan="2"></td><td colspan="2">Spring proportion</td><td colspan="2">Diurnal proportion</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>2.09</td><td>0.170</td><td>0.21</td><td>0.657</td></tr><tr><td>burn</td><td>4.32</td><td>0.056</td><td>1.59</td><td>0.228</td></tr><tr><td>age</td><td>17.62</td><td>&lt;0.001</td><td>8.38</td><td>0.012</td></tr></table>
+
+4
+
+<!-- page 5 of 12 -->
 
 Table S4. Results of distance-based redundancy analysis of ground beetle assemblages based on Bray-Curtis distances of species activity densities.
 
-<table><tr><td></td><td>Sum of Squares</td><td>df</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.359</td><td>1</td><td>3.43</td><td>0.009</td></tr><tr><td>burn</td><td>0.177</td><td>1</td><td>1.70</td><td>0.126</td></tr><tr><td>age</td><td>0.617</td><td>1</td><td>5.90</td><td>&lt;0.001</td></tr><tr><td>residuals</td><td>1.463</td><td>14</td><td></td><td></td></tr></table>
+|  | Sum of Squares | df | F | P |
+| --- | --- | --- | --- | --- |
+| bison | 0.359 | 1 | 3.43 | 0.009 |
+| burn | 0.177 | 1 | 1.70 | 0.126 |
+| age | 0.617 | 1 | 5.90 | &lt;0.001 |
+| residuals | 1.463 | 14 |  |  |
 
 Explained variation, constrained = 0.446, unconstrained = 0.554
 
+5
+
+<!-- page 6 of 12 -->
+
 Table S5. Results of analysis of restoration characteristics effects on seed and predation rate assays. Degrees of freedom = 1,16 for all F-tests.
 
-<table><tr><td rowspan="2"></td><td colspan="2">July seed predation</td><td colspan="2">July arthropod predation</td><td colspan="2">September arthropod predation</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.12</td><td>0.734</td><td>0.04</td><td>0.841</td><td>0.07</td><td>0.793</td></tr><tr><td>burn</td><td>5.12</td><td>0.038</td><td>3.46</td><td>0.082</td><td>10.95</td><td>0.004</td></tr><tr><td>age</td><td>1.72</td><td>0.208</td><td>0.01</td><td>0.907</td><td>0.02</td><td>0.878</td></tr><tr><td></td><td colspan="2">adj.  $R^2$ = 0.214</td><td colspan="2">adj.  $R^2$ = 0.025</td><td colspan="2">adj.  $R^2$ = 0.300</td></tr></table>
+<table><tr><td rowspan="2"></td><td colspan="2">July seed predation</td><td colspan="2">July arthropod predation</td><td colspan="2">September arthropod predation</td></tr><tr><td>F</td><td>P</td><td>F</td><td>P</td><td>F</td><td>P</td></tr><tr><td>bison</td><td>0.12</td><td>0.734</td><td>0.04</td><td>0.841</td><td>0.07</td><td>0.793</td></tr><tr><td>burn</td><td>5.12</td><td>0.038</td><td>3.46</td><td>0.082</td><td>10.95</td><td>0.004</td></tr><tr><td>age</td><td>1.72</td><td>0.208</td><td>0.01</td><td>0.907</td><td>0.02</td><td>0.878</td></tr><tr><td></td><td colspan="2">adj.  $R^2 = 0.214$ </td><td colspan="2">adj.  $R^2 = 0.025$ </td><td colspan="2">adj.  $R^2 = 0.300$ </td></tr></table>
+
+6
+
+<!-- page 7 of 12 -->
 
 Table S6. Model selection results for seed predation, July arthropod predation, and September arthropod predation. R<sup>2</sup> is Nagelkerke’s pseudo-R<sup>2</sup>.
 
 Seed Predation
 
-<table><tr><td>Model</td><td> $\Delta$ AICc</td><td>K</td><td> $\omega_i$ </td><td> $R^2$ </td></tr><tr><td>Null</td><td>0.00</td><td>2</td><td>0.296</td><td>0.000</td></tr><tr><td>Rarefied richness</td><td>1.58</td><td>3</td><td>0.134</td><td>0.134</td></tr><tr><td>Proportion spring active</td><td>2.15</td><td>3</td><td>0.101</td><td>0.106</td></tr><tr><td>Proportion herbivore/omnivore</td><td>2.72</td><td>3</td><td>0.076</td><td>0.078</td></tr><tr><td>FDiv</td><td>3.21</td><td>3</td><td>0.059</td><td>0.052</td></tr><tr><td>FDis</td><td>3.44</td><td>3</td><td>0.053</td><td>0.040</td></tr><tr><td>FRic</td><td>3.86</td><td>3</td><td>0.043</td><td>0.018</td></tr><tr><td>Body size CWM</td><td>3.92</td><td>3</td><td>0.042</td><td>0.014</td></tr><tr><td>Herbivore/omnivore activity density</td><td>3.95</td><td>3</td><td>0.041</td><td>0.013</td></tr><tr><td>FEve</td><td>3.98</td><td>3</td><td>0.040</td><td>0.011</td></tr><tr><td>Total activity density</td><td>4.00</td><td>3</td><td>0.040</td><td>0.010</td></tr><tr><td>Proportion brachypterous</td><td>4.09</td><td>3</td><td>0.038</td><td>0.005</td></tr><tr><td>Proportion diurnal</td><td>4.18</td><td>3</td><td>0.037</td><td>0.000</td></tr></table>
+| Model | ΔAICc | K | ωi | R2 |
+| --- | --- | --- | --- | --- |
+| Null | 0.00 | 2 | 0.296 | 0.000 |
+| Rarefied richness | 1.58 | 3 | 0.134 | 0.134 |
+| Proportion spring active | 2.15 | 3 | 0.101 | 0.106 |
+| Proportion herbivore/omnivore | 2.72 | 3 | 0.076 | 0.078 |
+| FDiv | 3.21 | 3 | 0.059 | 0.052 |
+| FDis | 3.44 | 3 | 0.053 | 0.040 |
+| FRic | 3.86 | 3 | 0.043 | 0.018 |
+| Body size CWM | 3.92 | 3 | 0.042 | 0.014 |
+| Herbivore/omnivore activity density | 3.95 | 3 | 0.041 | 0.013 |
+| FEve | 3.98 | 3 | 0.040 | 0.011 |
+| Total activity density | 4.00 | 3 | 0.040 | 0.010 |
+| Proportion brachypterous | 4.09 | 3 | 0.038 | 0.005 |
+| Proportion diurnal | 4.18 | 3 | 0.037 | 0.000 |
 
 July Arthropod Predation
 
-<table><tr><td>Model</td><td> $\Delta$ AICc</td><td>K</td><td> $\omega_i$ </td><td> $R^2$ </td></tr><tr><td>Null</td><td>0.00</td><td>2</td><td>0.329</td><td>0.000</td></tr><tr><td>Proportion spring active</td><td>1.65</td><td>3</td><td>0.144</td><td>0.130</td></tr><tr><td>Rarefied richness</td><td>2.60</td><td>3</td><td>0.090</td><td>0.083</td></tr><tr><td>FEve</td><td>3.64</td><td>3</td><td>0.053</td><td>0.029</td></tr><tr><td>Body size CWM</td><td>3.91</td><td>3</td><td>0.047</td><td>0.015</td></tr><tr><td>FRic</td><td>4.04</td><td>3</td><td>0.044</td><td>0.008</td></tr><tr><td>Total activity density</td><td>4.08</td><td>3</td><td>0.043</td><td>0.006</td></tr><tr><td>Proportion brachypterous</td><td>4.10</td><td>3</td><td>0.042</td><td>0.005</td></tr><tr><td>FDiv</td><td>4.12</td><td>3</td><td>0.042</td><td>0.004</td></tr><tr><td>Proportion carnivore</td><td>4.13</td><td>3</td><td>0.042</td><td>0.003</td></tr><tr><td>FDis</td><td>4.15</td><td>3</td><td>0.041</td><td>0.002</td></tr><tr><td>Proportion diurnal</td><td>4.17</td><td>3</td><td>0.041</td><td>0.001</td></tr><tr><td>Carnivore activity density</td><td>4.18</td><td>3</td><td>0.041</td><td>0.000</td></tr></table>
+| Model | ΔAICc | K | ωi | R2 |
+| --- | --- | --- | --- | --- |
+| Null | 0.00 | 2 | 0.329 | 0.000 |
+| Proportion spring active | 1.65 | 3 | 0.144 | 0.130 |
+| Rarefied richness | 2.60 | 3 | 0.090 | 0.083 |
+| FEve | 3.64 | 3 | 0.053 | 0.029 |
+| Body size CWM | 3.91 | 3 | 0.047 | 0.015 |
+| FRic | 4.04 | 3 | 0.044 | 0.008 |
+| Total activity density | 4.08 | 3 | 0.043 | 0.006 |
+| Proportion brachypterous | 4.10 | 3 | 0.042 | 0.005 |
+| FDiv | 4.12 | 3 | 0.042 | 0.004 |
+| Proportion carnivore | 4.13 | 3 | 0.042 | 0.003 |
+| FDis | 4.15 | 3 | 0.041 | 0.002 |
+| Proportion diurnal | 4.17 | 3 | 0.041 | 0.001 |
+| Carnivore activity density | 4.18 | 3 | 0.041 | 0.000 |
 
-<table><tr><td colspan="5">September Arthropod Predation</td></tr><tr><td>Model</td><td> $\Delta$ AICc</td><td>K</td><td> $\omega_{i}$ </td><td> $R^{2}$ </td></tr><tr><td>Carnivore activity density</td><td>0.00</td><td>3</td><td>0.219</td><td>0.210</td></tr><tr><td>Null</td><td>0.20</td><td>2</td><td>0.198</td><td>0.000</td></tr><tr><td>Proportion carnivore</td><td>0.66</td><td>3</td><td>0.158</td><td>0.182</td></tr><tr><td>Total activity density</td><td>1.04</td><td>3</td><td>0.130</td><td>0.164</td></tr><tr><td>Proportion brachypterous</td><td>2.92</td><td>3</td><td>0.051</td><td>0.075</td></tr><tr><td>Body size CWM</td><td>3.04</td><td>3</td><td>0.048</td><td>0.070</td></tr><tr><td>Rarefied richness</td><td>3.62</td><td>3</td><td>0.036</td><td>0.040</td></tr><tr><td>FEve</td><td>3.91</td><td>3</td><td>0.031</td><td>0.025</td></tr><tr><td>FDiv</td><td>4.09</td><td>3</td><td>0.028</td><td>0.016</td></tr><tr><td>FDis</td><td>4.30</td><td>3</td><td>0.026</td><td>0.005</td></tr><tr><td>FRic</td><td>4.32</td><td>3</td><td>0.025</td><td>0.004</td></tr><tr><td>Proportion diurnal</td><td>4.33</td><td>3</td><td>0.025</td><td>0.003</td></tr><tr><td>Proportion spring active</td><td>4.37</td><td>3</td><td>0.025</td><td>0.001</td></tr></table>
+September Arthropod Predation
+
+| Model | $\Delta$AICc | K | $\omega_{i}$ | $R^{2}$ |
+| --- | --- | --- | --- | --- |
+| Carnivore activity density | 0.00 | 3 | 0.219 | 0.210 |
+| Null | 0.20 | 2 | 0.198 | 0.000 |
+
+7
+
+<!-- page 8 of 12 -->
+
+| Proportion carnivore | 0.66 | 3 | 0.158 | 0.182 |
+| --- | --- | --- | --- | --- |
+| Total activity density | 1.04 | 3 | 0.130 | 0.164 |
+| Proportion brachypterous | 2.92 | 3 | 0.051 | 0.075 |
+| Body size CWM | 3.04 | 3 | 0.048 | 0.070 |
+| Rarefied richness | 3.62 | 3 | 0.036 | 0.040 |
+| FEve | 3.91 | 3 | 0.031 | 0.025 |
+| FDiv | 4.09 | 3 | 0.028 | 0.016 |
+| FDis | 4.30 | 3 | 0.026 | 0.005 |
+| FRic | 4.32 | 3 | 0.025 | 0.004 |
+| Proportion diurnal | 4.33 | 3 | 0.025 | 0.003 |
+| Proportion spring active | 4.37 | 3 | 0.025 | 0.001 |
+
+8
+
+<!-- page 9 of 12 -->
 
 Table S7. Results of analysis of restoration characteristics effects on September carnivorous ground beetle activity density. Degrees of freedom = 1,14 for all F-tests.
 
-<table><tr><td></td><td>F</td><td>P</td></tr><tr><td>bison</td><td>1.22</td><td>0.287</td></tr><tr><td>burn</td><td>4.98</td><td>0.043</td></tr><tr><td>age</td><td>4.06</td><td>0.064</td></tr><tr><td colspan="3">adj.  $R^{2}$ = 0.396</td></tr></table>
+|  | F | P |
+| --- | --- | --- |
+| bison | 1.22 | 0.287 |
+| burn | 4.98 | 0.043 |
+| age | 4.06 | 0.064 |
+
+adj. $R ^ { 2 }   =   0 . 3 9 6$
+
+9
+
+<!-- page 10 of 12 -->
 
 Table S8. Ground beetle species capture data. Mean is average activity density per 100 trapdays, range is minimum and maximum activity densities per 100 trapdays. Bison, Fire, and Age columns summarize responses of each species to those site characteristics. Bison and Fire are percent change in activity density relative to sites without bison or prescribed fire, respectively. ‘+’ indicates species was absent in non-bison or non-fire sites, and ‘–’ indicates species were absent in sites with bison or fire. Age is correlation (Pearson’s r) of activity density and restoration site age in years.
 
-<table><tr><td>Species</td><td>Total collected</td><td>Mean ± 1 s.d.</td><td>Range</td><td>Bison</td><td>Fire</td><td>Age</td></tr><tr><td>Agonum muelleri</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.31</td><td>+</td><td>+</td><td>-0.29</td></tr><tr><td>Amara angustata/angustatoides</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.29</td><td>-</td><td>-</td><td>-0.14</td></tr><tr><td>Amara crassispina</td><td>4</td><td>0.07 ± 0.22</td><td>0–0.9</td><td>-49</td><td>+</td><td>-0.14</td></tr><tr><td>Amara familiaris</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.3</td><td>-</td><td>+</td><td>-0.11</td></tr><tr><td>Amara obesa</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.29</td><td>+</td><td>-</td><td>-0.22</td></tr><tr><td>Amara rubrica/musculis</td><td>28</td><td>0.47 ± 0.58</td><td>0–2.06</td><td>147</td><td>-35</td><td>-0.48</td></tr><tr><td>Amara turbata</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.29</td><td>-</td><td>+</td><td>-0.11</td></tr><tr><td>Anisodactylus harrisii</td><td>26</td><td>0.43 ± 0.56</td><td>0–1.8</td><td>-62</td><td>59</td><td>-0.20</td></tr><tr><td>Anisodactylus ovularis</td><td>2</td><td>0.03 ± 0.14</td><td>0–0.6</td><td>-</td><td>+</td><td>-0.11</td></tr><tr><td>Anisodactylus rusticus</td><td>35</td><td>0.58 ± 0.68</td><td>0–2.35</td><td>-80</td><td>-54</td><td>-0.41</td></tr><tr><td>Bembidinii sp. 1</td><td>2</td><td>0.04 ± 0.11</td><td>0–0.36</td><td>90</td><td>-</td><td>0.29</td></tr><tr><td>Bembidion sp. 1</td><td>16</td><td>0.28 ± 0.69</td><td>0–2.95</td><td>284</td><td>338</td><td>0.79</td></tr><tr><td>Calathus gregarius</td><td>142</td><td>2.34 ± 2.68</td><td>0–10.29</td><td>-9</td><td>-53</td><td>-0.33</td></tr><tr><td>Calathus opaculus</td><td>176</td><td>2.9 ± 4.12</td><td>0–15</td><td>-19</td><td>-85</td><td>-0.44</td></tr><tr><td>Chlaenius platyderus</td><td>641</td><td>10.88 ± 15.08</td><td>0–57.96</td><td>457</td><td>216</td><td>0.36</td></tr><tr><td>Chlaenius tomentosus</td><td>6</td><td>0.1 ± 0.18</td><td>0–0.6</td><td>-21</td><td>1</td><td>-0.24</td></tr><tr><td>Cicindela punctulata</td><td>41</td><td>0.71 ± 0.8</td><td>0–2.14</td><td>95</td><td>81</td><td>0.51</td></tr><tr><td>Cicindela sexguttata</td><td>203</td><td>3.38 ± 2.22</td><td>0.3–7.65</td><td>11</td><td>-15</td><td>-0.31</td></tr><tr><td>Cyclotrachelus seximpressus</td><td>701</td><td>11.93 ± 12.05</td><td>0–51.48</td><td>43</td><td>108</td><td>0.80</td></tr><tr><td>Cyclotrachelus sodalis</td><td>650</td><td>11.27 ± 19.77</td><td>0.29–85.57</td><td>178</td><td>218</td><td>0.78</td></tr><tr><td>Dicaelus elongatus</td><td>13</td><td>0.21 ± 0.43</td><td>0–1.47</td><td>-71</td><td>-69</td><td>-0.20</td></tr><tr><td>Dicheirotrichus cognatus</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.3</td><td>+</td><td>+</td><td>0.15</td></tr><tr><td>Diplocheila obtusa</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.29</td><td>-</td><td>-</td><td>-0.07</td></tr><tr><td>Galerita janus</td><td>17</td><td>0.29 ± 0.68</td><td>0–2.7</td><td>290</td><td>8</td><td>0.17</td></tr><tr><td>Harpalus caliginosus</td><td>27</td><td>0.46 ± 1.28</td><td>0–5.5</td><td>469</td><td>497</td><td>-0.22</td></tr><tr><td>Harpalus herbivagus/somnulentus</td><td>8</td><td>0.13 ± 0.27</td><td>0–0.88</td><td>160</td><td>-67</td><td>-0.21</td></tr><tr><td>Harpalus pensylvanicus</td><td>34</td><td>0.57 ± 1.93</td><td>0–8.26</td><td>659</td><td>1556</td><td>-0.28</td></tr><tr><td>Harpalus rubripes</td><td>3</td><td>0.05 ± 0.11</td><td>0–0.29</td><td>-</td><td>-50</td><td>-0.15</td></tr><tr><td>Notiobia sayi</td><td>2</td><td>0.03 ± 0.1</td><td>0–0.3</td><td>-</td><td>2</td><td>-0.18</td></tr><tr><td>Notiobia terminata</td><td>2</td><td>0.03 ± 0.14</td><td>0–0.59</td><td>-</td><td>-</td><td>-0.07</td></tr><tr><td>Notiophilus semistriatus</td><td>6</td><td>0.1 ± 0.35</td><td>0–1.47</td><td>+</td><td>400</td><td>-0.16</td></tr><tr><td>Ophonus puncticeps</td><td>46</td><td>0.76 ± 2.37</td><td>0–10.21</td><td>-93</td><td>970</td><td>-0.10</td></tr><tr><td>Poecilus chalcites</td><td>3</td><td>0.05 ± 0.11</td><td>0–0.3</td><td>-22</td><td>-</td><td>-0.15</td></tr><tr><td>Poecilus lucublandus</td><td>92</td><td>1.51 ± 1.95</td><td>0–6.76</td><td>12</td><td>263</td><td>-0.02</td></tr><tr><td>Pterostichus commutabilis</td><td>3</td><td>0.05 ± 0.15</td><td>0–0.59</td><td>-</td><td>100</td><td>0.17</td></tr><tr><td>Pterostichus melanarius</td><td>19</td><td>0.31 ± 0.39</td><td>0–1.2</td><td>-58</td><td>-28</td><td>-0.30</td></tr><tr><td>Pterostichus permundus</td><td>226</td><td>3.75 ± 2.6</td><td>0–7.21</td><td>-11</td><td>19</td><td>-0.08</td></tr><tr><td>Pterostichus stygicus</td><td>19</td><td>0.31 ± 0.44</td><td>0–1.5</td><td>-91</td><td>-9</td><td>-0.16</td></tr><tr><td>Selenophorus ellipticus/granarius</td><td>13</td><td>0.21 ± 0.56</td><td>0–2.35</td><td>-70</td><td>-91</td><td>0.03</td></tr><tr><td>Selenophorus opalinus</td><td>1</td><td>0.02 ± 0.07</td><td>0–0.29</td><td>-</td><td>+</td><td>-0.11</td></tr></table>
+| Species | Total collected | Mean ± 1 s.d. | Range | Bison | Fire | Age |
+| --- | --- | --- | --- | --- | --- | --- |
+| Agonum muelleri | 1 | 0.02 ± 0.07 | 0–0.31 | + | + | -0.29 |
+| Amara angustata/angustatoides | 1 | 0.02 ± 0.07 | 0–0.29 | - | - | -0.14 |
+| Amara crassispina | 4 | 0.07 ± 0.22 | 0–0.9 | -49 | + | -0.14 |
+| Amara familiaris | 1 | 0.02 ± 0.07 | 0–0.3 | - | + | -0.11 |
+| Amara obesa | 1 | 0.02 ± 0.07 | 0–0.29 | + | - | -0.22 |
+| Amara rubrica/musculis | 28 | 0.47 ± 0.58 | 0–2.06 | 147 | -35 | -0.48 |
+| Amara turbata | 1 | 0.02 ± 0.07 | 0–0.29 | - | + | -0.11 |
+| Anisodactylus harrisii | 26 | 0.43 ± 0.56 | 0–1.8 | -62 | 59 | -0.20 |
+| Anisodactylus ovularis | 2 | 0.03 ± 0.14 | 0–0.6 | - | + | -0.11 |
+| Anisodactylus rusticus | 35 | 0.58 ± 0.68 | 0–2.35 | -80 | -54 | -0.41 |
+| Bembidinii sp. 1 | 2 | 0.04 ± 0.11 | 0–0.36 | 90 | - | 0.29 |
+| Bembidion sp. 1 | 16 | 0.28 ± 0.69 | 0–2.95 | 284 | 338 | 0.79 |
+| Calathus gregarius | 142 | 2.34 ± 2.68 | 0–10.29 | -9 | -53 | -0.33 |
+| Calathus opaculus | 176 | 2.9 ± 4.12 | 0–15 | -19 | -85 | -0.44 |
+| Chlaenius platyderus | 641 | 10.88 ± 15.08 | 0–57.96 | 457 | 216 | 0.36 |
+| Chlaenius tomentosus | 6 | 0.1 ± 0.18 | 0–0.6 | -21 | 1 | -0.24 |
+| Cicindela punctulata | 41 | 0.71 ± 0.8 | 0–2.14 | 95 | 81 | 0.51 |
+| Cicindela sexguttata | 203 | 3.38 ± 2.22 | 0.3–7.65 | 11 | -15 | -0.31 |
+| Cyclotrachelus seximpressus | 701 | 11.93 ± 12.05 | 0–51.48 | 43 | 108 | 0.80 |
+| Cyclotrachelus sodalis | 650 | 11.27 ± 19.77 | 0.29–85.57 | 178 | 218 | 0.78 |
+| Dicaelus elongatus | 13 | 0.21 ± 0.43 | 0–1.47 | -71 | -69 | -0.20 |
+| Dicheirotrichus cognatus | 1 | 0.02 ± 0.07 | 0–0.3 | + | + | 0.15 |
+| Diplocheila obtusa | 1 | 0.02 ± 0.07 | 0–0.29 | - | - | -0.07 |
+| Galerita janus | 17 | 0.29 ± 0.68 | 0–2.7 | 290 | 8 | 0.17 |
+| Harpalus caliginosus | 27 | 0.46 ± 1.28 | 0–5.5 | 469 | 497 | -0.22 |
+| Harpalus herbivagus/somnulentus | 8 | 0.13 ± 0.27 | 0–0.88 | 160 | -67 | -0.21 |
+| Harpalus pensylvanicus | 34 | 0.57 ± 1.93 | 0–8.26 | 659 | 1556 | -0.28 |
+| Harpalus rubripes | 3 | 0.05 ± 0.11 | 0–0.29 | - | -50 | -0.15 |
+| Notiobia sayi | 2 | 0.03 ± 0.1 | 0–0.3 | - | 2 | -0.18 |
+| Notiobia terminata | 2 | 0.03 ± 0.14 | 0–0.59 | - | - | -0.07 |
+| Notiophilus semistriatus | 6 | 0.1 ± 0.35 | 0–1.47 | + | 400 | -0.16 |
+| Ophonus puncticeps | 46 | 0.76 ± 2.37 | 0–10.21 | -93 | 970 | -0.10 |
+| Poecilus chalcites | 3 | 0.05 ± 0.11 | 0–0.3 | -22 | - | -0.15 |
+| Poecilus lucublandus | 92 | 1.51 ± 1.95 | 0–6.76 | 12 | 263 | -0.02 |
+| Pterostichus commutabilis | 3 | 0.05 ± 0.15 | 0–0.59 | - | 100 | 0.17 |
 
-Fig. S1. Species accumulation curves for all sites.  
-![](images/f9b603792db9f853dba4b04e3f52ab57b3ffb52e5b5478564791b0faa69935d7.jpg)
+10
+
+<!-- page 11 of 12 -->
+
+| Pterostichus melanarius | 19 | 0.31 ± 0.39 | 0–1.2 | -58 | -28 | -0.30 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Pterostichus permundus | 226 | 3.75 ± 2.6 | 0–7.21 | -11 | 19 | -0.08 |
+| Pterostichus stygicus | 19 | 0.31 ± 0.44 | 0–1.5 | -91 | -9 | -0.16 |
+| Selenophorus ellipticus/granarius | 13 | 0.21 ± 0.56 | 0–2.35 | -70 | -91 | 0.03 |
+| Selenophorus opalinus | 1 | 0.02 ± 0.07 | 0–0.29 | - | + | -0.11 |
+
+11
+
+<!-- page 12 of 12 -->
+
+Fig. S1. Species accumulation curves for all sites.
+
+| Category | Sample Size | Number of Species |
+| --- | --- | --- |
+| CCWE | ~70 | ~16 |
+| CCEE | ~120 | ~19 |
+| HPN | ~120 | ~16 |
+| SB | ~130 | ~16 |
+| SF | ~180 | ~17 |
+| L | ~90 | ~13 |
+| SBEW | ~100 | ~13 |
+| FC | ~140 | ~14 |
+| MR | ~150 | ~13 |
+| TC | ~140 | ~12 |
+| TCE | ~220 | ~13 |
+| HLP | ~420 | ~16 |
+| HPW | ~300 | ~17 |
+| TCR | ~280 | ~16 |
+| WH | ~130 | ~10 |
+| MU | ~490 | ~9 |
+
+12

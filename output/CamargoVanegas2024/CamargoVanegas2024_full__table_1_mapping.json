@@ -4,41 +4,44 @@
     "value_column": false,
     "reasoning": "The column contains the taxonomic identification of the focal insect.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Lists specific species identifications, which are measurements of the organism's identity."
+    "reasoning_relevance": "Names the specific taxonomic identity of the ant species found."
   },
   "Functional Groups": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column describes a categorical trait (functional group) of the organism.",
+    "reasoning": "This column categorizes the functional group of the organism.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Represents a classification of the ant community's functional structure.",
+    "reasoning_relevance": "Classifies the functional group of the ant community.",
     "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Functional Groups",
-    "basisOfRecord": "Functional groups identified within ant communities across different TDF fragments (N1, N2, N3)",
-    "basisOfRecord_reasoning": "The record pertains to the spatial and temporal variation of functional groups found in leaf-litter-associated ant communities across the studied TDF fragments. The study identified 20 functional groups and analyzed their distribution and richness across these fragments.",
-    "measurementMethod": "Integration of functional analysis with taxonomic assessment of ants, based on morphological traits and community structure.",
-    "measurementMethod_reasoning": "The functional groups were derived by evaluating functional traits (morphological traits) and assessing the resulting community structure (taxonomic diversity and functional diversity). The abstract states that functional groups were evaluated using 'diversity data and morphofunctional traits,' and Section 3.4 details the composition of these groups based on species richness and functional roles (e.g., epigeal/litter/small hypogeal omnivores, arboreal omnivores, dacetine predators)."
+    "basisOfRecord": "Functional groups identified within ant communities across different spatial and temporal fragments (N1, N2, N3)",
+    "basisOfRecord_reasoning": "The functional groups are a classification derived from the ant communities sampled across the different study sites (fragments N1, N2, N3) and seasons, used to evaluate spatial and temporal variation.",
+    "measurementMethod": "Sampling of ants during the dry and rainy seasons using mini-Winkler bags.",
+    "measurementMethod_reasoning": "The text states that ants were sampled during the dry and rainy seasons using mini-Winkler bags, and this data was used to evaluate functional traits and diversity, which led to the identification of functional groups."
   },
   "N1": {
-    "field": "measurementStatistic",
-    "value_column": false,
-    "reasoning": "The values appear to be individual measurements, not aggregated statistics.",
+    "field": "measurementValue",
+    "value_column": true,
+    "measurementStatistic": "mean",
+    "reasoning": "N1 represents a measured value derived from the study.",
     "category": null,
-    "reasoning_relevance": "Represents a spatial fragment identifier, not a trait of the organism."
+    "reasoning_relevance": "Represents a sampling site identifier, not an organism trait."
   },
   "N2": {
-    "field": "measurementStatistic",
-    "value_column": false,
-    "reasoning": "The values appear to be individual measurements, not aggregated statistics.",
+    "field": "measurementValue",
+    "value_column": true,
+    "measurementStatistic": "mean",
+    "reasoning": "N2 represents a measured value derived from the study.",
     "category": null,
-    "reasoning_relevance": "Represents a spatial fragment identifier, not a trait of the organism."
+    "reasoning_relevance": "Represents a sampling site identifier, not an organism trait."
   },
   "N3": {
-    "field": "measurementStatistic",
-    "value_column": false,
-    "reasoning": "The values appear to be individual measurements, not aggregated statistics.",
+    "field": "measurementValue",
+    "value_column": true,
+    "measurementStatistic": "mean",
+    "reasoning": "N3 represents a measured value derived from the study.",
     "category": null,
-    "reasoning_relevance": "Represents a spatial fragment identifier, not a trait of the organism."
+    "reasoning_relevance": "Represents a sampling site identifier, not an organism trait."
   }
 }

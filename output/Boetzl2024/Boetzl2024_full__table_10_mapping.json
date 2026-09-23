@@ -1,42 +1,32 @@
 {
-  "model": {
+  "repsonse": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header describes the specific biological property or trait being measured (e.g., activity density)."
+    "reasoning": "Reponese is a categorical trait being measured or observed."
   },
-  "crop / habitat": {
+  "repsonse (1)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header describes the environmental context or habitat where the measurement was taken."
+    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
   },
-  "median estimate": {
+  "parameter": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Parameter defines the independent variable or treatment applied."
+  },
+  "estimate": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the primary numerical or categorical result of the measurement."
+    "reasoning": "Estimate is the calculated result of the measurement."
   },
-  "95% CI": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This header specifies a statistical measure (Confidence Interval) associated with the estimate."
-  },
-  "median change per 10 m [%]": {
+  "95% CI lower bound": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds a specific calculated measurement value (rate of change)."
+    "reasoning": "Lower bound is the calculated confidence interval boundary."
   },
-  "95% CI change per 10 m [%]": {
-    "field": "measurementStatistic",
+  "95% CI upper bound": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This header specifies a statistical measure (Confidence Interval) for the rate of change."
-  },
-  "probability of positive slope [%]": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds a statistical measure (probability) derived from the model."
-  },
-  "probability of negative slope [%]": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds a statistical measure (probability) derived from the model."
+    "reasoning": "Upper bound is the calculated confidence interval boundary."
   }
 }

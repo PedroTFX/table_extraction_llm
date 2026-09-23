@@ -1,8 +1,12 @@
+<!-- page 1 of 2 -->
+
 ## SUPPLEMENTARY INFORMATION (SI)
 
 Table 1 Mean (standard deviation in parentheses) and range in body mass (in mg), wing length (in mm) and proboscis length (in mm) in the pooled dataset of butterflies and within the five families.
 
 <table><tr><td></td><td></td><td>Body mass</td><td>Wing length</td><td>Proboscis length</td></tr><tr><td rowspan="2">Pooled(n=251)</td><td>Mean</td><td>147.9 (158.1)</td><td>28.7 (13.05)</td><td>12.8 (7.4)</td></tr><tr><td>Range</td><td>3.3 - 1459.3</td><td>8.8 - 71.1</td><td>3.1 - 41</td></tr><tr><td rowspan="2">Papilionidae(n=26)</td><td>Mean</td><td>385.2 (252.51)</td><td>52.1 (11.65)</td><td>21.2 (8.35)</td></tr><tr><td>Range</td><td>85.2 - 1459.3</td><td>20.1 - 78.1</td><td>9.29 - 35.7</td></tr><tr><td rowspan="2">Nymphalidae(n=100)</td><td>Mean</td><td>174.2 (139.13)</td><td>32.7 (8.62)</td><td>11.2 (3.36)</td></tr><tr><td>Range</td><td>13.9 - 777.5</td><td>17.1 - 53.21</td><td>5 - 20.3</td></tr><tr><td rowspan="2">Pieridae(n=30)</td><td>Mean</td><td>110.5 (88.64)</td><td>30.8 (8.13)</td><td>13.9 (5.92)</td></tr><tr><td>Range</td><td>9.5 - 367.2</td><td>15.02 - 48.9</td><td>8.25 - 35.68</td></tr><tr><td rowspan="2">Hesperiidae(n=45)</td><td>Mean</td><td>91.1 (61.29)</td><td>18 (4.30)</td><td>18 (9.57)</td></tr><tr><td>Range</td><td>12.4 - 378.5</td><td>10.5 - 31.99</td><td>8 - 41</td></tr><tr><td rowspan="2">Lycaenidae(n=50)</td><td>Mean</td><td>45.5 (45.32)</td><td>16.8 (4.35)</td><td>6.1 (1.40)</td></tr><tr><td>Range</td><td>3.3 - 189.6</td><td>8.8 - 30.5</td><td>3.1 - 9.9</td></tr></table>
+
+<!-- page 2 of 2 -->
 
 Table 2 Results from linear models with logged wing length (in mm) and logged proboscis length (in mm) as the response variables and logged body mass (in mg), family, habitat and interaction between body mass and family as predictors.
 

@@ -1,37 +1,47 @@
 {
-  "Temperature Temperature": {
+  "identifier": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This column names the biological or environmental property being measured."
+    "value_column": true,
+    "reasoning": "The header names the environmental variables measured, not the insect itself."
   },
-  "Dry season May-September Max (°C) Min (°C)": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This column specifies the metric or measurement type (e.g., Mean, Relative humidity)."
-  },
-  "Dry season October 28.7 (3.3) 14 (2.5)": {
+  "Dry season May-September": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column contains specific numerical measurements and associated statistics."
+    "reasoning": "Contains the measured relative humidity data for the specified season."
   },
-  "Sampling period (November) Dry 33.6 (4) 19.7 (2.2)": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header describes the specific sampling condition or habitat type."
+  "Dry season October": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured relative humidity data for the specified season."
   },
-  "Sampling period (November) Intermediate 37.9 (2.3)A 22.4 (1.5)A": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header describes the specific sampling condition or habitat type."
+  "Sampling period (November) Dry": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured relative humidity data for the dry sampling period."
   },
-  "Sampling period (November) Wet 36.2 (2.2)A 23.1 (1.7)A": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header describes the specific sampling condition or habitat type."
+  "Sampling period (November) Intermediate": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured relative humidity data for the intermediate sampling period."
   },
-  "32.1 (1.8)B 21.9 (1.1)A": {
+  "Sampling period (November) Intermediate (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured relative humidity data for the intermediate sampling period."
+  },
+  "Sampling period (November) Wet": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured relative humidity data for the wet sampling period."
+  },
+  "Sampling period (November) Wet (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured relative humidity data for the wet sampling period."
+  },
+  "Relative humidity (%)": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header describes the final sampling condition or habitat type."
+    "value_column": true,
+    "reasoning": "The header names the measured environmental property of the site."
   }
 }

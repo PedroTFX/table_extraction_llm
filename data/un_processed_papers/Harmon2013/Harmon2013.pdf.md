@@ -1,3 +1,9 @@
+<!-- page 1 of 8 -->
+
+OPEN  ACCESS Freely available online
+
+PLOS|ONE
+
 # Filtering across Spatial Scales: Phylogeny, Biogeography and Community Structure in Bumble Bees
 
 Alexandra N. Harmon-Threatt<sup>1,3</sup>\*, David D. Ackerly<sup>2</sup>
@@ -8,7 +14,7 @@ Alexandra N. Harmon-Threatt<sup>1,3</sup>\*, David D. Ackerly<sup>2</sup>
 
 Despite the expansion of phylogenetic community analysis to understand community assembly, few studies have used these methods on mobile organisms and it has been suggested the local scales that are typically considered may be too small to represent the community as perceived by organisms with high mobility. Mobility is believed to allow species to mediate competitive interactions quickly and thus highly mobile species may appear randomly assembled in local communities. At larger scales, however, biogeographical processes could cause communities to be either phylogenetically clustered or even. Using phylogenetic community analysis we examined patterns of relatedness and trait similarity in communities of bumble bees (Bombus) across spatial scales comparing: local communities to regional pools, regional communities to continental pools and the continental community to a global species pool. Species composition and data on tongue lengths, a key foraging trait, were used to test patterns of relatedness and trait similarity across scales. Although expected to exhibit limiting similarity, local communities were clustered both phenotypically and phylogenetically. Larger spatial scales were also found to have more phylogenetic clustering but less trait clustering. While patterns of relatedness in mobile species have previously been suggested to exhibit less structure in local communities and to be less clustered than immobile species, we suggest that mobility may actually allow communities to have more similar species that can simply limit direct competition through mobility.
 
-Citation: Harmon-Threatt, AN. Ackerly DD (2013) Filtering across, Spatial Scales: Phylogeny, Biogeography and Community Structure in Bumble Bees, PLo ONE 8(3): e60446. doi:10.1371/journal.pone.0060446
+Citation: Harmon-Threatt AN, Ackerly DD (2013) Filtering across Spatial Scales: Phylogeny, Biogeography and Community Structure in Bumble Bees. PLoS ONE 8(3): e60446. doi:10.1371/journal.pone.0060446
 
 Editor: Corrie S. Moreau, Field Museum of Natural History, United States of America
 
@@ -26,9 +32,23 @@ Competing Interests: The authors declare that no competing interests exist.
 
 Understanding patterns of species diversity and assembly is a major objective of research in ecology, evolution and biogeography. The recent development of methods to integrate phylogenetics into community ecology–‘‘phylogenetic community ecology’’–makes it possible to simultaneously address spatial and temporal questions about how species assemble and what processes impact assemblage membership [1]. Recently, however, concern has been raised about the scales at which phylogenetic community methods are measured and whether expanding questions to biogeographical scales and considering a more diverse array of taxa could improve our understanding of community assembly [2–4].
 
-Phylogenetic methods are commonly used to determine the phylogenetic clustering vs. evenness (i.e. the degree of relatedness), and the degree of phenotypic similarity or differentiation of community members in local communities, compared to null communities drawn from a larger, regional species pool [5]. Patterns of trait conservatism (i.e. the extent to which close relatives are phenotypically similar) provide a critical linkage between phylogenetic and phenotypic patterns, focusing on traits related to resource use and community structure. These methods can also be applied to greater spatial scales to help illuminate how patterns of phylogenetic relatedness change across scales and how biogeographical factors might also impact patterns seen at local and regional spatial scales. Of the studies that have considered possible effects of spatial scale on patterns of relatedness, most do not vary the size of the local assemblage but change the size of the regional species pool (e.g. [4]) which is known to influence statistical power [6]. Additionally, few studies consider both the importance of traits and relatedness in a single community (see [7,8]).
+Phylogenetic methods are commonly used to determine the phylogenetic clustering vs. evenness (i.e. the degree of relatedness), and the degree of phenotypic similarity or differentiation of community members in local communities, compared to null communities drawn from a larger, regional species pool [5]. Patterns of trait conservatism (i.e. the extent to which close relatives are phenotypically similar) provide a critical linkage between phylogenetic and phenotypic patterns, focusing on traits related to resource use and community structure. These methods can also be applied to greater spatial scales to help illuminate how patterns of phylogenetic relatedness change across scales and how
 
-Increasing the scale of analysis used for phylogenetic community analysis could also help expand studies to mobile taxa for which patterns are believed to arise at scales larger than those normally considered by community ecology (e.g., ,1 km) [1]. High mobility can allow species to mediate competitive interactions quickly and may explain why some species appear randomly assembled at small spatial scales [2]. However, some mobile species such as hummingbirds were found to exhibit even trait dispersion in local communities [7], thus making the relationship between scale and mobility unclear. Despite concerns about the effect of spatial scale and mobility of organisms on local patterns of species diversity, the range of taxonomic systems addressed is stil very low and most have limited mobility (e.g. plants, microbes or Collembola) over short time periods. Of the 24 papers reviewed by Vamosi et al. [9] for phylogenetic community structure, only 2 considered species that can move freely between local assemblages. Understanding patterns of phylogenetic community assembly for highly mobile organisms is particularly important as species with large home ranges are at higher risks for decline [10].
+biogeographical factors might also impact patterns seen at local and regional spatial scales. Of the studies that have considered possible effects of spatial scale on patterns of relatedness, most do not vary the size of the local assemblage but change the size of the regional species pool (e.g. [4]) which is known to influence statistical power [6]. Additionally, few studies consider both the importance of traits and relatedness in a single community (see [7,8]).
+
+Increasing the scale of analysis used for phylogenetic community analysis could also help expand studies to mobile taxa for which patterns are believed to arise at scales larger than those normally considered by community ecology (e.g., ,1 km) [1]. High mobility can allow species to mediate competitive interactions quickly and may explain why some species appear randomly assembled at small spatial scales [2]. However, some mobile species such as hummingbirds were found to exhibit even trait dispersion in local communities [7], thus making the relationship between scale and mobility unclear. Despite concerns about the effect of spatial scale and mobility of organisms on local patterns of species diversity, the range of taxonomic systems addressed is still very low and most have limited mobility (e.g. plants, microbes or Collembola) over short time periods. Of the 24 papers reviewed by Vamosi et al. [9] for phylogenetic community structure, only 2 considered species that can move freely between local assemblages. Understanding patterns of phylogenetic community assembly for
+
+PLOS ONE | www.plosone.org
+
+1
+
+March 2013 | Volume 8 | Issue 3 | e60446
+
+<!-- page 2 of 8 -->
+
+Filtering across Spatial Scales
+
+highly mobile organisms is particularly important as species with large home ranges are at higher risks for decline [10].
 
 Bumble bees offer an excellent model group to test the impacts of spatial scale on patterns of community assembly. As generalist, large bodied pollinators, bumble bees (Bombus spp.) are likely to disproportionately provide pollination service to many crops and wildflowers [11] and are the primary pollinators in high altitude and high latitude environments [12]. Additionally, bumble bees are extremely strong fliers with recorded flight distances of up to 2.5 km for some species [13]. Thus, assessing patterns of community diversity of Bombus could provide both vital information for pollination service in sensitive areas and insight into local assemblage and biogeographical patterns of highly mobile species.
 
@@ -44,13 +64,15 @@ Data on local assemblages were shared by researchers with the full knowledge tha
 
 ## Data collection
 
-Bombus tongue length data were collected through literature searches in ISI Web of Science during the spring of 2009 using search terms: (Bombus or bumble\*) and (proboscis or tongue). Additional sources were acquired by searching cited literature. Only data for the worker caste that was directly measured as the sum of prementum and glossa were used [26]. If multiple records existed for a bee species, the sample size weighted average of all records was used. All species in the sub-genus Psythirus were removed from analysis because they do not have a worker caste and their existence in a community is dependent on an appropriate host.
+Bombus tongue length data were collected through literature searches in ISI Web of Science during the spring of 2009 using search terms: (Bombus or bumble\*) and (proboscis or tongue). Additional sources were acquired by searching cited literature. Only data for the worker caste that was directly measured as the
 
-For clarity, local communities are referred to as assemblages [27] which are defined as species that co-occur spatially and temporally in a community and are potentially competing for and partitioning resources or other niche axes. Assemblages were identified by contacting authors and researchers with survey data on pollinators or Bombus to acquire original databases on bumble bee species presence in the Nearctic Ecozone. Original data were required because published data was typically pooled spatially or temporally. Only data that was collected from sites greater than one km apart and in which sampling was conducted across al plant species were used to ensure sites were distinct and no species were excluded by sampling a single plant species [28,29]. Al studies were designed to fully sample Bombus or pollinator diversity so although they varied in size and sampling intensity (Table 1) in all cases effort was made to fully capture diversity within the study. Additionally differences in sampling area and intensity were not correlated with species richness within or between studies. If sites were sampled repeatedly, only the sampling date with the highest diversity, a proxy for most complete sampling of the site, was chosen. Abundance data were excluded from the analysis because they were not available for all sites.
+sum of prementum and glossa were used [26]. If multiple records existed for a bee species, the sample size weighted average of all records was used. All species in the sub-genus Psythirus were removed from analysis because they do not have a worker caste and their existence in a community is dependent on an appropriate host.
+
+For clarity, local communities are referred to as assemblages [27] which are defined as species that co-occur spatially and temporally in a community and are potentially competing for and partitioning resources or other niche axes. Assemblages were identified by contacting authors and researchers with survey data on pollinators or Bombus to acquire original databases on bumble bee species presence in the Nearctic Ecozone. Original data were required because published data was typically pooled spatially or temporally. Only data that was collected from sites greater than one km apart and in which sampling was conducted across all plant species were used to ensure sites were distinct and no species were excluded by sampling a single plant species [28,29]. All studies were designed to fully sample Bombus or pollinator diversity so although they varied in size and sampling intensity (Table 1) in all cases effort was made to fully capture diversity within the study. Additionally differences in sampling area and intensity were not correlated with species richness within or between studies. If sites were sampled repeatedly, only the sampling date with the highest diversity, a proxy for most complete sampling of the site, was chosen. Abundance data were excluded from the analysis because they were not available for all sites.
 
 To test for non-random patterns in observed communities, regional species pools were used to generate null communities for comparison with observed community phylogenetic distance and trait distributions. Regional species pools were defined based on equal area grid cells, following Williams [30]. Each grid cell covers approximately 611,000 km<sup>2</sup> of the earth’s surface (,6.2 degrees latitude and 10 degrees longitude on average). Using DiscoverLife.org, a freely available database that pools occurrence and location records from museums and databases of global species occurrence, we determined the species that occurred in each grid cell within Nearctic regions of North America (hereafter Nearctic) and compared these to published records of species occurrence when possible. Only data points that had been verified by a taxonomist and georeferenced were used from the Discover Life database. Using predefined regional areas helps limit the variability in species pool size and definition across studies, which can significantly impact power of analysis [31].
 
-To determine if species trait and phylogenetic structure appear at spatial scales larger than local communities, regional species pools were then compared to the entire Nearctic (continental) poo and the continental pool was compared to the global species pool.
+To determine if species trait and phylogenetic structure appear at spatial scales larger than local communities, regional species pools were then compared to the entire Nearctic (continental) pool and the continental pool was compared to the global species pool.
 
 ## Analysis
 
@@ -58,15 +80,35 @@ All analyses were conducted in R 2.10.1 using the picante package [32] with scri
 
 ## Trait Conservatism
 
-To determine levels of trait conservatism, we calculated Blomberg’s K value, a metric for describing the distribution of phenotypic variation across the tips of a phylogeny [33]. A value of K = 1 is expected for a trait whose distribution matches the expectations for simple random-walk Brownian motion evolution across a phylogeny. A value of K.1 suggests higher trait conservatism while K,1 shows lower trait conservatism (relative to a random-walk model). A tip-swap null model can be used to test for the presence of phylogenetic signal by comparing the observed K-value to a null distribution based on randomizing trait values across the tips of the tree $\mathrm { ( N = 9 9 9 ) }$ . The expected K value under this null distribution is very low (,0.2), so significant conservatism can be detected even for K values that are much lower than those expected under Brownian motion [34].
+To determine levels of trait conservatism, we calculated Blomberg’s K value, a metric for describing the distribution of phenotypic variation across the tips of a phylogeny [33]. A value of K = 1 is expected for a trait whose distribution matches the expectations for simple random-walk Brownian motion evolution across a phylogeny. A value of K.1 suggests higher trait conservatism while K,1 shows lower trait conservatism (relative to a random-walk model). A tip-swap null model can be used to test for the presence of phylogenetic signal by comparing the
 
-Bombusrichnessinsites,regionalspeciespoolasdeterminedusingWilliams(1996)equalareagridcellsandpublicationinformation. Table1.Informationonlocalassemblagesincludedinanalysisincludingnameofcontributor,numberofsitesprovided,locationandsizeofareasampled,durationofsampling,
+PLOS ONE | www.plosone.org
 
-<table><tr><td>Data contributor</td><td>Number of sites</td><td>Location</td><td>Site Size (ha)</td><td>Sampling time</td><td>Richness</td><td>Regional Species Pool</td><td>Publication</td></tr><tr><td>S. Colla</td><td>1</td><td>Southern Ontario</td><td>0.4</td><td>full transect walked</td><td>6</td><td>18</td><td>Colla and Packer(2008)</td></tr><tr><td>E. Evans</td><td>2</td><td>Minnesota</td><td>0.06</td><td>60–120 mins</td><td>5–7</td><td>13</td><td>unpublished</td></tr><tr><td>R. Hatfeld</td><td>20</td><td>California</td><td>0.377</td><td>45 mins</td><td>2–8</td><td>17</td><td>Hatfield and Lebuhn (2007)</td></tr><tr><td>S.Hendrix</td><td>13</td><td>Iowa</td><td>.5–1</td><td>60–120 mins</td><td>2–6</td><td>15</td><td>Hendrix, Kwaiser and Heard (2010); Kwaiser and Hendrix (2008); unpublished</td></tr><tr><td>C. Kearns</td><td>15</td><td>Colorado</td><td>0.385</td><td>variable</td><td>2–4</td><td>20</td><td>Kearns and Oliveras(2009)</td></tr><tr><td>R. Malfi and N. Williams</td><td>10</td><td>Pennsylvania and New Jersey</td><td>0.5</td><td>120 mins</td><td>4–6</td><td>16</td><td>unpublished</td></tr><tr><td>A. Tripodi</td><td>49</td><td>Tennessee and Arkansas</td><td>.02–5</td><td>15–60 mins</td><td>2–5</td><td>11,13</td><td>unpublished</td></tr></table>
+2
+
+March 2013 | Volume 8 | Issue 3 | e60446
+
+<!-- page 3 of 8 -->
+
+Filtering across Spatial Scales
+
+cellsandpublicationinformation. regionalspeciespoolasdeterminedusingWilliams(1996)equalareagrid Bombusrichnessinsites, durationofsampling, Table1.Informationonlocalassemblagesincludedinanalysisincludingnameofcontributor,numberofsitesprovided,locationandsizeofareasampled,
+
+| Data contributor | Number of sites | Location | Site Size (ha) | Sampling time | Richness | Regional Species Pool | Publication |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| S. Colla | 1 | Southern Ontario | 0.4 | full transect walked | 6 | 18 | Colla and Packer(2008) |
+| E. Evans | 2 | Minnesota | 0.06 | 60–120 mins | 5–7 | 13 | unpublished |
+| R. Hatfeld | 20 | California | 0.377 | 45 mins | 2–8 | 17 | Hatfield and Lebuhn (2007) |
+| S.Hendrix | 13 | Iowa | .5–1 | 60–120 mins | 2–6 | 15 | Hendrix, Kwaiser and Heard (2010); Kwaiser and Hendrix (2008); unpublished |
+| C. Kearns | 15 | Colorado | 0.385 | variable | 2–4 | 20 | Kearns and Oliveras(2009) |
+| R. Malfi and N. Williams | 10 | Pennsylvania and New Jersey | 0.5 | 120 mins | 4–6 | 16 | unpublished |
+| A. Tripodi | 49 | Tennessee and Arkansas | .02–5 | 15–60 mins | 2–5 | 11,13 | unpublished |
 
 doi:10.1371/journal.pone.0060446.t001
 
-We used the ultrametric, gap-coded, phylogenetic tree published by Hines [25], which is a time calibrated version of the Cameron et al. [35] tree. Species for which we did not have tongue length data were removed from the phylogeny. We analyzed trait conservatism for all species with published trait data $( \mathrm { n } = 7 9 )$ and those that occur in Nearctic areas $( \mathrm { n } = 3 4 )$ separately to determine if there were differing patterns of trait conservatism in the Nearctic areas, which were shown to be a more recent introduction and showed more rapid diversification than in the Old World [25].
+observed K-value to a null distribution based on randomizing trait values across the tips of the tree $( \mathrm { N }   =   9 9 9 )$ . The expected K value under this null distribution is very low (,0.2), so significant conservatism can be detected even for K values that are much lower than those expected under Brownian motion [34].
+
+We used the ultrametric, gap-coded, phylogenetic tree published by Hines [25], which is a time calibrated version of the Cameron et al. [35] tree. Species for which we did not have tongue length data were removed from the phylogeny. We analyzed trait conservatism for all species with published trait data $( \mathrm { n } = 7 9 )$ and those that occur in Nearctic areas $\mathrm { ( n = 3 4 ) }$ separately to determine if there were differing patterns of trait conservatism in the Nearctic areas, which were shown to be a more recent introduction and showed more rapid diversification than in the Old World [25].
 
 ## Phylogenetic Assemblage Analysis
 
@@ -76,9 +118,21 @@ For comparison, mean null values of MNND and MPD are calculated from 999 randoml
 
 ## Trait-based Analysis
 
-MNND and MPD are conventionally used to describe the phylogenetic distance between assemblage members. Here we use similar metrics to test for filtering of traits in assemblages called: Mean Nearest Trait Distance (MNTD) and Mean Trait Distance (MTD). MNTD and MTD are equivalent to MNND and MPD, respectively. Using the tongue length data for Nearctic species we created a phenotypic distance matrix of all species and calculated MNTD and MTD using the same method as above. Just as with phylogenetic distance, observed scores that are larger than nulls indicate limiting trait similarity in an assemblage. Positive Z-scores of MNTD and MTD indicate trait filtering.
+MNND and MPD are conventionally used to describe the phylogenetic distance between assemblage members. Here we use
 
-To determine if tongue length was consistently spaced along a trait axis, potentially limiting competition within a site, we calculated the standard deviation of the successive neighbor distance when divided by the trait range within the assemblage (SDNN ) [38–40]. For each observed assemblage we sorted the tongue lengths of members from lowest to highest and then calculated the range of tongue lengths, the difference between successive tongue length values and the standard deviation of these differences. This standard deviation was divided by the range of tongue lengths in the assemblage. Assemblages with less than 3 species were removed because it is impossible to obtain a nonrandom spacing pattern for 2 species. We then tested whether the traits found in an assemblage had more even spacing of the trait (SDNNr) compared to 999 null assemblages of the same size drawn from the regional pool. We also tested whether the trait range in observed communities was smaller than the null assemblages which would suggest environmental filtering. P-values of trait metrics were compared using the Wilcoxon test as described above.
+PLOS ONE | www.plosone.org
+
+3
+
+March 2013 | Volume 8 | Issue 3 | e60446
+
+<!-- page 4 of 8 -->
+
+Filtering across Spatial Scales
+
+similar metrics to test for filtering of traits in assemblages called: Mean Nearest Trait Distance (MNTD) and Mean Trait Distance (MTD). MNTD and MTD are equivalent to MNND and MPD, respectively. Using the tongue length data for Nearctic species we created a phenotypic distance matrix of all species and calculated MNTD and MTD using the same method as above. Just as with phylogenetic distance, observed scores that are larger than nulls indicate limiting trait similarity in an assemblage. Positive Z-scores of MNTD and MTD indicate trait filtering.
+
+To determine if tongue length was consistently spaced along a trait axis, potentially limiting competition within a site, we calculated the standard deviation of the successive neighbor distance when divided by the trait range within the assemblage (SDNN ) [38–40]. For each observed assemblage we sorted the tongue lengths of members from lowest to highest and then calculated the range of tongue lengths, the difference between successive tongue length values and the standard deviation of these differences. This standard deviation was divided by the range of tongue lengths in the assemblage. Assemblages with less than 3 species were removed because it is impossible to obtain a non-random spacing pattern for 2 species. We then tested whether the traits found in an assemblage had more even spacing of the trait (SDNNr) compared to 999 null assemblages of the same size drawn from the regional pool. We also tested whether the trait range in observed communities was smaller than the null assemblages which would suggest environmental filtering. P-values of trait metrics were compared using the Wilcoxon test as described above.
 
 ## Regional Pool Analysis
 
@@ -96,7 +150,9 @@ We found a total of 18 published studies and 1 unpublished Master’s thesis wit
 
 ## Phylogenetic Assemblage Analysis
 
-We identified 110 assemblages in 8 of the 45 grid cells in Nearctic areas to analyze tongue length and relatedness across cooccurring species. Richness ranged from 2 to 8 species across assemblages and regional species pools for these assemblages ranged from 11 to 20 species (see Table 1). When tested for clustering of phylogenetic distance and nearest neighbor distance, local assemblages were significantly clustered for MPD (Wilcoxon signed-rank test of MPD: Z = 2.159, p = 0.031, Table 2, Figure 2).
+We identified 110 assemblages in 8 of the 45 grid cells in Nearctic areas to analyze tongue length and relatedness across co-occurring species. Richness ranged from 2 to 8 species across assemblages and regional species pools for these assemblages
+
+ranged from 11 to 20 species (see Table 1). When tested for clustering of phylogenetic distance and nearest neighbor distance, local assemblages were significantly clustered for MPD (Wilcoxon signed-rank test of MPD: Z = 2.159, p = 0.031, Table 2, Figure 2).
 
 ## Trait Assemblage Analysis
 
@@ -104,7 +160,7 @@ For the same 110 observed communities above, the trait analysis revealed that to
 
 ## Regional Pool Analysis
 
-Phylogenentic metrics and trait metrics were calculated at the regional and continental level to determine if increasing scale of analysis altered patterns of dispersion for bumble bee assemblages. Regional species pools contained species with lower nearest neighbor phylogenetic distances than the nulls drawn from the continental pool (Wilcoxon signed-rank test of MNND: Z = 2.477, p = 0.013, Table 2). Regional pools were not significantly different from nulls for MPD, MNTD, MTD or range. However, SDNNr was smaller in regional assemblages compared to the species poo suggesting evenness for the regional assemblages (Z = 2.59, p = 0.009).
+Phylogenentic metrics and trait metrics were calculated at the regional and continental level to determine if increasing scale of analysis altered patterns of dispersion for bumble bee assemblages. Regional species pools contained species with lower nearest neighbor phylogenetic distances than the nulls drawn from the continental pool (Wilcoxon signed-rank test of MNND: Z = 2.477, p = 0.013, Table 2). Regional pools were not significantly different from nulls for MPD, MNTD, MTD or range. However, SDNNr was smaller in regional assemblages compared to the species pool suggesting evenness for the regional assemblages (Z = 2.59, p = 0.009).
 
 ## Continental Pool Analysis
 
@@ -112,36 +168,129 @@ When compared to the global species or trait pools, the Nearctic had highly sign
 
 ## Filtering across spatial scales
 
-Using the results above we can look at trends across the 3 spatia scales by plotting the Z-scores compared to null communities. Results for MNND reveal increasing phylogenetic clustering across spatial scales but metrics were similar at local and regiona scales (see Figure 3a.). Trait analysis had the most clustering at local spatial scales and the least at regional scales (see Figure 3b.).
+Using the results above we can look at trends across the 3 spatial scales by plotting the Z-scores compared to null communities. Results for MNND reveal increasing phylogenetic clustering across spatial scales but metrics were similar at local and regional scales (see Figure 3a.). Trait analysis had the most clustering at local spatial scales and the least at regional scales (see Figure 3b.).
 
 ## Discussion
 
-Under the competition-relatedness hypothesis [41], species that are closely related are expected to compete more strongly if traits mediating competition are highly conserved, thus causing loca communities to be evenly dispersed to limit trait and phylogenetic similarity. Alternatively, for species that are highly mobile and can mediate competition quickly we might expect local communities to be randomly assembled. We found that local assemblages of Bombus had significant clustering of mean phylogenetic distance (MPD) but not of mean nearest neighbor distance which suggests that local assemblages are overall closely related but not simply made up of sister taxa. Traits in local assemblages were also clustered for mean nearest trait distance (MNTD), mean trait distance (MTD) and range which suggests that local assemblages have more similar tongue lengths than expected by chance. As tongue length has strong phylogenetic signal and is prone to convergence on both the global and Nearctic phylogeny, the trait
+Under the competition-relatedness hypothesis [41], species that are closely related are expected to compete more strongly if traits mediating competition are highly conserved, thus causing local communities to be evenly dispersed to limit trait and phylogenetic similarity. Alternatively, for species that are highly mobile and can mediate competition quickly we might expect local communities to be randomly assembled. We found that local assemblages of Bombus had significant clustering of mean phylogenetic distance (MPD) but not of mean nearest neighbor distance which suggests that local assemblages are overall closely related but not simply made up of sister taxa. Traits in local assemblages were also clustered for mean nearest trait distance (MNTD), mean trait distance (MTD) and range which suggests that local assemblages have more similar tongue lengths than expected by chance. As tongue length has strong phylogenetic signal and is prone to convergence on both the global and Nearctic phylogeny, the trait
 
-## Tongue Length of Bumblebees
+PLOS ONE | www.plosone.org
 
-![](images/7e2752fc3ea7e299d20629f270cbec26174eb2626161d266358e64f5a69d8cfa.jpg)  
-Figure 1. Bi-plot of the phylogeny of species with trait values (n = 79) and the associated tongue length measured in ln(mm). Grey bars indicate species found in the Nearctic. Short faced (SF) and long faced (LF) sister clades are labeled to demonstrate the association with tongue length, Taxa labels are available in the Supplementary Table 1 with trait values. doi:10.1371/journal.pone.0060446.g001
+4
+
+March 2013 | Volume 8 | Issue 3 | e60446
+
+<!-- page 5 of 8 -->
+
+Filtering across Spatial Scales
+
+Tongue Length of Bumblebees
+
+| Species | Cluster |
+| :--- | :--- |
+| ardens | SF |
+| pyrenaeus | SF |
+| beaticola | SF |
+| frigidus | SF |
+| jonellus | SF |
+| cingulatus | SF |
+| mixtus | SF |
+| pratorum | SF |
+| lemniscatus | SF |
+| hypnorum | SF |
+| perplexus | SF |
+| bifarius | SF |
+| ternarius | SF |
+| huntii | SF |
+| vosnesenskii | SF |
+| impatiens | SF |
+| melanopygus | SF |
+| lapponicus | SF |
+| sylvicola | SF |
+| bimaculatus | SF |
+| monticola | SF |
+| vagans | SF |
+| centralis | SF |
+| flavifrons | SF |
+| vandykei | SF |
+| sporadicus | SF |
+| ignitus | SF |
+| terrestris | SF |
+| hypocrita | SF |
+| affinis | SF |
+| lucorum | SF |
+| patagiatus | SF |
+| occidentalis | SF |
+| terricola | SF |
+| balteatus | SF |
+| rufocinctus | SF |
+| fraternus | SF |
+| griseocolis | SF |
+| morrisoni | SF |
+| wurflenii | SF |
+| kashmirensis | SF |
+| sichelli | SF |
+| lapidarius | SF |
+| rufofasciatus | SF |
+| friseanus | SF |
+| ruderarius | LF |
+| veteranus | LF |
+| sylvarum | LF |
+| humilis | LF |
+| pascuorum | LF |
+| honshuensis | LF |
+| pseudobaicalensis | LF |
+| impetuosus | LF |
+| muscorum | LF |
+| filchnerae | LF |
+| laesus | LF |
+| atratus | LF |
+| sonorus | LF |
+| pensylvanicus | LF |
+| medius | LF |
+| bellicosus | LF |
+| californicus | LF |
+| fervidus | LF |
+| consobrinus | LF |
+| hortorum | LF |
+| ruderatus | LF |
+| supremus | LF |
+| diversus | LF |
+| subterraneus | LF |
+| distinguendus | LF |
+| appositus | LF |
+| borealis | LF |
+| haemorrhoidalis | LF |
+| soroeensis | LF |
+| confusus | LF |
+| auricomus | LF |
+| nevadensis | LF |
+| convexus | LF |
+| waltoni | LF |
+
+Figure 1. Bi-plot of the phylogeny of species with trait values (n = 79) and the associated tongue length measured in ln(mm). Grey bars indicate species found in the Nearctic. Short faced (SF) and long faced (LF) sister clades are labeled to demonstrate the association with tongue length. Taxa labels are available in the Supplementary Table 1 with trait values. doi:10.1371/journal.pone.0060446.g001
 
 clustering is consistent with phylogenetic clustering. This pattern arises despite high levels of variability in worker size in Bombus nests [42,43] and evidence that alternative methods for measuring may introduce additional error to the analysis [44]. The lack of even trait spacing (SDNNr) also constitutes a lack of evidence for niche partitioning in these local communities.
 
-Similarity in trait values and higher than expected relatedness among co-occurring species may suggest that other biotic and abiotic features are more important in structuring local Bombus communities. Competitive interactions, depending on their strength, can cause assemblages to be clustered or even [45]. In hummingbirds, strong competitive interactions for floral resources cause beak length, which effects flower foraging, to be evenly dispersed [7]. We observed the opposite pattern for bumble bees which may suggest that competition for floral resources does not cause exclusion. When competition does not play a significant role, pollinators have been found to share closely related floral resources [46] and floral communities may favor similarities in pollinator foraging traits among co-occurring taxa in a location [47]. If local floral communities are strongly clustered phenotypically, and traits
+Similarity in trait values and higher than expected relatedness among co-occurring species may suggest that other biotic and abiotic features are more important in structuring local Bombus communities. Competitive interactions, depending on their
 
-doi:10.1371/journal.pone.0060446.t002 doi:10.1371/iournal pone 0060446 t002
+strength, can cause assemblages to be clustered or even [45]. In hummingbirds, strong competitive interactions for floral resources cause beak length, which effects flower foraging, to be evenly dispersed [7]. We observed the opposite pattern for bumble bees which may suggest that competition for floral resources does not cause exclusion. When competition does not play a significant role, pollinators have been found to share closely related floral resources [46] and floral communities may favor similarities in pollinator foraging traits among co-occurring taxa in a location [47]. If local floral communities are strongly clustered phenotypically, and traits
 
-Species Richness  
-![](images/0230f4e69a87011ba655cbe6ad77442822d1af50e4ae036e9e06dd18c91d3536.jpg)
+PLOS ONE | www.plosone.org
 
-![](images/b1936b7e903419545c204bdecb949d448c21b2b6069d694c45c37a98a241707c.jpg)
+5
 
-![](images/47d2e72ea3e288d1150488195ea9d2d321fdd58f55ef335218205bca69749b21.jpg)
+March 2013 | Volume 8 | Issue 3 | e60446
 
-![](images/79d760a97d6e48ee154dae5915652276cf2c5ce68b99175ce859f07bd2466076.jpg)
+<!-- page 6 of 8 -->
 
-![](images/ea01636db999c9ea01e3cd312521e2416b60961821d0ea33864efa5d1bbdf426.jpg)
+Filtering across Spatial Scales
 
-![](images/19fc9f8dd68f5ffeee2665037011c4ebe679b4ff8ce5d3df638a324c2e202c9d.jpg)  
-Figure 2. Plot of observed values (diamonds) in communities and expected values (squares) vs. richness for a) Mean Phylogenetic Distance, b) Mean Nearest Neighbor Distance, c) Mean Trait Distance, d) Mean Nearest Trait Distance, e) SDNNr and f) Range. doi:10.1371/journal pone 0060446 g002
+![Image block](doc:51a9909/tier:advanced/page:6/block:2)
+
+Species Richness
+
+Figure 2. Plot of observed values (diamonds) in communities and expected values (squares) vs. richness for a) Mean Phylogenetic Distance, b) Mean Nearest Neighbor Distance, c) Mean Trait Distance, d) Mean Nearest Trait Distance, e) SDNNr and f) Range. doi:10.1371/journal.pone.0060446.g002
 
 Table 2. Z scores and p-values of relatedness and tongue length for various scales and measures of similarity.
 
@@ -149,8 +298,23 @@ Table 2. Z scores and p-values of relatedness and tongue length for various scal
 
 Local assemblages (n = 110) represent co-occurring species and the species pool is the regional gridcell the assemblage is within. Regional assemblages (n = 45) are the species in each grid cell compared to a species pool of all Nearctic Species. The continental assemblage (n = 1) consists of all Nearctic species compared to all Bombus globally.
 
-![](images/d51ed9d6044d5ffd786ff0d81c4afabf9a443e87e9172f49c81d46cc14210944.jpg)  
-Figure 3. Z-scores of observed communities when compared to randomly generated null communities at various spatial scales for: a) Mean Nearest Neighbor Distance (MNND) and Mean Pairwise Distance (MPD) and b) Mean Nearest Trait Distance (MNTD) and Mean Trait Distance (MTD) for trait similarity. The dotted line represents the null expectation if communities are randomly organized. Positive values suggest clustering while negative values suggest evenness. doi:10.1371/journal.pone.0060446.g003 doi:10.1371/iournal.pone.0060446.g003
+doi:10.1371/journal.pone.0060446.t002
+
+PLOS ONE | www.plosone.org
+
+6
+
+March 2013 | Volume 8 | Issue 3 | e60446
+
+<!-- page 7 of 8 -->
+
+Filtering across Spatial Scales
+
+![Image block](doc:51a9909/tier:advanced/page:7/block:2)
+
+Figure 3. Z-scores of observed communities when compared to randomly generated null communities at various spatial scales for: a) Mean Nearest Neighbor Distance (MNND) and Mean Pairwise Distance (MPD) and b) Mean Nearest Trait Distance (MNTD) and Mean Trait Distance (MTD) for trait similarity. The dotted line represents the null expectation if communities are randomly organized. Positive values suggest clustering while negative values suggest evenness.
+
+doi:10.1371/journal.pone.0060446.g003
 
 related to foraging are phylogenetically conserved, one would expect the pollinator communities to be more phylogenetically clustered as well [24,47,48], as observed here. We suggest that future work look into the similarity between morphological traits of bees and floral characteristics in local communities. Alternatively, phylogenetic clustering could arise if other resources are limiting and the associated morphological trait is phylogenetically conserved. Bumble bees share similar nesting characteristics (e.g. pocket-makers or pollen storers) [49] and thus nesting sites and materials could be limiting [50,51].
 
@@ -158,14 +322,10 @@ At regional and continental scales no significant pattern was found for trait me
 
 ## References
 
-1. Cavender-Bares J, Kozak KH, Fine PVA, Kembel SW (2009) The merging of community ecology and phylogenetic biology. Ecology letters 12: 693–715. doi:10.1111/i.1461-0248.2009.01314.x.
-
+1. Cavender-Bares J, Kozak KH, Fine PVA, Kembel SW (2009) The merging of community ecology and phylogenetic biology. Ecology letters 12: 693–715. doi:10.1111/j.1461-0248.2009.01314.x.
 2. Weiher E, Freund D, Bunton T, Stefanski A, Lee T, et al. (2011) Advances, challenges and a developing synthesis of ecological community assembly theory. Philosophical Transactions of the Royal Society B: Biological Sciences 366: 2403–2413.
-
-3. Emerson BC, Hewitt GM (2005) Phylogeography. Current biology: CB 15: R367–71, doi:10.1016/i.cub,2005.05.016.
-
+3. Emerson BC, Hewitt GM (2005) Phylogeography. Current biology: CB 15: R367–71. doi:10.1016/j.cub.2005.05.016.
 4. Cardillo M (2011) Phylogenetic structure of mammal assemblages at large geographical scales: linking phylogenetic community ecology with macroecology. Philosophical transactions of the Royal Society of London Series B, Biological sciences 366: 2545–2553. doi:10.1098/rstb.2011.0021.
-
 5. Webb CO, Ackerly DD, McPeek MA, Donoghue MJ (2002) Phylogenies and community ecology. Annual Review of Ecology and Systematics 33: 475–505. doi:10.1146/annurev.ecolysis.33.010802.150448.
 
 spatial scales [1] than immobile species, we contend that similar patterns for mobile and immobile organisms may be observed with the expansion of spatial scales, but this deserves further testing. The increasing degree of clustering observed with scale suggests that environmental filtering may be significant across scales but with potentially different forces at work, such as local floral resources influencing assembly processes, regional radiations, dispersal to the New World, etc. It is interesting to note that only MTD at the regional level detects evenness, suggesting that despite increasing evenness of the trait across scales it is still clustered overall. We suggest these patterns be explored at spatial scales that are relevant for highly mobile organisms and this may require a bridging of biogeographical and community ecology methods.
@@ -185,97 +345,68 @@ We would like to thank the Kremen and Ackerly Labs, and the 2009 Integrative Bio
 Conceived and designed the experiments: ANHT DDA. Performed the experiments: ANHT. Analyzed the data: ANHT DDA. Contributed reagents/materials/analysis tools: ANHT DDA. Wrote the paper: ANHT DDA.
 
 6. Kraft NJB, Cornwell WK, Webb CO, Ackerly DD (2007) Trait evolution, community assembly, and the phylogenetic structure of ecological communities. American Naturalist 170: 271–283.
-
-7. Graham CH, Parra J, Tinoco BA, Stiles FG, McGuire J (2012) Untangling the influence of ecological and evolutionary factors on trait variation acros hummingbird assemblages. Ecology 93: 99–111.
-
-8. Hoiss B, Krauss J, Potts SG, Roberts S, Steffan-Dewenter I (2012) Altitude acts as an environmental filter on phylogenetic composition, traits and diversity in bee communities. Proceedings of the Royal Society B: Biological Sciences: 4447– 4456. doi:10.1098/rspb 2012.1581
-
+7. Graham CH, Parra J, Tinoco BA, Stiles FG, McGuire J (2012) Untangling the influence of ecological and evolutionary factors on trait variation across hummingbird assemblages. Ecology 93: 99–111.
+8. Hoiss B, Krauss J, Potts SG, Roberts S, Steffan-Dewenter I (2012) Altitude acts as an environmental filter on phylogenetic composition, traits and diversity in bee communities. Proceedings of the Royal Society B: Biological Sciences: 4447–4456. doi:10.1098/rspb.2012.1581.
 9. Vamosi SM, Heard SB, Vamosi JC, Webb CO (2009) Emerging patterns in the comparative analysis of phylogenetic community structure. Molecular ecology 18: 572–592. doi:10.1111/j.1365-294X.2008.04001.x.
+10. Cardillo M, Mace GM, Jones KE, Bielby J, Bininda-Emonds ORP, et al. (2005) Multiple causes of high extinction risk in large mammal species. Science 309: 1239–1241. doi:10.1126/science.1116030.
 
-10. Cardillo M, Mace GM,Jones KE, BielbyJ, Bininda-Emonds ORP, et al. (2005) Multiple causes of high extinction risk in large mammal species. Science 309 1239–1241,doi:10.1126/science 1116030
+PLOS ONE | www.plosone.org
+
+7
+
+March 2013 | Volume 8 | Issue 3 | e60446
+
+<!-- page 8 of 8 -->
+
+Filtering across Spatial Scales
 
 11. Memmott J, Waser NM, Price M V. (2004) Tolerance of pollination networks to species extinctions. Proceedings of the Royal Society-Biological Sciences 271: 2605–2611.
-
 12. Goulson D (2010) Bumblebees. 3rd ed. Oxford: Oxford University Press. p.
-
 13. Hagen M, Wikelski M, Kissling WD (2011) Space use of bumblebees (Bombus spp.) revealed by radio-tracking. PloS one 6: e19997. doi:10.1371/journal.- pone.0019997.
-
 14. Pyke GH, Inouye DW, Thomson JD (2012) Local geographic distributions of bumble bees near crested butte, Colorado: competition and community structure revisited. Environmental entomology 41: 1332–1349. doi:10.1603/ EN11284.
-
 15. Inouye DW (1977) Resource partitioning in bumble bees. Journal of the New York Entomological Society 85: 253–254.
-
 16. Hanski I (1982) Structure in bumblebee communities. Annales Zoologici Fennici 19: 319–326.
-
-17. Harder LD (1983) Flower handling efficiency of bumble bees-Morphologica aspects of probing time. Oecologia 57: 274–280.
-
+17. Harder LD (1983) Flower handling efficiency of bumble bees-Morphological aspects of probing time. Oecologia 57: 274–280.
 18. Ranta E (1983) Foraging differences in bumblebees. Annales Entomologici Fennici 49: 17–22.
-
 19. Ranta E, Lundberg H (1980) Resource partitioning in bumblebees-The significance of differences in proboscis length. Oikos 35: 298–302.
-
 20. Medler J (1962) Morphometric studies on bumble bees. Annals of the Entomological Society of America 55: 212–218.
-
 21. Morse DH (1977) Estimating proboscis length from wing length in bumblebees (Bombus spp.). Annals of the Entomological Society of America 70: 311–315.
-
 22. Ranta E (1982) Species structure of North European bumblebee communities. Oikos 38: 202–209.
-
 23. Pekkarinen A (1984) Resource partitioning and coexistence in bumblebees. Annales Entomologici Fennici 50: 97–107.
-
 24. Ranta E (1984) Proboscis length and the coexistence of bumblebee species. Oikos 43: 189–196.
-
 25. Hines HM (2008) Historical biogeography, divergence times, and diversification patterns of bumble bees (Hymenoptera: Apidae: Bombus). Systematic biology 57: 58–75. doi:10.1080/10635150801898912.
-
 26. Harder LD (1985) Morphology as a predictor of flower choice by bumble bees. Ecology 66: 198–210.
-
-27. Begon M, HarperJ, Townsend C (1996) Ecology of Invididuals, Populations and Communities. Oxford, Uk: Blackwell Publishing. p.
-
+27. Begon M, Harper J, Townsend C (1996) Ecology of Invididuals, Populations and Communities. Oxford, Uk: Blackwell Publishing. p.
 28. Inouye DW (1978) Resource partitioning in bumble bees- Experimental studies of foraging behavior. Ecology 59: 672–678.
-
 29. Morse D (1977) Resource partitioning in bumble bees: The role of behavioral factors. Science 197: 678–680.
-
 30. Williams PH (1996) Mapping Variations in the Strength and Breadth of Biogeographic Transition Zones Using Species Turno... more. Proceedings of the Royal Society-Biological sciences 263: 579–588.
-
 31. Kraft NJB, Comita LS, Chase JM, Sanders NJ, Swenson NG, et al. (2011) Disentangling the drivers of b diversity along latitudinal and elevational gradients. Science 333: 1755–1758. doi:10.1126/science.1208584.
-
 32. Kembel SW, Cowan PD, Helmus MR, Cornwell WK, Morlon H, et al. (2010) Picante: R tools for integrating phylogenies and ecology. Bioinformatics 26: 1463–1464. doi:10.1093/bioinformatics/btq166.
-
 33. Blomberg SP, Garland T, Ives AR (2003) Testing for phylogenetic signal in comparative data: Behavioral traits are more labile. Evolution 57: 717–745.
-
 34. Ackerly DD (2009) Conservatism and diversification of plant functional traits: Evolutionary rates versus phylogenetic signal. Proceedings of the National
 
 Academy of Sciences of the United States of America 106 Suppl: 19699–19706. doi:10.1073/pnas.0901635106.
-
-35. Cameron SA, Hines HM, Williams PH (2007) A comprehensive phylogeny of the bumble bees (Bombus). Biological Journal of the Linnean Society 91: 161– 188.
-
-36. Cooper N, Rodrı´guez J, Purvis A (2008) A common tendency for phylogenetic overdispersion in mammalian assemblages. Proceedings Biological sciences/The Royal Society 275: 2031–2037. doi:10.1098/rspb.2008.0420
-
+35. Cameron SA, Hines HM, Williams PH (2007) A comprehensive phylogeny of the bumble bees (Bombus). Biological Journal of the Linnean Society 91: 161–188.
+36. Cooper N, Rodrı´guez J, Purvis A (2008) A common tendency for phylogenetic overdispersion in mammalian assemblages. Proceedings Biological sciences/The Royal Society 275: 2031–2037. doi:10.1098/rspb.2008.0420.
 37. Kembel SW, Hubbell S (2006) The phylogenetic structure of a neotropical forest tree. Ecology 87: S86:S99.
-
-38. Cornwell WK, Ackerly DD (2009) Community assembly and shifts in plant trait distributions across an environmental gradient in coastal California. Ecologica Monographs 79: 109–126.
-
+38. Cornwell WK, Ackerly DD (2009) Community assembly and shifts in plant trait distributions across an environmental gradient in coastal California. Ecological Monographs 79: 109–126.
 39. Kraft NJB, Valencia R, Ackerly DD (2008) Functional traits and niche-based tree community assembly in an Amazonian forest. Science 322: 580–582. doi:10.1126/science.1160662.
-
 40. Stubbs W, Wilson B (2004) Evidence for limiting similarity in a sand dune community. Journal of Ecology 92: 557–567.
-
 41. Cahill JF, Kembel SW, Lamb EG, Keddy PA (2008) Does phylogenetic relatedness influence the strength of competition among vascular plants? Perspectives in Plant Ecology, Evolution and Systematics 10: 41–50. doi:10.1016/j.ppees.2007.10.001.
-
 42. Johnson RA (1986) Intraspecific resource partitioning in the bumble bees Bombus ternarius and B. pensylvanicus. Ecology 67: 133–138.
-
-43. Peat J, Tucker J, Goulson D (2005) Does intraspecific size variation in bumblebees allow colonies to efficiently exploit different flowers? Ecologica Entomology 30: 176–181.
-
-44. Harder LD (1982) Measurement and estimation of functional proboscis lenth in bumble bees (Hymenoptera,Apidae). Canadian Journal of Zoology 60: 1073– 1079.
-
-45. Mayfield MM, Levine JM (2010)Opposing effects of competitive exclusion on the phylogenetic structure of communities. Ecology Letters 13:1085–1093. doi:10.1111/i.1461-0248.2010.01509.x
-
-46. Rezende EL, Lavabre JE, Guimara˜es PR, Jordano P, Bascompte J (2007) Non random coextinctions in phylogenetically structured mutualistic networks. Nature 448: 925–928, doi:10.1038/nature05956
-
-47. Pellissier L, Pradervand J-N, Williams PH, Litsios G, Cherix D, et al. (n.d.) Phylogenetic relatedness and proboscis length contribute to structuring bumblebee communities in the extremes of abiotic and biotic gradients. Globa Ecology and Biogeography: n/a–n/a. doi:10.1111/geb.12026.
-
+43. Peat J, Tucker J, Goulson D (2005) Does intraspecific size variation in bumblebees allow colonies to efficiently exploit different flowers? Ecological Entomology 30: 176–181.
+44. Harder LD (1982) Measurement and estimation of functional proboscis lenth in bumble bees (Hymenoptera,Apidae). Canadian Journal of Zoology 60: 1073–1079.
+45. Mayfield MM, Levine JM (2010)Opposing effects of competitive exclusion on the phylogenetic structure of communities. Ecology Letters 13:1085–1093. doi:10.1111/j.1461-0248.2010.01509.x.
+46. Rezende EL, Lavabre JE, Guimarães PR, Jordano P, Bascompte J (2007) Non-random coextinctions in phylogenetically structured mutualistic networks. Nature 448: 925–928. doi:10.1038/nature05956.
+47. Pellissier L, Pradervand J-N, Williams PH, Litsios G, Cherix D, et al. (n.d.) Phylogenetic relatedness and proboscis length contribute to structuring bumblebee communities in the extremes of abiotic and biotic gradients. Global Ecology and Biogeography: n/a–n/a. doi:10.1111/geb.12026.
 48. Sargent RD, Ackerly DD (2008) Plant-pollinator interactions and the assembly of plant communities. Trends in Ecology & Evolution 23: 123–130. doi:10.1016/j.tree.2007.11.003.
-
 49. Williams PH, Cameron SA, Hines HM, Cederberg B, Rasmont P (2008) A simplified subgeneric classification of the bumblebees (genus Bombus). Apidologie 39: 46–74. doi:10.1051/apido:2007052.
-
 50. Steffan-Dewenter I, Schiele S (2008) Do resources or natural enemies drive bee population dynamics in fragmented habitats? Ecology 89: 1375–1387.
-
 51. Potts SG, Vulliamy B, Roberts S, O’Toole C, Dafni A, et al. (2005) Role of nesting resources in organising diverse bee communities in a Mediterranean landscape. Ecological Entomology 30: 78–85. doi:10.1111/j.0307-6946. 2005.00662.x.
-
 52. Goulson D, Lye GC, Darvill B (2008) Decline and conservation of bumble bees. Annual review of entomology 53: 191–208. doi:10.1146/annurev.ento.53. 103106.093454.
+
+PLOS ONE | www.plosone.org
+
+8
+
+March 2013 | Volume 8 | Issue 3 | e60446

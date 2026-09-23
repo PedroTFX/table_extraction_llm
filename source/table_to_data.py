@@ -50,6 +50,18 @@ MAP_FIELDS = [
     "measurementValue",
     "measurementMethod",
     "measurementStatistic",
+    # Row-level ORGANISM qualifiers. A wide specimen table often carries a whole
+    # column for one of these (a 'Sex' column of F/M, a 'caste' column of
+    # worker/queen, a 'stage' column of larva/adult). Without them here the mapper
+    # had no valid target and was forced to call such a column a measurementType —
+    # so 'Sex' became a bogus trait, the real measurements in that row carried NO
+    # sex, and to_output's default silently stamped every row 'both'. Listing them
+    # (with their .md descriptions) lets the mapper route the column to the field,
+    # and ROW_FIELDS below then carries each row's value onto that row's
+    # measurements — exactly as verbatimLocality already rides along.
+    "sex",
+    "lifeStage",
+    "caste",
 ]
 
 # Fields that flag a DATA DICTIONARY / KEY table — one that DEFINES variables
@@ -104,6 +116,58 @@ def _field_descriptions_block(fields=MAP_FIELDS) -> str:
 # Table collection across the whole document set (paper + complementary files)
 # ---------------------------------------------------------------------------
 
+def split_banded_grid(raw_grid: str, llm=None) -> list[str]:
+    """Split a BANDED table into one raw pipe-grid per band, or return [raw_grid].
+
+    A wide table that won't fit across the page is often printed as several
+    stacked blocks: its header row (e.g. 'Species | Sp.a | Sp.b | ...') reappears
+    partway down, above a fresh set of columns for the NEXT group of taxa
+    (Fondjo2024: 8 species printed as two blocks of 4). Parsed as one grid this
+    folds the second block's rows into bogus duplicate columns and its taxa are
+    lost — so cut the grid at each repeat of the header before anything else sees
+    it, giving one clean sub-grid per band that then transposes on its own.
+
+    A band boundary is deterministic and conservative: a row AT OR BELOW the
+    header whose first cell equals the header's first-column label (the row-label
+    corner, e.g. 'Species') AND whose remaining cells are mostly taxon names —
+    i.e. a genuine repeated header, not a data row that merely starts with the
+    same word. If fewer than two such rows exist, the table isn't banded and the
+    original grid is returned unchanged.
+    """
+    lines = [l for l in (ln.strip() for ln in raw_grid.strip().splitlines()) if l]
+    if len(lines) < 4:
+        return [raw_grid]
+
+    def first_cell(l: str) -> str:
+        parts = [c.strip() for c in l.split("|")]
+        return parts[0] if parts else ""
+
+    def rest_cells(l: str) -> list:
+        return [c.strip() for c in l.split("|")[1:] if c.strip()]
+
+    # A species header row is one whose cells (past the row-label corner) are
+    # mostly taxon names — 'Species | Sp.a | Sp.b | ...'. Deterministic, so this
+    # costs no LLM call. A units/sex sub-row ('Parameters | Male | Female') is not
+    # taxa and is never flagged.
+    hdr_rows = [i for i, l in enumerate(lines)
+                if len(rest_cells(l)) >= 2 and taxon_fraction(rest_cells(l)) >= 0.6]
+    if len(hdr_rows) < 2:
+        return [raw_grid]
+    corner = first_cell(lines[hdr_rows[0]])
+    starts = [i for i in hdr_rows if first_cell(lines[i]) == corner]
+    if len(starts) < 2:
+        return [raw_grid]                      # header appears once -> not banded
+
+    bands = []
+    for k, s in enumerate(starts):
+        begin = 0 if k == 0 else s             # band 0 keeps any caption above it
+        end = starts[k + 1] if k + 1 < len(starts) else len(lines)
+        bands.append("\n".join(lines[begin:end]))
+    print(f"    banded table: split into {len(bands)} band(s) at rows {starts} "
+          f"(repeated '{corner}' header)")
+    return bands
+
+
 def tables_from_text(text: str, source: str, llm=None) -> list[Table]:
     """Parse every <table> in a document, joining page-continuation fragments.
 
@@ -120,21 +184,30 @@ def tables_from_text(text: str, source: str, llm=None) -> list[Table]:
     """
     out: list[Table] = []
     parent: Table | None = None
-    for i, t in enumerate(get_tables(text)):
+    idx = 0
+    for t in get_tables(text):
         raw = t["content"]
         if parent is not None and is_headerless_continuation(parent, raw):
             header = [("" if c.synthetic else c.name) for c in parent.columns]
-            tbl = parse_table(raw, source=source, table_index=i,
+            tbl = parse_table(raw, source=source, table_index=idx,
                               header_override=header)
-            print(f"    [continuation] table #{i} has no header — inherited from "
+            print(f"    [continuation] table #{idx} has no header — inherited from "
                   f"#{parent.table_index}, {len(tbl.data_records())} row(s) recovered")
+            out.append(tbl)
+            idx += 1
         else:
-            # Full-replacement header finding: the LLM reads the first rows and
-            # says which is the header. Falls back to row 0 on any failure.
-            hp = _header_plan_for(raw, llm=llm)
-            tbl = parse_table(raw, source=source, table_index=i, header_rows=hp)
-            parent = tbl                     # this one owns its header
-        out.append(tbl)
+            # A BANDED table (its species header reappears lower down for the next
+            # block of taxa) is cut into one sub-grid per band FIRST, so each band
+            # parses and transposes on its own instead of folding later blocks into
+            # bogus duplicate columns. An ordinary table returns as a single band.
+            for band in split_banded_grid(raw, llm=llm):
+                # Full-replacement header finding: the LLM reads the first rows and
+                # says which is the header. Falls back to row 0 on any failure.
+                hp = _header_plan_for(band, llm=llm)
+                tbl = parse_table(band, source=source, table_index=idx, header_rows=hp)
+                parent = tbl                 # this one owns its header
+                out.append(tbl)
+                idx += 1
     return out
 
 
@@ -194,11 +267,21 @@ def maybe_transpose(table: Table):
 
     rotated = transpose_table(table)
 
-    # Cell-count guard: rotation must preserve the populated data cells.
+    # Content guard: rotation must preserve every populated value — but it
+    # legitimately MOVES labels between the header and the first column (the trait
+    # names that sat in column 0 become the new column headers; the species that
+    # were column headers become the identifier column). So count HEADERS + BODY
+    # together: a transpose that only relocates labels shows no loss, while a
+    # transpose that truly drops or mangles a value still shrinks the multiset and
+    # is rejected. (Counting body cells alone flagged the trait labels as "lost"
+    # and wrongly discarded valid species-in-columns rotations, e.g. Fondjo2024.)
     def _cells(t):
-        return sorted(clean_text(v) for r in t.data_records()
-                      for k, v in r.items()
-                      if not k.startswith("_") and str(v or "").strip())
+        body = [clean_text(v) for r in t.data_records()
+                for k, v in r.items()
+                if not k.startswith("_") and str(v or "").strip()]
+        heads = [clean_text(c.name) for c in t.columns
+                 if not getattr(c, "synthetic", False) and str(c.name or "").strip()]
+        return sorted(body + heads)
 
     before, after = _cells(table), _cells(rotated)
     if len(after) < len(before):
@@ -325,7 +408,17 @@ def agent_find_header(grid_lines: list, llm=None, preview_rows: int = 4) -> dict
         "- A STACKED header spans two rows: a grouping label on top ('Successional "
         "stages') over the real names below ('G | H | C'). Then BOTH rows are the "
         "header and should be joined.\n"
-        "- A DATA row holds mostly numbers or specimen names; never the header.\n\n"
+        "- A TRANSPOSED (matrix) header is a row filled with DISTINCT organism / "
+        "taxon names spanning the columns ('Pteropera carnapi | Pteropera carnapi "
+        "| Pteropera descampsi | Pteropera descampsi | ...'), often with a "
+        "sex/stage band ('Male | Female | Male | Female') directly below it and "
+        "trait names ('HeadL', 'Body length') running DOWN the first column. Here "
+        "the species run ACROSS the top, so that row IS the header — select it "
+        "(and join the sex/stage row below it). Do NOT dismiss it as data: the "
+        "'specimen names = data' rule applies only to names running DOWN a column "
+        "(one specimen per row), never to distinct taxa spread ACROSS a row.\n"
+        "- A DATA row holds mostly numbers, or one specimen/taxon name per row "
+        "running DOWN the first column; never the header.\n\n"
         "Answer ONLY JSON: {\"header_rows\": [<row numbers>], \"join\": "
         "true|false}. 'join' is true only when header_rows has more than one row "
         "to combine. Do not rewrite any text; only give row numbers."
@@ -2119,6 +2212,22 @@ def map_and_group(sources, paper_text, out_dir=".", llm=None):
         decomposed.extend(agent_decompose_table(table, paper_text, llm=llm))
     tables = decomposed
     print(f"  {len(tables)} table(s) after decomposition")
+
+    # Second orientation pass — decomposition can EXPOSE a transposed layout the
+    # raw table hid. A species x trait matrix with a two-row header (species, then
+    # a Male/Female band) parses with its header mangled, so the FIRST orientation
+    # pass sees value strings in the header and skips it. Once decomposition
+    # rebuilds it into a clean species-in-header grid, it IS transposable — the
+    # species now sit along the header and the trait names down the first column.
+    # maybe_transpose is guarded (rotates only when the header is mostly taxa and
+    # the first column is not, and never drops a cell), so a table already in the
+    # right orientation — traits in the header after pass 1 — passes through
+    # untouched and cannot be flipped back.
+    reoriented: list[Table] = []
+    for table in tables:
+        rotated, _ = maybe_transpose(table)
+        reoriented.append(rotated)
+    tables = reoriented
 
     # Tables are often ONE logical table split across pages: identical headers
     # and identical column semantics, only different rows. The per-column LLM

@@ -1,17 +1,47 @@
 {
-  "Morphological Trait": {
+  "Taxa": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Names the specific taxonomic identity of the ant species found."
+  },
+  "Functional Groups": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Names the specific biological characteristic measured for the insect."
+    "reasoning": "This column categorizes the functional group of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Classifies the functional group of the ant community.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Functional Groups",
+    "basisOfRecord": "Functional groups identified within ant communities across different spatial and temporal fragments (N1, N2, N3)",
+    "basisOfRecord_reasoning": "The functional groups are a classification derived from the ant communities sampled across the different study sites (fragments N1, N2, N3) and seasons, used to evaluate spatial and temporal variation.",
+    "measurementMethod": "Sampling of ants during the dry and rainy seasons using mini-Winkler bags.",
+    "measurementMethod_reasoning": "The text states that ants were sampled during the dry and rainy seasons using mini-Winkler bags, and this data was used to evaluate functional traits and diversity, which led to the identification of functional groups."
   },
-  "Abbreviation": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a label/code for the trait, not a measurement or location."
+  "N1": {
+    "field": "measurementValue",
+    "value_column": true,
+    "measurementStatistic": "mean",
+    "reasoning": "N1 represents a measured value derived from the study.",
+    "category": null,
+    "reasoning_relevance": "Represents a sampling site identifier, not an organism trait."
   },
-  "Functional Importance": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "Provides context/interpretation, not a measurement, location, or identification."
+  "N2": {
+    "field": "measurementValue",
+    "value_column": true,
+    "measurementStatistic": "mean",
+    "reasoning": "N2 represents a measured value derived from the study.",
+    "category": null,
+    "reasoning_relevance": "Represents a sampling site identifier, not an organism trait."
+  },
+  "N3": {
+    "field": "measurementValue",
+    "value_column": true,
+    "measurementStatistic": "mean",
+    "reasoning": "N3 represents a measured value derived from the study.",
+    "category": null,
+    "reasoning_relevance": "Represents a sampling site identifier, not an organism trait."
   }
 }

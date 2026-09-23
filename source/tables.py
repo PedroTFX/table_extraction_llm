@@ -173,6 +173,14 @@ def _is_unit_token(v: str) -> bool:
     return bool(_UNIT_DIM_RE.match(v))
 
 
+# Closed sex vocabulary for recognising a 'Male | Female | ...' band as a real
+# second header row (see _looks_like_subheader). Symbols and the common
+# abbreviations are included; single letters 'm'/'f' are deliberately left OUT —
+# they collide with real data cells.
+_SEX_SUBHEADER = {"male", "female", "males", "females", "both",
+                  "♂", "♀", "♂", "♀"}
+
+
 def _looks_like_subheader(cells, header_cols):
     """Heuristic: is this row a CONTINUATION of the header (e.g. a units row like
     '| (mm) | (mm) | (mm) |') rather than data?
@@ -193,7 +201,17 @@ def _looks_like_subheader(cells, header_cols):
     if not rest:
         return False
     unit_like = sum(1 for v in rest if _is_unit_token(v))
-    return unit_like >= max(1, len(rest) // 2 + 1)   # majority are unit-like
+    if unit_like >= max(1, len(rest) // 2 + 1):      # majority are unit-like
+        return True
+    # A SEX BAND (e.g. 'Male | Female | Male | Female' sitting under a species
+    # colspan) is a real second header row, not data: its cells are drawn from a
+    # tiny closed sex vocabulary and repeat across the row. Merging it pairs each
+    # species column with its sex ('Pteropera carnapi ... Male'); leaving it as
+    # data scrambles a species-in-columns matrix (Fondjo2024, Gomez2022). Safe
+    # against the capitalised-data-value trap the docstring warns about, because a
+    # trait DATA row is not made up of sex tokens in (almost) every column.
+    sex_like = sum(1 for v in rest if v.strip().lower() in _SEX_SUBHEADER)
+    return sex_like >= max(2, len(rest) // 2 + 1)
 
 
 def _merge_header(columns, sub_cells):
@@ -1189,10 +1207,42 @@ def transpose_table(table, identifier_header: str = "Species"):
         seen[name] = n
         trait_names.append(name if n == 1 else f"{name} ({n})")
 
-    lines = [" | ".join([identifier_header] + trait_names)]
-    for c in others:
-        row = [_pipe_safe(c.name)] + [_pipe_safe(r.get(c.name, "")) for r in recs]
-        lines.append(" | ".join(row))
+    # A transposed table with a Male/Female band carries the sex INSIDE each
+    # species-header cell ('Pteropera carnapi ... Male'). Left in the identifier it
+    # glues to verbatimIdentification and no GT species matches. Peel a trailing
+    # sex token off each header into its own 'sex' column so the identifier stays a
+    # clean taxon and the sex lands where it belongs. Only done when a header
+    # actually carries a sex token, so ordinary transposed tables are untouched.
+    peeled = [_peel_sex(c.name) for c in others]
+    has_sex = any(sx for _, sx in peeled)
+
+    header = [identifier_header] + (["sex"] if has_sex else []) + trait_names
+    lines = [" | ".join(header)]
+    for c, (species, sx) in zip(others, peeled):
+        cells = [_pipe_safe(species)]
+        if has_sex:
+            cells.append(_pipe_safe(sx or ""))
+        cells += [_pipe_safe(r.get(c.name, "")) for r in recs]
+        lines.append(" | ".join(cells))
 
     return parse_table("\n".join(lines), source=table.source,
                        table_index=table.table_index)
+
+
+# Trailing sex token on a transposed species-header cell, mapped to the GT
+# vocabulary (male / female / both). Closed set, so this never fires on a taxon.
+_SEX_SUFFIX = re.compile(r"[\s,]+(males?|females?|both|♂|♀)\s*$", re.I)
+_SEX_CANON = {"male": "male", "males": "male", "female": "female",
+              "females": "female", "both": "both", "♂": "male", "♀": "female"}
+
+
+def _peel_sex(header: str):
+    """('Pteropera carnapi ... Male') -> ('Pteropera carnapi ...', 'male').
+
+    Returns (identifier_without_sex, sex_or_None). Leaves the header untouched
+    (sex=None) when there is no trailing sex token."""
+    m = _SEX_SUFFIX.search(header or "")
+    if not m:
+        return header, None
+    sex = _SEX_CANON.get(m.group(1).lower())
+    return header[:m.start()].strip().rstrip(",").strip(), sex

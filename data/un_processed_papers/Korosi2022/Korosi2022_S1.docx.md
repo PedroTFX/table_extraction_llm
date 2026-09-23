@@ -1,47 +1,148 @@
+<!-- page 1 of 1 -->
+
 Supplementary Material to the manuscript entitled ’Pace of life and mobility as key factors to survive in farmland – relationships between functional traits of diurnal Lepidoptera and landscape structure’.
 
-Table S1. Traits of buterflies and burnet moths used in the analysis with species names abbreviations, the number of sites with occurrences (Occ.) and total abundance (Ab.) of all 104 species.
+Table S1. Traits of butterflies and burnet moths used in the analysis with species names abbreviations, the number of sites with occurrences (Occ.) and total abundance (Ab.) of all 104 species.
 
-<table><tr><td>Species</td><td>Mobility</td><td>Larval diet</td><td>Overw. stage</td><td>Voltinism</td><td>HAT</td><td>HAST</td><td>Abbreviation</td><td>Occ.</td><td>Ab.</td></tr><tr><td>Adscita geryon</td><td>2</td><td>M</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Ads.ger</td><td>1</td><td>1</td></tr><tr><td>Adscita statices</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>2</td><td>3</td><td>Ads.sta</td><td>6</td><td>13</td></tr><tr><td>Aglais io</td><td>3</td><td>M</td><td>Adult</td><td>1.5</td><td>3</td><td>3</td><td>Agl.io</td><td>66</td><td>344</td></tr><tr><td>Aglais urticae</td><td>3</td><td>M</td><td>Adult</td><td>2</td><td>2</td><td>2</td><td>Agl.urt</td><td>91</td><td>586</td></tr><tr><td>Anthocharis cardamines</td><td>2</td><td>O</td><td>Pupa</td><td>1</td><td>3</td><td>5</td><td>Ant.car</td><td>18</td><td>37</td></tr><tr><td>Apatura ilia</td><td>2.5</td><td>O</td><td>Larva</td><td>1.5</td><td>1</td><td>2</td><td>Apa.ili</td><td>4</td><td>4</td></tr><tr><td>Apatura iris</td><td>2.5</td><td>O</td><td>Larva</td><td>1</td><td>1</td><td>1</td><td>Apa.iri</td><td>4</td><td>6</td></tr><tr><td>Aphantopus hyperantus</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>4</td><td>8</td><td>Aph.hyp</td><td>70</td><td>1368</td></tr><tr><td>Aporia crataegi</td><td>2.5</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>5</td><td>Apo.cra</td><td>8</td><td>59</td></tr><tr><td>Araschnia levana</td><td>2.5</td><td>M</td><td>Pupa</td><td>2.5</td><td>2</td><td>3</td><td>Ara.lev</td><td>33</td><td>132</td></tr><tr><td>Argynnis adippe</td><td>2.5</td><td>NO</td><td>Egg</td><td>1</td><td>2</td><td>4</td><td>Arg.adi</td><td>13</td><td>61</td></tr><tr><td>Argynnis aglaja</td><td>2.5</td><td>P</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Arg.agl</td><td>12</td><td>65</td></tr><tr><td>Argynnis niobe</td><td>2.5</td><td>NO</td><td>Egg</td><td>1</td><td>1</td><td>2</td><td>Arg.nio</td><td>1</td><td>5</td></tr><tr><td>Argynnis paphia</td><td>2.5</td><td>P</td><td>Larva</td><td>1</td><td>1</td><td>1</td><td>Arg.pap</td><td>43</td><td>406</td></tr><tr><td>Aricia agestis</td><td>1.5</td><td>P</td><td>Larva</td><td>2.5</td><td>2</td><td>3</td><td>Ari.age</td><td>18</td><td>34</td></tr><tr><td>Aricia artaxerxes</td><td>1.5</td><td>P</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Ari.art</td><td>2</td><td>6</td></tr><tr><td>Aricia eumedon</td><td>1</td><td>NO</td><td>Larva</td><td>1</td><td>3</td><td>6</td><td>Ari.eum</td><td>4</td><td>37</td></tr><tr><td>Boloria dia</td><td>2</td><td>NO</td><td>Larva</td><td>2.5</td><td>2</td><td>2</td><td>Bol.dia</td><td>17</td><td>198</td></tr><tr><td>Boloria eunomia</td><td>1</td><td>M</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Bol.eun</td><td>4</td><td>49</td></tr><tr><td>Boloria euphrosyne</td><td>2</td><td>NO</td><td>Larva</td><td>1</td><td>2</td><td>3</td><td>Bol.eup</td><td>8</td><td>28</td></tr><tr><td>Boloria selene</td><td>1.5</td><td>NO</td><td>Larva</td><td>1.5</td><td>3</td><td>5</td><td>Bol.sel</td><td>9</td><td>19</td></tr><tr><td>Boloria titania</td><td>2</td><td>P</td><td>Larva</td><td>1</td><td>2</td><td>3</td><td>Bol.tit</td><td>2</td><td>12</td></tr><tr><td>Brenthis ino</td><td>1</td><td>O</td><td>Egg</td><td>1</td><td>1</td><td>3</td><td>Bre.ino</td><td>16</td><td>141</td></tr><tr><td>Callophrys rubi</td><td>2</td><td>P</td><td>Pupa</td><td>1</td><td>3</td><td>5</td><td>Cal.rub</td><td>4</td><td>9</td></tr><tr><td>Carcharodus alceae</td><td>3</td><td>O</td><td>Larva</td><td>2</td><td>2</td><td>4</td><td>Car.alc</td><td>3</td><td>7</td></tr><tr><td>Carterocephalus palaemon</td><td>1</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>6</td><td>Car.pal</td><td>10</td><td>19</td></tr><tr><td>Celastrina argiolus</td><td>2.5</td><td>P</td><td>Pupa</td><td>2.5</td><td>1</td><td>2</td><td>Cel.arg</td><td>8</td><td>10</td></tr><tr><td>Coenonympha arcania</td><td>2</td><td>O</td><td>Larva</td><td>1.5</td><td>2</td><td>4</td><td>Coe.arc</td><td>13</td><td>169</td></tr><tr><td>Coenonympha glycerion</td><td>1.5</td><td>O</td><td>Larva</td><td>1</td><td>2</td><td>2</td><td>Coe.gly</td><td>5</td><td>34</td></tr><tr><td>Coenonympha pamphilus</td><td>2</td><td>O</td><td>Larva</td><td>3</td><td>3</td><td>5</td><td>Coe.pam</td><td>87</td><td>1548</td></tr><tr><td>Coenonympha tullia</td><td>1</td><td>P</td><td>Larva</td><td>1</td><td>1</td><td>1</td><td>Coe.tul</td><td>2</td><td>10</td></tr><tr><td>Colias alfacariensis</td><td>3</td><td>O</td><td>Larva</td><td>3</td><td>2</td><td>3</td><td>Col.alf</td><td>7</td><td>15</td></tr><tr><td>Colias croceus</td><td>4</td><td>O</td><td>Larva</td><td>2</td><td>2</td><td>5</td><td>Col.cro</td><td>3</td><td>4</td></tr><tr><td>Colias hyale</td><td>3</td><td>O</td><td>Larva</td><td>2.5</td><td>2</td><td>5</td><td>Col.hya</td><td>30</td><td>88</td></tr><tr><td>Cupido argiades</td><td>2.5</td><td>O</td><td>Larva</td><td>3</td><td>4</td><td>6</td><td>Cup.arg</td><td>36</td><td>126</td></tr><tr><td>Cupido minimus</td><td>1</td><td>O</td><td>Larva</td><td>2</td><td>2</td><td>3</td><td>Cup.min</td><td>4</td><td>25</td></tr><tr><td>Erebia aethiops</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Ere.aet</td><td>1</td><td>13</td></tr><tr><td>Erebia ligea</td><td>2</td><td>O</td><td>Egg</td><td>1</td><td>1</td><td>1</td><td>Ere.lig</td><td>3</td><td>13</td></tr><tr><td>Erebia medusa</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>6</td><td>Ere.med</td><td>14</td><td>69</td></tr><tr><td>Erebia meolans</td><td>2</td><td>NO</td><td>Larva</td><td>1</td><td>2</td><td>2</td><td>Ere.meo</td><td>3</td><td>56</td></tr><tr><td>Erynnis tages</td><td>2</td><td>O</td><td>Larva</td><td>1.5</td><td>2</td><td>4</td><td>Ery.tag</td><td>15</td><td>42</td></tr><tr><td>Glaucopsyche alexis</td><td>1</td><td>O</td><td>Pupa</td><td>1</td><td>2</td><td>3</td><td>Gla.ale</td><td>1</td><td>1</td></tr><tr><td>Gonepteryx rhamni</td><td>2</td><td>O</td><td>Adult</td><td>1</td><td>1</td><td>2</td><td>Gon.rha</td><td>50</td><td>235</td></tr><tr><td>Hamearis lucina</td><td>1</td><td>NO</td><td>Pupa</td><td>1</td><td>3</td><td>4</td><td>Ham.luc</td><td>2</td><td>2</td></tr><tr><td>Issoria lathonia</td><td>3</td><td>NO</td><td>Pupa</td><td>3</td><td>3</td><td>5</td><td>Iss.lat</td><td>23</td><td>71</td></tr><tr><td>Jordanita globulariae</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>5</td><td>Jor.glo</td><td>1</td><td>1</td></tr><tr><td>Lasiommata maera</td><td>2</td><td>O</td><td>Larva</td><td>1.5</td><td>2</td><td>4</td><td>Las.mae</td><td>4</td><td>19</td></tr><tr><td>Lasiommata megera</td><td>2</td><td>O</td><td>Larva</td><td>2.5</td><td>2</td><td>4</td><td>Las.meg</td><td>15</td><td>44</td></tr><tr><td>Leptidea sp.</td><td>1</td><td>O</td><td>Pupa</td><td>2.5</td><td>3</td><td>5</td><td>Lep.sp</td><td>48</td><td>298</td></tr><tr><td>Limenitis camilla</td><td>2</td><td>NO</td><td>Larva</td><td>1.5</td><td>1</td><td>1</td><td>Lim.cam</td><td>16</td><td>41</td></tr><tr><td>Limenitis populi</td><td>2</td><td>NO</td><td>Larva</td><td>1</td><td>1</td><td>1</td><td>Lim.pop</td><td>1</td><td>1</td></tr><tr><td>Lycaena dispar</td><td>2</td><td>NO</td><td>Larva</td><td>2</td><td>3</td><td>4</td><td>Lyc.dis</td><td>1</td><td>4</td></tr><tr><td>Lycaena hippothoe</td><td>2</td><td>NO</td><td>Larva</td><td>1</td><td>2</td><td>3</td><td>Lyc.hip</td><td>2</td><td>2</td></tr><tr><td>Lycaena phlaeas</td><td>3</td><td>NO</td><td>Larva</td><td>2.5</td><td>2</td><td>5</td><td>Lyc.phl</td><td>32</td><td>55</td></tr><tr><td>Lycaena tityrus</td><td>2</td><td>NO</td><td>Larva</td><td>2</td><td>3</td><td>6</td><td>Lyc.tit</td><td>24</td><td>67</td></tr><tr><td>Maculinea alcon XER</td><td>1</td><td>M</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Mac.alc</td><td>1</td><td>7</td></tr><tr><td>Maculinea nausithous</td><td>1</td><td>M</td><td>Larva</td><td>1</td><td>1</td><td>1</td><td>Mac.nau</td><td>4</td><td>8</td></tr><tr><td>Maculinea teleius</td><td>1</td><td>M</td><td>Larva</td><td>1</td><td>1</td><td>1</td><td>Mac.tel</td><td>1</td><td>2</td></tr><tr><td>Maniola jurtina</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>4</td><td>6</td><td>Man.jur</td><td>87</td><td>5739</td></tr><tr><td>Melanargia galathea</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>2</td><td>4</td><td>Mel.gal</td><td>70</td><td>3248</td></tr><tr><td>Melitaea athalia</td><td>2</td><td>P</td><td>Larva</td><td>1</td><td>3</td><td>4</td><td>Mel.ath</td><td>12</td><td>79</td></tr><tr><td>Melitaea aurelia</td><td>1</td><td>NO</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Mel.aur</td><td>2</td><td>7</td></tr><tr><td>Melitaea britomartis</td><td>1</td><td>P</td><td>Larva</td><td>1</td><td>2</td><td>2</td><td>Mel.bri</td><td>5</td><td>95</td></tr><tr><td>Melitaea cinxia</td><td>2</td><td>P</td><td>Larva</td><td>1.5</td><td>1</td><td>2</td><td>Mel.cin</td><td>5</td><td>27</td></tr><tr><td>Melitaea diamina</td><td>2</td><td>P</td><td>Larva</td><td>1</td><td>3</td><td>4</td><td>Mel.dia</td><td>10</td><td>34</td></tr><tr><td>Melitaea didyma</td><td>2</td><td>P</td><td>Larva</td><td>1.5</td><td>2</td><td>3</td><td>Mel.did</td><td>3</td><td>70</td></tr><tr><td>Nymphalis antiopa</td><td>2.5</td><td>P</td><td>Adult</td><td>1</td><td>1</td><td>2</td><td>Nym.ant</td><td>3</td><td>3</td></tr><tr><td>Nymphalis polychloros</td><td>2.5</td><td>P</td><td>Adult</td><td>1</td><td>1</td><td>2</td><td>Nym.pol</td><td>4</td><td>4</td></tr><tr><td>Ochlodes sylvanus</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>4</td><td>7</td><td>Och.syl</td><td>57</td><td>212</td></tr><tr><td>Papilio machaon</td><td>3</td><td>P</td><td>Pupa</td><td>2</td><td>3</td><td>7</td><td>Pap.mac</td><td>26</td><td>50</td></tr><tr><td>Pararge aegeria</td><td>2</td><td>O</td><td>Pupa</td><td>2.5</td><td>1</td><td>2</td><td>Par.aeg</td><td>21</td><td>63</td></tr><tr><td>Pieris brassicae</td><td>3</td><td>O</td><td>Pupa</td><td>3</td><td>2</td><td>5</td><td>Pie.bra</td><td>54</td><td>346</td></tr><tr><td>Pieris napi</td><td>3</td><td>O</td><td>Pupa</td><td>3.5</td><td>4</td><td>8</td><td>Pie.nap</td><td>78</td><td>688</td></tr><tr><td>Pieris rapae</td><td>3</td><td>O</td><td>Pupa</td><td>4</td><td>2</td><td>5</td><td>Pie.rap</td><td>94</td><td>2457</td></tr><tr><td>Plebeius argus</td><td>1.5</td><td>O</td><td>Egg</td><td>1.5</td><td>2</td><td>3</td><td>Ple.arg</td><td>5</td><td>49</td></tr><tr><td>Plebeius argyrognomon</td><td>1.5</td><td>O</td><td>Egg</td><td>2.5</td><td>2</td><td>3</td><td>Pl.argy</td><td>5</td><td>68</td></tr><tr><td>Polygonia c-album</td><td>3</td><td>P</td><td>Adult</td><td>2</td><td>1</td><td>2</td><td>Pol.c-a</td><td>26</td><td>47</td></tr><tr><td>Polyommatus bellargus</td><td>2</td><td>O</td><td>Larva</td><td>2.5</td><td>2</td><td>3</td><td>Pol.bel</td><td>12</td><td>142</td></tr><tr><td>Polyommatus coridon</td><td>1.5</td><td>O</td><td>Egg</td><td>1</td><td>2</td><td>4</td><td>Pol.cor</td><td>8</td><td>179</td></tr><tr><td>Polyommatus daphnis</td><td>1.5</td><td>O</td><td>Egg</td><td>1</td><td>1</td><td>1</td><td>Pol.dap</td><td>1</td><td>1</td></tr><tr><td>Polyommatus icarus</td><td>2</td><td>O</td><td>Larva</td><td>2.5</td><td>3</td><td>7</td><td>Pol.ica</td><td>91</td><td>1181</td></tr><tr><td>Polyommatus semiargus</td><td>1.5</td><td>O</td><td>Larva</td><td>2.5</td><td>3</td><td>5</td><td>Pol.sem</td><td>58</td><td>513</td></tr><tr><td>Polyommatus thersites</td><td>2</td><td>NO</td><td>Larva</td><td>2</td><td>1</td><td>2</td><td>Pol.the</td><td>4</td><td>122</td></tr><tr><td>Pyrgus armoricanus</td><td>2</td><td>NO</td><td>Larva</td><td>2.5</td><td>3</td><td>4</td><td>Pyr.arm</td><td>1</td><td>1</td></tr><tr><td>Pyrgus malvae</td><td>2</td><td>O</td><td>Pupa</td><td>1.5</td><td>4</td><td>6</td><td>Pyr.mal</td><td>9</td><td>19</td></tr><tr><td>Pyronia tithonus</td><td>1.5</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>5</td><td>Pyr.tit</td><td>5</td><td>95</td></tr><tr><td>Satyrium acaciae</td><td>1</td><td>M</td><td>Egg</td><td>1</td><td>2</td><td>3</td><td>Sat.aca</td><td>1</td><td>1</td></tr><tr><td>Satyrium pruni</td><td>2.5</td><td>NO</td><td>Egg</td><td>1</td><td>1</td><td>2</td><td>Sat.pru</td><td>11</td><td>35</td></tr><tr><td>Satyrium spini</td><td>2</td><td>NO</td><td>Egg</td><td>1</td><td>2</td><td>4</td><td>Sat.spi</td><td>2</td><td>3</td></tr><tr><td>Satyrium w-album</td><td>1.5</td><td>NO</td><td>Egg</td><td>1</td><td>1</td><td>2</td><td>Sat.w-a</td><td>3</td><td>4</td></tr><tr><td>Spialia sertorius</td><td>2</td><td>M</td><td>Larva</td><td>2</td><td>2</td><td>3</td><td>Spi.ser</td><td>4</td><td>13</td></tr><tr><td>Thecla betulae</td><td>2</td><td>NO</td><td>Egg</td><td>1</td><td>1</td><td>2</td><td>The.bet</td><td>1</td><td>1</td></tr><tr><td>Thymelicus lineola</td><td>2</td><td>O</td><td>Egg</td><td>1</td><td>4</td><td>7</td><td>Thy.lin</td><td>70</td><td>1073</td></tr><tr><td>Thymelicus sylvestris</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>5</td><td>Thy.syl</td><td>39</td><td>245</td></tr><tr><td>Vanessa atalanta</td><td>4</td><td>M</td><td>Adult</td><td>3.5</td><td>4</td><td>4</td><td>Van.ata</td><td>45</td><td>72</td></tr><tr><td>Zygaena carniolica</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>1</td><td>2</td><td>Zyg.car</td><td>1</td><td>15</td></tr><tr><td>Zygaena ephialtes</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>3</td><td>5</td><td>Zyg.eph</td><td>2</td><td>8</td></tr><tr><td>Zygaena filipendulae</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>4</td><td>7</td><td>Zyg.fil</td><td>17</td><td>86</td></tr><tr><td>Zygaena lonicerae</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>2</td><td>4</td><td>Zyg.lon</td><td>1</td><td>3</td></tr><tr><td>Zygaena loti</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>2</td><td>3</td><td>Zyg.lot</td><td>11</td><td>113</td></tr><tr><td>Zygaena purpuralis</td><td>2</td><td>NO</td><td>Larva</td><td>1</td><td>2</td><td>4</td><td>Zyg.pur</td><td>4</td><td>99</td></tr><tr><td>Zygaena transalpina</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>2</td><td>4</td><td>Zyg.tra</td><td>4</td><td>28</td></tr><tr><td>Zygaena trifolii</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>1</td><td>3</td><td>Zyg.tri</td><td>2</td><td>25</td></tr><tr><td>Zygaena viciae</td><td>2</td><td>O</td><td>Larva</td><td>1</td><td>4</td><td>6</td><td>Zyg.vic</td><td>4</td><td>21</td></tr></table>
+| **Species** | **Mobility** | **Larval diet** | **Overw.**<br>**stage** | **Voltinism** | **HAT** | **HAST** | **Abbreviation** | **Occ.** | **Ab.** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| *Adscita geryon* | 2 | M | Larva | 1 | 1 | 2 | Ads.ger | 1 | 1 |
+| *Adscita statices* | 2 | O | Larva | 1 | 2 | 3 | Ads.sta | 6 | 13 |
+| *Aglais io* | 3 | M | Adult | 1.5 | 3 | 3 | Agl.io | 66 | 344 |
+| *Aglais urticae* | 3 | M | Adult | 2 | 2 | 2 | Agl.urt | 91 | 586 |
+| *Anthocharis cardamines* | 2 | O | Pupa | 1 | 3 | 5 | Ant.car | 18 | 37 |
+| *Apatura ilia* | 2.5 | O | Larva | 1.5 | 1 | 2 | Apa.ili | 4 | 4 |
+| *Apatura iris* | 2.5 | O | Larva | 1 | 1 | 1 | Apa.iri | 4 | 6 |
+| *Aphantopus hyperantus* | 2 | O | Larva | 1 | 4 | 8 | Aph.hyp | 70 | 1368 |
+| *Aporia crataegi* | 2.5 | O | Larva | 1 | 3 | 5 | Apo.cra | 8 | 59 |
+| *Araschnia levana* | 2.5 | M | Pupa | 2.5 | 2 | 3 | Ara.lev | 33 | 132 |
+| *Argynnis adippe* | 2.5 | NO | Egg | 1 | 2 | 4 | Arg.adi | 13 | 61 |
+| *Argynnis aglaja* | 2.5 | P | Larva | 1 | 1 | 2 | Arg.agl | 12 | 65 |
+| *Argynnis niobe* | 2.5 | NO | Egg | 1 | 1 | 2 | Arg.nio | 1 | 5 |
+| *Argynnis paphia* | 2.5 | P | Larva | 1 | 1 | 1 | Arg.pap | 43 | 406 |
+| *Aricia agestis* | 1.5 | P | Larva | 2.5 | 2 | 3 | Ari.age | 18 | 34 |
+| *Aricia artaxerxes* | 1.5 | P | Larva | 1 | 1 | 2 | Ari.art | 2 | 6 |
+| *Aricia eumedon* | 1 | NO | Larva | 1 | 3 | 6 | Ari.eum | 4 | 37 |
+| *Boloria dia* | 2 | NO | Larva | 2.5 | 2 | 2 | Bol.dia | 17 | 198 |
+| *Boloria eunomia* | 1 | M | Larva | 1 | 1 | 2 | Bol.eun | 4 | 49 |
+| *Boloria euphrosyne* | 2 | NO | Larva | 1 | 2 | 3 | Bol.eup | 8 | 28 |
+| *Boloria selene* | 1.5 | NO | Larva | 1.5 | 3 | 5 | Bol.sel | 9 | 19 |
+| *Boloria titania* | 2 | P | Larva | 1 | 2 | 3 | Bol.tit | 2 | 12 |
+| *Brenthis ino* | 1 | O | Egg | 1 | 1 | 3 | Bre.ino | 16 | 141 |
+| *Callophrys rubi* | 2 | P | Pupa | 1 | 3 | 5 | Cal.rub | 4 | 9 |
+| *Carcharodus alceae* | 3 | O | Larva | 2 | 2 | 4 | Car.alc | 3 | 7 |
+| *Carterocephalus palaemon* | 1 | O | Larva | 1 | 3 | 6 | Car.pal | 10 | 19 |
+| *Celastrina argiolus* | 2.5 | P | Pupa | 2.5 | 1 | 2 | Cel.arg | 8 | 10 |
+| *Coenonympha arcania* | 2 | O | Larva | 1.5 | 2 | 4 | Coe.arc | 13 | 169 |
+| *Coenonympha glycerion* | 1.5 | O | Larva | 1 | 2 | 2 | Coe.gly | 5 | 34 |
+| *Coenonympha pamphilus* | 2 | O | Larva | 3 | 3 | 5 | Coe.pam | 87 | 1548 |
+| *Coenonympha tullia* | 1 | P | Larva | 1 | 1 | 1 | Coe.tul | 2 | 10 |
+| *Colias alfacariensis* | 3 | O | Larva | 3 | 2 | 3 | Col.alf | 7 | 15 |
+| *Colias croceus* | 4 | O | Larva | 2 | 2 | 5 | Col.cro | 3 | 4 |
+| *Colias hyale* | 3 | O | Larva | 2.5 | 2 | 5 | Col.hya | 30 | 88 |
+| *Cupido argiades* | 2.5 | O | Larva | 3 | 4 | 6 | Cup.arg | 36 | 126 |
+| *Cupido minimus* | 1 | O | Larva | 2 | 2 | 3 | Cup.min | 4 | 25 |
+| *Erebia aethiops* | 2 | O | Larva | 1 | 1 | 2 | Ere.aet | 1 | 13 |
+| *Erebia ligea* | 2 | O | Egg | 1 | 1 | 1 | Ere.lig | 3 | 13 |
+| *Erebia medusa* | 2 | O | Larva | 1 | 3 | 6 | Ere.med | 14 | 69 |
+| *Erebia meolans* | 2 | NO | Larva | 1 | 2 | 2 | Ere.meo | 3 | 56 |
+| *Erynnis tages* | 2 | O | Larva | 1.5 | 2 | 4 | Ery.tag | 15 | 42 |
+| *Glaucopsyche alexis* | 1 | O | Pupa | 1 | 2 | 3 | Gla.ale | 1 | 1 |
+| *Gonepteryx rhamni* | 2 | O | Adult | 1 | 1 | 2 | Gon.rha | 50 | 235 |
+| *Hamearis lucina* | 1 | NO | Pupa | 1 | 3 | 4 | Ham.luc | 2 | 2 |
+| *Issoria lathonia* | 3 | NO | Pupa | 3 | 3 | 5 | Iss.lat | 23 | 71 |
+| *Jordanita globulariae* | 2 | O | Larva | 1 | 3 | 5 | Jor.glo | 1 | 1 |
+| *Lasiommata maera* | 2 | O | Larva | 1.5 | 2 | 4 | Las.mae | 4 | 19 |
+| *Lasiommata megera* | 2 | O | Larva | 2.5 | 2 | 4 | Las.meg | 15 | 44 |
+| *Leptidea sp.* | 1 | O | Pupa | 2.5 | 3 | 5 | Lep.sp | 48 | 298 |
+| *Limenitis camilla* | 2 | NO | Larva | 1.5 | 1 | 1 | Lim.cam | 16 | 41 |
+| *Limenitis populi* | 2 | NO | Larva | 1 | 1 | 1 | Lim.pop | 1 | 1 |
+| *Lycaena dispar* | 2 | NO | Larva | 2 | 3 | 4 | Lyc.dis | 1 | 4 |
+| *Lycaena hippothoe* | 2 | NO | Larva | 1 | 2 | 3 | Lyc.hip | 2 | 2 |
+| *Lycaena phlaeas* | 3 | NO | Larva | 2.5 | 2 | 5 | Lyc.phl | 32 | 55 |
+| *Lycaena tityrus* | 2 | NO | Larva | 2 | 3 | 6 | Lyc.tit | 24 | 67 |
+| *Maculinea alcon XER* | 1 | M | Larva | 1 | 1 | 2 | Mac.alc | 1 | 7 |
+| *Maculinea nausithous* | 1 | M | Larva | 1 | 1 | 1 | Mac.nau | 4 | 8 |
+| *Maculinea teleius* | 1 | M | Larva | 1 | 1 | 1 | Mac.tel | 1 | 2 |
+| *Maniola jurtina* | 2 | O | Larva | 1 | 4 | 6 | Man.jur | 87 | 5739 |
+| *Melanargia galathea* | 2 | O | Larva | 1 | 2 | 4 | Mel.gal | 70 | 3248 |
+| *Melitaea athalia* | 2 | P | Larva | 1 | 3 | 4 | Mel.ath | 12 | 79 |
+| *Melitaea aurelia* | 1 | NO | Larva | 1 | 1 | 2 | Mel.aur | 2 | 7 |
+| *Melitaea britomartis* | 1 | P | Larva | 1 | 2 | 2 | Mel.bri | 5 | 95 |
+| *Melitaea cinxia* | 2 | P | Larva | 1.5 | 1 | 2 | Mel.cin | 5 | 27 |
+| *Melitaea diamina* | 2 | P | Larva | 1 | 3 | 4 | Mel.dia | 10 | 34 |
+| *Melitaea didyma* | 2 | P | Larva | 1.5 | 2 | 3 | Mel.did | 3 | 70 |
+| *Nymphalis antiopa* | 2.5 | P | Adult | 1 | 1 | 2 | Nym.ant | 3 | 3 |
+| *Nymphalis polychloros* | 2.5 | P | Adult | 1 | 1 | 2 | Nym.pol | 4 | 4 |
+| *Ochlodes sylvanus* | 2 | O | Larva | 1 | 4 | 7 | Och.syl | 57 | 212 |
+| *Papilio machaon* | 3 | P | Pupa | 2 | 3 | 7 | Pap.mac | 26 | 50 |
+| *Pararge aegeria* | 2 | O | Pupa | 2.5 | 1 | 2 | Par.aeg | 21 | 63 |
+| *Pieris brassicae* | 3 | O | Pupa | 3 | 2 | 5 | Pie.bra | 54 | 346 |
+| *Pieris napi* | 3 | O | Pupa | 3.5 | 4 | 8 | Pie.nap | 78 | 688 |
+| *Pieris rapae* | 3 | O | Pupa | 4 | 2 | 5 | Pie.rap | 94 | 2457 |
+| *Plebeius argus* | 1.5 | O | Egg | 1.5 | 2 | 3 | Ple.arg | 5 | 49 |
+| *Plebeius argyrognomon* | 1.5 | O | Egg | 2.5 | 2 | 3 | Pl.argy | 5 | 68 |
+| *Polygonia c-album* | 3 | P | Adult | 2 | 1 | 2 | Pol.c-a | 26 | 47 |
+| *Polyommatus bellargus* | 2 | O | Larva | 2.5 | 2 | 3 | Pol.bel | 12 | 142 |
+| *Polyommatus coridon* | 1.5 | O | Egg | 1 | 2 | 4 | Pol.cor | 8 | 179 |
+| *Polyommatus daphnis* | 1.5 | O | Egg | 1 | 1 | 1 | Pol.dap | 1 | 1 |
+| *Polyommatus icarus* | 2 | O | Larva | 2.5 | 3 | 7 | Pol.ica | 91 | 1181 |
+| *Polyommatus semiargus* | 1.5 | O | Larva | 2.5 | 3 | 5 | Pol.sem | 58 | 513 |
+| *Polyommatus thersites* | 2 | NO | Larva | 2 | 1 | 2 | Pol.the | 4 | 122 |
+| *Pyrgus armoricanus* | 2 | NO | Larva | 2.5 | 3 | 4 | Pyr.arm | 1 | 1 |
+| *Pyrgus malvae* | 2 | O | Pupa | 1.5 | 4 | 6 | Pyr.mal | 9 | 19 |
+| *Pyronia tithonus* | 1.5 | O | Larva | 1 | 3 | 5 | Pyr.tit | 5 | 95 |
+| *Satyrium acaciae* | 1 | M | Egg | 1 | 2 | 3 | Sat.aca | 1 | 1 |
+| *Satyrium pruni* | 2.5 | NO | Egg | 1 | 1 | 2 | Sat.pru | 11 | 35 |
+| *Satyrium spini* | 2 | NO | Egg | 1 | 2 | 4 | Sat.spi | 2 | 3 |
+| *Satyrium w-album* | 1.5 | NO | Egg | 1 | 1 | 2 | Sat.w-a | 3 | 4 |
+| *Spialia sertorius* | 2 | M | Larva | 2 | 2 | 3 | Spi.ser | 4 | 13 |
+| *Thecla betulae* | 2 | NO | Egg | 1 | 1 | 2 | The.bet | 1 | 1 |
+| *Thymelicus lineola* | 2 | O | Egg | 1 | 4 | 7 | Thy.lin | 70 | 1073 |
+| *Thymelicus sylvestris* | 2 | O | Larva | 1 | 3 | 5 | Thy.syl | 39 | 245 |
+| *Vanessa atalanta* | 4 | M | Adult | 3.5 | 4 | 4 | Van.ata | 45 | 72 |
+| *Zygaena carniolica* | 2 | O | Larva | 1 | 1 | 2 | Zyg.car | 1 | 15 |
+| *Zygaena ephialtes* | 2 | O | Larva | 1 | 3 | 5 | Zyg.eph | 2 | 8 |
+| *Zygaena filipendulae* | 2 | O | Larva | 1 | 4 | 7 | Zyg.fil | 17 | 86 |
+| *Zygaena lonicerae* | 2 | O | Larva | 1 | 2 | 4 | Zyg.lon | 1 | 3 |
+| *Zygaena loti* | 2 | O | Larva | 1 | 2 | 3 | Zyg.lot | 11 | 113 |
+| *Zygaena purpuralis* | 2 | NO | Larva | 1 | 2 | 4 | Zyg.pur | 4 | 99 |
+| *Zygaena transalpina* | 2 | O | Larva | 1 | 2 | 4 | Zyg.tra | 4 | 28 |
+| *Zygaena trifolii* | 2 | O | Larva | 1 | 1 | 3 | Zyg.tri | 2 | 25 |
+| *Zygaena viciae* | 2 | O | Larva | 1 | 4 | 6 | Zyg.vic | 4 | 21 |
 
 Table S2. Correlation tests between mobility scores used in our study and in previous ones.
 
-<table><tr><td>Reference dataset</td><td>Geographic region</td><td>No. overlapping species</td><td>Correlation coefficient</td><td>p-value</td></tr><tr><td>Bink (1992)</td><td>NW Europe</td><td>89</td><td>Pearson&#x27;s r = 0.75</td><td>&lt;&lt; 0.001</td></tr><tr><td>Cowley et al. (2001)</td><td>UK</td><td>43</td><td>Spearman&#x27;s ρ = 0.82</td><td>&lt;&lt; 0.001</td></tr><tr><td>Komonen et al. (2004)</td><td>Finland</td><td>53</td><td>Pearson&#x27;s r = 0.52</td><td>&lt;&lt; 0.001</td></tr></table>
+| **Reference dataset** | **Geographic region** | **No. overlapping species** | **Correlation coefficient** | ***p*****-value** |
+| --- | --- | --- | --- | --- |
+| Bink (1992) | NW Europe | 89 | Pearson's *r* = 0.75 | &lt;&lt; 0.001 |
+| Cowley *et al.* (2001) | UK | 43 | Spearman's *ρ* = 0.82 | &lt;&lt; 0.001 |
+| Komonen *et al.* (2004) | Finland | 53 | Pearson's *r* = 0.52 | &lt;&lt; 0.001 |
 
-Figure S1. Map of an exemplary arable site at Oberkessach, Germany. 340 m a.s.l. A: the red line is the 1500 m long transect, a black line represents the 100 m bufer around the transect, the square is 1 km × 1 km large. B: landscape structure within the 100 m bufer. Yellow – arable fields, light green – grasslands, purple – edge vegetation, dark green – forest, grey – impervious surface (roads and builtin area).  
-![](images/3e396297aa376fc29044d7a10f2ad2ec3ddbc76985cb9ca1e9aaed6c513adfac.jpg)
+Figure S1. Map of an exemplary arable site at Oberkessach, Germany. 340 m a.s.l. A: the red line is the 1500 m long transect, a black line represents the 100 m buffer around the transect, the square is 1 km × 1 km large. B: landscape structure within the 100 m buffer. Yellow – arable fields, light green – grasslands, purple – edge vegetation, dark green – forest, grey – impervious surface (roads and built-in area).
 
-Figure S2. Map of an exemplary grassland site at Wolfbühl, Germany, 750 m a.s.l. A: the red line is the 1500 m long transect, a black line represents the 100 m bufer around the transect, the square is 1 km × 1 km large. B: landscape structure within the 100 m bufer. Light green – grasslands, blue – intensive grasslands, purple – edge vegetation, dark green – forest, grey – impervious surface (roads and built-in area).  
-![](images/d02a8664c051deb3babe9f95fa94cfda6384594d8c37faa622609fd1671ea58e.jpg)
+![Image block](doc:44a0ae3/tier:flash/page:1/block:7)
 
-Figure S3. Map of an exemplary nature reserve „Steinriegellandschaft” at Weikersheim, Germany, 305 m a.s.l. A: the red line is the 1500 m long transect, a black line represents the 100 m bufer around the transect, the purple line denotes the nature reserve. B: landscape structure within the 100 m bufer. Yellow – arable fields, light green – grasslands, purple – edge vegetation, dark green – forest, grey – impervious surface (roads and built-in area), white – other.  
-![](images/f9383ada339604eb02ff6b4487df5d5f691938ae1b07002e89b8f619b7dfded3.jpg)
+Figure S2. Map of an exemplary grassland site at Wolfbühl, Germany, 750 m a.s.l. A: the red line is the 1500 m long transect, a black line represents the 100 m buffer around the transect, the square is 1 km × 1 km large. B: landscape structure within the 100 m buffer. Light green – grasslands, blue – intensive grasslands, purple – edge vegetation, dark green – forest, grey – impervious surface (roads and built-in area).
 
-Figure S4. Environmental variables in the three site types. Leters indicate significant diferences after multiple comparisons (ANOVA and Tukey post-hoc tests). \* Proportion of semi-natural biotopes was square-root transformed. NR: nature reserves.  
-![](images/303ebbd6330568f5898b75b4260f2fee9218d2ab43e148825d81195a3bdb902a.jpg)
+![Image block](doc:44a0ae3/tier:flash/page:1/block:9)
 
-![](images/97935ef264185fb59dbfc3537d11c2afb5eef46336141c6e0a9cb54ffbf48099.jpg)
+Figure S3. Map of an exemplary nature reserve „Steinriegellandschaft” at Weikersheim, Germany, 305 m a.s.l. A: the red line is the 1500 m long transect, a black line represents the 100 m buffer around the transect, the purple line denotes the nature reserve. B: landscape structure within the 100 m buffer. Yellow – arable fields, light green – grasslands, purple – edge vegetation, dark green – forest, grey – impervious surface (roads and built-in area), white – other.
 
-![](images/33c90ede1145c9569a624dac7a847f65217ab51009fefa1dd1044dddbb7933fb.jpg)  
-Site type
+![Image block](doc:44a0ae3/tier:flash/page:1/block:11)
 
-![](images/101458db06f3294b5044234f7961c24ff9420a89f433cfbd803bbfc59399638a.jpg)  
-Site type
+Figure S4. Environmental variables in the three site types. Letters indicate significant differences after multiple comparisons (ANOVA and Tukey post-hoc tests). \* Proportion of semi-natural biotopes was square-root transformed. NR: nature reserves.
 
-![](images/49e53941bbbe84ea2103e88ae90dde8ac634ce307950ce1f221e352a3f47be7b.jpg)  
-Site type
+![Image block](doc:44a0ae3/tier:flash/page:1/block:13)
 
-![](images/55ea3f4134bd25dd85162a2ff24aecc48de049ad5150df066b0bb4649b5826b9.jpg)  
-Site type
+Figure S5. Species scores along the two RLQ axes. Label positions are slightly jittered for better visibility. For abbreviations of species names see SM Table S1.
 
-Figure S5. Species scores along the two RLQ axes. Label positions are slightly jitered for beter visibility. For abbreviations of species names see SM Table S1.
+![Image block](doc:44a0ae3/tier:flash/page:1/block:15)
 
-<table><tr><td></td><td></td><td></td><td>Aph hyp</td><td></td><td></td><td>d = 2</td></tr><tr><td></td><td></td><td>Pie.nap</td><td>Och. zyl Zyg.filMzg.jicThy.lin Cup.arg Pol.icaEre.med Pyr.titCoe.pam Syg.ephApo.cra Fby.som</td><td></td><td></td><td></td></tr><tr><td></td><td>Van.ata</td><td>Pie.braPie.rap</td><td>Lep.soAnt.carCol.hya Las.megCar.alcSp.RaebiPl.argYagl.ioCol.alfCol.alfAra.lev Agl.untIss.latPar.aegCal.rubApa.illLyc.ph con rha Sat. spiArg.adl Apa.fiEre.lig Bol.dia Mol. didEre.mg Mol. titPol.theSat.w-Mel.cin Ari.artAca.angSat.pru Lim cangNym.pol Nym.ant Arg.papPol.c-aCel.arg</td><td></td><td></td><td></td></tr></table>
-
-## References
+**References**
 
 Bink, F.A.. 1992. Ecologische Atlas van de Dagvlinders van Noordwest-Europa. Schuyt & Co., Haarlem, The Netherlands.
 
-Cowley, M.J.R., Thomas, C.D., Roy, D.B., Wilson, R.J., León-Cortés, J.L., Gutiérrez, D., Bulman, C.R., Quinn, R.M., Moss, D., Gaston, K., 2001. Density–distribution relationships in British buterflies. I. The efect of mobility and spatial scale. J. Anim. Ecol., 70, 410–425.
+Cowley, M.J.R., Thomas, C.D., Roy, D.B., Wilson, R.J., León-Cortés, J.L., Gutiérrez, D., Bulman, C.R., Quinn, R.M., Moss, D., Gaston, K., 2001. Density–distribution relationships in British butterflies. I. The effect of mobility and spatial scale. J. Anim. Ecol., 70, 410–425.
 
-Komonen, A., Grapputo, A., Kaitala, V., Kotiaho, J.S., Päivinen, J., 2004. The role of niche breadth. resource availability and range position on the life history of buterflies. Oikos, 105, 41–54.
+Komonen, A., Grapputo, A., Kaitala, V., Kotiaho, J.S., Päivinen, J., 2004. The role of niche breadth. resource availability and range position on the life history of butterflies. Oikos, 105, 41–54.

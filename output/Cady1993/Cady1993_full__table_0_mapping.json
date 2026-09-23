@@ -4,30 +4,34 @@
     "value_column": false,
     "reasoning": "This column contains the taxonomic identification of the focal insect specimen.",
     "category": null,
-    "reasoning_relevance": "This is the specimen's identity, not a measured trait or observation."
+    "reasoning_relevance": "This column provides the verbatim identification of the organism, not a measured trait."
   },
   "Host spider(s)": {
     "field": "measurementType",
     "value_column": true,
     "reasoning": "This column names the associated organism (host/prey), which is a biotic association trait.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Names the associated host spider, a biotic association.",
+    "reasoning_relevance": "Records the biotic association (host) of the acrocerid species.",
     "multi_value": false,
     "value_type": "categorical",
-    "canonicalType": "Host spider"
+    "canonicalType": "Host spider",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The text describes detailed field observations and laboratory behavioral observations of the host spiders (e.g., changes in behavior, web structure, size, and appearance) rather than physical measurements taken from preserved specimens or simple occurrences.",
+    "measurementMethod": "Field observation and laboratory behavioral observation",
+    "measurementMethod_reasoning": "The data regarding the hosts are derived from 'Detailed field measurements and behavioral observations of host spiders' and 'Laboratory behavioral observations' described in the text, which involve direct observation of live or recently deceased hosts."
   },
   "Location/date/collector": {
     "field": "verbatimLocality",
     "value_column": false,
-    "reasoning": "This column specifies the exact place and date where sampling or observation occurred.",
+    "reasoning": "This column specifies the exact place and date where the sampling or observation occurred.",
     "category": null,
-    "reasoning_relevance": "This is metadata about the sampling site, not an organism trait."
+    "reasoning_relevance": "Contains location, date, and sample size, which are excluded variables."
   },
   "Notes": {
-    "field": "measurementMethod",
+    "field": null,
     "value_column": false,
-    "reasoning": "This column provides context regarding specimen handling and range notes.",
+    "reasoning": "This column contains descriptive annotations and does not represent a measured trait or location.",
     "category": null,
-    "reasoning_relevance": "This is descriptive text, not a measurement, behavior, or trait."
+    "reasoning_relevance": "These are descriptive annotations, not measurements of organism traits."
   }
 }

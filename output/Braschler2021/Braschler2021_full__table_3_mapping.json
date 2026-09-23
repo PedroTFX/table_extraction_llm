@@ -1,42 +1,58 @@
 {
-  "Organism group Organism group": {
-    "field": null,
+  "Organism group": {
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column lists organism groups (plants, snails) but does not contain specific insect taxa."
+    "reasoning": "This column names the group studied, not a specific insect taxon.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the group of organisms studied, which is a biological classification."
   },
-  "Variable Variable": {
+  "Variable": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "These headers describe environmental or habitat properties being measured for the study."
+    "value_column": true,
+    "reasoning": "This column names the specific property or trait being measured for the organism.",
+    "category": null,
+    "reasoning_relevance": "Represents environmental or garden characteristics, not a trait of the organism."
   },
   "FDis df": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical degrees of freedom, not organism data."
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the degrees of freedom for the statistical test.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical degree of freedom, not a measurement of the organism."
   },
   "FDis F": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical F-values, not organism data."
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the calculated F-statistic value.",
+    "category": null,
+    "reasoning_relevance": "This is a test statistic, not a measurement of the organism."
   },
   "FDis p": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical p-values, not organism data."
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the p-value for the statistical test.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical p-value, not a measurement of the organism."
   },
   "FEve df": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical degrees of freedom, not organism data."
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the degrees of freedom for the effect test.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical degree of freedom, not a measurement of the organism."
   },
   "FEve F": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical F-values, not organism data."
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the calculated F-statistic value for the effect.",
+    "category": null,
+    "reasoning_relevance": "This is a test statistic, not a measurement of the organism."
   },
   "FEve p": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains statistical p-values, not organism data."
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the p-value for the effect test.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical p-value, not a measurement of the organism."
   }
 }

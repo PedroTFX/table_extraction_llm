@@ -1,59 +1,32 @@
 {
-  "Species": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "Contains the scientific names of the insect taxa observed in the study.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Scientific names represent discrete classifications of the organism's biology."
-  },
-  "total individuals": {
+  "repsonse": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents the total count of the organism observed in the sample.",
-    "category": null,
-    "reasoning_relevance": "This is a count of individuals, which falls under sample size/count."
+    "reasoning": "Reponese is a categorical trait being measured or observed."
   },
-  "number of sampling plots with occurrence": {
+  "repsonse (1)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the extent of the sampling effort across different plots.",
-    "category": null,
-    "reasoning_relevance": "This is a count of sampling units, which falls under sample size/count."
+    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
   },
-  "diet": {
+  "parameter": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the feeding habits or biological trait of the insect.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Discrete classifications (carnivorous, omnivorous, granivorous) of the organism's biology.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "diet",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The data concerns the diet preference (granivorous, omnivorous, carnivorous) of carabid beetles, which is a natural history/functional trait. Although the data is derived from studies involving collected specimens (pitfall trapping), the diet itself is a behavioral/ecological trait recorded through observation or analysis of the individuals, fitting the definition of HumanObservation for natural history traits.",
-    "measurementMethod": "Synthesis of existing functional trait data from specialized databases and literature",
-    "measurementMethod_reasoning": "The diet preferences were not measured during the current study but were obtained by gathering, harmonizing, and re-analyzing data from external sources, specifically the 'carabids.org' database, monographies, and previous studies on carabid functional traits.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "Parameter defines the independent variable or treatment applied."
   },
-  "mean body size [mm]": {
-    "field": "measurementType",
+  "estimate": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Represents the average physical dimension (body size) of the insect.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "A physical/anatomical measurement with units (mm).",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "mean body size [mm]",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (body size) is a morphological trait of the organism. Although the data was compiled from databases and literature, the original measurement of body size is inherently taken from a physical specimen (dead or preserved) or a detailed observation of a specimen, fitting the definition of PreservedSpecimen for morphological traits.",
-    "measurementMethod": "Data extracted from the carabids.org database and monographies, and compiled from previous studies on carabid functional traits.",
-    "measurementMethod_reasoning": "The text explicitly states that 'Carabid traits... and mean body size... were obtained from the database carabids.org (extracted in spring of 2019) [40], monographies as well as from previous studies on carabid functional traits'.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement is body size, and the context of the study uses millimeters (mm) for size classes (e.g., 'less than 6 mm; medium: 6–10 mm; large: greater than 10 mm').",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The text explicitly refers to the trait as 'mean body size' and Table S5 provides specific mean values for individual species."
+    "reasoning": "Estimate is the calculated result of the measurement."
+  },
+  "95% CI lower bound": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Lower bound is the calculated confidence interval boundary."
+  },
+  "95% CI upper bound": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Upper bound is the calculated confidence interval boundary."
   }
 }

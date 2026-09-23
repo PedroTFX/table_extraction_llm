@@ -1,17 +1,32 @@
 {
-  "Crop type": {
-    "field": "verbatimLocality",
+  "repsonse": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the land-use/vegetation type where sampling occurred."
+    "reasoning": "Reponese is a categorical trait being measured or observed."
   },
-  "Adjacent habitat type": {
-    "field": "verbatimLocality",
+  "repsonse (1)": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the surrounding environment/habitat where sampling occurred."
+    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
   },
-  "Number of sites": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This is a study variable (count of sampling locations), not an organism's trait or location."
+  "parameter": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Parameter defines the independent variable or treatment applied."
+  },
+  "estimate": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Estimate is the calculated result of the measurement."
+  },
+  "95% CI lower bound": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Lower bound is the calculated confidence interval boundary."
+  },
+  "95% CI upper bound": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Upper bound is the calculated confidence interval boundary."
   }
 }
