@@ -1,32 +1,89 @@
 {
-  "Site_ID": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "These are site codes used to identify the specific sampling location."
+  "species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column names the focal insect taxon, which is the required verbatim identification.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Verbatim identification of the focal organism."
   },
-  "Intensity": {
+  "Date of changing season": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header describes a measured property or condition of the sampling event."
+    "reasoning": "This records the temporal observation date for the specimen.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the timing of seasonal change (phenology).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Date of changing season"
   },
-  "Plant_rich": {
+  "Diet": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header defines the measured property (plant richness) for the organism/site."
+    "reasoning": "This describes the organism's feeding association (biotic trait).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's resource specialization (biotic association).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Diet",
+    "basisOfRecord": "oligolectic or polylectic",
+    "basisOfRecord_reasoning": "The diet trait (oligolectic or polylectic) is assigned to each bee species based on primary literature on their natural history, as stated in the text: 'Traits for diet, nesting, social behavior, and voltinism were assigned for each bee species based on primary literature on their natural history (Hurd et al. 1974; Hurd 1979; Abrams and Eickwort 1980; Rehan and Richards 2010; Williams et al. 2014).'",
+    "measurementMethod": "Assignment based on primary literature",
+    "measurementMethod_reasoning": "The specific diet traits for the species were not measured directly in this study but were assigned based on existing knowledge from primary literature."
   },
-  "Perc_shrub": {
+  "Nesting": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header defines the measured property (percentage of shrub cover)."
+    "reasoning": "This describes the organism's microhabitat or nesting location.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Records the organism's preferred nesting habitat.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Nesting",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The data relates to the functional traits of wild bees, which include 'nesting behavior' (e.g., cavity or ground nesting). This is a description of the observed or known ecological behavior of the species in response to urbanization, fitting the definition of HumanObservation (behaviour/ecology).",
+    "measurementMethod": "Primary literature on natural history (Hurd et al. 1974; Hurd 1979; Abrams and Eickwort 1980; Rehan and Richards 2010; Williams et al. 2014)",
+    "measurementMethod_reasoning": "The text explicitly states that traits for diet, nesting, social behavior, and voltinism were assigned for each bee species 'based on primary literature on their natural history'."
   },
-  "Perc_grass": {
+  "Sociality": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header defines the measured property (percentage of grass cover)."
+    "reasoning": "This describes the organism's social behavior or organization.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's social behavior.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Sociality",
+    "basisOfRecord": "assigned from primary literature",
+    "basisOfRecord_reasoning": "The study assigns the social behavior (sociality) trait for each bee species based on primary literature on their natural history, rather than direct measurement or observation within the scope of this specific study.",
+    "measurementMethod": "based on primary literature on their natural history (Hurd et al. 1974; Hurd 1979; Abrams and Eickwort 1980; Rehan and Richards 2010; Williams et al. 2014)",
+    "measurementMethod_reasoning": "The method used to determine the sociality trait is referencing existing scientific literature rather than a direct measurement protocol applied to the sampled specimens."
   },
-  "Perc_tree": {
+  "Voltinism": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header defines the measured property (percentage of tree cover)."
+    "reasoning": "This describes the organism's voltinism (climatic/temporal trait).",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's reproductive cycle frequency.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Voltinism",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "Voltinism (univoltine or bivoltine) is a characteristic of the bee species, derived from their natural history, which is assigned based on literature rather than a direct physical measurement of a specimen or a live observation in situ.",
+    "measurementMethod": "Assignment based on primary literature on natural history (e.g., Hurd et al. 1974; Hurd 1979; Abrams and Eickwort 1980; Rehan and Richards 2010; Williams et al. 2014)",
+    "measurementMethod_reasoning": "The text explicitly states that traits, including voltinism, were assigned for each bee species based on primary literature regarding their natural history."
+  },
+  "Body size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes a morphometric trait of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a measured physical dimension of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Body size",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "Body size is a morphological/physical trait measured on the bee specimens, which are collected and studied.",
+    "measurementMethod": "Distance between each tegulae in millimeters (intertegular distance, ITD) measured using a stereo microscope (Nikon SMZ1270).",
+    "measurementMethod_reasoning": "The methods section explicitly states how body size was measured: 'Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).'"
   }
 }

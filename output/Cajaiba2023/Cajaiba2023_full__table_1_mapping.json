@@ -1,17 +1,47 @@
 {
   "Variables": {
     "field": "definitionTerm",
-    "value_column": false,
-    "reasoning": "This column lists the variable names or codes being defined in the dataset."
+    "value_column": true,
+    "reasoning": "This column defines the variables being measured in the study."
   },
   "Specification": {
     "field": "definitionText",
-    "value_column": false,
-    "reasoning": "This column provides the human-readable definition or unit for the corresponding variable."
+    "value_column": true,
+    "reasoning": "This column provides the units and format for the measured variables."
   },
   "Monitoring Methodology": {
     "field": "measurementMethod",
     "value_column": false,
-    "reasoning": "This column describes the protocol or method used to determine the measurement."
+    "reasoning": "This describes the protocol used to collect the data."
+  },
+  "Temperature – T": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a climatic condition measured for the sampling site."
+  },
+  "Humidity – H": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a climatic condition measured for the sampling site."
+  },
+  "Precipitation – P": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a climatic condition measured for the sampling site."
+  },
+  "Circumference at Breast Height – CBH": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a physical property of the host plant, not the insect."
+  },
+  "Circumference at Ankle Height - CAH": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a physical property of the host plant, not the insect."
+  },
+  "Canopy Cover – CC": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the habitat structure measured at the site."
   }
 }

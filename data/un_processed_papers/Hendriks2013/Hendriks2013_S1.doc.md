@@ -1,3 +1,53 @@
-Table S2. Orthoptera traits.
+<!-- page 1 of 1 -->
 
-<table><tr><td>species</td><td>Development rate (year)</td><td>Habitat specificity</td><td>Dispersal capacity</td><td>Herbivore in all life stages</td><td>Food specificity</td><td>Egg deposition</td></tr><tr><td>Acheta domesticus</td><td>One</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Chorthippus albomarginatus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus apricarius</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus biguttulus</td><td>One</td><td>wide</td><td>high</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus brunneus</td><td>One</td><td>wide</td><td>high</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus dorsatus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus mollis</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus montanus</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus parallelus</td><td>One</td><td>narrow</td><td>high</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chorthippus vagans</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Chrysochraon dispar</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>plants</td></tr><tr><td>Conocephalus discolor</td><td>One</td><td>wide</td><td>high</td><td>no</td><td>generalist</td><td>plants</td></tr><tr><td>Conocephalus dorsalis</td><td>One</td><td>wide</td><td>high</td><td>no</td><td>generalist</td><td>plants</td></tr><tr><td>Decticus verrucivorus</td><td>Two</td><td>wide</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Ephippiger ephippiger</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Gampsocleis glabra</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Gomphocerippus rufus</td><td>One</td><td>narrow</td><td>high</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Gryllotalpa gryllotalpa</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Gryllus campestris</td><td>One</td><td>arrow</td><td>high</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Leptophyes punctatissima</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>generalist</td><td>plants</td></tr><tr><td>Locusta migratoria</td><td>One</td><td>wide</td><td>high</td><td>yes</td><td>generalist</td><td>soil</td></tr><tr><td>Meconema meridionale</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>plants</td></tr><tr><td>Meconema thalassinum</td><td>One</td><td>wide</td><td>high</td><td>no</td><td>generalist</td><td>plants</td></tr><tr><td>Metrioptera bicolor</td><td>Two</td><td>narrow</td><td>high</td><td>no</td><td>generalist</td><td>plants</td></tr><tr><td>Metrioptera brachyptera</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Metrioptera roeselii</td><td>One</td><td>narrow</td><td>high</td><td>no</td><td>specialist</td><td>plants</td></tr><tr><td>Myrmeleotettix maculatus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Nemobius sylvestris</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Oedipoda caerulescens</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>generalist</td><td>soil</td></tr><tr><td>Omocestus rufipes</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Omocestus viridulus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Phaneroptera falcata</td><td>One</td><td>narrow</td><td>high</td><td>yes</td><td>generalist</td><td>soil</td></tr><tr><td>Pholidoptera griseoaptera</td><td>Two</td><td>wide</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Platycleis albopunctata</td><td>One</td><td>narrow</td><td>high</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Psophus stridulus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>generalist</td><td>soil</td></tr><tr><td>Sphingonotus caerulans</td><td>One</td><td>narrow</td><td>high</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Stenobothrus lineatus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Stenobothrus stigmaticus</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Stethophyma grossum</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Tachycinesa synamorus</td><td>One</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Tetrix bipunctata</td><td>One</td><td>narrow</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Tetrix ceperoi</td><td>One</td><td>narrow</td><td>high</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Tetrix subulata</td><td>One</td><td>wide</td><td>high</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Tetrix tenuicornis</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>generalist</td><td>soil</td></tr><tr><td>Tetrix undulata</td><td>One</td><td>wide</td><td>limited</td><td>yes</td><td>specialist</td><td>soil</td></tr><tr><td>Tettigonia cantans</td><td>Two</td><td>narrow</td><td>limited</td><td>no</td><td>generalist</td><td>soil</td></tr><tr><td>Tettigonia viridissima</td><td>Two</td><td>wide</td><td>high</td><td>no</td><td>generalist</td><td>soil</td></tr></table>
+**Table S2. Orthoptera traits.**
+
+| *species* | *Development rate (year)* | *Habitat specifity* | *Dispersal capacity* | *Herbivore in all life stages* | *Food specifity* | *Egg deposition* |
+| --- | --- | --- | --- | --- | --- | --- |
+| *Acheta domesticus* | One | narrow | limited | no | generalist | soil |
+| *Chorthippus albomarginatus* | One | narrow | limited | yes | specialist | soil |
+| *Chorthippus apricarius* | One | narrow | limited | yes | specialist | soil |
+| *Chorthippus biguttulus* | One | wide | high | yes | specialist | soil |
+| *Chorthippus brunneus* | One | wide | high | yes | specialist | soil |
+| *Chorthippus dorsatus* | One | narrow | limited | yes | specialist | soil |
+| *Chorthippus mollis* | One | wide | limited | yes | specialist | soil |
+| *Chorthippus montanus* | One | wide | limited | yes | specialist | soil |
+| *Chorthippus parallelus* | One | narrow | high | yes | specialist | soil |
+| *Chorthippus vagans* | One | wide | limited | yes | specialist | soil |
+| *Chrysochraon dispar* | One | narrow | limited | yes | specialist | plants |
+| *Conocephalus discolor* | One | wide | high | no | generalist | plants |
+| *Conocephalus dorsalis* | One | wide | high | no | generalist | plants |
+| *Decticus verrucivorus* | Two | wide | limited | no | generalist | soil |
+| *Ephippiger ephippiger* | Two | narrow | limited | no | generalist | soil |
+| *Gampsocleis glabra* | Two | narrow | limited | no | generalist | soil |
+| *Gomphocerippus rufus* | One | narrow | high | yes | specialist | soil |
+| *Gryllotalpa gryllotalpa* | Two | narrow | limited | no | generalist | soil |
+| *Gryllus campestris* | One | arrow | high | no | generalist | soil |
+| *Leptophyes punctatissima* | One | wide | limited | yes | generalist | plants |
+| *Locusta migratoria* | One | wide | high | yes | generalist | soil |
+| *Meconema meridionale* | Two | narrow | limited | no | generalist | plants |
+| *Meconema thalassinum* | One | wide | high | no | generalist | plants |
+| *Metrioptera bicolor* | Two | narrow | high | no | generalist | plants |
+| *Metrioptera brachyptera* | Two | narrow | limited | no | generalist | soil |
+| *Metrioptera roeselii* | One | narrow | high | no | specialist | plants |
+| *Myrmeleotettix maculatus* | One | narrow | limited | yes | specialist | soil |
+| *Nemobius sylvestris* | Two | narrow | limited | no | generalist | soil |
+| *Oedipoda caerulescens* | One | narrow | limited | yes | generalist | soil |
+| *Omocestus rufipes* | One | narrow | limited | yes | specialist | soil |
+| *Omocestus viridulus* | One | narrow | limited | yes | specialist | soil |
+| *Phaneroptera falcata* | One | narrow | high | yes | generalist | soil |
+| *Pholidoptera griseoaptera* | Two | wide | limited | no | generalist | soil |
+| *Platycleis albopunctata* | One | narrow | high | no | generalist | soil |
+| *Psophus stridulus* | One | narrow | limited | yes | generalist | soil |
+| *Sphingonotus caerulans* | One | narrow | high | no | generalist | soil |
+| *Stenobothrus lineatus* | One | narrow | limited | yes | specialist | soil |
+| *Stenobothrus stigmaticus* | One | narrow | limited | yes | specialist | soil |
+| *Stethophyma grossum* | One | wide | limited | yes | specialist | soil |
+| *Tachycinesa synamorus* | One | narrow | limited | no | generalist | soil |
+| *Tetrix bipunctata* | One | narrow | limited | yes | specialist | soil |
+| *Tetrix ceperoi* | One | narrow | high | yes | specialist | soil |
+| *Tetrix subulata* | One | wide | high | yes | specialist | soil |
+| *Tetrix tenuicornis* | One | wide | limited | yes | generalist | soil |
+| *Tetrix undulata* | One | wide | limited | yes | specialist | soil |
+| *Tettigonia cantans* | Two | narrow | limited | no | generalist | soil |
+| *Tettigonia viridissima* | Two | wide | high | no | generalist | soil |

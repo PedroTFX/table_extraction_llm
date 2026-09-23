@@ -2,46 +2,46 @@
   "Response variable": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header names the dependent variable or trait being measured in the model."
+    "reasoning": "Names the biological trait or measurement being reported for the organism."
   },
-  "Model": {
+  "model": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column contains statistical model identifiers, not biological data."
+    "reasoning": "Represents the statistical model used for the analysis, not a biological measurement."
   },
-  "Explanatory variable": {
-    "field": "measurementType",
+  "df": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This header names the independent variables or predictors being measured."
+    "reasoning": "Represents the degrees of freedom for the statistical model."
   },
-  "Estimate": {
-    "field": "measurementValue",
+  "BIC": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This column holds the calculated coefficient or value of the measurement."
+    "reasoning": "Represents the Bayesian Information Criterion value for the model."
   },
-  "Std.Error": {
-    "field": "measurementStatistic",
+  "deltaBIC": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the standard error, a statistical measure of the estimate."
+    "reasoning": "Represents the change in BIC between models."
   },
-  "lower CI": {
-    "field": "measurementStatistic",
+  "BIC weight": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the lower bound of the confidence interval, a statistical measure."
+    "reasoning": "Represents the weight assigned to the BIC in model selection."
   },
-  "upper CI": {
-    "field": "measurementStatistic",
+  "Explanatory variables": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the upper bound of the confidence interval, a statistical measure."
+    "reasoning": "Lists the independent variables used in the statistical model."
   },
-  "z-value": {
-    "field": "measurementStatistic",
+  "$R_m^2$": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the z-score, a statistical measure of the estimate."
+    "reasoning": "Represents the model's coefficient of determination for the response variable."
   },
-  "P": {
-    "field": "measurementStatistic",
+  "$R_c^2$": {
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the p-value, a statistical measure of significance."
+    "reasoning": "Represents the model's coefficient of determination for the residual error."
   }
 }

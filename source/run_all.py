@@ -17,8 +17,19 @@ from __future__ import annotations
 import contextlib
 import csv
 import io
+import sys
 import traceback
 from pathlib import Path
+
+# The pipeline prints Unicode (e.g. "✓ Wrote ...") that the default Windows
+# console codepage (cp1252) can't encode, which raises UnicodeEncodeError at the
+# very last step and marks an otherwise-finished paper FAILed. Force UTF-8 on our
+# streams so those prints never crash the run.
+for _s in (sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 from run_pipeline import run_pipeline
 from evaluate import evaluate, DEFAULT_KEY

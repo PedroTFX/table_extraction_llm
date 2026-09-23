@@ -1,72 +1,121 @@
 {
-  "Morphospecies/Species": {
+  "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Contains the taxonomic names of the insects observed (e.g., Acromyrmex sp1).",
+    "reasoning": "This column names the focal organism, which must be an insect taxon.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "These are discrete classifications of the ant species/morphospecies found in the study."
+    "reasoning_relevance": "Names the focal organism, identifying it as a biological entity."
   },
-  "PF": {
+  "Trophic type (TT_FT)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a measured or scored trait/variable for the organism.",
-    "category": null,
-    "reasoning_relevance": "These values likely represent site identifiers within the Primary Forest ecosystem."
-  },
-  "FS-15": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Represents a measured or scored trait/variable for the organism.",
-    "category": null,
-    "reasoning_relevance": "These values likely represent site identifiers within the Secondary Forest (15 years) ecosystem."
-  },
-  "FS-5": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Represents a measured or scored trait/variable for the organism.",
-    "category": null,
-    "reasoning_relevance": "These values likely represent site identifiers within the Secondary Forest (5 years) ecosystem."
-  },
-  "AG": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Represents a measured or scored trait/variable for the organism.",
-    "category": null,
-    "reasoning_relevance": "These values likely represent site identifiers within the Agriculture ecosystem."
-  },
-  "PA": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Represents a measured or scored trait/variable for the organism.",
-    "category": null,
-    "reasoning_relevance": "These values likely represent site identifiers within the Pasture ecosystem."
-  },
-  "Trophic type": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Describes the biological feeding strategy or diet of the insect.",
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "These are discrete classifications of ant functional traits based on feeding habits.",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
     "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Trophic type",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The study involves collecting ant individuals using pitfall traps and litter sampling, which are then screened, extracted, and preserved in 70% ethanol for identification and subsequent functional trait classification.",
-    "measurementMethod": "Classification of ant specimens into functional groups (e.g., cryptic predators, epigaeic omnivores, leaf-cutting Attini) based on their observed traits and taxonomic identification, following established protocols (as detailed in Table S3 and referenced literature like Leal et al., 2012).",
+    "basisOfRecord_reasoning": "The study involves the collection, extraction, and preservation of ant individuals (specimens) which were subsequently identified, fitting the definition of a preserved specimen.",
+    "measurementMethod": "Collection using pitfall traps and litter collection techniques, adapted from the standardised “Ants of the Leaf Litter” (ALL) protocol, including GPS registration of sampling points and manual extraction followed by preservation in 70% ethanol.",
     "measurementMethod_reasoning": null
   },
-  "Ecosystem specificity": {
+  "Trophic type (TT_FT) (2)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the ecological classification or habitat preference of the insect.",
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "These are discrete classifications of ant functional traits based on habitat preference.",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
     "multi_value": false,
     "value_type": "categorical",
-    "canonicalType": "Ecosystem specificity",
+    "canonicalType": "Trophic type (trophic type functional trait)",
     "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The functional traits (Ecosystem specificity) were determined from ant specimens that were collected using pitfall traps and litter sampling, manually extracted, and preserved in a 70% ethanol solution for identification.",
-    "measurementMethod": "Pitfall traps and manual litter sampling followed by taxonomic identification and functional trait assignment",
-    "measurementMethod_reasoning": "The measurement of Ecosystem specificity (ES_FT) was derived from ant assemblages collected using pitfall traps (baited with sardines and banana) and manual litter sampling (1m² points). The collected specimens were preserved in 70% ethanol and identified taxonomically. Functional traits were then assigned to these identified individuals, classifying them into categories such as Forest specialists (FS), Ecosystem generalists (EG), etc."
+    "basisOfRecord_reasoning": "The study involves collecting ant individuals using pitfall traps and litter collection, followed by manual extraction and preservation in 70% ethanol for taxonomic identification. This indicates the data records pertain to physical specimens.",
+    "measurementMethod": "Individuals were collected using pitfall traps and litter collection techniques during the rainy, intermediate, and dry seasons. For litter sampling, 10 random sampling points of 1m$^2$ were selected. Litter and upper soil layers were scraped gently with a metal spatula. Specimens were then manually extracted and preserved in a 70% ethanol solution, adapting the 'Ants of the Leaf Litter' (ALL) protocol.",
+    "measurementMethod_reasoning": null
+  },
+  "Trophic type (TT_FT) (3)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trophic type (trophic type functional trait)",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting, extracting, and preserving ant individuals in 70% ethanol for taxonomic identification and subsequent functional analysis, classifying them as preserved specimens.",
+    "measurementMethod": "Individuals were collected using pitfall traps and litter collection techniques during the rainy (February/March), intermediate (June), and dry (September/October) seasons. Pitfall traps consisted of 13 cm in diameter and 19 cm deep. For litter sampling, 10 random sampling points of 1m² were selected. Specimens were then extracted manually and preserved in a 70% ethanol solution, following an adaptation of the 'Ants of the Leaf Litter' (ALL) protocol.",
+    "measurementMethod_reasoning": null
+  },
+  "Trophic type (TT_FT) (4)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trophic type (trophic type functional trait)",
+    "basisOfRecord": "Ant communities and their functional responses; Environmental variables",
+    "basisOfRecord_reasoning": "The data records pertain to the composition and functional traits of ant communities (epigaeic and leaf-litter ants) and the measured environmental variables (temperature, humidity, precipitation, etc.) assessed at the study sites.",
+    "measurementMethod": "Individuals collected using pitfall traps and litter collection techniques; GPS registration and marking; Manual extraction and preservation in 70% ethanol; Adaptation of the 'Ants of the Leaf Litter' (ALL) protocol for litter sampling; Remote sensing, interviews, and on-site visits for land use classification; Assessment of 15 environmental variables (T, H, P, CBH, CAH, CC, RP, AP, TD, RS, AS, PES, GC, LLC, HLL).",
+    "measurementMethod_reasoning": null
+  },
+  "Trophic type (TT_FT) (5)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trophic type (trophic type functional trait)",
+    "basisOfRecord": "Ant communities and their functional responses to environmental changes",
+    "basisOfRecord_reasoning": "The study focuses on gauging the usefulness of epigaeic and leaf-litter ants’ functional responses towards measuring ecosystem degradation, implying the record is about the composition and functional traits of ant assemblages in relation to land use changes.",
+    "measurementMethod": "Individuals were collected using pitfall traps and litter collection techniques; manual extraction, preservation in 70% ethanol, and taxonomic identification; litter sampling involved selecting 10 random sampling points of 1m$^2$ with 100m spacing; environmental variables were assessed using on-site measurements (T, H, P, CBH, CAH, CC, RP, AP, TD, RS, AS, PES, GC, LLC, HLL).",
+    "measurementMethod_reasoning": null
+  },
+  "Trophic type (TT_FT) (6)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trophic type (trophic type functional trait)",
+    "basisOfRecord": "Ant communities/functional traits",
+    "basisOfRecord_reasoning": "The study focuses on gauging the usefulness of epigaeic and leaf-litter ants’ functional responses towards measuring ecosystem degradation. The data records the composition and functional traits of ant assemblages within different ecosystems.",
+    "measurementMethod": "Pitfall traps and litter collection techniques, followed by manual extraction and preservation in 70% ethanol.",
+    "measurementMethod_reasoning": "The ants were collected using pitfall traps and litter collection techniques. Subsequently, individuals were manually extracted and preserved in a 70% ethanol solution. This describes the protocol used to obtain the ant specimens."
+  },
+  "Trophic type (TT_FT) (7)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trophic type (trophic type functional trait)",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study involves collecting ant individuals which are subsequently extracted and preserved in a 70% ethanol solution for taxonomic identification. This fits the definition of a preserved specimen.",
+    "measurementMethod": "Individuals were collected using pitfall traps and litter collection techniques during specific seasons (rainy, intermediate, and dry). Litter sampling involved selecting 1m² points with 100m spacing. Specimens were extracted manually and preserved in 70% ethanol. The methodology was an adaptation of the standardised “Ants of the Leaf Litter” (ALL) protocol.",
+    "measurementMethod_reasoning": null
+  },
+  "Trophic type (TT_FT) (8)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes the organism's trophic role, which is a measured trait.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the organism's feeding guild or trophic position.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Trophic type (trophic type functional trait)",
+    "basisOfRecord": "Ant communities and their functional responses to ecosystem degradation",
+    "basisOfRecord_reasoning": "The study focuses on gauging the usefulness of epigaeic and leaf-litter ants’ functional responses towards measuring ecosystem degradation, and investigating how ant functional diversity changes along a disturbance gradient.",
+    "measurementMethod": "Individuals were collected using pitfall traps and litter collection techniques during rainy, intermediate, and dry seasons. Litter sampling involved selecting 10 random sampling points of 1m² with 100m distance between them. Specimens were extracted manually, preserved in a 70% ethanol solution, and identified according to taxonomic keys. Environmental variables were assessed at each location.",
+    "measurementMethod_reasoning": null
   }
 }

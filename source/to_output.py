@@ -62,6 +62,67 @@ def is_empty_like(v):
     return v is None or str(v).strip().lower() in EMPTY_LIKE
 
 
+# Fold free-form statistic labels (from the LLM tag step or a mapper) onto the
+# ground-truth vocabulary. Only known synonyms are rewritten; an already-canonical
+# term (mean, mode, min, max, range, count, median, SD, SE, individual, mean ± SD)
+# passes through untouched, so a specific GT term the model got right is kept.
+_STAT_SYNONYMS = {
+    "standard deviation": "SD", "std": "SD", "stdev": "SD", "std dev": "SD",
+    "standard error": "SE", "sem": "SE", "std error": "SE",
+    "average": "mean", "avg": "mean",
+    "single observation": "individual", "single measurement": "individual",
+    "single specimen": "individual", "one individual": "individual",
+    "single value": "individual", "observation": "individual",
+    "minimum": "min", "maximum": "max",
+}
+
+
+def normalize_statistic_out(s):
+    """Map a statistic label onto the GT vocabulary. Known synonyms are rewritten;
+    a bare number / percentage / significance mark ('1.25*', '2.5') is NOT a
+    statistic (the tag step sometimes leaks a value here) and is cleared to '' so
+    the value-aware default fills a real term."""
+    if not s:
+        return s
+    key = str(s).strip().lower()
+    if key in _STAT_SYNONYMS:
+        return _STAT_SYNONYMS[key]
+    val = str(s).strip()
+    if re.fullmatch(r"[\d.,*%±()/+\-\s]+", val):
+        return ""
+    return val
+
+
+# Valid Darwin Core basisOfRecord terms. The tag step occasionally returns a
+# free-text DESCRIPTION here ("Morphological traits (e.g., ...)") instead of a
+# term; anything not in this set is discarded so the default can apply.
+_VALID_BASIS = {
+    "preservedspecimen": "PreservedSpecimen", "livingspecimen": "LivingSpecimen",
+    "humanobservation": "HumanObservation", "machineobservation": "MachineObservation",
+    "materialsample": "MaterialSample", "materialcitation": "MaterialCitation",
+    "fossilspecimen": "FossilSpecimen", "occurrence": "Occurrence", "taxon": "Taxon",
+}
+
+
+def normalize_basis_out(s):
+    """Return the canonical DwC basisOfRecord term, or '' if `s` is not one (so
+    the default fills in). Guards against the tag step emitting a description."""
+    if not s:
+        return s
+    return _VALID_BASIS.get(str(s).strip().lower(), "")
+
+
+_NUMERIC_VALUE_RE = re.compile(r"^[<>~≈±]?\s*-?\d")
+
+
+def _looks_numeric_value(v) -> bool:
+    """A measurementValue that reads as a number (optionally a comparator/±
+    prefix). Used to pick the measurementStatistic default: the ground truth
+    labels a bare numeric reading 'individual' (a single-specimen measurement)
+    and a categorical state 'mode'."""
+    return bool(_NUMERIC_VALUE_RE.match(str(v).strip()))
+
+
 def clean_type(t):
     """Normalise a measurementType for output.
 
@@ -170,10 +231,32 @@ def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol):
                         row["samplingProtocol"] = row["measurementMethod"]
                     row["measurementMethod"] = ""
 
-                # defaults for constant fields (override empty-like values too)
+                # fold a free-form statistic label onto the GT vocabulary
+                # (single observation -> individual, standard deviation -> SD)
+                if row.get("measurementStatistic"):
+                    row["measurementStatistic"] = normalize_statistic_out(
+                        row["measurementStatistic"])
+                # discard a non-DwC basisOfRecord (a description the tag step
+                # returned by mistake) so the default below fills a valid term
+                row["basisOfRecord"] = normalize_basis_out(row.get("basisOfRecord"))
+
+                # defaults for constant fields (override empty-like values too).
+                # Two are VALUE-AWARE, matching the ground-truth split between a
+                # numeric per-specimen measurement and a categorical state:
+                #   measurementStatistic: numeric -> 'individual', else 'mode'
+                #   basisOfRecord:        numeric -> 'PreservedSpecimen'
+                #                         (morphology off a specimen), categorical
+                #                         -> 'HumanObservation' (a behavioural /
+                #                          ecological trait).
+                numeric = _looks_numeric_value(row.get("measurementValue"))
                 for col, default in defaults.items():
                     if is_empty_like(row.get(col)):
-                        row[col] = default
+                        if col == "measurementStatistic":
+                            row[col] = "individual" if numeric else default
+                        elif col == "basisOfRecord":
+                            row[col] = "PreservedSpecimen" if numeric else "HumanObservation"
+                        else:
+                            row[col] = default
 
                 rows.append(row)
     return rows

@@ -1,37 +1,72 @@
 {
-  "Site": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "Site codes are used to identify the specific sampling location."
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   },
-  "Geographical location": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "These are specific named locations where sampling occurred."
-  },
-  "Vegetation type": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "This describes the habitat or land-use where the sampling took place."
-  },
-  "Tree cover (%)": {
+  "Mean Worker length (mm)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This measures the percentage of tree cover, a characteristic of the environment."
+    "measurementValue": "2.4",
+    "measurementStatistic": "mean",
+    "reasoning": "Measures the average length of the worker insect.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   },
-  "Understory cover (%)": {
+  "Polymorphism": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This measures the percentage of understory cover, a characteristic of the environment."
+    "measurementValue": "1",
+    "measurementStatistic": "count",
+    "reasoning": "Records the degree of polymorphism observed in the colony.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   },
-  "No. of ant species": {
+  "Colony population": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This measures the count of ant species observed at the site."
+    "measurementValue": "3",
+    "measurementStatistic": "count",
+    "reasoning": "Records the total number of individuals in the colony.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   },
-  "% ant fauna in this study": {
+  "Brood cycle": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This measures the percentage of ant fauna relative to the study."
+    "measurementValue": "2",
+    "measurementStatistic": "individual",
+    "reasoning": "Records the duration of the brood cycle.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "N queens per colony": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "polygyny",
+    "measurementStatistic": "mode",
+    "reasoning": "Describes the social structure regarding the number of queens.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "N nests per colony": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "polydomy",
+    "measurementStatistic": "mode",
+    "reasoning": "Describes the social structure regarding the number of nests.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "Main food resource": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "honeydew",
+    "measurementStatistic": "mode",
+    "reasoning": "Records the primary food resource consumed by the colony.",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   }
 }

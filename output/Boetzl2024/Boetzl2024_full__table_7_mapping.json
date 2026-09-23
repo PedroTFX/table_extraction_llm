@@ -1,27 +1,32 @@
 {
-  "richness (omnivorous)[models with and without P. cupreus]": {
+  "repsonse": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header describes a measured ecological metric (richness) related to the organism's diet."
+    "reasoning": "Reponese is a categorical trait being measured or observed."
   },
-  "distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat": {
+  "repsonse (1)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header describes the environmental and sampling context variables used for the study."
+    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
   },
-  "1 + distance": {
+  "parameter": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This is a variable name representing a measured distance or spatial characteristic."
+    "reasoning": "Parameter defines the independent variable or treatment applied."
   },
-  "study/site": {
-    "field": "verbatimLocality",
+  "estimate": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column identifies the specific geographic location or study site where sampling occurred."
+    "reasoning": "Estimate is the calculated result of the measurement."
   },
-  "Poisson (log)": {
-    "field": "measurementType",
+  "95% CI lower bound": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This describes the statistical model used to analyze the measurement data."
+    "reasoning": "Lower bound is the calculated confidence interval boundary."
+  },
+  "95% CI upper bound": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Upper bound is the calculated confidence interval boundary."
   }
 }

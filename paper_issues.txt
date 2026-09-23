@@ -1,0 +1,139 @@
+PAPER ISSUE REGISTRY  (auto-generated; F1 from output/summary.csv)
+Categories: TRANSPOSE=species-in-cols matrix | EXTRACT-FAIL=tables present,0 rows | MATCH-FAIL=rows extracted but ~0 match | BAD-GT=ground-truth quirk | NO-TABLE=data in prose/images | PARTIAL=0.2-0.6 F1 | OK>=0.6
+cols: [CATEGORY] paper  F1  pred/gt rows  tbls/imgs  - note
+====================================================================================================
+COUNTS: TRANSPOSE=2  EXTRACT-FAIL=2  MATCH-FAIL=16  BAD-GT=2  NO-TABLE=6  NO-RUN=4  PARTIAL=28  OK=58
+
+--- TRANSPOSE (2) ---
+  [TRANSPOSE  ] Gomez2022              F1=0.0   pred/gt=26/1014  tbl=5 img=16  - species-in-columns matrix; same header-drop issue as Fondjo2024
+  [TRANSPOSE  ] Fondjo2024             F1=0.0   pred/gt=236/542   tbl=3 img=145  - species x sex matrix (2-row header); species header dropped by banner detection -> not melted
+
+--- EXTRACT-FAIL (2) ---
+  [EXTRACT-FAIL] Wijas2021              F1=0.0   pred/gt=0/487   tbl=2 img=19  - 2 table(s) but 0 rows extracted
+  [EXTRACT-FAIL] Orlofsk2014            F1=0.0   pred/gt=0/198   tbl=9 img=7  - stat tables (Mean/SD/CV) w/ trait in caption, no trait-name col -> grouping drops rows
+
+--- MATCH-FAIL (16) ---
+  [MATCH-FAIL ] Orr2024                F1=0.005 pred/gt=25047/12838 tbl=3 img=24  - extracted 25047, ~0 match GT 12838 (value/name/GT?)
+  [MATCH-FAIL ] Guareschi2015          F1=0.0   pred/gt=3160/1738  tbl=11 img=14  - extracted 3160, ~0 match GT 1738 (value/name/GT?)
+  [MATCH-FAIL ] Viza2023               F1=0.001 pred/gt=96/1695  tbl=5 img=9  - extracted 96, ~0 match GT 1695 (value/name/GT?)
+  [MATCH-FAIL ] Wallon2024             F1=0.138 pred/gt=3303/1229  tbl=24 img=34  - extracted 3303, ~0 match GT 1229 (value/name/GT?)
+  [MATCH-FAIL ] Tonelli2021            F1=0.0   pred/gt=190/1106  tbl=6 img=5  - extracted 190, ~0 match GT 1106 (value/name/GT?)
+  [MATCH-FAIL ] Wölfling2020           F1=0.047 pred/gt=1800/900   tbl=3 img=8  - extracted 1800, ~0 match GT 900 (value/name/GT?)
+  [MATCH-FAIL ] Chichorro2022          F1=0.113 pred/gt=14064/620   tbl=7 img=3  - extracted 14064, ~0 match GT 620 (value/name/GT?)
+  [MATCH-FAIL ] Cecala2021             F1=0.095 pred/gt=459/462   tbl=9 img=12  - extracted 459, ~0 match GT 462 (value/name/GT?)
+  [MATCH-FAIL ] MacDonald2021          F1=0.142 pred/gt=170/446   tbl=7 img=7  - extracted 170, ~0 match GT 446 (value/name/GT?)
+  [MATCH-FAIL ] Oliveira2022           F1=0.0   pred/gt=1103/390   tbl=8 img=26  - extracted 1103, ~0 match GT 390 (value/name/GT?)
+  [MATCH-FAIL ] Schirmel2012           F1=0.0   pred/gt=696/195   tbl=4 img=16  - extracted 696, ~0 match GT 195 (value/name/GT?)
+  [MATCH-FAIL ] Russo2017              F1=0.154 pred/gt=1641/191   tbl=3 img=17  - extracted 1641, ~0 match GT 191 (value/name/GT?)
+  [MATCH-FAIL ] Melo2021               F1=0.011 pred/gt=60/174   tbl=11 img=14  - extracted 60, ~0 match GT 174 (value/name/GT?)
+  [MATCH-FAIL ] Baine2024              F1=0.0   pred/gt=3/97    tbl=1 img=12  - extracted 3, ~0 match GT 97 (value/name/GT?)
+  [MATCH-FAIL ] Harmon2013             F1=0.0   pred/gt=84/84    tbl=3 img=8  - species remap OK, but measurementType is code "ln" (not GT trait name) -> 0 match
+  [MATCH-FAIL ] Attiwilli2022          F1=0.0   pred/gt=15/30    tbl=5 img=9  - extracted 15, ~0 match GT 30 (value/name/GT?)
+
+--- BAD-GT (2) ---
+  [BAD-GT     ] Gibb2005               F1=0.0   pred/gt=45/45    tbl=4 img=5  - GT put value in measurementMethod col, left measurementValue blank -> unmatchable
+  [BAD-GT     ] Borges2024             F1=0.0   pred/gt=28/23    tbl=2 img=5  - GT folds feeding treatment into trait name ("Fecundity when fed X"); pipeline keeps it separate
+
+--- NO-TABLE (6) ---
+  [NO-TABLE   ] Hill2024               F1=0.0   pred/gt=0/793   tbl=0 img=37  - body/leg lengths in description prose, 0 tables
+  [NO-TABLE   ] Xu2024                 F1=0.0   pred/gt=0/721   tbl=0 img=30  - altitude/morphology/distribution in prose, 0 tables
+  [NO-TABLE   ] Xia2022                F1=0.0   pred/gt=0/399   tbl=0 img=18  - morphometrics in prose (BL/HL/EL: value mm), 0 tables
+  [NO-TABLE   ] Ustjuzhanin2024        F1=0.0   pred/gt=0/243   tbl=0 img=15  - wingspan/altitude/habitat/distribution in prose, 0 tables
+  [NO-TABLE   ] Quicke2023             F1=0.0   pred/gt=0/131   tbl=1 img=34  - traits are descriptive prose (morphology/distribution); only table is molecular voucher
+  [NO-TABLE   ] Franzen2025            F1=0.0   pred/gt=0/19    tbl=0 img=6  - few measurements in prose, 0 tables
+
+--- NO-RUN (4) ---
+  [NO-RUN     ] Figueroa2021           F1=      pred/gt=None/None  tbl=6 img=23  - no summary entry (not in this run)
+  [NO-RUN     ] Kratschmer2019         F1=      pred/gt=None/None  tbl=10 img=16  - no summary entry (not in this run)
+  [NO-RUN     ] Noriega2023            F1=      pred/gt=None/None  tbl=10 img=12  - no summary entry (not in this run)
+  [NO-RUN     ] Vidal2023              F1=      pred/gt=None/None  tbl=10 img=16  - no summary entry (not in this run)
+
+--- PARTIAL (28) ---
+  [PARTIAL    ] Raine2018              F1=0.519 pred/gt=46237/41135 tbl=4 img=4  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Guariento2020          F1=0.298 pred/gt=26349/11170 tbl=5 img=26  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Taillefer2018          F1=0.333 pred/gt=2910/1765  tbl=5 img=23  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Fiedler2021            F1=0.397 pred/gt=1046/1569  tbl=1 img=9  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Cerini2023             F1=0.465 pred/gt=4716/1439  tbl=2 img=10  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Eckert2023             F1=0.463 pred/gt=1420/1269  tbl=17 img=26  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Scalercio2020          F1=0.408 pred/gt=803/1158  tbl=2 img=19  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Tsai2020               F1=0.455 pred/gt=8520/979   tbl=6 img=31  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Forrest2015            F1=0.567 pred/gt=1372/827   tbl=11 img=20  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Korosi2022             F1=0.504 pred/gt=624/624   tbl=7 img=13  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Torok2022              F1=0.21  pred/gt=105/501   tbl=6 img=5  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Habustova2017          F1=0.53  pred/gt=762/430   tbl=17 img=6  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Cao2024                F1=0.41  pred/gt=328/421   tbl=5 img=41  - extracts but misses/mismatches some rows
+  [PARTIAL    ] GibbParr2013           F1=0.255 pred/gt=691/414   tbl=3 img=1  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Arnan2012              F1=0.53  pred/gt=390/361   tbl=5 img=7  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Cawood2026             F1=0.471 pred/gt=140/327   tbl=3 img=58  - extracts but misses/mismatches some rows
+  [PARTIAL    ] OsorioCanadas2018      F1=0.203 pred/gt=1879/280   tbl=9 img=7  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Rebrina2022            F1=0.424 pred/gt=252/252   tbl=4 img=21  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Wang2021_1             F1=0.504 pred/gt=192/233   tbl=5 img=18  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Keller1998             F1=0.328 pred/gt=252/197   tbl=3 img=0  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Stemkovski2020         F1=0.558 pred/gt=308/134   tbl=6 img=13  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Nunes2016              F1=0.336 pred/gt=1380/112   tbl=5 img=14  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Penick2017             F1=0.571 pred/gt=102/90    tbl=1 img=14  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Cortés-Goméz2023       F1=0.358 pred/gt=72/86    tbl=2 img=12  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Kovacs2008             F1=0.271 pred/gt=168/81    tbl=2 img=7  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Lichtenberg2017        F1=0.337 pred/gt=126/47    tbl=3 img=6  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Tran2022               F1=0.4   pred/gt=31/32    tbl=3 img=8  - extracts but misses/mismatches some rows
+  [PARTIAL    ] Kovacs2010             F1=0.348 pred/gt=41/10    tbl=4 img=4  - extracts but misses/mismatches some rows
+
+--- OK (58) ---
+  [OK         ] Ji2024                 F1=0.917 pred/gt=6048/5616  tbl=2 img=7  - 
+  [OK         ] Teder2020              F1=0.991 pred/gt=3655/3655  tbl=3 img=5  - 
+  [OK         ] Gossner2013            F1=0.666 pred/gt=1502/3008  tbl=9 img=20  - 
+  [OK         ] CamargoVanegas2024     F1=0.808 pred/gt=3045/2017  tbl=14 img=25  - 
+  [OK         ] Normandin2017          F1=0.792 pred/gt=1800/1389  tbl=5 img=9  - 
+  [OK         ] Fontanilla2019         F1=0.996 pred/gt=1539/1315  tbl=13 img=13  - 
+  [OK         ] Luo2023                F1=0.635 pred/gt=1197/979   tbl=5 img=3  - 
+  [OK         ] Cappellari2022         F1=0.997 pred/gt=975/975   tbl=11 img=18  - 
+  [OK         ] Graf2021               F1=0.694 pred/gt=870/832   tbl=10 img=17  - 
+  [OK         ] Gathof2022             F1=0.801 pred/gt=654/640   tbl=6 img=5  - 
+  [OK         ] Eskilden2015           F1=0.923 pred/gt=711/553   tbl=9 img=9  - 
+  [OK         ] GarciaAtencia2024      F1=0.905 pred/gt=544/544   tbl=2 img=14  - 
+  [OK         ] Pessoa2017             F1=0.73  pred/gt=354/513   tbl=38 img=3  - 
+  [OK         ] Braschler2021          F1=0.796 pred/gt=536/511   tbl=8 img=21  - 
+  [OK         ] Boetzl2024             F1=0.733 pred/gt=282/482   tbl=11 img=22  - 
+  [OK         ] Brant2021              F1=1.0   pred/gt=480/480   tbl=5 img=9  - 
+  [OK         ] Khayati2024            F1=0.813 pred/gt=495/459   tbl=5 img=13  - 
+  [OK         ] Uemori2022             F1=0.648 pred/gt=496/433   tbl=4 img=13  - 
+  [OK         ] Uemori2021             F1=0.689 pred/gt=642/428   tbl=6 img=10  - 
+  [OK         ] Ibarra2021             F1=0.713 pred/gt=340/368   tbl=3 img=12  - 
+  [OK         ] Zhang2022              F1=0.824 pred/gt=288/360   tbl=3 img=10  - 
+  [OK         ] Weber2023              F1=0.758 pred/gt=195/304   tbl=3 img=21  - 
+  [OK         ] Hendriks2013           F1=0.989 pred/gt=282/282   tbl=3 img=15  - 
+  [OK         ] Geraghty2007           F1=0.954 pred/gt=280/280   tbl=2 img=8  - 
+  [OK         ] Araujo2021             F1=0.762 pred/gt=220/273   tbl=4 img=9  - 
+  [OK         ] Barber2017             F1=0.978 pred/gt=280/268   tbl=9 img=12  - 
+  [OK         ] Cajaiba2022            F1=0.986 pred/gt=262/255   tbl=6 img=17  - 
+  [OK         ] Cajaiba2023            F1=0.986 pred/gt=917/255   tbl=6 img=17  - 
+  [OK         ] Zhao2024               F1=0.714 pred/gt=412/252   tbl=7 img=28  - 
+  [OK         ] Wiescher2012           F1=0.813 pred/gt=296/250   tbl=4 img=4  - 
+  [OK         ] Leong2023              F1=0.616 pred/gt=238/236   tbl=5 img=31  - 
+  [OK         ] McCravy2019            F1=0.948 pred/gt=232/232   tbl=4 img=0  - 
+  [OK         ] Wilker2022             F1=0.784 pred/gt=282/210   tbl=3 img=5  - 
+  [OK         ] Beyer2021              F1=0.645 pred/gt=309/206   tbl=10 img=21  - 
+  [OK         ] Nelson2020             F1=0.806 pred/gt=218/191   tbl=11 img=17  - 
+  [OK         ] Nelson2021             F1=0.962 pred/gt=418/191   tbl=11 img=17  - 
+  [OK         ] Derhe2016              F1=0.909 pred/gt=273/179   tbl=6 img=41  - 
+  [OK         ] Batista2024            F1=0.603 pred/gt=155/174   tbl=6 img=5  - 
+  [OK         ] Lizee2016              F1=0.647 pred/gt=241/147   tbl=7 img=7  - 
+  [OK         ] Espinosa2023           F1=0.963 pred/gt=135/135   tbl=8 img=13  - 
+  [OK         ] Renoz2020              F1=0.674 pred/gt=340/125   tbl=2 img=6  - 
+  [OK         ] Pereira2016            F1=0.646 pred/gt=92/103   tbl=4 img=5  - 
+  [OK         ] Laha2020               F1=0.734 pred/gt=100/98    tbl=4 img=10  - 
+  [OK         ] McCune2023             F1=0.662 pred/gt=49/96    tbl=1 img=15  - 
+  [OK         ] Sultaire2021           F1=0.878 pred/gt=94/86    tbl=6 img=11  - 
+  [OK         ] Jones2015              F1=1.0   pred/gt=288/72    tbl=4 img=14  - 
+  [OK         ] Shi2022                F1=1.0   pred/gt=68/68    tbl=2 img=12  - 
+  [OK         ] DawesGromadzki2008     F1=1.0   pred/gt=111/63    tbl=1 img=4  - 
+  [OK         ] AmbspergTraun1991      F1=0.959 pred/gt=63/60    tbl=1 img=4  - 
+  [OK         ] CortesGomez2023        F1=0.808 pred/gt=72/56    tbl=2 img=12  - 
+  [OK         ] Wang2021               F1=0.938 pred/gt=64/48    tbl=5 img=10  - 
+  [OK         ] Mirzaee2023            F1=0.615 pred/gt=41/40    tbl=3 img=12  - 
+  [OK         ] Odanaka2019            F1=0.8   pred/gt=22/33    tbl=3 img=9  - 
+  [OK         ] Gonzalez2016           F1=0.769 pred/gt=34/31    tbl=1 img=2  - 
+  [OK         ] Heiva2013              F1=1.0   pred/gt=234/26    tbl=1 img=7  - 
+  [OK         ] Brasil2024             F1=0.877 pred/gt=37/25    tbl=8 img=8  - 
+  [OK         ] Cady1993               F1=0.812 pred/gt=16/16    tbl=2 img=10  - 
+  [OK         ] Dejean2019             F1=1.0   pred/gt=46/16    tbl=3 img=5  - 

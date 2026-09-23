@@ -1,95 +1,47 @@
 {
-  "species": {
-    "field": "verbatimIdentification",
+  "Response variable": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column names the trait being measured for the focal organism."
+  },
+  "Model": {
+    "field": null,
     "value_column": false,
-    "reasoning": "This column lists the specific insect taxon (species) the measurements belong to.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Lists specific bumblebee species names, classifying the organism."
+    "reasoning": "This is a statistical model identifier, not a measurement of the organism."
   },
-  "number of bumblebees": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This header describes the count of the organism observed in the sample.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "Represents the count of observed bumblebees in a sample.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "number of bumblebees",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The data was collected through landscape-level wild bee surveys involving transect walks to count flower-visiting bees in semi-natural habitats (SNH), which constitutes a personal observation of live organisms in situ.",
-    "measurementMethod": "Standardized transect walks (6 variable transect walks of 50 m x 5 m for 5 min) conducted within the most attractive flower-rich SNH in each study landscape to count flower-visiting bees.",
-    "measurementMethod_reasoning": "The methods section details the specific protocol used for sampling: 'During every sampling run six variable transect walks (50 m x 5 m, 5 min. excluding handling time) were conducted within the most attractive flower rich SNH in each study landscape... Walking slowly through the transect in one direction, the number of flower-visiting bees was counted.'",
-    "measurementUnit": "Density per 250 m² transect area and 5 min",
-    "measurementUnit_reasoning": "The response variable for bumblebee density was explicitly defined in the methods section as 'density of bumblebees (per 250 m2 transect area and 5 min)'.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The results report findings 'on average 1.6 times more bumblebees' and the statistical analysis used generalized linear mixed models (GLMM) to model the density, implying the calculation of mean density across the sampled landscapes and runs."
+  "Explanatory variable": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are the independent variables used in the statistical model."
   },
-  "mean TL": {
-    "field": "measurementType",
+  "Estimate": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This measures the average Total Length (TL) of the insect.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the mean tongue length, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "measurementStatistic": "mean",
-    "sampleSizeColumn": "number of bumblebees",
-    "canonicalType": "tongue length",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement of mean tongue length (TL) was performed on bumblebee workers that were collected during wild bee sampling (via transect walks) and taken to the lab for identification and measurement.",
-    "measurementMethod": "Measurement of the glossa (tongue length) of bumblebee workers, starting from the end of the paraglossa, using a connected microscope and Labscope Imaging Software (ZEISS).",
-    "measurementMethod_reasoning": "The text explicitly describes the procedure for measuring TL in Table S4: 'The length of the glossa was measured, starting from the end of the paraglossa.' The tools used were a 'connected microscope and the Labscope Imaging Software (ZEISS).'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "Although the unit is not explicitly stated in the text, tongue length (TL) and intertegular distance (ITD) are standard morphological measurements in entomology, typically recorded in millimeters (mm)."
+    "reasoning": "This column holds the calculated numerical estimate of the response variable."
   },
-  "mean ITD": {
-    "field": "measurementType",
+  "Std.Error": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This measures the average Inner Thoracic Distance (ITD) of the insect.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the mean intertegular distance, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "measurementStatistic": "mean",
-    "sampleSizeColumn": "number of bumblebees",
-    "canonicalType": "intertegular distance",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The Intertegular Distance (ITD) is a morphological trait (body size) measured directly from individual worker bees, which implies the use of collected/preserved specimens.",
-    "measurementMethod": "Measurement of intertegular distance (ITD) on worker individuals using a connected microscope and Labscope Imaging Software (ZEISS).",
-    "measurementMethod_reasoning": "The text explicitly states that ITD was measured on worker individuals and specifies the equipment used: 'For all ITD and tongue measurements, we used a connected microscope and the Labscope Imaging Software (ZEISS).'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "ITD is a measurement of body size in insects. Although the unit is not explicitly stated in the text, the standard unit for measuring ITD in bees is millimeters (mm)."
+    "reasoning": "This column holds the standard error associated with the estimate."
   },
-  "mean relative TL": {
-    "field": "measurementType",
+  "lower CI": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This measures the average Relative Total Length of the insect.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the mean relative tongue length, a calculated physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "measurementStatistic": "mean",
-    "sampleSizeColumn": "number of bumblebees",
-    "canonicalType": "relative tongue length",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The mean relative TL is a morphological trait (tongue length relative to body size) measured on collected bumblebee workers.",
-    "measurementMethod": "Measurement of tongue length (glossa) and intertegular distance (ITD) using a connected microscope and Labscope Imaging Software (ZEISS), followed by calculation of the ratio (tongue length / ITD).",
-    "measurementMethod_reasoning": "The text explicitly states that tongue length and ITD were measured using a connected microscope and Labscope Imaging Software (ZEISS), and the mean relative TL was calculated as the ratio of tongue length to ITD."
+    "reasoning": "This column holds the lower bound of the confidence interval."
   },
-  "TL category": {
-    "field": "measurementType",
+  "upper CI": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This classifies the insect based on its Total Length (TL) trait.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies bumblebees into discrete categories based on tongue length.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "tongue length category",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The study involved conducting landscape-level wild bee surveys using variable transect walks in semi-natural habitats (SNH) and crop fields. The measurements (densities, species richness, body size, and tongue length) were taken from wild bees observed and captured in their natural environment during specific sampling runs, which constitutes a human observation of live organisms.",
-    "measurementMethod": "Variable transect walks (50 m x 5 m, 5 min) conducted within semi-natural habitats (SNH) to count flower-visiting bees and capture individuals for morphological measurements (Intertegular Distance (ITD) and tongue length).",
-    "measurementMethod_reasoning": "The methodology explicitly details the use of 'six variable transect walks (50 m x 5 m, 5 min)' conducted within the most attractive flower-rich SNH to cover the foraging spectrum. Morphological traits (ITD and tongue length) were measured on captured individuals during these walks.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This column holds the upper bound of the confidence interval."
+  },
+  "z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the calculated z-statistic for the model."
+  },
+  "P": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the p-value for the statistical test."
   }
 }

@@ -1,216 +1,37 @@
 {
-  "Species Species": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "This column lists the taxonomic names of the insect species studied.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "These are scientific names of ant species, representing discrete biological classifications."
-  },
-  "N N": {
+  "TDF fragments": {
     "field": null,
-    "value_column": true,
-    "reasoning": "This column represents the sample size (number of individuals) and is not a measurement type.",
-    "category": null,
-    "reasoning_relevance": "This column records the number of individuals measured (sample size), which is not a biological trait."
+    "value_column": false,
+    "reasoning": "Identifies the specimen fragment ID, not an insect taxon or measurement."
   },
-  "HL Mean": {
+  "Season": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This specifies the mean measurement for Head Length (HL).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Head Length (HL) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "head length Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Head Length) is a morphological trait taken from ants collected and preserved in leaf litter samples.",
-    "measurementMethod": "dual-axis micrometer stage",
-    "measurementMethod_reasoning": "The text explicitly states that measurements were made using a dual-axis micrometer stage.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text specifies that all morphometric traits are expressed in mm.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The analysis calculates the Community-Weighted Mean (CWM) for each functional trait, which represents the average value of the trait for the community."
+    "reasoning": "Categorical environmental condition observed during sampling."
   },
-  "HL SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Head Length measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "HW Mean": {
+  "SR": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This specifies the mean measurement for Hind Width (HW).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Head Width (HW) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "head width Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Head Width) is a morphological trait taken from collected ant specimens, as indicated by the methodology section (Section 2.3.1).",
-    "measurementMethod": "Head width measured using a dual-axis micrometer stage.",
-    "measurementMethod_reasoning": "The text specifies that morphological traits were measured using a dual-axis micrometer stage, with measurements being approximated to 0.01 mm due to specimen orientation.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text states that all morphometric traits are expressed in mm.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The measurement is the Community-Weighted Mean (CWM) of the trait, which is calculated using the average value of the trait for each species, weighted according to the respective local abundance."
+    "reasoning": "Represents a measured variable, likely a specific metric or count."
   },
-  "HW SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Hind Width measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "ML Mean": {
+  "LCI": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This specifies the mean measurement for Mandible Length (ML).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Mandible Length (ML) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "mandible length Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Mandible Length) is a morphological trait taken from collected ant specimens (individuals were measured with a micrometer stage).",
-    "measurementMethod": "Measurement of mandible length using a dual-axis micrometer stage, calculated as Community-Weighted Mean (CWM)",
-    "measurementMethod_reasoning": "The text specifies that morphological traits were measured using a dual-axis micrometer stage. The final reported value (ML Mean) is the Community-Weighted Mean (CWM) of the trait, which is the average value of the trait for each species weighted by its local abundance.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text states that all morphometric traits are expressed in mm.",
-    "measurementStatistic": "mean ± SD",
-    "measurementStatistic_reasoning": "The results are reported as mean values (e.g., 0.653 mm) accompanied by standard deviation (SD) values (e.g., ± 0.096 mm)."
+    "reasoning": "Represents a measured variable, likely a specific metric or count."
   },
-  "ML SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Mandible Length measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "SL Mean": {
+  "UCI": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This specifies the mean measurement for Scape Length (SL).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Scape Length (SL) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "scape length Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Scape Length, SL) is a morphological trait taken from individual ant workers collected and preserved in leaf litter samples.",
-    "measurementMethod": "Measurement of Scape Length (SL) using a dual-axis micrometer stage on ant workers, with values approximated to 0.01 mm.",
-    "measurementMethod_reasoning": "The text specifies that morphological traits were measured using a dual-axis micrometer stage. The final reported value for the community is the Community Weighted Mean (CWM).",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text states that all morphometric traits are expressed in mm.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The measurement is reported as the Community Weighted Mean (CWM), which is a type of mean calculated by weighting the average trait value of each species by its local abundance."
+    "reasoning": "Represents a measured variable, likely a specific metric or count."
   },
-  "SL SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Scape Length measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "EL Mean": {
+  "Chao-1": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This specifies the mean measurement for Eye Length (EL).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Eye Length (EL) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "eye length Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Eye Length, EL) is a morphological trait taken from individual ant workers collected in the leaf litter, which implies the specimens were preserved for measurement.",
-    "measurementMethod": "Eye length (EL) measured using a dual-axis micrometer stage",
-    "measurementMethod_reasoning": "The text specifies that morphological traits were measured using a dual-axis micrometer stage, with measurements for EL being one of the eight functional traits analyzed.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text states that all morphometric traits, including EL, are expressed in millimeters (mm).",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The functional diversity analysis utilized the Community-Weighted Mean (CWM) of each functional trait, which is the average value of the trait for each species weighted by its local abundance. This represents the mean trait value of the community."
+    "reasoning": "Represents a measured diversity index or count."
   },
-  "EL SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Eye Length measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "DI Mean": {
+  "$\\hat{C}m$": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This specifies the mean measurement for Distance Index (DI).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Interocular Distance (DI) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "distance Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Interocular distance) is a morphological trait taken from ant specimens collected in leaf litter and preserved for study.",
-    "measurementMethod": "dual-axis micrometer stage",
-    "measurementMethod_reasoning": "The text specifies that measurements were made using a dual-axis micrometer stage, with readings approximated to 0.01 mm due to specimen orientation.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text states that all morphometric traits, including interocular distance, are expressed in millimeters (mm).",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The functional trait analysis uses the Community-weighted mean (CWM) of each trait, which represents the average value of the trait for each species weighted by its local abundance."
-  },
-  "DI SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Distance Index measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "FL Mean": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This specifies the mean measurement for Foreleg Length (FL).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Femur Length (FL) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "femur length Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Femur Length) is a morphological trait taken from individual ant specimens collected from the leaf litter.",
-    "measurementMethod": "Measurement of Femur Length (FL) using a dual-axis micrometer stage on ant workers.",
-    "measurementMethod_reasoning": "The text specifies that morphological traits were measured using a dual-axis micrometer stage. The measurement was applied to the workers of the ant species.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text states that all morphometric traits, including femur length, are expressed in millimeters (mm).",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The functional trait values were aggregated using the Community-Weighted Mean (CWM), which is calculated as the average value of the trait for each species, weighted according to the respective local abundance. The results section also refers to 'mean' values for comparison."
-  },
-  "FL SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Foreleg Length measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
-  },
-  "WL Mean": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This specifies the mean measurement for Wing Length (WL).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the average Weber Length (WL) of the ants, a physical measurement.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Weber length Mean",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement (Weber length) is a morphological trait taken from individual ant specimens collected in leaf litter samples, which are typically preserved for taxonomic and morphological study.",
-    "measurementMethod": "Measurement of Weber length using a dual-axis micrometer stage, approximated to 0.01 mm, with the final community trait calculated as the Community-Weighted Mean (CWM) based on local abundance.",
-    "measurementMethod_reasoning": "The text explicitly states that morphological traits were measured using a dual-axis micrometer stage and that the community-weighted mean (CWM) was calculated for each trait.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The text specifies that all morphometric traits, including Weber length, are expressed in mm.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The request asks for 'WL Mean', and the text describes the calculation of the Community-Weighted Mean (CWM) for the trait."
-  },
-  "WL SD": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This provides the standard deviation (SD) for the Wing Length measurement.",
-    "category": null,
-    "reasoning_relevance": "This column records the Standard Deviation (SD), which is a statistical index of variability."
+    "reasoning": "Represents a measured metric, likely a density or abundance estimate."
   }
 }

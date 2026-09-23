@@ -64,10 +64,10 @@ FUZZY VALUE MATCHES (5 accepted beyond exact/numeric)
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord               111    173  0.642
-  measurementMethod             0    125  0.000  <-- low
+  basisOfRecord                88    173  0.509
+  measurementMethod             0    128  0.000  <-- low
   measurementUnit             111    173  0.642
-  measurementStatistic         98    173  0.566
+  measurementStatistic          0    173  0.000  <-- low
   measurementRemarks            0      0    n/a
   sex                          62    173  0.358  <-- low
   lifeStage                   111    173  0.642
@@ -98,8 +98,8 @@ WHY THE 100 MISSED ROWS MISSED
   -> 1 species mismatch explains 7 of 100 misses (7%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Body Size'                        x38
      'Elevation'                        x38
+     'Body Size'                        x38
      'Pollen transport'                 x14
   -> 3 missing traits explain 90 of 100 misses (90%) — systematic, not scattered
 

@@ -2,21 +2,21 @@
   "TDF fragment pairs": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column describes the comparison groups (N1 vs N2), not an organism or a measurement."
+    "reasoning": "This column describes the comparison being made, not an organism or measurement."
   },
   "Pseudo-F": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column holds the calculated F-statistic value from the statistical test."
+    "reasoning": "This is a statistical test result, not a biological measurement of the insect."
   },
   "df(residual)": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column provides the degrees of freedom, a statistical parameter of the test."
+    "reasoning": "This is a statistical degree of freedom, not a biological measurement."
   },
   "p": {
-    "field": "measurementValue",
+    "field": null,
     "value_column": true,
-    "reasoning": "This column holds the p-value, a statistical result of the analysis."
+    "reasoning": "This is a statistical probability value, not a biological measurement."
   }
 }

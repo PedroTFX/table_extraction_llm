@@ -1,17 +1,79 @@
 {
-  "Reference": {
-    "field": null,
+  "Study ID": {
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column contains full scientific citations, which is metadata, not a data field."
+    "reasoning": "Study ID is a unique identifier, not an insect taxon or measurement.",
+    "category": null,
+    "reasoning_relevance": "Study ID is an identifier, not a biological measurement or trait."
   },
-  "data received after request": {
-    "field": null,
+  "country": {
+    "field": "verbatimLocality",
     "value_column": false,
-    "reasoning": "This column tracks the status of data acquisition, not a scientific measurement or identification."
+    "reasoning": "Country is a geographic location, fitting the definition of verbatimLocality.",
+    "category": null,
+    "reasoning_relevance": "Country is a place name, not a trait of the organism."
   },
-  "data included after review": {
-    "field": null,
+  "region": {
+    "field": "verbatimLocality",
     "value_column": false,
-    "reasoning": "This column tracks the status of data inclusion, not a scientific measurement or identification."
+    "reasoning": "Region is a geographic location, fitting the definition of verbatimLocality.",
+    "category": null,
+    "reasoning_relevance": "Region is a place name, not a trait of the organism."
+  },
+  "year": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Year is a temporal quantity measured for the study event.",
+    "category": null,
+    "reasoning_relevance": "Year is temporal context, not an inherent biological trait."
+  },
+  "months": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Months describe the temporal period of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Months is temporal context, not an inherent biological trait."
+  },
+  "crop types": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Crop types describe the habitat or land-use context of the study.",
+    "category": null,
+    "reasoning_relevance": "Crop types are environmental factors, not traits of the carabid."
+  },
+  "adjacent habitat classes": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Habitat classes describe the environment where the organism lives.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Describes the habitat class the organism interacts with.",
+    "multi_value": true,
+    "value_type": "categorical",
+    "canonicalType": "adjacent habitat classes",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The text discusses the spatial distribution and influence of carabid assemblages in relation to crop types and adjacent non-crop habitats. The underlying data involves spatial occurrences of carabids within agricultural landscapes defined by these habitat types.",
+    "measurementMethod": "Quantitative synthesis of distance functions based on spatial data from 1204 study sites across eight Western and Central European countries, focusing on the interplay between crop types, adjacent habitats, and functional traits.",
+    "measurementMethod_reasoning": "The text describes the methodology used for the synthesis: performing a quantitative synthesis of carabid richness, activity densities, and functional traits in relation to field edges (distance functions), and focusing on a combination of three potential drivers (crop types, adjacent habitats, and functional traits)."
+  },
+  "study sites": {
+    "field": "verbatimLocality",
+    "value_column": false,
+    "reasoning": "Study sites are specific named locations for sampling.",
+    "category": null,
+    "reasoning_relevance": "Study sites are specific locations, not organism traits."
+  },
+  "maximal distance [m]": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Distance is a measured physical trait of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Distance is a site variable, not an organism's inherent trait."
+  },
+  "trapping days": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Trapping days is a measured effort or time variable.",
+    "category": null,
+    "reasoning_relevance": "Trapping days is a sampling effort statistic, not an organism trait."
   }
 }

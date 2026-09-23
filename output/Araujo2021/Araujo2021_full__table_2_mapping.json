@@ -1,106 +1,57 @@
 {
-  "Bee species": {
-    "field": "verbatimIdentification",
+  "Variable": {
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column lists the specific insect taxa (species) being measured.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column lists the scientific names of the bee species observed."
+    "reasoning": "The variable names define the biological trait being measured for the focal organism."
   },
-  "Left wing length(mm)": {
-    "field": "measurementType",
+  "Estimate ± SE": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This defines a specific physical trait (body part length) measured on the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This is a physical measurement of the bee's wing with units (mm).",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Left wing length",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurements were taken on insects that were collected using trap-nests, pinned, and identified in the laboratory, indicating they were measured from preserved specimens.",
-    "measurementMethod": "Measurement of insect body parts using a millimetre scale and Leica Application Suite software version 2.0.",
-    "measurementMethod_reasoning": "The text explicitly states: 'The measurements of the insect’s body parts were made on a millimetre scale, using Leica Application Suite software version 2.0.'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement was taken on a millimetre scale, and the target measurement specifies (mm).",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "Although the measurement is taken on an individual insect, the paper reports functional traits (like wing length) as the 'trait average' or 'weighted community mean' of the trait values across the community."
+    "reasoning": "This column holds the estimated values for the measured trait."
   },
-  "ITS(mm)": {
-    "field": "measurementType",
+  "t-value": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This defines a specific physical trait (ITS length) measured on the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This is a physical measurement of a specific body part (ITS) with units (mm).",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "ITS",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurements (e.g., wing length, body size, mandibular length) were taken from insects that were collected in trap-nests, pinned, and identified in the laboratory, indicating they were measured off a preserved specimen.",
-    "measurementMethod": "Measurement of insect morphological traits (e.g., wing length, body size, posterior tibia length, mandibular length) using a millimetre scale and Leica Application Suite software.",
-    "measurementMethod_reasoning": "The text explicitly states: 'The measurements of the insect’s body parts were made on a millimetre scale, using Leica Application Suite software version 2.0.' Since 'ITS(mm)' is not a defined column, it is inferred to refer to these individual insect trait measurements.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The unit is specified in the prompt ('ITS(mm)') and confirmed in the text ('made on a millimetre scale').",
-    "measurementStatistic": "single observation",
-    "measurementStatistic_reasoning": "The measurements were taken on individual insects ('we randomly selected 20 individuals to take the measures of all traits cited above'), representing a single observation of that individual's trait."
+    "reasoning": "This column holds the calculated t-statistic for the comparison."
   },
-  "Left posterior tibia length(mm)": {
-    "field": "measurementType",
+  "Estimate ± SE (1)": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This defines a specific physical trait (tibia length) measured on the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This is a physical measurement of the bee's posterior tibia with units (mm).",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Left posterior tibia length",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurements were taken on insects (bees and wasps) collected from the field using trap-nests, preserved, and subsequently pinned in the laboratory for identification and measurement.",
-    "measurementMethod": "Direct measurement using a millimetre scale/Leica Application Suite software on pinned specimens.",
-    "measurementMethod_reasoning": "The text explicitly states: 'The measurements of the insect’s body parts were made on a millimetre scale, using Leica Application Suite software version 2.0.'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement is defined as 'Left posterior tibia length(mm)'.",
-    "measurementStatistic": "single observation",
-    "measurementStatistic_reasoning": "The measurement is taken on individual insects (e.g., 20 individuals were randomly selected per species). While the final analysis uses a 'weighted community mean' (trait average), the measurement itself is a single observation of a specific individual's trait."
+    "reasoning": "This column holds the estimated values with standard error for the first comparison."
   },
-  "Nesting material(own observation)": {
-    "field": "measurementType",
+  "t-value (1)": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Describes a characteristic of the organism's habitat or behavior (nest material).",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "This column classifies the discrete type of material used for nesting.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Nesting material",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurement of nesting material is a physical/morphological trait of the individual insect (bee or wasp). The insects were collected from trap-nest blocks in the field and subsequently measured and analyzed in the laboratory, classifying them as preserved specimens.",
-    "measurementMethod": "Direct observation of the material used by the individual to construct its nest/cell, based on the collected specimens from the trap nests.",
-    "measurementMethod_reasoning": "The study evaluated the nesting material trait by observing the physical characteristics of the nests built by the collected specimens. This observation was performed on the specimens retrieved from the experimental trap-nest blocks.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This column holds the calculated t-statistic for the first comparison."
   },
-  "Tongue length(mm)": {
-    "field": "measurementType",
+  "Estimate ± SE (2)": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This defines a specific physical trait (tongue length) measured on the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "This is a physical measurement of the bee's tongue with units (mm).",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Tongue length",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The measurements were taken on insects (bees and wasps) that were collected in trap-nests, pinned, and identified in the laboratory, indicating they were measured on preserved specimens.",
-    "measurementMethod": "Measurement of insect body parts using a millimetre scale and Leica Application Suite software version 2.0",
-    "measurementMethod_reasoning": "The text explicitly states that the measurements of the insect's body parts were made on a millimetre scale using Leica Application Suite software version 2.0.",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurements were taken on a millimetre scale.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The study calculated functional traits using the 'trait average' for continuous traits, which is defined as the 'weighted community mean (mean of the trait values of all species in the community weighted by their abundance)'."
+    "reasoning": "This column holds the estimated values with standard error for the second comparison."
   },
-  "Pollen transport(reference)": {
-    "field": "measurementMethod",
+  "t-value (2)": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Describes the method or anatomical structure used for pollen transport.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "This classifies the biological mechanism (e.g., scopa, corbicula) used for pollen transport.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "This column holds the calculated t-statistic for the second comparison."
+  },
+  "Estimate ± SE (3)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the estimated values with standard error for the third comparison."
+  },
+  "t-value (3)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the calculated t-statistic for the third comparison."
+  },
+  "Estimate ± SE (4)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the estimated values with standard error for the fourth comparison."
+  },
+  "t-value (4)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column holds the calculated t-statistic for the fourth comparison."
   }
 }

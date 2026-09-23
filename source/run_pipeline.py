@@ -34,6 +34,10 @@ DEFAULTS = {
     "measurementStatistic": "mode",
     "sex": "both",
     "lifeStage": "adult",
+    # PreservedSpecimen is the overwhelmingly dominant basisOfRecord in the GT
+    # (morphology off specimens). Used only when the tag step left it empty or
+    # returned a non-DwC description (cleared by to_output.normalize_basis_out).
+    "basisOfRecord": "PreservedSpecimen",
 }
 
 

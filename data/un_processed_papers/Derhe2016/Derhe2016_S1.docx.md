@@ -1,72 +1,165 @@
-Supporting Information  
-![](images/510791138e2fe0e3751b8e7748785bb283896bd5218ea4a83b2aadf3c7f40eab.jpg)  
-Figure S1 Map of the study area, showing the 20 study sites and areas of cleared forest, Eucalypt forest and rainforest. Each site comprised four sampling points (pitfall traps) for the measurement of community attributes and four experimental dung baits for the measurement of ecosystem functions.
+<!-- page 1 of 5 -->
 
-Table S1 Abundance of each species and their assigned functional trait values, including the habitat category within which the majority of individuals were recorded (‘habitat preference’): P= pasture; YR= young restoration; MR= mid-age restoration; OR= old restoration; RF = rainforest.
+**Supporting Information**
 
-<table><tr><td>Species</td><td>Taxonomic authority</td><td>Abundance</td><td>Body mass (mg)</td><td>Behavioural guild</td><td>Diel activity</td><td>Diet preference</td><td>Diet breadth</td><td>Habitat preference</td></tr><tr><td>Amphistomus complanatus</td><td>Matthews (1974)</td><td>333</td><td>9.60</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>YR; MR; OR; RF</td></tr><tr><td>Amphistomus NQ3</td><td>NA</td><td>235</td><td>18.31</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Amphistomus NQ4</td><td>NA</td><td>18</td><td>3.21</td><td>Rollers</td><td>NA</td><td>Dung</td><td>2</td><td>OR; RF</td></tr><tr><td>Amphistomus NQ5</td><td>NA</td><td>302</td><td>1.55</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>OR; RF</td></tr><tr><td>Amphistomus pygmaeus</td><td>Matthews (1974)</td><td>7</td><td>3.30</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Aptenocanthon winyar</td><td>Storey &amp; Monteith (2000)</td><td>4</td><td>9.00</td><td>Rollers</td><td>NA</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Boletoscapter cornutus</td><td>Matthews (1974)</td><td>68</td><td>8.50</td><td>Rollers</td><td>Nocturnal</td><td>Mushroom</td><td>1</td><td>MR; OR; RF</td></tr><tr><td>Coptodactyla depressa</td><td>Matthews (1976)</td><td>409</td><td>51.25</td><td>Tunnelers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>MR; OR; RF</td></tr><tr><td>Coptodactyla onitoides</td><td>Matthews (1976)</td><td>79</td><td>76.80</td><td>Tunnelers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>MR; OR</td></tr><tr><td>Demarziella interrupta</td><td>Matthews (1976)</td><td>27</td><td>2.95</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>P</td></tr><tr><td>Lepanus globulus</td><td>Matthews (1974)</td><td>11</td><td>4.43</td><td>Rollers</td><td>NA</td><td>Both</td><td>2</td><td>RF</td></tr><tr><td>Lepanus latheticus</td><td>Matthews (1974)</td><td>10</td><td>0.70</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>Lepanus nitidus (large)</td><td>Matthews (1974)</td><td>13</td><td>3.50</td><td>Rollers</td><td>Diurnal</td><td>Both</td><td>2</td><td>RF</td></tr><tr><td>Lepanus nitidus (small)</td><td>Matthews (1974)</td><td>115</td><td>1.40</td><td>Rollers</td><td>Diurnal</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>Lepanus NQ11</td><td>NA</td><td>1</td><td>0.70</td><td>Rollers</td><td>NA</td><td>NA</td><td>NA</td><td>OR</td></tr><tr><td>Lepanus NQ3</td><td>NA</td><td>3</td><td>0.75</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>Lepanus NQ5</td><td>NA</td><td>1</td><td>0.87</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>NA</td><td>RF</td></tr><tr><td>Lepanus palumensis</td><td>Matthews (1974)</td><td>1</td><td>0.80</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>1</td><td>RF</td></tr><tr><td>Lepanus villosus</td><td>Matthews (1974)</td><td>12</td><td>0.65</td><td>Rollers</td><td>Diurnal</td><td>Mushroom</td><td>1</td><td>RF</td></tr><tr><td>Onthophagus bornemisszanus</td><td>Matthews (1972)</td><td>2</td><td>20.00</td><td>Tunnelers</td><td>NA</td><td>NA</td><td>NA</td><td>P</td></tr><tr><td>Onthophagus bundara</td><td>Storey &amp; Weir (1990)</td><td>1</td><td>1.29</td><td>Tunnelers</td><td>NA</td><td>NA</td><td>NA</td><td>RF</td></tr><tr><td>Onthophagus capelliformis</td><td>Matthews (1972)</td><td>113</td><td>25.47</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>YR; MR; OR; RF</td></tr><tr><td>Onthophagus capella</td><td>Matthews (1972)</td><td>17</td><td>52.95</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>P; YR</td></tr><tr><td>Onthophagus cuniculus</td><td>Matthews (1972)</td><td>31</td><td>19.70</td><td>Tunnelers</td><td>Diurnal</td><td>Mushroom</td><td>2</td><td>P; YR</td></tr><tr><td>Onthophagus darlingtoni</td><td>Matthews (1972)</td><td>3</td><td>15.62</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Onthophagus dicranocerus</td><td>Matthews (1972)</td><td>18</td><td>31.04</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR; OR; RF</td></tr><tr><td>Onthophagus gulmarri</td><td>Matthews (1972)</td><td>4</td><td>9.00</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR; RF</td></tr><tr><td>Onthophagus millamilla</td><td>Matthews (1972)</td><td>59</td><td>4.38</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>2</td><td>MR; OR; RF</td></tr><tr><td>Onthophagus mundill</td><td>Matthews (1972)</td><td>1</td><td>61.00</td><td>Tunnelers</td><td>Nocturnal</td><td>NA</td><td>NA</td><td>RF</td></tr><tr><td>Onthophagus nigriventris</td><td>D'Orbigny (1902)</td><td>2</td><td>38.31</td><td>Tunnelers</td><td>Diurnal</td><td>NA</td><td>NA</td><td>OR</td></tr><tr><td>Onthophagus paluma</td><td>Matthews (1972)</td><td>1</td><td>28.50</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>P</td></tr><tr><td>Onthophagus rubicundulus</td><td>Matthews (1972)</td><td>15</td><td>1.86</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Onthophagus semimetallicus</td><td>Matthews (1972)</td><td>12</td><td>12.0</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR</td></tr><tr><td>Onthophagus wagamen</td><td>Matthews (1972)</td><td>62</td><td>5.70</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Onthophagus waminda</td><td>Matthews (1972)</td><td>84</td><td>1.93</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>YR; MR; OR; RF</td></tr><tr><td>Onthophagus yungaburra</td><td>Matthews (1972)</td><td>136</td><td>2.57</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>Temnoplectron aeneopiceum</td><td>Matthews (1974)</td><td>1</td><td>4.56</td><td>Rollers</td><td>Nocturnal</td><td>Unknown</td><td>1</td><td>RF</td></tr><tr><td>Temnoplectron bornemisszai</td><td>Matthews (1974)</td><td>18</td><td>63.50</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>Temnoplectron politulum</td><td>Matthews (1974)</td><td>387</td><td>18.56</td><td>Rollers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>OR; RF</td></tr></table>
+![Image block](doc:180203f/tier:flash/page:1/block:2)
 
-## Appendix S1 Functional trait assignment methods
+**Figure S1** Map of the study area, showing the 20 study sites and areas of cleared forest, Eucalypt forest and rainforest. Each site comprised four sampling points (pitfall traps) for the measurement of community attributes and four experimental dung baits for the measurement of ecosystem functions.
+
+<!-- page 2 of 5 -->
+
+**Table S1** Abundance of each species and their assigned functional trait values, including the habitat category within which the majority of individuals were recorded (‘habitat preference’): P= pasture; YR= young restoration; MR= mid-age restoration; OR= old restoration; RF = rainforest.
+
+| **Species** | **Taxonomic authority** | **Abundance** | **Body mass (mg)** | **Behavioural guild** | **Diel activity** | **Diet preference** | **Diet breadth** | **Habitat preference** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| *Amphistomus complanatus* | Matthews (1974) | 333 | 9.60 | Rollers | Nocturnal | Dung | 2 | YR; MR; OR; RF |
+| *Amphistomus NQ3* | NA | 235 | 18.31 | Rollers | Nocturnal | Dung | 2 | RF |
+| *Amphistomus NQ4* | NA | 18 | 3.21 | Rollers | NA | Dung | 2 | OR; RF |
+| *Amphistomus NQ5* | NA | 302 | 1.55 | Rollers | Nocturnal | Dung | 2 | OR; RF |
+| *Amphistomus pygmaeus* | Matthews (1974) | 7 | 3.30 | Rollers | Nocturnal | Dung | 1 | RF |
+| *Aptenocanthon winyar* | Storey &amp; Monteith (2000) | 4 | 9.00 | Rollers | NA | Dung | 1 | RF |
+| *Boletoscapter cornutus* | Matthews (1974) | 68 | 8.50 | Rollers | Nocturnal | Mushroom | 1 | MR; OR; RF |
+| *Coptodactyla depressa* | Matthews (1976) | 409 | 51.25 | Tunnelers | Nocturnal | Both | 2 | MR; OR; RF |
+| *Coptodactyla onitoides* | Matthews (1976) | 79 | 76.80 | Tunnelers | Nocturnal | Both | 2 | MR; OR |
+| *Demarziella interrupta* | Matthews (1976) | 27 | 2.95 | Tunnelers | Nocturnal | Dung | 2 | P |
+| *Lepanus globulus* | Matthews (1974) | 11 | 4.43 | Rollers | NA | Both | 2 | RF |
+| *Lepanus latheticus* | Matthews (1974) | 10 | 0.70 | Rollers | NA | Mushroom | 2 | RF |
+| *Lepanus nitidus (large)* | Matthews (1974) | 13 | 3.50 | Rollers | Diurnal | Both | 2 | RF |
+| *Lepanus nitidus (small)* | Matthews (1974) | 115 | 1.40 | Rollers | Diurnal | Mushroom | 2 | RF |
+| *Lepanus NQ11* | NA | 1 | 0.70 | Rollers | NA | NA | NA | OR |
+| *Lepanus NQ3* | NA | 3 | 0.75 | Rollers | NA | Mushroom | 2 | RF |
+| *Lepanus NQ5* | NA | 1 | 0.87 | Rollers | NA | Mushroom | NA | RF |
+| *Lepanus palumensis* | Matthews (1974) | 1 | 0.80 | Rollers | NA | Mushroom | 1 | RF |
+| *Lepanus villosus* | Matthews (1974) | 12 | 0.65 | Rollers | Diurnal | Mushroom | 1 | RF |
+| *Onthophagus bornemisszanus* | Matthews (1972) | 2 | 20.00 | Tunnelers | NA | NA | NA | P |
+| *Onthophagus bundara* | Storey &amp; Weir (1990) | 1 | 1.29 | Tunnelers | NA | NA | NA | RF |
+| *Onthophagus capelliformis* | Matthews (1972) | 113 | 25.47 | Tunnelers | Nocturnal | Dung | 1 | YR; MR; OR; RF |
+| *Onthophagus capella* | Matthews (1972) | 17 | 52.95 | Tunnelers | Nocturnal | Dung | 1 | P; YR |
+| *Onthophagus cuniculus* | Matthews (1972) | 31 | 19.70 | Tunnelers | Diurnal | Mushroom | 2 | P; YR |
+| *Onthophagus darlingtoni* | Matthews (1972) | 3 | 15.62 | Tunnelers | Nocturnal | Dung | 2 | RF |
+| *Onthophagus dicranocerus* | Matthews (1972) | 18 | 31.04 | Tunnelers | Nocturnal | Dung | 1 | MR; OR; RF |
+| *Onthophagus gulmarri* | Matthews (1972) | 4 | 9.00 | Tunnelers | Nocturnal | Dung | 1 | MR; RF |
+| *Onthophagus millamilla* | Matthews (1972) | 59 | 4.38 | Tunnelers | Diurnal | Dung | 2 | MR; OR; RF |
+| *Onthophagus mundill* | Matthews (1972) | 1 | 61.00 | Tunnelers | Nocturnal | NA | NA | RF |
+| *Onthophagus nigriventris* | D'Orbigny (1902) | 2 | 38.31 | Tunnelers | Diurnal | NA | NA | OR |
+| *Onthophagus paluma* | Matthews (1972) | 1 | 28.50 | Tunnelers | Diurnal | Dung | 1 | P |
+| *Onthophagus rubicundulus* | Matthews (1972) | 15 | 1.86 | Tunnelers | Diurnal | Dung | 2 | RF |
+| *Onthophagus semimetallicus* | Matthews (1972) | 12 | 12.0 | Tunnelers | Nocturnal | Dung | 1 | MR |
+| *Onthophagus wagamen* | Matthews (1972) | 62 | 5.70 | Tunnelers | Diurnal | Dung | 1 | RF |
+| *Onthophagus waminda* | Matthews (1972) | 84 | 1.93 | Tunnelers | Diurnal | Dung | 1 | YR; MR; OR; RF |
+| *Onthophagus yungaburra* | Matthews (1972) | 136 | 2.57 | Tunnelers | Diurnal | Dung | 1 | RF |
+| *Temnoplectron aeneopiceum* | Matthews (1974) | 1 | 4.56 | Rollers | Nocturnal | Unknown | 1 | RF |
+| *Temnoplectron bornemisszai* | Matthews (1974) | 18 | 63.50 | Rollers | Nocturnal | Dung | 2 | RF |
+| *Temnoplectron politulum* | Matthews (1974) | 387 | 18.56 | Rollers | Nocturnal | Both | 2 | OR; RF |
+
+<!-- page 3 of 5 -->
+
+**Appendix S1** Functional trait assignment methods
 
 Where information on a species was unavailable, NAs were used. This was necessary for eight species for diet preference and breadth, and for ten species for diel activity and behavioural guild. In order to calculate functional diversity metrics, traits were given equal weighting and species were weighted by their relative abundance. Sample sites for which there were less than three species recorded (n=4) were excluded from any analysis involving the functional diversity metrics, because functional diversity indices cannot be calculated from less than three species.
 
-## Behavioural guild, diel activity and body mass
+*Behavioural guild, diel activity and body mass*
 
-Information on species’ behavioural guilds and diel activity was obtained from the literature (Matthews 1972, 1974, 1976, Storey and Weir 1989, Storey and Monteith 2000) and from observations conducted by the authors (MD, GM and RM). Dung beetles were classified according to their resource relocation behaviour into either tunnelers, which bury dung directly beneath the dung pile; and rollers, which transport and bury dung some distance away from the dung pile (Hanski and Cambefort 1991). To calculate body mass, 1-20 specimens (unknown sex) of each species were dried in a forced draught oven at $6 0 ^ { \circ } \mathrm { C }$ to a constant weight, and weighed using a 0.0001 g precision balance.
+Information on species’ behavioural guilds and diel activity was obtained from the literature (Matthews 1972, 1974, 1976, Storey and Weir 1989, Storey and Monteith 2000) and from observations conducted by the authors (MD, GM and RM). Dung beetles were classified according to their resource relocation behaviour into either tunnelers, which bury dung directly beneath the dung pile; and rollers, which transport and bury dung some distance away from the dung pile (Hanski and Cambefort 1991). To calculate body mass, 1-20 specimens (unknown sex) of each species were dried in a forced draught oven at 60°C to a constant weight, and weighed using a 0.0001 g precision balance.
 
-## Diet preference and breadth
+*Diet preference and breadth*
 
-Diet preference was investigated using traps alternately baited with wallaby dung (n = 80 traps) and mushrooms (n = 80 traps). Trap design was identical for traps baited with both bait types. We used the proportion of individuals of each species attracted to a certain bait to determine bait specificity. Species of which >80% individuals were recorded in traps baited with dung were categorised as ‘dung specialists’; species of which >80% individuals were recorded in traps baited with mushroom were categorised as ‘mushroom specialists’; and species of which 25-75% individuals were recorded in traps baited with dung were categorised as ‘diet generalists’. Diet breadth was calculated as the number of bait types that a species was attracted to (species caught in both dung and mushroom baited traps = 2; species caught only in either dung or mushroom = 1). The minimum number of individuals of each species required to calculate diet preference and breadth was n = 3. Information on diet preference and breadth has important implications for resource partitioning between functional groups.
+Diet preference was investigated using traps alternately baited with wallaby dung (*n* = 80 traps) and mushrooms (*n* = 80 traps). Trap design was identical for traps baited with both bait types. We used the proportion of individuals of each species attracted to a certain bait to determine bait specificity. Species of which >80% individuals were recorded in traps baited with dung were categorised as ‘dung specialists’; species of which >80% individuals were recorded in traps baited with mushroom were categorised as ‘mushroom specialists’; and species of which 25-75% individuals were recorded in traps baited with dung were categorised as ‘diet generalists’. Diet breadth was calculated as the number of bait types that a species was attracted to (species caught in both dung and mushroom baited traps = 2; species caught only in either dung or mushroom = 1). The minimum number of individuals of each species required to calculate diet preference and breadth was n = 3. Information on diet preference and breadth has important implications for resource partitioning between functional groups.
 
-Table S2 Structure of generalised linear mixed models for determining the effects of restoration age and habitat category on species, functional diversity and community metrics and ecological functions.
+<!-- page 4 of 5 -->
 
-<table><tr><td rowspan="2">Response variable</td><td colspan="3">Fixed effect: Restoration age</td><td colspan="3">Fixed effect: Habitat category</td></tr><tr><td>Random effect(s)</td><td>Error distribution</td><td>Transformation</td><td>Random effect(s)</td><td>Error distribution</td><td>Transformation</td></tr><tr><td colspan="7">Species metrics</td></tr><tr><td>Species richness</td><td>Block</td><td>Poisson</td><td></td><td>Block</td><td>Poisson</td><td></td></tr><tr><td>Abundance</td><td>Block</td><td>Negative binomial</td><td></td><td>Block</td><td>Negative binomial</td><td></td></tr><tr><td>Biomass</td><td>Block</td><td>Gamma (log link)</td><td></td><td>Block</td><td>Gaussian</td><td> $\log_{10}$ </td></tr><tr><td>Species diversity</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Rarefied species richness</td><td>Block</td><td>Gaussian</td><td>sqrt</td><td>Block</td><td>Gaussian</td><td>sqrt</td></tr><tr><td>Estimated species richness</td><td>Block</td><td>Negative binomial</td><td></td><td>Block</td><td>Gaussian</td><td>sqrt</td></tr><tr><td>Species evenness</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td colspan="7">Functional diversity metrics</td></tr><tr><td>Functional richness</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Functional evenness</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Functional divergence</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td>Functional dispersion</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr><tr><td colspan="7">Community metrics</td></tr><tr><td>Bray-Curtis similarity to Pasture/ Rainforest</td><td>Block</td><td>Beta</td><td></td><td>Block</td><td>Beta</td><td></td></tr><tr><td colspan="7">Ecological functions</td></tr><tr><td>Dung removal</td><td>Block</td><td>Gaussian</td><td> $\log_{10}$ </td><td>Block</td><td>Gaussian</td><td> $\log_{10}$ </td></tr><tr><td>Seed dispersal</td><td>Block</td><td>Beta</td><td></td><td>Block</td><td>Beta</td><td></td></tr><tr><td>Soil excavation</td><td>Block</td><td>Gamma (log link)</td><td></td><td>Block</td><td>Gamma (log link)</td><td></td></tr><tr><td>Multifunctionality</td><td>Block</td><td>Gaussian</td><td></td><td>Block</td><td>Gaussian</td><td></td></tr></table>
+**Table S2** Structure of generalised linear mixed models for determining the effects of restoration age and habitat category on species, functional diversity and community metrics and ecological functions.
 
-Table S3 Structure of global models for determining the effects of species richness (SpRic), abundance (Abun), biomass (Biom), functional richness (FRic), functional evenness (FEve), functional dispersion (FDis) and functional divergence (FDiv) on dung removal (Dung), seeds dispersal (Seeds), soil excavation (Soil) and multifunctionality (Multi).
+<table><tr><td></td><td></td><td colspan="3"><p><strong>Fixed effect: Restoration age</strong></p></td><td></td><td colspan="3"><p><strong>Fixed effect: Habitat category</strong></p></td></tr><tr><td><p><strong>Response variable</strong></p></td><td></td><td><p><strong>Random effect(s)</strong></p></td><td><p><strong>Error distribution</strong></p></td><td><p><strong>Transformation</strong></p></td><td></td><td><p><strong>Random effect(s)</strong></p></td><td><p><strong>Error distribution</strong></p></td><td><p><strong>Transformation</strong></p></td></tr><tr><td><p><strong>Species metrics</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Species richness</p></td><td></td><td><p>Block</p></td><td><p>Poisson</p></td><td></td><td></td><td><p>Block</p></td><td><p>Poisson</p></td><td></td></tr><tr><td><p>Abundance</p></td><td></td><td><p>Block</p></td><td><p>Negative binomial</p></td><td></td><td></td><td><p>Block</p></td><td><p>Negative binomial</p></td><td></td></tr><tr><td><p>Biomass</p></td><td></td><td><p>Block</p></td><td><p>Gamma (log link) </p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>log<sub>10</sub></p></td></tr><tr><td><p>Species diversity</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Rarefied species richness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>sqrt</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>sqrt</p></td></tr><tr><td><p>Estimated species richness</p></td><td></td><td><p>Block</p></td><td><p>Negative binomial</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>sqrt</p></td></tr><tr><td><p>Species evenness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p><strong>Functional diversity metrics</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Functional richness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Functional evenness</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Functional divergence</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p>Functional dispersion</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr><tr><td><p><strong>Community metrics</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Bray-Curtis similarity to Pasture/ Rainforest</p></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td></tr><tr><td><p><strong>Ecological functions</strong></p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>Dung removal</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>log<sub>10</sub></p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td><p>log<sub>10</sub></p></td></tr><tr><td><p>Seed dispersal</p></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td><td></td><td><p>Block</p></td><td><p>Beta</p></td><td></td></tr><tr><td><p>Soil excavation</p></td><td></td><td><p>Block</p></td><td><p>Gamma (log link) </p></td><td></td><td></td><td><p>Block</p></td><td><p>Gamma (log link) </p></td><td></td></tr><tr><td><p>Multifunctionality</p></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td><td></td><td><p>Block</p></td><td><p>Gaussian</p></td><td></td></tr></table>
 
-<table><tr><td>Global model</td><td>Model</td><td>Random effect(s)</td></tr><tr><td>log(Dung) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>log(Seeds) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>log(Soil) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>Multi ~ SpRic + Abun + Biom + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr></table>
+<!-- page 5 of 5 -->
+
+**Table S3** Structure of global models for determining the effects of species richness (SpRic), abundance (Abun), biomass (Biom), functional richness (FRic), functional evenness (FEve), functional dispersion (FDis) and functional divergence (FDiv) on dung removal (Dung), seeds dispersal (Seeds), soil excavation (Soil) and multifunctionality (Multi). 
+
+| **Global model** | **Model** | **Random effect(s)** |
+| --- | --- | --- |
+| log(Dung) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
+| log(Seeds) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
+| log(Soil) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
+| Multi ~ SpRic + Abun + Biom + FRic + FEve + FDis + FDiv | lmm | Block |
 
 \*Number of individuals (abundance) and biomass were square root transformed to satisfy assumptions of normality
 
-Table S4 Summary of total abundance, observed (Sobs) and estimated (Sest) species richness, and proportion of species detected (Sobs / Sest) in each habitat category. Superscripts represent pairwise differences at the $P \leq$ 0.05 level.
+<a id="_Ref424123611"></a>
+**Table S4** Summary of total abundance, observed (Sobs) and estimated (Sest) species richness, and proportion of species detected (Sobs / Sest) in each habitat category. Superscripts represent pairwise differences at the *P* ≤ 0.05 level.
 
-<table><tr><td>Measure</td><td>Pasture</td><td>Young restoration</td><td>Mid restoration</td><td>Old restoration</td><td>Rainforest</td></tr><tr><td>Abundance</td><td> $78^a$ </td><td> $138^a$ </td><td> $537^b$ </td><td> $957^{bc}$ </td><td> $1607^c$ </td></tr><tr><td>Sobs</td><td> $7^a$ </td><td> $11^a$ </td><td> $20^b$ </td><td> $22^b$ </td><td> $32^c$ </td></tr><tr><td>Sest</td><td> $8.97^a$ </td><td> $13.56^a$ </td><td> $28.20^b$ </td><td> $32.48^b$ </td><td> $37.70^b$ </td></tr><tr><td>Sobs/ Sest</td><td> $0.78^a$ </td><td> $0.81^a$ </td><td> $0.71^a$ </td><td> $0.68^a$ </td><td> $0.85^a$ </td></tr></table>
+| **Measure** | **Pasture** | **Young restoration** | **Mid restoration** | **Old restoration** | **Rainforest** |
+| --- | --- | --- | --- | --- | --- |
+| Abundance | 78<sup>a</sup> | 138<sup>a</sup> | 537<sup>b</sup> | 957<sup>bc</sup> | 1607<sup>c</sup> |
+| Sobs | 7<sup>a</sup> | 11<sup>a</sup> | 20<sup>b</sup> | 22<sup>b</sup> | 32<sup>c</sup> |
+| Sest | 8.97<sup>a</sup> | 13.56<sup>a</sup> | 28.20<sup>b</sup> | 32.48<sup>b</sup> | 37.70<sup>b</sup> |
+| Sobs/ Sest | 0.78<sup>a</sup> | 0.81<sup>a</sup> | 0.71<sup>a</sup> | 0.68<sup>a</sup> | 0.85<sup>a</sup> |
 
-![](images/2df50e822f75ad6c468fcff2dcd9a23d771d19d5ff3059909f70117da42487bb.jpg)  
-Figure S2 Species accumulation curves constructed using sample-based rarefaction curves for pasture, rainforest and the three restoration categories (scaled to show the number of individuals). Dashed line represents 95% confidence interval (CI) of rainforest.
+![Image block](doc:180203f/tier:flash/page:5/block:6)
 
-![](images/b06d874c13d5be41b26abb346c9216b77c9cc19eb26c27f2692db9d6d2a286e7.jpg)  
-Figure S3 Associations between dung beetle community attributes: bivariate plots (lower panels), distributions (diagonal), and Pearson’s ρ (upper panels).
+**Figure S2** Species accumulation curves  constructed using sample-based rarefaction curves for pasture, rainforest and the three restoration categories (scaled to show the number of individuals). Dashed line represents 95% confidence interval (CI) of rainforest.
 
-Table S5 Pairwise comparisons of Bray Curtis assemblage similarity between different habitat categories. P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Asterisks indicate significant differences between categories at the 0.05 level. Degrees of freedom in all models = 1.
+![Image block](doc:180203f/tier:flash/page:5/block:8)
 
-<table><tr><td rowspan="2"></td><td colspan="2">P</td><td colspan="2">YR</td><td colspan="2">MR</td><td colspan="2">OR</td></tr><tr><td> $R^2$ </td><td>Pr(&gt;F)</td><td> $R^2$ </td><td>Pr(&gt;F)</td><td> $R^2$ </td><td>Pr(&gt;F)</td><td> $R^2$ </td><td>Pr(&gt;F)</td></tr><tr><td rowspan="3">YR</td><td>0.1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>4</td><td>0.472</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>0.4</td><td>0.033</td><td>0.2</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td rowspan="2">MR</td><td>1</td><td>*</td><td>3</td><td>0.076</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>0.3</td><td>0.029</td><td>0.1</td><td></td><td>0.0</td><td></td><td></td><td></td></tr><tr><td rowspan="2">OR</td><td>6</td><td>*</td><td>8</td><td>0.266</td><td>5</td><td>0.824</td><td>-</td><td>-</td></tr><tr><td>0.5</td><td>0.023</td><td>0.2</td><td>0.025</td><td>0.2</td><td></td><td>0.1</td><td></td></tr><tr><td>RF</td><td>1</td><td>*</td><td>6</td><td>*</td><td>1</td><td>0.250</td><td>4</td><td>0.502</td></tr></table>
+**Figure S3** Associations between dung beetle community attributes: bivariate plots (lower panels), distributions (diagonal), and Pearson’s ρ (upper panels).
 
-![](images/d06242f566e910f16e5d232cdbceae13f8f7b0296f0d2e87d6fd1f6f8e9c1acf.jpg)
+**Table S5** Pairwise comparisons of Bray Curtis assemblage similarity between different habitat categories. P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Asterisks indicate significant differences between categories at the 0.05 level. Degrees of freedom in all models = 1.
 
-![](images/751d78b3fff6d83a7b72da7f6f9b6c70babad97fb35c26e4cee2b5bec69a7b2a.jpg)
+<table><tr><td><p> </p></td><td colspan="2"><p><strong>P</strong></p></td><td><p><strong> </strong></p></td><td colspan="2"><p><strong>YR</strong></p></td><td><p><strong> </strong></p></td><td colspan="2"><p><strong>MR</strong></p></td><td><p><strong> </strong></p></td><td colspan="2"><p><strong>OR</strong></p></td></tr><tr><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td><td></td><td><p><strong>R<sup>2</sup></strong></p></td><td><p><strong>Pr(&gt;F)</strong></p></td></tr><tr><td><p><strong>YR</strong></p></td><td><p>0.14</p></td><td><p>0.472</p></td><td><p> </p></td><td><p>-</p></td><td><p>-</p></td><td><p> </p></td><td><p>-</p></td><td><p>-</p></td><td><p> </p></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p><strong>MR</strong></p></td><td><p>0.41</p></td><td><p>0.033*</p></td><td></td><td><p>0.23</p></td><td><p>0.076</p></td><td></td><td><p>-</p></td><td><p>-</p></td><td></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p><strong>OR</strong></p></td><td><p>0.36</p></td><td><p>0.029*</p></td><td></td><td><p>0.18</p></td><td><p>0.266</p></td><td></td><td><p>0.05</p></td><td><p>0.824</p></td><td></td><td><p>-</p></td><td><p>-</p></td></tr><tr><td><p><strong>RF</strong></p></td><td><p>0.51</p></td><td><p>0.023*</p></td><td></td><td><p>0.26</p></td><td><p>0.025*</p></td><td></td><td><p>0.21</p></td><td><p>0.250</p></td><td></td><td><p>0.14</p></td><td><p>0.502</p></td></tr></table>
 
-![](images/7c6864461cefdcd81ec38517afff2d94a139a3b093ad28f98d436911098a0c35.jpg)
+![Image block](doc:180203f/tier:flash/page:5/block:12)
 
-![](images/264d480652e68f8179890ce0eb55131bc88d38727811b57b875df55b60cf1463.jpg)  
-Figure S4 Relationship between restoration age and dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture (a-b). Mean ± SE dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture in the different habitat categories (c-d). P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Unlike letters indicate significant differences (P <0.05).
+**Figure S4** Relationship between restoration age and dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture (a-b). Mean ± SE dung beetle assemblage similarity (Bray–Curtis index) to primary forest and pasture in the different habitat categories (c-d). P = pasture; YR = young restoration; MR = mid-age restoration; OR = old restoration; RF = rainforest. Unlike letters indicate significant differences (P <0.05).
 
-Table S6 Support for generalized linear mixed models predicting multifunctionality, dung removal, seed dispersal and soil excavation in relation to dung beetle community attributes and functional diversity metrics.
+**Table S6** Support for generalized linear mixed models predicting multifunctionality, dung removal, seed dispersal and soil excavation in relation to dung beetle community attributes and functional diversity metrics.
 
-<table><tr><td>Predictor</td><td>log(L)</td><td> $\Delta AIC_c$ </td><td> $w_i$ </td></tr><tr><td colspan="4">Multifunctionality</td></tr><tr><td>FDiv</td><td>-17.04</td><td>0.00</td><td>0.309</td></tr><tr><td>FDis</td><td>-17.08</td><td>0.08</td><td>0.297</td></tr><tr><td>FEve</td><td>-17.37</td><td>0.66</td><td>0.223</td></tr><tr><td>Biomass</td><td>-18.02</td><td>1.95</td><td>0.116</td></tr><tr><td>FRic</td><td>-19.05</td><td>4.02</td><td>0.041</td></tr><tr><td>Abundance</td><td>-20.51</td><td>6.93</td><td>0.01</td></tr><tr><td>Species richness</td><td>-21.34</td><td>8.59</td><td>0.004</td></tr><tr><td colspan="4">Dung removal</td></tr><tr><td>FDis</td><td>-12.54</td><td>0.00</td><td>0.568</td></tr><tr><td>FEve</td><td>-13.83</td><td>2.57</td><td>0.157</td></tr><tr><td>FDiv</td><td>-13.86</td><td>2.65</td><td>0.151</td></tr><tr><td>Biomass</td><td>-14.78</td><td>4.49</td><td>0.060</td></tr><tr><td>FRic</td><td>-14.95</td><td>4.82</td><td>0.051</td></tr><tr><td>Abundance</td><td>-16.90</td><td>8.71</td><td>0.007</td></tr><tr><td>Species richness</td><td>-17.06</td><td>9.04</td><td>0.006</td></tr><tr><td colspan="4">Seed dispersal</td></tr><tr><td>FDis</td><td>-12.59</td><td>0.00</td><td>0.401</td></tr><tr><td>FDiv</td><td>-13.13</td><td>1.07</td><td>0.235</td></tr><tr><td>FEve</td><td>-13.41</td><td>1.64</td><td>0.176</td></tr><tr><td>Biomass</td><td>-13.85</td><td>2.52</td><td>0.114</td></tr><tr><td>FRic</td><td>-14.63</td><td>4.07</td><td>0.053</td></tr><tr><td>Abundance</td><td>-16.02</td><td>6.86</td><td>0.013</td></tr><tr><td>Species richness</td><td>-16.46</td><td>7.73</td><td>0.008</td></tr><tr><td colspan="4">Soil excavation</td></tr><tr><td>FDis</td><td>-16.23</td><td>0.00</td><td>0.432</td></tr><tr><td>FDiv</td><td>-16.56</td><td>0.66</td><td>0.310</td></tr><tr><td>FEve</td><td>-17.40</td><td>2.34</td><td>0.134</td></tr><tr><td>FRic</td><td>-17.84</td><td>3.21</td><td>0.087</td></tr><tr><td>Biomass</td><td>-18.83</td><td>5.19</td><td>0.032</td></tr><tr><td>Abundance</td><td>-20.97</td><td>9.49</td><td>0.004</td></tr><tr><td>Species richness</td><td>-21.68</td><td>10.90</td><td>0.002</td></tr></table>
+| **Predictor** | **log(L)** | **ΔAIC**<em><strong><sub>c</sub></strong></em> | ***w***<em><strong><sub>i</sub></strong></em> |
+| --- | --- | --- | --- |
+| Multifunctionality |  |  |  |
+| FDiv | -17.04 | 0.00 | 0.309 |
+| FDis | -17.08 | 0.08 | 0.297 |
+| FEve | -17.37 | 0.66 | 0.223 |
+| Biomass | -18.02 | 1.95 | 0.116 |
+| FRic | -19.05 | 4.02 | 0.041 |
+| Abundance | -20.51 | 6.93 | 0.01 |
+| Species richness | -21.34 | 8.59 | 0.004 |
+| Dung removal |  |  |  |
+| FDis | -12.54 | 0.00 | 0.568 |
+| FEve | -13.83 | 2.57 | 0.157 |
+| FDiv | -13.86 | 2.65 | 0.151 |
+| Biomass | -14.78 | 4.49 | 0.060 |
+| FRic | -14.95 | 4.82 | 0.051 |
+| Abundance | -16.90 | 8.71 | 0.007 |
+| Species richness | -17.06 | 9.04 | 0.006 |
+| Seed dispersal |  |  |  |
+| FDis | -12.59 | 0.00 | 0.401 |
+| FDiv | -13.13 | 1.07 | 0.235 |
+| FEve | -13.41 | 1.64 | 0.176 |
+| Biomass | -13.85 | 2.52 | 0.114 |
+| FRic | -14.63 | 4.07 | 0.053 |
+| Abundance | -16.02 | 6.86 | 0.013 |
+| Species richness | -16.46 | 7.73 | 0.008 |
+| Soil excavation |  |  |  |
+| FDis | -16.23 | 0.00 | 0.432 |
+| FDiv | -16.56 | 0.66 | 0.310 |
+| FEve | -17.40 | 2.34 | 0.134 |
+| FRic | -17.84 | 3.21 | 0.087 |
+| Biomass | -18.83 | 5.19 | 0.032 |
+| Abundance | -20.97 | 9.49 | 0.004 |
+| Species richness | -21.68 | 10.90 | 0.002 |
 
-\* Abundance and Biomass were square root transformed to satisfy assumptions of normality. Block was included as a random effect in each model $( \mathtt { n } = 2 0$ sites). There were 4 parameters in each model and 5 degrees of freedom. log(L) is the log likelihood; $\Delta \mathsf { A I C } _ { c }$ is the difference between the $\mathrm { A I C } _ { c }$ of each model and that of the top model; and w<sub>i</sub> is the Akaike weight.
+\* Abundance and Biomass were square root transformed to satisfy assumptions of normality. Block was included as a random effect in each model (n = 20 sites). There were 4 parameters in each model and 5 degrees of freedom. log(L) is the log likelihood; ΔAIC<em><sub>c</sub></em> is the difference between the AIC<em><sub>c</sub></em> of each model and that of the top model; and *w*<em><sub>i</sub></em> is the Akaike weight.
 
-## Literature cited
+**Literature cited**
 
 Hanski, I., and Y. Cambefort. 1991. Dung Beetle Ecology. Princeton University Press, Princeton.
 
 Matthews. 1972. A revision of the scarabaeine dung beetles of Australia. I. Tribe Onthophagini. Australian Journal of Zoology:1-330.
 
-Matthews. 1974. A revision of the scarabaeine dung beetles of Australia. II. Tribe Scarabaeini. Australian Journal of Zoology Supplementary Series No. 24:1-220.
+Matthews. 1974. A revision of the scarabaeine dung beetles of Australia. II. Tribe Scarabaeini. Australian Journal of Zoology **Supplementary Series No. 24**:1-220.
 
 Matthews. 1976. A revision of the scarabaeine dung beetles of Australia. III. Tribe Coprini. Australian Journal of Zoology:1-52.
 
-Storey, R. I., and G. B. Monteith. 2000. Five new species of Aptenocanthon Matthews (Coleoptera: Scarabaeidae: Scarabaeinae) from tropical Australia, with notes on distribution. Memoirs of the Queensland Museum 49-6:349-358.
+Storey, R. I., and G. B. Monteith. 2000. Five new species of Aptenocanthon Matthews (Coleoptera: Scarabaeidae: Scarabaeinae) from tropical Australia, with notes on distribution. Memoirs of the Queensland Museum **49-6**:349-358.
 
-Storey, R. I., and T. A. Weir. 1989. New species of Onthophagus Latreille (Coleoptera : Scarabaeidae) from Australia. Invertebrate Taxonomy 3:783–815.
+Storey, R. I., and T. A. Weir. 1989. New species of Onthophagus Latreille (Coleoptera : Scarabaeidae) from Australia. Invertebrate Taxonomy **3**:783–815.

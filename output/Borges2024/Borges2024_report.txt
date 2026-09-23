@@ -1,26 +1,40 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Borges2024\Borges2024.xlsx  (23 rows)
-PREDICTION   : ..\output\Borges2024\Borges2024.csv  (16 rows)
+PREDICTION   : ..\output\Borges2024\Borges2024.csv  (28 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
 
-measurementType LEFT UNMAPPED (2)
-  'Population Growth Parameters': no ground-truth string denotes this
-  'Prey Species Predator Biological Trait': no ground-truth string denotes this
+measurementType REMAP (pred -> gt, 1 pair(s))
+  'Sex ratio (% F:M)' -> 'Sex ratio when fed Myzus persicae'
+
+measurementType LEFT UNMAPPED (13)
+  '$R 0$ (female offspring/female)': no ground-truth string denotes this
+  '$r m$ (female/female day $^{-1}$ )': no ground-truth string denotes this
+  '$λ$ (female/female day $^{-1}$ )': no ground-truth string denotes this
+  '$τ$ (days)': no ground-truth string denotes this
+  'DT (days)': no ground-truth string denotes this
+  'Fecundity (n. of eggs)': matches 2 different targets: 'Fecundity when fed Aphis fabae', 'Fecundity when fed Myzus persicae'
+  'Female weight (mg)': matches 2 different targets: 'Female weight when fed Aphis fabae', 'Female weight when fed Myzus persicae'
+  'Fertility (n. of fertile eggs)': matches 2 different targets: 'Fertility when fed Aphis fabae', 'Fertility when fed Myzus persicae'
+  'Incubation time (days)': no ground-truth string denotes this
+  'Male weight (mg)': matches 2 different targets: 'Male weight when fed Aphis fabae', 'Male weight when fed Myzus persicae'
+  'Oviposition period (days)': no ground-truth string denotes this
+  'Oviposition rate (n. of eggs/day)': matches 2 different targets: 'Oviposition rate when fed Aphis fabae', 'Oviposition rate when fed Myzus persicae'
+  'Pre oviposition time (days)': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
   matched (TP)          : 0
   missed (FN)           : 23
-  spurious, in scope    : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 16   <- GT never covers it: nothing to score against
+  spurious, in scope    : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 26   <- GT never covers it: nothing to score against
 
   STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
   SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
   RECALL (GT coverage)  : 0.000
 
   out-of-scope rows by uncovered field:
-    measurementType                             16
+    measurementType                             26
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
@@ -44,21 +58,30 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   externalLink                  0      0    n/a
 
 WHY THE 23 MISSED ROWS MISSED
-  species present, trait missing                       23
+  species present, trait missing                       21
+  species+trait present, value differs                  2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '67.5'                       ->  '67.5 * (25:12)'             x1
+     '54.3'                       ->  '67.5 * (25:12)'             x1
+  -> 2 substitutions explain 2 of 23 misses (9%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Sex ratio when fed Myzus persicae' x2
-     'Incubation time when fed Myzus persicae' x1
-     'Fertility when fed Myzus persicae' x1
-     'Oviposition rate when fed Aphis fabae' x1
-     'Female weight when fed Myzus persicae' x1
-     'Oviposition period when fed Myzus persicae' x1
-  -> 6 missing traits explain 7 of 23 misses (30%) — scattered; no single cause
+     'Pre-oviposition time when fed Myzus persicae' x1
+     'Locality'                         x1
+     'Fecundity when fed Myzus persicae' x1
+     'Oviposition rate when fed Myzus persicae' x1
+     'Oviposition period when fed Aphis fabae' x1
+     'Immature survival when fed Aphis fabae' x1
+  -> 6 missing traits explain 6 of 23 misses (26%) — scattered; no single cause
 
   full miss detail saved -> Borges2024_misses.csv, Borges2024_misses_summary.json (23 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
+  $r 0$ (female offspring/female)                   0     2   PRED-ONLY
+  $λ$ (female/female day $^{-1}$ )                  0     2   PRED-ONLY
+  $r m$ (female/female day $^{-1}$ )                0     2   PRED-ONLY
   fecundity when fed aphis fabae                    1     0   GT-ONLY
   female weight when fed aphis fabae                1     0   GT-ONLY
   fertility when fed aphis fabae                    1     0   GT-ONLY
@@ -69,7 +92,12 @@ measurementType COVERAGE
   oviposition period when fed aphis fabae           1     0   GT-ONLY
   pre-oviposition time when fed aphis fabae         1     0   GT-ONLY
   oviposition rate when fed aphis fabae             1     0   GT-ONLY
-  prey species predator biological trait            0    11   PRED-ONLY
+  $τ$ (days)                                        0     2   PRED-ONLY
+  dt (days)                                         0     2   PRED-ONLY
+  incubation time (days)                            0     2   PRED-ONLY
+  oviposition period (days)                         0     2   PRED-ONLY
+  pre oviposition time (days)                       0     2   PRED-ONLY
+  fecundity (n. of eggs)                            0     2   PRED-ONLY
   fecundity when fed myzus persicae                 1     0   GT-ONLY
   female weight when fed myzus persicae             1     0   GT-ONLY
   fertility when fed myzus persicae                 1     0   GT-ONLY
@@ -80,14 +108,24 @@ measurementType COVERAGE
   oviposition period when fed myzus persicae        1     0   GT-ONLY
   pre-oviposition time when fed myzus persicae      1     0   GT-ONLY
   oviposition rate when fed myzus persicae          1     0   GT-ONLY
-  sex ratio when fed myzus persicae                 2     0   GT-ONLY
-  population growth parameters                      0     5   PRED-ONLY
+  sex ratio when fed myzus persicae                 2     2   
+  female weight (mg)                                0     2   PRED-ONLY
+  fertility (n. of fertile eggs)                    0     2   PRED-ONLY
   locality                                          1     0   GT-ONLY
+  male weight (mg)                                  0     2   PRED-ONLY
+  oviposition rate (n. of eggs/day)                 0     2   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
+    gt 'pre-oviposition time when fed aphis fabae' vs pred 'pre oviposition time (days)'      sim=0.70
+    gt 'oviposition period when fed aphis fabae' vs pred 'oviposition period (days)'        sim=0.68
+    gt 'incubation time when fed aphis fabae' vs pred 'incubation time (days)'           sim=0.64
+    gt 'oviposition rate when fed aphis fabae' vs pred 'oviposition rate (n. of eggs/day)' sim=0.60
+    gt 'male weight when fed aphis fabae' vs pred 'female weight (mg)'               sim=0.58
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     0    23   id+type+value
-             (16 more spurious row(s) out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0     0    23   basis+id+type+value+stat+sex+stage
-             (16 more spurious row(s) out-of-scope; strict P would be 0.000)
+  core        0.000  0.000  0.000      0     2    23   id+type+value
+             (26 more spurious row(s) out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     2    23   basis+id+type+value+stat+sex+stage
+             (26 more spurious row(s) out-of-scope; strict P would be 0.000)
              (F1 +0.000 vs previous)

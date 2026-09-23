@@ -1,37 +1,63 @@
 {
   "identifier": {
-    "field": "definitionTerm",
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column lists the variables or categories being tested in the statistical model."
+    "reasoning": "This column names the taxonomic group or specimen being measured.",
+    "category": null,
+    "reasoning_relevance": "Names sample grouping or taxonomic affiliation, not an organism trait."
   },
-  "Aversion to road Mean (SE)": {
+  "Body mass": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header names the specific trait being measured and the statistical measure (Mean ± SE)."
+    "reasoning": "This measures a physical trait of the insect specimen.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical dimension (weight) of the organism.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body mass",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body mass was measured on collected butterfly specimens, which fall under the category of a preserved specimen for morphological measurement.",
+    "measurementMethod": "Digital weighing-balance (SartoriusAC120S, 0.1 mg resolution)",
+    "measurementMethod_reasoning": "The text explicitly states that body mass was measured using a digital weighing-balance.",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "The measurement was performed on individual specimens (251 butterfly species), implying that each recorded body mass value is an individual measurement.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   },
-  "Aversion to road t-statistic": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This header specifies the statistical test used to determine the significance of the measurement."
-  },
-  "p p": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This header specifies the statistical significance (p-value) of the measurement."
-  },
-  "Aversion to high lantana Mean (SE)": {
+  "Wing length": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header names the specific trait being measured and the statistical measure (Mean ± SE)."
+    "reasoning": "This measures a physical trait of the insect specimen.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical dimension (length) of the organism.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Wing length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurements were taken on adult male butterflies, which are preserved specimens for morphological study.",
+    "measurementMethod": "Measured using a digital calliper (Mitutoyo Digimatic Caliper CD-6\" CSX, 0.01 mm resolution) as the longest straight-line distance from forewing base to forewing apex.",
+    "measurementMethod_reasoning": "The method is explicitly described in the 'Methods' section detailing the use of a digital calliper to measure the wing length.",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement tool resolution (0.01 mm) and the nature of the measurement (straight-line distance) imply the unit is millimeters.",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "The text describes measuring three traits for 251 butterfly species, implying individual measurements for each specimen."
   },
-  "Aversion to high lantana t-statistic": {
-    "field": "measurementStatistic",
+  "Proboscis length": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This header specifies the statistical test used to determine the significance of the measurement."
-  },
-  "Aversion to high lantana p": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This header specifies the statistical significance (p-value) of the measurement."
+    "reasoning": "This measures a physical trait of the insect specimen.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical dimension (length) of the organism.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Proboscis length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurement of proboscis length was performed on collected butterfly specimens, classifying it as a morphological trait.",
+    "measurementMethod": "Digital calliper",
+    "measurementMethod_reasoning": "The text explicitly states that proboscis length was measured using a digital calliper (Mitutoyo Digimatic Caliper CD-6\" CSX).",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The digital calliper resolution is 0.01 mm, indicating that the measurements are in millimeters.",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "The measurements were taken on individual adult male specimens, implying these are individual measurements for each specimen."
   }
 }

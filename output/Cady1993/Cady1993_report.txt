@@ -5,88 +5,89 @@ KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']
 SCOPE        : measurementType
 ================================================================
 
-TAXON NAME REMAP (pred -> gt, 1 pair(s))
+TAXON NAME REMAP (pred -> gt, 5 pair(s))
+  'Acrocera bimaculataLoew, 1866' -> 'Acrocera bimaculata'
+  'Exetasis eickstedtaeSchlinger, 1972' -> 'Exetasis eickstedtae'
   'Ogcodes borealis Cole, 1919' -> 'Ogcodes borealis'
+  'Ogcodes borealisCole, 1919' -> 'Ogcodes borealis'
+  'Turbopsebius sulphuripesLoew, 1869' -> 'Turbopsebius sulphuripes'
 
 TAXON NAMES LEFT UNMAPPED (1)
   'Ogcodes adaptatus': no ground-truth string denotes this
 
-measurementType LEFT UNMAPPED (1)
-  'Lab or field; mean temp. °C': no ground-truth string denotes this
+measurementType REMAP (pred -> gt, 1 pair(s))
+  'Host spider' -> 'Host spider(s)'
 
 ROW-LEVEL (key match)
-  matched (TP)          : 7
-  missed (FN)           : 9
-  spurious, in scope    : 1   <- GT covers this trait: real errors
-  spurious, out of scope: 8   <- GT never covers it: nothing to score against
+  matched (TP)          : 13
+  missed (FN)           : 3
+  spurious, in scope    : 3   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.438 / 0.438 / 0.438
-  SCOPED  P/R/F1        : 0.875 / 0.438 / 0.583
-  RECALL (GT coverage)  : 0.438
+  STRICT  P/R/F1        : 0.812 / 0.812 / 0.812
+  SCOPED  P/R/F1        : 0.812 / 0.812 / 0.812
+  RECALL (GT coverage)  : 0.812
 
-  out-of-scope rows by uncovered field:
-    measurementType                              8
-
-FUZZY VALUE MATCHES (7 accepted beyond exact/numeric)
-  subset           4
+FUZZY VALUE MATCHES (13 accepted beyond exact/numeric)
+  subset          10
   initialism       3
   sample:
-    [initialism] gt '5.5 ± 0.7' == pred '5.5±0.7'
-    [subset] gt '16.87 ± 1.4' == pred '16.87±1.4'
-    [subset] gt '4 ± 0' == pred '4.0±0'
     [initialism] gt '3.4 ± 0.6' == pred '3.4±0.6'
+    [subset] gt 'Coras montanus' == pred 'Coras montanus(Emerton, 1890a)(Agelenidae)'
+    [subset] gt 'Anyphaena californica' == pred 'Anyphaena californica(Banks, 1904)(Anyphaenidae)'
+    [subset] gt '4 ± 0' == pred '4.0±0'
+    [subset] gt '16.87 ± 1.4' == pred '16.87±1.4'
+    [subset] gt 'Pardosa sp.' == pred 'Pardosa sp.(Lycosidae)'
     [subset] gt '7.67 ± 5.4' == pred '7.67±5.4'
     [subset] gt '6.56 ± 1.2' == pred '6.56±1.2'
+    [initialism] gt '5.5 ± 0.7' == pred '5.5±0.7'
+    [subset] gt '"Lycosa" sp.' == pred '“Lycosa” sp.(Lycosidae)'
+    [subset] gt 'Lasiodora klugi' == pred 'Lasiodora klugi(C.L. Koch, 1842)(Theraphosidae)'
     [initialism] gt '9.5 ± 1.3' == pred '9.5±1.3'
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 7      7  1.000
-  measurementMethod             0      7  0.000  <-- low
-  measurementUnit               0      7  0.000  <-- low
-  measurementStatistic          7      7  1.000
-  measurementRemarks            0      7  0.000  <-- low
-  sex                           7      7  1.000
-  lifeStage                     0      7  0.000  <-- low
+  basisOfRecord                13     13  1.000
+  measurementMethod             0     12  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          7     13  0.538
+  measurementRemarks            0     13  0.000  <-- low
+  sex                          13     13  1.000
+  lifeStage                     0     13  0.000  <-- low
   caste                         0      0    n/a
-  sampleSizeValue               0      7  0.000  <-- low
-  sampleSizeUnit                0      7  0.000  <-- low
+  sampleSizeValue               0     13  0.000  <-- low
+  sampleSizeUnit                0     13  0.000  <-- low
   sampleTreatment               0      7  0.000  <-- low
   samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a
+  verbatimLocality              0     13  0.000  <-- low
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0      6  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      7  0.000  <-- low
+  associatedReferences          0     13  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 9 MISSED ROWS MISSED
-  species not in prediction                             4
-  species present, trait missing                        5
+WHY THE 3 MISSED ROWS MISSED
+  species not in prediction                             1
+  species+trait present, value differs                  2
 
-  SPECIES IN GT BUT NOT IN PREDICTION (4 distinct), closest predicted name:
-     gt 'Exetasis eickstedtae'               (nothing similar in the prediction)   x1
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'schizocosa rovneri'         ->  'pardosa sp.(lycosidae)'     x1
+     'schizocosa rovneri'         ->  'schizocosa rovneriuetz & dondale,1979 (lycosidae)' x1
+  -> 2 substitutions explain 2 of 3 misses (67%) — systematic, not scattered
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
      gt 'Ogcodes adaprarus'                 ~0.88~  pred 'Ogcodes adaptatus'   x1
-     gt 'Ogcodes sp.'                       ~0.58~  pred 'Ogcodes dispar'   x1
-     gt 'Turbopsebius sulphuripes'          ~0.76~  pred 'Turbopsebius diligens'   x1
-  -> 4 species mismatches explain 4 of 9 misses (44%) — scattered; no single cause
+  -> 1 species mismatch explains 1 of 3 misses (33%) — scattered; no single cause
 
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Host spider(s)'                   x5
-  -> 1 missing trait explains 5 of 9 misses (56%) — scattered; no single cause
-
-  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (9 row(s))
+  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (3 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  lab or field; mean temp. °c                       0     8   PRED-ONLY
   pupation duration                                 8     8   
-  host spider(s)                                    8     0   GT-ONLY
+  host spider(s)                                    8     8   
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.875  0.438  0.583      7     1     9   id+type+value
-             (8 more spurious row(s) out-of-scope; strict P would be 0.438)
-  tags        0.000  0.000  0.000      0     8    16   basis+id+type+value+stat+sex+stage
-             (8 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 -0.583 vs previous)
+  core        0.812  0.812  0.812     13     3     3   id+type+value
+  tags        0.000  0.000  0.000      0    16    16   basis+id+type+value+stat+sex+stage
+             (F1 -0.812 vs previous)

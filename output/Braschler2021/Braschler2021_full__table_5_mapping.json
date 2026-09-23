@@ -1,42 +1,114 @@
 {
   "Studied group": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Describes the classification or group of the organism being studied."
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column names the group being studied, not a specific insect taxon.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the group of organisms being studied."
   },
   "Distance to city center": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents a quantifiable environmental characteristic of the sampling location."
+    "measurementValue": "ns",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a spatial variable describing the location relative to a city center.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Represents an environmental factor influencing the organisms.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Distance to city center",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The 'distance to city center' is an environmental/spatial characteristic used to categorize the study sites (domestic gardens) along a rural–urban gradient. This falls under the category of ecological context or location, which is classified as HumanObservation in this schema.",
+    "measurementMethod": "Geographical distance calculation based on the location of the gardens relative to the city center.",
+    "measurementMethod_reasoning": "The text describes examining the effects of 'distance to city center' and 'percentage of sealed area' on biodiversity. Although the exact calculation method (e.g., straight-line distance, road distance) is not explicitly detailed in the provided excerpt, the context implies a spatial measurement derived from the location of the 35 gardens relative to the city center."
   },
   "Percentage of sealed area": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a site variable or environmental characteristic of the sampling location."
+    "measurementValue": "ns",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a measurement of a habitat characteristic.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Represents an environmental factor influencing the organisms.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Percentage of sealed area",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The 'percentage of sealed area' is an environmental characteristic of the domestic gardens being studied, representing the state of the habitat at each garden location, which aligns best with the definition of an Occurrence in this context.",
+    "measurementMethod": "Inferred from field survey of domestic gardens along a rural–urban gradient.",
+    "measurementMethod_reasoning": "The text mentions examining the effects of the 'percentage of sealed area' but does not explicitly detail the specific method or protocol used by the authors to measure this percentage across the 35 gardens. It is inferred that this measurement was obtained during the field survey described in Section 2.1 and 2.2."
   },
   "Vegetated garden area": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a site variable or environmental characteristic of the sampling location."
+    "measurementValue": "ns",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a measurement of a habitat characteristic.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical dimension of the garden area.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Vegetated garden area",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The data refers to the area of the grassland within the gardens, which is a physical characteristic of the habitat being studied, rather than a morphological trait of a specimen or a direct human observation of behavior.",
+    "measurementMethod": "Direct measurement of the grassland area in each garden",
+    "measurementMethod_reasoning": "The text states that 'All gardens had a grassland area of at least 4 m2'. This implies a direct measurement or assessment of the area of the grassland component in each garden."
   },
   "Native plant richness": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a site variable or environmental characteristic of the sampling location."
+    "measurementValue": "",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a measurement of plant diversity/richness.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Measures the richness of plant species present.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Native plant richness",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The data records the presence of native plant species within specific garden habitats, which establishes an occurrence of those species at particular locations.",
+    "measurementMethod": "Slowly walking in a zigzag line over the grassland area of a garden, recording plants when touching the line, and recording species along transect lines in other habitat types.",
+    "measurementMethod_reasoning": "The text explicitly describes the method used to record native plant species richness: 'We recorded all native plant species (including woody species) occurring in the grassland by slowly walking in a zigzag line over the grassland area of a garden (hereafter native plant species richness in grassland). Plants were recorded when touching this line.' This method was used to assess plant diversity across the gardens."
   },
   "Habitat richness": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a site variable or environmental characteristic of the sampling location."
+    "measurementValue": "-",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a measurement of habitat richness.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Measures the richness of habitat types present.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Habitat richness",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The data represents the count of native plant species found in the grassland of the gardens, establishing the state of the plant community at a particular place and time.",
+    "measurementMethod": "Slowly walking in a zigzag line over the grassland area of a garden and recording plants touched; complemented by recording species along transect lines in other habitat types.",
+    "measurementMethod_reasoning": "The text explicitly describes the method used to record native plant species richness: 'We recorded all native plant species (including woody species) occurring in the grassland by slowly walking in a zigzag line over the grassland area of a garden (hereafter native plant species richness in grassland). Plants were recorded when touching this line.' This method was used to calculate the total native plant species richness."
   },
   "Structural diversity": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a site variable or environmental characteristic of the sampling location."
+    "measurementValue": "",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a measurement of habitat structure.",
+    "category": "Trait-name column",
+    "reasoning_relevance": "Measures the diversity based on vegetation height.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Structural diversity",
+    "basisOfRecord": "LivingSpecimen",
+    "basisOfRecord_reasoning": "The structural diversity was calculated based on the characteristics of the native grassland plants within the gardens, which are living organisms.",
+    "measurementMethod": "Measuring the height of the vegetation at intervals of 2 m along the transect lines to calculate structural diversity.",
+    "measurementMethod_reasoning": "The text explicitly states that plants were measured at intervals of 2 m along the transect line to determine the height of the vegetation, which was then used to calculate structural diversity as a covariate."
   },
   "Index of permeable garden border": {
-    "field": "verbatimLocality",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a site variable or environmental characteristic of the sampling location."
+    "measurementValue": "-",
+    "measurementStatistic": "individual",
+    "reasoning": "This is a measurement of a garden border index.",
+    "category": null,
+    "reasoning_relevance": "Not explicitly defined or measured in the provided text context."
   }
 }

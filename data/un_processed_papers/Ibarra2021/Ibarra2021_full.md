@@ -1,86 +1,145 @@
-OPEN
+<!-- page 1 of 14 -->
+
+www.nature.com/scientificreports
+
+scientific reports
+
+0
 
 Check for updates
 
+**OPEN**
+
 # Social‑ecological filters drive the functional diversity of beetles in homegardens of campesinos and migrants in the southern Andes
 
-José Tomás Ibarra<sup>1,2\*</sup>, Julián Caviedes<sup>1</sup>, Tomás A. Altamirano<sup>1</sup>, Romina Urra<sup>1</sup>, Antonia Barreau<sup>1</sup> & Francisca Santana<sup>1</sup>
+**José Tomás Ibarra**<strong><sup>1,2</sup></strong><sup>\*</sup>**, Julián Caviedes**<strong><sup>1</sup></strong>**, Tomás A. Altamirano**<strong><sup>1</sup></strong>**, Romina Urra**<strong><sup>1</sup></strong>, **Antonia Barreau**<strong><sup>1</sup></strong> **& Francisca Santana**<strong><sup>1</sup></strong>
 
-Homegardens are coupled social-ecological systems that act as biodiversity reservoirs while contributing to local food sovereignty. These systems are characterized by their structural complexity, while involving management practices according to gardener’s cultural origin. Social–ecological processes in homegardens may act as filters of species’ functional traits, and thus influence the species richness-functional diversity relationship of critical agroecosystem components like beetles (Coleoptera). We tested the species richness-functional diversity relationship of beetle communities and examined whether habitat structure across diferent levels, sociodemographic profiles, and management practices act as filters in homegardens in a Global Biodiversity Hotspot, Chile. For 100 homegardens (50 campesino and 50 migrant), we sampled beetles and habitat attributes, and surveyed gardeners’ sociodemographic profiles and management practices. We recorded 85 beetle species and found a positive relationship between species richness and functional richness that saturated when functionally similar species co-occur more often than expected by chance, indicating functional redundancy in species-rich homegardens. Gardener origin (campesino/migrant), homegarden area (m<sup>2</sup>), structural complexity (index), and pest control strategy (natural, chemical, or none) were the most influential social–ecological filters that selectively remove beetle species according to their functional traits. We discuss opportunities in homegarden management for strengthening local functional diversity and resilience under social-environmental changes.
+**Homegardens are coupled social-ecological systems that act as biodiversity reservoirs while contributing to local food sovereignty. These systems are characterized by their structural complexity, while involving management practices according to gardener’s cultural origin. Social–ecological processes in homegardens may act as filters of species’ functional traits, and thus influence the species richness-functional diversity relationship of critical agroecosystem components like beetles (Coleoptera). We tested the species richness-functional diversity relationship of beetle communities and examined whether habitat structure across different levels, sociodemographic profiles, and management practices act as filters in homegardens in a Global Biodiversity Hotspot, Chile. For 100 homegardens (50 campesino and 50 migrant), we sampled beetles and habitat attributes, and surveyed gardeners’ sociodemographic profiles and management practices. We recorded 85 beetle species and found a positive relationship between species richness and functional richness that saturated when functionally similar species co-occur more often than expected by chance, indicating functional redundancy in species-rich homegardens. Gardener origin (campesino/migrant), homegarden area (m**<strong><sup>2</sup></strong>**), structural complexity (index), and pest control strategy (natural, chemical, or none) were the most influential social–ecological filters that selectively remove beetle species according to their functional traits. We discuss opportunities in homegarden management for strengthening local functional diversity and resilience under social-environmental changes.**
 
 Biological and cultural diversity have been recognized as inextricably linked, particularly in those nature-human coupled systems in which the interaction among multiple entities and actors allows their synergy<sup>1,2</sup>. However, poverty, population growth, power inequalities, climate change, and latest emerging diseases have, in many places, led to question how possible it is to find and strengthen these synergies<sup>3</sup>. Homegardens are peridomestic complex microenvironments in which useful plants are cultivated and are traditionally integrated within a larger coupled nature-human system known as agroforestry system<sup>4</sup>. These social-ecological systems are sometimes cultivated for aesthetic reasons only, others include space for children to play, but most provide year-round resources for household needs such as nourishment, medicine, and income generation opportunities, while involving specific management practices<sup>5,6</sup>.
 
-Homegardens are composed of multiple farming components, which generate structurally complex habitats across vertical (e.g., multiple strata of roots, corms, bulbs and tubers, small annual and perennial plants, shrubs, and trees) and landscape levels (e.g., distance to a source of species)<sup>7–9</sup>. As such, structurally complex homegardens have the potential to play an important role as biodiversity reservoirs<sup>10,11</sup>. Scholars have paid great attention to the diversity of plants grown in homegardens in diferent countries, mainly in tropical social–ecologica systems<sup>7</sup>. The complex habitat structure of homegardens, the sociodemographic profiles of gardeners (e.g., cul tural origin), and their diferent management practices (e.g., use of agrochemical or organic pesticides), can act as social-ecological filters. These filters influence the taxonomic diversity (e.g., species richness) of small animals,
+Homegardens are composed of multiple farming components, which generate structurally complex habitats across vertical (e.g., multiple strata of roots, corms, bulbs and tubers, small annual and perennial plants, shrubs, and trees) and landscape levels (e.g., distance to a source of species)<sup>7–9</sup>. As such, structurally complex homegardens have the potential to play an important role as biodiversity reservoirs<sup>10,11</sup>. Scholars have paid great attention to the diversity of plants grown in homegardens in different countries, mainly in tropical social–ecological systems<sup>7</sup>. The complex habitat structure of homegardens, the sociodemographic profiles of gardeners (e.g., cultural origin), and their different management practices (e.g., use of agrochemical or organic pesticides), can act as social-ecological filters. These filters influence the taxonomic diversity (e.g., species richness) of small animals,
 
-<sup>1</sup>ECOS (Ecosystem‑Complexity‑Society) Co‑Laboratory, Center for Local Development (CEDEL) & Center for Intercultural and Indigenous Research (CIIR), Villarrica Campus, Pontificia Universidad Católica de Chile, Bernardo O’Higgins 501, Villarrica, La Araucanía Region, Chile. <sup>2</sup>Department of Ecosystems and Environment, Faculty of Agriculture and Forest Sciences & Center of Applied Ecology and Sustainability (CAPES), Pontificia Universidad Católica de Chile, Av. Vicuña Mackenna 4860, Macul, Santiago, Chile. <sup>\*</sup>email: jtibarra@uc.cl
+<sup>1</sup>ECOS (Ecosystem‑Complexity‑Society) Co‑Laboratory, Center for Local Development (CEDEL) & Center for Intercultural and Indigenous Research (CIIR), Villarrica Campus, Pontificia Universidad Católica de Chile, Bernardo O’Higgins 501, Villarrica, La Araucanía Region, Chile. <sup>2</sup>Department of Ecosystems and Environment, Faculty of Agriculture and Forest Sciences & Center of Applied Ecology and Sustainability (CAPES), Pontificia Universidad Católica de Chile, Av. Vicuña Mackenna 4860, Macul, Santiago, Chile. \*email: jtibarra@uc.cl
+
+Scientific Reports | (2021) 11:12462
+
+| https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+1
+
+<!-- page 2 of 14 -->
+
+www.nature.com/scientificreports/
 
 such as beetles (Arthropoda: Coleoptera), in many human biomes beyond the tropics<sup>12–15</sup>. These social-ecological filters are defined as those coupled human-nature factors that selectively remove species according to their functional traits<sup>16–18</sup>. For example, homegarden area has been shown to filter arthropod species, and thus it structures community assembly in homegardens of Indonesia<sup>19</sup> and India<sup>20</sup>. Furthermore, the diversification of management practices, including the use of pesticides, mediates the variation of beetle diversity in homegardens of Mexico<sup>21</sup>.
 
-Beyond the influence on species richness, social-ecological filters can also influence the functional roles played by beetles in agricultural systems such as pollination, nutrient cycling, and pest control<sup>19,20,22,23</sup>. Thus, these filters determine the functional diversity of beetles, defined as the value, range, and relative abundance o beetle functional traits in a community<sup>12,24</sup>. Theoretical and empirical studies have shown that species richness and functional richness (i.e., the volume of functional niche space filled by species in ecological communities), are expected to correlate from negligible to a one-to-one relationship<sup>17,25</sup>. Species-rich communities are predicted to show a saturating “species richness-functional richness relationship” because of the presence of functiona redundancy, which is the degree to which species resemble each other in their functional traits<sup>26</sup>.
+Beyond the influence on species richness, social-ecological filters can also influence the functional roles played by beetles in agricultural systems such as pollination, nutrient cycling, and pest control<sup>19,20,22,23</sup>. Thus, these filters determine the functional diversity of beetles, defined as the value, range, and relative abundance of beetle functional traits in a community<sup>12,24</sup>. Theoretical and empirical studies have shown that species richness and functional richness (i.e., the volume of functional niche space filled by species in ecological communities), are expected to correlate from negligible to a one-to-one relationship<sup>17,25</sup>. Species-rich communities are predicted to show a saturating “species richness-functional richness relationship” because of the presence of functional redundancy, which is the degree to which species resemble each other in their functional traits<sup>26</sup>.
 
-Homegarden social-ecological systems are places in constant adaptation to globalization and its correlated environmental changes (e.g., climate, water scarcity, arrival of new species and technologies, etc.)<sup>27–29</sup>. Globalization has shifted the relationship between urban and rural shifting from unidirectional migration (rural exo dus) to bidirectional circulation<sup>30</sup>. As a result, in many locations it is possible to find recently arrived migrants co-inhabiting the same territories with local indigenous and non-indigenous campesinos (i.e., peasant farmers who were born and have been living in the territory most of their lives; they work small plots, with the family constituting most or all of the labor). Lifestyle migrants are urban people who voluntarily relocate to rural areas pursuing a greater connection with nature and are rapidly settling in many rural locations worldwide<sup>31</sup>. Many lifestyle migrants have incorporated homegardens into their livelihoods, but their socio-demographic profiles and management practices may influence contrasting patterns of both taxonomic and functional biodiversity in homegardens, in comparison to local campesinos<sup>32,33</sup>.
+Homegarden social-ecological systems are places in constant adaptation to globalization and its correlated environmental changes (e.g., climate, water scarcity, arrival of new species and technologies, etc.)<sup>27–29</sup>. Globalization has shifted the relationship between urban and rural shifting from unidirectional migration (rural exodus) to bidirectional circulation<sup>30</sup>. As a result, in many locations it is possible to find recently arrived migrants co-inhabiting the same territories with local indigenous and non-indigenous campesinos (i.e., peasant farmers who were born and have been living in the territory most of their lives; they work small plots, with the family constituting most or all of the labor). Lifestyle migrants are urban people who voluntarily relocate to rural areas pursuing a greater connection with nature and are rapidly settling in many rural locations worldwide<sup>31</sup>. Many lifestyle migrants have incorporated homegardens into their livelihoods, but their socio-demographic profiles and management practices may influence contrasting patterns of both taxonomic and functional biodiversity in homegardens, in comparison to local campesinos<sup>32,33</sup>.
 
-Andean temperate ecosystems, a Biodiversity Hotspot in south-central Chile<sup>34</sup>, are globally exceptional for their high rates of endemism of flora and fauna while supporting a relatively species-poor fauna<sup>35</sup>. Here, studies on the relationship between species richness and functional diversity, only available for mammals and birds have reported a low functional redundancy<sup>36,37</sup>. In these largely modified landscapes, homegardens may play a significant role in helping to sustain local livelihoods while maintaining the resilience of beetle diversity and ecosystem functioning. Beetles are essential functional components of ecosystems as they provide critical human-derived services<sup>38,39</sup>. However, this group is globally declining at an alarming rate<sup>40,41</sup> and information on species ecosystem functioning remains largely undocumented, especially in globally threatened ecoregions such as Andean temperate ecosystems<sup>42–46</sup>.
+Andean temperate ecosystems, a Biodiversity Hotspot in south-central Chile<sup>34</sup>, are globally exceptional for their high rates of endemism of flora and fauna while supporting a relatively species-poor fauna<sup>35</sup>. Here, studies on the relationship between species richness and functional diversity, only available for mammals and birds, have reported a low functional redundancy<sup>36,37</sup>. In these largely modified landscapes, homegardens may play a significant role in helping to sustain local livelihoods while maintaining the resilience of beetle diversity and ecosystem functioning. Beetles are essential functional components of ecosystems as they provide critical human-derived services<sup>38,39</sup>. However, this group is globally declining at an alarming rate<sup>40,41</sup> and information on species ecosystem functioning remains largely undocumented, especially in globally threatened ecoregions such as Andean temperate ecosystems<sup>42–46</sup>.
 
-In this study we (i) test the species richness-functional diversity (functional richness) relationship of beetle communities. We predicted that, because these temperate ecosystems are a species-poor system, homegardens will show an accelerating species richness-functional richness relationship and correlated low functional richness and low redundancy in beetle communities. We further (ii) examine whether habitat structure across diferent levels, sociodemographic profiles, and management practices act as social-ecological filters in homegardens in southern Andean temperate ecosystems. We predicted that habitat structure, sociodemographic profiles, and management practices act as social-ecological filters in homegardens, and thus selectively remove species according to their functional traits in this Global Biodiversity Hotspot.
+In this study we (i) test the species richness-functional diversity (functional richness) relationship of beetle communities. We predicted that, because these temperate ecosystems are a species-poor system, homegardens will show an accelerating species richness-functional richness relationship and correlated low functional richness and low redundancy in beetle communities. We further (ii) examine whether habitat structure across different levels, sociodemographic profiles, and management practices act as social-ecological filters in homegardens in southern Andean temperate ecosystems. We predicted that habitat structure, sociodemographic profiles, and management practices act as social-ecological filters in homegardens, and thus selectively remove species according to their functional traits in this Global Biodiversity Hotspot.
 
 ## Results
 
 In this study in southern Andean homegardens, as part of larger agroforestry systems, we found that campesinos were older (59 ± 13 vs. 49 ± 15 years) and more experienced gardeners (35 ± 20 vs. 10 ± 10 years of experience) than migrants. Homegardens tendered by campesinos were larger (394 ± 320 m<sup>2</sup>) than those from migrants (235 ± 227). Further, campesinos managed homegardens with higher values for the index of structural complexity (1.4 ± 0.4) than homegardens from migrants (0.9 ± 0.4).
 
-Beetle species richness‑functional diversity relationship. We recorded 85 beetle species in homegardens. Species richness (median with interquartile range in parenthesis) was 9 (5), with values ranging from 2 to 20 across homegardens. According to their main foraging guild, 49 species (57.6%) were considered beneficial while 36 (42.4%) were classified as harmful to agricultural production. Beetle functional richness (FRic) was strongly correlated with species richness by a polynomial regression (r<sup>2</sup> = 0.64; p < 0.01; y= 0.20 + 0.85x −0.26x<sup>2</sup>; Fig. 1) that started to saturate at the highest species-rich homegardens.
+**Beetle species richness‑functional diversity relationship.** We recorded 85 beetle species in homegardens. Species richness (median with interquartile range in parenthesis) was 9 (5), with values ranging from 2 to 20 across homegardens. According to their main foraging guild, 49 species (57.6%) were considered beneficial while 36 (42.4%) were classified as harmful to agricultural production. Beetle functional richness (FRic) was strongly correlated with species richness by a polynomial regression (r<sup>2</sup> = 0.64; p < 0.01; y= 0.20 + 0.85x −0.26x<sup>2</sup>; Fig. 1) that started to saturate at the highest species-rich homegardens.
 
-Beetle species richness and social‑ecological filters. The models with highest support (Δ AIC ≤ 2) for species richness contained two to three social-ecological filters (i.e., homegarden area, gardener origin, homegarden structural complexity; Table 1a). Model selection showed that species richness was positively correlated with homegarden area (m<sup>2</sup>; Fig. 2a; best supported model with estimated β = 0.007) and homegarden structural complexity (Fig. 2c; β = 1.372). Best models also supported an association between gardener origin and species richness (Table 1a); the latter were higher in campesino than in migrant homegardens (Fig. 2b).
+**Beetle species richness and social‑ecological filters.** The models with highest support (Δ AIC ≤ 2) for species richness contained two to three social-ecological filters (i.e., homegarden area, gardener origin, homegarden structural complexity; Table 1a). Model selection showed that species richness was positively correlated with homegarden area (m<sup>2</sup>; Fig. 2a; best supported model with estimated β = 0.007) and homegarden structural complexity (Fig. 2c; β = 1.372). Best models also supported an association between gardener origin and species richness (Table 1a); the latter were higher in campesino than in migrant homegardens (Fig. 2b).
 
-Beetle relative abundance and social‑ecological filters. Beetle relative abundance (60.8 ± 71.8) ranged between 2 and 421 individuals per homegarden. The models with highest support for relative abundance contained area, origin, and pests as the most important social-ecological filters (Table 1b). Model selection showed that relative abundance was positively correlated with homegarden area (m<sup>2</sup>; Fig. 2a; best supported model with estimated β = 0.065). Best models also supported an association between gardener origin and relative abundance (Table 1a); the latter was higher and positive in campesino homegardens (mean ± SD = 77.9 ± 78.6; β = 79.26) and smaller and negative in migrant homegardens (43.2 ± 60.1; β = − 38.32) (Fig. 2b). Beetle relative abundance was positively correlated with using a natural (mechanical by hand or using biopreparations) pest control strategy (β = 78.00) and negatively correlated with chemical control (β = − 44.63), while no control did not have an efect on beetle relative abundance. Structural complexity did not have an efect on beetle relative abundance (Fig. 2c).
+**Beetle relative abundance and social‑ecological filters.** Beetle relative abundance (60.8 ± 71.8) ranged between 2 and 421 individuals per homegarden. The models with highest support for relative abundance contained area, origin, and pests as the most important social-ecological filters (Table 1b). Model selection showed that relative abundance was positively correlated with homegarden area (m<sup>2</sup>; Fig. 2a; best supported model with estimated β = 0.065). Best models also supported an association between gardener origin and relative
 
-![](images/07a94c8dd158bf6d98cf73c2fe06de209fde7c8b821229f9e32ba195060b6fc6.jpg)  
-Figure 1. Estimated association between species richness and functional richness for 50 campesino (blue dots) and 50 migrants (yellow dots) homegardens for 85 species in beetle communities in Andean temperate ecosystems, southern Chile. Graphs were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.Rproject.org/).
+Scientific Reports | (2021) 11:12462 |
 
-<table><tr><td>Model structure</td><td> $K^a$ </td><td>AICc</td><td> $\Delta \mathrm{AIC}^{\mathrm{b}}$ </td><td> $W_i^c$ </td><td> $LL^d$ </td></tr><tr><td colspan="6">a) Species richness</td></tr><tr><td>Area + Complexity</td><td>6</td><td>514.2</td><td>0.00</td><td>0.291</td><td>-250.632</td></tr><tr><td>Area + Origin + Complexity</td><td>7</td><td>516.2</td><td>1.99</td><td>0.108</td><td>-250.466</td></tr><tr><td>Area + Origin</td><td>6</td><td>516.2</td><td>2.07</td><td>0.103</td><td>-251.667</td></tr><tr><td>Area</td><td>5</td><td>516.3</td><td>2.10</td><td>0.102</td><td>-252.818</td></tr><tr><td>Area + Complexity + Crop richness</td><td>7</td><td>516.4</td><td>2.21</td><td>0.096</td><td>-250.578</td></tr><tr><td>Area + Complexity + Pests</td><td>8</td><td>516.9</td><td>2.76</td><td>0.073</td><td>-249.669</td></tr><tr><td>Area + Origin + Complexity + Crop richness + Pests</td><td>8</td><td>518.5</td><td>4.28</td><td>0.034</td><td>-250.430</td></tr><tr><td colspan="6">b) Relative abundance</td></tr><tr><td>Area + Origin + Pests</td><td>7</td><td>1119.7</td><td>0.00</td><td>0.491</td><td>-552.216</td></tr><tr><td>Area + Origin</td><td>5</td><td>1120.4</td><td>0.71</td><td>0.345</td><td>-554.863</td></tr><tr><td>Area</td><td>5</td><td>1123.5</td><td>3.79</td><td>0.074</td><td>-556.405</td></tr><tr><td>Origin + Pests</td><td>6</td><td>1124.5</td><td>4.88</td><td>0.043</td><td>-555.816</td></tr><tr><td>Area + Pests</td><td>7</td><td>1124.8</td><td>5.19</td><td>0.037</td><td>-554.809</td></tr><tr><td>Origin</td><td>4</td><td>1127.19</td><td>8.24</td><td>0.008</td><td>-559.738</td></tr><tr><td>Pests</td><td>6</td><td>1130.9</td><td>11.20</td><td>0.002</td><td>-558.977</td></tr><tr><td colspan="6">c) Functional richness</td></tr><tr><td>Area + Origin</td><td>5</td><td>-194.8</td><td>0,00</td><td>0.252</td><td>102.752</td></tr><tr><td>Area + Origin + Pests</td><td>7</td><td>-194.8</td><td>0.03</td><td>0.248</td><td>105.052</td></tr><tr><td>Area + Origin + Complexity</td><td>6</td><td>-193.9</td><td>0.95</td><td>0.156</td><td>103.419</td></tr><tr><td>Area + Origin + Complexity + Pests</td><td>8</td><td>-193.7</td><td>1.07</td><td>0.148</td><td>105.730</td></tr><tr><td>Area + Complexity + Pests</td><td>7</td><td>-193.2</td><td>1.60</td><td>0.113</td><td>104.266</td></tr><tr><td>Area + Pests</td><td>7</td><td>-190.4</td><td>4.37</td><td>0.028</td><td>102.879</td></tr><tr><td>Area + Complexity</td><td>6</td><td>-190.3</td><td>4.49</td><td>0.027</td><td>101.649</td></tr></table>
+https://doi.org/10.1038/s41598-021-91185-4
 
-Table 1. Ranking of models for species richness, relative abundance, and functional richness as a function of social-ecological filters. Season and locality were random terms in all tested models. Model structure in bold indicates the best models with equivalent support. <sup>a</sup>Number of parameters estimated; <sup>b</sup>Diference in AICc values between each model and the lowest AICc model; <sup>c</sup>AICc model weight; <sup>d</sup>Log likelihood.
+natureportfolio
 
-![](images/79570ca350ed7920b88324aa7620f480d87f5a79a874e0de45631b36da94ac8a.jpg)
+2
 
-![](images/50d7bd03887a62a0a13d7a63a7d261ad9723d7ad546d2e93c6d92c71285c7357.jpg)
+<!-- page 3 of 14 -->
 
-![](images/e2f85bae8d27739872ff77ddb2fb7af349d837002d6aa01ccc6c9473d340ccde.jpg)
+www.nature.com/scientificreports/
 
-![](images/8dc823fc645412083394433f4f50951864737d27da432bd80da614731dd717c9.jpg)
+| Series | Species richness (range) | Functional richness (range) |
+| --- | --- | --- |
+| Campesino | 3~20 | 0.01~0.37 |
+| Migrant | 3~19 | 0.01~0.35 |
 
-![](images/b2a8b950c8c38d791b62162f092df87c30e37aa09208cc33558d14bc5a639ac5.jpg)
+Figure 1.   Estimated association between species richness and functional richness for 50 campesino (blue dots) and 50 migrants (yellow dots) homegardens for 85 species in beetle communities in Andean temperate ecosystems, southern Chile. Graphs were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. [https://www.Rproject.org/](https://www.Rproject.org/)).
 
-![](images/4b86085f84c22c909a5f523983dde239d7bab511e9608cd0992397a43e302053.jpg)
+<table><tr><td>Model structure</td><td> $K^a$ </td><td>AICc</td><td> $\Delta AIC^b$ </td><td> $W_i^c$ </td><td> $LL^d$ </td></tr><tr><td colspan="6">a) Species richness</td></tr><tr><td>Area + Complexity</td><td>6</td><td>514.2</td><td>0.00</td><td>0.291</td><td>-250.632</td></tr><tr><td>Area + Origin + Complexity</td><td>7</td><td>516.2</td><td>1.99</td><td>0.108</td><td>-250.466</td></tr><tr><td>Area + Origin</td><td>6</td><td>516.2</td><td>2.07</td><td>0.103</td><td>-251.667</td></tr><tr><td>Area</td><td>5</td><td>516.3</td><td>2.10</td><td>0.102</td><td>-252.818</td></tr><tr><td>Area + Complexity + Crop richness</td><td>7</td><td>516.4</td><td>2.21</td><td>0.096</td><td>-250.578</td></tr><tr><td>Area + Complexity + Pests</td><td>8</td><td>516.9</td><td>2.76</td><td>0.073</td><td>-249.669</td></tr><tr><td>Area + Origin + Complexity + Crop richness + Pests</td><td>8</td><td>518.5</td><td>4.28</td><td>0.034</td><td>-250.430</td></tr><tr><td colspan="6">b) Relative abundance</td></tr><tr><td>Area + Origin + Pests</td><td>7</td><td>1119.7</td><td>0.00</td><td>0.491</td><td>-552.216</td></tr><tr><td>Area + Origin</td><td>5</td><td>1120.4</td><td>0.71</td><td>0.345</td><td>-554.863</td></tr><tr><td>Area</td><td>5</td><td>1123.5</td><td>3.79</td><td>0.074</td><td>-556.405</td></tr><tr><td>Origin + Pests</td><td>6</td><td>1124.5</td><td>4.88</td><td>0.043</td><td>-555.816</td></tr><tr><td>Area + Pests</td><td>7</td><td>1124.8</td><td>5.19</td><td>0.037</td><td>-554.809</td></tr><tr><td>Origin</td><td>4</td><td>1127.19</td><td>8.24</td><td>0.008</td><td>-559.738</td></tr><tr><td>Pests</td><td>6</td><td>1130.9</td><td>11.20</td><td>0.002</td><td>-558.977</td></tr><tr><td colspan="6">c) Functional richness</td></tr><tr><td>Area + Origin</td><td>5</td><td>-194.8</td><td>0,00</td><td>0.252</td><td>102.752</td></tr><tr><td>Area + Origin + Pests</td><td>7</td><td>-194.8</td><td>0.03</td><td>0.248</td><td>105.052</td></tr><tr><td>Area + Origin + Complexity</td><td>6</td><td>-193.9</td><td>0.95</td><td>0.156</td><td>103.419</td></tr><tr><td>Area + Origin + Complexity + Pests</td><td>8</td><td>-193.7</td><td>1.07</td><td>0.148</td><td>105.730</td></tr><tr><td>Area + Complexity + Pests</td><td>7</td><td>-193.2</td><td>1.60</td><td>0.113</td><td>104.266</td></tr><tr><td>Area + Pests</td><td>7</td><td>-190.4</td><td>4.37</td><td>0.028</td><td>102.879</td></tr><tr><td>Area + Complexity</td><td>6</td><td>-190.3</td><td>4.49</td><td>0.027</td><td>101.649</td></tr></table>
 
-![](images/dd4bd9d9273e2f592412bece70a2cca878bf23e9f74021965c966f90e20e802a.jpg)  
-(a)Homegardenarea
+Table 1.   Ranking of models for species richness, relative abundance, and functional richness as a function of social-ecological filters. Season and locality were random terms in all tested models. Model structure in bold indicates the best models with equivalent support. <sup>a</sup>Number of parameters estimated; <sup>b</sup>Difference in AICc values between each model and the lowest AICc model; <sup>c</sup>AICc model weight; <sup>d</sup>Log likelihood.
 
-![](images/5cc2ed66eeee1290acb5bb2a56646f94121ab22635817f31a34c325ad608784c.jpg)  
-(b) Gardener origin
+Scientific Reports | (2021) 11:12462
 
-![](images/13f5a0a4cd8a28ea746912f8259000e74f41ff17f1a0f323db0ca81d9f896e0d.jpg)  
-(c) Structural complexity  
-Figure 2. Response of beetle species richness (number of species per homegarden), relative abundance (total number of individuals per homegarden), and functional richness (FRic value) to the most influential social ecological filters in homegardens, including (a) homegarden area, (b) gardener origin, and (c) homegarden structural complexity in Andean temperate ecosystems, southern Chile. Graphs were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation fo Statistical Computing, Vienna, Austria. https://www.Rproject.org/).
+https://doi.org/10.1038/s41598-021-91185-4
 
-Beetle functional richness and social‑ecological filters. Beetle functional richness (0.22 ± 0.09) estimates ranged between 0.01 and 0.35 per homegarden. The models with highest support for functiona richness contained the following social-ecological filters: homegarden area, structural complexity, origin, and pests (Table  1c). Functional richness was positively correlated with homegarden area (m<sup>2</sup>; Fig.  2a) and homegarden structural complexity (Fig. 2c; β = 0.024). Best models also supported an association between gardener origin and functional richness (Table 1c); the latter was higher and positive in campesino homegardens (mean ± SD = 77.9 ± 78.6; β = 0.25) and smaller and negative in migrant homegardens (43.2 ± 60.1; β = − 0.07; Fig. 2b). Beetle functional richness was positively correlated with natural pest control (β = 0.20) and by none control strategy (β = 0.05). Chemical control did not show an efect on beetle functional richness.
+natureportfolio
 
-Spatial projections of beetle diversity. The resulting projections of beetle diversity indicated, graphically, a zone of high values for beetle relative abundance to the east of the study area (Fig. 3b). The spatial projections for beetle species richness and functional richness did not reveal a clear pattern of areas with high values for these parameters. Anyhow, this analysis indicated a relative spatial mismatch between estimates of beetle species richness, relative abundance, and functional richness in the study area (Fig. 3).
+3
 
-![](images/d8eb905bcbce584d9344a3a9cb2b629fab971bfd9ccf8fa030600a4934c97a01.jpg)  
-Figure 3. (a) Land cover and location of studied homegardens (campesino = blue dots, migrant = yellow dots) in Andean temperate ecosystems, southern Chile. Projection of (b) beetle species richness (number of species per homegarden); (c) relative abundance (total number of individuals per homegarden), and (d) functional richness (FRic value) in the study area. In (b–d), red shows areas of higher estimated values while yellow depicts areas of lower estimated values. Maps were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.Rproject.org/).
+<!-- page 4 of 14 -->
+
+www.nature.com/scientificreports/
+
+![Image block](doc:0789a2a/tier:advanced/page:4/block:2)
+
+Figure 2.   Response of beetle species richness (number of species per homegarden), relative abundance (total number of individuals per homegarden), and functional richness (FRic value) to the most influential socialecological filters in homegardens, including (a) homegarden area, (b) gardener origin, and (c) homegarden structural complexity in Andean temperate ecosystems, southern Chile. Graphs were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. [https://www.Rproject.org/](https://www.Rproject.org/)).
+
+abundance (Table 1a); the latter was higher and positive in campesino homegardens (mean ± SD = 77.9 ± 78.6; β = 79.26) and smaller and negative in migrant homegardens (43.2 ± 60.1; β = − 38.32) (Fig. 2b). Beetle relative abundance was positively correlated with using a natural (mechanical by hand or using biopreparations) pest control strategy (β = 78.00) and negatively correlated with chemical control (β = − 44.63), while no control did not have an effect on beetle relative abundance. Structural complexity did not have an effect on beetle relative abundance (Fig. 2c).
+
+**Beetle functional richness and social‑ecological filters.** Beetle functional richness (0.22 ± 0.09) estimates ranged between 0.01 and 0.35 per homegarden. The models with highest support for functional richness contained the following social-ecological filters: homegarden area, structural complexity, origin, and pests (Table  1c). Functional richness was positively correlated with homegarden area (m<sup>2</sup>; Fig.  2a) and homegarden structural complexity (Fig. 2c; β = 0.024). Best models also supported an association between gardener origin and functional richness (Table 1c); the latter was higher and positive in campesino homegardens (mean ± SD = 77.9 ± 78.6; β = 0.25) and smaller and negative in migrant homegardens (43.2 ± 60.1; β = − 0.07; Fig. 2b). Beetle functional richness was positively correlated with natural pest control (β = 0.20) and by none control strategy (β = 0.05). Chemical control did not show an effect on beetle functional richness.
+
+**Spatial projections of beetle diversity.** The resulting projections of beetle diversity indicated, graphi cally, a zone of high values for beetle relative abundance to the east of the study area (Fig. 3b). The spatial projections for beetle species richness and functional richness did not reveal a clear pattern of areas with high values for these parameters. Anyhow, this analysis indicated a relative spatial mismatch between estimates of beetle species richness, relative abundance, and functional richness in the study area (Fig. 3).
+
+Scientific Reports | (2021) 11:12462
+
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+4
+
+<!-- page 5 of 14 -->
+
+www.nature.com/scientificreports/
+
+![Image block](doc:0789a2a/tier:advanced/page:5/block:2)
+
+Figure 3.   (a) Land cover and location of studied homegardens (campesino = blue dots, migrant = yellow dots) in Andean temperate ecosystems, southern Chile. Projection of (b) beetle species richness (number of species per homegarden); (c) relative abundance (total number of individuals per homegarden), and (d) functional richness (FRic value) in the study area. In (b–d), red shows areas of higher estimated values while yellow depicts areas of lower estimated values. Maps were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. [https://www.Rproject.org/](https://www.Rproject.org/)).
 
 ## Discussion
 
 This study extends previous research on the relationship between biodiversity and ecosystem functioning, acknowledging that homegardens, as part of larger agroforests, are coupled social-ecological systems in which biodiversity has the potential to thrive. We found that several beetle species may be performing similar roles (i.e., are functionally redundant) in southern Andean homegardens with relatively high number of species. Thereby, if some go locally extinct (removed from a diverse homegarden) this will likely not produce substantial loss in agroecosystem function<sup>47</sup>. This result associates with the observed steep relationship between beetle species richness and functional richness, in relation to a random expectation, that started to saturate with relatively high beetle richness<sup>48,49</sup>. This finding suggests that homegardens with high functional redundancy will be more resilient to shifts in social-ecological filters<sup>50–52</sup>.
 
-Beetle species richness‑functional diversity relationship. Our recorded total number of species is only a subset of the total species recorded or likely to occur in nearby temperate forest ecosystems<sup>42–45,53</sup>. However, remarkably, and contrary to our expectations, we found that beetle communities in southern Andean homegardens have a relatively high functional richness and functional redundancy. This result is not characteristic of systems generally considered as “species-poor”<sup>36,37,54,55</sup>. Andean temperate ecosystems are relatively impoverished in terms of faunal species richness in comparison to other tropical, subtropical, Mediterranean, and temperate ecosystem types<sup>43</sup>. During the Pleistocene (most recent period of repeated glaciations), immigration of species from tropical latitudes was not able to compensate for the extinction of local biota resulting from the contractions on the distribution of temperate forests<sup>56</sup>. Climatic change and geographic barriers, such as the Andes mountain range and the Atacama Desert, resulted in a net loss of species during the Pleistocene, especially of faunal groups with tropical lineage<sup>57</sup>. While little is known about biogeographic distribution of beetles in the southern temperate ecoregion<sup>42,58–60</sup>, our study shows that small-scale patches of habitat, like homegardens, can be both taxonomically and functionally rich.
+**Beetle species richness‑functional diversity relationship.** Our recorded total number of species is only a subset of the total species recorded or likely to occur in nearby temperate forest ecosystems<sup>42–45,53</sup>. However, remarkably, and contrary to our expectations, we found that beetle communities in southern Andean homegardens have a relatively high functional richness and functional redundancy. This result is not characteristic of systems generally considered as “species-poor”<sup>36,37,54,55</sup>. Andean temperate ecosystems are relatively impoverished in terms of faunal species richness in comparison to other tropical, subtropical, Mediterranean, and temperate ecosystem types<sup>43</sup>. During the Pleistocene (most recent period of repeated glaciations), immigration of species from tropical latitudes was not able to compensate for the extinction of local biota resulting from
 
-Our results support the idea that functional diversity is not only correlated with the pool of species occurring in beetle communities (first objective of our research: species richness–functional richness relationship). Beetle functional diversity is also influenced by social-ecological filters, which are coupled human-nature factors that selectively remove species according to their functional traits, likely through shifting the intensity and magnitude of competition in biological communities<sup>23,61,62</sup>. In accordance with other studies, the observed relative spatial mismatch for diversity parameters in the study area (shown graphically in Fig. 3), challenge the use o any diversity component as a surrogate for other parameters in agroecology, land-use planning, and biodiversity conservation<sup>37,63</sup>.
+Scientific Reports | (2021) 11:12462
 
-Gardener origin and beetle communities. We found that gardener cultural origin (indigenous and non-indigenous campesino vs. lifestyle migrant) might influence both the taxonomic and functional diversity of beetle communities in homegardens. Our result supports previous studies exploring the role of gardener origin on the composition, structure, and functioning of homegardens, as the latter usually reflect many aspects of the food system, tastes, and agricultural traditions of people co-occurring in an area<sup>19,64</sup>. For instance, diferences in both crop species and intensity of management practices are correlated with the gardener origin in Vietnamese homegardens<sup>64</sup>. Number of management practices and homegarden area are diferent among migrant and non-migrant homegardens and both social-ecological filters diferentially influence beetle functional groups in Indonesian homegardens<sup>19</sup>. While we acknowledge that homegarden attributes are likely influenced by severa factors beyond gardener origin<sup>7</sup>, our study sheds light on some of the underlying social-ecological filters explaining variation in the taxonomic and functional diversity of beetles in campesino and migrant homegardens of the southern Andes.
+https://doi.org/10.1038/s41598-021-91185-4
 
-Homegarden area, structural complexity, and management correlate with beetle taxonomic and functional diversity. We found support for our prediction that homegarden area leads to an increase in beetle species richness, relative abundance, and functional richness, a result in accordance with the few studies dealing with taxonomic and functional diversity of beetle communities in homegardens<sup>20,21</sup>. The long-standing Island Biogeography Theory<sup>65</sup> provides a framework for examining the underlying forces shaping community assembly and species loss in homegardens. For example, beetle communities shaped in coupled social-ecologica systems like homegardens may be chiefly determined by local extinctions, with smaller homegardens likely exhibiting the highest extinction rates of species<sup>41,66</sup>.
+natureportfolio
+
+5
+
+<!-- page 6 of 14 -->
+
+www.nature.com/scientificreports/
+
+the contractions on the distribution of temperate forests<sup>56</sup>. Climatic change and geographic barriers, such as the Andes mountain range and the Atacama Desert, resulted in a net loss of species during the Pleistocene, especially of faunal groups with tropical lineage<sup>57</sup>. While little is known about biogeographic distribution of beetles in the southern temperate ecoregion<sup>42,58–60</sup>, our study shows that small-scale patches of habitat, like homegardens, can be both taxonomically and functionally rich.
+
+Our results support the idea that functional diversity is not only correlated with the pool of species occurring in beetle communities (first objective of our research: species richness–functional richness relationship). Beetle functional diversity is also influenced by social-ecological filters, which are coupled human-nature factors that selectively remove species according to their functional traits, likely through shifting the intensity and magnitude of competition in biological communities<sup>23,61,62</sup>. In accordance with other studies, the observed relative spatial mismatch for diversity parameters in the study area (shown graphically in Fig. 3), challenge the use of any diversity component as a surrogate for other parameters in agroecology, land-use planning, and biodiversity conservation<sup>37,63</sup>.
+
+**Gardener origin and beetle communities.** We found that gardener cultural origin (indigenous and non-indigenous campesino vs. lifestyle migrant) might influence both the taxonomic and functional diversity of beetle communities in homegardens. Our result supports previous studies exploring the role of gardener origin on the composition, structure, and functioning of homegardens, as the latter usually reflect many aspects of the food system, tastes, and agricultural traditions of people co-occurring in an area<sup>19,64</sup>. For instance, differences in both crop species and intensity of management practices are correlated with the gardener origin in Vietnamese homegardens<sup>64</sup>. Number of management practices and homegarden area are different among migrant and non-migrant homegardens and both social-ecological filters differentially influence beetle functional groups in Indonesian homegardens<sup>19</sup>. While we acknowledge that homegarden attributes are likely influenced by several factors beyond gardener origin<sup>7</sup>, our study sheds light on some of the underlying social-ecological filters explaining variation in the taxonomic and functional diversity of beetles in campesino and migrant homegardens of the southern Andes.
+
+**Homegarden area, structural complexity, and management correlate with beetle taxonomic and functional diversity.** We found support for our prediction that homegarden area leads to an increase in beetle species richness, relative abundance, and functional richness, a result in accordance with the few studies dealing with taxonomic and functional diversity of beetle communities in homegardens<sup>20,21</sup>. The long-standing Island Biogeography Theory<sup>65</sup> provides a framework for examining the underlying forces shaping community assembly and species loss in homegardens. For example, beetle communities shaped in coupled social-ecological systems like homegardens may be chiefly determined by local extinctions, with smaller homegardens likely exhibiting the highest extinction rates of species<sup>41,66</sup>.
 
 Furthermore, the distribution of traits as a function of habitat area extends the Island Biogeography Theory beyond the traditional species–area relationship<sup>67</sup>. Social-ecological filters may perform as non-random processes that act on beetle species traits including the influence of local habitat conditions on species’ fitness and ecological interactions, such as competition, mutualisms, and other trophic associations<sup>23,38,39,68</sup>. For example, larger and heavier species that require relatively large territories or species with limited dispersal ability will have a higher likelihood of local extinction in response to a shrinking homegarden area<sup>69,70</sup>. Therefore, only subgroups of species sharing akin functional traits (i.e., appearing functionally clustered) will be able to persist or outcompete other species on small habitats<sup>67,68</sup>. In our study, for example, relatively large species like Apterodorcus bacchus and Calosoma vagans were never recorded in homegardens with an area smaller than 150 m<sup>2</sup>. In the southern Andes, homegarden area is definitely a non-random process. While campesinos generally have properties that are still larger than migrant ones, historical and contemporary processes of encroachment into indigenous and non-indigenous campesino way of life and the land upon which they live has been correlated with changes in agricultural practices and a decreasing trend in the area of agroforestry systems, including homegardens<sup>71</sup>.
 
@@ -88,39 +147,120 @@ As shown, larger homegardens likely provide more resource opportunities and they
 
 Structurally complex homegardens will not only increase the functional niche space filled by species in beetle communities and enhance beneficial organisms, such as pest-control predators, pollinators, and seed dispersers<sup>13</sup>, they will also be more important carbon sinks than those that are structurally simplified and lack trees<sup>73</sup>. In a complexity science context, this result suggests that these small-scale systems have a social-ecological memory in which older and structurally complex homegardens act as long-lived system entities whose presence continues to influence compositional, structural, and functional states of the system over time<sup>51</sup>.
 
-Using a natural (mechanical by hand or using biopreparations) pest control strategy positively influenced beetle functional richness and relative abundance, while chemical pesticides negatively correlated with functional richness. These results should be viewed with caution because it may be interpreted that controlling insects using natural strategies can potentially increase phytophagous beetles. However, we have recorded that controlling beetles that damage crops by hand is a widespread strategy (mostly to control Epicauta pilme) which reduces damage while increasing the relative abundance of benefic beetles (pollinators like Cantharis variabilis and pest controllers like Eriopis connexa; J. T. Ibarra Unpublished Data). The systematic use of pesticides in agriculture over the past decades has negatively impacted insect populations<sup>74</sup>, a pattern also reported for homegardens<sup>20</sup>, with persistent negative efects on biodiversity and biological control potential<sup>75</sup>. In our study area, campesinos report a higher use of pesticides than migrants because the former have been provided for decades with agro-chemicals (fertilizers, pesticides, herbicides, and hybrid seeds) by extension agents from governmental programs<sup>33</sup>. However, campesinos and migrants are progressively dismissing the use of agro-chemicals as a result of an increasing adoption of agroecological practices not only limited to chemical-free agriculture but also as an alternative movement for the defense and re-signification of rural areas<sup>32,33</sup>.
+Using a natural (mechanical by hand or using biopreparations) pest control strategy positively influenced beetle functional richness and relative abundance, while chemical pesticides negatively correlated with functional richness. These results should be viewed with caution because it may be interpreted that controlling insects using
 
-Recommendations for gardening while sustaining beetle diversity. Beetles are globally declining, principally, because of habitat loss and conversion to intensive agriculture. Paradoxically, beetles comprise many predator, pollinator, and saprophytic species of outstanding importance for agroecosystem functioning Homegardens, usually multifaceted, can be oriented towards building synergies between local food sovereignty or income generation depending on the concerns of the family and biodiversity. Our results highlight the impor tance of increasing the size of homegardens as much as possible and promoting the cultivation of a multi-layered arrangement of crops (e.g., combination of roots and tubers, small annual and perennial plants, shrubs, and trees) that will increase habitat structural complexity across years, and thus resources for a diversity of bee tle species, that will resemble with surrounding forests. Agricultural and environmental governmental agencies charged with supporting small-scale agriculture should discourage the use of pesticides to control beetles and other insects, as these chemicals likely have negative efects on ecosystem functioning and biological control potential. Furthermore, our results highlight the importance of incorporating campesino (indigenous and non-indigenous) agroecological knowledge on biodiversity friendly agroforestry management in homegardens. These measures may contribute to maintain ecosystem functioning, local livelihoods, and the resilience of beetle communities in times of rapid social-environmental changes.
+Scientific Reports | (2021) 11:12462 |
+
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+6
+
+<!-- page 7 of 14 -->
+
+www.nature.com/scientificreports/
+
+natural strategies can potentially increase phytophagous beetles. However, we have recorded that controlling beetles that damage crops by hand is a widespread strategy (mostly to control Epicauta pilme) which reduces damage while increasing the relative abundance of benefic beetles (pollinators like Cantharis variabilis and pest controllers like Eriopis connexa; J. T. Ibarra Unpublished Data). The systematic use of pesticides in agriculture over the past decades has negatively impacted insect populations<sup>74</sup>, a pattern also reported for homegardens<sup>20</sup>, with persistent negative effects on biodiversity and biological control potential<sup>75</sup>. In our study area, campesinos report a higher use of pesticides than migrants because the former have been provided for decades with agro-chemicals (fertilizers, pesticides, herbicides, and hybrid seeds) by extension agents from governmental programs<sup>33</sup>. However, campesinos and migrants are progressively dismissing the use of agro-chemicals as a result of an increasing adoption of agroecological practices not only limited to chemical-free agriculture but also as an alternative movement for the defense and re-signification of rural areas<sup>32,33</sup>.
+
+**Recommendations for gardening while sustaining beetle diversity.** Beetles are globally declining, principally, because of habitat loss and conversion to intensive agriculture. Paradoxically, beetles comprise many predator, pollinator, and saprophytic species of outstanding importance for agroecosystem functioning. Homegardens, usually multifaceted, can be oriented towards building synergies between local food sovereignty or income generation depending on the concerns of the family and biodiversity. Our results highlight the importance of increasing the size of homegardens as much as possible and promoting the cultivation of a multi-layered arrangement of crops (e.g., combination of roots and tubers, small annual and perennial plants, shrubs, and trees) that will increase habitat structural complexity across years, and thus resources for a diversity of beetle species, that will resemble with surrounding forests. Agricultural and environmental governmental agencies charged with supporting small-scale agriculture should discourage the use of pesticides to control beetles and other insects, as these chemicals likely have negative effects on ecosystem functioning and biological control potential. Furthermore, our results highlight the importance of incorporating campesino (indigenous and non-indigenous) agroecological knowledge on biodiversity friendly agroforestry management in homegardens. These measures may contribute to maintain ecosystem functioning, local livelihoods, and the resilience of beetle communities in times of rapid social-environmental changes.
 
 ## Methods
 
-Study area. The study was conducted in the Villarrica watershed in 30 diferent human settlements (locali ties) within the municipalities of Loncoche, Villarrica, Pucón, and Curarrehue in the Andean zone of the La Araucanía Region, a Global Biodiversity Hotspot in southern Chile (39.42° S 71.94° W). The area has a temperate climate with a short dry season (< 4 months) during the southern hemisphere summer (December to March). Over the last decade, the mean annual temperature has been 12° C with temperatures varying from 0.8 °C to 28 °C and mean annual precipitations of 2143 mm (http://explorador.cr2.cl/). The area has volcanic and mountainous topography with vegetation dominated by Nothofagus obliqua at lower elevations (200–1000 m) and mixed deciduous Nothofagus pumilio with the conifer Araucaria araucana at higher elevations (1000–1500 m) The landscape, dominated by native temperate forests, comprises a mosaic where small-scale agroecosystems (homegardens, orchards, and chacras/potato fields) mix with pasture lands, lakes, rivers, non-native tree monocultures as well as volcanoes and mountains<sup>72</sup>.
+**Study area.** The study was conducted in the Villarrica watershed in 30 different human settlements (localities) within the municipalities of Loncoche, Villarrica, Pucón, and Curarrehue in the Andean zone of the La Araucanía Region, a Global Biodiversity Hotspot in southern Chile (39.42° S 71.94° W). The area has a temperate climate with a short dry season (< 4 months) during the southern hemisphere summer (December to March). Over the last decade, the mean annual temperature has been 12° C with temperatures varying from 0.8 °C to 28 °C and mean annual precipitations of 2143 mm ([http://explorador.cr2.cl/](http://explorador.cr2.cl/)). The area has volcanic and mountainous topography with vegetation dominated by Nothofagus obliqua at lower elevations (200–1000 m) and mixed deciduous Nothofagus pumilio with the conifer Araucaria araucana at higher elevations (1000–1500 m). The landscape, dominated by native temperate forests, comprises a mosaic where small-scale agroecosystems (homegardens, orchards, and chacras/potato fields) mix with pasture lands, lakes, rivers, non-native tree monocultures as well as volcanoes and mountains<sup>72</sup>.
 
-Study design. All methods were carried out in accordance with relevant guidelines and regulations. The study was approved by Scientific Ethics Committee of the Pontificia Universidad Católica de Chile (Resolution #160415004). We conducted homergarden surveys and interviews to gardeners after obtaining prior informed consent from each one of them. Fieldwork was conducted in two field seasons during the summer season between December and February of 2016–2017 and 2017–2018. In total, we studied 100 homegardens (50 homegardens from Mapuche indigenous and non-indigenous campesinos were surveyed the first field season and 50 homegardens from lifestyle migrants were surveyed the second field season). Mapuche indigenous and non-indigenous campesinos were grouped together because the latter are people who were born, live, and work in the territory, often in close relationship with Mapuche families; their agriculture resembles and integrates the Mapuche traditional agricultural system<sup>33</sup>. For their part, lifestyle migrants are people who migrated during adulthood from an urban setting to the study area<sup>32</sup>. We used successive-referral sampling as our nonprobability recruiting method<sup>76,77</sup>. The criteria for selecting a homegarden for study was that its main purpose was family consumption and that it was at least two years old.
+**Study design.** All methods were carried out in accordance with relevant guidelines and regulations. The study was approved by Scientific Ethics Committee of the Pontificia Universidad Católica de Chile (Resolution #160415004). We conducted homergarden surveys and interviews to gardeners after obtaining prior informed consent from each one of them. Fieldwork was conducted in two field seasons during the summer season between December and February of 2016–2017 and 2017–2018. In total, we studied 100 homegardens (50 homegardens from Mapuche indigenous and non-indigenous campesinos were surveyed the first field season and 50 homegardens from lifestyle migrants were surveyed the second field season). Mapuche indigenous and non-indigenous campesinos were grouped together because the latter are people who were born, live, and work in the territory, often in close relationship with Mapuche families; their agriculture resembles and integrates the Mapuche traditional agricultural system<sup>33</sup>. For their part, lifestyle migrants are people who migrated during adulthood from an urban setting to the study area<sup>32</sup>. We used successive-referral sampling as our non-probability recruiting method<sup>76,77</sup>. The criteria for selecting a homegarden for study was that its main purpose was family consumption and that it was at least two years old.
 
-Homegarden habitat, sociodemographic profiles, and management practices. We identified all the crop species intentionally cultivated in each of the 100 homegardens and visually estimated the ground cover (%) of each crop vertical stratum through guided walks with gardeners (Table 2;<sup>78</sup>). We measured homegarden area (m<sup>2</sup>) and used a handheld GPS to record the homegarden spatial location (geographic coordinates). We used Google Earth (Map data ©2021 Google, Maxar Technologies) images to measure the distance from the homegarden to the nearest native forest edge (normally seen as a clear-cut line between forest and a diferent land cover; e.g., pasture). We further conducted structured interviews with data on sociodemographic profiles and management practices, including gardener origin, age, gardening experience, homegarden age, and pest control strategies (Table 2; <sup>19,77,79</sup>).
+**Homegarden habitat, sociodemographic profiles, and management practices.** We identified all the crop species intentionally cultivated in each of the 100 homegardens and visually estimated the ground cover (%) of each crop vertical stratum through guided walks with gardeners (Table 2;78). We measured homegarden area (m<sup>2</sup>) and used a handheld GPS to record the homegarden spatial location (geographic coordinates). We used Google Earth (Map data ©2021 Google, Maxar Technologies) images to measure the distance from the homegarden to the nearest native forest edge (normally seen as a clear-cut line between forest and a different land cover; e.g., pasture). We further conducted structured interviews with data on sociodemographic profiles and management practices, including gardener origin, age, gardening experience, homegarden age, and pest control strategies (Table 2; 19,77,79).
 
-Beetle sampling. We quantified beetle species richness (number of species per homegarden) and relative abundance (number of individuals per homegarden) using pitfall traps and sweeping nets to maximize the representation of the assemblage<sup>19,42,80</sup>. To determine an adequate sampling efort of beetles at each homegarden, we constructed sample-based rarefaction accumulation curves for both sampling methods. We considered an adequate sampling efort when there was no longer an increase in species as individuals accumulated<sup>81</sup>.
+**Beetle sampling.** We quantified beetle species richness (number of species per homegarden) and relative abundance (number of individuals per homegarden) using pitfall traps and sweeping nets to maximize the representation of the assemblage<sup>19,42,80</sup>. To determine an adequate sampling effort of beetles at each homegarden,
 
-<table><tr><td>Social-ecological filter</td><td>Description</td></tr><tr><td>Homegarden areaa</td><td>Size of the homegarden in  $m^{2}$ </td></tr><tr><td>Crop richnessa</td><td>Number of crop species intentionally cultivated in the homegarden</td></tr><tr><td>Structural complexitya</td><td>Index obtained from the sum of the coverage of each vegetation stratum (%) divided by 100. Strata: 0–0.3 m, 0.31–1 m, 1.1–2 m, and above 2 m</td></tr><tr><td>Elevation</td><td>Meters above sea level (masl)</td></tr><tr><td>Distance to foresta</td><td>Linear distance in m to nearest native forest patch</td></tr><tr><td>Homegarden age</td><td>Years that the homegarden has been in the same spatial location</td></tr><tr><td>Gardener origina</td><td>1: Campesino; 2: Migrant</td></tr><tr><td>Gardener age</td><td>Age of the gardener (years old)</td></tr><tr><td>Gardener experience</td><td>Number of years the person has been gardening</td></tr><tr><td>Pest control strategya</td><td>1: None; 2: Natural (mechanical by hand or using biopreparations); 3. Chemical pesticide</td></tr></table>
+Scientific Reports | (2021) 11:12462 |
 
-Table 2. Social-ecological filters used to evaluate homegarden associations of beetles (Arthropoda: Coleoptera) in Andean temperate ecosystems, southern Chile. <sup>a</sup>Social-ecological filters retained for tests of homegarden associations of beetles after reducing collinearity.
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+7
+
+<!-- page 8 of 14 -->
+
+www.nature.com/scientificreports/
+
+| Social-ecological filter | Description |
+| --- | --- |
+| Homegarden areaa | Size of the homegarden in $m^{2}$ |
+| Crop richnessa | Number of crop species intentionally cultivated in the homegarden |
+| Structural complexitya | Index obtained from the sum of the coverage of each vegetation stratum (%) divided by 100. Strata: 0–0.3 m, 0.31–1 m, 1.1–2 m, and above 2 m |
+| Elevation | Meters above sea level (masl) |
+| Distance to foresta | Linear distance in m to nearest native forest patch |
+| Homegarden age | Years that the homegarden has been in the same spatial location |
+| Gardener origina | 1: Campesino; 2: Migrant |
+| Gardener age | Age of the gardener (years old) |
+| Gardener experience | Number of years the person has been gardening |
+| Pest control strategya | 1: None; 2: Natural (mechanical by hand or using biopreparations); 3. Chemical pesticide |
+
+Table 2.   Social-ecological filters used to evaluate homegarden associations of beetles (Arthropoda: Coleoptera) in Andean temperate ecosystems, southern Chile. <sup>a</sup>Social-ecological filters retained for tests of homegarden associations of beetles after reducing collinearity.
+
+we constructed sample-based rarefaction accumulation curves for both sampling methods. We considered an adequate sampling effort when there was no longer an increase in species as individuals accumulated<sup>81</sup>.
 
 We randomly deployed four pitfall traps every 25 m<sup>2</sup> with a maximum of 16 traps (determined through accumulation curves) for three nights per homegarden<sup>19</sup>. We deployed traps between 8:00–11:00 am and were collected at the same time the fourth day. Each trap was buried 12 cm, had a diameter of 7.3 cm and was placed at the soil surface. Traps were filled to a third of their capacity with an ethylene glycol solution and covered by a suspended lid. For sweep netting, we performed one 10 m transect of 1.5 min every 25m<sup>2</sup> of homegarden with 3 m between transects and a maximum of nine transects per homegarden (determined through accumulation curves; Lister and Garcia 2018). We performed sweep netting transects from 12:00 to 16:00 on clear days with temperatures ranging from 15 °C to 25 °C. In total, we deployed 1.410 pitfall traps over 371 nights and conducted 371 sweep netting transects. We collected all beetle individuals and identified at the species level utilizing dichotomous keys in guides and the Coleoptera reference collection available at the Natural History Museum of Chile. Finally, we measured the length of a minimum of three individuals per species for functional trait analysis (below in section “Beetle traits and functional diversity”).
 
-Beetle traits and functional diversity. We used three traits of beetle species, including two categorical (foraging guild and habitat-use guild) and one continuous (body weight) measures (Table 3). These traits are correlated with resource use by species and are mechanistically linked to ecosystem functioning (e.g., quantity, type, and strategies for obtaining resources by each species; Table 3). For example, foraging guild has been used for linking resource production and disruption to beetle diversity<sup>82,83</sup>. Data on foraging guild and habitat-use guild were extracted from 34 bibliographic references (including<sup>84–92</sup>, among others). For its part, body weight has been utilized to show how environmental change has indirectly precipitated a bottom-up trophic cascade and consequent collapse of the food-web structures<sup>93</sup>. Body weight for each beetle species was calculated from measured body lengths using the function proposed by (Johnson and Strong<sup>94</sup>:
+**Beetle traits and functional diversity.** We used three traits of beetle species, including two categorical (foraging guild and habitat-use guild) and one continuous (body weight) measures (Table 3). These traits are correlated with resource use by species and are mechanistically linked to ecosystem functioning (e.g., quantity, type, and strategies for obtaining resources by each species; Table 3). For example, foraging guild has been used for linking resource production and disruption to beetle diversity<sup>82,83</sup>. Data on foraging guild and habitat-use guild were extracted from 34 bibliographic references (including<sup>84–92</sup>, among others). For its part, body weight has been utilized to show how environmental change has indirectly precipitated a bottom-up trophic cascade and consequent collapse of the food-web structures<sup>93</sup>. Body weight for each beetle species was calculated from measured body lengths using the function proposed by (Johnson and Strong<sup>94</sup>:
 
 $$
-\ln (\text { weight }) = \ln (b 0) + b 1 * \ln (\text { length })
+\ln (\text {weight}) = \ln (b 0) + b 1 * \ln (\text {length})
 $$
 
-According to their foraging guild, we classified each species as mainly beneficial (predator, pollinivorous, saprophagous, mycetophagous) or harmful (phytophagous, xylophagous) for homegarden production. Finally, we quantified functional diversity using the metric functional richness (FRic)<sup>24</sup>. FRic was calculated using the beetle traits (Table 3) and the presence/absence of each species per homegarden. We calculated FRic using the program R-FD<sup>95</sup>
+According to their foraging guild, we classified each species as mainly beneficial (predator, pollinivorous, saprophagous, mycetophagous) or harmful (phytophagous, xylophagous) for homegarden production. Finally, we quantified functional diversity using the metric functional richness (FRic)<sup>24</sup>. FRic was calculated using the beetle traits (Table 3) and the presence/absence of each species per homegarden. We calculated FRic using the program R-FD<sup>95</sup>.
 
-Data analysis. We used Generalized Linear Mixed-Efect models<sup>96</sup>, implemented in the packages lmer<sup>97</sup> and AICcmodavg packages<sup>98</sup> in R software version 4.0.4<sup>99</sup> (R Development Core Team, 2021). We first tested the species richness-functional diversity relationship by regressing species richness against FRic. Then, we examine the association between a dependent variable and independent variables (fixed efects; social-ecological filters; Table 2) collected in grouped units at diferent levels (random efects; season and locality). We first assessed col linearity to reduce the number of independent social-ecological filters presented in Table 2. With strongly correlated social-ecological filters (Spearman’s r > 0.6), we kept for analysis either the one considered to be most eco logically influential for the studied taxa or the most feasible to implement in management practices (Table 2). We examined the fixed efect of homegarden area, crop richness, structural complexity, distance to forest, homegar den age, gardener origin, and pest control strategy on the following dependent variables: beetle species richness, relative abundance, and FRic. To find the best models for our dependent variables, we generated a candidate set of models based on model weights (w ) and the precision of the estimated coeficients, using Akaike’s Information Criterion (AIC;<sup>100</sup>. We considered models with a ΔAIC < 2 of the top model as the competitive set of bestsupported models. For easier interpretation of our results and for categorizing taxonomically and functionally important biodiversity areas, we projected the observed values for beetle species richness, relative abundance, and functional richness utilizing the spatial interpolation toolbar Kriging<sup>101</sup>, implemented in ArcGIS 10.5. We present results for beetle species richness as median with data range (interquartile range). For relative abundance and FRic we present mean ± standard deviation (SD).
+**Data analysis.** We used Generalized Linear Mixed-Effect models<sup>96</sup>, implemented in the packages lmer<sup>97</sup> and AICcmodavg packages<sup>98</sup> in R software version 4.0.4<sup>99</sup> (R Development Core Team, 2021). We first tested the species richness-functional diversity relationship by regressing species richness against FRic. Then, we examine the association between a dependent variable and independent variables (fixed effects; social-ecological filters; Table 2) collected in grouped units at different levels (random effects; season and locality). We first assessed collinearity to reduce the number of independent social-ecological filters presented in Table 2. With strongly correlated social-ecological filters (Spearman’s r > 0.6), we kept for analysis either the one considered to be most ecologically influential for the studied taxa or the most feasible to implement in management practices (Table 2). We examined the fixed effect of homegarden area, crop richness, structural complexity, distance to forest, homegarden age, gardener origin, and pest control strategy on the following dependent variables: beetle species richness, relative abundance, and FRic. To find the best models for our dependent variables, we generated a candidate set of models based on model weights (w<sub>i</sub>) and the precision of the estimated coefficients, using Akaike’s Information Criterion (AIC;<sup>100</sup>. We considered models with a ΔAIC < 2 of the top model as the competitive set of bestsupported models. For easier interpretation of our results and for categorizing taxonomically and functionally
 
-<table><tr><td>Family</td><td>Scientific name</td><td>Mean length (mm) ± SD</td><td>Body weight (mg)a</td><td>Main foraging guild</td><td>Habitat-use guild</td></tr><tr><td>Anthicidae</td><td>Anthicus sp.</td><td>3.14 ± 0.06</td><td>0.68</td><td>Predator</td><td>Geophilous</td></tr><tr><td rowspan="3">Archeocrypticidae</td><td>Enneboeus sp.</td><td>3.56 ± 0.3</td><td>0.89</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Archeocrypticus topali</td><td>3.93 ± 0.23</td><td>1.1</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Enneboeus baeck-stroemi</td><td>3.69 ± 0</td><td>0.96</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td rowspan="3">Bruchidae</td><td>Lithraeus sp.</td><td>4.9 ± 0.18</td><td>1.78</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Lithraeus egenus</td><td>1.78 ± 0.01</td><td>0.2</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Acanthoscelides obtectus</td><td>3.87 ± 0</td><td>1.07</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td rowspan="3">Buprestidae</td><td>Anthaxia concinna</td><td>5.22 ± 0.19</td><td>2.04</td><td>Phytophagous</td><td>Arboreal/Flower</td></tr><tr><td>Conognatha sagittaria</td><td>16.61 ± 0</td><td>25.01</td><td>Xylophagous</td><td>Arboreal/Flower</td></tr><tr><td>Anthaxia cupriceps</td><td>4.24 ± 0</td><td>1.3</td><td>Xylophagous</td><td>Arboreal/Flower</td></tr><tr><td>Cantharidae</td><td>Cantharis variabilis</td><td>5.62 ± 0.11</td><td>2.39</td><td>Pollinivorous</td><td>Arboreal/Flower</td></tr><tr><td rowspan="18">Carabidae</td><td>Pterostichus aerea</td><td>14.76 ± 2.04</td><td>19.38</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Tetragonoderus viridis</td><td>5.41 ± 0.03</td><td>2.2</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Tetragonoderus sp.</td><td>5.71 ± 0.22</td><td>2.48</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Metius sp.</td><td>10.19 ± 0.52</td><td>8.68</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Bradycellus chilensis</td><td>4.29 ± 0.4</td><td>1.33</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Creobius sp.</td><td>6.44 ± 0</td><td>3.21</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Ceroglossus chilensis</td><td>23.24 ± 0.12</td><td>51.75</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Creobius eydouxii</td><td>17.98 ± 0</td><td>29.7</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Mimodromites nigrotestaceus</td><td>5.72 ± 0.62</td><td>2.48</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus unistriatus</td><td>8.03 ± 0.95</td><td>5.18</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Paramecus laevigatus</td><td>8.23 ± 0.72</td><td>5.47</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus sp.</td><td>15.62 ± 0.98</td><td>21.88</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Calosoma vagans</td><td>20.98 ± 0</td><td>41.49</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Parhypates bonelli</td><td>10.8 ± 1</td><td>9.85</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus chalceus</td><td>14.02 ± 1.17</td><td>17.33</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus aerea</td><td>19.6 ± 0</td><td>35.8</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Metius giga</td><td>9.7 ± 0</td><td>7.8</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Allendia chilensis</td><td>9.69 ± 0</td><td>7.78</td><td>Predator</td><td>Geophilous</td></tr><tr><td rowspan="5">Chrysomelidae</td><td>Chaectonema sp.</td><td>2.45 ± 0</td><td>0.4</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Kuschelina decorata</td><td>5.24 ± 0.09</td><td>2.05</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Aulondera darwini</td><td>2.24 ± 0</td><td>0.33</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Lexiphanes variabilis</td><td>2.76 ± 0</td><td>0.51</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Jansonius aeneus</td><td>3.07 ± 0.38</td><td>0.65</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Clambidae</td><td>Sphaerothorax andensis</td><td>1.09 ± 0</td><td>0.07</td><td>Mycetophagous</td><td>Geophilous</td></tr><tr><td rowspan="5">Coccinellidae</td><td>Psyllobora picta</td><td>3.11 ± 0.13</td><td>0.66</td><td>Predator/ Mycetophagous</td><td>Foliage</td></tr><tr><td>Harmonia axyridis</td><td>7.15 ± 1.56</td><td>4.02</td><td>Predator</td><td>Foliage</td></tr><tr><td>Eriopis connexa</td><td>5.56 ± 0.08</td><td>2.34</td><td>Predator</td><td>Foliage</td></tr><tr><td>Hyperaspis nana</td><td>2.3 ± 0</td><td>0.35</td><td>Predator</td><td>Foliage</td></tr><tr><td>Cercyon sp.</td><td>2.1 ± 0</td><td>0.28</td><td>Predator</td><td>Foliage</td></tr><tr><td>Cryptophagidae</td><td>Micrambina basalis</td><td>1.76 ± 0</td><td>0.19</td><td>Mycetophagous</td><td>Geophilous</td></tr><tr><td colspan="6">Continued</td></tr><tr><td rowspan="13">Curculionidae</td><td>Xyleborinus saxeseni</td><td>2.89 ± 0.48</td><td>0.57</td><td>Xylophagous</td><td>Geophilous</td></tr><tr><td>Aramigus tessellatus</td><td>6.4 ± 0.28</td><td>3.16</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Otiorhynchus sulcatus</td><td>9.69 ± 0.35</td><td>7.78</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Rhopalomerus tenuirostris</td><td>3.9 ± 0</td><td>1.08</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Polydrusus nothofagi</td><td>3.98 ± 0</td><td>1.13</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Hybreoleptops tuberculifer</td><td>10.85 ± 0</td><td>9.95</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Cylydrorhinus carinicollis</td><td>8.69 ± 1.32</td><td>6.14</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Listronotus bonariensis</td><td>2.93 ± 0</td><td>0.58</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Otiorhynchus subglobosus</td><td>6.52 ± 0</td><td>3.3</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Smicronyx argentinensis</td><td>1.98 ± 0</td><td>0.25</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Otiorhynchus rugosostratus</td><td>7.23 ± 0</td><td>4.13</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Puranius fasciculiger</td><td>4.1 ± 0</td><td>1.21</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Omoides flavipes</td><td>2.78 ± 0</td><td>0.52</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Dermestidae</td><td>Anthrenus chilensis</td><td>2.6 ± 0</td><td>0.45</td><td>Saprophagous/Pollinivorous</td><td>Arboreal</td></tr><tr><td rowspan="2">Elateridae</td><td>Mesembria adrasta</td><td>4.97 ± 0</td><td>1.83</td><td>Phytophagous/Saprophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Deromecus castaneipennis</td><td>12.6 ± 0</td><td>13.75</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Histeridae</td><td>Phelister chilicola</td><td>2.99 ± 0</td><td>0.61</td><td>Predator</td><td>Geophilous</td></tr><tr><td rowspan="3">Hydrophilidae</td><td>Cercyon analis</td><td>2.7 ± 0.26</td><td>0.49</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Tropisternus setiger</td><td>9.66 ± 0</td><td>7.73</td><td>Phytophagous</td><td>Hydrophilous</td></tr><tr><td>Parasidis porteri</td><td>1.24 ± 0.02</td><td>0.09</td><td>Predator</td><td>Foliage</td></tr><tr><td rowspan="2">Lampyridae</td><td>Pyrractonema obscura</td><td>9.86 ± 0.91</td><td>8.08</td><td>Predator</td><td>Arboreal/ Geophilous</td></tr><tr><td>Pyrractonema sp.</td><td>12.1 ± 0</td><td>12.59</td><td>Predator</td><td>Arboreal/ Geophilous</td></tr><tr><td>Latridiidae</td><td>Corticaria ferruginea</td><td>1.84 ± 0</td><td>0.21</td><td>Mycetophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Leiodidae</td><td>Anaballetus chilensis</td><td>2.6 ± 0</td><td>0.45</td><td>Mycetophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Lucanidae</td><td>Apterodorcus bacchus</td><td>24.23 ± 0</td><td>56.67</td><td>Xylophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Meloidae</td><td>Epicauta pilme</td><td>10.29 ± 0.35</td><td>8.87</td><td>Phytophagous</td><td>Foliage</td></tr><tr><td rowspan="4">Mordellidae</td><td>Mordella luctuosa</td><td>8.88 ± 0</td><td>6.44</td><td>Pollinivorous/Saprophagous</td><td>Flower</td></tr><tr><td>Mordella solieri</td><td>5.92 ± 0</td><td>2.68</td><td>Pollinivorous/Saprophagous</td><td>Flower</td></tr><tr><td>Mordella abbreviata</td><td>3.45 ± 0.19</td><td>0.83</td><td>Pollinivorous/Saprophagous</td><td>Flower</td></tr><tr><td>Mordella vidua</td><td>4.49 ± 0.43</td><td>1.47</td><td>Pollinivorous/Saprophagous</td><td>Flower</td></tr><tr><td>Nitidulidae</td><td>Epuraea sp.</td><td>1.96 ± 0</td><td>0.24</td><td>Saprophagous</td><td>Flower/ Geophilous</td></tr><tr><td>Oedemiridae</td><td>Platylytra vitticolle</td><td>13.04 ± 3.42</td><td>14.81</td><td>Pollinivorous</td><td>Geophilous/ Flower</td></tr><tr><td>Ptiliidae</td><td>Acrotrichis sp.</td><td>0.91 ± 0.08</td><td>0.05</td><td>Mycetophagous</td><td>Geophilous</td></tr><tr><td rowspan="6">Scarabaeidae</td><td>Aphodius granarius</td><td>5.75 ± 0.23</td><td>2.51</td><td>Phytophagous</td><td>Foliage/ Geophilous</td></tr><tr><td>Sericoides convexa</td><td>9.05 ± 0.54</td><td>6.72</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Sericoides delicatula</td><td>6.27 ± 0</td><td>3.03</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Hylamorpha elegans</td><td>12.27 ± 0</td><td>12.98</td><td>Phytophagous/Saprophagous</td><td>Foliage/ Geophilous</td></tr><tr><td>Sericoides obesa</td><td>12.36 ± 0</td><td>13.19</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Arctodium sp.</td><td>6.5 ± 0</td><td>3.28</td><td>Phytophagous</td><td>Foliage/ Geophilous</td></tr><tr><td colspan="6">Continued</td></tr><tr><td rowspan="2">Staphylinidae</td><td>Gnathymenus apterus</td><td>3.34±0.49</td><td>0.78</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Endeius punctipennis</td><td>7.23±0.28</td><td>4.13</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td rowspan="2">Tenebrionidae</td><td>Blapstinus punctulatus</td><td>5.71±0.45</td><td>2.47</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Oligocora nitidum</td><td>12.11±0.67</td><td>12.61</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Trachypachidae</td><td>Systolosoma breve</td><td>5.44±0</td><td>2.23</td><td>Predator</td><td>Arboreal/ Geophilous</td></tr></table>
+Scientific Reports | (2021) 11:12462 |
 
-Table 3. Traits utilized to examine beetle (Coleoptera) functional diversity in homegardens from Andean temperate ecosystems, southern Chile. <sup>a</sup> Species body weight was calculated from measured body lengths following Johnson and Strong<sup>94</sup>.
+https://doi.org/10.1038/s41598-021-91185-4
+
+nature portfolio
+
+8
+
+<!-- page 9 of 14 -->
+
+www.nature.com/scientificreports/
+
+<table><tr><td>Family</td><td>Scientific name</td><td>Mean length (mm) ± SD</td><td>Body weight (mg)a</td><td>Main foraging guild</td><td>Habitat-use guild</td></tr><tr><td>Anthicidae</td><td>Anthicus sp.</td><td>3.14 ± 0.06</td><td>0.68</td><td>Predator</td><td>Geophilous</td></tr><tr><td rowspan="3">Archeocrypticidae</td><td>Enneboeus sp.</td><td>3.56 ± 0.3</td><td>0.89</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Archeocrypticus topali</td><td>3.93 ± 0.23</td><td>1.1</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Enneboeus baeck-stroemi</td><td>3.69 ± 0</td><td>0.96</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td rowspan="3">Bruchidae</td><td>Lithraeus sp.</td><td>4.9 ± 0.18</td><td>1.78</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Lithraeus egenus</td><td>1.78 ± 0.01</td><td>0.2</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Acanthoscelides obtectus</td><td>3.87 ± 0</td><td>1.07</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td rowspan="3">Buprestidae</td><td>Anthaxia concinna</td><td>5.22 ± 0.19</td><td>2.04</td><td>Phytophagous</td><td>Arboreal/Flower</td></tr><tr><td>Conognatha sagittaria</td><td>16.61 ± 0</td><td>25.01</td><td>Xylophagous</td><td>Arboreal/Flower</td></tr><tr><td>Anthaxia cupiceps</td><td>4.24 ± 0</td><td>1.3</td><td>Xylophagous</td><td>Arboreal/Flower</td></tr><tr><td>Cantharidae</td><td>Cantharis variabilis</td><td>5.62 ± 0.11</td><td>2.39</td><td>Pollinivorous</td><td>Arboreal/Flower</td></tr><tr><td rowspan="18">Carabidae</td><td>Pterostichus aerea</td><td>14.76 ± 2.04</td><td>19.38</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Tetragonoderus viridis</td><td>5.41 ± 0.03</td><td>2.2</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Tetragonoderus sp.</td><td>5.71 ± 0.22</td><td>2.48</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Metius sp.</td><td>10.19 ± 0.52</td><td>8.68</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Bradycellus chilensis</td><td>4.29 ± 0.4</td><td>1.33</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Creobius sp.</td><td>6.44 ± 0</td><td>3.21</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Ceroglossus chilensis</td><td>23.24 ± 0.12</td><td>51.75</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Creobius eydouxii</td><td>17.98 ± 0</td><td>29.7</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Mimodromites nigrotestaceus</td><td>5.72 ± 0.62</td><td>2.48</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus unis-triatus</td><td>8.03 ± 0.95</td><td>5.18</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Paramecus laevigatus</td><td>8.23 ± 0.72</td><td>5.47</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus sp.</td><td>15.62 ± 0.98</td><td>21.88</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Calosoma vagans</td><td>20.98 ± 0</td><td>41.49</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Parhypates bonelli</td><td>10.8 ± 1</td><td>9.85</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus chalceus</td><td>14.02 ± 1.17</td><td>17.33</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Trirammatus aerea</td><td>19.6 ± 0</td><td>35.8</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Metius giga</td><td>9.7 ± 0</td><td>7.8</td><td>Predator</td><td>Geophilous</td></tr><tr><td>Allendia chilensis</td><td>9.69 ± 0</td><td>7.78</td><td>Predator</td><td>Geophilous</td></tr><tr><td rowspan="5">Chrysomelidae</td><td>Chaectonema sp.</td><td>2.45 ± 0</td><td>0.4</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Kuschelina decorata</td><td>5.24 ± 0.09</td><td>2.05</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Aulondera darwini</td><td>2.24 ± 0</td><td>0.33</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Lexiphanes variabilis</td><td>2.76 ± 0</td><td>0.51</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Jansonius aeneus</td><td>3.07 ± 0.38</td><td>0.65</td><td>Phytophagous</td><td>Arboreal</td></tr><tr><td>Clambidae</td><td>Sphaerothorax andensis</td><td>1.09 ± 0</td><td>0.07</td><td>Mycetophagous</td><td>Geophilous</td></tr><tr><td rowspan="5">Coccinellidae</td><td>Psyllobora picta</td><td>3.11 ± 0.13</td><td>0.66</td><td>Predator/ Mycetophagous</td><td>Foliage</td></tr><tr><td>Harmonia axyridis</td><td>7.15 ± 1.56</td><td>4.02</td><td>Predator</td><td>Foliage</td></tr><tr><td>Eriopis connexa</td><td>5.56 ± 0.08</td><td>2.34</td><td>Predator</td><td>Foliage</td></tr><tr><td>Hyperaspis nana</td><td>2.3 ± 0</td><td>0.35</td><td>Predator</td><td>Foliage</td></tr><tr><td>Cercyon sp.</td><td>2.1 ± 0</td><td>0.28</td><td>Predator</td><td>Foliage</td></tr><tr><td>Cryptophagidae</td><td>Micrambina basalis</td><td>1.76 ± 0</td><td>0.19</td><td>Mycetophagous</td><td>Geophilous</td></tr><tr><td colspan="6">Continued</td></tr></table>
+
+Scientific Reports | (2021) 11:12462
+
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+9
+
+<!-- page 10 of 14 -->
+
+www.nature.com/scientificreports/
+
+<table><tr><td>Family</td><td>Scientific name</td><td>Mean length (mm) ± SD</td><td>Body weight (mg)a</td><td>Main foraging guild</td><td>Habitat-use guild</td></tr><tr><td rowspan="13">Curculionidae</td><td>Xyleborinus saxeseni</td><td>2.89 ± 0.48</td><td>0.57</td><td>Xylophagous</td><td>Geophilous</td></tr><tr><td>Aramigus tessellatus</td><td>6.4 ± 0.28</td><td>3.16</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Otiorhynchus sulcatus</td><td>9.69 ± 0.35</td><td>7.78</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Rhopalomerus tenuirostris</td><td>3.9 ± 0</td><td>1.08</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Polydrusus nothofagi</td><td>3.98 ± 0</td><td>1.13</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Hybreoleptops tuberculifer</td><td>10.85 ± 0</td><td>9.95</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Cylydrorhinus carini-collis</td><td>8.69 ± 1.32</td><td>6.14</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Listronotus bonariensis</td><td>2.93 ± 0</td><td>0.58</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Otiorhynchus subglo-bosus</td><td>6.52 ± 0</td><td>3.3</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Smicronyx argentin-ensis</td><td>1.98 ± 0</td><td>0.25</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Otiorhynchus rugoso-stratus</td><td>7.23 ± 0</td><td>4.13</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Puranius fasciculiger</td><td>4.1 ± 0</td><td>1.21</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Omoides flavipes</td><td>2.78 ± 0</td><td>0.52</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Dermestidae</td><td>Anthrenus chilensis</td><td>2.6 ± 0</td><td>0.45</td><td>Saprophagous/ Pollinivorous</td><td>Arboreal</td></tr><tr><td rowspan="2">Elateridae</td><td>Mesembria adrasta</td><td>4.97 ± 0</td><td>1.83</td><td>Phytophagous/ Saprophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Deromecus castaneipennis</td><td>12.6 ± 0</td><td>13.75</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Histeridae</td><td>Phelister chilicola</td><td>2.99 ± 0</td><td>0.61</td><td>Predator</td><td>Geophilous</td></tr><tr><td rowspan="3">Hydrophilidae</td><td>Cercyon analis</td><td>2.7 ± 0.26</td><td>0.49</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Tropisternus setiger</td><td>9.66 ± 0</td><td>7.73</td><td>Phytophagous</td><td>Hydrophilous</td></tr><tr><td>Parasidis porteri</td><td>1.24 ± 0.02</td><td>0.09</td><td>Predator</td><td>Foliage</td></tr><tr><td rowspan="2">Lampyridae</td><td>Pyractonema obscura</td><td>9.86 ± 0.91</td><td>8.08</td><td>Predator</td><td>Arboreal/ Geophilous</td></tr><tr><td>Pyractonema sp.</td><td>12.1 ± 0</td><td>12.59</td><td>Predator</td><td>Arboreal/ Geophilous</td></tr><tr><td>Latridiidae</td><td>Corticaria ferruginea</td><td>1.84 ± 0</td><td>0.21</td><td>Mycetophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Leiodidae</td><td>Anaballetus chilensis</td><td>2.6 ± 0</td><td>0.45</td><td>Mycetophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Lucanidae</td><td>Apterodorcus bacchus</td><td>24.23 ± 0</td><td>56.67</td><td>Xylophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Meloidae</td><td>Epicauta pilme</td><td>10.29 ± 0.35</td><td>8.87</td><td>Phytophagous</td><td>Foliage</td></tr><tr><td rowspan="4">Mordellidae</td><td>Mordella luctuosa</td><td>8.88 ± 0</td><td>6.44</td><td>Pollinivorous/ Saprophagous</td><td>Flower</td></tr><tr><td>Mordella solieri</td><td>5.92 ± 0</td><td>2.68</td><td>Pollinivorous/ Saprophagous</td><td>Flower</td></tr><tr><td>Mordella abbreviata</td><td>3.45 ± 0.19</td><td>0.83</td><td>Pollinivorous/ Saprophagous</td><td>Flower</td></tr><tr><td>Mordella vidua</td><td>4.49 ± 0.43</td><td>1.47</td><td>Pollinivorous/ Saprophagous</td><td>Flower</td></tr><tr><td>Nitidulidae</td><td>Epuraea sp.</td><td>1.96 ± 0</td><td>0.24</td><td>Saprophagous</td><td>Flower/ Geophilous</td></tr><tr><td>Oedemiridae</td><td>Platylytra vitticolle</td><td>13.04 ± 3.42</td><td>14.81</td><td>Pollinivorous</td><td>Geophilous/ Flower</td></tr><tr><td>Ptiliidae</td><td>Acrotrichis sp.</td><td>0.91 ± 0.08</td><td>0.05</td><td>Mycetophagous</td><td>Geophilous</td></tr><tr><td rowspan="6">Scarabaeidae</td><td>Aphodius granarius</td><td>5.75 ± 0.23</td><td>2.51</td><td>Phytophagous</td><td>Foliage/ Geophilous</td></tr><tr><td>Sericoides convexa</td><td>9.05 ± 0.54</td><td>6.72</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Sericoides delicatula</td><td>6.27 ± 0</td><td>3.03</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Hylamorpha elegans</td><td>12.27 ± 0</td><td>12.98</td><td>Phytophagous/ Saprophagous</td><td>Foliage/ Geophilous</td></tr><tr><td>Sericoides obesa</td><td>12.36 ± 0</td><td>13.19</td><td>Phytophagous</td><td>Arboreal/ Geophilous</td></tr><tr><td>Arctodium sp.</td><td>6.5 ± 0</td><td>3.28</td><td>Phytophagous</td><td>Foliage/ Geophilous</td></tr><tr><td colspan="6">Continued</td></tr></table>
+
+Scientific Reports | (2021) 11:12462
+
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+10
+
+<!-- page 11 of 14 -->
+
+www.nature.com/scientificreports/
+
+<table><tr><td>Family</td><td>Scientific name</td><td>Mean length (mm) ± SD</td><td>Body weight (mg)a</td><td>Main foraging guild</td><td>Habitat-use guild</td></tr><tr><td rowspan="2">Staphylinidae</td><td>Gnathymenus apterus</td><td>3.34 ± 0.49</td><td>0.78</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Endeius punctipennis</td><td>7.23 ± 0.28</td><td>4.13</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td rowspan="2">Tenebrionidae</td><td>Blapstinus punctulatus</td><td>5.71 ± 0.45</td><td>2.47</td><td>Phytophagous</td><td>Geophilous</td></tr><tr><td>Oligocora nitidum</td><td>12.11 ± 0.67</td><td>12.61</td><td>Saprophagous</td><td>Geophilous</td></tr><tr><td>Trachypachidae</td><td>Systolosoma breve</td><td>5.44 ± 0</td><td>2.23</td><td>Predator</td><td>Arboreal/ Geophilous</td></tr></table>
+
+Table 3.   Traits utilized to examine beetle (Coleoptera) functional diversity in homegardens from Andean temperate ecosystems, southern Chile. a Species body weight was calculated from measured body lengths following Johnson and Strong<sup>94</sup>.
+
+important biodiversity areas, we projected the observed values for beetle species richness, relative abundance, and functional richness utilizing the spatial interpolation toolbar Kriging<sup>101</sup>, implemented in ArcGIS 10.5. We present results for beetle species richness as median with data range (interquartile range). For relative abundance and FRic we present mean ± standard deviation (SD).
 
 Received: 23 February 2021; Accepted: 24 May 2021
 
@@ -129,205 +269,131 @@ Published online: 14 June 2021
 ## References
 
 1. Berkes, F. & Folke, C. Linking social and ecological systems for resilience and sustainability. in Linking social and ecological systems: management practices and social mechanisms for building resilience (eds. Berkes, F. & Folke, C.) 1–25 (Cambridge University Press, 2002).
-
 2. Pretty, J. et al. The intersections of biological diversity and cultural diversity: Towards integration. Conserv. Soc. 7, 100 (2009).
-
-3. IPBES. The regional assessment report on biodiversity and ecosystem services for the Americas (Secretariat of the Intergovernmenta Science-Policy Platform on Biodiversity and Ecosystem Services, 2018)
-
-4. Galluzzi, G., Eyzaguirre, P. & Negri, V. Home gardens: Neglected hotspots of agro-biodiversity and cultural diversity. Biodivers. Conserv. 19, 3635–3654 (2010)
-
+3. IPBES. The regional assessment report on biodiversity and ecosystem services for the Americas (Secretariat of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services, 2018).
+4. Galluzzi, G., Eyzaguirre, P. & Negri, V. Home gardens: Neglected hotspots of agro-biodiversity and cultural diversity. Biodivers. Conserv. 19, 3635–3654 (2010).
 5. Fernandes, E. C. M. & Nair, P. K. R. An evaluation of the structure and function of tropical homegardens. Agric. Syst. 21, 279–310 (1986).
-
 6. Ibarra, J. T., Caviedes, J., Barreau, A. & Pessa, N. Huertas familiares y comunitarias: cultivando soberanía alimentaria (Ediciones Universidad Católica de Chile, 2019).
-
 7. Eyzaguirre, P. B. & Linares, O. F. Home Gardens and Agrobiodiversity (Smithsonian Institution Press, 2010).
-
-8. Timsuksai, P. & Rambo, A. T. The influence of culture on agroecosystem structure: a comparison of the spatial patterns of homegardens of diferent ethnic groups in Thailand and Vietnam. PLoS ONE 11, e0146118 (2016)
-
-9. Lemessa, D., Hambäck, P. A. & Hylander, K. The efect of local and landscape level land-use composition on predatory arthropods in a tropical agricultural landscape. Landsc. Ecol. 30, 167–180 (2015).
-
+8. Timsuksai, P. & Rambo, A. T. The influence of culture on agroecosystem structure: a comparison of the spatial patterns of homegardens of different ethnic groups in Thailand and Vietnam. PLoS ONE 11, e0146118 (2016).
+9. Lemessa, D., Hambäck, P. A. & Hylander, K. The effect of local and landscape level land-use composition on predatory arthropods in a tropical agricultural landscape. Landsc. Ecol. 30, 167–180 (2015).
 10. Mattsson, E., Ostwald, M., Nissanka, S. P. & Pushpakumara, D. K. N. G. Quantification of carbon stock and tree diversity of homegardens in a dry zone area of Moneragala district, Sri Lanka. Agrofor. Syst. 89, 435–445 (2015).
-
 11. Mohri, H. et al. Assessment of ecosystem services in homegarden systems in Indonesia, Sri Lanka, and Vietnam. Ecosyst. Serv. 5, 124–136 (2013).
-
-12. Pakeman, R. J. & Stockan, J. A. Drivers of carabid functional diversity: abiotic environment, plant functional traits, or plan functional diversity?. Ecology 95, 1213–1224 (2014).
-
+12. Pakeman, R. J. & Stockan, J. A. Drivers of carabid functional diversity: abiotic environment, plant functional traits, or plant functional diversity?. Ecology 95, 1213–1224 (2014).
 13. Altieri, M. A. Agroecology: The Science of Sustainable Agriculture (Westview Press, 1995).
-
 14. Ellis, E. C. & Ramankutty, N. Putting people in the map: Anthropogenic biomes of the world. Front. Ecol. Environ. 6, 439–447 (2008).
-
-15. Piccini, I. et al. Dung beetles as drivers of ecosystem multifunctionality: Are response and efect traits interwoven?. Sci. Total Environ. 616–617, 1440–1448 (2018).
-
+15. Piccini, I. et al. Dung beetles as drivers of ecosystem multifunctionality: Are response and effect traits interwoven?. Sci. Total Environ. 616–617, 1440–1448 (2018).
 16. Boonstra, W. J., Björkvik, E., Haider, L. J. & Masterson, V. Human responses to social-ecological traps. Sustain. Sci. 11, 877–889 (2016).
-
 17. Cadotte, M. W., Carscadden, K. & Mirotchnick, N. Beyond species: functional diversity and the maintenance of ecological processes and services. J. Appl. Ecol. 48, 1079–1087 (2011).
-
 18. Kraft, N. J. B. et al. Community assembly, coexistence and the environmental filtering metaphor. Funct. Ecol. 29, 592–599 (2015).
-
-19. Toledo-Hernández, M., Denmead, L. H., Clough, Y., Rafiudin, R. & Tscharntke, T. Cultural homegarden management practices mediate arthropod communities in Indonesia. J. Insect Conserv. 20, 373–382 (2016).
-
+19. Toledo-Hernández, M., Denmead, L. H., Clough, Y., Raffiudin, R. & Tscharntke, T. Cultural homegarden management practices mediate arthropod communities in Indonesia. J. Insect Conserv. 20, 373–382 (2016).
 20. Jaganmohan, M., Vailshery, L. S. & Nagendra, H. Patterns of insect abundance and distribution in urban domestic gardens in Bangalore, India. Diversity 5, 767–778 (2013).
-
 21. Huerta, E. & Van der Wal, H. Soil macroinvertebrates’ abundance and diversity in home gardens in Tabasco, Mexico, vary with soil texture, organic matter and vegetation cover. Eur. J. Soil Biol. 50, 68–75 (2012).
-
-22. Pizzolotto, R. et al. Ground beetles in Mediterranean olive agroecosystems: their significance and functional role as bioindicator (Coleoptera, Carabidae). PLoS ONE 13, e0194551 (2018).
-
-23. Grez, A. A., Zaviezo, T., Casanoves, F., Oberti, R. & Pliscof, P. The positive association between natural vegetation, native coccinellids and functional diversity of aphidophagous coccinellid communities in alfalfa. Insect Conserv. Divers. https://doi.org 10.1111/icad.12473 (2021).
-
+22. Pizzolotto, R. et al. Ground beetles in Mediterranean olive agroecosystems: their significance and functional role as bioindicators (Coleoptera, Carabidae). PLoS ONE 13, e0194551 (2018).
+23. Grez, A. A., Zaviezo, T., Casanoves, F., Oberti, R. & Pliscoff, P. The positive association between natural vegetation, native coccinellids and functional diversity of aphidophagous coccinellid communities in alfalfa. Insect Conserv. Divers. [https://doi.org/10.1111/icad.12473](https://doi.org/10.1111/icad.12473) (2021).
 24. Villéger, S., Mason, N. W. H. & Mouillot, D. New multidimensional functional diversity indices for a multifaceted framework in functional ecology. Ecology 89, 2290–2301 (2008).
-
 25. Guerrero, I., Carmona, C. P., Morales, M. B., Oñate, J. J. & Peco, B. Non-linear responses of functional diversity and redundancy to agricultural intensification at the field scale in Mediterranean arable plant communities. Agric. Ecosyst. Environ. 195, 36–43 (2014).
-
 26. Mayfield, M. M. et al. What does species richness tell us about functional trait diversity? Predictions and evidence for responses of species and functional trait diversity to land-use change. Glob. Ecol. Biogeogr. 19, 423–431 (2010).
 
-27. Upreti, B. R. & Upreti, Y. G. Factors leading to agro-biodiversity loss in developing countries: the case of Nepal. Biodivers. Conserv. 11, 1607–1621 (2002)
+Scientific Reports | (2021) 11:12462
 
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+11
+
+<!-- page 12 of 14 -->
+
+www.nature.com/scientificreports/
+
+27. Upreti, B. R. & Upreti, Y. G. Factors leading to agro-biodiversity loss in developing countries: the case of Nepal. Biodivers. Conserv. 11, 1607–1621 (2002).
 28. Reyes-García, V. et al. Resilience of traditional knowledge systems: The case of agricultural knowledge in home gardens of the Iberian Peninsula. Glob. Environ. Chang. 24, 223–231 (2014).
-
 29. Kawa, N. C. How religion, race, and the weedy agency of plants shape Amazonian home gardens. Cult. Agric. Food Environ. 38, 84–93 (2016).
-
 30. Brondizio, E. S. et al. Re-conceptualizing the Anthropocene: A call for collaboration. Glob. Environ. Chang. 39, 318–327 (2016).
-
 31. Benson, M. & O’Reilly, K. Lifestyle Migration: Expectations, Aspirations, and Experiences (Ashgate Publishing, 2009).
-
 32. Marchant, C. Lifestyle migration and the nascent agroecological movement in the Andean Araucanía, Chile: Is it promoting sustainable local development?. Mt. Res. Dev. 37, 406–414 (2017).
-
 33. Ibarra, J. T., Barreau, A., Caviedes, J., Pessa, N. & Urra, R. Huertas familiares tradicionales y emergentes: cultivando biodiversidad, aprendizaje y soberanía desde la interculturalidad. in Huertas familiares y comunitarias: cultivando soberanía alimentaria (eds. Ibarra, J. T., Caviedes, J., Barreau, A. & Pessa, N.) 138–165 (Ediciones Universidad Católica de Chile, 2019).
-
 34. Myers, N., Mittermeier, R. A., Mittermeier, C. G., da Fonseca, G. A. B. & Kent, J. Biodiversity hotspots for conservation priorities. Nature 403, 853–858 (2000).
-
 35. Arroyo, M. T. K. et al. El hotspot chileno, prioridad mundial para la conservación. in Diversidad de Chile: patrimonios y desafíos (ed. Mnisterio del Medio Ambiente, G. de C.) 90–95 (Ocho Libros Editores, 2006).
-
 36. Farias, A. A. & Jaksic, F. M. Low functional richness and redundancy of a predator assemblage in native forest fragments of Chiloe Island Chile. J. Anim. Ecol. 80, 809–817 (2011).
-
 37. Ibarra, J. T. & Martin, K. Biotic homogenization: loss of avian functional richness and habitat specialists in disturbed Andean temperate forests. Biol. Conserv. 192, 418–427 (2015).
-
 38. Lavelle, P. et al. Soil function in a changing world: The role of invertebrate ecosystem engineers. Eur. J. Soil Biol. 33, 159–193 (1997).
-
 39. Cole, L. J. et al. Relationships between agricultural management and ecological groups of ground beetles (Coleoptera: Carabidae) on Scottish farmland. Agric. Ecosyst. Environ. 93, 323–336 (2002).
-
 40. Van Klink, R. et al. Meta-analysis reveals declines in terrestrial but increases in freshwater insect abundances. Science 368, 417–420 (2020).
-
 41. Sánchez-Bayo, F. & Wyckhuys, K. A. G. Worldwide decline of the entomofauna: a review of its drivers. Biol. Conserv. 232, 8–27 (2019).
-
 42. Lencinas, M. V., Sola, F. J., Cellini, J. M., Peri, P. L. & Martínez Pastur, G. Land sharing in South Patagonia: Conservation of above-ground beetle diversity in forests and non-forest ecosystems. Sci. Total Environ. 690, 132–139 (2019).
-
 43. Roig-Juñent, S. & Domínguez, M. C. Diversidad de la familia Carabidae (Coleoptera) en Chile. Rev. Chil. Hist. Nat. 74, 549–571 (2001).
-
 44. Grez, A. A., Moreno, P. & Elgueta, M. Coleópteros (Insecta: Coleoptera) epígeos asociados al bosque maulino y plantaciones de pino aledañas. Rev. Chil. Entomol. 29, 9–18 (2003).
-
-45. Richardson, B. J. & Arias-Bohart, E. T. Why so many apparently rare beetles in Chilean temperate rainforests?. Rev. Chil. Hist. Nat. 84, 419–432 (2011)
-
+45. Richardson, B. J. & Arias-Bohart, E. T. Why so many apparently rare beetles in Chilean temperate rainforests?. Rev. Chil. Hist. Nat. 84, 419–432 (2011).
 46. Cifuentes-Croquevielle, C., Stanton, D. E. & Armesto, J. J. Soil invertebrate diversity loss and functional changes in temperate forest soils replaced by exotic pine plantations. Sci. Rep. 10, 7762 (2020).
-
 47. Fonseca, C. R. & Ganade, G. Species functional redundancy, random extinctions and the stability of ecosystems. J. Ecol. 89, 118–125 (2001).
-
 48. Rosenfeld, J. S. Functional redundancy in ecology and conservation. Oikos 98, 156–162 (2013).
-
 49. Petchey, O. L. & Gaston, K. J. Functional diversity (FD), species richness and community composition. Ecol. Lett. 5, 402–411 (2002).
-
 50. Mori, A. S. Resilience in the studies of biodiversity-ecosystem functioning. Trends Ecol. Evol. 31, 87–89 (2016).
-
 51. Ibarra, J. T. et al. Nurturing resilient forest biodiversity: nest webs as complex adaptive systems. Ecol. Soc. 25, 27 (2020).
-
 52. Ibarra, J. T., Martin, M., Cockle, K. L. & Martin, K. Maintaining ecosystem resilience: functional responses of tree cavity nesters to logging in temperate forests of the Americas. Sci. Rep. 7, 4467 (2017).
-
 53. Elgueta, M. & Arriagada, G. Estado actual del conocimiento de los coleópteros de Chile (Insecta: Coleoptera). Rev. Chil. Entomol. 17, 5–60 (1989).
-
-54. Díaz, S. & Cabido, M. Vive la diférence: plant functional diversity matters to ecosystem processes. Trends Ecol. Evol. 16, 646–655 (2001).
-
-55. Petchey, O. L., Evans, K. L., Fishburn, I. S. & Gaston, K. J. Low functional diversity and no redundancy in British avian assem blages. J. Anim. Ecol. 76, 977–985 (2007).
-
+54. Díaz, S. & Cabido, M. Vive la différence: plant functional diversity matters to ecosystem processes. Trends Ecol. Evol. 16, 646–655 (2001).
+55. Petchey, O. L., Evans, K. L., Fishburn, I. S. & Gaston, K. J. Low functional diversity and no redundancy in British avian assemblages. J. Anim. Ecol. 76, 977–985 (2007).
 56. Villagrán, C. & Hinojosa, L. F. Historia de los bosques del sur de Sudamérica, II : análisis fitogeográfico. Rev. Chil. Hist. Nat. 70, 241–267 (1997).
-
 57. Vuilleumier, F. & Simpson, B. Pleistocene changes in the fauna and flora of South America. Science 173, 771–780 (1971).
-
 58. Niemelä, J. Habitat distribution of carabid beetles in Tierra del Fuego South America. Entomol. Fenn. 29, 3–16 (1990).
-
 59. O’Brien, C. The biogeography of Chile through entomofaunal regions. Entomol. News 82, 197–202 (1971).
-
 60. Vergara, O. E., Jerez, V. & Parra, L. E. Diversidad y patrones de distribución de coleópteros en la Región del Biobío, Chile : una aproximación preliminar para la conservación de la diversidad. Rev. Chil. Hist. Nat. 79, 369–388 (2006).
-
 61. Mason, N. W. H., Irz, P., Lanoiselée, C., Mouillot, D. & Argillier, C. Evidence that niche specialization explains species-energy relationships in lake fish communities. J. Anim. Ecol. 77, 285–296 (2008).
-
 62. Clavel, J., Julliard, R. & Devictor, V. Worldwide decline of specialist species: toward a global functional homogenization?. Front. Ecol. Environ. 9, 222–228 (2011).
-
 63. Devictor, V. et al. Spatial mismatch and congruence between taxonomic, phylogenetic and functional diversity: the need for integrative conservation strategies in a changing world. Ecol. Lett. 13, 1030–1040 (2010).
-
 64. Trinh, L. N. et al. Agrobiodiversity conservation and development in Vietnamese home gardens. Agric. Ecosyst. Environ. 97, 317–344 (2003).
-
 65. MacArthur, R. H. & Wilson, E. O. The Theory of Island Biogeography (Princeton University Press, 1967).
-
 66. Serge, M. M. P., Giovani, E. T. & Mony, R. Household and home garden infesting arthropods (Ants and Myriapods) in the city of Yaoundé, Cameroon. J. Entomol. Zool. Stud. 7, 1030–1037 (2019).
-
 67. Jacquet, C., Mouillot, D., Kulbicki, M. & Gravel, D. Extensions of island biogeography theory predict the scaling of functional trait composition with habitat area and isolation. Ecol. Lett. 20, 135–146 (2017).
-
 68. Gravel, D., Massol, F., Canard, E., Mouillot, D. & Mouquet, N. Trophic theory of island biogeography. Ecol. Lett. 14, 1010–1016 (2011).
-
 69. Regman, T. P. et al. Species interactions regulate the collapse of biodiversity and ecosystem function in tropical forest fragments. Ecology 96, 2692–2704 (2015).
+70. Bolger, D. T., Suarez, A. V., Crooks, K. R., Morrison, S. A. & Case, T. J. Arthropods in urban habitat fragments in southern California: area, age and edge effects. Ecol. Appl. 10, 1230–1248 (2000).
 
-70. Bolger, D. T., Suarez, A. V., Crooks, K. R., Morrison, S. A. & Case, T. J. Arthropods in urban habitat fragments in southern California: area, age and edge efects. Ecol. Appl. 10, 1230–1248 (2000).
+Scientific Reports | (2021) 11:12462
 
-71. Barreau, A., Ibarra, J. T., Wyndham, F. S. & Kozak, R. A. Shifts in Mapuche food systems in southern Andean forest landscapes: historical processes and current trends of biocultural homogenization. Mt. Res. Dev. 39, 12–23 (2019)
+https://doi.org/10.1038/s41598-021-91185-4
 
+natureportfolio
+
+12
+
+<!-- page 13 of 14 -->
+
+www.nature.com/scientificreports/
+
+71. Barreau, A., Ibarra, J. T., Wyndham, F. S. & Kozak, R. A. Shifts in Mapuche food systems in southern Andean forest landscapes: historical processes and current trends of biocultural homogenization. Mt. Res. Dev. 39, 12–23 (2019).
 72. Caviedes, J. & Ibarra, J. T. Influence of anthropogenic disturbances on stand structural complexity in Andean temperate forests: implications for managing key habitat for biodiversity. PLoS ONE 12, e0169450 (2017).
-
-73. Altieri, M. A. & Nicholls, C. I. The adaptation and mitigation potential of traditional agriculture in a changing climate. Clim. Change 140, 33–45 (2017)
-
+73. Altieri, M. A. & Nicholls, C. I. The adaptation and mitigation potential of traditional agriculture in a changing climate. Clim. Change 140, 33–45 (2017).
 74. Sánchez-Bayo, F. Impacts of agricultural pesticides on terrestrial ecosystems. in Ecological Impacts of Toxic Chemicals (eds. Sánchez-Bayo, F., Van den Brink, P. J. & Mann, R.) 63–87 (Bentham Science Publishers, 2011).
-
-75. Geiger, F. et al. Persistent negative efects of pesticides on biodiversity and biological control potential on European farmland. Basic Appl. Ecol. 11, 97–105 (2010).
-
+75. Geiger, F. et al. Persistent negative effects of pesticides on biodiversity and biological control potential on European farmland. Basic Appl. Ecol. 11, 97–105 (2010).
 76. Barreau, A., Ibarra, J. T., Wyndham, F. S., Rojas, A. & Kozak, R. A. How can we teach our children if we cannot access the forest? Generational change in Mapuche knowledge of wild edible plants in Andean temperate ecosystems of Chile. J. Ethnobiol. 36, 412–432 (2016).
-
-77. Newing, H. Conducting research in conservation: a social science perspective. (Routledge, 2011). https://doi.org/10.1007 s13398-014-0173-7.2
-
+77. Newing, H. Conducting research in conservation: a social science perspective. (Routledge, 2011). [https://doi.org/10.1007/s13398-014-0173-7.2](https://doi.org/10.1007/s13398-014-0173-7.2)
 78. Caballero-Serrano, V. et al. Plant diversity and ecosystem services in Amazonian homegardens of Ecuador. Agric. Ecosyst. Environ. 225, 116–125 (2016).
-
-79. Schneider, J. Toward an analysis of home-garden cultures: on the use of socio-cultural variables in home garden studies. in Home gardens and agrobiodiversity (eds. Eyzaguirre, P. B. & Linares, O. F.) 41–55 (Smithsonian Books, 2010)
-
+79. Schneider, J. Toward an analysis of home-garden cultures: on the use of socio-cultural variables in home garden studies. in Home gardens and agrobiodiversity (eds. Eyzaguirre, P. B. & Linares, O. F.) 41–55 (Smithsonian Books, 2010).
 80. Rohr, J. R., Mahan, C. G. & Kim, K. C. Developing a monitoring program for invertebrates: guidelines and a case study. Conserv. Biol. 21, 422–433 (2007).
-
-81. Gotelli, N. J. & Colwell, R. K. Quantifying biodiversity: Procedures and pitfalls in the measurement and comparison of species richness. Ecol. Lett. 4, 379–391 (2001)
-
+81. Gotelli, N. J. & Colwell, R. K. Quantifying biodiversity: Procedures and pitfalls in the measurement and comparison of species richness. Ecol. Lett. 4, 379–391 (2001).
 82. Iida, T., Soga, M., Hiura, T. & Koike, S. Life history traits predict insect species responses to large herbivore overabundance: a multitaxonomic approach. J. Insect Conserv. 20, 295–304 (2016).
-
 83. Vanderwel, M. C., Malcolm, J. R., Smith, S. M. & Islam, N. Insect community composition and trophic guild structure in decaying logs from eastern Canadian pine-dominated forests. For. Ecol. Manage. 225, 190–199 (2006).
-
 84. Zarazaga, M. A. Clase Insecta Orden Coleoptera. Rev. IDE-SEA 56, 1–18 (2015).
-
 85. Lazo, W. Insectos de Chile: atlas entomológico. (Universidad de Chile, 2015).
-
 86. Briones, R., Gárate-Flores, F. & Jerez, V. Insectos de Chile. Nativos, introducidos y con problemas de conservacion. (Corporación Chilena de la Madera, 2012).
-
 87. Elgueta, M. & Arriagada, G. Estado actual del conocimiento de los coleópteros de Chile (Insecta: Coleoptera). Rev. Chil. Entomol. 17, 05–60 (1989).
-
-88. Elgueta, M. & Marvaldi, A. E. Lista sistemática de las especies de curculionoidea (insecta: coleoptera) presentes en Chile, con su sinonimia, Boletín del Mus, Nac. Hist, Nat, 55. 113–153 (2006)
-
+88. Elgueta, M. & Marvaldi, A. E. Lista sistemática de las especies de curculionoidea (insecta: coleoptera) presentes en Chile, con su sinonimia. Boletín del Mus. Nac. Hist. Nat. 55, 113–153 (2006).
 89. Moore, T. & Vidal, P. Los Bupréstidos de Chile. (Ediciones UC, 2013).
-
 90. Roig-Juñent, S. & Domínguez, M. C. Diversity of the family Carabidae (Coleoptera) in Chile. Rev. Chil. Hist. Nat. 74, 549–571 (2001).
-
-91. Arriagada, G. Histéridos chilenos (Coleoptera: Histeridae). Rev. Chil. Entomol. 14, 71–80 (1986)
-
+91. Arriagada, G. Histéridos chilenos (Coleoptera: Histeridae). Rev. Chil. Entomol. 14, 71–80 (1986).
 92. González, G. Lista y distribución geográfica de especies de Coccinelidae (Insecta: Coleoptera) presentes en Chile. Boletín del Mus. Nac. Hist. Nat. 57, 77–107 (2008).
-
-93. Lister, B. C. & Garcia, A. Climate-driven declines in arthropod abundance restructure a rainforest food web. Proc. Natl. Acad Sci. 115, E10397–E10406 (2018).
-
+93. Lister, B. C. & Garcia, A. Climate-driven declines in arthropod abundance restructure a rainforest food web. Proc. Natl. Acad. Sci. 115, E10397–E10406 (2018).
 94. Johnson, M. D. & Strong, A. M. Length-weight relationships of Jamaican arthropods. Entomol. News 111, 270–281 (2000).
-
 95. Laliberté, E., Legendre, P. & Shipley, B. FD: measuring functional diversity (FD) from multiple traits, and other tools for functional ecology. (2011).
-
-96. Zuur, A., Leno, E. N., Walker, N. J., Saveliev, A. A. & Smith, G. M. Mixed efects models and extensions in ecology with R. Statistic for Biology and Health 36, (Springer, 2009).
-
-97. Bates, D., Maechler, M., Bolker, B. & Walker, S. Fitting linear mixed-efects models using lme4. J. Stat. Softw. 67, 1:48 (2015)
-
+96. Zuur, A., Leno, E. N., Walker, N. J., Saveliev, A. A. & Smith, G. M. Mixed effects models and extensions in ecology with R. Statistics for Biology and Health 36, (Springer, 2009).
+97. Bates, D., Maechler, M., Bolker, B. & Walker, S. Fitting linear mixed-effects models using lme4. J. Stat. Softw. 67, 1:48 (2015).
 98. Mazerolle, M. J. AICcmodavg: model selection and multimodel inference based on (Q)AIC(c). R Packag. version 2.1–1 (2017).
-
-99. R Core Team. R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/. (2021).
-
+99. R Core Team. R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. [https://www.R-project.org/](https://www.R-project.org/). (2021).
 100. Burnham, K. P. & Anderson, D. R. Model selection and inference: a practical information-theoretic approach. (Springer-Verlag, 2002).
-
 101. Oliver, M. A. & Webster, R. Kriging: a method of interpolation for geographical information systems. Int. J. Geogr. Inf. Syst. 4, 313–332 (1990).
 
 ## Acknowledgements
@@ -338,20 +404,42 @@ We are grateful to the gardeners, campesinos and migrants, who generously partic
 
 J.T.I.: Conceptualization, Methodology, Validation, Formal analysis, Writing—Original Draft, Supervision, Project administration, Funding acquisition. J.C.: Methodology, Investigation, Data Curation, Writing—Review and Editing, Funding acquisition. T.A.A.: Formal analysis, Data Curation, Visualization, Writing—Review and Editing. R.U.: Methodology, Investigation, Data Curation. A.B.: Methodology, Investigation, Data Curation, Funding acquisition. F.S.: Methodology, Formal analysis, Visualization.
 
+Scientific Reports | (2021) 11:12462
+
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+13
+
+<!-- page 14 of 14 -->
+
+www.nature.com/scientificreports/
+
 ## Competing interests
 
 The authors declare no competing interests.
 
 ## Additional information
 
-Correspondence and requests for materials should be addressed to J.T.I.
+**Correspondence** and requests for materials should be addressed to J.T.I.
 
-Reprints and permissions information is available at www.nature.com/reprints.
+**Reprints and permissions information** is available at www.nature.com/reprints.
 
-Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional afiliations.
+**Publisher’s note** Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
 
-![](images/fe27a9aba37aba0c106a5cc2f7875a12462b7ee253bccec70515159902f0a7c4.jpg)
+![Image block](doc:0789a2a/tier:advanced/page:14/block:8)
 
-Cc 1 Open Access This article is licensed under a Creative Commons Attribution 4.0 International BY License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+**Open Access** This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or
+
+format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).
 
 © The Author(s) 2021
+
+Scientific Reports | (2021) 11:12462 |
+
+https://doi.org/10.1038/s41598-021-91185-4
+
+natureportfolio
+
+14

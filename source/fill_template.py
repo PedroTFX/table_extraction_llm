@@ -27,6 +27,27 @@ from column_relevance import make_llm, invoke_sized
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
 _EMPTY_LIKE = {None, "", "null", "none", "unknown"}
 
+# Value-legend decoding decides, per code, whether an explicit definition exists
+# in the paper and copies its wording. On the small e2b model this call is the
+# least stable (it non-deterministically returns null for a code it CAN resolve),
+# so run it on the larger e4b: bigger logit margins flip far less under the GPU's
+# float non-determinism, and it is one low-volume call per table.
+DECODE_MODEL = "gemma4:e4b-it-qat"
+
+# Max characters of paper prose fed to a tag agent. The measurement-level tag
+# step runs one call PER COLUMN, and the paper-/cross-level tag calls run per
+# tag; feeding the whole paper (e.g. Fondjo2024 ~128k chars) each time balloons
+# num_ctx to 49k+ and makes every call crawl — even on the GPU — so a 25-column
+# table takes many minutes. The tag signal (measurement method/unit/statistic,
+# sex/lifeStage/caste) lives in the abstract + methods, which sit at the head of
+# the paper, so bound the context to keep each call in a small, fast window.
+TAG_CONTEXT_CHARS = 16000
+
+
+def _cap_context(text: str) -> str:
+    """Trim prose context fed to a tag agent to TAG_CONTEXT_CHARS (see above)."""
+    return text[:TAG_CONTEXT_CHARS] if text and len(text) > TAG_CONTEXT_CHARS else text
+
 
 def get_tag_explanation(tag: str) -> str:
     return (TEMPLATE_DIR / f"{tag}.md").read_text(encoding="utf-8")
@@ -73,7 +94,7 @@ def agent_define_multi_tags(target, tags, chunks, llm=None):
     per_tag = {t: [] for t in tags}
     for chunk in chunks:
         try:
-            msgs = tag_finder_msg_builder_multi(target, tags, chunk["content"])
+            msgs = tag_finder_msg_builder_multi(target, tags, _cap_context(chunk["content"]))
             content = llm.invoke(msgs).content if llm else invoke_sized(msgs)
             parsed = json.loads(content)
         except json.JSONDecodeError:
@@ -251,7 +272,7 @@ def route_tags(tags, species, chunks, llm=None):
     """One LLM call classifying each cross-record tag into a level. Derived is only
     honoured when a curated rule exists for that tag; anything malformed, empty, or
     unsupported degrades to 'varies'. Returns {tag: {level, ...}}."""
-    text = "\n\n".join(c["content"] for c in chunks) if chunks else ""
+    text = _cap_context("\n\n".join(c["content"] for c in chunks)) if chunks else ""
     msgs = route_msg_builder(tags, species, text)
     try:
         content = llm.invoke(msgs).content if llm else invoke_sized(msgs)
@@ -387,7 +408,7 @@ def agent_define_scoped_tags(tags, species, chunks, llm=None):
     """One LLM call returning a per-tag scope verdict. Scope reasoning needs the
     whole paper, so chunks are merged into a single view. Always returns every
     tag; anything missing/malformed degrades to scope='varies' (stamp nothing)."""
-    text = "\n\n".join(c["content"] for c in chunks) if chunks else ""
+    text = _cap_context("\n\n".join(c["content"] for c in chunks)) if chunks else ""
     msgs = scope_tag_msg_builder(tags, species, text)
     try:
         content = llm.invoke(msgs).content if llm else invoke_sized(msgs)
@@ -557,7 +578,7 @@ Return ONLY a JSON object: {{"<column>": {{"<value>": "<canonical label or null>
     try:
         msgs = [{"role": "system", "content": system},
                 {"role": "user", "content": f"Here is the text:\n{context}"}]
-        content = llm.invoke(msgs).content if llm else invoke_sized(msgs)
+        content = llm.invoke(msgs).content if llm else invoke_sized(msgs, model=DECODE_MODEL)
         parsed = json.loads(content)
     except (json.JSONDecodeError, AttributeError):
         parsed = {}
@@ -586,6 +607,32 @@ def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, ll
 
     grouped = json.loads(Path(grouped_path).read_text(encoding="utf-8"))
 
+    # A code's meaning often lives in a DATA-DICTIONARY table (a term/code column
+    # paired with a definition column), which the prose chunks strip out — so the
+    # resolver never sees it. The mapper already flags those tables
+    # (field=definitionTerm/definitionText); render just those as compact
+    # "term = definition" lines and give them to the resolver as extra context.
+    # Only dictionary tables are added (they are inherently small), never the big
+    # data tables, so context stays bounded on huge papers.
+    legend_lines = []
+    for table in tables:
+        m = mappings.get(table_id(table))
+        if not m:
+            continue
+        term_cols = [h for h, mm in m.items()
+                     if isinstance(mm, dict) and mm.get("field") == "definitionTerm"]
+        text_cols = [h for h, mm in m.items()
+                     if isinstance(mm, dict) and mm.get("field") == "definitionText"]
+        if not (term_cols and text_cols):
+            continue
+        for rec in table.data_records():
+            term = " ".join(str(rec.get(c, "")).strip() for c in term_cols if rec.get(c))
+            text = " ".join(str(rec.get(c, "")).strip() for c in text_cols if rec.get(c))
+            if term and text:
+                legend_lines.append(f"{term} = {text}")
+    dict_chunks = ([{"content": "Data-dictionary definitions:\n" + "\n".join(legend_lines)}]
+                   if legend_lines else [])
+
     for table in tables:
         mapping = mappings.get(table_id(table))
         if not mapping:
@@ -595,9 +642,15 @@ def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, ll
         hints = parse_legends_from_text(paper_text, table)
         hints = {clean_text(k): v for k, v in hints.items()}
 
-        # LLM normalises every code (grounded on the hints)
+        # LLM normalises every code (grounded on the hints + any dictionary tables).
+        # Cap the PROSE context (bounds num_ctx so a large paper can't balloon the
+        # decode call — see TAG_CONTEXT_CHARS) but keep the dictionary-table chunks
+        # in full, since those carry the exact "code = meaning" definitions decode
+        # exists to read.
         col_codes = collect_categorical_codes(table, mapping)
-        llm_legends = agent_normalize_legends(col_codes, hints, chunks, llm=llm)
+        prose_chunk = ([{"content": _cap_context("\n\n".join(c["content"] for c in chunks))}]
+                       if chunks else [])
+        llm_legends = agent_normalize_legends(col_codes, hints, prose_chunk + dict_chunks, llm=llm)
 
         # The grouped measurements carry the CANONICAL type name (canonicalize
         # renames e.g. 'FG' -> 'functional groups'), but col_codes/hints are keyed

@@ -1,17 +1,62 @@
 {
-  "Habitat type": {
-    "field": "definitionTerm",
-    "value_column": false,
-    "reasoning": "This column lists the specific habitat names being defined in the glossary."
+  "region": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The column specifies the geographic location where sampling or observation occurred."
   },
-  "Habitat category": {
-    "field": "definitionTerm",
-    "value_column": false,
-    "reasoning": "This column provides a broad classification (woody/grassy) for the defined habitat types."
+  "l. pair": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column acts as an identifier or measurement for the specific sample/specimen being recorded."
   },
-  "Definition": {
-    "field": "definitionText",
-    "value_column": false,
-    "reasoning": "This column provides the detailed, human-readable description of the defined habitat."
+  "FB": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a categorical trait describing the foliage base condition (e.g., FB- or FB+)."
+  },
+  "grass y": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a categorical trait describing the presence or density of grassy vegetation."
+  },
+  "woody": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a categorical trait describing the presence or density of woody vegetation."
+  },
+  "total": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the total count of the measured feature for the focal organism."
+  },
+  "grassy": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the count related to the grassy vegetation trait."
+  },
+  "woody (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the count related to the woody vegetation trait (first measurement)."
+  },
+  "total (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the total count related to the first set of measurements."
+  },
+  "grassy (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the count related to the grassy vegetation trait (first measurement)."
+  },
+  "woody (2)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the count related to the woody vegetation trait (second measurement)."
+  },
+  "total (2)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the total count related to the second set of measurements."
   }
 }

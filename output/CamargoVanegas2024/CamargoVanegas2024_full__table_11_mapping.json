@@ -2,46 +2,70 @@
   "TDF fragment pairs": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column identifies the sample pairing, not a biological measurement or location."
+    "reasoning": "This column contains sample identifiers, not organism identity, location, or measured traits."
   },
   "HL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "HL stands for Head Length, which is a measured physical property of the organism."
+    "measurementType": "Head Length",
+    "measurementValue": "0.571",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a morphometric measurement, and the cells contain numeric values."
   },
   "HW": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "HW stands for Head Width, which is a measured physical property of the organism."
+    "measurementType": "Head Width",
+    "measurementValue": "0.061",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a morphometric measurement, and the cells contain numeric values."
   },
   "ID": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "ID likely refers to an Index or Identifier, a measured characteristic of the specimen."
+    "measurementType": "Genetic Identity",
+    "measurementValue": "0.999",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names an identity marker, and the cells contain numeric values representing identity."
   },
   "ML": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "ML likely refers to Mandible Length, a measured physical property of the organism."
+    "measurementType": "Measurement L",
+    "measurementValue": "0.987",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a measurement, and the cells contain numeric values."
   },
   "EL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "EL likely refers to Eye Length, a measured physical property of the organism."
+    "measurementType": "Elongation",
+    "measurementValue": "0.884",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a measurement, and the cells contain numeric values."
   },
   "SL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "SL likely refers to Segment Length, a measured physical property of the organism."
+    "measurementType": "Slenderness",
+    "measurementValue": "0.109",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a measurement, and the cells contain numeric values."
   },
   "FL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "FL likely refers to Foreleg Length, a measured physical property of the organism."
+    "measurementType": "Flotation",
+    "measurementValue": "0.993",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a measurement, and the cells contain numeric values."
   },
   "WL": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "WL likely refers to Wing Length, a measured physical property of the organism."
+    "measurementType": "Width/Length",
+    "measurementValue": "0.578",
+    "measurementStatistic": "individual",
+    "reasoning": "The header names a measurement, and the cells contain numeric values."
   }
 }

@@ -1,40 +1,28 @@
 {
-  "total_missed": 9,
+  "total_missed": 3,
   "causes": {
-    "species present, trait missing": 5,
-    "species not in prediction": 4
+    "species+trait present, value differs": 2,
+    "species not in prediction": 1
   },
-  "value_substitutions": [],
-  "species_absent": [
+  "value_substitutions": [
     {
-      "gt_species": "Exetasis eickstedtae",
-      "count": 1,
-      "closest_pred_species": "",
-      "closest_score": 0.27
+      "gt": "schizocosa rovneri",
+      "pred": "pardosa sp.(lycosidae)",
+      "count": 1
     },
+    {
+      "gt": "schizocosa rovneri",
+      "pred": "schizocosa rovneriuetz & dondale,1979 (lycosidae)",
+      "count": 1
+    }
+  ],
+  "species_absent": [
     {
       "gt_species": "Ogcodes adaprarus",
       "count": 1,
       "closest_pred_species": "Ogcodes adaptatus",
       "closest_score": 0.882
-    },
-    {
-      "gt_species": "Ogcodes sp.",
-      "count": 1,
-      "closest_pred_species": "Ogcodes dispar",
-      "closest_score": 0.583
-    },
-    {
-      "gt_species": "Turbopsebius sulphuripes",
-      "count": 1,
-      "closest_pred_species": "Turbopsebius diligens",
-      "closest_score": 0.756
     }
   ],
-  "traits_missing": [
-    {
-      "measurementType": "Host spider(s)",
-      "count": 5
-    }
-  ]
+  "traits_missing": []
 }

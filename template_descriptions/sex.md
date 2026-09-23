@@ -11,8 +11,15 @@ Notes:
 - If the paper does not mention sex at all, use "unknown".
 - The specie might not be called directly by name, many papers generalize
 
-For non conclusive texts:
-- In termites, soldiers are typically sterile males AND females
-- Worker bees are female by definition in bee colonies
+Inferring sex from caste / social role (applies when the record's caste is known
+even if sex is never stated):
+- In ANTS (Formicidae): workers, soldiers/majors/minors, gynes and queens are ALL
+  female; only drones/reproductive males are male. A morphometric study of ant
+  workers is therefore 'female'.
+- In BEES and WASPS: workers, gynes and queens are female; drones are male.
+- In TERMITES: castes contain both sexes, so soldiers/workers are 'both'.
+- If a whole table or paper measures a single caste that is sex-specific (e.g.
+  "we measured worker ants"), tag those measurements with the derived sex rather
+  than defaulting to 'both'.
 
 Examples: female, male, both, unknown

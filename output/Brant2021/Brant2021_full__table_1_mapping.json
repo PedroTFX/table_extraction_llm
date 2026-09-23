@@ -2,26 +2,26 @@
   "Cities": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The column lists pairs of cities, representing the geographic locations or comparison sites of the study."
+    "reasoning": "The values represent the geographic locations where the statistical comparison was made."
   },
   "Diff": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column contains the calculated difference (a numerical measurement) between the two locations."
+    "reasoning": "The values represent the calculated difference between the two locations."
   },
   "Lwr": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column provides the lower bound of the confidence interval, which is a measurement value."
+    "reasoning": "The values represent the lower bound of the calculated statistical difference."
   },
   "Upr": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column provides the upper bound of the confidence interval, which is a measurement value."
+    "reasoning": "The values represent the upper bound of the calculated statistical difference."
   },
   "p-Value": {
-    "field": "measurementStatistic",
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column records the statistical significance (p-value) of the comparison."
+    "reasoning": "The values represent the statistical significance (p-value) of the observed difference."
   }
 }

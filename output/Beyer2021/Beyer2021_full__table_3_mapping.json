@@ -1,81 +1,47 @@
 {
-  "species": {
-    "field": "verbatimIdentification",
+  "Response variable": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column names the trait being measured for the focal organism."
+  },
+  "Model": {
+    "field": null,
     "value_column": false,
-    "reasoning": "Contains the full taxonomic names of the insect species.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column lists the full scientific names of wild bee species, which is a discrete biological classification."
+    "reasoning": "This is a statistical model identifier, not a measurement of the organism."
   },
-  "density": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the abundance or count of the insect in the sample.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "The column records the count of observed individuals (abundance) within a specific sampling area.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "density",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The wild bee densities were measured through landscape-level wild bee surveys conducted via variable transect walks (50 m x 5 m, 5 min) within semi-natural habitats (SNH), which constitutes a direct observation of live organisms in their natural environment.",
-    "measurementMethod": "Variable transect walks (50 m x 5 m, 5 min.) conducted within the most attractive flower rich SNH in each study landscape to cover the entire spectrum of suitable foraging patches for wild bees at landscape scale.",
-    "measurementMethod_reasoning": "The text explicitly describes the sampling protocol used to count the bees: 'During every sampling run six variable transect walks (50 m x 5 m, 5 min. excluding handling time) were conducted within the most attractive flower rich SNH in each study landscape...'",
-    "measurementUnit": "per 250 m2 transect area and 5 min",
-    "measurementUnit_reasoning": "The response variables for density were defined as 'density of bumblebees, density of non-Bombus wild bees (per 250 m2 transect area and 5 min)'.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "The study used generalized linear mixed models (GLMM) with Poisson or negative binomial distributions to analyze the density counts, which estimates the average density (mean) of bees within the defined sampling area and time."
+  "Explanatory variable": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are the independent variables used in the statistical model."
   },
-  "ITD": {
-    "field": "measurementType",
+  "Estimate": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Represents a specific morphological measurement (Inter-Tarsal Distance).",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "ITD (Intertegular Distance) is a physical measurement of the bee's body size.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "intertegular distance",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "ITD (Intertegular Distance) is a morphological measurement (body size) taken from individual worker bees, which falls under the definition of measuring a physical trait on a collected specimen.",
-    "measurementMethod": "Intertegular distance (ITD) was measured on worker individuals using a connected microscope and Labscope Imaging Software (ZEISS).",
-    "measurementMethod_reasoning": "The text explicitly states the measurement was taken on worker individuals and specifies the equipment used for the measurement.",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "Table S4 indicates that the researchers reported the 'mean intertegular distance (ITD)' for each species.",
-    "measurementUnit": "per 250 m2 transect area and 5 min",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This column holds the calculated numerical estimate of the response variable."
   },
-  "foraging preference": {
-    "field": "measurementType",
+  "Std.Error": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Records a specific biological trait or preference of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The values (0, 1) classify the bee based on whether it collects pollen from Fabaceae.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "foraging preference",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "Foraging preference is a behavioral/ecological trait (which plant a bee visits) observed in a live organism in situ. Although the specific categorization was based on literature (Westrich 2018), the trait itself pertains to the ecological behavior of the wild bees during the study period.",
-    "measurementMethod": "Extraction from literature (Westrich 2018)",
-    "measurementMethod_reasoning": "The text explicitly states that 'Foraging preference and sociality information were extracted from the literature (Westrich 2018) (Table S3)' to categorize the wild bees into Fabaceae foragers or non-Fabaceae foragers.",
-    "measurementUnit": "per 250 m2 transect area and 5 min",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This column holds the standard error associated with the estimate."
   },
-  "sociality": {
-    "field": "measurementType",
+  "lower CI": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Records a specific biological trait regarding the organism's social structure.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The values (0, 1) classify the bee as solitary or social, which is a discrete biological trait.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "sociality",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The study observed wild bees in their natural habitat (semi-natural habitats and crop fields) during standardized transect walks to determine their functional traits, including sociality (social vs. solitary). Sociality is a behavioral/ecological trait, which falls under HumanObservation.",
-    "measurementMethod": "Standardized variable transect walks (50 m x 5 m, 5 min) conducted within semi-natural habitats (SNH) to observe and categorize the social status of wild bees.",
-    "measurementMethod_reasoning": "The proportion of social wild bees was determined by observing and categorizing the bees encountered during the field sampling protocol, which involved conducting six variable transect walks (50 m x 5 m, 5 min) within the most attractive flower-rich SNH in each study landscape.",
-    "measurementUnit": "per 250 m2 transect area and 5 min",
-    "measurementUnit_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "measurementStatistic": "mean",
-    "measurementStatistic_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This column holds the lower bound of the confidence interval."
+  },
+  "upper CI": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the upper bound of the confidence interval."
+  },
+  "z-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the calculated z-statistic for the model."
+  },
+  "P": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds the p-value for the statistical test."
   }
 }

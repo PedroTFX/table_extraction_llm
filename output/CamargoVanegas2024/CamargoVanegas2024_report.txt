@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\CamargoVanegas2024\CamargoVanegas2024.xlsx  (2017 rows)
-PREDICTION   : ..\output\CamargoVanegas2024\CamargoVanegas2024.csv  (2418 rows)
+PREDICTION   : ..\output\CamargoVanegas2024\CamargoVanegas2024.csv  (3045 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
 SCOPE        : measurementType
 ================================================================
@@ -106,97 +106,96 @@ TAXON NAMES LEFT UNMAPPED (19)
   'Myrmicocrypta sp. 2': no ground-truth string denotes this
   'Paratrachymyrmexirmgardae': no ground-truth string denotes this
 
-measurementType REMAP (pred -> gt, 8 pair(s))
-  'Weber length Mean' -> 'Weber length'
-  'distance Mean' -> 'Interocular distance'
-  'eye length Mean' -> 'Eye length'
-  'femur length Mean' -> 'Femur length'
-  'head length Mean' -> 'Head length'
-  'head width Mean' -> 'Head width'
-  'mandible length Mean' -> 'Mandible length'
-  'scape length Mean' -> 'Scape length'
+measurementType REMAP (pred -> gt, 7 pair(s))
+  'distance' -> 'Interocular distance'
+  'eye length' -> 'Eye length'
+  'femur length' -> 'Femur length'
+  'head length' -> 'Head length'
+  'head width' -> 'Head width'
+  'mandible length' -> 'Mandible length'
+  'scape length' -> 'Scape length'
 
 measurementType LEFT UNMAPPED (1)
   'Functional Groups': no ground-truth string denotes this
 
 ROW-LEVEL (key match)
-  matched (TP)          : 1109
-  missed (FN)           : 908
-  spurious, in scope    : 1163   <- GT covers this trait: real errors
+  matched (TP)          : 1987
+  missed (FN)           : 30
+  spurious, in scope    : 912   <- GT covers this trait: real errors
   spurious, out of scope: 146   <- GT never covers it: nothing to score against
 
-  STRICT  P/R/F1        : 0.459 / 0.550 / 0.500
-  SCOPED  P/R/F1        : 0.488 / 0.550 / 0.517
-  RECALL (GT coverage)  : 0.550
+  STRICT  P/R/F1        : 0.653 / 0.985 / 0.785
+  SCOPED  P/R/F1        : 0.685 / 0.985 / 0.808
+  RECALL (GT coverage)  : 0.985
 
   out-of-scope rows by uncovered field:
     measurementType                            146
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0   1109  0.000  <-- low
-  measurementMethod             0   1109  0.000  <-- low
-  measurementUnit               0   1109  0.000  <-- low
-  measurementStatistic         19   1109  0.017  <-- low
+  basisOfRecord                 0   1987  0.000  <-- low
+  measurementMethod             0   1487  0.000  <-- low
+  measurementUnit               0   1987  0.000  <-- low
+  measurementStatistic       1827   1987  0.919
   measurementRemarks            0      0    n/a
-  sex                           0   1109  0.000  <-- low
-  lifeStage                  1109   1109  1.000
-  caste                         0   1109  0.000  <-- low
-  sampleSizeValue               0   1109  0.000  <-- low
+  sex                           0   1987  0.000  <-- low
+  lifeStage                  1987   1987  1.000
+  caste                         0   1987  0.000  <-- low
+  sampleSizeValue            1986   1987  0.999
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0   1109  0.000  <-- low
-  verbatimLocality              0   1109  0.000  <-- low
+  samplingProtocol              0   1987  0.000  <-- low
+  verbatimLocality              0   1987  0.000  <-- low
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0   1109  0.000  <-- low
+  verbatimEventDate             0   1987  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0   1109  0.000  <-- low
+  associatedReferences          0   1987  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 908 MISSED ROWS MISSED
+WHY THE 30 MISSED ROWS MISSED
   species not in prediction                            17
-  species+trait present, value differs                891
+  species+trait present, value differs                 13
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '0'                          ->  '0.022'                      x3
-     '0.008'                      ->  '0.081'                      x2
-     '0.013'                      ->  '0.073'                      x2
-     '0'                          ->  '0.587'                      x2
-     '0.015'                      ->  '0.598'                      x2
-     '0.63'                       ->  ''                           x2
-  -> 6 substitutions explain 13 of 908 misses (1%) — scattered; no single cause
+     '0.63'                       ->  ''                           x1
+     '0.0572'                     ->  '2.05'                       x1
+     '0.398'                      ->  '2.225'                      x1
+     '0.804'                      ->  ''                           x1
+     '1.508'                      ->  '2.508'                      x1
+     '2'                          ->  ''                           x1
+  -> 6 substitutions explain 6 of 30 misses (20%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
      gt 'N3 Ants'                            (nothing similar in the prediction)   x6
      gt 'N2 Ants'                            (nothing similar in the prediction)   x6
      gt 'N1 Ants'                            (nothing similar in the prediction)   x5
-  -> 3 species mismatches explain 17 of 908 misses (2%) — scattered; no single cause
+  -> 3 species mismatches explain 17 of 30 misses (57%) — scattered; no single cause
 
-  full miss detail saved -> CamargoVanegas2024_misses.csv, CamargoVanegas2024_misses_summary.json (908 row(s))
+  full miss detail saved -> CamargoVanegas2024_misses.csv, CamargoVanegas2024_misses_summary.json (30 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  interocular distance                            250   284   Δ+34 (split?)
+  interocular distance                            250   365   Δ+115 (split?)
   funcional equitability                            3     0   GT-ONLY
-  eye length                                      250   284   Δ+34 (split?)
-  femur length                                    250   284   Δ+34 (split?)
+  eye length                                      250   365   Δ+115 (split?)
+  femur length                                    250   368   Δ+118 (split?)
   functional groups                                 0   146   PRED-ONLY
   functional redundancy                             3     0   GT-ONLY
   functional space                                  3     0   GT-ONLY
   habitat                                           6     0   GT-ONLY
-  head length                                     250   284   Δ+34 (split?)
-  head width                                      250   284   Δ+34 (split?)
-  mandible length                                 252   284   Δ+32 (split?)
-  scape length                                    250   284   Δ+34 (split?)
-  weber length                                    250   284   Δ+34 (split?)
+  head length                                     250   339   Δ+89 (split?)
+  head width                                      250   365   Δ+115 (split?)
+  mandible length                                 252   365   Δ+113 (split?)
+  scape length                                    250   365   Δ+115 (split?)
+  weber length                                    250   367   Δ+117 (split?)
 
   UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
     gt 'functional space'                 vs pred 'functional groups'                sim=0.73
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.488  0.550  0.517   1109  1163   908   id+type+value
-             (146 more spurious row(s) out-of-scope; strict P would be 0.459)
-  tags        0.000  0.000  0.000      0  2272  2017   basis+id+type+value+stat+sex+stage
+  core        0.685  0.985  0.808   1987   912    30   id+type+value
+             (146 more spurious row(s) out-of-scope; strict P would be 0.653)
+  tags        0.000  0.000  0.000      0  2899  2017   basis+id+type+value+stat+sex+stage
              (146 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 -0.517 vs previous)
+             (F1 -0.808 vs previous)

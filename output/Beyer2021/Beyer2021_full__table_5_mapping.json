@@ -1,57 +1,47 @@
 {
-  "Models": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains model identifiers, not insect taxa, locations, or measurement properties."
-  },
   "Response variable": {
     "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column names the trait being measured for the focal organism."
+  },
+  "Model": {
+    "field": null,
     "value_column": false,
-    "reasoning": "This header names the property (e.g., density, richness) that was measured or modeled."
+    "reasoning": "This is a statistical model identifier, not a measurement of the organism."
   },
-  "FB": {
+  "Explanatory variable": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "These are the independent variables used in the statistical model."
+  },
+  "Estimate": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
+    "reasoning": "This column holds the calculated numerical estimate of the response variable."
   },
-  "run": {
+  "Std.Error": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
+    "reasoning": "This column holds the standard error associated with the estimate."
   },
-  "FC": {
+  "lower CI": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
+    "reasoning": "This column holds the lower bound of the confidence interval."
   },
-  "LD": {
+  "upper CI": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
+    "reasoning": "This column holds the upper bound of the confidence interval."
   },
-  "OSR": {
+  "z-value": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
+    "reasoning": "This column holds the calculated z-statistic for the model."
   },
-  "SNH": {
+  "P": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
-  },
-  "FB:run": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
-  },
-  "run: SNH": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
-  },
-  "FB:FC": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column holds the numerical results of the statistical model for the response variable."
+    "reasoning": "This column holds the p-value for the statistical test."
   }
 }

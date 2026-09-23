@@ -1,50 +1,42 @@
 {
-  "Taxa": {
-    "field": "verbatimIdentification",
+  "TDF Fragments": {
+    "field": null,
     "value_column": false,
-    "reasoning": "Contains the taxonomic names of the insects studied.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the scientific name of the ant species, which is a discrete biological classification."
+    "reasoning": "This column serves as a fragment identifier, not a measurement or location."
   },
-  "Functional Groups": {
-    "field": "measurementType",
+  "Sampling site": {
+    "field": "verbatimLocality",
     "value_column": false,
-    "reasoning": "Represents functional classifications, not a measurement or location.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records discrete classifications of the ant's ecological role (e.g., AO, SO, SSP).",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Functional Groups",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The functional groups are derived from the morphological traits of ant species collected from the leaf litter in the study areas. Since the ants were collected, measured, and analyzed, the data is based on preserved specimens.",
-    "measurementMethod": "Functional groups were identified based on the measurement of eight specific morphological traits (e.g., head length, mandible length, Weber length) of the ant species using a dual-axis micrometer stage. These traits were then used to classify the species into functional groups (e.g., SO, AO, DP) according to established taxonomic and functional ecology protocols.",
-    "measurementMethod_reasoning": "The study explicitly states that morphological traits were used to calculate functional diversity and that the functional groups were identified based on these traits. The measurement tool used was a dual-axis micrometer stage."
+    "reasoning": "This column identifies the place where sampling occurred."
   },
-  "N1": {
+  "N1a": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Contains numeric data points representing measurements for the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a quantitative measurement (e.g., diversity index or abundance) recorded at site N1.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "This column holds a numeric measurement value."
   },
-  "N2": {
+  "N1b": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Contains numeric data points representing measurements for the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a quantitative measurement (e.g., diversity index or abundance) recorded at site N2.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "This column holds a numeric measurement value."
   },
-  "N3": {
+  "N2a": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Contains numeric data points representing measurements for the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a quantitative measurement (e.g., diversity index or abundance) recorded at site N3.",
-    "multi_value": false,
-    "value_type": "categorical"
+    "reasoning": "This column holds a numeric measurement value."
+  },
+  "N2b": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds a numeric measurement value."
+  },
+  "N3a": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds a numeric measurement value."
+  },
+  "N3b": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column holds a numeric measurement value."
   }
 }

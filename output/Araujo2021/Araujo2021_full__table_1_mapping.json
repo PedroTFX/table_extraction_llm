@@ -1,52 +1,67 @@
 {
-  "(a) Parasite richness": {
+  "Variables": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the number of parasites, a biological property of the organism."
+    "reasoning": "This column names the specific biological trait being measured for the focal organism."
   },
-  "(b) Parasitism (%)": {
-    "field": "measurementType",
+  "PF (reference level) Estimate ± SE": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Measures the percentage of parasitism, a biological trait of the organism."
+    "reasoning": "This column provides the estimated value of the trait, including standard error."
   },
-  "(c) H2'": {
-    "field": "measurementType",
+  "PF (reference level) t/z-value": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents a statistical measure of diversity (H2'), a biological property."
+    "reasoning": "This column provides the statistical test value (t-value) for the reference level comparison."
   },
-  "(d) Connectance": {
-    "field": "measurementType",
+  "PA vs. PF Estimate ± SE": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Measures the connectance of interactions, a biological property of the organism."
+    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
   },
-  "(e) Diversity of interactions": {
-    "field": "measurementType",
+  "PA vs. PF t/z-value": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Measures the diversity of interactions, a biological property of the organism."
+    "reasoning": "This column provides the statistical test value (t-value) for the comparison between PA and PF."
   },
-  "(f) Niche overlap": {
-    "field": "measurementType",
+  "TR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Measures niche overlap, a biological property of the organism."
+    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
   },
-  "(g) Compartments": {
-    "field": "measurementType",
+  "TR vs. PF t/z-value": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Measures the number of compartments, a biological property of the organism."
+    "reasoning": "This column provides the statistical test value (t-value) for the comparison between TR and PF."
   },
-  "(h) Nestedness": {
-    "field": "measurementType",
+  "FR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Measures nestedness, a biological property of the organism."
+    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
   },
-  "(i) Pairwise Permanova": {
-    "field": "measurementType",
+  "FR vs. PF t/z-value": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents a statistical test result (Permanova), a measurement of the data."
+    "reasoning": "This column provides the statistical test value (t-value) for the comparison between FR and PF."
   },
-  "Species": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column lists treatment/habitat names, not insect taxa."
+  "MR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+  },
+  "MR vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the statistical test value (t-value) for the comparison between MR and PF."
+  },
+  "NR vs. PF Estimate ± SE": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+  },
+  "NR vs. PF t/z-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This column provides the statistical test value (t-value) for the comparison between NR and PF."
   }
 }

@@ -1,32 +1,37 @@
 {
-  "Site": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "These are site codes representing the specific geographic locations where sampling occurred."
-  },
-  "Year planted": {
+  "identifier": {
     "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This header describes a specific characteristic (planting year) of the sample/site."
+    "value_column": false,
+    "reasoning": "This column names the measured trait (e.g., Abundance, Species richness), not the value itself."
   },
-  "2013": {
-    "field": "measurementType",
+  "Site age $\\chi^2$": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This header represents a temporal measurement (presence/absence) for the year 2013."
+    "reasoning": "The values are Chi-squared statistics, which are statistical measures, not biological traits."
   },
-  "2014": {
-    "field": "measurementType",
+  "Site age P": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This header represents a temporal measurement (presence/absence) for the year 2014."
+    "reasoning": "The values are P-values, which are statistical measures of significance."
   },
-  "2015": {
-    "field": "measurementType",
+  "Burn status $\\chi^2$": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This header represents a temporal measurement (presence/absence) for the year 2015."
+    "reasoning": "The values are Chi-squared statistics, which are statistical measures, not biological traits."
   },
-  "Age range": {
-    "field": "measurementType",
+  "Burn status P": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This header describes a biological characteristic (age) measured for the organism."
+    "reasoning": "The values are P-values, which are statistical measures of significance."
+  },
+  "Year $\\chi^2$": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "The values are Chi-squared statistics, which are statistical measures, not biological traits."
+  },
+  "Year P": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "The values are P-values, which are statistical measures of significance."
   }
 }

@@ -1,42 +1,197 @@
 {
-  "TDF Fragments": {
-    "field": null,
+  "Species": {
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column serves as a sample identifier or grouping variable, not a taxon, locality, or measurement."
+    "reasoning": "This column provides the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "This is the verbatim identification of the organism, not a measured trait."
   },
-  "Sampling site": {
-    "field": "verbatimLocality",
+  "N": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "The values are site codes (e.g., N1a, N1b) representing the location of sampling."
+    "reasoning": "This column reports the sample size or count of the specimens.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the abundance or sample size of the organism.",
+    "multi_value": false,
+    "value_type": "numeric"
   },
-  "N1a": {
-    "field": "measurementValue",
+  "HL Mean": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains raw numeric data representing a measurement value."
+    "reasoning": "This measures the mean Head Length of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Hindlimb Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "head length",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The text describes the collection of species and functional groups across different spatial and temporal fragments, which establishes an occurrence of ant communities in specific locations and times.",
+    "measurementMethod": "Sampling using mini-Winkler bags and establishing linear transects and quadrants.",
+    "measurementMethod_reasoning": "The methods section explicitly details the sampling techniques used, including the use of mini-Winkler bags and the establishment of linear transects and quadrants for data collection.",
+    "measurementUnit": "m",
+    "measurementUnit_reasoning": "The text mentions establishing linear transects of 100 m."
   },
-  "N1b": {
-    "field": "measurementValue",
+  "HL SD": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains raw numeric data representing a measurement value."
+    "reasoning": "This measures the standard deviation of the Head Length.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
   },
-  "N2a": {
-    "field": "measurementValue",
+  "HW Mean": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains raw numeric data representing a measurement value."
+    "reasoning": "This measures the mean Hindwidth of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Hindwing Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "head width",
+    "basisOfRecord": "species richness and composition variation",
+    "basisOfRecord_reasoning": "The text reports variations in the number of species (species richness) and the composition of ant groups across different spatial (N1, N2, N3 fragments) and temporal (dry/rainy seasons) areas.",
+    "measurementMethod": "sampling and evaluation of taxonomic diversity",
+    "measurementMethod_reasoning": "The study involved collecting ant species and evaluating their variation across spatial fragments and temporal periods.",
+    "measurementUnit": "species count",
+    "measurementUnit_reasoning": "The values reported (e.g., 75 to 119 species, 121 and 127 species) represent counts of ant species."
   },
-  "N2b": {
-    "field": "measurementValue",
+  "HW SD": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains raw numeric data representing a measurement value."
+    "reasoning": "This measures the standard deviation of the Hindwidth.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
   },
-  "N3a": {
-    "field": "measurementValue",
+  "ML Mean": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains raw numeric data representing a measurement value."
+    "reasoning": "This measures the mean Mesothoracic Length of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Midlimb Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "mandible length",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The data refers to the collection of ant species and functional groups across different spatial and temporal fragments, which establishes an event (occurrence) of diversity at specific locations and times.",
+    "measurementMethod": "Sampling using mini-Winkler bags and linear transects",
+    "measurementMethod_reasoning": "The text states that ants were sampled using 'mini-Winkler bags' and that 'two linear transects of 100 m were established' at each site, which describes the protocol used to gather the data.",
+    "measurementUnit": "count",
+    "measurementUnit_reasoning": "The measurements refer to the number of subfamilies (9), genera (57), species (146), and functional groups (20), which are counts."
   },
-  "N3b": {
-    "field": "measurementValue",
+  "ML SD": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains raw numeric data representing a measurement value."
+    "reasoning": "This measures the standard deviation of the Mesothoracic Length.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
+  },
+  "SL Mean": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the mean Sublateral Length of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Sternal Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "scape length",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The text describes the spatial and temporal variation of ant groups and functional traits across different forest fragments and seasons, which establishes occurrences of ant communities in specific locations and times.",
+    "measurementMethod": "Field observation and spatial mapping",
+    "measurementMethod_reasoning": "The study involves evaluating spatial and temporal variation, and the study areas are defined by geographical coordinates and area measurements. The sampling method involves establishing linear transects and locating quadrants.",
+    "measurementUnit": "ha, °C, mm, %",
+    "measurementUnit_reasoning": null
+  },
+  "SL SD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the standard deviation of the Sublateral Length.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
+  },
+  "EL Mean": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the mean Elytral Length of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Elongation/Eyelid Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "eye length",
+    "basisOfRecord": "Occurrence",
+    "basisOfRecord_reasoning": "The text describes the collection of ant species and functional groups based on spatial and temporal variation across different forest fragments, which establishes an occurrence of these diversity metrics in specific locations and times.",
+    "measurementMethod": "Sampling using mini-Winkler bags and establishing linear transects and quadrants.",
+    "measurementMethod_reasoning": "The text explicitly states that ants were sampled using 'mini-Winkler bags' and that 'two linear transects of 100 m were established' with 'ten 1 m² quadrants' located at each sampling site.",
+    "measurementUnit": "ha, m, m²",
+    "measurementUnit_reasoning": "Area measurements for the study sites are in hectares (ha). The dimensions for the sampling geometry are in meters (m) and square meters (m²)."
+  },
+  "EL SD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the standard deviation of the Elytral Length.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
+  },
+  "DI Mean": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the mean Dorsal Index of the organism.",
+    "category": null,
+    "reasoning_relevance": "Dissimilarity index is a derived statistic, not a measured trait."
+  },
+  "DI SD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the standard deviation of the Dorsal Index.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
+  },
+  "FL Mean": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the mean Forelength of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Forelimb Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "femur length",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The measurements refer to the area of TDF fragments, which are physical, preserved land areas, thus classifying them as a preserved specimen contextually."
+  },
+  "FL SD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the standard deviation of the Forelength.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
+  },
+  "WL Mean": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the mean Wing Length of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents the mean of a morphological dimension (Wing Length).",
+    "multi_value": false,
+    "value_type": "numeric",
+    "measurementStatistic": "mean",
+    "sampleSizeColumn": "N",
+    "canonicalType": "Weber length"
+  },
+  "WL SD": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the standard deviation of the Wing Length.",
+    "category": null,
+    "reasoning_relevance": "Standard deviation is a statistic, not a measurementType."
   }
 }

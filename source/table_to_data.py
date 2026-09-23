@@ -26,7 +26,8 @@ from typing import Iterable, Optional
 from tables import (Table, parse_table, clean_text, find_abbreviation_definitions,
                     find_binomial_candidates, looks_multivalue_column,
                     is_headerless_continuation,
-                    detect_transposed, transpose_table)
+                    detect_transposed, transpose_table,
+                    looks_like_taxon, taxon_fraction)
 from text_manager import get_tables, xlsx_to_table, csv_to_table
 from column_relevance import (agent_define_columns_relevance, make_llm,
                               invoke_sized, loads_salvaging)
@@ -49,6 +50,18 @@ MAP_FIELDS = [
     "measurementValue",
     "measurementMethod",
     "measurementStatistic",
+    # Row-level ORGANISM qualifiers. A wide specimen table often carries a whole
+    # column for one of these (a 'Sex' column of F/M, a 'caste' column of
+    # worker/queen, a 'stage' column of larva/adult). Without them here the mapper
+    # had no valid target and was forced to call such a column a measurementType —
+    # so 'Sex' became a bogus trait, the real measurements in that row carried NO
+    # sex, and to_output's default silently stamped every row 'both'. Listing them
+    # (with their .md descriptions) lets the mapper route the column to the field,
+    # and ROW_FIELDS below then carries each row's value onto that row's
+    # measurements — exactly as verbatimLocality already rides along.
+    "sex",
+    "lifeStage",
+    "caste",
 ]
 
 # Fields that flag a DATA DICTIONARY / KEY table — one that DEFINES variables
@@ -103,6 +116,58 @@ def _field_descriptions_block(fields=MAP_FIELDS) -> str:
 # Table collection across the whole document set (paper + complementary files)
 # ---------------------------------------------------------------------------
 
+def split_banded_grid(raw_grid: str, llm=None) -> list[str]:
+    """Split a BANDED table into one raw pipe-grid per band, or return [raw_grid].
+
+    A wide table that won't fit across the page is often printed as several
+    stacked blocks: its header row (e.g. 'Species | Sp.a | Sp.b | ...') reappears
+    partway down, above a fresh set of columns for the NEXT group of taxa
+    (Fondjo2024: 8 species printed as two blocks of 4). Parsed as one grid this
+    folds the second block's rows into bogus duplicate columns and its taxa are
+    lost — so cut the grid at each repeat of the header before anything else sees
+    it, giving one clean sub-grid per band that then transposes on its own.
+
+    A band boundary is deterministic and conservative: a row AT OR BELOW the
+    header whose first cell equals the header's first-column label (the row-label
+    corner, e.g. 'Species') AND whose remaining cells are mostly taxon names —
+    i.e. a genuine repeated header, not a data row that merely starts with the
+    same word. If fewer than two such rows exist, the table isn't banded and the
+    original grid is returned unchanged.
+    """
+    lines = [l for l in (ln.strip() for ln in raw_grid.strip().splitlines()) if l]
+    if len(lines) < 4:
+        return [raw_grid]
+
+    def first_cell(l: str) -> str:
+        parts = [c.strip() for c in l.split("|")]
+        return parts[0] if parts else ""
+
+    def rest_cells(l: str) -> list:
+        return [c.strip() for c in l.split("|")[1:] if c.strip()]
+
+    # A species header row is one whose cells (past the row-label corner) are
+    # mostly taxon names — 'Species | Sp.a | Sp.b | ...'. Deterministic, so this
+    # costs no LLM call. A units/sex sub-row ('Parameters | Male | Female') is not
+    # taxa and is never flagged.
+    hdr_rows = [i for i, l in enumerate(lines)
+                if len(rest_cells(l)) >= 2 and taxon_fraction(rest_cells(l)) >= 0.6]
+    if len(hdr_rows) < 2:
+        return [raw_grid]
+    corner = first_cell(lines[hdr_rows[0]])
+    starts = [i for i in hdr_rows if first_cell(lines[i]) == corner]
+    if len(starts) < 2:
+        return [raw_grid]                      # header appears once -> not banded
+
+    bands = []
+    for k, s in enumerate(starts):
+        begin = 0 if k == 0 else s             # band 0 keeps any caption above it
+        end = starts[k + 1] if k + 1 < len(starts) else len(lines)
+        bands.append("\n".join(lines[begin:end]))
+    print(f"    banded table: split into {len(bands)} band(s) at rows {starts} "
+          f"(repeated '{corner}' header)")
+    return bands
+
+
 def tables_from_text(text: str, source: str, llm=None) -> list[Table]:
     """Parse every <table> in a document, joining page-continuation fragments.
 
@@ -119,21 +184,30 @@ def tables_from_text(text: str, source: str, llm=None) -> list[Table]:
     """
     out: list[Table] = []
     parent: Table | None = None
-    for i, t in enumerate(get_tables(text)):
+    idx = 0
+    for t in get_tables(text):
         raw = t["content"]
         if parent is not None and is_headerless_continuation(parent, raw):
             header = [("" if c.synthetic else c.name) for c in parent.columns]
-            tbl = parse_table(raw, source=source, table_index=i,
+            tbl = parse_table(raw, source=source, table_index=idx,
                               header_override=header)
-            print(f"    [continuation] table #{i} has no header — inherited from "
+            print(f"    [continuation] table #{idx} has no header — inherited from "
                   f"#{parent.table_index}, {len(tbl.data_records())} row(s) recovered")
+            out.append(tbl)
+            idx += 1
         else:
-            # Full-replacement header finding: the LLM reads the first rows and
-            # says which is the header. Falls back to row 0 on any failure.
-            hp = _header_plan_for(raw, llm=llm)
-            tbl = parse_table(raw, source=source, table_index=i, header_rows=hp)
-            parent = tbl                     # this one owns its header
-        out.append(tbl)
+            # A BANDED table (its species header reappears lower down for the next
+            # block of taxa) is cut into one sub-grid per band FIRST, so each band
+            # parses and transposes on its own instead of folding later blocks into
+            # bogus duplicate columns. An ordinary table returns as a single band.
+            for band in split_banded_grid(raw, llm=llm):
+                # Full-replacement header finding: the LLM reads the first rows and
+                # says which is the header. Falls back to row 0 on any failure.
+                hp = _header_plan_for(band, llm=llm)
+                tbl = parse_table(band, source=source, table_index=idx, header_rows=hp)
+                parent = tbl                 # this one owns its header
+                out.append(tbl)
+                idx += 1
     return out
 
 
@@ -193,11 +267,21 @@ def maybe_transpose(table: Table):
 
     rotated = transpose_table(table)
 
-    # Cell-count guard: rotation must preserve the populated data cells.
+    # Content guard: rotation must preserve every populated value — but it
+    # legitimately MOVES labels between the header and the first column (the trait
+    # names that sat in column 0 become the new column headers; the species that
+    # were column headers become the identifier column). So count HEADERS + BODY
+    # together: a transpose that only relocates labels shows no loss, while a
+    # transpose that truly drops or mangles a value still shrinks the multiset and
+    # is rejected. (Counting body cells alone flagged the trait labels as "lost"
+    # and wrongly discarded valid species-in-columns rotations, e.g. Fondjo2024.)
     def _cells(t):
-        return sorted(clean_text(v) for r in t.data_records()
-                      for k, v in r.items()
-                      if not k.startswith("_") and str(v or "").strip())
+        body = [clean_text(v) for r in t.data_records()
+                for k, v in r.items()
+                if not k.startswith("_") and str(v or "").strip()]
+        heads = [clean_text(c.name) for c in t.columns
+                 if not getattr(c, "synthetic", False) and str(c.name or "").strip()]
+        return sorted(body + heads)
 
     before, after = _cells(table), _cells(rotated)
     if len(after) < len(before):
@@ -324,7 +408,17 @@ def agent_find_header(grid_lines: list, llm=None, preview_rows: int = 4) -> dict
         "- A STACKED header spans two rows: a grouping label on top ('Successional "
         "stages') over the real names below ('G | H | C'). Then BOTH rows are the "
         "header and should be joined.\n"
-        "- A DATA row holds mostly numbers or specimen names; never the header.\n\n"
+        "- A TRANSPOSED (matrix) header is a row filled with DISTINCT organism / "
+        "taxon names spanning the columns ('Pteropera carnapi | Pteropera carnapi "
+        "| Pteropera descampsi | Pteropera descampsi | ...'), often with a "
+        "sex/stage band ('Male | Female | Male | Female') directly below it and "
+        "trait names ('HeadL', 'Body length') running DOWN the first column. Here "
+        "the species run ACROSS the top, so that row IS the header — select it "
+        "(and join the sex/stage row below it). Do NOT dismiss it as data: the "
+        "'specimen names = data' rule applies only to names running DOWN a column "
+        "(one specimen per row), never to distinct taxa spread ACROSS a row.\n"
+        "- A DATA row holds mostly numbers, or one specimen/taxon name per row "
+        "running DOWN the first column; never the header.\n\n"
         "Answer ONLY JSON: {\"header_rows\": [<row numbers>], \"join\": "
         "true|false}. 'join' is true only when header_rows has more than one row "
         "to combine. Do not rewrite any text; only give row numbers."
@@ -1079,7 +1173,16 @@ def add_table_to_grouped(table: Table, mapping: dict, grouped: dict,
                 sv = (rec.get(size_col, "") or "").strip()
                 if sv:
                     meas["sampleSizeValue"] = sv
-            entry["measurements"].append(meas)
+            # Skip an exact duplicate: some papers print the SAME table twice (a
+            # body table and its folded CSV supplement — CamargoVanegas' Species|N|
+            # HL Mean|HL SD... appears once with a two-row header and once
+            # pre-flattened). They share a schema, so the fragment collector keeps
+            # both and every measurement lands twice. A measurement identical in
+            # type, value, statistic AND every row qualifier is indistinguishable
+            # data, so one copy is kept. Genuine page-split fragments differ by row
+            # (different species/values) and are unaffected.
+            if meas not in entry["measurements"]:
+                entry["measurements"].append(meas)
     return grouped
 
 
@@ -1107,16 +1210,18 @@ def _apply_glossary(header: str, glossary: dict) -> str:
 # judgement is the LLM's, with the paper in view. There is deliberately no
 # header-matching statistic dictionary anywhere; that approach mis-split real
 # trait names like 'Range size'.
+# Output forms match the ground-truth convention: dispersion measures are the
+# ABBREVIATIONS 'SD'/'SE' (never 'standard deviation'), min/max stay short.
 _STATISTIC_VOCAB = {
     "mean": "mean", "average": "mean", "avg": "mean", "x̄": "mean",
     "median": "median",
     "mode": "mode",
-    "sd": "standard deviation", "std": "standard deviation",
-    "stdev": "standard deviation", "standard deviation": "standard deviation",
-    "se": "standard error", "sem": "standard error",
-    "standard error": "standard error",
-    "min": "minimum", "minimum": "minimum",
-    "max": "maximum", "maximum": "maximum",
+    "sd": "SD", "std": "SD",
+    "stdev": "SD", "standard deviation": "SD",
+    "se": "SE", "sem": "SE",
+    "standard error": "SE",
+    "min": "min", "minimum": "min",
+    "max": "max", "maximum": "max",
     "range": "range",
     "sum": "sum", "total": "sum",
     "count": "count",
@@ -1147,6 +1252,68 @@ def _strip_leading_token(text: str, token: str) -> Optional[str]:
     rest = text[m.end():]
     rest = re.sub(r"^(of\b\s*|[-\u2013\u2014:,]\s*)", "", rest, flags=re.IGNORECASE).strip()
     return rest or None
+
+
+def _strip_trailing_token(text: str, token: str) -> Optional[str]:
+    """If `text` ends with `token` as a whole token (case-insensitive), return
+    `text` with that trailing token \u2014 and any immediately preceding separator or
+    'of' \u2014 removed; else None. Mirror of _strip_leading_token for a SUFFIX
+    statistic ('Head length Mean' -> 'Head length', 'body size SD' -> 'body
+    size'). Whole-token, so a trait that merely CONTAINS the word is untouched;
+    the caller gates this on the mapper having already flagged the column as a
+    statistic column."""
+    token = (token or "").strip()
+    if not token:
+        return None
+    m = re.search(r"(?<![\w])" + re.escape(token) + r"\s*$", text, flags=re.IGNORECASE)
+    if not m:
+        return None
+    rest = text[:m.start()]
+    rest = re.sub(r"(\s*\bof\b|[-\u2013\u2014:,(\s])+$", "", rest, flags=re.IGNORECASE).strip()
+    return rest or None
+
+
+def _split_trailing_statistic(text: str):
+    """If `text` ends in a statistic word ('Head length Mean', 'DI SD', 'body
+    size standard deviation'), return (base_name, statistic_word); else None.
+    Checks the last two words first so multi-word statistics ('standard
+    deviation') win over their last word."""
+    if not isinstance(text, str):
+        return None
+    words = text.split()
+    if not words:
+        return None
+    for cand in (" ".join(words[-2:]), words[-1]):
+        if _normalize_statistic(cand):
+            base = _strip_trailing_token(text, cand)
+            if base:
+                return base, cand
+    return None
+
+
+def _stat_fraction(values) -> float:
+    """Fraction of non-empty values that are statistic labels (Minimum, Mean,
+    SD, ...). A first column that is mostly these is a STATISTIC axis, not a
+    trait axis — the traits are then the column headers."""
+    vals = [clean_text(v) for v in values if clean_text(v)]
+    if not vals:
+        return 0.0
+    return sum(1 for v in vals if _normalize_statistic(v)) / len(vals)
+
+
+def _stat_split_bases(headers) -> set:
+    """Bases shared by >=2 columns whose header ends in a statistic word \u2014 the
+    signature of a mean/SD-style split ('HL Mean' | 'HL SD' | 'HW Mean' | 'HW
+    SD'). Only for such corroborated bases do we strip the trailing statistic
+    from a trait name, so a lone trait that merely ends in a stat-like word
+    ('home range', 'locomotion mode') is never touched."""
+    from collections import Counter
+    counts = Counter()
+    for h in headers:
+        split = _split_trailing_statistic(h)
+        if split:
+            counts[split[0].strip().lower()] += 1
+    return {b for b, n in counts.items() if n >= 2}
 
 
 _SAMPLE_SIZE_RE = re.compile(
@@ -1185,11 +1352,13 @@ def _looks_cryptic_code(header: str) -> bool:
     plain header ('Body length (mm)', 'Tongue Length') is already the trait name.
 
     Cryptic = no internal space (after dropping a trailing unit paren) AND a
-    STRONG machine-code signal: an underscore, an embedded digit, or a camelCase
-    boundary (lower->UPPER). We deliberately do NOT treat a plain short word as
-    cryptic — a short jargon label ('Lecty', 'Mass', 'Volt') is often exactly the
-    term the ground truth uses, so rewriting it would break a match that already
-    worked. Plain multi-word headers always have a space and are never cryptic."""
+    STRONG machine-code signal: an underscore, an embedded digit, a camelCase
+    boundary (lower->UPPER), or a dot-separated abbreviation ('Head.w',
+    'Intertegular.d' — an R data.frame column dump). We deliberately do NOT treat
+    a plain short word as cryptic — a short jargon label ('Lecty', 'Mass',
+    'Volt') is often exactly the term the ground truth uses, so rewriting it would
+    break a match that already worked. Plain multi-word headers always have a
+    space and are never cryptic."""
     if not isinstance(header, str):
         return False
     h = re.sub(r"\s*\([^()]*\)\s*$", "", header).strip()   # drop a trailing unit
@@ -1198,7 +1367,11 @@ def _looks_cryptic_code(header: str) -> bool:
     has_underscore = "_" in h
     has_digit = any(c.isdigit() for c in h)
     camel = any(h[i].islower() and h[i + 1].isupper() for i in range(len(h) - 1))
-    return has_underscore or has_digit or camel
+    # A dot joining two letter tokens is an R-style abbreviation code
+    # ('Head.w' = head width, 'Intertegular.d' = intertegular distance), never a
+    # plain trait name; a decimal ('3.5') is caught by has_digit instead.
+    has_dot_code = bool(re.search(r"[A-Za-z]\.[A-Za-z]", h))
+    return has_underscore or has_digit or camel or has_dot_code
 
 
 def agent_humanize_cryptic_types(headers: list, paper_text: str, llm=None) -> dict:
@@ -1405,6 +1578,38 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
     for mapping in mappings.values():
         # one sample-size column per table, linked to that table's aggregates
         size_col = _find_sample_size_column(mapping)
+        # bases that appear with >=2 statistic suffixes in THIS table (HL Mean /
+        # HL SD) — the corroboration for stripping a trailing statistic below
+        split_bases = _stat_split_bases(mapping.keys())
+        # Promote statistic-companion columns ('HL SD' next to 'HL Mean') to their
+        # OWN measurement. The mapper tends to file them as measurementStatistic,
+        # which makes add_table_to_grouped copy the SD *number* into the mean
+        # row's statistic field. Instead, give each the sibling mean column's
+        # relevance category so the keep-gate accepts it; the main loop below then
+        # canonicalizes it to the base trait name and sets a proper statistic
+        # LABEL ('standard deviation') from its header suffix.
+        if split_bases:
+            sib_cat = {}
+            for h, mm in mapping.items():
+                if not isinstance(mm, dict):
+                    continue
+                sp = _split_trailing_statistic(h)
+                if (sp and mm.get("field") == "measurementType"
+                        and mm.get("category") is not None):
+                    sib_cat.setdefault(sp[0].strip().lower(), mm.get("category"))
+            for h, mm in mapping.items():
+                if not isinstance(mm, dict) or mm.get("field") == "measurementType":
+                    continue
+                sp = _split_trailing_statistic(h)
+                if not sp or sp[0].strip().lower() not in split_bases:
+                    continue
+                cat = sib_cat.get(sp[0].strip().lower())
+                if cat is None:
+                    continue
+                mm["field"] = "measurementType"
+                mm["category"] = cat
+                print(f"    promoted stat-companion '{h}' -> its own "
+                      f"measurement (statistic={_normalize_statistic(sp[1])!r})")
         for header, m in mapping.items():
             if not (m.get("field") == "measurementType" and m.get("category") is not None):
                 continue
@@ -1428,6 +1633,28 @@ def agent_canonicalize_measurement_types(mappings: dict, paper_text: str, llm=No
                     if size_col:
                         m["sampleSizeColumn"] = size_col
                     n_stat += 1
+            # Trailing statistic suffix ('Head length Mean' -> 'head length',
+            # 'DI SD' -> 'distance'): common in R-exported morphometric tables
+            # (HL Mean | HL SD | HW Mean | HW SD ...). Strip it only when the RAW
+            # header's base is one this table repeats with >=2 statistic suffixes
+            # (split_bases) — that corroborates the suffix is a statistic and not
+            # part of a trait name that merely ends in a stat-like word ('home
+            # range', 'locomotion mode'). Keeps the trait name aligned with the
+            # plain-value version of the same table and with the ground truth.
+            if canonical == expanded:
+                raw_split = _split_trailing_statistic(header)
+                if raw_split and raw_split[0].strip().lower() in split_bases:
+                    exp_split = _split_trailing_statistic(expanded)
+                    if exp_split:
+                        canonical = exp_split[0]
+                        # Fill the statistic LABEL deterministically from the
+                        # header suffix ('Mean'->mean, 'SD'->standard deviation),
+                        # overriding any noisy value the mapper guessed. Free and
+                        # exact — no model call.
+                        m["measurementStatistic"] = _normalize_statistic(raw_split[1])
+                        if size_col:
+                            m["sampleSizeColumn"] = size_col
+                        n_stat += 1
             m["canonicalType"] = canonical
             if canonical != header:
                 n += 1
@@ -1487,6 +1714,184 @@ def add_long_table_to_grouped(table: Table, mapping: dict, grouped: dict,
     return grouped
 
 
+_TRAIT_LABEL_RE = re.compile(
+    r"\b(traits?|characters?|variables?|parameters?|measurements?|metrics?|"
+    r"morphometr\w*)\b", re.IGNORECASE)
+
+
+def _traitish(v: str) -> bool:
+    """A first-column cell that reads like a TRAIT NAME, not a taxon, a bare
+    number, or a blank — used to recognise a traits-in-rows table."""
+    v = clean_text(v)
+    if not v:
+        return False
+    if looks_like_taxon(v):
+        return False
+    return not re.fullmatch(r"[\d.,%±()/\s–—+-]+", v)
+
+
+def detect_trait_rows_table(table: Table, fallback_species: Optional[str]):
+    """Traits-in-ROWS: the first column lists trait names and the OTHER columns
+    are experimental conditions / castes / groups (Kovacs' Workers|Gynes, Borges'
+    prey diets, Kovacs2008's colonies A-F). The focal organism is named at PAPER
+    level (in prose), never in a column — so this only fires for a single-species
+    paper (fallback_species present), letting the melt below attribute every cell
+    to that one organism.
+
+    Returns (verdict, reason). Guards, in order:
+      - need a paper-level species and a >=2x2 grid;
+      - the OTHER column headers must NOT be taxa (else it is a normal or a
+        rotate case, handled elsewhere);
+      - the first column must read as trait names — by its HEADER word ('Trait',
+        'Character', 'Variable', ...) or by its VALUES being mostly trait-like;
+      - REJECT a correlation/comparison MATRIX, where the other headers repeat the
+        first column's own trait labels (Kovacs' trait x trait matrices) — melting
+        those would emit correlations as measurements.
+    """
+    if not fallback_species:
+        return False, "no paper-level species"
+    cols = list(table.columns)
+    recs = [r for r in table.data_records() if not r.get("_is_group_row")]
+    if len(cols) < 2 or len(recs) < 2:
+        return False, "grid too small"
+    col0 = cols[0]
+    # value columns = every non-first REAL column (drop the synthetic paper-species
+    # column the resolver injects, and any blank-header synthetic column).
+    value_cols = [c for c in cols[1:]
+                  if not c.synthetic and c.name != PAPER_SPECIES_KEY]
+    others = [c.name for c in value_cols]
+    if not others:
+        return False, "no value columns"
+    # NOTE: we do NOT reject when the other headers look like taxa. A single-
+    # species paper (fallback_species set) has exactly one focal organism, named
+    # at paper level; any taxa in the OTHER columns are therefore conditions
+    # (Borges' prey diets A. fabae / M. persicae), not the subject.
+    vals = [clean_text(r.get(col0.name, "")) for r in recs]
+    vals = [v for v in vals if v]
+    if not vals:
+        return False, "empty first column"
+    # correlation/comparison matrix: the other headers echo the trait labels
+    val_set = {v.lower() for v in vals}
+    other_set = {clean_text(o).lower() for o in others if clean_text(o)}
+    if other_set:
+        overlap = len(val_set & other_set) / len(other_set)
+        if overlap >= 0.5:
+            return False, "trait x trait matrix (other headers echo the rows)"
+    header_signal = bool(_TRAIT_LABEL_RE.search(clean_text(col0.name)))
+    val_signal = sum(_traitish(v) for v in vals) / len(vals) >= 0.7
+    if header_signal or val_signal:
+        return True, ("first-column header names a trait" if header_signal
+                      else "first-column values are trait-like")
+    return False, "first column is not trait-like"
+
+
+_MEAN_WORD_RE = re.compile(r"\b(mean|median|average|avg)\b", re.IGNORECASE)
+_SKIP_STAT_RE = re.compile(
+    r"\b(cv|sd|se|sem|std|stdev|variance|isometr\w*|dimorphism|correlation|"
+    r"slope|error)\b", re.IGNORECASE)
+_SIZE_LAST = {"n", "no", "no.", "count"}
+_TEST_LAST = {"t", "p", "f", "z"}
+
+
+def _classify_value_column(name: str):
+    """Classify a condition/value column of a traits-in-rows table.
+
+    Returns (kind, statistic, condition):
+      - 'value'  a real measurement column. `condition` (caste/diet/group) is
+        recorded as sampleTreatment; `statistic` is set for a mean/median column.
+      - 'skip'   a sample-size ('n'), dispersion ('CV'/'SD'/'SE') or test
+        statistic ('Between castes t') column — not a primary measurement.
+    A column whose header carries no statistic word is a plain condition
+    (Borges' prey diet, Kovacs' colony) and is kept as a measurement."""
+    raw = clean_text(name)
+    words = raw.split()
+    if _MEAN_WORD_RE.search(raw):
+        cond = _MEAN_WORD_RE.split(raw)[0].strip(" ±:;-–—()")
+        stat = "median" if re.search(r"median", raw, re.I) else "mean"
+        return "value", stat, cond
+    if _SKIP_STAT_RE.search(raw):
+        return "skip", None, None
+    last = words[-1].lower() if words else ""
+    if last in _SIZE_LAST:
+        return "skip", None, None
+    # single-letter test statistics (t/p/F) only when they trail a multi-word
+    # header ('Between castes t'); a lone 'F' is a colony/group label, kept.
+    if last in _TEST_LAST and len(words) > 1:
+        return "skip", None, None
+    return "value", None, raw
+
+
+def add_trait_rows_table_to_grouped(table: Table, grouped: dict,
+                                    fallback_species: str) -> dict:
+    """Melt a traits-in-ROWS table onto the paper-level species: every cell
+    becomes one measurement (type = the row's trait, value = the cell). When
+    there is more than one value column, each column is a CONDITION/caste/group,
+    recorded as sampleTreatment so the reading stays attributable. Deterministic
+    and mapper-free: the trait names are already human-readable in the first
+    column, so no glossary/relevance pass is needed."""
+    cols = list(table.columns)
+    col0 = cols[0]
+    raw_value_cols = [c for c in cols[1:]
+                      if not c.synthetic and c.name != PAPER_SPECIES_KEY]
+    recs = [r for r in table.data_records() if not r.get("_is_group_row")]
+    entry = grouped.setdefault(fallback_species, {
+        "verbatimIdentification": fallback_species, "measurements": []})
+
+    # Orientation B: the first column is a STATISTIC axis (Parameter: Minimum,
+    # Maximum, Mean, Median), so the COLUMN HEADERS are the traits. Emit
+    # type = column header, value = cell, statistic = the row's stat label.
+    if _stat_fraction(clean_text(r.get(col0.name, "")) for r in recs) >= 0.6:
+        n = 0
+        for rec in recs:
+            stat = _normalize_statistic(clean_text(rec.get(col0.name, "")))
+            for c in raw_value_cols:
+                value = (rec.get(c.name, "") or "").strip()
+                if not value:
+                    continue
+                meas = {"measurementType": clean_text(c.name),
+                        "measurementValue": value}
+                if stat:
+                    meas["measurementStatistic"] = stat
+                if meas not in entry["measurements"]:
+                    entry["measurements"].append(meas)
+                    n += 1
+        print(f"    [trait-rows/stat-axis] {table_id(table)}: {n} measurement(s) "
+              f"melted onto {fallback_species!r} (cols are traits)")
+        return grouped
+
+    # Orientation A: the first column is the TRAIT axis; other columns are
+    # conditions. classify each column: keep measurements (mean/plain condition),
+    # drop sample-size / dispersion / test-statistic columns.
+    kept = []
+    for c in raw_value_cols:
+        kind, stat, cond = _classify_value_column(c.name)
+        if kind == "value":
+            kept.append((c, stat, cond))
+    single = len(kept) == 1
+    n = 0
+    for rec in recs:
+        trait = clean_text(rec.get(col0.name, ""))
+        if not _traitish(trait):
+            continue
+        for c, stat, cond in kept:
+            value = (rec.get(c.name, "") or "").strip()
+            if not value:
+                continue
+            meas = {"measurementType": trait, "measurementValue": value}
+            if stat:
+                meas["measurementStatistic"] = stat
+            # record the condition (caste/diet/group) unless it is the sole
+            # column and carries no distinguishing label
+            if cond and not (single and not stat):
+                meas["sampleTreatment"] = cond
+            if meas not in entry["measurements"]:
+                entry["measurements"].append(meas)
+                n += 1
+    print(f"    [trait-rows] {table_id(table)}: {n} measurement(s) melted onto "
+          f"{fallback_species!r} ({len(kept)}/{len(raw_value_cols)} value col(s) kept)")
+    return grouped
+
+
 def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -> dict:
     """Merge every mapped table into one species-keyed structure.
 
@@ -1501,15 +1906,24 @@ def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -
         mapping = mappings.get(tid)
         if not mapping:
             continue
+        fb = fallback_species.get(tid)
+        # Traits-in-ROWS with a paper-level species (Kovacs, Borges): the first
+        # column is the trait, the other columns are conditions/castes. Melt it
+        # onto the one organism. Checked FIRST — this orientation is invisible to
+        # both the long detector and the wide path (they'd read a condition as the
+        # species or a trait as a value).
+        tr_ok, tr_reason = detect_trait_rows_table(table, fb)
+        if tr_ok:
+            add_trait_rows_table_to_grouped(table, grouped, fallback_species=fb)
+            continue
         # A tidy/long table (trait-name column + value column) is read row-wise;
         # everything else goes through the normal wide path.
         longspec = detect_long_in_table(table)
         if longspec:
             add_long_table_to_grouped(table, mapping, grouped, longspec,
-                                      fallback_species=fallback_species.get(tid))
+                                      fallback_species=fb)
         else:
-            add_table_to_grouped(table, mapping, grouped,
-                                 fallback_species=fallback_species.get(tid))
+            add_table_to_grouped(table, mapping, grouped, fallback_species=fb)
     return grouped
 
 
@@ -1798,6 +2212,22 @@ def map_and_group(sources, paper_text, out_dir=".", llm=None):
         decomposed.extend(agent_decompose_table(table, paper_text, llm=llm))
     tables = decomposed
     print(f"  {len(tables)} table(s) after decomposition")
+
+    # Second orientation pass — decomposition can EXPOSE a transposed layout the
+    # raw table hid. A species x trait matrix with a two-row header (species, then
+    # a Male/Female band) parses with its header mangled, so the FIRST orientation
+    # pass sees value strings in the header and skips it. Once decomposition
+    # rebuilds it into a clean species-in-header grid, it IS transposable — the
+    # species now sit along the header and the trait names down the first column.
+    # maybe_transpose is guarded (rotates only when the header is mostly taxa and
+    # the first column is not, and never drops a cell), so a table already in the
+    # right orientation — traits in the header after pass 1 — passes through
+    # untouched and cannot be flipped back.
+    reoriented: list[Table] = []
+    for table in tables:
+        rotated, _ = maybe_transpose(table)
+        reoriented.append(rotated)
+    tables = reoriented
 
     # Tables are often ONE logical table split across pages: identical headers
     # and identical column semantics, only different rows. The per-column LLM

@@ -1,22 +1,27 @@
 {
-  "Site": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "Represents the sampling location or condition (Low, Medium, High)."
+  "species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "The header explicitly names the taxonomic identification of the insect."
   },
-  "% of males": {
+  "Wing wear x urbanization": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes a biological trait measured for the organism (proportion of males)."
+    "reasoning": "This header describes a biological trait (wing wear) of the organism."
   },
-  "chisquare (χ2)": {
-    "field": "measurementStatistic",
+  "Wing wear x urbanization (1)": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Represents a statistical test result (chi-square value)."
+    "reasoning": "This column provides the measured value for the wing wear trait."
   },
-  "p-value": {
-    "field": "measurementStatistic",
+  "Wing wear x urbanization (2)": {
+    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Represents a statistical measure (probability value)."
+    "reasoning": "This column provides the measured value for the wing wear trait."
+  },
+  "Wing wear x urbanization (3)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "This column provides the measured value for the wing wear trait."
   }
 }

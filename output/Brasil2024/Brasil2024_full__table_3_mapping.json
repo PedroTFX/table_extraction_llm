@@ -1,32 +1,59 @@
 {
-  "Site_ID": {
-    "field": "verbatimLocality",
-    "value_column": true,
-    "reasoning": "Identifies the specific sampling site or location code."
-  },
-  "Agapostemon sericeus": {
+  "species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This is the taxonomic name of an insect species."
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "This is the organism's identity, not a measured trait, behavior, or association."
   },
-  "Bombus griseocollis": {
-    "field": "verbatimIdentification",
+  "Body size x urbanization Female spring F": {
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This is the taxonomic name of an insect species."
+    "reasoning": "no mapping returned (response truncated)",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures body size, a physical dimension of the organism.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body size x urbanization Female spring F",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The data concerns the morphology (body size) of wild bee species, which are typically measured from collected specimens.",
+    "measurementMethod": "Distance between each tegulae (intertegular distance, ITD) using a stereo microscope (Nikon SMZ1270)",
+    "measurementMethod_reasoning": "The text explicitly states the method used for measuring body size: 'Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).'",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The measurement unit specified for body size is millimeters.",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The text reports the average body length (x̄) for each species, indicating the mean was calculated for these measurements."
   },
-  "Bombus impatiens": {
-    "field": "verbatimIdentification",
+  "Body size x urbanization Female spring p value": {
+    "field": null,
     "value_column": false,
-    "reasoning": "This is the taxonomic name of an insect species."
+    "reasoning": "no mapping returned (response truncated)",
+    "category": null,
+    "reasoning_relevance": "Contains a p-value, which is a statistic, not a measurementType."
   },
-  "Ceratina calcarata": {
-    "field": "verbatimIdentification",
+  "Body size x urbanization Female summer F": {
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This is the taxonomic name of an insect species."
+    "reasoning": "no mapping returned (response truncated)",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures body size, a physical dimension of the organism.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Body size x urbanization Female summer F",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size measurements (average body length/ITD) are morphological traits measured on the collected bee specimens.",
+    "measurementMethod": "Measurement according to the distance between each tegulae (intertegular distance, ITD) using a stereo microscope (Nikon SMZ1270).",
+    "measurementMethod_reasoning": "The text explicitly states how body size was measured: 'Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).'",
+    "measurementUnit": "mm",
+    "measurementUnit_reasoning": "The text specifies that body size was measured in millimeters (ITD).",
+    "measurementStatistic": "mean",
+    "measurementStatistic_reasoning": "The text provides average body lengths (x̄) for the species, indicating the use of the mean statistic for these measurements."
   },
-  "Eucera pruinosa": {
-    "field": "verbatimIdentification",
+  "Body size x urbanization Female summer p value": {
+    "field": null,
     "value_column": false,
-    "reasoning": "This is the taxonomic name of an insect species."
+    "reasoning": "no mapping returned (response truncated)",
+    "category": null,
+    "reasoning_relevance": "Contains a p-value, which is a statistic, not a measurementType."
   }
 }
