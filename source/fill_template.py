@@ -42,11 +42,106 @@ DECODE_MODEL = "gemma4:e4b-it-qat"
 # sex/lifeStage/caste) lives in the abstract + methods, which sit at the head of
 # the paper, so bound the context to keep each call in a small, fast window.
 TAG_CONTEXT_CHARS = 16000
+_HEAD_CHARS = 3000          # title + abstract always kept
+
+# Paragraphs that carry tag evidence: who/what was measured (sex, stage, caste,
+# n), how (instrument, units, statistic) and where values came from.
+_TAG_EVIDENCE_RE = re.compile(
+    r"\b(males?|females?|workers?|queens?|gynes?|drones?|soldiers?|larva[el]?|nymphs?|"
+    r"pupa[el]?|instars?|adults?|juveniles?|specimens?|individuals?|measured|"
+    r"measurements?|preserved|pinned|ethanol|museum|reared|laboratory|caliper|"
+    r"microscope|weighed|literature|database|obtained|mean|means|s\.?e\.?|s\.?d\.?|"
+    r"standard (?:error|deviation)|n\s*=|sampled|collected|traps?)\b", re.I)
+_METHODS_HEAD_RE = re.compile(r"^#*\s*\d*\.?\s*(materials?\s+and\s+methods|methods|methodology|"
+                              r"study (?:area|site|design)|sampling|data collection)\b", re.I | re.M)
+def _spaced(word):          # 'R E F E R E N C E S' (letter-spaced headings, Gibb2005)
+    return r"\s?".join(word)
+
+
+_REFS_HEAD_RE = re.compile(
+    rf"^#*\s*(?:{_spaced('references')}|literature\s+cited|{_spaced('bibliography')})\s*:?\s*$",
+    re.I | re.M)
+# one bibliography entry: 'Surname, A. B. (2010) ...' / '- Surname A (2010) ...' /
+# numbered '12. Surname ...' — i.e. an author-like start and a year
+_REF_ENTRY_RE = re.compile(
+    r"^\s*(?:[-*•]\s*|\[?\d{1,3}[.)\]]\s*)?[A-ZÀ-Ý][\w'’\-]+,?\s+(?:[A-ZÀ-Ý][.\w]*|van|de|von|da)"
+    r".{0,400}?\b(1[89]\d{2}|20\d{2})[a-z]?\b", re.S)
+
+
+# publisher running headers/footers that interrupt a reference list mid-page
+_PAGE_NOISE_RE = re.compile(r"downloaded from https?://|terms and conditions|"
+                            r"creative commons|onlinelibrary\.wiley\.com", re.I)
+
+
+def _drop_reference_lists(text: str) -> str:
+    """Remove each bibliography, and ONLY the bibliography.
+
+    A paper's _full.md is the main PDF with every supplement appended after it
+    (mineru_extract), so the first 'References' heading is usually the end of the
+    main paper, not of the file — cutting 'everything after it' would throw the
+    supplements away. Instead drop the heading plus the paragraphs that follow it
+    while they look like reference entries, and resume at the first paragraph
+    that does not (the next section, appendix or appended document)."""
+    out, pos = [], 0
+    for m in _REFS_HEAD_RE.finditer(text):
+        if m.start() < pos:
+            continue
+        out.append(text[pos:m.start()])
+        rest = text[m.end():]
+        cut = 0
+        for p in re.finditer(r"(?s)(.*?)(?:\n\s*\n|\Z)", rest):
+            para = p.group(1)
+            if not para.strip():
+                if p.end() >= len(rest):
+                    break
+                cut = p.end()
+                continue
+            s = para.strip()
+            is_noise = (len(s) <= 120 and not s.startswith("#")) or _PAGE_NOISE_RE.search(s)
+            # a '- ...' list item with a year is an entry, even one continued
+            # lowercase after a page break ('- in amounts ... 157, 101–118.')
+            is_item = s.startswith(("- ", "* ", "• ")) and re.search(r"\b(1[89]\d{2}|20\d{2})\b", s)
+            if not (_REF_ENTRY_RE.match(para) or is_item or is_noise):
+                break               # page numbers / running headers don't end the list
+            cut = p.end()
+        pos = m.end() + cut
+    out.append(text[pos:])
+    return "".join(out)
 
 
 def _cap_context(text: str) -> str:
-    """Trim prose context fed to a tag agent to TAG_CONTEXT_CHARS (see above)."""
-    return text[:TAG_CONTEXT_CHARS] if text and len(text) > TAG_CONTEXT_CHARS else text
+    """Bound the prose fed to a tag agent to TAG_CONTEXT_CHARS (see above).
+
+    The first TAG_CONTEXT_CHARS characters used to be taken verbatim, which cut
+    the methods off in long papers (Gibb2005's '20 males of each species' sits at
+    ~17k chars, so the router answered 'no sex information'). Now: keep the head
+    (title/abstract), drop the reference list, then add the paragraphs with the
+    most tag evidence — Methods paragraphs first — until the budget is used, in
+    document order."""
+    if not text or len(text) <= TAG_CONTEXT_CHARS:
+        return text
+    text = _drop_reference_lists(text)
+    if len(text) <= TAG_CONTEXT_CHARS:
+        return text
+    head, rest = text[:_HEAD_CHARS], text[_HEAD_CHARS:]
+    paras = [p for p in re.split(r"\n\s*\n", rest) if p.strip()]
+    m = _METHODS_HEAD_RE.search(rest)
+    methods_at = m.start() if m else None
+    scored, pos = [], 0
+    for i, p in enumerate(paras):
+        start = rest.find(p, pos)
+        pos = start + len(p)
+        hits = len(_TAG_EVIDENCE_RE.findall(p))
+        in_methods = methods_at is not None and methods_at <= start < methods_at + 25000
+        scored.append((hits * (3 if in_methods else 1), i))
+    budget = TAG_CONTEXT_CHARS - len(head)
+    keep = set()
+    for score, i in sorted(scored, key=lambda x: (-x[0], x[1])):
+        if score == 0 or len(paras[i]) > budget:
+            continue
+        keep.add(i)
+        budget -= len(paras[i]) + 2
+    return head + "\n\n" + "\n\n".join(paras[i] for i in sorted(keep))
 
 
 def get_tag_explanation(tag: str) -> str:
@@ -129,6 +224,9 @@ Per-chunk results:
 # (1) measurement-level tags
 # ---------------------------------------------------------------------------
 
+NUMERIC_ONLY_TAGS = {"measurementUnit", "measurementStatistic"}
+
+
 def _fill_column_tags_from_siblings(table_mapping, tags):
     """Fill a measurementType column's MISSING column-level tag from the unanimous
     value of its sibling measurementType columns in the same table.
@@ -145,8 +243,14 @@ def _fill_column_tags_from_siblings(table_mapping, tags):
     cols = [m for m in table_mapping.values()
             if m.get("field") == "measurementType" and m.get("category")]
     for tag in tags:
-        present = [m[tag] for m in cols if not _is_empty_like(m.get(tag))]
-        missing = [m for m in cols if _is_empty_like(m.get(tag))]
+        # A unit/statistic only describes a numeric measurement: never hand a
+        # numeric column's 'mm'/'mean' to a categorical sibling (Barber2017's
+        # 'Mean bodylength (mm)' was the only column with a unit, so it counted
+        # as "unanimous" and stamped mm/mean on wing morphology, diet, ...).
+        pool = cols if tag not in NUMERIC_ONLY_TAGS else \
+            [m for m in cols if m.get("value_type") != "categorical"]
+        present = [m[tag] for m in pool if not _is_empty_like(m.get(tag))]
+        missing = [m for m in pool if _is_empty_like(m.get(tag))]
         if not present or not missing:
             continue                      # nothing to copy, or nothing to fill
         if len({str(v) for v in present}) != 1:
@@ -157,6 +261,22 @@ def _fill_column_tags_from_siblings(table_mapping, tags):
             m[f"{tag}_reasoning"] = ("inherited from unanimous sibling "
                                      "measurement columns in the same table")
     return table_mapping
+
+
+_HEADER_UNIT_RE = re.compile(
+    r"\(\s*((?:[µμu]m|mm|cm|dm|m|km|nm|mg|µg|μg|g|kg|ml|mL|µl|l|L|s|min|h|hrs?|days?|d|"
+    r"weeks?|months?|years?|yrs?|°C|ºC|℃|%|ha|m2|m²|mm2|mm²|cm2|cm²|mm3|mm³|kJ|J|W|Hz|"
+    r"ppm|ind\.?|individuals|°)"
+    r"(?:\s*[/·*]\s*[\w°µμ²³.-]+)*)\s*\)\s*$")
+
+
+def _unit_from_header(header):
+    """The unit in a trailing header parenthetical — 'Mean bodylength (mm)' ->
+    'mm', 'CTmax (°C)' -> '°C', 'Mass (mg/ind)' -> 'mg/ind'. Only a recognised
+    unit counts, so '(reference)' or '(Lycosidae)' is ignored. The tag LLM often
+    returns no unit even when the header states it, which blanked the unit."""
+    m = _HEADER_UNIT_RE.search(header or "")
+    return m.group(1).strip() if m else None
 
 
 def get_measurement_level_tags(table_mapping, paper_chunks, llm=None, allowed_tags=None):
@@ -181,6 +301,11 @@ def get_measurement_level_tags(table_mapping, paper_chunks, llm=None, allowed_ta
         # rather than once for the whole paper.
         tags = ["basisOfRecord", "measurementMethod"] if is_categorical else \
                ["basisOfRecord", "measurementMethod", "measurementUnit", "measurementStatistic"]
+        header_unit = _unit_from_header(header)
+        if header_unit and not mapping.get("measurementUnit") and \
+                (allowed_tags is None or "measurementUnit" in allowed_tags):
+            mapping["measurementUnit"] = header_unit
+            mapping["measurementUnit_reasoning"] = "stated in the column header"
         tags = [t for t in tags if not mapping.get(t)]
         if allowed_tags is not None:
             tags = [t for t in tags if t in allowed_tags]
@@ -287,6 +412,12 @@ def route_tags(tags, species, chunks, llm=None):
     for t in tags:
         r = parsed.get(t) if isinstance(parsed.get(t), dict) else {}
         level = r.get("level")
+        if level not in ("paper", "species", "derived", "varies"):
+            # the small model sometimes drops "level" but still answers
+            if isinstance(r.get("by_species"), dict) and r["by_species"]:
+                level = "species"
+            elif not _is_empty_like(r.get("value")):
+                level = "paper"
         if level == "derived" and t in DERIVATION_RULES:
             rule = DERIVATION_RULES[t]
             plan[t] = {"level": "derived", "from": rule["from"], "map": rule["map"]}

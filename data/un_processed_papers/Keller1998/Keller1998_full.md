@@ -44,30 +44,7 @@ A previous analysis controlling for the phylogeny (Keller and Genoud, 1997) show
 
 Table 1. Lifespan (years) , queen number and mode of colony founding in ants. M: species that are primarily monogynous. P: species that are primarily polygynous. I: species that found new colonies primarily through independent colony founding; D : species that generally use a dependent colony founding; Pa: species that parasitize colonies of other ant species. Species that commonly have both monogyne and polygyne colonies are referred as M, P. Similarly, species that found new colonies independently and dependently are referred as I, D
 
-| Species | Max. lifespan | Mean lifespan | Ref. | Queen number | Ref. | Colony founding | Ref. | Comments |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Aphaenogaster rudisc | 13.1 | 8.7 | 13 | M | 15, 21 | I | 64 | based on 11 queens in laboratory nests |
-| Atta cephalotes | $13.0^h$ |  | 14 | M | 61, 72 | I | 61, 73 | based on 1 queen in laboratory nest |
-| Atta sexdens | $15.3^i$ |  | 20 | M | 61, 73 | I | 59, 61, 72 | based on 1 queen in laboratory nest |
-| Camponotus consobrinus | >7 |  | 17 | M | 38 | I | 59, 38 | based on 1 queen in laboratory nest |
-| Camponotus herculaneus | >10 |  | 17 | M | 18 | I | 18, 19 | based on 1 queen in laboratory nest |
-| Camponotus lateralis | $8.0^f$ |  | 27 | M | 60 | I | 8 | based on 1 queen in laboratory nest |
-| Camponotus perthiana | 23.2 |  | 4 | M | 5 | I | 4 | based on 1 queen in laboratory nest |
-| Cardiocondyla emeryi1 | 0.5 | 0.3 | 78 | P | 79 | D | 78 | based on 38 queens in laboratory nests |
-| Crematogaster scutellaris | 20.0 |  | 24 | M | 24 | I | 24 | based on at least 3 queens in laboratory nests |
-| Diacamma cf. rugosum | 1.9 | 1.6 | 75 | M | 75, 76, 77 | D | 77 | based on 5 mated workers (= queens) in laboratory nestsj |
-| Ectatomma ruidum | 8.8 |  | 5 | M | 23 | I | 23 | based on 1 queen in laboratory nest |
-| Formica exsecta |  | 20.0 | 1 | M | 1 | I | 8 | based on estimation of age of field colonies with allozymes |
-| Formica fusca | 16.0 |  | 56 | M | 57 | I | 8 | based on 2 queens in laboratory nests |
-| Formica polyctena |  | 5.0 | 68 | P | 68 | D, Pa | 8 | based on survival of queens in field colonies |
-| Formica rufibarbis | 14.0 |  | 25 | M | 7 | I | 8 | based on 1 queen in laboratory nest |
-| Formica sanguinea | 20.0 |  | 25 | M, P | 57 | I, D, $Pa^g$ | 22 | based on 1 queen in laboratory nest |
-| Harpagoxenus sublaevis | >14 | 10.0 | 26, 35 | M | 26, 28, 35 | $Pa^k$ | 26, 35 | based on several queens in laboratory nests and the age of field colonies |
-| Lasius alienus | 9.0 |  | 29 | M | 30, 31 | I | 8 | based on 1 queen in laboratory nest |
-| Lasius flavus | 22.5 |  | 32 | M | 8, 30, 34 | I | 8 | based on 1 queen in laboratory nest |
-| Lasius niger | 28.5 |  | 25 | M | 8, 30, 34 | I | 8 | based on 1 queen in laboratory nest |
-| Leptothorax acervorum |  | 11.0 | 35 | M, P | 8 | I | 36 | based on 2 queens in laboratory nests |
-| Leptothorax affinis | 12.0 | 11.0 | 36 | M | 36 | I | 36 | based on many queens in laboratory nests |
+<table><tr><td>Species</td><td>Max. lifespan</td><td>Mean lifespan</td><td>Ref.</td><td>Queen number</td><td>Ref.</td><td>Colony founding</td><td>Ref.</td><td>Comments</td></tr><tr><td>Aphaenogaster rudisc</td><td>13.1</td><td>8.7</td><td>13</td><td>M</td><td>15, 21</td><td>I</td><td>64</td><td>based on 11 queens in laboratory nests</td></tr><tr><td>Atta cephalotes</td><td>$13.0^h$</td><td></td><td>14</td><td>M</td><td>61, 72</td><td>I</td><td>61, 73</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Atta sexdens</td><td>$15.3^i$</td><td></td><td>20</td><td>M</td><td>61, 73</td><td>I</td><td>59, 61, 72</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Camponotus consobrinus</td><td>&gt;7</td><td></td><td>17</td><td>M</td><td>38</td><td>I</td><td>59, 38</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Camponotus herculaneus</td><td>&gt;10</td><td></td><td>17</td><td>M</td><td>18</td><td>I</td><td>18, 19</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Camponotus lateralis</td><td>$8.0^f$</td><td></td><td>27</td><td>M</td><td>60</td><td>I</td><td>8</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Camponotus perthiana</td><td>23.2</td><td></td><td>4</td><td>M</td><td>5</td><td>I</td><td>4</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Cardiocondyla emeryi1</td><td>0.5</td><td>0.3</td><td>78</td><td>P</td><td>79</td><td>D</td><td>78</td><td>based on 38 queens in laboratory nests</td></tr><tr><td>Crematogaster scutellaris</td><td>20.0</td><td></td><td>24</td><td>M</td><td>24</td><td>I</td><td>24</td><td>based on at least 3 queens in laboratory nests</td></tr><tr><td>Diacamma cf. rugosum</td><td>1.9</td><td>1.6</td><td>75</td><td>M</td><td>75, 76, 77</td><td>D</td><td>77</td><td>based on 5 mated workers (= queens) in laboratory nestsj</td></tr><tr><td>Ectatomma ruidum</td><td>8.8</td><td></td><td>5</td><td>M</td><td>23</td><td>I</td><td>23</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Formica exsecta</td><td></td><td>20.0</td><td>1</td><td>M</td><td>1</td><td>I</td><td>8</td><td>based on estimation of age of field colonies with allozymes</td></tr><tr><td>Formica fusca</td><td>16.0</td><td></td><td>56</td><td>M</td><td>57</td><td>I</td><td>8</td><td>based on 2 queens in laboratory nests</td></tr><tr><td>Formica polyctena</td><td></td><td>5.0</td><td>68</td><td>P</td><td>68</td><td>D, Pa</td><td>8</td><td>based on survival of queens in field colonies</td></tr><tr><td>Formica rufibarbis</td><td>14.0</td><td></td><td>25</td><td>M</td><td>7</td><td>I</td><td>8</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Formica sanguinea</td><td>20.0</td><td></td><td>25</td><td>M, P</td><td>57</td><td>I, D, $Pa^g$</td><td>22</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Harpagoxenus sublaevis</td><td>&gt;14</td><td>10.0</td><td>26, 35</td><td>M</td><td>26, 28, 35</td><td>$Pa^k$</td><td>26, 35</td><td>based on several queens in laboratory nests and the age of field colonies</td></tr><tr><td>Lasius alienus</td><td>9.0</td><td></td><td>29</td><td>M</td><td>30, 31</td><td>I</td><td>8</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Lasius flavus</td><td>22.5</td><td></td><td>32</td><td>M</td><td>8, 30, 34</td><td>I</td><td>8</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Lasius niger</td><td>28.5</td><td></td><td>25</td><td>M</td><td>8, 30, 34</td><td>I</td><td>8</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Leptothorax acervorum</td><td></td><td>11.0</td><td>35</td><td>M, P</td><td>8</td><td>I</td><td>36</td><td>based on 2 queens in laboratory nests</td></tr><tr><td>Leptothorax affinis</td><td>12.0</td><td>11.0</td><td>36</td><td>M</td><td>36</td><td>I</td><td>36</td><td>based on many queens in laboratory nests</td></tr></table>
 
 Queen lifespan and social organization
 
@@ -77,28 +54,7 @@ Queen lifespan and social organization
 
 Table 1 (continued)
 
-| Species | Max. lifespan | Mean lifespan | Ref. | Queen number | Ref. | Colony founding | Ref. | Comments |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Leptothorax exilis | >16 |  | 35 | M | 35 | I | 35 | based on 1 queen in laboratory nest |
-| Leptothorax lichtensteini | 17.0 | 12–15 | 10 | M | 10, 36 | I | 10 | based on many queens in laboratory nests |
-| Leptothorax melas | >10 | 9.3 | 36 | M | 36 | I | 36 | based on 5 queens in laboratory nests |
-| Leptothorax nylanderi | 19.0 | 15.0 | 9, 10 | M | 10, 36 | I | 10 | based on many queens in laboratory nests |
-| Leptothorax parvulus | 12.0 | 10.0 | 10 | M | 10, 36 | I | 10 | based on many queens in laboratory nests |
-| Leptothorax rabaudi | >10 | 5.9 | 36 | M | 36 | I | 36 | based on 15 queens in laboratory nests |
-| Leptothorax unifasciatus | 12.0 | 11.0 | 36 | M | 36 | I | 36 | based on many queens in laboratory nests |
-| Linepithema humile |  | 0.9 | 43 | P | 43, 44, 45 | D | 46, 19 | based on the observation that 90% of the queens are executed when they are about 10 month old in the field |
-| Messor semirufus | 9.0 |  | 37 | M | 39 | I | 37 | based on several queens in laboratory nests |
-| Monomorium pharaonis | 0.7 | 0.5 | 47 | P | 48 | D | 48 | based on 10 queens in laboratory nests |
-| Myrmecocystus mimicus | >11 |  | 17 | M | 41 | I | 41 | based on 1 queen in laboratory nest |
-| Myrmecia gulosa | 12.8 |  | 5 | M | 5 | I | 5 | based on 1 queen in laboratory nest |
-| Myrmecia nigriceps | $7.2^d$ | $5.8^d$ | 5 | M | 5 | I | 5 | based on 4 queens in laboratory nests |
-| Myrmecia vindex | 10.8 | 7.6 | 5 | M | 5 | I | 5 | based on 11 queens in laboratory nests |
-| Myrmecia limanica |  | 1.8 | 50 | M, P | 50 | I, D | 12 | Inferred from the rapid turn-over of queens in the field |
-| Myrmecia lobicornis |  | &lt; 2 | 11 | M, P | 11 | $I, D^b$ | 11, 12 | Inferred from genetic data on colony composition in the field |
-| Myrmecia ruginodis |  | &lt; 1.5 | 11 | M, P | 11, 52 | $I, D^b$ | 11, 12 | Inferred from genetic data on colony composition in the field |
-| Myrmecia sabuleti | 4.0 | 2.5 | 51 | M, P | 51, 52 | I, D | 12 | Inferred from queen turnover |
-| Myrmecia sulcinodis |  | 4–5 | 53 | M, P | 52, 53 | I, D | 12 | Inferred from the fluctuation of queen number per colony |
-| Myrmecia tahoensis |  | &lt; 2 | 70 | M, P | 70 | D | 70 | Inferred from genetic data on colony composition in the field |
+<table><tr><td>Species</td><td>Max. lifespan</td><td>Mean lifespan</td><td>Ref.</td><td>Queen number</td><td>Ref.</td><td>Colony founding</td><td>Ref.</td><td>Comments</td></tr><tr><td>Leptothorax exilis</td><td>&gt;16</td><td></td><td>35</td><td>M</td><td>35</td><td>I</td><td>35</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Leptothorax lichtensteini</td><td>17.0</td><td>12–15</td><td>10</td><td>M</td><td>10, 36</td><td>I</td><td>10</td><td>based on many queens in laboratory nests</td></tr><tr><td>Leptothorax melas</td><td>&gt;10</td><td>9.3</td><td>36</td><td>M</td><td>36</td><td>I</td><td>36</td><td>based on 5 queens in laboratory nests</td></tr><tr><td>Leptothorax nylanderi</td><td>19.0</td><td>15.0</td><td>9, 10</td><td>M</td><td>10, 36</td><td>I</td><td>10</td><td>based on many queens in laboratory nests</td></tr><tr><td>Leptothorax parvulus</td><td>12.0</td><td>10.0</td><td>10</td><td>M</td><td>10, 36</td><td>I</td><td>10</td><td>based on many queens in laboratory nests</td></tr><tr><td>Leptothorax rabaudi</td><td>&gt;10</td><td>5.9</td><td>36</td><td>M</td><td>36</td><td>I</td><td>36</td><td>based on 15 queens in laboratory nests</td></tr><tr><td>Leptothorax unifasciatus</td><td>12.0</td><td>11.0</td><td>36</td><td>M</td><td>36</td><td>I</td><td>36</td><td>based on many queens in laboratory nests</td></tr><tr><td>Linepithema humile</td><td></td><td>0.9</td><td>43</td><td>P</td><td>43, 44, 45</td><td>D</td><td>46, 19</td><td>based on the observation that 90% of the queens are executed when they are about 10 month old in the field</td></tr><tr><td>Messor semirufus</td><td>9.0</td><td></td><td>37</td><td>M</td><td>39</td><td>I</td><td>37</td><td>based on several queens in laboratory nests</td></tr><tr><td>Monomorium pharaonis</td><td>0.7</td><td>0.5</td><td>47</td><td>P</td><td>48</td><td>D</td><td>48</td><td>based on 10 queens in laboratory nests</td></tr><tr><td>Myrmecocystus mimicus</td><td>&gt;11</td><td></td><td>17</td><td>M</td><td>41</td><td>I</td><td>41</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Myrmecia gulosa</td><td>12.8</td><td></td><td>5</td><td>M</td><td>5</td><td>I</td><td>5</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Myrmecia nigriceps</td><td>$7.2^d$</td><td>$5.8^d$</td><td>5</td><td>M</td><td>5</td><td>I</td><td>5</td><td>based on 4 queens in laboratory nests</td></tr><tr><td>Myrmecia vindex</td><td>10.8</td><td>7.6</td><td>5</td><td>M</td><td>5</td><td>I</td><td>5</td><td>based on 11 queens in laboratory nests</td></tr><tr><td>Myrmecia limanica</td><td></td><td>1.8</td><td>50</td><td>M, P</td><td>50</td><td>I, D</td><td>12</td><td>Inferred from the rapid turn-over of queens in the field</td></tr><tr><td>Myrmecia lobicornis</td><td></td><td>&amp;lt; 2</td><td>11</td><td>M, P</td><td>11</td><td>$I, D^b$</td><td>11, 12</td><td>Inferred from genetic data on colony composition in the field</td></tr><tr><td>Myrmecia ruginodis</td><td></td><td>&amp;lt; 1.5</td><td>11</td><td>M, P</td><td>11, 52</td><td>$I, D^b$</td><td>11, 12</td><td>Inferred from genetic data on colony composition in the field</td></tr><tr><td>Myrmecia sabuleti</td><td>4.0</td><td>2.5</td><td>51</td><td>M, P</td><td>51, 52</td><td>I, D</td><td>12</td><td>Inferred from queen turnover</td></tr><tr><td>Myrmecia sulcinodis</td><td></td><td>4–5</td><td>53</td><td>M, P</td><td>52, 53</td><td>I, D</td><td>12</td><td>Inferred from the fluctuation of queen number per colony</td></tr><tr><td>Myrmecia tahoensis</td><td></td><td>&amp;lt; 2</td><td>70</td><td>M, P</td><td>70</td><td>D</td><td>70</td><td>Inferred from genetic data on colony composition in the field</td></tr></table>
 
 238
 
@@ -108,20 +64,7 @@ Kelle
 
 Table 1 (continued)
 
-| Species | Max. lifespan | Mean lifespan | Ref. | Queen number | Ref. | Colony founding | Ref. | Comments |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Odontomachus haematoda | 4.5 |  | 5 | M | 5, 62 | I | 5, 62 | based on 1 queen in laboratory nest |
-| Odontomachus insularis | 4.5 |  | 5 | M | 5 | I | 5 | based on 1 queen in laboratory nest |
-| Pogonomyrmex badius | 18.0 |  | 16 | M | 30 | I | 55 | based on 1 queen in laboratory nest |
-| Pogonomyrmex barbatus | 20.0 | 17.5 | 65 | M | 65, 66 | I | 65 | Inferred from survival of field colonies |
-| Pogonomyrmex owyheei | 30.0 | 17.0 | 2 | M | 2 | I | 55 | Inferred from survival of field colonies |
-| Rhytidoponera purpurea | 12.5 |  | 5 | M | 5, 33 | I | 5, 6 | based on 1 queen in laboratory nest |
-| Sericomyrmex urichi | 11.0 |  | 49 | M | 40 | I | 49 | based on 1 queen in laboratory nest |
-| Solenopsis invicta |  | 5.8–6.8 | 3 | M, $P^e$ | 71 | I, D | 71, 74 | Inferred from the age of colonies and rate of sperm use of queens |
-| Stenamma westwoodi | 17–18 |  | 42 | M | 58 | I | 5 | based on 1 queen in laboratory nest |
-| Tapinoma sessile | a few weeks | a few weeks | 69 | P | 69 | D | 69 | based on many queens in laboratory nests |
-| Tetraponera anthracina | >3.1 |  | 54 | P | 54, 67 | D | 67 | based on 18 queens in laboratory nests |
-| Wasmannia auropunctata |  | 1.1 | 63 | P | 63 | D | 63 | based on 12 queens in laboratory nests |
+<table><tr><td>Species</td><td>Max. lifespan</td><td>Mean lifespan</td><td>Ref.</td><td>Queen number</td><td>Ref.</td><td>Colony founding</td><td>Ref.</td><td>Comments</td></tr><tr><td>Odontomachus haematoda</td><td>4.5</td><td></td><td>5</td><td>M</td><td>5, 62</td><td>I</td><td>5, 62</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Odontomachus insularis</td><td>4.5</td><td></td><td>5</td><td>M</td><td>5</td><td>I</td><td>5</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Pogonomyrmex badius</td><td>18.0</td><td></td><td>16</td><td>M</td><td>30</td><td>I</td><td>55</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Pogonomyrmex barbatus</td><td>20.0</td><td>17.5</td><td>65</td><td>M</td><td>65, 66</td><td>I</td><td>65</td><td>Inferred from survival of field colonies</td></tr><tr><td>Pogonomyrmex owyheei</td><td>30.0</td><td>17.0</td><td>2</td><td>M</td><td>2</td><td>I</td><td>55</td><td>Inferred from survival of field colonies</td></tr><tr><td>Rhytidoponera purpurea</td><td>12.5</td><td></td><td>5</td><td>M</td><td>5, 33</td><td>I</td><td>5, 6</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Sericomyrmex urichi</td><td>11.0</td><td></td><td>49</td><td>M</td><td>40</td><td>I</td><td>49</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Solenopsis invicta</td><td></td><td>5.8–6.8</td><td>3</td><td>M, $P^e$</td><td>71</td><td>I, D</td><td>71, 74</td><td>Inferred from the age of colonies and rate of sperm use of queens</td></tr><tr><td>Stenamma westwoodi</td><td>17–18</td><td></td><td>42</td><td>M</td><td>58</td><td>I</td><td>5</td><td>based on 1 queen in laboratory nest</td></tr><tr><td>Tapinoma sessile</td><td>a few weeks</td><td>a few weeks</td><td>69</td><td>P</td><td>69</td><td>D</td><td>69</td><td>based on many queens in laboratory nests</td></tr><tr><td>Tetraponera anthracina</td><td>&gt;3.1</td><td></td><td>54</td><td>P</td><td>54, 67</td><td>D</td><td>67</td><td>based on 18 queens in laboratory nests</td></tr><tr><td>Wasmannia auropunctata</td><td></td><td>1.1</td><td>63</td><td>P</td><td>63</td><td>D</td><td>63</td><td>based on 12 queens in laboratory nests</td></tr></table>
 
 a The studied population was monogynous (Pamilo, 1 991 ) . There are no data for polygynous populations.
 
@@ -168,17 +111,7 @@ Queen lifespan and social organization
 
 Table 2. Lifespan (years) of queens in termites
 
-|  | Max. lifespan | Mean lifespan | Ref. | Comments |
-| --- | --- | --- | --- | --- |
-| Cyclotermes sp. | 12 |  | 1 | no indication available on the source of information |
-| Kalotermes minor | 14 |  | 2 | based on several queens in laboratory nests |
-| Macrotermes bellicosus | >11 | >11 | 3 | based on several queens in laboratory nests; several queens still alive |
-| Macrotermes michaelseni | 19 | ca. 18 | 3 | based on 8 queens in laboratory nests; several queens still alive |
-| Macrotermes subhyalinus | >17 | ca. 16 | 3 | based on 7 queens in laboratory nests; several queens still alive |
-| Mastotermes darwiniensis |  | >7 | 4 | based on 1 queen in laboratory nest$^{a}$ |
-| Reticulitermes hesperus | 30 |  | 5 | no indication available on the source of information |
-| Reticulitermes santonensis | >7$^{b}$ | >7 | 6 | based on several queens in laboratory nests |
-| Zootermopsis angusticollis$^{d}$ | 5.9$^{c}$ |  | 7 | based on 1 queen in laboratory nest |
+<table><tr><td></td><td>Max. lifespan</td><td>Mean lifespan</td><td>Ref.</td><td>Comments</td></tr><tr><td>Cyclotermes sp.</td><td>12</td><td></td><td>1</td><td>no indication available on the source of information</td></tr><tr><td>Kalotermes minor</td><td>14</td><td></td><td>2</td><td>based on several queens in laboratory nests</td></tr><tr><td>Macrotermes bellicosus</td><td>&gt;11</td><td>&gt;11</td><td>3</td><td>based on several queens in laboratory nests; several queens still alive</td></tr><tr><td>Macrotermes michaelseni</td><td>19</td><td>ca. 18</td><td>3</td><td>based on 8 queens in laboratory nests; several queens still alive</td></tr><tr><td>Macrotermes subhyalinus</td><td>&gt;17</td><td>ca. 16</td><td>3</td><td>based on 7 queens in laboratory nests; several queens still alive</td></tr><tr><td>Mastotermes darwiniensis</td><td></td><td>&gt;7</td><td>4</td><td>based on 1 queen in laboratory nest$^{a}$</td></tr><tr><td>Reticulitermes hesperus</td><td>30</td><td></td><td>5</td><td>no indication available on the source of information</td></tr><tr><td>Reticulitermes santonensis</td><td>&gt;7$^{b}$</td><td>&gt;7</td><td>6</td><td>based on several queens in laboratory nests</td></tr><tr><td>Zootermopsis angusticollis$^{d}$</td><td>5.9$^{c}$</td><td></td><td>7</td><td>based on 1 queen in laboratory nest</td></tr></table>
 
 a The queen died when she was between 7–17 years old. The male lived more than 17 years.
 

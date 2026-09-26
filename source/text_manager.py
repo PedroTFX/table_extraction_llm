@@ -251,7 +251,11 @@ def get_text(text, size):
             content = re.sub(r'\s+', '', content)
             return content.strip()
 
-        text = re.sub(r'\$([^$]+)\$', humanize_math, text)
+        # An inline formula is short and on one line. Unbounded '\$([^$]+)\$'
+        # paired a stray '$' with one pages later and squashed everything in
+        # between into space-less text (16k chars of Gibb2005's methods, incl.
+        # 'measured for 20 males of each species').
+        text = re.sub(r'\$([^$\n]{1,200}?)\$', humanize_math, text)
         text = re.sub(r'[†‡§¶]', '', text)
         # Prose from MinerU carries the same inline HTML/entities as tables
         # (<sup> footnote markers, &amp;, &nbsp;, <br>); normalise them so the

@@ -186,59 +186,7 @@ Journal of Insect Conservation (2020) 24:431–443
 
 Table 1   List of herb and shrub species encountered during focal observation in the study sites
 
-| Serial no | Binomial name | Family |
-| --- | --- | --- |
-| 1 | *Rungia parviflora | Acanthaceae |
-| 2 | Clerodendrum viscosum (=C. infortunatum) | Lamiaceae |
-| 3 | Holarrhena pubescens | Apocynaceae |
-| 4 | *Sida veronicaefolia (=S. humilis) | Malvaceae |
-| 5 | Croton oblongifolius | Euphorbiaceae |
-| 6 | *Desmodium triflorum | Fabaceae |
-| 7 | Meyna spinosa (Xeromphis) | Rubiaceae |
-| 8 | Emilia sonchifolia | Asteraceae |
-| 9 | Phyllanthus simplex | Phyllanthaceae |
-| 10 | Spermacoce hispida | Rubiaceae |
-| 11 | Evolvulus nummularius | Convolvulaceae |
-| 12 | Hybanthus enneaspermus (=Ionidium suffruticosum) | Violaceae |
-| 13 | *Sida acuta | Malvaceae |
-| 14 | Ludwigia parviflora | Onagraceae |
-| 15 | Sida rhombifolia var. rhomboidea | Malvaceae |
-| 16 | Melochia corchorifolia | Sterculiaceae |
-| 17 | Corchorus aestuans | Tiliaceae |
-| 18 | *Hyptis suaveolens | Lamiaceae |
-| 19 | Didelacanthus prostratus (=Ruellia prostrata) | Acanthaceae |
-| 20 | Elephantopus scaber | Asteraceae |
-| 21 | Hedyotis pinifolia | Rubiaceae |
-| 22 | Unidentified plant 1 | - |
-| 23 | Bonnaya brachiata (=Lindernia ciliata) | Linderniaceae |
-| 24 | Evolvulus alsinoides | Convolvulaceae |
-| 25 | *Glycosmis pentaphylla | Rutaceae |
-| 26 | Dicliptera sp. | Acanthaceae |
-| 27 | Vernonia cinerea | Asteraceae |
-| 28 | Oldenlandia corymbosa | Rubiaceae |
-| 29 | Alternanthera sessilis | Amaranthaceae |
-| 30 | Lobelia sp. | Campanulaceae |
-| 31 | Spermacoce ocymoides | Rubiaceae |
-| 32 | Scoparia dulcis | Plantaginaceae |
-| 33 | Unidentified plant 2 | - |
-| 34 | *Anisochilus carnosus | Lamiaceae |
-| 35 | Unidentified plant 3 | - |
-| 36 | Unidentified plant 4 | - |
-| 37 | Taramnus labialis | Fabaceae |
-| 38 | Biophytum sensitivum | Oxalidaceae |
-| 39 | *Limnophila repens | Scrophulariaceae |
-| 40 | Hydrolea zeylanica | Hydroleaceae |
-| 41 | Oldenlandia sp. | Rubiaceae |
-| 42 | Erythraea roxburghii | Gentianaceae |
-| 43 | Drosera burmannii | Droseraceae |
-| 44 | Eranthemum sp. | Acanthaceae |
-| 45 | Barleria prionitis | Acanthaceae |
-| 46 | Ageratum conyzoides | Asteraceae |
-| 47 | Boerhavia repens | Nyctaginaceae |
-| 48 | Crotalaria prostrata | Fabaceae |
-| 49 | *Lindernia crustacea | Linderniaceae |
-| 50 | Unidentified plant 5 | - |
-| 51 | *Phyllanthus rheedei | Phyllanthaceae |
+<table><tr><td>Serial no</td><td>Binomial name</td><td>Family</td></tr><tr><td>1</td><td>*Rungia parviflora</td><td>Acanthaceae</td></tr><tr><td>2</td><td>Clerodendrum viscosum (=C. infortunatum)</td><td>Lamiaceae</td></tr><tr><td>3</td><td>Holarrhena pubescens</td><td>Apocynaceae</td></tr><tr><td>4</td><td>*Sida veronicaefolia (=S. humilis)</td><td>Malvaceae</td></tr><tr><td>5</td><td>Croton oblongifolius</td><td>Euphorbiaceae</td></tr><tr><td>6</td><td>*Desmodium triflorum</td><td>Fabaceae</td></tr><tr><td>7</td><td>Meyna spinosa (Xeromphis)</td><td>Rubiaceae</td></tr><tr><td>8</td><td>Emilia sonchifolia</td><td>Asteraceae</td></tr><tr><td>9</td><td>Phyllanthus simplex</td><td>Phyllanthaceae</td></tr><tr><td>10</td><td>Spermacoce hispida</td><td>Rubiaceae</td></tr><tr><td>11</td><td>Evolvulus nummularius</td><td>Convolvulaceae</td></tr><tr><td>12</td><td>Hybanthus enneaspermus (=Ionidium suffruticosum)</td><td>Violaceae</td></tr><tr><td>13</td><td>*Sida acuta</td><td>Malvaceae</td></tr><tr><td>14</td><td>Ludwigia parviflora</td><td>Onagraceae</td></tr><tr><td>15</td><td>Sida rhombifolia var. rhomboidea</td><td>Malvaceae</td></tr><tr><td>16</td><td>Melochia corchorifolia</td><td>Sterculiaceae</td></tr><tr><td>17</td><td>Corchorus aestuans</td><td>Tiliaceae</td></tr><tr><td>18</td><td>*Hyptis suaveolens</td><td>Lamiaceae</td></tr><tr><td>19</td><td>Didelacanthus prostratus (=Ruellia prostrata)</td><td>Acanthaceae</td></tr><tr><td>20</td><td>Elephantopus scaber</td><td>Asteraceae</td></tr><tr><td>21</td><td>Hedyotis pinifolia</td><td>Rubiaceae</td></tr><tr><td>22</td><td>Unidentified plant 1</td><td>-</td></tr><tr><td>23</td><td>Bonnaya brachiata (=Lindernia ciliata)</td><td>Linderniaceae</td></tr><tr><td>24</td><td>Evolvulus alsinoides</td><td>Convolvulaceae</td></tr><tr><td>25</td><td>*Glycosmis pentaphylla</td><td>Rutaceae</td></tr><tr><td>26</td><td>Dicliptera sp.</td><td>Acanthaceae</td></tr><tr><td>27</td><td>Vernonia cinerea</td><td>Asteraceae</td></tr><tr><td>28</td><td>Oldenlandia corymbosa</td><td>Rubiaceae</td></tr><tr><td>29</td><td>Alternanthera sessilis</td><td>Amaranthaceae</td></tr><tr><td>30</td><td>Lobelia sp.</td><td>Campanulaceae</td></tr><tr><td>31</td><td>Spermacoce ocymoides</td><td>Rubiaceae</td></tr><tr><td>32</td><td>Scoparia dulcis</td><td>Plantaginaceae</td></tr><tr><td>33</td><td>Unidentified plant 2</td><td>-</td></tr><tr><td>34</td><td>*Anisochilus carnosus</td><td>Lamiaceae</td></tr><tr><td>35</td><td>Unidentified plant 3</td><td>-</td></tr><tr><td>36</td><td>Unidentified plant 4</td><td>-</td></tr><tr><td>37</td><td>Taramnus labialis</td><td>Fabaceae</td></tr><tr><td>38</td><td>Biophytum sensitivum</td><td>Oxalidaceae</td></tr><tr><td>39</td><td>*Limnophila repens</td><td>Scrophulariaceae</td></tr><tr><td>40</td><td>Hydrolea zeylanica</td><td>Hydroleaceae</td></tr><tr><td>41</td><td>Oldenlandia sp.</td><td>Rubiaceae</td></tr><tr><td>42</td><td>Erythraea roxburghii</td><td>Gentianaceae</td></tr><tr><td>43</td><td>Drosera burmannii</td><td>Droseraceae</td></tr><tr><td>44</td><td>Eranthemum sp.</td><td>Acanthaceae</td></tr><tr><td>45</td><td>Barleria prionitis</td><td>Acanthaceae</td></tr><tr><td>46</td><td>Ageratum conyzoides</td><td>Asteraceae</td></tr><tr><td>47</td><td>Boerhavia repens</td><td>Nyctaginaceae</td></tr><tr><td>48</td><td>Crotalaria prostrata</td><td>Fabaceae</td></tr><tr><td>49</td><td>*Lindernia crustacea</td><td>Linderniaceae</td></tr><tr><td>50</td><td>Unidentified plant 5</td><td>-</td></tr><tr><td>51</td><td>*Phyllanthus rheedei</td><td>Phyllanthaceae</td></tr></table>
 
 1 3
 
@@ -250,55 +198,13 @@ Journal of Insect Conservation (2020) 24:431–443
 
 Table 1   (continued)
 
-| Serial no | Binomial name | Family |
-| --- | --- | --- |
-| 52 | Allophylus cobbe | Sapindaceae |
-| 53 | Cleome viscosa | Cleomaceae |
-| 54 | *Ocimum canum | Lamiaceae |
-| 55 | *Ocimum basilicum | Lamiaceae |
-| 56 | Mollugo stricta | Molluginaceae |
-| 57 | Unidentified plant 6 | - |
-| 58 | *Crotalaria pallida | Fabaceae |
-| 59 | *Cipadessa baccifera | Meliaceae |
-| 60 | Adenosma indianum | Scrophulariaceae |
-| 61 | Urena lobata | Malvaceae |
-| 62 | Spilanthes paniculata | Asteraceae |
-| 63 | Achyranthes bidentata | Amaranthaceae |
-| 64 | Jatropha curcas | Euphorbiaceae |
-| 65 | *Stylosanthes hamata | Fabaceae |
-| 66 | *Cassia occidentalis | Caesalpiniaceae |
-| 67 | *Cassia tora | Caesalpiniaceae |
-| 68 | *Cassia alata | Caesalpiniaceae |
-| 69 | *Tephrosia purpurea | Fabaceae |
-| 70 | *Tridax procumbens | Asteraceae |
-| 71 | Mimosa pudica | Mimosaceae |
-| 72 | *Chromolaena odorata (=Eupatorium odoratum) | Asteraceae |
-| 73 | *Jatropha gossypiifolia | Euphorbiaceae |
-| 74 | Bryophyllum sp. | Crassulaceae |
-| 75 | *Andrographis paniculata | Acanthaceae |
-| 76 | Cassia hirsuta | Caesalpiniaceae |
-| 77 | *Croton bonplandianus | Euphorbiaceae |
-| 78 | *Martynia annua | Martyniaceae |
+<table><tr><td>Serial no</td><td>Binomial name</td><td>Family</td></tr><tr><td>52</td><td>Allophylus cobbe</td><td>Sapindaceae</td></tr><tr><td>53</td><td>Cleome viscosa</td><td>Cleomaceae</td></tr><tr><td>54</td><td>*Ocimum canum</td><td>Lamiaceae</td></tr><tr><td>55</td><td>*Ocimum basilicum</td><td>Lamiaceae</td></tr><tr><td>56</td><td>Mollugo stricta</td><td>Molluginaceae</td></tr><tr><td>57</td><td>Unidentified plant 6</td><td>-</td></tr><tr><td>58</td><td>*Crotalaria pallida</td><td>Fabaceae</td></tr><tr><td>59</td><td>*Cipadessa baccifera</td><td>Meliaceae</td></tr><tr><td>60</td><td>Adenosma indianum</td><td>Scrophulariaceae</td></tr><tr><td>61</td><td>Urena lobata</td><td>Malvaceae</td></tr><tr><td>62</td><td>Spilanthes paniculata</td><td>Asteraceae</td></tr><tr><td>63</td><td>Achyranthes bidentata</td><td>Amaranthaceae</td></tr><tr><td>64</td><td>Jatropha curcas</td><td>Euphorbiaceae</td></tr><tr><td>65</td><td>*Stylosanthes hamata</td><td>Fabaceae</td></tr><tr><td>66</td><td>*Cassia occidentalis</td><td>Caesalpiniaceae</td></tr><tr><td>67</td><td>*Cassia tora</td><td>Caesalpiniaceae</td></tr><tr><td>68</td><td>*Cassia alata</td><td>Caesalpiniaceae</td></tr><tr><td>69</td><td>*Tephrosia purpurea</td><td>Fabaceae</td></tr><tr><td>70</td><td>*Tridax procumbens</td><td>Asteraceae</td></tr><tr><td>71</td><td>Mimosa pudica</td><td>Mimosaceae</td></tr><tr><td>72</td><td>*Chromolaena odorata (=Eupatorium odoratum)</td><td>Asteraceae</td></tr><tr><td>73</td><td>*Jatropha gossypiifolia</td><td>Euphorbiaceae</td></tr><tr><td>74</td><td>Bryophyllum sp.</td><td>Crassulaceae</td></tr><tr><td>75</td><td>*Andrographis paniculata</td><td>Acanthaceae</td></tr><tr><td>76</td><td>Cassia hirsuta</td><td>Caesalpiniaceae</td></tr><tr><td>77</td><td>*Croton bonplandianus</td><td>Euphorbiaceae</td></tr><tr><td>78</td><td>*Martynia annua</td><td>Martyniaceae</td></tr></table>
 
 Asterisk (\*) indicates species which received bee visits during focal observation
 
 Fig. 1   Family wise number of plant species visited by bees. Horizontal axis represents number of plant families which were observed to be visited by bees. Height of the column represents number of plant species (under each respective family) that were visited by bees during the study period
 
-| Plant families | Number of species |
-| --- | --- |
-| Fabaceae | 4 |
-| Lamiaceae | 4 |
-| Caesalpiniaceae | 3 |
-| Acanthaceae | 2 |
-| Asteraceae | 2 |
-| Euphorbiaceae | 2 |
-| Malvaceae | 2 |
-| Linderniaceae | 1 |
-| Martyniaceae | 1 |
-| Meliaceae | 1 |
-| Phyllanthaceae | 1 |
-| Rutaceae | 1 |
-| Scrophulariaceae | 1 |
+<table><tr><td>Plant families</td><td>Number of species</td></tr><tr><td>Fabaceae</td><td>4</td></tr><tr><td>Lamiaceae</td><td>4</td></tr><tr><td>Caesalpiniaceae</td><td>3</td></tr><tr><td>Acanthaceae</td><td>2</td></tr><tr><td>Asteraceae</td><td>2</td></tr><tr><td>Euphorbiaceae</td><td>2</td></tr><tr><td>Malvaceae</td><td>2</td></tr><tr><td>Linderniaceae</td><td>1</td></tr><tr><td>Martyniaceae</td><td>1</td></tr><tr><td>Meliaceae</td><td>1</td></tr><tr><td>Phyllanthaceae</td><td>1</td></tr><tr><td>Rutaceae</td><td>1</td></tr><tr><td>Scrophulariaceae</td><td>1</td></tr></table>
 
 1 3
 
@@ -348,30 +254,7 @@ Fig. 2   Relationships between bee visitation rate (VR) and a nectar sugar c
 
 the most important habitat variable and has been previously reported as being a crucial one for increasing bee visitation (Hegland and Boeke 2006). High flower density acts as a visual signal of resource availability to the bees (Dafni et al. 1997). Therefore, in a fragmented landscape, at patch scale, non-crop habitats with high flower density are an attractive foraging ground for pollinators, and subsequently, non-crops and nearby crops might involve in competition for pollinator visitation. However, presence of non-crops
 
-| log(DIA+1) | log(SUG+1) |
-| --- | --- |
-| ~0.8 | ~0.7 |
-| ~1.2 | ~0.5 |
-| ~1.3 | ~1.4 |
-| ~1.3 | ~1.7 |
-| ~1.4 | ~1.4 |
-| ~1.5 | ~0.6 |
-| ~1.6 | ~0.3 |
-| ~1.7 | ~0.6 |
-| ~1.7 | ~0.7 |
-| ~1.7 | ~1.2 |
-| ~1.8 | ~1.4 |
-| ~1.8 | ~1.7 |
-| ~1.9 | ~1.5 |
-| ~2.2 | ~1.0 |
-| ~2.4 | ~1.3 |
-| ~2.5 | ~0.2 |
-| ~2.6 | ~0.8 |
-| ~2.8 | ~0.2 |
-| ~2.9 | ~0.7 |
-| ~2.9 | ~0.7 |
-| ~3.0 | ~0.6 |
-| ~3.1 | ~0.1 |
+<table><tr><td>log(DIA+1)</td><td>log(SUG+1)</td></tr><tr><td>~0.8</td><td>~0.7</td></tr><tr><td>~1.2</td><td>~0.5</td></tr><tr><td>~1.3</td><td>~1.4</td></tr><tr><td>~1.3</td><td>~1.7</td></tr><tr><td>~1.4</td><td>~1.4</td></tr><tr><td>~1.5</td><td>~0.6</td></tr><tr><td>~1.6</td><td>~0.3</td></tr><tr><td>~1.7</td><td>~0.6</td></tr><tr><td>~1.7</td><td>~0.7</td></tr><tr><td>~1.7</td><td>~1.2</td></tr><tr><td>~1.8</td><td>~1.4</td></tr><tr><td>~1.8</td><td>~1.7</td></tr><tr><td>~1.9</td><td>~1.5</td></tr><tr><td>~2.2</td><td>~1.0</td></tr><tr><td>~2.4</td><td>~1.3</td></tr><tr><td>~2.5</td><td>~0.2</td></tr><tr><td>~2.6</td><td>~0.8</td></tr><tr><td>~2.8</td><td>~0.2</td></tr><tr><td>~2.9</td><td>~0.7</td></tr><tr><td>~2.9</td><td>~0.7</td></tr><tr><td>~3.0</td><td>~0.6</td></tr><tr><td>~3.1</td><td>~0.1</td></tr></table>
 
 Fig. 3   Relationship between nectar sugar content (SUG) and corolla diameter (DIA). Regression line was plotted after GLM fitting
 
@@ -541,28 +424,7 @@ Journal of Insect Conservation (2020) 24:431–443
 
 List of bee species encountered during focal observation and their respective traits.
 
-| Sl. No. | Bee species | BOL ± SE (mm) | ITD ± SE (mm) | FLL ± SE (mm) | MLL ± SE (mm) | TOL ± SE (mm) |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | Pseudapis sp. | 7.38±0.07 | 1.49±0.04 | 3.79±0.02 | 4.08±0.03 | 2.56±0.12 |
-| 2 | Heriades sp. | 5.57 | 1.35 | 3.16 | 3.04 | 3.37 |
-| 3 | Braunsapis sp. | 5.53±0.19 | 1.49±0.16 | 3.69±0.39 | 3.16±0.32 | 2.61±0.16 |
-| 4 | Halictus sp.1 | 7.74±0.16 | 1.7±0.07 | 3.94±0.05 | 4.32±0.08 | 3.29±0.07 |
-| 5 | Halictus sp.2 | 7.7 | 1.27 | 4.12 | 4.57 | 4.2 |
-| 6 | Steganomus sp. | 8.06±0.02 | 1.96±0.02 | 4.51±0.09 | 4.87±0.06 | 3.18±0.35 |
-| 7 | Apis dorsata | 19.43±0.1 | 3.28±0.05 | 9.82±0.08 | 9.18±0.2 | 7.65±0.15 |
-| 8 | Xylocopa sp.1 | 26.58±0.16 | 6.77±0.31 | 15.98±0.05 | 15.72±0.07 | 12.89±0.61 |
-| 9 | Curvinomia sp. | 10.18±0.32 | 2.67±0.1 | 5.35±0.37 | 5.7±0.34 | 7.42±0.08 |
-| 10 | Megachile bicolor | 17.08±0.53 | 4.47±0.06 | 9.71±0.51 | 8.19±0.12 | 5.35±0.35 |
-| 11 | Megachile sp. | 9.2 | 2.46 | 6.07 | 5.05 | NA |
-| 12 | Amegilla sp. | 15.88±0.91 | 3.7±0.21 | 8.33±0.18 | 9.51±0.3 | 12.37±0.43 |
-| 13 | Coelioxys sp. | 7.28 | 1.71 | 3.1 | 3.71 | 3.13 |
-| 14 | Xylocopa sp.2 | 12.93 | 4.72 | 7.07 | 8.11 | NA |
-| 15 | Thyreus sp. | 15.75±0.64 | 3.62±0.12 | 8.7±0.12 | 10.69±0.15 | 5.83±0.17 |
-| 16 | Ceratina sp. | 7.62±0.13 | 1.76±0.06 | 3.76±0.11 | 3.63±0.05 | 4.98±0.18 |
-| 17 | Lasioglossum sp.3 | 6.7±0.1 | 1.25±0.04 | 3.32±0.1 | 3.48±0.12 | 3.15±0.1 |
-| 18 | Lasioglossum sp.2 | 8.64±0.17 | 1.73±0.03 | 4.72±0.33 | 4.58±0.2 | 3.75±0.16 |
-| 19 | Lasioglossum sp.5 | 5.8±0.15 | 1.23±0.03 | 2.98±0.08 | 3.2±0.08 | 2.97±0.19 |
-| 20 | Trigona sp. | 4.81±0.18 | 1.09±0.04 | 3.13±0.11 | 3.75±0.15 | 1.75±0.05 |
+<table><tr><td>Sl. No.</td><td>Bee species</td><td>BOL ± SE (mm)</td><td>ITD ± SE (mm)</td><td>FLL ± SE (mm)</td><td>MLL ± SE (mm)</td><td>TOL ± SE (mm)</td></tr><tr><td>1</td><td>Pseudapis sp.</td><td>7.38±0.07</td><td>1.49±0.04</td><td>3.79±0.02</td><td>4.08±0.03</td><td>2.56±0.12</td></tr><tr><td>2</td><td>Heriades sp.</td><td>5.57</td><td>1.35</td><td>3.16</td><td>3.04</td><td>3.37</td></tr><tr><td>3</td><td>Braunsapis sp.</td><td>5.53±0.19</td><td>1.49±0.16</td><td>3.69±0.39</td><td>3.16±0.32</td><td>2.61±0.16</td></tr><tr><td>4</td><td>Halictus sp.1</td><td>7.74±0.16</td><td>1.7±0.07</td><td>3.94±0.05</td><td>4.32±0.08</td><td>3.29±0.07</td></tr><tr><td>5</td><td>Halictus sp.2</td><td>7.7</td><td>1.27</td><td>4.12</td><td>4.57</td><td>4.2</td></tr><tr><td>6</td><td>Steganomus sp.</td><td>8.06±0.02</td><td>1.96±0.02</td><td>4.51±0.09</td><td>4.87±0.06</td><td>3.18±0.35</td></tr><tr><td>7</td><td>Apis dorsata</td><td>19.43±0.1</td><td>3.28±0.05</td><td>9.82±0.08</td><td>9.18±0.2</td><td>7.65±0.15</td></tr><tr><td>8</td><td>Xylocopa sp.1</td><td>26.58±0.16</td><td>6.77±0.31</td><td>15.98±0.05</td><td>15.72±0.07</td><td>12.89±0.61</td></tr><tr><td>9</td><td>Curvinomia sp.</td><td>10.18±0.32</td><td>2.67±0.1</td><td>5.35±0.37</td><td>5.7±0.34</td><td>7.42±0.08</td></tr><tr><td>10</td><td>Megachile bicolor</td><td>17.08±0.53</td><td>4.47±0.06</td><td>9.71±0.51</td><td>8.19±0.12</td><td>5.35±0.35</td></tr><tr><td>11</td><td>Megachile sp.</td><td>9.2</td><td>2.46</td><td>6.07</td><td>5.05</td><td>NA</td></tr><tr><td>12</td><td>Amegilla sp.</td><td>15.88±0.91</td><td>3.7±0.21</td><td>8.33±0.18</td><td>9.51±0.3</td><td>12.37±0.43</td></tr><tr><td>13</td><td>Coelioxys sp.</td><td>7.28</td><td>1.71</td><td>3.1</td><td>3.71</td><td>3.13</td></tr><tr><td>14</td><td>Xylocopa sp.2</td><td>12.93</td><td>4.72</td><td>7.07</td><td>8.11</td><td>NA</td></tr><tr><td>15</td><td>Thyreus sp.</td><td>15.75±0.64</td><td>3.62±0.12</td><td>8.7±0.12</td><td>10.69±0.15</td><td>5.83±0.17</td></tr><tr><td>16</td><td>Ceratina sp.</td><td>7.62±0.13</td><td>1.76±0.06</td><td>3.76±0.11</td><td>3.63±0.05</td><td>4.98±0.18</td></tr><tr><td>17</td><td>Lasioglossum sp.3</td><td>6.7±0.1</td><td>1.25±0.04</td><td>3.32±0.1</td><td>3.48±0.12</td><td>3.15±0.1</td></tr><tr><td>18</td><td>Lasioglossum sp.2</td><td>8.64±0.17</td><td>1.73±0.03</td><td>4.72±0.33</td><td>4.58±0.2</td><td>3.75±0.16</td></tr><tr><td>19</td><td>Lasioglossum sp.5</td><td>5.8±0.15</td><td>1.23±0.03</td><td>2.98±0.08</td><td>3.2±0.08</td><td>2.97±0.19</td></tr><tr><td>20</td><td>Trigona sp.</td><td>4.81±0.18</td><td>1.09±0.04</td><td>3.13±0.11</td><td>3.75±0.15</td><td>1.75±0.05</td></tr></table>
 
 ecies of bees, there was only one individual in our collection and hence, wit
 

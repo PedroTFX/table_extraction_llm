@@ -147,10 +147,7 @@ We gathered data on body size and dispersal ability for each arthropod species s
 
 Table 1. Selection, definition, and ecological relevance of the functional traits used in the study.
 
-| Traits Category | Traits | Data Type | Attributes (Abbreviations) | Definition | Ecological Relevance |
-| --- | --- | --- | --- | --- | --- |
-| Guild | Type of food | Multi-choice nominal | Plants (FoodPl); animals (FoodAni); fungi (FoodFg); detritus (FoodDet); coprophagous organisms (FoodCopro) | Each guild is categorized according to the primary food consumed by the species during their adult stages, except for Lepidoptera, for which the classification is based on the feeding habits of the larvae. | Under different climatic conditions, the natural resources available for arthropod feeding may vary. This can affect arthropod feeding guilds and lead to different arthropod communities. |
-| Feeding behavior | Mode of ingestion | Nominal | Chewing and cutting (IngCC); piercing and sucking (IngPS); external digestion and sucking (IngEDS) | Depends on the type of mouthpart and, thus, on the way in which arthropods feed. For Lepidoptera, the classification is based on the mouthparts of the larvae. | Determines feeding strategies and diet specialization, influencing nutrient cycling and energy flow within ecosystems. |
+<table><tr><td>Traits Category</td><td>Traits</td><td>Data Type</td><td>Attributes (Abbreviations)</td><td>Definition</td><td>Ecological Relevance</td></tr><tr><td>Guild</td><td>Type of food</td><td>Multi-choice nominal</td><td>Plants (FoodPl); animals (FoodAni); fungi (FoodFg); detritus (FoodDet); coprophagous organisms (FoodCopro)</td><td>Each guild is categorized according to the primary food consumed by the species during their adult stages, except for Lepidoptera, for which the classification is based on the feeding habits of the larvae.</td><td>Under different climatic conditions, the natural resources available for arthropod feeding may vary. This can affect arthropod feeding guilds and lead to different arthropod communities.</td></tr><tr><td>Feeding behavior</td><td>Mode of ingestion</td><td>Nominal</td><td>Chewing and cutting (IngCC); piercing and sucking (IngPS); external digestion and sucking (IngEDS)</td><td>Depends on the type of mouthpart and, thus, on the way in which arthropods feed. For Lepidoptera, the classification is based on the mouthparts of the larvae.</td><td>Determines feeding strategies and diet specialization, influencing nutrient cycling and energy flow within ecosystems.</td></tr></table>
 
 <!-- page 6 of 40 -->
 
@@ -160,13 +157,7 @@ Insects 2024, 15, 677
 
 Table 1. Cont.
 
-| Traits Category | Traits | Data Type | Attributes (Abbreviations) | Definition | Ecological Relevance |
-| --- | --- | --- | --- | --- | --- |
-| Ecological | Body size | Continuous | Standardized body size (bodysizeStand); body size (bodysize) | Defined as species mean body length. | Species' body size is linked to their metabolism, which influences their adaptability and ecological niches. |
-| Ecological | Dispersal ability | Nominal | Low dispersal ability (Ldisp); High dispersal ability (Hdisp) | Dispersal ability (high or low) is attributed based on physical characteristics of the animal. Presence or absence of wings and ballooning capacity for spiders. | Animals with high dispersal ability will tend to respond more quickly to unsuitable abiotic conditions in order to find a more suitable environment. In contrast, animals with low dispersal ability will have more difficulty in migrating to better conditions. |
-| Ecological | Diel activity | Multi-choice nominal | Day (ActDay); Night (ActNig); Twilight (ActTw) | Refers to the main period of activity of the species during the day. | Diel activity shapes how species interact with their environment and each other, and also impacts how arthropods respond to heat. Nocturnal species are less affected by daytime temperatures, as they avoid direct sunlight and extreme heat by remaining hidden. |
-| Coloration | Color of beetle cuticle | Nominal | Black (Color_Black); blackish (Color_Blackish); reddish-brown (Color_ReddishBrown) | Refers to the main nuance observed on the cuticle. Black refers to a black cuticle. Blackish refers to a main black tendency with a reddish/orange color. Reddish-brown refers to a main tendency orange/brown. | Color can serve several functions, including signaling, mating, camouflage, and thermoregulation. For this reason, beetle color should provide information about the heat tolerance of the species. |
-| Coloration | Presence of iridescence on beetle cuticle | Nominal | Iridescence (IridescentColor) | Refers to the presence or absence of iridescence on the beetle cuticle. | The presence of iridescence helps thermoregulation by reducing solar absorption and limiting risks of overheating. |
+<table><tr><td>Traits Category</td><td>Traits</td><td>Data Type</td><td>Attributes (Abbreviations)</td><td>Definition</td><td>Ecological Relevance</td></tr><tr><td>Ecological</td><td>Body size</td><td>Continuous</td><td>Standardized body size (bodysizeStand); body size (bodysize)</td><td>Defined as species mean body length.</td><td>Species' body size is linked to their metabolism, which influences their adaptability and ecological niches.</td></tr><tr><td>Ecological</td><td>Dispersal ability</td><td>Nominal</td><td>Low dispersal ability (Ldisp); High dispersal ability (Hdisp)</td><td>Dispersal ability (high or low) is attributed based on physical characteristics of the animal. Presence or absence of wings and ballooning capacity for spiders.</td><td>Animals with high dispersal ability will tend to respond more quickly to unsuitable abiotic conditions in order to find a more suitable environment. In contrast, animals with low dispersal ability will have more difficulty in migrating to better conditions.</td></tr><tr><td>Ecological</td><td>Diel activity</td><td>Multi-choice nominal</td><td>Day (ActDay); Night (ActNig); Twilight (ActTw)</td><td>Refers to the main period of activity of the species during the day.</td><td>Diel activity shapes how species interact with their environment and each other, and also impacts how arthropods respond to heat. Nocturnal species are less affected by daytime temperatures, as they avoid direct sunlight and extreme heat by remaining hidden.</td></tr><tr><td>Coloration</td><td>Color of beetle cuticle</td><td>Nominal</td><td>Black (Color_Black); blackish (Color_Blackish); reddish-brown (Color_ReddishBrown)</td><td>Refers to the main nuance observed on the cuticle. Black refers to a black cuticle. Blackish refers to a main black tendency with a reddish/orange color. Reddish-brown refers to a main tendency orange/brown.</td><td>Color can serve several functions, including signaling, mating, camouflage, and thermoregulation. For this reason, beetle color should provide information about the heat tolerance of the species.</td></tr><tr><td>Coloration</td><td>Presence of iridescence on beetle cuticle</td><td>Nominal</td><td>Iridescence (IridescentColor)</td><td>Refers to the presence or absence of iridescence on the beetle cuticle.</td><td>The presence of iridescence helps thermoregulation by reducing solar absorption and limiting risks of overheating.</td></tr></table>
 
 Information on traits was gathered through a thorough review of the literature, encompassing original species descriptions, initial records of species in the Azores, short communications, and ecological research. Additionally, information was obtained from experts who identified the specimens, or specialists (P.A.V. Borges, Pedro Cardoso, Sofia Terzopoulou) in the relevant taxonomic group, in cases where specific species information was unavailable.
 
@@ -248,50 +239,7 @@ With this context in mind, let us delve into the details.
 
 Considering all the arthropods during the summer, all the guilds (Figure 3) showed significantly lower abundances at high altitude than at middle and low altitude. There ish seasons, showing a hump shape along the altitudinal gradient. an exception for predators, for which the highest abundance was found at mid-altitude forrbivores, coprophagous organisms, and fungivores also showed low both seasons, showing a hump shape along the altitudinal gradient. During winter, the herbivores, coprophagous organisms, and fungivores also showed lower abundances at high altitude than at low altitude. However, the altitude gradient was less pronouncedn summer. Nevertheless, during winter, there was a treatment r than in summer. Nevertheless, during winter, there was a treatment response for all trophicc levels, with higher abundances in the OTCs, except for the detr levels, with higher abundances in the OTCs, except for the detritivores, which showed no significant differences between altitude and treatment.
 
-| Trait Category | Season | Treatment::Control (Q1~Median ~Q3) | Treatment::OTC (Q1~Median ~Q3) |
-| :--- | :--- | :--- | :--- |
-| Herbivore | Winter | 0.20~0.23 ~0.24 | 0.28~0.31 ~0.35 |
-| Predator | Winter | 0.79~0.81 ~0.82 | 0.82~0.85 ~0.87 |
-| Fungivore | Winter | 0.11~0.14 ~0.16 | 0.13~0.16 ~0.21 |
-| Detritivore | Winter | 0.19~0.23 ~0.25 | 0.15~0.18 ~0.24 |
-| Coprophagous | Winter | 0.09~0.12 ~0.14 | 0.12~0.14 ~0.17 |
-| Chewing and cutting | Winter | 0.86~0.88 ~0.89 | 0.80~0.85 ~0.87 |
-| External digestion and sucking | Winter | 0.12~0.13 ~0.14 | 0.14~0.18 ~0.26 |
-| Piercing and sucking | Summer | 0.01~0.02 ~0.03 | 0.01~0.02 ~0.04 |
-| Body size | Summer | 0.55~0.58 ~0.60 | 0.60~0.63 ~0.66 |
-| Active Day | Summer | 0.25~0.27 ~0.29 | 0.24~0.26 ~0.28 |
-| Active Night | Summer | 0.78~0.81 ~0.83 | 0.76~0.79 ~0.81 |
-| Active Twilight | Summer | 0.25~0.29 ~0.32 | 0.24~0.28 ~0.33 |
-| High dispersal | Summer | 0.63~0.66 ~0.69 | 0.57~0.61 ~0.65 |
-| Low dispersal | Summer | 0.13~0.16 ~0.18 | 0.14~0.17 ~0.22 |
-| Herbivore | Summer | 0.62~0.65 ~0.68 | 0.59~0.61 ~0.63 |
-| Predator | Summer | 0.82~0.85 ~0.88 | 0.84~0.87 ~0.90 |
-| Fungivore | Summer | 0.23~0.26 ~0.28 | 0.22~0.24 ~0.26 |
-| Detritivore | Summer | 0.25~0.31 ~0.34 | 0.24~0.27 ~0.30 |
-| Coprophagous | Summer | 0.21~0.24 ~0.26 | 0.23~0.26 ~0.29 |
-| Chewing and cutting | Summer | 0.78~0.80 ~0.81 | 0.77~0.79 ~0.81 |
-| External digestion and sucking | Summer | 0.14~0.16 ~0.17 | 0.15~0.17 ~0.20 |
-| Piercing and sucking | Winter | 0.15~0.20 ~0.23 | 0.21~0.23 ~0.26 |
-| Body size | Winter | 0.55~0.60 ~0.64 | 0.73~0.78 ~0.82 |
-| Active Day | Winter | 0.26~0.29 ~0.31 | 0.25~0.27 ~0.29 |
-| Active Night | Winter | 0.90~0.93 ~0.95 | 0.91~0.94 ~0.96 |
-| Active Twilight | Winter | 0.28~0.31 ~0.34 | 0.30~0.32 ~0.34 |
-| High dispersal | Winter | 0.75~0.78 ~0.81 | 0.76~0.79 ~0.82 |
-| Low dispersal | Winter | 0.14~0.16 ~0.18 | 0.15~0.17 ~0.20 |
-| Herbivore | Summer | 0.63~0.66 ~0.69 | 0.60~0.63 ~0.66 |
-| Predator | Summer | 0.84~0.87 ~0.90 | 0.82~0.85 ~0.89 |
-| Fungivore | Summer | 0.13~0.15 ~0.17 | 0.14~0.16 ~0.18 |
-| Detritivore | Summer | 0.16~0.19 ~0.22 | 0.19~0.22 ~0.25 |
-| Coprophagous | Summer | 0.11~0.13 ~0.14 | 0.12~0.14 ~0.16 |
-| Chewing and cutting | Summer | 0.68~0.71 ~0.74 | 0.70~0.73 ~0.76 |
-| External digestion and sucking | Summer | 0.25~0.28 ~0.31 | 0.24~0.27 ~0.30 |
-| Piercing and sucking | Winter | 0.15~0.18 ~0.21 | 0.16~0.19 ~0.22 |
-| Body size | Winter | 0.55~0.60 ~0.64 | 0.73~0.78 ~0.82 |
-| Active Day | Winter | 0.26~0.29 ~0.32 | 0.27~0.29 ~0.31 |
-| Active Night | Winter | 0.90~0.93 ~0.96 | 0.91~0.94 ~0.97 |
-| Active Twilight | Winter | 0.20~0.23 ~0.26 | 0.21~0.23 ~0.25 |
-| High dispersal | Winter | 0.78~0.81 ~0.84 | 0.79~0.82 ~0.85 |
-| Low dispersal | Winter | 0.14~0.16 ~0.18 | 0.15~0.17 ~0.20 |
+<table><tr><td>Trait Category</td><td>Season</td><td>Treatment::Control (Q1~Median ~Q3)</td><td>Treatment::OTC (Q1~Median ~Q3)</td></tr><tr><td>Herbivore</td><td>Winter</td><td>0.20~0.23 ~0.24</td><td>0.28~0.31 ~0.35</td></tr><tr><td>Predator</td><td>Winter</td><td>0.79~0.81 ~0.82</td><td>0.82~0.85 ~0.87</td></tr><tr><td>Fungivore</td><td>Winter</td><td>0.11~0.14 ~0.16</td><td>0.13~0.16 ~0.21</td></tr><tr><td>Detritivore</td><td>Winter</td><td>0.19~0.23 ~0.25</td><td>0.15~0.18 ~0.24</td></tr><tr><td>Coprophagous</td><td>Winter</td><td>0.09~0.12 ~0.14</td><td>0.12~0.14 ~0.17</td></tr><tr><td>Chewing and cutting</td><td>Winter</td><td>0.86~0.88 ~0.89</td><td>0.80~0.85 ~0.87</td></tr><tr><td>External digestion and sucking</td><td>Winter</td><td>0.12~0.13 ~0.14</td><td>0.14~0.18 ~0.26</td></tr><tr><td>Piercing and sucking</td><td>Summer</td><td>0.01~0.02 ~0.03</td><td>0.01~0.02 ~0.04</td></tr><tr><td>Body size</td><td>Summer</td><td>0.55~0.58 ~0.60</td><td>0.60~0.63 ~0.66</td></tr><tr><td>Active Day</td><td>Summer</td><td>0.25~0.27 ~0.29</td><td>0.24~0.26 ~0.28</td></tr><tr><td>Active Night</td><td>Summer</td><td>0.78~0.81 ~0.83</td><td>0.76~0.79 ~0.81</td></tr><tr><td>Active Twilight</td><td>Summer</td><td>0.25~0.29 ~0.32</td><td>0.24~0.28 ~0.33</td></tr><tr><td>High dispersal</td><td>Summer</td><td>0.63~0.66 ~0.69</td><td>0.57~0.61 ~0.65</td></tr><tr><td>Low dispersal</td><td>Summer</td><td>0.13~0.16 ~0.18</td><td>0.14~0.17 ~0.22</td></tr><tr><td>Herbivore</td><td>Summer</td><td>0.62~0.65 ~0.68</td><td>0.59~0.61 ~0.63</td></tr><tr><td>Predator</td><td>Summer</td><td>0.82~0.85 ~0.88</td><td>0.84~0.87 ~0.90</td></tr><tr><td>Fungivore</td><td>Summer</td><td>0.23~0.26 ~0.28</td><td>0.22~0.24 ~0.26</td></tr><tr><td>Detritivore</td><td>Summer</td><td>0.25~0.31 ~0.34</td><td>0.24~0.27 ~0.30</td></tr><tr><td>Coprophagous</td><td>Summer</td><td>0.21~0.24 ~0.26</td><td>0.23~0.26 ~0.29</td></tr><tr><td>Chewing and cutting</td><td>Summer</td><td>0.78~0.80 ~0.81</td><td>0.77~0.79 ~0.81</td></tr><tr><td>External digestion and sucking</td><td>Summer</td><td>0.14~0.16 ~0.17</td><td>0.15~0.17 ~0.20</td></tr><tr><td>Piercing and sucking</td><td>Winter</td><td>0.15~0.20 ~0.23</td><td>0.21~0.23 ~0.26</td></tr><tr><td>Body size</td><td>Winter</td><td>0.55~0.60 ~0.64</td><td>0.73~0.78 ~0.82</td></tr><tr><td>Active Day</td><td>Winter</td><td>0.26~0.29 ~0.31</td><td>0.25~0.27 ~0.29</td></tr><tr><td>Active Night</td><td>Winter</td><td>0.90~0.93 ~0.95</td><td>0.91~0.94 ~0.96</td></tr><tr><td>Active Twilight</td><td>Winter</td><td>0.28~0.31 ~0.34</td><td>0.30~0.32 ~0.34</td></tr><tr><td>High dispersal</td><td>Winter</td><td>0.75~0.78 ~0.81</td><td>0.76~0.79 ~0.82</td></tr><tr><td>Low dispersal</td><td>Winter</td><td>0.14~0.16 ~0.18</td><td>0.15~0.17 ~0.20</td></tr><tr><td>Herbivore</td><td>Summer</td><td>0.63~0.66 ~0.69</td><td>0.60~0.63 ~0.66</td></tr><tr><td>Predator</td><td>Summer</td><td>0.84~0.87 ~0.90</td><td>0.82~0.85 ~0.89</td></tr><tr><td>Fungivore</td><td>Summer</td><td>0.13~0.15 ~0.17</td><td>0.14~0.16 ~0.18</td></tr><tr><td>Detritivore</td><td>Summer</td><td>0.16~0.19 ~0.22</td><td>0.19~0.22 ~0.25</td></tr><tr><td>Coprophagous</td><td>Summer</td><td>0.11~0.13 ~0.14</td><td>0.12~0.14 ~0.16</td></tr><tr><td>Chewing and cutting</td><td>Summer</td><td>0.68~0.71 ~0.74</td><td>0.70~0.73 ~0.76</td></tr><tr><td>External digestion and sucking</td><td>Summer</td><td>0.25~0.28 ~0.31</td><td>0.24~0.27 ~0.30</td></tr><tr><td>Piercing and sucking</td><td>Winter</td><td>0.15~0.18 ~0.21</td><td>0.16~0.19 ~0.22</td></tr><tr><td>Body size</td><td>Winter</td><td>0.55~0.60 ~0.64</td><td>0.73~0.78 ~0.82</td></tr><tr><td>Active Day</td><td>Winter</td><td>0.26~0.29 ~0.32</td><td>0.27~0.29 ~0.31</td></tr><tr><td>Active Night</td><td>Winter</td><td>0.90~0.93 ~0.96</td><td>0.91~0.94 ~0.97</td></tr><tr><td>Active Twilight</td><td>Winter</td><td>0.20~0.23 ~0.26</td><td>0.21~0.23 ~0.25</td></tr><tr><td>High dispersal</td><td>Winter</td><td>0.78~0.81 ~0.84</td><td>0.79~0.82 ~0.85</td></tr><tr><td>Low dispersal</td><td>Winter</td><td>0.14~0.16 ~0.18</td><td>0.15~0.17 ~0.20</td></tr></table>
 
 Figure 3. Boxplots highlighting the effect of the treatment (control vs. OTCs) on different traits along the elevation gradient considering all arthropods during the winter and the summer. On g g  p gy-axis are the values of the community weighted means (CWM) and on x-axis is the elevation factor: ues of the community weighted means (CWM) and on x-axis is the elevatilow (L), middle (M), and high (H) elevation. Black box plots indicate the control plots, while gray (M), and high (H) elevation. Black box plots indicate the control plots, whibox plots represent the OTCs. ANOVA and post hoc pairwise comparisons results are available in h OTables A1 and A2.
 
@@ -343,70 +291,7 @@ Insects 2024, 15, 677
 
 11 of 40
 
-| Season | Trait | Treatment | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- | --- | --- |
-| Winter | Herbivore | Control | ~4.2 | ~4.5 | ~4.8 |
-| Winter | Herbivore | OTC | ~4.6 | ~5.0 | ~5.2 |
-| Winter | Predator | Control | ~0.10 | ~0.13 | ~0.15 |
-| Winter | Predator | OTC | ~0.12 | ~0.18 | ~0.22 |
-| Winter | Fungivore | Control | ~0.74 | ~0.78 | ~0.80 |
-| Winter | Fungivore | OTC | ~0.76 | ~0.82 | ~0.88 |
-| Winter | Detritivore | Control | ~0.03 | ~0.05 | ~0.08 |
-| Winter | Detritivore | OTC | ~0.02 | ~0.04 | ~0.07 |
-| Winter | Body size | Control | ~0.12 | ~0.13 | ~0.14 |
-| Winter | Body size | OTC | ~0.05 | ~0.08 | ~0.11 |
-| Winter | Active Day | Control | ~0.27 | ~0.29 | ~0.31 |
-| Winter | Active Day | OTC | ~0.24 | ~0.26 | ~0.28 |
-| Winter | Active Night | Control | ~0.68 | ~0.70 | ~0.72 |
-| Winter | Active Night | OTC | ~0.61 | ~0.63 | ~0.65 |
-| Summer | Herbivore | Control | ~0.45 | ~0.48 | ~0.52 |
-| Summer | Herbivore | OTC | ~0.48 | ~0.55 | ~0.62 |
-| Summer | Predator | Control | ~0.33 | ~0.35 | ~0.37 |
-| Summer | Predator | OTC | ~0.28 | ~0.32 | ~0.38 |
-| Summer | Fungivore | Control | ~0.81 | ~0.84 | ~0.86 |
-| Summer | Fungivore | OTC | ~0.82 | ~0.85 | ~0.90 |
-| Summer | Detritivore | Control | ~0.03 | ~0.05 | ~0.07 |
-| Summer | Detritivore | OTC | ~0.04 | ~0.06 | ~0.09 |
-| Summer | Body size | Control | ~0.18 | ~0.20 | ~0.22 |
-| Summer | Body size | OTC | ~0.01 | ~0.02 | ~0.03 |
-| Summer | Active Day | Control | ~0.15 | ~0.16 | ~0.17 |
-| Summer | Active Day | OTC | ~0.18 | ~0.22 | ~0.26 |
-| Summer | Active Night | Control | ~0.82 | ~0.84 | ~0.86 |
-| Summer | Active Night | OTC | ~0.75 | ~0.83 | ~0.88 |
-| Winter | Active Twilight | Control | ~0.03 | ~0.05 | ~0.08 |
-| Winter | Active Twilight | OTC | ~0.02 | ~0.04 | ~0.07 |
-| Winter | High dispersal | Control | ~0.95 | ~0.96 | ~0.97 |
-| Winter | High dispersal | OTC | ~0.93 | ~0.96 | ~0.98 |
-| Winter | Black | Control | ~0.22 | ~0.24 | ~0.26 |
-| Winter | Black | OTC | ~0.35 | ~0.38 | ~0.42 |
-| Winter | Reddish Brown | Control | ~0.18 | ~0.20 | ~0.22 |
-| Winter | Reddish Brown | OTC | ~0.18 | ~0.22 | ~0.26 |
-| Winter | Iridescent | Control | ~0.03 | ~0.04 | ~0.05 |
-| Winter | Iridescent | OTC | ~0.03 | ~0.04 | ~0.05 |
-| Summer | Herbivore | Control | ~0.87 | ~0.89 | ~0.91 |
-| Summer | Herbivore | OTC | ~0.88 | ~0.92 | ~1.00 |
-| Summer | Predator | Control | ~0.26 | ~0.28 | ~0.30 |
-| Summer | Predator | OTC | ~0.35 | ~0.38 | ~0.42 |
-| Summer | Fungivore | Control | ~0.87 | ~0.90 | ~0.93 |
-| Summer | Fungivore | OTC | ~0.86 | ~0.89 | ~0.92 |
-| Summer | Detritivore | Control | ~0.04 | ~0.05 | ~0.07 |
-| Summer | Detritivore | OTC | ~0.03 | ~0.04 | ~0.06 |
-| Summer | Body size | Control | ~0.18 | ~0.20 | ~0.22 |
-| Summer | Body size | OTC | ~0.01 | ~0.02 | ~0.03 |
-| Summer | Active Day | Control | ~0.07 | ~0.09 | ~0.11 |
-| Summer | Active Day | OTC | ~0.05 | ~0.06 | ~0.08 |
-| Summer | Active Night | Control | ~0.92 | ~0.94 | ~0.96 |
-| Summer | Active Night | OTC | ~0.91 | ~0.94 | ~0.97 |
-| Winter | Active Twilight | Control | ~0.03 | ~0.05 | ~0.08 |
-| Winter | Active Twilight | OTC | ~0.02 | ~0.04 | ~0.06 |
-| Winter | High dispersal | Control | ~0.94 | ~0.96 | ~0.97 |
-| Winter | High dispersal | OTC | ~0.93 | ~0.96 | ~0.98 |
-| Winter | Black | Control | ~0.25 | ~0.27 | ~0.29 |
-| Winter | Black | OTC | ~0.32 | ~0.35 | ~0.40 |
-| Winter | Reddish Brown | Control | ~0.12 | ~0.14 | ~0.16 |
-| Winter | Reddish Brown | OTC | ~0.07 | ~0.09 | ~0.12 |
-| Winter | Iridescent | Control | ~0.07 | ~0.08 | ~0.09 |
-| Winter | Iridescent | OTC | ~0.12 | ~0.14 | ~0.16 |
+<table><tr><td>Season</td><td>Trait</td><td>Treatment</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Winter</td><td>Herbivore</td><td>Control</td><td>~4.2</td><td>~4.5</td><td>~4.8</td></tr><tr><td>Winter</td><td>Herbivore</td><td>OTC</td><td>~4.6</td><td>~5.0</td><td>~5.2</td></tr><tr><td>Winter</td><td>Predator</td><td>Control</td><td>~0.10</td><td>~0.13</td><td>~0.15</td></tr><tr><td>Winter</td><td>Predator</td><td>OTC</td><td>~0.12</td><td>~0.18</td><td>~0.22</td></tr><tr><td>Winter</td><td>Fungivore</td><td>Control</td><td>~0.74</td><td>~0.78</td><td>~0.80</td></tr><tr><td>Winter</td><td>Fungivore</td><td>OTC</td><td>~0.76</td><td>~0.82</td><td>~0.88</td></tr><tr><td>Winter</td><td>Detritivore</td><td>Control</td><td>~0.03</td><td>~0.05</td><td>~0.08</td></tr><tr><td>Winter</td><td>Detritivore</td><td>OTC</td><td>~0.02</td><td>~0.04</td><td>~0.07</td></tr><tr><td>Winter</td><td>Body size</td><td>Control</td><td>~0.12</td><td>~0.13</td><td>~0.14</td></tr><tr><td>Winter</td><td>Body size</td><td>OTC</td><td>~0.05</td><td>~0.08</td><td>~0.11</td></tr><tr><td>Winter</td><td>Active Day</td><td>Control</td><td>~0.27</td><td>~0.29</td><td>~0.31</td></tr><tr><td>Winter</td><td>Active Day</td><td>OTC</td><td>~0.24</td><td>~0.26</td><td>~0.28</td></tr><tr><td>Winter</td><td>Active Night</td><td>Control</td><td>~0.68</td><td>~0.70</td><td>~0.72</td></tr><tr><td>Winter</td><td>Active Night</td><td>OTC</td><td>~0.61</td><td>~0.63</td><td>~0.65</td></tr><tr><td>Summer</td><td>Herbivore</td><td>Control</td><td>~0.45</td><td>~0.48</td><td>~0.52</td></tr><tr><td>Summer</td><td>Herbivore</td><td>OTC</td><td>~0.48</td><td>~0.55</td><td>~0.62</td></tr><tr><td>Summer</td><td>Predator</td><td>Control</td><td>~0.33</td><td>~0.35</td><td>~0.37</td></tr><tr><td>Summer</td><td>Predator</td><td>OTC</td><td>~0.28</td><td>~0.32</td><td>~0.38</td></tr><tr><td>Summer</td><td>Fungivore</td><td>Control</td><td>~0.81</td><td>~0.84</td><td>~0.86</td></tr><tr><td>Summer</td><td>Fungivore</td><td>OTC</td><td>~0.82</td><td>~0.85</td><td>~0.90</td></tr><tr><td>Summer</td><td>Detritivore</td><td>Control</td><td>~0.03</td><td>~0.05</td><td>~0.07</td></tr><tr><td>Summer</td><td>Detritivore</td><td>OTC</td><td>~0.04</td><td>~0.06</td><td>~0.09</td></tr><tr><td>Summer</td><td>Body size</td><td>Control</td><td>~0.18</td><td>~0.20</td><td>~0.22</td></tr><tr><td>Summer</td><td>Body size</td><td>OTC</td><td>~0.01</td><td>~0.02</td><td>~0.03</td></tr><tr><td>Summer</td><td>Active Day</td><td>Control</td><td>~0.15</td><td>~0.16</td><td>~0.17</td></tr><tr><td>Summer</td><td>Active Day</td><td>OTC</td><td>~0.18</td><td>~0.22</td><td>~0.26</td></tr><tr><td>Summer</td><td>Active Night</td><td>Control</td><td>~0.82</td><td>~0.84</td><td>~0.86</td></tr><tr><td>Summer</td><td>Active Night</td><td>OTC</td><td>~0.75</td><td>~0.83</td><td>~0.88</td></tr><tr><td>Winter</td><td>Active Twilight</td><td>Control</td><td>~0.03</td><td>~0.05</td><td>~0.08</td></tr><tr><td>Winter</td><td>Active Twilight</td><td>OTC</td><td>~0.02</td><td>~0.04</td><td>~0.07</td></tr><tr><td>Winter</td><td>High dispersal</td><td>Control</td><td>~0.95</td><td>~0.96</td><td>~0.97</td></tr><tr><td>Winter</td><td>High dispersal</td><td>OTC</td><td>~0.93</td><td>~0.96</td><td>~0.98</td></tr><tr><td>Winter</td><td>Black</td><td>Control</td><td>~0.22</td><td>~0.24</td><td>~0.26</td></tr><tr><td>Winter</td><td>Black</td><td>OTC</td><td>~0.35</td><td>~0.38</td><td>~0.42</td></tr><tr><td>Winter</td><td>Reddish Brown</td><td>Control</td><td>~0.18</td><td>~0.20</td><td>~0.22</td></tr><tr><td>Winter</td><td>Reddish Brown</td><td>OTC</td><td>~0.18</td><td>~0.22</td><td>~0.26</td></tr><tr><td>Winter</td><td>Iridescent</td><td>Control</td><td>~0.03</td><td>~0.04</td><td>~0.05</td></tr><tr><td>Winter</td><td>Iridescent</td><td>OTC</td><td>~0.03</td><td>~0.04</td><td>~0.05</td></tr><tr><td>Summer</td><td>Herbivore</td><td>Control</td><td>~0.87</td><td>~0.89</td><td>~0.91</td></tr><tr><td>Summer</td><td>Herbivore</td><td>OTC</td><td>~0.88</td><td>~0.92</td><td>~1.00</td></tr><tr><td>Summer</td><td>Predator</td><td>Control</td><td>~0.26</td><td>~0.28</td><td>~0.30</td></tr><tr><td>Summer</td><td>Predator</td><td>OTC</td><td>~0.35</td><td>~0.38</td><td>~0.42</td></tr><tr><td>Summer</td><td>Fungivore</td><td>Control</td><td>~0.87</td><td>~0.90</td><td>~0.93</td></tr><tr><td>Summer</td><td>Fungivore</td><td>OTC</td><td>~0.86</td><td>~0.89</td><td>~0.92</td></tr><tr><td>Summer</td><td>Detritivore</td><td>Control</td><td>~0.04</td><td>~0.05</td><td>~0.07</td></tr><tr><td>Summer</td><td>Detritivore</td><td>OTC</td><td>~0.03</td><td>~0.04</td><td>~0.06</td></tr><tr><td>Summer</td><td>Body size</td><td>Control</td><td>~0.18</td><td>~0.20</td><td>~0.22</td></tr><tr><td>Summer</td><td>Body size</td><td>OTC</td><td>~0.01</td><td>~0.02</td><td>~0.03</td></tr><tr><td>Summer</td><td>Active Day</td><td>Control</td><td>~0.07</td><td>~0.09</td><td>~0.11</td></tr><tr><td>Summer</td><td>Active Day</td><td>OTC</td><td>~0.05</td><td>~0.06</td><td>~0.08</td></tr><tr><td>Summer</td><td>Active Night</td><td>Control</td><td>~0.92</td><td>~0.94</td><td>~0.96</td></tr><tr><td>Summer</td><td>Active Night</td><td>OTC</td><td>~0.91</td><td>~0.94</td><td>~0.97</td></tr><tr><td>Winter</td><td>Active Twilight</td><td>Control</td><td>~0.03</td><td>~0.05</td><td>~0.08</td></tr><tr><td>Winter</td><td>Active Twilight</td><td>OTC</td><td>~0.02</td><td>~0.04</td><td>~0.06</td></tr><tr><td>Winter</td><td>High dispersal</td><td>Control</td><td>~0.94</td><td>~0.96</td><td>~0.97</td></tr><tr><td>Winter</td><td>High dispersal</td><td>OTC</td><td>~0.93</td><td>~0.96</td><td>~0.98</td></tr><tr><td>Winter</td><td>Black</td><td>Control</td><td>~0.25</td><td>~0.27</td><td>~0.29</td></tr><tr><td>Winter</td><td>Black</td><td>OTC</td><td>~0.32</td><td>~0.35</td><td>~0.40</td></tr><tr><td>Winter</td><td>Reddish Brown</td><td>Control</td><td>~0.12</td><td>~0.14</td><td>~0.16</td></tr><tr><td>Winter</td><td>Reddish Brown</td><td>OTC</td><td>~0.07</td><td>~0.09</td><td>~0.12</td></tr><tr><td>Winter</td><td>Iridescent</td><td>Control</td><td>~0.07</td><td>~0.08</td><td>~0.09</td></tr><tr><td>Winter</td><td>Iridescent</td><td>OTC</td><td>~0.12</td><td>~0.14</td><td>~0.16</td></tr></table>
 
 Figure 4. Boxplots highlighting the effect of the treatment (control vs. OTCs) on different traits along 4. Boxplots highlighting the effect of the treatment (control vs. OTCs) on diffethe elevation gradient considering only beetles during the winter and the summer. On y-axis are the vation gradient considering only beetles during the winter and the summer. value of the community weighted means (CWM) and on x-axis is the elevation factor: low (L), middle (M), and high (H) elevation. Black box plots indicate the control plots, while gray box plots represent the OTCs. ANOVA and post hoc pairwise comparisons results are available in Tables A3 and A4.
 

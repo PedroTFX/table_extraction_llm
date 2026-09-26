@@ -127,15 +127,7 @@ Non-metric multidimensional scaling showed that farms of both types hosted bee c
 
 Table 2. Spearman correlations among traits. For categorical traits, the order in which character states are listed in row headers (column header for Sociality) is the same as that used for analysis
 
-|  | Body size | Flight season duration | Flight season median date | Lecty | Nesting location | Nest construction | Sociality (social or solitary) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Abundance (continuous) | -0.22** | 0.03 | 0.02 | 0.22* | -0.15 | -0.23** | -0.38*** |
-| Body size (continuous) |  | -0.16 | 0.06 | -0.01 | 0.00 | 0.23* | 0.24** |
-| Flight season duration, rarefied (continuous) |  |  | 0.44** | 0.30* | 0.20 | 0.06 | -0.32* |
-| Flight season median date (continuous) |  |  |  | -0.10 | 0.24** | 0.30** | -0.02 |
-| Lecty (oligolectic or polylectic) |  |  |  |  | 0.08 | 0.06 | -0.29** |
-| Nesting location (below-ground, mixed, or above-ground) |  |  |  |  |  | 0.76*** | 0.32*** |
-| Nest construction (excavate or rent) |  |  |  |  |  |  | 0.19* |
+<table><tr><td></td><td>Body size</td><td>Flight season duration</td><td>Flight season median date</td><td>Lecty</td><td>Nesting location</td><td>Nest construction</td><td>Sociality (social or solitary)</td></tr><tr><td>Abundance (continuous)</td><td>-0.22**</td><td>0.03</td><td>0.02</td><td>0.22*</td><td>-0.15</td><td>-0.23**</td><td>-0.38***</td></tr><tr><td>Body size (continuous)</td><td></td><td>-0.16</td><td>0.06</td><td>-0.01</td><td>0.00</td><td>0.23*</td><td>0.24**</td></tr><tr><td>Flight season duration, rarefied (continuous)</td><td></td><td></td><td>0.44**</td><td>0.30*</td><td>0.20</td><td>0.06</td><td>-0.32*</td></tr><tr><td>Flight season median date (continuous)</td><td></td><td></td><td></td><td>-0.10</td><td>0.24**</td><td>0.30**</td><td>-0.02</td></tr><tr><td>Lecty (oligolectic or polylectic)</td><td></td><td></td><td></td><td></td><td>0.08</td><td>0.06</td><td>-0.29**</td></tr><tr><td>Nesting location (below-ground, mixed, or above-ground)</td><td></td><td></td><td></td><td></td><td></td><td>0.76***</td><td>0.32***</td></tr><tr><td>Nest construction (excavate or rent)</td><td></td><td></td><td></td><td></td><td></td><td></td><td>0.19*</td></tr></table>
 
 N = 46–140, depending on the trait. $P < 0.05; **P < 0.01; ***P < 0.001.$
 
@@ -151,17 +143,7 @@ J. R. K. Forrest et al.
 
 Bee body sizes were similar among site types [ANOVA; individual level (abundance-weighted) $F_{2,13} = 1 \cdot 5, \; P = 0 \cdot 25;$ species level (unweighted) $F_{2,13} = 0 \cdot 58$ , P = 058; Fig. 4a, b]. Bees in natural sites had later flight seasons than bees on organic farms (weighted and unweighted $F _ { 2 , 1 3 } > 4 { \cdot } 0 ,$ $P < 0 { \cdot } 0 4 ;$ Fig. 4c,d) and tended to fly later in the season than those at conventional farms (unweighted, Tukey’s
 
-| Number of bees sampled | Conventional farm (Species observed) | Organic farm (Species observed) | Natural habitat (Species observed) |
-| --- | --- | --- | --- |
-| 0 | 1 | 1 | 1 |
-| ~50 | ~8 | ~12 | ~14 |
-| ~100 | ~13 | ~19 | ~22 |
-| ~150 | ~16 | ~24 | ~27 |
-| ~200 | ~20 | ~29 | ~33 |
-| ~250 | ~24 | ~34 | ~40 |
-| ~300 | ~28 | ~39 | — |
-| ~350 | ~31 | ~43 | — |
-| ~400 | ~32 | ~48 | — |
+<table><tr><td>Number of bees sampled</td><td>Conventional farm (Species observed)</td><td>Organic farm (Species observed)</td><td>Natural habitat (Species observed)</td></tr><tr><td>0</td><td>1</td><td>1</td><td>1</td></tr><tr><td>~50</td><td>~8</td><td>~12</td><td>~14</td></tr><tr><td>~100</td><td>~13</td><td>~19</td><td>~22</td></tr><tr><td>~150</td><td>~16</td><td>~24</td><td>~27</td></tr><tr><td>~200</td><td>~20</td><td>~29</td><td>~33</td></tr><tr><td>~250</td><td>~24</td><td>~34</td><td>~40</td></tr><tr><td>~300</td><td>~28</td><td>~39</td><td>—</td></tr><tr><td>~350</td><td>~31</td><td>~43</td><td>—</td></tr><tr><td>~400</td><td>~32</td><td>~48</td><td>—</td></tr></table>
 
 Fig. 1. Rarefaction curves for all three site types. Lines connect mean values of observed richness for each subsample size (in increments of five bees) for each site. Error bars are omitted for clarity. N = four conventional farms, five organic farms and seven natural habitat sites.
 
@@ -187,11 +169,7 @@ Species and functional-trait diversity in bees
 
 vs. below-ground nesting bees. Above-ground nesting substrates (trees, shrubs, stems and dead wood) were significantly more abundant at natural sites than either farm type $( F _ { 2 , 1 3 } = 7 { \cdot } 7$ $P = 0.0061;$ Tukey’s HSD, both $P < 0 . 0 5 )$ , whereas percentage cover of bare soil tended to be greater on farms (though it was significantly greater
 
-| Series | NMDS axis 1 (range) | NMDS axis 2 (range) |
-| --- | --- | --- |
-| Conventional farm | -0.1~1.1 | -0.3~0.6 |
-| Organic farm | -0.4~0.7 | -0.1~0.6 |
-| Natural habitat | -0.8~-0.1 | -0.6~0.5 |
+<table><tr><td>Series</td><td>NMDS axis 1 (range)</td><td>NMDS axis 2 (range)</td></tr><tr><td>Conventional farm</td><td>-0.1~1.1</td><td>-0.3~0.6</td></tr><tr><td>Organic farm</td><td>-0.4~0.7</td><td>-0.1~0.6</td></tr><tr><td>Natural habitat</td><td>-0.8~-0.1</td><td>-0.6~0.5</td></tr></table>
 
 Fig. 3. Non-metric multidimensional scaling of the 16 study sites, based on species abundances (Bray–Curtis dissimilarities). Sites (circles) are shaded according to site type. For simplicity, only the two-first axes of the three-axis solution are shown. (Site types were not differentiated along axis 3). Stress of the three-axis solution is 0098.
 

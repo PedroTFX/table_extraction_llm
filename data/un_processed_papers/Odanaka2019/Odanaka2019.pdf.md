@@ -159,41 +159,19 @@ Agriculture, Ecosystems and Environment 286 (2019) 106663
 
 a)
 
-| Landscape | Soil Composition | Mean nearest taxon distance |
-| --- | --- | --- |
-| Grazed | Pasture | 1.00 |
-| Grazed | Silvopasture | ~1.82 |
-| Grazed | Clear-cut | ~1.97 |
-| Un-grazed | Meadow | ~1.52 |
-| Un-grazed | Organic | ~1.81 |
-| Un-grazed | Conventional | ~1.40 |
+<table><tr><td>Landscape</td><td>Soil Composition</td><td>Mean nearest taxon distance</td></tr><tr><td>Grazed</td><td>Pasture</td><td>1.00</td></tr><tr><td>Grazed</td><td>Silvopasture</td><td>~1.82</td></tr><tr><td>Grazed</td><td>Clear-cut</td><td>~1.97</td></tr><tr><td>Un-grazed</td><td>Meadow</td><td>~1.52</td></tr><tr><td>Un-grazed</td><td>Organic</td><td>~1.81</td></tr><tr><td>Un-grazed</td><td>Conventional</td><td>~1.40</td></tr></table>
 
 b)
 
-| Landscape | Method | Mean pairwise distance |
-| --- | --- | --- |
-| Grazed | Pasture | ~0.02* |
-| Grazed | Silvopasture | ~2.23 |
-| Grazed | Clear-cut | ~2.63 |
-| Un-grazed | Meadow | ~1.93 |
-| Un-grazed | Organic | ~1.75 |
-| Un-grazed | Conventional | ~1.17* |
+<table><tr><td>Landscape</td><td>Method</td><td>Mean pairwise distance</td></tr><tr><td>Grazed</td><td>Pasture</td><td>~0.02*</td></tr><tr><td>Grazed</td><td>Silvopasture</td><td>~2.23</td></tr><tr><td>Grazed</td><td>Clear-cut</td><td>~2.63</td></tr><tr><td>Un-grazed</td><td>Meadow</td><td>~1.93</td></tr><tr><td>Un-grazed</td><td>Organic</td><td>~1.75</td></tr><tr><td>Un-grazed</td><td>Conventional</td><td>~1.17*</td></tr></table>
 
 Fig. 3. a) Phylogenetic results for Mean Nearest Taxon Distance (MNTD) indicate that sites have expected levels of species groupings. b) Mean Pairwise Distance (MPD) analysis indicate that all landscapes except pasture and conventional farmland (denoted by asterisks) exhibited more diversity than expected from a null model.
 
-| Landscape | Species richness \(( \pm SE)\) |
-| --- | --- |
-| Clear-cut | ~12 |
-| Pasture | ~6 |
-| Silvopasture | ~11 |
+<table><tr><td>Landscape</td><td>Species richness \(( \pm SE)\)</td></tr><tr><td>Clear-cut</td><td>~12</td></tr><tr><td>Pasture</td><td>~6</td></tr><tr><td>Silvopasture</td><td>~11</td></tr></table>
 
 Fig. 4. The species richness of Andrena for grazed landscapes. Pasture sites are depauperate in Andrena species compared to other grazed landscapes.
 
-| Landscape | Solitary | Social | Cleptoparasitic |
-| --- | --- | --- | --- |
-| Organic | ~32 | ~1 | ~3 |
-| Conventional | ~20 | ~1 | 0 |
-| Meadow | ~29 | ~1 | ~4 |
+<table><tr><td>Landscape</td><td>Solitary</td><td>Social</td><td>Cleptoparasitic</td></tr><tr><td>Organic</td><td>~32</td><td>~1</td><td>~3</td></tr><tr><td>Conventional</td><td>~20</td><td>~1</td><td>0</td></tr><tr><td>Meadow</td><td>~29</td><td>~1</td><td>~4</td></tr></table>
 
 Fig. 5. The observed richness of only stem nesting species found at the three ungrazed landscapes. There are no cleptoparasitic stem nesting species, genus Coelioxys, in conventional farmland sites.
 
@@ -217,11 +195,7 @@ A total of 17 species were found to be highly significant indicators of un-graze
 
 Table 2 Results from the phylogenetic signal tests on the combined set of the traits and the individual subcomponents using both Moran’s I and Abouheif’s $\mathbf { C _ { m e a n } } .$
 
-| Model | Moran's I | Abouheif's $C_{mean}$ | p-value |
-| --- | --- | --- | --- |
-| Phylogeny ~ nesting | 0.825 | 0.826 | &lt; 0.001 |
-| Phylogeny ~ behavior | 0.766 | 0.768 | &lt; 0.001 |
-| Phylogeny ~ lecty | 0.721 | 0.722 | &lt; 0.001 |
+<table><tr><td>Model</td><td>Moran's I</td><td>Abouheif's $C_{mean}$</td><td>p-value</td></tr><tr><td>Phylogeny ~ nesting</td><td>0.825</td><td>0.826</td><td>&amp;lt; 0.001</td></tr><tr><td>Phylogeny ~ behavior</td><td>0.766</td><td>0.768</td><td>&amp;lt; 0.001</td></tr><tr><td>Phylogeny ~ lecty</td><td>0.721</td><td>0.722</td><td>&amp;lt; 0.001</td></tr></table>
 
 5
 
@@ -231,14 +205,7 @@ K.A. Odanaka and S.M. Rehan
 
 Agriculture, Ecosystems and Environment 286 (2019) 106663
 
-| Series | PC1 (range) | PC2 (range) |
-| --- | --- | --- |
-| Grazed::Clear-cut | -6~-4 | -4~-3 |
-| Grazed::Pasture | -6~-5 | -4~-1 |
-| Grazed::Silvopasture | -6~-5 | -5~-4 |
-| Un-grazed::Conventional | 2~8 | 1~14 |
-| Un-grazed::Meadow | -2~0 | 9~13 |
-| Un-grazed::Organic | 22~28 | -8~-3 |
+<table><tr><td>Series</td><td>PC1 (range)</td><td>PC2 (range)</td></tr><tr><td>Grazed::Clear-cut</td><td>-6~-4</td><td>-4~-3</td></tr><tr><td>Grazed::Pasture</td><td>-6~-5</td><td>-4~-1</td></tr><tr><td>Grazed::Silvopasture</td><td>-6~-5</td><td>-5~-4</td></tr><tr><td>Un-grazed::Conventional</td><td>2~8</td><td>1~14</td></tr><tr><td>Un-grazed::Meadow</td><td>-2~0</td><td>9~13</td></tr><tr><td>Un-grazed::Organic</td><td>22~28</td><td>-8~-3</td></tr></table>
 
 Fig. 6. PCA showing communities of wild bees in six different landscape types and separated by year. Nesting was the only trait found to be significantly correlated with the parameters of the PCA.
 

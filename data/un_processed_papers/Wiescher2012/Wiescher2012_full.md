@@ -132,12 +132,7 @@ We collected 19,232 ants from pitfall traps and leaf-litter samples, totaling 48
 
 Environmental variables diVered between the shrub and forest habitats. EVect sizes for mean diVerences in ground-
 
-| Series | Axis 1 (range) | Axis 2 (range) |
-| --- | --- | --- |
-| Sand Pine Scrub (Shrub) | -0.5~-0.1 | -0.2~0.2 |
-| Scrubby Flatwoods (Shrub) | -0.4~-0.3 | -0.2~0.1 |
-| Southern Ridge Sandhill (Forest) | 0.5~0.7 | -0.2~0.1 |
-| Flatwoods (Forest) | 0.1~0.4 | -0.5~0.6 |
+<table><tr><td>Series</td><td>Axis 1 (range)</td><td>Axis 2 (range)</td></tr><tr><td>Sand Pine Scrub (Shrub)</td><td>-0.5~-0.1</td><td>-0.2~0.2</td></tr><tr><td>Scrubby Flatwoods (Shrub)</td><td>-0.4~-0.3</td><td>-0.2~0.1</td></tr><tr><td>Southern Ridge Sandhill (Forest)</td><td>0.5~0.7</td><td>-0.2~0.1</td></tr><tr><td>Flatwoods (Forest)</td><td>0.1~0.4</td><td>-0.5~0.6</td></tr></table>
 
 Fig. 1 NMDS ordination of ant assemblages. 95% conWdence interval ellipses for habitat types (shrub, forest) are based on the standard deviation of point scores. Environmental factors signiWcantly correlated with NMDS ordination are shown: groundcover (GC), surface temperature (ST), vapor pressure deWcit (VPD), and plant species richness (PSR)
 
@@ -157,45 +152,7 @@ Oecologia (2012) 169:1063–1074
 
 Table 1 Ants and their traits at Archbold Biological Station, FL
 
-| Species | HI | Mass (mg) | HW (mm) | HL (mm) | LL (mm) | RL | DI | FTL (°C) | LT (°C) | AIWLR (mg × h-1× cm-2) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Aphaenogaster ashmeadi* | 0.00 | 0.65 | 1.02 | 1.46 | 6.16 | 2.19 | 0.51 | 39.50 | 42.3 | 0.572 |
-| Brachymyrmex depilis | 0.72 | 0.02 | 0.34 | 0.37 | 0.89 | 2.02 | - | - | - | - |
-| Camponotus castaneus | 0.06 | 2.01 | 1.53 | 2.01 | 8.02 | 2.00 | - | - | - | - |
-| Camponotus floridanus* | 0.69 | 1.18 | 1.42 | 1.69 | 6.75 | 2.07 | 0.17 | 36.50 | 40.8 | 0.460 |
-| Camponotus socius | 0.86 | 3.07 | 1.72 | 2.16 | 10.51 | 2.12 | - | - | - | - |
-| Cardiocondyla emeryi | 0.62 | 0.03 | 0.34 | 0.43 | 0.98 | 1.91 | - | - | - | - |
-| Cyphomyrmex minutus | 0.00 | 0.12 | 0.60 | 0.65 | 1.96 | 2.17 | - | - | - | - |
-| Dorymyrmex bossutus | 0.30 | 0.11 | 0.62 | 0.72 | 2.82 | 2.47 | - | - | - | - |
-| Dorymyrmex bureni* | 0.13 | 0.11 | 0.73 | 0.85 | 3.55 | 2.46 | 0.88 | 46.50 | 47.3 | 0.283 |
-| Dorymyrmex elegans* | 0.96 | 0.13 | 0.75 | 0.88 | 5.11 | 2.87 | 0.62 | 45.50 | 45.2 | 0.338 |
-| Dorymyrmex flavopectus* | 1.00 | 0.08 | 0.73 | 0.84 | 4.06 | 2.66 | 0.80 | 45.50 | 45.6 | 0.275 |
-| Formica pallidefulva* | 0.28 | 0.79 | 1.16 | 1.43 | 6.76 | 2.31 | 1.00 | 44.00 | 46.9 | 0.460* |
-| Forelius pruinosus* | 0.82 | 0.07 | 0.54 | 0.60 | 2.24 | 2.5 | 1.00 | 49.00 | 49.3 | 0.214 |
-| Hypoponera inexorata | 0.50 | 0.18 | 0.63 | 0.70 | 1.81 | 1.95 | - | - | - | - |
-| Hypoponera opacior | 0.54 | 0.08 | 0.51 | 0.61 | 1.47 | 1.90 | - | - | - | - |
-| Monomorium viride* | 0.71 | 0.03 | 0.41 | 0.50 | 1.39 | 2.15 | 1.00 | 45.75 | 47.4 | 0.124 |
-| Odontomachus relictus* | 0.53 | 1.46 | 1.61 | 2.03 | 6.23 | 1.78 | 0.44 | 38.50 | 41.1 | 0.273 |
-| Paratrechina arenivaga* | 0.79 | 0.05 | 0.47 | 0.54 | 2.10 | 2.62 | 0.37 | 37.25 | 42.8 | 0.926 |
-| Paratrechina phantasma | 1.00 | 0.05 | 0.50 | 0.56 | 2.21 | 2.62 | - | - | - | - |
-| Paratrechina wojciki* | 0.10 | 0.04 | 0.52 | 0.57 | 1.86 | 2.34 | 0.14 | 36.67 | 39.9 | 1.254 |
-| Pheidole adrianoi* | 1.00 | 0.03 | 0.37 | 0.41 | 1.18 | 2.27 | 0.89 | 39.50 | 44.7 | 0.467 |
-| Pheidole dentata* | 0.27 | 0.08 | 0.57 | 0.63 | 2.29 | 2.44 | 0.67 | 38.75 | 42.5 | 0.293 |
-| Pheidole floridana* | 0.05 | 0.03 | 0.42 | 0.48 | 1.27 | 2.09 | 0.61 | 39.50 | 41.7 | 0.246 |
-| Pheidole metallescens* | 0.72 | 0.03 | 0.44 | 0.47 | 1.30 | 2.16 | 0.81 | 40.75 | 43.7 | 0.212 |
-| Pheidole moerens | 0.17 | 0.03 | 0.42 | 0.45 | 1.16 | 2.07 | - | - | - | - |
-| Pheidole morrisii* | 0.90 | 0.09 | 0.58 | 0.70 | 2.97 | 2.6 | 0.58 | 39.50 | 41.3 | 0.264 |
-| Pogonomyrmex badius | 1.00 | 1.45 | 1.61 | 1.63 | 6.13 | 2.03 | - | - | - | - |
-| Pyramica eggersi | 0.00 | 0.03 | 0.37 | 0.35 | 0.78 | 1.92 | - | - | - | - |
-| Solenopsis abdita/carolinensis | 0.20 | 0.02 | 0.29 | 0.37 | 0.70 | 1.69 | - | - | - | - |
-| Solenopsis globularia littoralis | 0.33 | 0.04 | 0.43 | 0.52 | 1.18 | 1.86 | - | - | - | - |
-| Solenopsis invicta | 0.00 | 0.23 | 0.57 | 0.66 | 2.03 | 2.19 | - | - | - | - |
-| Solenopsis nickersoni | 0.46 | 0.02 | 0.32 | 0.37 | 0.83 | 1.92 | - | - | - | - |
-| Solenopsis tennesseensis | 0.59 | 0.01 | 0.25 | 0.32 | 0.53 | 1.53 | - | - | - | - |
-| Strumigenys emmae | 0.50 | 0.02 | 0.36 | 0.42 | 0.76 | 1.61 | - | - | - | - |
-| Temnothorax pergandei* | 0.30 | 0.11 | 0.62 | 0.74 | 1.97 | 1.97 | - | - | - | - |
-| Temnothorax texanus* | 1.00 | 0.13 | 0.46 | 0.60 | 1.34 | 1.81 | - | - | - | - |
-| Trachymyrmex septentrionalis | 0.67 | 0.41 | 1.03 | 1.02 | 3.46 | 2.13 | - | - | - | - |
+<table><tr><td>Species</td><td>HI</td><td>Mass (mg)</td><td>HW (mm)</td><td>HL (mm)</td><td>LL (mm)</td><td>RL</td><td>DI</td><td>FTL (°C)</td><td>LT (°C)</td><td>AIWLR (mg × h-1× cm-2)</td></tr><tr><td>Aphaenogaster ashmeadi*</td><td>0.00</td><td>0.65</td><td>1.02</td><td>1.46</td><td>6.16</td><td>2.19</td><td>0.51</td><td>39.50</td><td>42.3</td><td>0.572</td></tr><tr><td>Brachymyrmex depilis</td><td>0.72</td><td>0.02</td><td>0.34</td><td>0.37</td><td>0.89</td><td>2.02</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Camponotus castaneus</td><td>0.06</td><td>2.01</td><td>1.53</td><td>2.01</td><td>8.02</td><td>2.00</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Camponotus floridanus*</td><td>0.69</td><td>1.18</td><td>1.42</td><td>1.69</td><td>6.75</td><td>2.07</td><td>0.17</td><td>36.50</td><td>40.8</td><td>0.460</td></tr><tr><td>Camponotus socius</td><td>0.86</td><td>3.07</td><td>1.72</td><td>2.16</td><td>10.51</td><td>2.12</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Cardiocondyla emeryi</td><td>0.62</td><td>0.03</td><td>0.34</td><td>0.43</td><td>0.98</td><td>1.91</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Cyphomyrmex minutus</td><td>0.00</td><td>0.12</td><td>0.60</td><td>0.65</td><td>1.96</td><td>2.17</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Dorymyrmex bossutus</td><td>0.30</td><td>0.11</td><td>0.62</td><td>0.72</td><td>2.82</td><td>2.47</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Dorymyrmex bureni*</td><td>0.13</td><td>0.11</td><td>0.73</td><td>0.85</td><td>3.55</td><td>2.46</td><td>0.88</td><td>46.50</td><td>47.3</td><td>0.283</td></tr><tr><td>Dorymyrmex elegans*</td><td>0.96</td><td>0.13</td><td>0.75</td><td>0.88</td><td>5.11</td><td>2.87</td><td>0.62</td><td>45.50</td><td>45.2</td><td>0.338</td></tr><tr><td>Dorymyrmex flavopectus*</td><td>1.00</td><td>0.08</td><td>0.73</td><td>0.84</td><td>4.06</td><td>2.66</td><td>0.80</td><td>45.50</td><td>45.6</td><td>0.275</td></tr><tr><td>Formica pallidefulva*</td><td>0.28</td><td>0.79</td><td>1.16</td><td>1.43</td><td>6.76</td><td>2.31</td><td>1.00</td><td>44.00</td><td>46.9</td><td>0.460*</td></tr><tr><td>Forelius pruinosus*</td><td>0.82</td><td>0.07</td><td>0.54</td><td>0.60</td><td>2.24</td><td>2.5</td><td>1.00</td><td>49.00</td><td>49.3</td><td>0.214</td></tr><tr><td>Hypoponera inexorata</td><td>0.50</td><td>0.18</td><td>0.63</td><td>0.70</td><td>1.81</td><td>1.95</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Hypoponera opacior</td><td>0.54</td><td>0.08</td><td>0.51</td><td>0.61</td><td>1.47</td><td>1.90</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Monomorium viride*</td><td>0.71</td><td>0.03</td><td>0.41</td><td>0.50</td><td>1.39</td><td>2.15</td><td>1.00</td><td>45.75</td><td>47.4</td><td>0.124</td></tr><tr><td>Odontomachus relictus*</td><td>0.53</td><td>1.46</td><td>1.61</td><td>2.03</td><td>6.23</td><td>1.78</td><td>0.44</td><td>38.50</td><td>41.1</td><td>0.273</td></tr><tr><td>Paratrechina arenivaga*</td><td>0.79</td><td>0.05</td><td>0.47</td><td>0.54</td><td>2.10</td><td>2.62</td><td>0.37</td><td>37.25</td><td>42.8</td><td>0.926</td></tr><tr><td>Paratrechina phantasma</td><td>1.00</td><td>0.05</td><td>0.50</td><td>0.56</td><td>2.21</td><td>2.62</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Paratrechina wojciki*</td><td>0.10</td><td>0.04</td><td>0.52</td><td>0.57</td><td>1.86</td><td>2.34</td><td>0.14</td><td>36.67</td><td>39.9</td><td>1.254</td></tr><tr><td>Pheidole adrianoi*</td><td>1.00</td><td>0.03</td><td>0.37</td><td>0.41</td><td>1.18</td><td>2.27</td><td>0.89</td><td>39.50</td><td>44.7</td><td>0.467</td></tr><tr><td>Pheidole dentata*</td><td>0.27</td><td>0.08</td><td>0.57</td><td>0.63</td><td>2.29</td><td>2.44</td><td>0.67</td><td>38.75</td><td>42.5</td><td>0.293</td></tr><tr><td>Pheidole floridana*</td><td>0.05</td><td>0.03</td><td>0.42</td><td>0.48</td><td>1.27</td><td>2.09</td><td>0.61</td><td>39.50</td><td>41.7</td><td>0.246</td></tr><tr><td>Pheidole metallescens*</td><td>0.72</td><td>0.03</td><td>0.44</td><td>0.47</td><td>1.30</td><td>2.16</td><td>0.81</td><td>40.75</td><td>43.7</td><td>0.212</td></tr><tr><td>Pheidole moerens</td><td>0.17</td><td>0.03</td><td>0.42</td><td>0.45</td><td>1.16</td><td>2.07</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Pheidole morrisii*</td><td>0.90</td><td>0.09</td><td>0.58</td><td>0.70</td><td>2.97</td><td>2.6</td><td>0.58</td><td>39.50</td><td>41.3</td><td>0.264</td></tr><tr><td>Pogonomyrmex badius</td><td>1.00</td><td>1.45</td><td>1.61</td><td>1.63</td><td>6.13</td><td>2.03</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Pyramica eggersi</td><td>0.00</td><td>0.03</td><td>0.37</td><td>0.35</td><td>0.78</td><td>1.92</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Solenopsis abdita/carolinensis</td><td>0.20</td><td>0.02</td><td>0.29</td><td>0.37</td><td>0.70</td><td>1.69</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Solenopsis globularia littoralis</td><td>0.33</td><td>0.04</td><td>0.43</td><td>0.52</td><td>1.18</td><td>1.86</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Solenopsis invicta</td><td>0.00</td><td>0.23</td><td>0.57</td><td>0.66</td><td>2.03</td><td>2.19</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Solenopsis nickersoni</td><td>0.46</td><td>0.02</td><td>0.32</td><td>0.37</td><td>0.83</td><td>1.92</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Solenopsis tennesseensis</td><td>0.59</td><td>0.01</td><td>0.25</td><td>0.32</td><td>0.53</td><td>1.53</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Strumigenys emmae</td><td>0.50</td><td>0.02</td><td>0.36</td><td>0.42</td><td>0.76</td><td>1.61</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Temnothorax pergandei*</td><td>0.30</td><td>0.11</td><td>0.62</td><td>0.74</td><td>1.97</td><td>1.97</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Temnothorax texanus*</td><td>1.00</td><td>0.13</td><td>0.46</td><td>0.60</td><td>1.34</td><td>1.81</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Trachymyrmex septentrionalis</td><td>0.67</td><td>0.41</td><td>1.03</td><td>1.02</td><td>3.46</td><td>2.13</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></table>
 
 Habitat index (HI) is the proportion of sampling units in which a species appeared in shrub habitats relative to all sampling units (1 indicates species only found in shrub, 0 indicates found only in forest)
 
@@ -215,13 +172,7 @@ Oecologia (2012) 169:1063–1074
 
 Table 2 Environmental characteristics of the two shrub (SS, SF) and two forest (FL, SR) habitats
 
-| Habitat | Groundcover (%) | Surface temperature (°C) | Vapor pressure deficit (kPa) | Soil moisture (%) | Soil pH | Plant diversity | Time since fire (years) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Sand Pine Scrub (S) | 42.4 | 35.3 | 2.0 | 2.2 | 4.9 | 18.7 | 12.7 |
-| Scrubby Flatwoods (S) | 49.3 | 36.9 | 1.8 | 3.0 | 4.1 | 18.0 | 6.3 |
-| Flatwoods (F) | 90.3 | 29.9 | 1.5 | 3.3 | 4.7 | 23.7 | 11.0 |
-| Southern Ridge Sandhill (F) | 97.8 | 30.9 | 1.3 | 1.6 | 5.4 | 33.0 | >40 |
-| Effect size | 48.2 | 5.7 | 0.5 | 0.15 | 0.55 | 10 | ≈16 |
+<table><tr><td>Habitat</td><td>Groundcover (%)</td><td>Surface temperature (°C)</td><td>Vapor pressure deficit (kPa)</td><td>Soil moisture (%)</td><td>Soil pH</td><td>Plant diversity</td><td>Time since fire (years)</td></tr><tr><td>Sand Pine Scrub (S)</td><td>42.4</td><td>35.3</td><td>2.0</td><td>2.2</td><td>4.9</td><td>18.7</td><td>12.7</td></tr><tr><td>Scrubby Flatwoods (S)</td><td>49.3</td><td>36.9</td><td>1.8</td><td>3.0</td><td>4.1</td><td>18.0</td><td>6.3</td></tr><tr><td>Flatwoods (F)</td><td>90.3</td><td>29.9</td><td>1.5</td><td>3.3</td><td>4.7</td><td>23.7</td><td>11.0</td></tr><tr><td>Southern Ridge Sandhill (F)</td><td>97.8</td><td>30.9</td><td>1.3</td><td>1.6</td><td>5.4</td><td>33.0</td><td>&gt;40</td></tr><tr><td>Effect size</td><td>48.2</td><td>5.7</td><td>0.5</td><td>0.15</td><td>0.55</td><td>10</td><td>≈16</td></tr></table>
 
 Surface temperature and VPD are based on summer daytime averages. Percent soil moisture, soil pH and plant diversity (species richness) are averages based on Abrahamson (1984) and Menges and Gallo (1991). Time since Wre is average number of years passed using 2009 as the reference point. The mean diVerence between shrub (S) and forest (F) habitats is denoted by eVect size; signiWcant diVerences $( P < 0 . 0 5 )$ are in bold
 

@@ -198,12 +198,7 @@ Biodivers Conserv (2013) 22:2567–2581
 
 Fig. 3 Ant richness per sample unit on the two drove roads. Error bars represent mean ± standard error. Different letters indicate significant differences for this variable (Tukey’s test, $P < 0 . 0 5 )$ (DR drove road)
 
-| Category | HCS/OH | GO | C | CCS/SH |
-| --- | --- | --- | --- | --- |
-| On the MDR | ~3.0 | ~6.0 | ~1.5 | ~1.0 |
-| Adjacent to MDR | ~4.0 | ~6.0 | ~2.0 | ~1.0 |
-| On the CDR | ~10.5 | ~10.5 | ~2.5 | ~1.0 |
-| Adjacent to CDR | ~6.5 | ~8.5 | ~3.0 | ~1.0 |
+<table><tr><td>Category</td><td>HCS/OH</td><td>GO</td><td>C</td><td>CCS/SH</td></tr><tr><td>On the MDR</td><td>~3.0</td><td>~6.0</td><td>~1.5</td><td>~1.0</td></tr><tr><td>Adjacent to MDR</td><td>~4.0</td><td>~6.0</td><td>~2.0</td><td>~1.0</td></tr><tr><td>On the CDR</td><td>~10.5</td><td>~10.5</td><td>~2.5</td><td>~1.0</td></tr><tr><td>Adjacent to CDR</td><td>~6.5</td><td>~8.5</td><td>~3.0</td><td>~1.0</td></tr></table>
 
 Fig. 4 Number of ant species for each functional group on the two drove roads (CCS/SH cold-climate specialists and/or shade habitats, C cryptic, GO generalist and/or opportunistic, HCS/OH hot climate specialist and/or open habitats, CDR Conquense Drove Road, MDR Murciana Drove Road)
 
@@ -221,21 +216,11 @@ Biodivers Conserv (2013) 22:2567–2581
 
 2575
 
-| Location | Environment | On the DR | Adjacent to DR |
-| --- | --- | --- | --- |
-| Murciana Drove Road | Herbaceous crops | ~1.0 | ~1.0 |
-| Murciana Drove Road | Vineyards | ~0.8 | ~0.9 |
-| Conquense Drove Road | Herbaceous crops | ~4.7 | ~2.9 |
-| Conquense Drove Road | Vineyards | ~5.1 | ~2.3 |
+<table><tr><td>Location</td><td>Environment</td><td>On the DR</td><td>Adjacent to DR</td></tr><tr><td>Murciana Drove Road</td><td>Herbaceous crops</td><td>~1.0</td><td>~1.0</td></tr><tr><td>Murciana Drove Road</td><td>Vineyards</td><td>~0.8</td><td>~0.9</td></tr><tr><td>Conquense Drove Road</td><td>Herbaceous crops</td><td>~4.7</td><td>~2.9</td></tr><tr><td>Conquense Drove Road</td><td>Vineyards</td><td>~5.1</td><td>~2.3</td></tr></table>
 
 Fig. 5 Ant richness per trap on the two drove roads. Error bars represent mean ± standard error. Different letters indicate significant differences for this variable (Tukey’s test, $P < 0 . 0 5 )$ (DR drove road)
 
-| Series | NMDS1 (range) | NMDS2 (range) |
-| --- | --- | --- |
-| On the CDR | -1.6~-0.3 | -1.25~0.45 |
-| On the MDR | -0.4~0.9 | -1.0~0.6 |
-| Adjacent to CDR | -0.9~0.1 | -0.2~1.45 |
-| Adjacent to MDR | 0.1~1.1 | -0.3~0.8 |
+<table><tr><td>Series</td><td>NMDS1 (range)</td><td>NMDS2 (range)</td></tr><tr><td>On the CDR</td><td>-1.6~-0.3</td><td>-1.25~0.45</td></tr><tr><td>On the MDR</td><td>-0.4~0.9</td><td>-1.0~0.6</td></tr><tr><td>Adjacent to CDR</td><td>-0.9~0.1</td><td>-0.2~1.45</td></tr><tr><td>Adjacent to MDR</td><td>0.1~1.1</td><td>-0.3~0.8</td></tr></table>
 
 Fig. 6 Non-metric multidimensional scaling (NMDS) of ant species composition on the two drove roads. Dissimilarities were calculated by Euclidean distance (CDR Conquense Drove Road, MDR Murciana Drove Road)
 
@@ -251,16 +236,7 @@ The Rao index showed significantly higher values on the CDR compared to the MDR 
 
 Biodivers Conserv (2013) 22:2567–2581
 
-| Land Cover Type | Environment | Median | Q1 | Q3 | Min | Max |
-| --- | --- | --- | --- | --- | --- | --- |
-| Herbaceous crops | On the DR | ~0.09 | ~0.09 | ~0.21 | ~0.09 | ~0.23 |
-| Herbaceous crops | Adjacent to DR | ~0.21 | ~0.21 | ~0.31 | ~0.21 | ~0.36 |
-| Vineyards | On the DR | ~0.10 | ~0.10 | ~0.15 | ~0.10 | ~0.19 |
-| Vineyards | Adjacent to DR | ~0.22 | ~0.09 | ~0.24 | ~0.09 | ~0.26 |
-| Herbaceous crops | On the DR | ~0.28 | ~0.26 | ~0.29 | ~0.25 | ~0.30 |
-| Herbaceous crops | Adjacent to DR | ~0.24 | ~0.22 | ~0.25 | ~0.22 | ~0.27 |
-| Vineyards | On the DR | ~0.28 | ~0.27 | ~0.29 | ~0.26 | ~0.29 |
-| Vineyards | Adjacent to DR | ~0.21 | ~0.19 | ~0.23 | ~0.19 | ~0.26 |
+<table><tr><td>Land Cover Type</td><td>Environment</td><td>Median</td><td>Q1</td><td>Q3</td><td>Min</td><td>Max</td></tr><tr><td>Herbaceous crops</td><td>On the DR</td><td>~0.09</td><td>~0.09</td><td>~0.21</td><td>~0.09</td><td>~0.23</td></tr><tr><td>Herbaceous crops</td><td>Adjacent to DR</td><td>~0.21</td><td>~0.21</td><td>~0.31</td><td>~0.21</td><td>~0.36</td></tr><tr><td>Vineyards</td><td>On the DR</td><td>~0.10</td><td>~0.10</td><td>~0.15</td><td>~0.10</td><td>~0.19</td></tr><tr><td>Vineyards</td><td>Adjacent to DR</td><td>~0.22</td><td>~0.09</td><td>~0.24</td><td>~0.09</td><td>~0.26</td></tr><tr><td>Herbaceous crops</td><td>On the DR</td><td>~0.28</td><td>~0.26</td><td>~0.29</td><td>~0.25</td><td>~0.30</td></tr><tr><td>Herbaceous crops</td><td>Adjacent to DR</td><td>~0.24</td><td>~0.22</td><td>~0.25</td><td>~0.22</td><td>~0.27</td></tr><tr><td>Vineyards</td><td>On the DR</td><td>~0.28</td><td>~0.27</td><td>~0.29</td><td>~0.26</td><td>~0.29</td></tr><tr><td>Vineyards</td><td>Adjacent to DR</td><td>~0.21</td><td>~0.19</td><td>~0.23</td><td>~0.19</td><td>~0.26</td></tr></table>
 
 Fig. 7 Rao index values on the two drove roads. The boxes represent the three quartiles, and the whiskers represent the minimum and maximum values obtained for this variable (DR drove road)
 

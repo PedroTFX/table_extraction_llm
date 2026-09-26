@@ -151,19 +151,7 @@ WILEY
 
 T A B L E 1 Site description including elevation, longitude, latitude, mean annual temperature (MAT), dominant tree species, field sites, and sampling date
 
-| Elevation (m) | Longitude | Latitude | MAT (°C) | Dominant tree species | Field sites | Sampling date (all in 2018) |
-| --- | --- | --- | --- | --- | --- | --- |
-| 177 | 131.29803 | 31.86442 | 16.703 | Castanopsis sieboldii, C. cuspidata, Distylium racemosum, Machilus thunbergii, Quercus salicina | Tano Forest Science Station | 1-3 Jun., 24-26 Jul., 18-20 Sep. |
-| 723 | 131.21057 | 32.35313 | 13.427 | Q. acuta, Q. salicina, D. racemosum, Litsea coreana, Abies firma | Kashiba National Forest | 1-3 Jun., 24-26 Jul., 18-20 Sep. |
-| 787 | 131.20836 | 32.35509 | 13.043 | Q. acuta, Q. salicina, D. racemosum, L coreana, Ab. firma | Kashiba National Forest | 1-3 Jun., 24-26 Jul., 18-20 Sep. |
-| 1068 | 131.2014 | 32.3503 | 11.357 | Q. acuta, Q. salicina, Acer sieboldianum, Ac. pictum | Shiiba Research Forest | 1-3 Jun., 24-26 Jul., 18-20 Sep. |
-| 1095 | 131.08922 | 32.36014 | 11.195 | Ab. firma, Q. crispula, Betula grossa | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
-| 1187 | 131.08323 | 32.36275 | 10.643 | Ab. firma, Ac. sieboldianum, Ac. pictum | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
-| 1209 | 131.08737 | 32.36806 | 10.511 | Kalopanax septemlobus, Cornus controversa, Ac. sieboldianum, Ac. pictum, Carpinus japonica, Ulmus laciniata, Pterocarya rhoifolia | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
-| 1249 | 131.07929 | 32.36304 | 10.271 | Fagus crenata, P. rhoifolia, Ac. sieboldianum | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
-| 1410 | 131.07762 | 32.36696 | 9.305 | F. crenata, P. rhoifolia, Ac. sieboldianum, Ab. firma, Car. japonica | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
-| 1483 | 131.07891 | 32.37204 | 8.867 | Ab. firma, F. crenata, Ac. sieboldianum | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
-| 1604 | 131.07603 | 32.37044 | 8.141 | F. crenata, Ac. Sieboldianum, Sorbus commixta, Hamamelis japonica, Clethra barbinervis, Styrax japonicus | Shiiba Research Forest | 31 May-2 Jun., 23-25 Jul., 17-19 Sep. |
+<table><tr><td>Elevation (m)</td><td>Longitude</td><td>Latitude</td><td>MAT (°C)</td><td>Dominant tree species</td><td>Field sites</td><td>Sampling date (all in 2018)</td></tr><tr><td>177</td><td>131.29803</td><td>31.86442</td><td>16.703</td><td>Castanopsis sieboldii, C. cuspidata, Distylium racemosum, Machilus thunbergii, Quercus salicina</td><td>Tano Forest Science Station</td><td>1-3 Jun., 24-26 Jul., 18-20 Sep.</td></tr><tr><td>723</td><td>131.21057</td><td>32.35313</td><td>13.427</td><td>Q. acuta, Q. salicina, D. racemosum, Litsea coreana, Abies firma</td><td>Kashiba National Forest</td><td>1-3 Jun., 24-26 Jul., 18-20 Sep.</td></tr><tr><td>787</td><td>131.20836</td><td>32.35509</td><td>13.043</td><td>Q. acuta, Q. salicina, D. racemosum, L coreana, Ab. firma</td><td>Kashiba National Forest</td><td>1-3 Jun., 24-26 Jul., 18-20 Sep.</td></tr><tr><td>1068</td><td>131.2014</td><td>32.3503</td><td>11.357</td><td>Q. acuta, Q. salicina, Acer sieboldianum, Ac. pictum</td><td>Shiiba Research Forest</td><td>1-3 Jun., 24-26 Jul., 18-20 Sep.</td></tr><tr><td>1095</td><td>131.08922</td><td>32.36014</td><td>11.195</td><td>Ab. firma, Q. crispula, Betula grossa</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr><tr><td>1187</td><td>131.08323</td><td>32.36275</td><td>10.643</td><td>Ab. firma, Ac. sieboldianum, Ac. pictum</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr><tr><td>1209</td><td>131.08737</td><td>32.36806</td><td>10.511</td><td>Kalopanax septemlobus, Cornus controversa, Ac. sieboldianum, Ac. pictum, Carpinus japonica, Ulmus laciniata, Pterocarya rhoifolia</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr><tr><td>1249</td><td>131.07929</td><td>32.36304</td><td>10.271</td><td>Fagus crenata, P. rhoifolia, Ac. sieboldianum</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr><tr><td>1410</td><td>131.07762</td><td>32.36696</td><td>9.305</td><td>F. crenata, P. rhoifolia, Ac. sieboldianum, Ab. firma, Car. japonica</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr><tr><td>1483</td><td>131.07891</td><td>32.37204</td><td>8.867</td><td>Ab. firma, F. crenata, Ac. sieboldianum</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr><tr><td>1604</td><td>131.07603</td><td>32.37044</td><td>8.141</td><td>F. crenata, Ac. Sieboldianum, Sorbus commixta, Hamamelis japonica, Clethra barbinervis, Styrax japonicus</td><td>Shiiba Research Forest</td><td>31 May-2 Jun., 23-25 Jul., 17-19 Sep.</td></tr></table>
 
 Note: All sites are natural forests. MAT at each elevation was estimated from the meteorological data of the Tano Forest Science Station (177 m a.s.l) and the Shiiba Research Forest (600 and 1604 m a.s.l).
 
@@ -251,35 +239,11 @@ WILEY
 
 783
 
-| Elevation (m) | Species diversity |
-| --- | --- |
-| ~200 | ~2 |
-| ~750 | ~6.5 |
-| ~800 | ~12.5 |
-| ~1100 | ~21.5 |
-| ~1150 | ~13.5 |
-| ~1200 | ~15.5 |
-| ~1220 | ~12.5 |
-| ~1250 | ~13 |
-| ~1400 | ~17.5 |
-| ~1500 | ~15 |
-| ~1600 | ~20.5 |
+<table><tr><td>Elevation (m)</td><td>Species diversity</td></tr><tr><td>~200</td><td>~2</td></tr><tr><td>~750</td><td>~6.5</td></tr><tr><td>~800</td><td>~12.5</td></tr><tr><td>~1100</td><td>~21.5</td></tr><tr><td>~1150</td><td>~13.5</td></tr><tr><td>~1200</td><td>~15.5</td></tr><tr><td>~1220</td><td>~12.5</td></tr><tr><td>~1250</td><td>~13</td></tr><tr><td>~1400</td><td>~17.5</td></tr><tr><td>~1500</td><td>~15</td></tr><tr><td>~1600</td><td>~20.5</td></tr></table>
 
 F I G U R E 3 The relationship between elevation and species diversity calculated by Simpson's diversity index. The solid line and gray area indicate the result of linear regression (r = 0.800, $p = 0 . 0 0 2 )$ and the 95% CI, respectively
 
-| Elevation (m) | Species richness |
-| --- | --- |
-| ~200 | ~8 |
-| ~750 | ~19 |
-| ~800 | ~26 |
-| ~1100 | ~39 |
-| ~1150 | ~37 |
-| ~1200 | ~28 |
-| ~1200 | ~30 |
-| ~1250 | ~33 |
-| ~1400 | ~29 |
-| ~1500 | ~22 |
-| ~1600 | ~39 |
+<table><tr><td>Elevation (m)</td><td>Species richness</td></tr><tr><td>~200</td><td>~8</td></tr><tr><td>~750</td><td>~19</td></tr><tr><td>~800</td><td>~26</td></tr><tr><td>~1100</td><td>~39</td></tr><tr><td>~1150</td><td>~37</td></tr><tr><td>~1200</td><td>~28</td></tr><tr><td>~1200</td><td>~30</td></tr><tr><td>~1250</td><td>~33</td></tr><tr><td>~1400</td><td>~29</td></tr><tr><td>~1500</td><td>~22</td></tr><tr><td>~1600</td><td>~39</td></tr></table>
 
 F I G U R E 4 The relationship between elevation and species richness. The solid line and gray area indicate the result of linear regression $(r=0.663,p=0.015)$ and the 95% CI, respectively
 
@@ -287,31 +251,13 @@ the Aculeata communities along an elevational gradient. The FD of trophic level 
 
 Trophic level CWM decreased with increasing elevation (Table 2; $p < 0 . 0 5 )$ . The CWM of flight duration also decreased with increasing elevation (Table 2; $p < 0 . 0 5 )$ The relative abundance of pollinators (herbivores) increased, and the relative abundance of predators decreased with increasing elevation (Figure 6). The relationships between the CWMs of body size, elevation range, and elevation were not statistically significant (Table 2; $p > 0 . 0 5 )$
 
-| Elevation (m) | Functional diversity |
-| --- | --- |
-| ~250 | ~1.21 |
-| ~700 | ~1.37 |
-| ~800 | ~1.42 |
-| ~1100 | ~1.48 |
-| ~1150 | ~1.39 |
-| ~1200 | ~1.46 |
-| ~1250 | ~1.43 |
-| ~1300 | ~1.48 |
-| ~1400 | ~1.47 |
-| ~1500 | ~1.40 |
-| ~1600 | ~1.53 |
+<table><tr><td>Elevation (m)</td><td>Functional diversity</td></tr><tr><td>~250</td><td>~1.21</td></tr><tr><td>~700</td><td>~1.37</td></tr><tr><td>~800</td><td>~1.42</td></tr><tr><td>~1100</td><td>~1.48</td></tr><tr><td>~1150</td><td>~1.39</td></tr><tr><td>~1200</td><td>~1.46</td></tr><tr><td>~1250</td><td>~1.43</td></tr><tr><td>~1300</td><td>~1.48</td></tr><tr><td>~1400</td><td>~1.47</td></tr><tr><td>~1500</td><td>~1.40</td></tr><tr><td>~1600</td><td>~1.53</td></tr></table>
 
 F I G U R E 5 The relationship between elevation and multiple functional diversity calculated by Rao's quadratic entropy. The solid line and gray area indicate the result of linear regression (r = 0.825, $p = 0 . 0 0 1 )$ and the 95% CI, respectively
 
 T A B L E 2 Linear regression's correlation coefficient between elevation and community-weighted mean (CWM) or functional diversity (FD) of each functional trait
 
-| Functional traits and distribution index | CWM (r) | FD (r) |
-| --- | --- | --- |
-| Trophic level | -0.735** | 0.781** |
-| Flight duration | -0.632* | 0.0458 |
-| Mean body size | -0.0949 | 0.310 |
-| Altitudinal range | -0.387 | 0.640* |
-| Distribution index | -0.906*** | 0.883*** |
+<table><tr><td>Functional traits and distribution index</td><td>CWM (r)</td><td>FD (r)</td></tr><tr><td>Trophic level</td><td>-0.735**</td><td>0.781**</td></tr><tr><td>Flight duration</td><td>-0.632*</td><td>0.0458</td></tr><tr><td>Mean body size</td><td>-0.0949</td><td>0.310</td></tr><tr><td>Altitudinal range</td><td>-0.387</td><td>0.640*</td></tr><tr><td>Distribution index</td><td>-0.906***</td><td>0.883***</td></tr></table>
 
 ## 3.3 | Phylogenetic composition
 
@@ -335,76 +281,17 @@ ECOLOGICAL RESEARCH
 
 UEMORI ET AL.
 
-| X | Relative abundance of pollinator |
-| --- | --- |
-| ~300 | 0.0 |
-| ~750 | ~0.01 |
-| ~800 | ~0.01 |
-| ~1100 | ~0.12 |
-| ~1150 | ~0.05 |
-| ~1200 | ~0.07 |
-| ~1220 | ~0.04 |
-| ~1230 | 0.3 |
-| ~1400 | ~0.21 |
-| ~1500 | ~0.23 |
-| ~1600 | ~0.39 |
+<table><tr><td>X</td><td>Relative abundance of pollinator</td></tr><tr><td>~300</td><td>0.0</td></tr><tr><td>~750</td><td>~0.01</td></tr><tr><td>~800</td><td>~0.01</td></tr><tr><td>~1100</td><td>~0.12</td></tr><tr><td>~1150</td><td>~0.05</td></tr><tr><td>~1200</td><td>~0.07</td></tr><tr><td>~1220</td><td>~0.04</td></tr><tr><td>~1230</td><td>0.3</td></tr><tr><td>~1400</td><td>~0.21</td></tr><tr><td>~1500</td><td>~0.23</td></tr><tr><td>~1600</td><td>~0.39</td></tr></table>
 
-| X | Relative abundance of predator |
-| --- | --- |
-| ~200 | ~0.70 |
-| ~750 | ~0.30 |
-| ~800 | ~0.43 |
-| ~1100 | ~0.29 |
-| ~1150 | ~0.43 |
-| ~1200 | ~0.35 |
-| ~1220 | ~0.34 |
-| ~1400 | ~0.46 |
-| ~1500 | ~0.18 |
-| ~1600 | ~0.37 |
+<table><tr><td>X</td><td>Relative abundance of predator</td></tr><tr><td>~200</td><td>~0.70</td></tr><tr><td>~750</td><td>~0.30</td></tr><tr><td>~800</td><td>~0.43</td></tr><tr><td>~1100</td><td>~0.29</td></tr><tr><td>~1150</td><td>~0.43</td></tr><tr><td>~1200</td><td>~0.35</td></tr><tr><td>~1220</td><td>~0.34</td></tr><tr><td>~1400</td><td>~0.46</td></tr><tr><td>~1500</td><td>~0.18</td></tr><tr><td>~1600</td><td>~0.37</td></tr></table>
 
 F I G U R E 6 The relationship between elevation and relative abundance of each feeding guild. The solid line and gray area indicate the result of linear regression and the 95% CI, respectively. (a) Pollinator $( r = 0 . 7 2 1 , p = 0 . 0 0 7 ) ,$ (b) predator $(r = -0.592, p = 0.03), (c)$ brood parasitoid (p > 0.05), and (d) parasitoid (p > 0.05)
 
-| Elevation (m) | Relative abundance of brood parasitoid |
-| --- | --- |
-| ~250 | ~0.07 |
-| ~700 | ~0.15 |
-| ~800 | ~0.16 |
-| ~1100 | ~0.18 |
-| ~1150 | ~0.09 |
-| ~1200 | ~0.28 |
-| ~1220 | ~0.16 |
-| ~1250 | ~0.19 |
-| ~1400 | ~0.15 |
-| ~1500 | ~0.34 |
-| ~1600 | ~0.09 |
+<table><tr><td>Elevation (m)</td><td>Relative abundance of brood parasitoid</td></tr><tr><td>~250</td><td>~0.07</td></tr><tr><td>~700</td><td>~0.15</td></tr><tr><td>~800</td><td>~0.16</td></tr><tr><td>~1100</td><td>~0.18</td></tr><tr><td>~1150</td><td>~0.09</td></tr><tr><td>~1200</td><td>~0.28</td></tr><tr><td>~1220</td><td>~0.16</td></tr><tr><td>~1250</td><td>~0.19</td></tr><tr><td>~1400</td><td>~0.15</td></tr><tr><td>~1500</td><td>~0.34</td></tr><tr><td>~1600</td><td>~0.09</td></tr></table>
 
-| Elevation (m) | Relative abundance of parasitoid |
-| --- | --- |
-| ~200 | ~0.25 |
-| ~700 | ~0.55 |
-| ~800 | ~0.41 |
-| ~1100 | ~0.28 |
-| ~1150 | ~0.60 |
-| ~1200 | ~0.23 |
-| ~1250 | ~0.47 |
-| ~1300 | ~0.19 |
-| ~1450 | ~0.20 |
-| ~1500 | ~0.26 |
-| ~1600 | ~0.17 |
+<table><tr><td>Elevation (m)</td><td>Relative abundance of parasitoid</td></tr><tr><td>~200</td><td>~0.25</td></tr><tr><td>~700</td><td>~0.55</td></tr><tr><td>~800</td><td>~0.41</td></tr><tr><td>~1100</td><td>~0.28</td></tr><tr><td>~1150</td><td>~0.60</td></tr><tr><td>~1200</td><td>~0.23</td></tr><tr><td>~1250</td><td>~0.47</td></tr><tr><td>~1300</td><td>~0.19</td></tr><tr><td>~1450</td><td>~0.20</td></tr><tr><td>~1500</td><td>~0.26</td></tr><tr><td>~1600</td><td>~0.17</td></tr></table>
 
-| Elevation (m) | Phylogenetic diversity |
-| --- | --- |
-| ~200 | ~1.9 |
-| ~750 | ~4.2 |
-| ~800 | ~4.9 |
-| ~1100 | ~4.6 |
-| ~1150 | ~5.1 |
-| ~1200 | ~4.8 |
-| ~1200 | ~3.7 |
-| ~1250 | ~5.4 |
-| ~1400 | ~5.9 |
-| ~1500 | ~6.0 |
-| ~1600 | ~5.4 |
+<table><tr><td>Elevation (m)</td><td>Phylogenetic diversity</td></tr><tr><td>~200</td><td>~1.9</td></tr><tr><td>~750</td><td>~4.2</td></tr><tr><td>~800</td><td>~4.9</td></tr><tr><td>~1100</td><td>~4.6</td></tr><tr><td>~1150</td><td>~5.1</td></tr><tr><td>~1200</td><td>~4.8</td></tr><tr><td>~1200</td><td>~3.7</td></tr><tr><td>~1250</td><td>~5.4</td></tr><tr><td>~1400</td><td>~5.9</td></tr><tr><td>~1500</td><td>~6.0</td></tr><tr><td>~1600</td><td>~5.4</td></tr></table>
 
 F I G U R E 7 The relationship between elevation and phylogenetic diversity. The solid line and gray area indicate the result of linear regression $(r = 0.819, p = 0.001)$ and the 95% CI, respectively
 

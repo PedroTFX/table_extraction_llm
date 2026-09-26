@@ -103,19 +103,7 @@ M. Wang et al.
 
 Ecological Indicators 126 (2021) 107701
 
-| Study Area | DEM Range |
-| --- | --- |
-| Mainland China | 377.962 - 1,001.405 |
-| Baiqi | 1,001.405 - 1,373.849 |
-| Shizigou | 1,373.849 - 2,971.917 |
-| Yanqing | 1,373.849 - 2,971.917 |
-| Beijing | 1,001.405 - 1,373.849 |
-| Haidian | 1,001.405 - 1,373.849 |
-| Fangshan | 1,001.405 - 1,373.849 |
-| Qianjiang | 1,001.405 - 1,373.849 |
-| Hebei | 1,001.405 - 1,373.849 |
-| Shandong | 1,001.405 - 1,373.849 |
-| Quzhou | 1,001.405 - 1,373.849 |
+<table><tr><td>Study Area</td><td>DEM Range</td></tr><tr><td>Mainland China</td><td>377.962 - 1,001.405</td></tr><tr><td>Baiqi</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Shizigou</td><td>1,373.849 - 2,971.917</td></tr><tr><td>Yanqing</td><td>1,373.849 - 2,971.917</td></tr><tr><td>Beijing</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Haidian</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Fangshan</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Qianjiang</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Hebei</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Shandong</td><td>1,001.405 - 1,373.849</td></tr><tr><td>Quzhou</td><td>1,001.405 - 1,373.849</td></tr></table>
 
 Fig. 1. Location of study areas.
 
@@ -369,148 +357,17 @@ Ecological Indicators 126 (2021) 107701
 
 Supporting Information
 
-| Body size (mm) | Individual percentage (%) |
-| --- | --- |
-| 0-1 | ~0.2 |
-| 1-2 | ~0.4 |
-| 2-3 | ~0.5 |
-| 3-4 | ~1.5 |
-| 4-5 | ~1.1 |
-| 5-6 | ~0.3 |
-| 6-7 | ~0.2 |
-| 7-8 | ~1.6 |
-| 8-9 | ~1.8 |
-| 9-10 | ~4.9 |
-| 10-11 | ~10.7 |
-| 11-12 | ~16.2 |
-| 12-13 | ~4.3 |
-| 13-14 | ~4.3 |
-| 14-15 | ~14.1 |
-| 15-16 | ~12.5 |
-| 16-17 | ~3.7 |
-| 17-18 | ~17.3 |
-| 18-19 | ~0.2 |
-| 19-20 | ~0.1 |
-| 20-21 | ~0.1 |
-| 21-22 | ~1.5 |
-| 22-23 | ~2.1 |
-| 23-24 | ~0.3 |
-| 24-25 | ~0.1 |
-| 25-26 | ~0.1 |
-| 26-27 | ~0.1 |
-| 27-28 | ~0.6 |
-| 28-29 | ~0.1 |
-| 29-30 | ~0.1 |
-| 30-31 | ~0.1 |
-| 31-32 | ~0.1 |
-| 32-33 | ~0.1 |
-| 33-34 | ~0.7 |
-| 34-35 | ~0.1 |
-| 35-36 | ~0.1 |
-| 36-37 | ~0.1 |
-| 37-38 | ~0.1 |
-| 38-39 | ~0.2 |
+<table><tr><td>Body size (mm)</td><td>Individual percentage (%)</td></tr><tr><td>0-1</td><td>~0.2</td></tr><tr><td>1-2</td><td>~0.4</td></tr><tr><td>2-3</td><td>~0.5</td></tr><tr><td>3-4</td><td>~1.5</td></tr><tr><td>4-5</td><td>~1.1</td></tr><tr><td>5-6</td><td>~0.3</td></tr><tr><td>6-7</td><td>~0.2</td></tr><tr><td>7-8</td><td>~1.6</td></tr><tr><td>8-9</td><td>~1.8</td></tr><tr><td>9-10</td><td>~4.9</td></tr><tr><td>10-11</td><td>~10.7</td></tr><tr><td>11-12</td><td>~16.2</td></tr><tr><td>12-13</td><td>~4.3</td></tr><tr><td>13-14</td><td>~4.3</td></tr><tr><td>14-15</td><td>~14.1</td></tr><tr><td>15-16</td><td>~12.5</td></tr><tr><td>16-17</td><td>~3.7</td></tr><tr><td>17-18</td><td>~17.3</td></tr><tr><td>18-19</td><td>~0.2</td></tr><tr><td>19-20</td><td>~0.1</td></tr><tr><td>20-21</td><td>~0.1</td></tr><tr><td>21-22</td><td>~1.5</td></tr><tr><td>22-23</td><td>~2.1</td></tr><tr><td>23-24</td><td>~0.3</td></tr><tr><td>24-25</td><td>~0.1</td></tr><tr><td>25-26</td><td>~0.1</td></tr><tr><td>26-27</td><td>~0.1</td></tr><tr><td>27-28</td><td>~0.6</td></tr><tr><td>28-29</td><td>~0.1</td></tr><tr><td>29-30</td><td>~0.1</td></tr><tr><td>30-31</td><td>~0.1</td></tr><tr><td>31-32</td><td>~0.1</td></tr><tr><td>32-33</td><td>~0.1</td></tr><tr><td>33-34</td><td>~0.7</td></tr><tr><td>34-35</td><td>~0.1</td></tr><tr><td>35-36</td><td>~0.1</td></tr><tr><td>36-37</td><td>~0.1</td></tr><tr><td>37-38</td><td>~0.1</td></tr><tr><td>38-39</td><td>~0.2</td></tr></table>
 
 Fig. S1. Distribution histogram of carabid body size.
 
-| Category | Small carabids (%) (Abundance) | Non-predatory carabids (%) (Abundance) | Non-predatory carabids (%) (Richness) |
-| --- | --- | --- | --- |
-| A | ~0.4 | ~-0.1 | ~0.2 |
-| P | ~-0.5 | ~0.1 | ~0.3 |
-| S | ~-1.1 | ~-1.0 | ~-0.3 |
+<table><tr><td>Category</td><td>Small carabids (%) (Abundance)</td><td>Non-predatory carabids (%) (Abundance)</td><td>Non-predatory carabids (%) (Richness)</td></tr><tr><td>A</td><td>~0.4</td><td>~-0.1</td><td>~0.2</td></tr><tr><td>P</td><td>~-0.5</td><td>~0.1</td><td>~0.3</td></tr><tr><td>S</td><td>~-1.1</td><td>~-1.0</td><td>~-0.3</td></tr></table>
 
 Fig. S2. Estimated coefficients from generalized linear mixed models showing the differences between assemblages in different land use types (A: annual crops; P: perennial crops; S: semi-natural habitats): (a) proportion of small carabids abundance (b) proportion of non-predatory carabids abundance (c) proportion of non-predatory carabids species richness; error bars refer to the SE of estimates, and asterisks indicate a significant difference based on the models (\*≤0.05; \*\*≤0.01; \*\*\*<0.001).
 
 <!-- page 2 of 8 -->
 
-| Plant species richness | Small carabids (%) (Abundance) |
-| --- | --- |
-| ~5 | ~38 |
-| ~6 | ~42 |
-| ~7 | ~23 |
-| ~8 | ~24 |
-| ~9 | ~10 |
-| ~10 | ~22 |
-| ~11 | ~25 |
-| ~12 | ~28 |
-| ~13 | ~30 |
-| ~14 | ~27 |
-| ~15 | ~26 |
-| ~16 | ~29 |
-| ~17 | ~25 |
-| ~18 | ~27 |
-| ~19 | ~25 |
-| ~20 | ~26 |
-| ~21 | ~24 |
-| ~22 | ~25 |
-| ~23 | ~26 |
-| ~24 | ~25 |
-| ~25 | ~25 |
-| ~26 | ~25 |
-| ~27 | ~25 |
-| ~28 | ~25 |
-| ~29 | ~25 |
-| ~30 | ~25 |
-| ~31 | ~25 |
-| ~32 | ~25 |
-| ~33 | ~25 |
-| ~34 | ~25 |
-| ~35 | ~25 |
-| ~36 | ~25 |
-| ~37 | ~25 |
-| ~38 | ~25 |
-| ~39 | ~25 |
-| ~40 | ~25 |
-| ~41 | ~25 |
-| ~42 | ~25 |
-| ~43 | ~25 |
-| ~44 | ~25 |
-| ~45 | ~25 |
-| ~46 | ~25 |
-| ~47 | ~25 |
-| ~48 | ~25 |
-| ~49 | ~25 |
-| ~50 | ~25 |
-| ~51 | ~25 |
-| ~52 | ~25 |
-| ~53 | ~25 |
-| ~54 | ~25 |
-| ~55 | ~25 |
-| ~56 | ~25 |
-| ~57 | ~25 |
-| ~58 | ~25 |
-| ~59 | ~25 |
-| ~60 | ~25 |
-| ~61 | ~25 |
-| ~62 | ~25 |
-| ~63 | ~25 |
-| ~64 | ~25 |
-| ~65 | ~25 |
-| ~66 | ~25 |
-| ~67 | ~25 |
-| ~68 | ~25 |
-| ~69 | ~25 |
-| ~70 | ~25 |
-| ~71 | ~25 |
-| ~72 | ~25 |
-| ~73 | ~25 |
-| ~74 | ~25 |
-| ~75 | ~25 |
-| ~76 | ~25 |
-| ~77 | ~25 |
-| ~78 | ~25 |
-| ~79 | ~25 |
-| ~80 | ~25 |
-| ~81 | ~25 |
-| ~82 | ~25 |
-| ~83 | ~25 |
-| ~84 | ~25 |
-| ~85 | ~25 |
-| ~86 | ~25 |
-| ~87 | ~25 |
-| ~88 | ~25 |
-| ~89 | ~25 |
-| ~90 | ~25 |
+<table><tr><td>Plant species richness</td><td>Small carabids (%) (Abundance)</td></tr><tr><td>~5</td><td>~38</td></tr><tr><td>~6</td><td>~42</td></tr><tr><td>~7</td><td>~23</td></tr><tr><td>~8</td><td>~24</td></tr><tr><td>~9</td><td>~10</td></tr><tr><td>~10</td><td>~22</td></tr><tr><td>~11</td><td>~25</td></tr><tr><td>~12</td><td>~28</td></tr><tr><td>~13</td><td>~30</td></tr><tr><td>~14</td><td>~27</td></tr><tr><td>~15</td><td>~26</td></tr><tr><td>~16</td><td>~29</td></tr><tr><td>~17</td><td>~25</td></tr><tr><td>~18</td><td>~27</td></tr><tr><td>~19</td><td>~25</td></tr><tr><td>~20</td><td>~26</td></tr><tr><td>~21</td><td>~24</td></tr><tr><td>~22</td><td>~25</td></tr><tr><td>~23</td><td>~26</td></tr><tr><td>~24</td><td>~25</td></tr><tr><td>~25</td><td>~25</td></tr><tr><td>~26</td><td>~25</td></tr><tr><td>~27</td><td>~25</td></tr><tr><td>~28</td><td>~25</td></tr><tr><td>~29</td><td>~25</td></tr><tr><td>~30</td><td>~25</td></tr><tr><td>~31</td><td>~25</td></tr><tr><td>~32</td><td>~25</td></tr><tr><td>~33</td><td>~25</td></tr><tr><td>~34</td><td>~25</td></tr><tr><td>~35</td><td>~25</td></tr><tr><td>~36</td><td>~25</td></tr><tr><td>~37</td><td>~25</td></tr><tr><td>~38</td><td>~25</td></tr><tr><td>~39</td><td>~25</td></tr><tr><td>~40</td><td>~25</td></tr><tr><td>~41</td><td>~25</td></tr><tr><td>~42</td><td>~25</td></tr><tr><td>~43</td><td>~25</td></tr><tr><td>~44</td><td>~25</td></tr><tr><td>~45</td><td>~25</td></tr><tr><td>~46</td><td>~25</td></tr><tr><td>~47</td><td>~25</td></tr><tr><td>~48</td><td>~25</td></tr><tr><td>~49</td><td>~25</td></tr><tr><td>~50</td><td>~25</td></tr><tr><td>~51</td><td>~25</td></tr><tr><td>~52</td><td>~25</td></tr><tr><td>~53</td><td>~25</td></tr><tr><td>~54</td><td>~25</td></tr><tr><td>~55</td><td>~25</td></tr><tr><td>~56</td><td>~25</td></tr><tr><td>~57</td><td>~25</td></tr><tr><td>~58</td><td>~25</td></tr><tr><td>~59</td><td>~25</td></tr><tr><td>~60</td><td>~25</td></tr><tr><td>~61</td><td>~25</td></tr><tr><td>~62</td><td>~25</td></tr><tr><td>~63</td><td>~25</td></tr><tr><td>~64</td><td>~25</td></tr><tr><td>~65</td><td>~25</td></tr><tr><td>~66</td><td>~25</td></tr><tr><td>~67</td><td>~25</td></tr><tr><td>~68</td><td>~25</td></tr><tr><td>~69</td><td>~25</td></tr><tr><td>~70</td><td>~25</td></tr><tr><td>~71</td><td>~25</td></tr><tr><td>~72</td><td>~25</td></tr><tr><td>~73</td><td>~25</td></tr><tr><td>~74</td><td>~25</td></tr><tr><td>~75</td><td>~25</td></tr><tr><td>~76</td><td>~25</td></tr><tr><td>~77</td><td>~25</td></tr><tr><td>~78</td><td>~25</td></tr><tr><td>~79</td><td>~25</td></tr><tr><td>~80</td><td>~25</td></tr><tr><td>~81</td><td>~25</td></tr><tr><td>~82</td><td>~25</td></tr><tr><td>~83</td><td>~25</td></tr><tr><td>~84</td><td>~25</td></tr><tr><td>~85</td><td>~25</td></tr><tr><td>~86</td><td>~25</td></tr><tr><td>~87</td><td>~25</td></tr><tr><td>~88</td><td>~25</td></tr><tr><td>~89</td><td>~25</td></tr><tr><td>~90</td><td>~25</td></tr></table>
 
 Fig. S3. Effects of the plant species richness on the proportion of small carabid abundance.
 
@@ -552,43 +409,4 @@ Table S4. Species list of carabid beetles with number of individuals and trophic
 
 <!-- page 8 of 8 -->
 
-| Chlaenius costiger Chaudoir, 1856 | 22.23 | 1 | 0 | 5 | Predatory |
-| --- | --- | --- | --- | --- | --- |
-| Chlaenius leueops | 13.24 | 1 | 0 | 23 | Predatory |
-| Chlaenius micans Fabricius, 1792 | 15.96 | 513 | 11 | 64 | Predatory |
-| Chlaenius pallipes Gebler, 1823 | 14.17 | 31 | 2 | 2 | Predatory |
-| Chlaenius posticalis Motschulsky, 1854 | 14.50 | 229 | 47 | 181 | Predatory |
-| Chlaenius touzalini Andrewes, 1920 | 14.75 | 6 | 0 | 0 | Predatory |
-| Chlaenius virgulifer Chaudoir, 1876 | 13.50 | 2 | 2 | 1 | Predatory |
-| Curtonotus giganteus Motschulsky, 1844 | 21.30 | 1 | 10 | 13 | Non-predatory |
-| Dolichus halensis Schaller, 1783 | 17.59 | 125 | 283 | 223 | Predatory |
-| Harpalus brevicornis Germar, 1824 | 15.47 | 6 | 2 | 1 | Non-predatory |
-| Harpalus crates Bates, 1883 | 12.57 | 3 | 3 | 0 | Non-predatory |
-| Harpalus chalcentus Bates, 1873 | 12.74 | 72 | 24 | 71 | Non-predatory |
-| Harpalus coreanus Tschitscherine, 1895 | 14.35 | 0 | 1 | 0 | Non-predatory |
-| Harpalus corporosus Motschulsky, 1861 | 15.03 | 76 | 69 | 11 | Non-predatory |
-| Harpalus eous Tschitscherine, 1901 | 15.29 | 2 | 0 | 0 | Non-predatory |
-| Harpalus lumbaris Mannerheim, 1825 | 13.04 | 34 | 1 | 5 | Non-predatory |
-| Harpalus roninus Bates, 1873 | 17.60 | 8 | 0 | 0 | Predatory |
-| Harpalus rubripes Duftschmid, 1812 | 13.35 | 0 | 0 | 1 | Non-predatory |
-| Harpalus simplicidens Schauberger, 1929 | 12.67 | 119 | 66 | 16 | Non-predatory |
-| Harpalus sinicus Hope, 1845 | 13.73 | 54 | 6 | 147 | Non-predatory |
-| Harpalus ussuriensis Chaudoir, 1863 | 13.73 | 5 | 0 | 3 | Non-predatory |
-| Harpalus vicaius Harold, 1878 | 17.60 | 5 | 1 | 0 | Predatory |
-| Nebria livida angulata Bänninger,1949 | 16.65 | 2 | 0 | 0 | Predatory |
-| Pheropsophus jessoensis Morawitz, 1862 | 17.37 | 300 | 0 | 353 | Predatory |
-| Planetes puncticeps Andrewes, 1919 | 13.63 | 0 | 0 | 1 | Predatory |
-| Pristosia sp. | 13.76 | 1 | 0 | 4 | Predatory |
-| Pseudotaphoxenus mongolicus Jedlička, 1953 | 15.00 | 7 | 2 | 306 | Predatory |
-| Pseudotaphoxenus rugipennis Faldermann, 1835 | 22.07 | 3 | 0 | 16 | Predatory |
-| Pterostichus acutidens Fairmaires,1888 | 17.46 | 15 | 0 | 24 | Predatory |
-| Pterostichus adstrictus Eschscholtz, 1823 | 15.79 | 0 | 0 | 63 | Predatory |
-| Pterostichus fortipes Chaudoir, 1850 | 14.44 | 40 | 94 | 640 | Predatory |
-| Pterostichus gebleri Dejean, 1828 | 16.44 | 64 | 52 | 217 | Non-predatory |
-| Pterostichus interruptus Dejean, 1828 | 18.02 | 0 | 0 | 1 | Predatory |
-| Scarites acutidens Chaudoir, 1855 | 32.09 | 4 | 0 | 2 | Non-predatory |
-| Scarites sulcatus Olivier, 1795 | 27.62 | 7 | 0 | 2 | Predatory |
-| Scarites terricola Bonelli, 1813 | 17.61 | 127 | 18 | 92 | Non-predatory |
-| Tachys sp3. | 18.31 | 1 | 0 | 0 | / |
-| Tachys sp4. | 22.50 | 1 | 0 | 0 | / |
-| Trigonognatha jeachi Sciaky 1995 | 22.22 | 0 | 2 | 5 | Non-predatory |
+<table><tr><td>Chlaenius costiger Chaudoir, 1856</td><td>22.23</td><td>1</td><td>0</td><td>5</td><td>Predatory</td></tr><tr><td>Chlaenius leueops</td><td>13.24</td><td>1</td><td>0</td><td>23</td><td>Predatory</td></tr><tr><td>Chlaenius micans Fabricius, 1792</td><td>15.96</td><td>513</td><td>11</td><td>64</td><td>Predatory</td></tr><tr><td>Chlaenius pallipes Gebler, 1823</td><td>14.17</td><td>31</td><td>2</td><td>2</td><td>Predatory</td></tr><tr><td>Chlaenius posticalis Motschulsky, 1854</td><td>14.50</td><td>229</td><td>47</td><td>181</td><td>Predatory</td></tr><tr><td>Chlaenius touzalini Andrewes, 1920</td><td>14.75</td><td>6</td><td>0</td><td>0</td><td>Predatory</td></tr><tr><td>Chlaenius virgulifer Chaudoir, 1876</td><td>13.50</td><td>2</td><td>2</td><td>1</td><td>Predatory</td></tr><tr><td>Curtonotus giganteus Motschulsky, 1844</td><td>21.30</td><td>1</td><td>10</td><td>13</td><td>Non-predatory</td></tr><tr><td>Dolichus halensis Schaller, 1783</td><td>17.59</td><td>125</td><td>283</td><td>223</td><td>Predatory</td></tr><tr><td>Harpalus brevicornis Germar, 1824</td><td>15.47</td><td>6</td><td>2</td><td>1</td><td>Non-predatory</td></tr><tr><td>Harpalus crates Bates, 1883</td><td>12.57</td><td>3</td><td>3</td><td>0</td><td>Non-predatory</td></tr><tr><td>Harpalus chalcentus Bates, 1873</td><td>12.74</td><td>72</td><td>24</td><td>71</td><td>Non-predatory</td></tr><tr><td>Harpalus coreanus Tschitscherine, 1895</td><td>14.35</td><td>0</td><td>1</td><td>0</td><td>Non-predatory</td></tr><tr><td>Harpalus corporosus Motschulsky, 1861</td><td>15.03</td><td>76</td><td>69</td><td>11</td><td>Non-predatory</td></tr><tr><td>Harpalus eous Tschitscherine, 1901</td><td>15.29</td><td>2</td><td>0</td><td>0</td><td>Non-predatory</td></tr><tr><td>Harpalus lumbaris Mannerheim, 1825</td><td>13.04</td><td>34</td><td>1</td><td>5</td><td>Non-predatory</td></tr><tr><td>Harpalus roninus Bates, 1873</td><td>17.60</td><td>8</td><td>0</td><td>0</td><td>Predatory</td></tr><tr><td>Harpalus rubripes Duftschmid, 1812</td><td>13.35</td><td>0</td><td>0</td><td>1</td><td>Non-predatory</td></tr><tr><td>Harpalus simplicidens Schauberger, 1929</td><td>12.67</td><td>119</td><td>66</td><td>16</td><td>Non-predatory</td></tr><tr><td>Harpalus sinicus Hope, 1845</td><td>13.73</td><td>54</td><td>6</td><td>147</td><td>Non-predatory</td></tr><tr><td>Harpalus ussuriensis Chaudoir, 1863</td><td>13.73</td><td>5</td><td>0</td><td>3</td><td>Non-predatory</td></tr><tr><td>Harpalus vicaius Harold, 1878</td><td>17.60</td><td>5</td><td>1</td><td>0</td><td>Predatory</td></tr><tr><td>Nebria livida angulata Bänninger,1949</td><td>16.65</td><td>2</td><td>0</td><td>0</td><td>Predatory</td></tr><tr><td>Pheropsophus jessoensis Morawitz, 1862</td><td>17.37</td><td>300</td><td>0</td><td>353</td><td>Predatory</td></tr><tr><td>Planetes puncticeps Andrewes, 1919</td><td>13.63</td><td>0</td><td>0</td><td>1</td><td>Predatory</td></tr><tr><td>Pristosia sp.</td><td>13.76</td><td>1</td><td>0</td><td>4</td><td>Predatory</td></tr><tr><td>Pseudotaphoxenus mongolicus Jedlička, 1953</td><td>15.00</td><td>7</td><td>2</td><td>306</td><td>Predatory</td></tr><tr><td>Pseudotaphoxenus rugipennis Faldermann, 1835</td><td>22.07</td><td>3</td><td>0</td><td>16</td><td>Predatory</td></tr><tr><td>Pterostichus acutidens Fairmaires,1888</td><td>17.46</td><td>15</td><td>0</td><td>24</td><td>Predatory</td></tr><tr><td>Pterostichus adstrictus Eschscholtz, 1823</td><td>15.79</td><td>0</td><td>0</td><td>63</td><td>Predatory</td></tr><tr><td>Pterostichus fortipes Chaudoir, 1850</td><td>14.44</td><td>40</td><td>94</td><td>640</td><td>Predatory</td></tr><tr><td>Pterostichus gebleri Dejean, 1828</td><td>16.44</td><td>64</td><td>52</td><td>217</td><td>Non-predatory</td></tr><tr><td>Pterostichus interruptus Dejean, 1828</td><td>18.02</td><td>0</td><td>0</td><td>1</td><td>Predatory</td></tr><tr><td>Scarites acutidens Chaudoir, 1855</td><td>32.09</td><td>4</td><td>0</td><td>2</td><td>Non-predatory</td></tr><tr><td>Scarites sulcatus Olivier, 1795</td><td>27.62</td><td>7</td><td>0</td><td>2</td><td>Predatory</td></tr><tr><td>Scarites terricola Bonelli, 1813</td><td>17.61</td><td>127</td><td>18</td><td>92</td><td>Non-predatory</td></tr><tr><td>Tachys sp3.</td><td>18.31</td><td>1</td><td>0</td><td>0</td><td>/</td></tr><tr><td>Tachys sp4.</td><td>22.50</td><td>1</td><td>0</td><td>0</td><td>/</td></tr><tr><td>Trigonognatha jeachi Sciaky 1995</td><td>22.22</td><td>0</td><td>2</td><td>5</td><td>Non-predatory</td></tr></table>

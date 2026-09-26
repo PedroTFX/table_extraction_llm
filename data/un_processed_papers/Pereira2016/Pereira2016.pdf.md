@@ -155,18 +155,7 @@ Fig 1.Species accumulation curves (Mao-Tau) and 95% confidence interval for the 
 
 The temperature and rainfall are among the environmental factors that influence the ants. In the study region, temperature does not vary much throughout the year (EMBRAPA, 2015). This fact can explain the lack of differences in species composition and taxonomic and functional diversity between seasons. Rainfall, though, varies largely throughout the year (EMBRAPA, 2015). However, even with such variation in rainfall, the fauna of poneromorph ants did not vary between the rainy and dry seasons. Other authors observed variation in species richness or diversity between the dry and rainy seasons in the Atlantic Forest (Coelho & Ribeiro, 2006; Vargas et al., 2007), but the results can be
 
-| Samples | Dry season (Number of species) | Rainy season (Number of species) |
-| --- | --- | --- |
-| 0 | 2 | 2 |
-| 40 | ~18 | ~17 |
-| 80 | ~25 | ~23 |
-| 120 | ~30 | ~27 |
-| 160 | ~34 | ~30 |
-| 200 | ~37 | ~32 |
-| 240 | ~39 | ~34 |
-| 280 | ~41 | ~35 |
-| 320 | ~42 | — |
-| 360 | ~43 | — |
+<table><tr><td>Samples</td><td>Dry season (Number of species)</td><td>Rainy season (Number of species)</td></tr><tr><td>0</td><td>2</td><td>2</td></tr><tr><td>40</td><td>~18</td><td>~17</td></tr><tr><td>80</td><td>~25</td><td>~23</td></tr><tr><td>120</td><td>~30</td><td>~27</td></tr><tr><td>160</td><td>~34</td><td>~30</td></tr><tr><td>200</td><td>~37</td><td>~32</td></tr><tr><td>240</td><td>~39</td><td>~34</td></tr><tr><td>280</td><td>~41</td><td>~35</td></tr><tr><td>320</td><td>~42</td><td>—</td></tr><tr><td>360</td><td>~43</td><td>—</td></tr></table>
 
 Fig 2. Species accumulation curves (Mao-Tau) and 95% confidence interval for the fauna of poneromorph ants collected in the dry and rainy seasons.
 
@@ -176,12 +165,7 @@ The lack of differences in community composition and functional groups can be re
 
 Table 2. Species richness and Shannon diversity ofponeromorph ants collected in the dry and rainy seasons in the Tapirapé-Aquirí National Forest, Pará, Brazil.
 
-| Variable | Dry season I | Dry season II | Rainy season I | Rainy season II |
-| --- | --- | --- | --- | --- |
-| Total Richness | 30 | 31 | 31 | 25 |
-| Total Diversity | 2.63 | 2.64 | 2.67 | 2.48 |
-| Average Richness (± SD) | 14.67 ± 2.74 | 15.56 ± 1.67 | 14.56 ± 2.51 | 13.80 ± 1.92 |
-| Average Diversity (± SD) | 2.29 ± 0.17 | 2.37 ± 0.12 | 2.31 ± 0.22 | 2.17 ± 0.12 |
+<table><tr><td>Variable</td><td>Dry season I</td><td>Dry season II</td><td>Rainy season I</td><td>Rainy season II</td></tr><tr><td>Total Richness</td><td>30</td><td>31</td><td>31</td><td>25</td></tr><tr><td>Total Diversity</td><td>2.63</td><td>2.64</td><td>2.67</td><td>2.48</td></tr><tr><td>Average Richness (± SD)</td><td>14.67 ± 2.74</td><td>15.56 ± 1.67</td><td>14.56 ± 2.51</td><td>13.80 ± 1.92</td></tr><tr><td>Average Diversity (± SD)</td><td>2.29 ± 0.17</td><td>2.37 ± 0.12</td><td>2.31 ± 0.22</td><td>2.17 ± 0.12</td></tr></table>
 
 <!-- page 6 of 9 -->
 
@@ -201,12 +185,7 @@ Ants are considered a bioindicator group (Silva & Brandão, 1999). However, asse
 
 Table 4. Species richness and Shannon diversity of functional groups of poneromorph ants collected in the dry and rainy seasons in the Tapirapé-Aquirí National Forest, Pará, Brazil.
 
-| Variable | Dry season I | Dry season II | Rainy season I | Rainy season II |
-| --- | --- | --- | --- | --- |
-| Total Richness | 7 | 8 | 7 | 6 |
-| Total Diversity | 1.26 | 1.20 | 1.18 | 1.05 |
-| Average Richness (± SD) | 5.33 ± 0.50 | 5.22 ± 0.67 | 5.00 ± 0.87 | 5.20 ± 0.84 |
-| Average Diversity (± SD) | 1.18 ± 0.14 | 1.15 ± 0.14 | 1.10 ± 0.25 | 1.01 ± 0.16 |
+<table><tr><td>Variable</td><td>Dry season I</td><td>Dry season II</td><td>Rainy season I</td><td>Rainy season II</td></tr><tr><td>Total Richness</td><td>7</td><td>8</td><td>7</td><td>6</td></tr><tr><td>Total Diversity</td><td>1.26</td><td>1.20</td><td>1.18</td><td>1.05</td></tr><tr><td>Average Richness (± SD)</td><td>5.33 ± 0.50</td><td>5.22 ± 0.67</td><td>5.00 ± 0.87</td><td>5.20 ± 0.84</td></tr><tr><td>Average Diversity (± SD)</td><td>1.18 ± 0.14</td><td>1.15 ± 0.14</td><td>1.10 ± 0.25</td><td>1.01 ± 0.16</td></tr></table>
 
 In our study we found no seasonal differences in composition and in taxonomic and functional diversity of poneromorph ants in the Amazon, which is useful for future studies that aim at using those ants as bioindicators. In addition, the identification of the species made in the present study has special relevance as it contributes to advance the knowledge of poneromorph ant diversity in the Amazon.
 

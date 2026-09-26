@@ -28,9 +28,9 @@ ROW-LEVEL (key match)
   RECALL (GT coverage): 0.983   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                31     59  0.525
-  measurementMethod             0     16  0.000  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord                28     59  0.475  <-- low
+  measurementMethod             0      0    n/a   +15 where GT blank
   measurementUnit               0      0    n/a
   measurementStatistic         59     59  1.000
   measurementRemarks            0      0    n/a
@@ -69,5 +69,5 @@ measurementType COVERAGE
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.937  0.983  0.959     59     4     1   id+type+value
-  tags        0.492  0.517  0.504     31    32    29   basis+id+type+value+stat+sex+stage
-             (F1 -0.455 vs previous)
+  tags        0.444  0.467  0.455     28    35    32   basis+id+type+value+stat+sex+stage
+             (F1 -0.504 vs previous)

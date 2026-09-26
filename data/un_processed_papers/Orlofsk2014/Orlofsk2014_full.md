@@ -156,72 +156,7 @@ The median size for more than half of the taxa (\~55%, 35/64) did not correspond
 
 J. M. Orlofske and D. J. Baird
 
-| Family | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Maccaffertium | ~2000 | ~3500 | ~5000 |
-| Ephemerellidae | ~1000 | ~1500 | ~2000 |
-| Eurylophella | ~1000 | ~1500 | ~2000 |
-| Micrasema | ~1000 | ~1500 | ~2000 |
-| Setodes | ~1000 | ~1500 | ~2000 |
-| Serratella | ~1000 | ~1500 | ~2000 |
-| Oxyethira | ~1000 | ~1500 | ~2000 |
-| Caenis | ~1000 | ~1500 | ~2000 |
-| Baetidae | ~1500 | ~2000 | ~2500 |
-| Attenella | ~1500 | ~2000 | ~2500 |
-| Acentrella | ~1500 | ~2000 | ~2500 |
-| Lepidostoma | ~2000 | ~3000 | ~4000 |
-| Leptophlebiidae | ~2000 | ~3000 | ~4000 |
-| Leuctridae | ~1500 | ~2000 | ~2500 |
-| Hydroptila | ~2000 | ~2500 | ~3000 |
-| Lepidostomatidae | ~2000 | ~3000 | ~4000 |
-| Capniidae | ~2000 | ~2500 | ~3000 |
-| Haploperla | ~2000 | ~3000 | ~4000 |
-| Paracapnia | ~2000 | ~3000 | ~4000 |
-| Glossosoma | ~2000 | ~3000 | ~4000 |
-| Glossosomatidae | ~2000 | ~3000 | ~4000 |
-| Hydropsychidae | ~2000 | ~3000 | ~4000 |
-| Choroterpes | ~2000 | ~3000 | ~4000 |
-| Chimarra | ~5000 | ~6000 | ~7000 |
-| Helicopsyche | ~5000 | ~6000 | ~7000 |
-| Philopotamidae | ~1000 | ~1500 | ~2000 |
-| Dolophilodes | ~8000 | ~9000 | ~13000 |
-| Cheumatopsyche | ~6000 | ~7000 | ~11000 |
-| Leptoceridae | ~1000 | ~1500 | ~2000 |
-| Heptageniidae | ~1000 | ~1500 | ~2000 |
-| Epeorus | ~1000 | ~1500 | ~2000 |
-| Stenonema | ~1000 | ~1500 | ~2000 |
-| Rhithrogena | ~1500 | ~2000 | ~3000 |
-| Ceraclea | ~1000 | ~1500 | ~2000 |
-| Ephemerella | ~1500 | ~2000 | ~2500 |
-| Taeniopterygidae | ~1500 | ~2000 | ~2500 |
-| Taenionema | ~1500 | ~2000 | ~2500 |
-| Paraleptophlebia | ~1500 | ~2000 | ~2500 |
-| Mystacides | ~1500 | ~2000 | ~2500 |
-| Lanthus | ~1500 | ~2000 | ~2500 |
-| Chloroperlidae | ~2000 | ~3000 | ~4000 |
-| Suwallia | ~2000 | ~3000 | ~4000 |
-| Isoperla | ~2000 | ~3000 | ~4000 |
-| Neureclipsis | ~2000 | ~3000 | ~4000 |
-| Brachycentridae | ~2000 | ~3000 | ~4000 |
-| Hydropsyche | ~4000 | ~5000 | ~6000 |
-| Isonychia | ~4000 | ~5000 | ~6000 |
-| Rhyacophila | ~4000 | ~5000 | ~6000 |
-| Brachycentrus | ~4000 | ~5000 | ~6000 |
-| Apatania | ~1000 | ~1500 | ~2000 |
-| Apataniidae | ~8000 | ~9000 | ~10000 |
-| Paragnetina | ~6000 | ~7000 | ~13000 |
-| Limnephilidae | ~1000 | ~1500 | ~2000 |
-| Perlodidae | ~1000 | ~1500 | ~2000 |
-| Gomphidae | ~1000 | ~1500 | ~2000 |
-| Perlidae | ~1500 | ~2000 | ~3000 |
-| Ophiogomphus | ~2000 | ~3000 | ~4000 |
-| Agnetina | ~2000 | ~3000 | ~4000 |
-| Acroneuria | ~2000 | ~3000 | ~4000 |
-| Hansonoperla | ~2000 | ~3000 | ~4000 |
-| Isogenoides | ~1000 | ~1500 | ~2000 |
-| Boyeria | ~1000 | ~1500 | ~2000 |
-| Coenagrionidae | ~15000 | ~16000 | ~17000 |
-| Pteronarcys | ~16000 | ~17000 | ~18000 |
+<table><tr><td>Family</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Maccaffertium</td><td>~2000</td><td>~3500</td><td>~5000</td></tr><tr><td>Ephemerellidae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Eurylophella</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Micrasema</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Setodes</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Serratella</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Oxyethira</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Caenis</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Baetidae</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Attenella</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Acentrella</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Lepidostoma</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Leptophlebiidae</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Leuctridae</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Hydroptila</td><td>~2000</td><td>~2500</td><td>~3000</td></tr><tr><td>Lepidostomatidae</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Capniidae</td><td>~2000</td><td>~2500</td><td>~3000</td></tr><tr><td>Haploperla</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Paracapnia</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Glossosoma</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Glossosomatidae</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Hydropsychidae</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Choroterpes</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Chimarra</td><td>~5000</td><td>~6000</td><td>~7000</td></tr><tr><td>Helicopsyche</td><td>~5000</td><td>~6000</td><td>~7000</td></tr><tr><td>Philopotamidae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Dolophilodes</td><td>~8000</td><td>~9000</td><td>~13000</td></tr><tr><td>Cheumatopsyche</td><td>~6000</td><td>~7000</td><td>~11000</td></tr><tr><td>Leptoceridae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Heptageniidae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Epeorus</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Stenonema</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Rhithrogena</td><td>~1500</td><td>~2000</td><td>~3000</td></tr><tr><td>Ceraclea</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Ephemerella</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Taeniopterygidae</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Taenionema</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Paraleptophlebia</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Mystacides</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Lanthus</td><td>~1500</td><td>~2000</td><td>~2500</td></tr><tr><td>Chloroperlidae</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Suwallia</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Isoperla</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Neureclipsis</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Brachycentridae</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Hydropsyche</td><td>~4000</td><td>~5000</td><td>~6000</td></tr><tr><td>Isonychia</td><td>~4000</td><td>~5000</td><td>~6000</td></tr><tr><td>Rhyacophila</td><td>~4000</td><td>~5000</td><td>~6000</td></tr><tr><td>Brachycentrus</td><td>~4000</td><td>~5000</td><td>~6000</td></tr><tr><td>Apatania</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Apataniidae</td><td>~8000</td><td>~9000</td><td>~10000</td></tr><tr><td>Paragnetina</td><td>~6000</td><td>~7000</td><td>~13000</td></tr><tr><td>Limnephilidae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Perlodidae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Gomphidae</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Perlidae</td><td>~1500</td><td>~2000</td><td>~3000</td></tr><tr><td>Ophiogomphus</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Agnetina</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Acroneuria</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Hansonoperla</td><td>~2000</td><td>~3000</td><td>~4000</td></tr><tr><td>Isogenoides</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Boyeria</td><td>~1000</td><td>~1500</td><td>~2000</td></tr><tr><td>Coenagrionidae</td><td>~15000</td><td>~16000</td><td>~17000</td></tr><tr><td>Pteronarcys</td><td>~16000</td><td>~17000</td><td>~18000</td></tr></table>
 
 Fig. 2 Boxplot of body size variation for 64 aquatic insect taxa for three typical biomonitoring samples collected from three stream reaches in the Miramichi River basin, Canada, on 2 November 2007. The grey boxes represent the USEPA trait database body size trait state for each taxon. Taxa are arranged by size within each USEPA trait database body size state category: small (<9000 lm), medium (9000–16 000 lm) and large (>16 000 lm).
 
@@ -255,22 +190,7 @@ Measured trait data were used to describe patterns in assemblage size structure 
 
 We compared three methods that can be used to describe the body size structure of the assemblage – trait database body size trait states – small (<9000 lm), medium (9000–16 000 lm), large (>16 000 lm) size classes applied to taxa as fixed states and measured specimens using our estimated size classes: 1: <3725 lm, 2: 3726–10 000 lm and 3: >10 000 lm (Fig. 4). By applying the trait database states to our data set, the proportion of
 
-| Body size \((\mu m)\) | SBREN (Density) | DUNDS (Density) | DUNMR (Density) |
-| --- | --- | --- | --- |
-| 0 | 0 | 0 | 0 |
-| ~1000 | ~\(4.5x10^{-4}\) | ~\(2.8x10^{-4}\) | ~\(2.8x10^{-4}\) |
-| ~2000 | ~\(3.5x10^{-4}\) | ~\(3.5x10^{-4}\) | ~\(2.8x10^{-4}\) |
-| ~3000 | ~\(1.5x10^{-4}\) | ~\(1.5x10^{-4}\) | ~\(1.5x10^{-4}\) |
-| ~4000 | ~\(0.6x10^{-4}\) | ~\(1.2x10^{-4}\) | ~\(1.3x10^{-4}\) |
-| ~5000 | ~\(0.6x10^{-4}\) | ~\(1.2x10^{-4}\) | ~\(1.2x10^{-4}\) |
-| ~6000 | ~\(0.3x10^{-4}\) | ~\(0.8x10^{-4}\) | ~\(0.9x10^{-4}\) |
-| ~7000 | ~\(0.1x10^{-4}\) | ~\(0.4x10^{-4}\) | ~\(0.5x10^{-4}\) |
-| ~8000 | 0 | ~\(0.2x10^{-4}\) | ~\(0.3x10^{-4}\) |
-| ~9000 | 0 | ~\(0.1x10^{-4}\) | ~\(0.1x10^{-4}\) |
-| ~10000 | 0 | ~\(0.1x10^{-4}\) | ~\(0.1x10^{-4}\) |
-| ~15000 | 0 | 0 | 0 |
-| ~20000 | 0 | 0 | 0 |
-| ~25000 | 0 | 0 | 0 |
+<table><tr><td>Body size \((\mu m)\)</td><td>SBREN (Density)</td><td>DUNDS (Density)</td><td>DUNMR (Density)</td></tr><tr><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>~1000</td><td>~\(4.5x10^{-4}\)</td><td>~\(2.8x10^{-4}\)</td><td>~\(2.8x10^{-4}\)</td></tr><tr><td>~2000</td><td>~\(3.5x10^{-4}\)</td><td>~\(3.5x10^{-4}\)</td><td>~\(2.8x10^{-4}\)</td></tr><tr><td>~3000</td><td>~\(1.5x10^{-4}\)</td><td>~\(1.5x10^{-4}\)</td><td>~\(1.5x10^{-4}\)</td></tr><tr><td>~4000</td><td>~\(0.6x10^{-4}\)</td><td>~\(1.2x10^{-4}\)</td><td>~\(1.3x10^{-4}\)</td></tr><tr><td>~5000</td><td>~\(0.6x10^{-4}\)</td><td>~\(1.2x10^{-4}\)</td><td>~\(1.2x10^{-4}\)</td></tr><tr><td>~6000</td><td>~\(0.3x10^{-4}\)</td><td>~\(0.8x10^{-4}\)</td><td>~\(0.9x10^{-4}\)</td></tr><tr><td>~7000</td><td>~\(0.1x10^{-4}\)</td><td>~\(0.4x10^{-4}\)</td><td>~\(0.5x10^{-4}\)</td></tr><tr><td>~8000</td><td>0</td><td>~\(0.2x10^{-4}\)</td><td>~\(0.3x10^{-4}\)</td></tr><tr><td>~9000</td><td>0</td><td>~\(0.1x10^{-4}\)</td><td>~\(0.1x10^{-4}\)</td></tr><tr><td>~10000</td><td>0</td><td>~\(0.1x10^{-4}\)</td><td>~\(0.1x10^{-4}\)</td></tr><tr><td>~15000</td><td>0</td><td>0</td><td>0</td></tr><tr><td>~20000</td><td>0</td><td>0</td><td>0</td></tr><tr><td>~25000</td><td>0</td><td>0</td><td>0</td></tr></table>
 
 Fig. 3 Kernel density plot of EPTO body size distribution for each New Brunswick stream site partitioned into three size ranges (<3725 lm, 3726–10 000 lm and >10 000 lm) based on a cluster analysis procedure. Distribution of EPTO body size varies significantly by site. EPTO, Ephemeroptera, Plecoptera, Trichoptera and Odonata
 
@@ -535,24 +455,4 @@ Ap pe nd ix S2 . Taxon size su m ma ry, i n cl u d i ng mea n , sta nd a rd d ev
 
 <!-- page 2 of 2 -->
 
-| Neureclipsis |  |  |  |  |  |  |  |  |  |  | 4188.73 | 831.19 | 0.1984 | 2886.91 | 5219.15 | 4188.73 | 831.19 | 0.1984 | 2886.91 | 5219.15 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Ophiogomphus | 3613.94 | 2053.86 | 0.5683 | 1823.25 | 10831.4 | 7880.06 | 5393.81 | 0.6845 | 2138.27 | 15544.85 | 6159.24 | 6024.95 | 0.9782 | 1041.58 | 21696.24 | 5736.98 | 5445.64 | 0.9492 | 1041.58 | 21696.24 |
-| Oxyethira |  |  |  |  |  | 2057.46 | 407.66 | 0.1981 | 1587.03 | 2307.09 |  |  |  |  |  | 2057.46 | 407.66 | 0.1981 | 1587.03 | 2307.09 |
-| Paracapnia |  |  |  |  |  | 3874.15 | 266.47 | 0.0688 | 3319.91 | 4409.83 |  |  |  |  |  | 3874.15 | 266.47 | 0.0688 | 3319.91 | 4409.83 |
-| Paragnetina | 17669.82 | 6092.88 | 0.3448 | 12082.48 | 24493.77 | 7609.87 | - | - | 7609.87 | 7609.87 | 7354.04 | 2015.2 | 0.274 | 5169.27 | 9829.79 | 10813.95 | 6163.02 | 0.5699 | 5169.27 | 24493.77 |
-| Paraleptophlebia | 3062.47 | 1316.3 | 0.4298 | 2131.7 | 3993.23 |  |  |  |  |  |  |  |  |  |  | 3062.47 | 1316.3 | 0.4298 | 2131.7 | 3993.23 |
-| Perlidae |  |  |  |  |  | 3151.93 | 1275.28 | 0.4046 | 1749.34 | 4718.82 | 2372.8 | 530.49 | 0.2236 | 1782.32 | 2809.21 | 2918.19 | 1135.08 | 0.389 | 1749.34 | 4718.82 |
-| Perlodidae | 1889.1 | 356.86 | 0.1889 | 1228.94 | 2463.75 | 2684.63 | 1086.56 | 0.4047 | 1796.68 | 4250.76 | 1830.82 | 784.46 | 0.4285 | 1021.83 | 4626.1 | 1925.15 | 755.95 | 0.3927 | 1021.83 | 4626.1 |
-| Philopotamidae | 6779.65 | - |  | 6779.65 | 6779.65 |  |  |  |  |  |  |  |  |  |  | 6779.65 | - | - | 6779.65 | 6779.65 |
-| Plecoptera | 1203.82 | 83.24 | 0.0691 | 1144.96 | 1262.68 |  |  |  |  |  | 2277.64 | - | - | 2277.64 | 2277.64 | 1561.76 | 622.76 | 0.3988 | 1144.96 | 2277.64 |
-| Pteronarcys | 18427.04 | 1286.66 | 0.0698 | 17486.48 | 19893.32 | 20131.77 | 12817.16 | 0.6367 | 9563.65 | 38696.86 |  |  |  |  |  | 19401.17 | 9139.04 | 0.4711 | 9563.65 | 38696.86 |
-| Rhithrogena | 2801.57 | 1472.83 | 0.5257 | 1214.22 | 6016.44 | 3715.98 | 1095.45 | 0.2948 | 1960.48 | 5145.15 | 3314.84 | 813.44 | 0.2454 | 2040.52 | 4988.84 | 2993.29 | 1381.1 | 0.4614 | 1214.22 | 6016.44 |
-| Rhyacophila |  |  |  |  |  | 5843.29 | 1268.17 | 0.217 | 3742.66 | 9355.32 |  |  |  |  |  | 5843.29 | 1268.17 | 0.217 | 3742.66 | 9355.32 |
-| Serratella | 2269.27 | 612.3 | 0.2698 | 1096.84 | 3282.27 | 2043.51 | 436.78 | 0.2137 | 1594.77 | 3448.61 | 1874.43 | 625.28 | 0.3336 | 913.34 | 3117.85 | 2065.13 | 571.41 | 0.2767 | 913.34 | 3448.61 |
-| Setodes |  |  |  |  |  | 2198.31 | 784.23 | 0.3567 | 1589.7 | 3716.23 |  |  |  |  |  | 2198.31 | 784.23 | 0.3567 | 1589.7 | 3716.23 |
-| Stenonema |  |  |  |  |  |  |  |  |  |  | 2219.37 | - | - | 2219.37 | 2219.37 | 2219.37 | - | - | 2219.37 | 2219.37 |
-| Suwallia |  |  |  |  |  | 4004.5 | 1472.72 | 0.3678 | 1938.34 | 6362.39 |  |  |  |  |  | 4004.5 | 1472.72 | 0.3678 | 1938.34 | 6362.39 |
-| Taenionema | 2819.31 | 349.81 | 0.1241 | 2368.03 | 3373.69 | 3148.45 | 773.82 | 0.2458 | 2601.28 | 3695.62 | 3253.91 | 497.02 | 0.1527 | 2540.02 | 3873.87 | 3021.55 | 473.09 | 0.1566 | 2368.03 | 3873.87 |
-| Taeniopterygidae |  |  |  |  |  | 2697.04 | 841.55 | 0.312 | 2101.97 | 3292.11 |  |  |  |  |  | 2697.04 | 841.55 | 0.312 | 2101.97 | 3292.11 |
-| Trichoptera | 1939.13 | 441.66 | 0.2278 | 1352.99 | 2477.61 |  |  |  |  |  |  |  |  |  |  | 1939.13 | 441.66 | 0.2278 | 1352.99 | 2477.61 |
+<table><tr><td>Neureclipsis</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>4188.73</td><td>831.19</td><td>0.1984</td><td>2886.91</td><td>5219.15</td><td>4188.73</td><td>831.19</td><td>0.1984</td><td>2886.91</td><td>5219.15</td></tr><tr><td>Ophiogomphus</td><td>3613.94</td><td>2053.86</td><td>0.5683</td><td>1823.25</td><td>10831.4</td><td>7880.06</td><td>5393.81</td><td>0.6845</td><td>2138.27</td><td>15544.85</td><td>6159.24</td><td>6024.95</td><td>0.9782</td><td>1041.58</td><td>21696.24</td><td>5736.98</td><td>5445.64</td><td>0.9492</td><td>1041.58</td><td>21696.24</td></tr><tr><td>Oxyethira</td><td></td><td></td><td></td><td></td><td></td><td>2057.46</td><td>407.66</td><td>0.1981</td><td>1587.03</td><td>2307.09</td><td></td><td></td><td></td><td></td><td></td><td>2057.46</td><td>407.66</td><td>0.1981</td><td>1587.03</td><td>2307.09</td></tr><tr><td>Paracapnia</td><td></td><td></td><td></td><td></td><td></td><td>3874.15</td><td>266.47</td><td>0.0688</td><td>3319.91</td><td>4409.83</td><td></td><td></td><td></td><td></td><td></td><td>3874.15</td><td>266.47</td><td>0.0688</td><td>3319.91</td><td>4409.83</td></tr><tr><td>Paragnetina</td><td>17669.82</td><td>6092.88</td><td>0.3448</td><td>12082.48</td><td>24493.77</td><td>7609.87</td><td>-</td><td>-</td><td>7609.87</td><td>7609.87</td><td>7354.04</td><td>2015.2</td><td>0.274</td><td>5169.27</td><td>9829.79</td><td>10813.95</td><td>6163.02</td><td>0.5699</td><td>5169.27</td><td>24493.77</td></tr><tr><td>Paraleptophlebia</td><td>3062.47</td><td>1316.3</td><td>0.4298</td><td>2131.7</td><td>3993.23</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>3062.47</td><td>1316.3</td><td>0.4298</td><td>2131.7</td><td>3993.23</td></tr><tr><td>Perlidae</td><td></td><td></td><td></td><td></td><td></td><td>3151.93</td><td>1275.28</td><td>0.4046</td><td>1749.34</td><td>4718.82</td><td>2372.8</td><td>530.49</td><td>0.2236</td><td>1782.32</td><td>2809.21</td><td>2918.19</td><td>1135.08</td><td>0.389</td><td>1749.34</td><td>4718.82</td></tr><tr><td>Perlodidae</td><td>1889.1</td><td>356.86</td><td>0.1889</td><td>1228.94</td><td>2463.75</td><td>2684.63</td><td>1086.56</td><td>0.4047</td><td>1796.68</td><td>4250.76</td><td>1830.82</td><td>784.46</td><td>0.4285</td><td>1021.83</td><td>4626.1</td><td>1925.15</td><td>755.95</td><td>0.3927</td><td>1021.83</td><td>4626.1</td></tr><tr><td>Philopotamidae</td><td>6779.65</td><td>-</td><td></td><td>6779.65</td><td>6779.65</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>6779.65</td><td>-</td><td>-</td><td>6779.65</td><td>6779.65</td></tr><tr><td>Plecoptera</td><td>1203.82</td><td>83.24</td><td>0.0691</td><td>1144.96</td><td>1262.68</td><td></td><td></td><td></td><td></td><td></td><td>2277.64</td><td>-</td><td>-</td><td>2277.64</td><td>2277.64</td><td>1561.76</td><td>622.76</td><td>0.3988</td><td>1144.96</td><td>2277.64</td></tr><tr><td>Pteronarcys</td><td>18427.04</td><td>1286.66</td><td>0.0698</td><td>17486.48</td><td>19893.32</td><td>20131.77</td><td>12817.16</td><td>0.6367</td><td>9563.65</td><td>38696.86</td><td></td><td></td><td></td><td></td><td></td><td>19401.17</td><td>9139.04</td><td>0.4711</td><td>9563.65</td><td>38696.86</td></tr><tr><td>Rhithrogena</td><td>2801.57</td><td>1472.83</td><td>0.5257</td><td>1214.22</td><td>6016.44</td><td>3715.98</td><td>1095.45</td><td>0.2948</td><td>1960.48</td><td>5145.15</td><td>3314.84</td><td>813.44</td><td>0.2454</td><td>2040.52</td><td>4988.84</td><td>2993.29</td><td>1381.1</td><td>0.4614</td><td>1214.22</td><td>6016.44</td></tr><tr><td>Rhyacophila</td><td></td><td></td><td></td><td></td><td></td><td>5843.29</td><td>1268.17</td><td>0.217</td><td>3742.66</td><td>9355.32</td><td></td><td></td><td></td><td></td><td></td><td>5843.29</td><td>1268.17</td><td>0.217</td><td>3742.66</td><td>9355.32</td></tr><tr><td>Serratella</td><td>2269.27</td><td>612.3</td><td>0.2698</td><td>1096.84</td><td>3282.27</td><td>2043.51</td><td>436.78</td><td>0.2137</td><td>1594.77</td><td>3448.61</td><td>1874.43</td><td>625.28</td><td>0.3336</td><td>913.34</td><td>3117.85</td><td>2065.13</td><td>571.41</td><td>0.2767</td><td>913.34</td><td>3448.61</td></tr><tr><td>Setodes</td><td></td><td></td><td></td><td></td><td></td><td>2198.31</td><td>784.23</td><td>0.3567</td><td>1589.7</td><td>3716.23</td><td></td><td></td><td></td><td></td><td></td><td>2198.31</td><td>784.23</td><td>0.3567</td><td>1589.7</td><td>3716.23</td></tr><tr><td>Stenonema</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>2219.37</td><td>-</td><td>-</td><td>2219.37</td><td>2219.37</td><td>2219.37</td><td>-</td><td>-</td><td>2219.37</td><td>2219.37</td></tr><tr><td>Suwallia</td><td></td><td></td><td></td><td></td><td></td><td>4004.5</td><td>1472.72</td><td>0.3678</td><td>1938.34</td><td>6362.39</td><td></td><td></td><td></td><td></td><td></td><td>4004.5</td><td>1472.72</td><td>0.3678</td><td>1938.34</td><td>6362.39</td></tr><tr><td>Taenionema</td><td>2819.31</td><td>349.81</td><td>0.1241</td><td>2368.03</td><td>3373.69</td><td>3148.45</td><td>773.82</td><td>0.2458</td><td>2601.28</td><td>3695.62</td><td>3253.91</td><td>497.02</td><td>0.1527</td><td>2540.02</td><td>3873.87</td><td>3021.55</td><td>473.09</td><td>0.1566</td><td>2368.03</td><td>3873.87</td></tr><tr><td>Taeniopterygidae</td><td></td><td></td><td></td><td></td><td></td><td>2697.04</td><td>841.55</td><td>0.312</td><td>2101.97</td><td>3292.11</td><td></td><td></td><td></td><td></td><td></td><td>2697.04</td><td>841.55</td><td>0.312</td><td>2101.97</td><td>3292.11</td></tr><tr><td>Trichoptera</td><td>1939.13</td><td>441.66</td><td>0.2278</td><td>1352.99</td><td>2477.61</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1939.13</td><td>441.66</td><td>0.2278</td><td>1352.99</td><td>2477.61</td></tr></table>

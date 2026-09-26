@@ -221,17 +221,7 @@ royalsocietypublishing.org/journal/rspb Proc. R. Soc. B 291: 20232383
 
 Downloaded from https://royalsocietypublishing.org/ on 31 October 2025
 
-| Category | Crop Type::cereal (766 fields) | Crop Type::legume (76 fields) | Crop Type::maize (78 fields) | Crop Type::oilseed (223 fields) | Crop Type::vegetable (51 fields) | Adjacent Habitat Type::control (264 fields) | Adjacent Habitat Type::herbaceous (554 fields) | Adjacent Habitat Type::woody (376 fields) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| richness overall | ~0.98 | ~0.99 | ~0.95 | ~0.98 | ~0.97 | ~0.96 | ~0.96 | ~0.96 |
-| richness carnivorous | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.97 | ~0.96 | ~0.95 |
-| richness granivorous | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.96 | ~0.96 | ~0.96 |
-| activity density overall | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.97 | ~0.96 | ~0.96 |
-| activity density carnivorous | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.97 | ~0.96 | ~0.96 |
-| activity density granivorous | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.96 | ~0.96 | ~0.96 |
-| activity density small | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.97 | ~0.96 | ~0.96 |
-| activity density medium | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.97 | ~0.96 | ~0.96 |
-| activity density large | ~0.98 | ~0.99 | ~0.94 | ~0.98 | ~0.97 | ~0.97 | ~0.96 | ~0.96 |
+<table><tr><td>Category</td><td>Crop Type::cereal (766 fields)</td><td>Crop Type::legume (76 fields)</td><td>Crop Type::maize (78 fields)</td><td>Crop Type::oilseed (223 fields)</td><td>Crop Type::vegetable (51 fields)</td><td>Adjacent Habitat Type::control (264 fields)</td><td>Adjacent Habitat Type::herbaceous (554 fields)</td><td>Adjacent Habitat Type::woody (376 fields)</td></tr><tr><td>richness overall</td><td>~0.98</td><td>~0.99</td><td>~0.95</td><td>~0.98</td><td>~0.97</td><td>~0.96</td><td>~0.96</td><td>~0.96</td></tr><tr><td>richness carnivorous</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.97</td><td>~0.96</td><td>~0.95</td></tr><tr><td>richness granivorous</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.96</td><td>~0.96</td><td>~0.96</td></tr><tr><td>activity density overall</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.97</td><td>~0.96</td><td>~0.96</td></tr><tr><td>activity density carnivorous</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.97</td><td>~0.96</td><td>~0.96</td></tr><tr><td>activity density granivorous</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.96</td><td>~0.96</td><td>~0.96</td></tr><tr><td>activity density small</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.97</td><td>~0.96</td><td>~0.96</td></tr><tr><td>activity density medium</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.97</td><td>~0.96</td><td>~0.96</td></tr><tr><td>activity density large</td><td>~0.98</td><td>~0.99</td><td>~0.94</td><td>~0.98</td><td>~0.97</td><td>~0.97</td><td>~0.96</td><td>~0.96</td></tr></table>
 
 Figure 3. Overall marginal within-field distance slope coefficients for overall carabid richness, richness of predominantly carnivorous species, richness of predominantly granivorous species, overall activity density, activity density of predominantly carnivorous species, activity density of predominantly granivorous species, activity density of small carabids (less than 6 mm body size), activity density of medium-sized carabids (greater than 6 mm but less than 10 mm body size) and activity density of large carabids (greater than 10 mm body size; from top to bottom) in relation to crop type (left) and adjacent habitat type (right). Slope coefficient estimates (median) of the posterior sample (black lines) with 50% (dark), 80% (medium) and 95% (light) credible intervals (CI), back-transformed from the log link scale to response scale. The dashed line represents the slope coefficient of 1, i.e. a flat slope. Coefficients can be interpreted as per cent change in the response every 10 m towards the field centre. For statistics and values, see electronic supplementary material, tables S8 and S9.
 
@@ -552,12 +542,7 @@ FIGURE S4: Overall marginal predictions for (A & B) the richness of omnivorous c
 
 Figure S5 Predictions for omnivorous species in relation to crop and adjacent habitat type
 
-| Category | Crop Type::cereal (766 fields) | Crop Type::legume (76 fields) | Crop Type::maize (78 fields) | Crop Type::oilseed (223 fields) | Crop Type::vegetable (51 fields) | Adjacent Habitat Type::control (264 fields) | Adjacent Habitat Type::herbaceous (554 fields) | Adjacent Habitat Type::woody (376 fields) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Richness omnivore | ~1.03 | ~1.02 | ~1.12 | ~1.01 | ~1.02 | ~1.04 | ~1.02 | ~1.05 |
-| Richness omnivore (without P. cupreus) | ~0.98 | ~0.97 | ~1.03 | ~0.92 | ~0.96 | ~0.96 | ~0.95 | ~0.98 |
-| Activity density omnivore | ~1.10 | ~1.14 | ~1.05 | ~1.13 | ~1.13 | ~1.10 | ~1.07 | ~1.18 |
-| Activity density omnivore (without P. cupreus) | ~1.02 | ~1.03 | ~1.04 | ~1.02 | ~1.02 | ~1.02 | ~0.98 | ~1.03 |
+<table><tr><td>Category</td><td>Crop Type::cereal (766 fields)</td><td>Crop Type::legume (76 fields)</td><td>Crop Type::maize (78 fields)</td><td>Crop Type::oilseed (223 fields)</td><td>Crop Type::vegetable (51 fields)</td><td>Adjacent Habitat Type::control (264 fields)</td><td>Adjacent Habitat Type::herbaceous (554 fields)</td><td>Adjacent Habitat Type::woody (376 fields)</td></tr><tr><td>Richness omnivore</td><td>~1.03</td><td>~1.02</td><td>~1.12</td><td>~1.01</td><td>~1.02</td><td>~1.04</td><td>~1.02</td><td>~1.05</td></tr><tr><td>Richness omnivore (without P. cupreus)</td><td>~0.98</td><td>~0.97</td><td>~1.03</td><td>~0.92</td><td>~0.96</td><td>~0.96</td><td>~0.95</td><td>~0.98</td></tr><tr><td>Activity density omnivore</td><td>~1.10</td><td>~1.14</td><td>~1.05</td><td>~1.13</td><td>~1.13</td><td>~1.10</td><td>~1.07</td><td>~1.18</td></tr><tr><td>Activity density omnivore (without P. cupreus)</td><td>~1.02</td><td>~1.03</td><td>~1.04</td><td>~1.02</td><td>~1.02</td><td>~1.02</td><td>~0.98</td><td>~1.03</td></tr></table>
 
 FIGURE S5: Overall marginal within-field distance slope coefficients for the richness and activity density of omnivorous carabid species in relation to crop type (left) and adjacent habitat type (right) both with all species included and with the hyperdominant species Poecilus cupreus removed. Slope coefficient estimates (median) of the posterior sample (black lines) with 50% (dark), 80% (medium) and 95% (light) credible intervals (CI), back-transformed from the log link scale to response scale. The dashed line represents the slope coefficient of 1, i.e. a flat slope. Coefficients can be interpreted as percent change in the response every 10 m towards the field centre. For statistics and values, see electronic supplementary material 1: tables S8 & S9.
 
@@ -567,24 +552,7 @@ Table S1 Publications returned by the literature search
 
 Table S1: List papers obtained from the initial literature search in the ISI Web of Science Core Collection and deemed suitable after full text review. For all papers, data were requested from the authors. For exclusion reasons for the datasets received but ultimately not included, see exclusion criteria stated in the text and Table S3.
 
-| Reference | data received after request | data included after review |
-| --- | --- | --- |
-| Al Hassan, D; Georgelin, E; Delattre, T; Burel, F; Plantegenest, M; Kindlmann, P; Butet, A (2013) Does the presence of grassy strips and landscape grain affect the spatial distribution of aphids and their carabid predators? Agricultural and Forest Entomology 15, 24-33. |  |  |
-| Anjum-Zubair, M; Schmidt-Entling, MH; Querner, P; Frank, T (2010) Influence of within-field position and adjoining habitat on carabid beetle assemblages in winter wheat. Agricultural and Forest Entomology 12, 301-306. | X | X |
-| Bedford, SE; Usher, MB (1994) Distribution of arthropod species across the margins of farm woodlands. Agriculture, Ecosystems &amp; Environment 48, 295-305. |  |  |
-| Birkhofer, K; Fevrier, V; Heinrich, AE; Rink, K; Smith, HG (2018) The contribution of CAP greening measures to conservation biological control at two spatial scales. Agriculture, Ecosystems &amp; Environment 255, 84-94. |  |  |
-| Birkhofer, K; Wolters, V; Diekotter, T (2014) Grassy margins along organically managed cereal fields foster trait diversity and taxonomic distinctness of arthropod communities. Insect Conservation and Diversity 7, 274-287. | X | X |
-| Chapelin-Viscardi, JD; Maillet-Mezeray, J; Tosser, V; Wartelle, R (2014) Emergence of Ground beetles in farming areas. Choice of habitat, diversity and specific requirements (Carabidae, Coleoptera). Bulletin Mensuel de la Société Linnéenne de Lyon 83, 157-170. |  |  |
-| Cividanes, FJ; Araujo, ES; Ide, S; Galli, JC (2010) Distribution and habitat preference of Carabidae and Staphylinidae (Coleoptera) in an orange orchard and forest fragment. Florida Entomologist 93, 339-345. |  |  |
-| Cividanes, FJ; dos Santos-Cividanes, TM; Ferraudo, AS; da Matta, DH (2018) Edge effects on carabid beetles (Coleoptera: Carabidae) between forest fragments and agricultural fields in south-east Brazil. Austral Entomology 57, 9-16. |  |  |
-| Collins, KL; Boatman, ND; Wilcox, A; Holland, JM; Chaney, K (2002) Influence of beetle banks on cereal, aphid predation in winter wheat. Agriculture, Ecosystems &amp; Environment 93, 337-350. |  |  |
-| Dennis, P; Fry, GLA (1992) Field margins – can they enhance natural enemy population-densities and general arthropod diversity on farmland? Agriculture, Ecosystems &amp; Environment 40, 95-115. |  |  |
-| Ditner, N; Balmer, O; Beck, J; Blick, T; Nagel, P; Luka, H (2013) Effects of experimentally planting non-crop flowers into cabbage fields on the abundance and diversity of predators. Biodiversity and Conservation 22, 1049-1061. | X | X |
-| Ernoult, A; Vialatte, A; Butet, A; Michel, N; Rantier, Y; Jambon, O; Burel, F (2013) Grassy strips in their landscape context, their role as new habitat for biodiversity. Agriculture, Ecosystems &amp; Environment 166, 15-27. |  |  |
-| Fernandes M, Ivan C; Cividanes, FJ; Ide, S; Haddad, GQ (2012) Diversity and habitat preferences of Carabidae and Staphylinidae (Coleoptera) in two agroecosystems. Bragantia 71. |  |  |
-| Ferrante, M; Gonzalez, E; Lövei, GL (2017) Predators do not spill over from forest fragments to maize fields in a landscape mosaic in central Argentina. Ecology and Evolution 7, 7699-7707. | X |  |
-| Fournier, E; Loreau, M (1999) Effects of newly planted hedges on ground-beetle diversity (Coleoptera, Carabidae) in an agricultural landscape. Ecography 22, 87-97. |  |  |
-| Fournier, E; Loreau, M (2002) Foraging activity of the carabid beetle Pterostichus melanarius Ill. in field margin habitats. Agriculture, Ecosystems &amp; Environment 89, 253-259. |  |  |
+<table><tr><td>Reference</td><td>data received after request</td><td>data included after review</td></tr><tr><td>Al Hassan, D; Georgelin, E; Delattre, T; Burel, F; Plantegenest, M; Kindlmann, P; Butet, A (2013) Does the presence of grassy strips and landscape grain affect the spatial distribution of aphids and their carabid predators? Agricultural and Forest Entomology 15, 24-33.</td><td></td><td></td></tr><tr><td>Anjum-Zubair, M; Schmidt-Entling, MH; Querner, P; Frank, T (2010) Influence of within-field position and adjoining habitat on carabid beetle assemblages in winter wheat. Agricultural and Forest Entomology 12, 301-306.</td><td>X</td><td>X</td></tr><tr><td>Bedford, SE; Usher, MB (1994) Distribution of arthropod species across the margins of farm woodlands. Agriculture, Ecosystems &amp;amp; Environment 48, 295-305.</td><td></td><td></td></tr><tr><td>Birkhofer, K; Fevrier, V; Heinrich, AE; Rink, K; Smith, HG (2018) The contribution of CAP greening measures to conservation biological control at two spatial scales. Agriculture, Ecosystems &amp;amp; Environment 255, 84-94.</td><td></td><td></td></tr><tr><td>Birkhofer, K; Wolters, V; Diekotter, T (2014) Grassy margins along organically managed cereal fields foster trait diversity and taxonomic distinctness of arthropod communities. Insect Conservation and Diversity 7, 274-287.</td><td>X</td><td>X</td></tr><tr><td>Chapelin-Viscardi, JD; Maillet-Mezeray, J; Tosser, V; Wartelle, R (2014) Emergence of Ground beetles in farming areas. Choice of habitat, diversity and specific requirements (Carabidae, Coleoptera). Bulletin Mensuel de la Société Linnéenne de Lyon 83, 157-170.</td><td></td><td></td></tr><tr><td>Cividanes, FJ; Araujo, ES; Ide, S; Galli, JC (2010) Distribution and habitat preference of Carabidae and Staphylinidae (Coleoptera) in an orange orchard and forest fragment. Florida Entomologist 93, 339-345.</td><td></td><td></td></tr><tr><td>Cividanes, FJ; dos Santos-Cividanes, TM; Ferraudo, AS; da Matta, DH (2018) Edge effects on carabid beetles (Coleoptera: Carabidae) between forest fragments and agricultural fields in south-east Brazil. Austral Entomology 57, 9-16.</td><td></td><td></td></tr><tr><td>Collins, KL; Boatman, ND; Wilcox, A; Holland, JM; Chaney, K (2002) Influence of beetle banks on cereal, aphid predation in winter wheat. Agriculture, Ecosystems &amp;amp; Environment 93, 337-350.</td><td></td><td></td></tr><tr><td>Dennis, P; Fry, GLA (1992) Field margins – can they enhance natural enemy population-densities and general arthropod diversity on farmland? Agriculture, Ecosystems &amp;amp; Environment 40, 95-115.</td><td></td><td></td></tr><tr><td>Ditner, N; Balmer, O; Beck, J; Blick, T; Nagel, P; Luka, H (2013) Effects of experimentally planting non-crop flowers into cabbage fields on the abundance and diversity of predators. Biodiversity and Conservation 22, 1049-1061.</td><td>X</td><td>X</td></tr><tr><td>Ernoult, A; Vialatte, A; Butet, A; Michel, N; Rantier, Y; Jambon, O; Burel, F (2013) Grassy strips in their landscape context, their role as new habitat for biodiversity. Agriculture, Ecosystems &amp;amp; Environment 166, 15-27.</td><td></td><td></td></tr><tr><td>Fernandes M, Ivan C; Cividanes, FJ; Ide, S; Haddad, GQ (2012) Diversity and habitat preferences of Carabidae and Staphylinidae (Coleoptera) in two agroecosystems. Bragantia 71.</td><td></td><td></td></tr><tr><td>Ferrante, M; Gonzalez, E; Lövei, GL (2017) Predators do not spill over from forest fragments to maize fields in a landscape mosaic in central Argentina. Ecology and Evolution 7, 7699-7707.</td><td>X</td><td></td></tr><tr><td>Fournier, E; Loreau, M (1999) Effects of newly planted hedges on ground-beetle diversity (Coleoptera, Carabidae) in an agricultural landscape. Ecography 22, 87-97.</td><td></td><td></td></tr><tr><td>Fournier, E; Loreau, M (2002) Foraging activity of the carabid beetle Pterostichus melanarius Ill. in field margin habitats. Agriculture, Ecosystems &amp;amp; Environment 89, 253-259.</td><td></td><td></td></tr></table>
 
 <!-- page 12 of 36 -->
 
@@ -617,17 +585,7 @@ Table S1: List papers obtained from the initial literature search in the ISI Web
 
 <!-- page 13 of 36 -->
 
-| Rouabah, A; Villerd, J; Amiaud, B; Plantureux, S; Lasserre-Joulin, F (2015) Response of carabid beetles diversity and size distribution to the vegetation structure within differently managed field margins. Agriculture, Ecosystems &amp; Environment 200, 21-32. |  |  |
-| --- | --- | --- |
-| Roume, A; Ouin, A; Raison, L; Deconchat, M (2011) Abundance and species richness of overwintering ground beetles (Coleoptera: Carabidae) are higher in the edge than in the centre of a woodlot. European Journal of Entomology 108, 615-622. |  |  |
-| Saska, P; Vodde, M; Heijerman, T; Westerman, P; van der Werf, W (2007) The significance of a grassy field boundary for the spatial distribution of carabids within two cereal fields. Agriculture, Ecosystems &amp; Environment 122, 427-434. | X |  |
-| Soboleva-Dokuchaeva, II; Chernyshev, VB; Afonina, VM; Ovchinnikova, MF; Timokhov, AV (2000) Factors responsible for distribution of ground beetles (Coleoptera, Carabidae) in agricultural lands. Zoologicheskii Zhurnal 79, 1071-1072. |  |  |
-| Soboleva-Dokuchaeva, II; Tshernyshev, VB; Afonina, VM; Timokhov, AV (2000) Seasonal dynamics of spatial distribution of mass ground-beetle species (Coleoptera, Carabidae) in agroecosystems of the mixed forest zone. Zoologicheskii Zhurnal 79, 822-823. |  |  |
-| Sutter, L; Amato, M; Jeanneret, P; Albrecht, M (2018) Overwintering of pollen beetles and their predators in oilseed rape and semi-natural habitats. Agriculture, Ecosystems &amp; Environment 265, 275-281. | X | X |
-| Thomas, CFG; Green, F; Marshall, EJP (1997) Distribution, dispersal and population size of the ground beetles, Pterostichus melanarius (Illiger) and Harpalus rufipes (Degeer) (Coleoptera, carabidae), in field margin habitats. Biological Agriculture &amp; Horticulture 15, 337-352. |  |  |
-| Thomas, CFG; Marshall, EJP (1999) Arthropod abundance and diversity in differently vegetated margins of arable fields. Agriculture, Ecosystems &amp; Environment 72, 131-144. |  |  |
-| Van Vooren, L; Reubens, B; Ampoorter, E; Broekx, S; Pardon, P; Van Waes, C; Verheyen, K (2018) Monitoring the Impact of Hedgerows and Grass Strips on the Performance of Multiple Ecosystem Service Indicators. Environmental Management 62, 241-259. | X | X |
-| Total | 18 | 11 |
+<table><tr><td>Rouabah, A; Villerd, J; Amiaud, B; Plantureux, S; Lasserre-Joulin, F (2015) Response of carabid beetles diversity and size distribution to the vegetation structure within differently managed field margins. Agriculture, Ecosystems &amp;amp; Environment 200, 21-32.</td><td></td><td></td></tr><tr><td>Roume, A; Ouin, A; Raison, L; Deconchat, M (2011) Abundance and species richness of overwintering ground beetles (Coleoptera: Carabidae) are higher in the edge than in the centre of a woodlot. European Journal of Entomology 108, 615-622.</td><td></td><td></td></tr><tr><td>Saska, P; Vodde, M; Heijerman, T; Westerman, P; van der Werf, W (2007) The significance of a grassy field boundary for the spatial distribution of carabids within two cereal fields. Agriculture, Ecosystems &amp;amp; Environment 122, 427-434.</td><td>X</td><td></td></tr><tr><td>Soboleva-Dokuchaeva, II; Chernyshev, VB; Afonina, VM; Ovchinnikova, MF; Timokhov, AV (2000) Factors responsible for distribution of ground beetles (Coleoptera, Carabidae) in agricultural lands. Zoologicheskii Zhurnal 79, 1071-1072.</td><td></td><td></td></tr><tr><td>Soboleva-Dokuchaeva, II; Tshernyshev, VB; Afonina, VM; Timokhov, AV (2000) Seasonal dynamics of spatial distribution of mass ground-beetle species (Coleoptera, Carabidae) in agroecosystems of the mixed forest zone. Zoologicheskii Zhurnal 79, 822-823.</td><td></td><td></td></tr><tr><td>Sutter, L; Amato, M; Jeanneret, P; Albrecht, M (2018) Overwintering of pollen beetles and their predators in oilseed rape and semi-natural habitats. Agriculture, Ecosystems &amp;amp; Environment 265, 275-281.</td><td>X</td><td>X</td></tr><tr><td>Thomas, CFG; Green, F; Marshall, EJP (1997) Distribution, dispersal and population size of the ground beetles, Pterostichus melanarius (Illiger) and Harpalus rufipes (Degeer) (Coleoptera, carabidae), in field margin habitats. Biological Agriculture &amp;amp; Horticulture 15, 337-352.</td><td></td><td></td></tr><tr><td>Thomas, CFG; Marshall, EJP (1999) Arthropod abundance and diversity in differently vegetated margins of arable fields. Agriculture, Ecosystems &amp;amp; Environment 72, 131-144.</td><td></td><td></td></tr><tr><td>Van Vooren, L; Reubens, B; Ampoorter, E; Broekx, S; Pardon, P; Van Waes, C; Verheyen, K (2018) Monitoring the Impact of Hedgerows and Grass Strips on the Performance of Multiple Ecosystem Service Indicators. Environmental Management 62, 241-259.</td><td>X</td><td>X</td></tr><tr><td>Total</td><td>18</td><td>11</td></tr></table>
 
 <!-- page 14 of 36 -->
 
@@ -641,21 +599,7 @@ Table S3 Datasets excluded from the analyses
 
 Table S3: List of all datasets excluded from our analyses with country, region, study years, crop types, adjacent habitat types, study sites, maximal sampled distances [m] and sampling days included in the datasets. Exclusion reason is highlighted in red. Datasets marked with ‘\*’ do not contain species level IDs.
 
-| Study ID | country | region | year | months | crop types | adjacent habitat classes | study sites | maximal distance [m] | trapping days (per trap) | reference |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Bade01 | France | Nouvelle-Aquitaine | 2015 | July | oilseed crops | herbaceous | 23 | 45 | 4 | Badenhausser et al. (2020) |
-| Cutl01* | Canada | Nova Scotia | 2008 / 2009 | May – August | blueberry | woody | 4 | 25 | 24 – 36 | Cutler et al. (2012) |
-| Cutl02* | Canada | Nova Scotia | 2017 | ‘summer’ | blueberry | woody | 6 | 160 | 21 | Loureiro A (2018) |
-| Farm07 | Canada | Ontario | 2013 / 2014 | April – June | cereals, leguminous crops, vegetables | herbaceous, woody, control | 238 | 25 | 16 | Sirami et al. (2019) |
-| Fren01 | USA | Oklahoma | 1993 - 1996 | various | cereals | herbaceous | 6 | 50 | 203 – 237 | French et al. (1999) |
-| Fren02 | USA | Oklahoma | 1995 / 1996 | various | cereals | herbaceous | 9 | 50 | 68 – 410 | French et al. (2001) |
-| Gonz01 | Argentina | Cordoba | 2011 / 2012 | December - February | leguminous crops | woody | 9 | 100 | 7 | González et al. (2017) |
-| Juch01 | Poland | Zachodniopomorskie | 2018 | June – September | vegetables | herbaceous | 1 | 29 | 69 | ? |
-| Koiv01 | Finland | Kanta-Häme | 2001 | May – August | vegetables | woody | 2 | 30 | 66 | Koivula et al. (2004) |
-| Mart01 | South Korea | Gangwon-do | 2009 | June – September | leguminous crops, vegetables | herbaceous | 28 | 20 | 20 | Martin et al. (2016) |
-| Nash01 | Australia | Victoria | 2006 | February / March | forage grass | herbaceous | 20 | 200 | 32 | Nash et al. (2008) |
-| Ng01 | Australia | New South Wales | 2014 / 2015 | September / October January / February | cereals | woody | 11 | 200 | 28 | Ng et al. (2018) |
-| Sask01 | Netherlands | Gelderland | 2004 | March – July | cereals | herbaceous | 2 | 49 | 146 | Saska et al. (2007) |
+<table><tr><td>Study ID</td><td>country</td><td>region</td><td>year</td><td>months</td><td>crop types</td><td>adjacent habitat classes</td><td>study sites</td><td>maximal distance [m]</td><td>trapping days (per trap)</td><td>reference</td></tr><tr><td>Bade01</td><td>France</td><td>Nouvelle-Aquitaine</td><td>2015</td><td>July</td><td>oilseed crops</td><td>herbaceous</td><td>23</td><td>45</td><td>4</td><td>Badenhausser et al. (2020)</td></tr><tr><td>Cutl01*</td><td>Canada</td><td>Nova Scotia</td><td>2008 / 2009</td><td>May – August</td><td>blueberry</td><td>woody</td><td>4</td><td>25</td><td>24 – 36</td><td>Cutler et al. (2012)</td></tr><tr><td>Cutl02*</td><td>Canada</td><td>Nova Scotia</td><td>2017</td><td>‘summer’</td><td>blueberry</td><td>woody</td><td>6</td><td>160</td><td>21</td><td>Loureiro A (2018)</td></tr><tr><td>Farm07</td><td>Canada</td><td>Ontario</td><td>2013 / 2014</td><td>April – June</td><td>cereals, leguminous crops, vegetables</td><td>herbaceous, woody, control</td><td>238</td><td>25</td><td>16</td><td>Sirami et al. (2019)</td></tr><tr><td>Fren01</td><td>USA</td><td>Oklahoma</td><td>1993 - 1996</td><td>various</td><td>cereals</td><td>herbaceous</td><td>6</td><td>50</td><td>203 – 237</td><td>French et al. (1999)</td></tr><tr><td>Fren02</td><td>USA</td><td>Oklahoma</td><td>1995 / 1996</td><td>various</td><td>cereals</td><td>herbaceous</td><td>9</td><td>50</td><td>68 – 410</td><td>French et al. (2001)</td></tr><tr><td>Gonz01</td><td>Argentina</td><td>Cordoba</td><td>2011 / 2012</td><td>December - February</td><td>leguminous crops</td><td>woody</td><td>9</td><td>100</td><td>7</td><td>González et al. (2017)</td></tr><tr><td>Juch01</td><td>Poland</td><td>Zachodniopomorskie</td><td>2018</td><td>June – September</td><td>vegetables</td><td>herbaceous</td><td>1</td><td>29</td><td>69</td><td>?</td></tr><tr><td>Koiv01</td><td>Finland</td><td>Kanta-Häme</td><td>2001</td><td>May – August</td><td>vegetables</td><td>woody</td><td>2</td><td>30</td><td>66</td><td>Koivula et al. (2004)</td></tr><tr><td>Mart01</td><td>South Korea</td><td>Gangwon-do</td><td>2009</td><td>June – September</td><td>leguminous crops, vegetables</td><td>herbaceous</td><td>28</td><td>20</td><td>20</td><td>Martin et al. (2016)</td></tr><tr><td>Nash01</td><td>Australia</td><td>Victoria</td><td>2006</td><td>February / March</td><td>forage grass</td><td>herbaceous</td><td>20</td><td>200</td><td>32</td><td>Nash et al. (2008)</td></tr><tr><td>Ng01</td><td>Australia</td><td>New South Wales</td><td>2014 / 2015</td><td>September / October January / February</td><td>cereals</td><td>woody</td><td>11</td><td>200</td><td>28</td><td>Ng et al. (2018)</td></tr><tr><td>Sask01</td><td>Netherlands</td><td>Gelderland</td><td>2004</td><td>March – July</td><td>cereals</td><td>herbaceous</td><td>2</td><td>49</td><td>146</td><td>Saska et al. (2007)</td></tr></table>
 
 <!-- page 16 of 36 -->
 
@@ -671,265 +615,23 @@ Table S5 Carabid beetle species and their traits.
 
 Table S5: The 241 carabid species contained in the accumulated dataset with total number of individuals, number of study sites on which the species occur as well as their (predominant) diet and mean body size. Carabids not identified to species level were excluded in this table. Carabid beetle traits were obtained from the database carabids.org (Homburg et al. 2014), monographies as well as previous studies on carabid beetle functional traits (Hůrka 1996; Ribera et al. 2001; Pakeman & Stockan 2014; Hanson et al. 2016).
 
-| Species | total individuals | number of sampling plots with occurrence | diet | mean body size [mm] |
-| --- | --- | --- | --- | --- |
-| Abax ovalis | 5 | 4 | carnivorous | 13 |
-| Abax parallelepipedus | 81 | 58 | carnivorous | 19 |
-| Abax parallelus | 37 | 19 | carnivorous | 15.5 |
-| Acupalpus elegans | 9 | 4 | omnivorous | 3.5 |
-| Acupalpus interstitialis | 5 | 5 | omnivorous | 2.5 |
-| Acupalpus meridianus | 354 | 150 | omnivorous | 3.5 |
-| Agonum emarginatum | 7 | 7 | carnivorous | 8 |
-| Agonum gracilipes | 1 | 1 | carnivorous | 7.5 |
-| Agonum lugens | 6 | 5 | carnivorous | 8.5 |
-| Agonum micans | 4 | 3 | carnivorous | 6 |
-| Agonum muelleri | 4982 | 462 | carnivorous | 7.5 |
-| Agonum nigrum | 10 | 8 | carnivorous | 7 |
-| Agonum sexpunctatum | 200 | 132 | carnivorous | 7.5 |
-| Agonum viduum | 10 | 8 | carnivorous | 8 |
-| Agonum viridicupreum | 5 | 2 | carnivorous | 8.5 |
-| Amara aenea | 741 | 381 | granivorous | 7 |
-| Amara anthobia | 2 | 2 | granivorous | 6 |
-| Amara apricaria | 24 | 18 | granivorous | 7.5 |
-| Amara aulica | 87 | 33 | granivorous | 12.5 |
-| Amara bifrons | 59 | 28 | granivorous | 6 |
-| Amara communis | 37 | 26 | granivorous | 6 |
-| Amara consularis | 347 | 79 | granivorous | 8 |
-| Amara convexior | 78 | 43 | granivorous | 8 |
-| Amara eurynota | 283 | 73 | granivorous | 11 |
-| Amara familiaris | 487 | 185 | granivorous | 7 |
-| Amara fulva | 6 | 4 | granivorous | 9 |
-| Amara littorea | 35 | 22 | granivorous | 7.5 |
-| Amara lucida | 4 | 3 | granivorous | 5 |
-| Amara lunicollis | 74 | 56 | granivorous | 7.5 |
-| Amara montivaga | 29 | 20 | granivorous | 8 |
-| Amara nitida | 1 | 1 | granivorous | 8 |
-| Amara ovata | 17049 | 470 | granivorous | 8.5 |
-| Amara plebeja | 308 | 127 | granivorous | 7 |
-| Amara rufipes | 4 | 4 | granivorous | 8.5 |
-| Amara sabulosa | 2 | 2 | granivorous | 5.5 |
-| Amara similata | 4417 | 438 | granivorous | 8.5 |
-| Amara tricuspidata | 2 | 2 | granivorous | 7.5 |
-| Amblystomus niger | 1 | 1 | granivorous | 2.5 |
-| Anchomenus dorsalis | 78281 | 1816 | carnivorous | 6.5 |
-| Anisodactylus binotatus | 544 | 189 | granivorous | 10.5 |
-| Anisodactylus poeciloides | 1 | 1 | granivorous | 11.5 |
+<table><tr><td>Species</td><td>total individuals</td><td>number of sampling plots with occurrence</td><td>diet</td><td>mean body size [mm]</td></tr><tr><td>Abax ovalis</td><td>5</td><td>4</td><td>carnivorous</td><td>13</td></tr><tr><td>Abax parallelepipedus</td><td>81</td><td>58</td><td>carnivorous</td><td>19</td></tr><tr><td>Abax parallelus</td><td>37</td><td>19</td><td>carnivorous</td><td>15.5</td></tr><tr><td>Acupalpus elegans</td><td>9</td><td>4</td><td>omnivorous</td><td>3.5</td></tr><tr><td>Acupalpus interstitialis</td><td>5</td><td>5</td><td>omnivorous</td><td>2.5</td></tr><tr><td>Acupalpus meridianus</td><td>354</td><td>150</td><td>omnivorous</td><td>3.5</td></tr><tr><td>Agonum emarginatum</td><td>7</td><td>7</td><td>carnivorous</td><td>8</td></tr><tr><td>Agonum gracilipes</td><td>1</td><td>1</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Agonum lugens</td><td>6</td><td>5</td><td>carnivorous</td><td>8.5</td></tr><tr><td>Agonum micans</td><td>4</td><td>3</td><td>carnivorous</td><td>6</td></tr><tr><td>Agonum muelleri</td><td>4982</td><td>462</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Agonum nigrum</td><td>10</td><td>8</td><td>carnivorous</td><td>7</td></tr><tr><td>Agonum sexpunctatum</td><td>200</td><td>132</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Agonum viduum</td><td>10</td><td>8</td><td>carnivorous</td><td>8</td></tr><tr><td>Agonum viridicupreum</td><td>5</td><td>2</td><td>carnivorous</td><td>8.5</td></tr><tr><td>Amara aenea</td><td>741</td><td>381</td><td>granivorous</td><td>7</td></tr><tr><td>Amara anthobia</td><td>2</td><td>2</td><td>granivorous</td><td>6</td></tr><tr><td>Amara apricaria</td><td>24</td><td>18</td><td>granivorous</td><td>7.5</td></tr><tr><td>Amara aulica</td><td>87</td><td>33</td><td>granivorous</td><td>12.5</td></tr><tr><td>Amara bifrons</td><td>59</td><td>28</td><td>granivorous</td><td>6</td></tr><tr><td>Amara communis</td><td>37</td><td>26</td><td>granivorous</td><td>6</td></tr><tr><td>Amara consularis</td><td>347</td><td>79</td><td>granivorous</td><td>8</td></tr><tr><td>Amara convexior</td><td>78</td><td>43</td><td>granivorous</td><td>8</td></tr><tr><td>Amara eurynota</td><td>283</td><td>73</td><td>granivorous</td><td>11</td></tr><tr><td>Amara familiaris</td><td>487</td><td>185</td><td>granivorous</td><td>7</td></tr><tr><td>Amara fulva</td><td>6</td><td>4</td><td>granivorous</td><td>9</td></tr><tr><td>Amara littorea</td><td>35</td><td>22</td><td>granivorous</td><td>7.5</td></tr><tr><td>Amara lucida</td><td>4</td><td>3</td><td>granivorous</td><td>5</td></tr><tr><td>Amara lunicollis</td><td>74</td><td>56</td><td>granivorous</td><td>7.5</td></tr><tr><td>Amara montivaga</td><td>29</td><td>20</td><td>granivorous</td><td>8</td></tr><tr><td>Amara nitida</td><td>1</td><td>1</td><td>granivorous</td><td>8</td></tr><tr><td>Amara ovata</td><td>17049</td><td>470</td><td>granivorous</td><td>8.5</td></tr><tr><td>Amara plebeja</td><td>308</td><td>127</td><td>granivorous</td><td>7</td></tr><tr><td>Amara rufipes</td><td>4</td><td>4</td><td>granivorous</td><td>8.5</td></tr><tr><td>Amara sabulosa</td><td>2</td><td>2</td><td>granivorous</td><td>5.5</td></tr><tr><td>Amara similata</td><td>4417</td><td>438</td><td>granivorous</td><td>8.5</td></tr><tr><td>Amara tricuspidata</td><td>2</td><td>2</td><td>granivorous</td><td>7.5</td></tr><tr><td>Amblystomus niger</td><td>1</td><td>1</td><td>granivorous</td><td>2.5</td></tr><tr><td>Anchomenus dorsalis</td><td>78281</td><td>1816</td><td>carnivorous</td><td>6.5</td></tr><tr><td>Anisodactylus binotatus</td><td>544</td><td>189</td><td>granivorous</td><td>10.5</td></tr><tr><td>Anisodactylus poeciloides</td><td>1</td><td>1</td><td>granivorous</td><td>11.5</td></tr></table>
 
 <!-- page 18 of 36 -->
 
-| Anisodactylus signatus | 46 | 25 | omnivorous | 12 |
-| --- | --- | --- | --- | --- |
-| Asaphidion flavipes | 698 | 330 | carnivorous | 3.5 |
-| Asaphidion stierlini | 14 | 11 | carnivorous | 3.5 |
-| Badister bullatus | 434 | 161 | carnivorous | 5 |
-| Badister lacertosus | 40 | 18 | carnivorous | 6.5 |
-| Badister meridionalis | 2 | 2 | carnivorous | 6.5 |
-| Badister sodalis | 519 | 123 | carnivorous | 3.5 |
-| Badister unipustulatus | 2 | 2 | carnivorous | 8 |
-| Bembidion biguttatum | 42 | 8 | carnivorous | 3.5 |
-| Bembidion deletum | 1 | 1 | carnivorous | 4.5 |
-| Bembidion femoratum | 63 | 17 | carnivorous | 4.5 |
-| Bembidion guttula | 129 | 32 | carnivorous | 2.5 |
-| Bembidion iricolor | 11 | 5 | carnivorous | 4 |
-| Bembidion lampros | 9074 | 1192 | carnivorous | 3 |
-| Bembidion latinum | 1 | 1 | carnivorous | 5 |
-| Bembidion lunulatum | 1174 | 78 | carnivorous | 3.5 |
-| Bembidion mannerheimii | 1 | 1 | carnivorous | 2.5 |
-| Bembidion normannum | 1 | 1 | carnivorous | 2.5 |
-| Bembidion obtusum | 7700 | 606 | carnivorous | 2.5 |
-| Bembidion properans | 872 | 161 | carnivorous | 3.5 |
-| Bembidion quadrimaculatum | 4767 | 211 | carnivorous | 2.5 |
-| Bembidion tetracolum | 1839 | 399 | carnivorous | 5 |
-| Blemus discus | 14 | 6 | carnivorous | 4.5 |
-| Brachinus crepitans | 21921 | 353 | carnivorous | 8 |
-| Brachinus elegans | 30 | 18 | carnivorous | 7.5 |
-| Brachinus explodens | 1079 | 174 | carnivorous | 5.5 |
-| Brachinus immaculicornis | 14 | 11 | carnivorous | 8.5 |
-| Brachinus sclopeta | 2637 | 195 | carnivorous | 5.5 |
-| Bradycellus caucasicus | 1 | 1 | omnivorous | 3.5 |
-| Bradycellus harpalinus | 3 | 2 | omnivorous | 4 |
-| Bradycellus verbasci | 5 | 96 | omnivorous | 4.5 |
-| Broscus cephalotes | 34 | 7 | granivorous | 21 |
-| Calathus ambiguus | 80 | 17 | carnivorous | 10 |
-| Calathus cinctus | 158 | 9 | carnivorous | 7.5 |
-| Calathus erratus | 8 | 6 | carnivorous | 10 |
-| Calathus fuscipes | 4872 | 267 | carnivorous | 12 |
-| Calathus melanocephalus | 44 | 25 | carnivorous | 7.5 |
-| Calathus rotundicollis | 1 | 1 | carnivorous | 9.5 |
-| Callistus lunatus | 1 | 1 | carnivorous | 5.5 |
-| Calosoma inquisitor | 4 | 99 | carnivorous | 21.5 |
-| Calosoma maderae | 7 | 5 | carnivorous | 27.5 |
-| Carabus auratus | 1326 | 251 | carnivorous | 23.5 |
-| Carabus auronitens | 4 | 4 | carnivorous | 25.5 |
-| Carabus cancellatus | 189 | 90 | carnivorous | 26 |
-| Carabus convexus | 33 | 19 | carnivorous | 17 |
-| Carabus coriaceus | 29 | 21 | carnivorous | 37 |
-| Carabus germarii | 4 | 3 | carnivorous | 29.5 |
-| Carabus granulatus | 671 | 164 | carnivorous | 21.5 |
-| Carabus hortensis | 5 | 4 | carnivorous | 26 |
-| Carabus intricatus | 4 | 3 | carnivorous | 31 |
+<table><tr><td>Anisodactylus signatus</td><td>46</td><td>25</td><td>omnivorous</td><td>12</td></tr><tr><td>Asaphidion flavipes</td><td>698</td><td>330</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Asaphidion stierlini</td><td>14</td><td>11</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Badister bullatus</td><td>434</td><td>161</td><td>carnivorous</td><td>5</td></tr><tr><td>Badister lacertosus</td><td>40</td><td>18</td><td>carnivorous</td><td>6.5</td></tr><tr><td>Badister meridionalis</td><td>2</td><td>2</td><td>carnivorous</td><td>6.5</td></tr><tr><td>Badister sodalis</td><td>519</td><td>123</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Badister unipustulatus</td><td>2</td><td>2</td><td>carnivorous</td><td>8</td></tr><tr><td>Bembidion biguttatum</td><td>42</td><td>8</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Bembidion deletum</td><td>1</td><td>1</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Bembidion femoratum</td><td>63</td><td>17</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Bembidion guttula</td><td>129</td><td>32</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Bembidion iricolor</td><td>11</td><td>5</td><td>carnivorous</td><td>4</td></tr><tr><td>Bembidion lampros</td><td>9074</td><td>1192</td><td>carnivorous</td><td>3</td></tr><tr><td>Bembidion latinum</td><td>1</td><td>1</td><td>carnivorous</td><td>5</td></tr><tr><td>Bembidion lunulatum</td><td>1174</td><td>78</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Bembidion mannerheimii</td><td>1</td><td>1</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Bembidion normannum</td><td>1</td><td>1</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Bembidion obtusum</td><td>7700</td><td>606</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Bembidion properans</td><td>872</td><td>161</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Bembidion quadrimaculatum</td><td>4767</td><td>211</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Bembidion tetracolum</td><td>1839</td><td>399</td><td>carnivorous</td><td>5</td></tr><tr><td>Blemus discus</td><td>14</td><td>6</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Brachinus crepitans</td><td>21921</td><td>353</td><td>carnivorous</td><td>8</td></tr><tr><td>Brachinus elegans</td><td>30</td><td>18</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Brachinus explodens</td><td>1079</td><td>174</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Brachinus immaculicornis</td><td>14</td><td>11</td><td>carnivorous</td><td>8.5</td></tr><tr><td>Brachinus sclopeta</td><td>2637</td><td>195</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Bradycellus caucasicus</td><td>1</td><td>1</td><td>omnivorous</td><td>3.5</td></tr><tr><td>Bradycellus harpalinus</td><td>3</td><td>2</td><td>omnivorous</td><td>4</td></tr><tr><td>Bradycellus verbasci</td><td>5</td><td>96</td><td>omnivorous</td><td>4.5</td></tr><tr><td>Broscus cephalotes</td><td>34</td><td>7</td><td>granivorous</td><td>21</td></tr><tr><td>Calathus ambiguus</td><td>80</td><td>17</td><td>carnivorous</td><td>10</td></tr><tr><td>Calathus cinctus</td><td>158</td><td>9</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Calathus erratus</td><td>8</td><td>6</td><td>carnivorous</td><td>10</td></tr><tr><td>Calathus fuscipes</td><td>4872</td><td>267</td><td>carnivorous</td><td>12</td></tr><tr><td>Calathus melanocephalus</td><td>44</td><td>25</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Calathus rotundicollis</td><td>1</td><td>1</td><td>carnivorous</td><td>9.5</td></tr><tr><td>Callistus lunatus</td><td>1</td><td>1</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Calosoma inquisitor</td><td>4</td><td>99</td><td>carnivorous</td><td>21.5</td></tr><tr><td>Calosoma maderae</td><td>7</td><td>5</td><td>carnivorous</td><td>27.5</td></tr><tr><td>Carabus auratus</td><td>1326</td><td>251</td><td>carnivorous</td><td>23.5</td></tr><tr><td>Carabus auronitens</td><td>4</td><td>4</td><td>carnivorous</td><td>25.5</td></tr><tr><td>Carabus cancellatus</td><td>189</td><td>90</td><td>carnivorous</td><td>26</td></tr><tr><td>Carabus convexus</td><td>33</td><td>19</td><td>carnivorous</td><td>17</td></tr><tr><td>Carabus coriaceus</td><td>29</td><td>21</td><td>carnivorous</td><td>37</td></tr><tr><td>Carabus germarii</td><td>4</td><td>3</td><td>carnivorous</td><td>29.5</td></tr><tr><td>Carabus granulatus</td><td>671</td><td>164</td><td>carnivorous</td><td>21.5</td></tr><tr><td>Carabus hortensis</td><td>5</td><td>4</td><td>carnivorous</td><td>26</td></tr><tr><td>Carabus intricatus</td><td>4</td><td>3</td><td>carnivorous</td><td>31</td></tr></table>
 
 <!-- page 19 of 36 -->
 
-| Carabus monilis | 375 | 45 | carnivorous | 24 |
-| --- | --- | --- | --- | --- |
-| Carabus nemoralis | 102 | 53 | carnivorous | 23 |
-| Carabus problematicus | 1 | 1 | carnivorous | 25 |
-| Carabus purpurascens | 41 | 25 | carnivorous | 30 |
-| Carabus ulrichii | 7 | 5 | carnivorous | 24.5 |
-| Carabus violaceus | 159 | 158 | carnivorous | 30 |
-| Carterus fulvipes | 4 | 3 | granivorous | 8 |
-| Chlaenius chrysocephalus | 299 | 86 | carnivorous | 8.5 |
-| Chlaenius decipiens | 7 | 4 | carnivorous | 11.5 |
-| Chlaenius festivus | 34 | 6 | carnivorous | 15 |
-| Chlaenius nigricornis | 9 | 7 | carnivorous | 11 |
-| Chlaenius olivieri | 3 | 2 | carnivorous | 11 |
-| Chlaenius tristis | 1 | 1 | carnivorous | 11.5 |
-| Cicindela campestris | 4 | 3 | carnivorous | 12 |
-| Clivina collaris | 16 | 11 | carnivorous | 4.5 |
-| Clivina fossor | 1491 | 201 | carnivorous | 6 |
-| Cychrus caraboides | 2 | 2 | carnivorous | 17 |
-| Cylinderera germanica | 3 | 2 | carnivorous | 9.5 |
-| Cylinderera paludosa | 1 | 1 | carnivorous | 10.5 |
-| Demetrias atricapillus | 302 | 175 | carnivorous | 5 |
-| Diachromus germanus | 58 | 31 | granivorous | 8.5 |
-| Dixus capito | 26 | 3 | granivorous | 12.5 |
-| Dixus clypeatus | 6 | 6 | granivorous | 10 |
-| Dixus sphaerocephalus | 1 | 1 | granivorous | 6.5 |
-| Dolichus halensis | 22 | 6 | carnivorous | 16.5 |
-| Dromius quadrimaculatus | 56 | 96 | carnivorous | 5 |
-| Dromius schneideri | 1 | 1 | carnivorous | 5.5 |
-| Drypta dentata | 4 | 4 | carnivorous | 8 |
-| Dyschirius globosus | 50 | 15 | carnivorous | 2.5 |
-| Elaphrus uliginosus | 1 | 1 | carnivorous | 9 |
-| Epaphius secalis | 416 | 38 | carnivorous | 3.5 |
-| Gynandromorphus etruscus | 14 | 13 | granivorous | 10.5 |
-| Harpalus affinis | 9406 | 909 | granivorous | 10 |
-| Harpalus atratus | 76 | 21 | granivorous | 11.5 |
-| Harpalus attenuatus | 3 | 3 | granivorous | 8.5 |
-| Harpalus calceatus | 5 | 3 | granivorous | 12.5 |
-| Harpalus cupreus | 18 | 12 | granivorous | 12.5 |
-| Harpalus dimidiatus | 1272 | 374 | granivorous | 12.5 |
-| Harpalus distinguendus | 1725 | 376 | granivorous | 9 |
-| Harpalus flavescens | 2 | 2 | granivorous | 12 |
-| Harpalus griseus | 18 | 12 | omnivorous | 10 |
-| Harpalus honestus | 4 | 3 | granivorous | 8.5 |
-| Harpalus laevipes | 5 | 4 | granivorous | 10.5 |
-| Harpalus latus | 152 | 107 | granivorous | 9.5 |
-| Harpalus luteicornis | 267 | 111 | granivorous | 6.5 |
-| Harpalus marginellus | 1 | 1 | granivorous | 10 |
-| Harpalus oblitus | 40 | 31 | granivorous | 9.5 |
-| Harpalus politus | 1 | 1 | granivorous | 9.5 |
-| Harpalus pumilus | 1 | 1 | granivorous | 5 |
-| Harpalus rubripes | 154 | 98 | granivorous | 10 |
+<table><tr><td>Carabus monilis</td><td>375</td><td>45</td><td>carnivorous</td><td>24</td></tr><tr><td>Carabus nemoralis</td><td>102</td><td>53</td><td>carnivorous</td><td>23</td></tr><tr><td>Carabus problematicus</td><td>1</td><td>1</td><td>carnivorous</td><td>25</td></tr><tr><td>Carabus purpurascens</td><td>41</td><td>25</td><td>carnivorous</td><td>30</td></tr><tr><td>Carabus ulrichii</td><td>7</td><td>5</td><td>carnivorous</td><td>24.5</td></tr><tr><td>Carabus violaceus</td><td>159</td><td>158</td><td>carnivorous</td><td>30</td></tr><tr><td>Carterus fulvipes</td><td>4</td><td>3</td><td>granivorous</td><td>8</td></tr><tr><td>Chlaenius chrysocephalus</td><td>299</td><td>86</td><td>carnivorous</td><td>8.5</td></tr><tr><td>Chlaenius decipiens</td><td>7</td><td>4</td><td>carnivorous</td><td>11.5</td></tr><tr><td>Chlaenius festivus</td><td>34</td><td>6</td><td>carnivorous</td><td>15</td></tr><tr><td>Chlaenius nigricornis</td><td>9</td><td>7</td><td>carnivorous</td><td>11</td></tr><tr><td>Chlaenius olivieri</td><td>3</td><td>2</td><td>carnivorous</td><td>11</td></tr><tr><td>Chlaenius tristis</td><td>1</td><td>1</td><td>carnivorous</td><td>11.5</td></tr><tr><td>Cicindela campestris</td><td>4</td><td>3</td><td>carnivorous</td><td>12</td></tr><tr><td>Clivina collaris</td><td>16</td><td>11</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Clivina fossor</td><td>1491</td><td>201</td><td>carnivorous</td><td>6</td></tr><tr><td>Cychrus caraboides</td><td>2</td><td>2</td><td>carnivorous</td><td>17</td></tr><tr><td>Cylinderera germanica</td><td>3</td><td>2</td><td>carnivorous</td><td>9.5</td></tr><tr><td>Cylinderera paludosa</td><td>1</td><td>1</td><td>carnivorous</td><td>10.5</td></tr><tr><td>Demetrias atricapillus</td><td>302</td><td>175</td><td>carnivorous</td><td>5</td></tr><tr><td>Diachromus germanus</td><td>58</td><td>31</td><td>granivorous</td><td>8.5</td></tr><tr><td>Dixus capito</td><td>26</td><td>3</td><td>granivorous</td><td>12.5</td></tr><tr><td>Dixus clypeatus</td><td>6</td><td>6</td><td>granivorous</td><td>10</td></tr><tr><td>Dixus sphaerocephalus</td><td>1</td><td>1</td><td>granivorous</td><td>6.5</td></tr><tr><td>Dolichus halensis</td><td>22</td><td>6</td><td>carnivorous</td><td>16.5</td></tr><tr><td>Dromius quadrimaculatus</td><td>56</td><td>96</td><td>carnivorous</td><td>5</td></tr><tr><td>Dromius schneideri</td><td>1</td><td>1</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Drypta dentata</td><td>4</td><td>4</td><td>carnivorous</td><td>8</td></tr><tr><td>Dyschirius globosus</td><td>50</td><td>15</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Elaphrus uliginosus</td><td>1</td><td>1</td><td>carnivorous</td><td>9</td></tr><tr><td>Epaphius secalis</td><td>416</td><td>38</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Gynandromorphus etruscus</td><td>14</td><td>13</td><td>granivorous</td><td>10.5</td></tr><tr><td>Harpalus affinis</td><td>9406</td><td>909</td><td>granivorous</td><td>10</td></tr><tr><td>Harpalus atratus</td><td>76</td><td>21</td><td>granivorous</td><td>11.5</td></tr><tr><td>Harpalus attenuatus</td><td>3</td><td>3</td><td>granivorous</td><td>8.5</td></tr><tr><td>Harpalus calceatus</td><td>5</td><td>3</td><td>granivorous</td><td>12.5</td></tr><tr><td>Harpalus cupreus</td><td>18</td><td>12</td><td>granivorous</td><td>12.5</td></tr><tr><td>Harpalus dimidiatus</td><td>1272</td><td>374</td><td>granivorous</td><td>12.5</td></tr><tr><td>Harpalus distinguendus</td><td>1725</td><td>376</td><td>granivorous</td><td>9</td></tr><tr><td>Harpalus flavescens</td><td>2</td><td>2</td><td>granivorous</td><td>12</td></tr><tr><td>Harpalus griseus</td><td>18</td><td>12</td><td>omnivorous</td><td>10</td></tr><tr><td>Harpalus honestus</td><td>4</td><td>3</td><td>granivorous</td><td>8.5</td></tr><tr><td>Harpalus laevipes</td><td>5</td><td>4</td><td>granivorous</td><td>10.5</td></tr><tr><td>Harpalus latus</td><td>152</td><td>107</td><td>granivorous</td><td>9.5</td></tr><tr><td>Harpalus luteicornis</td><td>267</td><td>111</td><td>granivorous</td><td>6.5</td></tr><tr><td>Harpalus marginellus</td><td>1</td><td>1</td><td>granivorous</td><td>10</td></tr><tr><td>Harpalus oblitus</td><td>40</td><td>31</td><td>granivorous</td><td>9.5</td></tr><tr><td>Harpalus politus</td><td>1</td><td>1</td><td>granivorous</td><td>9.5</td></tr><tr><td>Harpalus pumilus</td><td>1</td><td>1</td><td>granivorous</td><td>5</td></tr><tr><td>Harpalus rubripes</td><td>154</td><td>98</td><td>granivorous</td><td>10</td></tr></table>
 
 <!-- page 20 of 36 -->
 
-| Harpalus rufipes | 10163 | 1242 | granivorous | 13.5 |
-| --- | --- | --- | --- | --- |
-| Harpalus serripes | 61 | 18 | granivorous | 10.5 |
-| Harpalus signaticornis | 716 | 141 | granivorous | 6.5 |
-| Harpalus smaragdinus | 2 | 1 | granivorous | 9.5 |
-| Harpalus subcylindricus | 10 | 7 | granivorous | 6.5 |
-| Harpalus sulphuripes | 3 | 3 | granivorous | 7 |
-| Harpalus tardus | 180 | 92 | carnivorous | 9 |
-| Harpalus tenebrosus | 2 | 1 | granivorous | 9 |
-| Laemostenus terricola | 1 | 1 | carnivorous | 14 |
-| Leistus ferrugineus | 78 | 37 | carnivorous | 6.5 |
-| Leistus fulvibarbis | 3 | 3 | carnivorous | 7.5 |
-| Leistus rufomarginatus | 7 | 7 | carnivorous | 8 |
-| Leistus spinibarbis | 22 | 12 | carnivorous | 8.5 |
-| Licinus depressus | 2 | 2 | carnivorous | 10 |
-| Licinus punctatulus | 1 | 1 | carnivorous | 15 |
-| Limodromus assimilis | 465 | 147 | carnivorous | 11.5 |
-| Loricera pilicornis | 3076 | 767 | carnivorous | 7 |
-| Microlestes luctuosus | 8 | 5 | carnivorous | 2 |
-| Microlestes maurus | 309 | 119 | carnivorous | 2 |
-| Microlestes minutulus | 265 | 123 | carnivorous | 2.5 |
-| Microlestes negrita | 3 | 3 | carnivorous | 2 |
-| Molops elatus | 33 | 6 | carnivorous | 15 |
-| Molops piceus | 16 | 16 | carnivorous | 11.5 |
-| Nebria brevicollis | 1517 | 461 | carnivorous | 11.5 |
-| Nebria salina | 5303 | 547 | carnivorous | 11 |
-| Notiophilus aestuans | 334 | 137 | carnivorous | 4.5 |
-| Notiophilus aquaticus | 6 | 6 | carnivorous | 5 |
-| Notiophilus biguttatus | 2315 | 361 | carnivorous | 4.5 |
-| Notiophilus germinyi | 63 | 34 | carnivorous | 5 |
-| Notiophilus palustris | 235 | 135 | carnivorous | 5 |
-| Notiophilus quadripunctatus | 150 | 112 | carnivorous | 4 |
-| Notiophilus rufipes | 4 | 4 | carnivorous | 5 |
-| Notiophilus substriatus | 32 | 31 | carnivorous | 4.5 |
-| Ocys harpaloides | 2 | 97 | carnivorous | 5 |
-| Olisthopus rotundatus | 1 | 1 | carnivorous | 6.5 |
-| Ophonus ardosiacus | 148 | 40 | granivorous | 12 |
-| Ophonus azureus | 310 | 137 | granivorous | 7.5 |
-| Ophonus diffinis | 2 | 2 | granivorous | 11 |
-| Ophonus laticollis | 52 | 21 | granivorous | 9.5 |
-| Ophonus puncticeps | 19 | 16 | granivorous | 8 |
-| Ophonus puncticollis | 1 | 1 | granivorous | 8 |
-| Ophonus rufibarbis | 23 | 14 | granivorous | 7.5 |
-| Ophonus rupicola | 4 | 4 | granivorous | 8 |
-| Ophonus sabulicola | 4 | 4 | granivorous | 15 |
-| Ophonus schaubergerianus | 26 | 12 | granivorous | 8.5 |
-| Ophonus subquadratus | 3 | 2 | granivorous | 7 |
-| Orthomus expansus | 7 | 6 | carnivorous | 10 |
-| Oxypselaphus obscurus | 9 | 7 | carnivorous | 5 |
-| Panagaeus bipustulatus | 24 | 15 | omnivorous | 7 |
-| Panagaeus cruxmajor | 2 | 1 | omnivorous | 8 |
+<table><tr><td>Harpalus rufipes</td><td>10163</td><td>1242</td><td>granivorous</td><td>13.5</td></tr><tr><td>Harpalus serripes</td><td>61</td><td>18</td><td>granivorous</td><td>10.5</td></tr><tr><td>Harpalus signaticornis</td><td>716</td><td>141</td><td>granivorous</td><td>6.5</td></tr><tr><td>Harpalus smaragdinus</td><td>2</td><td>1</td><td>granivorous</td><td>9.5</td></tr><tr><td>Harpalus subcylindricus</td><td>10</td><td>7</td><td>granivorous</td><td>6.5</td></tr><tr><td>Harpalus sulphuripes</td><td>3</td><td>3</td><td>granivorous</td><td>7</td></tr><tr><td>Harpalus tardus</td><td>180</td><td>92</td><td>carnivorous</td><td>9</td></tr><tr><td>Harpalus tenebrosus</td><td>2</td><td>1</td><td>granivorous</td><td>9</td></tr><tr><td>Laemostenus terricola</td><td>1</td><td>1</td><td>carnivorous</td><td>14</td></tr><tr><td>Leistus ferrugineus</td><td>78</td><td>37</td><td>carnivorous</td><td>6.5</td></tr><tr><td>Leistus fulvibarbis</td><td>3</td><td>3</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Leistus rufomarginatus</td><td>7</td><td>7</td><td>carnivorous</td><td>8</td></tr><tr><td>Leistus spinibarbis</td><td>22</td><td>12</td><td>carnivorous</td><td>8.5</td></tr><tr><td>Licinus depressus</td><td>2</td><td>2</td><td>carnivorous</td><td>10</td></tr><tr><td>Licinus punctatulus</td><td>1</td><td>1</td><td>carnivorous</td><td>15</td></tr><tr><td>Limodromus assimilis</td><td>465</td><td>147</td><td>carnivorous</td><td>11.5</td></tr><tr><td>Loricera pilicornis</td><td>3076</td><td>767</td><td>carnivorous</td><td>7</td></tr><tr><td>Microlestes luctuosus</td><td>8</td><td>5</td><td>carnivorous</td><td>2</td></tr><tr><td>Microlestes maurus</td><td>309</td><td>119</td><td>carnivorous</td><td>2</td></tr><tr><td>Microlestes minutulus</td><td>265</td><td>123</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Microlestes negrita</td><td>3</td><td>3</td><td>carnivorous</td><td>2</td></tr><tr><td>Molops elatus</td><td>33</td><td>6</td><td>carnivorous</td><td>15</td></tr><tr><td>Molops piceus</td><td>16</td><td>16</td><td>carnivorous</td><td>11.5</td></tr><tr><td>Nebria brevicollis</td><td>1517</td><td>461</td><td>carnivorous</td><td>11.5</td></tr><tr><td>Nebria salina</td><td>5303</td><td>547</td><td>carnivorous</td><td>11</td></tr><tr><td>Notiophilus aestuans</td><td>334</td><td>137</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Notiophilus aquaticus</td><td>6</td><td>6</td><td>carnivorous</td><td>5</td></tr><tr><td>Notiophilus biguttatus</td><td>2315</td><td>361</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Notiophilus germinyi</td><td>63</td><td>34</td><td>carnivorous</td><td>5</td></tr><tr><td>Notiophilus palustris</td><td>235</td><td>135</td><td>carnivorous</td><td>5</td></tr><tr><td>Notiophilus quadripunctatus</td><td>150</td><td>112</td><td>carnivorous</td><td>4</td></tr><tr><td>Notiophilus rufipes</td><td>4</td><td>4</td><td>carnivorous</td><td>5</td></tr><tr><td>Notiophilus substriatus</td><td>32</td><td>31</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Ocys harpaloides</td><td>2</td><td>97</td><td>carnivorous</td><td>5</td></tr><tr><td>Olisthopus rotundatus</td><td>1</td><td>1</td><td>carnivorous</td><td>6.5</td></tr><tr><td>Ophonus ardosiacus</td><td>148</td><td>40</td><td>granivorous</td><td>12</td></tr><tr><td>Ophonus azureus</td><td>310</td><td>137</td><td>granivorous</td><td>7.5</td></tr><tr><td>Ophonus diffinis</td><td>2</td><td>2</td><td>granivorous</td><td>11</td></tr><tr><td>Ophonus laticollis</td><td>52</td><td>21</td><td>granivorous</td><td>9.5</td></tr><tr><td>Ophonus puncticeps</td><td>19</td><td>16</td><td>granivorous</td><td>8</td></tr><tr><td>Ophonus puncticollis</td><td>1</td><td>1</td><td>granivorous</td><td>8</td></tr><tr><td>Ophonus rufibarbis</td><td>23</td><td>14</td><td>granivorous</td><td>7.5</td></tr><tr><td>Ophonus rupicola</td><td>4</td><td>4</td><td>granivorous</td><td>8</td></tr><tr><td>Ophonus sabulicola</td><td>4</td><td>4</td><td>granivorous</td><td>15</td></tr><tr><td>Ophonus schaubergerianus</td><td>26</td><td>12</td><td>granivorous</td><td>8.5</td></tr><tr><td>Ophonus subquadratus</td><td>3</td><td>2</td><td>granivorous</td><td>7</td></tr><tr><td>Orthomus expansus</td><td>7</td><td>6</td><td>carnivorous</td><td>10</td></tr><tr><td>Oxypselaphus obscurus</td><td>9</td><td>7</td><td>carnivorous</td><td>5</td></tr><tr><td>Panagaeus bipustulatus</td><td>24</td><td>15</td><td>omnivorous</td><td>7</td></tr><tr><td>Panagaeus cruxmajor</td><td>2</td><td>1</td><td>omnivorous</td><td>8</td></tr></table>
 
 <!-- page 21 of 36 -->
 
-| Paradromius linearis | 4 | 3 | carnivorous | 4.5 |
-| --- | --- | --- | --- | --- |
-| Paranchus albipes | 3 | 3 | carnivorous | 7.5 |
-| Parophonus maculicornis | 11 | 9 | granivorous | 6 |
-| Parophonus mendax | 16 | 16 | granivorous | 8 |
-| Patrobus atrorufus | 40 | 8 | carnivorous | 8.5 |
-| Pedius longicollis | 74 | 27 | carnivorous | 6 |
-| Philorhizus melanocephalus | 1 | 1 | carnivorous | 2.5 |
-| Philorhizus notatus | 2 | 2 | carnivorous | 2.5 |
-| Poecilus cupreus | 65826 | 1651 | omnivorous | 11 |
-| Poecilus gisellae | 1 | 1 | carnivorous | 9.5 |
-| Poecilus lepidus | 45 | 22 | carnivorous | 12 |
-| Poecilus puncticollis | 3 | 2 | carnivorous | 9 |
-| Poecilus purpurascens | 27 | 21 | carnivorous | 10 |
-| Poecilus versicolor | 1000 | 147 | carnivorous | 10 |
-| Polistichus connexus | 6 | 6 | carnivorous | 8 |
-| Porotachys bisulcatus | 1 | 1 | carnivorous | 2.5 |
-| Pterostichus anthracinus | 2976 | 48 | carnivorous | 10.5 |
-| Pterostichus burmeisteri | 12 | 12 | carnivorous | 13.5 |
-| Pterostichus diligens | 2 | 2 | carnivorous | 5 |
-| Pterostichus macer | 160 | 53 | carnivorous | 13 |
-| Pterostichus madidus | 3872 | 325 | carnivorous | 16.5 |
-| Pterostichus melanarius | 37257 | 1330 | carnivorous | 15 |
-| Pterostichus melas | 30 | 9 | carnivorous | 16 |
-| Pterostichus niger | 764 | 127 | carnivorous | 18.5 |
-| Pterostichus nigrita | 40 | 105 | carnivorous | 10 |
-| Pterostichus oblongopunctatus | 35 | 25 | carnivorous | 10.5 |
-| Pterostichus ovoideus | 33 | 16 | carnivorous | 7 |
-| Pterostichus pumilio | 1 | 1 | carnivorous | 5 |
-| Pterostichus strenuus | 243 | 141 | carnivorous | 6 |
-| Pterostichus vernalis | 1623 | 338 | carnivorous | 6.5 |
-| Scybalicus oblongiusculus | 16 | 4 | granivorous | 11.5 |
-| Sinechostictus stomoides | 2 | 2 | carnivorous | 5.5 |
-| Stenolophus marginatus | 1 | 1 | omnivorous | 6.5 |
-| Stenolophus mixtus | 1 | 1 | carnivorous | 5.5 |
-| Stenolophus teutonus | 12 | 9 | omnivorous | 6 |
-| Stomis benoiti | 1 | 1 | carnivorous | 10 |
-| Stomis pumicatus | 169 | 86 | carnivorous | 7 |
-| Syntomus foveatus | 33 | 22 | carnivorous | 2.5 |
-| Syntomus obscuroguttatus | 166 | 88 | carnivorous | 2.5 |
-| Syntomus truncatellus | 43 | 29 | carnivorous | 2.5 |
-| Synuchus vivalis | 89 | 55 | granivorous | 7 |
-| Tachys bistriatus | 90 | 28 | carnivorous | 1.5 |
-| Trechoblemus micros | 28 | 10 | carnivorous | 4.5 |
-| Trechus obtusus | 10 | 105 | carnivorous | 3.5 |
-| Trechus quadristriatus | 16780 | 818 | carnivorous | 3.5 |
-| Trechus rubens | 23 | 15 | carnivorous | 5.5 |
-| Trichotichnus laevicollis | 3 | 3 | granivorous | 7 |
-| Trichotichnus nitens | 1 | 1 | granivorous | 8 |
-| Zabrus tenebrioides | 141 | 62 | granivorous | 15 |
-| Zuphium olens | 2 | 2 | carnivorous | 9.25 |
+<table><tr><td>Paradromius linearis</td><td>4</td><td>3</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Paranchus albipes</td><td>3</td><td>3</td><td>carnivorous</td><td>7.5</td></tr><tr><td>Parophonus maculicornis</td><td>11</td><td>9</td><td>granivorous</td><td>6</td></tr><tr><td>Parophonus mendax</td><td>16</td><td>16</td><td>granivorous</td><td>8</td></tr><tr><td>Patrobus atrorufus</td><td>40</td><td>8</td><td>carnivorous</td><td>8.5</td></tr><tr><td>Pedius longicollis</td><td>74</td><td>27</td><td>carnivorous</td><td>6</td></tr><tr><td>Philorhizus melanocephalus</td><td>1</td><td>1</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Philorhizus notatus</td><td>2</td><td>2</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Poecilus cupreus</td><td>65826</td><td>1651</td><td>omnivorous</td><td>11</td></tr><tr><td>Poecilus gisellae</td><td>1</td><td>1</td><td>carnivorous</td><td>9.5</td></tr><tr><td>Poecilus lepidus</td><td>45</td><td>22</td><td>carnivorous</td><td>12</td></tr><tr><td>Poecilus puncticollis</td><td>3</td><td>2</td><td>carnivorous</td><td>9</td></tr><tr><td>Poecilus purpurascens</td><td>27</td><td>21</td><td>carnivorous</td><td>10</td></tr><tr><td>Poecilus versicolor</td><td>1000</td><td>147</td><td>carnivorous</td><td>10</td></tr><tr><td>Polistichus connexus</td><td>6</td><td>6</td><td>carnivorous</td><td>8</td></tr><tr><td>Porotachys bisulcatus</td><td>1</td><td>1</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Pterostichus anthracinus</td><td>2976</td><td>48</td><td>carnivorous</td><td>10.5</td></tr><tr><td>Pterostichus burmeisteri</td><td>12</td><td>12</td><td>carnivorous</td><td>13.5</td></tr><tr><td>Pterostichus diligens</td><td>2</td><td>2</td><td>carnivorous</td><td>5</td></tr><tr><td>Pterostichus macer</td><td>160</td><td>53</td><td>carnivorous</td><td>13</td></tr><tr><td>Pterostichus madidus</td><td>3872</td><td>325</td><td>carnivorous</td><td>16.5</td></tr><tr><td>Pterostichus melanarius</td><td>37257</td><td>1330</td><td>carnivorous</td><td>15</td></tr><tr><td>Pterostichus melas</td><td>30</td><td>9</td><td>carnivorous</td><td>16</td></tr><tr><td>Pterostichus niger</td><td>764</td><td>127</td><td>carnivorous</td><td>18.5</td></tr><tr><td>Pterostichus nigrita</td><td>40</td><td>105</td><td>carnivorous</td><td>10</td></tr><tr><td>Pterostichus oblongopunctatus</td><td>35</td><td>25</td><td>carnivorous</td><td>10.5</td></tr><tr><td>Pterostichus ovoideus</td><td>33</td><td>16</td><td>carnivorous</td><td>7</td></tr><tr><td>Pterostichus pumilio</td><td>1</td><td>1</td><td>carnivorous</td><td>5</td></tr><tr><td>Pterostichus strenuus</td><td>243</td><td>141</td><td>carnivorous</td><td>6</td></tr><tr><td>Pterostichus vernalis</td><td>1623</td><td>338</td><td>carnivorous</td><td>6.5</td></tr><tr><td>Scybalicus oblongiusculus</td><td>16</td><td>4</td><td>granivorous</td><td>11.5</td></tr><tr><td>Sinechostictus stomoides</td><td>2</td><td>2</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Stenolophus marginatus</td><td>1</td><td>1</td><td>omnivorous</td><td>6.5</td></tr><tr><td>Stenolophus mixtus</td><td>1</td><td>1</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Stenolophus teutonus</td><td>12</td><td>9</td><td>omnivorous</td><td>6</td></tr><tr><td>Stomis benoiti</td><td>1</td><td>1</td><td>carnivorous</td><td>10</td></tr><tr><td>Stomis pumicatus</td><td>169</td><td>86</td><td>carnivorous</td><td>7</td></tr><tr><td>Syntomus foveatus</td><td>33</td><td>22</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Syntomus obscuroguttatus</td><td>166</td><td>88</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Syntomus truncatellus</td><td>43</td><td>29</td><td>carnivorous</td><td>2.5</td></tr><tr><td>Synuchus vivalis</td><td>89</td><td>55</td><td>granivorous</td><td>7</td></tr><tr><td>Tachys bistriatus</td><td>90</td><td>28</td><td>carnivorous</td><td>1.5</td></tr><tr><td>Trechoblemus micros</td><td>28</td><td>10</td><td>carnivorous</td><td>4.5</td></tr><tr><td>Trechus obtusus</td><td>10</td><td>105</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Trechus quadristriatus</td><td>16780</td><td>818</td><td>carnivorous</td><td>3.5</td></tr><tr><td>Trechus rubens</td><td>23</td><td>15</td><td>carnivorous</td><td>5.5</td></tr><tr><td>Trichotichnus laevicollis</td><td>3</td><td>3</td><td>granivorous</td><td>7</td></tr><tr><td>Trichotichnus nitens</td><td>1</td><td>1</td><td>granivorous</td><td>8</td></tr><tr><td>Zabrus tenebrioides</td><td>141</td><td>62</td><td>granivorous</td><td>15</td></tr><tr><td>Zuphium olens</td><td>2</td><td>2</td><td>carnivorous</td><td>9.25</td></tr></table>
 
 <!-- page 22 of 36 -->
 
@@ -945,19 +647,7 @@ Table S7 Model specifications for the calculated models
 
 Table S7: Model specifications for the calculated models.
 
-| response | constant effect | varying effect | family |
-| --- | --- | --- | --- |
-| richness (overall) | distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Poisson (log) |
-| richness (predominantly carnivorous) | distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Poisson (log) |
-| richness (omnivorous)[models with and without P. cupreus] | distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Poisson (log) |
-| richness (predominantly granivorous) | distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Poisson (log) |
-| activity density (overall) | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
-| activity density (predominantly carnivorous) | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
-| activity density (omnivorous)[models with and without P. cupreus] | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
-| activity density (predominantly granivorous) | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
-| activity density small species (&lt; 6 mm) | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
-| activity density medium-sized species(6 - 10 mm) | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
-| activity density large species (> 10 mm) | distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat | 1 + distance \| study/site | Gamma (log) |
+<table><tr><td>response</td><td>constant effect</td><td>varying effect</td><td>family</td></tr><tr><td>richness (overall)</td><td>distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Poisson (log)</td></tr><tr><td>richness (predominantly carnivorous)</td><td>distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Poisson (log)</td></tr><tr><td>richness (omnivorous)[models with and without P. cupreus]</td><td>distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Poisson (log)</td></tr><tr><td>richness (predominantly granivorous)</td><td>distancelog(trap days)crop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Poisson (log)</td></tr><tr><td>activity density (overall)</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr><tr><td>activity density (predominantly carnivorous)</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr><tr><td>activity density (omnivorous)[models with and without P. cupreus]</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr><tr><td>activity density (predominantly granivorous)</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr><tr><td>activity density small species (&amp;lt; 6 mm)</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr><tr><td>activity density medium-sized species(6 - 10 mm)</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr><tr><td>activity density large species (&gt; 10 mm)</td><td>distancecrop typeadjacent habitatdistance : crop typedistance : adjacent habitat</td><td>1 + distance | study/site</td><td>Gamma (log)</td></tr></table>
 
 <!-- page 24 of 36 -->
 

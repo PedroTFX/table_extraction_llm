@@ -112,14 +112,7 @@ Diversity 2024, 16, 687
 
 4 of 23
 
-| Site | Latitude (N) | Longitude (W) |
-| --- | --- | --- |
-| N1a | ~10.65 | ~75.2 |
-| N1b | ~10.8 | ~74.9 |
-| N2a | ~9.9 | ~75.3 |
-| N2b | ~9.9 | ~75.1 |
-| N3a | ~9.6 | ~75.3 |
-| N3b | ~9.55 | ~75.4 |
+<table><tr><td>Site</td><td>Latitude (N)</td><td>Longitude (W)</td></tr><tr><td>N1a</td><td>~10.65</td><td>~75.2</td></tr><tr><td>N1b</td><td>~10.8</td><td>~74.9</td></tr><tr><td>N2a</td><td>~9.9</td><td>~75.3</td></tr><tr><td>N2b</td><td>~9.9</td><td>~75.1</td></tr><tr><td>N3a</td><td>~9.6</td><td>~75.3</td></tr><tr><td>N3b</td><td>~9.55</td><td>~75.4</td></tr></table>
 
 Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Caribbean. N1a: Luriza Integrated Regional Management District; N1b: “Palmar del Titi” Integrated Tropical Dry Forest Reserve; N3a: “CARACOL ” Civil Society Nature Reserve; N3b: Coraza and Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Trop tributed both in the study area and in adjacent regions. ical Dry Forest Reserve; N3a: “CARACOLÍ” Civil Society Nature Reserve; N3b: Coraza and Montes de María Protective Reserve. The green polygons correspond to dry forest fragments distributed both 1. TDF f  A lá (h f 1in the study area and in adjacent regions.
 
@@ -155,16 +148,7 @@ Eight functionally important traits in ants were selected, which have been widel
 
 Table 1. Morphological traits used to calculate functional diversity and their ecological significance for leaf-litter-associated ant communities in study area.
 
-| Morphological Trait | Abbreviation | Functional Importance |
-| --- | --- | --- |
-| Head length | HL | Related to the body size of the ant workers [65]. |
-| Head width | HW | Related to the size of the spaces through which ants can pass [66] and to the mandibular musculature. Wider heads have larger mandibular muscles allowing the capture of larger prey [67]. |
-| Mandible length | ML | Indicates the type of diet since longer mandibles would indicate more predatory behavior [68]; likewise, longer mandibles could allow for the capture of larger prey [34]. |
-| Eye length | EL | Related to the foraging period. It could also indicate the behavior in the search for food [38]. |
-| Interocular distance | ID | Related to hunting strategies [34] and habitat complexity [69]. |
-| Scape length | SL | Related to sensory capabilities: longer antennal scapes facilitate the tracking of pheromone trails [32]. |
-| Femur length | FL | Related to foraging speed, which reflects habitat complexity [70]. It may also be related to food quality in some specialist groups [32]. |
-| Weber length | WL | Indicative of body size, which can be related to the amount and type of resource exploited [22]. Body size can influence the microhabitats in which species forage [65]. Large-bodied ants typically forage in open conditions on the soil surface, while smaller species may occupy smaller spaces in enclosed microhabitats in leaf litter and soil [32,40]. |
+<table><tr><td>Morphological Trait</td><td>Abbreviation</td><td>Functional Importance</td></tr><tr><td>Head length</td><td>HL</td><td>Related to the body size of the ant workers [65].</td></tr><tr><td>Head width</td><td>HW</td><td>Related to the size of the spaces through which ants can pass [66] and to the mandibular musculature. Wider heads have larger mandibular muscles allowing the capture of larger prey [67].</td></tr><tr><td>Mandible length</td><td>ML</td><td>Indicates the type of diet since longer mandibles would indicate more predatory behavior [68]; likewise, longer mandibles could allow for the capture of larger prey [34].</td></tr><tr><td>Eye length</td><td>EL</td><td>Related to the foraging period. It could also indicate the behavior in the search for food [38].</td></tr><tr><td>Interocular distance</td><td>ID</td><td>Related to hunting strategies [34] and habitat complexity [69].</td></tr><tr><td>Scape length</td><td>SL</td><td>Related to sensory capabilities: longer antennal scapes facilitate the tracking of pheromone trails [32].</td></tr><tr><td>Femur length</td><td>FL</td><td>Related to foraging speed, which reflects habitat complexity [70]. It may also be related to food quality in some specialist groups [32].</td></tr><tr><td>Weber length</td><td>WL</td><td>Indicative of body size, which can be related to the amount and type of resource exploited [22]. Body size can influence the microhabitats in which species forage [65]. Large-bodied ants typically forage in open conditions on the soil surface, while smaller species may occupy smaller spaces in enclosed microhabitats in leaf litter and soil [32,40].</td></tr></table>
 
 <!-- page 6 of 24 -->
 
@@ -196,17 +180,7 @@ Diversity 2024, 16, 687
 
 7 of 23 single
 
-| Category | N1 | N2 | N3 |
-| --- | --- | --- | --- |
-| Myrmicinae | ~52 | ~66 | ~75 |
-| Ponerinae | ~11 | ~18 | ~15 |
-| Formicinae | ~2 | ~9 | ~11 |
-| Ectatomminae | ~2 | ~3 | ~5 |
-| Proceratilinae | ~2 | ~4 | ~4 |
-| Dorylinae | ~3 | ~3 | ~3 |
-| Pseudomymecinae | ~2 | ~3 | ~2 |
-| Dolichoderinae | ~1 | ~2 | ~3 |
-| Amblyoponinae | 0 | ~1 | 0 |
+<table><tr><td>Category</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td>Myrmicinae</td><td>~52</td><td>~66</td><td>~75</td></tr><tr><td>Ponerinae</td><td>~11</td><td>~18</td><td>~15</td></tr><tr><td>Formicinae</td><td>~2</td><td>~9</td><td>~11</td></tr><tr><td>Ectatomminae</td><td>~2</td><td>~3</td><td>~5</td></tr><tr><td>Proceratilinae</td><td>~2</td><td>~4</td><td>~4</td></tr><tr><td>Dorylinae</td><td>~3</td><td>~3</td><td>~3</td></tr><tr><td>Pseudomymecinae</td><td>~2</td><td>~3</td><td>~2</td></tr><tr><td>Dolichoderinae</td><td>~1</td><td>~2</td><td>~3</td></tr><tr><td>Amblyoponinae</td><td>0</td><td>~1</td><td>0</td></tr></table>
 
 Figure 2. Number of ant species by subfamilies (horizontal axis) for TDF fragments in each area of Figure 2. Number of ant species by subfamilies (horizontal axis) for TDF fragments in each area of the northwestern Colombian Caribbean.the northwestern Colombian Caribbean.
 
@@ -226,91 +200,13 @@ Diversity 2024, 16, 687
 
 8 of 23
 
-| Category | Condition | Diversity (2D) |
-| --- | --- | --- |
-| N1 | Rainy | ~28 |
-| N2 | Rainy | ~34 |
-| N3 | Rainy | ~48 |
-| N1 | Dry | ~23 |
-| N2 | Dry | ~35 |
-| N3 | Dry | ~30 |
+<table><tr><td>Category</td><td>Condition</td><td>Diversity (2D)</td></tr><tr><td>N1</td><td>Rainy</td><td>~28</td></tr><tr><td>N2</td><td>Rainy</td><td>~34</td></tr><tr><td>N3</td><td>Rainy</td><td>~48</td></tr><tr><td>N1</td><td>Dry</td><td>~23</td></tr><tr><td>N2</td><td>Dry</td><td>~35</td></tr><tr><td>N3</td><td>Dry</td><td>~30</td></tr></table>
 
 ea. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Figure 3. Diversity expressed as the effective number of ant species (qD) in TDF fragments in each. ( )  ( ); ( )   ( ); ( )   ( ). nfidence intervals (CI) of each of the measurements. area. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Rank–abundance curves of ant species for the studied areas show few vconfidence intervals (CI) of each of the measurements.
 
 olenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885), Rank–abundance curves of ant species for the studied areas show few very frequentes (Figure 4). A total of seven species are considered frequent, which correspond to ith capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare species (Figure 4). A total of seven species are considered frequent, which correspondSolenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponera equencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepurus to Solenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponeraopacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885), rvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis opacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885),with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare endix A). with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare(with capture frequencies less than 50%), and 60 are considered very rare, with capture (with capture frequencies less than 50%), and 60 are considered very rare, with capturefrequencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepurus frequencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepuruscurvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis curvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis Lattke,Lattke, 1995; Acropyga fuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Ap-1995; Acropyga fuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Appendix A).pendix A).
 
-| Species | N1 (Abundance relative) | N2 (Abundance relative) | N3 (Abundance relative) |
-| :--- | :--- | :--- | :--- |
-| Solenopsis azteka | ~82 | ~79 | ~87 |
-| Pheidole flavens | ~56 | ~74 | — |
-| Strumigenys eggersi | ~50 | ~56 | — |
-| Octostruma amrishi | ~41 | ~48 | — |
-| Octostruma amrishi | ~39 | ~45 | — |
-| Solenopsis geminata | ~37 | ~42 | — |
-| Pheidole flavens | ~36 | ~40 | — |
-| N2 | ~35 | ~38 | — |
-| N2 | ~34 | ~36 | — |
-| N2 | ~33 | ~34 | — |
-| N2 | ~32 | ~32 | — |
-| N2 | ~31 | ~30 | — |
-| N2 | ~30 | ~28 | — |
-| N2 | ~29 | ~26 | — |
-| N2 | ~28 | ~24 | — |
-| N2 | ~27 | ~22 | — |
-| N2 | ~26 | ~20 | — |
-| N2 | ~25 | ~18 | — |
-| N2 | ~24 | ~16 | — |
-| N2 | ~23 | ~14 | — |
-| N2 | ~22 | ~12 | — |
-| N2 | ~21 | ~10 | — |
-| N2 | ~20 | ~8 | — |
-| N2 | ~19 | ~6 | — |
-| N2 | ~18 | ~4 | — |
-| N2 | ~17 | ~2 | — |
-| N2 | ~16 | ~1 | — |
-| N2 | ~15 | ~0 | — |
-| N2 | ~14 | ~0 | — |
-| N2 | ~13 | ~0 | — |
-| N2 | ~12 | ~0 | — |
-| N2 | ~11 | ~0 | — |
-| N2 | ~10 | ~0 | — |
-| N2 | ~9 | ~0 | — |
-| N2 | ~8 | ~0 | — |
-| N2 | ~7 | ~0 | — |
-| N2 | ~6 | ~0 | — |
-| N2 | ~5 | ~0 | — |
-| N2 | ~4 | ~0 | — |
-| N2 | ~3 | ~0 | — |
-| N2 | ~2 | ~0 | — |
-| N2 | ~1 | ~0 | — |
-| N2 | ~0 | ~0 | — |
-| N3 | — | — | ~87 |
-| N3 | — | — | ~76 |
-| N3 | — | — | ~51 |
-| N3 | — | — | ~47 |
-| N3 | — | — | ~41 |
-| N3 | — | — | ~40 |
-| N3 | — | — | ~38 |
-| N3 | — | — | ~36 |
-| N3 | — | — | ~34 |
-| N3 | — | — | ~32 |
-| N3 | — | — | ~30 |
-| N3 | — | — | ~28 |
-| N3 | — | — | ~26 |
-| N3 | — | — | ~24 |
-| N3 | — | — | ~22 |
-| N3 | — | — | ~20 |
-| N3 | — | — | ~18 |
-| N3 | — | — | ~16 |
-| N3 | — | — | ~14 |
-| N3 | — | — | ~12 |
-| N3 | — | — | ~10 |
-| N3 | — | — | ~8 |
-| N3 | — | — | ~6 |
-| N3 | — | — | ~4 |
-| N3 | — | — | ~2 |
-| N3 | — | — | ~1 |
-| N3 | — | — | ~0 |
+<table><tr><td>Species</td><td>N1 (Abundance relative)</td><td>N2 (Abundance relative)</td><td>N3 (Abundance relative)</td></tr><tr><td>Solenopsis azteka</td><td>~82</td><td>~79</td><td>~87</td></tr><tr><td>Pheidole flavens</td><td>~56</td><td>~74</td><td>—</td></tr><tr><td>Strumigenys eggersi</td><td>~50</td><td>~56</td><td>—</td></tr><tr><td>Octostruma amrishi</td><td>~41</td><td>~48</td><td>—</td></tr><tr><td>Octostruma amrishi</td><td>~39</td><td>~45</td><td>—</td></tr><tr><td>Solenopsis geminata</td><td>~37</td><td>~42</td><td>—</td></tr><tr><td>Pheidole flavens</td><td>~36</td><td>~40</td><td>—</td></tr><tr><td>N2</td><td>~35</td><td>~38</td><td>—</td></tr><tr><td>N2</td><td>~34</td><td>~36</td><td>—</td></tr><tr><td>N2</td><td>~33</td><td>~34</td><td>—</td></tr><tr><td>N2</td><td>~32</td><td>~32</td><td>—</td></tr><tr><td>N2</td><td>~31</td><td>~30</td><td>—</td></tr><tr><td>N2</td><td>~30</td><td>~28</td><td>—</td></tr><tr><td>N2</td><td>~29</td><td>~26</td><td>—</td></tr><tr><td>N2</td><td>~28</td><td>~24</td><td>—</td></tr><tr><td>N2</td><td>~27</td><td>~22</td><td>—</td></tr><tr><td>N2</td><td>~26</td><td>~20</td><td>—</td></tr><tr><td>N2</td><td>~25</td><td>~18</td><td>—</td></tr><tr><td>N2</td><td>~24</td><td>~16</td><td>—</td></tr><tr><td>N2</td><td>~23</td><td>~14</td><td>—</td></tr><tr><td>N2</td><td>~22</td><td>~12</td><td>—</td></tr><tr><td>N2</td><td>~21</td><td>~10</td><td>—</td></tr><tr><td>N2</td><td>~20</td><td>~8</td><td>—</td></tr><tr><td>N2</td><td>~19</td><td>~6</td><td>—</td></tr><tr><td>N2</td><td>~18</td><td>~4</td><td>—</td></tr><tr><td>N2</td><td>~17</td><td>~2</td><td>—</td></tr><tr><td>N2</td><td>~16</td><td>~1</td><td>—</td></tr><tr><td>N2</td><td>~15</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~14</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~13</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~12</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~11</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~10</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~9</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~8</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~7</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~6</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~5</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~4</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~3</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~2</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~1</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~0</td><td>~0</td><td>—</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~87</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~76</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~51</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~47</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~41</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~40</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~38</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~36</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~34</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~32</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~30</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~28</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~26</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~24</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~22</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~20</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~18</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~16</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~14</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~12</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~10</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~8</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~6</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~4</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~2</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~1</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~0</td></tr></table>
 
 Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abun-Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abundance) for the ant assemblage in the TDF fragments in each area. The names of the species with the dance) for the ant assemblage in the TDF fragments in each area. The names of the species with the highest capture frequency (≥50%) are shown. highest capture frequency (≥50%) are shown.
 
@@ -324,21 +220,13 @@ Diversity 2024, 16, 687
 
 9 of 23 6 = 1.8
 
-| Series | nMDS1 (range) | nMDS2 (range) |
-| --- | --- | --- |
-| N1 | ~0.35 ~0.45 | ~0.25 ~0.65 |
-| N2 | ~0.35 ~0.75 | ~0.05 ~0.45 |
-| N3 | ~0.55 ~0.95 | ~0.45 ~0.95 |
+<table><tr><td>Series</td><td>nMDS1 (range)</td><td>nMDS2 (range)</td></tr><tr><td>N1</td><td>~0.35 ~0.45</td><td>~0.25 ~0.65</td></tr><tr><td>N2</td><td>~0.35 ~0.75</td><td>~0.05 ~0.45</td></tr><tr><td>N3</td><td>~0.55 ~0.95</td><td>~0.45 ~0.95</td></tr></table>
 
 Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-litter-Th l i f b t di it ( ) b t th TDF f t i associated ant community in the studied areas. Letters in numbers are defined in the studassociated ant community in the studied areas. Letters in numbers are defined in the study area section. D corresponds to the dry season, while R is the rainy seasection. D corresponds to the dry season, while R is the rainy season.
 
 The analysis of beta diversity (βjac) between the TDF fragments in each arc showsn. For both seasons, turnover is the main component that explains th a moderate differentiation between 50 and 60% of dissimilarity between both climaticf h . I h d ,   76% f N1-N2 seasons; in general, higher dissimilarity values were found in the dry season than in the,rainy season. For both seasons, turnover is the main component that explains the variation,  %  - . g  y ,   g.   ,     p  pin the composition of the ants. In the dry season, turnover was 76% for N1-N2, 88% formong the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3 the composition of the ants. In the dry season, turnover was 76% for N1-N2, 88% foN1-N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74estedness values were recorded among N1-N3 (46%) in the rainy season, N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74 toto 77% among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. Thet d d b t 9 d 24% (Fi 6) (T bl S6 among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. The hihighest nestedness values were recorded among N1-N3 (46%) in the rainy season, while in nestedness values were recorded among N1-N3 (46%) in the rainy sethe dry season, nestedness ranged between 9 and 24% (Figure 6) (Table S6).
 
-| Category | \(\beta\)jac | \(\beta\)jtu | \(\beta\)jne |
-| --- | --- | --- | --- |
-| N2 - N3 | ~0.50 | ~0.38 | ~0.12 |
-| N1 - N3 | ~0.60 | ~0.32 | ~0.27 |
-| N1 - N2 | ~0.56 | ~0.41 | ~0.14 |
+<table><tr><td>Category</td><td>\(\beta\)jac</td><td>\(\beta\)jtu</td><td>\(\beta\)jne</td></tr><tr><td>N2 - N3</td><td>~0.50</td><td>~0.38</td><td>~0.12</td></tr><tr><td>N1 - N3</td><td>~0.60</td><td>~0.32</td><td>~0.27</td></tr><tr><td>N1 - N2</td><td>~0.56</td><td>~0.41</td><td>~0.14</td></tr></table>
 
 Figure 6. Cont.
 
@@ -348,11 +236,7 @@ Diversity 2024, 16, 687
 
 10 of 23
 
-| Category | \(\beta\)jac | \(\beta\)jtu | \(\beta\)jne |
-| --- | --- | --- | --- |
-| N2 - N3 | ~0.58 | ~0.53 | ~0.06 |
-| N1 - N3 | ~0.60 | ~0.53 | ~0.08 |
-| N1 - N2 | ~0.59 | ~0.45 | ~0.15 |
+<table><tr><td>Category</td><td>\(\beta\)jac</td><td>\(\beta\)jtu</td><td>\(\beta\)jne</td></tr><tr><td>N2 - N3</td><td>~0.58</td><td>~0.53</td><td>~0.06</td></tr><tr><td>N1 - N3</td><td>~0.60</td><td>~0.53</td><td>~0.08</td></tr><tr><td>N1 - N2</td><td>~0.59</td><td>~0.45</td><td>~0.15</td></tr></table>
 
 (b)
 
@@ -362,28 +246,7 @@ igure 6. Partition of beta diversity (βjac) into its turnover (βjtu) and neste
 
 p Twenty functional groups were identified: eighteen were recorded in N1, nineteen inTwenty functional groups were identified: eighteen were recorded in N1, nineteen in Twenty functional groups were identified: eighteen were recorded in NN3, and twenty in N2. The predominant functional groups in terms of species richnessN3, and twenty in N2. The predominant functional groups in terms of species richness d   2. Th d f l    fcorrespond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omni-correspond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omnivores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richnessvores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richness p  p g / / p gof functional groups between the rainy and dry seasons.of functional groups between the rainy and dry seasons.
 
-| Category | N1 (%) | N2 (%) | N3 (%) |
-| :--- | :--- | :--- | :--- |
-| Exclusive homopteran dependent (EHD) | 0 | ~50 | ~50 |
-| Medium-sized litter/hypogieic generalist predator (MLP) | 0 | ~40 | ~60 |
-| Soil-specialized isopoda forager/predator (SSI) | ~33 | ~37 | ~29 |
-| Mass predators or nomads (MPN) | ~51 | ~49 | 0 |
-| Soil-specialized millipede predator (SSM) | ~25 | ~55 | ~25 |
-| Dacetini predator with static prehensile mandibles (DPSM) | ~25 | ~30 | ~55 |
-| Fungus leaf-cutter agriculture (LCA) | ~34 | ~36 | ~32 |
-| Soil specialized forager/predator (SSP) | ~14 | ~48 | ~40 |
-| Army Ants (AA) | ~29 | ~31 | ~37 |
-| Small epigeic/litter/hypogieic generalist predator (SLP) | ~29 | ~31 | ~37 |
-| Fungus-generalized higher-agriculture (FGHA) | ~23 | ~48 | ~25 |
-| Fungus lower-agriculture (FLA) | ~23 | ~36 | ~39 |
-| Arboreous/soil omnivore (ASO) | ~15 | ~40 | ~55 |
-| Large/medium-sized arboreous generalist predator (LAP) | ~25 | ~35 | ~35 |
-| Fungus yeast agriculture (FYA) | ~30 | ~30 | ~30 |
-| Medium-sized litter/hypogieic omnivore (MLO) | ~18 | ~40 | ~42 |
-| Large epigeic generalist predator (LEP) | ~27 | ~45 | ~28 |
-| Dacetine Predator (DP) | ~28 | ~36 | ~34 |
-| Arboreous Omnivore (AO) | ~41 | ~26 | ~33 |
-| Small epigcic/litter/hypogieic omnivore (SO) | ~25 | ~40 | ~35 |
+<table><tr><td>Category</td><td>N1 (%)</td><td>N2 (%)</td><td>N3 (%)</td></tr><tr><td>Exclusive homopteran dependent (EHD)</td><td>0</td><td>~50</td><td>~50</td></tr><tr><td>Medium-sized litter/hypogieic generalist predator (MLP)</td><td>0</td><td>~40</td><td>~60</td></tr><tr><td>Soil-specialized isopoda forager/predator (SSI)</td><td>~33</td><td>~37</td><td>~29</td></tr><tr><td>Mass predators or nomads (MPN)</td><td>~51</td><td>~49</td><td>0</td></tr><tr><td>Soil-specialized millipede predator (SSM)</td><td>~25</td><td>~55</td><td>~25</td></tr><tr><td>Dacetini predator with static prehensile mandibles (DPSM)</td><td>~25</td><td>~30</td><td>~55</td></tr><tr><td>Fungus leaf-cutter agriculture (LCA)</td><td>~34</td><td>~36</td><td>~32</td></tr><tr><td>Soil specialized forager/predator (SSP)</td><td>~14</td><td>~48</td><td>~40</td></tr><tr><td>Army Ants (AA)</td><td>~29</td><td>~31</td><td>~37</td></tr><tr><td>Small epigeic/litter/hypogieic generalist predator (SLP)</td><td>~29</td><td>~31</td><td>~37</td></tr><tr><td>Fungus-generalized higher-agriculture (FGHA)</td><td>~23</td><td>~48</td><td>~25</td></tr><tr><td>Fungus lower-agriculture (FLA)</td><td>~23</td><td>~36</td><td>~39</td></tr><tr><td>Arboreous/soil omnivore (ASO)</td><td>~15</td><td>~40</td><td>~55</td></tr><tr><td>Large/medium-sized arboreous generalist predator (LAP)</td><td>~25</td><td>~35</td><td>~35</td></tr><tr><td>Fungus yeast agriculture (FYA)</td><td>~30</td><td>~30</td><td>~30</td></tr><tr><td>Medium-sized litter/hypogieic omnivore (MLO)</td><td>~18</td><td>~40</td><td>~42</td></tr><tr><td>Large epigeic generalist predator (LEP)</td><td>~27</td><td>~45</td><td>~28</td></tr><tr><td>Dacetine Predator (DP)</td><td>~28</td><td>~36</td><td>~34</td></tr><tr><td>Arboreous Omnivore (AO)</td><td>~41</td><td>~26</td><td>~33</td></tr><tr><td>Small epigcic/litter/hypogieic omnivore (SO)</td><td>~25</td><td>~40</td><td>~35</td></tr></table>
 
 Figure 7. The spatial variation in the functional groups recorded in the TDF fragments in each Figure 7. The spatial variation in the functional groups recorded in the TDF fragments in each area.
 
@@ -435,35 +298,19 @@ igure 8. The functional trait weighted mean (CWM) of the eight functional traits
 
 The functional space occupied by the ant community showed an increase in N3nt outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3. $( 4 2 . 7 \pm 2 1 . 3 )$ by approximately five orders of magnitude relative to N2 $( 9 . 8 9   \pm   8 . 2 2 )$ $( \mathbb { F } _ { 1 , 9 }   =   8 . 8 6 ;     p   =   0 . 0 1 8 )$ ,and seven orders of magnitude relative to N1 $( 5 . 8 6   \pm   5 . 6 8 )$ $( \mathbb { F } _ { 1 , 9 } = 8 . 8 6 ;   p = 0 . 0 1 0 )$ (Figure 9a). Functional equitability values did not show signifi-..  .  ; .cant differences among the TDF fragments in each area18) and seven orders of magnitude relative to N1 (5.86 ± 5.68) (F1,9 = 8.8 $( 0 . 6 5 \pm 0 . 0 4 3 6$ for $\mathrm { N } 3 ; 0 . 6 5 2 \pm 0 . 0 3 6$ forre 9 $\mathrm { N } 2 ;$ ,andnctio $0 . 6 1 8 \pm 0 . 0 4 8$ gfor N1)ues did n $( \mathbb { F } _ { 1 , 9 } = 0 . 7 6 ; p = 0 . 4 9 3 )$ g  (Figure 9b). N3 showed a significants among the y  ( .  . ) preduction in functional redundancy valuesg    ( .  .  ; .  . $( 0 . 7 5 7 \pm 0 . 0 1 3 6 )$ .  . ,  . compared to those from N1.(0.781 ± 0.004)ndancy values (0.75 $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 0 1 0 )$ . ; p  . ),and N2 (0.775 ± 0.005)from N1 (0.781 ± 0.004) (F1,9 = $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 4 3 0 )$ , while 1,9  . ; p  . ) ( gN1 and N2 showed no differences.010) and N2 (0.775 ± 0.005) (F1,9 = 7.87; p = 0.43 $( \mathbb { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 6 4 6 )$ g  (Figure 9c). Finally, N3 showed a no differ-.  .significant increase in1,9  . ; p  . ) ( g $\operatorname { R a o ^ { \prime } s } \mathbf { Q }$ .  . ) ( 1,9  . ; p  . values (6.21 ± 0.92) compared to those from N2y, N3 showed a significant increase in Rao’s $( 4 . 9 \pm 0 . 2 2 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ;   p = 0 . 0 2 1 )$ 64; p = and N106);  th $( 4 . 5 8 \pm 0 . 1 9 4 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ;   \mathrm { p } = 0 . 0 0 6 ) ,$ on the other hand, the howed no differences (F1,9 = 7.87; p = 0.713) (Figfragments from N1 and N2 showed no differencesed no differences (F1,9 = 7.87; p = 0.713) (Figure 9d) (Table S8). $( \mathbb { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 7 1 3 )$ (Figure 9d) (Table S8).
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| Orange | ~3 | ~4 | ~7 | ~4 |
-| Green | ~4 | ~9 | ~15 | ~11 |
-| Blue | ~28 | ~38 | ~53 | ~35 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>Orange</td><td>~3</td><td>~4</td><td>~7</td><td>~4</td></tr><tr><td>Green</td><td>~4</td><td>~9</td><td>~15</td><td>~11</td></tr><tr><td>Blue</td><td>~28</td><td>~38</td><td>~53</td><td>~35</td></tr></table>
 
 (a)
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Orange | ~0.594 | ~0.612 | ~0.639 |
-| Green | ~0.635 | ~0.658 | ~0.679 |
-| Blue | ~0.630 | ~0.650 | ~0.678 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Orange</td><td>~0.594</td><td>~0.612</td><td>~0.639</td></tr><tr><td>Green</td><td>~0.635</td><td>~0.658</td><td>~0.679</td></tr><tr><td>Blue</td><td>~0.630</td><td>~0.650</td><td>~0.678</td></tr></table>
 
 (b)
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Orange | ~0.776 | ~0.780 | ~0.784 |
-| Green | ~0.771 | ~0.775 | ~0.779 |
-| Blue | ~0.746 | ~0.756 | ~0.767 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Orange</td><td>~0.776</td><td>~0.780</td><td>~0.784</td></tr><tr><td>Green</td><td>~0.771</td><td>~0.775</td><td>~0.779</td></tr><tr><td>Blue</td><td>~0.746</td><td>~0.756</td><td>~0.767</td></tr></table>
 
 (c)
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Orange | ~4.35 | ~4.55 | ~4.70 |
-| Green | ~4.80 | ~4.90 | ~5.00 |
-| Blue | ~5.45 | ~6.20 | ~7.00 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Orange</td><td>~4.35</td><td>~4.55</td><td>~4.70</td></tr><tr><td>Green</td><td>~4.80</td><td>~4.90</td><td>~5.00</td></tr><tr><td>Blue</td><td>~5.45</td><td>~6.20</td><td>~7.00</td></tr></table>
 
 (d)
 
@@ -757,26 +604,11 @@ Copyright of Diversity ( 1 4242 8 1 8) is the property of MDPI and its content m
 
 **Figure S1.** Diversity expressed as the effective number of ant species in the six tropical dry forest sampling sites. The bars indicate the confidence intervals (CI) of each of the measurements. N1a: Distrito Regional de Manejo Integrado Luriza; N1b: Distrito Regional de Manejo integrado “Palmar del Titi”; N2a: Santuario de Flora y Fauna Los Colorados; N2b: Parcela Brasilar Bosque Seco Tropical; N3a: Reserva Natural de la Sociedad Civil "CARACOLÍ"; N3b: Reserva Protectora de Coraza y Montes de María.
 
-| Category | Mean Riqueza | Error Range |
-| --- | --- | --- |
-| N1a | ~64 | 55~73 |
-| N1b | ~57 | 45~69 |
-| N2a | ~74 | 63~85 |
-| N2b | ~89 | 79~99 |
-| N3a | ~92 | 79~105 |
-| N3b | ~85 | 72~98 |
+<table><tr><td>Category</td><td>Mean Riqueza</td><td>Error Range</td></tr><tr><td>N1a</td><td>~64</td><td>55~73</td></tr><tr><td>N1b</td><td>~57</td><td>45~69</td></tr><tr><td>N2a</td><td>~74</td><td>63~85</td></tr><tr><td>N2b</td><td>~89</td><td>79~99</td></tr><tr><td>N3a</td><td>~92</td><td>79~105</td></tr><tr><td>N3b</td><td>~85</td><td>72~98</td></tr></table>
 
 <!-- page 2 of 15 -->
 
-| Region | Value |
-| --- | --- |
-| N1 | 7 |
-| N2 | 14 |
-| N3 | 23 |
-| N1 & N2 | 7 |
-| N1 & N3 | 9 |
-| N2 & N3 | 34 |
-| N1 & N2 & N3 | 52 |
+<table><tr><td>Region</td><td>Value</td></tr><tr><td>N1</td><td>7</td></tr><tr><td>N2</td><td>14</td></tr><tr><td>N3</td><td>23</td></tr><tr><td>N1 &amp; N2</td><td>7</td></tr><tr><td>N1 &amp; N3</td><td>9</td></tr><tr><td>N2 &amp; N3</td><td>34</td></tr><tr><td>N1 &amp; N2 &amp; N3</td><td>52</td></tr></table>
 
 Figure S2. Ant species richness among the TDF fragments studied.
 
@@ -794,161 +626,35 @@ Table S2. Number of individuals measured (N). means and standard deviation (SD) 
 
 <!-- page 5 of 15 -->
 
-| Camponotus sp. 7 | 1 | 1.486 | - | 1.255 | - | 1.08 | - | 0.53 | - | 0.287 | - | 2 | - | 1.524 | - | 1.813 | - |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Camponotus striatus | 1 | 0.739 | - | 0.696 | - | 0.326 | - | 0.761 | - | 0.217 | - | 0.565 | - | 0.717 | - | 0.978 | - |
-| Carebara audita | 4 | 0.348 | 0.001 | 0.287 | 0.006 | 0.199 | 0.097 | 0.154 | 0.028 | 0.022 | 0 | 0.219 | 0.059 | 0.176 | 0.004 | 0.284 | 0.002 |
-| Carebara brevipilosa | 8 | 0.44 | 0.026 | 0.421 | 0.016 | 0.277 | 0.021 | 0.307 | 0.014 | 0.011 | 0 | 0.405 | 0.021 | 0.326 | 0.018 | 0.497 | 0.019 |
-| Carebara globularia | 8 | 0.303 | 0.005 | 0.236 | 0.012 | 0.185 | 0.041 | 0.148 | 0.007 | 0.014 | 0.016 | 0.072 | 0.079 | 0.134 | 0.014 | 0.279 | 0.011 |
-| Carebara striata | 4 | 0.348 | 0 | 0.304 | 0 | 0.145 | 0.013 | 0.188 | 0.013 | 0.022 | 0 | 0.279 | 0.017 | 0.17 | 0.006 | 0.326 | 0.022 |
-| Carebara urichi | 1 | 0.464 | - | 0.445 | - | 0.432 | - | 0.297 | - | 0.002 | - | 0.321 | - | 0.342 | - | 0.517 | - |
-| Cephalotes atratus | 1 | 2.461 | - | 3.341 | - | 3.11 | - | 0.68 | - | 0.7 | - | 0.987 | - | 3.425 | - | 3.343 | - |
-| Cephalotes columbicus | 1 | 1.313 | - | 1.455 | - | 1.455 | - | 0.178 | - | 0.36 | - | 0.53 | - | 0.78 | - | 1.135 | - |
-| Cephalotes complanatus | 1 | 1.61 | - | 2.16 | - | 1.9 | - | 0.255 | - | 0.508 | - | 0.435 | - | 1.4 | - | 1.9 | - |
-| Cephalotes porrasi | 1 | 1.087 | - | 1.217 | - | 0.326 | - | 0.522 | - | 0.239 | - | 0.978 | - | 0.63 | - | 1.109 | - |
-| Crematogaster brasiliensis | 8 | 0.675 | 0.004 | 0.698 | 0.006 | 0.542 | 0.13 | 0.433 | 0.161 | 0.154 | 0.006 | 0.661 | 0.035 | 1.001 | 0.012 | 0.806 | 0.008 |
-| Crematogaster carinata | 1 | 0.671 | - | 0.665 | - | 0.586 | - | 0.326 | - | 0.15 | - | 0.645 | - | 0.778 | - | 0.775 | - |
-| Crematogaster erecta | 4 | 0.541 | 0.004 | 0.587 | 0 | 0.412 | 0.152 | 0.356 | 0.081 | 0.13 | 0.001 | 0.466 | 0.079 | 0.543 | 0 | 0.582 | 0.006 |
-| Crematogaster flavosensitiva | 4 | 0.577 | 0.018 | 0.523 | 0.007 | 0.372 | 0.094 | 0.408 | 0.133 | 0.156 | 0.012 | 0.477 | 0.038 | 0.566 | 0.032 | 0.594 | 0.013 |
-| Crematogaster limata | 12 | 0.707 | 0.095 | 0.708 | 0.082 | 0.446 | 0.12 | 0.58 | 0.226 | 0.168 | 0.037 | 0.648 | 0.072 | 0.811 | 0.107 | 0.83 | 0.129 |
-| Crematogaster nigropilosa | 8 | 0.659 | 0.037 | 0.65 | 0.026 | 0.489 | 0.126 | 0.509 | 0.162 | 0.159 | 0.017 | 0.667 | 0.082 | 0.778 | 0.012 | 0.768 | 0.014 |
+<table><tr><td>Camponotus sp. 7</td><td>1</td><td>1.486</td><td>-</td><td>1.255</td><td>-</td><td>1.08</td><td>-</td><td>0.53</td><td>-</td><td>0.287</td><td>-</td><td>2</td><td>-</td><td>1.524</td><td>-</td><td>1.813</td><td>-</td></tr><tr><td>Camponotus striatus</td><td>1</td><td>0.739</td><td>-</td><td>0.696</td><td>-</td><td>0.326</td><td>-</td><td>0.761</td><td>-</td><td>0.217</td><td>-</td><td>0.565</td><td>-</td><td>0.717</td><td>-</td><td>0.978</td><td>-</td></tr><tr><td>Carebara audita</td><td>4</td><td>0.348</td><td>0.001</td><td>0.287</td><td>0.006</td><td>0.199</td><td>0.097</td><td>0.154</td><td>0.028</td><td>0.022</td><td>0</td><td>0.219</td><td>0.059</td><td>0.176</td><td>0.004</td><td>0.284</td><td>0.002</td></tr><tr><td>Carebara brevipilosa</td><td>8</td><td>0.44</td><td>0.026</td><td>0.421</td><td>0.016</td><td>0.277</td><td>0.021</td><td>0.307</td><td>0.014</td><td>0.011</td><td>0</td><td>0.405</td><td>0.021</td><td>0.326</td><td>0.018</td><td>0.497</td><td>0.019</td></tr><tr><td>Carebara globularia</td><td>8</td><td>0.303</td><td>0.005</td><td>0.236</td><td>0.012</td><td>0.185</td><td>0.041</td><td>0.148</td><td>0.007</td><td>0.014</td><td>0.016</td><td>0.072</td><td>0.079</td><td>0.134</td><td>0.014</td><td>0.279</td><td>0.011</td></tr><tr><td>Carebara striata</td><td>4</td><td>0.348</td><td>0</td><td>0.304</td><td>0</td><td>0.145</td><td>0.013</td><td>0.188</td><td>0.013</td><td>0.022</td><td>0</td><td>0.279</td><td>0.017</td><td>0.17</td><td>0.006</td><td>0.326</td><td>0.022</td></tr><tr><td>Carebara urichi</td><td>1</td><td>0.464</td><td>-</td><td>0.445</td><td>-</td><td>0.432</td><td>-</td><td>0.297</td><td>-</td><td>0.002</td><td>-</td><td>0.321</td><td>-</td><td>0.342</td><td>-</td><td>0.517</td><td>-</td></tr><tr><td>Cephalotes atratus</td><td>1</td><td>2.461</td><td>-</td><td>3.341</td><td>-</td><td>3.11</td><td>-</td><td>0.68</td><td>-</td><td>0.7</td><td>-</td><td>0.987</td><td>-</td><td>3.425</td><td>-</td><td>3.343</td><td>-</td></tr><tr><td>Cephalotes columbicus</td><td>1</td><td>1.313</td><td>-</td><td>1.455</td><td>-</td><td>1.455</td><td>-</td><td>0.178</td><td>-</td><td>0.36</td><td>-</td><td>0.53</td><td>-</td><td>0.78</td><td>-</td><td>1.135</td><td>-</td></tr><tr><td>Cephalotes complanatus</td><td>1</td><td>1.61</td><td>-</td><td>2.16</td><td>-</td><td>1.9</td><td>-</td><td>0.255</td><td>-</td><td>0.508</td><td>-</td><td>0.435</td><td>-</td><td>1.4</td><td>-</td><td>1.9</td><td>-</td></tr><tr><td>Cephalotes porrasi</td><td>1</td><td>1.087</td><td>-</td><td>1.217</td><td>-</td><td>0.326</td><td>-</td><td>0.522</td><td>-</td><td>0.239</td><td>-</td><td>0.978</td><td>-</td><td>0.63</td><td>-</td><td>1.109</td><td>-</td></tr><tr><td>Crematogaster brasiliensis</td><td>8</td><td>0.675</td><td>0.004</td><td>0.698</td><td>0.006</td><td>0.542</td><td>0.13</td><td>0.433</td><td>0.161</td><td>0.154</td><td>0.006</td><td>0.661</td><td>0.035</td><td>1.001</td><td>0.012</td><td>0.806</td><td>0.008</td></tr><tr><td>Crematogaster carinata</td><td>1</td><td>0.671</td><td>-</td><td>0.665</td><td>-</td><td>0.586</td><td>-</td><td>0.326</td><td>-</td><td>0.15</td><td>-</td><td>0.645</td><td>-</td><td>0.778</td><td>-</td><td>0.775</td><td>-</td></tr><tr><td>Crematogaster erecta</td><td>4</td><td>0.541</td><td>0.004</td><td>0.587</td><td>0</td><td>0.412</td><td>0.152</td><td>0.356</td><td>0.081</td><td>0.13</td><td>0.001</td><td>0.466</td><td>0.079</td><td>0.543</td><td>0</td><td>0.582</td><td>0.006</td></tr><tr><td>Crematogaster flavosensitiva</td><td>4</td><td>0.577</td><td>0.018</td><td>0.523</td><td>0.007</td><td>0.372</td><td>0.094</td><td>0.408</td><td>0.133</td><td>0.156</td><td>0.012</td><td>0.477</td><td>0.038</td><td>0.566</td><td>0.032</td><td>0.594</td><td>0.013</td></tr><tr><td>Crematogaster limata</td><td>12</td><td>0.707</td><td>0.095</td><td>0.708</td><td>0.082</td><td>0.446</td><td>0.12</td><td>0.58</td><td>0.226</td><td>0.168</td><td>0.037</td><td>0.648</td><td>0.072</td><td>0.811</td><td>0.107</td><td>0.83</td><td>0.129</td></tr><tr><td>Crematogaster nigropilosa</td><td>8</td><td>0.659</td><td>0.037</td><td>0.65</td><td>0.026</td><td>0.489</td><td>0.126</td><td>0.509</td><td>0.162</td><td>0.159</td><td>0.017</td><td>0.667</td><td>0.082</td><td>0.778</td><td>0.012</td><td>0.768</td><td>0.014</td></tr></table>
 
 <!-- page 6 of 15 -->
 
-| Crematogaster obscurata | 4 | 0.56 | 0.015 | 0.538 | 0.023 | 0.415 | 0.077 | 0.242 | 0.126 | 0.144 | 0.013 | 0.436 | 0.053 | 0.464 | 0.022 | 0.554 | 0.031 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Crematogaster stollii | 1 | 0.957 | - | 1.087 | - | 0.543 | - | 0.652 | - | 0.217 | - | 1.022 | - | 0.804 | - | 1.152 | - |
-| Cyphomyrmex costatus | 12 | 0.545 | 0.034 | 0.455 | 0.044 | 0.395 | 0.027 | 0.225 | 0.045 | 0.104 | 0.009 | 0.322 | 0.011 | 0.527 | 0.085 | 0.667 | 0.022 |
-| Cyphomyrmex minutus | 12 | 0.605 | 0.037 | 0.569 | 0.032 | 0.286 | 0.088 | 0.416 | 0.097 | 0.123 | 0.011 | 0.426 | 0.03 | 0.593 | 0.045 | 0.746 | 0.032 |
-| Cyphomyrmex rimosus | 8 | 0.65 | 0.032 | 0.557 | 0.065 | 0.372 | 0.096 | 0.378 | 0.143 | 0.144 | 0.018 | 0.544 | 0.068 | 0.696 | 0.046 | 0.798 | 0.042 |
-| Cyphomyrmex sp. 4 | 4 | 0.587 | 0 | 0.552 | 0 | 0.428 | 0 | 0.251 | 0 | 0.112 | 0 | 0.445 | 0 | 0.534 | 0 | 0.715 | 0 |
-| Discothyrea humilis | 4 | 0.368 | 0.003 | 0.302 | 0.003 | 0.195 | 0.092 | 0.162 | 0.048 | 0.019 | 0.004 | 0.227 | 0.048 | 0.215 | 0.003 | 0.39 | 0.002 |
-| Discothyrea neotropica | 4 | 0.5 | 0 | 0.442 | 0.013 | 0.188 | 0.013 | 0.261 | 0.022 | 0.022 | 0 | 0.362 | 0.013 | 0.297 | 0.013 | 0.558 | 0.013 |
-| Discothyrea testacea | 4 | 0.453 | 0.006 | 0.41 | 0.005 | 0.272 | 0.077 | 0.228 | 0.019 | 0.019 | 0.005 | 0.32 | 0.086 | 0.235 | 0.008 | 0.453 | 0.007 |
-| Dolichoderus bispinosus | 1 | 1.655 | - | 1.724 | - | 0.828 | - | 1.517 | - | 0.345 | - | 1.034 | - | 1.862 | - | 2 | - |
-| Dolichoderus sp. 2 | 1 | 1.78 | - | 1.859 | - | 1.107 | - | 0.36 | - | 0.439 | - | 1.317 | - | 1.699 | - | 1.566 | - |
-| Ectatomma ruidum | 8 | 1.744 | 0.068 | 1.622 | 0.254 | 1.088 | 0.191 | 1.518 | 0.168 | 0.45 | 0.041 | 1.294 | 0.29 | 2.277 | 0.277 | 2.776 | 0.143 |
-| Ectatomma tuberculatum | 4 | 2.337 | 0.01 | 1.852 | 0.014 | 1.753 | 0.057 | 2.029 | 0.349 | 0.54 | 0.017 | 1.993 | 0.38 | 3.094 | 0.014 | 3.718 | 0.009 |
-| Eurhopalothrix pilulifera | 1 | 0.565 | - | 0.543 | - | 0.152 | - | 0.326 | - | 0.022 | - | 0.391 | - | 0.435 | - | 0.587 | - |
-| Gnamptogenys boliviensis | 4 | 0.688 | 0.007 | 0.671 | 0.004 | 0.619 | 0.047 | 0.541 | 0.035 | 0.105 | 0.005 | 0.543 | 0.094 | 0.54 | 0.003 | 1.086 | 0.001 |
-| Gnamptogenys sp. 2 | 4 | 0.7 | 0.006 | 0.547 | 0.015 | 0.542 | 0.001 | 0.319 | 0.027 | 0.051 | 0.001 | 0.359 | 0.011 | 0.458 | 0.037 | 0.888 | 0.017 |
-| Holcoponera strigata | 4 | 1.121 | 0.202 | 1.017 | 0.269 | 0.809 | 0.314 | 0.717 | 0.307 | 0.246 | 0.102 | 0.944 | 0.321 | 1.265 | 0.222 | 1.616 | 0.348 |
+<table><tr><td>Crematogaster obscurata</td><td>4</td><td>0.56</td><td>0.015</td><td>0.538</td><td>0.023</td><td>0.415</td><td>0.077</td><td>0.242</td><td>0.126</td><td>0.144</td><td>0.013</td><td>0.436</td><td>0.053</td><td>0.464</td><td>0.022</td><td>0.554</td><td>0.031</td></tr><tr><td>Crematogaster stollii</td><td>1</td><td>0.957</td><td>-</td><td>1.087</td><td>-</td><td>0.543</td><td>-</td><td>0.652</td><td>-</td><td>0.217</td><td>-</td><td>1.022</td><td>-</td><td>0.804</td><td>-</td><td>1.152</td><td>-</td></tr><tr><td>Cyphomyrmex costatus</td><td>12</td><td>0.545</td><td>0.034</td><td>0.455</td><td>0.044</td><td>0.395</td><td>0.027</td><td>0.225</td><td>0.045</td><td>0.104</td><td>0.009</td><td>0.322</td><td>0.011</td><td>0.527</td><td>0.085</td><td>0.667</td><td>0.022</td></tr><tr><td>Cyphomyrmex minutus</td><td>12</td><td>0.605</td><td>0.037</td><td>0.569</td><td>0.032</td><td>0.286</td><td>0.088</td><td>0.416</td><td>0.097</td><td>0.123</td><td>0.011</td><td>0.426</td><td>0.03</td><td>0.593</td><td>0.045</td><td>0.746</td><td>0.032</td></tr><tr><td>Cyphomyrmex rimosus</td><td>8</td><td>0.65</td><td>0.032</td><td>0.557</td><td>0.065</td><td>0.372</td><td>0.096</td><td>0.378</td><td>0.143</td><td>0.144</td><td>0.018</td><td>0.544</td><td>0.068</td><td>0.696</td><td>0.046</td><td>0.798</td><td>0.042</td></tr><tr><td>Cyphomyrmex sp. 4</td><td>4</td><td>0.587</td><td>0</td><td>0.552</td><td>0</td><td>0.428</td><td>0</td><td>0.251</td><td>0</td><td>0.112</td><td>0</td><td>0.445</td><td>0</td><td>0.534</td><td>0</td><td>0.715</td><td>0</td></tr><tr><td>Discothyrea humilis</td><td>4</td><td>0.368</td><td>0.003</td><td>0.302</td><td>0.003</td><td>0.195</td><td>0.092</td><td>0.162</td><td>0.048</td><td>0.019</td><td>0.004</td><td>0.227</td><td>0.048</td><td>0.215</td><td>0.003</td><td>0.39</td><td>0.002</td></tr><tr><td>Discothyrea neotropica</td><td>4</td><td>0.5</td><td>0</td><td>0.442</td><td>0.013</td><td>0.188</td><td>0.013</td><td>0.261</td><td>0.022</td><td>0.022</td><td>0</td><td>0.362</td><td>0.013</td><td>0.297</td><td>0.013</td><td>0.558</td><td>0.013</td></tr><tr><td>Discothyrea testacea</td><td>4</td><td>0.453</td><td>0.006</td><td>0.41</td><td>0.005</td><td>0.272</td><td>0.077</td><td>0.228</td><td>0.019</td><td>0.019</td><td>0.005</td><td>0.32</td><td>0.086</td><td>0.235</td><td>0.008</td><td>0.453</td><td>0.007</td></tr><tr><td>Dolichoderus bispinosus</td><td>1</td><td>1.655</td><td>-</td><td>1.724</td><td>-</td><td>0.828</td><td>-</td><td>1.517</td><td>-</td><td>0.345</td><td>-</td><td>1.034</td><td>-</td><td>1.862</td><td>-</td><td>2</td><td>-</td></tr><tr><td>Dolichoderus sp. 2</td><td>1</td><td>1.78</td><td>-</td><td>1.859</td><td>-</td><td>1.107</td><td>-</td><td>0.36</td><td>-</td><td>0.439</td><td>-</td><td>1.317</td><td>-</td><td>1.699</td><td>-</td><td>1.566</td><td>-</td></tr><tr><td>Ectatomma ruidum</td><td>8</td><td>1.744</td><td>0.068</td><td>1.622</td><td>0.254</td><td>1.088</td><td>0.191</td><td>1.518</td><td>0.168</td><td>0.45</td><td>0.041</td><td>1.294</td><td>0.29</td><td>2.277</td><td>0.277</td><td>2.776</td><td>0.143</td></tr><tr><td>Ectatomma tuberculatum</td><td>4</td><td>2.337</td><td>0.01</td><td>1.852</td><td>0.014</td><td>1.753</td><td>0.057</td><td>2.029</td><td>0.349</td><td>0.54</td><td>0.017</td><td>1.993</td><td>0.38</td><td>3.094</td><td>0.014</td><td>3.718</td><td>0.009</td></tr><tr><td>Eurhopalothrix pilulifera</td><td>1</td><td>0.565</td><td>-</td><td>0.543</td><td>-</td><td>0.152</td><td>-</td><td>0.326</td><td>-</td><td>0.022</td><td>-</td><td>0.391</td><td>-</td><td>0.435</td><td>-</td><td>0.587</td><td>-</td></tr><tr><td>Gnamptogenys boliviensis</td><td>4</td><td>0.688</td><td>0.007</td><td>0.671</td><td>0.004</td><td>0.619</td><td>0.047</td><td>0.541</td><td>0.035</td><td>0.105</td><td>0.005</td><td>0.543</td><td>0.094</td><td>0.54</td><td>0.003</td><td>1.086</td><td>0.001</td></tr><tr><td>Gnamptogenys sp. 2</td><td>4</td><td>0.7</td><td>0.006</td><td>0.547</td><td>0.015</td><td>0.542</td><td>0.001</td><td>0.319</td><td>0.027</td><td>0.051</td><td>0.001</td><td>0.359</td><td>0.011</td><td>0.458</td><td>0.037</td><td>0.888</td><td>0.017</td></tr><tr><td>Holcoponera strigata</td><td>4</td><td>1.121</td><td>0.202</td><td>1.017</td><td>0.269</td><td>0.809</td><td>0.314</td><td>0.717</td><td>0.307</td><td>0.246</td><td>0.102</td><td>0.944</td><td>0.321</td><td>1.265</td><td>0.222</td><td>1.616</td><td>0.348</td></tr></table>
 
 <!-- page 7 of 15 -->
 
-| Hylomyrmacolumbica | 4 | 0.891 | - | 0.87 | - | 0.609 | - | 0.63 | - | 0.217 | - | 0.783 | - | 0.804 | - | 1.174 | - |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Hypoponera opacior | 12 | 0.722 | 0.046 | 0.614 | 0.054 | 0.419 | 0.122 | 0.501 | 0.135 | 0.04 | 0.008 | 0.559 | 0.059 | 0.636 | 0.091 | 1.048 | 0.107 |
-| Hypoponera trigona | 12 | 0.638 | 0.01 | 0.506 | 0.007 | 0.443 | 0.009 | 0.268 | 0.008 | 0.03 | 0.005 | 0.443 | 0.01 | 0.662 | 0.01 | 0.83 | 0.006 |
-| Labidus coecus | 3 | 0.947 | 0.089 | 0.888 | 0.135 | 0.675 | 0.154 | 0.624 | 0.061 | 0.037 | 0.012 | 0.752 | 0.085 | 1.073 | 0.125 | 1.289 | 0.148 |
-| Labidus predator | 8 | 1.439 | 0.01 | 1.309 | 0.008 | 1.027 | 0.015 | 1.044 | 0.053 | 0.043 | 0.007 | 1.136 | 0.057 | 2.072 | 0.009 | 2.07 | 0.01 |
-| Lachnomyrmexscrobiculatus | 1 | 0.739 | - | 0.739 | - | 0.37 | - | 0.457 | - | 0.152 | - | 0.652 | - | 0.63 | - | 0.87 | - |
-| Leptogenys ritae | 12 | 0.769 | 0.027 | 0.539 | 0.021 | 0.411 | 0.069 | 0.569 | 0.111 | 0.099 | 0.014 | 0.536 | 0.071 | 0.639 | 0.035 | 1.106 | 0.06 |
-| Mayaponera arhuaca | 8 | 1.247 | 0.084 | 1.127 | 0.035 | 0.898 | 0.101 | 0.963 | 0.065 | 0.159 | 0.022 | 1.004 | 0.047 | 1.183 | 0.035 | 1.814 | 0.079 |
-| Mayaponeraconstricta | 8 | 1.55 | 0.014 | 1.265 | 0.075 | 1.061 | 0.102 | 1.436 | 0.256 | 0.291 | 0.008 | 1.164 | 0.343 | 1.838 | 0.047 | 2.508 | 0.075 |
-| Megalomyrmexdrifti | 4 | 0.567 | 0.057 | 0.453 | 0.041 | 0.319 | 0.054 | 0.334 | 0.156 | 0.132 | 0.02 | 0.366 | 0.059 | 0.463 | 0.051 | 0.69 | 0.118 |
-| Megalomyrmexincisus | 4 | 0.696 | 0 | 0.598 | 0.015 | 0.402 | 0.015 | 0.598 | 0.015 | 0.196 | 0 | 0.5 | 0.031 | 0.772 | 0.046 | 0.935 | 0.031 |
-| Megalomyrmexlonginoi | 4 | 0.582 | 0.007 | 0.475 | 0.005 | 0.322 | 0.036 | 0.55 | 0.298 | 0.181 | 0.005 | 0.531 | 0.32 | 0.738 | 0.002 | 0.802 | 0.004 |
-| Megalomyrmexsilvestrii | 8 | 0.767 | 0.022 | 0.596 | 0.037 | 0.423 | 0.026 | 0.848 | 0.262 | 0.209 | 0.01 | 0.571 | 0.233 | 1.001 | 0.024 | 1.162 | 0.02 |
-| Monomoriumfloricola | 3 | 0.42 | 0.048 | 0.337 | 0.03 | 0.232 | 0.058 | 0.263 | 0.101 | 0.073 | 0.013 | 0.312 | 0.026 | 0.285 | 0.059 | 0.451 | 0.04 |
-| Mycetomoelleriussp. 1 | 1 | 0.602 | - | 0.605 | - | 0.556 | - | 0.432 | - | 0.102 | - | 0.469 | - | 0.581 | - | 0.821 | - |
-| Mycocepuruscurvispinosus | 4 | 0.645 | 0.021 | 0.614 | 0.01 | 0.523 | 0.093 | 0.47 | 0.021 | 0.109 | 0.007 | 0.531 | 0.042 | 0.562 | 0.012 | 0.824 | 0.012 |
+<table><tr><td>Hylomyrmacolumbica</td><td>4</td><td>0.891</td><td>-</td><td>0.87</td><td>-</td><td>0.609</td><td>-</td><td>0.63</td><td>-</td><td>0.217</td><td>-</td><td>0.783</td><td>-</td><td>0.804</td><td>-</td><td>1.174</td><td>-</td></tr><tr><td>Hypoponera opacior</td><td>12</td><td>0.722</td><td>0.046</td><td>0.614</td><td>0.054</td><td>0.419</td><td>0.122</td><td>0.501</td><td>0.135</td><td>0.04</td><td>0.008</td><td>0.559</td><td>0.059</td><td>0.636</td><td>0.091</td><td>1.048</td><td>0.107</td></tr><tr><td>Hypoponera trigona</td><td>12</td><td>0.638</td><td>0.01</td><td>0.506</td><td>0.007</td><td>0.443</td><td>0.009</td><td>0.268</td><td>0.008</td><td>0.03</td><td>0.005</td><td>0.443</td><td>0.01</td><td>0.662</td><td>0.01</td><td>0.83</td><td>0.006</td></tr><tr><td>Labidus coecus</td><td>3</td><td>0.947</td><td>0.089</td><td>0.888</td><td>0.135</td><td>0.675</td><td>0.154</td><td>0.624</td><td>0.061</td><td>0.037</td><td>0.012</td><td>0.752</td><td>0.085</td><td>1.073</td><td>0.125</td><td>1.289</td><td>0.148</td></tr><tr><td>Labidus predator</td><td>8</td><td>1.439</td><td>0.01</td><td>1.309</td><td>0.008</td><td>1.027</td><td>0.015</td><td>1.044</td><td>0.053</td><td>0.043</td><td>0.007</td><td>1.136</td><td>0.057</td><td>2.072</td><td>0.009</td><td>2.07</td><td>0.01</td></tr><tr><td>Lachnomyrmexscrobiculatus</td><td>1</td><td>0.739</td><td>-</td><td>0.739</td><td>-</td><td>0.37</td><td>-</td><td>0.457</td><td>-</td><td>0.152</td><td>-</td><td>0.652</td><td>-</td><td>0.63</td><td>-</td><td>0.87</td><td>-</td></tr><tr><td>Leptogenys ritae</td><td>12</td><td>0.769</td><td>0.027</td><td>0.539</td><td>0.021</td><td>0.411</td><td>0.069</td><td>0.569</td><td>0.111</td><td>0.099</td><td>0.014</td><td>0.536</td><td>0.071</td><td>0.639</td><td>0.035</td><td>1.106</td><td>0.06</td></tr><tr><td>Mayaponera arhuaca</td><td>8</td><td>1.247</td><td>0.084</td><td>1.127</td><td>0.035</td><td>0.898</td><td>0.101</td><td>0.963</td><td>0.065</td><td>0.159</td><td>0.022</td><td>1.004</td><td>0.047</td><td>1.183</td><td>0.035</td><td>1.814</td><td>0.079</td></tr><tr><td>Mayaponeraconstricta</td><td>8</td><td>1.55</td><td>0.014</td><td>1.265</td><td>0.075</td><td>1.061</td><td>0.102</td><td>1.436</td><td>0.256</td><td>0.291</td><td>0.008</td><td>1.164</td><td>0.343</td><td>1.838</td><td>0.047</td><td>2.508</td><td>0.075</td></tr><tr><td>Megalomyrmexdrifti</td><td>4</td><td>0.567</td><td>0.057</td><td>0.453</td><td>0.041</td><td>0.319</td><td>0.054</td><td>0.334</td><td>0.156</td><td>0.132</td><td>0.02</td><td>0.366</td><td>0.059</td><td>0.463</td><td>0.051</td><td>0.69</td><td>0.118</td></tr><tr><td>Megalomyrmexincisus</td><td>4</td><td>0.696</td><td>0</td><td>0.598</td><td>0.015</td><td>0.402</td><td>0.015</td><td>0.598</td><td>0.015</td><td>0.196</td><td>0</td><td>0.5</td><td>0.031</td><td>0.772</td><td>0.046</td><td>0.935</td><td>0.031</td></tr><tr><td>Megalomyrmexlonginoi</td><td>4</td><td>0.582</td><td>0.007</td><td>0.475</td><td>0.005</td><td>0.322</td><td>0.036</td><td>0.55</td><td>0.298</td><td>0.181</td><td>0.005</td><td>0.531</td><td>0.32</td><td>0.738</td><td>0.002</td><td>0.802</td><td>0.004</td></tr><tr><td>Megalomyrmexsilvestrii</td><td>8</td><td>0.767</td><td>0.022</td><td>0.596</td><td>0.037</td><td>0.423</td><td>0.026</td><td>0.848</td><td>0.262</td><td>0.209</td><td>0.01</td><td>0.571</td><td>0.233</td><td>1.001</td><td>0.024</td><td>1.162</td><td>0.02</td></tr><tr><td>Monomoriumfloricola</td><td>3</td><td>0.42</td><td>0.048</td><td>0.337</td><td>0.03</td><td>0.232</td><td>0.058</td><td>0.263</td><td>0.101</td><td>0.073</td><td>0.013</td><td>0.312</td><td>0.026</td><td>0.285</td><td>0.059</td><td>0.451</td><td>0.04</td></tr><tr><td>Mycetomoelleriussp. 1</td><td>1</td><td>0.602</td><td>-</td><td>0.605</td><td>-</td><td>0.556</td><td>-</td><td>0.432</td><td>-</td><td>0.102</td><td>-</td><td>0.469</td><td>-</td><td>0.581</td><td>-</td><td>0.821</td><td>-</td></tr><tr><td>Mycocepuruscurvispinosus</td><td>4</td><td>0.645</td><td>0.021</td><td>0.614</td><td>0.01</td><td>0.523</td><td>0.093</td><td>0.47</td><td>0.021</td><td>0.109</td><td>0.007</td><td>0.531</td><td>0.042</td><td>0.562</td><td>0.012</td><td>0.824</td><td>0.012</td></tr></table>
 
 <!-- page 8 of 15 -->
 
-| Myrmicocrypta sp. 2 | 1 | 0.761 | - | 0.63 | - | 0.413 | - | 0.63 | - | 0.065 | - | 0.587 | - | 0.696 | - | 0.913 | - |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Myrmicocrypta urichi | 8 | 0.693 | 0.017 | 0.553 | 0.013 | 0.371 | 0.037 | 0.517 | 0.134 | 0.097 | 0.011 | 0.517 | 0.091 | 0.722 | 0.042 | 0.865 | 0.031 |
-| Neoponera apicalis | 3 | 2.486 | 0.004 | 2.139 | 0.002 | 1.763 | 0.432 | 2.418 | 0.482 | 0.828 | 0 | 2.105 | 0.928 | 3.659 | 0.006 | 4.209 | 0.004 |
-| Neoponera carinulata | 4 | 1.499 | 0.016 | 1.383 | 0.006 | 1.092 | 0.025 | 1.293 | 0.148 | 0.448 | 0.03 | 1.159 | 0.199 | 1.638 | 0.017 | 2.293 | 0.016 |
-| Neoponera verenae | 1 | 2.463 | - | 2.119 | - | 1.413 | - | 2.044 | - | 0.818 | - | 2.729 | - | 3.631 | - | 4.176 | - |
-| Nesomyrmex sp. 1 | 1 | 0.866 | - | 0.778 | - | 0.685 | - | 0.228 | - | 0.187 | - | 0.434 | - | 0.67 | - | 0.907 | - |
-| Nomamyrmex esenbeckii | 1 | 1.437 | - | 1.333 | - | 1.022 | - | 0.462 | - | 0.083 | - | 0.797 | - | 1.531 | - | 2.054 | - |
-| Nylanderia guatemalensis | 12 | 0.609 | 0.028 | 0.501 | 0.026 | 0.311 | 0.026 | 0.576 | 0.26 | 0.147 | 0.013 | 0.381 | 0.128 | 0.708 | 0.043 | 0.771 | 0.061 |
-| Octostruma amrishi | 12 | 0.525 | 0.034 | 0.559 | 0.045 | 0.245 | 0.14 | 0.248 | 0.061 | 0.046 | 0.008 | 0.433 | 0.109 | 0.381 | 0.051 | 0.573 | 0.08 |
-| Octostruma iheringi | 4 | 0.589 | 0.004 | 0.653 | 0.008 | 0.541 | 0.008 | 0.176 | 0.006 | 0.065 | 0.008 | 0.326 | 0.006 | 0.433 | 0.005 | 0.739 | 0.006 |
-| Odontomachus bauri | 4 | 2.472 | 0.029 | 1.809 | 0.192 | 1.395 | 0.107 | 1.598 | 0.723 | 0.441 | 0.058 | 2.225 | 0.308 | 2.628 | 0.148 | 2.555 | 0.382 |
-| Odontomachus brunneus | 4 | 2.114 | 0.055 | 1.612 | 0.045 | 1.192 | 0.004 | 1.236 | 0.417 | 0.289 | 0.028 | 1.52 | 0.199 | 1.99 | 0.023 | 2.073 | 0.236 |
-| Odontomachus laticeps | 4 | 2.446 | 0.013 | 1.717 | 0.008 | 1.326 | 0.006 | 1.262 | 0.014 | 0.402 | 0.007 | 2.35 | 0.009 | 2.544 | 0.007 | 2.369 | 0.004 |
-| Odontomachus opaciventris | 12 | 2.767 | 0.43 | 2.144 | 0.274 | 1.668 | 0.216 | 2.399 | 0.733 | 0.504 | 0.084 | 2.05 | 0.572 | 2.965 | 0.4 | 3.38 | 0.412 |
-| Pachycondyla harpax | 12 | 1.928 | 0.101 | 1.828 | 0.105 | 1.412 | 0.274 | 1.344 | 0.225 | 0.394 | 0.065 | 1.501 | 0.09 | 1.757 | 0.167 | 2.926 | 0.229 |
-| Pachycondyla Impressa | 8 | 2.991 | 0.055 | 2.843 | 0.067 | 1.981 | 0.211 | 2.141 | 0.342 | 0.543 | 0.03 | 2.245 | 0.099 | 2.796 | 0.083 | 4.107 | 0.055 |
-| Paratrachymyrmex bugnioni | 8 | 0.777 | 0.076 | 0.735 | 0.075 | 0.491 | 0.047 | 0.56 | 0.17 | 0.128 | 0.011 | 0.652 | 0.1 | 0.911 | 0.135 | 1.08 | 0.125 |
+<table><tr><td>Myrmicocrypta sp. 2</td><td>1</td><td>0.761</td><td>-</td><td>0.63</td><td>-</td><td>0.413</td><td>-</td><td>0.63</td><td>-</td><td>0.065</td><td>-</td><td>0.587</td><td>-</td><td>0.696</td><td>-</td><td>0.913</td><td>-</td></tr><tr><td>Myrmicocrypta urichi</td><td>8</td><td>0.693</td><td>0.017</td><td>0.553</td><td>0.013</td><td>0.371</td><td>0.037</td><td>0.517</td><td>0.134</td><td>0.097</td><td>0.011</td><td>0.517</td><td>0.091</td><td>0.722</td><td>0.042</td><td>0.865</td><td>0.031</td></tr><tr><td>Neoponera apicalis</td><td>3</td><td>2.486</td><td>0.004</td><td>2.139</td><td>0.002</td><td>1.763</td><td>0.432</td><td>2.418</td><td>0.482</td><td>0.828</td><td>0</td><td>2.105</td><td>0.928</td><td>3.659</td><td>0.006</td><td>4.209</td><td>0.004</td></tr><tr><td>Neoponera carinulata</td><td>4</td><td>1.499</td><td>0.016</td><td>1.383</td><td>0.006</td><td>1.092</td><td>0.025</td><td>1.293</td><td>0.148</td><td>0.448</td><td>0.03</td><td>1.159</td><td>0.199</td><td>1.638</td><td>0.017</td><td>2.293</td><td>0.016</td></tr><tr><td>Neoponera verenae</td><td>1</td><td>2.463</td><td>-</td><td>2.119</td><td>-</td><td>1.413</td><td>-</td><td>2.044</td><td>-</td><td>0.818</td><td>-</td><td>2.729</td><td>-</td><td>3.631</td><td>-</td><td>4.176</td><td>-</td></tr><tr><td>Nesomyrmex sp. 1</td><td>1</td><td>0.866</td><td>-</td><td>0.778</td><td>-</td><td>0.685</td><td>-</td><td>0.228</td><td>-</td><td>0.187</td><td>-</td><td>0.434</td><td>-</td><td>0.67</td><td>-</td><td>0.907</td><td>-</td></tr><tr><td>Nomamyrmex esenbeckii</td><td>1</td><td>1.437</td><td>-</td><td>1.333</td><td>-</td><td>1.022</td><td>-</td><td>0.462</td><td>-</td><td>0.083</td><td>-</td><td>0.797</td><td>-</td><td>1.531</td><td>-</td><td>2.054</td><td>-</td></tr><tr><td>Nylanderia guatemalensis</td><td>12</td><td>0.609</td><td>0.028</td><td>0.501</td><td>0.026</td><td>0.311</td><td>0.026</td><td>0.576</td><td>0.26</td><td>0.147</td><td>0.013</td><td>0.381</td><td>0.128</td><td>0.708</td><td>0.043</td><td>0.771</td><td>0.061</td></tr><tr><td>Octostruma amrishi</td><td>12</td><td>0.525</td><td>0.034</td><td>0.559</td><td>0.045</td><td>0.245</td><td>0.14</td><td>0.248</td><td>0.061</td><td>0.046</td><td>0.008</td><td>0.433</td><td>0.109</td><td>0.381</td><td>0.051</td><td>0.573</td><td>0.08</td></tr><tr><td>Octostruma iheringi</td><td>4</td><td>0.589</td><td>0.004</td><td>0.653</td><td>0.008</td><td>0.541</td><td>0.008</td><td>0.176</td><td>0.006</td><td>0.065</td><td>0.008</td><td>0.326</td><td>0.006</td><td>0.433</td><td>0.005</td><td>0.739</td><td>0.006</td></tr><tr><td>Odontomachus bauri</td><td>4</td><td>2.472</td><td>0.029</td><td>1.809</td><td>0.192</td><td>1.395</td><td>0.107</td><td>1.598</td><td>0.723</td><td>0.441</td><td>0.058</td><td>2.225</td><td>0.308</td><td>2.628</td><td>0.148</td><td>2.555</td><td>0.382</td></tr><tr><td>Odontomachus brunneus</td><td>4</td><td>2.114</td><td>0.055</td><td>1.612</td><td>0.045</td><td>1.192</td><td>0.004</td><td>1.236</td><td>0.417</td><td>0.289</td><td>0.028</td><td>1.52</td><td>0.199</td><td>1.99</td><td>0.023</td><td>2.073</td><td>0.236</td></tr><tr><td>Odontomachus laticeps</td><td>4</td><td>2.446</td><td>0.013</td><td>1.717</td><td>0.008</td><td>1.326</td><td>0.006</td><td>1.262</td><td>0.014</td><td>0.402</td><td>0.007</td><td>2.35</td><td>0.009</td><td>2.544</td><td>0.007</td><td>2.369</td><td>0.004</td></tr><tr><td>Odontomachus opaciventris</td><td>12</td><td>2.767</td><td>0.43</td><td>2.144</td><td>0.274</td><td>1.668</td><td>0.216</td><td>2.399</td><td>0.733</td><td>0.504</td><td>0.084</td><td>2.05</td><td>0.572</td><td>2.965</td><td>0.4</td><td>3.38</td><td>0.412</td></tr><tr><td>Pachycondyla harpax</td><td>12</td><td>1.928</td><td>0.101</td><td>1.828</td><td>0.105</td><td>1.412</td><td>0.274</td><td>1.344</td><td>0.225</td><td>0.394</td><td>0.065</td><td>1.501</td><td>0.09</td><td>1.757</td><td>0.167</td><td>2.926</td><td>0.229</td></tr><tr><td>Pachycondyla Impressa</td><td>8</td><td>2.991</td><td>0.055</td><td>2.843</td><td>0.067</td><td>1.981</td><td>0.211</td><td>2.141</td><td>0.342</td><td>0.543</td><td>0.03</td><td>2.245</td><td>0.099</td><td>2.796</td><td>0.083</td><td>4.107</td><td>0.055</td></tr><tr><td>Paratrachymyrmex bugnioni</td><td>8</td><td>0.777</td><td>0.076</td><td>0.735</td><td>0.075</td><td>0.491</td><td>0.047</td><td>0.56</td><td>0.17</td><td>0.128</td><td>0.011</td><td>0.652</td><td>0.1</td><td>0.911</td><td>0.135</td><td>1.08</td><td>0.125</td></tr></table>
 
 <!-- page 9 of 15 -->
 
-| Paratrachymyrmex cornetzi | 4 | 0.92 | 0.012 | 0.942 | 0.012 | 0.699 | 0.105 | 0.767 | 0.126 | 0.142 | 0.011 | 0.803 | 0.02 | 1.206 | 0.029 | 1.38 | 0.066 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Paratrachymyrmex irmgardae | 4 | 0.805 | 0.158 | 0.788 | 0.214 | 0.685 | 0.173 | 0.433 | 0.262 | 0.124 | 0.023 | 0.672 | 0.192 | 0.968 | 0.355 | 1.118 | 0.418 |
-| Pheidole biconstricta | 4 | 0.768 | 0.146 | 0.681 | 0.131 | 0.5 | 0.078 | 0.777 | 0.557 | 0.166 | 0.035 | 0.65 | 0.082 | 1.015 | 0.389 | 1.01 | 0.312 |
-| Pheidole distorta | 1 | 0.565 | - | 0.587 | - | 0.413 | - | 0.543 | - | 0.13 | - | 0.587 | - | 0.609 | - | 0.674 | - |
-| Pheidole fimbriata | 4 | 0.848 | 0 | 0.826 | 0.001 | 0.717 | 0.123 | 0.775 | 0.195 | 0.067 | 0.003 | 0.858 | 0.075 | 1.045 | 0.002 | 1.11 | 0.002 |
-| Pheidole flavens | 12 | 0.439 | 0.032 | 0.385 | 0.022 | 0.266 | 0.044 | 0.315 | 0.072 | 0.081 | 0.008 | 0.345 | 0.03 | 0.335 | 0.034 | 0.463 | 0.027 |
-| Pheidole mendicula | 12 | 0.392 | 0.021 | 0.384 | 0.019 | 0.272 | 0.069 | 0.283 | 0.05 | 0.079 | 0.01 | 0.349 | 0.025 | 0.298 | 0.013 | 0.419 | 0.013 |
-| Pheidole pugnax | 12 | 0.66 | 0.024 | 0.617 | 0.029 | 0.463 | 0.092 | 0.636 | 0.179 | 0.148 | 0.024 | 0.598 | 0.086 | 0.732 | 0.203 | 0.851 | 0.046 |
-| Pheidole sp. 1 | 12 | 0.663 | 0.014 | 0.634 | 0.006 | 0.549 | 0.009 | 0.265 | 0.019 | 0.108 | 0.002 | 0.578 | 0.008 | 0.806 | 0.013 | 0.786 | 0.009 |
-| Pheidole sp. 12 | 8 | 0.482 | 0.007 | 0.461 | 0.005 | 0.438 | 0.007 | 0.329 | 0.003 | 0.086 | 0.007 | 0.415 | 0.007 | 0.436 | 0.006 | 0.546 | 0.006 |
-| Pheidole sp. 13 | 8 | 0.482 | 0.007 | 0.418 | 0.009 | 0.395 | 0.007 | 0.267 | 0.008 | 0.091 | 0.007 | 0.396 | 0.005 | 0.396 | 0.006 | 0.507 | 0.007 |
-| Pheidole sp. 17 | 3 | 0.661 | 0.047 | 0.594 | 0.119 | 0.431 | 0.074 | 0.72 | 0.259 | 0.11 | 0.002 | 0.59 | 0.254 | 0.907 | 0.062 | 0.935 | 0.043 |
-| Pheidole sp. 18 | 3 | 0.478 | 0.031 | 0.435 | 0.031 | 0.272 | 0.015 | 0.522 | 0.061 | 0.087 | 0 | 0.391 | 0.031 | 0.511 | 0.046 | 0.576 | 0.015 |
-| Pheidole sp. 2 | 8 | 0.803 | 0.007 | 0.694 | 0.008 | 0.628 | 0.011 | 0.431 | 0.006 | 0.195 | 0.01 | 1.058 | 0.008 | 1.106 | 0.009 | 1.107 | 0.002 |
-| Pheidole sp. 4 | 8 | 0.494 | 0.021 | 0.442 | 0.013 | 0.307 | 0.044 | 0.446 | 0.107 | 0.099 | 0.011 | 0.436 | 0.065 | 0.507 | 0.044 | 0.594 | 0.018 |
-| Pheidole sp. 5 | 8 | 0.512 | 0.039 | 0.472 | 0.014 | 0.4 | 0.065 | 0.397 | 0.071 | 0.085 | 0.002 | 0.465 | 0.045 | 0.504 | 0.033 | 0.612 | 0.005 |
-| Pheidole sp. 9 | 8 | 0.55 | 0.004 | 0.516 | 0.005 | 0.448 | 0.008 | 0.336 | 0.005 | 0.119 | 0.006 | 0.424 | 0.007 | 0.47 | 0.005 | 0.596 | 0.006 |
-| Pheidole subarmata | 12 | 0.498 | 0.022 | 0.458 | 0.024 | 0.365 | 0.069 | 0.377 | 0.07 | 0.113 | 0.005 | 0.425 | 0.03 | 0.494 | 0.029 | 0.621 | 0.05 |
-| Pheidole susannae | 4 | 0.659 | 0.008 | 0.517 | 0.002 | 0.439 | 0.005 | 0.251 | 0.007 | 0.134 | 0.007 | 0.807 | 0.014 | 1.034 | 0.069 | 0.795 | 0.006 |
+<table><tr><td>Paratrachymyrmex cornetzi</td><td>4</td><td>0.92</td><td>0.012</td><td>0.942</td><td>0.012</td><td>0.699</td><td>0.105</td><td>0.767</td><td>0.126</td><td>0.142</td><td>0.011</td><td>0.803</td><td>0.02</td><td>1.206</td><td>0.029</td><td>1.38</td><td>0.066</td></tr><tr><td>Paratrachymyrmex irmgardae</td><td>4</td><td>0.805</td><td>0.158</td><td>0.788</td><td>0.214</td><td>0.685</td><td>0.173</td><td>0.433</td><td>0.262</td><td>0.124</td><td>0.023</td><td>0.672</td><td>0.192</td><td>0.968</td><td>0.355</td><td>1.118</td><td>0.418</td></tr><tr><td>Pheidole biconstricta</td><td>4</td><td>0.768</td><td>0.146</td><td>0.681</td><td>0.131</td><td>0.5</td><td>0.078</td><td>0.777</td><td>0.557</td><td>0.166</td><td>0.035</td><td>0.65</td><td>0.082</td><td>1.015</td><td>0.389</td><td>1.01</td><td>0.312</td></tr><tr><td>Pheidole distorta</td><td>1</td><td>0.565</td><td>-</td><td>0.587</td><td>-</td><td>0.413</td><td>-</td><td>0.543</td><td>-</td><td>0.13</td><td>-</td><td>0.587</td><td>-</td><td>0.609</td><td>-</td><td>0.674</td><td>-</td></tr><tr><td>Pheidole fimbriata</td><td>4</td><td>0.848</td><td>0</td><td>0.826</td><td>0.001</td><td>0.717</td><td>0.123</td><td>0.775</td><td>0.195</td><td>0.067</td><td>0.003</td><td>0.858</td><td>0.075</td><td>1.045</td><td>0.002</td><td>1.11</td><td>0.002</td></tr><tr><td>Pheidole flavens</td><td>12</td><td>0.439</td><td>0.032</td><td>0.385</td><td>0.022</td><td>0.266</td><td>0.044</td><td>0.315</td><td>0.072</td><td>0.081</td><td>0.008</td><td>0.345</td><td>0.03</td><td>0.335</td><td>0.034</td><td>0.463</td><td>0.027</td></tr><tr><td>Pheidole mendicula</td><td>12</td><td>0.392</td><td>0.021</td><td>0.384</td><td>0.019</td><td>0.272</td><td>0.069</td><td>0.283</td><td>0.05</td><td>0.079</td><td>0.01</td><td>0.349</td><td>0.025</td><td>0.298</td><td>0.013</td><td>0.419</td><td>0.013</td></tr><tr><td>Pheidole pugnax</td><td>12</td><td>0.66</td><td>0.024</td><td>0.617</td><td>0.029</td><td>0.463</td><td>0.092</td><td>0.636</td><td>0.179</td><td>0.148</td><td>0.024</td><td>0.598</td><td>0.086</td><td>0.732</td><td>0.203</td><td>0.851</td><td>0.046</td></tr><tr><td>Pheidole sp. 1</td><td>12</td><td>0.663</td><td>0.014</td><td>0.634</td><td>0.006</td><td>0.549</td><td>0.009</td><td>0.265</td><td>0.019</td><td>0.108</td><td>0.002</td><td>0.578</td><td>0.008</td><td>0.806</td><td>0.013</td><td>0.786</td><td>0.009</td></tr><tr><td>Pheidole sp. 12</td><td>8</td><td>0.482</td><td>0.007</td><td>0.461</td><td>0.005</td><td>0.438</td><td>0.007</td><td>0.329</td><td>0.003</td><td>0.086</td><td>0.007</td><td>0.415</td><td>0.007</td><td>0.436</td><td>0.006</td><td>0.546</td><td>0.006</td></tr><tr><td>Pheidole sp. 13</td><td>8</td><td>0.482</td><td>0.007</td><td>0.418</td><td>0.009</td><td>0.395</td><td>0.007</td><td>0.267</td><td>0.008</td><td>0.091</td><td>0.007</td><td>0.396</td><td>0.005</td><td>0.396</td><td>0.006</td><td>0.507</td><td>0.007</td></tr><tr><td>Pheidole sp. 17</td><td>3</td><td>0.661</td><td>0.047</td><td>0.594</td><td>0.119</td><td>0.431</td><td>0.074</td><td>0.72</td><td>0.259</td><td>0.11</td><td>0.002</td><td>0.59</td><td>0.254</td><td>0.907</td><td>0.062</td><td>0.935</td><td>0.043</td></tr><tr><td>Pheidole sp. 18</td><td>3</td><td>0.478</td><td>0.031</td><td>0.435</td><td>0.031</td><td>0.272</td><td>0.015</td><td>0.522</td><td>0.061</td><td>0.087</td><td>0</td><td>0.391</td><td>0.031</td><td>0.511</td><td>0.046</td><td>0.576</td><td>0.015</td></tr><tr><td>Pheidole sp. 2</td><td>8</td><td>0.803</td><td>0.007</td><td>0.694</td><td>0.008</td><td>0.628</td><td>0.011</td><td>0.431</td><td>0.006</td><td>0.195</td><td>0.01</td><td>1.058</td><td>0.008</td><td>1.106</td><td>0.009</td><td>1.107</td><td>0.002</td></tr><tr><td>Pheidole sp. 4</td><td>8</td><td>0.494</td><td>0.021</td><td>0.442</td><td>0.013</td><td>0.307</td><td>0.044</td><td>0.446</td><td>0.107</td><td>0.099</td><td>0.011</td><td>0.436</td><td>0.065</td><td>0.507</td><td>0.044</td><td>0.594</td><td>0.018</td></tr><tr><td>Pheidole sp. 5</td><td>8</td><td>0.512</td><td>0.039</td><td>0.472</td><td>0.014</td><td>0.4</td><td>0.065</td><td>0.397</td><td>0.071</td><td>0.085</td><td>0.002</td><td>0.465</td><td>0.045</td><td>0.504</td><td>0.033</td><td>0.612</td><td>0.005</td></tr><tr><td>Pheidole sp. 9</td><td>8</td><td>0.55</td><td>0.004</td><td>0.516</td><td>0.005</td><td>0.448</td><td>0.008</td><td>0.336</td><td>0.005</td><td>0.119</td><td>0.006</td><td>0.424</td><td>0.007</td><td>0.47</td><td>0.005</td><td>0.596</td><td>0.006</td></tr><tr><td>Pheidole subarmata</td><td>12</td><td>0.498</td><td>0.022</td><td>0.458</td><td>0.024</td><td>0.365</td><td>0.069</td><td>0.377</td><td>0.07</td><td>0.113</td><td>0.005</td><td>0.425</td><td>0.03</td><td>0.494</td><td>0.029</td><td>0.621</td><td>0.05</td></tr><tr><td>Pheidole susannae</td><td>4</td><td>0.659</td><td>0.008</td><td>0.517</td><td>0.002</td><td>0.439</td><td>0.005</td><td>0.251</td><td>0.007</td><td>0.134</td><td>0.007</td><td>0.807</td><td>0.014</td><td>1.034</td><td>0.069</td><td>0.795</td><td>0.006</td></tr></table>
 
 <!-- page 10 of 15 -->
 
-| Pheidole synarmata | 4 | 0.513 | 0.041 | 0.473 | 0.033 | 0.354 | 0.056 | 0.392 | 0.042 | 0.099 | 0.014 | 0.425 | 0.011 | 0.441 | 0.021 | 0.566 | 0.026 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Pheidole transversostriata | 4 | 0.501 | 0.176 | 0.426 | 0.111 | 0.355 | 0.124 | 0.246 | 0.06 | 0.068 | 0.01 | 0.292 | 0.062 | 0.371 | 0.086 | 0.465 | 0.055 |
-| Pheidole zeteki | 12 | 0.404 | 0.025 | 0.374 | 0.018 | 0.222 | 0.024 | 0.309 | 0.036 | 0.078 | 0.019 | 0.335 | 0.019 | 0.326 | 0.031 | 0.422 | 0.052 |
-| Pogonomyrmex mayri | 8 | 1.985 | 0.064 | 1.742 | 0.034 | 1.189 | 0.227 | 1.535 | 0.334 | 0.274 | 0.003 | 1.569 | 0.067 | 2.363 | 0.034 | 2.294 | 0.034 |
-| Prionopelta antillana | 1 | 0.509 | - | 0.447 | - | 0.44 | - | 0.107 | - | 0.029 | - | 0.265 | - | 0.475 | - | 0.667 | - |
-| Probolomyrmex boliviensis | 2 | 0.75 | 0.046 | 0.446 | 0.015 | 0.228 | 0.015 | 0.554 | 0.015 | 0 | 0 | 0 | 0 | 0.641 | 0.046 | 1.054 | 0.077 |
-| Proceratium catio | 1 | 0.609 | - | 0.587 | - | 0.348 | - | 0.413 | - | 0.022 | - | 0.543 | - | 0.413 | - | 0.739 | - |
-| Pseudomyrmex boopis | 1 | 1.217 | - | 1 | - | 0.587 | - | 0.609 | - | 0.804 | - | 0.696 | - | 1.13 | - | 1.652 | - |
-| Pseudomyrmex mordax | 1 | 0.989 | - | 0.913 | - | 0.467 | - | 0.391 | - | 0.413 | - | 0.674 | - | 0.761 | - | 1.37 | - |
-| Pseudomyrmex simplex | 4 | 1.223 | 0.007 | 1.004 | 0.01 | 0.701 | 0.011 | 0.591 | 0.006 | 0.809 | 0.008 | 0.612 | 0.011 | 1.137 | 0.01 | 1.659 | 0.012 |
-| Pseudomyrmex sp. 4 | 1 | 1.976 | - | 1.62 | - | 0.93 | - | 0.41 | - | 1.198 | - | 0.92 | - | 1.852 | - | 2.756 | - |
-| Rasopone pluviselva | 1 | 1.261 | - | 1.152 | - | 0.761 | - | 0.891 | - | 0.152 | - | 0.978 | - | 0.87 | - | 1.739 | - |
-| Rhopalothrix isthmica | 1 | 0.566 | - | 0.551 | - | 0.393 | - | 0.157 | - | 0.026 | - | 0.328 | - | 0.445 | - | 0.593 | - |
-| Rogeria belti | 8 | 0.607 | 0.11 | 0.521 | 0.103 | 0.421 | 0.144 | 0.275 | 0.086 | 0.078 | 0.011 | 0.406 | 0.072 | 0.446 | 0.085 | 0.588 | 0.081 |
-| Rogeria ciliosa | 1 | 0.63 | - | 0.543 | - | 0.348 | - | 0.478 | - | 0.065 | - | 0.5 | - | 0.5 | - | 0.717 | - |
-| Rogeria curvipubens | 12 | 0.528 | 0.022 | 0.449 | 0.015 | 0.319 | 0.093 | 0.316 | 0.044 | 0.058 | 0.009 | 0.384 | 0.031 | 0.359 | 0.027 | 0.542 | 0.02 |
-| Rogeria foreli | 8 | 0.628 | 0.032 | 0.542 | 0.044 | 0.349 | 0.043 | 0.401 | 0.068 | 0.073 | 0.013 | 0.483 | 0.055 | 0.501 | 0.002 | 0.676 | 0.047 |
-| Sericomyrmex amabilis | 4 | 1.087 | 0.061 | 1.261 | 0.061 | 0.707 | 0.015 | 0.815 | 0.015 | 0.185 | 0.015 | 1.033 | 0.015 | 1.196 | 0.154 | 1.565 | 0.031 |
+<table><tr><td>Pheidole synarmata</td><td>4</td><td>0.513</td><td>0.041</td><td>0.473</td><td>0.033</td><td>0.354</td><td>0.056</td><td>0.392</td><td>0.042</td><td>0.099</td><td>0.014</td><td>0.425</td><td>0.011</td><td>0.441</td><td>0.021</td><td>0.566</td><td>0.026</td></tr><tr><td>Pheidole transversostriata</td><td>4</td><td>0.501</td><td>0.176</td><td>0.426</td><td>0.111</td><td>0.355</td><td>0.124</td><td>0.246</td><td>0.06</td><td>0.068</td><td>0.01</td><td>0.292</td><td>0.062</td><td>0.371</td><td>0.086</td><td>0.465</td><td>0.055</td></tr><tr><td>Pheidole zeteki</td><td>12</td><td>0.404</td><td>0.025</td><td>0.374</td><td>0.018</td><td>0.222</td><td>0.024</td><td>0.309</td><td>0.036</td><td>0.078</td><td>0.019</td><td>0.335</td><td>0.019</td><td>0.326</td><td>0.031</td><td>0.422</td><td>0.052</td></tr><tr><td>Pogonomyrmex mayri</td><td>8</td><td>1.985</td><td>0.064</td><td>1.742</td><td>0.034</td><td>1.189</td><td>0.227</td><td>1.535</td><td>0.334</td><td>0.274</td><td>0.003</td><td>1.569</td><td>0.067</td><td>2.363</td><td>0.034</td><td>2.294</td><td>0.034</td></tr><tr><td>Prionopelta antillana</td><td>1</td><td>0.509</td><td>-</td><td>0.447</td><td>-</td><td>0.44</td><td>-</td><td>0.107</td><td>-</td><td>0.029</td><td>-</td><td>0.265</td><td>-</td><td>0.475</td><td>-</td><td>0.667</td><td>-</td></tr><tr><td>Probolomyrmex boliviensis</td><td>2</td><td>0.75</td><td>0.046</td><td>0.446</td><td>0.015</td><td>0.228</td><td>0.015</td><td>0.554</td><td>0.015</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.641</td><td>0.046</td><td>1.054</td><td>0.077</td></tr><tr><td>Proceratium catio</td><td>1</td><td>0.609</td><td>-</td><td>0.587</td><td>-</td><td>0.348</td><td>-</td><td>0.413</td><td>-</td><td>0.022</td><td>-</td><td>0.543</td><td>-</td><td>0.413</td><td>-</td><td>0.739</td><td>-</td></tr><tr><td>Pseudomyrmex boopis</td><td>1</td><td>1.217</td><td>-</td><td>1</td><td>-</td><td>0.587</td><td>-</td><td>0.609</td><td>-</td><td>0.804</td><td>-</td><td>0.696</td><td>-</td><td>1.13</td><td>-</td><td>1.652</td><td>-</td></tr><tr><td>Pseudomyrmex mordax</td><td>1</td><td>0.989</td><td>-</td><td>0.913</td><td>-</td><td>0.467</td><td>-</td><td>0.391</td><td>-</td><td>0.413</td><td>-</td><td>0.674</td><td>-</td><td>0.761</td><td>-</td><td>1.37</td><td>-</td></tr><tr><td>Pseudomyrmex simplex</td><td>4</td><td>1.223</td><td>0.007</td><td>1.004</td><td>0.01</td><td>0.701</td><td>0.011</td><td>0.591</td><td>0.006</td><td>0.809</td><td>0.008</td><td>0.612</td><td>0.011</td><td>1.137</td><td>0.01</td><td>1.659</td><td>0.012</td></tr><tr><td>Pseudomyrmex sp. 4</td><td>1</td><td>1.976</td><td>-</td><td>1.62</td><td>-</td><td>0.93</td><td>-</td><td>0.41</td><td>-</td><td>1.198</td><td>-</td><td>0.92</td><td>-</td><td>1.852</td><td>-</td><td>2.756</td><td>-</td></tr><tr><td>Rasopone pluviselva</td><td>1</td><td>1.261</td><td>-</td><td>1.152</td><td>-</td><td>0.761</td><td>-</td><td>0.891</td><td>-</td><td>0.152</td><td>-</td><td>0.978</td><td>-</td><td>0.87</td><td>-</td><td>1.739</td><td>-</td></tr><tr><td>Rhopalothrix isthmica</td><td>1</td><td>0.566</td><td>-</td><td>0.551</td><td>-</td><td>0.393</td><td>-</td><td>0.157</td><td>-</td><td>0.026</td><td>-</td><td>0.328</td><td>-</td><td>0.445</td><td>-</td><td>0.593</td><td>-</td></tr><tr><td>Rogeria belti</td><td>8</td><td>0.607</td><td>0.11</td><td>0.521</td><td>0.103</td><td>0.421</td><td>0.144</td><td>0.275</td><td>0.086</td><td>0.078</td><td>0.011</td><td>0.406</td><td>0.072</td><td>0.446</td><td>0.085</td><td>0.588</td><td>0.081</td></tr><tr><td>Rogeria ciliosa</td><td>1</td><td>0.63</td><td>-</td><td>0.543</td><td>-</td><td>0.348</td><td>-</td><td>0.478</td><td>-</td><td>0.065</td><td>-</td><td>0.5</td><td>-</td><td>0.5</td><td>-</td><td>0.717</td><td>-</td></tr><tr><td>Rogeria curvipubens</td><td>12</td><td>0.528</td><td>0.022</td><td>0.449</td><td>0.015</td><td>0.319</td><td>0.093</td><td>0.316</td><td>0.044</td><td>0.058</td><td>0.009</td><td>0.384</td><td>0.031</td><td>0.359</td><td>0.027</td><td>0.542</td><td>0.02</td></tr><tr><td>Rogeria foreli</td><td>8</td><td>0.628</td><td>0.032</td><td>0.542</td><td>0.044</td><td>0.349</td><td>0.043</td><td>0.401</td><td>0.068</td><td>0.073</td><td>0.013</td><td>0.483</td><td>0.055</td><td>0.501</td><td>0.002</td><td>0.676</td><td>0.047</td></tr><tr><td>Sericomyrmex amabilis</td><td>4</td><td>1.087</td><td>0.061</td><td>1.261</td><td>0.061</td><td>0.707</td><td>0.015</td><td>0.815</td><td>0.015</td><td>0.185</td><td>0.015</td><td>1.033</td><td>0.015</td><td>1.196</td><td>0.154</td><td>1.565</td><td>0.031</td></tr></table>
 
 <!-- page 11 of 15 -->
 
-| Solenopsis azteca | 12 | 0.34 | 0.043 | 0.281 | 0.024 | 0.19 | 0.04 | 0.245 | 0.07 | 0.03 | 0.012 | 0.275 | 0.054 | 0.217 | 0.022 | 0.357 | 0.031 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Solenopsis geminata | 12 | 0.557 | 0.011 | 0.551 | 0.012 | 0.498 | 0.004 | 0.17 | 0.004 | 0.101 | 0.005 | 0.519 | 0.007 | 0.587 | 0.014 | 0.635 | 0.031 |
-| Solenopsis picea | 12 | 0.474 | 0.011 | 0.406 | 0.029 | 0.394 | 0.025 | 0.099 | 0.002 | 0.045 | 0.004 | 0.254 | 0.024 | 0.351 | 0.006 | 0.457 | 0.013 |
-| Stegomyrmex manni | 2 | 1.339 | 0.289 | 1.237 | 0.25 | 0.859 | 0.108 | 0.753 | 0.257 | 0.107 | 0.002 | 0.918 | 0.177 | 1.17 | 0.067 | 1.716 | 0.125 |
-| Strumigenys biolleyi | 1 | 0.674 | - | 0.543 | - | 0.391 | - | 0.413 | - | 0.087 | - | 0.326 | - | 0.522 | - | 0.696 | - |
-| Strumigenys cordovensis | 4 | 0.826 | 0.022 | 0.638 | 0.013 | 4.543 | 6.269 | 0.688 | 0.033 | 0.072 | 0.013 | 0.377 | 0.013 | 0.775 | 0.025 | 0.841 | 0.025 |
-| Strumigenys deltisquama | 12 | 0.634 | 0.098 | 0.625 | 0.14 | 0.357 | 0.033 | 0.312 | 0.023 | 0.059 | 0.009 | 0.337 | 0.118 | 0.419 | 0.047 | 0.638 | 0.111 |
-| Strumigenys denticulata | 4 | 0.465 | 0.007 | 0.354 | 0.006 | 1.597 | 1.063 | 0.343 | 0.052 | 0.189 | 0.145 | 0.262 | 0.039 | 0.308 | 0.003 | 0.482 | 0.003 |
-| Strumigenys dyseides | 4 | 0.391 | 0 | 0.326 | 0 | 0.227 | 0.014 | 0.238 | 0.032 | 0.025 | 0.004 | 0.246 | 0.01 | 0.285 | 0.003 | 0.432 | 0.003 |
-| Strumigenys eggersi | 12 | 0.442 | 0.011 | 0.362 | 0.009 | 0.266 | 0.035 | 0.248 | 0.032 | 0.044 | 0.002 | 0.21 | 0.009 | 0.269 | 0.017 | 0.451 | 0.016 |
-| Strumigenys elongata | 12 | 0.587 | 0.014 | 0.446 | 0.012 | 0.319 | 0.011 | 0.377 | 0.011 | 0.043 | 0 | 0.268 | 0.011 | 0.428 | 0.011 | 0.554 | 0.012 |
-| Strumigenys fridericimuelleri | 12 | 0.47 | 0.011 | 0.34 | 0.011 | 0.151 | 0.034 | 0.192 | 0.033 | 0.043 | 0.001 | 0.188 | 0.026 | 0.274 | 0.038 | 0.462 | 0.045 |
-| Strumigenys lanuginosa | 12 | 0.62 | 0.038 | 0.484 | 0.021 | 0.375 | 0.011 | 0.342 | 0.011 | 0.06 | 0.011 | 0.288 | 0.011 | 0.473 | 0.033 | 0.674 | 0.031 |
-| Strumigenys marginiventris | 8 | 0.742 | 0.03 | 0.555 | 0.109 | 0.505 | 0.1 | 0.554 | 0.034 | 0.083 | 0.01 | 0.384 | 0.082 | 0.548 | 0.035 | 0.732 | 0.019 |
-| Strumigenys subedentata | 4 | 0.494 | 0.024 | 0.421 | 0.012 | 0.293 | 0.011 | 0.273 | 0.011 | 0.051 | 0.012 | 0.267 | 0.013 | 0.362 | 0.026 | 0.523 | 0.037 |
-| Strumigenys zeteki | 8 | 0.488 | 0.022 | 0.352 | 0.012 | 0.211 | 0.03 | 0.194 | 0.016 | 0.041 | 0.004 | 0.162 | 0.026 | 0.314 | 0.021 | 0.547 | 0.049 |
-| Syscia sp. 1 | 3 | 0.686 | 0.027 | 0.557 | 0.026 | 0.203 | 0.176 | 0.366 | 0.102 | 0 | 0 | 0.105 | 0.182 | 0.35 | 0.303 | 0.884 | 0.067 |
+<table><tr><td>Solenopsis azteca</td><td>12</td><td>0.34</td><td>0.043</td><td>0.281</td><td>0.024</td><td>0.19</td><td>0.04</td><td>0.245</td><td>0.07</td><td>0.03</td><td>0.012</td><td>0.275</td><td>0.054</td><td>0.217</td><td>0.022</td><td>0.357</td><td>0.031</td></tr><tr><td>Solenopsis geminata</td><td>12</td><td>0.557</td><td>0.011</td><td>0.551</td><td>0.012</td><td>0.498</td><td>0.004</td><td>0.17</td><td>0.004</td><td>0.101</td><td>0.005</td><td>0.519</td><td>0.007</td><td>0.587</td><td>0.014</td><td>0.635</td><td>0.031</td></tr><tr><td>Solenopsis picea</td><td>12</td><td>0.474</td><td>0.011</td><td>0.406</td><td>0.029</td><td>0.394</td><td>0.025</td><td>0.099</td><td>0.002</td><td>0.045</td><td>0.004</td><td>0.254</td><td>0.024</td><td>0.351</td><td>0.006</td><td>0.457</td><td>0.013</td></tr><tr><td>Stegomyrmex manni</td><td>2</td><td>1.339</td><td>0.289</td><td>1.237</td><td>0.25</td><td>0.859</td><td>0.108</td><td>0.753</td><td>0.257</td><td>0.107</td><td>0.002</td><td>0.918</td><td>0.177</td><td>1.17</td><td>0.067</td><td>1.716</td><td>0.125</td></tr><tr><td>Strumigenys biolleyi</td><td>1</td><td>0.674</td><td>-</td><td>0.543</td><td>-</td><td>0.391</td><td>-</td><td>0.413</td><td>-</td><td>0.087</td><td>-</td><td>0.326</td><td>-</td><td>0.522</td><td>-</td><td>0.696</td><td>-</td></tr><tr><td>Strumigenys cordovensis</td><td>4</td><td>0.826</td><td>0.022</td><td>0.638</td><td>0.013</td><td>4.543</td><td>6.269</td><td>0.688</td><td>0.033</td><td>0.072</td><td>0.013</td><td>0.377</td><td>0.013</td><td>0.775</td><td>0.025</td><td>0.841</td><td>0.025</td></tr><tr><td>Strumigenys deltisquama</td><td>12</td><td>0.634</td><td>0.098</td><td>0.625</td><td>0.14</td><td>0.357</td><td>0.033</td><td>0.312</td><td>0.023</td><td>0.059</td><td>0.009</td><td>0.337</td><td>0.118</td><td>0.419</td><td>0.047</td><td>0.638</td><td>0.111</td></tr><tr><td>Strumigenys denticulata</td><td>4</td><td>0.465</td><td>0.007</td><td>0.354</td><td>0.006</td><td>1.597</td><td>1.063</td><td>0.343</td><td>0.052</td><td>0.189</td><td>0.145</td><td>0.262</td><td>0.039</td><td>0.308</td><td>0.003</td><td>0.482</td><td>0.003</td></tr><tr><td>Strumigenys dyseides</td><td>4</td><td>0.391</td><td>0</td><td>0.326</td><td>0</td><td>0.227</td><td>0.014</td><td>0.238</td><td>0.032</td><td>0.025</td><td>0.004</td><td>0.246</td><td>0.01</td><td>0.285</td><td>0.003</td><td>0.432</td><td>0.003</td></tr><tr><td>Strumigenys eggersi</td><td>12</td><td>0.442</td><td>0.011</td><td>0.362</td><td>0.009</td><td>0.266</td><td>0.035</td><td>0.248</td><td>0.032</td><td>0.044</td><td>0.002</td><td>0.21</td><td>0.009</td><td>0.269</td><td>0.017</td><td>0.451</td><td>0.016</td></tr><tr><td>Strumigenys elongata</td><td>12</td><td>0.587</td><td>0.014</td><td>0.446</td><td>0.012</td><td>0.319</td><td>0.011</td><td>0.377</td><td>0.011</td><td>0.043</td><td>0</td><td>0.268</td><td>0.011</td><td>0.428</td><td>0.011</td><td>0.554</td><td>0.012</td></tr><tr><td>Strumigenys fridericimuelleri</td><td>12</td><td>0.47</td><td>0.011</td><td>0.34</td><td>0.011</td><td>0.151</td><td>0.034</td><td>0.192</td><td>0.033</td><td>0.043</td><td>0.001</td><td>0.188</td><td>0.026</td><td>0.274</td><td>0.038</td><td>0.462</td><td>0.045</td></tr><tr><td>Strumigenys lanuginosa</td><td>12</td><td>0.62</td><td>0.038</td><td>0.484</td><td>0.021</td><td>0.375</td><td>0.011</td><td>0.342</td><td>0.011</td><td>0.06</td><td>0.011</td><td>0.288</td><td>0.011</td><td>0.473</td><td>0.033</td><td>0.674</td><td>0.031</td></tr><tr><td>Strumigenys marginiventris</td><td>8</td><td>0.742</td><td>0.03</td><td>0.555</td><td>0.109</td><td>0.505</td><td>0.1</td><td>0.554</td><td>0.034</td><td>0.083</td><td>0.01</td><td>0.384</td><td>0.082</td><td>0.548</td><td>0.035</td><td>0.732</td><td>0.019</td></tr><tr><td>Strumigenys subedentata</td><td>4</td><td>0.494</td><td>0.024</td><td>0.421</td><td>0.012</td><td>0.293</td><td>0.011</td><td>0.273</td><td>0.011</td><td>0.051</td><td>0.012</td><td>0.267</td><td>0.013</td><td>0.362</td><td>0.026</td><td>0.523</td><td>0.037</td></tr><tr><td>Strumigenys zeteki</td><td>8</td><td>0.488</td><td>0.022</td><td>0.352</td><td>0.012</td><td>0.211</td><td>0.03</td><td>0.194</td><td>0.016</td><td>0.041</td><td>0.004</td><td>0.162</td><td>0.026</td><td>0.314</td><td>0.021</td><td>0.547</td><td>0.049</td></tr><tr><td>Syscia sp. 1</td><td>3</td><td>0.686</td><td>0.027</td><td>0.557</td><td>0.026</td><td>0.203</td><td>0.176</td><td>0.366</td><td>0.102</td><td>0</td><td>0</td><td>0.105</td><td>0.182</td><td>0.35</td><td>0.303</td><td>0.884</td><td>0.067</td></tr></table>
 
 <!-- page 12 of 15 -->
 
-| Tapinoma ramulorum | 1 | 0.488 | - | 0.411 | - | 0.273 | - | 0.121 | - | 0.089 | - | 0.427 | - | 0.435 | - | 0.488 | - |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Thaumatomyrmex atrox | 4 | 0.687 | 0.004 | 0.712 | 0.006 | 0.631 | 0.006 | 0.672 | 0.006 | 0.227 | 0.006 | 0.578 | 0.001 | 0.713 | 0.005 | 1.145 | 0.006 |
-| Thaumatomyrmex zeteki | 8 | 0.67 | 0.045 | 0.681 | 0.034 | 0.644 | 0.024 | 0.567 | 0.067 | 0.2 | 0.02 | 0.577 | 0.028 | 0.687 | 0.024 | 1.121 | 0.023 |
-| Trichomyrmex destructor | 8 | 0.685 | 0.003 | 0.603 | 0.003 | 0.525 | 0.003 | 0.167 | 0.004 | 0.09 | 0.003 | 0.502 | 0.004 | 0.53 | 0.004 | 0.674 | 0.004 |
-| Wasmannia auropunctata | 12 | 0.458 | 0.014 | 0.409 | 0.021 | 0.236 | 0.057 | 0.345 | 0.072 | 0.094 | 0.005 | 0.355 | 0.009 | 0.358 | 0.096 | 0.476 | 0.015 |
+<table><tr><td>Tapinoma ramulorum</td><td>1</td><td>0.488</td><td>-</td><td>0.411</td><td>-</td><td>0.273</td><td>-</td><td>0.121</td><td>-</td><td>0.089</td><td>-</td><td>0.427</td><td>-</td><td>0.435</td><td>-</td><td>0.488</td><td>-</td></tr><tr><td>Thaumatomyrmex atrox</td><td>4</td><td>0.687</td><td>0.004</td><td>0.712</td><td>0.006</td><td>0.631</td><td>0.006</td><td>0.672</td><td>0.006</td><td>0.227</td><td>0.006</td><td>0.578</td><td>0.001</td><td>0.713</td><td>0.005</td><td>1.145</td><td>0.006</td></tr><tr><td>Thaumatomyrmex zeteki</td><td>8</td><td>0.67</td><td>0.045</td><td>0.681</td><td>0.034</td><td>0.644</td><td>0.024</td><td>0.567</td><td>0.067</td><td>0.2</td><td>0.02</td><td>0.577</td><td>0.028</td><td>0.687</td><td>0.024</td><td>1.121</td><td>0.023</td></tr><tr><td>Trichomyrmex destructor</td><td>8</td><td>0.685</td><td>0.003</td><td>0.603</td><td>0.003</td><td>0.525</td><td>0.003</td><td>0.167</td><td>0.004</td><td>0.09</td><td>0.003</td><td>0.502</td><td>0.004</td><td>0.53</td><td>0.004</td><td>0.674</td><td>0.004</td></tr><tr><td>Wasmannia auropunctata</td><td>12</td><td>0.458</td><td>0.014</td><td>0.409</td><td>0.021</td><td>0.236</td><td>0.057</td><td>0.345</td><td>0.072</td><td>0.094</td><td>0.005</td><td>0.355</td><td>0.009</td><td>0.358</td><td>0.096</td><td>0.476</td><td>0.015</td></tr></table>
 
 <!-- page 13 of 15 -->
 
@@ -958,21 +664,13 @@ Table S3. Summary of the interpolation and extrapolation analysis for the calcul
 
 Table S4. Permutation-based multivariate analysis of variance (PERMANOVA) between the temporal and spatial factors in the TDF fragments (N= 999). df: Degrees of freedom. The asterisk indicates statistical differences.
 
-| Factor | Pseudo-F | df(residual) | p |
-| --- | --- | --- | --- |
-| Temporal diferencia (Climate period) | 2.183 | 1(6) | 0.0267* |
-| Spatial difference (TDF Fragments) | 2.467 | 2(6) | 0.003** |
-| Difference (Climate period/ TDF Fragments) | 0.885 | 2(6) | 0.594 |
+<table><tr><td>Factor</td><td>Pseudo-F</td><td>df(residual)</td><td>p</td></tr><tr><td>Temporal diferencia (Climate period)</td><td>2.183</td><td>1(6)</td><td>0.0267*</td></tr><tr><td>Spatial difference (TDF Fragments)</td><td>2.467</td><td>2(6)</td><td>0.003**</td></tr><tr><td>Difference (Climate period/ TDF Fragments)</td><td>0.885</td><td>2(6)</td><td>0.594</td></tr></table>
 
 <!-- page 14 of 15 -->
 
 Table S5. Pairwise Adonis test using the Bray-Curtis distance for comparisons between departments. df: Degrees of freedom
 
-| TDF fragment pairs | Pseudo-F | df(residual) | p |
-| --- | --- | --- | --- |
-| N1 vs N2 | 1.65 | 1(6) | 0.167 |
-| N1 vs N3 | 3.30 | 1(6) | 0.034 |
-| N2 vs N3 | 1.84 | 1(6) | 0.029 |
+<table><tr><td>TDF fragment pairs</td><td>Pseudo-F</td><td>df(residual)</td><td>p</td></tr><tr><td>N1 vs N2</td><td>1.65</td><td>1(6)</td><td>0.167</td></tr><tr><td>N1 vs N3</td><td>3.30</td><td>1(6)</td><td>0.034</td></tr><tr><td>N2 vs N3</td><td>1.84</td><td>1(6)</td><td>0.029</td></tr></table>
 
 Table S6. Percentage contribution of each component to beta diversity for the TDF fragment pairs evaluated in each climatic season.
 
@@ -982,19 +680,11 @@ Table S6. Percentage contribution of each component to beta diversity for the TD
 
 Table S7. Community Weighted Mean (CWM) p-values for eight functional traits of ant communities across TDF fragments evaluated by Tukey post-hoc analysis at a significance level of 0.05 Abbreviations as in Table 1.
 
-| TDF fragment pairs | HL | HW | ID | ML | EL | SL | FL | WL |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| N1-N2 | 0.571 | 0.061 | 0.999 | 0.987 | 0.884 | 0.109 | 0.993 | 0.578 |
-| N1-N3 | 0.975 | 0.781 | 0.859 | 0.061 | 0.321 | 0.925 | 0.929 | 0.487 |
-| N2-N3 | 0.079 | 0.173 | 0.851 | 0.047 | 0.166 | 0.061 | 0.965 | 0.121 |
+<table><tr><td>TDF fragment pairs</td><td>HL</td><td>HW</td><td>ID</td><td>ML</td><td>EL</td><td>SL</td><td>FL</td><td>WL</td></tr><tr><td>N1-N2</td><td>0.571</td><td>0.061</td><td>0.999</td><td>0.987</td><td>0.884</td><td>0.109</td><td>0.993</td><td>0.578</td></tr><tr><td>N1-N3</td><td>0.975</td><td>0.781</td><td>0.859</td><td>0.061</td><td>0.321</td><td>0.925</td><td>0.929</td><td>0.487</td></tr><tr><td>N2-N3</td><td>0.079</td><td>0.173</td><td>0.851</td><td>0.047</td><td>0.166</td><td>0.061</td><td>0.965</td><td>0.121</td></tr></table>
 
 Table S8. p-values of the estimated functional diversity indices for ant communities among the TDF fragments evaluated by Tukey post-hoc analysis with a significance level of 0.05. Functional richness (FRic), functional evenness (FEve), functional redundancy (Fred) and Rao's quadratic entropy (QRao) were estimated.
 
-| TDF fragment pairs | Fric | Feve | Fred | QRao |
-| --- | --- | --- | --- | --- |
-| N1-N2 | 0.9085 | 0.5422 | 0.6467 | 0.7135 |
-| N1-N3 | 0.0100 | 0.5655 | 0.0106 | 0.0064 |
-| N2-N3 | 0.0189 | 0.9991 | 0.0430 | 0.0213 |
+<table><tr><td>TDF fragment pairs</td><td>Fric</td><td>Feve</td><td>Fred</td><td>QRao</td></tr><tr><td>N1-N2</td><td>0.9085</td><td>0.5422</td><td>0.6467</td><td>0.7135</td></tr><tr><td>N1-N3</td><td>0.0100</td><td>0.5655</td><td>0.0106</td><td>0.0064</td></tr><tr><td>N2-N3</td><td>0.0189</td><td>0.9991</td><td>0.0430</td><td>0.0213</td></tr></table>
 
 
 

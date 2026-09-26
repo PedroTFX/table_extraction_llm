@@ -104,14 +104,7 @@ The probability of being invariably univoltine across latitudes appears to be as
 
 The best model including the fixed effects and taxonomic hierarchy as a nested random effect was highly significant when compared to the model without taxonomic hierarchy, indicating a phylogenetic signal in the distribution of voltinism across the studied taxa (likelihood ratio test: $\chi ^ { 2 } = 8 7 . 5 ,$ $\mathrm{df}=4,\;\mathrm{p}<0.00001$ . Taxonomic hierarchy, used to account for phylogenetic relationships in the model, explained 28% of the variation in voltinism. Nevertheless, uni- and multivoltine species show no strong clustering across the lepidopteran
 
-| Species | Multivoltine species (%) | Univoltine species (%) |
-| :--- | :--- | :--- |
-| Papilionoidea | 38 | 42 |
-| Noctuoidea | 172 | 191 |
-| Lasiocampoidea | 2 | 11 |
-| Geometroidea | 157 | 95 |
-| Drepanoidea | 8 | 1 |
-| Bombycoidea | 10 | 4 |
+<table><tr><td>Species</td><td>Multivoltine species (%)</td><td>Univoltine species (%)</td></tr><tr><td>Papilionoidea</td><td>38</td><td>42</td></tr><tr><td>Noctuoidea</td><td>172</td><td>191</td></tr><tr><td>Lasiocampoidea</td><td>2</td><td>11</td></tr><tr><td>Geometroidea</td><td>157</td><td>95</td></tr><tr><td>Drepanoidea</td><td>8</td><td>1</td></tr><tr><td>Bombycoidea</td><td>10</td><td>4</td></tr></table>
 
 Figure 1. Proportions of multivoltine and univoltine species in different superfamilies of Macrolepidoptera. Numbers on the bars refer to the numbers of species in the respective taxa.
 
@@ -123,11 +116,7 @@ Species size has a significant effect on its potential for multivoltinism (Table
 
 Table 1. Results of the best generalized linear mixed model explaining the effects of species traits on the species’ potential for multivoltinism. Taxonomic hierarchy (superfamily/family/subfamily/genus) was included as a nested random effect to account for phylogenetic non-independence of the data. Overall, the selected model was highly significant when compared to the null model with only the random effect included (likelihood ratio test: $\chi^{2}=174.9,$ df= 7, $\mathrm { p   <   0 . 0 0 0 0 1 ) }$
 
-| Variable | $\chi^2$ | df | p |
-| --- | --- | --- | --- |
-| Overwintering stage | 60.8 | 3 | &lt;0.00001 |
-| Host type | 7.7 | 3 | 0.051 |
-| Species size | 18.6 | 1 | 0.00002 |
+<table><tr><td>Variable</td><td>$\chi^2$</td><td>df</td><td>p</td></tr><tr><td>Overwintering stage</td><td>60.8</td><td>3</td><td>&amp;lt;0.00001</td></tr><tr><td>Host type</td><td>7.7</td><td>3</td><td>0.051</td></tr><tr><td>Species size</td><td>18.6</td><td>1</td><td>0.00002</td></tr></table>
 
 1054
 
@@ -135,11 +124,7 @@ Table 1. Results of the best generalized linear mixed model explaining the effec
 
 <!-- page 5 of 10 -->
 
-| Taxonomic clade | multivoltine species (Mean size) | univoltine species (Mean size) |
-| --- | --- | --- |
-| Papilionoidea | ~35.5 | ~42.5 |
-| Geometroidea | ~25.0 | ~27.5 |
-| Noctuoidea | ~33.5 | ~37.5 |
+<table><tr><td>Taxonomic clade</td><td>multivoltine species (Mean size)</td><td>univoltine species (Mean size)</td></tr><tr><td>Papilionoidea</td><td>~35.5</td><td>~42.5</td></tr><tr><td>Geometroidea</td><td>~25.0</td><td>~27.5</td></tr><tr><td>Noctuoidea</td><td>~33.5</td><td>~37.5</td></tr></table>
 
 Figure  2. Mean size (= wingspan) of multivoltine and univoltine species in major superfamilies of the studied Macrolepidoptera. Error bars denote standard errors. Asterisks indicate significant differences (adjusted for multiple testing).
 
@@ -173,21 +158,7 @@ Focusing on the subset of (latitudinally) widely distributed species allowed me 
 
 <!-- page 6 of 10 -->
 
-| Category | Multivoltine species (Mean size) | Univoltine species (Mean size) |
-| --- | --- | --- |
-| OW: adult | ~33 | ~40 |
-| OW: egg | ~29 | ~35.5* |
-| OW: larva | ~30.5 | ~37* |
-| OW: pupa | ~31.5 | ~30 |
-| grasses | ~30.5 | ~33.5 |
-| forbs | ~29.5 | ~34* |
-| lichens | ~26 | ~28.5 |
-| woody plants | ~35 | ~38 |
-| woody / herbs | ~30.5 | ~38* |
-| mono-phages | ~28 | ~34* |
-| oligo-phages | ~33.5 | ~35 |
-| poly-phages | ~31 | ~37.5* |
-| all species | ~31.5 | ~36* |
+<table><tr><td>Category</td><td>Multivoltine species (Mean size)</td><td>Univoltine species (Mean size)</td></tr><tr><td>OW: adult</td><td>~33</td><td>~40</td></tr><tr><td>OW: egg</td><td>~29</td><td>~35.5*</td></tr><tr><td>OW: larva</td><td>~30.5</td><td>~37*</td></tr><tr><td>OW: pupa</td><td>~31.5</td><td>~30</td></tr><tr><td>grasses</td><td>~30.5</td><td>~33.5</td></tr><tr><td>forbs</td><td>~29.5</td><td>~34*</td></tr><tr><td>lichens</td><td>~26</td><td>~28.5</td></tr><tr><td>woody plants</td><td>~35</td><td>~38</td></tr><tr><td>woody / herbs</td><td>~30.5</td><td>~38*</td></tr><tr><td>mono-phages</td><td>~28</td><td>~34*</td></tr><tr><td>oligo-phages</td><td>~33.5</td><td>~35</td></tr><tr><td>poly-phages</td><td>~31</td><td>~37.5*</td></tr><tr><td>all species</td><td>~31.5</td><td>~36*</td></tr></table>
 
 Figure 3. Mean size (= wingspan) of multivoltine and univoltine species among the studied Macrolepidoptera classified by overwintering stage (OW), host type and larval diet breadth (see Material and methods for details of classification). Error bars denote standard errors. Asterisks indicate significant differences (adjusted for multiple testing).
 
@@ -195,12 +166,7 @@ in mean annual temperatures and large variation in season length) represent case
 
 In insects capable for multiple generations in a season, voltinism typically decreases with latitude (Zeuss et al. 2017; this study). In this light, having a single generation per year across a wide latitudinal temperature gradient indicates the presence of some constraint that makes additional generations either impossible or at least strongly disadvantageous. The scattered distribution of univoltine and multivoltine species across the lepidopteran phylogeny suggests that phylogenetic constraints do not strongly limit changes in voltinism,
 
-| Overwintering stage | univoltine species | multivoltine species |
-| --- | --- | --- |
-| egg | 114 | 11 |
-| adult | 41 | 14 |
-| larva | 136 | 140 |
-| pupa | 52 | 221 |
+<table><tr><td>Overwintering stage</td><td>univoltine species</td><td>multivoltine species</td></tr><tr><td>egg</td><td>114</td><td>11</td></tr><tr><td>adult</td><td>41</td><td>14</td></tr><tr><td>larva</td><td>136</td><td>140</td></tr><tr><td>pupa</td><td>52</td><td>221</td></tr></table>
 
 Figure 4. Proportions of multivoltine and univoltine species among the studied Macrolepidoptera classified by overwintering stage. Different letters above the bars indicate statistically significant differences in the proportions of uni- and multivoltine species between respective categories (p < 0.05; Tukey post hoc test for multiple comparisons). Numbers on the bars refer to the numbers of species in the respective categories.
 
@@ -208,12 +174,7 @@ and that the trait is open to ecologically-driven adaptive evolution. Indeed, th
 
 Quite obviously, all else being equal, one might expect larger species to be more time-constrained to produce multiple generations per year. The collected data show that body size indeed has a negative effect on the species’ potential for multivoltinism. Univoltine species are larger, on average, than multivoltine species in nearly all ecological categories, irrespective of whether species are classified according to overwintering stage, host type or larval diet breadth. Similarly, univoltine species are larger in all major taxonomic clades. The results regarding the general body size–voltinism relationship are thus consistent with the findings of earlier studies (Horne et al. 2015, Zeuss et al. 2017). Nevertheless, my results show that body size is far from being an absolute constraint to having multiple generations per year. In my sample of species, just four of the ten largest species are univoltine
 
-| Host type | univoltine species | multivoltine species |
-| --- | --- | --- |
-| grasses | 56 | 22 |
-| woody plants and herbs | 55 | 39 |
-| woody plants | 112 | 126 |
-| forbs | 120 | 197 |
+<table><tr><td>Host type</td><td>univoltine species</td><td>multivoltine species</td></tr><tr><td>grasses</td><td>56</td><td>22</td></tr><tr><td>woody plants and herbs</td><td>55</td><td>39</td></tr><tr><td>woody plants</td><td>112</td><td>126</td></tr><tr><td>forbs</td><td>120</td><td>197</td></tr></table>
 
 Figure 5. Proportions of multivoltine and univoltine species among the studied Macrolepidoptera feeding on different host types (see Material and methods for details of classification). Numbers on the bars refer to the numbers of species in the respective categories.
 

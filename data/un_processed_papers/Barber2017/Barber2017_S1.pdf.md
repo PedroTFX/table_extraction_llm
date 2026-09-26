@@ -36,135 +36,21 @@ Table 6. Species and number of individuals caught in each site, by year
 
 Table 7. Species trait values; species number refers to species in NMDS ordination in Figure 5
 
-| Species | Wing morphology | Breeding season | Diet | Activity time | Mean bodylength (mm) | Species number |
-| --- | --- | --- | --- | --- | --- | --- |
-| Acupalpus partiarius | macropterous | unknown | predator | nocturnal | 3.5 | 1 |
-| Agonoleptus conjunctus | macropterous | spring | predator | nocturnal | 3.8 | 2 |
-| Agonum placidum | macropterous | spring | omnivore | nocturnal | 7.9 | 3 |
-| Amara aenea.convexa | macropterous | spring | phytophagous | unknown | 7.1 | 4 |
-| Amara crassispina/neoscotica/cupreolata | dimorphic | spring | phytophagous | diurnal | 7.7 | 5 |
-| Amara lacustris/carinata | macropterous | autumn | omnivore | nocturnal | 12.2 | 6 |
-| Amara angustata/angustatoides | macropterous | spring | phytophagous | diurnal | 6.6 | 7 |
-| Amara obesa | dimorphic | autumn | predator | nocturnal | 11 | 8 |
-| Amara familiaris | macropterous | spring | omnivore | diurnal | 6.4 | 9 |
-| Amara rubrica.musculis | macropterous | autumn | phytophagous | diurnal | 5.6 | 10 |
-| Amara ellipsis | macropterous | spring | phytophagous | nocturnal | 8 | 11 |
-| Amara pennsylvanica | macropterous | autumn | unknown | nocturnal | 10.9 | 12 |
-| Amphasia sericea | macropterous | spring | omnivore | cathemeral | 9.9 | 13 |
-| Anisodactylus harrisii | macropterous | spring | omnivore | nocturnal | 11.8 | 14 |
-| Anisodactylus rusticus | macropterous | spring | omnivore | nocturnal | 10 | 15 |
-| Anisodactylus sanctaecrucis | macropterous | spring | omnivore | nocturnal | 9.6 | 16 |
-| Anisodactylus carbonarius | macropterous | autumn | predator | nocturnal | 12.2 | 17 |
-| Anisodactylus nigerrimus | macropterous | spring | predator | nocturnal | 10.8 | 18 |
-| Anisodactylus ovularis | macropterous | spring | omnivore | nocturnal | 11.3 | 19 |
-| Bembidion sp. | macropterous | spring | unknown | diurnal | 2.5 | 20 |
-| Calathus sp. | dimorphic | autumn | predator | nocturnal | 9.3 | 21 |
-| Chlaenius emarginatus | macropterous | spring | predator | nocturnal | 13.6 | 22 |
-| Chlaenius nemoralis | macropterous | spring | predator | nocturnal | 11.9 | 23 |
+<table><tr><td>Species</td><td>Wing morphology</td><td>Breeding season</td><td>Diet</td><td>Activity time</td><td>Mean bodylength (mm)</td><td>Species number</td></tr><tr><td>Acupalpus partiarius</td><td>macropterous</td><td>unknown</td><td>predator</td><td>nocturnal</td><td>3.5</td><td>1</td></tr><tr><td>Agonoleptus conjunctus</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>3.8</td><td>2</td></tr><tr><td>Agonum placidum</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>7.9</td><td>3</td></tr><tr><td>Amara aenea.convexa</td><td>macropterous</td><td>spring</td><td>phytophagous</td><td>unknown</td><td>7.1</td><td>4</td></tr><tr><td>Amara crassispina/neoscotica/cupreolata</td><td>dimorphic</td><td>spring</td><td>phytophagous</td><td>diurnal</td><td>7.7</td><td>5</td></tr><tr><td>Amara lacustris/carinata</td><td>macropterous</td><td>autumn</td><td>omnivore</td><td>nocturnal</td><td>12.2</td><td>6</td></tr><tr><td>Amara angustata/angustatoides</td><td>macropterous</td><td>spring</td><td>phytophagous</td><td>diurnal</td><td>6.6</td><td>7</td></tr><tr><td>Amara obesa</td><td>dimorphic</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>11</td><td>8</td></tr><tr><td>Amara familiaris</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>diurnal</td><td>6.4</td><td>9</td></tr><tr><td>Amara rubrica.musculis</td><td>macropterous</td><td>autumn</td><td>phytophagous</td><td>diurnal</td><td>5.6</td><td>10</td></tr><tr><td>Amara ellipsis</td><td>macropterous</td><td>spring</td><td>phytophagous</td><td>nocturnal</td><td>8</td><td>11</td></tr><tr><td>Amara pennsylvanica</td><td>macropterous</td><td>autumn</td><td>unknown</td><td>nocturnal</td><td>10.9</td><td>12</td></tr><tr><td>Amphasia sericea</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>cathemeral</td><td>9.9</td><td>13</td></tr><tr><td>Anisodactylus harrisii</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>11.8</td><td>14</td></tr><tr><td>Anisodactylus rusticus</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>10</td><td>15</td></tr><tr><td>Anisodactylus sanctaecrucis</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>9.6</td><td>16</td></tr><tr><td>Anisodactylus carbonarius</td><td>macropterous</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>12.2</td><td>17</td></tr><tr><td>Anisodactylus nigerrimus</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>10.8</td><td>18</td></tr><tr><td>Anisodactylus ovularis</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>11.3</td><td>19</td></tr><tr><td>Bembidion sp.</td><td>macropterous</td><td>spring</td><td>unknown</td><td>diurnal</td><td>2.5</td><td>20</td></tr><tr><td>Calathus sp.</td><td>dimorphic</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>9.3</td><td>21</td></tr><tr><td>Chlaenius emarginatus</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>13.6</td><td>22</td></tr><tr><td>Chlaenius nemoralis</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>11.9</td><td>23</td></tr></table>
 
 <!-- page 9 of 12 -->
 
-| Species | Wing morphology | Breeding season | Diet | Activity time | Mean bodylength (mm) | Species number |
-| --- | --- | --- | --- | --- | --- | --- |
-| Chlaenius platyderus | brachypterous | spring | omnivore | nocturnal | 14.7 | 24 |
-| Chlaenius purpuricollis | macropterous | spring | predator | nocturnal | 9.1 | 25 |
-| Chlaenius tomentosus | macropterous | spring | predator | nocturnal | 15.3 | 26 |
-| Cicindela punctulata | macropterous | autumn | predator | diurnal | 12.5 | 27 |
-| Cicindela sexguttata | macropterous | spring | predator | diurnal | 12 | 28 |
-| Cyclotrachelus seximpressus | brachypterous | unknown | predator | nocturnal | 16.5 | 29 |
-| Cyclotrachelus sodalis sodalis | brachypterous | autumn | predator | nocturnal | 16.3 | 30 |
-| Cymindis americana | dimorphic | autumn | predator | nocturnal | 13.3 | 31 |
-| Dicaelus elongatus | brachypterous | spring | predator | nocturnal | 17 | 32 |
-| Diplocheila obtusa | macropterous | spring | omnivore | nocturnal | 10.7 | 33 |
-| Galerita janus | macropterous | spring | omnivore | nocturnal | 19.5 | 34 |
-| Harpalus affinis | macropterous | spring | omnivore | diurnal | 10.3 | 35 |
-| Harpalus caliginosus | macropterous | autumn | omnivore | cathemeral | 26 | 36 |
-| Harpalus compar | macropterous | autumn | phytophagous | nocturnal | 15.1 | 37 |
-| Harpalus eraticus | macropterous | autumn | omnivore | nocturnal | 14.5 | 38 |
-| Harpalus faunus | macropterous | autumn | omnivore | nocturnal | 10.7 | 39 |
-| Harpalus herbivagus/somnulentus | macropterous | autumn | omnivore | nocturnal | 9.7 | 40 |
-| Harpalus pensylvanicus | macropterous | autumn | omnivore | nocturnal | 12.7 | 41 |
-| Cratacanthus dubius | dimorphic | unknown | predator | nocturnal | 11 | 42 |
-| Notiobia sp. | macropterous | spring | phytophagous | nocturnal | 9.7 | 43 |
-| Notiophilus sp. | dimorphic | spring | predator | diurnal | 5 | 44 |
-| Ophonus puncticeps | macropterous | autumn | phytophagous | nocturnal | 7.8 | 45 |
-| Panagaeus fasciatus | macropterous | unknown | unknown | nocturnal | 8.8 | 46 |
-| Poecilus chalcites | macropterous | spring | predator | nocturnal | 11.8 | 47 |
-| Poecilus lucublandus | macropterous | spring | predator | nocturnal | 11.5 | 48 |
-| Pterostichus melanarius | dimorphic | autumn | predator | nocturnal | 15.5 | 49 |
+<table><tr><td>Species</td><td>Wing morphology</td><td>Breeding season</td><td>Diet</td><td>Activity time</td><td>Mean bodylength (mm)</td><td>Species number</td></tr><tr><td>Chlaenius platyderus</td><td>brachypterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>14.7</td><td>24</td></tr><tr><td>Chlaenius purpuricollis</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>9.1</td><td>25</td></tr><tr><td>Chlaenius tomentosus</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>15.3</td><td>26</td></tr><tr><td>Cicindela punctulata</td><td>macropterous</td><td>autumn</td><td>predator</td><td>diurnal</td><td>12.5</td><td>27</td></tr><tr><td>Cicindela sexguttata</td><td>macropterous</td><td>spring</td><td>predator</td><td>diurnal</td><td>12</td><td>28</td></tr><tr><td>Cyclotrachelus seximpressus</td><td>brachypterous</td><td>unknown</td><td>predator</td><td>nocturnal</td><td>16.5</td><td>29</td></tr><tr><td>Cyclotrachelus sodalis sodalis</td><td>brachypterous</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>16.3</td><td>30</td></tr><tr><td>Cymindis americana</td><td>dimorphic</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>13.3</td><td>31</td></tr><tr><td>Dicaelus elongatus</td><td>brachypterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>17</td><td>32</td></tr><tr><td>Diplocheila obtusa</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>10.7</td><td>33</td></tr><tr><td>Galerita janus</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>19.5</td><td>34</td></tr><tr><td>Harpalus affinis</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>diurnal</td><td>10.3</td><td>35</td></tr><tr><td>Harpalus caliginosus</td><td>macropterous</td><td>autumn</td><td>omnivore</td><td>cathemeral</td><td>26</td><td>36</td></tr><tr><td>Harpalus compar</td><td>macropterous</td><td>autumn</td><td>phytophagous</td><td>nocturnal</td><td>15.1</td><td>37</td></tr><tr><td>Harpalus eraticus</td><td>macropterous</td><td>autumn</td><td>omnivore</td><td>nocturnal</td><td>14.5</td><td>38</td></tr><tr><td>Harpalus faunus</td><td>macropterous</td><td>autumn</td><td>omnivore</td><td>nocturnal</td><td>10.7</td><td>39</td></tr><tr><td>Harpalus herbivagus/somnulentus</td><td>macropterous</td><td>autumn</td><td>omnivore</td><td>nocturnal</td><td>9.7</td><td>40</td></tr><tr><td>Harpalus pensylvanicus</td><td>macropterous</td><td>autumn</td><td>omnivore</td><td>nocturnal</td><td>12.7</td><td>41</td></tr><tr><td>Cratacanthus dubius</td><td>dimorphic</td><td>unknown</td><td>predator</td><td>nocturnal</td><td>11</td><td>42</td></tr><tr><td>Notiobia sp.</td><td>macropterous</td><td>spring</td><td>phytophagous</td><td>nocturnal</td><td>9.7</td><td>43</td></tr><tr><td>Notiophilus sp.</td><td>dimorphic</td><td>spring</td><td>predator</td><td>diurnal</td><td>5</td><td>44</td></tr><tr><td>Ophonus puncticeps</td><td>macropterous</td><td>autumn</td><td>phytophagous</td><td>nocturnal</td><td>7.8</td><td>45</td></tr><tr><td>Panagaeus fasciatus</td><td>macropterous</td><td>unknown</td><td>unknown</td><td>nocturnal</td><td>8.8</td><td>46</td></tr><tr><td>Poecilus chalcites</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>11.8</td><td>47</td></tr><tr><td>Poecilus lucublandus</td><td>macropterous</td><td>spring</td><td>predator</td><td>nocturnal</td><td>11.5</td><td>48</td></tr><tr><td>Pterostichus melanarius</td><td>dimorphic</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>15.5</td><td>49</td></tr></table>
 
 <!-- page 10 of 12 -->
 
-| Species | Wing morphology | Breeding season | Diet | Activity time | Mean bodylength (mm) | Species number |
-| --- | --- | --- | --- | --- | --- | --- |
-| Pterostichus femoralis | dimorphic | spring | predator | nocturnal | 6.8 | 50 |
-| Pterostichus permundus | brachypterous | autumn | predator | nocturnal | 15 | 51 |
-| Pterostichus stygicus | brachypterous | autumn | predator | nocturnal | 15.3 | 52 |
-| Scarites vicinus | macropterous | unknown | predator | nocturnal | 22 | 53 |
-| Selenophorus ellipticus | macropterous | unknown | unknown | nocturnal | 5.9 | 54 |
-| Selenophorus hylacis | macropterous | autumn | unknown | nocturnal | 6.8 | 55 |
-| Stenolophus comma | macropterous | spring | omnivore | nocturnal | 6.6 | 56 |
+<table><tr><td>Species</td><td>Wing morphology</td><td>Breeding season</td><td>Diet</td><td>Activity time</td><td>Mean bodylength (mm)</td><td>Species number</td></tr><tr><td>Pterostichus femoralis</td><td>dimorphic</td><td>spring</td><td>predator</td><td>nocturnal</td><td>6.8</td><td>50</td></tr><tr><td>Pterostichus permundus</td><td>brachypterous</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>15</td><td>51</td></tr><tr><td>Pterostichus stygicus</td><td>brachypterous</td><td>autumn</td><td>predator</td><td>nocturnal</td><td>15.3</td><td>52</td></tr><tr><td>Scarites vicinus</td><td>macropterous</td><td>unknown</td><td>predator</td><td>nocturnal</td><td>22</td><td>53</td></tr><tr><td>Selenophorus ellipticus</td><td>macropterous</td><td>unknown</td><td>unknown</td><td>nocturnal</td><td>5.9</td><td>54</td></tr><tr><td>Selenophorus hylacis</td><td>macropterous</td><td>autumn</td><td>unknown</td><td>nocturnal</td><td>6.8</td><td>55</td></tr><tr><td>Stenolophus comma</td><td>macropterous</td><td>spring</td><td>omnivore</td><td>nocturnal</td><td>6.6</td><td>56</td></tr></table>
 
 <!-- page 11 of 12 -->
 
 Figure 4. Non-metric multidimensional scaling ordination depicting species coordinat Numbers refer to species numbers in Table 7 (Supplementary materials)
 
-| ID | Category | NMDS 1 (approx) | NMDS 2 (approx) |
-| --- | --- | --- | --- |
-| 6 | Agricultural field | ~-1.35 | ~0.65 |
-| 20 | Agricultural field | ~-1.35 | ~0.60 |
-| 39 | Agricultural field | ~-1.25 | ~0.10 |
-| 38 | Agricultural field | ~-1.10 | ~-0.35 |
-| 50 | Agricultural field | ~-1.10 | ~-0.40 |
-| 56 | Agricultural field | ~-1.10 | ~-0.45 |
-| 17 | Agricultural field | ~-1.10 | ~-0.50 |
-| 18 | Agricultural field | ~-1.05 | ~-0.50 |
-| 11 | Agricultural field | ~-1.05 | ~-0.55 |
-| 43 | Agricultural field | ~-1.00 | ~-0.75 |
-| 41 | Agricultural field | ~-0.95 | ~-0.30 |
-| 47 | Agricultural field | ~-0.90 | ~-0.35 |
-| 16 | Agricultural field | ~-0.90 | ~-0.60 |
-| 10 | Agricultural field | ~-0.85 | ~-0.80 |
-| 35 | Agricultural field | ~-0.70 | ~-0.60 |
-| 40 | Agricultural field | ~-0.50 | ~-0.75 |
-| 2 | Agricultural field | ~-0.45 | ~-0.75 |
-| 23 | Agricultural field | ~-0.45 | ~-0.80 |
-| 49 | Agricultural field | ~-0.45 | ~-0.50 |
-| 13 | Agricultural field | ~-0.35 | ~-0.50 |
-| 48 | Agricultural field | ~-0.30 | ~-0.45 |
-| 26 | Agricultural field | ~-0.25 | ~-0.35 |
-| 15 | Agricultural field | ~-0.20 | ~-0.40 |
-| 36 | Agricultural field | ~-0.15 | ~-0.20 |
-| 7 | Agricultural field | ~-0.10 | ~-0.25 |
-| 5 | Agricultural field | ~-0.10 | ~-0.35 |
-| 3 | Agricultural field | ~-0.05 | ~-0.55 |
-| 27 | Agricultural field | ~-0.10 | ~0.25 |
-| 8 | Agricultural field | ~-0.10 | ~0.35 |
-| 45 | Agricultural field | ~-0.10 | ~0.15 |
-| 12 | Agricultural field | ~-0.10 | ~0.10 |
-| 53 | Agricultural field | ~-0.40 | ~0.15 |
-| 54 | Agricultural field | ~-0.35 | ~0.50 |
-| 42 | Agricultural field | ~-0.35 | ~0.45 |
-| 9 | Agricultural field | ~-0.25 | ~0.50 |
-| 22 | Agricultural field | ~-0.10 | ~0.45 |
-| 34 | Agricultural field | ~0.10 | ~0.05 |
-| 52 | Agricultural field | ~0.15 | ~-0.50 |
-| 14 | Agricultural field | ~0.20 | ~-0.40 |
-| 51 | Agricultural field | ~0.20 | ~-0.45 |
-| 32 | Agricultural field | ~0.25 | ~-0.35 |
-| 28 | Agricultural field | ~0.35 | ~0.10 |
-| 24 | Agricultural field | ~0.35 | ~0.05 |
-| 44 | Agricultural field | ~0.35 | ~-0.15 |
-| 46 | Agricultural field | ~0.35 | ~-0.20 |
-| 29 | Agricultural field | ~0.45 | ~-0.20 |
-| 33 | Agricultural field | ~0.50 | ~-0.30 |
-| 30 | Agricultural field | ~0.60 | ~-0.55 |
-| 55 | Agricultural field | ~0.60 | ~0.45 |
-| 25 | Agricultural field | ~0.75 | ~0.15 |
-| 31 | Agricultural field | ~0.80 | ~-0.10 |
-| 21 | Agricultural field | ~0.05 | ~-0.75 |
-| 19 | Agricultural field | ~-0.10 | ~-0.80 |
-| 37 | Agricultural field | ~-0.10 | ~-0.85 |
+<table><tr><td>ID</td><td>Category</td><td>NMDS 1 (approx)</td><td>NMDS 2 (approx)</td></tr><tr><td>6</td><td>Agricultural field</td><td>~-1.35</td><td>~0.65</td></tr><tr><td>20</td><td>Agricultural field</td><td>~-1.35</td><td>~0.60</td></tr><tr><td>39</td><td>Agricultural field</td><td>~-1.25</td><td>~0.10</td></tr><tr><td>38</td><td>Agricultural field</td><td>~-1.10</td><td>~-0.35</td></tr><tr><td>50</td><td>Agricultural field</td><td>~-1.10</td><td>~-0.40</td></tr><tr><td>56</td><td>Agricultural field</td><td>~-1.10</td><td>~-0.45</td></tr><tr><td>17</td><td>Agricultural field</td><td>~-1.10</td><td>~-0.50</td></tr><tr><td>18</td><td>Agricultural field</td><td>~-1.05</td><td>~-0.50</td></tr><tr><td>11</td><td>Agricultural field</td><td>~-1.05</td><td>~-0.55</td></tr><tr><td>43</td><td>Agricultural field</td><td>~-1.00</td><td>~-0.75</td></tr><tr><td>41</td><td>Agricultural field</td><td>~-0.95</td><td>~-0.30</td></tr><tr><td>47</td><td>Agricultural field</td><td>~-0.90</td><td>~-0.35</td></tr><tr><td>16</td><td>Agricultural field</td><td>~-0.90</td><td>~-0.60</td></tr><tr><td>10</td><td>Agricultural field</td><td>~-0.85</td><td>~-0.80</td></tr><tr><td>35</td><td>Agricultural field</td><td>~-0.70</td><td>~-0.60</td></tr><tr><td>40</td><td>Agricultural field</td><td>~-0.50</td><td>~-0.75</td></tr><tr><td>2</td><td>Agricultural field</td><td>~-0.45</td><td>~-0.75</td></tr><tr><td>23</td><td>Agricultural field</td><td>~-0.45</td><td>~-0.80</td></tr><tr><td>49</td><td>Agricultural field</td><td>~-0.45</td><td>~-0.50</td></tr><tr><td>13</td><td>Agricultural field</td><td>~-0.35</td><td>~-0.50</td></tr><tr><td>48</td><td>Agricultural field</td><td>~-0.30</td><td>~-0.45</td></tr><tr><td>26</td><td>Agricultural field</td><td>~-0.25</td><td>~-0.35</td></tr><tr><td>15</td><td>Agricultural field</td><td>~-0.20</td><td>~-0.40</td></tr><tr><td>36</td><td>Agricultural field</td><td>~-0.15</td><td>~-0.20</td></tr><tr><td>7</td><td>Agricultural field</td><td>~-0.10</td><td>~-0.25</td></tr><tr><td>5</td><td>Agricultural field</td><td>~-0.10</td><td>~-0.35</td></tr><tr><td>3</td><td>Agricultural field</td><td>~-0.05</td><td>~-0.55</td></tr><tr><td>27</td><td>Agricultural field</td><td>~-0.10</td><td>~0.25</td></tr><tr><td>8</td><td>Agricultural field</td><td>~-0.10</td><td>~0.35</td></tr><tr><td>45</td><td>Agricultural field</td><td>~-0.10</td><td>~0.15</td></tr><tr><td>12</td><td>Agricultural field</td><td>~-0.10</td><td>~0.10</td></tr><tr><td>53</td><td>Agricultural field</td><td>~-0.40</td><td>~0.15</td></tr><tr><td>54</td><td>Agricultural field</td><td>~-0.35</td><td>~0.50</td></tr><tr><td>42</td><td>Agricultural field</td><td>~-0.35</td><td>~0.45</td></tr><tr><td>9</td><td>Agricultural field</td><td>~-0.25</td><td>~0.50</td></tr><tr><td>22</td><td>Agricultural field</td><td>~-0.10</td><td>~0.45</td></tr><tr><td>34</td><td>Agricultural field</td><td>~0.10</td><td>~0.05</td></tr><tr><td>52</td><td>Agricultural field</td><td>~0.15</td><td>~-0.50</td></tr><tr><td>14</td><td>Agricultural field</td><td>~0.20</td><td>~-0.40</td></tr><tr><td>51</td><td>Agricultural field</td><td>~0.20</td><td>~-0.45</td></tr><tr><td>32</td><td>Agricultural field</td><td>~0.25</td><td>~-0.35</td></tr><tr><td>28</td><td>Agricultural field</td><td>~0.35</td><td>~0.10</td></tr><tr><td>24</td><td>Agricultural field</td><td>~0.35</td><td>~0.05</td></tr><tr><td>44</td><td>Agricultural field</td><td>~0.35</td><td>~-0.15</td></tr><tr><td>46</td><td>Agricultural field</td><td>~0.35</td><td>~-0.20</td></tr><tr><td>29</td><td>Agricultural field</td><td>~0.45</td><td>~-0.20</td></tr><tr><td>33</td><td>Agricultural field</td><td>~0.50</td><td>~-0.30</td></tr><tr><td>30</td><td>Agricultural field</td><td>~0.60</td><td>~-0.55</td></tr><tr><td>55</td><td>Agricultural field</td><td>~0.60</td><td>~0.45</td></tr><tr><td>25</td><td>Agricultural field</td><td>~0.75</td><td>~0.15</td></tr><tr><td>31</td><td>Agricultural field</td><td>~0.80</td><td>~-0.10</td></tr><tr><td>21</td><td>Agricultural field</td><td>~0.05</td><td>~-0.75</td></tr><tr><td>19</td><td>Agricultural field</td><td>~-0.10</td><td>~-0.80</td></tr><tr><td>37</td><td>Agricultural field</td><td>~-0.10</td><td>~-0.85</td></tr></table>
 
 <!-- page 12 of 12 -->
 

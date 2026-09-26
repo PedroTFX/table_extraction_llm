@@ -174,93 +174,43 @@ Unlike many taxa, neither the functional nor species richness of termites respon
 
 (a)
 
-| Temperature \(({}^{\circ}C)\) |
-| --- |
-| ~20 |
-| ~15 |
-| ~10 |
+<table><tr><td>Temperature \(({}^{\circ}C)\)</td></tr><tr><td>~20</td></tr><tr><td>~15</td></tr><tr><td>~10</td></tr></table>
 
 (b)
 
-| Precipitation Range (mm) | Color |
-| --- | --- |
-| >3000 | Darkest Blue |
-| 2000-3000 | Dark Blue |
-| 1500-2000 | Medium-Dark Blue |
-| 1000-1500 | Medium Blue |
-| 600-1000 | Light Blue |
-| 400-600 | Light Green |
-| 300-400 | Very Light Green |
+<table><tr><td>Precipitation Range (mm)</td><td>Color</td></tr><tr><td>&gt;3000</td><td>Darkest Blue</td></tr><tr><td>2000-3000</td><td>Dark Blue</td></tr><tr><td>1500-2000</td><td>Medium-Dark Blue</td></tr><tr><td>1000-1500</td><td>Medium Blue</td></tr><tr><td>600-1000</td><td>Light Blue</td></tr><tr><td>400-600</td><td>Light Green</td></tr><tr><td>300-400</td><td>Very Light Green</td></tr></table>
 
 (c)
 
-| Probability | Color |
-| --- | --- |
-| 0.5 | Dark Purple |
-| 0.6 | Purple |
-| 0.7 | Orange-Red |
-| 0.8 | Red-Orange |
-| 0.9 | Light Orange |
+<table><tr><td>Probability</td><td>Color</td></tr><tr><td>0.5</td><td>Dark Purple</td></tr><tr><td>0.6</td><td>Purple</td></tr><tr><td>0.7</td><td>Orange-Red</td></tr><tr><td>0.8</td><td>Red-Orange</td></tr><tr><td>0.9</td><td>Light Orange</td></tr></table>
 
 (d)
 
-| Probability Range | Color |
-| --- | --- |
-| <200 | Light Yellow |
-| 0.6 | Light Orange |
-| 0.4 | Orange-Red |
-| 0.2 | Dark Purple |
-| 0 | Dark Blue |
+<table><tr><td>Probability Range</td><td>Color</td></tr><tr><td>&lt;200</td><td>Light Yellow</td></tr><tr><td>0.6</td><td>Light Orange</td></tr><tr><td>0.4</td><td>Orange-Red</td></tr><tr><td>0.2</td><td>Dark Purple</td></tr><tr><td>0</td><td>Dark Blue</td></tr></table>
 
 (e)
 
-| Probability Range | Color |
-| --- | --- |
-| 0.6 | Light Yellow |
-| 0.4 | Orange-Red |
-| 0.2 | Purple |
-| 0 | Dark Purple |
+<table><tr><td>Probability Range</td><td>Color</td></tr><tr><td>0.6</td><td>Light Yellow</td></tr><tr><td>0.4</td><td>Orange-Red</td></tr><tr><td>0.2</td><td>Purple</td></tr><tr><td>0</td><td>Dark Purple</td></tr></table>
 
 (f)
 
-| Probability Range | Color |
-| --- | --- |
-| 0.6 | Light Yellow |
-| 0.4 | Orange-Red |
-| 0.2 | Purple |
-| 0 | Dark Purple |
+<table><tr><td>Probability Range</td><td>Color</td></tr><tr><td>0.6</td><td>Light Yellow</td></tr><tr><td>0.4</td><td>Orange-Red</td></tr><tr><td>0.2</td><td>Purple</td></tr><tr><td>0</td><td>Dark Purple</td></tr></table>
 
 (g)
 
-| Probability Range | Color Representation |
-| --- | --- |
-| 0.8 | Light Yellow/Orange |
-| 0.6 | Orange-Red |
-| 0.4 | Red-Pink |
-| 0.2 | Dark Purple/Black |
+<table><tr><td>Probability Range</td><td>Color Representation</td></tr><tr><td>0.8</td><td>Light Yellow/Orange</td></tr><tr><td>0.6</td><td>Orange-Red</td></tr><tr><td>0.4</td><td>Red-Pink</td></tr><tr><td>0.2</td><td>Dark Purple/Black</td></tr></table>
 
 (h)
 
-| Probability Range | Color |
-| --- | --- |
-| 0.1~0.5 | Dark Purple to Light Yellow |
+<table><tr><td>Probability Range</td><td>Color</td></tr><tr><td>0.1~0.5</td><td>Dark Purple to Light Yellow</td></tr></table>
 
 (i)
 
-| Probability | Color |
-| --- | --- |
-| 0.0 | Dark Purple |
-| 0.1 | Purple |
-| 0.2 | Pink |
-| 0.3 | Light Yellow |
+<table><tr><td>Probability</td><td>Color</td></tr><tr><td>0.0</td><td>Dark Purple</td></tr><tr><td>0.1</td><td>Purple</td></tr><tr><td>0.2</td><td>Pink</td></tr><tr><td>0.3</td><td>Light Yellow</td></tr></table>
 
 (i)
 
-| Probability Range | Color |
-| --- | --- |
-| 0.25~0.75 | Dark Purple to Light Yellow |
-| 0.50~0.75 | Medium-Dark Purple |
-| 0.75~1.00 | Light Orange |
+<table><tr><td>Probability Range</td><td>Color</td></tr><tr><td>0.25~0.75</td><td>Dark Purple to Light Yellow</td></tr><tr><td>0.50~0.75</td><td>Medium-Dark Purple</td></tr><tr><td>0.75~1.00</td><td>Light Orange</td></tr></table>
 
 Figure 3. (a) Mean daily temperature (°C) and (b) mean annual precipitation (mm) across Australia. Trait distribution model according to precipitation and temperature for (c) wood feeding, (d) litter feeding, (e) dung feeding, (f) grass feeding and clay content added in for (g) belowground nesting, (h) aboveground nesting, (i) outside tree nesting and (j) inside tree nesting termite species. Note that intraspecific variation is included so a species that eats both litter and dung would be included in both panels, so the proportions at each site may sum to more than 1.
 

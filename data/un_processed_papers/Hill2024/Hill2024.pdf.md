@@ -1180,26 +1180,7 @@ ZooKeys 1218: 177–230 (2024), DOI: 10.3897/zookeys.1218.133703
 
 JoVonn G. Hill: Revision of Agroecotettix
 
-| Species | Color |
-| --- | --- |
-| A. aristidus | Grey |
-| A. moorei | Light Blue |
-| A. silverheelsi | Brown |
-| A. crypsidomus | Orange |
-| A. chisonensis | Yellow-Orange |
-| A. burtoni | Yellow |
-| A. dorni | Pink |
-| A. turneri | Green |
-| A. chiantiensis | Black |
-| A. quitmanensis | Light Green |
-| A. vaquero | Brown |
-| A. forcipatus | Blue |
-| A. xiphophorus | Green |
-| A. cumbres | Yellow |
-| A. kahloae | Magenta |
-| A. idic | Cyan |
-| A. glochinos | Black |
-| A. modestus | Red |
+<table><tr><td>Species</td><td>Color</td></tr><tr><td>A. aristidus</td><td>Grey</td></tr><tr><td>A. moorei</td><td>Light Blue</td></tr><tr><td>A. silverheelsi</td><td>Brown</td></tr><tr><td>A. crypsidomus</td><td>Orange</td></tr><tr><td>A. chisonensis</td><td>Yellow-Orange</td></tr><tr><td>A. burtoni</td><td>Yellow</td></tr><tr><td>A. dorni</td><td>Pink</td></tr><tr><td>A. turneri</td><td>Green</td></tr><tr><td>A. chiantiensis</td><td>Black</td></tr><tr><td>A. quitmanensis</td><td>Light Green</td></tr><tr><td>A. vaquero</td><td>Brown</td></tr><tr><td>A. forcipatus</td><td>Blue</td></tr><tr><td>A. xiphophorus</td><td>Green</td></tr><tr><td>A. cumbres</td><td>Yellow</td></tr><tr><td>A. kahloae</td><td>Magenta</td></tr><tr><td>A. idic</td><td>Cyan</td></tr><tr><td>A. glochinos</td><td>Black</td></tr><tr><td>A. modestus</td><td>Red</td></tr></table>
 
 Figure 25. Distribution of Agroecotettix species.
 

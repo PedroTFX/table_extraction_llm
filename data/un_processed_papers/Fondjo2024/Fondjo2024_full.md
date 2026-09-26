@@ -174,20 +174,7 @@ Jeanne Agrippine Yetchom Fondjo et al.: Integrative taxonomy of the genus Pterop
 
 **Diagnosis.** Of medium size (22.5 mm; 30.0 mm); integument moderately rugous dorsally and smooth ventrally; body and legs with inconspicuous hairs; antennal organ on the fifth segment before the apex; frons oblique (\~ 45°); frontal ridge slightly curved, depressed near the median ocelli, with parallel carinae; fastigium of vertex short, triangular to hexagonal, more or less elongated, with
 
-| Species | Genetic Distance |
-| :--- | :--- |
-| Catantops stramineus | 100/1 |
-| Exopropacris modica | 99/0.97 |
-| Parapropacris notatus | 100/1 |
-| Pteropera karschi zenkeri CM-Koukoue | 91/1, 95/1, 100/1 |
-| Pteropera descampsi CM-Ongot | 89/0.78, 91/0.76, 85/0.98 |
-| Pteropera uniformis CM-Ongot | 100/1, 100/0.96 |
-| Pteropera verrucigena CM-Sohock | 100/0.96 |
-| Pteropera kennei sp. nov. CM-Somalomo (Dja) | 77/0.78, 89/0.78, 57/0.51 |
-| Pteropera carnapi CM-Deng-Deng | 50/0.69, 92/0.89, 98/1 |
-| Pteropera matzkei sp. nov. CM-Somalomo (Dja) | 92/0.50, 98/0.99 |
-| Pteropera missoupi sp. nov. CM-Ongot | 72/0.89, 100/1, 87/1, 98/1 |
-| CM-Iboti | 98/1 |
+<table><tr><td>Species</td><td>Genetic Distance</td></tr><tr><td>Catantops stramineus</td><td>100/1</td></tr><tr><td>Exopropacris modica</td><td>99/0.97</td></tr><tr><td>Parapropacris notatus</td><td>100/1</td></tr><tr><td>Pteropera karschi zenkeri CM-Koukoue</td><td>91/1, 95/1, 100/1</td></tr><tr><td>Pteropera descampsi CM-Ongot</td><td>89/0.78, 91/0.76, 85/0.98</td></tr><tr><td>Pteropera uniformis CM-Ongot</td><td>100/1, 100/0.96</td></tr><tr><td>Pteropera verrucigena CM-Sohock</td><td>100/0.96</td></tr><tr><td>Pteropera kennei sp. nov. CM-Somalomo (Dja)</td><td>77/0.78, 89/0.78, 57/0.51</td></tr><tr><td>Pteropera carnapi CM-Deng-Deng</td><td>50/0.69, 92/0.89, 98/1</td></tr><tr><td>Pteropera matzkei sp. nov. CM-Somalomo (Dja)</td><td>92/0.50, 98/0.99</td></tr><tr><td>Pteropera missoupi sp. nov. CM-Ongot</td><td>72/0.89, 100/1, 87/1, 98/1</td></tr><tr><td>CM-Iboti</td><td>98/1</td></tr></table>
 
 Figure 1. Phylogenetic tree built from the maximum likelihood (ML) and Bayesian inference (BI) analyses of the concatenated (COI/16S/12S) dataset. The numbers close to the nodes of the tree are the bootstrap support (%) and the Bayesian posterior probabilities (PP). The collection localities are also indicated preceded by CM (Cameroon).
 

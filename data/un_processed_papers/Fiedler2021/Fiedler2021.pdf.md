@@ -85,15 +85,7 @@ The current compilation comprises data on ant associates of 523 lycaenid species
 
 Nota Lepi. 44: 159–174
 
-| Category | Value |
-| --- | --- |
-| Myrmicinae | 425 |
-| Formicinae | 480 |
-| Ectatomminae | 13 |
-| Ponerinae | 2 |
-| Myrmeciinae | 2 |
-| Pseudomyrmecinae | 4 |
-| Dolichoderinae | 268 |
+<table><tr><td>Category</td><td>Value</td></tr><tr><td>Myrmicinae</td><td>425</td></tr><tr><td>Formicinae</td><td>480</td></tr><tr><td>Ectatomminae</td><td>13</td></tr><tr><td>Ponerinae</td><td>2</td></tr><tr><td>Myrmeciinae</td><td>2</td></tr><tr><td>Pseudomyrmecinae</td><td>4</td></tr><tr><td>Dolichoderinae</td><td>268</td></tr></table>
 
 Figure 2. Representation of trophobiotic ant subfamilies in myrmecophilous associations of lycaenid butterflies. Figures indicate numbers of (butterfly species × ant genus) record pairs.
 
@@ -111,23 +103,11 @@ The global species richness of the observed ant genera was positively related to
 
 Fiedler: Ant associates of lycaenid butterflies
 
-| Product | recorded in 2001 | recorded in 2021 |
-| --- | --- | --- |
-| Formica | ~35 | ~65 |
-| Pheidole | ~40 | ~60 |
-| Tapinoma | ~40 | ~70 |
-| Lasius | ~45 | ~65 |
-| Technomyrmex | ~35 | ~35 |
-| Iridomyrmex | ~35 | ~25 |
-| Camponotus | ~90 | ~145 |
-| Crematogaster | ~180 | ~220 |
+<table><tr><td>Product</td><td>recorded in 2001</td><td>recorded in 2021</td></tr><tr><td>Formica</td><td>~35</td><td>~65</td></tr><tr><td>Pheidole</td><td>~40</td><td>~60</td></tr><tr><td>Tapinoma</td><td>~40</td><td>~70</td></tr><tr><td>Lasius</td><td>~45</td><td>~65</td></tr><tr><td>Technomyrmex</td><td>~35</td><td>~35</td></tr><tr><td>Iridomyrmex</td><td>~35</td><td>~25</td></tr><tr><td>Camponotus</td><td>~90</td><td>~145</td></tr><tr><td>Crematogaster</td><td>~180</td><td>~220</td></tr></table>
 
 Figure 3. Representation of ant genera in the list of visitors or hosts of lycaenid caterpillars, comparing the 2021 with the 2001 data set. Each dot represents one ant genus. An ordinary least squares (OLS) regression line is fitted into the data cloud for visual clarity.
 
-| Number of record pairs | Year_2001 (Associated ant genera) | Year_2021 (Associated ant genera) |
-| --- | --- | --- |
-| ~800 | ~53 | — |
-| ~1200 | — | ~64 |
+<table><tr><td>Number of record pairs</td><td>Year_2001 (Associated ant genera)</td><td>Year_2021 (Associated ant genera)</td></tr><tr><td>~800</td><td>~53</td><td>—</td></tr><tr><td>~1200</td><td>—</td><td>~64</td></tr></table>
 
 Figure 4. Rarefaction-extrapolation curves for the ant genera recorded as visitors or hosts of lycaenid caterpillars, comparing the data collections from 2001 and 2021, in relation to sampling success. Solid lines: rarefaction; dashed lines: extrapolation. Symbols denote observed level of records in either year.
 
@@ -137,17 +117,7 @@ trophobiotic ant genus of the Old World tropics), Tetramorium, and Temnothorax, 
 
 Nota Lepi. 44: 159–174
 
-| Ant Species | Global richness of ant genus | Associated Lyc. species |
-| --- | --- | --- |
-| Crematogaster | ~500 | ~215 |
-| Camponotus | ~1050 | ~140 |
-| Pheidole | ~1150 | ~55 |
-| Polyrhachis | ~700 | ~30 |
-| Tetramorium | ~600 | ~30 |
-| Temnothorax | ~400 | ~5 |
-| Formica | ~200 | ~70 |
-| Tapinoma | ~100 | ~75 |
-| Lasius | ~150 | ~75 |
+<table><tr><td>Ant Species</td><td>Global richness of ant genus</td><td>Associated Lyc. species</td></tr><tr><td>Crematogaster</td><td>~500</td><td>~215</td></tr><tr><td>Camponotus</td><td>~1050</td><td>~140</td></tr><tr><td>Pheidole</td><td>~1150</td><td>~55</td></tr><tr><td>Polyrhachis</td><td>~700</td><td>~30</td></tr><tr><td>Tetramorium</td><td>~600</td><td>~30</td></tr><tr><td>Temnothorax</td><td>~400</td><td>~5</td></tr><tr><td>Formica</td><td>~200</td><td>~70</td></tr><tr><td>Tapinoma</td><td>~100</td><td>~75</td></tr><tr><td>Lasius</td><td>~150</td><td>~75</td></tr></table>
 
 Figure 5. Representation of ant genera as hosts and visitors of lycaenid caterpillars, in relation to their global species richness. Each dot represents one ant genus. An OLS regression line is fitted into the data cloud for visual clarity. Ant genera below the regression line are under-represented, while those above the regression line are over-represented in relation to their global species diversity.
 
@@ -167,43 +137,11 @@ Contrary to expectation, the diversity of ant associations was not consistently 
 
 Fiedler: Ant associates of lycaenid butterflies
 
-| Category | # Associated ant genera |
-| --- | --- |
-| facultative | ~3.1 |
-| obligate | ~1.1 |
+<table><tr><td>Category</td><td># Associated ant genera</td></tr><tr><td>facultative</td><td>~3.1</td></tr><tr><td>obligate</td><td>~1.1</td></tr></table>
 
 Figure 6. Mean number of genera of attendant ants that have been observed as visitors of facultative or as hosts of obligate myrmecophiles per Lycaenidae species. Error bars are 95% confidence intervals based on 9999 bootstrap randomizations.
 
-| Species | # Facultative associations | # Obligate associations |
-| --- | --- | --- |
-| Oecophylla | ~2 | ~18 |
-| Anonychomyrma | ~3 | ~14 |
-| Anonychomyrma | ~4 | ~10 |
-| Anonychomyrma | ~5 | ~9 |
-| Anonychomyrma | ~6 | ~4 |
-| Anonychomyrma | ~7 | ~3 |
-| Anonychomyrma | ~8 | ~2 |
-| Anonychomyrma | ~10 | ~15 |
-| Anonychomyrma | ~12 | ~19 |
-| Anonychomyrma | ~15 | ~0 |
-| Anonychomyrma | ~18 | ~0 |
-| Anonychomyrma | ~20 | ~7 |
-| Anonychomyrma | ~21 | ~3 |
-| Anonychomyrma | ~22 | ~14 |
-| Anonychomyrma | ~23 | ~9 |
-| Anonychomyrma | ~25 | ~16 |
-| Anonychomyrma | ~28 | ~0 |
-| Anonychomyrma | ~30 | ~0 |
-| Anonychomyrma | ~35 | ~0 |
-| Anonychomyrma | ~52 | ~7 |
-| Anonychomyrma | ~65 | ~3 |
-| Anonychomyrma | ~68 | ~0 |
-| Anonychomyrma | ~70 | ~4 |
-| Anonychomyrma | ~120 | ~21 |
-| Iridomyrmex | ~15 | ~0 |
-| Iridomyrmex | ~20 | ~0 |
-| Iridomyrmex | ~22 | ~16 |
-| Crematogaster | ~125 | ~90 |
+<table><tr><td>Species</td><td># Facultative associations</td><td># Obligate associations</td></tr><tr><td>Oecophylla</td><td>~2</td><td>~18</td></tr><tr><td>Anonychomyrma</td><td>~3</td><td>~14</td></tr><tr><td>Anonychomyrma</td><td>~4</td><td>~10</td></tr><tr><td>Anonychomyrma</td><td>~5</td><td>~9</td></tr><tr><td>Anonychomyrma</td><td>~6</td><td>~4</td></tr><tr><td>Anonychomyrma</td><td>~7</td><td>~3</td></tr><tr><td>Anonychomyrma</td><td>~8</td><td>~2</td></tr><tr><td>Anonychomyrma</td><td>~10</td><td>~15</td></tr><tr><td>Anonychomyrma</td><td>~12</td><td>~19</td></tr><tr><td>Anonychomyrma</td><td>~15</td><td>~0</td></tr><tr><td>Anonychomyrma</td><td>~18</td><td>~0</td></tr><tr><td>Anonychomyrma</td><td>~20</td><td>~7</td></tr><tr><td>Anonychomyrma</td><td>~21</td><td>~3</td></tr><tr><td>Anonychomyrma</td><td>~22</td><td>~14</td></tr><tr><td>Anonychomyrma</td><td>~23</td><td>~9</td></tr><tr><td>Anonychomyrma</td><td>~25</td><td>~16</td></tr><tr><td>Anonychomyrma</td><td>~28</td><td>~0</td></tr><tr><td>Anonychomyrma</td><td>~30</td><td>~0</td></tr><tr><td>Anonychomyrma</td><td>~35</td><td>~0</td></tr><tr><td>Anonychomyrma</td><td>~52</td><td>~7</td></tr><tr><td>Anonychomyrma</td><td>~65</td><td>~3</td></tr><tr><td>Anonychomyrma</td><td>~68</td><td>~0</td></tr><tr><td>Anonychomyrma</td><td>~70</td><td>~4</td></tr><tr><td>Anonychomyrma</td><td>~120</td><td>~21</td></tr><tr><td>Iridomyrmex</td><td>~15</td><td>~0</td></tr><tr><td>Iridomyrmex</td><td>~20</td><td>~0</td></tr><tr><td>Iridomyrmex</td><td>~22</td><td>~16</td></tr><tr><td>Crematogaster</td><td>~125</td><td>~90</td></tr></table>
 
 Figure 7. Representation of ant genera as hosts of obligately myrmecophilous lycaenid caterpillars, in relation to their frequency as visitors of facultative myrmecophiles. Each dot represents one ant genus. An OLS regression line is fitted into the data cloud for visual clarity. Ant genera below the regression line are under-rep resented, while those above the regression line are over-represented.
 

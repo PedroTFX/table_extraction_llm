@@ -136,16 +136,7 @@ September/October 1993
 
 TABLE 2. Mean pupation duration for various acrocerids. (SEM = standard error of the mean)
 
-| Acrocerid | Source | Pupation duration (mean days ± SEM) | n | Lab or field; mean temp. °C (if available) |
-| --- | --- | --- | --- | --- |
-| Ogcodes pallidipennis (Loew, 1866) | Present study | 7.67±5.4 | 3 | Lab 20 |
-| Ogcodes pallidipennis (Loew, 1866) | Schlinger 1960 | 6.56±1.2 | 9 | Lab — |
-| Ogcodes eugonatus (Loew, 1872) | Kaston 1937 | 5.5±0.7 | 2 | Lab — |
-| Ogcodes adaptatus (Schlinger, 1960) | Schlinger 1960 | 3.83±0.9 | 6 | Lab — |
-| Ogcodes dispar (Macquart, 1855) | Lamore 1960 | 3.4±0.6 | 5 | Lab 22 |
-| Ogcodes borealis Cole, 1919 | Present study | 4.0±0 | 2 | Lab 20 |
-| Turbopsebius diligens (Osten Sacken, 1877) | Schlinger 1952 | 9.5±1.3 | 6 | Lab 20.9 |
-| Acrocera bimaculata (Loew, 1866) | Present study | 16.87±1.4 | 8 | Field 16 |
+<table><tr><td>Acrocerid</td><td>Source</td><td>Pupation duration (mean days ± SEM)</td><td>n</td><td>Lab or field; mean temp. °C (if available)</td></tr><tr><td>Ogcodes pallidipennis (Loew, 1866)</td><td>Present study</td><td>7.67±5.4</td><td>3</td><td>Lab 20</td></tr><tr><td>Ogcodes pallidipennis (Loew, 1866)</td><td>Schlinger 1960</td><td>6.56±1.2</td><td>9</td><td>Lab —</td></tr><tr><td>Ogcodes eugonatus (Loew, 1872)</td><td>Kaston 1937</td><td>5.5±0.7</td><td>2</td><td>Lab —</td></tr><tr><td>Ogcodes adaptatus (Schlinger, 1960)</td><td>Schlinger 1960</td><td>3.83±0.9</td><td>6</td><td>Lab —</td></tr><tr><td>Ogcodes dispar (Macquart, 1855)</td><td>Lamore 1960</td><td>3.4±0.6</td><td>5</td><td>Lab 22</td></tr><tr><td>Ogcodes borealis Cole, 1919</td><td>Present study</td><td>4.0±0</td><td>2</td><td>Lab 20</td></tr><tr><td>Turbopsebius diligens (Osten Sacken, 1877)</td><td>Schlinger 1952</td><td>9.5±1.3</td><td>6</td><td>Lab 20.9</td></tr><tr><td>Acrocera bimaculata (Loew, 1866)</td><td>Present study</td><td>16.87±1.4</td><td>8</td><td>Field 16</td></tr></table>
 
 days after pupation to determine eclosion dates accurately. Thus, they spent most of their developmental time in the field. Most eclosion occurred during May (earliest = 10 May, latest = 13 June) when temperatures on the Cumberland Plateau dropped to a low of 6–12°C at night. Reported Exetasis eickstedtae pupation times varied from 27 to 60 days (von Eickstedt 1971), and 41 days was observed in this study. Vellard (1934) reported that 26 days was required for the pupation of a species of Exetasis from Grammostola actaeon (Pocock, 1903). Thus, there seems to be a relationship between the mean duration of mean temperature (Fig. 10). The longer pupation duration for the flies observed in the field was probably caused by the cooler temperatures.
 
@@ -380,13 +371,7 @@ Close-up black-and-white photo of an insect specimen, likely a bee or insect, wi
 
 FIG, 9. Prolateral view of adult acrocerid, Exetasis eickstedtae (LS photo).
 
-| Sample | Mean Temperature \(({}^{\circ}C)\) | Mean Pupation Duration (Days) |
-| --- | --- | --- |
-| (8) | ~16 | ~17 |
-| (3) | 20 | ~8 |
-| (6) | 21 | ~9 |
-| (2) | 20 | ~4 |
-| (5) | 22 | ~4 |
+<table><tr><td>Sample</td><td>Mean Temperature \(({}^{\circ}C)\)</td><td>Mean Pupation Duration (Days)</td></tr><tr><td>(8)</td><td>~16</td><td>~17</td></tr><tr><td>(3)</td><td>20</td><td>~8</td></tr><tr><td>(6)</td><td>21</td><td>~9</td></tr><tr><td>(2)</td><td>20</td><td>~4</td></tr><tr><td>(5)</td><td>22</td><td>~4</td></tr></table>
 
 Fig. 10
 

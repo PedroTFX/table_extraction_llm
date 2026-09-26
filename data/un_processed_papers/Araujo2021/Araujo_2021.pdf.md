@@ -195,14 +195,7 @@ We found that the parasite richness and the percentage of parasitism varied amon
 
 We did not find differences between the treatments in relation to the composition of the parasite species associated with the nests of solitary bees and wasps $\bar{\mathrm{PERMANOVA}}: R^{2}=0.12.$ $P   =   0 . 0 6 ;$ PERMDISP: $F = 0 . 7 5 , P = 0 . 5 8$ . However, we found
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| PA | ~0.02 | ~0.04 | ~0.065 | ~0.045 |
-| TR | ~0.16 | ~0.19 | ~0.215 | ~0.055 |
-| FR | ~0.10 | ~0.12 | ~0.145 | ~0.045 |
-| MR | ~0.14 | ~0.175 | ~0.18 | ~0.03 |
-| NR | ~0.16 | ~0.185 | ~0.215 | ~0.055 |
-| PR | ~0.20 | ~0.215 | ~0.225 | ~0.025 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>PA</td><td>~0.02</td><td>~0.04</td><td>~0.065</td><td>~0.045</td></tr><tr><td>TR</td><td>~0.16</td><td>~0.19</td><td>~0.215</td><td>~0.055</td></tr><tr><td>FR</td><td>~0.10</td><td>~0.12</td><td>~0.145</td><td>~0.045</td></tr><tr><td>MR</td><td>~0.14</td><td>~0.175</td><td>~0.18</td><td>~0.03</td></tr><tr><td>NR</td><td>~0.16</td><td>~0.185</td><td>~0.215</td><td>~0.055</td></tr><tr><td>PR</td><td>~0.20</td><td>~0.215</td><td>~0.225</td><td>~0.025</td></tr></table>
 
 Figure 2. Variation in Wasp Functional dispersion among different types of reforestation in southeast of the Amazon rainforest. Treatments: pasture (PA), teak reforestation (TR), ficus reforestation $( \operatorname { F R } ) ,$ mixed reforestation (MR), natural regeneration (NR) and primary forest (PF). Asterisks (\*) on the boxes mean significant differences $( P \leq 0 . 0 5 )$ in relation to the primary forest (our control).
 

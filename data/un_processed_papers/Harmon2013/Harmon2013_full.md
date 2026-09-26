@@ -94,15 +94,7 @@ Filtering across Spatial Scales
 
 cellsandpublicationinformation. regionalspeciespoolasdeterminedusingWilliams(1996)equalareagrid Bombusrichnessinsites, durationofsampling, Table1.Informationonlocalassemblagesincludedinanalysisincludingnameofcontributor,numberofsitesprovided,locationandsizeofareasampled,
 
-| Data contributor | Number of sites | Location | Site Size (ha) | Sampling time | Richness | Regional Species Pool | Publication |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| S. Colla | 1 | Southern Ontario | 0.4 | full transect walked | 6 | 18 | Colla and Packer(2008) |
-| E. Evans | 2 | Minnesota | 0.06 | 60–120 mins | 5–7 | 13 | unpublished |
-| R. Hatfeld | 20 | California | 0.377 | 45 mins | 2–8 | 17 | Hatfield and Lebuhn (2007) |
-| S.Hendrix | 13 | Iowa | .5–1 | 60–120 mins | 2–6 | 15 | Hendrix, Kwaiser and Heard (2010); Kwaiser and Hendrix (2008); unpublished |
-| C. Kearns | 15 | Colorado | 0.385 | variable | 2–4 | 20 | Kearns and Oliveras(2009) |
-| R. Malfi and N. Williams | 10 | Pennsylvania and New Jersey | 0.5 | 120 mins | 4–6 | 16 | unpublished |
-| A. Tripodi | 49 | Tennessee and Arkansas | .02–5 | 15–60 mins | 2–5 | 11,13 | unpublished |
+<table><tr><td>Data contributor</td><td>Number of sites</td><td>Location</td><td>Site Size (ha)</td><td>Sampling time</td><td>Richness</td><td>Regional Species Pool</td><td>Publication</td></tr><tr><td>S. Colla</td><td>1</td><td>Southern Ontario</td><td>0.4</td><td>full transect walked</td><td>6</td><td>18</td><td>Colla and Packer(2008)</td></tr><tr><td>E. Evans</td><td>2</td><td>Minnesota</td><td>0.06</td><td>60–120 mins</td><td>5–7</td><td>13</td><td>unpublished</td></tr><tr><td>R. Hatfeld</td><td>20</td><td>California</td><td>0.377</td><td>45 mins</td><td>2–8</td><td>17</td><td>Hatfield and Lebuhn (2007)</td></tr><tr><td>S.Hendrix</td><td>13</td><td>Iowa</td><td>.5–1</td><td>60–120 mins</td><td>2–6</td><td>15</td><td>Hendrix, Kwaiser and Heard (2010); Kwaiser and Hendrix (2008); unpublished</td></tr><tr><td>C. Kearns</td><td>15</td><td>Colorado</td><td>0.385</td><td>variable</td><td>2–4</td><td>20</td><td>Kearns and Oliveras(2009)</td></tr><tr><td>R. Malfi and N. Williams</td><td>10</td><td>Pennsylvania and New Jersey</td><td>0.5</td><td>120 mins</td><td>4–6</td><td>16</td><td>unpublished</td></tr><tr><td>A. Tripodi</td><td>49</td><td>Tennessee and Arkansas</td><td>.02–5</td><td>15–60 mins</td><td>2–5</td><td>11,13</td><td>unpublished</td></tr></table>
 
 doi:10.1371/journal.pone.0060446.t001
 
@@ -186,87 +178,7 @@ Filtering across Spatial Scales
 
 Tongue Length of Bumblebees
 
-| Species | Cluster |
-| :--- | :--- |
-| ardens | SF |
-| pyrenaeus | SF |
-| beaticola | SF |
-| frigidus | SF |
-| jonellus | SF |
-| cingulatus | SF |
-| mixtus | SF |
-| pratorum | SF |
-| lemniscatus | SF |
-| hypnorum | SF |
-| perplexus | SF |
-| bifarius | SF |
-| ternarius | SF |
-| huntii | SF |
-| vosnesenskii | SF |
-| impatiens | SF |
-| melanopygus | SF |
-| lapponicus | SF |
-| sylvicola | SF |
-| bimaculatus | SF |
-| monticola | SF |
-| vagans | SF |
-| centralis | SF |
-| flavifrons | SF |
-| vandykei | SF |
-| sporadicus | SF |
-| ignitus | SF |
-| terrestris | SF |
-| hypocrita | SF |
-| affinis | SF |
-| lucorum | SF |
-| patagiatus | SF |
-| occidentalis | SF |
-| terricola | SF |
-| balteatus | SF |
-| rufocinctus | SF |
-| fraternus | SF |
-| griseocolis | SF |
-| morrisoni | SF |
-| wurflenii | SF |
-| kashmirensis | SF |
-| sichelli | SF |
-| lapidarius | SF |
-| rufofasciatus | SF |
-| friseanus | SF |
-| ruderarius | LF |
-| veteranus | LF |
-| sylvarum | LF |
-| humilis | LF |
-| pascuorum | LF |
-| honshuensis | LF |
-| pseudobaicalensis | LF |
-| impetuosus | LF |
-| muscorum | LF |
-| filchnerae | LF |
-| laesus | LF |
-| atratus | LF |
-| sonorus | LF |
-| pensylvanicus | LF |
-| medius | LF |
-| bellicosus | LF |
-| californicus | LF |
-| fervidus | LF |
-| consobrinus | LF |
-| hortorum | LF |
-| ruderatus | LF |
-| supremus | LF |
-| diversus | LF |
-| subterraneus | LF |
-| distinguendus | LF |
-| appositus | LF |
-| borealis | LF |
-| haemorrhoidalis | LF |
-| soroeensis | LF |
-| confusus | LF |
-| auricomus | LF |
-| nevadensis | LF |
-| convexus | LF |
-| waltoni | LF |
+<table><tr><td>Species</td><td>Cluster</td></tr><tr><td>ardens</td><td>SF</td></tr><tr><td>pyrenaeus</td><td>SF</td></tr><tr><td>beaticola</td><td>SF</td></tr><tr><td>frigidus</td><td>SF</td></tr><tr><td>jonellus</td><td>SF</td></tr><tr><td>cingulatus</td><td>SF</td></tr><tr><td>mixtus</td><td>SF</td></tr><tr><td>pratorum</td><td>SF</td></tr><tr><td>lemniscatus</td><td>SF</td></tr><tr><td>hypnorum</td><td>SF</td></tr><tr><td>perplexus</td><td>SF</td></tr><tr><td>bifarius</td><td>SF</td></tr><tr><td>ternarius</td><td>SF</td></tr><tr><td>huntii</td><td>SF</td></tr><tr><td>vosnesenskii</td><td>SF</td></tr><tr><td>impatiens</td><td>SF</td></tr><tr><td>melanopygus</td><td>SF</td></tr><tr><td>lapponicus</td><td>SF</td></tr><tr><td>sylvicola</td><td>SF</td></tr><tr><td>bimaculatus</td><td>SF</td></tr><tr><td>monticola</td><td>SF</td></tr><tr><td>vagans</td><td>SF</td></tr><tr><td>centralis</td><td>SF</td></tr><tr><td>flavifrons</td><td>SF</td></tr><tr><td>vandykei</td><td>SF</td></tr><tr><td>sporadicus</td><td>SF</td></tr><tr><td>ignitus</td><td>SF</td></tr><tr><td>terrestris</td><td>SF</td></tr><tr><td>hypocrita</td><td>SF</td></tr><tr><td>affinis</td><td>SF</td></tr><tr><td>lucorum</td><td>SF</td></tr><tr><td>patagiatus</td><td>SF</td></tr><tr><td>occidentalis</td><td>SF</td></tr><tr><td>terricola</td><td>SF</td></tr><tr><td>balteatus</td><td>SF</td></tr><tr><td>rufocinctus</td><td>SF</td></tr><tr><td>fraternus</td><td>SF</td></tr><tr><td>griseocolis</td><td>SF</td></tr><tr><td>morrisoni</td><td>SF</td></tr><tr><td>wurflenii</td><td>SF</td></tr><tr><td>kashmirensis</td><td>SF</td></tr><tr><td>sichelli</td><td>SF</td></tr><tr><td>lapidarius</td><td>SF</td></tr><tr><td>rufofasciatus</td><td>SF</td></tr><tr><td>friseanus</td><td>SF</td></tr><tr><td>ruderarius</td><td>LF</td></tr><tr><td>veteranus</td><td>LF</td></tr><tr><td>sylvarum</td><td>LF</td></tr><tr><td>humilis</td><td>LF</td></tr><tr><td>pascuorum</td><td>LF</td></tr><tr><td>honshuensis</td><td>LF</td></tr><tr><td>pseudobaicalensis</td><td>LF</td></tr><tr><td>impetuosus</td><td>LF</td></tr><tr><td>muscorum</td><td>LF</td></tr><tr><td>filchnerae</td><td>LF</td></tr><tr><td>laesus</td><td>LF</td></tr><tr><td>atratus</td><td>LF</td></tr><tr><td>sonorus</td><td>LF</td></tr><tr><td>pensylvanicus</td><td>LF</td></tr><tr><td>medius</td><td>LF</td></tr><tr><td>bellicosus</td><td>LF</td></tr><tr><td>californicus</td><td>LF</td></tr><tr><td>fervidus</td><td>LF</td></tr><tr><td>consobrinus</td><td>LF</td></tr><tr><td>hortorum</td><td>LF</td></tr><tr><td>ruderatus</td><td>LF</td></tr><tr><td>supremus</td><td>LF</td></tr><tr><td>diversus</td><td>LF</td></tr><tr><td>subterraneus</td><td>LF</td></tr><tr><td>distinguendus</td><td>LF</td></tr><tr><td>appositus</td><td>LF</td></tr><tr><td>borealis</td><td>LF</td></tr><tr><td>haemorrhoidalis</td><td>LF</td></tr><tr><td>soroeensis</td><td>LF</td></tr><tr><td>confusus</td><td>LF</td></tr><tr><td>auricomus</td><td>LF</td></tr><tr><td>nevadensis</td><td>LF</td></tr><tr><td>convexus</td><td>LF</td></tr><tr><td>waltoni</td><td>LF</td></tr></table>
 
 Figure 1. Bi-plot of the phylogeny of species with trait values (n = 79) and the associated tongue length measured in ln(mm). Grey bars indicate species found in the Nearctic. Short faced (SF) and long faced (LF) sister clades are labeled to demonstrate the association with tongue length. Taxa labels are available in the Supplementary Table 1 with trait values. doi:10.1371/journal.pone.0060446.g001
 
@@ -418,91 +330,6 @@ March 2013 | Volume 8 | Issue 3 | e60446
 
 <!-- page 1 of 1 -->
 
-| species | subgenus | ln(tongue length) | Author(s) |
-| --- | --- | --- | --- |
-| *ardens* | Pyrobombus | 2.152 | Inoue and Yokoyama (2006) |
-| *pyrenaeus* | Pyrobombus | 1.808 | Goulson et al. (2008) |
-| *beaticola* | Pyrobombus | 2.079 | Inoue and Yokoyama (2006) |
-| *frigidus** | Pyrobombus | 1.746 | Macior (1974) |
-| *jonellus** | Pyrobombus | 1.766 | Goulson et al (2005), Ranta (1983), Goulson et al. (2008) |
-| *cingulatus* | Pyrobombus | 1.826 | Pekkarinen (1979) |
-| *mixtus** | Pyrobombus | 1.627 | Macior (1974) |
-| *pratorum* | Pyrobombus | 1.914 | Goulson et al. (2005); Ranta (1983); Goulson et al.(2008) |
-| *lemniscatus* | Pyrobombus | 1.834 | Williams et al.(2009) |
-| *hypnorum* | Pyrobombus | 1.887 | Ranta (1983); Pekkarinen (1979); Goulson et al. (2008) |
-| *perplexus** | Pyrobombus | 2.006 | Medler (1962) |
-| *bifarius** | Pyrobombus | 1.741 | Macior (1974); Medler (1962); Bowers (1985) |
-| *ternarius** | Pyrobombus | 1.779 | Medler (1962); Harder (1983) |
-| *huntii** | Pyrobombus | 1.931 | Medler (1962); Bowers (1985) |
-| *vosnesenskii** | Pyrobombus | 2.043 | Medler (1962) |
-| *impatiens** | Pyrobombus | 1.984 | Medler(1962) |
-| *melanopygus** | Pyrobombus | 1.87 | Macior (1974) |
-| *lapponicus* | Pyrobombus | 1.773 | Pekkarinen (1979) |
-| *sylvicola** | Pyrobombus | 1.756 | Macior (1974) |
-| *bimaculatus** | Pyrobombus | 2.112 | Medler(1962); Harder (1983) |
-| *monticola* | Pyrobombus | 1.892 | Goulson et al (2005); Pekkarinen (1979) |
-| *vagans** | Pyrobombus | 2.081 | Medler(1962) |
-| *centralis** | Pyrobombus | 2.022 | Macior (1974); Bowers (1985) |
-| *flavifrons** | Pyrobombus | 2.059 | Inouye (1980); Macior (1974); Bowers (1985) |
-| *vandykei** | Pyrobombus | 2.092 | Brooks MS thesis (1999) |
-| *sporadicus* | Bombus | 1.997 | Pekkarinen (1979) |
-| *ignitus* | Bombus | 2.23 | Inoue and Yokoyama (2006) |
-| *terrestris* | Bombus | 2.04 | Goulson et al. (2005); Corbet et al. (1995); Pekkarinen (1979); Goulson et al.(2008) |
-| *hypocrita* | Bombus | 2.079 | Inoue and Yokoyama (2006) |
-| *affinis** | Bombus | 1.924 | Medler (1962) |
-| *lucorum** | Bombus | 1.872 | Goulson et al. (2005); Pekkarinen (1979); Medler (1962); Goulson et al.(2008), Ranta (1983) |
-| *patagiatus* | Bombus | 1.91 | Williams et al. (2009) |
-| *occidentalis** | Bombus | 1.786 | Macior (1974); Medler (1962); Bowers (1985) |
-| *terricola** | Bombus | 1.869 | Medler (1962) |
-| *balteatus** | Alpinobombus | 2.221 | Medler (1962); Macior (1974) |
-| *rufocinctus** | Cullumanobombus | 1.882 | Medler (1962); Bowers (1985) |
-| *fraternus** | Cullumanobombus | 2.006 | Medler (1962) |
-| *griseocollis** | Cullumanobombus | 2.029 | Medler (1962) |
-| *morrisoni** | Cullumanobombus | 2.11 | Medler (1962) |
-| *wurflenii* | Alpigenobombus | 2.157 | Medler (1962); Goulson et al. (2008) |
-| *kashmirensis* | Alpigenobombus | 1.979 | Williams et al.(2009) |
-| *sichelli* | Melanobombus | 1.886 | Williams et al.(2009) |
-| *lapidarius* | Melanobombus | 1.948 | Goulson et al (2005); Ranta (1983); Corbet et al (1995); Goulson et al. (2008) |
-| *rufofasciatus* | Melanobombus | 2.124 | Williams et al.(2009) |
-| *friseanus* | Melanobombus | 2.045 | Williams et al.(2009) |
-| *ruderarius* | Thoracobombus | 2.14 | Goulson et al (2005) |
-| *veteranus* | Thoracobombus | 2.116 | Ranta (1983); Goulson et al. (2008) |
-| *sylvarum* | Thoracobombus | 2.094 | Goulson et al.(2005); Medler (1962); Goulson et al.(2008) |
-| *humilis* | Thoracobombus | 2.073 | Medler (1962); Goulson (2008) |
-| *pascuorum* | Thoracobombus | 2.079 | Goulson et al (2005); Ranta (1983); Corbet et al (1995); Pekkarinen (1979); Goulson et al. (2008) |
-| *honshuensis* | Thoracobombus | 2.256 | Inoue and Yokoyama (2006); Suzuki (2007) |
-| *pseudobaicalensis* | Thoracobombus | 2.272 | Ishii et al (2008) |
-| *impetuosus* | Thoracobombus | 2.084 | Williams et al.(2009) |
-| *muscorum* | Thoracobombus | 2.064 | Goulson et al (2005); Pekkarinen (1979) |
-| *filchnerae* | Thoracobombus | 2.117 | Williams et al.(2009) |
-| *laesus* | Thoracobombus | 1.913 | Williams et al.(2009) |
-| *atratus* | Thoracobombus | 2.128 | Arbulo et al.(2011) |
-| *sonorus** | Thoracobombus | 2.182 | Medler (1962) |
-| *pensylvanicus** | Thoracobombus | 2.269 | Medler (1962) |
-| *medius** | Thoracobombus | 2.083 | Medler (1962) |
-| *bellicosus* | Thoracobombus | 2.067 | Arbulo et al.(2011) |
-| *californicus** | Thoracobombus | 2.304 | Macior (1974) |
-| *fervidus** | Thoracobombus | 2.271 | Medler (1962) |
-| *consobrinus* | Megabombus | 2.728 | Pekkarinen (1979); Suzuki et al.(2007) |
-| *sylvestris* | Psythirus | 1.887 | Goulson (2008) |
-| *bohemicus* | Psythirus | 1.946 | Goulson (2008) |
-| *rupestris* | Psythirus | 1.946 | Goulson (2008) |
-| *campestris* | Psythirus | 1.932 | Goulson (2008) |
-| *insularis** | Psythirus | 2.102 | Macior (1974) |
-| *hortorum* | Megabombus | 2.518 | Goulson et al (2005); Ranta (1983); Corbet et al (1995); Pekkarinen (1979); Goulson et al. (2008) |
-| *ruderatus* | Megabombus | 2.416 | Goulson et al (2005); Medler (1962); Goulson et al. (2008) |
-| *supremus* | Megabombus | 2.43 | Williams et al.(2009) |
-| *diversus* | Megabombus | 2.584 | Inoue and Yokoyama (2006); Suzuki (2007) |
-| *subterraneus* | Subterraneobombus | 2.193 | Goulson et al (2005); Medler (1962) |
-| *distinguendus* | Subterraneobombus | 2.263 | Goulson et al (2005); Medler (1962); Goulson et al.(2008) |
-| *appositus** | Subterraneobombus | 2.352 | Macior (1974); Medler (1962) |
-| *borealis** | Subterraneobombus | 2.153 | Grixti et al (2009) |
-| *haemorrhoidalis* | Orientalibombus | 2.443 | Dayal and Rana(2007) |
-| *soroeensis* | Kallobombus | 1.887 | Goulson et al (2005); Medler (1962); Goulson et al. (2008) |
-| *confusus* | Bombias | 2.125 | Medler (1962) |
-| *auricomus** | Bombias | 2.38 | Medler (1962) |
-| *nevadensis** | Bombias | 2.301 | Macior (1974); Medler (1962) |
-| *convexus* | Mendacibombus | 2.292 | Williams et al.(2009) |
-| *waltoni* | Mendacibombus | 2.275 | Williams et al.(2009) |
+<table><tr><td>species</td><td>subgenus</td><td>ln(tongue length)</td><td>Author(s)</td></tr><tr><td>*ardens*</td><td>Pyrobombus</td><td>2.152</td><td>Inoue and Yokoyama (2006)</td></tr><tr><td>*pyrenaeus*</td><td>Pyrobombus</td><td>1.808</td><td>Goulson et al. (2008)</td></tr><tr><td>*beaticola*</td><td>Pyrobombus</td><td>2.079</td><td>Inoue and Yokoyama (2006)</td></tr><tr><td>*frigidus**</td><td>Pyrobombus</td><td>1.746</td><td>Macior (1974)</td></tr><tr><td>*jonellus**</td><td>Pyrobombus</td><td>1.766</td><td>Goulson et al (2005), Ranta (1983), Goulson et al. (2008)</td></tr><tr><td>*cingulatus*</td><td>Pyrobombus</td><td>1.826</td><td>Pekkarinen (1979)</td></tr><tr><td>*mixtus**</td><td>Pyrobombus</td><td>1.627</td><td>Macior (1974)</td></tr><tr><td>*pratorum*</td><td>Pyrobombus</td><td>1.914</td><td>Goulson et al. (2005); Ranta (1983); Goulson et al.(2008)</td></tr><tr><td>*lemniscatus*</td><td>Pyrobombus</td><td>1.834</td><td>Williams et al.(2009)</td></tr><tr><td>*hypnorum*</td><td>Pyrobombus</td><td>1.887</td><td>Ranta (1983); Pekkarinen (1979); Goulson et al. (2008)</td></tr><tr><td>*perplexus**</td><td>Pyrobombus</td><td>2.006</td><td>Medler (1962)</td></tr><tr><td>*bifarius**</td><td>Pyrobombus</td><td>1.741</td><td>Macior (1974); Medler (1962); Bowers (1985)</td></tr><tr><td>*ternarius**</td><td>Pyrobombus</td><td>1.779</td><td>Medler (1962); Harder (1983)</td></tr><tr><td>*huntii**</td><td>Pyrobombus</td><td>1.931</td><td>Medler (1962); Bowers (1985)</td></tr><tr><td>*vosnesenskii**</td><td>Pyrobombus</td><td>2.043</td><td>Medler (1962)</td></tr><tr><td>*impatiens**</td><td>Pyrobombus</td><td>1.984</td><td>Medler(1962)</td></tr><tr><td>*melanopygus**</td><td>Pyrobombus</td><td>1.87</td><td>Macior (1974)</td></tr><tr><td>*lapponicus*</td><td>Pyrobombus</td><td>1.773</td><td>Pekkarinen (1979)</td></tr><tr><td>*sylvicola**</td><td>Pyrobombus</td><td>1.756</td><td>Macior (1974)</td></tr><tr><td>*bimaculatus**</td><td>Pyrobombus</td><td>2.112</td><td>Medler(1962); Harder (1983)</td></tr><tr><td>*monticola*</td><td>Pyrobombus</td><td>1.892</td><td>Goulson et al (2005); Pekkarinen (1979)</td></tr><tr><td>*vagans**</td><td>Pyrobombus</td><td>2.081</td><td>Medler(1962)</td></tr><tr><td>*centralis**</td><td>Pyrobombus</td><td>2.022</td><td>Macior (1974); Bowers (1985)</td></tr><tr><td>*flavifrons**</td><td>Pyrobombus</td><td>2.059</td><td>Inouye (1980); Macior (1974); Bowers (1985)</td></tr><tr><td>*vandykei**</td><td>Pyrobombus</td><td>2.092</td><td>Brooks MS thesis (1999)</td></tr><tr><td>*sporadicus*</td><td>Bombus</td><td>1.997</td><td>Pekkarinen (1979)</td></tr><tr><td>*ignitus*</td><td>Bombus</td><td>2.23</td><td>Inoue and Yokoyama (2006)</td></tr><tr><td>*terrestris*</td><td>Bombus</td><td>2.04</td><td>Goulson et al. (2005); Corbet et al. (1995); Pekkarinen (1979); Goulson et al.(2008)</td></tr><tr><td>*hypocrita*</td><td>Bombus</td><td>2.079</td><td>Inoue and Yokoyama (2006)</td></tr><tr><td>*affinis**</td><td>Bombus</td><td>1.924</td><td>Medler (1962)</td></tr><tr><td>*lucorum**</td><td>Bombus</td><td>1.872</td><td>Goulson et al. (2005); Pekkarinen (1979); Medler (1962); Goulson et al.(2008), Ranta (1983)</td></tr><tr><td>*patagiatus*</td><td>Bombus</td><td>1.91</td><td>Williams et al. (2009)</td></tr><tr><td>*occidentalis**</td><td>Bombus</td><td>1.786</td><td>Macior (1974); Medler (1962); Bowers (1985)</td></tr><tr><td>*terricola**</td><td>Bombus</td><td>1.869</td><td>Medler (1962)</td></tr><tr><td>*balteatus**</td><td>Alpinobombus</td><td>2.221</td><td>Medler (1962); Macior (1974)</td></tr><tr><td>*rufocinctus**</td><td>Cullumanobombus</td><td>1.882</td><td>Medler (1962); Bowers (1985)</td></tr><tr><td>*fraternus**</td><td>Cullumanobombus</td><td>2.006</td><td>Medler (1962)</td></tr><tr><td>*griseocollis**</td><td>Cullumanobombus</td><td>2.029</td><td>Medler (1962)</td></tr><tr><td>*morrisoni**</td><td>Cullumanobombus</td><td>2.11</td><td>Medler (1962)</td></tr><tr><td>*wurflenii*</td><td>Alpigenobombus</td><td>2.157</td><td>Medler (1962); Goulson et al. (2008)</td></tr><tr><td>*kashmirensis*</td><td>Alpigenobombus</td><td>1.979</td><td>Williams et al.(2009)</td></tr><tr><td>*sichelli*</td><td>Melanobombus</td><td>1.886</td><td>Williams et al.(2009)</td></tr><tr><td>*lapidarius*</td><td>Melanobombus</td><td>1.948</td><td>Goulson et al (2005); Ranta (1983); Corbet et al (1995); Goulson et al. (2008)</td></tr><tr><td>*rufofasciatus*</td><td>Melanobombus</td><td>2.124</td><td>Williams et al.(2009)</td></tr><tr><td>*friseanus*</td><td>Melanobombus</td><td>2.045</td><td>Williams et al.(2009)</td></tr><tr><td>*ruderarius*</td><td>Thoracobombus</td><td>2.14</td><td>Goulson et al (2005)</td></tr><tr><td>*veteranus*</td><td>Thoracobombus</td><td>2.116</td><td>Ranta (1983); Goulson et al. (2008)</td></tr><tr><td>*sylvarum*</td><td>Thoracobombus</td><td>2.094</td><td>Goulson et al.(2005); Medler (1962); Goulson et al.(2008)</td></tr><tr><td>*humilis*</td><td>Thoracobombus</td><td>2.073</td><td>Medler (1962); Goulson (2008)</td></tr><tr><td>*pascuorum*</td><td>Thoracobombus</td><td>2.079</td><td>Goulson et al (2005); Ranta (1983); Corbet et al (1995); Pekkarinen (1979); Goulson et al. (2008)</td></tr><tr><td>*honshuensis*</td><td>Thoracobombus</td><td>2.256</td><td>Inoue and Yokoyama (2006); Suzuki (2007)</td></tr><tr><td>*pseudobaicalensis*</td><td>Thoracobombus</td><td>2.272</td><td>Ishii et al (2008)</td></tr><tr><td>*impetuosus*</td><td>Thoracobombus</td><td>2.084</td><td>Williams et al.(2009)</td></tr><tr><td>*muscorum*</td><td>Thoracobombus</td><td>2.064</td><td>Goulson et al (2005); Pekkarinen (1979)</td></tr><tr><td>*filchnerae*</td><td>Thoracobombus</td><td>2.117</td><td>Williams et al.(2009)</td></tr><tr><td>*laesus*</td><td>Thoracobombus</td><td>1.913</td><td>Williams et al.(2009)</td></tr><tr><td>*atratus*</td><td>Thoracobombus</td><td>2.128</td><td>Arbulo et al.(2011)</td></tr><tr><td>*sonorus**</td><td>Thoracobombus</td><td>2.182</td><td>Medler (1962)</td></tr><tr><td>*pensylvanicus**</td><td>Thoracobombus</td><td>2.269</td><td>Medler (1962)</td></tr><tr><td>*medius**</td><td>Thoracobombus</td><td>2.083</td><td>Medler (1962)</td></tr><tr><td>*bellicosus*</td><td>Thoracobombus</td><td>2.067</td><td>Arbulo et al.(2011)</td></tr><tr><td>*californicus**</td><td>Thoracobombus</td><td>2.304</td><td>Macior (1974)</td></tr><tr><td>*fervidus**</td><td>Thoracobombus</td><td>2.271</td><td>Medler (1962)</td></tr><tr><td>*consobrinus*</td><td>Megabombus</td><td>2.728</td><td>Pekkarinen (1979); Suzuki et al.(2007)</td></tr><tr><td>*sylvestris*</td><td>Psythirus</td><td>1.887</td><td>Goulson (2008)</td></tr><tr><td>*bohemicus*</td><td>Psythirus</td><td>1.946</td><td>Goulson (2008)</td></tr><tr><td>*rupestris*</td><td>Psythirus</td><td>1.946</td><td>Goulson (2008)</td></tr><tr><td>*campestris*</td><td>Psythirus</td><td>1.932</td><td>Goulson (2008)</td></tr><tr><td>*insularis**</td><td>Psythirus</td><td>2.102</td><td>Macior (1974)</td></tr><tr><td>*hortorum*</td><td>Megabombus</td><td>2.518</td><td>Goulson et al (2005); Ranta (1983); Corbet et al (1995); Pekkarinen (1979); Goulson et al. (2008)</td></tr><tr><td>*ruderatus*</td><td>Megabombus</td><td>2.416</td><td>Goulson et al (2005); Medler (1962); Goulson et al. (2008)</td></tr><tr><td>*supremus*</td><td>Megabombus</td><td>2.43</td><td>Williams et al.(2009)</td></tr><tr><td>*diversus*</td><td>Megabombus</td><td>2.584</td><td>Inoue and Yokoyama (2006); Suzuki (2007)</td></tr><tr><td>*subterraneus*</td><td>Subterraneobombus</td><td>2.193</td><td>Goulson et al (2005); Medler (1962)</td></tr><tr><td>*distinguendus*</td><td>Subterraneobombus</td><td>2.263</td><td>Goulson et al (2005); Medler (1962); Goulson et al.(2008)</td></tr><tr><td>*appositus**</td><td>Subterraneobombus</td><td>2.352</td><td>Macior (1974); Medler (1962)</td></tr><tr><td>*borealis**</td><td>Subterraneobombus</td><td>2.153</td><td>Grixti et al (2009)</td></tr><tr><td>*haemorrhoidalis*</td><td>Orientalibombus</td><td>2.443</td><td>Dayal and Rana(2007)</td></tr><tr><td>*soroeensis*</td><td>Kallobombus</td><td>1.887</td><td>Goulson et al (2005); Medler (1962); Goulson et al. (2008)</td></tr><tr><td>*confusus*</td><td>Bombias</td><td>2.125</td><td>Medler (1962)</td></tr><tr><td>*auricomus**</td><td>Bombias</td><td>2.38</td><td>Medler (1962)</td></tr><tr><td>*nevadensis**</td><td>Bombias</td><td>2.301</td><td>Macior (1974); Medler (1962)</td></tr><tr><td>*convexus*</td><td>Mendacibombus</td><td>2.292</td><td>Williams et al.(2009)</td></tr><tr><td>*waltoni*</td><td>Mendacibombus</td><td>2.275</td><td>Williams et al.(2009)</td></tr></table>
 
 Table S1.

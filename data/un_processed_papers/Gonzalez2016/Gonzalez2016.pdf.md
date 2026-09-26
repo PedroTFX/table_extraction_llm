@@ -76,45 +76,7 @@ Victor H. Gonzalez et al. / Journal of Hymenoptera Research 51: 241–247 (2016)
 
 Table 1. Average intertegular distance and number of specimens of each bee species collected from pan traps placed on the ground and at 70 cm above ground. Supraspecific classification follows Michener (2007).
 
-| Bee taxa | Intertegular distance (mm) | Ground | Elevated |
-| --- | --- | --- | --- |
-| FAMILY APIDAE |  |  |  |
-| Amegilla sp. | 3.50 | 0 | 1 |
-| Apis mellifera L. | 2.83 | 1 | 5 |
-| Ceratina sp. 1 | 1.27 | 4 | 1 |
-| Eucera sp. 1 | 2.60 | 0 | 1 |
-| Eucera sp. 2 | 3.05 | 0 | 1 |
-| Eucera sp. 3 | 3.50 | 0 | 1 |
-| Xylocopa iris (Christ) | 4.28 | 0 | 3 |
-| Xylocopa violacea (L.) | 6.03 | 0 | 3 |
-| FAMILY HALICTIDAE |  |  |  |
-| Halictus (Seladonia) sp. | 1.22 | 1 | 6 |
-| Halictus scabiosae (Rossi) | 3.10 | 0 | 2 |
-| Halictus sp. 1 | 1.91 | 0 | 3 |
-| Halictus sp. 2 | 1.60 | 2 | 0 |
-| Halictus sp. 3 | 1.11 | 0 | 2 |
-| Lasioglossum malachurum (Kirby) | 1.40 | 22 | 25 |
-| Lasioglossum (Evylaeus) sp. 1 | 1.53 | 1 | 3 |
-| Lasioglossum (Evylaeus) sp. 2 | 1.23 | 0 | 2 |
-| Lasioglossum (Evylaeus) sp. 3 | 1.23 | 1 | 0 |
-| Lasioglossum (Dialictus) sp.1 | 1.49 | 1 | 2 |
-| Lasioglossum (Dialictus) sp. 2 | 1.25 | 1 | 0 |
-| Lasioglossum (Dialictus) sp. 3 | 1.06 | 0 | 3 |
-| Lasioglossum (Dialictus) sp. 4 | 0.83 | 1 | 0 |
-| Lasioglossum (Dialictus) sp. 5 | 1.02 | 2 | 1 |
-| Lasioglossum (s. str) sp. 1 | 2.00 | 24 | 11 |
-| Lasioglossum (s. str) sp. 2 | 2.10 | 0 | 1 |
-| FAMILY MEGACHILIDAE |  |  |  |
-| Anthidium florentinum (Fabricius) | 3.75 | 0 | 1 |
-| Hoplitis sp. | 2.35 | 3 | 0 |
-| Hoplosmia sp. | 1.46 | 3 | 0 |
-| Lithurgus chrysurus Fonscolombe | 2.90 | 1 | 1 |
-| Osmia erythrogastra Ferton | 1.57 | 5 | 0 |
-| Osmia bidentata Morawitz | 1.63 | 1 | 0 |
-| Pseudoanthidium lituratum (Panzer) | 2.03 | 0 | 1 |
-| Total specimens |  | 74 | 80 |
-| Total species |  | 17 | 23 |
-| Simpson's Index |  | 0.80 | 0.87 |
+<table><tr><td>Bee taxa</td><td>Intertegular distance (mm)</td><td>Ground</td><td>Elevated</td></tr><tr><td>FAMILY APIDAE</td><td></td><td></td><td></td></tr><tr><td>Amegilla sp.</td><td>3.50</td><td>0</td><td>1</td></tr><tr><td>Apis mellifera L.</td><td>2.83</td><td>1</td><td>5</td></tr><tr><td>Ceratina sp. 1</td><td>1.27</td><td>4</td><td>1</td></tr><tr><td>Eucera sp. 1</td><td>2.60</td><td>0</td><td>1</td></tr><tr><td>Eucera sp. 2</td><td>3.05</td><td>0</td><td>1</td></tr><tr><td>Eucera sp. 3</td><td>3.50</td><td>0</td><td>1</td></tr><tr><td>Xylocopa iris (Christ)</td><td>4.28</td><td>0</td><td>3</td></tr><tr><td>Xylocopa violacea (L.)</td><td>6.03</td><td>0</td><td>3</td></tr><tr><td>FAMILY HALICTIDAE</td><td></td><td></td><td></td></tr><tr><td>Halictus (Seladonia) sp.</td><td>1.22</td><td>1</td><td>6</td></tr><tr><td>Halictus scabiosae (Rossi)</td><td>3.10</td><td>0</td><td>2</td></tr><tr><td>Halictus sp. 1</td><td>1.91</td><td>0</td><td>3</td></tr><tr><td>Halictus sp. 2</td><td>1.60</td><td>2</td><td>0</td></tr><tr><td>Halictus sp. 3</td><td>1.11</td><td>0</td><td>2</td></tr><tr><td>Lasioglossum malachurum (Kirby)</td><td>1.40</td><td>22</td><td>25</td></tr><tr><td>Lasioglossum (Evylaeus) sp. 1</td><td>1.53</td><td>1</td><td>3</td></tr><tr><td>Lasioglossum (Evylaeus) sp. 2</td><td>1.23</td><td>0</td><td>2</td></tr><tr><td>Lasioglossum (Evylaeus) sp. 3</td><td>1.23</td><td>1</td><td>0</td></tr><tr><td>Lasioglossum (Dialictus) sp.1</td><td>1.49</td><td>1</td><td>2</td></tr><tr><td>Lasioglossum (Dialictus) sp. 2</td><td>1.25</td><td>1</td><td>0</td></tr><tr><td>Lasioglossum (Dialictus) sp. 3</td><td>1.06</td><td>0</td><td>3</td></tr><tr><td>Lasioglossum (Dialictus) sp. 4</td><td>0.83</td><td>1</td><td>0</td></tr><tr><td>Lasioglossum (Dialictus) sp. 5</td><td>1.02</td><td>2</td><td>1</td></tr><tr><td>Lasioglossum (s. str) sp. 1</td><td>2.00</td><td>24</td><td>11</td></tr><tr><td>Lasioglossum (s. str) sp. 2</td><td>2.10</td><td>0</td><td>1</td></tr><tr><td>FAMILY MEGACHILIDAE</td><td></td><td></td><td></td></tr><tr><td>Anthidium florentinum (Fabricius)</td><td>3.75</td><td>0</td><td>1</td></tr><tr><td>Hoplitis sp.</td><td>2.35</td><td>3</td><td>0</td></tr><tr><td>Hoplosmia sp.</td><td>1.46</td><td>3</td><td>0</td></tr><tr><td>Lithurgus chrysurus Fonscolombe</td><td>2.90</td><td>1</td><td>1</td></tr><tr><td>Osmia erythrogastra Ferton</td><td>1.57</td><td>5</td><td>0</td></tr><tr><td>Osmia bidentata Morawitz</td><td>1.63</td><td>1</td><td>0</td></tr><tr><td>Pseudoanthidium lituratum (Panzer)</td><td>2.03</td><td>0</td><td>1</td></tr><tr><td>Total specimens</td><td></td><td>74</td><td>80</td></tr><tr><td>Total species</td><td></td><td>17</td><td>23</td></tr><tr><td>Simpson's Index</td><td></td><td>0.80</td><td>0.87</td></tr></table>
 
 <!-- page 5 of 7 -->
 

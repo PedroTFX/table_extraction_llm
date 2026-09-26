@@ -274,18 +274,7 @@ Insects 2022, 13, 572
 
 Table A1. Cont.
 
-| No. | Taxon | Body Size (mm) | Femur Length: Body Size | Flight Capacity | Feeding Guild | Lifestyle | Moisture Preference |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 33 | Leptophyes boscii (Fieber, 1853) | 16.12 | 1.05 | none | herbivorous | chortobiont | mesophilous |
-| 34 | Modestana modesta (Fieber, 1853) | 17.89 | 1.09 | none | omnivorous | geo-chortobiont | xerophilous |
-| 35 | Pachytrachis gracilis (Brunner von Wattenwyl, 1861) | 16.73 | 1.06 | none | omnivorous | thamnobiont | mesophilous |
-| 36 | Pachytrachis striolatus (Fieber, 1853) | 21.02 | 1.06 | none | omnivorous | thamnobiont | mesophilous |
-| 37 | Phaneroptera falcata (Poda, 1761) | 14.70 | 1.39 | full | herbivorous | thamnobiont | mesophilous |
-| 38 | Pholidoptera femorata (Fieber, 1853) | 25.69 | 0.98 | none | omnivorous | thamnobiont | mesophilous |
-| 39 | Pholidoptera griseoaptera (De Geer, 1773) | 17.32 | 1.05 | none | omnivorous | thamnobiont | mesophilous |
-| 40 | Poecilimon sp. | 16.73 | 0.91 | none | herbivorous | chortobiont | mesophilous |
-| 41 | Roeseliana roeselii (Hagenbach, 1822) | 17.32 | 0.88 | reduced | omnivorous | chortobiont | mesophilous |
-| 42 | Tettigonia viridissima (Linnaeus, 1758) | 32.62 | 0.78 | full | carnivorous | thamnobiont | mesophilous |
+<table><tr><td>No.</td><td>Taxon</td><td>Body Size (mm)</td><td>Femur Length: Body Size</td><td>Flight Capacity</td><td>Feeding Guild</td><td>Lifestyle</td><td>Moisture Preference</td></tr><tr><td>33</td><td>Leptophyes boscii (Fieber, 1853)</td><td>16.12</td><td>1.05</td><td>none</td><td>herbivorous</td><td>chortobiont</td><td>mesophilous</td></tr><tr><td>34</td><td>Modestana modesta (Fieber, 1853)</td><td>17.89</td><td>1.09</td><td>none</td><td>omnivorous</td><td>geo-chortobiont</td><td>xerophilous</td></tr><tr><td>35</td><td>Pachytrachis gracilis (Brunner von Wattenwyl, 1861)</td><td>16.73</td><td>1.06</td><td>none</td><td>omnivorous</td><td>thamnobiont</td><td>mesophilous</td></tr><tr><td>36</td><td>Pachytrachis striolatus (Fieber, 1853)</td><td>21.02</td><td>1.06</td><td>none</td><td>omnivorous</td><td>thamnobiont</td><td>mesophilous</td></tr><tr><td>37</td><td>Phaneroptera falcata (Poda, 1761)</td><td>14.70</td><td>1.39</td><td>full</td><td>herbivorous</td><td>thamnobiont</td><td>mesophilous</td></tr><tr><td>38</td><td>Pholidoptera femorata (Fieber, 1853)</td><td>25.69</td><td>0.98</td><td>none</td><td>omnivorous</td><td>thamnobiont</td><td>mesophilous</td></tr><tr><td>39</td><td>Pholidoptera griseoaptera (De Geer, 1773)</td><td>17.32</td><td>1.05</td><td>none</td><td>omnivorous</td><td>thamnobiont</td><td>mesophilous</td></tr><tr><td>40</td><td>Poecilimon sp.</td><td>16.73</td><td>0.91</td><td>none</td><td>herbivorous</td><td>chortobiont</td><td>mesophilous</td></tr><tr><td>41</td><td>Roeseliana roeselii (Hagenbach, 1822)</td><td>17.32</td><td>0.88</td><td>reduced</td><td>omnivorous</td><td>chortobiont</td><td>mesophilous</td></tr><tr><td>42</td><td>Tettigonia viridissima (Linnaeus, 1758)</td><td>32.62</td><td>0.78</td><td>full</td><td>carnivorous</td><td>thamnobiont</td><td>mesophilous</td></tr></table>
 
 <!-- page 16 of 18 -->
 

@@ -16,120 +16,53 @@ Calculation of Landscape Diversity
 
 Figures
 
-| Group | Cluster | SNH | OSR |
-| --- | --- | --- | --- |
-| FB- | east | ~5.2 | 0 |
-| FB- | east | ~5.3 | ~7 |
-| FB- | east | ~6.1 | ~10 |
-| FB- | east | ~10.8 | ~10 |
-| FB- | middle | ~8.8 | ~0.5 |
-| FB- | middle | ~9.2 | ~5 |
-| FB- | middle | ~9.3 | ~7 |
-| FB- | middle | ~14.2 | ~9 |
-| FB- | middle | ~15.2 | ~16 |
-| FB+ | east | ~5.3 | 0 |
-| FB+ | east | ~5.4 | ~14 |
-| FB+ | east | ~6.1 | ~20 |
-| FB+ | middle | ~5.3 | 0 |
-| FB+ | middle | ~5.4 | ~6 |
-| FB+ | middle | ~7.8 | ~29 |
-| FB+ | middle | ~10.8 | ~5 |
-| FB+ | middle | ~11.2 | ~6 |
-| FB+ | middle | ~13.8 | ~6 |
-| FB+ | north | ~5.3 | 0 |
-| FB+ | north | ~5.4 | ~17 |
-| FB+ | north | ~6.1 | ~18 |
-| FB+ | north | ~9.2 | ~7 |
-| FB+ | north | ~11.8 | ~4 |
-| FB+ | north | ~11.8 | ~10 |
-| FB+ | north | ~9.2 | ~30 |
+<table><tr><td>Group</td><td>Cluster</td><td>SNH</td><td>OSR</td></tr><tr><td>FB-</td><td>east</td><td>~5.2</td><td>0</td></tr><tr><td>FB-</td><td>east</td><td>~5.3</td><td>~7</td></tr><tr><td>FB-</td><td>east</td><td>~6.1</td><td>~10</td></tr><tr><td>FB-</td><td>east</td><td>~10.8</td><td>~10</td></tr><tr><td>FB-</td><td>middle</td><td>~8.8</td><td>~0.5</td></tr><tr><td>FB-</td><td>middle</td><td>~9.2</td><td>~5</td></tr><tr><td>FB-</td><td>middle</td><td>~9.3</td><td>~7</td></tr><tr><td>FB-</td><td>middle</td><td>~14.2</td><td>~9</td></tr><tr><td>FB-</td><td>middle</td><td>~15.2</td><td>~16</td></tr><tr><td>FB+</td><td>east</td><td>~5.3</td><td>0</td></tr><tr><td>FB+</td><td>east</td><td>~5.4</td><td>~14</td></tr><tr><td>FB+</td><td>east</td><td>~6.1</td><td>~20</td></tr><tr><td>FB+</td><td>middle</td><td>~5.3</td><td>0</td></tr><tr><td>FB+</td><td>middle</td><td>~5.4</td><td>~6</td></tr><tr><td>FB+</td><td>middle</td><td>~7.8</td><td>~29</td></tr><tr><td>FB+</td><td>middle</td><td>~10.8</td><td>~5</td></tr><tr><td>FB+</td><td>middle</td><td>~11.2</td><td>~6</td></tr><tr><td>FB+</td><td>middle</td><td>~13.8</td><td>~6</td></tr><tr><td>FB+</td><td>north</td><td>~5.3</td><td>0</td></tr><tr><td>FB+</td><td>north</td><td>~5.4</td><td>~17</td></tr><tr><td>FB+</td><td>north</td><td>~6.1</td><td>~18</td></tr><tr><td>FB+</td><td>north</td><td>~9.2</td><td>~7</td></tr><tr><td>FB+</td><td>north</td><td>~11.8</td><td>~4</td></tr><tr><td>FB+</td><td>north</td><td>~11.8</td><td>~10</td></tr><tr><td>FB+</td><td>north</td><td>~9.2</td><td>~30</td></tr></table>
 
 Fig. S1: Scatterplot of explanatory variables: percentage cover of semi-natural habitats (SNH) and of oilseed rape (OSR) in our 30 paired study landscapes: 15 landscapes with faba bean cultivation (FB+) and 15 without (FB-). Landscapes were situated in three different regions of Germany: east (red circles), middle (green triangles) and north (blue squares) of Germany. Mean area of OSR of our study landscapes was 7.99 m<sup>2</sup> (min: 0.00 m<sup>2</sup>, max: 30.38 m<sup>2</sup>). Mean area of SNH was 8.17 m<sup>2</sup> (min: 3.68 m<sup>2</sup>; max: 15.34 m<sup>2</sup>).
 
 <!-- page 2 of 15 -->
 
-| Plant family | early summer | mid summer | late summer |
-| :--- | :--- | :--- | :--- |
-| Rosaceae | 217 | 27 | 6 |
-| Onagraceae | — | 48 | 53 |
-| Lamiaceae | 25 | 63 | 20 |
-| Geraniaceae | 1 | 5 | 50 |
-| Fabaceae | 318 | 569 | 239 |
-| Boranginaceae | 239 | 455 | 154 |
-| Asteraceae | 17 | 254 | 348 |
-| Apiaceae | 48 | 5 | 17 |
+<table><tr><td>Plant family</td><td>early summer</td><td>mid summer</td><td>late summer</td></tr><tr><td>Rosaceae</td><td>217</td><td>27</td><td>6</td></tr><tr><td>Onagraceae</td><td>—</td><td>48</td><td>53</td></tr><tr><td>Lamiaceae</td><td>25</td><td>63</td><td>20</td></tr><tr><td>Geraniaceae</td><td>1</td><td>5</td><td>50</td></tr><tr><td>Fabaceae</td><td>318</td><td>569</td><td>239</td></tr><tr><td>Boranginaceae</td><td>239</td><td>455</td><td>154</td></tr><tr><td>Asteraceae</td><td>17</td><td>254</td><td>348</td></tr><tr><td>Apiaceae</td><td>48</td><td>5</td><td>17</td></tr></table>
 
 Fig. S2: Number of observed flower visits on the eight most visited plant families for the three different sampling runs in early summer (22.05.-19.06.), mid-summer (22.06.-20.07.) and late summer (27.07.-22.08.). Note that x-axes are sqrt-transformed for graphical reasons. Common plant species / genus in the eight most visited plant families were for example: Fabaceae: Cytisus scoparius, Lupinus polyphyllus, Medicago sativa, Trifolium incarnatum, Trifolium hybridum, Trifolium pratense, Trifolium repens. Boraginaceae: Borago officinalis, Echium vulgare, Phacelia tanacetifolia, Symphytum officinale, Myosotis spp. Asteraceae: Taraxacum officinale agg., Arctium tomentosum, Bellis perennis, Cichorium intybus, Helianthus annuus, Matricaria recutita, Tanacetum vulgare, Achillea spp., Cirsium spp. Rosaceae: Rubus idaeus, Rubus sect. Rubus, Rosa spp. Lamiaceae: Lamium album, Salvia pratensis, Stachys sylvatica. Onagraceae: Epilobium angustifolium. Apiaceae: Daucus carota, Heracleum sphondylium . Geraniaceae: Geranium spp.
 
 <!-- page 3 of 15 -->
 
-| Sites | Rarefaction |
-| --- | --- |
-| 0 | ~2 |
-| 100 | ~34 |
-| 200 | ~43 |
-| 300 | ~50 |
-| 400 | ~56 |
-| 500 | ~61 |
+<table><tr><td>Sites</td><td>Rarefaction</td></tr><tr><td>0</td><td>~2</td></tr><tr><td>100</td><td>~34</td></tr><tr><td>200</td><td>~43</td></tr><tr><td>300</td><td>~50</td></tr><tr><td>400</td><td>~56</td></tr><tr><td>500</td><td>~61</td></tr></table>
 
 Fig. S3: Rarefaction curve across all transects and study landscapes using the specaccum command of the vegan package (Oksanen et al. 2019).
 
-| Run | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| early summer | ~0.5 | 1 | ~4 |
-| mid-summer | ~0.5 | ~2.5 | ~9 |
-| late summer | ~0.5 | 1 | ~2.5 |
+<table><tr><td>Run</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>early summer</td><td>~0.5</td><td>1</td><td>~4</td></tr><tr><td>mid-summer</td><td>~0.5</td><td>~2.5</td><td>~9</td></tr><tr><td>late summer</td><td>~0.5</td><td>1</td><td>~2.5</td></tr></table>
 
 Fig. S4: Effect of sampling run on the density of bumblebees. Predicted mean values and 95% confidence intervals are displayed in red. Different letters above boxplots indicate significant differences between runs. Predictions are based on the best model m.bb1 (Table 1). Y-axis is sqrt-transformed for graphical reasons.
 
 <!-- page 4 of 15 -->
 
-| Series | Semi-natural habitats (%) (range) | Proportion of social bees (range) |
-| --- | --- | --- |
-| early summer | 4~15 | 0.25~0.85 |
-| mid-summer | 4~15 | 0.65~1.0 |
-| late summer | 4~15 | 0.6~1.0 |
+<table><tr><td>Series</td><td>Semi-natural habitats (%) (range)</td><td>Proportion of social bees (range)</td></tr><tr><td>early summer</td><td>4~15</td><td>0.25~0.85</td></tr><tr><td>mid-summer</td><td>4~15</td><td>0.65~1.0</td></tr><tr><td>late summer</td><td>4~15</td><td>0.6~1.0</td></tr></table>
 
 Fig. S5: Effect of percentage semi-natural habitats on the proportion of social bees for the different sampling runs in early, mid and late summer. Predicted mean values and 95% confidence intervals are displayed. Predictions are based on the thirdbest fitting model m.s3 (Table 1).
 
 <!-- page 5 of 15 -->
 
-| Season | Cultivation | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- | --- |
-| early summer | FB- | ~0.79 | ~0.88 | 1.0 |
-| early summer | FB+ | ~0.64 | ~0.75 | ~0.95 |
-| mid-summer | FB- | ~0.86 | ~0.93 | 1.0 |
-| mid-summer | FB+ | ~0.92 | ~0.94 | 1.0 |
-| late summer | FB- | ~0.84 | ~0.86 | 1.0 |
-| late summer | FB+ | ~0.83 | ~0.92 | 1.0 |
+<table><tr><td>Season</td><td>Cultivation</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>early summer</td><td>FB-</td><td>~0.79</td><td>~0.88</td><td>1.0</td></tr><tr><td>early summer</td><td>FB+</td><td>~0.64</td><td>~0.75</td><td>~0.95</td></tr><tr><td>mid-summer</td><td>FB-</td><td>~0.86</td><td>~0.93</td><td>1.0</td></tr><tr><td>mid-summer</td><td>FB+</td><td>~0.92</td><td>~0.94</td><td>1.0</td></tr><tr><td>late summer</td><td>FB-</td><td>~0.84</td><td>~0.86</td><td>1.0</td></tr><tr><td>late summer</td><td>FB+</td><td>~0.83</td><td>~0.92</td><td>1.0</td></tr></table>
 
 Fig. S6: Effect of faba bean cultivation on the proportion of Fabaceae foragers for the three different sampling runs in early, mid and late summer. Different letters above boxplots indicate significant differences between faba bean (FB+) and control (FB-) landscapes within each run. Predicted mean values and 95% confidence intervals are displayed in red. Predictions are based on the best fitting model m.l1 (Table 1).
 
 <!-- page 6 of 15 -->
 
-| Series | NMDS1 (range) | NMDS2 (range) |
-| --- | --- | --- |
-| FB- | -0.3~0.25 | -0.25~0.4 |
-| FB+ | -0.35~0.55 | -0.35~0.3 |
+<table><tr><td>Series</td><td>NMDS1 (range)</td><td>NMDS2 (range)</td></tr><tr><td>FB-</td><td>-0.3~0.25</td><td>-0.25~0.4</td></tr><tr><td>FB+</td><td>-0.35~0.55</td><td>-0.35~0.3</td></tr></table>
 
 Fig. S7: Changes of bee communities due to mass-flowering crop cultivation. Non-metric multidimensional scaling (NMDS) using the metaMDS and envfit functions of the vegan package (Oksanen et al. 2019) and Bray-Curtis distance was used to visualize the results of the PERMANOVA (see Table S9). Red points and ellipse show communities of landscapes without faba bean cultivation (FB-) and green points and ellipse communities of landscapes with faba bean cultivation (FB+). Each point represents one study landscape per sampling run. The vector shows direction of the landscape metrics oilseed rape (osr) cover.
 
 <!-- page 7 of 15 -->
 
-| Run | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| early summer | ~0.15 | ~0.31 | ~0.50 | ~0.35 |
-| mid-summer | ~0.22 | ~0.31 | ~0.55 | ~0.33 |
-| late summer | ~0.40 | ~0.76 | ~0.98 | ~0.58 |
+<table><tr><td>Run</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>early summer</td><td>~0.15</td><td>~0.31</td><td>~0.50</td><td>~0.35</td></tr><tr><td>mid-summer</td><td>~0.22</td><td>~0.31</td><td>~0.55</td><td>~0.33</td></tr><tr><td>late summer</td><td>~0.40</td><td>~0.76</td><td>~0.98</td><td>~0.58</td></tr></table>
 
 Fig. S8: Effect of sampling run on the proportion of long-tongued bumblebees. Predicted mean values and 95% confidence intervals are displayed in red. Different letters above boxplots indicate significant differences between runs. Predictions are based on the second-best model m.ltb2 (Table 1). Y-axis is sqrt-transformed for graphical reasons.
 
 <!-- page 8 of 15 -->
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| FB- | 0 | ~0.65 | 1 |
-| FB+ | 0 | ~0.95 | 1 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>FB-</td><td>0</td><td>~0.65</td><td>1</td></tr><tr><td>FB+</td><td>0</td><td>~0.95</td><td>1</td></tr></table>
 
 Fig. S9: Effect of faba bean cultivation on Bombus pascuorum densities. Predicted mean values and 95% confidence intervals are displayed in red. Different letters above boxplots indicate significant differences between runs. Predictions are based on the first-best model.
 
@@ -139,18 +72,7 @@ Tables
 
 Table S1: Definitions of all grassy and woody habitat types considered as semi-natural habitat (SNH) in our study.
 
-| Habitat type | Habitat category | Definition |
-| --- | --- | --- |
-| Hedge | woody | Linear woody structure; mainly shrubs; longer than wide; width ≤ 10 m |
-| Grove | woody | Areal woody structure; mainly trees; width > 10 m; not part of a larger forest patch but isolated in the arable matrix |
-| Forest edges | woody | 5 m wide strip; extends 2.5 m into and covers 2.5 m in front of a larger forest patch |
-| Succession site | woody | Areal habitat in a progressed state of succession; emerging shrubs covers most of the area |
-| Flower strip | grassy | Linear or areal habitat with flowering plants sown as an agri-environmental measurement |
-| Extensive grassland / calcareous grassland | grassy | Areal habitat; diverse, flower-rich and extensively managed grassland; no shrubs present |
-| Orchard meadows | grassy | Grass-dominated areal habitat with a stand of old fruit trees; extensively managed or abandoned |
-| Fallows | grassy | Areal fallow land; dominated by naturally occurring pioneer vegetation (e.g. Cirium spp.; Arctium spp.; Urtica dioica; Atriplex spp.) |
-| Succession site | grassy | Areal habitat in an initial state of succession; emerging shrubs are present but grassy vegetation still dominating most of the area |
-| Grass-clover leys | grassy | Areal habitat cultivated with a flower-rich grass-legume mix; mostly Trifolium spp. but also other legumes like Medicago sativa |
+<table><tr><td>Habitat type</td><td>Habitat category</td><td>Definition</td></tr><tr><td>Hedge</td><td>woody</td><td>Linear woody structure; mainly shrubs; longer than wide; width ≤ 10 m</td></tr><tr><td>Grove</td><td>woody</td><td>Areal woody structure; mainly trees; width &gt; 10 m; not part of a larger forest patch but isolated in the arable matrix</td></tr><tr><td>Forest edges</td><td>woody</td><td>5 m wide strip; extends 2.5 m into and covers 2.5 m in front of a larger forest patch</td></tr><tr><td>Succession site</td><td>woody</td><td>Areal habitat in a progressed state of succession; emerging shrubs covers most of the area</td></tr><tr><td>Flower strip</td><td>grassy</td><td>Linear or areal habitat with flowering plants sown as an agri-environmental measurement</td></tr><tr><td>Extensive grassland / calcareous grassland</td><td>grassy</td><td>Areal habitat; diverse, flower-rich and extensively managed grassland; no shrubs present</td></tr><tr><td>Orchard meadows</td><td>grassy</td><td>Grass-dominated areal habitat with a stand of old fruit trees; extensively managed or abandoned</td></tr><tr><td>Fallows</td><td>grassy</td><td>Areal fallow land; dominated by naturally occurring pioneer vegetation (e.g. Cirium spp.; Arctium spp.; Urtica dioica; Atriplex spp.)</td></tr><tr><td>Succession site</td><td>grassy</td><td>Areal habitat in an initial state of succession; emerging shrubs are present but grassy vegetation still dominating most of the area</td></tr><tr><td>Grass-clover leys</td><td>grassy</td><td>Areal habitat cultivated with a flower-rich grass-legume mix; mostly Trifolium spp. but also other legumes like Medicago sativa</td></tr></table>
 
 Table S2: Number of transects per semi-natural habitat category (grassy/woody) for every landscape and sampling run (early/mid/late summer). Woody habitat category includes hedges, groves, forest edges, woody succession sites. The grassy habitat category includes flower strips, extensive and calcareous grasslands, orchard meadows, fallows, grassy succession sites, grass/clover leys. Two landscape pairs lacked woody habitat structures and all transects had to be assigned to grassy habitats. For the first run, the number of transects per habitat category for certain landscapes was not balanced (numbers in bold). l. pair = landscape pair ID; FB = faba bean cultivation
 
@@ -158,118 +80,19 @@ Table S2: Number of transects per semi-natural habitat category (grassy/woody) f
 
 <!-- page 10 of 15 -->
 
-| middle | 9 | FB- | 4 | 2 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| middle | 9 | FB+ | 4 | 2 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 10 | FB- | 4 | 2 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 10 | FB+ | 2 | 4 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 11 | FB- | 2 | 4 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 11 | FB+ | 4 | 2 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 12 | FB- | 2 | 4 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 12 | FB+ | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 13 | FB- | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 13 | FB+ | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 14 | FB- | 4 | 2 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| middle | 14 | FB+ | 4 | 2 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| north | 1 | FB- | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| north | 1 | FB+ | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| north | 2 | FB- | 6 | 0 | 6 | 6 | 0 | 6 | 6 | 0 | 6 |
-| north | 2 | FB+ | 6 | 0 | 6 | 6 | 0 | 6 | 6 | 0 | 6 |
-| north | 7 | FB- | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| north | 7 | FB+ | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| north | 23 | FB- | 3 | 3 | 6 | 6 | 0 | 6 | 6 | 0 | 6 |
-| north | 23 | FB+ | 6 | 0 | 6 | 6 | 0 | 6 | 6 | 0 | 6 |
-| north | 24 | FB- | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
-| north | 24 | FB+ | 3 | 3 | 6 | 3 | 3 | 6 | 3 | 3 | 6 |
+<table><tr><td>middle</td><td>9</td><td>FB-</td><td>4</td><td>2</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>9</td><td>FB+</td><td>4</td><td>2</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>10</td><td>FB-</td><td>4</td><td>2</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>10</td><td>FB+</td><td>2</td><td>4</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>11</td><td>FB-</td><td>2</td><td>4</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>11</td><td>FB+</td><td>4</td><td>2</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>12</td><td>FB-</td><td>2</td><td>4</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>12</td><td>FB+</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>13</td><td>FB-</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>13</td><td>FB+</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>14</td><td>FB-</td><td>4</td><td>2</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>middle</td><td>14</td><td>FB+</td><td>4</td><td>2</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>north</td><td>1</td><td>FB-</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>north</td><td>1</td><td>FB+</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>north</td><td>2</td><td>FB-</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td></tr><tr><td>north</td><td>2</td><td>FB+</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td></tr><tr><td>north</td><td>7</td><td>FB-</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>north</td><td>7</td><td>FB+</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>north</td><td>23</td><td>FB-</td><td>3</td><td>3</td><td>6</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td></tr><tr><td>north</td><td>23</td><td>FB+</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td><td>6</td><td>0</td><td>6</td></tr><tr><td>north</td><td>24</td><td>FB-</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr><tr><td>north</td><td>24</td><td>FB+</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td><td>3</td><td>3</td><td>6</td></tr></table>
 
 Table S3: Density and functional traits of all 66 collected wild bee species. ITD: measured mean intertegular distance; foraging preference: species known to collect pollen from Fabaceae (1) or not known to do so (0). Sociality: Social species (1) or solitary species (0). Foraging preference and Sociality data is from Westrich (2018). Note that Bombus terrestris complex includes the following species: Bombus terrestris, B. lucorum, B. cryptarum and B. magnus.
 
-| species | density | ITD | foraging preference | sociality |
-| --- | --- | --- | --- | --- |
-| Andrena bicolor Fabricius 1775 | 1 | 2.10 | 0 | 0 |
-| Andrena carantonica Pérez 1902 | 4 | 2.98 | 0 | 0 |
-| Andrena chrysosceles (Kirby 1802) | 10 | 2.04 | 0 | 0 |
-| Andrena cineraria (Linnaeus 1758) | 8 | 2.94 | 0 | 0 |
-| Andrena coitana (Kirby 1802) | 1 | 1.70 | 0 | 0 |
-| Andrena flavipes Panzer 1799 | 22 | 2.50 | 1 | 0 |
-| Andrena fucata Smith 1847 | 1 | 2.60 | 0 | 0 |
-| Andrena fulva (Müller 1766) | 1 | 2.95 | 0 | 0 |
-| Andrena fulvida Schenck 1983 | 2 | 2.55 | 1 | 0 |
-| Andrena haemorrhoa (Fabricius 1781) | 15 | 2.44 | 0 | 0 |
-| Andrena helvola (Linnaeus 1758) | 2 | 2.30 | 0 | 0 |
-| Andrena labiata Fabricius 1781 | 2 | 2.30 | 0 | 0 |
-| Andrena lathyri Alfken 1899 | 5 | 2.44 | 1 | 0 |
-| Andrena minutula (Kirby 1802) | 13 | 1.38 | 0 | 0 |
-| Andrena nigroaenea (Kirby 1802) | 28 | 2.98 | 1 | 0 |
-| Andrena nitida (Müller 1776) | 7 | 2.90 | 0 | 0 |
-| Andrena nitidiuscula Schenck 1853 | 2 | NA | 1 | 0 |
-| Andrena ovatula (Kirby 1802) | 7 | 2.20 | 1 | 0 |
-| Andrena proxima (Kirby 1802) | 5 | 1.90 | 0 | 0 |
-| Andrena viridescens Viereck 1916 | 2 | 1.55 | 0 | 0 |
-| Anthidium manicatum (Linnaeus 1758) | 1 | 3.50 | 1 | 0 |
-| Anthophora furcata (Panzer 1798) | 1 | 3.40 | 0 | 0 |
-| Anthophora plumipes (Pallas 1772) | 1 | 3.70 | 1 | 0 |
-| Bombus bohemicus (Seidl 1837) | 10 | NA | NA | NA |
-| Bombus hortorum (Linnaeus 1761) | 29 | 4.20 | 1 | 1 |
-| Bombus hypnorum (Linnaeus 1758) | 10 | 3.64 | 1 | 1 |
-| Bombus lapidarius (Linnaeus 1758) | 164 | 3.70 | 1 | 1 |
-| Bombus muscorum (Linnaeus 1758) | 18 | 3.84 | 1 | 1 |
-| Bombus pascuorum (Scopoli 1763) | 328 | 4.02 | 1 | 1 |
+<table><tr><td>species</td><td>density</td><td>ITD</td><td>foraging preference</td><td>sociality</td></tr><tr><td>Andrena bicolor Fabricius 1775</td><td>1</td><td>2.10</td><td>0</td><td>0</td></tr><tr><td>Andrena carantonica Pérez 1902</td><td>4</td><td>2.98</td><td>0</td><td>0</td></tr><tr><td>Andrena chrysosceles (Kirby 1802)</td><td>10</td><td>2.04</td><td>0</td><td>0</td></tr><tr><td>Andrena cineraria (Linnaeus 1758)</td><td>8</td><td>2.94</td><td>0</td><td>0</td></tr><tr><td>Andrena coitana (Kirby 1802)</td><td>1</td><td>1.70</td><td>0</td><td>0</td></tr><tr><td>Andrena flavipes Panzer 1799</td><td>22</td><td>2.50</td><td>1</td><td>0</td></tr><tr><td>Andrena fucata Smith 1847</td><td>1</td><td>2.60</td><td>0</td><td>0</td></tr><tr><td>Andrena fulva (Müller 1766)</td><td>1</td><td>2.95</td><td>0</td><td>0</td></tr><tr><td>Andrena fulvida Schenck 1983</td><td>2</td><td>2.55</td><td>1</td><td>0</td></tr><tr><td>Andrena haemorrhoa (Fabricius 1781)</td><td>15</td><td>2.44</td><td>0</td><td>0</td></tr><tr><td>Andrena helvola (Linnaeus 1758)</td><td>2</td><td>2.30</td><td>0</td><td>0</td></tr><tr><td>Andrena labiata Fabricius 1781</td><td>2</td><td>2.30</td><td>0</td><td>0</td></tr><tr><td>Andrena lathyri Alfken 1899</td><td>5</td><td>2.44</td><td>1</td><td>0</td></tr><tr><td>Andrena minutula (Kirby 1802)</td><td>13</td><td>1.38</td><td>0</td><td>0</td></tr><tr><td>Andrena nigroaenea (Kirby 1802)</td><td>28</td><td>2.98</td><td>1</td><td>0</td></tr><tr><td>Andrena nitida (Müller 1776)</td><td>7</td><td>2.90</td><td>0</td><td>0</td></tr><tr><td>Andrena nitidiuscula Schenck 1853</td><td>2</td><td>NA</td><td>1</td><td>0</td></tr><tr><td>Andrena ovatula (Kirby 1802)</td><td>7</td><td>2.20</td><td>1</td><td>0</td></tr><tr><td>Andrena proxima (Kirby 1802)</td><td>5</td><td>1.90</td><td>0</td><td>0</td></tr><tr><td>Andrena viridescens Viereck 1916</td><td>2</td><td>1.55</td><td>0</td><td>0</td></tr><tr><td>Anthidium manicatum (Linnaeus 1758)</td><td>1</td><td>3.50</td><td>1</td><td>0</td></tr><tr><td>Anthophora furcata (Panzer 1798)</td><td>1</td><td>3.40</td><td>0</td><td>0</td></tr><tr><td>Anthophora plumipes (Pallas 1772)</td><td>1</td><td>3.70</td><td>1</td><td>0</td></tr><tr><td>Bombus bohemicus (Seidl 1837)</td><td>10</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>Bombus hortorum (Linnaeus 1761)</td><td>29</td><td>4.20</td><td>1</td><td>1</td></tr><tr><td>Bombus hypnorum (Linnaeus 1758)</td><td>10</td><td>3.64</td><td>1</td><td>1</td></tr><tr><td>Bombus lapidarius (Linnaeus 1758)</td><td>164</td><td>3.70</td><td>1</td><td>1</td></tr><tr><td>Bombus muscorum (Linnaeus 1758)</td><td>18</td><td>3.84</td><td>1</td><td>1</td></tr><tr><td>Bombus pascuorum (Scopoli 1763)</td><td>328</td><td>4.02</td><td>1</td><td>1</td></tr></table>
 
 <!-- page 11 of 15 -->
 
-| Bombus pratorum (Linnaeus 1761) | 36 | 3.60 | 1 | 1 |
-| --- | --- | --- | --- | --- |
-| Bombus ruderarius (Müller 1765) | 1 | 3.42 | 1 | 1 |
-| Bombus rupestris (Fabricius 1793) | 8 | NA | NA | NA |
-| Bombus sylvarum (Linnaeus 1761) | 10 | 3.20 | 1 | 1 |
-| Bombus sylvestris (Lepeletier 1832) | 1 | NA | NA | NA |
-| Bombus terrestris (Linnaeus 1758) complex | 399 | 3.90 | 1 | 1 |
-| Chelostoma campanularum (Kirby 1802) | 4 | NA | 0 | 0 |
-| Chelostoma florisomne (Linnaeus 1758) | 4 | 2.05 | 0 | 0 |
-| Chelostoma rapunculi (Lepeletier 1841) | 2 | 1.65 | 0 | 0 |
-| Colletes daviesanus Smith 1846 | 2 | 2.30 | 0 | 0 |
-| Dasypoda hirtipes (Fabricius 1793) | 1 | 2.90 | 0 | 0 |
-| Eucera longicornis Linnaeus 1758 | 1 | 3.60 | 1 | 0 |
-| Eucera nigrescens Perez 1879 | 2 | 3.45 | 1 | 0 |
-| Halictus quadricinctus (Fabricius 1776) | 1 | 2.85 | 0 | 0 |
-| Halictus rubicundus (Christ 1791) | 4 | 2.12 | 1 | 1 |
-| Halictus scabiosae (Rossi 1790) | 15 | 2.52 | 0 | 0 |
-| Halictus simplex Blüthgen 1923 | 4 | 1.94 | 0 | 0 |
-| Halictus tumulorum (Linnaeus 1758) | 11 | 1.42 | 1 | 1 |
-| Hylaeus communis Nylander 1852 | 4 | 1.28 | 0 | 0 |
-| Hylaeus confusus Nylander 1853 | 3 | 1.46 | 1 | 0 |
-| Hylaeus gredleri Förster 1871 | 3 | 0.97 | 0 | 0 |
-| Hylaeus styriacus Förster 1871 | 1 | NA | 0 | 0 |
-| Lasioglossum calceatum (Scopoli 1763) | 25 | 1.74 | 0 | 1 |
-| Lasioglossum fulvicorne (Kirby 1802) | 1 | 1.35 | 0 | 0 |
-| Lasioglossum leucozonium (Schrank 1781) | 4 | 1.98 | 0 | 0 |
-| Lasioglossum morio (Fabricius 1793) | 3 | 1.03 | 0 | 1 |
-| Lasioglossum pauxillum (Schenck 1853) | 70 | 1.12 | 1 | 1 |
-| Lasioglossum villosulum (Kirby 1802) | 9 | 1.40 | 0 | 0 |
-| Megachile centuncularis (Linnaeus 1758) | 2 | 3.60 | 1 | 0 |
-| Melitta haemorrhoidalis (Fabricius 1775) | 1 | NA | 0 | 0 |
-| Melitta nigricans Alfken 1905 | 1 | 2.70 | 0 | 0 |
-| Nomada flavoguttata (Kirby 1802) | 1 | NA | NA | NA |
-| Nomada furva Panzer 1798 | 2 | NA | NA | NA |
-| Osmia adunca (Panzer 1798) | 3 | 2.80 | 0 | 0 |
-| Osmia bicolor (Schrank 1781) | 1 | 2.80 | 1 | 0 |
-| Osmia bicornis (Linnaeus 1758) | 1 | 3.20 | 1 | 0 |
-| Osmia parietina Curtis 1828 | 1 | 2.00 | 1 | 0 |
+<table><tr><td>Bombus pratorum (Linnaeus 1761)</td><td>36</td><td>3.60</td><td>1</td><td>1</td></tr><tr><td>Bombus ruderarius (Müller 1765)</td><td>1</td><td>3.42</td><td>1</td><td>1</td></tr><tr><td>Bombus rupestris (Fabricius 1793)</td><td>8</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>Bombus sylvarum (Linnaeus 1761)</td><td>10</td><td>3.20</td><td>1</td><td>1</td></tr><tr><td>Bombus sylvestris (Lepeletier 1832)</td><td>1</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>Bombus terrestris (Linnaeus 1758) complex</td><td>399</td><td>3.90</td><td>1</td><td>1</td></tr><tr><td>Chelostoma campanularum (Kirby 1802)</td><td>4</td><td>NA</td><td>0</td><td>0</td></tr><tr><td>Chelostoma florisomne (Linnaeus 1758)</td><td>4</td><td>2.05</td><td>0</td><td>0</td></tr><tr><td>Chelostoma rapunculi (Lepeletier 1841)</td><td>2</td><td>1.65</td><td>0</td><td>0</td></tr><tr><td>Colletes daviesanus Smith 1846</td><td>2</td><td>2.30</td><td>0</td><td>0</td></tr><tr><td>Dasypoda hirtipes (Fabricius 1793)</td><td>1</td><td>2.90</td><td>0</td><td>0</td></tr><tr><td>Eucera longicornis Linnaeus 1758</td><td>1</td><td>3.60</td><td>1</td><td>0</td></tr><tr><td>Eucera nigrescens Perez 1879</td><td>2</td><td>3.45</td><td>1</td><td>0</td></tr><tr><td>Halictus quadricinctus (Fabricius 1776)</td><td>1</td><td>2.85</td><td>0</td><td>0</td></tr><tr><td>Halictus rubicundus (Christ 1791)</td><td>4</td><td>2.12</td><td>1</td><td>1</td></tr><tr><td>Halictus scabiosae (Rossi 1790)</td><td>15</td><td>2.52</td><td>0</td><td>0</td></tr><tr><td>Halictus simplex Blüthgen 1923</td><td>4</td><td>1.94</td><td>0</td><td>0</td></tr><tr><td>Halictus tumulorum (Linnaeus 1758)</td><td>11</td><td>1.42</td><td>1</td><td>1</td></tr><tr><td>Hylaeus communis Nylander 1852</td><td>4</td><td>1.28</td><td>0</td><td>0</td></tr><tr><td>Hylaeus confusus Nylander 1853</td><td>3</td><td>1.46</td><td>1</td><td>0</td></tr><tr><td>Hylaeus gredleri Förster 1871</td><td>3</td><td>0.97</td><td>0</td><td>0</td></tr><tr><td>Hylaeus styriacus Förster 1871</td><td>1</td><td>NA</td><td>0</td><td>0</td></tr><tr><td>Lasioglossum calceatum (Scopoli 1763)</td><td>25</td><td>1.74</td><td>0</td><td>1</td></tr><tr><td>Lasioglossum fulvicorne (Kirby 1802)</td><td>1</td><td>1.35</td><td>0</td><td>0</td></tr><tr><td>Lasioglossum leucozonium (Schrank 1781)</td><td>4</td><td>1.98</td><td>0</td><td>0</td></tr><tr><td>Lasioglossum morio (Fabricius 1793)</td><td>3</td><td>1.03</td><td>0</td><td>1</td></tr><tr><td>Lasioglossum pauxillum (Schenck 1853)</td><td>70</td><td>1.12</td><td>1</td><td>1</td></tr><tr><td>Lasioglossum villosulum (Kirby 1802)</td><td>9</td><td>1.40</td><td>0</td><td>0</td></tr><tr><td>Megachile centuncularis (Linnaeus 1758)</td><td>2</td><td>3.60</td><td>1</td><td>0</td></tr><tr><td>Melitta haemorrhoidalis (Fabricius 1775)</td><td>1</td><td>NA</td><td>0</td><td>0</td></tr><tr><td>Melitta nigricans Alfken 1905</td><td>1</td><td>2.70</td><td>0</td><td>0</td></tr><tr><td>Nomada flavoguttata (Kirby 1802)</td><td>1</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>Nomada furva Panzer 1798</td><td>2</td><td>NA</td><td>NA</td><td>NA</td></tr><tr><td>Osmia adunca (Panzer 1798)</td><td>3</td><td>2.80</td><td>0</td><td>0</td></tr><tr><td>Osmia bicolor (Schrank 1781)</td><td>1</td><td>2.80</td><td>1</td><td>0</td></tr><tr><td>Osmia bicornis (Linnaeus 1758)</td><td>1</td><td>3.20</td><td>1</td><td>0</td></tr><tr><td>Osmia parietina Curtis 1828</td><td>1</td><td>2.00</td><td>1</td><td>0</td></tr></table>
 
 Table S4: Tongue length of bumblebee species. The length of the glossa was measured, starting from the end of the paraglossa. The number of measured bumblebee individuals per species is given, as well as their mean tongue length (TL), their mean intertegular distance (ITD) and their mean relative TL (tongue length divided by ITD) (to account for body size dependent tongue length variations). According to the mean relative TL, bumblebee species were categorized into short- and long-tongued. Species with a mean relative TL equal or higher 1.43 (the mean of all values) were assigned to the long-tongued category and species with a lower value to the short-tongued group. For all ITD and tongue measurements, we used a connected microscope and the Labscope Imaging Software (ZEISS).
 
-| species | number of bumblebees | mean TL | mean ITD | mean relative TL | TL category |
-| --- | --- | --- | --- | --- | --- |
-| B. hortorum | 12 | 8.87 | 4.14 | 2.15 | long |
-| B. hypnorum | 9 | 4.30 | 3.58 | 1.20 | short |
-| B. lapidarius | 12 | 4.39 | 3.68 | 1.20 | short |
-| B. muscorum | 7 | 5.66 | 3.79 | 1.49 | long |
-| B. pascuorum | 12 | 5.58 | 3.84 | 1.47 | long |
-| B. pratorum | 12 | 4.53 | 3.73 | 1.22 | short |
-| B. ruderarius | 9 | 5.08 | 3.41 | 1.49 | long |
-| B. sylvarum | 12 | 4.56 | 3.18 | 1.43 | long |
-| B. terrestris/lucorum | 12 | 4.80 | 3.92 | 1.23 | short |
+<table><tr><td>species</td><td>number of bumblebees</td><td>mean TL</td><td>mean ITD</td><td>mean relative TL</td><td>TL category</td></tr><tr><td>B. hortorum</td><td>12</td><td>8.87</td><td>4.14</td><td>2.15</td><td>long</td></tr><tr><td>B. hypnorum</td><td>9</td><td>4.30</td><td>3.58</td><td>1.20</td><td>short</td></tr><tr><td>B. lapidarius</td><td>12</td><td>4.39</td><td>3.68</td><td>1.20</td><td>short</td></tr><tr><td>B. muscorum</td><td>7</td><td>5.66</td><td>3.79</td><td>1.49</td><td>long</td></tr><tr><td>B. pascuorum</td><td>12</td><td>5.58</td><td>3.84</td><td>1.47</td><td>long</td></tr><tr><td>B. pratorum</td><td>12</td><td>4.53</td><td>3.73</td><td>1.22</td><td>short</td></tr><tr><td>B. ruderarius</td><td>9</td><td>5.08</td><td>3.41</td><td>1.49</td><td>long</td></tr><tr><td>B. sylvarum</td><td>12</td><td>4.56</td><td>3.18</td><td>1.43</td><td>long</td></tr><tr><td>B. terrestris/lucorum</td><td>12</td><td>4.80</td><td>3.92</td><td>1.23</td><td>short</td></tr></table>
 
 <!-- page 12 of 15 -->
 
@@ -295,22 +118,15 @@ Table S7: Summary of the best fitting candidate models (dBIC<2) and null models 
 
 Table S8: The relative importance of explanatory variables expressed by Σw<sub>i</sub> (sum of BIC weights) for models to explain the effects of of faba bean cultivation, landscape metrics and honeybee densities on wild bee densities (best fitting models are shown in Table S7). Model parameters having $\Sigma w _ { i }   < 0 . 2$ for all response variables are not shown. FB: faba bean cultivation (FB+/FB-), run: sampling run (early/mid/late summer), FC: local flower cover of transect area, OSR: percentage of oilseed rape, SNH: percentage of semi-natural habitats, LD: landscape diversity.
 
-| Models | Response variable | FB | run | FC | OSR | SNH | LD | FB:FC |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| m.bb | Bumblebee density | 0.88 | 1.00 | 1.00 | - | - | - | 0.86 |
-| m.nb | Non-Bombus density | - | - | 1.00 | - | - | 0.26 | - |
+<table><tr><td>Models</td><td>Response variable</td><td>FB</td><td>run</td><td>FC</td><td>OSR</td><td>SNH</td><td>LD</td><td>FB:FC</td></tr><tr><td>m.bb</td><td>Bumblebee density</td><td>0.88</td><td>1.00</td><td>1.00</td><td>-</td><td>-</td><td>-</td><td>0.86</td></tr><tr><td>m.nb</td><td>Non-Bombus density</td><td>-</td><td>-</td><td>1.00</td><td>-</td><td>-</td><td>0.26</td><td>-</td></tr></table>
 
 Table S9: Results of permutational multivariate analysis of variance (PERMANOVA), testing the effect of mass-flowering crop cultivation on bee community composition. To test effects of mass-flowering crop cultivation on community composition, we performed a PERMANOVA using the adonis function of the vegan package (Oksanen et al., 2019) with Bray-Curtis dissimilarity and 999 permutations. Bee communities did not differ significantly between landscapes with and without faba bean cultivation. Contrastingly, oilseed rape cover of the study landscapes impacted composition of bee communities. Simper analysis (function simper of vegan package, Bray-Curtis dissimilarities) revealed that compositional differences between landscapes with a high (> 8 %) and a low cover (< 8 %) of oilseed rape were mainly caused by the common species (landscapes were split into two groups for the purpose of simper analysis based on the mean oilseed rape cover of all study landscapes). Bombus terrestris, B. pascuorum and B. lapidarius together accounted for approx. 26.9 % of the total dissimilarity between landscapes with a high and a low oilseed rape cover. For NMDS, visualizing the effects, see Fig. S7.
 
-| Mass-flowering crop | Df | Pseudo-F | $R^{2}$ | P |
-| --- | --- | --- | --- | --- |
+<table><tr><td>Mass-flowering crop</td><td>Df</td><td>Pseudo-F</td><td>$R^{2}$</td><td>P</td></tr></table>
 
 <!-- page 15 of 15 -->
 
-|  |  |  |  |  |
-| --- | --- | --- | --- | --- |
-| Faba bean cultivation | 1 | 1.767 | 0.019 | 0.063 |
-| Oilseed rape cover (%) | 1 | 2.015 | 0.022 | 0.029 |
+<table><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Faba bean cultivation</td><td>1</td><td>1.767</td><td>0.019</td><td>0.063</td></tr><tr><td>Oilseed rape cover (%)</td><td>1</td><td>2.015</td><td>0.022</td><td>0.029</td></tr></table>
 
 ## References
 

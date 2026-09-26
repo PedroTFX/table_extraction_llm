@@ -94,12 +94,7 @@ Y. Cao et al.
 
 Ecological Indicators 159 (2024) 111656
 
-| Elevation (m) | Color |
-| --- | --- |
-| High: 3096 | Blue |
-| Low: 404 | Green |
-| High: 2800 | Black |
-| Low: 1000 | Dark Gray |
+<table><tr><td>Elevation (m)</td><td>Color</td></tr><tr><td>High: 3096</td><td>Blue</td></tr><tr><td>Low: 404</td><td>Green</td></tr><tr><td>High: 2800</td><td>Black</td></tr><tr><td>Low: 1000</td><td>Dark Gray</td></tr></table>
 
 Fig. 1. Geographical locations and elevations of the Shennongjia Forestry District (A), the Dajiuhu Wetland (B) and sites of the YLC (Yangluchang Core) peat core and surface samples along diverse habitats (C).
 
@@ -135,26 +130,7 @@ Ecological Indicators 159 (2024) 111656
 
 Table 1 Basic characteristics of different habitats. The values are ranges of environmental parameters and their mean values (in the parentheses) of samples from each habitat.
 
-| Habitat | Hummock | Hollow | Ditch | Pond | Peatland pool |
-| --- | --- | --- | --- | --- | --- |
-| Sample code | Hu 1-10 | Ho11-19 | Di 20-27 | Po 28-32 | Pl 33-44 |
-| DWT (cm) | 0.00 ~11.00(6.70) | -42.00~ -1.00(-16.22) | -62.00~ -5.00(-31.75) | -70.00~ -9.00(-25.20) | -147.00~ -22.00(-74.33) |
-| LOI (%) | 29.67 ~88.66(67.81) | 8.73 ~79.47(58.71) | 9.09 ~86.85(30.21) | 8.38 ~62.39(24.77) | 4.59 ~30.59(12.16) |
-| pH | 4.94 ~7.54 (5.78) | 4.82 ~6.71(5.58) | 5.59 ~7.56(6.39) | 5.94 ~7.16(6.73) | 6.59 ~8.96(7.40) |
-| Conductivity (μS cm-1) | 20.34 ~128.00(56.44) | 9.31 ~85.30(25.74) | 14.19 ~88.50(41.30) | 20.18 ~81.60(52.84) | 65.30 ~151.10(91.06) |
-| ORP (mV) | -19.90 ~272.50(140.82) | 128.80~ 280.00(207.51) | 96.50 ~231.50(174.29) | 73.00 ~240.50(155.08) | 87.40 ~213.80(156.24) |
-| DO (mg L-1) | 0.56 ~7.12 (2.53) | 3.18 ~10.84(6.35) | 0.55 ~9.51(5.50) | 4.61 ~9.40(7.27) | 4.65 ~11.73(7.89) |
-| TOC (g kg-1) | 146.21 ~390.71(310.83) | 62.98 ~383.13(283.68) | 31.73 ~401.68(142.95) | 27.12 ~316.10(114.98) | 12.09 ~143.11(47.29) |
-| TN (g kg-1) | 11.66 ~24.20(19.24) | 3.91 ~26.35(19.39) | 3.22 ~27.50(10.48) | 3.07 ~21.74(8.74) | 1.33 ~8.34(4.33) |
-| C/N | 14.64 ~29.47(19.02) | 13.93 ~19.68(17.48) | 11.26 ~20.24(15.22) | 10.30 ~16.96(13.93) | 9.35 ~20.02(11.92) |
-| K+(mg L-1) | 0.27 ~1.90 (1.06) | 0.00 ~1.33(0.44) | 0.00 ~1.20(0.57) | 1.03 ~1.88(1.22) | 0.28 ~1.34(0.85) |
-| Ca2+(mg L-1) | 1.48 ~13.35(3.85) | 1.08 ~10.71(2.76) | -0.09 ~14.15(4.46) | 0.99 ~8.30(3.98) | 8.44 ~16.28(10.34) |
-| Na+(mg L-1) | 0.22 ~1.90 (0.59) | 0.51 ~3.02(1.32) | 0.40 ~2.59(1.24) | 0.47 ~0.75(0.61) | 0.41 ~4.46(1.29) |
-| Mg2+(mg L-1) | 0.17 ~1.50 (0.50) | 0.20 ~1.14(0.43) | 0.03 ~1.32(0.54) | 0.21 ~0.92(0.51) | 1.01 ~2.13(1.52) |
-| NO3-N (mg L-1) | 0.01 ~0.15 (0.05) | 0.01 ~0.50(0.11) | 0.01 ~0.55(0.12) | 0.00 ~0.09(0.04) | 0.00 ~0.33(0.08) |
-| NH4+-N (mg L-1) | 0.00 ~1.73 (0.20) | 0.00 ~0.46(0.13) | 0.00 ~0.25(0.13) | 0.04 ~0.15(0.11) | 0.00 ~0.78(0.18) |
-| NO2-N (mg L-1) | 0.00 ~1.26 (0.37) | 0.00 ~0.19(0.04) | 0.00 ~0.09(0.01) | 0.00 ~0.01(0.00) | 0.00 ~0.21(0.04) |
-| PO4-P (mg L-1) | 0.00 ~0.08 (0.01) | 0.00 ~0.01(0.00) | 0.00 ~0.01(0.00) | 0.01 ~0.02(0.01) | 0.00 ~0.01(0.00) |
+<table><tr><td>Habitat</td><td>Hummock</td><td>Hollow</td><td>Ditch</td><td>Pond</td><td>Peatland pool</td></tr><tr><td>Sample code</td><td>Hu 1-10</td><td>Ho11-19</td><td>Di 20-27</td><td>Po 28-32</td><td>Pl 33-44</td></tr><tr><td>DWT (cm)</td><td>0.00 ~11.00(6.70)</td><td>-42.00~ -1.00(-16.22)</td><td>-62.00~ -5.00(-31.75)</td><td>-70.00~ -9.00(-25.20)</td><td>-147.00~ -22.00(-74.33)</td></tr><tr><td>LOI (%)</td><td>29.67 ~88.66(67.81)</td><td>8.73 ~79.47(58.71)</td><td>9.09 ~86.85(30.21)</td><td>8.38 ~62.39(24.77)</td><td>4.59 ~30.59(12.16)</td></tr><tr><td>pH</td><td>4.94 ~7.54 (5.78)</td><td>4.82 ~6.71(5.58)</td><td>5.59 ~7.56(6.39)</td><td>5.94 ~7.16(6.73)</td><td>6.59 ~8.96(7.40)</td></tr><tr><td>Conductivity (μS cm-1)</td><td>20.34 ~128.00(56.44)</td><td>9.31 ~85.30(25.74)</td><td>14.19 ~88.50(41.30)</td><td>20.18 ~81.60(52.84)</td><td>65.30 ~151.10(91.06)</td></tr><tr><td>ORP (mV)</td><td>-19.90 ~272.50(140.82)</td><td>128.80~ 280.00(207.51)</td><td>96.50 ~231.50(174.29)</td><td>73.00 ~240.50(155.08)</td><td>87.40 ~213.80(156.24)</td></tr><tr><td>DO (mg L-1)</td><td>0.56 ~7.12 (2.53)</td><td>3.18 ~10.84(6.35)</td><td>0.55 ~9.51(5.50)</td><td>4.61 ~9.40(7.27)</td><td>4.65 ~11.73(7.89)</td></tr><tr><td>TOC (g kg-1)</td><td>146.21 ~390.71(310.83)</td><td>62.98 ~383.13(283.68)</td><td>31.73 ~401.68(142.95)</td><td>27.12 ~316.10(114.98)</td><td>12.09 ~143.11(47.29)</td></tr><tr><td>TN (g kg-1)</td><td>11.66 ~24.20(19.24)</td><td>3.91 ~26.35(19.39)</td><td>3.22 ~27.50(10.48)</td><td>3.07 ~21.74(8.74)</td><td>1.33 ~8.34(4.33)</td></tr><tr><td>C/N</td><td>14.64 ~29.47(19.02)</td><td>13.93 ~19.68(17.48)</td><td>11.26 ~20.24(15.22)</td><td>10.30 ~16.96(13.93)</td><td>9.35 ~20.02(11.92)</td></tr><tr><td>K+(mg L-1)</td><td>0.27 ~1.90 (1.06)</td><td>0.00 ~1.33(0.44)</td><td>0.00 ~1.20(0.57)</td><td>1.03 ~1.88(1.22)</td><td>0.28 ~1.34(0.85)</td></tr><tr><td>Ca2+(mg L-1)</td><td>1.48 ~13.35(3.85)</td><td>1.08 ~10.71(2.76)</td><td>-0.09 ~14.15(4.46)</td><td>0.99 ~8.30(3.98)</td><td>8.44 ~16.28(10.34)</td></tr><tr><td>Na+(mg L-1)</td><td>0.22 ~1.90 (0.59)</td><td>0.51 ~3.02(1.32)</td><td>0.40 ~2.59(1.24)</td><td>0.47 ~0.75(0.61)</td><td>0.41 ~4.46(1.29)</td></tr><tr><td>Mg2+(mg L-1)</td><td>0.17 ~1.50 (0.50)</td><td>0.20 ~1.14(0.43)</td><td>0.03 ~1.32(0.54)</td><td>0.21 ~0.92(0.51)</td><td>1.01 ~2.13(1.52)</td></tr><tr><td>NO3-N (mg L-1)</td><td>0.01 ~0.15 (0.05)</td><td>0.01 ~0.50(0.11)</td><td>0.01 ~0.55(0.12)</td><td>0.00 ~0.09(0.04)</td><td>0.00 ~0.33(0.08)</td></tr><tr><td>NH4+-N (mg L-1)</td><td>0.00 ~1.73 (0.20)</td><td>0.00 ~0.46(0.13)</td><td>0.00 ~0.25(0.13)</td><td>0.04 ~0.15(0.11)</td><td>0.00 ~0.78(0.18)</td></tr><tr><td>NO2-N (mg L-1)</td><td>0.00 ~1.26 (0.37)</td><td>0.00 ~0.19(0.04)</td><td>0.00 ~0.09(0.01)</td><td>0.00 ~0.01(0.00)</td><td>0.00 ~0.21(0.04)</td></tr><tr><td>PO4-P (mg L-1)</td><td>0.00 ~0.08 (0.01)</td><td>0.00 ~0.01(0.00)</td><td>0.00 ~0.01(0.00)</td><td>0.01 ~0.02(0.01)</td><td>0.00 ~0.01(0.00)</td></tr></table>
 
 ranged from 4.6 % to 88.7 % with the mean values ranging from 12.2 % to 67.8 % from pools to arid Sphagnum hummocks respectively. Among peatland samples, three sites showed unexpectedly low LOI values: one sample from a Sphagnum moss hummock (29.6 % of LOI) and two from hollows (20 % and 8 % of LOI, respectively). TOC and TN, which also represent primary production, changed in a similar trend to LOI across different habitats. Sphagnum hollows in the peatland showed the highest acidity (mean pH of 5.58), but lowest ion concentrations (mean conductivity of 25.74 μS cm− ). The details of ranges and averages for major environmental parameters in different habitats are given in Table 1.
 
@@ -184,105 +160,11 @@ Y. Cao et al.
 
 Ecological Indicators 159 (2024) 111656
 
-| ID | Soil Type | PCA axis 1 (35.7%) | PCA axis 2 (15.3%) |
-| --- | --- | --- | --- |
-| 23 | Ditch | ~0.2 | ~0.9 |
-| 38 | Pool | ~0.6 | ~0.9 |
-| 43 | Pool | ~0.7 | ~0.7 |
-| 40 | Pool | ~0.8 | ~0.6 |
-| 11 | Hollow | ~-0.2 | ~0.7 |
-| 16 | Ditch | ~-0.1 | ~0.7 |
-| 15 | Hollow | ~-0.2 | ~0.6 |
-| 19 | Hollow | ~-0.2 | ~0.6 |
-| 21 | Ditch | ~-0.1 | ~0.6 |
-| 26 | Ditch | ~-0.1 | ~0.5 |
-| 13 | Hollow | ~-0.2 | ~0.5 |
-| 14 | Hollow | ~-0.3 | ~0.5 |
-| 20 | Ditch | ~-0.3 | ~0.4 |
-| 25 | Ditch | ~-0.1 | ~0.4 |
-| 37 | Pool | ~0.8 | ~0.4 |
-| 42 | Pool | ~0.9 | ~0.4 |
-| 44 | Pool | ~0.9 | ~0.4 |
-| 39 | Pool | ~0.9 | ~0.3 |
-| 34 | Pool | ~0.6 | ~0.3 |
-| 33 | Pool | ~0.7 | ~0.3 |
-| 18 | Pool | ~0.8 | ~0.3 |
-| 41 | Pool | ~0.8 | ~0.3 |
-| 24 | Ditch | ~0.9 | ~0.3 |
-| 30 | Pool | ~0.6 | ~0.2 |
-| 31 | Pool | ~0.7 | ~0.2 |
-| 22 | Ditch | ~0.7 | ~0.2 |
-| 35 | Pool | ~0.7 | ~0.1 |
-| 36 | Pool | ~0.9 | ~0.1 |
-| 28 | Pond | ~0.4 | ~0.1 |
-| 31 | Pond | ~0.6 | ~0.1 |
-| 29 | Pond | ~0.4 | ~-0.1 |
-| 10 | Hummock | ~-0.1 | ~-0.1 |
-| 7 | Hummock | ~-0.1 | ~-0.2 |
-| 6 | Hummock | ~-0.1 | ~-0.3 |
-| 4 | Hummock | ~-0.3 | ~-0.4 |
-| 3 | Hummock | ~-0.3 | ~-0.5 |
-| 2 | Hummock | ~-0.4 | ~-0.6 |
-| 8 | Hummock | ~-0.3 | ~-0.3 |
-| 17 | Hummock | ~-0.3 | ~-0.3 |
-| 9 | Hummock | ~-0.3 | ~-0.4 |
-| 12 | Hummock | ~-0.3 | ~-0.3 |
-| 27 | Pond | ~-0.1 | ~-0.2 |
-| 1 | Hummock | ~-0.1 | ~-0.2 |
-| 25 | Ditch | ~-0.1 | ~-0.2 |
-| 14 | Hollow | ~-0.3 | ~-0.3 |
-| ORP | Hollow | ~-0.3 | ~-0.3 |
-| 20 | Ditch | ~-0.3 | ~-0.4 |
-| 29 | Pond | ~-0.1 | ~-0.5 |
-| 5 | Hummock | ~-0.1 | ~-0.8 |
-| K | Hummock | ~-0.1 | ~-0.9 |
+<table><tr><td>ID</td><td>Soil Type</td><td>PCA axis 1 (35.7%)</td><td>PCA axis 2 (15.3%)</td></tr><tr><td>23</td><td>Ditch</td><td>~0.2</td><td>~0.9</td></tr><tr><td>38</td><td>Pool</td><td>~0.6</td><td>~0.9</td></tr><tr><td>43</td><td>Pool</td><td>~0.7</td><td>~0.7</td></tr><tr><td>40</td><td>Pool</td><td>~0.8</td><td>~0.6</td></tr><tr><td>11</td><td>Hollow</td><td>~-0.2</td><td>~0.7</td></tr><tr><td>16</td><td>Ditch</td><td>~-0.1</td><td>~0.7</td></tr><tr><td>15</td><td>Hollow</td><td>~-0.2</td><td>~0.6</td></tr><tr><td>19</td><td>Hollow</td><td>~-0.2</td><td>~0.6</td></tr><tr><td>21</td><td>Ditch</td><td>~-0.1</td><td>~0.6</td></tr><tr><td>26</td><td>Ditch</td><td>~-0.1</td><td>~0.5</td></tr><tr><td>13</td><td>Hollow</td><td>~-0.2</td><td>~0.5</td></tr><tr><td>14</td><td>Hollow</td><td>~-0.3</td><td>~0.5</td></tr><tr><td>20</td><td>Ditch</td><td>~-0.3</td><td>~0.4</td></tr><tr><td>25</td><td>Ditch</td><td>~-0.1</td><td>~0.4</td></tr><tr><td>37</td><td>Pool</td><td>~0.8</td><td>~0.4</td></tr><tr><td>42</td><td>Pool</td><td>~0.9</td><td>~0.4</td></tr><tr><td>44</td><td>Pool</td><td>~0.9</td><td>~0.4</td></tr><tr><td>39</td><td>Pool</td><td>~0.9</td><td>~0.3</td></tr><tr><td>34</td><td>Pool</td><td>~0.6</td><td>~0.3</td></tr><tr><td>33</td><td>Pool</td><td>~0.7</td><td>~0.3</td></tr><tr><td>18</td><td>Pool</td><td>~0.8</td><td>~0.3</td></tr><tr><td>41</td><td>Pool</td><td>~0.8</td><td>~0.3</td></tr><tr><td>24</td><td>Ditch</td><td>~0.9</td><td>~0.3</td></tr><tr><td>30</td><td>Pool</td><td>~0.6</td><td>~0.2</td></tr><tr><td>31</td><td>Pool</td><td>~0.7</td><td>~0.2</td></tr><tr><td>22</td><td>Ditch</td><td>~0.7</td><td>~0.2</td></tr><tr><td>35</td><td>Pool</td><td>~0.7</td><td>~0.1</td></tr><tr><td>36</td><td>Pool</td><td>~0.9</td><td>~0.1</td></tr><tr><td>28</td><td>Pond</td><td>~0.4</td><td>~0.1</td></tr><tr><td>31</td><td>Pond</td><td>~0.6</td><td>~0.1</td></tr><tr><td>29</td><td>Pond</td><td>~0.4</td><td>~-0.1</td></tr><tr><td>10</td><td>Hummock</td><td>~-0.1</td><td>~-0.1</td></tr><tr><td>7</td><td>Hummock</td><td>~-0.1</td><td>~-0.2</td></tr><tr><td>6</td><td>Hummock</td><td>~-0.1</td><td>~-0.3</td></tr><tr><td>4</td><td>Hummock</td><td>~-0.3</td><td>~-0.4</td></tr><tr><td>3</td><td>Hummock</td><td>~-0.3</td><td>~-0.5</td></tr><tr><td>2</td><td>Hummock</td><td>~-0.4</td><td>~-0.6</td></tr><tr><td>8</td><td>Hummock</td><td>~-0.3</td><td>~-0.3</td></tr><tr><td>17</td><td>Hummock</td><td>~-0.3</td><td>~-0.3</td></tr><tr><td>9</td><td>Hummock</td><td>~-0.3</td><td>~-0.4</td></tr><tr><td>12</td><td>Hummock</td><td>~-0.3</td><td>~-0.3</td></tr><tr><td>27</td><td>Pond</td><td>~-0.1</td><td>~-0.2</td></tr><tr><td>1</td><td>Hummock</td><td>~-0.1</td><td>~-0.2</td></tr><tr><td>25</td><td>Ditch</td><td>~-0.1</td><td>~-0.2</td></tr><tr><td>14</td><td>Hollow</td><td>~-0.3</td><td>~-0.3</td></tr><tr><td>ORP</td><td>Hollow</td><td>~-0.3</td><td>~-0.3</td></tr><tr><td>20</td><td>Ditch</td><td>~-0.3</td><td>~-0.4</td></tr><tr><td>29</td><td>Pond</td><td>~-0.1</td><td>~-0.5</td></tr><tr><td>5</td><td>Hummock</td><td>~-0.1</td><td>~-0.8</td></tr><tr><td>K</td><td>Hummock</td><td>~-0.1</td><td>~-0.9</td></tr></table>
 
 Fig. 2. Biplot of principal component analysis (PCA) showing the environmental differences between five different habitats from all the surface samples.
 
-| Sample Code | Hu | Ho | Di | Po | Pl |
-| --- | --- | --- | --- | --- | --- |
-| 1 | — | — | — | — | — |
-| 2 | — | — | — | — | — |
-| 3 | — | — | — | — | — |
-| 4 | — | — | — | — | — |
-| 5 | — | — | — | — | — |
-| 6 | — | — | — | — | — |
-| 7 | — | — | — | — | — |
-| 8 | — | — | — | — | — |
-| 9 | — | — | — | — | — |
-| 10 | — | — | — | — | — |
-| 12 | — | — | — | — | — |
-| 13 | — | — | — | — | — |
-| 14 | — | — | — | — | — |
-| 15 | — | — | — | — | — |
-| 16 | — | — | — | — | — |
-| 17 | — | — | — | — | — |
-| 18 | — | — | — | — | — |
-| 20 | Yes | — | — | — | — |
-| 21 | — | — | — | — | — |
-| 22 | — | — | — | — | — |
-| 23 | — | — | — | — | — |
-| 24 | — | — | — | — | — |
-| 25 | — | — | — | — | — |
-| 26 | — | — | — | — | — |
-| 27 | — | — | — | — | — |
-| 28 | — | — | — | Yes | — |
-| 29 | — | — | — | — | — |
-| 30 | — | — | — | — | — |
-| 31 | — | — | — | — | — |
-| 32 | — | — | — | — | — |
-| 33 | — | — | — | — | Yes |
-| 34 | — | — | — | — | Yes |
-| 35 | — | — | — | — | Yes |
-| 36 | — | — | — | — | Yes |
-| 37 | — | — | — | — | Yes |
-| 38 | — | — | — | — | Yes |
-| 39 | — | — | — | — | Yes |
-| 40 | — | — | — | — | Yes |
-| 41 | — | — | — | — | Yes |
-| 42 | — | — | — | — | Yes |
-| 43 | — | — | — | — | Yes |
-| 44 | — | — | — | — | Yes |
+<table><tr><td>Sample Code</td><td>Hu</td><td>Ho</td><td>Di</td><td>Po</td><td>Pl</td></tr><tr><td>1</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>5</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>7</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>8</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>9</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>10</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>12</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>13</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>14</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>15</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>16</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>17</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>18</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>20</td><td>Yes</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>21</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>22</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>23</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>24</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>25</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>26</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>27</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>28</td><td>—</td><td>—</td><td>—</td><td>Yes</td><td>—</td></tr><tr><td>29</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>30</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>31</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>32</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>33</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>34</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>35</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>36</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>37</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>38</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>39</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>40</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>41</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>42</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>43</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr><tr><td>44</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr></table>
 
 Fig. 3. Percentage abundance of chironomid taxa in different habitats (samples in each habitat were ordered based on DWT, so the driest samples are at the top, and the wettest at the base). The five habitats were abbreviated as follows: Hu-Sphagnum hummock; Ho-Sphagnum hollow; Di-ditch; Po-pond; Pl-pool.
 
@@ -368,27 +250,7 @@ Ecological Indicators 159 (2024) 111656
 
 Fig. 10. Variation partitioning analyses revealed the unique and shared variations (%) of three significant environmental factors on taxonomic (A) and functional trait (B) compositions.
 
-| Year | Date(CE) | Psilometriocnemus | Pseudosmitia | Limnophyes | Polypedilum bergi-type | Tanylarus mendax-type | M5 | M12 | M15 | CG | Size1 | Size2 | Sprawler | Burrower | Climber | PC-Taxonomy | PC-Morphological type** | PC-Feeding group** | PC-Size* | PC-Habit** | PC-Trait** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2010 | 12~72 | Yes | No | No | No | No | No | Yes | Yes | Yes | Yes | No | Yes | Yes | No | No | No | No | No | No | No |
-| 1990 | 12~72 | Yes | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1970 | 12~72 | Yes | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1950 | 12~72 | Yes | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1930 | 12~72 | Yes | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1910 | 12~72 | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| 1890 | 12~72 | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No | No |
-| 1870 | 12~72 | Yes | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1850 | 12~72 | No | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1830 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1810 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1790 | 12~72 | Yes | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1770 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1750 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1730 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1710 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1690 | 12~72 | Yes | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1670 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
-| 1650 | 12~72 | No | No | No | No | No | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | No | No | No | No | No | No |
+<table><tr><td>Year</td><td>Date(CE)</td><td>Psilometriocnemus</td><td>Pseudosmitia</td><td>Limnophyes</td><td>Polypedilum bergi-type</td><td>Tanylarus mendax-type</td><td>M5</td><td>M12</td><td>M15</td><td>CG</td><td>Size1</td><td>Size2</td><td>Sprawler</td><td>Burrower</td><td>Climber</td><td>PC-Taxonomy</td><td>PC-Morphological type**</td><td>PC-Feeding group**</td><td>PC-Size*</td><td>PC-Habit**</td><td>PC-Trait**</td></tr><tr><td>2010</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1990</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1970</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1950</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1930</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1910</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1890</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1870</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1850</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1830</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1810</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1790</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1770</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1750</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1730</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1710</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1690</td><td>12~72</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1670</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr><tr><td>1650</td><td>12~72</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td></tr></table>
 
 Fig. 11. Stratigraphy of major taxonomic and trait components of chironomid communities in the YLC peat core, and scores of the PC1 axis and the relations between traits and taxonomy-based PCs. Statistically significant relationships with a p value less than 0.05 or 0.01 were represented by symbol \* and \*\*, respectively. The period covered with a grey bar has no data.
 
@@ -416,21 +278,7 @@ Water level is an important environmental filter for biotic communities in both 
 
 An orthogonal relationship was identified between $\mathrm { K } ^ { + }$ and variables of LOI and DWT (Fig. 12), suggesting that $\mathrm { K } ^ { + }$ is independent of the other two parameters, and hence it may be related to the mineral type that is influencing the chironomid communities. Potassium mostly exists in the lattice of aluminosilicate minerals (mainly feldspars and micas) in the form of ions, but it is generally difficult to be released naturally. The catchment area of the Dajiuhu Wetland is mostly composed of
 
-| | LOI | TN | TOC | C/N | DWT | K | pH | Cond. | ORP | DO | Na | Mg | Ca |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| LOI | — | *** | *** | *** | *** | — | — | — | — | — | — | — | — |
-| TN | 0.96 | — | *** | *** | *** | — | — | — | — | — | — | — | — |
-| TOC | 0.98 | 0.96 | — | *** | *** | — | — | — | — | — | — | — | — |
-| C/N | 0.70 | 0.63 | 0.76 | C/N | *** | — | — | — | — | — | — | — | — |
-| DWT | 0.65 | 0.60 | 0.64 | 0.58 | DWT | — | — | — | — | — | — | — | — |
-| K | 0.079 | -0.048 | -0.12 | -0.073 | 0.15 | K | — | ** | — | — | — | * | ** |
-| pH | -0.80 | -0.76 | -0.81 | -0.64 | -0.57 | 0.067 | pH | *** | *** | ** | — | *** | *** |
-| Cond. | -0.63 | -0.63 | -0.67 | -0.48 | -0.25 | 0.41 | 0.64 | Cond. | *** | — | — | *** | *** |
-| ORP | 0.39 | 0.38 | 0.43 | 0.27 | -0.095 | -0.20 | -0.51 | -0.60 | ORP | — | — | ** | *** |
-| DO | -0.56 | -0.51 | -0.51 | -0.35 | -0.58 | 0.030 | 0.44 | 0.097 | 0.028 | DO | — | — | — |
-| Na | -0.30 | -0.22 | -0.23 | -0.18 | -0.28 | -0.20 | -0.045 | -0.095 | 0.088 | 0.20 | Na | — | — |
-| Mg | -0.68 | -0.64 | -0.70 | -0.56 | -0.40 | 0.32 | 0.64 | 0.79 | -0.46 | 0.14 | 0.24 | Mg | *** |
-| Ca | -0.65 | -0.64 | -0.67 | -0.51 | -0.28 | 0.43 | 0.63 | 0.87 | -0.53 | 0.20 | 0.11 | 0.87 | Ca |
+<table><tr><td></td><td>LOI</td><td>TN</td><td>TOC</td><td>C/N</td><td>DWT</td><td>K</td><td>pH</td><td>Cond.</td><td>ORP</td><td>DO</td><td>Na</td><td>Mg</td><td>Ca</td></tr><tr><td>LOI</td><td>—</td><td>***</td><td>***</td><td>***</td><td>***</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>TN</td><td>0.96</td><td>—</td><td>***</td><td>***</td><td>***</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>TOC</td><td>0.98</td><td>0.96</td><td>—</td><td>***</td><td>***</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>C/N</td><td>0.70</td><td>0.63</td><td>0.76</td><td>C/N</td><td>***</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>DWT</td><td>0.65</td><td>0.60</td><td>0.64</td><td>0.58</td><td>DWT</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>K</td><td>0.079</td><td>-0.048</td><td>-0.12</td><td>-0.073</td><td>0.15</td><td>K</td><td>—</td><td>**</td><td>—</td><td>—</td><td>—</td><td>*</td><td>**</td></tr><tr><td>pH</td><td>-0.80</td><td>-0.76</td><td>-0.81</td><td>-0.64</td><td>-0.57</td><td>0.067</td><td>pH</td><td>***</td><td>***</td><td>**</td><td>—</td><td>***</td><td>***</td></tr><tr><td>Cond.</td><td>-0.63</td><td>-0.63</td><td>-0.67</td><td>-0.48</td><td>-0.25</td><td>0.41</td><td>0.64</td><td>Cond.</td><td>***</td><td>—</td><td>—</td><td>***</td><td>***</td></tr><tr><td>ORP</td><td>0.39</td><td>0.38</td><td>0.43</td><td>0.27</td><td>-0.095</td><td>-0.20</td><td>-0.51</td><td>-0.60</td><td>ORP</td><td>—</td><td>—</td><td>**</td><td>***</td></tr><tr><td>DO</td><td>-0.56</td><td>-0.51</td><td>-0.51</td><td>-0.35</td><td>-0.58</td><td>0.030</td><td>0.44</td><td>0.097</td><td>0.028</td><td>DO</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Na</td><td>-0.30</td><td>-0.22</td><td>-0.23</td><td>-0.18</td><td>-0.28</td><td>-0.20</td><td>-0.045</td><td>-0.095</td><td>0.088</td><td>0.20</td><td>Na</td><td>—</td><td>—</td></tr><tr><td>Mg</td><td>-0.68</td><td>-0.64</td><td>-0.70</td><td>-0.56</td><td>-0.40</td><td>0.32</td><td>0.64</td><td>0.79</td><td>-0.46</td><td>0.14</td><td>0.24</td><td>Mg</td><td>***</td></tr><tr><td>Ca</td><td>-0.65</td><td>-0.64</td><td>-0.67</td><td>-0.51</td><td>-0.28</td><td>0.43</td><td>0.63</td><td>0.87</td><td>-0.53</td><td>0.20</td><td>0.11</td><td>0.87</td><td>Ca</td></tr></table>
 
 Fig. 12. Spearman correlations between different environmental variables.
 

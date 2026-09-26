@@ -131,47 +131,7 @@ longitude were transformed into the corresponding coordinates in X (east–west)
 
 Table 1. Ground cover variables reduced with principal component analysis. Variables with loadings larger than 0.32 in principal components (PC) 1 to 4 are in bold.
 
-| Variables | PC1 | PC2 | PC3 | PC4 |
-| --- | --- | --- | --- | --- |
-| Abies balsamea | -0.31 | 0.43 | 0.00 | 0.47 |
-| Bare soil | -0.31 | 0.08 | -0.01 | -0.53 |
-| Betula alleghaniensis | -0.31 | 0.43 | 0.00 | 0.47 |
-| Betula populifolia | 0.23 | 0.00 | -0.01 | -0.02 |
-| ?Calla palustris | -0.31 | 0.43 | 0.00 | 0.47 |
-| Carex oligosperma | 0.46 | 0.16 | -0.40 | 0.02 |
-| Carex viridula | -0.31 | 0.43 | 0.00 | 0.47 |
-| Cephalanthus occidentalis | -0.23 | -0.12 | -0.01 | -0.18 |
-| Chamaedaphne calyculata | 0.52 | 0.17 | -0.28 | 0.03 |
-| Cornus stolonifera | -0.17 | -0.09 | -0.02 | 0.11 |
-| Dead wood | -0.37 | -0.06 | -0.02 | 0.02 |
-| Drosera rotundifolia | 0.28 | 0.07 | -0.05 | 0.03 |
-| Equisetum pratense | -0.46 | 0.49 | 0.00 | 0.03 |
-| Eriophorum vaginatum | 0.49 | 0.09 | 0.46 | 0.06 |
-| Fraxinus nigra | -0.23 | 0.29 | 0.02 | -0.55 |
-| Hydrocharis morsus-ranae | -0.28 | -0.61 | -0.12 | 0.07 |
-| Kalmia angustifolia | 0.37 | 0.05 | 0.55 | 0.05 |
-| Larix laricina | 0.14 | -0.03 | 0.09 | -0.01 |
-| Ledum groenlandicum | 0.29 | 0.05 | 0.40 | 0.05 |
-| Litter | -0.47 | -0.03 | 0.11 | -0.08 |
-| Lysimachia terrestris | 0.34 | 0.15 | -0.54 | -0.01 |
-| Onoclea sensibilis | -0.49 | 0.35 | 0.01 | -0.28 |
-| Open pool | -0.51 | -0.33 | -0.11 | 0.33 |
-| Osmunda regalis | -0.28 | 0.25 | 0.02 | -0.57 |
-| Phalaris arundinacea | -0.10 | -0.40 | -0.08 | 0.12 |
-| Phragmites australis | -0.17 | -0.09 | -0.02 | 0.11 |
-| Pinus rigida | 0.34 | 0.15 | -0.54 | -0.01 |
-| Pleurocarpus moss | -0.65 | 0.15 | -0.05 | 0.04 |
-| Polytrichum spp. | 0.58 | 0.13 | 0.34 | 0.05 |
-| Sagittaria latifolia | -0.18 | -0.40 | -0.08 | 0.02 |
-| Salix pedicellaris | 0.20 | 0.01 | 0.33 | 0.01 |
-| Salix pyrifolia | 0.34 | 0.15 | -0.54 | -0.01 |
-| Sphagnum spp. | 0.66 | 0.19 | -0.05 | 0.04 |
-| Spiraea alba | 0.34 | 0.15 | -0.54 | -0.01 |
-| Spirodela polyrhiza | -0.14 | -0.50 | -0.10 | 0.10 |
-| Toxicodendron radicans | -0.37 | 0.49 | 0.02 | -0.23 |
-| Typha angustifolia | -0.14 | -0.52 | -0.10 | 0.11 |
-| Vaccinium ?angustifolium | 0.29 | 0.05 | 0.40 | 0.05 |
-| Vaccinium myrtilloides | 0.20 | 0.01 | 0.33 | 0.01 |
+<table><tr><td>Variables</td><td>PC1</td><td>PC2</td><td>PC3</td><td>PC4</td></tr><tr><td>Abies balsamea</td><td>-0.31</td><td>0.43</td><td>0.00</td><td>0.47</td></tr><tr><td>Bare soil</td><td>-0.31</td><td>0.08</td><td>-0.01</td><td>-0.53</td></tr><tr><td>Betula alleghaniensis</td><td>-0.31</td><td>0.43</td><td>0.00</td><td>0.47</td></tr><tr><td>Betula populifolia</td><td>0.23</td><td>0.00</td><td>-0.01</td><td>-0.02</td></tr><tr><td>?Calla palustris</td><td>-0.31</td><td>0.43</td><td>0.00</td><td>0.47</td></tr><tr><td>Carex oligosperma</td><td>0.46</td><td>0.16</td><td>-0.40</td><td>0.02</td></tr><tr><td>Carex viridula</td><td>-0.31</td><td>0.43</td><td>0.00</td><td>0.47</td></tr><tr><td>Cephalanthus occidentalis</td><td>-0.23</td><td>-0.12</td><td>-0.01</td><td>-0.18</td></tr><tr><td>Chamaedaphne calyculata</td><td>0.52</td><td>0.17</td><td>-0.28</td><td>0.03</td></tr><tr><td>Cornus stolonifera</td><td>-0.17</td><td>-0.09</td><td>-0.02</td><td>0.11</td></tr><tr><td>Dead wood</td><td>-0.37</td><td>-0.06</td><td>-0.02</td><td>0.02</td></tr><tr><td>Drosera rotundifolia</td><td>0.28</td><td>0.07</td><td>-0.05</td><td>0.03</td></tr><tr><td>Equisetum pratense</td><td>-0.46</td><td>0.49</td><td>0.00</td><td>0.03</td></tr><tr><td>Eriophorum vaginatum</td><td>0.49</td><td>0.09</td><td>0.46</td><td>0.06</td></tr><tr><td>Fraxinus nigra</td><td>-0.23</td><td>0.29</td><td>0.02</td><td>-0.55</td></tr><tr><td>Hydrocharis morsus-ranae</td><td>-0.28</td><td>-0.61</td><td>-0.12</td><td>0.07</td></tr><tr><td>Kalmia angustifolia</td><td>0.37</td><td>0.05</td><td>0.55</td><td>0.05</td></tr><tr><td>Larix laricina</td><td>0.14</td><td>-0.03</td><td>0.09</td><td>-0.01</td></tr><tr><td>Ledum groenlandicum</td><td>0.29</td><td>0.05</td><td>0.40</td><td>0.05</td></tr><tr><td>Litter</td><td>-0.47</td><td>-0.03</td><td>0.11</td><td>-0.08</td></tr><tr><td>Lysimachia terrestris</td><td>0.34</td><td>0.15</td><td>-0.54</td><td>-0.01</td></tr><tr><td>Onoclea sensibilis</td><td>-0.49</td><td>0.35</td><td>0.01</td><td>-0.28</td></tr><tr><td>Open pool</td><td>-0.51</td><td>-0.33</td><td>-0.11</td><td>0.33</td></tr><tr><td>Osmunda regalis</td><td>-0.28</td><td>0.25</td><td>0.02</td><td>-0.57</td></tr><tr><td>Phalaris arundinacea</td><td>-0.10</td><td>-0.40</td><td>-0.08</td><td>0.12</td></tr><tr><td>Phragmites australis</td><td>-0.17</td><td>-0.09</td><td>-0.02</td><td>0.11</td></tr><tr><td>Pinus rigida</td><td>0.34</td><td>0.15</td><td>-0.54</td><td>-0.01</td></tr><tr><td>Pleurocarpus moss</td><td>-0.65</td><td>0.15</td><td>-0.05</td><td>0.04</td></tr><tr><td>Polytrichum spp.</td><td>0.58</td><td>0.13</td><td>0.34</td><td>0.05</td></tr><tr><td>Sagittaria latifolia</td><td>-0.18</td><td>-0.40</td><td>-0.08</td><td>0.02</td></tr><tr><td>Salix pedicellaris</td><td>0.20</td><td>0.01</td><td>0.33</td><td>0.01</td></tr><tr><td>Salix pyrifolia</td><td>0.34</td><td>0.15</td><td>-0.54</td><td>-0.01</td></tr><tr><td>Sphagnum spp.</td><td>0.66</td><td>0.19</td><td>-0.05</td><td>0.04</td></tr><tr><td>Spiraea alba</td><td>0.34</td><td>0.15</td><td>-0.54</td><td>-0.01</td></tr><tr><td>Spirodela polyrhiza</td><td>-0.14</td><td>-0.50</td><td>-0.10</td><td>0.10</td></tr><tr><td>Toxicodendron radicans</td><td>-0.37</td><td>0.49</td><td>0.02</td><td>-0.23</td></tr><tr><td>Typha angustifolia</td><td>-0.14</td><td>-0.52</td><td>-0.10</td><td>0.11</td></tr><tr><td>Vaccinium ?angustifolium</td><td>0.29</td><td>0.05</td><td>0.40</td><td>0.05</td></tr><tr><td>Vaccinium myrtilloides</td><td>0.20</td><td>0.01</td><td>0.33</td><td>0.01</td></tr></table>
 
  2017 The Royal Entomological Society, Insect Conservation and Diversity, 11, 276–293
 
@@ -207,32 +167,7 @@ Wetland Diptera assembly
 
 281
 
-| Family | Value |
-| :--- | :--- |
-| Agromyzidae | 0.12 |
-| Clusiidae | 0.12 |
-| Periscelididae | 0.12 |
-| Scathophagidae | 0.12 |
-| Calliphoridae | 0.12 |
-| Sarcophagidae | 0.12 |
-| Ephydridae | 0.12 |
-| Drosophilidae | 0.12 |
-| Ephydridae | 0.12 |
-| Heleomyzidae | 0.12 |
-| Sphaeroceridae | 0.12 |
-| Outgroup | 0.12 |
-| Chloropidae | 0.12 |
-| Milichiidae | 0.12 |
-| Micropezidae | 0.12 |
-| Ulidiidae | 0.12 |
-| Pallopteridae | 0.12 |
-| Tephritidae | 0.12 |
-| Platystomatidae | 0.12 |
-| Lauxaniidae | 0.12 |
-| Chamaemyiidae | 0.12 |
-| Sepsidae | 0.12 |
-| Dryomyzidae | 0.12 |
-| Sciomyzidae | 0.12 |
+<table><tr><td>Family</td><td>Value</td></tr><tr><td>Agromyzidae</td><td>0.12</td></tr><tr><td>Clusiidae</td><td>0.12</td></tr><tr><td>Periscelididae</td><td>0.12</td></tr><tr><td>Scathophagidae</td><td>0.12</td></tr><tr><td>Calliphoridae</td><td>0.12</td></tr><tr><td>Sarcophagidae</td><td>0.12</td></tr><tr><td>Ephydridae</td><td>0.12</td></tr><tr><td>Drosophilidae</td><td>0.12</td></tr><tr><td>Ephydridae</td><td>0.12</td></tr><tr><td>Heleomyzidae</td><td>0.12</td></tr><tr><td>Sphaeroceridae</td><td>0.12</td></tr><tr><td>Outgroup</td><td>0.12</td></tr><tr><td>Chloropidae</td><td>0.12</td></tr><tr><td>Milichiidae</td><td>0.12</td></tr><tr><td>Micropezidae</td><td>0.12</td></tr><tr><td>Ulidiidae</td><td>0.12</td></tr><tr><td>Pallopteridae</td><td>0.12</td></tr><tr><td>Tephritidae</td><td>0.12</td></tr><tr><td>Platystomatidae</td><td>0.12</td></tr><tr><td>Lauxaniidae</td><td>0.12</td></tr><tr><td>Chamaemyiidae</td><td>0.12</td></tr><tr><td>Sepsidae</td><td>0.12</td></tr><tr><td>Dryomyzidae</td><td>0.12</td></tr><tr><td>Sciomyzidae</td><td>0.12</td></tr></table>
 
 Fig. 2. Hypothesised phylogenetic relationships, based on CO1, among Schizophora (Diptera) species collected in the 12 wetlands. Colours represent families, branch lengths represent divergence time estimates, and numbers on nodes represent posterior probabilities. Species codes can be found in Table S1. [Colour figure can be viewed at wileyonlinelibrary.com].
 
@@ -266,20 +201,7 @@ When testing for the influence of habitat type with ANO-VAS, relative abundance 
 
 Table 2. Abundance (N), species richness (Sobs) rarefied species richness  standard error (Sest) and extrapolated species richness (Chao)  standard error (Percentage contribution of observed species richness to expected species richness) (Sext) for each of the 12 wetland sites. Rarefied species richness was standardized at 196 individuals (PIN\_BG). See Figure 1 legend for site codes.
 
-| Site | N | Sobs | Sest | Sext |
-| --- | --- | --- | --- | --- |
-| CAL_SW | 532 | 73 | 49.2 ± 3.1 | 114.6 ± 20.6 (63%) |
-| TIH_SW | 1646 | 105 | 38.4 ± 3.7 | 143.0 ± 16.6 (73%) |
-| OKA_SW | 903 | 86 | 43.6 ± 3.5 | 126.6 ± 18.0 (68%) |
-| LAZ_SW | 234 | 62 | 57.6 ± 1.8 | 88.0 ± 13.1 (70%) |
-| BER_MA | 258 | 52 | 46.5 ± 2.0 | 78.3 ± 15.5 (67%) |
-| OKA_MA | 545 | 56 | 33.6 ± 2.9 | 88.5 ± 17.2 (63%) |
-| MIL_MA | 1037 | 91 | 46.2 ± 3.5 | 124.2 ± 16.1 (73%) |
-| FOR_MA | 252 | 33 | 30.5 ± 1.4 | 36.7 ± 4.5 (90%) |
-| BLA_BG | 237 | 30 | 27.5 ± 1.4 | 60.3 ± 22.7 (50%) |
-| PIN_BG | 196 | 40 | 40.0 ± 0.0 | 57.1 ± 12.0 (70%) |
-| MIR_BG | 290 | 67 | 56.2 ± 2.6 | 89.4 ± 12.2 (75%) |
-| BRB_BG | 468 | 72 | 45.5 ± 3.3 | 141.0 ± 33.4 (51 |
+<table><tr><td>Site</td><td>N</td><td>Sobs</td><td>Sest</td><td>Sext</td></tr><tr><td>CAL_SW</td><td>532</td><td>73</td><td>49.2 ± 3.1</td><td>114.6 ± 20.6 (63%)</td></tr><tr><td>TIH_SW</td><td>1646</td><td>105</td><td>38.4 ± 3.7</td><td>143.0 ± 16.6 (73%)</td></tr><tr><td>OKA_SW</td><td>903</td><td>86</td><td>43.6 ± 3.5</td><td>126.6 ± 18.0 (68%)</td></tr><tr><td>LAZ_SW</td><td>234</td><td>62</td><td>57.6 ± 1.8</td><td>88.0 ± 13.1 (70%)</td></tr><tr><td>BER_MA</td><td>258</td><td>52</td><td>46.5 ± 2.0</td><td>78.3 ± 15.5 (67%)</td></tr><tr><td>OKA_MA</td><td>545</td><td>56</td><td>33.6 ± 2.9</td><td>88.5 ± 17.2 (63%)</td></tr><tr><td>MIL_MA</td><td>1037</td><td>91</td><td>46.2 ± 3.5</td><td>124.2 ± 16.1 (73%)</td></tr><tr><td>FOR_MA</td><td>252</td><td>33</td><td>30.5 ± 1.4</td><td>36.7 ± 4.5 (90%)</td></tr><tr><td>BLA_BG</td><td>237</td><td>30</td><td>27.5 ± 1.4</td><td>60.3 ± 22.7 (50%)</td></tr><tr><td>PIN_BG</td><td>196</td><td>40</td><td>40.0 ± 0.0</td><td>57.1 ± 12.0 (70%)</td></tr><tr><td>MIR_BG</td><td>290</td><td>67</td><td>56.2 ± 2.6</td><td>89.4 ± 12.2 (75%)</td></tr><tr><td>BRB_BG</td><td>468</td><td>72</td><td>45.5 ± 3.3</td><td>141.0 ± 33.4 (51</td></tr></table>
 
 significantly different between wetland habitat, and the overall distribution was similar in each habitat. Saprophages were the most abundant and species rich, followed by phytophages, predators and parasites (except in bogs where parasites were more diverse than predators). Rare species were less abundant, but more species rich compared to common species and the abundance and richness decreased from small- to large-sized species (Fig. 5).
 
@@ -301,41 +223,13 @@ Wetland Diptera assembly
 
 283
 
-| Category | Number of individuals (range) | No. of species (range) |
-| --- | --- | --- |
-| MIR_BG | 0~450 | 0~65 |
-| PIN_BG | 0~200 | 0~45 |
-| BLA_BG | 0~200 | 0~35 |
-| BER_MA | 0~200 | 0~50 |
-| FOR_MA | 0~200 | 0~30 |
-| OKA_MA | 0~200 | 0~50 |
-| MIL_MA | 0~1000 | 0~90 |
-| LAZ_SW | 0~200 | 0~65 |
-| CAL_SW | 0~500 | 0~80 |
-| OKA_SW | 0~1000 | 0~90 |
-| TIH_SW | 0~1500 | 0~100 |
+<table><tr><td>Category</td><td>Number of individuals (range)</td><td>No. of species (range)</td></tr><tr><td>MIR_BG</td><td>0~450</td><td>0~65</td></tr><tr><td>PIN_BG</td><td>0~200</td><td>0~45</td></tr><tr><td>BLA_BG</td><td>0~200</td><td>0~35</td></tr><tr><td>BER_MA</td><td>0~200</td><td>0~50</td></tr><tr><td>FOR_MA</td><td>0~200</td><td>0~30</td></tr><tr><td>OKA_MA</td><td>0~200</td><td>0~50</td></tr><tr><td>MIL_MA</td><td>0~1000</td><td>0~90</td></tr><tr><td>LAZ_SW</td><td>0~200</td><td>0~65</td></tr><tr><td>CAL_SW</td><td>0~500</td><td>0~80</td></tr><tr><td>OKA_SW</td><td>0~1000</td><td>0~90</td></tr><tr><td>TIH_SW</td><td>0~1500</td><td>0~100</td></tr></table>
 
 Fig. 3. Individual-based accumulation curves at the global scale (all sites) (above) and individual-based rarefaction curves at the local scale (individual sites) (below) were computed to assess whether saturation was obtained with the methods of collection smoothed by 1000 repetitions of randomised sampling. Species counts at 196 individuals for rarefied estimates are indicated by the vertical black line. [Colour figure can be viewed at wileyonlinelibrary.com].
 
 Table 3. Indicator species analysis of Brachycera species for bogs, marshes and swamps. Only species with ≥ 10 individuals and with an indicator value (IndVal) greater than 85 and a significant (P ≤ 0.05) indicator value are shown.
 
-| Species | Number of individuals | Significant Association | IndVal | P-value |
-| --- | --- | --- | --- | --- |
-| Homoneura sheldoni (Coquillett) (Lauxaniidae) | 65 | Bog | 92 | 0.018 |
-| Euaresta bella (Loew) (Tephritidae) | 36 | Bog | 89 | 0.018 |
-| Malloewia abdominalis (Becker) (Chloropidae) | 122 | Bog | 90 | 0.050 |
-| Malloewia nigripalpis (Malloch) (Chloropidae) | 17 | Bog | 90 | 0.050 |
-| Notiphila avia Loew (Ephydridae) | 59 | Marsh | 89 | 0.018 |
-| Notiphila olivacea Cresson (Ephydridae) | 82 | Marsh | 87 | 0.022 |
-| Spelobia sp.A (Sphaeroceridae) | 20 | Swamp | 95 | 0.020 |
-| Spelobia luteilabris (Rondani) (Sphaeroceridae) | 10 | Swamp | 100 | 0.009 |
-| Pterogramma paliceps (Johnson) (Sphaeroceridae) | 47 | Swamp | 96 | 0.009 |
-| Drosophila transversa Fallén (Drosophilidae) | 37 | Swamp | 88 | 0.023 |
-| Chymomyza amoena (Loew) (Ephydridae) | 66 | Swamp | 96 | 0.009 |
-| Athyroglossa granulosa (Cresson) (Ephydridae) | 82 | Swamp | 93 | 0.025 |
-| Ditrichophara exigua Cresson (Ephydridae) | 147 | Swamp | 90 | 0.045 |
-| Rhopalopterum carbonarium (Loew) (Chloropidae) | 140 | Bog/Marsh | 95 | 0.035 |
-| Elachiptera nigriceps (Loew) (Chloropidae) | 244 | Marsh/Swamp | 96 | 0.007 |
+<table><tr><td>Species</td><td>Number of individuals</td><td>Significant Association</td><td>IndVal</td><td>P-value</td></tr><tr><td>Homoneura sheldoni (Coquillett) (Lauxaniidae)</td><td>65</td><td>Bog</td><td>92</td><td>0.018</td></tr><tr><td>Euaresta bella (Loew) (Tephritidae)</td><td>36</td><td>Bog</td><td>89</td><td>0.018</td></tr><tr><td>Malloewia abdominalis (Becker) (Chloropidae)</td><td>122</td><td>Bog</td><td>90</td><td>0.050</td></tr><tr><td>Malloewia nigripalpis (Malloch) (Chloropidae)</td><td>17</td><td>Bog</td><td>90</td><td>0.050</td></tr><tr><td>Notiphila avia Loew (Ephydridae)</td><td>59</td><td>Marsh</td><td>89</td><td>0.018</td></tr><tr><td>Notiphila olivacea Cresson (Ephydridae)</td><td>82</td><td>Marsh</td><td>87</td><td>0.022</td></tr><tr><td>Spelobia sp.A (Sphaeroceridae)</td><td>20</td><td>Swamp</td><td>95</td><td>0.020</td></tr><tr><td>Spelobia luteilabris (Rondani) (Sphaeroceridae)</td><td>10</td><td>Swamp</td><td>100</td><td>0.009</td></tr><tr><td>Pterogramma paliceps (Johnson) (Sphaeroceridae)</td><td>47</td><td>Swamp</td><td>96</td><td>0.009</td></tr><tr><td>Drosophila transversa Fallén (Drosophilidae)</td><td>37</td><td>Swamp</td><td>88</td><td>0.023</td></tr><tr><td>Chymomyza amoena (Loew) (Ephydridae)</td><td>66</td><td>Swamp</td><td>96</td><td>0.009</td></tr><tr><td>Athyroglossa granulosa (Cresson) (Ephydridae)</td><td>82</td><td>Swamp</td><td>93</td><td>0.025</td></tr><tr><td>Ditrichophara exigua Cresson (Ephydridae)</td><td>147</td><td>Swamp</td><td>90</td><td>0.045</td></tr><tr><td>Rhopalopterum carbonarium (Loew) (Chloropidae)</td><td>140</td><td>Bog/Marsh</td><td>95</td><td>0.035</td></tr><tr><td>Elachiptera nigriceps (Loew) (Chloropidae)</td><td>244</td><td>Marsh/Swamp</td><td>96</td><td>0.007</td></tr></table>
 
 in the phylogeny and for every functional group. The mean NRI for the functional groups showed that bog communities were more closely related than expected for
 
@@ -351,25 +245,9 @@ large species (2.5, P = 0.016), parasites (2.62, P = 0.01) and rare species (2.7
 
 Amelie Gregoire Taillefer and Terry A. Wheeler
 
-| Group | BMG NMDS1 (range) | BMG NMDS2 (range) | Marsh NMDS1 (range) | Marsh NMDS2 (range) | Swamp NMDS1 (range) | Swamp NMDS2 (range) |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | -0.4~0.6 | -0.7~0.3 | -1.0~0.6 | -0.9~0.1 | -0.8~0.5 | -0.7~0.6 |
-| 2 | -0.4~0.6 | -0.9~0.1 | -0.5~0.6 | -0.9~0.1 | -0.3~0.6 | -0.6~0.6 |
-| 3 | -1.0~0.4 | -0.5~0.3 | -0.5~0.4 | -0.7~0.2 | -0.8~0.4 | -0.5~0.5 |
-| 4 | -0.6~0.4 | -0.1~0.3 | -0.2~0.6 | -0.8~0.9 | -0.2~0.6 | -0.4~0.5 |
-| 5 | -0.2~0.4 | -0.1~0.2 | -0.2~0.6 | -0.8~0.3 | -0.2~0.6 | -0.4~0.5 |
-| 6 | -0.4~0.6 | -0.1~0.7 | -1.0~0.6 | -0.9~1.1 | -1.0~0.6 | -1.0~1.1 |
+<table><tr><td>Group</td><td>BMG NMDS1 (range)</td><td>BMG NMDS2 (range)</td><td>Marsh NMDS1 (range)</td><td>Marsh NMDS2 (range)</td><td>Swamp NMDS1 (range)</td><td>Swamp NMDS2 (range)</td></tr><tr><td>1</td><td>-0.4~0.6</td><td>-0.7~0.3</td><td>-1.0~0.6</td><td>-0.9~0.1</td><td>-0.8~0.5</td><td>-0.7~0.6</td></tr><tr><td>2</td><td>-0.4~0.6</td><td>-0.9~0.1</td><td>-0.5~0.6</td><td>-0.9~0.1</td><td>-0.3~0.6</td><td>-0.6~0.6</td></tr><tr><td>3</td><td>-1.0~0.4</td><td>-0.5~0.3</td><td>-0.5~0.4</td><td>-0.7~0.2</td><td>-0.8~0.4</td><td>-0.5~0.5</td></tr><tr><td>4</td><td>-0.6~0.4</td><td>-0.1~0.3</td><td>-0.2~0.6</td><td>-0.8~0.9</td><td>-0.2~0.6</td><td>-0.4~0.5</td></tr><tr><td>5</td><td>-0.2~0.4</td><td>-0.1~0.2</td><td>-0.2~0.6</td><td>-0.8~0.3</td><td>-0.2~0.6</td><td>-0.4~0.5</td></tr><tr><td>6</td><td>-0.4~0.6</td><td>-0.1~0.7</td><td>-1.0~0.6</td><td>-0.9~1.1</td><td>-1.0~0.6</td><td>-1.0~1.1</td></tr></table>
 
-| Variable | NMDS1 (range) | NMDS2 (range) |
-| --- | --- | --- |
-| Swamp | -0.8~-0.4 | 0.1~0.5 |
-| Tree_cloyer | -0.7~-0.3 | -0.2~0.1 |
-| Conductivity | -0.6~-0.3 | -0.3~-0.1 |
-| Open_water_above_surface | -0.2~0.6 | -0.9~-0.5 |
-| Marsh | 0.1~0.7 | -0.5~-0.1 |
-| Bog | 0.1~0.6 | 0.3~0.8 |
-| Exposed_land | 0.2~0.6 | 0.4~0.5 |
-| PC1- | 0.4~0.7 | 0.3~0.5 |
+<table><tr><td>Variable</td><td>NMDS1 (range)</td><td>NMDS2 (range)</td></tr><tr><td>Swamp</td><td>-0.8~-0.4</td><td>0.1~0.5</td></tr><tr><td>Tree_cloyer</td><td>-0.7~-0.3</td><td>-0.2~0.1</td></tr><tr><td>Conductivity</td><td>-0.6~-0.3</td><td>-0.3~-0.1</td></tr><tr><td>Open_water_above_surface</td><td>-0.2~0.6</td><td>-0.9~-0.5</td></tr><tr><td>Marsh</td><td>0.1~0.7</td><td>-0.5~-0.1</td></tr><tr><td>Bog</td><td>0.1~0.6</td><td>0.3~0.8</td></tr><tr><td>Exposed_land</td><td>0.2~0.6</td><td>0.4~0.5</td></tr><tr><td>PC1-</td><td>0.4~0.7</td><td>0.3~0.5</td></tr></table>
 
 Fig. 4. Non-metric multidimensional scaling ordination of Diptera species collected (a) by week in each wetland type and (b) overall in the three types of wetlands. Arrows represent vectors of the seven variables that explain Diptera species composition. [Colour figure can be viewed at wileyonlinelibrary.com].
 

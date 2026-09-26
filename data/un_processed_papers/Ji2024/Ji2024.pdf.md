@@ -173,10 +173,7 @@ Japan
 
 (b)
 
-| Elevation (m) | Value |
-| --- | --- |
-| High | 2740 |
-| Low | 630 |
+<table><tr><td>Elevation (m)</td><td>Value</td></tr><tr><td>High</td><td>2740</td></tr><tr><td>Low</td><td>630</td></tr></table>
 
 F I G U R E 1 Geographical position (a; red dot) and topology with the 10 sampling elevations from 800 m to 2600 m above sea level (b; black dots) of Changbai Mountain in northeast China. At each elevation, carrion beetle communities were sampled from seven plots at 100–200 m intervals.
 
@@ -214,14 +211,7 @@ Eight carrion beetle species (1034 individuals) were collected across the elevat
 
 The PC1 axis of the trait space (Figure S2) was mainly associated to head width, leg length and thorax length. Individual variation along this axis was similarly contributed by both intraspecific and interspecific variation (49.2% and 51.8%, respectively). Individual scores on
 
-| Elevation (m) | N. vespilloides | N. tenuipes | N. quadripunctatus | Nicrophorus maculifrons |
-| --- | --- | --- | --- | --- |
-| 950 | ~0.01 | ~0.25 | ~0.65 | ~0.95 |
-| 1100 | ~0.15 | ~0.28 | ~0.70 | ~0.85 |
-| 1250 | ~0.45 | ~0.22 | ~0.35 | ~0.65 |
-| 1400 | ~0.55 | ~0.20 | ~0.30 | ~0.60 |
-| 1550 | ~0.60 | ~0.18 | ~0.30 | ~0.60 |
-| 1700 | ~0.65 | ~0.15 | ~0.30 | ~0.60 |
+<table><tr><td>Elevation (m)</td><td>N. vespilloides</td><td>N. tenuipes</td><td>N. quadripunctatus</td><td>Nicrophorus maculifrons</td></tr><tr><td>950</td><td>~0.01</td><td>~0.25</td><td>~0.65</td><td>~0.95</td></tr><tr><td>1100</td><td>~0.15</td><td>~0.28</td><td>~0.70</td><td>~0.85</td></tr><tr><td>1250</td><td>~0.45</td><td>~0.22</td><td>~0.35</td><td>~0.65</td></tr><tr><td>1400</td><td>~0.55</td><td>~0.20</td><td>~0.30</td><td>~0.60</td></tr><tr><td>1550</td><td>~0.60</td><td>~0.18</td><td>~0.30</td><td>~0.60</td></tr><tr><td>1700</td><td>~0.65</td><td>~0.15</td><td>~0.30</td><td>~0.60</td></tr></table>
 
 F I G U R E 2 Relative abundance of each of the four Nicrophorus species along the elevational gradient in the Changbai Mountain. While the relative abundance of N. maculifrons, N. quadripunctatus and N. tenuipes decreased with elevation, N. vespilloides increased.
 
@@ -235,24 +225,7 @@ Insect Conservation and Diversity
 
 JI ET AL.
 
-| Trait | Elevation | Plot | Species | Sex | Individual |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Body length | ~0.06 | ~0.01 | ~0.58 | ~0.01 | ~0.34 |
-| Hindwing* | ~0.03 | ~0.01 | ~0.62 | ~0.07 | ~0.34 |
-| Leg length* | ~0.01 | ~0.01 | ~0.65 | ~0.09 | ~0.33 |
-| Body width* | ~0.04 | ~0.01 | ~0.58 | ~0.07 | ~0.36 |
-| Thorax width* | ~0.01 | ~0.01 | ~0.69 | ~0.03 | ~0.41 |
-| Femur* | ~0.02 | ~0.01 | ~0.57 | ~0.13 | ~0.36 |
-| Tibia* | ~0.05 | ~0.01 | ~0.48 | ~0.11 | ~0.46 |
-| Antenna* | ~0.03 | ~0.01 | ~0.12 | ~0.07 | ~0.77 |
-| Thorax length* | ~0.01 | ~0.01 | ~0.01 | ~0.45 | ~0.62 |
-| Elytra length* | ~0.01 | ~0.01 | ~0.01 | ~0.73 | ~0.41 |
-| Head length* | ~0.01 | ~0.01 | ~0.01 | ~0.73 | ~0.36 |
-| Head width* | ~0.01 | ~0.01 | ~0.01 | ~0.73 | ~0.22 |
-| PC1 | ~0.01 | ~0.01 | ~0.58 | ~0.34 | ~0.16 |
-| PC2 | ~0.04 | ~0.01 | ~0.59 | ~0.03 | ~0.31 |
-| PC3 | ~0.01 | ~0.01 | ~0.01 | ~0.78 | ~0.38 |
-| PC4 | ~0.01 | ~0.01 | ~0.01 | ~0.21 | ~0.82 |
+<table><tr><td>Trait</td><td>Elevation</td><td>Plot</td><td>Species</td><td>Sex</td><td>Individual</td></tr><tr><td>Body length</td><td>~0.06</td><td>~0.01</td><td>~0.58</td><td>~0.01</td><td>~0.34</td></tr><tr><td>Hindwing*</td><td>~0.03</td><td>~0.01</td><td>~0.62</td><td>~0.07</td><td>~0.34</td></tr><tr><td>Leg length*</td><td>~0.01</td><td>~0.01</td><td>~0.65</td><td>~0.09</td><td>~0.33</td></tr><tr><td>Body width*</td><td>~0.04</td><td>~0.01</td><td>~0.58</td><td>~0.07</td><td>~0.36</td></tr><tr><td>Thorax width*</td><td>~0.01</td><td>~0.01</td><td>~0.69</td><td>~0.03</td><td>~0.41</td></tr><tr><td>Femur*</td><td>~0.02</td><td>~0.01</td><td>~0.57</td><td>~0.13</td><td>~0.36</td></tr><tr><td>Tibia*</td><td>~0.05</td><td>~0.01</td><td>~0.48</td><td>~0.11</td><td>~0.46</td></tr><tr><td>Antenna*</td><td>~0.03</td><td>~0.01</td><td>~0.12</td><td>~0.07</td><td>~0.77</td></tr><tr><td>Thorax length*</td><td>~0.01</td><td>~0.01</td><td>~0.01</td><td>~0.45</td><td>~0.62</td></tr><tr><td>Elytra length*</td><td>~0.01</td><td>~0.01</td><td>~0.01</td><td>~0.73</td><td>~0.41</td></tr><tr><td>Head length*</td><td>~0.01</td><td>~0.01</td><td>~0.01</td><td>~0.73</td><td>~0.36</td></tr><tr><td>Head width*</td><td>~0.01</td><td>~0.01</td><td>~0.01</td><td>~0.73</td><td>~0.22</td></tr><tr><td>PC1</td><td>~0.01</td><td>~0.01</td><td>~0.58</td><td>~0.34</td><td>~0.16</td></tr><tr><td>PC2</td><td>~0.04</td><td>~0.01</td><td>~0.59</td><td>~0.03</td><td>~0.31</td></tr><tr><td>PC3</td><td>~0.01</td><td>~0.01</td><td>~0.01</td><td>~0.78</td><td>~0.38</td></tr><tr><td>PC4</td><td>~0.01</td><td>~0.01</td><td>~0.01</td><td>~0.21</td><td>~0.82</td></tr></table>
 
 F I G U R E 3 Percentage of trait variance explained by nested hierarchical scales: Interindividual (between individuals of one sex within a species), sex (males versus females within a species), species (different species within a plot), plot (seven plots at one elevation) and elevation (six elevations within the study area). According to the contribution of the scales, traits are assigned to different types, I, II, III and IV. Type I: Interspecific variation contributes more than intraspecific variation; Type II: Interspecific and intraspecific variation contribute equally; Type III: Intraspecific variation contributes more than interspecific variation and inter-individual differences than sex differences; Type IV: All variation is caused by intraspecific variation, with sex being a more important factor than inter-individual differences. The plot scale contributed virtually no trait variation. The position of the thick black line between the species- and sex-contributed variation in each bar indicates the summed proportion of intraspecific variation. The niche space of multidimensional morphological traits was constructed using principal component (PC) analysis, and individual scores along the first four axes were used in variance partitioning. Asterisk indicates ratio of trait to body length. Dashed line indicates 50% of trait variance. See text in Results section for details.
 
@@ -326,57 +299,7 @@ Entom
 
 JI ET AL.
 
-| Metric | Series | \(R^{2}\) | p-value |
-| :--- | :--- | :--- | :--- |
-| (a) Body size | Nicrophorus maculifrons | 0.75 | 0.02 |
-| (a) Body size | N. quadripunctatus | 0.73 | 0.03 |
-| (b) Head length | Nicrophorus maculifrons | 0.90 | < 0.01 |
-| (c) Head width | Nicrophorus maculifrons | 0.71 | 0.04 |
-| (d) Thorax length | Nicrophorus maculifrons | 0.80 | 0.03 |
-| (e) Thorax width | Nicrophorus maculifrons | 0.77 | 0.03 |
-| (f) Elytra length | Nicrophorus maculifrons | 0.66 | 0.049 |
-| (g) Body width | Nicrophorus maculifrons | 0.72 | 0.03 |
-| (h) Femur | Nicrophorus maculifrons | 0.70 | 0.04 |
-| (i) Tibia | Nicrophorus maculifrons | 0.74 | 0.03 |
-| (j) Antenna | Nicrophorus maculifrons | 0.88 | 0.01 |
-| (k) Hindwing | Nicrophorus maculifrons | 0.74 | 0.03 |
-| (l) Leg length | Nicrophorus maculifrons | 0.86 | 0.048 |
-| (a) Body size | N. quadripunctatus | — | — |
-| (b) Head length | N. quadripunctatus | — | — |
-| (c) Head width | N. quadripunctatus | — | — |
-| (d) Thorax length | N. quadripunctatus | — | — |
-| (e) Thorax width | N. quadripunctatus | — | — |
-| (f) Elytra length | N. quadripunctatus | — | — |
-| (g) Body width | N. quadripunctatus | — | — |
-| (h) Femur | N. quadripunctatus | — | — |
-| (i) Tibia | N. quadripunctatus | — | — |
-| (j) Antenna | N. quadripunctatus | — | — |
-| (k) Hindwing | N. quadripunctatus | — | — |
-| (l) Leg length | N. quadripunctatus | — | — |
-| (a) Body size | N. vespilloides | — | — |
-| (b) Head length | N. vespilloides | — | — |
-| (c) Head width | N. vespilloides | — | — |
-| (d) Thorax length | N. vespilloides | — | — |
-| (e) Thorax width | N. vespilloides | — | — |
-| (f) Elytra length | N. vespilloides | — | — |
-| (g) Body width | N. vespilloides | — | — |
-| (h) Femur | N. vespilloides | — | — |
-| (i) Tibia | N. vespilloides | — | — |
-| (j) Antenna | N. vespilloides | — | — |
-| (k) Hindwing | N. vespilloides | — | — |
-| (l) Leg length | N. vespilloides | — | — |
-| (a) Body size | CWM | — | — |
-| (b) Head length | CWM | — | — |
-| (c) Head width | CWM | — | — |
-| (d) Thorax length | CWM | — | — |
-| (e) Thorax width | CWM | — | — |
-| (f) Elytra length | CWM | — | — |
-| (g) Body width | CWM | — | — |
-| (h) Femur | CWM | — | — |
-| (i) Tibia | CWM | — | — |
-| (j) Antenna | CWM | — | — |
-| (k) Hindwing | CWM | — | — |
-| (l) Leg length | CWM | — | — |
+<table><tr><td>Metric</td><td>Series</td><td>\(R^{2}\)</td><td>p-value</td></tr><tr><td>(a) Body size</td><td>Nicrophorus maculifrons</td><td>0.75</td><td>0.02</td></tr><tr><td>(a) Body size</td><td>N. quadripunctatus</td><td>0.73</td><td>0.03</td></tr><tr><td>(b) Head length</td><td>Nicrophorus maculifrons</td><td>0.90</td><td>&lt; 0.01</td></tr><tr><td>(c) Head width</td><td>Nicrophorus maculifrons</td><td>0.71</td><td>0.04</td></tr><tr><td>(d) Thorax length</td><td>Nicrophorus maculifrons</td><td>0.80</td><td>0.03</td></tr><tr><td>(e) Thorax width</td><td>Nicrophorus maculifrons</td><td>0.77</td><td>0.03</td></tr><tr><td>(f) Elytra length</td><td>Nicrophorus maculifrons</td><td>0.66</td><td>0.049</td></tr><tr><td>(g) Body width</td><td>Nicrophorus maculifrons</td><td>0.72</td><td>0.03</td></tr><tr><td>(h) Femur</td><td>Nicrophorus maculifrons</td><td>0.70</td><td>0.04</td></tr><tr><td>(i) Tibia</td><td>Nicrophorus maculifrons</td><td>0.74</td><td>0.03</td></tr><tr><td>(j) Antenna</td><td>Nicrophorus maculifrons</td><td>0.88</td><td>0.01</td></tr><tr><td>(k) Hindwing</td><td>Nicrophorus maculifrons</td><td>0.74</td><td>0.03</td></tr><tr><td>(l) Leg length</td><td>Nicrophorus maculifrons</td><td>0.86</td><td>0.048</td></tr><tr><td>(a) Body size</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(b) Head length</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(c) Head width</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(d) Thorax length</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(e) Thorax width</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(f) Elytra length</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(g) Body width</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(h) Femur</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(i) Tibia</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(j) Antenna</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(k) Hindwing</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(l) Leg length</td><td>N. quadripunctatus</td><td>—</td><td>—</td></tr><tr><td>(a) Body size</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(b) Head length</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(c) Head width</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(d) Thorax length</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(e) Thorax width</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(f) Elytra length</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(g) Body width</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(h) Femur</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(i) Tibia</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(j) Antenna</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(k) Hindwing</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(l) Leg length</td><td>N. vespilloides</td><td>—</td><td>—</td></tr><tr><td>(a) Body size</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(b) Head length</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(c) Head width</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(d) Thorax length</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(e) Thorax width</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(f) Elytra length</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(g) Body width</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(h) Femur</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(i) Tibia</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(j) Antenna</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(k) Hindwing</td><td>CWM</td><td>—</td><td>—</td></tr><tr><td>(l) Leg length</td><td>CWM</td><td>—</td><td>—</td></tr></table>
 
 F I G U R E 5 Relationship between elevation and community-weighted mean (CWM; black dots and line) of trait and species trait mean (coloured dots and lines) of the four carrion beetle species across the six elevations of Changbai Mountain. Asterisk indicates ratio of trait to body length. Solid line indicates significant linear relationship ( p < 0.05).
 

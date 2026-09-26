@@ -8,23 +8,7 @@ Table A1: Species list of collected wild bees from forest steppe study sites inc
 
 <!-- page 2 of 5 -->
 
-| 30. | Lasioglossum sexstrigatum (Schenck, 1869) | Solitary | Soil | polylectic | 6.5 |
-| --- | --- | --- | --- | --- | --- |
-| 31. | Lasioglossum tarsatum (Schenck, 1870) | Solitary | Soil | polylectic | 5.5 |
-| 32. | Lasioglossum xanthopus (Kirby, 1802) | Solitary | Herbaceous plants | polylectic | 12 |
-| 33. | Lasioglossum zonulum (Smith, 1848) | Solitary | Soil | polylectic | 9.5 |
-| 34. | Megachile centuncularis (Linnaeus, 1758) | Solitary | Dead wood | polylectic | 9 |
-| 35. | Megachile circumcincta Kirby, 1802 | Solitary | Dead wood | polylectic | 10 |
-| 36. | Megachile leachella Curtis, 1828 | Solitary | Soil | polylectic | 9.5 |
-| 37. | Megachile maritima (Kirby, 1802) | Solitary | Woody plant | polylectic | 14.5 |
-| 38. | Megachile melanopyga Costa, 1863 | Solitary | Woody plant | oligolectic | 11.5 |
-| 39. | Megachile versicolor Smith, 1844 | Solitary | Herbaceous plants | polylectic | 11.5 |
-| 40. | Nomioides minutissimus (Rossi, 1790) | Solitary | Woody plant | polylectic | 4.5 |
-| 41. | Osmia brevicornis (Fabricius, 1798) | Solitary | Dead wood | oligolectic | 11 |
-| 42. | Osmia melanogaster Spinola, 1808 | Solitary | Dead wood | oligolectic | 9 |
-| 43. | Sphecodes puncticeps Thomson, 1870 | Parasitic | Soil | polylectic | 6 |
-| 44. | Trachusa interrupta (Fabricius, 1781) | Solitary | Soil | polylectic | 12 |
-| 45. | Xylocopa iris (Christ, 1791) | Solitary | Dead wood | polylectic | 16.5 |
+<table><tr><td>30.</td><td>Lasioglossum sexstrigatum (Schenck, 1869)</td><td>Solitary</td><td>Soil</td><td>polylectic</td><td>6.5</td></tr><tr><td>31.</td><td>Lasioglossum tarsatum (Schenck, 1870)</td><td>Solitary</td><td>Soil</td><td>polylectic</td><td>5.5</td></tr><tr><td>32.</td><td>Lasioglossum xanthopus (Kirby, 1802)</td><td>Solitary</td><td>Herbaceous plants</td><td>polylectic</td><td>12</td></tr><tr><td>33.</td><td>Lasioglossum zonulum (Smith, 1848)</td><td>Solitary</td><td>Soil</td><td>polylectic</td><td>9.5</td></tr><tr><td>34.</td><td>Megachile centuncularis (Linnaeus, 1758)</td><td>Solitary</td><td>Dead wood</td><td>polylectic</td><td>9</td></tr><tr><td>35.</td><td>Megachile circumcincta Kirby, 1802</td><td>Solitary</td><td>Dead wood</td><td>polylectic</td><td>10</td></tr><tr><td>36.</td><td>Megachile leachella Curtis, 1828</td><td>Solitary</td><td>Soil</td><td>polylectic</td><td>9.5</td></tr><tr><td>37.</td><td>Megachile maritima (Kirby, 1802)</td><td>Solitary</td><td>Woody plant</td><td>polylectic</td><td>14.5</td></tr><tr><td>38.</td><td>Megachile melanopyga Costa, 1863</td><td>Solitary</td><td>Woody plant</td><td>oligolectic</td><td>11.5</td></tr><tr><td>39.</td><td>Megachile versicolor Smith, 1844</td><td>Solitary</td><td>Herbaceous plants</td><td>polylectic</td><td>11.5</td></tr><tr><td>40.</td><td>Nomioides minutissimus (Rossi, 1790)</td><td>Solitary</td><td>Woody plant</td><td>polylectic</td><td>4.5</td></tr><tr><td>41.</td><td>Osmia brevicornis (Fabricius, 1798)</td><td>Solitary</td><td>Dead wood</td><td>oligolectic</td><td>11</td></tr><tr><td>42.</td><td>Osmia melanogaster Spinola, 1808</td><td>Solitary</td><td>Dead wood</td><td>oligolectic</td><td>9</td></tr><tr><td>43.</td><td>Sphecodes puncticeps Thomson, 1870</td><td>Parasitic</td><td>Soil</td><td>polylectic</td><td>6</td></tr><tr><td>44.</td><td>Trachusa interrupta (Fabricius, 1781)</td><td>Solitary</td><td>Soil</td><td>polylectic</td><td>12</td></tr><tr><td>45.</td><td>Xylocopa iris (Christ, 1791)</td><td>Solitary</td><td>Dead wood</td><td>polylectic</td><td>16.5</td></tr></table>
 
 Table A2: Species list of collected wasps from forest steppe study sites including information on species functional traits. Functional traits information after Agnoli & Rosa, 2021; Bees, Wasps & Ants Recording Society (BWARS); Evans & Matthews, 1973; Witt, 1998; Yeo & Corbet, 2015.
 
@@ -32,45 +16,11 @@ Table A2: Species list of collected wasps from forest steppe study sites includi
 
 <!-- page 3 of 5 -->
 
-| 13. | Crossocerus wesmaeli (Vander Linden,1829) | Solitary | Soil | Small flies (Diptera) | herbivore | 5 |
-| --- | --- | --- | --- | --- | --- | --- |
-| 14. | Diodontus minutus (Fabricius, 1793) | Solitary | Herbaceous plants | Aphids (Aphidoidea) | herbivore | 5 |
-| 15. | Dipogon bifasciatus (Geoffroy, 1785) | Solitary | Herbaceous plants | Spiders (Araneae) | carnivore | 6 |
-| 16. | Ectemnius dives (Lepeletier de Saint Fargeau &amp; Brullé, 1835) | Solitary | Dead wood | Hoverflies (Syrphidae), true flies (Tachinidae) | herbivore | 8 |
-| 17. | Episyron albonotatus (Costa, 1881) | Solitary | Soil | Spiders (Araneae) | carnivore | 13 |
-| 18. | Episyron rufipes (Linnaeus 1758) | Solitary | Soil | Spiders (Araneae) | carnivore | 11 |
-| 19. | Evagetes pectinipes (Linnaeus,1758) | Parasitic | Soil | Wasps (Hymenoptera: Vespidae) | carnivore | 5 |
-| 20. | Gorytes quinquecinctus (Fabricius, 1793) | Solitary | Soil | Small leafhoppers (Auchenorrhyncha ) | herbivore | 10 |
-| 21. | Meria tripunctata (Rossi, 1790) | Parasitic | Dead wood | Black beetle (Tenebrionidae) | herbivore | 14 |
-| 22. | Nemka viduata (Pallas, 1773) | Parasitic | Herbaceous plants | Wasps (Hymenoptera: Vespidae) | carnivore | 16 |
-| 23. | Oxybelus quatordecimnotatus Jurine, 1807 | Solitary | Soil | Muscids (Diptera: Muscidae) | herbivore | 6 |
-| 24. | Passaloecus gracilis (Curtis, 1834) | Solitary | Herbaceous plants | Aphids (Aphidoidea) | herbivore | 4 |
-| 25. | Passaloecus pictus Ribaut, 1952 | Solitary | Soil | Aphids (Aphidoidea) | herbivore | 6 |
-| 26. | Pemphredon inornata (Say 1824) | Solitary | Woody plant | Aphids (Aphidoidea) | herbivore | 1.5 |
-| 27. | Pemphredon lethifera (Shuckard, 1837) | Solitary | Woody plant | Aphids (Aphidoidea) | herbivore | 1.5 |
-| 28. | Pemphredon lugens (Dahlbom 1842) | Solitary | Woody plant | Aphids (Aphidoidea) | herbivore | 1.5 |
-| 29. | Philanthus venustus (Rossi, 1790) | Solitary | Soil | Bees (Hymenoptera: Apidae) | herbivore | 2 |
-| 30. | Polistes nimpha (Christ, 1791) | Eusocial | Herbaceous plants | Spiders (Araneae) | carnivore | 8 |
-| 31. | Pompilus cinereus Fabricius, 1798 | Solitary | Soil | Spiders (Araneae) | carnivore | 6 |
-| 32. | Pseudomalus auratus (Linnaeus,1758) | Parasitic | Woody plant | Wasps (Hymenoptera: Vespidae) | carnivore | 5 |
-| 33. | Pseudomalus pusillus (Fabricius, 1804) | Parasitic | Herbaceous plants | Wasps (Hymenoptera: Vespidae) | carnivore | 4 |
-| 34. | Scolia hirta (Schrank, 1781) | Solitary | Dead wood | Scarabaeidae | herbivore | 24 |
-| 35. | Sphex funerarius Gussakovskij, 1934 | Solitary | Soil | Grasshoppers, crickets (Orthoptera) | herbivore | 20 |
-| 36. | Stenodynerus chevrieranus (Saussure, 1855) | Solitary | Soil | Other insects | omnivore | 7 |
-| 37. | Symmorphus gracilis (Brullé, 1832) | Solitary | Herbaceous plants | Leaf beetle (Chrysomelidae) | herbivore | 10 |
-| 38. | Tachysphex mediterraneus Kohl, 1883 | Solitary | Soil | Grasshoppers, crickets (Orthoptera) | herbivore | 8 |
+<table><tr><td>13.</td><td>Crossocerus wesmaeli (Vander Linden,1829)</td><td>Solitary</td><td>Soil</td><td>Small flies (Diptera)</td><td>herbivore</td><td>5</td></tr><tr><td>14.</td><td>Diodontus minutus (Fabricius, 1793)</td><td>Solitary</td><td>Herbaceous plants</td><td>Aphids (Aphidoidea)</td><td>herbivore</td><td>5</td></tr><tr><td>15.</td><td>Dipogon bifasciatus (Geoffroy, 1785)</td><td>Solitary</td><td>Herbaceous plants</td><td>Spiders (Araneae)</td><td>carnivore</td><td>6</td></tr><tr><td>16.</td><td>Ectemnius dives (Lepeletier de Saint Fargeau &amp;amp; Brullé, 1835)</td><td>Solitary</td><td>Dead wood</td><td>Hoverflies (Syrphidae), true flies (Tachinidae)</td><td>herbivore</td><td>8</td></tr><tr><td>17.</td><td>Episyron albonotatus (Costa, 1881)</td><td>Solitary</td><td>Soil</td><td>Spiders (Araneae)</td><td>carnivore</td><td>13</td></tr><tr><td>18.</td><td>Episyron rufipes (Linnaeus 1758)</td><td>Solitary</td><td>Soil</td><td>Spiders (Araneae)</td><td>carnivore</td><td>11</td></tr><tr><td>19.</td><td>Evagetes pectinipes (Linnaeus,1758)</td><td>Parasitic</td><td>Soil</td><td>Wasps (Hymenoptera: Vespidae)</td><td>carnivore</td><td>5</td></tr><tr><td>20.</td><td>Gorytes quinquecinctus (Fabricius, 1793)</td><td>Solitary</td><td>Soil</td><td>Small leafhoppers (Auchenorrhyncha )</td><td>herbivore</td><td>10</td></tr><tr><td>21.</td><td>Meria tripunctata (Rossi, 1790)</td><td>Parasitic</td><td>Dead wood</td><td>Black beetle (Tenebrionidae)</td><td>herbivore</td><td>14</td></tr><tr><td>22.</td><td>Nemka viduata (Pallas, 1773)</td><td>Parasitic</td><td>Herbaceous plants</td><td>Wasps (Hymenoptera: Vespidae)</td><td>carnivore</td><td>16</td></tr><tr><td>23.</td><td>Oxybelus quatordecimnotatus Jurine, 1807</td><td>Solitary</td><td>Soil</td><td>Muscids (Diptera: Muscidae)</td><td>herbivore</td><td>6</td></tr><tr><td>24.</td><td>Passaloecus gracilis (Curtis, 1834)</td><td>Solitary</td><td>Herbaceous plants</td><td>Aphids (Aphidoidea)</td><td>herbivore</td><td>4</td></tr><tr><td>25.</td><td>Passaloecus pictus Ribaut, 1952</td><td>Solitary</td><td>Soil</td><td>Aphids (Aphidoidea)</td><td>herbivore</td><td>6</td></tr><tr><td>26.</td><td>Pemphredon inornata (Say 1824)</td><td>Solitary</td><td>Woody plant</td><td>Aphids (Aphidoidea)</td><td>herbivore</td><td>1.5</td></tr><tr><td>27.</td><td>Pemphredon lethifera (Shuckard, 1837)</td><td>Solitary</td><td>Woody plant</td><td>Aphids (Aphidoidea)</td><td>herbivore</td><td>1.5</td></tr><tr><td>28.</td><td>Pemphredon lugens (Dahlbom 1842)</td><td>Solitary</td><td>Woody plant</td><td>Aphids (Aphidoidea)</td><td>herbivore</td><td>1.5</td></tr><tr><td>29.</td><td>Philanthus venustus (Rossi, 1790)</td><td>Solitary</td><td>Soil</td><td>Bees (Hymenoptera: Apidae)</td><td>herbivore</td><td>2</td></tr><tr><td>30.</td><td>Polistes nimpha (Christ, 1791)</td><td>Eusocial</td><td>Herbaceous plants</td><td>Spiders (Araneae)</td><td>carnivore</td><td>8</td></tr><tr><td>31.</td><td>Pompilus cinereus Fabricius, 1798</td><td>Solitary</td><td>Soil</td><td>Spiders (Araneae)</td><td>carnivore</td><td>6</td></tr><tr><td>32.</td><td>Pseudomalus auratus (Linnaeus,1758)</td><td>Parasitic</td><td>Woody plant</td><td>Wasps (Hymenoptera: Vespidae)</td><td>carnivore</td><td>5</td></tr><tr><td>33.</td><td>Pseudomalus pusillus (Fabricius, 1804)</td><td>Parasitic</td><td>Herbaceous plants</td><td>Wasps (Hymenoptera: Vespidae)</td><td>carnivore</td><td>4</td></tr><tr><td>34.</td><td>Scolia hirta (Schrank, 1781)</td><td>Solitary</td><td>Dead wood</td><td>Scarabaeidae</td><td>herbivore</td><td>24</td></tr><tr><td>35.</td><td>Sphex funerarius Gussakovskij, 1934</td><td>Solitary</td><td>Soil</td><td>Grasshoppers, crickets (Orthoptera)</td><td>herbivore</td><td>20</td></tr><tr><td>36.</td><td>Stenodynerus chevrieranus (Saussure, 1855)</td><td>Solitary</td><td>Soil</td><td>Other insects</td><td>omnivore</td><td>7</td></tr><tr><td>37.</td><td>Symmorphus gracilis (Brullé, 1832)</td><td>Solitary</td><td>Herbaceous plants</td><td>Leaf beetle (Chrysomelidae)</td><td>herbivore</td><td>10</td></tr><tr><td>38.</td><td>Tachysphex mediterraneus Kohl, 1883</td><td>Solitary</td><td>Soil</td><td>Grasshoppers, crickets (Orthoptera)</td><td>herbivore</td><td>8</td></tr></table>
 
 <!-- page 4 of 5 -->
 
-| 39. Tachysphex obscuripennis (Schenck, 1857) | Solitary | Soil | Grasshoppers, crickets (Orthoptera) | herbivore | 8 |
-| --- | --- | --- | --- | --- | --- |
-| 40. Tachysphex pompiliformis (Panzer,1805) | Solitary | Soil | Grasshoppers, crickets (Orthoptera) | herbivore | 6 |
-| 41. Tachysphex psammobius (Kohl, 1880) | Solitary | Soil | Grasshoppers, crickets (Orthoptera) | herbivore | 5 |
-| 42. Tachysphex unicolor (Panzer,1809) | Solitary | Soil | Acrididae | herbivore | 6 |
-| 43. Telostegus inermis (Brullé, 1832) | Solitary | Soil | Spiders (Araneae) | carnivore | 7 |
-| 44. Tiphia femorata Fabricus,1775 | Parasitic | Soil | Scarabs (Scarabaeidae: Amphimallon) | herbivore | 10 |
-| 45. Trypoxylon scutatum Chevrier 1867 | Solitary | Herbaceous plants | Spiders (Araneae) | carnivore | 10 |
-| 46. Vespula germanica (Fabricius,1793) | Eusocial | Herbaceous plants | Spiders (Araneae) and other insects | omnivore | 13 |
+<table><tr><td>39. Tachysphex obscuripennis (Schenck, 1857)</td><td>Solitary</td><td>Soil</td><td>Grasshoppers, crickets (Orthoptera)</td><td>herbivore</td><td>8</td></tr><tr><td>40. Tachysphex pompiliformis (Panzer,1805)</td><td>Solitary</td><td>Soil</td><td>Grasshoppers, crickets (Orthoptera)</td><td>herbivore</td><td>6</td></tr><tr><td>41. Tachysphex psammobius (Kohl, 1880)</td><td>Solitary</td><td>Soil</td><td>Grasshoppers, crickets (Orthoptera)</td><td>herbivore</td><td>5</td></tr><tr><td>42. Tachysphex unicolor (Panzer,1809)</td><td>Solitary</td><td>Soil</td><td>Acrididae</td><td>herbivore</td><td>6</td></tr><tr><td>43. Telostegus inermis (Brullé, 1832)</td><td>Solitary</td><td>Soil</td><td>Spiders (Araneae)</td><td>carnivore</td><td>7</td></tr><tr><td>44. Tiphia femorata Fabricus,1775</td><td>Parasitic</td><td>Soil</td><td>Scarabs (Scarabaeidae: Amphimallon)</td><td>herbivore</td><td>10</td></tr><tr><td>45. Trypoxylon scutatum Chevrier 1867</td><td>Solitary</td><td>Herbaceous plants</td><td>Spiders (Araneae)</td><td>carnivore</td><td>10</td></tr><tr><td>46. Vespula germanica (Fabricius,1793)</td><td>Eusocial</td><td>Herbaceous plants</td><td>Spiders (Araneae) and other insects</td><td>omnivore</td><td>13</td></tr></table>
 
 ## References
 

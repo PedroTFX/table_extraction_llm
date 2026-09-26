@@ -248,57 +248,7 @@ Journal of Insect Conservation (2023) 27:693–705
 
 Table 1   Syrphid fly species and number of specimens captured in 2012 and 2013 in Montreal’s urban gardens, parks, and cemeteries
 
-| Species | Total number of individuals | Cemeteries | Gardens | Parks | Functional group |
-| --- | --- | --- | --- | --- | --- |
-| Allograpta obliqua (Say, 1823) | 3 | 3 | 0 | 0 | I |
-| Anasimyia bilinearis (Williston 1887) | 2 | 0 | 0 | 2 | AS |
-| Brachyopa vacua Osten Sacken, 1875 | 1 | 1 | 0 | 0 | TS |
-| Chalcosyrphus nemorum (Fabricius, 1805) | 1 | 1 | 0 | 0 | TS |
-| Chrysotoxum plumeum Johnson, 1924 | 3 | 3 | 0 | 0 | I |
-| Didea fuscipes Loew, 1863 | 1 | 1 | 0 | 0 | I |
-| Epistrophe nitidicollis (Meigen, 1822) | 10 | 8 | 0 | 2 | I |
-| Eristalis anthophorina (Fallen, 1817) | 1 | 0 | 1 | 0 | AS |
-| Eristalis arbustorum (Linnaeus, 1758) | 19 | 2 | 16 | 1 | AS |
-| Eristalis dimidiata (Wiedemann, 1830) | 5 | 3 | 2 | 0 | AS |
-| Eristalis tenax (Linnaeus, 1758) | 3 | 3 | 0 | 0 | AS |
-| Eristalis transversa (Wiedemann, 1830) | 5 | 3 | 2 | 0 | AS |
-| Eumerus sp. | 7 | 5 | 2 | 0 | P |
-| Eupeodes americanus (Wiedemann, 1830) | 19 | 16 | 2 | 1 | I |
-| Eurimyia stipata (Walker 1849) | 1 | 0 | 0 | 1 | AS |
-| Helophilus fasciatus Walker, 1849 | 10 | 8 | 2 | 0 | AS |
-| Helophilus latifrons Loew, 1863 | 4 | 3 | 1 | 0 | AS |
-| Mallota bautias (Walker, 1849) | 9 | 7 | 0 | 2 | AS |
-| Merodon equestris (Fabricius, 1794) | 7 | 1 | 5 | 1 | P |
-| Orthonevra pictipennis (Loew, 1863) | 1 | 0 | 1 | 0 | AS |
-| Parhelophilus laetus (Loew, 1963) | 2 | 0 | 1 | 1 | AS |
-| Pelecinobaccha costata (Say 1829) | 1 | 1 | 0 | 0 | I |
-| Pipiza sp. | 2 | 1 | 0 | 1 | I |
-| Platycheirus sp. | 1 | 1 | 0 | 0 | I |
-| Rhingia nasica Say, 1823 | 1 | 0 | 0 | 1 | TS |
-| Sericomyia bifasciata Williston, 1887 | 1 | 1 | 0 | 0 | AS |
-| Sericomyia chrysotoxoides Macquart, 1842 | 3 | 3 | 0 | 0 | AS |
-| Sericomyia militaris Walker, 1849 | 5 | 5 | 0 | 0 | AS |
-| Somula decora Macquart, 1847 | 4 | 2 | 0 | 2 | TS |
-| Sphaerophoria sp. | 25 | 24 | 1 | 0 | I |
-| Spilomyia longicornis Loew, 1872 | 5 | 2 | 1 | 2 | TS |
-| Spilomyia sayi (Goot, 1964) | 5 | 1 | 1 | 3 | TS |
-| Syritta pipiens (Linnaeus, 1758) | 17 | 3 | 14 | 0 | TS |
-| Syrphus attenuatus Hine, 1922 | 2 | 1 | 0 | 1 | I |
-| Syrphus knabi Shannon, 1916 | 1 | 0 | 1 | 0 | I |
-| Syrphus rectus Osten Sacken, 1875 | 1 | 0 | 1 | 0 | I |
-| Syrphus ribesii Linnaeus | 1 | 0 | 1 | 0 | I |
-| Syrphus torvus Osten Sacken, 1875 | 1 | 1 | 0 | 0 | I |
-| Temnostoma balyras (Walker 1849) | 1 | 0 | 0 | 1 | TS |
-| Temnostoma barberi Curran 1939 | 1 | 1 | 0 | 0 | TS |
-| Temnostoma excentrica (Harris, 1841) | 1 | 1 | 0 | 0 | TS |
-| Toxomerus geminatus (Say, 1823) | 370 | 285 | 31 | 54 | I |
-| Toxomerus marginatus (Say, 1823) | 1,198 | 1,068 | 108 | 22 | I |
-| Tropidia quadrata (Say, 1824) | 9 | 0 | 1 | 8 | AS |
-| Xylota annulifera Bigot, 1884 | 2 | 2 | 0 | 0 | TS |
-| Xylota quadrimaculata Loew, 1866 | 5 | 3 | 1 | 1 | TS |
-| Xylota segnis (Linnaeus, 1758) | 13 | 12 | 0 | 1 | TS |
-| Xylota subfasciata Loew, 1866 | 1 | 1 | 0 | 0 | TS |
-| Total number of individuals | 1,791 | 1,487 | 196 | 108 |  |
+<table><tr><td>Species</td><td>Total number of individuals</td><td>Cemeteries</td><td>Gardens</td><td>Parks</td><td>Functional group</td></tr><tr><td>Allograpta obliqua (Say, 1823)</td><td>3</td><td>3</td><td>0</td><td>0</td><td>I</td></tr><tr><td>Anasimyia bilinearis (Williston 1887)</td><td>2</td><td>0</td><td>0</td><td>2</td><td>AS</td></tr><tr><td>Brachyopa vacua Osten Sacken, 1875</td><td>1</td><td>1</td><td>0</td><td>0</td><td>TS</td></tr><tr><td>Chalcosyrphus nemorum (Fabricius, 1805)</td><td>1</td><td>1</td><td>0</td><td>0</td><td>TS</td></tr><tr><td>Chrysotoxum plumeum Johnson, 1924</td><td>3</td><td>3</td><td>0</td><td>0</td><td>I</td></tr><tr><td>Didea fuscipes Loew, 1863</td><td>1</td><td>1</td><td>0</td><td>0</td><td>I</td></tr><tr><td>Epistrophe nitidicollis (Meigen, 1822)</td><td>10</td><td>8</td><td>0</td><td>2</td><td>I</td></tr><tr><td>Eristalis anthophorina (Fallen, 1817)</td><td>1</td><td>0</td><td>1</td><td>0</td><td>AS</td></tr><tr><td>Eristalis arbustorum (Linnaeus, 1758)</td><td>19</td><td>2</td><td>16</td><td>1</td><td>AS</td></tr><tr><td>Eristalis dimidiata (Wiedemann, 1830)</td><td>5</td><td>3</td><td>2</td><td>0</td><td>AS</td></tr><tr><td>Eristalis tenax (Linnaeus, 1758)</td><td>3</td><td>3</td><td>0</td><td>0</td><td>AS</td></tr><tr><td>Eristalis transversa (Wiedemann, 1830)</td><td>5</td><td>3</td><td>2</td><td>0</td><td>AS</td></tr><tr><td>Eumerus sp.</td><td>7</td><td>5</td><td>2</td><td>0</td><td>P</td></tr><tr><td>Eupeodes americanus (Wiedemann, 1830)</td><td>19</td><td>16</td><td>2</td><td>1</td><td>I</td></tr><tr><td>Eurimyia stipata (Walker 1849)</td><td>1</td><td>0</td><td>0</td><td>1</td><td>AS</td></tr><tr><td>Helophilus fasciatus Walker, 1849</td><td>10</td><td>8</td><td>2</td><td>0</td><td>AS</td></tr><tr><td>Helophilus latifrons Loew, 1863</td><td>4</td><td>3</td><td>1</td><td>0</td><td>AS</td></tr><tr><td>Mallota bautias (Walker, 1849)</td><td>9</td><td>7</td><td>0</td><td>2</td><td>AS</td></tr><tr><td>Merodon equestris (Fabricius, 1794)</td><td>7</td><td>1</td><td>5</td><td>1</td><td>P</td></tr><tr><td>Orthonevra pictipennis (Loew, 1863)</td><td>1</td><td>0</td><td>1</td><td>0</td><td>AS</td></tr><tr><td>Parhelophilus laetus (Loew, 1963)</td><td>2</td><td>0</td><td>1</td><td>1</td><td>AS</td></tr><tr><td>Pelecinobaccha costata (Say 1829)</td><td>1</td><td>1</td><td>0</td><td>0</td><td>I</td></tr><tr><td>Pipiza sp.</td><td>2</td><td>1</td><td>0</td><td>1</td><td>I</td></tr><tr><td>Platycheirus sp.</td><td>1</td><td>1</td><td>0</td><td>0</td><td>I</td></tr><tr><td>Rhingia nasica Say, 1823</td><td>1</td><td>0</td><td>0</td><td>1</td><td>TS</td></tr><tr><td>Sericomyia bifasciata Williston, 1887</td><td>1</td><td>1</td><td>0</td><td>0</td><td>AS</td></tr><tr><td>Sericomyia chrysotoxoides Macquart, 1842</td><td>3</td><td>3</td><td>0</td><td>0</td><td>AS</td></tr><tr><td>Sericomyia militaris Walker, 1849</td><td>5</td><td>5</td><td>0</td><td>0</td><td>AS</td></tr><tr><td>Somula decora Macquart, 1847</td><td>4</td><td>2</td><td>0</td><td>2</td><td>TS</td></tr><tr><td>Sphaerophoria sp.</td><td>25</td><td>24</td><td>1</td><td>0</td><td>I</td></tr><tr><td>Spilomyia longicornis Loew, 1872</td><td>5</td><td>2</td><td>1</td><td>2</td><td>TS</td></tr><tr><td>Spilomyia sayi (Goot, 1964)</td><td>5</td><td>1</td><td>1</td><td>3</td><td>TS</td></tr><tr><td>Syritta pipiens (Linnaeus, 1758)</td><td>17</td><td>3</td><td>14</td><td>0</td><td>TS</td></tr><tr><td>Syrphus attenuatus Hine, 1922</td><td>2</td><td>1</td><td>0</td><td>1</td><td>I</td></tr><tr><td>Syrphus knabi Shannon, 1916</td><td>1</td><td>0</td><td>1</td><td>0</td><td>I</td></tr><tr><td>Syrphus rectus Osten Sacken, 1875</td><td>1</td><td>0</td><td>1</td><td>0</td><td>I</td></tr><tr><td>Syrphus ribesii Linnaeus</td><td>1</td><td>0</td><td>1</td><td>0</td><td>I</td></tr><tr><td>Syrphus torvus Osten Sacken, 1875</td><td>1</td><td>1</td><td>0</td><td>0</td><td>I</td></tr><tr><td>Temnostoma balyras (Walker 1849)</td><td>1</td><td>0</td><td>0</td><td>1</td><td>TS</td></tr><tr><td>Temnostoma barberi Curran 1939</td><td>1</td><td>1</td><td>0</td><td>0</td><td>TS</td></tr><tr><td>Temnostoma excentrica (Harris, 1841)</td><td>1</td><td>1</td><td>0</td><td>0</td><td>TS</td></tr><tr><td>Toxomerus geminatus (Say, 1823)</td><td>370</td><td>285</td><td>31</td><td>54</td><td>I</td></tr><tr><td>Toxomerus marginatus (Say, 1823)</td><td>1,198</td><td>1,068</td><td>108</td><td>22</td><td>I</td></tr><tr><td>Tropidia quadrata (Say, 1824)</td><td>9</td><td>0</td><td>1</td><td>8</td><td>AS</td></tr><tr><td>Xylota annulifera Bigot, 1884</td><td>2</td><td>2</td><td>0</td><td>0</td><td>TS</td></tr><tr><td>Xylota quadrimaculata Loew, 1866</td><td>5</td><td>3</td><td>1</td><td>1</td><td>TS</td></tr><tr><td>Xylota segnis (Linnaeus, 1758)</td><td>13</td><td>12</td><td>0</td><td>1</td><td>TS</td></tr><tr><td>Xylota subfasciata Loew, 1866</td><td>1</td><td>1</td><td>0</td><td>0</td><td>TS</td></tr><tr><td>Total number of individuals</td><td>1,791</td><td>1,487</td><td>196</td><td>108</td><td></td></tr></table>
 
 Trapping occurred over 13 periods of sampling, using blue, white, and yellow coloured pan traps. Functional groups consist of insectivores (I), terrestrial saprophagous (TS), aquatic saprophagous (AS), or phytophagous (P) species
 
@@ -312,22 +262,9 @@ Journal of Insect Conservation (2023) 27:693–705
 
 Fig. 3   Species accumulation curve of syrphid flies captured in the Montreal metropolitan area, QC, Canada in 2012 and 2013. Error bars denote 95% confidence intervals based on 999 permutations
 
-| Sampling units | Number of species (Median) |
-| --- | --- |
-| 0 | 0 |
-| 50 | ~20 |
-| 100 | ~30 |
-| 150 | ~36 |
-| 200 | ~41 |
-| 250 | ~45 |
-| 300 | ~48 |
+<table><tr><td>Sampling units</td><td>Number of species (Median)</td></tr><tr><td>0</td><td>0</td></tr><tr><td>50</td><td>~20</td></tr><tr><td>100</td><td>~30</td></tr><tr><td>150</td><td>~36</td></tr><tr><td>200</td><td>~41</td></tr><tr><td>250</td><td>~45</td></tr><tr><td>300</td><td>~48</td></tr></table>
 
-| Site surface area (ha) | Number of species |
-| --- | --- |
-| 0 | ~1 |
-| 5 | ~5.5 |
-| 10 | ~7.5 |
-| 15 | ~8.8 |
+<table><tr><td>Site surface area (ha)</td><td>Number of species</td></tr><tr><td>0</td><td>~1</td></tr><tr><td>5</td><td>~5.5</td></tr><tr><td>10</td><td>~7.5</td></tr><tr><td>15</td><td>~8.8</td></tr></table>
 
 Fig. 4   Species richness of syrphids estimated across site surface area from captures in the Montreal metropolitan area, QC, Canada in 2012 and 2013. Error bars denote 95% Bayesian credible intervals around estimates
 
@@ -351,13 +288,7 @@ Journal of Insect Conservation (2023) 27:693–705
 
 701
 
-| Proportion of heat island cover within 1000 m | Occupancy probability |
-| --- | --- |
-| 0.0 | 1.00 |
-| 0.2 | ~0.85 |
-| 0.4 | ~0.50 |
-| 0.6 | ~0.30 |
-| 0.7 | ~0.25 |
+<table><tr><td>Proportion of heat island cover within 1000 m</td><td>Occupancy probability</td></tr><tr><td>0.0</td><td>1.00</td></tr><tr><td>0.2</td><td>~0.85</td></tr><tr><td>0.4</td><td>~0.50</td></tr><tr><td>0.6</td><td>~0.30</td></tr><tr><td>0.7</td><td>~0.25</td></tr></table>
 
 Fig. 6   Occupancy probability of syrphids of the terrestrial saprophagous functional group across heat island cover based on syrphid flies captured in the Montreal metropolitan area, QC, Canada in 2012 and 2013. Error bars denote 95% Bayesian credible intervals
 

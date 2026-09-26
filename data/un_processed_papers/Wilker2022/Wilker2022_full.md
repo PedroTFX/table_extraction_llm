@@ -141,13 +141,7 @@ To test whether body size, foraging strategy and removal distance influenced the
 
 Table 1. Correlation coefficients in ants morphological traits
 
-|  | Weber's length | Mandible length | Eye width | Scape length | Leg length |
-| --- | --- | --- | --- | --- | --- |
-| Weber's length | - | 0.003 | &lt;0.001 | &lt;0.001 | &lt;0.001 |
-| Mandible length | 0.61 | - | 0.007 | &lt;0.001 | &lt;0.001 |
-| Eye width | 0.93 | 0.56 | - | &lt;0.001 | &lt;0.001 |
-| Scape length | 0.88 | 0.72 | 0.89 | - | &lt;0.001 |
-| Leg length | 0.86 | 0.69 | 0.91 | 0.97 | - |
+<table><tr><td></td><td>Weber's length</td><td>Mandible length</td><td>Eye width</td><td>Scape length</td><td>Leg length</td></tr><tr><td>Weber's length</td><td>-</td><td>0.003</td><td>&amp;lt;0.001</td><td>&amp;lt;0.001</td><td>&amp;lt;0.001</td></tr><tr><td>Mandible length</td><td>0.61</td><td>-</td><td>0.007</td><td>&amp;lt;0.001</td><td>&amp;lt;0.001</td></tr><tr><td>Eye width</td><td>0.93</td><td>0.56</td><td>-</td><td>&amp;lt;0.001</td><td>&amp;lt;0.001</td></tr><tr><td>Scape length</td><td>0.88</td><td>0.72</td><td>0.89</td><td>-</td><td>&amp;lt;0.001</td></tr><tr><td>Leg length</td><td>0.86</td><td>0.69</td><td>0.91</td><td>0.97</td><td>-</td></tr></table>
 
 p value above the dash and Spearman correlation below the dash
 
@@ -169,51 +163,19 @@ Sociobiology 69(3): e8308 (September, 2022)
 
 (larger species with solitary strategy). We found that the removal time decreases from the first to the last removal (df = 33; χ² = 13.127; p = 0.001; Pseudo-R² = 0.76; Fig 4).
 
-| Removal strategy | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| Group | ~0.9 | ~1.0 | ~1.05 | ~0.15 |
-| Solitary | ~2.75 | ~2.9 | ~3.2 | ~0.55 |
+<table><tr><td>Removal strategy</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>Group</td><td>~0.9</td><td>~1.0</td><td>~1.05</td><td>~0.15</td></tr><tr><td>Solitary</td><td>~2.75</td><td>~2.9</td><td>~3.2</td><td>~0.55</td></tr></table>
 
 Fig 1. Smaller ants remove diaspores in groups, and larger ants remove diaspores alone. The x-axis indicates the removal strategy, and the y-axis indicates the ant body size in millimetres. The centreline of each boxplot indicates the median of all values, and the boxes indicate the first quartile (median of the values above the central median) and third quartile (median of the values below the central median). The vertical lines of each boxplot are the Tukey-style whiskers (1.5 × interquartile range). The circles above each boxplot are outliers.
 
-| Series | Nest distance (m) | Discovery time (s) |
-| --- | --- | --- |
-| Group | ~0.3 | ~5700 |
-| Group | ~0.6 | ~6200 |
-| Group | ~0.4 | ~3300 |
-| Group | ~2.1 | ~5700 |
-| Group | ~2.2 | ~2400 |
-| Group | ~5.5 | ~7400 |
-| Solitary | ~1.1 | ~2200 |
-| Solitary | ~1.1 | ~1400 |
-| Solitary | ~1.6 | ~1100 |
-| Solitary | ~1.9 | ~1000 |
-| Solitary | ~2.0 | ~1200 |
-| Solitary | ~2.5 | ~3300 |
-| Solitary | ~2.5 | ~900 |
-| Solitary | ~2.6 | ~400 |
-| Solitary | ~3.0 | ~4100 |
-| Solitary | ~3.7 | ~1900 |
-| Solitary | ~3.8 | ~500 |
-| Solitary | ~4.5 | ~2000 |
-| Solitary | ~4.6 | ~700 |
-| Solitary | ~4.6 | ~100 |
-| Solitary | ~8.4 | ~5100 |
+<table><tr><td>Series</td><td>Nest distance (m)</td><td>Discovery time (s)</td></tr><tr><td>Group</td><td>~0.3</td><td>~5700</td></tr><tr><td>Group</td><td>~0.6</td><td>~6200</td></tr><tr><td>Group</td><td>~0.4</td><td>~3300</td></tr><tr><td>Group</td><td>~2.1</td><td>~5700</td></tr><tr><td>Group</td><td>~2.2</td><td>~2400</td></tr><tr><td>Group</td><td>~5.5</td><td>~7400</td></tr><tr><td>Solitary</td><td>~1.1</td><td>~2200</td></tr><tr><td>Solitary</td><td>~1.1</td><td>~1400</td></tr><tr><td>Solitary</td><td>~1.6</td><td>~1100</td></tr><tr><td>Solitary</td><td>~1.9</td><td>~1000</td></tr><tr><td>Solitary</td><td>~2.0</td><td>~1200</td></tr><tr><td>Solitary</td><td>~2.5</td><td>~3300</td></tr><tr><td>Solitary</td><td>~2.5</td><td>~900</td></tr><tr><td>Solitary</td><td>~2.6</td><td>~400</td></tr><tr><td>Solitary</td><td>~3.0</td><td>~4100</td></tr><tr><td>Solitary</td><td>~3.7</td><td>~1900</td></tr><tr><td>Solitary</td><td>~3.8</td><td>~500</td></tr><tr><td>Solitary</td><td>~4.5</td><td>~2000</td></tr><tr><td>Solitary</td><td>~4.6</td><td>~700</td></tr><tr><td>Solitary</td><td>~4.6</td><td>~100</td></tr><tr><td>Solitary</td><td>~8.4</td><td>~5100</td></tr></table>
 
 Fig 2. Ants with solitarily removal and ants with nests less distance discover diaspores faster. The x-axis indicates nest distance in meters (m) the removal strategy (solitary and group), and the y-axis indicates the diaspore discovery time in seconds (s). The circles and the line indicate group removal ants, and the triangles and dashed line indicate solitary remover ants.
 
-| Removal strategy | Q1 | Q2 (Median) | Q3 | Min | Max |
-| --- | --- | --- | --- | --- | --- |
-| Group | ~960 | ~1280 | ~1870 | ~500 | ~2100 |
-| Solitary | ~140 | ~160 | ~200 | ~80 | ~320 |
+<table><tr><td>Removal strategy</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>Min</td><td>Max</td></tr><tr><td>Group</td><td>~960</td><td>~1280</td><td>~1870</td><td>~500</td><td>~2100</td></tr><tr><td>Solitary</td><td>~140</td><td>~160</td><td>~200</td><td>~80</td><td>~320</td></tr></table>
 
 Fig 3. Solitary remover ants remove diaspores faster than group removal ants. The x-axis indicates the removal strategy, and the y-axis indicates the removal time in seconds. The centreline of each boxplot indicates the median of all values, and the boxes indicate the first quartile (median of the values above the central median) and third quartile (median of the values below the central median). The vertical lines of each boxplot are the Tukey-style whiskers (1.5 × interquartile range).
 
-| Removal | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| First | ~100 | ~170 | ~215 | ~115 |
-| Second | ~80 | ~170 | ~205 | ~125 |
-| Last | ~75 | ~105 | ~140 | ~65 |
+<table><tr><td>Removal</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>First</td><td>~100</td><td>~170</td><td>~215</td><td>~115</td></tr><tr><td>Second</td><td>~80</td><td>~170</td><td>~205</td><td>~125</td></tr><tr><td>Last</td><td>~75</td><td>~105</td><td>~140</td><td>~65</td></tr></table>
 
 Fig 4. After the first diaspore removal, Ectatomma edentatumremove diaspores more quickly. The x-axis indicates which diaspore removal (first, second and last) and the y-axis indicate removal time in seconds (s). The centreline of each boxplot indicates the median of all values, and the boxes indicate the first quartile (median of the values above the central median) and third quartile (median of the values below the central median). The vertical lines of each boxplot are the Tukey-style whiskers (1.5 × interquartile range). The circle above the boxplot is an outlier.
 
@@ -225,24 +187,7 @@ Icaro Wilker, Mariana A. Rabelo, Marina A. Angotti, Carla R. Ribas – Solitary 
 
 Last, regarding objective (v), we found that solitary foraging ants removed more diaspores than group-foraging ants (df = 19; $\chi^{2}=11.793; p<0.001;$ ; Pseudo-R² = 0.39; Fig 5) and larger distance of nests decreases diaspore removal $( \mathrm{df} = 18; \chi^{2} =$ 7.969; $\mathbf{p} = 0.004;$ Pseudo-R² = 0.39; Fig 5), but the ant size did not affect removal time $\mathrm{df}=17; \chi^{2}=1.888; \mathrm{p}=0.169;$ $\mathrm{Pscudo-R^{2}=0.42}$
 
-| Nest distance (m) | Group (Diaspore removal %) | Solitary (Diaspore removal %) |
-| --- | --- | --- |
-| ~0.3 | ~2 | — |
-| ~0.7 | ~2 | — |
-| ~1.4 | — | ~13 |
-| ~1.5 | — | ~68 |
-| ~2.1 | ~2 | ~30 |
-| ~2.2 | ~6 | — |
-| ~2.4 | — | ~27 |
-| ~2.5 | — | ~30 |
-| ~3.0 | — | ~49 |
-| ~3.6 | — | ~8 |
-| ~3.7 | — | ~13 |
-| ~4.5 | — | ~2 |
-| ~4.6 | — | ~8 |
-| ~4.7 | — | ~19 |
-| ~5.5 | ~4 | — |
-| ~8.4 | — | ~6 |
+<table><tr><td>Nest distance (m)</td><td>Group (Diaspore removal %)</td><td>Solitary (Diaspore removal %)</td></tr><tr><td>~0.3</td><td>~2</td><td>—</td></tr><tr><td>~0.7</td><td>~2</td><td>—</td></tr><tr><td>~1.4</td><td>—</td><td>~13</td></tr><tr><td>~1.5</td><td>—</td><td>~68</td></tr><tr><td>~2.1</td><td>~2</td><td>~30</td></tr><tr><td>~2.2</td><td>~6</td><td>—</td></tr><tr><td>~2.4</td><td>—</td><td>~27</td></tr><tr><td>~2.5</td><td>—</td><td>~30</td></tr><tr><td>~3.0</td><td>—</td><td>~49</td></tr><tr><td>~3.6</td><td>—</td><td>~8</td></tr><tr><td>~3.7</td><td>—</td><td>~13</td></tr><tr><td>~4.5</td><td>—</td><td>~2</td></tr><tr><td>~4.6</td><td>—</td><td>~8</td></tr><tr><td>~4.7</td><td>—</td><td>~19</td></tr><tr><td>~5.5</td><td>~4</td><td>—</td></tr><tr><td>~8.4</td><td>—</td><td>~6</td></tr></table>
 
 Fig 5. Ants with solitarily removal and ants with nests less distance (x-axis) remove more diaspores (y-axis). The number of diaspores removed is expressed as a percentage (number of diaspores removed by the species/total diaspores available at the sampling point\*100). The circles and the line indicate group removal ants, and the triangles and dashed line indicate solitary remover ants.
 
@@ -366,29 +311,7 @@ Icaro Wilker, Mariana A. Rabelo, Marina A. Angotti, Carla R. Ribas – Solitary 
 
 Table S1. Sampling areas, species sampled, and variables collected: sample (sampled areas - 1 to 15); specie (ants species - Hymenoptera: Formicidae); ML (Mesosomal or Weber’s length - millimeters - mm); MandL (Mandible length - millimeters - mm); EL (Eye length - millimeters - mm); SL (Scape length - millimeters - mm); FL (Leg length - summing the femur and tibia length of posterior metathorax leg - millimeters - mm); strategy (foraging strategy - solitary or group); discovery (discovery time of diaspores - seconds - s); time\_r (removal time of diaspores - seconds - s); diaspore\_removal (artificial diaspores removal by ants - Hymenoptera: Formicidae).
 
-| Sample | Species | ML | MandL | EL | SL | FL | Strategy | Discovery | Distance | Time_r | Diaspore removal |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Ectatomma edentatum | 2.549 | 0.909 | 0.291 | 1.481 | 4.075 | Solitary | 660 | 4.56 | 289 | 1 |
-| 1 | Pheidole jelskii | 0.892 | 0.360 | 0.108 | 0.721 | 1.650 | Group | 3240 | 0.35 | 1960 | 1 |
-| 2 | Ectatomma opaciventre | 4.506 | 7.782 | 0.475 | 2.661 | 7.260 | Solitary | 4.11 | 4.50 | 198 | 4 |
-| 2 | Pheidole jelskii | 1.146 | 0.442 | 0.126 | 0.808 | 1.560 | Group | 7320 | 5.42 | 960 | 2 |
-| 3 | Ectatomma planidens | 2.433 | 0.509 | 0.224 | 0.759 | 1.276 | Solitary | 2160 | 1.09 | 128 | 20 |
-| 4 | Ectatomma edentatum | 2.744 | 0.941 | 0.267 | 1.579 | 4.023 | Solitary | 880 | 2.44 | 177 | 15 |
-| 5 | Ectatomma edentatum | 2.993 | 1.268 | 0.392 | 1.515 | 4.700 | Solitary | 960 | 1.86 | 101 | 35 |
-| 6 | Ectatomma edentatum | 3.064 | 1.311 | 0.435 | 1.578 | 3.995 | Solitary | 1320 | 1.08 | 65 | 34 |
-| 7 | Ectatomma edentatum | 2.875 | 1.130 | 0.348 | 1.616 | 4.303 | Solitary | 1120 | 1.99 | 116 | 15 |
-| 8 | Ectatomma edentatum | 2.489 | 1.182 | 0.364 | 1.637 | 4.194 | Solitary | 1020 | 1.45 | 131 | 6 |
-| 9 | Ectatomma edentatum | 2.858 | 1.086 | 0.313 | 1.519 | 3.820 | Solitary | 1900 | 4.52 | 146 | 9 |
-| 9 | Pheidole jelskii | 1.024 | 0.391 | 0.122 | 1.044 | 2.260 | Group | 2340 | 2.13 | 960 | 1 |
-| 10 | Ectatomma edentatum | 2.818 | 1.050 | 0.323 | 1.557 | 4.095 | Solitary | 330 | 2.55 | 156 | 13 |
-| 11 | Ectatomma edentatum | 2.758 | 1.048 | 0.302 | 1.612 | 3.950 | Solitary | 480 | 3.60 | 280 | 4 |
-| 12 | Odontomachus haematodus | 3.221 | 1.017 | 0.262 | 1.527 | 2.924 | Solitary | 1800 | 3.70 | 123 | 6 |
-| 12 | Ectatomma opaciventre | 4.471 | 1.828 | 0.537 | 2.568 | 7.759 | Solitary | 5000 | 8.42 | 307 | 3 |
-| 13 | Odontomachus haematodus | 3.144 | 0.968 | 0.275 | 1.557 | 3.069 | Solitary | 3240 | 2.42 | 200 | 1 |
-| 13 | Ectatomma brunneum | 3.581 | 0.905 | 0.359 | 1.137 | 3.510 | Solitary | 4020 | 3.02 | 123 | 24 |
-| 14 | Pheidole capillata | 0.807 | 0.451 | 0.099 | 0.702 | 1.670 | Group | 5640 | 2.14 | 1601 | 3 |
-| 15 | Blepharidatta conopsi | 0.994 | 0.330 | 0.073 | 0.639 | 1.450 | Group | 5640 | 0.34 | 493 | 1 |
-| 15 | Solenopsis tridens | 0.930 | 0.276 | 0.072 | 0.656 | 1.390 | Group | 6180 | 0.67 | 2100 | 1 |
+<table><tr><td>Sample</td><td>Species</td><td>ML</td><td>MandL</td><td>EL</td><td>SL</td><td>FL</td><td>Strategy</td><td>Discovery</td><td>Distance</td><td>Time_r</td><td>Diaspore removal</td></tr><tr><td>1</td><td>Ectatomma edentatum</td><td>2.549</td><td>0.909</td><td>0.291</td><td>1.481</td><td>4.075</td><td>Solitary</td><td>660</td><td>4.56</td><td>289</td><td>1</td></tr><tr><td>1</td><td>Pheidole jelskii</td><td>0.892</td><td>0.360</td><td>0.108</td><td>0.721</td><td>1.650</td><td>Group</td><td>3240</td><td>0.35</td><td>1960</td><td>1</td></tr><tr><td>2</td><td>Ectatomma opaciventre</td><td>4.506</td><td>7.782</td><td>0.475</td><td>2.661</td><td>7.260</td><td>Solitary</td><td>4.11</td><td>4.50</td><td>198</td><td>4</td></tr><tr><td>2</td><td>Pheidole jelskii</td><td>1.146</td><td>0.442</td><td>0.126</td><td>0.808</td><td>1.560</td><td>Group</td><td>7320</td><td>5.42</td><td>960</td><td>2</td></tr><tr><td>3</td><td>Ectatomma planidens</td><td>2.433</td><td>0.509</td><td>0.224</td><td>0.759</td><td>1.276</td><td>Solitary</td><td>2160</td><td>1.09</td><td>128</td><td>20</td></tr><tr><td>4</td><td>Ectatomma edentatum</td><td>2.744</td><td>0.941</td><td>0.267</td><td>1.579</td><td>4.023</td><td>Solitary</td><td>880</td><td>2.44</td><td>177</td><td>15</td></tr><tr><td>5</td><td>Ectatomma edentatum</td><td>2.993</td><td>1.268</td><td>0.392</td><td>1.515</td><td>4.700</td><td>Solitary</td><td>960</td><td>1.86</td><td>101</td><td>35</td></tr><tr><td>6</td><td>Ectatomma edentatum</td><td>3.064</td><td>1.311</td><td>0.435</td><td>1.578</td><td>3.995</td><td>Solitary</td><td>1320</td><td>1.08</td><td>65</td><td>34</td></tr><tr><td>7</td><td>Ectatomma edentatum</td><td>2.875</td><td>1.130</td><td>0.348</td><td>1.616</td><td>4.303</td><td>Solitary</td><td>1120</td><td>1.99</td><td>116</td><td>15</td></tr><tr><td>8</td><td>Ectatomma edentatum</td><td>2.489</td><td>1.182</td><td>0.364</td><td>1.637</td><td>4.194</td><td>Solitary</td><td>1020</td><td>1.45</td><td>131</td><td>6</td></tr><tr><td>9</td><td>Ectatomma edentatum</td><td>2.858</td><td>1.086</td><td>0.313</td><td>1.519</td><td>3.820</td><td>Solitary</td><td>1900</td><td>4.52</td><td>146</td><td>9</td></tr><tr><td>9</td><td>Pheidole jelskii</td><td>1.024</td><td>0.391</td><td>0.122</td><td>1.044</td><td>2.260</td><td>Group</td><td>2340</td><td>2.13</td><td>960</td><td>1</td></tr><tr><td>10</td><td>Ectatomma edentatum</td><td>2.818</td><td>1.050</td><td>0.323</td><td>1.557</td><td>4.095</td><td>Solitary</td><td>330</td><td>2.55</td><td>156</td><td>13</td></tr><tr><td>11</td><td>Ectatomma edentatum</td><td>2.758</td><td>1.048</td><td>0.302</td><td>1.612</td><td>3.950</td><td>Solitary</td><td>480</td><td>3.60</td><td>280</td><td>4</td></tr><tr><td>12</td><td>Odontomachus haematodus</td><td>3.221</td><td>1.017</td><td>0.262</td><td>1.527</td><td>2.924</td><td>Solitary</td><td>1800</td><td>3.70</td><td>123</td><td>6</td></tr><tr><td>12</td><td>Ectatomma opaciventre</td><td>4.471</td><td>1.828</td><td>0.537</td><td>2.568</td><td>7.759</td><td>Solitary</td><td>5000</td><td>8.42</td><td>307</td><td>3</td></tr><tr><td>13</td><td>Odontomachus haematodus</td><td>3.144</td><td>0.968</td><td>0.275</td><td>1.557</td><td>3.069</td><td>Solitary</td><td>3240</td><td>2.42</td><td>200</td><td>1</td></tr><tr><td>13</td><td>Ectatomma brunneum</td><td>3.581</td><td>0.905</td><td>0.359</td><td>1.137</td><td>3.510</td><td>Solitary</td><td>4020</td><td>3.02</td><td>123</td><td>24</td></tr><tr><td>14</td><td>Pheidole capillata</td><td>0.807</td><td>0.451</td><td>0.099</td><td>0.702</td><td>1.670</td><td>Group</td><td>5640</td><td>2.14</td><td>1601</td><td>3</td></tr><tr><td>15</td><td>Blepharidatta conopsi</td><td>0.994</td><td>0.330</td><td>0.073</td><td>0.639</td><td>1.450</td><td>Group</td><td>5640</td><td>0.34</td><td>493</td><td>1</td></tr><tr><td>15</td><td>Solenopsis tridens</td><td>0.930</td><td>0.276</td><td>0.072</td><td>0.656</td><td>1.390</td><td>Group</td><td>6180</td><td>0.67</td><td>2100</td><td>1</td></tr></table>
 
 <!-- page 11 of 11 -->
 
@@ -398,41 +321,4 @@ Sociobiology 69(3): e8308 (September, 2022)
 
 Table S2. Nests sampled in each area, species sampled (only Ectatomma edentatum), removal performed (first, second, and last), and removal time (s).
 
-| Nest | Species | Time_r | N_removal |
-| --- | --- | --- | --- |
-| A4N1 | Ectatomma edentatum | 373 | First |
-| A4N1 | Ectatomma edentatum | 178 | Second |
-| A4N1 | Ectatomma edentatum | 149 | Last |
-| A4N2 | Ectatomma edentatum | 63 | First |
-| A4N2 | Ectatomma edentatum | 40 | Second |
-| A4N2 | Ectatomma edentatum | 41 | Last |
-| A5N1 | Ectatomma edentatum | 161 | First |
-| A5N1 | Ectatomma edentatum | 187 | Second |
-| A5N1 | Ectatomma edentatum | 94 | Last |
-| A6N1 | Ectatomma edentatum | 87 | First |
-| A6N1 | Ectatomma edentatum | 80 | Second |
-| A6N1 | Ectatomma edentatum | 58 | Last |
-| A7N1 | Ectatomma edentatum | 66 | First |
-| A7N1 | Ectatomma edentatum | 57 | Second |
-| A7N1 | Ectatomma edentatum | 71 | Last |
-| A7N2 | Ectatomma edentatum | 196 | First |
-| A7N2 | Ectatomma edentatum | 140 | Second |
-| A7N2 | Ectatomma edentatum | 97 | Last |
-| A7N4 | Ectatomma edentatum | 180 | First |
-| A7N4 | Ectatomma edentatum | 162 | Second |
-| A7N4 | Ectatomma edentatum | 112 | Last |
-| A8N1 | Ectatomma edentatum | 106 | First |
-| A8N1 | Ectatomma edentatum | 69 | Second |
-| A8N1 | Ectatomma edentatum | 77 | Last |
-| A9N1 | Ectatomma edentatum | 242 | First |
-| A9N1 | Ectatomma edentatum | 296 | Second |
-| A9N1 | Ectatomma edentatum | 240 | Last |
-| A9N2 | Ectatomma edentatum | 206 | First |
-| A9N2 | Ectatomma edentatum | 470 | Second |
-| A9N2 | Ectatomma edentatum | 190 | Last |
-| A10N1 | Ectatomma edentatum | 120 | First |
-| A10N1 | Ectatomma edentatum | 195 | Second |
-| A10N1 | Ectatomma edentatum | 130 | Last |
-| A10N2 | Ectatomma edentatum | 442 | First |
-| A10N2 | Ectatomma edentatum | 230 | Second |
-| A10N2 | Ectatomma edentatum | 138 | Last |
+<table><tr><td>Nest</td><td>Species</td><td>Time_r</td><td>N_removal</td></tr><tr><td>A4N1</td><td>Ectatomma edentatum</td><td>373</td><td>First</td></tr><tr><td>A4N1</td><td>Ectatomma edentatum</td><td>178</td><td>Second</td></tr><tr><td>A4N1</td><td>Ectatomma edentatum</td><td>149</td><td>Last</td></tr><tr><td>A4N2</td><td>Ectatomma edentatum</td><td>63</td><td>First</td></tr><tr><td>A4N2</td><td>Ectatomma edentatum</td><td>40</td><td>Second</td></tr><tr><td>A4N2</td><td>Ectatomma edentatum</td><td>41</td><td>Last</td></tr><tr><td>A5N1</td><td>Ectatomma edentatum</td><td>161</td><td>First</td></tr><tr><td>A5N1</td><td>Ectatomma edentatum</td><td>187</td><td>Second</td></tr><tr><td>A5N1</td><td>Ectatomma edentatum</td><td>94</td><td>Last</td></tr><tr><td>A6N1</td><td>Ectatomma edentatum</td><td>87</td><td>First</td></tr><tr><td>A6N1</td><td>Ectatomma edentatum</td><td>80</td><td>Second</td></tr><tr><td>A6N1</td><td>Ectatomma edentatum</td><td>58</td><td>Last</td></tr><tr><td>A7N1</td><td>Ectatomma edentatum</td><td>66</td><td>First</td></tr><tr><td>A7N1</td><td>Ectatomma edentatum</td><td>57</td><td>Second</td></tr><tr><td>A7N1</td><td>Ectatomma edentatum</td><td>71</td><td>Last</td></tr><tr><td>A7N2</td><td>Ectatomma edentatum</td><td>196</td><td>First</td></tr><tr><td>A7N2</td><td>Ectatomma edentatum</td><td>140</td><td>Second</td></tr><tr><td>A7N2</td><td>Ectatomma edentatum</td><td>97</td><td>Last</td></tr><tr><td>A7N4</td><td>Ectatomma edentatum</td><td>180</td><td>First</td></tr><tr><td>A7N4</td><td>Ectatomma edentatum</td><td>162</td><td>Second</td></tr><tr><td>A7N4</td><td>Ectatomma edentatum</td><td>112</td><td>Last</td></tr><tr><td>A8N1</td><td>Ectatomma edentatum</td><td>106</td><td>First</td></tr><tr><td>A8N1</td><td>Ectatomma edentatum</td><td>69</td><td>Second</td></tr><tr><td>A8N1</td><td>Ectatomma edentatum</td><td>77</td><td>Last</td></tr><tr><td>A9N1</td><td>Ectatomma edentatum</td><td>242</td><td>First</td></tr><tr><td>A9N1</td><td>Ectatomma edentatum</td><td>296</td><td>Second</td></tr><tr><td>A9N1</td><td>Ectatomma edentatum</td><td>240</td><td>Last</td></tr><tr><td>A9N2</td><td>Ectatomma edentatum</td><td>206</td><td>First</td></tr><tr><td>A9N2</td><td>Ectatomma edentatum</td><td>470</td><td>Second</td></tr><tr><td>A9N2</td><td>Ectatomma edentatum</td><td>190</td><td>Last</td></tr><tr><td>A10N1</td><td>Ectatomma edentatum</td><td>120</td><td>First</td></tr><tr><td>A10N1</td><td>Ectatomma edentatum</td><td>195</td><td>Second</td></tr><tr><td>A10N1</td><td>Ectatomma edentatum</td><td>130</td><td>Last</td></tr><tr><td>A10N2</td><td>Ectatomma edentatum</td><td>442</td><td>First</td></tr><tr><td>A10N2</td><td>Ectatomma edentatum</td><td>230</td><td>Second</td></tr><tr><td>A10N2</td><td>Ectatomma edentatum</td><td>138</td><td>Last</td></tr></table>

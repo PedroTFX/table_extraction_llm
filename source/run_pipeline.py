@@ -26,7 +26,7 @@ from text_manager import get_text
 from table_to_data import map_and_group, table_id, _identifier_column
 from fill_template import (get_measurement_level_tags, route_tags, apply_plan,
                            decode_grouped_values)
-from to_output import write_output_csv
+from to_output import pm_statistic_from_text, write_output_csv
 
 # Fields the volunteers fill with constants; override empties at output time.
 # Pull associatedReferences from your per-paper metadata rather than hardcoding.
@@ -145,6 +145,7 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
         decode=False,            # values already decoded in 4b
         keep_protocol=False,
         defaults=defaults,
+        pm_statistic=pm_statistic_from_text(paper_text),
     )
 
     print(f"\nDONE in {time.time() - t0:.1f}s -> {output_path}")

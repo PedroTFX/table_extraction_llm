@@ -65,18 +65,7 @@ the southern Sahara–Sahel zone of Africa (Mauritania to Eritrea) and the Arabi
 
 Table 1. Known records and the reported number of specimens (NOS) of Nilomantis floweri per country with years of collection, \* the collection from 1901 goes back to before the establishment of this genus and species by Werner in 1907. On a trip to Iran, Zarudny collected one male and one female of this species from Makran in Sistan and Baluchistan Province and deposited them at the Zoological Institute of the Russian Academy of Sciences, Saint Petersburg. Evgeny Shcherbakov (Lomonosov Moscow State University, Russia) recently identified them as Nilomantis floweri.
 
-| Country | Year | NOS | Reference |
-| --- | --- | --- | --- |
-| Chad | 1958 | 3 | Roy and Leston 1975 |
-| Eritrea | 1907, 1931 | 3 | NRM, Roy and Leston 1975 |
-| Iran | 1901*-2021 | 35 | This study |
-| Niger | 1897, 1958 | 4 | Roy and Leston 1975 |
-| Oman | 1976, 2000, 2016, 2017, 2020, 2022 | 45 | Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982 |
-| Qatar | 2020 | 1 | iNaturalist |
-| Saudi Arabia | 1930–1932, 1934, 1936, 1938, 1940, 1945, 1948, 1956, 1962, 1975–1980, 2019 | 43 | Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982 |
-| Sudan | 1906, 1928, 1931, 1957 | 4 | Roy and Leston 1975, LMZ |
-| United Arab Emirates | 2014, 2015, 2019–2022 | 18 | iNaturalist |
-| Yemen | 1987, 1988, 1945, 1956, 1996, 1998, 2000 | 50 | SMNK, Roy and Leston 1975 |
+<table><tr><td>Country</td><td>Year</td><td>NOS</td><td>Reference</td></tr><tr><td>Chad</td><td>1958</td><td>3</td><td>Roy and Leston 1975</td></tr><tr><td>Eritrea</td><td>1907, 1931</td><td>3</td><td>NRM, Roy and Leston 1975</td></tr><tr><td>Iran</td><td>1901*-2021</td><td>35</td><td>This study</td></tr><tr><td>Niger</td><td>1897, 1958</td><td>4</td><td>Roy and Leston 1975</td></tr><tr><td>Oman</td><td>1976, 2000, 2016, 2017, 2020, 2022</td><td>45</td><td>Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982</td></tr><tr><td>Qatar</td><td>2020</td><td>1</td><td>iNaturalist</td></tr><tr><td>Saudi Arabia</td><td>1930–1932, 1934, 1936, 1938, 1940, 1945, 1948, 1956, 1962, 1975–1980, 2019</td><td>43</td><td>Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982</td></tr><tr><td>Sudan</td><td>1906, 1928, 1931, 1957</td><td>4</td><td>Roy and Leston 1975, LMZ</td></tr><tr><td>United Arab Emirates</td><td>2014, 2015, 2019–2022</td><td>18</td><td>iNaturalist</td></tr><tr><td>Yemen</td><td>1987, 1988, 1945, 1956, 1996, 1998, 2000</td><td>50</td><td>SMNK, Roy and Leston 1975</td></tr></table>
 
 External morphology, male genitalia, and geographic distribution have traditionally been used to describe and classify mantid species. Nevertheless, high intraspecific variability in male genital characteristics makes it difficult to separate some closely related species. In addition, intraspecific morphological variability is still unknown or poorly documented for numerous species. In N. floweri for instance, a high variation in the shape of the phalloid apophysis
 
@@ -216,14 +205,7 @@ Figure 4. Ootheca of Nilomantis floweri: a lateral view b dorsal view.
 
 Table 2. Information regarding Nilomantis floweri oothecae. Oothecae one and two were collected from their natural habitat, and three and four were laid in the lab, n = Number.
 
-| Ootheca | Width (mm) | Length (mm) | Incubation duration (days) | n eggs | n hatched nymphs |
-| --- | --- | --- | --- | --- | --- |
-| 1 | 2.3 | 5.0 | 45 | 3 | 3 |
-| 2 | 3.0 | 9.0 | 42 | 8 | 6 |
-| 3 | 2.5 | 7.0 | 42 | 4 | 4 |
-| 4 | 2.2 | 5.5 | 45 | 3 | 1 |
-| Mean | 2.5 | 6.6 | 43.5 | 4.5 | 3.5 |
-| SD | 0.4 | 1.8 | 1.7 | 2.4 | 2.1 |
+<table><tr><td>Ootheca</td><td>Width (mm)</td><td>Length (mm)</td><td>Incubation duration (days)</td><td>n eggs</td><td>n hatched nymphs</td></tr><tr><td>1</td><td>2.3</td><td>5.0</td><td>45</td><td>3</td><td>3</td></tr><tr><td>2</td><td>3.0</td><td>9.0</td><td>42</td><td>8</td><td>6</td></tr><tr><td>3</td><td>2.5</td><td>7.0</td><td>42</td><td>4</td><td>4</td></tr><tr><td>4</td><td>2.2</td><td>5.5</td><td>45</td><td>3</td><td>1</td></tr><tr><td>Mean</td><td>2.5</td><td>6.6</td><td>43.5</td><td>4.5</td><td>3.5</td></tr><tr><td>SD</td><td>0.4</td><td>1.8</td><td>1.7</td><td>2.4</td><td>2.1</td></tr></table>
 
 ## Distribution
 
@@ -241,11 +223,7 @@ ZooKeys 1173: 275–295 (2023), DOI: 10.3897/zookeys.1173.107204
 
 Zohreh Mirzaee et al.: Life history and biogeography of Nilomantis floweri
 
-| Category | Description |
-| --- | --- |
-| Purple dots | Occurrence records |
-| Light blue area | Climatically unsuitable |
-| Dark blue area | Climatically suitable and non-extrapolative |
+<table><tr><td>Category</td><td>Description</td></tr><tr><td>Purple dots</td><td>Occurrence records</td></tr><tr><td>Light blue area</td><td>Climatically unsuitable</td></tr><tr><td>Dark blue area</td><td>Climatically suitable and non-extrapolative</td></tr></table>
 
 Figure 5. Final climate suitability map showing the current climatic suitability with a 10% threshold for N. floweri in its native range, visualisation with QGIS v. 3.22.
 
@@ -265,12 +243,7 @@ Zohreh Mirzaee et al.: Life history and biogeography of Nilomantis floweri
 
 Table 3. Summary of bioclimatic predictors and their relative importance (in %) to model habitat suitability of Nilomantis floweri across its native range. The pairwise correlation among these layers was less than 0.8.
 
-| Abbreviation | Variable | Units | Percent contribution |
-| --- | --- | --- | --- |
-| Bio 5 | Max temperature of warmest month | °C | 13.2 |
-| Bio 6 | Minimum temperature of coldest month | °C | 33.6 |
-| Bio 12 | annual precipitation | mm/a | 38.1 |
-| Bio 14 | Precipitation of driest month | mm/month | 15.1 |
+<table><tr><td>Abbreviation</td><td>Variable</td><td>Units</td><td>Percent contribution</td></tr><tr><td>Bio 5</td><td>Max temperature of warmest month</td><td>°C</td><td>13.2</td></tr><tr><td>Bio 6</td><td>Minimum temperature of coldest month</td><td>°C</td><td>33.6</td></tr><tr><td>Bio 12</td><td>annual precipitation</td><td>mm/a</td><td>38.1</td></tr><tr><td>Bio 14</td><td>Precipitation of driest month</td><td>mm/month</td><td>15.1</td></tr></table>
 
 precipitation was less than 100 mm and the precipitation of the driest month was less than 5 mm (Fig. 6). The response curves for the maximum temperature of the warmest month showed a linear increase with the increase in temperature, and the response curves for the minimum temperature of the coldest month showed a linear increase in the habitat suitability of N. floweri when the minimum temperature of the coldest month is between 15 and $2 4   ^ { \circ } \mathsf { C }$ (Fig. 6).
 
@@ -383,36 +356,7 @@ ZooKeys 1173: 275–295 (2023), DOI: 10.3897/zookeys.1173.107204
 
 Zohreh Mirzaee et al.: Life history and biogeography of Nilomantis floweri
 
-| Category | Value |
-| --- | --- |
-| H_01 | 1 |
-| H_02 | 1 |
-| H_03 | 1 |
-| H_04 | 1 |
-| H_05 | 1 |
-| H_06 | 1 |
-| H_07 | 1 |
-| H_08 | 1 |
-| H_09 | 1 |
-| H_10 | 1 |
-| H_11 | 1 |
-| H_12 | 1 |
-| H_13 | 1 |
-| H_14 | 1 |
-| H_15 | 1 |
-| H_16 | 1 |
-| H_17 | 1 |
-| H_18 | 1 |
-| H_19 | 1 |
-| H_20 | 1 |
-| H_21 | 1 |
-| H_22 | 1 |
-| H_23 | 1 |
-| H_24 | 1 |
-| H_25 | 1 |
-| H_26 | 1 |
-| H_27 | 1 |
-| H_28 | 1 |
+<table><tr><td>Category</td><td>Value</td></tr><tr><td>H_01</td><td>1</td></tr><tr><td>H_02</td><td>1</td></tr><tr><td>H_03</td><td>1</td></tr><tr><td>H_04</td><td>1</td></tr><tr><td>H_05</td><td>1</td></tr><tr><td>H_06</td><td>1</td></tr><tr><td>H_07</td><td>1</td></tr><tr><td>H_08</td><td>1</td></tr><tr><td>H_09</td><td>1</td></tr><tr><td>H_10</td><td>1</td></tr><tr><td>H_11</td><td>1</td></tr><tr><td>H_12</td><td>1</td></tr><tr><td>H_13</td><td>1</td></tr><tr><td>H_14</td><td>1</td></tr><tr><td>H_15</td><td>1</td></tr><tr><td>H_16</td><td>1</td></tr><tr><td>H_17</td><td>1</td></tr><tr><td>H_18</td><td>1</td></tr><tr><td>H_19</td><td>1</td></tr><tr><td>H_20</td><td>1</td></tr><tr><td>H_21</td><td>1</td></tr><tr><td>H_22</td><td>1</td></tr><tr><td>H_23</td><td>1</td></tr><tr><td>H_24</td><td>1</td></tr><tr><td>H_25</td><td>1</td></tr><tr><td>H_26</td><td>1</td></tr><tr><td>H_27</td><td>1</td></tr><tr><td>H_28</td><td>1</td></tr></table>
 
 Figure 8. Geographic distribution of the 28 COI haplotypes recorded for Nilomantis floweri.
 

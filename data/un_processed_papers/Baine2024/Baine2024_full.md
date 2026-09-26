@@ -195,11 +195,7 @@ m (C3) that frequently separates A. trixa from A. bigeloviae, also separates the
 
 Table 1. Significance values from $x ^ { 2 }$ tests to compare the presence/absence of wing characters in the three morphotypes.
 
-| Wing pattern character | A. bigeloviae ~ Type III | A. trixa ~ Type III |
-| --- | --- | --- |
-| C1 | $\chi^2 = 50.22, df = 1, p < 0.0001$ | $\chi^2 = 36.29, df = 1, p < 0.0001$ |
-| C2 | $\chi^2 = 68, df = 1, p < 0.0001$ | $\chi^2 = 65.33, df = 1, p < 0.0001$ |
-| C3 | $\chi^2 = 47.28, df = 2, p < 0.0001$ | NS |
+<table><tr><td>Wing pattern character</td><td>A. bigeloviae ~ Type III</td><td>A. trixa ~ Type III</td></tr><tr><td>C1</td><td>$\chi^2 = 50.22, df = 1, p &lt; 0.0001$</td><td>$\chi^2 = 36.29, df = 1, p &lt; 0.0001$</td></tr><tr><td>C2</td><td>$\chi^2 = 68, df = 1, p &lt; 0.0001$</td><td>$\chi^2 = 65.33, df = 1, p &lt; 0.0001$</td></tr><tr><td>C3</td><td>$\chi^2 = 47.28, df = 2, p &lt; 0.0001$</td><td>NS</td></tr></table>
 
 ## Genomics
 

@@ -258,24 +258,7 @@ Fig. 4. Fourth-corner analysis results of a) morphological traits, b) feeding st
 
 Table 3 Effect of biotope type on biotic and abiotic environmental variables across habitat types within each region using linear models (LM’s). Reported is the Fvalue, with significant effects at $\mathtt { p }   <   0 . 0 5$ . Pairwise comparisons reported in Table S6.
 
-| Environmental variable | Midlands | Zululand |
-| --- | --- | --- |
-| Bare ground cover (%) | 23.53*** | 21.02*** |
-| Dead wood cover (%) | 222.01*** | 38.75*** |
-| Grass cover (%) | 106.02*** | 311.04*** |
-| Herbaceous cover (%) | 39.25*** | 29.40*** |
-| Leaf litter cover (%) | 242.26*** | 45.07*** |
-| Leaf litter depth (cm) | 199.18*** | 37.49*** |
-| Number of plant species | 94.69*** | 24.54*** |
-| Rock cover (%) | 6.24** | n/a |
-| Shade cover (%) | 273.88*** | 333.97*** |
-| Shrub cover (%) | 26.36*** | 4.31* |
-| Soil compaction (psi) | 23.53*** | 33.47*** |
-| Soil moisture (%) | 1.92 | 13.27*** |
-| Soil pH | 10.93*** | 1.67 |
-| Tree density (%) | 108.31*** | 93.64*** |
-| Vegetation cover (%) | 197.37*** | 28.78*** |
-| Vegetation height (cm) | 47.52*** | 18.58*** |
+<table><tr><td>Environmental variable</td><td>Midlands</td><td>Zululand</td></tr><tr><td>Bare ground cover (%)</td><td>23.53***</td><td>21.02***</td></tr><tr><td>Dead wood cover (%)</td><td>222.01***</td><td>38.75***</td></tr><tr><td>Grass cover (%)</td><td>106.02***</td><td>311.04***</td></tr><tr><td>Herbaceous cover (%)</td><td>39.25***</td><td>29.40***</td></tr><tr><td>Leaf litter cover (%)</td><td>242.26***</td><td>45.07***</td></tr><tr><td>Leaf litter depth (cm)</td><td>199.18***</td><td>37.49***</td></tr><tr><td>Number of plant species</td><td>94.69***</td><td>24.54***</td></tr><tr><td>Rock cover (%)</td><td>6.24**</td><td>n/a</td></tr><tr><td>Shade cover (%)</td><td>273.88***</td><td>333.97***</td></tr><tr><td>Shrub cover (%)</td><td>26.36***</td><td>4.31*</td></tr><tr><td>Soil compaction (psi)</td><td>23.53***</td><td>33.47***</td></tr><tr><td>Soil moisture (%)</td><td>1.92</td><td>13.27***</td></tr><tr><td>Soil pH</td><td>10.93***</td><td>1.67</td></tr><tr><td>Tree density (%)</td><td>108.31***</td><td>93.64***</td></tr><tr><td>Vegetation cover (%)</td><td>197.37***</td><td>28.78***</td></tr><tr><td>Vegetation height (cm)</td><td>47.52***</td><td>18.58***</td></tr></table>
 
 Significance codes: $\mathrm { { } ^ { k } p < 0 . 0 5 , }$ \*\*p < 0.01, $产入   p <0.001$ .
 

@@ -104,14 +104,7 @@ Wild bees were sampled with pan traps of three different colours slightly modifi
 
 Fig. 1   Sampling point locations within Braunschweig. Green point in the inset map shows the location of Braunschweig within Germany. City border and digital orthophoto (DOP): © GeoBasis-DE / BKG 2023; Terms of use: [http://sg.geodatenzentrum.de/web\_public/nutzungsbedingungen.pdf](http://sg.geodatenzentrum.de/web_public/nutzungsbedingungen.pdf)
 
-| Species Richness | Color |
-| --- | --- |
-| 1 | Yellow |
-| 5 | Yellow |
-| 10 | Orange |
-| 15 | Orange |
-| 20 | Orange |
-| 23 | Red |
+<table><tr><td>Species Richness</td><td>Color</td></tr><tr><td>1</td><td>Yellow</td></tr><tr><td>5</td><td>Yellow</td></tr><tr><td>10</td><td>Orange</td></tr><tr><td>15</td><td>Orange</td></tr><tr><td>20</td><td>Orange</td></tr><tr><td>23</td><td>Red</td></tr></table>
 
 1 3
 

@@ -122,39 +122,11 @@ Journal compilation © 2008 Australian Entomological Society
 
 T Z Dawes-Gromadzki
 
-| Category | Percentage |
-| --- | --- |
-| M. darwiniensis | 3.1% |
-| C. acinaciformis | 6.3% |
-| S. actuosus | 14.6% |
-| Heterotermes spp. | 7.3% |
-| A. perelegans | 1.0% |
-| Ephelotermes spp. | 6.2% |
-| Macrognathotermes spp. | 3.1% |
-| Microcerotermes spp. | 22.9% |
-| Nasutitermes spp. | 35.4% |
-| H. vagus | 4.2% |
-| H. venustus | 3.1% |
-| E. taylori | 5.2% |
-| E. melachoma | 1.0% |
-| M. sunteri | 2.1% |
-| M. errator | 1.0% |
-| M. nervosus | 6.3% |
-| M. serratus | 2.1% |
-| M. boreus | 14.6% |
-| N. eucalypti | 30.2% |
-| N. longipennis | 4.2% |
-| N. graveolus | 1.0% |
+<table><tr><td>Category</td><td>Percentage</td></tr><tr><td>M. darwiniensis</td><td>3.1%</td></tr><tr><td>C. acinaciformis</td><td>6.3%</td></tr><tr><td>S. actuosus</td><td>14.6%</td></tr><tr><td>Heterotermes spp.</td><td>7.3%</td></tr><tr><td>A. perelegans</td><td>1.0%</td></tr><tr><td>Ephelotermes spp.</td><td>6.2%</td></tr><tr><td>Macrognathotermes spp.</td><td>3.1%</td></tr><tr><td>Microcerotermes spp.</td><td>22.9%</td></tr><tr><td>Nasutitermes spp.</td><td>35.4%</td></tr><tr><td>H. vagus</td><td>4.2%</td></tr><tr><td>H. venustus</td><td>3.1%</td></tr><tr><td>E. taylori</td><td>5.2%</td></tr><tr><td>E. melachoma</td><td>1.0%</td></tr><tr><td>M. sunteri</td><td>2.1%</td></tr><tr><td>M. errator</td><td>1.0%</td></tr><tr><td>M. nervosus</td><td>6.3%</td></tr><tr><td>M. serratus</td><td>2.1%</td></tr><tr><td>M. boreus</td><td>14.6%</td></tr><tr><td>N. eucalypti</td><td>30.2%</td></tr><tr><td>N. longipennis</td><td>4.2%</td></tr><tr><td>N. graveolus</td><td>1.0%</td></tr></table>
 
 Fig. 1. Relative abundance of termite species as a proportion of total termite encounters at Charles Darwin National Park, Darwin, Northern Territory.
 
-| Category | Percentage |
-| --- | --- |
-| Mounds | 39.3% |
-| Standing dead wood | 14.3% |
-| Lying dead wood | 26.8% |
-| Carton runways | 2.7% |
-| Baits | 17.0% |
+<table><tr><td>Category</td><td>Percentage</td></tr><tr><td>Mounds</td><td>39.3%</td></tr><tr><td>Standing dead wood</td><td>14.3%</td></tr><tr><td>Lying dead wood</td><td>26.8%</td></tr><tr><td>Carton runways</td><td>2.7%</td></tr><tr><td>Baits</td><td>17.0%</td></tr></table>
 
 Fig. 2. Relative frequencies of occurrence of termites in different microhabitats from direct searches and bait sampling in Charles Darwin National Park, Darwin, Northern Territory.
 
@@ -190,23 +162,11 @@ Termite fauna of a savanna woodland
 
 Fig. 3. Proportions of different termite feeding groups represented across the 16 termite species collected from direct search and bait sampling in Charles Darwin National Park, Darwin, Northern Territory. Note: litter- and grass-feeding termite species were absent.
 
-| Category | Percentage |
-| --- | --- |
-| Soil | 12.5% |
-| Wood/soil interface | 25.0% |
-| Wood | 56.25% |
-| Litter | 6.25% |
-| Grass | 6.25% |
-| Polyphagous | 6.25% |
+<table><tr><td>Category</td><td>Percentage</td></tr><tr><td>Soil</td><td>12.5%</td></tr><tr><td>Wood/soil interface</td><td>25.0%</td></tr><tr><td>Wood</td><td>56.25%</td></tr><tr><td>Litter</td><td>6.25%</td></tr><tr><td>Grass</td><td>6.25%</td></tr><tr><td>Polyphagous</td><td>6.25%</td></tr></table>
 
 Fig. 4. Proportions of different nesting groups represented across the 16 termite species collected from direct search and bait sampling in Charles Darwin National Park, Darwin, Northern Territory.
 
-| Category | Percentage |
-| --- | --- |
-| Hypogeal | 25.0% |
-| Wood | 6.25% |
-| Epigeal | 62.5% |
-| Arboreal | 6.25% |
+<table><tr><td>Category</td><td>Percentage</td></tr><tr><td>Hypogeal</td><td>25.0%</td></tr><tr><td>Wood</td><td>6.25%</td></tr><tr><td>Epigeal</td><td>62.5%</td></tr><tr><td>Arboreal</td><td>6.25%</td></tr></table>
 
 whole appears to be typical for NT savanna woodland fauna in taxonomic and functional group structure. However, based on limited species inventory information available, I suggest it appears to be less species-rich by comparison; characterised by a lower relative abundance of soil- and grass-harvesting species.
 

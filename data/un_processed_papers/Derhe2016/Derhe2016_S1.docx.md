@@ -10,47 +10,7 @@
 
 **Table S1** Abundance of each species and their assigned functional trait values, including the habitat category within which the majority of individuals were recorded (‘habitat preference’): P= pasture; YR= young restoration; MR= mid-age restoration; OR= old restoration; RF = rainforest.
 
-| **Species** | **Taxonomic authority** | **Abundance** | **Body mass (mg)** | **Behavioural guild** | **Diel activity** | **Diet preference** | **Diet breadth** | **Habitat preference** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| *Amphistomus complanatus* | Matthews (1974) | 333 | 9.60 | Rollers | Nocturnal | Dung | 2 | YR; MR; OR; RF |
-| *Amphistomus NQ3* | NA | 235 | 18.31 | Rollers | Nocturnal | Dung | 2 | RF |
-| *Amphistomus NQ4* | NA | 18 | 3.21 | Rollers | NA | Dung | 2 | OR; RF |
-| *Amphistomus NQ5* | NA | 302 | 1.55 | Rollers | Nocturnal | Dung | 2 | OR; RF |
-| *Amphistomus pygmaeus* | Matthews (1974) | 7 | 3.30 | Rollers | Nocturnal | Dung | 1 | RF |
-| *Aptenocanthon winyar* | Storey &amp; Monteith (2000) | 4 | 9.00 | Rollers | NA | Dung | 1 | RF |
-| *Boletoscapter cornutus* | Matthews (1974) | 68 | 8.50 | Rollers | Nocturnal | Mushroom | 1 | MR; OR; RF |
-| *Coptodactyla depressa* | Matthews (1976) | 409 | 51.25 | Tunnelers | Nocturnal | Both | 2 | MR; OR; RF |
-| *Coptodactyla onitoides* | Matthews (1976) | 79 | 76.80 | Tunnelers | Nocturnal | Both | 2 | MR; OR |
-| *Demarziella interrupta* | Matthews (1976) | 27 | 2.95 | Tunnelers | Nocturnal | Dung | 2 | P |
-| *Lepanus globulus* | Matthews (1974) | 11 | 4.43 | Rollers | NA | Both | 2 | RF |
-| *Lepanus latheticus* | Matthews (1974) | 10 | 0.70 | Rollers | NA | Mushroom | 2 | RF |
-| *Lepanus nitidus (large)* | Matthews (1974) | 13 | 3.50 | Rollers | Diurnal | Both | 2 | RF |
-| *Lepanus nitidus (small)* | Matthews (1974) | 115 | 1.40 | Rollers | Diurnal | Mushroom | 2 | RF |
-| *Lepanus NQ11* | NA | 1 | 0.70 | Rollers | NA | NA | NA | OR |
-| *Lepanus NQ3* | NA | 3 | 0.75 | Rollers | NA | Mushroom | 2 | RF |
-| *Lepanus NQ5* | NA | 1 | 0.87 | Rollers | NA | Mushroom | NA | RF |
-| *Lepanus palumensis* | Matthews (1974) | 1 | 0.80 | Rollers | NA | Mushroom | 1 | RF |
-| *Lepanus villosus* | Matthews (1974) | 12 | 0.65 | Rollers | Diurnal | Mushroom | 1 | RF |
-| *Onthophagus bornemisszanus* | Matthews (1972) | 2 | 20.00 | Tunnelers | NA | NA | NA | P |
-| *Onthophagus bundara* | Storey &amp; Weir (1990) | 1 | 1.29 | Tunnelers | NA | NA | NA | RF |
-| *Onthophagus capelliformis* | Matthews (1972) | 113 | 25.47 | Tunnelers | Nocturnal | Dung | 1 | YR; MR; OR; RF |
-| *Onthophagus capella* | Matthews (1972) | 17 | 52.95 | Tunnelers | Nocturnal | Dung | 1 | P; YR |
-| *Onthophagus cuniculus* | Matthews (1972) | 31 | 19.70 | Tunnelers | Diurnal | Mushroom | 2 | P; YR |
-| *Onthophagus darlingtoni* | Matthews (1972) | 3 | 15.62 | Tunnelers | Nocturnal | Dung | 2 | RF |
-| *Onthophagus dicranocerus* | Matthews (1972) | 18 | 31.04 | Tunnelers | Nocturnal | Dung | 1 | MR; OR; RF |
-| *Onthophagus gulmarri* | Matthews (1972) | 4 | 9.00 | Tunnelers | Nocturnal | Dung | 1 | MR; RF |
-| *Onthophagus millamilla* | Matthews (1972) | 59 | 4.38 | Tunnelers | Diurnal | Dung | 2 | MR; OR; RF |
-| *Onthophagus mundill* | Matthews (1972) | 1 | 61.00 | Tunnelers | Nocturnal | NA | NA | RF |
-| *Onthophagus nigriventris* | D'Orbigny (1902) | 2 | 38.31 | Tunnelers | Diurnal | NA | NA | OR |
-| *Onthophagus paluma* | Matthews (1972) | 1 | 28.50 | Tunnelers | Diurnal | Dung | 1 | P |
-| *Onthophagus rubicundulus* | Matthews (1972) | 15 | 1.86 | Tunnelers | Diurnal | Dung | 2 | RF |
-| *Onthophagus semimetallicus* | Matthews (1972) | 12 | 12.0 | Tunnelers | Nocturnal | Dung | 1 | MR |
-| *Onthophagus wagamen* | Matthews (1972) | 62 | 5.70 | Tunnelers | Diurnal | Dung | 1 | RF |
-| *Onthophagus waminda* | Matthews (1972) | 84 | 1.93 | Tunnelers | Diurnal | Dung | 1 | YR; MR; OR; RF |
-| *Onthophagus yungaburra* | Matthews (1972) | 136 | 2.57 | Tunnelers | Diurnal | Dung | 1 | RF |
-| *Temnoplectron aeneopiceum* | Matthews (1974) | 1 | 4.56 | Rollers | Nocturnal | Unknown | 1 | RF |
-| *Temnoplectron bornemisszai* | Matthews (1974) | 18 | 63.50 | Rollers | Nocturnal | Dung | 2 | RF |
-| *Temnoplectron politulum* | Matthews (1974) | 387 | 18.56 | Rollers | Nocturnal | Both | 2 | OR; RF |
+<table><tr><td>**Species**</td><td>**Taxonomic authority**</td><td>**Abundance**</td><td>**Body mass (mg)**</td><td>**Behavioural guild**</td><td>**Diel activity**</td><td>**Diet preference**</td><td>**Diet breadth**</td><td>**Habitat preference**</td></tr><tr><td>*Amphistomus complanatus*</td><td>Matthews (1974)</td><td>333</td><td>9.60</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>YR; MR; OR; RF</td></tr><tr><td>*Amphistomus NQ3*</td><td>NA</td><td>235</td><td>18.31</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>*Amphistomus NQ4*</td><td>NA</td><td>18</td><td>3.21</td><td>Rollers</td><td>NA</td><td>Dung</td><td>2</td><td>OR; RF</td></tr><tr><td>*Amphistomus NQ5*</td><td>NA</td><td>302</td><td>1.55</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>OR; RF</td></tr><tr><td>*Amphistomus pygmaeus*</td><td>Matthews (1974)</td><td>7</td><td>3.30</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>*Aptenocanthon winyar*</td><td>Storey &amp;amp; Monteith (2000)</td><td>4</td><td>9.00</td><td>Rollers</td><td>NA</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>*Boletoscapter cornutus*</td><td>Matthews (1974)</td><td>68</td><td>8.50</td><td>Rollers</td><td>Nocturnal</td><td>Mushroom</td><td>1</td><td>MR; OR; RF</td></tr><tr><td>*Coptodactyla depressa*</td><td>Matthews (1976)</td><td>409</td><td>51.25</td><td>Tunnelers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>MR; OR; RF</td></tr><tr><td>*Coptodactyla onitoides*</td><td>Matthews (1976)</td><td>79</td><td>76.80</td><td>Tunnelers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>MR; OR</td></tr><tr><td>*Demarziella interrupta*</td><td>Matthews (1976)</td><td>27</td><td>2.95</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>P</td></tr><tr><td>*Lepanus globulus*</td><td>Matthews (1974)</td><td>11</td><td>4.43</td><td>Rollers</td><td>NA</td><td>Both</td><td>2</td><td>RF</td></tr><tr><td>*Lepanus latheticus*</td><td>Matthews (1974)</td><td>10</td><td>0.70</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>*Lepanus nitidus (large)*</td><td>Matthews (1974)</td><td>13</td><td>3.50</td><td>Rollers</td><td>Diurnal</td><td>Both</td><td>2</td><td>RF</td></tr><tr><td>*Lepanus nitidus (small)*</td><td>Matthews (1974)</td><td>115</td><td>1.40</td><td>Rollers</td><td>Diurnal</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>*Lepanus NQ11*</td><td>NA</td><td>1</td><td>0.70</td><td>Rollers</td><td>NA</td><td>NA</td><td>NA</td><td>OR</td></tr><tr><td>*Lepanus NQ3*</td><td>NA</td><td>3</td><td>0.75</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>2</td><td>RF</td></tr><tr><td>*Lepanus NQ5*</td><td>NA</td><td>1</td><td>0.87</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>NA</td><td>RF</td></tr><tr><td>*Lepanus palumensis*</td><td>Matthews (1974)</td><td>1</td><td>0.80</td><td>Rollers</td><td>NA</td><td>Mushroom</td><td>1</td><td>RF</td></tr><tr><td>*Lepanus villosus*</td><td>Matthews (1974)</td><td>12</td><td>0.65</td><td>Rollers</td><td>Diurnal</td><td>Mushroom</td><td>1</td><td>RF</td></tr><tr><td>*Onthophagus bornemisszanus*</td><td>Matthews (1972)</td><td>2</td><td>20.00</td><td>Tunnelers</td><td>NA</td><td>NA</td><td>NA</td><td>P</td></tr><tr><td>*Onthophagus bundara*</td><td>Storey &amp;amp; Weir (1990)</td><td>1</td><td>1.29</td><td>Tunnelers</td><td>NA</td><td>NA</td><td>NA</td><td>RF</td></tr><tr><td>*Onthophagus capelliformis*</td><td>Matthews (1972)</td><td>113</td><td>25.47</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>YR; MR; OR; RF</td></tr><tr><td>*Onthophagus capella*</td><td>Matthews (1972)</td><td>17</td><td>52.95</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>P; YR</td></tr><tr><td>*Onthophagus cuniculus*</td><td>Matthews (1972)</td><td>31</td><td>19.70</td><td>Tunnelers</td><td>Diurnal</td><td>Mushroom</td><td>2</td><td>P; YR</td></tr><tr><td>*Onthophagus darlingtoni*</td><td>Matthews (1972)</td><td>3</td><td>15.62</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>*Onthophagus dicranocerus*</td><td>Matthews (1972)</td><td>18</td><td>31.04</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR; OR; RF</td></tr><tr><td>*Onthophagus gulmarri*</td><td>Matthews (1972)</td><td>4</td><td>9.00</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR; RF</td></tr><tr><td>*Onthophagus millamilla*</td><td>Matthews (1972)</td><td>59</td><td>4.38</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>2</td><td>MR; OR; RF</td></tr><tr><td>*Onthophagus mundill*</td><td>Matthews (1972)</td><td>1</td><td>61.00</td><td>Tunnelers</td><td>Nocturnal</td><td>NA</td><td>NA</td><td>RF</td></tr><tr><td>*Onthophagus nigriventris*</td><td>D'Orbigny (1902)</td><td>2</td><td>38.31</td><td>Tunnelers</td><td>Diurnal</td><td>NA</td><td>NA</td><td>OR</td></tr><tr><td>*Onthophagus paluma*</td><td>Matthews (1972)</td><td>1</td><td>28.50</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>P</td></tr><tr><td>*Onthophagus rubicundulus*</td><td>Matthews (1972)</td><td>15</td><td>1.86</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>*Onthophagus semimetallicus*</td><td>Matthews (1972)</td><td>12</td><td>12.0</td><td>Tunnelers</td><td>Nocturnal</td><td>Dung</td><td>1</td><td>MR</td></tr><tr><td>*Onthophagus wagamen*</td><td>Matthews (1972)</td><td>62</td><td>5.70</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>*Onthophagus waminda*</td><td>Matthews (1972)</td><td>84</td><td>1.93</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>YR; MR; OR; RF</td></tr><tr><td>*Onthophagus yungaburra*</td><td>Matthews (1972)</td><td>136</td><td>2.57</td><td>Tunnelers</td><td>Diurnal</td><td>Dung</td><td>1</td><td>RF</td></tr><tr><td>*Temnoplectron aeneopiceum*</td><td>Matthews (1974)</td><td>1</td><td>4.56</td><td>Rollers</td><td>Nocturnal</td><td>Unknown</td><td>1</td><td>RF</td></tr><tr><td>*Temnoplectron bornemisszai*</td><td>Matthews (1974)</td><td>18</td><td>63.50</td><td>Rollers</td><td>Nocturnal</td><td>Dung</td><td>2</td><td>RF</td></tr><tr><td>*Temnoplectron politulum*</td><td>Matthews (1974)</td><td>387</td><td>18.56</td><td>Rollers</td><td>Nocturnal</td><td>Both</td><td>2</td><td>OR; RF</td></tr></table>
 
 <!-- page 3 of 5 -->
 
@@ -76,24 +36,14 @@ Diet preference was investigated using traps alternately baited with wallaby dun
 
 **Table S3** Structure of global models for determining the effects of species richness (SpRic), abundance (Abun), biomass (Biom), functional richness (FRic), functional evenness (FEve), functional dispersion (FDis) and functional divergence (FDiv) on dung removal (Dung), seeds dispersal (Seeds), soil excavation (Soil) and multifunctionality (Multi). 
 
-| **Global model** | **Model** | **Random effect(s)** |
-| --- | --- | --- |
-| log(Dung) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
-| log(Seeds) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
-| log(Soil) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv | lmm | Block |
-| Multi ~ SpRic + Abun + Biom + FRic + FEve + FDis + FDiv | lmm | Block |
+<table><tr><td>**Global model**</td><td>**Model**</td><td>**Random effect(s)**</td></tr><tr><td>log(Dung) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>log(Seeds) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>log(Soil) ~ SpRic + sqrt(Abun) + sqrt(Biom) + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr><tr><td>Multi ~ SpRic + Abun + Biom + FRic + FEve + FDis + FDiv</td><td>lmm</td><td>Block</td></tr></table>
 
 \*Number of individuals (abundance) and biomass were square root transformed to satisfy assumptions of normality
 
 <a id="_Ref424123611"></a>
 **Table S4** Summary of total abundance, observed (Sobs) and estimated (Sest) species richness, and proportion of species detected (Sobs / Sest) in each habitat category. Superscripts represent pairwise differences at the *P* ≤ 0.05 level.
 
-| **Measure** | **Pasture** | **Young restoration** | **Mid restoration** | **Old restoration** | **Rainforest** |
-| --- | --- | --- | --- | --- | --- |
-| Abundance | 78<sup>a</sup> | 138<sup>a</sup> | 537<sup>b</sup> | 957<sup>bc</sup> | 1607<sup>c</sup> |
-| Sobs | 7<sup>a</sup> | 11<sup>a</sup> | 20<sup>b</sup> | 22<sup>b</sup> | 32<sup>c</sup> |
-| Sest | 8.97<sup>a</sup> | 13.56<sup>a</sup> | 28.20<sup>b</sup> | 32.48<sup>b</sup> | 37.70<sup>b</sup> |
-| Sobs/ Sest | 0.78<sup>a</sup> | 0.81<sup>a</sup> | 0.71<sup>a</sup> | 0.68<sup>a</sup> | 0.85<sup>a</sup> |
+<table><tr><td>**Measure**</td><td>**Pasture**</td><td>**Young restoration**</td><td>**Mid restoration**</td><td>**Old restoration**</td><td>**Rainforest**</td></tr><tr><td>Abundance</td><td>78&lt;sup&gt;a&lt;/sup&gt;</td><td>138&lt;sup&gt;a&lt;/sup&gt;</td><td>537&lt;sup&gt;b&lt;/sup&gt;</td><td>957&lt;sup&gt;bc&lt;/sup&gt;</td><td>1607&lt;sup&gt;c&lt;/sup&gt;</td></tr><tr><td>Sobs</td><td>7&lt;sup&gt;a&lt;/sup&gt;</td><td>11&lt;sup&gt;a&lt;/sup&gt;</td><td>20&lt;sup&gt;b&lt;/sup&gt;</td><td>22&lt;sup&gt;b&lt;/sup&gt;</td><td>32&lt;sup&gt;c&lt;/sup&gt;</td></tr><tr><td>Sest</td><td>8.97&lt;sup&gt;a&lt;/sup&gt;</td><td>13.56&lt;sup&gt;a&lt;/sup&gt;</td><td>28.20&lt;sup&gt;b&lt;/sup&gt;</td><td>32.48&lt;sup&gt;b&lt;/sup&gt;</td><td>37.70&lt;sup&gt;b&lt;/sup&gt;</td></tr><tr><td>Sobs/ Sest</td><td>0.78&lt;sup&gt;a&lt;/sup&gt;</td><td>0.81&lt;sup&gt;a&lt;/sup&gt;</td><td>0.71&lt;sup&gt;a&lt;/sup&gt;</td><td>0.68&lt;sup&gt;a&lt;/sup&gt;</td><td>0.85&lt;sup&gt;a&lt;/sup&gt;</td></tr></table>
 
 ![Image block](doc:180203f/tier:flash/page:5/block:6)
 
@@ -113,40 +63,7 @@ Diet preference was investigated using traps alternately baited with wallaby dun
 
 **Table S6** Support for generalized linear mixed models predicting multifunctionality, dung removal, seed dispersal and soil excavation in relation to dung beetle community attributes and functional diversity metrics.
 
-| **Predictor** | **log(L)** | **ΔAIC**<em><strong><sub>c</sub></strong></em> | ***w***<em><strong><sub>i</sub></strong></em> |
-| --- | --- | --- | --- |
-| Multifunctionality |  |  |  |
-| FDiv | -17.04 | 0.00 | 0.309 |
-| FDis | -17.08 | 0.08 | 0.297 |
-| FEve | -17.37 | 0.66 | 0.223 |
-| Biomass | -18.02 | 1.95 | 0.116 |
-| FRic | -19.05 | 4.02 | 0.041 |
-| Abundance | -20.51 | 6.93 | 0.01 |
-| Species richness | -21.34 | 8.59 | 0.004 |
-| Dung removal |  |  |  |
-| FDis | -12.54 | 0.00 | 0.568 |
-| FEve | -13.83 | 2.57 | 0.157 |
-| FDiv | -13.86 | 2.65 | 0.151 |
-| Biomass | -14.78 | 4.49 | 0.060 |
-| FRic | -14.95 | 4.82 | 0.051 |
-| Abundance | -16.90 | 8.71 | 0.007 |
-| Species richness | -17.06 | 9.04 | 0.006 |
-| Seed dispersal |  |  |  |
-| FDis | -12.59 | 0.00 | 0.401 |
-| FDiv | -13.13 | 1.07 | 0.235 |
-| FEve | -13.41 | 1.64 | 0.176 |
-| Biomass | -13.85 | 2.52 | 0.114 |
-| FRic | -14.63 | 4.07 | 0.053 |
-| Abundance | -16.02 | 6.86 | 0.013 |
-| Species richness | -16.46 | 7.73 | 0.008 |
-| Soil excavation |  |  |  |
-| FDis | -16.23 | 0.00 | 0.432 |
-| FDiv | -16.56 | 0.66 | 0.310 |
-| FEve | -17.40 | 2.34 | 0.134 |
-| FRic | -17.84 | 3.21 | 0.087 |
-| Biomass | -18.83 | 5.19 | 0.032 |
-| Abundance | -20.97 | 9.49 | 0.004 |
-| Species richness | -21.68 | 10.90 | 0.002 |
+<table><tr><td>**Predictor**</td><td>**log(L)**</td><td>**ΔAIC**&lt;em&gt;&lt;strong&gt;&lt;sub&gt;c&lt;/sub&gt;&lt;/strong&gt;&lt;/em&gt;</td><td>***w***&lt;em&gt;&lt;strong&gt;&lt;sub&gt;i&lt;/sub&gt;&lt;/strong&gt;&lt;/em&gt;</td></tr><tr><td>Multifunctionality</td><td></td><td></td><td></td></tr><tr><td>FDiv</td><td>-17.04</td><td>0.00</td><td>0.309</td></tr><tr><td>FDis</td><td>-17.08</td><td>0.08</td><td>0.297</td></tr><tr><td>FEve</td><td>-17.37</td><td>0.66</td><td>0.223</td></tr><tr><td>Biomass</td><td>-18.02</td><td>1.95</td><td>0.116</td></tr><tr><td>FRic</td><td>-19.05</td><td>4.02</td><td>0.041</td></tr><tr><td>Abundance</td><td>-20.51</td><td>6.93</td><td>0.01</td></tr><tr><td>Species richness</td><td>-21.34</td><td>8.59</td><td>0.004</td></tr><tr><td>Dung removal</td><td></td><td></td><td></td></tr><tr><td>FDis</td><td>-12.54</td><td>0.00</td><td>0.568</td></tr><tr><td>FEve</td><td>-13.83</td><td>2.57</td><td>0.157</td></tr><tr><td>FDiv</td><td>-13.86</td><td>2.65</td><td>0.151</td></tr><tr><td>Biomass</td><td>-14.78</td><td>4.49</td><td>0.060</td></tr><tr><td>FRic</td><td>-14.95</td><td>4.82</td><td>0.051</td></tr><tr><td>Abundance</td><td>-16.90</td><td>8.71</td><td>0.007</td></tr><tr><td>Species richness</td><td>-17.06</td><td>9.04</td><td>0.006</td></tr><tr><td>Seed dispersal</td><td></td><td></td><td></td></tr><tr><td>FDis</td><td>-12.59</td><td>0.00</td><td>0.401</td></tr><tr><td>FDiv</td><td>-13.13</td><td>1.07</td><td>0.235</td></tr><tr><td>FEve</td><td>-13.41</td><td>1.64</td><td>0.176</td></tr><tr><td>Biomass</td><td>-13.85</td><td>2.52</td><td>0.114</td></tr><tr><td>FRic</td><td>-14.63</td><td>4.07</td><td>0.053</td></tr><tr><td>Abundance</td><td>-16.02</td><td>6.86</td><td>0.013</td></tr><tr><td>Species richness</td><td>-16.46</td><td>7.73</td><td>0.008</td></tr><tr><td>Soil excavation</td><td></td><td></td><td></td></tr><tr><td>FDis</td><td>-16.23</td><td>0.00</td><td>0.432</td></tr><tr><td>FDiv</td><td>-16.56</td><td>0.66</td><td>0.310</td></tr><tr><td>FEve</td><td>-17.40</td><td>2.34</td><td>0.134</td></tr><tr><td>FRic</td><td>-17.84</td><td>3.21</td><td>0.087</td></tr><tr><td>Biomass</td><td>-18.83</td><td>5.19</td><td>0.032</td></tr><tr><td>Abundance</td><td>-20.97</td><td>9.49</td><td>0.004</td></tr><tr><td>Species richness</td><td>-21.68</td><td>10.90</td><td>0.002</td></tr></table>
 
 \* Abundance and Biomass were square root transformed to satisfy assumptions of normality. Block was included as a random effect in each model (n = 20 sites). There were 4 parameters in each model and 5 degrees of freedom. log(L) is the log likelihood; ΔAIC<em><sub>c</sub></em> is the difference between the AIC<em><sub>c</sub></em> of each model and that of the top model; and *w*<em><sub>i</sub></em> is the Akaike weight.
 

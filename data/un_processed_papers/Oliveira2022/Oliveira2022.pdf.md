@@ -133,51 +133,9 @@ To characterize the overall variability in ant morphology between plots along th
 
 TA B L E 1  Morphometric traits used to characterize the morphological variation of workers of Dinoponera quadriceps, Dorymyermex goeldii, Pheidole radoskowskii, and Ectatomma muticum along our disturbance and aridity gradients in Catimbau National Park, Pernambuco state, NE Brazil
 
-| Morphological trait | Measure | Function significance |
-| --- | --- | --- |
-| Mesosoma or Weber's length | It represents body size and was measured from the base of the anterior slope of the pronotum to the lower posterior angle of the propodeum (Brown, 1953) | Strongly correlated with many physiological, ecological, and life history traits (Kaspari &amp; Weiser, 1999) |
-| Clypeus length ratio | Ratio of clypeus length to mesosoma length | Correlated with sucking ability and liquid-feeding behavior (Davidson et al., 2004) |
-| Mandible length ratio | Ratio of mandible length to mesosoma length | Possible indicator of predatory lifestyle and thus types of resources consumed (Weiser &amp; Kaspari, 2006) |
-| Antenna length ratio | Ratio of antenna length (combined funicle and scape) to mesosoma length | Possibly correlated with ability to receive chemosensory information. Ants with long scapes may be more sensitive to pheromone trails (Weiser &amp; Kaspari, 2006) |
-| Leg length ratio | Ratio of leg length (combined length of femur and tibia) to mesosoma length | Possibly correlated with resource acquisition mode and foraging efficiency, as well as with the ability to cope with high foraging surface temperatures (Bihn et al., 2010; Kaspari &amp; Weiser, 1999) |
-| Eye length ratio | Ratio of eye length to mesosoma length | Likely correlated with main foraging period (day vs. night) (Bihn et al., 2010) |
-| Eye position ratio | Ratio of inter-ocular width to mesosoma length | Related to hunting method (Fowler et al., 1991) or the component of the habitat occupied (Gibb &amp; Parr, 2013) |
-| Pilosity | Count of hairs crossing mesosoma profile | Hairs may increase tolerance to dehydration or may relate to mechanoreception (Wittlinger et al., 2007) |
+<table><tr><td>Morphological trait</td><td>Measure</td><td>Function significance</td></tr><tr><td>Mesosoma or Weber's length</td><td>It represents body size and was measured from the base of the anterior slope of the pronotum to the lower posterior angle of the propodeum (Brown, 1953)</td><td>Strongly correlated with many physiological, ecological, and life history traits (Kaspari &amp;amp; Weiser, 1999)</td></tr><tr><td>Clypeus length ratio</td><td>Ratio of clypeus length to mesosoma length</td><td>Correlated with sucking ability and liquid-feeding behavior (Davidson et al., 2004)</td></tr><tr><td>Mandible length ratio</td><td>Ratio of mandible length to mesosoma length</td><td>Possible indicator of predatory lifestyle and thus types of resources consumed (Weiser &amp;amp; Kaspari, 2006)</td></tr><tr><td>Antenna length ratio</td><td>Ratio of antenna length (combined funicle and scape) to mesosoma length</td><td>Possibly correlated with ability to receive chemosensory information. Ants with long scapes may be more sensitive to pheromone trails (Weiser &amp;amp; Kaspari, 2006)</td></tr><tr><td>Leg length ratio</td><td>Ratio of leg length (combined length of femur and tibia) to mesosoma length</td><td>Possibly correlated with resource acquisition mode and foraging efficiency, as well as with the ability to cope with high foraging surface temperatures (Bihn et al., 2010; Kaspari &amp;amp; Weiser, 1999)</td></tr><tr><td>Eye length ratio</td><td>Ratio of eye length to mesosoma length</td><td>Likely correlated with main foraging period (day vs. night) (Bihn et al., 2010)</td></tr><tr><td>Eye position ratio</td><td>Ratio of inter-ocular width to mesosoma length</td><td>Related to hunting method (Fowler et al., 1991) or the component of the habitat occupied (Gibb &amp;amp; Parr, 2013)</td></tr><tr><td>Pilosity</td><td>Count of hairs crossing mesosoma profile</td><td>Hairs may increase tolerance to dehydration or may relate to mechanoreception (Wittlinger et al., 2007)</td></tr></table>
 
-| Category | Feature | Within plots (%) | Between plots (%) |
-| :--- | :--- | :--- | :--- |
-| Dq | Weber's length | ~83 | ~17 |
-| Em | Weber's length | ~85 | ~15 |
-| Dg | Weber's length | ~45 | ~55 |
-| Pr | Weber's length | ~60 | ~40 |
-| Dq | Clypeus length | ~28 | ~72 |
-| Em | Clypeus length | ~15 | ~85 |
-| Dg | Clypeus length | ~45 | ~55 |
-| Pr | Clypeus length | ~75 | ~25 |
-| Dq | Mandible length | ~45 | ~55 |
-| Em | Mandible length | ~90 | ~10 |
-| Dg | Mandible length | ~60 | ~40 |
-| Pr | Mandible length | ~75 | ~25 |
-| Dq | Leg length | ~85 | ~15 |
-| Em | Leg length | ~90 | ~10 |
-| Dg | Leg length | ~90 | ~10 |
-| Pr | Leg length | ~60 | ~40 |
-| Dq | Antenna length | ~75 | ~25 |
-| Em | Antenna length | ~85 | ~15 |
-| Dg | Antenna length | ~85 | ~15 |
-| Pr | Antenna length | ~75 | ~25 |
-| Dq | Eye length | ~75 | ~25 |
-| Em | Eye length | ~40 | ~60 |
-| Dg | Eye length | ~85 | ~15 |
-| Pr | Eye length | ~85 | ~15 |
-| Dq | Interocular distance | ~75 | ~25 |
-| Em | Interocular distance | ~75 | ~25 |
-| Dg | Interocular distance | ~90 | ~10 |
-| Pr | Interocular distance | ~75 | ~25 |
-| Dq | Pilosity | ~85 | ~15 |
-| Em | Pilosity | ~75 | ~25 |
-| Dg | Pilosity | 0 | 0 |
-| Pr | Pilosity | ~45 | ~55 |
+<table><tr><td>Category</td><td>Feature</td><td>Within plots (%)</td><td>Between plots (%)</td></tr><tr><td>Dq</td><td>Weber's length</td><td>~83</td><td>~17</td></tr><tr><td>Em</td><td>Weber's length</td><td>~85</td><td>~15</td></tr><tr><td>Dg</td><td>Weber's length</td><td>~45</td><td>~55</td></tr><tr><td>Pr</td><td>Weber's length</td><td>~60</td><td>~40</td></tr><tr><td>Dq</td><td>Clypeus length</td><td>~28</td><td>~72</td></tr><tr><td>Em</td><td>Clypeus length</td><td>~15</td><td>~85</td></tr><tr><td>Dg</td><td>Clypeus length</td><td>~45</td><td>~55</td></tr><tr><td>Pr</td><td>Clypeus length</td><td>~75</td><td>~25</td></tr><tr><td>Dq</td><td>Mandible length</td><td>~45</td><td>~55</td></tr><tr><td>Em</td><td>Mandible length</td><td>~90</td><td>~10</td></tr><tr><td>Dg</td><td>Mandible length</td><td>~60</td><td>~40</td></tr><tr><td>Pr</td><td>Mandible length</td><td>~75</td><td>~25</td></tr><tr><td>Dq</td><td>Leg length</td><td>~85</td><td>~15</td></tr><tr><td>Em</td><td>Leg length</td><td>~90</td><td>~10</td></tr><tr><td>Dg</td><td>Leg length</td><td>~90</td><td>~10</td></tr><tr><td>Pr</td><td>Leg length</td><td>~60</td><td>~40</td></tr><tr><td>Dq</td><td>Antenna length</td><td>~75</td><td>~25</td></tr><tr><td>Em</td><td>Antenna length</td><td>~85</td><td>~15</td></tr><tr><td>Dg</td><td>Antenna length</td><td>~85</td><td>~15</td></tr><tr><td>Pr</td><td>Antenna length</td><td>~75</td><td>~25</td></tr><tr><td>Dq</td><td>Eye length</td><td>~75</td><td>~25</td></tr><tr><td>Em</td><td>Eye length</td><td>~40</td><td>~60</td></tr><tr><td>Dg</td><td>Eye length</td><td>~85</td><td>~15</td></tr><tr><td>Pr</td><td>Eye length</td><td>~85</td><td>~15</td></tr><tr><td>Dq</td><td>Interocular distance</td><td>~75</td><td>~25</td></tr><tr><td>Em</td><td>Interocular distance</td><td>~75</td><td>~25</td></tr><tr><td>Dg</td><td>Interocular distance</td><td>~90</td><td>~10</td></tr><tr><td>Pr</td><td>Interocular distance</td><td>~75</td><td>~25</td></tr><tr><td>Dq</td><td>Pilosity</td><td>~85</td><td>~15</td></tr><tr><td>Em</td><td>Pilosity</td><td>~75</td><td>~25</td></tr><tr><td>Dg</td><td>Pilosity</td><td>0</td><td>0</td></tr><tr><td>Pr</td><td>Pilosity</td><td>~45</td><td>~55</td></tr></table>
 
 F I G U R E 1  The within- and between-plot variance for each morphological trait and ant species in the Catimbau National Park, northeastern Brazil. Abbreviations: Dq, Dinoponera quadriceps; Em, Ectatomma muticum; Dg, Dorymyrmex goeldii; and Pr, Pheidole radoskowskii
 
@@ -247,116 +205,19 @@ mean leg length ratio and pilosity of P. radoskowskii decreased with increasing 
 
 between mean clypeus length ratio, leg length ratio, and eye length ratio and aridity (Figure 4a,c,e). However, the variance of none of the traits of Dinoponera quadriceps was related to disturbance or aridity. For D. goeldii, the mean leg length ratio was negatively related to disturbance intensity (Figure 5b), and the variance in mandible length ratio decreased with increasing aridity, while the variance in antenna length ratio increased with increasing aridity (Figure 5a,c). Finally, in E. muticum, only the variance in pilosity responded negatively to increase in disturbance (Figure 6).
 
-| Water deficit (mm) | Leg length ratio |
-| --- | --- |
-| ~670 | ~1.805 |
-| ~670 | ~1.775 |
-| ~730 | ~1.745 |
-| ~790 | ~1.740 |
-| ~800 | ~1.765 |
-| ~930 | ~1.700 |
-| ~950 | ~1.665 |
-| ~990 | ~1.712 |
-| ~1000 | ~1.705 |
-| ~1010 | ~1.712 |
-| ~1040 | ~1.720 |
-| ~1050 | ~1.655 |
-| ~1090 | ~1.715 |
+<table><tr><td>Water deficit (mm)</td><td>Leg length ratio</td></tr><tr><td>~670</td><td>~1.805</td></tr><tr><td>~670</td><td>~1.775</td></tr><tr><td>~730</td><td>~1.745</td></tr><tr><td>~790</td><td>~1.740</td></tr><tr><td>~800</td><td>~1.765</td></tr><tr><td>~930</td><td>~1.700</td></tr><tr><td>~950</td><td>~1.665</td></tr><tr><td>~990</td><td>~1.712</td></tr><tr><td>~1000</td><td>~1.705</td></tr><tr><td>~1010</td><td>~1.712</td></tr><tr><td>~1040</td><td>~1.720</td></tr><tr><td>~1050</td><td>~1.655</td></tr><tr><td>~1090</td><td>~1.715</td></tr></table>
 
-| GMDI | Mandible length ratio |
-| --- | --- |
-| ~9 | ~0.00018 |
-| ~9 | ~0.00012 |
-| ~17 | ~0.00008 |
-| ~20 | ~0.00030 |
-| ~21 | ~0.00013 |
-| ~22 | ~0.00032 |
-| ~23 | ~0.00010 |
-| ~26 | ~0.00043 |
-| ~27 | ~0.00069 |
-| ~37 | ~0.00040 |
-| ~46 | ~0.00093 |
-| ~53 | ~0.00160 |
-| ~58 | ~0.00061 |
+<table><tr><td>GMDI</td><td>Mandible length ratio</td></tr><tr><td>~9</td><td>~0.00018</td></tr><tr><td>~9</td><td>~0.00012</td></tr><tr><td>~17</td><td>~0.00008</td></tr><tr><td>~20</td><td>~0.00030</td></tr><tr><td>~21</td><td>~0.00013</td></tr><tr><td>~22</td><td>~0.00032</td></tr><tr><td>~23</td><td>~0.00010</td></tr><tr><td>~26</td><td>~0.00043</td></tr><tr><td>~27</td><td>~0.00069</td></tr><tr><td>~37</td><td>~0.00040</td></tr><tr><td>~46</td><td>~0.00093</td></tr><tr><td>~53</td><td>~0.00160</td></tr><tr><td>~58</td><td>~0.00061</td></tr></table>
 
-| GMDI | Plosity |
-| --- | --- |
-| ~9 | ~0.7 |
-| ~9 | ~0.5 |
-| ~17 | ~0.8 |
-| ~20 | ~0.8 |
-| ~21 | ~0.8 |
-| ~23 | ~0.7 |
-| ~27 | ~1.7 |
-| ~27 | ~0.5 |
-| ~36 | ~0.3 |
-| ~46 | ~1.2 |
-| ~53 | ~1.3 |
-| ~58 | ~2.8 |
+<table><tr><td>GMDI</td><td>Plosity</td></tr><tr><td>~9</td><td>~0.7</td></tr><tr><td>~9</td><td>~0.5</td></tr><tr><td>~17</td><td>~0.8</td></tr><tr><td>~20</td><td>~0.8</td></tr><tr><td>~21</td><td>~0.8</td></tr><tr><td>~23</td><td>~0.7</td></tr><tr><td>~27</td><td>~1.7</td></tr><tr><td>~27</td><td>~0.5</td></tr><tr><td>~36</td><td>~0.3</td></tr><tr><td>~46</td><td>~1.2</td></tr><tr><td>~53</td><td>~1.3</td></tr><tr><td>~58</td><td>~2.8</td></tr></table>
 
-| Water deficit (mm) | Pilosity |
-| --- | --- |
-| ~670 | 3.0 |
-| ~680 | ~2.8 |
-| ~740 | ~2.2 |
-| ~790 | ~3.2 |
-| ~810 | ~3.2 |
-| ~930 | 2.0 |
-| ~950 | ~1.6 |
-| ~1000 | ~3.2 |
-| ~1010 | ~1.4 |
-| ~1020 | ~0.6 |
-| ~1040 | ~1.8 |
-| ~1050 | ~1.4 |
-| ~1090 | ~1.6 |
+<table><tr><td>Water deficit (mm)</td><td>Pilosity</td></tr><tr><td>~670</td><td>3.0</td></tr><tr><td>~680</td><td>~2.8</td></tr><tr><td>~740</td><td>~2.2</td></tr><tr><td>~790</td><td>~3.2</td></tr><tr><td>~810</td><td>~3.2</td></tr><tr><td>~930</td><td>2.0</td></tr><tr><td>~950</td><td>~1.6</td></tr><tr><td>~1000</td><td>~3.2</td></tr><tr><td>~1010</td><td>~1.4</td></tr><tr><td>~1020</td><td>~0.6</td></tr><tr><td>~1040</td><td>~1.8</td></tr><tr><td>~1050</td><td>~1.4</td></tr><tr><td>~1090</td><td>~1.6</td></tr></table>
 
-| GMDI | Leg length ratio |
-| --- | --- |
-| ~9 | ~0.0026 |
-| ~9 | ~0.0008 |
-| ~17 | ~0.0017 |
-| ~20 | ~0.0040 |
-| ~20 | ~0.0008 |
-| ~23 | ~0.0041 |
-| ~23 | ~0.0031 |
-| ~27 | ~0.0057 |
-| ~27 | ~0.0020 |
-| ~36 | ~0.0011 |
-| ~46 | ~0.0014 |
-| ~53 | ~0.0019 |
-| ~58 | ~0.0028 |
+<table><tr><td>GMDI</td><td>Leg length ratio</td></tr><tr><td>~9</td><td>~0.0026</td></tr><tr><td>~9</td><td>~0.0008</td></tr><tr><td>~17</td><td>~0.0017</td></tr><tr><td>~20</td><td>~0.0040</td></tr><tr><td>~20</td><td>~0.0008</td></tr><tr><td>~23</td><td>~0.0041</td></tr><tr><td>~23</td><td>~0.0031</td></tr><tr><td>~27</td><td>~0.0057</td></tr><tr><td>~27</td><td>~0.0020</td></tr><tr><td>~36</td><td>~0.0011</td></tr><tr><td>~46</td><td>~0.0014</td></tr><tr><td>~53</td><td>~0.0019</td></tr><tr><td>~58</td><td>~0.0028</td></tr></table>
 
-| GMDI | Antenna length ratio |
-| --- | --- |
-| ~9 | ~0.0005 |
-| ~9 | ~0.0023 |
-| ~17 | ~0.0054 |
-| ~19 | ~0.0050 |
-| ~21 | ~0.0043 |
-| ~22 | ~0.0069 |
-| ~23 | ~0.0021 |
-| ~27 | ~0.0115 |
-| ~28 | ~0.0028 |
-| ~36 | ~0.0043 |
-| ~46 | ~0.0033 |
-| ~53 | ~0.0086 |
-| ~58 | ~0.0145 |
+<table><tr><td>GMDI</td><td>Antenna length ratio</td></tr><tr><td>~9</td><td>~0.0005</td></tr><tr><td>~9</td><td>~0.0023</td></tr><tr><td>~17</td><td>~0.0054</td></tr><tr><td>~19</td><td>~0.0050</td></tr><tr><td>~21</td><td>~0.0043</td></tr><tr><td>~22</td><td>~0.0069</td></tr><tr><td>~23</td><td>~0.0021</td></tr><tr><td>~27</td><td>~0.0115</td></tr><tr><td>~28</td><td>~0.0028</td></tr><tr><td>~36</td><td>~0.0043</td></tr><tr><td>~46</td><td>~0.0033</td></tr><tr><td>~53</td><td>~0.0086</td></tr><tr><td>~58</td><td>~0.0145</td></tr></table>
 
-| Water deficit (mm) | Leg length ratio |
-| --- | --- |
-| ~670 | ~0.0057 |
-| ~670 | ~0.0028 |
-| ~730 | ~0.0041 |
-| ~790 | ~0.0020 |
-| ~800 | ~0.0014 |
-| ~930 | ~0.0026 |
-| ~950 | ~0.0019 |
-| ~1000 | ~0.0040 |
-| ~1010 | ~0.0031 |
-| ~1020 | ~0.0017 |
-| ~1040 | ~0.0008 |
-| ~1050 | ~0.0011 |
-| ~1090 | ~0.0008 |
+<table><tr><td>Water deficit (mm)</td><td>Leg length ratio</td></tr><tr><td>~670</td><td>~0.0057</td></tr><tr><td>~670</td><td>~0.0028</td></tr><tr><td>~730</td><td>~0.0041</td></tr><tr><td>~790</td><td>~0.0020</td></tr><tr><td>~800</td><td>~0.0014</td></tr><tr><td>~930</td><td>~0.0026</td></tr><tr><td>~950</td><td>~0.0019</td></tr><tr><td>~1000</td><td>~0.0040</td></tr><tr><td>~1010</td><td>~0.0031</td></tr><tr><td>~1020</td><td>~0.0017</td></tr><tr><td>~1040</td><td>~0.0008</td></tr><tr><td>~1050</td><td>~0.0011</td></tr><tr><td>~1090</td><td>~0.0008</td></tr></table>
 
 F I G U R E 3  Linear relationships between ant morphological traits of Pheidole radoskowskii and the explanatory variables retained in the best-supported models in the Catimbau National Park, northeastern Brazil: (a) mean leg length ratio and water deficit; (b) variance in mandible length ratio and disturbance; (c) variance in pilosity and disturbance; (d) mean pilosity and water deficit; (e) variance in leg length ratio and disturbance; (f) variance in antenna length ratio and disturbance; and (g) variance in leg length ratio and disturbance
 
@@ -386,44 +247,11 @@ ASSOCIATION FOR TROPICAL BIOLOGY AND CONSERVATION
 
 OLIVEIRA et al.
 
-| Water deficit (mm) | Mandible length ratio |
-| --- | --- |
-| ~930 | ~0.00057 |
-| ~950 | ~0.00089 |
-| ~995 | ~0.00071 |
-| ~1005 | ~0.00014 |
-| ~1015 | ~0.00053 |
-| ~1040 | ~0.00023 |
-| ~1050 | ~0.00013 |
-| ~1055 | ~0.00004 |
-| ~1075 | ~0.00008 |
-| ~1085 | ~0.00018 |
+<table><tr><td>Water deficit (mm)</td><td>Mandible length ratio</td></tr><tr><td>~930</td><td>~0.00057</td></tr><tr><td>~950</td><td>~0.00089</td></tr><tr><td>~995</td><td>~0.00071</td></tr><tr><td>~1005</td><td>~0.00014</td></tr><tr><td>~1015</td><td>~0.00053</td></tr><tr><td>~1040</td><td>~0.00023</td></tr><tr><td>~1050</td><td>~0.00013</td></tr><tr><td>~1055</td><td>~0.00004</td></tr><tr><td>~1075</td><td>~0.00008</td></tr><tr><td>~1085</td><td>~0.00018</td></tr></table>
 
-| GMDI | Leg length ratio |
-| --- | --- |
-| ~9 | ~1.863 |
-| ~11 | ~1.920 |
-| ~17 | ~1.924 |
-| ~19 | ~1.872 |
-| ~21 | ~1.889 |
-| ~23 | ~1.891 |
-| ~23 | ~1.893 |
-| ~31 | ~1.851 |
-| ~37 | ~1.854 |
-| ~37 | ~1.831 |
+<table><tr><td>GMDI</td><td>Leg length ratio</td></tr><tr><td>~9</td><td>~1.863</td></tr><tr><td>~11</td><td>~1.920</td></tr><tr><td>~17</td><td>~1.924</td></tr><tr><td>~19</td><td>~1.872</td></tr><tr><td>~21</td><td>~1.889</td></tr><tr><td>~23</td><td>~1.891</td></tr><tr><td>~23</td><td>~1.893</td></tr><tr><td>~31</td><td>~1.851</td></tr><tr><td>~37</td><td>~1.854</td></tr><tr><td>~37</td><td>~1.831</td></tr></table>
 
-| Water deficit (mm) | Antenna length ratio |
-| --- | --- |
-| ~925 | ~0.0027 |
-| ~950 | ~0.0032 |
-| ~995 | ~0.0012 |
-| ~1005 | ~0.0027 |
-| ~1015 | ~0.0042 |
-| ~1040 | ~0.0050 |
-| ~1050 | ~0.0052 |
-| ~1055 | ~0.0105 |
-| ~1075 | ~0.0165 |
-| ~1085 | ~0.0102 |
+<table><tr><td>Water deficit (mm)</td><td>Antenna length ratio</td></tr><tr><td>~925</td><td>~0.0027</td></tr><tr><td>~950</td><td>~0.0032</td></tr><tr><td>~995</td><td>~0.0012</td></tr><tr><td>~1005</td><td>~0.0027</td></tr><tr><td>~1015</td><td>~0.0042</td></tr><tr><td>~1040</td><td>~0.0050</td></tr><tr><td>~1050</td><td>~0.0052</td></tr><tr><td>~1055</td><td>~0.0105</td></tr><tr><td>~1075</td><td>~0.0165</td></tr><tr><td>~1085</td><td>~0.0102</td></tr></table>
 
 F I G U R E 5  Linear relationships between ant morphological traits of Dorymyrmex goeldii and the explanatory variables retained in the bestsupported models in the Catimbau National Park, northeastern Brazil: (a) variance in mandible length ratio and water deficit; (b) mean leg length ratio and disturbance; and (c) variance in antenna length ratio and water deficit
 
@@ -443,21 +271,7 @@ bIOTROPICA X ASSOCIATION FOR WILEY TROPICAL BIOLOGY AND CONSERVATION
 
 87
 
-| GMDI | Piloity |
-| --- | --- |
-| ~5 | ~1.7 |
-| ~11 | 0.5 |
-| ~20 | ~1.8 |
-| ~23 | ~0.8 |
-| ~23 | ~0.7 |
-| ~26 | ~0.2 |
-| ~27 | ~1.2 |
-| ~31 | ~1.1 |
-| ~37 | ~0.2 |
-| ~37 | ~0.2 |
-| ~46 | 0.5 |
-| ~48 | ~0.3 |
-| ~53 | ~0.2 |
+<table><tr><td>GMDI</td><td>Piloity</td></tr><tr><td>~5</td><td>~1.7</td></tr><tr><td>~11</td><td>0.5</td></tr><tr><td>~20</td><td>~1.8</td></tr><tr><td>~23</td><td>~0.8</td></tr><tr><td>~23</td><td>~0.7</td></tr><tr><td>~26</td><td>~0.2</td></tr><tr><td>~27</td><td>~1.2</td></tr><tr><td>~31</td><td>~1.1</td></tr><tr><td>~37</td><td>~0.2</td></tr><tr><td>~37</td><td>~0.2</td></tr><tr><td>~46</td><td>0.5</td></tr><tr><td>~48</td><td>~0.3</td></tr><tr><td>~53</td><td>~0.2</td></tr></table>
 
 F I G U R E 6  Linear relationship between variance in pilosity of Ectatomma muticum and disturbance in the Catimbau National Park, northeastern Brazil
 

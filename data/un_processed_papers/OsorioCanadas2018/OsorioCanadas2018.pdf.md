@@ -164,17 +164,7 @@ Bee activity began in early spring and continued through the summer. Bee composi
 
 Table 1. Effect of season on various community and network metrics.
 
-| Response variable | t | Pseudo-R2 | P | Controlled variable | t | Pseudo-R2 | P |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Host abundance | -0.78 | 0.02 | 0.45 | None | - | - | - |
-| Host richness | 11.4 | 0.50 | &lt;0.0001 | None | - | - | - |
-| Parasitoid abundance | -0.27 | 0.003 | 0.79 | Host richness | 1.20 | 0.05 | 0.25 |
-| Parasitoid richness | 1.93 | 0.12 | 0.076 | Host richness | 1.51 | 0.08 | 0.16 |
-| Percent parasitism | 0.067 | 0.001 | 0.95 | Host richness | 0.82 | 0.03 | 0.43 |
-| Vulnerability | 0.34 | 0.01 | 0.74 | Network size | 0.97 | 0.04 | 0.35 |
-| Generality | 3.56 | 0.32 | 0.005 | Network size | 1.62 | 0.10 | 0.13 |
-| Interaction evenness | 2.27 | 0.18 | 0.046 | Network size | 1.40 | 0.08 | 0.19 |
-| $H_2'$ | -0.65 | 0.07 | 0.53 | None | - | - | - |
+<table><tr><td>Response variable</td><td>t</td><td>Pseudo-R2</td><td>P</td><td>Controlled variable</td><td>t</td><td>Pseudo-R2</td><td>P</td></tr><tr><td>Host abundance</td><td>-0.78</td><td>0.02</td><td>0.45</td><td>None</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Host richness</td><td>11.4</td><td>0.50</td><td>&amp;lt;0.0001</td><td>None</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Parasitoid abundance</td><td>-0.27</td><td>0.003</td><td>0.79</td><td>Host richness</td><td>1.20</td><td>0.05</td><td>0.25</td></tr><tr><td>Parasitoid richness</td><td>1.93</td><td>0.12</td><td>0.076</td><td>Host richness</td><td>1.51</td><td>0.08</td><td>0.16</td></tr><tr><td>Percent parasitism</td><td>0.067</td><td>0.001</td><td>0.95</td><td>Host richness</td><td>0.82</td><td>0.03</td><td>0.43</td></tr><tr><td>Vulnerability</td><td>0.34</td><td>0.01</td><td>0.74</td><td>Network size</td><td>0.97</td><td>0.04</td><td>0.35</td></tr><tr><td>Generality</td><td>3.56</td><td>0.32</td><td>0.005</td><td>Network size</td><td>1.62</td><td>0.10</td><td>0.13</td></tr><tr><td>Interaction evenness</td><td>2.27</td><td>0.18</td><td>0.046</td><td>Network size</td><td>1.40</td><td>0.08</td><td>0.19</td></tr><tr><td>$H_2'$</td><td>-0.65</td><td>0.07</td><td>0.53</td><td>None</td><td>-</td><td>-</td><td>-</td></tr></table>
 
 Summary of the General linear mixed model outputs analyzing the effect of season (reference level: summer) on various community and network metrics. Six of the analyses (parasitoid abundance, parasitoid richness, percentage of parasitism, vulnerability, generality and interaction evenness) were repeated controlling for the effects of certain covariates (controlled variable). Significant values are marked in bold.
 
@@ -214,19 +204,11 @@ Table 2. Effect of season on community composition.
 
 A. Quantitative data
 
-| Response variable | Explanatory variable | df | Sums of squares | F | Pseudo-R2 | P |
-| --- | --- | --- | --- | --- | --- | --- |
-| Hosts | Season | 1 | 2.38 | 8.44 | 0.24 | 0.0001 |
-| Hosts (only bees) | Season | 1 | 1.43 | 4.28 | 0.14 | 0.0013 |
-| Parasitoids | Season | 1 | 1.98 | 9.05 | 0.26 | 0.0001 |
+<table><tr><td>Response variable</td><td>Explanatory variable</td><td>df</td><td>Sums of squares</td><td>F</td><td>Pseudo-R2</td><td>P</td></tr><tr><td>Hosts</td><td>Season</td><td>1</td><td>2.38</td><td>8.44</td><td>0.24</td><td>0.0001</td></tr><tr><td>Hosts (only bees)</td><td>Season</td><td>1</td><td>1.43</td><td>4.28</td><td>0.14</td><td>0.0013</td></tr><tr><td>Parasitoids</td><td>Season</td><td>1</td><td>1.98</td><td>9.05</td><td>0.26</td><td>0.0001</td></tr></table>
 
 B. Qualitative (presence/absence) data
 
-| Response variable | Explanatory variable | df | Sums of squares | F | Pseudo-R2 | P |
-| --- | --- | --- | --- | --- | --- | --- |
-| Hosts | Season | 1 | 1.72 | 10.40 | 0.29 | 0.0002 |
-| Host (only bees) | Season | 1 | 0.87 | 4.40 | 0.14 | 0.0003 |
-| Parasitoids | Season | 1 | 1.11 | 8.49 | 0.24 | 0.0003 |
+<table><tr><td>Response variable</td><td>Explanatory variable</td><td>df</td><td>Sums of squares</td><td>F</td><td>Pseudo-R2</td><td>P</td></tr><tr><td>Hosts</td><td>Season</td><td>1</td><td>1.72</td><td>10.40</td><td>0.29</td><td>0.0002</td></tr><tr><td>Host (only bees)</td><td>Season</td><td>1</td><td>0.87</td><td>4.40</td><td>0.14</td><td>0.0003</td></tr><tr><td>Parasitoids</td><td>Season</td><td>1</td><td>1.11</td><td>8.49</td><td>0.24</td><td>0.0003</td></tr></table>
 
 Results of PERMANOVA analyses of community composition using quantitative (A) and qualitative (B) data. Significant values are marked in bold.
 
@@ -258,57 +240,11 @@ Seasonal shifts in composition, functional diversity and host-parasitoid network
 
 A) Hosts (k=3, stress=0.12)
 
-| Cluster | Season | NMDS1 (range) | NMDS2 (range) |
-| --- | --- | --- | --- |
-| 1 | Spring | -1.7~-0.4 | -0.6~0.7 |
-| 2 | Summer | 0.3~0.8 | -0.9~-0.5 |
-| 3 | Summer | 0.7~0.9 | 0.0~0.3 |
-| 4 | Spring | -0.4~-0.1 | -0.4~0.2 |
-| 5 | Spring | -0.6~-0.3 | 0.2~0.7 |
-| 6 | Spring | -0.4~-0.1 | 1.3~1.3 |
-| 7 | Summer | 0.8~1.1 | 0.2~0.3 |
-| 8 | Summer | 0.7~0.9 | -0.9~-0.5 |
-| 9 | Summer | 0.6~0.7 | 0.6~0.7 |
-| 10 | Summer | 0.3~0.4 | -1.0~-0.8 |
-| 11 | Summer | 0.7~0.9 | 0.0~0.2 |
-| 12 | Spring | -0.6~-0.4 | -0.6~0.1 |
-| 13 | Spring | -0.5~-0.3 | 0.2~0.3 |
-| 14 | Spring | -1.7~-1.4 | -0.3~-0.1 |
-| 15 | Summer | 0.4~0.6 | -0.6~-0.4 |
-| 16 | Spring | -0.5~-0.3 | 0.6~0.7 |
-| 17 | Summer | 0.2~0.3 | -0.5~-0.4 |
-| 18 | Summer | 0.3~0.4 | -0.6~-0.5 |
-| 19 | Summer | 0.5~0.6 | -0.1~0.0 |
-| 20 | Summer | 0.5~0.7 | -0.5~-0.4 |
-| 21 | Summer | 0.5~0.6 | -0.3~-0.2 |
-| 22 | Summer | 0.4~0.5 | -0.4~-0.3 |
-| 23 | Summer | 0.5~0.7 | 0.2~0.3 |
-| 24 | Summer | 0.6~0.8 | -0.2~-0.1 |
-| 25 | Summer | 0.7~0.9 | 0.2~0.3 |
+<table><tr><td>Cluster</td><td>Season</td><td>NMDS1 (range)</td><td>NMDS2 (range)</td></tr><tr><td>1</td><td>Spring</td><td>-1.7~-0.4</td><td>-0.6~0.7</td></tr><tr><td>2</td><td>Summer</td><td>0.3~0.8</td><td>-0.9~-0.5</td></tr><tr><td>3</td><td>Summer</td><td>0.7~0.9</td><td>0.0~0.3</td></tr><tr><td>4</td><td>Spring</td><td>-0.4~-0.1</td><td>-0.4~0.2</td></tr><tr><td>5</td><td>Spring</td><td>-0.6~-0.3</td><td>0.2~0.7</td></tr><tr><td>6</td><td>Spring</td><td>-0.4~-0.1</td><td>1.3~1.3</td></tr><tr><td>7</td><td>Summer</td><td>0.8~1.1</td><td>0.2~0.3</td></tr><tr><td>8</td><td>Summer</td><td>0.7~0.9</td><td>-0.9~-0.5</td></tr><tr><td>9</td><td>Summer</td><td>0.6~0.7</td><td>0.6~0.7</td></tr><tr><td>10</td><td>Summer</td><td>0.3~0.4</td><td>-1.0~-0.8</td></tr><tr><td>11</td><td>Summer</td><td>0.7~0.9</td><td>0.0~0.2</td></tr><tr><td>12</td><td>Spring</td><td>-0.6~-0.4</td><td>-0.6~0.1</td></tr><tr><td>13</td><td>Spring</td><td>-0.5~-0.3</td><td>0.2~0.3</td></tr><tr><td>14</td><td>Spring</td><td>-1.7~-1.4</td><td>-0.3~-0.1</td></tr><tr><td>15</td><td>Summer</td><td>0.4~0.6</td><td>-0.6~-0.4</td></tr><tr><td>16</td><td>Spring</td><td>-0.5~-0.3</td><td>0.6~0.7</td></tr><tr><td>17</td><td>Summer</td><td>0.2~0.3</td><td>-0.5~-0.4</td></tr><tr><td>18</td><td>Summer</td><td>0.3~0.4</td><td>-0.6~-0.5</td></tr><tr><td>19</td><td>Summer</td><td>0.5~0.6</td><td>-0.1~0.0</td></tr><tr><td>20</td><td>Summer</td><td>0.5~0.7</td><td>-0.5~-0.4</td></tr><tr><td>21</td><td>Summer</td><td>0.5~0.6</td><td>-0.3~-0.2</td></tr><tr><td>22</td><td>Summer</td><td>0.4~0.5</td><td>-0.4~-0.3</td></tr><tr><td>23</td><td>Summer</td><td>0.5~0.7</td><td>0.2~0.3</td></tr><tr><td>24</td><td>Summer</td><td>0.6~0.8</td><td>-0.2~-0.1</td></tr><tr><td>25</td><td>Summer</td><td>0.7~0.9</td><td>0.2~0.3</td></tr></table>
 
 B) Parasitoids (k=3, stress=0.10)
 
-| ID | Season | NMDS1 | NMDS2 |
-| --- | --- | --- | --- |
-| 43 | Spring | ~0.15 | ~1.0 |
-| 44 | Summer | ~-0.85 | ~0.2 |
-| 29 | Summer | ~-0.75 | ~0.15 |
-| 32 | Spring | ~-0.25 | ~0.6 |
-| 33 | Spring | ~0.6 | ~0.6 |
-| 38 | Summer | ~-0.85 | ~-0.2 |
-| 37 | Summer | ~-0.95 | ~-0.3 |
-| 36 | Summer | ~-0.85 | ~-0.35 |
-| 31 | Summer | ~-0.6 | ~-0.25 |
-| 39 | Summer | ~-0.2 | ~0.0 |
-| 42 | Summer | ~-0.75 | ~-0.4 |
-| 41 | Summer | ~-0.7 | ~-0.45 |
-| 45 | Summer | ~-0.3 | ~-0.55 |
-| 35 | Summer | ~-0.3 | ~-0.6 |
-| 30 | Spring | ~0.6 | ~0.1 |
-| 46 | Spring | ~0.6 | ~-0.35 |
-| 40 | Spring | ~0.6 | ~-0.4 |
-| 28 | Spring | ~0.45 | ~-0.75 |
-| 34 | Spring | ~0.9 | ~-0.5 |
+<table><tr><td>ID</td><td>Season</td><td>NMDS1</td><td>NMDS2</td></tr><tr><td>43</td><td>Spring</td><td>~0.15</td><td>~1.0</td></tr><tr><td>44</td><td>Summer</td><td>~-0.85</td><td>~0.2</td></tr><tr><td>29</td><td>Summer</td><td>~-0.75</td><td>~0.15</td></tr><tr><td>32</td><td>Spring</td><td>~-0.25</td><td>~0.6</td></tr><tr><td>33</td><td>Spring</td><td>~0.6</td><td>~0.6</td></tr><tr><td>38</td><td>Summer</td><td>~-0.85</td><td>~-0.2</td></tr><tr><td>37</td><td>Summer</td><td>~-0.95</td><td>~-0.3</td></tr><tr><td>36</td><td>Summer</td><td>~-0.85</td><td>~-0.35</td></tr><tr><td>31</td><td>Summer</td><td>~-0.6</td><td>~-0.25</td></tr><tr><td>39</td><td>Summer</td><td>~-0.2</td><td>~0.0</td></tr><tr><td>42</td><td>Summer</td><td>~-0.75</td><td>~-0.4</td></tr><tr><td>41</td><td>Summer</td><td>~-0.7</td><td>~-0.45</td></tr><tr><td>45</td><td>Summer</td><td>~-0.3</td><td>~-0.55</td></tr><tr><td>35</td><td>Summer</td><td>~-0.3</td><td>~-0.6</td></tr><tr><td>30</td><td>Spring</td><td>~0.6</td><td>~0.1</td></tr><tr><td>46</td><td>Spring</td><td>~0.6</td><td>~-0.35</td></tr><tr><td>40</td><td>Spring</td><td>~0.6</td><td>~-0.4</td></tr><tr><td>28</td><td>Spring</td><td>~0.45</td><td>~-0.75</td></tr><tr><td>34</td><td>Spring</td><td>~0.9</td><td>~-0.5</td></tr></table>
 
 Fig 2. Effect of season on community composition. Nonmetric multidimensional scaling (NMDS) of (A) host and (B) parasitoid community composition in each season and site. Dots represent seasons (blue: spring; red: summer).
 
@@ -352,15 +288,7 @@ PLOS |ONE
 
 Seasonal shifts in composition, functional diversity and host-parasitoid network in a bee-wasp community
 
-| Nest diameter (mm) | Spring | Summer |
-| --- | --- | --- |
-| 2 | ~28 | 150 |
-| 3 | ~15 | 50 |
-| 4 | ~80 | ~133 |
-| 5 | ~70 | ~143 |
-| 6 | ~120 | ~144 |
-| 7 | 250 | ~108 |
-| 8 | ~155 | ~39 |
+<table><tr><td>Nest diameter (mm)</td><td>Spring</td><td>Summer</td></tr><tr><td>2</td><td>~28</td><td>150</td></tr><tr><td>3</td><td>~15</td><td>50</td></tr><tr><td>4</td><td>~80</td><td>~133</td></tr><tr><td>5</td><td>~70</td><td>~143</td></tr><tr><td>6</td><td>~120</td><td>~144</td></tr><tr><td>7</td><td>250</td><td>~108</td></tr><tr><td>8</td><td>~155</td><td>~39</td></tr></table>
 
 Fig 3. Effect of season on host nest diameter. Distribution of cavity diameters used by hosts for nest construction in spring (n = 719 nests) and summer (n = 768 nests). (X-squared = 272.45, df = 6, P < 0.0001).
 

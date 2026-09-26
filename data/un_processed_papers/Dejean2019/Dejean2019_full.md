@@ -74,10 +74,7 @@ Studying ant mosaics is important because TDAAs prevent attended hemipterans fro
 
 Alain Dejean et al.
 
-| Category | Species |
-| --- | --- |
-| Small African tree crown | M 62, M 61, M 75, M 74, M 88, M 85, M 84, M 103, M 115, M 116, M 118, M 119, M 130, M 132, M 134, M 135, M 137, N 133, N 134, N 135, N 136, N 138, N 159, N 152 |
-| Medium-sized African tree crown projection | M 70, M 59, M 58, M 57, M 56, M 37, M 34, M 67, M 68, M 33, M 78, M 94, M 93, M 82, M 97, M 81, M 96, M 80, M 95, M 100, M 99, M 98, M 108, M 119, M 124, M 125, M 126, M 129 |
+<table><tr><td>Category</td><td>Species</td></tr><tr><td>Small African tree crown</td><td>M 62, M 61, M 75, M 74, M 88, M 85, M 84, M 103, M 115, M 116, M 118, M 119, M 130, M 132, M 134, M 135, M 137, N 133, N 134, N 135, N 136, N 138, N 159, N 152</td></tr><tr><td>Medium-sized African tree crown projection</td><td>M 70, M 59, M 58, M 57, M 56, M 37, M 34, M 67, M 68, M 33, M 78, M 94, M 93, M 82, M 97, M 81, M 96, M 80, M 95, M 100, M 99, M 98, M 108, M 119, M 124, M 125, M 126, M 129</td></tr></table>
 
 Fig. 2. . Overhead view of the distribution of the trees and their associated territorially dominant ant species in the area studied in the Nouragues Ecological Field Station, French Guiana. Paths in this area follow an Hippodamian plan (grey lines representing the paths cutting at right angles and delimiting ha; the limits underlined in yellow serve to outline areas of 0.25 ha). The codes correspond to the trees listed in Appendix S1 (see also examples of the projection of African tree crowns for comparison). Note the co-occurrence of two mutually exclusive territorially dominant arboreal ant species in seven tree crowns (i.e. trees 11L403, 11L408, 11L411, 11L522, 11M111, 11M126, 11M128), and co-dominance in 29 trees. Certain co-occurrences of species are shown in the left part of the figure whereas others are represented by circles (e.g. Cephalotes attratus on a tree mostly occupied by Crematogaster levior; tree L495) or by red stars corresponding to Ectatomma tuberculatum tolerated by different ant species (e.g. trees M70, M104). [Colour figure can be viewed at [wileyonlinelibrary.com](http://wileyonlinelibrary.com)].
 
@@ -141,24 +138,7 @@ Alain Dejean et al.
 
 Table 1. List of dominant ant species collected from 157 trees in the Nouragues Ecological Research Station (the total of the percentages is greater than 100% because one tree crown can shelter several dominant ant species due to cases of co-dominance).
 
-| Ant species | Occurrences | Frequency on trees | Nesting habits |  |
-| --- | --- | --- | --- | --- |
-| Crematogaster levior | 69 | 43.95% | Carton nests, ant gardens, polydomous, parabiosis with Camponotus femoratus | Dejean et al. (2000); Vicente and Izzo (2017) |
-| Camponotus femoratus | 61 | 38.85% | Semi-spherical carton nests, ant gardens, polydomous, parabiosis with Crematogaster levior | Dejean et al. (2000); Vicente and Izzo (2017) |
-| Crematogaster stollii | 28 | 17.83% | Carton nests in cavities; galleries on tree trunks and branches; continue underground, interconnecting trees | Longino (2003) |
-| Azteca instabilis | 22 | 14.01% | Hemispherical carton nests against tree trunks or base of main branches, polydomous | De la Mora et al. (2008) |
-| Ectatomma tuberculatum | 19 | 12.10% | Ground-nesting at the base of trees, polydomous; galleries underground interconnecting trees | Delabie (1990); Hora et al. (2005) |
-| Azteca jelskii | 16 | 10.19% | Carton nests in cavities, polydomous | Longino (2007) |
-| Dolichoderus bidens | 6 | 3.82% | Numerous small carton nests under the leaves, polydomous | MacKay (1993); Delabie et al. (1991); Corbara et al. (2018) |
-| Dolichoderus bispinosus | 6 | 3.82% | Nests in cavities, polydomous | MacKay (1993) |
-| Daceton armigerum | 4 | 2.55% | Cavities in old branches of trees, polydomous | Dejean et al. (2012) |
-| Azteca ovaticeps | 4 | 2.55% | Nests in hollow trunks and branches of Cecropia spp. trees | Longino, 2007 |
-| Odontomachus hastatus | 4 | 2.55% | Nests in trash baskets formed by palm trees or Philodendron | Gibernau et al. (2007); Camargo and Oliveira (2012) |
-| Paraponera clavata | 4 | 2.55% | Ground-nesting at the base of trees | Elahi (2005) |
-| Azteca chartifex | 3 | 1.91% | Large, triangular carton nests, polydomous | Delabie et al. (1991); Longino (2007) |
-| Cephalotes atratus | 2 | 1.27% | Large cavities in old branches of trees, polydomous | Bolton (2018) |
-| Azteca brevis | 1 | 0.63% | Carton nests in cavities; galleries on tree trunks and branches; continue underground, interconnecting trees | Longino, 2007; Schmidt &amp; Dejean, 2018) |
-| Camponotus rapax | 1 | 0.63% | Small colonies nesting in cavities in old branches of trees | Gibernau et al. (2007); AD, BC pers. com |
+<table><tr><td>Ant species</td><td>Occurrences</td><td>Frequency on trees</td><td>Nesting habits</td><td></td></tr><tr><td>Crematogaster levior</td><td>69</td><td>43.95%</td><td>Carton nests, ant gardens, polydomous, parabiosis with Camponotus femoratus</td><td>Dejean et al. (2000); Vicente and Izzo (2017)</td></tr><tr><td>Camponotus femoratus</td><td>61</td><td>38.85%</td><td>Semi-spherical carton nests, ant gardens, polydomous, parabiosis with Crematogaster levior</td><td>Dejean et al. (2000); Vicente and Izzo (2017)</td></tr><tr><td>Crematogaster stollii</td><td>28</td><td>17.83%</td><td>Carton nests in cavities; galleries on tree trunks and branches; continue underground, interconnecting trees</td><td>Longino (2003)</td></tr><tr><td>Azteca instabilis</td><td>22</td><td>14.01%</td><td>Hemispherical carton nests against tree trunks or base of main branches, polydomous</td><td>De la Mora et al. (2008)</td></tr><tr><td>Ectatomma tuberculatum</td><td>19</td><td>12.10%</td><td>Ground-nesting at the base of trees, polydomous; galleries underground interconnecting trees</td><td>Delabie (1990); Hora et al. (2005)</td></tr><tr><td>Azteca jelskii</td><td>16</td><td>10.19%</td><td>Carton nests in cavities, polydomous</td><td>Longino (2007)</td></tr><tr><td>Dolichoderus bidens</td><td>6</td><td>3.82%</td><td>Numerous small carton nests under the leaves, polydomous</td><td>MacKay (1993); Delabie et al. (1991); Corbara et al. (2018)</td></tr><tr><td>Dolichoderus bispinosus</td><td>6</td><td>3.82%</td><td>Nests in cavities, polydomous</td><td>MacKay (1993)</td></tr><tr><td>Daceton armigerum</td><td>4</td><td>2.55%</td><td>Cavities in old branches of trees, polydomous</td><td>Dejean et al. (2012)</td></tr><tr><td>Azteca ovaticeps</td><td>4</td><td>2.55%</td><td>Nests in hollow trunks and branches of Cecropia spp. trees</td><td>Longino, 2007</td></tr><tr><td>Odontomachus hastatus</td><td>4</td><td>2.55%</td><td>Nests in trash baskets formed by palm trees or Philodendron</td><td>Gibernau et al. (2007); Camargo and Oliveira (2012)</td></tr><tr><td>Paraponera clavata</td><td>4</td><td>2.55%</td><td>Ground-nesting at the base of trees</td><td>Elahi (2005)</td></tr><tr><td>Azteca chartifex</td><td>3</td><td>1.91%</td><td>Large, triangular carton nests, polydomous</td><td>Delabie et al. (1991); Longino (2007)</td></tr><tr><td>Cephalotes atratus</td><td>2</td><td>1.27%</td><td>Large cavities in old branches of trees, polydomous</td><td>Bolton (2018)</td></tr><tr><td>Azteca brevis</td><td>1</td><td>0.63%</td><td>Carton nests in cavities; galleries on tree trunks and branches; continue underground, interconnecting trees</td><td>Longino, 2007; Schmidt &amp;amp; Dejean, 2018)</td></tr><tr><td>Camponotus rapax</td><td>1</td><td>0.63%</td><td>Small colonies nesting in cavities in old branches of trees</td><td>Gibernau et al. (2007); AD, BC pers. com</td></tr></table>
 
 Because ant mosaics correspond to non-random patterns of co-occurrence related to the mutual exclusion of TDAAs, we used a fixed-equiprobable null model and the C-score co-occurrence index with the sequential swap algorithm and 5000 iterations available in the ecosim software (Gotelli & Entsminger, 2004; Blüthgen & Stork, 2007; Fayle et al., 2013). The fixed-equiprobable algorithm maintains the species occurrence frequencies and considers all sites (trees) equiprobable (Gotelli, 2000). The C-score index used in combination with the fixed-equiprobable algorithm generally has good statistical properties and is not prone to false positives (Gotelli, 2000). Specific associations between the most frequent ant species (i.e. present on > 10% of the 157 trees sampled) were tested using 𝜒<sup>2</sup> tests with Yates’ correction. When field observations revealed that a single tree crown belonged to two different territories (n = 7 cases), the species involved were encoded separately in the co-occurrences matrix (the whole results in a matrix of six ant species × 164 sampling units).
 
@@ -218,14 +198,7 @@ Alain Dejean et al.
 
 Table 2. Associations between the most frequent species (frequency on the 157 trees sampled > 10%) by decreasing rank of occurrence and tested using $\chi ^ { 2 }$ tests (1 d.f., Yates’ correction).
 
-|  |  | Frequency | 1 | 2 | 3 | 4 | 5 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Crematogaster levior | 44% |  |  |  |  |  |
-| 2 | Camponotus femoratus | 39% | + |  |  |  |  |
-| 3 | Crematogaster stolli | 18% | - | - |  |  |  |
-| 4 | Azteca instabilis | 14% | - | - | 0 |  |  |
-| 5 | Ectatomma tuberculatum | 12% | - | - | + | 0 |  |
-| 6 | Azteca jelskii | 10% | - | - | 0 | 0 | 0 |
+<table><tr><td></td><td></td><td>Frequency</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>1</td><td>Crematogaster levior</td><td>44%</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td>Camponotus femoratus</td><td>39%</td><td>+</td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>Crematogaster stolli</td><td>18%</td><td>-</td><td>-</td><td></td><td></td><td></td></tr><tr><td>4</td><td>Azteca instabilis</td><td>14%</td><td>-</td><td>-</td><td>0</td><td></td><td></td></tr><tr><td>5</td><td>Ectatomma tuberculatum</td><td>12%</td><td>-</td><td>-</td><td>+</td><td>0</td><td></td></tr><tr><td>6</td><td>Azteca jelskii</td><td>10%</td><td>-</td><td>-</td><td>0</td><td>0</td><td>0</td></tr></table>
 
 Symbols indicate the nature of the association: +, positive; −, negative; 0, not significant.
 
@@ -269,46 +242,13 @@ A Neotropical ant mosaic
 
 567
 
-| Label | NMDS1 (approx) | NMDS2 (approx) |
-| --- | --- | --- |
-| Annonaceae Apocynaceae Faboideae Myristicaceae Myrtaceae | ~0.2 | ~1.3 |
-| Meliaceae Metteniusaceae Phyllanthaceae | ~-0.5 | ~1.0 |
-| Malvaceae Camponotus femoratus | ~0.4 | ~0.9 |
-| Daceton armigerum | ~0.9 | ~0.7 |
-| 1 | ~-0.3 | ~0.8 |
-| 5 | ~0.9 | ~0.6 |
-| 3 | ~-0.5 | ~0.2 |
-| Chrysobalanaceae | ~0.2 | ~0.4 |
-| Mimosoideae Caesalpinioideae | ~0.8 | ~0.3 |
-| 7 | ~0.8 | ~0.0 |
-| Dolichoderus bidens | ~0.9 | ~-0.1 |
-| 2 | ~-3.5 | ~-0.4 |
-| 6 | ~-0.5 | ~-0.4 |
-| 8 | ~2.3 | ~-0.4 |
-| 4 | ~0.6 | ~-0.5 |
-| Azteca jelskii | ~0.5 | ~-0.4 |
-| Burseraceae + Vochysiaceae Ebenaceae Symplocaceae | ~0.5 | ~-0.6 |
-| Clusiaceae Ixonanthaceae Moraceae | ~-0.5 | ~-0.7 |
-| Azteca instabilis | ~-0.5 | ~-0.4 |
-| Dolichoderus bispinosus | ~0.6 | ~-0.8 |
-| 2 + Cecropiaceae | ~-3.5 | ~-0.5 |
-| 4 + Arecaceae | ~2.3 | ~-0.7 |
+<table><tr><td>Label</td><td>NMDS1 (approx)</td><td>NMDS2 (approx)</td></tr><tr><td>Annonaceae Apocynaceae Faboideae Myristicaceae Myrtaceae</td><td>~0.2</td><td>~1.3</td></tr><tr><td>Meliaceae Metteniusaceae Phyllanthaceae</td><td>~-0.5</td><td>~1.0</td></tr><tr><td>Malvaceae Camponotus femoratus</td><td>~0.4</td><td>~0.9</td></tr><tr><td>Daceton armigerum</td><td>~0.9</td><td>~0.7</td></tr><tr><td>1</td><td>~-0.3</td><td>~0.8</td></tr><tr><td>5</td><td>~0.9</td><td>~0.6</td></tr><tr><td>3</td><td>~-0.5</td><td>~0.2</td></tr><tr><td>Chrysobalanaceae</td><td>~0.2</td><td>~0.4</td></tr><tr><td>Mimosoideae Caesalpinioideae</td><td>~0.8</td><td>~0.3</td></tr><tr><td>7</td><td>~0.8</td><td>~0.0</td></tr><tr><td>Dolichoderus bidens</td><td>~0.9</td><td>~-0.1</td></tr><tr><td>2</td><td>~-3.5</td><td>~-0.4</td></tr><tr><td>6</td><td>~-0.5</td><td>~-0.4</td></tr><tr><td>8</td><td>~2.3</td><td>~-0.4</td></tr><tr><td>4</td><td>~0.6</td><td>~-0.5</td></tr><tr><td>Azteca jelskii</td><td>~0.5</td><td>~-0.4</td></tr><tr><td>Burseraceae + Vochysiaceae Ebenaceae Symplocaceae</td><td>~0.5</td><td>~-0.6</td></tr><tr><td>Clusiaceae Ixonanthaceae Moraceae</td><td>~-0.5</td><td>~-0.7</td></tr><tr><td>Azteca instabilis</td><td>~-0.5</td><td>~-0.4</td></tr><tr><td>Dolichoderus bispinosus</td><td>~0.6</td><td>~-0.8</td></tr><tr><td>2 + Cecropiaceae</td><td>~-3.5</td><td>~-0.5</td></tr><tr><td>4 + Arecaceae</td><td>~2.3</td><td>~-0.7</td></tr></table>
 
 Fig. 4. Non-metric multidimensional scaling (NMDS) ordination plot showing the ant species (black dots) according to their host tree taxa (red dots) (Bray–Curtis distance). The ‘complete’ clustering of ant species in the ordination space according to host trees delimits eight clusters. The analysis was conducted on the 10 most frequent dominant ants and 31 tree families or subfamilies for the Fabaceae (this corresponds to 144 tree crowns out of the 157 sampled). The two interconnecting lines represent cases of associations between ant species. [Colour figure can be viewed at [wileyonlinelibrary.com](http://wileyonlinelibrary.com)].
 
 Table 3. Comparison of the parabiotic, ant-garden ants Camponotus femoratus and Crematogaster levior and all other territorially dominant arboreal ant species (TDAAs) between five Guianese rainforests.
 
-|  | A: Nouragues (plateau) | B: Paracou | C: Mitaraka (plateau) | D: Mitaraka (swamp) | E: Petit Saut |
-| --- | --- | --- | --- | --- | --- |
-| Ant-garden ants | 69 (45.7%) | 27 (20.15%) | 6 (20%) | 15 (50%) | 0 (0%) |
-| All other TDAAs | 82 (54.3%) | 107 (79.85%) | 24 (80%) | 15 (50%) | 45 (100%) |
-| Total | 151 | 134 | 30 | 30 | 45 |
-|  | A×B | A×C | A×D | A×E | B×C |
-| Fisher's exact test | P&lt;0.001 | P=0.0088 | P=0.693 | P=0.0001 | P=1 |
-| FDR adjustment | P&lt;0.05 | P&lt;0.05 | NS | P&lt;0.05 | NS |
-|  | B×D | B×E | C×D | C×E | D×E |
-| Fisher's exact test | P=0.002 | P=0.001 | P=0.0292 | P=0.0029 | P&lt;0.0001 |
-| FDR adjustment | P&lt;0.05 | P&lt;0.05 | P&lt;0.05 | P&lt;0.05 | P&lt;0.05 |
+<table><tr><td></td><td>A: Nouragues (plateau)</td><td>B: Paracou</td><td>C: Mitaraka (plateau)</td><td>D: Mitaraka (swamp)</td><td>E: Petit Saut</td></tr><tr><td>Ant-garden ants</td><td>69 (45.7%)</td><td>27 (20.15%)</td><td>6 (20%)</td><td>15 (50%)</td><td>0 (0%)</td></tr><tr><td>All other TDAAs</td><td>82 (54.3%)</td><td>107 (79.85%)</td><td>24 (80%)</td><td>15 (50%)</td><td>45 (100%)</td></tr><tr><td>Total</td><td>151</td><td>134</td><td>30</td><td>30</td><td>45</td></tr><tr><td></td><td>A×B</td><td>A×C</td><td>A×D</td><td>A×E</td><td>B×C</td></tr><tr><td>Fisher's exact test</td><td>P&amp;lt;0.001</td><td>P=0.0088</td><td>P=0.693</td><td>P=0.0001</td><td>P=1</td></tr><tr><td>FDR adjustment</td><td>P&amp;lt;0.05</td><td>P&amp;lt;0.05</td><td>NS</td><td>P&amp;lt;0.05</td><td>NS</td></tr><tr><td></td><td>B×D</td><td>B×E</td><td>C×D</td><td>C×E</td><td>D×E</td></tr><tr><td>Fisher's exact test</td><td>P=0.002</td><td>P=0.001</td><td>P=0.0292</td><td>P=0.0029</td><td>P&amp;lt;0.0001</td></tr><tr><td>FDR adjustment</td><td>P&amp;lt;0.05</td><td>P&amp;lt;0.05</td><td>P&amp;lt;0.05</td><td>P&amp;lt;0.05</td><td>P&amp;lt;0.05</td></tr></table>
 
 Statistical comparison: Fisher’s exact tests and false discovery rate (FDR; BH correction) adjustment for simultaneous comparisons.
 

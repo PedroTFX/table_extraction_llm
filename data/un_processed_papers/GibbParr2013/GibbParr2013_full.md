@@ -164,11 +164,7 @@ species [31], so may discover resources first. Discoverers also had relatively l
 
 Table 2. F-values from ANOVA testing the effect of region, foraging strategy and their interaction (df = 2,2,4) on morphological features of ants.
 
-| source | Weber's L | femur L | pronotum W | eye position |
-| --- | --- | --- | --- | --- |
-| foraging strategy | 21.67*** | 4.46* | 7.07*** | 0.88 |
-| region | 769.88*** | 27.81*** | 60.38*** | 135.80*** |
-| region*foraging strategy | 2.72* | 1.72 | 0.63 | 9.85*** |
+<table><tr><td>source</td><td>Weber's L</td><td>femur L</td><td>pronotum W</td><td>eye position</td></tr><tr><td>foraging strategy</td><td>21.67***</td><td>4.46*</td><td>7.07***</td><td>0.88</td></tr><tr><td>region</td><td>769.88***</td><td>27.81***</td><td>60.38***</td><td>135.80***</td></tr><tr><td>region*foraging strategy</td><td>2.72*</td><td>1.72</td><td>0.63</td><td>9.85***</td></tr></table>
 
 All measures except Weber’s length are based on residuals with Weber’s length. L = length; W = width. Values shown are F values. Results for post-hoc t-tests are shown in Fig. 1. Significance levels:
 

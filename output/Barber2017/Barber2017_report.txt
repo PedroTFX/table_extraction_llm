@@ -1,32 +1,32 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Barber2017\Barber2017.xlsx  (268 rows)
 PREDICTION   : ..\output\Barber2017\Barber2017.csv  (280 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
 TAXON NAME REMAP (pred -> gt, 1 pair(s))
   'Amara crassispina/neoscotica/cupreolata' -> 'Amara crassispina/ neoscotica/cupreolata\ncupreolata'
 
-measurementType REMAP (pred -> gt, 1 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
   'bodylength' -> 'Body Length'
 
 ROW-LEVEL (key match)
-  matched (TP)          : 268
-  missed (FN)           : 0
-  spurious, in scope    : 12   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+  matched (TP)        : 268
+  missed (FN)         : 0
+  spurious, in scope  : 12   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.957 / 1.000 / 0.978
-  SCOPED  P/R/F1        : 0.957 / 1.000 / 0.978
-  RECALL (GT coverage)  : 1.000
+  STRICT  P/R/F1      : 0.957 / 1.000 / 0.978   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.957 / 1.000 / 0.978   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord               162    268  0.604
-  measurementMethod             0    268  0.000  <-- low
-  measurementUnit              56    268  0.209  <-- low
-  measurementStatistic         56    268  0.209  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    268  0.000  <-- low
+  measurementMethod             0      0    n/a   +268 where GT blank
+  measurementUnit              56     56  1.000
+  measurementStatistic        268    268  1.000
   measurementRemarks            0      0    n/a
   sex                         268    268  1.000
   lifeStage                   268    268  1.000
@@ -53,5 +53,5 @@ measurementType COVERAGE
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.957  1.000  0.978    268    12     0   id+type+value
-  tags        0.200  0.209  0.204     56   224   212   basis+id+type+value+stat+sex+stage
-             (F1 -0.774 vs previous)
+  tags        0.000  0.000  0.000      0   280   268   basis+id+type+value+stat+sex+stage
+             (F1 -0.978 vs previous)

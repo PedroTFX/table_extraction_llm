@@ -88,6 +88,17 @@ COLUMNS = [
     "externalLink",
 ]
 
+# Descriptive fields the volunteers often left blank because the info was hard to
+# find, not because it was absent. When the GT cell is blank, a value the pipeline
+# found is reported as an "extra find" instead of a disagreement. Fields with a
+# fixed convention (basisOfRecord, unit, statistic, sex, lifeStage, caste,
+# associatedReferences) are still scored strictly.
+OPTIONAL_GT_FIELDS = {
+    "measurementMethod", "measurementRemarks", "sampleSizeValue", "sampleSizeUnit",
+    "sampleTreatment", "samplingProtocol", "verbatimLocality", "verbatimCoordinates",
+    "verbatimEventDate", "associatedOccurrences", "externalLink",
+}
+
 # Columns that form the identity of a row for matching. measurementValue is the
 # payload, so the natural key is "which trait of which species, with what value".
 DEFAULT_KEY = ["verbatimIdentification", "measurementType", "measurementValue"]
@@ -746,15 +757,18 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
     # For each non-key column, of the matched rows, how often do values agree?
     nonkey = [c for c in COLUMNS if c not in key_fields]
     print("\nFIELD-LEVEL ACCURACY (on matched rows only)")
-    print(f"  {'column':<24} {'agree':>6} {'total':>6} {'acc':>6}")
+    print(f"  {'column':<24} {'agree':>6} {'total':>6} {'acc':>6}   extra finds")
     field_stats = {}
     for col in nonkey:
-        agree = total = 0
+        agree = total = extra = 0
         for g, pr in matched:
             gv = normalize_value(g.get(col, ""), decode)
             pv = normalize_value(pr.get(col, ""), decode)
             if gv == "" and pv == "":
                 continue  # both empty: not informative
+            if gv == "" and col in OPTIONAL_GT_FIELDS:
+                extra += 1  # volunteer skipped it; a found value is a bonus, not an error
+                continue
             total += 1
             if gv == pv:
                 agree += 1
@@ -762,7 +776,8 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
         field_stats[col] = (agree, total, acc)
         flag = "" if total == 0 else ("  <-- low" if acc < 0.5 else "")
         acc_s = "  n/a" if total == 0 else f"{acc:.3f}"
-        print(f"  {col:<24} {agree:>6} {total:>6} {acc_s:>6}{flag}")
+        extra_s = f"   +{extra} where GT blank" if extra else ""
+        print(f"  {col:<24} {agree:>6} {total:>6} {acc_s:>6}{flag}{extra_s}")
 
     # --- WHY the misses missed, instead of a sample to read by eye ---
     # Save the COMPLETE miss breakdown next to the prediction CSV (same folder,

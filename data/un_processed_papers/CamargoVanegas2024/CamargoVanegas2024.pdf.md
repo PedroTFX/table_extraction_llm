@@ -112,14 +112,7 @@ Diversity 2024, 16, 687
 
 4 of 23
 
-| Site | Latitude (N) | Longitude (W) |
-| --- | --- | --- |
-| N1a | ~10.65 | ~75.2 |
-| N1b | ~10.8 | ~74.9 |
-| N2a | ~9.9 | ~75.3 |
-| N2b | ~9.9 | ~75.1 |
-| N3a | ~9.6 | ~75.3 |
-| N3b | ~9.55 | ~75.4 |
+<table><tr><td>Site</td><td>Latitude (N)</td><td>Longitude (W)</td></tr><tr><td>N1a</td><td>~10.65</td><td>~75.2</td></tr><tr><td>N1b</td><td>~10.8</td><td>~74.9</td></tr><tr><td>N2a</td><td>~9.9</td><td>~75.3</td></tr><tr><td>N2b</td><td>~9.9</td><td>~75.1</td></tr><tr><td>N3a</td><td>~9.6</td><td>~75.3</td></tr><tr><td>N3b</td><td>~9.55</td><td>~75.4</td></tr></table>
 
 Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Figure 1. A map showing sampling sites of tropical dry forest in the northwest of the Colombian Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Caribbean. N1a: Luriza Integrated Regional Management District; N1b: “Palmar del Titi” Integrated Tropical Dry Forest Reserve; N3a: “CARACOL ” Civil Society Nature Reserve; N3b: Coraza and Regional Management District; N2a: “Los Colorados” Flora and Fauna Sanctuary; N2b: Brasilar Trop tributed both in the study area and in adjacent regions. ical Dry Forest Reserve; N3a: “CARACOLÍ” Civil Society Nature Reserve; N3b: Coraza and Montes de María Protective Reserve. The green polygons correspond to dry forest fragments distributed both 1. TDF f  A lá (h f 1in the study area and in adjacent regions.
 
@@ -155,16 +148,7 @@ Eight functionally important traits in ants were selected, which have been widel
 
 Table 1. Morphological traits used to calculate functional diversity and their ecological significance for leaf-litter-associated ant communities in study area.
 
-| Morphological Trait | Abbreviation | Functional Importance |
-| --- | --- | --- |
-| Head length | HL | Related to the body size of the ant workers [65]. |
-| Head width | HW | Related to the size of the spaces through which ants can pass [66] and to the mandibular musculature. Wider heads have larger mandibular muscles allowing the capture of larger prey [67]. |
-| Mandible length | ML | Indicates the type of diet since longer mandibles would indicate more predatory behavior [68]; likewise, longer mandibles could allow for the capture of larger prey [34]. |
-| Eye length | EL | Related to the foraging period. It could also indicate the behavior in the search for food [38]. |
-| Interocular distance | ID | Related to hunting strategies [34] and habitat complexity [69]. |
-| Scape length | SL | Related to sensory capabilities: longer antennal scapes facilitate the tracking of pheromone trails [32]. |
-| Femur length | FL | Related to foraging speed, which reflects habitat complexity [70]. It may also be related to food quality in some specialist groups [32]. |
-| Weber length | WL | Indicative of body size, which can be related to the amount and type of resource exploited [22]. Body size can influence the microhabitats in which species forage [65]. Large-bodied ants typically forage in open conditions on the soil surface, while smaller species may occupy smaller spaces in enclosed microhabitats in leaf litter and soil [32,40]. |
+<table><tr><td>Morphological Trait</td><td>Abbreviation</td><td>Functional Importance</td></tr><tr><td>Head length</td><td>HL</td><td>Related to the body size of the ant workers [65].</td></tr><tr><td>Head width</td><td>HW</td><td>Related to the size of the spaces through which ants can pass [66] and to the mandibular musculature. Wider heads have larger mandibular muscles allowing the capture of larger prey [67].</td></tr><tr><td>Mandible length</td><td>ML</td><td>Indicates the type of diet since longer mandibles would indicate more predatory behavior [68]; likewise, longer mandibles could allow for the capture of larger prey [34].</td></tr><tr><td>Eye length</td><td>EL</td><td>Related to the foraging period. It could also indicate the behavior in the search for food [38].</td></tr><tr><td>Interocular distance</td><td>ID</td><td>Related to hunting strategies [34] and habitat complexity [69].</td></tr><tr><td>Scape length</td><td>SL</td><td>Related to sensory capabilities: longer antennal scapes facilitate the tracking of pheromone trails [32].</td></tr><tr><td>Femur length</td><td>FL</td><td>Related to foraging speed, which reflects habitat complexity [70]. It may also be related to food quality in some specialist groups [32].</td></tr><tr><td>Weber length</td><td>WL</td><td>Indicative of body size, which can be related to the amount and type of resource exploited [22]. Body size can influence the microhabitats in which species forage [65]. Large-bodied ants typically forage in open conditions on the soil surface, while smaller species may occupy smaller spaces in enclosed microhabitats in leaf litter and soil [32,40].</td></tr></table>
 
 <!-- page 6 of 24 -->
 
@@ -196,17 +180,7 @@ Diversity 2024, 16, 687
 
 7 of 23 single
 
-| Category | N1 | N2 | N3 |
-| --- | --- | --- | --- |
-| Myrmicinae | ~52 | ~66 | ~75 |
-| Ponerinae | ~11 | ~18 | ~15 |
-| Formicinae | ~2 | ~9 | ~11 |
-| Ectatomminae | ~2 | ~3 | ~5 |
-| Proceratilinae | ~2 | ~4 | ~4 |
-| Dorylinae | ~3 | ~3 | ~3 |
-| Pseudomymecinae | ~2 | ~3 | ~2 |
-| Dolichoderinae | ~1 | ~2 | ~3 |
-| Amblyoponinae | 0 | ~1 | 0 |
+<table><tr><td>Category</td><td>N1</td><td>N2</td><td>N3</td></tr><tr><td>Myrmicinae</td><td>~52</td><td>~66</td><td>~75</td></tr><tr><td>Ponerinae</td><td>~11</td><td>~18</td><td>~15</td></tr><tr><td>Formicinae</td><td>~2</td><td>~9</td><td>~11</td></tr><tr><td>Ectatomminae</td><td>~2</td><td>~3</td><td>~5</td></tr><tr><td>Proceratilinae</td><td>~2</td><td>~4</td><td>~4</td></tr><tr><td>Dorylinae</td><td>~3</td><td>~3</td><td>~3</td></tr><tr><td>Pseudomymecinae</td><td>~2</td><td>~3</td><td>~2</td></tr><tr><td>Dolichoderinae</td><td>~1</td><td>~2</td><td>~3</td></tr><tr><td>Amblyoponinae</td><td>0</td><td>~1</td><td>0</td></tr></table>
 
 Figure 2. Number of ant species by subfamilies (horizontal axis) for TDF fragments in each area of Figure 2. Number of ant species by subfamilies (horizontal axis) for TDF fragments in each area of the northwestern Colombian Caribbean.the northwestern Colombian Caribbean.
 
@@ -226,91 +200,13 @@ Diversity 2024, 16, 687
 
 8 of 23
 
-| Category | Condition | Diversity (2D) |
-| --- | --- | --- |
-| N1 | Rainy | ~28 |
-| N2 | Rainy | ~34 |
-| N3 | Rainy | ~48 |
-| N1 | Dry | ~23 |
-| N2 | Dry | ~35 |
-| N3 | Dry | ~30 |
+<table><tr><td>Category</td><td>Condition</td><td>Diversity (2D)</td></tr><tr><td>N1</td><td>Rainy</td><td>~28</td></tr><tr><td>N2</td><td>Rainy</td><td>~34</td></tr><tr><td>N3</td><td>Rainy</td><td>~48</td></tr><tr><td>N1</td><td>Dry</td><td>~23</td></tr><tr><td>N2</td><td>Dry</td><td>~35</td></tr><tr><td>N3</td><td>Dry</td><td>~30</td></tr></table>
 
 ea. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Figure 3. Diversity expressed as the effective number of ant species (qD) in TDF fragments in each. ( )  ( ); ( )   ( ); ( )   ( ). nfidence intervals (CI) of each of the measurements. area. (a) Richness (0D); (b) common species (1D); (c) dominant species (2D). The bars indicate the Rank–abundance curves of ant species for the studied areas show few vconfidence intervals (CI) of each of the measurements.
 
 olenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885), Rank–abundance curves of ant species for the studied areas show few very frequentes (Figure 4). A total of seven species are considered frequent, which correspond to ith capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare species (Figure 4). A total of seven species are considered frequent, which correspondSolenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponera equencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepurus to Solenopsis azteca, Octostruma amrishi, Strumigenys eggersi, Pheidole flavens, Hypoponeraopacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885), rvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis opacior, Solenopsis geminata (Fabricius, 1804), and Nylanderia guatemalensis (Forel, 1885),with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare endix A). with capture frequencies between 50 and 82.5%. On the other hand, 79 species are rare(with capture frequencies less than 50%), and 60 are considered very rare, with capture (with capture frequencies less than 50%), and 60 are considered very rare, with capturefrequencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepurus frequencies equal to or less than 2%, such as Alfaria minuta Emery, 1896; Mycocepuruscurvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis curvispinosus Mackay, 1998; Proceratium catio Andrade, 2003; Gnamptogenys boliviensis Lattke,Lattke, 1995; Acropyga fuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Ap-1995; Acropyga fuhrmanni (Forel, 1914); and Rogeria curvipubens Emery, 1894 (Appendix A).pendix A).
 
-| Species | N1 (Abundance relative) | N2 (Abundance relative) | N3 (Abundance relative) |
-| :--- | :--- | :--- | :--- |
-| Solenopsis azteka | ~82 | ~79 | ~87 |
-| Pheidole flavens | ~56 | ~74 | — |
-| Strumigenys eggersi | ~50 | ~56 | — |
-| Octostruma amrishi | ~41 | ~48 | — |
-| Octostruma amrishi | ~39 | ~45 | — |
-| Solenopsis geminata | ~37 | ~42 | — |
-| Pheidole flavens | ~36 | ~40 | — |
-| N2 | ~35 | ~38 | — |
-| N2 | ~34 | ~36 | — |
-| N2 | ~33 | ~34 | — |
-| N2 | ~32 | ~32 | — |
-| N2 | ~31 | ~30 | — |
-| N2 | ~30 | ~28 | — |
-| N2 | ~29 | ~26 | — |
-| N2 | ~28 | ~24 | — |
-| N2 | ~27 | ~22 | — |
-| N2 | ~26 | ~20 | — |
-| N2 | ~25 | ~18 | — |
-| N2 | ~24 | ~16 | — |
-| N2 | ~23 | ~14 | — |
-| N2 | ~22 | ~12 | — |
-| N2 | ~21 | ~10 | — |
-| N2 | ~20 | ~8 | — |
-| N2 | ~19 | ~6 | — |
-| N2 | ~18 | ~4 | — |
-| N2 | ~17 | ~2 | — |
-| N2 | ~16 | ~1 | — |
-| N2 | ~15 | ~0 | — |
-| N2 | ~14 | ~0 | — |
-| N2 | ~13 | ~0 | — |
-| N2 | ~12 | ~0 | — |
-| N2 | ~11 | ~0 | — |
-| N2 | ~10 | ~0 | — |
-| N2 | ~9 | ~0 | — |
-| N2 | ~8 | ~0 | — |
-| N2 | ~7 | ~0 | — |
-| N2 | ~6 | ~0 | — |
-| N2 | ~5 | ~0 | — |
-| N2 | ~4 | ~0 | — |
-| N2 | ~3 | ~0 | — |
-| N2 | ~2 | ~0 | — |
-| N2 | ~1 | ~0 | — |
-| N2 | ~0 | ~0 | — |
-| N3 | — | — | ~87 |
-| N3 | — | — | ~76 |
-| N3 | — | — | ~51 |
-| N3 | — | — | ~47 |
-| N3 | — | — | ~41 |
-| N3 | — | — | ~40 |
-| N3 | — | — | ~38 |
-| N3 | — | — | ~36 |
-| N3 | — | — | ~34 |
-| N3 | — | — | ~32 |
-| N3 | — | — | ~30 |
-| N3 | — | — | ~28 |
-| N3 | — | — | ~26 |
-| N3 | — | — | ~24 |
-| N3 | — | — | ~22 |
-| N3 | — | — | ~20 |
-| N3 | — | — | ~18 |
-| N3 | — | — | ~16 |
-| N3 | — | — | ~14 |
-| N3 | — | — | ~12 |
-| N3 | — | — | ~10 |
-| N3 | — | — | ~8 |
-| N3 | — | — | ~6 |
-| N3 | — | — | ~4 |
-| N3 | — | — | ~2 |
-| N3 | — | — | ~1 |
-| N3 | — | — | ~0 |
+<table><tr><td>Species</td><td>N1 (Abundance relative)</td><td>N2 (Abundance relative)</td><td>N3 (Abundance relative)</td></tr><tr><td>Solenopsis azteka</td><td>~82</td><td>~79</td><td>~87</td></tr><tr><td>Pheidole flavens</td><td>~56</td><td>~74</td><td>—</td></tr><tr><td>Strumigenys eggersi</td><td>~50</td><td>~56</td><td>—</td></tr><tr><td>Octostruma amrishi</td><td>~41</td><td>~48</td><td>—</td></tr><tr><td>Octostruma amrishi</td><td>~39</td><td>~45</td><td>—</td></tr><tr><td>Solenopsis geminata</td><td>~37</td><td>~42</td><td>—</td></tr><tr><td>Pheidole flavens</td><td>~36</td><td>~40</td><td>—</td></tr><tr><td>N2</td><td>~35</td><td>~38</td><td>—</td></tr><tr><td>N2</td><td>~34</td><td>~36</td><td>—</td></tr><tr><td>N2</td><td>~33</td><td>~34</td><td>—</td></tr><tr><td>N2</td><td>~32</td><td>~32</td><td>—</td></tr><tr><td>N2</td><td>~31</td><td>~30</td><td>—</td></tr><tr><td>N2</td><td>~30</td><td>~28</td><td>—</td></tr><tr><td>N2</td><td>~29</td><td>~26</td><td>—</td></tr><tr><td>N2</td><td>~28</td><td>~24</td><td>—</td></tr><tr><td>N2</td><td>~27</td><td>~22</td><td>—</td></tr><tr><td>N2</td><td>~26</td><td>~20</td><td>—</td></tr><tr><td>N2</td><td>~25</td><td>~18</td><td>—</td></tr><tr><td>N2</td><td>~24</td><td>~16</td><td>—</td></tr><tr><td>N2</td><td>~23</td><td>~14</td><td>—</td></tr><tr><td>N2</td><td>~22</td><td>~12</td><td>—</td></tr><tr><td>N2</td><td>~21</td><td>~10</td><td>—</td></tr><tr><td>N2</td><td>~20</td><td>~8</td><td>—</td></tr><tr><td>N2</td><td>~19</td><td>~6</td><td>—</td></tr><tr><td>N2</td><td>~18</td><td>~4</td><td>—</td></tr><tr><td>N2</td><td>~17</td><td>~2</td><td>—</td></tr><tr><td>N2</td><td>~16</td><td>~1</td><td>—</td></tr><tr><td>N2</td><td>~15</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~14</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~13</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~12</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~11</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~10</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~9</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~8</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~7</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~6</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~5</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~4</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~3</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~2</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~1</td><td>~0</td><td>—</td></tr><tr><td>N2</td><td>~0</td><td>~0</td><td>—</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~87</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~76</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~51</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~47</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~41</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~40</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~38</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~36</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~34</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~32</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~30</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~28</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~26</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~24</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~22</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~20</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~18</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~16</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~14</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~12</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~10</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~8</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~6</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~4</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~2</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~1</td></tr><tr><td>N3</td><td>—</td><td>—</td><td>~0</td></tr></table>
 
 Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abun-Figure 4. Rank–abundance curves showing the distribution of capture frequencies (relative abundance) for the ant assemblage in the TDF fragments in each area. The names of the species with the dance) for the ant assemblage in the TDF fragments in each area. The names of the species with the highest capture frequency (≥50%) are shown. highest capture frequency (≥50%) are shown.
 
@@ -324,21 +220,13 @@ Diversity 2024, 16, 687
 
 9 of 23 6 = 1.8
 
-| Series | nMDS1 (range) | nMDS2 (range) |
-| --- | --- | --- |
-| N1 | ~0.35 ~0.45 | ~0.25 ~0.65 |
-| N2 | ~0.35 ~0.75 | ~0.05 ~0.45 |
-| N3 | ~0.55 ~0.95 | ~0.45 ~0.95 |
+<table><tr><td>Series</td><td>nMDS1 (range)</td><td>nMDS2 (range)</td></tr><tr><td>N1</td><td>~0.35 ~0.45</td><td>~0.25 ~0.65</td></tr><tr><td>N2</td><td>~0.35 ~0.75</td><td>~0.05 ~0.45</td></tr><tr><td>N3</td><td>~0.55 ~0.95</td><td>~0.45 ~0.95</td></tr></table>
 
 Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-Figure 5. Ordination analysis using non-metric multidimensional scaling (nMDS) for the leaf-litter-Th l i f b t di it ( ) b t th TDF f t i associated ant community in the studied areas. Letters in numbers are defined in the studassociated ant community in the studied areas. Letters in numbers are defined in the study area section. D corresponds to the dry season, while R is the rainy seasection. D corresponds to the dry season, while R is the rainy season.
 
 The analysis of beta diversity (βjac) between the TDF fragments in each arc showsn. For both seasons, turnover is the main component that explains th a moderate differentiation between 50 and 60% of dissimilarity between both climaticf h . I h d ,   76% f N1-N2 seasons; in general, higher dissimilarity values were found in the dry season than in the,rainy season. For both seasons, turnover is the main component that explains the variation,  %  - . g  y ,   g.   ,     p  pin the composition of the ants. In the dry season, turnover was 76% for N1-N2, 88% formong the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3 the composition of the ants. In the dry season, turnover was 76% for N1-N2, 88% foN1-N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74estedness values were recorded among N1-N3 (46%) in the rainy season, N3, and 91% for N2-N3. During the rainy season, turnover values ranged from 74 toto 77% among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. Thet d d b t 9 d 24% (Fi 6) (T bl S6 among the TDF fragments from N1-N2 and N2-N3 and 54% among N1-N3. The hihighest nestedness values were recorded among N1-N3 (46%) in the rainy season, while in nestedness values were recorded among N1-N3 (46%) in the rainy sethe dry season, nestedness ranged between 9 and 24% (Figure 6) (Table S6).
 
-| Category | \(\beta\)jac | \(\beta\)jtu | \(\beta\)jne |
-| --- | --- | --- | --- |
-| N2 - N3 | ~0.50 | ~0.38 | ~0.12 |
-| N1 - N3 | ~0.60 | ~0.32 | ~0.27 |
-| N1 - N2 | ~0.56 | ~0.41 | ~0.14 |
+<table><tr><td>Category</td><td>\(\beta\)jac</td><td>\(\beta\)jtu</td><td>\(\beta\)jne</td></tr><tr><td>N2 - N3</td><td>~0.50</td><td>~0.38</td><td>~0.12</td></tr><tr><td>N1 - N3</td><td>~0.60</td><td>~0.32</td><td>~0.27</td></tr><tr><td>N1 - N2</td><td>~0.56</td><td>~0.41</td><td>~0.14</td></tr></table>
 
 Figure 6. Cont.
 
@@ -348,11 +236,7 @@ Diversity 2024, 16, 687
 
 10 of 23
 
-| Category | \(\beta\)jac | \(\beta\)jtu | \(\beta\)jne |
-| --- | --- | --- | --- |
-| N2 - N3 | ~0.58 | ~0.53 | ~0.06 |
-| N1 - N3 | ~0.60 | ~0.53 | ~0.08 |
-| N1 - N2 | ~0.59 | ~0.45 | ~0.15 |
+<table><tr><td>Category</td><td>\(\beta\)jac</td><td>\(\beta\)jtu</td><td>\(\beta\)jne</td></tr><tr><td>N2 - N3</td><td>~0.58</td><td>~0.53</td><td>~0.06</td></tr><tr><td>N1 - N3</td><td>~0.60</td><td>~0.53</td><td>~0.08</td></tr><tr><td>N1 - N2</td><td>~0.59</td><td>~0.45</td><td>~0.15</td></tr></table>
 
 (b)
 
@@ -362,28 +246,7 @@ igure 6. Partition of beta diversity (βjac) into its turnover (βjtu) and neste
 
 p Twenty functional groups were identified: eighteen were recorded in N1, nineteen inTwenty functional groups were identified: eighteen were recorded in N1, nineteen in Twenty functional groups were identified: eighteen were recorded in NN3, and twenty in N2. The predominant functional groups in terms of species richnessN3, and twenty in N2. The predominant functional groups in terms of species richness d   2. Th d f l    fcorrespond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omni-correspond to epigeal/litter/small hypogeal omnivores (SO), followed by arboreal omnivores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richnessvores (AO) and dacetine predators (DP) (Figure 7). There was no variation in the richness p  p g / / p gof functional groups between the rainy and dry seasons.of functional groups between the rainy and dry seasons.
 
-| Category | N1 (%) | N2 (%) | N3 (%) |
-| :--- | :--- | :--- | :--- |
-| Exclusive homopteran dependent (EHD) | 0 | ~50 | ~50 |
-| Medium-sized litter/hypogieic generalist predator (MLP) | 0 | ~40 | ~60 |
-| Soil-specialized isopoda forager/predator (SSI) | ~33 | ~37 | ~29 |
-| Mass predators or nomads (MPN) | ~51 | ~49 | 0 |
-| Soil-specialized millipede predator (SSM) | ~25 | ~55 | ~25 |
-| Dacetini predator with static prehensile mandibles (DPSM) | ~25 | ~30 | ~55 |
-| Fungus leaf-cutter agriculture (LCA) | ~34 | ~36 | ~32 |
-| Soil specialized forager/predator (SSP) | ~14 | ~48 | ~40 |
-| Army Ants (AA) | ~29 | ~31 | ~37 |
-| Small epigeic/litter/hypogieic generalist predator (SLP) | ~29 | ~31 | ~37 |
-| Fungus-generalized higher-agriculture (FGHA) | ~23 | ~48 | ~25 |
-| Fungus lower-agriculture (FLA) | ~23 | ~36 | ~39 |
-| Arboreous/soil omnivore (ASO) | ~15 | ~40 | ~55 |
-| Large/medium-sized arboreous generalist predator (LAP) | ~25 | ~35 | ~35 |
-| Fungus yeast agriculture (FYA) | ~30 | ~30 | ~30 |
-| Medium-sized litter/hypogieic omnivore (MLO) | ~18 | ~40 | ~42 |
-| Large epigeic generalist predator (LEP) | ~27 | ~45 | ~28 |
-| Dacetine Predator (DP) | ~28 | ~36 | ~34 |
-| Arboreous Omnivore (AO) | ~41 | ~26 | ~33 |
-| Small epigcic/litter/hypogieic omnivore (SO) | ~25 | ~40 | ~35 |
+<table><tr><td>Category</td><td>N1 (%)</td><td>N2 (%)</td><td>N3 (%)</td></tr><tr><td>Exclusive homopteran dependent (EHD)</td><td>0</td><td>~50</td><td>~50</td></tr><tr><td>Medium-sized litter/hypogieic generalist predator (MLP)</td><td>0</td><td>~40</td><td>~60</td></tr><tr><td>Soil-specialized isopoda forager/predator (SSI)</td><td>~33</td><td>~37</td><td>~29</td></tr><tr><td>Mass predators or nomads (MPN)</td><td>~51</td><td>~49</td><td>0</td></tr><tr><td>Soil-specialized millipede predator (SSM)</td><td>~25</td><td>~55</td><td>~25</td></tr><tr><td>Dacetini predator with static prehensile mandibles (DPSM)</td><td>~25</td><td>~30</td><td>~55</td></tr><tr><td>Fungus leaf-cutter agriculture (LCA)</td><td>~34</td><td>~36</td><td>~32</td></tr><tr><td>Soil specialized forager/predator (SSP)</td><td>~14</td><td>~48</td><td>~40</td></tr><tr><td>Army Ants (AA)</td><td>~29</td><td>~31</td><td>~37</td></tr><tr><td>Small epigeic/litter/hypogieic generalist predator (SLP)</td><td>~29</td><td>~31</td><td>~37</td></tr><tr><td>Fungus-generalized higher-agriculture (FGHA)</td><td>~23</td><td>~48</td><td>~25</td></tr><tr><td>Fungus lower-agriculture (FLA)</td><td>~23</td><td>~36</td><td>~39</td></tr><tr><td>Arboreous/soil omnivore (ASO)</td><td>~15</td><td>~40</td><td>~55</td></tr><tr><td>Large/medium-sized arboreous generalist predator (LAP)</td><td>~25</td><td>~35</td><td>~35</td></tr><tr><td>Fungus yeast agriculture (FYA)</td><td>~30</td><td>~30</td><td>~30</td></tr><tr><td>Medium-sized litter/hypogieic omnivore (MLO)</td><td>~18</td><td>~40</td><td>~42</td></tr><tr><td>Large epigeic generalist predator (LEP)</td><td>~27</td><td>~45</td><td>~28</td></tr><tr><td>Dacetine Predator (DP)</td><td>~28</td><td>~36</td><td>~34</td></tr><tr><td>Arboreous Omnivore (AO)</td><td>~41</td><td>~26</td><td>~33</td></tr><tr><td>Small epigcic/litter/hypogieic omnivore (SO)</td><td>~25</td><td>~40</td><td>~35</td></tr></table>
 
 Figure 7. The spatial variation in the functional groups recorded in the TDF fragments in each Figure 7. The spatial variation in the functional groups recorded in the TDF fragments in each area.
 
@@ -435,35 +298,19 @@ igure 8. The functional trait weighted mean (CWM) of the eight functional traits
 
 The functional space occupied by the ant community showed an increase in N3nt outliers. Orange boxes: N1; Green boxes: N2; Blue boxes: N3. $( 4 2 . 7 \pm 2 1 . 3 )$ by approximately five orders of magnitude relative to N2 $( 9 . 8 9   \pm   8 . 2 2 )$ $( \mathbb { F } _ { 1 , 9 }   =   8 . 8 6 ;     p   =   0 . 0 1 8 )$ ,and seven orders of magnitude relative to N1 $( 5 . 8 6   \pm   5 . 6 8 )$ $( \mathbb { F } _ { 1 , 9 } = 8 . 8 6 ;   p = 0 . 0 1 0 )$ (Figure 9a). Functional equitability values did not show signifi-..  .  ; .cant differences among the TDF fragments in each area18) and seven orders of magnitude relative to N1 (5.86 ± 5.68) (F1,9 = 8.8 $( 0 . 6 5 \pm 0 . 0 4 3 6$ for $\mathrm { N } 3 ; 0 . 6 5 2 \pm 0 . 0 3 6$ forre 9 $\mathrm { N } 2 ;$ ,andnctio $0 . 6 1 8 \pm 0 . 0 4 8$ gfor N1)ues did n $( \mathbb { F } _ { 1 , 9 } = 0 . 7 6 ; p = 0 . 4 9 3 )$ g  (Figure 9b). N3 showed a significants among the y  ( .  . ) preduction in functional redundancy valuesg    ( .  .  ; .  . $( 0 . 7 5 7 \pm 0 . 0 1 3 6 )$ .  . ,  . compared to those from N1.(0.781 ± 0.004)ndancy values (0.75 $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 0 1 0 )$ . ; p  . ),and N2 (0.775 ± 0.005)from N1 (0.781 ± 0.004) (F1,9 = $( \mathrm { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 4 3 0 )$ , while 1,9  . ; p  . ) ( gN1 and N2 showed no differences.010) and N2 (0.775 ± 0.005) (F1,9 = 7.87; p = 0.43 $( \mathbb { F } _ { 1 , 9 } = 7 . 8 7 ;   p = 0 . 6 4 6 )$ g  (Figure 9c). Finally, N3 showed a no differ-.  .significant increase in1,9  . ; p  . ) ( g $\operatorname { R a o ^ { \prime } s } \mathbf { Q }$ .  . ) ( 1,9  . ; p  . values (6.21 ± 0.92) compared to those from N2y, N3 showed a significant increase in Rao’s $( 4 . 9 \pm 0 . 2 2 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ;   p = 0 . 0 2 1 )$ 64; p = and N106);  th $( 4 . 5 8 \pm 0 . 1 9 4 )$ $( \mathrm { F } _ { 1 , 9 } = 9 . 6 4 ;   \mathrm { p } = 0 . 0 0 6 ) ,$ on the other hand, the howed no differences (F1,9 = 7.87; p = 0.713) (Figfragments from N1 and N2 showed no differencesed no differences (F1,9 = 7.87; p = 0.713) (Figure 9d) (Table S8). $( \mathbb { F } _ { 1 , 9 } = 7 . 8 7 ; p = 0 . 7 1 3 )$ (Figure 9d) (Table S8).
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| Orange | ~3 | ~4 | ~7 | ~4 |
-| Green | ~4 | ~9 | ~15 | ~11 |
-| Blue | ~28 | ~38 | ~53 | ~35 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>Orange</td><td>~3</td><td>~4</td><td>~7</td><td>~4</td></tr><tr><td>Green</td><td>~4</td><td>~9</td><td>~15</td><td>~11</td></tr><tr><td>Blue</td><td>~28</td><td>~38</td><td>~53</td><td>~35</td></tr></table>
 
 (a)
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Orange | ~0.594 | ~0.612 | ~0.639 |
-| Green | ~0.635 | ~0.658 | ~0.679 |
-| Blue | ~0.630 | ~0.650 | ~0.678 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Orange</td><td>~0.594</td><td>~0.612</td><td>~0.639</td></tr><tr><td>Green</td><td>~0.635</td><td>~0.658</td><td>~0.679</td></tr><tr><td>Blue</td><td>~0.630</td><td>~0.650</td><td>~0.678</td></tr></table>
 
 (b)
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Orange | ~0.776 | ~0.780 | ~0.784 |
-| Green | ~0.771 | ~0.775 | ~0.779 |
-| Blue | ~0.746 | ~0.756 | ~0.767 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Orange</td><td>~0.776</td><td>~0.780</td><td>~0.784</td></tr><tr><td>Green</td><td>~0.771</td><td>~0.775</td><td>~0.779</td></tr><tr><td>Blue</td><td>~0.746</td><td>~0.756</td><td>~0.767</td></tr></table>
 
 (c)
 
-| Category | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| Orange | ~4.35 | ~4.55 | ~4.70 |
-| Green | ~4.80 | ~4.90 | ~5.00 |
-| Blue | ~5.45 | ~6.20 | ~7.00 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Orange</td><td>~4.35</td><td>~4.55</td><td>~4.70</td></tr><tr><td>Green</td><td>~4.80</td><td>~4.90</td><td>~5.00</td></tr><tr><td>Blue</td><td>~5.45</td><td>~6.20</td><td>~7.00</td></tr></table>
 
 (d)
 

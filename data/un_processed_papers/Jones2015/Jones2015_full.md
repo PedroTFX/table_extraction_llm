@@ -106,24 +106,7 @@ Figure 2. Preparing moths for tethered flight. (A) Removal of scales from thorax
 
 Table 1. Measured and derived tethered flight performance variables extracted from flight mill data. Raw data are distance, duration, average speed, and maximum speed of individual flights ≥10 sec.
 
-| Tethered flight variable | Definition | Units | PCA label |
-| --- | --- | --- | --- |
-| Total distance | Sum of distance covered by all flights | Metres | Distance 1 |
-| Total duration | Sum of duration of all flights | Seconds | Duration 1 |
-| Number of flights | Count of flights | Numeric | NumFlights |
-| Average flight distance | Mean of distances of flights | Metres | Distance 2 |
-| Average flight duration | Mean of duration of flights | Seconds | Duration 2 |
-| Average flight speed | Mean of the speeds of individual flights (calculated as distance/duration) | Metres/sec | Speed 1 |
-| Maximum speed attained | Greatest distance attained in any 5 sec interval/5 – of the whole night | Metres/sec | Speed 2 |
-| First flight distance | Distance of first flight of the night | Metres | Distance 3 |
-| First flight duration | Duration of first flight of the night | Seconds | Duration 3 |
-| First flight average speed | Speed of first flight of the night (calculated as distance/duration) | Metres/sec | Speed 3 |
-| First flight max speed | Greatest speed attained in any 5 sec interval of the first valid flight | Metres/sec | Speed 4 |
-| Furthest flight distance | Distance travelled in the flight of greatest distance of the whole night | Metres | Distance 4 |
-| Longest flight distance | Distance travelled in the flight of greatest duration of the whole night | Metres | Distance 5 |
-| Longest flight duration | Duration of the flight with greatest duration | Seconds | Duration 4 |
-| Longest flight average speed | Speed of the flight with greatest duration (calculated as distance/duration) | Metres/sec | Speed 5 |
-| Longest flight max speed | Greatest speed attained in any 5 sec interval of the flight of greatest duration | Metres/sec | Speed 6 |
+<table><tr><td>Tethered flight variable</td><td>Definition</td><td>Units</td><td>PCA label</td></tr><tr><td>Total distance</td><td>Sum of distance covered by all flights</td><td>Metres</td><td>Distance 1</td></tr><tr><td>Total duration</td><td>Sum of duration of all flights</td><td>Seconds</td><td>Duration 1</td></tr><tr><td>Number of flights</td><td>Count of flights</td><td>Numeric</td><td>NumFlights</td></tr><tr><td>Average flight distance</td><td>Mean of distances of flights</td><td>Metres</td><td>Distance 2</td></tr><tr><td>Average flight duration</td><td>Mean of duration of flights</td><td>Seconds</td><td>Duration 2</td></tr><tr><td>Average flight speed</td><td>Mean of the speeds of individual flights (calculated as distance/duration)</td><td>Metres/sec</td><td>Speed 1</td></tr><tr><td>Maximum speed attained</td><td>Greatest distance attained in any 5 sec interval/5 – of the whole night</td><td>Metres/sec</td><td>Speed 2</td></tr><tr><td>First flight distance</td><td>Distance of first flight of the night</td><td>Metres</td><td>Distance 3</td></tr><tr><td>First flight duration</td><td>Duration of first flight of the night</td><td>Seconds</td><td>Duration 3</td></tr><tr><td>First flight average speed</td><td>Speed of first flight of the night (calculated as distance/duration)</td><td>Metres/sec</td><td>Speed 3</td></tr><tr><td>First flight max speed</td><td>Greatest speed attained in any 5 sec interval of the first valid flight</td><td>Metres/sec</td><td>Speed 4</td></tr><tr><td>Furthest flight distance</td><td>Distance travelled in the flight of greatest distance of the whole night</td><td>Metres</td><td>Distance 4</td></tr><tr><td>Longest flight distance</td><td>Distance travelled in the flight of greatest duration of the whole night</td><td>Metres</td><td>Distance 5</td></tr><tr><td>Longest flight duration</td><td>Duration of the flight with greatest duration</td><td>Seconds</td><td>Duration 4</td></tr><tr><td>Longest flight average speed</td><td>Speed of the flight with greatest duration (calculated as distance/duration)</td><td>Metres/sec</td><td>Speed 5</td></tr><tr><td>Longest flight max speed</td><td>Greatest speed attained in any 5 sec interval of the flight of greatest duration</td><td>Metres/sec</td><td>Speed 6</td></tr></table>
 
 ª 2015 The Authors. Ecology and Evolution published by John Wiley & Sons Ltd.
 
@@ -173,32 +156,7 @@ Quantifying Noctuid Dispersal with Tethered Flight
 
 Table 2. Responses to expert survey on noctuid moth mobility. Five experts categorized species as relatively sedentary, mobile, or very mobile which corresponds to 0, 1 or 2 mobility points in the table below.
 
-| Species | Expert 1 | Expert 2 | Expert 3 | Expert 4 | Expert 5 | Mean points |
-| --- | --- | --- | --- | --- | --- | --- |
-| Agrotis exclamationis | 2 | 1 | 1 | 1 | 0 | 1 |
-| Agrotis puta | 2 | 1 | 1 | 1 | 1 | 1.2 |
-| Amphipoea oculea | 1 | 1 | 0 | 1 | 1 | 0.8 |
-| Amphipyra pyramidea | 1 | 1 | 0 | 1 | 1 | 0.8 |
-| Apamea monoglypha | 2 | 2 | 1 | 1 | 1 | 1.4 |
-| Autographa gamma | 2 | 2 | 2 | 2 | 2 | 2 |
-| Axylia putris | 1 | 1 | 0 | 1 | 0 | 0.6 |
-| Hoplodrina alsines | 2 | 1 | 0 | 1 | 0 | 0.8 |
-| Hoplodrina ambigua | 2 | 1 | 1 | 1 | 2 | 1.4 |
-| Hydraecia micacea | 1 | 1 | 0 | 1 | 0 | 0.6 |
-| Lacanobia oleracea | 1 | 1 | 0 | 1 | 0 | 0.6 |
-| Mesapamea secalis | 2 | 1 | 0 | 1 | 0 | 0.8 |
-| Mesapamea didyma | 2 | 1 | 0 | 1 | 0 | 0.8 |
-| Mythimna impura | 2 | 1 | 0 | 1 | 0 | 0.8 |
-| Mythimna pallens | 2 | 1 | 0 | 1 | 0 | 0.8 |
-| Noctua comes | 2 | 2 | 1 | 1 | 0 | 1.2 |
-| Noctua janthe | 2 | 2 | 1 | 1 | 1 | 1.4 |
-| Noctua pronuba | 2 | 2 | 2 | 2 | 2 | 2 |
-| Ochropleura plecta | 1 | 1 | 1 | 1 | 1 | 1 |
-| Omphaloscelis lunosa | 2 | 1 | 0 | 1 | 1 | 1 |
-| Phlogophora meticulosa | 2 | 2 | 0 | 2 | 2 | 1.6 |
-| Xestia c-nigrum | 2 | 1 | 1 | 1 | 2 | 1.4 |
-| Xestia triangulum | 1 | 1 | 1 | 1 | 0 | 0.8 |
-| Xestia xanthographa | 2 | 1 | 0 | 1 | 0 | 0.8 |
+<table><tr><td>Species</td><td>Expert 1</td><td>Expert 2</td><td>Expert 3</td><td>Expert 4</td><td>Expert 5</td><td>Mean points</td></tr><tr><td>Agrotis exclamationis</td><td>2</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr><tr><td>Agrotis puta</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1.2</td></tr><tr><td>Amphipoea oculea</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0.8</td></tr><tr><td>Amphipyra pyramidea</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0.8</td></tr><tr><td>Apamea monoglypha</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1.4</td></tr><tr><td>Autographa gamma</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Axylia putris</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.6</td></tr><tr><td>Hoplodrina alsines</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.8</td></tr><tr><td>Hoplodrina ambigua</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>1.4</td></tr><tr><td>Hydraecia micacea</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.6</td></tr><tr><td>Lacanobia oleracea</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.6</td></tr><tr><td>Mesapamea secalis</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.8</td></tr><tr><td>Mesapamea didyma</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.8</td></tr><tr><td>Mythimna impura</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.8</td></tr><tr><td>Mythimna pallens</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.8</td></tr><tr><td>Noctua comes</td><td>2</td><td>2</td><td>1</td><td>1</td><td>0</td><td>1.2</td></tr><tr><td>Noctua janthe</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1.4</td></tr><tr><td>Noctua pronuba</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>Ochropleura plecta</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Omphaloscelis lunosa</td><td>2</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Phlogophora meticulosa</td><td>2</td><td>2</td><td>0</td><td>2</td><td>2</td><td>1.6</td></tr><tr><td>Xestia c-nigrum</td><td>2</td><td>1</td><td>1</td><td>1</td><td>2</td><td>1.4</td></tr><tr><td>Xestia triangulum</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0.8</td></tr><tr><td>Xestia xanthographa</td><td>2</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0.8</td></tr></table>
 
 ## Validating flight mill data
 
@@ -226,53 +184,11 @@ H. B. C. Jones et al.
 
 Table 3. Summary table of individual moth species flown on tethered flight mills. All individuals were males.
 
-| Species | N flown | Suction trap score | Expert opinion | Score | Mobility category | Total distance (m) | Maximum speed (m/sec) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Agrotis exclamationis | 18 | 1 | 1 | 2.0 | Medium | 6935 | 1.458 |
-| Agrotis puta | 8 | 1 | 1.2 | 2.2 | Medium | 597 | 0.743 |
-| Amphipoea oculea | 11 |  | 0.8 | 0.8 | Low | 1580 | 0.962 |
-| Amphipyra pyramidea | 14 |  | 0.8 | 0.8 | Low | 12352 | 1.799 |
-| Apamea monoglypha | 39 | 1 | 1.4 | 2.4 | High | 9036 | 2.059 |
-| Autographa gamma | 13 | 1 | 2 | 3.0 | High | 5168 | 1.535 |
-| Axylia putris | 14 |  | 0.6 | 0.6 | Low | 2474 | 0.979 |
-| Hoplodrina alsines | 13 |  | 0.8 | 0.8 | Low | 2647 | 1.152 |
-| Hoplodrina ambigua | 13 |  | 1.4 | 1.4 | Medium | 1166 | 0.974 |
-| Hydraecia micacea | 23 |  | 0.6 | 0.6 | Low | 2647 | 1.163 |
-| Lacanobia oleracea | 16 |  | 0.6 | 0.6 | Low | 3756 | 1.352 |
-| Mesapamea didyma | 10 | 1 | 0.8 | 1.8 | Medium | 3598 | 1.112 |
-| Mesapamea secalis | 16 | 1 | 0.8 | 1.8 | Medium | 3574 | 1.046 |
-| Mythimna impura | 11 |  | 0.8 | 0.8 | Low | 1581 | 0.807 |
-| Mythimna pallens | 19 |  | 0.8 | 0.8 | Low | 2675 | 0.882 |
-| Noctua comes | 26 |  | 1.2 | 1.2 | Medium | 6548 | 1.474 |
-| Noctua janthe | 13 |  | 1.4 | 1.4 | Medium | 4489 | 1.215 |
-| Noctua pronuba | 37 | 1 | 2 | 3.0 | High | 11596 | 1.623 |
-| Ochropleura plecta | 20 |  | 1 | 1.0 | Low | 626 | 0.697 |
-| Omphaloscelis lunosa | 16 |  | 1 | 1.0 | Low | 1693 | 1.286 |
-| Phlogophora meticulosa | 10 | 1 | 1.6 | 2.6 | High | 9501 | 1.877 |
-| Xestia c-nigrum | 59 | 1 | 1.4 | 2.4 | High | 5903 | 1.17 |
-| Xestia triangulum | 12 |  | 0.8 | 0.8 | Low | 5254 | 1.478 |
-| Xestia xanthographa | 25 | 1 | 0.8 | 1.8 | Medium | 4193 | 0.936 |
+<table><tr><td>Species</td><td>N flown</td><td>Suction trap score</td><td>Expert opinion</td><td>Score</td><td>Mobility category</td><td>Total distance (m)</td><td>Maximum speed (m/sec)</td></tr><tr><td>Agrotis exclamationis</td><td>18</td><td>1</td><td>1</td><td>2.0</td><td>Medium</td><td>6935</td><td>1.458</td></tr><tr><td>Agrotis puta</td><td>8</td><td>1</td><td>1.2</td><td>2.2</td><td>Medium</td><td>597</td><td>0.743</td></tr><tr><td>Amphipoea oculea</td><td>11</td><td></td><td>0.8</td><td>0.8</td><td>Low</td><td>1580</td><td>0.962</td></tr><tr><td>Amphipyra pyramidea</td><td>14</td><td></td><td>0.8</td><td>0.8</td><td>Low</td><td>12352</td><td>1.799</td></tr><tr><td>Apamea monoglypha</td><td>39</td><td>1</td><td>1.4</td><td>2.4</td><td>High</td><td>9036</td><td>2.059</td></tr><tr><td>Autographa gamma</td><td>13</td><td>1</td><td>2</td><td>3.0</td><td>High</td><td>5168</td><td>1.535</td></tr><tr><td>Axylia putris</td><td>14</td><td></td><td>0.6</td><td>0.6</td><td>Low</td><td>2474</td><td>0.979</td></tr><tr><td>Hoplodrina alsines</td><td>13</td><td></td><td>0.8</td><td>0.8</td><td>Low</td><td>2647</td><td>1.152</td></tr><tr><td>Hoplodrina ambigua</td><td>13</td><td></td><td>1.4</td><td>1.4</td><td>Medium</td><td>1166</td><td>0.974</td></tr><tr><td>Hydraecia micacea</td><td>23</td><td></td><td>0.6</td><td>0.6</td><td>Low</td><td>2647</td><td>1.163</td></tr><tr><td>Lacanobia oleracea</td><td>16</td><td></td><td>0.6</td><td>0.6</td><td>Low</td><td>3756</td><td>1.352</td></tr><tr><td>Mesapamea didyma</td><td>10</td><td>1</td><td>0.8</td><td>1.8</td><td>Medium</td><td>3598</td><td>1.112</td></tr><tr><td>Mesapamea secalis</td><td>16</td><td>1</td><td>0.8</td><td>1.8</td><td>Medium</td><td>3574</td><td>1.046</td></tr><tr><td>Mythimna impura</td><td>11</td><td></td><td>0.8</td><td>0.8</td><td>Low</td><td>1581</td><td>0.807</td></tr><tr><td>Mythimna pallens</td><td>19</td><td></td><td>0.8</td><td>0.8</td><td>Low</td><td>2675</td><td>0.882</td></tr><tr><td>Noctua comes</td><td>26</td><td></td><td>1.2</td><td>1.2</td><td>Medium</td><td>6548</td><td>1.474</td></tr><tr><td>Noctua janthe</td><td>13</td><td></td><td>1.4</td><td>1.4</td><td>Medium</td><td>4489</td><td>1.215</td></tr><tr><td>Noctua pronuba</td><td>37</td><td>1</td><td>2</td><td>3.0</td><td>High</td><td>11596</td><td>1.623</td></tr><tr><td>Ochropleura plecta</td><td>20</td><td></td><td>1</td><td>1.0</td><td>Low</td><td>626</td><td>0.697</td></tr><tr><td>Omphaloscelis lunosa</td><td>16</td><td></td><td>1</td><td>1.0</td><td>Low</td><td>1693</td><td>1.286</td></tr><tr><td>Phlogophora meticulosa</td><td>10</td><td>1</td><td>1.6</td><td>2.6</td><td>High</td><td>9501</td><td>1.877</td></tr><tr><td>Xestia c-nigrum</td><td>59</td><td>1</td><td>1.4</td><td>2.4</td><td>High</td><td>5903</td><td>1.17</td></tr><tr><td>Xestia triangulum</td><td>12</td><td></td><td>0.8</td><td>0.8</td><td>Low</td><td>5254</td><td>1.478</td></tr><tr><td>Xestia xanthographa</td><td>25</td><td>1</td><td>0.8</td><td>1.8</td><td>Medium</td><td>4193</td><td>0.936</td></tr></table>
 
 Mobility category was assigned by summing scores from suction trap data and expert survey. One point was assigned if species were in the top 25% of species caught in Rothamsted Insect Survey (RIS) suction traps (mean yearly catch over period 2000–2009). Expert opinion was the mean value of responses where five experts were asked to assign species to categories of low (0), medium (1), and high (2) mobility (see Table 2). “Score” sums these two methods of classification and mobility category was assigned according to thresholds: $\leq 1 = \mathsf { L O W } ,$ >1 to ≤2 = Medium and >2 = High. Species mean values for the tethered flight variables “Total distance flown overnight” and “maximum speed” are also shown.
 
-| Metric | TotalDistance | TotalDuration | NumFlights | AvgFlightDistance | AvgFlightDuration | AvgFlightSpeed | MaxSpeed | FFMeanSpeed | FFMaxSpeed | FFDistance | FFDuration | FurthestFDist | LongestFlightSpeed | LongestFlightMaxSpeed | LongestFlightDistance |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| LongestFlightDuration | ~0.85 | ~0.85 | ~0.65 | ~0.75 | ~0.65 | ~0.45 | ~0.35 | ~0.45 | ~0.55 | ~0.85 | ~0.95 | ~0.25 | ~0.65 | ~0.95 | ~0.15 |
-| LongestFlightDistance | ~0.85 | ~0.75 | ~0.65 | ~0.75 | ~0.65 | ~0.45 | ~0.35 | ~0.45 | ~0.55 | ~0.85 | ~0.95 | ~0.25 | ~0.65 | ~0.15 | ~0.95 |
-| LongestFlightMaxSpeed | ~0.65 | ~0.65 | ~0.35 | ~0.35 | ~0.35 | ~0.85 | ~0.65 | ~0.65 | ~0.45 | ~0.45 | ~0.45 | ~0.75 | ~0.15 | ~0.65 | ~0.45 |
-| LongestFlightSpeed | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.75 | ~0.65 | ~0.65 | ~0.45 | ~0.45 | ~0.45 | ~0.15 | ~0.85 | ~0.15 | ~0.35 |
-| FurthestFDist | ~0.85 | ~0.75 | ~0.65 | ~0.75 | ~0.65 | ~0.45 | ~0.35 | ~0.45 | ~0.55 | ~0.75 | ~0.15 | ~0.35 | ~0.35 | ~0.95 | ~0.95 |
-| FFDuration | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.45 | ~0.35 | ~0.45 | ~0.75 | ~0.15 | ~0.75 | ~0.35 | ~0.35 | ~0.65 | ~0.65 |
-| FFDistance | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.45 | ~0.45 | ~0.45 | ~0.15 | ~0.85 | ~0.95 | ~0.65 | ~0.65 | ~0.65 | ~0.65 |
-| FFMaxSpeed | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.45 | ~0.85 | ~0.15 | ~0.15 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 |
-| FFMeanSpeed | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.45 | ~0.15 | ~0.85 | ~0.15 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 |
-| MaxSpeed | ~0.65 | ~0.65 | ~0.35 | ~0.35 | ~0.35 | ~0.15 | ~0.45 | ~0.65 | ~0.65 | ~0.35 | ~0.35 | ~0.75 | ~0.95 | ~0.35 | ~0.35 |
-| AvgFlightSpeed | ~0.65 | ~0.65 | ~0.35 | ~0.35 | ~0.35 | ~0.15 | ~0.45 | ~0.65 | ~0.65 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.65 | ~0.65 |
-| AvgFlightDuration | ~0.65 | ~0.65 | ~0.85 | ~0.15 | ~0.15 | ~0.35 | ~0.35 | ~0.35 | ~0.45 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 |
-| AvgFlightDistance | ~0.65 | ~0.65 | ~0.15 | ~0.85 | ~0.15 | ~0.35 | ~0.35 | ~0.35 | ~0.45 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 |
-| NumFlights | ~0.35 | ~0.15 | ~0.15 | ~0.15 | ~0.15 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 | ~0.35 |
-| TotalDuration | ~0.85 | ~0.15 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.75 | ~0.35 | ~0.65 | ~0.85 |
-| TotalDistance | ~0.15 | ~0.85 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.65 | ~0.95 | ~0.35 | ~0.85 | ~0.95 |
+<table><tr><td>Metric</td><td>TotalDistance</td><td>TotalDuration</td><td>NumFlights</td><td>AvgFlightDistance</td><td>AvgFlightDuration</td><td>AvgFlightSpeed</td><td>MaxSpeed</td><td>FFMeanSpeed</td><td>FFMaxSpeed</td><td>FFDistance</td><td>FFDuration</td><td>FurthestFDist</td><td>LongestFlightSpeed</td><td>LongestFlightMaxSpeed</td><td>LongestFlightDistance</td></tr><tr><td>LongestFlightDuration</td><td>~0.85</td><td>~0.85</td><td>~0.65</td><td>~0.75</td><td>~0.65</td><td>~0.45</td><td>~0.35</td><td>~0.45</td><td>~0.55</td><td>~0.85</td><td>~0.95</td><td>~0.25</td><td>~0.65</td><td>~0.95</td><td>~0.15</td></tr><tr><td>LongestFlightDistance</td><td>~0.85</td><td>~0.75</td><td>~0.65</td><td>~0.75</td><td>~0.65</td><td>~0.45</td><td>~0.35</td><td>~0.45</td><td>~0.55</td><td>~0.85</td><td>~0.95</td><td>~0.25</td><td>~0.65</td><td>~0.15</td><td>~0.95</td></tr><tr><td>LongestFlightMaxSpeed</td><td>~0.65</td><td>~0.65</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.85</td><td>~0.65</td><td>~0.65</td><td>~0.45</td><td>~0.45</td><td>~0.45</td><td>~0.75</td><td>~0.15</td><td>~0.65</td><td>~0.45</td></tr><tr><td>LongestFlightSpeed</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.75</td><td>~0.65</td><td>~0.65</td><td>~0.45</td><td>~0.45</td><td>~0.45</td><td>~0.15</td><td>~0.85</td><td>~0.15</td><td>~0.35</td></tr><tr><td>FurthestFDist</td><td>~0.85</td><td>~0.75</td><td>~0.65</td><td>~0.75</td><td>~0.65</td><td>~0.45</td><td>~0.35</td><td>~0.45</td><td>~0.55</td><td>~0.75</td><td>~0.15</td><td>~0.35</td><td>~0.35</td><td>~0.95</td><td>~0.95</td></tr><tr><td>FFDuration</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.45</td><td>~0.35</td><td>~0.45</td><td>~0.75</td><td>~0.15</td><td>~0.75</td><td>~0.35</td><td>~0.35</td><td>~0.65</td><td>~0.65</td></tr><tr><td>FFDistance</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.45</td><td>~0.45</td><td>~0.45</td><td>~0.15</td><td>~0.85</td><td>~0.95</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td></tr><tr><td>FFMaxSpeed</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.45</td><td>~0.85</td><td>~0.15</td><td>~0.15</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td></tr><tr><td>FFMeanSpeed</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.45</td><td>~0.15</td><td>~0.85</td><td>~0.15</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td></tr><tr><td>MaxSpeed</td><td>~0.65</td><td>~0.65</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.15</td><td>~0.45</td><td>~0.65</td><td>~0.65</td><td>~0.35</td><td>~0.35</td><td>~0.75</td><td>~0.95</td><td>~0.35</td><td>~0.35</td></tr><tr><td>AvgFlightSpeed</td><td>~0.65</td><td>~0.65</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.15</td><td>~0.45</td><td>~0.65</td><td>~0.65</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.65</td><td>~0.65</td></tr><tr><td>AvgFlightDuration</td><td>~0.65</td><td>~0.65</td><td>~0.85</td><td>~0.15</td><td>~0.15</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.45</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td></tr><tr><td>AvgFlightDistance</td><td>~0.65</td><td>~0.65</td><td>~0.15</td><td>~0.85</td><td>~0.15</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.45</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td></tr><tr><td>NumFlights</td><td>~0.35</td><td>~0.15</td><td>~0.15</td><td>~0.15</td><td>~0.15</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td><td>~0.35</td></tr><tr><td>TotalDuration</td><td>~0.85</td><td>~0.15</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.75</td><td>~0.35</td><td>~0.65</td><td>~0.85</td></tr><tr><td>TotalDistance</td><td>~0.15</td><td>~0.85</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.65</td><td>~0.95</td><td>~0.35</td><td>~0.85</td><td>~0.95</td></tr></table>
 
 had mean flight distances 2.5 times that of species in the low mobility category (such as Axylia putris and Hydraecia micaea; group mean = 3263 m). Four of the five spe-
 
@@ -292,115 +208,7 @@ H. B. C. Jones et al.
 
 Quantifying Noctuid Dispersal with Tethered Flight
 
-| Category | PC 1 (53.66%) | PC 2 (16.48%) |
-| --- | --- | --- |
-| NomFlights | ~0.0 | ~0.0 |
-| Duration_1 | ~-2.5 | ~0.2 |
-| Duration_2 | ~-2.8 | ~1.5 |
-| Duration_3 | ~-2.5 | ~1.2 |
-| Distance_1 | ~-2.5 | ~0.5 |
-| Distance_2 | ~-2.5 | ~1.0 |
-| Distance_3 | ~-2.5 | ~0.8 |
-| Speed_1 | ~-1.5 | ~-1.5 |
-| Speed_2 | ~-1.5 | ~-1.8 |
-| Speed_3 | ~-1.5 | ~-2.0 |
-| Speed_4 | ~-1.5 | ~-2.2 |
-| Speed_5 | ~-1.5 | ~-2.5 |
-| Speed_6 | ~-1.5 | ~-2.8 |
-| Speed_7 | ~-1.5 | ~-3.0 |
-| Speed_8 | ~-1.5 | ~-3.2 |
-| Speed_9 | ~-1.5 | ~-3.5 |
-| Speed_10 | ~-1.5 | ~-3.8 |
-| Speed_11 | ~-1.5 | ~-4.0 |
-| Speed_12 | ~-1.5 | ~-4.2 |
-| Speed_13 | ~-1.5 | ~-4.5 |
-| Speed_14 | ~-1.5 | ~-4.8 |
-| Speed_15 | ~-1.5 | ~-5.0 |
-| Speed_16 | ~-1.5 | ~-5.2 |
-| Speed_17 | ~-1.5 | ~-5.5 |
-| Speed_18 | ~-1.5 | ~-5.8 |
-| Speed_19 | ~-1.5 | ~-6.0 |
-| Speed_20 | ~-1.5 | ~-6.2 |
-| Speed_21 | ~-1.5 | ~-6.5 |
-| Speed_22 | ~-1.5 | ~-6.8 |
-| Speed_23 | ~-1.5 | ~-7.0 |
-| Speed_24 | ~-1.5 | ~-7.2 |
-| Speed_25 | ~-1.5 | ~-7.5 |
-| Speed_26 | ~-1.5 | ~-7.8 |
-| Speed_27 | ~-1.5 | ~-8.0 |
-| Speed_28 | ~-1.5 | ~-8.2 |
-| Speed_29 | ~-1.5 | ~-8.5 |
-| Speed_30 | ~-1.5 | ~-8.8 |
-| Speed_31 | ~-1.5 | ~-9.0 |
-| Speed_32 | ~-1.5 | ~-9.2 |
-| Speed_33 | ~-1.5 | ~-9.5 |
-| Speed_34 | ~-1.5 | ~-9.8 |
-| Speed_35 | ~-1.5 | ~-10.0 |
-| Speed_36 | ~-1.5 | ~-10.2 |
-| Speed_37 | ~-1.5 | ~-10.5 |
-| Speed_38 | ~-1.5 | ~-10.8 |
-| Speed_39 | ~-1.5 | ~-11.0 |
-| Speed_40 | ~-1.5 | ~-11.2 |
-| Speed_41 | ~-1.5 | ~-11.5 |
-| Speed_42 | ~-1.5 | ~-11.8 |
-| Speed_43 | ~-1.5 | ~-12.0 |
-| Speed_44 | ~-1.5 | ~-12.2 |
-| Speed_45 | ~-1.5 | ~-12.5 |
-| Speed_46 | ~-1.5 | ~-12.8 |
-| Speed_47 | ~-1.5 | ~-13.0 |
-| Speed_48 | ~-1.5 | ~-13.2 |
-| Speed_49 | ~-1.5 | ~-13.5 |
-| Speed_50 | ~-1.5 | ~-13.8 |
-| Speed_51 | ~-1.5 | ~-14.0 |
-| Speed_52 | ~-1.5 | ~-14.2 |
-| Speed_53 | ~-1.5 | ~-14.5 |
-| Speed_54 | ~-1.5 | ~-14.8 |
-| Speed_55 | ~-1.5 | ~-15.0 |
-| Speed_56 | ~-1.5 | ~-15.2 |
-| Speed_57 | ~-1.5 | ~-15.5 |
-| Speed_58 | ~-1.5 | ~-15.8 |
-| Speed_59 | ~-1.5 | ~-16.0 |
-| Speed_60 | ~-1.5 | ~-16.2 |
-| Speed_61 | ~-1.5 | ~-16.5 |
-| Speed_62 | ~-1.5 | ~-16.8 |
-| Speed_63 | ~-1.5 | ~-17.0 |
-| Speed_64 | ~-1.5 | ~-17.2 |
-| Speed_65 | ~-1.5 | ~-17.5 |
-| Speed_66 | ~-1.5 | ~-17.8 |
-| Speed_67 | ~-1.5 | ~-18.0 |
-| Speed_68 | ~-1.5 | ~-18.2 |
-| Speed_69 | ~-1.5 | ~-18.5 |
-| Speed_70 | ~-1.5 | ~-18.8 |
-| Speed_71 | ~-1.5 | ~-19.0 |
-| Speed_72 | ~-1.5 | ~-19.2 |
-| Speed_73 | ~-1.5 | ~-19.5 |
-| Speed_74 | ~-1.5 | ~-19.8 |
-| Speed_75 | ~-1.5 | ~-20.0 |
-| Speed_76 | ~-1.5 | ~-20.2 |
-| Speed_77 | ~-1.5 | ~-20.5 |
-| Speed_78 | ~-1.5 | ~-20.8 |
-| Speed_79 | ~-1.5 | ~-21.0 |
-| Speed_80 | ~-1.5 | ~-21.2 |
-| Speed_81 | ~-1.5 | ~-21.5 |
-| Speed_82 | ~-1.5 | ~-21.8 |
-| Speed_83 | ~-1.5 | ~-22.0 |
-| Speed_84 | ~-1.5 | ~-22.2 |
-| Speed_85 | ~-1.5 | ~-22.5 |
-| Speed_86 | ~-1.5 | ~-22.8 |
-| Speed_87 | ~-1.5 | ~-23.0 |
-| Speed_88 | ~-1.5 | ~-23.2 |
-| Speed_89 | ~-1.5 | ~-23.5 |
-| Speed_90 | ~-1.5 | ~-23.8 |
-| Speed_91 | ~-1.5 | ~-24.0 |
-| Speed_92 | ~-1.5 | ~-24.2 |
-| Speed_93 | ~-1.5 | ~-24.5 |
-| Speed_94 | ~-1.5 | ~-24.8 |
-| Speed_95 | ~-1.5 | ~-25.0 |
-| Speed_96 | ~-1.5 | ~-25.2 |
-| Speed_97 | ~-1.5 | ~-25.5 |
-| Speed_98 | ~-1.5 | ~-25.8 |
-| Speed_99 | ~-1.5 | ~-26.0 |
-| Speed_100 | ~-1.5 | ~-26.2 |
+<table><tr><td>Category</td><td>PC 1 (53.66%)</td><td>PC 2 (16.48%)</td></tr><tr><td>NomFlights</td><td>~0.0</td><td>~0.0</td></tr><tr><td>Duration_1</td><td>~-2.5</td><td>~0.2</td></tr><tr><td>Duration_2</td><td>~-2.8</td><td>~1.5</td></tr><tr><td>Duration_3</td><td>~-2.5</td><td>~1.2</td></tr><tr><td>Distance_1</td><td>~-2.5</td><td>~0.5</td></tr><tr><td>Distance_2</td><td>~-2.5</td><td>~1.0</td></tr><tr><td>Distance_3</td><td>~-2.5</td><td>~0.8</td></tr><tr><td>Speed_1</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Speed_2</td><td>~-1.5</td><td>~-1.8</td></tr><tr><td>Speed_3</td><td>~-1.5</td><td>~-2.0</td></tr><tr><td>Speed_4</td><td>~-1.5</td><td>~-2.2</td></tr><tr><td>Speed_5</td><td>~-1.5</td><td>~-2.5</td></tr><tr><td>Speed_6</td><td>~-1.5</td><td>~-2.8</td></tr><tr><td>Speed_7</td><td>~-1.5</td><td>~-3.0</td></tr><tr><td>Speed_8</td><td>~-1.5</td><td>~-3.2</td></tr><tr><td>Speed_9</td><td>~-1.5</td><td>~-3.5</td></tr><tr><td>Speed_10</td><td>~-1.5</td><td>~-3.8</td></tr><tr><td>Speed_11</td><td>~-1.5</td><td>~-4.0</td></tr><tr><td>Speed_12</td><td>~-1.5</td><td>~-4.2</td></tr><tr><td>Speed_13</td><td>~-1.5</td><td>~-4.5</td></tr><tr><td>Speed_14</td><td>~-1.5</td><td>~-4.8</td></tr><tr><td>Speed_15</td><td>~-1.5</td><td>~-5.0</td></tr><tr><td>Speed_16</td><td>~-1.5</td><td>~-5.2</td></tr><tr><td>Speed_17</td><td>~-1.5</td><td>~-5.5</td></tr><tr><td>Speed_18</td><td>~-1.5</td><td>~-5.8</td></tr><tr><td>Speed_19</td><td>~-1.5</td><td>~-6.0</td></tr><tr><td>Speed_20</td><td>~-1.5</td><td>~-6.2</td></tr><tr><td>Speed_21</td><td>~-1.5</td><td>~-6.5</td></tr><tr><td>Speed_22</td><td>~-1.5</td><td>~-6.8</td></tr><tr><td>Speed_23</td><td>~-1.5</td><td>~-7.0</td></tr><tr><td>Speed_24</td><td>~-1.5</td><td>~-7.2</td></tr><tr><td>Speed_25</td><td>~-1.5</td><td>~-7.5</td></tr><tr><td>Speed_26</td><td>~-1.5</td><td>~-7.8</td></tr><tr><td>Speed_27</td><td>~-1.5</td><td>~-8.0</td></tr><tr><td>Speed_28</td><td>~-1.5</td><td>~-8.2</td></tr><tr><td>Speed_29</td><td>~-1.5</td><td>~-8.5</td></tr><tr><td>Speed_30</td><td>~-1.5</td><td>~-8.8</td></tr><tr><td>Speed_31</td><td>~-1.5</td><td>~-9.0</td></tr><tr><td>Speed_32</td><td>~-1.5</td><td>~-9.2</td></tr><tr><td>Speed_33</td><td>~-1.5</td><td>~-9.5</td></tr><tr><td>Speed_34</td><td>~-1.5</td><td>~-9.8</td></tr><tr><td>Speed_35</td><td>~-1.5</td><td>~-10.0</td></tr><tr><td>Speed_36</td><td>~-1.5</td><td>~-10.2</td></tr><tr><td>Speed_37</td><td>~-1.5</td><td>~-10.5</td></tr><tr><td>Speed_38</td><td>~-1.5</td><td>~-10.8</td></tr><tr><td>Speed_39</td><td>~-1.5</td><td>~-11.0</td></tr><tr><td>Speed_40</td><td>~-1.5</td><td>~-11.2</td></tr><tr><td>Speed_41</td><td>~-1.5</td><td>~-11.5</td></tr><tr><td>Speed_42</td><td>~-1.5</td><td>~-11.8</td></tr><tr><td>Speed_43</td><td>~-1.5</td><td>~-12.0</td></tr><tr><td>Speed_44</td><td>~-1.5</td><td>~-12.2</td></tr><tr><td>Speed_45</td><td>~-1.5</td><td>~-12.5</td></tr><tr><td>Speed_46</td><td>~-1.5</td><td>~-12.8</td></tr><tr><td>Speed_47</td><td>~-1.5</td><td>~-13.0</td></tr><tr><td>Speed_48</td><td>~-1.5</td><td>~-13.2</td></tr><tr><td>Speed_49</td><td>~-1.5</td><td>~-13.5</td></tr><tr><td>Speed_50</td><td>~-1.5</td><td>~-13.8</td></tr><tr><td>Speed_51</td><td>~-1.5</td><td>~-14.0</td></tr><tr><td>Speed_52</td><td>~-1.5</td><td>~-14.2</td></tr><tr><td>Speed_53</td><td>~-1.5</td><td>~-14.5</td></tr><tr><td>Speed_54</td><td>~-1.5</td><td>~-14.8</td></tr><tr><td>Speed_55</td><td>~-1.5</td><td>~-15.0</td></tr><tr><td>Speed_56</td><td>~-1.5</td><td>~-15.2</td></tr><tr><td>Speed_57</td><td>~-1.5</td><td>~-15.5</td></tr><tr><td>Speed_58</td><td>~-1.5</td><td>~-15.8</td></tr><tr><td>Speed_59</td><td>~-1.5</td><td>~-16.0</td></tr><tr><td>Speed_60</td><td>~-1.5</td><td>~-16.2</td></tr><tr><td>Speed_61</td><td>~-1.5</td><td>~-16.5</td></tr><tr><td>Speed_62</td><td>~-1.5</td><td>~-16.8</td></tr><tr><td>Speed_63</td><td>~-1.5</td><td>~-17.0</td></tr><tr><td>Speed_64</td><td>~-1.5</td><td>~-17.2</td></tr><tr><td>Speed_65</td><td>~-1.5</td><td>~-17.5</td></tr><tr><td>Speed_66</td><td>~-1.5</td><td>~-17.8</td></tr><tr><td>Speed_67</td><td>~-1.5</td><td>~-18.0</td></tr><tr><td>Speed_68</td><td>~-1.5</td><td>~-18.2</td></tr><tr><td>Speed_69</td><td>~-1.5</td><td>~-18.5</td></tr><tr><td>Speed_70</td><td>~-1.5</td><td>~-18.8</td></tr><tr><td>Speed_71</td><td>~-1.5</td><td>~-19.0</td></tr><tr><td>Speed_72</td><td>~-1.5</td><td>~-19.2</td></tr><tr><td>Speed_73</td><td>~-1.5</td><td>~-19.5</td></tr><tr><td>Speed_74</td><td>~-1.5</td><td>~-19.8</td></tr><tr><td>Speed_75</td><td>~-1.5</td><td>~-20.0</td></tr><tr><td>Speed_76</td><td>~-1.5</td><td>~-20.2</td></tr><tr><td>Speed_77</td><td>~-1.5</td><td>~-20.5</td></tr><tr><td>Speed_78</td><td>~-1.5</td><td>~-20.8</td></tr><tr><td>Speed_79</td><td>~-1.5</td><td>~-21.0</td></tr><tr><td>Speed_80</td><td>~-1.5</td><td>~-21.2</td></tr><tr><td>Speed_81</td><td>~-1.5</td><td>~-21.5</td></tr><tr><td>Speed_82</td><td>~-1.5</td><td>~-21.8</td></tr><tr><td>Speed_83</td><td>~-1.5</td><td>~-22.0</td></tr><tr><td>Speed_84</td><td>~-1.5</td><td>~-22.2</td></tr><tr><td>Speed_85</td><td>~-1.5</td><td>~-22.5</td></tr><tr><td>Speed_86</td><td>~-1.5</td><td>~-22.8</td></tr><tr><td>Speed_87</td><td>~-1.5</td><td>~-23.0</td></tr><tr><td>Speed_88</td><td>~-1.5</td><td>~-23.2</td></tr><tr><td>Speed_89</td><td>~-1.5</td><td>~-23.5</td></tr><tr><td>Speed_90</td><td>~-1.5</td><td>~-23.8</td></tr><tr><td>Speed_91</td><td>~-1.5</td><td>~-24.0</td></tr><tr><td>Speed_92</td><td>~-1.5</td><td>~-24.2</td></tr><tr><td>Speed_93</td><td>~-1.5</td><td>~-24.5</td></tr><tr><td>Speed_94</td><td>~-1.5</td><td>~-24.8</td></tr><tr><td>Speed_95</td><td>~-1.5</td><td>~-25.0</td></tr><tr><td>Speed_96</td><td>~-1.5</td><td>~-25.2</td></tr><tr><td>Speed_97</td><td>~-1.5</td><td>~-25.5</td></tr><tr><td>Speed_98</td><td>~-1.5</td><td>~-25.8</td></tr><tr><td>Speed_99</td><td>~-1.5</td><td>~-26.0</td></tr><tr><td>Speed_100</td><td>~-1.5</td><td>~-26.2</td></tr></table>
 
 Figure 5. Principal components analysis biplot of the 16 tethered flight mill variables listed in Table 1. The two first principal components are plotted with the proportion of variance explained by each component printed next to the axes label which together explain >70% of variation in the data. Crosses indicate the 456 male individuals in the data set; the top and right axes show principal component scores of the individuals. The arrows indicate the principal component loadings of the different tethered flight variables.
 
@@ -416,24 +224,7 @@ It is more complex to interpret how distances flown on the flight mill might rel
 
 Table 4. Canonical Variates Analysis was performed on the 16 tethered flight variables (outlined in Table 1).
 
-| Tethered flight measurement | CV1 (45.46) | CV2 (14.75) | CV3 (10.57) | CV4 (7.26) | CV5 (7.1) |
-| --- | --- | --- | --- | --- | --- |
-| AvgFlightDistance | -0.0002 | 0.0001 | 0.0004 | 0 | 0.0001 |
-| AvgFlightDuration | 0.0001 | -0.0002 | -0.0004 | 0 | -0.0002 |
-| AvgFlightSpeed | 0.8207 | -3.5807 | -0.5541 | -2.5477 | 2.1785 |
-| FFDistance | 0.0001 | 0.0003 | -0.0002 | -0.0004 | 0.0002 |
-| FFDuration | -0.0001 | -0.0002 | 0.0002 | 0.0002 | -0.0001 |
-| FFMaxSpeed | 0.3871 | 1.3461 | -1.1428 | 0.7091 | -0.8464 |
-| FFMeanSpeed | -1.0561 | -1.3326 | 0.902 | 0.8578 | 3.5797 |
-| FurthestFDist | -0.0001 | -0.0001 | -0.0001 | 0.0005 | 0 |
-| LongestFlightDistance | -0.0001 | -0.0001 | -0.0001 | 0.0005 | 0 |
-| LongestFlightDuration | 0.0001 | 0.0002 | 0 | -0.0007 | 0.0001 |
-| LongestFlightMaxSpeed | 1.1193 | 0.4216 | 1.392 | -1.12 | 1.3157 |
-| LongestFlightSpeed | 0.0129 | 0.9717 | 0.4125 | -1.8829 | 0.8313 |
-| MaxSpeed | 1.302 | 0.5732 | -1.5167 | 1.1944 | -1.9183 |
-| NumFlights | 0.0095 | -0.0076 | 0.0325 | -0.0066 | 0.0087 |
-| TotalDistance | 0.0001 | 0.0001 | 0.0001 | -0.0004 | -0.0003 |
-| TotalDuration | 0 | -0.0002 | 0.0001 | 0.0003 | 0.0002 |
+<table><tr><td>Tethered flight measurement</td><td>CV1 (45.46)</td><td>CV2 (14.75)</td><td>CV3 (10.57)</td><td>CV4 (7.26)</td><td>CV5 (7.1)</td></tr><tr><td>AvgFlightDistance</td><td>-0.0002</td><td>0.0001</td><td>0.0004</td><td>0</td><td>0.0001</td></tr><tr><td>AvgFlightDuration</td><td>0.0001</td><td>-0.0002</td><td>-0.0004</td><td>0</td><td>-0.0002</td></tr><tr><td>AvgFlightSpeed</td><td>0.8207</td><td>-3.5807</td><td>-0.5541</td><td>-2.5477</td><td>2.1785</td></tr><tr><td>FFDistance</td><td>0.0001</td><td>0.0003</td><td>-0.0002</td><td>-0.0004</td><td>0.0002</td></tr><tr><td>FFDuration</td><td>-0.0001</td><td>-0.0002</td><td>0.0002</td><td>0.0002</td><td>-0.0001</td></tr><tr><td>FFMaxSpeed</td><td>0.3871</td><td>1.3461</td><td>-1.1428</td><td>0.7091</td><td>-0.8464</td></tr><tr><td>FFMeanSpeed</td><td>-1.0561</td><td>-1.3326</td><td>0.902</td><td>0.8578</td><td>3.5797</td></tr><tr><td>FurthestFDist</td><td>-0.0001</td><td>-0.0001</td><td>-0.0001</td><td>0.0005</td><td>0</td></tr><tr><td>LongestFlightDistance</td><td>-0.0001</td><td>-0.0001</td><td>-0.0001</td><td>0.0005</td><td>0</td></tr><tr><td>LongestFlightDuration</td><td>0.0001</td><td>0.0002</td><td>0</td><td>-0.0007</td><td>0.0001</td></tr><tr><td>LongestFlightMaxSpeed</td><td>1.1193</td><td>0.4216</td><td>1.392</td><td>-1.12</td><td>1.3157</td></tr><tr><td>LongestFlightSpeed</td><td>0.0129</td><td>0.9717</td><td>0.4125</td><td>-1.8829</td><td>0.8313</td></tr><tr><td>MaxSpeed</td><td>1.302</td><td>0.5732</td><td>-1.5167</td><td>1.1944</td><td>-1.9183</td></tr><tr><td>NumFlights</td><td>0.0095</td><td>-0.0076</td><td>0.0325</td><td>-0.0066</td><td>0.0087</td></tr><tr><td>TotalDistance</td><td>0.0001</td><td>0.0001</td><td>0.0001</td><td>-0.0004</td><td>-0.0003</td></tr><tr><td>TotalDuration</td><td>0</td><td>-0.0002</td><td>0.0001</td><td>0.0003</td><td>0.0002</td></tr></table>
 
 Loadings values of the variables in the first five canonical variates are shown. Values in brackets next to CV number are the percentage variance in the dataset accounted for by that canonical variate.
 

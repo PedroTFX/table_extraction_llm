@@ -229,12 +229,7 @@ Note. SHDI: Shannon Diversity Landscape Index; x: Response variables (wild bee s
 
 In total, 113 species and 719 individuals were sampled in vineyards across Europe (species list: Supporting Information Appendix S1: Table S1) and 217 honey bee individuals were counted. Austrian vineyards represented the highest wild bee diversity (64 species) followed by Romania (38 species), France (35 species), and Spain (20 species). Accordingly, the highest wild bee abundance was found in Austrian vineyards (329 individuals), followed by France (181
 
-| Series | PC1 (range) | PC2 (range) |
-| --- | --- | --- |
-| AT | -0.1~0.6 | -0.3~0.1 |
-| ES | -0.5~-0.1 | 0.4~0.8 |
-| FR | -0.5~-0.1 | -0.8~-0.1 |
-| RO | -0.1~0.6 | -0.1~0.2 |
+<table><tr><td>Series</td><td>PC1 (range)</td><td>PC2 (range)</td></tr><tr><td>AT</td><td>-0.1~0.6</td><td>-0.3~0.1</td></tr><tr><td>ES</td><td>-0.5~-0.1</td><td>0.4~0.8</td></tr><tr><td>FR</td><td>-0.5~-0.1</td><td>-0.8~-0.1</td></tr><tr><td>RO</td><td>-0.1~0.6</td><td>-0.1~0.2</td></tr></table>
 
 F I G U R E 2   PCA for wild bee species assemblage in vineyards across Europe including wild bee traits based on significantly $( p \leq 0 . 0 5 )$ correlated CWM (community weighted means) values derived by vector fitting with permutation tests $( n = 9 9 9 )$
 
@@ -328,29 +323,11 @@ Open Access
 
 4111
 
-| Floral resource availability | Eusocial wild bee abundance |
-| --- | --- |
-| Very low | ~2 |
-| Low | ~8 |
-| Medium | ~22 |
+<table><tr><td>Floral resource availability</td><td>Eusocial wild bee abundance</td></tr><tr><td>Very low</td><td>~2</td></tr><tr><td>Low</td><td>~8</td></tr><tr><td>Medium</td><td>~22</td></tr></table>
 
-| SHDI | very low | low | medium |
-| --- | --- | --- | --- |
-| 1.0 | ~1.5 | ~3 | ~24 |
-| 1.2 | ~1.8 | ~4.5 | ~23 |
-| 1.4 | ~2 | ~7 | ~22 |
-| 1.6 | ~2.2 | ~10 | ~21 |
-| 1.8 | ~2.5 | ~15 | ~20 |
-| 2.0 | ~2.8 | ~23 | ~19 |
+<table><tr><td>SHDI</td><td>very low</td><td>low</td><td>medium</td></tr><tr><td>1.0</td><td>~1.5</td><td>~3</td><td>~24</td></tr><tr><td>1.2</td><td>~1.8</td><td>~4.5</td><td>~23</td></tr><tr><td>1.4</td><td>~2</td><td>~7</td><td>~22</td></tr><tr><td>1.6</td><td>~2.2</td><td>~10</td><td>~21</td></tr><tr><td>1.8</td><td>~2.5</td><td>~15</td><td>~20</td></tr><tr><td>2.0</td><td>~2.8</td><td>~23</td><td>~19</td></tr></table>
 
-| Mean vegetation cov.(%) | very low (Abundance) | low (Abundance) | medium (Abundance) |
-| --- | --- | --- | --- |
-| 0 | ~1.5 | ~1.8 | ~2.0 |
-| 20 | ~2.0 | ~2.5 | ~3.0 |
-| 40 | ~2.5 | ~3.5 | ~5.0 |
-| 60 | ~3.0 | ~4.5 | ~7.5 |
-| 80 | ~3.5 | ~5.5 | ~11.0 |
-| 100 | ~5.0 | ~7.0 | ~18.5 |
+<table><tr><td>Mean vegetation cov.(%)</td><td>very low (Abundance)</td><td>low (Abundance)</td><td>medium (Abundance)</td></tr><tr><td>0</td><td>~1.5</td><td>~1.8</td><td>~2.0</td></tr><tr><td>20</td><td>~2.0</td><td>~2.5</td><td>~3.0</td></tr><tr><td>40</td><td>~2.5</td><td>~3.5</td><td>~5.0</td></tr><tr><td>60</td><td>~3.0</td><td>~4.5</td><td>~7.5</td></tr><tr><td>80</td><td>~3.5</td><td>~5.5</td><td>~11.0</td></tr><tr><td>100</td><td>~5.0</td><td>~7.0</td><td>~18.5</td></tr></table>
 
 F I G U R E 6   Eusocial wild bee abundance in response to (a) floral resource availability and (b) the interaction of landscape diversity and floral resource availability. Solitary wild bee abundance in response to (c) interacting effects of floral resource availability and vegetation cover. Error bars/gray shading: 0.95 confidence intervals
 
