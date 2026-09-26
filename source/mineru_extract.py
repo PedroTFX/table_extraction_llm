@@ -100,7 +100,7 @@ def doc_to_markdown(doc_path, backend="vlm", lang="en", force=False, extra_args=
         print(f"  [mineru-api] cached: {target.name}")
         return target
 
-    md_text = _mineru_markdown_for(doc_path, backend=backend, lang=lang)
+    md_text = pipe_tables_to_html(_mineru_markdown_for(doc_path, backend=backend, lang=lang))
     target.write_text(md_text, encoding="utf-8")
     print(f"  [mineru-api] wrote: {target.name}  ({len(md_text)} chars)")
     return target
@@ -177,6 +177,61 @@ def _mineru_markdown_for(doc_path, backend="vlm", lang="en") -> str:
         print(f"  [mineru-local] partial result for {Path(doc_path).name} "
               f"({len({n for n, _ in marks})}/{marks[0][1]} pages), retry {attempt}")
     raise RuntimeError(f"MinerU returned an incomplete parse for {Path(doc_path).name}")
+
+
+_PIPE_ROW = re.compile(r"^\s*\|.*\|\s*$")
+_PIPE_SEP = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$")
+
+
+def _pipe_cells(line):
+    """Split one '| a | b |' row into cells, honouring escaped '\\|'."""
+    body = line.strip()
+    body = body[1:] if body.startswith("|") else body
+    body = body[:-1] if body.endswith("|") and not body.endswith("\\|") else body
+    return [c.replace("\\|", "|").strip() for c in re.split(r"(?<!\\)\|", body)]
+
+
+def pipe_tables_to_html(md_text):
+    """Rewrite GitHub-style pipe tables as HTML <table> blocks.
+
+    MinerU 4.x emits simple tables (no merged cells) as pipe-markdown and only
+    complex ones as HTML, but the whole pipeline (text_manager.get_tables, the
+    prose builder, long_format) only recognises <table>...</table>. Without this
+    those tables are silently dropped — e.g. Barber2017's species x trait table.
+    A pipe table = a header row, a |---| separator, then body rows.
+    """
+    lines = md_text.split("\n")
+    out, i = [], 0
+    while i < len(lines):
+        if (i + 1 < len(lines) and _PIPE_ROW.match(lines[i])
+                and _PIPE_SEP.match(lines[i + 1])):
+            rows = [_pipe_cells(lines[i])]
+            j = i + 2
+            while j < len(lines) and _PIPE_ROW.match(lines[j]):
+                rows.append(_pipe_cells(lines[j]))
+                j += 1
+            html_rows = "".join(
+                "<tr>" + "".join(f"<td>{_html.escape(c, quote=False)}</td>" for c in r) + "</tr>"
+                for r in rows)
+            out.append(f"<table>{html_rows}</table>")
+            i = j
+        else:
+            out.append(lines[i])
+            i += 1
+    return "\n".join(out)
+
+
+def normalize_tables_in_place(base):
+    """One-off: convert pipe tables to HTML in every existing .md under `base`
+    (cheap — no MinerU re-run). Returns the number of files changed."""
+    changed = 0
+    for md in sorted(Path(base).rglob("*.md")):
+        text = md.read_text(encoding="utf-8", errors="replace")
+        new = pipe_tables_to_html(text)
+        if new != text:
+            md.write_text(new, encoding="utf-8")
+            changed += 1
+    return changed
 
 
 def pdf_to_markdown(pdf_path, **kw):           # backwards-compatible alias
@@ -556,7 +611,7 @@ def combine_paper_to_markdown(folder, force=False, backend="vlm", lang="en"):
             parts.extend(_embed_as_html(cp))
 
     combined = folder / f"{folder.name}_full.md"
-    combined.write_text("\n\n".join(parts), encoding="utf-8")
+    combined.write_text(pipe_tables_to_html("\n\n".join(parts)), encoding="utf-8")
     print(f"  [combine] wrote single paper markdown: {combined.name}")
     return str(combined), results
 
@@ -612,6 +667,11 @@ if __name__ == "__main__":
     force = "--force" in args           # re-convert even if a cached .md exists
     positional = [a for a in args if not a.startswith("--")]
     base = Path(positional[0]) if positional else Path(DEFAULT_BASE)
+
+    if "--normalize-tables" in args:    # rewrite pipe tables as HTML, no MinerU
+        n = normalize_tables_in_place(base)
+        print(f"Converted pipe tables to HTML in {n} markdown file(s) under {base}")
+        sys.exit(0)
 
     if do_clean:
         clean_markdowns(base, dry_run=False)
