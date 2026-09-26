@@ -1,77 +1,74 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Attiwilli2022\Attiwilli2022.xlsx  (30 rows)
-PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (15 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (36 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-TAXON NAME REMAP (pred -> gt, 2 pair(s))
-  'Hesperiidae' -> 'Hesperiidae '
-  'Nymphalidae' -> 'Nymphalidae '
+TAXON NAMES LEFT UNMAPPED (1)
+  'Pooled': no ground-truth name denotes this organism
 
-measurementType LEFT UNMAPPED (3)
-  'Ecotone': no ground-truth string denotes this
-  'Forest': no ground-truth string denotes this
-  'Open': no ground-truth string denotes this
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body mass' -> ' Body mass '
+  'Proboscis length' -> 'Proboscis length '
+  'Wing length' -> 'Wing length '
 
 ROW-LEVEL (key match)
-  matched (TP)          : 0
-  missed (FN)           : 30
-  spurious, in scope    : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 15   <- GT never covers it: nothing to score against
+  matched (TP)        : 15
+  missed (FN)         : 15
+  spurious, in scope  : 21   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.000 / 0.000 / 0.000
-  SCOPED  P/R/F1        : 0.000 / 0.000 / 0.000
-  RECALL (GT coverage)  : 0.000
-
-  out-of-scope rows by uncovered field:
-    measurementType                             15
+  STRICT  P/R/F1      : 0.417 / 0.500 / 0.455   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.417 / 0.500 / 0.455   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                 0      0    n/a
-  measurementMethod             0      0    n/a
-  measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  basisOfRecord                15     15  1.000
+  measurementMethod             0     10  0.000  <-- low
+  measurementUnit              10     15  0.667
+  measurementStatistic          0     15  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
+  sex                           0     15  0.000  <-- low
+  lifeStage                    15     15  1.000
   caste                         0      0    n/a
-  sampleSizeValue               0      0    n/a
-  sampleSizeUnit                0      0    n/a
+  sampleSizeValue               0     15  0.000  <-- low
+  sampleSizeUnit                0     15  0.000  <-- low
   sampleTreatment               0      0    n/a
-  samplingProtocol              0      0    n/a
+  samplingProtocol              0     15  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0     15  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
+  associatedReferences          0     15  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 30 MISSED ROWS MISSED
-  species present, trait missing                       30
+WHY THE 15 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       15
 
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Wing length '                     x10
-     ' Body mass '                      x10
-     'Proboscis length '                x10
-  -> 3 missing traits explain 30 of 30 misses (100%) — systematic, not scattered
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '91.1 ± 61.29'               ->  '91.1 (61.29)'               x1
+     '45.5 ± 45.32'               ->  '45.5 (45.32)'               x1
+     '174.2 ± 139.13'             ->  '174.2 (139.13)'             x1
+     '385.2 ± 252.51'             ->  '385.2 (252.51)'             x1
+     '110.5 ± 88.64'              ->  '110.5 (88.64)'              x1
+     '18 ± 9.57'                  ->  '18 (9.57)'                  x1
+  -> 6 substitutions explain 6 of 15 misses (40%) — scattered; no single cause
+  [severity] assessing 15 ambiguous miss(es) in 1 batch(es)...
 
-  full miss detail saved -> Attiwilli2022_misses.csv, Attiwilli2022_misses_summary.json (30 row(s))
+  full miss detail saved -> Attiwilli2022_misses.csv, Attiwilli2022_misses_summary.json (15 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  body mass                                        10     0   GT-ONLY
-  ecotone                                           0     5   PRED-ONLY
-  forest                                            0     5   PRED-ONLY
-  proboscis length                                 10     0   GT-ONLY
-  wing length                                      10     0   GT-ONLY
-  open                                              0     5   PRED-ONLY
+  body mass                                        10    12   Δ+2 (split?)
+  proboscis length                                 10    12   Δ+2 (split?)
+  wing length                                      10    12   Δ+2 (split?)
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     0    30   id+type+value
-             (15 more spurious row(s) out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0     0    30   basis+id+type+value+stat+sex+stage
-             (15 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 +0.000 vs previous)
+  core        0.417  0.500  0.455     15    21    15   id+type+value
+  tags        0.000  0.000  0.000      0    36    30   basis+id+type+value+stat+sex+stage
+             (F1 -0.455 vs previous)
