@@ -1,100 +1,93 @@
+  [semantic] left unmatched: 'Number workers/bait' vs 'Maximum Activity Temperature' (llm said different traits)
+  [semantic] left unmatched: 'Number workers/bait' vs 'Main food resource' (llm said different traits)
+  [semantic] left unmatched: 'Number workers/bait' vs 'N nests per colony' (llm said different traits)
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Arnan2012\Arnan2012.xlsx  (361 rows)
-PREDICTION   : ..\output\Arnan2012\Arnan2012.csv  (390 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Arnan2012\Arnan2012.csv  (120 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-measurementType REMAP (pred -> gt, 2 pair(s))
-  'Critical thermal maximum' -> 'Critical Thermal Maximum'
-  'Maximal activity temperature' -> 'Maximum Activity Temperature'
-
-measurementType LEFT UNMAPPED (2)
-  'Number workers/bait': no ground-truth string denotes this
-  'Worker length': no ground-truth string denotes this
-
 ROW-LEVEL (key match)
-  matched (TP)          : 183
-  missed (FN)           : 178
-  spurious, in scope    : 147   <- GT covers this trait: real errors
-  spurious, out of scope: 60   <- GT never covers it: nothing to score against
+  matched (TP)        : 30
+  missed (FN)         : 331
+  spurious, in scope  : 60   <- GT covers this trait: real errors
+  spurious, out of scope: 30   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.469 / 0.507 / 0.487
-  SCOPED  P/R/F1        : 0.555 / 0.507 / 0.530
-  RECALL (GT coverage)  : 0.507
+  STRICT  P/R/F1      : 0.250 / 0.083 / 0.125   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.333 / 0.083 / 0.133   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.083   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                             60
-
-FUZZY VALUE MATCHES (33 accepted beyond exact/numeric)
-  jaccard         30
-  subset           3
-  sample:
-    [jaccard] gt 'larvae in the nests during the whole year' == pred 'Larvae within the nests during the whole year'
-    [jaccard] gt 'larvae in the nests from March to September' == pred 'Larvae within the nests from March to September'
-    [subset] gt 'tens of thousands' == pred 'Tens of thousands of workers'
+    measurementType                             30
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                33    183  0.180  <-- low
-  measurementMethod             0     93  0.000  <-- low
-  measurementUnit               0    123  0.000  <-- low
-  measurementStatistic         60    183  0.328  <-- low
+  basisOfRecord                 0     30  0.000  <-- low
+  measurementMethod             0     30  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic         30     30  1.000
   measurementRemarks            0      0    n/a
-  sex                         153    183  0.836
-  lifeStage                   150    183  0.820
-  caste                         0     30  0.000  <-- low
-  sampleSizeValue               0     30  0.000  <-- low
-  sampleSizeUnit                0     30  0.000  <-- low
+  sex                          30     30  1.000
+  lifeStage                    30     30  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    183  0.000  <-- low
+  associatedReferences          0     30  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 178 MISSED ROWS MISSED
-  species present, trait missing                       31
-  species+trait present, value differs                147
+WHY THE 331 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            271
+  species+trait present, value differs       60
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     'monogyny'                   ->  'only one queen'             x24
-     'monodomy'                   ->  'only one nest'              x24
-     'hundreds'                   ->  'hundreds of workers'        x17
-     'none'                       ->  'none (only defence of the nest)' x16
-     'food and/or territory'      ->  'defence of food or territory (foraging area)' x14
-     'insects'                    ->  'scavenger species'          x14
-  -> 6 substitutions explain 109 of 178 misses (61%) — systematic, not scattered
+     'none'                       ->  '1'                          x16
+     'food and/or territory'      ->  '2'                          x14
+     'diurnal'                    ->  'd'                          x13
+     'continuous in spring and nocturnal in summer' ->  'cn'                         x12
+     'diurnal in spring and continuous or with a midday drop in summer' ->  'dc'                         x3
+     'nocturnal'                  ->  'n'                          x2
+  -> 6 substitutions explain 60 of 331 misses (18%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Body Length'                      x31
-  -> 1 missing trait explains 31 of 178 misses (17%) — scattered; no single cause
+     'Polymorphism'                     x30
+     'Colony population'                x30
+     'Brood cycle'                      x30
+     'N queens per colony'              x30
+     'N nests per colony'               x30
+  -> 6 missing traits explain 181 of 331 misses (55%) — scattered; no single cause
+  [severity] assessing 60 ambiguous miss(es) in 3 batch(es)...
 
-  full miss detail saved -> Arnan2012_misses.csv, Arnan2012_misses_summary.json (178 row(s))
+  full miss detail saved -> Arnan2012_misses.csv, Arnan2012_misses_summary.json (331 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  maximum activity temperature                     30    30   
+  maximum activity temperature                     30     0   GT-ONLY
   month of peak activity                           30    30   
   number workers/bait                               0    30   PRED-ONLY
   body length                                      31     0   GT-ONLY
-  brood cycle                                      30    30   
-  n nests per colony                               30    30   
-  n queens per colony                              30    30   
-  colony population                                30    30   
-  critical thermal maximum                         30    30   
+  brood cycle                                      30     0   GT-ONLY
+  n nests per colony                               30     0   GT-ONLY
+  n queens per colony                              30     0   GT-ONLY
+  colony population                                30     0   GT-ONLY
+  critical thermal maximum                         30     0   GT-ONLY
   daily rhythm                                     30    30   
   defense of resources                             30    30   
-  main food resource                               30    30   
-  worker length                                     0    30   PRED-ONLY
-  polymorphism                                     30    30   
+  main food resource                               30     0   GT-ONLY
+  polymorphism                                     30     0   GT-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.555  0.507  0.530    183   147   178   id+type+value
-             (60 more spurious row(s) out-of-scope; strict P would be 0.469)
-  tags        0.000  0.000  0.000      0   330   361   basis+id+type+value+stat+sex+stage
-             (60 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 -0.530 vs previous)
+  core        0.333  0.083  0.133     30    60   331   id+type+value
+             (30 more spurious row(s) set aside as out-of-scope; strict P would be 0.250)
+  tags        0.000  0.000  0.000      0    90   361   basis+id+type+value+stat+sex+stage
+             (30 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.133 vs previous)

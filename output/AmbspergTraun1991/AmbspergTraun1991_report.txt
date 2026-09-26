@@ -1,7 +1,7 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (60 rows)
 PREDICTION   : ..\output\AmbspergTraun1991\AmbspergTraun1991.csv  (63 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
@@ -18,14 +18,14 @@ TAXON NAME REMAP (pred -> gt, 10 pair(s))
   'Schedorhinotermes actuosus' -> 'Schedorhinotermes actuosus (Hill)'
 
 ROW-LEVEL (key match)
-  matched (TP)          : 59
-  missed (FN)           : 1
-  spurious, in scope    : 4   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+  matched (TP)        : 59
+  missed (FN)         : 1
+  spurious, in scope  : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.937 / 0.983 / 0.959
-  SCOPED  P/R/F1        : 0.937 / 0.983 / 0.959
-  RECALL (GT coverage)  : 0.983
+  STRICT  P/R/F1      : 0.937 / 0.983 / 0.959   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.937 / 0.983 / 0.959   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.983   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
@@ -49,11 +49,14 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   externalLink                  0      0    n/a
 
 WHY THE 1 MISSED ROWS MISSED
-  species+trait present, value differs                  1
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        1
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'mound'                      ->  'hypogeal'                   x1
   -> 1 substitution explains 1 of 1 misses (100%) — systematic, not scattered
+  [severity] assessing 1 ambiguous miss(es) in 1 batch(es)...
 
   full miss detail saved -> AmbspergTraun1991_misses.csv, AmbspergTraun1991_misses_summary.json (1 row(s))
 

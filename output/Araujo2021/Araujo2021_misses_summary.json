@@ -1,11 +1,26 @@
 {
-  "total_missed": 100,
+  "total_missed": 101,
   "causes": {
-    "species present, trait missing": 90,
+    "species present, trait missing": 76,
     "species not in prediction": 7,
-    "species+trait present, value differs": 3
+    "species+trait present, value differs": 18
   },
   "value_substitutions": [
+    {
+      "gt": "plant parts",
+      "pred": "plant_parts",
+      "count": 5
+    },
+    {
+      "gt": "abdomen scopa",
+      "pred": "abdomen_scopa",
+      "count": 5
+    },
+    {
+      "gt": "leg scopa",
+      "pred": "leg_scopa",
+      "count": 5
+    },
     {
       "gt": "1.02",
       "pred": "1.2",
@@ -21,22 +36,18 @@
     {
       "gt_species": "Polistes guadeloupensis",
       "count": 7,
-      "closest_pred_species": "P. guadulpensis",
-      "closest_score": 0.703
+      "closest_pred_species": "Polistes nasidens",
+      "closest_score": 0.727
     }
   ],
   "traits_missing": [
-    {
-      "measurementType": "Elevation",
-      "count": 38
-    },
     {
       "measurementType": "Body Size",
       "count": 38
     },
     {
-      "measurementType": "Pollen transport",
-      "count": 14
+      "measurementType": "Elevation",
+      "count": 38
     }
   ]
 }

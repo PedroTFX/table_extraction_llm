@@ -1,7 +1,7 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Araujo2021\Araujo2021.xlsx  (273 rows)
-PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (220 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (234 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
@@ -39,39 +39,31 @@ TAXON NAME REMAP (pred -> gt, 31 pair(s))
   'Z. smithii' -> 'Zeta smithii'
 
 TAXON NAMES LEFT UNMAPPED (1)
-  'P. guadulpensis': no ground-truth string denotes this
-
-measurementType LEFT UNMAPPED (1)
-  'ITS': no ground-truth string denotes this
+  'P. guadulpensis': no ground-truth name denotes this organism
 
 ROW-LEVEL (key match)
-  matched (TP)          : 173
-  missed (FN)           : 100
-  spurious, in scope    : 8   <- GT covers this trait: real errors
-  spurious, out of scope: 39   <- GT never covers it: nothing to score against
+  matched (TP)        : 172
+  missed (FN)         : 101
+  spurious, in scope  : 23   <- GT covers this trait: real errors
+  spurious, out of scope: 39   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.786 / 0.634 / 0.702
-  SCOPED  P/R/F1        : 0.956 / 0.634 / 0.762
-  RECALL (GT coverage)  : 0.634
+  STRICT  P/R/F1      : 0.735 / 0.630 / 0.679   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.882 / 0.630 / 0.735   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.630   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                             39
 
-FUZZY VALUE MATCHES (5 accepted beyond exact/numeric)
-  subset           5
-  sample:
-    [subset] gt 'plant parts' == pred 'plant_parts'
-
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc
-  basisOfRecord                88    173  0.509
-  measurementMethod             0    128  0.000  <-- low
-  measurementUnit             111    173  0.642
-  measurementStatistic          0    173  0.000  <-- low
+  basisOfRecord                 0    172  0.000  <-- low
+  measurementMethod             0    172  0.000  <-- low
+  measurementUnit               0    111  0.000  <-- low
+  measurementStatistic         61    172  0.355  <-- low
   measurementRemarks            0      0    n/a
-  sex                          62    173  0.358  <-- low
-  lifeStage                   111    173  0.642
-  caste                         0    111  0.000  <-- low
+  sex                          57    172  0.331  <-- low
+  lifeStage                   115    172  0.669
+  caste                         0    115  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
@@ -80,30 +72,33 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    173  0.000  <-- low
+  associatedReferences          0    172  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 100 MISSED ROWS MISSED
-  species not in prediction                             7
-  species present, trait missing                       90
-  species+trait present, value differs                  3
+WHY THE 101 MISSED ROWS MISSED
+  species not in prediction                   7
+  species present, trait missing             76
+  species+trait present, value differs       18
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'plant parts'                ->  'plant_parts'                x5
+     'abdomen scopa'              ->  'abdomen_scopa'              x5
+     'leg scopa'                  ->  'leg_scopa'                  x5
      '1.02'                       ->  '1.2'                        x2
      '8.07'                       ->  '8.7'                        x1
-  -> 2 substitutions explain 3 of 100 misses (3%) — scattered; no single cause
+  -> 5 substitutions explain 18 of 101 misses (18%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
-     gt 'Polistes guadeloupensis'           ~0.70~  pred 'P. guadulpensis'   x7
-  -> 1 species mismatch explains 7 of 100 misses (7%) — scattered; no single cause
+     gt 'Polistes guadeloupensis'           ~0.73~  pred 'Polistes nasidens'   x7
+  -> 1 species mismatch explains 7 of 101 misses (7%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Elevation'                        x38
      'Body Size'                        x38
-     'Pollen transport'                 x14
-  -> 3 missing traits explain 90 of 100 misses (90%) — systematic, not scattered
+     'Elevation'                        x38
+  -> 2 missing traits explain 76 of 101 misses (75%) — systematic, not scattered
+  [severity] assessing 25 ambiguous miss(es) in 2 batch(es)...
 
-  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (100 row(s))
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (101 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -117,12 +112,12 @@ measurementType COVERAGE
   left tibia posterior                             25    25   
   tongue length                                    14    14   
   nesting material                                 39    39   
-  pollen transport                                 14     0   GT-ONLY
+  pollen transport                                 14    14   
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.956  0.634  0.762    173     8   100   id+type+value
-             (39 more spurious row(s) out-of-scope; strict P would be 0.786)
-  tags        0.000  0.000  0.000      0   181   273   basis+id+type+value+stat+sex+stage
-             (39 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 -0.762 vs previous)
+  core        0.882  0.630  0.735    172    23   101   id+type+value
+             (39 more spurious row(s) set aside as out-of-scope; strict P would be 0.735)
+  tags        0.000  0.000  0.000      0   195   273   basis+id+type+value+stat+sex+stage
+             (39 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.735 vs previous)
