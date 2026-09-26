@@ -88,23 +88,7 @@ In 2013, we selected twelve restored sites ([2 ha each) ranging from the first y
 
 Table 1 Chronosequence sites listing year planted, burn status in each year in which ground beetles were sampled (‘–’ indicates no sampling in that year), and age range during the study
 
-| Site | Year planted | 2013 | 2014 | 2015 | Age range |
-| --- | --- | --- | --- | --- | --- |
-| AG | - | N | N | N | - |
-| HF | 2013 | - | N | Y* | 1–2 |
-| HN | 2012 | N | Y | Y* | 1–3 |
-| L | 2011 | Y | Y | Y* | 2–4 |
-| SB | 2009 | N | Y | N | 4–6 |
-| CCW | 2008 | Y | N | Y | 5–7 |
-| HW | 2008 | Y | Y | Y* | 5–7 |
-| CCE | 2007 | Y | Y | N | 6–8 |
-| FC | 2006 | N | N | N | 7–9 |
-| TC | 2002 | N | N | N | 11–13 |
-| SF | 2001 | Y | Y | Y | 12–14 |
-| HLP | 2001 | Y | Y | N* | 12–14 |
-| WH | 1992 | Y | N | Y | 21–23 |
-| MU | 1987 | Y | Y | N | 26–28 |
-| MR | - | - | Y | N | - |
+<table><tr><td>Site</td><td>Year planted</td><td>2013</td><td>2014</td><td>2015</td><td>Age range</td></tr><tr><td>AG</td><td>-</td><td>N</td><td>N</td><td>N</td><td>-</td></tr><tr><td>HF</td><td>2013</td><td>-</td><td>N</td><td>Y*</td><td>1–2</td></tr><tr><td>HN</td><td>2012</td><td>N</td><td>Y</td><td>Y*</td><td>1–3</td></tr><tr><td>L</td><td>2011</td><td>Y</td><td>Y</td><td>Y*</td><td>2–4</td></tr><tr><td>SB</td><td>2009</td><td>N</td><td>Y</td><td>N</td><td>4–6</td></tr><tr><td>CCW</td><td>2008</td><td>Y</td><td>N</td><td>Y</td><td>5–7</td></tr><tr><td>HW</td><td>2008</td><td>Y</td><td>Y</td><td>Y*</td><td>5–7</td></tr><tr><td>CCE</td><td>2007</td><td>Y</td><td>Y</td><td>N</td><td>6–8</td></tr><tr><td>FC</td><td>2006</td><td>N</td><td>N</td><td>N</td><td>7–9</td></tr><tr><td>TC</td><td>2002</td><td>N</td><td>N</td><td>N</td><td>11–13</td></tr><tr><td>SF</td><td>2001</td><td>Y</td><td>Y</td><td>Y</td><td>12–14</td></tr><tr><td>HLP</td><td>2001</td><td>Y</td><td>Y</td><td>N*</td><td>12–14</td></tr><tr><td>WH</td><td>1992</td><td>Y</td><td>N</td><td>Y</td><td>21–23</td></tr><tr><td>MU</td><td>1987</td><td>Y</td><td>Y</td><td>N</td><td>26–28</td></tr><tr><td>MR</td><td>-</td><td>-</td><td>Y</td><td>N</td><td>-</td></tr></table>
 
 ‘\*’ indicates bison presence in 2015
 
@@ -196,45 +180,7 @@ Fixed factors were evaluated with likelihood ratio tests that approximate a $\ch
 
 Fig. 2 Non-metric multidimensional scaling ordination of restored sites (circles, with ages), agricultural field (diamonds), and remnant site (triangles). Individual sites censuses in different years are connected by gray arrows, and large arrow illustrates significant age vector
 
-| ID | Type | NMDS 1 | NMDS 2 |
-| --- | --- | --- | --- |
-| 4 | Agricultural field | ~-0.3 | ~0.85 |
-| 7 | Agricultural field | ~-0.2 | ~0.5 |
-| 6 | Agricultural field | ~-0.1 | ~0.45 |
-| 5 | Agricultural field | ~0.0 | ~0.45 |
-| 3 | Agricultural field | ~0.0 | ~0.2 |
-| 27 | Agricultural field | ~0.1 | ~0.85 |
-| 26 | Agricultural field | ~0.2 | ~0.45 |
-| 12 | Agricultural field | ~0.3 | ~0.35 |
-| 11 | Agricultural field | ~-0.1 | ~0.2 |
-| 13 | Agricultural field | ~0.1 | ~0.05 |
-| 12 | Agricultural field | ~-0.4 | ~0.1 |
-| 6 | Agricultural field | ~-0.2 | ~0.05 |
-| 13 | Agricultural field | ~0.1 | ~-0.1 |
-| 14 | Agricultural field | ~0.2 | ~-0.3 |
-| 8 | Agricultural field | ~0.1 | ~-0.5 |
-| 7 | Agricultural field | ~0.3 | ~-0.1 |
-| 21 | Agricultural field | ~0.6 | ~0.45 |
-| 22 | Agricultural field | ~0.6 | ~0.3 |
-| 28 | Agricultural field | ~0.7 | ~0.2 |
-| 2 | Agricultural field | ~-1.1 | ~0.1 |
-| 1 | Agricultural field | ~-1.1 | ~-0.2 |
-| 1 | Agricultural field | ~-1.1 | ~-0.35 |
-| 2 | Agricultural field | ~-1.0 | ~-0.45 |
-| 3 | Agricultural field | ~-0.4 | ~-0.75 |
-| 4 | Agricultural field | ~-0.1 | ~-0.8 |
-| 5 | Agricultural field | ~0.1 | ~-0.7 |
-| 6 | Agricultural field | ~0.1 | ~-1.0 |
-| 9 | Agricultural field | ~0.6 | ~-0.55 |
-| 8 | Agricultural field | ~0.7 | ~-0.55 |
-| 23 | Agricultural field | ~0.7 | ~-0.1 |
-| 14 | Agricultural field | ~0.7 | ~-0.2 |
-| 7 | Agricultural field | ~0.6 | ~-0.2 |
-| 12 | Agricultural field | ~0.3 | ~0.2 |
-| 13 | Agricultural field | ~0.3 | ~0.05 |
-| 7 | Agricultural field | ~0.4 | ~0.0 |
-| Age | Remnant | ~0.4 | ~0.6 |
-| Age | Remnant | ~0.9 | ~0.0 |
+<table><tr><td>ID</td><td>Type</td><td>NMDS 1</td><td>NMDS 2</td></tr><tr><td>4</td><td>Agricultural field</td><td>~-0.3</td><td>~0.85</td></tr><tr><td>7</td><td>Agricultural field</td><td>~-0.2</td><td>~0.5</td></tr><tr><td>6</td><td>Agricultural field</td><td>~-0.1</td><td>~0.45</td></tr><tr><td>5</td><td>Agricultural field</td><td>~0.0</td><td>~0.45</td></tr><tr><td>3</td><td>Agricultural field</td><td>~0.0</td><td>~0.2</td></tr><tr><td>27</td><td>Agricultural field</td><td>~0.1</td><td>~0.85</td></tr><tr><td>26</td><td>Agricultural field</td><td>~0.2</td><td>~0.45</td></tr><tr><td>12</td><td>Agricultural field</td><td>~0.3</td><td>~0.35</td></tr><tr><td>11</td><td>Agricultural field</td><td>~-0.1</td><td>~0.2</td></tr><tr><td>13</td><td>Agricultural field</td><td>~0.1</td><td>~0.05</td></tr><tr><td>12</td><td>Agricultural field</td><td>~-0.4</td><td>~0.1</td></tr><tr><td>6</td><td>Agricultural field</td><td>~-0.2</td><td>~0.05</td></tr><tr><td>13</td><td>Agricultural field</td><td>~0.1</td><td>~-0.1</td></tr><tr><td>14</td><td>Agricultural field</td><td>~0.2</td><td>~-0.3</td></tr><tr><td>8</td><td>Agricultural field</td><td>~0.1</td><td>~-0.5</td></tr><tr><td>7</td><td>Agricultural field</td><td>~0.3</td><td>~-0.1</td></tr><tr><td>21</td><td>Agricultural field</td><td>~0.6</td><td>~0.45</td></tr><tr><td>22</td><td>Agricultural field</td><td>~0.6</td><td>~0.3</td></tr><tr><td>28</td><td>Agricultural field</td><td>~0.7</td><td>~0.2</td></tr><tr><td>2</td><td>Agricultural field</td><td>~-1.1</td><td>~0.1</td></tr><tr><td>1</td><td>Agricultural field</td><td>~-1.1</td><td>~-0.2</td></tr><tr><td>1</td><td>Agricultural field</td><td>~-1.1</td><td>~-0.35</td></tr><tr><td>2</td><td>Agricultural field</td><td>~-1.0</td><td>~-0.45</td></tr><tr><td>3</td><td>Agricultural field</td><td>~-0.4</td><td>~-0.75</td></tr><tr><td>4</td><td>Agricultural field</td><td>~-0.1</td><td>~-0.8</td></tr><tr><td>5</td><td>Agricultural field</td><td>~0.1</td><td>~-0.7</td></tr><tr><td>6</td><td>Agricultural field</td><td>~0.1</td><td>~-1.0</td></tr><tr><td>9</td><td>Agricultural field</td><td>~0.6</td><td>~-0.55</td></tr><tr><td>8</td><td>Agricultural field</td><td>~0.7</td><td>~-0.55</td></tr><tr><td>23</td><td>Agricultural field</td><td>~0.7</td><td>~-0.1</td></tr><tr><td>14</td><td>Agricultural field</td><td>~0.7</td><td>~-0.2</td></tr><tr><td>7</td><td>Agricultural field</td><td>~0.6</td><td>~-0.2</td></tr><tr><td>12</td><td>Agricultural field</td><td>~0.3</td><td>~0.2</td></tr><tr><td>13</td><td>Agricultural field</td><td>~0.3</td><td>~0.05</td></tr><tr><td>7</td><td>Agricultural field</td><td>~0.4</td><td>~0.0</td></tr><tr><td>Age</td><td>Remnant</td><td>~0.4</td><td>~0.6</td></tr><tr><td>Age</td><td>Remnant</td><td>~0.9</td><td>~0.0</td></tr></table>
 
 Table 3 Partial mantel results for correlations of spatial distances between sites and Bray–Curtis dissimilarities, controlling for age differences between sites
 

@@ -81,17 +81,7 @@ In total we measured 18 functional traits: 11 morphological (seven associated wi
 
 Table 1. Summary of measured functional traits and their link to ecological functions (See Supplementary Materials Files S1 and S2 for further details). BM = Body Morphology; MM = Mouthpart Morphology; E = Ethological; Quan = Quantitative; Qual = Qualitative.
 
-| Trait | Trait Type | Data Type | Functional Link |
-| --- | --- | --- | --- |
-| Fresh body mass | BM | Quan | Resource useMetabolic rateThermoregulatory patternCompetition |
-| Sphericity | BM | Quan | Resource use |
-| Head area/Total area Ratio | BM | Quan | Resource use |
-| Hind tibiae length | BM | Quan | Resource use |
-| Metamesosternal area | BM | Quan | Dispersal capability |
-| Abdomen length | BM | Quan | Resource use |
-| Wing load | BM | Quan | Dispersal capabilityForaging strategyHabitat useThermoregulatory pattern |
-| Number of teeth in the mandibles profile | MM | Quan | Resource use |
-| Conjunctive/total mandible area ratio | MM | Quan | Resource use |
+<table><tr><td>Trait</td><td>Trait Type</td><td>Data Type</td><td>Functional Link</td></tr><tr><td>Fresh body mass</td><td>BM</td><td>Quan</td><td>Resource useMetabolic rateThermoregulatory patternCompetition</td></tr><tr><td>Sphericity</td><td>BM</td><td>Quan</td><td>Resource use</td></tr><tr><td>Head area/Total area Ratio</td><td>BM</td><td>Quan</td><td>Resource use</td></tr><tr><td>Hind tibiae length</td><td>BM</td><td>Quan</td><td>Resource use</td></tr><tr><td>Metamesosternal area</td><td>BM</td><td>Quan</td><td>Dispersal capability</td></tr><tr><td>Abdomen length</td><td>BM</td><td>Quan</td><td>Resource use</td></tr><tr><td>Wing load</td><td>BM</td><td>Quan</td><td>Dispersal capabilityForaging strategyHabitat useThermoregulatory pattern</td></tr><tr><td>Number of teeth in the mandibles profile</td><td>MM</td><td>Quan</td><td>Resource use</td></tr><tr><td>Conjunctive/total mandible area ratio</td><td>MM</td><td>Quan</td><td>Resource use</td></tr></table>
 
 <!-- page 4 of 13 -->
 
@@ -101,17 +91,7 @@ Life 2021, 11, 873
 
 Table 1. Cont.
 
-| Trait | Trait Type | Data Type | Functional Link |
-| --- | --- | --- | --- |
-| Percentage of filtering/masticator area of mandibular molars | MM | Quan | Resource use |
-| Zygum | MM | Qual | Resource use |
-| Trophic diversity | E | Quan | Resource use |
-| Nest type | E | Qual | Resource useCompetition Habitat use |
-| Nest depth | E | Qual | Resource useCompetition Habitat use |
-| Horizontal nest distance | E | Qual | Resource useCompetition Habitat use |
-| Nesting patterns | E | Qual | Resource useCompetition Habitat use |
-| Daily activity | E | Qual | Resource useCompetition Habitat use |
-| Phenology | E | Qual | Resource useCompetition Habitat use |
+<table><tr><td>Trait</td><td>Trait Type</td><td>Data Type</td><td>Functional Link</td></tr><tr><td>Percentage of filtering/masticator area of mandibular molars</td><td>MM</td><td>Quan</td><td>Resource use</td></tr><tr><td>Zygum</td><td>MM</td><td>Qual</td><td>Resource use</td></tr><tr><td>Trophic diversity</td><td>E</td><td>Quan</td><td>Resource use</td></tr><tr><td>Nest type</td><td>E</td><td>Qual</td><td>Resource useCompetition Habitat use</td></tr><tr><td>Nest depth</td><td>E</td><td>Qual</td><td>Resource useCompetition Habitat use</td></tr><tr><td>Horizontal nest distance</td><td>E</td><td>Qual</td><td>Resource useCompetition Habitat use</td></tr><tr><td>Nesting patterns</td><td>E</td><td>Qual</td><td>Resource useCompetition Habitat use</td></tr><tr><td>Daily activity</td><td>E</td><td>Qual</td><td>Resource useCompetition Habitat use</td></tr><tr><td>Phenology</td><td>E</td><td>Qual</td><td>Resource useCompetition Habitat use</td></tr></table>
 
 ## 2.3. Data Analysis
 
@@ -139,48 +119,7 @@ In total, we collected 156,936 individuals belonging to 58 species. In the horse
 
 Table 2. Raw data on total dung beetle species and individuals collected in horse and cow dung.
 
-| Family | Subfamily | Tribe | Species | Horse | Cow | Total |
-| --- | --- | --- | --- | --- | --- | --- |
-| Scarabaeidae | Aphodiinae | Aphodiini | Acanthobodilus immundus (Creutzer, 1799) | 6 | 17 | 23 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Acrossus luridus (Fabricius, 1775) | 66 | 163 | 229 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Acrossus rufipes (Linnaeus, 1758) | 0 | 4 | 4 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Agrilinus constans (Duftschmid, 1805) | 0 | 1 | 1 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Agrilinus convexus (Erichson, 1848) | 5 | 18 | 23 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Amidorus thermicola (Sturm, 1800) | 2 | 0 | 2 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Aphodius coniugatus (Panzer, 1795) | 1 | 10 | 11 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Aphodius fimetarius (Linnaeus, 1758) | 44 | 114 | 158 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Aphodius foetidus (Herbst, 1783) | 4 | 7 | 11 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Biralus mahunkaorum (Ádám, 1983) | 0 | 1 | 1 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Bodilopsis rufa (Moll, 1782) | 21 | 808 | 829 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Bodiloides ictericus (Laicharting, 1781) | 0 | 11 | 11 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Calamosternus granarius (Linnaeus, 1767) | 20 | 3 | 23 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Calamosternus mayeri (Pilleri, 1953) | 0 | 1 | 1 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Chilothorax conspurcatus (Linnaeus, 1758) | 778 | 3 | 781 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Chilothorax lineolatus (Illiger, 1803) | 2 | 1 | 3 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Chilothorax paykulli (Bedel, 1907) | 48 | 5 | 53 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Colobopterus erraticus (Linnaeus, 1758) | 401 | 2612 | 3013 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Coprimorphus scrutator (Herbst, 1789) | 45 | 134 | 179 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Esymus merdarius (Fabricius, 1775) | 57 | 50 | 107 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Esymus pusillus (Herbst, 1789) | 6 | 31 | 37 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Euorodalus paracoenosus (Balthasar &amp; Hrubant, 1960) | 2 | 0 | 2 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Labarrus lividus (Olivier, 1789) | 663 | 8 | 671 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Limarus zenkeri (Germar, 1813) | 2 | 0 | 2 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Loraphodius suarius (Faldermann, 1836) | 33 | 19 | 52 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Melinopterus consputus (Creutzer, 1799) | 61,128 | 40,406 | 101,534 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Melinopterus prodromus (Brahm, 1790) | 6859 | 531 | 7390 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Melinopterus reyi (Reitter, 1892) | 12 | 4 | 16 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Melinopterus stolzi (Reitter, 1906) | 0 | 2 | 2 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Nialus varians (Duftschmid, 1805) | 0 | 9 | 9 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Nimbus contaminatus (Herbst, 1783) | 435 | 371 | 806 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Nimbus johnsoni (Baraud, 1976) | 12 | 9 | 21 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Nimbus obliteratus (Panzer, 1823) | 2175 | 829 | 3004 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Otophorus haemorroidalis (Linnaeus, 1758) | 9 | 63 | 72 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Phalacronothus biguttatus (Germar, 1824) | 2 | 4 | 6 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Planolinus fasciatus (Olivier, 1789) | 0 | 2 | 2 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Sigorus porcus (Fabricius, 1792) | 216 | 179 | 395 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Teuchestes fossor (Linnaeus, 1758) | 1 | 11 | 12 |
-| Scarabaeidae | Aphodiinae | Aphodiini | Trichonotulus scrofa (Fabricius, 1787) | 45 | 202 | 247 |
-| Scarabaeidae | Scarabaeinae | Onitini | Bubas bison (Linnaeus, 1767) | 30 | 76 | 106 |
+<table><tr><td>Family</td><td>Subfamily</td><td>Tribe</td><td>Species</td><td>Horse</td><td>Cow</td><td>Total</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Acanthobodilus immundus (Creutzer, 1799)</td><td>6</td><td>17</td><td>23</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Acrossus luridus (Fabricius, 1775)</td><td>66</td><td>163</td><td>229</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Acrossus rufipes (Linnaeus, 1758)</td><td>0</td><td>4</td><td>4</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Agrilinus constans (Duftschmid, 1805)</td><td>0</td><td>1</td><td>1</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Agrilinus convexus (Erichson, 1848)</td><td>5</td><td>18</td><td>23</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Amidorus thermicola (Sturm, 1800)</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Aphodius coniugatus (Panzer, 1795)</td><td>1</td><td>10</td><td>11</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Aphodius fimetarius (Linnaeus, 1758)</td><td>44</td><td>114</td><td>158</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Aphodius foetidus (Herbst, 1783)</td><td>4</td><td>7</td><td>11</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Biralus mahunkaorum (Ádám, 1983)</td><td>0</td><td>1</td><td>1</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Bodilopsis rufa (Moll, 1782)</td><td>21</td><td>808</td><td>829</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Bodiloides ictericus (Laicharting, 1781)</td><td>0</td><td>11</td><td>11</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Calamosternus granarius (Linnaeus, 1767)</td><td>20</td><td>3</td><td>23</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Calamosternus mayeri (Pilleri, 1953)</td><td>0</td><td>1</td><td>1</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Chilothorax conspurcatus (Linnaeus, 1758)</td><td>778</td><td>3</td><td>781</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Chilothorax lineolatus (Illiger, 1803)</td><td>2</td><td>1</td><td>3</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Chilothorax paykulli (Bedel, 1907)</td><td>48</td><td>5</td><td>53</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Colobopterus erraticus (Linnaeus, 1758)</td><td>401</td><td>2612</td><td>3013</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Coprimorphus scrutator (Herbst, 1789)</td><td>45</td><td>134</td><td>179</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Esymus merdarius (Fabricius, 1775)</td><td>57</td><td>50</td><td>107</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Esymus pusillus (Herbst, 1789)</td><td>6</td><td>31</td><td>37</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Euorodalus paracoenosus (Balthasar &amp;amp; Hrubant, 1960)</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Labarrus lividus (Olivier, 1789)</td><td>663</td><td>8</td><td>671</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Limarus zenkeri (Germar, 1813)</td><td>2</td><td>0</td><td>2</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Loraphodius suarius (Faldermann, 1836)</td><td>33</td><td>19</td><td>52</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Melinopterus consputus (Creutzer, 1799)</td><td>61,128</td><td>40,406</td><td>101,534</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Melinopterus prodromus (Brahm, 1790)</td><td>6859</td><td>531</td><td>7390</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Melinopterus reyi (Reitter, 1892)</td><td>12</td><td>4</td><td>16</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Melinopterus stolzi (Reitter, 1906)</td><td>0</td><td>2</td><td>2</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Nialus varians (Duftschmid, 1805)</td><td>0</td><td>9</td><td>9</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Nimbus contaminatus (Herbst, 1783)</td><td>435</td><td>371</td><td>806</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Nimbus johnsoni (Baraud, 1976)</td><td>12</td><td>9</td><td>21</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Nimbus obliteratus (Panzer, 1823)</td><td>2175</td><td>829</td><td>3004</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Otophorus haemorroidalis (Linnaeus, 1758)</td><td>9</td><td>63</td><td>72</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Phalacronothus biguttatus (Germar, 1824)</td><td>2</td><td>4</td><td>6</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Planolinus fasciatus (Olivier, 1789)</td><td>0</td><td>2</td><td>2</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Sigorus porcus (Fabricius, 1792)</td><td>216</td><td>179</td><td>395</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Teuchestes fossor (Linnaeus, 1758)</td><td>1</td><td>11</td><td>12</td></tr><tr><td>Scarabaeidae</td><td>Aphodiinae</td><td>Aphodiini</td><td>Trichonotulus scrofa (Fabricius, 1787)</td><td>45</td><td>202</td><td>247</td></tr><tr><td>Scarabaeidae</td><td>Scarabaeinae</td><td>Onitini</td><td>Bubas bison (Linnaeus, 1767)</td><td>30</td><td>76</td><td>106</td></tr></table>
 
 <!-- page 6 of 13 -->
 
@@ -194,16 +133,7 @@ Table 2. Cont.
 
 Table 3. Dung beetle species that have a trophic preference for cow or horse dung. Numbers represent statistically significant IndVal values (p < 0.05).
 
-| Indicator Species | Cow | Horse |
-| --- | --- | --- |
-| Aphodius coniugatus(Panzer, 1795) | 42.4 |  |
-| Aphodius fimetarius(Linnaeus, 1758) | 67.3 |  |
-| Bodilopsis rufa(Moll, 1782) | 84.5 |  |
-| Colobopterus erraticus(Linnaeus, 1758) | 86.7 |  |
-| Esymus pusillus(Herbst, 1789) | 61.4 |  |
-| Geotrupes spinigerMarsham, 1802 | 65.7 |  |
-| Chilothorax conspurcatus(Linnaeus, 1758) |  | 59.8 |
-| Labarrus lividus(Olivier, 1789) |  | 92.2 |
+<table><tr><td>Indicator Species</td><td>Cow</td><td>Horse</td></tr><tr><td>Aphodius coniugatus(Panzer, 1795)</td><td>42.4</td><td></td></tr><tr><td>Aphodius fimetarius(Linnaeus, 1758)</td><td>67.3</td><td></td></tr><tr><td>Bodilopsis rufa(Moll, 1782)</td><td>84.5</td><td></td></tr><tr><td>Colobopterus erraticus(Linnaeus, 1758)</td><td>86.7</td><td></td></tr><tr><td>Esymus pusillus(Herbst, 1789)</td><td>61.4</td><td></td></tr><tr><td>Geotrupes spinigerMarsham, 1802</td><td>65.7</td><td></td></tr><tr><td>Chilothorax conspurcatus(Linnaeus, 1758)</td><td></td><td>59.8</td></tr><tr><td>Labarrus lividus(Olivier, 1789)</td><td></td><td>92.2</td></tr></table>
 
 ## 3.2. Functional Diversity
 

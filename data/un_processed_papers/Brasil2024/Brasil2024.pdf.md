@@ -122,13 +122,7 @@ Urbanization only significantly affected wing wear in E. pruinosa and C. calcara
 
 The fourth-corner analysis revealed some strong traiturbanization associations (Fig. 5). The strongest positive association was found between polylectic and trees percentage $(IC=0.29,\;\mathrm{Wald}=18.06,\;\mathrm{p}=0.05,\;\mathrm{Fig.}\;5\mathrm{A})$ , and polylectic and grass percentage (IC = 0.27, Wald = 17.25, $p   =   0 . 1 9 )$ . The two strongest negative associations were found between ground-nesters and trees percentage (IC = -0.25, Wald = 22.10, p = 0.15) and between univoltine bees and grass percentage (IC = -0.20, Wald = 18.31, p = 0.27). After applying the GLM-LASSO penalty, which reduces false interactions and keeps only significant predictions, the maximum likelihood supported the higher probability of finding polylectic bees at sites with low impervious surfaces
 
-| Species | Low | Medium | High |
-| --- | --- | --- | --- |
-| A. sericeus | ~52 | ~103 | ~51 |
-| C. calcarata | ~80 | ~58 | ~28 |
-| B. impatiens | ~94 | ~113 | ~48 |
-| B. griseocollis | ~88 | ~59 | ~41 |
-| E. pruinosa | ~11 | ~200 | ~105 |
+<table><tr><td>Species</td><td>Low</td><td>Medium</td><td>High</td></tr><tr><td>A. sericeus</td><td>~52</td><td>~103</td><td>~51</td></tr><tr><td>C. calcarata</td><td>~80</td><td>~58</td><td>~28</td></tr><tr><td>B. impatiens</td><td>~94</td><td>~113</td><td>~48</td></tr><tr><td>B. griseocollis</td><td>~88</td><td>~59</td><td>~41</td></tr><tr><td>E. pruinosa</td><td>~11</td><td>~200</td><td>~105</td></tr></table>
 
 Fig. 2 Total abundance for (A) sericeus, C. calcarata, (B) impatiens, B. griseocollis and E. pruinosa within each level of urbanization (low, medium and high)
 

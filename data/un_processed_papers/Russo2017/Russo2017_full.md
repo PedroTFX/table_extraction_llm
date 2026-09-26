@@ -109,31 +109,7 @@ Bees that visit apple flowers for nectar only tend to approach from the side (si
 
 Park et al. (2015) and Martins et al. (2015) agreed qualitatively on the flower handling behavior exhibited by specific bee taxa, and where they disagreed quantitatively (e.g. on proportion of top-working visits), we averaged the values (Table S1). Martins et al. (2015) visually classified bees into seven categories: (1) honeybees, (2) bumblebees, (3) metallic
 
-| Category | Proportion of pollination services from wild bees |
-| --- | --- |
-| 1 | ~0.91 |
-| 2 | ~0.90 |
-| 3 | ~0.87 |
-| 4 | ~0.86 |
-| 5 | ~0.83 |
-| 6 | ~0.79 |
-| 7 | ~0.79 |
-| 8 | ~0.76 |
-| 9 | ~0.76 |
-| 10 | ~0.76 |
-| 11 | ~0.73 |
-| 12 | ~0.72 |
-| 13 | ~0.72 |
-| 14 | ~0.71 |
-| 15 | ~0.65 |
-| 16 | ~0.60 |
-| 17 | ~0.58 |
-| 18 | ~0.56 |
-| 19 | ~0.52 |
-| 20 | ~0.52 |
-| 21 | ~0.46 |
-| 22 | ~0.18 |
-| 23 | ~0.12 |
+<table><tr><td>Category</td><td>Proportion of pollination services from wild bees</td></tr><tr><td>1</td><td>~0.91</td></tr><tr><td>2</td><td>~0.90</td></tr><tr><td>3</td><td>~0.87</td></tr><tr><td>4</td><td>~0.86</td></tr><tr><td>5</td><td>~0.83</td></tr><tr><td>6</td><td>~0.79</td></tr><tr><td>7</td><td>~0.79</td></tr><tr><td>8</td><td>~0.76</td></tr><tr><td>9</td><td>~0.76</td></tr><tr><td>10</td><td>~0.76</td></tr><tr><td>11</td><td>~0.73</td></tr><tr><td>12</td><td>~0.72</td></tr><tr><td>13</td><td>~0.72</td></tr><tr><td>14</td><td>~0.71</td></tr><tr><td>15</td><td>~0.65</td></tr><tr><td>16</td><td>~0.60</td></tr><tr><td>17</td><td>~0.58</td></tr><tr><td>18</td><td>~0.56</td></tr><tr><td>19</td><td>~0.52</td></tr><tr><td>20</td><td>~0.52</td></tr><tr><td>21</td><td>~0.46</td></tr><tr><td>22</td><td>~0.18</td></tr><tr><td>23</td><td>~0.12</td></tr></table>
 
 Fig. 2. The relative contribution to seed set of wild bees compared to honeybees in 23 orchards (columns). The contribution in this case is defined as the abundance of each bee species multiplied by the proportion of flower visits during which it contacts the anthers and stigma (top-working). For each orchard, this value is summed for all bee species in a given 15-min transect and then averaged across transects. The grey circles above the columns denote orchards that did not rent honeybee hives for the duration of the study. Dark grey columns denote orchards where wild bees contribute more than honeybees, light grey columns where they contribute an equal amount, and white columns where the honeybee contributes more to seed set.
 
@@ -193,19 +169,7 @@ Table 1 Functional traits including flower handling behavior (proportion of time
 
 Table 2 Models of the relationship between seed set and different ways of measuring pollinator contribution in apple orchards, compared to a basic abundance model. The only model that improves the variation explained and model fit is a model that includes honeybee abundance, wild bee abundance, and flower handling behavior. All models have random effects of orchard identity and apple variety. Significance at the P < 0.05 level is indicated by an asterisk.
 
-| Model Description | Marginal | Conditional | AIC | Sig. |
-| --- | --- | --- | --- | --- |
-| Basic Model (Honeybee abundance + wild bee abundance) | 0.21 | 0.66 | 771.5 |  |
-| Basic Model + Size | 0.24 | 0.67 | 773.4 |  |
-| Basic Model + Pollen Purity | 0.23 | 0.67 | 773.8 |  |
-| Basic Model + Flower Handling Behavior | 0.28 | 0.67 | 769.9 | * |
-| Basic Model + Size + Pollen Purity | 0.20 | 0.66 | 772.7 | * |
-| Basic Model + Size + Pollen Purity + Flower Handling Behavior | 0.27 | 0.67 | 770.8 | * |
-| Basic Model + Size + Flower Handling Behavior | 0.22 | 0.69 | 777.9 |  |
-| Basic Model + Pollen Purity + Flower Handling Behavior | 0.29 | 0.68 | 772.6 | * |
-| Pollen Purity | 0.17 | 0.66 | 774.5 |  |
-| Size | 0.05 | 0.67 | 781.6 |  |
-| Flower Handling Behavior | 0.11 | 0.67 | 778.6 | * |
+<table><tr><td>Model Description</td><td>Marginal</td><td>Conditional</td><td>AIC</td><td>Sig.</td></tr><tr><td>Basic Model (Honeybee abundance + wild bee abundance)</td><td>0.21</td><td>0.66</td><td>771.5</td><td></td></tr><tr><td>Basic Model + Size</td><td>0.24</td><td>0.67</td><td>773.4</td><td></td></tr><tr><td>Basic Model + Pollen Purity</td><td>0.23</td><td>0.67</td><td>773.8</td><td></td></tr><tr><td>Basic Model + Flower Handling Behavior</td><td>0.28</td><td>0.67</td><td>769.9</td><td>*</td></tr><tr><td>Basic Model + Size + Pollen Purity</td><td>0.20</td><td>0.66</td><td>772.7</td><td>*</td></tr><tr><td>Basic Model + Size + Pollen Purity + Flower Handling Behavior</td><td>0.27</td><td>0.67</td><td>770.8</td><td>*</td></tr><tr><td>Basic Model + Size + Flower Handling Behavior</td><td>0.22</td><td>0.69</td><td>777.9</td><td></td></tr><tr><td>Basic Model + Pollen Purity + Flower Handling Behavior</td><td>0.29</td><td>0.68</td><td>772.6</td><td>*</td></tr><tr><td>Pollen Purity</td><td>0.17</td><td>0.66</td><td>774.5</td><td></td></tr><tr><td>Size</td><td>0.05</td><td>0.67</td><td>781.6</td><td></td></tr><tr><td>Flower Handling Behavior</td><td>0.11</td><td>0.67</td><td>778.6</td><td>*</td></tr></table>
 
 were: honeybee abundance (estimate 0.12, $\mathrm { ~ P ~ } < \; 0 . 0 1 ) ,$ , wild bee abundance (0.12, P < 0.05), and flower handling behavior (5.73, $\mathrm { ~ P ~ } < \; 0 . 0 1 )$
 

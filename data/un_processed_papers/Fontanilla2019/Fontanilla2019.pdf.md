@@ -87,10 +87,7 @@ All samples were stored in 95% ethanol until ants were extracted. All worker ant
 
 Table 1. Morphological traits used for functional diversity analyses.
 
-| Trait | Justification | References |
-| --- | --- | --- |
-| Weber's length (WL) | Commonly used as a proxy for ant body size, which reflects the amount and type of resource exploited. May also reflect ability to nest in vegetation. | [15,28,29] |
-| Relative eye length (RelEL) | While eyes are used by ants for navigation and recognition of predator and prey, eye size may also be indicative of when (i.e., diurnal or nocturnal) and where ants forage, as well as their dietary preference (predators tend to have smaller eyes than omnivores). | [29–31] |
+<table><tr><td>Trait</td><td>Justification</td><td>References</td></tr><tr><td>Weber's length (WL)</td><td>Commonly used as a proxy for ant body size, which reflects the amount and type of resource exploited. May also reflect ability to nest in vegetation.</td><td>[15,28,29]</td></tr><tr><td>Relative eye length (RelEL)</td><td>While eyes are used by ants for navigation and recognition of predator and prey, eye size may also be indicative of when (i.e., diurnal or nocturnal) and where ants forage, as well as their dietary preference (predators tend to have smaller eyes than omnivores).</td><td>[29–31]</td></tr></table>
 
 <!-- page 5 of 15 -->
 
@@ -98,10 +95,7 @@ Insects 2019, 10, 128
 
 5 of 15
 
-| Relative scape length (RelSL) | May determine ants' effective range of sensitivity to chemosensory signals | [31] |
-| --- | --- | --- |
-| Relative mandible length (RelML) | Indicator of diet type, with predatory ants having longer mandibles | [31,32] |
-| Relative hindleg length (RelHL) | Related to locomotion speed as well as ants' capacity to navigate through crevices of varying sizes and the amount of load they can carry. May also indicate the type of diet, as ants with shorter RelHL tend to be predators. | [31,33,34] |
+<table><tr><td>Relative scape length (RelSL)</td><td>May determine ants' effective range of sensitivity to chemosensory signals</td><td>[31]</td></tr><tr><td>Relative mandible length (RelML)</td><td>Indicator of diet type, with predatory ants having longer mandibles</td><td>[31,32]</td></tr><tr><td>Relative hindleg length (RelHL)</td><td>Related to locomotion speed as well as ants' capacity to navigate through crevices of varying sizes and the amount of load they can carry. May also indicate the type of diet, as ants with shorter RelHL tend to be predators.</td><td>[31,33,34]</td></tr></table>
 
 Five functional traits, computed using measurements taken by AMF under a microscope with a calibrated eyepiece micrometer, were selected following Liu et al. [35] (Table 1): Weber’s length (WL); relative eye length (RelEL), calculated as the ratio of EL to WL; relative scape length (RelSL), calculated as the ratio of SL to WL; relative mandible length (RelML), the ratio of ML to WL; and relative hindleg length (RelHL), calculated as the sum of HFL and HTL, divided by WL. The mean of the trait values for each species were used for functional diversity analyses. Other measurements, namely head length (HL) and width (HW), eye width (EW), and pronotum width (PW), were also taken but were not included due to their high correlation and ecological redundancy to our five selected traits. A maximum of three worker ants per species were measured for each elevational band. For singletons and doubletons, only one and two ants were measured, respectively. For species with worker polymorphism, only minors were measured. Ant species with no eyes are likely to be subterranean species [31] with ecological characteristics inherently different from species foraging above ground. Thus, the proposed justification for the use of eye size listed in Table 1 probably does not apply to subterranean species, and assigning a RelEL of 0 for these species may therefore mischaracterize the “functional position” of eyeless ants. We therefore removed these species from the analysis.
 
@@ -139,29 +133,7 @@ dispersion). SES-FD was computed using R package “picante”, while SES-FRic w
 
 We recorded a total of 263 species from the three transects: 220 in Mengla, 55 in Ailaoshan, and three in Lijiang. Though there were no species shared among all transects or between Lijiang and Mengla, one was observed in both Lijiang and Ailaoshan and 14 in both Ailaoshan and Mengla. Mengla had the highest percentage of species present in all elevational bands (Mengla: 17%; Ailaoshan: 5%; Lijiang: 0%) and the highest number of species occurring in two adjacent elevational bands (Mengla: 53; Ailaoshan: 13; Lijiang: 1). Almost 30% (65) of the species in Mengla and more than half (34 species, 62%) of the species in Ailaoshan were restricted to one elevational band. Many species in Mengla and Ailaoshan were singletons, found in a single plot in the entire transect (Mengla: 47; Ailaoshan: 22). Of the 263 species, 12 eyeless species from Mengla and two eyeless species from Ailaoshan were excluded from functional diversity analyses. Incidence data and mean functional trait values for species recorded in Mengla, Ailaoshan, and Lijiang with eye length >0 are provided as supplementary material (Tables S1-S6).
 
-| Site | Elevation (m a.s.l.) | Temperature \(({}^{\circ}C)\) |
-| --- | --- | --- |
-| Mengla | ~700 | ~23.5 |
-| Mengla | ~800 | ~22.8 |
-| Mengla | ~1000 | ~22.2 |
-| Mengla | ~1200 | ~21.5 |
-| Mengla | ~1200 | ~21.3 |
-| Mengla | ~1200 | ~20.2 |
-| Mengla | ~1400 | ~20.8 |
-| Ailaoshan | ~2100 | ~18.5 |
-| Ailaoshan | ~2150 | ~19.0 |
-| Ailaoshan | ~2200 | ~18.8 |
-| Ailaoshan | ~2200 | ~17.8 |
-| Ailaoshan | ~2300 | ~16.8 |
-| Ailaoshan | ~2500 | ~17.2 |
-| Ailaoshan | ~2600 | ~16.5 |
-| Ailaoshan | ~2650 | ~16.8 |
-| Lijiang | ~3200 | ~11.5 |
-| Lijiang | ~3300 | ~11.2 |
-| Lijiang | ~3600 | ~9.8 |
-| Lijiang | ~3700 | ~9.5 |
-| Lijiang | ~3800 | ~8.5 |
-| Lijiang | ~3850 | ~8.2 |
+<table><tr><td>Site</td><td>Elevation (m a.s.l.)</td><td>Temperature \(({}^{\circ}C)\)</td></tr><tr><td>Mengla</td><td>~700</td><td>~23.5</td></tr><tr><td>Mengla</td><td>~800</td><td>~22.8</td></tr><tr><td>Mengla</td><td>~1000</td><td>~22.2</td></tr><tr><td>Mengla</td><td>~1200</td><td>~21.5</td></tr><tr><td>Mengla</td><td>~1200</td><td>~21.3</td></tr><tr><td>Mengla</td><td>~1200</td><td>~20.2</td></tr><tr><td>Mengla</td><td>~1400</td><td>~20.8</td></tr><tr><td>Ailaoshan</td><td>~2100</td><td>~18.5</td></tr><tr><td>Ailaoshan</td><td>~2150</td><td>~19.0</td></tr><tr><td>Ailaoshan</td><td>~2200</td><td>~18.8</td></tr><tr><td>Ailaoshan</td><td>~2200</td><td>~17.8</td></tr><tr><td>Ailaoshan</td><td>~2300</td><td>~16.8</td></tr><tr><td>Ailaoshan</td><td>~2500</td><td>~17.2</td></tr><tr><td>Ailaoshan</td><td>~2600</td><td>~16.5</td></tr><tr><td>Ailaoshan</td><td>~2650</td><td>~16.8</td></tr><tr><td>Lijiang</td><td>~3200</td><td>~11.5</td></tr><tr><td>Lijiang</td><td>~3300</td><td>~11.2</td></tr><tr><td>Lijiang</td><td>~3600</td><td>~9.8</td></tr><tr><td>Lijiang</td><td>~3700</td><td>~9.5</td></tr><tr><td>Lijiang</td><td>~3800</td><td>~8.5</td></tr><tr><td>Lijiang</td><td>~3850</td><td>~8.2</td></tr></table>
 
 Figure 1. Mean daily understory temperatures from July to September 2015. Temperature data were recorded from each plot every two hours.
 
@@ -179,12 +151,7 @@ Figure 2. Taxonomic (left) and functional (right, showing FD in light grey and F
 
 SES-FD and SES-FRic values in Mengla did not show distinct patterns, with only one plot having a significantly lower SES-FRic value from the mean expected value (Figure 3). In Ailaoshan, all plots found at the 2200, 2400, and 2600 m a.s.l. bands showed significantly lower SES-FRic values, while one plot in the 2000 m a.s.l. band showed a significantly high SES-FD value; all other SES-FD values as well as SES-FRic values from plots found in the 2000 m a.s.l. band did not differ significantly from expected.
 
-| Site | Elevation (m a.s.l.) (range) | SES (range) |
-| --- | --- | --- |
-| Ailaoshan | 2050~2700 | -3.5~-1.0 |
-| Mengla | 700~1400 | -1.5~2.2 |
-| FD | 700~1400 | -1.0~1.8 |
-| FRic | 2000~2700 | -3.5~2.8 |
+<table><tr><td>Site</td><td>Elevation (m a.s.l.) (range)</td><td>SES (range)</td></tr><tr><td>Ailaoshan</td><td>2050~2700</td><td>-3.5~-1.0</td></tr><tr><td>Mengla</td><td>700~1400</td><td>-1.5~2.2</td></tr><tr><td>FD</td><td>700~1400</td><td>-1.0~1.8</td></tr><tr><td>FRic</td><td>2000~2700</td><td>-3.5~2.8</td></tr></table>
 
 Figure 3. Standardized effect sizes (SES) for FD (light grey) and FRic (dark grey) in Mengla (circle) and Ailaoshan (square) against elevation (in m a.s.l.). Points above (for positive values) and below (for negative values) the dashed lines have SES values significantly different from the null model.
 
@@ -250,12 +217,7 @@ Insects 2019, 10, 128
 
 ## Appendix
 
-| Elevation Level | Value (m) |
-| --- | --- |
-| Top | 3800 |
-| Upper-Mid | 3600 |
-| Mid | 3400 |
-| Lower-Mid | 3200 |
+<table><tr><td>Elevation Level</td><td>Value (m)</td></tr><tr><td>Top</td><td>3800</td></tr><tr><td>Upper-Mid</td><td>3600</td></tr><tr><td>Mid</td><td>3400</td></tr><tr><td>Lower-Mid</td><td>3200</td></tr></table>
 
 ![Image block](doc:7ba6b71/tier:advanced/page:12/block:5)
 
@@ -266,12 +228,7 @@ Insects 2019, 10, 128
 2200 m
 </details>
 
-| Elevation Level | Value (m) |
-| --- | --- |
-| Top | 2600 |
-| Upper-Mid | 2400 |
-| Mid | 2200 |
-| Lower-Mid | 2000 |
+<table><tr><td>Elevation Level</td><td>Value (m)</td></tr><tr><td>Top</td><td>2600</td></tr><tr><td>Upper-Mid</td><td>2400</td></tr><tr><td>Mid</td><td>2200</td></tr><tr><td>Lower-Mid</td><td>2000</td></tr></table>
 
 ![Image block](doc:7ba6b71/tier:advanced/page:12/block:7)
 
@@ -282,43 +239,11 @@ Insects 2019, 10, 128
 20 m
 </details>
 
-| Elevation Level | Elevation (m) |
-| --- | --- |
-| Top | 1400 |
-| Upper-Mid | 1200 |
-| Mid | 1000 |
-| Lower-Mid | 800 |
+<table><tr><td>Elevation Level</td><td>Elevation (m)</td></tr><tr><td>Top</td><td>1400</td></tr><tr><td>Upper-Mid</td><td>1200</td></tr><tr><td>Mid</td><td>1000</td></tr><tr><td>Lower-Mid</td><td>800</td></tr></table>
 
 Figure A1. Schematic diagram of our study design, showing the elevational bands of the three transects (viz. Lijiang, Ailaoshan and Mengla; left), the distances between study plots within each elevational band, and the dimensions of each plot (bottom right). Distances are not to scale, and the precise spatial arrangement of study plots varied across elevations and transects depending on the available habitat.
 
-| Site | Elevation (m a.s.l.) | Species richness |
-| --- | --- | --- |
-| Mengla | ~700 | ~190 |
-| Mengla | ~750 | ~210 |
-| Mengla | ~800 | ~220 |
-| Mengla | ~850 | ~230 |
-| Mengla | ~1000 | ~220 |
-| Mengla | ~1050 | ~250 |
-| Mengla | ~1200 | ~220 |
-| Mengla | ~1250 | ~230 |
-| Mengla | ~1400 | ~230 |
-| Mengla | ~1450 | ~250 |
-| Ailaoshan | ~2000 | ~160 |
-| Ailaoshan | ~2100 | ~170 |
-| Ailaoshan | ~2200 | ~180 |
-| Ailaoshan | ~2300 | ~150 |
-| Ailaoshan | ~2400 | ~160 |
-| Ailaoshan | ~2500 | ~150 |
-| Ailaoshan | ~2600 | ~170 |
-| Ailaoshan | ~2650 | ~180 |
-| Lijiang | ~3200 | ~110 |
-| Lijiang | ~3300 | ~120 |
-| Lijiang | ~3400 | ~100 |
-| Lijiang | ~3500 | ~110 |
-| Lijiang | ~3600 | ~120 |
-| Lijiang | ~3700 | ~100 |
-| Lijiang | ~3800 | ~80 |
-| Lijiang | ~3900 | ~100 |
+<table><tr><td>Site</td><td>Elevation (m a.s.l.)</td><td>Species richness</td></tr><tr><td>Mengla</td><td>~700</td><td>~190</td></tr><tr><td>Mengla</td><td>~750</td><td>~210</td></tr><tr><td>Mengla</td><td>~800</td><td>~220</td></tr><tr><td>Mengla</td><td>~850</td><td>~230</td></tr><tr><td>Mengla</td><td>~1000</td><td>~220</td></tr><tr><td>Mengla</td><td>~1050</td><td>~250</td></tr><tr><td>Mengla</td><td>~1200</td><td>~220</td></tr><tr><td>Mengla</td><td>~1250</td><td>~230</td></tr><tr><td>Mengla</td><td>~1400</td><td>~230</td></tr><tr><td>Mengla</td><td>~1450</td><td>~250</td></tr><tr><td>Ailaoshan</td><td>~2000</td><td>~160</td></tr><tr><td>Ailaoshan</td><td>~2100</td><td>~170</td></tr><tr><td>Ailaoshan</td><td>~2200</td><td>~180</td></tr><tr><td>Ailaoshan</td><td>~2300</td><td>~150</td></tr><tr><td>Ailaoshan</td><td>~2400</td><td>~160</td></tr><tr><td>Ailaoshan</td><td>~2500</td><td>~150</td></tr><tr><td>Ailaoshan</td><td>~2600</td><td>~170</td></tr><tr><td>Ailaoshan</td><td>~2650</td><td>~180</td></tr><tr><td>Lijiang</td><td>~3200</td><td>~110</td></tr><tr><td>Lijiang</td><td>~3300</td><td>~120</td></tr><tr><td>Lijiang</td><td>~3400</td><td>~100</td></tr><tr><td>Lijiang</td><td>~3500</td><td>~110</td></tr><tr><td>Lijiang</td><td>~3600</td><td>~120</td></tr><tr><td>Lijiang</td><td>~3700</td><td>~100</td></tr><tr><td>Lijiang</td><td>~3800</td><td>~80</td></tr><tr><td>Lijiang</td><td>~3900</td><td>~100</td></tr></table>
 
 Figure A2. Adjusted moth species richness against elevation (in m a.s.l.) in Mengla, Ailaoshan and Lijiang. Species richness was adjusted based on the smallest sample size. Data from Ashton et al. [24].
 

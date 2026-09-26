@@ -214,24 +214,11 @@ CAJAIBA ET AL.
 
 (a)
 
-| Category | X (range) | Y (range) |
-| --- | --- | --- |
-| Forest specialists | -0.15~-0.08 | 0.02~0.12 |
-| Forest generalists | -0.08~0.02 | -0.12~-0.02 |
-| Ecosystem generalists | -0.08~0.12 | -0.12~0.05 |
-| T | 0.05~0.14 | 0.02~0.13 |
-| Open specialists | 0.06~0.14 | 0.02~0.13 |
-| PES | 0.08~0.17 | -0.12~0.05 |
+<table><tr><td>Category</td><td>X (range)</td><td>Y (range)</td></tr><tr><td>Forest specialists</td><td>-0.15~-0.08</td><td>0.02~0.12</td></tr><tr><td>Forest generalists</td><td>-0.08~0.02</td><td>-0.12~-0.02</td></tr><tr><td>Ecosystem generalists</td><td>-0.08~0.12</td><td>-0.12~0.05</td></tr><tr><td>T</td><td>0.05~0.14</td><td>0.02~0.13</td></tr><tr><td>Open specialists</td><td>0.06~0.14</td><td>0.02~0.13</td></tr><tr><td>PES</td><td>0.08~0.17</td><td>-0.12~0.05</td></tr></table>
 
 (b)
 
-| Series | X (range) | Y (range) |
-| --- | --- | --- |
-| PF | -0.17~-0.09 | -0.08~0.08 |
-| SF-15 | -0.14~-0.09 | -0.07~0.02 |
-| SF-5 | 0.01~0.06 | -0.05~0.12 |
-| AG | 0.05~0.10 | -0.04~0.05 |
-| PA | 0.06~0.13 | -0.04~0.17 |
+<table><tr><td>Series</td><td>X (range)</td><td>Y (range)</td></tr><tr><td>PF</td><td>-0.17~-0.09</td><td>-0.08~0.08</td></tr><tr><td>SF-15</td><td>-0.14~-0.09</td><td>-0.07~0.02</td></tr><tr><td>SF-5</td><td>0.01~0.06</td><td>-0.05~0.12</td></tr><tr><td>AG</td><td>0.05~0.10</td><td>-0.04~0.05</td></tr><tr><td>PA</td><td>0.06~0.13</td><td>-0.04~0.17</td></tr></table>
 
 F I G U R E 5 Non-metric multidimensional scaling (NMDS) depicting functional traits of ant assemblages in accordance with their distribution among ecosystems (using bray–Curtis similarity). (a) Ecosystem specificity; (a) trophic type. PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Variables: T, temperature; H, humidity; CC, canopy cover; PES, percentage of exposed soil; LLC, percentage of leaf litter cover; RS, richness of shrubs
 

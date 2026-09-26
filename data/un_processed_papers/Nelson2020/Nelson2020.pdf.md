@@ -80,30 +80,7 @@ Article e02217; page 3
 
 TABLE 1. Characteristics of restored and remnant prairie study sites.
 
-| Site | Age (yr) | Bison | Fire |
-| --- | --- | --- | --- |
-| Crew15† | 3 | N | Y |
-| HF | 5 | Y | Y |
-| HPN | 6 | Y | N |
-| LOW | 7 | Y | N |
-| SB | 9 | N | N |
-| SBEE | 9 | N | N |
-| SBEW | 9 | N | N |
-| CCW | 10 | N | Y |
-| CCWE | 10 | N | Y |
-| HPW | 10 | Y | Y |
-| FC | 12 | N | Y |
-| CCE | 11 | N | N |
-| CCEE | 11 | N | N |
-| SFW† | 16 | N | Y |
-| TC | 16 | N | Y |
-| TCE | 16 | N | Y |
-| HLP | 17 | Y | Y |
-| SF | 17 | N | N |
-| WH | 26 | Y | N |
-| MU | 31 | Y | Y |
-| MUR | Remnant | Y | Y |
-| TCR | Remnant | N | Y |
+<table><tr><td>Site</td><td>Age (yr)</td><td>Bison</td><td>Fire</td></tr><tr><td>Crew15†</td><td>3</td><td>N</td><td>Y</td></tr><tr><td>HF</td><td>5</td><td>Y</td><td>Y</td></tr><tr><td>HPN</td><td>6</td><td>Y</td><td>N</td></tr><tr><td>LOW</td><td>7</td><td>Y</td><td>N</td></tr><tr><td>SB</td><td>9</td><td>N</td><td>N</td></tr><tr><td>SBEE</td><td>9</td><td>N</td><td>N</td></tr><tr><td>SBEW</td><td>9</td><td>N</td><td>N</td></tr><tr><td>CCW</td><td>10</td><td>N</td><td>Y</td></tr><tr><td>CCWE</td><td>10</td><td>N</td><td>Y</td></tr><tr><td>HPW</td><td>10</td><td>Y</td><td>Y</td></tr><tr><td>FC</td><td>12</td><td>N</td><td>Y</td></tr><tr><td>CCE</td><td>11</td><td>N</td><td>N</td></tr><tr><td>CCEE</td><td>11</td><td>N</td><td>N</td></tr><tr><td>SFW†</td><td>16</td><td>N</td><td>Y</td></tr><tr><td>TC</td><td>16</td><td>N</td><td>Y</td></tr><tr><td>TCE</td><td>16</td><td>N</td><td>Y</td></tr><tr><td>HLP</td><td>17</td><td>Y</td><td>Y</td></tr><tr><td>SF</td><td>17</td><td>N</td><td>N</td></tr><tr><td>WH</td><td>26</td><td>Y</td><td>N</td></tr><tr><td>MU</td><td>31</td><td>Y</td><td>Y</td></tr><tr><td>MUR</td><td>Remnant</td><td>Y</td><td>Y</td></tr><tr><td>TCR</td><td>Remnant</td><td>N</td><td>Y</td></tr></table>
 
 Note: Age indicates number of growing seasons since a site was restored, bison indicates the presence (Y) or absence (N) of reintroduced bison, and fire indicates if the site received pre-scribed fire since the previous growing season (i.e., in the spring prior to the 2018 study season).
 
@@ -211,23 +188,7 @@ GROUND BEETLES IN RESTORED GRASSLANDS
 
 Article e02217; page 7
 
-| Point ID | dbRDA axis 1 | dbRDA axis 2 |
-| --- | --- | --- |
-| 5 | ~-0.9 | ~0.9 |
-| 6 | ~-1.2 | ~0.7 |
-| 7 | ~-0.9 | ~0.4 |
-| 10 | ~-0.3 | ~0.3 |
-| 10 | ~0.1 | ~0.8 |
-| 10 | ~0.1 | ~0.9 |
-| 16 | ~0.5 | ~0.3 |
-| 12 | ~0.6 | ~0.2 |
-| 17 | ~0.1 | ~-0.1 |
-| 11 | ~0.7 | ~-0.5 |
-| 11 | ~0.6 | ~-0.9 |
-| 16 | ~1.0 | ~-0.3 |
-| 9 | ~-0.6 | ~-0.9 |
-| 9 | ~-0.4 | ~-1.0 |
-| 31 | ~1.2 | ~-0.1 |
+<table><tr><td>Point ID</td><td>dbRDA axis 1</td><td>dbRDA axis 2</td></tr><tr><td>5</td><td>~-0.9</td><td>~0.9</td></tr><tr><td>6</td><td>~-1.2</td><td>~0.7</td></tr><tr><td>7</td><td>~-0.9</td><td>~0.4</td></tr><tr><td>10</td><td>~-0.3</td><td>~0.3</td></tr><tr><td>10</td><td>~0.1</td><td>~0.8</td></tr><tr><td>10</td><td>~0.1</td><td>~0.9</td></tr><tr><td>16</td><td>~0.5</td><td>~0.3</td></tr><tr><td>12</td><td>~0.6</td><td>~0.2</td></tr><tr><td>17</td><td>~0.1</td><td>~-0.1</td></tr><tr><td>11</td><td>~0.7</td><td>~-0.5</td></tr><tr><td>11</td><td>~0.6</td><td>~-0.9</td></tr><tr><td>16</td><td>~1.0</td><td>~-0.3</td></tr><tr><td>9</td><td>~-0.6</td><td>~-0.9</td></tr><tr><td>9</td><td>~-0.4</td><td>~-1.0</td></tr><tr><td>31</td><td>~1.2</td><td>~-0.1</td></tr></table>
 
 FIG. 2. Results of distance-based redundancy analysis (dbRDA) of ground beetle assemblages in restored prairies. Circles represent sites with bison, squares are sites without bison, and ellipses are 1 SD. Circles and squares with heavier outline are sites that received prescribed fire. Numbers in each point are the age of the restoration in years. For statistical results, see Appendix S1: Table S4.
 

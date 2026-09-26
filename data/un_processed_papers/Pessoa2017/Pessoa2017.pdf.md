@@ -233,10 +233,7 @@ PeerJ
 
 Table 2 The two groups of first partition/division were formed by k-means composed from 100 random partitions/divisions, using the Gower dissimilarity index, with an a posteriori analysis of the groups for a community of dung beetles (Coleoptera: Scarabaeinae) collected in the Pantanal subregion of Poconé, Mato Grosso, Brazil.
 
-| Group | Group characteristics | Species |
-| --- | --- | --- |
-| A | Diurnal-mixed activity, make ball/pear-shaped nest, when nocturnal displaces horizontally the resource | Anisocanthon aff. villosus, Deltochilum elongatum, Malagoniella aff. astynanax, Eurysternus caribaeus, Eurysternus nigrovirens, Canthon daguerrei, Canthon histrio, Canthon lituratus, Canthon maldonadoi, Canthon curvodilatatus, Canthon aff. ornatus, Canthon quinquemaculatus, Canthidium viride, Canthidium barbacenicum, Canthidium cuprinum, Canthidium sp.2, Canthidium sp.3, Gromphas inermis, Coprophanaeus bonariensis |
-| B | Nocturnal-mixed activity, does not make ball/pear-shaped nest, when making a ball/pear-shaped nest, it does not displace horizontally to the resource | Coprophanaeus milon, Ontherus appendiculatus, Ontherus digitatus, Ontherus sulcator, Ateuchus carbonarius, Ateuchus sp.1, Genieridium cryptops, Onthophagus aff. hirculus, Trichillidium quadridens, Trichillum externepunctatum, Uroxys aff. corporaali, Dichotomius bos, Dichotomius lycas, Dichotomius nisus, Dichotomius opacipennis, Digitonthophagus sp. |
+<table><tr><td>Group</td><td>Group characteristics</td><td>Species</td></tr><tr><td>A</td><td>Diurnal-mixed activity, make ball/pear-shaped nest, when nocturnal displaces horizontally the resource</td><td>Anisocanthon aff. villosus, Deltochilum elongatum, Malagoniella aff. astynanax, Eurysternus caribaeus, Eurysternus nigrovirens, Canthon daguerrei, Canthon histrio, Canthon lituratus, Canthon maldonadoi, Canthon curvodilatatus, Canthon aff. ornatus, Canthon quinquemaculatus, Canthidium viride, Canthidium barbacenicum, Canthidium cuprinum, Canthidium sp.2, Canthidium sp.3, Gromphas inermis, Coprophanaeus bonariensis</td></tr><tr><td>B</td><td>Nocturnal-mixed activity, does not make ball/pear-shaped nest, when making a ball/pear-shaped nest, it does not displace horizontally to the resource</td><td>Coprophanaeus milon, Ontherus appendiculatus, Ontherus digitatus, Ontherus sulcator, Ateuchus carbonarius, Ateuchus sp.1, Genieridium cryptops, Onthophagus aff. hirculus, Trichillidium quadridens, Trichillum externepunctatum, Uroxys aff. corporaali, Dichotomius bos, Dichotomius lycas, Dichotomius nisus, Dichotomius opacipennis, Digitonthophagus sp.</td></tr></table>
 
 which together accounted for 65.78% of the total sample. In Area 1, the most abundant species were C. barbacenicum (24.63%), U. aff. corporaali (17.79%), Ateuchus sp. (12.92%), Ontherus appendiculatus (23.9%) and Ateuchus carbonarius (6.58%), which accounted for 71.15% of the total sample. In Area 2, the most abundant species were O. sulcator (33.58%), Canthon daguerrei (23.88%), and Canthidium cuprinum (17.86%), which together accounted for 75.32% of the total sample. In Area 3, the most abundant species were Canthidium cuprinum (57.33%), O. sulcator (15.71%), and Eurysternus caribaeus (10.77%), which together represented 83.81% of the sample.
 
@@ -258,40 +255,7 @@ Pessôa et al. (2017), PeerJ, DOI [10.7717/peerj.3978](http://dx.doi.org/10.7717
 
 PeerJ
 
-| Species | PCoA Axis 1 (approx) | PCoA Axis 2 (approx) |
-| :--- | :--- | :--- |
-| Coprophanaeus bonariensis | ~-0.03 | ~0.45 |
-| Coprophanaeus milon | ~-0.17 | ~0.30 |
-| Ontherus sulcator | ~-0.13 | ~0.18 |
-| Gromphas inermis | ~0.02 | ~0.17 |
-| Malagoniella aff. astyanax | ~0.20 | ~0.17 |
-| Deltochilum elongatum | ~0.11 | ~0.15 |
-| Dichotomius bos | ~-0.34 | ~0.18 |
-| Dichotomius nisus | ~-0.33 | ~0.16 |
-| Dichotomius lycas | ~-0.32 | ~0.15 |
-| Ontherus appendiculatus | ~-0.08 | ~0.07 |
-| Eurysternus caribaeus | ~0.09 | ~0.04 |
-| Canthon aff. ornatus | ~0.10 | ~0.03 |
-| Canthon histrio | ~0.26 | ~0.03 |
-| Canthon quiquemaculatus | ~0.28 | ~0.02 |
-| Digitonthophagus sp. | ~-0.17 | ~0.03 |
-| Ontherus digitatus | ~-0.05 | ~0.01 |
-| Canthidium viride | ~0.09 | ~0.00 |
-| Canthidium cuprinum | ~0.10 | ~-0.02 |
-| Canthidium barbacenicum | ~0.11 | ~-0.05 |
-| Canthidium sp.3 | ~0.06 | ~-0.02 |
-| Canthidium sp.2 | ~0.11 | ~-0.08 |
-| Canthon maldonadoi | ~0.27 | ~-0.04 |
-| Canthon daguerrei | ~0.29 | ~-0.05 |
-| Canthon curvodiatatus | ~0.30 | ~-0.06 |
-| Anisocanthon aff. villosus | ~0.28 | ~-0.10 |
-| Ateuchus carbonarius | ~-0.19 | ~-0.14 |
-| Ateuchus sp.1 | ~-0.19 | ~-0.15 |
-| Ontophagus aff. hirculus | ~-0.12 | ~-0.19 |
-| Trichillum externepunctatum | ~-0.23 | ~-0.21 |
-| Genieridium cryptops | ~-0.18 | ~-0.26 |
-| Trichillidium quadridens | ~-0.24 | ~-0.27 |
-| Uroxys aff. corporaali | ~-0.13 | ~-0.31 |
+<table><tr><td>Species</td><td>PCoA Axis 1 (approx)</td><td>PCoA Axis 2 (approx)</td></tr><tr><td>Coprophanaeus bonariensis</td><td>~-0.03</td><td>~0.45</td></tr><tr><td>Coprophanaeus milon</td><td>~-0.17</td><td>~0.30</td></tr><tr><td>Ontherus sulcator</td><td>~-0.13</td><td>~0.18</td></tr><tr><td>Gromphas inermis</td><td>~0.02</td><td>~0.17</td></tr><tr><td>Malagoniella aff. astyanax</td><td>~0.20</td><td>~0.17</td></tr><tr><td>Deltochilum elongatum</td><td>~0.11</td><td>~0.15</td></tr><tr><td>Dichotomius bos</td><td>~-0.34</td><td>~0.18</td></tr><tr><td>Dichotomius nisus</td><td>~-0.33</td><td>~0.16</td></tr><tr><td>Dichotomius lycas</td><td>~-0.32</td><td>~0.15</td></tr><tr><td>Ontherus appendiculatus</td><td>~-0.08</td><td>~0.07</td></tr><tr><td>Eurysternus caribaeus</td><td>~0.09</td><td>~0.04</td></tr><tr><td>Canthon aff. ornatus</td><td>~0.10</td><td>~0.03</td></tr><tr><td>Canthon histrio</td><td>~0.26</td><td>~0.03</td></tr><tr><td>Canthon quiquemaculatus</td><td>~0.28</td><td>~0.02</td></tr><tr><td>Digitonthophagus sp.</td><td>~-0.17</td><td>~0.03</td></tr><tr><td>Ontherus digitatus</td><td>~-0.05</td><td>~0.01</td></tr><tr><td>Canthidium viride</td><td>~0.09</td><td>~0.00</td></tr><tr><td>Canthidium cuprinum</td><td>~0.10</td><td>~-0.02</td></tr><tr><td>Canthidium barbacenicum</td><td>~0.11</td><td>~-0.05</td></tr><tr><td>Canthidium sp.3</td><td>~0.06</td><td>~-0.02</td></tr><tr><td>Canthidium sp.2</td><td>~0.11</td><td>~-0.08</td></tr><tr><td>Canthon maldonadoi</td><td>~0.27</td><td>~-0.04</td></tr><tr><td>Canthon daguerrei</td><td>~0.29</td><td>~-0.05</td></tr><tr><td>Canthon curvodiatatus</td><td>~0.30</td><td>~-0.06</td></tr><tr><td>Anisocanthon aff. villosus</td><td>~0.28</td><td>~-0.10</td></tr><tr><td>Ateuchus carbonarius</td><td>~-0.19</td><td>~-0.14</td></tr><tr><td>Ateuchus sp.1</td><td>~-0.19</td><td>~-0.15</td></tr><tr><td>Ontophagus aff. hirculus</td><td>~-0.12</td><td>~-0.19</td></tr><tr><td>Trichillum externepunctatum</td><td>~-0.23</td><td>~-0.21</td></tr><tr><td>Genieridium cryptops</td><td>~-0.18</td><td>~-0.26</td></tr><tr><td>Trichillidium quadridens</td><td>~-0.24</td><td>~-0.27</td></tr><tr><td>Uroxys aff. corporaali</td><td>~-0.13</td><td>~-0.31</td></tr></table>
 
 Figure 3 Ordination of dung beetle species (Coleoptera; Scarabaeinae), collected in the sub-region Poconé, Pantanal, Mato Grosso, Brazil, by PCoA with Gower dissimilarity index using the functional matrix, where the colors and the symbols represent the groups identified by the k-means. Colors represent the groups of the first partition/division, where the color black represents group A; the color red represents group B. Symbols represent the groups of the second partition, where: hollow diamond = group 1, asterisk = group 2, filled square = group 3, hollow triangle = group 4, filled triangle = group 5, x circle = group 6, filled diamond = group 7 and cross circle = group 8.
 

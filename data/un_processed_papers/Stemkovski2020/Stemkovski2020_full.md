@@ -185,28 +185,7 @@ The bee monitoring study yielded 1606 time-series of at least four abundance mea
 
 Each candidate predictor variable was represented in the model set (Figure 2). Bees emerged $( 1 1 . 5 2 \pm 2 . 6 8 )$ , peaked $( 1 2 . 8 2 \pm 2 . 4 2 )$ , and senesced $( 7 . 8 1 \pm 2 . 4 4 )$ later in years with
 
-| Bee Species | Phenology Shift Category | Response to snowmelt (Days of phenology shift / Days of snowmelt shift) |
-| :--- | :--- | :--- |
-| Dufourea harveyi | Peak | ~0.2 |
-| Dufourea harveyi | Emergence | ~0.3 |
-| Halictus rubicundus | Peak | ~-0.1 |
-| Halictus rubicundus | Emergence | ~0.4 |
-| Halictus virgatellus | Peak | ~0.1 |
-| Halictus virgatellus | Emergence | ~0.0 |
-| Hoplitis fulgida | Peak | ~0.6 |
-| Hoplitis fulgida | Emergence | ~0.7 |
-| Hoplitis robusta | Peak | ~0.4 |
-| Hoplitis robusta | Emergence | ~0.5 |
-| Hylaeus annulatus | Peak | ~0.3 |
-| Hylaeus annulatus | Emergence | ~0.4 |
-| Lasioglossum sedi | Peak | ~0.6 |
-| Lasioglossum sedi | Emergence | ~0.2 |
-| Panurginus cressoniellus | Peak | ~0.3 |
-| Panurginus cressoniellus | Emergence | ~0.4 |
-| Panurginus ineptus | Peak | ~0.1 |
-| Panurginus ineptus | Emergence | ~0.2 |
-| Pseudopanurgus bakeri | Peak | ~-0.2 |
-| Pseudopanurgus bakeri | Emergence | ~0.4 |
+<table><tr><td>Bee Species</td><td>Phenology Shift Category</td><td>Response to snowmelt (Days of phenology shift / Days of snowmelt shift)</td></tr><tr><td>Dufourea harveyi</td><td>Peak</td><td>~0.2</td></tr><tr><td>Dufourea harveyi</td><td>Emergence</td><td>~0.3</td></tr><tr><td>Halictus rubicundus</td><td>Peak</td><td>~-0.1</td></tr><tr><td>Halictus rubicundus</td><td>Emergence</td><td>~0.4</td></tr><tr><td>Halictus virgatellus</td><td>Peak</td><td>~0.1</td></tr><tr><td>Halictus virgatellus</td><td>Emergence</td><td>~0.0</td></tr><tr><td>Hoplitis fulgida</td><td>Peak</td><td>~0.6</td></tr><tr><td>Hoplitis fulgida</td><td>Emergence</td><td>~0.7</td></tr><tr><td>Hoplitis robusta</td><td>Peak</td><td>~0.4</td></tr><tr><td>Hoplitis robusta</td><td>Emergence</td><td>~0.5</td></tr><tr><td>Hylaeus annulatus</td><td>Peak</td><td>~0.3</td></tr><tr><td>Hylaeus annulatus</td><td>Emergence</td><td>~0.4</td></tr><tr><td>Lasioglossum sedi</td><td>Peak</td><td>~0.6</td></tr><tr><td>Lasioglossum sedi</td><td>Emergence</td><td>~0.2</td></tr><tr><td>Panurginus cressoniellus</td><td>Peak</td><td>~0.3</td></tr><tr><td>Panurginus cressoniellus</td><td>Emergence</td><td>~0.4</td></tr><tr><td>Panurginus ineptus</td><td>Peak</td><td>~0.1</td></tr><tr><td>Panurginus ineptus</td><td>Emergence</td><td>~0.2</td></tr><tr><td>Pseudopanurgus bakeri</td><td>Peak</td><td>~-0.2</td></tr><tr><td>Pseudopanurgus bakeri</td><td>Emergence</td><td>~0.4</td></tr></table>
 
 Figure 1 Common species vary in their responses to snowmelt timing, with most phenophase shifts falling between no response (0, dashed line) and perfect tracking (1, dotted line) of snowmelt. Points to the left of zero represent advances in response to advanced snowmelt timing, and those to the right represent delays. Blue points represent emergence shifts, green points represent peak, and brown points represent senescence. The width of bars represents twice the standard errors around the estimates of response.
 
@@ -224,16 +203,7 @@ Drivers of bee phenology
 
 1593
 
-| Category | Emergence (Standardized effect size) | Peak (Standardized effect size) | Senescence (Standardized effect size) |
-| --- | --- | --- | --- |
-| Snowmelt date | ~12 | ~13 | ~8 |
-| Summer rainfall | ~10 | ~3 | ~-2 |
-| Maximum temperature | ~-7 | ~2 | ~-1 |
-| Elevation | ~14 | ~8 | ~-6 |
-| Solar incidence | ~-6 | ~-2 | ~4 |
-| Body mass | ~2 | ~-3 | ~-3 |
-| Nest location (below ground) | ~11 | ~-5 | ~-10 |
-| Overwintering (prepupae) | ~2 | ~11 | ~21 |
+<table><tr><td>Category</td><td>Emergence (Standardized effect size)</td><td>Peak (Standardized effect size)</td><td>Senescence (Standardized effect size)</td></tr><tr><td>Snowmelt date</td><td>~12</td><td>~13</td><td>~8</td></tr><tr><td>Summer rainfall</td><td>~10</td><td>~3</td><td>~-2</td></tr><tr><td>Maximum temperature</td><td>~-7</td><td>~2</td><td>~-1</td></tr><tr><td>Elevation</td><td>~14</td><td>~8</td><td>~-6</td></tr><tr><td>Solar incidence</td><td>~-6</td><td>~-2</td><td>~4</td></tr><tr><td>Body mass</td><td>~2</td><td>~-3</td><td>~-3</td></tr><tr><td>Nest location (below ground)</td><td>~11</td><td>~-5</td><td>~-10</td></tr><tr><td>Overwintering (prepupae)</td><td>~2</td><td>~11</td><td>~21</td></tr></table>
 
 Figure 2 Bee phenology is determined by interannual climatic variation, topography, and several species traits. The drivers vary in their relative effect across the phenophases, with the effect of climate variables generally lower for later phenophases. The first panel shows the standardised effect sizes of climate variables, the second topographic variables, and the third species traits on emergence (blue), peak (green), and senescence timing (brown) with standard errors around the estimates shown as brackets. Values greater than 0 represent later phenology, and those less than 0 represent earlier phenology. Standardised effect sizes are defined as the slope coefficients derived from scaled and centred explanatory variables.
 
@@ -263,10 +233,7 @@ M. Stemkovski et al.
 
 Letter
 
-| Category | Emergence \((R^{2}\) values) | Peak \((R^{2}\) values) | Senescence \((R^{2}\) values) |
-| --- | --- | --- | --- |
-| Marginal | ~0.50 | ~0.41 | ~0.45 |
-| Conditional | ~0.86 | ~0.90 | ~0.85 |
+<table><tr><td>Category</td><td>Emergence \((R^{2}\) values)</td><td>Peak \((R^{2}\) values)</td><td>Senescence \((R^{2}\) values)</td></tr><tr><td>Marginal</td><td>~0.50</td><td>~0.41</td><td>~0.45</td></tr><tr><td>Conditional</td><td>~0.86</td><td>~0.90</td><td>~0.85</td></tr></table>
 
 Figure 3 While the models were roughly equal in their ability to predict phenological shifts across all phenophases (panel a), early phenophases were predicted more strongly by climate variables and late phenophases by species traits (panel b). Panel a compares the marginal and conditional $R ^ { 2 }$ values across the top models for each phenophase, and panel b shows the ratio of variance explained by reduced models of only climate and trait variables vs. the variance explained by the top model. The ratio of variance in panel b was calculated as $R _ { \mathrm { ~ s u b s e t } } ^ { 2 } / R _ { \mathrm { ~ t o t a l } } ^ { 2 }$ where $R _ { \mathrm { ~ s u b s e t } } ^ { 2 }$ is the marginal $R ^ { 2 }$ of a model containing just climate or just species trait variables and $R _ { \mathrm { t o t a l } } ^ { 2 }$ is that of the top model containing all variables.
 
@@ -290,381 +257,7 @@ Drivers of bee phenology
 
 1595
 
-| Stage | Group | Date of bare ground (DOY) | Estimated phenology (DOY) |
-| --- | --- | --- | --- |
-| Emergence | Above ground | ~118 | ~153 |
-| Emergence | Below ground | ~118 | ~177 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Peak | Above ground | ~118 | ~184 |
-| Peak | Below ground | ~118 | ~184 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Senescence | Above ground | ~118 | ~210 |
-| Senescence | Below ground | ~118 | ~200 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~170 |
-| Emergence | Adults | ~118 | ~165 |
-| Emergence | Pupae/Prepupae | ~118 | ~195 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~192 |
-| Peak | Adults | ~118 | ~176 |
-| Peak | Pupae/Prepupae | ~118 | ~205 |
-| Senescence | Adults | ~118 | ~195 |
-| Senescence | Pupae/Prepupae | ~118 | ~220 |
-| Senescence | Adults | ~118 | ~200 |
-| Senescence | Pupae/Prepupae | ~118 | ~230 |
-| Emergence | Adults | ~118 | ~165 |
+<table><tr><td>Stage</td><td>Group</td><td>Date of bare ground (DOY)</td><td>Estimated phenology (DOY)</td></tr><tr><td>Emergence</td><td>Above ground</td><td>~118</td><td>~153</td></tr><tr><td>Emergence</td><td>Below ground</td><td>~118</td><td>~177</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Peak</td><td>Above ground</td><td>~118</td><td>~184</td></tr><tr><td>Peak</td><td>Below ground</td><td>~118</td><td>~184</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Senescence</td><td>Above ground</td><td>~118</td><td>~210</td></tr><tr><td>Senescence</td><td>Below ground</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~170</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr><tr><td>Emergence</td><td>Pupae/Prepupae</td><td>~118</td><td>~195</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~192</td></tr><tr><td>Peak</td><td>Adults</td><td>~118</td><td>~176</td></tr><tr><td>Peak</td><td>Pupae/Prepupae</td><td>~118</td><td>~205</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~195</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~220</td></tr><tr><td>Senescence</td><td>Adults</td><td>~118</td><td>~200</td></tr><tr><td>Senescence</td><td>Pupae/Prepupae</td><td>~118</td><td>~230</td></tr><tr><td>Emergence</td><td>Adults</td><td>~118</td><td>~165</td></tr></table>
 
 Figure 4 Bee species that nest above ground and those that overwinter as adults are more sensitive to variation in snowmelt timing than species that nest below ground and that overwinter as pupae or prepupae. The top three panels show predicted phenophase responses to snowmelt based on nesting location, and the bottom panels show the same based on overwintering stage. The slope of the lines represents the sensitivity of each phenophase to snowmelt timing. P-values are presented for the two significant differences in slope at the α = 0.01 level.
 
@@ -937,11 +530,7 @@ Weiss, S. B., Murphy, D. D., Ehrlich, P. R., & Metzler, C. F. (1993). Adult emer
 
 **Table S1**. The variance attributed to each random effect and residual variance.
 
-| **Phenophase** | **Year variance** | **Site variance** | **Species variance** | **Residual variance** |
-| --- | --- | --- | --- | --- |
-| Emergence | 221.14 | 193.01 | 74.95 | 39.03 |
-| Peak | 64.09 | 36.61 | 98.45 | 20.61 |
-| Senescence | 21.77 | 46.24 | 170.66 | 42.46 |
+<table><tr><td>**Phenophase**</td><td>**Year variance**</td><td>**Site variance**</td><td>**Species variance**</td><td>**Residual variance**</td></tr><tr><td>Emergence</td><td>221.14</td><td>193.01</td><td>74.95</td><td>39.03</td></tr><tr><td>Peak</td><td>64.09</td><td>36.61</td><td>98.45</td><td>20.61</td></tr><tr><td>Senescence</td><td>21.77</td><td>46.24</td><td>170.66</td><td>42.46</td></tr></table>
 
 **Figure S4**. The proportion of variance attributed to years and sites decreases across phenophases, while  it increases across phenophases for species. The proportional residual variance increases slightly across phenophases.
 
@@ -957,26 +546,7 @@ Weiss, S. B., Murphy, D. D., Ehrlich, P. R., & Metzler, C. F. (1993). Adult emer
 
 **Table S2**. Information on the sites used in the analysis.
 
-| **Site name** | **Elevation (m)** | **Latitude** | **Longitude** | **Aspect** | **Slope** |
-| --- | --- | --- | --- | --- | --- |
-| Almont Curve | 2456 | 38.66125 | -106.85152 | 168.69 | 10.825 |
-| Almont | 2569 | 38.65622 | -106.86203 | 111.801 | 15.07 |
-| CDOT | 2588 | 38.78257 | -106.87002 | 243.435 | 6.37937 |
-| Lypps | 2639 | 38.74812 | -106.83269 | 263.66 | 6.45795 |
-| Tuttle | 2877 | 38.954751 | -106.988704 | 243.435 | 3.1996 |
-| Willey | 2884 | 38.955971 | -106.988482 | 261.87 | 5.05115 |
-| Kettle Ponds | 2884 | 38.94435 | -106.97174 | 18.4349 | 2.26364 |
-| Beaver | 2921 | 38.961597 | -106.993975 | 45 | 5.05115 |
-| Seans | 2931 | 38.964099 | -106.992616 | 225 | 8.04947 |
-| Rustlers | 2977 | 38.9885 | -107.00512 | 231.34 | 9.09464 |
-| Davids | 2979 | 38.962124 | -106.986896 | 206.565 | 12.6044 |
-| Gothic | 3001 | 38.963088 | -106.994866 | 71.565 | 11.18 |
-| Little | 3061 | 38.96732 | -106.96885 | 135 | 8.04947 |
-| Hill | 3069 | 38.96677 | -106.97009 | 123.69 | 19.827 |
-| Copper | 3072 | 38.96896 | -106.96801 | 102.529 | 12.9794 |
-| Snodgrass | 3224 | 38.92625 | -106.98172 | 118.74 | 23.8426 |
-| Elko | 3230 | 39.01245 | -107.05279 | 45 | 1.01275 |
-| Mexican Cut | 3438 | 39.02685 | -107.06513 | 51.3402 | 17.7528 |
+<table><tr><td>**Site name**</td><td>**Elevation (m)**</td><td>**Latitude**</td><td>**Longitude**</td><td>**Aspect**</td><td>**Slope**</td></tr><tr><td>Almont Curve</td><td>2456</td><td>38.66125</td><td>-106.85152</td><td>168.69</td><td>10.825</td></tr><tr><td>Almont</td><td>2569</td><td>38.65622</td><td>-106.86203</td><td>111.801</td><td>15.07</td></tr><tr><td>CDOT</td><td>2588</td><td>38.78257</td><td>-106.87002</td><td>243.435</td><td>6.37937</td></tr><tr><td>Lypps</td><td>2639</td><td>38.74812</td><td>-106.83269</td><td>263.66</td><td>6.45795</td></tr><tr><td>Tuttle</td><td>2877</td><td>38.954751</td><td>-106.988704</td><td>243.435</td><td>3.1996</td></tr><tr><td>Willey</td><td>2884</td><td>38.955971</td><td>-106.988482</td><td>261.87</td><td>5.05115</td></tr><tr><td>Kettle Ponds</td><td>2884</td><td>38.94435</td><td>-106.97174</td><td>18.4349</td><td>2.26364</td></tr><tr><td>Beaver</td><td>2921</td><td>38.961597</td><td>-106.993975</td><td>45</td><td>5.05115</td></tr><tr><td>Seans</td><td>2931</td><td>38.964099</td><td>-106.992616</td><td>225</td><td>8.04947</td></tr><tr><td>Rustlers</td><td>2977</td><td>38.9885</td><td>-107.00512</td><td>231.34</td><td>9.09464</td></tr><tr><td>Davids</td><td>2979</td><td>38.962124</td><td>-106.986896</td><td>206.565</td><td>12.6044</td></tr><tr><td>Gothic</td><td>3001</td><td>38.963088</td><td>-106.994866</td><td>71.565</td><td>11.18</td></tr><tr><td>Little</td><td>3061</td><td>38.96732</td><td>-106.96885</td><td>135</td><td>8.04947</td></tr><tr><td>Hill</td><td>3069</td><td>38.96677</td><td>-106.97009</td><td>123.69</td><td>19.827</td></tr><tr><td>Copper</td><td>3072</td><td>38.96896</td><td>-106.96801</td><td>102.529</td><td>12.9794</td></tr><tr><td>Snodgrass</td><td>3224</td><td>38.92625</td><td>-106.98172</td><td>118.74</td><td>23.8426</td></tr><tr><td>Elko</td><td>3230</td><td>39.01245</td><td>-107.05279</td><td>45</td><td>1.01275</td></tr><tr><td>Mexican Cut</td><td>3438</td><td>39.02685</td><td>-107.06513</td><td>51.3402</td><td>17.7528</td></tr></table>
 
 **Table S3**. A list of the species, number of individuals, associated traits, number of individuals used in the analysis (#), and the number of phenophase estimates that we were able to make from the time-series data. Abbreviations are as follows: ITD is intertegular distance, Em. is emergence, and Sen. is senescence. Because there have not been species-levels trait studies on every species in the analysis, some nest location and overwintering stage traits have been inferred from other species in the same genera (marked with an \* in the references column). We also compared these trait values with those reported in papers summarizing traits by genus (Mitchell 1960, Mitchell 1962, Stephen et al. 1969, Michener 2007, Harmon-Threatt 2020).
 
@@ -1110,31 +680,11 @@ Thorp, R. W. 1969. Systematics and ecology of bees of the subgenus Diandrena (Hy
 
 **Table S4**. Coefficients for species-specific shifts in phenophases in response to snowmelt timing (Figure 1). The three phenophases (emergence, peak, senescence) are separated by commas.
 
-| **Species** | **Slope** | **SE** | ***t*** |
-| --- | --- | --- | --- |
-| *Dufourea harveyi* | 0.22, 0.18, NA | 0.32, 0.30, NA | 0.68, 0.59, NA |
-| *Halictus rubicundus* | 0.42, NA, 0.13 | 0.46, NA, 0.57 | 0.42, NA, 0.22 |
-| *Halictus virgatellus* | -0.01, -0.09, 1.45 | 1.12, 0.39, 0.66 | -0.21,-0.68, 2.01 |
-| *Hoplitis fulgida* | 0.86, 0.83, NA | 0.63, 0.39, NA | 1.02, 1.68, NA |
-| *Hoplitis robusta* | 0.52, 0.84, 0.5 | 0.61, 0.42, 0.9 | 0.48, 1.59, 0.41 |
-| *Hylaeus annulatus* | 0.65, 0.5, NA | 0.38, 0.35, NA | 1.13, 0.92, NA |
-| *Lasioglossum sedi* | NA, 0.8, -0.14 | NA, 0.51, 0.59 | NA, 1.22, -0.45 |
-| *Panurginus cressoniellus* | 0.56, 0.29, 0.71 | 0.46, 0.36, 0.74 | 0.74, 0.31, 0.79 |
-| *Panurginus ineptus* | -0.07, 0.09, 0.19, | 0.47, 0.35, 0.66 | -0.62, -0.24, 0.1 |
-| *Pseudopanurgus bakeri* | 0.53, 0.09, -0.25 | 0.39, 0.37, 0.73 | 0.79, -0.24,-0.52 |
+<table><tr><td>**Species**</td><td>**Slope**</td><td>**SE**</td><td>***t***</td></tr><tr><td>*Dufourea harveyi*</td><td>0.22, 0.18, NA</td><td>0.32, 0.30, NA</td><td>0.68, 0.59, NA</td></tr><tr><td>*Halictus rubicundus*</td><td>0.42, NA, 0.13</td><td>0.46, NA, 0.57</td><td>0.42, NA, 0.22</td></tr><tr><td>*Halictus virgatellus*</td><td>-0.01, -0.09, 1.45</td><td>1.12, 0.39, 0.66</td><td>-0.21,-0.68, 2.01</td></tr><tr><td>*Hoplitis fulgida*</td><td>0.86, 0.83, NA</td><td>0.63, 0.39, NA</td><td>1.02, 1.68, NA</td></tr><tr><td>*Hoplitis robusta*</td><td>0.52, 0.84, 0.5</td><td>0.61, 0.42, 0.9</td><td>0.48, 1.59, 0.41</td></tr><tr><td>*Hylaeus annulatus*</td><td>0.65, 0.5, NA</td><td>0.38, 0.35, NA</td><td>1.13, 0.92, NA</td></tr><tr><td>*Lasioglossum sedi*</td><td>NA, 0.8, -0.14</td><td>NA, 0.51, 0.59</td><td>NA, 1.22, -0.45</td></tr><tr><td>*Panurginus cressoniellus*</td><td>0.56, 0.29, 0.71</td><td>0.46, 0.36, 0.74</td><td>0.74, 0.31, 0.79</td></tr><tr><td>*Panurginus ineptus*</td><td>-0.07, 0.09, 0.19,</td><td>0.47, 0.35, 0.66</td><td>-0.62, -0.24, 0.1</td></tr><tr><td>*Pseudopanurgus bakeri*</td><td>0.53, 0.09, -0.25</td><td>0.39, 0.37, 0.73</td><td>0.79, -0.24,-0.52</td></tr></table>
 
 **Table S5**. Coefficients of standardized effect sizes from the full model of bee phenology (Figure 2). The three phenophases (emergence, peak, senescence) are separated by commas. Significant effects at the α=0.05 level are bold, but all effects were determined to be important by the model averaging protocol.
 
-| **Predictor** | **Slope** | **SE** | ***z*** | ***P*** |
-| --- | --- | --- | --- | --- |
-| Snowmelt date | **11.52**, **12.82**, **7.81** | 2.68, 2.42, 2.44 | 4.28, 5.26, 3.19 | &lt;0.01, &lt;0.01, &lt;0.01 |
-| Summer rainfall | **10.04**, 2.73, -1.85 | 2.12, 2.06, 2.12 | 4.72, 1.32, 0.87 | &lt;0.01, 0.19, 0.38 |
-| Maximum temperature | **-7.34**, 1.40, -0.90 | 2.41, 2.22, 2.47 | 3.04, 0.63, 0.36 | &lt;0.01, 0.53, 0.72 |
-| Elevation | **13.57**, **7.76**, -5.92 | 3.23, 3.65, 4.05 | 4.15, 2.12, 1.46 | &lt;0.01, 0.03, 0.15 |
-| Solar Incidence | -6.13, -1.68, 4.03 | 3.40, 3.27, 4.04 | 1.80, 0.56, 1.00 | 0.07, 0.57, 0.32 |
-| Body Mass | 2.08, -2.58, -2.79 | 3.23, 3.26, 3.57 | 0.64, 0.79, 0.78 | 0.54, 0.43, 0.43 |
-| Nest Location (below ground) | **11.21**, -4.57, **-9.82** | 4.30, 3.84, 4.29 | 2.60, 1.19, 2.28 | &lt;0.01, 0.24, 0.02 |
-| Overwintering stage (prepupae) | 1.91, **11.20**, **20.91** | 3.52, 3.23, 3.59 | 0.54, 3.45, 5.81 | 0.59, &lt;0.01, &lt;0.01 |
+<table><tr><td>**Predictor**</td><td>**Slope**</td><td>**SE**</td><td>***z***</td><td>***P***</td></tr><tr><td>Snowmelt date</td><td>**11.52**, **12.82**, **7.81**</td><td>2.68, 2.42, 2.44</td><td>4.28, 5.26, 3.19</td><td>&amp;lt;0.01, &amp;lt;0.01, &amp;lt;0.01</td></tr><tr><td>Summer rainfall</td><td>**10.04**, 2.73, -1.85</td><td>2.12, 2.06, 2.12</td><td>4.72, 1.32, 0.87</td><td>&amp;lt;0.01, 0.19, 0.38</td></tr><tr><td>Maximum temperature</td><td>**-7.34**, 1.40, -0.90</td><td>2.41, 2.22, 2.47</td><td>3.04, 0.63, 0.36</td><td>&amp;lt;0.01, 0.53, 0.72</td></tr><tr><td>Elevation</td><td>**13.57**, **7.76**, -5.92</td><td>3.23, 3.65, 4.05</td><td>4.15, 2.12, 1.46</td><td>&amp;lt;0.01, 0.03, 0.15</td></tr><tr><td>Solar Incidence</td><td>-6.13, -1.68, 4.03</td><td>3.40, 3.27, 4.04</td><td>1.80, 0.56, 1.00</td><td>0.07, 0.57, 0.32</td></tr><tr><td>Body Mass</td><td>2.08, -2.58, -2.79</td><td>3.23, 3.26, 3.57</td><td>0.64, 0.79, 0.78</td><td>0.54, 0.43, 0.43</td></tr><tr><td>Nest Location (below ground)</td><td>**11.21**, -4.57, **-9.82**</td><td>4.30, 3.84, 4.29</td><td>2.60, 1.19, 2.28</td><td>&amp;lt;0.01, 0.24, 0.02</td></tr><tr><td>Overwintering stage (prepupae)</td><td>1.91, **11.20**, **20.91**</td><td>3.52, 3.23, 3.59</td><td>0.54, 3.45, 5.81</td><td>0.59, &amp;lt;0.01, &amp;lt;0.01</td></tr></table>
 
 **Table S6**. Marginal and conditional R<sup>2</sup> values for the three phenology top models, as well as the proportion of variance explained by subsetted climate and trait models (Figure 3).
 

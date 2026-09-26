@@ -4,75 +4,23 @@
 
 Sheets
 
-| log_rules | Used within the R script to manage log transformations |
-| --- | --- |
-| Dataset | The dataset |
-| Dataset | The dataset |
+<table><tr><td>log_rules</td><td>Used within the R script to manage log transformations</td></tr><tr><td>Dataset</td><td>The dataset</td></tr><tr><td>Dataset</td><td>The dataset</td></tr></table>
 
-| Columns |  |
-| --- | --- |
-| IUCNName | Name of the species following the IUCN |
-| Status | IUCN conservation status |
-| CRITERIA | IUCN criteria in which the IUCN assessment was based |
-| YEAR_PUB | YEar in which the IUCN assessment was published |
-| Realm | Biogeographical realm |
-| IUCN_RAW_THREATS | Threats for the species listed on the IUCN, including sub-threats |
-| IUCN_THREATS | Threats for the species listed on the IUCN, including sub-threats |
-| IUCN_THREATS_CATEG | Threats for the species listed on the IUCN, not including sub-threats |
-| IUCN_N_THREATS | Number of threat categories |
+<table><tr><td>Columns</td><td></td></tr><tr><td>IUCNName</td><td>Name of the species following the IUCN</td></tr><tr><td>Status</td><td>IUCN conservation status</td></tr><tr><td>CRITERIA</td><td>IUCN criteria in which the IUCN assessment was based</td></tr><tr><td>YEAR_PUB</td><td>YEar in which the IUCN assessment was published</td></tr><tr><td>Realm</td><td>Biogeographical realm</td></tr><tr><td>IUCN_RAW_THREATS</td><td>Threats for the species listed on the IUCN, including sub-threats</td></tr><tr><td>IUCN_THREATS</td><td>Threats for the species listed on the IUCN, including sub-threats</td></tr><tr><td>IUCN_THREATS_CATEG</td><td>Threats for the species listed on the IUCN, not including sub-threats</td></tr><tr><td>IUCN_N_THREATS</td><td>Number of threat categories</td></tr></table>
 
-| 13 traits: |
-| --- |
-| BODY SIZE |
-| OFFSPRING SIZE |
-| FECUNDITY |
-| GENERATION LENGTH |
-| DIET BREADTH |
-| TROPHIC LEVEL |
-| DISPERSAL_ABILITY |
-| MICROHABITAT |
-| ALTITUDE_MIN |
-| ALTITUDE_MAX |
-| GEOGRAPHICAL RANGE SIZE |
+<table><tr><td>13 traits:</td></tr><tr><td>BODY SIZE</td></tr><tr><td>OFFSPRING SIZE</td></tr><tr><td>FECUNDITY</td></tr><tr><td>GENERATION LENGTH</td></tr><tr><td>DIET BREADTH</td></tr><tr><td>TROPHIC LEVEL</td></tr><tr><td>DISPERSAL_ABILITY</td></tr><tr><td>MICROHABITAT</td></tr><tr><td>ALTITUDE_MIN</td></tr><tr><td>ALTITUDE_MAX</td></tr><tr><td>GEOGRAPHICAL RANGE SIZE</td></tr></table>
 
-| Each trait has 6 subcolumns: |  |
-| --- | --- |
-| Subcolumns |  |
-| _FINAL | trait value |
-| proxy | proxy for the trait used (body length, body mass as proxy of body size, etc) |
-| unit/levels | e.g. grams, mm |
-| resolution | whether the trait value is retrieved from species genus, or family level. |
+<table><tr><td>Each trait has 6 subcolumns:</td><td></td></tr><tr><td>Subcolumns</td><td></td></tr><tr><td>_FINAL</td><td>trait value</td></tr><tr><td>proxy</td><td>proxy for the trait used (body length, body mass as proxy of body size, etc)</td></tr><tr><td>unit/levels</td><td>e.g. grams, mm</td></tr><tr><td>resolution</td><td>whether the trait value is retrieved from species genus, or family level.</td></tr></table>
 
 dHFP
 
-| comments | extra information |
-| --- | --- |
-| references | where the trait value was obtained |
+<table><tr><td>comments</td><td>extra information</td></tr><tr><td>references</td><td>where the trait value was obtained</td></tr></table>
 
 <!-- page 2 of 4 -->
 
 ## log\_rules
 
-| Trait | Mammals | Birds | Reptiles | Amphibians | Fishes | Dragonflies | Butterflies | Grasshoppers | Spiders | Snails | Bryophytes | Ferns | Gymnosperms | Monocots | Legumes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BODY_SIZE | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| OFFSPRING_SIZE | True | True | True | True | True | True | True | False | False | True | True | False | True | True | True |
-| RELATIVE_OFFSPRING_SIZE | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| FECUNDITY | True | True | True | True | False | False | False | False | False | False | False | False | False | False | False |
-| GENERATION_LENGTH | True | True | True | True | True | False | False | False | False | False | False | False | True | True | True |
-| DIET_BREADTH | True | True | False | False | False | False | False | False | False | True | False | False | False | False | False |
-| TROPHIC_LEVEL | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| MICROHABITAT | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| DISPERSAL_ABILITY | True | True | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| HABITAT_BREADTH | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| HABITAT_BREADTH_RESIDS | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| ALTITUDINAL_RANGE | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| RELATIVE_ALTITUDINAL_RANGE | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| GEOGRAPHICAL_RANGE_SIZE | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| HFP2009 | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| dHFP | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| HUMAN_FOOTPRINT | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| HABITAT_CONVERSION | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
+<table><tr><td>Trait</td><td>Mammals</td><td>Birds</td><td>Reptiles</td><td>Amphibians</td><td>Fishes</td><td>Dragonflies</td><td>Butterflies</td><td>Grasshoppers</td><td>Spiders</td><td>Snails</td><td>Bryophytes</td><td>Ferns</td><td>Gymnosperms</td><td>Monocots</td><td>Legumes</td></tr><tr><td>BODY_SIZE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>OFFSPRING_SIZE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td><td>True</td><td>True</td><td>False</td><td>True</td><td>True</td><td>True</td></tr><tr><td>RELATIVE_OFFSPRING_SIZE</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>FECUNDITY</td><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>GENERATION_LENGTH</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td></tr><tr><td>DIET_BREADTH</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>TROPHIC_LEVEL</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>MICROHABITAT</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>DISPERSAL_ABILITY</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>HABITAT_BREADTH</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>HABITAT_BREADTH_RESIDS</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>ALTITUDINAL_RANGE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>RELATIVE_ALTITUDINAL_RANGE</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>GEOGRAPHICAL_RANGE_SIZE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>HFP2009</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>dHFP</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>HUMAN_FOOTPRINT</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>HABITAT_CONVERSION</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr></table>
 
 <!-- page 3 of 4 -->
 
@@ -101322,11 +101270,4 @@ dHFP
 
 ## Change\_log
 
-| 20210910.0 | added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals |
-| --- | --- |
-| 20210929.0 | added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds |
-| 20211005.0 | excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator |
-| 20211130.0 | changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE |
-| 20220503.0 | Replaced assessments that in the 2021 IUCN moved from threatened -> LC or LC -> threatened: Turdus ludoviciae -> Cyanochen cyanoptera; Aspidoscelis inornata -> Pseudemys gorzugi; Enteromius dialonensis -> Alcolapia grahami; Boesemania microlepis -> Ompok weberi; Elaphoglossum kivuense -> Trachypteris drakeana; Asplenium majoricum -> Asplenium aureum. Added an extra bird in "extra_bird" in case needed |
-| 20220503.0 | Replaced all blank cells with NAs |
-| 20220730.0 | Removed old sheets, cleaning |
+<table><tr><td>20210910.0</td><td>added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals</td></tr><tr><td>20210929.0</td><td>added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds</td></tr><tr><td>20211005.0</td><td>excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator</td></tr><tr><td>20211130.0</td><td>changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE</td></tr><tr><td>20220503.0</td><td>Replaced assessments that in the 2021 IUCN moved from threatened -&gt; LC or LC -&gt; threatened: Turdus ludoviciae -&gt; Cyanochen cyanoptera; Aspidoscelis inornata -&gt; Pseudemys gorzugi; Enteromius dialonensis -&gt; Alcolapia grahami; Boesemania microlepis -&gt; Ompok weberi; Elaphoglossum kivuense -&gt; Trachypteris drakeana; Asplenium majoricum -&gt; Asplenium aureum. Added an extra bird in "extra_bird" in case needed</td></tr><tr><td>20220503.0</td><td>Replaced all blank cells with NAs</td></tr><tr><td>20220730.0</td><td>Removed old sheets, cleaning</td></tr></table>

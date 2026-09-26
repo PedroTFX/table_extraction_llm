@@ -196,17 +196,9 @@ A
 
 B
 
-| Urbanisation | Wild bee indicator species |
-| --- | --- |
-| high | Bombus lapidariusLasioglossum morio (a) |
-| medium | Andrena dorsataAndrena flavipes |
-| low | Andrena subopaca |
+<table><tr><td>Urbanisation</td><td>Wild bee indicator species</td></tr><tr><td>high</td><td>Bombus lapidariusLasioglossum morio (a)</td></tr><tr><td>medium</td><td>Andrena dorsataAndrena flavipes</td></tr><tr><td>low</td><td>Andrena subopaca</td></tr></table>
 
-| Urbanisation | Hoverfly indicator species |
-| --- | --- |
-| high | - |
-| medium | - |
-| low | Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b) |
+<table><tr><td>Urbanisation</td><td>Hoverfly indicator species</td></tr><tr><td>high</td><td>-</td></tr><tr><td>medium</td><td>-</td></tr><tr><td>low</td><td>Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b)</td></tr></table>
 
 Fig. 2   A Abundances of the indicator species L. morio (high urbanisation) and Helophilus trivittatus (low urbanisation) in the study sites across the urban matrix of Berlin. B List of indicator species for the
 
@@ -463,149 +455,10 @@ Oecologia (2022) 199:165–179
 
 ## Bees
 
-| Bee species | Caught individuals | Nesting behavior | Sociality | Diet | Active Flight Time (number of months) | Bodysize |
-| --- | --- | --- | --- | --- | --- | --- |
-| Andrena alfkenella | 1 | endogeic | solitary | polylectic | 4 | 6.5 |
-| Andrena argentata | 19 | endogeic | solitary | polylectic | 4.5 | 9 |
-| Andrena barbilabris | 2 | endogeic | solitary | polylectic | 4.3 | 11.5 |
-| Andrena bimaculata | 1 | endogeic | solitary | polylectic | 4 | 13.5 |
-| Andrena cineraria | 1 | endogeic | solitary | polylectic | 2 | 14 |
-| Andrena denticulata | 1 | endogeic | solitary | oligolectic | 1.6 | 11 |
-| Andrena dorsata | 11 | endogeic | solitary | polylectic | 3 | 9.5 |
-| Andrena flavipes | 44 | endogeic | solitary | polylectic | 4.6 | 12 |
-| Andrena haemorrhoa | 2 | endogeic | solitary | polylectic | 2.3 | 11 |
-| Andrena helvola | 1 | endogeic | solitary | polylectic | 2 | 11.5 |
-| Andrena nigroaenea | 8 | endogeic | solitary | polylectic | 2 | 14 |
-| Adrena nigrospina | 4 | endogeic | solitary | polylectic | 4.5 | 14 |
-| Andrena nitida | 14 | endogeic | solitary | polylectic | 1.8 | 15 |
-| Andrena semilaevis | 1 | endogeic | solitary | polylectic | 1.8 | 6.5 |
-| Andrena subopaca | 13 | endogeic | solitary | polylectic | 3.5 | 7 |
-| Andrena tibialis | 1 | endogeic | solitary | polylectic | 4 | 14 |
-| Anthidium punctatum | 1 | endogeic / hypergeic | solitary | polylectic | 2.3 | 8.5 |
-| Anthophora furcata | 2 | hypergeic | solitary | oligolectic | 1.8 | 11.5 |
-| Bombus bohemicus | 3 | cleptoparasitic | kleptoparasitic | / | 5.5 | 24 |
-| Bombus hortorum | 2 | endogeic / hypergeic | social | polylectic | 5.5 | 19.5 |
-| Bombus hypnorum | 5 | hyper | social | polylectic | 5.3 | 18.5 |
-| Bombus lapidarius | 15 | endogeic / hypergeic | social | polylectic | 6.6 | 21 |
-| Bombus lucorum | 3 | endogeic | social | polylectic | 5.5 | 19.5 |
-| Bombus pascuorum | 23 | endogeic / hypergeic | social | polylectic | 7.5 | 16.5 |
-| Bombus pratorum | 9 | hypergeic | social | polylectic | 4.5 | 16 |
-| Bombus ruderarius | 1 | hypergeic | social | polylectic | 4.8 | 17 |
-| Bombus rupestris | 26 | cleptoparasitic | kleptoparasitic | / | 4 | 20 |
-| Bombus soroeensis | 2 | endogeic | social | polylectic | 5.3 | 16 |
-| Bombus sylvarum | 1 | endogeic / hypergeic | social | polylectic | 7 | 17 |
-| Bombus sylvestris | 3 | cleptoparasitic | social | / | 4.5 | 15 |
-| Bombus terrestris | 67 | endogeic | social | polylectic | 7 | 21.5 |
-| Bombus vestalis | 6 | cleptoparasitic | kleptoparasitic | / | 4.5 | 21 |
-| Chelostoma rapunculi | 1 | hypergeic | solitary | oligolectic | 2.5 | 9 |
-| Coelioxys conica | 2 | cleptoparasitic | kleptoparasitic | / | 1.8 | 11.5 |
-| Dasypoda hirtipes | 21 | endogeic | solitary | oligolectic | 2 | 14 |
-| Halictus confusus | 3 | endogeic | social | polylectic | 5.5 | 7 |
-| Halictus rubicundus | 11 | endogeic | solitary / social | polylectic | 5.3 | 10.5 |
-| Halictus sexcinctus | 6 | endogeic | solitary | polylectic | 4.8 | 14.5 |
-| Halictus subauratus | 5 | endogeic | social | polylectic | 5.5 | 7.5 |
-| Halictus submediterraneus | 2 | endogeic | social | polylectic | 5.5 | 5.5 |
-| Halictus tumulorum | 17 | hypergeic | social | polylectic | 5 | 7 |
-| Heriades crenulatus | 3 | hypergeic | solitary | oligolectic | 2.6 | 6.5 |
-| Heriades truncorum | 3 | hypergeic | solitary | oligolectic | 3.5 | 6.5 |
-| Hoplitis adunca | 6 | hypergeic | solitary | oligolectic | 3.5 | 12 |
-| Hoplitis anthocopoides | 1 | hypergeic | solitary | oligolectic | 1.5 | 9.5 |
-| Hoplitis leucomelana | 2 | hypergeic | solitary | polylectic | 2.3 | 8 |
-| Hylaeus angustatus | 1 | hypergeic | solitary | polylectic | 3.5 | 5.5 |
-| Hylaeus brevicornis | 1 | hypergeic | solitary | polylectic | 3.3 | 5 |
-| Hylaeus communis | 46 | hypergeic | solitary | polylectic | 4.5 | 6.5 |
-| Hylaeus confusus | 3 | hypergeic | solitary | polylectic | 5 | 7 |
-| Hylaeus dilatatus | 3 | hypergeic | solitary | polylectic | 4 | 6.5 |
-| Hylaeus gredleri | 8 | hypergeic | solitary | polylectic | 4 | 5.5 |
-| Hylaeus hyalinatus | 20 | hypergeic | solitary | polylectic | 3.6 | 6.5 |
-| Hylaeus punctatus | 1 | hypergeic | solitary | polylectic | 2.8 | 5.5 |
-| Hylaeus signatus | 1 | hypergeic | solitary | oligolectic | 3.6 | 8 |
-| Hylaeus sinuatus | 1 | hypergeic | solitary | polylectic | 2.3 | 5.5 |
-| Lasioglossum aeratum | 6 | endogeic | social | polylectic | 4.3 | 5 |
-| Lasioglossum albipes | 1 | endogeic | social | polylectic | 5.5 | 8 |
-| Lasioglossum brevicorne | 1 | endogeic | social | oligolectic | 6 | 6.5 |
-| Lasioglossum calceatum | 95 | endogeic | social | polylectic | 7.5 | 8.5 |
-| Lasioglossum fulvicorne | 1 | endogeic | solitary | polylectic | 4.8 | 6.5 |
-| Lasioglossum laticeps | 51 | endogeic | social | polylectic | 6 | 6.5 |
-| Lasioglossum leucopus | 1 | endogeic | solitary | polylectic | 5.5 | 5 |
-| Lasioglossum leucozonium | 18 | endogeic | solitary | polylectic | 6.5 | 9 |
-| Lasioglossum lucidulum | 25 | endogeic | solitary | polylectic | 5 | 4.5 |
-| Lasioglossum monstrificum | 7 | endogeic | solitary | polylectic | 6 | 6.5 |
-| Lasioglossum morio | 139 | endogeic | social | polylectic | 6 | 5.5 |
-| Lasioglossum pauxillum | 19 | endogeic | social | polylectic | 5.8 | 5.5 |
-| Lasioglossum quadrinotatum | 2 | endogeic | solitary | polylectic | 6 | 7 |
-| Lasioglossum setulosum | 2 | endogeic | unknown | polylectic | 6 | 5 |
-| Lasioglossum sexnotatum | 1 | endogeic | solitary | polylectic | 6 | 10.5 |
-| Lasioglossum sexstrigatum | 30 | endogeic | solitary | polylectic | 6 | 6.5 |
-| Lasioglossum villosulum | 2 | endogeic | solitary | polylectic | 7 | 6.5 |
-| Macropis europaea | 1 | endogeic | solitary | oligolectic | 2.3 | 8.5 |
-| Megachile circumcincta | 6 | endogeic / hypergeic | solitary | polylectic | 2.6 | 12 |
-| Megachile ligniseca | 7 | hypergeic | solitary | polylectic | 2.3 | 14 |
-| Megachile maritima | 1 | endogeic | solitary | polylectic | 2.5 | 14.5 |
-| Megachile rotundata | 2 | hypergeic | solitary | polylectic | 1.8 | 8.5 |
-| Megachile versicolor | 2 | endogeic / hypergeic | solitary | polylectic | 4.3 | 11.5 |
-| Megachile willughbiella | 1 | endogeic / hypergeic | solitary | polylectic | 2.3 | 13.5 |
-| Melecta albifrons | 2 | cleptoparasitic | kleptoparasitic | / | 1.8 | 13 |
-| Melitta leporina | 1 | endogeic | solitary | oligolectic | 1.5 | 11.5 |
-| Nomada alboguttata | 1 | cleptoparasitic | kleptoparasitic | / | 4.8 | 8 |
-| Nomada flavoguttata | 1 | cleptoparasitic | kleptoparasitic | / | 5 | 6 |
-| Nomada flavopicta | 1 | cleptoparasitic | kleptoparasitic | / | 1.8 | 9.5 |
-| Nomada lathburiana | 1 | cleptoparasitic | kleptoparasitic | / | 2.6 | 11 |
-| Nomada moeschleri | 4 | cleptoparasitic | kleptoparasitic | / | 1.8 | 9.5 |
-| Nomada panzeri | 3 | cleptoparasitic | kleptoparasitic | / | 2.6 | 10.5 |
-| Nomada ruficornis | 3 | cleptoparasitic | kleptoparasitic | / | 1.5 | 10 |
-| Osmia bicolor | 1 | hypergeic | solitary | polylectic | 3 | 10.5 |
-| Osmia bicornis | 15 | hypergeic | solitary | polylectic | 2.5 | 10 |
-| Osmia brevicornis | 1 | hypergeic | solitary | oligolectic | 3.3 | 11 |
-| Osmia mustelina | 2 | hypergeic | solitary | polylectic | 1.8 | 13.5 |
-| Panurgus calcaratus | 4 | endogeic | solitary | oligolectic | 2.5 | 8 |
-| Sphecodes albilabris | 3 | cleptoparasitic | kleptoparasitic | / | 3.1 | 12.5 |
-| Sphecodes crassus | 1 | cleptoparasitic | kleptoparasitic | / | 5 | 6.5 |
-| Sphecodes ferruginatus | 1 | cleptoparasitic | kleptoparasitic | / | 5 | 7.5 |
-| Sphecodes longulus | 3 | cleptoparasitic | kleptoparasitic | / | 6 | 5.25 |
-| Sphecodes miniatus | 1 | cleptoparasitic | kleptoparasitic | / | 6 | 5.5 |
-| Spheocdes monilicornis | 3 | cleptoparasitic | kleptoparasitic | / | 6 | 8.5 |
-| Sphecodes niger | 1 | cleptoparasitic | kleptoparasitic | / | 6 | 5.5 |
-| Sphecodes pellucidus | 1 | cleptoparasitic | kleptoparasitic | / | 7.3 | 9 |
-| Sphecodes puncticeps | 2 | cleptoparasitic | kleptoparasitic | / | 6 | 6 |
-| Stelis breviuscula | 2 | cleptoparasitic | kleptoparasitic | / | 3 | 5.5 |
-| Systropha curvicornis | 11 | endogeic | solitary | oligolectic | 2 | 8.5 |
-| Tetraloniella dentata | 1 | endogeic | solitary | oligolectic | 2 | 13 |
+<table><tr><td>Bee species</td><td>Caught individuals</td><td>Nesting behavior</td><td>Sociality</td><td>Diet</td><td>Active Flight Time (number of months)</td><td>Bodysize</td></tr><tr><td>Andrena alfkenella</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4</td><td>6.5</td></tr><tr><td>Andrena argentata</td><td>19</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4.5</td><td>9</td></tr><tr><td>Andrena barbilabris</td><td>2</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4.3</td><td>11.5</td></tr><tr><td>Andrena bimaculata</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4</td><td>13.5</td></tr><tr><td>Andrena cineraria</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>2</td><td>14</td></tr><tr><td>Andrena denticulata</td><td>1</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>1.6</td><td>11</td></tr><tr><td>Andrena dorsata</td><td>11</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>3</td><td>9.5</td></tr><tr><td>Andrena flavipes</td><td>44</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4.6</td><td>12</td></tr><tr><td>Andrena haemorrhoa</td><td>2</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>2.3</td><td>11</td></tr><tr><td>Andrena helvola</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>2</td><td>11.5</td></tr><tr><td>Andrena nigroaenea</td><td>8</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>2</td><td>14</td></tr><tr><td>Adrena nigrospina</td><td>4</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4.5</td><td>14</td></tr><tr><td>Andrena nitida</td><td>14</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>1.8</td><td>15</td></tr><tr><td>Andrena semilaevis</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>1.8</td><td>6.5</td></tr><tr><td>Andrena subopaca</td><td>13</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>3.5</td><td>7</td></tr><tr><td>Andrena tibialis</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4</td><td>14</td></tr><tr><td>Anthidium punctatum</td><td>1</td><td>endogeic / hypergeic</td><td>solitary</td><td>polylectic</td><td>2.3</td><td>8.5</td></tr><tr><td>Anthophora furcata</td><td>2</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>1.8</td><td>11.5</td></tr><tr><td>Bombus bohemicus</td><td>3</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>5.5</td><td>24</td></tr><tr><td>Bombus hortorum</td><td>2</td><td>endogeic / hypergeic</td><td>social</td><td>polylectic</td><td>5.5</td><td>19.5</td></tr><tr><td>Bombus hypnorum</td><td>5</td><td>hyper</td><td>social</td><td>polylectic</td><td>5.3</td><td>18.5</td></tr><tr><td>Bombus lapidarius</td><td>15</td><td>endogeic / hypergeic</td><td>social</td><td>polylectic</td><td>6.6</td><td>21</td></tr><tr><td>Bombus lucorum</td><td>3</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.5</td><td>19.5</td></tr><tr><td>Bombus pascuorum</td><td>23</td><td>endogeic / hypergeic</td><td>social</td><td>polylectic</td><td>7.5</td><td>16.5</td></tr><tr><td>Bombus pratorum</td><td>9</td><td>hypergeic</td><td>social</td><td>polylectic</td><td>4.5</td><td>16</td></tr><tr><td>Bombus ruderarius</td><td>1</td><td>hypergeic</td><td>social</td><td>polylectic</td><td>4.8</td><td>17</td></tr><tr><td>Bombus rupestris</td><td>26</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>4</td><td>20</td></tr><tr><td>Bombus soroeensis</td><td>2</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.3</td><td>16</td></tr><tr><td>Bombus sylvarum</td><td>1</td><td>endogeic / hypergeic</td><td>social</td><td>polylectic</td><td>7</td><td>17</td></tr><tr><td>Bombus sylvestris</td><td>3</td><td>cleptoparasitic</td><td>social</td><td>/</td><td>4.5</td><td>15</td></tr><tr><td>Bombus terrestris</td><td>67</td><td>endogeic</td><td>social</td><td>polylectic</td><td>7</td><td>21.5</td></tr><tr><td>Bombus vestalis</td><td>6</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>4.5</td><td>21</td></tr><tr><td>Chelostoma rapunculi</td><td>1</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>2.5</td><td>9</td></tr><tr><td>Coelioxys conica</td><td>2</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>1.8</td><td>11.5</td></tr><tr><td>Dasypoda hirtipes</td><td>21</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>2</td><td>14</td></tr><tr><td>Halictus confusus</td><td>3</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.5</td><td>7</td></tr><tr><td>Halictus rubicundus</td><td>11</td><td>endogeic</td><td>solitary / social</td><td>polylectic</td><td>5.3</td><td>10.5</td></tr><tr><td>Halictus sexcinctus</td><td>6</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4.8</td><td>14.5</td></tr><tr><td>Halictus subauratus</td><td>5</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.5</td><td>7.5</td></tr><tr><td>Halictus submediterraneus</td><td>2</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.5</td><td>5.5</td></tr><tr><td>Halictus tumulorum</td><td>17</td><td>hypergeic</td><td>social</td><td>polylectic</td><td>5</td><td>7</td></tr><tr><td>Heriades crenulatus</td><td>3</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>2.6</td><td>6.5</td></tr><tr><td>Heriades truncorum</td><td>3</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>3.5</td><td>6.5</td></tr><tr><td>Hoplitis adunca</td><td>6</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>3.5</td><td>12</td></tr><tr><td>Hoplitis anthocopoides</td><td>1</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>1.5</td><td>9.5</td></tr><tr><td>Hoplitis leucomelana</td><td>2</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>2.3</td><td>8</td></tr><tr><td>Hylaeus angustatus</td><td>1</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>3.5</td><td>5.5</td></tr><tr><td>Hylaeus brevicornis</td><td>1</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>3.3</td><td>5</td></tr><tr><td>Hylaeus communis</td><td>46</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>4.5</td><td>6.5</td></tr><tr><td>Hylaeus confusus</td><td>3</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>5</td><td>7</td></tr><tr><td>Hylaeus dilatatus</td><td>3</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>4</td><td>6.5</td></tr><tr><td>Hylaeus gredleri</td><td>8</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>4</td><td>5.5</td></tr><tr><td>Hylaeus hyalinatus</td><td>20</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>3.6</td><td>6.5</td></tr><tr><td>Hylaeus punctatus</td><td>1</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>2.8</td><td>5.5</td></tr><tr><td>Hylaeus signatus</td><td>1</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>3.6</td><td>8</td></tr><tr><td>Hylaeus sinuatus</td><td>1</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>2.3</td><td>5.5</td></tr><tr><td>Lasioglossum aeratum</td><td>6</td><td>endogeic</td><td>social</td><td>polylectic</td><td>4.3</td><td>5</td></tr><tr><td>Lasioglossum albipes</td><td>1</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.5</td><td>8</td></tr><tr><td>Lasioglossum brevicorne</td><td>1</td><td>endogeic</td><td>social</td><td>oligolectic</td><td>6</td><td>6.5</td></tr><tr><td>Lasioglossum calceatum</td><td>95</td><td>endogeic</td><td>social</td><td>polylectic</td><td>7.5</td><td>8.5</td></tr><tr><td>Lasioglossum fulvicorne</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>4.8</td><td>6.5</td></tr><tr><td>Lasioglossum laticeps</td><td>51</td><td>endogeic</td><td>social</td><td>polylectic</td><td>6</td><td>6.5</td></tr><tr><td>Lasioglossum leucopus</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>5.5</td><td>5</td></tr><tr><td>Lasioglossum leucozonium</td><td>18</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>6.5</td><td>9</td></tr><tr><td>Lasioglossum lucidulum</td><td>25</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>5</td><td>4.5</td></tr><tr><td>Lasioglossum monstrificum</td><td>7</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>6</td><td>6.5</td></tr><tr><td>Lasioglossum morio</td><td>139</td><td>endogeic</td><td>social</td><td>polylectic</td><td>6</td><td>5.5</td></tr><tr><td>Lasioglossum pauxillum</td><td>19</td><td>endogeic</td><td>social</td><td>polylectic</td><td>5.8</td><td>5.5</td></tr><tr><td>Lasioglossum quadrinotatum</td><td>2</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>6</td><td>7</td></tr><tr><td>Lasioglossum setulosum</td><td>2</td><td>endogeic</td><td>unknown</td><td>polylectic</td><td>6</td><td>5</td></tr><tr><td>Lasioglossum sexnotatum</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>6</td><td>10.5</td></tr><tr><td>Lasioglossum sexstrigatum</td><td>30</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>6</td><td>6.5</td></tr><tr><td>Lasioglossum villosulum</td><td>2</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>7</td><td>6.5</td></tr><tr><td>Macropis europaea</td><td>1</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>2.3</td><td>8.5</td></tr><tr><td>Megachile circumcincta</td><td>6</td><td>endogeic / hypergeic</td><td>solitary</td><td>polylectic</td><td>2.6</td><td>12</td></tr><tr><td>Megachile ligniseca</td><td>7</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>2.3</td><td>14</td></tr><tr><td>Megachile maritima</td><td>1</td><td>endogeic</td><td>solitary</td><td>polylectic</td><td>2.5</td><td>14.5</td></tr><tr><td>Megachile rotundata</td><td>2</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>1.8</td><td>8.5</td></tr><tr><td>Megachile versicolor</td><td>2</td><td>endogeic / hypergeic</td><td>solitary</td><td>polylectic</td><td>4.3</td><td>11.5</td></tr><tr><td>Megachile willughbiella</td><td>1</td><td>endogeic / hypergeic</td><td>solitary</td><td>polylectic</td><td>2.3</td><td>13.5</td></tr><tr><td>Melecta albifrons</td><td>2</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>1.8</td><td>13</td></tr><tr><td>Melitta leporina</td><td>1</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>1.5</td><td>11.5</td></tr><tr><td>Nomada alboguttata</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>4.8</td><td>8</td></tr><tr><td>Nomada flavoguttata</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>5</td><td>6</td></tr><tr><td>Nomada flavopicta</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>1.8</td><td>9.5</td></tr><tr><td>Nomada lathburiana</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>2.6</td><td>11</td></tr><tr><td>Nomada moeschleri</td><td>4</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>1.8</td><td>9.5</td></tr><tr><td>Nomada panzeri</td><td>3</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>2.6</td><td>10.5</td></tr><tr><td>Nomada ruficornis</td><td>3</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>1.5</td><td>10</td></tr><tr><td>Osmia bicolor</td><td>1</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>3</td><td>10.5</td></tr><tr><td>Osmia bicornis</td><td>15</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>2.5</td><td>10</td></tr><tr><td>Osmia brevicornis</td><td>1</td><td>hypergeic</td><td>solitary</td><td>oligolectic</td><td>3.3</td><td>11</td></tr><tr><td>Osmia mustelina</td><td>2</td><td>hypergeic</td><td>solitary</td><td>polylectic</td><td>1.8</td><td>13.5</td></tr><tr><td>Panurgus calcaratus</td><td>4</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>2.5</td><td>8</td></tr><tr><td>Sphecodes albilabris</td><td>3</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>3.1</td><td>12.5</td></tr><tr><td>Sphecodes crassus</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>5</td><td>6.5</td></tr><tr><td>Sphecodes ferruginatus</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>5</td><td>7.5</td></tr><tr><td>Sphecodes longulus</td><td>3</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>6</td><td>5.25</td></tr><tr><td>Sphecodes miniatus</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>6</td><td>5.5</td></tr><tr><td>Spheocdes monilicornis</td><td>3</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>6</td><td>8.5</td></tr><tr><td>Sphecodes niger</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>6</td><td>5.5</td></tr><tr><td>Sphecodes pellucidus</td><td>1</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>7.3</td><td>9</td></tr><tr><td>Sphecodes puncticeps</td><td>2</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>6</td><td>6</td></tr><tr><td>Stelis breviuscula</td><td>2</td><td>cleptoparasitic</td><td>kleptoparasitic</td><td>/</td><td>3</td><td>5.5</td></tr><tr><td>Systropha curvicornis</td><td>11</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>2</td><td>8.5</td></tr><tr><td>Tetraloniella dentata</td><td>1</td><td>endogeic</td><td>solitary</td><td>oligolectic</td><td>2</td><td>13</td></tr></table>
 
 <!-- page 2 of 2 -->
 
 ## Hoverflies
 
-| Hoverfly species | Caught individuals | Body size (mm) | Active flight time (number of months) | Migratory status | Larval foodtype |
-| --- | --- | --- | --- | --- | --- |
-| *Cheilosia vernalis* | 1 | 6.5 | 7 | 0 | phytophagous |
-| *Chrysotoxum bicinctum* | 1 | 11 | 5 | 0 | zoophagous |
-| *Chrysotoxum festivum* | 3 | 13.5 | 5 | 0 | zoophagous |
-| Chrysotoxum verralli | 4 | 12 | 3 | 0 | zoophagous |
-| *Dasysyrphus albostriatus* | 4 | 10 | 6 | 1 | zoophagous |
-| *Didea intermedia* | 1 | 10 | 5 | 0 | zoophagous |
-| *Episyrphus balteatus* | 62 | 10 | 10 | 1 | zoophagous |
-| *Eristalinus sepulchralis* | 5 | 8.5 | 6 | 0 | aquatic saprophagous |
-| *Eristalis abusiva* | 1 | 10 | 6 | 0 | aquatic saprophagous |
-| *Eristalis arbustorum* | 192 | 10.5 | 7 | 1 | aquatic saprophagous |
-| *Eristalis intricaria* | 1 | 12.5 | 5 | 0 | aquatic saprophagous |
-| Eristalis nemorum | 1 | 12 | 6 | 1 | aquatic saprophagous |
-| *Eristalis similis* | 7 | 15 | 6 | 0 | aquatic saprophagous |
-| *Eristalis tenax* | 5 | 15 | 10 | 1 | aquatic saprophagous |
-| *Ferdinandea cuprea* | 1 | 9.5 | 6 | 0 | terrestrial saprophagous |
-| Helophilus pendulus | 245 | 12 | 7 | 1 | aquatic saprophagous |
-| *Helophilus trivittatus* | 610 | 15.5 | 6 | 1 | aquatic saprophagous |
-| *Melanostoma mellinum* | 25 | 6 | 7 | 1 | zoophagous |
-| *Melanostoma scalare* | 1 | 8 | 7 | 0 | zoophagous |
-| *Merodon equestris* | 13 | 15 | 3 | 0 | phytophagous |
-| *Myathropa florea* | 27 | 12 | 5 | 0 | terrestrial saprophagous |
-| *Pipiza festiva* | 1 | 9 | 6 | 0 | zoophagous |
-| *Scaeva selenitica* | 3 | 14 | 7 | 1 | zoophagous |
-| *Sericomyia silentis* | 1 | 16 | 6 | 0 | aquatic saprophagous |
-| *Sphaerophoria batava* | 2 | 8.5 | 5 | 0 | zoophagous |
-| *Sphaerophoria scripta* | 19 | 10 | 6 | 1 | zoophagous |
-| Syritta pipiens | 1 | 8 | 9 | 0 | terrestrial saprophagous |
-| *Syrphus ribesii* | 2 | 11.5 | 7 | 1 | zoophagous |
-| *Syrphus vitripennis* | 2 | 10 | 6 | 1 | zoophagous |
-| Volucella inanis | 1 | 16 | 4 | 1 | terrestrial saprophagous |
-| *Xylota segnis* | 4 | 11 | 7 | 0 | terrestrial saprophagous |
+<table><tr><td>Hoverfly species</td><td>Caught individuals</td><td>Body size (mm)</td><td>Active flight time (number of months)</td><td>Migratory status</td><td>Larval foodtype</td></tr><tr><td>*Cheilosia vernalis*</td><td>1</td><td>6.5</td><td>7</td><td>0</td><td>phytophagous</td></tr><tr><td>*Chrysotoxum bicinctum*</td><td>1</td><td>11</td><td>5</td><td>0</td><td>zoophagous</td></tr><tr><td>*Chrysotoxum festivum*</td><td>3</td><td>13.5</td><td>5</td><td>0</td><td>zoophagous</td></tr><tr><td>Chrysotoxum verralli</td><td>4</td><td>12</td><td>3</td><td>0</td><td>zoophagous</td></tr><tr><td>*Dasysyrphus albostriatus*</td><td>4</td><td>10</td><td>6</td><td>1</td><td>zoophagous</td></tr><tr><td>*Didea intermedia*</td><td>1</td><td>10</td><td>5</td><td>0</td><td>zoophagous</td></tr><tr><td>*Episyrphus balteatus*</td><td>62</td><td>10</td><td>10</td><td>1</td><td>zoophagous</td></tr><tr><td>*Eristalinus sepulchralis*</td><td>5</td><td>8.5</td><td>6</td><td>0</td><td>aquatic saprophagous</td></tr><tr><td>*Eristalis abusiva*</td><td>1</td><td>10</td><td>6</td><td>0</td><td>aquatic saprophagous</td></tr><tr><td>*Eristalis arbustorum*</td><td>192</td><td>10.5</td><td>7</td><td>1</td><td>aquatic saprophagous</td></tr><tr><td>*Eristalis intricaria*</td><td>1</td><td>12.5</td><td>5</td><td>0</td><td>aquatic saprophagous</td></tr><tr><td>Eristalis nemorum</td><td>1</td><td>12</td><td>6</td><td>1</td><td>aquatic saprophagous</td></tr><tr><td>*Eristalis similis*</td><td>7</td><td>15</td><td>6</td><td>0</td><td>aquatic saprophagous</td></tr><tr><td>*Eristalis tenax*</td><td>5</td><td>15</td><td>10</td><td>1</td><td>aquatic saprophagous</td></tr><tr><td>*Ferdinandea cuprea*</td><td>1</td><td>9.5</td><td>6</td><td>0</td><td>terrestrial saprophagous</td></tr><tr><td>Helophilus pendulus</td><td>245</td><td>12</td><td>7</td><td>1</td><td>aquatic saprophagous</td></tr><tr><td>*Helophilus trivittatus*</td><td>610</td><td>15.5</td><td>6</td><td>1</td><td>aquatic saprophagous</td></tr><tr><td>*Melanostoma mellinum*</td><td>25</td><td>6</td><td>7</td><td>1</td><td>zoophagous</td></tr><tr><td>*Melanostoma scalare*</td><td>1</td><td>8</td><td>7</td><td>0</td><td>zoophagous</td></tr><tr><td>*Merodon equestris*</td><td>13</td><td>15</td><td>3</td><td>0</td><td>phytophagous</td></tr><tr><td>*Myathropa florea*</td><td>27</td><td>12</td><td>5</td><td>0</td><td>terrestrial saprophagous</td></tr><tr><td>*Pipiza festiva*</td><td>1</td><td>9</td><td>6</td><td>0</td><td>zoophagous</td></tr><tr><td>*Scaeva selenitica*</td><td>3</td><td>14</td><td>7</td><td>1</td><td>zoophagous</td></tr><tr><td>*Sericomyia silentis*</td><td>1</td><td>16</td><td>6</td><td>0</td><td>aquatic saprophagous</td></tr><tr><td>*Sphaerophoria batava*</td><td>2</td><td>8.5</td><td>5</td><td>0</td><td>zoophagous</td></tr><tr><td>*Sphaerophoria scripta*</td><td>19</td><td>10</td><td>6</td><td>1</td><td>zoophagous</td></tr><tr><td>Syritta pipiens</td><td>1</td><td>8</td><td>9</td><td>0</td><td>terrestrial saprophagous</td></tr><tr><td>*Syrphus ribesii*</td><td>2</td><td>11.5</td><td>7</td><td>1</td><td>zoophagous</td></tr><tr><td>*Syrphus vitripennis*</td><td>2</td><td>10</td><td>6</td><td>1</td><td>zoophagous</td></tr><tr><td>Volucella inanis</td><td>1</td><td>16</td><td>4</td><td>1</td><td>terrestrial saprophagous</td></tr><tr><td>*Xylota segnis*</td><td>4</td><td>11</td><td>7</td><td>0</td><td>terrestrial saprophagous</td></tr></table>

@@ -162,13 +162,7 @@ All analyses were run using the R software (version 3.0.2, R Core Team, 2017) an
 
 We found statistically significant differences among the morphological traits (hind leg size, hind leg robustness, eye size, and eye roundness) of different functional groups (PERMANOVA, $F _ { 4 , 1 7 1 5 } = 1 1 8 2 . 7 ,$ $p < 0 . 0 0 1 )$ . Differences between functional groups were visualized using a principal components analysis (Figure 1); PC1 explained 56.3% of the variation in the data and PC2 explained 38.6% of the
 
-| Series | PC1 (range) | PC2 (range) |
-| --- | --- | --- |
-| Diurnal tuneller | -3.5~0.8 | -1.8~3.2 |
-| Nocturnal tuneller | -3.0~0.5 | -1.8~0.6 |
-| Nocturnal roller/tunneller | -2.5~0.5 | -1.8~0.6 |
-| Diurnal roller | 0.5~4.2 | -3.0~1.5 |
-| Nocturnal roller | 0.5~4.2 | -2.5~0.6 |
+<table><tr><td>Series</td><td>PC1 (range)</td><td>PC2 (range)</td></tr><tr><td>Diurnal tuneller</td><td>-3.5~0.8</td><td>-1.8~3.2</td></tr><tr><td>Nocturnal tuneller</td><td>-3.0~0.5</td><td>-1.8~0.6</td></tr><tr><td>Nocturnal roller/tunneller</td><td>-2.5~0.5</td><td>-1.8~0.6</td></tr><tr><td>Diurnal roller</td><td>0.5~4.2</td><td>-3.0~1.5</td></tr><tr><td>Nocturnal roller</td><td>0.5~4.2</td><td>-2.5~0.6</td></tr></table>
 
 F I G U R E   1   Principal component analysis of data on hind leg size, hind leg robustness, eye size, and eye roundness (see Table 2). Plot shows values for individual beetles and standard deviation of the data around the mean. The tunneller and facultative roller Synapsis ritsemae (■) falls between the tunneller and roller functional groups
 

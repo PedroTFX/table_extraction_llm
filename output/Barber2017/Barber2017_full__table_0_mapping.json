@@ -1,37 +1,32 @@
 {
-  "identifier": {
+  "Site": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values are named study sites or codes, defining the sampling location."
+  },
+  "Year planted": {
+    "field": null,
+    "value_column": true,
+    "reasoning": "This is a temporal variable describing the study setup, not an organism trait or location."
+  },
+  "2013": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This column names the measured trait (e.g., Abundance, Species richness), not the value itself."
-  },
-  "Site age $\\chi^2$": {
-    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "The values are Chi-squared statistics, which are statistical measures, not biological traits."
+    "reasoning": "Represents the presence or absence of the organism at that time/site."
   },
-  "Site age P": {
-    "field": "measurementStatistic",
+  "2014": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values are P-values, which are statistical measures of significance."
+    "reasoning": "Represents the presence or absence of the organism at that time/site."
   },
-  "Burn status $\\chi^2$": {
-    "field": "measurementStatistic",
+  "2015": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values are Chi-squared statistics, which are statistical measures, not biological traits."
+    "reasoning": "Represents the presence or absence of the organism at that time/site."
   },
-  "Burn status P": {
-    "field": "measurementStatistic",
+  "Age range": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "The values are P-values, which are statistical measures of significance."
-  },
-  "Year $\\chi^2$": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "The values are Chi-squared statistics, which are statistical measures, not biological traits."
-  },
-  "Year P": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "The values are P-values, which are statistical measures of significance."
+    "reasoning": "Describes the age of the organism, which is a measured property."
   }
 }

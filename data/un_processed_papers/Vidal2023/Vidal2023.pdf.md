@@ -347,65 +347,7 @@ J.M. Vidal-Cordero et al.
 
 Science of the Total Environment 887 (2023) 164132
 
-| Species | Time since fire (years) |
-| :--- | :--- |
-| phe.pal (579) | ~20 |
-| ibe.sub (523) | ~18 |
-| aph.ibe (407) | ~21 |
-| cat.vel (244) | ~23 |
-| tet.sem (215) | ~16 |
-| cam.syl (180) | ~17 |
-| pla.pyg (165) | ~16 |
-| cam.pil (162) | ~21 |
-| cat.his (161) | ~9 |
-| aph.sen (139) | ~13 |
-| aph.gib (139) | ~17 |
-| cre.aub (116) | ~20 |
-| pla.sch (111) | ~20 |
-| cam.cru (98) | ~24 |
-| tet.cae (94) | ~17 |
-| cat.ibe (81) | ~27 |
-| mes.bou (80) | ~13 |
-| sol.sp (74) | ~18 |
-| cat.tar (59) | ~13 |
-| tap.nig (57) | ~23 |
-| for.cun (57) | ~28 |
-| mon.sub (51) | ~28 |
-| cat.flo (43) | ~20 |
-| tem.rac (38) | ~18 |
-| mes.bar (36) | ~13 |
-| cat.ros (35) | ~17 |
-| gon.kug (31) | ~13 |
-| mes.cap (30) | ~30 |
-| tem.lut (28) | ~25 |
-| cam.for (26) | ~22 |
-| cre.sor (22) | ~23 |
-| tem.gre (21) | ~0 |
-| tem.rec (17) | ~24 |
-| tet.for (15) | ~4 |
-| mes.lus (15) | ~8 |
-| cre.scu (15) | ~20 |
-| cam.lat (15) | ~26 |
-| tap.err (14) | ~30 |
-| oxy.sau (13) | ~13 |
-| mes.mar (10) | ~13 |
-| las.gra (10) | ~22 |
-| tem.tyn (7) | ~20 |
-| tem.par (3) | ~4 |
-| tem.ang (3) | ~23 |
-| tem.kra (2) | ~15 |
-| tem.for (2) | ~26 |
-| tem.exi (2) | ~41 |
-| tem.ave (2) | ~35 |
-| gon.his (2) | ~29 |
-| tem.spe (1) | ~41 |
-| pol.ruf (1) | ~17 |
-| myr.alo (1) | ~0 |
-| mes.str (1) | ~28 |
-| las.myo (1) | ~26 |
-| car.bat (1) | ~2 |
-| aph.car (1) | ~24 |
-| amb.gae (1) | ~24 |
+<table><tr><td>Species</td><td>Time since fire (years)</td></tr><tr><td>phe.pal (579)</td><td>~20</td></tr><tr><td>ibe.sub (523)</td><td>~18</td></tr><tr><td>aph.ibe (407)</td><td>~21</td></tr><tr><td>cat.vel (244)</td><td>~23</td></tr><tr><td>tet.sem (215)</td><td>~16</td></tr><tr><td>cam.syl (180)</td><td>~17</td></tr><tr><td>pla.pyg (165)</td><td>~16</td></tr><tr><td>cam.pil (162)</td><td>~21</td></tr><tr><td>cat.his (161)</td><td>~9</td></tr><tr><td>aph.sen (139)</td><td>~13</td></tr><tr><td>aph.gib (139)</td><td>~17</td></tr><tr><td>cre.aub (116)</td><td>~20</td></tr><tr><td>pla.sch (111)</td><td>~20</td></tr><tr><td>cam.cru (98)</td><td>~24</td></tr><tr><td>tet.cae (94)</td><td>~17</td></tr><tr><td>cat.ibe (81)</td><td>~27</td></tr><tr><td>mes.bou (80)</td><td>~13</td></tr><tr><td>sol.sp (74)</td><td>~18</td></tr><tr><td>cat.tar (59)</td><td>~13</td></tr><tr><td>tap.nig (57)</td><td>~23</td></tr><tr><td>for.cun (57)</td><td>~28</td></tr><tr><td>mon.sub (51)</td><td>~28</td></tr><tr><td>cat.flo (43)</td><td>~20</td></tr><tr><td>tem.rac (38)</td><td>~18</td></tr><tr><td>mes.bar (36)</td><td>~13</td></tr><tr><td>cat.ros (35)</td><td>~17</td></tr><tr><td>gon.kug (31)</td><td>~13</td></tr><tr><td>mes.cap (30)</td><td>~30</td></tr><tr><td>tem.lut (28)</td><td>~25</td></tr><tr><td>cam.for (26)</td><td>~22</td></tr><tr><td>cre.sor (22)</td><td>~23</td></tr><tr><td>tem.gre (21)</td><td>~0</td></tr><tr><td>tem.rec (17)</td><td>~24</td></tr><tr><td>tet.for (15)</td><td>~4</td></tr><tr><td>mes.lus (15)</td><td>~8</td></tr><tr><td>cre.scu (15)</td><td>~20</td></tr><tr><td>cam.lat (15)</td><td>~26</td></tr><tr><td>tap.err (14)</td><td>~30</td></tr><tr><td>oxy.sau (13)</td><td>~13</td></tr><tr><td>mes.mar (10)</td><td>~13</td></tr><tr><td>las.gra (10)</td><td>~22</td></tr><tr><td>tem.tyn (7)</td><td>~20</td></tr><tr><td>tem.par (3)</td><td>~4</td></tr><tr><td>tem.ang (3)</td><td>~23</td></tr><tr><td>tem.kra (2)</td><td>~15</td></tr><tr><td>tem.for (2)</td><td>~26</td></tr><tr><td>tem.exi (2)</td><td>~41</td></tr><tr><td>tem.ave (2)</td><td>~35</td></tr><tr><td>gon.his (2)</td><td>~29</td></tr><tr><td>tem.spe (1)</td><td>~41</td></tr><tr><td>pol.ruf (1)</td><td>~17</td></tr><tr><td>myr.alo (1)</td><td>~0</td></tr><tr><td>mes.str (1)</td><td>~28</td></tr><tr><td>las.myo (1)</td><td>~26</td></tr><tr><td>car.bat (1)</td><td>~2</td></tr><tr><td>aph.car (1)</td><td>~24</td></tr><tr><td>amb.gae (1)</td><td>~24</td></tr></table>
 
 Fig. 4. Ant species occurrence and time since fire in burned plots. The species are sorted by decreasing order of occurrence $( \mathrm { m e a n } \pm \mathrm { S E } )$ . On the left axis is the total number of occurrences for each species. In red are the most recently burned areas (category 1: fire occurred 0 to 4 years ago). In orange are the moderately recently burned areas (category 2: fire occurred 7 to 12 years ago). In yellow are the least recently burned areas (category 3: fire occurred 15 to 41 years ago). Occurrence is the number of pitfall traps containing a given species. The abbreviations are listed in Table S6.
 

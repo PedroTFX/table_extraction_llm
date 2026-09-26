@@ -149,17 +149,7 @@ Traits for which means of individuals from different colonies were determined to
 
 Table 2: Spearman’s correlation coefficients (r<sub>s</sub>) between size metrics for Vespula maculifrons gynes (above the diagonal) and males (below the diagonal)
 
-| Trait | TW | TL | HTL | T3L | GL | AL | BL | CL | Mass |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| TW | - | 0.432 | 0.462 | 0.243 | 0.224 | 0.560 | 0.359 | 0.070 | 0.134 |
-| TL | 0.026 | - | 0.809 | 0.494 | 0.546 | 0.498 | 0.701 | 0.203 | 0.332 |
-| HTL | 0.400 | 0.674 | - | 0.341 | 0.445 | 0.498 | 0.694 | 0.096 | 0.210 |
-| T3L | 0.146 | 0.376 | 0.421 | - | 0.711 | 0.383 | 0.616 | 0.198 | 0.440 |
-| GL | 0.572 | 0.372 | 0.640 | 0.414 | - | 0.480 | 0.880 | 0.071 | 0.488 |
-| AL | 0.377 | 0.445 | 0.563 | 0.364 | 0.578 | - | 0.507 | 0.285 | 0.317 |
-| BL | 0.460 | 0.514 | 0.826 | 0.511 | 0.894 | 0.679 | - | 0.127 | 0.468 |
-| CL | 0.544 | 0.323 | 0.540 | 0.335 | 0.565 | 0.602 | 0.588 | - | 0.349 |
-| Mass | 0.596 | 0.245 | 0.545 | 0.364 | 0.742 | 0.475 | 0.703 | 0.619 | - |
+<table><tr><td>Trait</td><td>TW</td><td>TL</td><td>HTL</td><td>T3L</td><td>GL</td><td>AL</td><td>BL</td><td>CL</td><td>Mass</td></tr><tr><td>TW</td><td>-</td><td>0.432</td><td>0.462</td><td>0.243</td><td>0.224</td><td>0.560</td><td>0.359</td><td>0.070</td><td>0.134</td></tr><tr><td>TL</td><td>0.026</td><td>-</td><td>0.809</td><td>0.494</td><td>0.546</td><td>0.498</td><td>0.701</td><td>0.203</td><td>0.332</td></tr><tr><td>HTL</td><td>0.400</td><td>0.674</td><td>-</td><td>0.341</td><td>0.445</td><td>0.498</td><td>0.694</td><td>0.096</td><td>0.210</td></tr><tr><td>T3L</td><td>0.146</td><td>0.376</td><td>0.421</td><td>-</td><td>0.711</td><td>0.383</td><td>0.616</td><td>0.198</td><td>0.440</td></tr><tr><td>GL</td><td>0.572</td><td>0.372</td><td>0.640</td><td>0.414</td><td>-</td><td>0.480</td><td>0.880</td><td>0.071</td><td>0.488</td></tr><tr><td>AL</td><td>0.377</td><td>0.445</td><td>0.563</td><td>0.364</td><td>0.578</td><td>-</td><td>0.507</td><td>0.285</td><td>0.317</td></tr><tr><td>BL</td><td>0.460</td><td>0.514</td><td>0.826</td><td>0.511</td><td>0.894</td><td>0.679</td><td>-</td><td>0.127</td><td>0.468</td></tr><tr><td>CL</td><td>0.544</td><td>0.323</td><td>0.540</td><td>0.335</td><td>0.565</td><td>0.602</td><td>0.588</td><td>-</td><td>0.349</td></tr><tr><td>Mass</td><td>0.596</td><td>0.245</td><td>0.545</td><td>0.364</td><td>0.742</td><td>0.475</td><td>0.703</td><td>0.619</td><td>-</td></tr></table>
 
 Statistically significant correlations are shown in bold (a = 0.05). See Table 1 for trait abbreviations.
 
@@ -189,24 +179,7 @@ had just ceased mounting the gyne. Gynes were seen biting males both during and 
 
 No significant correlations were found between the size of male traits and mating success. In the subset of 15 trials in which insertions were observed,
 
-| Trait | Group | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- | --- |
-| TW | M | ~3.5 | ~3.6 | ~3.7 |
-| TW | U | ~3.5 | ~3.6 | ~3.7 |
-| TL | M | ~5.2 | ~5.4 | ~5.6 |
-| TL | U | ~4.9 | ~5.1 | ~5.3 |
-| HTL | M | ~6.8 | ~7.0 | ~7.2 |
-| HTL | U | ~6.5 | ~6.8 | ~7.0 |
-| T3L | M | ~2.4 | ~2.6 | ~2.9 |
-| T3L | U | ~2.3 | ~2.4 | ~2.5 |
-| GL | M | ~8.5 | ~8.8 | ~9.3 |
-| GL | U | ~7.4 | ~8.1 | ~8.6 |
-| AL | M | ~5.2 | ~5.3 | ~5.4 |
-| AL | U | ~4.9 | ~5.1 | ~5.2 |
-| BL | M | ~15.7 | ~16.4 | ~17.1 |
-| BL | U | ~15.2 | ~15.8 | ~16.7 |
-| CL | M | ~5.7 | ~5.9 | ~6.0 |
-| CL | U | ~5.6 | ~5.9 | ~6.1 |
+<table><tr><td>Trait</td><td>Group</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>TW</td><td>M</td><td>~3.5</td><td>~3.6</td><td>~3.7</td></tr><tr><td>TW</td><td>U</td><td>~3.5</td><td>~3.6</td><td>~3.7</td></tr><tr><td>TL</td><td>M</td><td>~5.2</td><td>~5.4</td><td>~5.6</td></tr><tr><td>TL</td><td>U</td><td>~4.9</td><td>~5.1</td><td>~5.3</td></tr><tr><td>HTL</td><td>M</td><td>~6.8</td><td>~7.0</td><td>~7.2</td></tr><tr><td>HTL</td><td>U</td><td>~6.5</td><td>~6.8</td><td>~7.0</td></tr><tr><td>T3L</td><td>M</td><td>~2.4</td><td>~2.6</td><td>~2.9</td></tr><tr><td>T3L</td><td>U</td><td>~2.3</td><td>~2.4</td><td>~2.5</td></tr><tr><td>GL</td><td>M</td><td>~8.5</td><td>~8.8</td><td>~9.3</td></tr><tr><td>GL</td><td>U</td><td>~7.4</td><td>~8.1</td><td>~8.6</td></tr><tr><td>AL</td><td>M</td><td>~5.2</td><td>~5.3</td><td>~5.4</td></tr><tr><td>AL</td><td>U</td><td>~4.9</td><td>~5.1</td><td>~5.2</td></tr><tr><td>BL</td><td>M</td><td>~15.7</td><td>~16.4</td><td>~17.1</td></tr><tr><td>BL</td><td>U</td><td>~15.2</td><td>~15.8</td><td>~16.7</td></tr><tr><td>CL</td><td>M</td><td>~5.7</td><td>~5.9</td><td>~6.0</td></tr><tr><td>CL</td><td>U</td><td>~5.6</td><td>~5.9</td><td>~6.1</td></tr></table>
 
 Fig. 3: Box plots illustrating the size of linearly measured traits in mated (M) and unmated (U) Vespula maculifrons gynes. Mated gynes were significantly $( ^ { \star } \mathsf { p } < 0 . 0 5 ; ~ ^ { \star \star } \mathsf { p } < 0 . 0 1 )$ larger than unmated gynes for four traits: T3L, GL, AL, and BL (see Table 1 for trait abbreviations).
 

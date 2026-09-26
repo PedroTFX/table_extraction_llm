@@ -193,39 +193,21 @@ F I G U R E 2 Cross-section of the free-flight chamber. The flight chamber was 1
 
 TA B L E 1 Summary of flight parameters of all Drosophila suzukii tested in the free-flight chamber (n = 36)
 
-| Parameter | Total flight time (s) | No. bouts |
-| --- | --- | --- |
-| Minimum | 2.00 | 1 |
-| Median | 23.49 | 1 |
-| Mean | 53.93 | 2.58 |
-| Maximum | 377.66 | 26 |
+<table><tr><td>Parameter</td><td>Total flight time (s)</td><td>No. bouts</td></tr><tr><td>Minimum</td><td>2.00</td><td>1</td></tr><tr><td>Median</td><td>23.49</td><td>1</td></tr><tr><td>Mean</td><td>53.93</td><td>2.58</td></tr><tr><td>Maximum</td><td>377.66</td><td>26</td></tr></table>
 
 TA B L E 2 Summary of flight parameters of all Drosophila suzukii tested on the tethered flight mill (n = 27)
 
-| Parameter | Distance (m) | Total flight time (s) | Velocity (m/s) | No. bouts |
-| --- | --- | --- | --- | --- |
-| Minimum | 0.69 | 1.36 | 0.13 | 1 |
-| Median | 4.58 | 15.11 | 0.29 | 2 |
-| Mean | 19.96 | 59.57 | 0.30 | 3.52 |
-| Maximum | 283.03 | 810.81 | 0.52 | 10 |
+<table><tr><td>Parameter</td><td>Distance (m)</td><td>Total flight time (s)</td><td>Velocity (m/s)</td><td>No. bouts</td></tr><tr><td>Minimum</td><td>0.69</td><td>1.36</td><td>0.13</td><td>1</td></tr><tr><td>Median</td><td>4.58</td><td>15.11</td><td>0.29</td><td>2</td></tr><tr><td>Mean</td><td>19.96</td><td>59.57</td><td>0.30</td><td>3.52</td></tr><tr><td>Maximum</td><td>283.03</td><td>810.81</td><td>0.52</td><td>10</td></tr></table>
 
 and tethered flight mill was 36.7 ± 11.29 and $1 1 . 7 \pm 4 . 1 0   \mathrm { s } ,$ respectively (Table 3). The final model showed that only flight apparatus influenced the duration of first flight: D.
 
-| Category | Summer (Proportion) | Winter (Proportion) |
-| --- | --- | --- |
-| Free-flight chamber | ~0.29 | ~0.07 |
-| Tethered flight mill | ~0.15 | ~0.12 |
+<table><tr><td>Category</td><td>Summer (Proportion)</td><td>Winter (Proportion)</td></tr><tr><td>Free-flight chamber</td><td>~0.29</td><td>~0.07</td></tr><tr><td>Tethered flight mill</td><td>~0.15</td><td>~0.12</td></tr></table>
 
 F I G U R E 3 Mean (± SEM) proportion of summer and winter morphs (sexes combined) of Drosophila suzukii propensity (i.e., yes or no) to initiate flight in the free-flight chamber and tethered flight mill.
 
 T A B L E 3 Summary of duration (s) of first flight (i.e., excluding additional take-offs) of Drosophila suzukii across the free-flight chamber and tethered flight mill
 
-| Parameter | Free-flight chamber | Tethered flight mill |
-| --- | --- | --- |
-| Minimum | 2.00 | 1.36 |
-| Median | 18.44 | 5.38 |
-| Mean | 36.68 | 11.74 |
-| Maximum | 377.66 | 108.66 |
+<table><tr><td>Parameter</td><td>Free-flight chamber</td><td>Tethered flight mill</td></tr><tr><td>Minimum</td><td>2.00</td><td>1.36</td></tr><tr><td>Median</td><td>18.44</td><td>5.38</td></tr><tr><td>Mean</td><td>36.68</td><td>11.74</td></tr><tr><td>Maximum</td><td>377.66</td><td>108.66</td></tr></table>
 
 suzukii flew longer in the free-flight chamber compared to the tethered flight mill $\chi^{2}=5.39,\mathrm{d.f.}=1,\mathrm{P}<0.02$ (Figure 4).
 
@@ -245,19 +227,11 @@ Entomologia Experimentalis et Applicata
 
 TRAN et al.
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| Free-flight chamber | ~6 | ~11 | ~24 | ~18 |
-| Tethered flight mill | ~3 | ~5 | ~8 | ~5 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>Free-flight chamber</td><td>~6</td><td>~11</td><td>~24</td><td>~18</td></tr><tr><td>Tethered flight mill</td><td>~3</td><td>~5</td><td>~8</td><td>~5</td></tr></table>
 
 F I G U R E 4 Total duration (s) of first flight (i.e., excluding additional take-offs) of Drosophila suzukii (sexes and morphs combined) in the free-flight chamber and tethered flight mill. The boxplots show the 25th, 50th, and 75th percentiles and the whiskers indicate the first and third quartiles ± 1.5× the interquartile range. All dots represent individual flies, whereas unfilled dots represent outliers (>1.5× the interquartile range). Dots have been jittered to prevent overlapping.
 
-| Morph | Gender | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- | --- |
-| Summer | Female (n = 25) | ~8 | ~25 | ~58 | ~50 |
-| Summer | Male (n = 11) | ~5 | ~17 | ~55 | ~40 |
-| Winter | Female (n = 25) | ~30 | ~93 | ~178 | ~148 |
-| Winter | Male (n = 11) | ~28 | ~28 | ~42 | ~14 |
+<table><tr><td>Morph</td><td>Gender</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>Summer</td><td>Female (n = 25)</td><td>~8</td><td>~25</td><td>~58</td><td>~50</td></tr><tr><td>Summer</td><td>Male (n = 11)</td><td>~5</td><td>~17</td><td>~55</td><td>~40</td></tr><tr><td>Winter</td><td>Female (n = 25)</td><td>~30</td><td>~93</td><td>~178</td><td>~148</td></tr><tr><td>Winter</td><td>Male (n = 11)</td><td>~28</td><td>~28</td><td>~42</td><td>~14</td></tr></table>
 
 F I G U R E 5 Total duration (s) of flight across sex (female and male) and morph (summer and winter) in Drosophila suzukii in the free-flight chamber. The boxplots show the 25th, 50th, and 75th percentiles and the whiskers indicate the first and third quartiles ±1.5× the interquartile range. All dots represent individual flies, whereas unfilled dots represent outliers (>1.5× the interquartile range). Dots have been jittered to prevent overlapping.
 

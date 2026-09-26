@@ -118,16 +118,7 @@ Page 6 of 14
 
 Table 2 (continued)
 
-| Larvae subterraneous | 7.056 | 0.0043 | 10.16 | 0.0002 |
-| --- | --- | --- | --- | --- |
-| Larvae on broad-leaved trees or shrubs | 101.70 | &lt; 0.0001 | 0.67 | 0.5794 |
-| Larvae on softwood trees | 256.84 | &lt; 0.0001 | 59.54 | &lt; 0.0001 |
-| Larvae on woody climbers | 93.71 | &lt; 0.0001 | 13.78 | &lt; 0.0001 |
-| Larvae on reed or aquatic plants | 0.662 | 0.5259 | 10.18 | 0.0002 |
-| Larvae on herbs | 128.09 | &lt; 0.0001 | 4.93 | 0.0091 |
-| Larvae on grasses | 105.80 | &lt; 0.0001 | 10.27 | 0.0002 |
-| Larvae on dead plant material | 6.31 | 0.0068 | 2.35 | 0.0997 |
-| Larvae on mosses, algae, or fungi | 410.90 | &lt; 0.0001 | 0.57 | 0.6396 |
+<table><tr><td>Larvae subterraneous</td><td>7.056</td><td>0.0043</td><td>10.16</td><td>0.0002</td></tr><tr><td>Larvae on broad-leaved trees or shrubs</td><td>101.70</td><td>&amp;lt; 0.0001</td><td>0.67</td><td>0.5794</td></tr><tr><td>Larvae on softwood trees</td><td>256.84</td><td>&amp;lt; 0.0001</td><td>59.54</td><td>&amp;lt; 0.0001</td></tr><tr><td>Larvae on woody climbers</td><td>93.71</td><td>&amp;lt; 0.0001</td><td>13.78</td><td>&amp;lt; 0.0001</td></tr><tr><td>Larvae on reed or aquatic plants</td><td>0.662</td><td>0.5259</td><td>10.18</td><td>0.0002</td></tr><tr><td>Larvae on herbs</td><td>128.09</td><td>&amp;lt; 0.0001</td><td>4.93</td><td>0.0091</td></tr><tr><td>Larvae on grasses</td><td>105.80</td><td>&amp;lt; 0.0001</td><td>10.27</td><td>0.0002</td></tr><tr><td>Larvae on dead plant material</td><td>6.31</td><td>0.0068</td><td>2.35</td><td>0.0997</td></tr><tr><td>Larvae on mosses, algae, or fungi</td><td>410.90</td><td>&amp;lt; 0.0001</td><td>0.57</td><td>0.6396</td></tr></table>
 
 Results of nested ANOVAs (F and p values). Statistically significant results (corrected for a table-wide false discovery rate at p < 0.05: [27]) are printed in bold face. Traits with significant difference according to flood regime are shaded in colour
 
@@ -169,30 +160,7 @@ Guariento et al. BMC Ecol (2020) 20:29
 
 Page 8 of 14
 
-| Variable | PCA1 (59.3%) | PCA2 (16.8%) |
-| --- | --- | --- |
-| NRI | ~0.05 | ~0.75 |
-| NTI | ~0.15 | ~0.65 |
-| SObs | ~0.25 | ~0.85 |
-| Chao | ~0.35 | ~0.75 |
-| Margalef | ~0.65 | ~0.65 |
-| FRic | ~0.15 | ~0.35 |
-| FDiv | ~0.45 | ~0.35 |
-| alpha | ~0.95 | ~0.25 |
-| Brillouin | ~0.95 | ~0.15 |
-| H' | ~0.95 | ~0.05 |
-| FDis | ~0.95 | ~0.05 |
-| Rao | ~0.95 | ~-0.05 |
-| J | ~0.95 | ~-0.15 |
-| expH' | ~0.95 | ~-0.25 |
-| bc_expH' | ~0.95 | ~-0.35 |
-| Menhinick | ~0.95 | ~-0.45 |
-| Hill_N2 | ~0.95 | ~-0.55 |
-| Hill_Ninf | ~0.95 | ~-0.65 |
-| E | ~0.95 | ~-0.75 |
-| Berger.Parker | ~-0.95 | ~-0.15 |
-| Simpson | ~-0.95 | ~-0.25 |
-| FEve | ~-0.15 | ~-0.65 |
+<table><tr><td>Variable</td><td>PCA1 (59.3%)</td><td>PCA2 (16.8%)</td></tr><tr><td>NRI</td><td>~0.05</td><td>~0.75</td></tr><tr><td>NTI</td><td>~0.15</td><td>~0.65</td></tr><tr><td>SObs</td><td>~0.25</td><td>~0.85</td></tr><tr><td>Chao</td><td>~0.35</td><td>~0.75</td></tr><tr><td>Margalef</td><td>~0.65</td><td>~0.65</td></tr><tr><td>FRic</td><td>~0.15</td><td>~0.35</td></tr><tr><td>FDiv</td><td>~0.45</td><td>~0.35</td></tr><tr><td>alpha</td><td>~0.95</td><td>~0.25</td></tr><tr><td>Brillouin</td><td>~0.95</td><td>~0.15</td></tr><tr><td>H'</td><td>~0.95</td><td>~0.05</td></tr><tr><td>FDis</td><td>~0.95</td><td>~0.05</td></tr><tr><td>Rao</td><td>~0.95</td><td>~-0.05</td></tr><tr><td>J</td><td>~0.95</td><td>~-0.15</td></tr><tr><td>expH'</td><td>~0.95</td><td>~-0.25</td></tr><tr><td>bc_expH'</td><td>~0.95</td><td>~-0.35</td></tr><tr><td>Menhinick</td><td>~0.95</td><td>~-0.45</td></tr><tr><td>Hill_N2</td><td>~0.95</td><td>~-0.55</td></tr><tr><td>Hill_Ninf</td><td>~0.95</td><td>~-0.65</td></tr><tr><td>E</td><td>~0.95</td><td>~-0.75</td></tr><tr><td>Berger.Parker</td><td>~-0.95</td><td>~-0.15</td></tr><tr><td>Simpson</td><td>~-0.95</td><td>~-0.25</td></tr><tr><td>FEve</td><td>~-0.15</td><td>~-0.65</td></tr></table>
 
 Fig. 3 Principal components ordination of 22 community diversity metrics (as vectors), compared across 28 moth communities in East Austrian floodplain forests. The first two ordination axes together account for 76.1% of variation in the data. SD and evenness metrics in blue, FD measures in green, and PD measures in red
 

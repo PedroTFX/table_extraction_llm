@@ -117,49 +117,7 @@ PeerJ
 
 Table 1 List of the sites surveyed for bees in Montreal and Quebec City with their abbreviation, type, size and coordinates.
 
-| Site name | Abbreviation | Green space type | City | Size (m2) | Latitude, longitude | Longitude |
-| --- | --- | --- | --- | --- | --- | --- |
-| Shaare Zion | CBS | Cemetery | Montreal | 16,483 | 45,5503 | -73,6557 |
-| Urgel Bourgie | CC | Cemetery | Montreal | 62,100 | 45,5095 | -73,6647 |
-| Hawthorn-Dale | CHD | Cemetery | Montreal | 86,000 | 45,6838 | -73,5069 |
-| Lachine | CL | Cemetery | Montreal | 50,735 | 45,4435 | -73,6840 |
-| Lakeview | CLV | Cemetery | Montreal | 147,000 | 45,4417 | -73,8373 |
-| La Présentation | CP | Cemetery | Montreal | 13,005 | 45,4434 | -73,7366 |
-| Ste-Geneviève | CSG | Cemetery | Montreal | 44,800 | 45,4590 | -73,9204 |
-| St-Laurent | CSL | Cemetery | Montreal | 16,182 | 45,5155 | -73,6714 |
-| De La Visitation | CV | Cemetery | Montreal | 6,200 | 45,5674 | -73,6591 |
-| Alexis-Nihon | JAN | Community garden | Montreal | 1,050 | 45,4971 | -73,6910 |
-| Étienne-Desmarteaux | JED | Community garden | Montreal | 5,149 | 45,5581 | -73,5782 |
-| Hartenstein | JH | Community garden | Montreal | 567 | 45,5581 | -73,5782 |
-| Laurendeau | JL | Community garden | Montreal | 2,320 | 45,6036 | -73,5702 |
-| Prieur | JP | Community garden | Montreal | 4,221 | 45,5778 | -73,6489 |
-| Père-Marquette | JPM | Community garden | Montreal | 3,180 | 45,5399 | 73.595690 |
-| Roseraie | JR | Community garden | Montreal | 2,117 | 45,5923 | -73,5544 |
-| Rosemont-Églantier | JRE | Community garden | Montreal | 7,514 | 45,5654 | -73,5685 |
-| Sherbrooke | JS | Community garden | Montreal | 960 | 45,4447 | -73,6679 |
-| Sainte-Marthe | JSM | Community garden | Montreal | 3,050 | 45,6386 | -73,5981 |
-| Bois-de-Liesse | PBL | Nature park | Montreal | 1,716 | 45,5007 | -73,7647 |
-| Boucherville island | PIB | Nature park | Montreal | 3,024 | 45,5885 | -73,4854 |
-| Pointe-aux-Prairies Heritage | PPPH | Nature park | Montreal | 5,900 | 45,6815 | -73,5068 |
-| Pointe-aux-Prairies Marais | PPPM | Nature park | Montreal | 9,211 | 45,6881 | -73,5237 |
-| De La Visitation | PV | Nature park | Montreal | 3,500 | 45,5808 | -73,6561 |
-| Cap-Rouge | CCR | Cemetery | Quebec | 6,770 | 46,7504 | -71,3453 |
-| Notre-Dame-de-Belmont | CDB | Cemetery | Quebec | 92,328 | 46,7903 | -71,2787 |
-| Mount Hermont | CMH | Cemetery | Quebec | 92,127 | 46,7788 | -71,2469 |
-| Notre-Dame-de-Foy | CNDF | Cemetery | Quebec | 7,051 | 46,7778 | -71,3031 |
-| Saint-Augustin | CSA | Cemetery | Quebec | 9,988 | 46,7433 | -71,4580 |
-| Saint-Charles | CSC | Cemetery | Quebec | 117,697 | 46,8087 | -71,2725 |
-| Saint-Patrick | CSP | Cemetery | Quebec | 52,611 | 46,7845 | -71,2408 |
-| Duberger | JD | Community garden | Quebec | 1,856 | 46,8115 | -71,2918 |
-| Le Marmottier | JLM | Community garden | Quebec | 2,845 | 46,7935 | -71,2419 |
-| Louis-Riel | JLR | Community garden | Quebec | 3,907 | 46,7650 | -71,3047 |
-| Marchand | JM | Community garden | Quebec | 1,510 | 46,8372 | 71.241248 |
-| Mont-Lilas | JML | Community garden | Quebec | 8,316 | 46,8612 | -71,1966 |
-| Parc des Sables | JPS | Community garden | Quebec | 1,545 | 46,8214 | -71,2221 |
-| Pointe Sainte-Foy | JPSF | Community garden | Quebec | 9,046 | 46,7660 | -71,3299 |
-| Sapinière Dorion | JSD | Community garden | Quebec | 2,921 | 46,8445 | -71,2403 |
-| Université Laval | JUL | Community garden | Quebec | 7,131 | 46,7778 | -71,2829 |
-| Versant Nord | JVN | Community garden | Quebec | 3,593 | 46,7803 | -71,3206 |
+<table><tr><td>Site name</td><td>Abbreviation</td><td>Green space type</td><td>City</td><td>Size (m2)</td><td>Latitude, longitude</td><td>Longitude</td></tr><tr><td>Shaare Zion</td><td>CBS</td><td>Cemetery</td><td>Montreal</td><td>16,483</td><td>45,5503</td><td>-73,6557</td></tr><tr><td>Urgel Bourgie</td><td>CC</td><td>Cemetery</td><td>Montreal</td><td>62,100</td><td>45,5095</td><td>-73,6647</td></tr><tr><td>Hawthorn-Dale</td><td>CHD</td><td>Cemetery</td><td>Montreal</td><td>86,000</td><td>45,6838</td><td>-73,5069</td></tr><tr><td>Lachine</td><td>CL</td><td>Cemetery</td><td>Montreal</td><td>50,735</td><td>45,4435</td><td>-73,6840</td></tr><tr><td>Lakeview</td><td>CLV</td><td>Cemetery</td><td>Montreal</td><td>147,000</td><td>45,4417</td><td>-73,8373</td></tr><tr><td>La Présentation</td><td>CP</td><td>Cemetery</td><td>Montreal</td><td>13,005</td><td>45,4434</td><td>-73,7366</td></tr><tr><td>Ste-Geneviève</td><td>CSG</td><td>Cemetery</td><td>Montreal</td><td>44,800</td><td>45,4590</td><td>-73,9204</td></tr><tr><td>St-Laurent</td><td>CSL</td><td>Cemetery</td><td>Montreal</td><td>16,182</td><td>45,5155</td><td>-73,6714</td></tr><tr><td>De La Visitation</td><td>CV</td><td>Cemetery</td><td>Montreal</td><td>6,200</td><td>45,5674</td><td>-73,6591</td></tr><tr><td>Alexis-Nihon</td><td>JAN</td><td>Community garden</td><td>Montreal</td><td>1,050</td><td>45,4971</td><td>-73,6910</td></tr><tr><td>Étienne-Desmarteaux</td><td>JED</td><td>Community garden</td><td>Montreal</td><td>5,149</td><td>45,5581</td><td>-73,5782</td></tr><tr><td>Hartenstein</td><td>JH</td><td>Community garden</td><td>Montreal</td><td>567</td><td>45,5581</td><td>-73,5782</td></tr><tr><td>Laurendeau</td><td>JL</td><td>Community garden</td><td>Montreal</td><td>2,320</td><td>45,6036</td><td>-73,5702</td></tr><tr><td>Prieur</td><td>JP</td><td>Community garden</td><td>Montreal</td><td>4,221</td><td>45,5778</td><td>-73,6489</td></tr><tr><td>Père-Marquette</td><td>JPM</td><td>Community garden</td><td>Montreal</td><td>3,180</td><td>45,5399</td><td>73.595690</td></tr><tr><td>Roseraie</td><td>JR</td><td>Community garden</td><td>Montreal</td><td>2,117</td><td>45,5923</td><td>-73,5544</td></tr><tr><td>Rosemont-Églantier</td><td>JRE</td><td>Community garden</td><td>Montreal</td><td>7,514</td><td>45,5654</td><td>-73,5685</td></tr><tr><td>Sherbrooke</td><td>JS</td><td>Community garden</td><td>Montreal</td><td>960</td><td>45,4447</td><td>-73,6679</td></tr><tr><td>Sainte-Marthe</td><td>JSM</td><td>Community garden</td><td>Montreal</td><td>3,050</td><td>45,6386</td><td>-73,5981</td></tr><tr><td>Bois-de-Liesse</td><td>PBL</td><td>Nature park</td><td>Montreal</td><td>1,716</td><td>45,5007</td><td>-73,7647</td></tr><tr><td>Boucherville island</td><td>PIB</td><td>Nature park</td><td>Montreal</td><td>3,024</td><td>45,5885</td><td>-73,4854</td></tr><tr><td>Pointe-aux-Prairies Heritage</td><td>PPPH</td><td>Nature park</td><td>Montreal</td><td>5,900</td><td>45,6815</td><td>-73,5068</td></tr><tr><td>Pointe-aux-Prairies Marais</td><td>PPPM</td><td>Nature park</td><td>Montreal</td><td>9,211</td><td>45,6881</td><td>-73,5237</td></tr><tr><td>De La Visitation</td><td>PV</td><td>Nature park</td><td>Montreal</td><td>3,500</td><td>45,5808</td><td>-73,6561</td></tr><tr><td>Cap-Rouge</td><td>CCR</td><td>Cemetery</td><td>Quebec</td><td>6,770</td><td>46,7504</td><td>-71,3453</td></tr><tr><td>Notre-Dame-de-Belmont</td><td>CDB</td><td>Cemetery</td><td>Quebec</td><td>92,328</td><td>46,7903</td><td>-71,2787</td></tr><tr><td>Mount Hermont</td><td>CMH</td><td>Cemetery</td><td>Quebec</td><td>92,127</td><td>46,7788</td><td>-71,2469</td></tr><tr><td>Notre-Dame-de-Foy</td><td>CNDF</td><td>Cemetery</td><td>Quebec</td><td>7,051</td><td>46,7778</td><td>-71,3031</td></tr><tr><td>Saint-Augustin</td><td>CSA</td><td>Cemetery</td><td>Quebec</td><td>9,988</td><td>46,7433</td><td>-71,4580</td></tr><tr><td>Saint-Charles</td><td>CSC</td><td>Cemetery</td><td>Quebec</td><td>117,697</td><td>46,8087</td><td>-71,2725</td></tr><tr><td>Saint-Patrick</td><td>CSP</td><td>Cemetery</td><td>Quebec</td><td>52,611</td><td>46,7845</td><td>-71,2408</td></tr><tr><td>Duberger</td><td>JD</td><td>Community garden</td><td>Quebec</td><td>1,856</td><td>46,8115</td><td>-71,2918</td></tr><tr><td>Le Marmottier</td><td>JLM</td><td>Community garden</td><td>Quebec</td><td>2,845</td><td>46,7935</td><td>-71,2419</td></tr><tr><td>Louis-Riel</td><td>JLR</td><td>Community garden</td><td>Quebec</td><td>3,907</td><td>46,7650</td><td>-71,3047</td></tr><tr><td>Marchand</td><td>JM</td><td>Community garden</td><td>Quebec</td><td>1,510</td><td>46,8372</td><td>71.241248</td></tr><tr><td>Mont-Lilas</td><td>JML</td><td>Community garden</td><td>Quebec</td><td>8,316</td><td>46,8612</td><td>-71,1966</td></tr><tr><td>Parc des Sables</td><td>JPS</td><td>Community garden</td><td>Quebec</td><td>1,545</td><td>46,8214</td><td>-71,2221</td></tr><tr><td>Pointe Sainte-Foy</td><td>JPSF</td><td>Community garden</td><td>Quebec</td><td>9,046</td><td>46,7660</td><td>-71,3299</td></tr><tr><td>Sapinière Dorion</td><td>JSD</td><td>Community garden</td><td>Quebec</td><td>2,921</td><td>46,8445</td><td>-71,2403</td></tr><tr><td>Université Laval</td><td>JUL</td><td>Community garden</td><td>Quebec</td><td>7,131</td><td>46,7778</td><td>-71,2829</td></tr><tr><td>Versant Nord</td><td>JVN</td><td>Community garden</td><td>Quebec</td><td>3,593</td><td>46,7803</td><td>-71,3206</td></tr></table>
 
 (continued on next page)
 
@@ -173,13 +131,7 @@ PeerJ
 
 Table 1 (continued)
 
-| Site name | Abbreviation | Green space type | City | Size (m2) | Latitude, longitude | Longitude |
-| --- | --- | --- | --- | --- | --- | --- |
-| Cartier-Bréboeuf | PCB | Nature park | Quebec | 28,503 | 46,8250 | -71,2403 |
-| Bois-de-Coulonge | PBC | Nature park | Quebec | 143,779 | 46,7897 | -71,2382 |
-| Domaine Cataraqui | PDC | Nature park | Quebec | 38,076 | 46,7750 | -71,2530 |
-| Base de Plein air Sainte-Foy | PPASF | Nature park | Quebec | 52,313 | 46,7911 | -71,3283 |
-| Plage Jacques-Cartier | PPJC | Nature park | Quebec | 22,584 | 46,7506 | -71,3138 |
+<table><tr><td>Site name</td><td>Abbreviation</td><td>Green space type</td><td>City</td><td>Size (m2)</td><td>Latitude, longitude</td><td>Longitude</td></tr><tr><td>Cartier-Bréboeuf</td><td>PCB</td><td>Nature park</td><td>Quebec</td><td>28,503</td><td>46,8250</td><td>-71,2403</td></tr><tr><td>Bois-de-Coulonge</td><td>PBC</td><td>Nature park</td><td>Quebec</td><td>143,779</td><td>46,7897</td><td>-71,2382</td></tr><tr><td>Domaine Cataraqui</td><td>PDC</td><td>Nature park</td><td>Quebec</td><td>38,076</td><td>46,7750</td><td>-71,2530</td></tr><tr><td>Base de Plein air Sainte-Foy</td><td>PPASF</td><td>Nature park</td><td>Quebec</td><td>52,313</td><td>46,7911</td><td>-71,3283</td></tr><tr><td>Plage Jacques-Cartier</td><td>PPJC</td><td>Nature park</td><td>Quebec</td><td>22,584</td><td>46,7506</td><td>-71,3138</td></tr></table>
 
 of the sites, especially in cemeteries, pan traps could not be placed on the highly managed lawns, and were therefore placed along borders. Additional sweep-netting is considered essential to this type of sampling, in order to collect wild bees from flowers as well as species that may be less attracted to pan traps (Westphal et al., 2008). Consequently, after every pan trapping period on each site (i.e., every two weeks), on sunny days, 10 min of active collection with a sweep net was conducted (45 cm diameter). Sweep netting was performed on open flowers and targeted bees. For both cities, the 2012 sampling began the first week of June and ended at the end of September; in 2013, sampling began the first week of May and also ended at the end of September. Overall, sampling (pan trap + sweep netting combined) was performed on every site (46 sites) 8 times/year, totalling 736 samples (46 sites × 8 samplings/site × 2 years). We received permission to collect insects in Montreal parks from the management of Montreal’s large parks and from the director of the Boucherville Islands national park. Authorizations to collect at the other sites (community gardens, cemeteries and Quebec city’s parks) were given verbally and are listed under the Field Study Permissions.
 
@@ -289,14 +241,7 @@ PeerJ
 
 Figure 2 Observed species-accumulation curves (thin solid line) and their associated standard deviation (SD) for each habitat type investigated in Montreal (A) and Quebec City (B).
 
-| Sampling units | MONTREAL (Species richness) | QUEBEC CITY (Species richness) |
-| --- | --- | --- |
-| 0 | ~35 | ~25 |
-| 20 | ~130 | ~110 |
-| 40 | ~150 | ~130 |
-| 60 | ~165 | ~145 |
-| 80 | ~175 | ~150 |
-| 95 | ~180 | — |
+<table><tr><td>Sampling units</td><td>MONTREAL (Species richness)</td><td>QUEBEC CITY (Species richness)</td></tr><tr><td>0</td><td>~35</td><td>~25</td></tr><tr><td>20</td><td>~130</td><td>~110</td></tr><tr><td>40</td><td>~150</td><td>~130</td></tr><tr><td>60</td><td>~165</td><td>~145</td></tr><tr><td>80</td><td>~175</td><td>~150</td></tr><tr><td>95</td><td>~180</td><td>—</td></tr></table>
 
 Figure 3 The figure shows the mean species accumulation curves and their associated standard deviation from n = 999 random permutations of the data.
 
@@ -328,32 +273,7 @@ Normandin et al. (2017), PeerJ, DOI [10.7717/peerj.3051](http://dx.doi.org/10.77
 
 PeerJ
 
-| Cumulative number of plots M | Montreal::Urban cemeteries | Montreal::Community gardens | Montreal::Urban parks | Quebec City::Urban cemeteries | Quebec City::Community gardens | Quebec City::Urban parks |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.30 | 0.38 | 0.43 | 0.25 | 0.25 | 0.31 |
-| 2 | 0.38 | 0.43 | 0.47 | 0.34 | 0.36 | 0.39 |
-| 3 | 0.41 | 0.45 | 0.48 | 0.36 | 0.39 | 0.42 |
-| 4 | 0.42 | 0.46 | 0.49 | 0.37 | 0.41 | 0.43 |
-| 5 | 0.43 | 0.47 | 0.50 | 0.38 | 0.42 | 0.44 |
-| 6 | 0.43 | 0.47 | 0.50 | 0.38 | 0.43 | 0.44 |
-| 7 | 0.44 | 0.47 | 0.50 | 0.39 | 0.44 | 0.45 |
-| 8 | 0.44 | 0.47 | 0.50 | 0.39 | 0.44 | 0.45 |
-| 9 | 0.44 | 0.47 | 0.50 | 0.39 | 0.45 | 0.45 |
-| 10 | 0.45 | 0.48 | 0.50 | 0.40 | 0.45 | 0.46 |
-| 12 | 0.45 | 0.48 | 0.50 | 0.40 | 0.45 | 0.46 |
-| 14 | 0.45 | 0.48 | 0.50 | 0.40 | 0.46 | 0.46 |
-| 16 | 0.45 | 0.48 | 0.50 | 0.40 | 0.46 | 0.46 |
-| 18 | 0.45 | 0.48 | 0.50 | 0.40 | 0.46 | 0.46 |
-| 20 | 0.45 | 0.48 | 0.50 | 0.40 | 0.46 | 0.46 |
-| 22 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 24 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 26 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 28 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 30 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 32 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 34 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 36 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
-| 38 | 0.45 | 0.48 | — | 0.40 | 0.46 | — |
+<table><tr><td>Cumulative number of plots M</td><td>Montreal::Urban cemeteries</td><td>Montreal::Community gardens</td><td>Montreal::Urban parks</td><td>Quebec City::Urban cemeteries</td><td>Quebec City::Community gardens</td><td>Quebec City::Urban parks</td></tr><tr><td>1</td><td>0.30</td><td>0.38</td><td>0.43</td><td>0.25</td><td>0.25</td><td>0.31</td></tr><tr><td>2</td><td>0.38</td><td>0.43</td><td>0.47</td><td>0.34</td><td>0.36</td><td>0.39</td></tr><tr><td>3</td><td>0.41</td><td>0.45</td><td>0.48</td><td>0.36</td><td>0.39</td><td>0.42</td></tr><tr><td>4</td><td>0.42</td><td>0.46</td><td>0.49</td><td>0.37</td><td>0.41</td><td>0.43</td></tr><tr><td>5</td><td>0.43</td><td>0.47</td><td>0.50</td><td>0.38</td><td>0.42</td><td>0.44</td></tr><tr><td>6</td><td>0.43</td><td>0.47</td><td>0.50</td><td>0.38</td><td>0.43</td><td>0.44</td></tr><tr><td>7</td><td>0.44</td><td>0.47</td><td>0.50</td><td>0.39</td><td>0.44</td><td>0.45</td></tr><tr><td>8</td><td>0.44</td><td>0.47</td><td>0.50</td><td>0.39</td><td>0.44</td><td>0.45</td></tr><tr><td>9</td><td>0.44</td><td>0.47</td><td>0.50</td><td>0.39</td><td>0.45</td><td>0.45</td></tr><tr><td>10</td><td>0.45</td><td>0.48</td><td>0.50</td><td>0.40</td><td>0.45</td><td>0.46</td></tr><tr><td>12</td><td>0.45</td><td>0.48</td><td>0.50</td><td>0.40</td><td>0.45</td><td>0.46</td></tr><tr><td>14</td><td>0.45</td><td>0.48</td><td>0.50</td><td>0.40</td><td>0.46</td><td>0.46</td></tr><tr><td>16</td><td>0.45</td><td>0.48</td><td>0.50</td><td>0.40</td><td>0.46</td><td>0.46</td></tr><tr><td>18</td><td>0.45</td><td>0.48</td><td>0.50</td><td>0.40</td><td>0.46</td><td>0.46</td></tr><tr><td>20</td><td>0.45</td><td>0.48</td><td>0.50</td><td>0.40</td><td>0.46</td><td>0.46</td></tr><tr><td>22</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>24</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>26</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>28</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>30</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>32</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>34</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>36</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr><tr><td>38</td><td>0.45</td><td>0.48</td><td>—</td><td>0.40</td><td>0.46</td><td>—</td></tr></table>
 
 Figure 5 Functional rarefaction curves (mean expected functional diversity Q(M) as a function of the cumulative number of sampling plots M) for species abundance data from the three habitat types investigated in Montreal (A) and Quebec City (B). The rarefaction curves are the result of 999 randomizations and the dotted lines of each curve are bootstrapped 95% confidence intervals.
 
@@ -395,53 +315,7 @@ Normandin et al. (2017), PeerJ, DOI [10.7717/peerj.3051](http://dx.doi.org/10.77
 
 PeerJ
 
-| Location | Montreal::Urban cemeteries | Montreal::Community gardens | Montreal::Urban parks | Quebec City::Urban cemeteries | Quebec City::Community gardens | Quebec City::Urban parks |
-| --- | --- | --- | --- | --- | --- | --- |
-| A. AURATA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. CARLIN | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. COMMODA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. CRATAGEI | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. CRESSONI | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. MISERABILIS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. NASSON | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. NIVALIS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. PURA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| A. VIRESCENS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B.PTSIELUERA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B.GRASEDOCLLYS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B. EMPERTOSIS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B.CATLUNA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| C.CAMPINILLARUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.COMMUNIS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.CORFUSUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.HYALINATUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.LIGATUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.MODESTUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.PRODUCTOR | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.PUNCTATUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.RUBICUNDUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| C.CORACIUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.CHRESSONI | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B.MITATUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.LAEVISSIMUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.LINEATULUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.SAGAX | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| VERSATUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| M.DESPONGA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| M.ROTUNDATA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| M.SUBILLATA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B.IMPKTIENS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.ANNILATUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.LIGATUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| H.LEUCICUNDUS | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.CHRESSONI | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| B.MITATUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.LEAVISSIMUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.LEUCOCOUMUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.LINEATULUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.PILOSUM | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| L.SAGAX | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
-| M.ROTUNDATA | ~100 | ~100 | ~100 | ~100 | ~100 | ~100 |
+<table><tr><td>Location</td><td>Montreal::Urban cemeteries</td><td>Montreal::Community gardens</td><td>Montreal::Urban parks</td><td>Quebec City::Urban cemeteries</td><td>Quebec City::Community gardens</td><td>Quebec City::Urban parks</td></tr><tr><td>A. AURATA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. CARLIN</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. COMMODA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. CRATAGEI</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. CRESSONI</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. MISERABILIS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. NASSON</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. NIVALIS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. PURA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>A. VIRESCENS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B.PTSIELUERA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B.GRASEDOCLLYS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B. EMPERTOSIS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B.CATLUNA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>C.CAMPINILLARUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.COMMUNIS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.CORFUSUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.HYALINATUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.LIGATUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.MODESTUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.PRODUCTOR</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.PUNCTATUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.RUBICUNDUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>C.CORACIUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.CHRESSONI</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B.MITATUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.LAEVISSIMUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.LINEATULUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.SAGAX</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>VERSATUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>M.DESPONGA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>M.ROTUNDATA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>M.SUBILLATA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B.IMPKTIENS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.ANNILATUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.LIGATUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>H.LEUCICUNDUS</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.CHRESSONI</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>B.MITATUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.LEAVISSIMUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.LEUCOCOUMUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.LINEATULUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.PILOSUM</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>L.SAGAX</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr><tr><td>M.ROTUNDATA</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td><td>~100</td></tr></table>
 
 Figure 7 Heat map illustrating the abundant species in both cities (Montreal (A) and Quebec City(B)) and in all three urban habitats (cemeteries, community gardens and city parks).
 
@@ -491,49 +365,7 @@ PeerJ
 
 Table 4 Bee species collected every two weeks from May to September 2012 and 2013 in Montreal and Quebec City, with their abundance for each city, status (native or exotic), and pollen specificity. The species are sorted by phylogenetic order.
 
-| Species | Montreal | Quebec | Native or exotic | Pollen specificity |
-| --- | --- | --- | --- | --- |
-| Colletes americanus Cresson, 1868 | 0 | 1 | N | P |
-| Colletes simulans Cresson, 1868 | 11 | 1 | N | O |
-| Hylaeus (Cephalylaeus) basalis (Smith, 1853) | 0 | 1 | N | P |
-| Hylaeus (Hylaeus) annulatus (Linnaeus, 1758) | 100 | 92 | N | P |
-| Hylaeus (Hylaeus) communis Nylander, 1852 | 633 | 21 | E | P |
-| Hylaeus (Hylaeus) leptocephalus (Morawitz, 1871 [“1870”]) | 41 | 6 | E | P |
-| Hylaeus (Hylaeus) mesillae (Cockerell, 1896) | 201 | 5 | N | P |
-| Hylaeus (Prosopis) affinis (Smith, 1853) | 142 | 26 | N | P |
-| Hylaeus (Prosopis) modestus Say, 1837 | 359 | 230 | N | P |
-| Hylaeus (Prosopis) nelumbonis (Robertson, 1890) | 2 | 0 | N | O |
-| Hylaeus (Spatulariella) hyalinatus Smith, 1842 | 357 | 2 | E | P |
-| Hylaeus (Spatulariella) punctatus (Brullé, 1832) | 108 | 0 | E | P |
-| Macropis (Macropis) nuda (Provancher, 1882) | 0 | 1 | N | O |
-| Augochloropsis (Paraugochloropsis) metallica (Fabricius, 1793) | 20 | 0 | N | P |
-| Augochlorella aurata (Smith, 1853) | 2,126 | 61 | N | P |
-| Augochlora (Augochlora) pura pura (Say, 1837) | 262 | 20 | N | P |
-| Agapostemon (Agapostemon) texanus Cresson, 1872 | 17 | 1 | N | P |
-| Agapostemon (Agapostemon) virescens (Fabricius, 1775) | 2,552 | 1 | N | P |
-| Sphecodes carolinus Mitchell, 1956 | 1 | 4 | N | P |
-| Sphecodes clematidis Robertson, 1897 | 5 | 8 | N | P |
-| Sphecodes confertus Say, 1837 | 1 | 0 | N | P |
-| Sphecodes cressonii (Robertson, 1903) | 1 | 0 | N | P |
-| Sphecodes dichrous Smith, 1853 | 4 | 3 | N | P |
-| Sphecodes mandibularis Cresson, 1872 | 0 | 2 | N | P |
-| Sphecodes ranunculi Robertson, 1897 | 22 | 27 | N | P |
-| Sphecodes solonis Graenicher, 1911 | 0 | 1 | N | P |
-| Halictus (Odontalictus) ligatus Say, 1837 | 605 | 146 | N | P |
-| Halictus (Protohalictus) rubicundus (Christ, 1791) | 603 | 411 | N | P |
-| Halictus (Seladonia) confusus confusus Smith, 1853 | 558 | 144 | N | P |
-| Lasioglossum (Dialictus) abanci (Crawford, 1932) | 0 | 1 | N | P |
-| Lasioglossum (Dialictus) asteris (Mitchell, 1960) | 1 | 1 | N | P |
-| Lasioglossum (Dialictus) cephalotes (Dalla Torre, 1896) | 1 | 0 | N | P |
-| Lasioglossum (Dialictus) coeruleum (Robertson, 1893) | 26 | 0 | N | P |
-| Lasioglossum (Dialictus) cressonii (Robertson, 1890) | 188 | 334 | N | P |
-| Lasioglossum (Dialictus) dreisbachi (Mitchell, 1960) | 7 | 0 | N | O |
-| Lasioglossum (Dialictus) ephialtum Gibbs, 2010 | 306 | 82 | N | P |
-| Lasioglossum (Dialictus) heterognathum (Mitchell, 1960) | 4 | 0 | N | P |
-| Lasioglossum (Dialictus) hitchensi Gibbs, 2012 | 64 | 17 | N | P |
-| Lasioglossum (Dialictus) imitatum (Smith, 1853) | 1,221 | 208 | N | P |
-| Lasioglossum (Dialictus) isawsum Gibbs, 2011 | 1 | 0 | N | P |
-| Lasioglossum (Dialictus) laevissimum (Smith, 1853) | 1,720 | 1,812 | N | P |
+<table><tr><td>Species</td><td>Montreal</td><td>Quebec</td><td>Native or exotic</td><td>Pollen specificity</td></tr><tr><td>Colletes americanus Cresson, 1868</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Colletes simulans Cresson, 1868</td><td>11</td><td>1</td><td>N</td><td>O</td></tr><tr><td>Hylaeus (Cephalylaeus) basalis (Smith, 1853)</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Hylaeus (Hylaeus) annulatus (Linnaeus, 1758)</td><td>100</td><td>92</td><td>N</td><td>P</td></tr><tr><td>Hylaeus (Hylaeus) communis Nylander, 1852</td><td>633</td><td>21</td><td>E</td><td>P</td></tr><tr><td>Hylaeus (Hylaeus) leptocephalus (Morawitz, 1871 [“1870”])</td><td>41</td><td>6</td><td>E</td><td>P</td></tr><tr><td>Hylaeus (Hylaeus) mesillae (Cockerell, 1896)</td><td>201</td><td>5</td><td>N</td><td>P</td></tr><tr><td>Hylaeus (Prosopis) affinis (Smith, 1853)</td><td>142</td><td>26</td><td>N</td><td>P</td></tr><tr><td>Hylaeus (Prosopis) modestus Say, 1837</td><td>359</td><td>230</td><td>N</td><td>P</td></tr><tr><td>Hylaeus (Prosopis) nelumbonis (Robertson, 1890)</td><td>2</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Hylaeus (Spatulariella) hyalinatus Smith, 1842</td><td>357</td><td>2</td><td>E</td><td>P</td></tr><tr><td>Hylaeus (Spatulariella) punctatus (Brullé, 1832)</td><td>108</td><td>0</td><td>E</td><td>P</td></tr><tr><td>Macropis (Macropis) nuda (Provancher, 1882)</td><td>0</td><td>1</td><td>N</td><td>O</td></tr><tr><td>Augochloropsis (Paraugochloropsis) metallica (Fabricius, 1793)</td><td>20</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Augochlorella aurata (Smith, 1853)</td><td>2,126</td><td>61</td><td>N</td><td>P</td></tr><tr><td>Augochlora (Augochlora) pura pura (Say, 1837)</td><td>262</td><td>20</td><td>N</td><td>P</td></tr><tr><td>Agapostemon (Agapostemon) texanus Cresson, 1872</td><td>17</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Agapostemon (Agapostemon) virescens (Fabricius, 1775)</td><td>2,552</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Sphecodes carolinus Mitchell, 1956</td><td>1</td><td>4</td><td>N</td><td>P</td></tr><tr><td>Sphecodes clematidis Robertson, 1897</td><td>5</td><td>8</td><td>N</td><td>P</td></tr><tr><td>Sphecodes confertus Say, 1837</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Sphecodes cressonii (Robertson, 1903)</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Sphecodes dichrous Smith, 1853</td><td>4</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Sphecodes mandibularis Cresson, 1872</td><td>0</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Sphecodes ranunculi Robertson, 1897</td><td>22</td><td>27</td><td>N</td><td>P</td></tr><tr><td>Sphecodes solonis Graenicher, 1911</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Halictus (Odontalictus) ligatus Say, 1837</td><td>605</td><td>146</td><td>N</td><td>P</td></tr><tr><td>Halictus (Protohalictus) rubicundus (Christ, 1791)</td><td>603</td><td>411</td><td>N</td><td>P</td></tr><tr><td>Halictus (Seladonia) confusus confusus Smith, 1853</td><td>558</td><td>144</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) abanci (Crawford, 1932)</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) asteris (Mitchell, 1960)</td><td>1</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) cephalotes (Dalla Torre, 1896)</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) coeruleum (Robertson, 1893)</td><td>26</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) cressonii (Robertson, 1890)</td><td>188</td><td>334</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) dreisbachi (Mitchell, 1960)</td><td>7</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Lasioglossum (Dialictus) ephialtum Gibbs, 2010</td><td>306</td><td>82</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) heterognathum (Mitchell, 1960)</td><td>4</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) hitchensi Gibbs, 2012</td><td>64</td><td>17</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) imitatum (Smith, 1853)</td><td>1,221</td><td>208</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) isawsum Gibbs, 2011</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) laevissimum (Smith, 1853)</td><td>1,720</td><td>1,812</td><td>N</td><td>P</td></tr></table>
 
 (continued on next page)
 
@@ -547,52 +379,7 @@ PeerJ
 
 Table 4 (continued)
 
-| Species | Montreal | Quebec | Native or exotic | Pollen specificity |
-| --- | --- | --- | --- | --- |
-| Lasioglossum (Dialictus) leucocomum (Lovell, 1908) | 54 | 122 | N | P |
-| Lasioglossum (Dialictus) lineatulum (Crawford, 1906) | 434 | 311 | N | P |
-| Lasioglossum (Dialictus) michiganense (Mitchell, 1960) | 1 | 13 | N | P |
-| Lasioglossum (Dialictus) nigroviride (Graenicher, 1911) | 14 | 35 | N | P |
-| Lasioglossum (Dialictus) oblongum (Lovell, 1905) | 10 | 14 | N | P |
-| Lasioglossum (Dialictus) paradmirandum (Knerer &amp; Atwood, 1966) | 1 | 0 | N | P |
-| Lasioglossum (Dialictus) perpunctatum (Ellis, 1913) | 0 | 68 | N | P |
-| Lasioglossum (Dialictus) pilosum (Smith, 1853) | 59 | 248 | N | P |
-| Lasioglossum (Dialictus) planatum (Lovell, 1905) | 11 | 5 | N | O |
-| Lasioglossum (Dialictus) sagax (Sandhouse, 1924) | 554 | 315 | N | P |
-| Lasioglossum (Dialictus) smilacinae (Robertson, 1897) | 2 | 0 | N | P |
-| Lasioglossum (Dialictus) subversans (Mitchell, 1960) | 0 | 1 | N | P |
-| Lasioglossum (Dialictus) taylorae Gibbs, 2010 | 0 | 2 | N | O |
-| Lasioglossum (Dialictus) tegulare (Robertson, 1890) | 149 | 53 | N | P |
-| Lasioglossum (Dialictus) tenax (Sandhouse, 1924) | 2 | 1 | N | P |
-| Lasioglossum (Dialictus) trigeminum Gibbs, 2011 | 9 | 0 | N | O |
-| Lasioglossum (Dialictus) versans (Lovell, 1905) | 99 | 58 | N | P |
-| Lasioglossum (Dialictus) versatum (Robertson, 1902) | 664 | 20 | N | P |
-| Lasioglossum (Dialictus) viridatum (Lovell, 1905) | 3 | 1 | N | P |
-| Lasioglossum (Dialictus) zephyrum (Smith, 1853) | 18 | 2 | N | P |
-| Lasioglossum (Evylaeus) cinctipes (Provancher, 1888) | 78 | 87 | N | P |
-| Lasioglossum (Hemihalictus) birkmanni (Crawford, 1906) | 7 | 3 | N | P |
-| Lasioglossum (Hemihalictus) foxii (Robertson, 1895) | 1 | 16 | N | P |
-| Lasioglossum (Hemihalictus) macoupinense (Robertson, 1895) | 37 | 45 | N | P |
-| Lasioglossum (Hemihalictus) inconditum (Cockerell, 1916) | 0 | 2 | N | P |
-| Lasioglossum (Lasioglossum) athabascense (Sandhouse, 1933) | 4 | 0 | N | P |
-| Lasioglossum (Lasioglossum) coriaceum (Smith, 1853) | 348 | 154 | N | P |
-| Lasioglossum (Leuchalictus) zonulum (Smith, 1848) | 100 | 93 | E | P |
-| Lasioglossum (Leuchalictus) leucozonium (Schrank, 1781) | 76 | 62 | E | P |
-| Lasioglossum (Sphecogastra) comagenense (Knerer &amp; Atwood, 1964) | 2 | 0 | N | P |
-| Lasioglossum (Sphecogastra) quebecense (Crawford, 1907) | 13 | 4 | N | P |
-| Lasioglossum (Sphecogastra) oenotherae (Stevens, 1920) | 111 | 1 | N | O |
-| Andrena (Andrena) clarkella (Kirby, 1802) | 1 | 1 | N | O |
-| Andrena (Andrena) frigida Smith, 1853 | 3 | 11 | N | P |
-| Andrena (Andrena) mandibularis Robertson, 1892 | 29 | 1 | N | P |
-| Andrena (Andrena) milwaukeeensis Graenicher, 1903 | 4 | 18 | N | P |
-| Andrena (Andrena) rufosignata Cockerell, 1902 | 0 | 4 | N | P |
-| Andrena (Callandrena s.l) asteris Robertson, 1891 | 0 | 1 | N | O |
-| Andrena (Callandrena s.l) simplex Smith, 1853 | 1 | 0 | N | O |
-| Andrena (Cnemiandrena) chromotricha Cockerell, 1899 | 15 | 0 | N | P |
-| Andrena (Cnemiandrena) hirticincta Provancher, 1888 | 10 | 17 | N | O |
-| Andrena (Cnemiandrena) nubecula Smith, 1853 | 2 | 17 | N | O |
-| Andrena (Euandrena) algida Smith, 1853 | 0 | 1 | N | P |
-| Andrena (Euandrena) geranii Robertson, 1891 | 2 | 10 | N | O |
+<table><tr><td>Species</td><td>Montreal</td><td>Quebec</td><td>Native or exotic</td><td>Pollen specificity</td></tr><tr><td>Lasioglossum (Dialictus) leucocomum (Lovell, 1908)</td><td>54</td><td>122</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) lineatulum (Crawford, 1906)</td><td>434</td><td>311</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) michiganense (Mitchell, 1960)</td><td>1</td><td>13</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) nigroviride (Graenicher, 1911)</td><td>14</td><td>35</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) oblongum (Lovell, 1905)</td><td>10</td><td>14</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) paradmirandum (Knerer &amp;amp; Atwood, 1966)</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) perpunctatum (Ellis, 1913)</td><td>0</td><td>68</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) pilosum (Smith, 1853)</td><td>59</td><td>248</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) planatum (Lovell, 1905)</td><td>11</td><td>5</td><td>N</td><td>O</td></tr><tr><td>Lasioglossum (Dialictus) sagax (Sandhouse, 1924)</td><td>554</td><td>315</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) smilacinae (Robertson, 1897)</td><td>2</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) subversans (Mitchell, 1960)</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) taylorae Gibbs, 2010</td><td>0</td><td>2</td><td>N</td><td>O</td></tr><tr><td>Lasioglossum (Dialictus) tegulare (Robertson, 1890)</td><td>149</td><td>53</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) tenax (Sandhouse, 1924)</td><td>2</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) trigeminum Gibbs, 2011</td><td>9</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Lasioglossum (Dialictus) versans (Lovell, 1905)</td><td>99</td><td>58</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) versatum (Robertson, 1902)</td><td>664</td><td>20</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) viridatum (Lovell, 1905)</td><td>3</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Dialictus) zephyrum (Smith, 1853)</td><td>18</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Evylaeus) cinctipes (Provancher, 1888)</td><td>78</td><td>87</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Hemihalictus) birkmanni (Crawford, 1906)</td><td>7</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Hemihalictus) foxii (Robertson, 1895)</td><td>1</td><td>16</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Hemihalictus) macoupinense (Robertson, 1895)</td><td>37</td><td>45</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Hemihalictus) inconditum (Cockerell, 1916)</td><td>0</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Lasioglossum) athabascense (Sandhouse, 1933)</td><td>4</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Lasioglossum) coriaceum (Smith, 1853)</td><td>348</td><td>154</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Leuchalictus) zonulum (Smith, 1848)</td><td>100</td><td>93</td><td>E</td><td>P</td></tr><tr><td>Lasioglossum (Leuchalictus) leucozonium (Schrank, 1781)</td><td>76</td><td>62</td><td>E</td><td>P</td></tr><tr><td>Lasioglossum (Sphecogastra) comagenense (Knerer &amp;amp; Atwood, 1964)</td><td>2</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Sphecogastra) quebecense (Crawford, 1907)</td><td>13</td><td>4</td><td>N</td><td>P</td></tr><tr><td>Lasioglossum (Sphecogastra) oenotherae (Stevens, 1920)</td><td>111</td><td>1</td><td>N</td><td>O</td></tr><tr><td>Andrena (Andrena) clarkella (Kirby, 1802)</td><td>1</td><td>1</td><td>N</td><td>O</td></tr><tr><td>Andrena (Andrena) frigida Smith, 1853</td><td>3</td><td>11</td><td>N</td><td>P</td></tr><tr><td>Andrena (Andrena) mandibularis Robertson, 1892</td><td>29</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Andrena (Andrena) milwaukeeensis Graenicher, 1903</td><td>4</td><td>18</td><td>N</td><td>P</td></tr><tr><td>Andrena (Andrena) rufosignata Cockerell, 1902</td><td>0</td><td>4</td><td>N</td><td>P</td></tr><tr><td>Andrena (Callandrena s.l) asteris Robertson, 1891</td><td>0</td><td>1</td><td>N</td><td>O</td></tr><tr><td>Andrena (Callandrena s.l) simplex Smith, 1853</td><td>1</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Andrena (Cnemiandrena) chromotricha Cockerell, 1899</td><td>15</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Cnemiandrena) hirticincta Provancher, 1888</td><td>10</td><td>17</td><td>N</td><td>O</td></tr><tr><td>Andrena (Cnemiandrena) nubecula Smith, 1853</td><td>2</td><td>17</td><td>N</td><td>O</td></tr><tr><td>Andrena (Euandrena) algida Smith, 1853</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Andrena (Euandrena) geranii Robertson, 1891</td><td>2</td><td>10</td><td>N</td><td>O</td></tr></table>
 
 (continued on next page)
 
@@ -606,52 +393,7 @@ PeerJ
 
 Table 4 (continued)
 
-| Species | Montreal | Quebec | Native or exotic | Pollen specificity |
-| --- | --- | --- | --- | --- |
-| Andrena (Gonandrena) fragilis Smith, 1853 | 1 | 0 | N | O |
-| Andrena (Gonandrena) integra Smith, 1853 | 4 | 3 | N | P |
-| Andrena (Gonandrena) persimulata Viereck, 1917 | 3 | 31 | N | P |
-| Andrena (Gonandrena) platyparia Robertson, 1895 | 0 | 2 | N | P |
-| Andrena (Holandrena) cressonii cressonii Robertson, 1891 | 101 | 0 | N | P |
-| Andrena (Larandrena) miserabilis Cresson, 1872 | 395 | 13 | N | P |
-| Andrena (Leucandrena) erythronii Robertson, 1891 | 2 | 0 | N | O |
-| Andrena (Melandrena) carlini Cockerell, 1901 | 153 | 37 | N | P |
-| Andrena (Melandrena) commoda Smith, 1879 | 355 | 53 | N | P |
-| Andrena (Melandrena) dunningi Cockerell, 1898 | 2 | 0 | N | P |
-| Andrena (Melandrena) nivalis Smith, 1853 | 284 | 78 | N | P |
-| Andrena (Melandrena) regularis Malloch, 1917 | 1 | 0 | N | P |
-| Andrena (Melandrena) vicina Smith, 1853 | 23 | 14 | N | P |
-| Andrena (Micrandrena) ziziae Robertson, 1891 | 2 | 2 | N | O |
-| Andrena (Micrandrena) nigrae Robertson, 1905 | 4 | 0 | N | P |
-| Andrena (Plastandrena) crataegi Robertson, 1893 | 159 | 15 | N | P |
-| Andrena (Ptilandrena) distans Provancher, 1888 | 1 | 0 | N | O |
-| Andrena (Ptilandrena) erigeniae Robertson, 1891 | 2 | 2 | N | O |
-| Andrena (Rhacanrena) brevipalpis Cockerell, 1930 | 1 | 0 | N | P |
-| Andrena (Rhacandrena) robertsonii Dalla Torre, 1896 | 6 | 4 | N | P |
-| Andrena (Scapteropsis) alleghaniensis Viereck, 1907 | 0 | 4 | N | P |
-| Andrena (Scapteropsis) imitatrix Cresson, 1872 | 8 | 11 | N | P |
-| Andrena (Scapteropsis) morrisonella Viereck, 1917 | 20 | 2 | N | P |
-| Andrena (Simandrena) nassonii Robertson, 1895 | 163 | 53 | N | P |
-| Andrena (Simandrena) wheeleri Graenicher, 1904 | 60 | 76 | N | P |
-| Andrena (Taeniandrena) wilkella (Kirby, 1802) | 60 | 79 | E | P |
-| Andrena (Thysandrena) w-scripta Viereck, 1904 | 8 | 3 | N | P |
-| Andrena (Thysandrena) bisalicis Viereck, 1908 | 2 | 0 | N | P |
-| Andrena (Trachandrena) ceanothi Viereck, 1917 | 3 | 17 | N | P |
-| Andrena (Trachandrena) forbesii Robertson, 1895 | 19 | 27 | N | P |
-| Andrena (Trachandrena) hippotes Robertson, 1895 | 167 | 33 | N | P |
-| Andrena (Trachandrena) rugosa Robertson, 1891 | 2 | 2 | N | P |
-| Andrena (Trachandrena) sigmundi Cockerell, 1902 | 0 | 5 | N | O |
-| Andrena (Trachandrena) spiraeana Robertson, 1895 | 23 | 7 | N | O |
-| Andrena (Tylandrena) erythrogaster (Ashmead, 1890) | 1 | 0 | N | O |
-| Andrena (Tylandrena) perplexa Smith, 1853 | 1 | 0 | N | P |
-| Calliopsis (Calliopsis) andreniformis Smith, 1853 | 7 | 2 | N | P |
-| Pseudopanurgus andrenoides (Smith, 1853) | 0 | 1 | N | P |
-| Pseudopanurgus parvus (Robertson, 1892) | 5 | 0 | N | P |
-| Pseudopanurgus helianthi Mitchell, 1960 | 10 | 1 | N | P |
-| Perdita (Perdita) octomaculata (Say, 1824) | 0 | 4 | N | O |
-| Anthidium (Anthidium) manicatum Linnaeus, 1758 | 86 | 25 | E | P |
-| Anthidium (Anthidium) florentinum Fabricius, 1775 | 147 | 0 | E | P |
-| Anthidium (Proantidium) oblongatum (Illiger, 1806) | 74 | 0 | E | P |
+<table><tr><td>Species</td><td>Montreal</td><td>Quebec</td><td>Native or exotic</td><td>Pollen specificity</td></tr><tr><td>Andrena (Gonandrena) fragilis Smith, 1853</td><td>1</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Andrena (Gonandrena) integra Smith, 1853</td><td>4</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Andrena (Gonandrena) persimulata Viereck, 1917</td><td>3</td><td>31</td><td>N</td><td>P</td></tr><tr><td>Andrena (Gonandrena) platyparia Robertson, 1895</td><td>0</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Andrena (Holandrena) cressonii cressonii Robertson, 1891</td><td>101</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Larandrena) miserabilis Cresson, 1872</td><td>395</td><td>13</td><td>N</td><td>P</td></tr><tr><td>Andrena (Leucandrena) erythronii Robertson, 1891</td><td>2</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Andrena (Melandrena) carlini Cockerell, 1901</td><td>153</td><td>37</td><td>N</td><td>P</td></tr><tr><td>Andrena (Melandrena) commoda Smith, 1879</td><td>355</td><td>53</td><td>N</td><td>P</td></tr><tr><td>Andrena (Melandrena) dunningi Cockerell, 1898</td><td>2</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Melandrena) nivalis Smith, 1853</td><td>284</td><td>78</td><td>N</td><td>P</td></tr><tr><td>Andrena (Melandrena) regularis Malloch, 1917</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Melandrena) vicina Smith, 1853</td><td>23</td><td>14</td><td>N</td><td>P</td></tr><tr><td>Andrena (Micrandrena) ziziae Robertson, 1891</td><td>2</td><td>2</td><td>N</td><td>O</td></tr><tr><td>Andrena (Micrandrena) nigrae Robertson, 1905</td><td>4</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Plastandrena) crataegi Robertson, 1893</td><td>159</td><td>15</td><td>N</td><td>P</td></tr><tr><td>Andrena (Ptilandrena) distans Provancher, 1888</td><td>1</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Andrena (Ptilandrena) erigeniae Robertson, 1891</td><td>2</td><td>2</td><td>N</td><td>O</td></tr><tr><td>Andrena (Rhacanrena) brevipalpis Cockerell, 1930</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Rhacandrena) robertsonii Dalla Torre, 1896</td><td>6</td><td>4</td><td>N</td><td>P</td></tr><tr><td>Andrena (Scapteropsis) alleghaniensis Viereck, 1907</td><td>0</td><td>4</td><td>N</td><td>P</td></tr><tr><td>Andrena (Scapteropsis) imitatrix Cresson, 1872</td><td>8</td><td>11</td><td>N</td><td>P</td></tr><tr><td>Andrena (Scapteropsis) morrisonella Viereck, 1917</td><td>20</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Andrena (Simandrena) nassonii Robertson, 1895</td><td>163</td><td>53</td><td>N</td><td>P</td></tr><tr><td>Andrena (Simandrena) wheeleri Graenicher, 1904</td><td>60</td><td>76</td><td>N</td><td>P</td></tr><tr><td>Andrena (Taeniandrena) wilkella (Kirby, 1802)</td><td>60</td><td>79</td><td>E</td><td>P</td></tr><tr><td>Andrena (Thysandrena) w-scripta Viereck, 1904</td><td>8</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Andrena (Thysandrena) bisalicis Viereck, 1908</td><td>2</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Andrena (Trachandrena) ceanothi Viereck, 1917</td><td>3</td><td>17</td><td>N</td><td>P</td></tr><tr><td>Andrena (Trachandrena) forbesii Robertson, 1895</td><td>19</td><td>27</td><td>N</td><td>P</td></tr><tr><td>Andrena (Trachandrena) hippotes Robertson, 1895</td><td>167</td><td>33</td><td>N</td><td>P</td></tr><tr><td>Andrena (Trachandrena) rugosa Robertson, 1891</td><td>2</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Andrena (Trachandrena) sigmundi Cockerell, 1902</td><td>0</td><td>5</td><td>N</td><td>O</td></tr><tr><td>Andrena (Trachandrena) spiraeana Robertson, 1895</td><td>23</td><td>7</td><td>N</td><td>O</td></tr><tr><td>Andrena (Tylandrena) erythrogaster (Ashmead, 1890)</td><td>1</td><td>0</td><td>N</td><td>O</td></tr><tr><td>Andrena (Tylandrena) perplexa Smith, 1853</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Calliopsis (Calliopsis) andreniformis Smith, 1853</td><td>7</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Pseudopanurgus andrenoides (Smith, 1853)</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Pseudopanurgus parvus (Robertson, 1892)</td><td>5</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Pseudopanurgus helianthi Mitchell, 1960</td><td>10</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Perdita (Perdita) octomaculata (Say, 1824)</td><td>0</td><td>4</td><td>N</td><td>O</td></tr><tr><td>Anthidium (Anthidium) manicatum Linnaeus, 1758</td><td>86</td><td>25</td><td>E</td><td>P</td></tr><tr><td>Anthidium (Anthidium) florentinum Fabricius, 1775</td><td>147</td><td>0</td><td>E</td><td>P</td></tr><tr><td>Anthidium (Proantidium) oblongatum (Illiger, 1806)</td><td>74</td><td>0</td><td>E</td><td>P</td></tr></table>
 
 (continued on next page)
 
@@ -665,52 +407,7 @@ PeerJ
 
 Table 4 (continued)
 
-| Species | Montreal | Quebec | Native or exotic | Pollen specificity |
-| --- | --- | --- | --- | --- |
-| Heriades (Neotrypetes) carinata Cresson, 1864 | 5 | 17 | N | P |
-| Heriades (Neotrypetes) leavitti Crawford, 1913 | 6 | 0 | N | P |
-| Hoplitis (Hoplitis) anthocopoides Schenck, 1853 | 1 | 0 | E | P |
-| Hoplitis (Alcidamea) pilosifrons (Cresson, 1864) | 6 | 6 | N | P |
-| Hoplitis (Alcidamea) producta producta (Cresson, 1864) | 587 | 69 | N | P |
-| Hoplitis (Alcidamea) spoliata (Provancher, 1888) | 9 | 0 | N | P |
-| Osmia (Diceratosmia) conjuncta Cresson, 1864 | 13 | 22 | N | P |
-| Osmia (Helicosmia) caerulescens Linnaeus, 1758 | 0 | 2 | E | P |
-| Osmia (Melanosmia) albiventris Cresson, 1864 | 68 | 14 | N | P |
-| Osmia (Melanosmia) atriventris Cresson, 1864 | 21 | 12 | N | P |
-| Osmia (Melanosmia) bucephala Cresson, 1864 | 0 | 2 | N | P |
-| Osmia (Melanosmia) pumila Cresson, 1864 | 6 | 2 | N | P |
-| Osmia (Melanosmia) simillima Smith, 1853 | 2 | 3 | N | P |
-| Osmia (Melanosmia) tersula Cockerell, 1912 | 0 | 11 | N | P |
-| Osmia (Osmia) lignaria Say, 1837 | 9 | 3 | N | P |
-| Osmia (Osmia) taurus Smith, 1873 | 1 | 0 | E | P |
-| Chelostoma (Foveosmia) campanularum (Kirby, 1802) | 311 | 0 | E | P |
-| Chelostoma (Gyrodromella) rapunculi (Lepeletier, 1841) | 169 | 10 | E | P |
-| Chelostoma (Prochelostoma) philadelphi (Robertson, 1891) | 31 | 0 | N | P |
-| Megachile (Chelostomoides) campanulae (Robertson, 1903) | 23 | 0 | N | P |
-| Megachile (Eutricharaea) rotundata (Fabricius, 1787) | 249 | 69 | E | P |
-| Megachile (Litomegachile) brevis Say, 1837 | 6 | 0 | N | P |
-| Megachile (Litomegachile) mendica Cresson, 1878 | 21 | 0 | N | P |
-| Megachile (Litomegachile) texana Cresson, 1878 | 128 | 24 | N | P |
-| Megachile (Megachile) centuncularis (Linnaeus, 1858) | 46 | 11 | E | P |
-| Megachile (Megachile) lapponica Thomson, 1872 | 33 | 2 | N | P |
-| Megachile (Megachile) inermis Provancher, 1888 | 5 | 81 | N | P |
-| Megachile (Megachile) relativa Cresson, 1878 | 15 | 1 | N | P |
-| Megachile (Xanthosarus) frigida Smith, 1853 | 40 | 25 | N | P |
-| Megachile (Xanthosarus) gemula Cresson, 1878 | 2 | 0 | N | P |
-| Megachile (Xanthosarus) latimanus Say, 1823 | 14 | 1 | N | P |
-| Megachile (Xanthosarus) melanophaea Smith, 1853 | 1 | 19 | N | P |
-| Megachile (Sayapis) pugnata Say, 1837 | 1 | 15 | N | P |
-| Coelioxys (Boreocoelioxys) octodentata Say, 1824 | 4 | 0 | N | P |
-| Coelioxys (Boreocoelioxys) porterae Cockerell, 1900 | 10 | 12 | N | P |
-| Xylocopa (xylocopoides) virginica Linnaeus, 1771 | 1 | 0 | N | P |
-| Ceratina (Zadontomerus) calcarata Robertson, 1900 | 779 | 160 | N | P |
-| Ceratina (Zadontomerus) dupla Say, 1837 | 109 | 24 | N | P |
-| Ceratina (Zadontomerus) mikmaqi Rehan &amp; Sheffield, 2011 | 102 | 33 | N | P |
-| Nomada bethunei Cockerell, 1903 | 48 | 23 | N | P |
-| Nomada cressonii Robertson, 1893 | 3 | 0 | N | P |
-| Nomada denticulata Robertson, 1902 | 9 | 2 | N | P |
-| Nomada luteoloides Robertson, 1895 | 30 | 9 | N | P |
-| Nomada maculata Cresson, 1863 | 12 | 10 | N | P |
+<table><tr><td>Species</td><td>Montreal</td><td>Quebec</td><td>Native or exotic</td><td>Pollen specificity</td></tr><tr><td>Heriades (Neotrypetes) carinata Cresson, 1864</td><td>5</td><td>17</td><td>N</td><td>P</td></tr><tr><td>Heriades (Neotrypetes) leavitti Crawford, 1913</td><td>6</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Hoplitis (Hoplitis) anthocopoides Schenck, 1853</td><td>1</td><td>0</td><td>E</td><td>P</td></tr><tr><td>Hoplitis (Alcidamea) pilosifrons (Cresson, 1864)</td><td>6</td><td>6</td><td>N</td><td>P</td></tr><tr><td>Hoplitis (Alcidamea) producta producta (Cresson, 1864)</td><td>587</td><td>69</td><td>N</td><td>P</td></tr><tr><td>Hoplitis (Alcidamea) spoliata (Provancher, 1888)</td><td>9</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Osmia (Diceratosmia) conjuncta Cresson, 1864</td><td>13</td><td>22</td><td>N</td><td>P</td></tr><tr><td>Osmia (Helicosmia) caerulescens Linnaeus, 1758</td><td>0</td><td>2</td><td>E</td><td>P</td></tr><tr><td>Osmia (Melanosmia) albiventris Cresson, 1864</td><td>68</td><td>14</td><td>N</td><td>P</td></tr><tr><td>Osmia (Melanosmia) atriventris Cresson, 1864</td><td>21</td><td>12</td><td>N</td><td>P</td></tr><tr><td>Osmia (Melanosmia) bucephala Cresson, 1864</td><td>0</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Osmia (Melanosmia) pumila Cresson, 1864</td><td>6</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Osmia (Melanosmia) simillima Smith, 1853</td><td>2</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Osmia (Melanosmia) tersula Cockerell, 1912</td><td>0</td><td>11</td><td>N</td><td>P</td></tr><tr><td>Osmia (Osmia) lignaria Say, 1837</td><td>9</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Osmia (Osmia) taurus Smith, 1873</td><td>1</td><td>0</td><td>E</td><td>P</td></tr><tr><td>Chelostoma (Foveosmia) campanularum (Kirby, 1802)</td><td>311</td><td>0</td><td>E</td><td>P</td></tr><tr><td>Chelostoma (Gyrodromella) rapunculi (Lepeletier, 1841)</td><td>169</td><td>10</td><td>E</td><td>P</td></tr><tr><td>Chelostoma (Prochelostoma) philadelphi (Robertson, 1891)</td><td>31</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Megachile (Chelostomoides) campanulae (Robertson, 1903)</td><td>23</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Megachile (Eutricharaea) rotundata (Fabricius, 1787)</td><td>249</td><td>69</td><td>E</td><td>P</td></tr><tr><td>Megachile (Litomegachile) brevis Say, 1837</td><td>6</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Megachile (Litomegachile) mendica Cresson, 1878</td><td>21</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Megachile (Litomegachile) texana Cresson, 1878</td><td>128</td><td>24</td><td>N</td><td>P</td></tr><tr><td>Megachile (Megachile) centuncularis (Linnaeus, 1858)</td><td>46</td><td>11</td><td>E</td><td>P</td></tr><tr><td>Megachile (Megachile) lapponica Thomson, 1872</td><td>33</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Megachile (Megachile) inermis Provancher, 1888</td><td>5</td><td>81</td><td>N</td><td>P</td></tr><tr><td>Megachile (Megachile) relativa Cresson, 1878</td><td>15</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Megachile (Xanthosarus) frigida Smith, 1853</td><td>40</td><td>25</td><td>N</td><td>P</td></tr><tr><td>Megachile (Xanthosarus) gemula Cresson, 1878</td><td>2</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Megachile (Xanthosarus) latimanus Say, 1823</td><td>14</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Megachile (Xanthosarus) melanophaea Smith, 1853</td><td>1</td><td>19</td><td>N</td><td>P</td></tr><tr><td>Megachile (Sayapis) pugnata Say, 1837</td><td>1</td><td>15</td><td>N</td><td>P</td></tr><tr><td>Coelioxys (Boreocoelioxys) octodentata Say, 1824</td><td>4</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Coelioxys (Boreocoelioxys) porterae Cockerell, 1900</td><td>10</td><td>12</td><td>N</td><td>P</td></tr><tr><td>Xylocopa (xylocopoides) virginica Linnaeus, 1771</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Ceratina (Zadontomerus) calcarata Robertson, 1900</td><td>779</td><td>160</td><td>N</td><td>P</td></tr><tr><td>Ceratina (Zadontomerus) dupla Say, 1837</td><td>109</td><td>24</td><td>N</td><td>P</td></tr><tr><td>Ceratina (Zadontomerus) mikmaqi Rehan &amp;amp; Sheffield, 2011</td><td>102</td><td>33</td><td>N</td><td>P</td></tr><tr><td>Nomada bethunei Cockerell, 1903</td><td>48</td><td>23</td><td>N</td><td>P</td></tr><tr><td>Nomada cressonii Robertson, 1893</td><td>3</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Nomada denticulata Robertson, 1902</td><td>9</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Nomada luteoloides Robertson, 1895</td><td>30</td><td>9</td><td>N</td><td>P</td></tr><tr><td>Nomada maculata Cresson, 1863</td><td>12</td><td>10</td><td>N</td><td>P</td></tr></table>
 
 (continued on next page)
 
@@ -724,35 +421,7 @@ PeerJ
 
 Table 4 (continued)
 
-| Species | Montreal | Quebec | Native or exotic | Pollen specificity |
-| --- | --- | --- | --- | --- |
-| Nomada parva Robertson, 1900 | 0 | 1 | N | P |
-| Nomada pygmaea Cresson, 1963 | 26 | 1 | N | P |
-| Nomada vicina Cresson, 1863 | 2 | 2 | N | P |
-| Epeolus scutellaris Say, 1824 | 5 | 0 | N | P |
-| Triepeolus obliteratus Graenicher, 1911 | 0 | 1 | N | P |
-| Triepeolus remigatus (Fabricius, 1804) | 1 | 0 | N | P |
-| Triepeolus pectoralis (Robertson, 1897) | 19 | 0 | N | P |
-| Holcopasites calliopsidis (Linsley, 1943) | 1 | 0 | N | P |
-| Mellisodes (Eumelissodes) druriella (Kirby, 1802) | 117 | 23 | N | O |
-| Melissodes (Eumelissodes) subillata LaBerge, 1961 | 134 | 19 | N | P |
-| Melissodes (Eumelissodes) illata Lovell &amp; Cockerell, 1906 | 74 | 25 | N | P |
-| Melissodes (Eumelissodes) trinodis Robertson, 1901 | 20 | 13 | N | P |
-| Melissodes (Heliomelissodes) desponsa Smith, 1854 | 932 | 58 | N | O |
-| Peponapis (Peponapis) pruinosa (Say, 1837) | 181 | 7 | N | O |
-| Anthophora (Clisodon) terminalis Cresson, 1869 | 23 | 4 | N | P |
-| Bombus (Bombus) terricola Kirby, 1837 | 6 | 8 | N | P |
-| Bombus (Psithyrus) citrinus (Smith, 1854) | 47 | 25 | N | P |
-| Bombus (Thoracobombus) fervidus (Fabricius, 1798) | 15 | 23 | N | P |
-| Bombus (Cullumanobombus) rufocinctus Cresson, 1863 | 142 | 140 | N | P |
-| Bombus (Cullumanobombus) griseocollis (DeGeer, 1773) | 311 | 12 | N | P |
-| Bombus (Pyrobombus) bimaculatus Cresson, 1863 | 64 | 56 | N | P |
-| Bombus (Pyrobombus) impatiens Cresson, 1863 | 1,097 | 627 | N | P |
-| Bombus (Pyrobombus) perplexus Cresson, 1863 | 8 | 6 | N | P |
-| Bombus (Pyrobombus) ternarius Say, 1837 | 36 | 44 | N | P |
-| Bombus (Pyrobombus) vagans vagans Smith, 1854 | 44 | 33 | N | P |
-| Bombus (Subterraneobombus) borealis Kirby, 1837 | 4 | 3 | N | P |
-| Apis (Apis) mellifera Linnaeus, 1758 | 416 | 95 | E | P |
+<table><tr><td>Species</td><td>Montreal</td><td>Quebec</td><td>Native or exotic</td><td>Pollen specificity</td></tr><tr><td>Nomada parva Robertson, 1900</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Nomada pygmaea Cresson, 1963</td><td>26</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Nomada vicina Cresson, 1863</td><td>2</td><td>2</td><td>N</td><td>P</td></tr><tr><td>Epeolus scutellaris Say, 1824</td><td>5</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Triepeolus obliteratus Graenicher, 1911</td><td>0</td><td>1</td><td>N</td><td>P</td></tr><tr><td>Triepeolus remigatus (Fabricius, 1804)</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Triepeolus pectoralis (Robertson, 1897)</td><td>19</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Holcopasites calliopsidis (Linsley, 1943)</td><td>1</td><td>0</td><td>N</td><td>P</td></tr><tr><td>Mellisodes (Eumelissodes) druriella (Kirby, 1802)</td><td>117</td><td>23</td><td>N</td><td>O</td></tr><tr><td>Melissodes (Eumelissodes) subillata LaBerge, 1961</td><td>134</td><td>19</td><td>N</td><td>P</td></tr><tr><td>Melissodes (Eumelissodes) illata Lovell &amp;amp; Cockerell, 1906</td><td>74</td><td>25</td><td>N</td><td>P</td></tr><tr><td>Melissodes (Eumelissodes) trinodis Robertson, 1901</td><td>20</td><td>13</td><td>N</td><td>P</td></tr><tr><td>Melissodes (Heliomelissodes) desponsa Smith, 1854</td><td>932</td><td>58</td><td>N</td><td>O</td></tr><tr><td>Peponapis (Peponapis) pruinosa (Say, 1837)</td><td>181</td><td>7</td><td>N</td><td>O</td></tr><tr><td>Anthophora (Clisodon) terminalis Cresson, 1869</td><td>23</td><td>4</td><td>N</td><td>P</td></tr><tr><td>Bombus (Bombus) terricola Kirby, 1837</td><td>6</td><td>8</td><td>N</td><td>P</td></tr><tr><td>Bombus (Psithyrus) citrinus (Smith, 1854)</td><td>47</td><td>25</td><td>N</td><td>P</td></tr><tr><td>Bombus (Thoracobombus) fervidus (Fabricius, 1798)</td><td>15</td><td>23</td><td>N</td><td>P</td></tr><tr><td>Bombus (Cullumanobombus) rufocinctus Cresson, 1863</td><td>142</td><td>140</td><td>N</td><td>P</td></tr><tr><td>Bombus (Cullumanobombus) griseocollis (DeGeer, 1773)</td><td>311</td><td>12</td><td>N</td><td>P</td></tr><tr><td>Bombus (Pyrobombus) bimaculatus Cresson, 1863</td><td>64</td><td>56</td><td>N</td><td>P</td></tr><tr><td>Bombus (Pyrobombus) impatiens Cresson, 1863</td><td>1,097</td><td>627</td><td>N</td><td>P</td></tr><tr><td>Bombus (Pyrobombus) perplexus Cresson, 1863</td><td>8</td><td>6</td><td>N</td><td>P</td></tr><tr><td>Bombus (Pyrobombus) ternarius Say, 1837</td><td>36</td><td>44</td><td>N</td><td>P</td></tr><tr><td>Bombus (Pyrobombus) vagans vagans Smith, 1854</td><td>44</td><td>33</td><td>N</td><td>P</td></tr><tr><td>Bombus (Subterraneobombus) borealis Kirby, 1837</td><td>4</td><td>3</td><td>N</td><td>P</td></tr><tr><td>Apis (Apis) mellifera Linnaeus, 1758</td><td>416</td><td>95</td><td>E</td><td>P</td></tr></table>
 
 19 (12.4%), respectively) most of the species are polylectic (generalist). As urban sprawl continues, these species may gain more territory and the pressure they apply on other species through higher foraging efficiency could eventually lead to the loss of native species (Petren & Case, 1996). Competition for resources can occur in bees (Goulson & Sparrow, 2009) especially when exotic species are involved (Lye et al., 2010).
 
@@ -1072,205 +741,4 @@ Normandin et al. (2017), PeerJ, DOI [10.7717/peerj.3051](http://dx.doi.org/10.77
 
 <!-- page 1 of 1 -->
 
-| Species | Nesting | ITD | Social | Pollen | Tongue | Lecty | Season |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L.MICHIGANENSIS | cleptoparasite | 1.4 | Cleptoparasite | Accidental | medium | Polylectic | Spring |
-| L.ISAWZUM | cleptoparasite | 1.3 | Cleptoparasite | Accidental | medium | Polylectic | summer |
-| L.ASTERIS | cleptoparasite | 1.05 | Cleptoparasite | Accidental | medium | Polylectic | summer |
-| L.SAGAX | excavator:ground | 1.6 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.LAEVISSIMUM | excavator:ground | 1.42 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.LEUCOCOMUM | excavator:ground | 1.48 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.LINEATULUM | excavator:ground | 1.5 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.CRESSONII | excavator:ground | 2.15 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.TEGULAREA | excavator:ground | 0.98 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.IMITATUM | excavator:ground | 0.98 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.EPHIALTUM | excavator:ground | 1.5 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.PILOSUM | excavator:ground | 1.87 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.VERSATUM | excavator:ground | 1.9 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.HITCHENSI | excavator:ground | 1.56 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.VERSANS | excavator:ground | 1.61 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.SUBVERSANS | excavator:ground | 1.63 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.NIGROVIRIDE | excavator:ground | 1.91 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.PERPUNCTATUM | excavator:ground | 1.64 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.PLANATUM | excavator:ground | 1.05 | Solitary | Leg&amp;body | medium | Oligolectic | Spring:summer |
-| L.DREISBACHI | excavator:ground | 1.04 | Solitary | Leg&amp;body | medium | Oligolectic | Spring:summer |
-| L.VIRIDATUM | excavator:ground | 1.62 | Solitary | Leg&amp;body | medium | Polylectic | Spring |
-| L.OBLONGUM | excavator:ground | 1.65 | Solitary | Leg&amp;body | medium | Polylectic | Spring |
-| L.TRIGEMINUM | excavator:ground | 1.73 | Solitary | Leg&amp;body | medium | Oligolectic | Spring |
-| L.SMILACINAE | excavator:ground | 1.55 | Solitary | Leg&amp;body | medium | Polylectic | Spring |
-| L.ZEPHYRUM | excavator:ground | 1.45 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.TAYLOREA | excavator:ground | 1.43 | Solitary | Leg&amp;body | medium | Oligolectic | summer |
-| L.TENAX | excavator:ground | 1.03 | Solitary | Leg&amp;body | medium | Polylectic | Spring |
-| L.COERULUM | excavator:ground | 1.7 | Solitary | Leg&amp;body | medium | Polylectic | Spring |
-| L.HETEROGNATUM | excavator:ground | 1.2 | Solitary | Leg&amp;body | medium | Polylectic |  |
-| L.PARADMIRANTUM | excavator:ground | 1.43 | Solitary | Leg&amp;body | medium | Polylectic | Spring |
-| L.ABANCI | excavator:ground | 1.5 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.CEPHALOTES | cleptoparasite | 0.96 | Cleptoparasite | Accidental | medium | Polylectic | Spring:summer |
-| L.ATHABACENSE | excavator:ground | 2.55 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.CORIACEUM | excavator:ground | 2.59 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.OENOTHERAE | excavator:ground | 1.59 | Solitary | Leg&amp;body | medium | Oligolectic | Spring:summer |
-| L.CINCTIPES | excavator:ground | 2.3 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.QUEBECENSIS | excavator:ground | 2.02 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.COMAGENENSE | excavator:ground | 1.63 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.MACOUPINENSE | excavator:ground | 1.67 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.BIRKAMNNI | excavator:ground | 1.61 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.FOXII | excavator:ground | 1.59 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.INCONDIDUM | excavator:ground | 1.73 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.ZONULUM | excavator:ground | 2.6 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| L.LEUCOZONIUM | excavator:ground | 2.57 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| H.RUBICUNDUS | excavator:ground | 3.14 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| H.CONFUSUS | excavator:ground | 1.89 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| H.LIGATUS | excavator:ground | 2.48 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| A.AURATA | excavator:ground | 2.05 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| A.PURA | excavator:ground | 2.55 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| A.VIRESCENS | excavator:ground | 3.39 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| A.METALLICA | excavator:ground | 2.6 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| A.TEXANA | excavator:ground | 2.73 | Solitary | Leg&amp;body | medium | Polylectic | Spring:summer |
-| APIS.MELLIFERA | Renter:existingcavitiesbelowground | 3.6 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.IMPATIENS | Renter:existingcavitiesbelowground | 7.6 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.TERRICOLA | Renter:existingcavitiesbelowground | 6.5 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.GRISEOCOLLIS | Renter:existingcavitiesbelowground | 7.4 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.VAGANS | Renter:existingcavitiesbelowground | 7.34 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.RUFOCINCTUS | Renter:existingcavitiesbelowground | 6.37 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.TERNARIUS | Renter:existingcavitiesbelowground |  | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.BIMACULATUS | Renter:existingcavitiesbelowground | 6.93 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.FERVIDUS | Renter:existingcavitiesbelowground | 7.0 | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.CITRINUS | Socialparasite | 6.5 | Socialparasite | Accidental | long | Polylectic | summer |
-| B.PERPLEXUS | Renter:existingcavitiesbelowground |  | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| B.BOREALIS | Renter:existingcavitiesbelowground |  | Highlyeusocial | Corbiculae | long | Polylectic | year |
-| M.DESPONSA | excavator:ground | 4.05 | Solitary | legsonly | long | Oligolectic | summer |
-| M.TRINODIS | excavator:ground | 3.3 | Solitary | legsonly | long | Polylectic | summer |
-| M.DRURIELLA | excavator:ground | 3.26 | Solitary | legsonly | long | Oligolectic | summer |
-| M.ILLATA | excavator:ground | 3.3 | Solitary | legsonly | long | Polylectic | summer |
-| M.SUBILLATA | excavator:ground | 3.7 | Solitary | legsonly | long | Polylectic | summer |
-| P.PRUINOSA | excavator:ground | 3.94 | Solitary | legsonly | long | Oligolectic | summer |
-| A.TERMINALIS | excavator:deadstem | 3.04 | Solitary | legsonly | long | Polylectic | summer |
-| C.CALCARATA | excavator:deadstem | 1.91 | Solitary | legsonly | medium | Polylectic | year |
-| C.MIKMAQUI | excavator:deadstem | 1.81 | Solitary | legsonly | medium | Polylectic | year |
-| C.DUPLA | excavator:deadstem | 1.2 | Solitary | legsonly | medium | Polylectic | year |
-| X.VIRGINIANA | excavator:deadstem | 6.5 | Solitary | legsonly | medium | Polylectic | summer |
-| M.INERMIS | Renter:existingcavitiesaboveground | 5.51 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.FRIGIDA | Renter:existingcavitiesaboveground | 3.46 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.ROTUNDATA | Renter:existingcavitiesaboveground | 2.27 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| M.MELANOPHEA | excavator:ground | 4.4 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.PUGNATA | Renter:existingcavitiesaboveground | 4.3 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.CAMPANULAE | Renter:existingcavitiesaboveground | 2.26 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.CENTUNCULARIS | Renter:existingcavitiesaboveground | 3.3 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.RELATIVA | Renter:existingcavitiesaboveground | 3.51 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.LATIMANUS | excavator:ground | 4.34 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.GEMULA | Renter:existingcavitiesaboveground | 4.38 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.TEXANA | excavator:ground | 3.56 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.BREVIS | Renter:existingcavitiesaboveground | 3.13 |  |  |  |  |  |
-| M.MENDICA | Renter:existingcavitiesaboveground | 3.36 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| M.LAPPONICA | Renter:existingcavitiesaboveground | 3.11 |  | underside:abdomen | medium | Polylectic | summer |
-| A.MANICATUM | carder | 4.13 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| A.OBLONGATUM | carder | 3.6 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| A.FLORENTINUM | carder | 4.95 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| C.OCTODENTATA | cleptoparasite | 2.87 | Solitary | Accidental | medium | Polylectic | summer |
-| C.PORTERAE | cleptoparasite | 2.76 | Solitary | Accidental | medium | Polylectic | summer |
-| H.CARINATA | Renter:existingcavitiesaboveground | 1.67 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| H.PRODUCTA | Renter:existingcavitiesaboveground | 2.1 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| H.PILOSIFRONS | Renter:existingcavitiesaboveground | 2.1 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| H.SPOLIATA | Renter:existingcavitiesaboveground | 3.15 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| H.LEAVITTI | Renter:existingcavitiesaboveground | 1.75 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| H.ANTHOCOPOIDES | Renter:existingcavitiesaboveground | 2.65 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| O.ALBIVENTRIS | Renter:existingcavitiesaboveground | 2.23 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| O.ATRIVENTRIS | Renter:existingcavitiesaboveground | 2.69 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| O.CAERULESCENS | Renter:existingcavitiesaboveground | 2.43 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| O.TERSULA | Renter:existingcavitiesaboveground | 2.73 | Solitary | underside:abdomen | medium | Polylectic | summer |
-| O.LIGNARIA | Renter:existingcavitiesaboveground | 4.1 | Solitary | underside:abdomen | medium | Polylectic | Spring |
-| O.PUMILA | Renter:existingcavitiesaboveground | 2.36 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| O.TAURUS | Renter:existingcavitiesaboveground | 3.47 | Solitary | underside:abdomen | medium | Polylectic | Spring |
-| O.CONJUNCTA | Renter:existingcavitiesaboveground | 2.6 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| O.SIMILLIMA | Renter:existingcavitiesaboveground | 3.39 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| O.BUCEPHALA | Renter:existingcavitiesaboveground | 3.55 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| C.RAPUNCULI | Renter:existingcavitiesaboveground | 2.17 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| C.PHILADELPHI | Renter:existingcavitiesaboveground | 1.47 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| C.CAMPANULARUM | Renter:existingcavitiesaboveground | 1.03 | Solitary | underside:abdomen | medium | Polylectic | Spring:summer |
-| H.HYALINATUS | Renter:existingcavitiesaboveground | 1.71 | Solitary | Crop | short | Polylectic | summer |
-| H.MESILLAE | Renter:existingcavitiesaboveground | 1.86 | Solitary | Crop | short | Polylectic | summer |
-| H.AFFINIS | Renter:existingcavitiesaboveground | 1.48 | Solitary | Crop | short | Polylectic | summer |
-| H.MODESTUS | Renter:existingcavitiesaboveground | 1.65 | Solitary | Crop | short | Polylectic | summer |
-| H.ANNULATUS | Renter:existingcavitiesaboveground | 1.2 | Solitary | Crop | short | Polylectic | summer |
-| H.BASALIS | Renter:existingcavitiesaboveground | 2.45 | Solitary | Crop | short | Polylectic | summer |
-| H.PUNCTATUS | Renter:existingcavitiesaboveground | 1.23 | Solitary | Crop | short | Polylectic | summer |
-| H.COMMUNIS | Renter:existingcavitiesaboveground | 1.6 | Solitary | Crop | short | Polylectic | summer |
-| H.LEPTOCEPHALUS | Renter:existingcavitiesaboveground | 1.05 | Solitary | Crop | short | Polylectic | summer |
-| H.NELUMBONIS | Renter:existingcavitiesaboveground | 1.53 | Solitary | Crop | short | Oligolectic | summer |
-| C.SIMULANS | excavator:ground | 2.55 | Solitary | Leg&amp;body | short | Oligolectic | summer |
-| C.AMERICANA | excavator:ground | 2.07 | Solitary | Leg&amp;body | short | Polylectic | summer |
-| C.ANDRENIFORMIS | excavator:ground | 1.98 | Solitary | Leg&amp;body | medium | Polylectic | summer |
-| P.PARVUS | excavator:ground | 1.73 | Solitary | Leg&amp;body | short | Polylectic | summer |
-| P.RUDBECKIAE | excavator:ground | 1.46 | Solitary | Leg&amp;body | short | Polylectic | summer |
-| P.ANDRENOIDES | excavator:ground | 1.56 | Solitary | Leg&amp;body | short | Polylectic | summer |
-| P.OCTOMACULATA | excavator:ground | 1.53 | communal | Leg&amp;body | short | Polylectic | summer |
-| A.HIRTICINCTA | excavator:ground | 2.55 | Solitary | Leg&amp;body | short | Oligolectic | summer |
-| A.WHEELERI | excavator:ground | 2.3 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.HIPPOTES | excavator:ground | 2.87 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.CRESSONII | excavator:ground | 2.72 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.NIGRAE | excavator:ground | 1.9 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.NIVALIS | excavator:ground | 2.75 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.COMMODA | excavator:ground | 4.0 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.CARLINI | excavator:ground | 3.7 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.CRATAGEI | excavator:ground | 3.4 | Solitary | Leg&amp;body | short | Polylectic | year |
-| A.MISERABILIS | excavator:ground | 1.56 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.MILWAUKIENSIS | excavator:ground | 3.11 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.VICINA | excavator:ground | 3.35 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.FRIGIDA* | excavator:ground | 3.01 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.PERPLEXA* | excavator:ground | 3.2 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.ZIZIEA | excavator:ground | 2.3 | Solitary | Leg&amp;body | short | Oligolectic | Spring |
-| A.MANDIBULARIS* | excavator:ground | 2.17 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.GERANII | excavator:ground | 2.66 | Solitary | Leg&amp;body | short | Oligolectic | Spring:summer |
-| A.MORISONELLA | excavator:ground | 2.93 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.ERYTHROGASTER | excavator:ground | 2.75 | Solitary | Leg&amp;body | short | Oligolectic | Spring:summer |
-| A.ERYTHRONII | excavator:ground | 2.2 | Solitary | Leg&amp;body | short | Oligolectic |  |
-| A.DUNNINGI | excavator:ground | 2.51 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.PERSIMULATA | excavator:ground | 2.31 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.RUGOSA | excavator:ground | 3.28 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.FORBESII | excavator:ground | 3.0 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.NASSONI | excavator:ground | 1.65 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.SPIREANA | excavator:ground | 2.66 | Solitary | Leg&amp;body | short | Oligolectic | Spring:summer |
-| A.BISALICIS | excavator:ground | 2.52 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.ROBERTSONI | excavator:ground | 1.69 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.WILKELLA | excavator:ground | 2.95 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.CEANOTHI | excavator:ground | 2.73 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.IMITATRIX | excavator:ground | 1.6 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.INTEGRA | excavator:ground | 2.52 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.CLARKELLA | excavator:ground | 3.39 | Solitary | Leg&amp;body | short | Oligolectic | Spring |
-| A.ALGIDA | excavator:ground | 2.61 | Solitary | Leg&amp;body | short | Polylectic | summer |
-| A.ALLEGHANIENSIS | excavator:ground | 2.96 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.CHROMOTRICHA | excavator:ground | 2.69 | Solitary | Leg&amp;body | short | Polylectic | summer |
-| A.ERIGENIAE* | excavator:ground | 2.3 | Solitary | Leg&amp;body | short | Oligolectic | Spring |
-| A.WSCRIPTA | excavator:ground | 2.7 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.BREVIPALPIS | excavator:ground | 2.53 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.NUBECULA | excavator:ground | 1.95 | Solitary | Leg&amp;body | short | Oligolectic | summer |
-| A.FRAGILIS | excavator:ground | 2.5 | Solitary | Leg&amp;body | short | Oligolectic | Spring:summer |
-| A.SIGMUNDI | excavator:ground | 3.1 | Solitary | Leg&amp;body | short | Oligolectic | Spring:summer |
-| A.PLATYPARIA | excavator:ground | 1.6 | Solitary | Leg&amp;body | short | Oligolectic | summer |
-| A.ASTERIS | excavator:ground | 2.88 | Solitary | Leg&amp;body | short | Oligolectic | summer |
-| A.DISTANS | excavator:ground | 1.55 | Solitary | Leg&amp;body | short | Oligolectic | Spring |
-| A.RUFOSIGNATA | excavator:ground | 2.57 | Solitary | Leg&amp;body | short | Polylectic | Spring |
-| A.REGULARIS | excavator:ground | 3.53 | Solitary | Leg&amp;body | short | Polylectic | Spring:summer |
-| A.SIMPLEX | excavator:ground | 2.01 | Solitary | Leg&amp;body | short | Oligolectic | summer |
-| N.BETHUNEI | cleptoparasite | 2.8 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.CRESSONII | cleptoparasite | 2.5 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.PYGMAEA | cleptoparasite | 2.7 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.PARVA | cleptoparasite | 2.02 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.MACULATA | cleptoparasite | 3.05 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.DENTICULATA | cleptoparasite | 2.3 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.LUTHEOLOIDES | cleptoparasite | 3.1 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| N.VICINA | cleptoparasite | 2.6 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.RANUNCULI | cleptoparasite | 2.16 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.DICHROUS | cleptoparasite | 2.7 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.MANDIBULARIS | cleptoparasite | 1.5 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.SOLONIS | cleptoparasite | 1.5 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.CLEMATIDIS | cleptoparasite | 2.5 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.CONFERTUS | cleptoparasite | 1.5 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.CRESSONI | cleptoparasite | 1.2 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| S.CAROLINUS | cleptoparasite | 1.6 | Cleptoparasite | Accidental | short | Polylectic | Spring |
-| T.OBLITERATUS | cleptoparasite | 2.83 | Cleptoparasite | Accidental | short | Polylectic | summer |
-| T.REGIMENATUS | cleptoparasite | 3.6 | Cleptoparasite | Accidental | short | Polylectic | summer |
-| E.SCUTELARIS | cleptoparasite | 3.33 | Cleptoparasite | Accidental | short | Polylectic | summer |
-| M.NUDA | excavator:ground | 2.7 | Solitary | legsonly | medium | Oligolectic | Spring:summer |
-| T.PECTORALIS | cleptoparasite | 2.85 | Cleptoparasite | Accidental | short | Polylectic | summer |
-| H.CALLIOPSIDIS | cleptoparasite | 1.25 | Cleptoparasite | Accidental | short | Polylectic | summer |
+<table><tr><td>Species</td><td>Nesting</td><td>ITD</td><td>Social</td><td>Pollen</td><td>Tongue</td><td>Lecty</td><td>Season</td></tr><tr><td>L.MICHIGANENSIS</td><td>cleptoparasite</td><td>1.4</td><td>Cleptoparasite</td><td>Accidental</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.ISAWZUM</td><td>cleptoparasite</td><td>1.3</td><td>Cleptoparasite</td><td>Accidental</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>L.ASTERIS</td><td>cleptoparasite</td><td>1.05</td><td>Cleptoparasite</td><td>Accidental</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>L.SAGAX</td><td>excavator:ground</td><td>1.6</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.LAEVISSIMUM</td><td>excavator:ground</td><td>1.42</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.LEUCOCOMUM</td><td>excavator:ground</td><td>1.48</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.LINEATULUM</td><td>excavator:ground</td><td>1.5</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.CRESSONII</td><td>excavator:ground</td><td>2.15</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.TEGULAREA</td><td>excavator:ground</td><td>0.98</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.IMITATUM</td><td>excavator:ground</td><td>0.98</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.EPHIALTUM</td><td>excavator:ground</td><td>1.5</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.PILOSUM</td><td>excavator:ground</td><td>1.87</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.VERSATUM</td><td>excavator:ground</td><td>1.9</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.HITCHENSI</td><td>excavator:ground</td><td>1.56</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.VERSANS</td><td>excavator:ground</td><td>1.61</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.SUBVERSANS</td><td>excavator:ground</td><td>1.63</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.NIGROVIRIDE</td><td>excavator:ground</td><td>1.91</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.PERPUNCTATUM</td><td>excavator:ground</td><td>1.64</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.PLANATUM</td><td>excavator:ground</td><td>1.05</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>L.DREISBACHI</td><td>excavator:ground</td><td>1.04</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>L.VIRIDATUM</td><td>excavator:ground</td><td>1.62</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.OBLONGUM</td><td>excavator:ground</td><td>1.65</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.TRIGEMINUM</td><td>excavator:ground</td><td>1.73</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Oligolectic</td><td>Spring</td></tr><tr><td>L.SMILACINAE</td><td>excavator:ground</td><td>1.55</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.ZEPHYRUM</td><td>excavator:ground</td><td>1.45</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.TAYLOREA</td><td>excavator:ground</td><td>1.43</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Oligolectic</td><td>summer</td></tr><tr><td>L.TENAX</td><td>excavator:ground</td><td>1.03</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.COERULUM</td><td>excavator:ground</td><td>1.7</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.HETEROGNATUM</td><td>excavator:ground</td><td>1.2</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td></td></tr><tr><td>L.PARADMIRANTUM</td><td>excavator:ground</td><td>1.43</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>L.ABANCI</td><td>excavator:ground</td><td>1.5</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.CEPHALOTES</td><td>cleptoparasite</td><td>0.96</td><td>Cleptoparasite</td><td>Accidental</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.ATHABACENSE</td><td>excavator:ground</td><td>2.55</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.CORIACEUM</td><td>excavator:ground</td><td>2.59</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.OENOTHERAE</td><td>excavator:ground</td><td>1.59</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>L.CINCTIPES</td><td>excavator:ground</td><td>2.3</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.QUEBECENSIS</td><td>excavator:ground</td><td>2.02</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.COMAGENENSE</td><td>excavator:ground</td><td>1.63</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.MACOUPINENSE</td><td>excavator:ground</td><td>1.67</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.BIRKAMNNI</td><td>excavator:ground</td><td>1.61</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.FOXII</td><td>excavator:ground</td><td>1.59</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.INCONDIDUM</td><td>excavator:ground</td><td>1.73</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.ZONULUM</td><td>excavator:ground</td><td>2.6</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>L.LEUCOZONIUM</td><td>excavator:ground</td><td>2.57</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>H.RUBICUNDUS</td><td>excavator:ground</td><td>3.14</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>H.CONFUSUS</td><td>excavator:ground</td><td>1.89</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>H.LIGATUS</td><td>excavator:ground</td><td>2.48</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.AURATA</td><td>excavator:ground</td><td>2.05</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.PURA</td><td>excavator:ground</td><td>2.55</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.VIRESCENS</td><td>excavator:ground</td><td>3.39</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.METALLICA</td><td>excavator:ground</td><td>2.6</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.TEXANA</td><td>excavator:ground</td><td>2.73</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>APIS.MELLIFERA</td><td>Renter:existingcavitiesbelowground</td><td>3.6</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.IMPATIENS</td><td>Renter:existingcavitiesbelowground</td><td>7.6</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.TERRICOLA</td><td>Renter:existingcavitiesbelowground</td><td>6.5</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.GRISEOCOLLIS</td><td>Renter:existingcavitiesbelowground</td><td>7.4</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.VAGANS</td><td>Renter:existingcavitiesbelowground</td><td>7.34</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.RUFOCINCTUS</td><td>Renter:existingcavitiesbelowground</td><td>6.37</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.TERNARIUS</td><td>Renter:existingcavitiesbelowground</td><td></td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.BIMACULATUS</td><td>Renter:existingcavitiesbelowground</td><td>6.93</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.FERVIDUS</td><td>Renter:existingcavitiesbelowground</td><td>7.0</td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.CITRINUS</td><td>Socialparasite</td><td>6.5</td><td>Socialparasite</td><td>Accidental</td><td>long</td><td>Polylectic</td><td>summer</td></tr><tr><td>B.PERPLEXUS</td><td>Renter:existingcavitiesbelowground</td><td></td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>B.BOREALIS</td><td>Renter:existingcavitiesbelowground</td><td></td><td>Highlyeusocial</td><td>Corbiculae</td><td>long</td><td>Polylectic</td><td>year</td></tr><tr><td>M.DESPONSA</td><td>excavator:ground</td><td>4.05</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Oligolectic</td><td>summer</td></tr><tr><td>M.TRINODIS</td><td>excavator:ground</td><td>3.3</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.DRURIELLA</td><td>excavator:ground</td><td>3.26</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Oligolectic</td><td>summer</td></tr><tr><td>M.ILLATA</td><td>excavator:ground</td><td>3.3</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.SUBILLATA</td><td>excavator:ground</td><td>3.7</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Polylectic</td><td>summer</td></tr><tr><td>P.PRUINOSA</td><td>excavator:ground</td><td>3.94</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Oligolectic</td><td>summer</td></tr><tr><td>A.TERMINALIS</td><td>excavator:deadstem</td><td>3.04</td><td>Solitary</td><td>legsonly</td><td>long</td><td>Polylectic</td><td>summer</td></tr><tr><td>C.CALCARATA</td><td>excavator:deadstem</td><td>1.91</td><td>Solitary</td><td>legsonly</td><td>medium</td><td>Polylectic</td><td>year</td></tr><tr><td>C.MIKMAQUI</td><td>excavator:deadstem</td><td>1.81</td><td>Solitary</td><td>legsonly</td><td>medium</td><td>Polylectic</td><td>year</td></tr><tr><td>C.DUPLA</td><td>excavator:deadstem</td><td>1.2</td><td>Solitary</td><td>legsonly</td><td>medium</td><td>Polylectic</td><td>year</td></tr><tr><td>X.VIRGINIANA</td><td>excavator:deadstem</td><td>6.5</td><td>Solitary</td><td>legsonly</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.INERMIS</td><td>Renter:existingcavitiesaboveground</td><td>5.51</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.FRIGIDA</td><td>Renter:existingcavitiesaboveground</td><td>3.46</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.ROTUNDATA</td><td>Renter:existingcavitiesaboveground</td><td>2.27</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>M.MELANOPHEA</td><td>excavator:ground</td><td>4.4</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.PUGNATA</td><td>Renter:existingcavitiesaboveground</td><td>4.3</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.CAMPANULAE</td><td>Renter:existingcavitiesaboveground</td><td>2.26</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.CENTUNCULARIS</td><td>Renter:existingcavitiesaboveground</td><td>3.3</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.RELATIVA</td><td>Renter:existingcavitiesaboveground</td><td>3.51</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.LATIMANUS</td><td>excavator:ground</td><td>4.34</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.GEMULA</td><td>Renter:existingcavitiesaboveground</td><td>4.38</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.TEXANA</td><td>excavator:ground</td><td>3.56</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.BREVIS</td><td>Renter:existingcavitiesaboveground</td><td>3.13</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>M.MENDICA</td><td>Renter:existingcavitiesaboveground</td><td>3.36</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.LAPPONICA</td><td>Renter:existingcavitiesaboveground</td><td>3.11</td><td></td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>A.MANICATUM</td><td>carder</td><td>4.13</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>A.OBLONGATUM</td><td>carder</td><td>3.6</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>A.FLORENTINUM</td><td>carder</td><td>4.95</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>C.OCTODENTATA</td><td>cleptoparasite</td><td>2.87</td><td>Solitary</td><td>Accidental</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>C.PORTERAE</td><td>cleptoparasite</td><td>2.76</td><td>Solitary</td><td>Accidental</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.CARINATA</td><td>Renter:existingcavitiesaboveground</td><td>1.67</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.PRODUCTA</td><td>Renter:existingcavitiesaboveground</td><td>2.1</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.PILOSIFRONS</td><td>Renter:existingcavitiesaboveground</td><td>2.1</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.SPOLIATA</td><td>Renter:existingcavitiesaboveground</td><td>3.15</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.LEAVITTI</td><td>Renter:existingcavitiesaboveground</td><td>1.75</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.ANTHOCOPOIDES</td><td>Renter:existingcavitiesaboveground</td><td>2.65</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>O.ALBIVENTRIS</td><td>Renter:existingcavitiesaboveground</td><td>2.23</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>O.ATRIVENTRIS</td><td>Renter:existingcavitiesaboveground</td><td>2.69</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>O.CAERULESCENS</td><td>Renter:existingcavitiesaboveground</td><td>2.43</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>O.TERSULA</td><td>Renter:existingcavitiesaboveground</td><td>2.73</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>O.LIGNARIA</td><td>Renter:existingcavitiesaboveground</td><td>4.1</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>O.PUMILA</td><td>Renter:existingcavitiesaboveground</td><td>2.36</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>O.TAURUS</td><td>Renter:existingcavitiesaboveground</td><td>3.47</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring</td></tr><tr><td>O.CONJUNCTA</td><td>Renter:existingcavitiesaboveground</td><td>2.6</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>O.SIMILLIMA</td><td>Renter:existingcavitiesaboveground</td><td>3.39</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>O.BUCEPHALA</td><td>Renter:existingcavitiesaboveground</td><td>3.55</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>C.RAPUNCULI</td><td>Renter:existingcavitiesaboveground</td><td>2.17</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>C.PHILADELPHI</td><td>Renter:existingcavitiesaboveground</td><td>1.47</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>C.CAMPANULARUM</td><td>Renter:existingcavitiesaboveground</td><td>1.03</td><td>Solitary</td><td>underside:abdomen</td><td>medium</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>H.HYALINATUS</td><td>Renter:existingcavitiesaboveground</td><td>1.71</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.MESILLAE</td><td>Renter:existingcavitiesaboveground</td><td>1.86</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.AFFINIS</td><td>Renter:existingcavitiesaboveground</td><td>1.48</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.MODESTUS</td><td>Renter:existingcavitiesaboveground</td><td>1.65</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.ANNULATUS</td><td>Renter:existingcavitiesaboveground</td><td>1.2</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.BASALIS</td><td>Renter:existingcavitiesaboveground</td><td>2.45</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.PUNCTATUS</td><td>Renter:existingcavitiesaboveground</td><td>1.23</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.COMMUNIS</td><td>Renter:existingcavitiesaboveground</td><td>1.6</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.LEPTOCEPHALUS</td><td>Renter:existingcavitiesaboveground</td><td>1.05</td><td>Solitary</td><td>Crop</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.NELUMBONIS</td><td>Renter:existingcavitiesaboveground</td><td>1.53</td><td>Solitary</td><td>Crop</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>C.SIMULANS</td><td>excavator:ground</td><td>2.55</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>C.AMERICANA</td><td>excavator:ground</td><td>2.07</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>C.ANDRENIFORMIS</td><td>excavator:ground</td><td>1.98</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>medium</td><td>Polylectic</td><td>summer</td></tr><tr><td>P.PARVUS</td><td>excavator:ground</td><td>1.73</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>P.RUDBECKIAE</td><td>excavator:ground</td><td>1.46</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>P.ANDRENOIDES</td><td>excavator:ground</td><td>1.56</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>P.OCTOMACULATA</td><td>excavator:ground</td><td>1.53</td><td>communal</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>A.HIRTICINCTA</td><td>excavator:ground</td><td>2.55</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>A.WHEELERI</td><td>excavator:ground</td><td>2.3</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.HIPPOTES</td><td>excavator:ground</td><td>2.87</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.CRESSONII</td><td>excavator:ground</td><td>2.72</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.NIGRAE</td><td>excavator:ground</td><td>1.9</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.NIVALIS</td><td>excavator:ground</td><td>2.75</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.COMMODA</td><td>excavator:ground</td><td>4.0</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.CARLINI</td><td>excavator:ground</td><td>3.7</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.CRATAGEI</td><td>excavator:ground</td><td>3.4</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>year</td></tr><tr><td>A.MISERABILIS</td><td>excavator:ground</td><td>1.56</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.MILWAUKIENSIS</td><td>excavator:ground</td><td>3.11</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.VICINA</td><td>excavator:ground</td><td>3.35</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.FRIGIDA*</td><td>excavator:ground</td><td>3.01</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.PERPLEXA*</td><td>excavator:ground</td><td>3.2</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.ZIZIEA</td><td>excavator:ground</td><td>2.3</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring</td></tr><tr><td>A.MANDIBULARIS*</td><td>excavator:ground</td><td>2.17</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.GERANII</td><td>excavator:ground</td><td>2.66</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>A.MORISONELLA</td><td>excavator:ground</td><td>2.93</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.ERYTHROGASTER</td><td>excavator:ground</td><td>2.75</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>A.ERYTHRONII</td><td>excavator:ground</td><td>2.2</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td></td></tr><tr><td>A.DUNNINGI</td><td>excavator:ground</td><td>2.51</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.PERSIMULATA</td><td>excavator:ground</td><td>2.31</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.RUGOSA</td><td>excavator:ground</td><td>3.28</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.FORBESII</td><td>excavator:ground</td><td>3.0</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.NASSONI</td><td>excavator:ground</td><td>1.65</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.SPIREANA</td><td>excavator:ground</td><td>2.66</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>A.BISALICIS</td><td>excavator:ground</td><td>2.52</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.ROBERTSONI</td><td>excavator:ground</td><td>1.69</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.WILKELLA</td><td>excavator:ground</td><td>2.95</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.CEANOTHI</td><td>excavator:ground</td><td>2.73</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.IMITATRIX</td><td>excavator:ground</td><td>1.6</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.INTEGRA</td><td>excavator:ground</td><td>2.52</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.CLARKELLA</td><td>excavator:ground</td><td>3.39</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring</td></tr><tr><td>A.ALGIDA</td><td>excavator:ground</td><td>2.61</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>A.ALLEGHANIENSIS</td><td>excavator:ground</td><td>2.96</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.CHROMOTRICHA</td><td>excavator:ground</td><td>2.69</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>A.ERIGENIAE*</td><td>excavator:ground</td><td>2.3</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring</td></tr><tr><td>A.WSCRIPTA</td><td>excavator:ground</td><td>2.7</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.BREVIPALPIS</td><td>excavator:ground</td><td>2.53</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.NUBECULA</td><td>excavator:ground</td><td>1.95</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>A.FRAGILIS</td><td>excavator:ground</td><td>2.5</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>A.SIGMUNDI</td><td>excavator:ground</td><td>3.1</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>A.PLATYPARIA</td><td>excavator:ground</td><td>1.6</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>A.ASTERIS</td><td>excavator:ground</td><td>2.88</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>A.DISTANS</td><td>excavator:ground</td><td>1.55</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>Spring</td></tr><tr><td>A.RUFOSIGNATA</td><td>excavator:ground</td><td>2.57</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>A.REGULARIS</td><td>excavator:ground</td><td>3.53</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Polylectic</td><td>Spring:summer</td></tr><tr><td>A.SIMPLEX</td><td>excavator:ground</td><td>2.01</td><td>Solitary</td><td>Leg&amp;amp;body</td><td>short</td><td>Oligolectic</td><td>summer</td></tr><tr><td>N.BETHUNEI</td><td>cleptoparasite</td><td>2.8</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.CRESSONII</td><td>cleptoparasite</td><td>2.5</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.PYGMAEA</td><td>cleptoparasite</td><td>2.7</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.PARVA</td><td>cleptoparasite</td><td>2.02</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.MACULATA</td><td>cleptoparasite</td><td>3.05</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.DENTICULATA</td><td>cleptoparasite</td><td>2.3</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.LUTHEOLOIDES</td><td>cleptoparasite</td><td>3.1</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>N.VICINA</td><td>cleptoparasite</td><td>2.6</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.RANUNCULI</td><td>cleptoparasite</td><td>2.16</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.DICHROUS</td><td>cleptoparasite</td><td>2.7</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.MANDIBULARIS</td><td>cleptoparasite</td><td>1.5</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.SOLONIS</td><td>cleptoparasite</td><td>1.5</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.CLEMATIDIS</td><td>cleptoparasite</td><td>2.5</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.CONFERTUS</td><td>cleptoparasite</td><td>1.5</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.CRESSONI</td><td>cleptoparasite</td><td>1.2</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>S.CAROLINUS</td><td>cleptoparasite</td><td>1.6</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>Spring</td></tr><tr><td>T.OBLITERATUS</td><td>cleptoparasite</td><td>2.83</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>T.REGIMENATUS</td><td>cleptoparasite</td><td>3.6</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>E.SCUTELARIS</td><td>cleptoparasite</td><td>3.33</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>M.NUDA</td><td>excavator:ground</td><td>2.7</td><td>Solitary</td><td>legsonly</td><td>medium</td><td>Oligolectic</td><td>Spring:summer</td></tr><tr><td>T.PECTORALIS</td><td>cleptoparasite</td><td>2.85</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>summer</td></tr><tr><td>H.CALLIOPSIDIS</td><td>cleptoparasite</td><td>1.25</td><td>Cleptoparasite</td><td>Accidental</td><td>short</td><td>Polylectic</td><td>summer</td></tr></table>

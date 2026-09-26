@@ -150,12 +150,7 @@ We assessed the utility of this modelling framework using a butterfly assemblage
 
 <!-- page 6 of 16 -->
 
-| Category | Description |
-| --- | --- |
-| Land | Green area representing land use |
-| Water | Light blue area representing water usage |
-| Study islands | Black cross markers indicating study locations (0.1 to 8 ha) |
-| Isolation buffer | Yellow circles representing isolation buffers (e.g. 250 m) |
+<table><tr><td>Category</td><td>Description</td></tr><tr><td>Land</td><td>Green area representing land use</td></tr><tr><td>Water</td><td>Light blue area representing water usage</td></tr><tr><td>Study islands</td><td>Black cross markers indicating study locations (0.1 to 8 ha)</td></tr><tr><td>Isolation buffer</td><td>Yellow circles representing isolation buffers (e.g. 250 m)</td></tr></table>
 
 Figure 1. Map of the study area, located in Sabaskong Bay, Lake of the Woods, Canada. Butterfly abundance, occurrence and species richness data were collected for 30 study islands, varying in area from 0.09 to 8.4 ha, using repeated full island surveys.
 
@@ -211,19 +206,7 @@ Coefficients of the wingspan:area and rarity:area interaction terms were signifi
 
 Table 1. Log likelihood values for linear mixed effects (abundance and occurrence) and linear (species richness) models. For species’ abundances, species’ occurrences and species richness, separate models were built for a range of isolation buffers, measuring the proportion of open water within 250, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500 and 5000 m of island shores. Model support significantly declined across increasing isolation buffer sizes in all instances. The most supported buffer size for each model set is highlighted in bold.
 
-| Isolation buffer (m) | Abundance | Occurrence | Species richness |
-| --- | --- | --- | --- |
-| 250 | -1329.83 | -1340.37 | -36.79 |
-| 500 | -1330.22 | -1340.71 | -37.45 |
-| 1000 | -1330.99 | -1342.89 | -37.67 |
-| 1500 | -1332.11 | -1341.77 | -36.61 |
-| 2000 | -1332.00 | -1340.52 | -37.02 |
-| 2500 | -1332.05 | -1340.72 | -37.79 |
-| 3000 | -1332.17 | -1341.71 | -38.12 |
-| 3500 | -1332.13 | -1342.61 | -38.36 |
-| 4000 | -1332.01 | -1343.28 | -38.45 |
-| 4500 | -1331.86 | -1343.60 | -38.48 |
-| 5000 | -1331.87 | -1343.53 | -38.44 |
+<table><tr><td>Isolation buffer (m)</td><td>Abundance</td><td>Occurrence</td><td>Species richness</td></tr><tr><td>250</td><td>-1329.83</td><td>-1340.37</td><td>-36.79</td></tr><tr><td>500</td><td>-1330.22</td><td>-1340.71</td><td>-37.45</td></tr><tr><td>1000</td><td>-1330.99</td><td>-1342.89</td><td>-37.67</td></tr><tr><td>1500</td><td>-1332.11</td><td>-1341.77</td><td>-36.61</td></tr><tr><td>2000</td><td>-1332.00</td><td>-1340.52</td><td>-37.02</td></tr><tr><td>2500</td><td>-1332.05</td><td>-1340.72</td><td>-37.79</td></tr><tr><td>3000</td><td>-1332.17</td><td>-1341.71</td><td>-38.12</td></tr><tr><td>3500</td><td>-1332.13</td><td>-1342.61</td><td>-38.36</td></tr><tr><td>4000</td><td>-1332.01</td><td>-1343.28</td><td>-38.45</td></tr><tr><td>4500</td><td>-1331.86</td><td>-1343.60</td><td>-38.48</td></tr><tr><td>5000</td><td>-1331.87</td><td>-1343.53</td><td>-38.44</td></tr></table>
 
 abundance residuals and functional trait variables were not significant. This result is expected, as abundance residuals were standardized for each species individually before they were concatenated for use in linear mixed effects models.
 

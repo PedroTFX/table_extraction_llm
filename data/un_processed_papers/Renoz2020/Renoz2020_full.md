@@ -243,33 +243,7 @@ Published online April 9, 2020
 
 Table S1. Detection of the targeted facultative symbionts in the different colonies of A. spiraecola and A. gossypii in different regions of the North of Tunisia.
 
-| Colony ID | Sampling date | Collection site | Aphid species | Host plant species | Arsenophonus | S. symbiotica | R. insecticola | H.defensa |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 31/04/2013 | Béni Khalled | A. gossypii | Citrus sinensis | + | + |  |  |
-| 2 | 31/04/2013 | Béni Khalled | A. gossypii | Citrus sinensis | + | + |  |  |
-| 3 | 31/04/2013 | Menzel Bouzelfa | A. gossypii | Citrus sinensis‘Thomson Navel’ | + | + | + |  |
-| 4 | 31/04/2013 | Menzel Bouzelfa | A. gossypii | Citrus sinensis‘Thomson Navel’ | + | + |  |  |
-| 5 | 31/04/2013 | Menzel Bouzelfa | A. gossypii | Citrus × limon | + |  |  |  |
-| 6 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis‘Washington Navel’ | + |  |  |  |
-| 7 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis‘Washington Navel’ | + |  |  |  |
-| 8 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis‘Washington Navel’ | + |  |  |  |
-| 9 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis‘Washington Navel’ |  |  |  |  |
-| 10 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis | + |  |  |  |
-| 11 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis | + |  |  |  |
-| 12 | 31/04/2013 | Takilsa | A. gossypii | Citrus sinensis | + |  |  |  |
-| 13 | 3/05/2013 | Mornag | A. gossypii | Citrus clementina |  | + |  |  |
-| 14 | 3/05/2013 | Mornag | A. gossypii | Citrus clementina | + |  | + |  |
-| 15 | 3/05/2013 | Mornag | A. gossypii | Citrus clementina | + |  |  |  |
-| 16 | 3/05/2013 | Mornag | A. gossypii | Citrus clementina |  |  | + |  |
-| 17 | 3/05/2013 | Mornag | A. gossypii | Citrus clementina |  |  |  |  |
-| 18 | 3/05/2013 | Khalidia | A. gossypii | Citrus sinensis‘Thomson Navel’ | + |  |  |  |
-| 19 | 3/05/2013 | Khalidia | A. gossypii | Citrus sinensis‘Thomson Navel’ |  |  | + |  |
-| 20 | 31/04/2013 | Grombalia | A. spiraecola | Citrus clementina | + |  |  | + |
-| 21 | 31/04/2013 | Grombalia | A. spiraecola | Citrus clementina | + |  |  | + |
-| 22 | 31/04/2013 | Grombalia | A. spiraecola | Citrus clementina | + |  |  | + |
-| 23 | 31/04/2013 | Grombalia | A. spiraecola | Citrus clementina |  |  |  |  |
-| 24 | 31/04/2013 | Grombalia | A. spiraecola | Citrus clementina |  | + |  | + |
-| 25 | 31/04/2013 | Béni Khalled | A. spiraecola | Citrus × limon |  |  |  | + |
+<table><tr><td>Colony ID</td><td>Sampling date</td><td>Collection site</td><td>Aphid species</td><td>Host plant species</td><td>Arsenophonus</td><td>S. symbiotica</td><td>R. insecticola</td><td>H.defensa</td></tr><tr><td>1</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. gossypii</td><td>Citrus sinensis</td><td>+</td><td>+</td><td></td><td></td></tr><tr><td>2</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. gossypii</td><td>Citrus sinensis</td><td>+</td><td>+</td><td></td><td></td></tr><tr><td>3</td><td>31/04/2013</td><td>Menzel Bouzelfa</td><td>A. gossypii</td><td>Citrus sinensis‘Thomson Navel’</td><td>+</td><td>+</td><td>+</td><td></td></tr><tr><td>4</td><td>31/04/2013</td><td>Menzel Bouzelfa</td><td>A. gossypii</td><td>Citrus sinensis‘Thomson Navel’</td><td>+</td><td>+</td><td></td><td></td></tr><tr><td>5</td><td>31/04/2013</td><td>Menzel Bouzelfa</td><td>A. gossypii</td><td>Citrus × limon</td><td>+</td><td></td><td></td><td></td></tr><tr><td>6</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis‘Washington Navel’</td><td>+</td><td></td><td></td><td></td></tr><tr><td>7</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis‘Washington Navel’</td><td>+</td><td></td><td></td><td></td></tr><tr><td>8</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis‘Washington Navel’</td><td>+</td><td></td><td></td><td></td></tr><tr><td>9</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis‘Washington Navel’</td><td></td><td></td><td></td><td></td></tr><tr><td>10</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis</td><td>+</td><td></td><td></td><td></td></tr><tr><td>11</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis</td><td>+</td><td></td><td></td><td></td></tr><tr><td>12</td><td>31/04/2013</td><td>Takilsa</td><td>A. gossypii</td><td>Citrus sinensis</td><td>+</td><td></td><td></td><td></td></tr><tr><td>13</td><td>3/05/2013</td><td>Mornag</td><td>A. gossypii</td><td>Citrus clementina</td><td></td><td>+</td><td></td><td></td></tr><tr><td>14</td><td>3/05/2013</td><td>Mornag</td><td>A. gossypii</td><td>Citrus clementina</td><td>+</td><td></td><td>+</td><td></td></tr><tr><td>15</td><td>3/05/2013</td><td>Mornag</td><td>A. gossypii</td><td>Citrus clementina</td><td>+</td><td></td><td></td><td></td></tr><tr><td>16</td><td>3/05/2013</td><td>Mornag</td><td>A. gossypii</td><td>Citrus clementina</td><td></td><td></td><td>+</td><td></td></tr><tr><td>17</td><td>3/05/2013</td><td>Mornag</td><td>A. gossypii</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>18</td><td>3/05/2013</td><td>Khalidia</td><td>A. gossypii</td><td>Citrus sinensis‘Thomson Navel’</td><td>+</td><td></td><td></td><td></td></tr><tr><td>19</td><td>3/05/2013</td><td>Khalidia</td><td>A. gossypii</td><td>Citrus sinensis‘Thomson Navel’</td><td></td><td></td><td>+</td><td></td></tr><tr><td>20</td><td>31/04/2013</td><td>Grombalia</td><td>A. spiraecola</td><td>Citrus clementina</td><td>+</td><td></td><td></td><td>+</td></tr><tr><td>21</td><td>31/04/2013</td><td>Grombalia</td><td>A. spiraecola</td><td>Citrus clementina</td><td>+</td><td></td><td></td><td>+</td></tr><tr><td>22</td><td>31/04/2013</td><td>Grombalia</td><td>A. spiraecola</td><td>Citrus clementina</td><td>+</td><td></td><td></td><td>+</td></tr><tr><td>23</td><td>31/04/2013</td><td>Grombalia</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>24</td><td>31/04/2013</td><td>Grombalia</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td>+</td><td></td><td>+</td></tr><tr><td>25</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td></td><td></td><td>+</td></tr></table>
 
 155
 
@@ -281,50 +255,6 @@ doi: 10.14411/eje.2020.017
 
 Table S1 (continued).
 
-| Colony ID | Sampling date | Collection site | Aphid species | Host plant species | Arsenophonus | S. symbiotica | R. insecticola | H.defensa |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 26 | 31/04/2013 | Béni Khalled | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 27 | 31/04/2013 | Béni Khalled | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 28 | 31/04/2013 | Béni Khalled | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 29 | 31/04/2013 | Béni Khalled | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 30 | 31/04/2013 | Menzel Bouzelfa | A. spiraecola | Citrus sinensis'Thomson Navel' |  | + | + | + |
-| 31 | 31/04/2013 | Menzel Bouzelfa | A. spiraecola | Citrus × limon |  |  |  |  |
-| 32 | 31/04/2013 | Menzel Bouzelfa | A. spiraecola | Citrus × limon |  | + |  |  |
-| 33 | 31/04/2013 | Selinem | A. spiraecola | Citrus sinensis | + |  |  |  |
-| 34 | 31/04/2013 | Selinem | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 35 | 31/04/2013 | Takilsa | A. spiraecola | Citrus sinensis'Washington Navel' |  |  | + |  |
-| 36 | 31/04/2013 | Takilsa | A. spiraecola | Citrus sinensis'Washington Navel' |  |  |  |  |
-| 37 | 31/04/2013 | Takilsa | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 38 | 31/04/2013 | Takilsa | A. spiraecola | Citrus sinensis |  |  |  |  |
-| 39 | 2/05/2013 | Bou Salem | A. spiraecola | Citrus clementina |  |  |  |  |
-| 40 | 2/05/2013 | Bou Salem | A. spiraecola | Citrus clementina |  |  |  |  |
-| 41 | 2/05/2013 | Bou Salem | A. spiraecola | Citrus sinensis'Washington Navel' |  |  | + |  |
-| 42 | 2/05/2013 | Bou Salem | A. spiraecola | Citrus sinensis'Washington Navel' |  |  | + |  |
-| 43 | 2/05/2013 | Bou Salem | A. spiraecola | Citrus sinensis'Washington Navel' |  |  |  |  |
-| 44 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  | + |  |
-| 45 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 46 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 47 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 48 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 49 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 50 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  | + | + |  |
-| 51 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  | + | + |  |
-| 52 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  | + |  |  |
-| 53 | 2/05/2013 | Jendouba | A. spiraecola | Citrus sinensis'Thomson Navel' |  | + |  |  |
-| 54 | 3/05/2013 | Mornag | A. spiraecola | Citrus clementina | + | + | + |  |
-| 55 | 3/05/2013 | Mornag | A. spiraecola | Citrus clementina | + |  |  |  |
-| 56 | 3/05/2013 | Mornag | A. spiraecola | Citrus clementina | + | + | + |  |
-| 57 | 3/05/2013 | Mornag | A. spiraecola | Citrus clementina |  |  |  |  |
-| 58 | 3/05/2013 | Mornag | A. spiraecola | Citrus × limon |  |  |  |  |
-| 59 | 3/05/2013 | Mornag | A. spiraecola | Citrus × limon |  |  |  |  |
-| 60 | 3/05/2013 | Mornag | A. spiraecola | Citrus × limon |  |  | + |  |
-| 61 | 3/05/2013 | Mornag | A. spiraecola | Citrus × limon |  |  |  |  |
-| 62 | 3/05/2013 | Khalidia | A. spiraecola | Citrus sinensis'Thomson Navel' | + |  |  |  |
-| 63 | 3/05/2013 | Khalidia | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 64 | 3/05/2013 | Khalidia | A. spiraecola | Citrus sinensis'Thomson Navel' |  |  |  |  |
-| 65 | 3/05/2013 | Khalidia | A. spiraecola | Citrus clementina |  |  |  |  |
-| 66 | 3/05/2013 | Khalidia | A. spiraecola | Citrus clementina |  |  |  |  |
-| 67 | 3/05/2013 | Khalidia | A. spiraecola | Citrus sinensis'Maltaise demi-sanguine' | + |  |  |  |
-| 68 | 3/05/2013 | Khalidia | A. spiraecola | Citrus sinensis'Maltaise demi-sanguine' |  |  |  |  |
+<table><tr><td>Colony ID</td><td>Sampling date</td><td>Collection site</td><td>Aphid species</td><td>Host plant species</td><td>Arsenophonus</td><td>S. symbiotica</td><td>R. insecticola</td><td>H.defensa</td></tr><tr><td>26</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>27</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>28</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>29</td><td>31/04/2013</td><td>Béni Khalled</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>30</td><td>31/04/2013</td><td>Menzel Bouzelfa</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td>+</td><td>+</td><td>+</td></tr><tr><td>31</td><td>31/04/2013</td><td>Menzel Bouzelfa</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td></td><td></td><td></td></tr><tr><td>32</td><td>31/04/2013</td><td>Menzel Bouzelfa</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td>+</td><td></td><td></td></tr><tr><td>33</td><td>31/04/2013</td><td>Selinem</td><td>A. spiraecola</td><td>Citrus sinensis</td><td>+</td><td></td><td></td><td></td></tr><tr><td>34</td><td>31/04/2013</td><td>Selinem</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>35</td><td>31/04/2013</td><td>Takilsa</td><td>A. spiraecola</td><td>Citrus sinensis'Washington Navel'</td><td></td><td></td><td>+</td><td></td></tr><tr><td>36</td><td>31/04/2013</td><td>Takilsa</td><td>A. spiraecola</td><td>Citrus sinensis'Washington Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>37</td><td>31/04/2013</td><td>Takilsa</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>38</td><td>31/04/2013</td><td>Takilsa</td><td>A. spiraecola</td><td>Citrus sinensis</td><td></td><td></td><td></td><td></td></tr><tr><td>39</td><td>2/05/2013</td><td>Bou Salem</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>40</td><td>2/05/2013</td><td>Bou Salem</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>41</td><td>2/05/2013</td><td>Bou Salem</td><td>A. spiraecola</td><td>Citrus sinensis'Washington Navel'</td><td></td><td></td><td>+</td><td></td></tr><tr><td>42</td><td>2/05/2013</td><td>Bou Salem</td><td>A. spiraecola</td><td>Citrus sinensis'Washington Navel'</td><td></td><td></td><td>+</td><td></td></tr><tr><td>43</td><td>2/05/2013</td><td>Bou Salem</td><td>A. spiraecola</td><td>Citrus sinensis'Washington Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>44</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td>+</td><td></td></tr><tr><td>45</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>46</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>47</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>48</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>49</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>50</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td>+</td><td>+</td><td></td></tr><tr><td>51</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td>+</td><td>+</td><td></td></tr><tr><td>52</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td>+</td><td></td><td></td></tr><tr><td>53</td><td>2/05/2013</td><td>Jendouba</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td>+</td><td></td><td></td></tr><tr><td>54</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus clementina</td><td>+</td><td>+</td><td>+</td><td></td></tr><tr><td>55</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus clementina</td><td>+</td><td></td><td></td><td></td></tr><tr><td>56</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus clementina</td><td>+</td><td>+</td><td>+</td><td></td></tr><tr><td>57</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>58</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td></td><td></td><td></td></tr><tr><td>59</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td></td><td></td><td></td></tr><tr><td>60</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td></td><td>+</td><td></td></tr><tr><td>61</td><td>3/05/2013</td><td>Mornag</td><td>A. spiraecola</td><td>Citrus × limon</td><td></td><td></td><td></td><td></td></tr><tr><td>62</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td>+</td><td></td><td></td><td></td></tr><tr><td>63</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>64</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus sinensis'Thomson Navel'</td><td></td><td></td><td></td><td></td></tr><tr><td>65</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>66</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus clementina</td><td></td><td></td><td></td><td></td></tr><tr><td>67</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus sinensis'Maltaise demi-sanguine'</td><td>+</td><td></td><td></td><td></td></tr><tr><td>68</td><td>3/05/2013</td><td>Khalidia</td><td>A. spiraecola</td><td>Citrus sinensis'Maltaise demi-sanguine'</td><td></td><td></td><td></td><td></td></tr></table>
 
 156

@@ -116,11 +116,7 @@ In PsV, we counted 63 lost, 156 persistent, and 81 previously unrecorded moth sp
 
 Only one species, Nola cristatula Hübner, 1793 (Lepidoptera: Nolidae), reached the highest possible degree of specialization according to our classification system. Most moth species matched a specialization score of 10 or even higher, indicating a high proportion of generalist species in our data set (Fig.  3). Looking at the three groups of lost, persistent, and previously unrecorded species, the specialization scores showed no significant differences. This was true for all three dimensions separately—larval food, habitat, and northern distribution limit—as well as for total specializa tion (Table 2). Likewise, the GAM showed no consistent decline in
 
-| Status | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| Lost | ~29 | ~35 | ~40 | ~11 |
-| Persistent | ~26 | ~32 | ~38 | ~12 |
-| Previously unrecorded | ~24 | ~30 | ~35 | ~11 |
+<table><tr><td>Status</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>Lost</td><td>~29</td><td>~35</td><td>~40</td><td>~11</td></tr><tr><td>Persistent</td><td>~26</td><td>~32</td><td>~38</td><td>~12</td></tr><tr><td>Previously unrecorded</td><td>~24</td><td>~30</td><td>~35</td><td>~11</td></tr></table>
 
 Fig. 1. Wingspan of moth species from Pineta san Vitale (PsV) partitioned into three categories according to their occurrence status. ‘Lost’ (orange) represents moth species that were only found pre-1997 $\left( n = 6 3 \right)$ . ‘Persistent’ (yellow) denotes moths occurring pre-1997 as well as afterward $( n = 1 5 6 ) .$ ‘Previously unrecorded’ (green) refers to species only observed in 1997 or later (n = 81). ‘Previously unrecorded’ and ‘Lost’ species differed significantly in body size $\left( P = 0 . 0 0 2 \right)$ . Bar in the middle represent median, box limits are third and first quartiles, and whiskers describe data points within 1.5 times of the interquartile range.
 
@@ -180,35 +176,11 @@ Journal of Insect Science, 2020, Vol. 20, No. 5
 
 7
 
-| Degree of total specialization | Black Segment (Number of species) | Grey Segment (Number of species) |
-| --- | --- | --- |
-| 3 | 1 | 49 |
-| 4 | 0 | 8 |
-| 5 | 3 | 5 |
-| 6 | 7 | 24 |
-| 7 | 11 | 18 |
-| 8 | 11 | 30 |
-| 9 | 7 | 29 |
-| 10 | 11 | 39 |
-| 11 | 10 | 38 |
-| 12 | 5 | 34 |
+<table><tr><td>Degree of total specialization</td><td>Black Segment (Number of species)</td><td>Grey Segment (Number of species)</td></tr><tr><td>3</td><td>1</td><td>49</td></tr><tr><td>4</td><td>0</td><td>8</td></tr><tr><td>5</td><td>3</td><td>5</td></tr><tr><td>6</td><td>7</td><td>24</td></tr><tr><td>7</td><td>11</td><td>18</td></tr><tr><td>8</td><td>11</td><td>30</td></tr><tr><td>9</td><td>7</td><td>29</td></tr><tr><td>10</td><td>11</td><td>39</td></tr><tr><td>11</td><td>10</td><td>38</td></tr><tr><td>12</td><td>5</td><td>34</td></tr></table>
 
 Fig. 3. Number of species in regard to their total specialization score (gray bars). Black bars indicate the number of lost species. For each degree of specialization one representative species was selected viz. (from left): Nola cristatula Hübner 1783 (Lepidoptera: Nolidae), Dyspessa ulula Borkhausen 1790 (Lepidoptera: Cossidae), Spatalia argentina Schiffermüller 1775 (Lepidoptera: Notodontidae), Callopistria juventina Stoll 1782 (Lepidoptera: Noctuidae), Arctia villica Linnaeus 1758 (Lepidoptera: Erebidae), Ligdia adustata Schiffermüller 1775 (Lepidoptera: Geometridae), Timandra comae Schmidt 1931 (Lepidoptera: Geometridae), Pseudoips prasinana Linnaeus 1758 (Lepidoptera: Nolidae), Phragmatobia fuliginosa Linnaeuas 1758 (Lepidoptera: Erebidae).
 
-| Year | NMDS1 | NMDS2 |
-| --- | --- | --- |
-| 1960s | ~-1.1 | ~-0.35 |
-| 1940s | ~-0.8 | ~0.25 |
-| 2002 | ~-0.2 | ~0.25 |
-| 2000 | ~-0.15 | ~-0.25 |
-| 2001 | ~-0.15 | ~-0.6 |
-| 1980s | ~0.1 | ~0.75 |
-| 1970s | ~0.3 | ~0.55 |
-| 2012 | ~0.2 | ~0.2 |
-| 2011 | ~0.2 | ~0.1 |
-| 1998 | ~0.6 | ~0.0 |
-| 1999 | ~0.7 | ~-0.15 |
-| 1997 | ~0.6 | ~-0.6 |
+<table><tr><td>Year</td><td>NMDS1</td><td>NMDS2</td></tr><tr><td>1960s</td><td>~-1.1</td><td>~-0.35</td></tr><tr><td>1940s</td><td>~-0.8</td><td>~0.25</td></tr><tr><td>2002</td><td>~-0.2</td><td>~0.25</td></tr><tr><td>2000</td><td>~-0.15</td><td>~-0.25</td></tr><tr><td>2001</td><td>~-0.15</td><td>~-0.6</td></tr><tr><td>1980s</td><td>~0.1</td><td>~0.75</td></tr><tr><td>1970s</td><td>~0.3</td><td>~0.55</td></tr><tr><td>2012</td><td>~0.2</td><td>~0.2</td></tr><tr><td>2011</td><td>~0.2</td><td>~0.1</td></tr><tr><td>1998</td><td>~0.6</td><td>~0.0</td></tr><tr><td>1999</td><td>~0.7</td><td>~-0.15</td></tr><tr><td>1997</td><td>~0.6</td><td>~-0.6</td></tr></table>
 
 Fig. 4. Non-metric multidimensional scaling (NMDS) ordination based on moth species lists from 15 time layers sampled in PsV. Proportion of open habitat species, mean wingspan, and total degree of specialization were superimposed as descriptors of the moth communities. The sampling years are projected on the NMDS through an ordisurf function based on a generalized additive model (GAM). Stress: 0.13 (non-metric fit $R ^ { 2 }   =   0 . 9 8 ,$ linear fit $R ^ { 2 }   =   0 . 9 1 )$
 

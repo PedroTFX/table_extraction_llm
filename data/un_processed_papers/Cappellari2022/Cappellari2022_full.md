@@ -190,16 +190,7 @@ For Model 1, fifteen models showed a ΔAICc<6 (Table S6). Model averaging indic
 
 Oecologia (2022) 198:1019–1029
 
-| Category | Estimate | Lower Bound | Upper Bound |
-| --- | --- | --- | --- |
-| Apis | ~-0.09 | ~-0.21 | ~0.03 |
-| Temp | ~0.01 | ~-0.13 | ~0.15 |
-| FRic | 0.00 | ~-0.14 | ~0.14 |
-| TSim | ~0.17 | ~0.04 | ~0.29 |
-| Apis \(\times\) FRic | -0.20 | ~-0.34 | ~-0.06 |
-| Apis \(\times\) TSim | ~-0.06 | ~-0.21 | ~0.10 |
-| FRic \(\times\) TSim | ~0.05 | ~-0.10 | ~0.20 |
-| Apis \(\times\) FRic \(\times\) TSim | ~-0.02 | ~-0.24 | ~0.20 |
+<table><tr><td>Category</td><td>Estimate</td><td>Lower Bound</td><td>Upper Bound</td></tr><tr><td>Apis</td><td>~-0.09</td><td>~-0.21</td><td>~0.03</td></tr><tr><td>Temp</td><td>~0.01</td><td>~-0.13</td><td>~0.15</td></tr><tr><td>FRic</td><td>0.00</td><td>~-0.14</td><td>~0.14</td></tr><tr><td>TSim</td><td>~0.17</td><td>~0.04</td><td>~0.29</td></tr><tr><td>Apis \(\times\) FRic</td><td>-0.20</td><td>~-0.34</td><td>~-0.06</td></tr><tr><td>Apis \(\times\) TSim</td><td>~-0.06</td><td>~-0.21</td><td>~0.10</td></tr><tr><td>FRic \(\times\) TSim</td><td>~0.05</td><td>~-0.10</td><td>~0.20</td></tr><tr><td>Apis \(\times\) FRic \(\times\) TSim</td><td>~-0.02</td><td>~-0.24</td><td>~0.20</td></tr></table>
 
 Fig. 2   Model estimates from the model-averaging procedure based on the set of models with all functional traits of both plants and pollinators (Model 1). Explanatory variables of the global model are honeybee abundance (Apis, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), trait similarity between wild pollinator community and the honeybee (TSim), and the interactions Apis × FRic, Apis × TSim, FRic × TSim, and Apis × FRic × TSim. All explanatory variables were scaled to mean 0 and standard deviation 1. Dots indicate the model estimated means, while error bars indicate the 95% confidence intervals for the expected values of the variables
 

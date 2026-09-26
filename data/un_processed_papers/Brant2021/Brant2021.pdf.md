@@ -146,21 +146,13 @@ Insects 2021, 12, 1086
 
 size variation between H. ligatus bees in Chicago and Detroit and between Detroit and Saint Louis, we performed a Tukey HSD post hoc analysis on the previous ANCOVA test. Thep p   p  - g . g p p results of the Tukey HSD test indicated that all three cities showed significantly different,  g    p   g  gg variation in bee body size (Table 1).extent of bee body size variatio
 
-| Series | Head width (cm) (range) | Intertegular distance (cm) (range) |
-| --- | --- | --- |
-| Chicago | 0.18~0.28 | 0.105~0.16 |
-| Detroit | 0.19~0.34 | 0.115~0.21 |
-| Saint Louis | 0.18~0.34 | 0.11~0.19 |
+<table><tr><td>Series</td><td>Head width (cm) (range)</td><td>Intertegular distance (cm) (range)</td></tr><tr><td>Chicago</td><td>0.18~0.28</td><td>0.105~0.16</td></tr><tr><td>Detroit</td><td>0.19~0.34</td><td>0.115~0.21</td></tr><tr><td>Saint Louis</td><td>0.18~0.34</td><td>0.11~0.19</td></tr></table>
 
 Figure 3. Variation in body size of H. ligatus females from three Midwestern cities: ChicagoFigure 3. Variation in body size of H. ligatus females from three Midwestern cities: Chicago, Detroit, and St. Louis. The spread of body size variation was greatest in Detroit. Additionally, theand St. Louis. The spread of body size variation was greatest in Detroit. Additionally, the bee with the largest head width was located in Saint Louis (0.337 cm) and the bee with the smalthe largest head width was located in Saint Louis (0.337 cm) and the bee with the smallest head width width was sampled from Chicago was sampled from Chicago (0.177 cm).
 
 Table 1. Results of a Tukey HSD post hoc analysis reveal significant differences between the variation of body size of Halictus ligatus females in Detroit, Chicago, and Saint Louis.
 
-| Cities | Diff | Lwr | Upr | p-Value |
-| --- | --- | --- | --- | --- |
-| Detroit-Chicago | 0.05 | 0.04 | 0.07 | $<1.0 \times 10^{-4}$ |
-| St. Louis-Chicago | 0.034 | 0.02 | 0.05 | $<1.0 \times 10^{-4}$ |
-| St. Louis-Detroit | -0.02 | -0.03 | $-7.0 \times 10^{-3}$ | $9.0 \times 10^{-4}$ |
+<table><tr><td>Cities</td><td>Diff</td><td>Lwr</td><td>Upr</td><td>p-Value</td></tr><tr><td>Detroit-Chicago</td><td>0.05</td><td>0.04</td><td>0.07</td><td>$&lt;1.0 \times 10^{-4}$</td></tr><tr><td>St. Louis-Chicago</td><td>0.034</td><td>0.02</td><td>0.05</td><td>$&lt;1.0 \times 10^{-4}$</td></tr><tr><td>St. Louis-Detroit</td><td>-0.02</td><td>-0.03</td><td>$-7.0 \times 10^{-3}$</td><td>$9.0 \times 10^{-4}$</td></tr></table>
 
 ,Chicago had the lowest degree of body size variation, with the largest individual g  y p     g ,measured at 0.280 cm and the smallest individual at 0.177 cm. Detroit had the largest Chicago were not significantly different from each other (Tables 2 and 3). Figurspread in variation of body size among the sampled H. ligatus females (largest = 0.337 cm trates the variation in temperature and CGDD in 2016 between the three surveyeand smallest = 0.185 cm). This finding supports previous studies suggesting that body size variation in a population aids the persistence of urban-dwelling H. ligatus populations. **Table 2.** Results of a Tukey HSD post hoc analysis reveal significant differences in the aveHowever, the significant differences in the slope of each regression line suggest that the perature in 2016 between St. Louis and Chicago and between St. Louis and Detroit. extent of bee body size variation is likely to be shaped by local environmental pressures.
 
@@ -176,66 +168,19 @@ Insects 2021, 12, 1086
 
 Table 2. Results of a Tukey HSD post hoc analysis reveal significant differences in the average temperature in 2016 between St. Louis and Chicago and between St. Louis and Detroit.
 
-| Cities | Diff | Lwr | Upr | p-Value |
-| --- | --- | --- | --- | --- |
-| Detroit-Chicago | 0.059 | -1.75 | 1.86 | 0.99 |
-| St. Louis-Chicago | 4.10 | 2.30 | 5.91 | $3.00 \times 10^{-6}$ |
-| St. Louis-Detroit | 4.05 | 2.24 | 5.85 | $5.00 \times 10^{-6}$ |
+<table><tr><td>Cities</td><td>Diff</td><td>Lwr</td><td>Upr</td><td>p-Value</td></tr><tr><td>Detroit-Chicago</td><td>0.059</td><td>-1.75</td><td>1.86</td><td>0.99</td></tr><tr><td>St. Louis-Chicago</td><td>4.10</td><td>2.30</td><td>5.91</td><td>$3.00 \times 10^{-6}$</td></tr><tr><td>St. Louis-Detroit</td><td>4.05</td><td>2.24</td><td>5.85</td><td>$5.00 \times 10^{-6}$</td></tr></table>
 
 Table 3. Results of a Tukey HSD post hoc analysis reveal significant differences in the averagel ti i d d i 2016 b t St. L i d Chi d b t St cumulative growing degree days in 2016 between St. Louis and Chicago and between St. LouisDetroit. and Detroit.
 
-| Cities | Diff | Lwr | Upr | p-Value |
-| --- | --- | --- | --- | --- |
-| Detroit-Chicago | -30.62 | -194.53 | 133.30 | 0.90 |
-| St. Louis-Chicago | 465.37 | 301.45 | 629.29 | $1.00 \times 10^{-10}$ |
-| St. Louis-Detroit | 495.99 | 332.07 | 659.90 | $1.00 \times 10^{-10}$ |
+<table><tr><td>Cities</td><td>Diff</td><td>Lwr</td><td>Upr</td><td>p-Value</td></tr><tr><td>Detroit-Chicago</td><td>-30.62</td><td>-194.53</td><td>133.30</td><td>0.90</td></tr><tr><td>St. Louis-Chicago</td><td>465.37</td><td>301.45</td><td>629.29</td><td>$1.00 \times 10^{-10}$</td></tr><tr><td>St. Louis-Detroit</td><td>495.99</td><td>332.07</td><td>659.90</td><td>$1.00 \times 10^{-10}$</td></tr></table>
 
 (a)
 
-| Month | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- |
-| January | ~-7.5 | ~-3.0 | ~0.5 |
-| February | ~-3.5 | ~0.5 | ~2.5 |
-| March | ~6.0 | ~8.0 | ~10.0 |
-| April | ~5.5 | ~8.0 | ~13.0 |
-| May | ~11.5 | ~14.0 | ~20.0 |
-| June | ~20.5 | ~22.0 | ~24.0 |
-| July | ~23.0 | ~25.0 | ~26.5 |
-| August | ~23.5 | ~25.0 | ~26.0 |
-| September | ~19.0 | ~21.5 | ~23.0 |
-| October | ~9.5 | ~14.0 | ~17.0 |
-| November | ~-6.5 | ~-3.5 | ~0.0 |
-| December | ~-2.0 | ~0.0 | ~2.5 |
+<table><tr><td>Month</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>January</td><td>~-7.5</td><td>~-3.0</td><td>~0.5</td></tr><tr><td>February</td><td>~-3.5</td><td>~0.5</td><td>~2.5</td></tr><tr><td>March</td><td>~6.0</td><td>~8.0</td><td>~10.0</td></tr><tr><td>April</td><td>~5.5</td><td>~8.0</td><td>~13.0</td></tr><tr><td>May</td><td>~11.5</td><td>~14.0</td><td>~20.0</td></tr><tr><td>June</td><td>~20.5</td><td>~22.0</td><td>~24.0</td></tr><tr><td>July</td><td>~23.0</td><td>~25.0</td><td>~26.5</td></tr><tr><td>August</td><td>~23.5</td><td>~25.0</td><td>~26.0</td></tr><tr><td>September</td><td>~19.0</td><td>~21.5</td><td>~23.0</td></tr><tr><td>October</td><td>~9.5</td><td>~14.0</td><td>~17.0</td></tr><tr><td>November</td><td>~-6.5</td><td>~-3.5</td><td>~0.0</td></tr><tr><td>December</td><td>~-2.0</td><td>~0.0</td><td>~2.5</td></tr></table>
 
 (b)
 
-| Month | City | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- | --- |
-| January | Chicago | ~-2 | ~0 | ~5 |
-| January | Detroit | ~-2 | ~0 | ~5 |
-| February | Chicago | ~0 | ~3 | ~7 |
-| February | Detroit | ~0 | ~3 | ~7 |
-| March | Chicago | ~8 | ~12 | ~14 |
-| March | Detroit | ~6 | ~9 | ~14 |
-| April | Chicago | ~10 | ~12 | ~21 |
-| April | Detroit | ~9 | ~12 | ~17 |
-| May | Chicago | ~17 | ~22 | ~28 |
-| May | Detroit | ~17 | ~22 | ~28 |
-| June | Chicago | ~26 | ~28 | ~32 |
-| June | Detroit | ~25 | ~28 | ~30 |
-| July | Chicago | ~28 | ~30 | ~32 |
-| July | Detroit | ~28 | ~30 | ~32 |
-| August | Chicago | ~29 | ~30 | ~31 |
-| August | Detroit | ~29 | ~30 | ~31 |
-| September | Chicago | ~24 | ~26 | ~29 |
-| September | Detroit | ~24 | ~27 | ~29 |
-| October | Chicago | ~15 | ~18 | ~23 |
-| October | Detroit | ~12 | ~17 | ~20 |
-| November | Chicago | ~8 | ~13 | ~18 |
-| November | Detroit | ~8 | ~13 | ~17 |
-| December | Chicago | ~-5 | ~0 | ~4 |
-| December | Detroit | ~-1 | ~2 | ~6 |
-| December | St. Louis | ~4 | ~6 | ~10 |
+<table><tr><td>Month</td><td>City</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>January</td><td>Chicago</td><td>~-2</td><td>~0</td><td>~5</td></tr><tr><td>January</td><td>Detroit</td><td>~-2</td><td>~0</td><td>~5</td></tr><tr><td>February</td><td>Chicago</td><td>~0</td><td>~3</td><td>~7</td></tr><tr><td>February</td><td>Detroit</td><td>~0</td><td>~3</td><td>~7</td></tr><tr><td>March</td><td>Chicago</td><td>~8</td><td>~12</td><td>~14</td></tr><tr><td>March</td><td>Detroit</td><td>~6</td><td>~9</td><td>~14</td></tr><tr><td>April</td><td>Chicago</td><td>~10</td><td>~12</td><td>~21</td></tr><tr><td>April</td><td>Detroit</td><td>~9</td><td>~12</td><td>~17</td></tr><tr><td>May</td><td>Chicago</td><td>~17</td><td>~22</td><td>~28</td></tr><tr><td>May</td><td>Detroit</td><td>~17</td><td>~22</td><td>~28</td></tr><tr><td>June</td><td>Chicago</td><td>~26</td><td>~28</td><td>~32</td></tr><tr><td>June</td><td>Detroit</td><td>~25</td><td>~28</td><td>~30</td></tr><tr><td>July</td><td>Chicago</td><td>~28</td><td>~30</td><td>~32</td></tr><tr><td>July</td><td>Detroit</td><td>~28</td><td>~30</td><td>~32</td></tr><tr><td>August</td><td>Chicago</td><td>~29</td><td>~30</td><td>~31</td></tr><tr><td>August</td><td>Detroit</td><td>~29</td><td>~30</td><td>~31</td></tr><tr><td>September</td><td>Chicago</td><td>~24</td><td>~26</td><td>~29</td></tr><tr><td>September</td><td>Detroit</td><td>~24</td><td>~27</td><td>~29</td></tr><tr><td>October</td><td>Chicago</td><td>~15</td><td>~18</td><td>~23</td></tr><tr><td>October</td><td>Detroit</td><td>~12</td><td>~17</td><td>~20</td></tr><tr><td>November</td><td>Chicago</td><td>~8</td><td>~13</td><td>~18</td></tr><tr><td>November</td><td>Detroit</td><td>~8</td><td>~13</td><td>~17</td></tr><tr><td>December</td><td>Chicago</td><td>~-5</td><td>~0</td><td>~4</td></tr><tr><td>December</td><td>Detroit</td><td>~-1</td><td>~2</td><td>~6</td></tr><tr><td>December</td><td>St. Louis</td><td>~4</td><td>~6</td><td>~10</td></tr></table>
 
 Figure 4. Climatic differences between the three sampled cities, Chicago, Detroit, and SFigure 4. Climatic differences between the three sampled cities, Chicago, Detroit, and Saint Louis, including (a) average temperature from NOAA climate data throughout 2016 and (b) cincluding (a) average temperature from NOAA climate data throughout 2016 and (b) cumulative growing degree days throughout growing degree days throughout 2016.
 
@@ -251,41 +196,9 @@ Insects 2021, 12, 1086
 
 Table 4. The results of the linear model with head width as the response variable and month and city as interacting fixed effects indicate significant relationships between bee head with and city climate.
 
-| Coefficients: | Estimate | Std. Error | t Value | Pr(>\|t\|) |
-| --- | --- | --- | --- | --- |
-| (Intercept) | 0.22 | $5.83 \times 10^{-3}$ | 37.73 | $<2.00 \times 10^{-16}$ |
-| Month July | $-4.54 \times 10^{-3}$ | 0.01 | -0.38 | 0.70 |
-| Month June | -0.02 | $8.09 \times 10^{-3}$ | -1.93 | 0.05 |
-| Month May | $1.46 \times 10^{-3}$ | 0.02 | 0.09 | 0.93 |
-| Month Sep Oct | 0.03 | 0.01 | 2.50 | 0.01 |
-| City Detroit | 0.07 | 0.01 | 5.63 | 0.00 |
-| City Saint. Louis | 0.02 | $7.55 \times 10^{-3}$ | 2.87 | 0.00 |
-| Month July: City Detroit | -0.02 | 0.02 | -1.30 | 0.19 |
-| Month June: City Detroit | $1.85 \times 10^{-3}$ | 0.02 | 0.09 | 0.93 |
-| Month May: City Detroit | -0.03 | 0.02 | -1.31 | 0.19 |
-| Month Sep Oct: City Detroit | -0.03 | 0.03 | -1.18 | 0.24 |
-| Month July: City Saint. Louis | $5.83 \times 10^{-3}$ | 0.01 | 0.42 | 0.67 |
-| Month June: City Saint. Louis | 0.03 | 0.01 | 3.29 | $1.12 \times 10^{-3}$ |
-| Month May: City Saint. Louis | 0.05 | 0.02 | 2.44 | 0.02 |
-| Month Sep Oct: City Saint. Louis | -0.02 | 0.02 | -1.29 | 0.20 |
+<table><tr><td>Coefficients:</td><td>Estimate</td><td>Std. Error</td><td>t Value</td><td>Pr(&gt;|t|)</td></tr><tr><td>(Intercept)</td><td>0.22</td><td>$5.83 \times 10^{-3}$</td><td>37.73</td><td>$&lt;2.00 \times 10^{-16}$</td></tr><tr><td>Month July</td><td>$-4.54 \times 10^{-3}$</td><td>0.01</td><td>-0.38</td><td>0.70</td></tr><tr><td>Month June</td><td>-0.02</td><td>$8.09 \times 10^{-3}$</td><td>-1.93</td><td>0.05</td></tr><tr><td>Month May</td><td>$1.46 \times 10^{-3}$</td><td>0.02</td><td>0.09</td><td>0.93</td></tr><tr><td>Month Sep Oct</td><td>0.03</td><td>0.01</td><td>2.50</td><td>0.01</td></tr><tr><td>City Detroit</td><td>0.07</td><td>0.01</td><td>5.63</td><td>0.00</td></tr><tr><td>City Saint. Louis</td><td>0.02</td><td>$7.55 \times 10^{-3}$</td><td>2.87</td><td>0.00</td></tr><tr><td>Month July: City Detroit</td><td>-0.02</td><td>0.02</td><td>-1.30</td><td>0.19</td></tr><tr><td>Month June: City Detroit</td><td>$1.85 \times 10^{-3}$</td><td>0.02</td><td>0.09</td><td>0.93</td></tr><tr><td>Month May: City Detroit</td><td>-0.03</td><td>0.02</td><td>-1.31</td><td>0.19</td></tr><tr><td>Month Sep Oct: City Detroit</td><td>-0.03</td><td>0.03</td><td>-1.18</td><td>0.24</td></tr><tr><td>Month July: City Saint. Louis</td><td>$5.83 \times 10^{-3}$</td><td>0.01</td><td>0.42</td><td>0.67</td></tr><tr><td>Month June: City Saint. Louis</td><td>0.03</td><td>0.01</td><td>3.29</td><td>$1.12 \times 10^{-3}$</td></tr><tr><td>Month May: City Saint. Louis</td><td>0.05</td><td>0.02</td><td>2.44</td><td>0.02</td></tr><tr><td>Month Sep Oct: City Saint. Louis</td><td>-0.02</td><td>0.02</td><td>-1.29</td><td>0.20</td></tr></table>
 
-| Month | City | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- | --- |
-| May | Chicago | ~0.21 | ~0.22 | ~0.23 |
-| May | Detroit | ~0.23 | ~0.25 | ~0.32 |
-| May | St. Louis | ~0.27 | ~0.30 | ~0.31 |
-| June | Chicago | ~0.19 | ~0.20 | ~0.21 |
-| June | Detroit | ~0.26 | ~0.28 | ~0.29 |
-| June | St. Louis | ~0.24 | ~0.26 | ~0.28 |
-| July | Chicago | ~0.20 | ~0.21 | ~0.22 |
-| July | Detroit | ~0.24 | ~0.28 | ~0.29 |
-| July | St. Louis | ~0.22 | ~0.25 | ~0.27 |
-| August | Chicago | ~0.20 | ~0.21 | ~0.22 |
-| August | Detroit | ~0.27 | ~0.28 | ~0.31 |
-| August | St. Louis | ~0.22 | ~0.24 | ~0.26 |
-| SepOct | Chicago | ~0.23 | ~0.25 | ~0.27 |
-| SepOct | Detroit | ~0.28 | ~0.29 | ~0.29 |
-| SepOct | St. Louis | ~0.22 | ~0.24 | ~0.26 |
+<table><tr><td>Month</td><td>City</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>May</td><td>Chicago</td><td>~0.21</td><td>~0.22</td><td>~0.23</td></tr><tr><td>May</td><td>Detroit</td><td>~0.23</td><td>~0.25</td><td>~0.32</td></tr><tr><td>May</td><td>St. Louis</td><td>~0.27</td><td>~0.30</td><td>~0.31</td></tr><tr><td>June</td><td>Chicago</td><td>~0.19</td><td>~0.20</td><td>~0.21</td></tr><tr><td>June</td><td>Detroit</td><td>~0.26</td><td>~0.28</td><td>~0.29</td></tr><tr><td>June</td><td>St. Louis</td><td>~0.24</td><td>~0.26</td><td>~0.28</td></tr><tr><td>July</td><td>Chicago</td><td>~0.20</td><td>~0.21</td><td>~0.22</td></tr><tr><td>July</td><td>Detroit</td><td>~0.24</td><td>~0.28</td><td>~0.29</td></tr><tr><td>July</td><td>St. Louis</td><td>~0.22</td><td>~0.25</td><td>~0.27</td></tr><tr><td>August</td><td>Chicago</td><td>~0.20</td><td>~0.21</td><td>~0.22</td></tr><tr><td>August</td><td>Detroit</td><td>~0.27</td><td>~0.28</td><td>~0.31</td></tr><tr><td>August</td><td>St. Louis</td><td>~0.22</td><td>~0.24</td><td>~0.26</td></tr><tr><td>SepOct</td><td>Chicago</td><td>~0.23</td><td>~0.25</td><td>~0.27</td></tr><tr><td>SepOct</td><td>Detroit</td><td>~0.28</td><td>~0.29</td><td>~0.29</td></tr><tr><td>SepOct</td><td>St. Louis</td><td>~0.22</td><td>~0.24</td><td>~0.26</td></tr></table>
 
 Figure 5. Variation in body size of female Halictus ligatus sweat bees throughout the season in Chi-Figure 5. Variation in body size of female Halictus ligatus sweat bees throughout the season in cago, Detroit, and Saint Louis.Chicago, Detroit, and Saint Louis.
 

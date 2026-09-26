@@ -69,13 +69,7 @@ All specimens used in this study have been databased, and the data are freely ac
 
 ## Collection references
 
-| NHMUK | Natural History Museum, London, UK; |
-| --- | --- |
-| CASC | California Academy of Sciences Collection, California, USA; |
-| FHGC | Francisco Hita–Garcia Collection, Okinawa, Japan; |
-| KGAC | Kiko Gómez Abal Collection. Barcelona, Spain; |
-| YKPC | Yeo Kolo Collection, Lamto Station, Ivory Coast; |
-| RBINS | Royal Belgian Institute of Natural Sciences, Brussels, Belgium. |
+<table><tr><td>NHMUK</td><td>Natural History Museum, London, UK;</td></tr><tr><td>CASC</td><td>California Academy of Sciences Collection, California, USA;</td></tr><tr><td>FHGC</td><td>Francisco Hita–Garcia Collection, Okinawa, Japan;</td></tr><tr><td>KGAC</td><td>Kiko Gómez Abal Collection. Barcelona, Spain;</td></tr><tr><td>YKPC</td><td>Yeo Kolo Collection, Lamto Station, Ivory Coast;</td></tr><tr><td>RBINS</td><td>Royal Belgian Institute of Natural Sciences, Brussels, Belgium.</td></tr></table>
 
 ## Measurements and indices
 
@@ -135,13 +129,7 @@ Pheidole klaman sp. nov.
 
 133
 
-| PWI | Pronotal width index. PW / HW * 100 |
-| --- | --- |
-| FI | Metafemur index. MFL / HW * 100. |
-| PeI | Petiole index. PTW / PW * 100 |
-| PpI | Postpetiole index. PPW / PW * 100 |
-| PpWI | Postpetiole width index. PPW / PTW * 100 |
-| PpLI | Postpetiole length index. PTL / PPL * 100 |
+<table><tr><td>PWI</td><td>Pronotal width index. PW / HW * 100</td></tr><tr><td>FI</td><td>Metafemur index. MFL / HW * 100.</td></tr><tr><td>PeI</td><td>Petiole index. PTW / PW * 100</td></tr><tr><td>PpI</td><td>Postpetiole index. PPW / PW * 100</td></tr><tr><td>PpWI</td><td>Postpetiole width index. PPW / PTW * 100</td></tr><tr><td>PpLI</td><td>Postpetiole length index. PTL / PPL * 100</td></tr></table>
 
 ## Results
 
@@ -306,11 +294,7 @@ Table 4. Measurements for the minor workers of dark forms of the pulchella speci
 
 Table 5. Summary of micro-CT scanning parameters with resulting voxel sizes (optical magnification was $4 \times$ and image size $1013 \times 1013$) for all three scanned specimens.
 
-| Subcaste | Specimen ID | Magnification | Voxel size (μm) | Exposure (s) | Power (W) | Voltage (kV) | Current (uA) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| major | CASENT0764691 | 4 × | 5,7854 | 1,2 | 5,92 | 70 | 85 |
-| minor | CASENT0745509 | 4 × | 4,6952 | 0,6 | 4,01 | 50 | 80 |
-| minor | CASENT0764692 | 4 × | 5,3599 | 0,6 | 6,02 | 70 | 85 |
+<table><tr><td>Subcaste</td><td>Specimen ID</td><td>Magnification</td><td>Voxel size (μm)</td><td>Exposure (s)</td><td>Power (W)</td><td>Voltage (kV)</td><td>Current (uA)</td></tr><tr><td>major</td><td>CASENT0764691</td><td>4 ×</td><td>5,7854</td><td>1,2</td><td>5,92</td><td>70</td><td>85</td></tr><tr><td>minor</td><td>CASENT0745509</td><td>4 ×</td><td>4,6952</td><td>0,6</td><td>4,01</td><td>50</td><td>80</td></tr><tr><td>minor</td><td>CASENT0764692</td><td>4 ×</td><td>5,3599</td><td>0,6</td><td>6,02</td><td>70</td><td>85</td></tr></table>
 
 Head longer than wide (CI: 79–83), with sides posterior of eye level weakly convex, slightly rounded towards posterior margin. Occipital carina conspicuous, medially and laterally. Mandibles relatively long (MDI: 85–88). Scapes very long (SI: 182–189), the longest in the whole pulchella group. All funicular segments significantly ( $\sim 2 \times$ ) longer than wide, apical three segments at least  $3 \times$  as long as wide. Mesosoma as described for the group, with moderately long, apically tapering, posteriorly curved spines (PSLI: 30–34). Pronotal humeri slightly peaked in lateral view, first and second mesonotal processes notorious and pronounced, each of these structures weakly marginate, or at least with some feeble rugulae. Metanotal groove broad and deep. Legs very long (FI: 208–220), relative to body size, the longest of all the pulchella group.
 

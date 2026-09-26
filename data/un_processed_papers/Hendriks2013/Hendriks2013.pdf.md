@@ -216,15 +216,7 @@ August 2013 | Volume 8 | Issue 8 | e71736
 
 Temporal-Spatial Dynamics in Orthoptera
 
-| log(ChangePlants+1) | high Ammonia levels (Nhx=2000) | low Ammonia levels (Nhx=300) |
-| --- | --- | --- |
-| 0.00 | ~0.02 | ~0.20 |
-| 0.05 | ~0.01 | ~0.21 |
-| 0.10 | ~0.00 | ~0.22 |
-| 0.15 | ~-0.01 | ~0.23 |
-| 0.20 | ~-0.02 | ~0.24 |
-| 0.25 | ~-0.04 | ~0.25 |
-| 0.30 | ~-0.06 | ~0.27 |
+<table><tr><td>log(ChangePlants+1)</td><td>high Ammonia levels (Nhx=2000)</td><td>low Ammonia levels (Nhx=300)</td></tr><tr><td>0.00</td><td>~0.02</td><td>~0.20</td></tr><tr><td>0.05</td><td>~0.01</td><td>~0.21</td></tr><tr><td>0.10</td><td>~0.00</td><td>~0.22</td></tr><tr><td>0.15</td><td>~-0.01</td><td>~0.23</td></tr><tr><td>0.20</td><td>~-0.02</td><td>~0.24</td></tr><tr><td>0.25</td><td>~-0.04</td><td>~0.25</td></tr><tr><td>0.30</td><td>~-0.06</td><td>~0.27</td></tr></table>
 
 Figure 3. Orthoptera species richness change (+2SD, dashed lines) against plant species change at low versus high nitrogen levels (all Orthoptera). All comparisons between the second (1976–1990) and third time period (1996–2010) and in 10 km grid cells. The black lines show the estimated values for Orthoptera under a fixed value of ammonia; the grey lines represent the 95% confidence intervals. Ammonia levels in mol/ ha.
 

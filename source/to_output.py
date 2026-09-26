@@ -37,6 +37,24 @@ JSON_KEY = {
 }
 
 COLUMN_LEVEL_TAGS = ["basisOfRecord", "measurementMethod", "measurementUnit", "measurementStatistic"]
+VALUE_COL = "measurementValue\xa0"     # the output header really has the NBSP
+
+# A mean ± error followed by post-hoc significance letters (Tukey etc.) and an
+# optional '(n)': '2.87 ± 0.05 cd', '4.2 ± 0.1 a (30)'. Only after a ± value, so a
+# lone footnote marker ('100^b', Weber2023) or a word is never touched.
+_SIG_RE = re.compile(
+    r"^\s*(?P<v>-?\d[\d.,]*\s*(?:±|\+/-|\+-)\s*\d[\d.,]*)\s+"
+    r"(?P<g>[a-h]{1,4})\s*(?:\(\s*(?P<n>\d+)\s*\))?\s*$")
+
+
+def split_significance(value):
+    """-> (value without letters, letters or '', n or ''). The volunteers always
+    drop the letters from measurementValue; they describe a between-species test,
+    not the measurement, so they are kept in measurementRemarks instead."""
+    m = _SIG_RE.match(str(value or ""))
+    if not m:
+        return value, "", ""
+    return m.group("v").strip(), m.group("g"), m.group("n") or ""
 
 # Not an output column — a column-level fact about the VALUES (set by
 # table_to_data.classify_value_types) that decides whether a comma in a cell
@@ -117,10 +135,51 @@ _NUMERIC_VALUE_RE = re.compile(r"^[<>~≈±]?\s*-?\d")
 
 def _looks_numeric_value(v) -> bool:
     """A measurementValue that reads as a number (optionally a comparator/±
-    prefix). Used to pick the measurementStatistic default: the ground truth
-    labels a bare numeric reading 'individual' (a single-specimen measurement)
-    and a categorical state 'mode'."""
+    prefix). Used to pick the value-aware defaults in default_tag."""
     return bool(_NUMERIC_VALUE_RE.match(str(v).strip()))
+
+
+_MEAN_SD_RE = re.compile(r"^\s*-?\d[\d.,]*\s*(±|\+/-|\+-)\s*\d")
+_RANGE_RE = re.compile(r"^\s*-?\d[\d.,]*\s*[-–—]\s*\d[\d.,]*\s*$")
+
+
+_SE_RE = re.compile(r"±\s*(?:1\s*)?s\.?\s?e\.?m?\b|\bstandard errors?\b|\bmeans?\s*\(?\s*±?\s*se\b", re.I)
+_SD_RE = re.compile(r"±\s*(?:1\s*)?s\.?\s?d\.?\b|\bstandard deviations?\b|\bmeans?\s*\(?\s*±?\s*sd\b", re.I)
+
+
+def pm_statistic_from_text(text):
+    """Which error a paper reports after '±': 'mean ± SE' or 'mean ± SD', from
+    how often it says each (Gibb2005's Table 2 caption: 'Mean ± SE'). None when
+    the paper names neither, so the caller keeps its own default."""
+    t = (text or "").replace("$\\pm$", "±").replace("\\pm", "±")
+    se, sd = len(_SE_RE.findall(t)), len(_SD_RE.findall(t))
+    if se == sd:
+        return None
+    return "mean ± SE" if se > sd else "mean ± SD"
+
+
+def default_tag(col, value, pm_statistic=None):
+    """Value-aware fallback for a tag the tag step left empty.
+
+    Chosen from the ground-truth conventions (one vote per paper):
+      basisOfRecord         numeric -> PreservedSpecimen (56% of papers);
+                            categorical -> MaterialCitation (40%, vs 17% for
+                            HumanObservation, the old default)
+      measurementStatistic  'x ± y' -> the paper's 'mean ± SE'/'mean ± SD'
+                            (pm_statistic), else 'mean ± SD'; 'a-b' -> 'range';
+                            other numeric -> 'mean'; categorical -> 'mode'
+    Returns None for columns without a value-aware default."""
+    numeric = _looks_numeric_value(value)
+    if col == "basisOfRecord":
+        return "PreservedSpecimen" if numeric else "MaterialCitation"
+    if col == "measurementStatistic":
+        v = str(value or "")
+        if _MEAN_SD_RE.match(v):
+            return pm_statistic or "mean ± SD"
+        if _RANGE_RE.match(v):
+            return "range"
+        return "mean" if numeric else "mode"
+    return None
 
 
 def clean_type(t):
@@ -179,8 +238,23 @@ def build_column_lookup(mapping_paths):
     return lookup
 
 
-def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol):
+def _significance_types(grouped):
+    """measurementTypes whose '± value + letters' suffix really is a post-hoc
+    group: the letters VARY down the column (a, ab, b, ...). A constant suffix is
+    a unit ('3.2 ± 0.4 d' = days, 'g', 'h') and is left alone."""
+    seen = {}
+    for sp in grouped.values():
+        for m in sp.get("measurements", []):
+            g = split_significance(m.get("measurementValue", ""))[1]
+            if g:
+                seen.setdefault(clean_type(m.get("measurementType", "")), set()).add(g)
+    return {t for t, gs in seen.items() if len(gs) >= 2}
+
+
+def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol,
+                  pm_statistic=None):
     rows = []
+    sig_types = _significance_types(grouped)
     for species, species_data in grouped.items():
         species_level = {k: v for k, v in species_data.items() if k != "measurements"}
 
@@ -217,6 +291,17 @@ def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol):
                     elif key in measurement and measurement[key] is not None:
                         row[col] = measurement[key]
 
+                # '2.87 ± 0.05 cd' / '4.2 ± 0.1 a (30)': move post-hoc letters
+                # to measurementRemarks and a trailing '(n)' to sampleSizeValue
+                value_, group, n = split_significance(row[VALUE_COL])
+                if group and m_type in sig_types:
+                    row[VALUE_COL] = value_
+                    note = f"post-hoc significance group: {group}"
+                    row["measurementRemarks"] = "; ".join(
+                        x for x in (str(row["measurementRemarks"] or "").strip(), note) if x)
+                    if n and not row["sampleSizeValue"]:
+                        row["sampleSizeValue"] = n
+
                 # column-level enrichment (only fill empties)
                 if m_type in column_lookup:
                     for col in COLUMNS:
@@ -240,23 +325,13 @@ def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol):
                 # returned by mistake) so the default below fills a valid term
                 row["basisOfRecord"] = normalize_basis_out(row.get("basisOfRecord"))
 
-                # defaults for constant fields (override empty-like values too).
-                # Two are VALUE-AWARE, matching the ground-truth split between a
-                # numeric per-specimen measurement and a categorical state:
-                #   measurementStatistic: numeric -> 'individual', else 'mode'
-                #   basisOfRecord:        numeric -> 'PreservedSpecimen'
-                #                         (morphology off a specimen), categorical
-                #                         -> 'HumanObservation' (a behavioural /
-                #                          ecological trait).
-                numeric = _looks_numeric_value(row.get("measurementValue"))
+                # defaults for constant fields (override empty-like values too);
+                # basisOfRecord and measurementStatistic are value-aware (see
+                # default_tag), the rest take the constant default.
                 for col, default in defaults.items():
                     if is_empty_like(row.get(col)):
-                        if col == "measurementStatistic":
-                            row[col] = "individual" if numeric else default
-                        elif col == "basisOfRecord":
-                            row[col] = "PreservedSpecimen" if numeric else "HumanObservation"
-                        else:
-                            row[col] = default
+                        aware = default_tag(col, row.get(VALUE_COL), pm_statistic)
+                        row[col] = aware if aware is not None else default
 
                 rows.append(row)
     return rows
@@ -270,6 +345,7 @@ def write_output_csv(
     decode=True,
     defaults=None,
     keep_protocol=False,
+    pm_statistic=None,
 ):
     if defaults is None:
         defaults = {"measurementStatistic": "mode", "sex": "both"}
@@ -283,7 +359,8 @@ def write_output_csv(
         mapping_paths = glob(f"{paper_stem}_table_mapping_*.json")
     mapping_paths = [p for p in mapping_paths if Path(p).exists()]
     column_lookup = build_column_lookup(mapping_paths)
-    rows = merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol)
+    rows = merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol,
+                         pm_statistic=pm_statistic)
 
     with open(output_path, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=COLUMNS)

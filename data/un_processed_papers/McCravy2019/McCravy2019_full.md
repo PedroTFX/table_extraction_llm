@@ -140,44 +140,17 @@ Table 1. (Continued) Traits of bee species collected using 4 sampling methods (e
 
 Table 2. Numbers of social and solitary bees (unrelativized and relativized by the maximum) collected using 4 sampling methods in a west-central Illinois restored tallgrass prairie, with P-values. EBT: elevated bowl trap; GBT: ground-level bowl trap; MT: Malaise trap; VT: vane trap. Global G-value = 910.02; P = 0.038.
 
-| Trap type | Trait | # of Bees | Relativized # of bees | P-value |
-| --- | --- | --- | --- | --- |
-| EBT | Social | 453 | 22.22 | 0.450 |
-| EBT | Solitary | 226 | 32.26 | 0.470 |
-| GBT | Social | 248 | 6.32 | 0.043 |
-| GBT | Solitary | 144 | 25.64 | 0.040 |
-| MT | Social | 2,226 | 33.02 | 0.106 |
-| MT | Solitary | 297 | 35.52 | 0.114 |
-| VT | Social | 209 | 14.82 | 0.236 |
-| VT | Solitary | 225 | 33.07 | 0.221 |
+<table><tr><td>Trap type</td><td>Trait</td><td># of Bees</td><td>Relativized # of bees</td><td>P-value</td></tr><tr><td>EBT</td><td>Social</td><td>453</td><td>22.22</td><td>0.450</td></tr><tr><td>EBT</td><td>Solitary</td><td>226</td><td>32.26</td><td>0.470</td></tr><tr><td>GBT</td><td>Social</td><td>248</td><td>6.32</td><td>0.043</td></tr><tr><td>GBT</td><td>Solitary</td><td>144</td><td>25.64</td><td>0.040</td></tr><tr><td>MT</td><td>Social</td><td>2,226</td><td>33.02</td><td>0.106</td></tr><tr><td>MT</td><td>Solitary</td><td>297</td><td>35.52</td><td>0.114</td></tr><tr><td>VT</td><td>Social</td><td>209</td><td>14.82</td><td>0.236</td></tr><tr><td>VT</td><td>Solitary</td><td>225</td><td>33.07</td><td>0.221</td></tr></table>
 
 tively associated with body length. Of the 4 sampling methods in this study, Malaise traps appear to be the least dependent on active colorbased attraction of bees and may collect relatively fewer specialist bees that are attracted to particular flower colors. All 14 indicator species for Malaise traps in the study of Geroff et al. (2014) were polylectic. It is possible that larger bees, that are presumably stronger, more active fliers, are more adept at avoiding the Malaise traps altogether,
 
 Table 3. Numbers of aboveground and belowground-nesting bees (unrelativized and relativized by the maximum) collected using 4 sampling methods in a westcentral Illinois restored tallgrass prairie, with P-values. EBT: elevated bowl trap; GBT: ground-level bowl trap; MT: Malaise trap; VT: vane trap. Global G-value = 1,144.21; P = 0.039.
 
-| Trap type | Trait | # of bees | Relativized # of bees | P-value |
-| --- | --- | --- | --- | --- |
-| EBT | Aboveground | 169 | 14.86 | 0.326 |
-| EBT | Belowground | 510 | 39.62 | 0.308 |
-| GBT | Aboveground | 141 | 19.36 | 0.024 |
-| GBT | Belowground | 251 | 12.60 | 0.024 |
-| MT | Aboveground | 304 | 28.57 | 0.078 |
-| MT | Belowground | 2,219 | 39.97 | 0.086 |
-| VT | Aboveground | 169 | 14.00 | 0.385 |
-| VT | Belowground | 265 | 33.89 | 0.367 |
+<table><tr><td>Trap type</td><td>Trait</td><td># of bees</td><td>Relativized # of bees</td><td>P-value</td></tr><tr><td>EBT</td><td>Aboveground</td><td>169</td><td>14.86</td><td>0.326</td></tr><tr><td>EBT</td><td>Belowground</td><td>510</td><td>39.62</td><td>0.308</td></tr><tr><td>GBT</td><td>Aboveground</td><td>141</td><td>19.36</td><td>0.024</td></tr><tr><td>GBT</td><td>Belowground</td><td>251</td><td>12.60</td><td>0.024</td></tr><tr><td>MT</td><td>Aboveground</td><td>304</td><td>28.57</td><td>0.078</td></tr><tr><td>MT</td><td>Belowground</td><td>2,219</td><td>39.97</td><td>0.086</td></tr><tr><td>VT</td><td>Aboveground</td><td>169</td><td>14.00</td><td>0.385</td></tr><tr><td>VT</td><td>Belowground</td><td>265</td><td>33.89</td><td>0.367</td></tr></table>
 
 Table 4. Numbers of oligolectic and polylectic bees (unrelativized and relativized by the maximum) collected using 4 sampling methods in a west-central Illinois restored tallgrass prairie, with P-values. EBT: elevated bowl trap; GBT: groundlevel bowl trap; MT: Malaise trap; VT: vane trap. Global G-value = 1,076.62; P = 0.029.
 
-| Trap type | Trait | # of bees | Relativized # of bees | P-value |
-| --- | --- | --- | --- | --- |
-| EBT | Oligolectic | 17 | 5.32 | 0.483 |
-| EBT | Polylectic | 662 | 49.16 | 0.464 |
-| GBT | Oligolectic | 3 | 2.08 | 0.429 |
-| GBT | Polylectic | 389 | 29.88 | 0.385 |
-| MT | Oligolectic | 19 | 1.58 | 0.024 |
-| MT | Polylectic | 2,504 | 66.96 | 0.024 |
-| VT | Oligolectic | 30 | 9.49 | 0.072 |
-| VT | Polylectic | 404 | 38.40 | 0.077 |
+<table><tr><td>Trap type</td><td>Trait</td><td># of bees</td><td>Relativized # of bees</td><td>P-value</td></tr><tr><td>EBT</td><td>Oligolectic</td><td>17</td><td>5.32</td><td>0.483</td></tr><tr><td>EBT</td><td>Polylectic</td><td>662</td><td>49.16</td><td>0.464</td></tr><tr><td>GBT</td><td>Oligolectic</td><td>3</td><td>2.08</td><td>0.429</td></tr><tr><td>GBT</td><td>Polylectic</td><td>389</td><td>29.88</td><td>0.385</td></tr><tr><td>MT</td><td>Oligolectic</td><td>19</td><td>1.58</td><td>0.024</td></tr><tr><td>MT</td><td>Polylectic</td><td>2,504</td><td>66.96</td><td>0.024</td></tr><tr><td>VT</td><td>Oligolectic</td><td>30</td><td>9.49</td><td>0.072</td></tr><tr><td>VT</td><td>Polylectic</td><td>404</td><td>38.40</td><td>0.077</td></tr></table>
 
 or escaping from them before entering the collection container. The positive association of vane traps with body length was not surprising. Vane traps, particularly blue vane traps, are known to be especially effective in collecting larger bees, such as bumble bees and eucerine bees (Stephen & Rao 2005; Kimoto et al. 2012; Geroff et al. 2014; Buchanan et al. 2017; Gibbs et al. 2017b; McCravy & Ruholl 2017), particularly long-tongued bumble bees such as B. auricomus (Gibbs et al. 2017b). The light reflectance of blue vane traps may attract these bees by mimicking that of their preferred host plants (Joshi et al. 2015; Gibbs et al. 2017b).
 

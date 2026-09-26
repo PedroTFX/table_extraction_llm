@@ -197,59 +197,15 @@ Influence of Urbanization on Ants and Spiders
 
 a)
 
-| Landscape mean fractal dimension | Ant species richness |
-| --- | --- |
-| ~1.095 | ~62 |
-| ~1.112 | ~54 |
-| ~1.113 | ~57 |
-| ~1.114 | ~54 |
-| ~1.115 | ~65 |
-| ~1.116 | ~56 |
-| ~1.122 | ~56 |
-| ~1.128 | ~34 |
-| ~1.129 | ~50 |
-| ~1.133 | ~43 |
-| ~1.135 | ~46 |
-| ~1.137 | ~39 |
-| ~1.145 | ~43 |
+<table><tr><td>Landscape mean fractal dimension</td><td>Ant species richness</td></tr><tr><td>~1.095</td><td>~62</td></tr><tr><td>~1.112</td><td>~54</td></tr><tr><td>~1.113</td><td>~57</td></tr><tr><td>~1.114</td><td>~54</td></tr><tr><td>~1.115</td><td>~65</td></tr><tr><td>~1.116</td><td>~56</td></tr><tr><td>~1.122</td><td>~56</td></tr><tr><td>~1.128</td><td>~34</td></tr><tr><td>~1.129</td><td>~50</td></tr><tr><td>~1.133</td><td>~43</td></tr><tr><td>~1.135</td><td>~46</td></tr><tr><td>~1.137</td><td>~39</td></tr><tr><td>~1.145</td><td>~43</td></tr></table>
 
 b)
 
-| Landscape mean fractal dimension | Ant community NMDS1 |
-| --- | --- |
-| ~1.095 | ~0.58 |
-| ~1.112 | ~0.49 |
-| ~1.113 | ~0.16 |
-| ~1.114 | ~0.33 |
-| ~1.115 | ~0.26 |
-| ~1.116 | ~-0.08 |
-| ~1.117 | ~0.02 |
-| ~1.122 | ~-0.09 |
-| ~1.127 | ~-0.44 |
-| ~1.128 | ~-0.05 |
-| ~1.133 | ~-0.21 |
-| ~1.136 | ~-0.24 |
-| ~1.137 | ~-0.16 |
-| ~1.145 | ~-0.51 |
+<table><tr><td>Landscape mean fractal dimension</td><td>Ant community NMDS1</td></tr><tr><td>~1.095</td><td>~0.58</td></tr><tr><td>~1.112</td><td>~0.49</td></tr><tr><td>~1.113</td><td>~0.16</td></tr><tr><td>~1.114</td><td>~0.33</td></tr><tr><td>~1.115</td><td>~0.26</td></tr><tr><td>~1.116</td><td>~-0.08</td></tr><tr><td>~1.117</td><td>~0.02</td></tr><tr><td>~1.122</td><td>~-0.09</td></tr><tr><td>~1.127</td><td>~-0.44</td></tr><tr><td>~1.128</td><td>~-0.05</td></tr><tr><td>~1.133</td><td>~-0.21</td></tr><tr><td>~1.136</td><td>~-0.24</td></tr><tr><td>~1.137</td><td>~-0.16</td></tr><tr><td>~1.145</td><td>~-0.51</td></tr></table>
 
 c)
 
-| Landscape mean fractal dimension | Ant community NMDS2 |
-| --- | --- |
-| ~-1.5 | ~1.3 |
-| ~-1.3 | ~1.5 |
-| ~-0.8 | ~1.1 |
-| ~-0.4 | ~1.5 |
-| ~-0.4 | ~-1.0 |
-| ~-0.2 | ~-0.4 |
-| ~-0.1 | ~0.0 |
-| ~0.0 | ~-1.3 |
-| ~0.1 | ~-0.2 |
-| ~0.5 | ~-0.9 |
-| ~0.7 | ~0.3 |
-| ~0.8 | ~-0.3 |
-| ~0.9 | ~-0.4 |
-| ~2.2 | ~-1.3 |
+<table><tr><td>Landscape mean fractal dimension</td><td>Ant community NMDS2</td></tr><tr><td>~-1.5</td><td>~1.3</td></tr><tr><td>~-1.3</td><td>~1.5</td></tr><tr><td>~-0.8</td><td>~1.1</td></tr><tr><td>~-0.4</td><td>~1.5</td></tr><tr><td>~-0.4</td><td>~-1.0</td></tr><tr><td>~-0.2</td><td>~-0.4</td></tr><tr><td>~-0.1</td><td>~0.0</td></tr><tr><td>~0.0</td><td>~-1.3</td></tr><tr><td>~0.1</td><td>~-0.2</td></tr><tr><td>~0.5</td><td>~-0.9</td></tr><tr><td>~0.7</td><td>~0.3</td></tr><tr><td>~0.8</td><td>~-0.3</td></tr><tr><td>~0.9</td><td>~-0.4</td></tr><tr><td>~2.2</td><td>~-1.3</td></tr></table>
 
 Fig 2 Linear regression results for the relationship between the ants’ communities’ composition, species richness, and functional groups and the landscape structure from the Metropolitan Region of Salvador; Blue points and bands represent the sampling units and 95% confidence interval respectively; red line represents the predicted values by the linear models; NMDS1 and NMDS2 refers to the nonmetric multidimensional scaling two axes.
 

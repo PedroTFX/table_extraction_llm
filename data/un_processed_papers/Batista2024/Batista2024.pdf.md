@@ -232,10 +232,7 @@ Biodiversity and Conservation (2024) 33:2345–2361
 
 2355
 
-| Shelter Index (SI) | Wing Typology |
-| --- | --- |
-| 0 | ~0.71 |
-| 22 | ~0.21 |
+<table><tr><td>Shelter Index (SI)</td><td>Wing Typology</td></tr><tr><td>0</td><td>~0.71</td></tr><tr><td>22</td><td>~0.21</td></tr></table>
 
 Fig. 3 GLMM effect plot showing residual relationships of carabid wing typology (winged species – “1”, wingless species – “0”, averaged per site) with habitat Shelter Index (SI)
 

@@ -81,15 +81,7 @@ In this study we describe the dung beetle communities along a tropical altitudin
 
 The study was conducted along an altitudinal gradient of cerrado and rupestrian grassland areas located in the southern part of the Espinhaço mountain range, in State of Minas Gerais, Brazil (19°10’ and 19°22’ S, 43°29’ and 43°36’ W) between September 2013 and June 2014 (Fig 1). The region, called Serra do Cipó, has a highland tropical Cwb Köppen climate with a rainy season between November and February and mean annual temperature and rainfall of 20°C and 1,500 mm, respectively [41]. The Espinhaço range is a quartzite mountain chain that crosses the southeast and part of northeast of Brazil and separates the Atlantic Forest and
 
-| Location | Area (m a.s.l.) |
-| --- | --- |
-| Santana do Riacho | 1100 |
-| Santana do Riacho | 900 |
-| Santana do Riacho | 1300 |
-| Santana do Riacho | 800 |
-| Santana do Riacho | 1000 |
-| Santana do Riacho | 1200 |
-| Santana do Riacho | 1400 |
+<table><tr><td>Location</td><td>Area (m a.s.l.)</td></tr><tr><td>Santana do Riacho</td><td>1100</td></tr><tr><td>Santana do Riacho</td><td>900</td></tr><tr><td>Santana do Riacho</td><td>1300</td></tr><tr><td>Santana do Riacho</td><td>800</td></tr><tr><td>Santana do Riacho</td><td>1000</td></tr><tr><td>Santana do Riacho</td><td>1200</td></tr><tr><td>Santana do Riacho</td><td>1400</td></tr></table>
 
 Fig 1. Altitudinal map of the study site with the seven sampling areas. Serra do Cipó, State of Minas Gerais, Brazil (Source: SIG–LEEB).
 

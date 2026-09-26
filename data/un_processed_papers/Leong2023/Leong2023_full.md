@@ -112,10 +112,7 @@ Functional responses dominanted by thermal tolerance
 
 Thermal trait (CTmax)
 
-| Series | Distribution Type |
-| --- | --- |
-| Red (Left) | Left Cluster (Red Shape) |
-| Blue (Right) | Right Cluster (Blue Shape) |
+<table><tr><td>Series</td><td>Distribution Type</td></tr><tr><td>Red (Left)</td><td>Left Cluster (Red Shape)</td></tr><tr><td>Blue (Right)</td><td>Right Cluster (Blue Shape)</td></tr></table>
 
 ![Image block](doc:d6f04e0/tier:advanced/page:3/block:12)
 
@@ -257,38 +254,7 @@ Society
 
 259
 
-| Subfamily | Species | Q1 | Q2 (Median) | Q3 |
-| --- | --- | --- | --- | --- |
-| Dorylinae | Aenictus cf parahuonicus | ~43 | ~45 | ~46 |
-| Dorylinae | Aenictus parahuonicus | ~43 | ~44 | ~45 |
-| Formicinae | Anoplolepis gracilipes | ~48 | ~49 | ~50 |
-| Formicinae | Euprenolepis cf procera | ~45 | ~46 | ~47 |
-| Formicinae | Nylanderia sp1 | ~45 | ~46 | ~47 |
-| Formicinae | Carebara sp1 | ~44 | ~45 | ~46 |
-| Formicinae | Carebara sp2 | ~48 | ~49 | ~50 |
-| Formicinae | Crematogaster sp1 | ~49 | ~53 | ~57 |
-| Myrmicinae | Lophomyrmex bedoti | ~44 | ~45 | ~46 |
-| Myrmicinae | Monomorium sp1 | ~48 | ~49 | ~50 |
-| Myrmicinae | Pheidole sp1 | ~45 | ~46 | ~47 |
-| Myrmicinae | Pheidole sp2 | ~42 | ~43 | ~44 |
-| Myrmicinae | Pheidole sp3 | ~45 | ~46 | ~47 |
-| Myrmicinae | Pheidole sp4 | ~44 | ~45 | ~46 |
-| Ponerinae | Tetramorium sp1 obesum group | ~46 | ~47 | ~48 |
-| Ponerinae | Ectomomyrmex astutus | ~46 | ~47 | ~48 |
-| Ponerinae | Leptogenys sp1 | ~43 | ~44 | ~45 |
-| Ponerinae | Odontomachus sp1 | ~43 | ~44 | ~45 |
-| Ponerinae | Odontoponera denticulata | ~46 | ~47 | ~48 |
-| Ectatomminnae | Stictoponera sp1 cf binghamii | ~45 | ~46 | ~47 |
-| Ectatomminnae | Stictoponera sp2 | ~45 | ~46 | ~47 |
-| Formicinae | Anoplolepis gracilipes | ~48 | ~49 | ~50 |
-| Formicinae | Camponotus sp1 | ~48 | ~49 | ~50 |
-| Formicinae | Camponotus sp2 | ~49 | ~50 | ~51 |
-| Formicinae | Lepisiota cf rothneyi | ~53 | ~54 | ~56 |
-| Myrmicinae | Tetramorium sp2 obesum group | ~45 | ~46 | ~47 |
-| Ponerinae | Anochetus graeffei | ~44 | ~45 | ~46 |
-| Ponerinae | Diacamma sp rugosum complex | ~51 | ~52 | ~53 |
-| Ponerinae | Euponera sharpi | ~44 | ~45 | ~46 |
-| Ponerinae | Odontoponera denticulata | ~47 | ~48 | ~49 |
+<table><tr><td>Subfamily</td><td>Species</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td></tr><tr><td>Dorylinae</td><td>Aenictus cf parahuonicus</td><td>~43</td><td>~45</td><td>~46</td></tr><tr><td>Dorylinae</td><td>Aenictus parahuonicus</td><td>~43</td><td>~44</td><td>~45</td></tr><tr><td>Formicinae</td><td>Anoplolepis gracilipes</td><td>~48</td><td>~49</td><td>~50</td></tr><tr><td>Formicinae</td><td>Euprenolepis cf procera</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Formicinae</td><td>Nylanderia sp1</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Formicinae</td><td>Carebara sp1</td><td>~44</td><td>~45</td><td>~46</td></tr><tr><td>Formicinae</td><td>Carebara sp2</td><td>~48</td><td>~49</td><td>~50</td></tr><tr><td>Formicinae</td><td>Crematogaster sp1</td><td>~49</td><td>~53</td><td>~57</td></tr><tr><td>Myrmicinae</td><td>Lophomyrmex bedoti</td><td>~44</td><td>~45</td><td>~46</td></tr><tr><td>Myrmicinae</td><td>Monomorium sp1</td><td>~48</td><td>~49</td><td>~50</td></tr><tr><td>Myrmicinae</td><td>Pheidole sp1</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Myrmicinae</td><td>Pheidole sp2</td><td>~42</td><td>~43</td><td>~44</td></tr><tr><td>Myrmicinae</td><td>Pheidole sp3</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Myrmicinae</td><td>Pheidole sp4</td><td>~44</td><td>~45</td><td>~46</td></tr><tr><td>Ponerinae</td><td>Tetramorium sp1 obesum group</td><td>~46</td><td>~47</td><td>~48</td></tr><tr><td>Ponerinae</td><td>Ectomomyrmex astutus</td><td>~46</td><td>~47</td><td>~48</td></tr><tr><td>Ponerinae</td><td>Leptogenys sp1</td><td>~43</td><td>~44</td><td>~45</td></tr><tr><td>Ponerinae</td><td>Odontomachus sp1</td><td>~43</td><td>~44</td><td>~45</td></tr><tr><td>Ponerinae</td><td>Odontoponera denticulata</td><td>~46</td><td>~47</td><td>~48</td></tr><tr><td>Ectatomminnae</td><td>Stictoponera sp1 cf binghamii</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Ectatomminnae</td><td>Stictoponera sp2</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Formicinae</td><td>Anoplolepis gracilipes</td><td>~48</td><td>~49</td><td>~50</td></tr><tr><td>Formicinae</td><td>Camponotus sp1</td><td>~48</td><td>~49</td><td>~50</td></tr><tr><td>Formicinae</td><td>Camponotus sp2</td><td>~49</td><td>~50</td><td>~51</td></tr><tr><td>Formicinae</td><td>Lepisiota cf rothneyi</td><td>~53</td><td>~54</td><td>~56</td></tr><tr><td>Myrmicinae</td><td>Tetramorium sp2 obesum group</td><td>~45</td><td>~46</td><td>~47</td></tr><tr><td>Ponerinae</td><td>Anochetus graeffei</td><td>~44</td><td>~45</td><td>~46</td></tr><tr><td>Ponerinae</td><td>Diacamma sp rugosum complex</td><td>~51</td><td>~52</td><td>~53</td></tr><tr><td>Ponerinae</td><td>Euponera sharpi</td><td>~44</td><td>~45</td><td>~46</td></tr><tr><td>Ponerinae</td><td>Odontoponera denticulata</td><td>~47</td><td>~48</td><td>~49</td></tr></table>
 
 F I G U R E 2 Top part: Trait probability density (TPD) incorporating intraspecific variation of critical thermal maximum $( \mathsf { C T } _ { \mathsf { m a x } } )$ in assemblagelevel with presenting the TPD’s dissimilarity (Dissim), and the purple colour represents the overlapped TPD between the forest and rubber plantation ant species. Lower part: $\mathsf { C T _ { m a x } }$ of ant species from forest (red section) and rubber plantation (blue section) with p value of nonparametric Mann–Whitney U test of species average $\mathsf { C T } _ { \mathsf { m a x } }$ difference between the two habitats, and the dash lines indicate the mean value of $\mathsf { C T } _ { \mathsf { m a x } }$ across species in each habitat.
 

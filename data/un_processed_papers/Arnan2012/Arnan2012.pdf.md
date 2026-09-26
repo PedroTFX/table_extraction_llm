@@ -72,21 +72,7 @@ Table 1 Geographical location and main characteristics of vegetation and ant com
 
 Vegetation type and cover (%), number of ant species collected in pitfall traps and percentage of workers captured that correspond to species considered in this study are indicated
 
-| Site | Geographical location | Vegetation type | Tree cover (%) | Understory cover (%) | No. of ant species | % ant fauna in this study |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | Portbou (Girona) | Grassland | 0 | 20 | 8 | 99.4 |
-| 2 | Portbou (Girona) | Shrubland | 0 | 40 | 10 | 99.6 |
-| 3 | Portbou (Girona) | Open mixed forest | 40 | 40 | 8 | 98.3 |
-| 4 | Canet de Mar (Barcelona) | Grassland | 0 | 25 | 12 | 99.8 |
-| 5 | Canet de Mar (Barcelona) | Open holm oak forest | 40 | 50 | 15 | 98.3 |
-| 6 | Canet de Mar (Barcelona) | Open pine forest | 60 | 20 | 15 | 98.7 |
-| 7 | Serra de l'Obac (Barcelona) | Forest gap | 60 | 30 | 15 | 99.6 |
-| 8 | Serra de l'Obac (Barcelona) | Open holm oak forest | 70 | 40 | 11 | 96.1 |
-| 9 | Serra de l'Obac (Barcelona) | Holm oak forest | 90 | 40 | 13 | 96.5 |
-| 10 | Bellaterra (Barcelona) | Grassland | 0 | 25 | 13 | 99.9 |
-| 11 | Serra de Collserola (Barcelona) | Shrubland | 0 | 60 | 9 | 100 |
-| 12 | Sierra Sur (Jaén) | Grassland | 0 | 5 | 11 | 100 |
-| 13 | Doñana National Park (Huelva) | Grassland | 0 | 10 | 6 | 100 |
+<table><tr><td>Site</td><td>Geographical location</td><td>Vegetation type</td><td>Tree cover (%)</td><td>Understory cover (%)</td><td>No. of ant species</td><td>% ant fauna in this study</td></tr><tr><td>1</td><td>Portbou (Girona)</td><td>Grassland</td><td>0</td><td>20</td><td>8</td><td>99.4</td></tr><tr><td>2</td><td>Portbou (Girona)</td><td>Shrubland</td><td>0</td><td>40</td><td>10</td><td>99.6</td></tr><tr><td>3</td><td>Portbou (Girona)</td><td>Open mixed forest</td><td>40</td><td>40</td><td>8</td><td>98.3</td></tr><tr><td>4</td><td>Canet de Mar (Barcelona)</td><td>Grassland</td><td>0</td><td>25</td><td>12</td><td>99.8</td></tr><tr><td>5</td><td>Canet de Mar (Barcelona)</td><td>Open holm oak forest</td><td>40</td><td>50</td><td>15</td><td>98.3</td></tr><tr><td>6</td><td>Canet de Mar (Barcelona)</td><td>Open pine forest</td><td>60</td><td>20</td><td>15</td><td>98.7</td></tr><tr><td>7</td><td>Serra de l'Obac (Barcelona)</td><td>Forest gap</td><td>60</td><td>30</td><td>15</td><td>99.6</td></tr><tr><td>8</td><td>Serra de l'Obac (Barcelona)</td><td>Open holm oak forest</td><td>70</td><td>40</td><td>11</td><td>96.1</td></tr><tr><td>9</td><td>Serra de l'Obac (Barcelona)</td><td>Holm oak forest</td><td>90</td><td>40</td><td>13</td><td>96.5</td></tr><tr><td>10</td><td>Bellaterra (Barcelona)</td><td>Grassland</td><td>0</td><td>25</td><td>13</td><td>99.9</td></tr><tr><td>11</td><td>Serra de Collserola (Barcelona)</td><td>Shrubland</td><td>0</td><td>60</td><td>9</td><td>100</td></tr><tr><td>12</td><td>Sierra Sur (Jaén)</td><td>Grassland</td><td>0</td><td>5</td><td>11</td><td>100</td></tr><tr><td>13</td><td>Doñana National Park (Huelva)</td><td>Grassland</td><td>0</td><td>10</td><td>6</td><td>100</td></tr></table>
 
 123
 
@@ -182,22 +168,7 @@ Results shown in Table 2 indicate that there were significant differences betwee
 
 Table 2 Statistical comparison of life traits between the dominant (n = 10) and subordinate (n = 20) ant species identified in the Mediterranean ant communities studied
 
-| Life trait | Statistical test | Significance |
-| --- | --- | --- |
-| Worker size (mm) | Mann-Whitney U test | 0.947 |
-| Polymorphism | Mann-Whitney U test | 0.172 |
-| Defence of resources | Mann-Whitney U test | &lt;0.001 |
-| Number of workers per bait | Mann-Whitney U test | 0.001 |
-| Colony population | Mann-Whitney U test | &lt;0.001 |
-| Brood cycle index | Mann-Whitney U test | 0.151 |
-| Number of queens per colony | Mann-Whitney U test | 0.341 |
-| Number of nests per colony | Mann-Whitney U test | 1.000 |
-| Main food resources | Chi-squared test | 0.005 |
-| Daily activity rhythm | Chi-squared test | 0.003 |
-| Month of maximum activity | Chi-squared test | 0.300 |
-| Critical thermal maximum (CTM) | Mann-Whitney U test | 0.103 |
-| Maximal activity temperature (MAT) | Mann-Whitney U test | 0.018 |
-| Difference CTM-MAT | Mann-Whitney U test | 0.013 |
+<table><tr><td>Life trait</td><td>Statistical test</td><td>Significance</td></tr><tr><td>Worker size (mm)</td><td>Mann-Whitney U test</td><td>0.947</td></tr><tr><td>Polymorphism</td><td>Mann-Whitney U test</td><td>0.172</td></tr><tr><td>Defence of resources</td><td>Mann-Whitney U test</td><td>&amp;lt;0.001</td></tr><tr><td>Number of workers per bait</td><td>Mann-Whitney U test</td><td>0.001</td></tr><tr><td>Colony population</td><td>Mann-Whitney U test</td><td>&amp;lt;0.001</td></tr><tr><td>Brood cycle index</td><td>Mann-Whitney U test</td><td>0.151</td></tr><tr><td>Number of queens per colony</td><td>Mann-Whitney U test</td><td>0.341</td></tr><tr><td>Number of nests per colony</td><td>Mann-Whitney U test</td><td>1.000</td></tr><tr><td>Main food resources</td><td>Chi-squared test</td><td>0.005</td></tr><tr><td>Daily activity rhythm</td><td>Chi-squared test</td><td>0.003</td></tr><tr><td>Month of maximum activity</td><td>Chi-squared test</td><td>0.300</td></tr><tr><td>Critical thermal maximum (CTM)</td><td>Mann-Whitney U test</td><td>0.103</td></tr><tr><td>Maximal activity temperature (MAT)</td><td>Mann-Whitney U test</td><td>0.018</td></tr><tr><td>Difference CTM-MAT</td><td>Mann-Whitney U test</td><td>0.013</td></tr></table>
 
 Values significant at p \ 0.05 are shown in bold
 
@@ -219,38 +190,7 @@ Oecologia (2012) 170:489–500
 
 Fig. 1 Dendrogram of species similarities derived from UPGMA cluster analysis, based on life traits of each ant species. Dominance groups (dom): (?) dominant, (-) subordinate
 
-| Ant Species | Subfamily | Dom |
-| :--- | :--- | :--- |
-| Camponotus cruentatus | Formicinae | + |
-| Camponotus sylvaticus | Formicinae | + |
-| Messor barbarus | Myrmicinae | + |
-| Messor capitatus | Myrmicinae | + |
-| Pheidole pallidula | Myrmicinae | + |
-| Linepithema humile | Dolichoderinae | + |
-| Tapinoma nigerrimum | Dolichoderinae | + |
-| Tetramorium caespitum | Myrmicinae | + |
-| Tetramorium impurum | Myrmicinae | + |
-| Tetramorium semilaeve | Myrmicinae | + |
-| Myrmica sabuleti | Myrmicinae | - |
-| Plagiolepis pygmaea | Formicinae | - |
-| Leptothorax kraussei | Myrmicinae | - |
-| Leptothorax specularis | Myrmicinae | - |
-| Leptothorax unifasciatus | Myrmicinae | - |
-| Crematogaster sordidula | Myrmicinae | - |
-| Crematogaster auberti | Myrmicinae | - |
-| Camponotus foreli | Formicinae | - |
-| Cataglyphis cursor | Formicinae | - |
-| Cataglyphis floricola | Formicinae | - |
-| Cataglyphis iberica | Formicinae | - |
-| Cataglyphis rosenhaueri | Formicinae | - |
-| Proformica nasuta | Formicinae | - |
-| Formica subrufa | Formicinae | - |
-| Aphaenogaster gibbosa | Myrmicinae | - |
-| Aphaenogaster senilis | Myrmicinae | - |
-| Cataglyphis velox | Formicinae | - |
-| Camponotus piceus | Formicinae | - |
-| Messor bouvieri | Formicinae | - |
-| Messor lusitanicus | Formicinae | - |
+<table><tr><td>Ant Species</td><td>Subfamily</td><td>Dom</td></tr><tr><td>Camponotus cruentatus</td><td>Formicinae</td><td>+</td></tr><tr><td>Camponotus sylvaticus</td><td>Formicinae</td><td>+</td></tr><tr><td>Messor barbarus</td><td>Myrmicinae</td><td>+</td></tr><tr><td>Messor capitatus</td><td>Myrmicinae</td><td>+</td></tr><tr><td>Pheidole pallidula</td><td>Myrmicinae</td><td>+</td></tr><tr><td>Linepithema humile</td><td>Dolichoderinae</td><td>+</td></tr><tr><td>Tapinoma nigerrimum</td><td>Dolichoderinae</td><td>+</td></tr><tr><td>Tetramorium caespitum</td><td>Myrmicinae</td><td>+</td></tr><tr><td>Tetramorium impurum</td><td>Myrmicinae</td><td>+</td></tr><tr><td>Tetramorium semilaeve</td><td>Myrmicinae</td><td>+</td></tr><tr><td>Myrmica sabuleti</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Plagiolepis pygmaea</td><td>Formicinae</td><td>-</td></tr><tr><td>Leptothorax kraussei</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Leptothorax specularis</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Leptothorax unifasciatus</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Crematogaster sordidula</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Crematogaster auberti</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Camponotus foreli</td><td>Formicinae</td><td>-</td></tr><tr><td>Cataglyphis cursor</td><td>Formicinae</td><td>-</td></tr><tr><td>Cataglyphis floricola</td><td>Formicinae</td><td>-</td></tr><tr><td>Cataglyphis iberica</td><td>Formicinae</td><td>-</td></tr><tr><td>Cataglyphis rosenhaueri</td><td>Formicinae</td><td>-</td></tr><tr><td>Proformica nasuta</td><td>Formicinae</td><td>-</td></tr><tr><td>Formica subrufa</td><td>Formicinae</td><td>-</td></tr><tr><td>Aphaenogaster gibbosa</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Aphaenogaster senilis</td><td>Myrmicinae</td><td>-</td></tr><tr><td>Cataglyphis velox</td><td>Formicinae</td><td>-</td></tr><tr><td>Camponotus piceus</td><td>Formicinae</td><td>-</td></tr><tr><td>Messor bouvieri</td><td>Formicinae</td><td>-</td></tr><tr><td>Messor lusitanicus</td><td>Formicinae</td><td>-</td></tr></table>
 
 variables. Species of group 1 had the highest degree of polymorphism, followed by the species of groups 5, 4 and 2 (Kruskal–Wallis test, $H = 1 7 . 4 , P = 0 . 0 0 3 7 )$ . Species of groups 1, 2, 3a and 5 (and especially the two species of group 2) had more populated colonies than those of groups 3b and 4 $( H = 2 0 . 7$ $P = 0 . 0 0 0 9 )$ . Concerning colony composition, group 2 was only composed of two polygynous and polydomous species, while the other groups were mainly composed of monogynous and monodomous species (excepting the most specious group 4, with several species having more than one queen per colony) (number of queens per colony, $H = 11.9,   P = 0.0359;$ number of nests per colony, H = 13.9, $P = 0 . 0 1 6 4 )$ . As regards the brood cycle, most groups were composed of species with larvae within the nest all the year, except group 4, which included many species with larvae within the nests only in the foraging activity season $( H = 1 6 . 9 ,   P = 0 . 0 0 4 6 )$ . The pattern observed with regard to the defence of resources was the same as in the previous analysis between dominant and subordinates, so that most subordinate species (of groups 3b, 4 and 5) only defend their nests, while the
 
@@ -280,14 +220,7 @@ None of these species groups was conditioned by the aridity gradient. Cryptic sp
 
 In this study, we have been able to identify a set of ecologically relevant life traits of the most common Iberian ant species. More interestingly, we have firstly identified clearly distinctive life traits of dominant and subordinate species in Mediterranean environments. Thus, when compared with subordinates, dominants have some common traits that can be grouped under two main headings: resource exploitation and temporal activity patterns. On the one hand, dominant species have more populated colonies and defend food resources (that are mainly rich and stable ones, such as honeydew-producing groups of aphids;
 
-| Variable | Group | Axis I: 50.3% of variance | Axis I: 29.5% of variance |
-| --- | --- | --- | --- |
-| Temperature | Group 3a | ~-0.1 | ~0.9 |
-| Temperature | Group 4 | ~-0.1 | ~0.3 |
-| Temperature | Group 5 | ~-0.1 | ~0.2 |
-| Precipitation | Group 3b | ~0.8 | ~-0.2 |
-| Tree Cover (%) | Group 2 | ~0.6 | ~-0.3 |
-| Understory Cover (%) | Group 1 | ~0.1 | ~-0.4 |
+<table><tr><td>Variable</td><td>Group</td><td>Axis I: 50.3% of variance</td><td>Axis I: 29.5% of variance</td></tr><tr><td>Temperature</td><td>Group 3a</td><td>~-0.1</td><td>~0.9</td></tr><tr><td>Temperature</td><td>Group 4</td><td>~-0.1</td><td>~0.3</td></tr><tr><td>Temperature</td><td>Group 5</td><td>~-0.1</td><td>~0.2</td></tr><tr><td>Precipitation</td><td>Group 3b</td><td>~0.8</td><td>~-0.2</td></tr><tr><td>Tree Cover (%)</td><td>Group 2</td><td>~0.6</td><td>~-0.3</td></tr><tr><td>Understory Cover (%)</td><td>Group 1</td><td>~0.1</td><td>~-0.4</td></tr></table>
 
 Fig. 3 Representation of the five groups (plus Pheidole pallidula) of ant species (in italics) and environmental factors (in bold) on the first two axes of the canonical correspondence analysis (CCA)
 
@@ -305,18 +238,7 @@ In addition to the large differences found in life traits between dominants and 
 
 Table 3 Comparative table of our classification of ant groups and that of Andersen’s (1995, 1997) ant functional groups classification in relation to stress and disturbance
 
-| Andersen's functional groups | Our ant groups classification |
-| --- | --- |
-| Dominant Dolichoderinae | Group 2 |
-| Subordinate Camponotini | Group 1 (?) |
-| Hot climate specialists | Group 4 |
-| Cold climate specialists | - |
-| Tropical climate specialists | - |
-| Cryptic species | Group 3b |
-| Opportunists | - |
-| Generalised Myrmicinae | Group 3a + P. pallidulaGroup 1 (?) |
-| Specialist predators | - |
-| - | Group 5 |
+<table><tr><td>Andersen's functional groups</td><td>Our ant groups classification</td></tr><tr><td>Dominant Dolichoderinae</td><td>Group 2</td></tr><tr><td>Subordinate Camponotini</td><td>Group 1 (?)</td></tr><tr><td>Hot climate specialists</td><td>Group 4</td></tr><tr><td>Cold climate specialists</td><td>-</td></tr><tr><td>Tropical climate specialists</td><td>-</td></tr><tr><td>Cryptic species</td><td>Group 3b</td></tr><tr><td>Opportunists</td><td>-</td></tr><tr><td>Generalised Myrmicinae</td><td>Group 3a + P. pallidulaGroup 1 (?)</td></tr><tr><td>Specialist predators</td><td>-</td></tr><tr><td>-</td><td>Group 5</td></tr></table>
 
 the functional groups can be placed into different levels of the dominance hierarchy (Arnan et al. 2011). The first major similarity is that, according to our phylogenetic contrasts, the species that compose the different assemblages are, as a rule, phylogenetically closer than the species of different groups. Group 2 of dominant ants includes two Dolichoderine species of relatively small size and large-populated colonies: a Mediterranean species, Tapinoma nigerrimum, and an invasive species, the Argentine ant (Linepithema humile). The latter is an increasingly important global invader, particularly in Mediterraneantype ecosystems (Holway 1998; Giraud et al. 2002). Both species share many life traits: they have high numbers of workers at baits compared to other dominant groups (Fig. 2), and they are also the only polygynous and polydomous dominant species, which confers on them a great competitive advantage in relation to other dominant species (McGlynn 1999). In other areas of the world, dominant ants are strongly territorial ants, such as those species of the dominant Dolichoderinae functional group of the Andersen’s scheme (Andersen 1992, 1995, 1997). Although with a lower degree of aggressiveness and territoriality, L. humile and T. nigerrimum would be the only species that would have more resemblance to this functional group (Table 3). The subdominant species of the classification of Vepsäläinen and Pisarski (1982) in boreal biomes and of Arnan et al. (2011) in sub-tropical biomes are non-territorial but aggressive when defending or trying to take over concentrated food resources. These species are capable of achieving moderate densities in areas where the dominants are absent or in lacunae in the mosaic of dominants (Savolainen et al. 1989; Arnan et al. 2011). In our study, this role is accomplished by dominant species of groups 1 and 3a, which can dominate food resources but do not defend territories surrounding their nests. Group 1 includes polymorphic, dominant ants (Camponotus spp. and Messor spp.) with larger workers (Fig. 1) mainly concerned with tasks of defending nest and food (Hölldobler and Wilson 1990). Meanwhile, group 3a is mainly composed of small dominant species belonging to the genus Tetramorium. Myrmica sabuleti was placed together with them because they have several features in common, although the criteria followed did not allow us to classify it as a dominant species. Both phylogenetically and for their role in the dominance hierarchy (Arnan et al. 2011), these two groups could be perfectly paralleled to the generalised Myrmicinae of Andersen’s classification (Table 3), with the exception of the two Camponotus species of Group 1, which could be included within the Subordinate Camponotini group. In Australia, species of Camponotus can also be highly competitive at baits (Andersen 1992), especially in the absence of Iridomyrmex (Andersen and Patel 1994). Similar species to those of these two groups are also
 

@@ -196,17 +196,9 @@ A
 
 B
 
-| Urbanisation | Wild bee indicator species |
-| --- | --- |
-| high | Bombus lapidariusLasioglossum morio (a) |
-| medium | Andrena dorsataAndrena flavipes |
-| low | Andrena subopaca |
+<table><tr><td>Urbanisation</td><td>Wild bee indicator species</td></tr><tr><td>high</td><td>Bombus lapidariusLasioglossum morio (a)</td></tr><tr><td>medium</td><td>Andrena dorsataAndrena flavipes</td></tr><tr><td>low</td><td>Andrena subopaca</td></tr></table>
 
-| Urbanisation | Hoverfly indicator species |
-| --- | --- |
-| high | - |
-| medium | - |
-| low | Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b) |
+<table><tr><td>Urbanisation</td><td>Hoverfly indicator species</td></tr><tr><td>high</td><td>-</td></tr><tr><td>medium</td><td>-</td></tr><tr><td>low</td><td>Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b)</td></tr></table>
 
 Fig. 2   A Abundances of the indicator species L. morio (high urbanisation) and Helophilus trivittatus (low urbanisation) in the study sites across the urban matrix of Berlin. B List of indicator species for the
 

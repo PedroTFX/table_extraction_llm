@@ -158,46 +158,7 @@ ZooKeys 1166: 235–259 (2023), DOI: 10.3897/zookeys.1166.105589
 
 Donald L. J. Quicke et al.: Two new genera and species of the Adeshini
 
-| Species | Clade |
-| :--- | :--- |
-| Indadesha_sp_India | Adeshini |
-| Furcadesha_huddlestoni_India | Adeshini |
-| Protadesha_intermedia_South-Africa | Adeshini |
-| Adesha_sp_Indonesia | Braconini |
-| Adesha_sp_Thailand | Braconini |
-| Africadesha_sp_Tanzania | Braconini |
-| Spinadesha_sp_Malaysia | Braconini |
-| Crenuladesha_narendreni_India | Braconini |
-| Plesiobracon-grp-gen-nov_sp_India | Braconini |
-| Eutropobracon_indicus_Thailand | Braconini |
-| Scutibracon_hispae_India | Braconini |
-| Acgorium_felipechavarriai_Costa-Rica | Braconini |
-| Habrobracon_brevicornis_Thailand&Senegal | Braconini |
-| Crinibracon_chromusae_India | Braconini |
-| Lyricibracon_sp_Madagascar | Braconini |
-| Myosoma_sp_Peru | Braconini |
-| Coeloides_sordidator_Norway | Braconini |
-| Dolabraulax_sp_India | Braconini |
-| Bracon_garugaphagae_India | Braconini |
-| Syntomernus_sp_Bangladesh | Braconini |
-| Braconella_sp3_Republic-of-Congo | Braconini |
-| Sculptolobus_sp_India | Braconini |
-| Bracon_rosamondae_Mexico | Braconini |
-| Karposibracon_papuensis_Papua-New-Guinea | Braconini |
-| Physaraia_sp_Thailand | Braconini |
-| Trigastrotheca_doiphukhaensis_Thailand | Braconini |
-| Carinibracon_sp_India | Braconini |
-| Glyptomorpha_sp_South_Africa | Aphrastobraconini |
-| Pseudovipio_sp_Tajikistan | Aphrastobraconini |
-| Soter_sp_Uganda | Aphrastobraconini |
-| Iphiaulax_impostor_Hungary | Aphrastobraconini |
-| Atanycolus_ulmicola_USA | Aphrastobraconini |
-| Euurobracon_yokahamae_Japan | Aphrastobraconini |
-| Rhammura_sp_Uganda | Aphrastobraconini |
-| Callibracon_limbatus_Australia | Aphrastobraconini |
-| Digonogastra_sp_Honduras | Aphrastobraconini |
-| Stenobracon_nicevillei_Thailand | Aphrastobraconini |
-| Colastes_braconius_UK | Outgroup |
+<table><tr><td>Species</td><td>Clade</td></tr><tr><td>Indadesha_sp_India</td><td>Adeshini</td></tr><tr><td>Furcadesha_huddlestoni_India</td><td>Adeshini</td></tr><tr><td>Protadesha_intermedia_South-Africa</td><td>Adeshini</td></tr><tr><td>Adesha_sp_Indonesia</td><td>Braconini</td></tr><tr><td>Adesha_sp_Thailand</td><td>Braconini</td></tr><tr><td>Africadesha_sp_Tanzania</td><td>Braconini</td></tr><tr><td>Spinadesha_sp_Malaysia</td><td>Braconini</td></tr><tr><td>Crenuladesha_narendreni_India</td><td>Braconini</td></tr><tr><td>Plesiobracon-grp-gen-nov_sp_India</td><td>Braconini</td></tr><tr><td>Eutropobracon_indicus_Thailand</td><td>Braconini</td></tr><tr><td>Scutibracon_hispae_India</td><td>Braconini</td></tr><tr><td>Acgorium_felipechavarriai_Costa-Rica</td><td>Braconini</td></tr><tr><td>Habrobracon_brevicornis_Thailand&amp;Senegal</td><td>Braconini</td></tr><tr><td>Crinibracon_chromusae_India</td><td>Braconini</td></tr><tr><td>Lyricibracon_sp_Madagascar</td><td>Braconini</td></tr><tr><td>Myosoma_sp_Peru</td><td>Braconini</td></tr><tr><td>Coeloides_sordidator_Norway</td><td>Braconini</td></tr><tr><td>Dolabraulax_sp_India</td><td>Braconini</td></tr><tr><td>Bracon_garugaphagae_India</td><td>Braconini</td></tr><tr><td>Syntomernus_sp_Bangladesh</td><td>Braconini</td></tr><tr><td>Braconella_sp3_Republic-of-Congo</td><td>Braconini</td></tr><tr><td>Sculptolobus_sp_India</td><td>Braconini</td></tr><tr><td>Bracon_rosamondae_Mexico</td><td>Braconini</td></tr><tr><td>Karposibracon_papuensis_Papua-New-Guinea</td><td>Braconini</td></tr><tr><td>Physaraia_sp_Thailand</td><td>Braconini</td></tr><tr><td>Trigastrotheca_doiphukhaensis_Thailand</td><td>Braconini</td></tr><tr><td>Carinibracon_sp_India</td><td>Braconini</td></tr><tr><td>Glyptomorpha_sp_South_Africa</td><td>Aphrastobraconini</td></tr><tr><td>Pseudovipio_sp_Tajikistan</td><td>Aphrastobraconini</td></tr><tr><td>Soter_sp_Uganda</td><td>Aphrastobraconini</td></tr><tr><td>Iphiaulax_impostor_Hungary</td><td>Aphrastobraconini</td></tr><tr><td>Atanycolus_ulmicola_USA</td><td>Aphrastobraconini</td></tr><tr><td>Euurobracon_yokahamae_Japan</td><td>Aphrastobraconini</td></tr><tr><td>Rhammura_sp_Uganda</td><td>Aphrastobraconini</td></tr><tr><td>Callibracon_limbatus_Australia</td><td>Aphrastobraconini</td></tr><tr><td>Digonogastra_sp_Honduras</td><td>Aphrastobraconini</td></tr><tr><td>Stenobracon_nicevillei_Thailand</td><td>Aphrastobraconini</td></tr><tr><td>Colastes_braconius_UK</td><td>Outgroup</td></tr></table>
 
 Figure 1. Maximum likelihood tree recovered from analyses of combined barcode and 28S D2-D3 rDNA sequence data showing major groupings and bootstrap support values. The two new taxa described are indicated by red star symbols. Nodes with 100% bootstrap support are indicated by black circles.
 

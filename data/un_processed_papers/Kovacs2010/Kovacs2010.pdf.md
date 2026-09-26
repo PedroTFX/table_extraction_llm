@@ -126,10 +126,7 @@ We determined the degree of trait dimorphism between workers and gynes using a m
 
 **Figure 2.** Relationships between log-transformed morphological traits and total body size in Vespula maculifrons gynes and workers. Standard major axis regression lines demonstrate a linear fit. Histograms illustrate the distributions of trait sizes in both castes. Gyne traits are represented by black symbols and lines, whereas worker traits are represented by grey symbols and lines.
 
-| Trait | Series | Log Body Length (range) | Log Thorax Width (range) |
-| --- | --- | --- | --- |
-| Gynes | Gynes | 2.75~3.00 | 1.25~1.40 |
-| Workers | Workers | 2.25~2.75 | 0.60~1.10 |
+<table><tr><td>Trait</td><td>Series</td><td>Log Body Length (range)</td><td>Log Thorax Width (range)</td></tr><tr><td>Gynes</td><td>Gynes</td><td>2.75~3.00</td><td>1.25~1.40</td></tr><tr><td>Workers</td><td>Workers</td><td>2.25~2.75</td><td>0.60~1.10</td></tr></table>
 
 Downloaded from https://academic.oup.com/biolinnean/article/101/1/93/2450698 by IST user on 19 February 2026
 
@@ -161,13 +158,7 @@ We detected significant differences in the level of variation for a few traits b
 
 Table 2. Mean (±standard error) of intercaste correlations and caste dimorphism values for Vespula maculifrons
 
-| Trait | Intercaste correlation ± SE | Castedimorphism ± SE |
-| --- | --- | --- |
-| Thorax width | 0.222 ± 0.159 | 0.028 ± 0.013 |
-| Thorax length | 0.163 ± 0.122 | -0.001 ± 0.015 |
-| Third tergum length | 0.097 ± 0.144 | 0.099 ± 0.012 |
-| Gaster length | 0.182 ± 0.141 | 0.134 ± 0.012 |
-| Mass | -0.068 ± 0.107 | 0.739 ± 0.018 |
+<table><tr><td>Trait</td><td>Intercaste correlation ± SE</td><td>Castedimorphism ± SE</td></tr><tr><td>Thorax width</td><td>0.222 ± 0.159</td><td>0.028 ± 0.013</td></tr><tr><td>Thorax length</td><td>0.163 ± 0.122</td><td>-0.001 ± 0.015</td></tr><tr><td>Third tergum length</td><td>0.097 ± 0.144</td><td>0.099 ± 0.012</td></tr><tr><td>Gaster length</td><td>0.182 ± 0.141</td><td>0.134 ± 0.012</td></tr><tr><td>Mass</td><td>-0.068 ± 0.107</td><td>0.739 ± 0.018</td></tr></table>
 
 Negative, or positive, caste dimorphism values indicate that worker traits were larger than, or smaller than, gyne traits relative to the total body length, respectively. No traits displayed significant intercaste correlation. Caste dimorphism estimates that are significantly different from zero are set in bold.
 
@@ -183,13 +174,7 @@ J. L. KOVACS ET AL.
 
 Table 3. Mean Spearman’s correlations between morphological traits in Vespula maculifrons gynes and workers
 
-| Trait | Thorax width | Thorax length | Third tergum length | Gaster length | Mass |
-| --- | --- | --- | --- | --- | --- |
-| Thorax width |  | 0.39 | 0.26 | 0.23 | 0.09 |
-| Thorax length | 0.65 |  | 0.14 | 0.09 | 0.09 |
-| Third tergum length | 0.42 | 0.47 |  | 0.42 | 0.28 |
-| Gaster length | 0.45 | 0.45 | 0.51 |  | 0.62 |
-| Mass | 0.40 | 0.36 | 0.34 | 0.41 |  |
+<table><tr><td>Trait</td><td>Thorax width</td><td>Thorax length</td><td>Third tergum length</td><td>Gaster length</td><td>Mass</td></tr><tr><td>Thorax width</td><td></td><td>0.39</td><td>0.26</td><td>0.23</td><td>0.09</td></tr><tr><td>Thorax length</td><td>0.65</td><td></td><td>0.14</td><td>0.09</td><td>0.09</td></tr><tr><td>Third tergum length</td><td>0.42</td><td>0.47</td><td></td><td>0.42</td><td>0.28</td></tr><tr><td>Gaster length</td><td>0.45</td><td>0.45</td><td>0.51</td><td></td><td>0.62</td></tr><tr><td>Mass</td><td>0.40</td><td>0.36</td><td>0.34</td><td>0.41</td><td></td></tr></table>
 
 Gyne correlations lie above the diagonal and worker correlations lie below. Correlations that differ significantly from zero $( P < 0 . 0 5 )$ are set in bold. Traits for which correlations were significantly larger in one caste than the other are underlined in the caste with the larger correlation.
 
@@ -225,13 +210,7 @@ SELECTION ON MORPHOLOGICAL TRAITS IN SOCIAL INSECTS
 
 99
 
-| Feature | Intercaste Mean Phenotypic Correlations | Caste Dimorphism |
-| --- | --- | --- |
-| Dry Mass | ~-0.06 | ~0.74 |
-| Third Tergum Length | 0.1 | 0.1 |
-| Thorax Length | ~0.16 | ~-0.03 |
-| Gaster Length | ~0.18 | ~0.13 |
-| Thorax Width | ~0.22 | ~0.03 |
+<table><tr><td>Feature</td><td>Intercaste Mean Phenotypic Correlations</td><td>Caste Dimorphism</td></tr><tr><td>Dry Mass</td><td>~-0.06</td><td>~0.74</td></tr><tr><td>Third Tergum Length</td><td>0.1</td><td>0.1</td></tr><tr><td>Thorax Length</td><td>~0.16</td><td>~-0.03</td></tr><tr><td>Gaster Length</td><td>~0.18</td><td>~0.13</td></tr><tr><td>Thorax Width</td><td>~0.22</td><td>~0.03</td></tr></table>
 
 Figure 3. Relationship between levels of caste dimorphism and intercaste mean phenotypic correlations for morphological traits in Vespula maculifrons.
 

@@ -181,15 +181,7 @@ SULTAIRE ET AL.
 
 Table 1. Carabid community metrics used in mixed-effects models, statistical method used to quantify them, range of values, model distribution, and sample size.
 
-| Metric | Method | Range | Distribution | Sample size |
-| --- | --- | --- | --- | --- |
-| Taxonomic richness | Chao1 | 2.00–33.00 | Poisson | 178 |
-| Functional richness | Dendrogram | 0.53–2.32 | Gaussian | 178 |
-| Taxonomic dissimilarity | Bray-Curtis | 0.04–1.00 | Beta | 178 |
-| Functional dissimilarity | TPD | 0.09–0.99 | Beta | 178 |
-| Body size | TPD | 2.97–25.9 | Gaussian | 1269 |
-| Mandible length/width | TPD | 0.59–2.17 | Gaussian | 1269 |
-| Dispersal PCoA | TPD | -0.47–0.52 | Gaussian | 1269 |
+<table><tr><td>Metric</td><td>Method</td><td>Range</td><td>Distribution</td><td>Sample size</td></tr><tr><td>Taxonomic richness</td><td>Chao1</td><td>2.00–33.00</td><td>Poisson</td><td>178</td></tr><tr><td>Functional richness</td><td>Dendrogram</td><td>0.53–2.32</td><td>Gaussian</td><td>178</td></tr><tr><td>Taxonomic dissimilarity</td><td>Bray-Curtis</td><td>0.04–1.00</td><td>Beta</td><td>178</td></tr><tr><td>Functional dissimilarity</td><td>TPD</td><td>0.09–0.99</td><td>Beta</td><td>178</td></tr><tr><td>Body size</td><td>TPD</td><td>2.97–25.9</td><td>Gaussian</td><td>1269</td></tr><tr><td>Mandible length/width</td><td>TPD</td><td>0.59–2.17</td><td>Gaussian</td><td>1269</td></tr><tr><td>Dispersal PCoA</td><td>TPD</td><td>-0.47–0.52</td><td>Gaussian</td><td>1269</td></tr></table>
 
 analysis of community data collected across long gradients with many zeros using techniques such as RDA that are based on Euclidean distance (Legendre and Gallagher 2001). Because Hellinger’s transformation relativizes species abundances, this transformation also helped account for differences in sampling effort among stands.
 
@@ -267,13 +259,7 @@ Comparing variation in community composition within stands, the DS treatment had
 
 Our analysis of changes in functional trait values among treatments included 1269 TPDs generated from each pitfall sample collected, 1184 in the 50 treatment stands and 85 samples from nine rotation-aged forests. For body length and mandible characteristics, sampled trait values were generally higher in retention patches compared to clear-cuts within-stands, but this relationship was only consistent for mandible characteristics (Table 3). Sampled mandible length to width ratios were lower in the DS treatment compared to other treatments but body length did not differ (Table 3). Sampled body
 
-| Treatment | Functional (Mean) | Taxonomic (Mean) |
-| --- | --- | --- |
-| RA | 0.60 | ~0.73 |
-| UA | ~0.61 | ~0.72 |
-| S | ~0.65 | ~0.75 |
-| SS | ~0.60 | ~0.71 |
-| DS | ~0.43 | ~0.59 |
+<table><tr><td>Treatment</td><td>Functional (Mean)</td><td>Taxonomic (Mean)</td></tr><tr><td>RA</td><td>0.60</td><td>~0.73</td></tr><tr><td>UA</td><td>~0.61</td><td>~0.72</td></tr><tr><td>S</td><td>~0.65</td><td>~0.75</td></tr><tr><td>SS</td><td>~0.60</td><td>~0.71</td></tr><tr><td>DS</td><td>~0.43</td><td>~0.59</td></tr></table>
 
 Fig. 3. Predicted (mean and 95% confidence interval) taxonomic and functional dissimilarity of carabid beetles between retention patches and clear-cuts by retention treatment from beta-distributed mixed effects models. Year and Julian date of sampling were included in each model and for predictions year was set to 2018 and Julian date was set to 136, the earliest value for all sample collection periods. Sampling conducted in western Oregon and Washington retention treatment harvest units, 2017 and 2018. Abbreviations are RA, Riparian Aggregated; UA, Upland Aggregated; S, Split; SS, Split with Snags; and DS, Dispersed with Snags.
 
@@ -281,12 +267,7 @@ lengths, however, were significantly larger in rotation-aged stands than retenti
 
 Table 2. Coefficient estimates (and 95% CIs) from mixed-effects models testing the effect of retention treatment on taxonomic and functional richness (stand-scale) and within-stand community dissimilarity (between patch and clear-cut).
 
-| Response | UA | S | SS | DS |
-| --- | --- | --- | --- | --- |
-| SRich | -0.05 (-0.39, 0.29) | -0.08 (-0.43, 0.26) | 0.00 (-0.34, 0.34) | -0.09 (-0.43, 0.25) |
-| FRich | -0.06 (-0.17, 0.29) | 0.00 (-0.24, 0.22) | 0.04 (-0.19, 0.26) | -0.04 (-0.26, 0.18) |
-| TDissim | -0.08 (-0.54, 0.38) | 0.11 (-0.37, 0.59) | -0.11 (-0.57, 0.35) | -0.66 (-1.12, -0.20) |
-| FDissim | -0.05 (-0.46, 0.56) | 0.21 (-0.31, 0.74) | 0.03 (-0.49, 0.54) | -0.68 (-1.20, -0.16) |
+<table><tr><td>Response</td><td>UA</td><td>S</td><td>SS</td><td>DS</td></tr><tr><td>SRich</td><td>-0.05 (-0.39, 0.29)</td><td>-0.08 (-0.43, 0.26)</td><td>0.00 (-0.34, 0.34)</td><td>-0.09 (-0.43, 0.25)</td></tr><tr><td>FRich</td><td>-0.06 (-0.17, 0.29)</td><td>0.00 (-0.24, 0.22)</td><td>0.04 (-0.19, 0.26)</td><td>-0.04 (-0.26, 0.18)</td></tr><tr><td>TDissim</td><td>-0.08 (-0.54, 0.38)</td><td>0.11 (-0.37, 0.59)</td><td>-0.11 (-0.57, 0.35)</td><td>-0.66 (-1.12, -0.20)</td></tr><tr><td>FDissim</td><td>-0.05 (-0.46, 0.56)</td><td>0.21 (-0.31, 0.74)</td><td>0.03 (-0.49, 0.54)</td><td>-0.68 (-1.20, -0.16)</td></tr></table>
 
 Notes: SRich is the Chao1 species richness estimate, FRich is functional richness calculated from dendrogram length, TDissim is Bray-Curtis dissimilarity, and FDissim is the nonoverlap of the trait probability distributions as calculated by Carmona et al. 2016. Bold indicates treatment effects for which the 95% confidence interval did not overlap zero.
 
@@ -304,14 +285,7 @@ SULTAIRE ET AL.
 
 Table 3. Coefficient estimates (and 95% CI) from mixed-effect models for the effect of retention treatment and cover type (patch/rotation age or clear-cut) on carabid functional traits body size, mandible characteristics, or dispersal.
 
-|  | Body length | Mandible ratio | Dispersal PCoA† |
-| --- | --- | --- | --- |
-| UA | 0.69 (-1.02, 2.40) | -0.05 (-0.11, 0.00) | 0.02 (-0.06, 0.09) |
-| S | 0.78 (-0.96, 2.54) | -0.02 (-0.08, 0.03) | 0.02 (-0.06, 0.09) |
-| SS | -0.52 (-2.24, 1.20) | -0.07 (-0.12, 0.01) | -0.03 (-0.11, 0.05) |
-| DS | -0.56 (-2.28, 1.16) | -0.13 (-0.19, -0.07) | -0.08 (-0.16, -0.01) |
-| RotAge | 2.23 (0.27, 4.20) | 0.01 (-0.06, 0.08) | 0.09 (0.00, 0.18) |
-| CoverType‡ | 1.58 (0.99, 2.17) | 0.07 (0.05, 0.09) | 0.11 (0.08, 0.13) |
+<table><tr><td></td><td>Body length</td><td>Mandible ratio</td><td>Dispersal PCoA†</td></tr><tr><td>UA</td><td>0.69 (-1.02, 2.40)</td><td>-0.05 (-0.11, 0.00)</td><td>0.02 (-0.06, 0.09)</td></tr><tr><td>S</td><td>0.78 (-0.96, 2.54)</td><td>-0.02 (-0.08, 0.03)</td><td>0.02 (-0.06, 0.09)</td></tr><tr><td>SS</td><td>-0.52 (-2.24, 1.20)</td><td>-0.07 (-0.12, 0.01)</td><td>-0.03 (-0.11, 0.05)</td></tr><tr><td>DS</td><td>-0.56 (-2.28, 1.16)</td><td>-0.13 (-0.19, -0.07)</td><td>-0.08 (-0.16, -0.01)</td></tr><tr><td>RotAge</td><td>2.23 (0.27, 4.20)</td><td>0.01 (-0.06, 0.08)</td><td>0.09 (0.00, 0.18)</td></tr><tr><td>CoverType‡</td><td>1.58 (0.99, 2.17)</td><td>0.07 (0.05, 0.09)</td><td>0.11 (0.08, 0.13)</td></tr></table>
 
 Notes: Coefficients are in comparison with the RA treatment. Bold values indicate covariate effects with 95% CIs that do not include 0.
 

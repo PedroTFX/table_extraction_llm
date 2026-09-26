@@ -186,13 +186,7 @@ Conservation Biology Volume 27, No. 3, 2013
 
 Functional Diversity of Beetles
 
-| Variable | CCA1 (Species) | CCA2 (Species) |
-| --- | --- | --- |
-| CO | ~-8.5 | ~0.5 |
-| TD | ~-4.5 | ~-1.0 |
-| DTW | ~1.5 | ~3.5 |
-| DT | ~1.5 | ~4.0 |
-| VT | ~2.0 | ~7.5 |
+<table><tr><td>Variable</td><td>CCA1 (Species)</td><td>CCA2 (Species)</td></tr><tr><td>CO</td><td>~-8.5</td><td>~0.5</td></tr><tr><td>TD</td><td>~-4.5</td><td>~-1.0</td></tr><tr><td>DTW</td><td>~1.5</td><td>~3.5</td></tr><tr><td>DT</td><td>~1.5</td><td>~4.0</td></tr><tr><td>VT</td><td>~2.0</td><td>~7.5</td></tr></table>
 
 Figure 2. Ordination plot resulting from canonical correspondence analysis of saproxylic beetles caught in 1156 flight-interception traps throughout Europe (large plot) and on 69 plots in the Steigerwald (regional scale) (small plot). Circles show the position of saproxylic beetle species (Europe 709 species, regional 284 species) relative to 4 forest-stand variables (VT, occurrence of veteran trees; DW, amount of dead wood; CO, occurrence of conifers; TD, tree diversity). The figure indicates 2 axes: conifer axis (European scale, CCA1, eigenvalue 0.128; regional scale, CCA2, eigenvalue 0.156) and a dead-wood and veteran-tree axis (European scale, CCA2, eigenvalue 0.084; regional scale, CCA1, eigenvalue 0.209).
 
@@ -220,11 +214,7 @@ Gossner et al.
 
 611
 
-| Variable | Mean dead-wood amount \((m^{3}/ha)\) (range) | Value (range) |
-| --- | --- | --- |
-| Body size | 10~400 | 0~25 |
-| Diameter (cm) | 10~400 | 8~85 |
-| Decay stage | 10~400 | 0~3 |
+<table><tr><td>Variable</td><td>Mean dead-wood amount \((m^{3}/ha)\) (range)</td><td>Value (range)</td></tr><tr><td>Body size</td><td>10~400</td><td>0~25</td></tr><tr><td>Diameter (cm)</td><td>10~400</td><td>8~85</td></tr><tr><td>Decay stage</td><td>10~400</td><td>0~3</td></tr></table>
 
 Figure 3. Correlation between traits of saproxylic beetle species and the position of a single species on an axis of the amount of dead wood (measured with high resolution) on the regional scale (Steigerwald) (gray bars, frequency distribution of dead-wood amount). This axis was calculated as the mean value of log-transformed values of dead-wood amount across the plots on which a species occurred. We estimated niche positions for each beetle species along the diameter and decay stage axes (left-hand axis) on the basis of occurrence of species across categories known from literature (diameter: <15 cm, 15–35 cm, >35 cm, and >70 cm; decay stage: 0, alive; 1, freshly dead [1–2 years]; 2, initiated decomposition [loose bark, tough sapwood]; 3, advanced decomposition [soft sapwood, partly tough hardwood]; and 4 [extremely decomposed and moldered]) and weighting scores (0.5, very rarely used; 1, rarely used; 2, commonly used; 3, preferred). For illustration, the scales of the original classification of dead-wood diameter niche and dead-wood decay-stage niche are on the right-hand axis. All species that were sampled on at least 3 plots were included (n = 149 species).
 
@@ -252,20 +242,7 @@ Conservation Biology Volume 27, No. 3, 2013
 
 Functional Diversity of Beetles
 
-| Category | PhyI Div | FuncDiv | Body size | Diameter | Decay | Canopy |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Geography::Latitude | ~2.5 | ~-1.5 | ~-1.5 | ~4.5 | ~2.0 | ~3.5 |
-| Geography::Longitude | ~2.5 | ~3.5 | ~2.0 | ~3.0 | ~3.0 | ~4.5 |
-| Landscape::Forest area | ~-2.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Landscape::Broad-leaf trees | ~2.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~3.0 |
-| Landscape::Urban area | ~-2.5 | ~-3.5 | ~-2.0 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Local climate::Temperature | ~2.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-3.0 |
-| Local climate::Precipitation | ~2.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Forest stand::Protection | ~1.0 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Forest stand::Veteran trees | ~1.0 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Forest stand::Dead wood | ~2.0 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Forest stand::Tree diversity | ~1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
-| Forest stand::Conifers | ~-2.0 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 | ~-1.5 |
+<table><tr><td>Category</td><td>PhyI Div</td><td>FuncDiv</td><td>Body size</td><td>Diameter</td><td>Decay</td><td>Canopy</td></tr><tr><td>Geography::Latitude</td><td>~2.5</td><td>~-1.5</td><td>~-1.5</td><td>~4.5</td><td>~2.0</td><td>~3.5</td></tr><tr><td>Geography::Longitude</td><td>~2.5</td><td>~3.5</td><td>~2.0</td><td>~3.0</td><td>~3.0</td><td>~4.5</td></tr><tr><td>Landscape::Forest area</td><td>~-2.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Landscape::Broad-leaf trees</td><td>~2.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~3.0</td></tr><tr><td>Landscape::Urban area</td><td>~-2.5</td><td>~-3.5</td><td>~-2.0</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Local climate::Temperature</td><td>~2.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-3.0</td></tr><tr><td>Local climate::Precipitation</td><td>~2.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Forest stand::Protection</td><td>~1.0</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Forest stand::Veteran trees</td><td>~1.0</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Forest stand::Dead wood</td><td>~2.0</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Forest stand::Tree diversity</td><td>~1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr><tr><td>Forest stand::Conifers</td><td>~-2.0</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td><td>~-1.5</td></tr></table>
 
 Figure 4. Results of linear regression analyses of effects of predictor variables (geographic, landscape, regional climate [Europe-wide scale only], forest stand variables) on the functional composition of saproxylic beetle assemblages (effect sizes of phylogenetic diversity [PhylDiv] and functional diversity [FuncDiv], and single traits) fitted by the linear model function (lm) (regional scale, white symbols) and a linear mixed-effect model (lmer) with forest stand as a random factor (European scale, grey symbols). Single traits are the mean values and effect sizes of diversity (measured as dispersion with null models with 999 randomizations) of body size and dead-wood niche characteristics (diameter, decay, canopy cover). Analysis on the regional scale is based on the complete data set. Shaded areas indicate range of nonsignificant values (t values: European ±1.998; regional ±1.960). For detailed values, see Supporting Information.
 

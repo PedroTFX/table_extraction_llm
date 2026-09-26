@@ -104,14 +104,7 @@ Wild bees were sampled with pan traps of three different colours slightly modifi
 
 Fig. 1   Sampling point locations within Braunschweig. Green point in the inset map shows the location of Braunschweig within Germany. City border and digital orthophoto (DOP): © GeoBasis-DE / BKG 2023; Terms of use: [http://sg.geodatenzentrum.de/web\_public/nutzungsbedingungen.pdf](http://sg.geodatenzentrum.de/web_public/nutzungsbedingungen.pdf)
 
-| Species Richness | Color |
-| --- | --- |
-| 1 | Yellow |
-| 5 | Yellow |
-| 10 | Orange |
-| 15 | Orange |
-| 20 | Orange |
-| 23 | Red |
+<table><tr><td>Species Richness</td><td>Color</td></tr><tr><td>1</td><td>Yellow</td></tr><tr><td>5</td><td>Yellow</td></tr><tr><td>10</td><td>Orange</td></tr><tr><td>15</td><td>Orange</td></tr><tr><td>20</td><td>Orange</td></tr><tr><td>23</td><td>Red</td></tr></table>
 
 1 3
 
@@ -571,166 +564,21 @@ Monika Weber<sup>1,2,\*</sup>, Tim Diekötter<sup>2</sup>, Anke C. Dietzsch<sup>
 
 **Tab. ESM1.01**: Wild bee species with total abundance and associated traits. Specimens without species identification were not grouped (-).Bumble bees were grouped in their own size class (B). Hylaeus brevicornis and H. gredleri could not be distinguished and were combined to Hyleaus brevicornis agg. Andrena minutula and A. subopaca were combined to Andrena minutula agg. Considering the controversial taxonomic status of some species (Schmidt et al. 2015), it was neither differentiated between Nomada succincta and N. goodeniana nor between Andrena dorsata and A. propinqua.
 
-| Species | Total Abundance | Size group | Foraging habit | Nesting habit |
-| --- | --- | --- | --- | --- |
-| Andrena bicolor | 3 | medium | polylectic | below-ground |
-| Andrena carantonica | 10 | large | polylectic | below-ground |
-| Andrena chrysosceles | 14 | medium | polylectic | below-ground |
-| Andrena cineraria | 75 | large | polylectic | below-ground |
-| Andrena clarkella | 2 | large | oligolectic | below-ground |
-| Andrena dorsata | 10 | medium | polylectic | below-ground |
-| Andrena flavipes | 106 | medium | polylectic | below-ground |
-| Andrena fulva | 29 | medium | polylectic | below-ground |
-| Andrena gravida | 15 | large | polylectic | below-ground |
-| Andrena haemorrhoa | 287 | medium | polylectic | below-ground |
-| Andrena helvola | 52 | medium | polylectic | below-ground |
-| Andrena labialis | 1 | large | oligolectic | below-ground |
-| Andrena minutula agg. | 18 | small | polylectic | below-ground |
-| Andrena mitis | 2 | medium | oligolectic | below-ground |
-| Andrena nigroaenea | 39 | large | polylectic | below-ground |
-| Andrena nitida | 46 | large | polylectic | below-ground |
-| Andrena ovatula | 1 | medium | polylectic | below-ground |
-| Andrena praecox | 4 | medium | oligolectic | below-ground |
-| Andrena strohmella | 8 | small | polylectic | below-ground |
+<table><tr><td>Species</td><td>Total Abundance</td><td>Size group</td><td>Foraging habit</td><td>Nesting habit</td></tr><tr><td>Andrena bicolor</td><td>3</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena carantonica</td><td>10</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena chrysosceles</td><td>14</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena cineraria</td><td>75</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena clarkella</td><td>2</td><td>large</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Andrena dorsata</td><td>10</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena flavipes</td><td>106</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena fulva</td><td>29</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena gravida</td><td>15</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena haemorrhoa</td><td>287</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena helvola</td><td>52</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena labialis</td><td>1</td><td>large</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Andrena minutula agg.</td><td>18</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena mitis</td><td>2</td><td>medium</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Andrena nigroaenea</td><td>39</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena nitida</td><td>46</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena ovatula</td><td>1</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena praecox</td><td>4</td><td>medium</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Andrena strohmella</td><td>8</td><td>small</td><td>polylectic</td><td>below-ground</td></tr></table>
 
 1
 
 <!-- page 2 of 4 -->
 
-| Andrena tibialis | 1 | large | polylectic | below-ground |
-| --- | --- | --- | --- | --- |
-| Andrena vaga | 122 | large | oligolectic | below-ground |
-| Andrena varians | 1 | medium | polylectic | below-ground |
-| Andrena ventralis | 7 | small | oligolectic | below-ground |
-| Andrena sp. | 2 | - | - | - |
-| Anthidium manicatum | 2 | large | polylectic | both |
-| Bombus hortorum | 3 | B | polylectic | both |
-| Bombus hypnorum | 7 | B | polylectic | above-ground |
-| Bombus lapidarius | 9 | B | polylectic | both |
-| Bombus lucorum | 17 | B | polylectic | below-ground |
-| Bombus pascuorum | 44 | B | polylectic | both |
-| Bombus pratorum | 7 | B | polylectic | both |
-| Bombus soroeensis | 2 | B | polylectic | below-ground |
-| Bombus terrestris | 84 | B | polylectic | both |
-| Bombus vestalis | 7 | B | parasitic | parasitic |
-| Chelostoma florisomne | 3 | medium | oligolectic | above-ground |
-| Chelostoma rapunculi | 3 | medium | oligolectic | above-ground |
-| Colletes cunicularius | 7 | large | polylectic | below-ground |
-| Colletes daviesanus | 2 | medium | oligolectic | above-ground |
-| Colletes fodiens | 3 | medium | oligolectic | below-ground |
-| Colletes similis | 1 | small | oligolectic | below-ground |
-| Dasypoda hirtipes | 41 | large | oligolectic | below-ground |
-| Halictus quadricinctus | 4 | large | polylectic | below-ground |
-| Halictus rubicundus | 3 | medium | polylectic | below-ground |
-| Halictus scabiosae | 22 | large | polylectic | below-ground |
-| Halictus subauratus | 3 | small | polylectic | below-ground |
-| Halictus tumulorum | 2 | small | polylectic | below-ground |
-| Hoplitis adunca | 1 | large | oligolectic | above-ground |
-| Hoplitis leucomelana | 1 | small | polylectic | above-ground |
-| Hylaeus angustatus | 1 | small | polylectic | above-ground |
-| Hylaeus brevicornis aggr. | 5 | small | polylectic | above-ground |
-| Hylaeus communis | 28 | small | polylectic | above-ground |
-| Hylaeus confusus | 5 | small | polylectic | above-ground |
-| Hylaeus cornutus | 1 | small | polylectic | above-ground |
-| Hylaeus dilatatus | 5 | small | polylectic | above-ground |
-| Hylaeus hyalinatus | 7 | small | polylectic | above-ground |
-| Hylaeus nigritus | 13 | small | oligolectic | above-ground |
-| Hylaeus paulus | 1 | small | polylectic | above-ground |
-| Hylaeus sp. | 1 | - | - | - |
-| Lasioglossum calceatum | 6 | medium | polylectic | below-ground |
-| Lasioglossum fulvicorne | 26 | small | polylectic | below-ground |
-| Lasioglossum intermedium | 5 | small | polylectic | below-ground |
-| Lasioglossum laticeps | 2 | small | polylectic | below-ground |
-| Lasioglossum leucopus | 1 | small | polylectic | below-ground |
-| Lasioglossum leucozonium | 6 | medium | polylectic | below-ground |
-| Lasioglossum malachurum | 2 | medium | polylectic | below-ground |
+<table><tr><td>Andrena tibialis</td><td>1</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena vaga</td><td>122</td><td>large</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Andrena varians</td><td>1</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Andrena ventralis</td><td>7</td><td>small</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Andrena sp.</td><td>2</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Anthidium manicatum</td><td>2</td><td>large</td><td>polylectic</td><td>both</td></tr><tr><td>Bombus hortorum</td><td>3</td><td>B</td><td>polylectic</td><td>both</td></tr><tr><td>Bombus hypnorum</td><td>7</td><td>B</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Bombus lapidarius</td><td>9</td><td>B</td><td>polylectic</td><td>both</td></tr><tr><td>Bombus lucorum</td><td>17</td><td>B</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Bombus pascuorum</td><td>44</td><td>B</td><td>polylectic</td><td>both</td></tr><tr><td>Bombus pratorum</td><td>7</td><td>B</td><td>polylectic</td><td>both</td></tr><tr><td>Bombus soroeensis</td><td>2</td><td>B</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Bombus terrestris</td><td>84</td><td>B</td><td>polylectic</td><td>both</td></tr><tr><td>Bombus vestalis</td><td>7</td><td>B</td><td>parasitic</td><td>parasitic</td></tr><tr><td>Chelostoma florisomne</td><td>3</td><td>medium</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>Chelostoma rapunculi</td><td>3</td><td>medium</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>Colletes cunicularius</td><td>7</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Colletes daviesanus</td><td>2</td><td>medium</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>Colletes fodiens</td><td>3</td><td>medium</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Colletes similis</td><td>1</td><td>small</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Dasypoda hirtipes</td><td>41</td><td>large</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>Halictus quadricinctus</td><td>4</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Halictus rubicundus</td><td>3</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Halictus scabiosae</td><td>22</td><td>large</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Halictus subauratus</td><td>3</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Halictus tumulorum</td><td>2</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Hoplitis adunca</td><td>1</td><td>large</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>Hoplitis leucomelana</td><td>1</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus angustatus</td><td>1</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus brevicornis aggr.</td><td>5</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus communis</td><td>28</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus confusus</td><td>5</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus cornutus</td><td>1</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus dilatatus</td><td>5</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus hyalinatus</td><td>7</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus nigritus</td><td>13</td><td>small</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>Hylaeus paulus</td><td>1</td><td>small</td><td>polylectic</td><td>above-ground</td></tr><tr><td>Hylaeus sp.</td><td>1</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Lasioglossum calceatum</td><td>6</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Lasioglossum fulvicorne</td><td>26</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Lasioglossum intermedium</td><td>5</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Lasioglossum laticeps</td><td>2</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Lasioglossum leucopus</td><td>1</td><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Lasioglossum leucozonium</td><td>6</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>Lasioglossum malachurum</td><td>2</td><td>medium</td><td>polylectic</td><td>below-ground</td></tr></table>
 
 2
 
 <!-- page 3 of 4 -->
 
-| Lasioglossum minutissimum | 7 |
-| --- | --- |
-| Lasioglossum monstrificum | 5 |
-| Lasioglossum morio | 22 |
-| Lasioglossum nitidiusculum | 3 |
-| Lasioglossum nitidulum | 3 |
-| Lasioglossum pauxillum | 76 |
-| Lasioglossum quadrinotatum | 2 |
-| Lasioglossum rufitarse | 1 |
-| Lasioglossum semilucens | 1 |
-| Lasioglossum sexnotatum | 3 |
-| Lasioglossum sexstrigatum | 5 |
-| Lasioglossum villosulum | 6 |
-| Lasioglossum sp. | 2 |
-| Macropis fulvipes | 1 |
-| Megachile ericetorum | 2 |
-| Megachile ligniseca | 1 |
-| Megachile maritima aff. | 2 |
-| Megachile versicolor | 3 |
-| Megachile willughbiella | 1 |
-| Nomada alboguttata | 2 |
-| Nomada fabriciana | 10 |
-| Nomada ferruginata | 2 |
-| Nomada flava | 1 |
-| Nomada flavoguttata | 1 |
-| Nomada fucata | 4 |
-| Nomada lathburiana | 7 |
-| Nomada panzeri | 13 |
-| Nomada ruficornis | 6 |
-| Nomada succincta | 1 |
-| Osmia bicolor | 17 |
-| Osmia bicornis | 117 |
-| Osmia brevicornis | 1 |
-| Osmia cornuta | 2 |
-| Osmia spinulosa | 2 |
-| Panurgus banksianus | 1 |
-| Panurgus calcaratus | 1 |
-| Sphecodes albilabris | 1 |
-| Sphecodes crassus | 3 |
-| Sphecodes ephippius | 1 |
-| Sphecodes puncticeps | 2 |
+<table><tr><td>Lasioglossum minutissimum</td><td>7</td></tr><tr><td>Lasioglossum monstrificum</td><td>5</td></tr><tr><td>Lasioglossum morio</td><td>22</td></tr><tr><td>Lasioglossum nitidiusculum</td><td>3</td></tr><tr><td>Lasioglossum nitidulum</td><td>3</td></tr><tr><td>Lasioglossum pauxillum</td><td>76</td></tr><tr><td>Lasioglossum quadrinotatum</td><td>2</td></tr><tr><td>Lasioglossum rufitarse</td><td>1</td></tr><tr><td>Lasioglossum semilucens</td><td>1</td></tr><tr><td>Lasioglossum sexnotatum</td><td>3</td></tr><tr><td>Lasioglossum sexstrigatum</td><td>5</td></tr><tr><td>Lasioglossum villosulum</td><td>6</td></tr><tr><td>Lasioglossum sp.</td><td>2</td></tr><tr><td>Macropis fulvipes</td><td>1</td></tr><tr><td>Megachile ericetorum</td><td>2</td></tr><tr><td>Megachile ligniseca</td><td>1</td></tr><tr><td>Megachile maritima aff.</td><td>2</td></tr><tr><td>Megachile versicolor</td><td>3</td></tr><tr><td>Megachile willughbiella</td><td>1</td></tr><tr><td>Nomada alboguttata</td><td>2</td></tr><tr><td>Nomada fabriciana</td><td>10</td></tr><tr><td>Nomada ferruginata</td><td>2</td></tr><tr><td>Nomada flava</td><td>1</td></tr><tr><td>Nomada flavoguttata</td><td>1</td></tr><tr><td>Nomada fucata</td><td>4</td></tr><tr><td>Nomada lathburiana</td><td>7</td></tr><tr><td>Nomada panzeri</td><td>13</td></tr><tr><td>Nomada ruficornis</td><td>6</td></tr><tr><td>Nomada succincta</td><td>1</td></tr><tr><td>Osmia bicolor</td><td>17</td></tr><tr><td>Osmia bicornis</td><td>117</td></tr><tr><td>Osmia brevicornis</td><td>1</td></tr><tr><td>Osmia cornuta</td><td>2</td></tr><tr><td>Osmia spinulosa</td><td>2</td></tr><tr><td>Panurgus banksianus</td><td>1</td></tr><tr><td>Panurgus calcaratus</td><td>1</td></tr><tr><td>Sphecodes albilabris</td><td>1</td></tr><tr><td>Sphecodes crassus</td><td>3</td></tr><tr><td>Sphecodes ephippius</td><td>1</td></tr><tr><td>Sphecodes puncticeps</td><td>2</td></tr></table>
 
-| small | polylectic | below-ground |
-| --- | --- | --- |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| medium | polylectic | below-ground |
-| small | polylectic | below-ground |
-| small | polylectic | below-ground |
-| - | - | - |
-| medium | oligolectic | below-ground |
-| large | oligolectic | above-ground |
-| large | polylectic | above-ground |
-| large | - | - |
-| large | polylectic | above-ground |
-| large | polylectic | both |
-| medium | parasitic | parasitic |
-| medium | parasitic | parasitic |
-| medium | parasitic | parasitic |
-| medium | parasitic | parasitic |
-| small | parasitic | parasitic |
-| medium | parasitic | parasitic |
-| large | parasitic | parasitic |
-| medium | parasitic | parasitic |
-| medium | parasitic | parasitic |
-| large | parasitic | parasitic |
-| large | polylectic | above-ground |
-| medium | polylectic | above-ground |
-| medium | oligolectic | above-ground |
-| large | polylectic | above-ground |
-| small | oligolectic | above-ground |
-| large | oligolectic | below-ground |
-| small | oligolectic | below-ground |
-| large | parasitic | parasitic |
-| small | parasitic | parasitic |
-| small | parasitic | parasitic |
-| small | parasitic | parasitic |
+<table><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>medium</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>small</td><td>polylectic</td><td>below-ground</td></tr><tr><td>-</td><td>-</td><td>-</td></tr><tr><td>medium</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>large</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>large</td><td>polylectic</td><td>above-ground</td></tr><tr><td>large</td><td>-</td><td>-</td></tr><tr><td>large</td><td>polylectic</td><td>above-ground</td></tr><tr><td>large</td><td>polylectic</td><td>both</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>small</td><td>parasitic</td><td>parasitic</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>large</td><td>parasitic</td><td>parasitic</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>medium</td><td>parasitic</td><td>parasitic</td></tr><tr><td>large</td><td>parasitic</td><td>parasitic</td></tr><tr><td>large</td><td>polylectic</td><td>above-ground</td></tr><tr><td>medium</td><td>polylectic</td><td>above-ground</td></tr><tr><td>medium</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>large</td><td>polylectic</td><td>above-ground</td></tr><tr><td>small</td><td>oligolectic</td><td>above-ground</td></tr><tr><td>large</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>small</td><td>oligolectic</td><td>below-ground</td></tr><tr><td>large</td><td>parasitic</td><td>parasitic</td></tr><tr><td>small</td><td>parasitic</td><td>parasitic</td></tr><tr><td>small</td><td>parasitic</td><td>parasitic</td></tr><tr><td>small</td><td>parasitic</td><td>parasitic</td></tr></table>
 
 3
 

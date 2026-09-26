@@ -85,13 +85,7 @@ We chose five vertebrate, five invertebrate, and five plant taxa. Selection of g
 
 Table 1 Traits studied, definition, examples, and hypotheses.
 
-| Trait | Definition | Examples of traits | Hypothesis | References |
-| --- | --- | --- | --- | --- |
-| Body size | Typical size of an adult organism. | body mass, body length, plant height, plant mass, shell length | Larger organisms are more vulnerable because 1) they tend to have lower population densities, 2) require more resources; and 3) slower life cycles. | (Purvis et al., 2000a) |
-| Offspring size | Typical size of an offspring. | size at birth, egg size, seed size | Organisms with larger offspring than expected by body size are more vulnerable to extinction because offspring size is often correlated with lower fecundity and slower life cycles with less capacity to adapt to new conditions. | (Purvis et al., 2000a) |
-| Fecundity | Reproductive output. | Number of offspring per reproductive event, number of reproductive events in a year | Species with larger fecundities can compensate for the effects of higher mortality rates, particularly in the face of a changing environment. | (Purvis et al., 2000a) |
-| Generation length | Typical length of the life cycle, from birth until reproduction. | Generation length, age at maturation, max longevity | Species with slow life cycles are more vulnerable to extinction, due to their weaker capacity to recover normal population numbers after a disturbance. | (Purvis et al., 2000a) |
-| Diet breadth | Degree of narrowness of diet or of substrate used | Number of food types ingested, diversity of prey, breadth of soil conditions | Species with narrow diet breadths are more vulnerable because they are less able to shift diets when resource abundance fluctuates or decreases. | (Di Marco et al., 2015; González-Suárez et al., 2013) |
+<table><tr><td>Trait</td><td>Definition</td><td>Examples of traits</td><td>Hypothesis</td><td>References</td></tr><tr><td>Body size</td><td>Typical size of an adult organism.</td><td>body mass, body length, plant height, plant mass, shell length</td><td>Larger organisms are more vulnerable because 1) they tend to have lower population densities, 2) require more resources; and 3) slower life cycles.</td><td>(Purvis et al., 2000a)</td></tr><tr><td>Offspring size</td><td>Typical size of an offspring.</td><td>size at birth, egg size, seed size</td><td>Organisms with larger offspring than expected by body size are more vulnerable to extinction because offspring size is often correlated with lower fecundity and slower life cycles with less capacity to adapt to new conditions.</td><td>(Purvis et al., 2000a)</td></tr><tr><td>Fecundity</td><td>Reproductive output.</td><td>Number of offspring per reproductive event, number of reproductive events in a year</td><td>Species with larger fecundities can compensate for the effects of higher mortality rates, particularly in the face of a changing environment.</td><td>(Purvis et al., 2000a)</td></tr><tr><td>Generation length</td><td>Typical length of the life cycle, from birth until reproduction.</td><td>Generation length, age at maturation, max longevity</td><td>Species with slow life cycles are more vulnerable to extinction, due to their weaker capacity to recover normal population numbers after a disturbance.</td><td>(Purvis et al., 2000a)</td></tr><tr><td>Diet breadth</td><td>Degree of narrowness of diet or of substrate used</td><td>Number of food types ingested, diversity of prey, breadth of soil conditions</td><td>Species with narrow diet breadths are more vulnerable because they are less able to shift diets when resource abundance fluctuates or decreases.</td><td>(Di Marco et al., 2015; González-Suárez et al., 2013)</td></tr></table>
 
 (continued on next page)
 
@@ -105,18 +99,11 @@ Biological Conservation 274 (2022) 109738
 
 Table 1 (continued )
 
-| Trait | Definition | Examples of traits | Hypothesis | References |
-| --- | --- | --- | --- | --- |
-| Trophic level | Trophic position | Herbivore/ omnivore/ carnivore | Organisms at higher trophic levels are more vulnerable because biomass available is reduced. Furthermore, they are affected by disturbance at lower trophic levels. | (Purvis et al., 2000a) |
-| Dispersal ability | Capacity to disperse | Migrant? or not, dispersal speed, dispersal distance | Organisms with low dispersal ability are more vulnerable because they do not have the mechanisms to find suitable habitat around a changing environment. | (Bartonova et al., 2014; Benscoter et al., 2013; Parlato et al., 2015; Saar et al., 2012) |
-| Microhabitat | Typical vertical stratum occupied in a habitat. | Nest position, foraging stratum, vertical position in the water column | Organisms that occupy lower strata in a habitat are more likely to face less extinction risk because they are less dependent on other species providing them verticality (like trees, bushes, etc.). On the other hand, species living on the ground may face higher predation pressure. Benthic organisms may be more vulnerable than those in the water column due to loss of good quality substratum and benthic vegetation. | (Giam et al., 2011; Johnson and Isaac, 2009) |
-| Habitat breadth | Range of habitat types occupied. | Number of habitat types | Species capable of occupying a broad range of habitats are less likely to become extinct, because they may shift | (Böhm et al., 2016) |
+<table><tr><td>Trait</td><td>Definition</td><td>Examples of traits</td><td>Hypothesis</td><td>References</td></tr><tr><td>Trophic level</td><td>Trophic position</td><td>Herbivore/ omnivore/ carnivore</td><td>Organisms at higher trophic levels are more vulnerable because biomass available is reduced. Furthermore, they are affected by disturbance at lower trophic levels.</td><td>(Purvis et al., 2000a)</td></tr><tr><td>Dispersal ability</td><td>Capacity to disperse</td><td>Migrant? or not, dispersal speed, dispersal distance</td><td>Organisms with low dispersal ability are more vulnerable because they do not have the mechanisms to find suitable habitat around a changing environment.</td><td>(Bartonova et al., 2014; Benscoter et al., 2013; Parlato et al., 2015; Saar et al., 2012)</td></tr><tr><td>Microhabitat</td><td>Typical vertical stratum occupied in a habitat.</td><td>Nest position, foraging stratum, vertical position in the water column</td><td>Organisms that occupy lower strata in a habitat are more likely to face less extinction risk because they are less dependent on other species providing them verticality (like trees, bushes, etc.). On the other hand, species living on the ground may face higher predation pressure. Benthic organisms may be more vulnerable than those in the water column due to loss of good quality substratum and benthic vegetation.</td><td>(Giam et al., 2011; Johnson and Isaac, 2009)</td></tr><tr><td>Habitat breadth</td><td>Range of habitat types occupied.</td><td>Number of habitat types</td><td>Species capable of occupying a broad range of habitats are less likely to become extinct, because they may shift</td><td>(Böhm et al., 2016)</td></tr></table>
 
 Table 1 (continued )
 
-| Trait | Definition | Examples of traits | Hypothesis | References |
-| --- | --- | --- | --- | --- |
-| Altitudinal range | Range of altitude levels occupied. | Vertical distance between lower and higher limits | preferential habitat when one is reduced.Species with broader altitudinal ranges are able to adapt to different altitudinal strata and shift or survive in different altitudes when conditions change. | (Keane et al., 2005) |
+<table><tr><td>Trait</td><td>Definition</td><td>Examples of traits</td><td>Hypothesis</td><td>References</td></tr><tr><td>Altitudinal range</td><td>Range of altitude levels occupied.</td><td>Vertical distance between lower and higher limits</td><td>preferential habitat when one is reduced.Species with broader altitudinal ranges are able to adapt to different altitudinal strata and shift or survive in different altitudes when conditions change.</td><td>(Keane et al., 2005)</td></tr></table>
 
 comprised “Dragonflies” (Order: Odonata, including damselflies), “Butterflies” (Suborder: Rhopalocera), “Grasshoppers” (Order: Orthoptera), “Spiders” (Order: Araneae), and land “Snails” (Class: Gastropoda). In the selection of plants we followed a recent baseline study (Brummitt et al., 2015), which includes species sampled from the five main phylogenetic branches of land plants (embryophytes): “bryophytes”, excluding hornworts (Divisions: Bryophyta and Marchantiophyta), “ferns” (Classes: Lycopodiopsida, Polypodiopsida), “Gymnosperms” (Classes: Pinopsida, Cycadopsida, Gnetopsida), “Monocots” (Class: Liliopsida), and finally the “Legumes” (Order: Fabales). “Legumes” served as a representative of the most diverse group of plants, eudicots, because they are the single family that best reflects both plant functional diversity as well as species richness of this large plant group (Nic Lughadha et al., 2005; Brummitt et al., 2015), with species reaching forest canopy heights as well as many small, herbaceous species.
 
@@ -365,75 +352,23 @@ Biological Conservation 274 (2022) 109738
 
 Sheets
 
-| log_rules | Used within the R script to manage log transformations |
-| --- | --- |
-| Dataset | The dataset |
-| Dataset | The dataset |
+<table><tr><td>log_rules</td><td>Used within the R script to manage log transformations</td></tr><tr><td>Dataset</td><td>The dataset</td></tr><tr><td>Dataset</td><td>The dataset</td></tr></table>
 
-| Columns |  |
-| --- | --- |
-| IUCNName | Name of the species following the IUCN |
-| Status | IUCN conservation status |
-| CRITERIA | IUCN criteria in which the IUCN assessment was based |
-| YEAR_PUB | YEar in which the IUCN assessment was published |
-| Realm | Biogeographical realm |
-| IUCN_RAW_THREATS | Threats for the species listed on the IUCN, including sub-threats |
-| IUCN_THREATS | Threats for the species listed on the IUCN, including sub-threats |
-| IUCN_THREATS_CATEG | Threats for the species listed on the IUCN, not including sub-threats |
-| IUCN_N_THREATS | Number of threat categories |
+<table><tr><td>Columns</td><td></td></tr><tr><td>IUCNName</td><td>Name of the species following the IUCN</td></tr><tr><td>Status</td><td>IUCN conservation status</td></tr><tr><td>CRITERIA</td><td>IUCN criteria in which the IUCN assessment was based</td></tr><tr><td>YEAR_PUB</td><td>YEar in which the IUCN assessment was published</td></tr><tr><td>Realm</td><td>Biogeographical realm</td></tr><tr><td>IUCN_RAW_THREATS</td><td>Threats for the species listed on the IUCN, including sub-threats</td></tr><tr><td>IUCN_THREATS</td><td>Threats for the species listed on the IUCN, including sub-threats</td></tr><tr><td>IUCN_THREATS_CATEG</td><td>Threats for the species listed on the IUCN, not including sub-threats</td></tr><tr><td>IUCN_N_THREATS</td><td>Number of threat categories</td></tr></table>
 
-| 13 traits: |
-| --- |
-| BODY SIZE |
-| OFFSPRING SIZE |
-| FECUNDITY |
-| GENERATION LENGTH |
-| DIET BREADTH |
-| TROPHIC LEVEL |
-| DISPERSAL_ABILITY |
-| MICROHABITAT |
-| ALTITUDE_MIN |
-| ALTITUDE_MAX |
-| GEOGRAPHICAL RANGE SIZE |
+<table><tr><td>13 traits:</td></tr><tr><td>BODY SIZE</td></tr><tr><td>OFFSPRING SIZE</td></tr><tr><td>FECUNDITY</td></tr><tr><td>GENERATION LENGTH</td></tr><tr><td>DIET BREADTH</td></tr><tr><td>TROPHIC LEVEL</td></tr><tr><td>DISPERSAL_ABILITY</td></tr><tr><td>MICROHABITAT</td></tr><tr><td>ALTITUDE_MIN</td></tr><tr><td>ALTITUDE_MAX</td></tr><tr><td>GEOGRAPHICAL RANGE SIZE</td></tr></table>
 
-| Each trait has 6 subcolumns: |  |
-| --- | --- |
-| Subcolumns |  |
-| _FINAL | trait value |
-| proxy | proxy for the trait used (body length, body mass as proxy of body size, etc) |
-| unit/levels | e.g. grams, mm |
-| resolution | whether the trait value is retrieved from species genus, or family level. |
+<table><tr><td>Each trait has 6 subcolumns:</td><td></td></tr><tr><td>Subcolumns</td><td></td></tr><tr><td>_FINAL</td><td>trait value</td></tr><tr><td>proxy</td><td>proxy for the trait used (body length, body mass as proxy of body size, etc)</td></tr><tr><td>unit/levels</td><td>e.g. grams, mm</td></tr><tr><td>resolution</td><td>whether the trait value is retrieved from species genus, or family level.</td></tr></table>
 
 dHFP
 
-| comments | extra information |
-| --- | --- |
-| references | where the trait value was obtained |
+<table><tr><td>comments</td><td>extra information</td></tr><tr><td>references</td><td>where the trait value was obtained</td></tr></table>
 
 <!-- page 2 of 4 -->
 
 ## log\_rules
 
-| Trait | Mammals | Birds | Reptiles | Amphibians | Fishes | Dragonflies | Butterflies | Grasshoppers | Spiders | Snails | Bryophytes | Ferns | Gymnosperms | Monocots | Legumes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BODY_SIZE | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| OFFSPRING_SIZE | True | True | True | True | True | True | True | False | False | True | True | False | True | True | True |
-| RELATIVE_OFFSPRING_SIZE | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| FECUNDITY | True | True | True | True | False | False | False | False | False | False | False | False | False | False | False |
-| GENERATION_LENGTH | True | True | True | True | True | False | False | False | False | False | False | False | True | True | True |
-| DIET_BREADTH | True | True | False | False | False | False | False | False | False | True | False | False | False | False | False |
-| TROPHIC_LEVEL | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| MICROHABITAT | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| DISPERSAL_ABILITY | True | True | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| HABITAT_BREADTH | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| HABITAT_BREADTH_RESIDS | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| ALTITUDINAL_RANGE | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| RELATIVE_ALTITUDINAL_RANGE | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| GEOGRAPHICAL_RANGE_SIZE | True | True | True | True | True | True | True | True | True | True | True | True | True | True | True |
-| HFP2009 | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| dHFP | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| HUMAN_FOOTPRINT | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
-| HABITAT_CONVERSION | False | False | False | False | False | False | False | False | False | False | False | False | False | False | False |
+<table><tr><td>Trait</td><td>Mammals</td><td>Birds</td><td>Reptiles</td><td>Amphibians</td><td>Fishes</td><td>Dragonflies</td><td>Butterflies</td><td>Grasshoppers</td><td>Spiders</td><td>Snails</td><td>Bryophytes</td><td>Ferns</td><td>Gymnosperms</td><td>Monocots</td><td>Legumes</td></tr><tr><td>BODY_SIZE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>OFFSPRING_SIZE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td><td>True</td><td>True</td><td>False</td><td>True</td><td>True</td><td>True</td></tr><tr><td>RELATIVE_OFFSPRING_SIZE</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>FECUNDITY</td><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>GENERATION_LENGTH</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>True</td><td>True</td><td>True</td></tr><tr><td>DIET_BREADTH</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>TROPHIC_LEVEL</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>MICROHABITAT</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>DISPERSAL_ABILITY</td><td>True</td><td>True</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>HABITAT_BREADTH</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>HABITAT_BREADTH_RESIDS</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>ALTITUDINAL_RANGE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>RELATIVE_ALTITUDINAL_RANGE</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>GEOGRAPHICAL_RANGE_SIZE</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td><td>True</td></tr><tr><td>HFP2009</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>dHFP</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>HUMAN_FOOTPRINT</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr><tr><td>HABITAT_CONVERSION</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td><td>False</td></tr></table>
 
 <!-- page 3 of 4 -->
 
@@ -101683,11 +101618,4 @@ dHFP
 
 ## Change\_log
 
-| 20210910.0 | added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals |
-| --- | --- |
-| 20210929.0 | added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds |
-| 20211005.0 | excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator |
-| 20211130.0 | changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE |
-| 20220503.0 | Replaced assessments that in the 2021 IUCN moved from threatened -> LC or LC -> threatened: Turdus ludoviciae -> Cyanochen cyanoptera; Aspidoscelis inornata -> Pseudemys gorzugi; Enteromius dialonensis -> Alcolapia grahami; Boesemania microlepis -> Ompok weberi; Elaphoglossum kivuense -> Trachypteris drakeana; Asplenium majoricum -> Asplenium aureum. Added an extra bird in "extra_bird" in case needed |
-| 20220503.0 | Replaced all blank cells with NAs |
-| 20220730.0 | Removed old sheets, cleaning |
+<table><tr><td>20210910.0</td><td>added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals</td></tr><tr><td>20210929.0</td><td>added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds</td></tr><tr><td>20211005.0</td><td>excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator</td></tr><tr><td>20211130.0</td><td>changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE</td></tr><tr><td>20220503.0</td><td>Replaced assessments that in the 2021 IUCN moved from threatened -&gt; LC or LC -&gt; threatened: Turdus ludoviciae -&gt; Cyanochen cyanoptera; Aspidoscelis inornata -&gt; Pseudemys gorzugi; Enteromius dialonensis -&gt; Alcolapia grahami; Boesemania microlepis -&gt; Ompok weberi; Elaphoglossum kivuense -&gt; Trachypteris drakeana; Asplenium majoricum -&gt; Asplenium aureum. Added an extra bird in "extra_bird" in case needed</td></tr><tr><td>20220503.0</td><td>Replaced all blank cells with NAs</td></tr><tr><td>20220730.0</td><td>Removed old sheets, cleaning</td></tr></table>

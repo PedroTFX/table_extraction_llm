@@ -161,14 +161,7 @@ E. Törok ¨ et al.
 
 Global Ecology and Conservation 33 (2022) e01988
 
-| Variable | X-axis (approx) | Y-axis (approx) |
-| --- | --- | --- |
-| Large fragment size | ~-0.25 | ~0.6 |
-| Eusocial habit | ~0.75 | ~0.4 |
-| Large body size | ~0.85 | ~-0.3 |
-| Connectivity | ~0.9 | ~-0.3 |
-| Abundance of flowers | ~-0.4 | ~-0.6 |
-| Number of flowering species | ~-0.4 | ~-0.6 |
+<table><tr><td>Variable</td><td>X-axis (approx)</td><td>Y-axis (approx)</td></tr><tr><td>Large fragment size</td><td>~-0.25</td><td>~0.6</td></tr><tr><td>Eusocial habit</td><td>~0.75</td><td>~0.4</td></tr><tr><td>Large body size</td><td>~0.85</td><td>~-0.3</td></tr><tr><td>Connectivity</td><td>~0.9</td><td>~-0.3</td></tr><tr><td>Abundance of flowers</td><td>~-0.4</td><td>~-0.6</td></tr><tr><td>Number of flowering species</td><td>~-0.4</td><td>~-0.6</td></tr></table>
 
 Fig. 1. Ordination plot of environmental variables (yellow points) and wild bee species traits (arrows) along the two first axes of the RLQ analysis. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)
 
@@ -192,15 +185,7 @@ E. T¨orok ¨ et al.
 
 Global Ecology and Conservation 33 (2022) e01988
 
-| Variable | X-axis (approx) | Y-axis (approx) |
-| --- | --- | --- |
-| Connectivity | ~0.3 | ~-0.1 |
-| Eusocial habit | ~0.6 | ~0.6 |
-| Number of flowering species | ~0.2 | ~-0.6 |
-| Abundance of flowers | ~-0.4 | ~-0.8 |
-| Large fragment size | ~-0.7 | ~0.1 |
-| Carnivore prey | ~-0.5 | ~-0.3 |
-| Woody nester | ~-0.4 | ~0.5 |
+<table><tr><td>Variable</td><td>X-axis (approx)</td><td>Y-axis (approx)</td></tr><tr><td>Connectivity</td><td>~0.3</td><td>~-0.1</td></tr><tr><td>Eusocial habit</td><td>~0.6</td><td>~0.6</td></tr><tr><td>Number of flowering species</td><td>~0.2</td><td>~-0.6</td></tr><tr><td>Abundance of flowers</td><td>~-0.4</td><td>~-0.8</td></tr><tr><td>Large fragment size</td><td>~-0.7</td><td>~0.1</td></tr><tr><td>Carnivore prey</td><td>~-0.5</td><td>~-0.3</td></tr><tr><td>Woody nester</td><td>~-0.4</td><td>~0.5</td></tr></table>
 
 Fig. 2. Ordination plot of environmental variables (yellow points) and wasp species traits (arrows) along the two first axes of the RLQ analysis. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)
 

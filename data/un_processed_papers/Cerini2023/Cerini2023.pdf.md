@@ -73,11 +73,7 @@ functional traits, we bring new potential information, but additional complicati
 
 In a simplified view, trait distance and co-occurrence should display a negative relationship if the traits drive primarily environmental filtering, and a positive one if the traits drive patterns of competitive exclusion (Figure 1). Clearly, in the real world (and considering multiple traits), the two processes coexist, making it hard to find a clear association. For instance, Elo et al. (2021) found no relationship between functional species similarity and negative co-occurrence on a large set of stream macroinvertebrate communities. Similarly, Burner et al. (2021) found that the difference in species traits was not a consistent predictor of the spatial associations for forest beetles. Nevertheless, it is important to consider that competitive dynamics (and species interactions in general) might be linked to functional traits in a more complex fashion than that provided by trait similarity.
 
-| Co-occurrence | Biotic interactions (Functional distance) | Environmental filtering (Functional distance) |
-| --- | --- | --- |
-| -1.0 | 0.0 | 1.0 |
-| 0.0 | 0.5 | 0.5 |
-| 1.0 | 1.0 | 0.0 |
+<table><tr><td>Co-occurrence</td><td>Biotic interactions (Functional distance)</td><td>Environmental filtering (Functional distance)</td></tr><tr><td>-1.0</td><td>0.0</td><td>1.0</td></tr><tr><td>0.0</td><td>0.5</td><td>0.5</td></tr><tr><td>1.0</td><td>1.0</td><td>0.0</td></tr></table>
 
 F I G U R E 1 Theoretical relationships between species distance in functional traits and degree of co-occurrence. In a situation where functional traits drive environmental filtering, we should expect a negative relationship between distance and co-occurrence (green line); in the opposite scenario, where functional traits drive patterns of competitive exclusion, we should expect a positive relationship between distance and co-occurrence (blue line).
 
@@ -181,9 +177,7 @@ Overall, we found no relationship between species co-occurrence and trait dissim
 
 Nevertheless, our machine learning approach revealed a significant potential for functional traits to predict co-occurrence patterns. Specifically, model I, that
 
-| Co-occurrence (range) | Functional distance (range) | Counts |
-| --- | --- | --- |
-| -0.8~0.9 | 0.0~1.0 | 1~27 |
+<table><tr><td>Co-occurrence (range)</td><td>Functional distance (range)</td><td>Counts</td></tr><tr><td>-0.8~0.9</td><td>0.0~1.0</td><td>1~27</td></tr></table>
 
 F I G U R E 3 Density color-coded hexplot showing the regression $( R ^ { 2 } = 0 . 0 0 3 )$ between Hierarchical Modeling of Species Communities residuals co-occurrence values and species trait dissimilarity, calculated as the Mahalanobis distance, between all pair of species in the dataset.
 
@@ -195,16 +189,7 @@ F I G U R E 3 Density color-coded hexplot showing the regression $( R ^ { 2 } = 
 
 CERINI ET AL.
 
-| Slope (Bin) | Frequency |
-| --- | --- |
-| -0.35~-0.325 | 1 |
-| -0.275~-0.25 | 2 |
-| -0.25~-0.225 | 2 |
-| -0.225~-0.2 | 2 |
-| -0.175~-0.15 | 3 |
-| -0.15~-0.125 | 8 |
-| -0.125~-0.1 | 4 |
-| -0.1~0.075 | 1 |
+<table><tr><td>Slope (Bin)</td><td>Frequency</td></tr><tr><td>-0.35~-0.325</td><td>1</td></tr><tr><td>-0.275~-0.25</td><td>2</td></tr><tr><td>-0.25~-0.225</td><td>2</td></tr><tr><td>-0.225~-0.2</td><td>2</td></tr><tr><td>-0.175~-0.15</td><td>3</td></tr><tr><td>-0.15~-0.125</td><td>8</td></tr><tr><td>-0.125~-0.1</td><td>4</td></tr><tr><td>-0.1~0.075</td><td>1</td></tr></table>
 
 F I G U R E 4 Frequency histograms of the slopes of the regressions between pairwise species co-occurrences and individual traits distance.
 
@@ -218,9 +203,7 @@ Among the considered traits, the adult phase morphological parameters related to
 
 Environmental features and interspecific interactions are assumed to be the main drivers of species distribution and abundance (Chesson, 2000), often interacting in a
 
-| Predicted Co-occurrence (range) | Observed Co-occurrence (range) |
-| --- | --- |
-| -1.0~1.0 | -1.0~1.0 |
+<table><tr><td>Predicted Co-occurrence (range)</td><td>Observed Co-occurrence (range)</td></tr><tr><td>-1.0~1.0</td><td>-1.0~1.0</td></tr></table>
 
 F I G U R E 5 Observed residual co-occurrence from the Hierarchical Modeling of Species Communities analysis for all Odonata species pairs versus the predictions obtained from a Random Forest regressor modeling species co-occurrence based on species functional traits. The plot includes comparisons between observations and predictions for 100 models, each trained on a random sample including 80% of the available observations and tested on the remaining 20% (thus, each point in the plot correspond to test observations, not to training data). The red line is the line of equity.
 

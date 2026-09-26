@@ -214,24 +214,11 @@ CAJAIBA ET AL.
 
 (a)
 
-| Category | X (range) | Y (range) |
-| --- | --- | --- |
-| Forest specialists | -0.15~-0.08 | 0.02~0.12 |
-| Forest generalists | -0.08~0.02 | -0.12~-0.02 |
-| Ecosystem generalists | -0.08~0.12 | -0.12~0.05 |
-| T | 0.05~0.14 | 0.02~0.13 |
-| Open specialists | 0.06~0.14 | 0.02~0.13 |
-| PES | 0.08~0.17 | -0.12~0.05 |
+<table><tr><td>Category</td><td>X (range)</td><td>Y (range)</td></tr><tr><td>Forest specialists</td><td>-0.15~-0.08</td><td>0.02~0.12</td></tr><tr><td>Forest generalists</td><td>-0.08~0.02</td><td>-0.12~-0.02</td></tr><tr><td>Ecosystem generalists</td><td>-0.08~0.12</td><td>-0.12~0.05</td></tr><tr><td>T</td><td>0.05~0.14</td><td>0.02~0.13</td></tr><tr><td>Open specialists</td><td>0.06~0.14</td><td>0.02~0.13</td></tr><tr><td>PES</td><td>0.08~0.17</td><td>-0.12~0.05</td></tr></table>
 
 (b)
 
-| Series | X (range) | Y (range) |
-| --- | --- | --- |
-| PF | -0.17~-0.09 | -0.08~0.08 |
-| SF-15 | -0.14~-0.09 | -0.07~0.02 |
-| SF-5 | 0.01~0.06 | -0.05~0.12 |
-| AG | 0.05~0.10 | -0.04~0.05 |
-| PA | 0.06~0.13 | -0.04~0.17 |
+<table><tr><td>Series</td><td>X (range)</td><td>Y (range)</td></tr><tr><td>PF</td><td>-0.17~-0.09</td><td>-0.08~0.08</td></tr><tr><td>SF-15</td><td>-0.14~-0.09</td><td>-0.07~0.02</td></tr><tr><td>SF-5</td><td>0.01~0.06</td><td>-0.05~0.12</td></tr><tr><td>AG</td><td>0.05~0.10</td><td>-0.04~0.05</td></tr><tr><td>PA</td><td>0.06~0.13</td><td>-0.04~0.17</td></tr></table>
 
 F I G U R E 5 Non-metric multidimensional scaling (NMDS) depicting functional traits of ant assemblages in accordance with their distribution among ecosystems (using bray–Curtis similarity). (a) Ecosystem specificity; (a) trophic type. PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Variables: T, temperature; H, humidity; CC, canopy cover; PES, percentage of exposed soil; LLC, percentage of leaf litter cover; RS, richness of shrubs
 
@@ -253,33 +240,15 @@ Entamological
 
 (a)
 
-| Category | Q1 | Q2 (Median) | Q3 | Min | Max |
-| --- | --- | --- | --- | --- | --- |
-| PF | ~5.2 | ~6.4 | ~7.0 | ~4.7 | ~7.6 |
-| SF-15 | ~4.0 | ~4.9 | ~5.5 | ~3.0 | ~6.0 |
-| SF-5 | ~2.2 | ~2.7 | ~3.3 | ~1.1 | ~4.4 |
-| AG | ~1.9 | ~2.4 | ~3.0 | ~0.8 | ~3.4 |
-| PA | ~0.3 | ~0.4 | ~0.7 | ~0.2 | ~0.9 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>Min</td><td>Max</td></tr><tr><td>PF</td><td>~5.2</td><td>~6.4</td><td>~7.0</td><td>~4.7</td><td>~7.6</td></tr><tr><td>SF-15</td><td>~4.0</td><td>~4.9</td><td>~5.5</td><td>~3.0</td><td>~6.0</td></tr><tr><td>SF-5</td><td>~2.2</td><td>~2.7</td><td>~3.3</td><td>~1.1</td><td>~4.4</td></tr><tr><td>AG</td><td>~1.9</td><td>~2.4</td><td>~3.0</td><td>~0.8</td><td>~3.4</td></tr><tr><td>PA</td><td>~0.3</td><td>~0.4</td><td>~0.7</td><td>~0.2</td><td>~0.9</td></tr></table>
 
 (b)
 
-| Category | Q1 | Q2 (Median) | Q3 | Min | Max |
-| --- | --- | --- | --- | --- | --- |
-| PF | ~0.79 | ~0.82 | ~0.87 | ~0.75 | ~0.90 |
-| SF-15 | ~0.68 | ~0.74 | ~0.82 | ~0.61 | ~0.89 |
-| SF-5 | ~0.55 | ~0.69 | ~0.73 | ~0.51 | ~0.77 |
-| AG | ~0.46 | ~0.50 | ~0.64 | ~0.34 | ~0.72 |
-| PA | ~0.45 | ~0.52 | ~0.59 | ~0.38 | ~0.64 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>Min</td><td>Max</td></tr><tr><td>PF</td><td>~0.79</td><td>~0.82</td><td>~0.87</td><td>~0.75</td><td>~0.90</td></tr><tr><td>SF-15</td><td>~0.68</td><td>~0.74</td><td>~0.82</td><td>~0.61</td><td>~0.89</td></tr><tr><td>SF-5</td><td>~0.55</td><td>~0.69</td><td>~0.73</td><td>~0.51</td><td>~0.77</td></tr><tr><td>AG</td><td>~0.46</td><td>~0.50</td><td>~0.64</td><td>~0.34</td><td>~0.72</td></tr><tr><td>PA</td><td>~0.45</td><td>~0.52</td><td>~0.59</td><td>~0.38</td><td>~0.64</td></tr></table>
 
 (c)
 
-| Category | Q1 | Q2 (Median) | Q3 | Min | Max |
-| --- | --- | --- | --- | --- | --- |
-| PF | ~0.42 | ~0.60 | ~0.72 | ~0.24 | ~0.83 |
-| SF-15 | ~0.38 | ~0.45 | ~0.60 | ~0.31 | ~0.60 |
-| SF-5 | ~0.41 | ~0.51 | ~0.56 | ~0.34 | ~0.60 |
-| AG | ~0.42 | ~0.47 | ~0.53 | ~0.28 | ~0.60 |
-| PA | ~0.36 | ~0.40 | ~0.44 | ~0.27 | ~0.44 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>Min</td><td>Max</td></tr><tr><td>PF</td><td>~0.42</td><td>~0.60</td><td>~0.72</td><td>~0.24</td><td>~0.83</td></tr><tr><td>SF-15</td><td>~0.38</td><td>~0.45</td><td>~0.60</td><td>~0.31</td><td>~0.60</td></tr><tr><td>SF-5</td><td>~0.41</td><td>~0.51</td><td>~0.56</td><td>~0.34</td><td>~0.60</td></tr><tr><td>AG</td><td>~0.42</td><td>~0.47</td><td>~0.53</td><td>~0.28</td><td>~0.60</td></tr><tr><td>PA</td><td>~0.36</td><td>~0.40</td><td>~0.44</td><td>~0.27</td><td>~0.44</td></tr></table>
 
 F I G U R E 6 Box-plot comparisons for (a) functional richness, (b) functional evenness and (c) functional redundancy for the different ecosystems considered. The values followed by different letters are significantly different according to paired contrast analyses using the Z-tests (corrected with Holm’s sequential Bonferroni procedure). PF, primary Forest; SF-15, secondary forest with 15 years of regeneration; SF-5, secondary forest with 5 years of regeneration; AG, agriculture; PA, pasture. Detailed information on predictor variables’ estimates (estimate), standard error (SE) for fixed effects and standard deviation (SD) for random effects, Z values, and associated P values are depicted in Supplementary Table S5
 

@@ -122,13 +122,7 @@ Urbanization only significantly affected wing wear in E. pruinosa and C. calcara
 
 The fourth-corner analysis revealed some strong traiturbanization associations (Fig. 5). The strongest positive association was found between polylectic and trees percentage $(IC=0.29,\;\mathrm{Wald}=18.06,\;\mathrm{p}=0.05,\;\mathrm{Fig.}\;5\mathrm{A})$ , and polylectic and grass percentage (IC = 0.27, Wald = 17.25, $p   =   0 . 1 9 )$ . The two strongest negative associations were found between ground-nesters and trees percentage (IC = -0.25, Wald = 22.10, p = 0.15) and between univoltine bees and grass percentage (IC = -0.20, Wald = 18.31, p = 0.27). After applying the GLM-LASSO penalty, which reduces false interactions and keeps only significant predictions, the maximum likelihood supported the higher probability of finding polylectic bees at sites with low impervious surfaces
 
-| Species | Low | Medium | High |
-| --- | --- | --- | --- |
-| A. sericeus | ~52 | ~103 | ~51 |
-| C. calcarata | ~80 | ~58 | ~28 |
-| B. impatiens | ~94 | ~113 | ~48 |
-| B. griseocollis | ~88 | ~59 | ~41 |
-| E. pruinosa | ~11 | ~200 | ~105 |
+<table><tr><td>Species</td><td>Low</td><td>Medium</td><td>High</td></tr><tr><td>A. sericeus</td><td>~52</td><td>~103</td><td>~51</td></tr><tr><td>C. calcarata</td><td>~80</td><td>~58</td><td>~28</td></tr><tr><td>B. impatiens</td><td>~94</td><td>~113</td><td>~48</td></tr><tr><td>B. griseocollis</td><td>~88</td><td>~59</td><td>~41</td></tr><tr><td>E. pruinosa</td><td>~11</td><td>~200</td><td>~105</td></tr></table>
 
 Fig. 2 Total abundance for (A) sericeus, C. calcarata, (B) impatiens, B. griseocollis and E. pruinosa within each level of urbanization (low, medium and high)
 
@@ -2166,39 +2160,7 @@ Springer Nature or its licensor (e.g. a society or other partner) holds exclusiv
 
 ## Table S2
 
-| **Table S2**. Environmental data for each sample site |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
-| Site_ID | Intensity | Plant_rich | Perc_shrub | Perc_grass | Perc_tree |
-| L01 | Low | 30 | 34.15 | 17.65 | 20.38 |
-| L02 | Low | 14 | 2.83 | 5.08 | 48.46 |
-| L03 | Low | 7 | 11.73 | 5.75 | 24.3 |
-| L04 | Low | 20 | 7.51 | 14.4 | 63.44 |
-| L05 | Low | 17 | 14.73 | 9.47 | 20.3 |
-| L06 | Low | 30 | 20.2 | 14.43 | 36.23 |
-| L07 | Low | 15 | 25.91 | 9.11 | 44.61 |
-| L08 | Low | 18 | 6.1 | 9.84 | 18.66 |
-| L09 | Low | 15 | 3.03 | 6.31 | 77.57 |
-| L10 | Low | 20 | 4.5 | 6.02 | 85.93 |
-| M01 | Medium | 33 | 1.31 | 4.66 | 13.41 |
-| M02 | Medium | 13 | 0.69 | 2.37 | 16.37 |
-| M03 | Medium | 12 | 0.41 | 1.06 | 29.01 |
-| M04 | Medium | 27 | 4.13 | 4.27 | 29.01 |
-| M05 | Medium | 8 | 2.92 | 7.03 | 18.65 |
-| M06 | Medium | 17 | 0.65 | 3.12 | 15.75 |
-| M07 | Medium | 28 | 0.87 | 3.17 | 54.33 |
-| M08 | Medium | 20 | 0.72 | 2.95 | 24.63 |
-| M09 | Medium | 18 | 0.48 | 1.58 | 35.11 |
-| M10 | Medium | 30 | 1.42 | 2.36 | 32.5 |
-| H01 | High | 6 | 0.5 | 2.39 | 21.84 |
-| H02 | High | 28 | 0.79 | 3.08 | 14.9 |
-| H03 | High | 8 | 0.59 | 2.08 | 6.44 |
-| H04 | High | 61 | 0.36 | 2.13 | 13.84 |
-| H05 | High | 6 | 0.3 | 2.29 | 14.88 |
-| H06 | High | 16 | 0.46 | 1.74 | 14 |
-| H07 | High | 6 | 1.25 | 5.02 | 5.03 |
-| H08 | High | 17 | 0.8 | 4.67 | 7.15 |
-| H09 | High | 16 | 0.69 | 1.72 | 14.12 |
+<table><tr><td>**Table S2**. Environmental data for each sample site</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Site_ID</td><td>Intensity</td><td>Plant_rich</td><td>Perc_shrub</td><td>Perc_grass</td><td>Perc_tree</td></tr><tr><td>L01</td><td>Low</td><td>30</td><td>34.15</td><td>17.65</td><td>20.38</td></tr><tr><td>L02</td><td>Low</td><td>14</td><td>2.83</td><td>5.08</td><td>48.46</td></tr><tr><td>L03</td><td>Low</td><td>7</td><td>11.73</td><td>5.75</td><td>24.3</td></tr><tr><td>L04</td><td>Low</td><td>20</td><td>7.51</td><td>14.4</td><td>63.44</td></tr><tr><td>L05</td><td>Low</td><td>17</td><td>14.73</td><td>9.47</td><td>20.3</td></tr><tr><td>L06</td><td>Low</td><td>30</td><td>20.2</td><td>14.43</td><td>36.23</td></tr><tr><td>L07</td><td>Low</td><td>15</td><td>25.91</td><td>9.11</td><td>44.61</td></tr><tr><td>L08</td><td>Low</td><td>18</td><td>6.1</td><td>9.84</td><td>18.66</td></tr><tr><td>L09</td><td>Low</td><td>15</td><td>3.03</td><td>6.31</td><td>77.57</td></tr><tr><td>L10</td><td>Low</td><td>20</td><td>4.5</td><td>6.02</td><td>85.93</td></tr><tr><td>M01</td><td>Medium</td><td>33</td><td>1.31</td><td>4.66</td><td>13.41</td></tr><tr><td>M02</td><td>Medium</td><td>13</td><td>0.69</td><td>2.37</td><td>16.37</td></tr><tr><td>M03</td><td>Medium</td><td>12</td><td>0.41</td><td>1.06</td><td>29.01</td></tr><tr><td>M04</td><td>Medium</td><td>27</td><td>4.13</td><td>4.27</td><td>29.01</td></tr><tr><td>M05</td><td>Medium</td><td>8</td><td>2.92</td><td>7.03</td><td>18.65</td></tr><tr><td>M06</td><td>Medium</td><td>17</td><td>0.65</td><td>3.12</td><td>15.75</td></tr><tr><td>M07</td><td>Medium</td><td>28</td><td>0.87</td><td>3.17</td><td>54.33</td></tr><tr><td>M08</td><td>Medium</td><td>20</td><td>0.72</td><td>2.95</td><td>24.63</td></tr><tr><td>M09</td><td>Medium</td><td>18</td><td>0.48</td><td>1.58</td><td>35.11</td></tr><tr><td>M10</td><td>Medium</td><td>30</td><td>1.42</td><td>2.36</td><td>32.5</td></tr><tr><td>H01</td><td>High</td><td>6</td><td>0.5</td><td>2.39</td><td>21.84</td></tr><tr><td>H02</td><td>High</td><td>28</td><td>0.79</td><td>3.08</td><td>14.9</td></tr><tr><td>H03</td><td>High</td><td>8</td><td>0.59</td><td>2.08</td><td>6.44</td></tr><tr><td>H04</td><td>High</td><td>61</td><td>0.36</td><td>2.13</td><td>13.84</td></tr><tr><td>H05</td><td>High</td><td>6</td><td>0.3</td><td>2.29</td><td>14.88</td></tr><tr><td>H06</td><td>High</td><td>16</td><td>0.46</td><td>1.74</td><td>14</td></tr><tr><td>H07</td><td>High</td><td>6</td><td>1.25</td><td>5.02</td><td>5.03</td></tr><tr><td>H08</td><td>High</td><td>17</td><td>0.8</td><td>4.67</td><td>7.15</td></tr><tr><td>H09</td><td>High</td><td>16</td><td>0.69</td><td>1.72</td><td>14.12</td></tr></table>
 
 <!-- page 3 of 8 -->
 
@@ -2287,39 +2249,7 @@ Springer Nature or its licensor (e.g. a society or other partner) holds exclusiv
 
 ## Table S4
 
-| **Table S4.** Abundance table for all species within each sample site |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
-| Site_ID | Agapostemon sericeus | Bombus griseocollis | Bombus impatiens | Ceratina calcarata | Eucera pruinosa |
-| H01 | 1 | 0 | 2 | 7 | 0 |
-| H02 | 7 | 4 | 3 | 5 | 9 |
-| H03 | 16 | 0 | 11 | 2 | 43 |
-| H04 | 21 | 23 | 6 | 8 | 21 |
-| H05 | 8 | 0 | 0 | 0 | 2 |
-| H06 | 0 | 2 | 7 | 2 | 27 |
-| H07 | 0 | 0 | 3 | 0 | 1 |
-| H08 | 0 | 6 | 14 | 0 | 2 |
-| H09 | 0 | 9 | 4 | 6 | 2 |
-| L01 | 20 | 41 | 11 | 1 | 0 |
-| L02 | 6 | 2 | 5 | 2 | 2 |
-| L03 | 5 | 0 | 2 | 1 | 6 |
-| L04 | 15 | 6 | 6 | 1 | 0 |
-| L05 | 0 | 1 | 2 | 3 | 3 |
-| L06 | 1 | 4 | 11 | 18 | 1 |
-| L07 | 2 | 4 | 20 | 0 | 1 |
-| L08 | 0 | 7 | 8 | 1 | 0 |
-| L09 | 3 | 0 | 13 | 1 | 0 |
-| L10 | 2 | 25 | 20 | 55 | 0 |
-| M01 | 15 | 9 | 8 | 5 | 135 |
-| M02 | 17 | 4 | 7 | 1 | 10 |
-| M03 | 9 | 10 | 27 | 1 | 0 |
-| M04 | 50 | 20 | 19 | 2 | 33 |
-| M05 | 1 | 2 | 3 | 1 | 5 |
-| M06 | 0 | 1 | 1 | 0 | 0 |
-| M07 | 15 | 3 | 18 | 4 | 30 |
-| M08 | 1 | 1 | 15 | 4 | 0 |
-| M09 | 0 | 0 | 0 | 6 | 9 |
-| M10 | 0 | 13 | 17 | 36 | 0 |
+<table><tr><td>**Table S4.** Abundance table for all species within each sample site</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Site_ID</td><td>Agapostemon sericeus</td><td>Bombus griseocollis</td><td>Bombus impatiens</td><td>Ceratina calcarata</td><td>Eucera pruinosa</td></tr><tr><td>H01</td><td>1</td><td>0</td><td>2</td><td>7</td><td>0</td></tr><tr><td>H02</td><td>7</td><td>4</td><td>3</td><td>5</td><td>9</td></tr><tr><td>H03</td><td>16</td><td>0</td><td>11</td><td>2</td><td>43</td></tr><tr><td>H04</td><td>21</td><td>23</td><td>6</td><td>8</td><td>21</td></tr><tr><td>H05</td><td>8</td><td>0</td><td>0</td><td>0</td><td>2</td></tr><tr><td>H06</td><td>0</td><td>2</td><td>7</td><td>2</td><td>27</td></tr><tr><td>H07</td><td>0</td><td>0</td><td>3</td><td>0</td><td>1</td></tr><tr><td>H08</td><td>0</td><td>6</td><td>14</td><td>0</td><td>2</td></tr><tr><td>H09</td><td>0</td><td>9</td><td>4</td><td>6</td><td>2</td></tr><tr><td>L01</td><td>20</td><td>41</td><td>11</td><td>1</td><td>0</td></tr><tr><td>L02</td><td>6</td><td>2</td><td>5</td><td>2</td><td>2</td></tr><tr><td>L03</td><td>5</td><td>0</td><td>2</td><td>1</td><td>6</td></tr><tr><td>L04</td><td>15</td><td>6</td><td>6</td><td>1</td><td>0</td></tr><tr><td>L05</td><td>0</td><td>1</td><td>2</td><td>3</td><td>3</td></tr><tr><td>L06</td><td>1</td><td>4</td><td>11</td><td>18</td><td>1</td></tr><tr><td>L07</td><td>2</td><td>4</td><td>20</td><td>0</td><td>1</td></tr><tr><td>L08</td><td>0</td><td>7</td><td>8</td><td>1</td><td>0</td></tr><tr><td>L09</td><td>3</td><td>0</td><td>13</td><td>1</td><td>0</td></tr><tr><td>L10</td><td>2</td><td>25</td><td>20</td><td>55</td><td>0</td></tr><tr><td>M01</td><td>15</td><td>9</td><td>8</td><td>5</td><td>135</td></tr><tr><td>M02</td><td>17</td><td>4</td><td>7</td><td>1</td><td>10</td></tr><tr><td>M03</td><td>9</td><td>10</td><td>27</td><td>1</td><td>0</td></tr><tr><td>M04</td><td>50</td><td>20</td><td>19</td><td>2</td><td>33</td></tr><tr><td>M05</td><td>1</td><td>2</td><td>3</td><td>1</td><td>5</td></tr><tr><td>M06</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr><td>M07</td><td>15</td><td>3</td><td>18</td><td>4</td><td>30</td></tr><tr><td>M08</td><td>1</td><td>1</td><td>15</td><td>4</td><td>0</td></tr><tr><td>M09</td><td>0</td><td>0</td><td>0</td><td>6</td><td>9</td></tr><tr><td>M10</td><td>0</td><td>13</td><td>17</td><td>36</td><td>0</td></tr></table>
 
 <!-- page 5 of 8 -->
 
@@ -2455,25 +2385,13 @@ Springer Nature or its licensor (e.g. a society or other partner) holds exclusiv
 
 ## Table S6
 
-| **Table S6**. Mean wing wear and body size values for each functional trait |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |
-| Functional trait | Mean wing wear | SD | t | p-value | Mean ITD | SD | t | p-value |
-| Univoltine | 2.13729508196721 | 1.46225700310786 | 0.9 | 0.18 | 1.72 | 0.404156779068756 | 28.77 | &lt; 0.001 |
-| Bivoltine | 2.06127080181543 | 1.37194207213079 |  |  | 3.23060149253731 | 1.27306540740742 |  |  |
-| Social | 2.46416938110749 | 1.35814366063052 | 9.94 | &lt; 0.001 | 3.19984578696343 | 1.42315084292634 | 22.98 | &lt; 0.001 |
-| Solitary | 1.66822429906542 | 1.35010043535686 |  |  | 1.87339405204461 | 0.244462693078519 |  |  |
-| Cavity | 2.18181818181818 | 1.91996165889286 | 0.66 | 0.25 | 1.20776162790698 | 0.110672987209678 | -41.6 | &lt; 0.001 |
-| Ground | 2.07876016260163 | 1.30697560666505 |  |  | 2.82698894472362 | 1.19843461735335 |  |  |
-| Oligolectic | 2.11455108359133 | 1.49695964528674 | -0.35 | 0.36 | 1.99492615384615 | 0.168791275040876 | 16.74 | &lt; 0.001 |
-| Polylectic | 2.08535108958838 | 1.16398012019469 |  |  | 2.81738479809977 | 1.39915615443777 |  |  |
+<table><tr><td>**Table S6**. Mean wing wear and body size values for each functional trait</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Functional trait</td><td>Mean wing wear</td><td>SD</td><td>t</td><td>p-value</td><td>Mean ITD</td><td>SD</td><td>t</td><td>p-value</td></tr><tr><td>Univoltine</td><td>2.13729508196721</td><td>1.46225700310786</td><td>0.9</td><td>0.18</td><td>1.72</td><td>0.404156779068756</td><td>28.77</td><td>&amp;lt; 0.001</td></tr><tr><td>Bivoltine</td><td>2.06127080181543</td><td>1.37194207213079</td><td></td><td></td><td>3.23060149253731</td><td>1.27306540740742</td><td></td><td></td></tr><tr><td>Social</td><td>2.46416938110749</td><td>1.35814366063052</td><td>9.94</td><td>&amp;lt; 0.001</td><td>3.19984578696343</td><td>1.42315084292634</td><td>22.98</td><td>&amp;lt; 0.001</td></tr><tr><td>Solitary</td><td>1.66822429906542</td><td>1.35010043535686</td><td></td><td></td><td>1.87339405204461</td><td>0.244462693078519</td><td></td><td></td></tr><tr><td>Cavity</td><td>2.18181818181818</td><td>1.91996165889286</td><td>0.66</td><td>0.25</td><td>1.20776162790698</td><td>0.110672987209678</td><td>-41.6</td><td>&amp;lt; 0.001</td></tr><tr><td>Ground</td><td>2.07876016260163</td><td>1.30697560666505</td><td></td><td></td><td>2.82698894472362</td><td>1.19843461735335</td><td></td><td></td></tr><tr><td>Oligolectic</td><td>2.11455108359133</td><td>1.49695964528674</td><td>-0.35</td><td>0.36</td><td>1.99492615384615</td><td>0.168791275040876</td><td>16.74</td><td>&amp;lt; 0.001</td></tr><tr><td>Polylectic</td><td>2.08535108958838</td><td>1.16398012019469</td><td></td><td></td><td>2.81738479809977</td><td>1.39915615443777</td><td></td><td></td></tr></table>
 
 <!-- page 7 of 8 -->
 
 ## Table S7
 
-| **Table S7.** ANOVA results for body size and wing wear across all urbanization levels by season (spring and summer) for bivoltine species |
-| --- |
+<table><tr><td>**Table S7.** ANOVA results for body size and wing wear across all urbanization levels by season (spring and summer) for bivoltine species</td></tr></table>
 
 <table>
   <tr>
@@ -2574,38 +2492,4 @@ Springer Nature or its licensor (e.g. a society or other partner) holds exclusiv
 
 ## Table S8
 
-| **Table S8. A**NOVA and GLM results from fourth-corner analysis |  |  |  |
-| --- | --- | --- | --- |
-|  |  |  |  |
-| Enviroment:Trait | interaction coefficient | wald value | Pr(>wald) |
-| (Intercept) | 1.660101671 | 16.292 | 0.000999 |
-| IntensityLow.body.sizeSmall | -0.094611281 | 0 | 0.864136 |
-| IntensityLow.dietPolylectic | -0.107498758 | 0 | 0.814186 |
-| IntensityLow.nestGround | 0.052139894 | 0.327 | 0.37962 |
-| IntensityLow.socialitySolitary | -0.006838931 | 0 | 0.988012 |
-| IntensityLow.voltinismunivoltine | 0.045200315 | 3.183 | 0.441558 |
-| IntensityMedium.body.sizeSmall | -0.063057722 | 4.692 | 0.432567 |
-| IntensityMedium.dietPolylectic | -0.160787887 | 13.316 | 0.110889 |
-| IntensityMedium.nestGround | 0.140398113 | 11.72 | 0.242757 |
-| IntensityMedium.socialitySolitary | 0.068225031 | 5.802 | 0.461538 |
-| IntensityMedium.voltinismunivoltine | 0.01664817 | 1.585 | 0.756244 |
-| Perc_grass.body.sizeSmall | 0.123599117 | 8.922 | 0.491508 |
-| Perc_grass.dietPolylectic | 0.265759723 | 17.249 | 0.194805 |
-| Perc_grass.nestGround | -0.018890896 | 1.561 | 0.832168 |
-| Perc_grass.socialitySolitary | -0.093392779 | 7.946 | 0.573427 |
-| Perc_grass.voltinismunivoltine | -0.201567571 | 18.307 | 0.272727 |
-| Perc_shrub.body.sizeSmall | -0.038231699 | 2.704 | 0.753247 |
-| Perc_shrub.dietPolylectic | -0.00901645 | 0.533 | 0.854146 |
-| Perc_shrub.nestGround | -0.001663369 | 0.118 | 0.89011 |
-| Perc_shrub.socialitySolitary | -0.030869779 | 2.341 | 0.792208 |
-| Perc_shrub.voltinismunivoltine | 0.008720056 | 0.614 | 0.861139 |
-| Perc_tree.body.sizeSmall | 0.102990415 | 7.39 | 0.415584 |
-| Perc_tree.dietPolylectic | 0.287799836 | 18.056 | 0.046953 |
-| Perc_tree.nestGround | -0.254593371 | 22.096 | 0.147852 |
-| Perc_tree.socialitySolitary | -0.13199716 | 11.102 | 0.352647 |
-| Perc_tree.voltinismunivoltine | -0.027112962 | 2.524 | 0.75025 |
-| Plant_rich.body.sizeSmall | -0.026728153 | 2.062 | 0.72028 |
-| Plant_rich.dietPolylectic | 0.004262616 | 0.375 | 0.847153 |
-| Plant_rich.nestGround | -0.055522461 | 5.091 | 0.56044 |
-| Plant_rich.socialitySolitary | -0.030208564 | 2.708 | 0.685315 |
-| Plant_rich.voltinismunivoltine | 0.041853511 | 4.452 | 0.564436 |
+<table><tr><td>**Table S8. A**NOVA and GLM results from fourth-corner analysis</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td>Enviroment:Trait</td><td>interaction coefficient</td><td>wald value</td><td>Pr(&gt;wald)</td></tr><tr><td>(Intercept)</td><td>1.660101671</td><td>16.292</td><td>0.000999</td></tr><tr><td>IntensityLow.body.sizeSmall</td><td>-0.094611281</td><td>0</td><td>0.864136</td></tr><tr><td>IntensityLow.dietPolylectic</td><td>-0.107498758</td><td>0</td><td>0.814186</td></tr><tr><td>IntensityLow.nestGround</td><td>0.052139894</td><td>0.327</td><td>0.37962</td></tr><tr><td>IntensityLow.socialitySolitary</td><td>-0.006838931</td><td>0</td><td>0.988012</td></tr><tr><td>IntensityLow.voltinismunivoltine</td><td>0.045200315</td><td>3.183</td><td>0.441558</td></tr><tr><td>IntensityMedium.body.sizeSmall</td><td>-0.063057722</td><td>4.692</td><td>0.432567</td></tr><tr><td>IntensityMedium.dietPolylectic</td><td>-0.160787887</td><td>13.316</td><td>0.110889</td></tr><tr><td>IntensityMedium.nestGround</td><td>0.140398113</td><td>11.72</td><td>0.242757</td></tr><tr><td>IntensityMedium.socialitySolitary</td><td>0.068225031</td><td>5.802</td><td>0.461538</td></tr><tr><td>IntensityMedium.voltinismunivoltine</td><td>0.01664817</td><td>1.585</td><td>0.756244</td></tr><tr><td>Perc_grass.body.sizeSmall</td><td>0.123599117</td><td>8.922</td><td>0.491508</td></tr><tr><td>Perc_grass.dietPolylectic</td><td>0.265759723</td><td>17.249</td><td>0.194805</td></tr><tr><td>Perc_grass.nestGround</td><td>-0.018890896</td><td>1.561</td><td>0.832168</td></tr><tr><td>Perc_grass.socialitySolitary</td><td>-0.093392779</td><td>7.946</td><td>0.573427</td></tr><tr><td>Perc_grass.voltinismunivoltine</td><td>-0.201567571</td><td>18.307</td><td>0.272727</td></tr><tr><td>Perc_shrub.body.sizeSmall</td><td>-0.038231699</td><td>2.704</td><td>0.753247</td></tr><tr><td>Perc_shrub.dietPolylectic</td><td>-0.00901645</td><td>0.533</td><td>0.854146</td></tr><tr><td>Perc_shrub.nestGround</td><td>-0.001663369</td><td>0.118</td><td>0.89011</td></tr><tr><td>Perc_shrub.socialitySolitary</td><td>-0.030869779</td><td>2.341</td><td>0.792208</td></tr><tr><td>Perc_shrub.voltinismunivoltine</td><td>0.008720056</td><td>0.614</td><td>0.861139</td></tr><tr><td>Perc_tree.body.sizeSmall</td><td>0.102990415</td><td>7.39</td><td>0.415584</td></tr><tr><td>Perc_tree.dietPolylectic</td><td>0.287799836</td><td>18.056</td><td>0.046953</td></tr><tr><td>Perc_tree.nestGround</td><td>-0.254593371</td><td>22.096</td><td>0.147852</td></tr><tr><td>Perc_tree.socialitySolitary</td><td>-0.13199716</td><td>11.102</td><td>0.352647</td></tr><tr><td>Perc_tree.voltinismunivoltine</td><td>-0.027112962</td><td>2.524</td><td>0.75025</td></tr><tr><td>Plant_rich.body.sizeSmall</td><td>-0.026728153</td><td>2.062</td><td>0.72028</td></tr><tr><td>Plant_rich.dietPolylectic</td><td>0.004262616</td><td>0.375</td><td>0.847153</td></tr><tr><td>Plant_rich.nestGround</td><td>-0.055522461</td><td>5.091</td><td>0.56044</td></tr><tr><td>Plant_rich.socialitySolitary</td><td>-0.030208564</td><td>2.708</td><td>0.685315</td></tr><tr><td>Plant_rich.voltinismunivoltine</td><td>0.041853511</td><td>4.452</td><td>0.564436</td></tr></table>

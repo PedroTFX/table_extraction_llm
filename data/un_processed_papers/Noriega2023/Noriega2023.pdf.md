@@ -135,12 +135,7 @@ Eastern Europe, where Holocene land-use changes have resulted in an acceleration
 
 Table 1 | Results of a meta-regression model assessing the effects of climate $( P C A 1 _ { C l i m a t e } )$ and variation in cattle density (Δ Cattle Density) on the difference in dung removal rates between pasture management regimes (low-high intensities) within sites
 
-| Moderators | Estimate | SE | t | df | P | VIF |
-| --- | --- | --- | --- | --- | --- | --- |
-| Intercept | 0.097 | 0.261 | 0.372 | 34 | 0.712 |  |
-| $PCA1_{Climate}$ | -0.098 | 0.103 | -0.959 | 34 | 0.344 | 1.05 |
-| $\Delta Cattle Density$ | -0.185 | 0.239 | -0.775 | 34 | 0.444 | 1.01 |
-| $PCA1_{Diversity}$ | 0.404 | 0.161 | 2.502 | 34 | 0.017 | 1.07 |
+<table><tr><td>Moderators</td><td>Estimate</td><td>SE</td><td>t</td><td>df</td><td>P</td><td>VIF</td></tr><tr><td>Intercept</td><td>0.097</td><td>0.261</td><td>0.372</td><td>34</td><td>0.712</td><td></td></tr><tr><td>$PCA1_{Climate}$</td><td>-0.098</td><td>0.103</td><td>-0.959</td><td>34</td><td>0.344</td><td>1.05</td></tr><tr><td>$\Delta Cattle Density$</td><td>-0.185</td><td>0.239</td><td>-0.775</td><td>34</td><td>0.444</td><td>1.01</td></tr><tr><td>$PCA1_{Diversity}$</td><td>0.404</td><td>0.161</td><td>2.502</td><td>34</td><td>0.017</td><td>1.07</td></tr></table>
 
 The effects of the other variables (differences in dung beetle abundance, richness, and functional diversity based on both behavioral and morphological traits) were tested altogether as the scores of a principal component analysis that summarizes them $( P C A 1 _ { D i v e r s i t y } ;$ see Table S5). Pseudo- $\cdot R^{2}=0.137;F_{3,34}=3.30;P=0.032.$ VIF stands for variance inflation factor. See also Tables S3 and S4 for comparison with other model specifications. t: t-test values for the intercept and each partial regression coefficient.
 

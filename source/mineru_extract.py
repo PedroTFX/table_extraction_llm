@@ -100,7 +100,7 @@ def doc_to_markdown(doc_path, backend="vlm", lang="en", force=False, extra_args=
         print(f"  [mineru-api] cached: {target.name}")
         return target
 
-    md_text = pipe_tables_to_html(_mineru_markdown_for(doc_path, backend=backend, lang=lang))
+    md_text = _mineru_markdown_for(doc_path, backend=backend, lang=lang)
     target.write_text(md_text, encoding="utf-8")
     print(f"  [mineru-api] wrote: {target.name}  ({len(md_text)} chars)")
     return target
@@ -173,7 +173,7 @@ def _mineru_markdown_for(doc_path, backend="vlm", lang="en") -> str:
         marks = [(int(n), int(m)) for n, m in
                  re.findall(r"<!--\s*page\s+(\d+)\s+of\s+(\d+)\s*-->", text)]
         if not marks or len({n for n, _ in marks}) >= marks[0][1]:
-            return text
+            return pipe_tables_to_html(text)     # pipeline only reads <table>s
         print(f"  [mineru-local] partial result for {Path(doc_path).name} "
               f"({len({n for n, _ in marks})}/{marks[0][1]} pages), retry {attempt}")
     raise RuntimeError(f"MinerU returned an incomplete parse for {Path(doc_path).name}")

@@ -256,15 +256,7 @@ In plants, species composition has been reported to be more homogeneous in urban
 
 BRASCHLER et al.
 
-|  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Studied group | Distance to city center | Percentage of sealed area | Vegetated garden area | Native plant richness | Habitat richness | Structural diversity | Index of permeable garden border |
-| Native plants |  | ns | ns |  | - |  | - |
-| Snails |  | ns | ns | - |  | - | ns |
-| Spiders |  | ns | ns | - | ns | - | - |
-| Millipedes |  | ns | ns | - | - | - | - |
-| Ants |  | ns | ns | - | - | - | ns |
-| Rove beetles |  | ns | ns | - | - | - | - |
+<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Studied group</td><td>Distance to city center</td><td>Percentage of sealed area</td><td>Vegetated garden area</td><td>Native plant richness</td><td>Habitat richness</td><td>Structural diversity</td><td>Index of permeable garden border</td></tr><tr><td>Native plants</td><td></td><td>ns</td><td>ns</td><td></td><td>-</td><td></td><td>-</td></tr><tr><td>Snails</td><td></td><td>ns</td><td>ns</td><td>-</td><td></td><td>-</td><td>ns</td></tr><tr><td>Spiders</td><td></td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>-</td><td>-</td></tr><tr><td>Millipedes</td><td></td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Ants</td><td></td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>-</td><td>ns</td></tr><tr><td>Rove beetles</td><td></td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></table>
 
 ![Image block](doc:5e195e1/tier:advanced/page:8/block:5)
 
@@ -368,22 +360,7 @@ BRASCHLER et al.
 
 <table><tr><td colspan="8"></td></tr><tr><td>Studied group</td><td>Distance to city center</td><td>Percentage of sealed area</td><td>Vegetated garden area</td><td>Native plant richness</td><td>Habitat richness</td><td>Structural diversity</td><td>Index of permeable garden border</td></tr><tr><td>Snails</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Slugs</td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>ns</td><td>ns</td></tr><tr><td>Spiders</td><td></td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Millipedes</td><td></td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>-</td></tr><tr><td>Woodlice</td><td></td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>ns</td><td></td></tr><tr><td>Ants</td><td>ns</td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>-</td></tr><tr><td>Rove beetles</td><td></td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>ns</td><td>ns</td></tr></table>
 
-| Studied group | Distance to city center | Percentage of sealed area | Vegetated garden area | Native plant richness | Habitat richness | Structural diversity | Index of permeable garden border |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Snails |  |  |  |  |  |  |  |
-|  | ns | ns | ns | - | - | ns | ns |
-| Slugs |  |  |  |  |  |  |  |
-|  |  | ns | ns | ns | - | - | - |
-| Spiders |  |  |  |  |  |  |  |
-|  |  | ns | ns | ns | - | ns | - |
-| Millipedes |  |  |  |  |  |  |  |
-|  |  | ns | ns | - | ns | ns |  |
-| Woodlice |  |  |  |  |  |  |  |
-|  | ns | ns | ns | ns | - | ns | - |
-| Ants |  |  |  |  |  |  |  |
-|  |  | ns | ns | - | - | ns | ns |
-| Rove beetles |  |  |  |  |  |  |  |
-|  |  | ns | ns | - | - | - | - |
+<table><tr><td>Studied group</td><td>Distance to city center</td><td>Percentage of sealed area</td><td>Vegetated garden area</td><td>Native plant richness</td><td>Habitat richness</td><td>Structural diversity</td><td>Index of permeable garden border</td></tr><tr><td>Snails</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>ns</td><td>ns</td></tr><tr><td>Slugs</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>-</td></tr><tr><td>Spiders</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>-</td></tr><tr><td>Millipedes</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>ns</td><td></td></tr><tr><td>Woodlice</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>ns</td><td>ns</td><td>ns</td><td>ns</td><td>-</td><td>ns</td><td>-</td></tr><tr><td>Ants</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>ns</td><td>ns</td></tr><tr><td>Rove beetles</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>ns</td><td>ns</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></table>
 
 F I G U R E 3   Effects of urbanization, garden size and local garden characteristics, habitat type richness, structural diversity of the vegetation, and index of permeable border, on body size of seven groups of invertebrates. For detailed explanations, see caption to Figure 1
 

@@ -66,10 +66,7 @@ natureportfolio
 
 www.nature.com/scientificreports/
 
-| Series | Species richness (range) | Functional richness (range) |
-| --- | --- | --- |
-| Campesino | 3~20 | 0.01~0.37 |
-| Migrant | 3~19 | 0.01~0.35 |
+<table><tr><td>Series</td><td>Species richness (range)</td><td>Functional richness (range)</td></tr><tr><td>Campesino</td><td>3~20</td><td>0.01~0.37</td></tr><tr><td>Migrant</td><td>3~19</td><td>0.01~0.35</td></tr></table>
 
 Figure 1.   Estimated association between species richness and functional richness for 50 campesino (blue dots) and 50 migrants (yellow dots) homegardens for 85 species in beetle communities in Andean temperate ecosystems, southern Chile. Graphs were generated using R software version 4.0.4 (R Core Team, 2021. R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. [https://www.Rproject.org/](https://www.Rproject.org/)).
 
@@ -187,18 +184,7 @@ natureportfolio
 
 www.nature.com/scientificreports/
 
-| Social-ecological filter | Description |
-| --- | --- |
-| Homegarden areaa | Size of the homegarden in $m^{2}$ |
-| Crop richnessa | Number of crop species intentionally cultivated in the homegarden |
-| Structural complexitya | Index obtained from the sum of the coverage of each vegetation stratum (%) divided by 100. Strata: 0–0.3 m, 0.31–1 m, 1.1–2 m, and above 2 m |
-| Elevation | Meters above sea level (masl) |
-| Distance to foresta | Linear distance in m to nearest native forest patch |
-| Homegarden age | Years that the homegarden has been in the same spatial location |
-| Gardener origina | 1: Campesino; 2: Migrant |
-| Gardener age | Age of the gardener (years old) |
-| Gardener experience | Number of years the person has been gardening |
-| Pest control strategya | 1: None; 2: Natural (mechanical by hand or using biopreparations); 3. Chemical pesticide |
+<table><tr><td>Social-ecological filter</td><td>Description</td></tr><tr><td>Homegarden areaa</td><td>Size of the homegarden in $m^{2}$</td></tr><tr><td>Crop richnessa</td><td>Number of crop species intentionally cultivated in the homegarden</td></tr><tr><td>Structural complexitya</td><td>Index obtained from the sum of the coverage of each vegetation stratum (%) divided by 100. Strata: 0–0.3 m, 0.31–1 m, 1.1–2 m, and above 2 m</td></tr><tr><td>Elevation</td><td>Meters above sea level (masl)</td></tr><tr><td>Distance to foresta</td><td>Linear distance in m to nearest native forest patch</td></tr><tr><td>Homegarden age</td><td>Years that the homegarden has been in the same spatial location</td></tr><tr><td>Gardener origina</td><td>1: Campesino; 2: Migrant</td></tr><tr><td>Gardener age</td><td>Age of the gardener (years old)</td></tr><tr><td>Gardener experience</td><td>Number of years the person has been gardening</td></tr><tr><td>Pest control strategya</td><td>1: None; 2: Natural (mechanical by hand or using biopreparations); 3. Chemical pesticide</td></tr></table>
 
 Table 2.   Social-ecological filters used to evaluate homegarden associations of beetles (Arthropoda: Coleoptera) in Andean temperate ecosystems, southern Chile. <sup>a</sup>Social-ecological filters retained for tests of homegarden associations of beetles after reducing collinearity.
 

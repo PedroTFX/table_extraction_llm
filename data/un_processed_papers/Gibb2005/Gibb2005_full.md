@@ -260,109 +260,11 @@ B I O L O G I C A L C O N S E R V A T I O N 1 3 2 ( 2 0 0 6 ) 2 5 0 – 2 6 0
 
 257
 
-| Category | E. angustula | E. borella | E. deubeli | E. longipennis | E. pygmaea |
-| --- | --- | --- | --- | --- | --- |
-| Burned | ~0.006 (cd) | ~0.005 (d) | ~0.001 (de) | ~0.007 (cd) | ~0.006 (cd) |
-| Control | ~0.005 (d) | ~0.004 (d) | ~0.001 (de) | ~0.004 (d) | ~0.007 (cd) |
-| Fomitopsis pinicola | ~0.003 (d) | ~0.004 (d) | ~0.001 (de) | ~0.013 (abc) | ~0.004 (d) |
-| Natural shade | ~0.006 (cd) | ~0.006 (cd) | ~0.001 (de) | ~0.008 (bcd) | ~0.004 (d) |
-| Resinicium bicolor | ~0.004 (d) | ~0.003 (d) | ~0.001 (e) | ~0.004 (d) | ~0.003 (d) |
-| Snag | ~0.014 (ab) | ~0.015 (a) | ~0.082 (a) | ~0.004 (d) | ~0.016 (a) |
+<table><tr><td>Category</td><td>E. angustula</td><td>E. borella</td><td>E. deubeli</td><td>E. longipennis</td><td>E. pygmaea</td></tr><tr><td>Burned</td><td>~0.006 (cd)</td><td>~0.005 (d)</td><td>~0.001 (de)</td><td>~0.007 (cd)</td><td>~0.006 (cd)</td></tr><tr><td>Control</td><td>~0.005 (d)</td><td>~0.004 (d)</td><td>~0.001 (de)</td><td>~0.004 (d)</td><td>~0.007 (cd)</td></tr><tr><td>Fomitopsis pinicola</td><td>~0.003 (d)</td><td>~0.004 (d)</td><td>~0.001 (de)</td><td>~0.013 (abc)</td><td>~0.004 (d)</td></tr><tr><td>Natural shade</td><td>~0.006 (cd)</td><td>~0.006 (cd)</td><td>~0.001 (de)</td><td>~0.008 (bcd)</td><td>~0.004 (d)</td></tr><tr><td>Resinicium bicolor</td><td>~0.004 (d)</td><td>~0.003 (d)</td><td>~0.001 (e)</td><td>~0.004 (d)</td><td>~0.003 (d)</td></tr><tr><td>Snag</td><td>~0.014 (ab)</td><td>~0.015 (a)</td><td>~0.082 (a)</td><td>~0.004 (d)</td><td>~0.016 (a)</td></tr></table>
 
 Fig. 3 – Mean ± SE standardised abundance per site of the common and red-listed Epuraea species in eclector and window traps on spruce. Symbols with the same letters are not significantly different. Black symbols represent red-listed species.
 
-| Habitat | Species | Proportion of total per site |
-| :--- | :--- | :--- |
-| Burned | T. elegans | ~0.001 |
-| Burned | T. elongatus | ~0.007 |
-| Burned | T. laticollis | ~0.003 |
-| Burned | T. pallipes | ~0.002 |
-| Burned | T. proximus | ~0.001 |
-| Control | T. elegans | ~0.001 |
-| Control | T. elongatus | ~0.001 |
-| Control | T. laticollis | ~0.003 |
-| Control | T. pallipes | ~0.002 |
-| Control | T. proximus | ~0.001 |
-| Fomitopsis pinicola | T. elegans | ~0.001 |
-| Fomitopsis pinicola | T. elongatus | ~0.001 |
-| Fomitopsis pinicola | T. laticollis | ~0.003 |
-| Fomitopsis pinicola | T. pallipes | ~0.002 |
-| Fomitopsis pinicola | T. proximus | ~0.001 |
-| Natural shade | T. elegans | ~0.001 |
-| Natural shade | T. elongatus | ~0.004 |
-| Natural shade | T. laticollis | ~0.005 |
-| Natural shade | T. pallipes | ~0.006 |
-| Natural shade | T. proximus | ~0.005 |
-| Resinicium bicolor | T. elegans | ~0.006 |
-| Resinicium bicolor | T. elongatus | ~0.001 |
-| Resinicium bicolor | T. laticollis | ~0.003 |
-| Resinicium bicolor | T. pallipes | ~0.002 |
-| Resinicium bicolor | T. proximus | ~0.001 |
-| Snag | T. elegans | ~0.001 |
-| Snag | T. elongatus | ~0.001 |
-| Snag | T. laticollis | ~0.002 |
-| Snag | T. pallipes | ~0.001 |
-| Snag | T. proximus | ~0.001 |
-| Burned | T. elegans | ~0.02 |
-| Burned | T. elongatus | ~0.005 |
-| Burned | T. laticollis | ~0.013 |
-| Burned | T. pallipes | ~0.013 |
-| Burned | T. proximus | ~0.012 |
-| Control | T. elegans | ~0.001 |
-| Control | T. elongatus | ~0.007 |
-| Control | T. laticollis | ~0.043 |
-| Control | T. pallipes | ~0.035 |
-| Control | T. proximus | ~0.023 |
-| Fomitopsis pinicola | T. elegans | ~0.008 |
-| Fomitopsis pinicola | T. elongatus | ~0.022 |
-| Fomitopsis pinicola | T. laticollis | ~0.01 |
-| Fomitopsis pinicola | T. pallipes | ~0.016 |
-| Fomitopsis pinicola | T. proximus | ~0.004 |
-| Natural shade | T. elegans | ~0.043 |
-| Natural shade | T. elongatus | ~0.008 |
-| Natural shade | T. laticollis | ~0.015 |
-| Natural shade | T. pallipes | ~0.007 |
-| Natural shade | T. proximus | ~0.021 |
-| Resinicium bicolor | T. elegans | ~0.008 |
-| Resinicium bicolor | T. elongatus | ~0.023 |
-| Resinicium bicolor | T. laticollis | ~0.004 |
-| Resinicium bicolor | T. pallipes | ~0.004 |
-| Resinicium bicolor | T. proximus | ~0.012 |
-| Snag | T. elegans | ~0.001 |
-| Snag | T. elongatus | ~0.001 |
-| Snag | T. laticollis | ~0.001 |
-| Snag | T. pallipes | ~0.001 |
-| Snag | T. proximus | ~0.001 |
-| Burned | T. elegans | ~0.001 |
-| Burned | T. elongatus | ~0.001 |
-| Burned | T. laticollis | ~0.005 |
-| Burned | T. pallipes | ~0.008 |
-| Burned | T. proximus | ~0.035 |
-| Control | T. elegans | ~0.001 |
-| Control | T. elongatus | ~0.012 |
-| Control | T. laticollis | ~0.005 |
-| Control | T. pallipes | ~0.007 |
-| Control | T. proximus | ~0.003 |
-| Fomitopsis pinicola | T. elegans | ~0.015 |
-| Fomitopsis pinicola | T. elongatus | ~0.02 |
-| Fomitopsis pinicola | T. laticollis | ~0.006 |
-| Fomitopsis pinicola | T. pallipes | ~0.012 |
-| Fomitopsis pinicola | T. proximus | ~0.003 |
-| Natural shade | T. elegans | ~0.015 |
-| Natural shade | T. elongatus | ~0.006 |
-| Natural shade | T. laticollis | ~0.005 |
-| Natural shade | T. pallipes | ~0.007 |
-| Natural shade | T. proximus | ~0.012 |
-| Resinicium bicolor | T. elegans | ~0.001 |
-| Resinicium bicolor | T. elongatus | ~0.001 |
-| Resinicium bicolor | T. laticollis | ~0.003 |
-| Resinicium bicolor | T. pallipes | ~0.006 |
-| Resinicium bicolor | T. proximus | ~0.001 |
-| Snag | T. elegans | ~0.001 |
-| Snag | T. elongatus | ~0.001 |
-| Snag | T. laticollis | ~0.001 |
-| Snag | T. pallipes | ~0.001 |
-| Snag | T. proximus | ~0.001 |
+<table><tr><td>Habitat</td><td>Species</td><td>Proportion of total per site</td></tr><tr><td>Burned</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Burned</td><td>T. elongatus</td><td>~0.007</td></tr><tr><td>Burned</td><td>T. laticollis</td><td>~0.003</td></tr><tr><td>Burned</td><td>T. pallipes</td><td>~0.002</td></tr><tr><td>Burned</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Control</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Control</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Control</td><td>T. laticollis</td><td>~0.003</td></tr><tr><td>Control</td><td>T. pallipes</td><td>~0.002</td></tr><tr><td>Control</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Fomitopsis pinicola</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Fomitopsis pinicola</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Fomitopsis pinicola</td><td>T. laticollis</td><td>~0.003</td></tr><tr><td>Fomitopsis pinicola</td><td>T. pallipes</td><td>~0.002</td></tr><tr><td>Fomitopsis pinicola</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Natural shade</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Natural shade</td><td>T. elongatus</td><td>~0.004</td></tr><tr><td>Natural shade</td><td>T. laticollis</td><td>~0.005</td></tr><tr><td>Natural shade</td><td>T. pallipes</td><td>~0.006</td></tr><tr><td>Natural shade</td><td>T. proximus</td><td>~0.005</td></tr><tr><td>Resinicium bicolor</td><td>T. elegans</td><td>~0.006</td></tr><tr><td>Resinicium bicolor</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Resinicium bicolor</td><td>T. laticollis</td><td>~0.003</td></tr><tr><td>Resinicium bicolor</td><td>T. pallipes</td><td>~0.002</td></tr><tr><td>Resinicium bicolor</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. laticollis</td><td>~0.002</td></tr><tr><td>Snag</td><td>T. pallipes</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Burned</td><td>T. elegans</td><td>~0.02</td></tr><tr><td>Burned</td><td>T. elongatus</td><td>~0.005</td></tr><tr><td>Burned</td><td>T. laticollis</td><td>~0.013</td></tr><tr><td>Burned</td><td>T. pallipes</td><td>~0.013</td></tr><tr><td>Burned</td><td>T. proximus</td><td>~0.012</td></tr><tr><td>Control</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Control</td><td>T. elongatus</td><td>~0.007</td></tr><tr><td>Control</td><td>T. laticollis</td><td>~0.043</td></tr><tr><td>Control</td><td>T. pallipes</td><td>~0.035</td></tr><tr><td>Control</td><td>T. proximus</td><td>~0.023</td></tr><tr><td>Fomitopsis pinicola</td><td>T. elegans</td><td>~0.008</td></tr><tr><td>Fomitopsis pinicola</td><td>T. elongatus</td><td>~0.022</td></tr><tr><td>Fomitopsis pinicola</td><td>T. laticollis</td><td>~0.01</td></tr><tr><td>Fomitopsis pinicola</td><td>T. pallipes</td><td>~0.016</td></tr><tr><td>Fomitopsis pinicola</td><td>T. proximus</td><td>~0.004</td></tr><tr><td>Natural shade</td><td>T. elegans</td><td>~0.043</td></tr><tr><td>Natural shade</td><td>T. elongatus</td><td>~0.008</td></tr><tr><td>Natural shade</td><td>T. laticollis</td><td>~0.015</td></tr><tr><td>Natural shade</td><td>T. pallipes</td><td>~0.007</td></tr><tr><td>Natural shade</td><td>T. proximus</td><td>~0.021</td></tr><tr><td>Resinicium bicolor</td><td>T. elegans</td><td>~0.008</td></tr><tr><td>Resinicium bicolor</td><td>T. elongatus</td><td>~0.023</td></tr><tr><td>Resinicium bicolor</td><td>T. laticollis</td><td>~0.004</td></tr><tr><td>Resinicium bicolor</td><td>T. pallipes</td><td>~0.004</td></tr><tr><td>Resinicium bicolor</td><td>T. proximus</td><td>~0.012</td></tr><tr><td>Snag</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. laticollis</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. pallipes</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Burned</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Burned</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Burned</td><td>T. laticollis</td><td>~0.005</td></tr><tr><td>Burned</td><td>T. pallipes</td><td>~0.008</td></tr><tr><td>Burned</td><td>T. proximus</td><td>~0.035</td></tr><tr><td>Control</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Control</td><td>T. elongatus</td><td>~0.012</td></tr><tr><td>Control</td><td>T. laticollis</td><td>~0.005</td></tr><tr><td>Control</td><td>T. pallipes</td><td>~0.007</td></tr><tr><td>Control</td><td>T. proximus</td><td>~0.003</td></tr><tr><td>Fomitopsis pinicola</td><td>T. elegans</td><td>~0.015</td></tr><tr><td>Fomitopsis pinicola</td><td>T. elongatus</td><td>~0.02</td></tr><tr><td>Fomitopsis pinicola</td><td>T. laticollis</td><td>~0.006</td></tr><tr><td>Fomitopsis pinicola</td><td>T. pallipes</td><td>~0.012</td></tr><tr><td>Fomitopsis pinicola</td><td>T. proximus</td><td>~0.003</td></tr><tr><td>Natural shade</td><td>T. elegans</td><td>~0.015</td></tr><tr><td>Natural shade</td><td>T. elongatus</td><td>~0.006</td></tr><tr><td>Natural shade</td><td>T. laticollis</td><td>~0.005</td></tr><tr><td>Natural shade</td><td>T. pallipes</td><td>~0.007</td></tr><tr><td>Natural shade</td><td>T. proximus</td><td>~0.012</td></tr><tr><td>Resinicium bicolor</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Resinicium bicolor</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Resinicium bicolor</td><td>T. laticollis</td><td>~0.003</td></tr><tr><td>Resinicium bicolor</td><td>T. pallipes</td><td>~0.006</td></tr><tr><td>Resinicium bicolor</td><td>T. proximus</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. elegans</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. elongatus</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. laticollis</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. pallipes</td><td>~0.001</td></tr><tr><td>Snag</td><td>T. proximus</td><td>~0.001</td></tr></table>
 
 Fig. 4 – Mean ± SE standardised abundance per site of the common and red-listed Tachinus species collected in window traps on spruce in clear-cuts, managed forests and reserves. Symbols with the same letters are not significantly different. Black symbols represent red-listed species.
 

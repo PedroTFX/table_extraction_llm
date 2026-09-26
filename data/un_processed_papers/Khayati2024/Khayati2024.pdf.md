@@ -209,20 +209,11 @@ The remaining most abundant ant species (Pheidole pallidula, Aphaenogaster senil
 
 One particularly striking finding is the significant increase in functional richness observed in burnt plots. This may be due to the fact that
 
-| Fire condition | Functional richness |
-| --- | --- |
-| Unburnt | ~3.0 |
-| Burnt | ~3.6 |
+<table><tr><td>Fire condition</td><td>Functional richness</td></tr><tr><td>Unburnt</td><td>~3.0</td></tr><tr><td>Burnt</td><td>~3.6</td></tr></table>
 
-| Fire condition | Functional evenness |
-| --- | --- |
-| Unburnt | ~0.152 |
-| Burnt | ~0.123 |
+<table><tr><td>Fire condition</td><td>Functional evenness</td></tr><tr><td>Unburnt</td><td>~0.152</td></tr><tr><td>Burnt</td><td>~0.123</td></tr></table>
 
-| Fire condition | Functional dispersion |
-| --- | --- |
-| Unburnt | ~0.90 |
-| Burnt | ~0.90 |
+<table><tr><td>Fire condition</td><td>Functional dispersion</td></tr><tr><td>Unburnt</td><td>~0.90</td></tr><tr><td>Burnt</td><td>~0.90</td></tr></table>
 
 Fig. 3. Differences in ant functional richness (a), functional evenness (b) and functional dispersion (c) between unburnt (green) and burnt (red) plots. Bars are mean and whiskers standard error values of Generalized Linear Mixed Models estimates.
 

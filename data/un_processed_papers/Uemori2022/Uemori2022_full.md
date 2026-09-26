@@ -150,22 +150,7 @@ We selected six functional traits expected to respond to changes in elevation: t
 
 UEMORI et al.
 
-| Elevation (m) | Dominant tree | Understory vegetation |
-| --- | --- | --- |
-| 223 | Fraxinus mandshurica, Ulmus davidiiata | Sasa nipponica |
-| 312 | Quercus crispula, Betula maximowicziana, B. platyphylla, Acer pictum, Maackia amurensis, Cerasus sargentii, C. maximowiczii | Sa. nipponica |
-| 392 | Q. crispula, Tilia maximowicziana, Ac. pictum, B. maximowicziana, Alnus hirsuta | Sa. nipponica |
-| 507 | Abies sachalinensis, Al. hirsuta, B. ermanii, Ac. ukurunduense | Sa. senanensis |
-| 594 | Ab. sachalinensis, Picea glehnii, Al. hirsuta, B. ermanii | Sa. senanensis |
-| 695 | Ab. sachalinensis, Al. hirsuta, B. ermanii | Sa. senanensis |
-| 800 | Ab. sachalinensis, Al. hirsuta, B. ermanii | Sa. senanensis |
-| 993 | Ab. sachalinensis, Picea glehnii, B. ermanii, Ac. ukurunduense, Sorbus commixta | Sa. senanensis |
-| 1097 | Ab. sachalinensis, P. glehnii, B. ermanii, Ac. ukurunduense, So. commixta, Rhododendron multiflorum | Fern spp. |
-| 1209 | Ab. sachalinensis, Ac. ukurunduense, So. commixta, R. multiflorum | Moss &amp; fern spp. |
-| 1284 | Ab. sachalinensis, P. jezoensis, B. ermanii, Ac. ukurunduense, So. commixta, Weigela middendorffiana | Moss &amp; fern spp. |
-| 1396 | Ab. sachalinensis, P. jezoensis, B. ermanii, Ac. ukurunduense, So. commixta, W. middendorffiana, C. nipponica | Fern spp. |
-| 1509 | B. ermanii, Al. alnobetula, So. commixta, W. middendorffiana, R. multiflorum | Fern &amp; Calamagrostis spp. |
-| 1581 | Pinus pumila, B. ermanii, Al. alnobetula, So. commixta, P. glehnii, R. diversipilosum, Lonicera alpigena | Calamagrostis spp. |
+<table><tr><td>Elevation (m)</td><td>Dominant tree</td><td>Understory vegetation</td></tr><tr><td>223</td><td>Fraxinus mandshurica, Ulmus davidiiata</td><td>Sasa nipponica</td></tr><tr><td>312</td><td>Quercus crispula, Betula maximowicziana, B. platyphylla, Acer pictum, Maackia amurensis, Cerasus sargentii, C. maximowiczii</td><td>Sa. nipponica</td></tr><tr><td>392</td><td>Q. crispula, Tilia maximowicziana, Ac. pictum, B. maximowicziana, Alnus hirsuta</td><td>Sa. nipponica</td></tr><tr><td>507</td><td>Abies sachalinensis, Al. hirsuta, B. ermanii, Ac. ukurunduense</td><td>Sa. senanensis</td></tr><tr><td>594</td><td>Ab. sachalinensis, Picea glehnii, Al. hirsuta, B. ermanii</td><td>Sa. senanensis</td></tr><tr><td>695</td><td>Ab. sachalinensis, Al. hirsuta, B. ermanii</td><td>Sa. senanensis</td></tr><tr><td>800</td><td>Ab. sachalinensis, Al. hirsuta, B. ermanii</td><td>Sa. senanensis</td></tr><tr><td>993</td><td>Ab. sachalinensis, Picea glehnii, B. ermanii, Ac. ukurunduense, Sorbus commixta</td><td>Sa. senanensis</td></tr><tr><td>1097</td><td>Ab. sachalinensis, P. glehnii, B. ermanii, Ac. ukurunduense, So. commixta, Rhododendron multiflorum</td><td>Fern spp.</td></tr><tr><td>1209</td><td>Ab. sachalinensis, Ac. ukurunduense, So. commixta, R. multiflorum</td><td>Moss &amp;amp; fern spp.</td></tr><tr><td>1284</td><td>Ab. sachalinensis, P. jezoensis, B. ermanii, Ac. ukurunduense, So. commixta, Weigela middendorffiana</td><td>Moss &amp;amp; fern spp.</td></tr><tr><td>1396</td><td>Ab. sachalinensis, P. jezoensis, B. ermanii, Ac. ukurunduense, So. commixta, W. middendorffiana, C. nipponica</td><td>Fern spp.</td></tr><tr><td>1509</td><td>B. ermanii, Al. alnobetula, So. commixta, W. middendorffiana, R. multiflorum</td><td>Fern &amp;amp; Calamagrostis spp.</td></tr><tr><td>1581</td><td>Pinus pumila, B. ermanii, Al. alnobetula, So. commixta, P. glehnii, R. diversipilosum, Lonicera alpigena</td><td>Calamagrostis spp.</td></tr></table>
 
 TA B L E 1  Site description includes elevation, dominant tree species, and understory vegetation
 
@@ -191,15 +176,7 @@ Open Access
 
 TA B L E 2  Trait description includes value definition, expected change with increasing elevation, and reference for each trait
 
-| Trait | Definition of value | Expected change with increasing elevation | Reference |
-| --- | --- | --- | --- |
-| Trophic level | 1. herbivorous2. primary predators3. hyper predators | Decrease | Uemori et al. (2021) |
-| Seasonal duration | Total number of collecting seasons | Decrease | Randall et al. (1981); Macgregor et al. (2019); Uemori et al. (2021) |
-| Body size | The mean of the literature data | Increase | Hodkinson (2005); Hoiss et al. (2012) |
-| Elevational range | The highest elevation - the lowest elevation | Increase | Rapoport (1982); Hoiss et al. (2012); McCain (2009) |
-| Nesting position | 1. below-ground2. above-ground | Decrease (increase below-ground species) | Hoiss et al. (2012) |
-| Soil dependence of food resource | 1. herbivorous cycle2. detritivorous cycle | Increase (increase detritivorous cycle species) |  |
-| Distribution index | 1. north of Hokkaido2. Hokkaido3. east Honshu4. west Honshu &amp; Shikoku5. Kyushu6. Amami Is. &amp; Okinawa Is.7. south of Yaeyama Is. | Decrease (increase northern species) | Uemori et al. (2021) |
+<table><tr><td>Trait</td><td>Definition of value</td><td>Expected change with increasing elevation</td><td>Reference</td></tr><tr><td>Trophic level</td><td>1. herbivorous2. primary predators3. hyper predators</td><td>Decrease</td><td>Uemori et al. (2021)</td></tr><tr><td>Seasonal duration</td><td>Total number of collecting seasons</td><td>Decrease</td><td>Randall et al. (1981); Macgregor et al. (2019); Uemori et al. (2021)</td></tr><tr><td>Body size</td><td>The mean of the literature data</td><td>Increase</td><td>Hodkinson (2005); Hoiss et al. (2012)</td></tr><tr><td>Elevational range</td><td>The highest elevation - the lowest elevation</td><td>Increase</td><td>Rapoport (1982); Hoiss et al. (2012); McCain (2009)</td></tr><tr><td>Nesting position</td><td>1. below-ground2. above-ground</td><td>Decrease (increase below-ground species)</td><td>Hoiss et al. (2012)</td></tr><tr><td>Soil dependence of food resource</td><td>1. herbivorous cycle2. detritivorous cycle</td><td>Increase (increase detritivorous cycle species)</td><td></td></tr><tr><td>Distribution index</td><td>1. north of Hokkaido2. Hokkaido3. east Honshu4. west Honshu &amp;amp; Shikoku5. Kyushu6. Amami Is. &amp;amp; Okinawa Is.7. south of Yaeyama Is.</td><td>Decrease (increase northern species)</td><td>Uemori et al. (2021)</td></tr></table>
 
 TA B L E 3  Linear regression correlation coefficient between elevation and abundance, species richness (SR), species diversity (SD), functional diversities (FDs), and community-weighted means (CWMs) of each functional traits in all Aculeata and each guild. A negative r value indicates a decrease in the response variable with increasing elevation. Trophic level, nesting position, and soil dependence in pollinator were not shown because the trait values were the same for all pollinator species. The significant values are shown bold.
 

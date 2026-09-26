@@ -94,15 +94,7 @@ Filtering across Spatial Scales
 
 cellsandpublicationinformation. regionalspeciespoolasdeterminedusingWilliams(1996)equalareagrid Bombusrichnessinsites, durationofsampling, Table1.Informationonlocalassemblagesincludedinanalysisincludingnameofcontributor,numberofsitesprovided,locationandsizeofareasampled,
 
-| Data contributor | Number of sites | Location | Site Size (ha) | Sampling time | Richness | Regional Species Pool | Publication |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| S. Colla | 1 | Southern Ontario | 0.4 | full transect walked | 6 | 18 | Colla and Packer(2008) |
-| E. Evans | 2 | Minnesota | 0.06 | 60–120 mins | 5–7 | 13 | unpublished |
-| R. Hatfeld | 20 | California | 0.377 | 45 mins | 2–8 | 17 | Hatfield and Lebuhn (2007) |
-| S.Hendrix | 13 | Iowa | .5–1 | 60–120 mins | 2–6 | 15 | Hendrix, Kwaiser and Heard (2010); Kwaiser and Hendrix (2008); unpublished |
-| C. Kearns | 15 | Colorado | 0.385 | variable | 2–4 | 20 | Kearns and Oliveras(2009) |
-| R. Malfi and N. Williams | 10 | Pennsylvania and New Jersey | 0.5 | 120 mins | 4–6 | 16 | unpublished |
-| A. Tripodi | 49 | Tennessee and Arkansas | .02–5 | 15–60 mins | 2–5 | 11,13 | unpublished |
+<table><tr><td>Data contributor</td><td>Number of sites</td><td>Location</td><td>Site Size (ha)</td><td>Sampling time</td><td>Richness</td><td>Regional Species Pool</td><td>Publication</td></tr><tr><td>S. Colla</td><td>1</td><td>Southern Ontario</td><td>0.4</td><td>full transect walked</td><td>6</td><td>18</td><td>Colla and Packer(2008)</td></tr><tr><td>E. Evans</td><td>2</td><td>Minnesota</td><td>0.06</td><td>60–120 mins</td><td>5–7</td><td>13</td><td>unpublished</td></tr><tr><td>R. Hatfeld</td><td>20</td><td>California</td><td>0.377</td><td>45 mins</td><td>2–8</td><td>17</td><td>Hatfield and Lebuhn (2007)</td></tr><tr><td>S.Hendrix</td><td>13</td><td>Iowa</td><td>.5–1</td><td>60–120 mins</td><td>2–6</td><td>15</td><td>Hendrix, Kwaiser and Heard (2010); Kwaiser and Hendrix (2008); unpublished</td></tr><tr><td>C. Kearns</td><td>15</td><td>Colorado</td><td>0.385</td><td>variable</td><td>2–4</td><td>20</td><td>Kearns and Oliveras(2009)</td></tr><tr><td>R. Malfi and N. Williams</td><td>10</td><td>Pennsylvania and New Jersey</td><td>0.5</td><td>120 mins</td><td>4–6</td><td>16</td><td>unpublished</td></tr><tr><td>A. Tripodi</td><td>49</td><td>Tennessee and Arkansas</td><td>.02–5</td><td>15–60 mins</td><td>2–5</td><td>11,13</td><td>unpublished</td></tr></table>
 
 doi:10.1371/journal.pone.0060446.t001
 
@@ -186,87 +178,7 @@ Filtering across Spatial Scales
 
 Tongue Length of Bumblebees
 
-| Species | Cluster |
-| :--- | :--- |
-| ardens | SF |
-| pyrenaeus | SF |
-| beaticola | SF |
-| frigidus | SF |
-| jonellus | SF |
-| cingulatus | SF |
-| mixtus | SF |
-| pratorum | SF |
-| lemniscatus | SF |
-| hypnorum | SF |
-| perplexus | SF |
-| bifarius | SF |
-| ternarius | SF |
-| huntii | SF |
-| vosnesenskii | SF |
-| impatiens | SF |
-| melanopygus | SF |
-| lapponicus | SF |
-| sylvicola | SF |
-| bimaculatus | SF |
-| monticola | SF |
-| vagans | SF |
-| centralis | SF |
-| flavifrons | SF |
-| vandykei | SF |
-| sporadicus | SF |
-| ignitus | SF |
-| terrestris | SF |
-| hypocrita | SF |
-| affinis | SF |
-| lucorum | SF |
-| patagiatus | SF |
-| occidentalis | SF |
-| terricola | SF |
-| balteatus | SF |
-| rufocinctus | SF |
-| fraternus | SF |
-| griseocolis | SF |
-| morrisoni | SF |
-| wurflenii | SF |
-| kashmirensis | SF |
-| sichelli | SF |
-| lapidarius | SF |
-| rufofasciatus | SF |
-| friseanus | SF |
-| ruderarius | LF |
-| veteranus | LF |
-| sylvarum | LF |
-| humilis | LF |
-| pascuorum | LF |
-| honshuensis | LF |
-| pseudobaicalensis | LF |
-| impetuosus | LF |
-| muscorum | LF |
-| filchnerae | LF |
-| laesus | LF |
-| atratus | LF |
-| sonorus | LF |
-| pensylvanicus | LF |
-| medius | LF |
-| bellicosus | LF |
-| californicus | LF |
-| fervidus | LF |
-| consobrinus | LF |
-| hortorum | LF |
-| ruderatus | LF |
-| supremus | LF |
-| diversus | LF |
-| subterraneus | LF |
-| distinguendus | LF |
-| appositus | LF |
-| borealis | LF |
-| haemorrhoidalis | LF |
-| soroeensis | LF |
-| confusus | LF |
-| auricomus | LF |
-| nevadensis | LF |
-| convexus | LF |
-| waltoni | LF |
+<table><tr><td>Species</td><td>Cluster</td></tr><tr><td>ardens</td><td>SF</td></tr><tr><td>pyrenaeus</td><td>SF</td></tr><tr><td>beaticola</td><td>SF</td></tr><tr><td>frigidus</td><td>SF</td></tr><tr><td>jonellus</td><td>SF</td></tr><tr><td>cingulatus</td><td>SF</td></tr><tr><td>mixtus</td><td>SF</td></tr><tr><td>pratorum</td><td>SF</td></tr><tr><td>lemniscatus</td><td>SF</td></tr><tr><td>hypnorum</td><td>SF</td></tr><tr><td>perplexus</td><td>SF</td></tr><tr><td>bifarius</td><td>SF</td></tr><tr><td>ternarius</td><td>SF</td></tr><tr><td>huntii</td><td>SF</td></tr><tr><td>vosnesenskii</td><td>SF</td></tr><tr><td>impatiens</td><td>SF</td></tr><tr><td>melanopygus</td><td>SF</td></tr><tr><td>lapponicus</td><td>SF</td></tr><tr><td>sylvicola</td><td>SF</td></tr><tr><td>bimaculatus</td><td>SF</td></tr><tr><td>monticola</td><td>SF</td></tr><tr><td>vagans</td><td>SF</td></tr><tr><td>centralis</td><td>SF</td></tr><tr><td>flavifrons</td><td>SF</td></tr><tr><td>vandykei</td><td>SF</td></tr><tr><td>sporadicus</td><td>SF</td></tr><tr><td>ignitus</td><td>SF</td></tr><tr><td>terrestris</td><td>SF</td></tr><tr><td>hypocrita</td><td>SF</td></tr><tr><td>affinis</td><td>SF</td></tr><tr><td>lucorum</td><td>SF</td></tr><tr><td>patagiatus</td><td>SF</td></tr><tr><td>occidentalis</td><td>SF</td></tr><tr><td>terricola</td><td>SF</td></tr><tr><td>balteatus</td><td>SF</td></tr><tr><td>rufocinctus</td><td>SF</td></tr><tr><td>fraternus</td><td>SF</td></tr><tr><td>griseocolis</td><td>SF</td></tr><tr><td>morrisoni</td><td>SF</td></tr><tr><td>wurflenii</td><td>SF</td></tr><tr><td>kashmirensis</td><td>SF</td></tr><tr><td>sichelli</td><td>SF</td></tr><tr><td>lapidarius</td><td>SF</td></tr><tr><td>rufofasciatus</td><td>SF</td></tr><tr><td>friseanus</td><td>SF</td></tr><tr><td>ruderarius</td><td>LF</td></tr><tr><td>veteranus</td><td>LF</td></tr><tr><td>sylvarum</td><td>LF</td></tr><tr><td>humilis</td><td>LF</td></tr><tr><td>pascuorum</td><td>LF</td></tr><tr><td>honshuensis</td><td>LF</td></tr><tr><td>pseudobaicalensis</td><td>LF</td></tr><tr><td>impetuosus</td><td>LF</td></tr><tr><td>muscorum</td><td>LF</td></tr><tr><td>filchnerae</td><td>LF</td></tr><tr><td>laesus</td><td>LF</td></tr><tr><td>atratus</td><td>LF</td></tr><tr><td>sonorus</td><td>LF</td></tr><tr><td>pensylvanicus</td><td>LF</td></tr><tr><td>medius</td><td>LF</td></tr><tr><td>bellicosus</td><td>LF</td></tr><tr><td>californicus</td><td>LF</td></tr><tr><td>fervidus</td><td>LF</td></tr><tr><td>consobrinus</td><td>LF</td></tr><tr><td>hortorum</td><td>LF</td></tr><tr><td>ruderatus</td><td>LF</td></tr><tr><td>supremus</td><td>LF</td></tr><tr><td>diversus</td><td>LF</td></tr><tr><td>subterraneus</td><td>LF</td></tr><tr><td>distinguendus</td><td>LF</td></tr><tr><td>appositus</td><td>LF</td></tr><tr><td>borealis</td><td>LF</td></tr><tr><td>haemorrhoidalis</td><td>LF</td></tr><tr><td>soroeensis</td><td>LF</td></tr><tr><td>confusus</td><td>LF</td></tr><tr><td>auricomus</td><td>LF</td></tr><tr><td>nevadensis</td><td>LF</td></tr><tr><td>convexus</td><td>LF</td></tr><tr><td>waltoni</td><td>LF</td></tr></table>
 
 Figure 1. Bi-plot of the phylogeny of species with trait values (n = 79) and the associated tongue length measured in ln(mm). Grey bars indicate species found in the Nearctic. Short faced (SF) and long faced (LF) sister clades are labeled to demonstrate the association with tongue length. Taxa labels are available in the Supplementary Table 1 with trait values. doi:10.1371/journal.pone.0060446.g001
 

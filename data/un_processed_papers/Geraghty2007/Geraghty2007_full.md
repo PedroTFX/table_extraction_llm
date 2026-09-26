@@ -70,28 +70,7 @@ There is some question as to whether Bergmann's Rule should be tested intra- or 
 
 ![Image block](doc:a6a6e24/tier:advanced/page:3/block:1)
 
-| Colony size | Body size (mm) |
-| --- | --- |
-| ~100 | ~0.45 |
-| ~100 | ~0.50 |
-| ~100 | ~0.60 |
-| ~100 | ~0.75 |
-| ~100 | ~0.80 |
-| ~100 | ~0.95 |
-| ~200 | ~1.40 |
-| ~200 | ~1.50 |
-| ~200 | ~1.60 |
-| ~200 | ~1.75 |
-| ~200 | ~1.85 |
-| ~300 | ~1.90 |
-| ~300 | ~2.60 |
-| ~300 | ~3.15 |
-| ~3000 | ~0.45 |
-| ~3000 | ~0.95 |
-| ~3000 | ~1.10 |
-| ~3000 | ~1.45 |
-| ~3000 | ~2.50 |
-| ~9000 | ~2.35 |
+<table><tr><td>Colony size</td><td>Body size (mm)</td></tr><tr><td>~100</td><td>~0.45</td></tr><tr><td>~100</td><td>~0.50</td></tr><tr><td>~100</td><td>~0.60</td></tr><tr><td>~100</td><td>~0.75</td></tr><tr><td>~100</td><td>~0.80</td></tr><tr><td>~100</td><td>~0.95</td></tr><tr><td>~200</td><td>~1.40</td></tr><tr><td>~200</td><td>~1.50</td></tr><tr><td>~200</td><td>~1.60</td></tr><tr><td>~200</td><td>~1.75</td></tr><tr><td>~200</td><td>~1.85</td></tr><tr><td>~300</td><td>~1.90</td></tr><tr><td>~300</td><td>~2.60</td></tr><tr><td>~300</td><td>~3.15</td></tr><tr><td>~3000</td><td>~0.45</td></tr><tr><td>~3000</td><td>~0.95</td></tr><tr><td>~3000</td><td>~1.10</td></tr><tr><td>~3000</td><td>~1.45</td></tr><tr><td>~3000</td><td>~2.50</td></tr><tr><td>~9000</td><td>~2.35</td></tr></table>
 
 Fig. 2: The relationship between body size (in mm, measured as Weber's Length) and colony size (estimated as the number of workers) for 36 forest ant species in eastern North America. In the figure, each symbol represents a single species, and the line is the best-fit regression line.
 

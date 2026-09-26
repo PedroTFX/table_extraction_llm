@@ -155,13 +155,7 @@ Concerning population growth parameters, we found that the intrinsic rate of inc
 
 Table 2. Population growth parameters (mean ± SE) (r<sub>m</sub>: intrinsic rate of increase; λ: finite rate of increase; DT: doubling time; τ: mean generation time; $R _ { 0 } ;$ net reproductive rate) of Scymnus nubilus fed single-aphid diets of Aphis fabae or Myzus persicae $( 2 5 ^ { \circ } \pm 1 ^ { \circ } \; \mathsf { C } , 7 5 \pm 5 \%$ relative humidity, and 16L:8D light regime).
 
-| Population Growth Parameters | A. fabae | M. persicae |
-| --- | --- | --- |
-| $r_m$ (female/female day$^{-1}$) | 0.190 ± 0.002 a | 0.178 ± 0.003 b |
-| λ (female/female day$^{-1}$) | 1.210 ± 0.003 a | 1.195 ± 0.003 b |
-| DT (days) | 3.642 ± 0.042 b | 3.893 ± 0.057 a |
-| τ (days) | 32.6 ± 0.7 a | 30.0 ± 1.3 a |
-| $R_0$ (female offspring/female) | 489.6 ± 63.6 a | 201.2 ± 51.2 b |
+<table><tr><td>Population Growth Parameters</td><td>A. fabae</td><td>M. persicae</td></tr><tr><td>$r_m$ (female/female day$^{-1}$)</td><td>0.190 ± 0.002 a</td><td>0.178 ± 0.003 b</td></tr><tr><td>λ (female/female day$^{-1}$)</td><td>1.210 ± 0.003 a</td><td>1.195 ± 0.003 b</td></tr><tr><td>DT (days)</td><td>3.642 ± 0.042 b</td><td>3.893 ± 0.057 a</td></tr><tr><td>τ (days)</td><td>32.6 ± 0.7 a</td><td>30.0 ± 1.3 a</td></tr><tr><td>$R_0$ (female offspring/female)</td><td>489.6 ± 63.6 a</td><td>201.2 ± 51.2 b</td></tr></table>
 
 Population growth parameters followed by different letters are significantly different.
 
@@ -179,21 +173,7 @@ Figure 1. Age-specific survivalFigure 1. Age-specific survival $( l _ { x } ;$ l
 
 On the A. fabae diet, the mean lifespan was significantly longer than on M. persicaeOn the A. fabae diet, the mean lifespan was significantly longer than on M. persicae O th(Log-Rank test:(Log-Rank test: $\chi ^ { 2 } = 3 9 8 . 7 7$ i, , $p < 0 . 0 0 1$ lif  i ifi tl l th; Figure 2). Across the entire life cycle, the predatorFi ure 2). Acro the entire life c cle, the redator showed a higher survival rate when fed A. fabae.h d  hi h i l t h f d A. b
 
-| Time (days) | Aphis fabae (Percent survival) | Myzus persicae (Percent survival) |
-| --- | --- | --- |
-| 0 | 1.00 | 1.00 |
-| 30 | 1.00 | ~0.90 |
-| 40 | 1.00 | ~0.80 |
-| 50 | 1.00 | ~0.70 |
-| 60 | ~0.90 | ~0.60 |
-| 70 | ~0.80 | ~0.50 |
-| 80 | ~0.70 | ~0.40 |
-| 90 | ~0.60 | ~0.40 |
-| 100 | ~0.50 | ~0.20 |
-| 110 | ~0.40 | ~0.10 |
-| 120 | ~0.30 | 0.00 |
-| 130 | ~0.10 | — |
-| 150 | 0.00 | — |
+<table><tr><td>Time (days)</td><td>Aphis fabae (Percent survival)</td><td>Myzus persicae (Percent survival)</td></tr><tr><td>0</td><td>1.00</td><td>1.00</td></tr><tr><td>30</td><td>1.00</td><td>~0.90</td></tr><tr><td>40</td><td>1.00</td><td>~0.80</td></tr><tr><td>50</td><td>1.00</td><td>~0.70</td></tr><tr><td>60</td><td>~0.90</td><td>~0.60</td></tr><tr><td>70</td><td>~0.80</td><td>~0.50</td></tr><tr><td>80</td><td>~0.70</td><td>~0.40</td></tr><tr><td>90</td><td>~0.60</td><td>~0.40</td></tr><tr><td>100</td><td>~0.50</td><td>~0.20</td></tr><tr><td>110</td><td>~0.40</td><td>~0.10</td></tr><tr><td>120</td><td>~0.30</td><td>0.00</td></tr><tr><td>130</td><td>~0.10</td><td>—</td></tr><tr><td>150</td><td>0.00</td><td>—</td></tr></table>
 
 Myzus persicae Figure 2. Kaplan–Meier survival curves of Scymnus nubilus fed single-aphid diets of black beanFigure 2. Kaplan–Meier survival curves of Scymnus nubilus fed single-aphid diets of black bean 0.00aphids (Aphis fabae; dark gray) or green peach aphids (Myzus persicae; pale green) and 95% confi-aphids (Aphis fabae; dark gray) or green peach aphids (Myzus persicae; pale green) and 95% dence intervals.confidence intervals.
 

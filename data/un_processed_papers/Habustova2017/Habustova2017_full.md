@@ -97,13 +97,7 @@ Toxins 2017, 9, 121
 
 Table 2. Mean (±SE) indices of carabid diversity in the examined localities per year.
 
-| Locality | No. of Tested Years | Simpson Dominance Index (D) | Berger-Parker Index (D) | Species Evenness (E) | Margalef Index (DMg) |
-| --- | --- | --- | --- | --- | --- |
-| SB1 | 1 | 0.18 | 0.32 | 0.59 | 3.95 |
-| SB2 | 3 | 0.37 ± 0.08 | 0.60 | 0.44 ± 0.07 | 4.25 ± 0.55 |
-| SB3 | 3 | 0.53 ± 0.15 | 0.80 | 0.38 ± 0.13 | 2.60 ± 0.23 |
-| CB | 2 | 0.28 ± 0.01 | 0.47 | 0.53 ± 0.03 | 3.38 ± 0.21 |
-| WS | 2 | 0.48 ± 0.08 | 0.70 | 0.39 ± 0.07 | 3.05 ± 0.30 |
+<table><tr><td>Locality</td><td>No. of Tested Years</td><td>Simpson Dominance Index (D)</td><td>Berger-Parker Index (D)</td><td>Species Evenness (E)</td><td>Margalef Index (DMg)</td></tr><tr><td>SB1</td><td>1</td><td>0.18</td><td>0.32</td><td>0.59</td><td>3.95</td></tr><tr><td>SB2</td><td>3</td><td>0.37 ± 0.08</td><td>0.60</td><td>0.44 ± 0.07</td><td>4.25 ± 0.55</td></tr><tr><td>SB3</td><td>3</td><td>0.53 ± 0.15</td><td>0.80</td><td>0.38 ± 0.13</td><td>2.60 ± 0.23</td></tr><tr><td>CB</td><td>2</td><td>0.28 ± 0.01</td><td>0.47</td><td>0.53 ± 0.03</td><td>3.38 ± 0.21</td></tr><tr><td>WS</td><td>2</td><td>0.48 ± 0.08</td><td>0.70</td><td>0.39 ± 0.07</td><td>3.05 ± 0.30</td></tr></table>
 
 Table 3. Similarity matrices of Jaccard and Sorensen–Dice indices between carabid communities in the examined localities. Highest values for both indices are in bold.
 
@@ -115,11 +109,7 @@ The lowest percentage of variability explained by localities occurred in the TaT
 
 Table 4. Changes in the variability explained by environmental variables in the SaS, SaT, and TaT models (see Section 5.3 Data Analysis) in CCA between cut-off levels 230 and 600 individuals per species. Values based on data are given before parentheses and values in parentheses are based on values interpolations from the constructed curves.
 
-| Environmental Variable | SaS | SaT | TaT |
-| --- | --- | --- | --- |
-| Locality | 5.2 (12.1) | 0.1 (6.5) | n.a.$^{1}$(1.2) |
-| Time series A (Sampling date) | 2.3 (3.6) | 0.9 (3.1) | n.a. (0.3) |
-| Year | 0.1 (n. a.) | 0.5 (0) | n.a. (0.1) |
+<table><tr><td>Environmental Variable</td><td>SaS</td><td>SaT</td><td>TaT</td></tr><tr><td>Locality</td><td>5.2 (12.1)</td><td>0.1 (6.5)</td><td>n.a.$^{1}$(1.2)</td></tr><tr><td>Time series A (Sampling date)</td><td>2.3 (3.6)</td><td>0.9 (3.1)</td><td>n.a. (0.3)</td></tr><tr><td>Year</td><td>0.1 (n. a.)</td><td>0.5 (0)</td><td>n.a. (0.1)</td></tr></table>
 
 1 n.a.: not available.
 
@@ -129,53 +119,15 @@ Toxins 2017, 9, 121
 
 6 of 18
 
-| log number of individuals | SaS model (%) | SaT model (%) | TaT model (%) |
-| --- | --- | --- | --- |
-| ~10 | ~16 | ~24 | ~23 |
-| ~20 | ~18 | ~24 | ~23 |
-| ~30 | ~18 | ~24 | ~23 |
-| ~40 | ~19 | ~24 | ~23 |
-| ~50 | ~19 | ~24 | ~23 |
-| ~60 | ~20 | ~24 | ~23 |
-| ~70 | ~21 | ~24 | ~23 |
-| ~80 | ~22 | ~24 | ~23 |
-| ~90 | ~23 | ~25 | ~23 |
-| ~100 | ~24 | ~26 | ~23 |
-| ~150 | ~25 | ~27 | ~24 |
-| ~200 | ~28 | ~28 | ~24 |
-| ~300 | ~31 | ~29 | ~25 |
-| ~400 | ~34 | ~30 | ~26 |
-| ~500 | ~35 | ~31 | ~27 |
-| ~600 | ~36 | ~32 | ~28 |
-| ~700 | ~42 | ~35 | ~29 |
-| ~800 | ~46 | ~35 | ~30 |
-| ~900 | ~52 | ~35 | ~31 |
-| ~1000 | ~53 | ~35 | ~32 |
-| ~1500 | ~63 | ~59 | ~34 |
-| ~2000 | ~66 | ~69 | ~31 |
-| ~3000 | — | — | ~30 |
-| ~4000 | — | — | ~33 |
-| ~5000 | — | — | ~29 |
-| ~10000 | — | — | ~31 |
-| ~20000 | — | — | ~31 |
-| ~30000 | — | — | ~33 |
-| ~40000 | — | — | ~27 |
+<table><tr><td>log number of individuals</td><td>SaS model (%)</td><td>SaT model (%)</td><td>TaT model (%)</td></tr><tr><td>~10</td><td>~16</td><td>~24</td><td>~23</td></tr><tr><td>~20</td><td>~18</td><td>~24</td><td>~23</td></tr><tr><td>~30</td><td>~18</td><td>~24</td><td>~23</td></tr><tr><td>~40</td><td>~19</td><td>~24</td><td>~23</td></tr><tr><td>~50</td><td>~19</td><td>~24</td><td>~23</td></tr><tr><td>~60</td><td>~20</td><td>~24</td><td>~23</td></tr><tr><td>~70</td><td>~21</td><td>~24</td><td>~23</td></tr><tr><td>~80</td><td>~22</td><td>~24</td><td>~23</td></tr><tr><td>~90</td><td>~23</td><td>~25</td><td>~23</td></tr><tr><td>~100</td><td>~24</td><td>~26</td><td>~23</td></tr><tr><td>~150</td><td>~25</td><td>~27</td><td>~24</td></tr><tr><td>~200</td><td>~28</td><td>~28</td><td>~24</td></tr><tr><td>~300</td><td>~31</td><td>~29</td><td>~25</td></tr><tr><td>~400</td><td>~34</td><td>~30</td><td>~26</td></tr><tr><td>~500</td><td>~35</td><td>~31</td><td>~27</td></tr><tr><td>~600</td><td>~36</td><td>~32</td><td>~28</td></tr><tr><td>~700</td><td>~42</td><td>~35</td><td>~29</td></tr><tr><td>~800</td><td>~46</td><td>~35</td><td>~30</td></tr><tr><td>~900</td><td>~52</td><td>~35</td><td>~31</td></tr><tr><td>~1000</td><td>~53</td><td>~35</td><td>~32</td></tr><tr><td>~1500</td><td>~63</td><td>~59</td><td>~34</td></tr><tr><td>~2000</td><td>~66</td><td>~69</td><td>~31</td></tr><tr><td>~3000</td><td>—</td><td>—</td><td>~30</td></tr><tr><td>~4000</td><td>—</td><td>—</td><td>~33</td></tr><tr><td>~5000</td><td>—</td><td>—</td><td>~29</td></tr><tr><td>~10000</td><td>—</td><td>—</td><td>~31</td></tr><tr><td>~20000</td><td>—</td><td>—</td><td>~31</td></tr><tr><td>~30000</td><td>—</td><td>—</td><td>~33</td></tr><tr><td>~40000</td><td>—</td><td>—</td><td>~27</td></tr></table>
 
 (a)
 
-| Series | log number of individuals (range) | explained variability [%] (range) |
-| --- | --- | --- |
-| Solid Line (Circle) | 10~3000 | 3.5~29.5 |
-| Dashed Line (Square) | 10~3000 | 4.5~28.0 |
-| Dashed Line (Triangle) | 100~40000 | 4.5~10.5 |
+<table><tr><td>Series</td><td>log number of individuals (range)</td><td>explained variability [%] (range)</td></tr><tr><td>Solid Line (Circle)</td><td>10~3000</td><td>3.5~29.5</td></tr><tr><td>Dashed Line (Square)</td><td>10~3000</td><td>4.5~28.0</td></tr><tr><td>Dashed Line (Triangle)</td><td>100~40000</td><td>4.5~10.5</td></tr></table>
 
 (b)
 
-| Series | log number of individuals (range) | explained variability [%] (range) |
-| --- | --- | --- |
-| Circle | 10~3000 | 0.8~1.9 |
-| Square | 10~4000 | 1.5~2.7 |
-| Triangle | 1000~40000 | 0.0~1.7 |
+<table><tr><td>Series</td><td>log number of individuals (range)</td><td>explained variability [%] (range)</td></tr><tr><td>Circle</td><td>10~3000</td><td>0.8~1.9</td></tr><tr><td>Square</td><td>10~4000</td><td>1.5~2.7</td></tr><tr><td>Triangle</td><td>1000~40000</td><td>0.0~1.7</td></tr></table>
 
 (c)
 
@@ -191,25 +143,7 @@ In the SaT model at a cut-off level of 600, most of the categories of functional
 
 When we compared plots with GM events and plots treated with insecticides at a cut-off level of 600, the variability explained by these localities was 20.7%. It was lower than baseline (Figure 1a: SaT model, x (no. of individuals) = 600, y (explained variability) = 28.1%), indicating low probability of an impact of GM maize on the carabid groupings in these localities (Figure 3a). When GM events were compared with near-isogenic cultivars, variability among these plots in different localities was 28.9% (Figure 3b), which is still around the level of variability explained by different localities. A higher difference would indicate that the GM crop had an impact on the agroecosystem.T i **2017**, 9, 121
 
-| Species | X-axis Position | Y-axis Position |
-| :--- | :--- | :--- |
-| Central Bohemia | ~1.8 | ~1.9 |
-| South Bohemia 1 | ~-1.3 | ~0.7 |
-| xerophilous | ~1.2 | ~0.5 |
-| body C | ~-1.1 | ~0.4 |
-| spring breeder | ~1.0 | ~0.3 |
-| body D | ~1.0 | ~0.3 |
-| carnivorous | ~1.0 | ~0.2 |
-| open biotopes (humidity) | ~-1.3 | ~0.2 |
-| eurytopic | ~-1.3 | ~0.1 |
-| omnivorous summer breeder | ~-1.2 | ~0.1 |
-| body B | ~1.0 | ~0.0 |
-| autumn breeder | ~1.0 | ~0.0 |
-| eurytopic (habitat) | ~1.3 | ~0.0 |
-| mesophilous | ~1.4 | ~0.0 |
-| hygrophilous | ~-1.3 | ~-0.8 |
-| western Slovakia | ~-1.4 | ~-1.2 |
-| South Bohemia 3 | ~1.9 | ~-1.4 |
+<table><tr><td>Species</td><td>X-axis Position</td><td>Y-axis Position</td></tr><tr><td>Central Bohemia</td><td>~1.8</td><td>~1.9</td></tr><tr><td>South Bohemia 1</td><td>~-1.3</td><td>~0.7</td></tr><tr><td>xerophilous</td><td>~1.2</td><td>~0.5</td></tr><tr><td>body C</td><td>~-1.1</td><td>~0.4</td></tr><tr><td>spring breeder</td><td>~1.0</td><td>~0.3</td></tr><tr><td>body D</td><td>~1.0</td><td>~0.3</td></tr><tr><td>carnivorous</td><td>~1.0</td><td>~0.2</td></tr><tr><td>open biotopes (humidity)</td><td>~-1.3</td><td>~0.2</td></tr><tr><td>eurytopic</td><td>~-1.3</td><td>~0.1</td></tr><tr><td>omnivorous summer breeder</td><td>~-1.2</td><td>~0.1</td></tr><tr><td>body B</td><td>~1.0</td><td>~0.0</td></tr><tr><td>autumn breeder</td><td>~1.0</td><td>~0.0</td></tr><tr><td>eurytopic (habitat)</td><td>~1.3</td><td>~0.0</td></tr><tr><td>mesophilous</td><td>~1.4</td><td>~0.0</td></tr><tr><td>hygrophilous</td><td>~-1.3</td><td>~-0.8</td></tr><tr><td>western Slovakia</td><td>~-1.4</td><td>~-1.2</td></tr><tr><td>South Bohemia 3</td><td>~1.9</td><td>~-1.4</td></tr></table>
 
 Figure 2. CCA ordination diagram showing the importance of locality for functional trait categories of,      carabids that reached an abundance of at least 600 (10 species, 14 categories) based on the SaT model (explained in Section 5.3 Data Analysis).
 
@@ -221,24 +155,7 @@ Toxins 2017, 9, 121
 
 Table 5. Species with abundance higher than 230 included in the CCA analysis of the SaT model (explained in Section 5.3 Data Analysis) and their functiona classification (explained in footnote of Table 1). Species with abundance higher than 600 are highlighted in bold. Underlined species were sampled in all localities.
 
-| Species | Total Abundance | Body Size | Habitat Affinity | Humidity Affinity | Breeding Period | Food Specialization |
-| --- | --- | --- | --- | --- | --- | --- |
-| Agonum muelleri | 256 | C | Eurytopic | Hygrophilous | Spring | Carnivorous |
-| Anchomenus dorsalis | 1099 | C | Open biotopes | Hygrophilous | Spring | Carnivorous |
-| Bembidion lampros | 462 | D | Open biotopes | Eurytopic | Spring | Carnivorous |
-| Bembidion quadrimaculatum | 1680 | D | Open biotopes | Eurytopic | Spring | Carnivorous |
-| Brachinus crepitans | 348 | C | Open biotopes | Xerophilous | Summer | Carnivorous |
-| Brachinus explondes | 294 | D | Open biotopes | Hygrophilous | Spring | Carnivorous |
-| Calathus fuscipes | 2811 | B | Open biotopes | Xerophilous | Autumn | Carnivorous |
-| Carabus granulatus | 596 | B | Silvicolous | Hygrophilous | Spring | Carnivorous |
-| Clivina fossor | 325 | C | Open biotopes | Hygrophilous | Spring | Carnivorous |
-| Harpalus affinis | 920 | C | Open biotopes | Eurytopic | Spring/summer/autumn | Omnivorous |
-| Harpalus rubripes | 2734 | C | Open biotopes | Eurytopic | Spring | Omnivorous |
-| Poecilus cupreus | 15,975 | B | Eurytopic | Eurytopic | Spring | Omnivorous |
-| Poecilus versicolor | 1710 | C | Open biotopes | Hygrophilous | Spring | Carnivorous |
-| Pseudoophonus rufipes | 7871 | B | Open biotopes | Eurytopic | Autumn | Omnivorous |
-| Pterostichus melanarius | 18,297 | B | Eurytopic | Mesophilous | Autumn | Carnivorous |
-| Trechus quadristriatus | 841 | D | Open biotopes | Mesophilous | Autumn | Carnivorous |
+<table><tr><td>Species</td><td>Total Abundance</td><td>Body Size</td><td>Habitat Affinity</td><td>Humidity Affinity</td><td>Breeding Period</td><td>Food Specialization</td></tr><tr><td>Agonum muelleri</td><td>256</td><td>C</td><td>Eurytopic</td><td>Hygrophilous</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Anchomenus dorsalis</td><td>1099</td><td>C</td><td>Open biotopes</td><td>Hygrophilous</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Bembidion lampros</td><td>462</td><td>D</td><td>Open biotopes</td><td>Eurytopic</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Bembidion quadrimaculatum</td><td>1680</td><td>D</td><td>Open biotopes</td><td>Eurytopic</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Brachinus crepitans</td><td>348</td><td>C</td><td>Open biotopes</td><td>Xerophilous</td><td>Summer</td><td>Carnivorous</td></tr><tr><td>Brachinus explondes</td><td>294</td><td>D</td><td>Open biotopes</td><td>Hygrophilous</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Calathus fuscipes</td><td>2811</td><td>B</td><td>Open biotopes</td><td>Xerophilous</td><td>Autumn</td><td>Carnivorous</td></tr><tr><td>Carabus granulatus</td><td>596</td><td>B</td><td>Silvicolous</td><td>Hygrophilous</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Clivina fossor</td><td>325</td><td>C</td><td>Open biotopes</td><td>Hygrophilous</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Harpalus affinis</td><td>920</td><td>C</td><td>Open biotopes</td><td>Eurytopic</td><td>Spring/summer/autumn</td><td>Omnivorous</td></tr><tr><td>Harpalus rubripes</td><td>2734</td><td>C</td><td>Open biotopes</td><td>Eurytopic</td><td>Spring</td><td>Omnivorous</td></tr><tr><td>Poecilus cupreus</td><td>15,975</td><td>B</td><td>Eurytopic</td><td>Eurytopic</td><td>Spring</td><td>Omnivorous</td></tr><tr><td>Poecilus versicolor</td><td>1710</td><td>C</td><td>Open biotopes</td><td>Hygrophilous</td><td>Spring</td><td>Carnivorous</td></tr><tr><td>Pseudoophonus rufipes</td><td>7871</td><td>B</td><td>Open biotopes</td><td>Eurytopic</td><td>Autumn</td><td>Omnivorous</td></tr><tr><td>Pterostichus melanarius</td><td>18,297</td><td>B</td><td>Eurytopic</td><td>Mesophilous</td><td>Autumn</td><td>Carnivorous</td></tr><tr><td>Trechus quadristriatus</td><td>841</td><td>D</td><td>Open biotopes</td><td>Mesophilous</td><td>Autumn</td><td>Carnivorous</td></tr></table>
 
 <!-- page 9 of 18 -->
 
@@ -322,22 +239,7 @@ Toxins 2017, 9, 121
 
 Table 6. Basic features of the examined localities and information on field trials in the localities South Bohemia 1 (SB1), 2 (SB2), and 3 (SB3); Central Bohemia (CB); and western Slovakia (WS).
 
-| Features | SB1 | SB2 | SB3 | CB | WS |
-| --- | --- | --- | --- | --- | --- |
-| Timing (sowing-harvest, maize stage during harvest) | 2002(15.5-17.9. (BBCH 87)) | 2003-2005 | 2009-2011 | 2013-2014 | 2014-2015(2014: 28.4-29.10.2015: 5.5-30.10. (2nd trial), 4.11. (1st trial) (BBCH 89)) |
-| GPS coordinates | $48^{\circ}97'$ N $14^{\circ}44'$ E | $48^{\circ}58'$ N $14^{\circ}24'$ E | $48^{\circ}59'$ N $14^{\circ}20'$ E | $50^{\circ}09'$ N $15^{\circ}11'$ E | $48^{\circ}34'$ N $17^{\circ}43'$ E |
-| Altitude (m a.s.l.) | 381 | 409 | 420 | 285 | 160 |
-| Climatic region | Moderately warm humid | Moderately warm humid | Moderately warm humid | Warm, slightly dry | Warm, moderate arid |
-| Average annual temperature (°C) | 8.1 | 8.1 | 8.1 | 8.9 | 9.2 |
-| Average annual precipitation (mm) | 623 | 623 | 623 | 596 | 593 |
-| Prevalent soil type | Cambisol, sandy loam brown | Cambisol, sandy loam brown | Medium-weight, mildly humid clay-loam brown | Medium-grained black floodplain from debris | Loamy luvic chernozem |
-| Trial area (ha) | 7.6 | 14 | 15 | 4.38 | 2.9 (1st trial); 0.52 (2nd trial) |
-| No. of plots (plot size in ha) | 10 (0.5) | 10 (0.5) | 25 (0.5) | 54 (0.054) | 12 (0.09, 1st trial); 20 (0.01, 2nd trial); |
-| No. of pitfall traps per plot/total amount | 5/50 | 5/50 | 5/125 | 2/108 | 2/24 (1st trial); 2/40 (2nd trial) |
-| GM cultivar (No. of plots) | YieldGard®MON $810^1$ (5) | YieldGard®MON $810^1$ (5) | YieldGardVT Rootworm/RR$2^{TM}$ MON $88017^1$ (5) | Roundup ReadyTM 2NK $603^1$ ($54^2$) | YieldGard®MON $810^1$ (4 in 1st trial; 10 in 2nd trial) |
-| Near-isogenic cultivar (No. of plots) | Monumental (5) | Monumental (5) | DK 315 ($5, 5^3$) | None | DKC 3871 (4, 4 in 1st field trial; 10 in 2nd field trial4) |
-| Other treatments (No. of plots) | None | None | (b) Cultivar Kipous (KWS SAAT AG) (5)(c) Cv. PR38N86 (DuPont Pioneer) (5) | None | None |
-| References | [48] | [10,49] | [50] | [46] | None |
+<table><tr><td>Features</td><td>SB1</td><td>SB2</td><td>SB3</td><td>CB</td><td>WS</td></tr><tr><td>Timing (sowing-harvest, maize stage during harvest)</td><td>2002(15.5-17.9. (BBCH 87))</td><td>2003-2005</td><td>2009-2011</td><td>2013-2014</td><td>2014-2015(2014: 28.4-29.10.2015: 5.5-30.10. (2nd trial), 4.11. (1st trial) (BBCH 89))</td></tr><tr><td>GPS coordinates</td><td>$48^{\circ}97'$ N $14^{\circ}44'$ E</td><td>$48^{\circ}58'$ N $14^{\circ}24'$ E</td><td>$48^{\circ}59'$ N $14^{\circ}20'$ E</td><td>$50^{\circ}09'$ N $15^{\circ}11'$ E</td><td>$48^{\circ}34'$ N $17^{\circ}43'$ E</td></tr><tr><td>Altitude (m a.s.l.)</td><td>381</td><td>409</td><td>420</td><td>285</td><td>160</td></tr><tr><td>Climatic region</td><td>Moderately warm humid</td><td>Moderately warm humid</td><td>Moderately warm humid</td><td>Warm, slightly dry</td><td>Warm, moderate arid</td></tr><tr><td>Average annual temperature (°C)</td><td>8.1</td><td>8.1</td><td>8.1</td><td>8.9</td><td>9.2</td></tr><tr><td>Average annual precipitation (mm)</td><td>623</td><td>623</td><td>623</td><td>596</td><td>593</td></tr><tr><td>Prevalent soil type</td><td>Cambisol, sandy loam brown</td><td>Cambisol, sandy loam brown</td><td>Medium-weight, mildly humid clay-loam brown</td><td>Medium-grained black floodplain from debris</td><td>Loamy luvic chernozem</td></tr><tr><td>Trial area (ha)</td><td>7.6</td><td>14</td><td>15</td><td>4.38</td><td>2.9 (1st trial); 0.52 (2nd trial)</td></tr><tr><td>No. of plots (plot size in ha)</td><td>10 (0.5)</td><td>10 (0.5)</td><td>25 (0.5)</td><td>54 (0.054)</td><td>12 (0.09, 1st trial); 20 (0.01, 2nd trial);</td></tr><tr><td>No. of pitfall traps per plot/total amount</td><td>5/50</td><td>5/50</td><td>5/125</td><td>2/108</td><td>2/24 (1st trial); 2/40 (2nd trial)</td></tr><tr><td>GM cultivar (No. of plots)</td><td>YieldGard®MON $810^1$ (5)</td><td>YieldGard®MON $810^1$ (5)</td><td>YieldGardVT Rootworm/RR$2^{TM}$ MON $88017^1$ (5)</td><td>Roundup ReadyTM 2NK $603^1$ ($54^2$)</td><td>YieldGard®MON $810^1$ (4 in 1st trial; 10 in 2nd trial)</td></tr><tr><td>Near-isogenic cultivar (No. of plots)</td><td>Monumental (5)</td><td>Monumental (5)</td><td>DK 315 ($5, 5^3$)</td><td>None</td><td>DKC 3871 (4, 4 in 1st field trial; 10 in 2nd field trial4)</td></tr><tr><td>Other treatments (No. of plots)</td><td>None</td><td>None</td><td>(b) Cultivar Kipous (KWS SAAT AG) (5)(c) Cv. PR38N86 (DuPont Pioneer) (5)</td><td>None</td><td>None</td></tr><tr><td>References</td><td>[48]</td><td>[10,49]</td><td>[50]</td><td>[46]</td><td>None</td></tr></table>
 
 1 MONSANTO Technology $\operatorname { L L C } ; { } ^ { 2 }$ Treatments: Herbicides: (a) Foramsulfuron; (b) Glyphosate: split application; and (c) Glyphosate + acetochlor, Tillage: (a) Conventional; (b) Reduced; and (c) Cover crops: Hordeum vulgare, Phacelia tanacetifolia, Sinapis alba or Trifolium incarnatum; 3 Treatments: (a) DK 315 alone; and (b) DK 315 + insecticide chlorpyrifos; 4 Treatments: 1st trial: (a) DKC 3871 + lambda-cyhalothrin (0.25 L/ha); and (b) DKC 3871 + bioinsecticide Bacillus thuringiensis ssp. kurstaki (1.5 L/ha), 2nd trial: DKC 3871 + lambda-cyhalothrin.
 

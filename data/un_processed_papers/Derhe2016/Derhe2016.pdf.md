@@ -164,13 +164,7 @@ Restoration of biodiversity and functionality
 
 1719
 
-| Series | MDS axis 1 (range) | MDS axis 2 (range) |
-| --- | --- | --- |
-| Pasture | -0.3~0.6 | -0.5~0.1 |
-| Young restoration | -0.3~0.6 | -0.7~0.0 |
-| Mid restoration | -0.4~0.2 | -0.2~0.6 |
-| Old restoration | -0.4~0.3 | -0.3~0.6 |
-| Rainforest | -0.5~-0.1 | -0.2~0.2 |
+<table><tr><td>Series</td><td>MDS axis 1 (range)</td><td>MDS axis 2 (range)</td></tr><tr><td>Pasture</td><td>-0.3~0.6</td><td>-0.5~0.1</td></tr><tr><td>Young restoration</td><td>-0.3~0.6</td><td>-0.7~0.0</td></tr><tr><td>Mid restoration</td><td>-0.4~0.2</td><td>-0.2~0.6</td></tr><tr><td>Old restoration</td><td>-0.4~0.3</td><td>-0.3~0.6</td></tr><tr><td>Rainforest</td><td>-0.5~-0.1</td><td>-0.2~0.2</td></tr></table>
 
 Fig. 2. Non-metric multidimensional scaling ordination of community assemblages between the different habitat categories (pasture, young reforestation, mid-reforestation, old reforestation and rain forest) at the site scale, based on square-root-transformed, standardized abundance data $( r ^ { 2 } = 0 { \cdot } 7 3 )$
 

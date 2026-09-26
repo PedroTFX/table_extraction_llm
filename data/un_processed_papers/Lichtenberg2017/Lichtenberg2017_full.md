@@ -86,10 +86,7 @@ Journal of Animal Ecology
 
 LICHTENBERG et al.
 
-| Category | Species | Environmental variables |
-| --- | --- | --- |
-| Sites | Abundance/presence | — |
-| Traits | — | Fourth corner |
+<table><tr><td>Category</td><td>Species</td><td>Environmental variables</td></tr><tr><td>Sites</td><td>Abundance/presence</td><td>—</td></tr><tr><td>Traits</td><td>—</td><td>Fourth corner</td></tr></table>
 
 F I G U R E   1   The “fourth-corner problem” refers to the difficulty of analysing joint effects of environment and trait, because the former is a property of sites and the later a property of species. Here, each grey box represents a data matrix or table (modified from figure 1 in Walker et al., 2012)
 
@@ -153,26 +150,7 @@ LICHTENBERG et al.
 
 Trait values for Costa Rican stingless bee species used
 
-| Species | Name in Brosi (2009)$^A$ | Head width (mm)$^B$ | Colony size (# workers)$^C$ | Diet breadth$^z$ | Group foraging?$^D$ | Nests in ground?$^E$ | Inquiline nesting?$^E$ | Nests in man-made structures?$^E$ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Aparatrigona isopterophila | Paratrigona isopterophila | $2.17^i$ | $185^h$ | 0.56 |  | No | Yes | No |
-| Melipona costaricensis or panamica | Melipona fasciata$^{cc}$ | $4.01^{i,p,ee}$ | $1092.84^{b,h,j,n,o,dd}$ | 0.44 | $No^k$ | No | No | No |
-| Oxytrigona mellicolor | Oxytrigona sp.$^{i,w}$ | $2.7^i$ | $5442^h$ |  | $Yes^u$ | No | No | No |
-| Paratrigona ornaticeps | Paratrigona ornaticeps | $1.795^{i,l}$ | $1710^h$ | 0.56 |  | No | No | No |
-| Partamona orizabaensis | Partemona orizabaensis | $2.46^s$ | $2950^{b,c}$ | 0.37 | $Yes^{g,k}$ | Yes | Yes | Yes |
-| Plebeia frontalis | Plebeia frontalis | $1.8^{i,ee}$ | $1500^{b,c,f,h}$ | 0.51 | $No^{c,g}$ | No | No | Yes |
-| Plebeia jatiformis | Noguerapis sp., Plebeia jatiformis | $1.5^i$ | $805^h$ | 0.51 | $No^k$ | No | No | No |
-| Ptilotrigona occidentalis | Trigona c.f. ferricauda | $3.055^{i,v}$ |  |  |  | No | Yes | No |
-| Scaptotrigona pectoralis | Scaptotrigona c.f. pectoralis | $2.5^i$ | $4375^{c,f}$ | 0.26 | $Yes^{c,d,g,q,t}$ | No | No | Yes |
-| Scaptotrigona subobscuripennis | Scaptotrigona mexicana | $2.6^i$ |  | 0.26 | $Yes^{c,d,g,m,r,t,aa}$ | Yes | No | No |
-| Tetragona perangulata | Trigona sp. 2, Trigona perangulata | $2.7^i$ |  | 0.53 |  | No | No | No |
-| Tetragona ziegleri | Trigona dorsalis | $2.3^i$ | $2647.75^{c,f,t}$ | 0.53 | $No^c$ | Yes | No | Yes |
-| Tetragonisca angustula | $Trigona angustula^{w,bb}$ | $1.8^i$ | $2715^{a,h,n,x,y}$ | 0.5 | $No^g$ | Yes | No | Yes |
-| Tetragonisca buchwaldi | Trigona sp.$1^i$ | $1.9^i$ | $1376.25^b$ | 0.5 |  | Yes | Yes | No |
-| Trigona corvina | Trigona corvine | $2.5^i$ | $13,625^{b,c,h,y}$ | 0.43 | $Yes^{d,e,t}$ | Yes | No | No |
-| Trigona fulviventris | Trigona fulviventris | $2.7^i$ | $9375^{c,f,h}$ | 0.43 | $Yes^{g,t}$ | Yes | Yes | Yes |
-| Trigona silvestriana | Trigona amalthea | $3.3^{i,ee}$ | $7500^{c,f,h}$ | 0.43 | $Yes^{c,d,e,g}$ | No | No | No |
-| Trigonisca sp. | Trigonisca sp. | $1.2^i$ |  |  |  | No | No | No |
+<table><tr><td>Species</td><td>Name in Brosi (2009)$^A$</td><td>Head width (mm)$^B$</td><td>Colony size (# workers)$^C$</td><td>Diet breadth$^z$</td><td>Group foraging?$^D$</td><td>Nests in ground?$^E$</td><td>Inquiline nesting?$^E$</td><td>Nests in man-made structures?$^E$</td></tr><tr><td>Aparatrigona isopterophila</td><td>Paratrigona isopterophila</td><td>$2.17^i$</td><td>$185^h$</td><td>0.56</td><td></td><td>No</td><td>Yes</td><td>No</td></tr><tr><td>Melipona costaricensis or panamica</td><td>Melipona fasciata$^{cc}$</td><td>$4.01^{i,p,ee}$</td><td>$1092.84^{b,h,j,n,o,dd}$</td><td>0.44</td><td>$No^k$</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Oxytrigona mellicolor</td><td>Oxytrigona sp.$^{i,w}$</td><td>$2.7^i$</td><td>$5442^h$</td><td></td><td>$Yes^u$</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Paratrigona ornaticeps</td><td>Paratrigona ornaticeps</td><td>$1.795^{i,l}$</td><td>$1710^h$</td><td>0.56</td><td></td><td>No</td><td>No</td><td>No</td></tr><tr><td>Partamona orizabaensis</td><td>Partemona orizabaensis</td><td>$2.46^s$</td><td>$2950^{b,c}$</td><td>0.37</td><td>$Yes^{g,k}$</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Plebeia frontalis</td><td>Plebeia frontalis</td><td>$1.8^{i,ee}$</td><td>$1500^{b,c,f,h}$</td><td>0.51</td><td>$No^{c,g}$</td><td>No</td><td>No</td><td>Yes</td></tr><tr><td>Plebeia jatiformis</td><td>Noguerapis sp., Plebeia jatiformis</td><td>$1.5^i$</td><td>$805^h$</td><td>0.51</td><td>$No^k$</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Ptilotrigona occidentalis</td><td>Trigona c.f. ferricauda</td><td>$3.055^{i,v}$</td><td></td><td></td><td></td><td>No</td><td>Yes</td><td>No</td></tr><tr><td>Scaptotrigona pectoralis</td><td>Scaptotrigona c.f. pectoralis</td><td>$2.5^i$</td><td>$4375^{c,f}$</td><td>0.26</td><td>$Yes^{c,d,g,q,t}$</td><td>No</td><td>No</td><td>Yes</td></tr><tr><td>Scaptotrigona subobscuripennis</td><td>Scaptotrigona mexicana</td><td>$2.6^i$</td><td></td><td>0.26</td><td>$Yes^{c,d,g,m,r,t,aa}$</td><td>Yes</td><td>No</td><td>No</td></tr><tr><td>Tetragona perangulata</td><td>Trigona sp. 2, Trigona perangulata</td><td>$2.7^i$</td><td></td><td>0.53</td><td></td><td>No</td><td>No</td><td>No</td></tr><tr><td>Tetragona ziegleri</td><td>Trigona dorsalis</td><td>$2.3^i$</td><td>$2647.75^{c,f,t}$</td><td>0.53</td><td>$No^c$</td><td>Yes</td><td>No</td><td>Yes</td></tr><tr><td>Tetragonisca angustula</td><td>$Trigona angustula^{w,bb}$</td><td>$1.8^i$</td><td>$2715^{a,h,n,x,y}$</td><td>0.5</td><td>$No^g$</td><td>Yes</td><td>No</td><td>Yes</td></tr><tr><td>Tetragonisca buchwaldi</td><td>Trigona sp.$1^i$</td><td>$1.9^i$</td><td>$1376.25^b$</td><td>0.5</td><td></td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>Trigona corvina</td><td>Trigona corvine</td><td>$2.5^i$</td><td>$13,625^{b,c,h,y}$</td><td>0.43</td><td>$Yes^{d,e,t}$</td><td>Yes</td><td>No</td><td>No</td></tr><tr><td>Trigona fulviventris</td><td>Trigona fulviventris</td><td>$2.7^i$</td><td>$9375^{c,f,h}$</td><td>0.43</td><td>$Yes^{g,t}$</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Trigona silvestriana</td><td>Trigona amalthea</td><td>$3.3^{i,ee}$</td><td>$7500^{c,f,h}$</td><td>0.43</td><td>$Yes^{c,d,e,g}$</td><td>No</td><td>No</td><td>No</td></tr><tr><td>Trigonisca sp.</td><td>Trigonisca sp.</td><td>$1.2^i$</td><td></td><td></td><td></td><td>No</td><td>No</td><td>No</td></tr></table>
 
 the T. atomaria meas e based Trigonisca body size on Trigonisca atomaria, the only Trigonisca species with published head width. Measurement of several sampled stematics have recently undergone revisions. Name changes were made following the Moure bee catalogue (Camargo & Pedro, 20
 
@@ -250,29 +228,7 @@ species’ presence was not affected by the richness or abundance of honeybees o
 
 It is increasingly clear that functional traits underlie general patterns of community disassembly with anthropogenic change. Such pre-dictions will be useful for conservation of bees and the pollination ecosystem service they provide, but the geographic bias in bee biodiversity research (Archer, Pirk, Carvalheiro, & Nicolson, 2014) may affect assessment of community disassembly patterns. The results of this study show that social tropical bees respond to land use change differently than do temperate bees. In contrast to the majority of studies to date (e.g. Cane et al., 2006; Williams et al., 2010), we found
 
-| Covariate | w | Predicted coefficient (±SE) | z | p-value |
-| --- | --- | --- | --- | --- |
-| Intercept | - | -7.42 (2.98) | 2.49 | .013 |
-| Plant richness | 0.29 | -0.01 (0.02) | 0.29 | .77 |
-| Honeybee abundance | 0.37 | -0.003 (0.01) | 0.21 | .84 |
-| Stingless bee abundance | $1.00^a$ | -0.0007 (0.007) | 0.10 | .92 |
-| Stingless bee richness | 1.00 | 0.59 (0.10) | 5.91 | &lt;.0001 |
-| Other bee abundance | 0.38 | -0.01 (0.02) | 0.42 | .68 |
-| Other bee richness | 0.33 | -0.01 (0.06) | 0.11 | .91 |
-| Forest cover | 1.00 | -3.75 (7.02) | 0.53 | .59 |
-| Body size | 0.94 | 1.19 (0.56) | 2.12 | .035 |
-| Diet breadth | 1.00 | -0.62 (4.15) | 0.15 | .88 |
-| Group foraging? | 0.89 | 0.47 (0.81) | 0.58 | .56 |
-| Ground nesting? | 1.00 | 1.78 (0.66) | 2.71 | .007 |
-| Inquiline nesting? | 1.00 | 2.34 (0.94) | 2.50 | .013 |
-| Man-made nests? | 0.94 | 0.08 (0.82) | 0.10 | .92 |
-| Forest cover: body size | 0.94 | -1.96 (1.16) | 1.69 | .09 |
-| Forest cover: diet breadth | 1.00 | 22.33 (11.38) | 1.96 | .049 |
-| Forest cover: group foraging? | 0.89 | 1.10 (2.00) | 0.55 | .59 |
-| Forest cover: ground nesting? | 1.00 | -1.56 (1.57) | 0.99 | .32 |
-| Forest cover: inquiline nesting? | 1.00 | 1.37 (2.34) | 0.59 | .56 |
-| Forest cover: man-made nests? | 0.94 | -2.68 (2.07) | 1.30 | .20 |
-| Honeybee abundance: group foraging? | 0.15 | 0.004 (0.01) | 0.30 | .76 |
+<table><tr><td>Covariate</td><td>w</td><td>Predicted coefficient (±SE)</td><td>z</td><td>p-value</td></tr><tr><td>Intercept</td><td>-</td><td>-7.42 (2.98)</td><td>2.49</td><td>.013</td></tr><tr><td>Plant richness</td><td>0.29</td><td>-0.01 (0.02)</td><td>0.29</td><td>.77</td></tr><tr><td>Honeybee abundance</td><td>0.37</td><td>-0.003 (0.01)</td><td>0.21</td><td>.84</td></tr><tr><td>Stingless bee abundance</td><td>$1.00^a$</td><td>-0.0007 (0.007)</td><td>0.10</td><td>.92</td></tr><tr><td>Stingless bee richness</td><td>1.00</td><td>0.59 (0.10)</td><td>5.91</td><td>&amp;lt;.0001</td></tr><tr><td>Other bee abundance</td><td>0.38</td><td>-0.01 (0.02)</td><td>0.42</td><td>.68</td></tr><tr><td>Other bee richness</td><td>0.33</td><td>-0.01 (0.06)</td><td>0.11</td><td>.91</td></tr><tr><td>Forest cover</td><td>1.00</td><td>-3.75 (7.02)</td><td>0.53</td><td>.59</td></tr><tr><td>Body size</td><td>0.94</td><td>1.19 (0.56)</td><td>2.12</td><td>.035</td></tr><tr><td>Diet breadth</td><td>1.00</td><td>-0.62 (4.15)</td><td>0.15</td><td>.88</td></tr><tr><td>Group foraging?</td><td>0.89</td><td>0.47 (0.81)</td><td>0.58</td><td>.56</td></tr><tr><td>Ground nesting?</td><td>1.00</td><td>1.78 (0.66)</td><td>2.71</td><td>.007</td></tr><tr><td>Inquiline nesting?</td><td>1.00</td><td>2.34 (0.94)</td><td>2.50</td><td>.013</td></tr><tr><td>Man-made nests?</td><td>0.94</td><td>0.08 (0.82)</td><td>0.10</td><td>.92</td></tr><tr><td>Forest cover: body size</td><td>0.94</td><td>-1.96 (1.16)</td><td>1.69</td><td>.09</td></tr><tr><td>Forest cover: diet breadth</td><td>1.00</td><td>22.33 (11.38)</td><td>1.96</td><td>.049</td></tr><tr><td>Forest cover: group foraging?</td><td>0.89</td><td>1.10 (2.00)</td><td>0.55</td><td>.59</td></tr><tr><td>Forest cover: ground nesting?</td><td>1.00</td><td>-1.56 (1.57)</td><td>0.99</td><td>.32</td></tr><tr><td>Forest cover: inquiline nesting?</td><td>1.00</td><td>1.37 (2.34)</td><td>0.59</td><td>.56</td></tr><tr><td>Forest cover: man-made nests?</td><td>0.94</td><td>-2.68 (2.07)</td><td>1.30</td><td>.20</td></tr><tr><td>Honeybee abundance: group foraging?</td><td>0.15</td><td>0.004 (0.01)</td><td>0.30</td><td>.76</td></tr></table>
 
 TAB L E   2   Weights, coefficients and Wald test results for the averaged model. Terms in bold had a statistically significant effect on a species’ presence in pasture sites
 

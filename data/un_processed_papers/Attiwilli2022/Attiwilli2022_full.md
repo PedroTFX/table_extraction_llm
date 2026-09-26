@@ -94,13 +94,7 @@ International Journal of Tropical Insect Science (2022) 42:855–864
 
 Table 1   Number of species used for morphological measurements and their habitat associations in different families of butterflies
 
-|  | Ecotone | Forest | Open | Total |
-| --- | --- | --- | --- | --- |
-| Hesperiidae | 11 | 22 | 9 | 42 |
-| Lycaenidae | 13 | 23 | 5 | 41 |
-| Nymphalidae | 28 | 53 | 8 | 89 |
-| Papilionidae | 5 | 19 | 1 | 25 |
-| Pieridae | 6 | 7 | 14 | 27 |
+<table><tr><td></td><td>Ecotone</td><td>Forest</td><td>Open</td><td>Total</td></tr><tr><td>Hesperiidae</td><td>11</td><td>22</td><td>9</td><td>42</td></tr><tr><td>Lycaenidae</td><td>13</td><td>23</td><td>5</td><td>41</td></tr><tr><td>Nymphalidae</td><td>28</td><td>53</td><td>8</td><td>89</td></tr><tr><td>Papilionidae</td><td>5</td><td>19</td><td>1</td><td>25</td></tr><tr><td>Pieridae</td><td>6</td><td>7</td><td>14</td><td>27</td></tr></table>
 
 To test associations between traits and response to habitat disturbance, we ran simple linear models, with an index of aversion as the response variable, and each of the traits, i.e., body mass, wing length, proboscis length and habitat preference as individual predictors. In case of road vs. interior, ecotone and ecotone-open species were pooled into a single category, i.e., ecotone-open, due to a smaller number of species in each individual category, thus getting a factor with three levels (ecotone-open: n = 17; forest: n = 17; open: n = 11). In case of aversion to lantana, we pooled ecotone and open species into a single category, i.e., ecotoneopen, since there were relatively few representatives of each
 
@@ -142,27 +136,15 @@ Aversion to high lantana transects in the forest interior did not detectably var
 
 (a)
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| E | ~50 | ~100 | ~280 | ~230 |
-| F | ~60 | ~120 | ~190 | ~130 |
-| O | ~30 | ~60 | ~110 | ~80 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>E</td><td>~50</td><td>~100</td><td>~280</td><td>~230</td></tr><tr><td>F</td><td>~60</td><td>~120</td><td>~190</td><td>~130</td></tr><tr><td>O</td><td>~30</td><td>~60</td><td>~110</td><td>~80</td></tr></table>
 
 (b)
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| E | ~18 | ~27.5 | ~44 | ~26 |
-| F | ~21 | ~28 | ~37 | ~16 |
-| O | ~16 | ~23 | ~28 | ~12 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>E</td><td>~18</td><td>~27.5</td><td>~44</td><td>~26</td></tr><tr><td>F</td><td>~21</td><td>~28</td><td>~37</td><td>~16</td></tr><tr><td>O</td><td>~16</td><td>~23</td><td>~28</td><td>~12</td></tr></table>
 
 (c)
 
-| Category | Q1 | Q2 (Median) | Q3 | IQR |
-| --- | --- | --- | --- | --- |
-| E | ~8 | ~12 | ~15 | ~7 |
-| F | ~8 | ~11.5 | ~14.5 | ~6.5 |
-| O | ~9 | ~11 | ~13 | ~4 |
+<table><tr><td>Category</td><td>Q1</td><td>Q2 (Median)</td><td>Q3</td><td>IQR</td></tr><tr><td>E</td><td>~8</td><td>~12</td><td>~15</td><td>~7</td></tr><tr><td>F</td><td>~8</td><td>~11.5</td><td>~14.5</td><td>~6.5</td></tr><tr><td>O</td><td>~9</td><td>~11</td><td>~13</td><td>~4</td></tr></table>
 
 Habitat preference (E = Ecotone, F = Forest, O = Open)
 

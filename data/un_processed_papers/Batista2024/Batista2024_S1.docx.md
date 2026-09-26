@@ -6,101 +6,11 @@
 
 **Table S2.** List of Caraboidea beetles (Cicindelidae, Carabidae) and their respective morphological traits regarding wing development (fully developed wings - macropterous, or apterous/brachypterous) and body size (cm). Data collected from literature specific of each species (Serrano et al., 2023) and/or confirmed/extracted from the actual specimens.
 
-| **Species** | **Wings fully developed** | **Medium length (cm)** |
-| --- | --- | --- |
-| *Abacetus cursor* | Yes | 5 |
-| *Abacetus denticollis* | Yes | 9.25 |
-| *Abacetus discolor* | Yes | 7 |
-| *Abacetus nigrinus* | Yes | 10 |
-| *Abacetus percoides* | Yes | 10.75 |
-| *Abacetus perturbator* | Yes | 5.75 |
-| *Abacetus pseudomashunus* | Yes | 14 |
-| *Anaulacus madagascariensis* | Yes | 6.5 |
-| *Anthia alternata* | No | 40.5 |
-| *Anthia burchelli petersi* | No | 46.5 |
-| *Anthia circumscripta circumscripta* | No | 44.5 |
-| *Anthia fornasinii fornasinii* | No | 40.5 |
-| *Anthia omoplata* | No | 38 |
-| *Apotomus annulaticornis* | Yes | 3.5 |
-| *Apristus latipennis latipennis* | Yes | 3.5 |
-| *Brachinus distans* | Yes | 10 |
-| *Brachinus laetus* | Yes | 8 |
-| *Brachinus leprieuri* | Yes | 4 |
-| *Calosoma planicolle* | Yes | 35 |
-| *Chlaenius conformis* | Yes | 13 |
-| *Chlaenius cosciniophorus* | Yes | 11.75 |
-| *Chlaenius cylindricollis* | Yes | 14 |
-| *Chlaenius discopictus nuncius* | Yes | 14.75 |
-| *Chlaenius dusaultii diagraphus* | Yes | 16.5 |
-| *Chlaenius fulvicollis* | Yes | 11.25 |
-| *Chlaenius kirki kirki* | Yes | 15 |
-| *Chlaenius lugens* | Yes | 18.75 |
-| *Chlaenius notabilis* | Yes | 12 |
-| *Chlaenius paenulatus* | Yes | 8 |
-| *Chlaenius peringueyi* | Yes | 15.5 |
-| *Chlaenius zanzibaricus giganteus* | Yes | 29 |
-| *Cimbionotum schueppelii* | Yes | 4 |
-| *Crepidogaster langenhani* | No | 10.75 |
-| *Crepidogaster longelineata* | No | 4.65 |
-| *Crepidogaster protuberata* | No | 9.75 |
-| *Cymindoidea regularis* | No | 8.5 |
-| *Cypholoba alveolata ranzanii* | No | 28 |
-| *Cypholoba graphipteroides bilunata* | No | 25 |
-| *Cypholoba rutata* | No | 22.5 |
-| *Cypholoba semisuturata vassei* | No | 22.5 |
-| *Distichus bisquadripunctatus* | Yes | 11.5 |
-| *Distichus picicornis* | Yes | 9.5 |
-| *Dromica dolosa latepolita* | No | 9.9 |
-| *Eccoptoptera mutilloides mutilloides* | No | 15.5 |
-| *Elaphropus aethiopicus* | Yes | 2 |
-| *Elaphropus haemorrhoidalis* | Yes | 2.5 |
-| *Elliptica compressicornis compressicornis* | Yes | 17 |
-| *Galerita angustipennis* | No | 22.5 |
-| *Graphipterus horni staudingeri* | No | 12 |
-| *Graphipterus lineelus* | No | 11.5 |
-| *Graphipterus tristis* | No | 12 |
-| *Manticora latipennis* | No | 52.5 |
-| *Megacephala asperata* | No | 24.5 |
-| *Melaenus elegans* | Yes | 9 |
-| *Melanchiton lucidulus* | Yes | 10.5 |
-| *Mesolestes sp.* | Yes | 2 |
-| *Mesolestes machadoi* | Yes | 2.65 |
-| *Mesolestes nigrocephalus* | Yes | 2.65 |
-| *Metagonum insolitum* | No | 10.75 |
-| *Microlestes flavipes micromys* | Yes | 2.65 |
-| *Microlestes zambezianus* | Yes | 2.75 |
-| *Omostropus mandibularis* | Yes | 8.5 |
-| *Parophonus tomentosus* | Yes | 15 |
-| *Paussus cultratus* | Yes | 5 |
-| *Paussus pseudoklugi* | Yes | 5 |
-| *Pentaplatarthrus gestroi* | Yes | 8 |
-| *Perigona schmitzi* | Yes | 2.85 |
-| *Pheropsophus dregei* | Yes | 17 |
-| *Pheropsophus insignis insignis* | No | 15.5 |
-| *Pheropsophus mashunus* | No | 14.5 |
-| *Pheropsophus stenopterus* | Yes | 19 |
-| *Planetes quadricollis* | Yes | 11 |
-| *Platytarus tesselatus* | No | 6.5 |
-| *Prothymidia angusticollis* | No | 9 |
-| *Scarites polyphemus* | No | 26 |
-| *Scarites tenebricosus molossus* | No | 30 |
-| *Siagona caffra* | Yes | 22 |
-| *Siagona levasseuri* | Yes | 15 |
-| *Siagona partita* | Yes | 9 |
-| *Singilis africaorientalis kenyacus* | Yes | 4 |
-| *Siopelus lucens* | Yes | 9 |
-| *Styphlomerus neavei neavei* | Yes | 10.5 |
-| *Systolocranius goryi* | Yes | 20 |
-| *Tachys iridipennis* | Yes | 2.7 |
-| *Tefflus carinatus carinatus* | No | 35 |
-| *Tetragonoderus immaculatus* | Yes | 5 |
-| *Triaenogenius carinulatus carinulatus* | No | 20 |
+<table><tr><td>**Species**</td><td>**Wings fully developed**</td><td>**Medium length (cm)**</td></tr><tr><td>*Abacetus cursor*</td><td>Yes</td><td>5</td></tr><tr><td>*Abacetus denticollis*</td><td>Yes</td><td>9.25</td></tr><tr><td>*Abacetus discolor*</td><td>Yes</td><td>7</td></tr><tr><td>*Abacetus nigrinus*</td><td>Yes</td><td>10</td></tr><tr><td>*Abacetus percoides*</td><td>Yes</td><td>10.75</td></tr><tr><td>*Abacetus perturbator*</td><td>Yes</td><td>5.75</td></tr><tr><td>*Abacetus pseudomashunus*</td><td>Yes</td><td>14</td></tr><tr><td>*Anaulacus madagascariensis*</td><td>Yes</td><td>6.5</td></tr><tr><td>*Anthia alternata*</td><td>No</td><td>40.5</td></tr><tr><td>*Anthia burchelli petersi*</td><td>No</td><td>46.5</td></tr><tr><td>*Anthia circumscripta circumscripta*</td><td>No</td><td>44.5</td></tr><tr><td>*Anthia fornasinii fornasinii*</td><td>No</td><td>40.5</td></tr><tr><td>*Anthia omoplata*</td><td>No</td><td>38</td></tr><tr><td>*Apotomus annulaticornis*</td><td>Yes</td><td>3.5</td></tr><tr><td>*Apristus latipennis latipennis*</td><td>Yes</td><td>3.5</td></tr><tr><td>*Brachinus distans*</td><td>Yes</td><td>10</td></tr><tr><td>*Brachinus laetus*</td><td>Yes</td><td>8</td></tr><tr><td>*Brachinus leprieuri*</td><td>Yes</td><td>4</td></tr><tr><td>*Calosoma planicolle*</td><td>Yes</td><td>35</td></tr><tr><td>*Chlaenius conformis*</td><td>Yes</td><td>13</td></tr><tr><td>*Chlaenius cosciniophorus*</td><td>Yes</td><td>11.75</td></tr><tr><td>*Chlaenius cylindricollis*</td><td>Yes</td><td>14</td></tr><tr><td>*Chlaenius discopictus nuncius*</td><td>Yes</td><td>14.75</td></tr><tr><td>*Chlaenius dusaultii diagraphus*</td><td>Yes</td><td>16.5</td></tr><tr><td>*Chlaenius fulvicollis*</td><td>Yes</td><td>11.25</td></tr><tr><td>*Chlaenius kirki kirki*</td><td>Yes</td><td>15</td></tr><tr><td>*Chlaenius lugens*</td><td>Yes</td><td>18.75</td></tr><tr><td>*Chlaenius notabilis*</td><td>Yes</td><td>12</td></tr><tr><td>*Chlaenius paenulatus*</td><td>Yes</td><td>8</td></tr><tr><td>*Chlaenius peringueyi*</td><td>Yes</td><td>15.5</td></tr><tr><td>*Chlaenius zanzibaricus giganteus*</td><td>Yes</td><td>29</td></tr><tr><td>*Cimbionotum schueppelii*</td><td>Yes</td><td>4</td></tr><tr><td>*Crepidogaster langenhani*</td><td>No</td><td>10.75</td></tr><tr><td>*Crepidogaster longelineata*</td><td>No</td><td>4.65</td></tr><tr><td>*Crepidogaster protuberata*</td><td>No</td><td>9.75</td></tr><tr><td>*Cymindoidea regularis*</td><td>No</td><td>8.5</td></tr><tr><td>*Cypholoba alveolata ranzanii*</td><td>No</td><td>28</td></tr><tr><td>*Cypholoba graphipteroides bilunata*</td><td>No</td><td>25</td></tr><tr><td>*Cypholoba rutata*</td><td>No</td><td>22.5</td></tr><tr><td>*Cypholoba semisuturata vassei*</td><td>No</td><td>22.5</td></tr><tr><td>*Distichus bisquadripunctatus*</td><td>Yes</td><td>11.5</td></tr><tr><td>*Distichus picicornis*</td><td>Yes</td><td>9.5</td></tr><tr><td>*Dromica dolosa latepolita*</td><td>No</td><td>9.9</td></tr><tr><td>*Eccoptoptera mutilloides mutilloides*</td><td>No</td><td>15.5</td></tr><tr><td>*Elaphropus aethiopicus*</td><td>Yes</td><td>2</td></tr><tr><td>*Elaphropus haemorrhoidalis*</td><td>Yes</td><td>2.5</td></tr><tr><td>*Elliptica compressicornis compressicornis*</td><td>Yes</td><td>17</td></tr><tr><td>*Galerita angustipennis*</td><td>No</td><td>22.5</td></tr><tr><td>*Graphipterus horni staudingeri*</td><td>No</td><td>12</td></tr><tr><td>*Graphipterus lineelus*</td><td>No</td><td>11.5</td></tr><tr><td>*Graphipterus tristis*</td><td>No</td><td>12</td></tr><tr><td>*Manticora latipennis*</td><td>No</td><td>52.5</td></tr><tr><td>*Megacephala asperata*</td><td>No</td><td>24.5</td></tr><tr><td>*Melaenus elegans*</td><td>Yes</td><td>9</td></tr><tr><td>*Melanchiton lucidulus*</td><td>Yes</td><td>10.5</td></tr><tr><td>*Mesolestes sp.*</td><td>Yes</td><td>2</td></tr><tr><td>*Mesolestes machadoi*</td><td>Yes</td><td>2.65</td></tr><tr><td>*Mesolestes nigrocephalus*</td><td>Yes</td><td>2.65</td></tr><tr><td>*Metagonum insolitum*</td><td>No</td><td>10.75</td></tr><tr><td>*Microlestes flavipes micromys*</td><td>Yes</td><td>2.65</td></tr><tr><td>*Microlestes zambezianus*</td><td>Yes</td><td>2.75</td></tr><tr><td>*Omostropus mandibularis*</td><td>Yes</td><td>8.5</td></tr><tr><td>*Parophonus tomentosus*</td><td>Yes</td><td>15</td></tr><tr><td>*Paussus cultratus*</td><td>Yes</td><td>5</td></tr><tr><td>*Paussus pseudoklugi*</td><td>Yes</td><td>5</td></tr><tr><td>*Pentaplatarthrus gestroi*</td><td>Yes</td><td>8</td></tr><tr><td>*Perigona schmitzi*</td><td>Yes</td><td>2.85</td></tr><tr><td>*Pheropsophus dregei*</td><td>Yes</td><td>17</td></tr><tr><td>*Pheropsophus insignis insignis*</td><td>No</td><td>15.5</td></tr><tr><td>*Pheropsophus mashunus*</td><td>No</td><td>14.5</td></tr><tr><td>*Pheropsophus stenopterus*</td><td>Yes</td><td>19</td></tr><tr><td>*Planetes quadricollis*</td><td>Yes</td><td>11</td></tr><tr><td>*Platytarus tesselatus*</td><td>No</td><td>6.5</td></tr><tr><td>*Prothymidia angusticollis*</td><td>No</td><td>9</td></tr><tr><td>*Scarites polyphemus*</td><td>No</td><td>26</td></tr><tr><td>*Scarites tenebricosus molossus*</td><td>No</td><td>30</td></tr><tr><td>*Siagona caffra*</td><td>Yes</td><td>22</td></tr><tr><td>*Siagona levasseuri*</td><td>Yes</td><td>15</td></tr><tr><td>*Siagona partita*</td><td>Yes</td><td>9</td></tr><tr><td>*Singilis africaorientalis kenyacus*</td><td>Yes</td><td>4</td></tr><tr><td>*Siopelus lucens*</td><td>Yes</td><td>9</td></tr><tr><td>*Styphlomerus neavei neavei*</td><td>Yes</td><td>10.5</td></tr><tr><td>*Systolocranius goryi*</td><td>Yes</td><td>20</td></tr><tr><td>*Tachys iridipennis*</td><td>Yes</td><td>2.7</td></tr><tr><td>*Tefflus carinatus carinatus*</td><td>No</td><td>35</td></tr><tr><td>*Tetragonoderus immaculatus*</td><td>Yes</td><td>5</td></tr><tr><td>*Triaenogenius carinulatus carinulatus*</td><td>No</td><td>20</td></tr></table>
 
 **Table S3.** Summary of GLM analysis with the fixed effects of wing development (species with not fully developed wings – apterous/brachypterous - used as reference) on Caraboidea body size (response variable).
 
-| **Response** | **Fixed effects** | **Estimate** | **Std. Error** | **t value** | **P value** | **F**<strong><sub>(1,188)</sub></strong> | **P value** |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Body size | Macropterous spp. | -8.43 | 0.97 | -8.67 | &lt; 0.001 | 105.9 | &lt; 0.001 |
+<table><tr><td>**Response**</td><td>**Fixed effects**</td><td>**Estimate**</td><td>**Std. Error**</td><td>**t value**</td><td>**P value**</td><td>**F**&lt;strong&gt;&lt;sub&gt;(1,188)&lt;/sub&gt;&lt;/strong&gt;</td><td>**P value**</td></tr><tr><td>Body size</td><td>Macropterous spp.</td><td>-8.43</td><td>0.97</td><td>-8.67</td><td>&amp;lt; 0.001</td><td>105.9</td><td>&amp;lt; 0.001</td></tr></table>
 
 **Table S4.** Tiger- and ground-beetle community found in grassland habitats in the intermediate and wet sampling periods, that were either exclusive species of grassland habitats in the dry period (light grey), or exclusive forest species in the dry period that appeared in grasslands in the intermediate-wet period (dark grey).
 

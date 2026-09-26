@@ -1132,24 +1132,11 @@ ZooKeys 1195: 337–381 (2024), DOI: 10.3897/zookeys.1195.114392
 
 Yuan Xu et al.: A review of the semipunctata species group within the genus Lilioceris
 
-| Species | Location (Approximate) |
-| --- | --- |
-| L. consentanea | Central/Southwest |
-| L. discrepens | Central/Southwest |
-| L. latissima | Central/Southwest |
-| L. rondoni | Central/Southwest |
-| L. semipunctata | Central/Southwest |
+<table><tr><td>Species</td><td>Location (Approximate)</td></tr><tr><td>L. consentanea</td><td>Central/Southwest</td></tr><tr><td>L. discrepens</td><td>Central/Southwest</td></tr><tr><td>L. latissima</td><td>Central/Southwest</td></tr><tr><td>L. rondoni</td><td>Central/Southwest</td></tr><tr><td>L. semipunctata</td><td>Central/Southwest</td></tr></table>
 
 Figure 67. Distribution map of Lilioceris spp. (all marked location information is derived from the labels of available specimens).
 
-| Species | Location (Approximate) |
-| --- | --- |
-| L. atrilateralis | North of China |
-| L. dentifemoralis | Central China |
-| L. jianfenglingensis | South of China |
-| L. rufometallica | East of China |
-| L. lianzhouensis | East of China |
-| L. yuanae | East of China |
+<table><tr><td>Species</td><td>Location (Approximate)</td></tr><tr><td>L. atrilateralis</td><td>North of China</td></tr><tr><td>L. dentifemoralis</td><td>Central China</td></tr><tr><td>L. jianfenglingensis</td><td>South of China</td></tr><tr><td>L. rufometallica</td><td>East of China</td></tr><tr><td>L. lianzhouensis</td><td>East of China</td></tr><tr><td>L. yuanae</td><td>East of China</td></tr></table>
 
 Figure 68. Distribution map of Lilioceris spp. (all marked location information is derived from the labels of available specimens).
 

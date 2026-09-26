@@ -290,11 +290,7 @@ First, variation partitioning showed an important part of variation of each resp
 
 Table 3 Results of nestedness analysis of species composition showing observed and simulated values of BR, NODF and T with 95 % confidence interval and associated probabilities
 
-| Metric | Matrix value | Simulated value | L 95 % CL | U 95 % CL | P (H0) |
-| --- | --- | --- | --- | --- | --- |
-| BR | 50.00 | 105.90 | 99.00 | 112.00 | 0.001 |
-| NODF | 64.63 | 44.64 | 40.89 | 48.01 | 0.001 |
-| Temp | 19.22 | 52.29 | 46.80 | 58.05 | 0.001 |
+<table><tr><td>Metric</td><td>Matrix value</td><td>Simulated value</td><td>L 95 % CL</td><td>U 95 % CL</td><td>P (H0)</td></tr><tr><td>BR</td><td>50.00</td><td>105.90</td><td>99.00</td><td>112.00</td><td>0.001</td></tr><tr><td>NODF</td><td>64.63</td><td>44.64</td><td>40.89</td><td>48.01</td><td>0.001</td></tr><tr><td>Temp</td><td>19.22</td><td>52.29</td><td>46.80</td><td>58.05</td><td>0.001</td></tr></table>
 
 Springer
 
@@ -306,11 +302,7 @@ Urban Ecosyst (2016) 19:205–224
 
 Table 4 Results of nestedness analysis of habitat composition showing observed and simulated values of BR, NODF and T with 95 % confidence interval and associated probabilities
 
-| Metric | Matrix value | Simulated value | L 95 % CL | U 95 % CL | P (H0) |
-| --- | --- | --- | --- | --- | --- |
-| BR | 14.00 | 16.17 | 13.00 | 19.00 | 0.119 |
-| NODF | 71.30 | 67.59 | 63.86 | 71.50 | 0.056 |
-| Temp | 14.93 | 35.27 | 21.41 | 47.76 | 0.001 |
+<table><tr><td>Metric</td><td>Matrix value</td><td>Simulated value</td><td>L 95 % CL</td><td>U 95 % CL</td><td>P (H0)</td></tr><tr><td>BR</td><td>14.00</td><td>16.17</td><td>13.00</td><td>19.00</td><td>0.119</td></tr><tr><td>NODF</td><td>71.30</td><td>67.59</td><td>63.86</td><td>71.50</td><td>0.056</td></tr><tr><td>Temp</td><td>14.93</td><td>35.27</td><td>21.41</td><td>47.76</td><td>0.001</td></tr></table>
 
 variation in community structure constrained by park characteristics is shared with landscape characteristics, contrasting with the pure effect of park features which does not exceed 3 % (for total abundance). As total area and vegetated area of park are not correlated with our response variables, park characteristics are reduced to diversity and fragmentation of habitat units which are both negatively correlated with the response variables. Here, the negative relationship between butterfly richness (or abundance) and habitat diversity is quite surprising. Indeed, this relationship is known to be positive and monotonic (Hortal et al. 2009). Moreover, in their review of 24 empirical data sets, Hortal et al. (2009) showed that the relationship between species richness and habitat diversity is never negative (at least in natural areas). It seems that habitat diversity measured in our study reflects quite the same organisational pattern as fragmentation. The more the park contains vegetation units, the more the park is diversified in terms of habitats, but also the more the vegetated area is fragmented. This assumption is congruent with the absence of significant species-area relationship (Lomolino 2000; Triantis et al. 2006). Multiplying the different vegetation units in a park, may reduce the size of these units, by increasing the Bedge effect^, making them too small to be useful as habitats, and at the same time, contributing to reduce species richness. However, the first outcome of this study is to highlight the need for further investigation, and especially interdisciplinary studies, in order to understand these links between urbanization context (landscape characteristics) and park design, or even management practices (plot characteristics). To what extent do landscape and human components, such as management or use of urban green spaces, interact in urban areas (Cadenasso et al. 2006)?
 
@@ -328,35 +320,7 @@ Urban Ecosyst (2016) 19:205–224
 
 217
 
-| Cumulative area (ha) | Series 1 (Solid Square) | Series 2 (Open Square) |
-| --- | --- | --- |
-| 0.00 | 0 | 0 |
-| ~1.5 | 12 | — |
-| ~2.5 | 18 | — |
-| ~3.5 | 19 | — |
-| ~4.5 | 26 | — |
-| ~6.0 | 27 | — |
-| ~8.0 | 30 | — |
-| ~10.0 | 33 | — |
-| ~13.0 | 34 | — |
-| ~18.0 | 34 | 13 |
-| ~25.0 | 35 | — |
-| ~28.0 | — | 20 |
-| ~32.0 | 35 | — |
-| ~38.0 | — | 24 |
-| ~40.0 | 39 | — |
-| ~45.0 | — | 36 |
-| ~50.0 | 39 | — |
-| ~53.0 | — | 36 |
-| ~60.0 | 40 | 38 |
-| ~65.0 | — | 38 |
-| ~68.0 | — | 38 |
-| ~71.0 | — | 38 |
-| ~72.0 | — | 40 |
-| ~73.0 | — | 40 |
-| ~75.0 | — | 41 |
-| ~76.0 | — | 41 |
-| ~78.0 | — | 41 |
+<table><tr><td>Cumulative area (ha)</td><td>Series 1 (Solid Square)</td><td>Series 2 (Open Square)</td></tr><tr><td>0.00</td><td>0</td><td>0</td></tr><tr><td>~1.5</td><td>12</td><td>—</td></tr><tr><td>~2.5</td><td>18</td><td>—</td></tr><tr><td>~3.5</td><td>19</td><td>—</td></tr><tr><td>~4.5</td><td>26</td><td>—</td></tr><tr><td>~6.0</td><td>27</td><td>—</td></tr><tr><td>~8.0</td><td>30</td><td>—</td></tr><tr><td>~10.0</td><td>33</td><td>—</td></tr><tr><td>~13.0</td><td>34</td><td>—</td></tr><tr><td>~18.0</td><td>34</td><td>13</td></tr><tr><td>~25.0</td><td>35</td><td>—</td></tr><tr><td>~28.0</td><td>—</td><td>20</td></tr><tr><td>~32.0</td><td>35</td><td>—</td></tr><tr><td>~38.0</td><td>—</td><td>24</td></tr><tr><td>~40.0</td><td>39</td><td>—</td></tr><tr><td>~45.0</td><td>—</td><td>36</td></tr><tr><td>~50.0</td><td>39</td><td>—</td></tr><tr><td>~53.0</td><td>—</td><td>36</td></tr><tr><td>~60.0</td><td>40</td><td>38</td></tr><tr><td>~65.0</td><td>—</td><td>38</td></tr><tr><td>~68.0</td><td>—</td><td>38</td></tr><tr><td>~71.0</td><td>—</td><td>38</td></tr><tr><td>~72.0</td><td>—</td><td>40</td></tr><tr><td>~73.0</td><td>—</td><td>40</td></tr><tr><td>~75.0</td><td>—</td><td>41</td></tr><tr><td>~76.0</td><td>—</td><td>41</td></tr><tr><td>~78.0</td><td>—</td><td>41</td></tr></table>
 
 Fig. 4 Cumulative species-area curves. Filled squares represent the situation when the 15 parks were ranked from small to large. Open squares represents the situation when the 15 parks were ranked from large to small
 
