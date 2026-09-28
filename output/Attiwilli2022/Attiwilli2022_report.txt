@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Attiwilli2022\Attiwilli2022.xlsx  (30 rows)
-PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (36 rows)
+PREDICTION   : ..\output\Attiwilli2022\Attiwilli2022.csv  (51 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -17,17 +17,20 @@ ROW-LEVEL (key match)
   matched (TP)        : 15
   missed (FN)         : 15
   spurious, in scope  : 21   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+  spurious, out of scope: 15   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.417 / 0.500 / 0.455   (every extra row counts against precision)
+  STRICT  P/R/F1      : 0.294 / 0.500 / 0.370   (every extra row counts against precision)
   SCOPED  P/R/F1      : 0.417 / 0.500 / 0.455   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
 
+  out-of-scope rows by uncovered field:
+    measurementType                             15
+
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
+  column                    agree  total    acc   extra finds
   basisOfRecord                15     15  1.000
-  measurementMethod             0     10  0.000  <-- low
-  measurementUnit              10     15  0.667
+  measurementMethod             0      0    n/a   +15 where GT blank
+  measurementUnit               5     15  0.333  <-- low
   measurementStatistic          0     15  0.000  <-- low
   measurementRemarks            0      0    n/a
   sex                           0     15  0.000  <-- low
@@ -64,11 +67,16 @@ WHY THE 15 MISSED ROWS MISSED
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   body mass                                        10    12   Δ+2 (split?)
+  ecotone                                           0     5   PRED-ONLY
+  forest                                            0     5   PRED-ONLY
   proboscis length                                 10    12   Δ+2 (split?)
   wing length                                      10    12   Δ+2 (split?)
+  open                                              0     5   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.417  0.500  0.455     15    21    15   id+type+value
+             (15 more spurious row(s) set aside as out-of-scope; strict P would be 0.294)
   tags        0.000  0.000  0.000      0    36    30   basis+id+type+value+stat+sex+stage
+             (15 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
              (F1 -0.455 vs previous)

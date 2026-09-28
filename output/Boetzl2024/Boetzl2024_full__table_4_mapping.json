@@ -1,32 +1,75 @@
 {
-  "repsonse": {
+  "Study ID": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This is a unique identifier for the study record, not an insect taxon.",
+    "category": null,
+    "reasoning_relevance": "Identifies the study record, not a biological trait of the organism."
+  },
+  "country": {
+    "field": "verbatimLocality",
+    "value_column": false,
+    "reasoning": "Represents the geographic country where sampling occurred.",
+    "category": null,
+    "reasoning_relevance": "A specific place name, not a trait of the organism."
+  },
+  "region": {
+    "field": "verbatimLocality",
+    "value_column": false,
+    "reasoning": "Represents the geographic region where sampling occurred.",
+    "category": null,
+    "reasoning_relevance": "A specific place name, not a trait of the organism."
+  },
+  "year": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Reponese is a categorical trait being measured or observed."
+    "reasoning": "Represents the temporal context of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Temporal data, not a biological trait of the organism."
   },
-  "repsonse (1)": {
+  "months": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
+    "reasoning": "Represents the temporal context of the sampling event.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Describes the species' phenology (flight period/months active).",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "months"
   },
-  "parameter": {
+  "crop types": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Describes the land-use context of the sampling location.",
+    "category": null,
+    "reasoning_relevance": "Describes the agricultural context, not an inherent trait of the carabid."
+  },
+  "adjacent habitat classes": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Describes the habitat context of the sampling location.",
+    "category": null,
+    "reasoning_relevance": "Describes the habitat context, not an inherent trait of the organism."
+  },
+  "study sites": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Represents the specific location or site code of the sampling.",
+    "category": null,
+    "reasoning_relevance": "A count of sites, not a biological trait of the organism."
+  },
+  "maximal distance [m]": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Parameter defines the independent variable or treatment applied."
+    "reasoning": "Measures the maximal distance related to the study event.",
+    "category": null,
+    "reasoning_relevance": "A spatial measurement of the sampling setup, not an organism trait."
   },
-  "estimate": {
-    "field": "measurementValue",
+  "trapping days": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Estimate is the calculated result of the measurement."
-  },
-  "95% CI lower bound": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Lower bound is the calculated confidence interval boundary."
-  },
-  "95% CI upper bound": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Upper bound is the calculated confidence interval boundary."
+    "reasoning": "Measures the duration of the trapping effort.",
+    "category": null,
+    "reasoning_relevance": "A measure of sampling effort, not an organism trait."
   }
 }

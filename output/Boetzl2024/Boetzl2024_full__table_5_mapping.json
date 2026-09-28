@@ -1,32 +1,103 @@
 {
-  "repsonse": {
+  "Study ID": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "Study ID is a unique identifier for the record, not an insect taxon.",
+    "category": null,
+    "reasoning_relevance": "Study ID is an identifier, not a biological measurement or trait."
+  },
+  "country": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Country specifies the geographic location of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Country is a place name, not a trait of the organism."
+  },
+  "region": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "Region specifies the geographic location of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Region is a place name, not a trait of the organism."
+  },
+  "year": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Reponese is a categorical trait being measured or observed."
+    "reasoning": "Year specifies the temporal context of the sampling event.",
+    "category": null,
+    "reasoning_relevance": "Year is a study context, not a direct biological trait of the organism."
   },
-  "repsonse (1)": {
+  "months": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
+    "reasoning": "Months specify the temporal context of the sampling event.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Specifies the species' phenology or active period.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "months",
+    "basisOfRecord": "MaterialCitation",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   },
-  "parameter": {
+  "crop types": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Parameter defines the independent variable or treatment applied."
+    "reasoning": "Crop types describe the land-use context of the sampling location.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Describes the organism's association with crop fields (diet context).",
+    "multi_value": true,
+    "value_type": "categorical",
+    "canonicalType": "crop types",
+    "basisOfRecord": "MaterialCitation",
+    "basisOfRecord_reasoning": "The crop type values were obtained from pre-existing datasets that the authors selected from literature (e.g., the 35 suitable datasets), rather than being measured or observed by the authors in this study.",
+    "measurementMethod": "Data specified by the original dataset sources",
+    "measurementMethod_reasoning": "The text indicates that the crop type was a criterion specified by the external datasets used for the analysis. The authors did not perform the measurement of crop type themselves; they utilized the crop type information provided by the source datasets."
   },
-  "estimate": {
-    "field": "measurementValue",
+  "adjacent habitat classes": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Estimate is the calculated result of the measurement."
+    "reasoning": "Habitat classes describe the environment where the sampling occurred.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Describes the organism's association with adjacent habitat.",
+    "multi_value": true,
+    "value_type": "categorical",
+    "canonicalType": "adjacent habitat classes",
+    "basisOfRecord": "MaterialCitation",
+    "basisOfRecord_reasoning": "The adjacent habitat classes ('herbaceous, woody or control') were used as variables in the statistical model, and the text indicates that the data for these variables were drawn from existing datasets and literature, rather than being measured or observed directly by the authors in this study.",
+    "measurementMethod": "Categorical classification used as a constant effect in a hierarchical Bayesian generalized linear regression model.",
+    "measurementMethod_reasoning": "The text specifies that 'adjacent habitat type' (herbaceous, woody or control) was included as a constant effect in the models, indicating that the habitat was categorized into these distinct types for comparative analysis."
   },
-  "95% CI lower bound": {
-    "field": "measurementValue",
+  "study sites": {
+    "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "Lower bound is the calculated confidence interval boundary."
+    "reasoning": "Study sites specify the exact geographic location of the sampling.",
+    "category": null,
+    "reasoning_relevance": "Study sites are locations, not traits of the organism."
   },
-  "95% CI upper bound": {
-    "field": "measurementValue",
+  "maximal distance [m]": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Upper bound is the calculated confidence interval boundary."
+    "reasoning": "This measures the maximal distance between the focal organism and a reference point.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Represents a spatial measurement related to the organism's distribution.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "maximal distance [m]",
+    "basisOfRecord": "MaterialCitation",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+  },
+  "trapping days (per trap)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the duration or frequency of the trapping event.",
+    "category": null,
+    "reasoning_relevance": "Represents sampling effort, not a trait of the organism."
+  },
+  "reference": {
+    "field": "measurementMethod",
+    "value_column": false,
+    "reasoning": "Reference provides the source for the data or method used.",
+    "category": null,
+    "reasoning_relevance": "Reference is a citation, not a measurement of the organism."
   }
 }

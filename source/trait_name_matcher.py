@@ -196,13 +196,19 @@ def llm_match(unmatched_pred, unmatched_gt, confirm=_ollama_yes,
     return mapping
 
 
-def build_type_map(gt_names, pred_names, use_llm=True, return_report=False):
+def build_type_map(gt_names, pred_names, use_llm=True, return_report=False,
+                   value_match=None):
     """Full pipeline, cheapest and safest first:
 
       1. NORMALIZE-EQUAL   — casing/underscores/word order (no LLM, exact).
       2. CONTAINMENT       — one name is the other qualified, unambiguously
                              (no LLM, deterministic; see containment_match).
-      3. LLM               — everything else that is at least plausible.
+      3. VALUES            — optional `value_match(un_pred, un_gt) -> {pred: gt}`
+                             supplied by the caller that has the rows: two names
+                             whose per-species values agree are the same trait,
+                             whatever they are called ('number of used habitat
+                             types' vs 'Number of Habitats').
+      4. LLM               — everything else that is at least plausible.
 
     Returns pred->gt dict, or (dict, report) with return_report=True. The report
     records which pass decided each pair and whether the LLM was reachable, so
@@ -220,6 +226,14 @@ def build_type_map(gt_names, pred_names, use_llm=True, return_report=False):
     for p, g in contained.items():
         report["by_pass"][p] = "containment"
     mapping.update(contained)
+
+    if value_match is not None and un_pred and un_gt:
+        by_values = value_match(un_pred, un_gt)
+        for p, g in by_values.items():
+            report["by_pass"][p] = "values"
+        mapping.update(by_values)
+        un_pred = [p for p in un_pred if p not in by_values]
+        un_gt = [g for g in un_gt if g not in set(by_values.values())]
 
     if use_llm and un_pred and un_gt:
         by_llm = llm_match(un_pred, un_gt, report=report)

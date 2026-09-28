@@ -1,69 +1,42 @@
 {
-  "Species": {
-    "field": "verbatimIdentification",
+  "identifier": {
+    "field": "measurementType",
     "value_column": false,
-    "reasoning": "This column contains the taxonomic identification of the focal insect.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Records the verbatim identification of the focal organism."
+    "reasoning": "The header names the variable being measured, defining the trait."
   },
-  "Grassland habitats Dry period": {
-    "field": "measurementType",
+  "May-September": {
+    "field": "measurementValue",
     "value_column": true,
-    "measurementValue": "1",
-    "measurementStatistic": "individual",
-    "reasoning": "This describes the habitat condition of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies the habitat type based on the organism's environment.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Grassland habitats Dry period",
-    "basisOfRecord": "Occurrence",
-    "basisOfRecord_reasoning": "The data records the presence and characteristics of the main habitat types (including grasslands/open savannas) within the Gorongosa National Park, establishing an event (occurrence) of that habitat type at specific locations.",
-    "measurementMethod": "Habitat classification based on landscape configuration and sampling site selection within defined habitat types (miombo forest, mixed forest, transitional forest, and open savanna).",
-    "measurementMethod_reasoning": "The text defines the habitat types based on the physical landscape (e.g., 'open savanna' being a type of floodplain grassland) and explicitly states that 25 sampling sites were selected for each of these main habitat types. The specific environmental variables (like Canopy Area, Bare Soil, etc.) were measured at these sites to calculate the Shelter Index (SI) and distance to the lake, which are the derived measurements related to these habitat types."
+    "reasoning": "Contains the measured value for the May-September period."
   },
-  "Grassland habitats Interm-Wet": {
-    "field": "measurementType",
+  "October": {
+    "field": "measurementValue",
     "value_column": true,
-    "measurementValue": "4",
-    "measurementStatistic": "individual",
-    "reasoning": "This describes the habitat condition of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies the habitat type based on the organism's environment.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Grassland habitats Interm-Wet",
-    "basisOfRecord": "Occurrence",
-    "basisOfRecord_reasoning": "The data records the occurrence of the grassland habitat type within the Gorongosa National Park, established through field sampling."
+    "reasoning": "Contains the measured value for the October period."
   },
-  "Forested habitats Dry period": {
-    "field": "measurementType",
+  "Dry": {
+    "field": "measurementValue",
     "value_column": true,
-    "measurementValue": "0",
-    "measurementStatistic": "individual",
-    "reasoning": "This describes the habitat condition of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies the habitat type based on the organism's environment.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Forested habitats Dry period",
-    "basisOfRecord": "Habitat types (miombo forests, mixed forests, transitional forests, and grasslands) and the environmental gradient related to habitat shelters during the dry season.",
-    "basisOfRecord_reasoning": "The study explicitly compares ground beetle communities across four main habitat types (miombo forests, mixed forests, transitional forests, and grasslands) and evaluates the influence of habitat shelters during a long period of drought. This forms the basis of the comparison.",
-    "measurementMethod": "Sampling pitfall traps across 100 sites distributed across the four main habitat types, analyzed in relation to an environmental gradient of tree canopy cover and geographical distance to lake Urema, and calculation of the Shelter Index (SI) based on canopy area (CA), herbaceous cover (HC), shrub cover (SC), litter (L), and bare soil (BS).",
-    "measurementMethod_reasoning": "The method involved setting up pitfall traps across these habitats, sampling along an environmental gradient (tree canopy cover and distance to lake Urema), and calculating a composite Shelter Index (SI) using various habitat variables (CA, HC, SC, L, BS) to quantify habitat shelter."
+    "reasoning": "Contains the measured value for the Dry period."
   },
-  "Forested habitats Interm-Wet": {
-    "field": "measurementType",
+  "Intermediate": {
+    "field": "measurementValue",
     "value_column": true,
-    "measurementValue": "0",
-    "measurementStatistic": "individual",
-    "reasoning": "This describes the habitat condition of the organism.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies the habitat type based on the organism's environment.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Forested habitats Interm-Wet",
-    "basisOfRecord": "Occurrence",
-    "basisOfRecord_reasoning": "The data records the existence and spatial configuration of specific habitat types (miombo forests, mixed forests, transitional forests, and grasslands) within the Gorongosa National Park, establishing an event or state of the ecosystem at particular locations."
+    "reasoning": "Contains the measured value for the Intermediate period."
+  },
+  "Intermediate (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured value for the Intermediate (1) period."
+  },
+  "Wet": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured value for the Wet period."
+  },
+  "Wet (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Contains the measured value for the Wet (1) period."
   }
 }

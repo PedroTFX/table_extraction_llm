@@ -1,7 +1,7 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Cady1993\Cady1993.xlsx  (16 rows)
 PREDICTION   : ..\output\Cady1993\Cady1993.csv  (16 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
@@ -13,73 +13,62 @@ TAXON NAME REMAP (pred -> gt, 5 pair(s))
   'Turbopsebius sulphuripesLoew, 1869' -> 'Turbopsebius sulphuripes'
 
 TAXON NAMES LEFT UNMAPPED (1)
-  'Ogcodes adaptatus': no ground-truth string denotes this
+  'Ogcodes adaptatus': no ground-truth name denotes this organism
 
-measurementType REMAP (pred -> gt, 1 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
   'Host spider' -> 'Host spider(s)'
 
 ROW-LEVEL (key match)
-  matched (TP)          : 13
-  missed (FN)           : 3
-  spurious, in scope    : 3   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+  matched (TP)        : 0
+  missed (FN)         : 16
+  spurious, in scope  : 16   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.812 / 0.812 / 0.812
-  SCOPED  P/R/F1        : 0.812 / 0.812 / 0.812
-  RECALL (GT coverage)  : 0.812
-
-FUZZY VALUE MATCHES (13 accepted beyond exact/numeric)
-  subset          10
-  initialism       3
-  sample:
-    [initialism] gt '3.4 ± 0.6' == pred '3.4±0.6'
-    [subset] gt 'Coras montanus' == pred 'Coras montanus(Emerton, 1890a)(Agelenidae)'
-    [subset] gt 'Anyphaena californica' == pred 'Anyphaena californica(Banks, 1904)(Anyphaenidae)'
-    [subset] gt '4 ± 0' == pred '4.0±0'
-    [subset] gt '16.87 ± 1.4' == pred '16.87±1.4'
-    [subset] gt 'Pardosa sp.' == pred 'Pardosa sp.(Lycosidae)'
-    [subset] gt '7.67 ± 5.4' == pred '7.67±5.4'
-    [subset] gt '6.56 ± 1.2' == pred '6.56±1.2'
-    [initialism] gt '5.5 ± 0.7' == pred '5.5±0.7'
-    [subset] gt '"Lycosa" sp.' == pred '“Lycosa” sp.(Lycosidae)'
-    [subset] gt 'Lasiodora klugi' == pred 'Lasiodora klugi(C.L. Koch, 1842)(Theraphosidae)'
-    [initialism] gt '9.5 ± 1.3' == pred '9.5±1.3'
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                13     13  1.000
-  measurementMethod             0     12  0.000  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
   measurementUnit               0      0    n/a
-  measurementStatistic          7     13  0.538
-  measurementRemarks            0     13  0.000  <-- low
-  sex                          13     13  1.000
-  lifeStage                     0     13  0.000  <-- low
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
   caste                         0      0    n/a
-  sampleSizeValue               0     13  0.000  <-- low
-  sampleSizeUnit                0     13  0.000  <-- low
-  sampleTreatment               0      7  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
-  verbatimLocality              0     13  0.000  <-- low
+  verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      6  0.000  <-- low
+  verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     13  0.000  <-- low
+  associatedReferences          0      0    n/a
   externalLink                  0      0    n/a
 
-WHY THE 3 MISSED ROWS MISSED
-  species not in prediction                             1
-  species+trait present, value differs                  2
+WHY THE 16 MISSED ROWS MISSED
+  species not in prediction                   1
+  species present, trait missing              0
+  species+trait present, value differs       15
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'coras montanus'             ->  'coras montanus(emerton, 1890a)(agelenidae)' x2
+     'lasiodora klugi'            ->  'lasiodora klugi(c.l. koch, 1842)(theraphosidae)' x1
+     'pardosa sp.'                ->  'pardosa sp.(lycosidae)'     x1
      'schizocosa rovneri'         ->  'pardosa sp.(lycosidae)'     x1
      'schizocosa rovneri'         ->  'schizocosa rovneriuetz & dondale,1979 (lycosidae)' x1
-  -> 2 substitutions explain 2 of 3 misses (67%) — systematic, not scattered
+     '"lycosa" sp.'               ->  'schizocosa rovneriuetz & dondale,1979 (lycosidae)' x1
+  -> 6 substitutions explain 7 of 16 misses (44%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
-     gt 'Ogcodes adaprarus'                 ~0.88~  pred 'Ogcodes adaptatus'   x1
-  -> 1 species mismatch explains 1 of 3 misses (33%) — scattered; no single cause
+     gt 'Ogcodes adaprarus'                 ~0.89~  pred 'Ogcodes adaptatus'   x1
+  -> 1 species mismatch explains 1 of 16 misses (6%) — scattered; no single cause
+  [severity] assessing 16 ambiguous miss(es) in 1 batch(es)...
 
-  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (3 row(s))
+  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (16 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -88,6 +77,6 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.812  0.812  0.812     13     3     3   id+type+value
+  core        0.000  0.000  0.000      0    16    16   id+type+value
   tags        0.000  0.000  0.000      0    16    16   basis+id+type+value+stat+sex+stage
-             (F1 -0.812 vs previous)
+             (F1 +0.000 vs previous)

@@ -100,7 +100,7 @@ def doc_to_markdown(doc_path, backend="vlm", lang="en", force=False, extra_args=
         print(f"  [mineru-api] cached: {target.name}")
         return target
 
-    md_text = _mineru_markdown_for(doc_path, backend=backend, lang=lang)
+    md_text = _mineru_markdown_for(doc_path, backend=backend, lang=lang, force=force)
     target.write_text(md_text, encoding="utf-8")
     print(f"  [mineru-api] wrote: {target.name}  ({len(md_text)} chars)")
     return target
@@ -133,9 +133,14 @@ def _ensure_mineru_server(exe: str) -> None:
         pass
 
 
-def _mineru_markdown_for(doc_path, backend="vlm", lang="en") -> str:
+def _mineru_markdown_for(doc_path, backend="vlm", lang="en", force=False) -> str:
     """Run the LOCAL MinerU 4.x (advanced tier) on ONE pdf/image and return the
     markdown TEXT (no file written next to the source).
+
+    ``force`` also passes --force to MinerU: without it the server returns its
+    CACHED parse, so a forced re-extraction silently kept old output (Borges2024
+    kept a chart-derived table from an earlier parse; a fresh advanced-tier
+    parse leaves Figure 2 as an image).
 
     Uses the CLI in the project's .mineru_venv, talking to the managed local
     parse-server. The advanced/VLM tier gives clean figure/table SEPARATION —
@@ -163,7 +168,7 @@ def _mineru_markdown_for(doc_path, backend="vlm", lang="en") -> str:
             out = Path(td) / "out.md"
             r = subprocess.run(
                 [exe, "parse", str(Path(doc_path).resolve()), "--tier", tier, *page_args,
-                 "--wait", "1800", "-o", str(out)],
+                 *(["--force"] if force else []), "--wait", "1800", "-o", str(out)],
                 capture_output=True, text=True, timeout=2400, cwd=_mineru_workdir())
             if r.returncode != 0 or not out.exists():
                 raise RuntimeError(

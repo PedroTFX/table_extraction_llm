@@ -1,65 +1,41 @@
 {
-  "Response Response": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header names the biological property (Body size) that was measured for the organism.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The example value 'Body size' names the trait being measured, indicating a measurement key.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Response Response",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The study measured specific morphological traits of ground beetles, namely average body size (species length) and wing typology (macropterous vs. brachypterous/apterous). These measurements were taken from specimens that were collected and preserved in absolute ethanol, classifying the data as being derived from preserved specimens.",
-    "measurementMethod": "Pitfall traps (plastic vials filled with 5% ethylene glycol) were used to sample ground beetles across 100 sites (25 per habitat type) during the dry season (October 25th to November 15th, 2019). Morphological traits (body size and wing typology) were determined by direct measurement of the collected and preserved specimens.",
-    "measurementMethod_reasoning": null
-  },
-  "Fixed effects Fixed effects": {
+  "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column identifies the insect taxon (Macropterous spp.) whose measurements are being reported.",
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "Names the organism's identity, not a measured trait."
+  },
+  "Wings fully developed": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This describes a biological state of the organism, making it a measurement type.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "The example value 'Macropterous spp.' is a discrete classification of the organism's wing type."
+    "reasoning_relevance": "Records a discrete state (Yes/No) of the organism's morphology.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Wings fully developed",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The study collected and identified ground beetle specimens. The traits, including wing typology, were derived from direct morphological measurement of these specimens, which fall under the definition of measurements taken on preserved specimens.",
+    "measurementMethod": "direct morphological measurement",
+    "measurementMethod_reasoning": "The text explicitly states that information on species traits was collected from 'direct morphological measurement of the specimens'."
   },
-  "Estimate e": {
-    "field": "measurementValue",
+  "Medium length (cm)": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column holds the estimated numerical value for the response variable.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical estimate of a coefficient, not a biological measurement or trait."
-  },
-  "Estimate Std. Error": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column provides the standard error associated with the estimate.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical measure of the variability of the estimate."
-  },
-  "Estimate t value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column provides the calculated t-statistic for the measurement.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical index (t-statistic) used for hypothesis testing."
-  },
-  "Estimate P value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column provides the p-value indicating statistical significance.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical index (p-value) used to determine significance."
-  },
-  "Estimate $F_{(1,188)}$": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column provides the calculated F-statistic for the analysis.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical index (F-statistic) used in ANOVA/GLM analysis."
-  },
-  "Estimate P value (1)": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column provides the p-value for the second statistical test.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical index (p-value) used to determine significance."
+    "reasoning": "This is a direct measurement of the organism's morphology.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Records a measured physical dimension of the organism's body size.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "Medium length",
+    "measurementUnit": "cm",
+    "measurementUnit_reasoning": "stated in the column header",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The body size and wing typology traits were obtained by direct morphological measurement of the specimens, which are preserved specimens.",
+    "measurementMethod": "direct morphological measurement",
+    "measurementMethod_reasoning": "The text explicitly states that information on species traits was collected from 'direct morphological measurement of the specimens'.",
+    "measurementStatistic": "individual",
+    "measurementStatistic_reasoning": "The text refers to 'average body size' and the context implies measurements taken on individual specimens, although the specific aggregated statistics for the 'Medium length (cm)' column are not provided in the excerpt."
   }
 }

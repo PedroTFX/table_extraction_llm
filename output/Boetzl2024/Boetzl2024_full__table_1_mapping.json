@@ -1,17 +1,47 @@
 {
-  "Crop type": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column describes the plant material studied, not the insect or location."
-  },
-  "Adjacent habitat type": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This describes the land-use/habitat where sampling occurred."
-  },
-  "Number of sites": {
-    "field": "measurementValue",
+  "Category": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This is a count of sampling locations, which is a measured quantity."
+    "reasoning": "Defines the type of richness or activity measured for the organism."
+  },
+  "Crop Type::cereal (766 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the measured richness/activity related to cereal crops."
+  },
+  "Crop Type::legume (76 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the measured richness/activity related to legume crops."
+  },
+  "Crop Type::maize (78 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the measured richness/activity related to maize crops."
+  },
+  "Crop Type::oilseed (223 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the measured richness/activity related to oilseed crops."
+  },
+  "Crop Type::vegetable (51 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Represents the measured richness/activity related to vegetable crops."
+  },
+  "Adjacent Habitat Type::control (264 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the measured adjacent habitat type for the sampling location."
+  },
+  "Adjacent Habitat Type::herbaceous (554 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the measured adjacent habitat type for the sampling location."
+  },
+  "Adjacent Habitat Type::woody (376 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the measured adjacent habitat type for the sampling location."
   }
 }

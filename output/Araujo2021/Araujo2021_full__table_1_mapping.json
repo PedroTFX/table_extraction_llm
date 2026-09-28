@@ -1,67 +1,97 @@
 {
   "Variables": {
-    "field": "measurementType",
+    "field": "definitionTerm",
     "value_column": true,
-    "reasoning": "This column names the specific biological trait being measured for the focal organism."
+    "reasoning": "This column defines the names of the traits being measured in the table."
   },
   "PF (reference level) Estimate ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the estimated value of the trait, including standard error."
+    "reasoning": "This header names the estimated trait value and its associated standard error."
   },
   "PF (reference level) t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the statistical test value (t-value) for the reference level comparison."
+    "reasoning": "This header names the statistical test value for the reference level estimate."
   },
   "PA vs. PF Estimate ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+    "reasoning": "This header names the estimated trait value and its associated standard error for the comparison."
   },
   "PA vs. PF t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the statistical test value (t-value) for the comparison between PA and PF."
+    "reasoning": "This header names the statistical test value for the comparison between PA and PF."
   },
   "TR vs. PF Estimate ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+    "reasoning": "This header names the estimated trait value and its associated standard error for the comparison."
   },
   "TR vs. PF t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the statistical test value (t-value) for the comparison between TR and PF."
+    "reasoning": "This header names the statistical test value for the comparison between TR and PF."
   },
   "FR vs. PF Estimate ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+    "reasoning": "This header names the estimated trait value and its associated standard error for the comparison."
   },
   "FR vs. PF t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the statistical test value (t-value) for the comparison between FR and PF."
+    "reasoning": "This header names the statistical test value for the comparison between FR and PF."
   },
   "MR vs. PF Estimate ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+    "reasoning": "This header names the estimated trait value and its associated standard error for the comparison."
   },
   "MR vs. PF t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the statistical test value (t-value) for the comparison between MR and PF."
+    "reasoning": "This header names the statistical test value for the comparison between MR and PF."
   },
   "NR vs. PF Estimate ± SE": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column provides the estimated difference between the two reference levels, including standard error."
+    "reasoning": "This header names the estimated trait value and its associated standard error for the comparison."
   },
   "NR vs. PF t/z-value": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column provides the statistical test value (t-value) for the comparison between NR and PF."
+    "reasoning": "This header names the statistical test value for the comparison between NR and PF."
+  },
+  "(i) FDis": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a statistical measure (FDis) of genetic differentiation, a trait of the population."
+  },
+  "(j) FRic": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a trait measurement, likely related to reproductive characteristics or indices."
+  },
+  "(k) FEve": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a trait measurement, likely related to emergence timing or phenology."
+  },
+  "(l) Wing length": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a direct morphometric measurement of the insect."
+  },
+  "(m) Body size": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a direct morphometric measurement of the insect."
+  },
+  "(n) Posterior tibia length": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a direct morphometric measurement of the insect."
   }
 }

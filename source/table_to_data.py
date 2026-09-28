@@ -851,7 +851,66 @@ def _identifier_columns(table: Table, mapping: dict) -> list:
                 names.append(col.name)
     order = {h: i for i, h in enumerate(table.header_names)}
     names.sort(key=lambda n: order.get(n, len(order)))
+    # Join parts only when the name really is SPLIT. If one column already holds
+    # full names ('Adscita geryon'), the other "identifier" columns are aliases —
+    # an abbreviation/code column ('Ads.ger'), a common name — and gluing them on
+    # ('Adscita geryon Ads.ger', Korosi2022) breaks every species match.
+    full = [n for n in names if _holds_full_names(table, n)]
+    if full and len(names) > 1:
+        return full[:1]
     return names
+
+
+# A header that is JUST the field's name ('Sex', 'Stage', 'Life stage', 'Caste')
+# is a genuine row qualifier; anything more ('Overw. stage', 'Sex ratio') is a
+# candidate species trait.
+_BARE_ROW_FIELD_HEADERS = {
+    "lifeStage": {"stage", "life stage", "lifestage", "life-stage", "developmental stage",
+                  "instar", "stage of development"},
+    "sex": {"sex", "gender", "sexes"},
+    "caste": {"caste", "castes", "morph", "worker caste"},
+}
+
+
+def _species_trait_not_row_field(table: Table, header: str, field: str, id_cols) -> bool:
+    """True when a column the mapper sent to lifeStage/sex/caste is really a
+    per-SPECIES trait (Korosi2022's 'Overw. stage' = larva/pupa/adult: the stage
+    each species overwinters in). Two structural signals, both required:
+      1. the header says more than the bare field name, and
+      2. the table has ONE row per species and the column's value changes from
+         species to species — a real row qualifier repeats a species across rows
+         (a larva row and an adult row), a species trait does not.
+    The field descriptions already say this; the small mapper still keys on the
+    word 'stage' and the egg/larva/pupa values, so this backstops it."""
+    if field not in _BARE_ROW_FIELD_HEADERS or not id_cols:
+        return False
+    h = re.sub(r"[^a-z ]+", " ", str(header).lower())
+    h = re.sub(r"\s+", " ", h).strip()
+    if h in _BARE_ROW_FIELD_HEADERS[field]:
+        return False
+    col = table.resolve(header)
+    if col is None:
+        return False
+    ids = [" ".join(str(table.column_values(c)[i]).strip() for c in id_cols)
+           for i in range(len(table.column_values(id_cols[0])))]
+    vals = [str(v).strip() for v in table.column_values(col.name)]
+    pairs = [(s, v) for s, v in zip(ids, vals) if s and v]
+    if len(pairs) < 5:
+        return False
+    species = [s for s, _ in pairs]
+    one_row_each = len(set(species)) >= 0.9 * len(species)
+    varies = len({v.lower() for _, v in pairs}) >= 2
+    return one_row_each and varies
+
+
+def _holds_full_names(table: Table, col_name: str) -> bool:
+    """Most populated cells are multi-word names ('Genus epithet'), i.e. the
+    column needs no other column to form a taxon name."""
+    vals = [v.strip() for v in table.column_values(col_name) if v and v.strip()]
+    if not vals:
+        return False
+    multi = sum(1 for v in vals if len(re.findall(r"[A-Za-z]{2,}", v)) >= 2)
+    return multi >= max(1, int(0.7 * len(vals)))
 
 
 def _identifier_column(table: Table, mapping: dict) -> Optional[str]:
@@ -1068,6 +1127,12 @@ def add_table_to_grouped(table: Table, mapping: dict, grouped: dict,
         # measurementStatistic) describes the observation, not a trait. Carry it
         # onto this row's measurements rather than dropping it or turning it into
         # a bogus measurementType named after the column.
+        if field in ROW_FIELDS and _species_trait_not_row_field(table, header, field, id_cols):
+            print(f"    '{header}' -> measurementType (a per-species trait, not the "
+                  f"{field} of the recorded individuals)")
+            m = {**m, "field": "measurementType"}
+            mapping[header] = m
+            field = "measurementType"
         if field in ROW_FIELDS:
             col = table.resolve(header)
             if col is not None:
@@ -1730,6 +1795,11 @@ def _traitish(v: str) -> bool:
     return not re.fullmatch(r"[\d.,%±()/\s–—+-]+", v)
 
 
+_UNIT_PAREN_RE = re.compile(
+    r"\(\s*(?:[µμu]m|mm|cm|m|km|mg|µg|g|kg|ml|µl|l|s|min|h|d|days?|°C|ºC|%|mm2|mm²|cm2|cm²)"
+    r"(?:\s*[/·]\s*[\w°µ²]+)*\s*\)", re.I)
+
+
 def detect_trait_rows_table(table: Table, fallback_species: Optional[str]):
     """Traits-in-ROWS: the first column lists trait names and the OTHER columns
     are experimental conditions / castes / groups (Kovacs' Workers|Gynes, Borges'
@@ -1778,6 +1848,21 @@ def detect_trait_rows_table(table: Table, fallback_species: Optional[str]):
         if overlap >= 0.5:
             return False, "trait x trait matrix (other headers echo the rows)"
     header_signal = bool(_TRAIT_LABEL_RE.search(clean_text(col0.name)))
+    # Without an explicit 'Trait'/'Variable' label on the first column, two
+    # structural checks keep record tables out (an explicit label wins: Kovacs2008
+    # lists 'Trait' x group in long format, so its trait names DO repeat).
+    if not header_signal:
+        # Rows are TRAITS only if the labels are (nearly) all different — a list
+        # of traits does not repeat. A per-SPECIMEN table's first column does
+        # (Brant2021 S1: 'Chicago' x 120, one row per bee); melting it made each
+        # city a "trait".
+        if len(vals) >= 4 and len(set(v.lower() for v in vals)) < 0.8 * len(vals):
+            return False, "first-column values repeat (rows are records, not traits)"
+        # Headers that carry a UNIT ('Head width (cm) (range)') are the traits
+        # themselves, so the rows are conditions/places, not traits.
+        unit_headers = sum(bool(_UNIT_PAREN_RE.search(clean_text(o))) for o in others)
+        if unit_headers >= max(1, len(others) // 2):
+            return False, "other headers carry units (traits are in the columns)"
     val_signal = sum(_traitish(v) for v in vals) / len(vals) >= 0.7
     if header_signal or val_signal:
         return True, ("first-column header names a trait" if header_signal
@@ -1821,8 +1906,47 @@ def _classify_value_column(name: str):
     return "value", None, raw
 
 
+# a dash in a traits-in-rows cell means "not measured" (Kovacs2008 males,
+# colonies A-B), not a value
+_NO_VALUE = {"-", "–", "—", "--"}
+
+
+_LABEL_MARKS_RE = re.compile(r"[\s*†‡§¶#]+$")
+_LABEL_ABBR_RE = re.compile(r"^(?P<full>.*\S)\s*\((?P<abbr>[A-Za-z][A-Za-z0-9]{0,5})\)$")
+
+
+def _trait_label_names(labels) -> dict:
+    """{raw label: trait name} for one traits-in-rows table, so every block of
+    rows uses the same name. A table often defines its abbreviations in the
+    first block ('Thorax width (TW)*') and uses them bare in the next ('TW*',
+    Kovacs2008's gynes), which split one trait into two. From the table's own
+    labels only: footnote marks are dropped; 'Name (ABBR)' where ABBR is also a
+    bare label becomes 'Name', and that bare ABBR resolves to Name."""
+    labels = [l for l in labels if l]
+    bases = {_LABEL_MARKS_RE.sub("", l) for l in labels}
+    abbr = {}
+    for b in bases:
+        m = _LABEL_ABBR_RE.match(b)
+        # '(X)' is an abbreviation only if X is ALSO used bare as a label here;
+        # otherwise it is a unit or gloss ('Female weight (mg)') and stays
+        if m and m.group("abbr") in bases:
+            abbr[m.group("abbr")] = m.group("full")
+    full_of = {f"{f} ({a})": f for a, f in abbr.items()}
+    out = {}
+    for l in labels:
+        base = _LABEL_MARKS_RE.sub("", l)
+        name = full_of.get(base) or abbr.get(base, base)
+        if name != l:
+            out[l] = name
+    return out
+
+
+# mapper fields that mean "this column holds the measurements"
+_MELT_VALUE_FIELDS = {"measurementValue", "measurementType"}
+
+
 def add_trait_rows_table_to_grouped(table: Table, grouped: dict,
-                                    fallback_species: str) -> dict:
+                                    fallback_species: str, mapping: dict = None) -> dict:
     """Melt a traits-in-ROWS table onto the paper-level species: every cell
     becomes one measurement (type = the row's trait, value = the cell). When
     there is more than one value column, each column is a CONDITION/caste/group,
@@ -1846,7 +1970,7 @@ def add_trait_rows_table_to_grouped(table: Table, grouped: dict,
             stat = _normalize_statistic(clean_text(rec.get(col0.name, "")))
             for c in raw_value_cols:
                 value = (rec.get(c.name, "") or "").strip()
-                if not value:
+                if not value or value in _NO_VALUE:
                     continue
                 meas = {"measurementType": clean_text(c.name),
                         "measurementValue": value}
@@ -1865,17 +1989,28 @@ def add_trait_rows_table_to_grouped(table: Table, grouped: dict,
     kept = []
     for c in raw_value_cols:
         kind, stat, cond = _classify_value_column(c.name)
+        # The mapper (LLM) already judged every column; its field is the verdict
+        # on value vs sample size / statistic. The header-word rule above is only
+        # the fallback for a column it did not map — it read 'Colony-of-origin F'
+        # as an F-statistic and dropped colony F (Kovacs2008).
+        field = ((mapping or {}).get(c.name) or {}).get("field")
+        if field:
+            kind = "value" if field in _MELT_VALUE_FIELDS else "skip"
+            if kind == "value" and cond is None:
+                cond = clean_text(c.name)
         if kind == "value":
             kept.append((c, stat, cond))
     single = len(kept) == 1
+    names = _trait_label_names(clean_text(r.get(col0.name, "")) for r in recs)
     n = 0
     for rec in recs:
         trait = clean_text(rec.get(col0.name, ""))
         if not _traitish(trait):
             continue
+        trait = names.get(trait, trait)
         for c, stat, cond in kept:
             value = (rec.get(c.name, "") or "").strip()
-            if not value:
+            if not value or value in _NO_VALUE:
                 continue
             meas = {"measurementType": trait, "measurementValue": value}
             if stat:
@@ -1914,7 +2049,8 @@ def build_grouped(tables: list, mappings: dict, fallback_species: dict = None) -
         # species or a trait as a value).
         tr_ok, tr_reason = detect_trait_rows_table(table, fb)
         if tr_ok:
-            add_trait_rows_table_to_grouped(table, grouped, fallback_species=fb)
+            add_trait_rows_table_to_grouped(table, grouped, fallback_species=fb,
+                                            mapping=mapping)
             continue
         # A tidy/long table (trait-name column + value column) is read row-wise;
         # everything else goes through the normal wide path.

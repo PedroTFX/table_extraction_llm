@@ -1,37 +1,30 @@
 {
-  "identifier": {
-    "field": "measurementType",
+  "Body mass": {
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Names the specific trait or variable being measured (e.g., log body mass)."
+    "reasoning": "Values are taxonomic group names, identifying the focal insect taxon.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Measures a physical dimension (body size) of the butterfly."
   },
-  "Aversion to road Mean (SE)": {
+  "Estimate mean ± SE": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Contains the mean value and its associated standard error for the trait."
+    "reasoning": "Represents the calculated mean and standard error of the trait.",
+    "category": null,
+    "reasoning_relevance": "This is a derived statistic (mean/SE), not a direct biological trait."
   },
-  "Aversion to road t-statistic": {
+  "t-statistic": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents the calculated t-statistic for the road aversion relationship."
+    "reasoning": "Represents the statistical test result for the comparison.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical test result, not a trait of the organism."
   },
   "p": {
     "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "Represents the p-value associated with the statistical test."
-  },
-  "Aversion to high lantana Mean (SE)": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains the mean value and its associated standard error for the lantana aversion trait."
-  },
-  "Aversion to high lantana t-statistic": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Represents the calculated t-statistic for the lantana aversion relationship."
-  },
-  "Aversion to high lantana p": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Represents the p-value associated with the lantana aversion test."
+    "reasoning": "Represents the p-value associated with the statistical test.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical probability value, not a biological measurement."
   }
 }

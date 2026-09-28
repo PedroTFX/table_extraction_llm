@@ -1,177 +1,37 @@
 {
-  "﻿City": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This is the name of the city where sampling occurred.",
-    "category": null,
-    "reasoning_relevance": "not found in text"
-  },
-  "Location": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This specifies the geographic location of the sampling event.",
-    "category": null,
-    "reasoning_relevance": "Names a specific place, which is not a measurementType."
-  },
-  "Management": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Describes the land-use or management type of the sampling site.",
-    "category": null,
-    "reasoning_relevance": "Describes the context of the garden, not a trait of the organism."
-  },
-  "Date": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Records the date of the sampling event.",
-    "category": null,
-    "reasoning_relevance": "Temporal data, not a trait of the organism."
-  },
   "Month": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Records the month of the sampling event.",
+    "reasoning": "The header describes the time of sampling, which is a measured temporal property.",
     "category": null,
-    "reasoning_relevance": "Temporal data, not a trait of the organism."
+    "reasoning_relevance": "Represents the time of sampling, not a biological trait of the organism."
   },
-  "Day": {
+  "Q1": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Records the day of the sampling event.",
+    "reasoning": "Q1 represents a measured temporal quantity (time series data).",
     "category": null,
-    "reasoning_relevance": "Temporal data, not a trait of the organism."
+    "reasoning_relevance": "Likely represents site conditions or derived environmental variables, not organism traits."
   },
-  "Year": {
+  "Q2 (Median)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Records the year of the sampling event.",
-    "category": null,
-    "reasoning_relevance": "Temporal data, not a trait of the organism."
-  },
-  "Intertegular.d": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the intertegular distance of the insect.",
+    "reasoning": "Q2 (Median) represents a measured temporal quantity (time series data).",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Measures an anatomical dimension used as a proxy for body size.",
+    "reasoning_relevance": "Represents a median value, likely of body size or related morphological traits.",
     "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "intertegular distance"
+    "value_type": "categorical",
+    "canonicalType": "Q2"
   },
-  "Head.w": {
+  "Q3": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Measures the width of the head of the insect.",
+    "reasoning": "Q3 represents a measured temporal quantity (time series data).",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Measures an anatomical dimension used as a proxy for body size.",
+    "reasoning_relevance": "Represents a median value, likely of body size or related morphological traits.",
     "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "head width"
-  },
-  "I.D.": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "This is the unique identification number of the focal insect.",
-    "category": null,
-    "reasoning_relevance": "Specimen identification, not a measured trait."
-  },
-  "Neighborhood": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This specifies the neighborhood location of the sampling.",
-    "category": null,
-    "reasoning_relevance": "Names a specific place, which is not a measurementType."
-  },
-  "Garden.area": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the area of the garden/plot.",
-    "category": null,
-    "reasoning_relevance": "Measures a site variable (area), not an organism trait."
-  },
-  "Med.Income.scaled": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the scaled median income of the area.",
-    "category": null,
-    "reasoning_relevance": "A human/socioeconomic variable of the site."
-  },
-  "City.med.income": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the median income of the city.",
-    "category": null,
-    "reasoning_relevance": "A human/socioeconomic variable of the site."
-  },
-  "Percent.income": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the percentage of income related to the area.",
-    "category": null,
-    "reasoning_relevance": "A human/socioeconomic variable of the site."
-  },
-  "popdens": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the population density of the area.",
-    "category": null,
-    "reasoning_relevance": "An abundance or sample size, not an organism trait."
-  },
-  "DDG_15": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the Degree-Day of Growing (15).",
-    "category": null,
-    "reasoning_relevance": "A site condition (Growing Degree Days), not an organism trait."
-  },
-  "DDG_16": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the Degree-Day of Growing (16).",
-    "category": null,
-    "reasoning_relevance": "A site condition (Growing Degree Days), not an organism trait."
-  },
-  "CV_15": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Represents the Coefficient of Variation for the 15-day metric.",
-    "category": null,
-    "reasoning_relevance": "A statistic (Coefficient of Variation), not a measured trait."
-  },
-  "CV_16": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "Represents the Coefficient of Variation for the 16-day metric.",
-    "category": null,
-    "reasoning_relevance": "A statistic (Coefficient of Variation), not a measured trait."
-  },
-  "scaled.garden": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the scaled garden area.",
-    "category": null,
-    "reasoning_relevance": "A scaled measurement of site area, not an organism trait."
-  },
-  "income": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Records the income level (e.g., low).",
-    "category": null,
-    "reasoning_relevance": "A human/socioeconomic variable of the site."
-  },
-  "PGDD": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the Projected Growing Degree Days.",
-    "category": null,
-    "reasoning_relevance": "A derived index, not a measured trait."
-  },
-  "15Temp": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Measures the temperature at 15 degrees.",
-    "category": null,
-    "reasoning_relevance": "A site condition (Temperature), not an organism trait."
+    "value_type": "categorical",
+    "canonicalType": "Third quartile of body size variation"
   },
   "__paperSpecies__": {
     "field": "verbatimIdentification",
@@ -179,23 +39,27 @@
     "scope": "paper",
     "column": null,
     "value": "Halictus ligatus",
-    "reasoning": "The measurements quantify body size variation in female Halictus ligatus sweat bees across three different cities.",
+    "reasoning": "The measurements quantify body size variation in Halictus ligatus across different cities.",
     "decided_by": "llm",
     "roles": {
-      "Halictus ligatus": "measured subject"
+      "Halictus ligatus": "measured subject",
+      "Halicus ligatus": "measured subject",
+      "Chicago and": "habitat",
+      "Detroit and": "habitat",
+      "Image block": "unclear"
     },
     "candidates": [
       {
         "name": "Halictus ligatus",
         "mentions": 13,
-        "abbrev_mentions": 27,
-        "score": 151
+        "abbrev_mentions": 29,
+        "score": 161
       },
       {
         "name": "Halicus ligatus",
         "mentions": 1,
-        "abbrev_mentions": 27,
-        "score": 139
+        "abbrev_mentions": 29,
+        "score": 146
       },
       {
         "name": "Chicago and",
@@ -204,8 +68,8 @@
         "score": 8
       },
       {
-        "name": "Detroit and",
-        "mentions": 8,
+        "name": "Image block",
+        "mentions": 5,
         "abbrev_mentions": 0,
         "score": 8
       }

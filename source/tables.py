@@ -699,6 +699,79 @@ def _parse_pairs(segment: str) -> dict:
     return out
 
 
+def legend_from_code_definitions(text: str, codes) -> dict:
+    """{code: term} for a column's short codes, from a sentence/caption anywhere
+    in the paper that defines SEVERAL of them as 'CODE: term' or 'CODE = term'
+    — e.g. Korosi2022's figure caption '(M: monophagous, NO: narrowly
+    oligophagous, O: oligophagous, P: polyphagous)', which has no footnote
+    marker, so parse_legends_from_text never saw it and the LLM paraphrased
+    'NO' as 'narrowing oligophagous'.
+
+    Requires >= 2 of THIS column's codes defined in the same sentence, so a lone
+    'P: 0.05' elsewhere can't be taken as a legend. Returns the best sentence's
+    pairs (most codes defined), verbatim."""
+    short = [c for c in dict.fromkeys(codes) if c and len(c) <= 5 and not c.replace(".", "").isdigit()]
+    if len(short) < 2 or not text:
+        return {}
+    best = {}
+    for sent in re.split(r"(?<=[.!?])\s+(?=[A-Z(])|\n", text):
+        if "<td" in sent:
+            continue
+        found = {}
+        for c in short:
+            m = re.search(rf"(?<![\w/]){re.escape(c)}\s*[:=]\s*([A-Za-z][^,;:=()\n]{{1,60}}?)"
+                          r"(?=\s*(?:[,;)]|\.(?:\s|$)|$))", sent)
+            if m:
+                found[c] = m.group(1).strip()
+        if len(found) >= 2 and len(found) > len(best):
+            best = found
+    return best
+
+
+def legend_for_named_column(text: str, header: str, codes) -> dict:
+    """{code: term} from a legend INTRODUCED BY THE COLUMN'S NAME:
+        'Colony population: 1, hundreds; 2, thousands; 3, tens of thousands.'
+        'Defence of resources: 1, none; 2, food and/or territory.'   (Arnan2012)
+    The name makes it safe to accept digit codes and 'code, term' pairs, which
+    legend_from_code_definitions must refuse ('P: 0.05'). The label must contain
+    every significant word of the header (prefix match: 'rhythm' ~ 'rhythms',
+    'defense' ~ 'defence'), and >= 2 of the column's codes must be defined."""
+    words = [w for w in re.findall(r"[a-z]{4,}", str(header).lower())]
+    if not words or not text:
+        return {}
+    wanted = {str(c).strip() for c in codes if str(c).strip()}
+    best = {}
+    # 'Label: pairs.' — the label is a short run of words right before ':'
+    for m in re.finditer(r"([A-Za-z][A-Za-z /()-]{2,60}):\s*([^.:]{3,400}?)(?=\.\s|\.$|$)", text):
+        label = m.group(1).lower()
+        if not all(re.search(rf"\b{w[:5]}", label) for w in words):
+            continue
+        found = {}
+        for part in re.split(r";", m.group(2)):
+            pm = re.match(r"\s*([A-Za-z0-9/+]{1,6})\s*[,=:\-]\s*(.+?)\s*$", part)
+            if pm and pm.group(1) in wanted:
+                found[pm.group(1)] = pm.group(2).strip()
+        # enumerated shape: 'Trophic levels were defined at three levels:
+        # (1) herbivores (pollinator bees), (2) primary predators (...), and
+        # (3) secondary predators (...)' (Uemori2021) — gloss in () dropped
+        if len(found) < 2:
+            enum = {}
+            for em in re.finditer(r"\(([A-Za-z0-9]{1,4})\)\s*([^,;()]+?)\s*(?:\([^)]*\)\s*)?(?=,|;|$)",
+                                  m.group(2)):
+                term = re.sub(r"^(?:and|or)\s+", "", em.group(2).strip())
+                if em.group(1) in wanted and term:
+                    enum[em.group(1)] = term
+            if len(enum) > len(found):
+                found = enum
+        # most codes wins; on a tie the SHORTEST wording — a paper often gives
+        # the legend twice ('hundreds of workers' in the text, 'hundreds' in the
+        # supplement table) and volunteers record the concise term (Arnan2012)
+        if len(found) >= 2 and (len(found), -sum(map(len, found.values()))) > \
+                (len(best), -sum(map(len, best.values())) if best else 0):
+            best = found
+    return best
+
+
 def parse_legends_from_text(text: str, table: Table) -> dict:
     """Best-effort deterministic legend extraction.
 
@@ -854,9 +927,35 @@ def _abbrev_from_definition(token: str, text: str) -> Optional[str]:
     return None
 
 
+_GLOSSARY_PAIR_RE = re.compile(r"(?<![\w-])([A-Z][A-Za-z0-9]{1,9})\s*[:=]\s*([^;:=\n]{3,90}?)(?=\s*[;.\n]|$)")
+
+
+def _abbrev_from_glossary(token: str, text: str) -> Optional[str]:
+    """Shape: a caption/legend GLOSSARY listing several 'ABBR: description' pairs
+    e.g. 'HAT: number of used habitat types; HAST: number of used habitat
+    subtypes; Voltin: voltinism' (Korosi2022).
+
+    An explicit definition list is the strongest evidence a paper gives, and its
+    descriptions need not start with the acronym's letters ('HAT: number of ...'),
+    which the anchored 'ABBR = term' shape rejects — so the looser 'term (ABBR)'
+    shape used to win with a letter-scatter match ('Habitat breadth (HAT)').
+    Accepted only inside a sentence that holds at least two such pairs."""
+    for sent in re.split(r"(?<=[.!?])\s+|\n", text):
+        pairs = _GLOSSARY_PAIR_RE.findall(sent)
+        if len(pairs) < 2:
+            continue
+        for abbr, desc in pairs:
+            if abbr == token:
+                desc = re.sub(r"\s+", " ", desc).strip(" ,")
+                if desc and desc.lower() != token.lower():
+                    return desc
+    return None
+
+
 # Ordered: the first shape that resolves a token wins. Extend this list to add
 # new definition shapes without touching the caller.
 _ABBREV_SHAPES = [
+    ("glossary ABBR: description", _abbrev_from_glossary),
     ("term (ABBR)", _abbrev_from_term_paren),
     ("ABBR = term", _abbrev_from_definition),
 ]

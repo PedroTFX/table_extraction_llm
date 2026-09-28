@@ -21,6 +21,21 @@ numbers. A header naming the KIND of place the organism occupies — microhabita
 habitat, habitat found, nesting substrate, stratum — IS a measurementType; there
 the place is the VALUE ("microhabitat = leaf litter"). Judge each header alone.
 
+Values that LOOK LIKE another field's vocabulary do not make the column that
+field. The other fields (lifeStage, sex, caste, verbatimEventDate,
+verbatimLocality, ...) describe THE RECORDED INDIVIDUALS or THE SAMPLING EVENT;
+a header that names a property OF THE SPECIES is a measurementType even when
+its cells are stages, sexes, castes, months or places:
+- "Overwintering stage" / "Overw. stage" / "Diapause stage" = egg/larva/pupa/
+  adult -> measurementType (the stage the species overwinters in), NOT lifeStage
+- "Sex ratio" / "Sex determination" -> measurementType, NOT sex
+- "Flight period" / "Months active" = May-Aug -> measurementType, NOT
+  verbatimEventDate
+- "Distribution" / "Native range" = countries -> measurementType, NOT
+  verbatimLocality
+Apply the TEST above: "species has overwintering stage = larva" is a fact about
+the species' biology, so the header is the measurementType.
+
 A climatic, spatial or temporal quantity attributed to the ORGANISM is still a
 measurementType — the species' OWN thermal or precipitation tolerance, its
 climatic niche or range, its phenology (flight period, months active, emergence

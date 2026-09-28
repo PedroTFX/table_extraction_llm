@@ -1,48 +1,95 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Brant2021\Brant2021.xlsx  (480 rows)
-PREDICTION   : ..\output\Brant2021\Brant2021.csv  (480 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Brant2021\Brant2021.csv  (584 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)          : 480
-  missed (FN)           : 0
-  spurious, in scope    : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Head width' -> 'head width'
+  'Head width (cm)' -> 'head width'
+  'Intertegular distance' -> 'intertegular distance'
+  'Intertegular distance (cm)' -> 'intertegular distance'
 
-  STRICT  P/R/F1        : 1.000 / 1.000 / 1.000
-  SCOPED  P/R/F1        : 1.000 / 1.000 / 1.000
-  RECALL (GT coverage)  : 1.000
+ROW-LEVEL (key match)
+  matched (TP)        : 442
+  missed (FN)         : 38
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 136   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.757 / 0.921 / 0.831   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.987 / 0.921 / 0.953   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.921   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            136
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                 0    480  0.000  <-- low
-  measurementMethod             0    480  0.000  <-- low
-  measurementUnit               0    480  0.000  <-- low
-  measurementStatistic          0    480  0.000  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord               442    442  1.000
+  measurementMethod             0    442  0.000  <-- low
+  measurementUnit               0    442  0.000  <-- low
+  measurementStatistic          0    442  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                         480    480  1.000
-  lifeStage                   480    480  1.000
-  caste                         0    480  0.000  <-- low
+  sex                         442    442  1.000
+  lifeStage                   442    442  1.000
+  caste                         0    442  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    480  0.000  <-- low
-  verbatimLocality              0    480  0.000  <-- low
+  samplingProtocol              0    442  0.000  <-- low
+  verbatimLocality              0      0    n/a   +442 where GT blank
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0    480  0.000  <-- low
+  verbatimEventDate             0    442  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    480  0.000  <-- low
+  associatedReferences          0    442  0.000  <-- low
   externalLink                  0      0    n/a
+
+WHY THE 38 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        0
+  [severity] assessing 38 ambiguous miss(es) in 2 batch(es)...
+
+  full miss detail saved -> Brant2021_misses.csv, Brant2021_misses_summary.json (38 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  intertegular distance                           240   240   
-  head width                                      240   240   
+  april                                             0     3   PRED-ONLY
+  august                                            0     3   PRED-ONLY
+  city detroit                                      0     3   PRED-ONLY
+  month july: city detroit                          0     3   PRED-ONLY
+  month june: city detroit                          0     3   PRED-ONLY
+  month may: city detroit                           0     3   PRED-ONLY
+  month sep oct: city detroit                       0     3   PRED-ONLY
+  month july: city saint. louis                     0     3   PRED-ONLY
+  month june: city saint. louis                     0     3   PRED-ONLY
+  month may: city saint. louis                      0     3   PRED-ONLY
+  month sep oct: city saint. louis                  0     3   PRED-ONLY
+  city saint. louis                                 0     3   PRED-ONLY
+  december                                          0     3   PRED-ONLY
+  intertegular distance                           240   219   Δ-21 (split?)
+  february                                          0     3   PRED-ONLY
+  head width                                      240   229   Δ-11 (split?)
+  (intercept)                                       0     3   PRED-ONLY
+  january                                           0     3   PRED-ONLY
+  july                                              0     3   PRED-ONLY
+  month july                                        0     3   PRED-ONLY
+  june                                              0     3   PRED-ONLY
+  month june                                        0     3   PRED-ONLY
+  management                                        0    55   PRED-ONLY
+  march                                             0     3   PRED-ONLY
+  may                                               0     3   PRED-ONLY
+  month may                                         0     3   PRED-ONLY
+  month sep oct                                     0     3   PRED-ONLY
+  november                                          0     3   PRED-ONLY
+  october                                           0     3   PRED-ONLY
+  september                                         0     3   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        1.000  1.000  1.000    480     0     0   id+type+value
-  tags        0.000  0.000  0.000      0   480   480   basis+id+type+value+stat+sex+stage
-             (F1 -1.000 vs previous)
+  core        0.987  0.921  0.953    442     6    38   id+type+value
+             (136 more spurious row(s) set aside as out-of-scope; strict P would be 0.757)
+  tags        0.000  0.000  0.000      0   448   480   basis+id+type+value+stat+sex+stage
+             (136 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.953 vs previous)

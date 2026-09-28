@@ -1,3 +1,4 @@
+  [semantic] matched by values: 'ITS' -> 'Body Size'
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Araujo2021\Araujo2021.xlsx  (273 rows)
 PREDICTION   : ..\output\Araujo2021\Araujo2021.csv  (234 rows)
@@ -41,29 +42,29 @@ TAXON NAME REMAP (pred -> gt, 31 pair(s))
 TAXON NAMES LEFT UNMAPPED (1)
   'P. guadulpensis': no ground-truth name denotes this organism
 
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'ITS' -> 'Body Size'
+
 ROW-LEVEL (key match)
-  matched (TP)        : 172
-  missed (FN)         : 101
-  spurious, in scope  : 23   <- GT covers this trait: real errors
-  spurious, out of scope: 39   <- GT never covers this trait: nothing to score against
+  matched (TP)        : 210
+  missed (FN)         : 63
+  spurious, in scope  : 24   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.735 / 0.630 / 0.679   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.882 / 0.630 / 0.735   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.630   <- 'how much of the GT did we get' — extras cannot affect this
-
-  out-of-scope rows by uncovered field:
-    measurementType                             39
+  STRICT  P/R/F1      : 0.897 / 0.769 / 0.828   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.897 / 0.769 / 0.828   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.769   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                 0    172  0.000  <-- low
-  measurementMethod             0    172  0.000  <-- low
-  measurementUnit               0    111  0.000  <-- low
-  measurementStatistic         61    172  0.355  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord               210    210  1.000
+  measurementMethod             0      0    n/a   +73 where GT blank
+  measurementUnit             149    149  1.000
+  measurementStatistic         61    210  0.290  <-- low
   measurementRemarks            0      0    n/a
-  sex                          57    172  0.331  <-- low
-  lifeStage                   115    172  0.669
-  caste                         0    115  0.000  <-- low
+  sex                          57    210  0.271  <-- low
+  lifeStage                   153    210  0.729
+  caste                         0    153  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
@@ -72,12 +73,12 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    172  0.000  <-- low
+  associatedReferences          0    210  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 101 MISSED ROWS MISSED
+WHY THE 63 MISSED ROWS MISSED
   species not in prediction                   7
-  species present, trait missing             76
+  species present, trait missing             38
   species+trait present, value differs       18
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
@@ -86,26 +87,24 @@ WHY THE 101 MISSED ROWS MISSED
      'leg scopa'                  ->  'leg_scopa'                  x5
      '1.02'                       ->  '1.2'                        x2
      '8.07'                       ->  '8.7'                        x1
-  -> 5 substitutions explain 18 of 101 misses (18%) — scattered; no single cause
+  -> 5 substitutions explain 18 of 63 misses (29%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
      gt 'Polistes guadeloupensis'           ~0.73~  pred 'Polistes nasidens'   x7
-  -> 1 species mismatch explains 7 of 101 misses (7%) — scattered; no single cause
+  -> 1 species mismatch explains 7 of 63 misses (11%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Body Size'                        x38
      'Elevation'                        x38
-  -> 2 missing traits explain 76 of 101 misses (75%) — systematic, not scattered
+  -> 1 missing trait explains 38 of 63 misses (60%) — systematic, not scattered
   [severity] assessing 25 ambiguous miss(es) in 2 batch(es)...
 
-  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (101 row(s))
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (63 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  body size                                        39     0   GT-ONLY
+  body size                                        39    39   
   larval diet                                      25    25   
   elevation                                        39     0   GT-ONLY
-  its                                               0    39   PRED-ONLY
   left posterior tibia length                      14    14   
   left wing length                                 39    39   
   left mandibula                                   25    25   
@@ -116,8 +115,6 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.882  0.630  0.735    172    23   101   id+type+value
-             (39 more spurious row(s) set aside as out-of-scope; strict P would be 0.735)
-  tags        0.000  0.000  0.000      0   195   273   basis+id+type+value+stat+sex+stage
-             (39 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.735 vs previous)
+  core        0.897  0.769  0.828    210    24    63   id+type+value
+  tags        0.000  0.000  0.000      0   234   273   basis+id+type+value+stat+sex+stage
+             (F1 -0.828 vs previous)

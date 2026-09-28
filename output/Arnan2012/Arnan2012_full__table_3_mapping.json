@@ -1,113 +1,22 @@
 {
-  "Species": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "The column contains the taxonomic identification of the insect species.",
-    "category": "null",
-    "reasoning_relevance": "This is the specimen's identity, not a measurable trait."
-  },
-  "Mean Worker length (mm)": {
+  "Variable": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "2.4",
-    "measurementStatistic": "mean",
-    "reasoning": "The header names a physical measurement of the organism.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents a measured physical dimension of the organism.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Worker length"
+    "reasoning": "The variable names the property measured for the organism, defining a biological trait."
   },
-  "Polymorphism": {
+  "Group": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "1",
-    "measurementStatistic": "single observation",
-    "reasoning": "The column records a categorical state of polymorphism for the species.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records a discrete state of the organism's worker caste.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Polymorphism",
-    "basisOfRecord": "Worker polymorphism (monomorphism, low polymorphism, or high polymorphism)",
-    "basisOfRecord_reasoning": "The data record is the classification of ant species based on the polymorphism level of their worker caste, categorized as monomorphism (1), low polymorphism (2), or high polymorphism (3).",
-    "measurementMethod": "Assignment based on literature, personal data, and personal communications from colleagues.",
-    "measurementMethod_reasoning": "The text states that the discrete category for worker polymorphism was assigned based on information obtained from personal data, literature, and communications from colleagues, rather than a direct physical measurement protocol."
+    "reasoning": "The group defines a categorical grouping of the organism based on environmental factors."
   },
-  "Colony population": {
-    "field": "measurementType",
+  "Axis I: 50.3% of variance": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "measurementValue": "3",
-    "measurementStatistic": "single observation",
-    "reasoning": "The column records the numerical population count of the colony.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the size of the ant colony.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Colony population",
-    "basisOfRecord": "Categorical classification of colony population based on worker numbers: 1 (hundreds of workers), 2 (thousands of workers), 3 (tens of thousands of workers).",
-    "basisOfRecord_reasoning": "The text defines 'Colony population' as an ordinal variable used for classification (1, 2, or 3) in the study, derived from personal data and literature, as detailed in Table S1.",
-    "measurementMethod": "Information derived from personal observations, literature, and personal communications from colleagues (as summarized in Table S1).",
-    "measurementMethod_reasoning": "The quantitative values for colony population are not derived from a single physical measurement but are classifications assigned based on the life traits observed and reported by the researchers, as explicitly stated in the methodology section regarding data acquisition."
+    "reasoning": "This represents the percentage of variance explained by the grouping variable."
   },
-  "Brood cycle": {
-    "field": "measurementType",
+  "Axis I: 29.5% of variance": {
+    "field": "measurementStatistic",
     "value_column": true,
-    "measurementValue": "2",
-    "measurementStatistic": "single observation",
-    "reasoning": "The column records the brood cycle duration for the colony.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the duration of the larval development cycle.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Brood cycle",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The 'Brood cycle' is a life history characteristic (larval development timing) of the ant species, which falls under the category of behavioural/ecological/natural-history traits. The data was derived from a tabulation of life traits obtained from personal observations and literature, thus classifying it as HumanObservation.",
-    "measurementMethod": "Tabulation of life traits derived from personal observations and literature.",
-    "measurementMethod_reasoning": "The specific values (1 or 2) for the brood cycle were assigned based on a tabulation of life traits obtained from personal data, literature, and personal communications from colleagues, as detailed in the 'Life traits of species' section and Table S1."
-  },
-  "N queens per colony": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementValue": "polygyny",
-    "measurementStatistic": "single observation",
-    "reasoning": "The column records the social structure of the colony.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the social structure regarding queen numbers.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "N queens per colony",
-    "basisOfRecord": "Categorical classification of colony structure (1 for monogyny/only one queen; 2 for polygyny/more than one queen)",
-    "basisOfRecord_reasoning": "The text defines 'Number of queens per colony' as a discrete category used for grouping ant species based on their colony composition (monogyny or polygyny).",
-    "measurementMethod": "Tabulation of 14 life traits derived from personal data, literature, and personal communications from colleagues.",
-    "measurementMethod_reasoning": "The classification of 'Number of queens per colony' (1 or 2) was part of a larger set of life traits that were tabulated based on personal observations and literature, as detailed in the 'Life traits of species' section and Table S1."
-  },
-  "N nests per colony": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementValue": "polydomy",
-    "measurementStatistic": "single observation",
-    "reasoning": "The column records the nesting structure of the colony.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the social structure regarding nest numbers.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "N nests per colony"
-  },
-  "Main food resource": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementValue": "honeydew",
-    "measurementStatistic": "single observation",
-    "reasoning": "The column records the primary food source for the colony.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the primary food source utilized by the ants.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Main food resource",
-    "basisOfRecord": "Classification of diet type (e.g., arthropod corpses, nectar, seeds, honeydew)",
-    "basisOfRecord_reasoning": "The data record for the 'Main food resource' is a categorical classification assigned to ant species based on their ecological role (scavenger, nectar-eating, granivorous, aphid-tender), derived from the analysis of life traits.",
-    "measurementMethod": "Tabulation of 14 life traits, including the classification of diet (Variable 6), based on personal data, literature, and personal communications from colleagues.",
-    "measurementMethod_reasoning": "The specific values for the main food resource classification were obtained by tabulating 14 life traits, which were derived from a combination of personal observations, literature review, and personal communications, as detailed in the 'Life traits of species' section and summarized in Table S1."
+    "reasoning": "This represents the percentage of variance explained by the grouping variable."
   }
 }

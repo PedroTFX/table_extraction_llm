@@ -34,8 +34,24 @@ def strip_html_markup(text: str) -> str:
     text = _BLOCK_RE.sub(' ', text)
     text = _TAG_RE.sub('', text)
     text = _html.unescape(text)
+    # MinerU sometimes escapes a line break ('&lt;br&gt;'), so it only becomes
+    # '<br>' after unescaping — turn it into a space like a real one.
+    text = _BR_RE.sub(' ', text)
     text = text.replace('\xa0', ' ')
-    return text
+    return strip_md_emphasis(text)
+
+
+# Markdown emphasis MinerU writes INSIDE HTML cells ('**Species**',
+# '*Adscita geryon*'). Left in, the identifier/taxon checks don't recognise the
+# header or the names (Korosi2022's species table was skipped). Only PAIRED
+# markers are removed, so a lone footnote asterisk ('urticae*') survives.
+_MD_BOLD_RE = re.compile(r'(\*\*|__)(?=\S)(.+?)(?<=\S)\1')
+_MD_ITALIC_RE = re.compile(r'(?<![\w*])\*(?=[^\s*])([^*\n]+?)(?<=[^\s*])\*(?![\w*])')
+
+
+def strip_md_emphasis(text: str) -> str:
+    text = _MD_BOLD_RE.sub(r'\2', text)
+    return _MD_ITALIC_RE.sub(r'\1', text)
 
 
 # Inline formatting tags only — NOT the table-structural ones. Used where the
@@ -134,6 +150,46 @@ def expand_rowspans(table_html):
     return "\n".join(out)
 
 
+_LATEX_SYMBOLS = {r"\pm": "±", r"\times": "×", r"\circ": "°", r"\%": "%",
+                  r"\leq": "≤", r"\geq": "≥", r"\le": "≤", r"\ge": "≥", r"\sim": "~",
+                  r"\approx": "≈", r"\mu": "µ", r"\cdot": "·", r"\lambda": "λ",
+                  r"\tau": "τ", r"\alpha": "α", r"\beta": "β", r"\Delta": "Δ",
+                  r"\delta": "δ", r"\sigma": "σ", r"\,": " ", r"\;": " ", r"\ ": " "}
+
+
+def latex_cell_to_text(cell: str) -> str:
+    """Inline LaTeX in a table cell -> plain text, keeping its STRUCTURE:
+    '$3.11^1 \\pm 0.08$' -> '3.11^1 ± 0.08', '$r_m$ (day$^{-1}$)' -> 'r_m (day^-1)'.
+
+    Unlike the prose cleaner (which squashes a formula into one token), spaces
+    and the '^'/'_' markers are kept: a superscript on a mean is a post-hoc
+    significance group that to_output moves to measurementRemarks (Kovacs2008),
+    while one in a unit is an exponent. Cells without '$' are returned as is."""
+    if "$" not in cell:
+        return cell
+
+    def conv(m):
+        s = m.group(1)
+        # MinerU spaces out letters in math fonts ('\mathsf { S D }'): rejoin
+        # single letters there only; \text{...} is prose and keeps its spaces
+        s = re.sub(r"\\(?:mathrm|mathsf|mathbf|mathit)\s*\{([^{}]*)\}",
+                   lambda t: re.sub(r"(?<=\b\w) (?=\w\b)", "", t.group(1).strip()), s)
+        s = re.sub(r"\\(?:text|textrm|operatorname)\s*\{([^{}]*)\}", lambda t: t.group(1).strip(), s)
+        s = re.sub(r"\\bar\s*\{\s*([^{}]*?)\s*\}", lambda b: b.group(1).replace(" ", "") + "\u0304", s)
+        for k in sorted(_LATEX_SYMBOLS, key=len, reverse=True):
+            s = s.replace(k, _LATEX_SYMBOLS[k])
+        s = re.sub(r"([\^_])\s*\{\s*([^{}]*?)\s*\}", lambda g: g.group(1) + re.sub(r"\s+", "", g.group(2)), s)
+        s = re.sub(r"\\[A-Za-z]+", "", s)           # any other command: drop
+        s = s.replace("{", "").replace("}", "")
+        s = re.sub(r"(?<=\d)\s+(?=[\d.])|(?<=\.)\s+(?=\d)", "", s)   # '1 2 . 5' -> '12.5'
+        s = re.sub(r"\s*([\^_])\s*", r"\1", s)
+        s = s.replace("^°", "°")
+        return re.sub(r"\s+", " ", s).strip()
+
+    out = re.sub(r"\$([^$]{1,200}?)\$", conv, cell)
+    return re.sub(r"\s+", " ", out).strip()
+
+
 def clean_tables(text):
     # Make rowspans explicit BEFORE the per-row flattening below, which would
     # otherwise drop the covered cells and misalign every row under a rowspan.
@@ -147,6 +203,7 @@ def clean_tables(text):
     # the FIRST data row for the header — gluing data values into column names.
     def _flatten_cell(m):
         inner = re.sub(r'\s+', ' ', m.group(2)).strip()
+        inner = latex_cell_to_text(inner)
         return f'<{m.group(1)}>{inner}</{m.group(1)}>'
     text = re.sub(r'<(td|th)[^>]*>(.*?)</(?:td|th)>', _flatten_cell, text,
                   flags=re.DOTALL | re.IGNORECASE)
