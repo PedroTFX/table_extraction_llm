@@ -1,32 +1,80 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Boetzl2024\Boetzl_2024.xlsx  (482 rows)
-PREDICTION   : ..\output\Boetzl2024\Boetzl2024.csv  (282 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Boetzl2024\Boetzl2024.csv  (567 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-measurementType REMAP (pred -> gt, 1 pair(s))
+TAXON NAMES LEFT UNMAPPED (43)
+  'Bade01': no ground-truth name denotes this organism
+  'Bata01': no ground-truth name denotes this organism
+  'Bata02': no ground-truth name denotes this organism
+  'Bata03': no ground-truth name denotes this organism
+  'Birk01': no ground-truth name denotes this organism
+  'Boet01': no ground-truth name denotes this organism
+  'Boet02': no ground-truth name denotes this organism
+  'Cutl01*': no ground-truth name denotes this organism
+  'Cutl02*': no ground-truth name denotes this organism
+  'Cylinderera germanica': no ground-truth name denotes this organism
+  'Cylinderera paludosa': no ground-truth name denotes this organism
+  'Entl01': no ground-truth name denotes this organism
+  'Farm01': no ground-truth name denotes this organism
+  'Farm02': no ground-truth name denotes this organism
+  'Farm03': no ground-truth name denotes this organism
+  'Farm04': no ground-truth name denotes this organism
+  'Farm05': no ground-truth name denotes this organism
+  'Farm06': no ground-truth name denotes this organism
+  'Farm07': no ground-truth name denotes this organism
+  'Farm08': no ground-truth name denotes this organism
+  'Fren01': no ground-truth name denotes this organism
+  'Fren02': no ground-truth name denotes this organism
+  'Gonz01': no ground-truth name denotes this organism
+  'Hof01': no ground-truth name denotes this organism
+  'Juch01': no ground-truth name denotes this organism
+  'Knap01': no ground-truth name denotes this organism
+  'Koiv01': no ground-truth name denotes this organism
+  'Luka01': no ground-truth name denotes this organism
+  'Luka02': no ground-truth name denotes this organism
+  'Maas01': no ground-truth name denotes this organism
+  'Maas02': no ground-truth name denotes this organism
+  'Maas03': no ground-truth name denotes this organism
+  'Marr01': no ground-truth name denotes this organism
+  'Marr02': no ground-truth name denotes this organism
+  'Marr03': no ground-truth name denotes this organism
+  'Mart01': no ground-truth name denotes this organism
+  'Nash01': no ground-truth name denotes this organism
+  'Ng01': no ground-truth name denotes this organism
+  'Sask01': no ground-truth name denotes this organism
+  'Schi01': no ground-truth name denotes this organism
+  'Sutt01': no ground-truth name denotes this organism
+  'Tsch01': no ground-truth name denotes this organism
+  'Voor01': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
   'mean body size [mm]' -> 'body size'
 
 ROW-LEVEL (key match)
-  matched (TP)          : 280
-  missed (FN)           : 202
-  spurious, in scope    : 2   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+  matched (TP)        : 476
+  missed (FN)         : 6
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 85   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.993 / 0.581 / 0.733
-  SCOPED  P/R/F1        : 0.993 / 0.581 / 0.733
-  RECALL (GT coverage)  : 0.581
+  STRICT  P/R/F1      : 0.840 / 0.988 / 0.908   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.988 / 0.988 / 0.988   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.988   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             85
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                 0    280  0.000  <-- low
-  measurementMethod             0    139  0.000  <-- low
-  measurementUnit             141    280  0.504
-  measurementStatistic        141    280  0.504
+  column                    agree  total    acc   extra finds
+  basisOfRecord               476    476  1.000
+  measurementMethod             0      0    n/a   +476 where GT blank
+  measurementUnit               0    239  0.000  <-- low
+  measurementStatistic        476    476  1.000
   measurementRemarks            0      0    n/a
-  sex                         280    280  1.000
-  lifeStage                   280    280  1.000
+  sex                         476    476  1.000
+  lifeStage                   476    476  1.000
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -36,36 +84,40 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    280  0.000  <-- low
+  associatedReferences          0    476  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 202 MISSED ROWS MISSED
-  species not in prediction                           200
-  species+trait present, value differs                  2
+WHY THE 6 MISSED ROWS MISSED
+  species not in prediction                   4
+  species present, trait missing              0
+  species+trait present, value differs        2
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'carnivorous'                ->  'granivorous'                x1
      'granivorous'                ->  'carnivorous'                x1
-  -> 2 substitutions explain 2 of 202 misses (1%) — scattered; no single cause
+  -> 2 substitutions explain 2 of 6 misses (33%) — scattered; no single cause
 
-  SPECIES IN GT BUT NOT IN PREDICTION (100 distinct), closest predicted name:
-     gt 'Harpalus honestus'                 ~0.67~  pred 'Carabus convexus'   x2
-     gt 'Notiophilus aestuans'               (nothing similar in the prediction)   x2
-     gt 'Carabus ulrichii'                  ~0.69~  pred 'Carabus germarii'   x2
-     gt 'Cylindera germanica'               ~0.57~  pred 'Carabus germarii'   x2
-     gt 'Notiophilus quadripunctatus'       ~0.56~  pred 'Anisodactylus binotatus'   x2
-     gt 'Harpalus dimidiatus'               ~0.59~  pred 'Carabus auratus'   x2
-  -> 6 species mismatches explain 12 of 202 misses (6%) — scattered; no single cause
+  SPECIES IN GT BUT NOT IN PREDICTION (2 distinct), closest predicted name:
+     gt 'Cylindera germanica'               ~0.95~  pred 'Cylinderera germanica'   x2
+     gt 'Cylindera paludosa'                ~0.95~  pred 'Cylinderera paludosa'   x2
+  -> 2 species mismatches explain 4 of 6 misses (67%) — systematic, not scattered
+  [severity] assessing 6 ambiguous miss(es) in 1 batch(es)...
 
-  full miss detail saved -> Boetzl2024_misses.csv, Boetzl2024_misses_summary.json (202 row(s))
+  full miss detail saved -> Boetzl2024_misses.csv, Boetzl2024_misses_summary.json (6 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  body size                                       241   141   Δ-100 (split?)
-  diet                                            241   141   Δ-100 (split?)
+  adjacent habitat classes                          0    15   PRED-ONLY
+  body size                                       241   241   
+  crop types                                        0    16   PRED-ONLY
+  diet                                            241   241   
+  maximal distance [m]                              0    13   PRED-ONLY
+  months                                            0    41   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.993  0.581  0.733    280     2   202   id+type+value
-  tags        0.000  0.000  0.000      0   282   482   basis+id+type+value+stat+sex+stage
-             (F1 -0.733 vs previous)
+  core        0.988  0.988  0.988    476     6     6   id+type+value
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.840)
+  tags        0.988  0.988  0.988    476     6     6   basis+id+type+value+stat+sex+stage
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.840)
+             (F1 +0.000 vs previous)

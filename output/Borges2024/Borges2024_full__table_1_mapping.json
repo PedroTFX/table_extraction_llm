@@ -1,69 +1,69 @@
 {
-  "Population Growth Parameters": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Header describes mathematical parameters of population dynamics, which are measured traits.",
-    "category": null,
-    "reasoning_relevance": "These are derived statistics, not direct measurements of the organism's traits."
-  },
-  "A. fabae": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Column contains numerical estimates of population growth parameters for the focal insect.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Names the associated prey species (biotic association).",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "A. fabae"
-  },
-  "M. persicae": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Column contains numerical estimates of population growth parameters for the focal insect.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Names the associated prey species (biotic association).",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "M. persicae"
-  },
-  "__paperSpecies__": {
+  "Species": {
     "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Names the associated prey species, a biotic association."
+  },
+  "$\text{r}_m$ (female/female day$^{-1}$):": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a biological rate (mating rate) for the organism."
+  },
+  "$\text{\\lambda}$ (female/female day$^{-1}$):": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a biological rate (fecundity) for the organism."
+  },
+  "DT (days)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a temporal trait (development time) for the organism.",
+    "category": "Behavioral observation",
+    "reasoning_relevance": "Measures the doubling time, a life history trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "doubling time",
+    "measurementUnit": "days",
+    "measurementUnit_reasoning": "stated in the column header"
+  },
+  "$\tau$ (days)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a temporal trait (time spent) for the organism."
+  },
+  "$\text{R}_0$ (female offspring/female)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures a reproductive output trait for the organism."
+  },
+  "$r_m$ (female/female day$^{-1}$)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
     "category": null,
-    "scope": "paper",
-    "column": null,
-    "value": "Scymnus nubilus",
-    "reasoning": "The measurements describe the performance of the predator Scymnus nubilus based on the aphid diets provided.",
-    "decided_by": "llm",
-    "roles": {
-      "Scymnus nubilus": "measured subject",
-      "Aphis fabae": "diet",
-      "Myzus persicae": "diet"
-    },
-    "candidates": [
-      {
-        "name": "Aphis fabae",
-        "mentions": 7,
-        "abbrev_mentions": 21,
-        "score": 115
-      },
-      {
-        "name": "Myzus persicae",
-        "mentions": 11,
-        "abbrev_mentions": 17,
-        "score": 99
-      },
-      {
-        "name": "Scymnus nubilus",
-        "mentions": 14,
-        "abbrev_mentions": 14,
-        "score": 87
-      },
-      {
-        "name": "Scymnu nubilus",
-        "mentions": 1,
-        "abbrev_mentions": 14,
-        "score": 71
-      }
-    ]
+    "reasoning_relevance": "not found in text"
+  },
+  "λ (female/female day$^{-1}$)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "τ (days)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
+    "category": null,
+    "reasoning_relevance": "not found in text"
+  },
+  "$R_0$ (female offspring/female)": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "no mapping returned (response truncated)",
+    "category": null,
+    "reasoning_relevance": "not found in text"
   }
 }

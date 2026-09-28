@@ -56,6 +56,91 @@ def split_significance(value):
         return value, "", ""
     return m.group("v").strip(), m.group("g"), m.group("n") or ""
 
+
+_SUP_GROUP_RE = re.compile(
+    r"^\s*(?P<m>-?\d[\d.,]*)\^(?P<g>[A-Za-z0-9]{1,4}(?:,[A-Za-z0-9]{1,4})*)\s*"
+    r"(?P<e>(?:±|\+/-|\+-)\s*\d[\d.,]*)\s*$")
+
+
+def split_superscript_group(value):
+    """'3.11^1 ± 0.08' -> ('3.11 ± 0.08', '1'); '2.55^2,3 ± 0.08' -> (.., '2,3').
+    The superscript sits on the MEAN of a 'mean ± error' cell (the LaTeX cell
+    converter keeps it as '^'), where it can only be a post-hoc group mark
+    (Kovacs2008). None when the value has no such mark."""
+    m = _SUP_GROUP_RE.match(str(value or ""))
+    if not m:
+        return None
+    err = re.sub(r"\s+", " ", m.group("e"))
+    return f"{m.group('m')} {err}", m.group("g")
+
+
+# --- extra detail riding along in a value -----------------------------------
+# The volunteers record the bare value and put the rest in its own field. Split
+# it off here rather than scoring 'contains the GT value' as correct, so the
+# score stays strict AND the detail is kept (Cady1993, Habustova2017, Fondjo2024).
+_VALUE_UNIT_RE = re.compile(
+    r"^(?P<v>[<>~≈]?\s*-?\d[\d.,]*(?:\s*(?:±|\+/-|[-–—~])\s*-?\d[\d.,]*)?)\s*"
+    r"(?P<u>[µμu]m|mm|cm|m|km|mg|µg|g|kg|ml|µl|°C|ºC|%|days?|d|h|hrs?|min|s|yrs?|years?)$")
+_VALUE_N_RE = re.compile(r"^(?P<v>.*?\d.*?)\s*\(\s*n\s*=\s*(?P<n>\d+)\s*\)\s*$", re.I)
+# 'Genus epithet' + authority and/or family, incl. an authority glued on by the
+# PDF ('Schizocosa rovneriUetz & Dondale,1979 (Lycosidae)')
+_TAXON_TAIL_RE = re.compile(
+    r"^(?P<name>[\"“'‘]?[A-Z][a-z]+[\"”'’]?\s+(?:sp\.|spp\.|[a-z][a-z-]+?))(?=[A-Z(\s,]|$)(?P<tail>.*)$")
+_FAMILY_RE = re.compile(r"\(?\s*([A-Z][a-z]+(?:idae|inae|ini))\s*\)?")
+_YEAR_RE = re.compile(r"\b(1[7-9]\d{2}|20\d{2})[a-z]?\b")
+
+
+def split_value_parts(value):
+    """Deterministically SPLIT extra detail off a value; do not decide where it
+    goes (fill_template.route_value_extras asks the LLM that, per paper).
+    -> (core value, [{"text", "kind", "guess"}]) where kind is one of
+    unit / sample_size / authority / family and guess is the default field:
+         '6–10.9 mm'            -> '6–10.9',        [mm (unit)]
+         '11.62 ± 0.50 (n = 4)' -> '11.62 ± 0.50',  [4 (sample_size)]
+         'Coras montanus(Emerton, 1890a)(Agelenidae)'
+                                -> 'Coras montanus', [Emerton, 1890a (authority),
+                                                      Agelenidae (family)]
+    A value that is none of these comes back unchanged with []."""
+    v = str(value or "").strip()
+    parts = []
+    m = _VALUE_N_RE.match(v)
+    if m:
+        v = m.group("v").strip()
+        parts.append({"text": m.group("n"), "kind": "sample_size", "guess": "sampleSizeValue"})
+    m = _VALUE_UNIT_RE.match(v)
+    if m:
+        parts.append({"text": m.group("u"), "kind": "unit", "guess": "measurementUnit"})
+        return m.group("v").strip(), parts
+    m = _TAXON_TAIL_RE.match(v)
+    if m and m.group("tail").strip():
+        tail = m.group("tail").strip()
+        fam = _FAMILY_RE.search(tail)
+        year = _YEAR_RE.search(tail)
+        if fam or year:                     # a real authority/family, not prose
+            auth = tail[:fam.start()] + tail[fam.end():] if fam else tail
+            auth = re.sub(r"[()]", " ", auth)
+            auth = re.sub(r"\s*,\s*", ", ", re.sub(r"\s+", " ", auth)).strip(" ,;")
+            if auth:
+                parts.append({"text": auth, "kind": "authority", "guess": "measurementRemarks"})
+            if fam:
+                parts.append({"text": fam.group(1), "kind": "family", "guess": "measurementRemarks"})
+            return m.group("name").strip(), parts
+    return v, parts
+
+
+def split_value_extras(value):
+    """split_value_parts with each part sent to its default field — the
+    fallback when the LLM routing is unavailable. -> (clean value, {field: text})."""
+    core, parts = split_value_parts(value)
+    extras = {}
+    for p in parts:
+        text = f"{p['kind']}: {p['text']}" if p["guess"] == "measurementRemarks" else p["text"]
+        if p["guess"] == "measurementRemarks" and extras.get(p["guess"]):
+            extras[p["guess"]] += "; " + text
+        else:
+            extras.setdefault(p["guess"], text)
+    return core, extras
+
 # Not an output column — a column-level fact about the VALUES (set by
 # table_to_data.classify_value_types) that decides whether a comma in a cell
 # separates list items or belongs to the value. Carried through the lookup so the
@@ -294,7 +379,12 @@ def merge_to_rows(grouped, column_lookup, decode, defaults, keep_protocol,
                 # '2.87 ± 0.05 cd' / '4.2 ± 0.1 a (30)': move post-hoc letters
                 # to measurementRemarks and a trailing '(n)' to sampleSizeValue
                 value_, group, n = split_significance(row[VALUE_COL])
-                if group and m_type in sig_types:
+                sup = split_superscript_group(row[VALUE_COL])
+                if sup:
+                    # '3.11^1 ± 0.08': a superscript on the mean is always a group
+                    # mark (a LaTeX '^' is unambiguous, unlike trailing letters)
+                    value_, group, n = sup[0], sup[1], ""
+                if group and (sup or m_type in sig_types):
                     row[VALUE_COL] = value_
                     note = f"post-hoc significance group: {group}"
                     row["measurementRemarks"] = "; ".join(

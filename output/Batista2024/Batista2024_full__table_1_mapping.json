@@ -1,44 +1,32 @@
 {
   "identifier": {
-    "field": "verbatimIdentification",
+    "field": null,
     "value_column": false,
-    "reasoning": "This column holds specimen identifiers, not insect taxonomy.",
-    "category": null,
-    "reasoning_relevance": "Represents sample size or labels, which are not organism traits."
+    "reasoning": "This column identifies the specimen, not the insect taxon or location."
   },
   "Fixed effects": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column describes the model structure, not a measured trait.",
-    "category": null,
-    "reasoning_relevance": "These are names of traits, not the measured values of the organism."
+    "reasoning": "This column defines grouping variables, not a measurement of the organism."
   },
   "Est.": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column holds the estimated values for the measured traits.",
-    "category": null,
-    "reasoning_relevance": "This is a derived estimate, a statistic, not a biological trait."
+    "reasoning": "Header names a measured trait (e.g., Shelter index), and cells contain the trait values."
   },
   "SE": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column holds the standard error associated with the estimates.",
-    "category": null,
-    "reasoning_relevance": "Standard error is a statistic, not a measurement of the organism."
+    "reasoning": "Represents the Standard Error of the measurement."
   },
   "Z-value": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column holds the Z-statistic for the statistical test.",
-    "category": null,
-    "reasoning_relevance": "This is a test statistic, which is explicitly excluded from measurement types."
+    "reasoning": "Represents the Z-score used in the statistical test."
   },
   "p value": {
-    "field": "measurementValue",
+    "field": "measurementStatistic",
     "value_column": true,
-    "reasoning": "This column holds the p-value for the statistical test.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical result, not a biological trait of the organism."
+    "reasoning": "Represents the p-value from the statistical test."
   }
 }

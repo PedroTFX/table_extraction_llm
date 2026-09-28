@@ -1,30 +1,62 @@
 {
-  "Body mass": {
+  "identifier": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "Values are taxonomic groups (families), not specific insect species.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "It is a measured physical dimension of the organism."
+    "reasoning": "This column contains the taxonomic identification of the insect taxon.",
+    "category": null,
+    "reasoning_relevance": "Taxonomic rank, not a measured trait of the organism."
   },
-  "Estimate mean ± SE": {
+  "Ecotone": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Header names the trait; cells provide the estimated mean and standard error.",
-    "category": null,
-    "reasoning_relevance": "This is a derived statistic, not a trait of the organism."
+    "measurementValue": "11",
+    "reasoning": "This measures the ecotone associated with the insect group.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents the organism's habitat preference classification.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Ecotone",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The authors measured morphological traits (body mass, wing length, and proboscis length) on collected butterfly specimens. This falls under the definition of measurements taken on preserved specimens.",
+    "measurementMethod": "Body mass was measured using a digital weighing-balance (SartoriusAC120S, 0.1 mg resolution). Wing length and proboscis length were measured using a digital calliper (Mitutoyo Digimatic Caliper CD-6\" CSX, 0.01 mm resolution).",
+    "measurementMethod_reasoning": null
   },
-  "t-statistic": {
-    "field": "measurementStatistic",
+  "Forest": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents the statistical test result for the comparison.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical test result, not a biological trait."
+    "measurementValue": "22",
+    "reasoning": "This measures the forest type associated with the insect group.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents the organism's habitat preference classification.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Forest",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The morphological traits (body mass, wing length, proboscis length) were measured on collected butterfly specimens, which are treated as preserved specimens for the purpose of this study.",
+    "measurementMethod": "Digital weighing-balance and digital calliper",
+    "measurementMethod_reasoning": "Body mass was measured using a digital weighing-balance (SartoriusAC120S, 0.1 mg resolution), and wing length and proboscis length were measured using a digital calliper (Mitutoyo Digimatic Caliper CD-6\" CSX, 0.01 mm resolution)."
   },
-  "p": {
-    "field": "measurementStatistic",
+  "Open": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Represents the probability value associated with the t-statistic.",
+    "measurementValue": "9",
+    "reasoning": "This measures the open area associated with the insect group.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Represents the organism's habitat preference classification.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Open",
+    "basisOfRecord": "PreservedSpecimen",
+    "basisOfRecord_reasoning": "The authors explicitly state they measured morphological traits (body mass, wing length, and proboscis length) on the collected specimens. This falls under the category of measurements taken from preserved specimens.",
+    "measurementMethod": "Digital weighing-balance and digital calliper",
+    "measurementMethod_reasoning": "Body mass (weight of the whole specimen) was measured using a digital weighing-balance (SartoriusAC120S, 0.1 mg resolution). Wing length and proboscis length were measured using a digital calliper (Mitutoyo Digimatic Caliper CD-6\" CSX, 0.01 mm resolution)."
+  },
+  "Total": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "42",
+    "reasoning": "This measures the total count or index for the insect group.",
     "category": null,
-    "reasoning_relevance": "This is a statistical result, not a biological trait."
+    "reasoning_relevance": "Represents sample size/abundance, not a trait of the organism."
   }
 }

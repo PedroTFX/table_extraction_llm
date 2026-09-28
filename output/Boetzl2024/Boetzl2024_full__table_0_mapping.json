@@ -1,79 +1,47 @@
 {
-  "Study ID": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "Study ID is a unique identifier, not an insect taxon or measurement.",
-    "category": null,
-    "reasoning_relevance": "Study ID is an identifier, not a biological measurement or trait."
-  },
-  "country": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "Country is a geographic location, fitting the definition of verbatimLocality.",
-    "category": null,
-    "reasoning_relevance": "Country is a place name, not a trait of the organism."
-  },
-  "region": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "Region is a geographic location, fitting the definition of verbatimLocality.",
-    "category": null,
-    "reasoning_relevance": "Region is a place name, not a trait of the organism."
-  },
-  "year": {
+  "Category": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Year is a temporal quantity measured for the study event.",
-    "category": null,
-    "reasoning_relevance": "Year is temporal context, not an inherent biological trait."
+    "reasoning": "Defines the type of richness or activity measured for the organism."
   },
-  "months": {
+  "Crop Type::cereal (766 fields)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Months describe the temporal period of the sampling event.",
-    "category": null,
-    "reasoning_relevance": "Months is temporal context, not an inherent biological trait."
+    "reasoning": "Represents the measured richness/activity related to cereal crops."
   },
-  "crop types": {
+  "Crop Type::legume (76 fields)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Crop types describe the habitat or land-use context of the study.",
-    "category": null,
-    "reasoning_relevance": "Crop types are environmental factors, not traits of the carabid."
+    "reasoning": "Represents the measured richness/activity related to legume crops."
   },
-  "adjacent habitat classes": {
+  "Crop Type::maize (78 fields)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Habitat classes describe the environment where the organism lives.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Describes the habitat class the organism interacts with.",
-    "multi_value": true,
-    "value_type": "categorical",
-    "canonicalType": "adjacent habitat classes",
-    "basisOfRecord": "Occurrence",
-    "basisOfRecord_reasoning": "The text discusses the spatial distribution and influence of carabid assemblages in relation to crop types and adjacent non-crop habitats. The underlying data involves spatial occurrences of carabids within agricultural landscapes defined by these habitat types.",
-    "measurementMethod": "Quantitative synthesis of distance functions based on spatial data from 1204 study sites across eight Western and Central European countries, focusing on the interplay between crop types, adjacent habitats, and functional traits.",
-    "measurementMethod_reasoning": "The text describes the methodology used for the synthesis: performing a quantitative synthesis of carabid richness, activity densities, and functional traits in relation to field edges (distance functions), and focusing on a combination of three potential drivers (crop types, adjacent habitats, and functional traits)."
+    "reasoning": "Represents the measured richness/activity related to maize crops."
   },
-  "study sites": {
-    "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "Study sites are specific named locations for sampling.",
-    "category": null,
-    "reasoning_relevance": "Study sites are specific locations, not organism traits."
-  },
-  "maximal distance [m]": {
+  "Crop Type::oilseed (223 fields)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Distance is a measured physical trait of the sampling event.",
-    "category": null,
-    "reasoning_relevance": "Distance is a site variable, not an organism's inherent trait."
+    "reasoning": "Represents the measured richness/activity related to oilseed crops."
   },
-  "trapping days": {
+  "Crop Type::vegetable (51 fields)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Trapping days is a measured effort or time variable.",
-    "category": null,
-    "reasoning_relevance": "Trapping days is a sampling effort statistic, not an organism trait."
+    "reasoning": "Represents the measured richness/activity related to vegetable crops."
+  },
+  "Adjacent Habitat Type::control (264 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the measured adjacent habitat type for the sampling location."
+  },
+  "Adjacent Habitat Type::herbaceous (554 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the measured adjacent habitat type for the sampling location."
+  },
+  "Adjacent Habitat Type::woody (376 fields)": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Defines the measured adjacent habitat type for the sampling location."
   }
 }

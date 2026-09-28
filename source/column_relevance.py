@@ -387,7 +387,11 @@ Return a JSON object keyed by column name, with this format:
 
 Keep the reasoning to AT MOST 15 words.
 Return null for any column that is not a measurementType per the definition above."""
-    user = f"Here is the paper text for context:\n{text}"
+    # The column list goes LAST, after the text: a small model answers about
+    # whatever it read most recently, and a paper's prose can itself describe
+    # other columns (Uemori2021's site table), which it then answered instead.
+    user = (f"Here is the paper text for context:\n{text}\n\n"
+            f"---\nNow judge ONLY these columns (answer with exactly these keys):\n{col_block}")
     return [{"role": "system", "content": system},
             {"role": "user", "content": user}]
 
@@ -404,10 +408,17 @@ def agent_define_columns_relevance(columns, paper_text, llm=None, samples=None):
     # and can hang the local model for >10 min on a single call. The head of the
     # paper — abstract, methods, trait definitions, first tables — carries the
     # signal a relevance judgment needs, so bound it to keep the call fast.
-    if len(paper_text) > RELEVANCE_CONTEXT_CHARS:
-        paper_text = paper_text[:RELEVANCE_CONTEXT_CHARS]
-    chunks = get_text(paper_text, len(paper_text))
-    merged = "\n\n".join(c["content"] for c in chunks)
+    # Strip the tables FIRST, then bound the prose. Cutting the raw markdown
+    # first could land inside a <table> (open tag in, close tag out), so the
+    # table was not recognised and its cells were glued into the "prose"
+    # (Uemori2021's site table, which the model then answered about instead of
+    # the columns it was asked). The bound uses the same relevance-ranked
+    # selection as the tag steps (head + methods paragraphs, no bibliography).
+    from fill_template import _cap_context        # local: fill_template imports us
+    prose = "\n\n".join(c["content"] for c in get_text(paper_text, max(len(paper_text), 1)))
+    merged = _cap_context(prose)
+    if len(merged) > RELEVANCE_CONTEXT_CHARS:
+        merged = merged[:RELEVANCE_CONTEXT_CHARS]
     chunks = [{"content": merged}]
 
     per_column = {col: [] for col in columns}

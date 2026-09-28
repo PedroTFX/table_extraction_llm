@@ -1,7 +1,11 @@
+  [semantic] left unmatched: 'density' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'mean intertegular distance' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'mean tongue length' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'tongue length category' vs 'Relative Tonghe Length' (llm said different traits)
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Beyer2021\Beyer2021.xlsx  (206 rows)
 PREDICTION   : ..\output\Beyer2021\Beyer2021.csv  (309 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
@@ -20,14 +24,14 @@ TAXON NAME REMAP (pred -> gt, 42 pair(s))
   'Anthidium manicatum' -> 'Anthidium manicatum (Linnaeus 1758)'
   'Anthophora furcata' -> 'Anthophora furcata (Panzer 1798)'
   'Anthophora plumipes' -> 'Anthophora plumipes (Pallas 1772)'
-  'Bombus hortorum' -> 'B. hortorum'
-  'Bombus hypnorum' -> 'B. hypnorum'
-  'Bombus lapidarius' -> 'B. lapidarius'
-  'Bombus muscorum' -> 'B. muscorum'
-  'Bombus pascuorum' -> 'B. pascuorum'
-  'Bombus pratorum' -> 'B. pratorum'
-  'Bombus ruderarius' -> 'B. ruderarius'
-  'Bombus sylvarum' -> 'B. sylvarum'
+  'Bombus hortorum' -> 'Bombus hortorum (Linnaeus 1761)'
+  'Bombus hypnorum' -> 'Bombus hypnorum (Linnaeus 1758)'
+  'Bombus lapidarius' -> 'Bombus lapidarius (Linnaeus 1758)'
+  'Bombus muscorum' -> 'Bombus muscorum (Linnaeus 1758)'
+  'Bombus pascuorum' -> 'Bombus pascuorum (Scopoli 1763)'
+  'Bombus pratorum' -> 'Bombus pratorum (Linnaeus 1761)'
+  'Bombus ruderarius' -> 'Bombus ruderarius (Müller 1765)'
+  'Bombus sylvarum' -> 'Bombus sylvarum (Linnaeus 1761)'
   'Bombus terrestris complex' -> 'Bombus terrestris (Linnaeus 1758) complex'
   'Chelostoma campanularum' -> 'Chelostoma campanularum (Kirby 1802)'
   'Chelostoma florisomne' -> 'Chelostoma florisomne (Linnaeus 1758)'
@@ -50,100 +54,93 @@ TAXON NAME REMAP (pred -> gt, 42 pair(s))
   'Osmia bicornis' -> 'Osmia bicornis (Linnaeus 1758)'
 
 TAXON NAMES LEFT UNMAPPED (5)
-  'Bombus bohemicus': no ground-truth string denotes this
-  'Bombus rupestris': no ground-truth string denotes this
-  'Bombus sylvestris': no ground-truth string denotes this
-  'Nomada flavoguttata': no ground-truth string denotes this
-  'Nomada furva Panzer 1798': no ground-truth string denotes this
+  'Bombus bohemicus': no ground-truth name denotes this organism
+  'Bombus rupestris': no ground-truth name denotes this organism
+  'Bombus sylvestris': no ground-truth name denotes this organism
+  'Nomada flavoguttata': no ground-truth name denotes this organism
+  'Nomada furva Panzer 1798': no ground-truth name denotes this organism
 
-measurementType REMAP (pred -> gt, 5 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
   'foraging preference' -> 'Foraging preference'
   'intertegular distance' -> 'Intertegular Distance'
+  'mean relative tongue length' -> 'Tongue Length'
   'sociality' -> 'Sociality'
-  'tongue length' -> 'Tongue Length'
-  'tongue length category' -> 'Tongue Length'
-
-measurementType LEFT UNMAPPED (3)
-  'density': no ground-truth string denotes this
-  'number of bumblebees': no ground-truth string denotes this
-  'relative tongue length': matches 2 different targets: 'Relative Tonghe Length', 'Tongue Length'
 
 ROW-LEVEL (key match)
-  matched (TP)          : 139
-  missed (FN)           : 67
-  spurious, in scope    : 86   <- GT covers this trait: real errors
-  spurious, out of scope: 84   <- GT never covers it: nothing to score against
+  matched (TP)        : 57
+  missed (FN)         : 149
+  spurious, in scope  : 150   <- GT covers this trait: real errors
+  spurious, out of scope: 102   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.450 / 0.675 / 0.540
-  SCOPED  P/R/F1        : 0.618 / 0.675 / 0.645
-  RECALL (GT coverage)  : 0.675
+  STRICT  P/R/F1      : 0.184 / 0.277 / 0.221   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.275 / 0.277 / 0.276   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.277   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                             84
+    measurementType                            102
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                58    139  0.417  <-- low
-  measurementMethod             0     19  0.000  <-- low
-  measurementUnit              58    130  0.446  <-- low
-  measurementStatistic         58    139  0.417  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord                57     57  1.000
+  measurementMethod             0      0    n/a   +57 where GT blank
+  measurementUnit              57     57  1.000
+  measurementStatistic         57     57  1.000
   measurementRemarks            0      0    n/a
-  sex                          53    139  0.381  <-- low
-  lifeStage                    86    139  0.619
-  caste                         0     86  0.000  <-- low
-  sampleSizeValue               9      9  1.000
+  sex                           0     57  0.000  <-- low
+  lifeStage                    57     57  1.000
+  caste                         0     57  0.000  <-- low
+  sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0    139  0.000  <-- low
+  verbatimEventDate             0     57  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    139  0.000  <-- low
+  associatedReferences          0     57  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 67 MISSED ROWS MISSED
-  species not in prediction                            24
-  species present, trait missing                        9
-  species+trait present, value differs                 34
+WHY THE 149 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              9
+  species+trait present, value differs      140
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     'species not known to collect pollen from fabaceae' ->  'species not known to exploit fabaceae' x34
-  -> 1 substitution explains 34 of 67 misses (51%) — scattered; no single cause
-
-  SPECIES IN GT BUT NOT IN PREDICTION (8 distinct), closest predicted name:
-     gt 'Bombus muscorum (Linnaeus 1758)'   ~0.75~  pred 'Halictus tumulorum (Linnaeus 1758)'   x3
-     gt 'Bombus hortorum (Linnaeus 1761)'   ~0.62~  pred 'Bombus terrestris (Linnaeus 1758) complex'   x3
-     gt 'Bombus ruderarius (Müller 1765)'   ~0.62~  pred 'Bombus terrestris (Linnaeus 1758) complex'   x3
-     gt 'Bombus hypnorum (Linnaeus 1758)'   ~0.65~  pred 'Bombus terrestris (Linnaeus 1758) complex'   x3
-     gt 'Bombus lapidarius (Linnaeus 1758)'  ~0.64~  pred 'Chelostoma florisomne (Linnaeus 1758)'   x3
-     gt 'Bombus pascuorum (Scopoli 1763)'   ~0.62~  pred 'Lasioglossum calceatum (Scopoli 1763)'   x3
-  -> 6 species mismatches explain 18 of 67 misses (27%) — scattered; no single cause
+     'solitary species'           ->  '0'                          x47
+     'species not known to collect pollen from fabaceae' ->  '0'                          x34
+     'species known to collect pollen from fabaceae' ->  '1'                          x27
+     'social species'             ->  '1'                          x14
+     'short'                      ->  '1.2'                        x2
+     'long'                       ->  '1.49'                       x2
+  -> 6 substitutions explain 126 of 149 misses (85%) — systematic, not scattered
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Relative Tonghe Length'           x9
-  -> 1 missing trait explains 9 of 67 misses (13%) — scattered; no single cause
+  -> 1 missing trait explains 9 of 149 misses (6%) — scattered; no single cause
+  [severity] assessing 140 ambiguous miss(es) in 7 batch(es)...
 
-  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (67 row(s))
+  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (149 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   number of bumblebees                              0     9   PRED-ONLY
+  tongue length category                            0     9   PRED-ONLY
   density                                           0    66   PRED-ONLY
-  intertegular distance                            57    75   Δ+18 (split?)
+  intertegular distance                            57    66   Δ+9 (split?)
+  mean intertegular distance                        0     9   PRED-ONLY
   foraging preference                              61    66   Δ+5 (split?)
+  mean tongue length                                0     9   PRED-ONLY
   relative tonghe length                            9     0   GT-ONLY
-  relative tongue length                            0     9   PRED-ONLY
-  tongue length                                    18    18   
+  tongue length                                    18     9   Δ-9 (split?)
   sociality                                        61    66   Δ+5 (split?)
 
-  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — cost both a miss and a spurious row)
-    gt 'relative tonghe length'           vs pred 'relative tongue length'           sim=0.95
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'relative tonghe length'           vs pred 'tongue length category'           sim=0.74
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.618  0.675  0.645    139    86    67   id+type+value
-             (84 more spurious row(s) out-of-scope; strict P would be 0.450)
-  tags        0.000  0.000  0.000      0   225   206   basis+id+type+value+stat+sex+stage
-             (84 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 -0.645 vs previous)
+  core        0.275  0.277  0.276     57   150   149   id+type+value
+             (102 more spurious row(s) set aside as out-of-scope; strict P would be 0.184)
+  tags        0.000  0.000  0.000      0   207   206   basis+id+type+value+stat+sex+stage
+             (102 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.276 vs previous)

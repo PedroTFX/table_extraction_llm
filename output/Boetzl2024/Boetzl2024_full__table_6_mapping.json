@@ -1,32 +1,19 @@
 {
-  "repsonse": {
+  "Crop type": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This column describes the crop type, which is context, not an insect identity or measurement."
+  },
+  "Adjacent habitat type": {
+    "field": null,
+    "value_column": false,
+    "reasoning": "This describes the habitat type, which is context, not an insect identity or location."
+  },
+  "Number of sites": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Reponese is a categorical trait being measured or observed."
-  },
-  "repsonse (1)": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
-  },
-  "parameter": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Parameter defines the independent variable or treatment applied."
-  },
-  "estimate": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Estimate is the calculated result of the measurement."
-  },
-  "95% CI lower bound": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Lower bound is the calculated confidence interval boundary."
-  },
-  "95% CI upper bound": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Upper bound is the calculated confidence interval boundary."
+    "measurementValue": "160",
+    "measurementStatistic": "count",
+    "reasoning": "This column reports the number of sampling sites, which is a count statistic."
   }
 }

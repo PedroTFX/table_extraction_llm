@@ -2,36 +2,38 @@
   "Acrocerid": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column contains the taxonomic identification of the focal insect specimen.",
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
     "category": null,
-    "reasoning_relevance": "This column provides the verbatim identification of the organism, not a measured trait."
+    "reasoning_relevance": "This is the specimen's identity, not a measured trait."
   },
   "Host spider(s)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column names the associated organism (host/prey), which is a biotic association trait.",
+    "reasoning": "This names the associated organism, which is a biotic association trait.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the biotic association (host) of the acrocerid species.",
+    "reasoning_relevance": "Names the associated host spider, a biotic association.",
     "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Host spider",
+    "measurementUnit": "s",
+    "measurementUnit_reasoning": "stated in the column header",
     "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The text describes detailed field observations and laboratory behavioral observations of the host spiders (e.g., changes in behavior, web structure, size, and appearance) rather than physical measurements taken from preserved specimens or simple occurrences.",
-    "measurementMethod": "Field observation and laboratory behavioral observation",
-    "measurementMethod_reasoning": "The data regarding the hosts are derived from 'Detailed field measurements and behavioral observations of host spiders' and 'Laboratory behavioral observations' described in the text, which involve direct observation of live or recently deceased hosts."
+    "basisOfRecord_reasoning": "The text describes 'Detailed field measurements and behavioral observations of host spiders' and notes changes in behavior (slower response, less aggressive) and physical characteristics (smaller, weighed less, paler color) of the hosts in their natural environment. This aligns with the definition of HumanObservation, as the authors observed live organisms in situ.",
+    "measurementMethod": "Field measurements and behavioral observations",
+    "measurementMethod_reasoning": "The text explicitly states that 'Detailed field measurements and behavioral observations of host spiders' were described and compared with literature. This encompasses the physical changes, behavioral responses, and lesion presence observed on the host spiders in the field."
   },
   "Location/date/collector": {
     "field": "verbatimLocality",
-    "value_column": false,
-    "reasoning": "This column specifies the exact place and date where the sampling or observation occurred.",
+    "value_column": true,
+    "reasoning": "This specifies the place and date where sampling or observation occurred.",
     "category": null,
-    "reasoning_relevance": "Contains location, date, and sample size, which are excluded variables."
+    "reasoning_relevance": "Describes the sampling event, not a trait of the organism."
   },
   "Notes": {
     "field": null,
-    "value_column": false,
-    "reasoning": "This column contains descriptive annotations and does not represent a measured trait or location.",
+    "value_column": null,
+    "reasoning": "This column contains descriptive metadata and does not fit the defined fields.",
     "category": null,
-    "reasoning_relevance": "These are descriptive annotations, not measurements of organism traits."
+    "reasoning_relevance": "Provides metadata about the record, not a biological measurement."
   }
 }

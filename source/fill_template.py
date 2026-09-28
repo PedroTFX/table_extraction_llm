@@ -17,12 +17,15 @@ tanked the match against ground truth.
 from __future__ import annotations
 
 import json
+import time
 import re
 from pathlib import Path
 
 from text_manager import get_tables
-from tables import parse_table, parse_legends_from_text, apply_legend, clean_text
-from column_relevance import make_llm, invoke_sized
+from tables import (parse_table, parse_legends_from_text, legend_from_code_definitions,
+                    legend_for_named_column,
+                    apply_legend, clean_text)
+from column_relevance import make_llm, invoke_sized, loads_salvaging
 
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "template_descriptions"
 _EMPTY_LIKE = {None, "", "null", "none", "unknown"}
@@ -710,8 +713,17 @@ Return ONLY a JSON object: {{"<column>": {{"<value>": "<canonical label or null>
         msgs = [{"role": "system", "content": system},
                 {"role": "user", "content": f"Here is the text:\n{context}"}]
         content = llm.invoke(msgs).content if llm else invoke_sized(msgs, model=DECODE_MODEL)
-        parsed = json.loads(content)
-    except (json.JSONDecodeError, AttributeError):
+        parsed = loads_salvaging(content)
+    except (json.JSONDecodeError, AttributeError) as e:
+        # used to be silent: Beyer2021's 0/1 legend decoded fine in isolation
+        # but came back undecoded from the run with no trace of why
+        print(f"  legend LLM reply unusable ({type(e).__name__}); codes left as written")
+        parsed = {}
+    except (TimeoutError, OSError) as e:
+        # a slow/busy local model must not fail the whole paper: keep the
+        # deterministic legends already in `merged`, leave the rest verbatim
+        print(f"  legend LLM unavailable ({type(e).__name__}); using the "
+              f"deterministic legends only")
         parsed = {}
 
     if isinstance(parsed, dict):
@@ -724,6 +736,139 @@ Return ONLY a JSON object: {{"<column>": {{"<value>": "<canonical label or null>
 
     return {c: {k: v for k, v in m.items() if not _is_empty_like(v)}
             for c, m in merged.items()}
+
+
+VALUE_EXTRA_FIELDS = ["measurementUnit", "measurementRemarks", "sampleSizeValue",
+                      "sampleSizeUnit", "verbatimLocality", "keep"]
+
+
+def route_value_extras(grouped_path, llm=None):
+    """Move detail that rides along in a value into its own field.
+
+    The SPLIT is deterministic (to_output.split_value_parts: a trailing unit,
+    '(n = 4)', a taxonomic authority and/or family after a name). WHERE each
+    fragment goes is decided by the LLM, once per paper over the distinct
+    (trait, fragment) pairs — 'Agelenidae' is a family, '(Emerton, 1890a)' an
+    authority, 'mm' a unit — with 'keep' for a split that was wrong. If the model
+    is unavailable, each fragment's deterministic guess is used.
+
+    Only EMPTY fields are filled (remarks are appended), and a value is left
+    whole if any of its fragments is judged 'keep'. Rewrites grouped in place."""
+    from to_output import split_value_parts   # local import avoids a cycle
+    grouped = json.loads(Path(grouped_path).read_text(encoding="utf-8"))
+    splits, pairs = [], {}
+    for sp in grouped.values():
+        for meas in sp.get("measurements", []):
+            core, parts = split_value_parts(meas.get("measurementValue", ""))
+            if parts:
+                splits.append((meas, core, parts))
+                for p in parts:
+                    key = (meas.get("measurementType", ""), p["text"], p["kind"])
+                    pairs.setdefault(key, {"guess": p["guess"],
+                                           "example": meas.get("measurementValue", "")})
+    if not splits:
+        return 0
+    keys = list(pairs)[:80]
+    listing = "\n".join(f'{i}. trait "{t}": fragment "{f}" (looks like: {k}; '
+                        f'from value "{pairs[(t, f, k)]["example"]}")'
+                        for i, (t, f, k) in enumerate(keys, 1))
+    system = f"""Values in a species-trait table sometimes carry extra detail that
+belongs in another Darwin Core field. Each numbered fragment below was split off
+a value. For each, choose where it belongs:
+- "measurementUnit": the unit of the value (mm, mg, °C, days, %)
+- "measurementRemarks": a note about the value — a taxonomic authority, a
+  family name, a qualifier
+- "sampleSizeValue": the number of individuals/samples behind the value
+- "sampleSizeUnit": the unit of that sample size (individuals, colonies)
+- "verbatimLocality": a place
+- "keep": it is part of the value itself and must stay there
+
+Return ONLY JSON: {{"1": "<field>", "2": "<field>", ...}}
+
+Fragments:
+{listing}"""
+    routed = {}
+    try:
+        content = llm.invoke([{"role": "system", "content": system}]).content if llm \
+            else invoke_sized([{"role": "system", "content": system}])
+        answer = json.loads(content)
+        for i, key in enumerate(keys, 1):
+            field = answer.get(str(i)) if isinstance(answer, dict) else None
+            if field in VALUE_EXTRA_FIELDS:
+                routed[key] = field
+    except (json.JSONDecodeError, AttributeError, TimeoutError, OSError) as e:
+        print(f"  value-extra routing LLM unavailable ({type(e).__name__}); using defaults")
+    n = 0
+    for meas, core, parts in splits:
+        fields = [routed.get((meas.get("measurementType", ""), p["text"], p["kind"]), p["guess"])
+                  for p in parts]
+        if "keep" in fields:
+            continue
+        meas["measurementValue"] = core
+        for p, field in zip(parts, fields):
+            if field == "measurementRemarks":
+                note = f"{p['kind'].replace('_', ' ')}: {p['text']}"
+                meas[field] = "; ".join(x for x in (str(meas.get(field) or "").strip(), note) if x)
+            elif not str(meas.get(field) or "").strip():
+                meas[field] = p["text"]
+        n += 1
+    Path(grouped_path).write_text(json.dumps(grouped, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"  moved extra detail out of {n} value(s) "
+          f"({len(routed)}/{len(keys)} fragment(s) routed by the LLM)")
+    return n
+
+
+def _looks_like_code(v: str) -> bool:
+    """A value that may need expanding: short ('W', 'nc', 'Pred'), or an
+    abbreviation-shaped token ('LDW', 'GenForager', 'W/S', 'M(O)', 'para.sma').
+    Ordinary words and phrases ('spring', 'preferring moist places') are not."""
+    s = str(v).strip()
+    if not s or len(s) > 24:
+        return False
+    if len(s) <= 4:
+        return True
+    return bool(re.search(r"[A-Z].*[A-Z]|[a-z][A-Z]|\d|[/.()_]", s))
+
+
+def _legend_code_list(value: str, legend: dict):
+    """['Sub', 'Lit'] when a cell joins >= 2 codes that are EACH defined in the
+    column's legend ('Sub/Lit', 'W, S', 'A+B'); else None. The legend is the
+    evidence that the pieces are separate states — a slash inside an ordinary
+    value ('3/4', 'and/or') has pieces the legend never defines, so it stays."""
+    parts = [p.strip() for p in re.split(r"\s*[/,;+]\s*", value.strip())]
+    if len(parts) < 2 or not all(parts):
+        return None
+    keys = {str(k).strip().lower() for k in legend}
+    if not all(p.lower() in keys for p in parts):
+        return None
+    return list(dict.fromkeys(parts))
+
+
+def _code_context(text: str, codes, limit: int = 6000, headers=()) -> str:
+    """The paragraphs that mention any of these codes as a whole token, most
+    codes first, capped at `limit` chars — what a legend decode actually needs,
+    instead of 16k chars of general prose.
+
+    A paragraph that also names a column counts double per name: digit codes
+    ('0'/'1') occur in nearly every paragraph, so without the names the legend
+    ('Sociality: Social species (1) or solitary species (0)', Beyer2021) lost
+    to number-heavy results paragraphs and never reached the model."""
+    paras = [p for p in re.split(r"\n\s*\n", text or "") if p.strip()]
+    pats = [re.compile(rf"(?<![\w]){re.escape(c)}(?![\w])") for c in set(codes) if c]
+    names = [re.compile(rf"\b{re.escape(h.strip())}\b", re.I) for h in set(headers) if h and h.strip()]
+
+    def score(p):
+        hits = sum(bool(p_.search(p)) for p_ in pats)
+        return hits + 2 * sum(bool(n.search(p)) for n in names) if hits else 0
+    scored = sorted(((score(p), i) for i, p in enumerate(paras)),
+                    key=lambda x: (-x[0], x[1]))
+    keep, used = [], 0
+    for score, i in scored:
+        if score == 0 or used + len(paras[i]) > limit:
+            continue
+        keep.append(i)
+        used += len(paras[i])
+    return "\n\n".join(paras[i] for i in sorted(keep)) or _cap_context(text)[:limit]
 
 
 def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, llm=None):
@@ -764,6 +909,10 @@ def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, ll
     dict_chunks = ([{"content": "Data-dictionary definitions:\n" + "\n".join(legend_lines)}]
                    if legend_lines else [])
 
+    grouped_types = {clean_text(m.get("measurementType", ""))
+                     for sp in grouped.values() for m in sp.get("measurements", [])}
+    prose_text = "\n\n".join(c["content"] for c in chunks) if chunks else ""
+    decode_cache: dict = {}
     for table in tables:
         mapping = mappings.get(table_id(table))
         if not mapping:
@@ -779,9 +928,71 @@ def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, ll
         # in full, since those carry the exact "code = meaning" definitions decode
         # exists to read.
         col_codes = collect_categorical_codes(table, mapping)
-        prose_chunk = ([{"content": _cap_context("\n\n".join(c["content"] for c in chunks))}]
-                       if chunks else [])
-        llm_legends = agent_normalize_legends(col_codes, hints, prose_chunk + dict_chunks, llm=llm)
+        # Numeric-looking CODE columns ('Colony population' = 1/2/3, Arnan2012)
+        # are typed numeric, so they never reach decoding. Decode one only when
+        # a legend introduced by its OWN name defines its values — and pass only
+        # those codes on, so the LLM is never asked to "decode" a real number.
+        for header, mm in mapping.items():
+            if mm.get("field") != "measurementType" or mm.get("category") is None \
+                    or mm.get("value_type") == "categorical":
+                continue
+            vals = sorted({str(v).strip() for v in table.column_values(header) if str(v).strip()})
+            named = legend_for_named_column(paper_text, header, vals) if len(vals) <= 12 else {}
+            if named and set(vals) <= set(named):
+                col = clean_text(header)
+                col_codes[col] = sorted(named)
+                hints.setdefault(col, {}).update({k: v for k, v in named.items()
+                                                  if k not in hints.get(col, {})})
+        # codes defined in a caption/sentence with no footnote marker
+        # ('M: monophagous, NO: narrowly oligophagous, ...') — also trusted
+        for col, codes in col_codes.items():
+            # a legend introduced by this column's own name wins ('Colony
+            # population: 1, hundreds; 2, thousands'); else a caption that
+            # defines several of its codes
+            found = legend_for_named_column(paper_text, col, codes) or \
+                legend_from_code_definitions(paper_text, codes)
+            if found:
+                hints.setdefault(col, {})
+                for code, term in found.items():
+                    hints[col].setdefault(code, term)
+        # Only columns that feed a measurement in grouped are worth decoding:
+        # stats tables and skipped tables produced nothing (Barber2017's GLMM
+        # tables used to cost a full decode call each).
+        canon = {clean_text(h): clean_text(m.get("canonicalType") or h) for h, m in mapping.items()}
+        col_codes = {c: v for c, v in col_codes.items() if canon.get(c, c) in grouped_types}
+        if not col_codes:
+            continue
+        # The LLM is asked only about values that LOOK like codes; a column of
+        # plain words ('spring', 'predator') needs no call at all. The
+        # deterministic legend readers above still ran on every value.
+        ask = {c: [v for v in codes if _looks_like_code(v)
+                   and _is_empty_like((hints.get(c) or {}).get(v))]
+               for c, codes in col_codes.items()}
+        ask = {c: v for c, v in ask.items() if v}
+        sig = json.dumps([sorted(col_codes.items()), sorted((k, sorted(v.items()))
+                          for k, v in hints.items())], ensure_ascii=False)
+        t0 = time.time()
+        if sig in decode_cache:
+            llm_legends = decode_cache[sig]
+            how = "reused (same columns/codes as an earlier fragment)"
+        elif ask:
+            ctx = _code_context(prose_text, [v for vs in ask.values() for v in vs],
+                                headers=list(ask))
+            llm_legends = agent_normalize_legends(
+                {c: col_codes[c] for c in ask}, hints,
+                [{"content": ctx}] + dict_chunks, llm=llm)
+            for c, codes in col_codes.items():      # hint-only columns
+                if c not in llm_legends and hints.get(c):
+                    llm_legends[c] = {k: v for k, v in hints[c].items() if k in codes}
+            how = f"LLM on {sum(map(len, ask.values()))} code(s), {len(ctx)} chars context"
+        else:
+            llm_legends = {c: {k: v for k, v in (hints.get(c) or {}).items() if k in codes}
+                           for c, codes in col_codes.items()}
+            how = "deterministic only (no code-like values left)"
+        decode_cache[sig] = llm_legends
+        n_det = sum(len(v) for v in hints.values())
+        print(f"    {table_id(table)}: {len(col_codes)} column(s), {n_det} code(s) from "
+              f"legends in the text; {how} ({time.time() - t0:.1f}s)")
 
         # The grouped measurements carry the CANONICAL type name (canonicalize
         # renames e.g. 'FG' -> 'functional groups'), but col_codes/hints are keyed
@@ -807,10 +1018,20 @@ def decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings, ll
 
         # rewrite the codes in grouped (match on cleaned measurementType)
         for species_data in grouped.values():
+            expanded = []
             for meas in species_data.get("measurements", []):
                 leg = legend_by_col.get(clean_text(meas.get("measurementType", "")))
                 if leg and isinstance(meas.get("measurementValue"), str):
+                    parts = _legend_code_list(meas["measurementValue"], leg)
+                    if parts:
+                        # 'Sub/Lit' = two states (Pereira2016): one measurement each
+                        for p in parts:
+                            expanded.append({**meas, "measurementValue": apply_legend(p, leg)})
+                        continue
                     meas["measurementValue"] = apply_legend(meas["measurementValue"], leg)
+                expanded.append(meas)
+            if "measurements" in species_data:
+                species_data["measurements"] = expanded
 
     Path(grouped_path).write_text(json.dumps(grouped, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"  decoded values in {grouped_path}")

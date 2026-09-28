@@ -428,7 +428,16 @@ def normalize_value(v, decode=False):
     if decode and s in VALUE_DECODE:
         s = VALUE_DECODE[s]
     n = canonical_number(s)
-    return n if n is not None else s
+    if n is not None:
+        return n
+    # 'mean ± error' written differently ('7.67±5.4', '4.0 ± 0', '3.4 +/- 0.6')
+    # is the same value: fold each side like a single number (Cady1993)
+    m = re.fullmatch(r"(-?[\d.,]+)\s*(?:±|\+/-|\+-)\s*([\d.,]+)", s)
+    if m:
+        a, b = canonical_number(m.group(1)), canonical_number(m.group(2))
+        if a is not None and b is not None:
+            return f"{a} ± {b}"
+    return s
 
 
 def load_csv(path):
@@ -463,8 +472,64 @@ def load_xlsx(path):
     return rows
 
 
+_PAREN_ERROR_RE = re.compile(r"(-?[\d.,]+)\s*\(\s*([\d.,]+)\s*\)")
+_PM_STAT_RE = re.compile(r"±|\+/-|\bs\.?d\.?\b|\bs\.?e\.?\b|standard (?:deviation|error)", re.I)
+
+
+def key_value(row, decode):
+    """measurementValue for comparison. 'mean (SD)' is how many tables print
+    'mean ± SD' ('91.1 (61.29)', Attiwilli2022) — the same value — so fold it,
+    but ONLY when the row's statistic says ± SD/SE: a bare '12 (3)' elsewhere
+    can be a count with n, and must not be credited as a mean ± error."""
+    v = row.get("measurementValue", "")
+    m = _PAREN_ERROR_RE.fullmatch(str(v).strip())
+    if m and _PM_STAT_RE.search(str(row.get("measurementStatistic", ""))):
+        v = f"{m.group(1)} ± {m.group(2)}"
+    return normalize_value(v, decode)
+
+
 def row_key(row, key_fields, decode):
-    return tuple(normalize_value(row.get(f, ""), decode) for f in key_fields)
+    return tuple(key_value(row, decode) if f == "measurementValue"
+                 else normalize_value(row.get(f, ""), decode) for f in key_fields)
+
+
+def match_types_by_values(gt_rows, pred_rows, un_pred, un_gt,
+                          min_species=5, min_agree=0.8, min_margin=0.2):
+    """Pair a predicted measurementType with a GT one when their VALUES agree for
+    the same species — the strongest evidence two differently-worded names are
+    one trait. For each (pred, gt) pair: over the species both cover, the share
+    whose value sets intersect. Accept the best GT for a pred only if it covers
+    >= min_species species, agrees >= min_agree, and beats the runner-up by
+    min_margin (so two small-integer traits, e.g. habitat types 1-4 vs subtypes
+    1-9, are not confused). One-to-one: a GT name is used once."""
+    def index(rows, types):
+        idx = {t: defaultdict(set) for t in types}
+        for r in rows:
+            t = r.get("measurementType", "")
+            if t in idx:
+                sp = normalize_value(r.get("verbatimIdentification", ""))
+                idx[t][sp].add(normalize_value(r.get("measurementValue", "")))
+        return idx
+    pi, gi = index(pred_rows, un_pred), index(gt_rows, un_gt)
+    scored = []
+    for p in un_pred:
+        cands = []
+        for g in un_gt:
+            shared = set(pi[p]) & set(gi[g])
+            if len(shared) < min_species:
+                continue
+            agree = sum(bool(pi[p][s] & gi[g][s]) for s in shared) / len(shared)
+            cands.append((agree, len(shared), g))
+        cands.sort(reverse=True)
+        if cands and cands[0][0] >= min_agree and \
+                (len(cands) == 1 or cands[0][0] - cands[1][0] >= min_margin):
+            scored.append((cands[0][0], cands[0][1], p, cands[0][2]))
+    out, used = {}, set()
+    for agree, n, p, g in sorted(scored, reverse=True):
+        if g not in used:
+            out[p] = g
+            used.add(g)
+    return out
 
 
 def remap_pred_types(gt_rows, pred_rows, use_llm=True):
@@ -489,10 +554,14 @@ def remap_pred_types(gt_rows, pred_rows, use_llm=True):
         return pred_rows, {}
 
     try:
-        type_map, report = build_type_map(gt_types, pred_types, use_llm=use_llm,
-                                          return_report=True)
+        type_map, report = build_type_map(
+            gt_types, pred_types, use_llm=use_llm, return_report=True,
+            value_match=lambda up, ug: match_types_by_values(gt_rows, pred_rows, up, ug))
     except TypeError:                     # older matcher without return_report
         type_map, report = build_type_map(gt_types, pred_types, use_llm=use_llm), {}
+    for p, g in type_map.items():
+        if report.get("by_pass", {}).get(p) == "values":
+            print(f"  [semantic] matched by values: {p!r} -> {g!r}")
 
     # Say out loud what the matcher could NOT resolve, and why. A silently
     # failing LLM used to look identical to a confident "these are different
@@ -682,16 +751,17 @@ def evaluate(pred_path, gt_path, key_fields, decode, semantic=False, use_llm=Tru
     gt = load_xlsx(gt_path)
     pred = load_csv(pred_path)
 
-    type_map = {}
-    if semantic:
-        pred, type_map = remap_pred_types(gt, pred, use_llm=use_llm)
-
     # Taxon names are reconciled BEFORE matching, and before any diagnostic runs,
     # so the score and every breakdown below agree on which organism a row is
-    # about (the same reason measurementType is remapped first).
+    # about. Species go FIRST: the measurementType remap can then pair two
+    # differently-worded traits by comparing their values species by species.
     species_map, species_unmapped = {}, []
     if match_species:
         pred, species_map, species_unmapped = remap_pred_species(gt, pred)
+
+    type_map = {}
+    if semantic:
+        pred, type_map = remap_pred_types(gt, pred, use_llm=use_llm)
 
     matched, missing, extra = match_rows(gt, pred, key_fields, decode)
 

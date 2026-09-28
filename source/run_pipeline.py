@@ -25,7 +25,7 @@ from pathlib import Path
 from text_manager import get_text
 from table_to_data import map_and_group, table_id, _identifier_column
 from fill_template import (get_measurement_level_tags, route_tags, apply_plan,
-                           decode_grouped_values)
+                           decode_grouped_values, route_value_extras)
 from to_output import pm_statistic_from_text, write_output_csv
 
 # Fields the volunteers fill with constants; override empties at output time.
@@ -68,9 +68,17 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
     print(f"Document set: {[Path(s).name for s in sources]}")
     print("=" * 60)
     t0 = time.time()
+    stages = []                      # (label, start time) — per-step timings
+
+    def stage(title):
+        now = time.time()
+        if stages:
+            print(f"  ({stages[-1][0]} took {now - stages[-1][1]:.1f}s)")
+        stages.append((title.split("]")[0] + "]", now))
+        print("\n" + title)
 
     # 1) tables -> mappings -> grouped
-    print("\n[1/5] Collecting + mapping tables, grouping by species...")
+    stage("[1/5] Collecting + mapping tables, grouping by species...")
     paper_text = "\n\n".join(
         Path(s).read_text(encoding="utf-8", errors="replace")
         for s in sources if Path(s).suffix.lower() in {".md", ".html", ".htm", ".txt"})
@@ -80,7 +88,7 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
     print(f"  grouped {len(grouped)} species from {len(tables)} table(s)")
 
     # 2) prose chunks
-    print("\n[2/5] Building prose chunks...")
+    stage("[2/5] Building prose chunks...")
     chunks = prose_chunks(sources, chunk_size=chunk_size)
     print(f"  {len(chunks)} chunk(s)")
 
@@ -88,7 +96,7 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
     # tags are measurement-level vs paper-level. Column tags are column-level by
     # nature; the cross-record tags (sex/lifeStage/caste) are classified by one
     # LLM pass, with 'derived' resolved from a curated rule (e.g. caste -> sex).
-    print("\n[plan] Routing tags to levels...")
+    stage("[plan] Routing tags to levels...")
     COLUMN_TAGS = ["basisOfRecord", "measurementMethod", "measurementUnit", "measurementStatistic"]
     CROSS_TAGS = ["sex", "lifeStage", "caste"]
     plan = {t: {"level": "column"} for t in COLUMN_TAGS}
@@ -99,7 +107,7 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
     column_tags = {t for t, s in plan.items() if s["level"] == "column"}
 
     # 3) measurement-level (column) tags — only those the plan routed to 'column'
-    print("\n[3/5] Measurement-level tags...")
+    stage("[3/5] Measurement-level tags...")
     # Page-fragments of one table share a schema and a mapping, so tag ONCE per
     # distinct header set and copy the result to its fragments (see map_and_group).
     import copy as _copy
@@ -126,15 +134,19 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
             json.dumps(mappings[tid], indent=2, ensure_ascii=False), encoding="utf-8")
 
     # 4) apply paper / species / derived tags onto grouped per the plan
-    print("\n[4/5] Applying paper/species/derived tags...")
+    stage("[4/5] Applying paper/species/derived tags...")
     apply_plan(plan, grouped_path)
 
     # 4b) decode legends
-    print("\n[4b] Decoding value legends...")
+    stage("[4b] Decoding value legends...")
     decode_grouped_values(grouped_path, tables, paper_text, chunks, mappings)
 
+    # 4c) units / authorities / sample sizes riding in values -> their own fields
+    stage("[4c] Routing extra detail out of values...")
+    route_value_extras(grouped_path)
+
     # 5) output csv
-    print("\n[5/5] Writing output CSV...")
+    stage("[5/5] Writing output CSV...")
     defaults = dict(DEFAULTS)
     if citation:
         defaults["associatedReferences "] = citation
@@ -148,7 +160,12 @@ def run_pipeline(paper_filename, complementary_files=(), output_path="output.csv
         pm_statistic=pm_statistic_from_text(paper_text),
     )
 
-    print(f"\nDONE in {time.time() - t0:.1f}s -> {output_path}")
+    end = time.time()
+    print(f"  ({stages[-1][0]} took {end - stages[-1][1]:.1f}s)")
+    print(f"\nDONE in {end - t0:.1f}s -> {output_path}")
+    print("  step times: " + ", ".join(
+        f"{lab} {((stages[i + 1][1] if i + 1 < len(stages) else end) - st):.0f}s"
+        for i, (lab, st) in enumerate(stages)))
 
 
 if __name__ == "__main__":

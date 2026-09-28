@@ -2,14 +2,14 @@
   "Acrocerid": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column contains the taxonomic identification of the focal insect specimen.",
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
     "category": null,
-    "reasoning_relevance": "This is the specimen's identity, not a measured trait."
+    "reasoning_relevance": "This is the organism's identity, not a measured trait."
   },
   "Source": {
     "field": null,
     "value_column": false,
-    "reasoning": "This column provides the citation or source for the data, serving as metadata.",
+    "reasoning": "This column provides the reference for the data source, not a measurement or location.",
     "category": null,
     "reasoning_relevance": "This is a citation, not a biological measurement or trait."
   },
@@ -18,31 +18,28 @@
     "value_column": true,
     "measurementValue": "7.67±5.4",
     "measurementStatistic": "mean ± SE",
-    "measurementMethod": "Mean duration with standard error of the mean (SEM)",
-    "reasoning": "Measures the pupation duration of the insect, including the mean and standard error.",
+    "reasoning": "This measures the pupation duration with mean and standard error.",
     "category": "Morphological measurement",
-    "reasoning_relevance": "Measures the duration of a biological developmental process.",
+    "reasoning_relevance": "Duration of pupation is a measured biological trait of the fly.",
     "multi_value": false,
     "value_type": "numeric",
-    "canonicalType": "Pupation duration",
-    "basisOfRecord": "Compiled data from field and laboratory observations",
-    "basisOfRecord_reasoning": "The data is compiled from detailed field measurements and behavioral observations, as summarized in Table 2.",
-    "measurementMethod_reasoning": "Table 2 explicitly states that the data presented is the 'Mean pupation duration' and notes that SEM (standard error of the mean) is included."
+    "canonicalType": "Pupation duration"
   },
   "n": {
-    "field": "measurementType",
+    "field": "measurementStatistic",
     "value_column": true,
     "measurementValue": "3",
     "measurementStatistic": "count",
-    "reasoning": "Represents the sample size or count of specimens analyzed for the trait.",
+    "reasoning": "This represents the number of specimens sampled.",
     "category": null,
-    "reasoning_relevance": "This is an abundance or sample size count."
+    "reasoning_relevance": "This is a sample size, not a trait of the organism."
   },
   "Lab or field; mean temp. °C (if available)": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "Indicates the specific laboratory or field location where the data was collected.",
+    "measurementValue": "Lab 20",
+    "reasoning": "This specifies the location where the measurement was taken.",
     "category": null,
-    "reasoning_relevance": "This is a site variable (raw condition), not an organism trait."
+    "reasoning_relevance": "This is a site variable (sampling condition), not an organism trait."
   }
 }

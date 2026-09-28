@@ -1,57 +1,27 @@
 {
-  "Variable": {
+  "Category": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "The variable names define the biological trait being measured for the focal organism."
+    "value_column": true,
+    "reasoning": "Defines the grouping or type of trait being measured for the organism."
   },
-  "Estimate ± SE": {
+  "Q1": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the estimated values for the measured trait."
+    "reasoning": "Represents the first quartile of the measured trait distribution."
   },
-  "t-value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds the calculated t-statistic for the comparison."
-  },
-  "Estimate ± SE (1)": {
+  "Q2 (Median)": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the estimated values with standard error for the first comparison."
+    "reasoning": "Represents the median of the measured trait distribution."
   },
-  "t-value (1)": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds the calculated t-statistic for the first comparison."
-  },
-  "Estimate ± SE (2)": {
+  "Q3": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the estimated values with standard error for the second comparison."
+    "reasoning": "Represents the third quartile of the measured trait distribution."
   },
-  "t-value (2)": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds the calculated t-statistic for the second comparison."
-  },
-  "Estimate ± SE (3)": {
+  "IQR": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the estimated values with standard error for the third comparison."
-  },
-  "t-value (3)": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds the calculated t-statistic for the third comparison."
-  },
-  "Estimate ± SE (4)": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column holds the estimated values with standard error for the fourth comparison."
-  },
-  "t-value (4)": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This column holds the calculated t-statistic for the fourth comparison."
+    "reasoning": "Represents the interquartile range of the measured trait distribution."
   }
 }

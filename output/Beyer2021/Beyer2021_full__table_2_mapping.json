@@ -1,57 +1,17 @@
 {
-  "Models": {
+  "Series": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Models define the statistical or mathematical framework used for the analysis."
+    "reasoning": "The column labels the grouping of the data (FB- vs FB+), defining the series."
   },
-  "Response variable": {
+  "X (range)": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "Describes the biological trait or ecological variable being studied."
+    "reasoning": "This describes the range of a measured trait for the focal organism."
   },
-  "FB": {
-    "field": "measurementValue",
+  "Bumblebee density (range)": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Contains a numerical value, likely a fitted parameter or result."
-  },
-  "run": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely a model output or factor."
-  },
-  "FC": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely a fitted parameter or result."
-  },
-  "LD": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely a fitted parameter or result."
-  },
-  "OSR": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely a fitted parameter or result."
-  },
-  "SNH": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely a fitted parameter or result."
-  },
-  "FB:run": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely an interaction or derived result."
-  },
-  "run: SNH": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely an interaction or derived result."
-  },
-  "FB:FC": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "Contains a numerical value, likely an interaction or derived result."
+    "reasoning": "This describes the range of the associated organism's density."
   }
 }

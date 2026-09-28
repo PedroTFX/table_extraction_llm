@@ -1,47 +1,22 @@
 {
-  "Models": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "This column contains model identifiers, not biological data, location, or taxon names."
-  },
-  "Response variable": {
+  "Group": {
     "field": "measurementType",
-    "value_column": false,
-    "reasoning": "This header names the property being measured (e.g., density), making it the measurement type."
-  },
-  "FB": {
-    "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column contains numerical results of the measurement."
+    "reasoning": "The values represent a categorical grouping of the insects."
   },
-  "run": {
-    "field": "measurementValue",
+  "Cluster": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains numerical results of the measurement."
-  },
-  "FC": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column contains numerical results of the measurement."
-  },
-  "OSR": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column is intended for a measurement value, even if currently empty."
+    "reasoning": "The values describe the ecological or geographic grouping of the specimens."
   },
   "SNH": {
-    "field": "measurementValue",
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column is intended for a measurement value, even if currently empty."
+    "reasoning": "SNH represents a measured trait, likely a mean or estimate, for the focal organism."
   },
-  "LD": {
-    "field": "measurementValue",
+  "OSR": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "This column contains numerical results of the measurement."
-  },
-  "FB:FC": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "This column contains numerical results of the measurement."
+    "reasoning": "OSR represents a measured trait, likely a mean or estimate, for the focal organism."
   }
 }

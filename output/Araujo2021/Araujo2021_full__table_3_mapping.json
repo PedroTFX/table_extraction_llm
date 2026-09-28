@@ -1,99 +1,72 @@
 {
-  "Bee species": {
+  "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column names the taxonomic identity of the focal insect specimen.",
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
     "category": null,
-    "reasoning_relevance": "This is the organism's identity, not a measured trait or observation."
+    "reasoning_relevance": "not found in text"
   },
-  "Left wing length (mm)": {
+  "(a) Parasite richness": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "7.32",
-    "reasoning": "This column measures a specific morphometric trait of the bee species.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Measures a physical dimension of the organism.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Left wing length",
-    "measurementMethod": "bee and wasp trap-nests",
-    "measurementMethod_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This measures the richness of parasites associated with the organism.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result (t-value), not a measurement of the organism's trait."
   },
-  "ITS (mm)": {
+  "(b) Parasitism (%)": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "3.03",
-    "reasoning": "This column measures a specific morphometric trait of the bee species.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Measures a physical dimension of the organism.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "ITS",
-    "measurementMethod": "bee and wasp trap-nests",
-    "measurementMethod_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This measures the percentage of parasitism observed.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result (percentage), not an intrinsic biological trait."
   },
-  "Left posterior tibia length (mm)": {
+  "(c) H2'": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "1.78",
-    "reasoning": "This column measures a specific morphometric trait of the bee species.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Measures a physical dimension of the organism.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Left posterior tibia length",
-    "measurementMethod": "bee and wasp trap-nests",
-    "measurementMethod_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This measures the H2' trait, likely related to host-parasite dynamics.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result, not a measurement of the organism's trait."
   },
-  "Nesting material (own observation)": {
+  "(d) Connectance": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "resine and plants",
-    "reasoning": "This column records the observed nesting material associated with the bee.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "Records the material used for nesting, an observed behavior.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Nesting material",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The study evaluates functional diversity and interaction networks established by cavity-nesting bees and wasps with nest parasites across different reforestation types. This involves observing the ecological context (reforestation types) and the resulting interactions, which falls under behavioural/ecological/natural-history traits.",
-    "measurementMethod": "bee and wasp trap-nests",
-    "measurementMethod_reasoning": "The abstract explicitly states that the researchers 'used bee and wasp trap-nests to sample six different types of environments' (pasture, teak reforestation, fig reforestation, mixed reforestation, natural regeneration, and primary forest) to evaluate functional diversity and interactions with nest parasites."
+    "reasoning": "This measures the connectance trait, related to interaction structure.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result, not a measurement of the organism's trait."
   },
-  "Tongue length (mm)": {
+  "(e) Diversity of interactions": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "1.05",
-    "reasoning": "This column measures a specific morphometric trait of the bee species.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Measures a physical dimension of the organism.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Tongue length",
-    "measurementMethod": "bee and wasp trap-nests",
-    "measurementMethod_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This measures the diversity of biotic interactions observed.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result (diversity index), not a measured trait."
   },
-  "Pollen transport (reference)": {
+  "(f) Niche overlap": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "Abdomen_scopa",
-    "reasoning": "This column records the reference for pollen transport behavior.",
-    "category": "Behavioral observation",
-    "reasoning_relevance": "Describes the mechanism of pollen transport, a functional trait.",
-    "multi_value": false,
-    "value_type": "categorical",
-    "canonicalType": "Pollen transport",
-    "measurementMethod": "bee and wasp trap-nests",
-    "measurementMethod_reasoning": "inherited from unanimous sibling measurement columns in the same table",
-    "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table"
+    "reasoning": "This measures the degree of niche overlap between interacting species.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result, not a measurement of the organism's trait."
+  },
+  "(g) Compartments": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the niche partitioning or compartment structure.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result, not a measurement of the organism's trait."
+  },
+  "(h) Nestedness": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the degree of niche nesting or overlap.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical result, not a measurement of the organism's trait."
+  },
+  "(i) Pairwise Permanova": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This measures the pairwise permanova index of the interactions.",
+    "category": null,
+    "reasoning_relevance": "This is a statistical test result, not a measurement of the organism's trait."
   }
 }

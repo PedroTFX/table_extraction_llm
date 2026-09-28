@@ -1,114 +1,27 @@
 {
-  "Coefficients:": {
-    "field": "measurementType",
-    "value_column": false,
-    "reasoning": "These are regression coefficients, representing the relationship between variables.",
-    "category": null,
-    "reasoning_relevance": "Represents statistical coefficients from a model, not a biological trait."
-  },
-  "Estimate": {
-    "field": "measurementValue",
-    "value_column": true,
-    "reasoning": "These are the estimated values (coefficients) from the statistical model.",
-    "category": null,
-    "reasoning_relevance": "Represents a statistical estimate from the model, not a biological trait."
-  },
-  "Std. Error": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This is the standard error associated with the estimates.",
-    "category": null,
-    "reasoning_relevance": "Represents a statistical error measure, not a biological trait."
-  },
-  "t Value": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This is the t-statistic used for hypothesis testing.",
-    "category": null,
-    "reasoning_relevance": "Represents a test statistic, which is excluded by definition."
-  },
-  "Pr(>": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This is the p-value for the hypothesis test.",
-    "category": null,
-    "reasoning_relevance": "Represents a p-value, which is excluded by definition."
-  },
-  "t": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This is the t-value, a statistical measure.",
-    "category": null,
-    "reasoning_relevance": "Represents a test statistic, which is excluded by definition."
-  },
-  ")": {
-    "field": "measurementStatistic",
-    "value_column": true,
-    "reasoning": "This represents the degrees of freedom for the test.",
-    "category": null,
-    "reasoning_relevance": "Represents a closing parenthesis for the statistical output."
-  },
-  "Month July": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This is a temporal variable used in the model."
-  },
-  "Month June": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This is a temporal variable used in the model."
-  },
-  "Month May": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This is a temporal variable used in the model."
-  },
-  "Month Sep Oct": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "This is a temporal variable used in the model."
-  },
-  "City Detroit": {
+  "Cities": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "This specifies the geographic location of the study."
+    "reasoning": "The values are named geographic locations where the sampling occurred."
   },
-  "__paperSpecies__": {
-    "field": "verbatimIdentification",
-    "category": null,
-    "scope": "paper",
-    "column": null,
-    "value": "Halictus ligatus",
-    "reasoning": "The measurements quantify body size variation in female Halictus ligatus sweat bees across three different cities.",
-    "decided_by": "llm",
-    "roles": {
-      "Halictus ligatus": "measured subject"
-    },
-    "candidates": [
-      {
-        "name": "Halictus ligatus",
-        "mentions": 13,
-        "abbrev_mentions": 27,
-        "score": 151
-      },
-      {
-        "name": "Halicus ligatus",
-        "mentions": 1,
-        "abbrev_mentions": 27,
-        "score": 139
-      },
-      {
-        "name": "Chicago and",
-        "mentions": 8,
-        "abbrev_mentions": 0,
-        "score": 8
-      },
-      {
-        "name": "Detroit and",
-        "mentions": 8,
-        "abbrev_mentions": 0,
-        "score": 8
-      }
-    ]
+  "Diff": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the calculated difference between the two locations."
+  },
+  "Lwr": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the lower bound of the calculated range or difference."
+  },
+  "Upr": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the upper bound of the calculated range or difference."
+  },
+  "p-Value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Represents the statistical significance of the observed difference."
   }
 }

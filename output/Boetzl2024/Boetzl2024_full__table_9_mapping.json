@@ -1,32 +1,53 @@
 {
-  "repsonse": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Reponese is a categorical trait being measured or observed."
+  "Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "This column contains the taxonomic identification of the focal insect.",
+    "category": null,
+    "reasoning_relevance": "This is the organism's identity, not a measured trait."
   },
-  "repsonse (1)": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Reponese (1) is a slope, a measured trait of the relationship."
-  },
-  "parameter": {
-    "field": "measurementType",
-    "value_column": true,
-    "reasoning": "Parameter defines the independent variable or treatment applied."
-  },
-  "estimate": {
+  "total individuals": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Estimate is the calculated result of the measurement."
+    "reasoning": "This is a count of the total number of individuals recorded.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Counts of individuals are measurements of abundance.",
+    "multi_value": false,
+    "value_type": "numeric"
   },
-  "95% CI lower bound": {
+  "number of sampling plots with occurrence": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "Lower bound is the calculated confidence interval boundary."
+    "reasoning": "This is a count of the sampling locations where the species was found.",
+    "category": null,
+    "reasoning_relevance": "This is a count related to sampling effort, not a trait of the organism."
   },
-  "95% CI upper bound": {
-    "field": "measurementValue",
+  "diet": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "Upper bound is the calculated confidence interval boundary."
+    "reasoning": "This describes the biotic association (diet) of the organism.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Diet preference is a biological trait of the organism.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "diet",
+    "basisOfRecord": "MaterialCitation",
+    "basisOfRecord_reasoning": "The diet preferences (granivorous, omnivorous, and carnivorous) were not measured by the authors in this study. They were obtained by extracting traits from external sources, specifically the carabids.org database and monographies, which falls under the definition of MaterialCitation.",
+    "measurementMethod": "Extracted from the carabids.org database and monographies",
+    "measurementMethod_reasoning": "The text explicitly states that carabid traits with respect to diet preference were 'obtained from the database carabids.org (extracted in spring of 2019) [40], monographies as well as from previous studies'. This describes the method of data acquisition."
+  },
+  "mean body size [mm]": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This is a morphometric measurement of the organism.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Body size is a measured physical dimension of the organism.",
+    "multi_value": false,
+    "value_type": "numeric",
+    "canonicalType": "mean body size [mm]",
+    "basisOfRecord": "MaterialCitation",
+    "basisOfRecord_reasoning": "inherited from unanimous sibling measurement columns in the same table",
+    "measurementMethod": "Extracted from the carabids.org database and monographies",
+    "measurementMethod_reasoning": "inherited from unanimous sibling measurement columns in the same table"
   }
 }

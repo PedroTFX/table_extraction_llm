@@ -1,12 +1,30 @@
 {
-  "Andersen's functional groups": {
+  "Ant Species": {
+    "field": "verbatimIdentification",
+    "value_column": false,
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the specific species of the focal organism."
+  },
+  "Subfamily": {
     "field": null,
     "value_column": false,
-    "reasoning": "These are functional group classifications, not specific insect taxon names or measurements."
+    "reasoning": "This is a taxonomic rank, which is part of the verbatimIdentification.",
+    "category": null,
+    "reasoning_relevance": "Taxonomic rank is excluded as a measurementType (specimen identity)."
   },
-  "Our ant groups classification": {
-    "field": null,
+  "Dom": {
+    "field": "measurementType",
     "value_column": true,
-    "reasoning": "These are categorical group classifications, not specimen identity or measurements."
+    "reasoning": "This appears to be a classification or distribution marker, not a measurement or location.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Indicates the dominance status, a behavioral/ecological trait.",
+    "multi_value": false,
+    "value_type": "categorical",
+    "canonicalType": "Dom",
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "For ant abundance, the data was determined by sampling pitfall traps in the field.",
+    "measurementMethod": "Maximal activity temperature (MAT) was established by dividing the whole range of field temperatures into °C classes and computing the mean activity value by averaging ant abundance at baits every time that temperature was reached throughout all sampling days.",
+    "measurementMethod_reasoning": "This describes the method used to calculate the MAT based on field data."
   }
 }
