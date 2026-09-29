@@ -196,8 +196,19 @@ def llm_match(unmatched_pred, unmatched_gt, confirm=_ollama_yes,
     return mapping
 
 
+def _ranked_candidates(unmatched_pred, unmatched_gt, max_candidates=3, floor=0.35):
+    """{pred: top GT names by soft-token similarity}, the same shortlist the
+    gemma judge confirms one by one; preds with nothing above `floor` omitted."""
+    out = {}
+    for p in unmatched_pred:
+        ranked = sorted(unmatched_gt, key=lambda g: _soft_token_sim(p, g), reverse=True)
+        if ranked and _soft_token_sim(p, ranked[0]) >= floor:
+            out[p] = ranked[:max_candidates]
+    return out
+
+
 def build_type_map(gt_names, pred_names, use_llm=True, return_report=False,
-                   value_match=None):
+                   value_match=None, judge="gemma"):
     """Full pipeline, cheapest and safest first:
 
       1. NORMALIZE-EQUAL   — casing/underscores/word order (no LLM, exact).
@@ -235,7 +246,19 @@ def build_type_map(gt_names, pred_names, use_llm=True, return_report=False,
         un_pred = [p for p in un_pred if p not in by_values]
         un_gt = [g for g in un_gt if g not in set(by_values.values())]
 
-    if use_llm and un_pred and un_gt:
+    if use_llm and un_pred and un_gt and judge == "tev1":
+        # decision model: one choice question per name, probabilities thresholded
+        from decision_judge import decision_match
+        try:
+            by_llm = decision_match(un_pred, _ranked_candidates(un_pred, un_gt),
+                                    report=report)
+        except Exception as e:
+            report["llm_error"] = f"{type(e).__name__}: {e}"
+            by_llm = {}
+        for p in by_llm:
+            report["by_pass"][p] = "llm"
+        mapping.update(by_llm)
+    elif use_llm and un_pred and un_gt:
         by_llm = llm_match(un_pred, un_gt, report=report)
         for p in by_llm:
             report["by_pass"][p] = "llm"
