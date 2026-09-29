@@ -38,6 +38,7 @@ import contextlib
 import csv
 import io
 import json
+import os
 import re
 import traceback
 import unicodedata
@@ -532,6 +533,14 @@ def match_types_by_values(gt_rows, pred_rows, un_pred, un_gt,
     return out
 
 
+# Which model makes the evaluator's two LLM decisions (same-trait matching, miss
+# severity): 'gemma' (free-form chat) or 'tev1' (decision model, decision_judge).
+JUDGE = os.environ.get("EVAL_JUDGE", "gemma")
+# GT trait name -> probability the decision judge gave its accepted rename;
+# reused as the miss 'severity' signal so the decision judge needs no extra calls
+MATCH_PROBS: dict = {}
+
+
 def remap_pred_types(gt_rows, pred_rows, use_llm=True):
     """Rewrite each predicted row's measurementType to the ground-truth wording
     for the SAME trait, so semantically-equal names (e.g. 'Diurnal_activity' vs
@@ -556,9 +565,14 @@ def remap_pred_types(gt_rows, pred_rows, use_llm=True):
     try:
         type_map, report = build_type_map(
             gt_types, pred_types, use_llm=use_llm, return_report=True,
-            value_match=lambda up, ug: match_types_by_values(gt_rows, pred_rows, up, ug))
+            value_match=lambda up, ug: match_types_by_values(gt_rows, pred_rows, up, ug),
+            judge=JUDGE)
     except TypeError:                     # older matcher without return_report
         type_map, report = build_type_map(gt_types, pred_types, use_llm=use_llm), {}
+    MATCH_PROBS.clear()
+    for _p, _g, _prob, _st in report.get("decision_probs") or []:
+        if _st == "accepted":
+            MATCH_PROBS[_g] = _prob
     for p, g in type_map.items():
         if report.get("by_pass", {}).get(p) == "values":
             print(f"  [semantic] matched by values: {p!r} -> {g!r}")
@@ -1051,12 +1065,32 @@ def assess_miss_severity(rows, use_llm=True, batch_size=20):
             r["severity"], r["reasoning"] = "", "(not assessed)"
             deferred.append(i)
 
+    if JUDGE == "tev1":
+        # decision judge: no separate grading calls. Reuse the probability it
+        # already gave when renaming this row's trait (a shaky rename is the
+        # likeliest reason for a whole block of misses); else leave unassessed.
+        n = 0
+        for k in deferred:
+            pr = MATCH_PROBS.get(rows[k].get("measurementType", ""))
+            if pr is not None:
+                rows[k]["reasoning"] = f"trait renamed by decision judge, p={pr:.2f}"
+                n += 1
+        if deferred:
+            print(f"  [severity] decision judge: {n} of {len(deferred)} ambiguous "
+                  f"miss(es) carry a rename probability; no grading calls")
+        return rows
+
     if not use_llm or invoke_sized is None or not deferred:
         return rows
 
+    if JUDGE == "tev1":
+        batch_size = 64                  # one decision call holds 64 questions
     print(f"  [severity] assessing {len(deferred)} ambiguous miss(es) "
           f"in {(len(deferred) + batch_size - 1) // batch_size} batch(es)...")
-    for start in range(0, len(deferred), batch_size):
+    n_batches = (len(deferred) + batch_size - 1) // batch_size
+    for b, start in enumerate(range(0, len(deferred), batch_size), 1):
+        if b % 25 == 0:
+            print(f"  [severity] batch {b}/{n_batches}", flush=True)
         idxs = deferred[start:start + batch_size]
         items = [{"n": k,
                   "gt_species": rows[k].get("verbatimIdentification", ""),
@@ -1064,7 +1098,15 @@ def assess_miss_severity(rows, use_llm=True, batch_size=20):
                   "gt_value": rows[k].get("measurementValue", ""),
                   "pred_value": rows[k].get("pred_collision_value", "")}
                  for k in idxs]
-        graded = _assess_severity_batch(items, llm=None)
+        if JUDGE == "tev1":
+            from decision_judge import decision_severity
+            try:
+                graded = decision_severity(items)
+            except Exception as e:
+                print(f"  [severity] tev1 unavailable ({type(e).__name__}); left blank")
+                graded = {}
+        else:
+            graded = _assess_severity_batch(items, llm=None)
         for k in idxs:
             if k in graded:
                 rows[k]["severity"], rows[k]["reasoning"] = graded[k]
@@ -1497,6 +1539,10 @@ if __name__ == "__main__":
                          "'measurementType' (default): a row whose trait GT never "
                          "records is out-of-scope, not a false positive. "
                          "'none': strict, every extra row is a false positive.")
+    ap.add_argument("--judge", choices=["gemma", "tev1"], default=None,
+                    help="model for the evaluator's LLM decisions (same-trait "
+                         "matching, miss severity): gemma chat (default) or the "
+                         "tev1 decision model (needs Ollama >= 0.35)")
     ap.add_argument("--no-llm", action="store_true",
                     help="with semantic remapping, use the deterministic pass only "
                          "(no Ollama calls)")
@@ -1516,6 +1562,8 @@ if __name__ == "__main__":
                          "no reusable score are still evaluated. Use to resume an "
                          "interrupted batch without redoing finished papers.")
     args = ap.parse_args()
+    if args.judge:
+        JUDGE = args.judge
 
     if args.all:
         # In batch mode semantic remapping is ON by default (matches run_all.py);
