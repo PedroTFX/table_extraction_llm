@@ -1,27 +1,33 @@
 {
-  "Plant family/genus": {
-    "field": null,
+  "Species": {
+    "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
-  },
-  "High": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
-  },
-  "Medium": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
+    "reasoning": "The column contains the taxonomic identification of the focal insect.",
+    "category": "Categorical biological trait",
+    "reasoning_relevance": "Identifies the focal organism; a discrete biological entity."
   },
   "Low": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "~52",
+    "reasoning": "Represents the lower bound of the measured trait for the focal species.",
+    "category": null,
+    "reasoning_relevance": "Represents urbanization level, which is a site variable, not an organism trait."
   },
-  "Grand Total": {
-    "field": null,
-    "value_column": false,
-    "reasoning": "no mapping returned (response truncated)"
+  "Medium": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "~103",
+    "reasoning": "Represents the median or middle bound of the measured trait for the focal species.",
+    "category": null,
+    "reasoning_relevance": "Represents urbanization level, which is a site variable, not an organism trait."
+  },
+  "High": {
+    "field": "measurementType",
+    "value_column": true,
+    "measurementValue": "~51",
+    "reasoning": "Represents the upper bound of the measured trait for the focal species.",
+    "category": null,
+    "reasoning_relevance": "Represents urbanization level, which is a site variable, not an organism trait."
   }
 }

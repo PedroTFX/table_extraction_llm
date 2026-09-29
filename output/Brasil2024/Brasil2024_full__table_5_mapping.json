@@ -1,45 +1,27 @@
 {
-  "species": {
-    "field": "verbatimIdentification",
+  "Site": {
+    "field": "verbatimLocality",
+    "value_column": true,
+    "reasoning": "The values represent the geographic locations where sampling occurred."
+  },
+  " % of males": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "This column measures the proportion of males in the sample."
+  },
+  "chisquare (χ2)": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is a statistical test result, not a measured biological trait."
+  },
+  "p-value": {
+    "field": "measurementStatistic",
+    "value_column": true,
+    "reasoning": "This is a statistical test result, not a measured biological trait."
+  },
+  "% of males": {
+    "field": null,
     "value_column": false,
-    "reasoning": "The column contains the taxonomic identification of the focal insect.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Identifies the focal organism's identity."
-  },
-  "Female spring F": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementStatistic": "F",
-    "measurementValue": "0.822",
-    "reasoning": "This is a statistical result (F-statistic) derived from the measurements for the species.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical result (F-statistic), not a trait measurement."
-  },
-  "Female spring p value": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementStatistic": "p value",
-    "measurementValue": "0.455",
-    "reasoning": "This is a statistical result (p-value) derived from the measurements for the species.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical result (p-value), which is excluded."
-  },
-  "Female summer F": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementStatistic": "F",
-    "measurementValue": "0.051",
-    "reasoning": "This is a statistical result (F-statistic) derived from the measurements for the species.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical result (F-statistic), not a trait measurement."
-  },
-  "Female summer p value": {
-    "field": "measurementType",
-    "value_column": true,
-    "measurementStatistic": "p value",
-    "measurementValue": "0.95",
-    "reasoning": "This is a statistical result (p-value) derived from the measurements for the species.",
-    "category": null,
-    "reasoning_relevance": "This is a statistical result (p-value), which is excluded."
+    "reasoning": "no mapping returned (response truncated)"
   }
 }

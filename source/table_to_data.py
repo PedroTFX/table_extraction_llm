@@ -2386,7 +2386,16 @@ def map_and_group(sources, paper_text, out_dir=".", llm=None):
     rep_mapping: dict = {}                   # signature -> finished mapping
     for sig in order:
         rep = groups[sig][0]
-        rep_mapping[sig] = agent_table_mapper(rep, paper_text, llm=llm)
+        try:
+            rep_mapping[sig] = agent_table_mapper(rep, paper_text, llm=llm)
+        except json.JSONDecodeError as e:
+            # one unusable reply must cost this table, not the whole paper
+            # (Oliveira2022 failed outright on one degenerate mapper reply)
+            print(f"    mapper reply unusable for {rep.source}#{rep.table_index} "
+                  f"({e.msg}); table left unmapped")
+            rep_mapping[sig] = {h: {"field": None, "value_column": False,
+                                    "reasoning": "mapper reply unusable"}
+                                for h in rep.header_names}
         extra = len(groups[sig]) - 1
         if extra:
             print(f"    schema shared: reusing this mapping for {extra} more "

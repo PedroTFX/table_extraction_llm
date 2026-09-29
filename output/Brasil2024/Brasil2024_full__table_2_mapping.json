@@ -1,28 +1,32 @@
 {
-  "Site": {
+  "Site_ID": {
     "field": "verbatimLocality",
     "value_column": true,
-    "reasoning": "The column lists the specific locations where sampling or observation occurred."
+    "reasoning": "Site_ID identifies the specific location where sampling occurred."
   },
-  "% of males": {
+  "Intensity": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "0.74",
-    "measurementStatistic": "mean",
-    "reasoning": "This column reports a proportion of males, which is a measured trait of the focal organism."
+    "reasoning": "Intensity is a categorical trait measured for the habitat/site."
   },
-  "chisquare (χ2)": {
+  "Plant_rich": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "12.519",
-    "measurementStatistic": "mean",
-    "reasoning": "This is a statistical test result, which is a measured property of the sample."
+    "reasoning": "Plant_rich measures the density of plant species in the habitat."
   },
-  "p-value": {
+  "Perc_shrub": {
     "field": "measurementType",
     "value_column": true,
-    "measurementValue": "0.001*",
-    "measurementStatistic": "mean",
-    "reasoning": "This is a statistical result derived from the comparison of the sample data."
+    "reasoning": "Perc_shrub measures the percentage of shrub cover in the habitat."
+  },
+  "Perc_grass": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Perc_grass measures the percentage of grass cover in the habitat."
+  },
+  "Perc_tree": {
+    "field": "measurementType",
+    "value_column": true,
+    "reasoning": "Perc_tree measures the percentage of tree cover in the habitat."
   }
 }

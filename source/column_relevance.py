@@ -268,6 +268,11 @@ def loads_salvaging(content: str) -> dict:
                 depth += 1
             elif ch in "}]":
                 depth -= 1
+                # right after a member's value closes: a reply of ONE complete
+                # member then junk (Oliveira2022: '{"X": {...}' + endless
+                # whitespace) has no depth-1 comma to cut at
+                if depth == 1:
+                    cut = i + 1
             elif ch == "," and depth == 1:
                 cut = i
         if cut is None:

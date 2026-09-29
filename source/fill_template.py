@@ -835,10 +835,14 @@ def _legend_code_list(value: str, legend: dict):
     column's legend ('Sub/Lit', 'W, S', 'A+B'); else None. The legend is the
     evidence that the pieces are separate states — a slash inside an ordinary
     value ('3/4', 'and/or') has pieces the legend never defines, so it stays."""
+    keys = {str(k).strip().lower() for k in legend}
+    # a joined value the legend defines AS A WHOLE is one state, not a list
+    # ('W/S' = 'wood/soil interface' beside 'W' and 'S', AmbspergTraun1991)
+    if value.strip().lower() in keys:
+        return None
     parts = [p.strip() for p in re.split(r"\s*[/,;+]\s*", value.strip())]
     if len(parts) < 2 or not all(parts):
         return None
-    keys = {str(k).strip().lower() for k in legend}
     if not all(p.lower() in keys for p in parts):
         return None
     return list(dict.fromkeys(parts))

@@ -1,44 +1,34 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Brasil2024\Brasil2024.xlsx  (25 rows)
-PREDICTION   : ..\output\Brasil2024\Brasil2024.csv  (37 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Brasil2024\Brasil2024.csv  (31 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
 TAXON NAME REMAP (pred -> gt, 1 pair(s))
   'Eucera pruinosa' -> 'Eucera (Peponapis) pruinosa'
 
-TAXON NAMES LEFT UNMAPPED (1)
-  'species': no ground-truth string denotes this
-
-measurementType REMAP (pred -> gt, 2 pair(s))
-  'Body size x urbanization' -> 'Body size'
-  'Functional traits Diet' -> 'Diet'
-
-measurementType LEFT UNMAPPED (1)
-  'Date of changing season': no ground-truth string denotes this
-
 ROW-LEVEL (key match)
-  matched (TP)          : 25
-  missed (FN)           : 0
-  spurious, in scope    : 7   <- GT covers this trait: real errors
-  spurious, out of scope: 5   <- GT never covers it: nothing to score against
+  matched (TP)        : 25
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 6   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1        : 0.676 / 1.000 / 0.806
-  SCOPED  P/R/F1        : 0.781 / 1.000 / 0.877
-  RECALL (GT coverage)  : 1.000
+  STRICT  P/R/F1      : 0.806 / 1.000 / 0.893   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                              5
+    measurementType                              6
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
-  basisOfRecord                 0     25  0.000  <-- low
-  measurementMethod             0     20  0.000  <-- low
+  column                    agree  total    acc   extra finds
+  basisOfRecord                15     25  0.600
+  measurementMethod             0      0    n/a   +15 where GT blank
   measurementUnit               0      0    n/a
   measurementStatistic         25     25  1.000
   measurementRemarks            0      0    n/a
-  sex                          25     25  1.000
+  sex                           0     25  0.000  <-- low
   lifeStage                    10     25  0.400  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
@@ -54,8 +44,9 @@ FIELD-LEVEL ACCURACY (on matched rows only)
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  body size                                         5    12   Δ+7 (split?)
-  date of changing season                           0     5   PRED-ONLY
+  body size x urbanization female spring f          0     3   PRED-ONLY
+  body size x urbanization female summer f          0     3   PRED-ONLY
+  body size                                         5     5   
   diet                                              5     5   
   nesting                                           5     5   
   sociality                                         5     5   
@@ -63,8 +54,8 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.781  1.000  0.877     25     7     0   id+type+value
-             (5 more spurious row(s) out-of-scope; strict P would be 0.676)
-  tags        0.000  0.000  0.000      0    32    25   basis+id+type+value+stat+sex+stage
-             (5 more spurious row(s) out-of-scope; strict P would be 0.000)
-             (F1 -0.877 vs previous)
+  core        1.000  1.000  1.000     25     0     0   id+type+value
+             (6 more spurious row(s) set aside as out-of-scope; strict P would be 0.806)
+  tags        0.000  0.000  0.000      0    25    25   basis+id+type+value+stat+sex+stage
+             (6 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
