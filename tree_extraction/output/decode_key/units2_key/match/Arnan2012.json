@@ -1,0 +1,774 @@
+{
+ "_columns": [
+  [
+   6,
+   1,
+   "Defense of resources",
+   [
+    "2",
+    "1"
+   ]
+  ],
+  [
+   5,
+   2,
+   "Polymorphism",
+   [
+    "1",
+    "2",
+    "3"
+   ]
+  ],
+  [
+   5,
+   3,
+   "Colony population",
+   [
+    "3",
+    "2",
+    "1"
+   ]
+  ],
+  [
+   5,
+   4,
+   "Brood cycle",
+   [
+    "2",
+    "1"
+   ]
+  ],
+  [
+   5,
+   5,
+   "N queens per colony",
+   [
+    "polygyny",
+    "monogyny"
+   ]
+  ],
+  [
+   5,
+   6,
+   "N nests per colony",
+   [
+    "polydomy",
+    "monodomy"
+   ]
+  ],
+  [
+   5,
+   7,
+   "Main food resource",
+   [
+    "honeydew",
+    "nectar",
+    "insects",
+    "seeds"
+   ]
+  ],
+  [
+   6,
+   3,
+   "Daily rhythm",
+   [
+    "CN",
+    "DC",
+    "D",
+    "N"
+   ]
+  ],
+  [
+   6,
+   4,
+   "Month of peak activity",
+   [
+    "September",
+    "June",
+    "July",
+    "August",
+    "May",
+    "October"
+   ]
+  ],
+  [
+   6,
+   5,
+   "CTM (ºC)",
+   [
+    "40",
+    "42",
+    "48",
+    "44",
+    "46",
+    "50",
+    "52"
+   ]
+  ],
+  [
+   6,
+   6,
+   "MAT (ºC)",
+   [
+    "20",
+    "24",
+    "40",
+    "44",
+    "30",
+    "28",
+    "48",
+    "50",
+    "46",
+    "22",
+    "36",
+    "42",
+    "26",
+    "18"
+   ]
+  ]
+ ],
+ "6:1": {
+  "cells": {
+   "2": {
+    "term": "defence of food or territory (foraging area)",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "nectar",
+       "defence",
+       "diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "2": {
+      "e0": 0.001,
+      "e1": 0.978,
+      "e2": 0.0,
+      "keep": 0.021
+     },
+     "2 | QB": {
+      "w0": 0.001,
+      "w1": 0.648,
+      "w2": 0.351
+     }
+    }
+   },
+   "1": {
+    "term": "none (only defence of the nest)",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "arthropod corpses",
+       "none",
+       "diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.978,
+      "word": 0.022
+     },
+     "1": {
+      "e0": 0.0,
+      "e1": 0.994,
+      "e2": 0.0,
+      "keep": 0.006
+     },
+     "1 | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u7",
+    "u8",
+    "u12",
+    "u17",
+    "u18",
+    "u13"
+   ],
+   "choice": "p2",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.0,
+    "p2": 0.997,
+    "p3": 0.0,
+    "p4": 0.0,
+    "p5": 0.0,
+    "p6": 0.0,
+    "several": 0.002,
+    "none": 0.0
+   },
+   "chosen": [
+    "u8"
+   ]
+  },
+  "header": "Defense of resources"
+ },
+ "5:2": {
+  "cells": {
+   "1": {
+    "term": "monomorphism",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "monomorphism",
+       "hundred",
+       "larvae",
+       "none"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.945,
+      "word": 0.055
+     },
+     "1": {
+      "e0": 0.964,
+      "e1": 0.0,
+      "e2": 0.0,
+      "e3": 0.001,
+      "keep": 0.034
+     },
+     "1 | QB": {}
+    }
+   },
+   "2": {
+    "term": "low polymorphism",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "polymorphism",
+       "thousands",
+       "larvae",
+       "food"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "2": {
+      "e0": 0.682,
+      "e1": 0.002,
+      "e2": 0.001,
+      "e3": 0.001,
+      "keep": 0.314
+     },
+     "2 | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   },
+   "3": {
+    "term": "high polymorphism",
+    "parts": [
+     "3"
+    ],
+    "options": {
+     "3": {
+      "evidence": "explicit",
+      "labels": [
+       "polymorphism",
+       "tens"
+      ]
+     }
+    },
+    "evidence": {
+     "3": "explicit"
+    },
+    "probs": {
+     "3 | QK": {
+      "code": 0.97,
+      "word": 0.03
+     },
+     "3": {
+      "e0": 0.96,
+      "e1": 0.001,
+      "keep": 0.039
+     },
+     "3 | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u7",
+    "u8",
+    "u18",
+    "u12",
+    "u17",
+    "u13"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.132,
+    "p2": 0.0,
+    "p3": 0.541,
+    "p4": 0.0,
+    "p5": 0.0,
+    "p6": 0.0,
+    "several": 0.325,
+    "none": 0.0
+   },
+   "chosen": [
+    "u18"
+   ]
+  },
+  "header": "Polymorphism"
+ },
+ "5:3": {
+  "cells": {
+   "3": {
+    "term": null,
+    "parts": [
+     "3"
+    ],
+    "options": {
+     "3": {
+      "evidence": "explicit",
+      "labels": [
+       "polymorphism",
+       "tens"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "3 | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "3": {
+      "e0": 0.001,
+      "e1": 0.018,
+      "keep": 0.982
+     }
+    }
+   },
+   "2": {
+    "term": null,
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "polymorphism",
+       "thousands",
+       "larvae",
+       "food"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "2 | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "2": {
+      "e0": 0.0,
+      "e1": 0.024,
+      "e2": 0.0,
+      "e3": 0.0,
+      "keep": 0.975
+     }
+    }
+   },
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "monomorphism",
+       "hundred",
+       "larvae",
+       "none"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.943,
+      "word": 0.057
+     },
+     "1": {
+      "e0": 0.001,
+      "e1": 0.004,
+      "e2": 0.0,
+      "e3": 0.001,
+      "keep": 0.994
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u7",
+    "u8",
+    "u18",
+    "u12",
+    "u17",
+    "u13"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.047,
+    "p2": 0.0,
+    "p3": 0.822,
+    "p4": 0.0,
+    "p5": 0.0,
+    "p6": 0.0,
+    "several": 0.128,
+    "none": 0.001
+   },
+   "chosen": [
+    "u18"
+   ]
+  },
+  "header": "Colony population"
+ },
+ "5:4": {
+  "cells": {
+   "2": {
+    "term": "larvae in the nests during the whole year",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "polymorphism",
+       "thousands",
+       "larvae",
+       "food"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.948,
+      "word": 0.052
+     },
+     "2": {
+      "e0": 0.0,
+      "e1": 0.0,
+      "e2": 0.973,
+      "e3": 0.0,
+      "keep": 0.026
+     },
+     "2 | QB": {
+      "w0": 0.001,
+      "w1": 0.999
+     }
+    }
+   },
+   "1": {
+    "term": "larvae in the nests from March to September",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "monomorphism",
+       "hundred",
+       "larvae",
+       "none"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.949,
+      "word": 0.051
+     },
+     "1": {
+      "e0": 0.008,
+      "e1": 0.0,
+      "e2": 0.631,
+      "e3": 0.001,
+      "keep": 0.359
+     },
+     "1 | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u7",
+    "u8",
+    "u12",
+    "u17",
+    "u18",
+    "u13"
+   ],
+   "choice": "p5",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.001,
+    "p2": 0.0,
+    "p3": 0.0,
+    "p4": 0.0,
+    "p5": 0.987,
+    "p6": 0.0,
+    "several": 0.012,
+    "none": 0.0
+   },
+   "chosen": [
+    "u18"
+   ]
+  },
+  "header": "Brood cycle"
+ },
+ "5:5": {
+  "cells": {},
+  "header": "N queens per colony",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "5:6": {
+  "cells": {},
+  "header": "N nests per colony",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "5:7": {
+  "cells": {},
+  "header": "Main food resource",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "6:3": {
+  "cells": {
+   "CN": {
+    "term": "continuous in spring and nocturnal in summer",
+    "parts": [
+     "CN"
+    ],
+    "options": {
+     "CN": {
+      "evidence": "explicit",
+      "labels": [
+       "continuous"
+      ]
+     }
+    },
+    "evidence": {
+     "CN": "explicit"
+    },
+    "probs": {
+     "CN | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "CN": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "CN | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   },
+   "DC": {
+    "term": "diurnal in spring and continuous or with a midday drop in summer",
+    "parts": [
+     "DC"
+    ],
+    "options": {
+     "DC": {
+      "evidence": "explicit",
+      "labels": [
+       "diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "DC": "explicit"
+    },
+    "probs": {
+     "DC | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "DC": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "DC | QB": {
+      "w0": 0.001,
+      "w1": 0.999
+     }
+    }
+   },
+   "D": {
+    "term": "diurnal",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.936,
+      "word": 0.064
+     },
+     "D": {
+      "e0": 0.99,
+      "keep": 0.01
+     },
+     "D | QB": {}
+    }
+   },
+   "N": {
+    "term": "nocturnal",
+    "parts": [
+     "N"
+    ],
+    "options": {
+     "N": {
+      "evidence": "explicit",
+      "labels": [
+       "nocturnal"
+      ]
+     }
+    },
+    "evidence": {
+     "N": "explicit"
+    },
+    "probs": {
+     "N | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "N": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "N | QB": {}
+    }
+   }
+  },
+  "header": "Daily rhythm",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "6:4": {
+  "cells": {},
+  "header": "Month of peak activity",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "6:5": {
+  "cells": {},
+  "header": "CTM (ºC)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "6:6": {
+  "cells": {},
+  "header": "MAT (ºC)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ }
+}

@@ -1,0 +1,348 @@
+{
+ "calls": 1,
+ "chars": 3524,
+ "passages": [
+  "[prose] necessary, overdispersed models were fit using quasibinomial or negative binomial error distribution, according to the dependent variable. Following the construction of the model for each response variable, we contrast the proposed model against the null model using the ‘AICcmodavg’ v. 2.3-1 package (Mazerolle & Linden, 2019), in order to find the best-fit model for our response variables. We determined the minimum adequate model(s) by comparing Akaike Information Criterion corrected (AICc) values and AICc weights (AICcWt) for proposed models and null models (intercept-only model). Models within 2 ΔAICc units of the top model (i.e the model with the lowest AICc and highest AICcWt values) were considered to have equivalent explanatory power (Burnham & Anderson, 2002) (Supplementary Table S4 and S5). Due to the lower nesting rate of bees, our analyses of FEve produced a high amount of ‘NA’. Therefore, for this group, we do not include these indices in the statistical models. In addition, pasture treatment presented an extremely low number of occupations of bees and parasites associated with the nests (see Table 1). Thus, we did not include this treatment in the GLMs analyses for functional diversity indices. In the models for all response variables, we assessed potential spatial autocorrelation in raw response values and in the residuals of the models, by calculating spatial correlograms for Moran’s I values in ‘ncf’ v.1.2-6 package (Bjornstad & Cai, 2018).",
+  "[prose] We tested the variation in the composition of parasites and parasite–host interactions among habitats by performing permutational multivariate analyses of variance (PERMANOVA) with 1000 permutations (Anderson, 2001) on the abundance of data (parasite/parasite–host interaction) standardised to proportion, using Bray–Curtis dissimilarity index with the adonis function in ‘vegan’ v. 2.5-7 package (Oksanen et al., 2020). Standardisation was necessary, as we were more interested in relative similarity/dissimilarity patterns than down weighting abundant species or interactions (Clarke & Warwick, 2001). When the result was significant, we assessed the differences between “Control vs. Treatments”, by pairwise comparisons with adjusted P-value using Bonferroni correction (Paolucci et al., 2017). Additionally, we also assessed within-group homogeneity using PERMDISP (Warton et al., 2012). We used the first two axis of principal coordinates analyses (PCoA) to visualise graphically significant differences in PERMANOVA and treatment clusters. All analyses were performed in R version 3.5.1 (R Team Core, 2018).",
+  "[prose] At each of the 64 sites, we marked out five equidistant points 50 m apart on a line transect (oriented along the primary forest) and installed experimental trap-nest blocks constructed of wood (Cedrela fissilis, Meliaceae) with holes drilled into them. Trapnests were placed at a height of 1.5 m above the ground attached to trees or wooden stakes (Araújo et al., 2019).",
+  "[prose] From the total of 2000 (2800 in PF) trap-nests available in each sampled treatment, 23.96% were occupied in PF, 24.99% in TR, 17.10% in MR, 16.45% in NR, 13.80% in FR and 1.5% in PA. We recorded 26 host wasp species (1813 nests, 3525 individuals) belonging to the families Crabronidae, Pompilidae, Sphecidae and Vespidae, and 14 host bee species (330 nests, 1286 individuals) belonging to the families Apidae and Megachilidae that nested among sampled habitats (Supporting Information Table S.6). We also found 26 parasite species"
+ ],
+ "categories": [
+  {
+   "variable": "PF",
+   "code": "PF",
+   "term": "PF",
+   "model_label": "PF",
+   "label": "PF",
+   "explanation": ""
+  },
+  {
+   "variable": "TR",
+   "code": "TR",
+   "term": "TR",
+   "model_label": "TR",
+   "label": "TR",
+   "explanation": ""
+  },
+  {
+   "variable": "MR",
+   "code": "MR",
+   "term": "MR",
+   "model_label": "MR",
+   "label": "MR",
+   "explanation": ""
+  },
+  {
+   "variable": "NR",
+   "code": "NR",
+   "term": "NR",
+   "model_label": "NR",
+   "label": "NR",
+   "explanation": ""
+  },
+  {
+   "variable": "FR",
+   "code": "FR",
+   "term": "FR",
+   "model_label": "FR",
+   "label": "FR",
+   "explanation": ""
+  },
+  {
+   "variable": "PA",
+   "code": "PA",
+   "term": "PA",
+   "model_label": "PA",
+   "label": "PA",
+   "explanation": ""
+  },
+  {
+   "variable": "occupancy",
+   "code": "",
+   "label": "occupied",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "occupancy",
+   "code": "",
+   "label": "occupied in PF",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "occupancy",
+   "code": "",
+   "term": "occupied in TR",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "occupancy",
+   "code": "",
+   "term": "occupied in MR",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "occupancy",
+   "code": "",
+   "term": "occupied in NR",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "occupancy",
+   "code": "",
+   "term": "occupied in FR",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "occupancy",
+   "code": "",
+   "term": "occupied in PA",
+   "why": "uncoded label not printed as whole words"
+  }
+ ],
+ "seconds": 18.8,
+ "columns": [
+  [
+   3,
+   1,
+   "Left wing length (mm)",
+   [
+    "7.32",
+    "10.24",
+    "9.04",
+    "9.28",
+    "7.78",
+    "8.39",
+    "8.25",
+    "8.22",
+    "9.27",
+    "9.74",
+    "8.45",
+    "8.17",
+    "9.55"
+   ]
+  ],
+  [
+   3,
+   2,
+   "ITS (mm)",
+   [
+    "3.03",
+    "4.19",
+    "4.02",
+    "3.62",
+    "3.37",
+    "4.18",
+    "4.29",
+    "3.41",
+    "3.39",
+    "3.66",
+    "3.05",
+    "2.14",
+    "2.52",
+    "3.89"
+   ]
+  ],
+  [
+   3,
+   3,
+   "Left posterior tibia length (mm)",
+   [
+    "1.78",
+    "5.19",
+    "4.8",
+    "4.59",
+    "4.31",
+    "4.12",
+    "3.92",
+    "2.54",
+    "2.77",
+    "2.96",
+    "2.7",
+    "3.89",
+    "3.13",
+    "3.81"
+   ]
+  ],
+  [
+   3,
+   4,
+   "Nesting material (own observation)",
+   [
+    "resine and plants",
+    "sand and resine",
+    "resine",
+    "leaves"
+   ]
+  ],
+  [
+   3,
+   5,
+   "Tongue length (mm)",
+   [
+    "1.05",
+    "2.67",
+    "2.44",
+    "6.8",
+    "7.11",
+    "7.05",
+    "7.26",
+    "1.48",
+    "1.87",
+    "1.8",
+    "1.27",
+    "1.23",
+    "1.29"
+   ]
+  ],
+  [
+   4,
+   1,
+   "Left wing length (mm)",
+   [
+    "13.83",
+    "9.77",
+    "8.7",
+    "8.41",
+    "11.25",
+    "15.2",
+    "11.63",
+    "11.31",
+    "11.58",
+    "11.28",
+    "8.95",
+    "8.11",
+    "9.75",
+    "13.68",
+    "13.47",
+    "10.71",
+    "10.99",
+    "13.71",
+    "10.47",
+    "6.62",
+    "9.79",
+    "9.49",
+    "10.91",
+    "14.83",
+    "8.39"
+   ]
+  ],
+  [
+   4,
+   2,
+   "ITS (mm)",
+   [
+    "2.09",
+    "1.58",
+    "1.63",
+    "2.64",
+    "3.96",
+    "2.43",
+    "2.48",
+    "2.55",
+    "2.98",
+    "2.03",
+    "2.53",
+    "2.24",
+    "2.4",
+    "2.7",
+    "2.17",
+    "2.29",
+    "2.86",
+    "2.59",
+    "1.83",
+    "1.56",
+    "1.84",
+    "2.3",
+    "3.12",
+    "2.66"
+   ]
+  ],
+  [
+   4,
+   3,
+   "Left tibia posterior (mm)",
+   [
+    "5.6",
+    "4",
+    "24.44",
+    "3.5",
+    "2.63",
+    "3.68",
+    "2.38",
+    "2.77",
+    "2.65",
+    "3.02",
+    "2.04",
+    "2.18",
+    "2.27",
+    "4.44",
+    "4.32",
+    "3.6",
+    "2.32",
+    "4.66",
+    "2.86",
+    "1.97",
+    "1.79",
+    "2.61",
+    "2.37",
+    "3.31",
+    "2.29"
+   ]
+  ],
+  [
+   4,
+   4,
+   "Left mandibula (mm)",
+   [
+    "1.55",
+    "1.2",
+    "1.16",
+    "1.45",
+    "2.55",
+    "1.39",
+    "1.47",
+    "1.57",
+    "1.42",
+    "1.34",
+    "1.37",
+    "1.21",
+    "1.76",
+    "1.59",
+    "2.33",
+    "1.5",
+    "3.04",
+    "0.86",
+    "0.75",
+    "0.69",
+    "0.66",
+    "1.32",
+    "2.08",
+    "1.62"
+   ]
+  ],
+  [
+   4,
+   5,
+   "Larval diet (own observation)",
+   [
+    "spider",
+    "grasshopper",
+    "larvae",
+    "cockroach"
+   ]
+  ],
+  [
+   4,
+   6,
+   "Nesting material (own observation)",
+   [
+    "mud",
+    "plant_parts"
+   ]
+  ]
+ ]
+}

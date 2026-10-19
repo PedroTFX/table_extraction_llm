@@ -1,0 +1,347 @@
+{
+ "1:4": {
+  "cells": {},
+  "header": "Behavioural guild"
+ },
+ "1:5": {
+  "cells": {},
+  "header": "Diel activity"
+ },
+ "1:6": {
+  "cells": {},
+  "header": "Diet preference"
+ },
+ "1:8": {
+  "cells": {
+   "YR; MR; OR; RF": {
+    "term": "young restoration; mid-age restoration; old restoration; rain forest",
+    "parts": [
+     "YR",
+     "MR",
+     "OR",
+     "RF"
+    ],
+    "options": {
+     "YR": [
+      "young restoration"
+     ],
+     "MR": [
+      "mid-age restoration",
+      "midage restoration"
+     ],
+     "OR": [
+      "old restoration"
+     ],
+     "RF": [
+      "rain forest"
+     ]
+    },
+    "probs": {
+     "YR | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "YR": {
+      "e0": 0.984,
+      "keep": 0.016
+     },
+     "MR | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "MR": {
+      "e0": 0.514,
+      "e1": 0.363,
+      "keep": 0.123
+     },
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.978,
+      "keep": 0.022
+     },
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.996,
+      "keep": 0.004
+     }
+    }
+   },
+   "RF": {
+    "term": "rain forest",
+    "parts": [
+     "RF"
+    ],
+    "options": {
+     "RF": [
+      "rain forest"
+     ]
+    },
+    "probs": {
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.996,
+      "keep": 0.004
+     }
+    }
+   },
+   "OR; RF": {
+    "term": "old restoration; rain forest",
+    "parts": [
+     "OR",
+     "RF"
+    ],
+    "options": {
+     "OR": [
+      "old restoration"
+     ],
+     "RF": [
+      "rain forest"
+     ]
+    },
+    "probs": {
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.978,
+      "keep": 0.022
+     },
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.996,
+      "keep": 0.004
+     }
+    }
+   },
+   "MR; OR; RF": {
+    "term": "mid-age restoration; old restoration; rain forest",
+    "parts": [
+     "MR",
+     "OR",
+     "RF"
+    ],
+    "options": {
+     "MR": [
+      "mid-age restoration",
+      "midage restoration"
+     ],
+     "OR": [
+      "old restoration"
+     ],
+     "RF": [
+      "rain forest"
+     ]
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "MR": {
+      "e0": 0.514,
+      "e1": 0.363,
+      "keep": 0.123
+     },
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.978,
+      "keep": 0.022
+     },
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.996,
+      "keep": 0.004
+     }
+    }
+   },
+   "MR; OR": {
+    "term": "mid-age restoration; old restoration",
+    "parts": [
+     "MR",
+     "OR"
+    ],
+    "options": {
+     "MR": [
+      "mid-age restoration",
+      "midage restoration"
+     ],
+     "OR": [
+      "old restoration"
+     ]
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "MR": {
+      "e0": 0.514,
+      "e1": 0.363,
+      "keep": 0.123
+     },
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.978,
+      "keep": 0.022
+     }
+    }
+   },
+   "P": {
+    "term": "pasture",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": [
+      "pasture"
+     ]
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "P": {
+      "e0": 0.992,
+      "keep": 0.008
+     }
+    }
+   },
+   "OR": {
+    "term": "old restoration",
+    "parts": [
+     "OR"
+    ],
+    "options": {
+     "OR": [
+      "old restoration"
+     ]
+    },
+    "probs": {
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.978,
+      "keep": 0.022
+     }
+    }
+   },
+   "P; YR": {
+    "term": "pasture; young restoration",
+    "parts": [
+     "P",
+     "YR"
+    ],
+    "options": {
+     "P": [
+      "pasture"
+     ],
+     "YR": [
+      "young restoration"
+     ]
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "P": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "YR | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "YR": {
+      "e0": 0.984,
+      "keep": 0.016
+     }
+    }
+   },
+   "MR; RF": {
+    "term": "mid-age restoration; rain forest",
+    "parts": [
+     "MR",
+     "RF"
+    ],
+    "options": {
+     "MR": [
+      "mid-age restoration",
+      "midage restoration"
+     ],
+     "RF": [
+      "rain forest"
+     ]
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "MR": {
+      "e0": 0.514,
+      "e1": 0.363,
+      "keep": 0.123
+     },
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.996,
+      "keep": 0.004
+     }
+    }
+   },
+   "MR": {
+    "term": "mid-age restoration",
+    "parts": [
+     "MR"
+    ],
+    "options": {
+     "MR": [
+      "mid-age restoration",
+      "midage restoration"
+     ]
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "MR": {
+      "e0": 0.514,
+      "e1": 0.363,
+      "keep": 0.123
+     }
+    }
+   }
+  },
+  "header": "Habitat preference"
+ }
+}

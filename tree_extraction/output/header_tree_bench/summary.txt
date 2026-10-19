@@ -1,0 +1,26 @@
+30 papers, 71 tables the GT draws on (51 with a sure key)
+(the 5 tables the head reader was developed on are left out)
+
+                                    gemma (pipeline)         tree code           tree q4         tree head
+first record row right                     43/51 84%         47/51 92%         42/51 82%         49/51 96%
+column names match the GT trait          139/181 77%       139/181 77%       129/181 71%       134/181 74%
+group labels found / GT records    joined into names            14 / 1            18 / 3            15 / 1
+seconds (tables scored)                          407                 1               181               821
+
+head reader, per table scored:
+  model calls 4.4, seconds 11.6
+  Q-SPEC: names it decided that match the GT trait 7/15 47%
+  body rows asked (QB): 41 (no GT for them: look in the report)
+
+head reader, misses by bucket:
+  names: other QC                           26
+  names: undecided, other QC                10
+  names: Q-SPEC                             8
+  names: after a wrong first record         3
+  tables: first record wrong                2
+
+rows between the head and the first record (head end: no GT, check by eye):
+  Brasil2024 table 3: rows between the head and the first record: 1 section, 2 section, 3 repeated_header
+  Brasil2024 table 5: rows between the head and the first record: 1 empty, 2 section, 3 section
+  GibbParr2013 table 2: rows between the head and the first record: 2 section
+  Graf2021 table 8: rows between the head and the first record: 1 section, 2 section

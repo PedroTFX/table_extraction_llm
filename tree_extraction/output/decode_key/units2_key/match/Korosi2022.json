@@ -1,0 +1,310 @@
+{
+ "_columns": [
+  [
+   5,
+   1,
+   "Mobility",
+   [
+    "2",
+    "3",
+    "2.5",
+    "1.5",
+    "1",
+    "4"
+   ]
+  ],
+  [
+   5,
+   2,
+   "Larval diet",
+   [
+    "M",
+    "O",
+    "NO",
+    "P"
+   ]
+  ],
+  [
+   5,
+   3,
+   "Overw. stage",
+   [
+    "Larva",
+    "Adult",
+    "Pupa",
+    "Egg"
+   ]
+  ],
+  [
+   5,
+   4,
+   "Voltinism",
+   [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4"
+   ]
+  ],
+  [
+   5,
+   5,
+   "HAT",
+   [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  ],
+  [
+   5,
+   6,
+   "HAST",
+   [
+    "2",
+    "3",
+    "5",
+    "1",
+    "8",
+    "4",
+    "6",
+    "7"
+   ]
+  ]
+ ],
+ "5:1": {
+  "cells": {},
+  "header": "Mobility",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "5:2": {
+  "cells": {
+   "M": {
+    "term": "monophagous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "M": {
+      "e0": 0.985,
+      "keep": 0.015
+     },
+     "M | QB": {}
+    }
+   },
+   "O": {
+    "term": "oligophagous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "explicit",
+      "labels": [
+       "oligophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "explicit"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "O": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "O | QB": {}
+    }
+   },
+   "NO": {
+    "term": "narrowly oligophagous",
+    "parts": [
+     "NO"
+    ],
+    "options": {
+     "NO": {
+      "evidence": "explicit",
+      "labels": [
+       "narrowly oligophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "NO": "explicit"
+    },
+    "probs": {
+     "NO | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "NO": {
+      "e0": 0.937,
+      "keep": 0.063
+     },
+     "NO | QB": {}
+    }
+   },
+   "P": {
+    "term": "polyphagous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polyphagous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "P": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "header": "Larval diet",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "5:3": {
+  "cells": {
+   "Larva": {
+    "term": null,
+    "parts": [
+     "Larva"
+    ],
+    "options": {
+     "Larva": {
+      "evidence": "explicit",
+      "labels": [
+       "Larva"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Larva | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Pupa": {
+    "term": null,
+    "parts": [
+     "Pupa"
+    ],
+    "options": {
+     "Pupa": {
+      "evidence": "explicit",
+      "labels": [
+       "Pupa"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Pupa | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Egg": {
+    "term": null,
+    "parts": [
+     "Egg"
+    ],
+    "options": {
+     "Egg": {
+      "evidence": "explicit",
+      "labels": [
+       "Egg"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Egg | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "header": "Overw. stage",
+  "units": {
+   "from": "inventory run",
+   "was": "none",
+   "offered": 1
+  }
+ },
+ "5:4": {
+  "cells": {},
+  "header": "Voltinism",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "5:5": {
+  "cells": {},
+  "header": "HAT",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "5:6": {
+  "cells": {},
+  "header": "HAST",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ }
+}

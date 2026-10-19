@@ -1,0 +1,97 @@
+held-out tables: 181 GT-trait columns
+
+  direct name match (no judge):
+    gemma names                                  139/181 77%
+    head reader names                            139/181 77%
+    gemma + meaning v2                           160/181 88%
+    head + meaning v2   <- the score             160/181 88%
+
+  with the synonym judge (provisional):
+    gemma, 2-way judge (v2)                      171/181 94%
+    gemma, 3-way judge (v3)                      167/181 92%
+    head, 2-way judge (v2)                       169/181 93%
+    head, 3-way judge (v3)                       167/181 92%
+
+  decoys judged 'same trait' (false positives; 3-way / 2-way):
+    head   unrelated   3-way     0/9 0%   2-way     0/9 0%
+    head   value       3-way     0/8 0%   2-way    2/8 25%
+    head   initials    3-way     0/3 0%   2-way     0/3 0%
+    gemma  unrelated   3-way    0/14 0%   2-way    0/14 0%
+    gemma  value       3-way    0/12 0%   2-way   4/12 33%
+    gemma  initials    3-way     0/3 0%   2-way     0/3 0%
+
+  credited only by the judge (3-way 'same'):
+    head  Braschler2021 t8: 'Dry tolerant' ~ 'Drought Resistance'
+    gemma Braschler2021 t8: 'Dry tolerant' ~ 'Drought Resistance'
+    head  Braschler2021 t9: 'Dry tolerant' ~ 'Drought Resistance'
+    gemma Braschler2021 t9: 'Dry tolerant' ~ 'Drought Resistance'
+    head  Ibarra2021 t3: 'Mean length (mm) ± SD' ~ 'Body Length'
+    gemma Ibarra2021 t3: 'Mean length (mm) ± SD' ~ 'Body Length'
+    head  Ibarra2021 t4: 'Mean length (mm) ± SD' ~ 'Body Length'
+    gemma Ibarra2021 t4: 'Mean length (mm) ± SD' ~ 'Body Length'
+    head  Ibarra2021 t5: 'Mean length (mm) ± SD' ~ 'Body Length'
+    gemma Ibarra2021 t5: 'Mean length (mm) ± SD' ~ 'Body Length'
+    head  Rebrina2022 t2: 'Body Size (mm)' ~ 'Body Length'
+    gemma Rebrina2022 t2: 'Body Size (mm)' ~ 'Body Length'
+    head  Rebrina2022 t3: 'Body Size (mm)' ~ 'Body Length'
+    gemma Rebrina2022 t3: 'Body Size (mm)' ~ 'Body Length'
+
+  body values judged 'same trait' (false positives):
+
+  judge answers that changed from v2 (2-way -> 3-way):
+    gemma main      Torok2022 t8: 'Solitary' ~ 'Social habit': yes -> value
+    gemma value     Torok2022 t8: 'Solitary' ~ 'Social habit': yes -> value
+    gemma main      Torok2022 t8: 'herbivore' ~ 'Larvae feeding preference': yes -> value
+    gemma value     Torok2022 t8: 'herbivore' ~ 'Larvae feeding preference': yes -> value
+    head  main      Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    gemma main      Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    head  value     Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    gemma value     Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    head  main      Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+    gemma main      Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+    head  value     Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+    gemma value     Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+
+development tables: 8 GT-trait columns
+
+  direct name match (no judge):
+    gemma names                                       0/8 0%
+    head reader names                                 0/8 0%
+    gemma + meaning v2                                0/8 0%
+    head + meaning v2   <- the score                  0/8 0%
+
+  with the synonym judge (provisional):
+    gemma, 2-way judge (v2)                           0/8 0%
+    gemma, 3-way judge (v3)                          3/8 38%
+    head, 2-way judge (v2)                           2/8 25%
+    head, 3-way judge (v3)                           4/8 50%
+
+  decoys judged 'same trait' (false positives; 3-way / 2-way):
+    head   unrelated   3-way    2/8 25%   2-way     0/8 0%
+    head   value       3-way          -   2-way          -
+    head   initials    3-way          -   2-way          -
+    gemma  unrelated   3-way    2/8 25%   2-way     0/8 0%
+    gemma  value       3-way          -   2-way          -
+    gemma  initials    3-way          -   2-way          -
+
+  credited only by the judge (3-way 'same'):
+    head  Oliveira2022 t14: 'Traits ML M' ~ 'Mandible length ratio'
+    gemma Oliveira2022 t14: 'Traits (2)' ~ 'Mandible length ratio'
+    head  Oliveira2022 t14: 'Traits WL M' ~ 'Mesosoma length'
+    gemma Oliveira2022 t14: 'Traits (10)' ~ 'Pilosity'
+    head  Oliveira2022 t14: 'Traits LEG M' ~ 'Leg length ratio'
+    gemma Oliveira2022 t14: 'Traits (12)' ~ 'Leg length ratio'
+    head  Oliveira2022 t14: 'Traits AL M' ~ 'Antenna length ratio'
+
+  body values judged 'same trait' (false positives):
+
+  judge answers that changed from v2 (2-way -> 3-way):
+    head  unrelated Oliveira2022 t14: 'Traits CL M' ~ 'Mandible length ratio': no -> same
+    gemma unrelated Oliveira2022 t14: 'Traits' ~ 'Mandible length ratio': no -> same
+    head  main      Oliveira2022 t14: 'Traits ML M' ~ 'Mandible length ratio': no -> same
+    gemma main      Oliveira2022 t14: 'Traits (2)' ~ 'Mandible length ratio': no -> same
+    head  unrelated Oliveira2022 t14: 'Traits EL M' ~ 'Mandible length ratio': no -> same
+    gemma unrelated Oliveira2022 t14: 'Traits (8)' ~ 'Mandible length ratio': no -> same
+    gemma main      Oliveira2022 t14: 'Traits (10)' ~ 'Pilosity': no -> same
+    gemma main      Oliveira2022 t14: 'Traits (12)' ~ 'Leg length ratio': no -> same
+    head  main      Oliveira2022 t14: 'Traits AL M' ~ 'Antenna length ratio': no -> same

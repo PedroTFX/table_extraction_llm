@@ -1,0 +1,1664 @@
+{
+ "paper": "Harmon2013",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Despite the expansion of phylogenetic community analysis to understand community assembly, few studies have used these methods on mobile organisms and it has been suggested the local scales that are typically considered may be too small to represent the community as perceived by organisms with high mobility. Mobility is believed to allow species to mediate competitive interactions quickly and thus highly mobile species may appear randomly assembled in local communities. At larger scales, however, biogeographical processes could cause communities to be either phylogenetically clustered or even. Using phylogenetic community analysis we examined patterns of relatedness and trait similarity in communities of bumble bees (Bombus) across spatial scales comparing: local communities to regional pools, regional communities to continental pools and the continental community to a global species pool. Species composition and data on tongue lengths, a key foraging trait, were used to test patterns of relatedness and trait similarity across scales. Although expected to exhibit limiting similarity, local communities were clustered both phenotypically and phylogenetically. Larger spatial scales were also found to have more phylogenetic clustering but less trait clustering. While patterns of relatedness in mobile species have previously been suggested to exhibit less structure in local communities and to be less clustered than immobile species, we suggest that mobility may actually allow communities to have more similar species that can simply limit direct competition through mobility."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Citation: Harmon-Threatt AN, Ackerly DD (2013) Filtering across Spatial Scales: Phylogeny, Biogeography and Community Structure in Bumble Bees. PLoS ONE 8(3): e60446. doi:10.1371/journal.pone.0060446"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Using phylogenetic community methods we measured the trait conservatism of a focal trait and the phylogenetic and trait diversity of Bombus communities at local, regional and continental levels to assess patterns of species diversity across spatial scales. Tongue length was chosen as the focal trait because it has previously been linked to resource partitioning [14–16] and affects handling efficiency of flowers and nectar extraction [17–19]. Tongue length is also strongly correlated with wing length and other morphological characteristics that can affect foraging and competition [20,21]. The importance of resource partitioning and community assembly based on tongue length, however, has also been called into question. In European communities, tongue length was found to be more similar than expected when compared to randomly created communities [22–24] which suggests that communities may be filtered by environmental factors and tongue length may be locally clustered (i.e. more similar among co-occurring species)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "To determine levels of trait conservatism, we calculated Blomberg’s K value, a metric for describing the distribution of phenotypic variation across the tips of a phylogeny [33]. A value of K = 1 is expected for a trait whose distribution matches the expectations for simple random-walk Brownian motion evolution across a phylogeny. A value of K.1 suggests higher trait conservatism while K,1 shows lower trait conservatism (relative to a random-walk model). A tip-swap null model can be used to test for the presence of phylogenetic signal by comparing the"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Phylogenetic community analysis can identify patterns of relatedness in assemblages compared to null assemblages via several metrics. Here we use: 1) Mean Nearest Neighbor Distance (MNND) and 2) Mean Phylogenetic Distance (MPD) as defined and implemented in picante [32]. Using the phylogenetic tree, a pairwise phylogenetic distance matrix was created based on the branch lengths separating each pair of species. MNND calculates the phylogenetic distance between a species and the nearest related neighbor in an assemblage and provides analysis of phylogenetic clustering of closest relatives. MPD, in contrast, calculates the mean phylogenetic distance separating all assemblage members from each other and allows us to analyze the overall relatedness of the assemblage members."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "For comparison, mean null values of MNND and MPD are calculated from 999 randomly generated assemblages with species richness equal to each of the observed assemblages and species selected at random from the regional species pool of the observed community (’taxa labels’ null model in picante). The observed value is then ranked compared to the null values and the p-value is the rank/1000. From MNND and MPD corresponding z- score standardizations referred to as the Nearest Taxon Index (NTI) and Net Relatedness Index (NRI) using the mean and standard deviation are typically calculated to allow comparison across groups. Positive values of NTI and NRI indicate clustering of species in an assemblage compared to the nulls. Multiplying by negative one allows the indices to have more intuitive meaning with negative values indicating phylogenetic evenness and positive values indicating clustering. However, as highlighted by Cooper et al. [36], the null distribution of MPD is skewed, creating a bias towards negative NRI values (also see [37]). Thus, to determine trends across assemblages we use a Wilcoxon test to compare the p-values of the observed MNND/MPD to the expected median of the distribution for p-values, which is 0.5. Although NTI is not expected to have this bias, for consistency, we used the same Wilcoxon test on the MNND values. Using the W+ value calculated by the Wilcoxon test, we calculated Z scores and true p-values. To be consistent with the meaning of NRI and NTI, all Z-scores reported are multiplied by -1 with negative values suggesting evenness and positive values suggesting clustering. For all analyses, the species pool is limited to species for which we have trait data. This allows comparison between trait and phylogenetic data and was not found to significantly affect the results when Zvalues were compared using a Paired Wilcoxon Signed Rank Test (p = 0.677)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "similar metrics to test for filtering of traits in assemblages called: Mean Nearest Trait Distance (MNTD) and Mean Trait Distance (MTD). MNTD and MTD are equivalent to MNND and MPD, respectively. Using the tongue length data for Nearctic species we created a phenotypic distance matrix of all species and calculated MNTD and MTD using the same method as above. Just as with phylogenetic distance, observed scores that are larger than nulls indicate limiting trait similarity in an assemblage. Positive Z-scores of MNTD and MTD indicate trait filtering."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "To determine if tongue length was consistently spaced along a trait axis, potentially limiting competition within a site, we calculated the standard deviation of the successive neighbor distance when divided by the trait range within the assemblage (SDNN ) [38–40]. For each observed assemblage we sorted the tongue lengths of members from lowest to highest and then calculated the range of tongue lengths, the difference between successive tongue length values and the standard deviation of these differences. This standard deviation was divided by the range of tongue lengths in the assemblage. Assemblages with less than 3 species were removed because it is impossible to obtain a non-random spacing pattern for 2 species. We then tested whether the traits found in an assemblage had more even spacing of the trait (SDNNr) compared to 999 null assemblages of the same size drawn from the regional pool. We also tested whether the trait range in observed communities was smaller than the null assemblages which would suggest environmental filtering. P-values of trait metrics were compared using the Wilcoxon test as described above."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "ranged from 11 to 20 species (see Table 1). When tested for clustering of phylogenetic distance and nearest neighbor distance, local assemblages were significantly clustered for MPD (Wilcoxon signed-rank test of MPD: Z = 2.159, p = 0.031, Table 2, Figure 2)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "For the same 110 observed communities above, the trait analysis revealed that tongue length had significantly lower nearest trait distance (MNTD) and significantly more similar overall tongue lengths (MTD) in observed assemblages compared to nulls (Wilcoxon signed-rank test, MNTD: Z = 3.887, p.0.001 and MTD: Z = 4.933, p.0.001, respectively, Table 2, Figure 2). Additionally, tongue length was not evenly spaced in assemblages (SDNNr: Z = 0.952, p = 0.5341) and only five of 84 assemblages were more evenly spaced than nulls. The range of tongue lengths was significantly lower than expected by chance, indicating trait clustering in local communities (Z = 3.754, p,0.001)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Phylogenentic metrics and trait metrics were calculated at the regional and continental level to determine if increasing scale of analysis altered patterns of dispersion for bumble bee assemblages. Regional species pools contained species with lower nearest neighbor phylogenetic distances than the nulls drawn from the continental pool (Wilcoxon signed-rank test of MNND: Z = 2.477, p = 0.013, Table 2). Regional pools were not significantly different from nulls for MPD, MNTD, MTD or range. However, SDNNr was smaller in regional assemblages compared to the species pool suggesting evenness for the regional assemblages (Z = 2.59, p = 0.009)."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "When compared to the global species or trait pools, the Nearctic had highly significant phylogenetic relatedness for both MNND and MPD (MNND: Z = 4.387, p = 0.001, MPD: Z = 3.490, p = 0.001) but was not significant for any trait measure."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Under the competition-relatedness hypothesis [41], species that are closely related are expected to compete more strongly if traits mediating competition are highly conserved, thus causing local communities to be evenly dispersed to limit trait and phylogenetic similarity. Alternatively, for species that are highly mobile and can mediate competition quickly we might expect local communities to be randomly assembled. We found that local assemblages of Bombus had significant clustering of mean phylogenetic distance (MPD) but not of mean nearest neighbor distance which suggests that local assemblages are overall closely related but not simply made up of sister taxa. Traits in local assemblages were also clustered for mean nearest trait distance (MNTD), mean trait distance (MTD) and range which suggests that local assemblages have more similar tongue lengths than expected by chance. As tongue length has strong phylogenetic signal and is prone to convergence on both the global and Nearctic phylogeny, the trait"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Figure 1. Bi-plot of the phylogeny of species with trait values (n = 79) and the associated tongue length measured in ln(mm). Grey bars indicate species found in the Nearctic. Short faced (SF) and long faced (LF) sister clades are labeled to demonstrate the association with tongue length. Taxa labels are available in the Supplementary Table 1 with trait values. doi:10.1371/journal.pone.0060446.g001"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "clustering is consistent with phylogenetic clustering. This pattern arises despite high levels of variability in worker size in Bombus nests [42,43] and evidence that alternative methods for measuring may introduce additional error to the analysis [44]. The lack of even trait spacing (SDNNr) also constitutes a lack of evidence for niche partitioning in these local communities."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "![Image block](doc:51a9909/tier:advanced/page:6/block:2)"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Local assemblages (n = 110) represent co-occurring species and the species pool is the regional gridcell the assemblage is within. Regional assemblages (n = 45) are the species in each grid cell compared to a species pool of all Nearctic Species. The continental assemblage (n = 1) consists of all Nearctic species compared to all Bombus globally."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "![Image block](doc:51a9909/tier:advanced/page:7/block:2)"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Figure 3. Z-scores of observed communities when compared to randomly generated null communities at various spatial scales for: a) Mean Nearest Neighbor Distance (MNND) and Mean Pairwise Distance (MPD) and b) Mean Nearest Trait Distance (MNTD) and Mean Trait Distance (MTD) for trait similarity. The dotted line represents the null expectation if communities are randomly organized. Positive values suggest clustering while negative values suggest evenness."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Table S1 Tongue lengths of all Bombus species recorded during study and source. Note: A weighted average was used for species with multiple published measurements. Species are in the same order as in Figure 1 except Psythirus (shaded grey) which were excluded. Subgeneric classification is based on Williams et al. (2008). *indicates those in Nearctic region (DOCX)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "6. Kraft NJB, Cornwell WK, Webb CO, Ackerly DD (2007) Trait evolution, community assembly, and the phylogenetic structure of ecological communities. American Naturalist 170: 271–283. 7. Graham CH, Parra J, Tinoco BA, Stiles FG, McGuire J (2012) Untangling the influence of ecological and evolutionary factors on trait variation across hummingbird assemblages. Ecology 93: 99–111. 8. Hoiss B, Krauss J, Potts SG, Roberts S, Steffan-Dewenter I (2012) Altitude acts as an environmental filter on phylogenetic composition, traits and diversity in bee communities. Proceedings of the Royal Society B: Biological Sciences: 4447–4456. doi:10.1098/rspb.2012.1581. 9. Vamosi SM, Heard SB, Vamosi JC, Webb CO (2009) Emerging patterns in the comparative analysis of phylogenetic community structure. Molecular ecology 18: 572–592. doi:10.1111/j.1365-294X.2008.04001.x. 10. Cardillo M, Mace GM, Jones KE, Bielby J, Bininda-Emonds ORP, et al. (2005) Multiple causes of high extinction risk in large mammal species. Science 309: 1239–1241. doi:10.1126/science.1116030."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "11. Memmott J, Waser NM, Price M V. (2004) Tolerance of pollination networks to species extinctions. Proceedings of the Royal Society-Biological Sciences 271: 2605–2611. 12. Goulson D (2010) Bumblebees. 3rd ed. Oxford: Oxford University Press. p. 13. Hagen M, Wikelski M, Kissling WD (2011) Space use of bumblebees (Bombus spp.) revealed by radio-tracking. PloS one 6: e19997. doi:10.1371/journal.- pone.0019997. 14. Pyke GH, Inouye DW, Thomson JD (2012) Local geographic distributions of bumble bees near crested butte, Colorado: competition and community structure revisited. Environmental entomology 41: 1332–1349. doi:10.1603/ EN11284. 15. Inouye DW (1977) Resource partitioning in bumble bees. Journal of the New York Entomological Society 85: 253–254. 16. Hanski I (1982) Structure in bumblebee communities. Annales Zoologici Fennici 19: 319–326. 17. Harder LD (1983) Flower handling efficiency of bumble bees-Morphological aspects of probing time. Oecologia 57: 274–280. 18. Ranta E (1983) Foraging differences in bumblebees. Annales Entomologici Fennici 49: 17–22. 19. Ranta E, Lundberg H (1980) Resource partitioning in bumblebees-The significance of differences in proboscis length. Oikos 35: 298–302. 20. Medler J (1962) Morphometric studies on bumble bees. Annals of the Entomological Society of America 55: 212–218. 21. Morse DH (1977) Estimating proboscis length from wing length in bumblebees (Bombus spp.). Annals of the Entomological Society of America 70: 311–315. 22. Ranta E (1982) Species structure of North European bumblebee communities. Oikos 38: 202–209. 23. Pekkarinen A (1984) Resource partitioning and coexistence in bumblebees. Annales Entomologici Fennici 50: 97–107. 24. Ranta E (1984) Proboscis length and the coexistence of bumblebee species. Oikos 43: 189–196. 25. Hines HM (2008) Historical biogeography, divergence times, and diversification patterns of bumble bees (Hymenoptera: Apidae: Bombus). Systematic biology 57: 58–75. doi:10.1080/10635150801898912. 26. Harder LD (1985) Morphology as a predictor of flower choice by bumble bees. Ecology 66: 198–210. 27. Begon M, Harper J, Townsend C (1996) Ecology of Invididuals, Populations and Communities. Oxford, Uk: Blackwell Publishing. p. 28. Inouye DW (1978) Resource partitioning in bumble bees- Experimental studies of foraging behavior. Ecology 59: 672–678. 29. Morse D (1977) Resource partitioning in bumble bees: The role of behavioral factors. Science 197: 678–680. 30. Williams PH (1996) Mapping Variations in the Strength and Breadth of Biogeographic Transition Zones Using Species Turno... more. Proceedings of the Royal Society-Biological sciences 263: 579–588. 31. Kraft NJB, Comita LS, Chase JM, Sanders NJ, Swenson NG, et al. (2011) Disentangling the drivers of b diversity along latitudinal and elevational gradients. Science 333: 1755–1758. doi:10.1126/science.1208584. 32. Kembel SW, Cowan PD, Helmus MR, Cornwell WK, Morlon H, et al. (2010) Picante: R tools for integrating phylogenies and ecology. Bioinformatics 26: 1463–1464. doi:10.1093/bioinformatics/btq166. 33. Blomberg SP, Garland T, Ives AR (2003) Testing for phylogenetic signal in comparative data: Behavioral traits are more labile. Evolution 57: 717–745. 34. Ackerly DD (2009) Conservatism and diversification of plant functional traits: Evolutionary rates versus phylogenetic signal. Proceedings of the National"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Academy of Sciences of the United States of America 106 Suppl: 19699–19706. doi:10.1073/pnas.0901635106. 35. Cameron SA, Hines HM, Williams PH (2007) A comprehensive phylogeny of the bumble bees (Bombus). Biological Journal of the Linnean Society 91: 161–188. 36. Cooper N, Rodrı´guez J, Purvis A (2008) A common tendency for phylogenetic overdispersion in mammalian assemblages. Proceedings Biological sciences/The Royal Society 275: 2031–2037. doi:10.1098/rspb.2008.0420. 37. Kembel SW, Hubbell S (2006) The phylogenetic structure of a neotropical forest tree. Ecology 87: S86:S99. 38. Cornwell WK, Ackerly DD (2009) Community assembly and shifts in plant trait distributions across an environmental gradient in coastal California. Ecological Monographs 79: 109–126. 39. Kraft NJB, Valencia R, Ackerly DD (2008) Functional traits and niche-based tree community assembly in an Amazonian forest. Science 322: 580–582. doi:10.1126/science.1160662. 40. Stubbs W, Wilson B (2004) Evidence for limiting similarity in a sand dune community. Journal of Ecology 92: 557–567. 41. Cahill JF, Kembel SW, Lamb EG, Keddy PA (2008) Does phylogenetic relatedness influence the strength of competition among vascular plants? Perspectives in Plant Ecology, Evolution and Systematics 10: 41–50. doi:10.1016/j.ppees.2007.10.001. 42. Johnson RA (1986) Intraspecific resource partitioning in the bumble bees Bombus ternarius and B. pensylvanicus. Ecology 67: 133–138. 43. Peat J, Tucker J, Goulson D (2005) Does intraspecific size variation in bumblebees allow colonies to efficiently exploit different flowers? Ecological Entomology 30: 176–181. 44. Harder LD (1982) Measurement and estimation of functional proboscis lenth in bumble bees (Hymenoptera,Apidae). Canadian Journal of Zoology 60: 1073–1079. 45. Mayfield MM, Levine JM (2010)Opposing effects of competitive exclusion on the phylogenetic structure of communities. Ecology Letters 13:1085–1093. doi:10.1111/j.1461-0248.2010.01509.x. 46. Rezende EL, Lavabre JE, Guimarães PR, Jordano P, Bascompte J (2007) Non-random coextinctions in phylogenetically structured mutualistic networks. Nature 448: 925–928. doi:10.1038/nature05956. 47. Pellissier L, Pradervand J-N, Williams PH, Litsios G, Cherix D, et al. (n.d.) Phylogenetic relatedness and proboscis length contribute to structuring bumblebee communities in the extremes of abiotic and biotic gradients. Global Ecology and Biogeography: n/a–n/a. doi:10.1111/geb.12026. 48. Sargent RD, Ackerly DD (2008) Plant-pollinator interactions and the assembly of plant communities. Trends in Ecology & Evolution 23: 123–130. doi:10.1016/j.tree.2007.11.003. 49. Williams PH, Cameron SA, Hines HM, Cederberg B, Rasmont P (2008) A simplified subgeneric classification of the bumblebees (genus Bombus). Apidologie 39: 46–74. doi:10.1051/apido:2007052. 50. Steffan-Dewenter I, Schiele S (2008) Do resources or natural enemies drive bee population dynamics in fragmented habitats? Ecology 89: 1375–1387. 51. Potts SG, Vulliamy B, Roberts S, O’Toole C, Dafni A, et al. (2005) Role of nesting resources in organising diverse bee communities in a Mediterranean landscape. Ecological Entomology 30: 78–85. doi:10.1111/j.0307-6946. 2005.00662.x. 52. Goulson D, Lye GC, Darvill B (2008) Decline and conservation of bumble bees. Annual review of entomology 53: 191–208. doi:10.1146/annurev.ento.53. 103106.093454."
+  },
+  {
+   "id": "u23",
+   "kind": "table 1",
+   "text": "Species | Cluster\nardens | SF\npyrenaeus | SF\nbeaticola | SF\nfrigidus | SF\njonellus | SF\ncingulatus | SF\nmixtus | SF\npratorum | SF\nlemniscatus | SF"
+  },
+  {
+   "id": "u24",
+   "kind": "table 1",
+   "text": "hypnorum | SF\nperplexus | SF\nbifarius | SF\nternarius | SF\nhuntii | SF\nvosnesenskii | SF\nimpatiens | SF\nmelanopygus | SF\nlapponicus | SF\nsylvicola | SF"
+  },
+  {
+   "id": "u25",
+   "kind": "table 1",
+   "text": "bimaculatus | SF\nmonticola | SF\nvagans | SF\ncentralis | SF\nflavifrons | SF\nvandykei | SF\nsporadicus | SF\nignitus | SF\nterrestris | SF\nhypocrita | SF"
+  },
+  {
+   "id": "u26",
+   "kind": "table 1",
+   "text": "affinis | SF\nlucorum | SF\npatagiatus | SF\noccidentalis | SF\nterricola | SF\nbalteatus | SF\nrufocinctus | SF\nfraternus | SF\ngriseocolis | SF\nmorrisoni | SF"
+  },
+  {
+   "id": "u27",
+   "kind": "table 1",
+   "text": "wurflenii | SF\nkashmirensis | SF\nsichelli | SF\nlapidarius | SF\nrufofasciatus | SF\nfriseanus | SF\nruderarius | LF\nveteranus | LF\nsylvarum | LF\nhumilis | LF"
+  },
+  {
+   "id": "u28",
+   "kind": "table 1",
+   "text": "pascuorum | LF\nhonshuensis | LF\npseudobaicalensis | LF\nimpetuosus | LF\nmuscorum | LF\nfilchnerae | LF\nlaesus | LF\natratus | LF\nsonorus | LF\npensylvanicus | LF"
+  },
+  {
+   "id": "u29",
+   "kind": "table 1",
+   "text": "medius | LF\nbellicosus | LF\ncalifornicus | LF\nfervidus | LF\nconsobrinus | LF\nhortorum | LF\nruderatus | LF\nsupremus | LF\ndiversus | LF\nsubterraneus | LF"
+  },
+  {
+   "id": "u30",
+   "kind": "table 1",
+   "text": "distinguendus | LF\nappositus | LF\nborealis | LF\nhaemorrhoidalis | LF\nsoroeensis | LF\nconfusus | LF\nauricomus | LF\nnevadensis | LF\nconvexus | LF\nwaltoni | LF"
+  },
+  {
+   "id": "u31",
+   "kind": "table 3",
+   "text": "species | subgenus | ln(tongue length) | Author(s)\nardens | Pyrobombus | 2.152 | Inoue and Yokoyama (2006)\npyrenaeus | Pyrobombus | 1.808 | Goulson et al. (2008)\nbeaticola | Pyrobombus | 2.079 | Inoue and Yokoyama (2006)\n*frigidus** | Pyrobombus | 1.746 | Macior (1974)\n*jonellus** | Pyrobombus | 1.766 | Goulson et al (2005), Ranta (1983), Goulson et al. (2008)\ncingulatus | Pyrobombus | 1.826 | Pekkarinen (1979)\n*mixtus** | Pyrobombus | 1.627 | Macior (1974)\npratorum | Pyrobombus | 1.914 | Goulson et al. (2005); Ranta (1983); Goulson et al.(2008)\nlemniscatus | Pyrobombus | 1.834 | Williams et al.(2009)"
+  },
+  {
+   "id": "u32",
+   "kind": "table 3",
+   "text": "hypnorum | Pyrobombus | 1.887 | Ranta (1983); Pekkarinen (1979); Goulson et al. (2008)\n*perplexus** | Pyrobombus | 2.006 | Medler (1962)\n*bifarius** | Pyrobombus | 1.741 | Macior (1974); Medler (1962); Bowers (1985)\n*ternarius** | Pyrobombus | 1.779 | Medler (1962); Harder (1983)\n*huntii** | Pyrobombus | 1.931 | Medler (1962); Bowers (1985)\n*vosnesenskii** | Pyrobombus | 2.043 | Medler (1962)\n*impatiens** | Pyrobombus | 1.984 | Medler(1962)\n*melanopygus** | Pyrobombus | 1.87 | Macior (1974)\nlapponicus | Pyrobombus | 1.773 | Pekkarinen (1979)\n*sylvicola** | Pyrobombus | 1.756 | Macior (1974)"
+  },
+  {
+   "id": "u33",
+   "kind": "table 3",
+   "text": "*bimaculatus** | Pyrobombus | 2.112 | Medler(1962); Harder (1983)\nmonticola | Pyrobombus | 1.892 | Goulson et al (2005); Pekkarinen (1979)\n*vagans** | Pyrobombus | 2.081 | Medler(1962)\n*centralis** | Pyrobombus | 2.022 | Macior (1974); Bowers (1985)\n*flavifrons** | Pyrobombus | 2.059 | Inouye (1980); Macior (1974); Bowers (1985)\n*vandykei** | Pyrobombus | 2.092 | Brooks MS thesis (1999)\nsporadicus | Bombus | 1.997 | Pekkarinen (1979)\nignitus | Bombus | 2.23 | Inoue and Yokoyama (2006)\nterrestris | Bombus | 2.04 | Goulson et al. (2005); Corbet et al. (1995); Pekkarinen (1979); Goulson et al.(2008)\nhypocrita | Bombus | 2.079 | Inoue and Yokoyama (2006)"
+  },
+  {
+   "id": "u34",
+   "kind": "table 3",
+   "text": "*affinis** | Bombus | 1.924 | Medler (1962)\n*lucorum** | Bombus | 1.872 | Goulson et al. (2005); Pekkarinen (1979); Medler (1962); Goulson et al.(2008), Ranta (1983)\npatagiatus | Bombus | 1.91 | Williams et al. (2009)\n*occidentalis** | Bombus | 1.786 | Macior (1974); Medler (1962); Bowers (1985)\n*terricola** | Bombus | 1.869 | Medler (1962)\n*balteatus** | Alpinobombus | 2.221 | Medler (1962); Macior (1974)\n*rufocinctus** | Cullumanobombus | 1.882 | Medler (1962); Bowers (1985)\n*fraternus** | Cullumanobombus | 2.006 | Medler (1962)\n*griseocollis** | Cullumanobombus | 2.029 | Medler (1962)\n*morrisoni** | Cullumanobombus | 2.11 | Medler (1962)"
+  },
+  {
+   "id": "u35",
+   "kind": "table 3",
+   "text": "wurflenii | Alpigenobombus | 2.157 | Medler (1962); Goulson et al. (2008)\nkashmirensis | Alpigenobombus | 1.979 | Williams et al.(2009)\nsichelli | Melanobombus | 1.886 | Williams et al.(2009)\nlapidarius | Melanobombus | 1.948 | Goulson et al (2005); Ranta (1983); Corbet et al (1995); Goulson et al. (2008)\nrufofasciatus | Melanobombus | 2.124 | Williams et al.(2009)\nfriseanus | Melanobombus | 2.045 | Williams et al.(2009)\nruderarius | Thoracobombus | 2.14 | Goulson et al (2005)\nveteranus | Thoracobombus | 2.116 | Ranta (1983); Goulson et al. (2008)\nsylvarum | Thoracobombus | 2.094 | Goulson et al.(2005); Medler (1962); Goulson et al.(2008)\nhumilis | Thoracobombus | 2.073 | Medler (1962); Goulson (2008)"
+  },
+  {
+   "id": "u36",
+   "kind": "table 3",
+   "text": "pascuorum | Thoracobombus | 2.079 | Goulson et al (2005); Ranta (1983); Corbet et al (1995); Pekkarinen (1979); Goulson et al. (2008)\nhonshuensis | Thoracobombus | 2.256 | Inoue and Yokoyama (2006); Suzuki (2007)\npseudobaicalensis | Thoracobombus | 2.272 | Ishii et al (2008)\nimpetuosus | Thoracobombus | 2.084 | Williams et al.(2009)\nmuscorum | Thoracobombus | 2.064 | Goulson et al (2005); Pekkarinen (1979)\nfilchnerae | Thoracobombus | 2.117 | Williams et al.(2009)\nlaesus | Thoracobombus | 1.913 | Williams et al.(2009)\natratus | Thoracobombus | 2.128 | Arbulo et al.(2011)\n*sonorus** | Thoracobombus | 2.182 | Medler (1962)\n*pensylvanicus** | Thoracobombus | 2.269 | Medler (1962)"
+  },
+  {
+   "id": "u37",
+   "kind": "table 3",
+   "text": "*medius** | Thoracobombus | 2.083 | Medler (1962)\nbellicosus | Thoracobombus | 2.067 | Arbulo et al.(2011)\n*californicus** | Thoracobombus | 2.304 | Macior (1974)\n*fervidus** | Thoracobombus | 2.271 | Medler (1962)\nconsobrinus | Megabombus | 2.728 | Pekkarinen (1979); Suzuki et al.(2007)\nsylvestris | Psythirus | 1.887 | Goulson (2008)\nbohemicus | Psythirus | 1.946 | Goulson (2008)\nrupestris | Psythirus | 1.946 | Goulson (2008)\ncampestris | Psythirus | 1.932 | Goulson (2008)\n*insularis** | Psythirus | 2.102 | Macior (1974)"
+  },
+  {
+   "id": "u38",
+   "kind": "table 3",
+   "text": "hortorum | Megabombus | 2.518 | Goulson et al (2005); Ranta (1983); Corbet et al (1995); Pekkarinen (1979); Goulson et al. (2008)\nruderatus | Megabombus | 2.416 | Goulson et al (2005); Medler (1962); Goulson et al. (2008)\nsupremus | Megabombus | 2.43 | Williams et al.(2009)\ndiversus | Megabombus | 2.584 | Inoue and Yokoyama (2006); Suzuki (2007)\nsubterraneus | Subterraneobombus | 2.193 | Goulson et al (2005); Medler (1962)\ndistinguendus | Subterraneobombus | 2.263 | Goulson et al (2005); Medler (1962); Goulson et al.(2008)\n*appositus** | Subterraneobombus | 2.352 | Macior (1974); Medler (1962)\n*borealis** | Subterraneobombus | 2.153 | Grixti et al (2009)\nhaemorrhoidalis | Orientalibombus | 2.443 | Dayal and Rana(2007)\nsoroeensis | Kallobombus | 1.887 | Goulson et al (2005); Medler (1962); Goulson et al. (2008)"
+  },
+  {
+   "id": "u39",
+   "kind": "table 3",
+   "text": "confusus | Bombias | 2.125 | Medler (1962)\n*auricomus** | Bombias | 2.38 | Medler (1962)\n*nevadensis** | Bombias | 2.301 | Macior (1974); Medler (1962)\nconvexus | Mendacibombus | 2.292 | Williams et al.(2009)\nwaltoni | Mendacibombus | 2.275 | Williams et al.(2009)"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10"
+  ],
+  [
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19",
+   "u20"
+  ],
+  [
+   "u21"
+  ],
+  [
+   "u22"
+  ],
+  [
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32"
+  ],
+  [
+   "u33",
+   "u34",
+   "u35",
+   "u36"
+  ],
+  [
+   "u37",
+   "u38",
+   "u39"
+  ]
+ ],
+ "calls": 24,
+ "categories": [
+  {
+   "variable": "local",
+   "code": "local",
+   "term": "local communities",
+   "unit": "u0",
+   "model_label": "local",
+   "label": "local",
+   "explanation": "communities"
+  },
+  {
+   "variable": "regional",
+   "code": "regional",
+   "term": "regional communities",
+   "unit": "u0",
+   "model_label": "regional",
+   "label": "regional",
+   "explanation": "communities"
+  },
+  {
+   "variable": "continental",
+   "code": "continental",
+   "term": "continental pools",
+   "unit": "u0",
+   "model_label": "continental",
+   "label": "continental",
+   "explanation": "pools"
+  },
+  {
+   "variable": "global",
+   "code": "global",
+   "term": "global species pool",
+   "unit": "u0",
+   "model_label": "global",
+   "label": "global",
+   "explanation": "species pool"
+  },
+  {
+   "variable": "K",
+   "code": "1",
+   "term": "is expected for a trait whose distribution matches the expectations for simple random-walk Brownian motion evolution across a phylogeny",
+   "unit": "u3",
+   "model_label": "1",
+   "label": "is expected for a trait whose distribution matches the expectations for simple random-walk Brownian motion evolution across a phylogeny",
+   "explanation": ""
+  },
+  {
+   "variable": "Z-scores reported",
+   "code": "-1",
+   "term": "negative values suggesting evenness and positive values suggesting clustering",
+   "unit": "u5",
+   "model_label": "-1",
+   "label": "negative values suggesting evenness and positive values suggesting clustering",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "SDNN",
+   "term": "standard deviation of the successive neighbor distance when divided by the trait range within the assemblage",
+   "unit": "u7",
+   "model_label": "SDNN",
+   "label": "standard deviation of the successive neighbor distance when divided by the trait range within the assemblage",
+   "explanation": ""
+  },
+  {
+   "variable": "MNND",
+   "code": "MNND",
+   "term": "MNND",
+   "unit": "u11",
+   "model_label": "MNND",
+   "label": "MNND",
+   "explanation": ""
+  },
+  {
+   "variable": "MPD",
+   "code": "MPD",
+   "term": "MPD",
+   "unit": "u11",
+   "model_label": "MPD",
+   "label": "MPD",
+   "explanation": ""
+  },
+  {
+   "variable": "SF",
+   "code": "SF",
+   "term": "Short faced",
+   "unit": "u13",
+   "model_label": "Short faced",
+   "label": "Short faced",
+   "explanation": ""
+  },
+  {
+   "variable": "LF",
+   "code": "LF",
+   "term": "long faced",
+   "unit": "u13",
+   "model_label": "long faced",
+   "label": "long faced",
+   "explanation": ""
+  },
+  {
+   "variable": "Species",
+   "code": "SF",
+   "term": "SF",
+   "unit": "u23",
+   "model_label": "SF",
+   "label": "SF",
+   "explanation": ""
+  },
+  {
+   "variable": "Species",
+   "code": "LF",
+   "term": "LF",
+   "unit": "u27",
+   "model_label": "LF",
+   "label": "LF",
+   "explanation": ""
+  },
+  {
+   "variable": "Species",
+   "code": "Pyrobombus",
+   "term": "Pyrobombus",
+   "unit": "u31",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*bimaculatus**",
+   "term": "Pyrobombus",
+   "unit": "u33",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "monticola",
+   "term": "Pyrobombus",
+   "unit": "u33",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*vagans**",
+   "term": "Pyrobombus",
+   "unit": "u33",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*centralis**",
+   "term": "Pyrobombus",
+   "unit": "u33",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*flavifrons**",
+   "term": "Pyrobombus",
+   "unit": "u33",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*vandykei**",
+   "term": "Pyrobombus",
+   "unit": "u33",
+   "model_label": "Pyrobombus",
+   "label": "Pyrobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "sporadicus",
+   "term": "Bombus",
+   "unit": "u33",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "ignitus",
+   "term": "Bombus",
+   "unit": "u33",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "terrestris",
+   "term": "Bombus",
+   "unit": "u33",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "hypocrita",
+   "term": "Bombus",
+   "unit": "u33",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*affinis**",
+   "term": "Bombus",
+   "unit": "u34",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*lucorum**",
+   "term": "Bombus",
+   "unit": "u34",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "patagiatus",
+   "term": "Bombus",
+   "unit": "u34",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*occidentalis**",
+   "term": "Bombus",
+   "unit": "u34",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*terricola**",
+   "term": "Bombus",
+   "unit": "u34",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*balteatus**",
+   "term": "Alpinobombus",
+   "unit": "u34",
+   "model_label": "Alpinobombus",
+   "label": "Alpinobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*rufocinctus**",
+   "term": "Cullumanobombus",
+   "unit": "u34",
+   "model_label": "Cullumanobombus",
+   "label": "Cullumanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*fraternus**",
+   "term": "Cullumanobombus",
+   "unit": "u34",
+   "model_label": "Cullumanobombus",
+   "label": "Cullumanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*griseocollis**",
+   "term": "Cullumanobombus",
+   "unit": "u34",
+   "model_label": "Cullumanobombus",
+   "label": "Cullumanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*morrisoni**",
+   "term": "Cullumanobombus",
+   "unit": "u34",
+   "model_label": "Cullumanobombus",
+   "label": "Cullumanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "wurflenii",
+   "term": "Alpigenobombus",
+   "unit": "u35",
+   "model_label": "Alpigenobombus",
+   "label": "Alpigenobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "kashmirensis",
+   "term": "Alpigenobombus",
+   "unit": "u35",
+   "model_label": "Alpigenobombus",
+   "label": "Alpigenobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "sichelli",
+   "term": "Melanobombus",
+   "unit": "u35",
+   "model_label": "Melanobombus",
+   "label": "Melanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "lapidarius",
+   "term": "Melanobombus",
+   "unit": "u35",
+   "model_label": "Melanobombus",
+   "label": "Melanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "rufofasciatus",
+   "term": "Melanobombus",
+   "unit": "u35",
+   "model_label": "Melanobombus",
+   "label": "Melanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "friseanus",
+   "term": "Melanobombus",
+   "unit": "u35",
+   "model_label": "Melanobombus",
+   "label": "Melanobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "ruderarius",
+   "term": "Thoracobombus",
+   "unit": "u35",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "veteranus",
+   "term": "Thoracobombus",
+   "unit": "u35",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "sylvarum",
+   "term": "Thoracobombus",
+   "unit": "u35",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "humilis",
+   "term": "Thoracobombus",
+   "unit": "u35",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "pascuorum",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "honshuensis",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "pseudobaicalensis",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "impetuosus",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "muscorum",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "filchnerae",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "laesus",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "atratus",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*sonorus**",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "*pensylvanicus**",
+   "term": "Thoracobombus",
+   "unit": "u36",
+   "model_label": "Thoracobombus",
+   "label": "Thoracobombus",
+   "explanation": ""
+  },
+  {
+   "variable": "medius",
+   "code": "*medius**",
+   "term": "*medius**",
+   "unit": "u37",
+   "model_label": "*medius**",
+   "label": "medius",
+   "explanation": "* **"
+  },
+  {
+   "variable": "bellicosus",
+   "code": "bellicosus",
+   "term": "bellicosus",
+   "unit": "u37",
+   "model_label": "bellicosus",
+   "label": "bellicosus",
+   "explanation": ""
+  },
+  {
+   "variable": "californicus",
+   "code": "*californicus**",
+   "term": "*californicus**",
+   "unit": "u37",
+   "model_label": "*californicus**",
+   "label": "californicus",
+   "explanation": "* **"
+  },
+  {
+   "variable": "fervidus",
+   "code": "*fervidus**",
+   "term": "*fervidus**",
+   "unit": "u37",
+   "model_label": "*fervidus**",
+   "label": "fervidus",
+   "explanation": "* **"
+  },
+  {
+   "variable": "consobrinus",
+   "code": "consobrinus",
+   "term": "consobrinus",
+   "unit": "u37",
+   "model_label": "consobrinus",
+   "label": "consobrinus",
+   "explanation": ""
+  },
+  {
+   "variable": "sylvestris",
+   "code": "sylvestris",
+   "term": "sylvestris",
+   "unit": "u37",
+   "model_label": "sylvestris",
+   "label": "sylvestris",
+   "explanation": ""
+  },
+  {
+   "variable": "bohemicus",
+   "code": "bohemicus",
+   "term": "bohemicus",
+   "unit": "u37",
+   "model_label": "bohemicus",
+   "label": "bohemicus",
+   "explanation": ""
+  },
+  {
+   "variable": "rupestris",
+   "code": "rupestris",
+   "term": "rupestris",
+   "unit": "u37",
+   "model_label": "rupestris",
+   "label": "rupestris",
+   "explanation": ""
+  },
+  {
+   "variable": "campestris",
+   "code": "campestris",
+   "term": "campestris",
+   "unit": "u37",
+   "model_label": "campestris",
+   "label": "campestris",
+   "explanation": ""
+  },
+  {
+   "variable": "insularis",
+   "code": "*insularis**",
+   "term": "*insularis**",
+   "unit": "u37",
+   "model_label": "*insularis**",
+   "label": "insularis",
+   "explanation": "* **"
+  },
+  {
+   "variable": "hortorum",
+   "code": "hortorum",
+   "term": "hortorum",
+   "unit": "u38",
+   "model_label": "hortorum",
+   "label": "hortorum",
+   "explanation": ""
+  },
+  {
+   "variable": "ruderatus",
+   "code": "ruderatus",
+   "term": "ruderatus",
+   "unit": "u38",
+   "model_label": "ruderatus",
+   "label": "ruderatus",
+   "explanation": ""
+  },
+  {
+   "variable": "supremus",
+   "code": "supremus",
+   "term": "supremus",
+   "unit": "u38",
+   "model_label": "supremus",
+   "label": "supremus",
+   "explanation": ""
+  },
+  {
+   "variable": "diversus",
+   "code": "diversus",
+   "term": "diversus",
+   "unit": "u38",
+   "model_label": "diversus",
+   "label": "diversus",
+   "explanation": ""
+  },
+  {
+   "variable": "subterraneus",
+   "code": "subterraneus",
+   "term": "subterraneus",
+   "unit": "u38",
+   "model_label": "subterraneus",
+   "label": "subterraneus",
+   "explanation": ""
+  },
+  {
+   "variable": "distinguendus",
+   "code": "distinguendus",
+   "term": "distinguendus",
+   "unit": "u38",
+   "model_label": "distinguendus",
+   "label": "distinguendus",
+   "explanation": ""
+  },
+  {
+   "variable": "appositus",
+   "code": "*appositus**",
+   "term": "*appositus**",
+   "unit": "u38",
+   "model_label": "*appositus**",
+   "label": "appositus",
+   "explanation": "* **"
+  },
+  {
+   "variable": "borealis",
+   "code": "*borealis**",
+   "term": "*borealis**",
+   "unit": "u38",
+   "model_label": "*borealis**",
+   "label": "borealis",
+   "explanation": "* **"
+  },
+  {
+   "variable": "haemorrhoidalis",
+   "code": "haemorrhoidalis",
+   "term": "haemorrhoidalis",
+   "unit": "u38",
+   "model_label": "haemorrhoidalis",
+   "label": "haemorrhoidalis",
+   "explanation": ""
+  },
+  {
+   "variable": "soroeensis",
+   "code": "soroeensis",
+   "term": "soroeensis",
+   "unit": "u38",
+   "model_label": "soroeensis",
+   "label": "soroeensis",
+   "explanation": ""
+  },
+  {
+   "variable": "confusus",
+   "code": "confusus",
+   "term": "confusus",
+   "unit": "u39",
+   "model_label": "confusus",
+   "label": "confusus",
+   "explanation": ""
+  },
+  {
+   "variable": "auricomus",
+   "code": "*auricomus**",
+   "term": "*auricomus**",
+   "unit": "u39",
+   "model_label": "*auricomus**",
+   "label": "auricomus",
+   "explanation": "* **"
+  },
+  {
+   "variable": "nevadensis",
+   "code": "*nevadensis**",
+   "term": "*nevadensis**",
+   "unit": "u39",
+   "model_label": "*nevadensis**",
+   "label": "nevadensis",
+   "explanation": "* **"
+  },
+  {
+   "variable": "convexus",
+   "code": "convexus",
+   "term": "convexus",
+   "unit": "u39",
+   "model_label": "convexus",
+   "label": "convexus",
+   "explanation": ""
+  },
+  {
+   "variable": "waltoni",
+   "code": "waltoni",
+   "term": "waltoni",
+   "unit": "u39",
+   "model_label": "waltoni",
+   "label": "waltoni",
+   "explanation": ""
+  },
+  {
+   "variable": "tongue lengths",
+   "code": "",
+   "label": "more similar than expected",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "phenotypic variation",
+   "code": "",
+   "label": "trait conservatism",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "relatedness in assemblages",
+   "code": "",
+   "label": "Mean Nearest Neighbor Distance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "relatedness in assemblages",
+   "code": "",
+   "label": "Mean Phylogenetic Distance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "tongue length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "worker size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "trait similarity",
+   "code": "",
+   "label": "Mean Nearest Trait Distance (MNTD)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "trait similarity",
+   "code": "",
+   "label": "Mean Trait Distance (MTD)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "ardens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "pyrenaeus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "beaticola",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "frigidus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "jonellus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "cingulatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "mixtus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "pratorum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "lemniscatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "hypnorum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "perplexus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "bifarius",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "ternarius",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "huntii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "vosnesenskii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "impatiens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "melanopygus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "lapponicus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "sylvicola",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "bimaculatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "monticola",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "vagans",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "centralis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "flavifrons",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "vandykei",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "sporadicus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "ignitus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "terrestris",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "hypocrita",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "affinis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "lucorum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "patagiatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "occidentalis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "terricola",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "balteatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "rufocinctus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "fraternus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "griseocolis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "morrisoni",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "wurflenii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "kashmirensis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "sichelli",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "lapidarius",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "rufofasciatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "friseanus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "ruderarius",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "veteranus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "sylvarum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "humilis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "pascuorum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "honshuensis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "pseudobaicalensis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "impetuosus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "muscorum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "filchnerae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "laesus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "atratus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "sonorus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Species",
+   "code": "",
+   "label": "pensylvanicus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Thoracobombus",
+   "code": "",
+   "label": "*medius",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
+  },
+  {
+   "variable": "Thoracobombus",
+   "code": "",
+   "label": "*californicus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
+  },
+  {
+   "variable": "Thoracobombus",
+   "code": "",
+   "label": "*fervidus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
+  },
+  {
+   "variable": "Psythirus",
+   "code": "",
+   "label": "*insularis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
+  },
+  {
+   "variable": "Subterraneobombus",
+   "code": "",
+   "label": "*appositus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u38"
+  },
+  {
+   "variable": "Subterraneobombus",
+   "code": "",
+   "label": "*borealis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u38"
+  },
+  {
+   "variable": "Bombias",
+   "code": "",
+   "label": "*auricomus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u39"
+  },
+  {
+   "variable": "Bombias",
+   "code": "",
+   "label": "*nevadensis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u39"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "K",
+   "code": "1.1",
+   "term": "suggest higher trait conservatism",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "K",
+   "code": "1.1",
+   "term": "shows lower trait conservatism (relative to a random-walk model)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "p-value",
+   "code": "rank/1000",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "SDNNr",
+   "term": "None",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "MPD",
+   "term": "None",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "MNTD",
+   "term": "None",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "MTD",
+   "term": "None",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "MNND",
+   "term": "None",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "those in Nearctic region",
+   "code": "*",
+   "term": "indicates those in Nearctic region (DOCX)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Species structure of North European bumblebee communities",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Species structure of North European bumblebee communities",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "solitary",
+   "code": "(SO)",
+   "term": "solitary (SO)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "primitively eusocial",
+   "code": "(P_E)",
+   "term": "primitively eusocial (P_E)",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 269.0
+}

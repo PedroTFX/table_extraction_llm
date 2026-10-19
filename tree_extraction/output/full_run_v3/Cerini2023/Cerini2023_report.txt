@@ -1,0 +1,153 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Cerini2023\Cerini2023.xlsx  (1439 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Cerini2023\Cerini2023.csv  (21680 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (47)
+  'Aeshna': no ground-truth name denotes this organism
+  'Amphiagrion': no ground-truth name denotes this organism
+  'Anax': no ground-truth name denotes this organism
+  'Argia': no ground-truth name denotes this organism
+  'Arigomphus': no ground-truth name denotes this organism
+  'Basiaeschna': no ground-truth name denotes this organism
+  'Boyeria': no ground-truth name denotes this organism
+  'Calopteryx': no ground-truth name denotes this organism
+  'Celithemis': no ground-truth name denotes this organism
+  'Chromagrion': no ground-truth name denotes this organism
+  'Coenagrion': no ground-truth name denotes this organism
+  'Cordulegaster': no ground-truth name denotes this organism
+  'Cordulia': no ground-truth name denotes this organism
+  'Didymops': no ground-truth name denotes this organism
+  'Dorocordulia': no ground-truth name denotes this organism
+  'Dromogomphus': no ground-truth name denotes this organism
+  'Enallagma': no ground-truth name denotes this organism
+  'Epiaeschna': no ground-truth name denotes this organism
+  'Epitheca': no ground-truth name denotes this organism
+  'Erythemis': no ground-truth name denotes this organism
+  'Gomphaeschna': no ground-truth name denotes this organism
+  'Gomphus': no ground-truth name denotes this organism
+  'Hagenius': no ground-truth name denotes this organism
+  'Helocordulia': no ground-truth name denotes this organism
+  'Hetaerina': no ground-truth name denotes this organism
+  'Ischnura': no ground-truth name denotes this organism
+  'Ladona': no ground-truth name denotes this organism
+  'Lanthus': no ground-truth name denotes this organism
+  'Lestes': no ground-truth name denotes this organism
+  'Leucorrhinia': no ground-truth name denotes this organism
+  'Libellula': no ground-truth name denotes this organism
+  'Macromia': no ground-truth name denotes this organism
+  'Nannothemis': no ground-truth name denotes this organism
+  'Nehalennia': no ground-truth name denotes this organism
+  'Neurocordulia': no ground-truth name denotes this organism
+  'Ophiogomphus': no ground-truth name denotes this organism
+  'Pachydiplax': no ground-truth name denotes this organism
+  'Pantala': no ground-truth name denotes this organism
+  'Perithemis': no ground-truth name denotes this organism
+  'Plathemis': no ground-truth name denotes this organism
+  'Rhionaeschna': no ground-truth name denotes this organism
+  'Somatochlora': no ground-truth name denotes this organism
+  'Stylogomphus': no ground-truth name denotes this organism
+  'Stylurus': no ground-truth name denotes this organism
+  'Sympetrum': no ground-truth name denotes this organism
+  'Tramea': no ground-truth name denotes this organism
+  'Williamsonia': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 16 pair(s))
+  'Flight_season_end' -> 'flight season'
+  'aquatic_habitats' -> 'aquatic habitats'
+  'body_colors' -> 'body colors'
+  'body_colortypes' -> 'body colortypes'
+  'body_lengths' -> 'body lengths'
+  'body_patterns' -> 'body patterns'
+  'flight_mode' -> 'flight mode'
+  'habitat_openness' -> 'habitat openness'
+  'has_wing_pigment' -> 'has wing pigment'
+  'hindwing_lengths' -> 'hindwing lengths'
+  'mate_guarding' -> 'mate guarding'
+  'wing_pigment_color' -> 'wing pigment color'
+  'wing_pigment_extent_continuous' -> 'wing pigment extent continuous'
+  'wing_pigment_extent_discrete' -> 'wing pigment extent discrete'
+  'wing_pigment_placement' -> 'wing pigment placement'
+  'wing_pigment_symmetry' -> 'wing pigment symmetry'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1439
+  spurious, in scope  : 18680   <- GT covers this trait: real errors
+  spurious, out of scope: 3000   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           3000
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1439 MISSED ROWS MISSED
+  species not in prediction                1439
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (127 distinct), closest predicted name:
+     gt 'Calopteryx aequabilis'             ~0.80~  pred 'Calopteryx'   x17
+     gt 'Calopteryx maculata'               ~0.83~  pred 'Calopteryx'   x17
+     gt 'Celithemis elisa'                  ~0.88~  pred 'Celithemis'   x17
+     gt 'Celithemis eponina'                ~0.81~  pred 'Celithemis'   x17
+     gt 'Hetaerina americana'               ~0.92~  pred 'Hetaerina'   x17
+     gt 'Ladona julia'                      ~0.84~  pred 'Ladona'   x17
+  -> 6 species mismatches explain 102 of 1439 misses (7%) — scattered; no single cause
+
+  full miss detail saved -> Cerini2023_misses.csv, Cerini2023_misses_summary.json (1439 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  aquatic habitats                                119  1488   Δ+1369 (split?)
+  body colors                                     118  1488   Δ+1370 (split?)
+  body colortypes                                 118  1488   Δ+1370 (split?)
+  body lengths                                    120  1488   Δ+1368 (split?)
+  body patterns                                   119  1488   Δ+1369 (split?)
+  wing pigment color                               31   492   Δ+461 (split?)
+  wing pigment extent continuous                   28   454   Δ+426 (split?)
+  wing pigment extent discrete                     30   472   Δ+442 (split?)
+  flight mode                                     120  1488   Δ+1368 (split?)
+  flight season                                   126  1498   Δ+1372 (split?)
+  flight_season_start                               0  1498   PRED-ONLY
+  mate guarding                                    69   970   Δ+901 (split?)
+  habitat openness                                105  1360   Δ+1255 (split?)
+  has wing pigment                                120  1488   Δ+1368 (split?)
+  hindwing lengths                                120  1488   Δ+1368 (split?)
+  wing pigment placement                           30   472   Δ+442 (split?)
+  wing pigment symmetry                            30   482   Δ+452 (split?)
+  species                                           0  1502   PRED-ONLY
+  territoriality                                   36   576   Δ+540 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0 18680  1439   id+type+value
+             (3000 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0 18680  1439   basis+id+type+value+stat+sex+stage
+             (3000 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

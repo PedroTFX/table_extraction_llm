@@ -1,0 +1,3390 @@
+{
+ "paper": "Cappellari2022",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Received: 31 March 2021 / Accepted: 23 March 2022 / Published online: 5 April 2022"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "![Image block](doc:ba50c18/tier:advanced/page:2/block:8)"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "```mermaid graph LR subgraph Panel_a[\"(a)\"] direction TB A1[\"Honeybee\"] --> B1[\"Flowers (yellow, white, yellow flowers)\"] A2[\"Honeybee\"] --> B2[\"Flowers (white, purple flowers)\"] A3[\"Honeybee\"] --> B3[\"Flowers (blue, purple flowers)\"] end"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "subgraph Panel_b[\"(b)\"] direction TB B1 --> C1[\"Flowers (yellow, pink, purple flowers)\"] B2 --> C2[\"Flowers (blue, purple flowers)\"] B3 --> C3[\"Flowers (blue, purple flowers)\"] end"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Between May and September 2019, we observed plant–pollinator interactions in the selected sites. Sampling occurred between 9:00 and 17:00 only with air temperature > 15 °C, low wind, no rain, and cloud coverage"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Before performing the statistical analyses described below, we analysed potential collinearity in our data by computing the variance inflation factors (VIFs) using the R package car (John and Weisberg 2019). Plant species richness and standardized functional richness of plant community were strongly correlated (Pearson’s correlation = 0.876, p value 7 mm. Body size categories for wild pollinators were: smaller than the honey bee 15 mm. We categorized continuous trait variables due to the poor outcome of model residual diagnostics using traits as continuous variables. For taxonomic family, we aggregated families with less than ten collected individuals, i.e., Cimbicidae, Megalodontesidae, Melittidae, and Scoliidae. For each network, we calculated the CWM resource overlap between wild pollinators and the honeybee for each trait category, e.g., for body size, we had one value of CWM resource overlap for wild pollinators smaller than the honeybee, one for wild pollinators similar in size, and one for wild pollinators larger than the honeybee. Each global model included honeybee abundance, temperature, trait category, and the interaction between honeybee abundance and trait category as explanatory variables, and network identity as random factor. In all models described above, the continuous explanatory variables"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Within each set, models were ordered based on their second-order Akaike information criterion corrected for small sample size (AICc), with lower values indicating models that better fit the data. For each model, we calculated the ΔAICc, i.e., the difference between the model AICc and the lowest AICc of the entire set of models (with the best model having $\\Delta \\mathrm { A I C c = 0 ) }$ , and the Akaike model weight, which indicates the probability that the model is the best one. As a measure of goodness-of-fit, we estimated the $R ^ { 2 } .$ Lastly, we calculated the model-averaged partial coefficient for each explanatory variable using all models within each set and estimated the 95% confidence intervals around model-averaged partial coefficients. We presented in the tables all models with ΔAICc"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Fig. 2 Model estimates from the model-averaging procedure based on the set of models with all functional traits of both plants and pollinators (Model 1). Explanatory variables of the global model are honeybee abundance (Apis, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), trait similarity between wild pollinator community and the honeybee (TSim), and the interactions Apis × FRic, Apis × TSim, FRic × TSim, and Apis × FRic × TSim. All explanatory variables were scaled to mean 0 and standard deviation 1. Dots indicate the model estimated means, while error bars indicate the 95% confidence intervals for the expected values of the variables"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:ba50c18/tier:advanced/page:7/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "![Image block](doc:ba50c18/tier:advanced/page:8/block:3)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "As expected, the resource overlap increased with increasing trait similarity between wild pollinators and the honeybee. Species with similar functional traits usually exploit similar floral resources (Fontaine et al. 2006; Albrecht et al. 2012), so potential competition is expected to be higher for wild pollinators which share traits with the honeybee. First, proboscis length is one of the main constraints of resource selection, affecting whether a pollinator species can obtain nectar from specific flowers. Pollinators are usually more efficient when foraging on plants with flower corolla length matching their mouthpart length (Inouye 1980; Madjidian et al. 2008; Klumpers et al. 2019). For example, hoverflies with a short proboscis tend to prefer flowers that are flat or have a shallow corolla (Fontaine et al. 2006), while long-tongued bumblebees tend to forage on flowers with deep corolla (Balfour et al. 2013). While pollinator species with proboscis shorter or longer than the honeybee mostly foraged on plant species that were not visited by honeybees, pollinators with a similar proboscis visited the same plant species, therefore, increasing their potential competition. Second, body size determines how far pollinators are able to forage, with large pollinators usually having a longer foraging range compared to small species (Gathmann and Tscharntke 2002; Greenleaf et al. 2007). Here, we found that body size was a key functional trait, driving the resource overlap between wild pollinators and the honeybee. The latter increased with increasing body size, even if we expected a higher overlap for species similar in size to the honeybee. Potential competition with honeybees was, therefore, higher for large species, such as bumblebees. Third, we also observed an increase in resource overlap for centralplace foragers. These species are obliged to forage relatively near the nest, based on their foraging range, and are, therefore, unable to expand their foraging area, even when the local density of honeybees is high (Walther-Hellwig et al. 2006). Fourth, many Hymenoptera families such as Apidae, Halictidae, and Megachilidae showed a high level of resource overlap with honeybees. Surprisingly, both thick-headed flies (Diptera: Conopidae) and hoverflies (Diptera: Syrphidae), which we expected to mostly visit open disc flowers, also showed a relatively high resource overlap. While the potential negative effects of honeybees on wild pollinators have often focused on wild bees (e.g., Mallinger et al. 2017), other groups of insects might also be affected."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Funding Open access funding provided by Università degli Studi di Padova within the CRUI-CARE Agreement. The research was partly supported by the University of Padua STARS Consolidator Grant (STARS-CoG-2017, BICE project) and partly by the European Union’s Horizon 2020 329 project “Safeguard” (Grant agreement ID: 101003476) funded under Societal Challenges - Climate 330 action, Environment, Resource Efficiency and Raw Materials."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Table S3 Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (C central-place forager, NC non-central-place forager)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Table S4 Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (C central-place foragers, NC non-central-place foragers)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Table S5 Summary of the six global models. Abbreviated explanatory variables are honeybee abundance (Apis, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), proboscis length category (Prob), body size category (Body), type of foraging range (For), and taxonomic family (Fam). The continuous explanatory variables were scaled to mean 0 and standard deviation 1 to make slopes comparable"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Table S6 Results of the multi-model inference analysis testing the effects on CWM resource overlap of honeybee abundance (Apis, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), trait similarity between wild pollinator community and the honeybee (TSim), and the following interactions: Apis × FRic, Apis × TSim, FRic × TSim, and Apis × FRic × TSim. The table reports the estimates for each variable, the ΔAICc, the R 2 , and the Akaike weight (w) for each model with ΔAICc 2 , and the Akaike weight (w) for each model with ΔAICc"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Table S8 Results of the multi-model inference analysis for single traits of pollinators, testing the effects on CWM resource overlap between wild pollinators and the honeybee of honeybee abundance (Apis, ln-transformed), temperature (Temp), and a proboscis length (Prob) and the interaction between honeybee abundance and proboscis length (Apis × Prob), b body size (Body) and the interaction between honeybee abundance and body size (Apis × Body), c type of foraging range (For) and the interaction between honeybee abundance and type of foraging range (Apis × For), and d taxonomic family (Fam) and the interaction between honeybee abundance and taxonomic family (Apis × Fam). The table reports the estimate for each continuous variable or the presence of each categorical variable in the model, the ΔAICc, the R 2 , and the Akaike weight (w) for each model of the set with ΔAICc < 6. All the continuous explanatory variables were scaled to mean 0 and standard deviation 1"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "![Image block](doc:2ccefef/tier:flash/page:3/block:4)"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "![Image block](doc:2ccefef/tier:flash/page:3/block:6)"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Fig. S3 Model estimates from the model-averaging procedure based on the set of models with all functional traits of both plants and pollinators. Explanatory variables of the global model are honeybee abundance (Apis, ln-transformed), temperature (Temp), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), and the following interactions: Apis × FDis, Apis × TSim, FDis × TSim, and Apis × FDis × TSim. All explanatory variables were scaled to mean 0 and standard deviation 1. Dots indicate the model estimated means, while error bars indicate the 95% confidence intervals for the expected value of the variable. The variable effect is supported when the confidence intervals do not include zero"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "![Image block](doc:2ccefef/tier:flash/page:3/block:8)"
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "Amiet F, Müller A, Neumeyer R (2014) Fauna Helvetica 4, Apidae 2 – Colletes, Dufourea, Hylaeus, Nomia, Nomioides, Rhophitoides, Rophites, Sphecodes, Systropha. Centre Suisse de Cartographie de la Faune & Schweizerische Entomologische Gesellschaft, Neuchâtel"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Amiet F, Herrmann M, Müller A, et al (2001) Fauna Helvetica 6, Apidae 3 – Halictus, Lasioglossum. Centre Suisse de Cartographie de la Faune & Schweizerische Entomologische Gesellschaft, Neuchâtel"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "Amiet F, Herrmann M, Müller A, et al (2004) Fauna Helvetica 9, Apidae 4 – Anthidium, Chelostoma, Coelioxys, Dioxys, Heriades, Lithurgus, Megachile, Osmia, Stelis. Centre Suisse de Cartographie de la Faune & Schweizerische Entomologische Gesellschaft, Neuchâtel"
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "Cariveau DP, Nayak GK, Bartomeus I, et al (2016) The allometry of bee proboscis length and its uses in ecology. PLoS ONE 11:1-13"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Ebmer AW (1969) Die bienen des genus Halictus Latr. s.l. im Grosraum von Linz (Hymenoptera Apidae). Systematik, biogeographie, ökologie und biologie mit berücksichtingung aller bisher aus Mitteleuropa bekannten Arten. Teile I-III. Naturkundliches Jahrbuch der Stadt Linz 15:133-183"
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "von Hagen E (1994) Hummeln: bestimmen, ansiedeln, vermehren, schützen. Naturbuch Vlg., Augsburg"
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "Schmid-Egger C, Scheuchl E (1997) Illustrierte bestimmungstabellen der wilbienen Deutschlands un Österreichs, band 3 – Andrenidae. Norbert Präbst Satz & Druck"
+  },
+  {
+   "id": "u28",
+   "kind": "table 0",
+   "text": "Category | Estimate | Lower Bound | Upper Bound\nApis | ~-0.09 | ~-0.21 | ~0.03\nTemp | ~0.01 | ~-0.13 | ~0.15\nFRic | 0.00 | ~-0.14 | ~0.14\nTSim | ~0.17 | ~0.04 | ~0.29\nApis \\(\\times\\) FRic | -0.20 | ~-0.34 | ~-0.06\nApis \\(\\times\\) TSim | ~-0.06 | ~-0.21 | ~0.10\nFRic \\(\\times\\) TSim | ~0.05 | ~-0.10 | ~0.20\nApis \\(\\times\\) FRic \\(\\times\\) TSim | ~-0.02 | ~-0.24 | ~0.20"
+  },
+  {
+   "id": "u29",
+   "kind": "table 2",
+   "text": "Plant species | Flower color | Flower type | Corolla (mm)\nAchillea clavennae | white | flower head | 6\nAchillea millefolium | white | flower head | 4.7\nAconitum degenii | blue | bell/funnel/lip | 26\nAconitum lycoctonum | yellow/orange | bell/funnel/lip | 25.5\nAconitum napellus | blue | bell/funnel/lip | 11.5\nAdenostyles alpina | pink/purple | stalk disc | 13\nAegopodium podagraria | white | open disc | 1\nAgrimonia eupatoria | yellow/orange | pollen | 0.05\nAllium carinatum | pink/purple | hidden disc | 5.5"
+  },
+  {
+   "id": "u30",
+   "kind": "table 2",
+   "text": "Allium schoenoprasum | pink/purple | hidden disc | 12\nAngelica sylvestris | white | open disc | 1\nAnthriscus sylvestris | white | open disc | 0.4\nAnthyllis vulneraria | yellow/orange | flag | 12\nAristolochia clematitis | yellow/orange | bell/funnel/lip | 30\nArnica montana | yellow/orange | flower head | 17.5\nAsperula cristata | pink/purple | bell/funnel/lip | 3\nAster alpinus | pink/purple | flower head | 8\nAstragalus glycyphyllos | yellow/orange | flag | 7\nAstrantia major | white | flower head | 6"
+  },
+  {
+   "id": "u31",
+   "kind": "table 2",
+   "text": "Bellis perennis | white | flower head | 4\nBetonica alopecurus | yellow/orange | bell/funnel/lip | 10\nBuddleja davidii | pink/purple | stalk disc | 10\nBuphthalmum salicifolium | yellow/orange | flower head | 8\nCalluna vulgaris | pink/purple | bell/funnel/lip | 5\nCalystegia sepium | white | bell/funnel/lip | 33.3\nCampanula barbata | pink/purple | bell/funnel/lip | 16\nCampanula carnica | pink/purple | bell/funnel/lip | 11\nCampanula glomerata | pink/purple | bell/funnel/lip | 13\nCampanula patula | pink/purple | bell/funnel/lip | 11"
+  },
+  {
+   "id": "u32",
+   "kind": "table 2",
+   "text": "Campanula persicifolia | pink/purple | bell/funnel/lip | 18\nCampanula rapunculoides | pink/purple | bell/funnel/lip | 17\nCampanula rapunculus | pink/purple | bell/funnel/lip | 15\nCampanula rotundifolia | pink/purple | bell/funnel/lip | 15\nCampanula scheuchzeri | pink/purple | bell/funnel/lip | 15\nCampanula spicata | pink/purple | bell/funnel/lip | 11\nCampanula trachelium | pink/purple | bell/funnel/lip | 26.5\nCarduus defloratus | pink/purple | flower head | 17\nCarduus nutans | pink/purple | flower head | 12\nCarduus personata | pink/purple | flower head | 22"
+  },
+  {
+   "id": "u33",
+   "kind": "table 2",
+   "text": "Carum carvi | white | open disc | 0.3\nCentaurea jacea | pink/purple | flower head | 20\nCentaurea nervosa | pink/purple | flower head | 23.5\nCentaurea nigrescens | pink/purple | flower head | 12.2\nCentaurea scabiosa | pink/purple | flower head | 13.5\nCentaurea stoebe | pink/purple | flower head | 10\nCentaurea triumfetti | blue | flower head | 12\nCerastium arvense | white | hidden disc | 4\nCerastium holosteoides | white | hidden disc | 2\nChaerophyllum hirsutum | white | open disc | 1"
+  },
+  {
+   "id": "u34",
+   "kind": "table 2",
+   "text": "Cichorium intybus | blue | flower head | 0.05\nCirsium arvense | pink/purple | flower head | 16\nCirsium erisithales | yellow/orange | flower head | 23.3\nCirsium heterophyllum | pink/purple | flower head | 33\nCirsium montanum | pink/purple | flower head | 7\nCirsium oleraceum | yellow/orange | flower head | 23\nClematis vitalba | white | pollen | 0.05\nClinopodium acinos | pink/purple | bell/funnel/lip | 9\nClinopodium alpinum | pink/purple | bell/funnel/lip | 9\nClinopodium nepeta | pink/purple | bell/funnel/lip | 9.5"
+  },
+  {
+   "id": "u35",
+   "kind": "table 2",
+   "text": "Clinopodium vulgare | pink/purple | bell/funnel/lip | 11\nConvolvulus arvensis | white | bell/funnel/lip | 16.3\nConyza canadensis | white | flower head | 5\nCrepis aurea | yellow/orange | flower head | 13.5\nCrepis biennis | yellow/orange | flower head | 8.5\nCrepis foetida | yellow/orange | flower head | 6\nCrepis paludosa | yellow/orange | flower head | 11\nCrepis vesicaria | yellow/orange | flower head | 8\nCruciata laevipes | yellow/orange | open disc | 0.05\nDaucus carota | white | open disc | 0.05"
+  },
+  {
+   "id": "u36",
+   "kind": "table 2",
+   "text": "Delosperma sp. | pink/purple | flower head | 5\nDianthus superbus | pink/purple | stalk disc | 30\nDiplotaxis tenuifolia | yellow/orange | hidden disc | 4\nDoronicum austriacum | yellow/orange | flower head | 4.5\nDorycnium pentaphyllum | white | flag | 4\nDryas octopetala | white | hidden disc | 0.05\nEchium vulgare | pink/purple | bell/funnel/lip | 9.3\nEpilobium angustifolium | pink/purple | hidden disc | 0.05\nEpilobium dodonaei | pink/purple | hidden disc | 0.05\nEpilobium hirsutum | pink/purple | hidden disc | 0.05"
+  },
+  {
+   "id": "u37",
+   "kind": "table 2",
+   "text": "Epilobium montanum | pink/purple | hidden disc | 7\nErigeron annuus | white | flower head | 1\nEupatorium cannabinum | pink/purple | flower head | 5\nEuphrasia rostkoviana | white | bell/funnel/lip | 10\nEuphrasia salisburgensis | white | bell/funnel/lip | 6\nEuphrasia sp. | white | bell/funnel/lip | 6.5\nFilipendula vulgaris | white | pollen | 0.05\nFragaria vesca | white | hidden disc | 0.05\nGaleopsis pubescens | pink/purple | bell/funnel/lip | 17\nGaleopsis speciosa | yellow/orange | bell/funnel/lip | 22"
+  },
+  {
+   "id": "u38",
+   "kind": "table 2",
+   "text": "Galeopsis tetrahit | pink/purple | bell/funnel/lip | 13\nGalium lucidum | white | open disc | 0.5\nGalium mollugo | white | open disc | 1\nGalium saxatile | white | open disc | 1\nGalium verum | yellow/orange | open disc | 0.3\nGenista tinctoria | yellow/orange | flag | 7.7\nGentiana cruciata | blue | bell/funnel/lip | 14.5\nGentianella rhaetica | pink/purple | bell/funnel/lip | 17\nGeranium columbinum | pink/purple | hidden disc | 0.05\nGeranium molle | pink/purple | hidden disc | 0.05"
+  },
+  {
+   "id": "u39",
+   "kind": "table 2",
+   "text": "Geranium phaeum | pink/purple | hidden disc | 0.05\nGeranium pyrenaicum | pink/purple | hidden disc | 0.05\nGeranium robertianum | pink/purple | hidden disc | 6.5\nGeranium sylvaticum | pink/purple | hidden disc | 0.05\nGeum rivale | red | bell/funnel/lip | 7\nGymandenia conopsea | pink/purple | bell/funnel/lip | 6\nGypsophila repens | white | bell/funnel/lip | 7\nHedysarum hedysaroides | pink/purple | flag | 8\nHelianthemum nummularium | yellow/orange | pollen | 0.05\nHeracleum sphondylium | white | open disc | 0.1"
+  },
+  {
+   "id": "u40",
+   "kind": "table 2",
+   "text": "Hieracium bifidum | yellow/orange | flower head | 13.3\nHieracium glaucum | yellow/orange | flower head | 12\nHieracium picroides | yellow/orange | flower head | 11\nHieracium pilosella | yellow/orange | flower head | 11\nHieracium sp. | yellow/orange | flower head | 8.5\nHieracium valdepilosum | yellow/orange | flower head | 20\nHorminum pyrenaicum | pink/purple | bell/funnel/lip | 14\nHypericum maculatum | yellow/orange | pollen | 0.05\nHypericum perforatum | yellow/orange | pollen | 0.05\nHypochaeris uniflora | yellow/orange | flower head | 22"
+  },
+  {
+   "id": "u41",
+   "kind": "table 2",
+   "text": "Impatiens glandulifera | pink/purple | bell/funnel/lip | 23\nInula salicina | yellow/orange | flower head | 7.5\nInula sp. | yellow/orange | flower head | 9\nJacobaea alpina | yellow/orange | flower head | 7.5\nKnautia arvensis | blue | flower head | 7.3\nKnautia drymeia | pink/purple | flower head | 7\nKnautia longifolia | pink/purple | flower head | 9\nLamium album | white | bell/funnel/lip | 9.5\nLamium galeobdolon | yellow/orange | bell/funnel/lip | 9\nLamium orvala | pink/purple | bell/funnel/lip | 14"
+  },
+  {
+   "id": "u42",
+   "kind": "table 2",
+   "text": "Lathyrus pratensis | yellow/orange | flag | 13.7\nLathyrus sylvestris | pink/purple | flag | 12.5\nLeontodon hispidus | yellow/orange | flower head | 11.7\nLeucanthemum vulgare | white | flower head | 4.8\nLigustrum lucidum | white | bell/funnel/lip | 3\nLigustrum vulgare | white | bell/funnel/lip | 3\nLilium bulbiferum | yellow/orange | bell/funnel/lip | 0.05\nLilium martagon | pink/purple | bell/funnel/lip | 10\nLinaria alpina | pink/purple | bell/funnel/lip | 8\nLoncomelos brevistylus | white | hidden disc | 0.05"
+  },
+  {
+   "id": "u43",
+   "kind": "table 2",
+   "text": "Lotus corniculatus | yellow/orange | flag | 5.5\nLupinus polyphyllus | blue | flag | 9\nLychnis flos cuculi | pink/purple | stalk disc | 10.5\nLysimachia arvensis | yellow/orange | pollen | 0.05\nLysimachia vulgaris | yellow/orange | pollen | 0.05\nLythrum salicaria | pink/purple | bell/funnel/lip | 7\nMalva sylvestris | pink/purple | hidden disc | 0.05\nMatricaria chamomilla | white | flower head | 7\nMedicago falcata | yellow/orange | flag | 5\nMedicago lupulina | yellow/orange | flag | 2.5"
+  },
+  {
+   "id": "u44",
+   "kind": "table 2",
+   "text": "Medicago sativa | pink/purple | flag | 6\nMelampyrum italicum | yellow/orange | bell/funnel/lip | 18\nMelampyrum sp. | yellow/orange | bell/funnel/lip | 10\nMelilotus albus | white | flag | 3.3\nMentha arvensis | pink/purple | bell/funnel/lip | 4\nMentha longifolia | pink/purple | bell/funnel/lip | 3\nMinuartia recurva | white | hidden disc | 0.05\nMyosotis sp. | blue | stalk disc | 2.3\nMyosoton aquaticum | white | hidden disc | 0.05\nOenothera biennis | yellow/orange | stalk disc | 17"
+  },
+  {
+   "id": "u45",
+   "kind": "table 2",
+   "text": "Onobrychis montana | pink/purple | flag | 11.7\nOnobrychis viciifolia | pink/purple | flag | 11.5\nOnonis spinosa | pink/purple | flag | 10\nOriganum vulgare | pink/purple | bell/funnel/lip | 6\nOrnithogalum pyrenaicum | white | hidden disc | 0.05\nOrnithogalum umbellatum | white | hidden disc | 1\nOxalis articulata | pink/purple | hidden disc | 3\nOxytropis montana | pink/purple | flag | 11.5\nPapaver rhoeas | red | pollen | 0.05\nParnassia palustris | white | open disc | 0.05"
+  },
+  {
+   "id": "u46",
+   "kind": "table 2",
+   "text": "Pastinaca sativa | yellow/orange | open disc | 1\nPedicularis comosa | yellow/orange | bell/funnel/lip | 17\nPedicularis palustris | pink/purple | bell/funnel/lip | 14\nPersicaria bistorta | pink/purple | bell/funnel/lip | 2\nPetrorhagia saxifraga | pink/purple | bell/funnel/lip | 4.7\nPhyteuma betonicifolium | blue | NA | 4.8\nPhyteuma orbiculare | blue | NA | 4\nPicris hieracioides | yellow/orange | flower head | 12.3\nPimpinella major | white | open disc | 1.3\nPimpinella saxifraga | white | open disc | 0.05"
+  },
+  {
+   "id": "u47",
+   "kind": "table 2",
+   "text": "Plantago lanceolata | white | NA | 0.05\nPlantago media | white | NA | 0.05\nPolygonum viviparum | white | bell/funnel/lip | 2\nPotentilla argentea | yellow/orange | hidden disc | 0.05\nPotentilla erecta | yellow/orange | hidden disc | 0.05\nPotentilla nitida | pink/purple | hidden disc | 0.05\nPotentilla reptans | yellow/orange | hidden disc | 0.05\nPrenanthes purpurea | pink/purple | flower head | 11.5\nPrunella grandiflora | pink/purple | bell/funnel/lip | 13\nPrunella laciniata | white | bell/funnel/lip | 6"
+  },
+  {
+   "id": "u48",
+   "kind": "table 2",
+   "text": "Prunella vulgaris | pink/purple | bell/funnel/lip | 8.4\nPyrola minor | white | bell/funnel/lip | 0.05\nRanunculus acris | yellow/orange | hidden disc | 0.05\nRanunculus platanifolius | white | hidden disc | 0.05\nRanunculus polyanthemophyllus | yellow/orange | hidden disc | 0.05\nRanunculus repens | yellow/orange | hidden disc | 0.05\nRhinanthus alectorolophus | yellow/orange | bell/funnel/lip | 22.5\nRhinanthus freynii | yellow/orange | bell/funnel/lip | 18\nRhinanthus minor | yellow/orange | bell/funnel/lip | 16\nRhododendron hirsutum | pink/purple | bell/funnel/lip | 10.5"
+  },
+  {
+   "id": "u49",
+   "kind": "table 2",
+   "text": "Rorippa sylvestris | yellow/orange | hidden disc | 2\nRosa canina | pink/purple | pollen | 0.05\nRubus sp. | white | hidden disc | 0.05\nSalvia glutinosa | yellow/orange | bell/funnel/lip | 20\nSalvia pratensis | blue | bell/funnel/lip | 9\nSaponaria officinalis | pink/purple | stalk disc | 23\nSaxifraga rotundifolia | white | open disc | 0.05\nScabiosa columbaria | pink/purple | flower head | 5.5\nScabiosa gramuntia | pink/purple | flower head | 6.5\nScabiosa lucida | pink/purple | flower head | 6"
+  },
+  {
+   "id": "u50",
+   "kind": "table 2",
+   "text": "Scabiosa triandra | pink/purple | flower head | 6.4\nScrophularia nodosa | red | bell/funnel/lip | 6\nSecurigera varia | pink/purple | flag | 11\nSedum acre | yellow/orange | hidden disc | 1.75\nSedum album | white | hidden disc | 1.5\nSenecio inaequidens | yellow/orange | flower head | 8\nSenecio nemorensis | yellow/orange | flower head | 13\nSenecio squalidus | yellow/orange | flower head | 10.3\nSherardia arvensis | pink/purple | bell/funnel/lip | 2.5\nSilene alba | white | stalk disc | 16"
+  },
+  {
+   "id": "u51",
+   "kind": "table 2",
+   "text": "Silene dioica | pink/purple | stalk disc | 15.3\nSilene nutans | white | stalk disc | 13\nSilene saxifraga | white | stalk disc | 5.5\nSilene vulgaris | white | stalk disc | 18\nSolanum tuberosum | white | pollen | 2\nSolidago gigantea | yellow/orange | flower head | 6\nSolidago virgaurea | yellow/orange | flower head | 10.7\nStachys alpina | pink/purple | bell/funnel/lip | 10\nStachys officinalis | pink/purple | bell/funnel/lip | 9\nStachys recta | white | bell/funnel/lip | 8"
+  },
+  {
+   "id": "u52",
+   "kind": "table 2",
+   "text": "Stachys sylvatica | pink/purple | bell/funnel/lip | 11\nStellaria graminea | white | hidden disc | 0.05\nStellaria nemorum | white | hidden disc | 2.5\nSymphytum officinale | pink/purple | bell/funnel/lip | 15\nTanacetum corymbosum | white | flower head | 8\nTanacetum vulgare | yellow/orange | flower head | 5\nTaraxacum officinale | yellow/orange | flower head | 8\nTeucrium chamaedrys | pink/purple | bell/funnel/lip | 8\nThalictrum aquilegifolium | pink/purple | brush | 0.05\nThalictrum lucidum | yellow/orange | brush | 0.05"
+  },
+  {
+   "id": "u53",
+   "kind": "table 2",
+   "text": "Thymus sp. | pink/purple | bell/funnel/lip | 3.5\nTorilis arvensis | white | open disc | 0.1\nTragopogon pratensis | yellow/orange | flower head | 12.5\nTrifolium badium | yellow/orange | flag | 5.5\nTrifolium medium | pink/purple | flag | 13\nTrifolium montanum | white | flag | 8.5\nTrifolium pratense | pink/purple | flag | 11.3\nTrifolium repens | white | flag | 4\nValeriana montana | pink/purple | bell/funnel/lip | 5\nValeriana officinalis | pink/purple | bell/funnel/lip | 3.7"
+  },
+  {
+   "id": "u54",
+   "kind": "table 2",
+   "text": "Verbascum alpinum | yellow/orange | bell/funnel/lip | 8\nVerbascum chaixii | yellow/orange | bell/funnel/lip | 5\nVerbascum densiflorum | yellow/orange | bell/funnel/lip | 10\nVerbascum lychnitis | yellow/orange | bell/funnel/lip | 10\nVerbascum nigrum | yellow/orange | bell/funnel/lip | 3\nVerbena officinalis | pink/purple | bell/funnel/lip | 5.3\nVeronica anagallis-aquatica | pink/purple | bell/funnel/lip | 0.05\nVeronica chamaedrys | blue | bell/funnel/lip | 0.05\nVeronica persica | blue | bell/funnel/lip | 0.05\nVicia cracca | pink/purple | flag | 7.6"
+  },
+  {
+   "id": "u55",
+   "kind": "table 2",
+   "text": "Vicia sepium | pink/purple | flag | 10\nVicia sylvatica | white | flag | 13\nVicia villosa | pink/purple | flag | 11"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9"
+  ],
+  [
+   "u10"
+  ],
+  [
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24"
+  ],
+  [
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31"
+  ],
+  [
+   "u32",
+   "u33",
+   "u34",
+   "u35",
+   "u36"
+  ],
+  [
+   "u37",
+   "u38",
+   "u39",
+   "u40",
+   "u41"
+  ],
+  [
+   "u42",
+   "u43",
+   "u44",
+   "u45",
+   "u46"
+  ],
+  [
+   "u47",
+   "u48",
+   "u49",
+   "u50",
+   "u51"
+  ],
+  [
+   "u52",
+   "u53",
+   "u54",
+   "u55"
+  ]
+ ],
+ "calls": 30,
+ "categories": [
+  {
+   "variable": "Body size categories for wild pollinators",
+   "code": "smaller than the honey bee",
+   "term": "smaller than the honey bee",
+   "unit": "u5",
+   "model_label": "smaller than the honey bee",
+   "label": "smaller than the honey bee",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size categories for wild pollinators",
+   "code": "similar in size",
+   "term": "similar in size",
+   "unit": "u5",
+   "model_label": "similar in size",
+   "label": "similar in size",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size categories for wild pollinators",
+   "code": "larger than the honeybee",
+   "term": "larger than the honeybee",
+   "unit": "u5",
+   "model_label": "larger than the honeybee",
+   "label": "larger than the honeybee",
+   "explanation": ""
+  },
+  {
+   "variable": "type of foraging range",
+   "code": "C",
+   "term": "central-place forager",
+   "unit": "u12",
+   "model_label": "central-place forager",
+   "label": "central-place forager",
+   "explanation": ""
+  },
+  {
+   "variable": "type of foraging range",
+   "code": "NC",
+   "term": "non-central-place forager",
+   "unit": "u12",
+   "model_label": "non-central-place forager",
+   "label": "non-central-place forager",
+   "explanation": ""
+  },
+  {
+   "variable": "number of collected specimens",
+   "code": "N",
+   "term": "number of collected specimens",
+   "unit": "u13",
+   "model_label": "number of collected specimens",
+   "label": "number of collected specimens",
+   "explanation": ""
+  },
+  {
+   "variable": "honeybee abundance",
+   "code": "Apis",
+   "term": "honeybee abundance",
+   "unit": "u14",
+   "model_label": "honeybee abundance",
+   "label": "honeybee abundance",
+   "explanation": ""
+  },
+  {
+   "variable": "temperature",
+   "code": "Temp",
+   "term": "temperature",
+   "unit": "u14",
+   "model_label": "temperature",
+   "label": "temperature",
+   "explanation": ""
+  },
+  {
+   "variable": "standardized functional richness of plant community",
+   "code": "FRic",
+   "term": "standardized functional richness of plant community",
+   "unit": "u14",
+   "model_label": "standardized functional richness of plant community",
+   "label": "standardized functional richness of plant community",
+   "explanation": ""
+  },
+  {
+   "variable": "functional dispersion of plant community",
+   "code": "FDis",
+   "term": "functional dispersion of plant community",
+   "unit": "u14",
+   "model_label": "functional dispersion of plant community",
+   "label": "functional dispersion of plant community",
+   "explanation": ""
+  },
+  {
+   "variable": "trait similarity between wild pollinator community and the honeybee",
+   "code": "TSim",
+   "term": "trait similarity between wild pollinator community and the honeybee",
+   "unit": "u14",
+   "model_label": "trait similarity between wild pollinator community and the honeybee",
+   "label": "trait similarity between wild pollinator community and the honeybee",
+   "explanation": ""
+  },
+  {
+   "variable": "proboscis length category",
+   "code": "Prob",
+   "term": "proboscis length category",
+   "unit": "u14",
+   "model_label": "proboscis length category",
+   "label": "proboscis length category",
+   "explanation": ""
+  },
+  {
+   "variable": "body size category",
+   "code": "Body",
+   "term": "body size category",
+   "unit": "u14",
+   "model_label": "body size category",
+   "label": "body size category",
+   "explanation": ""
+  },
+  {
+   "variable": "type of foraging range",
+   "code": "For",
+   "term": "type of foraging range",
+   "unit": "u14",
+   "model_label": "type of foraging range",
+   "label": "type of foraging range",
+   "explanation": ""
+  },
+  {
+   "variable": "taxonomic family",
+   "code": "Fam",
+   "term": "taxonomic family",
+   "unit": "u14",
+   "model_label": "taxonomic family",
+   "label": "taxonomic family",
+   "explanation": ""
+  },
+  {
+   "variable": "honeybee abundance",
+   "code": "Apis",
+   "term": "Apis",
+   "unit": "u16",
+   "model_label": "Apis",
+   "label": "Apis",
+   "explanation": ""
+  },
+  {
+   "variable": "body size",
+   "code": "Body",
+   "term": "Body",
+   "unit": "u16",
+   "model_label": "Body",
+   "label": "Body",
+   "explanation": ""
+  },
+  {
+   "variable": "type of foraging range",
+   "code": "For",
+   "term": "For",
+   "unit": "u16",
+   "model_label": "For",
+   "label": "For",
+   "explanation": ""
+  },
+  {
+   "variable": "taxonomic family",
+   "code": "Fam",
+   "term": "Fam",
+   "unit": "u16",
+   "model_label": "Fam",
+   "label": "Fam",
+   "explanation": ""
+  },
+  {
+   "variable": "temperature",
+   "code": "Temp",
+   "term": "Temp",
+   "unit": "u16",
+   "model_label": "Temp",
+   "label": "Temp",
+   "explanation": ""
+  },
+  {
+   "variable": "functional dispersion of plant community",
+   "code": "FDis",
+   "term": "FDis",
+   "unit": "u19",
+   "model_label": "FDis",
+   "label": "FDis",
+   "explanation": ""
+  },
+  {
+   "variable": "trait similarity between wild pollinator community and the honeybee",
+   "code": "TSim",
+   "term": "TSim",
+   "unit": "u19",
+   "model_label": "TSim",
+   "label": "TSim",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Apis",
+   "term": "Apis",
+   "unit": "u28",
+   "model_label": "Apis",
+   "label": "Apis",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Temp",
+   "term": "Temp",
+   "unit": "u28",
+   "model_label": "Temp",
+   "label": "Temp",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "FRic",
+   "term": "FRic",
+   "unit": "u28",
+   "model_label": "FRic",
+   "label": "FRic",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "TSim",
+   "term": "TSim",
+   "unit": "u28",
+   "model_label": "TSim",
+   "label": "TSim",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula persicifolia",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula persicifolia",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula rapunculoides",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula rapunculoides",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula rapunculus",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula rapunculus",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula rotundifolia",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula rotundifolia",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula scheuchzeri",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula scheuchzeri",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula spicata",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula spicata",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula trachelium",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanula trachelium",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Carduus defloratus",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Carduus defloratus",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Carduus nutans",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Carduus nutans",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Carduus personata",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Carduus personata",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Carum carvi",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Carum carvi",
+   "code": "open disc",
+   "term": "open disc",
+   "unit": "u33",
+   "model_label": "open disc",
+   "label": "open disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea jacea",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea jacea",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea nervosa",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea nervosa",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea nigrescens",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea nigrescens",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea scabiosa",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea scabiosa",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea stoebe",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea stoebe",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea triumfetti",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u33",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Centaurea triumfetti",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cerastium arvense",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Cerastium arvense",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Cerastium holosteoides",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Cerastium holosteoides",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Chaerophyllum hirsutum",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Chaerophyllum hirsutum",
+   "code": "open disc",
+   "term": "open disc",
+   "unit": "u33",
+   "model_label": "open disc",
+   "label": "open disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Cichorium intybus",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u33",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Cichorium intybus",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium arvense",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium arvense",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium erisithales",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium erisithales",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium heterophyllum",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium heterophyllum",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium montanum",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium montanum",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium oleraceum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Cirsium oleraceum",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Clematis vitalba",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Clematis vitalba",
+   "code": "pollen",
+   "term": "pollen",
+   "unit": "u34",
+   "model_label": "pollen",
+   "label": "pollen",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium acinos",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium acinos",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium alpinum",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium alpinum",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium nepeta",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium nepeta",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium vulgare",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Clinopodium vulgare",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Convolvulus arvensis",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Convolvulus arvensis",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Conyza canadensis",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Conyza canadensis",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis aurea",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis aurea",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis biennis",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis biennis",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis foetida",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis foetida",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis paludosa",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis paludosa",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis vesicaria",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Crepis vesicaria",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Cruciata laevipes",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Cruciata laevipes",
+   "code": "open disc",
+   "term": "open disc",
+   "unit": "u33",
+   "model_label": "open disc",
+   "label": "open disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Daucus carota",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Daucus carota",
+   "code": "open disc",
+   "term": "open disc",
+   "unit": "u33",
+   "model_label": "open disc",
+   "label": "open disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Delosperma sp.",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Delosperma sp.",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Dianthus superbus",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Dianthus superbus",
+   "code": "stalk disc",
+   "term": "stalk disc",
+   "unit": "u36",
+   "model_label": "stalk disc",
+   "label": "stalk disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Diplotaxis tenuifolia",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Diplotaxis tenuifolia",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Doronicum austriacum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u34",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Doronicum austriacum",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u32",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Dorycnium pentaphyllum",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Dorycnium pentaphyllum",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u36",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Dryas octopetala",
+   "code": "white",
+   "term": "white",
+   "unit": "u33",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Dryas octopetala",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Echium vulgare",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Echium vulgare",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u32",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium angustifolium",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium angustifolium",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium dodonaei",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium dodonaei",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium hirsutum",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u32",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium hirsutum",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u33",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Epilobium montanum",
+   "code": "7",
+   "term": "7",
+   "unit": "u37",
+   "model_label": "7",
+   "label": "7",
+   "explanation": ""
+  },
+  {
+   "variable": "Erigeron annuus",
+   "code": "1",
+   "term": "1",
+   "unit": "u37",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Eupatorium cannabinum",
+   "code": "5",
+   "term": "5",
+   "unit": "u37",
+   "model_label": "5",
+   "label": "5",
+   "explanation": ""
+  },
+  {
+   "variable": "Euphrasia rostkoviana",
+   "code": "10",
+   "term": "10",
+   "unit": "u37",
+   "model_label": "10",
+   "label": "10",
+   "explanation": ""
+  },
+  {
+   "variable": "Euphrasia salisburgensis",
+   "code": "6",
+   "term": "6",
+   "unit": "u37",
+   "model_label": "6",
+   "label": "6",
+   "explanation": ""
+  },
+  {
+   "variable": "Euphrasia sp.",
+   "code": "6.5",
+   "term": "6.5",
+   "unit": "u37",
+   "model_label": "6.5",
+   "label": "6.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Filipendula vulgaris",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Fragaria vesca",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Galeopsis pubescens",
+   "code": "17",
+   "term": "17",
+   "unit": "u37",
+   "model_label": "17",
+   "label": "17",
+   "explanation": ""
+  },
+  {
+   "variable": "Galeopsis speciosa",
+   "code": "22",
+   "term": "22",
+   "unit": "u37",
+   "model_label": "22",
+   "label": "22",
+   "explanation": ""
+  },
+  {
+   "variable": "Galeopsis tetrahit",
+   "code": "13",
+   "term": "13",
+   "unit": "u38",
+   "model_label": "13",
+   "label": "13",
+   "explanation": ""
+  },
+  {
+   "variable": "Galium lucidum",
+   "code": "0.5",
+   "term": "0.5",
+   "unit": "u38",
+   "model_label": "0.5",
+   "label": "0.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Galium mollugo",
+   "code": "1",
+   "term": "1",
+   "unit": "u37",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Galium saxatile",
+   "code": "1",
+   "term": "1",
+   "unit": "u37",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Galium verum",
+   "code": "0.3",
+   "term": "0.3",
+   "unit": "u38",
+   "model_label": "0.3",
+   "label": "0.3",
+   "explanation": ""
+  },
+  {
+   "variable": "Genista tinctoria",
+   "code": "7.7",
+   "term": "7.7",
+   "unit": "u38",
+   "model_label": "7.7",
+   "label": "7.7",
+   "explanation": ""
+  },
+  {
+   "variable": "Gentiana cruciata",
+   "code": "14.5",
+   "term": "14.5",
+   "unit": "u38",
+   "model_label": "14.5",
+   "label": "14.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Gentianella rhaetica",
+   "code": "17",
+   "term": "17",
+   "unit": "u37",
+   "model_label": "17",
+   "label": "17",
+   "explanation": ""
+  },
+  {
+   "variable": "Geranium columbinum",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Geranium molle",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Geranium phaeum",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Geranium pyrenaicum",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Geranium robertianum",
+   "code": "6.5",
+   "term": "6.5",
+   "unit": "u37",
+   "model_label": "6.5",
+   "label": "6.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Geranium sylvaticum",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Geum rivale",
+   "code": "7",
+   "term": "7",
+   "unit": "u37",
+   "model_label": "7",
+   "label": "7",
+   "explanation": ""
+  },
+  {
+   "variable": "Gymandenia conopsea",
+   "code": "6",
+   "term": "6",
+   "unit": "u37",
+   "model_label": "6",
+   "label": "6",
+   "explanation": ""
+  },
+  {
+   "variable": "Gypsophila repens",
+   "code": "7",
+   "term": "7",
+   "unit": "u37",
+   "model_label": "7",
+   "label": "7",
+   "explanation": ""
+  },
+  {
+   "variable": "Hedysarum hedysaroides",
+   "code": "8",
+   "term": "8",
+   "unit": "u39",
+   "model_label": "8",
+   "label": "8",
+   "explanation": ""
+  },
+  {
+   "variable": "Helianthemum nummularium",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Heracleum sphondylium",
+   "code": "0.1",
+   "term": "0.1",
+   "unit": "u39",
+   "model_label": "0.1",
+   "label": "0.1",
+   "explanation": ""
+  },
+  {
+   "variable": "Hieracium bifidum",
+   "code": "13.3",
+   "term": "13.3",
+   "unit": "u40",
+   "model_label": "13.3",
+   "label": "13.3",
+   "explanation": ""
+  },
+  {
+   "variable": "Hieracium glaucum",
+   "code": "12",
+   "term": "12",
+   "unit": "u40",
+   "model_label": "12",
+   "label": "12",
+   "explanation": ""
+  },
+  {
+   "variable": "Hieracium picroides",
+   "code": "11",
+   "term": "11",
+   "unit": "u40",
+   "model_label": "11",
+   "label": "11",
+   "explanation": ""
+  },
+  {
+   "variable": "Hieracium pilosella",
+   "code": "11",
+   "term": "11",
+   "unit": "u40",
+   "model_label": "11",
+   "label": "11",
+   "explanation": ""
+  },
+  {
+   "variable": "Hieracium sp.",
+   "code": "8.5",
+   "term": "8.5",
+   "unit": "u40",
+   "model_label": "8.5",
+   "label": "8.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Hieracium valdepilosum",
+   "code": "20",
+   "term": "20",
+   "unit": "u40",
+   "model_label": "20",
+   "label": "20",
+   "explanation": ""
+  },
+  {
+   "variable": "Horminum pyrenaicum",
+   "code": "14",
+   "term": "14",
+   "unit": "u38",
+   "model_label": "14",
+   "label": "14",
+   "explanation": ""
+  },
+  {
+   "variable": "Hypericum maculatum",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Hypericum perforatum",
+   "code": "0.05",
+   "term": "0.05",
+   "unit": "u37",
+   "model_label": "0.05",
+   "label": "0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Hypochaeris uniflora",
+   "code": "22",
+   "term": "22",
+   "unit": "u37",
+   "model_label": "22",
+   "label": "22",
+   "explanation": ""
+  },
+  {
+   "variable": "Impatiens glandulifera",
+   "code": "23",
+   "term": "23",
+   "unit": "u41",
+   "model_label": "23",
+   "label": "23",
+   "explanation": ""
+  },
+  {
+   "variable": "Inula salicina",
+   "code": "7.5",
+   "term": "7.5",
+   "unit": "u41",
+   "model_label": "7.5",
+   "label": "7.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Inula sp.",
+   "code": "9",
+   "term": "9",
+   "unit": "u41",
+   "model_label": "9",
+   "label": "9",
+   "explanation": ""
+  },
+  {
+   "variable": "Jacobaea alpina",
+   "code": "7.5",
+   "term": "7.5",
+   "unit": "u41",
+   "model_label": "7.5",
+   "label": "7.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Knautia arvensis",
+   "code": "7.3",
+   "term": "7.3",
+   "unit": "u41",
+   "model_label": "7.3",
+   "label": "7.3",
+   "explanation": ""
+  },
+  {
+   "variable": "Knautia drymeia",
+   "code": "7",
+   "term": "7",
+   "unit": "u37",
+   "model_label": "7",
+   "label": "7",
+   "explanation": ""
+  },
+  {
+   "variable": "Knautia longifolia",
+   "code": "9",
+   "term": "9",
+   "unit": "u41",
+   "model_label": "9",
+   "label": "9",
+   "explanation": ""
+  },
+  {
+   "variable": "Lamium album",
+   "code": "9.5",
+   "term": "9.5",
+   "unit": "u41",
+   "model_label": "9.5",
+   "label": "9.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Lamium galeobdolon",
+   "code": "9",
+   "term": "9",
+   "unit": "u41",
+   "model_label": "9",
+   "label": "9",
+   "explanation": ""
+  },
+  {
+   "variable": "Lamium orvala",
+   "code": "14",
+   "term": "14",
+   "unit": "u38",
+   "model_label": "14",
+   "label": "14",
+   "explanation": ""
+  },
+  {
+   "variable": "Lathyrus pratensis",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Lathyrus sylvestris",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Leontodon hispidus",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Leucanthemum vulgare",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Ligustrum lucidum",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Ligustrum vulgare",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Lilium bulbiferum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Lilium martagon",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Linaria alpina",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Loncomelos brevistylus",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Lotus corniculatus",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Lupinus polyphyllus",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u43",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Lychnis flos cuculi",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Lysimachia arvensis",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Lysimachia vulgaris",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Lythrum salicaria",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Malva sylvestris",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Matricaria chamomilla",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Medicago falcata",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Medicago lupulina",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Medicago sativa",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Melampyrum italicum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Melampyrum sp.",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Melilotus albus",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Mentha arvensis",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Mentha longifolia",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Minuartia recurva",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Myosotis sp.",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u43",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Myosoton aquaticum",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Oenothera biennis",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Onobrychis montana",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Onobrychis viciifolia",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Ononis spinosa",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Origanum vulgare",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Ornithogalum pyrenaicum",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Ornithogalum umbellatum",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Oxalis articulata",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Oxytropis montana",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Papaver rhoeas",
+   "code": "red",
+   "term": "red",
+   "unit": "u45",
+   "model_label": "red",
+   "label": "red",
+   "explanation": ""
+  },
+  {
+   "variable": "Parnassia palustris",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Pastinaca sativa",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Pedicularis comosa",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Pedicularis palustris",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Persicaria bistorta",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Petrorhagia saxifraga",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u42",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Phyteuma betonicifolium",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u43",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Phyteuma orbiculare",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u43",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Picris hieracioides",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u42",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Pimpinella major",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Pimpinella saxifraga",
+   "code": "white",
+   "term": "white",
+   "unit": "u42",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "white",
+   "code": "white",
+   "term": "white",
+   "unit": "u47",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "bell/funnel/lip",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u47",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "yellow/orange",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u47",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "hidden disc",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u47",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "pink/purple",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u47",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "flower head",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u47",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "red",
+   "code": "red",
+   "term": "red",
+   "unit": "u50",
+   "model_label": "red",
+   "label": "red",
+   "explanation": ""
+  },
+  {
+   "variable": "flag",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u50",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "stalk disc",
+   "code": "stalk disc",
+   "term": "stalk disc",
+   "unit": "u49",
+   "model_label": "stalk disc",
+   "label": "stalk disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Stachys sylvatica",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Stachys sylvatica",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Stellaria graminea",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Stellaria graminea",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u52",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Stellaria nemorum",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Stellaria nemorum",
+   "code": "hidden disc",
+   "term": "hidden disc",
+   "unit": "u52",
+   "model_label": "hidden disc",
+   "label": "hidden disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Symphytum officinale",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Symphytum officinale",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Tanacetum corymbosum",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Tanacetum corymbosum",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u52",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Tanacetum vulgare",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Tanacetum vulgare",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u52",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Taraxacum officinale",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Taraxacum officinale",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u52",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Teucrium chamaedrys",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Teucrium chamaedrys",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Thalictrum aquilegifolium",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Thalictrum aquilegifolium",
+   "code": "brush",
+   "term": "brush",
+   "unit": "u52",
+   "model_label": "brush",
+   "label": "brush",
+   "explanation": ""
+  },
+  {
+   "variable": "Thalictrum lucidum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Thalictrum lucidum",
+   "code": "brush",
+   "term": "brush",
+   "unit": "u52",
+   "model_label": "brush",
+   "label": "brush",
+   "explanation": ""
+  },
+  {
+   "variable": "Thymus sp.",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Thymus sp.",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Torilis arvensis",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Torilis arvensis",
+   "code": "open disc",
+   "term": "open disc",
+   "unit": "u53",
+   "model_label": "open disc",
+   "label": "open disc",
+   "explanation": ""
+  },
+  {
+   "variable": "Tragopogon pratensis",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Tragopogon pratensis",
+   "code": "flower head",
+   "term": "flower head",
+   "unit": "u52",
+   "model_label": "flower head",
+   "label": "flower head",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium badium",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium badium",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium medium",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium medium",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium montanum",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium montanum",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium pratense",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium pratense",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium repens",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Trifolium repens",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Valeriana montana",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Valeriana montana",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Valeriana officinalis",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Valeriana officinalis",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum alpinum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum alpinum",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum chaixii",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum chaixii",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum densiflorum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum densiflorum",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum lychnitis",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum lychnitis",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum nigrum",
+   "code": "yellow/orange",
+   "term": "yellow/orange",
+   "unit": "u52",
+   "model_label": "yellow/orange",
+   "label": "yellow/orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbascum nigrum",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbena officinalis",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Verbena officinalis",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Veronica anagallis-aquatica",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Veronica anagallis-aquatica",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Veronica chamaedrys",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u54",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Veronica chamaedrys",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Veronica persica",
+   "code": "blue",
+   "term": "blue",
+   "unit": "u54",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": ""
+  },
+  {
+   "variable": "Veronica persica",
+   "code": "bell/funnel/lip",
+   "term": "bell/funnel/lip",
+   "unit": "u52",
+   "model_label": "bell/funnel/lip",
+   "label": "bell/funnel/lip",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia cracca",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia cracca",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia sepium",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia sepium",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia sylvatica",
+   "code": "white",
+   "term": "white",
+   "unit": "u52",
+   "model_label": "white",
+   "label": "white",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia sylvatica",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia villosa",
+   "code": "pink/purple",
+   "term": "pink/purple",
+   "unit": "u52",
+   "model_label": "pink/purple",
+   "label": "pink/purple",
+   "explanation": ""
+  },
+  {
+   "variable": "Vicia villosa",
+   "code": "flag",
+   "term": "flag",
+   "unit": "u53",
+   "model_label": "flag",
+   "label": "flag",
+   "explanation": ""
+  },
+  {
+   "variable": "proboscis length",
+   "code": "",
+   "label": "short proboscis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "proboscis length",
+   "code": "",
+   "label": "long-tongued bumblebees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "large pollinators",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "small species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "foraging range",
+   "code": "",
+   "label": "centralplace foragers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "proboscis length",
+   "code": "",
+   "label": "Prob",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Achillea clavennae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Achillea millefolium",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Aconitum degenii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Aconitum lycoctonum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Aconitum napellus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Adenostyles alpina",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Aegopodium podagraria",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Agrimonia eupatoria",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Allium carinatum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Allium schoenoprasum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Angelica sylvestris",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Anthriscus sylvestris",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Anthyllis vulneraria",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Aristolochia clematitis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Arnica montana",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Asperula cristata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Aster alpinus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Astragalus glycyphyllos",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Astrantia major",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Bellis perennis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Betonica alopecurus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Buddleja davidii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Buphthalmum salicifolium",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Calluna vulgaris",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Calystegia sepium",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Campanula barbata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Campanula carnica",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Campanula glomerata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant species",
+   "code": "",
+   "label": "Campanula patula",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "G",
+   "code": "G",
+   "term": "ground nesting",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "Apis \\times FRic",
+   "term": "Apis \\times FRic",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "Apis \\times TSim",
+   "term": "Apis \\times TSim",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "FRic \\times TSim",
+   "term": "FRic \\times TSim",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "Apis \\times FRic \\times TSim",
+   "term": "Apis \\times FRic \\times TSim",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 436.7
+}

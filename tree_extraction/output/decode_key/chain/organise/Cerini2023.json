@@ -1,0 +1,492 @@
+{
+ "calls": 2,
+ "chars": 9564,
+ "passages": [
+  "[prose] Francesco Cerini 1,2 | Leonardo Vignoli 3 | Michael Blust 4 | Giovanni Strona 5,6",
+  "[prose] 1 Dipartimento Scienze Ecologiche e Biologiche, Università della Tuscia, Viterbo, Italy 2 School of Biological Sciences, University of Bristol, Bristol, UK 3 Department of Science, University of Roma Tre, Rome, Italy 4 Department of Biology, Green Mountain College, Poultney, Vermont, USA 5 European Commission, Joint Research Centre, Ispra, Italy 6 Faculty of Biological and Environmental Sciences, Organismal and Evolutionary Biology Research Programme, University of Helsinki, Helsinki, Finland",
+  "[prose] 4 of 11",
+  "[prose] For each site/year combination, we identified and obtained information on the most important abiotic factors known to shape Odonata communities (Bried & Siepielski, 2018) and to play a fundamental role in the phenology and the beginning of adult stage for Odonata (Corbet, 1999; Flenner et al., 2010), namely, temperature, precipitation, habitat type (lotic or lentic water body), elevation, and land cover. For temperature and precipitation, we matched the exact dates of the records (month/ year) with actual temperature and precipitation data from the Global Historical Climatology Network monthly (GHCNm, freely available at [https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-monthly)) dataset, which provides monthly climate summaries from meteorological stations. We interpolated the temperature and precipitation values using ordinary kriging between the closest stations for which data were available for a target point. For this, we started from the 10 closest stations to the target point, and then we progressively increased the number of stations until we found at least three temperature and pre-cipitation records. As for habitat type, we used information from the original data sources to classify sites into four broad categories, namely, lentic water, lotic water, wetland, and land. Additionally, we used a high-resolution dataset from the University of Vermont Spatial Analysis Laboratory (freely available at [https://geodata.vermont.gov/pages/land-cover](https://geodata.vermont.gov/pages/land-cover)) to characterize the land cover surrounding the target localities. The dataset provides data for 2016 at a resolution of 0.5 m. Instead of focusing on the exact land cover class at each sampling point, we computed the fraction of area covered, respectively, by tree canopy, grassland/shrubland, bare soil, water, or artificial structures within a square of 500 × 500 m centered on the target site. Such a measure offered the most informative picture of the environmental setting available for the sampling localities, with the assumption that the landcover surrounding the sites stayed stable during the years.",
+  "[prose] 5 of 11",
+  "[prose] 6 of 11",
+  "[prose] 7 of 11",
+  "[prose] F I G U R E 7 Importance of the species functional traits in the three Random Forest models to predict co-occurrence. (A) Traits importance calculated as the percentage increment of the mean square error (MSE) when permuting the out-of-bag data and extracting the resulting error increase when one variable is left out. (B) Traits important based on the random forest tree node purity, calculated as the reduction in sum of squared errors whenever a variable is chosen to split. Bars with whiskers show the mean scores ± SEs of the different values for the one-hot encoded traits (i.e., traits with different categorical values like “habitat preference = open versus closed”). Model I: Random Forest and regressor modeling continuous positive and negative Hierarchical Modeling of Species Communities residual co-occurrence versus Odonata functional traits. Model II: Random Forest classifier modeling positive co-occurrence (i.e., co-occurrence >0.5 with a statistical support of 0.95) versus Odonata functional traits. Model III: Random Forest classifier modeling negative co-occurrence (i.e., co-occurrence",
+  "[prose] 9 of 11",
+  "[prose] DOI: 10.1002/ecs2.4732",
+  "[prose] [https://doi.org/10.1002/ecs2.4732](https://doi.org/10.1002/ecs2.4732)",
+  "[prose] 21508925, 2023, 12, Downloaded from https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.4732 by Faculdade Medicina De Lisboa, Wiley Online Library on [31/10/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License",
+  "[prose] 3 of 11",
+  "[prose] ![Image block](doc:ae11e86/tier:advanced/page:3/block:8)",
+  "[prose] and then we excluded all species present in less than 10 sites to avoid considering very rare species sampled just sporadically throughout the years, which can potentially create artefactual negative co-occurrence pattern with many other species just due to their rarity. This left us with 520 sites, 764 combinations of sites/years, and 95 species (3712 occurrences).",
+  "[prose] is, the Random Forest regressor aiming at predicting continuous positive and negative co-occurrence values, showed a $R ^ { 2 }$ of 0.66 between all observed versus predicted co-occurrence values $( n = 6 4 { , } 8 0 0 )$ obtained from 100 models trained on random sets including 80% of observations in the dataset and tested on the remaining 20% of observations (Figure 5).",
+  "[prose] ![Image block](doc:ae11e86/tier:advanced/page:7/block:3)",
+  "[prose] 8 of 11",
+  "[prose] ![Image block](doc:ae11e86/tier:advanced/page:8/block:3)",
+  "[prose] Data and code (Strona, 2023) are available from Zenodo: [https://doi.org/10.5281/zenodo.10069033](https://doi.org/10.5281/zenodo.10069033).",
+  "[prose] 10 of 11",
+  "[table 1] Co-occurrence (range) | Functional distance (range) | Counts\n-0.8~0.9 | 0.0~1.0 | 1~27",
+  "[table 2] Slope (Bin) | Frequency\n-0.35~-0.325 | 1\n-0.275~-0.25 | 2\n-0.25~-0.225 | 2\n-0.225~-0.2 | 2\n-0.175~-0.15 | 3\n-0.15~-0.125 | 8\n-0.125~-0.1 | 4\n-0.1~0.075 | 1",
+  "[prose] F I G U R E 1 Theoretical relationships between species distance in functional traits and degree of co-occurrence. In a situation where functional traits drive environmental filtering, we should expect a negative relationship between distance and co-occurrence (green line); in the opposite scenario, where functional traits drive patterns of competitive exclusion, we should expect a positive relationship between distance and co-occurrence (blue line).",
+  "[prose] contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022). Second, various studies have suggested that, in addition to habitat preference, interspecific interactions play a fundamental role in shaping Odonata communities and metacommunities (Cerini et al., 2019, 2020; Renner et al., 2019; Suutari et al., 2004). The data represent an updated and georeferenced version of the dataset from Blust and Pfeiffer (2015), a publication which summarized more than 80 years of Odonata collection activities (both scientific and amateur) in the state of Vermont. Each local site in the dataset consists of a water body (e.g., pond, brooks, lakes, and river beds) that was visited once or multiple times over the years. We cleaned the dataset by removing species with uncertain or missing taxonomical information. Presence data represent sampling of adults and/or larvae. The final dataset includes 4995 species occurrence records for 131 species across 917 sites and 86 years (1663 combinations of sites and years). We excluded all sites hosting only 1 species (i.e., not hosting an Odonata multispecies community),",
+  "[prose] This is an open access article under the terms of the [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.",
+  "[prose] In a simplified view, trait distance and co-occurrence should display a negative relationship if the traits drive primarily environmental filtering, and a positive one if the traits drive patterns of competitive exclusion (Figure 1). Clearly, in the real world (and considering multiple traits), the two processes coexist, making it hard to find a clear association. For instance, Elo et al. (2021) found no relationship between functional species similarity and negative co-occurrence on a large set of stream macroinvertebrate communities. Similarly, Burner et al. (2021) found that the difference in species traits was not a consistent predictor of the spatial associations for forest beetles. Nevertheless, it is important to consider that competitive dynamics (and species interactions in general) might be linked to functional traits in a more complex fashion than that provided by trait similarity.",
+  "[prose] Overall, we found no relationship between species co-occurrence and trait dissimilarity $( R ^ { 2 } = 0 . 0 0 7 ;$ Figure 3), as we recorded cases of high and low co-occurrence for both small and large functional distance (Figure 3). In most cases, however, functional distance fell into an average range. The correlations between individual trait distance and co-occurrence were very weak, but negative slopes were more common than positives (Figure 4).",
+  "[prose] The authors declare no conflicts of interest.",
+  "[prose] To assess pairwise species co-occurrence, we fit a latent-variable jSDM using the Hierarchical Modeling of Species Communities (HMSC) Bayesian framework. We fitted the models with a probit link function under the default prior distribution. We devised the following model (Equation 1):"
+ ],
+ "categories": [
+  {
+   "variable": "habitat type",
+   "code": "lentic water",
+   "term": "lentic water",
+   "model_label": "lentic water",
+   "label": "lentic water",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "lotic water",
+   "term": "lotic water",
+   "model_label": "lotic water",
+   "label": "lotic water",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "wetland",
+   "term": "wetland",
+   "model_label": "wetland",
+   "label": "wetland",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "land",
+   "term": "land",
+   "model_label": "land",
+   "label": "land",
+   "explanation": ""
+  },
+  {
+   "variable": "land cover",
+   "code": "tree canopy",
+   "term": "tree canopy",
+   "model_label": "tree canopy",
+   "label": "tree canopy",
+   "explanation": ""
+  },
+  {
+   "variable": "land cover",
+   "code": "grassland/shrubland",
+   "term": "grassland/shrubland",
+   "model_label": "grassland/shrubland",
+   "label": "grassland/shrubland",
+   "explanation": ""
+  },
+  {
+   "variable": "land cover",
+   "code": "bare soil",
+   "term": "bare soil",
+   "model_label": "bare soil",
+   "label": "bare soil",
+   "explanation": ""
+  },
+  {
+   "variable": "land cover",
+   "code": "water",
+   "term": "water",
+   "model_label": "water",
+   "label": "water",
+   "explanation": ""
+  },
+  {
+   "variable": "land cover",
+   "code": "artificial structures",
+   "term": "artificial structures",
+   "model_label": "artificial structures",
+   "label": "artificial structures",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat preference",
+   "code": "open",
+   "term": "open",
+   "model_label": "open",
+   "label": "open",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat preference",
+   "code": "closed",
+   "term": "closed",
+   "model_label": "closed",
+   "label": "closed",
+   "explanation": ""
+  },
+  {
+   "variable": "distance and co-occurrence",
+   "code": "green line",
+   "term": "negative relationship between distance and co-occurrence",
+   "model_label": "negative relationship between distance and co-occurrence",
+   "label": "negative relationship between distance and co-occurrence",
+   "explanation": ""
+  },
+  {
+   "variable": "distance and co-occurrence",
+   "code": "blue line",
+   "term": "positive relationship between distance and co-occurrence",
+   "model_label": "positive relationship between distance and co-occurrence",
+   "label": "positive relationship between distance and co-occurrence",
+   "explanation": ""
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "environmental filtering",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "patterns of competitive exclusion",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 47.9,
+ "columns": [
+  [
+   4,
+   2,
+   "Species",
+   [
+    "canadensis",
+    "clepsydra",
+    "constricta",
+    "eremita",
+    "interrupta",
+    "tuberculifera",
+    "umbrosa",
+    "verticalis",
+    "saucium",
+    "junius",
+    "apicalis",
+    "fumipennis",
+    "moesta",
+    "furcifer",
+    "villosipes",
+    "janata",
+    "grafiana",
+    "NA",
+    "vinosa",
+    "aequabilis",
+    "maculata",
+    "elisa",
+    "eponina",
+    "conditum",
+    "resolutum"
+   ]
+  ],
+  [
+   4,
+   5,
+   "Flight_season_start",
+   [
+    "6/5",
+    "22/6",
+    "7/8",
+    "7/3",
+    "7/9",
+    "7/11",
+    "15/7",
+    "22/5",
+    "19/4",
+    "30/5",
+    "29/5",
+    "5/11",
+    "7/12",
+    "NA",
+    "7/4",
+    "28/5",
+    "7/5",
+    "25/5",
+    "31/5",
+    "14/7",
+    "5/6",
+    "19/5",
+    "5/9",
+    "5/12",
+    "15/5"
+   ]
+  ],
+  [
+   4,
+   6,
+   "Flight_season_end",
+   [
+    "20/10",
+    "26/9",
+    "10/3",
+    "20/9",
+    "10/1",
+    "10/9",
+    "27/10",
+    "18/9",
+    "27/7",
+    "11/3",
+    "19/8",
+    "10/2",
+    "17/7",
+    "15/7",
+    "24/9",
+    "NA",
+    "10/11",
+    "18/8",
+    "8/10",
+    "19/9",
+    "9/6",
+    "31/8",
+    "8/8",
+    "26/7",
+    "31/7"
+   ]
+  ],
+  [
+   4,
+   7,
+   "body_colors",
+   [
+    "NA",
+    "blue",
+    "black",
+    "brown",
+    "green"
+   ]
+  ],
+  [
+   4,
+   8,
+   "body_colortypes",
+   [
+    "NA",
+    "pigment",
+    "structural",
+    "pruinescence"
+   ]
+  ],
+  [
+   4,
+   9,
+   "body_patterns",
+   [
+    "NA",
+    "spotted",
+    "plain",
+    "striped"
+   ]
+  ],
+  [
+   4,
+   10,
+   "mate_guarding",
+   [
+    "NA",
+    "none",
+    "contact",
+    "noncontact"
+   ]
+  ],
+  [
+   4,
+   11,
+   "flight_mode",
+   [
+    "flier",
+    "NA",
+    "percher"
+   ]
+  ],
+  [
+   4,
+   12,
+   "territoriality",
+   [
+    "NA",
+    "non-territorial",
+    "territorial"
+   ]
+  ],
+  [
+   4,
+   13,
+   "aquatic_habitats",
+   [
+    "NA",
+    "ephemeral",
+    "lake",
+    "river",
+    "stream",
+    "pond",
+    "wetland"
+   ]
+  ],
+  [
+   4,
+   14,
+   "habitat_openness",
+   [
+    "NA",
+    "open",
+    "closed",
+    "semi"
+   ]
+  ],
+  [
+   4,
+   15,
+   "body_lengths",
+   [
+    "NA",
+    "69",
+    "72.5",
+    "66.5",
+    "75.5",
+    "68.5",
+    "67",
+    "74",
+    "36.5",
+    "31.5",
+    "39.5",
+    "50",
+    "54",
+    "59",
+    "64",
+    "65.5",
+    "48.5",
+    "54.5",
+    "48",
+    "39",
+    "35",
+    "30",
+    "62",
+    "70",
+    "46"
+   ]
+  ],
+  [
+   4,
+   16,
+   "hindwing_lengths",
+   [
+    "NA",
+    "43.5",
+    "46.5",
+    "47",
+    "44",
+    "50.5",
+    "22.5",
+    "20.5",
+    "25.5",
+    "29",
+    "32.5",
+    "36",
+    "42.5",
+    "32",
+    "37.5",
+    "30.5",
+    "27.5",
+    "33",
+    "23",
+    "17.5",
+    "39",
+    "28.5",
+    "18",
+    "19.5",
+    "18.5"
+   ]
+  ],
+  [
+   4,
+   17,
+   "has_wing_pigment",
+   [
+    "NA",
+    "no",
+    "yes"
+   ]
+  ],
+  [
+   4,
+   18,
+   "wing_pigment_extent_discrete",
+   [
+    "NA",
+    "100",
+    "10",
+    "50",
+    "25",
+    "75"
+   ]
+  ],
+  [
+   4,
+   19,
+   "wing_pigment_extent_continuous",
+   [
+    "NA",
+    "1",
+    "0.02",
+    "0.45",
+    "0.28",
+    "0.32",
+    "0.03",
+    "0.23",
+    "0.06",
+    "0.01",
+    "0.74",
+    "0.46",
+    "0.13",
+    "0.04",
+    "0.51",
+    "0.56",
+    "0.36",
+    "0.22"
+   ]
+  ],
+  [
+   4,
+   20,
+   "wing_pigment_symmetry",
+   [
+    "NA",
+    "symmetric pigment",
+    "hindwing more pigment"
+   ]
+  ],
+  [
+   4,
+   21,
+   "wing_pigment_color",
+   [
+    "NA",
+    "black",
+    "brown",
+    "amber",
+    "red",
+    "yellow"
+   ]
+  ],
+  [
+   4,
+   22,
+   "wing_pigment_placement",
+   [
+    "NA",
+    "full",
+    "basal",
+    "tip"
+   ]
+  ]
+ ]
+}

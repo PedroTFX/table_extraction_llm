@@ -1,0 +1,1668 @@
+{
+ "paper": "Beyer2021",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Received: 18 February 2021 / Accepted: 10 May 2021 / Published online: 22 May 2021"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Context Pollinator declines and functional homogenization of farmland insect communities have been reported. Mass-flowering crops (MFC) can support pollinators by providing floral resources. Knowledge about how MFC with dissimilar flower morphology affect functional groups and functional trait compositions of wild bee communities is scarce."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Objective We investigated how two morphologi cally different MFC, land cover and local flower cover of semi-natural habitats (SNH) and landscape diversity affect wild bees and their functional traits (body size, tongue length, sociality, foraging preferences)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Also, the cultivation of mass-flowering crops (MFC) can benefit wild bees by temporary providing high pollen and nectar amounts (Westphal et al. 2003; Diekötter et al. 2014; Rundlöf et al. 2014). The most commonly grown MFC in Europe is oilseed rape (OSR) (Brassica napus L.). But due to extreme drought during summer, cultivation area dropped by 28% from 2018 to 2019, accounting for 7.4% of the total German cropland (Destatis 2020). Other MFC, like grain legumes, are rarely cultivated (1.7% of cropland in Germany), although their cultivation area increased due to their promotion as ecological focus area (EFA) within the CAP greening reform of 2013 (Destatis 2020)."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Transect walks were conducted between 9 a.m. and 7 p.m. on days with suitable weather conditions (no rain, low wind speed, temperatures [ 15 \u0003C). Walking slowly through the transect in one direction, the number of flower-visiting bees was counted. Species, that could not be identified in the field, were caught and taken to the lab for further identification. To avoid excessive killing, we collected only the first five bumblebee individuals of every species/morphospecies per transect for confirmatory identification. Based on similar coloration, we defined three morphospecies: (1) Bombus terrestris, B. lucorum, B. hortorum, B. bohemicus and B. sylvestris, (2) B. lapidarius, B. ruderarius and B. rupestris, (3) B. pascuorum and B. muscorum. All other bumblebee species could be distinguished as separate species. We identified all bumblebees (Mauss 1994) and all non-Bombus wild bees (Amiet et al. 2001, 2007, 2014) in the lab. Because Bombus terrestris, B. lucorum, B. cryptarum and B. magnus are difficult to distinguish,"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "![Image block](doc:cd01150/tier:advanced/page:4/block:3)"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "we aggregated them. The percentage of local flower cover within the transect area was estimated during each transect walk (mean: 28.7%, range: 0–95%). Flowering plants, on which we observed pollinator visits were recorded on family level (Fig. S2)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "cases we only caught five or less bumblebee individuals per transect. We excluded cleptoparasites from the trait analyses (six species) because of their different life-history strategy and undefined foraging preferences. We measured the intertegular distance (ITD) of at least one and maximum five worker individuals per species (57 species in total) as a measure of body size (Table S3). For four species we caught only one single male individual and thus were not able to measure ITD. For the foraging preferences, wild bees were categorized into species collecting pollen from Fabaceae (any species, known to forage on Fabaceae, not specifically Fabaceae specialists) and species not known to exploit Fabaceae (specialists of a different plant family or generalists, not known to visit Fabaceae). For sociality, wild bees were grouped into social and solitary bees. Foraging preference and sociality information were extracted from the literature (Westrich 2018) (Table S3)."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "All analyses were conducted in R version 3.6.1 (R Core Team 2019) using generalized linear mixed models with the glmmTMB package (Brooks et al. 2017) and linear mixed effect models with the nlme package (Pinheiro et al. 2019). We followed a multimodel inference approach (Burnham and Anderson 2002). Based on global models (see details below), we fitted candidate models containing all possible combinations of explanatory variables and their interactions with the help of the dredge function of the MuMIn package (Barton 2019). The number of variables in the single candidate models was restricted to a maximum of seven. Candidate models were ranked by Bayesian Information Criterion (BIC), which is an information criterion similar to the more commonly used Akaike information criterion (AIC), but with a penalty term that also considers the number of samples. BIC thus tends to select less complex models in comparison to AIC (Burnham and Anderson 2002; Link and Barker 2006). We considered all models with a delta BIC \\ 2 compared to the best fitting model to have important empirical support (Raftery 1995). We used BIC model weights (w i ), to assess the posterior probability of each model (Link and Barker 2006) and derived the sum of BIC model weights (Rw i ) across all models to rank the importance of explanatory variables."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "To analyze the effect of local and landscape resource availability on pollinator densities, we performed two separate models for bumblebees and all other wild bees (non-Bombus wild bees). While all observed wild bees (excluding honeybees) were included in the wild bee densities, only identified individuals were used for the wild bee species richness. Overall species richness (see Fig. S3 for species accumulation curve) was analyzed at landscape scale (due to very low species numbers per transect), i.e. richness was calculated across all six transects per study landscape and run and SNH flower cover was averaged across all transects per study landscape and run. Our response variables were: density of bumblebees, density of non-Bombus wild bees (per 250 m 2 transect area and 5 min), species richness of all wild bees per study landscape (per 1500 $\\mathbf { m } ^ { 2 }$ transect area and 30 min), and additionally, density of the long-tongued B. pascuorum/ B. muscorum color group (hereinafter referred to as B. pascuorum densities, since B. muscorum made up only a small proportion of that group). We included faba bean cultivation $\\mathrm { ( F B + / F B - ) }$ , local flower cover of the SNH transect area (FC), sampling run (early/mid/late summer), percentage of SNH and of OSR per study landscape and landscape diversity as explanatory variables in the global models. Moreover, we added all possible two-way interactions, as we consider each of them as ecologically relevant. All continuous explanatory variables were standardized to a mean of zero and a standard deviation of 1 to improve model convergence. As nested random effects, we included study region, landscape pair, study landscape and sampling run (region/landscape pair/landscape/run) into the pollinator density models and region, landscape pair and study landscape (region/landscape pair/landscape) into the species richness model."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "To analyze the effects of faba bean cultivation and landscape metrics on the functional traits of wild bees at landscape level, we aggregated data across transects for each run. Using the FD package (Laliberté and Legendre 2010), we calculated the community weighted means (CWM) for ITD for the entire pollinator community and for bumblebees seperately. We applied linear mixed effect models with Gamma distribution and log link for the entire wild bee community and with normal distribution for the analysis of CWM ITD of bumblebees. Moreover, we used generalized linear mixed models with binomial familiy and logit link to test the effect of local and landscape wide floral resources on the following response variables: the proportion of wild bees collecting pollen from Fabaceae (Fabaceae foragers) and the proportion of social wild bees relative to all bees as well as the proportion of long-tongued bumblebees relative to all bumblebees. The explanatory variables, random effects and multimodel inference procedure were the same as described above for the species richness."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Fig. 3 Effect of (a) faba bean cultivation and of (b) oilseed rape cover on the proportion of social bees (for the three different sampling runs in (a)). Different letters above boxplots indicate significant differences between faba bean (FB ?) and control"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:cd01150/tier:advanced/page:10/block:3)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Fig. 4 Effect of faba bean cultivation $\\left( p = 0 . 0 7 \\right) \\left( \\mathbf { a } \\right)$ and of local flower cover (%) (b) on the proportions of long-tongued bumblebees. Effect of faba bean cultivation $( p = 0 . 1 2 )$ (c) and of local flower cover (%) (d) for faba bean (FB ?) and control (FB-) landscapes on the community weighted means (CWM) for intertegular distance (ITD) of bumblebees. Same letters"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:cd01150/tier:advanced/page:10/block:7)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Acknowledgements We thank all farmers and landowners, who allowed us to conduct our research on their land. We are grateful to Jens Dauber, Georg Everwand and Katharina Schulz-Kesting for their support during the study site selection and landscape mapping process. We thank Stefan Mecke for his supervision of the GIS based landscape analyses and selection of the landscape pairs. Dr. Hella Ludwig and Mike Kuschereitz supported the species identification, especially of the non-Bombus wild bees, and we are grateful for their expertise and help. The study was conducted within the framework of the RELEVANT project. It is supported by funds of the Federal Ministry of Food and Agriculture (BMEL) based on a decision of the parliament of the Federal Republic of Germany via the Federal Office for Agriculture and Food (BLE) under the Federal Programme for Ecological Farming and Other Forms of Sustainable Agriculture (Project number 281 5EPSO 16). CW is grateful for being funded by the Deutsche Forschungsgemeinschaft (DFG) (Project number 405945293)."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Author contributions CW conceived the study and supervised the project; NB and FK implemented the study sites; FK collected the data; NB performed data analyses with support of FK and advice of DG and CW; NB wrote the first manuscript draft. All authors contributed critically and gave final approval for publication."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Fig. S1: Scatterplot of explanatory variables: percentage cover of semi-natural habitats (SNH) and of oilseed rape (OSR) in our 30 paired study landscapes: 15 landscapes with faba bean cultivation (FB+) and 15 without (FB-). Landscapes were situated in three different regions of Germany: east (red circles), middle (green triangles) and north (blue squares) of Germany. Mean area of OSR of our study landscapes was 7.99 m 2 (min: 0.00 m 2 , max: 30.38 m 2 ). Mean area of SNH was 8.17 m 2 (min: 3.68 m 2 ; max: 15.34 m 2 )."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Fig. S2: Number of observed flower visits on the eight most visited plant families for the three different sampling runs in early summer (22.05.-19.06.), mid-summer (22.06.-20.07.) and late summer (27.07.-22.08.). Note that x-axes are sqrt-transformed for graphical reasons. Common plant species / genus in the eight most visited plant families were for example: Fabaceae: Cytisus scoparius, Lupinus polyphyllus, Medicago sativa, Trifolium incarnatum, Trifolium hybridum, Trifolium pratense, Trifolium repens. Boraginaceae: Borago officinalis, Echium vulgare, Phacelia tanacetifolia, Symphytum officinale, Myosotis spp. Asteraceae: Taraxacum officinale agg., Arctium tomentosum, Bellis perennis, Cichorium intybus, Helianthus annuus, Matricaria recutita, Tanacetum vulgare, Achillea spp., Cirsium spp. Rosaceae: Rubus idaeus, Rubus sect. Rubus, Rosa spp. Lamiaceae: Lamium album, Salvia pratensis, Stachys sylvatica. Onagraceae: Epilobium angustifolium. Apiaceae: Daucus carota, Heracleum sphondylium . Geraniaceae: Geranium spp."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Fig. S7: Changes of bee communities due to mass-flowering crop cultivation. Non-metric multidimensional scaling (NMDS) using the metaMDS and envfit functions of the vegan package (Oksanen et al. 2019) and Bray-Curtis distance was used to visualize the results of the PERMANOVA (see Table S9). Red points and ellipse show communities of landscapes without faba bean cultivation (FB-) and green points and ellipse communities of landscapes with faba bean cultivation (FB+). Each point represents one study landscape per sampling run. The vector shows direction of the landscape metrics oilseed rape (osr) cover."
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Table S1: Definitions of all grassy and woody habitat types considered as semi-natural habitat (SNH) in our study."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "Table S2: Number of transects per semi-natural habitat category (grassy/woody) for every landscape and sampling run (early/mid/late summer). Woody habitat category includes hedges, groves, forest edges, woody succession sites. The grassy habitat category includes flower strips, extensive and calcareous grasslands, orchard meadows, fallows, grassy succession sites, grass/clover leys. Two landscape pairs lacked woody habitat structures and all transects had to be assigned to grassy habitats. For the first run, the number of transects per habitat category for certain landscapes was not balanced (numbers in bold). l. pair = landscape pair ID; FB = faba bean cultivation"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Table S3: Density and functional traits of all 66 collected wild bee species. ITD: measured mean intertegular distance; foraging preference: species known to collect pollen from Fabaceae (1) or not known to do so (0). Sociality: Social species (1) or solitary species (0). Foraging preference and Sociality data is from Westrich (2018). Note that Bombus terrestris complex includes the following species: Bombus terrestris, B. lucorum, B. cryptarum and B. magnus."
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "Table S4: Tongue length of bumblebee species. The length of the glossa was measured, starting from the end of the paraglossa. The number of measured bumblebee individuals per species is given, as well as their mean tongue length (TL), their mean intertegular distance (ITD) and their mean relative TL (tongue length divided by ITD) (to account for body size dependent tongue length variations). According to the mean relative TL, bumblebee species were categorized into short- and long-tongued. Species with a mean relative TL equal or higher 1.43 (the mean of all values) were assigned to the long-tongued category and species with a lower value to the short-tongued group. For all ITD and tongue measurements, we used a connected microscope and the Labscope Imaging Software (ZEISS)."
+  },
+  {
+   "id": "u24",
+   "kind": "table 1",
+   "text": "Category | Q1 | Q2 (Median) | Q3\na | ~0.5 | 1 | ~4\nb | ~0.5 | 2 | ~5"
+  },
+  {
+   "id": "u25",
+   "kind": "table 2",
+   "text": "Series | X (range) | Bumblebee density (range)\nFB- | 0~95 | 0~75\nFB+ | 0~95 | 0~50"
+  },
+  {
+   "id": "u26",
+   "kind": "table 3",
+   "text": "X | Non - Bombus density\n~5 | 1\n~8 | 6\n~10 | 2\n~12 | 3\n~15 | 9\n~18 | 4\n~20 | 3\n~22 | 8\n~25 | 4"
+  },
+  {
+   "id": "u27",
+   "kind": "table 3",
+   "text": "~28 | 4\n~30 | 7\n~32 | 6\n~35 | 8\n~38 | 9\n~40 | 25\n~42 | 8\n~45 | 3\n~48 | 2\n~50 | 1"
+  },
+  {
+   "id": "u28",
+   "kind": "table 3",
+   "text": "~55 | 7\n~60 | 14\n~65 | 17\n~70 | 10\n~75 | 17\n~80 | 11\n~85 | 2\n~90 | 1"
+  },
+  {
+   "id": "u29",
+   "kind": "table 4",
+   "text": "X | Species richness of all wild bees\n~12 | 1\n~13 | 1\n~14 | 1\n~15 | 2\n~16 | 2\n~17 | 3\n~18 | 9\n~19 | 8\n~20 | 6"
+  },
+  {
+   "id": "u30",
+   "kind": "table 4",
+   "text": "~21 | 7\n~22 | 4\n~23 | 5\n~24 | 4\n~25 | 3\n~26 | 3\n~27 | 4\n~28 | 4\n~29 | 4\n~30 | 4"
+  },
+  {
+   "id": "u31",
+   "kind": "table 4",
+   "text": "~31 | 4\n~32 | 4\n~33 | 5\n~34 | 6\n~35 | 7\n~36 | 8\n~37 | 9\n~38 | 7\n~39 | 6\n~40 | 7"
+  },
+  {
+   "id": "u32",
+   "kind": "table 4",
+   "text": "~41 | 8\n~42 | 9\n~43 | 8\n~44 | 7\n~45 | 6\n~46 | 6\n~47 | 6\n~48 | 6\n~49 | 6\n~50 | 4"
+  },
+  {
+   "id": "u33",
+   "kind": "table 5",
+   "text": "X | Species richness of all wild bees\n~0.35 | ~2.1\n~0.35 | ~5.0\n~0.35 | ~9.0\n~0.45 | ~3.0\n~0.45 | ~3.1\n~0.45 | ~4.0\n~0.45 | ~5.0\n~0.45 | ~7.0\n~0.50 | ~2.1"
+  },
+  {
+   "id": "u34",
+   "kind": "table 5",
+   "text": "~0.50 | ~3.1\n~0.50 | ~4.0\n~0.50 | ~5.0\n~0.50 | ~6.0\n~0.50 | ~7.0\n~0.55 | ~1.0\n~0.55 | ~3.1\n~0.55 | ~4.0\n~0.55 | ~5.0\n~0.55 | ~6.0"
+  },
+  {
+   "id": "u35",
+   "kind": "table 5",
+   "text": "~0.55 | ~8.0\n~0.55 | ~9.8\n~0.60 | ~1.0\n~0.60 | ~3.1\n~0.60 | ~4.0\n~0.60 | ~5.0\n~0.60 | ~7.0\n~0.65 | ~1.0\n~0.65 | ~3.1\n~0.65 | ~4.0"
+  },
+  {
+   "id": "u36",
+   "kind": "table 5",
+   "text": "~0.65 | ~5.0\n~0.65 | ~7.0\n~0.70 | ~1.0\n~0.70 | ~3.1\n~0.70 | ~4.0\n~0.70 | ~5.0\n~0.70 | ~7.0\n~0.75 | ~1.0\n~0.75 | ~3.1\n~0.75 | ~4.0"
+  },
+  {
+   "id": "u37",
+   "kind": "table 5",
+   "text": "~0.75 | ~5.0\n~0.75 | ~6.0\n~0.80 | ~1.0\n~0.80 | ~3.1\n~0.80 | ~4.0\n~0.80 | ~5.0\n~0.80 | ~6.0\n~0.85 | ~1.0\n~0.85 | ~3.1\n~0.85 | ~4.0"
+  },
+  {
+   "id": "u38",
+   "kind": "table 5",
+   "text": "~0.85 | ~5.0\n~0.85 | ~6.0\n~0.90 | ~1.0\n~0.90 | ~3.1\n~0.90 | ~4.0\n~0.90 | ~5.0\n~0.90 | ~6.0\n~0.95 | ~1.0\n~0.95 | ~3.1\n~0.95 | ~4.0"
+  },
+  {
+   "id": "u39",
+   "kind": "table 5",
+   "text": "~0.95 | ~5.0\n~0.95 | ~6.0\n~1.00 | ~1.0\n~1.00 | ~3.1\n~1.00 | ~4.0\n~1.00 | ~5.0\n~1.00 | ~6.0\n~1.05 | ~1.0\n~1.05 | ~3.1\n~1.05 | ~4.0"
+  },
+  {
+   "id": "u40",
+   "kind": "table 5",
+   "text": "~1.05 | ~5.0\n~1.05 | ~6.0\n~1.10 | ~1.0\n~1.10 | ~3.1\n~1.10 | ~4.0\n~1.10 | ~5.0\n~1.10 | ~6.0\n~1.15 | ~1.0\n~1.15 | ~3.1\n~1.15 | ~4.0"
+  },
+  {
+   "id": "u41",
+   "kind": "table 5",
+   "text": "~1.15 | ~5.0\n~1.15 | ~6.0\n~1.20 | ~1.0\n~1.20 | ~3.1\n~1.20 | ~4.0\n~1.20 | ~5.0\n~1.20 | ~6.0\n~1.25 | ~1.0\n~1.25 | ~3.1\n~1.25 | ~4.0"
+  },
+  {
+   "id": "u42",
+   "kind": "table 5",
+   "text": "~1.25 | ~5.0\n~1.25 | ~6.0\n~1.30 | ~1.0\n~1.30 | ~3.1\n~1.30 | ~4.0\n~1.30 | ~5.0\n~1.30 | ~6.0\n~1.35 | ~1.0\n~1.35 | ~3.1\n~1.35 | ~4.0"
+  },
+  {
+   "id": "u43",
+   "kind": "table 5",
+   "text": "~1.35 | ~5.0\n~1.35 | ~6.0\n~1.40 | ~1.0\n~1.40 | ~3.1\n~1.40 | ~4.0\n~1.40 | ~5.0\n~1.40 | ~6.0\n~1.45 | ~1.0\n~1.45 | ~3.1\n~1.45 | ~4.0"
+  },
+  {
+   "id": "u44",
+   "kind": "table 5",
+   "text": "~1.45 | ~5.0\n~1.45 | ~6.0\n~1.50 | ~1.0\n~1.50 | ~3.1\n~1.50 | ~4.0\n~1.50 | ~5.0\n~1.50 | ~6.0\n~1.55 | ~1.0\n~1.55 | ~3.1\n~1.55 | ~4.0"
+  },
+  {
+   "id": "u45",
+   "kind": "table 5",
+   "text": "~1.55 | ~5.0\n~1.55 | ~6.0\n~1.60 | ~1.0\n~1.60 | ~3.1\n~1.60 | ~4.0\n~1.60 | ~5.0\n~1.60 | ~6.0\n~1.65 | ~1.0\n~1.65 | ~3.1\n~1.65 | ~4.0"
+  },
+  {
+   "id": "u46",
+   "kind": "table 5",
+   "text": "~1.65 | ~5.0\n~1.65 | ~6.0\n~1.70 | ~1.0\n~1.70 | ~3.1\n~1.70 | ~4.0\n~1.70 | ~5.0\n~1.70 | ~6.0\n~1.75 | ~1.0\n~1.75 | ~3.1\n~1.75 | ~4.0"
+  },
+  {
+   "id": "u47",
+   "kind": "table 5",
+   "text": "~1.75 | ~5.0\n~1.75 | ~6.0\n~1.80 | ~1.0\n~1.80 | ~3.1\n~1.80 | ~4.0\n~1.80 | ~5.0\n~1.80 | ~6.0\n~1.85 | ~1.0\n~1.85 | ~3.1\n~1.85 | ~4.0"
+  },
+  {
+   "id": "u48",
+   "kind": "table 5",
+   "text": "~1.85 | ~5.0\n~1.85 | ~6.0\n~1.90 | ~1.0\n~1.90 | ~3.1\n~1.90 | ~4.0\n~1.90 | ~5.0\n~1.90 | ~6.0\n~1.95 | ~1.0\n~1.95 | ~3.1\n~1.95 | ~4.0"
+  },
+  {
+   "id": "u49",
+   "kind": "table 5",
+   "text": "~1.95 | ~5.0\n~1.95 | ~6.0\n~2.00 | ~1.0\n~2.00 | ~3.1\n~2.00 | ~4.0\n~2.00 | ~5.0\n~2.00 | ~6.0\n~2.05 | ~1.0\n~2.05 | ~3.1\n~2.05 | ~4.0"
+  },
+  {
+   "id": "u50",
+   "kind": "table 5",
+   "text": "~2.05 | ~5.0\n~2.05 | ~6.0\n~2.10 | ~1.0\n~2.10 | ~3.1\n~2.10 | ~4.0\n~2.10 | ~5.0\n~2.10 | ~6.0\n~2.15 | ~1.0\n~2.15 | ~3.1\n~2.15 | ~4.0"
+  },
+  {
+   "id": "u51",
+   "kind": "table 5",
+   "text": "~2.15 | ~5.0\n~2.15 | ~6.0\n~2.20 | ~1.0\n~2.20 | ~3.1\n~2.20 | ~4.0\n~2.20 | ~5.0\n~2.20 | ~6.0\n~2.25 | ~1.0\n~2.25 | ~3.1\n~2.25 | ~4.0"
+  },
+  {
+   "id": "u52",
+   "kind": "table 5",
+   "text": "~2.25 | ~5.0\n~2.25 | ~6.0\n~2.30 | ~1.0\n~2.30 | ~3.1\n~2.30 | ~4.0\n~2.30 | ~5.0\n~2.30 | ~6.0\n~2.35 | ~1.0\n~2.35 | ~3.1\n~2.35 | ~4.0"
+  },
+  {
+   "id": "u53",
+   "kind": "table 5",
+   "text": "~2.35 | ~5.0\n~2.35 | ~6.0\n~2.40 | ~1.0\n~2.40 | ~3.1\n~2.40 | ~4.0\n~2.40 | ~5.0\n~2.40 | ~6.0\n~2.45 | ~1.0\n~2.45 | ~3.1\n~2.45 | ~4.0"
+  },
+  {
+   "id": "u54",
+   "kind": "table 5",
+   "text": "~2.45 | ~5.0\n~2.45 | ~6.0\n~2.50 | ~1.0\n~2.50 | ~3.1\n~2.50 | ~4.0\n~2.50 | ~5.0\n~2.50 | ~6.0\n~2.55 | ~1.0\n~2.55 | ~3.1\n~2.55 | ~4.0"
+  },
+  {
+   "id": "u55",
+   "kind": "table 5",
+   "text": "~2.55 | ~5.0\n~2.55 | ~6.0\n~2.60 | ~1.0\n~2.60 | ~3.1\n~2.60 | ~4.0\n~2.60 | ~5.0\n~2.60 | ~6.0\n~2.65 | ~1.0\n~2.65 | ~3.1\n~2.65 | ~4.0"
+  },
+  {
+   "id": "u56",
+   "kind": "table 5",
+   "text": "~2.65 | ~5.0\n~2.65 | ~6.0\n~2.70 | ~1.0\n~2.70 | ~3.1\n~2.70 | ~4.0\n~2.70 | ~5.0\n~2.70 | ~6.0\n~2.75 | ~1.0\n~2.75 | ~3.1\n~2.75 | ~4.0"
+  },
+  {
+   "id": "u57",
+   "kind": "table 5",
+   "text": "~2.75 | ~5.0\n~2.75 | ~6.0\n~2.80 | ~1.0\n~2.80 | ~3.1\n~2.80 | ~4.0\n~2.80 | ~5.0\n~2.80 | ~6.0\n~2.85 | ~1.0\n~2.85 | ~3.1\n~2.85 | ~4.0"
+  },
+  {
+   "id": "u58",
+   "kind": "table 5",
+   "text": "~2.85 | ~5.0\n~2.85 | ~6.0\n~2.90 | ~1.0\n~2.90 | ~3.1\n~2.90 | ~4.0\n~2.90 | ~5.0\n~2.90 | ~6.0\n~2.95 | ~1.0\n~2.95 | ~3.1\n~2.95 | ~4.0"
+  },
+  {
+   "id": "u59",
+   "kind": "table 5",
+   "text": "~2.95 | ~5.0\n~2.95 | ~6.0\n~3.00 | ~1.0\n~3.00 | ~3.1\n~3.00 | ~4.0\n~3.00 | ~5.0\n~3.00 | ~6.0\n~3.05 | ~1.0\n~3.05 | ~3.1\n~3.05 | ~4.0"
+  },
+  {
+   "id": "u60",
+   "kind": "table 5",
+   "text": "~3.05 | ~5.0\n~3.05 | ~6.0\n~3.10 | ~1.0\n~3.10 | ~3.1\n~3.10 | ~4.0\n~3.10 | ~5.0\n~3.10 | ~6.0\n~3.15 | ~1.0\n~3.15 | ~3.1\n~3.15 | ~4.0"
+  },
+  {
+   "id": "u61",
+   "kind": "table 5",
+   "text": "~3.15 | ~5.0\n~3.15 | ~6.0\n~3.20 | ~1.0\n~3.20 | ~3.1\n~3.20 | ~4.0\n~3.20 | ~5.0\n~3.20 | ~6.0\n~3.25 | ~1.0\n~3.25 | ~3.1\n~3.25 | ~4.0"
+  },
+  {
+   "id": "u62",
+   "kind": "table 5",
+   "text": "~3.25 | ~5.0\n~3.25 | ~6.0\n~3.30 | ~1.0\n~3.30 | ~3.1\n~3.30 | ~4.0\n~3.30 | ~5.0\n~3.30 | ~6.0\n~3.35 | ~1.0\n~3.35 | ~3.1\n~3.35 | ~4.0"
+  },
+  {
+   "id": "u63",
+   "kind": "table 5",
+   "text": "~3.35 | ~5.0\n~3.35 | ~6.0\n~3.40 | ~1.0\n~3.40 | ~3.1\n~3.40 | ~4.0\n~3.40 | ~5.0\n~3.40 | ~6.0\n~3.45 | ~1.0\n~3.45 | ~3.1\n~3.45 | ~4.0"
+  },
+  {
+   "id": "u64",
+   "kind": "table 5",
+   "text": "~3.45 | ~5.0\n~3.45 | ~6.0\n~3.50 | ~1.0\n~3.50 | ~3.1\n~3.50 | ~4.0\n~3.50 | ~5.0\n~3.50 | ~6.0\n~3.55 | ~1.0\n~3.55 | ~3.1\n~3.55 | ~4.0"
+  },
+  {
+   "id": "u65",
+   "kind": "table 5",
+   "text": "~3.55 | ~5.0\n~3.55 | ~6.0\n~3.60 | ~1.0\n~3.60 | ~3.1\n~3.60 | ~4.0\n~3.60 | ~5.0\n~3.60 | ~6.0\n~3.65 | ~1.0\n~3.65 | ~3.1\n~3.65 | ~4.0"
+  },
+  {
+   "id": "u66",
+   "kind": "table 5",
+   "text": "~3.65 | ~5.0\n~3.65 | ~6.0\n~3.70 | ~1.0\n~3.70 | ~3.1\n~3.70 | ~4.0\n~3.70 | ~5.0\n~3.70 | ~6.0\n~3.75 | ~1.0\n~3.75 | ~3.1\n~3.75 | ~4.0"
+  },
+  {
+   "id": "u67",
+   "kind": "table 5",
+   "text": "~3.75 | ~5.0\n~3.75 | ~6.0\n~3.80 | ~1.0\n~3.80 | ~3.1\n~3.80 | ~4.0\n~3.80 | ~5.0\n~3.80 | ~6.0\n~3.85 | ~1.0\n~3.85 | ~3.1\n~3.85 | ~4.0"
+  },
+  {
+   "id": "u68",
+   "kind": "table 5",
+   "text": "~3.85 | ~5.0\n~3.85 | ~6.0\n~3.90 | ~1.0\n~3.90 | ~3.1\n~3.90 | ~4.0\n~3.90 | ~5.0\n~3.90 | ~6.0\n~3.95 | ~1.0\n~3.95 | ~3.1\n~3.95 | ~4.0"
+  },
+  {
+   "id": "u69",
+   "kind": "table 5",
+   "text": "~3.95 | ~5.0\n~3.95 | ~6.0\n~4.00 | ~1.0\n~4.00 | ~3.1\n~4.00 | ~4.0\n~4.00 | ~5.0\n~4.00 | ~6.0\n~4.05 | ~1.0\n~4.05 | ~3.1\n~4.05 | ~4.0"
+  },
+  {
+   "id": "u70",
+   "kind": "table 5",
+   "text": "~4.05 | ~5.0\n~4.05 | ~6.0\n~4.10 | ~1.0\n~4.10 | ~3.1\n~4.10 | ~4.0\n~4.10 | ~5.0\n~4.10 | ~6.0\n~4.15 | ~1.0\n~4.15 | ~3.1\n~4.15 | ~4.0"
+  },
+  {
+   "id": "u71",
+   "kind": "table 5",
+   "text": "~4.15 | ~5.0\n~4.15 | ~6.0\n~4.20 | ~1.0\n~4.20 | ~3.1\n~4.20 | ~4.0\n~4.20 | ~5.0\n~4.20 | ~6.0\n~4.25 | ~1.0\n~4.25 | ~3.1\n~4.25 | ~4.0"
+  },
+  {
+   "id": "u72",
+   "kind": "table 5",
+   "text": "~4.25 | ~5.0\n~4.25 | ~6.0\n~4.30 | ~1.0\n~4.30 | ~3.1\n~4.30 | ~4.0\n~4.30 | ~5.0\n~4.30 | ~6.0\n~4.35 | ~1.0\n~4.35 | ~3.1\n~4.35 | ~4.0"
+  },
+  {
+   "id": "u73",
+   "kind": "table 5",
+   "text": "~4.35 | ~5.0\n~4.35 | ~6.0\n~4.40 | ~1.0\n~4.40 | ~3.1\n~4.40 | ~4.0\n~4.40 | ~5.0\n~4.40 | ~6.0\n~4.45 | ~1.0\n~4.45 | ~3.1\n~4.45 | ~4.0"
+  },
+  {
+   "id": "u74",
+   "kind": "table 5",
+   "text": "~4.45 | ~5.0\n~4.45 | ~6.0\n~4.50 | ~1.0\n~4.50 | ~3.1\n~4.50 | ~4.0\n~4.50 | ~5.0\n~4.50 | ~6.0\n~4.55 | ~1.0\n~4.55 | ~3.1\n~4.55 | ~4.0"
+  },
+  {
+   "id": "u75",
+   "kind": "table 5",
+   "text": "~4.55 | ~5.0\n~4.55 | ~6.0\n~4.60 | ~1.0\n~4.60 | ~3.1\n~4.60 | ~4.0\n~4.60 | ~5.0\n~4.60 | ~6.0\n~4.65 | ~1.0\n~4.65 | ~3.1\n~4.65 | ~4.0"
+  },
+  {
+   "id": "u76",
+   "kind": "table 5",
+   "text": "~4.65 | ~5.0\n~4.65 | ~6.0\n~4.70 | ~1.0\n~4.70 | ~3.1\n~4.70 | ~4.0\n~4.70 | ~5.0\n~4.70 | ~6.0\n~4.75 | ~1.0\n~4.75 | ~3.1\n~4.75 | ~4.0"
+  },
+  {
+   "id": "u77",
+   "kind": "table 5",
+   "text": "~4.75 | ~5.0\n~4.75 | ~6.0\n~4.80 | ~1.0\n~4.80 | ~3.1\n~4.80 | ~4.0\n~4.80 | ~5.0\n~4.80 | ~6.0\n~4.85 | ~1.0\n~4.85 | ~3.1\n~4.85 | ~4.0"
+  },
+  {
+   "id": "u78",
+   "kind": "table 5",
+   "text": "~4.85 | ~5.0\n~4.85 | ~6.0\n~4.90 | ~1.0\n~4.90 | ~3.1\n~4.90 | ~4.0\n~4.90 | ~5.0\n~4.90 | ~6.0\n~4.95 | ~1.0\n~4.95 | ~3.1\n~4.95 | ~4.0"
+  },
+  {
+   "id": "u79",
+   "kind": "table 5",
+   "text": "~4.95 | ~5.0\n~4.95 | ~6.0\n~5.00 | ~1.0\n~5.00 | ~3.1\n~5.00 | ~4.0\n~5.00 | ~5.0\n~5.00 | ~6.0\n~5.05 | ~1.0\n~5.05 | ~3.1\n~5.05 | ~4.0"
+  },
+  {
+   "id": "u80",
+   "kind": "table 5",
+   "text": "~5.05 | ~5.0\n~5.05 | ~6.0\n~5.10 | ~1.0\n~5.10 | ~3.1\n~5.10 | ~4.0\n~5.10 | ~5.0\n~5.10 | ~6.0\n~5.15 | ~1.0\n~5.15 | ~3.1\n~5.15 | ~4.0"
+  },
+  {
+   "id": "u81",
+   "kind": "table 5",
+   "text": "~5.15 | ~5.0\n~5.15 | ~6.0\n~5.20 | ~1.0\n~5.20 | ~3.1\n~5.20 | ~4.0\n~5.20 | ~5.0\n~5.20 | ~6.0\n~5.25 | ~1.0\n~5.25 | ~3.1\n~5.25 | ~4.0"
+  },
+  {
+   "id": "u82",
+   "kind": "table 5",
+   "text": "~5.25 | ~5.0\n~5.25 | ~6.0\n~5.30 | ~1.0\n~5.30 | ~3.1\n~5.30 | ~4.0\n~5.30 | ~5.0\n~5.30 | ~6.0\n~5.35 | ~1.0\n~5.35 | ~3.1\n~5.35 | ~4.0"
+  },
+  {
+   "id": "u83",
+   "kind": "table 5",
+   "text": "~5.35 | ~5.0\n~5.35 | ~6.0\n~5.40 | ~1.0\n~5.40 | ~3.1\n~5.40 | ~4.0\n~5.40 | ~5.0\n~5.40 | ~6.0\n~5.45 | ~1.0\n~5.45 | ~3.1\n~5.45 | ~4.0"
+  },
+  {
+   "id": "u84",
+   "kind": "table 5",
+   "text": "~5.45 | ~5.0\n~5.45 | ~6.0\n~5.50 | ~1.0\n~5.50 | ~3.1\n~5.50 | ~4.0\n~5.50 | ~5.0\n~5.50 | ~6.0\n~5.55 | ~1.0\n~5.55 | ~3.1\n~5.55 | ~4.0"
+  },
+  {
+   "id": "u85",
+   "kind": "table 5",
+   "text": "~5.55 | ~5.0\n~5.55 | ~6.0\n~5.60 | ~1.0\n~5.60 | ~3.1\n~5.60 | ~4.0\n~5.60 | ~5.0\n~5.60 | ~6.0\n~5.65 | ~1.0\n~5.65 | ~3.1\n~5.65 | ~4.0"
+  },
+  {
+   "id": "u86",
+   "kind": "table 5",
+   "text": "~5.65 | ~5.0\n~5.65 | ~6.0\n~5.70 | ~1.0\n~5.70 | ~3.1\n~5.70 | ~4.0\n~5.70 | ~5.0\n~5.70 | ~6.0\n~5.75 | ~1.0\n~5.75 | ~3.1\n~5.75 | ~4.0"
+  },
+  {
+   "id": "u87",
+   "kind": "table 5",
+   "text": "~5.75 | ~5.0\n~5.75 | ~6.0\n~5.80 | ~1.0\n~5.80 | ~3.1\n~5.80 | ~4.0\n~5.80 | ~5.0\n~5.80 | ~6.0\n~5.85 | ~1.0\n~5.85 | ~3.1\n~5.85 | ~4.0"
+  },
+  {
+   "id": "u88",
+   "kind": "table 5",
+   "text": "~5.85 | ~5.0\n~5.85 | ~6.0\n~5.90 | ~1.0\n~5.90 | ~3.1\n~5.90 | ~4.0\n~5.90 | ~5.0\n~5.90 | ~6.0\n~5.95 | ~1.0\n~5.95 | ~3.1\n~5.95 | ~4.0"
+  },
+  {
+   "id": "u89",
+   "kind": "table 5",
+   "text": "~5.95 | ~5.0\n~5.95 | ~6.0\n~6.00 | ~1.0\n~6.00 | ~3.1\n~6.00 | ~4.0\n~6.00 | ~5.0\n~6.00 | ~6.0\n~6.05 | ~1.0\n~6.05 | ~3.1\n~6.05 | ~4.0"
+  },
+  {
+   "id": "u90",
+   "kind": "table 5",
+   "text": "~6.05 | ~5.0\n~6.05 | ~6.0\n~6.10 | ~1.0\n~6.10 | ~3.1\n~6.10 | ~4.0\n~6.10 | ~5.0\n~6.10 | ~6.0\n~6.15 | ~1.0\n~6.15 | ~3.1\n~6.15 | ~4.0"
+  },
+  {
+   "id": "u91",
+   "kind": "table 5",
+   "text": "~6.15 | ~5.0\n~6.15 | ~6.0\n~6.20 | ~1.0\n~6.20 | ~3.1\n~6.20 | ~4.0\n~6.20 | ~5.0\n~6.20 | ~6.0\n~6.25 | ~1.0\n~6.25 | ~3.1\n~6.25 | ~4.0"
+  },
+  {
+   "id": "u92",
+   "kind": "table 5",
+   "text": "~6.25 | ~5.0\n~6.25 | ~6.0\n~6.30 | ~1.0\n~6.30 | ~3.1\n~6.30 | ~4.0\n~6.30 | ~5.0\n~6.30 | ~6.0\n~6.35 | ~1.0\n~6.35 | ~3.1\n~6.35 | ~4.0"
+  },
+  {
+   "id": "u93",
+   "kind": "table 5",
+   "text": "~6.35 | ~5.0\n~6.35 | ~6.0\n~6.40 | ~1.0\n~6.40 | ~3.1\n~6.40 | ~4.0\n~6.40 | ~5.0\n~6.40 | ~6.0\n~6.45 | ~1.0\n~6.45 | ~3.1\n~6.45 | ~4.0"
+  },
+  {
+   "id": "u94",
+   "kind": "table 5",
+   "text": "~6.45 | ~5.0\n~6.45 | ~6.0\n~6.50 | ~1.0\n~6.50 | ~3.1\n~6.50 | ~4.0\n~6.50 | ~5.0\n~6.50 | ~6.0\n~6.55 | ~1.0\n~6.55 | ~3.1\n~6.55 | ~4.0"
+  },
+  {
+   "id": "u95",
+   "kind": "table 5",
+   "text": "~6.55 | ~5.0\n~6.55 | ~6.0\n~6.60 | ~1.0\n~6.60 | ~3.1\n~6.60 | ~4.0\n~6.60 | ~5.0\n~6.60 | ~6.0\n~6.65 | ~1.0\n~6.65 | ~3.1\n~6.65 | ~4.0"
+  },
+  {
+   "id": "u96",
+   "kind": "table 5",
+   "text": "~6.65 | ~5.0\n~6.65 | ~6.0\n~6.70 | ~1.0\n~6.70 | ~3.1\n~6.70 | ~4.0\n~6.70 | ~5.0\n~6.70 | ~6.0\n~6.75 | ~1.0\n~6.75 | ~3.1\n~6.75 | ~4.0"
+  },
+  {
+   "id": "u97",
+   "kind": "table 5",
+   "text": "~6.75 | ~5.0\n~6.75 | ~6.0\n~6.80 | ~1.0\n~6.80 | ~3.1\n~6.80 | ~4.0\n~6.80 | ~5.0\n~6.80 | ~6.0\n~6.85 | ~1.0\n~6.85 | ~3.1\n~6.85 | ~4.0"
+  },
+  {
+   "id": "u98",
+   "kind": "table 5",
+   "text": "~6.85 | ~5.0\n~6.85 | ~6.0\n~6.90 | ~1.0\n~6.90 | ~3.1\n~6.90 | ~4.0\n~6.90 | ~5.0\n~6.90 | ~6.0\n~6.95 | ~1.0"
+  },
+  {
+   "id": "u99",
+   "kind": "table 7",
+   "text": "Oilseed rape (%) | Proportion of social bees\n~0 | 1.0\n~0 | ~0.94\n~0 | ~0.92\n~0 | ~0.87\n~0 | ~0.83\n~0 | ~0.80\n~0 | ~0.75\n~0 | ~0.64\n~0 | ~0.50"
+  },
+  {
+   "id": "u100",
+   "kind": "table 7",
+   "text": "~0 | ~0.48\n~4 | 1.0\n~5 | 1.0\n~6 | 1.0\n~7 | 1.0\n~7 | ~0.94\n~7 | ~0.88\n~7 | ~0.82\n~7 | ~0.76\n~7 | ~0.72"
+  },
+  {
+   "id": "u101",
+   "kind": "table 7",
+   "text": "~7 | ~0.50\n~7 | ~0.50\n~8 | 1.0\n~8 | ~0.94\n~8 | ~0.88\n~8 | ~0.82\n~8 | ~0.76\n~8 | ~0.63\n~9 | 1.0\n~9 | ~0.94"
+  },
+  {
+   "id": "u102",
+   "kind": "table 7",
+   "text": "~9 | ~0.88\n~9 | ~0.80\n~9 | ~0.78\n~10 | 1.0\n~10 | ~0.88\n~10 | ~0.64\n~10 | ~0.63\n~10 | ~0.40\n~15 | 1.0\n~15 | ~0.71"
+  },
+  {
+   "id": "u103",
+   "kind": "table 7",
+   "text": "~15 | ~0.25\n~16 | 1.0\n~17 | 1.0\n~17 | ~0.87\n~17 | ~0.80\n~17 | ~0.64\n~17 | ~0.60\n~18 | 1.0\n~19 | 1.0\n~20 | 0.94"
+  },
+  {
+   "id": "u104",
+   "kind": "table 7",
+   "text": "~20 | ~0.91\n~20 | ~0.28\n~28 | 1.0\n~28 | ~0.92\n~28 | ~0.50\n~30 | 1.0\n~30 | ~0.50"
+  },
+  {
+   "id": "u105",
+   "kind": "table 8",
+   "text": "Group | Cluster | SNH | OSR\nFB- | east | ~5.2 | 0\nFB- | east | ~5.3 | ~7\nFB- | east | ~6.1 | ~10\nFB- | east | ~10.8 | ~10\nFB- | middle | ~8.8 | ~0.5\nFB- | middle | ~9.2 | ~5\nFB- | middle | ~9.3 | ~7\nFB- | middle | ~14.2 | ~9\nFB- | middle | ~15.2 | ~16"
+  },
+  {
+   "id": "u106",
+   "kind": "table 8",
+   "text": "FB+ | east | ~5.3 | 0\nFB+ | east | ~5.4 | ~14\nFB+ | east | ~6.1 | ~20\nFB+ | middle | ~5.3 | 0\nFB+ | middle | ~5.4 | ~6\nFB+ | middle | ~7.8 | ~29\nFB+ | middle | ~10.8 | ~5\nFB+ | middle | ~11.2 | ~6\nFB+ | middle | ~13.8 | ~6\nFB+ | north | ~5.3 | 0"
+  },
+  {
+   "id": "u107",
+   "kind": "table 8",
+   "text": "FB+ | north | ~5.4 | ~17\nFB+ | north | ~6.1 | ~18\nFB+ | north | ~9.2 | ~7\nFB+ | north | ~11.8 | ~4\nFB+ | north | ~11.8 | ~10\nFB+ | north | ~9.2 | ~30"
+  },
+  {
+   "id": "u108",
+   "kind": "table 9",
+   "text": "Plant family | early summer | mid summer | late summer\nRosaceae | 217 | 27 | 6\nOnagraceae | — | 48 | 53\nLamiaceae | 25 | 63 | 20\nGeraniaceae | 1 | 5 | 50\nFabaceae | 318 | 569 | 239\nBoranginaceae | 239 | 455 | 154\nAsteraceae | 17 | 254 | 348\nApiaceae | 48 | 5 | 17"
+  },
+  {
+   "id": "u109",
+   "kind": "table 10",
+   "text": "Sites | Rarefaction\n0 | ~2\n100 | ~34\n200 | ~43\n300 | ~50\n400 | ~56\n500 | ~61"
+  },
+  {
+   "id": "u110",
+   "kind": "table 11",
+   "text": "Run | Q1 | Q2 (Median) | Q3\nearly summer | ~0.5 | 1 | ~4\nmid-summer | ~0.5 | ~2.5 | ~9\nlate summer | ~0.5 | 1 | ~2.5"
+  },
+  {
+   "id": "u111",
+   "kind": "table 12",
+   "text": "Series | Semi-natural habitats (%) (range) | Proportion of social bees (range)\nearly summer | 4~15 | 0.25~0.85\nmid-summer | 4~15 | 0.65~1.0\nlate summer | 4~15 | 0.6~1.0"
+  },
+  {
+   "id": "u112",
+   "kind": "table 14",
+   "text": "Series | NMDS1 (range) | NMDS2 (range)\nFB- | -0.3~0.25 | -0.25~0.4\nFB+ | -0.35~0.55 | -0.35~0.3"
+  },
+  {
+   "id": "u113",
+   "kind": "table 16",
+   "text": "Category | Q1 | Q2 (Median) | Q3\nFB- | 0 | ~0.65 | 1\nFB+ | 0 | ~0.95 | 1"
+  },
+  {
+   "id": "u114",
+   "kind": "table 17",
+   "text": "Habitat type | Habitat category | Definition\nHedge | woody | Linear woody structure; mainly shrubs; longer than wide; width ≤ 10 m\nGrove | woody | Areal woody structure; mainly trees; width > 10 m; not part of a larger forest patch but isolated in the arable matrix\nForest edges | woody | 5 m wide strip; extends 2.5 m into and covers 2.5 m in front of a larger forest patch\nSuccession site | woody | Areal habitat in a progressed state of succession; emerging shrubs covers most of the area\nFlower strip | grassy | Linear or areal habitat with flowering plants sown as an agri-environmental measurement\nExtensive grassland / calcareous grassland | grassy | Areal habitat; diverse, flower-rich and extensively managed grassland; no shrubs present\nOrchard meadows | grassy | Grass-dominated areal habitat with a stand of old fruit trees; extensively managed or abandoned\nFallows | grassy | Areal fallow land; dominated by naturally occurring pioneer vegetation (e.g. Cirium spp.; Arctium spp.; Urtica dioica; Atriplex spp.)\nSuccession site | grassy | Areal habitat in an initial state of succession; emerging shrubs are present but grassy vegetation still dominating most of the area"
+  },
+  {
+   "id": "u115",
+   "kind": "table 17",
+   "text": "Grass-clover leys | grassy | Areal habitat cultivated with a flower-rich grass-legume mix; mostly Trifolium spp. but also other legumes like Medicago sativa"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8"
+  ],
+  [
+   "u9"
+  ],
+  [
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20"
+  ],
+  [
+   "u21",
+   "u22",
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33"
+  ],
+  [
+   "u34",
+   "u35",
+   "u36",
+   "u37",
+   "u38",
+   "u39",
+   "u40",
+   "u41",
+   "u42",
+   "u43",
+   "u44",
+   "u45",
+   "u46",
+   "u47",
+   "u48",
+   "u49",
+   "u50",
+   "u51",
+   "u52",
+   "u53",
+   "u54"
+  ],
+  [
+   "u55",
+   "u56",
+   "u57",
+   "u58",
+   "u59",
+   "u60",
+   "u61",
+   "u62",
+   "u63",
+   "u64",
+   "u65",
+   "u66",
+   "u67",
+   "u68",
+   "u69",
+   "u70",
+   "u71",
+   "u72",
+   "u73",
+   "u74",
+   "u75"
+  ],
+  [
+   "u76",
+   "u77",
+   "u78",
+   "u79",
+   "u80",
+   "u81",
+   "u82",
+   "u83",
+   "u84",
+   "u85",
+   "u86",
+   "u87",
+   "u88",
+   "u89",
+   "u90",
+   "u91",
+   "u92",
+   "u93",
+   "u94",
+   "u95",
+   "u96"
+  ],
+  [
+   "u97",
+   "u98",
+   "u99",
+   "u100",
+   "u101",
+   "u102",
+   "u103",
+   "u104",
+   "u105",
+   "u106",
+   "u107",
+   "u108",
+   "u109",
+   "u110",
+   "u111",
+   "u112",
+   "u113"
+  ],
+  [
+   "u114",
+   "u115"
+  ]
+ ],
+ "calls": 24,
+ "categories": [
+  {
+   "variable": "MFC",
+   "code": "MFC",
+   "term": "mass-flowering crops",
+   "unit": "u1",
+   "model_label": "MFC",
+   "label": "mass-flowering crops",
+   "explanation": ""
+  },
+  {
+   "variable": "SNH",
+   "code": "SNH",
+   "term": "semi-natural habitats",
+   "unit": "u2",
+   "model_label": "SNH",
+   "label": "semi-natural habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "OSR",
+   "code": "OSR",
+   "term": "oilseed rape",
+   "unit": "u3",
+   "model_label": "OSR",
+   "label": "oilseed rape",
+   "explanation": ""
+  },
+  {
+   "variable": "EFA",
+   "code": "EFA",
+   "term": "ecological focus area",
+   "unit": "u3",
+   "model_label": "EFA",
+   "label": "ecological focus area",
+   "explanation": ""
+  },
+  {
+   "variable": "Foraging preferences",
+   "code": "Fabaceae",
+   "term": "species collecting pollen from Fabaceae (any species, known to forage on Fabaceae, not specifically Fabaceae specialists)",
+   "unit": "u7",
+   "model_label": "Fabaceae",
+   "label": "Fabaceae",
+   "explanation": "species collecting pollen from (any species, known to forage on Fabaceae, not specifically Fabaceae specialists"
+  },
+  {
+   "variable": "Foraging preferences",
+   "code": "not known to exploit Fabaceae",
+   "term": "species not known to exploit Fabaceae (specialists of a different plant family or generalists, not known to visit Fabaceae)",
+   "unit": "u7",
+   "model_label": "not known to exploit Fabaceae",
+   "label": "not known to exploit Fabaceae",
+   "explanation": "species (specialists of a different plant family or generalists, not known to visit Fabaceae"
+  },
+  {
+   "variable": "sociality",
+   "code": "social",
+   "term": "social",
+   "unit": "u7",
+   "model_label": "social",
+   "label": "social",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "solitary",
+   "term": "solitary",
+   "unit": "u7",
+   "model_label": "solitary",
+   "label": "solitary",
+   "explanation": ""
+  },
+  {
+   "variable": "local flower cover of the SNH transect area",
+   "code": "FC",
+   "term": "local flower cover of the SNH transect area",
+   "unit": "u9",
+   "model_label": "FC",
+   "label": "local flower cover of the SNH transect area",
+   "explanation": ""
+  },
+  {
+   "variable": "sampling run",
+   "code": "early/mid/late summer",
+   "term": "sampling run",
+   "unit": "u9",
+   "model_label": "sampling run",
+   "label": "sampling run",
+   "explanation": ""
+  },
+  {
+   "variable": "faba bean",
+   "code": "FB ?",
+   "term": "faba bean",
+   "unit": "u11",
+   "model_label": "FB ?",
+   "label": "faba bean",
+   "explanation": ""
+  },
+  {
+   "variable": "control",
+   "code": "FB-",
+   "term": "control",
+   "unit": "u11",
+   "model_label": "FB-",
+   "label": "control",
+   "explanation": ""
+  },
+  {
+   "variable": "percentage cover of semi-natural habitats",
+   "code": "SNH",
+   "term": "semi-natural habitats",
+   "unit": "u17",
+   "model_label": "SNH",
+   "label": "semi-natural habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "percentage cover of oilseed rape",
+   "code": "OSR",
+   "term": "oilseed rape",
+   "unit": "u17",
+   "model_label": "OSR",
+   "label": "oilseed rape",
+   "explanation": ""
+  },
+  {
+   "variable": "landscapes with faba bean cultivation",
+   "code": "FB+",
+   "term": "faba bean cultivation",
+   "unit": "u17",
+   "model_label": "FB+",
+   "label": "faba bean cultivation",
+   "explanation": ""
+  },
+  {
+   "variable": "landscapes without faba bean cultivation",
+   "code": "FB-",
+   "term": "with faba bean cultivation",
+   "model_term": "without faba bean cultivation",
+   "unit": "u17",
+   "model_label": "FB-",
+   "label": "with faba bean cultivation",
+   "explanation": ""
+  },
+  {
+   "variable": "east",
+   "code": "red circles",
+   "term": "east",
+   "unit": "u17",
+   "model_label": "red circles",
+   "label": "east",
+   "explanation": ""
+  },
+  {
+   "variable": "middle",
+   "code": "green triangles",
+   "term": "middle",
+   "unit": "u17",
+   "model_label": "green triangles",
+   "label": "middle",
+   "explanation": ""
+  },
+  {
+   "variable": "north",
+   "code": "blue squares",
+   "term": "north",
+   "unit": "u17",
+   "model_label": "blue squares",
+   "label": "north",
+   "explanation": ""
+  },
+  {
+   "variable": "landscapes with faba bean cultivation",
+   "code": "FB+",
+   "term": "with faba bean cultivation",
+   "unit": "u17",
+   "model_label": "FB+",
+   "label": "with faba bean cultivation",
+   "explanation": ""
+  },
+  {
+   "variable": "landscape metrics oilseed rape cover",
+   "code": "osr",
+   "term": "oilseed rape",
+   "unit": "u19",
+   "model_label": "osr",
+   "label": "oilseed rape",
+   "explanation": ""
+  },
+  {
+   "variable": "landscape pair ID",
+   "code": "l. pair",
+   "term": "landscape pair ID",
+   "unit": "u21",
+   "model_label": "l. pair",
+   "label": "landscape pair ID",
+   "explanation": ""
+  },
+  {
+   "variable": "faba bean cultivation",
+   "code": "FB",
+   "term": "faba bean cultivation",
+   "unit": "u21",
+   "model_label": "FB",
+   "label": "faba bean cultivation",
+   "explanation": ""
+  },
+  {
+   "variable": "foraging preference",
+   "code": "(1)",
+   "term": "species known to collect pollen from Fabaceae",
+   "unit": "u22",
+   "model_label": "(1)",
+   "label": "species known to collect pollen from Fabaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "foraging preference",
+   "code": "(0)",
+   "term": "not known to do so",
+   "unit": "u22",
+   "model_label": "(0)",
+   "label": "not known to do so",
+   "explanation": ""
+  },
+  {
+   "variable": "Sociality",
+   "code": "(1)",
+   "term": "Social species",
+   "unit": "u22",
+   "model_label": "(1)",
+   "label": "Social species",
+   "explanation": ""
+  },
+  {
+   "variable": "Sociality",
+   "code": "(0)",
+   "term": "solitary species",
+   "unit": "u22",
+   "model_label": "(0)",
+   "label": "solitary species",
+   "explanation": ""
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~0",
+   "term": "Oilseed rape (%)",
+   "unit": "u99",
+   "model_label": "~0",
+   "label": "Oilseed rape (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Sites",
+   "code": "0",
+   "term": "Sites",
+   "unit": "u109",
+   "model_label": "0",
+   "label": "Sites",
+   "explanation": ""
+  },
+  {
+   "variable": "Sites",
+   "code": "100",
+   "term": "Sites",
+   "unit": "u109",
+   "model_label": "100",
+   "label": "Sites",
+   "explanation": ""
+  },
+  {
+   "variable": "Sites",
+   "code": "200",
+   "term": "Sites",
+   "unit": "u109",
+   "model_label": "200",
+   "label": "Sites",
+   "explanation": ""
+  },
+  {
+   "variable": "Sites",
+   "code": "300",
+   "term": "Sites",
+   "unit": "u109",
+   "model_label": "300",
+   "label": "Sites",
+   "explanation": ""
+  },
+  {
+   "variable": "Sites",
+   "code": "400",
+   "term": "Sites",
+   "unit": "u109",
+   "model_label": "400",
+   "label": "Sites",
+   "explanation": ""
+  },
+  {
+   "variable": "Sites",
+   "code": "500",
+   "term": "Sites",
+   "unit": "u109",
+   "model_label": "500",
+   "label": "Sites",
+   "explanation": ""
+  },
+  {
+   "variable": "Group",
+   "code": "FB-",
+   "term": "Group",
+   "unit": "u105",
+   "model_label": "FB-",
+   "label": "Group",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Rosaceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Rosaceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Onagraceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Onagraceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Lamiaceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Lamiaceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Geraniaceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Geraniaceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Fabaceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Fabaceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Boranginaceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Boranginaceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Asteraceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Asteraceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Plant family",
+   "code": "Apiaceae",
+   "term": "Plant family",
+   "unit": "u108",
+   "model_label": "Apiaceae",
+   "label": "Plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "early summer",
+   "term": "Series",
+   "unit": "u111",
+   "model_label": "early summer",
+   "label": "Series",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "mid-summer",
+   "term": "Series",
+   "unit": "u111",
+   "model_label": "mid-summer",
+   "label": "Series",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "late summer",
+   "term": "Series",
+   "unit": "u111",
+   "model_label": "late summer",
+   "label": "Series",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "FB-",
+   "term": "Series",
+   "unit": "u112",
+   "model_label": "FB-",
+   "label": "Series",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "FB+",
+   "term": "Series",
+   "unit": "u112",
+   "model_label": "FB+",
+   "label": "Series",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "FB-",
+   "term": "Category",
+   "unit": "u113",
+   "model_label": "FB-",
+   "label": "Category",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "FB+",
+   "term": "Category",
+   "unit": "u113",
+   "model_label": "FB+",
+   "label": "Category",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Hedge",
+   "term": "woody",
+   "unit": "u114",
+   "model_label": "Hedge",
+   "label": "woody",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Grove",
+   "term": "woody",
+   "unit": "u114",
+   "model_label": "Grove",
+   "label": "woody",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Forest edges",
+   "term": "woody",
+   "unit": "u114",
+   "model_label": "Forest edges",
+   "label": "woody",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Succession site",
+   "term": "woody",
+   "unit": "u114",
+   "model_label": "Succession site",
+   "label": "woody",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Flower strip",
+   "term": "grassy",
+   "unit": "u114",
+   "model_label": "Flower strip",
+   "label": "grassy",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Extensive grassland / calcareous grassland",
+   "term": "grassy",
+   "unit": "u114",
+   "model_label": "Extensive grassland / calcareous grassland",
+   "label": "grassy",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Orchard meadows",
+   "term": "grassy",
+   "unit": "u114",
+   "model_label": "Orchard meadows",
+   "label": "grassy",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Fallows",
+   "term": "grassy",
+   "unit": "u114",
+   "model_label": "Fallows",
+   "label": "grassy",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat type",
+   "code": "Succession site",
+   "term": "grassy",
+   "unit": "u114",
+   "model_label": "Succession site",
+   "label": "grassy",
+   "explanation": ""
+  },
+  {
+   "variable": "Grass-clover leys",
+   "code": "grassy",
+   "term": "Areal habitat cultivated with a flower-rich grass-legume mix; mostly Trifolium spp. but also other legumes like Medicago sativa",
+   "unit": "u115",
+   "model_label": "grassy",
+   "label": "Areal habitat cultivated with a flower-rich grass-legume mix; mostly Trifolium spp. but also other legumes like Medicago sativa",
+   "explanation": ""
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "tongue length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "sociality",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "foraging preferences",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "Foraging preferences",
+   "code": "",
+   "label": "species collecting pollen from Fabaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Foraging preferences",
+   "code": "",
+   "label": "species not known to exploit Fabaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "sociality",
+   "code": "",
+   "label": "solitary bees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "density of bumblebees",
+   "code": "",
+   "label": "density of bumblebees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "density of non-Bombus wild bees",
+   "code": "",
+   "label": "density of non-Bombus wild bees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species richness of all wild bees per study landscape",
+   "code": "",
+   "label": "species richness of all wild bees per study landscape",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "density of the long-tongued B. pascuorum/ B. muscorum color group",
+   "code": "",
+   "label": "B. pascuorum densities",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "proportion of wild bees collecting pollen from Fabaceae",
+   "code": "",
+   "label": "Fabaceae foragers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "proportion of social wild bees relative to all bees",
+   "code": "",
+   "label": "proportion of social wild bees relative to all bees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "proportion of long-tongued bumblebees relative to all bumblebees",
+   "code": "",
+   "label": "proportion of long-tongued bumblebees relative to all bumblebees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "semi-natural habitat (SNH)",
+   "code": "",
+   "label": "Woody habitat",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "tongue length",
+   "code": "",
+   "label": "short-tongued",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "tongue length",
+   "code": "",
+   "label": "long-tongued",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Rosaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Onagraceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Lamiaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Geraniaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Boranginaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Asteraceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Plant family",
+   "code": "",
+   "label": "Apiaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Run",
+   "code": "",
+   "label": "early summer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Run",
+   "code": "",
+   "label": "mid-summer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Run",
+   "code": "",
+   "label": "late summer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u108"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Hedge",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Grove",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Forest edges",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Succession site",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Flower strip",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Extensive grassland / calcareous grassland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Orchard meadows",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Fallows",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u114"
+  },
+  {
+   "variable": "Habitat category",
+   "code": "",
+   "label": "Grass-clover leys",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u115"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "faba bean cultivation",
+   "code": "FB+",
+   "term": "faba bean cultivation",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "faba bean cultivation",
+   "code": "FB-",
+   "term": "faba bean cultivation",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "N/A",
+   "term": "N/A",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "N/A",
+   "term": "N/A",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~4",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~5",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~6",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~7",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~8",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~9",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~10",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~15",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~16",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~17",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~18",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~19",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Oilseed rape (%)",
+   "code": "~20",
+   "term": "Oilseed rape (%)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Group",
+   "code": "FB+",
+   "term": "Group",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 127.9
+}

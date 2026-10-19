@@ -1,0 +1,684 @@
+{
+ "calls": 1,
+ "chars": 3789,
+ "passages": [
+  "[prose] Ahola, M., & Silvonen, K. (2005‒2011). Larvae of northern European Noctuidae. Volumes 1‒3. Kuva Seppälä, Vaasa.",
+  "[prose] Hibernation_Larva: 0 – no hibernation in larval stage recorded; 1 – hibernation in larval stage recorded.",
+  "[prose] Hibernation_Pupa: 0 – no hibernation in pupal stage recorded; 1 – hibernation in pupal stage recorded.",
+  "[prose] Hibernation_Egg: 0 – no hibernation in egg stage recorded; 1 – hibernation in egg stage recorded.",
+  "[prose] Hibernation_Imago: 0 – no hibernation as adult recorded; 1 – hibernation in adult stage recorded.",
+  "[prose] Larvae_endophagous: 0 – larvae are external feeders throughout their life; 0.5 – larva construct closed shelters (from leaf rolls, leaves spun together or alike; viz. they are ‘semi-concealed’); or they are boring into plant tissues, but only for a fraction of their development; 1 – larvae are internal feeders inside plant organs such as stems, fruits, or roots.",
+  "[prose] Larvae_social: 0 – larvae feed solitarily; 0.5 – larvae form aggregations in earlier instars, sometimes in loose webs; 1 – larvae are highly social, in communal webs.",
+  "[prose] Larval_host-plant_families: number of host families recorded in evaluated sources. Species known to feed on plant species in just one genus are scored as 0.5.",
+  "[prose] Larvae_on_dead_plant_matter: 0 – larvae feed on living plant tissues; 1 – larvae feed on withered plants or on leaf litter and alike.",
+  "[prose] Larvae_on_mosses-lichens: 0 – larvae feed on vascular plants; 1 – larvae feed on lichens, mosses, or algal biofilms.",
+  "[prose] Larvae_on_reed_aquatic: 0 – larva on terrestrial plants; 1 – larvae feed on reed (Phragmites australis), other reed plants (e.g. Iris pseudacorus) directly at the edge of water bodies, or in submersed manner on aquatic plants.",
+  "[prose] Larvae_on_herbs: 0 – larvae exclusively feed on woody plants; 0.5 – larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants.",
+  "[prose] Larvae_on_grasses: 0 – larvae never feed on graminoid plants (Poaceae, Cyperaceae, Juncaceae); 0.5 – larval host range includes graminoid plants, but moth species is not specific to that resource; 1 – larvae exclusively known to feed on graminoid plants in nature.",
+  "[prose] Larvae_on_softwood_trees: 0 – larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz. Populus, Salix, Alnus); 0.5 – larval host range does include softwood trees; 1 – larvae exclusively feed on softwood trees in nature.",
+  "[prose] Larvae_on_lianas: 0 – larvae not known to feed on the few lianas native to Central Europe (Clematis vitalba, Hedera helix) which are common in floodplain forests; 0.5 – larval host range does include lianas; 1 – larvae exclusively feed on these lianas.",
+  "[prose] Larvae_on_broadleaved_trees_shrubs: 0 – caterpillars do not feed on woody deciduous plants in nature; 0.5 – host range includes broadleaved trees and shrubs; 1 – larvae only feed on trees and shrubs.",
+  "[prose] Larvae_subterraneous: 0 – larvae live above ground (except perhaps for pupation); 0.5 – larvae in uppermost litter layer, e.g. when feeding on mosses etc.; 1 – larvae spend most of their time below ground, e.g. as root herbivores.",
+  "[prose] Pupa_in_on_ground: 0 – pupation site distinctly above ground, in higher vegetation; 1 – pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events.",
+  "[prose] Functional_proboscis: 0 – proboscis reduced an non-functional; 0.5 – proboscis reduced, but can be used to access at least water and very open nutrient sources; 1 – proboscis well developed.",
+  "[prose] Imago_on_non-nectar_food-sources: 0 – adults feed on flower nectar; 1 – adult moths known to regularly visit rotting fruits an related non-floral nutrient sources."
+ ],
+ "categories": [
+  {
+   "variable": "Hibernation_Larva",
+   "code": "0",
+   "term": "no hibernation in larval stage recorded",
+   "model_label": "no hibernation",
+   "label": "no hibernation",
+   "explanation": "in larval stage recorded"
+  },
+  {
+   "variable": "Hibernation_Larva",
+   "code": "1",
+   "term": "hibernation in larval stage recorded",
+   "model_label": "hibernation",
+   "label": "hibernation",
+   "explanation": "in larval stage recorded"
+  },
+  {
+   "variable": "Hibernation_Pupa",
+   "code": "0",
+   "term": "no hibernation in pupal stage recorded",
+   "model_label": "no hibernation",
+   "label": "no hibernation",
+   "explanation": "in pupal stage recorded"
+  },
+  {
+   "variable": "Hibernation_Pupa",
+   "code": "1",
+   "term": "hibernation in pupal stage recorded",
+   "model_label": "hibernation",
+   "label": "hibernation",
+   "explanation": "in pupal stage recorded"
+  },
+  {
+   "variable": "Hibernation_Egg",
+   "code": "0",
+   "term": "no hibernation in egg stage recorded",
+   "model_label": "no hibernation",
+   "label": "no hibernation",
+   "explanation": "in egg stage recorded"
+  },
+  {
+   "variable": "Hibernation_Egg",
+   "code": "1",
+   "term": "hibernation in egg stage recorded",
+   "model_label": "hibernation",
+   "label": "hibernation",
+   "explanation": "in egg stage recorded"
+  },
+  {
+   "variable": "Hibernation_Imago",
+   "code": "0",
+   "term": "no hibernation as adult recorded",
+   "model_label": "no hibernation",
+   "label": "no hibernation",
+   "explanation": "as adult recorded"
+  },
+  {
+   "variable": "Hibernation_Imago",
+   "code": "1",
+   "term": "hibernation in adult stage recorded",
+   "model_label": "hibernation",
+   "label": "hibernation",
+   "explanation": "in adult stage recorded"
+  },
+  {
+   "variable": "Larvae_endophagous",
+   "code": "0",
+   "term": "larvae are external feeders throughout their life",
+   "model_label": "external feeders",
+   "label": "external feeders",
+   "explanation": "larvae are throughout their life"
+  },
+  {
+   "variable": "Larvae_endophagous",
+   "code": "0.5",
+   "term": "larva construct closed shelters (from leaf rolls, leaves spun together or alike; viz. they are ‘semi-concealed’); or they are boring into plant tissues, but only for a fraction of their development",
+   "model_label": "larva construct closed shelters",
+   "label": "larva construct closed shelters",
+   "explanation": "from leaf rolls, leaves spun together or alike; viz. they are ‘semi-concealed’); or they are boring into plant tissues, but only for a fraction of their development"
+  },
+  {
+   "variable": "Larvae_endophagous",
+   "code": "1",
+   "term": "larvae are internal feeders inside plant organs such as stems, fruits, or roots",
+   "model_label": "internal feeders",
+   "label": "internal feeders",
+   "explanation": "larvae are inside plant organs such as stems, fruits, or roots"
+  },
+  {
+   "variable": "Larvae_social",
+   "code": "0",
+   "term": "larvae feed solitarily",
+   "model_label": "solitarily",
+   "label": "solitarily",
+   "explanation": "larvae feed"
+  },
+  {
+   "variable": "Larvae_social",
+   "code": "0.5",
+   "term": "larvae form aggregations in earlier instars, sometimes in loose webs",
+   "model_label": "form aggregations",
+   "label": "form aggregations",
+   "explanation": "larvae in earlier instars, sometimes in loose webs"
+  },
+  {
+   "variable": "Larvae_social",
+   "code": "1",
+   "term": "larvae are highly social, in communal webs",
+   "model_label": "highly social",
+   "label": "highly social",
+   "explanation": "larvae are , in communal webs"
+  },
+  {
+   "variable": "Larvae_on_dead_plant_matter",
+   "code": "0",
+   "term": "larvae feed on living plant tissues",
+   "model_label": "living plant tissues",
+   "label": "living plant tissues",
+   "explanation": "larvae feed on"
+  },
+  {
+   "variable": "Larvae_on_dead_plant_matter",
+   "code": "1",
+   "term": "larvae feed on withered plants or on leaf litter and alike",
+   "model_label": "withered plants",
+   "label": "withered plants",
+   "explanation": "larvae feed on or on leaf litter and alike"
+  },
+  {
+   "variable": "Larvae_on_mosses-lichens",
+   "code": "0",
+   "term": "larvae feed on vascular plants",
+   "model_label": "vascular plants",
+   "label": "vascular plants",
+   "explanation": "larvae feed on"
+  },
+  {
+   "variable": "Larvae_on_mosses-lichens",
+   "code": "1",
+   "term": "larvae feed on lichens, mosses, or algal biofilms",
+   "model_label": "lichens, mosses, or algal biofilms",
+   "label": "lichens, mosses, or algal biofilms",
+   "explanation": "larvae feed on"
+  },
+  {
+   "variable": "Larvae_on_reed_aquatic",
+   "code": "0",
+   "term": "larva on terrestrial plants",
+   "model_label": "terrestrial plants",
+   "label": "terrestrial plants",
+   "explanation": "larva on"
+  },
+  {
+   "variable": "Larvae_on_reed_aquatic",
+   "code": "1",
+   "term": "larvae feed on reed (Phragmites australis), other reed plants (e.g. Iris pseudacorus) directly at the edge of water bodies, or in submersed manner on aquatic plants",
+   "model_label": "reed",
+   "label": "reed",
+   "explanation": "larvae feed on (Phragmites australis), other reed plants (e.g. Iris pseudacorus) directly at the edge of water bodies, or in submersed manner on aquatic plants"
+  },
+  {
+   "variable": "Larvae_on_herbs",
+   "code": "0",
+   "term": "larvae exclusively feed on woody plants",
+   "model_label": "woody plants",
+   "label": "woody plants",
+   "explanation": "larvae exclusively feed on"
+  },
+  {
+   "variable": "Larvae_on_herbs",
+   "code": "0.5",
+   "term": "larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants",
+   "model_label": "woody plants",
+   "label": "woody plants",
+   "explanation": "larvae mainly on , but also recorded from herbaceous plants; larvae only feed on herbaceous plants"
+  },
+  {
+   "variable": "Larvae_on_grasses",
+   "code": "0",
+   "term": "larvae never feed on graminoid plants (Poaceae, Cyperaceae, Juncaceae)",
+   "model_label": "graminoid plants",
+   "label": "graminoid plants",
+   "explanation": "larvae never feed on (Poaceae, Cyperaceae, Juncaceae"
+  },
+  {
+   "variable": "Larvae_on_grasses",
+   "code": "0.5",
+   "term": "larval host range includes graminoid plants, but moth species is not specific to that resource",
+   "model_label": "graminoid plants",
+   "label": "graminoid plants",
+   "explanation": "larval host range includes , but moth species is not specific to that resource"
+  },
+  {
+   "variable": "Larvae_on_grasses",
+   "code": "1",
+   "term": "larvae exclusively known to feed on graminoid plants in nature",
+   "model_label": "graminoid plants",
+   "label": "graminoid plants",
+   "explanation": "larvae exclusively known to feed on in nature"
+  },
+  {
+   "variable": "Larvae_on_softwood_trees",
+   "code": "0",
+   "term": "larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz. Populus, Salix, Alnus)",
+   "model_label": "softwood trees",
+   "label": "softwood trees",
+   "explanation": "larval host range does not include , which are characteristic elements of floodplain forest vegetation (viz. Populus, Salix, Alnus"
+  },
+  {
+   "variable": "Larvae_on_softwood_trees",
+   "code": "0.5",
+   "term": "larval host range does include softwood trees",
+   "model_label": "softwood trees",
+   "label": "softwood trees",
+   "explanation": "larval host range does include"
+  },
+  {
+   "variable": "Larvae_on_softwood_trees",
+   "code": "1",
+   "term": "larvae exclusively feed on softwood trees in nature",
+   "model_label": "softwood trees",
+   "label": "softwood trees",
+   "explanation": "larvae exclusively feed on in nature"
+  },
+  {
+   "variable": "Larvae_on_lianas",
+   "code": "0",
+   "term": "larvae not known to feed on the few lianas native to Central Europe (Clematis vitalba, Hedera helix) which are common in floodplain forests",
+   "model_label": "lianas",
+   "label": "lianas",
+   "explanation": "larvae not known to feed on the few native to Central Europe (Clematis vitalba, Hedera helix) which are common in floodplain forests"
+  },
+  {
+   "variable": "Larvae_on_lianas",
+   "code": "0.5",
+   "term": "larval host range does include lianas",
+   "model_label": "lianas",
+   "label": "lianas",
+   "explanation": "larval host range does include"
+  },
+  {
+   "variable": "Larvae_on_lianas",
+   "code": "1",
+   "term": "larvae exclusively feed on these lianas",
+   "model_label": "lianas",
+   "label": "lianas",
+   "explanation": "larvae exclusively feed on these"
+  },
+  {
+   "variable": "Larvae_on_broadleaved_trees_shrubs",
+   "code": "0",
+   "term": "caterpillars do not feed on woody deciduous plants in nature",
+   "model_label": "woody deciduous plants",
+   "label": "woody deciduous plants",
+   "explanation": "caterpillars do not feed on in nature"
+  },
+  {
+   "variable": "Larvae_on_broadleaved_trees_shrubs",
+   "code": "0.5",
+   "term": "host range includes broadleaved trees and shrubs",
+   "model_label": "broadleaved trees and shrubs",
+   "label": "broadleaved trees and shrubs",
+   "explanation": "host range includes"
+  },
+  {
+   "variable": "Larvae_on_broadleaved_trees_shrubs",
+   "code": "1",
+   "term": "larvae only feed on trees and shrubs",
+   "model_label": "trees and shrubs",
+   "label": "trees and shrubs",
+   "explanation": "larvae only feed on"
+  },
+  {
+   "variable": "Larvae_subterraneous",
+   "code": "0",
+   "term": "larvae live above ground (except perhaps for pupation)",
+   "model_label": "above ground",
+   "label": "above ground",
+   "explanation": "larvae live (except perhaps for pupation"
+  },
+  {
+   "variable": "Larvae_subterraneous",
+   "code": "0.5",
+   "term": "larvae in uppermost litter layer, e.g. when feeding on mosses etc.",
+   "model_label": "uppermost litter layer",
+   "label": "uppermost litter layer",
+   "explanation": "larvae in , e.g. when feeding on mosses etc."
+  },
+  {
+   "variable": "Larvae_subterraneous",
+   "code": "1",
+   "term": "larvae spend most of their time below ground, e.g. as root herbivores",
+   "model_label": "below ground",
+   "label": "below ground",
+   "explanation": "larvae spend most of their time , e.g. as root herbivores"
+  },
+  {
+   "variable": "Pupa_in_on_ground",
+   "code": "0",
+   "term": "pupation site distinctly above ground, in higher vegetation",
+   "model_label": "above ground",
+   "label": "above ground",
+   "explanation": "pupation site distinctly , in higher vegetation"
+  },
+  {
+   "variable": "Pupa_in_on_ground",
+   "code": "1",
+   "term": "pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events",
+   "model_label": "ground",
+   "label": "ground",
+   "explanation": "pupation site in or close to in low vegetation ( 100cm), thus hardly threatened by flood events"
+  },
+  {
+   "variable": "Functional_proboscis",
+   "code": "0",
+   "term": "proboscis reduced an non-functional",
+   "model_label": "proboscis reduced",
+   "label": "proboscis reduced",
+   "explanation": "an non-functional"
+  },
+  {
+   "variable": "Functional_proboscis",
+   "code": "0.5",
+   "term": "proboscis reduced, but can be used to access at least water and very open nutrient sources",
+   "model_label": "proboscis reduced",
+   "label": "proboscis reduced",
+   "explanation": "but can be used to access at least water and very open nutrient sources"
+  },
+  {
+   "variable": "Functional_proboscis",
+   "code": "1",
+   "term": "proboscis well developed",
+   "model_label": "proboscis well developed",
+   "label": "proboscis well developed",
+   "explanation": ""
+  },
+  {
+   "variable": "Imago_on_non-nectar_food-sources",
+   "code": "0",
+   "term": "adults feed on flower nectar",
+   "model_term": "adult moths feed on flower nectar",
+   "model_label": "flower nectar",
+   "label": "flower nectar",
+   "explanation": "adults feed on"
+  },
+  {
+   "variable": "Imago_on_non-nectar_food-sources",
+   "code": "1",
+   "term": "adult moths known to regularly visit rotting fruits an related non-floral nutrient sources",
+   "model_label": "rotting fruits",
+   "label": "rotting fruits",
+   "explanation": "adult moths known to regularly visit an related non-floral nutrient sources"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "no hibernation in larval stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "hibernation in larval stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "no hibernation in pupal stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "hibernation in pupal stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "no hibernation in egg stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "hibernation in egg stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "no hibernation as adult recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Hibernation",
+   "code": "",
+   "label": "hibernation in adult stage recorded",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_endophagous",
+   "code": "",
+   "label": "larvae are external feeders throughout their life",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_endophagous",
+   "code": "",
+   "label": "larva construct closed shelters (from leaf rolls, leaves spun together or alike; viz. they are ‘semi-concealed’); or they are boring into plant tissues, but only for a fraction of their development",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_endophagous",
+   "code": "",
+   "label": "larvae are internal feeders inside plant organs such as stems, fruits, or roots",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_social",
+   "code": "",
+   "label": "larvae feed solitarily",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_social",
+   "code": "",
+   "label": "larvae form aggregations in earlier instars, sometimes in loose webs",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_social",
+   "code": "",
+   "label": "larvae are highly social, in communal webs",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_dead_plant_matter",
+   "code": "",
+   "label": "larvae feed on living plant tissues",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_dead_plant_matter",
+   "code": "",
+   "label": "larvae feed on withered plants or on leaf litter and alike",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_mosses-lichens",
+   "code": "",
+   "label": "larvae feed on vascular plants",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_mosses-lichens",
+   "code": "",
+   "label": "larvae feed on lichens, mosses, or algal biofilms",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_reed_aquatic",
+   "code": "",
+   "label": "larva on terrestrial plants",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_reed_aquatic",
+   "code": "",
+   "label": "larvae feed on reed (Phragmites australis), other reed plants (e.g. Iris pseudacorus) directly at the edge of water bodies, or in submersed manner on aquatic plants",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_herbs",
+   "code": "",
+   "label": "larvae exclusively feed on woody plants",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_herbs",
+   "code": "",
+   "label": "larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_grasses",
+   "code": "",
+   "label": "larvae never feed on graminoid plants (Poaceae, Cyperaceae, Juncaceae)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_grasses",
+   "code": "",
+   "label": "larval host range includes graminoid plants, but moth species is not specific to that resource",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_grasses",
+   "code": "",
+   "label": "larvae exclusively known to feed on graminoid plants in nature",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_softwood_trees",
+   "code": "",
+   "label": "larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz. Populus, Salix, Alnus)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_softwood_trees",
+   "code": "",
+   "label": "larval host range does include softwood trees",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_softwood_trees",
+   "code": "",
+   "label": "larvae exclusively feed on softwood trees in nature",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_lianas",
+   "code": "",
+   "label": "larvae not known to feed on the few lianas native to Central Europe (Clematis vitalba, Hedera helix) which are common in floodplain forests",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_lianas",
+   "code": "",
+   "label": "larval host range does include lianas",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_lianas",
+   "code": "",
+   "label": "larvae exclusively feed on these lianas",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_broadleaved_trees_shrubs",
+   "code": "",
+   "label": "caterpillars do not feed on woody deciduous plants in nature",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_broadleaved_trees_shrubs",
+   "code": "",
+   "label": "host range includes broadleaved trees and shrubs",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_on_broadleaved_trees_shrubs",
+   "code": "",
+   "label": "larvae only feed on trees and shrubs",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_subterraneous",
+   "code": "",
+   "label": "larvae live above ground (except perhaps for pupation)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_subterraneous",
+   "code": "",
+   "label": "larvae in uppermost litter layer, e.g. when feeding on mosses etc.",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Larvae_subterraneous",
+   "code": "",
+   "label": "larvae spend most of their time below ground, e.g. as root herbivores",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Pupa_in_on_ground",
+   "code": "",
+   "label": "pupation site distinctly above ground, in higher vegetation",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Pupa_in_on_ground",
+   "code": "",
+   "label": "pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Functional_proboscis",
+   "code": "",
+   "label": "proboscis reduced an non-functional",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Functional_proboscis",
+   "code": "",
+   "label": "proboscis reduced, but can be used to access at least water and very open nutrient sources",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Imago_on_non-nectar_food-sources",
+   "code": "",
+   "label": "adult moths known to regularly visit rotting fruits an related non-floral nutrient sources",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "Imago_on_non-nectar_food-sources",
+   "code": "",
+   "term": "adult moths feed on flower nectar",
+   "why": "uncoded label not printed as whole words"
+  }
+ ],
+ "seconds": 106.0
+}

@@ -1,0 +1,128 @@
+round3_full vs round2, against the person's round-2 marks
+
+  right & unchanged    226
+  right & CHANGED       12
+  wrong & changed       10
+  wrong & unchanged     15
+  not marked             0
+
+right & CHANGED:
+  Barber2017__t5
+      body start 2 -> 1
+      cell 1,0: row_label -> None
+  Barber2017__t6
+      cell 1,2: column -> value
+      col 2: ('', 'AG', '-') -> ('', 'AG', '')
+  Brasil2024__t8
+      col 3: ('', 'Body size x urbanization', 'Female summer, F') -> ('', 'Body size x urbanization Female summer', 'F')
+      col 4: ('', 'Body size x urbanization', 'Female summer, p value') -> ('', 'Body size x urbanization Female summer', 'p value')
+  Brasil2024__t9
+      cell 0,1: group -> column
+  Gossner2013__t10
+      cell 1,0: row_label -> column
+      col 0: ('', '', '') -> ('', 'Variable', '')
+  Guareschi2015__t6
+      cell 0,2: joined -> group
+      cell 0,6: joined -> group
+      cell 0,9: joined -> group
+      col 0: ('', 'Network', 'Taxonomic diversity') -> ('Network', 'Taxonomic diversity', '')
+      col 2: ('', 'βSIM Protected', '') -> ('βSIM', 'Protected', '')
+      col 3: ('', 'βSIM Random', '') -> ('βSIM', 'Random', '')
+      col 4: ('', 'βSIM P', '') -> ('βSIM', 'P', '')
+      col 6: ('', 'βNES Protected', '') -> ('βNES', 'Protected', '')
+      …
+  Korosi2022__t2   note: table is a error not header detection
+      cell 0,1: column -> row_label
+      col 1: ('', 'Column 1', '') -> ('', '', '')
+  Kovacs2010__t4
+      cell 0,1: column -> joined
+      cell 0,3: column -> joined
+      cell 1,1: specification -> column
+      cell 1,2: specification -> column
+      cell 1,3: specification -> column
+      cell 1,4: specification -> column
+      col 1: ('', 'Workers', 'k ± SE') -> ('', 'Workers k ± SE', '')
+      col 2: ('', 'Workers', 'Isometry (t)') -> ('', 'Workers Isometry (t)', '')
+      …
+  OsorioCanadas2018__t10
+      body start 0 -> 1
+      cell 0,0: None -> column
+      cell 0,1: None -> column
+      cell 0,2: None -> column
+      cell 0,3: None -> column
+      cell 0,4: None -> column
+      cell 0,5: None -> column
+      cell 0,6: None -> column
+      …
+  Rebrina2022__t0
+      cell 0,5: group -> joined
+      col 5: ('p', '10-25', '') -> ('', 'p 10-25', '')
+      col 6: ('p', '10-50', '') -> ('', 'p 10-50', '')
+      col 7: ('p', '10-100', '') -> ('', 'p 10-100', '')
+      col 8: ('p', '10-500', '') -> ('', 'p 10-500', '')
+      col 9: ('p', '25-50', '') -> ('', 'p 25-50', '')
+  Wiescher2012__t3
+      cell 1,0: section -> row_label
+  Wiescher2012__t4
+      body start 2 -> 1
+      cell 1,0: section -> None
+
+wrong & changed:
+  Braschler2021__t1   note: row1 is not header?
+      body start 2 -> 1
+      cell 1,0: column -> None
+      cell 1,1: column -> None
+      cell 1,2: column -> None
+      cell 1,3: column -> None
+      col 0: ('Trait', 'Habitat preference', '') -> ('', 'Trait', '')
+      col 1: ('', 'Type', 'Binominal') -> ('', 'Type', '')
+      col 2: ('', 'Specification', 'Habitat specialist (openland or forest); habitat generalist') -> ('', 'Specification', '')
+      …
+  Derhe2016__t3   note: Global model is also not section it should be column name
+      cell 0,0: section -> column
+      col 0: ('', '', '') -> ('', 'Global model', '')
+  Espinosa2023__t7   note: Feeding group column name
+      cell 1,5: value -> column
+      col 5: ('', '', '') -> ('', 'Feeding group', '')
+  Graf2021__t7   note: Andreninae and Calliopsini are sections
+      body start 2 -> 3
+      cell 2,0: None -> row_label
+  Graf2021__t12   note: Areas is column name
+      cell 0,0: section -> column
+      col 0: ('', '', '') -> ('', 'Areas', '')
+  Guareschi2015__t7
+      body start 2 -> 1
+      cell 1,0: column -> None
+      col 0: ('Network', 'Taxonomic diversity', '') -> ('', 'Network', '')
+      col 1: ('Threshold', 'Taxonomic diversity', '') -> ('', 'Threshold', '')
+  Habustova2017__t0   note: Trait Category1 is row label here
+      body start 3 -> 2
+      cell 0,0: group -> column
+      cell 2,0: section -> None
+      col 0: ('Trait Category1', '', '') -> ('', 'Trait Category1', '')
+      col 1: ('Trait Category1', '', '') -> ('', 'Trait Category1', '')
+  Nunes2016__t2   note: Altitude (m a.s.l.) can be joined
+      col 0: ('', 'Species', 'Transects') -> ('Altitude (m a.s.l.) > Species', 'Transects', '')
+  Odanaka2019__t4   note: Landscape is a column anme here
+      cell 0,0: section -> column
+      col 0: ('', '', '') -> ('', 'Landscape', '')
+  Uemori2021__t4   note: Functional traits and distribution index is a column name
+      cell 0,0: section -> column
+      col 0: ('', '', '') -> ('', 'Functional traits and distribution index', '')
+
+wrong & unchanged:
+  Attiwilli2022__t5
+  Brasil2024__t3   note: species is column name
+  Brasil2024__t6   note: Functional trait column name
+  Figueroa2021__t2   note: Thermal Cycling is group and Denaturing Min | Temp	Replication Sec | Temp	Elongation Min | Temp is column names
+  Gossner2013__t2   note: Europe-wide and Regional scale scale are groups and, 	Trait and Trait mean(range) are column names
+  Gossner2013__t9
+  Gossner2013__t11
+  Graf2021__t8   note: Andreninae		and Calliopsini are sections
+  Guareschi2015__t1
+  Guareschi2015__t3   note: Traits is not a group
+  Guareschi2015__t8
+  Ibarra2021__t1   note: a) Species richness section
+  Korosi2022__t3   note: 2019 is not tagged as value
+  Rebrina2022__t2   note: Acrididae MacLeay, 1821 is a section
+  Tonelli2021__t5

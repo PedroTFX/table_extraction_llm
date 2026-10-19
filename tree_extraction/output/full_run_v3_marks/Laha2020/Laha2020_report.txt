@@ -1,0 +1,142 @@
+  [semantic] matched by values: 'inter-tegular distance ± SE (mm)' -> 'Intertegular distance'
+  [semantic] matched by values: 'MLL ± SE (mm)' -> 'Midleg Lengths'
+  [semantic] matched by values: 'FLL ± SE (mm)' -> 'Foreleg Lengths'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Laha2020\Laha2020.xlsx  (98 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Laha2020\Laha2020.csv  (170 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (72)
+  '*Andrographis paniculata': no ground-truth name denotes this organism
+  '*Anisochilus carnosus': no ground-truth name denotes this organism
+  '*Cassia alata': no ground-truth name denotes this organism
+  '*Cassia occidentalis': no ground-truth name denotes this organism
+  '*Cassia tora': no ground-truth name denotes this organism
+  '*Chromolaena odorata (=Eupatorium odoratum)': no ground-truth name denotes this organism
+  '*Cipadessa baccifera': no ground-truth name denotes this organism
+  '*Crotalaria pallida': no ground-truth name denotes this organism
+  '*Croton bonplandianus': no ground-truth name denotes this organism
+  '*Desmodium triflorum': no ground-truth name denotes this organism
+  '*Glycosmis pentaphylla': no ground-truth name denotes this organism
+  '*Hyptis suaveolens': no ground-truth name denotes this organism
+  '*Jatropha gossypiifolia': no ground-truth name denotes this organism
+  '*Limnophila repens': no ground-truth name denotes this organism
+  '*Lindernia crustacea': no ground-truth name denotes this organism
+  '*Martynia annua': no ground-truth name denotes this organism
+  '*Ocimum basilicum': no ground-truth name denotes this organism
+  '*Ocimum canum': no ground-truth name denotes this organism
+  '*Phyllanthus rheedei': no ground-truth name denotes this organism
+  '*Rungia parviflora': no ground-truth name denotes this organism
+  '*Sida acuta': no ground-truth name denotes this organism
+  '*Sida veronicaefolia (=S. humilis)': no ground-truth name denotes this organism
+  '*Stylosanthes hamata': no ground-truth name denotes this organism
+  '*Tephrosia purpurea': no ground-truth name denotes this organism
+  '*Tridax procumbens': no ground-truth name denotes this organism
+  'Achyranthes bidentata': no ground-truth name denotes this organism
+  'Adenosma indianum': no ground-truth name denotes this organism
+  'Ageratum conyzoides': no ground-truth name denotes this organism
+  'Allophylus cobbe': no ground-truth name denotes this organism
+  'Alternanthera sessilis': no ground-truth name denotes this organism
+  'Barleria prionitis': no ground-truth name denotes this organism
+  'Biophytum sensitivum': no ground-truth name denotes this organism
+  'Boerhavia repens': no ground-truth name denotes this organism
+  'Bonnaya brachiata (=Lindernia ciliata)': no ground-truth name denotes this organism
+  'Bryophyllum sp.': no ground-truth name denotes this organism
+  'Cassia hirsuta': no ground-truth name denotes this organism
+  'Cleome viscosa': no ground-truth name denotes this organism
+  'Clerodendrum viscosum (=C. infortunatum)': no ground-truth name denotes this organism
+  'Corchorus aestuans': no ground-truth name denotes this organism
+  'Crotalaria prostrata': no ground-truth name denotes this organism
+  'Croton oblongifolius': no ground-truth name denotes this organism
+  'Dicliptera sp.': no ground-truth name denotes this organism
+  'Didelacanthus prostratus (=Ruellia prostrata)': no ground-truth name denotes this organism
+  'Drosera burmannii': no ground-truth name denotes this organism
+  'Elephantopus scaber': no ground-truth name denotes this organism
+  'Emilia sonchifolia': no ground-truth name denotes this organism
+  'Eranthemum sp.': no ground-truth name denotes this organism
+  'Erythraea roxburghii': no ground-truth name denotes this organism
+  'Evolvulus alsinoides': no ground-truth name denotes this organism
+  'Evolvulus nummularius': no ground-truth name denotes this organism
+  'Hedyotis pinifolia': no ground-truth name denotes this organism
+  'Holarrhena pubescens': no ground-truth name denotes this organism
+  'Hybanthus enneaspermus (=Ionidium suffruticosum)': no ground-truth name denotes this organism
+  'Hydrolea zeylanica': no ground-truth name denotes this organism
+  'Jatropha curcas': no ground-truth name denotes this organism
+  'Lobelia sp.': no ground-truth name denotes this organism
+  'Ludwigia parviflora': no ground-truth name denotes this organism
+  'Melochia corchorifolia': no ground-truth name denotes this organism
+  'Meyna spinosa (Xeromphis)': no ground-truth name denotes this organism
+  'Mimosa pudica': no ground-truth name denotes this organism
+  'Mollugo stricta': no ground-truth name denotes this organism
+  'Oldenlandia corymbosa': no ground-truth name denotes this organism
+  'Oldenlandia sp.': no ground-truth name denotes this organism
+  'Phyllanthus simplex': no ground-truth name denotes this organism
+  'Scoparia dulcis': no ground-truth name denotes this organism
+  'Sida rhombifolia var. rhomboidea': no ground-truth name denotes this organism
+  'Spermacoce hispida': no ground-truth name denotes this organism
+  'Spermacoce ocymoides': no ground-truth name denotes this organism
+  'Spilanthes paniculata': no ground-truth name denotes this organism
+  'Taramnus labialis': no ground-truth name denotes this organism
+  'Urena lobata': no ground-truth name denotes this organism
+  'Vernonia cinerea': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'FLL ± SE (mm)' -> 'Foreleg Lengths'
+  'MLL ± SE (mm)' -> 'Midleg Lengths'
+  'body length ± SE (mm)' -> 'Body length'
+  'inter-tegular distance ± SE (mm)' -> 'Intertegular distance'
+  'tongue length ± SE (mm)' -> 'Tongue Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 98
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 72   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.576 / 1.000 / 0.731   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             72
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     98  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     98  0.000  <-- low
+  measurementStatistic          0     98  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     98  0.000  <-- low
+  lifeStage                     0     98  0.000  <-- low
+  caste                         0     98  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     98  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     98  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      20    20   
+  intertegular distance                            20    20   
+  family                                            0    72   PRED-ONLY
+  foreleg lengths                                  20    20   
+  tongue length                                    18    18   
+  midleg lengths                                   20    20   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     98     0     0   id+type+value
+             (72 more spurious row(s) set aside as out-of-scope; strict P would be 0.576)
+  tags        0.000  0.000  0.000      0    98    98   basis+id+type+value+stat+sex+stage
+             (72 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
+             note: only 0/98 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

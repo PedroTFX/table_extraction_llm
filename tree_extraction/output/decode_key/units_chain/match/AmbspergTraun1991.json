@@ -1,0 +1,848 @@
+{
+ "_columns": [
+  [
+   0,
+   4,
+   "Feeding group†",
+   [
+    "W",
+    "S",
+    "W/S",
+    "P"
+   ]
+  ],
+  [
+   0,
+   5,
+   "Nesting group‡",
+   [
+    "W",
+    "M",
+    "H",
+    "M(O)",
+    "H, M(O)",
+    "A"
+   ]
+  ],
+  [
+   0,
+   6,
+   "Microhabitat found§",
+   [
+    "LDW",
+    "M, SDW, LDW",
+    "LDW, SDW, M, B",
+    "B",
+    "M",
+    "LDW, SDW, M",
+    "M, LDW, SDW, B",
+    "SDW, B",
+    "M, LDW, SDW",
+    "M, SDW"
+   ]
+  ]
+ ],
+ "0:4": {
+  "cells": {
+   "W": {
+    "term": null,
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "W | QK": {
+      "code": 0.897,
+      "word": 0.103
+     },
+     "W": {
+      "e0": 0.094,
+      "keep": 0.906
+     }
+    }
+   },
+   "S": {
+    "term": null,
+    "parts": [
+     "S"
+    ],
+    "options": {
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "S | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "S": {
+      "e0": 0.241,
+      "keep": 0.759
+     }
+    }
+   },
+   "W/S": {
+    "term": null,
+    "parts": [
+     "W",
+     "S"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     },
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "W | QK": {
+      "code": 0.897,
+      "word": 0.103
+     },
+     "W": {
+      "e0": 0.094,
+      "keep": 0.906
+     },
+     "S | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "S": {
+      "e0": 0.241,
+      "keep": 0.759
+     }
+    }
+   },
+   "P": {
+    "term": null,
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polyphagous"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "P | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "P": {
+      "e0": 0.1,
+      "keep": 0.9
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.99,
+    "several": 0.004,
+    "none": 0.006
+   },
+   "chosen": [
+    "u4"
+   ]
+  },
+  "header": "Feeding group†"
+ },
+ "0:5": {
+  "cells": {
+   "W": {
+    "term": null,
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "W | QK": {
+      "code": 0.92,
+      "word": 0.08
+     },
+     "W": {
+      "e0": 0.015,
+      "keep": 0.985
+     }
+    }
+   },
+   "M": {
+    "term": null,
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.972,
+      "word": 0.028
+     },
+     "M": {
+      "e0": 0.287,
+      "keep": 0.713
+     }
+    }
+   },
+   "H": {
+    "term": "hypogeal",
+    "parts": [
+     "H"
+    ],
+    "options": {
+     "H": {
+      "evidence": "explicit",
+      "labels": [
+       "hypogeal"
+      ]
+     }
+    },
+    "evidence": {
+     "H": "explicit"
+    },
+    "probs": {
+     "H | QK": {
+      "code": 0.961,
+      "word": 0.039
+     },
+     "H": {
+      "e0": 0.502,
+      "keep": 0.498
+     },
+     "H | QB": {}
+    }
+   },
+   "M(O)": {
+    "term": null,
+    "parts": [
+     "M(O)"
+    ],
+    "options": {
+     "M(O)": {
+      "evidence": "explicit",
+      "labels": [
+       "mounds"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M(O) | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "M(O)": {
+      "e0": 0.325,
+      "keep": 0.675
+     }
+    }
+   },
+   "H, M(O)": {
+    "term": "hypogeal; M(O)",
+    "parts": [
+     "H",
+     "M(O)"
+    ],
+    "options": {
+     "H": {
+      "evidence": "explicit",
+      "labels": [
+       "hypogeal"
+      ]
+     },
+     "M(O)": {
+      "evidence": "explicit",
+      "labels": [
+       "mounds"
+      ]
+     }
+    },
+    "evidence": {
+     "H": "explicit"
+    },
+    "probs": {
+     "H | QK": {
+      "code": 0.961,
+      "word": 0.039
+     },
+     "H": {
+      "e0": 0.502,
+      "keep": 0.498
+     },
+     "H | QB": {},
+     "M(O) | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "M(O)": {
+      "e0": 0.325,
+      "keep": 0.675
+     }
+    }
+   },
+   "A": {
+    "term": null,
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "explicit",
+      "labels": [
+       "arboreal"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "A | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "A": {
+      "e0": 0.422,
+      "keep": 0.578
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.968,
+    "several": 0.019,
+    "none": 0.012
+   },
+   "chosen": [
+    "u4"
+   ]
+  },
+  "header": "Nesting group‡"
+ },
+ "0:6": {
+  "cells": {
+   "LDW": {
+    "term": null,
+    "parts": [
+     "LDW"
+    ],
+    "options": {
+     "LDW": {
+      "evidence": "explicit",
+      "labels": [
+       "lying dead wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "LDW | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "LDW": {
+      "e0": 0.376,
+      "keep": 0.624
+     }
+    }
+   },
+   "M, SDW, LDW": {
+    "term": null,
+    "parts": [
+     "M",
+     "SDW",
+     "LDW"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     },
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     },
+     "LDW": {
+      "evidence": "explicit",
+      "labels": [
+       "lying dead wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     },
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     },
+     "LDW | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "LDW": {
+      "e0": 0.376,
+      "keep": 0.624
+     }
+    }
+   },
+   "LDW, SDW, M, B": {
+    "term": null,
+    "parts": [
+     "LDW",
+     "SDW",
+     "M",
+     "B"
+    ],
+    "options": {
+     "LDW": {
+      "evidence": "explicit",
+      "labels": [
+       "lying dead wood"
+      ]
+     },
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     },
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     },
+     "B": {
+      "evidence": "explicit",
+      "labels": [
+       "bait"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "LDW | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "LDW": {
+      "e0": 0.376,
+      "keep": 0.624
+     },
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     },
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     },
+     "B | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "B": {
+      "e0": 0.166,
+      "keep": 0.834
+     }
+    }
+   },
+   "B": {
+    "term": null,
+    "parts": [
+     "B"
+    ],
+    "options": {
+     "B": {
+      "evidence": "explicit",
+      "labels": [
+       "bait"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "B | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "B": {
+      "e0": 0.166,
+      "keep": 0.834
+     }
+    }
+   },
+   "M": {
+    "term": null,
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     }
+    }
+   },
+   "LDW, SDW, M": {
+    "term": null,
+    "parts": [
+     "LDW",
+     "SDW",
+     "M"
+    ],
+    "options": {
+     "LDW": {
+      "evidence": "explicit",
+      "labels": [
+       "lying dead wood"
+      ]
+     },
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     },
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "LDW | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "LDW": {
+      "e0": 0.376,
+      "keep": 0.624
+     },
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     },
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     }
+    }
+   },
+   "M, LDW, SDW, B": {
+    "term": null,
+    "parts": [
+     "M",
+     "LDW",
+     "SDW",
+     "B"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     },
+     "LDW": {
+      "evidence": "explicit",
+      "labels": [
+       "lying dead wood"
+      ]
+     },
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     },
+     "B": {
+      "evidence": "explicit",
+      "labels": [
+       "bait"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     },
+     "LDW | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "LDW": {
+      "e0": 0.376,
+      "keep": 0.624
+     },
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     },
+     "B | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "B": {
+      "e0": 0.166,
+      "keep": 0.834
+     }
+    }
+   },
+   "SDW, B": {
+    "term": null,
+    "parts": [
+     "SDW",
+     "B"
+    ],
+    "options": {
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     },
+     "B": {
+      "evidence": "explicit",
+      "labels": [
+       "bait"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     },
+     "B | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "B": {
+      "e0": 0.166,
+      "keep": 0.834
+     }
+    }
+   },
+   "M, LDW, SDW": {
+    "term": null,
+    "parts": [
+     "M",
+     "LDW",
+     "SDW"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     },
+     "LDW": {
+      "evidence": "explicit",
+      "labels": [
+       "lying dead wood"
+      ]
+     },
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     },
+     "LDW | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "LDW": {
+      "e0": 0.376,
+      "keep": 0.624
+     },
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     }
+    }
+   },
+   "M, SDW": {
+    "term": null,
+    "parts": [
+     "M",
+     "SDW"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     },
+     "SDW": {
+      "evidence": "explicit",
+      "labels": [
+       "standing dead wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "M": {
+      "e0": 0.448,
+      "keep": 0.552
+     },
+     "SDW | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "SDW": {
+      "e0": 0.113,
+      "keep": 0.887
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.99,
+    "several": 0.004,
+    "none": 0.006
+   },
+   "chosen": [
+    "u4"
+   ]
+  },
+  "header": "Microhabitat found§"
+ }
+}

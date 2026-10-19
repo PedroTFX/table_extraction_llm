@@ -1,0 +1,111 @@
+held-out tables: 181 GT-trait columns
+
+  direct name match (no judge):
+    gemma names                                  139/181 77%
+    head reader names                            139/181 77%
+    gemma + meaning v2                           160/181 88%
+    head + meaning v2   <- the score             160/181 88%
+
+  with the synonym judge (provisional):
+    gemma, 2-way judge (v2)                      171/181 94%
+    gemma, 3-way judge (v3)                      167/181 92%
+    head, 2-way judge (v2)                       169/181 93%
+    head, 3-way judge (v3)                       167/181 92%
+
+  decoys judged 'same trait' (false positives; 3-way / 2-way):
+    head   unrelated   3-way     0/9 0%   2-way     0/9 0%
+    head   value       3-way     0/8 0%   2-way    2/8 25%
+    head   initials    3-way     0/3 0%   2-way     0/3 0%
+    gemma  unrelated   3-way    0/14 0%   2-way    0/14 0%
+    gemma  value       3-way    0/12 0%   2-way   4/12 33%
+    gemma  initials    3-way     0/3 0%   2-way     0/3 0%
+
+  credited only by the judge (3-way 'same'):
+    head  Braschler2021 t8: 'Dry tolerant' ~ 'Drought Resistance'
+    gemma Braschler2021 t8: 'Dry tolerant' ~ 'Drought Resistance'
+    head  Braschler2021 t9: 'Dry tolerant' ~ 'Drought Resistance'
+    gemma Braschler2021 t9: 'Dry tolerant' ~ 'Drought Resistance'
+    head  Ibarra2021 t3: 'Mean length (mm) ± SD' ~ 'Body Length'
+    gemma Ibarra2021 t3: 'Mean length (mm) ± SD' ~ 'Body Length'
+    head  Ibarra2021 t4: 'Mean length (mm) ± SD' ~ 'Body Length'
+    gemma Ibarra2021 t4: 'Mean length (mm) ± SD' ~ 'Body Length'
+    head  Ibarra2021 t5: 'Mean length (mm) ± SD' ~ 'Body Length'
+    gemma Ibarra2021 t5: 'Mean length (mm) ± SD' ~ 'Body Length'
+    head  Rebrina2022 t2: 'Body Size (mm)' ~ 'Body Length'
+    gemma Rebrina2022 t2: 'Body Size (mm)' ~ 'Body Length'
+    head  Rebrina2022 t3: 'Body Size (mm)' ~ 'Body Length'
+    gemma Rebrina2022 t3: 'Body Size (mm)' ~ 'Body Length'
+
+  body values judged 'same trait' (false positives):
+
+  judge answers that changed from v2 (2-way -> 3-way):
+    gemma main      Torok2022 t8: 'Solitary' ~ 'Social habit': yes -> value
+    gemma value     Torok2022 t8: 'Solitary' ~ 'Social habit': yes -> value
+    gemma main      Torok2022 t8: 'herbivore' ~ 'Larvae feeding preference': yes -> value
+    gemma value     Torok2022 t8: 'herbivore' ~ 'Larvae feeding preference': yes -> value
+    head  main      Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    gemma main      Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    head  value     Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    gemma value     Derhe2016 t4: 'Pasture' ~ 'Habitat preference': yes -> value
+    head  main      Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+    gemma main      Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+    head  value     Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+    gemma value     Derhe2016 t4: 'Rainforest' ~ 'Habitat preference': yes -> value
+
+development tables: 8 GT-trait columns
+
+  direct name match (no judge):
+    gemma names                                       0/8 0%
+    head reader names                                 0/8 0%
+    gemma + meaning v2                                0/8 0%
+    head + meaning v2   <- the score                  0/8 0%
+
+  with the synonym judge (provisional):
+    gemma, 2-way judge (v2)                           0/8 0%
+    gemma, 3-way judge (v3)                           0/8 0%
+    head, 2-way judge (v2)                            0/8 0%
+    head, 3-way judge (v3)                            0/8 0%
+
+  decoys judged 'same trait' (false positives; 3-way / 2-way):
+    head   unrelated   3-way          -   2-way          -
+    head   value       3-way          -   2-way          -
+    head   initials    3-way          -   2-way          -
+    gemma  unrelated   3-way          -   2-way          -
+    gemma  value       3-way          -   2-way          -
+    gemma  initials    3-way          -   2-way          -
+
+  credited only by the judge (3-way 'same'):
+
+  body values judged 'same trait' (false positives):
+
+  judge answers that changed from v2 (2-way -> 3-way):
+
+regression checks:
+  head  Oliveira 'Traits CL M' ~ 'Clypeus length ratio': unresolved — undefined in the paper: 'CL' (in 'CL')
+  gemma Oliveira 'Traits' ~ 'Clypeus length ratio': unresolved — no column-specific name: 'Traits' heads 16 columns
+  head  Oliveira 'Traits ML M' ~ 'Mandible length ratio': unresolved — undefined in the paper: 'ML' (in 'ML')
+  gemma Oliveira 'Traits (2)' ~ 'Mandible length ratio': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (2)' is the pipeline's duplicate suffix)
+  head  Oliveira 'Traits WL M' ~ 'Mesosoma length': unresolved — undefined in the paper: 'WL' (in 'WL')
+  gemma Oliveira 'Traits (4)' ~ 'Mesosoma length': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (4)' is the pipeline's duplicate suffix)
+  head  Oliveira 'Traits IOW M' ~ 'Eye position ratio': unresolved — undefined in the paper: 'IOW' (in 'IOW')
+  gemma Oliveira 'Traits (6)' ~ 'Eye position ratio': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (6)' is the pipeline's duplicate suffix)
+  head  Oliveira 'Traits EL M' ~ 'Eye length ratio': unresolved — undefined in the paper: 'EL' (in 'EL')
+  gemma Oliveira 'Traits (8)' ~ 'Eye length ratio': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (8)' is the pipeline's duplicate suffix)
+  head  Oliveira 'Traits P M' ~ 'Pilosity': unresolved — undefined in the paper: 'P' (in 'P')
+  gemma Oliveira 'Traits (10)' ~ 'Pilosity': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (10)' is the pipeline's duplicate suffix)
+  head  Oliveira 'Traits LEG M' ~ 'Leg length ratio': unresolved — undefined in the paper: 'LEG' (in 'LEG')
+  gemma Oliveira 'Traits (12)' ~ 'Leg length ratio': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (12)' is the pipeline's duplicate suffix)
+  head  Oliveira 'Traits AL M' ~ 'Antenna length ratio': unresolved — undefined in the paper: 'AL' (in 'AL')
+  gemma Oliveira 'Traits (14)' ~ 'Antenna length ratio': unresolved — no column-specific name: 'Traits' heads 16 columns ('Traits (14)' is the pipeline's duplicate suffix)
+  verified credit Braschler2021 t8 'Dry tolerant' ~ 'Drought Resistance': judged, same
+  verified credit Braschler2021 t9 'Dry tolerant' ~ 'Drought Resistance': judged, same
+  verified credit Ibarra2021 t3 'Mean length (mm) ± SD' ~ 'Body Length': judged, same
+  verified credit Ibarra2021 t4 'Mean length (mm) ± SD' ~ 'Body Length': judged, same
+  verified credit Ibarra2021 t5 'Mean length (mm) ± SD' ~ 'Body Length': judged, same
+  verified credit Rebrina2022 t2 'Body Size (mm)' ~ 'Body Length': judged, same
+  verified credit Rebrina2022 t3 'Body Size (mm)' ~ 'Body Length': judged, same
+
+not judged, by reason (head + gemma):
+  undefined in the paper                  14
+  no column-specific name                 8
+  no name                                 5

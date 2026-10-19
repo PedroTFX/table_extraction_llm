@@ -1,0 +1,65 @@
+{
+ "calls": 1,
+ "chars": 4726,
+ "passages": [
+  "[prose] F I G U R E 1 Theoretical relationships between species distance in functional traits and degree of co-occurrence. In a situation where functional traits drive environmental filtering, we should expect a negative relationship between distance and co-occurrence (green line); in the opposite scenario, where functional traits drive patterns of competitive exclusion, we should expect a positive relationship between distance and co-occurrence (blue line).",
+  "[prose] contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022). Second, various studies have suggested that, in addition to habitat preference, interspecific interactions play a fundamental role in shaping Odonata communities and metacommunities (Cerini et al., 2019, 2020; Renner et al., 2019; Suutari et al., 2004). The data represent an updated and georeferenced version of the dataset from Blust and Pfeiffer (2015), a publication which summarized more than 80 years of Odonata collection activities (both scientific and amateur) in the state of Vermont. Each local site in the dataset consists of a water body (e.g., pond, brooks, lakes, and river beds) that was visited once or multiple times over the years. We cleaned the dataset by removing species with uncertain or missing taxonomical information. Presence data represent sampling of adults and/or larvae. The final dataset includes 4995 species occurrence records for 131 species across 917 sites and 86 years (1663 combinations of sites and years). We excluded all sites hosting only 1 species (i.e., not hosting an Odonata multispecies community),",
+  "[prose] This is an open access article under the terms of the [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.",
+  "[prose] F I G U R E 7 Importance of the species functional traits in the three Random Forest models to predict co-occurrence. (A) Traits importance calculated as the percentage increment of the mean square error (MSE) when permuting the out-of-bag data and extracting the resulting error increase when one variable is left out. (B) Traits important based on the random forest tree node purity, calculated as the reduction in sum of squared errors whenever a variable is chosen to split. Bars with whiskers show the mean scores ± SEs of the different values for the one-hot encoded traits (i.e., traits with different categorical values like “habitat preference = open versus closed”). Model I: Random Forest and regressor modeling continuous positive and negative Hierarchical Modeling of Species Communities residual co-occurrence versus Odonata functional traits. Model II: Random Forest classifier modeling positive co-occurrence (i.e., co-occurrence >0.5 with a statistical support of 0.95) versus Odonata functional traits. Model III: Random Forest classifier modeling negative co-occurrence (i.e., co-occurrence",
+  "[prose] In a simplified view, trait distance and co-occurrence should display a negative relationship if the traits drive primarily environmental filtering, and a positive one if the traits drive patterns of competitive exclusion (Figure 1). Clearly, in the real world (and considering multiple traits), the two processes coexist, making it hard to find a clear association. For instance, Elo et al. (2021) found no relationship between functional species similarity and negative co-occurrence on a large set of stream macroinvertebrate communities. Similarly, Burner et al. (2021) found that the difference in species traits was not a consistent predictor of the spatial associations for forest beetles. Nevertheless, it is important to consider that competitive dynamics (and species interactions in general) might be linked to functional traits in a more complex fashion than that provided by trait similarity.",
+  "[prose] Overall, we found no relationship between species co-occurrence and trait dissimilarity $( R ^ { 2 } = 0 . 0 0 7 ;$ Figure 3), as we recorded cases of high and low co-occurrence for both small and large functional distance (Figure 3). In most cases, however, functional distance fell into an average range. The correlations between individual trait distance and co-occurrence were very weak, but negative slopes were more common than positives (Figure 4).",
+  "[prose] The authors declare no conflicts of interest.",
+  "[prose] To assess pairwise species co-occurrence, we fit a latent-variable jSDM using the Hierarchical Modeling of Species Communities (HMSC) Bayesian framework. We fitted the models with a probit link function under the default prior distribution. We devised the following model (Equation 1):"
+ ],
+ "categories": [
+  {
+   "variable": "co-occurrence",
+   "code": "green line",
+   "term": "negative relationship between distance and co-occurrence",
+   "model_label": "negative relationship",
+   "label": "negative relationship",
+   "explanation": "between distance and co-occurrence"
+  },
+  {
+   "variable": "co-occurrence",
+   "code": "blue line",
+   "term": "positive relationship between distance and co-occurrence",
+   "model_label": "positive relationship",
+   "label": "positive relationship",
+   "explanation": "between distance and co-occurrence"
+  },
+  {
+   "variable": "habitat preference",
+   "code": "open versus closed",
+   "term": "categorical values",
+   "model_label": "categorical values",
+   "label": "categorical values",
+   "explanation": ""
+  },
+  {
+   "variable": "co-occurrence",
+   "code": ">0.5",
+   "term": "positive co-occurrence",
+   "model_label": "positive co-occurrence",
+   "label": "positive co-occurrence",
+   "explanation": ""
+  },
+  {
+   "variable": "co-occurrence",
+   "code": "negative co-occurrence",
+   "term": "negative co-occurrence",
+   "model_label": "negative co-occurrence",
+   "label": "negative co-occurrence",
+   "explanation": ""
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "habitat preference = open versus closed",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 8.9
+}

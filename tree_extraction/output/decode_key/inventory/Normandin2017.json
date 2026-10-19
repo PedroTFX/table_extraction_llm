@@ -1,0 +1,760 @@
+{
+ "paper": "Normandin2017",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Urbanization is one of the major anthropogenic processes contributing to local habitat loss and extirpation of numerous species, including wild bees, the most widespread pollinators. Little is known about the mechanisms through which urbanization impacts wild bee communities, or the types of urban green spaces that best promote their conservation in cities. The main objective of this study was to describe and compare wild bee community diversity, structure, and dynamics in two Canadian cities, Montreal and Quebec City. A second objective was to compare functional trait diversity among three habitat types (cemeteries, community gardens and urban parks) within each city. Bees were collected using pan traps and netting on the same 46 sites, multiple times, over the active season in 2012 and 2013. A total of 32,237 specimens were identified, representing 200 species and 6 families, including two new continental records, Hylaeus communis Nylander (1852) and Anthidium florentinum (Fabricius, 1775). Despite high community evenness, we found significant abundance of diverse species, including exotic ones. Spatio-temporal analysis showed higher stability in the most urbanized city (Montreal) but low nestedness of species assemblages among the three urban habitats in both cities. Our study demonstrates that cities are home to diverse communities of wild bees, but in turn affect bee community structure and dynamics. We also found that community gardens harbour high levels of functional trait diversity. Urban agriculture therefore contributes substantially to the provision of functionally diverse bee communities and possibly to urban pollination services."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "The study was conducted in Montreal (45◦30 0 04 00 N: 73◦39 0 22 00 O) and Quebec City $\\left( 46^{\\circ}48^{\\prime}08^{\\prime\\prime} N : 71^{\\circ}15^{\\prime}50^{\\prime\\prime} O \\right)$ , both located in the southern part of the province of Quebec, Canada, 230 km apart. Montreal is the second largest city in Canada, with a population of 1.6 million (Statistics Canada, 2014) (4 million in the greater metropolitan area). Quebec City has a population of 799,632 (Statistics Canada, 2014). Wild bees were collected in three types of urban green spaces on the same 46 sites in 2012 and 2013 (see sampling protocol below and Table 1 for the complete list of sites). In Montreal, 10 community gardens, nine cemeteries and five urban parks were sampled, while 10 community gardens, seven cemeteries and five urban parks were sampled in Quebec City."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Wild bees were sampled at each site every two weeks using coloured pan traps and sweepnets. The combination of methods is crucial, to properly assess bee communities (Westphal et al., 2008; Nielsen et al., 2011). Pan trapping is a standard and passive method that takes advantage of the insect’s attraction to certain colours. Plastic bowls with a capacity of 400 ml were used to construct pan traps. Originally white, one-third were spray-painted fluorescent blue and another third yellow (with Krylon R paint); bowls were then grouped in threes, one each in white, yellow and blue. Bowls were raised to the average height of the herbaceous vegetation on a 60 cm long wooden stick. Bowls were filled with soapy water (5 drops of concentrated dish detergent per 1 L water) every two weeks during the sampling season. Pan traps were set up on all sites in a single day in one of the two cities, and were retrieved 48 h later all at once. As per Matteson, Ascher & Langellotto (2008), we used a ratio of pan traps per sampling area because the sites were highly variable in size. We installed one group of 3 bowls per 1,000 m 2 with a maximum of 45 pan traps per site, for feasibility. In Montreal, we installed a total of 481 pan traps, and in Quebec City, 550. Whenever possible, pan traps were aligned along a single transect, 1–2 m apart. On some"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "All analyses were performed using pooled data obtained by both sampling techniques (i.e., pan traps and netting) because these techniques can be considered to be complementary (Westphal et al., 2008). Sampling periods were also pooled, except for the abundance LSD test (ANOVA) comparing the three urban habitats."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "To illustrate the number of bee species recorded in each habitat type (i.e., their original contribution in terms of species) for each city (Montreal and Quebec City), as well as the shared species (e.g. the number of species collected jointly in two or more habitats), we created a Venn diagram for each city with overlapping ellipses using the ‘‘VennDiagram’ package (version 1.6.5) in R (Chen & Boutros, 2011). To describe rank-abundance distributions specific to our datasets for Montreal and Quebec City, we first plotted rank abundance–dominance (RAD) curves (1 for Montreal, 1 for Quebec City) (Whittaker, 1965) with the biodiversityR package in Rstudio. The data allowed us to determine which species could be considered abundant or dominant. All species that ranked higher than the curve plateau were considered ‘‘abundant’’ species. If a species represented more than 50% of the total abundance at a site with the two sampling years pooled, it was considered ‘‘dominant.’"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "To compare the abundance of exotic and dominant or abundant species between the two cities, the Welch two-sample T test was used. To compare abundance among the three habitats (park, cemetery and community garden), Fisher’s least significant test (ANOVA) was used. Abundance per pan trap was calculated first because of the pan trap ratio used (1 triplet per 1,000 m 2 ). Then, four LSD tests were performed in R for each city and each sampling technique (pan trap and netting). For the Quebec City pan trap test, a LOG transformation was performed to correct variance homogeneity. For the netting technique, a square root transformation was performed for both cities."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To estimate the multiple-site variation in species composition among habitats for each city, taking into account the identity of all species, we computed beta diversity metrics. We used the ‘‘betapart’’ package (Baselga & Orme, 2012), with which it is possible to partition the Sørensen index of beta diversity (βsor, a measure of total dissimilarity) into its two major components, (i) species replacement (i.e., ‘‘true’’ species turnover: βsim) and (ii) species loss/or gain (i.e., nestedness: βnes) according to $\\beta \\mathrm { s o r } = \\beta \\mathrm { s i m } + \\beta \\mathrm { n e s } .$"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "The Sørensen index (βsor) ranges from 0 (identical species assemblages) to 1 (different species assemblages). Using this approach with our dataset allowed testing (i) differences in the values of total dissimilarity (βsor) between Montreal and Quebec City, but also (ii) the relative contribution of species turnover (βsim) and nestedness-resultant dissimilarity (βnes) in each city."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "We compiled ecological, life-history and morphological traits for all species recorded in this study. We chose six variables from a list of 30 variables of functional categorical traits, selected to include diverse attributes of wild bee ecology that are known to influence their functional role in an assemblage (Violle et al., 2007). The variables that concerned our species were: pollen specialization (oligolectic, polylectic), pollen transportation (accidental, leg and body, corbiculae, legs only, underside, crop), tongue length (short, medium, long), seasonal activity (spring, spring/summer), sociality (solitary, cleptoparasite, eusocial, communal), nesting behaviour (ground, cleptoparasite cavity below ground,"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "cavity above ground, social parasite, carder), and inter-tegular distance. The inter-tegular distance (ITD) values, a good proxy for body size (Cane, 1987) and bee foraging range (Greenleaf et al., 2007; Zurbuchen et al., 2010 and references therein), were measured on five female specimens of each species with a digital calliper $( \\mathrm { p r e c i s i o n } = 0 . 0 1 \\; \\mathrm { m m } )$ . All of these trait attributes were allocated based on the primary literature (Ascher & Pickering, 2014), and on researcher expertise when published information for a particular species was unavailable (see also Moretti et al. (2009), who used the same approach)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:78f1b2f/tier:advanced/page:10/block:2)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Figure 1 Venn diagrams illustrating species richness in Montreal and Quebec City. (A and B) Shows the species richness in the three urban habitats (cemeteries, community gardens and urban parks). (C) shows the overlapping of species richness between both cities."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:78f1b2f/tier:advanced/page:11/block:2)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Figure 2 Observed species-accumulation curves (thin solid line) and their associated standard deviation (SD) for each habitat type investigated in Montreal (A) and Quebec City (B)."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:78f1b2f/tier:advanced/page:12/block:4)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Figure 4 Analysis of Pielou’s J 0 index of species evenness (Pielou, 1966) among sampling sites in Montreal (A) and Quebec City (B). The index indicates how close in number each species is in each sampling site; a value of 1 refers to a completely numerically even community of species, whereas a value closer to 0 indicates a numerically unbalanced community. The results show that, particularly in Montreal, more uneven communities are found in urban cemeteries than in community gardens or city parks."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "The functional rarefaction curves (Fig. 5) show the expected functional trait diversity for the three types of urban habitats. The curves increase asymptotically from their initial point and nearly reach the Q value (N) following the increase of M (possible combinations of sampling plots). The results indicate that urban cemeteries are significantly less functionally diverse than community gardens and urban parks irrespective of the city considered, and that urban parks harbour significantly higher functional trait diversity in each city; community gardens have significantly higher functional trait diversity than urban cemeteries and are functionally less diverse than urban parks in Montreal. These results contrast with the higher levels of species richness found in each habitat type and suggest that the higher levels of species richness found in urban cemeteries are associated to higher levels of functional"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Figure 5 Functional rarefaction curves (mean expected functional diversity Q(M) as a function of the cumulative number of sampling plots M) for species abundance data from the three habitat types investigated in Montreal (A) and Quebec City (B). The rarefaction curves are the result of 999 randomizations and the dotted lines of each curve are bootstrapped 95% confidence intervals."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "The tanglegrams (Fig. 6) illustrate community partitioning among all sites in both cities and the quality of alignment between pairs of dendrograms of 2012 and 2013. For Montreal, the presence of a nested park cluster indicates that the bee communities in parks were similar for this habitat but different from the bee communities found in community gardens and cemeteries. In Quebec City, none of the three types of urban habitats was isolated in a cluster, indicating a similarity in community composition among all habitats. The three types of metrics (entanglement, Baker’s index and cophenetic correlation coefficient) measuring the degree of congruence between the clustering analyses highlighted a better alignment for Montreal: a value of 0.128 for the entanglement is considered good, since this metric ranges from 0 to 1 with 0 being a perfect value of congruence. Baker’s index value of 0.741 and the cophenetic correlation coefficient (CCC) of 0.786, which both range from −1 to 1, with 0 meaning the two trees are not statistically similar, also demonstrate a good similarity between both trees. This suggests that Montreal’s bee communities were more"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "![Image block](doc:78f1b2f/tier:advanced/page:14/block:2)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Figure 6 A tanglegram approach to the analysis of changes in wild bee community structure among sites and habitat types between 2012 and 2013 in Montreal (A) and Quebec City (B). Here, a hierarchical clustering with multiscale bootstrap resampling was performed using abundance data of wild bees for each city and each year on the same sampling sites. The 2012 and 2013 dendrograms of each city were aligned so as to minimize the number of crossings between inter-tree edges, and matching leaves (i.e., sampling sites) were connected by inter-tree edges. We measured the quality of the alignment of the two trees in the tanglegram layout by quantifying (i) the ‘‘entanglement’’ index (0, perfect match with straight horizontal edges between matching sites; 1, no match at all), (ii) Baker’s Gamma Index, a measure of statistical sim ilarity between two dendrograms (−1, statistically highly dissimilar; 0, not statistically similar; 1, statistically similar) and (iii) the cophenetic correlation coefficient (CCC), a measure of how faithfully the 2013 dendrogram (particularly the cophenetic distances obtained) reflects the dissimilarities among sites observed in 2012 (i.e., the reference tree) (−1, the two dendrograms are statistically dissimilar; near 0 values, the two trees are not statistically similar; 1, the two dendrograms are statistically similar)."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "Table 3 Beta diversity partitioning with the Cardoso et al. (2014) method and the Baselga & Orme (2012) method."
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Figure 7 Heat map illustrating the abundant species in both cities (Montreal (A) and Quebec City(B)) and in all three urban habitats (cemeteries, community gardens and city parks)."
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "the two sampling seasons, with the two sampling methods pooled. Two species were highly abundant, Melissodes desponsa in the Hawthorn-Dale cemetery (CHD) and Augochlorella aurata in the Lakeview cemetery (CLV), with 789 and 1,043 individuals respectively, thus decreasing the evenness value of those sites. For Lachine Cemetery (CL), Agapostemon virescens and Lasioglossum imitatum were especially abundant. For Quebec City, Lasioglossum laevissimum was responsible for the lower evenness values of CNDF, JM, JPS, PCB and PBC (again, please refer to Table 1 for acronyms). This species was also abundant in Montreal, especially in the Rosemont–Églantier garden (JRE). The heat map also shows which species were abundant in both urban settings, 33 species for Montreal and 12 for Quebec City, while nine (75%) were shared."
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "There are some 365 bee species in the province of Quebec (Ascher & Pickering, 2014). Our sampling protocol allowed us to capture 200 species from six bee families: Andrenidae, Apidae, Colletidae, Halictidae, Megachilidae and Melittidae. The Halictidae and the Andrenidae were the most diverse groups, with 60 and 53 species respectively, followed by the Megachilidae, with 38 species and the Apidae, with 36 species. However, the accumulation curves, which did not reach a plateau for either city or species estimators, showed that our sampling could have captured more species. Nonetheless, with 177 species found in Montreal and 152 in Quebec City, both cities host diverse wild bee communities, confirming findings of previous studies elsewhere. For example, Fortel et al. (2014) documented 291 species in Lyon, France, and 104 species were found in Poznan, Poland (Banaszak-Cibicka & Zmihorski, 2012). In North America, Fetridge, Ascher & Langellotto (2008) reported 110 species in New York’s suburbs (United-States) and Tommasi et al. (2004) found 56 species in Vancouver, Canada. These diverse communities of wild bees seem indeed to be favoured by the highly heterogeneous habitats occurring in anthropogenic environments (Winfree, Bartomeus & Cariveau, 2011). Contrasting habitats arise because the growth of urban environments creates different levels of disturbance, ranging from high intensity in the city core to low intensity at the outskirts."
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Urban landscapes are also characterized by high floral diversity that provides forage for a wide variety of bees (Loram et al., 2007; Frankie et al., 2005; Gaston et al., 2005). Floral resources should then determine the quality and suitability of the different kinds of green spaces to urban bees. Relative bee abundance did not differ substantially between the three types of green spaces studied in Quebec City, a finding similar to that was reported by Baldock et al. (2015) in the United Kingdom. For Quebec City, community gardens and parks showed a higher bee abundance than cemeteries, a finding based only on specimens collected by netting. In Montreal, community gardens showed the highest relative abundance compared to cemeteries, a finding, this time, based on specimens collected by both netting and pan traps. The abundance of flowering plants and their density in community gardens likely explain our results. Similarly, Frankie et al. (2005) observed the highest bee diversity and abundance in gardens with high numbers of bee-attracting plants. Andersson, Barthel & Ahrné (2007) found that bumblebees clearly benefit from the management practices in allotment gardens, where a much higher abundance of bumblebees was observed compared to parks and cemeteries. Even if larger sites could offer more nesting opportunities and thus host a higher abundance of bees than smaller sites, we found that cemeteries, often large in size, had the lowest abundance per pan trap, and with the netting technique."
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "The presence of dominant species decreases community evenness, and this decline in evenness is a pattern observed in several studies (e.g., Shochat et al., 2010; Marzluff, Bowman & Donnelly, 2001) reflecting the redundant negative impact of urbanization on communities. For ground arthropods, evenness declines as urban exploiters increase in relative abundance and come to dominate communities (Faeth, Bang & Saari, 2011). Rank abundance analysis did not show the presence of dominant species (defined, for the purpose of our study, as species representing more than 50% of the total abundance of bee species at a given site), but indicated many species we defined as abundant. Our results (Fig. 4) also showed that only three sites (CHD, CL and CLV) in Montreal and one site (CNDF) in Quebec City had lower evenness values (J). Patterns of evenness with winged insects like bees may be different, however, because their abundance can also be influenced by flower density (Westphal, Steffan-Dewenter & Tscharntke, 2003). The general increase in plant species evenness in cities (Walker et al., 2009; Grimm et al., 2008) may explain the relatively high evenness found in our study (Fig. 4). Nevertheless, abundant species may maintain high evenness values. The most striking results emerged from those abundant species (Fig. 7), which accounted for 81% (33 species) and 59% (12 species) of the abundance for Montreal and Quebec City, respectively (Table 4). Montreal had significantly more abundant species, which were also more abundant than those in Quebec City. This suggests that only a few species may represent a much higher proportion of the whole community in both cities. Being ubiquitous and generalist are the common characteristics all those species share (except Melissodes desponsa). Their success could be explained by a higher tolerance to fast changing pollen/nesting resources and an opportunistic nature. Indeed, even if Montreal and Quebec City have a fair amount of oligolectic (specialist) species (21 (11.8%) and"
+  },
+  {
+   "id": "u27",
+   "kind": "table 2",
+   "text": "Sampling units | MONTREAL (Species richness) | QUEBEC CITY (Species richness)\n0 | ~35 | ~25\n20 | ~130 | ~110\n40 | ~150 | ~130\n60 | ~165 | ~145\n80 | ~175 | ~150\n95 | ~180 | —"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16"
+  ],
+  [
+   "u17",
+   "u18",
+   "u19"
+  ],
+  [
+   "u20",
+   "u21",
+   "u22",
+   "u23"
+  ],
+  [
+   "u24",
+   "u25"
+  ],
+  [
+   "u26",
+   "u27"
+  ]
+ ],
+ "calls": 18,
+ "categories": [
+  {
+   "variable": "rank abundance–dominance",
+   "code": "1",
+   "term": "Montreal",
+   "unit": "u2",
+   "model_label": "Montreal",
+   "label": "Montreal",
+   "explanation": ""
+  },
+  {
+   "variable": "rank abundance–dominance",
+   "code": "1",
+   "term": "Quebec City",
+   "unit": "u2",
+   "model_label": "Quebec City",
+   "label": "Quebec City",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen specialization",
+   "code": "oligolectic",
+   "term": "oligolectic",
+   "unit": "u8",
+   "model_label": "oligolectic",
+   "label": "oligolectic",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen specialization",
+   "code": "polylectic",
+   "term": "polylectic",
+   "unit": "u8",
+   "model_label": "polylectic",
+   "label": "polylectic",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen transportation",
+   "code": "accidental",
+   "term": "accidental",
+   "unit": "u8",
+   "model_label": "accidental",
+   "label": "accidental",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen transportation",
+   "code": "leg and body",
+   "term": "leg and body",
+   "unit": "u8",
+   "model_label": "leg and body",
+   "label": "leg and body",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen transportation",
+   "code": "corbiculae",
+   "term": "corbiculae",
+   "unit": "u8",
+   "model_label": "corbiculae",
+   "label": "corbiculae",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen transportation",
+   "code": "legs only",
+   "term": "legs only",
+   "unit": "u8",
+   "model_label": "legs only",
+   "label": "legs only",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen transportation",
+   "code": "underside",
+   "term": "underside",
+   "unit": "u8",
+   "model_label": "underside",
+   "label": "underside",
+   "explanation": ""
+  },
+  {
+   "variable": "pollen transportation",
+   "code": "crop",
+   "term": "crop",
+   "unit": "u8",
+   "model_label": "crop",
+   "label": "crop",
+   "explanation": ""
+  },
+  {
+   "variable": "tongue length",
+   "code": "short",
+   "term": "short",
+   "unit": "u8",
+   "model_label": "short",
+   "label": "short",
+   "explanation": ""
+  },
+  {
+   "variable": "tongue length",
+   "code": "medium",
+   "term": "medium",
+   "unit": "u8",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": ""
+  },
+  {
+   "variable": "tongue length",
+   "code": "long",
+   "term": "long",
+   "unit": "u8",
+   "model_label": "long",
+   "label": "long",
+   "explanation": ""
+  },
+  {
+   "variable": "seasonal activity",
+   "code": "spring",
+   "term": "spring",
+   "unit": "u8",
+   "model_label": "spring",
+   "label": "spring",
+   "explanation": ""
+  },
+  {
+   "variable": "seasonal activity",
+   "code": "spring/summer",
+   "term": "spring/summer",
+   "unit": "u8",
+   "model_label": "spring/summer",
+   "label": "spring/summer",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "solitary",
+   "term": "solitary",
+   "unit": "u8",
+   "model_label": "solitary",
+   "label": "solitary",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "cleptoparasite",
+   "term": "cleptoparasite",
+   "unit": "u8",
+   "model_label": "cleptoparasite",
+   "label": "cleptoparasite",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "eusocial",
+   "term": "eusocial",
+   "unit": "u8",
+   "model_label": "eusocial",
+   "label": "eusocial",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "communal",
+   "term": "communal",
+   "unit": "u8",
+   "model_label": "communal",
+   "label": "communal",
+   "explanation": ""
+  },
+  {
+   "variable": "nesting behaviour",
+   "code": "ground",
+   "term": "ground",
+   "unit": "u8",
+   "model_label": "ground",
+   "label": "ground",
+   "explanation": ""
+  },
+  {
+   "variable": "nesting behaviour",
+   "code": "cleptoparasite cavity below ground",
+   "term": "cleptoparasite cavity below ground",
+   "unit": "u8",
+   "model_label": "cleptoparasite cavity below ground",
+   "label": "cleptoparasite cavity below ground",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 1 Venn diagrams illustrating species richness in Montreal and Quebec City.",
+   "code": "A",
+   "term": "shows the species richness in the three urban habitats (cemeteries, community gardens and urban parks).",
+   "unit": "u11",
+   "model_label": "A",
+   "label": "shows the species richness in the three urban habitats (cemeteries, community gardens and urban parks).",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 1 Venn diagrams illustrating species richness in Montreal and Quebec City.",
+   "code": "B",
+   "term": "Shows the species richness in the three urban habitats (cemeteries, community gardens and urban parks).",
+   "unit": "u11",
+   "model_label": "B",
+   "label": "Shows the species richness in the three urban habitats (cemeteries, community gardens and urban parks).",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 1 Venn diagrams illustrating species richness in Montreal and Quebec City.",
+   "code": "C",
+   "term": "shows the overlapping of species richness between both cities.",
+   "unit": "u11",
+   "model_label": "C",
+   "label": "shows the overlapping of species richness between both cities.",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 2 Observed species-accumulation curves",
+   "code": "A",
+   "term": "Montreal",
+   "unit": "u11",
+   "model_label": "Montreal",
+   "label": "Montreal",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 2 Observed species-accumulation curves",
+   "code": "B",
+   "term": "Quebec City",
+   "unit": "u11",
+   "model_label": "Quebec City",
+   "label": "Quebec City",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 4 Analysis of Pielou’s J 0 index of species evenness",
+   "code": "A",
+   "term": "Montreal",
+   "unit": "u11",
+   "model_label": "Montreal",
+   "label": "Montreal",
+   "explanation": ""
+  },
+  {
+   "variable": "Figure 4 Analysis of Pielou’s J 0 index of species evenness",
+   "code": "B",
+   "term": "Quebec City",
+   "unit": "u11",
+   "model_label": "Quebec City",
+   "label": "Quebec City",
+   "explanation": ""
+  },
+  {
+   "variable": "entanglement",
+   "code": "0",
+   "term": "perfect match with straight horizontal edges between matching sites",
+   "unit": "u20",
+   "model_label": "0",
+   "label": "perfect match with straight horizontal edges between matching sites",
+   "explanation": ""
+  },
+  {
+   "variable": "entanglement",
+   "code": "1",
+   "term": "no match at all",
+   "unit": "u20",
+   "model_label": "1",
+   "label": "no match at all",
+   "explanation": ""
+  },
+  {
+   "variable": "Baker’s Gamma Index",
+   "code": "-1",
+   "term": "statistically highly dissimilar",
+   "unit": "u20",
+   "model_label": "-1",
+   "label": "statistically highly dissimilar",
+   "explanation": ""
+  },
+  {
+   "variable": "Baker’s Gamma Index",
+   "code": "0",
+   "term": "not statistically similar",
+   "unit": "u20",
+   "model_label": "0",
+   "label": "not statistically similar",
+   "explanation": ""
+  },
+  {
+   "variable": "Baker’s Gamma Index",
+   "code": "1",
+   "term": "statistically similar",
+   "unit": "u20",
+   "model_label": "1",
+   "label": "statistically similar",
+   "explanation": ""
+  },
+  {
+   "variable": "cophenetic correlation coefficient (CCC)",
+   "code": "-1",
+   "term": "the two dendrograms are statistically dissimilar",
+   "unit": "u20",
+   "model_label": "-1",
+   "label": "the two dendrograms are statistically dissimilar",
+   "explanation": ""
+  },
+  {
+   "variable": "cophenetic correlation coefficient (CCC)",
+   "code": "near 0 values",
+   "term": "the two trees are not statistically similar",
+   "unit": "u20",
+   "model_label": "near 0 values",
+   "label": "the two trees are not statistically similar",
+   "explanation": ""
+  },
+  {
+   "variable": "cophenetic correlation coefficient (CCC)",
+   "code": "1",
+   "term": "the two dendrograms are statistically similar",
+   "unit": "u20",
+   "model_label": "1",
+   "label": "the two dendrograms are statistically similar",
+   "explanation": ""
+  },
+  {
+   "variable": "city",
+   "code": "Montreal",
+   "term": "Montreal",
+   "unit": "u24",
+   "model_label": "Montreal",
+   "label": "Montreal",
+   "explanation": ""
+  },
+  {
+   "variable": "city",
+   "code": "Quebec City",
+   "term": "Quebec City",
+   "unit": "u24",
+   "model_label": "Quebec City",
+   "label": "Quebec City",
+   "explanation": ""
+  },
+  {
+   "variable": "city",
+   "code": "Lyon",
+   "term": "Lyon",
+   "unit": "u24",
+   "model_label": "Lyon",
+   "label": "Lyon",
+   "explanation": ""
+  },
+  {
+   "variable": "city",
+   "code": "Poznan",
+   "term": "Poznan",
+   "unit": "u24",
+   "model_label": "Poznan",
+   "label": "Poznan",
+   "explanation": ""
+  },
+  {
+   "variable": "city",
+   "code": "New York’s suburbs",
+   "term": "New York’s suburbs",
+   "unit": "u24",
+   "model_label": "New York’s suburbs",
+   "label": "New York’s suburbs",
+   "explanation": ""
+  },
+  {
+   "variable": "city",
+   "code": "Vancouver",
+   "term": "Vancouver",
+   "unit": "u24",
+   "model_label": "Vancouver",
+   "label": "Vancouver",
+   "explanation": ""
+  },
+  {
+   "variable": "Sampling units",
+   "code": "0",
+   "term": "~35",
+   "unit": "u27",
+   "model_label": "~35",
+   "label": "35",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "0",
+   "term": "~25",
+   "unit": "u27",
+   "model_label": "~25",
+   "label": "25",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "20",
+   "term": "~130",
+   "unit": "u27",
+   "model_label": "~130",
+   "label": "130",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "20",
+   "term": "~110",
+   "unit": "u27",
+   "model_label": "~110",
+   "label": "110",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "40",
+   "term": "~150",
+   "unit": "u27",
+   "model_label": "~150",
+   "label": "150",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "40",
+   "term": "~130",
+   "unit": "u27",
+   "model_label": "~130",
+   "label": "130",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "60",
+   "term": "~165",
+   "unit": "u27",
+   "model_label": "~165",
+   "label": "165",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "60",
+   "term": "~145",
+   "unit": "u27",
+   "model_label": "~145",
+   "label": "145",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "80",
+   "term": "~175",
+   "unit": "u27",
+   "model_label": "~175",
+   "label": "175",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "80",
+   "term": "~150",
+   "unit": "u27",
+   "model_label": "~150",
+   "label": "150",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "95",
+   "term": "~180",
+   "unit": "u27",
+   "model_label": "~180",
+   "label": "180",
+   "explanation": "~"
+  },
+  {
+   "variable": "habitat types",
+   "code": "",
+   "label": "cemeteries",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "habitat types",
+   "code": "",
+   "label": "community gardens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "habitat types",
+   "code": "",
+   "label": "urban parks",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "None",
+   "code": "",
+   "label": "abundant",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "None",
+   "code": "",
+   "label": "dominant",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "cavity",
+   "code": "",
+   "label": "above ground",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "social parasite",
+   "code": "",
+   "label": "social parasite",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "cavity",
+   "code": "",
+   "label": "carder",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "habitat types investigated in Montreal",
+   "code": "",
+   "label": "parks",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "wild bee community structure",
+   "code": "",
+   "label": "wild bee community structure",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "Sampling units",
+   "code": "95",
+   "term": "—",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 98.0
+}

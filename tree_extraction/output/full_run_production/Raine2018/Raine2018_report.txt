@@ -1,0 +1,98 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Raine2018\Raine2018.xlsx  (41135 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Raine2018\Raine2018.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 41135
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 41135 MISSED ROWS MISSED
+  species not in prediction               41135
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (13 distinct), closest predicted name:
+     gt 'Catharsius dayacus'                 (nothing similar in the prediction)   x7104
+     gt 'Onthophagus obscurior'              (nothing similar in the prediction)   x5280
+     gt 'Proagaderus wantanabei'             (nothing similar in the prediction)   x3960
+     gt 'Paragymnopleurus maurus'            (nothing similar in the prediction)   x3768
+     gt 'Onthophagus rugicollis'             (nothing similar in the prediction)   x3720
+     gt 'Onthophagus vulpes'                 (nothing similar in the prediction)   x3720
+  -> 6 species mismatches explain 27552 of 41135 misses (67%) — systematic, not scattered
+
+  full miss detail saved -> Raine2018_misses.csv, Raine2018_misses_summary.json (41135 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  repoductive capacity (thorax:abdomen)          1691     0   GT-ONLY
+  abdomen length                                 1720     0   GT-ONLY
+  wing area (mm2)                                1691     0   GT-ONLY
+  wing aspect ratio (wing width: length)         1691     0   GT-ONLY
+  eye length: body length                          29     0   GT-ONLY
+  hind leg to body ratio                           29     0   GT-ONLY
+  body length                                    1720     0   GT-ONLY
+  body size                                      1720     0   GT-ONLY
+  reproductive capactiy                            29     0   GT-ONLY
+  left eye length                                1691     0   GT-ONLY
+  left eye width                                 1691     0   GT-ONLY
+  eye length                                       29     0   GT-ONLY
+  eye width: length                                29     0   GT-ONLY
+  eye roundness                                  1691     0   GT-ONLY
+  eye size                                       1691     0   GT-ONLY
+  eye width                                        29     0   GT-ONLY
+  head length                                    1720     0   GT-ONLY
+  head width :length                             1691     0   GT-ONLY
+  head width: length                               29     0   GT-ONLY
+  head width                                     1720     0   GT-ONLY
+  left hind leg length                           1691     0   GT-ONLY
+  left hind leg width                            1691     0   GT-ONLY
+  hind leg robustness (leg width :length)        1691     0   GT-ONLY
+  hind leg length                                  29     0   GT-ONLY
+  hind leg robustness                              29     0   GT-ONLY
+  hind leg size                                  1691     0   GT-ONLY
+  hind leg width                                   29     0   GT-ONLY
+  left wing length                                296     0   GT-ONLY
+  left wing width                                3086     0   GT-ONLY
+  thorax roundness (width :length)               1691     0   GT-ONLY
+  thorax length                                  1720     0   GT-ONLY
+  wing loading                                   1691     0   GT-ONLY
+  thorax roundness                                 29     0   GT-ONLY
+  thoax size                                       29     0   GT-ONLY
+  thorax size                                    1691     0   GT-ONLY
+  thorax width                                   1720     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0 41135   id+type+value
+  tags        0.000  0.000  0.000      0     0 41135   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

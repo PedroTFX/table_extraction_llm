@@ -1,0 +1,77 @@
+  [semantic] matched by values: 'Femur Length: Body Size' -> 'Femur Length'
+  [semantic] matched by values: 'Body Size' -> 'Body Length'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Rebrina2022\Rebrina2022.xlsx  (252 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Rebrina2022\Rebrina2022.csv  (192 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Gryllus campestris Linnaeus, 1758' -> 'Gryllus campestris'
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body Size' -> 'Body Length'
+  'Femur Length: Body Size' -> 'Femur Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 192
+  missed (FN)         : 60
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 0.762 / 0.865   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.762 / 0.865   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.762   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    192  0.000  <-- low
+  measurementMethod             0     64  0.000  <-- low
+  measurementUnit               0     64  0.000  <-- low
+  measurementStatistic          0    192  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         192    192  1.000
+  lifeStage                   160    192  0.833
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    192  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 60 MISSED ROWS MISSED
+  species not in prediction                  60
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (10 distinct), closest predicted name:
+     gt 'Leptophyes boscii'                 ~0.68~  pred 'Leptophyes albovittata'   x6
+     gt 'Modestana modesta'                  (nothing similar in the prediction)   x6
+     gt 'Pachytrachis gracilis'              (nothing similar in the prediction)   x6
+     gt 'Pachytrachis striolatus'            (nothing similar in the prediction)   x6
+     gt 'Phaneroptera falcata'               (nothing similar in the prediction)   x6
+     gt 'Pholidoptera femorata'             ~0.65~  pred 'Eupholidoptera schmidti'   x6
+  -> 6 species mismatches explain 36 of 60 misses (60%) — systematic, not scattered
+
+  full miss detail saved -> Rebrina2022_misses.csv, Rebrina2022_misses_summary.json (60 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      42    32   Δ-10 (split?)
+  flight capacity                                  42    32   Δ-10 (split?)
+  feeding guild                                    42    32   Δ-10 (split?)
+  femur length                                     42    32   Δ-10 (split?)
+  lifestyle                                        42    32   Δ-10 (split?)
+  moisture preference                              42    32   Δ-10 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.762  0.865    192     0    60   id+type+value
+  tags        0.000  0.000  0.000      0   192   252   basis+id+type+value+stat+sex+stage
+             (F1 -0.865 vs previous)

@@ -1,0 +1,683 @@
+{
+ "_columns": [
+  [
+   11,
+   6,
+   "dom",
+   [
+    "subordinate",
+    "dominant",
+    "NA"
+   ]
+  ],
+  [
+   11,
+   7,
+   "diu",
+   [
+    "NA",
+    "NSD",
+    "SD"
+   ]
+  ],
+  [
+   11,
+   8,
+   "rec",
+   [
+    "1.0",
+    "2.0",
+    "3.0",
+    "NA"
+   ]
+  ],
+  [
+   11,
+   11,
+   "liquids",
+   [
+    "0.0",
+    "1.0"
+   ]
+  ],
+  [
+   11,
+   9,
+   "seeds",
+   [
+    "0.0",
+    "1.0"
+   ]
+  ],
+  [
+   11,
+   10,
+   "insects",
+   [
+    "1.0",
+    "0.0"
+   ]
+  ],
+  [
+   12,
+   4,
+   "nest_site",
+   [
+    "0.0",
+    "2.0",
+    "3.0",
+    "1.0"
+   ]
+  ],
+  [
+   11,
+   14,
+   "pol",
+   [
+    "1.0",
+    "3.0",
+    "2.0"
+   ]
+  ],
+  [
+   12,
+   5,
+   "body_size",
+   [
+    "2.0",
+    "1.0",
+    "3.0",
+    "0.0"
+   ]
+  ],
+  [
+   12,
+   6,
+   "tongue_length",
+   [
+    "2.0",
+    "1.0"
+   ]
+  ]
+ ],
+ "11:6": {
+  "cells": {},
+  "header": "dom"
+ },
+ "11:7": {
+  "cells": {
+   "NSD": {
+    "term": "non-strictly diurnal species [NDS]",
+    "parts": [
+     "NSD"
+    ],
+    "options": {
+     "NSD": {
+      "evidence": "initial",
+      "labels": [
+       "non-strictly diurnal species [NDS]"
+      ]
+     }
+    },
+    "evidence": {
+     "NSD": "initial"
+    },
+    "probs": {
+     "NSD | QK": {
+      "code": 0.962,
+      "word": 0.038
+     },
+     "NSD": {
+      "e0": 0.953,
+      "keep": 0.047
+     },
+     "NSD | QB": {}
+    }
+   },
+   "SD": {
+    "term": "strictly diurnal",
+    "parts": [
+     "SD"
+    ],
+    "options": {
+     "SD": {
+      "evidence": "initial",
+      "labels": [
+       "strictly diurnal",
+       "strictly diurnal species [DS]"
+      ]
+     }
+    },
+    "evidence": {
+     "SD": "initial"
+    },
+    "probs": {
+     "SD | QK": {
+      "code": 0.854,
+      "word": 0.146
+     },
+     "SD": {
+      "e0": 0.958,
+      "e1": 0.009,
+      "keep": 0.033
+     },
+     "SD | QB": {}
+    }
+   }
+  },
+  "header": "diu"
+ },
+ "11:8": {
+  "cells": {
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.942,
+      "word": 0.058
+     },
+     "1.0": {
+      "e0": 0.973,
+      "keep": 0.027
+     },
+     "1.0 | QB": {}
+    }
+   },
+   "2.0": {
+    "term": "fire occurred 7 to 12 years ago",
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "0.05",
+       "fire occurred 7 to 12 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "2.0": "explicit"
+    },
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.863,
+      "word": 0.137
+     },
+     "2.0": {
+      "e0": 0.007,
+      "e1": 0.828,
+      "keep": 0.165
+     },
+     "2.0 | QB": {}
+    }
+   },
+   "3.0": {
+    "term": "fire occurred 15 to 41 years ago",
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "years"
+      ]
+     }
+    },
+    "evidence": {
+     "3.0": "explicit"
+    },
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.937,
+      "word": 0.063
+     },
+     "3.0": {
+      "e0": 0.937,
+      "keep": 0.063
+     },
+     "3.0 | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   }
+  },
+  "header": "rec"
+ },
+ "11:11": {
+  "cells": {
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.894,
+      "word": 0.106
+     },
+     "1.0": {
+      "e0": 0.727,
+      "keep": 0.273
+     },
+     "1.0 | QB": {}
+    }
+   }
+  },
+  "header": "liquids"
+ },
+ "11:9": {
+  "cells": {
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.958,
+      "word": 0.042
+     },
+     "1.0": {
+      "e0": 0.693,
+      "keep": 0.307
+     },
+     "1.0 | QB": {}
+    }
+   }
+  },
+  "header": "seeds"
+ },
+ "11:10": {
+  "cells": {
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.972,
+      "word": 0.028
+     },
+     "1.0": {
+      "e0": 0.959,
+      "keep": 0.041
+     },
+     "1.0 | QB": {}
+    }
+   }
+  },
+  "header": "insects"
+ },
+ "12:4": {
+  "cells": {
+   "2.0": {
+    "term": "fire occurred 7 to 12 years ago",
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "0.05",
+       "fire occurred 7 to 12 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "2.0": "explicit"
+    },
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.895,
+      "word": 0.105
+     },
+     "2.0": {
+      "e0": 0.003,
+      "e1": 0.69,
+      "keep": 0.307
+     },
+     "2.0 | QB": {}
+    }
+   },
+   "3.0": {
+    "term": "fire occurred 15 to 41 years ago",
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "years"
+      ]
+     }
+    },
+    "evidence": {
+     "3.0": "explicit"
+    },
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "3.0": {
+      "e0": 0.966,
+      "keep": 0.034
+     },
+     "3.0 | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   },
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "1.0": {
+      "e0": 0.955,
+      "keep": 0.045
+     },
+     "1.0 | QB": {}
+    }
+   }
+  },
+  "header": "nest_site"
+ },
+ "11:14": {
+  "cells": {
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "1.0": {
+      "e0": 0.986,
+      "keep": 0.014
+     },
+     "1.0 | QB": {}
+    }
+   },
+   "3.0": {
+    "term": "fire occurred 15 to 41 years ago",
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "years"
+      ]
+     }
+    },
+    "evidence": {
+     "3.0": "explicit"
+    },
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "3.0": {
+      "e0": 0.976,
+      "keep": 0.024
+     },
+     "3.0 | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   },
+   "2.0": {
+    "term": "fire occurred 7 to 12 years ago",
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "0.05",
+       "fire occurred 7 to 12 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "2.0": "explicit"
+    },
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.733,
+      "word": 0.267
+     },
+     "2.0": {
+      "e0": 0.021,
+      "e1": 0.866,
+      "keep": 0.113
+     },
+     "2.0 | QB": {}
+    }
+   }
+  },
+  "header": "pol"
+ },
+ "12:5": {
+  "cells": {
+   "2.0": {
+    "term": null,
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "0.05",
+       "fire occurred 7 to 12 years ago"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.413,
+      "word": 0.587
+     }
+    }
+   },
+   "1.0": {
+    "term": "fire occurred 0 to 4 years ago",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.585,
+      "word": 0.415
+     },
+     "1.0": {
+      "e0": 0.549,
+      "keep": 0.451
+     },
+     "1.0 | QB": {}
+    }
+   },
+   "3.0": {
+    "term": null,
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "years"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.917,
+      "word": 0.083
+     },
+     "3.0": {
+      "e0": 0.419,
+      "keep": 0.581
+     }
+    }
+   }
+  },
+  "header": "body_size"
+ },
+ "12:6": {
+  "cells": {
+   "2.0": {
+    "term": null,
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "0.05",
+       "fire occurred 7 to 12 years ago"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.455,
+      "word": 0.545
+     }
+    }
+   },
+   "1.0": {
+    "term": null,
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "fire occurred 0 to 4 years ago"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.592,
+      "word": 0.408
+     },
+     "1.0": {
+      "e0": 0.075,
+      "keep": 0.925
+     }
+    }
+   }
+  },
+  "header": "tongue_length"
+ }
+}

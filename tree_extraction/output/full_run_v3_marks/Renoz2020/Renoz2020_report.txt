@@ -1,0 +1,92 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Renoz2020\Renoz2020.xlsx  (125 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Renoz2020\Renoz2020.csv  (18 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'A. spiraecola' -> 'Aphis spiraecola'
+
+TAXON NAMES LEFT UNMAPPED (4)
+  '+': no ground-truth name denotes this organism
+  '31/04/2013': no ground-truth name denotes this organism
+  'Citrus clementina': no ground-truth name denotes this organism
+  'Grombalia': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Species' -> 'Host plant species'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 125
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 12   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             12
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 125 MISSED ROWS MISSED
+  species not in prediction                  42
+  species present, trait missing             34
+  species+trait present, value differs       49
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'citrus clementina'          ->  'aphid species'              x15
+     "citrus sinensis 'thomson navel'" ->  'aphid species'              x14
+     'citrus sinensis'            ->  'aphid species'              x8
+     'citrus × limon'             ->  'aphid species'              x7
+     "citrus sinensis 'washington navel’" ->  'aphid species'              x4
+     "citrus sinensis 'maltaise demi-sanguine'" ->  'aphid species'              x1
+  -> 6 substitutions explain 49 of 125 misses (39%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Aphis gossypii'                    ~0.67~  pred 'Aphis spiraecola'   x42
+  -> 1 species mismatch explains 42 of 125 misses (34%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Symbionts'                        x34
+  -> 1 missing trait explains 34 of 125 misses (27%) — scattered; no single cause
+
+  full miss detail saved -> Renoz2020_misses.csv, Renoz2020_misses_summary.json (125 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  11                                                0     4   PRED-ONLY
+  12                                                0     4   PRED-ONLY
+  16                                                0     4   PRED-ONLY
+  host plant species                               68     6   Δ-62 (split?)
+  symbionts                                        57     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     6   125   id+type+value
+             (12 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     6   125   basis+id+type+value+stat+sex+stage
+             (12 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

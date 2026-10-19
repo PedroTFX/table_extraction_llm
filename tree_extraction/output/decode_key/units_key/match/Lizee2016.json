@@ -1,0 +1,175 @@
+{
+ "_columns": [
+  [
+   7,
+   3,
+   "Voltinism / Larval diet",
+   [
+    "polyphagous",
+    "oligophagous"
+   ]
+  ],
+  [
+   7,
+   5,
+   "Larval diet / Functional group",
+   [
+    "TG",
+    "RS",
+    "SeG",
+    "TS"
+   ]
+  ]
+ ],
+ "7:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Voltinism / Larval diet"
+ },
+ "7:5": {
+  "cells": {
+   "TG": {
+    "term": "typical generalists",
+    "parts": [
+     "TG"
+    ],
+    "options": {
+     "TG": {
+      "evidence": "explicit",
+      "labels": [
+       "generalists"
+      ]
+     }
+    },
+    "evidence": {
+     "TG": "explicit"
+    },
+    "probs": {
+     "TG | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "TG": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "TG | QB": {
+      "w0": 0.002,
+      "w1": 0.998
+     }
+    }
+   },
+   "RS": {
+    "term": "rebound specialists",
+    "parts": [
+     "RS"
+    ],
+    "options": {
+     "RS": {
+      "evidence": "explicit",
+      "labels": [
+       "specialists"
+      ]
+     }
+    },
+    "evidence": {
+     "RS": "explicit"
+    },
+    "probs": {
+     "RS | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "RS": {
+      "e0": 0.982,
+      "keep": 0.018
+     },
+     "RS | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   },
+   "SeG": {
+    "term": "selective generalists",
+    "parts": [
+     "SeG"
+    ],
+    "options": {
+     "SeG": {
+      "evidence": "explicit",
+      "labels": [
+       "generalists"
+      ]
+     }
+    },
+    "evidence": {
+     "SeG": "explicit"
+    },
+    "probs": {
+     "SeG | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "SeG": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "SeG | QB": {
+      "w0": 0.0,
+      "w1": 1.0
+     }
+    }
+   },
+   "TS": {
+    "term": "typical specialists",
+    "parts": [
+     "TS"
+    ],
+    "options": {
+     "TS": {
+      "evidence": "explicit",
+      "labels": [
+       "specialists"
+      ]
+     }
+    },
+    "evidence": {
+     "TS": "explicit"
+    },
+    "probs": {
+     "TS | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "TS": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "TS | QB": {
+      "w0": 0.002,
+      "w1": 0.998
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u2"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.752,
+    "several": 0.241,
+    "none": 0.008
+   },
+   "chosen": [
+    "u2"
+   ]
+  },
+  "header": "Larval diet / Functional group"
+ }
+}

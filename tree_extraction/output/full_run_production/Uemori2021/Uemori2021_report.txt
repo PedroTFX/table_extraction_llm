@@ -1,0 +1,108 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Uemori2021\Uemori2021.xlsx  (428 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Uemori2021\Uemori2021.csv  (543 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 29 pair(s))
+  'Anoplius fratellus' -> 'Anoplius fratellus (Pérez, 1905)'
+  'Auplopus kyotensis' -> 'Auplopus kyotensis (Yasumatsu, 1939)'
+  'Bischoffitilla ardescens' -> 'Bischoffitilla ardescens (Smith, 1873)'
+  'Caliadurgus ussuriensis' -> 'Caliadurgus ussuriensis (Gussakovskij, 1933)'
+  'Clistoderes futabae' -> 'Clistoderes futabae (Ishikawa, 1962)'
+  'Crossocerus opacifrons' -> 'Crossocerus opacifrons (Tsuneki, 1947)'
+  'Crossocerus styrius' -> 'Crossocerus styrius (Kohl, 1892)'
+  'Crossocerus subulatus' -> 'Crossocerus subulatus (Dahlbom, 1845)'
+  'Dipogon bifasciatus' -> 'Dipogon bifasciatus (Geoffroy, 1785)'
+  'Dipogon immarginatus' -> 'Dipogon immarginatus (Gussakovskij, 1933)'
+  'Dipogon nipponicus' -> 'Dipogon nipponicus (Yasumatsu, 1939)'
+  'Dryinus indicus' -> 'Dryinus indicus (Kieffer, 1914)'
+  'Ectemnius continuus' -> 'Ectemnius continuus (Fabricius, 1804)'
+  'Elampus bidens' -> 'Elampus bidens (Forster, 1853)'
+  'Eucera nipponensis' -> 'Eucera nipponensis (Pérez, 1905)'
+  'Holepyris atamensis' -> 'Holepyris atamensis (Ashmead, 1904)'
+  'Lasioglossum apristum' -> 'Lasioglossum apristum (Vachal, 1903)'
+  'Lasioglossum duplex' -> 'Lasioglossum duplex (Dalla Torre, 1896)'
+  'Lasioglossum exiliceps' -> 'Lasioglossum exiliceps (Vachal, 1903)'
+  'Lasioglossum occidens' -> 'Lasioglossum occidens (Smith, 1873)'
+  'Lasioglossum pallilomum' -> 'Lasioglossum pallilomum (Strand, 1913)'
+  'Lasioglossum transpositum' -> 'Lasioglossum transpositum (Cockerell, 1925)'
+  'Nysson spinosus' -> 'Nysson spinosus (Foster, 1771)'
+  'Passaloecus insignis' -> 'Passaloecus insignis (van der Linden, 1829)'
+  'Poecilagenia maruyamai' -> 'Poecilagenia maruyamai (Ishikawa, 1965)'
+  'Pristepyris japonicus' -> 'Pristepyris japonicus (Yasumatsu, 1955)'
+  'Pristepyris minutus' -> 'Pristepyris minutus (Yasumatsu, 1955)'
+  'Spilomena curruca' -> 'Spilomena curruca (Dahlbom, 1844)'
+  'Taimyrmosa nigrofasciata' -> 'Taimyrmosa nigrofasciata (Yasumatsu, 1931)'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Functional traits': no ground-truth name denotes this organism
+  'Phylogenetic composition': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 318
+  missed (FN)         : 110
+  spurious, in scope  : 110   <- GT covers this trait: real errors
+  spurious, out of scope: 115   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.586 / 0.743 / 0.655   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.743 / 0.743 / 0.743   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.743   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            115
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               107    318  0.336  <-- low
+  measurementMethod             0      0    n/a   +318 where GT blank
+  measurementUnit             107    211  0.507
+  measurementStatistic        214    318  0.673
+  measurementRemarks            0      0    n/a
+  sex                         318    318  1.000
+  lifeStage                   211    318  0.664
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    318  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 110 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      110
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'primary predator'           ->  '2'                          x43
+     'hyper predator'             ->  '3'                          x39
+     'herbivorous'                ->  '1'                          x24
+     '7.95'                       ->  '7.949999999999999'          x1
+     '5.95'                       ->  '5.949999999999999'          x1
+     '4'                          ->  '3'                          x1
+  -> 6 substitutions explain 109 of 110 misses (99%) — systematic, not scattered
+
+  full miss detail saved -> Uemori2021_misses.csv, Uemori2021_misses_summary.json (110 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitudinal range                               107   107   
+  mean body size                                  107   107   
+  elevation (m) species diversity species richness    0     8   PRED-ONLY
+  flight duration                                   0   107   PRED-ONLY
+  feeding guild                                   107   107   
+  trophic level                                   107   107   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.743  0.743  0.743    318   110   110   id+type+value
+             (115 more spurious row(s) set aside as out-of-scope; strict P would be 0.586)
+  tags        0.250  0.250  0.250    107   321   321   basis+id+type+value+stat+sex+stage
+             (115 more spurious row(s) set aside as out-of-scope; strict P would be 0.197)
+             (F1 -0.493 vs previous)

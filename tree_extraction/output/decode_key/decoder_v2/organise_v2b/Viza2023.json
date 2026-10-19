@@ -1,0 +1,186 @@
+{
+ "calls": 2,
+ "chars": 6434,
+ "passages": [
+  "[prose] Among freshwater macroinvertebrates, Odonata (Insecta) are a good model taxon for exploring the effects of climate warming on freshwater biodiversity because (1) they originated in the tropics, which implies tolerance to high temperatures; (2) adults present high morphological differentiation across species, which facilitates capture, identification and recording; (3) they occur with medium to high local abundances and are present in almost all freshwater habitats, with high species turnover due to larval and adult preferences in habitat use and evident niche partition among species; (4) they present high phenotypic variability, both within and between species, in traits pre-sumably involved in adaptation to climate warming, such as emergence and duration of flight season; and (5) there is a large and wellknown body of historical research, including extensive recording and rich historical datasets from citizen science projects (Corser et al., 2014; Hassall & Thompson, 2008; Termaat et al., 2019).",
+  "[prose] The first fPCA axis of the functional space (Figure 4a; Supporting information S8) explained 20.85% of the total variability, whereas the second and third axes explained respectively 13.62% and 10.94%. The trait categories most correlated to the first axis were semivoltinism (NC0) together with the opposite patterns of behaviour fliers (FBF) versus perchers (FBP), and the water quality oligotrophic (WO) versus eutrophic (WE). The second axis was mostly related with the opposite directions of absence (DN) versus presence (DY) of egg diapause. The trait categories most correlated with axes (>0.6) were selected (Supporting information S9).",
+  "[prose] F I G U R E 4 Fuzzy principal component analysis (fPCA). (a) Distribution of species on the generated functional space. Ellipses cluster the species belonging to the same category of range-shift responses, each colour and letters corresponding to a different range-shift response as in Figures 1a and 2; (b) arrows represent the most weighted trait categories for principal components 1 and 2 on fPCA (see trait abbreviation in Supporting information S2); (c) distribution of species by discriminant analysis (DA) space; (d) significant traits that discriminated between the categories of range-shift responses in DA. From left to right and from up to down: flight season (FS); range margins (R); habitat type (H); oviposition habitat (O); river zonation (A); vegetation at the breeding site (V); and voltinism (NC). The categories within a trait are depicted in the same colour.",
+  "[prose] This is an open access article under the terms of the [Creative Commons Attribution-NonCommercial](http://creativecommons.org/licenses/by-nc/4.0/) License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited and is not used for commercial purposes.",
+  "[prose] F I G U R E 1 (a) Proposed categories of potential range shifts based on differences between current and future species distribution in terms of longitude and latitude; (b) species occurrence map covering the Iberian Peninsula and Northern Morocco from six datasets.",
+  "[prose] The geographic extent of bioclimatic variables to model current distribution covered northern Morocco, the Iberian Peninsula and southern France, between latitudes 30\u0001 N and $$4 5 ^ { \\circ }$ N,$ and longitudes $1 0 ^ { \\circ }$ W and $$5 ^ { \\circ }$ 巨 .$ The predictions of future potential distribution were exclusively limited to the Iberian Peninsula and South of France. Current climatic conditions were described by 19 bioclimatic variables based on temperature and rainfall values. These variables were downloaded from [worldclim.org](http://worldclim.org) at 30 arc-second resolution based on monthly averages for the period 1970–2000. Bioclimatic variables are commonly used in SDMs for predicting species ranges and were originally created to generate more biologically meaningful variables than traditional environmental metrics such as mean temperature and pre-cipitation (O’Donnell & Ignizio, 2012).",
+  "[prose] To determine the current species distribution, binary logistic generalised linear models (GLM) and boosted regression trees (BRT) were run for each species because testing for several algorithms is suggested to optimise the predictions for each particular species (Konowalik & Nosol, 2021; Qiao et al., 2015). GLM represents a flexible extension of linear models that allows for response variables that have a non-normal distribution error (binomial in the case of binary responses), whereas BRT combines regression trees for generating large numbers of simple distribution models that are selected for the best prediction by boosting algorithms (Elith et al., 2008; Franklin, 2010; Kienast et al., 2012). To create the input SDM matrix, the current bioclimatic information was extracted for each spatial point. The database created for each species was split into 70% as training set and 30% as testing set by random partition to validate the models. Each model was evaluated independently by three predictors of significance to select the model with the best performance: (1) by means of area under curve (AUC) statistics from a receiver-operating characteristic analysis (ROC), which is a threshold-independent evaluation of model discrimination (Fielding & Bell, 1997); (2) by true skills statistics (TSS), which is a measure of accuracy (Allouche et al., 2006) and (3) by odds ratio skill score (ORSS), which measures skill compared to a random prediction (Stephenson, 2000). AUC and TSS were the two metrics that achieved the highest performance compared to other evaluation models (Konowalik & Nosol, 2021) (Supporting information S2). The widely used logistic regression (fitted with GLM) was selected for the majority of species. However, for some species that had low numbers of occurrences (fewer than 70 grid cells), the BRT models (learning $\\mathsf { r a t e } = 0 . 0 0 1$ , bag fraction = 0.75) performed better than GLM, as previously suggested (Konowalik & Nosol, 2021). All models were performed and evaluated using the R software (R Core Team, 2016) and the package ‘gbm (Ridgeway et al., 2015).",
+  "[table 4] Sympetrum vulgatum | 65.0 | 1698.0\nTrithemis annulata | 2323.0 | 1302.0\nTrithemis arteriosa | 11.0 | 1704.0\nTrithemis kirbyi | 902.0 | 1528.0\nZygonyx torridus | 193.0 | 1669.0\nTable S1. Species records used to each distribution model."
+ ],
+ "categories": [
+  {
+   "variable": "range-shift responses",
+   "code": "letters",
+   "term": "each colour and letters corresponding to a different range-shift response as in Figures 1a and 2",
+   "model_label": "letters",
+   "label": "letters",
+   "explanation": "each colour and corresponding to a different range-shift response as in Figures 1a and 2"
+  },
+  {
+   "variable": "trait categories",
+   "code": "NC0",
+   "term": "semivoltinism",
+   "model_label": "semivoltinism",
+   "label": "semivoltinism",
+   "explanation": ""
+  },
+  {
+   "variable": "trait categories",
+   "code": "FBF",
+   "term": "fliers",
+   "model_term": "fliiers",
+   "model_label": "fliers",
+   "label": "fliers",
+   "explanation": ""
+  },
+  {
+   "variable": "trait categories",
+   "code": "FBP",
+   "term": "perchers",
+   "model_label": "perchers",
+   "label": "perchers",
+   "explanation": ""
+  },
+  {
+   "variable": "trait categories",
+   "code": "WO",
+   "term": "oligotrophic",
+   "model_label": "oligotrophic",
+   "label": "oligotrophic",
+   "explanation": ""
+  },
+  {
+   "variable": "trait categories",
+   "code": "WE",
+   "term": "eutrophic",
+   "model_label": "eutrophic",
+   "label": "eutrophic",
+   "explanation": ""
+  },
+  {
+   "variable": "absence",
+   "code": "DN",
+   "term": "absence",
+   "model_label": "absence",
+   "label": "absence",
+   "explanation": ""
+  },
+  {
+   "variable": "presence",
+   "code": "DY",
+   "term": "presence",
+   "model_label": "presence",
+   "label": "presence",
+   "explanation": ""
+  },
+  {
+   "variable": "flight season",
+   "code": "FS",
+   "term": "flight season",
+   "model_label": "flight season",
+   "label": "flight season",
+   "explanation": ""
+  },
+  {
+   "variable": "range margins",
+   "code": "R",
+   "term": "range margins",
+   "model_label": "range margins",
+   "label": "range margins",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "H",
+   "term": "habitat type",
+   "model_label": "habitat type",
+   "label": "habitat type",
+   "explanation": ""
+  },
+  {
+   "variable": "oviposition habitat",
+   "code": "O",
+   "term": "oviposition habitat",
+   "model_label": "oviposition habitat",
+   "label": "oviposition habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "river zonation",
+   "code": "A",
+   "term": "river zonation",
+   "model_label": "river zonation",
+   "label": "river zonation",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation at the breeding site",
+   "code": "V",
+   "term": "vegetation at the breeding site",
+   "model_label": "vegetation",
+   "label": "vegetation",
+   "explanation": "at the breeding site"
+  },
+  {
+   "variable": "voltinism",
+   "code": "NC",
+   "term": "voltinism",
+   "model_label": "voltinism",
+   "label": "voltinism",
+   "explanation": ""
+  },
+  {
+   "variable": "Species records used to each distribution model",
+   "code": "Sympetrum vulgatum",
+   "term": "Sympetrum vulgatum",
+   "model_label": "Sympetrum vulgatum",
+   "label": "Sympetrum vulgatum",
+   "explanation": ""
+  },
+  {
+   "variable": "Species records used to each distribution model",
+   "code": "Trithemis annulata",
+   "term": "Trithemis annulata",
+   "model_label": "Trithemis annulata",
+   "label": "Trithemis annulata",
+   "explanation": ""
+  },
+  {
+   "variable": "Species records used to each distribution model",
+   "code": "Trithemis arteriosa",
+   "term": "Trithemis arteriosa",
+   "model_label": "Trithemis arteriosa",
+   "label": "Trithemis arteriosa",
+   "explanation": ""
+  },
+  {
+   "variable": "Species records used to each distribution model",
+   "code": "Trithemis kirbyi",
+   "term": "Trithemis kirbyi",
+   "model_label": "Trithemis kirbyi",
+   "label": "Trithemis kirbyi",
+   "explanation": ""
+  },
+  {
+   "variable": "Species records used to each distribution model",
+   "code": "Zygonyx torridus",
+   "term": "Zygonyx torridus",
+   "model_label": "Zygonyx torridus",
+   "label": "Zygonyx torridus",
+   "explanation": ""
+  },
+  {
+   "variable": "range-shift responses",
+   "code": "",
+   "label": "range-shift response",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 33.9
+}

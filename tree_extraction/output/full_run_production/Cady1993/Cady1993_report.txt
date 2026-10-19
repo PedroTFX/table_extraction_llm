@@ -1,0 +1,76 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Cady1993\Cady1993.xlsx  (16 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Cady1993\Cady1993.csv  (16 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 5 pair(s))
+  'Acrocera bimaculataLoew, 1866' -> 'Acrocera bimaculata'
+  'Exetasis eickstedtaeSchlinger, 1972' -> 'Exetasis eickstedtae'
+  'Ogcodes borealis Cole, 1919' -> 'Ogcodes borealis'
+  'Ogcodes borealisCole, 1919' -> 'Ogcodes borealis'
+  'Turbopsebius sulphuripesLoew, 1869' -> 'Turbopsebius sulphuripes'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Ogcodes adaptatus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Host spider' -> 'Host spider(s)'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 14
+  missed (FN)         : 2
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.875 / 0.875 / 0.875   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.875 / 0.875 / 0.875   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.875   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 7     14  0.500
+  measurementMethod             0      0    n/a   +7 where GT blank
+  measurementUnit               0      7  0.000  <-- low
+  measurementStatistic          7     14  0.500
+  measurementRemarks            0     14  0.000  <-- low
+  sex                          14     14  1.000
+  lifeStage                     0     14  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0     14  0.000  <-- low
+  sampleSizeUnit                0     14  0.000  <-- low
+  sampleTreatment               0      7  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +14 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      7  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     14  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 2 MISSED ROWS MISSED
+  species not in prediction                   1
+  species present, trait missing              0
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '"lycosa" sp.'               ->  'schizocosa rovneri'         x1
+  -> 1 substitution explains 1 of 2 misses (50%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Ogcodes adaprarus'                 ~0.89~  pred 'Ogcodes adaptatus'   x1
+  -> 1 species mismatch explains 1 of 2 misses (50%) — scattered; no single cause
+
+  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (2 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pupation duration                                 8     8   
+  host spider(s)                                    8     8   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.875  0.875  0.875     14     2     2   id+type+value
+  tags        0.000  0.000  0.000      0    16    16   basis+id+type+value+stat+sex+stage
+             (F1 -0.875 vs previous)

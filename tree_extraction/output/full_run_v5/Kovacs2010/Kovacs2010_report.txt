@@ -1,0 +1,67 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Kovacs2010\kovacs2010.xlsx  (10 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5\Kovacs2010\Kovacs2010.csv  (49 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Gaster length' -> 'Gaster length '
+  'Mass' -> 'Mass '
+  'Third tergum length' -> 'Third tergum length '
+  'Thorax length' -> 'Thorax length '
+  'Thorax width' -> 'Thorax width '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 10
+  missed (FN)         : 0
+  spurious, in scope  : 30   <- GT covers this trait: real errors
+  spurious, out of scope: 9   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.204 / 1.000 / 0.339   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.250 / 1.000 / 0.400   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              9
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     10  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     10  0.000  <-- low
+  measurementStatistic          0     10  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     10  0.000  <-- low
+  lifeStage                     0     10  0.000  <-- low
+  caste                         0     10  0.000  <-- low
+  sampleSizeValue               5     10  0.500
+  sampleSizeUnit                0     10  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     10  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     10  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  log body length (range)                           0     2   PRED-ONLY
+  feature                                           0     5   PRED-ONLY
+  gaster length                                     2     8   Δ+6 (split?)
+  third tergum length                               2     8   Δ+6 (split?)
+  thorax length                                     2     8   Δ+6 (split?)
+  log thorax width (range)                          0     2   PRED-ONLY
+  mass                                              2     8   Δ+6 (split?)
+  thorax width                                      2     8   Δ+6 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.250  1.000  0.400     10    30     0   id+type+value
+             (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.204)
+  tags        0.000  0.000  0.000      0    40    10   basis+id+type+value+stat+sex+stage
+             (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.400 vs previous)
+             note: only 0/10 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

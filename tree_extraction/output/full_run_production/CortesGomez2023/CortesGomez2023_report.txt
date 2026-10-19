@@ -1,0 +1,86 @@
+  [semantic] left unmatched: 'Mean' vs 'Hair length' (llm said different traits)
+  [semantic] left unmatched: 'Mean' vs 'Body size' (llm said different traits)
+  [semantic] left unmatched: 'Mean' vs 'Altitude' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\CortesGomez2023\CortesGomez2023.xlsx  (56 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\CortesGomez2023\CortesGomez2023.csv  (64 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Bombus atratus, Bombus hortulanus, Bombus melaleucus' -> 'Bombus atratus, Bombus hortulanus,Bombus melaleucus'
+  'Xylocopa frontalis' -> 'Xylocopa frontalis (Olivier)'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Partamona sp., Para-partamona sp.': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 28
+  missed (FN)         : 28
+  spurious, in scope  : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 32   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.438 / 0.500 / 0.467   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.875 / 0.500 / 0.636   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             32
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     28  0.000  <-- low
+  measurementMethod             0      2  0.000  <-- low   +12 where GT blank
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     28  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          14     28  0.500
+  lifeStage                    14     28  0.500
+  caste                         0     14  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     28  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 28 MISSED ROWS MISSED
+  species not in prediction                   7
+  species present, trait missing             21
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Partamona sp., Parapartamona sp.'  ~0.94~  pred 'Partamona sp., Para-partamona sp.'   x7
+  -> 1 species mismatch explains 7 of 28 misses (25%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Altitude'                         x7
+     'Body size'                        x7
+     'Hair length'                      x7
+  -> 3 missing traits explain 21 of 28 misses (75%) — systematic, not scattered
+
+  full miss detail saved -> CortesGomez2023_misses.csv, CortesGomez2023_misses_summary.json (28 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitude                                          8     0   GT-ONLY
+  amount body hair                                  8     8   
+  social behavior                                   8     8   
+  body size                                         8     0   GT-ONLY
+  structure carrying pollen                         8     8   
+  hair length                                       8     0   GT-ONLY
+  nest location                                     8     8   
+  mean                                              0    32   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.875  0.500  0.636     28     4    28   id+type+value
+             (32 more spurious row(s) set aside as out-of-scope; strict P would be 0.438)
+  tags        0.000  0.000  0.000      0    32    56   basis+id+type+value+stat+sex+stage
+             (32 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.636 vs previous)

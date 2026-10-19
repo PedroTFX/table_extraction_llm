@@ -1,0 +1,66 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Espinosa2023\Espinosa2023.xlsx  (135 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Espinosa2023\Espinosa2023.csv  (135 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Size of the mesonotum' -> 'Size of the mesonotum '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 108
+  missed (FN)         : 27
+  spurious, in scope  : 27   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.800 / 0.800 / 0.800   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.800 / 0.800 / 0.800   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.800   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                81    108  0.750
+  measurementMethod             0      0    n/a
+  measurementUnit               0     81  0.000  <-- low
+  measurementStatistic         27    108  0.250  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         108    108  1.000
+  lifeStage                   108    108  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    108  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 27 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       27
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'non-opercular gill'         ->  'nog'                        x20
+     'opercular gill'             ->  'og'                         x7
+  -> 2 substitutions explain 27 of 27 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Espinosa2023_misses.csv, Espinosa2023_misses_summary.json (27 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  feeding group                                    27    27   
+  presence of opercular gill                       27    27   
+  length head size                                 27    27   
+  width head size                                  27    27   
+  size of the mesonotum                            27    27   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.800  0.800  0.800    108    27    27   id+type+value
+  tags        0.000  0.000  0.000      0   135   135   basis+id+type+value+stat+sex+stage
+             (F1 -0.800 vs previous)

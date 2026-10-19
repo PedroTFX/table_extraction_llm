@@ -1,0 +1,531 @@
+10 papers, 18 tables, 136 scored columns (82 used by the GT)
+
+accuracy                                gemma           tev1         nimble    nimble_full      tree_tev1tree_tev1_noctx    tree_nimble
+GT-used columns                     77/82 94%      80/82 98%      79/82 96%      77/82 94%      78/82 95%      28/82 34%      78/82 95%
+  identifier                        21/24 88%      22/24 92%      23/24 96%      22/24 92%      20/24 83%      22/24 92%      20/24 83%
+  trait (type/value)                56/58 97%     58/58 100%      56/58 97%      55/58 95%     58/58 100%       6/58 10%     58/58 100%
+  row fields                                -              -              -              -              -              -              -
+GT-used, type~value equal           77/82 94%      80/82 98%      81/82 99%      79/82 96%      78/82 95%      77/82 94%      78/82 95%
+GT-unused columns (weak key)          1/54 2%       7/54 13%      14/54 26%      11/54 20%      26/54 48%      27/54 50%      33/54 61%
+all columns                        78/136 57%     87/136 64%     93/136 68%     88/136 65%    104/136 76%     55/136 40%    111/136 82%
+tables, identifier exact            15/18 83%      13/18 72%      17/18 94%      16/18 89%      11/18 61%      12/18 67%      14/18 78%
+seconds                                   322            262            524            531            330            155            715
+
+TREE tree_tev1
+  soft answer (most path probability), GT-used: 78/82 95%
+  decision calls: 331
+  organism column picked right: 18/18 100%
+  table kinds chosen: organism_traits x10, counts x5, statistics x1, long_format x1, specimens x1
+  first wrong turn, GT-used columns (GT field <- step):
+    verbatimIdentification   <- is_taxon:no                                   x4
+  first wrong turn, GT-unused (weak key) columns (GT field <- step):
+    none                     <- kind:organism_property                        x19
+    none                     <- organism_name:higher_rank                     x3
+    none                     <- record_context:sampling_place                 x2
+    none                     <- organism_name:row_organism                    x2
+    none                     <- counts_or_statistics:statistic_name           x1
+    none                     <- counts_or_statistics:property_spread          x1
+
+TREE tree_tev1_noctx
+  soft answer (most path probability), GT-used: 29/82 35%
+  decision calls: 429
+  first wrong turn, GT-used columns (GT field <- step):
+    measurementType          <- organism_property:cells_are_values            x49
+    measurementType          <- organism_name:row_organism                    x2
+    verbatimIdentification   <- is_taxon:no                                   x2
+    measurementType          <- kind:record_context                           x1
+  first wrong turn, GT-unused (weak key) columns (GT field <- step):
+    none                     <- kind:organism_property                        x11
+    none                     <- record_context:sampling_place                 x9
+    none                     <- organism_name:row_organism                    x3
+    none                     <- counts_or_statistics:statistic_name           x2
+    none                     <- organism_name:higher_rank                     x1
+    none                     <- organism_name:associated_organism             x1
+
+TREE tree_nimble
+  soft answer (most path probability), GT-used: 78/82 95%
+  decision calls: 97
+  organism column picked right: 17/18 94%
+  table kinds chosen: organism_traits x11, counts x3, statistics x2, specimens x1, long_format x1
+  first wrong turn, GT-used columns (GT field <- step):
+    verbatimIdentification   <- is_taxon:no                                   x4
+  first wrong turn, GT-unused (weak key) columns (GT field <- step):
+    none                     <- kind:organism_property                        x16
+    none                     <- record_context:sampling_place                 x3
+    none                     <- counts_or_statistics:statistic_name           x1
+    none                     <- organism_name:associated_organism             x1
+
+PER PAPER (GT-used columns correct / total)
+paper                                 gemma           tev1         nimble    nimble_full      tree_tev1tree_tev1_noctx    tree_nimble
+OsorioCanadas2018                     13/14          14/14          13/14          14/14          14/14           8/14          13/14
+Dejean2019                              3/3            3/3            3/3            3/3            3/3            2/3            3/3
+Attiwilli2022                           5/6            4/6            5/6            5/6            6/6            2/6            5/6
+Oliveira2022                          10/10          10/10           9/10           8/10          10/10           2/10          10/10
+Korosi2022                              6/7            7/7            7/7            7/7            7/7            2/7            7/7
+Habustova2017                         16/17          17/17          17/17          17/17          14/17           6/17          16/17
+Derhe2016                               6/7            7/7            7/7            6/7            6/7            2/7            6/7
+Wiescher2012                          10/10          10/10          10/10          10/10          10/10           2/10          10/10
+Rebrina2022                             7/7            7/7            7/7            6/7            7/7            1/7            7/7
+Figueroa2021                            1/1            1/1            1/1            1/1            1/1            1/1            1/1
+
+DETAIL: columns where a tree variant disagrees with the GT label (path = the tree's greedy route)
+  OsorioCanadas2018 OsorioCanadas2018_full.md#9 'Larval diet': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.66) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.83) > organism_name:row_organism(0.80)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#9 'Body size (ITS,mm)': GT=measurementType [89% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementValue, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:cells_are_values(0.83)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#9 'Wintering stage': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.94) > kind:organism_property(0.94) > organism_property:cells_are_values(0.78)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#9 'Nest-building material': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.89) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.84) > kind:organism_property(0.98) > organism_property:cells_are_values(0.64)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#10 'Order / Infraclass': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification, nimble=verbatimIdentification, nimble_full=verbatimIdentification
+      tree_tev1=verbatimIdentification  via is_taxon:yes(0.93) > organism_name:row_organism(0.88)
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.98) > organism_name:row_organism(0.70)
+      tree_nimble=measurementType  via is_taxon:no(0.93) > kind:organism_property(0.95) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#10 'Wintering stage': GT=measurementType [95% (species,value) pairs in GT]
+      gemma=lifeStage, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.88) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.73) > kind:organism_property(0.90) > organism_property:cells_are_values(0.66)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#10 'Gregariousness': GT=measurementType [95% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.90) > kind:organism_property(0.96) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.79) > kind:organism_property(0.95) > organism_property:cells_are_values(0.71)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#1 'Frequency on trees': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.73) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.84) > counts_or_statistics:abundance(0.70)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.91) > counts_or_statistics:abundance(0.98)
+  Dejean2019 Dejean2019_full.md#1 'Nesting habits': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.97) > kind:organism_property(0.98) > organism_property:cells_are_values(0.65)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#2 '1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.95) > kind:organism_property(0.72) > organism_property:by table kind counts
+      tree_tev1_noctx=measurementType  via is_taxon:no(0.57) > kind:organism_property(0.57) > organism_property:header_names_property(0.77)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#2 '2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.83) > kind:organism_property(0.50) > organism_property:by table kind counts
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.85) > kind:record_context(0.44) > record_context:sampling_place(0.48)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.95) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#2 '3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.91) > kind:organism_property(0.55) > organism_property:by table kind counts
+      tree_tev1_noctx=measurementType  via is_taxon:no(0.82) > kind:organism_property(0.44) > organism_property:header_names_property(0.80)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#2 '4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.80) > kind:organism_property(0.55) > organism_property:by table kind counts
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.62) > kind:record_context(0.35) > record_context:sampling_place(0.57)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.73) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#2 '5': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=none, nimble_full=measurementType
+      tree_tev1=verbatimLocality  via is_taxon:no(0.70) > kind:record_context(0.44) > record_context:sampling_place(0.46)
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.60) > kind:record_context(0.34) > record_context:sampling_place(0.59)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.69) > organism_property:by table kind organism_traits
+  Attiwilli2022 Attiwilli2022_full.md#0 'Ecotone': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementStatistic, nimble_full=measurementStatistic
+      tree_tev1=verbatimIdentification  via is_taxon:yes(0.54) > organism_name:higher_rank(0.50)
+      tree_tev1_noctx=none  via is_taxon:no(0.52) > kind:counts_or_statistics(0.92) > counts_or_statistics:abundance(0.84)
+      tree_nimble=none  via is_taxon:no(0.63) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)
+  Attiwilli2022 Attiwilli2022_full.md#1 'Body mass': GT=verbatimIdentification [57% GT species]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=verbatimIdentification
+      tree_tev1=verbatimIdentification  via table:organism_column(0.97)
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.93) > organism_name:row_organism(0.72)
+      tree_nimble=none  via is_taxon:no(0.56) > kind:counts_or_statistics(0.86) > counts_or_statistics:test_result(0.98)
+  Attiwilli2022 Attiwilli2022_full.md#1 'Estimate mean ± SE': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementType, nimble=measurementType, nimble_full=measurementStatistic
+      tree_tev1=verbatimIdentification  via is_taxon:yes(0.64) > organism_name:row_organism(0.55)
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.69) > organism_name:higher_rank(0.54)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(1.00)
+  Attiwilli2022 Attiwilli2022_full.md#1 't-statistic': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementStatistic, nimble=none, nimble_full=none
+      tree_tev1=verbatimIdentification  via is_taxon:yes(0.87) > organism_name:higher_rank(0.55)
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.80) > organism_name:row_organism(0.69)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)
+  Attiwilli2022 Attiwilli2022_full.md#1 'p': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementStatistic, nimble=none, nimble_full=none
+      tree_tev1=verbatimIdentification  via is_taxon:yes(0.86) > organism_name:higher_rank(0.50)
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.76) > organism_name:row_organism(0.46)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)
+  Attiwilli2022 Attiwilli2022_full.md#6 'identifier': GT=verbatimIdentification [83% GT species]
+      gemma=verbatimIdentification, tev1=none, nimble=verbatimIdentification, nimble_full=measurementStatistic
+      tree_tev1=verbatimIdentification  via table:organism_column(0.97)
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.52) > kind:organism_property(0.55) > organism_property:cells_are_values(0.57)
+      tree_nimble=verbatimIdentification  via table:organism_column(1.00)
+  Attiwilli2022 Attiwilli2022_full.md#6 'Body mass': GT=measurementType [50% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.97) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:cells_are_values(0.71)
+      tree_nimble=measurementType  via is_taxon:no(0.89) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+  Attiwilli2022 Attiwilli2022_full.md#6 'Wing length': GT=measurementType [50% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.99) > organism_property:cells_are_values(0.77)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Attiwilli2022 Attiwilli2022_full.md#6 'Proboscis length': GT=measurementType [50% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.96) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.97) > kind:organism_property(0.98) > organism_property:cells_are_values(0.68)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Oliveira2022 Oliveira2022_full.md#2 'Trait': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.97) > organism_property:cells_name_property(0.89)
+      tree_tev1_noctx=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.95) > organism_property:cells_name_property(0.87)
+      tree_nimble=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.81) > organism_property:by table kind statistics
+  Oliveira2022 Oliveira2022_full.md#2 'Response variables': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementStatistic, nimble=measurementStatistic, nimble_full=measurementStatistic
+      tree_tev1=measurementStatistic  via is_taxon:no(0.99) > kind:counts_or_statistics(0.63) > counts_or_statistics:statistic_name(0.97)
+      tree_tev1_noctx=measurementStatistic  via is_taxon:no(0.94) > kind:counts_or_statistics(0.60) > counts_or_statistics:statistic_name(0.99)
+      tree_nimble=measurementStatistic  via is_taxon:no(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:statistic_name(0.94)
+  Oliveira2022 Oliveira2022_full.md#2 'Explanatory variables': GT=none [pairs 0%]
+      gemma=none, tev1=verbatimIdentification, nimble=none, nimble_full=none
+      tree_tev1=measurementValue  via is_taxon:no(0.96) > kind:organism_property(0.55) > organism_property:cells_are_values(0.52)
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.94) > kind:organism_property(0.57) > organism_property:cells_are_values(0.58)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.88) > organism_property:by table kind statistics
+  Oliveira2022 Oliveira2022_full.md#2 'AICc': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=none, nimble=none, nimble_full=none
+      tree_tev1=none  via is_taxon:no(0.97) > kind:counts_or_statistics(0.97) > counts_or_statistics:test_result(0.48)
+      tree_tev1_noctx=measurementStatistic  via is_taxon:no(0.91) > kind:counts_or_statistics(0.99) > counts_or_statistics:statistic_name(0.62)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(1.00)
+  Oliveira2022 Oliveira2022_full.md#2 'Delta AICc': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=none, nimble=none, nimble_full=none
+      tree_tev1=measurementType  via is_taxon:no(0.95) > kind:counts_or_statistics(0.91) > counts_or_statistics:property_spread(0.41)
+      tree_tev1_noctx=none  via is_taxon:no(0.87) > kind:counts_or_statistics(0.91) > counts_or_statistics:test_result(0.38)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(0.98)
+  Oliveira2022 Oliveira2022_full.md#14 'Plot': GT=none [pairs 0%]
+      gemma=verbatimLocality, tev1=verbatimLocality, nimble=verbatimLocality, nimble_full=verbatimLocality
+      tree_tev1=verbatimLocality  via is_taxon:no(0.98) > kind:record_context(0.81) > record_context:sampling_place(1.00)
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.98) > kind:record_context(0.93) > record_context:sampling_place(0.99)
+      tree_nimble=verbatimLocality  via is_taxon:no(1.00) > kind:record_context(0.98) > record_context:sampling_place(1.00)
+  Oliveira2022 Oliveira2022_full.md#14 'GMDI': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=none, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.89) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.97) > kind:organism_property(0.71) > organism_property:cells_are_values(0.79)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.94) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'DH': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=none, nimble_full=verbatimLocality
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.86) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.97) > kind:organism_property(0.61) > organism_property:cells_are_values(0.64)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.85) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementValue, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.69) > kind:organism_property(0.76) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.86) > kind:organism_property(0.52) > organism_property:cells_are_values(0.66)
+      tree_nimble=measurementType  via is_taxon:no(0.90) > kind:organism_property(0.76) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.93) > kind:organism_property(0.90) > organism_property:by table kind specimens
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.92) > kind:record_context(0.45) > record_context:sampling_place(0.48)
+      tree_nimble=none  via is_taxon:no(0.69) > kind:counts_or_statistics(0.46) > counts_or_statistics:test_result(0.98)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (2)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.93) > kind:organism_property(0.91) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.94) > kind:organism_property(0.80) > organism_property:cells_are_values(0.73)
+      tree_nimble=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.96) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (3)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementValue, nimble_full=measurementValue
+      tree_tev1=measurementType  via is_taxon:no(0.95) > kind:organism_property(0.73) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.92) > kind:organism_property(0.39) > organism_property:cells_are_values(0.75)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.89) > counts_or_statistics:test_result(0.97)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (4)': GT=measurementType [95% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementValue
+      tree_tev1=measurementType  via is_taxon:no(0.69) > kind:organism_property(0.57) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.60) > kind:organism_property(0.52) > organism_property:cells_are_values(0.62)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.94) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (5)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementValue, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.77) > kind:organism_property(0.61) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.83) > kind:organism_property(0.43) > organism_property:cells_are_values(0.74)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.47) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (6)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.74) > kind:organism_property(0.64) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.92) > kind:organism_property(0.54) > organism_property:cells_are_values(0.77)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.95) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (7)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementValue, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.95) > kind:organism_property(0.64) > organism_property:by table kind specimens
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.97) > kind:record_context(0.36) > record_context:sampling_place(0.31)
+      tree_nimble=none  via is_taxon:no(1.00) > kind:counts_or_statistics(0.77) > counts_or_statistics:test_result(0.94)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (8)': GT=measurementType [98% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.72) > kind:organism_property(0.55) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.78) > kind:organism_property(0.42) > organism_property:cells_are_values(0.58)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (9)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementStatistic, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.80) > kind:organism_property(0.63) > organism_property:by table kind specimens
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.87) > kind:record_context(0.36) > record_context:sampling_place(0.46)
+      tree_nimble=none  via is_taxon:no(0.99) > kind:counts_or_statistics(0.69) > counts_or_statistics:test_result(0.91)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (10)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.74) > kind:organism_property(0.41) > organism_property:by table kind specimens
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.76) > kind:record_context(0.37) > record_context:sampling_place(0.76)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.88) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (11)': GT=none [pairs 2%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.52) > kind:organism_property(0.44) > organism_property:by table kind specimens
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.76) > kind:record_context(0.33) > record_context:sampling_place(0.47)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.94) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (12)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.66) > kind:organism_property(0.58) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.77) > kind:organism_property(0.45) > organism_property:cells_are_values(0.63)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.97) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (13)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementValue, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.70) > kind:organism_property(0.61) > organism_property:by table kind specimens
+      tree_tev1_noctx=verbatimLocality  via is_taxon:no(0.73) > kind:record_context(0.32) > record_context:sampling_place(0.45)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.96) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (14)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=caste
+      tree_tev1=measurementType  via is_taxon:no(0.64) > kind:organism_property(0.60) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.63) > kind:organism_property(0.54) > organism_property:cells_are_values(0.50)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (15)': GT=none [pairs 3%]
+      gemma=measurementType, tev1=measurementType, nimble=none, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.64) > kind:organism_property(0.52) > organism_property:by table kind specimens
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.75) > kind:organism_property(0.37) > organism_property:cells_are_values(0.55)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.62) > organism_property:by table kind specimens
+  Korosi2022 Korosi2022_full.md#5 'Mobility': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.96) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.54) > kind:organism_property(0.95) > organism_property:cells_are_values(0.75)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits
+  Korosi2022 Korosi2022_full.md#5 'Larval diet': GT=measurementType [header names a GT trait; pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.83) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.70) > organism_name:row_organism(0.93)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Korosi2022 Korosi2022_full.md#5 'Overw. stage': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=lifeStage, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.96) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.89) > kind:organism_property(0.99) > organism_property:cells_are_values(0.72)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Korosi2022 Korosi2022_full.md#5 'HAT': GT=measurementType [98% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.83) > kind:organism_property(0.95) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.66) > kind:organism_property(0.93) > organism_property:cells_are_values(0.75)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+  Korosi2022 Korosi2022_full.md#5 'HAST': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.88) > kind:organism_property(0.87) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.86) > kind:organism_property(0.86) > organism_property:cells_are_values(0.87)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#8 'Body Size': GT=measurementType [header names a GT trait; pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.98) > organism_property:cells_are_values(0.86)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#8 'Habitat Affinity': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.99) > organism_property:cells_are_values(0.83)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#8 'Humidity Affinity': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:cells_are_values(0.85)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#8 'Breeding Period': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.97) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.97) > organism_property:cells_are_values(0.57)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#8 'Food Specialization': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.86) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.61) > kind:organism_property(0.99) > organism_property:cells_are_values(0.66)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#11 'Tribe': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification, nimble=verbatimIdentification, nimble_full=verbatimIdentification
+      tree_tev1=measurementType  via is_taxon:no(0.89) > kind:organism_property(0.92) > organism_property:by table kind counts
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.87) > organism_name:higher_rank(0.58)
+      tree_nimble=verbatimIdentification  via is_taxon:yes(0.65) > organism_name:higher_rank(0.97)
+  Habustova2017 Habustova2017_full.md#13 'Tribe': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification, nimble=verbatimIdentification, nimble_full=verbatimIdentification
+      tree_tev1=measurementType  via is_taxon:no(0.60) > kind:organism_property(0.96) > organism_property:by table kind counts
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.72) > organism_name:higher_rank(0.50)
+      tree_nimble=verbatimIdentification  via is_taxon:yes(0.68) > organism_name:higher_rank(0.99)
+  Habustova2017 Habustova2017_full.md#13 'Localities (1)': GT=none [pairs 0%]
+      gemma=verbatimLocality, tev1=verbatimLocality, nimble=measurementStatistic, nimble_full=measurementStatistic
+      tree_tev1=none  via is_taxon:no(0.97) > kind:counts_or_statistics(0.86) > counts_or_statistics:abundance(0.94)
+      tree_tev1_noctx=none  via is_taxon:no(0.97) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.88)
+      tree_nimble=verbatimLocality  via is_taxon:no(0.99) > kind:record_context(0.98) > record_context:sampling_place(1.00)
+  Habustova2017 Habustova2017_full.md#13 'Localities (4)': GT=none [pairs 0%]
+      gemma=verbatimLocality, tev1=verbatimLocality, nimble=verbatimLocality, nimble_full=verbatimLocality
+      tree_tev1=none  via is_taxon:no(0.98) > kind:counts_or_statistics(0.92) > counts_or_statistics:abundance(0.87)
+      tree_tev1_noctx=none  via is_taxon:no(0.97) > kind:counts_or_statistics(0.93) > counts_or_statistics:abundance(0.75)
+      tree_nimble=verbatimLocality  via is_taxon:no(0.85) > kind:record_context(0.47) > record_context:sampling_place(0.99)
+  Habustova2017 Habustova2017_full.md#14 'Tribe': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=measurementType, tev1=verbatimIdentification, nimble=verbatimIdentification, nimble_full=verbatimIdentification
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.92) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.93) > kind:organism_property(0.96) > organism_property:cells_are_values(0.54)
+      tree_nimble=measurementType  via is_taxon:no(0.97) > kind:organism_property(0.95) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Incidence': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=none  via is_taxon:no(0.93) > kind:counts_or_statistics(0.63) > counts_or_statistics:abundance(0.46)
+      tree_tev1_noctx=none  via is_taxon:no(0.94) > kind:counts_or_statistics(0.75) > counts_or_statistics:abundance(0.65)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Body size': GT=measurementType [header names a GT trait; pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.96) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:cells_are_values(0.93)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Habitat affinity': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.95) > kind:organism_property(0.99) > organism_property:cells_are_values(0.86)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Humidity affinity': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:cells_are_values(0.90)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Breeding period': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.90) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.96) > organism_property:cells_are_values(0.53)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Food specialization': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.84) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.58) > kind:organism_property(0.99) > organism_property:cells_are_values(0.64)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Taxonomic authority': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=none, tev1=verbatimIdentification, nimble=verbatimIdentification, nimble_full=none
+      tree_tev1=measurementType  via is_taxon:no(0.56) > kind:organism_property(0.84) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.70) > organism_name:higher_rank(0.81)
+      tree_nimble=none  via is_taxon:no(0.91) > kind:other(0.91)
+  Derhe2016 Derhe2016_full.md#1 'Body mass (mg)': GT=measurementType [97% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:cells_are_values(0.89)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Behavioural guild': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.97) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.86) > kind:organism_property(0.98) > organism_property:cells_are_values(0.78)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Diel activity': GT=measurementType [74% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.87) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.99) > organism_property:cells_are_values(0.87)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Diet preference': GT=measurementType [82% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.85) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.69) > kind:organism_property(0.98) > organism_property:cells_are_values(0.58)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Diet breadth': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.95) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.92) > kind:organism_property(0.91) > organism_property:cells_are_values(0.79)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Habitat preference': GT=measurementType [header names a GT trait; pairs 0%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.94) > kind:organism_property(0.94) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.76) > kind:organism_property(0.93) > organism_property:cells_are_values(0.78)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'HI': GT=none [pairs 3%]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.97) > kind:organism_property(0.86) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.87) > kind:organism_property(0.67) > organism_property:cells_are_values(0.50)
+      tree_nimble=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.75) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'Mass (mg)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.98) > organism_property:cells_are_values(0.86)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'HW (mm)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.99) > organism_property:cells_are_values(0.78)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'HL (mm)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.99) > organism_property:cells_are_values(0.79)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'LL (mm)': GT=measurementType [95% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.99) > organism_property:cells_are_values(0.83)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'RL': GT=measurementType [97% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.90) > organism_property:cells_are_values(0.61)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'FTL (°C)': GT=measurementType [43% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.85) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.79) > organism_property:cells_are_values(0.80)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'LT (°C)': GT=measurementType [43% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.84) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.96) > kind:organism_property(0.73) > organism_property:cells_are_values(0.77)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'AIWLR (mg × h-1× cm-2)': GT=measurementType [41% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.91) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.77) > organism_property:cells_are_values(0.74)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Rebrina2022 Rebrina2022_full.md#2 'No.': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=none, nimble=none, nimble_full=none
+      tree_tev1=none  via is_taxon:no(0.60) > kind:other(0.94)
+      tree_tev1_noctx=verbatimIdentification  via is_taxon:yes(0.63) > organism_name:row_organism(0.94)
+      tree_nimble=none  via is_taxon:no(0.99) > kind:other(0.99)
+  Rebrina2022 Rebrina2022_full.md#2 'Body Size (mm)': GT=measurementType [97% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.99) > organism_property:cells_are_values(0.72)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Rebrina2022 Rebrina2022_full.md#2 'Femur Length: Body Size': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementValue
+      tree_tev1=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.96) > organism_property:cells_are_values(0.88)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Rebrina2022 Rebrina2022_full.md#2 'Flight Capacity': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.98) > kind:organism_property(0.99) > organism_property:cells_are_values(0.79)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Rebrina2022 Rebrina2022_full.md#2 'Feeding Guild': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.99) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.91) > kind:organism_property(0.99) > organism_property:cells_are_values(0.61)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits
+  Rebrina2022 Rebrina2022_full.md#2 'Lifestyle': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.90) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.60) > kind:organism_property(0.98) > organism_property:cells_are_values(0.73)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Rebrina2022 Rebrina2022_full.md#2 'Moisture Preference': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=measurementType  via is_taxon:no(0.98) > kind:organism_property(0.95) > organism_property:by table kind organism_traits
+      tree_tev1_noctx=measurementValue  via is_taxon:no(0.99) > kind:organism_property(0.96) > organism_property:cells_are_values(0.77)
+      tree_nimble=measurementType  via is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Figueroa2021 Figueroa2021_full.md#1 'Plant Family': GT=none [pairs 0%]
+      gemma=measurementType, tev1=verbatimIdentification, nimble=measurementType, nimble_full=measurementType
+      tree_tev1=verbatimIdentification  via is_taxon:yes(0.57) > organism_name:row_organism(0.72)
+      tree_tev1_noctx=measurementType  via is_taxon:yes(0.72) > organism_name:associated_organism(0.55)
+      tree_nimble=measurementType  via is_taxon:yes(0.94) > organism_name:associated_organism(0.99)

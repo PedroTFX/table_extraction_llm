@@ -1,0 +1,101 @@
+  [semantic] left unmatched: 'Higher elevational band' vs 'Relative Hindleg Length' (llm said different traits)
+  [semantic] left unmatched: 'Higher elevational band' vs 'Relative Mandible Length' (llm said different traits)
+  [semantic] left unmatched: 'Higher elevational band' vs 'Relative Eye Length' (llm said different traits)
+  [semantic] left unmatched: 'Intermediate elevational band' vs 'Relative Mandible Length' (llm said different traits)
+  [semantic] left unmatched: 'Intermediate elevational band' vs 'Relative Hindleg Length' (llm said different traits)
+  [semantic] left unmatched: 'Intermediate elevational band' vs 'Relative Eye Length' (llm said different traits)
+  [semantic] left unmatched: 'Lowest elevational band' vs 'Relative Mandible Length' (llm said different traits)
+  [semantic] left unmatched: 'Lowest elevational band' vs 'Relative Hindleg Length' (llm said different traits)
+  [semantic] left unmatched: 'Lowest elevational band' vs 'Relative Eye Length' (llm said different traits)
+  [semantic] left unmatched: 'Middle elevational band' vs 'Relative Mandible Length' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Fontanilla2019\Fontanilla2019.xlsx  (1315 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Fontanilla2019\Fontanilla2019.csv  (330 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Species/morphospecies': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1315
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 330   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            330
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1315 MISSED ROWS MISSED
+  species not in prediction                1145
+  species present, trait missing            170
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (217 distinct), closest predicted name:
+     gt 'Carebara obtusidenta'               (nothing similar in the prediction)   x10
+     gt 'Cerapachys sulcinodis'              (nothing similar in the prediction)   x10
+     gt 'Ectomomyrmex javana'                (nothing similar in the prediction)   x10
+     gt 'Hypoponera nippona'                 (nothing similar in the prediction)   x10
+     gt 'Hypoponera truncata'               ~0.60~  pred 'Amblyopone crenata'   x10
+     gt 'Monomorium pharaonis'               (nothing similar in the prediction)   x10
+  -> 6 species mismatches explain 60 of 1315 misses (5%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Relative Eye Length'              x34
+     'Relative Hindleg Length'          x34
+     'Relative Mandible Length'         x34
+     'Relative Scape Length'            x34
+     "Weber's Length"                   x34
+  -> 5 missing traits explain 170 of 1315 misses (13%) — scattered; no single cause
+
+  full miss detail saved -> Fontanilla2019_misses.csv, Fontanilla2019_misses_summary.json (1315 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1000                                              0    50   PRED-ONLY
+  1200                                              0    48   PRED-ONLY
+  1400                                              0    49   PRED-ONLY
+  800                                               0    47   PRED-ONLY
+  higher elevational band                           0    34   PRED-ONLY
+  intermediate elevational band                     0    34   PRED-ONLY
+  lowest elevational band                           0    34   PRED-ONLY
+  middle elevational band                           0    34   PRED-ONLY
+  relative eye length                             263     0   GT-ONLY
+  relative hindleg length                         263     0   GT-ONLY
+  relative mandible length                        263     0   GT-ONLY
+  relative scape length                           263     0   GT-ONLY
+  weber's length                                  263     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0  1315   id+type+value
+             (330 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0  1315   basis+id+type+value+stat+sex+stage
+             (330 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

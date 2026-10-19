@@ -1,0 +1,73 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Weber2023\Weber2023.xlsx  (304 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Weber2023\Weber2023.csv  (189 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Andrena minutula agg.' -> 'Andrena minutula agg'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 180
+  missed (FN)         : 124
+  spurious, in scope  : 9   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.952 / 0.592 / 0.730   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.952 / 0.592 / 0.730   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.592   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    180  0.000  <-- low
+  measurementMethod             0      3  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    180  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    180  0.000  <-- low
+  lifeStage                     0    180  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    180  0.000  <-- low
+  verbatimLocality              0    180  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    180  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 124 MISSED ROWS MISSED
+  species not in prediction                 115
+  species present, trait missing              0
+  species+trait present, value differs        9
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'b'                          ->  'bumble bees'                x9
+  -> 1 substitution explains 9 of 124 misses (7%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (38 distinct), closest predicted name:
+     gt 'Sphecodes albilabris'               (nothing similar in the prediction)   x6
+     gt 'Lasioglossum minutissimum'         ~0.76~  pred 'Lasioglossum intermedium'   x3
+     gt 'Lasioglossum monstrificum'         ~0.72~  pred 'Lasioglossum leucozonium'   x3
+     gt 'Lasioglossum morio'                ~0.67~  pred 'Lasioglossum leucozonium'   x3
+     gt 'Lasioglossum nitidiusculum'        ~0.75~  pred 'Lasioglossum intermedium'   x3
+     gt 'Lasioglossum nitidulum'            ~0.72~  pred 'Lasioglossum intermedium'   x3
+  -> 6 species mismatches explain 21 of 124 misses (17%) — scattered; no single cause
+
+  full miss detail saved -> Weber2023_misses.csv, Weber2023_misses_summary.json (124 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  foraging habit                                  101    63   Δ-38 (split?)
+  size group                                      102    63   Δ-39 (split?)
+  nesting habit                                   101    63   Δ-38 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.952  0.592  0.730    180     9   124   id+type+value
+  tags        0.000  0.000  0.000      0   189   304   basis+id+type+value+stat+sex+stage
+             (F1 -0.730 vs previous)
+             note: only 0/180 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

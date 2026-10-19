@@ -1,0 +1,77 @@
+  [semantic] matched by values: 'trophic level' -> 'Trophic Levels'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Wang2021_1\Wang2021_1.xlsx  (233 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Wang2021_1\Wang2021_1.csv  (336 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body size' -> 'Body Size'
+  'trophic level' -> 'Trophic Levels'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 157
+  missed (FN)         : 76
+  spurious, in scope  : 3   <- GT covers this trait: real errors
+  spurious, out of scope: 176   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.467 / 0.674 / 0.552   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.981 / 0.674 / 0.799   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.674   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            176
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                80    157  0.510
+  measurementMethod             0      0    n/a   +157 where GT blank
+  measurementUnit              80     81  0.988
+  measurementStatistic         77    157  0.490  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         157    157  1.000
+  lifeStage                   157    157  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    157  0.000  <-- low
+  verbatimLocality              0    157  0.000  <-- low
+  verbatimCoordinates           0    157  0.000  <-- low
+  verbatimEventDate             0    157  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    157  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 76 MISSED ROWS MISSED
+  species not in prediction                   3
+  species present, trait missing             73
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (2 distinct), closest predicted name:
+     gt 'Chlaenius costiger Chaudoir, 1856'  ~0.85~  pred 'Chlaenius bengalensis Chaudoir, 1856'   x2
+     gt 'Pterostichus acutidens Fairmaires, 1888'  ~1.00~  pred 'Pterostichus acutidens Fairmaires,1888'   x1
+  -> 2 species mismatches explain 3 of 76 misses (4%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Size'                        x37
+     'Trophic Levels'                   x36
+  -> 2 missing traits explain 73 of 76 misses (96%) — systematic, not scattered
+
+  full miss detail saved -> Wang2021_1_misses.csv, Wang2021_1_misses_summary.json (76 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       119    80   Δ-39 (split?)
+  trophic levels                                  114    80   Δ-34 (split?)
+  predatory                                         0    38   PRED-ONLY
+  unknown                                           0   138   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.981  0.674  0.799    157     3    76   id+type+value
+             (176 more spurious row(s) set aside as out-of-scope; strict P would be 0.467)
+  tags        0.000  0.000  0.000      0   160   233   basis+id+type+value+stat+sex+stage
+             (176 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.799 vs previous)

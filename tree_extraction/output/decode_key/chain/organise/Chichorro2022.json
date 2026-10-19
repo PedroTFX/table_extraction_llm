@@ -1,0 +1,345 @@
+{
+ "calls": 1,
+ "chars": 1788,
+ "passages": [
+  "[table 5] 13 traits:\nBODY SIZE\nOFFSPRING SIZE\nFECUNDITY\nGENERATION LENGTH\nDIET BREADTH\nTROPHIC LEVEL\nDISPERSAL_ABILITY\nMICROHABITAT\nALTITUDE_MIN",
+  "[prose] dHFP",
+  "[table 10] 20210910.0 | added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals\n20210929.0 | added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds\n20211005.0 | excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator\n20211130.0 | changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE\n20220503.0 | Replaced assessments that in the 2021 IUCN moved from threatened -> LC or LC -> threatened: Turdus ludoviciae -> Cyanochen cyanoptera; Aspidoscelis inornata -> Pseudemys gorzugi; Enteromius dialonensis -> Alcolapia grahami; Boesemania microlepis -> Ompok weberi; Elaphoglossum kivuense -> Trachypteris drakeana; Asplenium majoricum -> Asplenium aureum. Added an extra bird in \"extra_bird\" in case needed\n20220503.0 | Replaced all blank cells with NAs\n20220730.0 | Removed old sheets, cleaning",
+  "[prose] [Biological Conservation 274 (2022) 109738](https://doi.org/10.1016/j.biocon.2022.109738)",
+  "[prose] [https://doi.org/10.1016/j.biocon.2022.109738](https://doi.org/10.1016/j.biocon.2022.109738)",
+  "[prose] The scripts and data supporting the manuscript are available in https://doi.org/10.6084/m9.figshare.20391126.",
+  "[prose] Supplementary data to this article can be found online at [https://doi.org/10.1016/j.biocon.2022.109738](https://doi.org/10.1016/j.biocon.2022.109738)."
+ ],
+ "categories": [
+  {
+   "variable": "BODY SIZE",
+   "code": "",
+   "label": "BODY SIZE",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "OFFSPRING SIZE",
+   "code": "",
+   "label": "OFFSPRING SIZE",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "FECUNDITY",
+   "code": "",
+   "label": "FECUNDITY",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "GENERATION LENGTH",
+   "code": "",
+   "label": "GENERATION LENGTH",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "DIET BREADTH",
+   "code": "",
+   "label": "DIET BREADTH",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "TROPHIC LEVEL",
+   "code": "",
+   "label": "TROPHIC LEVEL",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "DISPERSAL_ABILITY",
+   "code": "",
+   "label": "DISPERSAL_ABILITY",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "MICROHABITAT",
+   "code": "",
+   "label": "MICROHABITAT",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "ALTITUDE_MIN",
+   "code": "",
+   "label": "ALTITUDE_MIN",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 7.7,
+ "columns": [
+  [
+   0,
+   0,
+   "Trait",
+   [
+    "Body size",
+    "Offspring size",
+    "Fecundity",
+    "Generation length",
+    "Diet breadth"
+   ]
+  ],
+  [
+   0,
+   1,
+   "Definition",
+   [
+    "Typical size of an adult organism.",
+    "Typical size of an offspring.",
+    "Reproductive output.",
+    "Typical length of the life cycle, from birth until reproduction.",
+    "Degree of narrowness of diet or of substrate used"
+   ]
+  ],
+  [
+   1,
+   0,
+   "Trait",
+   [
+    "Trophic level",
+    "Dispersal ability",
+    "Microhabitat",
+    "Habitat breadth"
+   ]
+  ],
+  [
+   1,
+   1,
+   "Definition",
+   [
+    "Trophic position",
+    "Capacity to disperse",
+    "Typical vertical stratum occupied in a habitat.",
+    "Range of habitat types occupied."
+   ]
+  ],
+  [
+   2,
+   0,
+   "Trait",
+   [
+    "Altitudinal range"
+   ]
+  ],
+  [
+   2,
+   1,
+   "Definition",
+   [
+    "Range of altitude levels occupied."
+   ]
+  ],
+  [
+   4,
+   0,
+   "Columns",
+   [
+    "IUCNName",
+    "Status",
+    "CRITERIA",
+    "YEAR_PUB",
+    "Realm",
+    "IUCN_RAW_THREATS",
+    "IUCN_THREATS",
+    "IUCN_THREATS_CATEG",
+    "IUCN_N_THREATS"
+   ]
+  ],
+  [
+   6,
+   1,
+   "(no name, column 1)",
+   [
+    "trait value",
+    "proxy for the trait used (body length, body mass as proxy of body size, etc)",
+    "e.g. grams, mm",
+    "whether the trait value is retrieved from species genus, or family level."
+   ]
+  ],
+  [
+   8,
+   0,
+   "Trait",
+   [
+    "BODY_SIZE",
+    "OFFSPRING_SIZE",
+    "RELATIVE_OFFSPRING_SIZE",
+    "FECUNDITY",
+    "GENERATION_LENGTH",
+    "DIET_BREADTH",
+    "TROPHIC_LEVEL",
+    "MICROHABITAT",
+    "DISPERSAL_ABILITY",
+    "HABITAT_BREADTH",
+    "HABITAT_BREADTH_RESIDS",
+    "ALTITUDINAL_RANGE",
+    "RELATIVE_ALTITUDINAL_RANGE",
+    "GEOGRAPHICAL_RANGE_SIZE",
+    "HFP2009",
+    "dHFP",
+    "HUMAN_FOOTPRINT",
+    "HABITAT_CONVERSION"
+   ]
+  ],
+  [
+   8,
+   1,
+   "Mammals",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   2,
+   "Birds",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   3,
+   "Reptiles",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   4,
+   "Amphibians",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   5,
+   "Fishes",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   6,
+   "Dragonflies",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   7,
+   "Butterflies",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   8,
+   "Grasshoppers",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   9,
+   "Spiders",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   10,
+   "Snails",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   11,
+   "Bryophytes",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   12,
+   "Ferns",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   13,
+   "Gymnosperms",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   14,
+   "Monocots",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   15,
+   "Legumes",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   10,
+   1,
+   "(no name, column 1)",
+   [
+    "added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals",
+    "added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds",
+    "excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator",
+    "changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE",
+    "Replaced assessments that in the 2021 IUCN moved from threatened -> LC or LC -> threatened: Turdus ludoviciae -> Cyanochen cyanoptera; Aspidoscelis inornata -> Pseudemys gorzugi; Enteromius dialonensis -> Alcolapia grahami; Boesemania microlepis -> Ompok weberi; Elaphoglossum kivuense -> Trachypteris drakeana; Asplenium majoricum -> Asplenium aureum. Added an extra bird in \"extra_bird\" in case needed",
+    "Replaced all blank cells with NAs",
+    "Removed old sheets, cleaning"
+   ]
+  ]
+ ]
+}

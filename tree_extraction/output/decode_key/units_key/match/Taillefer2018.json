@@ -1,0 +1,431 @@
+{
+ "_columns": [
+  [
+   17,
+   1,
+   "Feeding",
+   [
+    "SA",
+    "NA",
+    "PA",
+    "PH"
+   ]
+  ],
+  [
+   15,
+   3,
+   "Spe/Gen",
+   [
+    "NA",
+    "G",
+    "S"
+   ]
+  ],
+  [
+   8,
+   4,
+   "Habitat pref",
+   [
+    "L",
+    "T",
+    "M"
+   ]
+  ],
+  [
+   13,
+   8,
+   "Voltinism",
+   [
+    "NA",
+    "U",
+    "M"
+   ]
+  ],
+  [
+   8,
+   9,
+   "Overwin stage",
+   [
+    "A",
+    "L",
+    "P",
+    "NA"
+   ]
+  ],
+  [
+   15,
+   10,
+   "Specializ",
+   [
+    "NA",
+    "F",
+    "O",
+    "A"
+   ]
+  ]
+ ],
+ "17:1": {
+  "cells": {
+   "SA": {
+    "term": "saprophage",
+    "parts": [
+     "SA"
+    ],
+    "options": {
+     "SA": {
+      "evidence": "explicit",
+      "labels": [
+       "saprophage"
+      ]
+     }
+    },
+    "evidence": {
+     "SA": "explicit"
+    },
+    "probs": {
+     "SA | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "SA": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "SA | QB": {}
+    }
+   },
+   "PA": {
+    "term": "parasite/parasitoid",
+    "parts": [
+     "PA"
+    ],
+    "options": {
+     "PA": {
+      "evidence": "explicit",
+      "labels": [
+       "parasite/parasitoid"
+      ]
+     }
+    },
+    "evidence": {
+     "PA": "explicit"
+    },
+    "probs": {
+     "PA | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "PA": {
+      "e0": 0.987,
+      "keep": 0.013
+     },
+     "PA | QB": {}
+    }
+   },
+   "PH": {
+    "term": "phytophage",
+    "parts": [
+     "PH"
+    ],
+    "options": {
+     "PH": {
+      "evidence": "explicit",
+      "labels": [
+       "phytophage"
+      ]
+     }
+    },
+    "evidence": {
+     "PH": "explicit"
+    },
+    "probs": {
+     "PH | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "PH": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "PH | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u22",
+    "u29"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.705,
+    "several": 0.294,
+    "none": 0.001
+   },
+   "chosen": [
+    "u29"
+   ]
+  },
+  "header": "Feeding"
+ },
+ "15:3": {
+  "cells": {
+   "G": {
+    "term": "Generalist",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "explicit",
+      "labels": [
+       "Generalist"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "explicit"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "G": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "G | QB": {}
+    }
+   },
+   "S": {
+    "term": "feed on one genus/type of plant, animal or substrate",
+    "parts": [
+     "S"
+    ],
+    "options": {
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "feed on one genus/type of plant, animal or substrate"
+      ]
+     }
+    },
+    "evidence": {
+     "S": "explicit"
+    },
+    "probs": {
+     "S | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "S": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "S | QB": {
+      "w0": 0.979,
+      "w1": 0.021
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u30"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.979,
+    "several": 0.014,
+    "none": 0.007
+   },
+   "chosen": [
+    "u30"
+   ]
+  },
+  "header": "Spe/Gen"
+ },
+ "8:4": {
+  "cells": {
+   "L": {
+    "term": "lentic",
+    "parts": [
+     "L"
+    ],
+    "options": {
+     "L": {
+      "evidence": "explicit",
+      "labels": [
+       "lentic"
+      ]
+     }
+    },
+    "evidence": {
+     "L": "explicit"
+    },
+    "probs": {
+     "L | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "L": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "L | QB": {}
+    }
+   },
+   "T": {
+    "term": "terrestrial",
+    "parts": [
+     "T"
+    ],
+    "options": {
+     "T": {
+      "evidence": "explicit",
+      "labels": [
+       "terrestrial"
+      ]
+     }
+    },
+    "evidence": {
+     "T": "explicit"
+    },
+    "probs": {
+     "T | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "T": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "T | QB": {}
+    }
+   },
+   "M": {
+    "term": "moist",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "moist"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.818,
+      "word": 0.182
+     },
+     "M": {
+      "e0": 0.985,
+      "keep": 0.015
+     },
+     "M | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u31"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.995,
+    "several": 0.003,
+    "none": 0.001
+   },
+   "chosen": [
+    "u31"
+   ]
+  },
+  "header": "Habitat pref"
+ },
+ "13:8": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u31"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.161,
+    "several": 0.081,
+    "none": 0.759
+   }
+  },
+  "header": "Voltinism"
+ },
+ "8:9": {
+  "cells": {
+   "L": {
+    "term": null,
+    "parts": [
+     "L"
+    ],
+    "options": {
+     "L": {
+      "evidence": "explicit",
+      "labels": [
+       "lentic"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "L | QK": {
+      "code": 0.974,
+      "word": 0.026
+     },
+     "L": {
+      "e0": 0.022,
+      "keep": 0.978
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u25",
+    "u31"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.002,
+    "p1": 0.804,
+    "several": 0.057,
+    "none": 0.137
+   },
+   "chosen": [
+    "u31"
+   ]
+  },
+  "header": "Overwin stage"
+ },
+ "15:10": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u8",
+    "u39"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.003,
+    "p1": 0.001,
+    "several": 0.019,
+    "none": 0.977
+   }
+  },
+  "header": "Specializ"
+ }
+}

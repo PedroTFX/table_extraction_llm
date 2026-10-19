@@ -1,0 +1,98 @@
+  [semantic] matched by values: 'Mean Worker length (mm)' -> 'Body Length'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Arnan2012\Arnan2012.xlsx  (361 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Arnan2012\Arnan2012.csv  (250 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Tapinoma nigerrimum' -> 'Tapinoma nigerimum'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Mean Worker length (mm)' -> 'Body Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 164
+  missed (FN)         : 197
+  spurious, in scope  : 46   <- GT covers this trait: real errors
+  spurious, out of scope: 40   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.656 / 0.454 / 0.537   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.781 / 0.454 / 0.574   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.454   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             40
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    164  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     29  0.000  <-- low
+  measurementStatistic          0    164  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    164  0.000  <-- low
+  lifeStage                     0    164  0.000  <-- low
+  caste                         0     74  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    164  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 197 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            150
+  species+trait present, value differs       47
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'hundreds'                   ->  '1'                          x17
+     'monomorphism'               ->  '1'                          x15
+     'thousands'                  ->  '2'                          x10
+     'tens of thousands'          ->  '3'                          x3
+     '4.1'                        ->  '1.9*/4.1**'                 x1
+     '1.9'                        ->  '1.9*/4.1**'                 x1
+  -> 6 substitutions explain 47 of 197 misses (24%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Defense of resources'             x30
+     'Daily rhythm'                     x30
+     'Month of peak activity'           x30
+     'Critical Thermal Maximum'         x30
+     'Maximum Activity Temperature'     x30
+  -> 5 missing traits explain 150 of 197 misses (76%) — systematic, not scattered
+
+  full miss detail saved -> Arnan2012_misses.csv, Arnan2012_misses_summary.json (197 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1                                                 0    16   PRED-ONLY
+  2                                                 0    14   PRED-ONLY
+  maximum activity temperature                     30     0   GT-ONLY
+  month of peak activity                           30     0   GT-ONLY
+  body length                                      31    30   Δ-1 (split?)
+  brood cycle                                      30    30   
+  n nests per colony                               30    30   
+  n queens per colony                              30    30   
+  colony population                                30    30   
+  critical thermal maximum                         30     0   GT-ONLY
+  daily rhythm                                     30     0   GT-ONLY
+  defense of resources                             30     0   GT-ONLY
+  dom                                               0    10   PRED-ONLY
+  main food resource                               30    30   
+  polymorphism                                     30    30   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.781  0.454  0.574    164    46   197   id+type+value
+             (40 more spurious row(s) set aside as out-of-scope; strict P would be 0.656)
+  tags        0.000  0.000  0.000      0   210   361   basis+id+type+value+stat+sex+stage
+             (40 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.574 vs previous)
+             note: only 0/164 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -1,0 +1,132 @@
+  [semantic] matched by values: 'thoraxwidth' -> 'Thorax Width'
+  [semantic] matched by values: 'thoraxlenth' -> 'Thorax Length'
+  [semantic] matched by values: 'leglenth' -> 'Total Length'
+  [semantic] matched by values: 'headwidth' -> 'Head Width'
+  [semantic] matched by values: 'headlenth' -> 'Head Length'
+  [semantic] matched by values: 'bodysize' -> 'Body Size'
+  [semantic] left unmatched: 'Leg (femur length, tibia length and total length)' vs 'Elevation' (llm said different traits)
+  [semantic] left unmatched: 'Metric' vs 'Elevation' (llm said different traits)
+  [semantic] left unmatched: 'elytralenth' vs 'Elevation' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Ji2024\Ji2024.xlsx  (5616 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Ji2024\Ji2024.csv  (5273 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 3 pair(s))
+  'N. quadripunctatus' -> 'Nicrophorus quadripunctatus'
+  'N. tenuipes' -> 'Nicrophorus tenuipes'
+  'N. vespilloides' -> 'Nicrophorus vespilloides'
+
+TAXON NAMES LEFT UNMAPPED (8)
+  'Asgari et al. (2021), Goczał and Beutel (2023)': no ground-truth name denotes this organism
+  'Barton et al. (2011)': no ground-truth name denotes this organism
+  'Bauer et al. (1998), Talarico et al. (2007)': no ground-truth name denotes this organism
+  'CWM': no ground-truth name denotes this organism
+  'Fountain-Jones et al. (2015)': no ground-truth name denotes this organism
+  'Gibb et al. (2006)': no ground-truth name denotes this organism
+  'Nichols et al. (2009), Slade et al. (2007)': no ground-truth name denotes this organism
+  'Ribera et al. (1999)': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 12 pair(s))
+  'Antenna length' -> 'Antenna Length'
+  'Body width' -> 'Body Width'
+  'Elytra length' -> 'Elytra Length'
+  'Hindwing (maximal length)' -> 'Hindwing Length'
+  'bodysize' -> 'Body Size'
+  'femur' -> 'Femur Length'
+  'headlenth' -> 'Head Length'
+  'headwidth' -> 'Head Width'
+  'leglenth' -> 'Total Length'
+  'thoraxlenth' -> 'Thorax Length'
+  'thoraxwidth' -> 'Thorax Width'
+  'tibia' -> 'Tibia Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 3456
+  missed (FN)         : 2160
+  spurious, in scope  : 8   <- GT covers this trait: real errors
+  spurious, out of scope: 1809   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.655 / 0.615 / 0.635   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.998 / 0.615 / 0.761   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.615   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1809
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   3456  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0   3456  0.000  <-- low
+  measurementStatistic          0   3456  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   3456  0.000  <-- low
+  lifeStage                     0   3456  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +3456 where GT blank
+  verbatimCoordinates           0   3456  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   3456  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 2160 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           2160
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Elytra Length'                    x432
+     'Body Width'                       x432
+     'Antenna Length'                   x432
+     'Hindwing Length'                  x432
+     'Elevation'                        x432
+  -> 5 missing traits explain 2160 of 2160 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Ji2024_misses.csv, Ji2024_misses_summary.json (2160 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1100                                              0     4   PRED-ONLY
+  1250                                              0     4   PRED-ONLY
+  1400                                              0     4   PRED-ONLY
+  1550                                              0     4   PRED-ONLY
+  1700                                              0     4   PRED-ONLY
+  950                                               0     4   PRED-ONLY
+  antenna                                           0   432   PRED-ONLY
+  antenna length                                  432     2   Δ-430 (split?)
+  body length                                       0     2   PRED-ONLY
+  body size                                       432   432   
+  body width                                      432     2   Δ-430 (split?)
+  bodywidth                                         0   432   PRED-ONLY
+  elevation                                       432     0   GT-ONLY
+  elytra length                                   432     2   Δ-430 (split?)
+  elytralenth                                       0   432   PRED-ONLY
+  leg (femur length, tibia length and total length)    0     2   PRED-ONLY
+  femur length                                    432   432   
+  head length                                     432   432   
+  head (width and length)                           0     2   PRED-ONLY
+  head width                                      432   432   
+  hindwing                                          0   432   PRED-ONLY
+  hindwing length                                 432     2   Δ-430 (split?)
+  thorax length                                   432   432   
+  thorax (width and length)                         0     2   PRED-ONLY
+  tibia length                                    432   432   
+  total length                                    432   432   
+  metric                                            0    49   PRED-ONLY
+  thorax width                                    432   432   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.998  0.615  0.761   3456     8  2160   id+type+value
+             (1809 more spurious row(s) set aside as out-of-scope; strict P would be 0.655)
+  tags        0.000  0.000  0.000      0  3464  5616   basis+id+type+value+stat+sex+stage
+             (1809 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.761 vs previous)

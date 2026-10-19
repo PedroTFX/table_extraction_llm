@@ -1,0 +1,116 @@
+  [semantic] matched by values: 'Weber s length' -> 'Weber’s length'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Leong2023\Leong2023.xlsx  (236 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Leong2023\Leong2023.csv  (296 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 7 pair(s))
+  'Aenictus cf parahuonicus' -> 'Aenictus parahuonicus'
+  'Diacamma sp rugosum complex' -> 'Diacamma sp. rugosum complex'
+  'Euprenolepis cf procera' -> 'Euprenolepis sp. cf procera'
+  'Lepisiota cf rothneyi' -> 'Lepisiota sp. cf rothneyi'
+  'Stictoponera sp1 cf binghamii' -> 'Stictoponera sp. cf binghamii'
+  'Tetramorium sp1 obesum group' -> 'Tetramorium sp. 1 obesum group'
+  'Tetramorium sp2 obesum group' -> 'Tetramorium sp. 1 obesum group'
+
+TAXON NAMES LEFT UNMAPPED (14)
+  'Camponotus sp1': no ground-truth name denotes this organism
+  'Camponotus sp2': no ground-truth name denotes this organism
+  'Carebara sp1': no ground-truth name denotes this organism
+  'Carebara sp2': no ground-truth name denotes this organism
+  'Crematogaster sp1': no ground-truth name denotes this organism
+  'Leptogenys sp1': no ground-truth name denotes this organism
+  'Monomorium sp1': no ground-truth name denotes this organism
+  'Nylanderia sp1': no ground-truth name denotes this organism
+  'Odontomachus sp1': no ground-truth name denotes this organism
+  'Pheidole sp1': no ground-truth name denotes this organism
+  'Pheidole sp2': no ground-truth name denotes this organism
+  'Pheidole sp3': no ground-truth name denotes this organism
+  'Pheidole sp4': no ground-truth name denotes this organism
+  'Stictoponera sp2': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Weber s length' -> 'Weber’s length'
+  'relative eye position' -> 'Relative eye position'
+  'relative eye width' -> 'Relative eye width corrected by body size'
+  'relative hind femur' -> 'Relative hind femur length corrected by body size'
+  'relative mandible size' -> 'Relative mandible size'
+  'relative scape length' -> 'Relative scape length corrected by body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 234
+  missed (FN)         : 2
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 60   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.791 / 0.992 / 0.880   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.992 / 0.992 / 0.992   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.992   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             60
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    234  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    174  0.000  <-- low
+  measurementStatistic          0    234  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    234  0.000  <-- low
+  lifeStage                     0    234  0.000  <-- low
+  caste                         0    234  0.000  <-- low
+  sampleSizeValue              94    234  0.402  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0     60  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    234  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 2 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.99'                       ->  '0.6'                        x1
+     '0.6'                        ->  '0.99'                       x1
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Leong2023_misses.csv, Leong2023_misses_summary.json (2 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  ~42                                               0     2   PRED-ONLY
+  ~43                                               0     8   PRED-ONLY
+  ~44                                               0    10   PRED-ONLY
+  ~45                                               0    14   PRED-ONLY
+  ~46                                               0     6   PRED-ONLY
+  ~47                                               0     2   PRED-ONLY
+  ~48                                               0    10   PRED-ONLY
+  ~49                                               0     4   PRED-ONLY
+  ~51                                               0     2   PRED-ONLY
+  ~53                                               0     2   PRED-ONLY
+  relative eye width corrected by body size        28    28   
+  relative hind femur length corrected by body size   30    30   
+  relative scape length corrected by body size     30    30   
+  critical thermal maximum                         30    30   
+  relative eye position                            28    28   
+  habitat                                          30    30   
+  weber’s length                                   30    30   
+  relative mandible size                           30    30   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.992  0.992  0.992    234     2     2   id+type+value
+             (60 more spurious row(s) set aside as out-of-scope; strict P would be 0.791)
+  tags        0.000  0.000  0.000      0   236   236   basis+id+type+value+stat+sex+stage
+             (60 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.992 vs previous)
+             note: only 0/234 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

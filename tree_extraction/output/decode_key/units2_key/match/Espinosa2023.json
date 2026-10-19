@@ -1,0 +1,173 @@
+{
+ "_columns": [
+  [
+   7,
+   4,
+   "Presence of opercular gill",
+   [
+    "og",
+    "nog"
+   ]
+  ],
+  [
+   7,
+   5,
+   "Feeding group",
+   [
+    "Collector",
+    "Scraper",
+    "Filterer"
+   ]
+  ]
+ ],
+ "7:4": {
+  "cells": {
+   "og": {
+    "term": "opercular gill",
+    "parts": [
+     "og"
+    ],
+    "options": {
+     "og": {
+      "evidence": "explicit",
+      "labels": [
+       "opercular gill"
+      ]
+     }
+    },
+    "evidence": {
+     "og": "explicit"
+    },
+    "probs": {
+     "og | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "og": {
+      "e0": 0.979,
+      "keep": 0.021
+     },
+     "og | QB": {}
+    }
+   },
+   "nog": {
+    "term": "non-opercular gill",
+    "parts": [
+     "nog"
+    ],
+    "options": {
+     "nog": {
+      "evidence": "explicit",
+      "labels": [
+       "non-opercular gill"
+      ]
+     }
+    },
+    "evidence": {
+     "nog": "explicit"
+    },
+    "probs": {
+     "nog | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "nog": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "nog | QB": {}
+    }
+   }
+  },
+  "header": "Presence of opercular gill",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "7:5": {
+  "cells": {
+   "Collector": {
+    "term": null,
+    "parts": [
+     "Collector"
+    ],
+    "options": {
+     "Collector": {
+      "evidence": "explicit",
+      "labels": [
+       "collector"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Collector | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "Scraper": {
+    "term": null,
+    "parts": [
+     "Scraper"
+    ],
+    "options": {
+     "Scraper": {
+      "evidence": "explicit",
+      "labels": [
+       "scraper"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Scraper | QK": {
+      "code": 0.005,
+      "word": 0.995
+     }
+    }
+   },
+   "Filterer": {
+    "term": null,
+    "parts": [
+     "Filterer"
+    ],
+    "options": {
+     "Filterer": {
+      "evidence": "explicit",
+      "labels": [
+       "filter-feeder"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Filterer | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u33"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.985,
+    "p1": 0.0,
+    "several": 0.008,
+    "none": 0.006
+   },
+   "chosen": [
+    "u23"
+   ]
+  },
+  "header": "Feeding group"
+ }
+}

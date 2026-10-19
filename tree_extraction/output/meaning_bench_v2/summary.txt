@@ -1,0 +1,113 @@
+held-out tables: 181 GT-trait columns
+
+  names, no synonyms:
+    gemma names                                          139/181 77%
+    head reader names                                    139/181 77%
+      + finder first definition (v1, code only)          159/181 88%
+      + meaning chosen per name (v1, QM)                 158/181 87%
+      + meanings chosen per token (v2, QM2)              160/181 88%
+    gemma names + meanings per token (v2, QM2)           160/181 88%
+
+  with the synonym judge:
+    v1 judge (unrestricted): gemma                       172/181 95%
+    v1 judge (unrestricted): head + meaning              170/181 94%
+    v2 judge (paper meanings only): gemma                171/181 94%
+    v2 judge (paper meanings only): head + meanings      169/181 93%
+
+  decoys — judge said 'same trait' (lower is better):
+    head   unrelated       0/9 0%
+    head   value          2/8 25%
+    head   initials       2/3 67%
+    gemma  unrelated      0/14 0%
+    gemma  value         4/12 33%
+    gemma  initials       2/3 67%
+
+  the three version-1 failures:
+    GibbParr2013 'EP' -> 'eye position' (GT 'Eye position'): match
+    Ibarra2021 'Mean length (mm) ± SD' -> 'Mean length (mm) ± standard deviation' (GT 'Body Length'): no match
+    Leong2023 'WL' -> 'Weber s length' (GT 'Weber’s length'): match
+  written out but still not the GT trait: 3
+    Ibarra2021 t3: 'Mean length (mm) ± SD' -> 'Mean length (mm) ± standard deviation' vs 'Body Length'
+    Ibarra2021 t4: 'Mean length (mm) ± SD' -> 'Mean length (mm) ± standard deviation' vs 'Body Length'
+    Ibarra2021 t5: 'Mean length (mm) ± SD' -> 'Mean length (mm) ± standard deviation' vs 'Body Length'
+  head credited only by the judge (check by eye): 9
+    Braschler2021 t8: 'Dry tolerant' ~ 'Drought Resistance'
+    Braschler2021 t9: 'Dry tolerant' ~ 'Drought Resistance'
+    Ibarra2021 t3: 'Mean length (mm) ± SD' (SD = standard deviation) ~ 'Body Length'
+    Ibarra2021 t4: 'Mean length (mm) ± SD' (SD = standard deviation) ~ 'Body Length'
+    Ibarra2021 t5: 'Mean length (mm) ± SD' (SD = standard deviation) ~ 'Body Length'
+    Derhe2016 t4: 'Pasture' ~ 'Habitat preference'
+    Derhe2016 t4: 'Rainforest' ~ 'Habitat preference'
+    Rebrina2022 t2: 'Body Size (mm)' ~ 'Body Length'
+    Rebrina2022 t3: 'Body Size (mm)' ~ 'Body Length'
+  gemma credited only by the judge: 11
+    Braschler2021 t8: 'Dry tolerant' ~ 'Drought Resistance'
+    Braschler2021 t9: 'Dry tolerant' ~ 'Drought Resistance'
+    Torok2022 t8: 'Solitary' ~ 'Social habit'
+    Torok2022 t8: 'herbivore' ~ 'Larvae feeding preference'
+    Ibarra2021 t3: 'Mean length (mm) ± SD' ~ 'Body Length'
+    Ibarra2021 t4: 'Mean length (mm) ± SD' ~ 'Body Length'
+    Ibarra2021 t5: 'Mean length (mm) ± SD' ~ 'Body Length'
+    Derhe2016 t4: 'Pasture' ~ 'Habitat preference'
+    Derhe2016 t4: 'Rainforest' ~ 'Habitat preference'
+    Rebrina2022 t2: 'Body Size (mm)' ~ 'Body Length'
+    Rebrina2022 t3: 'Body Size (mm)' ~ 'Body Length'
+  head still missed: 12
+    Torok2022 t8: '' vs 'Social habit' (no name)
+    Torok2022 t8: '' vs 'Nest location' (no name)
+    Torok2022 t8: '' vs 'Wasp preys' (no name)
+    Torok2022 t8: '' vs 'Larvae feeding preference' (no name)
+    Torok2022 t8: '' vs 'Body Size' (no name)
+    Uemori2021 t10: 'Distribution index' vs 'Mean body size' (judge said no)
+    OsorioCanadas2018 t9: 'Body size (ITS,mm)' vs 'Intertegular Span' (not eligible, undefined: ITS)
+    Korosi2022 t5: 'Overw. stage' vs 'Overwintering stage' (not eligible, undefined: Overw.)
+    Derhe2016 t4: 'Old restoration' vs 'Habitat preference' (judge said no)
+    Wiescher2012 t1: 'DI' vs 'diurnality index' (not eligible, undefined: DI)
+    Figueroa2021 t1: 'n' vs 'Intertegular Distance' (judge said no)
+    Tsai2020 t5: 'day after emergence' vs 'Bury or Not' (judge said no)
+
+development tables: 8 GT-trait columns
+
+  names, no synonyms:
+    gemma names                                               0/8 0%
+    head reader names                                         0/8 0%
+      + finder first definition (v1, code only)               0/8 0%
+      + meaning chosen per name (v1, QM)                      0/8 0%
+      + meanings chosen per token (v2, QM2)                   0/8 0%
+    gemma names + meanings per token (v2, QM2)                0/8 0%
+
+  with the synonym judge:
+    v1 judge (unrestricted): gemma                            0/8 0%
+    v1 judge (unrestricted): head + meaning                  2/8 25%
+    v2 judge (paper meanings only): gemma                     0/8 0%
+    v2 judge (paper meanings only): head + meanings          2/8 25%
+
+  decoys — judge said 'same trait' (lower is better):
+    head   unrelated       0/8 0%
+    head   value                -
+    head   initials             -
+    gemma  unrelated       0/8 0%
+    gemma  value                -
+    gemma  initials             -
+
+  the three version-1 failures:
+  written out but still not the GT trait: 8
+    Oliveira2022 t14: 'Traits CL M' -> 'mean' vs 'Clypeus length ratio'
+    Oliveira2022 t14: 'Traits ML M' -> 'mean' vs 'Mandible length ratio'
+    Oliveira2022 t14: 'Traits WL M' -> 'mean' vs 'Mesosoma length'
+    Oliveira2022 t14: 'Traits IOW M' -> 'mean' vs 'Eye position ratio'
+    Oliveira2022 t14: 'Traits EL M' -> 'mean' vs 'Eye length ratio'
+    Oliveira2022 t14: 'Traits P M' -> 'mean' vs 'Pilosity'
+    Oliveira2022 t14: 'Traits LEG M' -> 'mean' vs 'Leg length ratio'
+    Oliveira2022 t14: 'Traits AL M' -> 'mean' vs 'Antenna length ratio'
+  head credited only by the judge (check by eye): 2
+    Oliveira2022 t14: 'Traits WL M' (M = mean) ~ 'Mesosoma length'
+    Oliveira2022 t14: 'Traits LEG M' (M = mean) ~ 'Leg length ratio'
+  gemma credited only by the judge: 0
+  head still missed: 6
+    Oliveira2022 t14: 'Traits CL M' vs 'Clypeus length ratio' (judge said no)
+    Oliveira2022 t14: 'Traits ML M' vs 'Mandible length ratio' (judge said no)
+    Oliveira2022 t14: 'Traits IOW M' vs 'Eye position ratio' (judge said no)
+    Oliveira2022 t14: 'Traits EL M' vs 'Eye length ratio' (judge said no)
+    Oliveira2022 t14: 'Traits P M' vs 'Pilosity' (judge said no)
+    Oliveira2022 t14: 'Traits AL M' vs 'Antenna length ratio' (judge said no)

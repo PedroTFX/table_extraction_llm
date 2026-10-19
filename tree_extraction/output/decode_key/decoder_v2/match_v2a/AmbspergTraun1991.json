@@ -1,0 +1,287 @@
+{
+ "0:4": {
+  "cells": {
+   "W": {
+    "term": "wood",
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "explicit"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.931,
+      "word": 0.069
+     },
+     "W": {
+      "e0": 0.972,
+      "keep": 0.028
+     }
+    }
+   },
+   "S": {
+    "term": "soil",
+    "parts": [
+     "S"
+    ],
+    "options": {
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {
+     "S": "explicit"
+    },
+    "probs": {
+     "S | QK": {
+      "code": 0.906,
+      "word": 0.094
+     },
+     "S": {
+      "e0": 0.963,
+      "keep": 0.037
+     }
+    }
+   },
+   "W/S": {
+    "term": "wood; soil",
+    "parts": [
+     "W",
+     "S"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     },
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "explicit",
+     "S": "explicit"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.931,
+      "word": 0.069
+     },
+     "W": {
+      "e0": 0.972,
+      "keep": 0.028
+     },
+     "S | QK": {
+      "code": 0.906,
+      "word": 0.094
+     },
+     "S": {
+      "e0": 0.963,
+      "keep": 0.037
+     }
+    }
+   }
+  },
+  "header": "Feeding group†"
+ },
+ "0:5": {
+  "cells": {
+   "W": {
+    "term": "wood",
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "explicit"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.942,
+      "word": 0.058
+     },
+     "W": {
+      "e0": 0.979,
+      "keep": 0.021
+     }
+    }
+   },
+   "M": {
+    "term": "mound",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.725,
+      "word": 0.275
+     },
+     "M": {
+      "e0": 0.97,
+      "keep": 0.03
+     }
+    }
+   },
+   "H": {
+    "term": "hypogeal",
+    "parts": [
+     "H"
+    ],
+    "options": {
+     "H": {
+      "evidence": "explicit",
+      "labels": [
+       "hypogeal"
+      ]
+     }
+    },
+    "evidence": {
+     "H": "explicit"
+    },
+    "probs": {
+     "H | QK": {
+      "code": 0.816,
+      "word": 0.184
+     },
+     "H": {
+      "e0": 0.963,
+      "keep": 0.037
+     }
+    }
+   },
+   "M(O)": {
+    "term": "found in mounds of other termites",
+    "parts": [
+     "M(O)"
+    ],
+    "options": {
+     "M(O)": {
+      "evidence": "explicit",
+      "labels": [
+       "found in mounds of other termites"
+      ]
+     }
+    },
+    "evidence": {
+     "M(O)": "explicit"
+    },
+    "probs": {
+     "M(O) | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "M(O)": {
+      "e0": 0.983,
+      "keep": 0.017
+     }
+    }
+   },
+   "H, M(O)": {
+    "term": "hypogeal; found in mounds of other termites",
+    "parts": [
+     "H",
+     "M(O)"
+    ],
+    "options": {
+     "H": {
+      "evidence": "explicit",
+      "labels": [
+       "hypogeal"
+      ]
+     },
+     "M(O)": {
+      "evidence": "explicit",
+      "labels": [
+       "found in mounds of other termites"
+      ]
+     }
+    },
+    "evidence": {
+     "H": "explicit",
+     "M(O)": "explicit"
+    },
+    "probs": {
+     "H | QK": {
+      "code": 0.816,
+      "word": 0.184
+     },
+     "H": {
+      "e0": 0.963,
+      "keep": 0.037
+     },
+     "M(O) | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "M(O)": {
+      "e0": 0.983,
+      "keep": 0.017
+     }
+    }
+   },
+   "A": {
+    "term": "arboreal",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "explicit",
+      "labels": [
+       "arboreal"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "explicit"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.697,
+      "word": 0.303
+     },
+     "A": {
+      "e0": 0.977,
+      "keep": 0.023
+     }
+    }
+   }
+  },
+  "header": "Nesting group‡"
+ }
+}

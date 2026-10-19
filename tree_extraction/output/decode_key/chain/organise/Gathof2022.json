@@ -1,0 +1,535 @@
+{
+ "calls": 2,
+ "chars": 7918,
+ "passages": [
+  "[prose] To investigate the trait–environmental relationships of wild bee and hoverfly communities, we derived functional traits for each pollinator species from literature (Table 1). For wild bees, we used [WB 1] sociality; [WB 2] nesting behaviour; [WB 3] diet; [WB 4] active flight time and [WB 5] body size from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen (Amiet 1996; Amiet et al. 1999, 2001, 2004, 2007, 2010; Westrich 2019). For hoverflies, we derived [HF 1] body size of adult individuals from head to the end of the abdomen, [HF 2] active flight time, [HF 3] migratory status (Speight et al. 2013) and [HF 4] larval food type (Saure 2018).",
+  "[prose] Regarding hoverflies, habitat requirements within the larval phase could explain the performance of this pollinator group in urban areas (Verboven et al. 2014; Persson et al. 2020). As the required local microhabitat structures for terrestrial saprophagous larval phases can be found in the form of rot-holes, tree-hollows, compost heaps and dung in residential gardens, parks, cemeteries and other urban green spaces, species with this larval development type may thrive in urban habitats. In terms of migratory status, our results mirror those of Luder et al. (2018), which is the only study on this research topic and which detected fewer migratory species in urban than in rural sites. Their high mobility probably enables these species to access floral and larval food resources spread across a large area. In general, cities provide high small-scale resource heterogeneity, but relevant resources are often less abundant in urban compared to rural areas.",
+  "[table 0] Functional traits | Unit/score/categories | Explanation\nWild bees\n[WB 1] Sociality | Solitary | Nest foundation occurs alone; no division of labour and no storage of food stocks\nEusocial | Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included\nCleptoparasitic | Brood parasitic way of life\n[WB 2] Nesting behaviour | Hypergeic | Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks\nEndogeic | Belowground nesting in self-excavated or existing cavities\nHyper- and endogeic | Combination of the two nesting types\nCleptoparasitic | Penetration into foreign nests and deposition of the eggs therein\n[WB 3] Diet | Oligolectic | Pollen specialisation",
+  "[table 0] Polylectic | No binding to certain plant species\nCleptoparasitic | No collection of pollen\n[WB 4] Active flight time | # Average number of months | Average flight period of female and male individuals\n[WB 5] body size | # Average size in mm | Average size of female individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen\nHoverflies\n[HF 1] body size | # Average size in mm | Average size of adult individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen\n[HF 2] active flight time | # Average number of months | Average flight period of female and male individuals\n[HF 3] migratory status | 0/1 (no/yes) | Ability to undertake long-distance movements\n[HF 4] larval food type | Phytophagous | Nutrition through plant components\nZoophagous | Nutrition through animals, especially aphids",
+  "[prose] Asterisks show positive (+) or negative (-) trait–environment relationships with $P",
+  "[prose] https://doi.org/10.1007/s00442-022-05174-z",
+  "[prose] Received: 14 October 2021 / Accepted: 19 April 2022 / Published online: 4 May 2022",
+  "[prose] Supplementary Information The online version contains supplementary material available at [https://doi.org/10.1007/s00442-022-05174-z](https://doi.org/10.1007/s00442-022-05174-z).",
+  "[prose] Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit[http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/).",
+  "[prose] Our study was performed in the administrative region of Berlin, spanning 891.1 km 2 and inhabiting a population of approximately 3.6 million people. We used the City-ScapeLab Berlin (von der Lippe et al. 2020) as our study system, a novel research platform that allowed us to study urbanisation effects on biodiversity patterns of pollinators and uses urban grassland as a model ecosystem; urban grassland is an essential component of urban green spaces (Fischer et al. 2013; Klaus 2013) and a potentially important habitat especially for wild bees (Hall et al. 2017; Dylewski et al. 2019) and for the foraging of adult hoverflies. We, therefore, studied 49 urban grasslands distributed across the city, 44 located in and 5 outside of Berlin. Each study site consisted of a dry grassland patch that encompasses one randomly located plot with a standardised size (4 × 4 m) for sampling environmental variables (vegetation variables and temperature) and pollinators (von der Lippe et al. 2020).",
+  "[prose] abundances, and each trait distribution among grasslands. We then used the fourth-corner analysis to test for correlations between environmental filters and pollinator traits (Dray and Legendre 2008; Dray et al. 2014). Wild bees and hoverflies were analysed separately. This involved creating three matrices for each pollinator group: an R matrix (environmental variables), an L matrix (wild bee/hoverfly species abundances) and a Q matrix (wild bee/hoverfly species traits). Subsequently, a correspondence analysis (L matrix) and principal components analysis (R, Q matrices) were performed while applying a permutation model using model type 2, that permutes the values of the sites (rows of L matrix). Further regressions, using Poisson GLMs, were applied to determine the direction of the effect. Therefore, we counted the frequency of each trait per species community or study site, respectively, and used these count data as response variable to environmental variables. All analyses were performed in the R Statistical Environment (version 3.3.1, R Core Team 2016), including the packages ade4 (Dray and Dufour 2007), labdsv (Roberts 2016), AER (Kleiber and Zeileis 2008) and vegan (Oksanen et al. 2013).",
+  "[prose] At the local scale, we used the variables [3] patch size, [4] cover of herbaceous plants, [5] cover of non-native herbaceous plants and [6] mean air temperature (Table 2) to characterise the local habitat features of each grassland patch. The cover of herbaceous plants was collected within each plot (4 × 4 m) as a measure of local resource availability, using the Braun-Blanquet approach, which lists the plant species present in order of layers (trees, shrubs, herbaceous plants) and scores them according to the degree of cover (van der Maarel and Franklin 2012). Further, we considered the cover of non-native herbaceous plants because",
+  "[table 0] Terrestrial saprophagous | Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)\nAquatic saprophagous | Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)"
+ ],
+ "categories": [
+  {
+   "variable": "Sociality",
+   "code": "Solitary",
+   "term": "Nest foundation occurs alone; no division of labour and no storage of food stocks",
+   "model_label": "Solitary",
+   "label": "Nest foundation occurs alone; no division of labour and no storage of food stocks",
+   "explanation": ""
+  },
+  {
+   "variable": "Sociality",
+   "code": "Eusocial",
+   "term": "Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included",
+   "model_label": "Eusocial",
+   "label": "Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included",
+   "explanation": ""
+  },
+  {
+   "variable": "Sociality",
+   "code": "Cleptoparasitic",
+   "term": "Brood parasitic way of life",
+   "model_label": "Cleptoparasitic",
+   "label": "Brood parasitic way of life",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Hypergeic",
+   "term": "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks",
+   "model_label": "Hypergeic",
+   "label": "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Endogeic",
+   "term": "Belowground nesting in self-excavated or existing cavities",
+   "model_label": "Endogeic",
+   "label": "Belowground nesting in self-excavated or existing cavities",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Hyper- and endogeic",
+   "term": "Combination of the two nesting types",
+   "model_label": "Hyper- and endogeic",
+   "label": "Combination of the two nesting types",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Cleptoparasitic",
+   "term": "Penetration into foreign nests and deposition of the eggs therein",
+   "model_label": "Cleptoparasitic",
+   "label": "Penetration into foreign nests and deposition of the eggs therein",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "Oligolectic",
+   "term": "Pollen specialisation",
+   "model_label": "Oligolectic",
+   "label": "Pollen specialisation",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "Polylectic",
+   "term": "No binding to certain plant species",
+   "model_label": "Polylectic",
+   "label": "No binding to certain plant species",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "Cleptoparasitic",
+   "term": "No collection of pollen",
+   "model_label": "Cleptoparasitic",
+   "label": "No collection of pollen",
+   "explanation": ""
+  },
+  {
+   "variable": "Active flight time",
+   "code": "#",
+   "term": "Average number of months",
+   "model_label": "Average number of months",
+   "label": "Average number of months",
+   "explanation": ""
+  },
+  {
+   "variable": "body size",
+   "code": "#",
+   "term": "Average size in mm",
+   "model_label": "Average size in mm",
+   "label": "Average size in mm",
+   "explanation": ""
+  },
+  {
+   "variable": "body size",
+   "code": "#",
+   "term": "Average size of adult individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen",
+   "model_label": "Average size of adult individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen",
+   "label": "Average size of adult individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen",
+   "explanation": ""
+  },
+  {
+   "variable": "migratory status",
+   "code": "0/1",
+   "term": "no/yes",
+   "model_label": "no/yes",
+   "label": "no/yes",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food type",
+   "code": "Phytophagous",
+   "term": "Nutrition through plant components",
+   "model_label": "Phytophagous",
+   "label": "Nutrition through plant components",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food type",
+   "code": "Zoophagous",
+   "term": "Nutrition through animals, especially aphids",
+   "model_label": "Zoophagous",
+   "label": "Nutrition through animals, especially aphids",
+   "explanation": ""
+  },
+  {
+   "variable": "patch size",
+   "code": "[3]",
+   "term": "patch size",
+   "model_label": "patch size",
+   "label": "patch size",
+   "explanation": ""
+  },
+  {
+   "variable": "cover of herbaceous plants",
+   "code": "[4]",
+   "term": "cover of herbaceous plants",
+   "model_label": "cover of herbaceous plants",
+   "label": "cover of herbaceous plants",
+   "explanation": ""
+  },
+  {
+   "variable": "cover of non-native herbaceous plants",
+   "code": "[5]",
+   "term": "cover of non-native herbaceous plants",
+   "model_label": "cover of non-native herbaceous plants",
+   "label": "cover of non-native herbaceous plants",
+   "explanation": ""
+  },
+  {
+   "variable": "mean air temperature",
+   "code": "[6]",
+   "term": "mean air temperature",
+   "model_label": "mean air temperature",
+   "label": "mean air temperature",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "",
+   "label": "Solitary",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "sociality",
+   "code": "",
+   "label": "Eusocial",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "sociality",
+   "code": "",
+   "label": "Cleptoparasitic",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "nesting behaviour",
+   "code": "",
+   "label": "Hypergeic",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "nesting behaviour",
+   "code": "",
+   "label": "Endogeic",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "nesting behaviour",
+   "code": "",
+   "label": "Hyper- and endogeic",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "diet",
+   "code": "",
+   "label": "Oligolectic",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "diet",
+   "code": "",
+   "label": "Polylectic",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "larval food type",
+   "code": "",
+   "label": "Phytophagous",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "larval food type",
+   "code": "",
+   "label": "Zoophagous",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)",
+   "code": "",
+   "label": "Terrestrial saprophagous",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)",
+   "code": "",
+   "label": "Aquatic saprophagous",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 41.7,
+ "columns": [
+  [
+   0,
+   0,
+   "Functional traits",
+   [
+    "[WB 1] Sociality",
+    "[WB 2] Nesting behaviour",
+    "[WB 3] Diet",
+    "[WB 4] Active flight time",
+    "[WB 5] body size",
+    "Hoverflies",
+    "[HF 1] body size",
+    "[HF 2] active flight time",
+    "[HF 3] migratory status",
+    "[HF 4] larval food type"
+   ]
+  ],
+  [
+   0,
+   1,
+   "Unit/score/categories",
+   [
+    "Solitary",
+    "Eusocial",
+    "Cleptoparasitic",
+    "Hypergeic",
+    "Endogeic",
+    "Hyper- and endogeic",
+    "Oligolectic",
+    "Polylectic",
+    "# Average number of months",
+    "# Average size in mm",
+    "Hoverflies",
+    "0/1 (no/yes)",
+    "Phytophagous",
+    "Zoophagous",
+    "Terrestrial saprophagous",
+    "Aquatic saprophagous"
+   ]
+  ],
+  [
+   0,
+   2,
+   "Explanation",
+   [
+    "Nest foundation occurs alone; no division of labour and no storage of food stocks",
+    "Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included",
+    "Brood parasitic way of life",
+    "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks",
+    "Belowground nesting in self-excavated or existing cavities",
+    "Combination of the two nesting types",
+    "Penetration into foreign nests and deposition of the eggs therein",
+    "Pollen specialisation",
+    "No binding to certain plant species",
+    "No collection of pollen",
+    "Average flight period of female and male individuals",
+    "Average size of female individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen",
+    "Hoverflies",
+    "Average size of adult individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen",
+    "Ability to undertake long-distance movements",
+    "Nutrition through plant components",
+    "Nutrition through animals, especially aphids",
+    "Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)",
+    "Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)"
+   ]
+  ],
+  [
+   4,
+   0,
+   "Taxon",
+   [
+    "Wild bees",
+    "Hoverflies"
+   ]
+  ],
+  [
+   4,
+   1,
+   "Functional trait",
+   [
+    "Sociality",
+    "Nesting",
+    "Diet",
+    "Body size",
+    "Larval food type",
+    "Migratory status"
+   ]
+  ],
+  [
+   4,
+   2,
+   "Functional trait #2",
+   [
+    "Eusocial",
+    "Cleptoparasitic",
+    "Endogeic",
+    "Polylectic",
+    "Terrestrial saprophagous",
+    "Migrating"
+   ]
+  ],
+  [
+   4,
+   4,
+   "Connectivity",
+   [
+    "-**",
+    "+*"
+   ]
+  ],
+  [
+   5,
+   2,
+   "Nesting behavior",
+   [
+    "endogeic",
+    "endogeic / hypergeic",
+    "hypergeic",
+    "cleptoparasitic",
+    "hyper"
+   ]
+  ],
+  [
+   5,
+   3,
+   "Sociality",
+   [
+    "solitary",
+    "kleptoparasitic",
+    "social",
+    "solitary / social",
+    "unknown"
+   ]
+  ],
+  [
+   5,
+   4,
+   "Diet",
+   [
+    "polylectic",
+    "oligolectic",
+    "/"
+   ]
+  ],
+  [
+   5,
+   5,
+   "Active Flight Time (number of months)",
+   [
+    "4",
+    "4.5",
+    "4.3",
+    "2",
+    "1.6",
+    "3",
+    "4.6",
+    "2.3",
+    "1.8",
+    "3.5",
+    "5.5",
+    "5.3",
+    "6.6",
+    "7.5",
+    "4.8",
+    "7",
+    "2.5",
+    "5",
+    "2.6",
+    "1.5",
+    "3.3",
+    "3.6",
+    "2.8",
+    "6",
+    "6.5"
+   ]
+  ],
+  [
+   5,
+   6,
+   "Bodysize",
+   [
+    "6.5",
+    "9",
+    "11.5",
+    "13.5",
+    "14",
+    "11",
+    "9.5",
+    "12",
+    "15",
+    "7",
+    "8.5",
+    "24",
+    "19.5",
+    "18.5",
+    "21",
+    "16.5",
+    "16",
+    "17",
+    "20",
+    "21.5",
+    "10.5",
+    "14.5",
+    "7.5",
+    "5.5",
+    "8"
+   ]
+  ],
+  [
+   6,
+   2,
+   "Body size (mm)",
+   [
+    "6.5",
+    "11",
+    "13.5",
+    "12",
+    "10",
+    "8.5",
+    "10.5",
+    "12.5",
+    "15",
+    "9.5",
+    "15.5",
+    "6",
+    "8",
+    "9",
+    "14",
+    "16",
+    "11.5"
+   ]
+  ],
+  [
+   6,
+   3,
+   "Active flight time (number of months)",
+   [
+    "7",
+    "5",
+    "3",
+    "6",
+    "10",
+    "9",
+    "4"
+   ]
+  ],
+  [
+   6,
+   4,
+   "Migratory status",
+   [
+    "0",
+    "1"
+   ]
+  ],
+  [
+   6,
+   5,
+   "Larval foodtype",
+   [
+    "phytophagous",
+    "zoophagous",
+    "aquatic saprophagous",
+    "terrestrial saprophagous"
+   ]
+  ]
+ ]
+}

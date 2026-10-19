@@ -1,0 +1,604 @@
+{
+ "calls": 3,
+ "chars": 14342,
+ "passages": [
+  "[table 1] Species | Time since fire (years)\nphe.pal (579) | ~20\nibe.sub (523) | ~18\naph.ibe (407) | ~21\ncat.vel (244) | ~23\ntet.sem (215) | ~16\ncam.syl (180) | ~17\npla.pyg (165) | ~16\ncam.pil (162) | ~21\ncat.his (161) | ~9",
+  "[table 1] aph.sen (139) | ~13\naph.gib (139) | ~17\ncre.aub (116) | ~20\npla.sch (111) | ~20\ncam.cru (98) | ~24\ntet.cae (94) | ~17\ncat.ibe (81) | ~27\nmes.bou (80) | ~13\nsol.sp (74) | ~18\ncat.tar (59) | ~13",
+  "[table 1] tap.nig (57) | ~23\nfor.cun (57) | ~28\nmon.sub (51) | ~28\ncat.flo (43) | ~20\ntem.rac (38) | ~18\nmes.bar (36) | ~13\ncat.ros (35) | ~17\ngon.kug (31) | ~13\nmes.cap (30) | ~30\ntem.lut (28) | ~25",
+  "[table 1] cam.for (26) | ~22\ncre.sor (22) | ~23\ntem.gre (21) | ~0\ntem.rec (17) | ~24\ntet.for (15) | ~4\nmes.lus (15) | ~8\ncre.scu (15) | ~20\ncam.lat (15) | ~26\ntap.err (14) | ~30\noxy.sau (13) | ~13",
+  "[table 1] mes.mar (10) | ~13\nlas.gra (10) | ~22\ntem.tyn (7) | ~20\ntem.par (3) | ~4\ntem.ang (3) | ~23\ntem.kra (2) | ~15\ntem.for (2) | ~26\ntem.exi (2) | ~41\ntem.ave (2) | ~35\ngon.his (2) | ~29",
+  "[table 1] tem.spe (1) | ~41\npol.ruf (1) | ~17\nmyr.alo (1) | ~0\nmes.str (1) | ~28\nlas.myo (1) | ~26\ncar.bat (1) | ~2\naph.car (1) | ~24\namb.gae (1) | ~24",
+  "[prose] ## 2.1. Study areas and fire effect variables",
+  "[prose] ## 2.5. Taxonomic diversity",
+  "[prose] All the analyses were performed using R (v. 4.1.3; R Core Team, 2022). First, we characterized the taxonomic structure and composition of the ant and bee communities. We defined ant abundance $( \\mathrm { A _ { a n t s } } )$ as the mean number of ants per transect $( N = 1 5 )$ using the total number of ants in each trap in the calculation. We defined bee abundance $( A _ { \\mathrm { b e e s } } )$ as the total number of bees captured per transect. When traps were missing, we extrapolated ant and bee abundance data to the total number of traps for each transect (for ants, 103 traps across 46 transects went missing; for bees, 11 traps across 8 transects went missing; total transects = 140, Dataset S2). For each transect, we calculated the following taxonomic diversity indices (Dataset S1, spreadsheets data.ants and data.bees): (1) observed taxon richness $( S { \\mathrm { a n t s } }$ and $S { \\mathrm { b e e s } } ) _ { i }$ which was the total number of species/genera observed per transect; (2) the Shannon diversity index $( \\mathrm { H } { \\mathrm { a n t s } }$ and $\\mathrm { H { b e e s } ) _ { i } }$ , which accounts for both the number of species/genera and their relative abundance; and (3) Pielou's evenness $( \\mathrm { J } { \\mathrm { a n t s } }$ and $\\mathbf { J } { \\mathrm { b e e s } } ) _ { i }$ which is the Shannon diversity index divided by the natural logarithm of the observed taxon richness. S and H were calculated using the estimate function (vegan package, Oksanen et al., 2018).",
+  "[prose] ## 2.8.3. Effects of fire on taxonomic and functional community structure",
+  "[prose] ## 2.8.4. Effects of fire on taxonomic and functional community composition",
+  "[prose] ## 2.8.5. Effects of fire on functional traits",
+  "[prose] ## 3.1. Effects of fire on community richness",
+  "[prose] ## 3.5. Effects of fire on functional traits",
+  "[prose] ## 4.1. Do taxonomic and functional diversity increase immediately after fire?",
+  "[prose] ## 4.5. Which functional traits are filtered by fire?",
+  "[prose] because there is an increase in floral resources and boring insect exit holes used by cavity-nesting bees (Galbraith et al., 2019); because bee abundance is negatively related to canopy cover (Grundel et al., 2010); or because floral abundance persisted for longer time in burned sites (Mola and Williams, 2018; Moretti et al., 2009; Potts et al., 2003); in all these cases, the pattern that usually emerges is a rapid recovery with a peak in diversity of both flowers and bees in the first years after a fire. For ants, however, taxonomic responses have been quite variable across the world (New, 2014): in the Brazilian rupestrian complex, the ant fauna of burned areas maintained a constant species diversity along time but greatly changed species assemblage due to the occurrence of several species not found in the unburned area (Anjos et al., 2015); in the Australian pindan savanna woodland, the ant fauna was highly resilient to fire and most of the 84 ant species (except 2) did not show any positive change in abundance over time since fire (Andersen et al., 2014); but after experimental fires in a similar savanna woodland Parr and Andersen (2008) observed a dramatic decline in dominance of the patchily distributed forest-associated species Oecophylla smaragdina and Papyrius sp., although fire had no effect on overall dominance by open savanna species of Iridomyrmex. Yet, relatively little is known about how ants and bees respond functionally to fire over the intermediate and long term. Functional redundancy has been observed in bees: after a fire, bee abundance climbs, and while taxonomic diversity may decrease, functional diversity is maintained (Moretti et al., 2009). In Mediterranean ant communities, fire results in greater functional diversity, mainly due to the presence of rare species that are functionally unique (Arnan et al., 2019). In both cases, such changes could have major consequences for ecosystem processes and services.",
+  "[prose] Given the importance of plant community recovery in ant and bee community recovery, we explored whether vegetation cover formed natural groups based on time since fire. To this end, we performed a cluster analysis using the hclust function (cluster package; Maechler et al., 2022). The dependent variable was the vegetation cover at the burned areas for the three strata found to be significant above. The results revealed the presence of three categories (Fig. S2): category 1—fire occurred 0 to 4 years ago; category 2—fire occurred 7 to 12 years ago; and category 3—fire occurred 15 to 41 years ago. These categories are similar to those used by Peralta et al. (2017) when studying fire's effects on plant-bee networks.",
+  "[prose] Given the regional scale of our study, we gathered information on the environmental characteristics of each study area. The resulting set of variables was used as covariables in the analyses (Dataset S1, spreadsheets data.ants and data.bees). This list comprised latitude, longitude, and elevation (Lat, Long, and Elev) as determined from GPS coordinates; lithological types (igneous, sedimentary, and metamorphic rock) (CSIC-IARA, 1988), as different type of soil affect ant richness and bee nesting for ground-dwelling bees (Angulo et al., 2016; Lybrand et al., 2020; Antoine and Forrest, 2021); pine species (Pine halepensis, P. nigra, P. pinaster, and P. pinea) because pines can differ in their responses to fire (He et al., 2012); and eight bioclimatic variables (WorldClim database v. 2.0— [www.worldclim.org](http://www.worldclim.org); Hijmans et al., 2005). The latter covered the period from 1970 to 2000, and the values had a spatial resolution of about 1 km 2 . Using principal components analysis (PCA), we reduced them to two uncorrelated components that accounted for 92.3 % of the original variation (Clim. 1 and Clim. 2; Table S5).",
+  "[prose] We examined the effects of fire and time since fire on the taxonomic and functional community structure indexes (indices: A, S, H, J, FRic, FEve, FDis and FDiv). The ant and bee data were analyzed separately using linear mixed-effects models (lme function, nlme package; Pinheiro and Bates, 2022, Pinheiro and Bates, 2000). In the models, the dependent variable was one of the indices; fire (burned and unburned), time since fire (continuous: 0 to 41), and their interaction were fixed effects. The environmental variables were covariates, and study area was a random factor to account for the fact that different transects were sampled within the same study area. To meet statistical assumptions regarding normality, homogeneity and heteroscedasticity, we transformed the dependent variables using the transformation that better suit normality assumptions in each case (see Results, Table 1).",
+  "[prose] Table 1 Effects of fire and time since fire on the taxonomic community structure of ants (a) and bees (b); and on the functional community structure of ants (c) and bees (d). Metrics are A = abundance, S = richness, H = Shannon diversity index, and J = Pielou's evenness; FRic: functional richness; FEve: functional evenness; FDis: and ½ indicate the use of a logarithmic, squared, or square-root transformation, respectively. Fire: fire treatment (burned and unburned); Time: how long ago the fire occurred (0 to 41 years); FxT: the interaction between the former two variables. Statistically significant results are in bold. The complete models are in Table S9, S10.",
+  "[prose] Fig. 5. Effects of fire on the taxonomic and functional community structure of ants. (a) Mean (± SE) log-transformed ant abundance for burned versus unburned areas as well as (b) ant species richness, (c) square-transformed Shannon diversity, and (d) mean (± SE) ant functional divergence for burned versus unburned areas. In red are the burned areas, and in green are the unburned areas. Only statistically significant results are presented (i.e. only some of the explored indices for ants, see Table 1 and Tables S8-S10).",
+  "[prose] The objective of our study was to assess the effects of fire and time since fire on two taxonomic groups—ants and bees. We conducted our research along a regional gradient in southern Spain in 35 pine forests that had experienced a wildfire at some point in the past (between 0 and 41 years ago). We characterized the forests' geographical and climatic conditions, and we assessed vegetation cover and the diversity and composition of ant and bee communities. Within each study area, we compared a burned area with a nearby unburned area. We tested the following hypotheses: (1) since fire reduces canopy and vegetation cover, and thus reduces vegetation structural complexity and the amount of feeding resources, we expected that, in the short term, fire could decrease taxonomic and functional diversity at burned versus unburned areas; alternatively, the appearance of new ecological niches (open areas in the forest) could boost taxonomic and functional diversity at burned versus unburned areas; (2) since recently burned areas tend to harbor species typical of open habitats but less recently burned areas harbor species with greater ties to vegetation, we expected that taxonomic and functional diversity would decline over time at the burned areas until they reached the values found at the unburned areas; (3) the null hypothesis for hypotheses 1 and 2 was that taxo nomic and functional diversity would be related to environmental variables (i.e. latitude, longitude, elevation, climate, lithology or the pine species present previous to fire) rather than time since fire; and (4) in accordance with the above-noted changes in vegetation, we expected the taxonomic",
+  "[prose] We wanted to compare taxon richness (species/genus) at burned vs unburned areas. First, we calculated the difference in ant and bee occurrence between burned and unburned areas using a habitat use index, modified from Suggitt et al. (2012): $\\mathrm { I _ { h a b i t a t } } = \\: [ ( 2 \\: ^ { \\mathrm { \\scriptsize ~ s ~ } }$ unburned occurrence values)/(unburned occurrence values + burned occurrence values)]–1. The value of the index ranges from −1 to 1, where negative values indicate more frequent association with burned habitats, and positive values denote taxa more associated with unburned habitats.",
+  "[prose] Additionally, when differences in species richness were mapped across the study areas (Fig. 3), the same result was seen. The richness of ant and bee communities was greater at burned than unburned areas (more red vs. blue), a pattern that was seemingly more pronounced in ants. However time since fire did not significantly affect the differences in species richness $( \\mathbb { F } _ { 1 , 2 2 } = 0 . 0 0 , p = 0$ .948 for ants; $\\mathtt { F } _ { 1 , 2 2 } = 1 . 5 6 , p = 0 . 2 2 8$ for bees). Out of all the environmental variables, only latitude was correlated with differences in community richness and only in the case of ants $( \\mathrm { F } _ { 1 , 2 2 } = 5 . 2 6 ,$ $p = 0 . 0 3 )$ (Table S8).",
+  "[prose] There were no significant effects of fire on the functional composition of ant communities (fire: $\\mathrm{F}=0.24,p=0.58;$ time: $F = 2.88, p = 0.16;$ and interaction: $\\mathrm { F } = 1 . 5 3 , p = 0 . 0 9 )$ . The same was mostly true for bees (fire: $\\mathrm{F} = 0.94, p = 0.42$ and time: $F = 3.66, p = 0.20;$ and interaction: $\\mathrm { ~ F ~ } { = }$ $1.18, p = 0.08, \\mathrm{R}^2 = 0.03) (\\mathrm{Fig}$ . 6d–f). We observed that the functional communities of bees at burned areas occupied a larger and more distinct",
+  "[prose] ## 4.2. Do taxonomic and functional diversity decrease progressively with time since fire?",
+  "[prose] Sampling protocols are sufficiently accurate to provide good quality data about ant and bee community structure and composition after wildfires. However, our study has some limitations. First, we used a paired design to select burned and unburned areas with a space-for-time substitution approach in which unburned areas represented native communities before the fire (Blois et al., 2013; Kelly et al., 2011; Moretti and Legg, 2009). There were large areas (> 4000 ha) of burned Pinus forests without fire recurrence (only one fire event) and where the wood was not removed. Moreover, paired control areas had similar slope and orientation characteristics to burned areas. Some components of the fire regime could not be taken into account and could influence the results. For example, fire season, because most of the selected fires were burned along the summer season, when the majority of fires occur; and fire intensity, because this information was not available for all the fires studied. A second issue could be the Pinus species. As we have discussed in the Section 4.2, pine species have different fire adaptation strategies (He et al., 2012; Keeley, 2012), and our sites include forests of four different Pinus species: P. pinaster, P. halepensis, P. pinea and P. nigra, that mainly affect the speed of vegetation recovery. Although, pine species was added as a factor in the analysis performed, it is possible that some bias around the time since fire could remain."
+ ],
+ "categories": [
+  {
+   "variable": "category 1",
+   "code": "1",
+   "term": "fire occurred 0 to 4 years ago",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "occurred 0 to 4 years ago"
+  },
+  {
+   "variable": "category 2",
+   "code": "2",
+   "term": "fire occurred 7 to 12 years ago",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "occurred 7 to 12 years ago"
+  },
+  {
+   "variable": "category 3",
+   "code": "3",
+   "term": "fire occurred 15 to 41 years ago",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "occurred 15 to 41 years ago"
+  },
+  {
+   "variable": "Metrics are",
+   "code": "A",
+   "term": "abundance",
+   "model_label": "abundance",
+   "label": "abundance",
+   "explanation": ""
+  },
+  {
+   "variable": "Metrics are",
+   "code": "S",
+   "term": "richness",
+   "model_label": "richness",
+   "label": "richness",
+   "explanation": ""
+  },
+  {
+   "variable": "Metrics are",
+   "code": "H",
+   "term": "Shannon diversity index",
+   "model_label": "Shannon diversity index",
+   "label": "Shannon diversity index",
+   "explanation": ""
+  },
+  {
+   "variable": "Metrics are",
+   "code": "J",
+   "term": "Pielou's evenness",
+   "model_label": "Pielou's evenness",
+   "label": "Pielou's evenness",
+   "explanation": ""
+  },
+  {
+   "variable": "Metrics are",
+   "code": "FRic",
+   "term": "functional richness",
+   "model_label": "functional richness",
+   "label": "functional richness",
+   "explanation": ""
+  },
+  {
+   "variable": "Metrics are",
+   "code": "FEve",
+   "term": "functional evenness",
+   "model_label": "functional evenness",
+   "label": "functional evenness",
+   "explanation": ""
+  },
+  {
+   "variable": "Metrics are",
+   "code": "FDis",
+   "term": "and ½ indicate the use of a logarithmic, squared, or square-root transformation, respectively.",
+   "model_label": "FDis",
+   "label": "and ½ indicate the use of a logarithmic, squared, or square-root transformation, respectively.",
+   "explanation": ""
+  },
+  {
+   "variable": "Fire:",
+   "code": "burned and unburned",
+   "term": "fire treatment (burned and unburned)",
+   "model_label": "fire treatment",
+   "label": "fire treatment",
+   "explanation": "burned and unburned"
+  },
+  {
+   "variable": "Time:",
+   "code": "0 to 41 years",
+   "term": "how long ago the fire occurred (0 to 41 years)",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "how long ago the occurred (0 to 41 years"
+  },
+  {
+   "variable": "FxT:",
+   "code": "the interaction between the former two variables",
+   "term": "the interaction between the former two variables",
+   "model_label": "the interaction between the former two variables",
+   "label": "the interaction between the former two variables",
+   "explanation": ""
+  },
+  {
+   "variable": "In red are the",
+   "code": "burned areas",
+   "term": "burned areas",
+   "model_label": "burned areas",
+   "label": "burned areas",
+   "explanation": ""
+  },
+  {
+   "variable": "In green are the",
+   "code": "unburned areas",
+   "term": "unburned areas",
+   "model_label": "unburned areas",
+   "label": "unburned areas",
+   "explanation": ""
+  },
+  {
+   "variable": "negative values indicate more frequent association with",
+   "code": "-1",
+   "term": "burned habitats",
+   "model_label": "burned habitats",
+   "label": "burned habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "positive values denote taxa more associated with",
+   "code": "1",
+   "term": "unburned habitats",
+   "model_label": "unburned habitats",
+   "label": "unburned habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "red vs. blue",
+   "code": "red",
+   "term": "burned",
+   "model_label": "burned",
+   "label": "burned",
+   "explanation": ""
+  },
+  {
+   "variable": "red vs. blue",
+   "code": "blue",
+   "term": "unburned",
+   "model_label": "unburned",
+   "label": "unburned",
+   "explanation": ""
+  },
+  {
+   "variable": "wood",
+   "code": "wood",
+   "term": "wood",
+   "model_label": "wood",
+   "label": "wood",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation cover",
+   "code": "",
+   "label": "category 1",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "vegetation cover",
+   "code": "",
+   "label": "category 2",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "vegetation cover",
+   "code": "",
+   "label": "category 3",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "lithological types",
+   "code": "",
+   "label": "igneous",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "lithological types",
+   "code": "",
+   "label": "sedimentary",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "lithological types",
+   "code": "",
+   "label": "metamorphic rock",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "pine species",
+   "code": "",
+   "label": "Pine halepensis",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "pine species",
+   "code": "",
+   "label": "P. nigra",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "pine species",
+   "code": "",
+   "label": "P. pinaster",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "pine species",
+   "code": "",
+   "label": "P. pinea",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "community richness",
+   "code": "",
+   "label": "ant",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "community richness",
+   "code": "",
+   "label": "bee",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 41.6,
+ "columns": [
+  [
+   11,
+   1,
+   "abbr",
+   [
+    "amb.gae",
+    "aph.car",
+    "aph.gib",
+    "aph.ibe",
+    "aph.sen",
+    "cam.cru",
+    "cam.for",
+    "cam.lat",
+    "cam.pil",
+    "cam.syl",
+    "car.bat",
+    "cat.flo",
+    "cat.his",
+    "cat.ibe",
+    "cat.ros",
+    "cat.tar",
+    "cat.vel",
+    "col.tru",
+    "cre.aub",
+    "cre.scu",
+    "cre.sor",
+    "for.cun",
+    "for.fus",
+    "gon.his",
+    "gon.kug"
+   ]
+  ],
+  [
+   11,
+   3,
+   "col.siz",
+   [
+    "18.0",
+    "3000.0",
+    "650.0",
+    "520.0",
+    "5000.0",
+    "400.0",
+    "300.0",
+    "1000.0",
+    "120.0",
+    "250.0",
+    "750.0",
+    "600.0",
+    "10000.0",
+    "1400.0",
+    "9000.0",
+    "350.0",
+    "360.0",
+    "2000.0",
+    "8000.0",
+    "3500.0",
+    "20000.0",
+    "4000.0",
+    "100.0",
+    "800.0",
+    "7000.0"
+   ]
+  ],
+  [
+   11,
+   4,
+   "nes.num",
+   [
+    "0.0",
+    "0.5",
+    "1.0",
+    "NA"
+   ]
+  ],
+  [
+   11,
+   5,
+   "que.num",
+   [
+    "1.0",
+    "0.0",
+    "0.5"
+   ]
+  ],
+  [
+   11,
+   6,
+   "dom",
+   [
+    "subordinate",
+    "dominant",
+    "NA"
+   ]
+  ],
+  [
+   11,
+   7,
+   "diu",
+   [
+    "NA",
+    "NSD",
+    "SD"
+   ]
+  ],
+  [
+   11,
+   8,
+   "rec",
+   [
+    "1.0",
+    "2.0",
+    "3.0",
+    "NA"
+   ]
+  ],
+  [
+   11,
+   9,
+   "seeds",
+   [
+    "0.0",
+    "1.0"
+   ]
+  ],
+  [
+   11,
+   10,
+   "insects",
+   [
+    "1.0",
+    "0.0"
+   ]
+  ],
+  [
+   11,
+   11,
+   "liquids",
+   [
+    "0.0",
+    "1.0"
+   ]
+  ],
+  [
+   11,
+   12,
+   "net.sit",
+   [
+    "ground",
+    "vegetation"
+   ]
+  ],
+  [
+   11,
+   13,
+   "bod.siz",
+   [
+    "3.5",
+    "6.7",
+    "4.9",
+    "6.4",
+    "7.0",
+    "10.0",
+    "6.1",
+    "5.0",
+    "8.5",
+    "8.0",
+    "2.1",
+    "6.0",
+    "8.3",
+    "4.5",
+    "3.4",
+    "4.1",
+    "2.5",
+    "5.3",
+    "3.9",
+    "3.1",
+    "2.9",
+    "7.9",
+    "6.3",
+    "8.4",
+    "6.5"
+   ]
+  ],
+  [
+   11,
+   14,
+   "pol",
+   [
+    "1.0",
+    "3.0",
+    "2.0"
+   ]
+  ],
+  [
+   11,
+   16,
+   "similar species",
+   [
+    "Amblyopone pallipes",
+    "Ponera coarctata",
+    "Solenopsis fugax",
+    "other Temnothorax species"
+   ]
+  ],
+  [
+   12,
+   1,
+   "abbr",
+   [
+    "ame.qua",
+    "and.his",
+    "and.sp",
+    "ant.bim",
+    "ant.cin",
+    "ant.sp",
+    "api.mel",
+    "bom.hor",
+    "bom.ter",
+    "cer.cuc",
+    "cer.moc",
+    "cer.sp",
+    "che.flo",
+    "che.sp",
+    "das.cin",
+    "das.sp",
+    "euc.sp",
+    "fla.ven",
+    "hal.gem",
+    "hal.sma",
+    "hal.sp",
+    "hal.sub",
+    "her.sp",
+    "hop.sp",
+    "hyl.sp"
+   ]
+  ],
+  [
+   12,
+   2,
+   "floral_specialization",
+   [
+    "1.0",
+    "NA",
+    "2.0"
+   ]
+  ],
+  [
+   12,
+   3,
+   "life_form",
+   [
+    "0.0",
+    "1.0",
+    "0.5"
+   ]
+  ],
+  [
+   12,
+   4,
+   "nest_site",
+   [
+    "0.0",
+    "2.0",
+    "3.0",
+    "1.0"
+   ]
+  ],
+  [
+   12,
+   5,
+   "body_size",
+   [
+    "2.0",
+    "1.0",
+    "3.0",
+    "0.0"
+   ]
+  ],
+  [
+   12,
+   6,
+   "tongue_length",
+   [
+    "2.0",
+    "1.0"
+   ]
+  ],
+  [
+   12,
+   7,
+   "intertegular distance",
+   [
+    "3.11",
+    "2.95",
+    "2.11",
+    "2.39",
+    "3.34",
+    "3.21",
+    "2.82",
+    "4.56",
+    "4.2",
+    "1.3",
+    "1.04",
+    "0.92",
+    "1.14",
+    "1.33",
+    "2.35",
+    "1.95",
+    "2.56",
+    "1.84",
+    "1.34",
+    "1.2",
+    "1.1",
+    "1.65",
+    "1.18",
+    "1.67",
+    "0.99"
+   ]
+  ]
+ ]
+}

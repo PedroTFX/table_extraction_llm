@@ -1,0 +1,178 @@
+{
+ "_columns": [
+  [
+   1,
+   4,
+   "Feeding Trait",
+   [
+    "C",
+    "O"
+   ]
+  ],
+  [
+   1,
+   5,
+   "Wing Morphology",
+   [
+    "M",
+    "B"
+   ]
+  ]
+ ],
+ "1:4": {
+  "cells": {
+   "C": {
+    "term": "carnivorous",
+    "parts": [
+     "C"
+    ],
+    "options": {
+     "C": {
+      "evidence": "initial",
+      "labels": [
+       "carnivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "C": "initial"
+    },
+    "probs": {
+     "C | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "C": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "C | QB": {}
+    }
+   },
+   "O": {
+    "term": "omnivorous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "initial",
+      "labels": [
+       "omnivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "initial"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.94,
+      "word": 0.06
+     },
+     "O": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "O | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u0",
+    "u17"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.96,
+    "p1": 0.0,
+    "p2": 0.001,
+    "several": 0.006,
+    "none": 0.032
+   },
+   "chosen": [
+    "u5"
+   ]
+  },
+  "header": "Feeding Trait"
+ },
+ "1:5": {
+  "cells": {
+   "M": {
+    "term": "macropterous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "initial",
+      "labels": [
+       "macropterous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "initial"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "M": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "M | QB": {}
+    }
+   },
+   "B": {
+    "term": "brachypterous",
+    "parts": [
+     "B"
+    ],
+    "options": {
+     "B": {
+      "evidence": "initial",
+      "labels": [
+       "brachypterous"
+      ]
+     }
+    },
+    "evidence": {
+     "B": "initial"
+    },
+    "probs": {
+     "B | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "B": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "B | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u17"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.985,
+    "p1": 0.0,
+    "several": 0.004,
+    "none": 0.011
+   },
+   "chosen": [
+    "u5"
+   ]
+  },
+  "header": "Wing Morphology"
+ }
+}

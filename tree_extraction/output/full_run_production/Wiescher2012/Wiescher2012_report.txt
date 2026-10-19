@@ -1,0 +1,71 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Wiescher2012\Wiescher2012.xlsx  (250 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Wiescher2012\Wiescher2012.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 250
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 250 MISSED ROWS MISSED
+  species not in prediction                 250
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (37 distinct), closest predicted name:
+     gt 'Aphaenogaster ashmeadi'             (nothing similar in the prediction)   x9
+     gt 'Camponotus floridanus'              (nothing similar in the prediction)   x9
+     gt 'Dorymyrmex bureni'                  (nothing similar in the prediction)   x9
+     gt 'Dorymyrmex elegans'                 (nothing similar in the prediction)   x9
+     gt 'Dorymyrmex flavopectus'             (nothing similar in the prediction)   x9
+     gt 'Forelius pruinosus'                 (nothing similar in the prediction)   x9
+  -> 6 species mismatches explain 54 of 250 misses (22%) — scattered; no single cause
+
+  full miss detail saved -> Wiescher2012_misses.csv, Wiescher2012_misses_summary.json (250 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  area-independent water loss rates                16     0   GT-ONLY
+  diurnality index                                 17     0   GT-ONLY
+  foraging thermal limit                           16     0   GT-ONLY
+  head length                                      37     0   GT-ONLY
+  head width                                       37     0   GT-ONLY
+  leg length                                       37     0   GT-ONLY
+  relative leg length                              37     0   GT-ONLY
+  lethal temperature                               16     0   GT-ONLY
+  mass                                             37     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   250   id+type+value
+  tags        0.000  0.000  0.000      0     0   250   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

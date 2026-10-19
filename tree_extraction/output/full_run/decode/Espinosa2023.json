@@ -1,0 +1,752 @@
+{
+ "1:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "2:0": {
+  "cells": {
+   "COD": {
+    "term": "chemical oxygen demand",
+    "parts": [
+     "COD"
+    ],
+    "options": {
+     "COD": {
+      "evidence": "explicit",
+      "labels": [
+       "chemical oxygen demand"
+      ]
+     }
+    },
+    "evidence": {
+     "COD": "explicit"
+    },
+    "probs": {
+     "COD | QK": {
+      "code": 0.916,
+      "word": 0.084
+     },
+     "COD": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "COD | QB": {}
+    }
+   },
+   "pH": {
+    "term": null,
+    "parts": [
+     "pH"
+    ],
+    "options": {
+     "pH": {
+      "evidence": "explicit",
+      "labels": [
+       "pH"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "pH | QK": {
+      "code": 0.034,
+      "word": 0.966
+     }
+    }
+   },
+   "Cond": {
+    "term": null,
+    "parts": [
+     "Cond"
+    ],
+    "options": {
+     "Cond": {
+      "evidence": "explicit",
+      "labels": [
+       "conductivity"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Cond | QK": {
+      "code": 0.494,
+      "word": 0.506
+     }
+    }
+   },
+   "IronTot": {
+    "term": "total iron",
+    "parts": [
+     "IronTot"
+    ],
+    "options": {
+     "IronTot": {
+      "evidence": "explicit",
+      "labels": [
+       "total iron"
+      ]
+     }
+    },
+    "evidence": {
+     "IronTot": "explicit"
+    },
+    "probs": {
+     "IronTot | QK": {
+      "code": 0.562,
+      "word": 0.438
+     },
+     "IronTot": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "IronTot | QB": {}
+    }
+   },
+   "Mangtot": {
+    "term": "total manganese",
+    "parts": [
+     "Mangtot"
+    ],
+    "options": {
+     "Mangtot": {
+      "evidence": "explicit",
+      "labels": [
+       "total manganese"
+      ]
+     }
+    },
+    "evidence": {
+     "Mangtot": "explicit"
+    },
+    "probs": {
+     "Mangtot | QK": {
+      "code": 0.638,
+      "word": 0.362
+     },
+     "Mangtot": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "Mangtot | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u33"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.572,
+    "p1": 0.069,
+    "several": 0.316,
+    "none": 0.043
+   },
+   "chosen": [
+    "u16"
+   ]
+  }
+ },
+ "3:0": {
+  "cells": {
+   "op.gills": {
+    "term": "opercular gill presence",
+    "parts": [
+     "op.gills"
+    ],
+    "options": {
+     "op.gills": {
+      "evidence": "explicit",
+      "labels": [
+       "opercular gill presence"
+      ]
+     }
+    },
+    "evidence": {
+     "op.gills": "explicit"
+    },
+    "probs": {
+     "op.gills | QK": {
+      "code": 0.892,
+      "word": 0.108
+     },
+     "op.gills": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "op.gills | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u33",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.705,
+    "several": 0.293,
+    "none": 0.001
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "4:0": {
+  "cells": {
+   "tm": {
+    "term": "mesonotum size",
+    "parts": [
+     "tm"
+    ],
+    "options": {
+     "tm": {
+      "evidence": "explicit",
+      "labels": [
+       "mesonotum size"
+      ]
+     }
+    },
+    "evidence": {
+     "tm": "explicit"
+    },
+    "probs": {
+     "tm | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "tm": {
+      "e0": 0.935,
+      "keep": 0.065
+     },
+     "tm | QB": {}
+    }
+   },
+   "tc1": {
+    "term": "head length size",
+    "parts": [
+     "tc1"
+    ],
+    "options": {
+     "tc1": {
+      "evidence": "explicit",
+      "labels": [
+       "head length size"
+      ]
+     }
+    },
+    "evidence": {
+     "tc1": "explicit"
+    },
+    "probs": {
+     "tc1 | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "tc1": {
+      "e0": 0.965,
+      "keep": 0.035
+     },
+     "tc1 | QB": {}
+    }
+   },
+   "tc2": {
+    "term": "head width",
+    "parts": [
+     "tc2"
+    ],
+    "options": {
+     "tc2": {
+      "evidence": "explicit",
+      "labels": [
+       "head width"
+      ]
+     }
+    },
+    "evidence": {
+     "tc2": "explicit"
+    },
+    "probs": {
+     "tc2 | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "tc2": {
+      "e0": 0.956,
+      "keep": 0.044
+     },
+     "tc2 | QB": {}
+    }
+   },
+   "op.gills": {
+    "term": "opercular gill presence",
+    "parts": [
+     "op.gills"
+    ],
+    "options": {
+     "op.gills": {
+      "evidence": "explicit",
+      "labels": [
+       "opercular gill presence"
+      ]
+     }
+    },
+    "evidence": {
+     "op.gills": "explicit"
+    },
+    "probs": {
+     "op.gills | QK": {
+      "code": 0.957,
+      "word": 0.043
+     },
+     "op.gills": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "op.gills | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u33",
+    "u23"
+   ],
+   "choice": "several",
+   "probs": {
+    "p0": 0.008,
+    "p1": 0.383,
+    "several": 0.607,
+    "none": 0.002
+   }
+  }
+ },
+ "6:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:5": {
+  "cells": {
+   "Collector": {
+    "term": null,
+    "parts": [
+     "Collector"
+    ],
+    "options": {
+     "Collector": {
+      "evidence": "explicit",
+      "labels": [
+       "collector"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Collector | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Filterer": {
+    "term": null,
+    "parts": [
+     "Filterer"
+    ],
+    "options": {
+     "Filterer": {
+      "evidence": "explicit",
+      "labels": [
+       "filter-feeder"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Filterer | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "Scraper": {
+    "term": null,
+    "parts": [
+     "Scraper"
+    ],
+    "options": {
+     "Scraper": {
+      "evidence": "explicit",
+      "labels": [
+       "scraper"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Scraper | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u33"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.96,
+    "p1": 0.0,
+    "several": 0.016,
+    "none": 0.023
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "6:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:4": {
+  "cells": {
+   "og": {
+    "term": "opercular gill",
+    "parts": [
+     "og"
+    ],
+    "options": {
+     "og": {
+      "evidence": "explicit",
+      "labels": [
+       "opercular gill"
+      ]
+     }
+    },
+    "evidence": {
+     "og": "explicit"
+    },
+    "probs": {
+     "og | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "og": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "og | QB": {}
+    }
+   },
+   "nog": {
+    "term": "non-opercular gill",
+    "parts": [
+     "nog"
+    ],
+    "options": {
+     "nog": {
+      "evidence": "explicit",
+      "labels": [
+       "non-opercular gill"
+      ]
+     }
+    },
+    "evidence": {
+     "nog": "explicit"
+    },
+    "probs": {
+     "nog | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "nog": {
+      "e0": 0.978,
+      "keep": 0.022
+     },
+     "nog | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u33"
+   ],
+   "choice": null
+  }
+ },
+ "7:5": {
+  "cells": {
+   "Collector": {
+    "term": null,
+    "parts": [
+     "Collector"
+    ],
+    "options": {
+     "Collector": {
+      "evidence": "explicit",
+      "labels": [
+       "collector"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Collector | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Scraper": {
+    "term": null,
+    "parts": [
+     "Scraper"
+    ],
+    "options": {
+     "Scraper": {
+      "evidence": "explicit",
+      "labels": [
+       "scraper"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Scraper | QK": {
+      "code": 0.029,
+      "word": 0.971
+     }
+    }
+   },
+   "Filterer": {
+    "term": null,
+    "parts": [
+     "Filterer"
+    ],
+    "options": {
+     "Filterer": {
+      "evidence": "explicit",
+      "labels": [
+       "filter-feeder"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Filterer | QK": {
+      "code": 0.017,
+      "word": 0.983
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u33"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.973,
+    "p1": 0.0,
+    "several": 0.01,
+    "none": 0.016
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "12:2": {
+  "cells": {
+   "op.gills": {
+    "term": "opercular gill presence",
+    "parts": [
+     "op.gills"
+    ],
+    "options": {
+     "op.gills": {
+      "evidence": "explicit",
+      "labels": [
+       "opercular gill presence"
+      ]
+     }
+    },
+    "evidence": {
+     "op.gills": "explicit"
+    },
+    "probs": {
+     "op.gills | QK": {
+      "code": 0.949,
+      "word": 0.051
+     },
+     "op.gills": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "op.gills | QB": {}
+    }
+   },
+   "Collector": {
+    "term": null,
+    "parts": [
+     "Collector"
+    ],
+    "options": {
+     "Collector": {
+      "evidence": "explicit",
+      "labels": [
+       "collector"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Collector | QK": {
+      "code": 0.008,
+      "word": 0.992
+     }
+    }
+   },
+   "Scraper": {
+    "term": null,
+    "parts": [
+     "Scraper"
+    ],
+    "options": {
+     "Scraper": {
+      "evidence": "explicit",
+      "labels": [
+       "scraper"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Scraper | QK": {
+      "code": 0.043,
+      "word": 0.957
+     }
+    }
+   },
+   "Filterer": {
+    "term": null,
+    "parts": [
+     "Filterer"
+    ],
+    "options": {
+     "Filterer": {
+      "evidence": "explicit",
+      "labels": [
+       "filter-feeder"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Filterer | QK": {
+      "code": 0.017,
+      "word": 0.983
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u33"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.613,
+    "p1": 0.01,
+    "several": 0.375,
+    "none": 0.001
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "12:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ }
+}

@@ -1,0 +1,230 @@
+{
+ "_columns": [
+  [
+   8,
+   4,
+   "Pollen specificity",
+   [
+    "P",
+    "O"
+   ]
+  ],
+  [
+   12,
+   1,
+   "Nesting",
+   [
+    "cleptoparasite",
+    "excavator:ground",
+    "Renter:existingcavitiesbelowground",
+    "Socialparasite",
+    "excavator:deadstem",
+    "Renter:existingcavitiesaboveground",
+    "carder"
+   ]
+  ],
+  [
+   12,
+   3,
+   "Social",
+   [
+    "Cleptoparasite",
+    "Solitary",
+    "Highlyeusocial",
+    "Socialparasite",
+    "communal"
+   ]
+  ],
+  [
+   12,
+   4,
+   "Pollen",
+   [
+    "Accidental",
+    "Leg&body",
+    "Corbiculae",
+    "legsonly",
+    "underside:abdomen",
+    "Crop"
+   ]
+  ],
+  [
+   12,
+   5,
+   "Tongue",
+   [
+    "medium",
+    "long",
+    "short"
+   ]
+  ],
+  [
+   12,
+   7,
+   "Season",
+   [
+    "Spring",
+    "summer",
+    "Spring:summer",
+    "year"
+   ]
+  ]
+ ],
+ "8:4": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u18"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.002,
+    "several": 0.026,
+    "none": 0.972
+   }
+  },
+  "header": "Pollen specificity"
+ },
+ "12:1": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u8"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.342,
+    "several": 0.219,
+    "none": 0.44
+   }
+  },
+  "header": "Nesting"
+ },
+ "12:3": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u8"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.361,
+    "several": 0.158,
+    "none": 0.48
+   }
+  },
+  "header": "Social"
+ },
+ "12:4": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u8"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.005,
+    "several": 0.111,
+    "none": 0.883
+   }
+  },
+  "header": "Pollen"
+ },
+ "12:5": {
+  "cells": {
+   "medium": {
+    "term": null,
+    "parts": [
+     "medium"
+    ],
+    "options": {
+     "medium": {
+      "evidence": "explicit",
+      "labels": [
+       "medium"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "medium | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "long": {
+    "term": null,
+    "parts": [
+     "long"
+    ],
+    "options": {
+     "long": {
+      "evidence": "explicit",
+      "labels": [
+       "long"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "long | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "short": {
+    "term": null,
+    "parts": [
+     "short"
+    ],
+    "options": {
+     "short": {
+      "evidence": "explicit",
+      "labels": [
+       "short"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "short | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u8"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.963,
+    "several": 0.006,
+    "none": 0.031
+   },
+   "chosen": [
+    "u8"
+   ]
+  },
+  "header": "Tongue"
+ },
+ "12:7": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u8"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.004,
+    "several": 0.041,
+    "none": 0.955
+   }
+  },
+  "header": "Season"
+ }
+}

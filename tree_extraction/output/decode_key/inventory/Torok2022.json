@@ -1,0 +1,214 @@
+{
+ "paper": "Torok2022",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:980e029/tier:advanced/page:1/block:8)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Functional traits are physiological, morphological, and phenological characteristics that impact the fitness of an individual and influence ecosystem functioning (Riemann et al., 2017; Wong et al., 2019). It is challenging to predict the specific responses of functional traits to habitat fragmentation. For example, Larsen et al. (2005) found that large-bodied wild bee species were the most extinction-prone and most sensitive to the decrease and connectivity of their habitat. However, Carrié et al. (2017) showed an opposite result, large-bodied wild bees have good dispersal ability, therefore they are not so sensitive to habitat fragmentation as smaller-bodied species. Small-bodied species have limited dispersal abilities and need to nest closer to floral resources (Greenleaf et al., 2007). These opposite results may be related to semi-natural habitat types, because most of the Hymenoptera functional trait studies focus on agricultural and urban areas (Hoffmann et al., 2018, 2020; Marja et al., 2018; Hall et al., 2019; Lanner et al., 2020), and these environments can affect Hymenoptera functional traits differently. This can be related to body size, which is one of the most commonly studied functional trait because it is easy to measure, but not easy to interpret (Gallé and Batary, ´ 2019), since it may influence insects metabolism (Brown et al., 2004) growth rate (Angilletta et al., 2004), movements speed (Sekar, 2012) and forage/prey consummation (Pawar et al., 2012). Furthermore, body size can be correlated with other traits such as diet breadth and sociality (Jauker et al., 2013; Nock et al., 2016)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "H1. : Local number of flowering species and abundance of flowers affect feeding preference. Flower species-rich fragments and those with high flower abundance support wild bees and wasps with generalist feeding preferences. H2. : Fragment size affects nest location and social habit. Large fragment size offers more and diverse nesting places. Social species are linked to larger fragments, as they have higher food demand than solitary bees and wasps."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "The study area is located in the Hungarian Great Plain, in the centre of the Kiskunsag ´ region. The natural vegetation in the forest steppe is composed of native poplar (Populus alba) and hawthorn (Crategus monogyna) patches embedded in dry sandy grasslands resulting in a structurally and microclimatically complex ecosystem (Erdos ˝ et al., 2018). Festuca vaginata and Stipa borysthenica are the dominant grass species and Euphorbia seguieriana and Alkanna tinctoria are the dominant flower species in this area. The climate is continental with 500–550 mm mean annual precipitation and 9.5 and $1 0 ~ ^ { \\circ } \\mathbf { C }$ mean annual temperature. We selected 30 sampling fragments embedded in a matrix of small-scale forest plantations near the villages of Pirto ´ (n = 15), Bocsa ´ (n = 7) and Kunfehérto ´ (n = 8) (Appendix, Fig. A1, A2). The study sites were selected based on the size of the fragments (ranged between 0.16 and 6.88 ha) and along a landscape configuration gradient by performing preliminary field visits and GIS calculations. We selected 15 small (0.16–0.48 ha) and 15 large (0.93–6.88 ha) forest-steppe fragments. For quantifying landscape configuration, we calculated Hanski’s connectivity index (Hanski et al., 2013) using Google aerial photographs (captured in 2019), the new ecosystem map of Hungary (Tan´acs et al., 2021) in Quantum GIS 3.6.1 software (Quantum GIS Development Team 2019). We applied a 500 m radius buffer for the calculations. For connectivity calculations we considered all natural habitat fragments (other forest steppe fragments and open sand grasslands) that were situated around the focal fragments. We applied the connectivity index to entire wild bee and wasp communities containing many taxa, thus both scaling parameters α and β were set to the value of 0.5 (Kormann et al., 2015). The connectivity values of the selected fragments ranged from 24 (isolated) to 811 (connected), (mean $\\pm \\mathrm { S E M } = 3 9 4 \\pm 2 0 6 )$"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "For studying the functional community composition, we used RLQ co-inertia analysis to detect the links between wild bee and wasp traits and our predictor environmental variables, i.e. fragment size, connectivity, flower abundance and number of flowering species (Dolédec et al., 1996). We analysed the wild bee and wasp data separately. We used three data matrices: predictor environmental variables × sampling site (R), species × sampling site (L) and traits × species (Q), with the package ade4 (Dray and Dufour, 2007) of the R statistical environment (R Development Core Team 2020). This multivariate analysis provides an ordination plot to summarise the joint structure amongst the three tables (Dray et al., 2014). To determine, which functional traits were responsible for the species distributions according to environmental variables, we conducted a Kendall and Spearman correlation analysis between the scores of the species along the first and second axis of the RLQ analysis and the original values for the functional traits (Benesty et al., 2009)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Table A1: Species list of collected wild bees from forest steppe study sites including information on species functional traits. Functional traits information after Bees, Wasps & Ants Recording Society (BWARS); Bogusch & Straka, 2012; Falk, 2015; Michez et al., 2019."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Table A2: Species list of collected wasps from forest steppe study sites including information on species functional traits. Functional traits information after Agnoli & Rosa, 2021; Bees, Wasps & Ants Recording Society (BWARS); Evans & Matthews, 1973; Witt, 1998; Yeo & Corbet, 2015."
+  },
+  {
+   "id": "u7",
+   "kind": "table 1",
+   "text": "Variable | X-axis (approx) | Y-axis (approx)\nLarge fragment size | ~-0.25 | ~0.6\nEusocial habit | ~0.75 | ~0.4\nLarge body size | ~0.85 | ~-0.3\nConnectivity | ~0.9 | ~-0.3\nAbundance of flowers | ~-0.4 | ~-0.6\nNumber of flowering species | ~-0.4 | ~-0.6"
+  },
+  {
+   "id": "u8",
+   "kind": "table 3",
+   "text": "Variable | X-axis (approx) | Y-axis (approx)\nConnectivity | ~0.3 | ~-0.1\nEusocial habit | ~0.6 | ~0.6\nNumber of flowering species | ~0.2 | ~-0.6\nAbundance of flowers | ~-0.4 | ~-0.8\nLarge fragment size | ~-0.7 | ~0.1\nCarnivore prey | ~-0.5 | ~-0.3\nWoody nester | ~-0.4 | ~0.5"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ]
+ ],
+ "calls": 7,
+ "categories": [
+  {
+   "variable": "Social species",
+   "code": "solitary",
+   "term": "solitary bees and wasps",
+   "unit": "u2",
+   "model_label": "solitary",
+   "label": "solitary",
+   "explanation": "bees and wasps"
+  },
+  {
+   "variable": "isolated",
+   "code": "24",
+   "term": "isolated",
+   "unit": "u3",
+   "model_label": "isolated",
+   "label": "isolated",
+   "explanation": ""
+  },
+  {
+   "variable": "connected",
+   "code": "811",
+   "term": "connected",
+   "unit": "u3",
+   "model_label": "connected",
+   "label": "connected",
+   "explanation": ""
+  },
+  {
+   "variable": "predictor environmental variables",
+   "code": "R",
+   "term": "sampling site",
+   "unit": "u4",
+   "model_label": "sampling site",
+   "label": "sampling site",
+   "explanation": ""
+  },
+  {
+   "variable": "species",
+   "code": "L",
+   "term": "sampling site",
+   "unit": "u4",
+   "model_label": "sampling site",
+   "label": "sampling site",
+   "explanation": ""
+  },
+  {
+   "variable": "traits",
+   "code": "Q",
+   "term": "species",
+   "unit": "u4",
+   "model_label": "species",
+   "label": "species",
+   "explanation": ""
+  },
+  {
+   "variable": "feeding preference",
+   "code": "",
+   "label": "generalist feeding preferences",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "nest location",
+   "code": "",
+   "label": "Large fragment size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "social habit",
+   "code": "",
+   "label": "Social species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "natural vegetation",
+   "code": "",
+   "label": "forest steppe",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Eusocial habit",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Large body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Connectivity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Abundance of flowers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Number of flowering species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Carnivore prey",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Woody nester",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  }
+ ],
+ "dropped": [],
+ "seconds": 36.0
+}

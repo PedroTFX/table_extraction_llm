@@ -1,0 +1,230 @@
+{
+ "_columns": [
+  [
+   0,
+   5,
+   "Functional group",
+   [
+    "I",
+    "AS",
+    "TS",
+    "P"
+   ]
+  ],
+  [
+   1,
+   1,
+   "Number of species (Median)",
+   [
+    "0",
+    "~20",
+    "~30",
+    "~36",
+    "~41",
+    "~45",
+    "~48"
+   ]
+  ],
+  [
+   3,
+   1,
+   "Occupancy probability",
+   [
+    "1.00",
+    "~0.85",
+    "~0.50",
+    "~0.30",
+    "~0.25"
+   ]
+  ]
+ ],
+ "0:5": {
+  "cells": {
+   "I": {
+    "term": "insectivores",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "insectivores"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "I": {
+      "e0": 0.968,
+      "keep": 0.032
+     },
+     "I | QB": {}
+    }
+   },
+   "AS": {
+    "term": "aquatic saprophagous",
+    "parts": [
+     "AS"
+    ],
+    "options": {
+     "AS": {
+      "evidence": "explicit",
+      "labels": [
+       "aquatic saprophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "AS": "explicit"
+    },
+    "probs": {
+     "AS | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "AS": {
+      "e0": 0.99,
+      "keep": 0.01
+     },
+     "AS | QB": {}
+    }
+   },
+   "TS": {
+    "term": "terrestrial saprophagous",
+    "parts": [
+     "TS"
+    ],
+    "options": {
+     "TS": {
+      "evidence": "explicit",
+      "labels": [
+       "terrestrial saprophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "TS": "explicit"
+    },
+    "probs": {
+     "TS | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "TS": {
+      "e0": 0.985,
+      "keep": 0.015
+     },
+     "TS | QB": {}
+    }
+   },
+   "P": {
+    "term": "phytophagous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "phytophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "P": {
+      "e0": 0.987,
+      "keep": 0.013
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u14"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.992,
+    "several": 0.006,
+    "none": 0.002
+   },
+   "chosen": [
+    "u14"
+   ]
+  },
+  "header": "Functional group"
+ },
+ "1:1": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "0",
+       "1"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.044,
+      "word": 0.956
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u6",
+    "u22"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.016,
+    "p1": 0.925,
+    "several": 0.01,
+    "none": 0.049
+   },
+   "chosen": [
+    "u22"
+   ]
+  },
+  "header": "Number of species (Median)"
+ },
+ "3:1": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u6"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.017,
+    "several": 0.04,
+    "none": 0.943
+   }
+  },
+  "header": "Occupancy probability"
+ }
+}

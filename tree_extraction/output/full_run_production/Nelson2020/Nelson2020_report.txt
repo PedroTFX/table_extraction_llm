@@ -1,0 +1,87 @@
+  [semantic] left unmatched: 'community weighted mean F' vs 'wingtype' (llm said different traits)
+  [semantic] left unmatched: 'community weighted mean F' vs 'breeding season' (llm said different traits)
+  [semantic] left unmatched: 'community weighted mean F' vs 'activity' (llm said different traits)
+  [semantic] left unmatched: 'community weighted mean P' vs 'wingtype' (llm said different traits)
+  [semantic] left unmatched: 'community weighted mean P' vs 'breeding season' (llm said different traits)
+  [semantic] left unmatched: 'community weighted mean P' vs 'activity' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Nelson2020\Nelson2020.xlsx  (191 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Nelson2020\Nelson2020.csv  (18 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'age': no ground-truth name denotes this organism
+  'bison': no ground-truth name denotes this organism
+  'burn': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 191
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 18   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             18
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 191 MISSED ROWS MISSED
+  species not in prediction                 191
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (40 distinct), closest predicted name:
+     gt 'Harpalus caliginosus'               (nothing similar in the prediction)   x5
+     gt 'Agonum muelleri'                    (nothing similar in the prediction)   x5
+     gt 'Amara angustata/angustatoides'      (nothing similar in the prediction)   x5
+     gt 'Amara familiaris'                   (nothing similar in the prediction)   x5
+     gt 'Amara rubrica/musculis'             (nothing similar in the prediction)   x5
+     gt 'Bembidion sp.1'                     (nothing similar in the prediction)   x5
+  -> 6 species mismatches explain 30 of 191 misses (16%) — scattered; no single cause
+
+  full miss detail saved -> Nelson2020_misses.csv, Nelson2020_misses_summary.json (191 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  activity                                         38     0   GT-ONLY
+  breeding season                                  40     0   GT-ONLY
+  community weighted mean f                         0     3   PRED-ONLY
+  community weighted mean p                         0     3   PRED-ONLY
+  diet                                             33     0   GT-ONLY
+  f                                                 0     6   PRED-ONLY
+  p                                                 0     6   PRED-ONLY
+  size                                             40     0   GT-ONLY
+  wingtype                                         40     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   191   id+type+value
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0   191   basis+id+type+value+stat+sex+stage
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

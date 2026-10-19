@@ -1,0 +1,7007 @@
+{
+ "Leong2023": [
+  {
+   "table": "Leong2023#1",
+   "headers": [
+    "Subfamily",
+    "Species",
+    "Q1",
+    "Q2 (Median)",
+    "Q3"
+   ],
+   "labels": {
+    "Subfamily": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "53% GT species"
+    ],
+    "Q1": [
+     "none",
+     "pairs 0%"
+    ],
+    "Q2 (Median)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Q3": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.996
+     ],
+     "Subfamily": [
+      "verbatimIdentification",
+      0.787
+     ],
+     "Q1": [
+      "measurementType",
+      0.537
+     ],
+     "Q2 (Median)": [
+      "measurementValue",
+      0.902
+     ],
+     "Q3": [
+      "measurementValue",
+      0.859
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Subfamily": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.99) > organism_name:higher_rank(0.80)",
+    "Q1": "code:numeric(1.00) > kind:organism_property(0.54) > organism_property:by table kind organism_traits",
+    "Q2 (Median)": "code:numeric(1.00) > kind:counts_or_statistics(0.95) > counts_or_statistics:statistic_header(0.95)",
+    "Q3": "code:numeric(1.00) > kind:counts_or_statistics(0.92) > counts_or_statistics:statistic_header(0.93)"
+   },
+   "secs": 11.1,
+   "calls": 6
+  },
+  {
+   "table": "Leong2023#4",
+   "headers": [
+    "Species",
+    "Habitat",
+    "N_ctmax",
+    "CTmax",
+    "WL",
+    "RMS",
+    "REP",
+    "REW",
+    "RSL",
+    "RHF"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Habitat": [
+     "measurementType",
+     "97% (species,value) pairs in GT"
+    ],
+    "N_ctmax": [
+     "sampleSizeValue",
+     "90% (species,sampleSizeValue) pairs in GT"
+    ],
+    "CTmax": [
+     "measurementType",
+     "80% (species,value) pairs in GT"
+    ],
+    "WL": [
+     "measurementType",
+     "80% (species,value) pairs in GT"
+    ],
+    "RMS": [
+     "measurementType",
+     "80% (species,value) pairs in GT"
+    ],
+    "REP": [
+     "measurementType",
+     "83% (species,value) pairs in GT"
+    ],
+    "REW": [
+     "measurementType",
+     "77% (species,value) pairs in GT"
+    ],
+    "RSL": [
+     "measurementType",
+     "80% (species,value) pairs in GT"
+    ],
+    "RHF": [
+     "measurementType",
+     "80% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Habitat": [
+      "measurementType",
+      0.994
+     ],
+     "N_ctmax": [
+      "sampleSizeValue",
+      0.548
+     ],
+     "CTmax": [
+      "measurementType",
+      0.998
+     ],
+     "WL": [
+      "measurementType",
+      0.986
+     ],
+     "RMS": [
+      "measurementType",
+      0.992
+     ],
+     "REP": [
+      "measurementType",
+      0.968
+     ],
+     "REW": [
+      "measurementType",
+      0.978
+     ],
+     "RSL": [
+      "measurementType",
+      0.881
+     ],
+     "RHF": [
+      "measurementType",
+      0.976
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Habitat": "cell_shape:everyday_words(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "N_ctmax": "code:numeric(1.00) > kind:counts_or_statistics(0.61) > counts_or_statistics:sample_size(0.90)",
+    "CTmax": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "WL": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "RMS": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "REP": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:by table kind organism_traits",
+    "REW": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits",
+    "RSL": "code:numeric(1.00) > kind:organism_property(0.88) > organism_property:by table kind organism_traits",
+    "RHF": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits"
+   },
+   "secs": 12.5,
+   "calls": 6
+  }
+ ],
+ "Graf2021": [
+  {
+   "table": "Graf2021#7",
+   "headers": [
+    "Bee species",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "Total"
+   ],
+   "labels": {
+    "Bee species": [
+     "verbatimIdentification",
+     "98% GT species"
+    ],
+    "1": [
+     "none",
+     "pairs 0%"
+    ],
+    "2": [
+     "none",
+     "pairs 0%"
+    ],
+    "3": [
+     "none",
+     "pairs 0%"
+    ],
+    "4": [
+     "none",
+     "pairs 0%"
+    ],
+    "5": [
+     "none",
+     "pairs 0%"
+    ],
+    "6": [
+     "none",
+     "pairs 0%"
+    ],
+    "7": [
+     "none",
+     "pairs 0%"
+    ],
+    "8": [
+     "none",
+     "pairs 0%"
+    ],
+    "9": [
+     "none",
+     "pairs 0%"
+    ],
+    "10": [
+     "none",
+     "pairs 0%"
+    ],
+    "Total": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Bee species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "1": [
+      "none",
+      0.457
+     ],
+     "2": [
+      "none",
+      0.791
+     ],
+     "3": [
+      "none",
+      0.811
+     ],
+     "4": [
+      "none",
+      0.551
+     ],
+     "5": [
+      "measurementType",
+      0.574
+     ],
+     "6": [
+      "none",
+      0.49
+     ],
+     "7": [
+      "measurementType",
+      0.74
+     ],
+     "8": [
+      "none",
+      0.249
+     ],
+     "9": [
+      "none",
+      0.673
+     ],
+     "10": [
+      "none",
+      0.599
+     ],
+     "Total": [
+      "none",
+      0.834
+     ]
+    }
+   },
+   "context": [
+    "Section labels, each heading the rows below it (found in the table): 'Calliopsini' (row 2), 'Protandrenini' (row 5), 'Apinae' (row 35), 'Bombini' (row 36), 'Euglossini' (row 39), 'Meliponini' (row 41), 'Centridini' (row 59), 'Emphorini' (row 64), 'Eucerini' (row 67), 'Exomalopsini' (row 88), 'Nomadini' (row 97), 'Osirini' (row 111) ... (28 in all)"
+   ],
+   "paths": {
+    "Bee species": "table:organism_column(1.00)",
+    "1": "code:numeric(1.00) > kind:counts_or_statistics(0.51) > counts_or_statistics:abundance(0.89)",
+    "2": "code:numeric(1.00) > kind:counts_or_statistics(0.82) > counts_or_statistics:abundance(0.97)",
+    "3": "code:numeric(1.00) > kind:counts_or_statistics(0.83) > counts_or_statistics:abundance(0.97)",
+    "4": "code:numeric(1.00) > kind:counts_or_statistics(0.57) > counts_or_statistics:abundance(0.96)",
+    "5": "code:numeric(1.00) > kind:organism_property(0.57) > organism_property:by table kind organism_traits",
+    "6": "code:numeric(1.00) > kind:counts_or_statistics(0.51) > counts_or_statistics:abundance(0.96)",
+    "7": "code:numeric(1.00) > kind:organism_property(0.74) > organism_property:by table kind organism_traits",
+    "8": "code:numeric(1.00) > kind:counts_or_statistics(0.50) > counts_or_statistics:abundance(0.50)",
+    "9": "code:numeric(1.00) > kind:counts_or_statistics(0.72) > counts_or_statistics:abundance(0.93)",
+    "10": "code:numeric(1.00) > kind:counts_or_statistics(0.66) > counts_or_statistics:abundance(0.91)",
+    "Total": "code:numeric(0.98) > kind:counts_or_statistics(0.89) > counts_or_statistics:abundance(0.94)"
+   },
+   "secs": 20.4,
+   "calls": 5
+  },
+  {
+   "table": "Graf2021#8",
+   "headers": [
+    "Bee species",
+    "Behavior",
+    "Nesting site",
+    "Feeding habit"
+   ],
+   "labels": {
+    "Bee species": [
+     "verbatimIdentification",
+     "98% GT species"
+    ],
+    "Behavior": [
+     "none",
+     "pairs 0%"
+    ],
+    "Nesting site": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Feeding habit": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Bee species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Behavior": [
+      "measurementType",
+      0.789
+     ],
+     "Nesting site": [
+      "measurementType",
+      0.78
+     ],
+     "Feeding habit": [
+      "measurementType",
+      0.703
+     ]
+    }
+   },
+   "context": [
+    "Section labels, each heading the rows below it (found in the table): 'Andreninae' (row 1), 'Calliopsini' (row 2), 'Protandrenini' (row 5), 'Apinae' (row 35), 'Bombini' (row 36), 'Euglossini' (row 39), 'Meliponini' (row 41), 'Centridini' (row 59), 'Emphorini' (row 64), 'Exomalopsini' (row 88), 'Nomadini' (row 98), 'Osirini' (row 112) ... (28 in all)"
+   ],
+   "paths": {
+    "Bee species": "table:organism_column(1.00)",
+    "Behavior": "cell_shape:codes(0.80) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Nesting site": "cell_shape:codes(0.78) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Feeding habit": "cell_shape:codes(0.71) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 7.8,
+   "calls": 3
+  }
+ ],
+ "Nunes2016": [
+  {
+   "table": "Nunes2016#2",
+   "headers": [
+    "Species Altitude (m a.s.l.) Transects",
+    "Functional Guild Altitude (m a.s.l.) Transects",
+    "Mean Biomass (mg) Altitude (m a.s.l.) Transects",
+    "Number of Individuals 1400 I",
+    "Number of Individuals 1400 II",
+    "Number of Individuals 1400 III",
+    "Number of Individuals 1300 I",
+    "Number of Individuals 1300 II",
+    "Number of Individuals 1300 III",
+    "Number of Individuals 1200 I",
+    "Number of Individuals 1200 II",
+    "Number of Individuals 1200 III",
+    "Number of Individuals 1100 I",
+    "Number of Individuals 1100 II",
+    "Number of Individuals 1100 III",
+    "Number of Individuals 1000 I",
+    "Number of Individuals 1000 II",
+    "Number of Individuals 1000 III",
+    "Number of Individuals 900 I",
+    "Number of Individuals 900 II",
+    "Number of Individuals 900 III",
+    "Number of Individuals 800 I",
+    "Number of Individuals 800 II",
+    "Number of Individuals 800 III"
+   ],
+   "labels": {
+    "Species Altitude (m a.s.l.) Transects": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Functional Guild Altitude (m a.s.l.) Transects": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Mean Biomass (mg) Altitude (m a.s.l.) Transects": [
+     "measurementType",
+     "52% (species,value) pairs in GT"
+    ],
+    "Number of Individuals 1400 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1400 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1400 III": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1300 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1300 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1300 III": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1200 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1200 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1200 III": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1100 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1100 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1100 III": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1000 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1000 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 1000 III": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 900 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 900 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 900 III": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 800 I": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 800 II": [
+     "none",
+     "pairs 0%"
+    ],
+    "Number of Individuals 800 III": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species Altitude (m a.s.l.) Transects": [
+      "verbatimIdentification",
+      0.993
+     ],
+     "Functional Guild Altitude (m a.s.l.) Transects": [
+      "measurementType",
+      0.976
+     ],
+     "Mean Biomass (mg) Altitude (m a.s.l.) Transects": [
+      "measurementType",
+      0.948
+     ],
+     "Number of Individuals 1400 I": [
+      "none",
+      0.993
+     ],
+     "Number of Individuals 1400 II": [
+      "none",
+      0.995
+     ],
+     "Number of Individuals 1400 III": [
+      "none",
+      0.995
+     ],
+     "Number of Individuals 1300 I": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 1300 II": [
+      "none",
+      0.995
+     ],
+     "Number of Individuals 1300 III": [
+      "none",
+      0.995
+     ],
+     "Number of Individuals 1200 I": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 1200 II": [
+      "none",
+      0.998
+     ],
+     "Number of Individuals 1200 III": [
+      "none",
+      0.998
+     ],
+     "Number of Individuals 1100 I": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 1100 II": [
+      "none",
+      0.996
+     ],
+     "Number of Individuals 1100 III": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 1000 I": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 1000 II": [
+      "none",
+      0.998
+     ],
+     "Number of Individuals 1000 III": [
+      "none",
+      0.998
+     ],
+     "Number of Individuals 900 I": [
+      "none",
+      0.998
+     ],
+     "Number of Individuals 900 II": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 900 III": [
+      "none",
+      0.996
+     ],
+     "Number of Individuals 800 I": [
+      "none",
+      0.997
+     ],
+     "Number of Individuals 800 II": [
+      "none",
+      0.998
+     ],
+     "Number of Individuals 800 III": [
+      "none",
+      0.997
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species Altitude (m a.s.l.) Transects": "table:organism_column(0.99)",
+    "Functional Guild Altitude (m a.s.l.) Transects": "cell_shape:single_latin_words(0.99) > is_taxon:no(1.00) > kind:organism_property(0.99) > organism_property:by table kind counts",
+    "Mean Biomass (mg) Altitude (m a.s.l.) Transects": "code:numeric(1.00) > kind:organism_property(0.95) > organism_property:by table kind counts",
+    "Number of Individuals 1400 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1400 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1400 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1300 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1300 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1300 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1200 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1200 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1200 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1100 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1100 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1100 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1000 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1000 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 1000 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 900 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 900 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 900 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 800 I": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 800 II": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Number of Individuals 800 III": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)"
+   },
+   "secs": 26.9,
+   "calls": 12
+  }
+ ],
+ "Barber2017": [
+  {
+   "table": "Barber2017#6",
+   "headers": [
+    "(no name, column 0)",
+    "Site Year planted Sampling year",
+    "AG",
+    "HF",
+    "HN",
+    "L",
+    "SB",
+    "HW",
+    "CCW",
+    "CCE",
+    "FC",
+    "TC",
+    "SF",
+    "HLP",
+    "WH",
+    "MU",
+    "MR"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "89% GT species"
+    ],
+    "Site Year planted Sampling year": [
+     "none",
+     "pairs 0%"
+    ],
+    "AG": [
+     "none",
+     "pairs 0%"
+    ],
+    "HF": [
+     "none",
+     "pairs 0%"
+    ],
+    "HN": [
+     "none",
+     "pairs 0%"
+    ],
+    "L": [
+     "none",
+     "pairs 0%"
+    ],
+    "SB": [
+     "none",
+     "pairs 0%"
+    ],
+    "HW": [
+     "none",
+     "pairs 0%"
+    ],
+    "CCW": [
+     "none",
+     "pairs 0%"
+    ],
+    "CCE": [
+     "none",
+     "pairs 0%"
+    ],
+    "FC": [
+     "none",
+     "pairs 0%"
+    ],
+    "TC": [
+     "none",
+     "pairs 0%"
+    ],
+    "SF": [
+     "none",
+     "pairs 0%"
+    ],
+    "HLP": [
+     "none",
+     "pairs 0%"
+    ],
+    "WH": [
+     "none",
+     "pairs 0%"
+    ],
+    "MU": [
+     "none",
+     "pairs 0%"
+    ],
+    "MR": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Site Year planted Sampling year": [
+      "verbatimEventDate",
+      0.822
+     ],
+     "AG": [
+      "none",
+      0.952
+     ],
+     "HF": [
+      "none",
+      0.975
+     ],
+     "HN": [
+      "none",
+      0.987
+     ],
+     "L": [
+      "none",
+      0.945
+     ],
+     "SB": [
+      "none",
+      0.977
+     ],
+     "HW": [
+      "none",
+      0.82
+     ],
+     "CCW": [
+      "none",
+      0.972
+     ],
+     "CCE": [
+      "none",
+      0.976
+     ],
+     "FC": [
+      "none",
+      0.892
+     ],
+     "TC": [
+      "none",
+      0.85
+     ],
+     "SF": [
+      "none",
+      0.946
+     ],
+     "HLP": [
+      "none",
+      0.908
+     ],
+     "WH": [
+      "none",
+      0.926
+     ],
+     "MU": [
+      "none",
+      0.55
+     ],
+     "MR": [
+      "none",
+      0.409
+     ]
+    }
+   },
+   "context": [
+    "Head row 'row 1' gives, per column: column 2: -; column 3: 2013; column 4: 2012; column 5: 2011; column 6: 2009; column 7: 2008; column 8: 2008; column 9: 2007; column 10: 2006; column 11: 2002; column 12: 2001; column 13: 2001; column 14: 1992; column 15: 1987; column 16: -"
+   ],
+   "paths": {
+    "(no name, column 0)": "table:organism_column(1.00)",
+    "Site Year planted Sampling year": "code:numeric(1.00) > kind:record_context(0.86) > record_context:sampling_time(0.96)",
+    "AG": "code:numeric(1.00) > kind:counts_or_statistics(0.96) > counts_or_statistics:abundance(0.99)",
+    "HF": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.99)",
+    "HN": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "L": "code:numeric(1.00) > kind:counts_or_statistics(0.95) > counts_or_statistics:abundance(0.99)",
+    "SB": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.99)",
+    "HW": "code:numeric(1.00) > kind:counts_or_statistics(0.83) > counts_or_statistics:abundance(0.99)",
+    "CCW": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.98)",
+    "CCE": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.98)",
+    "FC": "code:numeric(1.00) > kind:counts_or_statistics(0.91) > counts_or_statistics:abundance(0.98)",
+    "TC": "code:numeric(1.00) > kind:counts_or_statistics(0.87) > counts_or_statistics:abundance(0.98)",
+    "SF": "code:numeric(1.00) > kind:counts_or_statistics(0.96) > counts_or_statistics:abundance(0.99)",
+    "HLP": "code:numeric(1.00) > kind:counts_or_statistics(0.92) > counts_or_statistics:abundance(0.99)",
+    "WH": "code:numeric(1.00) > kind:counts_or_statistics(0.96) > counts_or_statistics:abundance(0.97)",
+    "MU": "code:numeric(1.00) > kind:counts_or_statistics(0.58) > counts_or_statistics:abundance(0.95)",
+    "MR": "code:numeric(1.00) > kind:counts_or_statistics(0.43) > counts_or_statistics:abundance(0.96)"
+   },
+   "secs": 19.0,
+   "calls": 8
+  },
+  {
+   "table": "Barber2017#7",
+   "headers": [
+    "(no name, column 0)",
+    "Site",
+    "AG",
+    "HF",
+    "HN",
+    "L",
+    "SB",
+    "HW",
+    "CCW",
+    "CCE",
+    "FC",
+    "TC",
+    "SF",
+    "HLP",
+    "WH",
+    "MU",
+    "MR"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Site": [
+     "none",
+     "pairs 0%"
+    ],
+    "AG": [
+     "none",
+     "pairs 0%"
+    ],
+    "HF": [
+     "none",
+     "pairs 0%"
+    ],
+    "HN": [
+     "none",
+     "pairs 3%"
+    ],
+    "L": [
+     "none",
+     "pairs 0%"
+    ],
+    "SB": [
+     "none",
+     "pairs 0%"
+    ],
+    "HW": [
+     "none",
+     "pairs 3%"
+    ],
+    "CCW": [
+     "none",
+     "pairs 0%"
+    ],
+    "CCE": [
+     "none",
+     "pairs 0%"
+    ],
+    "FC": [
+     "none",
+     "pairs 0%"
+    ],
+    "TC": [
+     "none",
+     "pairs 0%"
+    ],
+    "SF": [
+     "none",
+     "pairs 0%"
+    ],
+    "HLP": [
+     "none",
+     "pairs 0%"
+    ],
+    "WH": [
+     "none",
+     "pairs 0%"
+    ],
+    "MU": [
+     "none",
+     "pairs 0%"
+    ],
+    "MR": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Site": [
+      "verbatimEventDate",
+      0.96
+     ],
+     "AG": [
+      "none",
+      0.947
+     ],
+     "HF": [
+      "none",
+      0.986
+     ],
+     "HN": [
+      "none",
+      0.991
+     ],
+     "L": [
+      "none",
+      0.979
+     ],
+     "SB": [
+      "none",
+      0.985
+     ],
+     "HW": [
+      "none",
+      0.942
+     ],
+     "CCW": [
+      "none",
+      0.967
+     ],
+     "CCE": [
+      "none",
+      0.991
+     ],
+     "FC": [
+      "none",
+      0.983
+     ],
+     "TC": [
+      "none",
+      0.977
+     ],
+     "SF": [
+      "none",
+      0.983
+     ],
+     "HLP": [
+      "none",
+      0.726
+     ],
+     "WH": [
+      "none",
+      0.807
+     ],
+     "MU": [
+      "none",
+      0.644
+     ],
+     "MR": [
+      "none",
+      0.737
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "(no name, column 0)": "table:organism_column(1.00)",
+    "Site": "code:numeric(1.00) > kind:record_context(0.97) > record_context:sampling_time(0.99)",
+    "AG": "code:numeric(1.00) > kind:counts_or_statistics(0.97) > counts_or_statistics:abundance(0.98)",
+    "HF": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "HN": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "L": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "SB": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "HW": "code:numeric(1.00) > kind:counts_or_statistics(0.96) > counts_or_statistics:abundance(0.98)",
+    "CCW": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.97)",
+    "CCE": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "FC": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "TC": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.99)",
+    "SF": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "HLP": "code:numeric(1.00) > kind:counts_or_statistics(0.73) > counts_or_statistics:abundance(0.99)",
+    "WH": "code:numeric(1.00) > kind:counts_or_statistics(0.84) > counts_or_statistics:abundance(0.96)",
+    "MU": "code:numeric(1.00) > kind:counts_or_statistics(0.66) > counts_or_statistics:abundance(0.98)",
+    "MR": "code:numeric(1.00) > kind:counts_or_statistics(0.75) > counts_or_statistics:abundance(0.98)"
+   },
+   "secs": 19.8,
+   "calls": 8
+  },
+  {
+   "table": "Barber2017#12",
+   "headers": [
+    "Species",
+    "Wing morphology",
+    "Breeding season",
+    "Diet",
+    "Activity time",
+    "Mean bodylength (mm)",
+    "Species number"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Wing morphology": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Breeding season": [
+     "measurementType",
+     "96% (species,value) pairs in GT"
+    ],
+    "Diet": [
+     "measurementType",
+     "91% (species,value) pairs in GT"
+    ],
+    "Activity time": [
+     "measurementType",
+     "96% (species,value) pairs in GT"
+    ],
+    "Mean bodylength (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Species number": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Wing morphology": [
+      "measurementType",
+      0.935
+     ],
+     "Breeding season": [
+      "measurementType",
+      0.986
+     ],
+     "Diet": [
+      "measurementType",
+      0.992
+     ],
+     "Activity time": [
+      "measurementType",
+      0.986
+     ],
+     "Mean bodylength (mm)": [
+      "measurementType",
+      0.989
+     ],
+     "Species number": [
+      "none",
+      0.736
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Wing morphology": "cell_shape:everyday_words(0.94) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Breeding season": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Diet": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Activity time": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Mean bodylength (mm)": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Species number": "code:numeric(1.00) > kind:counts_or_statistics(0.83) > counts_or_statistics:abundance(0.89)"
+   },
+   "secs": 7.9,
+   "calls": 5
+  }
+ ],
+ "CortesGomez2023": [
+  {
+   "table": "CortesGomez2023#0",
+   "headers": [
+    "Category",
+    "Other pollen",
+    "Granadilla pollen",
+    "Species abundance"
+   ],
+   "labels": {
+    "Category": [
+     "verbatimIdentification",
+     "69% GT species"
+    ],
+    "Other pollen": [
+     "none",
+     "pairs 0%"
+    ],
+    "Granadilla pollen": [
+     "none",
+     "pairs 0%"
+    ],
+    "Species abundance": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Category": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Other pollen": [
+      "measurementType",
+      0.96
+     ],
+     "Granadilla pollen": [
+      "measurementType",
+      0.972
+     ],
+     "Species abundance": [
+      "none",
+      0.983
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Category": "table:organism_column(1.00)",
+    "Other pollen": "code:numeric(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "Granadilla pollen": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:by table kind organism_traits",
+    "Species abundance": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)"
+   },
+   "secs": 3.8,
+   "calls": 3
+  },
+  {
+   "table": "CortesGomez2023#6",
+   "headers": [
+    "Cluster",
+    "Species",
+    "Body size Mean (sd)",
+    "Hair length Mean (sd)",
+    "Social behavior",
+    "Amount body hair",
+    "Nest location",
+    "Structure carrying pollen",
+    "Granadilla pollen Mean (sd)",
+    "Total pollen Mean (sd)"
+   ],
+   "labels": {
+    "Cluster": [
+     "none",
+     "pairs 0%"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "88% GT species"
+    ],
+    "Body size Mean (sd)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Hair length Mean (sd)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Social behavior": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Amount body hair": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Nest location": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Structure carrying pollen": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Granadilla pollen Mean (sd)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Total pollen Mean (sd)": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Cluster": [
+      "measurementValue",
+      0.723
+     ],
+     "Body size Mean (sd)": [
+      "measurementType",
+      0.947
+     ],
+     "Hair length Mean (sd)": [
+      "measurementType",
+      0.989
+     ],
+     "Social behavior": [
+      "measurementType",
+      0.994
+     ],
+     "Amount body hair": [
+      "measurementType",
+      0.997
+     ],
+     "Nest location": [
+      "measurementType",
+      0.995
+     ],
+     "Structure carrying pollen": [
+      "measurementType",
+      0.537
+     ],
+     "Granadilla pollen Mean (sd)": [
+      "measurementType",
+      0.954
+     ],
+     "Total pollen Mean (sd)": [
+      "measurementType",
+      0.968
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Cluster": "code:numeric(1.00) > kind:counts_or_statistics(0.91) > counts_or_statistics:statistic_header(0.80)",
+    "Body size Mean (sd)": "code:numeric(1.00) > kind:organism_property(0.95) > organism_property:by table kind organism_traits",
+    "Hair length Mean (sd)": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Social behavior": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Amount body hair": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Nest location": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Structure carrying pollen": "cell_shape:everyday_words(0.54) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Granadilla pollen Mean (sd)": "code:numeric(1.00) > kind:organism_property(0.95) > organism_property:by table kind organism_traits",
+    "Total pollen Mean (sd)": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:by table kind organism_traits"
+   },
+   "secs": 12.5,
+   "calls": 7
+  }
+ ],
+ "Guareschi2015": [
+  {
+   "table": "Guareschi2015#3",
+   "headers": [
+    "Traits Modalities",
+    "A 1",
+    "A 2",
+    "A 3",
+    "A 4",
+    "B 1",
+    "B 2",
+    "C 1",
+    "C 2",
+    "D 1",
+    "D 2",
+    "D 3",
+    "E 1",
+    "E 2",
+    "E 3",
+    "F 1",
+    "F 2",
+    "F 3",
+    "G 1",
+    "G 2",
+    "H 1",
+    "H 2",
+    "H 3",
+    "H 4",
+    "H 5",
+    "I 1",
+    "I 2",
+    "I 3",
+    "I 4",
+    "J 1",
+    "J 2",
+    "J 3",
+    "J 4",
+    "J 5",
+    "J 6",
+    "J 7",
+    "J 8",
+    "K 1",
+    "K 2",
+    "K 3",
+    "K 4"
+   ],
+   "labels": {
+    "Traits Modalities": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "A 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "A 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "A 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "A 4": [
+     "none",
+     "pairs 0%"
+    ],
+    "B 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "B 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "C 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "C 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "D 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "D 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "D 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "E 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "E 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "E 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "F 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "F 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "F 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "G 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "G 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "H 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "H 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "H 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "H 4": [
+     "none",
+     "pairs 0%"
+    ],
+    "H 5": [
+     "none",
+     "pairs 0%"
+    ],
+    "I 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "I 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "I 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "I 4": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 4": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 5": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 6": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 7": [
+     "none",
+     "pairs 0%"
+    ],
+    "J 8": [
+     "none",
+     "pairs 0%"
+    ],
+    "K 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "K 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "K 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "K 4": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Traits Modalities": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "A 1": [
+      "measurementType",
+      0.789
+     ],
+     "A 2": [
+      "measurementType",
+      0.866
+     ],
+     "A 3": [
+      "measurementType",
+      0.911
+     ],
+     "A 4": [
+      "measurementType",
+      0.899
+     ],
+     "B 1": [
+      "measurementType",
+      0.63
+     ],
+     "B 2": [
+      "measurementType",
+      0.723
+     ],
+     "C 1": [
+      "measurementType",
+      0.811
+     ],
+     "C 2": [
+      "measurementType",
+      0.776
+     ],
+     "D 1": [
+      "measurementType",
+      0.637
+     ],
+     "D 2": [
+      "measurementType",
+      0.852
+     ],
+     "D 3": [
+      "measurementType",
+      0.815
+     ],
+     "E 1": [
+      "measurementType",
+      0.596
+     ],
+     "E 2": [
+      "measurementType",
+      0.684
+     ],
+     "E 3": [
+      "measurementType",
+      0.704
+     ],
+     "F 1": [
+      "measurementType",
+      0.79
+     ],
+     "F 2": [
+      "measurementType",
+      0.876
+     ],
+     "F 3": [
+      "measurementType",
+      0.876
+     ],
+     "G 1": [
+      "measurementType",
+      0.694
+     ],
+     "G 2": [
+      "measurementType",
+      0.863
+     ],
+     "H 1": [
+      "measurementType",
+      0.827
+     ],
+     "H 2": [
+      "measurementType",
+      0.898
+     ],
+     "H 3": [
+      "measurementType",
+      0.882
+     ],
+     "H 4": [
+      "measurementType",
+      0.88
+     ],
+     "H 5": [
+      "measurementType",
+      0.84
+     ],
+     "I 1": [
+      "measurementType",
+      0.727
+     ],
+     "I 2": [
+      "measurementType",
+      0.781
+     ],
+     "I 3": [
+      "measurementType",
+      0.829
+     ],
+     "I 4": [
+      "measurementType",
+      0.861
+     ],
+     "J 1": [
+      "measurementType",
+      0.715
+     ],
+     "J 2": [
+      "measurementType",
+      0.782
+     ],
+     "J 3": [
+      "measurementType",
+      0.764
+     ],
+     "J 4": [
+      "measurementType",
+      0.826
+     ],
+     "J 5": [
+      "measurementType",
+      0.642
+     ],
+     "J 6": [
+      "measurementType",
+      0.861
+     ],
+     "J 7": [
+      "measurementType",
+      0.866
+     ],
+     "J 8": [
+      "measurementType",
+      0.762
+     ],
+     "K 1": [
+      "measurementType",
+      0.767
+     ],
+     "K 3": [
+      "measurementType",
+      0.818
+     ],
+     "K 4": [
+      "measurementType",
+      0.76
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Traits Modalities": "table:organism_column(1.00)",
+    "A 1": "code:numeric(1.00) > kind:organism_property(0.79) > organism_property:by table kind organism_traits",
+    "A 2": "code:numeric(1.00) > kind:organism_property(0.87) > organism_property:by table kind organism_traits",
+    "A 3": "code:numeric(1.00) > kind:organism_property(0.91) > organism_property:by table kind organism_traits",
+    "A 4": "code:numeric(1.00) > kind:organism_property(0.90) > organism_property:by table kind organism_traits",
+    "B 1": "code:numeric(1.00) > kind:organism_property(0.63) > organism_property:by table kind organism_traits",
+    "B 2": "code:numeric(1.00) > kind:organism_property(0.72) > organism_property:by table kind organism_traits",
+    "C 1": "code:numeric(1.00) > kind:organism_property(0.81) > organism_property:by table kind organism_traits",
+    "C 2": "code:numeric(1.00) > kind:organism_property(0.78) > organism_property:by table kind organism_traits",
+    "D 1": "code:numeric(1.00) > kind:organism_property(0.64) > organism_property:by table kind organism_traits",
+    "D 2": "code:numeric(1.00) > kind:organism_property(0.85) > organism_property:by table kind organism_traits",
+    "D 3": "code:numeric(1.00) > kind:organism_property(0.82) > organism_property:by table kind organism_traits",
+    "E 1": "code:numeric(1.00) > kind:organism_property(0.60) > organism_property:by table kind organism_traits",
+    "E 2": "code:numeric(1.00) > kind:organism_property(0.68) > organism_property:by table kind organism_traits",
+    "E 3": "code:numeric(1.00) > kind:organism_property(0.70) > organism_property:by table kind organism_traits",
+    "F 1": "code:numeric(1.00) > kind:organism_property(0.79) > organism_property:by table kind organism_traits",
+    "F 2": "code:numeric(1.00) > kind:organism_property(0.88) > organism_property:by table kind organism_traits",
+    "F 3": "code:numeric(1.00) > kind:organism_property(0.88) > organism_property:by table kind organism_traits",
+    "G 1": "code:numeric(1.00) > kind:organism_property(0.69) > organism_property:by table kind organism_traits",
+    "G 2": "code:numeric(1.00) > kind:organism_property(0.86) > organism_property:by table kind organism_traits",
+    "H 1": "code:numeric(1.00) > kind:organism_property(0.83) > organism_property:by table kind organism_traits",
+    "H 2": "code:numeric(1.00) > kind:organism_property(0.90) > organism_property:by table kind organism_traits",
+    "H 3": "code:numeric(1.00) > kind:organism_property(0.88) > organism_property:by table kind organism_traits",
+    "H 4": "code:numeric(1.00) > kind:organism_property(0.88) > organism_property:by table kind organism_traits",
+    "H 5": "code:numeric(1.00) > kind:organism_property(0.84) > organism_property:by table kind organism_traits",
+    "I 1": "code:numeric(1.00) > kind:organism_property(0.73) > organism_property:by table kind organism_traits",
+    "I 2": "code:numeric(1.00) > kind:organism_property(0.78) > organism_property:by table kind organism_traits",
+    "I 3": "code:numeric(1.00) > kind:organism_property(0.83) > organism_property:by table kind organism_traits",
+    "I 4": "code:numeric(1.00) > kind:organism_property(0.86) > organism_property:by table kind organism_traits",
+    "J 1": "code:numeric(1.00) > kind:organism_property(0.72) > organism_property:by table kind organism_traits",
+    "J 2": "code:numeric(1.00) > kind:organism_property(0.78) > organism_property:by table kind organism_traits",
+    "J 3": "code:numeric(1.00) > kind:organism_property(0.76) > organism_property:by table kind organism_traits",
+    "J 4": "code:numeric(1.00) > kind:organism_property(0.83) > organism_property:by table kind organism_traits",
+    "J 5": "code:numeric(1.00) > kind:organism_property(0.64) > organism_property:by table kind organism_traits",
+    "J 6": "code:numeric(1.00) > kind:organism_property(0.86) > organism_property:by table kind organism_traits",
+    "J 7": "code:numeric(1.00) > kind:organism_property(0.87) > organism_property:by table kind organism_traits",
+    "J 8": "code:numeric(1.00) > kind:organism_property(0.76) > organism_property:by table kind organism_traits",
+    "K 1": "code:numeric(1.00) > kind:organism_property(0.77) > organism_property:by table kind organism_traits",
+    "K 3": "code:numeric(1.00) > kind:organism_property(0.82) > organism_property:by table kind organism_traits",
+    "K 4": "code:numeric(1.00) > kind:organism_property(0.76) > organism_property:by table kind organism_traits"
+   },
+   "secs": 26.2,
+   "calls": 8
+  }
+ ],
+ "Braschler2021": [
+  {
+   "table": "Braschler2021#8",
+   "headers": [
+    "Species",
+    "Body size (mm)",
+    "Main food",
+    "Main nest stratum",
+    "Colony founding mode",
+    "Number of queens",
+    "Dry tolerant",
+    "Habitat generalist"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Body size (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Main food": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Main nest stratum": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Colony founding mode": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Number of queens": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Dry tolerant": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Habitat generalist": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Body size (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "Main food": [
+      "measurementType",
+      0.979
+     ],
+     "Main nest stratum": [
+      "measurementType",
+      0.989
+     ],
+     "Colony founding mode": [
+      "measurementType",
+      0.979
+     ],
+     "Number of queens": [
+      "measurementType",
+      0.894
+     ],
+     "Dry tolerant": [
+      "measurementType",
+      0.994
+     ],
+     "Habitat generalist": [
+      "measurementType",
+      0.993
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Body size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Main food": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Main nest stratum": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Colony founding mode": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Number of queens": "cell_shape:everyday_words(0.90) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Dry tolerant": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Habitat generalist": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.4,
+   "calls": 4
+  },
+  {
+   "table": "Braschler2021#9",
+   "headers": [
+    "Species",
+    "Body size (mm)",
+    "Micro-habitat preference",
+    "Dry tolerant",
+    "Habitat generalist"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Body size (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Micro-habitat preference": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Dry tolerant": [
+     "measurementType",
+     "71% (species,value) pairs in GT"
+    ],
+    "Habitat generalist": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Body size (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "Micro-habitat preference": [
+      "measurementType",
+      0.991
+     ],
+     "Dry tolerant": [
+      "measurementType",
+      0.974
+     ],
+     "Habitat generalist": [
+      "measurementType",
+      0.994
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Body size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Micro-habitat preference": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Dry tolerant": "cell_shape:everyday_words(0.97) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Habitat generalist": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 5.8,
+   "calls": 4
+  }
+ ],
+ "Brasil2024": [
+  {
+   "table": "Brasil2024#0",
+   "headers": [
+    "Species",
+    "Low",
+    "Medium",
+    "High"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Low": [
+     "none",
+     "pairs 0%"
+    ],
+    "Medium": [
+     "none",
+     "pairs 0%"
+    ],
+    "High": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.987
+     ],
+     "Low": [
+      "none",
+      0.494
+     ],
+     "Medium": [
+      "none",
+      0.992
+     ],
+     "High": [
+      "none",
+      0.989
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "cell_shape:latin_binomials(0.99) > organism_name:row_organism(0.99)",
+    "Low": "code:numeric(1.00) > kind:record_context(0.51) > record_context:site_conditions(0.97)",
+    "Medium": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "High": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(1.00)"
+   },
+   "secs": 6.8,
+   "calls": 6
+  },
+  {
+   "table": "Brasil2024#3",
+   "headers": [
+    "(no name, column 0)",
+    "Date of changing season",
+    "Functional traits Diet",
+    "Functional traits Nesting",
+    "Functional traits Sociality",
+    "Functional traits Voltinism",
+    "Functional traits Body size"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Date of changing season": [
+     "none",
+     "pairs 0%"
+    ],
+    "Functional traits Diet": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Functional traits Nesting": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Functional traits Sociality": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Functional traits Voltinism": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Functional traits Body size": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Date of changing season": [
+      "verbatimEventDate",
+      0.789
+     ],
+     "Functional traits Diet": [
+      "measurementType",
+      0.993
+     ],
+     "Functional traits Nesting": [
+      "measurementType",
+      0.995
+     ],
+     "Functional traits Sociality": [
+      "measurementType",
+      0.996
+     ],
+     "Functional traits Voltinism": [
+      "measurementType",
+      0.989
+     ],
+     "Functional traits Body size": [
+      "measurementType",
+      0.995
+     ]
+    }
+   },
+   "context": [
+    "Table title (found in its head): Table S3. Summarized information about functional traits for each studied species."
+   ],
+   "paths": {
+    "(no name, column 0)": "table:organism_column(1.00)",
+    "Date of changing season": "cell_shape:everyday_words(0.84) > kind:record_context(0.94) > record_context:sampling_time(1.00)",
+    "Functional traits Diet": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Functional traits Nesting": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Functional traits Sociality": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Functional traits Voltinism": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Functional traits Body size": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 10.2,
+   "calls": 4
+  },
+  {
+   "table": "Brasil2024#4",
+   "headers": [
+    "Species",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "H06",
+    "H07",
+    "H08",
+    "H09",
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M10"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "H01": [
+     "none",
+     "pairs 0%"
+    ],
+    "H02": [
+     "none",
+     "pairs 0%"
+    ],
+    "H03": [
+     "none",
+     "pairs 0%"
+    ],
+    "H04": [
+     "none",
+     "pairs 0%"
+    ],
+    "H05": [
+     "none",
+     "pairs 0%"
+    ],
+    "H06": [
+     "none",
+     "pairs 0%"
+    ],
+    "H07": [
+     "none",
+     "pairs 0%"
+    ],
+    "H08": [
+     "none",
+     "pairs 0%"
+    ],
+    "H09": [
+     "none",
+     "pairs 0%"
+    ],
+    "L01": [
+     "none",
+     "pairs 0%"
+    ],
+    "L02": [
+     "none",
+     "pairs 0%"
+    ],
+    "L03": [
+     "none",
+     "pairs 0%"
+    ],
+    "L04": [
+     "none",
+     "pairs 0%"
+    ],
+    "L05": [
+     "none",
+     "pairs 0%"
+    ],
+    "L06": [
+     "none",
+     "pairs 0%"
+    ],
+    "L07": [
+     "none",
+     "pairs 0%"
+    ],
+    "L08": [
+     "none",
+     "pairs 0%"
+    ],
+    "L09": [
+     "none",
+     "pairs 0%"
+    ],
+    "L10": [
+     "none",
+     "pairs 0%"
+    ],
+    "M01": [
+     "none",
+     "pairs 0%"
+    ],
+    "M02": [
+     "none",
+     "pairs 0%"
+    ],
+    "M03": [
+     "none",
+     "pairs 0%"
+    ],
+    "M04": [
+     "none",
+     "pairs 0%"
+    ],
+    "M05": [
+     "none",
+     "pairs 0%"
+    ],
+    "M06": [
+     "none",
+     "pairs 0%"
+    ],
+    "M07": [
+     "none",
+     "pairs 0%"
+    ],
+    "M08": [
+     "none",
+     "pairs 0%"
+    ],
+    "M09": [
+     "none",
+     "pairs 0%"
+    ],
+    "M10": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "H01": [
+      "none",
+      0.862
+     ],
+     "H02": [
+      "none",
+      0.871
+     ],
+     "H03": [
+      "none",
+      0.943
+     ],
+     "H04": [
+      "none",
+      0.955
+     ],
+     "H05": [
+      "none",
+      0.761
+     ],
+     "H06": [
+      "none",
+      0.831
+     ],
+     "H07": [
+      "none",
+      0.28
+     ],
+     "H08": [
+      "none",
+      0.725
+     ],
+     "H09": [
+      "none",
+      0.785
+     ],
+     "L01": [
+      "none",
+      0.829
+     ],
+     "L02": [
+      "none",
+      0.758
+     ],
+     "L03": [
+      "none",
+      0.833
+     ],
+     "L04": [
+      "none",
+      0.512
+     ],
+     "L05": [
+      "none",
+      0.646
+     ],
+     "L06": [
+      "none",
+      0.798
+     ],
+     "L07": [
+      "none",
+      0.755
+     ],
+     "L08": [
+      "none",
+      0.747
+     ],
+     "L09": [
+      "none",
+      0.836
+     ],
+     "L10": [
+      "none",
+      0.518
+     ],
+     "M01": [
+      "none",
+      0.768
+     ],
+     "M02": [
+      "none",
+      0.811
+     ],
+     "M03": [
+      "none",
+      0.853
+     ],
+     "M04": [
+      "none",
+      0.805
+     ],
+     "M05": [
+      "none",
+      0.373
+     ],
+     "M06": [
+      "measurementType",
+      0.369
+     ],
+     "M07": [
+      "measurementType",
+      0.447
+     ],
+     "M08": [
+      "measurementType",
+      0.412
+     ],
+     "M09": [
+      "none",
+      0.698
+     ],
+     "M10": [
+      "none",
+      0.775
+     ]
+    }
+   },
+   "context": [
+    "Table title (found in its head): Table S4. Abundance table for all species within each sample site"
+   ],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "H01": "code:numeric(1.00) > kind:counts_or_statistics(0.88) > counts_or_statistics:abundance(0.98)",
+    "H02": "code:numeric(1.00) > kind:counts_or_statistics(0.90) > counts_or_statistics:abundance(0.96)",
+    "H03": "code:numeric(1.00) > kind:counts_or_statistics(0.96) > counts_or_statistics:abundance(0.98)",
+    "H04": "code:numeric(1.00) > kind:counts_or_statistics(0.97) > counts_or_statistics:abundance(0.99)",
+    "H05": "code:numeric(1.00) > kind:counts_or_statistics(0.79) > counts_or_statistics:abundance(0.96)",
+    "H06": "code:numeric(1.00) > kind:counts_or_statistics(0.87) > counts_or_statistics:abundance(0.96)",
+    "H07": "code:numeric(1.00) > kind:counts_or_statistics(0.43) > counts_or_statistics:abundance(0.66)",
+    "H08": "code:numeric(1.00) > kind:counts_or_statistics(0.80) > counts_or_statistics:abundance(0.91)",
+    "H09": "code:numeric(1.00) > kind:counts_or_statistics(0.82) > counts_or_statistics:abundance(0.96)",
+    "L01": "code:numeric(1.00) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.88)",
+    "L02": "code:numeric(1.00) > kind:counts_or_statistics(0.83) > counts_or_statistics:abundance(0.92)",
+    "L03": "code:numeric(1.00) > kind:counts_or_statistics(0.88) > counts_or_statistics:abundance(0.95)",
+    "L04": "code:numeric(1.00) > kind:counts_or_statistics(0.70) > counts_or_statistics:abundance(0.73)",
+    "L05": "code:numeric(1.00) > kind:counts_or_statistics(0.79) > counts_or_statistics:abundance(0.82)",
+    "L06": "code:numeric(1.00) > kind:counts_or_statistics(0.89) > counts_or_statistics:abundance(0.90)",
+    "L07": "code:numeric(1.00) > kind:counts_or_statistics(0.86) > counts_or_statistics:abundance(0.88)",
+    "L08": "code:numeric(1.00) > kind:counts_or_statistics(0.80) > counts_or_statistics:abundance(0.94)",
+    "L09": "code:numeric(1.00) > kind:counts_or_statistics(0.88) > counts_or_statistics:abundance(0.95)",
+    "L10": "code:numeric(1.00) > kind:counts_or_statistics(0.66) > counts_or_statistics:abundance(0.79)",
+    "M01": "code:numeric(1.00) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.82)",
+    "M02": "code:numeric(1.00) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.86)",
+    "M03": "code:numeric(1.00) > kind:counts_or_statistics(0.95) > counts_or_statistics:abundance(0.90)",
+    "M04": "code:numeric(1.00) > kind:counts_or_statistics(0.91) > counts_or_statistics:abundance(0.88)",
+    "M05": "code:numeric(1.00) > kind:counts_or_statistics(0.45) > counts_or_statistics:abundance(0.83)",
+    "M06": "code:numeric(1.00) > kind:organism_property(0.37) > organism_property:by table kind counts",
+    "M07": "code:numeric(1.00) > kind:organism_property(0.45) > organism_property:by table kind counts",
+    "M08": "code:numeric(1.00) > kind:organism_property(0.41) > organism_property:by table kind counts",
+    "M09": "code:numeric(1.00) > kind:counts_or_statistics(0.79) > counts_or_statistics:abundance(0.88)",
+    "M10": "code:numeric(1.00) > kind:counts_or_statistics(0.84) > counts_or_statistics:abundance(0.93)"
+   },
+   "secs": 41.5,
+   "calls": 12
+  },
+  {
+   "table": "Brasil2024#8",
+   "headers": [
+    "species",
+    "Body size x urbanization Female spring F",
+    "Body size x urbanization Female spring p value",
+    "Body size x urbanization Female summer F",
+    "Body size x urbanization Female summer p value",
+    "(no name, column 5)",
+    "(no name, column 6)",
+    "(no name, column 7)",
+    "(no name, column 8)"
+   ],
+   "labels": {
+    "species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Body size x urbanization Female spring F": [
+     "none",
+     "pairs 0%"
+    ],
+    "Body size x urbanization Female spring p value": [
+     "none",
+     "pairs 0%"
+    ],
+    "Body size x urbanization Female summer F": [
+     "none",
+     "pairs 0%"
+    ],
+    "Body size x urbanization Female summer p value": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 5)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 6)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 7)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 8)": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Body size x urbanization Female spring F": [
+      "none",
+      0.998
+     ],
+     "Body size x urbanization Female spring p value": [
+      "none",
+      0.999
+     ],
+     "Body size x urbanization Female summer F": [
+      "none",
+      0.998
+     ],
+     "Body size x urbanization Female summer p value": [
+      "none",
+      0.998
+     ],
+     "(no name, column 5)": [
+      "none",
+      0.486
+     ],
+     "(no name, column 6)": [
+      "none",
+      0.778
+     ],
+     "(no name, column 7)": [
+      "none",
+      0.385
+     ],
+     "(no name, column 8)": [
+      "none",
+      0.508
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "species": "table:organism_column(1.00)",
+    "Body size x urbanization Female spring F": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Body size x urbanization Female spring p value": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Body size x urbanization Female summer F": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Body size x urbanization Female summer p value": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "(no name, column 5)": "cell_shape:codes(0.65) > kind:other(0.82) > other:bookkeeping(0.90)",
+    "(no name, column 6)": "cell_shape:codes(0.93) > kind:other(0.92) > other:bookkeeping(0.91)",
+    "(no name, column 7)": "cell_shape:codes(0.70) > kind:other(0.82) > other:bookkeeping(0.67)",
+    "(no name, column 8)": "cell_shape:codes(0.62) > kind:other(0.90) > other:bookkeeping(0.90)"
+   },
+   "secs": 14.7,
+   "calls": 6
+  },
+  {
+   "table": "Brasil2024#9",
+   "headers": [
+    "species",
+    "Wing wear x urbanization Female spring F",
+    "Wing wear x urbanization Female spring p value",
+    "Wing wear x urbanization Female summer F",
+    "Wing wear x urbanization Female summer p value"
+   ],
+   "labels": {
+    "species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Wing wear x urbanization Female spring F": [
+     "none",
+     "pairs 0%"
+    ],
+    "Wing wear x urbanization Female spring p value": [
+     "none",
+     "pairs 0%"
+    ],
+    "Wing wear x urbanization Female summer F": [
+     "none",
+     "pairs 0%"
+    ],
+    "Wing wear x urbanization Female summer p value": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Wing wear x urbanization Female spring F": [
+      "none",
+      0.999
+     ],
+     "Wing wear x urbanization Female spring p value": [
+      "none",
+      0.999
+     ],
+     "Wing wear x urbanization Female summer F": [
+      "none",
+      0.998
+     ],
+     "Wing wear x urbanization Female summer p value": [
+      "none",
+      0.998
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "species": "table:organism_column(1.00)",
+    "Wing wear x urbanization Female spring F": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Wing wear x urbanization Female spring p value": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Wing wear x urbanization Female summer F": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Wing wear x urbanization Female summer p value": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)"
+   },
+   "secs": 6.8,
+   "calls": 3
+  }
+ ],
+ "Torok2022": [
+  {
+   "table": "Torok2022#4",
+   "headers": [
+    "Taxa",
+    "Taxa #2",
+    "Social habit",
+    "Nest location",
+    "Larvae feeding preference",
+    "Body size (mm)"
+   ],
+   "labels": {
+    "Taxa": [
+     "none",
+     "pairs 0%"
+    ],
+    "Taxa #2": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Social habit": [
+     "measurementType",
+     "96% (species,value) pairs in GT"
+    ],
+    "Nest location": [
+     "measurementType",
+     "89% (species,value) pairs in GT"
+    ],
+    "Larvae feeding preference": [
+     "measurementType",
+     "93% (species,value) pairs in GT"
+    ],
+    "Body size (mm)": [
+     "measurementType",
+     "89% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Taxa #2": [
+      "verbatimIdentification",
+      0.928
+     ],
+     "Taxa": [
+      "verbatimIdentification",
+      0.839
+     ],
+     "Social habit": [
+      "measurementType",
+      0.971
+     ],
+     "Nest location": [
+      "measurementType",
+      0.986
+     ],
+     "Larvae feeding preference": [
+      "measurementType",
+      0.875
+     ],
+     "Body size (mm)": [
+      "measurementType",
+      0.998
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Taxa #2": "table:organism_column(0.93)",
+    "Taxa": "cell_shape:latin_binomials(0.87) > organism_name:higher_rank(0.97)",
+    "Social habit": "cell_shape:everyday_words(0.97) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Nest location": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Larvae feeding preference": "cell_shape:everyday_words(0.88) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Body size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 7.5,
+   "calls": 5
+  },
+  {
+   "table": "Torok2022#6",
+   "headers": [
+    "Taxa",
+    "Taxa #2",
+    "Social habit",
+    "Nest location",
+    "Wasp preys",
+    "Larvae feeding preference",
+    "Body size (mm)"
+   ],
+   "labels": {
+    "Taxa": [
+     "none",
+     "pairs 3%"
+    ],
+    "Taxa #2": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Social habit": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Nest location": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Wasp preys": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ],
+    "Larvae feeding preference": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Body size (mm)": [
+     "measurementType",
+     "92% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Taxa #2": [
+      "verbatimIdentification",
+      0.986
+     ],
+     "Taxa": [
+      "verbatimIdentification",
+      0.649
+     ],
+     "Social habit": [
+      "measurementType",
+      0.971
+     ],
+     "Nest location": [
+      "measurementType",
+      0.986
+     ],
+     "Wasp preys": [
+      "measurementType",
+      0.523
+     ],
+     "Larvae feeding preference": [
+      "measurementType",
+      0.984
+     ],
+     "Body size (mm)": [
+      "measurementType",
+      0.997
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Taxa #2": "table:organism_column(0.99)",
+    "Taxa": "cell_shape:latin_binomials(0.90) > organism_name:higher_rank(0.72)",
+    "Social habit": "cell_shape:everyday_words(0.98) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Nest location": "cell_shape:everyday_words(0.99) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Wasp preys": "cell_shape:everyday_words(0.52) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Larvae feeding preference": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Body size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.8,
+   "calls": 7
+  },
+  {
+   "table": "Torok2022#8",
+   "headers": [
+    "(no name, column 0)",
+    "(no name, column 1)",
+    "(no name, column 2)",
+    "(no name, column 3)",
+    "(no name, column 4)",
+    "(no name, column 5)"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "(no name, column 1)": [
+     "measurementType",
+     "88% (species,value) pairs in GT"
+    ],
+    "(no name, column 2)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "(no name, column 3)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "(no name, column 4)": [
+     "measurementType",
+     "88% (species,value) pairs in GT"
+    ],
+    "(no name, column 5)": [
+     "measurementType",
+     "75% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.966
+     ],
+     "(no name, column 1)": [
+      "measurementType",
+      0.983
+     ],
+     "(no name, column 2)": [
+      "measurementType",
+      0.797
+     ],
+     "(no name, column 3)": [
+      "measurementType",
+      0.532
+     ],
+     "(no name, column 4)": [
+      "measurementType",
+      0.91
+     ],
+     "(no name, column 5)": [
+      "measurementType",
+      0.55
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "(no name, column 0)": "cell_shape:latin_binomials(0.97) > organism_name:row_organism(0.99)",
+    "(no name, column 1)": "cell_shape:everyday_words(0.99) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "(no name, column 2)": "cell_shape:everyday_words(0.80) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "(no name, column 3)": "cell_shape:single_latin_words(0.90) > is_taxon:yes(0.60) > organism_name:associated_organism(0.99)",
+    "(no name, column 4)": "cell_shape:everyday_words(0.91) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "(no name, column 5)": "code:numeric(1.00) > kind:organism_property(0.55) > organism_property:by table kind organism_traits"
+   },
+   "secs": 11.1,
+   "calls": 9
+  }
+ ],
+ "Ibarra2021": [
+  {
+   "table": "Ibarra2021#3",
+   "headers": [
+    "Family",
+    "Scientific name",
+    "Mean length (mm) ± SD",
+    "Body weight (mg)a",
+    "Main foraging guild",
+    "Habitat-use guild"
+   ],
+   "labels": {
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Scientific name": [
+     "verbatimIdentification",
+     "95% GT species"
+    ],
+    "Mean length (mm) ± SD": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Body weight (mg)a": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Main foraging guild": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Habitat-use guild": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Scientific name": [
+      "verbatimIdentification",
+      0.991
+     ],
+     "Family": [
+      "measurementType",
+      0.631
+     ],
+     "Mean length (mm) ± SD": [
+      "measurementType",
+      0.961
+     ],
+     "Body weight (mg)a": [
+      "measurementType",
+      0.995
+     ],
+     "Main foraging guild": [
+      "measurementType",
+      0.982
+     ],
+     "Habitat-use guild": [
+      "measurementType",
+      0.944
+     ]
+    }
+   },
+   "context": [
+    "Section labels, each heading the rows below it (found in the table): 'Continued Continued Continued Continued Continued Continued' (row 42)"
+   ],
+   "paths": {
+    "Scientific name": "table:organism_column(0.99)",
+    "Family": "cell_shape:single_latin_words(0.99) > is_taxon:no(0.77) > kind:organism_property(0.83) > organism_property:by table kind organism_traits",
+    "Mean length (mm) ± SD": "code:numeric(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "Body weight (mg)a": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Main foraging guild": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Habitat-use guild": "cell_shape:everyday_words(0.95) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.2,
+   "calls": 6
+  }
+ ],
+ "Gossner2013": [
+  {
+   "table": "Gossner2013#6",
+   "headers": [
+    "Family",
+    "Species",
+    "Body size",
+    "Diameter",
+    "Decay",
+    "Canopy cover"
+   ],
+   "labels": {
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Body size": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Diameter": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Decay": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Canopy cover": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.992
+     ],
+     "Family": [
+      "verbatimIdentification",
+      0.936
+     ],
+     "Body size": [
+      "measurementType",
+      0.988
+     ],
+     "Diameter": [
+      "measurementType",
+      0.553
+     ],
+     "Decay": [
+      "none",
+      0.525
+     ],
+     "Canopy cover": [
+      "none",
+      0.88
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(0.99)",
+    "Family": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.97) > organism_name:higher_rank(0.97)",
+    "Body size": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Diameter": "code:numeric(1.00) > kind:organism_property(0.55) > organism_property:by table kind specimens",
+    "Decay": "code:numeric(1.00) > kind:record_context(0.72) > record_context:site_conditions(0.73)",
+    "Canopy cover": "code:numeric(1.00) > kind:record_context(0.92) > record_context:site_conditions(0.96)"
+   },
+   "secs": 6.9,
+   "calls": 6
+  }
+ ],
+ "Uemori2021": [
+  {
+   "table": "Uemori2021#10",
+   "headers": [
+    "Superfamily",
+    "Family",
+    "Subfamily",
+    "Genus",
+    "Subgenus",
+    "Species",
+    "Trophic level",
+    "Flight duration",
+    "Mean body size",
+    "Altitudinal range",
+    "Feeding guild",
+    "Distribution index"
+   ],
+   "labels": {
+    "Superfamily": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Subfamily": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Genus": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Subgenus": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Trophic level": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Flight duration": [
+     "none",
+     "pairs 0%"
+    ],
+    "Mean body size": [
+     "measurementType",
+     "97% (species,value) pairs in GT"
+    ],
+    "Altitudinal range": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Feeding guild": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Distribution index": [
+     "none",
+     "pairs 4%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.994
+     ],
+     "Superfamily": [
+      "verbatimIdentification",
+      0.627
+     ],
+     "Family": [
+      "verbatimIdentification",
+      0.957
+     ],
+     "Subfamily": [
+      "verbatimIdentification",
+      0.956
+     ],
+     "Genus": [
+      "verbatimIdentification",
+      0.846
+     ],
+     "Subgenus": [
+      "verbatimIdentification",
+      0.981
+     ],
+     "Trophic level": [
+      "measurementType",
+      0.972
+     ],
+     "Flight duration": [
+      "measurementType",
+      0.977
+     ],
+     "Mean body size": [
+      "measurementType",
+      0.996
+     ],
+     "Altitudinal range": [
+      "measurementType",
+      0.988
+     ],
+     "Feeding guild": [
+      "measurementType",
+      0.968
+     ],
+     "Distribution index": [
+      "measurementType",
+      0.927
+     ]
+    }
+   },
+   "context": [
+    "Table title (found in its head): Table S1. All functional traits and distribution index of each species in order taxonomic hierarchy."
+   ],
+   "paths": {
+    "Species": "table:organism_column(0.99)",
+    "Superfamily": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.63) > organism_name:higher_rank(0.99)",
+    "Family": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.96) > organism_name:higher_rank(1.00)",
+    "Subfamily": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.96) > organism_name:higher_rank(1.00)",
+    "Genus": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.85) > organism_name:higher_rank(1.00)",
+    "Subgenus": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.99) > organism_name:higher_rank(0.99)",
+    "Trophic level": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:by table kind organism_traits",
+    "Flight duration": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits",
+    "Mean body size": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Altitudinal range": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Feeding guild": "cell_shape:everyday_words(0.97) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Distribution index": "code:numeric(1.00) > kind:organism_property(0.93) > organism_property:by table kind organism_traits"
+   },
+   "secs": 12.6,
+   "calls": 7
+  },
+  {
+   "table": "Uemori2021#11",
+   "headers": [
+    "Superfamily",
+    "Family",
+    "Subfamily",
+    "Genus",
+    "Subgenus",
+    "Species",
+    "Spring 177.0",
+    "Spring 723.0",
+    "Spring 787.0",
+    "Spring 1068.0",
+    "Spring 1095.0",
+    "Spring 1187.0",
+    "Spring 1209.0",
+    "Spring 1249.0",
+    "Spring 1410.0",
+    "Spring 1483.0",
+    "Spring 1604.0",
+    "Summer 177.0",
+    "Summer 723.0",
+    "Summer 787.0",
+    "Summer 1068.0",
+    "Summer 1095.0",
+    "Summer 1187.0",
+    "Summer 1209.0",
+    "Summer 1249.0",
+    "Summer 1410.0",
+    "Summer 1483.0",
+    "Summer 1604.0",
+    "Autumn 177.0",
+    "Autumn 723.0",
+    "Autumn 787.0",
+    "Autumn 1068.0",
+    "Autumn 1095.0",
+    "Autumn 1187.0",
+    "Autumn 1209.0",
+    "Autumn 1249.0",
+    "Autumn 1410.0",
+    "Autumn 1483.0",
+    "Autumn 1604.0"
+   ],
+   "labels": {
+    "Superfamily": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Subfamily": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Genus": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Subgenus": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Spring 177.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 723.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 787.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1068.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1095.0": [
+     "none",
+     "pairs 6%"
+    ],
+    "Spring 1187.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1209.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1249.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1410.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1483.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Spring 1604.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 177.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 723.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 787.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1068.0": [
+     "none",
+     "pairs 5%"
+    ],
+    "Summer 1095.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1187.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1209.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1249.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1410.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1483.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Summer 1604.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 177.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 723.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 787.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1068.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1095.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1187.0": [
+     "none",
+     "pairs 8%"
+    ],
+    "Autumn 1209.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1249.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1410.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1483.0": [
+     "none",
+     "pairs 0%"
+    ],
+    "Autumn 1604.0": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.994
+     ],
+     "Superfamily": [
+      "verbatimIdentification",
+      0.982
+     ],
+     "Family": [
+      "verbatimIdentification",
+      0.994
+     ],
+     "Subfamily": [
+      "verbatimIdentification",
+      0.988
+     ],
+     "Genus": [
+      "verbatimIdentification",
+      0.991
+     ],
+     "Subgenus": [
+      "verbatimIdentification",
+      0.966
+     ],
+     "Spring 177.0": [
+      "none",
+      0.903
+     ],
+     "Spring 723.0": [
+      "none",
+      0.992
+     ],
+     "Spring 787.0": [
+      "none",
+      0.993
+     ],
+     "Spring 1068.0": [
+      "none",
+      0.989
+     ],
+     "Spring 1095.0": [
+      "none",
+      0.987
+     ],
+     "Spring 1187.0": [
+      "none",
+      0.962
+     ],
+     "Spring 1209.0": [
+      "none",
+      0.973
+     ],
+     "Spring 1249.0": [
+      "none",
+      0.988
+     ],
+     "Spring 1410.0": [
+      "none",
+      0.988
+     ],
+     "Spring 1483.0": [
+      "none",
+      0.978
+     ],
+     "Spring 1604.0": [
+      "none",
+      0.978
+     ],
+     "Summer 177.0": [
+      "none",
+      0.984
+     ],
+     "Summer 723.0": [
+      "none",
+      0.98
+     ],
+     "Summer 787.0": [
+      "none",
+      0.989
+     ],
+     "Summer 1068.0": [
+      "none",
+      0.987
+     ],
+     "Summer 1095.0": [
+      "none",
+      0.98
+     ],
+     "Summer 1187.0": [
+      "none",
+      0.964
+     ],
+     "Summer 1209.0": [
+      "none",
+      0.972
+     ],
+     "Summer 1249.0": [
+      "none",
+      0.989
+     ],
+     "Summer 1410.0": [
+      "none",
+      0.991
+     ],
+     "Summer 1483.0": [
+      "none",
+      0.99
+     ],
+     "Summer 1604.0": [
+      "none",
+      0.99
+     ],
+     "Autumn 177.0": [
+      "none",
+      0.983
+     ],
+     "Autumn 723.0": [
+      "none",
+      0.986
+     ],
+     "Autumn 787.0": [
+      "none",
+      0.99
+     ],
+     "Autumn 1068.0": [
+      "none",
+      0.991
+     ],
+     "Autumn 1095.0": [
+      "none",
+      0.989
+     ],
+     "Autumn 1187.0": [
+      "none",
+      0.989
+     ],
+     "Autumn 1209.0": [
+      "none",
+      0.986
+     ],
+     "Autumn 1249.0": [
+      "none",
+      0.977
+     ],
+     "Autumn 1410.0": [
+      "none",
+      0.979
+     ],
+     "Autumn 1483.0": [
+      "none",
+      0.983
+     ],
+     "Autumn 1604.0": [
+      "none",
+      0.969
+     ]
+    }
+   },
+   "context": [
+    "Table title (found in its head): Table S2. List of Aculeata species collected in the Kyushu Central Mountains, Miyazaki."
+   ],
+   "paths": {
+    "Species": "table:organism_column(0.99)",
+    "Superfamily": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.99) > organism_name:higher_rank(0.99)",
+    "Family": "cell_shape:single_latin_words(1.00) > is_taxon:yes(1.00) > organism_name:higher_rank(1.00)",
+    "Subfamily": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.99) > organism_name:higher_rank(1.00)",
+    "Genus": "cell_shape:single_latin_words(1.00) > is_taxon:yes(1.00) > organism_name:higher_rank(1.00)",
+    "Subgenus": "cell_shape:single_latin_words(0.99) > is_taxon:yes(0.99) > organism_name:higher_rank(0.99)",
+    "Spring 177.0": "code:numeric(1.00) > kind:counts_or_statistics(0.91) > counts_or_statistics:abundance(0.99)",
+    "Spring 723.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Spring 787.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Spring 1068.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Spring 1095.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Spring 1187.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.97)",
+    "Spring 1209.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.98)",
+    "Spring 1249.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Spring 1410.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Spring 1483.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Spring 1604.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 177.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 723.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 787.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 1068.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 1095.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 1187.0": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.98)",
+    "Summer 1209.0": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.99)",
+    "Summer 1249.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 1410.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Summer 1483.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Summer 1604.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Autumn 177.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Autumn 723.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Autumn 787.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1068.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1095.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1187.0": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1209.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1249.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1410.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1483.0": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:abundance(0.99)",
+    "Autumn 1604.0": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.99)"
+   },
+   "secs": 56.8,
+   "calls": 16
+  }
+ ],
+ "Kovacs2010": [
+  {
+   "table": "Kovacs2010#0",
+   "headers": [
+    "Trait",
+    "Workers n",
+    "Workers Mean ± SD",
+    "Workers CV",
+    "Gynes n",
+    "Gynes Mean ± SD",
+    "Gynes CV",
+    "Between castes t"
+   ],
+   "labels": {
+    "Trait": [
+     "measurementType",
+     "100% GT trait names (long)"
+    ],
+    "Workers n": [
+     "sampleSizeValue",
+     "100% (species,sampleSizeValue) pairs in GT"
+    ],
+    "Workers Mean ± SD": [
+     "measurementValue",
+     "100% (species,value) pairs in GT"
+    ],
+    "Workers CV": [
+     "none",
+     "pairs 0%"
+    ],
+    "Gynes n": [
+     "sampleSizeValue",
+     "100% (species,sampleSizeValue) pairs in GT"
+    ],
+    "Gynes Mean ± SD": [
+     "measurementValue",
+     "100% (species,value) pairs in GT"
+    ],
+    "Gynes CV": [
+     "none",
+     "pairs 0%"
+    ],
+    "Between castes t": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Trait": [
+      "measurementType",
+      0.892
+     ],
+     "Workers n": [
+      "sampleSizeValue",
+      0.994
+     ],
+     "Workers Mean ± SD": [
+      "measurementValue",
+      0.52
+     ],
+     "Workers CV": [
+      "measurementValue",
+      0.988
+     ],
+     "Gynes n": [
+      "sampleSizeValue",
+      0.982
+     ],
+     "Gynes Mean ± SD": [
+      "measurementValue",
+      0.968
+     ],
+     "Gynes CV": [
+      "measurementValue",
+      0.987
+     ],
+     "Between castes t": [
+      "none",
+      0.991
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Trait": "cell_shape:everyday_words(1.00) > kind:organism_property(0.99) > organism_property:cells_name_property(0.90)",
+    "Workers n": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:sample_size(1.00)",
+    "Workers Mean ± SD": "code:numeric(1.00) > kind:organism_property(0.52) > organism_property:cells_are_values(1.00)",
+    "Workers CV": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:statistic_header(0.99)",
+    "Gynes n": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:sample_size(0.98)",
+    "Gynes Mean ± SD": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:cells_are_values(1.00)",
+    "Gynes CV": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:statistic_header(0.99)",
+    "Between castes t": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(0.99)"
+   },
+   "secs": 12.0,
+   "calls": 8
+  },
+  {
+   "table": "Kovacs2010#1",
+   "headers": [
+    "Trait",
+    "Series",
+    "Log Body Length (range)",
+    "Log Thorax Width (range)"
+   ],
+   "labels": {
+    "Trait": [
+     "none",
+     "pairs 0%"
+    ],
+    "Series": [
+     "none",
+     "pairs 0%"
+    ],
+    "Log Body Length (range)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Log Thorax Width (range)": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Trait": [
+      "verbatimIdentification",
+      0.596
+     ],
+     "Series": [
+      "caste",
+      0.764
+     ],
+     "Log Body Length (range)": [
+      "measurementType",
+      0.897
+     ],
+     "Log Thorax Width (range)": [
+      "measurementType",
+      0.978
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Trait": "table:organism_column(0.60)",
+    "Series": "cell_shape:everyday_words(0.77) > kind:record_context(0.99) > record_context:caste(1.00)",
+    "Log Body Length (range)": "cell_shape:numbers_with_text(0.94) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "Log Thorax Width (range)": "cell_shape:numbers_with_text(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 5.5,
+   "calls": 4
+  },
+  {
+   "table": "Kovacs2010#2",
+   "headers": [
+    "Trait",
+    "Intercaste correlation ± SE",
+    "Castedimorphism ± SE"
+   ],
+   "labels": {
+    "Trait": [
+     "measurementType",
+     "100% GT trait names (long)"
+    ],
+    "Intercaste correlation ± SE": [
+     "none",
+     "pairs 0%"
+    ],
+    "Castedimorphism ± SE": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Trait": [
+      "measurementType",
+      0.24
+     ],
+     "Intercaste correlation ± SE": [
+      "none",
+      0.979
+     ],
+     "Castedimorphism ± SE": [
+      "none",
+      0.629
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Trait": "cell_shape:everyday_words(0.99) > kind:counts_or_statistics(0.59) > counts_or_statistics:property_spread(0.41)",
+    "Intercaste correlation ± SE": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(0.98)",
+    "Castedimorphism ± SE": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(0.63)"
+   },
+   "secs": 6.1,
+   "calls": 6
+  },
+  {
+   "table": "Kovacs2010#3",
+   "headers": [
+    "Trait",
+    "Thorax width",
+    "Thorax length",
+    "Third tergum length",
+    "Gaster length",
+    "Mass"
+   ],
+   "labels": {
+    "Trait": [
+     "measurementType",
+     "100% GT trait names (long)"
+    ],
+    "Thorax width": [
+     "unsure",
+     "pairs 0%, header match True"
+    ],
+    "Thorax length": [
+     "unsure",
+     "pairs 0%, header match True"
+    ],
+    "Third tergum length": [
+     "unsure",
+     "pairs 0%, header match True"
+    ],
+    "Gaster length": [
+     "unsure",
+     "pairs 0%, header match True"
+    ],
+    "Mass": [
+     "unsure",
+     "pairs 0%, header match True"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Trait": [
+      "measurementType",
+      0.764
+     ],
+     "Thorax width": [
+      "measurementType",
+      0.949
+     ],
+     "Thorax length": [
+      "measurementType",
+      0.993
+     ],
+     "Third tergum length": [
+      "measurementType",
+      0.996
+     ],
+     "Gaster length": [
+      "measurementType",
+      0.996
+     ],
+     "Mass": [
+      "measurementType",
+      0.991
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Trait": "cell_shape:everyday_words(0.78) > kind:organism_property(0.98) > organism_property:by table kind specimens",
+    "Thorax width": "code:numeric(1.00) > kind:organism_property(0.95) > organism_property:by table kind specimens",
+    "Thorax length": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Third tergum length": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind specimens",
+    "Gaster length": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind specimens",
+    "Mass": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens"
+   },
+   "secs": 5.6,
+   "calls": 4
+  },
+  {
+   "table": "Kovacs2010#4",
+   "headers": [
+    "Trait",
+    "Workers k ± SE",
+    "Workers Isometry (t)",
+    "Gynes k ± SE",
+    "Gynes Isometry (t)",
+    "(no name, column 5)"
+   ],
+   "labels": {
+    "Trait": [
+     "measurementType",
+     "100% GT trait names (long)"
+    ],
+    "Workers k ± SE": [
+     "none",
+     "pairs 0%"
+    ],
+    "Workers Isometry (t)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Gynes k ± SE": [
+     "none",
+     "pairs 0%"
+    ],
+    "Gynes Isometry (t)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 5)": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Trait": [
+      "measurementType",
+      0.924
+     ],
+     "Workers k ± SE": [
+      "measurementValue",
+      0.636
+     ],
+     "Workers Isometry (t)": [
+      "none",
+      0.995
+     ],
+     "Gynes k ± SE": [
+      "measurementValue",
+      0.773
+     ],
+     "Gynes Isometry (t)": [
+      "none",
+      0.995
+     ],
+     "(no name, column 5)": [
+      "none",
+      0.911
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Trait": "cell_shape:everyday_words(0.99) > kind:organism_property(0.93) > organism_property:by table kind statistics",
+    "Workers k ± SE": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:statistic_header(0.64)",
+    "Workers Isometry (t)": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Gynes k ± SE": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:statistic_header(0.78)",
+    "Gynes Isometry (t)": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "(no name, column 5)": "code:numeric(1.00) > kind:counts_or_statistics(0.97) > counts_or_statistics:test_result(0.93)"
+   },
+   "secs": 9.2,
+   "calls": 5
+  },
+  {
+   "table": "Kovacs2010#5",
+   "headers": [
+    "Feature",
+    "Intercaste Mean Phenotypic Correlations",
+    "Caste Dimorphism"
+   ],
+   "labels": {
+    "Feature": [
+     "measurementType",
+     "80% GT trait names (long)"
+    ],
+    "Intercaste Mean Phenotypic Correlations": [
+     "none",
+     "pairs 0%"
+    ],
+    "Caste Dimorphism": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Feature": [
+      "measurementValue",
+      0.393
+     ],
+     "Intercaste Mean Phenotypic Correlations": [
+      "none",
+      0.872
+     ],
+     "Caste Dimorphism": [
+      "none",
+      0.513
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Feature": "cell_shape:everyday_words(0.98) > kind:counts_or_statistics(0.54) > counts_or_statistics:statistic_header(0.74)",
+    "Intercaste Mean Phenotypic Correlations": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(0.88)",
+    "Caste Dimorphism": "code:numeric(1.00) > kind:counts_or_statistics(0.92) > counts_or_statistics:test_result(0.56)"
+   },
+   "secs": 6.2,
+   "calls": 6
+  }
+ ],
+ "Wang2021": [
+  {
+   "table": "Wang2021#1",
+   "headers": [
+    "Species",
+    "Abundance",
+    "Length (mm)",
+    "Body Size",
+    "Feeding Trait",
+    "Wing Morphology"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Abundance": [
+     "none",
+     "pairs 0%"
+    ],
+    "Length (mm)": [
+     "measurementType",
+     "81% (species,value) pairs in GT"
+    ],
+    "Body Size": [
+     "none",
+     "pairs 0%"
+    ],
+    "Feeding Trait": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Wing Morphology": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Abundance": [
+      "none",
+      0.994
+     ],
+     "Length (mm)": [
+      "measurementType",
+      0.997
+     ],
+     "Body Size": [
+      "measurementType",
+      0.702
+     ],
+     "Feeding Trait": [
+      "measurementType",
+      0.68
+     ],
+     "Wing Morphology": [
+      "measurementType",
+      0.698
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Abundance": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Length (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Body Size": "cell_shape:everyday_words(0.70) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Feeding Trait": "cell_shape:everyday_words(0.68) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Wing Morphology": "cell_shape:codes(0.70) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 8.8,
+   "calls": 5
+  }
+ ],
+ "Odanaka2019": [
+  {
+   "table": "Odanaka2019#7",
+   "headers": [
+    "Family",
+    "Species",
+    "Nesting biology",
+    "Behavior",
+    "Un-grazed landscapes",
+    "Low management intensity",
+    "Moderate management intensity",
+    "High management intensity"
+   ],
+   "labels": {
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Nesting biology": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Behavior": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Un-grazed landscapes": [
+     "none",
+     "pairs 0%"
+    ],
+    "Low management intensity": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Moderate management intensity": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "High management intensity": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.997
+     ],
+     "Family": [
+      "verbatimIdentification",
+      0.886
+     ],
+     "Nesting biology": [
+      "measurementType",
+      0.987
+     ],
+     "Behavior": [
+      "measurementType",
+      0.993
+     ],
+     "Un-grazed landscapes": [
+      "measurementType",
+      0.892
+     ],
+     "Low management intensity": [
+      "measurementType",
+      0.822
+     ],
+     "Moderate management intensity": [
+      "measurementType",
+      0.749
+     ],
+     "High management intensity": [
+      "measurementType",
+      0.914
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Family": "cell_shape:single_latin_words(0.99) > is_taxon:yes(0.90) > organism_name:higher_rank(0.99)",
+    "Nesting biology": "cell_shape:everyday_words(0.99) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Behavior": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Un-grazed landscapes": "cell_shape:codes(0.92) > kind:organism_property(0.97) > organism_property:by table kind organism_traits",
+    "Low management intensity": "cell_shape:codes(0.85) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "Moderate management intensity": "cell_shape:codes(0.78) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "High management intensity": "cell_shape:everyday_words(0.94) > kind:organism_property(0.98) > organism_property:by table kind organism_traits"
+   },
+   "secs": 10.8,
+   "calls": 6
+  }
+ ],
+ "Cappellari2022": [
+  {
+   "table": "Cappellari2022#3",
+   "headers": [
+    "Pollinator species",
+    "Family",
+    "Proboscis (mm)",
+    "Body (mm)",
+    "Foraging"
+   ],
+   "labels": {
+    "Pollinator species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Proboscis (mm)": [
+     "measurementType",
+     "97% (species,value) pairs in GT"
+    ],
+    "Body (mm)": [
+     "measurementType",
+     "98% (species,value) pairs in GT"
+    ],
+    "Foraging": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Pollinator species": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Family": [
+      "verbatimIdentification",
+      0.95
+     ],
+     "Proboscis (mm)": [
+      "measurementType",
+      0.997
+     ],
+     "Body (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "Foraging": [
+      "measurementType",
+      0.665
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Pollinator species": "table:organism_column(1.00)",
+    "Family": "cell_shape:single_latin_words(0.99) > is_taxon:yes(0.96) > organism_name:higher_rank(0.99)",
+    "Proboscis (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Body (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Foraging": "cell_shape:everyday_words(0.68) > kind:organism_property(0.98) > organism_property:by table kind organism_traits"
+   },
+   "secs": 5.9,
+   "calls": 6
+  }
+ ],
+ "Tonelli2021": [
+  {
+   "table": "Tonelli2021#2",
+   "headers": [
+    "Family",
+    "Subfamily",
+    "Tribe",
+    "Species",
+    "Horse",
+    "Cow",
+    "Total"
+   ],
+   "labels": {
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Subfamily": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Tribe": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "98% GT species"
+    ],
+    "Horse": [
+     "unsure",
+     "pairs 31%, header match False"
+    ],
+    "Cow": [
+     "none",
+     "pairs 13%"
+    ],
+    "Total": [
+     "none",
+     "pairs 10%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Family": [
+      "none",
+      0.251
+     ],
+     "Subfamily": [
+      "verbatimIdentification",
+      0.949
+     ],
+     "Tribe": [
+      "verbatimIdentification",
+      0.956
+     ],
+     "Horse": [
+      "none",
+      0.996
+     ],
+     "Cow": [
+      "none",
+      0.998
+     ],
+     "Total": [
+      "none",
+      0.995
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Family": "cell_shape:single_latin_words(1.00) > is_taxon:no(0.66) > kind:other(0.57) > other:bookkeeping(0.66)",
+    "Subfamily": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.95) > organism_name:higher_rank(1.00)",
+    "Tribe": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.96) > organism_name:higher_rank(1.00)",
+    "Horse": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Cow": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Total": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)"
+   },
+   "secs": 10.6,
+   "calls": 8
+  },
+  {
+   "table": "Tonelli2021#4",
+   "headers": [
+    "Indicator Species",
+    "Cow",
+    "Horse"
+   ],
+   "labels": {
+    "Indicator Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Cow": [
+     "none",
+     "pairs 0%"
+    ],
+    "Horse": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Indicator Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Cow": [
+      "none",
+      0.987
+     ],
+     "Horse": [
+      "none",
+      0.985
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Indicator Species": "table:organism_column(1.00)",
+    "Cow": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Horse": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)"
+   },
+   "secs": 3.6,
+   "calls": 3
+  }
+ ],
+ "GibbParr2013": [
+  {
+   "table": "GibbParr2013#2",
+   "headers": [
+    "Species",
+    "Habitat Complex",
+    "Habitat Simple",
+    "Morphological trait WL",
+    "Morphological trait HL",
+    "Morphological trait FL",
+    "Morphological trait PW",
+    "Morphological trait HW1",
+    "Morphological trait HW2",
+    "Morphological trait EP"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Habitat Complex": [
+     "none",
+     "pairs 0%"
+    ],
+    "Habitat Simple": [
+     "none",
+     "pairs 0%"
+    ],
+    "Morphological trait WL": [
+     "measurementType",
+     "92% (species,value) pairs in GT"
+    ],
+    "Morphological trait HL": [
+     "measurementType",
+     "88% (species,value) pairs in GT"
+    ],
+    "Morphological trait FL": [
+     "measurementType",
+     "87% (species,value) pairs in GT"
+    ],
+    "Morphological trait PW": [
+     "measurementType",
+     "92% (species,value) pairs in GT"
+    ],
+    "Morphological trait HW1": [
+     "measurementType",
+     "91% (species,value) pairs in GT"
+    ],
+    "Morphological trait HW2": [
+     "measurementType",
+     "90% (species,value) pairs in GT"
+    ],
+    "Morphological trait EP": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Habitat Complex": [
+      "measurementType",
+      0.98
+     ],
+     "Habitat Simple": [
+      "measurementType",
+      0.963
+     ],
+     "Morphological trait WL": [
+      "measurementType",
+      0.999
+     ],
+     "Morphological trait HL": [
+      "measurementType",
+      0.999
+     ],
+     "Morphological trait FL": [
+      "measurementType",
+      0.999
+     ],
+     "Morphological trait PW": [
+      "measurementType",
+      0.998
+     ],
+     "Morphological trait HW1": [
+      "measurementType",
+      0.995
+     ],
+     "Morphological trait HW2": [
+      "measurementType",
+      0.999
+     ],
+     "Morphological trait EP": [
+      "measurementType",
+      0.983
+     ]
+    }
+   },
+   "context": [
+    "Section labels, each heading the rows below it (found in the table): 'S Africa' (row 2), 'SE Australia' (row 31), 'Sweden' (row 56)"
+   ],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Habitat Complex": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits",
+    "Habitat Simple": "code:numeric(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "Morphological trait WL": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Morphological trait HL": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Morphological trait FL": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Morphological trait PW": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Morphological trait HW1": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Morphological trait HW2": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Morphological trait EP": "code:numeric(0.98) > kind:organism_property(0.98) > organism_property:by table kind organism_traits"
+   },
+   "secs": 6.4,
+   "calls": 3
+  }
+ ],
+ "Espinosa2023": [
+  {
+   "table": "Espinosa2023#7",
+   "headers": [
+    "Genus",
+    "Size of the mesonotum (mm)",
+    "Length head size (mm)",
+    "Width head size (mm)",
+    "Presence of opercular gill",
+    "Feeding group"
+   ],
+   "labels": {
+    "Genus": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Size of the mesonotum (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Length head size (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Width head size (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Presence of opercular gill": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Feeding group": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Genus": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Size of the mesonotum (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "Length head size (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "Width head size (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "Presence of opercular gill": [
+      "measurementType",
+      0.915
+     ],
+     "Feeding group": [
+      "measurementType",
+      0.978
+     ]
+    }
+   },
+   "context": [
+    "Table title (found in its head): Traits"
+   ],
+   "paths": {
+    "Genus": "table:organism_column(1.00)",
+    "Size of the mesonotum (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Length head size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Width head size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Presence of opercular gill": "cell_shape:everyday_words(0.93) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Feeding group": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 5.6,
+   "calls": 4
+  }
+ ],
+ "OsorioCanadas2018": [
+  {
+   "table": "OsorioCanadas2018#9",
+   "headers": [
+    "Hosts species",
+    "Family",
+    "Larval diet",
+    "Body size (ITS,mm)",
+    "Wintering stage",
+    "Voltinism",
+    "Nest-building material"
+   ],
+   "labels": {
+    "Hosts species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Family": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Larval diet": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Body size (ITS,mm)": [
+     "measurementType",
+     "89% (species,value) pairs in GT"
+    ],
+    "Wintering stage": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Voltinism": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Nest-building material": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Hosts species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Family": [
+      "verbatimIdentification",
+      0.941
+     ],
+     "Larval diet": [
+      "measurementType",
+      0.957
+     ],
+     "Body size (ITS,mm)": [
+      "measurementType",
+      0.998
+     ],
+     "Wintering stage": [
+      "measurementType",
+      0.838
+     ],
+     "Voltinism": [
+      "measurementType",
+      0.774
+     ],
+     "Nest-building material": [
+      "measurementType",
+      0.872
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Hosts species": "table:organism_column(1.00)",
+    "Family": "cell_shape:single_latin_words(0.99) > is_taxon:yes(0.97) > organism_name:higher_rank(0.98)",
+    "Larval diet": "cell_shape:everyday_words(0.97) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Body size (ITS,mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Wintering stage": "cell_shape:numbers_with_text(0.84) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Voltinism": "cell_shape:numbers_with_text(0.78) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Nest-building material": "cell_shape:everyday_words(0.88) > kind:organism_property(0.99) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.9,
+   "calls": 6
+  },
+  {
+   "table": "OsorioCanadas2018#10",
+   "headers": [
+    "Parasitoid species",
+    "Order / Infraclass",
+    "Parasitic behaviour",
+    "Body size length (mm)",
+    "Wintering stage",
+    "Voltinism",
+    "Gregariousness"
+   ],
+   "labels": {
+    "Parasitoid species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Order / Infraclass": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Parasitic behaviour": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ],
+    "Body size length (mm)": [
+     "measurementType",
+     "89% (species,value) pairs in GT"
+    ],
+    "Wintering stage": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ],
+    "Voltinism": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ],
+    "Gregariousness": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Parasitoid species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Order / Infraclass": [
+      "verbatimIdentification",
+      0.91
+     ],
+     "Parasitic behaviour": [
+      "measurementType",
+      0.845
+     ],
+     "Body size length (mm)": [
+      "measurementType",
+      0.988
+     ],
+     "Wintering stage": [
+      "measurementType",
+      0.97
+     ],
+     "Voltinism": [
+      "measurementType",
+      0.749
+     ],
+     "Gregariousness": [
+      "measurementType",
+      0.972
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Parasitoid species": "table:organism_column(1.00)",
+    "Order / Infraclass": "cell_shape:single_latin_words(0.98) > is_taxon:yes(0.98) > organism_name:higher_rank(0.95)",
+    "Parasitic behaviour": "cell_shape:everyday_words(0.86) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Body size length (mm)": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Wintering stage": "cell_shape:everyday_words(0.97) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Voltinism": "cell_shape:everyday_words(0.75) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Gregariousness": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.5,
+   "calls": 6
+  }
+ ],
+ "Dejean2019": [
+  {
+   "table": "Dejean2019#1",
+   "headers": [
+    "Ant species",
+    "Occurrences",
+    "Frequency on trees",
+    "Nesting habits",
+    "(no name, column 4)"
+   ],
+   "labels": {
+    "Ant species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Occurrences": [
+     "sampleSizeValue",
+     "100% (species,sampleSizeValue) pairs in GT"
+    ],
+    "Frequency on trees": [
+     "none",
+     "pairs 0%"
+    ],
+    "Nesting habits": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "(no name, column 4)": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Ant species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Occurrences": [
+      "sampleSizeValue",
+      0.888
+     ],
+     "Frequency on trees": [
+      "none",
+      0.519
+     ],
+     "Nesting habits": [
+      "measurementType",
+      0.989
+     ],
+     "(no name, column 4)": [
+      "verbatimIdentification",
+      0.998
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Ant species": "table:organism_column(1.00)",
+    "Occurrences": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:sample_size(0.89)",
+    "Frequency on trees": "cell_shape:numbers_with_text(0.96) > kind:counts_or_statistics(0.90) > counts_or_statistics:abundance(0.60)",
+    "Nesting habits": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "(no name, column 4)": "cell_shape:author_year(1.00)"
+   },
+   "secs": 6.5,
+   "calls": 6
+  },
+  {
+   "table": "Dejean2019#2",
+   "headers": [
+    "(no name, column 0)",
+    "(no name, column 1)",
+    "Frequency",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 1)": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Frequency": [
+     "none",
+     "pairs 0%"
+    ],
+    "1": [
+     "none",
+     "pairs 0%"
+    ],
+    "2": [
+     "none",
+     "pairs 0%"
+    ],
+    "3": [
+     "none",
+     "pairs 0%"
+    ],
+    "4": [
+     "none",
+     "pairs 0%"
+    ],
+    "5": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 1)": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "(no name, column 0)": [
+      "none",
+      0.391
+     ],
+     "Frequency": [
+      "none",
+      0.841
+     ],
+     "1": [
+      "measurementType",
+      0.903
+     ],
+     "2": [
+      "measurementType",
+      0.556
+     ],
+     "3": [
+      "measurementType",
+      0.71
+     ],
+     "4": [
+      "measurementType",
+      0.679
+     ],
+     "5": [
+      "measurementType",
+      0.678
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "(no name, column 1)": "table:organism_column(1.00)",
+    "(no name, column 0)": "code:numeric(1.00) > kind:counts_or_statistics(0.64) > counts_or_statistics:abundance(0.61)",
+    "Frequency": "cell_shape:numbers_with_text(0.88) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.97)",
+    "1": "cell_shape:codes(0.99) > kind:organism_property(0.91) > organism_property:by table kind organism_traits",
+    "2": "cell_shape:codes(0.91) > kind:organism_property(0.61) > organism_property:by table kind organism_traits",
+    "3": "cell_shape:codes(0.84) > kind:organism_property(0.84) > organism_property:by table kind organism_traits",
+    "4": "code:numeric(1.00) > kind:organism_property(0.68) > organism_property:by table kind organism_traits",
+    "5": "code:numeric(1.00) > kind:organism_property(0.68) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.2,
+   "calls": 6
+  }
+ ],
+ "Attiwilli2022": [
+  {
+   "table": "Attiwilli2022#0",
+   "headers": [
+    "(no name, column 0)",
+    "Ecotone",
+    "Forest",
+    "Open",
+    "Total"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Ecotone": [
+     "none",
+     "pairs 0%"
+    ],
+    "Forest": [
+     "none",
+     "pairs 0%"
+    ],
+    "Open": [
+     "none",
+     "pairs 0%"
+    ],
+    "Total": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Ecotone": [
+      "none",
+      0.973
+     ],
+     "Forest": [
+      "none",
+      0.997
+     ],
+     "Open": [
+      "none",
+      0.997
+     ],
+     "Total": [
+      "none",
+      0.995
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "(no name, column 0)": "table:organism_column(1.00)",
+    "Ecotone": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(1.00)",
+    "Forest": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Open": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Total": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)"
+   },
+   "secs": 6.4,
+   "calls": 3
+  },
+  {
+   "table": "Attiwilli2022#1",
+   "headers": [
+    "(no name, column 0)",
+    "Estimate mean ± SE",
+    "t-statistic",
+    "p"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "57% GT species"
+    ],
+    "Estimate mean ± SE": [
+     "none",
+     "pairs 0%"
+    ],
+    "t-statistic": [
+     "none",
+     "pairs 0%"
+    ],
+    "p": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.997
+     ],
+     "Estimate mean ± SE": [
+      "none",
+      0.948
+     ],
+     "t-statistic": [
+      "none",
+      0.996
+     ],
+     "p": [
+      "none",
+      0.995
+     ]
+    }
+   },
+   "context": [
+    "Section labels, each heading the rows below it (found in the table): 'Wing length Wing length Wing length Wing length' (row 9), 'Proboscis length Proboscis length Proboscis length Proboscis' (row 17)"
+   ],
+   "paths": {
+    "(no name, column 0)": "table:organism_column(1.00)",
+    "Estimate mean ± SE": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(0.96)",
+    "t-statistic": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "p": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)"
+   },
+   "secs": 5.3,
+   "calls": 3
+  },
+  {
+   "table": "Attiwilli2022#6",
+   "headers": [
+    "(no name, column 0)",
+    "(no name, column 1)",
+    "Body mass",
+    "Wing length",
+    "Proboscis length"
+   ],
+   "labels": {
+    "(no name, column 0)": [
+     "verbatimIdentification",
+     "83% GT species"
+    ],
+    "(no name, column 1)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Body mass": [
+     "measurementType",
+     "50% (species,value) pairs in GT"
+    ],
+    "Wing length": [
+     "measurementType",
+     "50% (species,value) pairs in GT"
+    ],
+    "Proboscis length": [
+     "measurementType",
+     "50% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "(no name, column 0)": [
+      "verbatimIdentification",
+      0.993
+     ],
+     "(no name, column 1)": [
+      "measurementValue",
+      0.519
+     ],
+     "Body mass": [
+      "measurementType",
+      0.986
+     ],
+     "Wing length": [
+      "measurementType",
+      0.994
+     ],
+     "Proboscis length": [
+      "measurementType",
+      0.994
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "(no name, column 0)": "table:organism_column(0.99)",
+    "(no name, column 1)": "cell_shape:everyday_words(0.61) > kind:counts_or_statistics(0.93) > counts_or_statistics:statistic_header(0.91)",
+    "Body mass": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Wing length": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Proboscis length": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits"
+   },
+   "secs": 6.2,
+   "calls": 5
+  }
+ ],
+ "Oliveira2022": [
+  {
+   "table": "Oliveira2022#2",
+   "headers": [
+    "Ant species",
+    "Trait",
+    "Response variables",
+    "Explanatory variables",
+    "AICc",
+    "Delta AICc",
+    "Weight"
+   ],
+   "labels": {
+    "Ant species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Trait": [
+     "none",
+     "pairs 0%"
+    ],
+    "Response variables": [
+     "none",
+     "pairs 0%"
+    ],
+    "Explanatory variables": [
+     "none",
+     "pairs 0%"
+    ],
+    "AICc": [
+     "none",
+     "pairs 0%"
+    ],
+    "Delta AICc": [
+     "none",
+     "pairs 0%"
+    ],
+    "Weight": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Ant species": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Trait": [
+      "measurementType",
+      0.927
+     ],
+     "Response variables": [
+      "measurementValue",
+      0.868
+     ],
+     "Explanatory variables": [
+      "measurementType",
+      0.627
+     ],
+     "AICc": [
+      "none",
+      0.995
+     ],
+     "Delta AICc": [
+      "none",
+      0.989
+     ],
+     "Weight": [
+      "none",
+      0.984
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Ant species": "table:organism_column(1.00)",
+    "Trait": "cell_shape:everyday_words(0.96) > kind:organism_property(0.97) > organism_property:by table kind statistics",
+    "Response variables": "cell_shape:everyday_words(0.99) > kind:counts_or_statistics(0.97) > counts_or_statistics:statistic_header(0.90)",
+    "Explanatory variables": "cell_shape:everyday_words(0.66) > kind:organism_property(0.96) > organism_property:by table kind statistics",
+    "AICc": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:test_result(1.00)",
+    "Delta AICc": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(0.99)",
+    "Weight": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:test_result(0.99)"
+   },
+   "secs": 9.8,
+   "calls": 6
+  },
+  {
+   "table": "Oliveira2022#14",
+   "headers": [
+    "Ant species",
+    "Plot",
+    "GMDI",
+    "DH",
+    "Traits CL M",
+    "Traits CL V",
+    "Traits ML M",
+    "Traits ML V",
+    "Traits WL M",
+    "Traits WL V",
+    "Traits IOW M",
+    "Traits IOW V",
+    "Traits EL M",
+    "Traits EL V",
+    "Traits P M",
+    "Traits P V",
+    "Traits LEG M",
+    "Traits LEG V",
+    "Traits AL M",
+    "Traits AL V"
+   ],
+   "labels": {
+    "Ant species": [
+     "verbatimIdentification",
+     "80% GT species"
+    ],
+    "Plot": [
+     "none",
+     "pairs 0%"
+    ],
+    "GMDI": [
+     "none",
+     "pairs 0%"
+    ],
+    "DH": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits CL M": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Traits CL V": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits ML M": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Traits ML V": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits WL M": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ],
+    "Traits WL V": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits IOW M": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Traits IOW V": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits EL M": [
+     "measurementType",
+     "98% (species,value) pairs in GT"
+    ],
+    "Traits EL V": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits P M": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Traits P V": [
+     "none",
+     "pairs 2%"
+    ],
+    "Traits LEG M": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Traits LEG V": [
+     "none",
+     "pairs 0%"
+    ],
+    "Traits AL M": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Traits AL V": [
+     "none",
+     "pairs 3%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Ant species": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Plot": [
+      "verbatimLocality",
+      0.924
+     ],
+     "GMDI": [
+      "measurementType",
+      0.972
+     ],
+     "DH": [
+      "measurementType",
+      0.643
+     ],
+     "Traits CL M": [
+      "measurementType",
+      0.99
+     ],
+     "Traits CL V": [
+      "measurementType",
+      0.983
+     ],
+     "Traits ML M": [
+      "measurementType",
+      0.992
+     ],
+     "Traits ML V": [
+      "measurementType",
+      0.982
+     ],
+     "Traits WL M": [
+      "measurementType",
+      0.988
+     ],
+     "Traits WL V": [
+      "measurementType",
+      0.935
+     ],
+     "Traits IOW M": [
+      "measurementType",
+      0.984
+     ],
+     "Traits IOW V": [
+      "measurementType",
+      0.925
+     ],
+     "Traits EL M": [
+      "measurementType",
+      0.992
+     ],
+     "Traits EL V": [
+      "measurementType",
+      0.974
+     ],
+     "Traits P M": [
+      "measurementType",
+      0.948
+     ],
+     "Traits P V": [
+      "measurementType",
+      0.923
+     ],
+     "Traits LEG M": [
+      "measurementType",
+      0.995
+     ],
+     "Traits LEG V": [
+      "measurementType",
+      0.98
+     ],
+     "Traits AL M": [
+      "measurementType",
+      0.997
+     ],
+     "Traits AL V": [
+      "measurementType",
+      0.987
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Ant species": "table:organism_column(1.00)",
+    "Plot": "cell_shape:codes(0.93) > kind:record_context(0.99) > record_context:sampling_place(1.00)",
+    "GMDI": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:by table kind specimens",
+    "DH": "code:numeric(1.00) > kind:organism_property(0.64) > organism_property:by table kind specimens",
+    "Traits CL M": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Traits CL V": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind specimens",
+    "Traits ML M": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Traits ML V": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind specimens",
+    "Traits WL M": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Traits WL V": "code:numeric(1.00) > kind:organism_property(0.93) > organism_property:by table kind specimens",
+    "Traits IOW M": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind specimens",
+    "Traits IOW V": "code:numeric(1.00) > kind:organism_property(0.92) > organism_property:by table kind specimens",
+    "Traits EL M": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Traits EL V": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:by table kind specimens",
+    "Traits P M": "code:numeric(1.00) > kind:organism_property(0.95) > organism_property:by table kind specimens",
+    "Traits P V": "code:numeric(1.00) > kind:organism_property(0.92) > organism_property:by table kind specimens",
+    "Traits LEG M": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens",
+    "Traits LEG V": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind specimens",
+    "Traits AL M": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind specimens",
+    "Traits AL V": "code:numeric(0.98) > kind:organism_property(0.99) > organism_property:by table kind specimens"
+   },
+   "secs": 15.5,
+   "calls": 7
+  }
+ ],
+ "Korosi2022": [
+  {
+   "table": "Korosi2022#5",
+   "headers": [
+    "Species",
+    "Mobility",
+    "Larval diet",
+    "Overw. stage",
+    "Voltinism",
+    "HAT",
+    "HAST",
+    "Abbreviation",
+    "Occ.",
+    "Ab."
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Mobility": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Larval diet": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Overw. stage": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Voltinism": [
+     "measurementType",
+     "98% (species,value) pairs in GT"
+    ],
+    "HAT": [
+     "measurementType",
+     "98% (species,value) pairs in GT"
+    ],
+    "HAST": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Abbreviation": [
+     "none",
+     "pairs 0%"
+    ],
+    "Occ.": [
+     "unsure",
+     "pairs 27%, header match False"
+    ],
+    "Ab.": [
+     "none",
+     "pairs 11%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "Mobility": [
+      "measurementType",
+      0.961
+     ],
+     "Larval diet": [
+      "measurementType",
+      0.76
+     ],
+     "Overw. stage": [
+      "measurementType",
+      0.984
+     ],
+     "Voltinism": [
+      "measurementType",
+      0.991
+     ],
+     "HAT": [
+      "measurementType",
+      0.896
+     ],
+     "HAST": [
+      "measurementType",
+      0.932
+     ],
+     "Abbreviation": [
+      "none",
+      0.872
+     ],
+     "Occ.": [
+      "sampleSizeValue",
+      0.833
+     ],
+     "Ab.": [
+      "none",
+      0.941
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Mobility": "code:numeric(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits",
+    "Larval diet": "cell_shape:everyday_words(0.77) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Overw. stage": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Voltinism": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "HAT": "code:numeric(1.00) > kind:organism_property(0.90) > organism_property:by table kind organism_traits",
+    "HAST": "code:numeric(1.00) > kind:organism_property(0.93) > organism_property:by table kind organism_traits",
+    "Abbreviation": "cell_shape:codes(1.00) > kind:other(0.87) > other:taxon_code(1.00)",
+    "Occ.": "code:numeric(1.00) > kind:counts_or_statistics(0.88) > counts_or_statistics:sample_size(0.95)",
+    "Ab.": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.96)"
+   },
+   "secs": 10.6,
+   "calls": 6
+  }
+ ],
+ "Habustova2017": [
+  {
+   "table": "Habustova2017#8",
+   "headers": [
+    "Species",
+    "Total Abundance",
+    "Body Size",
+    "Habitat Affinity",
+    "Humidity Affinity",
+    "Breeding Period",
+    "Food Specialization"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "94% GT species"
+    ],
+    "Total Abundance": [
+     "none",
+     "pairs 0%"
+    ],
+    "Body Size": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Habitat Affinity": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Humidity Affinity": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Breeding Period": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Food Specialization": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Total Abundance": [
+      "none",
+      0.994
+     ],
+     "Body Size": [
+      "measurementType",
+      0.795
+     ],
+     "Habitat Affinity": [
+      "measurementType",
+      0.983
+     ],
+     "Humidity Affinity": [
+      "measurementType",
+      0.498
+     ],
+     "Breeding Period": [
+      "measurementType",
+      0.976
+     ],
+     "Food Specialization": [
+      "measurementType",
+      0.612
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Total Abundance": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Body Size": "cell_shape:everyday_words(0.80) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Habitat Affinity": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Humidity Affinity": "cell_shape:single_latin_words(0.50) > is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Breeding Period": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Food Specialization": "cell_shape:everyday_words(0.61) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 11.7,
+   "calls": 7
+  },
+  {
+   "table": "Habustova2017#11",
+   "headers": [
+    "Tribe",
+    "Species",
+    "Localities South Bohemia 1",
+    "Localities South Bohemia 2",
+    "Localities South Bohemia 3",
+    "Localities Central Bohemia",
+    "Localities western Slovakia",
+    "Total"
+   ],
+   "labels": {
+    "Tribe": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Localities South Bohemia 1": [
+     "none",
+     "pairs 0%"
+    ],
+    "Localities South Bohemia 2": [
+     "none",
+     "pairs 0%"
+    ],
+    "Localities South Bohemia 3": [
+     "none",
+     "pairs 0%"
+    ],
+    "Localities Central Bohemia": [
+     "none",
+     "pairs 0%"
+    ],
+    "Localities western Slovakia": [
+     "none",
+     "pairs 0%"
+    ],
+    "Total": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "Tribe": [
+      "verbatimIdentification",
+      0.911
+     ],
+     "Localities South Bohemia 1": [
+      "none",
+      0.995
+     ],
+     "Localities South Bohemia 2": [
+      "none",
+      0.997
+     ],
+     "Localities South Bohemia 3": [
+      "none",
+      0.997
+     ],
+     "Localities Central Bohemia": [
+      "none",
+      0.997
+     ],
+     "Localities western Slovakia": [
+      "none",
+      0.989
+     ],
+     "Total": [
+      "none",
+      0.995
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Tribe": "cell_shape:single_latin_words(1.00) > is_taxon:yes(0.99) > organism_name:higher_rank(0.92)",
+    "Localities South Bohemia 1": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Localities South Bohemia 2": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Localities South Bohemia 3": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Localities Central Bohemia": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Localities western Slovakia": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(0.99)",
+    "Total": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)"
+   },
+   "secs": 11.1,
+   "calls": 6
+  },
+  {
+   "table": "Habustova2017#14",
+   "headers": [
+    "Tribe",
+    "Species",
+    "Incidence",
+    "Body size",
+    "Habitat affinity",
+    "Humidity affinity",
+    "Breeding period",
+    "Food specialization"
+   ],
+   "labels": {
+    "Tribe": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Incidence": [
+     "none",
+     "pairs 0%"
+    ],
+    "Body size": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ],
+    "Habitat affinity": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Humidity affinity": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Breeding period": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Food specialization": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Tribe": [
+      "verbatimIdentification",
+      0.948
+     ],
+     "Incidence": [
+      "measurementType",
+      0.636
+     ],
+     "Body size": [
+      "measurementType",
+      0.968
+     ],
+     "Habitat affinity": [
+      "measurementType",
+      0.965
+     ],
+     "Humidity affinity": [
+      "measurementType",
+      0.9
+     ],
+     "Breeding period": [
+      "measurementType",
+      0.985
+     ],
+     "Food specialization": [
+      "measurementType",
+      0.994
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Tribe": "cell_shape:single_latin_words(0.99) > is_taxon:yes(0.98) > organism_name:higher_rank(0.97)",
+    "Incidence": "cell_shape:everyday_words(0.98) > kind:organism_property(0.65) > organism_property:by table kind organism_traits",
+    "Body size": "cell_shape:codes(0.99) > kind:organism_property(0.98) > organism_property:by table kind organism_traits",
+    "Habitat affinity": "cell_shape:everyday_words(0.97) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Humidity affinity": "cell_shape:single_latin_words(0.90) > is_taxon:no(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Breeding period": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Food specialization": "cell_shape:everyday_words(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 12.2,
+   "calls": 8
+  }
+ ],
+ "Derhe2016": [
+  {
+   "table": "Derhe2016#1",
+   "headers": [
+    "Species",
+    "Taxonomic authority",
+    "Abundance",
+    "Body mass (mg)",
+    "Behavioural guild",
+    "Diel activity",
+    "Diet preference",
+    "Diet breadth",
+    "Habitat preference"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Taxonomic authority": [
+     "verbatimIdentification",
+     "taxonomic rank column (identity)"
+    ],
+    "Abundance": [
+     "none",
+     "pairs 3%"
+    ],
+    "Body mass (mg)": [
+     "measurementType",
+     "97% (species,value) pairs in GT"
+    ],
+    "Behavioural guild": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Diel activity": [
+     "measurementType",
+     "74% (species,value) pairs in GT"
+    ],
+    "Diet preference": [
+     "measurementType",
+     "82% (species,value) pairs in GT"
+    ],
+    "Diet breadth": [
+     "none",
+     "pairs 0%"
+    ],
+    "Habitat preference": [
+     "measurementType",
+     "header names a GT trait; pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Taxonomic authority": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Abundance": [
+      "none",
+      0.992
+     ],
+     "Body mass (mg)": [
+      "measurementType",
+      0.998
+     ],
+     "Behavioural guild": [
+      "measurementType",
+      0.968
+     ],
+     "Diel activity": [
+      "measurementType",
+      0.984
+     ],
+     "Diet preference": [
+      "measurementType",
+      0.99
+     ],
+     "Diet breadth": [
+      "measurementType",
+      0.979
+     ],
+     "Habitat preference": [
+      "measurementType",
+      0.936
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "Taxonomic authority": "cell_shape:author_year(1.00)",
+    "Abundance": "code:numeric(1.00) > kind:counts_or_statistics(1.00) > counts_or_statistics:abundance(1.00)",
+    "Body mass (mg)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Behavioural guild": "cell_shape:everyday_words(0.97) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Diel activity": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Diet preference": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Diet breadth": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits",
+    "Habitat preference": "cell_shape:codes(0.95) > kind:organism_property(0.99) > organism_property:by table kind organism_traits"
+   },
+   "secs": 11.1,
+   "calls": 5
+  }
+ ],
+ "Wiescher2012": [
+  {
+   "table": "Wiescher2012#1",
+   "headers": [
+    "Species",
+    "HI",
+    "Mass (mg)",
+    "HW (mm)",
+    "HL (mm)",
+    "LL (mm)",
+    "RL",
+    "DI",
+    "FTL (°C)",
+    "LT (°C)",
+    "AIWLR (mg × h-1× cm-2)"
+   ],
+   "labels": {
+    "Species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "HI": [
+     "none",
+     "pairs 3%"
+    ],
+    "Mass (mg)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "HW (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "HL (mm)": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "LL (mm)": [
+     "measurementType",
+     "95% (species,value) pairs in GT"
+    ],
+    "RL": [
+     "measurementType",
+     "97% (species,value) pairs in GT"
+    ],
+    "DI": [
+     "measurementType",
+     "41% (species,value) pairs in GT"
+    ],
+    "FTL (°C)": [
+     "measurementType",
+     "43% (species,value) pairs in GT"
+    ],
+    "LT (°C)": [
+     "measurementType",
+     "43% (species,value) pairs in GT"
+    ],
+    "AIWLR (mg × h-1× cm-2)": [
+     "measurementType",
+     "41% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Species": [
+      "verbatimIdentification",
+      1.0
+     ],
+     "HI": [
+      "measurementType",
+      0.854
+     ],
+     "Mass (mg)": [
+      "measurementType",
+      1.0
+     ],
+     "HW (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "HL (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "LL (mm)": [
+      "measurementType",
+      0.999
+     ],
+     "RL": [
+      "measurementType",
+      0.992
+     ],
+     "DI": [
+      "measurementType",
+      0.859
+     ],
+     "FTL (°C)": [
+      "measurementType",
+      0.995
+     ],
+     "LT (°C)": [
+      "measurementType",
+      0.997
+     ],
+     "AIWLR (mg × h-1× cm-2)": [
+      "measurementType",
+      0.99
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Species": "table:organism_column(1.00)",
+    "HI": "code:numeric(1.00) > kind:organism_property(0.85) > organism_property:by table kind organism_traits",
+    "Mass (mg)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "HW (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "HL (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "LL (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "RL": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "DI": "code:numeric(1.00) > kind:organism_property(0.86) > organism_property:by table kind organism_traits",
+    "FTL (°C)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "LT (°C)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "AIWLR (mg × h-1× cm-2)": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits"
+   },
+   "secs": 7.8,
+   "calls": 3
+  }
+ ],
+ "Rebrina2022": [
+  {
+   "table": "Rebrina2022#2",
+   "headers": [
+    "No.",
+    "Taxon",
+    "Body Size (mm)",
+    "Femur Length: Body Size",
+    "Flight Capacity",
+    "Feeding Guild",
+    "Lifestyle",
+    "Moisture Preference"
+   ],
+   "labels": {
+    "No.": [
+     "none",
+     "pairs 0%"
+    ],
+    "Taxon": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Body Size (mm)": [
+     "measurementType",
+     "97% (species,value) pairs in GT"
+    ],
+    "Femur Length: Body Size": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Flight Capacity": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Feeding Guild": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Lifestyle": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "Moisture Preference": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Taxon": [
+      "verbatimIdentification",
+      0.999
+     ],
+     "No.": [
+      "none",
+      0.938
+     ],
+     "Body Size (mm)": [
+      "measurementType",
+      0.995
+     ],
+     "Femur Length: Body Size": [
+      "measurementType",
+      0.994
+     ],
+     "Flight Capacity": [
+      "measurementType",
+      0.991
+     ],
+     "Feeding Guild": [
+      "measurementType",
+      0.994
+     ],
+     "Lifestyle": [
+      "measurementType",
+      0.937
+     ],
+     "Moisture Preference": [
+      "measurementType",
+      0.979
+     ]
+    }
+   },
+   "context": [
+    "Section labels, each heading the rows below it (found in the table): 'Gryllidae Laicharting, 1781 Gryllidae Laicharting, 1781 Gryl' (row 21), 'Rhaphidophoridae Walker, 1869 Rhaphidophoridae Walker, 1869 ' (row 24), 'Tetrigidae Rambur, 1838 Tetrigidae Rambur, 1838 Tetrigidae R' (row 26), 'Tettigoniidae Krauss, 1902 Tettigoniidae Krauss, 1902 Tettig' (row 29)"
+   ],
+   "paths": {
+    "Taxon": "table:organism_column(1.00)",
+    "No.": "code:numeric(1.00) > kind:other(0.94) > other:bookkeeping(0.99)",
+    "Body Size (mm)": "code:numeric(1.00) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Femur Length: Body Size": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Flight Capacity": "cell_shape:everyday_words(1.00) > kind:organism_property(0.99) > organism_property:by table kind organism_traits",
+    "Feeding Guild": "cell_shape:everyday_words(0.99) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Lifestyle": "cell_shape:everyday_words(0.94) > kind:organism_property(1.00) > organism_property:by table kind organism_traits",
+    "Moisture Preference": "cell_shape:everyday_words(0.98) > kind:organism_property(1.00) > organism_property:by table kind organism_traits"
+   },
+   "secs": 9.3,
+   "calls": 5
+  }
+ ],
+ "Figueroa2021": [
+  {
+   "table": "Figueroa2021#1",
+   "headers": [
+    "Bee species",
+    "Plant Family",
+    "n"
+   ],
+   "labels": {
+    "Bee species": [
+     "verbatimIdentification",
+     "100% GT species"
+    ],
+    "Plant Family": [
+     "none",
+     "pairs 0%"
+    ],
+    "n": [
+     "none",
+     "pairs 3%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Bee species": [
+      "verbatimIdentification",
+      0.998
+     ],
+     "Plant Family": [
+      "measurementType",
+      0.759
+     ],
+     "n": [
+      "sampleSizeValue",
+      0.991
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Bee species": "table:organism_column(1.00)",
+    "Plant Family": "cell_shape:single_latin_words(1.00) > is_taxon:no(0.89) > kind:organism_property(0.85) > organism_property:by table kind organism_traits",
+    "n": "code:numeric(1.00) > kind:counts_or_statistics(0.99) > counts_or_statistics:sample_size(1.00)"
+   },
+   "secs": 4.8,
+   "calls": 6
+  }
+ ],
+ "Tsai2020": [
+  {
+   "table": "Tsai2020#1",
+   "headers": [
+    "Mt. Hehuan month",
+    "ele",
+    "amount",
+    "(no name, column 3)",
+    "Mt. Lala month",
+    "ele #2",
+    "amount #2",
+    "(no name, column 7)",
+    "Wulai month",
+    "ele #3",
+    "amount #3",
+    "(no name, column 11)",
+    "Amami Oshima month",
+    "ele #4",
+    "amount #4",
+    "(no name, column 15)",
+    "Mt. Jiajin month",
+    "ele #5",
+    "amount #5"
+   ],
+   "labels": {
+    "Mt. Hehuan month": [
+     "none",
+     "pairs 9%"
+    ],
+    "ele": [
+     "none",
+     "pairs 0%"
+    ],
+    "amount": [
+     "measurementType",
+     "74% (species,value) pairs in GT"
+    ],
+    "(no name, column 3)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Mt. Lala month": [
+     "none",
+     "pairs 0%"
+    ],
+    "ele #2": [
+     "none",
+     "pairs 0%"
+    ],
+    "amount #2": [
+     "measurementType",
+     "75% (species,value) pairs in GT"
+    ],
+    "(no name, column 7)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Wulai month": [
+     "none",
+     "pairs 8%"
+    ],
+    "ele #3": [
+     "none",
+     "pairs 0%"
+    ],
+    "amount #3": [
+     "measurementType",
+     "60% (species,value) pairs in GT"
+    ],
+    "(no name, column 11)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Amami Oshima month": [
+     "unsure",
+     "pairs 22%, header match False"
+    ],
+    "ele #4": [
+     "none",
+     "pairs 9%"
+    ],
+    "amount #4": [
+     "unsure",
+     "pairs 35%, header match False"
+    ],
+    "(no name, column 15)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Mt. Jiajin month": [
+     "unsure",
+     "pairs 22%, header match False"
+    ],
+    "ele #5": [
+     "none",
+     "pairs 0%"
+    ],
+    "amount #5": [
+     "measurementType",
+     "76% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "Mt. Hehuan month": [
+      "verbatimEventDate",
+      0.746
+     ],
+     "ele": [
+      "none",
+      0.88
+     ],
+     "amount": [
+      "none",
+      0.92
+     ],
+     "(no name, column 3)": [
+      "none",
+      0.326
+     ],
+     "Mt. Lala month": [
+      "verbatimLocality",
+      0.647
+     ],
+     "ele #2": [
+      "measurementType",
+      0.857
+     ],
+     "amount #2": [
+      "none",
+      0.897
+     ],
+     "(no name, column 7)": [
+      "none",
+      0.435
+     ],
+     "Wulai month": [
+      "verbatimEventDate",
+      0.676
+     ],
+     "ele #3": [
+      "none",
+      0.966
+     ],
+     "amount #3": [
+      "none",
+      0.923
+     ],
+     "(no name, column 11)": [
+      "none",
+      0.183
+     ],
+     "Amami Oshima month": [
+      "verbatimEventDate",
+      0.831
+     ],
+     "ele #4": [
+      "none",
+      0.966
+     ],
+     "amount #4": [
+      "none",
+      0.93
+     ],
+     "(no name, column 15)": [
+      "none",
+      0.192
+     ],
+     "Mt. Jiajin month": [
+      "verbatimEventDate",
+      0.489
+     ],
+     "ele #5": [
+      "none",
+      0.923
+     ],
+     "amount #5": [
+      "none",
+      0.906
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "Mt. Hehuan month": "code:numeric(1.00) > kind:record_context(0.92) > record_context:sampling_time(0.81)",
+    "ele": "code:numeric(1.00) > kind:counts_or_statistics(0.90) > counts_or_statistics:abundance(0.98)",
+    "amount": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.94)",
+    "(no name, column 3)": "cell_shape:codes(0.51) > kind:other(0.93) > other:bookkeeping(0.69)",
+    "Mt. Lala month": "code:numeric(1.00) > kind:record_context(0.90) > record_context:sampling_place(0.72)",
+    "ele #2": "code:numeric(1.00) > kind:organism_property(0.86) > organism_property:by table kind counts",
+    "amount #2": "code:numeric(1.00) > kind:counts_or_statistics(0.97) > counts_or_statistics:abundance(0.93)",
+    "(no name, column 7)": "cell_shape:codes(0.70) > kind:other(0.78) > other:bookkeeping(0.80)",
+    "Wulai month": "code:numeric(1.00) > kind:record_context(0.83) > record_context:sampling_time(0.81)",
+    "ele #3": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.99)",
+    "amount #3": "code:numeric(1.00) > kind:counts_or_statistics(0.96) > counts_or_statistics:abundance(0.96)",
+    "(no name, column 11)": "cell_shape:codes(0.64) > kind:other(0.58) > other:bookkeeping(0.49)",
+    "Amami Oshima month": "code:numeric(1.00) > kind:record_context(0.87) > record_context:sampling_time(0.96)",
+    "ele #4": "code:numeric(1.00) > kind:counts_or_statistics(0.98) > counts_or_statistics:abundance(0.98)",
+    "amount #4": "code:numeric(1.00) > kind:counts_or_statistics(0.95) > counts_or_statistics:abundance(0.98)",
+    "(no name, column 15)": "cell_shape:codes(0.60) > kind:other(0.64) > other:bookkeeping(0.50)",
+    "Mt. Jiajin month": "code:numeric(1.00) > kind:record_context(0.57) > record_context:sampling_time(0.86)",
+    "ele #5": "code:numeric(1.00) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.98)",
+    "amount #5": "code:numeric(1.00) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.96)"
+   },
+   "secs": 33.2,
+   "calls": 11
+  },
+  {
+   "table": "Tsai2020#2",
+   "headers": [
+    "a. Mt. Hehuan Plot",
+    "Set.Year",
+    "Set.Month",
+    "Set.Date",
+    "Tmean",
+    "NN",
+    "(no name, column 6)",
+    "b. Mt. Mt. Lala Plot",
+    "Set.Year #2",
+    "Set.Month #2",
+    "Set.Date #2",
+    "Tmean #2",
+    "NN #2",
+    "(no name, column 13)",
+    "(no name, column 14)",
+    "Set.Year #3",
+    "Set.Month #3",
+    "Set.Date #3",
+    "Tmean #3",
+    "NN #3",
+    "(no name, column 20)",
+    "(no name, column 21)",
+    "Set.Year #4",
+    "Set.Month #4",
+    "Set.Date #4",
+    "Tmean #4",
+    "NN #4",
+    "(no name, column 27)",
+    "e. Mt. Jiain Plot",
+    "Set.Year #5",
+    "Set.Month #5",
+    "Set.Date #5",
+    "Tmean #5",
+    "NN #5",
+    "(no name, column 34)",
+    "number",
+    "population",
+    "temperature",
+    "T_after"
+   ],
+   "labels": {
+    "a. Mt. Hehuan Plot": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Year": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Month": [
+     "none",
+     "pairs 11%"
+    ],
+    "Set.Date": [
+     "none",
+     "pairs 0%"
+    ],
+    "Tmean": [
+     "none",
+     "pairs 0%"
+    ],
+    "NN": [
+     "measurementType",
+     "76% (species,value) pairs in GT"
+    ],
+    "(no name, column 6)": [
+     "none",
+     "pairs 0%"
+    ],
+    "b. Mt. Mt. Lala Plot": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Year #2": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Month #2": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Date #2": [
+     "none",
+     "pairs 12%"
+    ],
+    "Tmean #2": [
+     "none",
+     "pairs 0%"
+    ],
+    "NN #2": [
+     "measurementType",
+     "79% (species,value) pairs in GT"
+    ],
+    "(no name, column 13)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 14)": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Year #3": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Month #3": [
+     "none",
+     "pairs 10%"
+    ],
+    "Set.Date #3": [
+     "none",
+     "pairs 0%"
+    ],
+    "Tmean #3": [
+     "none",
+     "pairs 0%"
+    ],
+    "NN #3": [
+     "measurementType",
+     "75% (species,value) pairs in GT"
+    ],
+    "(no name, column 20)": [
+     "none",
+     "pairs 0%"
+    ],
+    "(no name, column 21)": [
+     "none",
+     "pairs 1%"
+    ],
+    "Set.Year #4": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Month #4": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Date #4": [
+     "none",
+     "pairs 0%"
+    ],
+    "Tmean #4": [
+     "none",
+     "pairs 0%"
+    ],
+    "NN #4": [
+     "measurementType",
+     "79% (species,value) pairs in GT"
+    ],
+    "(no name, column 27)": [
+     "none",
+     "pairs 0%"
+    ],
+    "e. Mt. Jiain Plot": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Year #5": [
+     "none",
+     "pairs 0%"
+    ],
+    "Set.Month #5": [
+     "none",
+     "pairs 11%"
+    ],
+    "Set.Date #5": [
+     "measurementType",
+     "86% (species,value) pairs in GT"
+    ],
+    "Tmean #5": [
+     "none",
+     "pairs 0%"
+    ],
+    "NN #5": [
+     "measurementType",
+     "76% (species,value) pairs in GT"
+    ],
+    "(no name, column 34)": [
+     "none",
+     "pairs 0%"
+    ],
+    "number": [
+     "none",
+     "pairs 0%"
+    ],
+    "population": [
+     "none",
+     "pairs 0%"
+    ],
+    "temperature": [
+     "none",
+     "pairs 0%"
+    ],
+    "T_after": [
+     "none",
+     "pairs 0%"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "a. Mt. Hehuan Plot": [
+      "verbatimLocality",
+      0.36
+     ],
+     "Set.Year": [
+      "verbatimEventDate",
+      0.713
+     ],
+     "Set.Month": [
+      "verbatimEventDate",
+      0.986
+     ],
+     "Set.Date": [
+      "verbatimEventDate",
+      0.99
+     ],
+     "Tmean": [
+      "none",
+      0.962
+     ],
+     "NN": [
+      "none",
+      0.461
+     ],
+     "(no name, column 6)": [
+      "measurementRemarks",
+      0.544
+     ],
+     "b. Mt. Mt. Lala Plot": [
+      "associatedOccurrences",
+      0.821
+     ],
+     "Set.Year #2": [
+      "verbatimEventDate",
+      0.966
+     ],
+     "Set.Month #2": [
+      "verbatimEventDate",
+      0.955
+     ],
+     "Set.Date #2": [
+      "verbatimEventDate",
+      0.983
+     ],
+     "Tmean #2": [
+      "none",
+      0.956
+     ],
+     "NN #2": [
+      "none",
+      0.322
+     ],
+     "(no name, column 13)": [
+      "none",
+      0.593
+     ],
+     "(no name, column 14)": [
+      "associatedOccurrences",
+      0.494
+     ],
+     "Set.Year #3": [
+      "verbatimEventDate",
+      0.963
+     ],
+     "Set.Month #3": [
+      "verbatimEventDate",
+      0.973
+     ],
+     "Set.Date #3": [
+      "verbatimEventDate",
+      0.951
+     ],
+     "Tmean #3": [
+      "none",
+      0.92
+     ],
+     "NN #3": [
+      "none",
+      0.338
+     ],
+     "(no name, column 20)": [
+      "none",
+      0.193
+     ],
+     "(no name, column 21)": [
+      "associatedOccurrences",
+      0.063
+     ],
+     "Set.Year #4": [
+      "verbatimEventDate",
+      0.967
+     ],
+     "Set.Month #4": [
+      "verbatimEventDate",
+      0.969
+     ],
+     "Set.Date #4": [
+      "verbatimEventDate",
+      0.939
+     ],
+     "Tmean #4": [
+      "none",
+      0.84
+     ],
+     "NN #4": [
+      "none",
+      0.265
+     ],
+     "(no name, column 27)": [
+      "none",
+      0.159
+     ],
+     "e. Mt. Jiain Plot": [
+      "verbatimLocality",
+      0.316
+     ],
+     "Set.Year #5": [
+      "verbatimEventDate",
+      0.953
+     ],
+     "Set.Month #5": [
+      "verbatimEventDate",
+      0.942
+     ],
+     "Set.Date #5": [
+      "verbatimEventDate",
+      0.716
+     ],
+     "Tmean #5": [
+      "none",
+      0.92
+     ],
+     "NN #5": [
+      "sex",
+      0.205
+     ],
+     "(no name, column 34)": [
+      "none",
+      0.265
+     ],
+     "number": [
+      "associatedOccurrences",
+      0.447
+     ],
+     "population": [
+      "verbatimLocality",
+      0.931
+     ],
+     "temperature": [
+      "measurementType",
+      0.386
+     ],
+     "T_after": [
+      "none",
+      0.48
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "a. Mt. Hehuan Plot": "cell_shape:latin_binomials(0.52) > organism_name:not_a_name(0.82) > kind:record_context(0.85) > record_context:sampling_place(1.00)",
+    "Set.Year": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.73)",
+    "Set.Month": "code:numeric(1.00) > kind:record_context(0.99) > record_context:sampling_time(1.00)",
+    "Set.Date": "code:numeric(1.00) > kind:record_context(0.99) > record_context:sampling_time(1.00)",
+    "Tmean": "code:numeric(1.00) > kind:record_context(0.97) > record_context:site_conditions(0.99)",
+    "NN": "code:numeric(1.00) > kind:record_context(0.81) > record_context:site_conditions(0.57)",
+    "(no name, column 6)": "cell_shape:codes(0.98) > kind:other(0.94) > other:remarks(0.59)",
+    "b. Mt. Mt. Lala Plot": "cell_shape:codes(0.85) > kind:other(0.98) > other:record_ids(0.99)",
+    "Set.Year #2": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.98)",
+    "Set.Month #2": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.97)",
+    "Set.Date #2": "code:numeric(1.00) > kind:record_context(0.99) > record_context:sampling_time(0.99)",
+    "Tmean #2": "code:numeric(1.00) > kind:record_context(0.97) > record_context:site_conditions(0.99)",
+    "NN #2": "code:numeric(1.00) > kind:record_context(0.60) > record_context:site_conditions(0.53)",
+    "(no name, column 13)": "cell_shape:codes(0.73) > kind:other(0.93) > other:bookkeeping(0.87)",
+    "(no name, column 14)": "cell_shape:codes(0.95) > kind:other(0.57) > other:record_ids(0.92)",
+    "Set.Year #3": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.98)",
+    "Set.Month #3": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.99)",
+    "Set.Date #3": "code:numeric(1.00) > kind:record_context(0.96) > record_context:sampling_time(0.99)",
+    "Tmean #3": "code:numeric(1.00) > kind:record_context(0.93) > record_context:site_conditions(0.99)",
+    "NN #3": "code:numeric(1.00) > kind:record_context(0.75) > record_context:site_conditions(0.45)",
+    "(no name, column 20)": "cell_shape:codes(0.64) > kind:other(0.54) > other:bookkeeping(0.56)",
+    "(no name, column 21)": "cell_shape:latin_binomials(0.59) > organism_name:not_a_name(0.66) > kind:other(0.48) > other:record_ids(0.34)",
+    "Set.Year #4": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.98)",
+    "Set.Month #4": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.99)",
+    "Set.Date #4": "code:numeric(1.00) > kind:record_context(0.95) > record_context:sampling_time(0.98)",
+    "Tmean #4": "code:numeric(1.00) > kind:record_context(0.84) > record_context:site_conditions(1.00)",
+    "NN #4": "code:numeric(1.00) > kind:record_context(0.50) > record_context:site_conditions(0.53)",
+    "(no name, column 27)": "cell_shape:codes(0.52) > kind:other(0.68) > other:bookkeeping(0.45)",
+    "e. Mt. Jiain Plot": "cell_shape:everyday_words(0.72) > kind:record_context(0.53) > record_context:sampling_place(0.84)",
+    "Set.Year #5": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(0.97)",
+    "Set.Month #5": "code:numeric(1.00) > kind:record_context(0.96) > record_context:sampling_time(0.98)",
+    "Set.Date #5": "code:numeric(1.00) > kind:record_context(0.90) > record_context:sampling_time(0.80)",
+    "Tmean #5": "code:numeric(1.00) > kind:record_context(0.92) > record_context:site_conditions(1.00)",
+    "NN #5": "code:numeric(1.00) > kind:record_context(0.48) > record_context:sex(0.42)",
+    "(no name, column 34)": "cell_shape:numbers_with_text(0.57) > kind:other(0.66) > other:bookkeeping(0.71)",
+    "number": "cell_shape:numbers_with_text(0.46) > kind:other(0.99) > other:record_ids(0.99)",
+    "population": "cell_shape:everyday_words(0.98) > kind:record_context(0.96) > record_context:sampling_place(0.99)",
+    "temperature": "cell_shape:everyday_words(0.78) > kind:organism_property(0.49) > organism_property:by table kind specimens",
+    "T_after": "code:numeric(1.00) > kind:record_context(0.50) > record_context:site_conditions(0.96)"
+   },
+   "secs": 73.9,
+   "calls": 25
+  },
+  {
+   "table": "Tsai2020#4",
+   "headers": [
+    "a. population",
+    "experimental ID",
+    "photoperiod",
+    "bury or not"
+   ],
+   "labels": {
+    "a. population": [
+     "none",
+     "pairs 0%"
+    ],
+    "experimental ID": [
+     "none",
+     "pairs 0%"
+    ],
+    "photoperiod": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "bury or not": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "a. population": [
+      "verbatimLocality",
+      0.906
+     ],
+     "experimental ID": [
+      "none",
+      0.531
+     ],
+     "photoperiod": [
+      "sampleTreatment",
+      0.458
+     ],
+     "bury or not": [
+      "sampleTreatment",
+      0.326
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "a. population": "cell_shape:single_latin_words(0.94) > is_taxon:no(0.99) > kind:record_context(0.98) > record_context:sampling_place(1.00)",
+    "experimental ID": "cell_shape:codes(0.95) > kind:other(0.98) > other:bookkeeping(0.57)",
+    "photoperiod": "cell_shape:everyday_words(0.99) > kind:record_context(0.95) > record_context:treatment(0.48)",
+    "bury or not": "code:numeric(1.00) > kind:record_context(0.64) > record_context:treatment(0.51)"
+   },
+   "secs": 9.5,
+   "calls": 10
+  },
+  {
+   "table": "Tsai2020#5",
+   "headers": [
+    "b. beetle's ID",
+    "photoperiod",
+    "day after emergence",
+    "standardized ovary"
+   ],
+   "labels": {
+    "b. beetle's ID": [
+     "none",
+     "pairs 0%"
+    ],
+    "photoperiod": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "day after emergence": [
+     "unsure",
+     "pairs 18%, header match False"
+    ],
+    "standardized ovary": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "b. beetle's ID": [
+      "associatedOccurrences",
+      0.756
+     ],
+     "photoperiod": [
+      "sampleTreatment",
+      0.249
+     ],
+     "day after emergence": [
+      "verbatimEventDate",
+      0.585
+     ],
+     "standardized ovary": [
+      "measurementType",
+      0.992
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "b. beetle's ID": "cell_shape:codes(0.79) > kind:other(0.97) > other:record_ids(0.98)",
+    "photoperiod": "cell_shape:everyday_words(0.96) > kind:record_context(0.89) > record_context:treatment(0.29)",
+    "day after emergence": "code:numeric(1.00) > kind:record_context(0.73) > record_context:sampling_time(0.80)",
+    "standardized ovary": "code:numeric(1.00) > kind:organism_property(0.99) > organism_property:by table kind specimens"
+   },
+   "secs": 7.9,
+   "calls": 7
+  },
+  {
+   "table": "Tsai2020#6",
+   "headers": [
+    "c. nest",
+    "temperature",
+    "population",
+    "burying"
+   ],
+   "labels": {
+    "c. nest": [
+     "none",
+     "pairs 0%"
+    ],
+    "temperature": [
+     "none",
+     "pairs 0%"
+    ],
+    "population": [
+     "none",
+     "pairs 0%"
+    ],
+    "burying": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "c. nest": [
+      "associatedOccurrences",
+      0.69
+     ],
+     "temperature": [
+      "none",
+      0.899
+     ],
+     "population": [
+      "verbatimLocality",
+      0.767
+     ],
+     "burying": [
+      "measurementType",
+      0.95
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "c. nest": "cell_shape:codes(0.97) > kind:other(0.72) > other:record_ids(0.99)",
+    "temperature": "code:numeric(1.00) > kind:record_context(0.90) > record_context:site_conditions(1.00)",
+    "population": "cell_shape:everyday_words(0.92) > kind:record_context(0.84) > record_context:sampling_place(1.00)",
+    "burying": "code:numeric(1.00) > kind:organism_property(0.95) > organism_property:by table kind specimens"
+   },
+   "secs": 7.7,
+   "calls": 7
+  },
+  {
+   "table": "Tsai2020#7",
+   "headers": [
+    "a.b.c.d. Year_set",
+    "Month_set",
+    "Day_set",
+    "Plot",
+    "beetles' pop.",
+    "expplace",
+    "burying or not",
+    "breeding or not",
+    "(no name, column 8)",
+    "e.f.g.h Year_set",
+    "Month_set #2",
+    "Day_set #2",
+    "Plot #2",
+    "expplace #2",
+    "beetles' pop. #2",
+    "burying or not #2",
+    "breeding or not #2"
+   ],
+   "labels": {
+    "a.b.c.d. Year_set": [
+     "none",
+     "pairs 0%"
+    ],
+    "Month_set": [
+     "none",
+     "pairs 0%"
+    ],
+    "Day_set": [
+     "none",
+     "pairs 0%"
+    ],
+    "Plot": [
+     "none",
+     "pairs 0%"
+    ],
+    "beetles' pop.": [
+     "none",
+     "pairs 0%"
+    ],
+    "expplace": [
+     "none",
+     "pairs 0%"
+    ],
+    "burying or not": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "breeding or not": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "(no name, column 8)": [
+     "none",
+     "pairs 0%"
+    ],
+    "e.f.g.h Year_set": [
+     "none",
+     "pairs 0%"
+    ],
+    "Month_set #2": [
+     "none",
+     "pairs 5%"
+    ],
+    "Day_set #2": [
+     "unsure",
+     "pairs 16%, header match False"
+    ],
+    "Plot #2": [
+     "none",
+     "pairs 9%"
+    ],
+    "expplace #2": [
+     "none",
+     "pairs 0%"
+    ],
+    "beetles' pop. #2": [
+     "none",
+     "pairs 0%"
+    ],
+    "burying or not #2": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ],
+    "breeding or not #2": [
+     "measurementType",
+     "100% (species,value) pairs in GT"
+    ]
+   },
+   "pred": {
+    "head_v2": {
+     "a.b.c.d. Year_set": [
+      "verbatimEventDate",
+      0.908
+     ],
+     "Month_set": [
+      "verbatimEventDate",
+      0.973
+     ],
+     "Day_set": [
+      "verbatimEventDate",
+      0.969
+     ],
+     "Plot": [
+      "verbatimLocality",
+      0.801
+     ],
+     "beetles' pop.": [
+      "verbatimLocality",
+      0.473
+     ],
+     "expplace": [
+      "verbatimLocality",
+      0.859
+     ],
+     "burying or not": [
+      "measurementValue",
+      0.584
+     ],
+     "breeding or not": [
+      "measurementValue",
+      0.491
+     ],
+     "(no name, column 8)": [
+      "measurementRemarks",
+      0.182
+     ],
+     "e.f.g.h Year_set": [
+      "verbatimEventDate",
+      0.944
+     ],
+     "Month_set #2": [
+      "verbatimEventDate",
+      0.875
+     ],
+     "Day_set #2": [
+      "verbatimEventDate",
+      0.893
+     ],
+     "Plot #2": [
+      "verbatimLocality",
+      0.339
+     ],
+     "expplace #2": [
+      "verbatimLocality",
+      0.815
+     ],
+     "beetles' pop. #2": [
+      "verbatimLocality",
+      0.515
+     ],
+     "burying or not #2": [
+      "measurementValue",
+      0.608
+     ],
+     "breeding or not #2": [
+      "measurementType",
+      0.544
+     ]
+    }
+   },
+   "context": [],
+   "paths": {
+    "a.b.c.d. Year_set": "code:numeric(1.00) > kind:record_context(0.94) > record_context:sampling_time(0.97)",
+    "Month_set": "code:numeric(1.00) > kind:record_context(0.98) > record_context:sampling_time(1.00)",
+    "Day_set": "code:numeric(1.00) > kind:record_context(0.97) > record_context:sampling_time(1.00)",
+    "Plot": "cell_shape:everyday_words(0.94) > kind:record_context(0.86) > record_context:sampling_place(0.99)",
+    "beetles' pop.": "cell_shape:everyday_words(0.90) > kind:record_context(0.54) > record_context:sampling_place(0.97)",
+    "expplace": "cell_shape:everyday_words(0.94) > kind:record_context(0.92) > record_context:sampling_place(0.99)",
+    "burying or not": "code:numeric(1.00) > kind:organism_property(0.93) > organism_property:cells_are_values(0.63)",
+    "breeding or not": "code:numeric(1.00) > kind:organism_property(0.97) > organism_property:cells_are_values(0.51)",
+    "(no name, column 8)": "cell_shape:everyday_words(0.35) > kind:other(0.78) > other:remarks(0.66)",
+    "e.f.g.h Year_set": "code:numeric(1.00) > kind:record_context(0.95) > record_context:sampling_time(0.99)",
+    "Month_set #2": "code:numeric(1.00) > kind:record_context(0.88) > record_context:sampling_time(1.00)",
+    "Day_set #2": "code:numeric(1.00) > kind:record_context(0.90) > record_context:sampling_time(1.00)",
+    "Plot #2": "cell_shape:numbers_with_text(0.75) > kind:record_context(0.82) > record_context:sampling_place(0.55)",
+    "expplace #2": "cell_shape:everyday_words(0.84) > kind:record_context(0.97) > record_context:sampling_place(0.99)",
+    "beetles' pop. #2": "cell_shape:everyday_words(0.79) > kind:record_context(0.68) > record_context:sampling_place(0.96)",
+    "burying or not #2": "code:numeric(1.00) > kind:organism_property(0.94) > organism_property:cells_are_values(0.64)",
+    "breeding or not #2": "code:numeric(1.00) > kind:organism_property(0.98) > organism_property:header_names_property(0.56)"
+   },
+   "secs": 30.5,
+   "calls": 11
+  }
+ ]
+}

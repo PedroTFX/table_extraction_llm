@@ -1,0 +1,307 @@
+{
+ "_columns": [
+  [
+   28,
+   11,
+   "ActDay",
+   [
+    "1",
+    "0"
+   ]
+  ],
+  [
+   24,
+   14,
+   "Dispersaldisp",
+   [
+    "Hdisp",
+    "Ldisp"
+   ]
+  ],
+  [
+   25,
+   4,
+   "Stand. body size",
+   [
+    "1.33",
+    "-0.63",
+    "-0.52",
+    "1.36",
+    "-0.28",
+    "0.52",
+    "NA",
+    "-0.26",
+    "-0.21",
+    "-0.36",
+    "0.41",
+    "-0.5",
+    "1.02",
+    "-0.65",
+    "-0.67",
+    "-0.45",
+    "-0.62",
+    "-0.58",
+    "-0.41",
+    "3.75",
+    "-0.13",
+    "3.37",
+    "-0.61"
+   ]
+  ],
+  [
+   28,
+   5,
+   "FoodPI",
+   [
+    "1",
+    "0"
+   ]
+  ],
+  [
+   28,
+   10,
+   "IngestFood",
+   [
+    "CC",
+    "PS"
+   ]
+  ],
+  [
+   30,
+   4,
+   "bodysize",
+   [
+    "NA",
+    "7.00",
+    "19.17",
+    "3.94",
+    "3.64",
+    "2.43",
+    "1.94",
+    "2.68",
+    "1.12",
+    "3.45",
+    "3.71"
+   ]
+  ],
+  [
+   35,
+   14,
+   "Iridescence",
+   [
+    "1",
+    "0"
+   ]
+  ]
+ ],
+ "28:11": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u29"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.021,
+    "several": 0.016,
+    "none": 0.962
+   }
+  },
+  "header": "ActDay"
+ },
+ "24:14": {
+  "cells": {
+   "Hdisp": {
+    "term": "High dispersal ability (Hdisp)",
+    "parts": [
+     "Hdisp"
+    ],
+    "options": {
+     "Hdisp": {
+      "evidence": "explicit",
+      "labels": [
+       "high dispersal ability",
+       "High dispersal ability"
+      ]
+     }
+    },
+    "evidence": {
+     "Hdisp": "explicit"
+    },
+    "probs": {
+     "Hdisp | QK": {
+      "code": 0.954,
+      "word": 0.046
+     },
+     "Hdisp": {
+      "e0": 0.046,
+      "e1": 0.911,
+      "keep": 0.043
+     },
+     "Hdisp | QB": {
+      "w0": 0.354,
+      "w1": 0.646
+     }
+    }
+   },
+   "Ldisp": {
+    "term": "low dispersal ability",
+    "parts": [
+     "Ldisp"
+    ],
+    "options": {
+     "Ldisp": {
+      "evidence": "explicit",
+      "labels": [
+       "low dispersal ability",
+       "low dispersal ability"
+      ]
+     }
+    },
+    "evidence": {
+     "Ldisp": "explicit"
+    },
+    "probs": {
+     "Ldisp | QK": {
+      "code": 0.978,
+      "word": 0.022
+     },
+     "Ldisp": {
+      "e0": 0.074,
+      "e1": 0.87,
+      "keep": 0.055
+     },
+     "Ldisp | QB": {
+      "w0": 0.872,
+      "w1": 0.128
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u23"
+   ],
+   "choice": "several",
+   "probs": {
+    "p0": 0.205,
+    "p1": 0.003,
+    "several": 0.791,
+    "none": 0.001
+   },
+   "chosen": [
+    "u16",
+    "u23"
+   ]
+  },
+  "header": "Dispersaldisp"
+ },
+ "25:4": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.01,
+    "several": 0.015,
+    "none": 0.975
+   }
+  },
+  "header": "Stand. body size"
+ },
+ "28:5": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u29"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.012,
+    "several": 0.017,
+    "none": 0.971
+   }
+  },
+  "header": "FoodPI"
+ },
+ "28:10": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u16"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.003,
+    "several": 0.025,
+    "none": 0.972
+   }
+  },
+  "header": "IngestFood"
+ },
+ "30:4": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.006,
+    "several": 0.012,
+    "none": 0.982
+   }
+  },
+  "header": "bodysize"
+ },
+ "35:14": {
+  "cells": {
+   "0": {
+    "term": "absence",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "absence"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "0": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u29"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.987,
+    "several": 0.003,
+    "none": 0.011
+   },
+   "chosen": [
+    "u29"
+   ]
+  },
+  "header": "Iridescence"
+ }
+}

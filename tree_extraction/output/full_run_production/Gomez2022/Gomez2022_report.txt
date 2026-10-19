@@ -1,0 +1,150 @@
+  [semantic] left unmatched: 'Postpetiole width index' vs 'Postpetiole Index' (llm said different traits)
+  [semantic] left unmatched: 'Postpetiole width index' vs 'Postpetiole Width' (llm said different traits)
+  [semantic] left unmatched: 'Postpetiole width index' vs 'Petiole Index' (llm said different traits)
+  [semantic] left unmatched: 'Propodeal spine index' vs 'Propodeal Spine Length.I' (llm said different traits)
+  [semantic] left unmatched: 'Propodeal spine index' vs 'Postpetiole Index' (llm said different traits)
+  [semantic] left unmatched: 'Propodeal spine index' vs 'Petiole Index' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Gomez2022\Gomez2022.xlsx  (1014 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Gomez2022\Gomez2022.csv  (272 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 8 pair(s))
+  'P. batrachorum' -> 'Pheidole batrachorum'
+  'P. darwini' -> 'Pheidole darwini'
+  'P. glabrella' -> 'Pheidole glabrella'
+  'P. klaman' -> 'Pheidole klaman'
+  'P. pulchella' -> 'Pheidole pulchella'
+  'P. rebeccae' -> 'Pheidole rebeccae'
+  'P. semidea' -> 'Pheidole semidea'
+  'P. setosa' -> 'Pheidole setosa'
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'P. beliosa': no ground-truth name denotes this organism
+  'P. christinae': no ground-truth name denotes this organism
+  'P. dea': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 14 pair(s))
+  'Eye length' -> 'Eye Length'
+  'Head length' -> 'Head Length'
+  'Head width' -> 'Head Width'
+  'Mandible index' -> 'Mandible Index'
+  'Mandible length' -> 'Mandible Length'
+  'Metafemur index' -> 'Metafemur Index'
+  'Petiole length' -> 'Petiole Length'
+  'Postpetiole length index' -> 'Postpetiole Length Index.'
+  'Pronotal width' -> 'Pronotal Width'
+  'Pronotal width index' -> 'Pronotal Width Index.'
+  'Propodeal spine length' -> 'Propodeal Spine Length.'
+  'Scape index' -> 'Scape Index'
+  'Scape length' -> 'Scape Length'
+  "Weber's length" -> "Weber's Length"
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1014
+  spurious, in scope  : 238   <- GT covers this trait: real errors
+  spurious, out of scope: 34   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             34
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1014 MISSED ROWS MISSED
+  species not in prediction                 234
+  species present, trait missing            360
+  species+trait present, value differs      420
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '1.02'                       ->  '0.94–1.08 (1.02)'           x2
+     '0.25'                       ->  '0.23–0.28 (0.25)'           x1
+     '0.25'                       ->  '0.24–0.27 (0.25)'           x1
+     '0.22'                       ->  '0.16–0.19 (0.18)'           x1
+     '0.24'                       ->  '0.17–0.19 (0.18)'           x1
+     '0.26'                       ->  '0.23–0.27 (0.26)'           x1
+  -> 6 substitutions explain 7 of 1014 misses (1%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'Pheidole dae'                      ~0.73~  pred 'Pheidole semidea'   x104
+     gt 'Pheidole heloisa'                  ~0.81~  pred 'Pheidole setosa'   x78
+     gt 'Pheidole christinae'               ~0.72~  pred 'Pheidole semidea'   x52
+  -> 3 species mismatches explain 234 of 1014 misses (23%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Postpetiole Width'                x60
+     'Cephalic Index'                   x30
+     'Eye Index'                        x30
+     'Metafemur Length'                 x30
+     'Petiole Index'                    x30
+     'Postpetiole Index'                x30
+  -> 6 missing traits explain 210 of 1014 misses (21%) — scattered; no single cause
+
+  full miss detail saved -> Gomez2022_misses.csv, Gomez2022_misses_summary.json (1014 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  cephalic index                                   39     0   GT-ONLY
+  eye index                                        39     0   GT-ONLY
+  eye length                                       39    17   Δ-22 (split?)
+  head length                                      39    17   Δ-22 (split?)
+  head width                                       39    17   Δ-22 (split?)
+  petiolar node height                             39     0   GT-ONLY
+  postpetiole height                               39     0   GT-ONLY
+  propodeal spine length.i                         39     0   GT-ONLY
+  postpetiole length index.                        39    17   Δ-22 (split?)
+  mandible index                                   39    17   Δ-22 (split?)
+  metafemur index                                  39    17   Δ-22 (split?)
+  petiole index                                    39     0   GT-ONLY
+  postpetiole index                                39     0   GT-ONLY
+  postpetiole width index                           0    17   PRED-ONLY
+  pronotal width index.                            39    17   Δ-22 (split?)
+  propodeal spine index                             0    17   PRED-ONLY
+  scape index                                      39    17   Δ-22 (split?)
+  mandible length                                  39    17   Δ-22 (split?)
+  metafemur length                                 39     0   GT-ONLY
+  petiole length                                   39    17   Δ-22 (split?)
+  postpetiole length                               39     0   GT-ONLY
+  propodeal spine length.                          39    17   Δ-22 (split?)
+  weber's length                                   39    17   Δ-22 (split?)
+  scape length                                     39    17   Δ-22 (split?)
+  petiolar node width                              39     0   GT-ONLY
+  postpetiole width                                78     0   GT-ONLY
+  pronotal width                                   39    17   Δ-22 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'postpetiole width'                vs pred 'postpetiole width index'          sim=0.90
+    gt 'propodeal spine length.i'         vs pred 'propodeal spine index'            sim=0.75
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0   238  1014   id+type+value
+             (34 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0   238  1014   basis+id+type+value+stat+sex+stage
+             (34 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

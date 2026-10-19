@@ -1,0 +1,107 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\OsorioCanadas2018\OsorioCanadas2018.xlsx  (280 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\OsorioCanadas2018\OsorioCanadas2018.csv  (207 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Hybomischos septemcinctorius' -> 'Hybomischos (=Perithous) septemcinctorius'
+  'Omalus auratus' -> 'Omalus (=Pseudomalus) auratus'
+
+TAXON NAMES LEFT UNMAPPED (5)
+  'COLLETIDAE': no ground-truth name denotes this organism
+  'CRABRONIDAE': no ground-truth name denotes this organism
+  'MEGACHILIDAE': no ground-truth name denotes this organism
+  'SPHECIDAE': no ground-truth name denotes this organism
+  'VESPIDAE': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body size length' -> 'Body Length'
+  'Nest building material' -> 'Nest-building material'
+  'Parasitic behaviour' -> 'Parasitic behavior'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 280
+  spurious, in scope  : 154   <- GT covers this trait: real errors
+  spurious, out of scope: 53   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             53
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 280 MISSED ROWS MISSED
+  species not in prediction                 167
+  species present, trait missing             19
+  species+trait present, value differs       94
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'univoltinev'                ->  'univoltinev [4]'            x4
+     'multivoltine'               ->  'multivoltine [9]'           x3
+     'inmature'                   ->  'inmature [4]'               x3
+     'inmature'                   ->  'inmature [9,26]'            x3
+     'gregarious'                 ->  'gregarious [4]'             x2
+     'solitary'                   ->  'solitary [9]'               x2
+  -> 6 substitutions explain 17 of 280 misses (6%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (30 distinct), closest predicted name:
+     gt 'Alastor atropos'                    (nothing similar in the prediction)   x6
+     gt 'Chelostoma campanularum'            (nothing similar in the prediction)   x6
+     gt 'Chelostoma emarginata'              (nothing similar in the prediction)   x6
+     gt 'Chelostoma florisomne'              (nothing similar in the prediction)   x6
+     gt 'Euodynerus posticus'               ~0.59~  pred 'Monodontomerus obsoletus'   x6
+     gt 'Heriades truncorum'                 (nothing similar in the prediction)   x6
+  -> 6 species mismatches explain 36 of 280 misses (13%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Altitude'                         x19
+  -> 1 missing trait explains 19 of 280 misses (7%) — scattered; no single cause
+
+  full miss detail saved -> OsorioCanadas2018_misses.csv, OsorioCanadas2018_misses_summary.json (280 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitude                                         46     0   GT-ONLY
+  parasitic behavior                               23    19   Δ-4 (split?)
+  body length                                      19    19   
+  body size                                         0    26   PRED-ONLY
+  nest-building material                           27    20   Δ-7 (split?)
+  larval diet                                      27    16   Δ-11 (split?)
+  gregariousness                                   19    19   
+  hosts species                                     0    27   PRED-ONLY
+  intertegular span                                27     0   GT-ONLY
+  voltinism                                        46    42   Δ-4 (split?)
+  wintering stage                                  46    19   Δ-27 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0   154   280   id+type+value
+             (53 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0   154   280   basis+id+type+value+stat+sex+stage
+             (53 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

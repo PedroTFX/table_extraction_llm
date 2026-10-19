@@ -1,0 +1,73 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Guareschi2015\Guareschi2015.xlsx  (1738 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Guareschi2015\Guareschi2015.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1738
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1738 MISSED ROWS MISSED
+  species not in prediction                1738
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (79 distinct), closest predicted name:
+     gt 'Paracymus'                          (nothing similar in the prediction)   x27
+     gt 'Agabus'                             (nothing similar in the prediction)   x26
+     gt 'Berosus'                            (nothing similar in the prediction)   x26
+     gt 'Enochrus'                           (nothing similar in the prediction)   x26
+     gt 'Anacaena'                           (nothing similar in the prediction)   x25
+     gt 'Deronectes'                         (nothing similar in the prediction)   x25
+  -> 6 species mismatches explain 155 of 1738 misses (9%) — scattered; no single cause
+
+  full miss detail saved -> Guareschi2015_misses.csv, Guareschi2015_misses_summary.json (1738 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  aquatic stages                                  206     0   GT-ONLY
+  life cycle duration                             139     0   GT-ONLY
+  potential number of reproduction cycles per year  136     0   GT-ONLY
+  dispersal                                       181     0   GT-ONLY
+  feeding habits                                  166     0   GT-ONLY
+  food                                            202     0   GT-ONLY
+  resistance form                                 100     0   GT-ONLY
+  locomotion and substrate relation               234     0   GT-ONLY
+  maximal size                                    107     0   GT-ONLY
+  reproduction                                     81     0   GT-ONLY
+  respiration                                     186     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0  1738   id+type+value
+  tags        0.000  0.000  0.000      0     0  1738   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

@@ -1,0 +1,135 @@
+10 papers, 18 tables, 136 scored columns (82 used by GT)
+
+accuracy                               gemma            tev1          nimble     nimble_full
+all columns                       78/136 57%      87/136 64%      87/136 64%      88/136 65%
+GT-used columns                    77/82 94%       80/82 98%       73/82 89%       77/82 94%
+  identifier                       21/24 88%       22/24 92%       22/24 92%       22/24 92%
+  trait (type/value)               56/58 97%      58/58 100%       51/58 88%       55/58 95%
+  row fields                               -               -               -               -
+GT-unused columns                    1/54 2%        7/54 13%       14/54 26%       11/54 20%
+GT-used, type~value equal          77/82 94%       80/82 98%       75/82 91%       79/82 96%
+tables, identifier exact           15/18 83%       13/18 72%       16/18 89%       16/18 89%
+seconds (total)                          322             262             529             531
+
+PER PAPER (GT-used columns correct / total)
+paper                               gemma         tev1       nimble  nimble_full
+OsorioCanadas2018                   13/14        14/14        13/14        14/14
+Dejean2019                            3/3          3/3          3/3          3/3
+Attiwilli2022                         5/6          4/6          5/6          5/6
+Oliveira2022                        10/10        10/10         9/10         8/10
+Korosi2022                            6/7          7/7          7/7          7/7
+Habustova2017                       16/17        17/17        11/17        17/17
+Derhe2016                             6/7          7/7          7/7          6/7
+Wiescher2012                        10/10        10/10        10/10        10/10
+Rebrina2022                           7/7          7/7          7/7          6/7
+Figueroa2021                          1/1          1/1          1/1          1/1
+
+gemma: most common confusions (gold -> predicted)
+  none                     -> measurementType          x30
+  none                     -> verbatimLocality         x11
+  none                     -> measurementStatistic     x7
+  none                     -> measurementValue         x5
+  measurementType          -> lifeStage                x2
+  verbatimIdentification   -> measurementType          x2
+  verbatimIdentification   -> none                     x1
+
+tev1: most common confusions (gold -> predicted)
+  none                     -> measurementType          x23
+  none                     -> verbatimLocality         x11
+  none                     -> measurementStatistic     x10
+  none                     -> verbatimIdentification   x3
+  verbatimIdentification   -> measurementType          x1
+  verbatimIdentification   -> none                     x1
+
+nimble: most common confusions (gold -> predicted)
+  none                     -> measurementStatistic     x18
+  none                     -> measurementType          x13
+  none                     -> measurementValue         x5
+  measurementType          -> error                    x5
+  none                     -> verbatimLocality         x3
+  measurementType          -> measurementValue         x2
+  verbatimIdentification   -> measurementType          x1
+  verbatimIdentification   -> error                    x1
+
+nimble_full: most common confusions (gold -> predicted)
+  none                     -> measurementType          x19
+  none                     -> measurementStatistic     x17
+  none                     -> verbatimLocality         x5
+  none                     -> measurementValue         x2
+  measurementType          -> measurementValue         x2
+  verbatimIdentification   -> measurementStatistic     x1
+  measurementType          -> caste                    x1
+  verbatimIdentification   -> none                     x1
+
+DETAIL: columns where models disagree with the GT label
+  OsorioCanadas2018 OsorioCanadas2018_full.md#9 'Body size (ITS,mm)': GT=measurementType [89% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.981), nimble=measurementValue(0.53), nimble_full=measurementType(0.953)
+  OsorioCanadas2018 OsorioCanadas2018_full.md#10 'Wintering stage': GT=measurementType [95% (species,value) pairs in GT] | gemma=lifeStage, tev1=measurementType(0.986), nimble=measurementType(0.937), nimble_full=measurementType(0.866)
+  Dejean2019 Dejean2019_full.md#1 'Occurrences': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementStatistic(0.783), nimble=measurementStatistic(0.895), nimble_full=measurementStatistic(0.623)
+  Dejean2019 Dejean2019_full.md#1 'Frequency on trees': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.949), nimble=measurementType(0.672), nimble_full=measurementType(0.814)
+  Dejean2019 Dejean2019_full.md#2 'Frequency': GT=none [pairs 0%] | gemma=measurementValue, tev1=none(0.501), nimble=none(0.603), nimble_full=none(0.823)
+  Dejean2019 Dejean2019_full.md#2 '1': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.869), nimble=measurementType(0.847), nimble_full=measurementType(0.872)
+  Dejean2019 Dejean2019_full.md#2 '2': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.72), nimble=measurementType(0.853), nimble_full=measurementType(0.884)
+  Dejean2019 Dejean2019_full.md#2 '3': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.661), nimble=measurementType(0.878), nimble_full=measurementType(0.732)
+  Dejean2019 Dejean2019_full.md#2 '4': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.572), nimble=measurementType(0.833), nimble_full=measurementType(0.699)
+  Dejean2019 Dejean2019_full.md#2 '5': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.423), nimble=none(0.833), nimble_full=measurementType(0.515)
+  Attiwilli2022 Attiwilli2022_full.md#0 'Ecotone': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.458), nimble=measurementStatistic(0.936), nimble_full=measurementStatistic(0.933)
+  Attiwilli2022 Attiwilli2022_full.md#0 'Forest': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.333), nimble=measurementStatistic(0.886), nimble_full=measurementStatistic(0.833)
+  Attiwilli2022 Attiwilli2022_full.md#0 'Open': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementStatistic(0.305), nimble=measurementStatistic(0.734), nimble_full=measurementStatistic(0.657)
+  Attiwilli2022 Attiwilli2022_full.md#0 'Total': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementStatistic(0.662), nimble=measurementStatistic(0.86), nimble_full=measurementStatistic(0.815)
+  Attiwilli2022 Attiwilli2022_full.md#1 'Body mass': GT=verbatimIdentification [57% GT species] | gemma=measurementType, tev1=measurementType(0.98), nimble=measurementType(0.637), nimble_full=verbatimIdentification(0.962)
+  Attiwilli2022 Attiwilli2022_full.md#1 'Estimate mean ± SE': GT=none [pairs 0%] | gemma=measurementValue, tev1=measurementType(0.924), nimble=measurementType(0.522), nimble_full=measurementStatistic(0.463)
+  Attiwilli2022 Attiwilli2022_full.md#1 't-statistic': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=measurementStatistic(0.481), nimble=none(0.969), nimble_full=none(0.983)
+  Attiwilli2022 Attiwilli2022_full.md#1 'p': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=measurementStatistic(0.705), nimble=none(0.945), nimble_full=none(0.982)
+  Attiwilli2022 Attiwilli2022_full.md#6 'identifier': GT=verbatimIdentification [83% GT species] | gemma=verbatimIdentification, tev1=none(0.516), nimble=verbatimIdentification(0.953), nimble_full=measurementStatistic(0.356)
+  Oliveira2022 Oliveira2022_full.md#2 'Trait': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.903), nimble=measurementType(0.992), nimble_full=measurementType(0.972)
+  Oliveira2022 Oliveira2022_full.md#2 'Response variables': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=measurementStatistic(0.978), nimble=measurementStatistic(0.989), nimble_full=measurementStatistic(0.988)
+  Oliveira2022 Oliveira2022_full.md#2 'Explanatory variables': GT=none [pairs 0%] | gemma=none, tev1=verbatimIdentification(0.987), nimble=none(0.707), nimble_full=none(0.605)
+  Oliveira2022 Oliveira2022_full.md#2 'AICc': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=none(0.77), nimble=none(0.852), nimble_full=none(0.928)
+  Oliveira2022 Oliveira2022_full.md#2 'Delta AICc': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=none(0.944), nimble=none(0.934), nimble_full=none(0.924)
+  Oliveira2022 Oliveira2022_full.md#2 'Weight': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=none(0.929), nimble=none(0.919), nimble_full=measurementStatistic(0.46)
+  Oliveira2022 Oliveira2022_full.md#14 'Plot': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.964), nimble=verbatimLocality(0.987), nimble_full=verbatimLocality(0.998)
+  Oliveira2022 Oliveira2022_full.md#14 'GMDI': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.447), nimble=none(0.574), nimble_full=measurementType(0.405)
+  Oliveira2022 Oliveira2022_full.md#14 'DH': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.59), nimble=none(0.444), nimble_full=verbatimLocality(0.944)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.867), nimble=measurementValue(0.742), nimble_full=measurementType(0.871)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (1)': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.831), nimble=measurementType(0.916), nimble_full=measurementType(0.794)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (3)': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.797), nimble=measurementValue(0.555), nimble_full=measurementValue(0.806)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (4)': GT=measurementType [95% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.83), nimble=measurementType(0.783), nimble_full=measurementValue(0.541)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (5)': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.64), nimble=measurementValue(0.595), nimble_full=measurementType(0.679)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (7)': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.448), nimble=measurementValue(0.378), nimble_full=measurementType(0.494)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (9)': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.688), nimble=measurementStatistic(0.309), nimble_full=measurementType(0.738)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (11)': GT=none [pairs 2%] | gemma=measurementType, tev1=measurementType(0.806), nimble=measurementType(0.731), nimble_full=measurementType(0.594)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (13)': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.656), nimble=measurementValue(0.314), nimble_full=measurementType(0.49)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (14)': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.874), nimble=measurementType(0.724), nimble_full=caste(0.682)
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (15)': GT=none [pairs 3%] | gemma=measurementType, tev1=measurementType(0.794), nimble=none(0.338), nimble_full=measurementType(0.866)
+  Korosi2022 Korosi2022_full.md#5 'Overw. stage': GT=measurementType [100% (species,value) pairs in GT] | gemma=lifeStage, tev1=measurementType(0.974), nimble=measurementType(0.983), nimble_full=measurementType(0.922)
+  Korosi2022 Korosi2022_full.md#5 'Abbreviation': GT=none [pairs 0%] | gemma=measurementType, tev1=verbatimIdentification(0.882), nimble=none(0.856), nimble_full=none(0.886)
+  Korosi2022 Korosi2022_full.md#5 'Ab.': GT=none [pairs 11%] | gemma=measurementType, tev1=none(0.78), nimble=measurementStatistic(0.361), nimble_full=none(0.654)
+  Habustova2017 Habustova2017_full.md#8 'Species': GT=verbatimIdentification [94% GT species] | gemma=verbatimIdentification, tev1=verbatimIdentification(0.997), nimble=error, nimble_full=verbatimIdentification(0.997)
+  Habustova2017 Habustova2017_full.md#8 'Total Abundance': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementStatistic(0.599), nimble=error, nimble_full=measurementStatistic(0.717)
+  Habustova2017 Habustova2017_full.md#8 'Body Size': GT=measurementType [header names a GT trait; pairs 0%] | gemma=measurementType, tev1=measurementType(0.982), nimble=error, nimble_full=measurementType(0.855)
+  Habustova2017 Habustova2017_full.md#8 'Habitat Affinity': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.543), nimble=error, nimble_full=measurementType(0.879)
+  Habustova2017 Habustova2017_full.md#8 'Humidity Affinity': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.943), nimble=error, nimble_full=measurementType(0.972)
+  Habustova2017 Habustova2017_full.md#8 'Breeding Period': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.967), nimble=error, nimble_full=measurementType(0.569)
+  Habustova2017 Habustova2017_full.md#8 'Food Specialization': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.994), nimble=error, nimble_full=measurementType(0.999)
+  Habustova2017 Habustova2017_full.md#11 'Localities South Bohemia 1': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.715), nimble=measurementStatistic(0.695), nimble_full=measurementStatistic(0.502)
+  Habustova2017 Habustova2017_full.md#11 'Localities South Bohemia 2': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.56), nimble=measurementStatistic(0.51), nimble_full=measurementStatistic(0.398)
+  Habustova2017 Habustova2017_full.md#11 'Localities South Bohemia 3': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.458), nimble=measurementStatistic(0.591), nimble_full=measurementStatistic(0.408)
+  Habustova2017 Habustova2017_full.md#11 'Localities Central Bohemia': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.517), nimble=measurementStatistic(0.495), nimble_full=measurementValue(0.463)
+  Habustova2017 Habustova2017_full.md#11 'Localities western Slovakia': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.66), nimble=verbatimLocality(0.947), nimble_full=verbatimLocality(0.901)
+  Habustova2017 Habustova2017_full.md#11 'Total': GT=none [pairs 0%] | gemma=measurementValue, tev1=measurementStatistic(0.921), nimble=measurementStatistic(0.962), nimble_full=measurementStatistic(0.921)
+  Habustova2017 Habustova2017_full.md#13 'Localities': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.925), nimble=measurementStatistic(0.602), nimble_full=measurementStatistic(0.679)
+  Habustova2017 Habustova2017_full.md#13 'Localities (1)': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.871), nimble=measurementStatistic(0.592), nimble_full=measurementStatistic(0.725)
+  Habustova2017 Habustova2017_full.md#13 'Localities (2)': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.882), nimble=measurementStatistic(0.677), nimble_full=measurementStatistic(0.718)
+  Habustova2017 Habustova2017_full.md#13 'Localities (3)': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.951), nimble=measurementValue(0.489), nimble_full=verbatimLocality(0.726)
+  Habustova2017 Habustova2017_full.md#13 'Localities (4)': GT=none [pairs 0%] | gemma=verbatimLocality, tev1=verbatimLocality(0.858), nimble=verbatimLocality(0.951), nimble_full=verbatimLocality(0.901)
+  Habustova2017 Habustova2017_full.md#13 'Total': GT=none [pairs 0%] | gemma=measurementValue, tev1=measurementStatistic(0.886), nimble=measurementStatistic(0.965), nimble_full=measurementStatistic(0.572)
+  Habustova2017 Habustova2017_full.md#14 'Tribe': GT=verbatimIdentification [taxonomic rank column (identity)] | gemma=measurementType, tev1=verbatimIdentification(0.99), nimble=verbatimIdentification(0.99), nimble_full=verbatimIdentification(0.991)
+  Habustova2017 Habustova2017_full.md#14 'Incidence': GT=none [pairs 0%] | gemma=measurementType, tev1=none(0.43), nimble=measurementType(0.4), nimble_full=measurementType(0.881)
+  Derhe2016 Derhe2016_full.md#1 'Taxonomic authority': GT=verbatimIdentification [taxonomic rank column (identity)] | gemma=none, tev1=verbatimIdentification(0.914), nimble=verbatimIdentification(0.741), nimble_full=none(0.911)
+  Derhe2016 Derhe2016_full.md#1 'Abundance': GT=none [pairs 3%] | gemma=measurementType, tev1=measurementType(0.397), nimble=none(0.893), nimble_full=none(0.957)
+  Derhe2016 Derhe2016_full.md#1 'Diet breadth': GT=none [pairs 0%] | gemma=measurementType, tev1=measurementType(0.983), nimble=measurementType(0.98), nimble_full=measurementType(0.968)
+  Wiescher2012 Wiescher2012_full.md#1 'HI': GT=none [pairs 3%] | gemma=measurementType, tev1=measurementType(0.865), nimble=measurementType(0.587), nimble_full=measurementType(0.811)
+  Rebrina2022 Rebrina2022_full.md#2 'No.': GT=none [pairs 0%] | gemma=measurementStatistic, tev1=none(0.955), nimble=none(0.982), nimble_full=none(0.994)
+  Rebrina2022 Rebrina2022_full.md#2 'Femur Length: Body Size': GT=measurementType [100% (species,value) pairs in GT] | gemma=measurementType, tev1=measurementType(0.976), nimble=measurementType(0.828), nimble_full=measurementValue(0.859)
+  Figueroa2021 Figueroa2021_full.md#1 'Plant Family': GT=none [pairs 0%] | gemma=measurementType, tev1=verbatimIdentification(0.956), nimble=measurementType(0.914), nimble_full=measurementType(0.982)
+  Figueroa2021 Figueroa2021_full.md#1 'n': GT=none [pairs 3%] | gemma=measurementValue, tev1=measurementStatistic(0.752), nimble=measurementStatistic(0.613), nimble_full=none(0.629)

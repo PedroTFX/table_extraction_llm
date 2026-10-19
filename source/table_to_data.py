@@ -681,12 +681,41 @@ def classify_value_types(table: Table, mapping: dict) -> dict:
     return mapping
 
 
+# Columns per mapper call. Over all papers' tables: median 5, p90 13, p95 18
+# columns; only ~4% exceed 20. Those (plot x month abundance grids of 76-81
+# columns, Kratschmer2019) overflowed one reply, lost 29-38 columns to
+# truncation and retried with ever larger contexts (~13 min of mapping).
+MAPPER_CHUNK_COLS = 20
+
+
 def agent_table_mapper(table: Table, paper_text: str, llm=None) -> dict:
     """Map a table's headers to template fields and merge in column relevance.
-    Returns the mapping dict (no file IO). Context is sized to the prompt."""
-    headers = table.header_names
+    Returns the mapping dict (no file IO). Context is sized to the prompt.
 
-    sample = [{h: r[h] for h in headers} for r in table.data_records()[:6]]
+    Tables wider than MAPPER_CHUNK_COLS are mapped in chunks: each call sees and
+    answers only its own columns plus the first two (usually the species), so the
+    prompt stays small. (Showing all 81 headers in every chunk made Kratschmer2019
+    slower than the single truncated call: 1028 s vs 793 s.)"""
+    headers = table.header_names
+    if len(headers) > MAPPER_CHUNK_COLS:
+        print(f"  Mapping table {table.source}#{table.table_index} ({len(headers)} cols) "
+              f"in chunks of {MAPPER_CHUNK_COLS}")
+        merged = {}
+        for i in range(0, len(headers), MAPPER_CHUNK_COLS):
+            part = headers[i:i + MAPPER_CHUNK_COLS]
+            merged.update(_map_columns(table, headers, part, llm=llm))
+        return _finish_mapping(merged, headers)
+    print(f"  Mapping table {table.source}#{table.table_index} ({len(headers)} cols)")
+    return _finish_mapping(_map_columns(table, headers, headers, llm=llm), headers)
+
+
+def _map_columns(table: Table, headers: list, ask: list, llm=None) -> dict:
+    """One mapper call for the columns in `ask` (all of them for a normal table)."""
+    chunked = ask != headers
+    shown = (list(dict.fromkeys(headers[:2] + list(ask))) if chunked else headers)
+    sample = [{h: r[h] for h in shown} for r in table.data_records()[:6]]
+    focus = (f"\nThis is part of a WIDE table ({len(headers)} columns), mapped in "
+             f"parts. Map ONLY these headers in this reply: {ask}\n" if chunked else "")
 
     prompt = f"""You're mapping a scientific table to a fixed template.
 
@@ -704,9 +733,9 @@ Use these ONLY when the table is clearly a glossary — one column of short
 terms/codes paired with one column of longer descriptions. NEVER use them on a
 normal specimen or trait table.
 
-Table headers: {headers}
+Table headers: {shown}
 Sample rows: {sample}
-
+{focus}
 For each header, return an object with:
 - field: one of {MAP_FIELDS + DICT_FIELDS}, or null if the column fits none of them
 - value_column: true if this column holds measurement values (numeric or
@@ -722,7 +751,6 @@ The field descriptions above define measurementType vs measurementValue (a wide
 trait column is a measurementType even when its cells are numbers).
 Return ONLY a JSON object keyed by header name."""
 
-    print(f"  Mapping table {table.source}#{table.table_index} ({len(headers)} cols)")
     # The reply is one object per header, but its size cannot be predicted from
     # the width alone (the same 3-column prompt has answered in 165 tokens and
     # run away past 1500). invoke_sized grows num_ctx and retries when a reply is
@@ -731,6 +759,13 @@ Return ONLY a JSON object keyed by header name."""
     mapping = loads_salvaging(content)
     if not isinstance(mapping, dict):
         mapping = {}
+    if chunked:                       # keep only what this chunk was asked about
+        mapping = {h: v for h, v in mapping.items() if h in ask}
+    return mapping
+
+
+def _finish_mapping(mapping: dict, headers: list) -> dict:
+    """Coerce odd entries and fill any column the reply(ies) left out."""
     # A smaller model sometimes maps a header to a bare string ("measurementType")
     # instead of the {field, value_column, ...} object. Coerce any non-dict entry
     # to an unmapped column so every downstream `.get()` on a mapping entry is safe.

@@ -1,0 +1,65 @@
+{
+ "calls": 1,
+ "chars": 5771,
+ "passages": [
+  "[prose] (Model 2 p = 0.00001, Model 4 p = 0.001) indicating a significant global relationship between species traits and environmental variables (Dray et al., 2014). We found ten significant pairwise associations after P-value adjustment using the fourth-corner approach (Table 1, Fig. 3). Mobility and voltinism were significantly positively related to arable sites and to the proportion of arable land, while they were negatively related to the proportion of natural biotopes. Mobility was also negatively associated with landscape diversity. In contrast, larval overwintering stage was positively correlated with landscape diversity and negatively with the proportion of arable land (Table 1, Fig. 3). We found a significant positive association between oligophagous larval diet and year 2018.",
+  "[prose] Finally, we found significant correlations between species traits and environmental gradients, and between trait syndromes and environmental variables (Fig. 4). The first trait syndrome (‘mobility’) was significantly negatively correlated with the proportion of arable land and arable sites and positively with landscape diversity, nature reserves and proportion of natural biotopes and forests. This means that landscapes with high proportion of arable fields are favored by rather mobile species that have several generations and overwinter not in the larval stage. (Note that mobility and voltinism were negatively correlated with the first RLQ axis, thus high voltinisim and high mobility correspond to negative values in the mobility syndrome.) The second trait syndrome (‘habitat specialization’) was significantly positively related to grassland sites clearly indicating that these sites are mostly occupied by habitat generalist species (Fig. 4a, Table 2). Voltinism and mobility were negatively, while larval overwintering stage was positively related with the first environmental gradient, indicating again that butterflies overwintering in the larval stage occur rather in diverse landscapes, while simple landscapes with high proportion of arable fields are inhabited by highly mobile species with high voltinism and non-larval overwintering stages. Habitat breadth (HAT) was significantly positively correlated",
+  "[prose] ## A R T I C L E I N F O",
+  "[prose] * Corresponding author at: Büro Geyer und Dolek, Alpenblick 12, Worthsee ¨ 82237, Germany. E-mail addresses: [korozott@gmail.com](mailto:korozott@gmail.com) (A. ´ Kor ˝ osi), ¨ [matthias.dolek@geyer-und-dolek.de](mailto:matthias.dolek@geyer-und-dolek.de) (M. Dolek), [info@bioplan-tuebingen.de](mailto:info@bioplan-tuebingen.de) (A. Nunner), [lang@biologie.de](mailto:lang@biologie.de) (A. Lang), [florian.theves@lubw.bwl.de](mailto:florian.theves@lubw.bwl.de) (F. Theves).",
+  "[prose] First, we carried out a Correspondence Analysis (CA) on the species abundance matrix. As both the environmental and trait data tables contained a mix of categorical and quantitative variables a Hill-Smith analysis (Hill and Smith, 1976) was conducted on both tables weighted by the sites and species weights derived from the previous CA. In the fourth-corner analysis, we used a sequential test proposed by ter Braak et al. (2012) to test if traits and environment influence species distributions. We applied 49 999 permutations in all randomization procedures and the false discovery rate method (FDR; Benjamini and Hochberg, 1995) to adjust P-values for multiple testing. We combined the two methods in three ways: first we performed a multivariate test, which is based on the total inertia of the RLQ analysis, to evaluate the global significance of the traits-environment relationships. Then we presented the significant relationships revealed by the fourth-corner method on a biplot where RLQ scores were used to represent traits and environmental variables. Finally, we tested directly the links between RLQ axes and traits and environmental variables using fourth-corner tests. These can be interpreted as correlation tests between environmental gradients and traits, and between environmental",
+  "[prose] Fig. 2. Coefficients for (a) environmental and (b) trait variables along the two RLQ axes. (a) NR: nature reserves; Ar: arable sites; Gr: grassland sites; elev: elevation; SHDI: landscape diversity; PAR: perimeter-to-area ratio. (b) Diet: larval diet (M: monophagous, NO: narrowly oligophagous, O: oligophagous, P: polyphagous); HAT: number of used habitat types; HAST: number of used habitat subtypes; Voltin: voltinism; W: overwintering stage. See text for more details.",
+  "[prose] Table 1 Results of the fourth-corner tests. Significant (P",
+  "[prose] Fig. 3. Representation of significant (P",
+  "[prose] Cowley, M.J.R., Thomas, C.D., Roy, D.B., Wilson, R.J., León-Cortés, J.L., Gutiérrez, D., Bulman, C.R., Quinn, R.M., Moss, D., Gaston, K., 2001. Density–distribution relationships in British butterflies. I. The effect of mobility and spatial scale. J. Anim. Ecol., 70, 410–425.",
+  "[table 1] Trait | X-axis Position | Y-axis Position\nAr | ~10% | ~-25%\narable | ~20% | ~-15%\nVeltin | ~30% | ~-5%\nMobility | ~30% | ~-10%\nDiet:O | ~40% | ~5%\nW:larva | ~50% | ~5%\nSHDI | ~70% | 0%\nnature | ~80% | ~-25%",
+  "[table 4] Environmental gradients\nArable vs. landscape diversity | Grassland use intensity\nMobility | -0.286\nLarval diet | Monophagous\nNarrowly oligophagous\nOligophagous\nPolyphagous\nOverwintering stage | Egg\nLarva | 0.284\nPupa",
+  "[prose] variables and trait syndromes. Environmental gradients and trait syndromes are linear combinations of environmental variables and traits, respectively, which are found by the RLQ method by maximizing their cross-covariance (see more details in Dray et al., 2014). All analyses were made using the ‘ade4′ package 1.7–15 (Dray and Dufour, 2007) in R 3.6.3 statistical software (R Core Team, 2020)."
+ ],
+ "categories": [
+  {
+   "variable": "Diet",
+   "code": "M",
+   "label": "monophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "NO",
+   "label": "narrowly oligophagous",
+   "explanation": "",
+   "model_label": "narrow oligophagous"
+  },
+  {
+   "variable": "Diet",
+   "code": "O",
+   "label": "oligophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "P",
+   "label": "polyphagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "",
+   "label": "Egg",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "",
+   "label": "Larva",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "",
+   "label": "Pupa",
+   "explanation": ""
+  }
+ ],
+ "dropped": [],
+ "seconds": 6.3
+}

@@ -1,0 +1,113 @@
+  [semantic] left unmatched: 'Body size (ITS,mm)' vs 'Body Length' (llm said different traits)
+  [semantic] left unmatched: 'Body size (ITS,mm)' vs 'Parasitic behavior' (llm said different traits)
+  [semantic] left unmatched: 'Body size (ITS,mm)' vs 'Altitude' (llm said different traits)
+  [semantic] left unmatched: 'Explanatory variable' vs 'Parasitic behavior' (llm said different traits)
+  [semantic] left unmatched: 'Explanatory variable' vs 'Intertegular Span' (llm said different traits)
+  [semantic] left unmatched: 'Explanatory variable' vs 'Gregariousness' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\OsorioCanadas2018\OsorioCanadas2018.xlsx  (280 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v3\OsorioCanadas2018\OsorioCanadas2018.csv  (241 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Passaloecus spp (mostly corniger, some eremita & gracilis)' -> 'Passaloecus spp'
+  'Trypoxylon spp (mostly clavicerum, some minus)' -> 'Trypoxylon spp'
+
+TAXON NAMES LEFT UNMAPPED (5)
+  'Host (only bees)': no ground-truth name denotes this organism
+  'Hosts': no ground-truth name denotes this organism
+  'Hosts (only bees)': no ground-truth name denotes this organism
+  'Parasitoid species': no ground-truth name denotes this organism
+  'Parasitoids': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 54
+  missed (FN)         : 226
+  spurious, in scope  : 134   <- GT covers this trait: real errors
+  spurious, out of scope: 53   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.224 / 0.193 / 0.207   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.287 / 0.193 / 0.231   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.193   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             53
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     54  0.000  <-- low
+  measurementMethod             0     54  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     54  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     54  0.000  <-- low
+  lifeStage                     0     54  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     54  0.000  <-- low
+  samplingProtocol              0     54  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     54  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 226 MISSED ROWS MISSED
+  species not in prediction                   7
+  species present, trait missing            129
+  species+trait present, value differs       90
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'prepupa'                    ->  'prepupa [2]'                x6
+     'prepupa'                    ->  'prepupa [2,10-12]'          x5
+     'univoltinev'                ->  'univoltinev [4]'            x4
+     'univoltine'                 ->  'univoltine [2-3,14]'        x4
+     'adult'                      ->  'adult [3]'                  x4
+     'univoltine'                 ->  'univoltine [14]'            x3
+  -> 6 substitutions explain 26 of 226 misses (12%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'Hybomischos (=Perithous)'          ~0.90~  pred 'Hybomischos (=Perithous) septemcinctorius'   x5
+     gt 'Passaloecus spp (mostly corniger, some eremita & gracilis )'  ~0.73~  pred 'Passaloecus spp'   x1
+     gt 'Trypoxylon spp. (mostly clavicerum, some minus )'  ~0.74~  pred 'Trypoxylon spp'   x1
+  -> 3 species mismatches explain 7 of 226 misses (3%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Altitude'                         x44
+     'Intertegular Span'                x27
+     'Parasitic behavior'               x22
+     'Body Length'                      x18
+     'Gregariousness'                   x18
+  -> 5 missing traits explain 129 of 226 misses (57%) — scattered; no single cause
+
+  full miss detail saved -> OsorioCanadas2018_misses.csv, OsorioCanadas2018_misses_summary.json (226 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitude                                         46     0   GT-ONLY
+  parasitic behavior                               23     0   GT-ONLY
+  body length                                      19     0   GT-ONLY
+  body size (its,mm)                                0    47   PRED-ONLY
+  nest-building material                           27    47   Δ+20 (split?)
+  larval diet                                      27    47   Δ+20 (split?)
+  explanatory variable                              0     6   PRED-ONLY
+  gregariousness                                   19     0   GT-ONLY
+  intertegular span                                27     0   GT-ONLY
+  voltinism                                        46    47   Δ+1 (split?)
+  wintering stage                                  46    47   Δ+1 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'body length'                      vs pred 'body size (its,mm)'               sim=0.60
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.287  0.193  0.231     54   134   226   id+type+value
+             (53 more spurious row(s) set aside as out-of-scope; strict P would be 0.224)
+  tags        0.000  0.000  0.000      0   188   280   basis+id+type+value+stat+sex+stage
+             (53 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.231 vs previous)
+             note: only 0/54 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

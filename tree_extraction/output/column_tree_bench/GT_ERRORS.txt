@@ -1,0 +1,108 @@
+GT_ERRORS — columns the GT uses where a model was scored "wrong" but the error
+is in the answer key, not in the model.
+Reviewed 2026-10-02 from the column-tagging benchmark (output/column_tree_bench).
+
+The answer key has two layers, and an error can sit in either:
+  - GT xlsx: what the volunteers recorded (data/un_processed_papers/<paper>/<paper>.xlsx)
+  - derived key: how column_role_bench.derive_labels turns the GT into one tag per
+    column (by matching cell values, plus the rule "rank/authority columns are identity")
+
+Note on 1, 2 and 4: template_descriptions/measurementType.md currently says the
+opposite of the verdicts below (quoted under each). If the verdicts stand, that
+file should change too, or the tree and the mapper will keep following it.
+
+===============================================================================
+1. OsorioCanadas2018 — 'Wintering stage'                    error in: GT xlsx
+===============================================================================
+Tables:  OsorioCanadas2018_full.md#9  (hosts: bees and wasps)
+         OsorioCanadas2018_full.md#10 (parasitoids)
+Headers #9:  Hosts species | Family | Larval diet | Body size (ITS,mm) |
+             Wintering stage | Voltinism | Nest-building material
+Headers #10: Parasitoid species | Order / Infraclass | Parasitic behaviour |
+             Body size length (mm) | Wintering stage | Voltinism | Gregariousness
+Values:  PREPUPA [1]; ADULT [1,5-6]; INMATURE [4]; INAMATURE [30]
+GT xlsx: 46 rows measurementType = 'Wintering stage', values Prepupa / Inmature /
+         Adult / Inamature, lifeStage = 'all'
+Key:     measurementType (100% / 95% of (species, value) pairs match the GT)
+Models:  gemma = lifeStage (table #10), everything else = measurementType
+Verdict: the values are life stages -> lifeStage, not a measurementType.
+Template today (measurementType.md): '"Overwintering stage" / "Overw. stage" /
+         "Diapause stage" = egg/larva/pupa/adult -> measurementType (the stage the
+         species overwinters in), NOT lifeStage'
+
+===============================================================================
+2. Korosi2022 — 'Overw. stage'                               error in: GT xlsx
+===============================================================================
+Table:   Korosi2022_full.md#5
+Headers: Species | Mobility | Larval diet | Overw. stage | Voltinism | HAT | HAST |
+         Abbreviation | Occ. | Ab.
+Values:  Larva; Adult; Pupa; Egg
+GT xlsx: 104 rows measurementType = 'Overwintering stage', values Larva (69) /
+         Egg (14) / Pupa (14) / Adult (7), lifeStage = 'all'
+Key:     measurementType (100% of pairs match the GT)
+Models:  gemma = lifeStage, everything else = measurementType
+Verdict: same as 1 — life-stage values -> lifeStage.
+Template today: same sentence as in 1.
+
+===============================================================================
+3. Attiwilli2022 — 'Body mass' (Table 2)       error in: derived key (+ parsing)
+===============================================================================
+Table:   Attiwilli2022_full.md#1 — paper Table 2, "Results from linear models
+         with logged body mass, logged wing length and logged proboscis length as
+         the response variables and family and habitat as predictors"
+Source:  first header cell is EMPTY; 'Body mass' is a section row spanning the
+         table (<td colspan="4">Body mass</td>), followed later by 'Wing length'
+         and 'Proboscis length' sections:
+           (blank)                        | Estimate mean ± SE | t-statistic | p
+           Body mass (section row)
+           Intercept (Hesperiidae–Ecotone)| 4.45 ± 0.146       | 30.56       | <0.0001
+           Lycaenidae                     | -0.98 ± 0.169      | -5.80       | ...
+Parsed:  Body mass | Estimate mean ± SE | t-statistic | p   (the section label
+         became the first column's header)
+Values:  Intercept (Hesperiidae–Ecotone); Lycaenidae; Nymphalidae; Papilionidae;
+         Pieridae; Habitat Forest; Habitat Open
+GT xlsx: does not use this table (its 'Body mass' rows come from #6, e.g.
+         '174.2 ± 139.13', '12.4 - 378.5')
+Key:     verbatimIdentification (57% of cells are GT names: the families)
+Models:  gemma, tev1, nimble = measurementType; nimble_full and all trees =
+         verbatimIdentification
+Verdict: the column does not hold body-mass values; it is the predictor list of
+         a regression table, and 'Body mass' is a section title. Correct key:
+         none (statistics table). Two fixes: the key must not label a column
+         from a section title, and the parser must treat a full-width
+         'Body mass' row as a section (a header-tree case; the production code
+         may already handle it).
+
+===============================================================================
+4. Derhe2016 — 'Taxonomic authority'                      error in: derived key
+===============================================================================
+Table:   Derhe2016_full.md#1
+Headers: Species | Taxonomic authority | Abundance | Body mass (mg) |
+         Behavioural guild | Diel activity | Diet preference | Diet breadth |
+         Habitat preference
+Values:  Matthews (1974); NA; Storey & Monteith (2000); Matthews (1976);
+         Storey & Weir (1990); D'Orbigny (1902)
+GT xlsx: does not record the authority
+Key:     verbatimIdentification (the bench rule "rank/authority columns are
+         identity")
+Models:  gemma, nimble_full = none; tev1, nimble and all trees =
+         verbatimIdentification
+Verdict: the authority is not verbatimIdentification. Correct key: none.
+Template today (measurementType.md): 'a taxonomic rank naming the organism's own
+         classification: Family, Order, Suborder, Genus, Subgenus, Tribe,
+         Subfamily, or authorship. That is the specimen's IDENTITY (it belongs
+         with verbatimIdentification)'
+
+===============================================================================
+What to change
+===============================================================================
+- GT xlsx (1, 2): move the overwintering/wintering stage rows from
+  measurementType to lifeStage — if the definition changes (see note above).
+  Back up first (data/backup/<paper>/) and log in output/gt_value_fixes.csv.
+- derived key (3): do not label a column whose header is a full-width section
+  row; treat statistics tables (estimate/t/p) as none.
+- derived key (4): drop "authorship" from the identity rule (rank columns such
+  as Family/Order/Tribe stay identity).
+- tree / descriptions: the 'record_context:life_stage' and 'organism_name:
+  higher_rank' options follow measurementType.md and would need the same
+  change.

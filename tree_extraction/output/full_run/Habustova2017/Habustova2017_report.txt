@@ -1,0 +1,126 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Habustova2017\Habustova2017.xlsx  (430 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Habustova2017\Habustova2017.csv  (597 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 16 pair(s))
+  'Abax parallelus (Duftschmid, 1812)' -> 'Abax parallelus'
+  'Acupalpus meridianus (Linnaeus, 1761)' -> 'Acupalpus meridianus'
+  'Agonum gracilipes (Duftschmid, 1812)' -> 'Agonum gracilipes'
+  'Agonum muelleri (Herbst, 1784)' -> 'Agonum muelleri'
+  'Agonum sexpunctatum (Linnaeus, 1758)' -> 'Agonum sexpunctatum'
+  'Agonum versutum (Sturm, 1824)' -> 'Agonum versutum'
+  'Amara aenea (De Geer, 1774)' -> 'Amara aenea'
+  'Amara apricaria (Paykull, 1790)' -> 'Amara apricaria'
+  'Amara aulica (Panzer, 1796)' -> 'Amara aulica'
+  'Amara consularis (Duftschmid 1812)' -> 'Amara consularis'
+  'Amara cursitans (Zimmermann, 1831)' -> 'Amara cursitans'
+  'Amara eurynota (Panzer, 1797)' -> 'Amara eurynota'
+  'Amara familiaris (Duftschmid 1812)' -> 'Amara familiaris'
+  'Amara littorea (C.G. Thomson, 1857)' -> 'Amara littorea'
+  'Amara nitida (Sturm, 1825)' -> 'Amara nitida'
+  'Amara ovata (Fabricius, 1792)' -> 'Amara ovata'
+
+TAXON NAMES LEFT UNMAPPED (18)
+  'Bembidiini': no ground-truth name denotes this organism
+  'Brachinini': no ground-truth name denotes this organism
+  'Brachinus explondes': no ground-truth name denotes this organism
+  'CB': no ground-truth name denotes this organism
+  'Callistini': no ground-truth name denotes this organism
+  'Carabini': no ground-truth name denotes this organism
+  'Clivinini': no ground-truth name denotes this organism
+  'Harpalini': no ground-truth name denotes this organism
+  'Lebiini': no ground-truth name denotes this organism
+  'Licinini': no ground-truth name denotes this organism
+  'Loricerini': no ground-truth name denotes this organism
+  'Nebrini': no ground-truth name denotes this organism
+  'Nebtriini': no ground-truth name denotes this organism
+  'Notiophilini': no ground-truth name denotes this organism
+  'Platynini': no ground-truth name denotes this organism
+  'Pterostichini': no ground-truth name denotes this organism
+  'Trechini': no ground-truth name denotes this organism
+  'Zabrini': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Body Size' -> 'Body size'
+  'Breeding Period' -> 'Breeding period'
+  'Food Specialization' -> 'Food specialization'
+  'Habitat Affinity' -> 'Habitat affinity'
+  'Humidity Affinity' -> 'Humidity affinity'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 120
+  missed (FN)         : 310
+  spurious, in scope  : 390   <- GT covers this trait: real errors
+  spurious, out of scope: 87   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.201 / 0.279 / 0.234   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.235 / 0.279 / 0.255   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.279   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             87
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    120  0.000  <-- low
+  measurementMethod             0     60  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    120  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    120  0.000  <-- low
+  lifeStage                     0    120  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    120  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 310 MISSED ROWS MISSED
+  species not in prediction                 280
+  species present, trait missing              0
+  species+trait present, value differs       30
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '6–10.9'                     ->  'c'                          x19
+     '11–21.9'                    ->  'b'                          x7
+     '˂5.9'                       ->  '˂5.9 mm'                    x4
+  -> 3 substitutions explain 30 of 310 misses (10%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (56 distinct), closest predicted name:
+     gt 'Amara similata'                    ~0.76~  pred 'Amara apricaria'   x5
+     gt 'Amara tibialis'                    ~0.77~  pred 'Amara familiaris'   x5
+     gt 'Anisodactylus binotatus'            (nothing similar in the prediction)   x5
+     gt 'Anisodactylus signatus'            ~0.56~  pred 'Carabus granulatus'   x5
+     gt 'Badister bullatus'                  (nothing similar in the prediction)   x5
+     gt 'Badister lacertosus'                (nothing similar in the prediction)   x5
+  -> 6 species mismatches explain 30 of 310 misses (10%) — scattered; no single cause
+
+  full miss detail saved -> Habustova2017_misses.csv, Habustova2017_misses_summary.json (310 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  jaccard index (js) locality #6                    0     1   PRED-ONLY
+  habitat affinity                                 86   102   Δ+16 (split?)
+  humidity affinity                                86   102   Δ+16 (split?)
+  body size                                        86   102   Δ+16 (split?)
+  breeding period                                  86   102   Δ+16 (split?)
+  food specialization                              86   102   Δ+16 (split?)
+  incidence                                         0    86   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.235  0.279  0.255    120   390   310   id+type+value
+             (87 more spurious row(s) set aside as out-of-scope; strict P would be 0.201)
+  tags        0.000  0.000  0.000      0   510   430   basis+id+type+value+stat+sex+stage
+             (87 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.255 vs previous)
+             note: only 0/120 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -1,0 +1,144 @@
+{
+ "_columns": [
+  [
+   10,
+   6,
+   "Trophic level",
+   [
+    "1.0",
+    "2.0",
+    "3.0"
+   ]
+  ],
+  [
+   10,
+   10,
+   "Feeding guild",
+   [
+    "Pollinator",
+    "Blood Parasitoid",
+    "Predator",
+    "Parasitoid"
+   ]
+  ]
+ ],
+ "10:6": {
+  "cells": {
+   "1.0": {
+    "term": null,
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "herbivores"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.953,
+      "word": 0.047
+     },
+     "1.0": {
+      "e0": 0.016,
+      "keep": 0.984
+     }
+    }
+   },
+   "2.0": {
+    "term": "primary predators (predators and parasitoids of herbivores)",
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "primary predators"
+      ]
+     }
+    },
+    "evidence": {
+     "2.0": "explicit"
+    },
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.949,
+      "word": 0.051
+     },
+     "2.0": {
+      "e0": 0.693,
+      "keep": 0.307
+     },
+     "2.0 | QB": {
+      "w0": 0.482,
+      "w1": 0.518
+     }
+    }
+   },
+   "3.0": {
+    "term": "secondary predators (predators and parasitoids of predators)",
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "secondary predators"
+      ]
+     }
+    },
+    "evidence": {
+     "3.0": "explicit"
+    },
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.954,
+      "word": 0.046
+     },
+     "3.0": {
+      "e0": 0.921,
+      "keep": 0.079
+     },
+     "3.0 | QB": {
+      "w0": 0.398,
+      "w1": 0.602
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u5",
+    "u9",
+    "u10"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.968,
+    "p2": 0.0,
+    "several": 0.014,
+    "none": 0.017
+   },
+   "chosen": [
+    "u9"
+   ]
+  },
+  "header": "Trophic level"
+ },
+ "10:10": {
+  "cells": {},
+  "header": "Feeding guild",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ }
+}

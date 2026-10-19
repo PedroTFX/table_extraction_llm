@@ -1,0 +1,490 @@
+{
+ "4:8": {
+  "cells": {},
+  "header": "BIO.2"
+ },
+ "4:9": {
+  "cells": {},
+  "header": "BIO.3"
+ },
+ "4:12": {
+  "cells": {},
+  "header": "BIO.6"
+ },
+ "4:14": {
+  "cells": {},
+  "header": "BIO.8"
+ },
+ "4:15": {
+  "cells": {},
+  "header": "BIO.9"
+ },
+ "4:16": {
+  "cells": {},
+  "header": "BIO.10"
+ },
+ "4:17": {
+  "cells": {},
+  "header": "BIO.11"
+ },
+ "4:19": {
+  "cells": {},
+  "header": "BIO.13"
+ },
+ "4:20": {
+  "cells": {},
+  "header": "BIO.14"
+ },
+ "4:21": {
+  "cells": {},
+  "header": "BIO.15"
+ },
+ "4:23": {
+  "cells": {},
+  "header": "BIO.17"
+ },
+ "4:24": {
+  "cells": {},
+  "header": "BIO.18"
+ },
+ "5:5": {
+  "cells": {},
+  "header": "Final dung dry"
+ },
+ "7:1": {
+  "cells": {},
+  "header": "Biomass morph"
+ },
+ "7:2": {
+  "cells": {},
+  "header": "EL morph"
+ },
+ "7:3": {
+  "cells": {},
+  "header": "HL morph"
+ },
+ "7:4": {
+  "cells": {},
+  "header": "HW morph"
+ },
+ "7:5": {
+  "cells": {},
+  "header": "mTL morph"
+ },
+ "7:6": {
+  "cells": {},
+  "header": "PH morph"
+ },
+ "7:7": {
+  "cells": {},
+  "header": "PL morph"
+ },
+ "7:8": {
+  "cells": {},
+  "header": "pTL morph"
+ },
+ "7:9": {
+  "cells": {},
+  "header": "pTW morph"
+ },
+ "7:10": {
+  "cells": {},
+  "header": "PW morph"
+ },
+ "7:11": {
+  "cells": {},
+  "header": "reloc.size behav"
+ },
+ "8:1": {
+  "cells": {},
+  "header": "Dung relocation strategy"
+ },
+ "8:5": {
+  "cells": {
+   "Biomass": {
+    "term": null,
+    "parts": [
+     "Biomass"
+    ],
+    "options": {
+     "Biomass": {
+      "evidence": "explicit",
+      "labels": [
+       "Dry weight (grams) of whole individual after 72h in a 60ºC oven"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Biomass | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "EL": {
+    "term": "Elytra length (mm)",
+    "parts": [
+     "EL"
+    ],
+    "options": {
+     "EL": {
+      "evidence": "explicit",
+      "labels": [
+       "Elytra length"
+      ]
+     }
+    },
+    "evidence": {
+     "EL": "explicit"
+    },
+    "probs": {
+     "EL | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "EL": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "EL | QB": {
+      "w0": 0.056,
+      "w1": 0.944
+     }
+    }
+   },
+   "HL": {
+    "term": "Head length (mm)",
+    "parts": [
+     "HL"
+    ],
+    "options": {
+     "HL": {
+      "evidence": "explicit",
+      "labels": [
+       "Head length"
+      ]
+     }
+    },
+    "evidence": {
+     "HL": "explicit"
+    },
+    "probs": {
+     "HL | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "HL": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "HL | QB": {
+      "w0": 0.06,
+      "w1": 0.94
+     }
+    }
+   },
+   "HW": {
+    "term": "Head width (mm)",
+    "parts": [
+     "HW"
+    ],
+    "options": {
+     "HW": {
+      "evidence": "explicit",
+      "labels": [
+       "Head width"
+      ]
+     }
+    },
+    "evidence": {
+     "HW": "explicit"
+    },
+    "probs": {
+     "HW | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "HW": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "HW | QB": {
+      "w0": 0.04,
+      "w1": 0.96
+     }
+    }
+   },
+   "mTL": {
+    "term": "Metatiba length (mm)",
+    "parts": [
+     "mTL"
+    ],
+    "options": {
+     "mTL": {
+      "evidence": "explicit",
+      "labels": [
+       "Metatiba length"
+      ]
+     }
+    },
+    "evidence": {
+     "mTL": "explicit"
+    },
+    "probs": {
+     "mTL | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "mTL": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "mTL | QB": {
+      "w0": 0.101,
+      "w1": 0.899
+     }
+    }
+   },
+   "MTL": {
+    "term": null,
+    "parts": [
+     "MTL"
+    ],
+    "options": {
+     "MTL": {
+      "evidence": "explicit",
+      "labels": [
+       "Metatiba length"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "MTL | QK": {
+      "code": 0.842,
+      "word": 0.158
+     },
+     "MTL": {
+      "e0": 0.024,
+      "keep": 0.976
+     }
+    }
+   },
+   "PH": {
+    "term": "Pronotum height (mm)",
+    "parts": [
+     "PH"
+    ],
+    "options": {
+     "PH": {
+      "evidence": "explicit",
+      "labels": [
+       "Pronotum height"
+      ]
+     }
+    },
+    "evidence": {
+     "PH": "explicit"
+    },
+    "probs": {
+     "PH | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "PH": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "PH | QB": {
+      "w0": 0.129,
+      "w1": 0.871
+     }
+    }
+   },
+   "PL": {
+    "term": "Pronotum length (mm)",
+    "parts": [
+     "PL"
+    ],
+    "options": {
+     "PL": {
+      "evidence": "explicit",
+      "labels": [
+       "Pronotum length"
+      ]
+     }
+    },
+    "evidence": {
+     "PL": "explicit"
+    },
+    "probs": {
+     "PL | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "PL": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "PL | QB": {
+      "w0": 0.111,
+      "w1": 0.889
+     }
+    }
+   },
+   "pTL": {
+    "term": "Protibia length (mm)",
+    "parts": [
+     "pTL"
+    ],
+    "options": {
+     "pTL": {
+      "evidence": "explicit",
+      "labels": [
+       "Protibia length"
+      ]
+     }
+    },
+    "evidence": {
+     "pTL": "explicit"
+    },
+    "probs": {
+     "pTL | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "pTL": {
+      "e0": 0.987,
+      "keep": 0.013
+     },
+     "pTL | QB": {
+      "w0": 0.149,
+      "w1": 0.851
+     }
+    }
+   },
+   "PTL": {
+    "term": null,
+    "parts": [
+     "PTL"
+    ],
+    "options": {
+     "PTL": {
+      "evidence": "explicit",
+      "labels": [
+       "Protibia length"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "PTL | QK": {
+      "code": 0.95,
+      "word": 0.05
+     },
+     "PTL": {
+      "e0": 0.012,
+      "keep": 0.988
+     }
+    }
+   },
+   "pTW": {
+    "term": "Protibia width (mm)",
+    "parts": [
+     "pTW"
+    ],
+    "options": {
+     "pTW": {
+      "evidence": "explicit",
+      "labels": [
+       "Protibia width"
+      ]
+     }
+    },
+    "evidence": {
+     "pTW": "explicit"
+    },
+    "probs": {
+     "pTW | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "pTW": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "pTW | QB": {
+      "w0": 0.073,
+      "w1": 0.927
+     }
+    }
+   },
+   "PTW": {
+    "term": null,
+    "parts": [
+     "PTW"
+    ],
+    "options": {
+     "PTW": {
+      "evidence": "explicit",
+      "labels": [
+       "Protibia width"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "PTW | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "PTW": {
+      "e0": 0.049,
+      "keep": 0.951
+     }
+    }
+   },
+   "PW": {
+    "term": "Pronotum width (mm)",
+    "parts": [
+     "PW"
+    ],
+    "options": {
+     "PW": {
+      "evidence": "explicit",
+      "labels": [
+       "Pronotum width"
+      ]
+     }
+    },
+    "evidence": {
+     "PW": "explicit"
+    },
+    "probs": {
+     "PW | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "PW": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "PW | QB": {
+      "w0": 0.033,
+      "w1": 0.967
+     }
+    }
+   }
+  },
+  "header": "Trait"
+ },
+ "8:6": {
+  "cells": {},
+  "header": "Measurement"
+ },
+ "9:11": {
+  "cells": {},
+  "header": "Feve morph"
+ }
+}

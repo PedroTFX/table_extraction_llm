@@ -1,0 +1,29 @@
+all papers: 30 papers
+
+                                           gemma's tables (pipeline)             head reader 1, v1             head reader 1, v2             head reader 2, v2
+tables the GT draws on                                            63                            61                            61                            60
+GT-used columns, 9 mapper fields                         236/251 94%                   220/244 90%                   223/244 91%                   212/237 89%
+  (type~value counted equal)                             237/251 94%                   224/244 92%                   227/244 93%                   216/237 91%
+GT-used, new tags (tree only)                               4/4 100%                      4/4 100%                      4/4 100%                      4/4 100%
+GT-unused columns -> none                                149/338 44%                   165/334 49%                   193/334 58%                   195/334 58%
+column-tree seconds                                              909                          1059                           793                           907
+
+the column tree's held-out papers (new20): 19 papers
+
+                                           gemma's tables (pipeline)             head reader 1, v1             head reader 1, v2             head reader 2, v2
+tables the GT draws on                                            38                            38                            38                            38
+GT-used columns, 9 mapper fields                         141/145 97%                   137/145 94%                   140/145 97%                   136/145 94%
+  (type~value counted equal)                             142/145 98%                   138/145 95%                   141/145 97%                   137/145 94%
+GT-used, new tags (tree only)                               3/3 100%                      3/3 100%                      3/3 100%                      3/3 100%
+GT-unused columns -> none                                104/217 48%                   121/221 55%                   149/221 67%                   151/221 68%
+column-tree seconds                                              531                           582                           473                           483
+
+the column tree's tuning papers: 11 papers
+
+                                           gemma's tables (pipeline)             head reader 1, v1             head reader 1, v2             head reader 2, v2
+tables the GT draws on                                            25                            23                            23                            22
+GT-used columns, 9 mapper fields                          95/106 90%                     83/99 84%                     83/99 84%                     76/92 83%
+  (type~value counted equal)                              95/106 90%                     86/99 87%                     86/99 87%                     79/92 86%
+GT-used, new tags (tree only)                               1/1 100%                      1/1 100%                      1/1 100%                      1/1 100%
+GT-unused columns -> none                                 45/121 37%                    44/113 39%                    44/113 39%                    44/113 39%
+column-tree seconds                                              378                           477                           320                           424

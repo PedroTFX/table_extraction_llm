@@ -1,0 +1,314 @@
+{
+ "_columns": [
+  [
+   7,
+   1,
+   "Morphological type",
+   [
+    "M11",
+    "M6",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M7",
+    "M8",
+    "M10",
+    "M12",
+    "M14",
+    "M15",
+    "M13",
+    "M1",
+    "M16",
+    "M9"
+   ]
+  ],
+  [
+   7,
+   2,
+   "Functional feeding guild",
+   [
+    "Prd",
+    "Shr",
+    "CG",
+    "CF",
+    "Scr"
+   ]
+  ],
+  [
+   7,
+   4,
+   "Locomotion",
+   [
+    "Sprawler",
+    "Burrower",
+    "Climber",
+    "Clinger"
+   ]
+  ]
+ ],
+ "7:1": {
+  "cells": {},
+  "header": "Morphological type",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "7:2": {
+  "cells": {
+   "Prd": {
+    "term": "Predators",
+    "parts": [
+     "Prd"
+    ],
+    "options": {
+     "Prd": {
+      "evidence": "explicit",
+      "labels": [
+       "Predators"
+      ]
+     }
+    },
+    "evidence": {
+     "Prd": "explicit"
+    },
+    "probs": {
+     "Prd | QK": {
+      "code": 0.998,
+      "word": 0.002
+     },
+     "Prd": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "Prd | QB": {}
+    }
+   },
+   "Shr": {
+    "term": "Shredders",
+    "parts": [
+     "Shr"
+    ],
+    "options": {
+     "Shr": {
+      "evidence": "explicit",
+      "labels": [
+       "Shredders"
+      ]
+     }
+    },
+    "evidence": {
+     "Shr": "explicit"
+    },
+    "probs": {
+     "Shr | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "Shr": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "Shr | QB": {}
+    }
+   },
+   "CG": {
+    "term": "Collector-gatherers",
+    "parts": [
+     "CG"
+    ],
+    "options": {
+     "CG": {
+      "evidence": "explicit",
+      "labels": [
+       "Collector-gatherers"
+      ]
+     }
+    },
+    "evidence": {
+     "CG": "explicit"
+    },
+    "probs": {
+     "CG | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "CG": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "CG | QB": {}
+    }
+   },
+   "CF": {
+    "term": "Collector-filterers",
+    "parts": [
+     "CF"
+    ],
+    "options": {
+     "CF": {
+      "evidence": "explicit",
+      "labels": [
+       "Collector-filterers"
+      ]
+     }
+    },
+    "evidence": {
+     "CF": "explicit"
+    },
+    "probs": {
+     "CF | QK": {
+      "code": 0.998,
+      "word": 0.002
+     },
+     "CF": {
+      "e0": 1.0,
+      "keep": 0.0
+     },
+     "CF | QB": {}
+    }
+   },
+   "Scr": {
+    "term": "Scrapers",
+    "parts": [
+     "Scr"
+    ],
+    "options": {
+     "Scr": {
+      "evidence": "explicit",
+      "labels": [
+       "Scrapers"
+      ]
+     }
+    },
+    "evidence": {
+     "Scr": "explicit"
+    },
+    "probs": {
+     "Scr | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "Scr": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "Scr | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u49",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.968,
+    "p1": 0.001,
+    "several": 0.019,
+    "none": 0.012
+   },
+   "chosen": [
+    "u49"
+   ]
+  },
+  "header": "Functional feeding guild"
+ },
+ "7:4": {
+  "cells": {
+   "Sprawler": {
+    "term": null,
+    "parts": [
+     "Sprawler"
+    ],
+    "options": {
+     "Sprawler": {
+      "evidence": "explicit",
+      "labels": [
+       "Sprawler"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Sprawler | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Burrower": {
+    "term": null,
+    "parts": [
+     "Burrower"
+    ],
+    "options": {
+     "Burrower": {
+      "evidence": "explicit",
+      "labels": [
+       "Burrower"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Burrower | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Climber": {
+    "term": null,
+    "parts": [
+     "Climber"
+    ],
+    "options": {
+     "Climber": {
+      "evidence": "explicit",
+      "labels": [
+       "Climber"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Climber | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Clinger": {
+    "term": null,
+    "parts": [
+     "Clinger"
+    ],
+    "options": {
+     "Clinger": {
+      "evidence": "explicit",
+      "labels": [
+       "Clinger"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Clinger | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "header": "Locomotion",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ }
+}

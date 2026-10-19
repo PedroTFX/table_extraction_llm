@@ -1,0 +1,87 @@
+{
+ "calls": 1,
+ "chars": 5065,
+ "passages": [
+  "[prose] Statistical analyses were performed in R (ver. 3.3.3 and ver. 3.6.1; R Core Team, 2015) and were carried out separately for the different taxonomic groups with the 35 gardens as replicates. We used various traits, depending on the plants or the invertebrate group examined, to calculate FDis and FEve (Table 1) using the FD package in R (Laliberté & Legendre, 2010). For native grassland plants and for ants, we used presence/absence data, and for the remaining groups we used abundance data to calculate FDis and FEve. We applied generalized linear models (GLM) with Gaussian error distribution to examine potential effects of landscape variables, garden size (vegetated garden area) and various local garden characteristics on species richness of different taxonomic groups. The three main variables (distance to city center, percentage sealed area and vegetated garden area) were retained in all models, while a step-wise procedure was followed with the other four garden characteristics (total native plant richness, structural diversity of the vegetation, habitat type richness and index of permeable border) to obtain the mini mal adequate models (Crawley, 2007). Three variables (total native plant richness, structural diversity of the vegetation and habitat type richness) were correlated with total garden area. Therefore, we used residuals of the relationships between the variable and total garden area for the GLM models. Distance to city center and percentage of sealed area were slightly correlated $( r = - 0 . 4 6 , p = . 0 0 6 )$ . However, we retained both in the model because they represent different aspects of urbanization. The same GLM model was used to analyze urbanization-related effects on body size for invertebrate groups.",
+  "[prose] ## 3.2 | Functional evenness",
+  "[prose] ## 3.4 | Body size",
+  "[prose] ## 4.4 | Body size",
+  "[table 0] Trait | Type | Specification | References\n(a) Traits used to calculate FDis and FEvea\nPlants\nLife form | Categorical | Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte | 1\nReproduction type | Categorical | Sexual; mixed; self-fertilization | 1\nEcological strategy | Categorical | C; CR; CS; CSR; S; SR; R (categories after Grime, 1979) | 1\nPollination syndrome | Categorical | Insects; wind | 1\nSeed dispersal type | Categorical | Zoochory; anemochory; hemerochory; autochory; hydrochory | 2\nSeed mass | Continuous | Mean of seed mass (mg) | 1\nSnails\nShell size | Continuous | The longer of shell height or shell breadth (mm) | 3\nAge at sexual maturity | Ordinal | <1 year; 1 year; >1 year | 4-6\nLongevity | Ordinal | <1 year; 1-2 years; >2 years | 5, 6\nShell shape (snails) | Categorical | Depressed; globose/conical; oblong | 3\nSpiders\nBody size | Continuous | Mean male body length (mm) | 7\nHunting mode | Categorical | Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other | 8\nShading width | Continuous | Measure for the niche width | 9\nHumidity width | Continuous | Measure for the niche width | 9\nMillipedes",
+  "[prose] Table 3; Figure S1). Percentage of sealed area negatively influenced FDis of ants (Figure 1; Table 3; Figure S1). No significant effects of distance to city center or percentage of sealed area on FDis were found for the other invertebrate groups. Habitat type richness was the only local garden characteristics to affect FDis, which was increasing in snails with increasing habitat type richness (Figure 1; Table 3; Figure S1).",
+  "[table 0] Body length | Continuous | Mean of male and female body length of first adult stage (mm) | 10-15\nBreadth | Continuous | Maximum body breath at mid length of individual (mm) | 10-15\nEye morphology | Continuous | Number of ocelli | 10-13, 16\nFeeding guild | Categorical | Detritivore; facultative scavenger; algivore | 10-12, 17\nAnts\nBody size | Continuous | Maximum total length of workers, including major workers in species where these forage (mm) | 18-21\nMain food | Categorical | Carbohydrates; animal matter; carbohydrates & animal matter; grains | 18-20\nMain nest stratum | Categorical | Wood & litter; soil & crevices; both | 18-20\nColony founding mode | Categorical | Independent; social parasite | 18-20\nNumber of queens | Categorical | Monogynous; polygynous (species where only some nests have more than one queen are considered polygynous) | 18-20\nRove beetles\nBody size | Continuous | Mean of mean body length of males and females (mm) | 10, 22-30\nMicrohabitat preference | Categorical | No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous | 31\n(b) Measures for habitat preferences\nNative grassland plants\nHabitat preference | Binominal | Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land) | 32\nPreference for dry conditions | Binominal | Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3) | 33\nSnails"
+ ],
+ "legends": [
+  {
+   "variable": "Life form",
+   "code": "Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte",
+   "term": "1"
+  },
+  {
+   "variable": "Reproduction type",
+   "code": "Sexual; mixed; self-fertilization",
+   "term": "1"
+  },
+  {
+   "variable": "Ecological strategy",
+   "code": "C; CR; CS; CSR; S; SR; R",
+   "term": "1"
+  },
+  {
+   "variable": "Pollination syndrome",
+   "code": "Insects; wind",
+   "term": "1"
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "Zoochory; anemochory; hemerochory; autochory; hydrochory",
+   "term": "2"
+  },
+  {
+   "variable": "Age at sexual maturity",
+   "code": "<1 year; 1 year; >1 year",
+   "term": "4-6"
+  },
+  {
+   "variable": "Longevity",
+   "code": "<1 year; 1-2 years; >2 years",
+   "term": "5, 6"
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "Depressed; globose/conical; oblong",
+   "term": "3"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other",
+   "term": "8"
+  },
+  {
+   "variable": "Main nest stratum",
+   "code": "Wood & litter; soil & crevices; both",
+   "term": "18-20"
+  },
+  {
+   "variable": "Colony founding mode",
+   "code": "Independent; social parasite",
+   "term": "18-20"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous",
+   "term": "31"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "term": "32"
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3)",
+   "term": "33"
+  }
+ ],
+ "dropped": [],
+ "seconds": 13.2
+}

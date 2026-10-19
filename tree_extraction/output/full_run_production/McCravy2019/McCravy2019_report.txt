@@ -1,0 +1,76 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\McCravy2019\McCravy2019.xlsx  (232 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\McCravy2019\McCravy2019.csv  (232 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (8)
+  'Andrena cressonii': no ground-truth name denotes this organism
+  'Andrena robertsonii': no ground-truth name denotes this organism
+  'Lasioglossum cressonii': no ground-truth name denotes this organism
+  'subviridatum': no ground-truth name denotes this organism
+  'timothyi Gibbs': no ground-truth name denotes this organism
+  'truncatum': no ground-truth name denotes this organism
+  'versatum': no ground-truth name denotes this organism
+  'weemsi': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 200
+  missed (FN)         : 32
+  spurious, in scope  : 32   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.862 / 0.862 / 0.862   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.862 / 0.862 / 0.862   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.862   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               150    200  0.750
+  measurementMethod             0      0    n/a   +100 where GT blank
+  measurementUnit              50     50  1.000
+  measurementStatistic        200    200  1.000
+  measurementRemarks            0      0    n/a
+  sex                         100    200  0.500
+  lifeStage                   100    200  0.500
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    200  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 32 MISSED ROWS MISSED
+  species not in prediction                  32
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (7 distinct), closest predicted name:
+     gt 'Andrenaii'                         ~0.80~  pred 'Andrena cressonii'   x8
+     gt 'Lasioglossumii'                    ~0.78~  pred 'Lasioglossum obscurum'   x4
+     gt 'Lasioglossum subviridatum'         ~0.81~  pred 'subviridatum'   x4
+     gt 'Lasioglossum timothyi'             ~0.69~  pred 'Lasioglossum imitatum'   x4
+     gt 'Lasioglossum truncatum'            ~0.82~  pred 'truncatum'   x4
+     gt 'Lasioglossum versatum'             ~0.82~  pred 'versatum'   x4
+  -> 6 species mismatches explain 28 of 32 misses (88%) — systematic, not scattered
+
+  full miss detail saved -> McCravy2019_misses.csv, McCravy2019_misses_summary.json (32 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      58    58   
+  lecty                                            58    58   
+  nest location                                    58    58   
+  sociality                                        58    58   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.862  0.862  0.862    200    32    32   id+type+value
+  tags        0.000  0.000  0.000      0   232   232   basis+id+type+value+stat+sex+stage
+             (F1 -0.862 vs previous)

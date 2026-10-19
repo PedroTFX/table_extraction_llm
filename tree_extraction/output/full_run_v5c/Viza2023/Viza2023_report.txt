@@ -1,0 +1,142 @@
+  [semantic] left unmatched: 'Altitudinal distribution AL' vs 'River zonation (Altitudinal distribution)' (llm said different traits)
+  [semantic] left unmatched: 'Altitudinal distribution AL' vs 'Iberian Peninsula Range (Distribution relative to the Iberian Peninsula)' (llm said different traits)
+  [semantic] left unmatched: 'Altitudinal distribution AL' vs 'Habitat seasonality' (llm said different traits)
+  [semantic] left unmatched: 'Altitudinal distribution AM' vs 'River zonation (Altitudinal distribution)' (llm said different traits)
+  [semantic] left unmatched: 'Altitudinal distribution AM' vs 'Iberian Peninsula Range (Distribution relative to the Iberian Peninsula)' (llm said different traits)
+  [semantic] left unmatched: 'Altitudinal distribution AM' vs 'Habitat seasonality' (llm said different traits)
+  [semantic] left unmatched: 'Body size BM' vs 'Body Length' (llm said different traits)
+  [semantic] left unmatched: 'Body size BM' vs 'Vegetation at the breeding site' (llm said different traits)
+  [semantic] left unmatched: 'Body size BM' vs 'Iberian Peninsula Range (Distribution relative to the Iberian Peninsula)' (llm said different traits)
+  [semantic] left unmatched: 'Body size BS' vs 'Body Length' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Viza2023\Viza2023.xlsx  (1695 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5c\Viza2023\Viza2023.csv  (3108 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 12 pair(s))
+  'Altitudinal distribution AH' -> 'Distribution'
+  'Diapause directions of absence' -> 'Diapause'
+  'Dispersion behaviour DBD' -> 'Dispersion Behaviour'
+  'Flight Season FSA' -> 'Flight Season'
+  'Flight behaviour FBF' -> 'Flight Behaviour'
+  'Habitat Hpl' -> 'Habitat Type'
+  'Iberian Peninsula Range RC' -> 'Iberian Peninsula Range (Distribution relative to the Iberian Peninsula)'
+  'Oviposition habitat OF' -> 'Oviposition Habitat'
+  'Seasonality ST' -> 'Habitat seasonality'
+  'Vegetation VS' -> 'Vegetation at the breeding site'
+  'Voltinism NC0' -> 'Voltinism'
+  'Water Quality WE' -> 'Water Quality'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1695
+  spurious, in scope  : 1008   <- GT covers this trait: real errors
+  spurious, out of scope: 2100   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           2100
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1695 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            252
+  species+trait present, value differs     1443
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'perchers'                   ->  '0'                          x65
+     'permanent'                  ->  '0'                          x56
+     'no'                         ->  '1'                          x54
+     'dispersal'                  ->  '1'                          x52
+     'summer'                     ->  '0'                          x52
+     'spring'                     ->  '0'                          x50
+  -> 6 substitutions explain 329 of 1695 misses (19%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Length'                      x84
+     'Drought Resistance'               x84
+     'River zonation (Altitudinal distribution)' x84
+  -> 3 missing traits explain 252 of 1695 misses (15%) — scattered; no single cause
+
+  full miss detail saved -> Viza2023_misses.csv, Viza2023_misses_summary.json (1695 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitudinal distribution al                       0    84   PRED-ONLY
+  altitudinal distribution am                       0    84   PRED-ONLY
+  river zonation (altitudinal distribution)        84     0   GT-ONLY
+  dispersion behaviour dbe                          0    84   PRED-ONLY
+  dispersion behaviour dbm                          0    84   PRED-ONLY
+  dispersion behaviour dbp                          0    84   PRED-ONLY
+  dispersion behaviour                            113    84   Δ-29 (split?)
+  flight behaviour fbp                              0    84   PRED-ONLY
+  flight behaviour                                 84    84   
+  body size bm                                      0    84   PRED-ONLY
+  body size bs                                      0    84   PRED-ONLY
+  body length                                      84     0   GT-ONLY
+  vegetation at the breeding site                 110    84   Δ-26 (split?)
+  sp code                                           0    84   PRED-ONLY
+  diapause                                         84    84   
+  distribution                                     84    84   
+  iberian peninsula range (distribution relative to the iberian peninsula)   83    84   Δ+1 (split?)
+  resistance drl                                    0    84   PRED-ONLY
+  drought resistance                               84     0   GT-ONLY
+  flight season fsp                                 0    84   PRED-ONLY
+  flight season fsu                                 0    84   PRED-ONLY
+  flight season fsw                                 0    84   PRED-ONLY
+  flight season                                   201    84   Δ-117 (split?)
+  habitat ha                                        0    84   PRED-ONLY
+  habitat hl                                        0    84   PRED-ONLY
+  habitat hpd                                       0    84   PRED-ONLY
+  oviposition habitat oa                            0    84   PRED-ONLY
+  oviposition habitat osm                           0    84   PRED-ONLY
+  oviposition habitat                             147    84   Δ-63 (split?)
+  habitat seasonality                              84    84   
+  habitat type                                    285    84   Δ-201 (split?)
+  iberian peninsula range rl                        0    84   PRED-ONLY
+  iberian peninsula range ru                        0    84   PRED-ONLY
+  voltinism nc1                                     0    84   PRED-ONLY
+  voltinism nc2                                     0    84   PRED-ONLY
+  water quality                                    84    84   
+  seasonality sp                                    0    84   PRED-ONLY
+  vegetation vhe                                    0    84   PRED-ONLY
+  vegetation vhy                                    0    84   PRED-ONLY
+  voltinism                                        84    84   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'river zonation (altitudinal distribution)' vs pred 'altitudinal distribution al'      sim=0.71
+    gt 'drought resistance'               vs pred 'resistance drl'                   sim=0.70
+    gt 'body length'                      vs pred 'body size bs'                     sim=0.56
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0  1008  1695   id+type+value
+             (2100 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0  1008  1695   basis+id+type+value+stat+sex+stage
+             (2100 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

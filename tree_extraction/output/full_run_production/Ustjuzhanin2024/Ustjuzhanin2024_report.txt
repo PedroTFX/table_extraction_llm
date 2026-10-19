@@ -1,0 +1,119 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Ustjuzhanin2024\Ustjuzhanin2024.xlsx  (243 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Ustjuzhanin2024\Ustjuzhanin2024.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 243
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 243 MISSED ROWS MISSED
+  species not in prediction                 243
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (13 distinct), closest predicted name:
+     gt 'Alucita sroczki Ustjuzhanin & Kovtunovich'   (nothing similar in the prediction)   x38
+     gt 'Alucita fako Ustjuzhanin & Kovtunovich'   (nothing similar in the prediction)   x36
+     gt 'Alucita sedlaceki Ustjuzhanin & Kovtunovich'   (nothing similar in the prediction)   x28
+     gt 'Alucita sokolovi Ustjuzhanin & Kovtunovich'   (nothing similar in the prediction)   x24
+     gt 'Alucita potockyi Ustjuzhanin & Kovtunovich'   (nothing similar in the prediction)   x20
+     gt 'Alucita erzayi Ustjuzhanin & Kovtunovich'   (nothing similar in the prediction)   x18
+  -> 6 species mismatches explain 164 of 243 misses (67%) — systematic, not scattered
+
+  full miss detail saved -> Ustjuzhanin2024_misses.csv, Ustjuzhanin2024_misses_summary.json (243 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  aedeagus                                          6     0   GT-ONLY
+  fringe on all lobes of the wings                  1     0   GT-ONLY
+  fringe on the lobes of all wings                  1     0   GT-ONLY
+  the fringe on the lobes of all wings              1     0   GT-ONLY
+  fringe on all wings                               2     0   GT-ONLY
+  all lobes of the wings                            1     0   GT-ONLY
+  lobes of all wings                                1     0   GT-ONLY
+  all wings                                         1     0   GT-ONLY
+  altitude                                         41     0   GT-ONLY
+  papillae anales                                   5     0   GT-ONLY
+  anellus arms                                      6     0   GT-ONLY
+  antenna                                           1     0   GT-ONLY
+  antennae                                          8     0   GT-ONLY
+  antrum                                            5     0   GT-ONLY
+  ductus between the ductus seminalis and antrum    1     0   GT-ONLY
+  lower portion of the antrum                       1     0   GT-ONLY
+  medium portion of the antrum                      1     0   GT-ONLY
+  apophyses                                         1     0   GT-ONLY
+  posterior apophyses                               4     0   GT-ONLY
+  wings’ basal areas                                1     0   GT-ONLY
+  gnathos arms                                      4     0   GT-ONLY
+  medial band                                       1     0   GT-ONLY
+  basal portion of the sacculus                     1     0   GT-ONLY
+  bursa                                             1     0   GT-ONLY
+  bursa copulatrix                                  3     0   GT-ONLY
+  cornuti                                           1     0   GT-ONLY
+  cornutus                                          1     0   GT-ONLY
+  distal portion                                    1     0   GT-ONLY
+  distribution                                     13     0   GT-ONLY
+  ductus                                            4     0   GT-ONLY
+  ductus seminalis                                  2     0   GT-ONLY
+  ductus widens                                     1     0   GT-ONLY
+  first lobe on the fore wing                       1     0   GT-ONLY
+  fore wing                                         2     0   GT-ONLY
+  fore wings                                        3     0   GT-ONLY
+  forehead                                          1     0   GT-ONLY
+  inner portion of the fork                         1     0   GT-ONLY
+  outer portion of this fork                        1     0   GT-ONLY
+  fringe on the wings                               2     0   GT-ONLY
+  fringes on the hind wings                         1     0   GT-ONLY
+  gnathos                                           6     0   GT-ONLY
+  habitat type                                     26     0   GT-ONLY
+  head                                              1     0   GT-ONLY
+  head, thorax, and tegulae                         5     0   GT-ONLY
+  head and thorax                                   2     0   GT-ONLY
+  hind legs                                         8     0   GT-ONLY
+  lobes of the hind wings                           1     0   GT-ONLY
+  hind wings                                        4     0   GT-ONLY
+  holotype wingspan                                 4     0   GT-ONLY
+  labial palpi                                     10     0   GT-ONLY
+  saccus                                            6     0   GT-ONLY
+  third segment                                     4     0   GT-ONLY
+  thorax and tegulae                                2     0   GT-ONLY
+  uncus                                             6     0   GT-ONLY
+  valves                                            6     0   GT-ONLY
+  wings                                             9     0   GT-ONLY
+  wingspan                                          9     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   243   id+type+value
+  tags        0.000  0.000  0.000      0     0   243   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

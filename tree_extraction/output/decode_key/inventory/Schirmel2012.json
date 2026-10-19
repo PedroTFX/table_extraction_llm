@@ -1,0 +1,611 @@
+{
+ "paper": "Schirmel2012",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "We investigated patterns in species richness and diversity, life-history traits and functional diversity of carabid beetles and spiders along a coastal heathland successional gradient. We sampled in five successional stages on the island of Hiddensee, Germany. Species richness of carabids and spiders and Simpson diversity for spiders did not differ among stages. Functional dispersion (FDis), a measure of functional richness, was lowest in the youngest stage for both carabids and spiders. Older successional stages represent more heterogeneous habitats and offer a broader range of niches, which might enhance functional dispersion. Functional evenness (FEve) differed among successional stages for spiders, indicating an uneven distribution of species abundances in the functional trait space. Functional divergence (FDiv) did not differ among stages for either taxon. Shifts in life-history traits were noted in both arthropod groups, but not always in the same direction: Body size of carabid beetles increased towards older successional stages, but decreased for spiders. The number of flightless carabid species increased towards older habitats. Each successional stage seemingly favors species with distinct life-history traits (species sorting). We conclude that a trait-based approach including the use of functional diversity measurements (FDis) could contribute valuable information for biodiversity conservation."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "integrate biodiversity research into the broader context of ecosystem processes and functioning (Loreau 2010), e.g., for productivity (Tilman et al. 1997) or resilience (Folke et al. 2004). Several indices were developed analogously to traditional alpha diversity indices to measure functional diversity or to display functional composition (Petchey & Gaston 2006; Villéger, Mason, & Mouillot 2008; Laliberté & Legendre 2010). In the present study, three indices were used to explore the different facets of functional diversity: functional evenness (FEve) and functional divergence (FDiv) (Villéger et al. 2008) as well as functional dispersion (FDis) (Laliberté & Legendre 2010). Although it has an extensive theoretical and mathematical background (Schleuter, Daufresne, Massol, & Argillier 2010), functional diversity, especially from multiple traits, has rarely been incorporated into ecological studies to date, and little is known in particular about shifts of functional diversity along environmental gradients (Gerisch et al. 2011). However, life-history traits of carabids and spiders have already been successfully integrated into investigations of assemblage shifts (e.g., Lambeets et al. 2008; Lambeets et al. 2009; Il Choi et al. 2010; Vandewalle et al. 2010)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "In particular, we (i) tested whether species richness and diversity as well as functional diversity increased with age and structurally complexity of successional stage and (ii) hypothesized that succession is reflected by shifts in lifehistory traits, and (iii) that certain traits are responsible for species sorting along a successional gradient."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:e22497a/tier:advanced/page:3/block:3)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Boddenlandschaft’ (Western Pomeranian lagoon area) in Northeastern Germany, Mecklenburg-Western Pomerania (Fig. 1). The climate is characterized by an average annual temperature of $7 . 5 ^ { \\circ } \\mathrm { C }$ and an average annual precipitation of 547 mm (Reinhard 1962). An anthropo-zoogenic coastal heathland is situated in the centre of the island $(54^{\\circ}32'\\mathrm{N},$ 13◦5\u0004E; 1–5 m a.s.l.; Fig. 1) on acidic, nutrient-poor and sandy soils (Bauer 1972). This area was traditionally used as grazing ground for domestic animals and for fuel and building material. However, traditional land use decreased at the beginning of the 20th century and ceased totally around the Second World War (Umweltministerium Mecklenburg-Vorpommern 2003). Nowadays it is preserved as an open landscape by several management measures such as shrub clearing, mowing, sod cutting and (since 2004) sheep grazing. Five main stages of (coastal) heathland succession can be found (Remke 2003): (i) open acidic (coastal) dunes (grey dunes) dominated by Corynephorus canescens, Carex arenaria and cryptogams representing the youngest successional stage (G); (ii) dwarf-shrub heath dominated by Calluna vulgaris and Empetrum nigrum, the main vegetation type within the study area (H); (iii) grassy heath, where the majority of the dwarf-shrubs are displaced by tall graminoids, especially by C. arenaria (C); (iv) shrubheathland dominated by Betula pendula, Betula pubescens or Prunus serotina (S); (v) young birch forest, which has developed due to the lack of management during the last 30–40 years, thus representing the oldest successional stage (B). The five successional stages differed in habitat heterogeneity (expressed as the Simpson-Diversity of estimated cover of ‘trees’, ‘shrubs’, ‘field layer’, ‘C. vulgaris’ and ‘cryptogams based on vegetation sampling data from Schirmel, Mantilla-Contreras, Blindow, and Fartmann (2011); one-way ANOVA: $F = 53.901, P"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Carabid beetles and spiders were assigned to lifehistory trait categories with the help of literature data and using morpho-physiological and phenological features which potentially affect the occurrence patterns of these species (Ribera et al. 2001; Bonte et al. 2006; Lambeets et al. 2009) (Table 1; Appendix A: Table 1). The following traits were analyzed: ‘body size’, ‘dispersal’ and ‘feeding preference (carabids)/hunting mode (spiders)’. For body size, metric data (mm) were given in addition to body size categories."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "We used three functional diversity measurements. FDis expresses changes in functional dispersion, FEve for functional evenness and FDiv for functional divergence. FDis is a measure of functional richness, which considers species relative abundances by estimating their dispersion in a multidimensional trait space (Laliberté & Legendre 2010). In the following, we interpret functional dispersion as a measure for functional diversity per se. Life-history trait data (for dispersal, feeding preference/hunting mode) were coded categorically for calculating functional diversity indices except body size. All used indices are distance-based and can be computed for categorical variables (Laliberté & Legendre 2010; Laliberté & Shipley 2010; Schleuter et al. 2010). We computed FDis (Laliberté & Legendre 2010) and FEve and FDiv (Villéger et al. 2008) using the R language package FD (Laliberté & Shipley 2010). Differences in species richness, Simpson diversity and functional diversity indices among the successional stages were tested with generalised linear models (GLMs) using Poisson models for count data and Gaussian error structures and identity link function for indices."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "In total, 3.646 carabid and 9.934 spider individuals were trapped (Appendix A: Table 1). Species richness did not differ among the five successional stages for carabid beetles or spiders (Appendix A: Table 2). In contrast, Simpson diversity differed among the stages for carabids (Fig. 2), while no differences were observed for spiders (Appendix A: Table 2). FDis of both carabid beetles and spiders differed significantly among the successional stages and was lowest in grey dunes (Fig. 2), while no differences were observed in"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:e22497a/tier:advanced/page:5/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 2. Diversity measures (mean values + SE) of carabid beetles (Simpson diversity, functional dispersion) and spiders (functional evenness, functional dispersion) showing significant differences among five heathland successional stages on the Baltic island of Hiddensee, Germany. Significance of differences was tested using Gaussian GLM with identity link. G: grey dunes, H: dwarf-shrub heath, C: grassy heath, S: heath with shrubs and B: birch forest."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "FDiv (Appendix A: Table 2). For spiders, FEve differed significantly among stages and was also lowest in grey dunes (Fig. 2). No differences in FEve were found for carabids (Appendix A: Table 2)."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:e22497a/tier:advanced/page:5/block:10)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Most obviously, habitat heterogeneity facilitates niche differentiation in coastal heathlands (Schultz & Finch 1996); this is reflected by a higher functional diversity (FDis) of carabid beetles and spiders in later and structurally more complex successional stages. Our findings therefore emphasize that species richness (and to some extent Simpson diversity) have limited explanatory power for analyzing shifts along environmental gradients, as also found e.g., by Brose (2003), Mallis and Hurd (2005) and Buchholz (2010)."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Changes in functional diversity (FDis) were linked to community-wide character shifts of both carabid beetles and spiders. Habitat conditions constrained species composition (Schirmel & Buchholz 2011) but varied among functional groups. Species sorting occurred, allowing species with distinct life-history traits to occur under the given conditions of a certain successional stage."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Carabid beetles were smaller in grey dunes and large-bodied in most vegetated successional stages. This corroborates the stress hypothesis according to which species often have a smaller body size in disturbed and dynamic habitats (Gray 1989). As an adaption to unstable conditions, species in more disturbed habitats often have a high turnover rate and therefore a smaller body size, while species in undisturbed habitats often have a low turnover rate and a larger size. For carabid beetles, support for this hypothesis had already been given by Blake, Foster, Eyre, and Luff (1994), Ribera et al. (2001) and Niemelä and Kotze (2009) who found that body size was smaller in disturbed habitats."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Opposite patterns were observed in spiders, where most large and medium-sized species occurred in grey dunes, implying that body size patterns seem to be constrained by morphology rather than habitat dynamics. Remmert (1981) and Entling, Schmidt-Entling, Bacher, Brandl, and Nentwig (2010) suggested that dry and hot habitat conditions favor large-bodied species because of the higher desiccation resistance which results from their more compact and waterproof cuticle and their lower surface area: volume ratio. Moreover, large spider species with a burrowing life style often occur in dune habitats which benefit from high sand dynamics that avoid an increase in soil hardness and vegetation encroachment (Bonte et al. 2006). However, as only body size values of adults were used for analyses it is possible that patterns may change substantially after including all instars."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Appendix A: Table 1. Individual numbers of carabid beetles and spiders caught in the five coastal heathland successional stages (ordered by total catch numbers) and species life-history traits (based on literature data, see Table 1). G = grey dunes, H = dwarf-shrub heath, C = grassy heath, S = heath with shrubs, B = birch forest."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "* P < 0.05, ** P < 0.01, *** P < 0.001, n.s. = not significant. FEve = functional evenness, FDiv = functional divergence, FDis = functional dispersion"
+  },
+  {
+   "id": "u18",
+   "kind": "table 0",
+   "text": "Trait | Category\nCarabids\nMean body size ^a,b | Very small (<5 mm)Small (5–9 mm)Medium (9–15 mm)Large (>15 mm)\nAbility of active flight ^c | FlightlessAble to fly\nFeeding ^a | Collembola specialistGeneralist predatorMixed feederPhytophagous\nSpiders\nMean body size of females ^d,e | Very small (<3.1 mm)Small (3.1–4.5 mm)Medium (4.6–8.4 mm)Large (>8.5 mm)\nBallooning ^i,f | Very commonLess commonUncommon\nHunting ^d,g,h | Active huntingWebAmbush"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16"
+  ],
+  [
+   "u17",
+   "u18"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "successional stage",
+   "code": "G",
+   "term": "open acidic (coastal) dunes (grey dunes) dominated by Corynephorus canescens, Carex arenaria and cryptogams representing the youngest successional stage",
+   "unit": "u4",
+   "model_label": "dunes",
+   "label": "dunes",
+   "explanation": "open acidic (coastal) (grey dunes) dominated by Corynephorus canescens, Carex arenaria and cryptogams representing the youngest successional stage"
+  },
+  {
+   "variable": "successional stage",
+   "code": "H",
+   "term": "dwarf-shrub heath dominated by Calluna vulgaris and Empetrum nigrum, the main vegetation type within the study area",
+   "unit": "u4",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "dwarf-shrub dominated by Calluna vulgaris and Empetrum nigrum, the main vegetation type within the study area"
+  },
+  {
+   "variable": "successional stage",
+   "code": "C",
+   "term": "grassy heath, where the majority of the dwarf-shrubs are displaced by tall graminoids, especially by C. arenaria",
+   "unit": "u4",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "grassy , where the majority of the dwarf-shrubs are displaced by tall graminoids, especially by C. arenaria"
+  },
+  {
+   "variable": "successional stage",
+   "code": "S",
+   "term": "shrubheathland dominated by Betula pendula, Betula pubescens or Prunus serotina",
+   "unit": "u4",
+   "model_label": "heathland",
+   "label": "shrubheathland dominated by Betula pendula, Betula pubescens or Prunus serotina",
+   "explanation": ""
+  },
+  {
+   "variable": "successional stage",
+   "code": "B",
+   "term": "young birch forest, which has developed due to the lack of management during the last 30–40 years, thus representing the oldest successional stage",
+   "unit": "u4",
+   "model_label": "forest",
+   "label": "forest",
+   "explanation": "young birch , which has developed due to the lack of management during the last 30–40 years, thus representing the oldest successional stage"
+  },
+  {
+   "variable": "successional stages",
+   "code": "G",
+   "term": "grey dunes",
+   "unit": "u9",
+   "model_label": "dunes",
+   "label": "dunes",
+   "explanation": "grey"
+  },
+  {
+   "variable": "successional stages",
+   "code": "H",
+   "term": "dwarf-shrub heath",
+   "unit": "u9",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "dwarf-shrub"
+  },
+  {
+   "variable": "successional stages",
+   "code": "C",
+   "term": "grassy heath",
+   "unit": "u9",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "grassy"
+  },
+  {
+   "variable": "successional stages",
+   "code": "S",
+   "term": "heath with shrubs",
+   "unit": "u9",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "with shrubs"
+  },
+  {
+   "variable": "successional stages",
+   "code": "B",
+   "term": "birch forest",
+   "unit": "u9",
+   "model_label": "forest",
+   "label": "forest",
+   "explanation": "birch"
+  },
+  {
+   "variable": "coastal heathland successional stages",
+   "code": "G",
+   "term": "grey dunes",
+   "unit": "u16",
+   "model_label": "dunes",
+   "label": "dunes",
+   "explanation": "grey"
+  },
+  {
+   "variable": "coastal heathland successional stages",
+   "code": "H",
+   "term": "dwarf-shrub heath",
+   "unit": "u16",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "dwarf-shrub"
+  },
+  {
+   "variable": "coastal heathland successional stages",
+   "code": "C",
+   "term": "grassy heath",
+   "unit": "u16",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "grassy"
+  },
+  {
+   "variable": "coastal heathland successional stages",
+   "code": "S",
+   "term": "heath with shrubs",
+   "unit": "u16",
+   "model_label": "heath",
+   "label": "heath",
+   "explanation": "with shrubs"
+  },
+  {
+   "variable": "coastal heathland successional stages",
+   "code": "B",
+   "term": "birch forest",
+   "unit": "u16",
+   "model_label": "forest",
+   "label": "forest",
+   "explanation": "birch"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "^a,b",
+   "term": "Very small (<5 mm)",
+   "unit": "u18",
+   "model_label": "Very small",
+   "label": "Very small",
+   "explanation": "<5 mm"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "^a,b",
+   "term": "Small (5–9 mm)",
+   "unit": "u18",
+   "model_label": "Small",
+   "label": "Small",
+   "explanation": "5–9 mm"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "^a,b",
+   "term": "Medium (9–15 mm)",
+   "unit": "u18",
+   "model_label": "Medium",
+   "label": "Medium",
+   "explanation": "9–15 mm"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "^a,b",
+   "term": "Large (>15 mm)",
+   "unit": "u18",
+   "model_label": "Large",
+   "label": "Large",
+   "explanation": ">15 mm"
+  },
+  {
+   "variable": "Ability of active flight",
+   "code": "^c",
+   "term": "Flightless",
+   "unit": "u18",
+   "model_label": "Flightless",
+   "label": "Flightless",
+   "explanation": ""
+  },
+  {
+   "variable": "Ability of active flight",
+   "code": "^c",
+   "term": "Able to fly",
+   "unit": "u18",
+   "model_label": "Able to fly",
+   "label": "Able to fly",
+   "explanation": ""
+  },
+  {
+   "variable": "Feeding",
+   "code": "^a",
+   "term": "Collembola specialist",
+   "unit": "u18",
+   "model_label": "Collembola specialist",
+   "label": "Collembola specialist",
+   "explanation": ""
+  },
+  {
+   "variable": "Feeding",
+   "code": "^a",
+   "term": "Generalist predator",
+   "unit": "u18",
+   "model_label": "Generalist predator",
+   "label": "Generalist predator",
+   "explanation": ""
+  },
+  {
+   "variable": "Feeding",
+   "code": "^a",
+   "term": "Mixed feeder",
+   "unit": "u18",
+   "model_label": "Mixed feeder",
+   "label": "Mixed feeder",
+   "explanation": ""
+  },
+  {
+   "variable": "Feeding",
+   "code": "^a",
+   "term": "Phytophagous",
+   "unit": "u18",
+   "model_label": "Phytophagous",
+   "label": "Phytophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "^d,e",
+   "term": "Very small (<3.1 mm)",
+   "unit": "u18",
+   "model_label": "Very small",
+   "label": "Very small",
+   "explanation": "<3.1 mm"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "^d,e",
+   "term": "Small (3.1–4.5 mm)",
+   "unit": "u18",
+   "model_label": "Small",
+   "label": "Small",
+   "explanation": "3.1–4.5 mm"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "^d,e",
+   "term": "Medium (4.6–8.4 mm)",
+   "unit": "u18",
+   "model_label": "Medium",
+   "label": "Medium",
+   "explanation": "4.6–8.4 mm"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "^d,e",
+   "term": "Large (>8.5 mm)",
+   "unit": "u18",
+   "model_label": "Large",
+   "label": "Large",
+   "explanation": ">8.5 mm"
+  },
+  {
+   "variable": "Ballooning",
+   "code": "^i,f",
+   "term": "Very common",
+   "unit": "u18",
+   "model_label": "Very common",
+   "label": "Very common",
+   "explanation": ""
+  },
+  {
+   "variable": "Ballooning",
+   "code": "^i,f",
+   "term": "Less common",
+   "unit": "u18",
+   "model_label": "Less common",
+   "label": "Less common",
+   "explanation": ""
+  },
+  {
+   "variable": "Ballooning",
+   "code": "^i,f",
+   "term": "Uncommon",
+   "unit": "u18",
+   "model_label": "Uncommon",
+   "label": "Uncommon",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting",
+   "code": "^d,g,h",
+   "term": "Active hunting",
+   "unit": "u18",
+   "model_label": "Active hunting",
+   "label": "Active hunting",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting",
+   "code": "^d,g,h",
+   "term": "Web",
+   "unit": "u18",
+   "model_label": "Web",
+   "label": "Web",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting",
+   "code": "^d,g,h",
+   "term": "Ambush",
+   "unit": "u18",
+   "model_label": "Ambush",
+   "label": "Ambush",
+   "explanation": ""
+  },
+  {
+   "variable": "life-history traits",
+   "code": "",
+   "label": "Body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "life-history traits",
+   "code": "",
+   "label": "number of flightless carabid species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "open acidic (coastal) dunes (grey dunes)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "dwarf-shrub heath",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "grassy heath",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "shrubheathland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "young birch forest",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "dispersal",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "feeding preference (carabids)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "lifehistory traits",
+   "code": "",
+   "label": "hunting mode (spiders)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "Life-history trait data",
+   "code": "",
+   "label": "feeding preference/hunting mode",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "life-history traits",
+   "code": "",
+   "label": "life-history traits",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "",
+   "label": "Very small (<5 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "",
+   "label": "Small (5–9 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "",
+   "label": "Medium (9–15 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size",
+   "code": "",
+   "label": "Large (>15 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "",
+   "label": "Very small (<3.1 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "",
+   "label": "Small (3.1–4.5 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "",
+   "label": "Medium (4.6–8.4 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Mean body size of females",
+   "code": "",
+   "label": "Large (>8.5 mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  }
+ ],
+ "dropped": [],
+ "seconds": 73.0
+}

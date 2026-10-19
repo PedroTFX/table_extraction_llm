@@ -1,0 +1,78 @@
+decoder on the chain's own columns (head reader v2 -> column tags -> decoder v2)
+
+coded: 8573 species rows   right 4665, no legend printed 2023, right, longer wording 949, left as printed 750, right, shorter wording 69, other term 48, not reached 38, GT error 19, right, unit inside 12
+kept: 15968 species rows   right 15802, changed (should keep) 166
+
+per paper, coded rows right / reachable (not reached):
+  AmbspergTraun1991    27 / 31   (not reached 0)
+  Arnan2012            82 / 150   (not reached 0)
+  Beyer2021            46 / 46   (not reached 0)
+  Cao2024              79 / 79   (not reached 0)
+  Cappellari2022       325 / 325   (not reached 0)
+  Derhe2016            5 / 5   (not reached 0)
+  Espinosa2023         27 / 27   (not reached 0)
+  Graf2021             781 / 816   (not reached 0)
+  Guariento2020        69 / 945   (not reached 0)
+  Habustova2017        12 / 16   (not reached 0)
+  Heiva2013            26 / 26   (not reached 0)
+  Keller1998           0 / 26   (not reached 0)
+  Korosi2022           104 / 104   (not reached 0)
+  Kratschmer2019       0 / 38   (not reached 38)
+  Lizee2016            41 / 41   (not reached 0)
+  McCune2023           48 / 48   (not reached 0)
+  Normandin2017        0 / 34   (not reached 0)
+  Pereira2016          42 / 42   (not reached 0)
+  Taillefer2018        20 / 56   (not reached 0)
+  Teder2020            2431 / 2844   (not reached 0)
+  Uemori2022           40 / 124   (not reached 0)
+  Vidal2023            0 / 25   (not reached 0)
+  Wallon2024           48 / 112   (not reached 0)
+  Wang2021             32 / 32   (not reached 0)
+  Wölfling2020         392 / 539   (not reached 0)
+
+misses:
+  AmbspergTraun1991 'Feeding group' 'W/S' -> want 'Wood/soil interface', have 'wood; soil' [right, shorter wording]
+  Arnan2012 'Defense of resources' '1' -> want 'none', have 'none (only defence of the nest)' [right, longer wording]
+  Arnan2012 'Colony population' '3' -> want 'tens of thousands', have '3' [left as printed]
+  Arnan2012 'Colony population' '2' -> want 'thousands', have '2' [left as printed]
+  Arnan2012 'Colony population' '1' -> want 'hundreds', have '1' [left as printed]
+  Arnan2012 'Brood cycle' '2' -> want 'larvae in the nests during the', have 'larvae within the nests during the whole' [other term]
+  Derhe2016 'Habitat preference' 'RF' -> want 'rainforest', have 'rain forest' [GT error]
+  Graf2021 'Feeding habit' 'NA' -> want 'not specified', have 'NA' [left as printed]
+  Guariento2020 'Hibernation in larval state ' '0' -> want 'No', have 'no hibernation in larval stage recorded' [right, longer wording]
+  Guariento2020 'Hibernation in pupal stage r' '0' -> want 'No', have 'no hibernation in pupal stage recorded' [right, longer wording]
+  Guariento2020 'Adult feeding' '0' -> want 'adults feed on flower nectar', have '0' [left as printed]
+  Habustova2017 'Body size' 'C' -> want '6–10.9', have '6–10.9 mm' [right, unit inside]
+  Habustova2017 'Body size' 'D' -> want '˂5.9', have '˂5.9 mm' [right, unit inside]
+  Habustova2017 'Body size' 'B' -> want '11–21.9', have '11–21.9 mm' [right, unit inside]
+  Habustova2017 'Body size' 'A' -> want '˃22', have 'A' [left as printed]
+  Keller1998 'queen number' 'M' -> want 'primarily monogynous', have 'species that are primarily monogynous' [right, longer wording]
+  Keller1998 'queen number' 'P' -> want 'primarily polygynous', have 'species that are primarily polygynous' [right, longer wording]
+  Keller1998 'queen number' 'M, P' -> want 'commonly have both monogyne an', have 'species that are primarily monogynous; s' [other term]
+  Keller1998 'colony founding' 'D' -> want 'generally use a dependent colo', have 'species that generally use a dependent c' [right, longer wording]
+  Keller1998 'colony founding' 'I, D' -> want 'found new colonies independent', have 'I, D' [left as printed]
+  Kratschmer2019 'Nesting type' 'G' -> want 'Ground-nesting', have 'G' [not reached]
+  Kratschmer2019 'Nesting type' 'A' -> want 'Above-ground nesting', have 'A' [not reached]
+  Kratschmer2019 'Nesting type' 'P' -> want 'Parasitic', have 'P' [not reached]
+  Normandin2017 'Lecty' 'P' -> want 'Polylectic', have 'P' [left as printed]
+  Normandin2017 'Lecty' 'O' -> want 'Oligolectic', have 'O' [left as printed]
+  Taillefer2018 'Larval feeding habit' 'PA' -> want 'Parasite', have 'PA' [left as printed]
+  Taillefer2018 'Feeding' 'G' -> want 'Generalist', have 'Specialist/ Generalist' [right, longer wording]
+  Taillefer2018 'Feeding' 'S' -> want 'Specialist', have 'Specialist/ Generalist' [right, longer wording]
+  Taillefer2018 'Habitat pref' 'M' -> want 'Moist', have 'M' [left as printed]
+  Teder2020 'Overwintering stage' 'LP' -> want 'larva', have 'LP' [left as printed]
+  Teder2020 'Overwintering stage' 'AP' -> want 'adult within pupal case', have 'AP = adult within pupal case' [right, longer wording]
+  Teder2020 'Host type' 'G' -> want 'grasses', have 'G = grasses' [right, longer wording]
+  Teder2020 'Host type' 'W' -> want 'woody plants', have 'W = woody plants' [right, longer wording]
+  Teder2020 'Host type' 'WH' -> want 'woody + herbaceous plants', have 'WH = woody + herbaceous plants' [right, longer wording]
+  Teder2020 'Host type' 'L' -> want 'lichens', have 'larva' [other term]
+  Uemori2022 'Trophic level' '1' -> want 'herbivorous', have '1' [left as printed]
+  Uemori2022 'Soil dependence' '2' -> want 'detritivorous cycle', have '2' [left as printed]
+  Uemori2022 'Soil dependence' '1' -> want 'herbivorous cycle', have '1' [left as printed]
+  Vidal2023 'Nesting site' '0.0' -> want 'Ground', have '0.0' [left as printed]
+  Wallon2024 'Diel activity' '1' -> want 'Day', have '1' [left as printed]
+  Wallon2024 'Diel activity' '0' -> want 'Night', have '0' [left as printed]
+  Wallon2024 'Type of Food' '1' -> want 'Plants', have '1' [left as printed]
+  Wallon2024 'Type of Food' '0' -> want 'Animals', have '0' [left as printed]
+  Wölfling2020 'Specialization in larval foo' '1' -> want 'Monophagous within one plant g', have '1' [left as printed]
+  Wölfling2020 'Specialization in habitat ch' '3' -> want '5 or more habitat types or com', have '5 or more habitat types or common/nonspe' [right, shorter wording]

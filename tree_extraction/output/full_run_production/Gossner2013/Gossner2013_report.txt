@@ -1,0 +1,56 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Gossner2013\Gossner2013.xlsx  (3008 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Gossner2013\Gossner2013.csv  (3008 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Scolytus' -> 'Scolytus scolytus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Decay' -> 'Dead-wood decay'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 3008
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   3008  0.000  <-- low
+  measurementMethod             0      0    n/a   +1504 where GT blank
+  measurementUnit               0    752  0.000  <-- low
+  measurementStatistic          0   3008  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                        3008   3008  1.000
+  lifeStage                  3008   3008  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   3008  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       752   752   
+  canopy cover                                    752   752   
+  dead-wood decay                                 752   752   
+  diameter                                        752   752   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000   3008     0     0   id+type+value
+  tags        0.000  0.000  0.000      0  3008  3008   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)

@@ -1,0 +1,116 @@
+{
+ "1:4": {
+  "cells": {
+   "M": {
+    "term": "monogyne",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "initial",
+      "labels": [
+       "monogyne"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "initial"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "M": {
+      "e0": 0.982,
+      "keep": 0.018
+     }
+    }
+   },
+   "P": {
+    "term": "Pa",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Pa",
+       "polygyne"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "initial"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.944,
+      "word": 0.056
+     },
+     "P": {
+      "e0": 0.463,
+      "e1": 0.426,
+      "keep": 0.112
+     }
+    }
+   },
+   "M, P": {
+    "term": "monogyne; Pa",
+    "parts": [
+     "M",
+     "P"
+    ],
+    "options": {
+     "M": {
+      "evidence": "initial",
+      "labels": [
+       "monogyne"
+      ]
+     },
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Pa",
+       "polygyne"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "initial",
+     "P": "initial"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "M": {
+      "e0": 0.982,
+      "keep": 0.018
+     },
+     "P | QK": {
+      "code": 0.944,
+      "word": 0.056
+     },
+     "P": {
+      "e0": 0.463,
+      "e1": 0.426,
+      "keep": 0.112
+     }
+    }
+   }
+  },
+  "header": "Queen number"
+ },
+ "1:6": {
+  "cells": {},
+  "header": "Colony founding"
+ },
+ "3:2": {
+  "cells": {},
+  "header": "Mean lifespan"
+ }
+}

@@ -1,0 +1,66 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Kratschmer2019\Kratschmer2019.xlsx  (633 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Kratschmer2019\Kratschmer2019.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 633
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 633 MISSED ROWS MISSED
+  species not in prediction                 633
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (150 distinct), closest predicted name:
+     gt 'Andrena flavipes Panzer, 1799'      (nothing similar in the prediction)   x8
+     gt 'Andrena ovatula (Kirby, 1802)'      (nothing similar in the prediction)   x8
+     gt 'Andrena pusilla Perez, 1903'        (nothing similar in the prediction)   x8
+     gt 'Bombus pascuorum (Scopoli, 1763)'   (nothing similar in the prediction)   x8
+     gt 'Halictus maculatus Smith, 1848'     (nothing similar in the prediction)   x8
+     gt 'Halictus simplex Bluethgen, 1923'   (nothing similar in the prediction)   x8
+  -> 6 species mismatches explain 48 of 633 misses (8%) — scattered; no single cause
+
+  full miss detail saved -> Kratschmer2019_misses.csv, Kratschmer2019_misses_summary.json (633 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  intertegular distance                           159     0   GT-ONLY
+  lecty                                           160     0   GT-ONLY
+  nesting type                                    158     0   GT-ONLY
+  sociality                                       156     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   633   id+type+value
+  tags        0.000  0.000  0.000      0     0   633   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

@@ -1,0 +1,257 @@
+{
+ "_columns": [
+  [
+   5,
+   1,
+   "Mobility",
+   [
+    "2",
+    "3",
+    "2.5",
+    "1.5",
+    "1",
+    "4"
+   ]
+  ],
+  [
+   5,
+   2,
+   "Larval diet",
+   [
+    "M",
+    "O",
+    "NO",
+    "P"
+   ]
+  ],
+  [
+   5,
+   3,
+   "Overw. stage",
+   [
+    "Larva",
+    "Adult",
+    "Pupa",
+    "Egg"
+   ]
+  ],
+  [
+   5,
+   4,
+   "Voltinism",
+   [
+    "1",
+    "1.5",
+    "2",
+    "2.5",
+    "3",
+    "3.5",
+    "4"
+   ]
+  ],
+  [
+   5,
+   5,
+   "HAT",
+   [
+    "1",
+    "2",
+    "3",
+    "4"
+   ]
+  ],
+  [
+   5,
+   6,
+   "HAST",
+   [
+    "2",
+    "3",
+    "5",
+    "1",
+    "8",
+    "4",
+    "6",
+    "7"
+   ]
+  ]
+ ],
+ "5:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Mobility"
+ },
+ "5:2": {
+  "cells": {
+   "M": {
+    "term": "monophagous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "M": {
+      "e0": 0.985,
+      "keep": 0.015
+     },
+     "M | QB": {}
+    }
+   },
+   "O": {
+    "term": "oligophagous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "explicit",
+      "labels": [
+       "oligophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "explicit"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "O": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "O | QB": {}
+    }
+   },
+   "NO": {
+    "term": "narrowly oligophagous",
+    "parts": [
+     "NO"
+    ],
+    "options": {
+     "NO": {
+      "evidence": "explicit",
+      "labels": [
+       "narrowly oligophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "NO": "explicit"
+    },
+    "probs": {
+     "NO | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "NO": {
+      "e0": 0.937,
+      "keep": 0.063
+     },
+     "NO | QB": {}
+    }
+   },
+   "P": {
+    "term": "polyphagous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polyphagous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "P": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u8"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.996,
+    "several": 0.002,
+    "none": 0.001
+   },
+   "chosen": [
+    "u8"
+   ]
+  },
+  "header": "Larval diet"
+ },
+ "5:3": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u26"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.373,
+    "several": 0.038,
+    "none": 0.589
+   }
+  },
+  "header": "Overw. stage"
+ },
+ "5:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Voltinism"
+ },
+ "5:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "HAT"
+ },
+ "5:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "HAST"
+ }
+}

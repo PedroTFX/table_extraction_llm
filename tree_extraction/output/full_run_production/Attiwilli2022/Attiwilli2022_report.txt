@@ -1,0 +1,65 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Attiwilli2022\Attiwilli2022.xlsx  (30 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Attiwilli2022\Attiwilli2022.csv  (51 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Pooled': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body mass' -> ' Body mass '
+  'Proboscis length' -> 'Proboscis length '
+  'Wing length' -> 'Wing length '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 30
+  missed (FN)         : 0
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 15   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.588 / 1.000 / 0.741   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.833 / 1.000 / 0.909   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             15
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                30     30  1.000
+  measurementMethod             0      0    n/a   +30 where GT blank
+  measurementUnit              10     30  0.333  <-- low
+  measurementStatistic         15     30  0.500
+  measurementRemarks            0      0    n/a
+  sex                           0     30  0.000  <-- low
+  lifeStage                    30     30  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0     30  0.000  <-- low
+  sampleSizeUnit                0     30  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     30  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     30  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     30  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body mass                                        10    12   Δ+2 (split?)
+  ecotone                                           0     5   PRED-ONLY
+  forest                                            0     5   PRED-ONLY
+  proboscis length                                 10    12   Δ+2 (split?)
+  wing length                                      10    12   Δ+2 (split?)
+  open                                              0     5   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.833  1.000  0.909     30     6     0   id+type+value
+             (15 more spurious row(s) set aside as out-of-scope; strict P would be 0.588)
+  tags        0.000  0.000  0.000      0    36    30   basis+id+type+value+stat+sex+stage
+             (15 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.909 vs previous)

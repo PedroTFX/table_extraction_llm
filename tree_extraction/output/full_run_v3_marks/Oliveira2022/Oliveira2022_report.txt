@@ -1,0 +1,116 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Oliveira2022\Oliveira2022.xlsx  (390 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Oliveira2022\Oliveira2022.csv  (922 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Dorymyrmex goeldii' -> 'Dorymyrex goeldii'
+
+TAXON NAMES LEFT UNMAPPED (9)
+  'Correlated with sucking ability and liquid-feeding behavior (Davidson et al., 2004)': no ground-truth name denotes this organism
+  'Dorymyrmex thoracicus': no ground-truth name denotes this organism
+  'Hairs may increase tolerance to dehydration or may relate to mechanoreception (Wittlinger et al., 2007)': no ground-truth name denotes this organism
+  'Likely correlated with main foraging period (day vs. night) (Bihn et al., 2010)': no ground-truth name denotes this organism
+  'Possible indicator of predatory lifestyle and thus types of resources consumed (Weiser & Kaspari, 2006)': no ground-truth name denotes this organism
+  'Possibly correlated with ability to receive chemosensory information. Ants with long scapes may be more sensitive to pheromone trails (Weiser & Kaspari, 2006)': no ground-truth name denotes this organism
+  'Possibly correlated with resource acquisition mode and foraging efficiency, as well as with the ability to cope with high foraging surface temperatures (Bihn et al., 2010; Kaspari & Weiser, 1999)': no ground-truth name denotes this organism
+  'Related to hunting method (Fowler et al., 1991) or the component of the habitat occupied (Gibb & Parr, 2013)': no ground-truth name denotes this organism
+  'Strongly correlated with many physiological, ecological, and life history traits (Kaspari & Weiser, 1999)': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  "Mesosoma or Weber's length" -> 'Mesosoma length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 390
+  spurious, in scope  : 8   <- GT covers this trait: real errors
+  spurious, out of scope: 914   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            914
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 390 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            390
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Antenna length ratio'             x50
+     'Clypeus length ratio'             x50
+     'Eye length ratio'                 x50
+     'Eye position ratio'               x50
+     'Leg length ratio'                 x50
+     'Mandible length ratio'            x50
+  -> 6 missing traits explain 300 of 390 misses (77%) — systematic, not scattered
+
+  full miss detail saved -> Oliveira2022_misses.csv, Oliveira2022_misses_summary.json (390 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  al                                                0     2   PRED-ONLY
+  traits al mean                                    0    50   PRED-ONLY
+  traits al variance                                0    49   PRED-ONLY
+  antenna length ratio                             50     1   Δ-49 (split?)
+  cl                                                0     1   PRED-ONLY
+  traits cl mean                                    0    50   PRED-ONLY
+  traits cl variance                                0    50   PRED-ONLY
+  clypeus length ratio                             50     1   Δ-49 (split?)
+  dh                                                0    50   PRED-ONLY
+  global multimeric disturbance index               0    50   PRED-ONLY
+  el                                                0     2   PRED-ONLY
+  traits el mean                                    0    50   PRED-ONLY
+  traits el variance                                0    50   PRED-ONLY
+  eye length ratio                                 50     1   Δ-49 (split?)
+  eye position ratio                               50     1   Δ-49 (split?)
+  traits iow mean                                   0    50   PRED-ONLY
+  traits iow variance                               0    50   PRED-ONLY
+  leg                                               0     5   PRED-ONLY
+  leg length ratio                                 50     1   Δ-49 (split?)
+  traits leg mean                                   0    50   PRED-ONLY
+  traits leg variance                               0    50   PRED-ONLY
+  mandible length ratio                            50     1   Δ-49 (split?)
+  mesosoma length                                  50     1   Δ-49 (split?)
+  traits ml mean                                    0    50   PRED-ONLY
+  traits p mean                                     0    50   PRED-ONLY
+  traits wl mean                                    0    50   PRED-ONLY
+  ml                                                0     2   PRED-ONLY
+  traits ml variance                                0    50   PRED-ONLY
+  p                                                 0     3   PRED-ONLY
+  traits p variance                                 0    50   PRED-ONLY
+  pilosity                                         40     1   Δ-39 (split?)
+  traits wl variance                                0    50   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     8   390   id+type+value
+             (914 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     8   390   basis+id+type+value+stat+sex+stage
+             (914 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)
