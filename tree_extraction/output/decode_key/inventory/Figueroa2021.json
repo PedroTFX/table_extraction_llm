@@ -1,0 +1,1340 @@
+{
+ "paper": "Figueroa2021",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "The use of functional traits has been proposed as a way of increasing synthesis, generalizability, and predictability in ecology 1 , all of which are critical elements in a world characterized by accelerating global change and biodiversity loss. Functional traits are measurable properties of an organism, including morphological, physiological, and phenological characteristics, that influence performance (growth, reproduction, and survival) 2,3 . Functional traits can be effective at predicting plant community assembly, functioning, and structure 1 . Moreover, functional traits can predict how ecologically important taxa, such as bees, will respond to stressors 4,5 and how effective their ecosystem service provisioning may be 6,7 , though not always consistently 8 . Similarly, intraspecific trait variation can affect pathogen transmission rates by influencing host susceptibility, immune response, and social behavior 9 ; for example, rodents with higher body mass contribute more to tick-born encephalitis transmission than rodents with lower body mass 10 . Given the recognized role of pathogens in bee declines worldwide 11 , developing generalizable ways of predicting disease risk could help target effective conservation research."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Here, we collected 613 bees representing 50 species collected across 11 wildflower plantings and screened them for three common bee pathogens (trypanosomes, Nosema ceranae, and neogregarines). We evaluated (1) taxonomic differences in pathogen prevalence, among bee families and genera, (2) temporal patterns in pathogen prevalence, (3) the relationship between bee functional traits—body size, phenology (range and peak activity), nesting location, sociality, and foraging choice—and pathogen prevalence (289 bees and 31 species), (4) intraspecific size and pathogen prevalence of the dominant species in our system B. impatiens, and lastly (5) the model fit based on taxonomy compared to functional traits. Infection with trypanosomes, such as C. bombi, can alter bumble bee foraging behavior, cognitive function 41,42 , and reproduction 43 . Similarly, the microsporidian N. ceranae and neogregarines such as Apicystis bombi can reduce adult bee survival 44–46 . Additionally, larvae inoculated with N. ceranae can have higher morality than sham-inoculated counterparts (mason bees) 47 and reduced adult survival (honey bees) 48 ."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Field sample collection. We collected bees foraging in 11 established wildflower plantings in central New York, USA, from June 17 to September 11, 2015 as described in Figueroa et al.16. The 10 m × 15 m plots were established in 2012 with a mix of native perennial wildflower species as well as spontaneous weedy species (in total 23 plant species and 10 plant families; Tables S1, S2). We sampled bees within the wildflower planting and adjacent areas for 1.5 ± 0.5 person-hours from 8:00 to 17:00 h at each site on sunny and low wind days, with 8 to 12 collection days per site throughout the season. Sites were sampled in alternating order so that each site was visited at different times of day throughout the season. Bees were collected while foraging on flowers and immediately placed on dry ice in the field and stored at − 80 °C until processing 16 ."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Pathogen screening. We screened for presence of Nosema ceranae, trypanosomes, and neogregarines in the bee guts using established Polymerase Chain Reaction (PCR) primers 16 . We surface sterilized each bee before extracting the gut, fat body, and Malpighian tubules and placing into sterile vials containing two sterilized 2.4 mm steel beads, 100 µl of sterilized 0.1 mm zirconia beads, and 800 µl of TRIsure reagent (Bioline, Boston, MA, USA). After homogenizing the samples for 30 s at 6.5 m/s using a bead mill homogenizer (Omni International, Kennesaw, GA, USA), we transferred the solution to a new sterile vial, taking care to not pipette beads or large tissue fragments. We extracted DNA following the manufacture’s protocol. Each extraction batch included a negative control. The PCR primers are provided in Table S3. While the primers for trypanosomes and neogregarines were developed to be taxonomically inclusive, upon Sanger sequencing a subset of the samples from numerous bee species we found that 66% of the trypanosome positive samples had very high sequence similarity with C. bombi (others present were C. mellificae, Herpetomonas pessoai, and Trypanostomatidae sp.) and that 100% of the neogregarine positive samples had very high sequence similarity with A. bombi 16 ."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Bee identification. To reduce risk of DNA degradation and cross-contamination, we identified the bee species post-dissection. As such, not all specimens retained the characters necessary for identification. Bees were predominantly identified using reference materials located in the Cornell University Insect Collection and published keys 49–54 (additional information in Figueroa et al. 2020). Bees in the genus Lasioglossum are difficult to identify morphologically and were thus identified using barcoding methods. Specifically, we amplified and sequenced a 900 bp region of the protein-coding gene elongation factor 1-alpha 16 . Ultimately, we were able to identify 86% of all bees to species, 13% to genus only, and unable to identify 1% of the bees. Unidentified bees were removed from the analyses (n = 8). To be conservative, we conducted analyses only for bees that amplified positive control (bee DNA) or pathogen DNA (separate because multiplex primers developed to favor pathogen amplification)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Functional trait assessment. We selected six functional traits that we hypothesized could be important for determining pathogen prevalence: body size (continuous; empirically determined), phenology (continuous; peak and range), nesting location (above-/below- ground), sociality (social/solitary), and foraging choice (Asteraceae/non-Asteraceae). These traits are frequently used in the bee literature 8,55,56 and we were able to obtain information for many of the species in our study (Table S4). We determined body size by measuring the intertegular distance (ITD), defined as the distance between the bees’ wing bases (Cane, 1987; Greenleaf et al., 2007) using an Olympus SZX10 microscope and CellSens Standard software (Olympus Corporation of the Americas, Scientific Solutions Group, Waltham, Massachusetts, USA). Due to risk of cross-contamination and DNA-degradation, we measured ITD post-dissection. As such, some specimens were not in suitable condition for adequately measuring ITD (76 individuals). To include the specimens that were not directly measured in community-wide analyses (but not intraspecific analyses), we used the average ITD of other bees of the same species and sex at the same site (reduced number of individuals without measurement to 35). Bee phenology was obtained from a publicly available database of Northeastern US bees 56 . Specifically, we evaluated mean Julian day of adult activity as well as phenological range of activity (90th quantile—10th quantile in Julian date of adult activity), hereafter referred to as peak seasonal activity and seasonal activity range."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Statistical analyses. Statistical analyses were conducted in RStudio (R Core group, version 3.4.0) using the lme4 and epiR packages 57,58 . We computed the true pathogen prevalence across all sites for each of the three pathogen groups (trypanosomes, N. ceranae, and neogregarines; n = 613) using the epi.prev function of the epiR package, which accounts for differences in abundance. The test sensitivity was set to 95% using the Blaker method for two-sided confidence intervals 58 . This method was also used to evaluate pathogen prevalence for the most abundant species, Bombus impatiens (n = 106). We evaluated temporal patterns of pathogen prevalence using generalized linear mixed effects models (GLMM), which included pathogen status (proportion of pathogen positive bees out of the bees screened at each site) as a binomial response, month as the numeric explanatory variable, and site as a random effect. We conducted a likelihood ratio test to determine the significance of coefficients by comparing against a null model that only included the random effect (site). The unit of replication was the number of unique site-month combinations in which we sampled and screened bees (n = 40). All pathogen prevalence analyses included a binomial distribution and logit-link as transformation."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "We evaluated the relationship between bee pathogen prevalence and bee functional traits using a GLMM that included pathogen presence/absence in individual bees as the binomial response predicted by each of the six traits (size, peak seasonal activity, seasonal activity range, nesting location, sociality, and foraging choice), including species and site as the random effects. Given that female and male bees can vary in size 59 and can both become infected 60–63 , models included sex as a covariate. While we successfully screened 613 identified bees, we analyzed all traits simultaneously in a single GLMM and hence only used species without missing trait or sex data (n = 289 individuals). We conducted this analysis separately for each pathogen group (trypanosomes, N. ceranae, and neogregarines). Including sociality raised the VIF above $2 ;$ once this factor was removed from the model, the VIF was less than two for all remaining factors and were therefore analyzed simultaneously 64 . Based on the taxonomic analysis, we found that Augochlorella aurata was significantly more likely to have trypanosomes than other genera (this species was the only representative of the genus in our system; see “Results”). To determine whether patterns were driven by this species, we excluded A. aurata from the datasheet and re-analyzed significant models. To further evaluate whether season could be driving size patterns, we evaluated differences in bee size over the sampling period by constructing a Linear Mixed Model that included bee size (ITD) as the response predicted by month, including species and site as random effects. Bee size was log-transformed to meet assumptions of normality."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "We evaluated whether intraspecific body size predicted presence of each of the pathogens in the dominant species (Bombus impatiens, n = 106 workers). This was the only species for which we had sufficient numbers to evaluate intra-specific trait variation $( i . e . \\geq 5 0$ individuals 1 ). To address this question, we conducted a GLMM that included pathogen presence as the binary response, predicted by individual bee size, and site as the random effect; this was done separately for each of the three pathogen groups. Significance was determined using likelihood ratio test that compared the model including bee size as a predictor to a null model that only included the random effect (site). The analysis was conducted only on worker bees, as no queens or drones were collected. The intra-specific size variation followed a normal distribution, with the exception of one very small worker (Fig. S1). Excluding the single outlier had a large effect on the results (the only significant pattern was for N. ceranae, which changed from $P = 0 . 0 4 2$ to $P = 0 . 2 \\dot { 7 } 5$ when the outlier was removed). Although we have no reason to suspect this data point was incorrectly measured, here we choose not to highlight this result since it is does not appear to be a general pattern (Fig. S2). As such, in the main text we present the results with the single outlier removed from the analyses."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Lastly, we compared the fit of models that included functional traits as predictors compared to taxonomic groupings (genus) using Akaike Information Criterion (AIC). To do this, we compared GLMMs that included pathogen presence as the response (trypanosome, N. ceranae, or neogregarine) predicted by the six functional traits or genus; both models included species and site as random effects and were evaluated on the dataset used in the functional trait analyses (n = 289). Both models included sex as a covariate. Differences in AIC were used to rank the fit of models to the data, and ∆AIC ≥ 2 were taken to indicate substantial differences between models 65 ."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Pathogen prevalence in the bees ranged from 23% for trypanosomes (95% Confidence Interval (CI), 20–27%), to 11% for Nosema ceranae (95% CI 8–15%), and 1% for neogregarines (95% CI 0–3%). Pathogen prevalence varied among bee genera for trypanosomes $\\chi^{2}{19}=30.80, P=0.042;$ Fig. 1A) and N. ceranae $\\chi^{2}{19}=40.08, P=0.003;$ Fig. 1B), though not neogregarines $\\chi^{2}_{19}=22.11, P=0.28; Fig. 1 C$ . Post-hoc tests indicate that bees in the genus Augochlorella (of which there was only one species in our system A. aurata) were more likely to harbor trypanosomes than those in the genera Lasioglossum $(z = 4.16, P = 0.005)$ , Bombus $(z = 3.85, P = 0.017)$ , and $A p i s ( z = 3 . 6 1$ $P=0.040; Fig.1$ . Other comparisons between genera were not significant for trypanosomes, nor were comparisons for N. ceranae prevalence (P > 0.05; Table S5). There were no differences among bee families for any of the three pathogens screened $\\chi^{2}{4}=2.83, P=0.59, \\chi^{2}{4}=6.87, P=0.14, \\chi^{2}_{4}=5.92, P=0.21$ for trypanosome, N. ceranae, and neogregarine prevalence, respectively). Month did not explain pathogen prevalence in our bee communities (June–September) $\\chi^{2}{1}=0.04, P=0.84, \\chi^{2}{1}=0.00, P=0.96, \\chi^{2}_{1}=0.58, P=0.45$ for trypanosome, N. ceranae, and neogregarine prevalence, respectively), indicating no clear temporal pattern of pathogen prevalence across sites, despite marked differences across time within sites (Fig. 2)."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Functional traits were linked to trypanosome prevalence, though not to N. ceranae and neogregarine prevalence (Fig. 3). Bigger bees and those that were active later in the season were less likely to harbor trypanosomes than smaller counterparts and those active earlier in the season $z = - 2.72, P = 0.006 and z = - 2.72, P = 0.007,$ for bee size and peak seasonal activity, respectively; Figs. 4A,B, S2). We excluded A. aurata from the analyses to evaluate whether its disproportionately high trypanosome prevalence was driving the patterns, as a comparatively smaller and earlier-active species (Table S4). We found that A. aurata was largely driving the effects of size $z = -1.46, P = 0.144$ when A. aurata removed; Fig. 4C), though the peak seasonal activity patterns remained largely unchanged $z = - 2.49, P = 0.013; Fig. 4D$ . We found no seasonal differences in bee size as delineated by month $\\chi^{2}_{1}=1.69, P=0.19$ . Phenological range, nesting location, sex and foraging choice (whether or not collected on Asteraceae) did not explain trypanosome prevalence in the bees (Table S6), nor was any trait linked to N. ceranae or neogregarine prevalence (Table S6)."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "We evaluated the role of intra-specific size variation in relation to pathogen prevalence in Bombus impatiens, which ranged from 19% for trypanosomes (95% CI 10–28%), to 11% for N. ceranae (95% CI 5–20%), and 5% for"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "![Image block](doc:e7de9ef/tier:advanced/page:5/block:2)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Figure 1. Prevalence of (A) trypanosomes, (B) Nosema ceranae, and (C) neogregarines among bee genera. The genera are ordered by decreasing prevalence within families. Differences were significant $( \\bar { P }"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "![Image block](doc:e7de9ef/tier:advanced/page:6/block:2)"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "![Image block](doc:e7de9ef/tier:advanced/page:7/block:2)"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "![Image block](doc:e7de9ef/tier:advanced/page:8/block:2)"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Figure 4. Relationship between bee size and trypanosome prevalence in the overall community (A) when A. aurata included and (B) when A. aurata excluded. Relationship between peak seasonal activity (in Julian days) and trypanosome prevalence (C) when A. aurata included and (D) when A. aurata excluded. Shaded confidence interval corresponds to standard error. The regression lines are based on the model output (Table S6). Data are presented as proportions for ease of visualization in Fig. S3."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Intra-specific variability plays a key role in driving species coexistence, ecosystem functioning, and response to global change, which can be comparable to or even greater than inter-species differences 1,67 . Individual body size was not linked to increased likelihood of harboring any of the three screened pathogens in the dominant bee species in our study, Bombus impatiens. Other studies have found that bigger individuals of this species are less likely to harbor the trypanosomatid pathogen C. bombi, possibly due to a more robust immune system 20–22 . However, many studies evaluating the relationship between bee size and pathogens have been conducted in the laboratory where bees have access to pollen and sucrose ad libitum. In the field, bees experience numerous interacting stressors (e.g. decreased floral diversity, increased pesticide exposure, and competition with honey bees 68 ), often being smaller in more simplified agricultural landscapes 69–72 . As such, we do not know if small individuals that were infected succumbed to the negative health consequence of the pathogens (and therefore were not out foraging for us to collect and screen), while larger individuals could tolerate the infections and thus bias the patterns. Additionally, smaller bumble bees often remain in the hive as brood-care workers while larger bees forage 73 , with the potential to further bias the sampling. A recent observational study similarly found no relationship between bee size and pathogen prevalence in wild bumble bee workers 74 . As such, determining"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Received: 12 November 2020; Accepted: 17 March 2021"
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "![Image block](doc:e7de9ef/tier:advanced/page:12/block:2)"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "![Image block](doc:aacf2bc/tier:flash/page:1/block:11)"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "![Image block](doc:aacf2bc/tier:flash/page:1/block:12)"
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "![Image block](doc:aacf2bc/tier:flash/page:1/block:14)"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Figure S3. Relationship between bee size and trypanosome prevalence (mean ±SE) in the overall community (A) when A. aurata included and (B) when A. aurata excluded. Relationship between peak seasonal activity (in Julian days) and trypanosome prevalence (mean ±SE) in the overall community (A) when A. aurata included and (B) when A. aurata excluded. Data analyzed as continuous and plotted as such in Figure 4, presented here as proportion for ease of visualization."
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "Figure S4. Histogram showing distribution of peak seasonal activity (based on Julian day) for the samples included in the functional trait analyses (A) and for the species in the NE of the US (overlapping region with the present study) 1 ."
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "![Image block](doc:aacf2bc/tier:flash/page:1/block:17)"
+  },
+  {
+   "id": "u28",
+   "kind": "prose",
+   "text": "Table S4: Summary of bee species and functional traits. Sample size refers to bees for which we had complete functional trait information, including sex (n = 289). Peak activity and Activity range in Julian days."
+  },
+  {
+   "id": "u29",
+   "kind": "prose",
+   "text": "![Image block](doc:aacf2bc/tier:flash/page:1/block:25)"
+  },
+  {
+   "id": "u30",
+   "kind": "prose",
+   "text": "![Image block](doc:aacf2bc/tier:flash/page:1/block:29)"
+  },
+  {
+   "id": "u31",
+   "kind": "table 0",
+   "text": "In planting | Adjacent\nAgastache nepetoides | Convolvulus arvensis\nCirsium arvense | Daucus carota\nCoreopsis lanceolata | Hypericum perforatum\nDaucus carota | Leucanthemum vulgare\nErigeron annuus | Lotus corniculatus\nLobelia siphilitica | Malva moschata\nMedicago sativa | Potentilla fruticosa\nPenstemon digitalis | Plantago lanceolata\nSilphium perfoliatum | Rubus fruticosus"
+  },
+  {
+   "id": "u32",
+   "kind": "table 0",
+   "text": "Solidago juncea | Symphyotrichum novi-belgii\nTrifolium pratens\nTrifolium repens\nVeronicastrum virginicum"
+  },
+  {
+   "id": "u33",
+   "kind": "table 1",
+   "text": "Bee species | Plant Family | n\nAgapostemon virescens | Asteraceae | 4\nPlantaginaceae | 7\nAndrena simplex | Asteraceae | 1\nAndrena spp. | Asteraceae | 1\nAndrena wilkella | Fabaceae | 2\nAnthophora terminalis | Plantaginaceae | 22\nNA | 1\nApis mellifera | Asteraceae | 33\nAugochlora pura | Plantaginaceae | 2"
+  },
+  {
+   "id": "u34",
+   "kind": "table 1",
+   "text": "Augochlorella aurata | Asteraceae | 9\nConvolvulaceae | 6\nFabaceae | 2\nPlantaginaceae | 8\nBombus bimaculatus | Asteraceae | 3\nFabaceae | 4\nPlantaginaceae | 16\nBombus fervidus | Asteraceae | 1\nFabaceae | 1\nPlantaginaceae | 1"
+  },
+  {
+   "id": "u35",
+   "kind": "table 1",
+   "text": "Bombus griseocollis | Asteraceae | 4\nPlantaginaceae | 5\nBombus impatiens | Apiaceae | 2\nAsteraceae | 99\nCampanulaceae | 3\nFabaceae | 1\nLamiaceae | 5\nPlantaginaceae | 12\nBombus perplexus | Asteraceae | 1\nBombus ternarius | Asteraceae | 3"
+  },
+  {
+   "id": "u36",
+   "kind": "table 1",
+   "text": "Plantaginaceae | 2\nBombus vagans | Asteraceae | 3\nFabaceae | 1\nPlantaginaceae | 6\nCalliopsis andreniformis | Asteraceae | 1\nCalliopsis nebraskensis | Asteraceae | 1\nCeratina calcarata | Asteraceae | 5\nCampanulaceae | 3\nMalvaceae | 1\nPlantaginaceae | 3"
+  },
+  {
+   "id": "u37",
+   "kind": "table 1",
+   "text": "Rosaceae | 1\nNA | 2\nCeratina dupla | Plantaginaceae | 1\nRosaceae | 1\nCeratina mikmaqi | Asteraceae | 8\nFabaceae | 1\nHypericaceae | 1\nPlantaginaceae | 8\nCeratina spp. | Asteraceae | 2\nCampanulaceae | 1"
+  },
+  {
+   "id": "u38",
+   "kind": "table 1",
+   "text": "Plantaginaceae | 3\nCoelioxys rufitarsis | Asteraceae | 1\nColletes kincaidii | Asteraceae | 1\nHalictus confusus | Asteraceae | 13\nConvolvulaceae | 1\nPlantaginaceae | 2\nRosaceae | 1\nHalictus ligatus | Asteraceae | 32\nConvolvulaceae | 8\nHalictus rubicundis | Fabaceae | 1"
+  },
+  {
+   "id": "u39",
+   "kind": "table 1",
+   "text": "Heriades carinata | Asteraceae | 1\nHoplitis producta | Plantaginaceae | 1\nHoplitis spp. | Asteraceae | 1\nHylaeus affinis | Asteraceae | 6\nConvolvulaceae | 2\nPlantaginaceae | 3\nHylaeus annulatus | Asteraceae | 1\nMalvaceae | 1\nPlantaginaceae | 1\nHylaeus modestus | Asteraceae | 1"
+  },
+  {
+   "id": "u40",
+   "kind": "table 1",
+   "text": "Campanulaceae | 9\nPlantaginaceae | 4\nHylaeus spp. | Asteraceae | 3\nLasioglossum coriaceum | Plantaginaceae | 3\nLasioglossum hitchensi | Plantaginaceae | 1\nLasioglossum imitatum | Asteraceae | 2\nLasioglossum inconditum | NA | 1\nLasioglossum lineatulum | Asteraceae | 1\nPlantaginaceae | 2\nLasioglossum perpunctatum | Asteraceae | 1"
+  },
+  {
+   "id": "u41",
+   "kind": "table 1",
+   "text": "Lasioglossum pilosum | Asteraceae | 4\nPlantaginaceae | 7\nLasioglossum spp. | Asteraceae | 10\nConvolvulaceae | 1\nHypericaceae | 4\nPlantaginaceae | 10\nLasioglossum versatum | Plantaginaceae | 3\nLasioglossum viridatum | Asteraceae | 7\nConvolvulaceae | 4\nFabaceae | 1"
+  },
+  {
+   "id": "u42",
+   "kind": "table 1",
+   "text": "Plantaginaceae | 31\nRosaceae | 2\nNA | 1\nLasioglossum weemsi | Campanulaceae | 1\nLasioglossum zephyrum | Asteraceae | 3\nHypericaceae | 3\nPlantaginaceae | 1\nMegachile spp. | Asteraceae | 1\nPlantaginaceae | 4\nMelissodes agilis | Asteraceae | 5"
+  },
+  {
+   "id": "u43",
+   "kind": "table 1",
+   "text": "Melissodes bimaculata | Asteraceae | 4\nMelissodes desponsa | Asteraceae | 6\nMelissodes druriella | Asteraceae | 3\nMelissodes spp. | Asteraceae | 37\nNA | 1\nMelissodes subillata | Asteraceae | 3\nMelissodes trinodis | Asteraceae | 29\nOsmia atriventris | Plantaginaceae | 1\nOsmia bucephala | Plantaginaceae | 4\nPeponapis pruinosa | Asteraceae | 1"
+  },
+  {
+   "id": "u44",
+   "kind": "table 1",
+   "text": "Xylocopa virginica | Asteraceae | 2"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5"
+  ],
+  [
+   "u6"
+  ],
+  [
+   "u7"
+  ],
+  [
+   "u8",
+   "u9"
+  ],
+  [
+   "u10",
+   "u11",
+   "u12",
+   "u13"
+  ],
+  [
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24"
+  ],
+  [
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33",
+   "u34",
+   "u35",
+   "u36",
+   "u37"
+  ],
+  [
+   "u38",
+   "u39",
+   "u40",
+   "u41",
+   "u42",
+   "u43",
+   "u44"
+  ]
+ ],
+ "calls": 22,
+ "categories": [
+  {
+   "variable": "pathogen prevalence",
+   "code": "1",
+   "term": "taxonomic differences in pathogen prevalence",
+   "unit": "u1",
+   "model_label": "taxonomic",
+   "label": "taxonomic",
+   "explanation": "differences in pathogen prevalence"
+  },
+  {
+   "variable": "pathogen prevalence",
+   "code": "2",
+   "term": "temporal patterns in pathogen prevalence",
+   "unit": "u1",
+   "model_label": "temporal",
+   "label": "temporal",
+   "explanation": "patterns in pathogen prevalence"
+  },
+  {
+   "variable": "pathogen prevalence",
+   "code": "3",
+   "term": "the relationship between bee functional traits—body size, phenology (range and peak activity), nesting location, sociality, and foraging choice—and pathogen prevalence",
+   "unit": "u1",
+   "model_label": "functional",
+   "label": "functional",
+   "explanation": "the relationship between bee traits—body size, phenology (range and peak activity), nesting location, sociality, and foraging choice—and pathogen prevalence"
+  },
+  {
+   "variable": "pathogen prevalence",
+   "code": "4",
+   "term": "intraspecific size and pathogen prevalence of the dominant species in our system B. impatiens",
+   "unit": "u1",
+   "model_label": "intraspecific",
+   "label": "intraspecific",
+   "explanation": "size and pathogen prevalence of the dominant species in our system B. impatiens"
+  },
+  {
+   "variable": "model fit",
+   "code": "5",
+   "term": "the model fit based on taxonomy compared to functional traits",
+   "unit": "u1",
+   "model_label": "model",
+   "label": "model",
+   "explanation": "the fit based on taxonomy compared to functional traits"
+  },
+  {
+   "variable": "trypanosome positive samples",
+   "code": "C. bombi",
+   "term": "C. bombi",
+   "unit": "u3",
+   "model_label": "C. bombi",
+   "label": "C. bombi",
+   "explanation": ""
+  },
+  {
+   "variable": "trypanosome positive samples",
+   "code": "C. mellificae",
+   "term": "C. mellificae",
+   "unit": "u3",
+   "model_label": "C. mellificae",
+   "label": "C. mellificae",
+   "explanation": ""
+  },
+  {
+   "variable": "trypanosome positive samples",
+   "code": "Herpetomonas pessoai",
+   "term": "Herpetomonas pessoai",
+   "unit": "u3",
+   "model_label": "Herpetomonas pessoai",
+   "label": "Herpetomonas pessoai",
+   "explanation": ""
+  },
+  {
+   "variable": "trypanosome positive samples",
+   "code": "Trypanostomatidae sp.",
+   "term": "Trypanostomatidae sp.",
+   "unit": "u3",
+   "model_label": "Trypanostomatidae sp.",
+   "label": "Trypanostomatidae sp",
+   "explanation": "."
+  },
+  {
+   "variable": "neogregarine positive samples",
+   "code": "A. bombi",
+   "term": "A. bombi",
+   "unit": "u3",
+   "model_label": "A. bombi",
+   "label": "A. bombi",
+   "explanation": ""
+  },
+  {
+   "variable": "sociality",
+   "code": "social/solitary",
+   "term": "social/solitary",
+   "unit": "u5",
+   "model_label": "social/solitary",
+   "label": "social/solitary",
+   "explanation": ""
+  },
+  {
+   "variable": "pathogen presence/absence in individual bees",
+   "code": "binomial response",
+   "term": "pathogen presence/absence in individual bees",
+   "unit": "u7",
+   "model_label": "binomial",
+   "label": "pathogen presence/absence in individual bees",
+   "explanation": ""
+  },
+  {
+   "variable": "pathogen presence",
+   "code": "binary",
+   "term": "pathogen presence as the binary response",
+   "unit": "u8",
+   "model_label": "binary",
+   "label": "binary",
+   "explanation": "pathogen presence as the response"
+  },
+  {
+   "variable": "pathogen groups",
+   "code": "three",
+   "term": "each of the three pathogen groups",
+   "unit": "u8",
+   "model_label": "three",
+   "label": "three",
+   "explanation": "each of the pathogen groups"
+  },
+  {
+   "variable": "A. aurata",
+   "code": "A. aurata",
+   "term": "A. aurata",
+   "unit": "u10",
+   "model_label": "A. aurata",
+   "label": "A. aurata",
+   "explanation": ""
+  },
+  {
+   "variable": "Lasioglossum",
+   "code": "Lasioglossum",
+   "term": "Lasioglossum",
+   "unit": "u10",
+   "model_label": "Lasioglossum",
+   "label": "Lasioglossum",
+   "explanation": ""
+  },
+  {
+   "variable": "Bombus",
+   "code": "Bombus",
+   "term": "Bombus",
+   "unit": "u10",
+   "model_label": "Bombus",
+   "label": "Bombus",
+   "explanation": ""
+  },
+  {
+   "variable": "Apis",
+   "code": "A p i s",
+   "term": "A p i s",
+   "unit": "u10",
+   "model_label": "A p i s",
+   "label": "A p i s",
+   "explanation": ""
+  },
+  {
+   "variable": "Prevalence of",
+   "code": "(A)",
+   "term": "trypanosomes",
+   "unit": "u14",
+   "model_label": "trypanosomes",
+   "label": "trypanosomes",
+   "explanation": ""
+  },
+  {
+   "variable": "Prevalence of",
+   "code": "(B)",
+   "term": "Nosema ceranae",
+   "unit": "u14",
+   "model_label": "Nosema ceranae",
+   "label": "Nosema ceranae",
+   "explanation": ""
+  },
+  {
+   "variable": "Prevalence of",
+   "code": "(C)",
+   "term": "neogregarines",
+   "unit": "u14",
+   "model_label": "neogregarines",
+   "label": "neogregarines",
+   "explanation": ""
+  },
+  {
+   "variable": "when A. aurata included",
+   "code": "(A)",
+   "term": "when A. aurata included",
+   "unit": "u18",
+   "model_label": "A. aurata",
+   "label": "A. aurata",
+   "explanation": "when included"
+  },
+  {
+   "variable": "when A. aurata excluded",
+   "code": "(B)",
+   "term": "when A. aurata excluded",
+   "unit": "u18",
+   "model_label": "A. aurata",
+   "label": "A. aurata",
+   "explanation": "when excluded"
+  },
+  {
+   "variable": "when A. aurata included",
+   "code": "(C)",
+   "term": "when A. aurata included",
+   "unit": "u18",
+   "model_label": "A. aurata",
+   "label": "A. aurata",
+   "explanation": "when included"
+  },
+  {
+   "variable": "when A. aurata excluded",
+   "code": "(D)",
+   "term": "when A. aurata excluded",
+   "unit": "u18",
+   "model_label": "A. aurata",
+   "label": "A. aurata",
+   "explanation": "when excluded"
+  },
+  {
+   "variable": "Bee species",
+   "code": "NA",
+   "term": "NA",
+   "unit": "u33",
+   "model_label": "NA",
+   "label": "NA",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Augochlorella aurata",
+   "term": "Augochlorella aurata",
+   "unit": "u34",
+   "model_label": "Augochlorella aurata",
+   "label": "Augochlorella aurata",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus bimaculatus",
+   "term": "Bombus bimaculatus",
+   "unit": "u34",
+   "model_label": "Bombus bimaculatus",
+   "label": "Bombus bimaculatus",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus fervidus",
+   "term": "Bombus fervidus",
+   "unit": "u34",
+   "model_label": "Bombus fervidus",
+   "label": "Bombus fervidus",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus griseocollis",
+   "term": "Bombus griseocollis",
+   "unit": "u35",
+   "model_label": "Bombus griseocollis",
+   "label": "Bombus griseocollis",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus impatiens",
+   "term": "Bombus impatiens",
+   "unit": "u35",
+   "model_label": "Bombus impatiens",
+   "label": "Bombus impatiens",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus perplexus",
+   "term": "Bombus perplexus",
+   "unit": "u35",
+   "model_label": "Bombus perplexus",
+   "label": "Bombus perplexus",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus ternarius",
+   "term": "Bombus ternarius",
+   "unit": "u35",
+   "model_label": "Bombus ternarius",
+   "label": "Bombus ternarius",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Bombus vagans",
+   "term": "Bombus vagans",
+   "unit": "u36",
+   "model_label": "Bombus vagans",
+   "label": "Bombus vagans",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Calliopsis andreniformis",
+   "term": "Calliopsis andreniformis",
+   "unit": "u36",
+   "model_label": "Calliopsis andreniformis",
+   "label": "Calliopsis andreniformis",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Calliopsis nebraskensis",
+   "term": "Calliopsis nebraskensis",
+   "unit": "u36",
+   "model_label": "Calliopsis nebraskensis",
+   "label": "Calliopsis nebraskensis",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Ceratina calcarata",
+   "term": "Ceratina calcarata",
+   "unit": "u36",
+   "model_label": "Ceratina calcarata",
+   "label": "Ceratina calcarata",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Ceratina dupla",
+   "term": "Ceratina dupla",
+   "unit": "u37",
+   "model_label": "Ceratina dupla",
+   "label": "Ceratina dupla",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Ceratina mikmaqi",
+   "term": "Ceratina mikmaqi",
+   "unit": "u37",
+   "model_label": "Ceratina mikmaqi",
+   "label": "Ceratina mikmaqi",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Ceratina spp.",
+   "term": "Ceratina spp.",
+   "unit": "u37",
+   "model_label": "Ceratina spp.",
+   "label": "Ceratina spp",
+   "explanation": "."
+  },
+  {
+   "variable": "Bee species",
+   "code": "Agapostemon virescens",
+   "term": "Agapostemon virescens",
+   "unit": "u33",
+   "model_label": "Agapostemon virescens",
+   "label": "Agapostemon virescens",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Andrena simplex",
+   "term": "Andrena simplex",
+   "unit": "u33",
+   "model_label": "Andrena simplex",
+   "label": "Andrena simplex",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Andrena spp.",
+   "term": "Andrena spp.",
+   "unit": "u33",
+   "model_label": "Andrena spp.",
+   "label": "Andrena spp",
+   "explanation": "."
+  },
+  {
+   "variable": "Bee species",
+   "code": "Andrena wilkella",
+   "term": "Andrena wilkella",
+   "unit": "u33",
+   "model_label": "Andrena wilkella",
+   "label": "Andrena wilkella",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Anthophora terminalis",
+   "term": "Anthophora terminalis",
+   "unit": "u33",
+   "model_label": "Anthophora terminalis",
+   "label": "Anthophora terminalis",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Apis mellifera",
+   "term": "Apis mellifera",
+   "unit": "u33",
+   "model_label": "Apis mellifera",
+   "label": "Apis mellifera",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee species",
+   "code": "Augochlora pura",
+   "term": "Augochlora pura",
+   "unit": "u33",
+   "model_label": "Augochlora pura",
+   "label": "Augochlora pura",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "3",
+   "term": "Plantaginaceae",
+   "unit": "u38",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "1",
+   "term": "Asteraceae",
+   "unit": "u38",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "13",
+   "term": "Asteraceae",
+   "unit": "u38",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Convolvulaceae",
+   "code": "1",
+   "term": "Convolvulaceae",
+   "unit": "u38",
+   "model_label": "Convolvulaceae",
+   "label": "Convolvulaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "2",
+   "term": "Plantaginaceae",
+   "unit": "u38",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Rosaceae",
+   "code": "1",
+   "term": "Rosaceae",
+   "unit": "u38",
+   "model_label": "Rosaceae",
+   "label": "Rosaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "32",
+   "term": "Asteraceae",
+   "unit": "u38",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Convolvulaceae",
+   "code": "8",
+   "term": "Convolvulaceae",
+   "unit": "u38",
+   "model_label": "Convolvulaceae",
+   "label": "Convolvulaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Fabaceae",
+   "code": "1",
+   "term": "Fabaceae",
+   "unit": "u38",
+   "model_label": "Fabaceae",
+   "label": "Fabaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "1",
+   "term": "Plantaginaceae",
+   "unit": "u38",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "6",
+   "term": "Asteraceae",
+   "unit": "u39",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Convolvulaceae",
+   "code": "2",
+   "term": "Convolvulaceae",
+   "unit": "u38",
+   "model_label": "Convolvulaceae",
+   "label": "Convolvulaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Malvaceae",
+   "code": "1",
+   "term": "Malvaceae",
+   "unit": "u39",
+   "model_label": "Malvaceae",
+   "label": "Malvaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "4",
+   "term": "Plantaginaceae",
+   "unit": "u40",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "3",
+   "term": "Asteraceae",
+   "unit": "u38",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "2",
+   "term": "Asteraceae",
+   "unit": "u38",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "NA",
+   "code": "1",
+   "term": "NA",
+   "unit": "u38",
+   "model_label": "NA",
+   "label": "NA",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "4",
+   "term": "Asteraceae",
+   "unit": "u40",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "7",
+   "term": "Plantaginaceae",
+   "unit": "u41",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "10",
+   "term": "Asteraceae",
+   "unit": "u41",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Hypericaceae",
+   "code": "4",
+   "term": "Hypericaceae",
+   "unit": "u41",
+   "model_label": "Hypericaceae",
+   "label": "Hypericaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "10",
+   "term": "Plantaginaceae",
+   "unit": "u41",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "7",
+   "term": "Asteraceae",
+   "unit": "u41",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Convolvulaceae",
+   "code": "4",
+   "term": "Convolvulaceae",
+   "unit": "u41",
+   "model_label": "Convolvulaceae",
+   "label": "Convolvulaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Plantaginaceae",
+   "code": "31",
+   "term": "Plantaginaceae",
+   "unit": "u42",
+   "model_label": "Plantaginaceae",
+   "label": "Plantaginaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Rosaceae",
+   "code": "2",
+   "term": "Rosaceae",
+   "unit": "u38",
+   "model_label": "Rosaceae",
+   "label": "Rosaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Campanulaceae",
+   "code": "1",
+   "term": "Campanulaceae",
+   "unit": "u40",
+   "model_label": "Campanulaceae",
+   "label": "Campanulaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Hypericaceae",
+   "code": "3",
+   "term": "Hypericaceae",
+   "unit": "u41",
+   "model_label": "Hypericaceae",
+   "label": "Hypericaceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "5",
+   "term": "Asteraceae",
+   "unit": "u42",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "37",
+   "term": "Asteraceae",
+   "unit": "u43",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "Asteraceae",
+   "code": "29",
+   "term": "Asteraceae",
+   "unit": "u43",
+   "model_label": "Asteraceae",
+   "label": "Asteraceae",
+   "explanation": ""
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "phenology",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "nesting location",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "sociality",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "foraging choice",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "nesting location",
+   "code": "",
+   "label": "above-/below- ground",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "foraging choice",
+   "code": "",
+   "label": "Asteraceae/non-Asteraceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "pathogen groups",
+   "code": "",
+   "label": "N. ceranae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "pathogen status",
+   "code": "",
+   "label": "proportion of pathogen positive bees out of the bees screened at each site",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "peak seasonal activity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "bee functional traits",
+   "code": "",
+   "label": "seasonal activity range",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "pathogen presence",
+   "code": "",
+   "label": "trypanosome",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "pathogen presence",
+   "code": "",
+   "label": "neogregarine",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "bee size",
+   "code": "",
+   "label": "Bigger bees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "peak seasonal activity",
+   "code": "",
+   "label": "active later in the season",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "Phenological range",
+   "code": "",
+   "label": "Phenological range",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "sex",
+   "code": "",
+   "label": "sex",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "In planting",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Agastache nepetoides",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Convolvulus arvensis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Cirsium arvense",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Daucus carota",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Coreopsis lanceolata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Hypericum perforatum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Erigeron annuus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Lotus corniculatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Lobelia siphilitica",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Malva moschata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Medicago sativa",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Potentilla fruticosa",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Penstemon digitalis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Plantago lanceolata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Silphium perfoliatum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Rubus fruticosus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Solidago juncea",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Symphyotrichum novi-belgii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Trifolium pratens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Trifolium repens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "Plant",
+   "code": "",
+   "label": "Veronicastrum virginicum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "Plant Family",
+   "code": "",
+   "label": "Apiaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Plant Family",
+   "code": "",
+   "label": "Lamiaceae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  }
+ ],
+ "dropped": [],
+ "seconds": 328.5
+}

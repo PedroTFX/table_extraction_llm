@@ -1,0 +1,429 @@
+{
+ "calls": 1,
+ "chars": 5905,
+ "passages": [
+  "[prose] 4. Within a taxonomic group, increased temperature may lead to a decline in body size (Gardner et al., 2011). Several studies provided evidence that this can result in small-sized species being more numerous in urban assemblages, as shown in bumblebees (Eggenberger et al., 2019), wild bees (Hamblin et al., 2018), spiders, carabids and weevils (Merckx et al., 2018) and in habitat specialists among carabids (Magura et al., 2020). Hence, we expected that for some of the examined groups of ground-dwelling invertebrates the proportion of small-sized species would increase with degree of urbanization.",
+  "[prose] Statistical analyses were performed in R (ver. 3.3.3 and ver. 3.6.1; R Core Team, 2015) and were carried out separately for the different taxonomic groups with the 35 gardens as replicates. We used various traits, depending on the plants or the invertebrate group examined, to calculate FDis and FEve (Table 1) using the FD package in R (Laliberté & Legendre, 2010). For native grassland plants and for ants, we used presence/absence data, and for the remaining groups we used abundance data to calculate FDis and FEve. We applied generalized linear models (GLM) with Gaussian error distribution to examine potential effects of landscape variables, garden size (vegetated garden area) and various local garden characteristics on species richness of different taxonomic groups. The three main variables (distance to city center, percentage sealed area and vegetated garden area) were retained in all models, while a step-wise procedure was followed with the other four garden characteristics (total native plant richness, structural diversity of the vegetation, habitat type richness and index of permeable border) to obtain the mini mal adequate models (Crawley, 2007). Three variables (total native plant richness, structural diversity of the vegetation and habitat type richness) were correlated with total garden area. Therefore, we used residuals of the relationships between the variable and total garden area for the GLM models. Distance to city center and percentage of sealed area were slightly correlated $( r = - 0 . 4 6 , p = . 0 0 6 )$ . However, we retained both in the model because they represent different aspects of urbanization. The same GLM model was used to analyze urbanization-related effects on body size for invertebrate groups.",
+  "[prose] ## 3.2 | Functional evenness",
+  "[prose] ## 3.4 | Body size",
+  "[prose] Distance to city center affected body size in all invertebrate groups except snails and woodlice (Figure 3; Table S2; Figure S3). Body size increased with distance to city center for slugs, spiders, millipedes, ants, and rove beetles. In millipedes, body size also increased with index of permeable garden border (Figure 3; Table S2; Figure S3).",
+  "[prose] ## 4.2 | Functional evenness",
+  "[prose] ## 4.4 | Body size",
+  "[prose] F I G U R E 3 Effects of urbanization, garden size and local garden characteristics, habitat type richness, structural diversity of the vegetation, and index of permeable border, on body size of seven groups of invertebrates. For detailed explanations, see caption to Figure 1",
+  "[table 0] Shell size | Continuous | The longer of shell height or shell breadth (mm) | 3\nAge at sexual maturity | Ordinal | <1 year; 1 year; >1 year | 4-6\nLongevity | Ordinal | <1 year; 1-2 years; >2 years | 5, 6\nShell shape (snails) | Categorical | Depressed; globose/conical; oblong | 3\nSpiders\nBody size | Continuous | Mean male body length (mm) | 7\nHunting mode | Categorical | Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other | 8\nShading width | Continuous | Measure for the niche width | 9\nHumidity width | Continuous | Measure for the niche width | 9\nMillipedes",
+  "[prose] Table 3; Figure S1). Percentage of sealed area negatively influenced FDis of ants (Figure 1; Table 3; Figure S1). No significant effects of distance to city center or percentage of sealed area on FDis were found for the other invertebrate groups. Habitat type richness was the only local garden characteristics to affect FDis, which was increasing in snails with increasing habitat type richness (Figure 1; Table 3; Figure S1).",
+  "[table 0] Rove beetles\nBody size | Continuous | Mean of mean body length of males and females (mm) | 10, 22-30\nMicrohabitat preference | Categorical | No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous | 31\n(b) Measures for habitat preferences\nNative grassland plants\nHabitat preference | Binominal | Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land) | 32\nPreference for dry conditions | Binominal | Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3) | 33\nSnails",
+  "[prose] ## 2.1 | Garden selection",
+  "[prose] The study was conducted in the city of Basel, its suburbs and nearby villages in North-western Switzerland (47˚34'N, 7˚36'E). Total annual precipitation averages 842 mm and annual mean temperature is 10.5°C in the city (records from 1981 to 2010, [www.meteoswiss.admin.ch](http://www.meteoswiss.admin.ch)). We selected 35 gardens from a pool of 65 candidates offered in response to public calls. The chosen gardens reflect a rural–urban gradient, encompassing wide ranges of garden sizes and management types. Further criteria for the garden choice were acceptance of the intended sampling methods by the garden owners and guaranteed daytime access to the gardens. All gardens had a grassland area of at least 4 m 2 , allowing us to set up traps and hay baits, but they differed in the composition of other habitat types (see below).",
+  "[prose] ## 2.2 | Plant and ground-dwelling invertebrate surveys",
+  "[prose] ## 2.4 | Local garden characteristics and landscape variables"
+ ],
+ "categories": [
+  {
+   "variable": "Shell size",
+   "code": "Continuous",
+   "term": "The longer of shell height or shell breadth (mm)",
+   "model_label": "Continuous",
+   "label": "The longer of shell height or shell breadth (mm)",
+   "explanation": ""
+  },
+  {
+   "variable": "Age at sexual maturity",
+   "code": "<1 year",
+   "term": "<1 year",
+   "model_label": "<1 year",
+   "label": "1 year",
+   "explanation": "<"
+  },
+  {
+   "variable": "Age at sexual maturity",
+   "code": "1 year",
+   "term": "1 year",
+   "model_label": "1 year",
+   "label": "1 year",
+   "explanation": ""
+  },
+  {
+   "variable": "Age at sexual maturity",
+   "code": ">1 year",
+   "term": ">1 year",
+   "model_label": ">1 year",
+   "label": "1 year",
+   "explanation": ">"
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "Depressed",
+   "term": "Depressed",
+   "model_label": "Depressed",
+   "label": "Depressed",
+   "explanation": ""
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "globose/conical",
+   "term": "globose/conical",
+   "model_label": "globose/conical",
+   "label": "globose/conical",
+   "explanation": ""
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "oblong",
+   "term": "oblong",
+   "model_label": "oblong",
+   "label": "oblong",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size",
+   "code": "Continuous",
+   "term": "Mean male body length (mm)",
+   "model_label": "Continuous",
+   "label": "Mean male body length (mm)",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "Ambush",
+   "term": "Ambush",
+   "model_label": "Ambush",
+   "label": "Ambush",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "ground hunter",
+   "term": "ground hunter",
+   "model_label": "ground hunter",
+   "label": "ground hunter",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "orb web",
+   "term": "orb web",
+   "model_label": "orb web",
+   "label": "orb web",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "sensing web",
+   "term": "sensing web",
+   "model_label": "sensing web",
+   "label": "sensing web",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "sheet web",
+   "term": "sheet web",
+   "model_label": "sheet web",
+   "label": "sheet web",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "space web",
+   "term": "space web",
+   "model_label": "space web",
+   "label": "space web",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "specialist",
+   "term": "specialist",
+   "model_label": "specialist",
+   "label": "specialist",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "other",
+   "term": "other",
+   "model_label": "other",
+   "label": "other",
+   "explanation": ""
+  },
+  {
+   "variable": "Shading width",
+   "code": "Continuous",
+   "term": "Measure for the niche width",
+   "model_label": "Continuous",
+   "label": "Measure for the niche width",
+   "explanation": ""
+  },
+  {
+   "variable": "Humidity width",
+   "code": "Continuous",
+   "term": "Measure for the niche width",
+   "model_label": "Continuous",
+   "label": "Measure for the niche width",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size",
+   "code": "Continuous",
+   "term": "Mean of mean body length of males and females (mm)",
+   "model_label": "Continuous",
+   "label": "Mean of mean body length of males and females (mm)",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "No specific microhabitat preference",
+   "term": "No specific microhabitat preference",
+   "model_label": "No specific microhabitat preference",
+   "label": "No specific microhabitat preference",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "saprophilous",
+   "term": "saprophilous",
+   "model_label": "saprophilous",
+   "label": "saprophilous",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "coprophilous",
+   "term": "coprophilous",
+   "model_label": "coprophilous",
+   "label": "coprophilous",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "thermophilous but no further preference",
+   "term": "thermophilous but no further preference",
+   "model_label": "thermophilous but no further preference",
+   "label": "thermophilous but no further preference",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "hygrophilous but no further preference",
+   "term": "hygrophilous but no further preference",
+   "model_label": "hygrophilous but no further preference",
+   "label": "hygrophilous but no further preference",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "phytodetricolous",
+   "term": "phytodetricolous",
+   "model_label": "phytodetricolous",
+   "label": "phytodetricolous",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "Habitat specialist (grassland)",
+   "term": "Habitat specialist (grassland)",
+   "model_label": "Habitat specialist (grassland)",
+   "label": "Habitat specialist (grassland",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "term": "habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "model_label": "habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "label": "habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land",
+   "explanation": ""
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "Preference for wet or moist habitats (indicator value above 3)",
+   "term": "Preference for wet or moist habitats (indicator value above 3)",
+   "model_label": "Preference for wet or moist habitats (indicator value above 3)",
+   "label": "Preference for wet or moist habitats (indicator value above 3",
+   "explanation": ""
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "preference for dry habitats (indicator value up to 3)",
+   "term": "preference for dry habitats (indicator value up to 3)",
+   "model_label": "preference for dry habitats (indicator value up to 3)",
+   "label": "preference for dry habitats (indicator value up to 3",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "",
+   "label": "Habitat specialist (grassland)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "",
+   "label": "habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "",
+   "label": "Preference for wet or moist habitats (indicator value above 3)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "",
+   "label": "preference for dry habitats (indicator value up to 3)",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 66.9,
+ "columns": [
+  [
+   8,
+   1,
+   "Body size (mm)",
+   [
+    "9.0",
+    "4.0",
+    "7.5",
+    "4.5",
+    "4.8",
+    "6.0",
+    "3.6",
+    "5.0",
+    "3.7",
+    "5.5",
+    "3.5",
+    "3.0",
+    "4.2",
+    "3.2"
+   ]
+  ],
+  [
+   8,
+   2,
+   "Main food",
+   [
+    "Carbohydrates & animal matter",
+    "Carbohydrates",
+    "Animal matter",
+    "Grains"
+   ]
+  ],
+  [
+   8,
+   3,
+   "Main nest stratum",
+   [
+    "Wood & litter",
+    "Soil & crevices",
+    "Both"
+   ]
+  ],
+  [
+   8,
+   4,
+   "Colony founding mode",
+   [
+    "Independent",
+    "Social parasite"
+   ]
+  ],
+  [
+   8,
+   5,
+   "Number of queens",
+   [
+    "Monogynous",
+    "Polygynous"
+   ]
+  ],
+  [
+   8,
+   6,
+   "Dry tolerant",
+   [
+    "Yes",
+    "No"
+   ]
+  ],
+  [
+   8,
+   7,
+   "Habitat generalist",
+   [
+    "No",
+    "Yes"
+   ]
+  ],
+  [
+   9,
+   1,
+   "Body size (mm)",
+   [
+    "2.05",
+    "2.4",
+    "4",
+    "2.25",
+    "2.2",
+    "3.25",
+    "1.5",
+    "3.9",
+    "3.65",
+    "1.8",
+    "2.1",
+    "2.55",
+    "3.1",
+    "1.7",
+    "2.6",
+    "1.15",
+    "2.64",
+    "2",
+    "6.5",
+    "2.7",
+    "3.35",
+    "4.9",
+    "4.2",
+    "4.75",
+    "3.85"
+   ]
+  ],
+  [
+   9,
+   2,
+   "Micro-habitat preference",
+   [
+    "saprophilous",
+    "no specific preference",
+    "coprophilous",
+    "thermopilous but no further preference",
+    "phytodetricol",
+    "hygrophilous but no further preference"
+   ]
+  ],
+  [
+   9,
+   3,
+   "Dry tolerant",
+   [
+    "NA",
+    "No",
+    "Yes"
+   ]
+  ],
+  [
+   9,
+   4,
+   "Habitat generalist",
+   [
+    "Yes",
+    "No"
+   ]
+  ]
+ ]
+}

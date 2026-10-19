@@ -1,0 +1,129 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\McCravy2019\McCravy2019.xlsx  (232 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\McCravy2019\McCravy2019.csv  (232 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (58)
+  'abrupta Say': no ground-truth name denotes this organism
+  'affinis (Smith)': no ground-truth name denotes this organism
+  'agilis Cresson': no ground-truth name denotes this organism
+  'andreniformis Smith': no ground-truth name denotes this organism
+  'aurata (Smith)': no ground-truth name denotes this organism
+  'auricomus (Robertson)': no ground-truth name denotes this organism
+  'bimaculatus (Lepeletier)': no ground-truth name denotes this organism
+  'bimaculatus Cresson': no ground-truth name denotes this organism
+  'birkmanni (Crawford)': no ground-truth name denotes this organism
+  'calcarata Robertson': no ground-truth name denotes this organism
+  'carinata Cresson': no ground-truth name denotes this organism
+  'cattellae (Ellis)': no ground-truth name denotes this organism
+  'cinctipes (Provancher)': no ground-truth name denotes this organism
+  'coeruleum (Robertson)': no ground-truth name denotes this organism
+  'commoda Smith': no ground-truth name denotes this organism
+  'comptoides Robertson': no ground-truth name denotes this organism
+  'coriaceum (Smith)': no ground-truth name denotes this organism
+  'cressonii (Robertson)': no ground-truth name denotes this organism
+  'cressonii Robertson': no ground-truth name denotes this organism
+  'desponsus Smith': no ground-truth name denotes this organism
+  'dupla Say': no ground-truth name denotes this organism
+  'fuscipenne (Smith)': no ground-truth name denotes this organism
+  'gemula Cresson': no ground-truth name denotes this organism
+  'griseocollis (DeGeer)': no ground-truth name denotes this organism
+  'hamata (Bradley)': no ground-truth name denotes this organism
+  'hitchensi Gibbs': no ground-truth name denotes this organism
+  'illinoense (Robertson)': no ground-truth name denotes this organism
+  'imitatrix Cresson': no ground-truth name denotes this organism
+  'imitatum (Smith)': no ground-truth name denotes this organism
+  'impatiens Cresson': no ground-truth name denotes this organism
+  'ligatus Say': no ground-truth name denotes this organism
+  'mellifera L.': no ground-truth name denotes this organism
+  'mendica Cresson': no ground-truth name denotes this organism
+  'mesillae (Cockerell)': no ground-truth name denotes this organism
+  'metallica (F.)': no ground-truth name denotes this organism
+  'mikmaqi Rehan & Sheffield': no ground-truth name denotes this organism
+  'obliqua (Say)': no ground-truth name denotes this organism
+  'obscurum (Robertson)': no ground-truth name denotes this organism
+  'oceanicum (Cockerell)': no ground-truth name denotes this organism
+  'pilosifrons (Cresson)': no ground-truth name denotes this organism
+  'producta (Cresson)': no ground-truth name denotes this organism
+  'pruinosa (Say)': no ground-truth name denotes this organism
+  'pura (Say)': no ground-truth name denotes this organism
+  'robertsonii Dalla Torre': no ground-truth name denotes this organism
+  'sericeus (Förster)': no ground-truth name denotes this organism
+  'smilacinae (Robertson)': no ground-truth name denotes this organism
+  'spoliata (Provancher)': no ground-truth name denotes this organism
+  'strenua Smith': no ground-truth name denotes this organism
+  'subviridatum (Cockerell)': no ground-truth name denotes this organism
+  'terminalis Cresson': no ground-truth name denotes this organism
+  'timothyi Gibbs': no ground-truth name denotes this organism
+  'trinodis Robertson': no ground-truth name denotes this organism
+  'truncatum (Robertson)': no ground-truth name denotes this organism
+  'variolosa (Cresson)': no ground-truth name denotes this organism
+  'versatum (Robertson)': no ground-truth name denotes this organism
+  'virescens (F.)': no ground-truth name denotes this organism
+  'weemsi (Mitchell)': no ground-truth name denotes this organism
+  'wilkella (Kirby)': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body length (mm)' -> 'Body length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 232
+  spurious, in scope  : 232   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 232 MISSED ROWS MISSED
+  species not in prediction                 232
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (57 distinct), closest predicted name:
+     gt 'Andrenaii'                         ~0.58~  pred 'andreniformis Smith'   x8
+     gt 'Agapostemon sericeus'              ~0.72~  pred 'sericeus (Förster)'   x4
+     gt 'Agapostemon virescens'             ~0.57~  pred 'virescens (F.)'   x4
+     gt 'Andrena commoda'                   ~0.58~  pred 'commoda Smith'   x4
+     gt 'Andrena imitatrix'                 ~0.71~  pred 'imitatrix Cresson'   x4
+     gt 'Andrena wilkella'                  ~0.58~  pred 'wilkella (Kirby)'   x4
+  -> 6 species mismatches explain 28 of 232 misses (12%) — scattered; no single cause
+
+  full miss detail saved -> McCravy2019_misses.csv, McCravy2019_misses_summary.json (232 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      58    58   
+  lecty                                            58    58   
+  nest location                                    58    58   
+  sociality                                        58    58   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0   232   232   id+type+value
+  tags        0.000  0.000  0.000      0   232   232   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

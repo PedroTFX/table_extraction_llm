@@ -1,0 +1,678 @@
+{
+ "paper": "Chichorro2022",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:8760eff/tier:advanced/page:1/block:9)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "a Laboratory for Integrative Biodiversity Research (LIBRe), Finnish Museum of Natural History LUOMUS, University of Helsinki, PO Box 17, Pohjoinen Rautatiekatu 13, 00014 Helsinki, Finland b Faculty of Life Sciences, University of Madeira, Penteada University Campus, 9020-105 Funchal, Portugal c Finnish Museum of Natural History LUOMUS, University of Helsinki, PO Box 17, Pohjoinen Rautatiekatu 13, 00014 Helsinki, Finland d Mediterranean Institute for Agriculture, Environment and Development (MED), University of Evora, ´ Mitra, 7002-554 - Evora, ´ Portugal e Department of Life Sciences, Natural History Museum, Cromwell Road, London SW7 5BD, UK f Trier University, Department of Biogeography, D-54286 Trier, Germany g IUCN SSC Invertebrate Conservation Committee, Trier University, Department of Biogeography, D-54286 Trier, Germany h Finnish Museum of Natural History (Botany) & OEB/ViPS, University of Helsinki, PO Box 7, 00014, Finland"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "* Corresponding author at: Laboratory for Integrative Biodiversity Research (LIBRe), Finnish Museum of Natural History LUOMUS, University of Helsinki, PO Box 17, Pohjoinen Rautatiekatu 13, 00014 Helsinki, Finland."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "We chose five vertebrate, five invertebrate, and five plant taxa. Selection of groups at the same taxonomical level was difficult because species information is often collated at different levels across taxa. Vertebrate taxa comprised the major groups of terrestrial vertebrates: “Mammals” (Class: Mammalia), “Birds” (Class: Aves), “Reptiles” (Class: Reptilia), “Amphibians” (Class: Amphibia) and freshwater “Fishes” (Class: Actinopterygii). Many invertebrate taxa lack assessments at a global scale and thus it was not possible to obtain an exhaustive set of taxa of the terrestrial and freshwater diversity. The invertebrates"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "comprised “Dragonflies” (Order: Odonata, including damselflies), “Butterflies” (Suborder: Rhopalocera), “Grasshoppers” (Order: Orthoptera), “Spiders” (Order: Araneae), and land “Snails” (Class: Gastropoda). In the selection of plants we followed a recent baseline study (Brummitt et al., 2015), which includes species sampled from the five main phylogenetic branches of land plants (embryophytes): “bryophytes”, excluding hornworts (Divisions: Bryophyta and Marchantiophyta), “ferns” (Classes: Lycopodiopsida, Polypodiopsida), “Gymnosperms” (Classes: Pinopsida, Cycadopsida, Gnetopsida), “Monocots” (Class: Liliopsida), and finally the “Legumes” (Order: Fabales). “Legumes” served as a representative of the most diverse group of plants, eudicots, because they are the single family that best reflects both plant functional diversity as well as species richness of this large plant group (Nic Lughadha et al., 2005; Brummitt et al., 2015), with species reaching forest canopy heights as well as many small, herbaceous species."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "![Image block](doc:8760eff/tier:advanced/page:5/block:11)"
+  },
+  {
+   "id": "u6",
+   "kind": "table 3",
+   "text": "log_rules | Used within the R script to manage log transformations\nDataset | The dataset\nDataset | The dataset"
+  },
+  {
+   "id": "u7",
+   "kind": "table 4",
+   "text": "Columns\nIUCNName | Name of the species following the IUCN\nStatus | IUCN conservation status\nCRITERIA | IUCN criteria in which the IUCN assessment was based\nYEAR_PUB | YEar in which the IUCN assessment was published\nRealm | Biogeographical realm\nIUCN_RAW_THREATS | Threats for the species listed on the IUCN, including sub-threats\nIUCN_THREATS | Threats for the species listed on the IUCN, including sub-threats\nIUCN_THREATS_CATEG | Threats for the species listed on the IUCN, not including sub-threats\nIUCN_N_THREATS | Number of threat categories"
+  },
+  {
+   "id": "u8",
+   "kind": "table 5",
+   "text": "13 traits:\nBODY SIZE\nOFFSPRING SIZE\nFECUNDITY\nGENERATION LENGTH\nDIET BREADTH\nTROPHIC LEVEL\nDISPERSAL_ABILITY\nMICROHABITAT\nALTITUDE_MIN"
+  },
+  {
+   "id": "u9",
+   "kind": "table 5",
+   "text": "ALTITUDE_MAX\nGEOGRAPHICAL RANGE SIZE"
+  },
+  {
+   "id": "u10",
+   "kind": "table 6",
+   "text": "Each trait has 6 subcolumns:\nSubcolumns\n_FINAL | trait value\nproxy | proxy for the trait used (body length, body mass as proxy of body size, etc)\nunit/levels | e.g. grams, mm\nresolution | whether the trait value is retrieved from species genus, or family level."
+  },
+  {
+   "id": "u11",
+   "kind": "table 7",
+   "text": "comments | extra information\nreferences | where the trait value was obtained"
+  },
+  {
+   "id": "u12",
+   "kind": "table 10",
+   "text": "20210910.0 | added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals\n20210929.0 | added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds\n20211005.0 | excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator\n20211130.0 | changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE\n20220503.0 | Replaced assessments that in the 2021 IUCN moved from threatened -> LC or LC -> threatened: Turdus ludoviciae -> Cyanochen cyanoptera; Aspidoscelis inornata -> Pseudemys gorzugi; Enteromius dialonensis -> Alcolapia grahami; Boesemania microlepis -> Ompok weberi; Elaphoglossum kivuense -> Trachypteris drakeana; Asplenium majoricum -> Asplenium aureum. Added an extra bird in \"extra_bird\" in case needed\n20220503.0 | Replaced all blank cells with NAs\n20220730.0 | Removed old sheets, cleaning"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ]
+ ],
+ "calls": 5,
+ "categories": [
+  {
+   "variable": "terrestrial vertebrates",
+   "code": "Mammals",
+   "term": "Class: Mammalia",
+   "unit": "u3",
+   "model_label": "Mammalia",
+   "label": "Mammalia",
+   "explanation": "Class"
+  },
+  {
+   "variable": "terrestrial vertebrates",
+   "code": "Birds",
+   "term": "Class: Aves",
+   "unit": "u3",
+   "model_label": "Aves",
+   "label": "Aves",
+   "explanation": "Class"
+  },
+  {
+   "variable": "terrestrial vertebrates",
+   "code": "Reptiles",
+   "term": "Class: Reptilia",
+   "unit": "u3",
+   "model_label": "Reptilia",
+   "label": "Reptilia",
+   "explanation": "Class"
+  },
+  {
+   "variable": "terrestrial vertebrates",
+   "code": "Amphibians",
+   "term": "Class: Amphibia",
+   "unit": "u3",
+   "model_label": "Amphibia",
+   "label": "Amphibia",
+   "explanation": "Class"
+  },
+  {
+   "variable": "freshwater vertebrates",
+   "code": "Fishes",
+   "term": "Class: Actinopterygii",
+   "unit": "u3",
+   "model_label": "Actinopterygii",
+   "label": "Actinopterygii",
+   "explanation": "Class"
+  },
+  {
+   "variable": "invertebrate taxa",
+   "code": "Dragonflies",
+   "term": "Order: Odonata, including damselflies",
+   "unit": "u4",
+   "model_label": "Odonata",
+   "label": "Odonata",
+   "explanation": "Order: , including damselflies"
+  },
+  {
+   "variable": "invertebrate taxa",
+   "code": "Butterflies",
+   "term": "Suborder: Rhopalocera",
+   "unit": "u4",
+   "model_label": "Rhopalocera",
+   "label": "Rhopalocera",
+   "explanation": "Suborder"
+  },
+  {
+   "variable": "invertebrate taxa",
+   "code": "Grasshoppers",
+   "term": "Order: Orthoptera",
+   "unit": "u4",
+   "model_label": "Orthoptera",
+   "label": "Orthoptera",
+   "explanation": "Order"
+  },
+  {
+   "variable": "invertebrate taxa",
+   "code": "Spiders",
+   "term": "Order: Araneae",
+   "unit": "u4",
+   "model_label": "Araneae",
+   "label": "Araneae",
+   "explanation": "Order"
+  },
+  {
+   "variable": "invertebrate taxa",
+   "code": "Snails",
+   "term": "Class: Gastropoda",
+   "unit": "u4",
+   "model_label": "Gastropoda",
+   "label": "Gastropoda",
+   "explanation": "Class"
+  },
+  {
+   "variable": "land plants",
+   "code": "bryophytes",
+   "term": "excluding hornworts (Divisions: Bryophyta and Marchantiophyta)",
+   "unit": "u4",
+   "model_label": "Bryophyta",
+   "label": "Bryophyta",
+   "explanation": "excluding hornworts (Divisions: and Marchantiophyta"
+  },
+  {
+   "variable": "land plants",
+   "code": "ferns",
+   "term": "Classes: Lycopodiopsida, Polypodiopsida",
+   "unit": "u4",
+   "model_label": "Lycopodopsida",
+   "label": "Classes: Lycopodiopsida, Polypodiopsida",
+   "explanation": ""
+  },
+  {
+   "variable": "land plants",
+   "code": "Gymnosperms",
+   "term": "Classes: Pinopsida, Cycadopsida, Gnetopsida",
+   "unit": "u4",
+   "model_label": "Pinopsida",
+   "label": "Pinopsida",
+   "explanation": "Classes: , Cycadopsida, Gnetopsida"
+  },
+  {
+   "variable": "land plants",
+   "code": "Monocots",
+   "term": "Class: Liliopsida",
+   "unit": "u4",
+   "model_label": "Liliopsida",
+   "label": "Liliopsida",
+   "explanation": "Class"
+  },
+  {
+   "variable": "land plants",
+   "code": "Legumes",
+   "term": "Order: Fabales",
+   "unit": "u4",
+   "model_label": "Fabales",
+   "label": "Fabales",
+   "explanation": "Order"
+  },
+  {
+   "variable": "IUCNName",
+   "code": "IUCNName",
+   "term": "Name of the species following the IUCN",
+   "unit": "u7",
+   "model_label": "IUCNName",
+   "label": "Name of the species following the IUCN",
+   "explanation": ""
+  },
+  {
+   "variable": "Status",
+   "code": "Status",
+   "term": "IUCN conservation status",
+   "unit": "u7",
+   "model_label": "Status",
+   "label": "status",
+   "explanation": "IUCN conservation"
+  },
+  {
+   "variable": "CRITERIA",
+   "code": "CRITERIA",
+   "term": "IUCN criteria in which the IUCN assessment was based",
+   "unit": "u7",
+   "model_label": "CRITERIA",
+   "label": "criteria",
+   "explanation": "IUCN in which the IUCN assessment was based"
+  },
+  {
+   "variable": "YEAR_PUB",
+   "code": "YEAR_PUB",
+   "term": "YEar in which the IUCN assessment was published",
+   "unit": "u7",
+   "model_label": "YEAR_PUB",
+   "label": "YEar in which the IUCN assessment was published",
+   "explanation": ""
+  },
+  {
+   "variable": "Realm",
+   "code": "Realm",
+   "term": "Biogeographical realm",
+   "unit": "u7",
+   "model_label": "Realm",
+   "label": "realm",
+   "explanation": "Biogeographical"
+  },
+  {
+   "variable": "IUCN_RAW_THREATS",
+   "code": "IUCN_RAW_THREATS",
+   "term": "Threats for the species listed on the IUCN, including sub-threats",
+   "unit": "u7",
+   "model_label": "IUCN_RAW_THREATS",
+   "label": "Threats for the species listed on the IUCN, including sub-threats",
+   "explanation": ""
+  },
+  {
+   "variable": "IUCN_THREATS",
+   "code": "IUCN_THREATS",
+   "term": "Threats for the species listed on the IUCN, including sub-threats",
+   "unit": "u7",
+   "model_label": "IUCN_THREATS",
+   "label": "Threats for the species listed on the IUCN, including sub-threats",
+   "explanation": ""
+  },
+  {
+   "variable": "IUCN_THREATS_CATEG",
+   "code": "IUCN_THREATS_CATEG",
+   "term": "Threats for the species listed on the IUCN, not including sub-threats",
+   "unit": "u7",
+   "model_label": "IUCN_THREATS_CATEG",
+   "label": "Threats for the species listed on the IUCN, not including sub-threats",
+   "explanation": ""
+  },
+  {
+   "variable": "IUCN_N_THREATS",
+   "code": "IUCN_N_THREATS",
+   "term": "Number of threat categories",
+   "unit": "u7",
+   "model_label": "IUCN_N_THREATS",
+   "label": "Number of threat categories",
+   "explanation": ""
+  },
+  {
+   "variable": "proxy",
+   "code": "proxy",
+   "term": "proxy for the trait used (body length, body mass as proxy of body size, etc)",
+   "unit": "u10",
+   "model_label": "proxy",
+   "label": "proxy",
+   "explanation": "for the trait used (body length, body mass as proxy of body size, etc"
+  },
+  {
+   "variable": "unit/levels",
+   "code": "unit/levels",
+   "term": "e.g. grams, mm",
+   "unit": "u10",
+   "model_label": "unit/levels",
+   "label": "e.g. grams, mm",
+   "explanation": ""
+  },
+  {
+   "variable": "resolution",
+   "code": "resolution",
+   "term": "whether the trait value is retrieved from species genus, or family level.",
+   "unit": "u10",
+   "model_label": "resolution",
+   "label": "whether the trait value is retrieved from species genus, or family level.",
+   "explanation": ""
+  },
+  {
+   "variable": "comments",
+   "code": "comments",
+   "term": "extra information",
+   "unit": "u11",
+   "model_label": "comments",
+   "label": "extra information",
+   "explanation": ""
+  },
+  {
+   "variable": "references",
+   "code": "references",
+   "term": "where the trait value was obtained",
+   "unit": "u11",
+   "model_label": "references",
+   "label": "where the trait value was obtained",
+   "explanation": ""
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Mammals",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Birds",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Reptiles",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Amphibians",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Fishes",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Dragonflies",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Butterflies",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Grasshoppers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Spiders",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Snails",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "bryophytes",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "ferns",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Gymnosperms",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Monocots",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxa",
+   "code": "",
+   "label": "Legumes",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "IUCN",
+   "code": "",
+   "label": "IUCNName",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "IUCN",
+   "code": "",
+   "label": "YEAR_PUB",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "IUCN",
+   "code": "",
+   "label": "IUCN_RAW_THREATS",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "IUCN",
+   "code": "",
+   "label": "IUCN_THREATS",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "IUCN",
+   "code": "",
+   "label": "IUCN_THREATS_CATEG",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "IUCN",
+   "code": "",
+   "label": "IUCN_N_THREATS",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "BODY SIZE",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "OFFSPRING SIZE",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "FECUNDITY",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "GENERATION LENGTH",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "DIET BREADTH",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "TROPHIC LEVEL",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "DISPERSAL_ABILITY",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "MICROHABITAT",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "ALTITUDE_MIN",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "ALTITUDE_MAX",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "GEOGRAPHICAL RANGE SIZE",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "BODY SIZE",
+   "code": "BODY SIZE",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "OFFSPRING SIZE",
+   "code": "OFFSPRING SIZE",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "FECUNDITY",
+   "code": "FECUNDITY",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "GENERATION LENGTH",
+   "code": "GENERATION LENGTH",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "DIET BREADTH",
+   "code": "DIET BREADTH",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "TROPHIC LEVEL",
+   "code": "TROPHIC LEVEL",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "DISPERSAL_ABILITY",
+   "code": "DISPERSAL_ABILITY",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "MICROHABITAT",
+   "code": "MICROHABITAT",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "ALTITUDE_MIN",
+   "code": "ALTITUDE_MIN",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "ALTITUDE_MAX",
+   "code": "ALTITUDE_MAX",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "GEOGRAPHICAL RANGE SIZE",
+   "code": "GEOGRAPHICAL RANGE SIZE",
+   "term": "",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 72.1
+}

@@ -1,0 +1,218 @@
+{
+ "paper": "Khayati2024",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:0583686/tier:advanced/page:1/block:8)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "In fire prone-regions, forest fires play a vital role in shaping animal communities, particularly for groups like ants strongly associated with vegetation and soil. While prior works on the impact of forest fires on biodiversity focused on taxonomic responses, there is a growing interest on exploring functional responses. This study assesses the taxonomic and functional response of ant species to fire in afforested landscapes (pine plantations) in northern Morocco. These landscapes are widely recognized as suboptimal for many taxonomic groups, suggesting a positive responses of ant communities to fire. Our specific hypotheses were: (1) increasing post-fire openness enhances the richness and abundance of ant species in burnt plots, and (2) fire induces shifts in functional traits within ant communities influencing their composition, potentially favoring species with adaptations suited to the post-fire environment. Our results reveal that fire altered the taxonomic (winner and loser ant species) and functional composition (higher functional richness in burnt plots) of ant communities. Burnt areas harbored a greater abundance of ant species adapted to open habitats, characterized by ground nesting habits, ground foraging, and a preference for readily available resources like seeds. In contrast, unburnt plots hosted species ideally adapted to denser vegetation, utilizing arboreal nesting and foraging strategies and resource niches in the canopy. Overall, we found that fire significantly shapes ant communities by promoting the arrival of species tolerant of open areas and capable of exploiting new available resources in the post-fire habitat."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "![Image block](doc:0583686/tier:advanced/page:3/block:3)"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Fig. 1. (a) Location of the four study sites in Tetouan Province, Morocco, with red polygons showing the burnt areas. Location of four burnt and four unburnt plot in the site Oued Lil (b), Pictures of burnt (c) and unburnt (d) plots sampled for ants."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "We used Generalized Linear Mixed Models (GLMMs) to compare species richness (number of ant species) between burnt and unburnt plots. We also modelled species abundance (Number of ants detected per plot) for the 13 most abundant species. We used species richness, a widely used measure of biodiversity (Krebs et al., 1999), to assess the response of ant communities to fire. Species richness provides a clear idea of the number of different ant species present in the burned and unburned plots. Although ant abundance data were also collected, they can be influenced by variation in colony size within a species, making"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "The similarity of the ant community between unburnt and burnt plots was assessed by permutational multivariate analysis of variance (PERMANOVA) using the \"adonis\" function in the R package vegan (Oksanen et al., 2022). Pairwise similarity in ant composition among pairs of plots was evaluated using the Bray-Curtis similarity distance for relative abundance data, while the Jaccard similarity index was employed for occurrence (presence/absence) data. We constructed PERMANOVA models using 999 permutations, with fire condition (unburnt or burnt plot) as the main effect, with site as “strata,” which limits permutations to within site, and block as a random effect. To visually represent the similarity of transects in terms of species composition, we conducted a non-metric multidimensional scaling (NMDS) analysis. The NMDS has been carried out using the metaMDS function in the vegan package. (Oksanen et al., 2022)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Trait abundances per plot were used to compute three primary functional diversity (FD) indices, following the approach outlined by Mason et al. (2005): functional richness (FRic), functional dispersion (FDis), and functional evenness (FEve). Functional richness is a measure of the volume of the convex hull of the functional space that the community occupies (Villéger et al., 2008). Functional evenness assesses the uniformity of distribution of abundance in the space of functional traits (Mason et al., 2005). Functional dispersion is defined as the mean dis tance in the multidi- mensional trait space of individual species to the centroid of all species (Laliberté and Legendre, 2010). These analyses were conducted using the dbFD function of the FD package (Laliberté et al., 2023). We assessed Differences in FD indices between burnt and unburnt plots were examined with GLMMs adjusting data to a Gaussian distribution, with site as a random effect."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "In accordance with the GLMMs, the PERMANOVA results uncovered significant differences in both species abundance (Bray-Curtis’s index) $\\mathrm{F}=2.4202;\\mathrm{~R}^{2}=0.0795;\\mathrm{~p}=0.005)$ and species occurrence (Jaccard index) (F= 1.9074; R 2 = 0.0638; p= 0.007) between unburnt and burnt plots. The NMDS showed taxonomic differences in ant communities with axis 1 discriminating between unburnt and burnt plots, with a stress value of 0.2154 (Figure S5)."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:0583686/tier:advanced/page:5/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 2. Differences in the abundance of ant functional classes between unburnt (green) and burnt (red) plots in four pine plantations from northwestern Africa. Mean (lines), boxes (standard errors) and whiskers (standard deviation) are obtained from Generalized Linear Mixed Models. Stars show significant variations in terms of abundance between unburnt and burnt plots."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Fig. 3. Differences in ant functional richness (a), functional evenness (b) and functional dispersion (c) between unburnt (green) and burnt (red) plots. Bars are mean and whiskers standard error values of Generalized Linear Mixed Models estimates."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Ahmed Taheri: Writing – review & editing, Validation, Methodology, Investigation. Soumia Fahd: Writing – review & editing, Visualization, Supervision, Investigation. Xavier Santos: Writing – review & editing, Visualization, Supervision, Methodology, Investigation,"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Conceptualization. Brahim Chergui: Writing – review & editing, Supervision, Methodology, Investigation, Formal analysis. Mounia EL KHAYATI: Writing – original draft, Methodology, Investigation, Funding acquisition."
+  },
+  {
+   "id": "u13",
+   "kind": "table 2",
+   "text": "Functional index | Fire condition\nEstimate | Std. Error | P\nFunctional richness (FRic) | -0.189 | 0.081 | 0.0201\nFunctional evenness (FEve) | 0.029 | 0.013 | 0.0219\nFunctional dispersion (FDis) | 0.004 | 0.125 | 0.973"
+  },
+  {
+   "id": "u14",
+   "kind": "table 3",
+   "text": "Fire condition | Functional richness\nUnburnt | ~3.0\nBurnt | ~3.6"
+  },
+  {
+   "id": "u15",
+   "kind": "table 4",
+   "text": "Fire condition | Functional evenness\nUnburnt | ~0.152\nBurnt | ~0.123"
+  },
+  {
+   "id": "u16",
+   "kind": "table 5",
+   "text": "Fire condition | Functional dispersion\nUnburnt | ~0.90\nBurnt | ~0.90"
+  },
+  {
+   "id": "u17",
+   "kind": "table 7",
+   "text": "Santschi, 1936c | Santschi, F., 1936. Fourmis nouvelles ou interessantes de la Republique Argentine. Rev. Entomol. 6, 402–421\nSantschi, 1933 | Santschi, F., 1933. Etude sur le sous-genre Aphaenogaster Mayr. Rev. suisse Zool. 40, 389-408.\nGotwald, 1995 | Gotwald, W.H., 1995. Army ants: The biology of social predation. Comstock Publishing Associates, Ithaca.\nTinaut et al. 2011 | Tinaut, A., Bensusan, K., Guillen, R., 2011. Redescription of the queen of Anochetus ghilianii (Spinola, 1851)(Hymenoptera, Formicidae). Boln. Asoc. esp. Ent. 35, 151-161.\nTaheri and Reyes-López, 2018 | Taheri, A., Reyes-López, J., 2018. Exotic ants (Hymenoptera: Formicidae) in Morocco: checklist, comments and new faunistic data. Trans. Am. Entomol. Soc. 144, 99-107.\nTaxomara, 2018 | Asociación Ibérica de Mirmecología. 2018. Listado de especies de hormigas encontradas durante el “Taxomara de León 2018”. Iberomyrmex, 10: 51-53.\nCagniant, 1994 | Cagniant, H., 1994. Contribution à la connaissance des fourmis marocaines. Description d’Aphaenogaster rifensis n. sp. Revision de la superespèce Aphaenogaster (supersp.) gemella Rog.(n. taxon).(Hymenoptera, Formicidae). Bull. Soc. Zool. Fr. 119, 15-29.\nBernard et al. 1976a | Bernard, B.B., Brooks, J.M., Sackett, W.M.,1976. Natural gas seepage in the Gulf of Mexico. Earth Planet. Sci. Lett. 31, 48-54.\nSantschi, 1911 | Santschi, F., 1911. Obervations et remarques critiques sur le mécanisme de l'orientation chez les fourmis. Rév Suisse Zool 19, 305–338.\nBernard, 1967a | Bernard, F. 1967a (\"1968\"). Faune de l'Europe et du Bassin Méditerranéen. 3. Les fourmis (Hymenoptera Formicidae) d'Europe occidentale et septentrionale. Paris: Masson, 411 pp"
+  },
+  {
+   "id": "u18",
+   "kind": "table 7",
+   "text": "Cagniant, 1996 | Cagniant, H., 1996. Les Aphaenogaster du Maroc (Hymenoptera: Formicidae): clé et catalogue des espèces. Ann. Soc. Entomol. Fr. 32, 67-85.\nSeifert, 2020 | Seifert, B., 2020. The Gene and Gene Expression (GAGE) species concept: an universal approach for all Eukaryotic organisms. Syst. Biol. 69, 1033-1038.\nMayr, 1988 | Mayr, E., 1988. Toward a new philosophy of biology: Observations of an evolutionist (No. 211). Harvard University Press.\nCagniant et Espadaler, 1997 | Cagniant, H., Espadaler, X., 1997. Le genre Messor au Maroc (Hymenoptera: Formicidae). Ann. Soc. Entomol. Fr. 33, 419-434.\nBernard, 1974 | [Bernard, F. R. 1974. Particle sorting and labial palp function in the Pacific Oyster Crassostrea gigas (Thunberg, 1795). Biol. Bull. 146:1-10. ](https://www.journals.uchicago.edu/doi/epdf/10.2307/1542056)\nLaPolla et al. 2013 | LaPolla, J. S., Dlussky, G. M., Perrichot, V., 2013. Ants and the fossil record. Annu. Rev. Entomol. 58, 609-630.\nSharaf et al. 2011 | Sharaf, M.R., Aldawood, A.S., Taylor, B., 2011.The Formicine ant genus Plagiolepis Mayr (Hymenoptera: Formicidae) in the Arabian Peninsula, with description of two new species. Trans. Am. Entomol. Soc. 137, 203–215.\nSharaf et al. 2009 | Sharaf, M.R., Taylor, B., Klingenberg, C., 2009. Ants of the genus Solenopsis Westwood, 1840 (Hymenoptera: Formicidae) in Egypt with description of the worker caste of S. cooperi Donisthorpe, 1947. Zootaxa 2004, 49-58.\nSharaf et al. 2018 | Sharaf, M. R., Al Dhafer, H. M., Aldawood, A. S., 2018. Review of the ant genus Technomyrmex Mayr, 1872 in the Arabian Peninsula (Hymenoptera, Formicidae). ZooKeys 780, 35.\nReyes-López and Carpintero-Ortega, 2013 | Reyes-López, J. L., Carpintero-Ortega, S., 2013. Descripción de Temnothorax bejaraniensis nov. sp.(Hymenoptera, Formicidae), una nueva especie para la península Ibérica. Boletín de la S.E.A. 52, 23-28."
+  },
+  {
+   "id": "u19",
+   "kind": "table 7",
+   "text": "Santschi, 1909 | Santschi, F. 1909. Sur la signification de la barbe des fourmis arénicoles. Rev. Suisse Zool. 17:449-458.\nCagniant, 1970b | Cagniant, H., 1970b. Deuxième liste de fourmis d’Algérie récoltées principalement en forêt (1re partie). Bulletin de la Société d’Histoire Naturelle de Toulouse, 105: 405-430\nGuillem et Bensusan, 2009 | Guillem, R., Bensusan, K., 2009. Tetramorium parvioculum sp. n.(Formicidae: Myrmicinae), A new species of the T. simillimum group from Gibraltar. Boletín de la S.E.A. 45, 157-161."
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7",
+   "u8",
+   "u9"
+  ],
+  [
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19"
+  ]
+ ],
+ "calls": 9,
+ "categories": [
+  {
+   "variable": "ground nesting habits",
+   "code": "ground nesting",
+   "term": "ground nesting",
+   "unit": "u1",
+   "model_label": "ground nesting",
+   "label": "ground nesting",
+   "explanation": ""
+  },
+  {
+   "variable": "ground foraging",
+   "code": "ground foraging",
+   "term": "ground foraging",
+   "unit": "u1",
+   "model_label": "ground foraging",
+   "label": "ground foraging",
+   "explanation": ""
+  },
+  {
+   "variable": "arboreal nesting",
+   "code": "arboreal nesting",
+   "term": "arboreal nesting",
+   "unit": "u1",
+   "model_label": "arboreal nesting",
+   "label": "arboreal nesting",
+   "explanation": ""
+  },
+  {
+   "variable": "unburnt",
+   "code": "green",
+   "term": "unburnt",
+   "unit": "u9",
+   "model_label": "unburnt",
+   "label": "unburnt",
+   "explanation": ""
+  },
+  {
+   "variable": "burnt",
+   "code": "red",
+   "term": "burnt",
+   "unit": "u9",
+   "model_label": "burnt",
+   "label": "burnt",
+   "explanation": ""
+  },
+  {
+   "variable": "fire condition",
+   "code": "",
+   "label": "burnt plot",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "arboreal foraging",
+   "code": "arboreal foraging",
+   "term": "arboreal foraging",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Fire condition",
+   "code": "Unburnt",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Fire condition",
+   "code": "Burnt",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "G",
+   "code": "G",
+   "term": "ground nesting",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 34.7
+}

@@ -1,0 +1,123 @@
+decoder v2 against the decoding key (corrected 2026-10-12); cells = species rows, pairs = distinct cells
+
+v1-dev       coded cells reachable  1293: right 1242 + unit inside 16 = 1258 (97%)   right 1242, no legend printed 170, left as printed 35, GT error 19, right, unit inside 16
+v1-dev       coded pairs reachable    22: right 17 + unit inside 4 = 21 (95%)   right 17, no legend printed 15, right, unit inside 4, GT error 1, left as printed 1
+v1-dev       kept  cells   799: kept 799 (100.0%)   right 799
+v1-dev       kept  pairs    56: kept 56 (100.0%)   right 56
+
+v1-held-out  coded cells reachable  5227: right 4063 + unit inside 0 = 4063 (78%)   right 4063, no legend printed 1864, left as printed 521, other term 348, right, longer wording 295
+                   cells + longer wording 295 = 4358 (83%) if the boundary is forgiven
+v1-held-out  coded pairs reachable   104: right 70 + unit inside 0 = 70 (67%)   no legend printed 88, right 70, left as printed 14, other term 13, right, longer wording 7
+                   pairs + longer wording 7 = 77 (74%) if the boundary is forgiven
+v1-held-out  kept  cells 15169: kept 15104 (99.6%)   right 15104, changed (should keep) 65
+v1-held-out  kept  pairs  1450: kept 1445 (99.7%)   right 1445, changed (should keep) 5
+
+all          coded cells reachable  6520: right 5305 + unit inside 16 = 5321 (82%)   right 5305, no legend printed 2034, left as printed 556, other term 348, right, longer wording 295, GT error 19, right, unit inside 16
+                   cells + longer wording 295 = 5616 (86%) if the boundary is forgiven
+all          coded pairs reachable   126: right 87 + unit inside 4 = 91 (72%)   no legend printed 103, right 87, left as printed 15, other term 13, right, longer wording 7, right, unit inside 4, GT error 1
+                   pairs + longer wording 7 = 98 (78%) if the boundary is forgiven
+all          kept  cells 15968: kept 15903 (99.6%)   right 15903, changed (should keep) 65
+all          kept  pairs  1506: kept 1501 (99.7%)   right 1501, changed (should keep) 5
+
+decoded cells by evidence class (pairs | cells): right / decoded
+  explicit  85/143 | 5160/6589
+  initial   6/6 | 161/161
+
+v1 on the same corrected key, same report (baseline)
+
+v1-dev       coded cells reachable  1293: right 1242 + unit inside 16 = 1258 (97%)   right 1242, no legend printed 170, left as printed 35, GT error 19, right, unit inside 16
+v1-dev       coded pairs reachable    22: right 17 + unit inside 4 = 21 (95%)   right 17, no legend printed 15, right, unit inside 4, GT error 1, left as printed 1
+v1-dev       kept  cells   799: kept 799 (100.0%)   right 799
+v1-dev       kept  pairs    56: kept 56 (100.0%)   right 56
+
+v1-held-out  coded cells reachable  5155: right 3270 + unit inside 0 = 3270 (63%)   right 3270, no legend printed 1936, left as printed 1047, right, longer wording 585, other term 253
+                   cells + longer wording 585 = 3855 (75%) if the boundary is forgiven
+v1-held-out  coded pairs reachable   104: right 62 + unit inside 0 = 62 (60%)   no legend printed 88, right 62, left as printed 21, other term 12, right, longer wording 9
+                   pairs + longer wording 9 = 71 (68%) if the boundary is forgiven
+v1-held-out  kept  cells 15169: kept 15130 (99.7%)   right 15130, changed (should keep) 39
+v1-held-out  kept  pairs  1450: kept 1448 (99.9%)   right 1448, changed (should keep) 2
+
+all          coded cells reachable  6448: right 4512 + unit inside 16 = 4528 (70%)   right 4512, no legend printed 2106, left as printed 1082, right, longer wording 585, other term 253, GT error 19, right, unit inside 16
+                   cells + longer wording 585 = 5113 (79%) if the boundary is forgiven
+all          coded pairs reachable   126: right 79 + unit inside 4 = 83 (66%)   no legend printed 103, right 79, left as printed 22, other term 12, right, longer wording 9, right, unit inside 4, GT error 1
+                   pairs + longer wording 9 = 92 (73%) if the boundary is forgiven
+all          kept  cells 15968: kept 15929 (99.8%)   right 15929, changed (should keep) 39
+all          kept  pairs  1506: kept 1504 (99.9%)   right 1504, changed (should keep) 2
+
+decoded cells by evidence class (pairs | cells): right / decoded
+  explicit  0/0 | 0/0
+  initial   0/0 | 0/0
+
+per paper (coded cells right incl. unit inside / reachable):
+  [v1-held-out] AmbspergTraun1991    27/31
+  [v1-held-out] Arnan2012            76/150
+  [v1-held-out] Beyer2021            46/46
+  [v1-held-out] Cao2024              79/79
+  [v1-dev] Cappellari2022       325/325
+  [v1-dev] Derhe2016            5/5
+  [v1-dev] Espinosa2023         27/27
+  [v1-held-out] Forrest2015          89/89
+  [v1-dev] Graf2021             781/816
+  [v1-held-out] Guariento2020        447/945
+  [v1-dev] Habustova2017        16/16
+  [v1-held-out] Heiva2013            26/26
+  [v1-held-out] Keller1998           0/26
+  [v1-dev] Korosi2022           104/104
+  [v1-held-out] Kratschmer2019       38/38
+  [v1-held-out] Lizee2016            19/41
+  [v1-held-out] McCune2023           48/48
+  [v1-held-out] Normandin2017        34/34
+  [v1-held-out] Pereira2016          42/42
+  [v1-held-out] Taillefer2018        40/56
+  [v1-held-out] Teder2020            2796/2844
+  [v1-held-out] Uemori2022           22/109
+  [v1-held-out] Vidal2023            0/25
+  [v1-held-out] Wallon2024           16/112
+  [v1-held-out] Wölfling2020         218/486
+
+every miss:
+  [v1-held-out] AmbspergTraun1991 'Feeding group': 'W/S' -> want 'Wood/soil interface', have 'wood; soil'  [other term; explicit]
+  [v1-held-out] Arnan2012 'Defense of resources': '2' -> want 'food and/or territory', have 'defence of food or territory'  [other term; explicit]
+  [v1-held-out] Arnan2012 'Colony population': '3' -> want 'tens of thousands', have '3'  [left as printed; None]
+  [v1-held-out] Arnan2012 'Colony population': '2' -> want 'thousands', have '2'  [left as printed; None]
+  [v1-held-out] Arnan2012 'Colony population': '1' -> want 'hundreds', have '1'  [left as printed; None]
+  [v1-held-out] Arnan2012 'Brood cycle': '2' -> want 'larvae in the nests during the whole year', have 'larvae within the nests during the whole year (also in winte'  [other term; explicit]
+  [v1-held-out] Arnan2012 'Brood cycle': '1' -> want 'larvae in the nests from March to September', have 'larvae within the nests from March to September (foraging ac'  [other term; explicit]
+  [v1-dev] Derhe2016 'Habitat preference': 'RF' -> want 'rainforest', have 'rain forest'  [GT error; explicit]
+  [v1-dev] Graf2021 'Feeding habit': 'NA' -> want 'not specified', have 'NA'  [left as printed; None]
+  [v1-held-out] Guariento2020 'Hibernation in larval state re': '0' -> want 'No', have 'no hibernation in larval stage recorded'  [right, longer wording; explicit]
+  [v1-held-out] Guariento2020 'Hibernation in pupal stage rce': '0' -> want 'No', have '0'  [left as printed; None]
+  [v1-dev] Habustova2017 'Body size': 'C' -> want '6–10.9', have '6–10.9 mm'  [right, unit inside; explicit]
+  [v1-dev] Habustova2017 'Body size': 'D' -> want '˂5.9', have '˂5.9 mm'  [right, unit inside; explicit]
+  [v1-dev] Habustova2017 'Body size': 'B' -> want '11–21.9', have '11–21.9 mm'  [right, unit inside; explicit]
+  [v1-dev] Habustova2017 'Body size': 'A' -> want '˃22', have '>22 mm'  [right, unit inside; explicit]
+  [v1-held-out] Keller1998 'queen number': 'M' -> want 'primarily monogynous', have 'species that are primarily monogynous'  [right, longer wording; explicit]
+  [v1-held-out] Keller1998 'queen number': 'P' -> want 'primarily polygynous', have 'species that are primarily polygynous'  [right, longer wording; explicit]
+  [v1-held-out] Keller1998 'queen number': 'M, P' -> want 'commonly have both monogyne and polygyne colonies', have 'species that are primarily monogynous; species that are prim'  [other term; explicit]
+  [v1-held-out] Keller1998 'colony founding': 'D' -> want 'generally use a dependent colony founding', have 'species that generally use a dependent colony founding'  [right, longer wording; explicit]
+  [v1-held-out] Keller1998 'colony founding': 'I, D' -> want 'found new colonies independently and dependently', have 'species that found new colonies primarily through independen'  [other term; explicit]
+  [v1-held-out] Lizee2016 'Functional group': 'RS' -> want 'rebound specialists', have 'RS'  [left as printed; None]
+  [v1-held-out] Lizee2016 'Functional group': 'TS' -> want 'typical specialists', have 'TS'  [left as printed; None]
+  [v1-held-out] Rebrina2022 'Lifestyle': 'chortobiont' -> want 'chortobiont', have 'grass-/herb-dwelling'  [changed (should keep); explicit]
+  [v1-held-out] Rebrina2022 'Lifestyle': 'geo-chortobiont' -> want 'geo-chortobiont', have 'both ground- and grass/herb-dwelling'  [changed (should keep); explicit]
+  [v1-held-out] Rebrina2022 'Lifestyle': 'geobiont' -> want 'geobiont', have 'ground-dwelling'  [changed (should keep); explicit]
+  [v1-held-out] Taillefer2018 'Larval feeding habit': 'PA' -> want 'Parasite', have 'parasite/parasitoid'  [right, longer wording; explicit]
+  [v1-held-out] Taillefer2018 'Feeding': 'S' -> want 'Specialist', have 'feed on one genus/type of plant, animal or substrate'  [other term; explicit]
+  [v1-held-out] Teder2020 'Overwintering stage': 'LP' -> want 'larva', have 'LP'  [left as printed; None]
+  [v1-held-out] Teder2020 'Overwintering stage': 'AP' -> want 'adult within pupal case', have 'adult within pupal case (classified as adult overwinterers i'  [right, longer wording; explicit]
+  [v1-held-out] Teder2020 'Host type': 'W(c)' -> want 'W(c)', have 'species feeding exclusively on coniferous trees are indicate'  [changed (should keep); explicit]
+  [v1-held-out] Teder2020 'Host type': 'L' -> want 'lichens', have 'larva'  [other term; explicit]
+  [v1-held-out] Teder2020 'Host type': 'G(i)' -> want 'G(i)', have 'endophagous grass-feeders are indicated by G(i)'  [changed (should keep); explicit]
+  [v1-held-out] Uemori2022 'Trophic level': '3' -> want 'hyper predators', have 'hyper predators feeding Araneae, Diptera, and predator Hymen'  [right, longer wording; explicit]
+  [v1-held-out] Uemori2022 'Soil dependence': '2' -> want 'detritivorous cycle', have 'Hemiptera, Lepidoptera, Orthoptera, and pollinator Hymenopte'  [other term; explicit]
+  [v1-held-out] Uemori2022 'Soil dependence': '1' -> want 'herbivorous cycle', have '1'  [left as printed; None]
+  [v1-held-out] Vidal2023 'Nesting site': '0.0' -> want 'Ground', have '0.0'  [left as printed; None]
+  [v1-held-out] Wallon2024 'Diel activity': '1' -> want 'Day', have '1'  [left as printed; None]
+  [v1-held-out] Wallon2024 'Diel activity': '0' -> want 'Night', have 'absence'  [other term; explicit]
+  [v1-held-out] Wallon2024 'Type of Food': '1' -> want 'Plants', have '1'  [left as printed; None]
+  [v1-held-out] Wallon2024 'Type of Food': '0' -> want 'Animals', have 'absence'  [other term; explicit]
+  [v1-held-out] Wallon2024 'Mode of Ingestion': 'CC' -> want 'Chewing and cutting', have 'CC'  [left as printed; None]
+  [v1-held-out] Wallon2024 'Mode of Ingestion': 'PS' -> want 'Piercing and sucking', have 'PS'  [left as printed; None]
+  [v1-held-out] Wölfling2020 'Specialization in larval food ': '1' -> want 'Monophagous within one plant genus', have '1'  [left as printed; None]
+  [v1-held-out] Wölfling2020 'Specialization in habitat choi': '3' -> want '5 or more habitat types or common/nonspecial habit', have 'Polyphagous: >1 plant family'  [other term; explicit]
+  [v1-held-out] Wölfling2020 'Specialization in habitat choi': '4' -> want 'Numerous and/or anthropogenic influenced habitats ', have 'Highly polyphagous: >5 plant families'  [other term; explicit]

@@ -1,0 +1,112 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Torok2022\Torok2022.xlsx  (501 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Torok2022\Torok2022.csv  (176 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 31 pair(s))
+  'Amegilla quadrifasciata' -> 'Amegilla quadrifasciata (de Villers, 1789)'
+  'Ancistrocerus gazella' -> 'Ancistrocerus gazella (Panzer 1798)'
+  'Anthidium interruptum' -> 'Anthidium interruptum (Fabricius, 1781)'
+  'Anthidium manicatum' -> 'Anthidium manicatum (Linnaeus, 1758)'
+  'Aporinellus moestus sericeomaculatus' -> 'Aporinellus moestus sericeomaculatus (Kohl, 1888)'
+  'Arachnospila abnormis' -> 'Arachnospila abnormis (Dahlbom, 1842)'
+  'Arachnospila minutula' -> 'Arachnospila minutula (Dahlbom,1842)'
+  'Arachnospila spissa' -> 'Arachnospila spissa (Schiødte,1837)'
+  'Arachnospila trivialis' -> 'Arachnospila trivialis (Dahlbom,1843)'
+  'Astata boops' -> 'Astata boops (Schrank,1781)'
+  'Bembecinus tridens' -> 'Bembecinus tridens (Fabricius, 1781)'
+  'Bombus pascuorum' -> 'Bombus pascuorum (Scopoli, 1763)'
+  'Bombus ruderatus' -> 'Bombus ruderatus (Fabricius, 1775)'
+  'Bombus terrestris' -> 'Bombus terrestris (Linnaeus, 1758)'
+  'Chrysis illigeriWesmael,1839' -> 'Chrysis illigeri Wesmael,1839'
+  'Chrysis rutilansOlivier, 1790' -> 'Chrysis rutilans Olivier, 1790'
+  'Chrysura dichroa' -> 'Chrysura dichroa (Dahlbom, 1854)'
+  'Coelioxys quadridentata' -> 'Coelioxys quadridentata (Linnaeus, 1758)'
+  'Crabro scutellatus' -> 'Crabro scutellatus (von Scheven,1781)'
+  'Hoplitis bisulca' -> 'Hoplitis bisulca (Gerstäcker, 1869)'
+  'Hylaeus angustatus' -> 'Hylaeus angustatus (Schenck, 1861)'
+  'Lasioglossum albipes' -> 'Lasioglossum albipes (Fabricius, 1781)'
+  'Lasioglossum brevicorne' -> 'Lasioglossum brevicorne (Schenck, 1869)'
+  'Lasioglossum calceatum' -> 'Lasioglossum calceatum (Scopoli, 1763)'
+  'Lasioglossum leucozonium' -> 'Lasioglossum leucozonium (Schrank, 1781)'
+  'Lasioglossum mesosclerum' -> 'Lasioglossum mesosclerum (Perez, 1903)'
+  'Lasioglossum minutissimum' -> 'Lasioglossum minutissimum (Kirby, 1802)'
+  'Lasioglossum politum' -> 'Lasioglossum politum (Schenck, 1853)'
+  'Lasioglossum punctatissimum' -> 'Lasioglossum punctatissimum (Schenck, 1853)'
+  'Lasioglossum puncticolle' -> 'Lasioglossum puncticolle (Morawitz, 1872)'
+  'Lasioglossum semilucens' -> 'Lasioglossum semilucens (Alfken, 1914)'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body size' -> 'Body Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 175
+  missed (FN)         : 326
+  spurious, in scope  : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.994 / 0.349 / 0.517   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.994 / 0.349 / 0.517   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.349   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    175  0.000  <-- low
+  measurementMethod             0      0    n/a   +134 where GT blank
+  measurementUnit              39    175  0.223  <-- low
+  measurementStatistic         41    175  0.234  <-- low
+  measurementRemarks            0      0    n/a
+  sex                         123    175  0.703
+  lifeStage                    52    175  0.297  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    175  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 326 MISSED ROWS MISSED
+  species not in prediction                 284
+  species present, trait missing             41
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'bee (hymenoptera: apidae)'  ->  'bees (hymenoptera: apidae)' x1
+  -> 1 substitution explains 1 of 326 misses (0%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (55 distinct), closest predicted name:
+     gt 'Ectemnius dives (Lepeletier de Saint Fargeau & Brullé, 1835)'   (nothing similar in the prediction)   x6
+     gt 'Gorytes quinquecinctus (Fabricius, 1793)'  ~0.61~  pred 'Bembecinus tridens (Fabricius, 1781)'   x6
+     gt 'Passaloecus gracilis (Curtis, 1834)'   (nothing similar in the prediction)   x6
+     gt 'Pemphredon lugens (Dahlbom 1842)'  ~0.66~  pred 'Arachnospila abnormis (Dahlbom, 1842)'   x6
+     gt 'Pseudomalus auratus (Linnaeus,1758)'  ~0.71~  pred 'Anthidium manicatum (Linnaeus, 1758)'   x6
+     gt 'Stenodynerus chevrieranus (Saussure, 1855)'   (nothing similar in the prediction)   x6
+  -> 6 species mismatches explain 36 of 326 misses (11%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     ''                                 x41
+  -> 1 missing trait explains 41 of 326 misses (13%) — scattered; no single cause
+
+  full miss detail saved -> Torok2022_misses.csv, Torok2022_misses_summary.json (326 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   91     0   GT-ONLY
+  body size                                        91    41   Δ-50 (split?)
+  larvae feeding preference                        91    41   Δ-50 (split?)
+  social habit                                     91    41   Δ-50 (split?)
+  nest location                                    91    41   Δ-50 (split?)
+  wasp preys                                       46    12   Δ-34 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.994  0.349  0.517    175     1   326   id+type+value
+  tags        0.000  0.000  0.000      0   176   501   basis+id+type+value+stat+sex+stage
+             (F1 -0.517 vs previous)

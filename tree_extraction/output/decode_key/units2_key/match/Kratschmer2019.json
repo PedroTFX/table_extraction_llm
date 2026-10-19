@@ -1,0 +1,208 @@
+{
+ "_columns": [
+  [
+   13,
+   2,
+   "Nesting type",
+   [
+    "G",
+    "A",
+    "P",
+    "BP"
+   ]
+  ],
+  [
+   10,
+   4,
+   "Sociality",
+   [
+    "social",
+    "solitary",
+    "eusocial",
+    "NA",
+    "parasitic"
+   ]
+  ]
+ ],
+ "13:2": {
+  "cells": {
+   "G": {
+    "term": "Ground nesting",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "initial",
+      "labels": [
+       "Ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "initial"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "G": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "G | QB": {}
+    }
+   },
+   "A": {
+    "term": "Above-ground nesting",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "initial",
+      "labels": [
+       "Above-ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "initial"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.946,
+      "word": 0.054
+     },
+     "A": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "A | QB": {}
+    }
+   },
+   "P": {
+    "term": "Parasitic",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Parasitic"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "initial"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "P": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u2",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.895,
+    "several": 0.083,
+    "none": 0.021
+   },
+   "chosen": [
+    "u23"
+   ]
+  },
+  "header": "Nesting type"
+ },
+ "10:4": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "solitary species",
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "eusocial": {
+    "term": null,
+    "parts": [
+     "eusocial"
+    ],
+    "options": {
+     "eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "eusocial species",
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "eusocial | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "parasitic": {
+    "term": null,
+    "parts": [
+     "parasitic"
+    ],
+    "options": {
+     "parasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "♀ lay their eggs in nests of specific host species",
+       "See above"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "parasitic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "header": "Sociality",
+  "units": {
+   "from": "inventory run",
+   "was": "several",
+   "offered": 2
+  }
+ }
+}

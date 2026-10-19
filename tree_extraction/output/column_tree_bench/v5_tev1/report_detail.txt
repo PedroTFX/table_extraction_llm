@@ -1,0 +1,619 @@
+29 papers, 56 tables, 501 scored columns (231 used by the GT)
+
+accuracy                                gemma           tev1     tree5_tev1
+GT-used columns, 9 mapper fields    215/227 95%    213/227 94%    220/227 97%
+  identifier                        66/74 89%      71/74 96%      70/74 95%
+  trait (type/value)              149/153 97%    142/153 93%    150/153 98%
+  row fields                                -              -              -
+  (type~value counted equal)      217/227 96%    214/227 94%    222/227 98%
+GT-used, new tags (tree only)          0/4 0%         0/4 0%        2/4 50%
+GT-unused columns (weak key)         1/270 0%      12/270 4%     96/270 36%
+all columns                       216/501 43%    225/501 45%    318/501 63%
+tables, identifier exact            44/50 88%      36/50 72%      43/50 86%
+seconds                                  2541           1535            576
+
+TREE tree5_tev1
+  soft answer (most path probability), GT-used: 222/231 96%
+  decision calls: 959
+  organism column picked right: 52/56 93%
+  table kinds chosen: organism_traits x42, counts x9, long_format x2, specimens x2, statistics x1
+  first wrong turn, GT-used columns (GT field <- step):
+    verbatimIdentification   <- organism_name:not_a_name                      x2
+    measurementValue         <- organism_property: by table kind organism_traits x2
+    verbatimIdentification   <- organism_name:taxon_code                      x2
+    sampleSizeValue          <- kind:organism_property                        x1
+    measurementType          <- organism_name:row_organism                    x1
+    sampleSizeValue          <- counts_or_statistics:abundance                x1
+  first wrong turn, GT-unused (weak key) columns (GT field <- step):
+    none                     <- kind:organism_property                        x154
+    none                     <- counts_or_statistics:statistic_header         x6
+    none                     <- record_context:sampling_place                 x4
+    none                     <- record_context:sampling_time                  x3
+    none                     <- table level: organism column                  x2
+    none                     <- record_context:caste                          x2
+    none                     <- counts_or_statistics:property_spread          x1
+    none                     <- other:remarks                                 x1
+    none                     <- organism_name:associated_organism             x1
+
+PER PAPER (GT-used columns correct / total)
+paper                                 gemma           tev1     tree5_tev1
+Leong2023                             11/12          10/12          11/12
+Graf2021                                4/4            4/4            4/4
+Nunes2016                               3/3            2/3            3/3
+Barber2017                              8/8            8/8            8/8
+CortesGomez2023                         8/8            5/8            8/8
+Guareschi2015                           1/1            1/1            1/1
+Braschler2021                         13/13          11/13          13/13
+Brasil2024                            10/10           9/10          10/10
+Torok2022                             16/17          15/17          16/17
+Ibarra2021                              6/6            6/6            6/6
+Gossner2013                             6/6            6/6            6/6
+Uemori2021                            11/16          16/16          15/16
+Kovacs2010                             8/10           6/10           8/10
+Wang2021                                3/4            4/4            4/4
+Odanaka2019                             7/7            7/7            7/7
+Cappellari2022                          4/4            4/4            3/4
+Tonelli2021                             5/5            5/5            4/5
+GibbParr2013                            8/8            8/8            8/8
+Espinosa2023                            6/6            6/6            6/6
+OsorioCanadas2018                     13/14          14/14          13/14
+Dejean2019                              3/4            3/4            3/4
+Attiwilli2022                           5/6            4/6            6/6
+Oliveira2022                          10/10          10/10          10/10
+Korosi2022                              6/7            7/7            7/7
+Habustova2017                         16/17          17/17          17/17
+Derhe2016                               6/7            7/7            7/7
+Wiescher2012                          10/10          10/10          10/10
+Rebrina2022                             7/7            7/7            7/7
+Figueroa2021                            1/1            1/1            1/1
+
+DETAIL: columns where a tree variant disagrees with the GT label (path = the tree's greedy route)
+  Leong2023 Leong2023_full.md#1 'Q1': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementStatistic
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.76) > organism_property:by table kind organism_traits
+  Leong2023 Leong2023_full.md#1 'Q2 (Median)': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementStatistic
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.56) > organism_property:by table kind organism_traits
+  Leong2023 Leong2023_full.md#1 'Q3': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementStatistic
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:counts_or_statistics(0.59) > counts_or_statistics:property_spread(0.37)
+  Leong2023 Leong2023_full.md#4 'N_ctmax': GT=sampleSizeValue [90% (species,sampleSizeValue) pairs in GT]
+      gemma=measurementType, tev1=measurementStatistic
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.72) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=verbatimIdentification
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.46) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.65) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.67) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.85) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '5': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.66) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '6': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.47) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '7': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.74) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#7 '8': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.44) > organism_property:by table kind organism_traits
+  Graf2021 Graf2021_full.md#8 'Behavior': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:everyday_words(0.84) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+  Barber2017 Barber2017_full.md#6 'Site Year planted': GT=none [pairs 0%]
+      gemma=measurementType, tev1=verbatimLocality
+      tree5_tev1=verbatimEventDate  via code:numeric(0.93) > kind:record_context(0.91) > record_context:sampling_time(0.97)
+  Barber2017 Barber2017_full.md#6 'AG': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.39) > organism_property:by table kind counts
+  Barber2017 Barber2017_full.md#6 'HF': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=verbatimEventDate  via code:numeric(1.00) > kind:record_context(0.44) > record_context:sampling_time(0.98)
+  Barber2017 Barber2017_full.md#7 'Site': GT=none [pairs 0%]
+      gemma=verbatimLocality, tev1=verbatimLocality
+      tree5_tev1=verbatimEventDate  via code:numeric(1.00) > kind:record_context(0.77) > record_context:sampling_time(0.79)
+  Barber2017 Barber2017_full.md#7 'AG': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=verbatimLocality  via code:numeric(1.00) > kind:record_context(0.41) > record_context:sampling_place(0.40)
+  Barber2017 Barber2017_full.md#12 'Species number': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementStatistic
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:counts_or_statistics(0.81) > counts_or_statistics:statistic_header(0.37)
+  CortesGomez2023 CortesGomez2023_full.md#0 'Other pollen': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.87) > organism_property:by table kind organism_traits
+  CortesGomez2023 CortesGomez2023_full.md#0 'Granadilla pollen': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.96) > organism_property:by table kind organism_traits
+  CortesGomez2023 CortesGomez2023_full.md#6 'Cluster': GT=none [pairs 0%]
+      gemma=measurementType, tev1=verbatimIdentification
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.69) > organism_property:by table kind organism_traits
+  CortesGomez2023 CortesGomez2023_full.md#6 'Granadilla pollen Mean (sd)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.50) > organism_property:by table kind organism_traits
+  CortesGomez2023 CortesGomez2023_full.md#6 'Total pollen Mean (sd)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:counts_or_statistics(0.79) > counts_or_statistics:statistic_header(0.96)
+  Guareschi2015 Guareschi2015_full.md#3 'A 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.81) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'A 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.85) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'A 3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.88) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'A 4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.89) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'B 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.91) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'B 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.81) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'C 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.81) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'C 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.67) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'D 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.85) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'D 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.43) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'E 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.75) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'E 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.62) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'E 3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.62) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'F 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.65) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'F 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.53) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'F 3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.62) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'G 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.79) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'G 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.72) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'H 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.66) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'H 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.61) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'H 3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.63) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'H 4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.69) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'H 5': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.64) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'I 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.63) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'I 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.57) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'I 3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.54) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'I 4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.62) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 1': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.68) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.71) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.71) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.77) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 5': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.82) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 6': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.63) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 7': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.69) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'J 8': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.68) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'K 1': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.76) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'K 2': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.70) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'K 3': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.70) > organism_property:by table kind organism_traits
+  Guareschi2015 Guareschi2015_full.md#3 'K 4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.59) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#3 'Date of changing season': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:everyday_words(0.57) > kind:organism_property(0.99) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H01': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.87) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H02': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.89) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H03': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.79) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H04': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.92) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H05': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.77) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H06': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.73) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H07': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.75) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H08': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.64) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'H09': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.41) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L01': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=verbatimLocality  via code:numeric(1.00) > kind:record_context(0.34) > record_context:sampling_place(0.65)
+  Brasil2024 Brasil2024_full.md#4 'L02': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.44) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L03': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.50) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L04': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.55) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L05': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.50) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L06': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.44) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L07': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.50) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L08': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.47) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'L09': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=verbatimLocality  via code:numeric(1.00) > kind:record_context(0.32) > record_context:sampling_place(0.55)
+  Brasil2024 Brasil2024_full.md#4 'M01': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.39) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M02': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.48) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M03': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.67) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M04': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.56) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M05': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.54) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M06': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.44) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M07': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.46) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M08': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.52) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#4 'M09': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.44) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#8 'Body size x urbanization Female spring F': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.90) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#8 'Body size x urbanization Female summer F': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.91) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#10 'Female spring F': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.81) > organism_property:by table kind organism_traits
+  Brasil2024 Brasil2024_full.md#10 'Female summer F': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.89) > organism_property:by table kind organism_traits
+  Torok2022 Torok2022_full.md#4 'Taxa': GT=none [pairs 0%]
+      gemma=verbatimIdentification, tev1=verbatimIdentification
+      tree5_tev1=verbatimIdentification  via table:organism_column(0.90)
+  Torok2022 Torok2022_full.md#6 'Taxa': GT=none [pairs 8%]
+      gemma=verbatimIdentification, tev1=verbatimIdentification
+      tree5_tev1=verbatimIdentification  via table:organism_column(0.71)
+  Torok2022 Torok2022_full.md#8 'Grasshoppers, crickets (Orthoptera)': GT=measurementType [100% (species,value) pairs in GT]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=verbatimIdentification  via cell_shape:single_latin_words(0.46) > is_taxon:yes(0.74) > organism_name:row_organism(0.60)
+  Uemori2021 Uemori2021_full.md#10 'Flight duration': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#10 'Distribution index': GT=none [pairs 4%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.45) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 'Genus': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification
+      tree5_tev1=measurementType  via cell_shape:single_latin_words(1.00) > is_taxon:yes(0.96) > organism_name:not_a_name(0.45) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '177.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.89) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '723.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.56) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '787.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.52) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1068.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.59) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1095.0': GT=none [pairs 6%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.72) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1187.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.70) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1209.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.54) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1249.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.51) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1410.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.66) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1483.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.62) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1604.0': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.49) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '177.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.60) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '723.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.38) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1068.0 (1)': GT=none [pairs 5%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.38) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1095.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.56) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1187.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementStatistic
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.43) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1209.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementStatistic
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.39) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1249.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.46) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1410.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.43) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1483.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.60) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1604.0 (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.66) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '177.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.47) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '723.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.35) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '787.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.42) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1068.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.38) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1095.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.64) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1187.0 (2)': GT=none [pairs 8%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.60) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1209.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.51) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1249.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.46) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1410.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.63) > organism_property:by table kind organism_traits
+  Uemori2021 Uemori2021_full.md#11 '1483.0 (2)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.82) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#0 'Workers Mean ± SD': GT=measurementValue [100% (species,value) pairs in GT]
+      gemma=measurementValue, tev1=caste
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#0 'Workers CV': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementStatistic
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:counts_or_statistics(0.87) > counts_or_statistics:statistic_header(0.82)
+  Kovacs2010 Kovacs2010_full.md#0 'Gynes Mean ± SD': GT=measurementValue [100% (species,value) pairs in GT]
+      gemma=measurementValue, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.92) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#0 'Gynes CV': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementStatistic
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:counts_or_statistics(0.88) > counts_or_statistics:statistic_header(0.86)
+  Kovacs2010 Kovacs2010_full.md#1 'Trait': GT=none [pairs 0%]
+      gemma=measurementType, tev1=caste
+      tree5_tev1=caste  via cell_shape:everyday_words(0.61) > kind:record_context(0.83) > record_context:caste(0.97)
+  Kovacs2010 Kovacs2010_full.md#1 'Series': GT=none [pairs 0%]
+      gemma=caste, tev1=caste
+      tree5_tev1=caste  via cell_shape:single_latin_words(0.65) > is_taxon:no(0.75) > kind:record_context(0.93) > record_context:caste(0.98)
+  Kovacs2010 Kovacs2010_full.md#1 'Log Body Length (range)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:numbers_with_text(0.59) > kind:organism_property(0.97) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#2 'Intercaste correlation ± SE': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.99) > organism_property:cells_name_property(0.66)
+  Kovacs2010 Kovacs2010_full.md#2 'Castedimorphism ± SE': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementType
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:organism_property(0.90) > organism_property:cells_are_values(0.79)
+  Kovacs2010 Kovacs2010_full.md#4 'Workers k ± SE': GT=none [pairs 0%]
+      gemma=measurementType, tev1=caste
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.91) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#4 'Gynes k ± SE': GT=none [pairs 0%]
+      gemma=measurementType, tev1=caste
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.94) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#5 'Intercaste Mean Phenotypic Correlations': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.78) > organism_property:by table kind organism_traits
+  Kovacs2010 Kovacs2010_full.md#5 'Caste Dimorphism': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=caste
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.80) > organism_property:by table kind organism_traits
+  Wang2021 Wang2021_full.md#1 'Body Size': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:codes(0.58) > kind:organism_property(0.98) > organism_property:by table kind organism_traits
+  Odanaka2019 Odanaka2019_full.md#7 'Un-grazed landscapes': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:latin_binomials(0.83) > organism_name:not_a_name(0.61) > kind:organism_property(0.74) > organism_property:by table kind organism_traits
+  Cappellari2022 Cappellari2022_full.md#3 'Family': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification
+      tree5_tev1=none  via cell_shape:single_latin_words(0.91) > is_taxon:yes(0.96) > organism_name:taxon_code(0.40)
+  Cappellari2022 Cappellari2022_full.md#3 'Foraging': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:everyday_words(0.81) > kind:organism_property(0.94) > organism_property:by table kind organism_traits
+  Tonelli2021 Tonelli2021_full.md#2 'Tribe': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification
+      tree5_tev1=measurementType  via cell_shape:single_latin_words(0.97) > is_taxon:yes(0.82) > organism_name:not_a_name(0.41) > kind:organism_property(0.86) > organism_property:by table kind counts
+  Tonelli2021 Tonelli2021_full.md#4 'Cow': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.93) > organism_property:by table kind organism_traits
+  Tonelli2021 Tonelli2021_full.md#4 'Horse': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.81) > organism_property:by table kind organism_traits
+  GibbParr2013 GibbParr2013_full.md#2 'Complex': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.91) > organism_property:by table kind organism_traits
+  GibbParr2013 GibbParr2013_full.md#2 'Simple': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.83) > organism_property:by table kind organism_traits
+  OsorioCanadas2018 OsorioCanadas2018_full.md#10 'Order / Infraclass': GT=verbatimIdentification [taxonomic rank column (identity)]
+      gemma=verbatimIdentification, tev1=verbatimIdentification
+      tree5_tev1=none  via cell_shape:single_latin_words(0.96) > is_taxon:yes(0.83) > organism_name:taxon_code(0.42)
+  Dejean2019 Dejean2019_full.md#1 'Occurrences': GT=sampleSizeValue [100% (species,sampleSizeValue) pairs in GT]
+      gemma=measurementType, tev1=measurementStatistic
+      tree5_tev1=none  via code:numeric(1.00) > kind:counts_or_statistics(0.94) > counts_or_statistics:abundance(0.91)
+  Dejean2019 Dejean2019_full.md#1 'Frequency on trees': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:numbers_with_text(0.73) > kind:organism_property(0.90) > organism_property:by table kind organism_traits
+  Dejean2019 Dejean2019_full.md#2 '2': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:latin_binomials(0.84) > organism_name:not_a_name(0.40) > kind:organism_property(0.53) > organism_property:by table kind counts
+  Dejean2019 Dejean2019_full.md#2 '3': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:codes(0.36) > kind:organism_property(0.48) > organism_property:by table kind counts
+  Dejean2019 Dejean2019_full.md#2 '4': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.69) > organism_property:by table kind counts
+  Dejean2019 Dejean2019_full.md#2 '5': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementRemarks  via code:numeric(1.00) > kind:other(0.35) > other:remarks(0.54)
+  Attiwilli2022 Attiwilli2022_full.md#1 'Estimate mean ± SE': GT=none [pairs 0%]
+      gemma=measurementValue, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.89) > organism_property:by table kind statistics
+  Attiwilli2022 Attiwilli2022_full.md#1 't-statistic': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementStatistic
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:counts_or_statistics(0.84) > counts_or_statistics:statistic_header(0.68)
+  Oliveira2022 Oliveira2022_full.md#2 'Trait': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via cell_shape:single_latin_words(0.74) > is_taxon:no(0.99) > kind:organism_property(0.99) > organism_property:cells_name_property(0.81)
+  Oliveira2022 Oliveira2022_full.md#2 'Response variables': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=measurementStatistic
+      tree5_tev1=measurementValue  via cell_shape:everyday_words(0.88) > kind:organism_property(0.85) > organism_property:cells_are_values(0.51)
+  Oliveira2022 Oliveira2022_full.md#2 'Explanatory variables': GT=none [pairs 0%]
+      gemma=none, tev1=verbatimIdentification
+      tree5_tev1=measurementValue  via cell_shape:single_latin_words(0.61) > is_taxon:no(0.94) > kind:organism_property(0.42) > organism_property:cells_are_values(0.59)
+  Oliveira2022 Oliveira2022_full.md#2 'Weight': GT=none [pairs 0%]
+      gemma=measurementStatistic, tev1=none
+      tree5_tev1=measurementValue  via code:numeric(1.00) > kind:counts_or_statistics(0.76) > counts_or_statistics:statistic_header(0.43)
+  Oliveira2022 Oliveira2022_full.md#14 'Plot': GT=none [pairs 0%]
+      gemma=verbatimLocality, tev1=verbatimLocality
+      tree5_tev1=verbatimLocality  via cell_shape:everyday_words(0.53) > kind:record_context(0.88) > record_context:sampling_place(1.00)
+  Oliveira2022 Oliveira2022_full.md#14 'GMDI': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.89) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'DH': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.87) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (1)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.88) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (3)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.72) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (5)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.61) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (7)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.66) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (9)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.64) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (11)': GT=none [pairs 2%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.49) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (13)': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.98) > kind:organism_property(0.57) > organism_property:by table kind specimens
+  Oliveira2022 Oliveira2022_full.md#14 'Traits (15)': GT=none [pairs 3%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(0.96) > kind:organism_property(0.47) > organism_property:by table kind specimens
+  Korosi2022 Korosi2022_full.md#5 'Abbreviation': GT=none [pairs 0%]
+      gemma=measurementType, tev1=verbatimIdentification
+      tree5_tev1=measurementType  via cell_shape:codes(1.00) > kind:organism_property(0.94) > organism_property:by table kind organism_traits
+  Habustova2017 Habustova2017_full.md#14 'Incidence': GT=none [pairs 0%]
+      gemma=measurementType, tev1=none
+      tree5_tev1=measurementType  via cell_shape:codes(0.52) > kind:organism_property(0.61) > organism_property:by table kind organism_traits
+  Derhe2016 Derhe2016_full.md#1 'Diet breadth': GT=none [pairs 0%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.94) > organism_property:by table kind organism_traits
+  Wiescher2012 Wiescher2012_full.md#1 'HI': GT=none [pairs 3%]
+      gemma=measurementType, tev1=measurementType
+      tree5_tev1=measurementType  via code:numeric(1.00) > kind:organism_property(0.92) > organism_property:by table kind organism_traits
+  Figueroa2021 Figueroa2021_full.md#1 'Plant Family': GT=none [pairs 0%]
+      gemma=measurementType, tev1=verbatimIdentification
+      tree5_tev1=measurementType  via cell_shape:single_latin_words(0.93) > is_taxon:yes(0.84) > organism_name:associated_organism(0.69)

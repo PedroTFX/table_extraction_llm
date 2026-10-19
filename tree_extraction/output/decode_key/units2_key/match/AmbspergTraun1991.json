@@ -1,0 +1,334 @@
+{
+ "_columns": [
+  [
+   0,
+   4,
+   "Feeding group†",
+   [
+    "W",
+    "S",
+    "W/S",
+    "P"
+   ]
+  ],
+  [
+   0,
+   5,
+   "Nesting group‡",
+   [
+    "W",
+    "M",
+    "H",
+    "M(O)",
+    "H, M(O)",
+    "A"
+   ]
+  ]
+ ],
+ "0:4": {
+  "cells": {
+   "W": {
+    "term": null,
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "W | QK": {
+      "code": 0.897,
+      "word": 0.103
+     },
+     "W": {
+      "e0": 0.094,
+      "keep": 0.906
+     }
+    }
+   },
+   "S": {
+    "term": null,
+    "parts": [
+     "S"
+    ],
+    "options": {
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "S | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "S": {
+      "e0": 0.241,
+      "keep": 0.759
+     }
+    }
+   },
+   "W/S": {
+    "term": null,
+    "parts": [
+     "W",
+     "S"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     },
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "W | QK": {
+      "code": 0.897,
+      "word": 0.103
+     },
+     "W": {
+      "e0": 0.094,
+      "keep": 0.906
+     },
+     "S | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "S": {
+      "e0": 0.241,
+      "keep": 0.759
+     }
+    }
+   },
+   "P": {
+    "term": null,
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polyphagous"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "P | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "P": {
+      "e0": 0.1,
+      "keep": 0.9
+     }
+    }
+   }
+  },
+  "header": "Feeding group†",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "0:5": {
+  "cells": {
+   "W": {
+    "term": null,
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "wood"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "W | QK": {
+      "code": 0.92,
+      "word": 0.08
+     },
+     "W": {
+      "e0": 0.015,
+      "keep": 0.985
+     }
+    }
+   },
+   "M": {
+    "term": null,
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "mound"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M | QK": {
+      "code": 0.972,
+      "word": 0.028
+     },
+     "M": {
+      "e0": 0.287,
+      "keep": 0.713
+     }
+    }
+   },
+   "H": {
+    "term": "hypogeal",
+    "parts": [
+     "H"
+    ],
+    "options": {
+     "H": {
+      "evidence": "explicit",
+      "labels": [
+       "hypogeal"
+      ]
+     }
+    },
+    "evidence": {
+     "H": "explicit"
+    },
+    "probs": {
+     "H | QK": {
+      "code": 0.961,
+      "word": 0.039
+     },
+     "H": {
+      "e0": 0.502,
+      "keep": 0.498
+     },
+     "H | QB": {}
+    }
+   },
+   "M(O)": {
+    "term": null,
+    "parts": [
+     "M(O)"
+    ],
+    "options": {
+     "M(O)": {
+      "evidence": "explicit",
+      "labels": [
+       "mounds"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "M(O) | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "M(O)": {
+      "e0": 0.325,
+      "keep": 0.675
+     }
+    }
+   },
+   "H, M(O)": {
+    "term": "hypogeal; M(O)",
+    "parts": [
+     "H",
+     "M(O)"
+    ],
+    "options": {
+     "H": {
+      "evidence": "explicit",
+      "labels": [
+       "hypogeal"
+      ]
+     },
+     "M(O)": {
+      "evidence": "explicit",
+      "labels": [
+       "mounds"
+      ]
+     }
+    },
+    "evidence": {
+     "H": "explicit"
+    },
+    "probs": {
+     "H | QK": {
+      "code": 0.961,
+      "word": 0.039
+     },
+     "H": {
+      "e0": 0.502,
+      "keep": 0.498
+     },
+     "H | QB": {},
+     "M(O) | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "M(O)": {
+      "e0": 0.325,
+      "keep": 0.675
+     }
+    }
+   },
+   "A": {
+    "term": null,
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "explicit",
+      "labels": [
+       "arboreal"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "A | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "A": {
+      "e0": 0.422,
+      "keep": 0.578
+     }
+    }
+   }
+  },
+  "header": "Nesting group‡",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ }
+}

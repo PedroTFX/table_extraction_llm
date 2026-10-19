@@ -1,0 +1,70 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\AmbspergTraun1991\AmbspergTraun1991.xlsx  (61 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\AmbspergTraun1991\AmbspergTraun1991.csv  (48 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Feeding group†' -> 'Feeding group'
+  'Microhabitat found§' -> 'Microhabitat found'
+  'Nesting group‡' -> 'Nesting group'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 61
+  spurious, in scope  : 48   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 61 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       61
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'wood'                       ->  'w'                          x10
+     'mound'                      ->  'm'                          x10
+     'wood/soil interface'        ->  'w/s'                        x4
+     'found in mounds of other termites' ->  'm(o)'                       x4
+     'lying dead wood'            ->  'ldw'                        x3
+     'hypogeal'                   ->  'h'                          x3
+  -> 6 substitutions explain 34 of 61 misses (56%) — scattered; no single cause
+
+  full miss detail saved -> AmbspergTraun1991_misses.csv, AmbspergTraun1991_misses_summary.json (61 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  feeding group                                    16    16   
+  microhabitat found                               28    16   Δ-12 (split?)
+  nesting group                                    17    16   Δ-1 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0    48    61   id+type+value
+  tags        0.000  0.000  0.000      0    48    61   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

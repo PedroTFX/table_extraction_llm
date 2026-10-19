@@ -1,0 +1,107 @@
+  [semantic] left unmatched: 'Indicative of diet; longer mandibles could allow predation of larger prey.' vs 'Mandible length' (llm said different traits)
+  [semantic] left unmatched: 'Indicative of diet; longer mandibles could allow predation of larger prey.' vs 'Hindleg length' (llm said different traits)
+  [semantic] left unmatched: 'Indicative of diet; longer mandibles could allow predation of larger prey.' vs 'Scape length' (llm said different traits)
+  [semantic] left unmatched: 'Indicative of the exploratory capacities of the habitat.' vs 'Scape length' (llm said different traits)
+  [semantic] left unmatched: 'Indicative of the exploratory capacities of the habitat.' vs 'Head width' (llm said different traits)
+  [semantic] left unmatched: 'Indicative of the exploratory capacities of the habitat.' vs 'Mandible length' (llm said different traits)
+  [semantic] left unmatched: 'Leg length is the predictor for locomotory skills and habitat complexity.' vs 'Hindleg length' (llm said different traits)
+  [semantic] left unmatched: 'Leg length is the predictor for locomotory skills and habitat complexity.' vs 'Scape length' (llm said different traits)
+  [semantic] left unmatched: 'Leg length is the predictor for locomotory skills and habitat complexity.' vs 'Mandible length' (llm said different traits)
+  [semantic] left unmatched: 'Sensory abilities-longer scapes facilitate following of pheromone trails, finding food and perceiving vibrations, etc.' vs 'Scape length' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Luo2023\Luo2023.xlsx  (979 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5\Luo2023\Luo2023.csv  (19 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Size of gaps through which worker can pass, which is also a trait used as estimation of the worker size.' -> 'Scape length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 979
+  spurious, in scope  : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 18   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             18
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 979 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            816
+  species+trait present, value differs      163
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '1.0205'                     ->  'maximum width of the head across the eyes.' x1
+     '1.01108'                    ->  'maximum width of the head across the eyes.' x1
+     '0.98516'                    ->  'maximum width of the head across the eyes.' x1
+     '0.95801'                    ->  'maximum width of the head across the eyes.' x1
+     '0.93765'                    ->  'maximum width of the head across the eyes.' x1
+     '0.96228'                    ->  'maximum width of the head across the eyes.' x1
+  -> 6 substitutions explain 6 of 979 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Head width'                       x163
+     'Mandible length'                  x163
+     'Eye width'                        x163
+     'Weber’s length'                   x163
+     'Hindleg length'                   x163
+     ''                                 x1
+  -> 6 missing traits explain 816 of 979 misses (83%) — systematic, not scattered
+
+  full miss detail saved -> Luo2023_misses.csv, Luo2023_misses_summary.json (979 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                    1     0   GT-ONLY
+  sensory abilities-longer scapes facilitate following of pheromone trails, finding food and perceiving vibrations, etc.    0     1   PRED-ONLY
+  indicative of diet; longer mandibles could allow predation of larger prey.    0     1   PRED-ONLY
+  indicative of worker body size.                   0     1   PRED-ONLY
+  indicative of the exploratory capacities of the habitat.    0     1   PRED-ONLY
+  leg length is the predictor for locomotory skills and habitat complexity.    0     1   PRED-ONLY
+  eye width                                       163     0   GT-ONLY
+  head width                                      163     0   GT-ONLY
+  hindleg length                                  163     0   GT-ONLY
+  mandible length                                 163     0   GT-ONLY
+  scape length                                    163     1   Δ-162 (split?)
+  weber’s length                                  163     0   GT-ONLY
+  unique volume (%)                                 0     7   PRED-ONLY
+  variables                                         0     6   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'hindleg length'                   vs pred 'leg length is the predictor for locomotory skills and habitat complexity.' sim=0.59
+    gt 'mandible length'                  vs pred 'indicative of diet; longer mandibles could allow predation of larger prey.' sim=0.56
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     1   979   id+type+value
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     1   979   basis+id+type+value+stat+sex+stage
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

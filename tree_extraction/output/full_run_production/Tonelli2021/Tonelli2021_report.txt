@@ -1,0 +1,83 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Tonelli2021\Tonelli2021.xlsx  (1106 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Tonelli2021\Tonelli2021.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1106
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1106 MISSED ROWS MISSED
+  species not in prediction                1106
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (59 distinct), closest predicted name:
+     gt 'Acanthobodilus immundus'            (nothing similar in the prediction)   x19
+     gt 'Acrossus luridus'                   (nothing similar in the prediction)   x19
+     gt 'Acrossus rufipes'                   (nothing similar in the prediction)   x19
+     gt 'Agrilinus constans'                 (nothing similar in the prediction)   x19
+     gt 'Agrilinus convexus'                 (nothing similar in the prediction)   x19
+     gt 'Amidorus thermicola'                (nothing similar in the prediction)   x19
+  -> 6 species mismatches explain 114 of 1106 misses (10%) — scattered; no single cause
+
+  full miss detail saved -> Tonelli2021_misses.csv, Tonelli2021_misses_summary.json (1106 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abdomen length                                   58     0   GT-ONLY
+  daily activity                                   58     0   GT-ONLY
+  altitudinal range                                 1     0   GT-ONLY
+  area conjunctive/total mandible area             58     0   GT-ONLY
+  head area/total area                             58     0   GT-ONLY
+  climate of the area                               1     0   GT-ONLY
+  metamesosternal area                             58     0   GT-ONLY
+  biomass                                          58     0   GT-ONLY
+  nest depth                                       58     0   GT-ONLY
+  horizontal nest distance                         58     0   GT-ONLY
+  trophic diversity                                58     0   GT-ONLY
+  feeding habit                                     1     0   GT-ONLY
+  habitat                                           1     0   GT-ONLY
+  hind tibiae length                               58     0   GT-ONLY
+  wing load                                        58     0   GT-ONLY
+  number of teeth in the mandibles profile        174     0   GT-ONLY
+  nesting patterns                                 58     0   GT-ONLY
+  nesting type                                     58     0   GT-ONLY
+  phenology                                        58     0   GT-ONLY
+  sphericity                                       58     0   GT-ONLY
+  zigum                                            58     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0  1106   id+type+value
+  tags        0.000  0.000  0.000      0     0  1106   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

@@ -1,0 +1,67 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Habustova2017\Habustova2017.xlsx  (430 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Habustova2017\Habustova2017.csv  (430 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 170
+  missed (FN)         : 260
+  spurious, in scope  : 260   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.395 / 0.395 / 0.395   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.395 / 0.395 / 0.395   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.395   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    170  0.000  <-- low
+  measurementMethod             0      0    n/a   +86 where GT blank
+  measurementUnit               0      0    n/a
+  measurementStatistic        170    170  1.000
+  measurementRemarks            0      0    n/a
+  sex                         170    170  1.000
+  lifeStage                   170    170  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    170  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 260 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      260
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '6–10.9'                     ->  '6–10.9 mm'                  x44
+     'open biotopes'              ->  'preferring open areas'      x44
+     'eurytopic'                  ->  'adaptable to various environmental conditions' x40
+     'hygrophilous'               ->  'preferring moist places'    x34
+     'xerophilous'                ->  'preferring dry environmental conditions' x20
+     '11–21.9'                    ->  '11–21.9 mm'                 x19
+  -> 6 substitutions explain 201 of 260 misses (77%) — systematic, not scattered
+
+  full miss detail saved -> Habustova2017_misses.csv, Habustova2017_misses_summary.json (260 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  habitat affinity                                 86    86   
+  humidity affinity                                86    86   
+  body size                                        86    86   
+  breeding period                                  86    86   
+  food specialization                              86    86   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.395  0.395  0.395    170   260   260   id+type+value
+  tags        0.000  0.000  0.000      0   430   430   basis+id+type+value+stat+sex+stage
+             (F1 -0.395 vs previous)

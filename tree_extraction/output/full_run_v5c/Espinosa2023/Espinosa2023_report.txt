@@ -1,0 +1,59 @@
+  [semantic] matched by values: '(no name, column 5)' -> 'Feeding group'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Espinosa2023\Espinosa2023.xlsx  (135 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v4\Espinosa2023\Espinosa2023.csv  (135 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  '(no name, column 5)' -> 'Feeding group'
+  'Length head size (mm)' -> 'Length head size'
+  'Size of the mesonotum (mm)' -> 'Size of the mesonotum '
+  'Width head size (mm)' -> 'Width head size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 135
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    135  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     81  0.000  <-- low
+  measurementStatistic          0    135  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    135  0.000  <-- low
+  lifeStage                     0    135  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    135  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  feeding group                                    27    27   
+  presence of opercular gill                       27    27   
+  length head size                                 27    27   
+  width head size                                  27    27   
+  size of the mesonotum                            27    27   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000    135     0     0   id+type+value
+  tags        0.000  0.000  0.000      0   135   135   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)
+             note: only 0/135 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

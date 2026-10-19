@@ -1,0 +1,201 @@
+decoder v1 against the decoding key (cells = species rows; pairs = distinct cells)
+
+dev       coded  cells  right 1242/1482 (84%)   right 1242, no legend printed 170, left as printed 35, GT error 19, right, unit inside 16
+dev       coded  pairs  right 17/38 (45%)   right 17, no legend printed 15, right, unit inside 4, GT error 1, left as printed 1
+dev       kept   cells  right 799/799 (100%)   right 799
+dev       kept   pairs  right 56/56 (100%)   right 56
+
+held-out  coded  cells  right 3270/7091 (46%)   right 3270, no legend printed 1407, other term 1244, left as printed 1170
+held-out  coded  pairs  right 62/192 (32%)   no legend printed 80, right 62, left as printed 26, other term 24
+held-out  kept   cells  right 15130/15169 (100%)   right 15130, changed (should keep) 39
+held-out  kept   pairs  right 1448/1450 (100%)   right 1448, changed (should keep) 2
+
+per paper with coded cells:
+  [held-out] AmbspergTraun1991    coded 26/32   kept 0/0
+  [held-out] Arnan2012            coded 78/150   kept 180/180
+  [held-out] Beyer2021            coded 46/61   kept 45/45
+  [held-out] Cao2024              coded 79/128   kept 79/79
+  [dev] Cappellari2022       coded 325/325   kept 0/0
+  [held-out] Chichorro2022        coded 0/77   kept 16/16
+  [dev] Derhe2016            coded 5/39   kept 101/101
+  [dev] Espinosa2023         coded 27/27   kept 27/27
+  [held-out] Forrest2015          coded 0/120   kept 402/402
+  [held-out] Gathof2022           coded 0/31   kept 380/380
+  [dev] Graf2021             coded 781/832   kept 0/0
+  [held-out] Guariento2020        coded 0/1341   kept 0/0
+  [dev] Habustova2017        coded 0/16   kept 44/44
+  [held-out] Heiva2013            coded 26/26   kept 0/0
+  [held-out] Keller1998           coded 0/40   kept 5/5
+  [dev] Korosi2022           coded 104/104   kept 520/520
+  [held-out] Kratschmer2019       coded 0/38   kept 62/62
+  [held-out] Lizee2016            coded 24/41   kept 41/41
+  [held-out] McCune2023           coded 48/48   kept 0/0
+  [held-out] Noriega2023          coded 0/287   kept 0/0
+  [held-out] Normandin2017        coded 0/34   kept 993/993
+  [held-out] Pereira2016          coded 42/42   kept 0/0
+  [held-out] Scalercio2020        coded 0/73   kept 219/219
+  [held-out] Schirmel2012         coded 0/9   kept 120/120
+  [held-out] Taillefer2018        coded 40/114   kept 0/0
+  [held-out] Teder2020            coded 2796/2845   kept 16/55
+  [dev] Uemori2021           coded 0/107   kept 107/107
+  [held-out] Uemori2022           coded 17/186   kept 124/124
+  [held-out] Vidal2023            coded 0/475   kept 60/60
+  [held-out] Viza2023             coded 0/168   kept 0/0
+  [held-out] Wallon2024           coded 48/125   kept 34/34
+  [dev] Wang2021             coded 0/32   kept 0/0
+  [held-out] Wölfling2020         coded 0/600   kept 0/0
+
+every miss:
+  [held-out] AmbspergTraun1991 t0 'Feeding group': 'W/S' -> want 'Wood/soil interface', have 'wood; soil'  [other term; legend: None]
+  [held-out] AmbspergTraun1991 t0 'Feeding group': 'P' -> want 'Polyphagous', have 'P'  [left as printed; legend: None]
+  [held-out] AmbspergTraun1991 t0 'Nesting group': 'H, M(O)' -> want 'Hypogeal', have 'hypogeal; found in mounds of other termites'  [no legend printed; legend: None]
+  [held-out] Arnan2012 t6 'Defense of resources': '2' -> want 'food and/or territory', have 'defence of food or territory (foraging area)'  [other term; legend: None]
+  [held-out] Arnan2012 t6 'Defense of resources': '1' -> want 'none', have 'none (only defence of the nest)'  [other term; legend: None]
+  [held-out] Arnan2012 t5 'Colony population': '3' -> want 'tens of thousands', have '3'  [left as printed; legend: None]
+  [held-out] Arnan2012 t5 'Colony population': '1' -> want 'hundreds', have 'hundred'  [other term; legend: None]
+  [held-out] Arnan2012 t5 'Brood cycle': '2' -> want 'larvae in the nests during the whole year', have 'larvae within the nests during the whole year (also in winter)'  [other term; legend: None]
+  [held-out] Beyer2021 t20 'Foraging preference': '0' -> want 'species not known to collect pollen from Fabaceae', have 'not known to do so'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M11' -> want 'No teeth on mentum', have 'M11'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M2' -> want 'Two median teeth', have 'M2'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M3' -> want 'One/trifid median tooth', have 'M3'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M4' -> want 'Cluster of outermost lateral teeth', have 'M4'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M7' -> want 'One broad median tooth', have 'M7'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M8' -> want 'One median tooth', have 'M8'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M12' -> want '3-4 median teeth higher than lateral ones', have 'M12'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M14' -> want '2 median teeth', have 'M14'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M15' -> want 'One broad median tooth or two median teeth', have 'M15'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M13' -> want '3-4 median teeth higher than lateral ones', have 'M13'  [no legend printed; legend: None]
+  [held-out] Cao2024 t7 'Teeth type': 'M1' -> want 'One broad or several smaller median teeth', have 'M1'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Diet Breadth': '2.0' -> want 'oligophagous', have '2.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Diet Breadth': '1.0' -> want 'monophagous', have '1.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Diet Breadth': '3.0' -> want 'polyphagous', have '3.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Microhabitat': '2.0' -> want 'terricolous', have '2.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Microhabitat': '5.0' -> want 'arboricolous', have '5.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Microhabitat': '4.0' -> want 'arbusticolous', have '4.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Microhabitat': '3.0' -> want 'graminicolous/forbicolous', have '3.0'  [no legend printed; legend: None]
+  [held-out] Chichorro2022 t9 'Microhabitat': '1.0' -> want 'troglobiont', have '1.0'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'YR; MR; OR; RF' -> want 'young restold restorationation mid-age restold restorationation old restoration rainforest', have 'young restoration; mid-age restoration; old restoration; rain forest'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'RF' -> want 'rainforest', have 'rain forest'  [GT error; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'OR; RF' -> want 'old restoration rainforest', have 'old restoration; rain forest'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'MR; OR; RF' -> want 'mid-age restold restorationation old restoration rainforest', have 'mid-age restoration; old restoration; rain forest'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'MR; OR' -> want 'mid-age restold restorationation old restoration', have 'mid-age restoration; old restoration'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'P; YR' -> want 'pasture young restold restorationation', have 'pasture; young restoration'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'MR; RF' -> want 'mid-age restold restorationation rainforest', have 'mid-age restoration; rain forest'  [no legend printed; legend: None]
+  [dev] Derhe2016 t1 'Habitat preference': 'MR' -> want 'mid-age restold restorationation', have 'mid-age restoration'  [no legend printed; legend: None]
+  [held-out] Forrest2015 t4 'Lecty': 'poly' -> want 'Polylectic', have 'poly'  [no legend printed; legend: None]
+  [held-out] Forrest2015 t4 'Lecty': 'oligo' -> want 'Oligolectic', have 'oligo'  [no legend printed; legend: None]
+  [held-out] Gathof2022 t6 'Migratory status': '0' -> want 'no', have '0'  [left as printed; legend: None]
+  [held-out] Gathof2022 t6 'Migratory status': '1' -> want 'yes', have '1'  [left as printed; legend: None]
+  [dev] Graf2021 t8 'Social Behaviour': 'A_E' -> want 'highly eussocial', have 'highly eusocial'  [no legend printed; legend: None]
+  [dev] Graf2021 t8 'Feeding habit': 'NA' -> want 'not specified', have 'NA'  [left as printed; legend: None]
+  [held-out] Guariento2020 t4 'Hibernation in larval state recorded': '0' -> want 'No', have 'no hibernation in larval stage recorded'  [other term; legend: None]
+  [held-out] Guariento2020 t4 'Hibernation in larval state recorded': '1' -> want 'Yes', have 'hibernation in larval stage recorded'  [other term; legend: None]
+  [held-out] Guariento2020 t4 'Hibernation in pupal stage rceorded': '1' -> want 'Yes', have 'hibernation in pupal stage recorded'  [other term; legend: None]
+  [held-out] Guariento2020 t4 'Hibernation in pupal stage rceorded': '0' -> want 'No', have 'no hibernation in pupal stage recorded'  [other term; legend: None]
+  [held-out] Guariento2020 t4 'Adult feeding': '0' -> want 'adults feed on flower nectar', have '0'  [left as printed; legend: None]
+  [held-out] Guariento2020 t4 'Adult feeding': '1' -> want 'adult moths known to regularly visit rotting fruits an related non-floral nutrient sources.', have '1'  [left as printed; legend: None]
+  [dev] Habustova2017 t16 'Body size': 'C' -> want '6–10.9', have '6–10.9 mm'  [right, unit inside; legend: None]
+  [dev] Habustova2017 t16 'Body size': 'D' -> want '˂5.9', have '˂5.9 mm'  [right, unit inside; legend: None]
+  [dev] Habustova2017 t16 'Body size': 'B' -> want '11–21.9', have '11–21.9 mm'  [right, unit inside; legend: None]
+  [dev] Habustova2017 t16 'Body size': 'A' -> want '˃22', have '>22 mm'  [right, unit inside; legend: None]
+  [held-out] Keller1998 t1 'queen number': 'M' -> want 'primarily monogynous', have 'species that are primarily monogynous'  [other term; legend: None]
+  [held-out] Keller1998 t1 'queen number': 'P' -> want 'primarily polygynous', have 'species that are primarily polygynous'  [other term; legend: None]
+  [held-out] Keller1998 t1 'queen number': 'M, P' -> want 'commonly have both monogyne and polygyne colonies', have 'species that are primarily monogynous; species that are primarily polygynous'  [other term; legend: None]
+  [held-out] Keller1998 t1 'colony founding': 'I' -> want 'primarily use independent colony founding', have 'species that found new colonies primarily through independent colony founding'  [no legend printed; legend: None]
+  [held-out] Keller1998 t1 'colony founding': 'D' -> want 'generally use a dependent colony founding', have 'species that generally use a dependent colony founding'  [other term; legend: None]
+  [held-out] Keller1998 t1 'colony founding': 'I, D' -> want 'found new colonies independently and dependently', have 'species that found new colonies primarily through independent colony founding; species that generally use a dependent colony founding'  [other term; legend: None]
+  [held-out] Keller1998 t1 'colony founding': 'I, D^b' -> want 'found new colonies independently and dependently', have 'I, D^b'  [no legend printed; legend: None]
+  [held-out] Kratschmer2019 t13 'Nesting type': 'G' -> want 'Ground-nesting', have 'G'  [left as printed; legend: None]
+  [held-out] Kratschmer2019 t13 'Nesting type': 'A' -> want 'Above-ground nesting', have 'A'  [left as printed; legend: None]
+  [held-out] Kratschmer2019 t13 'Nesting type': 'P' -> want 'Parasitic', have 'P'  [left as printed; legend: None]
+  [held-out] Lizee2016 t7 'Functional group': 'TS' -> want 'typical specialists', have 'TS'  [left as printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'endo.sma' -> want 'small endocoprids', have 'endo.sma'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'endo.med' -> want 'medium endocoprids', have 'endo.med'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'para.sma' -> want 'small paracoprids', have 'para.sma'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'para.big' -> want 'big paracoprids', have 'para.big'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'tele.big' -> want 'big telecoprids', have 'tele.big'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'tele.sma' -> want 'small telecoprids', have 'tele.sma'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'tele.med' -> want 'medium telecoprids', have 'tele.med'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'para.med' -> want 'medium paracoprids', have 'para.med'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'klep.sma' -> want 'small kleptocoprids', have 'klep.sma'  [no legend printed; legend: None]
+  [held-out] Noriega2023 t7 'Relocation Size': 'endo.big' -> want 'big endocoprids', have 'endo.big'  [no legend printed; legend: None]
+  [held-out] Normandin2017 t8 'Lecty': 'P' -> want 'Polylectic', have 'P'  [left as printed; legend: None]
+  [held-out] Normandin2017 t8 'Lecty': 'O' -> want 'Oligolectic', have 'O'  [left as printed; legend: None]
+  [held-out] Scalercio2020 t1 'Month of adult first emergence': '6' -> want 'June', have '6'  [no legend printed; legend: None]
+  [held-out] Scalercio2020 t1 'Month of adult first emergence': '3' -> want 'March', have '3'  [no legend printed; legend: None]
+  [held-out] Scalercio2020 t1 'Month of adult first emergence': '4' -> want 'April', have '4'  [no legend printed; legend: None]
+  [held-out] Scalercio2020 t1 'Month of adult first emergence': '5' -> want 'May', have '5'  [no legend printed; legend: None]
+  [held-out] Scalercio2020 t1 'Month of adult first emergence': '2' -> want 'February', have '2'  [no legend printed; legend: None]
+  [held-out] Scalercio2020 t1 'Month of adult first emergence': '7' -> want 'July', have '7'  [no legend printed; legend: None]
+  [held-out] Schirmel2012 t1 'Feeding': 'collembola' -> want 'collembola specialist', have 'collembola'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t17 'Larval feeding habit': 'PA' -> want 'Parasite', have 'parasite/parasitoid'  [other term; legend: None]
+  [held-out] Taillefer2018 t15 'Feeding': 'S' -> want 'Specialist', have 'feed on one genus/type of plant, animal or substrate'  [other term; legend: None]
+  [held-out] Taillefer2018 t13 'Voltinism': 'U' -> want 'Univoltine', have 'U'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t13 'Voltinism': 'M' -> want 'Bivoltine', have 'moist'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t8 'Overwintering stage': 'A' -> want 'Adults', have 'A'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t8 'Overwintering stage': 'L' -> want 'Larvae', have 'lentic'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t8 'Overwintering stage': 'P' -> want 'Pupae', have 'P'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t15 'Specialization': 'F' -> want 'Facultative', have 'F'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t15 'Specialization': 'O' -> want 'Obligate', have 'O'  [no legend printed; legend: None]
+  [held-out] Taillefer2018 t15 'Specialization': 'A' -> want 'Amphibious', have 'A'  [no legend printed; legend: None]
+  [held-out] Teder2020 t6 'Overwintering stage': 'LP' -> want 'larva', have 'LP'  [left as printed; legend: None]
+  [held-out] Teder2020 t6 'Overwintering stage': 'EL' -> want 'egg larva', have 'EL'  [no legend printed; legend: None]
+  [held-out] Teder2020 t6 'Overwintering stage': 'AP' -> want 'adult within pupal case', have 'adult within pupal case (classified as adult overwinterers in the analysis)'  [other term; legend: None]
+  [held-out] Teder2020 t6 'Host type': 'W(c)' -> want 'W(c)', have 'species feeding exclusively on coniferous trees'  [changed (should keep); legend: None]
+  [held-out] Teder2020 t6 'Host type': 'L' -> want 'lichens', have 'larva'  [other term; legend: None]
+  [held-out] Teder2020 t6 'Host type': 'G(i)' -> want 'G(i)', have 'endophagous grass-feeders'  [changed (should keep); legend: None]
+  [dev] Uemori2021 t10 'Trophic level': '1.0' -> want 'herbivorous', have '1.0'  [no legend printed; legend: None]
+  [dev] Uemori2021 t10 'Trophic level': '2.0' -> want 'primary predator', have 'primary predators (predators and parasitoids of herbivores)'  [no legend printed; legend: None]
+  [dev] Uemori2021 t10 'Trophic level': '3.0' -> want 'hyper predator', have 'secondary predators (predators and parasitoids of predators)'  [no legend printed; legend: None]
+  [held-out] Uemori2022 t3 'Trophic level': '2' -> want 'primary predators', have '2'  [no legend printed; legend: None]
+  [held-out] Uemori2022 t3 'Trophic level': '3' -> want 'hyper predators', have 'hyper predators feeding Araneae, Diptera, and predator Hymenoptera'  [other term; legend: None]
+  [held-out] Uemori2022 t3 'Trophic level': '1' -> want 'herbivorous', have '1'  [left as printed; legend: None]
+  [held-out] Uemori2022 t3 'Nesting position': '1' -> want 'below ground', have '1'  [no legend printed; legend: None]
+  [held-out] Uemori2022 t3 'Soil dependence': '2' -> want 'detritivorous cycle', have 'Aculeata feeding flowers and above-ground animals (herbivorous cycle; as in grasshoppers, caterpillars, and nesting spiders)'  [other term; legend: None]
+  [held-out] Uemori2022 t3 'Soil dependence': '1' -> want 'herbivorous cycle', have '1'  [left as printed; legend: None]
+  [held-out] Vidal2023 t11 'Diurnality': 'NSD' -> want 'Non-strictly diurnal (NSD)', have 'NSD'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Diurnality': 'SD' -> want 'Strictly diurnal (SD)', have 'SD'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Foraging strategy': '1.0' -> want 'Individual', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Foraging strategy': '2.0' -> want 'Group', have 'fire occurred 7 to 12 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Foraging strategy': '3.0' -> want 'Collective', have 'fire occurred 15 to 41 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Sugary liquids in diet': '0.0' -> want 'No', have '0.0'  [left as printed; legend: None]
+  [held-out] Vidal2023 t11 'Sugary liquids in diet': '1.0' -> want 'Yes', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Seeds in diet': '0.0' -> want 'No', have '0.0'  [left as printed; legend: None]
+  [held-out] Vidal2023 t11 'Seeds in diet': '1.0' -> want 'Yes', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Insects in diet': '1.0' -> want 'Yes', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Insects in diet': '0.0' -> want 'No', have '0.0'  [left as printed; legend: None]
+  [held-out] Vidal2023 t12 'Nesting site': '0.0' -> want 'Ground', have '0.0'  [left as printed; legend: None]
+  [held-out] Vidal2023 t12 'Nesting site': '2.0' -> want 'Snail shells', have 'fire occurred 7 to 12 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Nesting site': '3.0' -> want 'Hives', have 'fire occurred 15 to 41 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Nesting site': '1.0' -> want 'Wood', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Degree of worker polymorphism': '1.0' -> want 'Low', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Degree of worker polymorphism': '3.0' -> want 'High', have 'fire occurred 15 to 41 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t11 'Degree of worker polymorphism': '2.0' -> want 'Medium', have 'fire occurred 7 to 12 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Body size': '2.0' -> want 'Medium', have 'fire occurred 7 to 12 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Body size': '1.0' -> want 'Small', have 'fire occurred 0 to 4 years ago'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Body size': '3.0' -> want 'Large', have '3.0'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Body size': '0.0' -> want 'Very small', have '0.0'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Tongue length': '2.0' -> want 'Long', have '2.0'  [no legend printed; legend: None]
+  [held-out] Vidal2023 t12 'Tongue length': '1.0' -> want 'Short', have '1.0'  [no legend printed; legend: None]
+  [held-out] Viza2023 t7 'Flight Behaviour': '1.0' -> want 'Perchers', have '1.0'  [no legend printed; legend: None]
+  [held-out] Viza2023 t7 'Flight Behaviour': '0.0' -> want 'Fliers', have '0.0'  [no legend printed; legend: None]
+  [held-out] Viza2023 t7 'Distribution': '0.0' -> want 'Fragmented', have '0.0'  [no legend printed; legend: None]
+  [held-out] Viza2023 t7 'Distribution': '1.0' -> want 'Continuum', have '1.0'  [no legend printed; legend: None]
+  [held-out] Wallon2024 t28 'Diel activity': '1' -> want 'Day', have '1'  [left as printed; legend: None]
+  [held-out] Wallon2024 t28 'Diel activity': '0' -> want 'Night', have 'absence'  [other term; legend: None]
+  [held-out] Wallon2024 t28 'Type of Food': '1' -> want 'Plants', have '1'  [left as printed; legend: None]
+  [held-out] Wallon2024 t28 'Type of Food': '0' -> want 'Animals', have 'absence'  [other term; legend: None]
+  [held-out] Wallon2024 t35 'Presence of iridescence on beetle cuticle': '1' -> want 'Yes', have '1'  [no legend printed; legend: None]
+  [held-out] Wallon2024 t35 'Presence of iridescence on beetle cuticle': '0' -> want 'No', have 'absence'  [other term; legend: None]
+  [dev] Wang2021 t1 'Feeding Trait': 'C' -> want 'Carnivorous', have 'C'  [no legend printed; legend: None]
+  [dev] Wang2021 t1 'Feeding Trait': 'O' -> want 'Omnivorous', have 'O'  [no legend printed; legend: None]
+  [dev] Wang2021 t1 'Wing Morphology': 'M' -> want 'Macropterous', have 'M'  [no legend printed; legend: None]
+  [dev] Wang2021 t1 'Wing Morphology': 'B' -> want 'Brachypterous', have 'B'  [no legend printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in larval food selection': '1' -> want 'Monophagous within one plant genus', have 'by classifying larval food affiliations, habitat preferences, and the northern distributional limit'  [other term; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in larval food selection': '3' -> want 'Polyphagous: >1 plant family', have '3'  [left as printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in larval food selection': '4' -> want 'Highly polyphagous: >5 plant families', have '4'  [left as printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in larval food selection': '2' -> want 'Oligophagous within one plant family', have '2'  [left as printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in habitat choice': '1' -> want '1–2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc.)', have 'by classifying larval food affiliations, habitat preferences, and the northern distributional limit'  [no legend printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in habitat choice': '3' -> want '5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc.)', have '3'  [left as printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in habitat choice': '4' -> want 'Numerous and/or anthropogenic influenced habitats (gardens, parks, urban areas, common meadows', have '4'  [left as printed; legend: None]
+  [held-out] Wölfling2020 t5 'Specialization in habitat choice': '2' -> want '3–4 habitat types', have '2'  [no legend printed; legend: None]

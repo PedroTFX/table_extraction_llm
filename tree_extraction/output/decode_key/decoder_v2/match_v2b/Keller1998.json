@@ -1,0 +1,242 @@
+{
+ "1:4": {
+  "cells": {
+   "M": {
+    "term": "species that are primarily monogynous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.972,
+      "word": 0.028
+     },
+     "M": {
+      "e0": 0.948,
+      "keep": 0.052
+     },
+     "M | QB": {
+      "w0": 0.012,
+      "w1": 0.988
+     }
+    }
+   },
+   "P": {
+    "term": "species that are primarily polygynous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "P": {
+      "e0": 0.582,
+      "keep": 0.418
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   },
+   "M, P": {
+    "term": "species that are primarily monogynous; species that are primarily polygynous",
+    "parts": [
+     "M",
+     "P"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     },
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit",
+     "P": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.972,
+      "word": 0.028
+     },
+     "M": {
+      "e0": 0.948,
+      "keep": 0.052
+     },
+     "M | QB": {
+      "w0": 0.012,
+      "w1": 0.988
+     },
+     "P | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "P": {
+      "e0": 0.582,
+      "keep": 0.418
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   }
+  },
+  "header": "Queen number"
+ },
+ "1:6": {
+  "cells": {
+   "I": {
+    "term": "species that found new colonies primarily through independent colony founding",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.966,
+      "word": 0.034
+     },
+     "I": {
+      "e0": 0.965,
+      "keep": 0.035
+     },
+     "I | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "D": {
+    "term": "species that generally use a dependent colony founding",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.971,
+      "word": 0.029
+     },
+     "D": {
+      "e0": 0.917,
+      "keep": 0.083
+     },
+     "D | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "I, D": {
+    "term": "species that found new colonies primarily through independent colony founding; species that generally use a dependent colony founding",
+    "parts": [
+     "I",
+     "D"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     },
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit",
+     "D": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.966,
+      "word": 0.034
+     },
+     "I": {
+      "e0": 0.965,
+      "keep": 0.035
+     },
+     "I | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     },
+     "D | QK": {
+      "code": 0.971,
+      "word": 0.029
+     },
+     "D": {
+      "e0": 0.917,
+      "keep": 0.083
+     },
+     "D | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   }
+  },
+  "header": "Colony founding"
+ },
+ "3:2": {
+  "cells": {},
+  "header": "Mean lifespan"
+ }
+}

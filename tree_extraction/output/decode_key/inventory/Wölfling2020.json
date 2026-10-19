@@ -1,0 +1,752 @@
+{
+ "paper": "Wölfling2020",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Long-term data are important to understand the changes in ecological communities over time but are quite rare for insects. We analyzed such changes using historic museum collections. For our study area, an isolated forest reserve in North-East Italy, data from the past 80 yr were available. We used records of 300 moth species to analyze whether extinction risk was linked to their body size or to their degree of ecological specialization. Specialization was scored 1) by classifying larval food affiliations, habitat preferences, and the northern distributional limit and 2) by analyzing functional dispersion (FDis) within species assemblages over time. Our results show that locally extinct species (mean wingspan: 37.0 mm) were larger than persistent (33.2 mm) or previously unrecorded ones (30.7 mm), leading to a smaller mean wingspan of the moth community over time. Some ecological filters appear to have selected against bigger species. By using coarse specialization categories, we did not observe any relationship with local extinction risk. However, FDis, calculated across 12 species traits, significantly decreased over time. We conclude that simple classification systems might fail in reflecting changes in community-wide specialization. Multivariate approaches such as FDis may provide deeper insight, as they reflect a variety of ecological niche dimensions. With the abandonment of extensive land use practices, natural succession seems to have shifted the moth community toward a preponderance of forest-affiliated species, leading to decreased FDis values. Multivariate analyses of species composition also confirmed that the moth community has significantly changed during the last 80 yr."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Looking at species functional traits, there is evidence for specialized species vanishing more strongly due to land use intensification (Mangels et al. 2017) and urbanization (Concepción et al. 2015). The phenomenon of specialized species being replaced by a few generalist ones is described as biotic homogenization of communities (Knop 2016). Fragmentation can also favor functional homogenization and the replacement of specialized species by generalist ones (Bagchi et al. 2018, Ramiadantsoa et al. 2018). Thus, Keinath et al. (2017) suggested that conservationists should pay particular attention to specialized species whenever anthropogenic disturbances could further fragment remaining habitats. However, there is no uniform method to measure the degree of specialization. For animals, a common approach is to classify species according to their feeding habits or habitat preferences. Either only one of these characteristics is considered (Mangels et al. 2017) or various specialization values covering different aspects of the ecological niche requirements of organisms are aggregated into one synthetic specialization score (Eskildsen et al. 2015). Additionally, different methods to quantify functional diversity have become popular at the community level. On the one hand, community weighted means can give insight into conditions favoring shifts with regard to single factors (Neff et al. 2019). On the other hand, functional dispersion (FDis) represents the abundance-based dispersion of species in trait space (Laliberté and Legendre 2010). As functional specialization is defined as the relative distance of a species from the centroid (Bellwood et al. 2006, Laliberté and Legendre 2010), FDis can be interpreted as mean functional specialization at the community level. To calculate FDis, a variety of ecologically relevant species traits needs to be assembled and subjected to multivariate analysis."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "The forest reserve PsV (expansion of 950 ha from north 44°31′39.15″N, 12°14′19.82″E to south 44°27′48.09″N, 12°13′43.67″E and west 44°29′51.96″N, 12°13′22.79″E to east 44°29′50.50″N, 12°14′15.56″E) is located in the Emilia Romagna (Italy) close to the city of Ravenna. The area of PsV developed from the tenth century onwards through sedimentation forming dunes. The pine woods, which were planted afterward for firewood and pine-nut production in the 10th and 11th centuries, were also used extensively for cattle grazing keeping the understory open and therefore forming a very open forest structure (Malfitano 2002, Andreatta 2010). Extensive land use was then abandoned in 1988, when PsV became a part of the Parco Regionale del Delta del Po (Consorzio Del Parco Regionale Del Delta Del Po 2004) and therefore was protected as UNESCO biosphere reserve (UNESCO 2015). Since then, succession formed more forest like habitats with a diverse understory in PsV (Wölfling et al. 2019). Today, PsV consists mainly of downy oak forest and hygrophilous forest, but also smaller patches of pine stands, reed, and open habitats. PsV is protected under several levels of legislation based on Natura 2000 (Montanari 2010) and the Convention of Ramsar (Ramsar Convention Secretariat 2013). For the present paper, three historical moth collections were analyzed:"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Furthermore, we compiled a trait matrix containing information on 12 species traits of functional relevance, viz. wingspan, presence or absence of proboscis, larval food source (detritivore, lichen feeder, and 15 plant families), salt tolerance of larval food plants, use of ruderal food plants, growth form of larval host plants (e.g., woody or herbaceous), degree of larval food specialization (from monophagous to highly polyphagous), habitat type (forest, open habitats, shrub-land, or reed), phenology of adult activity period (spring, early summer or summer), voltinism, hibernating stage, and latitudinal extent of European distributional range. From these trait data, we calculated a Gower dissimilarity matrix, which was—together with the moth incidence data—used for calculating FDis as an index for community-wide specialization using the ‘dbFD’ function in the ‘FD’ package in R (Laliberté and Legendre 2010). Comparing these two different methods for classifying moth specialization, we wanted to analyze which index is more useful."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Finally, to check whether changes in species composition in PsV over time were related to shifts in wingspan, ecological specialization, or preference for open habitats, we used non-metric multidimensional scaling (NMDS) and a permutation test (999 permutations). We first prepared our own sample data by separating them according to single sampling years, yielding eight data points. Museum collections data were as above split into the four partitions ‘1940s’, ‘1960s’, ‘1970s’, and ‘1980s’. From the resulting species × time layer incidence matrix, a triangular similarity matrix was calculated using the Sørensen similarity measure. As potential explanatory factors, we included community mean values of wingspan (log transformed), mean total specialization score, and the proportion of open habitat species (logit transformed) per each time unit. For visualization of possible temporal trends, we created an ordisurf diagram using the package ‘vegan’ (Oksanen et al. 2018). Ordisurf is a function performed on the NMDS ordination, based on GAM (Oksanen 2007)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "In PsV, we counted 63 lost, 156 persistent, and 81 previously unrecorded moth species, summing up to a total of 300 species ([Supp Table 1](http://academic.oup.com/jinsectscience/article-lookup/doi/10.1093/jisesa/ieaa097#supplementary-data) [online only]). As predicted, locally lost species were on average larger than previously unrecorded moth species $(P = 0.002,$ df = 287; Fig. 1, Table 2). The GAM also revealed substantial changes across the entire community in wingspan over time (Fig. 2A, Table 2)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Fig. 1. Wingspan of moth species from Pineta san Vitale (PsV) partitioned into three categories according to their occurrence status. ‘Lost’ (orange) represents moth species that were only found pre-1997 $\\left( n = 6 3 \\right)$ . ‘Persistent’ (yellow) denotes moths occurring pre-1997 as well as afterward $( n = 1 5 6 ) .$ ‘Previously unrecorded’ (green) refers to species only observed in 1997 or later (n = 81). ‘Previously unrecorded’ and ‘Lost’ species differed significantly in body size $\\left( P = 0 . 0 0 2 \\right)$ . Bar in the middle represent median, box limits are third and first quartiles, and whiskers describe data points within 1.5 times of the interquartile range."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "The unconstrained ordination plot reveals substantial changes in the species composition of moth assemblages over time (Fig. 4). According to a permutation test, variation in mean wingspan $R^{2} = 0.23, P = 0.001$ , mean total specialization $( R ^ { 2 } = 0 . 1 9 ,$ $P = 0 . 0 0 1 )$ , and the proportion of open habitat species $( R ^ { 2 } = 0 . 1 4 ,$ $P = 0.004)$ were all significantly associated with variation in species composition. However, moth samples partitioned into 15 time periods did not indicate a simple directional shift. Rather, older (museum) samples were ordinated in the periphery in reduced ordination space, with the most recent (quantitative light trap) samples in the center."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:658e254/tier:advanced/page:6/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 2. Plots showing (A) mean wingspan in millimeters, (B) proportion of open habitat species in percentage, (C) mean degree of total specialization, and (D) functional dispersion (FDis) in the moth community over time. Moth data from PsV were partitioned into 15 time layers for analysis. The dark line indicates the generalized additive model (GAM) function and its confidence intervals (shaded area). Statistical details of the GAMs can be looked up in Table 2."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Fig. 4. Non-metric multidimensional scaling (NMDS) ordination based on moth species lists from 15 time layers sampled in PsV. Proportion of open habitat species, mean wingspan, and total degree of specialization were superimposed as descriptors of the moth communities. The sampling years are projected on the NMDS through an ordisurf function based on a generalized additive model (GAM). Stress: 0.13 (non-metric fit $R ^ { 2 } = 0 . 9 8 ,$ linear fit $R ^ { 2 } = 0 . 9 1 )$"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:658e254/tier:advanced/page:8/block:3)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Fig. 5. Change of functional dispersion over time in a conservation area where due to abandonment of land use and natural forest succession the open grassland biota gradually declines. Gray points represent species in functional trait space. The red point indicates the trait space center. The distance between each species and the trait space centroid is shown as a line. The orange circle symbolizes the mean functional dispersion FDis (mean distance across all species to the centroid). By simplifying multivariate trait space into two-dimensions, we indicate open habitat species to the left of the picture (grass symbols), and species of woody habitat on the right (tree symbols). (A) Situation about 80 yr ago with historic extensive land use. (B) First scenario: Species in general got ‘less specialized’. The functional centroid keeps its position, but individual species distances are on average smaller compared to the past (dashed lines). Consequently, mean functional dispersion decreases (compared with the ancient dispersion, shown as dashed circle). (C) Second scenario: Occupied functional trait space shifts toward more forest-affiliated species. Species might be also specialized, but predominantly concentrate in one habitat type. The dispersion of species toward open habitats therefore decreases, the trait space centroid shifts toward forest species, leading to smaller mean distances of species to the new trait space center."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "erto Fabbri (Museo Civico delle Cappuccine, Bagnacavallo), and Edgardo Bertaccini (private). The Faculty of Life Sciences (University of Vienna) and the Heinrich Böll Stiftung (Berlin) kindly provided financial support. We thank two anonymous reviewers for constructive comments on an earlier manuscript draft. All authors contributed equally to this work."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "- Airoldi, L., M. Ponti, and M. Abbiati. 2016. Conservation challenges in human dominated seascapes: the harbour and coast of Ravenna. Reg. Stud. Mar. Sci. 8: 308–318. - Andreatta, G. 2010. Proposal for the establishment of a ‘silvo-museum’ in the Ravenna historical pinewoods. J. Silvicult. For. Ecol. 7: 237–246. - Antonellini, M., and P. N. Mollema. 2010. Impact of groundwater salinity on vegetation species richness in the coastal pine forests and wetlands of Ravenna, Italy. Ecol. Eng. 36: 1201–1211. - Axmacher, J. C., and K. Fiedler. 2004. Manual versus automatic moth sampling at equal light sources – a comparison of catches from Mt. Kilimanjaro. J. Lepid. Soc. 58: 196–202. - Bagchi, R., L. M. Brown, C. S. Elphick, D. L. Wagner, and M. S. Singer. 2018. Anthropogenic fragmentation of landscapes: mechanisms for eroding the specificity of plant-herbivore interactions. Oecologia 187: 521–533. - Bellwood, D. R., P. C. Wainwright, C. J. Fulton, and A. S. Hoey. 2006. Functional versatility supports coral reef biodiversity. Proc. Biol. Sci. 273: 101–107. - Concepción, E. D., M. Moretti, F. Altermatt, M. P. Nobis, and M. K. Obrist. 2015. Impacts of urbanisation on biodiversity: the role of species mobility, degree of specialisation and spatial scale. Oikos 124: 1571–1582. - Consorzio Del Parco Regionale Del Delta Del Po. 2004. Statuto del consorzio del parco regionale del delta del Po. ([https://web.archive.org/web/20071012220755/http://www.parcodeltapo.it/er/parco/statuto_consorzio.pdf](https://web.archive.org/web/20071012220755/http://www.parcodeltapo.it/er/parco/statuto_consorzio.pdf)). - Correa Ayram, C. A., M. E. Mendoza, A. Etter, and D. R. P. Salicrup. 2016. Habitat connectivity in biodiversity conservation: a review of recent studies and applications. Prog. Phys. Geogr. 40: 7–37. - Coulthard, E., J. Norrey, C. Shortall, and W. E. Harris. 2019. Ecological traits predict population changes in moths. Biol. Conserv. 233: 213–219. - Ebert, G. (ed.). 1994–2003. Die Schmetterlinge Baden-Württembergs, Vols. 3–9. E. Ulmer, Stuttgart, Germany. - Eskildsen, A., L. G. Carvalheiro, W. D. Kissling, J. C. Biesmeijer, O. Schweiger, and T. T. Høye. 2015. Ecological specialization matters: long-term trends in butterfly species richness and assemblage composition depend on multiple functional traits. Divers. Distrib. 21: 792–802. - Estreguil, C., G. Caudullo, and J. San Miguel. 2013. Connectivity of Natura 2000 forest sites. JRC Executive report. European Commission. ([https://ec.europa.eu/jrc/en/publication/eur-scientific-and-technical-research-reports/connectivity-natura-2000-forest-sites](https://ec.europa.eu/jrc/en/publication/eur-scientific-and-technical-research-reports/connectivity-natura-2000-forest-sites)). - Graham, C. H., S. Ferrier, F. Huettman, C. Moritz, and A. T. Peterson. 2004. New developments in museum-based informatics and applications in biodiversity analysis. Trends Ecol. Evol. 19: 497–503. - Guerra, R., A. Pasteris, S. H. Lee, N. J. Park, and G. Ok. 2014. Spatial patterns of metals, PCDDs/Fs, PCBs, PBDEs and chemical status of sediments from a coastal lagoon (Pialassa Baiona, NW Adriatic, Italy). Mar. Pollut. Bull. 89: 407–416. - Habel, J. C., and T. Schmitt. 2018. Vanishing of the common species: empty habitats and the role of genetic diversity. Biol. Conserv. 218: 211–216. - Keinath, D. A., D. F. Doak, K. E. Hodges, L. R. Prugh, W. Fagan, C. H. Sekercioglu, S. H. M. Buchart, and M. Kauffman. 2017. A global analysis of traits predicting species sensitivity to habitat fragmentation. Glob. Ecol. Biogeogr. 26: 115–127. - Knop, E. 2016. Biotic homogenization of three insect groups due to urbanization. Glob. Chang. Biol. 22: 228–236. - Koh, L. P., N. S. Sodhi, and B. W. Brook 2004. Ecological correlates of extinction proneness in tropical butterflies. Conserv. Biol. 18: 1571–1578. - Kurze, S., T. Heinken, and T. Fartmann 2018. Nitrogen enrichment in host plants increases the mortality of common Lepidoptera species. Oecologia 188: 1227–1237."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "- Kuussaari, M., M. Saarinen, E. L. Korpela, J. Pöyry, and T. Hyvönen. 2014. Higher mobility of butterflies than moths connected to habitat suitability and body size in a release experiment. Ecol. Evol. 4: 3800–3811. - Laliberté, E., and P. Legendre. 2010. A distance-based framework for measuring functional diversity from multiple traits. Ecology 91: 299–305. - Laurance, W. F. 2019. The Anthropocene. Curr. Biol. 29: R953–R954. - Lucialli, P., P. Ugolini, and E. Pollini. 2007. Harbour of Ravenna: the contribution of harbour traffic to air quality. Atmos. Environ. 41: 6421–6431. - Maas, B., D. S. Karp, S. Bumrungsri, K. Darras, D. Gonthier, J. C. Huang, C. A. Lindell, J. J. Maine, L. Mestre, N. L. Michel, et al. 2016. Bird and bat predation services in tropical forests and agroforestry landscapes. Biol. Rev. Camb. Philos. Soc. 91: 1081–1101. - Malfitano, A. 2002. Alle origini della politica di tutela ambientale in Italia. Luigi Rava e la nuova pineta ‘storica’ di Ravenna. Storia Futuro 1: 32–40. - Mangels, J., K. Fiedler, F. D. Schneider, and N. Blüthgen. 2017. Diversity and trait composition of moths respond to land-use intensification in grasslands: generalists replace specialists. Biodivers. Conserv. 26: 3385–3405. - Melo de Melo, D. H., B. K. Filgueiras, C. A. Iserhard, L. Iannuzzi, A. V. Freitas, and I. R. Leal. 2019. Effect of habitat loss and fragmentation on fruitfeeding butterflies in the Brazilian Atlantic Forest. Can. J. Zool. 97: 588–596. - Merckx, T., and E. M. Slade. 2014. Macro-moth families differ in their attraction to light: implications for light-trap monitoring programmes. Insect Conserv. Divers. 7: 453–461. - Merckx, T., A. Kaiser, and H. Van Dyck. 2018. Increased bodysize along urbanization gradients at both community and intraspecific level in macromoths. Glob. Change Biol. 24: 3837–3848. - Montanari, S. 2010. Note integrative sulla flora della Pineta di San Vitale (Ravenna). Quaderno Studi Notizie Storia Naturale Della Romagna. 42: 1–42. - Montecchio, L., R. Causin, S. Rossi, and S. M. Accordi. 2004. Changes in ectomycorrhizal diversity in a declining Quercus ilex coastal forest. Phytopathol. Mediterr. 43: 26–34. - Neff, F., N. Blüthgen, M. N. Chisté, N. K. Simons, J. Steckel, W. W. Weisser, C. Westphal, L. Pellissier, and M. M. Gossner. 2019. Cross-scale effects of land use on the functional composition of herbivorous insect communities. Landsc. Ecol. 34: 2001–2015. - Nolte, D., E. Boutaud, D. J. Kotze, A. Schuldt, and T. Assmann. 2019. Habitat specialization, distribution range size and body size drive extinction risk in carabid beetles. Biodiv. Conserv. 28: 1267–1283. - Noriega, J. A., J. Hortal, F. M. Azcárate, M. P. Berg, N. Bonada, M. J. Briones, I. Del Toro, D. Goulson, S. Ibanez, D. A. Landis, et al. 2018. Research trends in ecosystem services provided by insects. Basic Appl. Ecol. 26: 8–23. - Ockinger, E., O. Schweiger, T. O. Crist, D. M. Debinski, J. Krauss, M. Kuussaari, J. D. Petersen, J. Pöyry, J. Settele, K. S. Summerville, et al. 2010. Life-history traits predict species responses to habitat area and isolation: a cross-continental synthesis. Ecol. Lett. 13: 969–979. - Okon, O. G. 2019. Effect of salinity on physiological processes in plants. In B. Giri and A. Varma (eds.), Microorganisms in saline environments: strategies and functions, pp. 237–262. Springer, Cham, Switzerland. - Oksanen, J. 2007. Multivariate analysis of ecological communities in R: vegan tutorial. University of Oulu, Oulu, Finland. - Oksanen, J., F. Guillaume Blanchet, M. Friendly, R. Kindt, P. Legendre, D. McGlinn, P. R. Minchin, R. B. O’Hara, G. L. Simpson, P. Solymos, et al. 2018. vegan: community ecology package, version 2.5-2. ([https://CRAN.R-project.org/package=vegan](https://CRAN.R-project.org/package=vegan)). - Owens, A. C., P. Cochard, J. Durrant, B. Farnworth, E. K. Perkin, and B. Seymoure. 2020. Light pollution is a driver of insect declines. Biol. Conserv. 241: 108259. - Pinheiro, J., D. Bates, S. DebRoy, and D. Sarkar; R Core Team. 2019. Package ‘nlme’: linear and nonlinear mixed effects models. R package version 3.1–140. ([https://CRAN.R-project.org/package=nlme](https://CRAN.R-project.org/package=nlme))."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "- Plieninger, T., H. Draux, N. Fagerholm, C. Bieling, M. Bürgi, T. Kizos, T. Kuemmerle, J. Primdahl, and P. H. Verburg. 2016. The driving forces of landscape change in Europe: a systematic review of the evidence. Land Use Policy 57: 204–214. - Quais, M. K., N. A. Ansari, G. Y. Wang, W. W. Zhou, and Z. R. Zhu. 2019. Host plant salinity stress affects the development and population parameters of Nilaparvata lugens (Hemiptera: Delphacidae). Environ. Entomol. 48: 1149–1161. - Ramiadantsoa, T., I. Hanski, and O. Ovaskainen. 2018. Responses of generalist and specialist species to fragmented landscapes. Theor. Popul. Biol. 124: 31–40. - Ramsar Convention Secretariat. 2013. The Ramsar convention manual: a guide to the convention on wetlands (Ramsar, Iran, 1971), 6th ed. Ramsar Convention Secretariat, Gland, Switzerland. - Regier, J. C., C. Mitter, A. Zwick, A. L. Bazinet, M. P. Cummings, A. Y. Kawahara, J. C. Sohn, D. J. Zwickl, S. Cho, D. R. Davis, et al. 2013. A large-scale, higher-level, molecular phylogenetic study of the insect order Lepidoptera (moths and butterflies). PLoS One 8: e58568. - Ripple, W. J., C. Wolf, T. M. Newsome, M. Hoffmann, A. J. Wirsing, and D. J. McCauley. 2017. Extinction risk is most acute for the world’s largest and smallest vertebrates. Proc. Natl. Acad. Sci. USA 114: 10678–10683. - Rösch, V., T. Tscharntke, C. Scherber, and P. Batary. 2013. Landscape composition, connectivity and fragment size drive effects of grassland fragmentation on insect communities. J. Appl. Ecol. 50: 387–394. - Seibold, S., M. M. Gossner, N. K. Simons, N. Blüthgen, J. Müller, D. Ambarlı, C. Ammer, J. Bauhus, M. Fischer, J. C. Habel, et al. 2019. Arthropod decline in grasslands and forests is associated with landscape-level drivers. Nature 574: 671–674. - Sgardeli, V., K. Zografou, and J. M. Halley. 2016. Climate change versus ecological drift: assessing 13 years of turnover in a butterfly community. Basic Appl. Ecol. 17: 283–290. - Slade, E. M., T. Merckx, T. Riutta, D. P. Bebber, D. Redhead, P. Riordan, and D. W. Macdonald. 2013. Life-history traits and landscape characteristics predict macro-moth responses to forest fragmentation. Ecology 94: 1519–1530. - Smith, F. A., R. E. Elliott Smith, S. K. Lyons, and J. L. Payne. 2018. Body size downgrading of mammals over the late Quaternary. Science 360: 310–313. - Sydenham, M. A., S. R. Moe, M. Kuhlmann, S. G. Potts, S. P. Roberts, Ø. Totland, and K. Eldegard. 2017. Disentangling the contributions of dispersal limitation, ecological drift, and ecological filtering to wild bee community assembly. Ecosphere 8: e01650. - Thompson, P. L., B. Rayfield, and A. Gonzalez. 2017. Loss of habitat and connectivity erodes species diversity, ecosystem functioning, and stability in metacommunity networks. Ecography 40: 98–108. - Uhl, B., and M. Wölfling. 2015. Anthropogenic influences on the condition of Pinus pinea L. and Quercus robur L. in Pineta san Vitale (Ravenna, Italy). J. Mediterr. Ecol. 13: 5–12. ([http://www.jmecology.com/?page_id=334](http://www.jmecology.com/?page_id=334)). - Uhl, B., M. Wölfling, and K. Fiedler. 2020. Local, forest stand and landscapescale correlates of plant communities in isolated coastal forest reserves. Plant Biosyst. (in press). - UNESCO. 2015. Bonn: Po Delta, United Nations Educational Scientific and Cultural Organisation. 2015. Biosphere reserves: Po Delta. [http://www.unesco.org/new/en/natural-sciences/environment/ecological-sciences/biosphere-reserves/europe-north-america/italy/po-delta](http://www.unesco.org/new/en/natural-sciences/environment/ecological-sciences/biosphere-reserves/europe-north-america/italy/po-delta). - Vellend, M. 2016. The theory of ecological communities, vol. 75. MPB-57. Princeton University Press, Princeton, NJ. - Wölfling, M., B. Uhl, and K. Fiedler. 2019. Multi-decadal surveys in a Mediterranean forest reserve – do succession and isolation drive moth species richness? Nat. Conserv. 35: 25–40. - Wood, S. N. 2011. Fast stable restricted maximum likelihood and marginal likelihood estimation of semiparametric generalized linear models. J. R. Stat. Soc. B 73: 3–36."
+  },
+  {
+   "id": "u17",
+   "kind": "table 0",
+   "text": "Dimension of resource | Classification factors | Classification value\nSpecialization in larval food selection | The species' phagism-type is:\nMonophagous within one plant genus | →1\nOligophagous within one plant family | →2\nPolyphagous: >1 plant family | →3\nHighly polyphagous: >5 plant families | →4\nNorthern limit of distribution in Europe | The northern distribution limit of the species is:\n43°-46° N (range limit: south of the Alps) | →1\n47°-50° N (range limit: German highlands) | →2\n51°-54° N (range limit: North or Baltic sea coast) | →3"
+  },
+  {
+   "id": "u18",
+   "kind": "table 0",
+   "text": "55°-71° N (range limit: further north than class 3) | →4\nSpecialization in habitat choice | The species occurs in:\n1-2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc.) | →1\n3-4 habitat types | →2\n5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc.) | →3\nNumerous and/or anthropogenic influenced habitats (gardens, parks, urban areas, common meadows | →4"
+  },
+  {
+   "id": "u19",
+   "kind": "table 3",
+   "text": "Degree of total specialization | Black Segment (Number of species) | Grey Segment (Number of species)\n3 | 1 | 49\n4 | 0 | 8\n5 | 3 | 5\n6 | 7 | 24\n7 | 11 | 18\n8 | 11 | 30\n9 | 7 | 29\n10 | 11 | 39\n11 | 10 | 38"
+  },
+  {
+   "id": "u20",
+   "kind": "table 3",
+   "text": "12 | 5 | 34"
+  },
+  {
+   "id": "u21",
+   "kind": "table 4",
+   "text": "Year | NMDS1 | NMDS2\n1960s | ~-1.1 | ~-0.35\n1940s | ~-0.8 | ~0.25\n2002 | ~-0.2 | ~0.25\n2000 | ~-0.15 | ~-0.25\n2001 | ~-0.15 | ~-0.6\n1980s | ~0.1 | ~0.75\n1970s | ~0.3 | ~0.55\n2012 | ~0.2 | ~0.2\n2011 | ~0.2 | ~0.1"
+  },
+  {
+   "id": "u22",
+   "kind": "table 4",
+   "text": "1998 | ~0.6 | ~0.0\n1999 | ~0.7 | ~-0.15\n1997 | ~0.6 | ~-0.6"
+  },
+  {
+   "id": "u23",
+   "kind": "footnote of table 5",
+   "text": "Table of the 300 moth species from Pineta san Vitale (Italy). Listed is their occurrence status (lost, persistent, or previously unrecorded), their classification with regard to specialization (total specialization, larval food specialization, northern distribution range limit, and habitat specialization), their wingspan (in mm), and their taxonomic affiliation at family level."
+  }
+ ],
+ "batches": [
+  [
+   "u0"
+  ],
+  [
+   "u1"
+  ],
+  [
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13"
+  ],
+  [
+   "u14"
+  ],
+  [
+   "u15"
+  ],
+  [
+   "u16"
+  ],
+  [
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23"
+  ]
+ ],
+ "calls": 21,
+ "categories": [
+  {
+   "variable": "Specialization",
+   "code": "1)",
+   "term": "classifying larval food affiliations, habitat preferences, and the northern distributional limit",
+   "unit": "u0",
+   "model_label": "classifying larval food affiliations, habitat preferences, and the northern distributional limit",
+   "label": "classifying larval food affiliations, habitat preferences, and the northern distributional limit",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization",
+   "code": "2)",
+   "term": "analyzing functional dispersion (FDis) within species assemblages over time",
+   "unit": "u0",
+   "model_label": "analyzing functional dispersion (FDis) within species assemblages over time",
+   "label": "analyzing functional dispersion (FDis) within species assemblages over time",
+   "explanation": ""
+  },
+  {
+   "variable": "wingspan",
+   "code": "wingspan",
+   "term": "wingspan",
+   "unit": "u3",
+   "model_label": "wingspan",
+   "label": "wingspan",
+   "explanation": ""
+  },
+  {
+   "variable": "presence or absence of proboscis",
+   "code": "presence or absence of proboscis",
+   "term": "presence or absence of proboscis",
+   "unit": "u3",
+   "model_label": "presence or absence of proboscis",
+   "label": "presence or absence of proboscis",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food source",
+   "code": "detritivore",
+   "term": "detritivore",
+   "unit": "u3",
+   "model_label": "detritivore",
+   "label": "detritivore",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food source",
+   "code": "lichen feeder",
+   "term": "lichen feeder",
+   "unit": "u3",
+   "model_label": "lichen feeder",
+   "label": "lichen feeder",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food source",
+   "code": "15 plant families",
+   "term": "15 plant families",
+   "unit": "u3",
+   "model_label": "15 plant families",
+   "label": "15 plant families",
+   "explanation": ""
+  },
+  {
+   "variable": "growth form of larval host plants",
+   "code": "woody",
+   "term": "woody",
+   "unit": "u3",
+   "model_label": "woody",
+   "label": "woody",
+   "explanation": ""
+  },
+  {
+   "variable": "growth form of larval host plants",
+   "code": "herbaceous",
+   "term": "herbaceous",
+   "unit": "u3",
+   "model_label": "herbaceous",
+   "label": "herbaceous",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "forest",
+   "term": "forest",
+   "unit": "u2",
+   "model_label": "forest",
+   "label": "forest",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "open habitats",
+   "term": "open habitats",
+   "unit": "u2",
+   "model_label": "open habitats",
+   "label": "open habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "shrub-land",
+   "term": "shrub-land",
+   "unit": "u3",
+   "model_label": "shrub-land",
+   "label": "shrub-land",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "reed",
+   "term": "reed",
+   "unit": "u2",
+   "model_label": "reed",
+   "label": "reed",
+   "explanation": ""
+  },
+  {
+   "variable": "phenology of adult activity period",
+   "code": "spring",
+   "term": "spring",
+   "unit": "u3",
+   "model_label": "spring",
+   "label": "spring",
+   "explanation": ""
+  },
+  {
+   "variable": "phenology of adult activity period",
+   "code": "early summer",
+   "term": "early summer",
+   "unit": "u3",
+   "model_label": "early summer",
+   "label": "early summer",
+   "explanation": ""
+  },
+  {
+   "variable": "phenology of adult activity period",
+   "code": "summer",
+   "term": "summer",
+   "unit": "u3",
+   "model_label": "summer",
+   "label": "summer",
+   "explanation": ""
+  },
+  {
+   "variable": "occurrence status",
+   "code": "Lost",
+   "term": "moth species that were only found pre-1997",
+   "unit": "u6",
+   "model_label": "Lost",
+   "label": "moth species that were only found pre-1997",
+   "explanation": ""
+  },
+  {
+   "variable": "occurrence status",
+   "code": "Persistent",
+   "term": "moths occurring pre-1997 as well as afterward",
+   "unit": "u6",
+   "model_label": "Persistent",
+   "label": "moths occurring pre-1997 as well as afterward",
+   "explanation": ""
+  },
+  {
+   "variable": "occurrence status",
+   "code": "Previously unrecorded",
+   "term": "species only observed in 1997 or later",
+   "unit": "u6",
+   "model_label": "Previously unrecorded",
+   "label": "species only observed in 1997 or later",
+   "explanation": ""
+  },
+  {
+   "variable": "older",
+   "code": "(museum)",
+   "term": "museum",
+   "unit": "u7",
+   "model_label": "museum",
+   "label": "museum",
+   "explanation": ""
+  },
+  {
+   "variable": "most recent",
+   "code": "(quantitative light trap)",
+   "term": "quantitative light trap",
+   "unit": "u7",
+   "model_label": "quantitative light trap",
+   "label": "quantitative light trap",
+   "explanation": ""
+  },
+  {
+   "variable": "open habitat species",
+   "code": "left of the picture",
+   "term": "grass symbols",
+   "unit": "u12",
+   "model_label": "grass symbols",
+   "label": "grass symbols",
+   "explanation": ""
+  },
+  {
+   "variable": "species of woody habitat",
+   "code": "right",
+   "term": "tree symbols",
+   "unit": "u12",
+   "model_label": "tree symbols",
+   "label": "tree symbols",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization in larval food selection",
+   "code": "→1",
+   "term": "Monophagous within one plant genus",
+   "unit": "u17",
+   "model_label": "Monophagous within one plant genus",
+   "label": "Monophagous within one plant genus",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization in larval food selection",
+   "code": "→2",
+   "term": "Oligophagous within one plant family",
+   "unit": "u17",
+   "model_label": "Oligophagous within one plant family",
+   "label": "Oligophagous within one plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization in larval food selection",
+   "code": "→3",
+   "term": "Polyphagous: >1 plant family",
+   "unit": "u17",
+   "model_label": "Polyphagous: >1 plant family",
+   "label": "Polyphagous: >1 plant family",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization in larval food selection",
+   "code": "→4",
+   "term": "Highly polyphagous: >5 plant families",
+   "unit": "u17",
+   "model_label": "Highly polyphagous: >5 plant families",
+   "label": "Highly polyphagous: >5 plant families",
+   "explanation": ""
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "→1",
+   "term": "43°-46° N (range limit: south of the Alps)",
+   "unit": "u17",
+   "model_label": "43°-46° N (range limit: south of the Alps)",
+   "label": "43°-46° N (range limit: south of the Alps",
+   "explanation": ""
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "→2",
+   "term": "47°-50° N (range limit: German highlands)",
+   "unit": "u17",
+   "model_label": "47°-50° N (range limit: German highlands)",
+   "label": "47°-50° N (range limit: German highlands",
+   "explanation": ""
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "→3",
+   "term": "51°-54° N (range limit: North or Baltic sea coast)",
+   "unit": "u17",
+   "model_label": "51°-54° N (range limit: North or Baltic sea coast)",
+   "label": "51°-54° N (range limit: North or Baltic sea coast",
+   "explanation": ""
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "→4",
+   "term": "55°-71° N (range limit: further north than class 3)",
+   "unit": "u18",
+   "model_label": "55°-71° N (range limit: further north than class 3)",
+   "label": "55°-71° N (range limit: further north than class 3",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization in habitat choice",
+   "code": "→1",
+   "term": "1-2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc.)",
+   "unit": "u18",
+   "model_label": "1-2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc.)",
+   "label": "1-2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc",
+   "explanation": "."
+  },
+  {
+   "variable": "Specialization in habitat choice",
+   "code": "→2",
+   "term": "3-4 habitat types",
+   "unit": "u18",
+   "model_label": "3-4 habitat types",
+   "label": "3-4 habitat types",
+   "explanation": ""
+  },
+  {
+   "variable": "Specialization in habitat choice",
+   "code": "→3",
+   "term": "5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc.)",
+   "unit": "u18",
+   "model_label": "5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc.)",
+   "label": "5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc",
+   "explanation": "."
+  },
+  {
+   "variable": "Specialization in habitat choice",
+   "code": "→4",
+   "term": "Numerous and/or anthropogenic influenced habitats (gardens, parks, urban areas, common meadows",
+   "unit": "u18",
+   "model_label": "Numerous and/or anthropogenic influenced habitats (gardens, parks, urban areas, common meadows",
+   "label": "Numerous and/or anthropogenic influenced habitats (gardens, parks, urban areas, common meadows",
+   "explanation": ""
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "larger",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "smaller",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "ecological specialization",
+   "code": "",
+   "label": "coarse specialization categories",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "ecological specialization",
+   "code": "",
+   "label": "forest-affiliated species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "feeding habits",
+   "code": "",
+   "label": "feeding habits",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "habitat preferences",
+   "code": "",
+   "label": "habitat preferences",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "salt tolerance of larval food plants",
+   "code": "",
+   "label": "salt tolerance of larval food plants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "use of ruderal food plants",
+   "code": "",
+   "label": "use of ruderal food plants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "degree of larval food specialization",
+   "code": "",
+   "label": "monophagous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "degree of larval food specialization",
+   "code": "",
+   "label": "highly polyphagous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "voltinism",
+   "code": "",
+   "label": "voltinism",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "hibernating stage",
+   "code": "",
+   "label": "hibernating stage",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "latitudinal extent of European distributional range",
+   "code": "",
+   "label": "latitudinal extent of European distributional range",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "occurrence status",
+   "code": "",
+   "label": "Lost",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "occurrence status",
+   "code": "",
+   "label": "Persistent",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "occurrence status",
+   "code": "",
+   "label": "Previously unrecorded",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "mean wingspan",
+   "code": "",
+   "label": "mean wingspan",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "proportion of open habitat species",
+   "code": "",
+   "label": "proportion of open habitat species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "mean total specialization",
+   "code": "",
+   "label": "mean degree of total specialization",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "functional dispersion",
+   "code": "",
+   "label": "less specialized",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "functional dispersion",
+   "code": "",
+   "label": "more forest-affiliated species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "degree of specialisation",
+   "code": "",
+   "label": "degree of specialisation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "multiple functional traits",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "habitat specialization",
+   "code": "",
+   "label": "Habitat specialization",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "",
+   "label": "43°-46° N (range limit: south of the Alps)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u17"
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "",
+   "label": "47°-50° N (range limit: German highlands)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u17"
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "",
+   "label": "51°-54° N (range limit: North or Baltic sea coast)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u17"
+  },
+  {
+   "variable": "Northern limit of distribution in Europe",
+   "code": "",
+   "label": "55°-71° N (range limit: further north than class 3)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Specialization in habitat choice",
+   "code": "",
+   "label": "1-2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc.)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Specialization in habitat choice",
+   "code": "",
+   "label": "5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc.)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "solitary",
+   "code": "(SO)",
+   "term": "solitary (SO)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "primitively eusocial",
+   "code": "(P_E)",
+   "term": "primitively eusocial (P_E)",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 93.6
+}

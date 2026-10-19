@@ -1,0 +1,61 @@
+  [semantic] matched by values: 'functional groups' -> 'Funtional Group'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Heiva2013\Heiva2013.xlsx  (26 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Heiva2013\Heiva2013.csv  (109 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Species': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'functional groups' -> 'Funtional Group'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 26
+  missed (FN)         : 0
+  spurious, in scope  : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 82   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.239 / 1.000 / 0.385   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.963 / 1.000 / 0.981   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             82
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     26  0.000  <-- low
+  measurementMethod             0      0    n/a   +26 where GT blank
+  measurementUnit               0      0    n/a
+  measurementStatistic         26     26  1.000
+  measurementRemarks            0      0    n/a
+  sex                          26     26  1.000
+  lifeStage                    26     26  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     26  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     26  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  conquense drove road                              0    44   PRED-ONLY
+  murciana drove road                               0    38   PRED-ONLY
+  funtional group                                  26    27   Δ+1 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.963  1.000  0.981     26     1     0   id+type+value
+             (82 more spurious row(s) set aside as out-of-scope; strict P would be 0.239)
+  tags        0.000  0.000  0.000      0    27    26   basis+id+type+value+stat+sex+stage
+             (82 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.981 vs previous)

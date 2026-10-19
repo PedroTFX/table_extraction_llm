@@ -1,0 +1,164 @@
+  [semantic] matched by values: "Functional traits (mm) Weber's length" -> 'Weber’s length'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Zhao2024\Zhao2024.xlsx  (252 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Zhao2024\Zhao2024.csv  (510 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 60 pair(s))
+  'Aphaenogaster caeciliae' -> 'A. caeciliae'
+  'Brachyponera chinensis' -> 'B. chinensis'
+  'Camponotus herculeanus' -> 'C. herculeanus'
+  'Camponotus japonicus' -> 'C. japonicus'
+  'Camponotus mitis' -> 'C. mitis'
+  'Crematogaster anthracina' -> 'C. anthracina'
+  'Crematogaster osakensis' -> 'C. osakensis'
+  'Dolichoderinae D. sibiricus' -> 'D. sibiricus'
+  'Dolichoderinae L. sinense' -> 'L. sinense'
+  'Dolichoderinae T. geei' -> 'T. geei'
+  'Dolichoderinae T. indicum' -> 'T. indicum'
+  'Dolichoderus sibiricus' -> 'D. sibiricus'
+  'Ectomomyrmex javanus' -> 'E. javanus'
+  'Formica fusca' -> 'F. fusca'
+  'Formica japonica' -> 'F. japonica'
+  'Formicinae C. herculeanus' -> 'C. herculeanus'
+  'Formicinae C. japonicus' -> 'C. japonicus'
+  'Formicinae C. mitis' -> 'C. mitis'
+  'Formicinae C. sp.' -> 'C. sp.'
+  'Formicinae F. fusca' -> 'F. fusca'
+  'Formicinae F. japonica' -> 'F. japonica'
+  'Formicinae L. alienus' -> 'L. alienus'
+  'Formicinae L. flavus' -> 'L. flavus'
+  'Formicinae L. fuliginosus' -> 'L. fuliginosus'
+  'Formicinae N. pieli' -> 'N. pieli'
+  'Formicinae N. sharpii' -> 'N. sharpii'
+  'Formicinae N. sp.' -> 'N. sp.'
+  'Formicinae P. angularis' -> 'P. angularis'
+  'Formicinae P. lamellidens' -> 'P. lamellidens'
+  'Formicinae P. samurai' -> 'P. samurai'
+  'Hypoponera beppin' -> 'H. beppin'
+  'Hypoponera sauteri' -> 'H. sauteri'
+  'Lasius alienus' -> 'L. alienus'
+  'Lasius flavus' -> 'L. flavus'
+  'Lasius fuliginosus' -> 'L. fuliginosus'
+  'Liometopum sinense' -> 'L. sinense'
+  'Lordomyrma bhutanensis' -> 'L. bhutanensis'
+  'Myrmecina pauca' -> 'M. pauca'
+  'Myrmica luteola' -> 'M. luteola'
+  'Myrmica mifui' -> 'M. mifui'
+  'Myrmica taibaiensis' -> 'M. taibaiensis'
+  'Myrmicinae A. caeciliae' -> 'A. caeciliae'
+  'Myrmicinae C. anthracina' -> 'C. anthracina'
+  'Myrmicinae C. osakensis' -> 'C. osakensis'
+  'Nylanderia pieli' -> 'N. pieli'
+  'Nylanderia sharpii' -> 'N. sharpii'
+  'Odontomachus monticola' -> 'O. monticola'
+  'Perissomyrmex bidentatus' -> 'P. bidentatus'
+  'Pheidole fervida' -> 'P. fervida'
+  'Polyergus samurai' -> 'P. samurai'
+  'Polyrhachis lamellidens' -> 'P. lamellidens'
+  'Ponera paedericera' -> 'P. paedericera'
+  'Prenolepis angularis' -> 'P. angularis'
+  'Pristomyrmex punctatus' -> 'P. punctatus'
+  'Strumigenys lewisi' -> 'S. lewisi'
+  'Tapinoma geei' -> 'T. geei'
+  'Tapinoma indicum' -> 'T. indicum'
+  'Temnothorax argentipes' -> 'T. argentipes'
+  'Temnothorax shannxiensis' -> 'T. shannxiensis'
+  'Tetramorium smithi' -> 'T. smithi'
+
+TAXON NAMES LEFT UNMAPPED (5)
+  'Camponotussp.': no ground-truth name denotes this organism
+  'Functional significance': no ground-truth name denotes this organism
+  'Myrmicasp.': no ground-truth name denotes this organism
+  'Nylanderiasp.': no ground-truth name denotes this organism
+  'Trait measurement': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  "Functional traits (mm) Weber's length" -> 'Weber’s length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 22
+  missed (FN)         : 230
+  spurious, in scope  : 10   <- GT covers this trait: real errors
+  spurious, out of scope: 478   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.043 / 0.087 / 0.058   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.688 / 0.087 / 0.155   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.087   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            478
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                22     22  1.000
+  measurementMethod             0      0    n/a   +22 where GT blank
+  measurementUnit              22     22  1.000
+  measurementStatistic          0     22  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     22  0.000  <-- low
+  lifeStage                    22     22  1.000
+  caste                         0     22  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     22  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     22  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 230 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            230
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Head width'                       x42
+     'Scape length'                     x42
+     'Eye length'                       x42
+     'Mandible length'                  x42
+     'Hind leg length'                  x42
+     'Weber’s length'                   x20
+  -> 6 missing traits explain 230 of 230 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Zhao2024_misses.csv, Zhao2024_misses_summary.json (230 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  0.111 ± 0.005                                     0    19   PRED-ONLY
+  0.46 ± 0.016                                      0    19   PRED-ONLY
+  0.803 ± 0.025                                     0    19   PRED-ONLY
+  0.598 ± 0.031                                     0    19   PRED-ONLY
+  0.359 ± 0.035                                     0    19   PRED-ONLY
+  0.886 ± 0.043                                     0    19   PRED-ONLY
+  worker number at each site es1                    0    42   PRED-ONLY
+  worker number at each site es2                    0    42   PRED-ONLY
+  worker number at each site es3                    0    42   PRED-ONLY
+  worker number at each site es4                    0    42   PRED-ONLY
+  worker number at each site es5                    0    42   PRED-ONLY
+  worker number at each site es6                    0    42   PRED-ONLY
+  functional traits (mm) eye length                 0    22   PRED-ONLY
+  eye length                                       42     2   Δ-40 (split?)
+  functional traits (mm) head width                 0    22   PRED-ONLY
+  functional traits (mm) hind leg length            0    22   PRED-ONLY
+  functional traits (mm) mandible length            0    22   PRED-ONLY
+  functional traits (mm) scape length               0    22   PRED-ONLY
+  head width                                       42     2   Δ-40 (split?)
+  hind leg length                                  42     2   Δ-40 (split?)
+  mandible length                                  42     2   Δ-40 (split?)
+  weber's length                                    0     2   PRED-ONLY
+  scape length                                     42     2   Δ-40 (split?)
+  weber’s length                                   42    22   Δ-20 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.688  0.087  0.155     22    10   230   id+type+value
+             (478 more spurious row(s) set aside as out-of-scope; strict P would be 0.043)
+  tags        0.000  0.000  0.000      0    32   252   basis+id+type+value+stat+sex+stage
+             (478 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.155 vs previous)

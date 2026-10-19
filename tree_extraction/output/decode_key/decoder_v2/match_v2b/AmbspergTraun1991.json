@@ -1,0 +1,147 @@
+{
+ "0:4": {
+  "cells": {
+   "W": {
+    "term": "Wood",
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "initial",
+      "labels": [
+       "Wood",
+       "wood/soil interface"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "initial"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "W": {
+      "e0": 0.943,
+      "e1": 0.006,
+      "keep": 0.051
+     },
+     "W | QB": {}
+    }
+   },
+   "S": {
+    "term": "soil",
+    "parts": [
+     "S"
+    ],
+    "options": {
+     "S": {
+      "evidence": "initial",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {
+     "S": "initial"
+    },
+    "probs": {
+     "S | QK": {
+      "code": 0.95,
+      "word": 0.05
+     },
+     "S": {
+      "e0": 0.972,
+      "keep": 0.028
+     },
+     "S | QB": {}
+    }
+   },
+   "W/S": {
+    "term": "Wood; soil",
+    "parts": [
+     "W",
+     "S"
+    ],
+    "options": {
+     "W": {
+      "evidence": "initial",
+      "labels": [
+       "Wood",
+       "wood/soil interface"
+      ]
+     },
+     "S": {
+      "evidence": "initial",
+      "labels": [
+       "soil"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "initial",
+     "S": "initial"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "W": {
+      "e0": 0.943,
+      "e1": 0.006,
+      "keep": 0.051
+     },
+     "W | QB": {},
+     "S | QK": {
+      "code": 0.95,
+      "word": 0.05
+     },
+     "S": {
+      "e0": 0.972,
+      "keep": 0.028
+     },
+     "S | QB": {}
+    }
+   }
+  },
+  "header": "Feeding group†"
+ },
+ "0:5": {
+  "cells": {
+   "W": {
+    "term": "Wood",
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "initial",
+      "labels": [
+       "Wood",
+       "wood/soil interface"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "initial"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.969,
+      "word": 0.031
+     },
+     "W": {
+      "e0": 0.899,
+      "e1": 0.013,
+      "keep": 0.088
+     },
+     "W | QB": {}
+    }
+   }
+  },
+  "header": "Nesting group‡"
+ }
+}

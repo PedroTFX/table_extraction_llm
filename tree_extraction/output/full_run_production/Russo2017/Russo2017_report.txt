@@ -1,0 +1,82 @@
+  [semantic] matched by values: 'Length (mm)' -> 'Body size'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Russo2017\Russo2017.xlsx  (191 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Russo2017\Russo2017.csv  (691 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'Andrena *': no ground-truth name denotes this organism
+  'Nomada media': no ground-truth name denotes this organism
+  'Species': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Intertegular distance' -> 'Intertegular Distance'
+  'Length (mm)' -> 'Body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 189
+  missed (FN)         : 2
+  spurious, in scope  : 12   <- GT covers this trait: real errors
+  spurious, out of scope: 490   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.274 / 0.990 / 0.429   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.940 / 0.990 / 0.964   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.990   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            490
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    189  0.000  <-- low
+  measurementMethod             0      0    n/a   +99 where GT blank
+  measurementUnit               0    189  0.000  <-- low
+  measurementStatistic          0    189  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    189  0.000  <-- low
+  lifeStage                   189    189  1.000
+  caste                         0    137  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0    189  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    189  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 2 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '9'                          ->  '0.97'                       x1
+     '2.003'                      ->  '1'                          x1
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Russo2017_misses.csv, Russo2017_misses_summary.json (2 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abundance                                         0   103   PRED-ONLY
+  body length                                       0    17   PRED-ONLY
+  body size                                        91    99   Δ+8 (split?)
+  intertegular distance                           100   102   Δ+2 (split?)
+  floral handling                                   0    79   PRED-ONLY
+  flower handling                                   0    15   PRED-ONLY
+  functional group                                  0    80   PRED-ONLY
+  length                                            0    99   PRED-ONLY
+  pollen purity                                     0    97   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.940  0.990  0.964    189    12     2   id+type+value
+             (490 more spurious row(s) set aside as out-of-scope; strict P would be 0.274)
+  tags        0.000  0.000  0.000      0   201   191   basis+id+type+value+stat+sex+stage
+             (490 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.964 vs previous)

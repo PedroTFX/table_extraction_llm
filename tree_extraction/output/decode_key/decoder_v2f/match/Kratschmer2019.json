@@ -1,0 +1,161 @@
+{
+ "13:2": {
+  "cells": {
+   "G": {
+    "term": "Ground nesting",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "initial",
+      "labels": [
+       "Ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "initial"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "G": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "G | QB": {}
+    }
+   },
+   "A": {
+    "term": "Above-ground nesting",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "initial",
+      "labels": [
+       "Above-ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "initial"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.946,
+      "word": 0.054
+     },
+     "A": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "A | QB": {}
+    }
+   },
+   "P": {
+    "term": "Parasitic",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Parasitic",
+       "Polylectic"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "initial"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.986,
+      "word": 0.014
+     },
+     "P": {
+      "e0": 0.986,
+      "e1": 0.001,
+      "keep": 0.013
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "header": "Nesting type"
+ },
+ "10:4": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "eusocial": {
+    "term": null,
+    "parts": [
+     "eusocial"
+    ],
+    "options": {
+     "eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "eusocial | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "parasitic": {
+    "term": null,
+    "parts": [
+     "parasitic"
+    ],
+    "options": {
+     "parasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "♀ lay their eggs in nests of specific host species"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "parasitic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "header": "Sociality"
+ }
+}

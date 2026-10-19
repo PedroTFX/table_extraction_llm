@@ -1,0 +1,98 @@
+{
+ "10:6": {
+  "cells": {
+   "1.0": {
+    "term": null,
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "herbivores"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.901,
+      "word": 0.099
+     },
+     "1.0": {
+      "e0": 0.015,
+      "keep": 0.985
+     }
+    }
+   },
+   "2.0": {
+    "term": "primary predators (predators and parasitoids of herbivores)",
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "primary predators"
+      ]
+     }
+    },
+    "evidence": {
+     "2.0": "explicit"
+    },
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.952,
+      "word": 0.048
+     },
+     "2.0": {
+      "e0": 0.743,
+      "keep": 0.257
+     },
+     "2.0 | QB": {
+      "w0": 0.445,
+      "w1": 0.555
+     }
+    }
+   },
+   "3.0": {
+    "term": "secondary predators (predators and parasitoids of predators)",
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "secondary predators"
+      ]
+     }
+    },
+    "evidence": {
+     "3.0": "explicit"
+    },
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.906,
+      "word": 0.094
+     },
+     "3.0": {
+      "e0": 0.945,
+      "keep": 0.055
+     },
+     "3.0 | QB": {
+      "w0": 0.403,
+      "w1": 0.597
+     }
+    }
+   }
+  },
+  "header": "Trophic level"
+ },
+ "10:10": {
+  "cells": {},
+  "header": "Feeding guild"
+ }
+}

@@ -1,0 +1,494 @@
+{
+ "calls": 2,
+ "chars": 7645,
+ "passages": [
+  "[prose] For each species, up to 8 individuals (range 4–8) were measured; in di- or polymorphic species, only minor workers were measured. Standard linear measurements were taken using an ocular micrometer on a dissecting microscope to determine species means for head width, head length, and total hind leg length (hind tibia length + hind femur length) (Kaspari and Weiser 1999; Parr et al. 2003). Relative leg length was measured as the ratio $\\mathrm { R L } = \\log { 1 0 }$ (total hind leg length $+ 1 ) \\times [ \\log { 1 0 }$ (head length + 1)]¡ 1 . To determine ant masses, we placed ants in a drying oven at $6 0 ^ { \\circ } \\mathbf { C }$ for 24 h and then used a microbalance (Mettler & Toledo©) to weigh mean dry masses to the nearest 0.01 mg. To test for evidence of allometric relationships between ant size (head width, head length, and mass) and leg length, we performed standardized major axis regressions using the smatr package (Warton and Ormerod 2007) in R 2.10.1 (R Development Core Team 2009). Standardized major axis regressions are appropriate when testing whether the relationships between size variables diVer from isometry, i.e., determining if an observed slope exhibits allometry (Warton et al. 2006). Evidence for positive allometry would consist of an observed slope of b > 1 (for leg length vs. head width and head length) and of b > 0.33 (for leg length vs. mass).",
+  "[prose] cover, surface temperature, and VPD were pronounced: shrub habitats featured less groundcover, hotter and drier conditions, and lower plant species richness (Table 2). Furthermore, diVerences in ant composition were linked to a habitat’s environmental conditions. Four environmental factors were signiWcantly correlated with ant composition: groundcover (r 2 = 0.90, P 2 = 0.86, P 2 = 0.92, P 2 = 0.61, P = 0.019) (Fig. 1). In contrast, soil moisture (r 2 = 0.21, P = 0.350), soil pH $( r ^ { 2 } = 0 . 4 7 )$ $P = 0 . 0 6 9 )$ , and time since Wre (r 2 = 0.29, P = 0.209) were not signiWcantly associated with ant composition.",
+  "[prose] Desiccation resistance was estimated for common species in the following way. We collected up to 20 individuals (range 5–20) and weighed them to the nearest 0.01 mg to determine mean wet mass (WM). We then placed the ants in glass desiccation chambers maintained at approximately 0 relative humidity with desiccant. We deWned the lethal desiccation time (LD50) as the time elapsed when 50% of ants had succumbed. Next, we weighed each species to determine the mean critical water content mass (WC). Surface areas of ants were estimated using the equation $\\mathrm { S A } = 0 . 1 0 3 \\times \\mathrm { W M } ^ { 0 . 6 6 7 }$ (Lighton and Feener 1989). Finally, we calculated area-independent water loss rates as: $\\mathrm{AIWLR} = (\\mathrm{WM} - \\mathrm{WC}) \\times (\\mathrm{LD50})^{-1} \\times (\\mathrm{SA})^{-1}$ This desiccation resistance measure enables across-species comparison by adjusting for surface area (Schilman et al. 2007). We repeated this procedure four times for each species.",
+  "[prose] by comparing dissimilarities within and among groups (McCune and Grace 2002). We again used the total number of species incidences on plots to construct the ant assemblage dataset. We applied the Kulczynski distance measure for analysis with 1,000 permutations. All species–environment analyses were performed using R 2.10.1 (R Development Core Team 2009) with the vegan package (Oksanen et al. 2009).",
+  "[prose] raised until 100% of ants lost locomotor control or died. LT values were calculated for each species using probit regression to estimate the temperature at which 99% of individuals succumb to heat stress; probit regression was done using R 2.10.1 (R Development Core Team 2009) and the MASS package (Venables and Ripley 2002).",
+  "[prose] ant incidence at baits during the day relative to the incidence at baits during the day and at night (1 indicates species active only in daytime, 0 indicates active only at night). Baiting data (Wiescher et al. 2011) were used because pitfall trap and leaf- litter sampling did not account for activity diVerences between day and night. We used permutation model 2 (999 permutations) to test the signiWcance of all relationships. Permutation model 2 tests the null hypothesis that species assemblages are randomly distributed with respect to environmental variables. The alternative hypothesis posits that species assemblages are distributed according to environmental preferences. This model is appropriate when traits and environmental variables are measured directly (Wxed) and species assemblages respond to environmental gradients, as is the case here (Aubin et al. 2009; Dray and Legendre 2008). We used the Bonferroni correction procedure to account for the three environmental variables examined. Statistical analyses were done using R 2.10.1 (R Development Core Team 2009) with the ade4 package (Dray and Dufour 2007).",
+  "[prose] COMMUNITY ECOLOGY - ORIGINAL RESEARCH",
+  "[prose] To determine the environmental characteristics of the four habitats, we Wrst measured groundcover, surface temperature, ambient temperature, and relative humidity. To estimate groundcover, we placed $0 . 2 5 \\text {-} \\mathrm { m } ^ { 2 }$ grids divided into $0 . 0 1 { \\scriptstyle - } { \\mathrm { m } } ^ { 2 }$ squares centered over each station on each plot in 2008. The total amount of covered ground was recorded; values were averaged to determine percent groundcover for each habitat. To measure surface temperature, we placed a HOBO© Type K thermocouple data logger (Onset) at the center of a plot representative of each habitat type. We calculated the average daytime (0600–1800 hours) surface temperatures for the summers of 2007 and 2008. We placed HOBO© Pro series RH Temp data loggers (Onset) at the center of the representative plots to record ambient temperature and relative humidity; loggers were situated 50 cm above the soil surface. Average daytime (0600–1800 hours) ambient temperature (T) and percent relative humidity (RH) for the summers of 2006, 2007, and 2008 were used to calculate average vapor pressure deWcit (VPD) for each habitat, where vapor pressure $( \\mathrm { V P } ) = 5 1 2 + 7 3 . 6 6 2 \\times T - 0 . 7 2 6 4 5 \\times$ $T ^ { 2 } + 0 . 0 7 9 6 1 6 \\times T ^ { 3 }$ and VPD $( \\mathrm { k P a } ) = \\mathrm { V P } - ( \\mathrm { V P } \\times \\mathrm { R H } \\times$ $1 0 0 ^ { - 1 } )$ (Ward and Elliot 1995). In addition, percent soil moisture at 0–20 cm of depth, soil pH, plant species richness (Abrahamson 1984; Menges and Gallo 1991), and time since Wre (J. Layne, R. Myers, E. Menges, and K. Main, unpublished data) for each habitat were identiWed using existing data sources.",
+  "[prose] For common species (marked with *), the diurnality index (DI: 1 indicates species active only in daytime, 0 indicates active only at night) and physiological traits were measured: foraging thermal limit (FTL), lethal temperature (LT) and area-independent water loss rates (AIWLR). AIWLR for F. pallidefulva (0.460*) was estimated from the measure obtained for C. Xoridanus; previous work in Florida has shown these two species experience similar water loss rates (Hood and Tschinkel 1990) and are similar in size",
+  "[table 3] HL (mm) | 0.071 | -0.080 | -0.047\nLL (mm) | 0.056 | -0.061 | -0.026\nRL | -0.186 | 0.189 | 0.176\nFTL (°C) | -0.147 | 0.134 | 0.150\nLT (°C) | -0.208 | 0.184 | 0.214\nAIWLR (mg × h-1× cm-2) | -0.005 | 0.004 | 0.016",
+  "[table 4] Trait | Groundcover (%) | Surface temperature (°C) | VPD (kPa)\nDiurnality-weighted dataset\nFTL (°C) | -0.206 | 0.168 | 0.212\nLT (°C) | -0.251 | 0.206 | 0.257\nAIWLR (mg × h^-1 × cm^-2 ) | -0.006 | 0.009 | 0.027"
+ ],
+ "categories": [
+  {
+   "variable": "ant incidence at baits during the day relative to the incidence at baits during the day and at night",
+   "code": "1",
+   "term": "indicates species active only in daytime",
+   "model_label": "daytime",
+   "label": "daytime",
+   "explanation": "indicates species active only in"
+  },
+  {
+   "variable": "ant incidence at baits during the day relative to the incidence at baits during the day and at night",
+   "code": "0",
+   "term": "indicates active only at night",
+   "model_label": "night",
+   "label": "night",
+   "explanation": "indicates active only at"
+  },
+  {
+   "variable": "diurnality index",
+   "code": "1",
+   "term": "indicates species active only in daytime",
+   "model_label": "daytime",
+   "label": "daytime",
+   "explanation": "indicates species active only in"
+  },
+  {
+   "variable": "diurnality index",
+   "code": "0",
+   "term": "indicates active only at night",
+   "model_label": "night",
+   "label": "night",
+   "explanation": "indicates active only at"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "less groundcover",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "hotter",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "drier conditions",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "lower plant species richness",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "groundcover",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "soil moisture",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "soil pH",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "time since Wre",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "desiccation resistance",
+   "code": "",
+   "label": "lethal desiccation time (LD50)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "desiccation resistance",
+   "code": "",
+   "label": "mean critical water content mass (WC)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "activity",
+   "code": "",
+   "label": "active only in daytime",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "activity",
+   "code": "",
+   "label": "active only at night",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "groundcover",
+   "code": "",
+   "label": "Groundcover (%)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "surface temperature",
+   "code": "",
+   "label": "Surface temperature (°C)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "ambient temperature",
+   "code": "",
+   "label": "ambient temperature",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "relative humidity",
+   "code": "",
+   "label": "relative humidity",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "vapor pressure deWcit",
+   "code": "",
+   "label": "VPD (kPa)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "soil moisture",
+   "code": "",
+   "label": "percent soil moisture at 0–20 cm of depth",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "plant species richness",
+   "code": "",
+   "label": "plant species richness",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "diurnality index",
+   "code": "",
+   "label": "diurnality index",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "foraging thermal limit",
+   "code": "",
+   "label": "foraging thermal limit (FTL)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "lethal temperature",
+   "code": "",
+   "label": "lethal temperature (LT)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "area-independent water loss rates",
+   "code": "",
+   "label": "area-independent water loss rates (AIWLR)",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 36.0,
+ "columns": [
+  [
+   1,
+   1,
+   "HI",
+   [
+    "0.00",
+    "0.72",
+    "0.06",
+    "0.69",
+    "0.86",
+    "0.62",
+    "0.30",
+    "0.13",
+    "0.96",
+    "1.00",
+    "0.28",
+    "0.82",
+    "0.50",
+    "0.54",
+    "0.71",
+    "0.53",
+    "0.79",
+    "0.10",
+    "0.27",
+    "0.05",
+    "0.17",
+    "0.90",
+    "0.20",
+    "0.33",
+    "0.46"
+   ]
+  ],
+  [
+   1,
+   2,
+   "Mass (mg)",
+   [
+    "0.65",
+    "0.02",
+    "2.01",
+    "1.18",
+    "3.07",
+    "0.03",
+    "0.12",
+    "0.11",
+    "0.13",
+    "0.08",
+    "0.79",
+    "0.07",
+    "0.18",
+    "1.46",
+    "0.05",
+    "0.04",
+    "0.09",
+    "1.45",
+    "0.23",
+    "0.01",
+    "0.41"
+   ]
+  ],
+  [
+   1,
+   3,
+   "HW (mm)",
+   [
+    "1.02",
+    "0.34",
+    "1.53",
+    "1.42",
+    "1.72",
+    "0.60",
+    "0.62",
+    "0.73",
+    "0.75",
+    "1.16",
+    "0.54",
+    "0.63",
+    "0.51",
+    "0.41",
+    "1.61",
+    "0.47",
+    "0.50",
+    "0.52",
+    "0.37",
+    "0.57",
+    "0.42",
+    "0.44",
+    "0.58",
+    "0.29",
+    "0.43"
+   ]
+  ],
+  [
+   1,
+   4,
+   "HL (mm)",
+   [
+    "1.46",
+    "0.37",
+    "2.01",
+    "1.69",
+    "2.16",
+    "0.43",
+    "0.65",
+    "0.72",
+    "0.85",
+    "0.88",
+    "0.84",
+    "1.43",
+    "0.60",
+    "0.70",
+    "0.61",
+    "0.50",
+    "2.03",
+    "0.54",
+    "0.56",
+    "0.57",
+    "0.41",
+    "0.63",
+    "0.48",
+    "0.47",
+    "0.45"
+   ]
+  ],
+  [
+   1,
+   5,
+   "LL (mm)",
+   [
+    "6.16",
+    "0.89",
+    "8.02",
+    "6.75",
+    "10.51",
+    "0.98",
+    "1.96",
+    "2.82",
+    "3.55",
+    "5.11",
+    "4.06",
+    "6.76",
+    "2.24",
+    "1.81",
+    "1.47",
+    "1.39",
+    "6.23",
+    "2.10",
+    "2.21",
+    "1.86",
+    "1.18",
+    "2.29",
+    "1.27",
+    "1.30",
+    "1.16"
+   ]
+  ],
+  [
+   1,
+   6,
+   "RL",
+   [
+    "2.19",
+    "2.02",
+    "2.00",
+    "2.07",
+    "2.12",
+    "1.91",
+    "2.17",
+    "2.47",
+    "2.46",
+    "2.87",
+    "2.66",
+    "2.31",
+    "2.5",
+    "1.95",
+    "1.90",
+    "2.15",
+    "1.78",
+    "2.62",
+    "2.34",
+    "2.27",
+    "2.44",
+    "2.09",
+    "2.16",
+    "2.6",
+    "2.03"
+   ]
+  ],
+  [
+   1,
+   7,
+   "DI",
+   [
+    "0.51",
+    "-",
+    "0.17",
+    "0.88",
+    "0.62",
+    "0.80",
+    "1.00",
+    "0.44",
+    "0.37",
+    "0.14",
+    "0.89",
+    "0.67",
+    "0.61",
+    "0.81",
+    "0.58"
+   ]
+  ],
+  [
+   1,
+   8,
+   "FTL (°C)",
+   [
+    "39.50",
+    "-",
+    "36.50",
+    "46.50",
+    "45.50",
+    "44.00",
+    "49.00",
+    "45.75",
+    "38.50",
+    "37.25",
+    "36.67",
+    "38.75",
+    "40.75"
+   ]
+  ],
+  [
+   1,
+   9,
+   "LT (°C)",
+   [
+    "42.3",
+    "-",
+    "40.8",
+    "47.3",
+    "45.2",
+    "45.6",
+    "46.9",
+    "49.3",
+    "47.4",
+    "41.1",
+    "42.8",
+    "39.9",
+    "44.7",
+    "42.5",
+    "41.7",
+    "43.7",
+    "41.3"
+   ]
+  ],
+  [
+   1,
+   10,
+   "AIWLR (mg × h-1× cm-2)",
+   [
+    "0.572",
+    "-",
+    "0.460",
+    "0.283",
+    "0.338",
+    "0.275",
+    "0.460*",
+    "0.214",
+    "0.124",
+    "0.273",
+    "0.926",
+    "1.254",
+    "0.467",
+    "0.293",
+    "0.246",
+    "0.212",
+    "0.264"
+   ]
+  ]
+ ]
+}

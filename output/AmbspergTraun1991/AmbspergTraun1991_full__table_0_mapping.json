@@ -2,77 +2,71 @@
   "Species": {
     "field": "verbatimIdentification",
     "value_column": false,
-    "reasoning": "This column contains the taxonomic identification of the focal insect.",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the verbatim identification of the organism."
+    "reasoning": "This column contains the taxonomic identification of the focal insect specimen.",
+    "category": "Morphological measurement",
+    "reasoning_relevance": "Names the identity of the organism, which is a biological trait."
   },
   "Direct search(n = 80)": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numeric count of the direct search observations.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the number of direct searches performed.",
-    "multi_value": false,
-    "value_type": "numeric"
+    "reasoning": "This column holds the measured count/abundance of the focal organism.",
+    "category": null,
+    "reasoning_relevance": "Represents an abundance or sample size, which is excluded."
   },
   "Baits(n = 16 )": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the numeric count of the bait observations.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the number of bait samples taken.",
-    "multi_value": false,
-    "value_type": "numeric"
+    "reasoning": "This column holds the measured count/abundance of the associated organism (baits).",
+    "category": null,
+    "reasoning_relevance": "Represents an abundance or sample size, which is excluded."
   },
   "Total(n = 96)": {
     "field": "measurementValue",
     "value_column": true,
-    "reasoning": "This column holds the total count of the observed specimens.",
-    "category": "Morphological measurement",
-    "reasoning_relevance": "Represents the total number of encounters recorded.",
-    "multi_value": false,
-    "value_type": "numeric"
+    "reasoning": "This column holds the total measured count/abundance of the focal organism.",
+    "category": null,
+    "reasoning_relevance": "Represents an abundance or sample size, which is excluded."
   },
   "Feeding group": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This describes the biotic association of the insect with its food source.",
+    "reasoning": "This describes the biotic association (diet) of the organism.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies the termite's feeding strategy.",
+    "reasoning_relevance": "Describes the functional feeding association of the termite species.",
     "multi_value": false,
     "value_type": "categorical",
     "canonicalType": "Feeding group",
     "basisOfRecord": "MaterialCitation",
-    "basisOfRecord_reasoning": "The feeding groups were assigned based on 'literature available on Australian termites and in situ observations' (citing multiple sources). This indicates the values were compiled from external sources and field observations rather than being directly measured by the authors on the specimens themselves.",
-    "measurementMethod": "Based on literature and in situ observations (Braithwaite et al. 1988; Spain & Reddell 1996; Tayasu et al. 1998; Dawes-Gromadzki & Spain 2003; Dawes-Gromadzki 2005a)",
-    "measurementMethod_reasoning": "The text explicitly states that species were assigned to feeding groups based on 'literature available on Australian termites and in situ observations' and lists the relevant citations used for this assignment."
+    "basisOfRecord_reasoning": "The feeding groups were assigned based on literature available on Australian termites and in situ observations (citing Braithwaite et al. 1988; Spain & Reddell 1996; etc.). The authors did not measure these groups directly but relied on existing knowledge and field observations to categorize the species.",
+    "measurementMethod": "Assignment based on literature and in situ observations",
+    "measurementMethod_reasoning": "The feeding groups were assigned by referencing existing literature and in situ observations rather than direct measurement by the authors of this study."
   },
   "Nesting group": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This describes the biotic association of the insect with its nesting site.",
+    "reasoning": "This describes the biotic association (nesting location) of the organism.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Classifies the termite's nesting habit.",
+    "reasoning_relevance": "Describes the nesting association/behavior of the termite species.",
     "multi_value": true,
     "value_type": "categorical",
     "canonicalType": "Nesting group",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The authors directly observed and recorded the nesting habits of the collected termite specimens during the direct search protocol, classifying them into defined nesting groups.",
-    "measurementMethod": "Direct visual examination and recording of the location of nests/habitats during direct searches",
-    "measurementMethod_reasoning": "The nesting habits were determined by examining the microhabitats (mounds, dead wood, etc.) during the direct search protocol, and then recording the corresponding nesting habit for each termite collection."
+    "basisOfRecord": "HumanObservation",
+    "basisOfRecord_reasoning": "The nesting habits (epigeal, hypogeal, nests within wood, arboreal nests) were determined by the authors through direct search and observation of the microhabitats during the sampling protocol, which constitutes field observation of behaviour/ecology.",
+    "measurementMethod": "Direct search and examination of microhabitats (mounds, dead wood, carton runways) during site searching.",
+    "measurementMethod_reasoning": "The nesting groups were identified by physically examining the mounds, dead wood, and other microhabitats on site, as described in the methods section, to determine the nesting habits of the encountered termite populations."
   },
   "Microhabitat found": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "This describes the physical habitat where the organism was found.",
+    "reasoning": "This describes the organism's habitat or microenvironment.",
     "category": "Categorical biological trait",
-    "reasoning_relevance": "Records the specific microhabitat where termites were found.",
+    "reasoning_relevance": "Describes the microhabitat where the termite was found.",
     "multi_value": true,
     "value_type": "categorical",
     "canonicalType": "Microhabitat found",
     "basisOfRecord": "HumanObservation",
-    "basisOfRecord_reasoning": "The data on microhabitat locations (mounds, dead wood, soil, etc.) were obtained through direct search and bait sampling protocols conducted by the authors in the field (in situ observation of behaviour and ecology).",
-    "measurementMethod": "Direct search and bait sampling protocol; examination of specific microhabitats (mounds, lying dead wood, soil, litter, carton runways, standing dead wood) for termites.",
-    "measurementMethod_reasoning": "The methods section details the protocol used to sample microhabitats. Direct searches involved examining epigeal/intermediate mounds and foraging trails on litter/trees, and examining standing/lying dead wood and soil beneath rotten wood. Bait sampling was also used to assess activity within these environments."
+    "basisOfRecord_reasoning": "The researchers directly searched and observed the termite microhabitats (mounds, dead wood, soil, etc.) in situ during the fieldwork, which constitutes field observation of behaviour and ecology.",
+    "measurementMethod": "Standardised direct search sampling protocol involving searching different microhabitats for termites, including examining epigeal and intermediate mounds, foraging trails, standing dead wood, lying dead wood, carton sheeting on dead wood, and soil beneath rotten wood.",
+    "measurementMethod_reasoning": "The text explicitly details the standardized protocol used by the researchers to search and record the termite microhabitats across the sites."
   }
 }

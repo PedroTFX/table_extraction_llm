@@ -1,0 +1,85 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Beyer2021\Beyer2021.xlsx  (206 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Beyer2021\Beyer2021.csv  (197 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'foraging preference' -> 'Foraging preference'
+  'intertegular distance' -> 'Intertegular Distance'
+  'sociality' -> 'Sociality'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 145
+  missed (FN)         : 61
+  spurious, in scope  : 34   <- GT covers this trait: real errors
+  spurious, out of scope: 18   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.736 / 0.704 / 0.720   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.810 / 0.704 / 0.753   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.704   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             18
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    145  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     57  0.000  <-- low
+  measurementStatistic          0    145  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    145  0.000  <-- low
+  lifeStage                     0    145  0.000  <-- low
+  caste                         0     84  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    145  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    145  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 61 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             27
+  species+trait present, value differs       34
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'species not known to collect pollen from fabaceae' ->  'not known to do so'         x34
+  -> 1 substitution explains 34 of 61 misses (56%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Tongue Length'                    x18
+     'Relative Tonghe Length'           x9
+  -> 2 missing traits explain 27 of 61 misses (44%) — scattered; no single cause
+
+  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (61 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1.2                                               0     4   PRED-ONLY
+  1.22                                              0     2   PRED-ONLY
+  1.23                                              0     2   PRED-ONLY
+  1.43                                              0     2   PRED-ONLY
+  1.47                                              0     2   PRED-ONLY
+  1.49                                              0     4   PRED-ONLY
+  2.15                                              0     2   PRED-ONLY
+  intertegular distance                            57    57   
+  foraging preference                              61    61   
+  relative tonghe length                            9     0   GT-ONLY
+  tongue length                                    18     0   GT-ONLY
+  sociality                                        61    61   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.810  0.704  0.753    145    34    61   id+type+value
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.736)
+  tags        0.000  0.000  0.000      0   179   206   basis+id+type+value+stat+sex+stage
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.753 vs previous)
+             note: only 0/145 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

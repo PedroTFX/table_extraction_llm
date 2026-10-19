@@ -1,0 +1,118 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Torok2022\Torok2022.xlsx  (501 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5c\Torok2022\Torok2022.csv  (386 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 20 pair(s))
+  '39. Tachysphex obscuripennis (Schenck, 1857)' -> 'Tachysphex obscuripennis (Schenck, 1857)'
+  '40. Tachysphex pompiliformis (Panzer,1805)' -> 'Tachysphex pompiliformis (Panzer,1805)'
+  '41. Tachysphex psammobius (Kohl, 1880)' -> 'Tachysphex psammobius (Kohl, 1880)'
+  '42. Tachysphex unicolor (Panzer,1809)' -> 'Tachysphex unicolor (Panzer,1809)'
+  '43. Telostegus inermis (Brullé, 1832)' -> 'Telostegus inermis (Brullé, 1832)'
+  '44. Tiphia femorata Fabricus,1775' -> 'Tiphia femorata Fabricus,1775'
+  '45. Trypoxylon scutatum Chevrier 1867' -> 'Trypoxylon scutatum Chevrier 1867'
+  '46. Vespula germanica (Fabricius,1793)' -> 'Vespula germanica (Fabricius,1793)'
+  'Ancistrocerus gazella(Panzer 1798)' -> 'Ancistrocerus gazella (Panzer 1798)'
+  'Aporinellus moestus sericeomaculatus(Kohl, 1888)' -> 'Aporinellus moestus sericeomaculatus (Kohl, 1888)'
+  'Arachnospila abnormis(Dahlbom, 1842)' -> 'Arachnospila abnormis (Dahlbom, 1842)'
+  'Arachnospila minutula(Dahlbom,1842)' -> 'Arachnospila minutula (Dahlbom,1842)'
+  'Arachnospila spissa(Schiødte,1837)' -> 'Arachnospila spissa (Schiødte,1837)'
+  'Arachnospila trivialis(Dahlbom,1843)' -> 'Arachnospila trivialis (Dahlbom,1843)'
+  'Astata boops(Schrank,1781)' -> 'Astata boops (Schrank,1781)'
+  'Bembecinus tridens(Fabricius, 1781)' -> 'Bembecinus tridens (Fabricius, 1781)'
+  'Chrysis illigeriWesmael,1839' -> 'Chrysis illigeri Wesmael,1839'
+  'Chrysis rutilansOlivier, 1790' -> 'Chrysis rutilans Olivier, 1790'
+  'Chrysura dichroa(Dahlbom, 1854)' -> 'Chrysura dichroa (Dahlbom, 1854)'
+  'Crabro scutellatus(von Scheven,1781)' -> 'Crabro scutellatus (von Scheven,1781)'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body size (mm)' -> 'Body Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 349
+  missed (FN)         : 152
+  spurious, in scope  : 21   <- GT covers this trait: real errors
+  spurious, out of scope: 16   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.904 / 0.697 / 0.787   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.943 / 0.697 / 0.801   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.697   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             16
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    349  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     72  0.000  <-- low
+  measurementStatistic          0    349  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    349  0.000  <-- low
+  lifeStage                     0    349  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    349  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 152 MISSED ROWS MISSED
+  species not in prediction                  10
+  species present, trait missing            124
+  species+trait present, value differs       18
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'oligolectic'                ->  'polylectic'                 x2
+     '11.5'                       ->  '4.5'                        x1
+     '4.5'                        ->  '11'                         x1
+     '11'                         ->  '9'                          x1
+     '9'                          ->  '6'                          x1
+     '6'                          ->  '12'                         x1
+  -> 6 substitutions explain 7 of 152 misses (5%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
+     gt 'Tiphia femorata Fabricus,1776'     ~0.94~  pred 'Tiphia femorata Fabricus,1775'   x2
+     gt 'Passaloecus pictus Ribaut, 1953'   ~0.94~  pred 'Passaloecus pictus Ribaut, 1952'   x2
+     gt 'Sphex funerarius Gussakovskij, 1935'  ~0.94~  pred 'Sphex funerarius Gussakovskij, 1934'   x2
+     gt 'Tachysphex mediterraneus Kohl, 1884'  ~0.94~  pred 'Tachysphex mediterraneus Kohl, 1883'   x2
+     gt 'Trypoxylon scutatum Chevrier 1868'  ~0.94~  pred 'Trypoxylon scutatum Chevrier 1867'   x2
+  -> 5 species mismatches explain 10 of 152 misses (7%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     ''                                 x86
+     'Larvae feeding preference'        x8
+     'Nest location'                    x8
+     'Social habit'                     x8
+     'Wasp preys'                       x8
+     'Body Size'                        x6
+  -> 6 missing traits explain 124 of 152 misses (82%) — systematic, not scattered
+
+  full miss detail saved -> Torok2022_misses.csv, Torok2022_misses_summary.json (152 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   91     0   GT-ONLY
+  (no name, column 4)                               0     8   PRED-ONLY
+  (no name, column 5)                               0     8   PRED-ONLY
+  body size                                        91    83   Δ-8 (split?)
+  larvae feeding preference                        91    83   Δ-8 (split?)
+  social habit                                     91    83   Δ-8 (split?)
+  nest location                                    91    83   Δ-8 (split?)
+  wasp preys                                       46    38   Δ-8 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.943  0.697  0.801    349    21   152   id+type+value
+             (16 more spurious row(s) set aside as out-of-scope; strict P would be 0.904)
+  tags        0.000  0.000  0.000      0   370   501   basis+id+type+value+stat+sex+stage
+             (16 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.801 vs previous)
+             note: only 0/349 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

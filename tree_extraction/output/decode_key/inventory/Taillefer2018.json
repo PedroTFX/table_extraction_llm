@@ -1,0 +1,1007 @@
+{
+ "paper": "Taillefer2018",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "and time is one of the oldest questions in ecology, and no general consensus has arisen to explain the patterns observed. Several alternative theories have been proposed. The niche theory dates back to Grinnell (1924) who defined an ‘ecological or environmental niche’ as the distributional unit where a species can live. A few years later, Elton (1927) developed a concept of niche in terms of food habits of a species. Later, Hutchinson (1957) defined the notion of ecological niche as a multidimensional space of suitable environmental variables for the survival of a species. More recently, Webb (2000) and Cavender-Bares et al. (2006) incorporated the phylogenetic structure of a community into ecological deterministic processes in the niche model that influence the community pattern. The concept of neutral theory developed by Bell (2000) and Hubbell (2001) assumes an equivalence between individuals (i.e. differences have no functional significance) and stochastic processes in species coexistence such as birth, death, speciation and dispersal. The continuum hypothesis (Gravel et al., 2006) proposed to unify the niche and neutral models, where the importance of deterministic and stochastic processes varies along a continuum. The model focuses on local community scale, where recruitment is a lottery between species competitive ability (niche processes) and dispersal limitations (neutral processes). Another dynamic model (Jabot et al., 2008) proposed a mathematical framework in which to measure the recruitment limitation defined as the influence of dispersal limitation and post-dispersal filtering of species. Vellend (2010) organised the large number of ecological theories into four distinct processes to provide a general conceptual framework in community ecology: selection, drift, speciation and dispersal."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We examined whether (i) wetland Schizophora communities exhibit taxonomic, phenotypic, and phylogenetic structure and (ii) whether rare species within wetland habitats are ecologically dissimilar to common species or whether commonness and rarity are essentially stochastic. Also, we examined (iii) how taxonomic, phylogenetic, and functional compositions are related to local environmental conditions, patch area, and/or surrounding landscape. We hypothesised that species composition is related to local conditions and diversity follows a gradient from poorer"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Fig. 1. Map of the 12 study locations in the Montreal metropolitan area and surroundings, Quebec, Canada. Stars: swamps; squares: marshes; triangles: bogs. (CAL_SW: Pointe-Calumet swamp; TIH_SW: St-Thimoth\u0001e swamp; OKA_SW: Oka National Park swamp; LAZ_SW: St-Lazare swamp; BER_MA: Ile St-Bernard marsh; OKA_MA: Oka National Park marsh; MIL_MA: Mirabel Parc du Domaine Vert marsh; FOR_MA: Pointe-Fortune marsh; BLA_BG: Blainville bog; PIN_BG: Pin-Rigide bog; BRB_BG: Ste-Barbe Large Tea Field bog; MIR_BG: Mirabel bog). Map created with SimpleMappr (www.simplemappr.net)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Diptera diversity and community structure. Diptera communities in each site were characterised by relative abundance, observed species richness and diversity from samples of pan traps and sweeping pooled by week and throughout the season. Individual-based accumulation curves at the global scale (all sites) and individual-based rarefaction curves at the local scale (individual sites) were computed to assess whether saturation was obtained with the methods of collection smoothed by 1000 repetitions of randomised sampling using the vegan package (Oksanen et al., 2015) in R version 3.2.2 (R Core Team, 2015). Significance of differences in overall relative abundance, observed species richness, rarefied species richness and expected species richness (Chao) among wetland type were determined based on ANOVA F tests."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "A non-metric multidimensional scaling (NMDS) ordination was used to assess differences among sites and weeks in relation to their Diptera community composition using the function metaMDS of the vegan package. A Hellinger transformation (Legendre & Gallagher, 2001) was used on the species data to give low weight to rare species. A permutational multivariate analysis of variance based on a Bray–Curtis distance matrix was used to assess significance of differences among habitats using the function Adonis of the vegan package. Ground cover variables were reduced with principal component analysis (PCA) using the correlation matrix (Dormann et al., 2013), and principal components (PC) were used in subsequent analyses. Significant PC were identified using the Kaiser–Guttman criterion (Yeomans & Golder, 1982). Variables with loadings larger than 0.32 were forming the clusters of interest (Booth et al., 1994) (Table 1). Latitude and"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "longitude were transformed into the corresponding coordinates in X (east–west) and Y (north–south) distances using the function geoXY in the package SoDA (Chambers, 2008). To reduce the number of environmental variables in the subsequent analyses and to avoid autocorrelation between them, first all remaining environmental variables were observed with scatterplots and Pearson’s correlation indices were calculated for all combination of variables (Dormann et al., 2013). The resultant matrix included the PC1 to 4, X and Y coordinates, % tree cover, % water above surface, conductivity, plant richness and all landscape variables. Environmental variables were standardised prior to subsequent analyses. The function envfit of the vegan package was used to examine the significant relationship between the"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "In all analyses, strong priors were set on the age of two nodes corresponding to Schizophora (LogNormal: mean = 3, SD = 0.78, offset = 70) and Chloropidae (LogNormal: mean = 3, SD = 0.7, offset = 42) according to palaeontological and molecular data (Nardi et al., 2010; Wiegmann et al., 2011). The appropriate model"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "topology was used (Kembel & Hubbell, 2006). These 999 null measurements were used to calculate measures of standardised effect size for MPD and MNTD: net relatedness index (NRI) and nearest taxon index (NTI) multi-plied by \u00011 (observed value minus the mean value of the 999 null values divided by the standard deviation of the 999 null values), respectively, and probabilities. Negative NRI/NTI values and high quantiles (P > 0.95) indicate phylogenetic evenness, while positive values and low quantiles (P"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "retrieved between \u0003 50 and 90% of Schizophora diversity (Table 2). In contrast, when considering the global set of sites, the individual-based accumulation curve reached an asymptote at 11 sites. The number of species increased rapidly with the addition of the first 10 sites, but once \\~11 sites were considered, the addition of more sites resulted in a small addition of new species. Global extrapolated species richness with Chao was evaluated to $4 1 3 . 8 \\pm 2 9 . 9$ individuals, meaning between 65 and 76% of species were collected. Scatella stagnalis Fall\u0001en (Ephydridae) was the most abundant species accounting for 12% of total abundance and was the most widely distributed species, being found in all sites. The next most abundant was Leptocera erythrocera (Becker) (Sphaeroceridae) (8%), followed by Rachispoda limosa (Fall\u0001en) (Sphaeroceridae), Incertella bispina (Malloch) (Chloropidae) and Elachiptera nigriceps (Loew) (Chloropidae), together accounting for 4% of the total specimens. Indicator species analysis revealed that 13 species were significantly associated with one type of wetland and that two were associated with two types (Table 3)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "When testing for the influence of habitat type with ANO-VAS, relative abundance $(F = 1.63,\\ P = 0.25)$ , observed species richness $(F = 2.14,\\ P = 0.173)$ , rarefied species richness (F = 0.69, $P = 0 . 5 2 )$ and extrapolated species richness (Chao) (F = 1.375, P = 0.3) (Table 2) were not significantly different between wetland types. High turnover of species was observed from week to week in marshes and bogs as supported by NMDS; although in swamps, species compositions from week to week were overlapping (Fig. 4a). For the functional groups, the abundance and richness of each trophic group were not"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Table 2. Abundance (N), species richness (Sobs) rarefied species richness \u0004 standard error (Sest) and extrapolated species richness (Chao) \u0004 standard error (Percentage contribution of observed species richness to expected species richness) (Sext) for each of the 12 wetland sites. Rarefied species richness was standardized at 196 individuals (PIN_BG). See Figure 1 legend for site codes."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Community composition shown by NMDS ordination (stress = 0.081) indicated distinct assemblages between the three types of wetlands (Adonis: $R^{2}=0.4,\\ P=0.001$ Species assemblages in each wetland class were associated mainly with local conditions: tree cover $( R ^ { 2 } = 0 . 9 4 ,$ $P = 0.001)$ PC1 (R 2 = 0.9, P = 0.001), conductivity (R 2 = 0.85, P = 0.002), water above surface $( R ^ { 2 } = 0 . 7 7 ,$ P = 0.002), and/or PC2 (R 2 = 0.74, P = 0.004) (Hydrocharis morsus-ranae, Typha angustifolia, Spirodela polyrhiza, Equisetum pratense, etc. (Table 1)) Only open water $( R ^ { 2 } = 0 . 6 8 ,$ P = 0.01) and exposed land $( R ^ { 2 } = 0 . 4 9 ,$ P = 0.04) surrounding the habitats had a lower positive association with marsh and bog, respectively (Fig. 4b)."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "The test of phylogenetic signal using Pagel’s lambda showed that the restriction to a wetland type $( \\lambda = 0.61 ,$ $\\ln L = -238.11, \\ln L _{\\lambda = 0} = -240.898, P = 0.018$ was significantly non-randomly distributed over the tree. Blomberg’s K value for size $(K = 0.55, P = 0.001)$ showed that closely related species resemble each other less in size than expected under the Brownian motion model of trait evolution. The GLS of size as a function of wetland type (ANOVA F = 0.83, $P = 0 . 4 4 )$ and the pGLS (F = 0.7, P = 0.5) models were both non-significant."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "As expected, Faith’s PD showed the same pattern as species richness as it is highly correlated with species richness, where none of the pairwise comparisons of wetland classes for the entire pool of species or by functional group displayed significant differences $(P > 0.05)$ . The phylogenetic structure of Diptera communities was never evenly distributed, only a few sites showed clustering and a large proportion showed randomness when compared to phylogenetically random communities generated by the null model. For all sites pooled together, mean NRI value for individuals (2.24, P = 0.016) and taxa (2.68, P = 0.0012) and mean NTI value for individuals (1.4, P = 0.01) and taxa (1.99, P = 0.0001) were significantly clustered. At the level of the entire tree, the bog habitat was significantly clustered for co-occurring species $( _ { \\mathrm { m e a n } } \\mathrm { N R I } = 3 . 9 , \\; P = 0 . 0 2 6 )$ but not for co-occurring individuals $( _ { \\mathrm { m e a n } } \\mathrm { N R I } = 2 . 0 7 , \\; P = 0 . 1 )$ . The other two wetland habitats were not significantly different from a random distribution $( _ { \\mathrm { m e a n } } \\mathrm { N R I } = 0 , P > 0 . 0 5 )$ . Phylogenetic clustering towards the tip of the tree was significant for marsh habitat for individuals $\\mathrm{({mean}NTI = 2.29)}$ , P = 0.04) and species $\\left( { meanNTI } = 2.57, P = 0.01 \\right) (Fig. 6)$ . The swamp habitat contains species randomly distributed at each level"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Fig. 3. Individual-based accumulation curves at the global scale (all sites) (above) and individual-based rarefaction curves at the local scale (individual sites) (below) were computed to assess whether saturation was obtained with the methods of collection smoothed by 1000 repetitions of randomised sampling. Species counts at 196 individuals for rarefied estimates are indicated by the vertical black line. [Colour figure can be viewed at wileyonlinelibrary.com]."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Table 3. Indicator species analysis of Brachycera species for bogs, marshes and swamps. Only species with ≥ 10 individuals and with an indicator value (IndVal) greater than 85 and a significant (P ≤ 0.05) indicator value are shown."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "large species (2.5, P = 0.016), parasites (2.62, P = 0.01) and rare species (2.7, P = 0.049) overall and by week (2.06, $P = 0.0009$ . The mean NRI value for rare species"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Fig. 4. Non-metric multidimensional scaling ordination of Diptera species collected (a) by week in each wetland type and (b) overall in the three types of wetlands. Arrows represent vectors of the seven variables that explain Diptera species composition. [Colour figure can be viewed at wileyonlinelibrary.com]."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "in marshes by week was also significantly clustered (1.15, $P = 0.0009$ . The mean NTI values in marsh habitat showed clustering for medium species (1.76, $P = 0 . 0 2 6 )$ saprophages (1.72, $P = 0 . 0 1 )$ and rare species (1.97, $P = 0 . 0 1 8 )$ overall and by week (0.96, P = 0.00023) and in bogs for large species (1.46, $P = 0 . 0 3 4 )$ , rare species by week (1.44, $P = 0.00027$ and restricted species (1.99, $P = 0 . 0 4 )$ . Standardised effect sizes for all traits pooled were not significantly different from a random expectation."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Mantel correlation between beta- and phylobeta-diversity was only significantly correlated with spatial distance for small $( r = 0 . 3 2$ $P = 0 . 0 3 2 )$ and common $( r = 0 . 3 1$ $P = 0 . 0 1 )$ species beta-NTI values . All Mantel correlations for taxonomic Bray–Curtis versus phylogenetic diversity and trait dissimilarities were significant. Adonis analyses showed significant differences between types of wetland for all NMDS ordinations except for beta-diversity in traits MPD $( R ^ { 2 } = 0 . 2 4$ $P = 0 . 1 )$ (Fig. 7) and betadiversity in common species MNTD/MPD $( P > 0 . 0 5 )$ Overall MPD and MNTD phylogenetic beta-diversity were influenced each by a subset of environmental variables influencing community structure. MPD beta-diversity was affected in decreasing order by conductivity $( R ^ { 2 } = 0 . 8 3 , P = 0 . 0 0 1 )$ , PC1 $( R ^ { 2 } = 0 . 7 7$ , P = 0.02), surrounding open water $( R ^ { 2 } = 0 . 6 7$ $P = 0 . 0 1 6 )$ and tree cover $( R ^ { 2 } = 0 . 6 1$ $P = 0 . 0 1 )$ . MNTD beta-diversity was"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "influenced in decreasing order by $PC1 \\quad (R^{2} = 0.9,$ $P = 0.001)$ , tree cover $(R^{2}=0.82,\\quad P=0.003)$ , PC2 $( R ^ { 2 } = 0 . 7 5 ,$ $P = 0 . 0 0 5 ) ,$ conductivity $( R ^ { 2 } = 0 . 6 8 ,$ $P = 0 . 0 1 1 ) ,$ surrounding exposed land $( R ^ { 2 } = 0 . 6 2 ,$ $P = 0 . 0 2 5 )$ surrounding open water $( R ^ { 2 } = 0 . 5 9 ,$ $P = 0 . 0 2 5 )$ and water above surface $( R ^ { 2 } = 0 . 5 8 ,$ $P = 0 . 0 1 3 )$ . Trait beta-diversity was influenced by a subset of environmental variables influencing beta-MPD/MNTD (Fig. 7)."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "![Image block](doc:769fab3/tier:advanced/page:10/block:3)"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Fig. 5. Changes in (a) Trophic mean abundance and richness; (b) rarity mean abundance and richness; and (c) size class mean abundances and richness of Diptera between bogs (BG), marshes (MA) and swamps (SW) for phytophages (PH), predators (PR), saprophages (SA) and parasites (PA)."
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "![Image block](doc:769fab3/tier:advanced/page:11/block:3)"
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "Fig. 6. Distribution of mean \u0004 standard deviation of phylogenetic diversity, net relatedness index (NRI) and nearest taxon index (NTI) of Diptera across the three wetland types (BG: bog, MA: marsh, SW: swamp). *Significant deviation from 0 (t-test) at $p \\leq 0 . 0 5$"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "coincided with the Hypsithermal, the warmest time interval of the current interglacial (Pielou, 1991). These warmer and drier conditions permitted dispersal of flora and fauna northwards (Hewitt, 2000). Consequently, the current distribution of species in bog communities, particularly those with low dispersal range, is still influenced by this past event. During community assembly, environmental filtering first acted on species where plant assemblages (PC1) influenced which traits allowed species establishment. The plant composition is characteristic with only a few species that can survive in these acid and low nutrient conditions. Therefore, the characteristic bog plant species are locally abundant, but do not occur in the surrounding environments. Environmental filtering mostly affected large, parasitic and rare fly species. Several Diptera species are considered peatland specialists (Teskey & Burger, 1976; Miller, 1977; Farkas & Brust, 1986; Marshall, 1994), likely because specialist species survived glaciation in suitable habitats in the southern refugium, and then dispersed northwards as the ice receded. In accordance with our hypotheses, we found indications that the bogs support closely related species filtered by harsher environmental conditions, as the"
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "![Image block](doc:769fab3/tier:advanced/page:12/block:3)"
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "Fig. 7. Non-metric multidimensional scaling ordination of species and trait phylogenetic beta-diversity of mean pairwise distance (MPD) and mean nearest taxon distance (MNTD) of Diptera in the three types of wetlands. Arrows represent vectors of the variables that explain phylogenetic turnover in community composition. [Colour figure can be viewed at wileyonlinelibrary.com]."
+  },
+  {
+   "id": "u28",
+   "kind": "prose",
+   "text": "assembly processes are important, restoration projects may require intervention such as propagule addition or removal to consider stochasticity (Gr\u0001egoire Taillefer & Wheeler, 2013). On the other hand, when niche processes are more important, restoration projects should focus on desired habitat properties for species of interest. The wide range of wetland site size (6.7–161.6 ha) did not influence the diversity and abundance of Diptera, which was similar to results found by Savage et al. (2011). Area has been found to influence predacious long-legged fly communities in reed marshes (Decleer et al., 2015), so the effect may vary with size and specialisation and be obscured in these functionally diverse communities. Local characteristics are the major determinants of composition. We could argue that even small fragments of wetlands are of major importance to maintain high diversity and abundance of Diptera. This is in line with Perovi\u0001c et al. (2015) who showed that maintaining a higher level of landscape complexity (within 250–1000 m of the habitat patch) with many small important habitat patches for butterflies was maintaining increased taxonomic and functional diversity. More configurational heterogeneous landscapes are shown to support more microhabitats thus more species with different ecological functions (Devictor & Jiguet, 2007; Fahrig et al., 2011). Given the rapid disappearance of wetlands and their invaluable roles for carbon sequestration, habitat for endangered species, water quality and supply, this study bears further examination based on additional data, including at a larger scale and with other types of organisms."
+  },
+  {
+   "id": "u29",
+   "kind": "prose",
+   "text": "Feeding: Larval feeding habit – SA: saprophage, PR: predator, PA: parasite/parasitoid, PH : phytophage"
+  },
+  {
+   "id": "u30",
+   "kind": "prose",
+   "text": "Spe/Gen: Specialist/ Generalist – S: feed on one genus/type of plant, animal or substrate, G"
+  },
+  {
+   "id": "u31",
+   "kind": "prose",
+   "text": "Habitat pref: Habitat preference for oviposition – M: moist, L: lentic, T: terrestrial"
+  },
+  {
+   "id": "u32",
+   "kind": "prose",
+   "text": "Type wetland: Restriction to a wetland habitat – R: restricted (found in only one wetland type), I: intermediate (found in two wetland types), B: broad (found in three wetland types)"
+  },
+  {
+   "id": "u33",
+   "kind": "prose",
+   "text": "Freq occurrence: Frequency of occurrence – 1: only found in one site, 2: found in 2 to 6 sites, 3: found in 7 to 13 sites, 4: found in 14 to 16 sites."
+  },
+  {
+   "id": "u34",
+   "kind": "table 1",
+   "text": "Family | Value\nAgromyzidae | 0.12\nClusiidae | 0.12\nPeriscelididae | 0.12\nScathophagidae | 0.12\nCalliphoridae | 0.12\nSarcophagidae | 0.12\nEphydridae | 0.12\nDrosophilidae | 0.12\nEphydridae | 0.12"
+  },
+  {
+   "id": "u35",
+   "kind": "table 1",
+   "text": "Heleomyzidae | 0.12\nSphaeroceridae | 0.12\nOutgroup | 0.12\nChloropidae | 0.12\nMilichiidae | 0.12\nMicropezidae | 0.12\nUlidiidae | 0.12\nPallopteridae | 0.12\nTephritidae | 0.12\nPlatystomatidae | 0.12"
+  },
+  {
+   "id": "u36",
+   "kind": "table 1",
+   "text": "Lauxaniidae | 0.12\nChamaemyiidae | 0.12\nSepsidae | 0.12\nDryomyzidae | 0.12\nSciomyzidae | 0.12"
+  },
+  {
+   "id": "u37",
+   "kind": "table 3",
+   "text": "Category | Number of individuals (range) | No. of species (range)\nMIR_BG | 0~450 | 0~65\nPIN_BG | 0~200 | 0~45\nBLA_BG | 0~200 | 0~35\nBER_MA | 0~200 | 0~50\nFOR_MA | 0~200 | 0~30\nOKA_MA | 0~200 | 0~50\nMIL_MA | 0~1000 | 0~90\nLAZ_SW | 0~200 | 0~65\nCAL_SW | 0~500 | 0~80"
+  },
+  {
+   "id": "u38",
+   "kind": "table 3",
+   "text": "OKA_SW | 0~1000 | 0~90\nTIH_SW | 0~1500 | 0~100"
+  },
+  {
+   "id": "u39",
+   "kind": "table 6",
+   "text": "Variable | NMDS1 (range) | NMDS2 (range)\nSwamp | -0.8~-0.4 | 0.1~0.5\nTree_cloyer | -0.7~-0.3 | -0.2~0.1\nConductivity | -0.6~-0.3 | -0.3~-0.1\nOpen_water_above_surface | -0.2~0.6 | -0.9~-0.5\nMarsh | 0.1~0.7 | -0.5~-0.1\nBog | 0.1~0.6 | 0.3~0.8\nExposed_land | 0.2~0.6 | 0.4~0.5\nPC1- | 0.4~0.7 | 0.3~0.5"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10"
+  ],
+  [
+   "u11",
+   "u12",
+   "u13"
+  ],
+  [
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19"
+  ],
+  [
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24",
+   "u25",
+   "u26"
+  ],
+  [
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33",
+   "u34"
+  ],
+  [
+   "u35",
+   "u36",
+   "u37",
+   "u38",
+   "u39"
+  ]
+ ],
+ "calls": 18,
+ "categories": [
+  {
+   "variable": "swamps",
+   "code": "Stars",
+   "term": "swamps",
+   "unit": "u2",
+   "model_label": "swamps",
+   "label": "swamps",
+   "explanation": ""
+  },
+  {
+   "variable": "marshes",
+   "code": "squares",
+   "term": "marshes",
+   "unit": "u2",
+   "model_label": "marshes",
+   "label": "marshes",
+   "explanation": ""
+  },
+  {
+   "variable": "bogs",
+   "code": "triangles",
+   "term": "bogs",
+   "unit": "u2",
+   "model_label": "bogs",
+   "label": "bogs",
+   "explanation": ""
+  },
+  {
+   "variable": "Ground cover variables",
+   "code": "PC",
+   "term": "principal components",
+   "unit": "u4",
+   "model_label": "principal components",
+   "label": "principal components",
+   "explanation": ""
+  },
+  {
+   "variable": "Percentage contribution of observed species richness to expected species richness",
+   "code": "Sext",
+   "term": "Percentage contribution of observed species richness to expected species richness",
+   "unit": "u10",
+   "model_label": "Percentage contribution of observed species richness to expected species richness",
+   "label": "Percentage contribution of observed species richness to expected species richness",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "Adonis",
+   "term": "Adonis",
+   "unit": "u11",
+   "model_label": "Adonis",
+   "label": "Adonis",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "marsh",
+   "term": "marsh",
+   "unit": "u11",
+   "model_label": "marsh",
+   "label": "marsh",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "bog",
+   "term": "bog",
+   "unit": "u11",
+   "model_label": "bog",
+   "label": "bog",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "open water",
+   "term": "open water",
+   "unit": "u11",
+   "model_label": "open water",
+   "label": "open water",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "exposed land",
+   "term": "exposed land",
+   "unit": "u11",
+   "model_label": "exposed land",
+   "label": "exposed land",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "bog habitat",
+   "term": "bog habitat",
+   "unit": "u13",
+   "model_label": "bog habitat",
+   "label": "bog habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "marsh habitat",
+   "term": "marsh habitat",
+   "unit": "u13",
+   "model_label": "marsh habitat",
+   "label": "marsh habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "wetland type",
+   "code": "swamp habitat",
+   "term": "swamp habitat",
+   "unit": "u13",
+   "model_label": "swamp habitat",
+   "label": "swamp habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "Indicator species analysis of Brachycera species for bogs, marshes and swamps.",
+   "code": "IndVal",
+   "term": "indicator value",
+   "unit": "u15",
+   "model_label": "indicator value",
+   "label": "indicator value",
+   "explanation": ""
+  },
+  {
+   "variable": "large species",
+   "code": "2.5",
+   "term": "large species",
+   "unit": "u16",
+   "model_label": "large species",
+   "label": "large species",
+   "explanation": ""
+  },
+  {
+   "variable": "parasites",
+   "code": "2.62",
+   "term": "parasites",
+   "unit": "u16",
+   "model_label": "parasites",
+   "label": "parasites",
+   "explanation": ""
+  },
+  {
+   "variable": "rare species",
+   "code": "2.7",
+   "term": "rare species",
+   "unit": "u16",
+   "model_label": "rare species",
+   "label": "rare species",
+   "explanation": ""
+  },
+  {
+   "variable": "medium species",
+   "code": "1.76",
+   "term": "medium species",
+   "unit": "u18",
+   "model_label": "medium species",
+   "label": "medium species",
+   "explanation": ""
+  },
+  {
+   "variable": "saprophages",
+   "code": "1.72",
+   "term": "saprophages",
+   "unit": "u18",
+   "model_label": "saprophages",
+   "label": "saprophages",
+   "explanation": ""
+  },
+  {
+   "variable": "rare species",
+   "code": "1.97",
+   "term": "rare species",
+   "unit": "u18",
+   "model_label": "rare species",
+   "label": "rare species",
+   "explanation": ""
+  },
+  {
+   "variable": "large species",
+   "code": "1.46",
+   "term": "large species",
+   "unit": "u18",
+   "model_label": "large species",
+   "label": "large species",
+   "explanation": ""
+  },
+  {
+   "variable": "rare species by week",
+   "code": "1.44",
+   "term": "rare species",
+   "unit": "u18",
+   "model_label": "rare species",
+   "label": "rare species",
+   "explanation": ""
+  },
+  {
+   "variable": "restricted species",
+   "code": "1.99",
+   "term": "restricted species",
+   "unit": "u18",
+   "model_label": "restricted species",
+   "label": "restricted species",
+   "explanation": ""
+  },
+  {
+   "variable": "small species",
+   "code": "r = 0 . 3 2",
+   "term": "small",
+   "unit": "u19",
+   "model_label": "small",
+   "label": "small",
+   "explanation": ""
+  },
+  {
+   "variable": "common species",
+   "code": "r = 0 . 3 1",
+   "term": "common",
+   "unit": "u19",
+   "model_label": "common",
+   "label": "common",
+   "explanation": ""
+  },
+  {
+   "variable": "between bogs",
+   "code": "BG",
+   "term": "bogs",
+   "unit": "u22",
+   "model_label": "bogs",
+   "label": "bogs",
+   "explanation": ""
+  },
+  {
+   "variable": "between marshes",
+   "code": "MA",
+   "term": "marshes",
+   "unit": "u22",
+   "model_label": "marshes",
+   "label": "marshes",
+   "explanation": ""
+  },
+  {
+   "variable": "between swamps",
+   "code": "SW",
+   "term": "swamps",
+   "unit": "u22",
+   "model_label": "swamps",
+   "label": "swamps",
+   "explanation": ""
+  },
+  {
+   "variable": "of Diptera",
+   "code": "PH",
+   "term": "phytophages",
+   "unit": "u22",
+   "model_label": "phytophages",
+   "label": "phytophages",
+   "explanation": ""
+  },
+  {
+   "variable": "of Diptera",
+   "code": "PR",
+   "term": "predators",
+   "unit": "u22",
+   "model_label": "predators",
+   "label": "predators",
+   "explanation": ""
+  },
+  {
+   "variable": "of Diptera",
+   "code": "SA",
+   "term": "saprophages",
+   "unit": "u22",
+   "model_label": "saprophages",
+   "label": "saprophages",
+   "explanation": ""
+  },
+  {
+   "variable": "of Diptera",
+   "code": "PA",
+   "term": "parasites",
+   "unit": "u22",
+   "model_label": "parasites",
+   "label": "parasites",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval feeding habit",
+   "code": "SA",
+   "term": "saprophage",
+   "unit": "u29",
+   "model_label": "saprophage",
+   "label": "saprophage",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval feeding habit",
+   "code": "PR",
+   "term": "predator",
+   "unit": "u29",
+   "model_label": "predator",
+   "label": "predator",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval feeding habit",
+   "code": "PA",
+   "term": "parasite/parasitoid",
+   "unit": "u29",
+   "model_label": "parasite/parasitoid",
+   "label": "parasite/parasitoid",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval feeding habit",
+   "code": "PH",
+   "term": "phytophage",
+   "unit": "u29",
+   "model_label": "phytophage",
+   "label": "phytophage",
+   "explanation": ""
+  },
+  {
+   "variable": "Spe/Gen",
+   "code": "S",
+   "term": "feed on one genus/type of plant, animal or substrate",
+   "unit": "u30",
+   "model_label": "feed on one genus/type of plant, animal or substrate",
+   "label": "feed on one genus/type of plant, animal or substrate",
+   "explanation": ""
+  },
+  {
+   "variable": "Spe/Gen",
+   "code": "G",
+   "term": "Generalist",
+   "unit": "u30",
+   "model_label": "Generalist",
+   "label": "Generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference for oviposition",
+   "code": "M",
+   "term": "moist",
+   "unit": "u31",
+   "model_label": "moist",
+   "label": "moist",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference for oviposition",
+   "code": "L",
+   "term": "lentic",
+   "unit": "u31",
+   "model_label": "lentic",
+   "label": "lentic",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference for oviposition",
+   "code": "T",
+   "term": "terrestrial",
+   "unit": "u31",
+   "model_label": "terrestrial",
+   "label": "terrestrial",
+   "explanation": ""
+  },
+  {
+   "variable": "Type wetland",
+   "code": "R",
+   "term": "restricted (found in only one wetland type)",
+   "unit": "u32",
+   "model_label": "restricted",
+   "label": "restricted",
+   "explanation": "found in only one wetland type"
+  },
+  {
+   "variable": "Type wetland",
+   "code": "I",
+   "term": "intermediate (found in two wetland types)",
+   "unit": "u32",
+   "model_label": "intermediate",
+   "label": "intermediate",
+   "explanation": "found in two wetland types"
+  },
+  {
+   "variable": "Type wetland",
+   "code": "B",
+   "term": "broad (found in three wetland types)",
+   "unit": "u32",
+   "model_label": "broad",
+   "label": "broad",
+   "explanation": "found in three wetland types"
+  },
+  {
+   "variable": "Frequency of occurrence",
+   "code": "1",
+   "term": "only found in one site",
+   "unit": "u33",
+   "model_label": "only",
+   "label": "only",
+   "explanation": "found in one site"
+  },
+  {
+   "variable": "Frequency of occurrence",
+   "code": "2",
+   "term": "found in 2 to 6 sites",
+   "unit": "u33",
+   "model_label": "2",
+   "label": "2",
+   "explanation": "found in to 6 sites"
+  },
+  {
+   "variable": "Frequency of occurrence",
+   "code": "3",
+   "term": "found in 7 to 13 sites",
+   "unit": "u33",
+   "model_label": "7",
+   "label": "7",
+   "explanation": "found in to 13 sites"
+  },
+  {
+   "variable": "Frequency of occurrence",
+   "code": "4",
+   "term": "found in 14 to 16 sites",
+   "unit": "u33",
+   "model_label": "14",
+   "label": "14",
+   "explanation": "found in to 16 sites"
+  },
+  {
+   "variable": "ecological or environmental niche",
+   "code": "",
+   "label": "ecological or environmental niche",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "niche",
+   "code": "",
+   "label": "niche",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "ecological niche",
+   "code": "",
+   "label": "ecological niche",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "selection",
+   "code": "",
+   "label": "selection",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "drift",
+   "code": "",
+   "label": "drift",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "speciation",
+   "code": "",
+   "label": "speciation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "dispersal",
+   "code": "",
+   "label": "dispersal",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "wetland type",
+   "code": "",
+   "label": "wetland type",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "indicator species analysis",
+   "code": "",
+   "label": "one type of wetland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "indicator species analysis",
+   "code": "",
+   "label": "two types",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "wetland type",
+   "code": "",
+   "label": "swamp",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "MPD",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "MNTD",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "beta-diversity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "Trophic mean abundance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "richness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "rarity mean abundance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "size class mean abundances",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "peatland specialists",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Spe/Gen",
+   "code": "",
+   "label": "Specialist",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Variable",
+   "code": "",
+   "label": "Tree_cloyer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u39"
+  },
+  {
+   "variable": "Variable",
+   "code": "",
+   "label": "Conductivity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u39"
+  },
+  {
+   "variable": "Variable",
+   "code": "",
+   "label": "Open_water_above_surface",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u39"
+  },
+  {
+   "variable": "Variable",
+   "code": "",
+   "label": "Exposed_land",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u39"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "Category",
+   "code": "MIR_BG",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "PIN_BG",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "BLA_BG",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "BER_MA",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "FOR_MA",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "OKA_MA",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "MIL_MA",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "LAZ_SW",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "CAL_SW",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "OKA_SW",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "TIH_SW",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Swamp",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Tree_cloyer",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Conductivity",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Open_water_above_surface",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Marsh",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Bog",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "Exposed_land",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Variable",
+   "code": "PC1-",
+   "term": "",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 114.8
+}

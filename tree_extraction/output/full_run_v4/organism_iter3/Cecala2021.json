@@ -1,0 +1,70 @@
+{
+ "2": {
+  "candidates": [
+   "Taxonomy family",
+   "Taxonomy genus",
+   "Taxonomy subgenus",
+   "Taxonomy species"
+  ],
+  "kinds": {
+   "Taxonomy family": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.999,
+     "other": 0.001
+    }
+   },
+   "Taxonomy genus": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.001,
+     "higher": 0.998,
+     "other": 0.001
+    }
+   },
+   "Taxonomy subgenus": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.001,
+     "part": 0.001,
+     "higher": 0.99,
+     "other": 0.008
+    }
+   },
+   "Taxonomy species": {
+    "choice": "species",
+    "probs": {
+     "species": 0.997,
+     "part": 0.001,
+     "higher": 0.001,
+     "other": 0.001
+    }
+   }
+  },
+  "organism": "Taxonomy species",
+  "genus_from": null,
+  "outcome": "species column"
+ },
+ "6": {
+  "candidates": [
+   "plant species name"
+  ],
+  "kinds": {
+   "plant species name": {
+    "choice": "species",
+    "probs": {
+     "species": 0.999,
+     "part": 0.0,
+     "higher": 0.0,
+     "other": 0.0
+    }
+   }
+  },
+  "organism": "plant species name",
+  "genus_from": null,
+  "outcome": "species column"
+ }
+}

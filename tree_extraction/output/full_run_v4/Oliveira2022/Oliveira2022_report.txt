@@ -1,0 +1,129 @@
+  [semantic] left unmatched: 'AL' vs 'Mandible length ratio' (llm said different traits)
+  [semantic] left unmatched: 'AL' vs 'Antenna length ratio' (llm said different traits)
+  [semantic] left unmatched: 'AL' vs 'Clypeus length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits AL mean' vs 'Mandible length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits AL mean' vs 'Antenna length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits AL mean' vs 'Eye length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits AL variance' vs 'Mandible length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits AL variance' vs 'Antenna length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits AL variance' vs 'Clypeus length ratio' (llm said different traits)
+  [semantic] left unmatched: 'Traits CL mean' vs 'Clypeus length ratio' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Oliveira2022\Oliveira2022.xlsx  (390 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v4\Oliveira2022\Oliveira2022.csv  (914 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Dorymyrmex goeldii' -> 'Dorymyrex goeldii'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Dorymyrmex thoracicus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'LEG' -> 'Leg length ratio'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 390
+  spurious, in scope  : 5   <- GT covers this trait: real errors
+  spurious, out of scope: 909   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            909
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 390 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            353
+  species+trait present, value differs       37
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '1.739'                      ->  'mean'                       x3
+     '1.753'                      ->  'mean'                       x2
+     '1.746'                      ->  'mean'                       x2
+     '1.742'                      ->  'mean'                       x1
+     '1.758'                      ->  'mean'                       x1
+     '1.745'                      ->  'mean'                       x1
+  -> 6 substitutions explain 10 of 390 misses (3%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Antenna length ratio'             x50
+     'Clypeus length ratio'             x50
+     'Eye length ratio'                 x50
+     'Eye position ratio'               x50
+     'Mandible length ratio'            x50
+     'Mesosoma length'                  x50
+  -> 6 missing traits explain 300 of 390 misses (77%) — systematic, not scattered
+
+  full miss detail saved -> Oliveira2022_misses.csv, Oliveira2022_misses_summary.json (390 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  al                                                0     2   PRED-ONLY
+  traits al mean                                    0    50   PRED-ONLY
+  traits al variance                                0    49   PRED-ONLY
+  antenna length ratio                             50     0   GT-ONLY
+  cl                                                0     1   PRED-ONLY
+  traits cl mean                                    0    50   PRED-ONLY
+  traits cl variance                                0    50   PRED-ONLY
+  clypeus length ratio                             50     0   GT-ONLY
+  dh                                                0    50   PRED-ONLY
+  global multimeric disturbance index               0    50   PRED-ONLY
+  el                                                0     2   PRED-ONLY
+  traits el mean                                    0    50   PRED-ONLY
+  traits el variance                                0    50   PRED-ONLY
+  eye length ratio                                 50     0   GT-ONLY
+  eye position ratio                               50     0   GT-ONLY
+  traits iow mean                                   0    50   PRED-ONLY
+  traits iow variance                               0    50   PRED-ONLY
+  leg length ratio                                 50     5   Δ-45 (split?)
+  traits leg mean                                   0    50   PRED-ONLY
+  traits leg variance                               0    50   PRED-ONLY
+  mandible length ratio                            50     0   GT-ONLY
+  mesosoma length                                  50     0   GT-ONLY
+  traits ml mean                                    0    50   PRED-ONLY
+  traits p mean                                     0    50   PRED-ONLY
+  traits wl mean                                    0    50   PRED-ONLY
+  ml                                                0     2   PRED-ONLY
+  traits ml variance                                0    50   PRED-ONLY
+  p                                                 0     3   PRED-ONLY
+  traits p variance                                 0    50   PRED-ONLY
+  pilosity                                         40     0   GT-ONLY
+  traits wl variance                                0    50   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'mandible length ratio'            vs pred 'traits leg mean'                  sim=0.57
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     5   390   id+type+value
+             (909 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     5   390   basis+id+type+value+stat+sex+stage
+             (909 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

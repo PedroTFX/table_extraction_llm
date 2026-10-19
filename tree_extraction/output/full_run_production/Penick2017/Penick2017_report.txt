@@ -1,0 +1,83 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Penick2017\Penick2017.xlsx  (90 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Penick2017\Penick2017.csv  (98 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  '$CT {max}$ (°C)SD, n' -> 'CT Max'
+  'Activity seasonLength (days)IQR' -> 'Activity season length'
+  'Pupal development time (days) 20°C' -> 'Pupal development'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 28
+  missed (FN)         : 62
+  spurious, in scope  : 28   <- GT covers this trait: real errors
+  spurious, out of scope: 42   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.286 / 0.311 / 0.298   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.500 / 0.311 / 0.384   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.311   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             42
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     28  0.000  <-- low
+  measurementMethod             0     14  0.000  <-- low
+  measurementUnit              14     28  0.500
+  measurementStatistic          0     28  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          28     28  1.000
+  lifeStage                    14     28  0.500
+  caste                         0      0    n/a
+  sampleSizeValue               0     16  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     14  0.000  <-- low
+  samplingProtocol              0     14  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     28  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 62 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             14
+  species+trait present, value differs       48
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '11'                         ->  '27'                         x2
+     '12'                         ->  '30'                         x2
+     '9'                          ->  '29'                         x2
+     '12'                         ->  '32'                         x2
+     '95.5'                       ->  '95.5127.5-223'              x1
+     '101'                        ->  '101167-268'                 x1
+  -> 6 substitutions explain 10 of 62 misses (16%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Elevation'                        x14
+  -> 1 missing trait explains 14 of 62 misses (23%) — scattered; no single cause
+
+  full miss detail saved -> Penick2017_misses.csv, Penick2017_misses_summary.json (62 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pupal development time (days) 23°c                0    14   PRED-ONLY
+  pupal development time (days) 26°c                0    14   PRED-ONLY
+  pupal development time (days) 29°c                0    14   PRED-ONLY
+  activity season length                            6    14   Δ+8 (split?)
+  ct max                                           14    28   Δ+14 (split?)
+  elevation                                        14     0   GT-ONLY
+  pupal development                                56    14   Δ-42 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.500  0.311  0.384     28    28    62   id+type+value
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.286)
+  tags        0.000  0.000  0.000      0    56    90   basis+id+type+value+stat+sex+stage
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.384 vs previous)

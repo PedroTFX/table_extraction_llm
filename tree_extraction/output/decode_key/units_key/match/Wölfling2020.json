@@ -1,0 +1,338 @@
+{
+ "_columns": [
+  [
+   5,
+   3,
+   "Classification of the degree of specialization / Food",
+   [
+    "1",
+    "3",
+    "4",
+    "2"
+   ]
+  ],
+  [
+   5,
+   5,
+   "Classification of the degree of specialization / Habitat",
+   [
+    "1",
+    "3",
+    "4",
+    "2"
+   ]
+  ]
+ ],
+ "5:3": {
+  "cells": {
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Monophagous within one plant genus",
+       "43°-46° N (range limit: south of the Alps"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "1": {
+      "e0": 0.178,
+      "e1": 0.001,
+      "keep": 0.821
+     }
+    }
+   },
+   "3": {
+    "term": "Polyphagous: >1 plant family",
+    "parts": [
+     "3"
+    ],
+    "options": {
+     "3": {
+      "evidence": "explicit",
+      "labels": [
+       "Polyphagous: >1 plant family",
+       "51°-54° N (range limit: North or Baltic sea coast"
+      ]
+     }
+    },
+    "evidence": {
+     "3": "explicit"
+    },
+    "probs": {
+     "3 | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "3": {
+      "e0": 0.907,
+      "e1": 0.001,
+      "keep": 0.092
+     },
+     "3 | QB": {
+      "w0": 0.767,
+      "w1": 0.233
+     }
+    }
+   },
+   "4": {
+    "term": "Highly polyphagous: >5 plant families",
+    "parts": [
+     "4"
+    ],
+    "options": {
+     "4": {
+      "evidence": "explicit",
+      "labels": [
+       "Highly polyphagous: >5 plant families"
+      ]
+     }
+    },
+    "evidence": {
+     "4": "explicit"
+    },
+    "probs": {
+     "4 | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "4": {
+      "e0": 0.975,
+      "keep": 0.025
+     },
+     "4 | QB": {
+      "w0": 0.715,
+      "w1": 0.285
+     }
+    }
+   },
+   "2": {
+    "term": "Oligophagous within one plant family",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "Oligophagous within one plant family",
+       "47°-50° N (range limit: German highlands"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "2": {
+      "e0": 0.676,
+      "e1": 0.001,
+      "keep": 0.323
+     },
+     "2 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u17",
+    "u18",
+    "u0"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.794,
+    "p1": 0.009,
+    "p2": 0.035,
+    "several": 0.159,
+    "none": 0.003
+   },
+   "chosen": [
+    "u17"
+   ]
+  },
+  "header": "Classification of the degree of specialization / Food"
+ },
+ "5:5": {
+  "cells": {
+   "1": {
+    "term": "1-2 habitat types",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "classifying larval food affiliations, habitat preferences, and the northern distributional limit",
+       "Monophagous within one plant genus",
+       "43°-46° N (range limit: south of the Alps",
+       "1-2 habitat types (e.g., xeric grasslands, coppice forests, pine forests, etc"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.958,
+      "word": 0.042
+     },
+     "1": {
+      "e0": 0.004,
+      "e1": 0.007,
+      "e2": 0.001,
+      "e3": 0.964,
+      "keep": 0.023
+     },
+     "1 | QB": {
+      "w0": 0.219,
+      "w1": 0.087,
+      "w2": 0.694
+     }
+    }
+   },
+   "3": {
+    "term": "5 or more habitat types or common/nonspecial habitat types",
+    "parts": [
+     "3"
+    ],
+    "options": {
+     "3": {
+      "evidence": "explicit",
+      "labels": [
+       "Polyphagous: >1 plant family",
+       "51°-54° N (range limit: North or Baltic sea coast",
+       "5 or more habitat types or common/nonspecial habitat types (e.g., forest, deciduous mixed forest, edge of the woods, woody habitats, meadows, etc"
+      ]
+     }
+    },
+    "evidence": {
+     "3": "explicit"
+    },
+    "probs": {
+     "3 | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "3": {
+      "e0": 0.002,
+      "e1": 0.001,
+      "e2": 0.992,
+      "keep": 0.005
+     },
+     "3 | QB": {
+      "w0": 0.052,
+      "w1": 0.045,
+      "w2": 0.903
+     }
+    }
+   },
+   "4": {
+    "term": "Numerous and/or anthropogenic influenced habitats",
+    "parts": [
+     "4"
+    ],
+    "options": {
+     "4": {
+      "evidence": "explicit",
+      "labels": [
+       "Highly polyphagous: >5 plant families",
+       "55°-71° N (range limit: further north than class 3",
+       "Numerous and/or anthropogenic influenced habitats (gardens, parks, urban areas, common meadows"
+      ]
+     }
+    },
+    "evidence": {
+     "4": "explicit"
+    },
+    "probs": {
+     "4 | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "4": {
+      "e0": 0.002,
+      "e1": 0.001,
+      "e2": 0.99,
+      "keep": 0.007
+     },
+     "4 | QB": {
+      "w0": 0.472,
+      "w1": 0.528
+     }
+    }
+   },
+   "2": {
+    "term": "3-4 habitat types",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "analyzing functional dispersion (FDis) within species assemblages over time",
+       "Oligophagous within one plant family",
+       "47°-50° N (range limit: German highlands",
+       "3-4 habitat types"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.974,
+      "word": 0.026
+     },
+     "2": {
+      "e0": 0.004,
+      "e1": 0.009,
+      "e2": 0.001,
+      "e3": 0.971,
+      "keep": 0.016
+     },
+     "2 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u17",
+    "u18",
+    "u0"
+   ],
+   "choice": "several",
+   "probs": {
+    "p0": 0.055,
+    "p1": 0.108,
+    "p2": 0.011,
+    "several": 0.824,
+    "none": 0.002
+   },
+   "chosen": [
+    "u0",
+    "u17",
+    "u18"
+   ]
+  },
+  "header": "Classification of the degree of specialization / Habitat"
+ }
+}

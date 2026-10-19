@@ -1,0 +1,513 @@
+{
+ "paper": "Baine2024",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:1/block:11)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "The genus Aciurina (Diptera: Tephritidae) are gall-inducing flies on Asterace ae shrubs in western North America (Foote et al. 1993). Many species in this genus are informally recognized by gall morphological characters, and, similarly to many tephritid “picture-wing” flies, formally identified with diagnostic black and transparent markings of the wings. The common and widespread species Trypeta bigeloviae was first described only as a “white, woolly [sic], and conspicuous” gall on the plant Bigelovia (Cockerell 1890a). The fly was then described in the same year as both T. bigeloviae and T. bigeloviae var. disrupta based on a single distinction in the postero-distal hyaline region of the wing: in disrupta this area is divided (disrupted) into two by a complete black marking (Cockerell 1890b). Bates (1935) later re-assigned T. bigeloviae to the genus Aciurina, including the variety disrupta which he did not consider distinct, citing variation of this character in specimens from the same locality. Wing marking variation led Steyskal (1984) in his revision of Aciurina to then synonymize the type species Aciurina trixa Curran, 1932 and Aciurina semilucida Bates, 1935 with Aciurina bigeloviae (Cockerell, 1890), which he characterized as being the most variable species of the genus. However, Dodson and George (1986) soon after described the likely recently diverged relationship of A. bigeloviae and A. trixa based on thorough examination of gall morphology, host plant ecology, hybrid breeding success, and genetic allelic frequencies. First Goeden and Teerink (1996) reinstated A. semilucida, then Headrick et al. (1997) officially reinstated A. trixa as a species distinct from A. bigeloviae and provided a larval description. The most reliable diagnostic character established between the sister species was gall morphology: A. bigeloviae has a white, wooly “cotton” gall and A. trixa has a resinous, waxy “smooth” gall. Both species form galls on"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "We systematically collected and reared A. bigeloviae and A. trixa galls in New Mexico between 2021–2022 following methods outlined in Baine et al. (2023a). Type III galls were collected haphazardly from identified populations throughout New Mexico and Colorado in April and May of 2021–2023 by clipping sections of stem with gall attached and transporting them to the University of New Mexico. In the lab, galls were placed in insect rearing cages (BugDorm) and kept at 45% relative humidity. Adult flies were removed from cages as they emerged and preserved in 100% EtOH at -20 °C for the following analyses. A subset of pinned flies and galls was examined for morphological characters and photographed using an EOS 40D camera fitted with a 65 mm MP-E macro photo lens (Canon) mounted on Stackshot macro rail with controller (Cognisys), and then focus stacked with Zerene Stacker software. Representative flies and galls of each sampled population, plus other material examined, including the holotype of A. luminaria, were deposited in the following collections: The Museum of Southwestern Biology, Arthropods Division, New Mexico (MSBA); Smithsonian Institution, National Museum of Natural History, Washington DC (USNM); and William F. Barr Entomological Museum, Idaho (WFBM)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "A total of 62 female Aciurina specimens of the three morphotypes from 19 populations were selected for morphological assessment. Both wings of each specimen were carefully removed by pulling at the connection point where the tegula meets the thorax. Wings were mounted on glass slides with a Euparal mounting medium (Hempstead Halide). The edges of the cover slide were then sealed with clear nail polish and slides were left to dry at room temperature for 24 hours. Images of each wing were taken using a Axiocam 208 color camera mounted on a Stemi 508 microscope (Zeiss). Measurements were taken in ZEN 3.6 blue edition (Zeiss). The methodology used to take standardized proxy measurements of the wing width (represented by distance from apex of vein R1 to junction of vein M4 and crossvein dm-m) and length (represented by distance from junction of vein M4 and crossvein bm-m to apex of vein M4) follows Baleba et al. (2019). A total of seven different measurements and three different categorical observations were made for each wing (Fig. 1A). To facilitate comparison without influence of difference in overall body size, each measurement was divided by our measurement for wing length. Finally, measurements from each wing pair were averaged. We then compared morphotype III to both morphotype I and II using each set of measurements by analysis of variance (ANOVA, aov) or Kruskal-Wallis where assumptions for ANOVA were not met (kruskal.test), and each set of categorical variables by Pearson’s $x ^ { 2 }$ test (chi.test) in R version 4.2.2 (R Core Team 2021)."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "brL: The maximum diameter of the subapical hyaline spot of cell br. This spot has a circular-elliptical shape, so the measurement typically follows a line from one elliptical-vertex to the other. rrL: The maximum width of the hyaline region located within cells $\\mathsf { r } { \\eta }$ and $\\mathsf { T } { 2 + 3 ^ { \\prime } }$ crossing vein $\\mathsf { R } _ { 2 + 3 } \\mathsf { : }$ measurement taken from the midpoint of the vein C to the parabolic vertex of the shape. This pattern occasionally reaches vein $\\mathsf { R } _ { 4 + 5 ^ { i } }$ in this case the midpoint that borders this vein is used instead of a parabolic vertex. • rrH: The maximum length of the same region hyaline in cells $\\mathsf { r } { \\eta }$ and $\\mathsf { T } { 2 + 3 ^ { \\prime } }$ measured along vein $\\mathsf { R } { { 2 + 3 } }$ mrL: The maximum length of the subapical hyaline region in cells $\\mathsf { T } _ { 4 + 5 }$ and m: length taken from the postero-distal corner to the parabolic vertex of the region. • C1: The presence or absence of a complete medial stripe within the anal lobe from veins $\\mathsf { C u A + C u P }$ to the posterior wing margin. • C2: The presence or absence of a complete medial stripe within cell $\\mathrm { m } { 4 }$ from vein $M { 4 }$ to the posterior wing margin."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "From three populations each of A. bigeloviae, A. trixa and Type III, we extracted whole-body DNA from three replicates (total n = 27) using the DNeasy Blood & Tissue kit and protocol (Qiagen), and quantified nucleic acid with a Qubit 3.0 fluorometer (Invitrogen). We generated genotypes for each sample from single-nucleotide polymorphisms (SNPs) derived from double digest restriction site associated DNA sequencing (ddRADseq) (Peterson et al. 2012). DNA was digested with enzymes EcoRI and MseI, and fragments were coupled with Illumina adaptors through T4 ligation. Pooled fragments were used for PCR with a proofreading enzyme (Iproof; BioRad), and fragment size selection for 300–450 bp"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:5/block:5)"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:6/block:2)"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Figure 2. Galls of A. luminaria and A. bigeloviae A immature A. luminaria galls B internal view of immature A. luminaria gall with early instar larva burrowing into the stem while gall develops C mature A. luminaria galls D internal view of mature A. luminaria gall with full-sized larval chamber E mature A. bigeloviae galls F internal view of A. bigeloviae gall with a mature larva in the larval chamber. Side by side comparison of A. bigeloviae (left) and A. luminaria (right) tomentum texture and uniformity G external view H internal view."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "We mapped trimmed reads de novo using the Stacks 2.61 (Catchen et al. 2011) wrapper denovo_map.pl with the selected parameters: 5 minimum reads per stack, 3 maximum mismatches per locus, 3 maximum mismatches per stack, and minimum 80% individuals required per locus (parameter optimization was performed generally following Paris et al. 2017). We then filtered stacks in R with SNPfiltR (DeRaad 2022) and the settings: maximum depth of 50, maximum missing per sample 80%, minimum SNP completeness 80%, and minimum minor allele count of 1. Filtered SNP loci were used for principal component analysis (PCA) using packages vcfR (Knaus and Grünwald 2017), dartR (Gruber et al. 2018) and adegenet (Jombart 2008). We also calculated π for each population as a measure of nucleotide diversity. Structure was estimated using sparse non-negative matrix factorization (sNMF) with package LEA (Frichot and Francois 2015). For each K value, where K represents the number of clusters ranging from 1 to 9, we performed 50 iterations. We then selected and graphed the best result from the most optimal K value, as identified through the cross-entropy criterion."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "SNPs per sample were concatenated to generate sequences for each individual, and sequences were aligned in Stacks. Phylogeny was inferred by maximum likelihood (ML) tree with IQ-TREE 2.2.0 (Minh et al. 2020). ModelFinder (Kalyaanamoorthy et al. 2017) was used to select the best model as determined by Akaike Information Criterion (AIC). We calculated branch support from 1000 ultrafast bootstrap (UFBoot) (Hoang et al. 2018) and 1000 Shimodaira–Hasegawa approximate likelihood ratio test (SH-aLRT) (Guindon et al. 2010) replications. We report the selected model and basal branch support values. Sequence reads used in all above genomic analyses are deposited in NCBI GenBank within BioProject PRJNA1075688."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "m (C3) that frequently separates A. trixa from A. bigeloviae, also separates the Type III morphotype from A. bigeloviae, but not from A. trixa. See Suppl. material 1: fig. S1 for wing character variation in each of the three morphotypes sampled."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "From the ddRAD sequencing of the three morphotypes, 42,838 SNPs were retained after filtering. A single sample was filtered out for high relative missingness, so we used 26 samples total for the following analyses. The first principal component (PC1) in the PCA performed accounted for 42.3% of the variance, splitting the morphotypes into discrete clusters that match to gall morphology (Fig. 3A). The second principal component (PC2) explained an additional 21.2% of the variance, splitting Type III from A. bigeloviae, and also with minimal loadings on geographic variation within A. bigeloviae populations (Fig. 3A). The PCA represents the greatest amount of variance exists between the three morphotypes. Average genetic diversity across all sites (π) was lower in Type III (0.0008) than in A. bigeloviae (0.0014) or A. trixa (0.0011) across all populations (0.0775, 0.1324, 0.1083, respectively across variant sites). Genetic diversity was also lower by a comparable margin in Type III across the populations at the sympatric site for all three morphotypes, “SNM” (0.0767 versus 0.12 A. bigeloviae and 0.1006 A. trixa). The most optimal K for structure-like sNMF analysis was 3, and plots reveal that there is virtually no admixture present between the morphotypes, even in the populations at the sympatric sites (Fig. 3C)."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:9/block:2)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:10/block:2)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "and Van Iwarden Dr, Alamosa; 37.43771°N, 105.88511°W; 14 May 2023; Q. Baine leg.; MSBA81922–81925. Chaffee Co. • 2♀ 2♂; Hwy 285 W of Johnson Village; 38.80956°N, 106.11603°W; 20 May 2021; E. Martinson leg.; MSBA81883–81886 • NM; Cibola Co.; 2♀ 2♂; El Malpais National Conservation Area Narrows; 34.96499°N, 107.81464°W; 15 May 2022; V. Martinson leg.; MSBA81876–81879. San Juan Co. • 1♂; S Bloomfield Hwy 550 Kutz Wash; 36.64524°N, 108.00264°W; 18 March 2022; E. Martinson leg.; MSBA81891. Sandoval Co. • 4♀; N side Hwy 550, La Jara; 36.0581873°N, 106.9749619°W; 31 May 2020; D. Hughes leg.; MSBA81887–81890. Santa Fe Co. • 5♀ 4♂, 1 gall; Tesuque E arroyo crossing Road 74; 35.77686°N, 105.92904°W; 7 May 2023; Q. Baine leg.; MSBA81934–81938, MSBA81941–81942, USNMENT02011090–USNMENT02011092 • 2♀; Tesuque E arroyo crossing Road 74; 35.77686°N, 105.92904°W; 5 May 2021; Q. Baine leg.; MSBA81956–81957 • 4♀ 2♂; 1 mi SE Chupadero off St Rd 592; 35.814006°N, 105.907426°W; 7 May 2023; Q. Baine leg.; MSBA81943–81948 • 3♀ 4♂; Tesuque Arroyo Ancho and Meredith Dr on Tesuque Village Rd; 35.752991°N, 105.934346°W; 7 May 2023; Q. Baine leg.; MSBA81949–81955. Taos Co. • 2♀ 3♂; 3 mi N Ojo Caliente off Hwy 285; 36.33046°N, 106.00581°W; 14 May 2023; Q. Baine leg.; MSBA81917–81921 • UT; Kane Co.; 1♀ 1♂; Coral Pink Sand Dunes; 3 July 1966; E.J. Allen leg.; WFBM0050980–0050981."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Other material examined. USA • NM; Alamosa Co.; 4 galls, 1 pupa; S Nageezi side of Pueblo Pintado Rd; 36.21480°N, 107.69633°W; 23 May 2024; S. Rollins leg • 4♀ 3♂; Corner of Cortez Rd and Van Iwarden Dr, Alamosa; 37.43771°N, 105.88511°W; 14 May 2023; Q. Baine leg. • 3 larvae; San Luis State Wildlife Area, Lane 6 N; 37.66256°N, 105.72293°W; 20 May 2021; E. Martinson leg."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:13/block:3)"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "![Image block](doc:8f90e0f/tier:advanced/page:13/block:5)"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "We provide the following supplement, modified from that of Headrick et al. (1997) couplets to modify the key to species of Aciurina by Foote et al. (1993), with figure citations referencing Foote et al. (1993) except as noted. We have also removed a character from the key of Headrick et al. (1997: 419) that we found to be inconsistently present in both A. bigeloviae and A. trixa in New Mexico, and therefore not reliable as a diagnostic character: “pterostigma of at least one wing with a proximal hyaline or subhyaline incision”."
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "11 Proximal marginal hyaline incision in cell m lacking median, dark mark .....12 Proximal marginal hyaline incision in cell m with a median, dark, often elongate mark (fig. 122), which sometimes divides the incision (Steyskal 1984: fig. 13) (Dodson and George 1986: fig. la, b); galls spheroid with cottony tomentum.. ..A. bigeloviae (Cockerell) 12 Anal cell bisected at least partially by medial brown mark from veins A1+CuA1 extending posteriorly, often reaching posterior wing margin; hyaline spot within cell br of the wing subcircular, 1–1.5 × as long as wide; brown region surrounding vein r-m paler in color than remaining dark part of wing, appearing like a diffuse orange spot; submedial dark mark usually present crossing cell cua from vein CuA to posterior wing margin; galls without tomentum.. . A. trixa Curran Anal cell without medial brown mark; hyaline spot within cell br of the wing elongated longitudinally, 1.5–2.5 × as long as wide; brown region surrounding vein r-m consistent in color, no diffuse spot present; submedial dark mark in cell cua absent; galls frequently ovoid or teardrop shaped with dense cottony tomentum.. ... A. luminaria Baine, sp. nov."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "Conceptualization: VGM, EOM. Data curation: BW, QB. Formal analysis: BW, QB. Funding acquisition: EOM, VGM. Investigation: EOM, QB, BW, VGM. Methodology: QB. Resources: EOM, VGM. Supervision: EOM. Visualization: QB. Writing – original draft: BW, QB. Writing – review and editing: EOM, VGM."
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Authors: Quinlyn Baine, Branden White, Vincent G. Martinson, Ellen O. Martinson Data type: pdf"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "Copyright notice: This dataset is made available under the Open Database License ([http://opendatacommons.org/licenses/odbl/1.0/](http://opendatacommons.org/licenses/odbl/1.0/)). The Open Database License (ODbL) is a license agreement intended to allow users to freely share, modify, and use this Dataset while maintaining this same freedom for others, provided that the original source and author(s) are credited."
+  },
+  {
+   "id": "u24",
+   "kind": "table 0",
+   "text": "Wing pattern character | A. bigeloviae ~ Type III | A. trixa ~ Type III\nC1 | ^2 = 50.22, df = 1, p < 0.0001 | ^2 = 36.29, df = 1, p < 0.0001\nC2 | ^2 = 68, df = 1, p < 0.0001 | ^2 = 65.33, df = 1, p < 0.0001\nC3 | ^2 = 47.28, df = 2, p < 0.0001 | NS"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22"
+  ],
+  [
+   "u23",
+   "u24"
+  ]
+ ],
+ "calls": 15,
+ "categories": [
+  {
+   "variable": "gall morphology",
+   "code": "resinous, waxy",
+   "term": "smooth",
+   "unit": "u1",
+   "model_label": "smooth",
+   "label": "smooth",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "I",
+   "term": "morphotype I",
+   "unit": "u3",
+   "model_label": "morphotype I",
+   "label": "morphotype I",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "II",
+   "term": "morphotype II",
+   "unit": "u3",
+   "model_label": "morphotype II",
+   "label": "morphotype II",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "III",
+   "term": "morphotype III",
+   "unit": "u3",
+   "model_label": "morphotype III",
+   "label": "morphotype III",
+   "explanation": ""
+  },
+  {
+   "variable": "Galls of A. luminaria and A. bigeloviae",
+   "code": "A",
+   "term": "immature A. luminaria galls",
+   "unit": "u8",
+   "model_label": "immature A. luminaria galls",
+   "label": "immature A. luminaria galls",
+   "explanation": ""
+  },
+  {
+   "variable": "Galls of A. luminaria and A. bigeloviae",
+   "code": "B",
+   "term": "internal view of immature A. luminaria gall with early instar larva burrowing into the stem while gall develops",
+   "unit": "u8",
+   "model_label": "internal view of immature A. luminaria gall with early instar larva burrowing into the stem while gall develops",
+   "label": "internal view of immature A. luminaria gall with early instar larva burrowing into the stem while gall develops",
+   "explanation": ""
+  },
+  {
+   "variable": "Galls of A. luminaria and A. bigeloviae",
+   "code": "C",
+   "term": "mature A. luminaria galls",
+   "unit": "u8",
+   "model_label": "mature A. luminaria galls",
+   "label": "mature A. luminaria galls",
+   "explanation": ""
+  },
+  {
+   "variable": "Galls of A. luminaria and A. bigeloviae",
+   "code": "D",
+   "term": "internal view of mature A. luminaria gall with full-sized larval chamber",
+   "unit": "u8",
+   "model_label": "internal view of mature A. luminaria gall with full-sized larval chamber",
+   "label": "internal view of mature A. luminaria gall with full-sized larval chamber",
+   "explanation": ""
+  },
+  {
+   "variable": "Galls of A. luminaria and A. bigeloviae",
+   "code": "E",
+   "term": "mature A. bigeloviae galls",
+   "unit": "u8",
+   "model_label": "mature A. bigeloviae galls",
+   "label": "mature A. bigeloviae galls",
+   "explanation": ""
+  },
+  {
+   "variable": "Galls of A. luminaria and A. bigeloviae",
+   "code": "F",
+   "term": "internal view of A. bigeloviae gall with a mature larva in the larval chamber",
+   "unit": "u8",
+   "model_label": "internal view of A. bigeloviae gall with a mature larva in the larval chamber",
+   "label": "internal view of A. bigeloviae gall with a mature larva in the larval chamber",
+   "explanation": ""
+  },
+  {
+   "variable": "tomentum texture and uniformity",
+   "code": "G",
+   "term": "external view",
+   "unit": "u8",
+   "model_label": "external view",
+   "label": "external view",
+   "explanation": ""
+  },
+  {
+   "variable": "tomentum texture and uniformity",
+   "code": "H",
+   "term": "internal view",
+   "unit": "u8",
+   "model_label": "internal view",
+   "label": "internal view",
+   "explanation": ""
+  },
+  {
+   "variable": "K",
+   "code": "1 to 9",
+   "term": "number of clusters",
+   "unit": "u9",
+   "model_label": "number of clusters",
+   "label": "number of clusters",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "Type III",
+   "term": "Type III",
+   "unit": "u12",
+   "model_label": "Type III",
+   "label": "Type III",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "A. bigeloviae",
+   "term": "A. bigeloviae",
+   "unit": "u12",
+   "model_label": "A. bigeloviae",
+   "label": "A. bigeloviae",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "A. trixa",
+   "term": "A. trixa",
+   "unit": "u12",
+   "model_label": "A. trixa",
+   "label": "A. trixa",
+   "explanation": ""
+  },
+  {
+   "variable": "morphotypes",
+   "code": "SNM",
+   "term": "SNM",
+   "unit": "u12",
+   "model_label": "SNM",
+   "label": "SNM",
+   "explanation": ""
+  },
+  {
+   "variable": "Data type",
+   "code": "pdf",
+   "term": "pdf",
+   "unit": "u22",
+   "model_label": "pdf",
+   "label": "pdf",
+   "explanation": ""
+  },
+  {
+   "variable": "gall morphology",
+   "code": "",
+   "label": "resinous, waxy “smooth” gall",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "brL",
+   "code": "",
+   "label": "The maximum diameter of the subapical hyaline spot of cell br.",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "rrL",
+   "code": "",
+   "label": "The maximum width of the hyaline region located within cells $\\mathsf { r } { \\eta }$ and $\\mathsf { T } { 2 + 3 ^ { \\prime } }$ crossing vein $\\mathsf { R } _ { 2 + 3 } \\mathsf { : }$ measurement taken from the midpoint of the vein C to the parabolic vertex of the shape.",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "rrH",
+   "code": "",
+   "label": "The maximum length of the same region hyaline in cells $\\mathsf { r } { \\eta }$ and $\\mathsf { T } { 2 + 3 ^ { \\prime } }$ measured along vein $\\mathsf { R } { { 2 + 3 } }$",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "mrL",
+   "code": "",
+   "label": "The maximum length of the subapical hyaline region in cells $\\mathsf { T } _ { 4 + 5 }$ and m: length taken from the postero-distal corner to the parabolic vertex of the region.",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "C1",
+   "code": "",
+   "label": "The presence or absence of a complete medial stripe within the anal lobe from veins $\\mathsf { C u A + C u P }$ to the posterior wing margin.",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "C2",
+   "code": "",
+   "label": "The presence or absence of a complete medial stripe within cell $\\mathrm { m } { 4 }$ from vein $M { 4 }$ to the posterior wing margin.",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "morphotype",
+   "code": "",
+   "label": "Type III morphotype",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "Proximal marginal hyaline incision in cell m",
+   "code": "",
+   "label": "Proximal marginal hyaline incision in cell m lacking median, dark mark",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Proximal marginal hyaline incision in cell m",
+   "code": "",
+   "label": "Proximal marginal hyaline incision in cell m with a median, dark, often elongate mark",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "galls",
+   "code": "",
+   "label": "galls spheroid with cottony tomentum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Anal cell",
+   "code": "",
+   "label": "Anal cell bisected at least partially by medial brown mark from veins A1+CuA1 extending posteriorly, often reaching posterior wing margin",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "hyaline spot within cell br of the wing",
+   "code": "",
+   "label": "hyaline spot within cell br of the wing subcircular, 1–1.5 × as long as wide",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "brown region surrounding vein r-m",
+   "code": "",
+   "label": "brown region surrounding vein r-m paler in color than remaining dark part of wing, appearing like a diffuse orange spot",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "submedial dark mark",
+   "code": "",
+   "label": "submedial dark mark usually present crossing cell cua from vein CuA to posterior wing margin",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "galls",
+   "code": "",
+   "label": "galls without tomentum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Anal cell",
+   "code": "",
+   "label": "Anal cell without medial brown mark",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "hyaline spot within cell br of the wing",
+   "code": "",
+   "label": "hyaline spot within cell br of the wing elongated longitudinally, 1.5–2.5 × as long as wide",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "brown region surrounding vein r-m",
+   "code": "",
+   "label": "brown region surrounding vein r-m consistent in color, no diffuse spot present",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "submedial dark mark",
+   "code": "",
+   "label": "submedial dark mark in cell cua absent",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "galls",
+   "code": "",
+   "label": "galls frequently ovoid or teardrop shaped with dense cottony tomentum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "gall morphology",
+   "code": "white, woolly",
+   "term": "cotton",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 114.0
+}

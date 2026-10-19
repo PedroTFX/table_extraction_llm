@@ -1,0 +1,71 @@
+TABLE LEVEL
+  table_kind: What does each row of this table hold?
+    - organism_traits: Each row is one organism (a species, genus or morphospecies) and the columns describe its traits or properties.
+    - specimens: Each row is one collected or measured individual (a specimen) with its measurements.
+    - long_format: Long table: one column's cells NAME the property measured (body length, thorax width) and other columns hold its values, e.g. one property per row for a species named in the caption or the header.
+    - counts: Each row gives how many individuals of an organism were found per site, sample, date or treatment (abundance or occurrence data).
+    - statistics: Each row is a result of a statistical test or model (estimates, t, F, p, AIC), not raw data about organisms.
+    - other: Study sites, environmental variables, definitions of codes or abbreviations, or anything else.
+  organism_column: Which column names the organism that each row is about, the organism the table's other columns describe? Only a column whose values are taxon names (Latin species or genus names) qualifies.
+    - <one option per text column>
+    - none: No column names it: the whole table is about one organism named elsewhere, or its rows are not organisms.
+
+COLUMN LEVEL
+  (code) cells >= 80% numbers once peeled -> start at [kind]; otherwise start at [cell_shape]. Measured cell facts are added to questions marked {facts}.
+  [cell_shape] Column '{h}' (values: {values}).{facts} What do the cells look like?
+    - latin_binomials: Two-word Latin names, a genus and a species ('Osmia cornuta', 'Formica sp.', 'Sarcophagidae sp.1').
+      [organism_name] Column '{h}' (values: {values}).{facts} It names organisms. Which ones?
+        - row_organism -> verbatimIdentification: The organism the row is about, the one the table's other columns describe: its full name, or one part of a name split over columns (genus, species epithet).
+        - higher_rank -> verbatimIdentification: A higher taxonomic rank of the row's organism (family, subfamily, tribe, order) or the author and year of its name.
+        - associated_organism -> measurementType: A DIFFERENT organism linked to the row's organism: its host, prey, parasite or parasitoid, food or host plant (or the plant's family), or partner.
+        - taxon_code -> none: A short code or abbreviation standing for the row's organism (e.g. 'Ads.ger'), not its name.
+        - not_a_name: Not organism names after all: a property, category, place or code.
+          [kind] Column '{h}' (values: {values}).{facts} What do its cells record?
+            - organism_property: A property of the organism itself, what it has, does or where it lives: body size or other measurements, diet, behaviour, sociality, phenology or flight period, voltinism, overwintering stage, nesting, habitat preference, host range, geographic or elevation range. As numbers, categories, yes/no or codes. Still a property when its cells are stages, sexes, months or places, if the header names something about the species ('Overwintering stage' = larva, 'Flight period' = May-Aug). Its classification (family, order, tribe) is a name, not a property.
+              [organism_property] Column '{h}' (values: {values}) records a property of the organism. What does its HEADER say?
+                (asked only when table_kind is long_format; otherwise -> measurementType)
+                - header_names_property -> measurementType: The header is the NAME of one property ('Body length (mm)', 'Diet', 'Voltinism') and the cells are its values.
+                - cells_name_property -> measurementType: The header is generic ('Trait', 'Variable', 'Character') and the cells are property NAMES that change from row to row ('body length', 'diet').
+                - cells_are_values -> measurementValue + measurementStatistic from the header: The header is generic or only a statistic ('Value', 'Measurement', 'Mean ± SD', 'Median') and the cells are values whose property is named in ANOTHER column of the row.
+            - record_context: About the recorded individuals or the sampling, not the species' biology: the sex, life stage or caste of the specimens measured; the place, coordinates or date of sampling; the conditions of the site; how specimens were sampled, treated or measured.
+              [record_context] Column '{h}' (values: {values}) describes the records or the sampling. What exactly?
+                - sex -> sex: The sex of the recorded individuals: male, female, both. Not a sex ratio.
+                - life_stage -> lifeStage: The developmental stage of the recorded individuals: egg, larva, pupa, nymph, adult. Not the stage the species overwinters in.
+                - caste -> caste: The caste of the recorded social insects: worker, queen, soldier, male.
+                - sampling_place -> verbatimLocality: Where the sampling happened, as a place: country, region, named site, plot or site code, or the habitat that was sampled.
+                - coordinates -> verbatimCoordinates: Where the sampling happened, as coordinates: latitude/longitude, degrees or decimals.
+                - sampling_time -> verbatimEventDate: When the sampling happened: a date, month, year, season or date range.
+                - measurement_method -> measurementMethod: How the VALUE was measured: method, instrument, formula (e.g. 'ocular micrometer', 'dry weight').
+                - sampling_protocol -> samplingProtocol: How the specimens were COLLECTED: trap type or sampling protocol (e.g. 'pitfall trap', 'sweep net', 'light trap').
+                - treatment -> sampleTreatment: What was done to specimens BEFORE analysis or storage: preserved in ethanol, dried, fixed.
+                - site_conditions -> none: Conditions of the sampling site: temperature, rainfall, vegetation, land use, distance.
+            - counts_or_statistics: About the numbers rather than the organism: how many individuals were found (abundance, number of specimens, frequency, occurrences, totals per site), sample sizes, the unit of the values, a statistic of a property named elsewhere (header 'Mean ± SD', 'Median', 'Q1', 'CV'), or test results (estimate, t, F, p, AIC, index).
+              [counts_or_statistics] Column '{h}' (values: {values}).{facts} It is about the numbers. Which?
+                - abundance -> none: How many individuals were found per site, sample or date: abundance, number of specimens collected, totals, counts per site.
+                - statistic_header -> measurementValue + measurementStatistic from the header: The HEADER names only a statistic, maybe after a group ('Mean ± SD', 'Workers Mean ± SD', 'Median', 'Q1', 'CV') and the cells are its values; the property itself is named elsewhere (a trait column, the caption).
+                - statistic_name -> measurementStatistic: The cells are WORDS naming which statistic each row's value is ('mean', 'SD', 'SE').
+                - property_spread -> measurementType: The header names a property AND a statistic of it ('Body length SD', 'Wing length range'): values of that property.
+                - sample_size -> sampleSizeValue: The size of the sample behind a value: how many individuals, records or occurrences it rests on (n, 'Occurrences'), or a length, area or time sampled.
+                - unit -> measurementUnit: The unit the values are in: mm, mg, %, days.
+                - test_result -> none: Results of a statistical test or model: estimate, t, F, chi-square, p-value, AIC, R2, a diversity or other index.
+            - other: Notes or remarks, references or citations, links, record or specimen numbers, row numbers, glossary terms or their definitions, or anything else.
+              [other] Column '{h}' (values: {values}). Which of these is it?
+                - remarks -> measurementRemarks: Notes or remarks about a record or measurement ('specimen damaged', 'estimated').
+                - references -> associatedReferences: References or citations of other publications ('Smith et al. 2005', a DOI).
+                - links -> externalLink: Web links (URLs) to external resources.
+                - record_ids -> associatedOccurrences: Identifiers of other records of the same specimens: museum or occurrence numbers.
+                - taxon_code -> none: A short code or abbreviation standing for the row's organism (e.g. 'Ads.ger').
+                - bookkeeping -> none: Row numbers, glossary terms or definitions, or anything else.
+    - single_latin_words: Single Latin words or group names, often capitalised or in capitals ('Osmia', 'Formicinae', 'Pterostichini', COLLETIDAE, DIPTERA).
+      [is_taxon] Column '{h}' (values: {values}).{facts} Are these NAMES of organisms or taxonomic groups? Test: read a cell as '<the row's organism> has {h} = <cell>'. If that states a fact about the organism, the cells are values of a property, not names.
+        - yes: Yes, each cell names a taxon: a genus, or the family, subfamily, tribe or order the organism belongs to (Latin endings: -idae family, -inae subfamily, -ini tribe, -oidea superfamily, -ptera order), or a host, prey or plant taxon.
+          [organism_name] (see above)
+        - no: No, the cells are values of a property, state or category of the organism (an amount, a guild, a habit, a body structure, a stage, yes/no), even when capitalised or Latin-looking.
+          [kind] (see above)
+    - author_year -> verbatimIdentification: Person names with a year ('Matthews (1974)', 'Linnaeus, 1758'): the author of a name.
+    - everyday_words: Ordinary words, categories or phrases, capitalised or not ('POLLENIVOROUS', 'Larva', 'Adult', 'solitary', 'leaf litter', 'yes', 'May-Aug').
+      [kind] (see above)
+    - codes: Short codes, abbreviations or symbols ('W/S', 'Ads.ger', 'A', '+', 'S7').
+      [kind] (see above)
+    - numbers_with_text: Numbers with extra text around them: units, a spread, a range, a citation in brackets.
+      [kind] (see above)

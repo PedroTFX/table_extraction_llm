@@ -1,0 +1,231 @@
+{
+ "_columns": [
+  [
+   20,
+   2,
+   "ITD",
+   [
+    "2.10",
+    "2.98",
+    "2.04",
+    "2.94",
+    "1.70",
+    "2.50",
+    "2.60",
+    "2.95",
+    "2.55",
+    "2.44",
+    "2.30",
+    "1.38",
+    "2.90",
+    "NA",
+    "2.20",
+    "1.90",
+    "1.55",
+    "3.50",
+    "3.40",
+    "3.70",
+    "4.20",
+    "3.64",
+    "3.84",
+    "4.02"
+   ]
+  ],
+  [
+   20,
+   3,
+   "foraging preference",
+   [
+    "0",
+    "1",
+    "NA"
+   ]
+  ],
+  [
+   21,
+   4,
+   "sociality",
+   [
+    "1",
+    "NA",
+    "0"
+   ]
+  ],
+  [
+   22,
+   2,
+   "mean TL",
+   [
+    "8.87",
+    "4.30",
+    "4.39",
+    "5.66",
+    "5.58",
+    "4.53",
+    "5.08",
+    "4.56",
+    "4.80"
+   ]
+  ],
+  [
+   22,
+   4,
+   "mean relative TL",
+   [
+    "2.15",
+    "1.20",
+    "1.49",
+    "1.47",
+    "1.22",
+    "1.43",
+    "1.23"
+   ]
+  ]
+ ],
+ "20:2": {
+  "cells": {},
+  "header": "ITD"
+ },
+ "20:3": {
+  "cells": {
+   "0": {
+    "term": "not known to do so",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not known to do so",
+       "solitary species",
+       "Sites"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.724,
+      "word": 0.276
+     },
+     "0": {
+      "e0": 0.953,
+      "e1": 0.002,
+      "e2": 0.0,
+      "keep": 0.045
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "species known to collect pollen from Fabaceae",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "species known to collect pollen from Fabaceae",
+       "Social species"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "1": {
+      "e0": 0.987,
+      "e1": 0.0,
+      "keep": 0.012
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "header": "foraging preference"
+ },
+ "21:4": {
+  "cells": {
+   "1": {
+    "term": "Social species",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "species known to collect pollen from Fabaceae",
+       "Social species"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "1": {
+      "e0": 0.0,
+      "e1": 0.993,
+      "keep": 0.007
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": "solitary species",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not known to do so",
+       "solitary species",
+       "Sites"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.887,
+      "word": 0.113
+     },
+     "0": {
+      "e0": 0.0,
+      "e1": 0.995,
+      "e2": 0.0,
+      "keep": 0.005
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "header": "sociality"
+ },
+ "22:2": {
+  "cells": {},
+  "header": "mean TL"
+ },
+ "22:4": {
+  "cells": {},
+  "header": "mean relative TL"
+ }
+}

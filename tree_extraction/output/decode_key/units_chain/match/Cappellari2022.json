@@ -1,0 +1,707 @@
+{
+ "_columns": [
+  [
+   2,
+   1,
+   "Flower color",
+   [
+    "white",
+    "blue",
+    "yellow/orange",
+    "pink/purple",
+    "red"
+   ]
+  ],
+  [
+   2,
+   2,
+   "Flower type",
+   [
+    "flower head",
+    "bell/funnel/lip",
+    "stalk disc",
+    "open disc",
+    "pollen",
+    "hidden disc",
+    "flag",
+    "NA",
+    "brush"
+   ]
+  ],
+  [
+   2,
+   3,
+   "Corolla (mm)",
+   [
+    "6",
+    "4.7",
+    "26",
+    "25.5",
+    "11.5",
+    "13",
+    "1",
+    "0.05",
+    "5.5",
+    "12",
+    "0.4",
+    "30",
+    "17.5",
+    "3",
+    "8",
+    "7",
+    "4",
+    "10",
+    "5",
+    "33.3",
+    "16",
+    "11",
+    "18",
+    "17",
+    "15"
+   ]
+  ],
+  [
+   3,
+   2,
+   "Proboscis (mm)",
+   [
+    "0.8",
+    "8.2",
+    "1.1",
+    "0.95",
+    "2",
+    "1.6",
+    "3.5",
+    "2.3",
+    "2.7",
+    "1.85",
+    "1.95",
+    "2.8",
+    "1.45",
+    "1.5",
+    "1.03",
+    "1.15",
+    "1.2",
+    "1.25",
+    "1",
+    "3.2",
+    "4",
+    "3.3",
+    "12",
+    "8.25",
+    "9"
+   ]
+  ],
+  [
+   3,
+   3,
+   "Body (mm)",
+   [
+    "12",
+    "13",
+    "7",
+    "5.75",
+    "9",
+    "14",
+    "11",
+    "11.5",
+    "10",
+    "9.5",
+    "8",
+    "6.75",
+    "5.5",
+    "15",
+    "6.5",
+    "15.67",
+    "17",
+    "17.75",
+    "18",
+    "16.83",
+    "13.5",
+    "15.33",
+    "16",
+    "15.5",
+    "14.67"
+   ]
+  ],
+  [
+   3,
+   4,
+   "Foraging",
+   [
+    "NC",
+    "C"
+   ]
+  ],
+  [
+   4,
+   2,
+   "Proboscis (mm)",
+   [
+    "1.73 (0.67)",
+    "6.88 (2.66)",
+    "0.85 (0.07)",
+    "0.79 (0.19)",
+    "4.1 (0.99)",
+    "0.92 (0.4)",
+    "1.84 (0.62)",
+    "3.9 (1.11)",
+    "2.25 (0.07)",
+    "1.2 (NA)",
+    "4.1 (NA)",
+    "0.98 (0.38)",
+    "2.68 (1.07)",
+    "0.91 (0.29)",
+    "1.54 (0.09)"
+   ]
+  ],
+  [
+   4,
+   3,
+   "Body (mm)",
+   [
+    "9.33 (2.17)",
+    "14.1 (3.56)",
+    "10 (2.83)",
+    "5.13 (0.88)",
+    "8.78 (3.12)",
+    "7.62 (2.38)",
+    "7.87 (1.73)",
+    "10.31 (3.32)",
+    "12 (0)",
+    "9 (NA)",
+    "19 (NA)",
+    "9.66 (2.49)",
+    "8.74 (2.72)",
+    "10.9 (1.76)",
+    "13.58 (0.49)"
+   ]
+  ],
+  [
+   4,
+   4,
+   "C species (%)",
+   [
+    "100",
+    "78",
+    "-",
+    "88",
+    "94",
+    "83"
+   ]
+  ],
+  [
+   4,
+   5,
+   "NC species (%)",
+   [
+    "-",
+    "22",
+    "100",
+    "12",
+    "6",
+    "17"
+   ]
+  ],
+  [
+   8,
+   4,
+   "Prob",
+   [
+    "+",
+    "Body",
+    "For",
+    "Fam"
+   ]
+  ]
+ ],
+ "2:1": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u33",
+    "u45"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.023,
+    "p1": 0.04,
+    "several": 0.091,
+    "none": 0.846
+   }
+  },
+  "header": "Flower color"
+ },
+ "2:2": {
+  "cells": {
+   "flower head": {
+    "term": null,
+    "parts": [
+     "flower head"
+    ],
+    "options": {
+     "flower head": {
+      "evidence": "explicit",
+      "labels": [
+       "flower head"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "flower head | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "bell/funnel/lip": {
+    "term": null,
+    "parts": [
+     "bell/funnel/lip"
+    ],
+    "options": {
+     "bell/funnel/lip": {
+      "evidence": "explicit",
+      "labels": [
+       "bell/funnel/lip"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "bell/funnel/lip | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   },
+   "stalk disc": {
+    "term": null,
+    "parts": [
+     "stalk disc"
+    ],
+    "options": {
+     "stalk disc": {
+      "evidence": "explicit",
+      "labels": [
+       "stalk disc"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "stalk disc | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "open disc": {
+    "term": null,
+    "parts": [
+     "open disc"
+    ],
+    "options": {
+     "open disc": {
+      "evidence": "explicit",
+      "labels": [
+       "open disc"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "open disc | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "pollen": {
+    "term": null,
+    "parts": [
+     "pollen"
+    ],
+    "options": {
+     "pollen": {
+      "evidence": "explicit",
+      "labels": [
+       "pollen"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "pollen | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   },
+   "hidden disc": {
+    "term": null,
+    "parts": [
+     "hidden disc"
+    ],
+    "options": {
+     "hidden disc": {
+      "evidence": "explicit",
+      "labels": [
+       "hidden disc"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "hidden disc | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "flag": {
+    "term": null,
+    "parts": [
+     "flag"
+    ],
+    "options": {
+     "flag": {
+      "evidence": "explicit",
+      "labels": [
+       "flag"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "flag | QK": {
+      "code": 0.011,
+      "word": 0.989
+     }
+    }
+   },
+   "brush": {
+    "term": null,
+    "parts": [
+     "brush"
+    ],
+    "options": {
+     "brush": {
+      "evidence": "explicit",
+      "labels": [
+       "brush"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "brush | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u33",
+    "u36",
+    "u31",
+    "u32",
+    "u34",
+    "u52"
+   ],
+   "choice": "several",
+   "probs": {
+    "p0": 0.021,
+    "p1": 0.005,
+    "p2": 0.004,
+    "p3": 0.001,
+    "p4": 0.0,
+    "p5": 0.0,
+    "several": 0.727,
+    "none": 0.243
+   },
+   "chosen": [
+    "u31",
+    "u32",
+    "u33",
+    "u34",
+    "u36",
+    "u52"
+   ]
+  },
+  "header": "Flower type"
+ },
+ "2:3": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u37",
+    "u40",
+    "u38",
+    "u39"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.02,
+    "p1": 0.009,
+    "p2": 0.005,
+    "p3": 0.039,
+    "several": 0.005,
+    "none": 0.923
+   }
+  },
+  "header": "Corolla (mm)"
+ },
+ "3:2": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u37",
+    "u40",
+    "u41"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.003,
+    "p1": 0.008,
+    "p2": 0.002,
+    "several": 0.008,
+    "none": 0.978
+   }
+  },
+  "header": "Proboscis (mm)"
+ },
+ "3:3": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u37",
+    "u38",
+    "u40",
+    "u41",
+    "u39"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.068,
+    "p1": 0.01,
+    "p2": 0.047,
+    "p3": 0.004,
+    "p4": 0.001,
+    "several": 0.029,
+    "none": 0.84
+   }
+  },
+  "header": "Body (mm)"
+ },
+ "3:4": {
+  "cells": {
+   "NC": {
+    "term": "non-central-place forager",
+    "parts": [
+     "NC"
+    ],
+    "options": {
+     "NC": {
+      "evidence": "explicit",
+      "labels": [
+       "non-central-place forager"
+      ]
+     }
+    },
+    "evidence": {
+     "NC": "explicit"
+    },
+    "probs": {
+     "NC | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "NC": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "NC | QB": {}
+    }
+   },
+   "C": {
+    "term": "central-place forager",
+    "parts": [
+     "C"
+    ],
+    "options": {
+     "C": {
+      "evidence": "explicit",
+      "labels": [
+       "central-place forager"
+      ]
+     }
+    },
+    "evidence": {
+     "C": "explicit"
+    },
+    "probs": {
+     "C | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "C": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "C | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u12"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.996,
+    "several": 0.004,
+    "none": 0.001
+   },
+   "chosen": [
+    "u12"
+   ]
+  },
+  "header": "Foraging"
+ },
+ "4:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Proboscis (mm)"
+ },
+ "4:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Body (mm)"
+ },
+ "4:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "C species (%)"
+ },
+ "4:5": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u37",
+    "u40"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.029,
+    "p1": 0.014,
+    "several": 0.035,
+    "none": 0.923
+   }
+  },
+  "header": "NC species (%)"
+ },
+ "8:4": {
+  "cells": {
+   "Body": {
+    "term": null,
+    "parts": [
+     "Body"
+    ],
+    "options": {
+     "Body": {
+      "evidence": "explicit",
+      "labels": [
+       "body size category"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Body | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   },
+   "For": {
+    "term": null,
+    "parts": [
+     "For"
+    ],
+    "options": {
+     "For": {
+      "evidence": "explicit",
+      "labels": [
+       "type of foraging range"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "For | QK": {
+      "code": 0.006,
+      "word": 0.994
+     }
+    }
+   },
+   "Fam": {
+    "term": "taxonomic family",
+    "parts": [
+     "Fam"
+    ],
+    "options": {
+     "Fam": {
+      "evidence": "explicit",
+      "labels": [
+       "taxonomic family"
+      ]
+     }
+    },
+    "evidence": {
+     "Fam": "explicit"
+    },
+    "probs": {
+     "Fam | QK": {
+      "code": 0.97,
+      "word": 0.03
+     },
+     "Fam": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "Fam | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u14",
+    "u16"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.975,
+    "p1": 0.001,
+    "several": 0.008,
+    "none": 0.017
+   },
+   "chosen": [
+    "u14"
+   ]
+  },
+  "header": "Prob"
+ }
+}

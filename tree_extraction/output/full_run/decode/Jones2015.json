@@ -1,0 +1,943 @@
+{
+ "0:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "0:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "0:3": {
+  "cells": {
+   "Speed 3": {
+    "term": null,
+    "parts": [
+     "Speed 3"
+    ],
+    "options": {
+     "Speed 3": {
+      "evidence": "explicit",
+      "labels": [
+       "Metres/sec"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Speed 3 | QK": {
+      "code": 0.032,
+      "word": 0.968
+     }
+    }
+   },
+   "Speed 4": {
+    "term": null,
+    "parts": [
+     "Speed 4"
+    ],
+    "options": {
+     "Speed 4": {
+      "evidence": "explicit",
+      "labels": [
+       "Metres/sec"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Speed 4 | QK": {
+      "code": 0.036,
+      "word": 0.964
+     }
+    }
+   },
+   "Distance 4": {
+    "term": null,
+    "parts": [
+     "Distance 4"
+    ],
+    "options": {
+     "Distance 4": {
+      "evidence": "explicit",
+      "labels": [
+       "Metres"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Distance 4 | QK": {
+      "code": 0.011,
+      "word": 0.989
+     }
+    }
+   },
+   "Distance 5": {
+    "term": null,
+    "parts": [
+     "Distance 5"
+    ],
+    "options": {
+     "Distance 5": {
+      "evidence": "explicit",
+      "labels": [
+       "Metres"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Distance 5 | QK": {
+      "code": 0.013,
+      "word": 0.987
+     }
+    }
+   },
+   "Duration 4": {
+    "term": null,
+    "parts": [
+     "Duration 4"
+    ],
+    "options": {
+     "Duration 4": {
+      "evidence": "explicit",
+      "labels": [
+       "Seconds"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Duration 4 | QK": {
+      "code": 0.015,
+      "word": 0.985
+     }
+    }
+   },
+   "Speed 5": {
+    "term": null,
+    "parts": [
+     "Speed 5"
+    ],
+    "options": {
+     "Speed 5": {
+      "evidence": "explicit",
+      "labels": [
+       "Metres/sec"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Speed 5 | QK": {
+      "code": 0.095,
+      "word": 0.905
+     }
+    }
+   },
+   "Speed 6": {
+    "term": null,
+    "parts": [
+     "Speed 6"
+    ],
+    "options": {
+     "Speed 6": {
+      "evidence": "explicit",
+      "labels": [
+       "Metres/sec"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Speed 6 | QK": {
+      "code": 0.027,
+      "word": 0.973
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16"
+   ],
+   "choice": null
+  }
+ },
+ "1:1": {
+  "cells": {
+   "1": {
+    "term": "medium",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "medium"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "1": {
+      "e0": 0.915,
+      "keep": 0.085
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u7",
+    "u8",
+    "u11",
+    "u12"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.365,
+    "p2": 0.0,
+    "p3": 0.607,
+    "several": 0.025,
+    "none": 0.002
+   },
+   "chosen": [
+    "u12"
+   ]
+  }
+ },
+ "1:2": {
+  "cells": {
+   "1": {
+    "term": "mobile",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "mobile"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "1": {
+      "e0": 0.971,
+      "keep": 0.029
+     },
+     "1 | QB": {}
+    }
+   },
+   "2": {
+    "term": "very mobile",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "very mobile"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.986,
+      "word": 0.014
+     },
+     "2": {
+      "e0": 0.976,
+      "keep": 0.024
+     },
+     "2 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u7",
+    "u8",
+    "u11",
+    "u12"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.555,
+    "p2": 0.0,
+    "p3": 0.415,
+    "several": 0.023,
+    "none": 0.007
+   },
+   "chosen": [
+    "u8"
+   ]
+  }
+ },
+ "1:3": {
+  "cells": {
+   "1": {
+    "term": "medium",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "medium"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.975,
+      "word": 0.025
+     },
+     "1": {
+      "e0": 0.765,
+      "keep": 0.235
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u8",
+    "u7",
+    "u11",
+    "u12"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.145,
+    "p1": 0.0,
+    "p2": 0.0,
+    "p3": 0.829,
+    "several": 0.02,
+    "none": 0.005
+   },
+   "chosen": [
+    "u12"
+   ]
+  }
+ },
+ "1:4": {
+  "cells": {
+   "1": {
+    "term": "medium",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "medium"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "1": {
+      "e0": 0.762,
+      "keep": 0.238
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u7",
+    "u8",
+    "u11",
+    "u12"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.368,
+    "p2": 0.0,
+    "p3": 0.608,
+    "several": 0.013,
+    "none": 0.009
+   },
+   "chosen": [
+    "u12"
+   ]
+  }
+ },
+ "1:5": {
+  "cells": {
+   "0": {
+    "term": "sedentary",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "sedentary"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "0": {
+      "e0": 0.959,
+      "keep": 0.041
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "mobile",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "mobile"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "1": {
+      "e0": 0.964,
+      "keep": 0.036
+     },
+     "1 | QB": {}
+    }
+   },
+   "2": {
+    "term": "very mobile",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "very mobile"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "2": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "2 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u8",
+    "u7",
+    "u11",
+    "u12"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.687,
+    "p1": 0.0,
+    "p2": 0.0,
+    "p3": 0.296,
+    "several": 0.011,
+    "none": 0.006
+   },
+   "chosen": [
+    "u8"
+   ]
+  }
+ },
+ "1:6": {
+  "cells": {
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "worn",
+       "mobile",
+       "medium"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "1": {
+      "e0": 0.008,
+      "e1": 0.009,
+      "e2": 0.003,
+      "keep": 0.98
+     }
+    }
+   },
+   "2": {
+    "term": null,
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "poor",
+       "very mobile",
+       "high"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "2 | QK": {
+      "code": 0.986,
+      "word": 0.014
+     },
+     "2": {
+      "e0": 0.003,
+      "e1": 0.01,
+      "e2": 0.013,
+      "keep": 0.973
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u7",
+    "u8",
+    "u11",
+    "u12"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.008,
+    "p1": 0.024,
+    "p2": 0.001,
+    "p3": 0.068,
+    "several": 0.011,
+    "none": 0.888
+   }
+  }
+ },
+ "2:3": {
+  "cells": {
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "medium"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "1": {
+      "e0": 0.264,
+      "keep": 0.736
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u7",
+    "u8",
+    "u11",
+    "u12"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.025,
+    "p2": 0.001,
+    "p3": 0.921,
+    "several": 0.028,
+    "none": 0.025
+   },
+   "chosen": [
+    "u12"
+   ]
+  }
+ },
+ "2:4": {
+  "cells": {
+   "1.0": {
+    "term": null,
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "medium"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.799,
+      "word": 0.201
+     },
+     "1.0": {
+      "e0": 0.113,
+      "keep": 0.887
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u7",
+    "u8",
+    "u11",
+    "u12"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.001,
+    "p2": 0.0,
+    "p3": 0.967,
+    "several": 0.01,
+    "none": 0.021
+   },
+   "chosen": [
+    "u12"
+   ]
+  }
+ },
+ "2:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "2:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "2:7": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:7": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:8": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:9": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:10": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:11": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:12": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:13": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:14": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:15": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:1": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "sedentary",
+       "low"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.934,
+      "word": 0.066
+     },
+     "0": {
+      "e0": 0.066,
+      "e1": 0.023,
+      "keep": 0.911
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u8",
+    "u11"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.022,
+    "p1": 0.005,
+    "several": 0.029,
+    "none": 0.944
+   }
+  }
+ },
+ "5:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:3": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "sedentary",
+       "low"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.958,
+      "word": 0.042
+     },
+     "0": {
+      "e0": 0.093,
+      "e1": 0.02,
+      "keep": 0.888
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u8",
+    "u11"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.005,
+    "p1": 0.003,
+    "several": 0.037,
+    "none": 0.955
+   }
+  }
+ }
+}

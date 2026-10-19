@@ -1,0 +1,72 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Wang2021\Wang2021.xlsx  (48 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Wang2021\Wang2021.csv  (64 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Length (mm)' -> 'Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 45
+  missed (FN)         : 3
+  spurious, in scope  : 3   <- GT covers this trait: real errors
+  spurious, out of scope: 16   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.703 / 0.938 / 0.804   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.938 / 0.938 / 0.938   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.938   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             16
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     45  0.000  <-- low
+  measurementMethod             0     45  0.000  <-- low
+  measurementUnit               0     13  0.000  <-- low
+  measurementStatistic          0     45  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     45  0.000  <-- low
+  lifeStage                     0     45  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     45  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     45  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 3 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        3
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '7.08'                       ->  '7.8'                        x1
+     '12.05'                      ->  '12.5'                       x1
+     '11.05'                      ->  '11.5'                       x1
+  -> 3 substitutions explain 3 of 3 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Wang2021_misses.csv, Wang2021_misses_summary.json (3 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                         0    16   PRED-ONLY
+  feeding trait                                    16    16   
+  length                                           16    16   
+  wing morphology                                  16    16   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.938  0.938  0.938     45     3     3   id+type+value
+             (16 more spurious row(s) set aside as out-of-scope; strict P would be 0.703)
+  tags        0.000  0.000  0.000      0    48    48   basis+id+type+value+stat+sex+stage
+             (16 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.938 vs previous)
+             note: only 0/45 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

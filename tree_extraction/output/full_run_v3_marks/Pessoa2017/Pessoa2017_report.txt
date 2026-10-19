@@ -1,0 +1,114 @@
+  [semantic] left unmatched: 'Group' vs 'Pronotum length' (llm said different traits)
+  [semantic] left unmatched: 'Group' vs 'Elytron length' (llm said different traits)
+  [semantic] left unmatched: 'Group' vs 'Wing area' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Pessoa2017\Pessoa2017.xlsx  (513 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Pessoa2017\Pessoa2017.csv  (406 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 5 pair(s))
+  'Canthidium viride' -> 'Canthidium aff. viride'
+  'Canthon aff. ornatus' -> 'Canthon ornatus'
+  'Canthon quiquemaculatus' -> 'Canthon quinquemaculatus'
+  'Malagoniella aff. astyanax' -> 'Malagoniella astyanax'
+  'Ontophagus aff. hirculus' -> 'Onthophagus aff. hirculus'
+
+TAXON NAMES LEFT UNMAPPED (4)
+  'Anisocanthon aff. villosus, Deltochilum elongatum, Malagoniella aff. astynanax, Eurysternus caribaeus, Eurysternus nigrovirens, Canthon daguerrei, Canthon histrio, Canthon lituratus, Canthon maldonadoi, Canthon curvodilatatus, Canthon aff. ornatus, Canthon quinquemaculatus, Canthidium viride, Canthidium barbacenicum, Canthidium cuprinum, Canthidium sp.2, Canthidium sp.3, Gromphas inermis, Coprophanaeus bonariensis': matches 15 different organisms, cannot choose: 'Anisocanthon aff. villosus', 'Canthidium aff. viride', 'Canthidium barbacenicum', 'Canthidium cuprinum'
+  'Canthon curvodiatatus': no ground-truth name denotes this organism
+  'Coprophanaeus milon, Ontherus appendiculatus, Ontherus digitatus, Ontherus sulcator, Ateuchus carbonarius, Ateuchus sp.1, Genieridium cryptops, Onthophagus aff. hirculus, Trichillidium quadridens, Trichillum externepunctatum, Uroxys aff. corporaali, Dichotomius bos, Dichotomius lycas, Dichotomius nisus, Dichotomius opacipennis, Digitonthophagus sp.': matches 14 different organisms, cannot choose: 'Ateuchus carbonarius', 'Coprophanaeus milon', 'Dichotomius bos', 'Dichotomius lycas'
+  'Digitonthophagus sp.': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'size was defined by adding pronotal and elytra' -> 'Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 315
+  missed (FN)         : 198
+  spurious, in scope  : 23   <- GT covers this trait: real errors
+  spurious, out of scope: 68   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.776 / 0.614 / 0.686   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.932 / 0.614 / 0.740   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.614   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             68
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    315  0.000  <-- low
+  measurementMethod             0    213  0.000  <-- low
+  measurementUnit               0    175  0.000  <-- low
+  measurementStatistic          0    315  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    315  0.000  <-- low
+  lifeStage                     0    315  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    315  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 198 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            175
+  species+trait present, value differs       23
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '236439.06'                  ->  '236439.0625'                x2
+     '103989.68'                  ->  '103989.6822'                x1
+     '6.73'                       ->  '6.734109331'                x1
+     '51.71'                      ->  '51.71442891'                x1
+     '121'                        ->  '120.9961299'                x1
+     '15.77'                      ->  '15.77222053'                x1
+  -> 6 substitutions explain 7 of 198 misses (4%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Wing area'                        x35
+     'Pronotum length'                  x35
+     'Elytron length'                   x35
+     'Apical width'                     x35
+     'Tibia length'                     x35
+  -> 5 missing traits explain 175 of 198 misses (88%) — systematic, not scattered
+
+  full miss detail saved -> Pessoa2017_misses.csv, Pessoa2017_misses_summary.json (198 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pcoa axis 1 (approx)                              0    32   PRED-ONLY
+  pcoa axis 2 (approx)                              0    32   PRED-ONLY
+  daily activity                                   32    32   
+  anterior tibiae area                             35    35   
+  apical width                                     35     0   GT-ONLY
+  wing area                                        35     0   GT-ONLY
+  pear/ball nest                                   35    35   
+  group characteristics                             0     2   PRED-ONLY
+  horizontal displacement                          35    35   
+  elytron length                                   35     0   GT-ONLY
+  generalism                                       27    27   
+  group                                             0     2   PRED-ONLY
+  protorax height                                  35    35   
+  pronotum length                                  35     0   GT-ONLY
+  tibia length                                     35     0   GT-ONLY
+  wing load                                        35    35   
+  nest                                             34    34   
+  tibial ratio                                     35    35   
+  size                                             35    35   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.932  0.614  0.740    315    23   198   id+type+value
+             (68 more spurious row(s) set aside as out-of-scope; strict P would be 0.776)
+  tags        0.000  0.000  0.000      0   338   513   basis+id+type+value+stat+sex+stage
+             (68 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.740 vs previous)
+             note: only 0/315 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

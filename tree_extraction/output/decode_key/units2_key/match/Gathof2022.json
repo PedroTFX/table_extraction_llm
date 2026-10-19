@@ -1,0 +1,376 @@
+{
+ "_columns": [
+  [
+   5,
+   2,
+   "Nesting behavior",
+   [
+    "endogeic",
+    "endogeic / hypergeic",
+    "hypergeic",
+    "cleptoparasitic",
+    "hyper"
+   ]
+  ],
+  [
+   5,
+   3,
+   "Sociality",
+   [
+    "solitary",
+    "kleptoparasitic",
+    "social",
+    "solitary / social",
+    "unknown"
+   ]
+  ],
+  [
+   5,
+   4,
+   "Diet",
+   [
+    "polylectic",
+    "oligolectic",
+    "/"
+   ]
+  ],
+  [
+   6,
+   2,
+   "Body size (mm)",
+   [
+    "6.5",
+    "11",
+    "13.5",
+    "12",
+    "10",
+    "8.5",
+    "10.5",
+    "12.5",
+    "15",
+    "9.5",
+    "15.5",
+    "6",
+    "8",
+    "9",
+    "14",
+    "16",
+    "11.5"
+   ]
+  ],
+  [
+   6,
+   3,
+   "Active flight time (number of months)",
+   [
+    "7",
+    "5",
+    "3",
+    "6",
+    "10",
+    "9",
+    "4"
+   ]
+  ],
+  [
+   6,
+   4,
+   "Migratory status",
+   [
+    "0",
+    "1"
+   ]
+  ],
+  [
+   6,
+   5,
+   "Larval foodtype",
+   [
+    "phytophagous",
+    "zoophagous",
+    "aquatic saprophagous",
+    "terrestrial saprophagous"
+   ]
+  ]
+ ],
+ "5:2": {
+  "cells": {
+   "endogeic": {
+    "term": null,
+    "parts": [
+     "endogeic"
+    ],
+    "options": {
+     "endogeic": {
+      "evidence": "explicit",
+      "labels": [
+       "Belowground nesting in self-excavated or existing cavities"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "endogeic | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "endogeic / hypergeic": {
+    "term": null,
+    "parts": [
+     "endogeic",
+     "hypergeic"
+    ],
+    "options": {
+     "endogeic": {
+      "evidence": "explicit",
+      "labels": [
+       "Belowground nesting in self-excavated or existing cavities"
+      ]
+     },
+     "hypergeic": {
+      "evidence": "explicit",
+      "labels": [
+       "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "endogeic | QK": {
+      "code": 0.001,
+      "word": 0.999
+     },
+     "hypergeic | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "hypergeic": {
+    "term": null,
+    "parts": [
+     "hypergeic"
+    ],
+    "options": {
+     "hypergeic": {
+      "evidence": "explicit",
+      "labels": [
+       "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "hypergeic | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "cleptoparasitic": {
+    "term": null,
+    "parts": [
+     "cleptoparasitic"
+    ],
+    "options": {
+     "cleptoparasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "Brood parasitic way of life",
+       "Penetration into foreign nests and deposition of the eggs therein"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "cleptoparasitic | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u13",
+    "u14"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.947,
+    "p1": 0.001,
+    "several": 0.04,
+    "none": 0.013
+   },
+   "chosen": [
+    "u13"
+   ]
+  },
+  "header": "Nesting behavior"
+ },
+ "5:3": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Nest foundation occurs alone; no division of labour and no storage of food stocks"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "header": "Sociality",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "5:4": {
+  "cells": {
+   "polylectic": {
+    "term": null,
+    "parts": [
+     "polylectic"
+    ],
+    "options": {
+     "polylectic": {
+      "evidence": "explicit",
+      "labels": [
+       "No binding to certain plant species"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "polylectic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u13",
+    "u14"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.978,
+    "several": 0.014,
+    "none": 0.008
+   },
+   "chosen": [
+    "u14"
+   ]
+  },
+  "header": "Diet"
+ },
+ "6:2": {
+  "cells": {},
+  "header": "Body size (mm)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "6:3": {
+  "cells": {},
+  "header": "Active flight time (number of months)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "6:4": {
+  "cells": {},
+  "header": "Migratory status",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "6:5": {
+  "cells": {
+   "aquatic saprophagous": {
+    "term": null,
+    "parts": [
+     "aquatic saprophagous"
+    ],
+    "options": {
+     "aquatic saprophagous": {
+      "evidence": "explicit",
+      "labels": [
+       "Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "aquatic saprophagous | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "terrestrial saprophagous": {
+    "term": null,
+    "parts": [
+     "terrestrial saprophagous"
+    ],
+    "options": {
+     "terrestrial saprophagous": {
+      "evidence": "explicit",
+      "labels": [
+       "Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "terrestrial saprophagous | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u14",
+    "u15"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.966,
+    "several": 0.025,
+    "none": 0.009
+   },
+   "chosen": [
+    "u15"
+   ]
+  },
+  "header": "Larval foodtype"
+ }
+}

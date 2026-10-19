@@ -1,0 +1,60 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Odanaka2019\Odanaka2019.xlsx  (33 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Odanaka2019\Odanaka2019.csv  (22 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 22
+  missed (FN)         : 11
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 0.667 / 0.800   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.667 / 0.800   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.667   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                11     22  0.500
+  measurementMethod             0     22  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic         22     22  1.000
+  measurementRemarks            0      0    n/a
+  sex                          11     22  0.500
+  lifeStage                    11     22  0.500
+  caste                         0     11  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     22  0.000  <-- low
+  samplingProtocol              0     22  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     22  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 11 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             11
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Management intensity'             x11
+  -> 1 missing trait explains 11 of 11 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Odanaka2019_misses.csv, Odanaka2019_misses_summary.json (11 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  behavior                                         11    11   
+  nesting biology                                  11    11   
+  management intensity                             11     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.667  0.800     22     0    11   id+type+value
+  tags        0.000  0.000  0.000      0    22    33   basis+id+type+value+stat+sex+stage
+             (F1 -0.800 vs previous)

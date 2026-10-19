@@ -1,0 +1,17 @@
+Held-out (19 papers): 19 papers, 38 tables
+  model                        accuracy     identifiers          traits        new tags        id exact        s/column
+  gemma (pipeline)          138/145 95%       45/50 90%       93/95 98%          0/3 0%       29/32 91%           5.97s
+  tev1 flat                 133/145 92%       49/50 98%       84/95 88%          0/3 0%       23/32 72%           3.42s
+  tree v3 · tev1            129/145 89%      50/50 100%       79/95 83%         2/3 67%       23/32 72%           1.94s
+  tree v3 · nimble Q8       139/145 96%       49/50 98%       90/95 95%        3/3 100%       29/32 91%           4.90s
+  tree v3 · nimble Q4       135/145 93%       48/50 96%       87/95 92%        3/3 100%       27/32 84%           1.35s
+  39 GT-used column(s) with at least one wrong answer -> report.html
+
+Tuning (10 papers): 10 papers, 18 tables
+  model                        accuracy     identifiers          traits        new tags        id exact        s/column
+  gemma (pipeline)            77/82 94%       21/24 88%       56/58 97%          0/1 0%       15/18 83%           2.35s
+  tev1 flat                   80/82 98%       22/24 92%      58/58 100%          0/1 0%       13/18 72%           1.91s
+  tree v3 · tev1             82/82 100%      24/24 100%      58/58 100%          0/1 0%       17/18 94%           2.65s
+  tree v3 · nimble Q8        82/82 100%      24/24 100%      58/58 100%          0/1 0%      18/18 100%           5.59s
+  tree v3 · nimble Q4        82/82 100%      24/24 100%      58/58 100%          0/1 0%      18/18 100%           1.58s
+  7 GT-used column(s) with at least one wrong answer -> report.html

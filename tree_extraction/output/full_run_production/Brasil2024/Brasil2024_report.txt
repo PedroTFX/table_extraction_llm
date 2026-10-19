@@ -1,0 +1,61 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Brasil2024\Brasil2024.xlsx  (25 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Brasil2024\Brasil2024.csv  (31 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Eucera pruinosa' -> 'Eucera (Peponapis) pruinosa'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 25
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 6   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.806 / 1.000 / 0.893   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              6
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                15     25  0.600
+  measurementMethod             0      0    n/a   +15 where GT blank
+  measurementUnit               0      0    n/a
+  measurementStatistic         25     25  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     25  0.000  <-- low
+  lifeStage                    10     25  0.400  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     25  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     25  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     25  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size x urbanization female spring f          0     3   PRED-ONLY
+  body size x urbanization female summer f          0     3   PRED-ONLY
+  body size                                         5     5   
+  diet                                              5     5   
+  nesting                                           5     5   
+  sociality                                         5     5   
+  voltinism                                         5     5   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     25     0     0   id+type+value
+             (6 more spurious row(s) set aside as out-of-scope; strict P would be 0.806)
+  tags        0.000  0.000  0.000      0    25    25   basis+id+type+value+stat+sex+stage
+             (6 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)

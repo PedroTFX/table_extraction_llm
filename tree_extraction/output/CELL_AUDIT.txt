@@ -1,0 +1,93 @@
+GT values traced to a table cell: 8498  (not found in any table cell: 4916)
+
+cell pattern                  cells  share GT=whole  handled  GT statistic (top)            unit / n recorded
+----------------------------------------------------------------------------------------------------------------------
+number                         6080    72%     100%     100%  mean 5708, range 107, mode 102 unit 52% · n 19%
+words                          1765    21%     100%     100%  mode 1761, individual 4        unit 0% · n 2%
+code                            227     3%     100%     100%  mode 227                       unit 0% · n 0%
+number ± number                  89     1%     100%     100%  mean ± SD 89                   unit 100% · n 11%
+other: text                      85     1%     100%     100%  mode 85                        unit 0% · n 0%
+list of words                    78     1%      28%      28%  mode 78                        unit 0% · n 15%
+words + citation                 71     1%      96%      96%  mode 71                        unit 0% · n 0%
+other: mixed text and numbers     57     1%      98%      98%  mode 56, mean 1                unit 2% · n 0%
+number + citation                16     0%     100%     100%  mean 16                        unit 100% · n 0%
+range a–b                        15     0%     100%     100%  range 15                       unit 100% · n 100%
+number (number)                  14     0%     100%     100%  mean ± SD 14                   unit 0% · n 0%
+number + mark                     1     0%     100%     100%  mean 1                         unit 100% · n 0%
+
+GT=whole: the GT value is the whole printed cell.  handled: an existing splitter
+(or no split at all) turns the cell into exactly the GT value.
+
+which splitter does the work, per pattern (cells where the GT took a PART of the cell):
+  list of words                   56 cells: none 56
+  words + citation                 3 cells: none 3
+  other: mixed text and numbers     1 cells: none 1
+
+examples per pattern (cell -> GT value | statistic | unit | n), up to 4 from different papers:
+  number:
+    Leong2023: '44.33' -> '44.33' | mean | ºC | 10  [as is]
+    Nunes2016: '3.0' -> '3' | mean | mg | -  [as is]
+    Barber2017: '3.5' -> '3.5' | mean | mm | -  [as is]
+    Braschler2021: '9.0' -> '9' | max | mm | -  [as is]
+  words:
+    Leong2023: 'forest' -> 'forest' | mode | - | 10  [as is]
+    Nunes2016: 'Paracoprid' -> 'Paracoprid' | mode | - | -  [as is]
+    Barber2017: 'nocturnal' -> 'nocturnal' | mode | - | -  [as is]
+    CortesGomez2023: 'Moderate' -> 'Moderate' | mode | - | -  [as is]
+  code:
+    Braschler2021: 'No' -> 'No' | mode | - | -  [as is]
+    OsorioCanadas2018: 'MUD' -> 'Mud' | mode | - | -  [as is]
+    Korosi2022: 'Egg' -> 'Egg' | mode | - | -  [as is]
+  number ± number:
+    Ibarra2021: '3.14 ± 0.06' -> '3.14 ± 0.06' | mean ± SD | mm | -  [as is]
+    Kovacs2010: '2.31 ± 0.24' -> '2.31 ± 0.24 ' | mean ± SD | mm | 860  [as is]
+  other: text:
+    CortesGomez2023: 'Corbícula' -> 'Corbícula' | mode | - | -  [as is]
+    Braschler2021: 'Carbohydrates & animal matter' -> 'Carbohydrates & animal matter' | mode | - | -  [as is]
+    Torok2022: 'Spiders (Araneae) and other insects' -> 'Spiders (Araneae) and other in' | mode | - | -  [as is]
+  list of words:
+    Ibarra2021: 'Predator/ Mycetophagous' -> 'Mycetophagous' | mode | - | -  [none]
+    Dejean2019: 'Carton nests in cavities; galleries on tree trunks' -> 'Carton nests in cavities; gall' | mode | - | 1  [as is]
+    Habustova2017: 'Spring/summer' -> 'Spring/summer' | mode | - | -  [as is]
+  words + citation:
+    OsorioCanadas2018: 'PRED/SCAVENGER [4]' -> 'Scavenger' | mode | - | -  [none]
+  other: mixed text and numbers:
+    OsorioCanadas2018: 'PRED/SCAVENGER [3-4]' -> 'Scavenger' | mode | - | -  [none]
+    Torok2022: '6.' -> '6' | mean | mm | -  [as is]
+  number + citation:
+    OsorioCanadas2018: '10 [8]' -> '10' | mean | mm | -  [as is]
+  range a–b:
+    Attiwilli2022: '12.4 - 378.5' -> '12.4 - 378.5 ' | range | mg | 45  [as is]
+  number (number):
+    CortesGomez2023: '3.0 (0.10)' -> '3.0 (0.10)' | mean ± SD | - | -  [as is]
+  number + mark:
+    Wiescher2012: '0.460*' -> '0.46' | mean | mg x h^-1 x cm^-2 | -  [as is]
+
+not handled by any splitter (the GT value is a part no splitter gives), by pattern:
+  list of words               56
+  words + citation            3
+  other: mixed text and numbers1
+
+GT values not found in any table cell, per paper (text, legends decoded, other files):
+  Guareschi2015         1659
+  Tonelli2021           1087
+  Graf2021              832
+  Cappellari2022        325
+  Figueroa2021          243
+  Torok2022             109
+  Uemori2021            109
+  Korosi2022            107
+  Habustova2017         87
+  Oliveira2022          73
+  OsorioCanadas2018     58
+  Derhe2016             39
+  Wang2021              35
+  GibbParr2013          33
+  Espinosa2023          27
+  Ibarra2021            24
+  Nunes2016             19
+  Attiwilli2022         15
+  CortesGomez2023       14
+  Odanaka2019           11
+  Wiescher2012          5
+  Tsai2020              5

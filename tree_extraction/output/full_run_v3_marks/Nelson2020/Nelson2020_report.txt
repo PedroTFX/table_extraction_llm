@@ -1,0 +1,108 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Nelson2020\Nelson2020.xlsx  (191 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Nelson2020\Nelson2020.csv  (240 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Bembidion sp. 1' -> 'Bembidion sp.1'
+  'Harpalus herbivagus/somnulentus' -> 'Harpalus herbivagus/ somnulentus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'season' -> 'breeding season'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 160
+  missed (FN)         : 31
+  spurious, in scope  : 40   <- GT covers this trait: real errors
+  spurious, out of scope: 40   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.667 / 0.838 / 0.742   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.800 / 0.838 / 0.818   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.838   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             40
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    160  0.000  <-- low
+  measurementMethod             0    120  0.000  <-- low
+  measurementUnit               0      9  0.000  <-- low
+  measurementStatistic          0    160  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    160  0.000  <-- low
+  lifeStage                     0    160  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    160  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 31 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       31
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '3.09'                       ->  '9.3'                        x2
+     '3.15'                       ->  '15.3'                       x2
+     '7.09'                       ->  '9.7'                        x2
+     '8.07'                       ->  '7.8'                        x2
+     '8.11'                       ->  '11.8'                       x2
+     '1.05'                       ->  '5.1'                        x1
+  -> 6 substitutions explain 11 of 31 misses (35%) — scattered; no single cause
+
+  full miss detail saved -> Nelson2020_misses.csv, Nelson2020_misses_summary.json (31 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  0.29–85.57                                        0     1   PRED-ONLY
+  0.3–7.65                                          0     1   PRED-ONLY
+  0–0.29                                            0     6   PRED-ONLY
+  0–0.3                                             0     4   PRED-ONLY
+  0–0.31                                            0     1   PRED-ONLY
+  0–0.36                                            0     1   PRED-ONLY
+  0–0.59                                            0     2   PRED-ONLY
+  0–0.6                                             0     2   PRED-ONLY
+  0–0.88                                            0     1   PRED-ONLY
+  0–0.9                                             0     1   PRED-ONLY
+  0–1.2                                             0     1   PRED-ONLY
+  0–1.47                                            0     2   PRED-ONLY
+  0–1.5                                             0     1   PRED-ONLY
+  0–1.8                                             0     1   PRED-ONLY
+  0–10.21                                           0     1   PRED-ONLY
+  0–10.29                                           0     1   PRED-ONLY
+  0–15                                              0     1   PRED-ONLY
+  0–2.06                                            0     1   PRED-ONLY
+  0–2.14                                            0     1   PRED-ONLY
+  0–2.35                                            0     2   PRED-ONLY
+  0–2.7                                             0     1   PRED-ONLY
+  0–2.95                                            0     1   PRED-ONLY
+  0–5.5                                             0     1   PRED-ONLY
+  0–51.48                                           0     1   PRED-ONLY
+  0–57.96                                           0     1   PRED-ONLY
+  0–6.76                                            0     1   PRED-ONLY
+  0–7.21                                            0     1   PRED-ONLY
+  0–8.26                                            0     1   PRED-ONLY
+  activity                                         38    40   Δ+2 (split?)
+  breeding season                                  40    40   
+  diet                                             33    40   Δ+7 (split?)
+  size                                             40    40   
+  wingtype                                         40    40   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.800  0.838  0.818    160    40    31   id+type+value
+             (40 more spurious row(s) set aside as out-of-scope; strict P would be 0.667)
+  tags        0.000  0.000  0.000      0   200   191   basis+id+type+value+stat+sex+stage
+             (40 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.818 vs previous)
+             note: only 0/160 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -1,0 +1,120 @@
+{
+ "calls": 2,
+ "chars": 7130,
+ "passages": [
+  "[prose] Quebec Ontario □ Maine NewYork N 0 5 10 20 Km Château Roult 201 et 227 Leuille Perrot Reserve nationale de laune de laufetida du P",
+  "[prose] Trace plots and other diagnostics for the species richness model suggested that chains mixed well and were of sufficient length. The posterior predictive check suggested good model fit $( \\chi ^ { 2 } { = } 9 3 2 . 8 7 , P { = } 0 . 4 8 )$ . Species richness increased with site surface area (Table S3, Fig. 4) but did not vary with the cover of heat islands within a 1,000 m radius around sites (Table S3). Species detection probability did not vary with sampling effort (Table S3). Detection probability followed a quadratic trend with Julian date, reaching a peak in midseason (Table S3, Fig. 5). Finally, detection probability of species with blue pan traps was lower than with yellow traps but did not differ from that of white traps (Table S3, Fig. 5).",
+  "[prose] The occupancy analysis focused on three functional groups: insectivores, terrestrial saprophagous, and aquatic saprophagous. The phytophagous functional group was excluded due to very sparse data. Trace plots and other diagnostics for the occupancy model on functional groups suggested that chains mixed well for all parameters and that chains were sufficiently long. There were no indications that the model lacked ${ \\bf f } { \\bf t } ,$ based on the posterior predictive check on either rows or columns $\\chi^{2}{ rows } = 1096.87, P = 0.20;$ $\\chi^{2}{ columns } = 7.26, P = 0.49$ . The area under the ROC curve was 0.64 (95% CRI: [0.54, 0.75]), suggesting an intermediate model performance.",
+  "[prose] Trapping occurred over 13 periods of sampling, using blue, white, and yellow coloured pan traps. Functional groups consist of insectivores (I), terrestrial saprophagous (TS), aquatic saprophagous (AS), or phytophagous (P) species",
+  "[prose] Acknowledgements We are grateful to O. Samson-Robert, P. Hamelin, C. Barrette, M. Girard, M. Heiztman, É. Nadeau, J. Hamel, S. Silverman, M.-È. Chagnon, S. Loboda, M. Charrette, Y. Wong, M. St-Laurent, M. Bellanger, D. Le Botlan, G. Guengard, T. Andro, L. Alexandre, A. Boilard, A. Duclos, D. Garrec, N. Rault, and G. Blais for the help with field sampling, lab work, and data transcription. Finally, we are indebted to the managers of cemeteries and community gardens as well as the Management of Large Parks and Greening of the city of Montreal, and the director of the Boucherville Islands National Park for allowing access to their sites. This study was funded by the National Science and Engineering Research Council of Canada (NSERC) Discovery Grant Program, NSERC-CANPOLIN (the Canadian pollinator initiative) and the Fonds de recherche du Québec – Nature et technologies (FRQNT). The Bayesian analyses and goodness of fit tests were conducted on the Beluga and Graham high performance computer clusters of Compute Canada.",
+  "[prose] We estimated the species richness of syrphids on each site during each trapping period using a hierarchical model based on data augmentation (Kéry and Royle 2016; Royle and Dorazio 2012; Royle et al. 2007). Data augmentation is an approach used to estimate the number of species in a community among an arbitrarily large set of M potential species (Royle and Dorazio 2012). This model was built using the observed detection histories of each species and incorporated the effects of explanatory variables on species richness and detection probability. Specifically, we translated capture data for each species into detected (1) or not detected (0)",
+  "[prose] normal priors with $\\mathrm{N}(\\mu = 0, \\sigma^2 = 100)$ for the fixed effect β parameters, and a uniform prior U(0, 50) for the standard deviation parameter of random intercepts. Model structure and priors are presented in Table S1. This model was implemented in JAGS 4.3.0 within R 4.1.2 with the jagsUI and coda packages (Kellner 2017; Lunn et al. 2013; Plummer et al. 2006; R Core Team 2021). We evaluated convergence based on trace plots, posterior density plots, and the Brooks-Gelman-Rubin statistic. Model fit was assessed with a posterior predictive check comparing the observed number of species detected on site j on date k in trap colour l against the number of expected species detected with a Pearson chisquare (Kéry and Royle 2016). We reported means and 95% Bayesian credible intervals for each parameter of interest, where intervals excluding 0 indicated that the effect of a variable is different from 0.",
+  "[prose] We investigated occupancy patterns of three of the four syrphid fly functional groups defined above (insectivores, terrestrial saprophagous, and aquatic saprophagous). The phytophagous functional group was excluded due to very sparse data. We combined the detection data of the species of each functional group for each sampling visit on the 25 sites sampled. Here, we translated capture data for each functional group into detected (1) or not detected (0) for traps of each trap colour during a given trapping period. Much like in the species richness analysis above, data were combined into detection histories.",
+  "[table 2] Site surface area (ha) | Number of species\n0 | ~1\n5 | ~5.5\n10 | ~7.5\n15 | ~8.8",
+  "[prose] Syrphid flies (Diptera, Syrphidae) play important ecological roles as pollinators, pest control agents, and decomposers. Communities are influenced by environmental variables such as land use. However, these interactions are poorly studied in urban landscapes. We used pan traps in community gardens, cemeteries, and parks in Montreal, Canada, to investigate syrphid fly communities in an urban landscape and describe how site surface area and heat island cover shape these communities. We estimated the species richness of communities and the occupancy patterns of three syrphid functional groups (insectivores, terrestrial saprophagous, and aquatic saprophagous). We captured 1,791 specimens from 48 species. Species richness increased with site surface area but did not vary with the level of urbanisation. The occupancy of the three groups did not change with site surface area. Syrphid flies of the terrestrial saprophagous group were less likely to occur on sites with high urbanisation, but the occupancy of insectivore and aquatic saprophagous groups did not vary with the variable.",
+  "[prose] Detection histories form the raw data to estimate the occupancy and detection probability of a given species or group with the classic occupancy model (MacKenzie et al. 2002). This occupancy model includes two main parameters: one describes the biological process of interest, which is the probability of occupancy of the species (ψ), whereas the other describes the observation process (p). To account for potential heterogeneity in either occupancy or detection probability, covariates can be included on these parameters using a logit link function analogous to logistic regression. We modified the approach to our syrphid fly functional group data to test our hypotheses on site surface area and heat island cover within 1 km. Specifically, we estimated occupancy and detection probability of each functional group in the same hierarchical model."
+ ],
+ "categories": [
+  {
+   "variable": "detected",
+   "code": "1",
+   "term": "detected",
+   "model_label": "detected",
+   "label": "detected",
+   "explanation": ""
+  },
+  {
+   "variable": "detected",
+   "code": "0",
+   "term": "not detected",
+   "model_label": "not detected",
+   "label": "not detected",
+   "explanation": ""
+  },
+  {
+   "variable": "site surface area",
+   "code": "1",
+   "term": "1,791",
+   "model_label": "1,791",
+   "label": "1,791",
+   "explanation": ""
+  },
+  {
+   "variable": "species",
+   "code": "48",
+   "term": "48",
+   "model_label": "48",
+   "label": "48",
+   "explanation": ""
+  },
+  {
+   "variable": "Site surface area",
+   "code": "",
+   "label": "Site surface area (ha)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "syrphid functional groups",
+   "code": "",
+   "label": "insectivores",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "syrphid functional groups",
+   "code": "",
+   "label": "terrestrial saprophagous",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "syrphid functional groups",
+   "code": "",
+   "label": "aquatic saprophagous",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 12.9,
+ "columns": [
+  [
+   0,
+   5,
+   "Functional group",
+   [
+    "I",
+    "AS",
+    "TS",
+    "P"
+   ]
+  ],
+  [
+   1,
+   1,
+   "Number of species (Median)",
+   [
+    "0",
+    "~20",
+    "~30",
+    "~36",
+    "~41",
+    "~45",
+    "~48"
+   ]
+  ],
+  [
+   3,
+   1,
+   "Occupancy probability",
+   [
+    "1.00",
+    "~0.85",
+    "~0.50",
+    "~0.30",
+    "~0.25"
+   ]
+  ]
+ ]
+}

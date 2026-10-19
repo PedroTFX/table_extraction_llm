@@ -1,0 +1,207 @@
+{
+ "calls": 1,
+ "chars": 5160,
+ "passages": [
+  "[prose] The study was conducted in Braunschweig, Lower Saxony, Germany (Fig. 1). With almost 250,000 inhabitants and an area of around 193 km 2 (Stadt Braunschweig - Referat Stadtentwicklung, Statistik, Vorhabenplanung 2021), Braunschweig is located in the northern foreland of the Harz mountains. The mean annual precipitation is 637 mm and the mean",
+  "[prose] ```mermaid graph TD A[\"Land-use types\\n(Based on Basis-DLM)\\nTypes: industrial and commercial area, arable land, grassland, wood, flower-rich anthropogenic habitats, near-natural habitats, parks, residential area\\nRadii: 50, 100, 150, 200, 250, 300, 400, 500, 600, 750, 1000, 1500 m\"] --> B[\"Correlation tests\"] C[\"Bee data\\nGroups: total abundance, species richness, abundance of small bees, medium-sized bees, large bees, bumble bees, below-ground nesting bees, above-ground nesting bees, above- and below-ground nesting bees, parasitic bees, polylectic bees, oligolectic bees\"] --> B D[\"Impervious surface\\n(Based on IMD)\\nRadii: 50, 100, 150, 200, 250, 300, 400, 500, 600, 750, 1000, 1500 m\"] --> C B --> E[\"GLMs\"] E --> F[\"Radii with the lowest AIC for each bee group and impervious surface as linear or non-linear variable (see Table 1)\"] E --> G[\"Radii with the strongest correlation for each bee group and each land use type (see Table 1)\"] G --> H[\"First GLM\\nOne GLM for each bee group with using multimodel inference approach\"] G --> I[\"Second GLM\\nOne GLM for each bee group with using multimodel inference approach\"] H --> J[\"Third GLM\\n(computed only if impervious surface was significant for regarded bee group)\\nTests for interactions between impervious surface and significant variables from first GLM (see Table 2) with using multimodel inference approach\"] I --> J ```",
+  "[prose] Tab. ESM1.01: Wild bee species with total abundance and associated traits. Specimens without species identification were not grouped (-).Bumble bees were grouped in their own size class (B). Hylaeus brevicornis and H. gredleri could not be distinguished and were combined to Hyleaus brevicornis agg. Andrena minutula and A. subopaca were combined to Andrena minutula agg. Considering the controversial taxonomic status of some species (Schmidt et al. 2015), it was neither differentiated between Nomada succincta and N. goodeniana nor between Andrena dorsata and A. propinqua.",
+  "[table 6] small | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nmedium | polylectic | below-ground\nsmall | polylectic | below-ground",
+  "[table 6] small | polylectic | below-ground\n- | - | -\nmedium | oligolectic | below-ground\nlarge | oligolectic | above-ground\nlarge | polylectic | above-ground\nlarge | - | -\nlarge | polylectic | above-ground\nlarge | polylectic | both\nmedium | parasitic | parasitic\nmedium | parasitic | parasitic",
+  "[table 6] medium | parasitic | parasitic\nmedium | parasitic | parasitic\nsmall | parasitic | parasitic\nmedium | parasitic | parasitic\nlarge | parasitic | parasitic\nmedium | parasitic | parasitic\nmedium | parasitic | parasitic\nlarge | parasitic | parasitic\nlarge | polylectic | above-ground\nmedium | polylectic | above-ground",
+  "[table 6] medium | oligolectic | above-ground\nlarge | polylectic | above-ground\nsmall | oligolectic | above-ground\nlarge | oligolectic | below-ground\nsmall | oligolectic | below-ground\nlarge | parasitic | parasitic\nsmall | parasitic | parasitic\nsmall | parasitic | parasitic\nsmall | parasitic | parasitic",
+  "[prose] The most important land-use type supporting the urban wild bee community was proportion of flowerrich anthropogenic habitats, composed of long-term allotments and cemeteries. This factor had a positive effect on almost all investigated bee groups, showing the utmost importance of flower-rich anthropogenic managed habitats for urban wild bees. The positive effect of allotments for bees has been shown before (Baldock et al. 2019) with higher abundance of bees in allotments compared to most other urban land uses, whereas bee species richness was not affected. In the current study, both, bee species richness and total bee abundance, benefited from proportion of flower-rich anthropogenic habitat within a 400 m and 250 m radius, respectively. The difference in scales is presumably showing the difference between the mean dispersal range of the trapped bee species (species richness) and the smaller mean foraging range of the trapped individual bees (abundance). The dispersal distance of solitary wild bees is largely unknown and observations range from sedentary behaviour to several kilometres even for the same species (Franzén et al. 2009). The maximum foraging distance for all bees in this study estimated with the formula of Gathmann and Tscharntke (2002) is 364 m (estimated mean body size among all bee individuals: 10.9 mm). As the formula of Gathmann and Tscharntke (2002) estimates the maximum foraging distance from the nesting site, it is not surprising that the scale of 250 m determined here for total wild bee abundance is lower."
+ ],
+ "categories": [
+  {
+   "variable": "Land-use types",
+   "code": "industrial and commercial area",
+   "term": "industrial and commercial area",
+   "model_label": "industrial and commercial area",
+   "label": "industrial and commercial area",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "arable land",
+   "term": "arable land",
+   "model_label": "arable land",
+   "label": "arable land",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "grassland",
+   "term": "grassland",
+   "model_label": "grassland",
+   "label": "grassland",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "wood",
+   "term": "wood",
+   "model_label": "wood",
+   "label": "wood",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "flower-rich anthropogenic habitats",
+   "term": "flower-rich anthropogenic habitats",
+   "model_label": "flower-rich anthropogenic habitats",
+   "label": "flower-rich anthropogenic habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "near-natural habitats",
+   "term": "near-natural habitats",
+   "model_label": "near-natural habitats",
+   "label": "near-natural habitats",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "parks",
+   "term": "parks",
+   "model_label": "parks",
+   "label": "parks",
+   "explanation": ""
+  },
+  {
+   "variable": "Land-use types",
+   "code": "residential area",
+   "term": "residential area",
+   "model_label": "residential area",
+   "label": "residential area",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "total abundance",
+   "term": "total abundance",
+   "model_label": "total abundance",
+   "label": "total abundance",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "species richness",
+   "term": "species richness",
+   "model_label": "species richness",
+   "label": "species richness",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "abundance of small bees",
+   "term": "abundance of small bees",
+   "model_label": "abundance of small bees",
+   "label": "abundance of small bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "medium-sized bees",
+   "term": "medium-sized bees",
+   "model_label": "medium-sized bees",
+   "label": "medium-sized bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "large bees",
+   "term": "large bees",
+   "model_label": "large bees",
+   "label": "large bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "bumble bees",
+   "term": "bumble bees",
+   "model_label": "bumble bees",
+   "label": "bumble bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "below-ground nesting bees",
+   "term": "below-ground nesting bees",
+   "model_label": "below-ground nesting bees",
+   "label": "below-ground nesting bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "above-ground nesting bees",
+   "term": "above-ground nesting bees",
+   "model_label": "above-ground nesting bees",
+   "label": "above-ground nesting bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "above- and below-ground nesting bees",
+   "term": "above- and below-ground nesting bees",
+   "model_label": "above- and below-ground nesting bees",
+   "label": "above- and below-ground nesting bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "parasitic bees",
+   "term": "parasitic bees",
+   "model_label": "parasitic bees",
+   "label": "parasitic bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "polylectic bees",
+   "term": "polylectic bees",
+   "model_label": "polylectic bees",
+   "label": "polylectic bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "oligolectic bees",
+   "term": "oligolectic bees",
+   "model_label": "oligolectic bees",
+   "label": "oligolectic bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Impervious surface",
+   "code": "Radii",
+   "term": "Radii",
+   "model_label": "Radii",
+   "label": "Radii",
+   "explanation": ""
+  },
+  {
+   "variable": "Bee data",
+   "code": "",
+   "label": "small",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Bee data",
+   "code": "",
+   "label": "medium",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Bee data",
+   "code": "",
+   "label": "large",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [],
+ "seconds": 47.5
+}

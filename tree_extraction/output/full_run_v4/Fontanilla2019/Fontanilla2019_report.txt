@@ -1,0 +1,113 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Fontanilla2019\Fontanilla2019.xlsx  (1315 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run\Fontanilla2019\Fontanilla2019.csv  (2331 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Ectomomyrmex leuwenhoeki' -> 'Ectomomyrmex leeuwenhoeki'
+  'Temnothorax cf. pisarskii' -> 'Temnothorax cf. pisarski'
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'Dilobocondyla': no ground-truth name denotes this organism
+  'Parapatrechina sauteri': no ground-truth name denotes this organism
+  'gasteroreticulatus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Relative eye length' -> 'Relative Eye Length'
+  'Relative hindleg length' -> 'Relative Hindleg Length'
+  'Relative mandible length' -> 'Relative Mandible Length'
+  'Relative scape length' -> 'Relative Scape Length'
+  'Weber s length' -> "Weber's Length"
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1310
+  missed (FN)         : 5
+  spurious, in scope  : 5   <- GT covers this trait: real errors
+  spurious, out of scope: 1016   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.562 / 0.996 / 0.719   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.996 / 0.996 / 0.996   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.996   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1016
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   1310  0.000  <-- low
+  measurementMethod             0   1048  0.000  <-- low
+  measurementUnit               0   1048  0.000  <-- low
+  measurementStatistic          0   1310  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   1310  0.000  <-- low
+  lifeStage                     0   1310  0.000  <-- low
+  caste                         0   1310  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0   1310  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0   1310  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1310  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 5 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              5
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Relative Eye Length'              x1
+     'Relative Hindleg Length'          x1
+     'Relative Mandible Length'         x1
+     'Relative Scape Length'            x1
+     "Weber's Length"                   x1
+  -> 5 missing traits explain 5 of 5 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Fontanilla2019_misses.csv, Fontanilla2019_misses_summary.json (5 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 1)                               0    50   PRED-ONLY
+  (no name, column 10)                              0    61   PRED-ONLY
+  1000 #3                                           0    10   PRED-ONLY
+  1000 #4                                           0     7   PRED-ONLY
+  1000 #5                                           0    10   PRED-ONLY
+  (no name, column 11)                              0    52   PRED-ONLY
+  (no name, column 12)                              0    54   PRED-ONLY
+  1200                                              0     5   PRED-ONLY
+  (no name, column 13)                              0    41   PRED-ONLY
+  (no name, column 14)                              0    63   PRED-ONLY
+  1400                                              0     4   PRED-ONLY
+  1400 #3                                           0     9   PRED-ONLY
+  (no name, column 15)                              0    45   PRED-ONLY
+  (no name, column 16)                              0    35   PRED-ONLY
+  (no name, column 17)                              0    39   PRED-ONLY
+  (no name, column 18)                              0    44   PRED-ONLY
+  (no name, column 19)                              0    22   PRED-ONLY
+  (no name, column 2)                               0    53   PRED-ONLY
+  (no name, column 3)                               0    46   PRED-ONLY
+  (no name, column 4)                               0    69   PRED-ONLY
+  (no name, column 5)                               0    63   PRED-ONLY
+  (no name, column 6)                               0    56   PRED-ONLY
+  (no name, column 7)                               0    53   PRED-ONLY
+  (no name, column 8)                               0    70   PRED-ONLY
+  (no name, column 9)                               0    55   PRED-ONLY
+  relative eye length                             263   263   
+  relative hindleg length                         263   263   
+  relative mandible length                        263   263   
+  relative scape length                           263   263   
+  weber's length                                  263   263   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.996  0.996  0.996   1310     5     5   id+type+value
+             (1016 more spurious row(s) set aside as out-of-scope; strict P would be 0.562)
+  tags        0.000  0.000  0.000      0  1315  1315   basis+id+type+value+stat+sex+stage
+             (1016 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.996 vs previous)
+             note: only 0/1310 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

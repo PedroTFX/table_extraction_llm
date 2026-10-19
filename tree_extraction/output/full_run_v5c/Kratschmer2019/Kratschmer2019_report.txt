@@ -1,0 +1,130 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Kratschmer2019\Kratschmer2019.xlsx  (633 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5c\Kratschmer2019\Kratschmer2019.csv  (2702 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'honey bees': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Intertegular distance' -> 'Intertegular Distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 338
+  missed (FN)         : 295
+  spurious, in scope  : 315   <- GT covers this trait: real errors
+  spurious, out of scope: 2049   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.125 / 0.534 / 0.203   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.518 / 0.534 / 0.526   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.534   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           2049
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    338  0.000  <-- low
+  measurementMethod             0    338  0.000  <-- low
+  measurementUnit               0    111  0.000  <-- low
+  measurementStatistic          0    338  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    338  0.000  <-- low
+  lifeStage                     0    338  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    338  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 295 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      295
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'polylectic'                 ->  'pl'                         x141
+     'ground-nesting'             ->  'ground nesting'             x105
+     '1.268'                      ->  '1.2679999999999998'         x2
+     '1.705875'                   ->  '1.7058750000000003'         x2
+     '1.40933333333333'           ->  '1.4093333333333333'         x2
+     '2.03533333333333'           ->  '2.0353333333333334'         x1
+  -> 6 substitutions explain 253 of 295 misses (86%) — systematic, not scattered
+
+  full miss detail saved -> Kratschmer2019_misses.csv, Kratschmer2019_misses_summary.json (295 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  france_01 flower_buds                             0    36   PRED-ONLY
+  spain_01 flowering                                0    21   PRED-ONLY
+  a_02 mature_begin                                 0    65   PRED-ONLY
+  romania_02 mature_begin                           0    39   PRED-ONLY
+  france_02 flower_buds                             0    36   PRED-ONLY
+  spain_02 flowering                                0    21   PRED-ONLY
+  romania_03 mature_begin                           0    39   PRED-ONLY
+  france_03 flower_buds                             0    36   PRED-ONLY
+  spain_03 flowering                                0    21   PRED-ONLY
+  romania_04 #2                                     0    39   PRED-ONLY
+  romania_04 #4                                     0    39   PRED-ONLY
+  romania_04 mature_begin                           0    39   PRED-ONLY
+  france_04 flower_buds                             0    36   PRED-ONLY
+  spain_04 flowering                                0    21   PRED-ONLY
+  france_04                                         0    36   PRED-ONLY
+  romania_05 mature_begin                           0    39   PRED-ONLY
+  france_05 flower_buds                             0    36   PRED-ONLY
+  france_06 #2                                      0    36   PRED-ONLY
+  france_06 #3                                      0    36   PRED-ONLY
+  romania_06 mature_begin                           0    39   PRED-ONLY
+  france_06 flower_buds                             0    36   PRED-ONLY
+  france_07 #2                                      0    36   PRED-ONLY
+  france_07 #4                                      0    36   PRED-ONLY
+  a_07 mature_begin                                 0    65   PRED-ONLY
+  france_07 flower_buds                             0    36   PRED-ONLY
+  france_08 #2                                      0    36   PRED-ONLY
+  a_08 mature_begin                                 0    65   PRED-ONLY
+  france_08 flower_buds                             0    36   PRED-ONLY
+  a_09 mature_begin                                 0    65   PRED-ONLY
+  a_10 mature_begin                                 0    65   PRED-ONLY
+  france_10 flower_buds                             0    36   PRED-ONLY
+  a_11 mature_begin                                 0    65   PRED-ONLY
+  france_11 flower_buds                             0    36   PRED-ONLY
+  a_12 mature_begin                                 0    65   PRED-ONLY
+  france_12 flower_buds                             0    36   PRED-ONLY
+  france_13 #3                                      0    36   PRED-ONLY
+  a_13 mature_begin                                 0    65   PRED-ONLY
+  france_13 flower_buds                             0    36   PRED-ONLY
+  france_13                                         0    36   PRED-ONLY
+  a_14 mature_begin                                 0    65   PRED-ONLY
+  france_14 flower_buds                             0    36   PRED-ONLY
+  romania_15 #4                                     0    39   PRED-ONLY
+  a_15 mature_begin                                 0    65   PRED-ONLY
+  france_15 flower_buds                             0    36   PRED-ONLY
+  romania_16 #4                                     0    39   PRED-ONLY
+  a_16 mature_begin                                 0    65   PRED-ONLY
+  france_16 flower_buds                             0    36   PRED-ONLY
+  spain_16 flowering                                0    21   PRED-ONLY
+  france_16                                         0    36   PRED-ONLY
+  body size                                         0     2   PRED-ONLY
+  intertegular distance                           159   159   
+  shannon diversity landscape index                 0     6   PRED-ONLY
+  lecty                                           160   165   Δ+5 (split?)
+  very low                                          0     6   PRED-ONLY
+  nesting type                                    158   167   Δ+9 (split?)
+  sociality                                       156   162   Δ+6 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.518  0.534  0.526    338   315   295   id+type+value
+             (2049 more spurious row(s) set aside as out-of-scope; strict P would be 0.125)
+  tags        0.000  0.000  0.000      0   653   633   basis+id+type+value+stat+sex+stage
+             (2049 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.526 vs previous)
+             note: only 84/338 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

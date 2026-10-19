@@ -1,0 +1,401 @@
+{
+ "paper": "Lichtenberg2017",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "expected group sizes (as is often the case with bees). Summarizing trait distributions also is better suited to answering questions about changes in community composition than species-level responses to environmental change: the focus of our study. Furthermore, workarounds cannot explicitly test how trait and environmental values simultaneously alter persistence probabilities (or other performance consequences) because they do not explicitly include a trait-by-environment interaction (McGill, 2015). This makes it difficult to directly address mechanisms that determine how traits mediate community disassembly (Pedley & Dolman, 2014). In contrast, analyses that incorporate the fourth corner, such as the one presented here, permit direct tests of mechanisms. We used the method developed by Walker, Guénard, Sólymos, and Legendre (2012) to combine the three standard “corners” (Figure 1; site-by-species matrix, species-by-traits matrix, site-by-environment matrix) into a long format that allows regression of species occurrence by both traits and environmental data in the same dataset. This approach avoids the pitfalls described above by (1) including both trait and environment data for each site–species combination and (2) combining continuous and categorical trait variables. Our regression-based method, which is not restricted to any one type of regression, provides an additional benefit: flexibility. For example, it can be used to study nonlinear effects, or to test a priori hypotheses about combined effects of multiple traits and environmental variables (via planned contrasts)."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We use data on the effects of forest loss on Costa Rican stingless bee communities to ask two questions: (1) Does land use change cause trait shifts within stingless bee communities? and (2) Does competition affect which species can persist in altered habitats? It is generally held that specialized species and larger animals are more sensitive to habitat loss and prone to extinction (Ewers & Didham, 2006; McKinney, 1997). Studies of temperate bee communities to date typically support specialization effects (Bartomeus et al., 2013; Cane et al., 2006; Forrest et al., 2015; Gonçalves et al., 2014; Kleijn & Raemakers, 2008; Rader et al., 2014; Williams et al., 2010; but see Otieno et al., 2015), but show mixed support for size effects (Bartomeus et al., 2013; Jauker et al., 2013; Rader et al., 2014; Williams et al., 2010; Winfree, Griswold, & Kremen, 2007; Wray, Neame, & Elle, 2014). Too little is known about stingless bee biology and responses to land use change to formulate specific hypotheses about other traits. In terms of the second question, competition with honeybees (Paini, 2004; Roubik, Moreno, Vergara, & Wittmann, 1986) and among stingless bees (Eltz, Brühl, van der Kaars, & Linsenmair, 2002; Slaa, 2006) have been hypothesized to be key factors shaping stingless bee communities. Forest loss can reduce both nesting sites and food (flowers) available to stingless bees (Batista, Ramalho, & Soares, 2003; Roubik, 1989), potentially intensifying competition for those resources. Thus, competition may partially drive species persistence patterns under land use change."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Each site was comprised of a 20 × 20 m plot, in which we sampled all bees detected in 15-min netting samples with two field team members actively netting. We did not sample bees in conditions of high winds, fog or precipitation. Bees were captured in the order that they were seen (i.e. rare species were not sampled at the expense of a common species seen first). This sampling effort was inclusive of all species in the bee community, but we used only the stingless bees from these samples in the analyses presented here. We sampled foraging bees in the rainy seasons of 2003 and 2004 (June–September) and in the dry season of 2005 (February–May). In Costa Rica, stingless bee richness and species’ abundances show little seasonality (Heithaus, 1979). Each site was sampled on 10–22 separate days over these periods. We pinned, labelled and identified stingless bees to the species level using Roubik (1992b). V. Gonzalez and I. Hinojosa, then at the University of Kansas, evaluated and corrected species determinations. Some determinations are updated here following Camargo and Pedro (2013). Specimens are housed in the Department of Environmental Sciences, Emory University. For more on the sampling, see Brosi et al. (2007, 2008) and Brosi (2009)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "In addition to bee traits, we assessed the impact of landscape context, bee community context and flowering plant resources on stingless bee communities. To quantify landscape context, we calculated the proportion of forest around sample points at radii ranging from 10 to 1,350 m in 10–50-m increments. We classified ecosystem elements manually, by digitizing Costa Rica Airborne Research and Technology Applications (CARTA) orthorectified aerial photographs from 2003 to 2005 with 2-m resolution. Forest elements included: primary and secondary forest fragments of all sizes, single trees, charral (early secondary forest), live fences, hedgerows, non-native timber and fruit tree plantations, and non-native garden ornamentals. These data are much finer resolution than the $3 0 \\times 3 0$ m pixel LANDSAT data previously used by Brosi (Brosi, 2009; Brosi et al., 2008). We determined the most appropriate radius to use in analyses by assessing the correlation between percentage forest cover and stingless bee richness at each distance. Because stingless bee richness was significantly related to forest cover up to c. 250 m (Figure S1), further analyses quantify landscape context as the percentage of forest within a 250-m radius circle around each sample point."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "In order to include interactions between traits, which describe bee species, and landscape context, which describes sites, we combined data on sites and species into a data list (Walker et al., 2012). This data structure organizes multiple table data (here, site-by-species matrix, species by-traits matrix, site-by-environment matrix) into a long format with one row per site–species combination, and all site and trait variables as separate columns. This data list can be used by standard R regression functions. It thus overcomes the “fourth-corner problem,” the difficulty in linking species’ traits to environmental variables (Legendre et al., 1997). This yields nested data, since environmental variables are properties of the site and traits are species-specific. However, the tight correlations between our fixed effects and potential random effects (site, species) would violate the assumption that fixed and random effects are orthogonal (Wooldridge, 2010). We thus used fixed effects models to more accurately measure relationships between traits, site characteristics and a species’ presence (Townsend, Buckley, Harada, & Scott, 2013)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "To identify potential drivers of stingless bee presence in our sites, we used a four-step information theoretic model selection approach. First, we ran logistic regressions (in a generalized linear modelling framework) relating the presence/absence of stingless bees at particular sites to both trait and environmental variables, with rigorous assessment for collinearity and overdispersion (relative to a binomial distribution). We assessed collinearity using regressions that included all environmental and trait variables as main effects, but no interaction terms. These independent variables were: flowering plant richness, abundance of the bee community (one or three variables), richness of the bee community (one or two variables), forest cover as landscape context, body size, colony size, diet breadth, group foraging, ground nesting, inquiline nesting and nesting in man-made structures. Regressions with rarefied stingless bee presence/absence data (presented here), which were proportions, included sampling effort (10 sites) as a weight, while regressions with unrarefied presence/ absence data (see R scripts) included the number of times a site was sampled. Models with both classifications of bee community context (all bees together vs. bees split into groups) showed evidence of collinearity (high variance inflation factors; see R scripts). Collinearity was no longer present when we removed colony size, which had strong relationships with diet breadth (Spearman’s rank correlation: r = −.70, $S = 618.46, p = .008$ and group foraging (Mann–Whitney U test: $U = 0, N_1 = 14, N_2 = 12, p = .004$ Further analyses thus excluded colony size. We next reran models with the terms described above plus the interaction between each trait and forest cover. Models with the bee community split into groups additionally included the interaction between honeybee abundance and the group foraging trait, since honeybees may be in stronger competition with group-foraging than solitary-foraging species. Regressions that included interaction terms but excluded colony size showed overdispersion. We thus used the quasibinomial link in regressions, and assessed model fit via quasi-AIC,"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "since quasi-distributions do not allow for the strict calculation of likelihood that is needed for classic AIC calculations. Because these models included multiple parameters, we used the second-order quasi-Akaike information criterion (QAICc) for smaller sample sizes (Bartón, 2013; Burnham & Anderson, 1998)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "As stingless bee communities disassembled, effects of forest loss depended on a species’ diet breadth (Table 2). Species with narrower diet breadths were less likely to be present at sites with more forest nearby, while species with broader diets were more likely to be present at such sites (Figure 2a, Figure S2). Further investigation showed that diet breadth was narrower for group-foraging species than for those that are not known to forage in large groups (Figure 2b; Mann– Whitney U test: $U = 30, N_1 = 5, N_2 = 6, p = .007$"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:7df4eab/tier:advanced/page:8/block:4)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "F I G U R E 2 (a) Predicted probability that a species was present in a pasture as a function of the site’s natural habitat availability (x-axis) and the bee species’ diet breadth (individual curves). Curves show the predicted probability averaged across all values of the traits other than forest cover and diet breadth. Figure S2 shows curves with 95% confidence intervals. (b) Species that forage as solitary individuals rather than in large groups of nestmates tend to have wider diets than group-foraging species"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "The trait-based approach we used suggests a mechanism through which forest loss reduces persistence of species with broader diets in communities of social, tropical bees: interspecific competition and dominance-related foraging traits. In this study, species with more diversified diets and a negative response to forest loss also tended to forage as individuals or in small groups. Such species are generally subordinate (Lichtenberg et al., 2010), and thus subject to displacement by group foraging, dominant species. We propose, therefore, that stingless bee species’ diet breadths are plastic responses to competitive interactions rather than the evolved preferences hypothesized by earlier work (Johnson & Hubbell, 1975). This may be true even though our analyses did not detect effects of community context. Such facultative expansion of diet in response to competition is common (Futuyma & Moreno, 1988), and may help animals avoid unsustainably long food search times (Prinzing, 2003). Under this scenario, species with broader diets may tolerate disturbance poorly if they require the larger or more diversified resource pool that natural habitats offer, or cannot compete with more dominant stingless bee species in areas with a reduced floral resource pool. The dominant species with narrower diet breadths, meanwhile, may have been largely absent from sites surrounded by more forest if those forest fragments provided sufficient quantities of one preferred food resource for stingless bees: mass-flowering trees (Ramalho, 2004). Our results thus highlight the importance of including behavioural traits in studies of community disassembly."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:7df4eab/tier:advanced/page:9/block:4)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "F I G U R E 3 Predicted probability that a species was present in a pasture as a function of (a) the species’ body size, as indicated by head width (95% confidence interval in grey), (b) whether the species nests in the ground and (c) whether the species exhibits inquiline nesting"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "K. Frangioso, B. Graham, J. Ilama, F. Oviedo and T. Shih for field assistance; and the staff of the Las Cruces Biological Station and the Organization for Tropical Studies (especially R. Quirós, E. Ramirez and Z. Zahawi) for field research support. Funding for field work was provided by the Anne M. and Robert T. Bass Stanford Graduate Fellowship in Science and Engineering (to B.B.); the Teresa Heinz Graduate Fellowship in Science and Engineering (to B.B.); the Moore Family Foundation (to B.B.); the Stanford University Field Studies and Human Biology Research Experiences for Undergraduates (HBREX) Program; and grants to the Center for Conservation Biology at Stanford University from the Koret, McDonnell, Sherwood and Winslow Foundations and Peter and Helen Bing. E.M.L. was partially supported by a NSF Graduate Research Fellowship and an ARCS Foundation Graduate Scholar Award."
+  },
+  {
+   "id": "u14",
+   "kind": "table 0",
+   "text": "Category | Species | Environmental variables\nSites | Abundance/presence | —\nTraits | — | Fourth corner"
+  }
+ ],
+ "batches": [
+  [
+   "u0"
+  ],
+  [
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14"
+  ]
+ ],
+ "calls": 13,
+ "categories": [
+  {
+   "variable": "Forest elements included:",
+   "code": "primary and secondary forest fragments of all sizes",
+   "term": "primary and secondary forest fragments of all sizes",
+   "unit": "u3",
+   "model_label": "primary and secondary forest fragments of all sizes",
+   "label": "primary and secondary forest fragments of all sizes",
+   "explanation": ""
+  },
+  {
+   "variable": "Forest elements included:",
+   "code": "single trees",
+   "term": "single trees",
+   "unit": "u3",
+   "model_label": "single trees",
+   "label": "single trees",
+   "explanation": ""
+  },
+  {
+   "variable": "Forest elements included:",
+   "code": "charral",
+   "term": "charral",
+   "unit": "u3",
+   "model_label": "charral",
+   "label": "charral",
+   "explanation": ""
+  },
+  {
+   "variable": "Forest elements included:",
+   "code": "live fences",
+   "term": "live fences",
+   "unit": "u3",
+   "model_label": "live fences",
+   "label": "live fences",
+   "explanation": ""
+  },
+  {
+   "variable": "Forest elements included:",
+   "code": "hedgerows",
+   "term": "hedgerows",
+   "unit": "u3",
+   "model_label": "hedgerows",
+   "label": "hedgerows",
+   "explanation": ""
+  },
+  {
+   "variable": "Forest elements included:",
+   "code": "non-native timber and fruit tree plantations",
+   "term": "non-native timber and fruit tree plantations",
+   "unit": "u3",
+   "model_label": "non-native timber and fruit tree plantations",
+   "label": "non-native timber and fruit tree plantations",
+   "explanation": ""
+  },
+  {
+   "variable": "Forest elements included:",
+   "code": "non-native garden ornamentals",
+   "term": "non-native garden ornamentals",
+   "unit": "u3",
+   "model_label": "non-native garden ornamentals",
+   "label": "non-native garden ornamentals",
+   "explanation": ""
+  },
+  {
+   "variable": "ground nesting",
+   "code": "ground nesting",
+   "term": "ground nesting",
+   "unit": "u5",
+   "model_label": "ground nesting",
+   "label": "ground nesting",
+   "explanation": ""
+  },
+  {
+   "variable": "inquiline nesting",
+   "code": "inquiline nesting",
+   "term": "inquiline nesting",
+   "unit": "u5",
+   "model_label": "inquiline nesting",
+   "label": "inquiline nesting",
+   "explanation": ""
+  },
+  {
+   "variable": "nesting in man-made structures",
+   "code": "nesting in man-made structures",
+   "term": "nesting in man-made structures",
+   "unit": "u5",
+   "model_label": "nesting in man-made structures",
+   "label": "nesting in man-made structures",
+   "explanation": ""
+  },
+  {
+   "variable": "solitary-foraging species",
+   "code": "solitary-foraging",
+   "term": "solitary-foraging species",
+   "unit": "u5",
+   "model_label": "solitary-foraging species",
+   "label": "solitary-foraging species",
+   "explanation": ""
+  },
+  {
+   "variable": "diet breadth",
+   "code": "narrower",
+   "term": "narrower diet breadths",
+   "unit": "u7",
+   "model_label": "narrower diet breadths",
+   "label": "narrower diet breadths",
+   "explanation": ""
+  },
+  {
+   "variable": "diet breadth",
+   "code": "broader",
+   "term": "broader diets",
+   "unit": "u7",
+   "model_label": "broader diets",
+   "label": "broader diets",
+   "explanation": ""
+  },
+  {
+   "variable": "whether the species nests in the ground",
+   "code": "b",
+   "term": "whether the species nests in the ground",
+   "unit": "u12",
+   "model_label": "whether the species nests in the ground",
+   "label": "whether the species nests in the ground",
+   "explanation": ""
+  },
+  {
+   "variable": "whether the species exhibits inquiline nesting",
+   "code": "c",
+   "term": "whether the species exhibits inquiline nesting",
+   "unit": "u12",
+   "model_label": "whether the species exhibits inquiline nesting",
+   "label": "whether the species exhibits inquiline nesting",
+   "explanation": ""
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "trait",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "trait shifts",
+   "code": "",
+   "label": "specialized species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "trait shifts",
+   "code": "",
+   "label": "larger animals",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "landscape context",
+   "code": "",
+   "label": "secondary forest fragments",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "landscape context",
+   "code": "",
+   "label": "non-native timber",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "landscape context",
+   "code": "",
+   "label": "fruit tree plantations",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "flowering plant richness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "abundance of the bee community",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "richness of the bee community",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "colony size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "diet breadth",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "group foraging",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "diet breadth",
+   "code": "",
+   "label": "more diversified diets",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "head width",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "nesting",
+   "code": "",
+   "label": "nests in the ground",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "nesting",
+   "code": "",
+   "label": "exhibits inquiline nesting",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "Sites",
+   "code": "",
+   "label": "Abundance/presence",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "Traits",
+   "code": "",
+   "label": "Fourth corner",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  }
+ ],
+ "dropped": [],
+ "seconds": 92.2
+}

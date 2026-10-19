@@ -1,0 +1,81 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Cady1993\Cady1993.xlsx  (16 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5c\Cady1993\Cady1993.csv  (8 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 6 pair(s))
+  'Acrocera bimaculata (Loew, 1866)' -> 'Acrocera bimaculata'
+  'Ogcodes borealis Cole, 1919' -> 'Ogcodes borealis'
+  'Ogcodes dispar (Macquart, 1855)' -> 'Ogcodes dispar'
+  'Ogcodes eugonatus (Loew, 1872)' -> 'Ogcodes eugonatus'
+  'Ogcodes pallidipennis (Loew, 1866)' -> 'Ogcodes pallidipennis'
+  'Turbopsebius diligens (Osten Sacken, 1877)' -> 'Turbopsebius diligens'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Ogcodes adaptatus (Schlinger, 1960)': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Pupation duration (mean days ± standard error of the mean)' -> 'Pupation duration'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 7
+  missed (FN)         : 9
+  spurious, in scope  : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.875 / 0.438 / 0.583   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.875 / 0.438 / 0.583   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.438   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      7  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      7  0.000  <-- low
+  measurementRemarks            0      7  0.000  <-- low
+  sex                           0      7  0.000  <-- low
+  lifeStage                     0      7  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               7      7  1.000
+  sampleSizeUnit                0      7  0.000  <-- low
+  sampleTreatment               0      7  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      7  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 9 MISSED ROWS MISSED
+  species not in prediction                   4
+  species present, trait missing              5
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (4 distinct), closest predicted name:
+     gt 'Exetasis eickstedtae'               (nothing similar in the prediction)   x1
+     gt 'Ogcodes sp.'                       ~0.75~  pred 'Ogcodes dispar'   x1
+     gt 'Turbopsebius sulphuripes'          ~0.67~  pred 'Turbopsebius diligens'   x1
+     gt 'Ogcodes adaprarus'                 ~0.77~  pred 'Ogcodes dispar'   x1
+  -> 4 species mismatches explain 4 of 9 misses (44%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Host spider(s)'                   x5
+  -> 1 missing trait explains 5 of 9 misses (56%) — scattered; no single cause
+
+  full miss detail saved -> Cady1993_misses.csv, Cady1993_misses_summary.json (9 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pupation duration                                 8     8   
+  host spider(s)                                    8     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.875  0.438  0.583      7     1     9   id+type+value
+  tags        0.000  0.000  0.000      0     8    16   basis+id+type+value+stat+sex+stage
+             (F1 -0.583 vs previous)
+             note: only 0/7 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

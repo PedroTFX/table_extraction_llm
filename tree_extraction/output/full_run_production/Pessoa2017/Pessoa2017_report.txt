@@ -1,0 +1,77 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Pessoa2017\Pessoa2017.xlsx  (513 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Pessoa2017\Pessoa2017.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 513
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 513 MISSED ROWS MISSED
+  species not in prediction                 513
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (35 distinct), closest predicted name:
+     gt 'Ateuchus carbonarius'               (nothing similar in the prediction)   x15
+     gt 'Ateuchus sp.1'                      (nothing similar in the prediction)   x15
+     gt 'Canthidium aff. viride'             (nothing similar in the prediction)   x15
+     gt 'Canthidium barbacenicum'            (nothing similar in the prediction)   x15
+     gt 'Canthidium cuprinum'                (nothing similar in the prediction)   x15
+     gt 'Canthidium sp.2'                    (nothing similar in the prediction)   x15
+  -> 6 species mismatches explain 90 of 513 misses (18%) — scattered; no single cause
+
+  full miss detail saved -> Pessoa2017_misses.csv, Pessoa2017_misses_summary.json (513 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  daily activity                                   32     0   GT-ONLY
+  anterior tibiae area                             35     0   GT-ONLY
+  apical width                                     35     0   GT-ONLY
+  wing area                                        35     0   GT-ONLY
+  pear/ball nest                                   35     0   GT-ONLY
+  horizontal displacement                          35     0   GT-ONLY
+  elytron length                                   35     0   GT-ONLY
+  generalism                                       27     0   GT-ONLY
+  protorax height                                  35     0   GT-ONLY
+  pronotum length                                  35     0   GT-ONLY
+  tibia length                                     35     0   GT-ONLY
+  wing load                                        35     0   GT-ONLY
+  nest                                             34     0   GT-ONLY
+  tibial ratio                                     35     0   GT-ONLY
+  size                                             35     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   513   id+type+value
+  tags        0.000  0.000  0.000      0     0   513   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

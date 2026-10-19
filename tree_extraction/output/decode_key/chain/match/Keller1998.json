@@ -1,0 +1,691 @@
+{
+ "0:1": {
+  "cells": {},
+  "header": "Max. lifespan"
+ },
+ "0:2": {
+  "cells": {},
+  "header": "Mean lifespan"
+ },
+ "0:4": {
+  "cells": {
+   "M": {
+    "term": "species that are primarily monogynous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "M": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "M | QB": {
+      "w0": 0.015,
+      "w1": 0.985
+     }
+    }
+   },
+   "P": {
+    "term": "species that are primarily polygynous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "P": {
+      "e0": 0.962,
+      "keep": 0.038
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   },
+   "M, P": {
+    "term": "species that are primarily monogynous; species that are primarily polygynous",
+    "parts": [
+     "M",
+     "P"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     },
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit",
+     "P": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "M": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "M | QB": {
+      "w0": 0.015,
+      "w1": 0.985
+     },
+     "P | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "P": {
+      "e0": 0.962,
+      "keep": 0.038
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   }
+  },
+  "header": "Queen number"
+ },
+ "0:6": {
+  "cells": {
+   "I": {
+    "term": "species that found new colonies primarily through independent colony founding",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.975,
+      "word": 0.025
+     },
+     "I": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "I | QB": {
+      "w0": 0.011,
+      "w1": 0.989
+     }
+    }
+   },
+   "D": {
+    "term": "species that generally use a dependent colony founding",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "D": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "D | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   },
+   "D, Pa": {
+    "term": "species that generally use a dependent colony founding; species that parasitize colonies of other ant species",
+    "parts": [
+     "D",
+     "Pa"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     },
+     "Pa": {
+      "evidence": "explicit",
+      "labels": [
+       "parasitize"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit",
+     "Pa": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "D": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "D | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     },
+     "Pa | QK": {
+      "code": 0.957,
+      "word": 0.043
+     },
+     "Pa": {
+      "e0": 0.916,
+      "keep": 0.084
+     },
+     "Pa | QB": {
+      "w0": 0.007,
+      "w1": 0.993
+     }
+    }
+   }
+  },
+  "header": "Colony founding"
+ },
+ "1:1": {
+  "cells": {},
+  "header": "Max. lifespan"
+ },
+ "1:2": {
+  "cells": {},
+  "header": "Mean lifespan"
+ },
+ "1:4": {
+  "cells": {
+   "M": {
+    "term": "species that are primarily monogynous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "M": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "M | QB": {
+      "w0": 0.015,
+      "w1": 0.985
+     }
+    }
+   },
+   "P": {
+    "term": "species that are primarily polygynous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "P": {
+      "e0": 0.962,
+      "keep": 0.038
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   },
+   "M, P": {
+    "term": "species that are primarily monogynous; species that are primarily polygynous",
+    "parts": [
+     "M",
+     "P"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     },
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit",
+     "P": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "M": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "M | QB": {
+      "w0": 0.015,
+      "w1": 0.985
+     },
+     "P | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "P": {
+      "e0": 0.962,
+      "keep": 0.038
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   }
+  },
+  "header": "Queen number"
+ },
+ "1:6": {
+  "cells": {
+   "I": {
+    "term": "species that found new colonies primarily through independent colony founding",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "I": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "I | QB": {
+      "w0": 0.011,
+      "w1": 0.989
+     }
+    }
+   },
+   "D": {
+    "term": "species that generally use a dependent colony founding",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "D": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "D | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   },
+   "I, D": {
+    "term": "species that found new colonies primarily through independent colony founding; species that generally use a dependent colony founding",
+    "parts": [
+     "I",
+     "D"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     },
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit",
+     "D": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "I": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "I | QB": {
+      "w0": 0.011,
+      "w1": 0.989
+     },
+     "D | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "D": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "D | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   }
+  },
+  "header": "Colony founding"
+ },
+ "2:1": {
+  "cells": {},
+  "header": "Max. lifespan"
+ },
+ "2:2": {
+  "cells": {},
+  "header": "Mean lifespan"
+ },
+ "2:4": {
+  "cells": {
+   "M": {
+    "term": "species that are primarily monogynous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "M": {
+      "e0": 0.969,
+      "keep": 0.031
+     },
+     "M | QB": {
+      "w0": 0.015,
+      "w1": 0.985
+     }
+    }
+   },
+   "P": {
+    "term": "species that are primarily polygynous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "P": {
+      "e0": 0.643,
+      "keep": 0.357
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   }
+  },
+  "header": "Queen number"
+ },
+ "2:6": {
+  "cells": {
+   "I": {
+    "term": "species that found new colonies primarily through independent colony founding",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "I": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "I | QB": {
+      "w0": 0.011,
+      "w1": 0.989
+     }
+    }
+   },
+   "I, D": {
+    "term": "species that found new colonies primarily through independent colony founding; species that generally use a dependent colony founding",
+    "parts": [
+     "I",
+     "D"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     },
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit",
+     "D": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "I": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "I | QB": {
+      "w0": 0.011,
+      "w1": 0.989
+     },
+     "D | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "D": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "D | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   },
+   "D": {
+    "term": "species that generally use a dependent colony founding",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "D": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "D | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   }
+  },
+  "header": "Colony founding"
+ },
+ "3:1": {
+  "cells": {},
+  "header": "Max. lifespan"
+ },
+ "3:2": {
+  "cells": {},
+  "header": "Mean lifespan"
+ }
+}

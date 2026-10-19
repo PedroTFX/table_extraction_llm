@@ -1,22 +1,29 @@
 ================================================================
 GROUND TRUTH : ..\data\un_processed_papers\Cajaiba2022\Cajaiba2022.xlsx  (255 rows)
-PREDICTION   : ..\output\Cajaiba2022\Cajaiba2022.csv  (262 rows)
-KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True  strict_values=False  embed=off
+PREDICTION   : ..\output\Cajaiba2022\Cajaiba2022.csv  (933 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)          : 255
-  missed (FN)           : 0
-  spurious, in scope    : 7   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers it: nothing to score against
+TAXON NAMES LEFT UNMAPPED (2)
+  'Ecosystem generalists': no ground-truth name denotes this organism
+  'Species captured in all ecosystems': no ground-truth name denotes this organism
 
-  STRICT  P/R/F1        : 0.973 / 1.000 / 0.986
-  SCOPED  P/R/F1        : 0.973 / 1.000 / 0.986
-  RECALL (GT coverage)  : 1.000
+ROW-LEVEL (key match)
+  matched (TP)        : 255
+  missed (FN)         : 0
+  spurious, in scope  : 9   <- GT covers this trait: real errors
+  spurious, out of scope: 669   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.273 / 1.000 / 0.429   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.966 / 1.000 / 0.983   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            669
 
 FIELD-LEVEL ACCURACY (on matched rows only)
-  column                    agree  total    acc
+  column                    agree  total    acc   extra finds
   basisOfRecord               255    255  1.000
   measurementMethod             0    255  0.000  <-- low
   measurementUnit               0      0    n/a
@@ -38,11 +45,19 @@ FIELD-LEVEL ACCURACY (on matched rows only)
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
+  forest specialists-15                             0   131   PRED-ONLY
+  forest specialists-5                              0   131   PRED-ONLY
+  agriculture                                       0   131   PRED-ONLY
   ecosystem specificity                           131   131   
-  trophic type                                    124   131   Δ+7 (split?)
+  primary forest                                    0   131   PRED-ONLY
+  trophic type (trophic type functional trait)      0    14   PRED-ONLY
+  pasture                                           0   131   PRED-ONLY
+  trophic type                                    124   133   Δ+9 (split?)
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.973  1.000  0.986    255     7     0   id+type+value
-  tags        0.000  0.000  0.000      0   262   255   basis+id+type+value+stat+sex+stage
-             (F1 -0.986 vs previous)
+  core        0.966  1.000  0.983    255     9     0   id+type+value
+             (669 more spurious row(s) set aside as out-of-scope; strict P would be 0.273)
+  tags        0.000  0.000  0.000      0   264   255   basis+id+type+value+stat+sex+stage
+             (669 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.983 vs previous)

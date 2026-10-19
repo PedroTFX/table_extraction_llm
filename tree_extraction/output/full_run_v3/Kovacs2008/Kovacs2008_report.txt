@@ -1,0 +1,101 @@
+  [semantic] left unmatched: 'Q3' vs 'Tergum 3 length' (llm said different traits)
+  [semantic] left unmatched: 'T3L' vs 'Tergum 3 length' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Kovacs2008\Kovacs2008.xlsx  (81 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v3\Kovacs2008\Kovacs2008.csv  (235 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'Mass' -> 'Mass '
+  'Thorax width' -> 'Thorax width  '
+  'antennal length' -> 'Antennal length '
+  'body length' -> 'Total body length '
+  'cell length' -> 'Distal cell length '
+  'gaster length' -> 'Gaster length  '
+  'thorax length' -> 'Thorax length '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 81
+  spurious, in scope  : 64   <- GT covers this trait: real errors
+  spurious, out of scope: 171   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            171
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 81 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              9
+  species+trait present, value differs       72
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '5.17 ± 0.08'                ->  '0.56'                       x1
+     '5.04 ± 0.11'                ->  '0.56'                       x1
+     '5.03 ± 0.08'                ->  '0.56'                       x1
+     '5.22 ± 0.07'                ->  '0.56'                       x1
+     '4.99 ± 0.05'                ->  '0.56'                       x1
+     '7.76 ± 0.13'                ->  '0.56'                       x1
+  -> 6 substitutions explain 6 of 81 misses (7%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Tergum 3 length'                  x9
+  -> 1 missing trait explains 9 of 81 misses (11%) — scattered; no single cause
+
+  full miss detail saved -> Kovacs2008_misses.csv, Kovacs2008_misses_summary.json (81 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  tergum 3 length                                   9     0   GT-ONLY
+  antennal length                                   9     8   Δ-1 (split?)
+  colony-of-origin b                                0     9   PRED-ONLY
+  total body length                                 9     8   Δ-1 (split?)
+  colony-of-origin c                                0    18   PRED-ONLY
+  distal cell length                                9     8   Δ-1 (split?)
+  colony-of-origin d                                0    18   PRED-ONLY
+  colony-of-origin e                                0    18   PRED-ONLY
+  colony-of-origin f                                0     9   PRED-ONLY
+  head to end of thorax length                      9     8   Δ-1 (split?)
+  gaster length                                     9     8   Δ-1 (split?)
+  thorax length                                     9     8   Δ-1 (split?)
+  mass                                              9     8   Δ-1 (split?)
+  q2 (median)                                       0    16   PRED-ONLY
+  q1                                                0    16   PRED-ONLY
+  q3                                                0    16   PRED-ONLY
+  t3l                                               0     8   PRED-ONLY
+  thorax width                                      9     8   Δ-1 (split?)
+  trait                                             0    43   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0    64    81   id+type+value
+             (171 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0    64    81   basis+id+type+value+stat+sex+stage
+             (171 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

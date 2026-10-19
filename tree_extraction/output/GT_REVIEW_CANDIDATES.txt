@@ -1,0 +1,101 @@
+GT REVIEW CANDIDATES — values that do not fit the tag they were recorded under
+Built 2026-10-02 from two independent checks (nothing in the GT was changed):
+
+  A. gt_value_audit.py — every GT spreadsheet (109): a measurementType whose
+     values belong to another field's vocabulary (template_descriptions), or a
+     lifeStage/sex/caste field holding foreign values. Full list:
+     output/GT_VALUE_AUDIT.txt
+  B. the column tree (v5, nimble Q4) on all 97 usable papers: GT-used columns
+     where the tree chose a different tag (47 of 866). Full report:
+     output/column_tree_bench/all_v5q4/report.html
+
+Each item is a CANDIDATE; the verdict is yours. Already reviewed items are in
+output/column_tree_bench/GT_ERRORS.txt.
+
+===============================================================================
+A. GT AUDIT
+===============================================================================
+A1. Life stages recorded as a measurementType (lifeStage = 'all' on every row)
+    6 papers, 1,351 rows
+      Teder2020          'Overwintering stage'     731  larva, pupa, egg, adult
+      Guareschi2015      'Aquatic stages'          206  Adult, Larva + pupa, Egg
+      Taillefer2018      'Overwintering stage'     185  Pupae, Adults, Larvae, Eggs
+      Korosi2022         'Overwintering stage'     104  Larva, Egg, Pupa, Adult
+      Eskilden2015       'Overwintering strategy'   79  larva, pupa, egg, adult
+      OsorioCanadas2018  'Wintering stage'          46  Prepupa, Inmature, Adult
+    Open question before moving them: if lifeStage = larva, what are the row's
+    measurementType and value? (measurementType.md today: overwintering stage is
+    a measurementType.)
+
+A2. A lifeStage value that is not a life stage
+      Baine2024          lifeStage = 'galls'        2 rows
+
+A3. Checked, no problem found
+    - taxon names as a measurementType (11 traits, 1,030 rows): associated
+      organisms (hosts, host plants, symbionts, associated ants) — a trait whose
+      value is another organism, as the template says. Two false positives of
+      the Latin-name test: Araujo2021 'Abdomen scopa', Cao2024 'Concave mentum'.
+    - months as a measurementType: Scalercio2020 (flight months, first
+      emergence), Arnan2012 (month of peak activity) — phenology traits.
+    - no sex, caste, statistic or unit values recorded as a measurementType.
+
+===============================================================================
+B. WHERE THE TREE DISAGREES — likely GT or answer-key problems
+===============================================================================
+B1. Sampling place / site / experiment recorded as a species trait
+      Mirzaee2023  #0  'Country'         Chad; Eritrea; Iran; Niger
+                       GT: measurementType   tree: verbatimLocality
+                       (a trait only if it is the species' distribution, not
+                       the place a record comes from)
+      Gossner2013  #6  'Diameter', 'Decay', 'Canopy cover'
+                       2.50; 3.00 / 2.83; 3.40 / 1.00; 1.80
+                       GT: measurementType   tree: verbatimLocality / none
+                       (properties of the tree hole or site, not the insect?)
+      Ji2024       #5  'Elevation'       800; 950; 1100; 1250
+                       GT: measurementType   tree: none (site elevation?)
+      Tsai2020     #8  'elevation' (x3)  800; 4100 / 700; 60 / 400; 2000
+                       GT: measurementType   tree: none (could be a species'
+                       range, min-max, which the template counts as a trait)
+      Tsai2020     #4,#5 'photoperiod'   short; long
+                       GT: measurementType   tree: sampleTreatment
+                       (an experimental condition, not a trait?)
+
+B2. Counts the GT records as sample size, the tree calls abundance
+      Gathof2022   #6,#7 'Caught individuals'   1; 19; 2; 11
+      Beyer2021    #22   'number of bumblebees'  12; 9; 7
+      CamargoVanegas2024 #21 '1'                 1; 4; 8; 12
+                       GT: sampleSizeValue   tree: none
+      (the same convention as Dejean2019 'Occurrences' — decide once whether
+      "how many were caught" is a sample size)
+
+B3. Answer-key artefact: a long table not recognised
+      Kovacs2008   #0  'Colony-of-origin A' ... 'F' (6 columns)
+                       3.67 ± 0.05; 5.32 ± 0.08 ...
+                       key: measurementType   tree: measurementValue
+      Traits are in the rows and each column is a colony, so by the rule agreed
+      for Kovacs2010 these are value columns; the key missed that the table is
+      long. Fix in column_role_bench.derive_labels, not in the GT.
+
+B4. Parsing problem (headers lost)
+      Tsai2020     #2  'NN', 'NN (1)' ... 'NN (4)', 'Set.Date (4)'
+                       small numbers (0.0; 1.0; 2.0) tagged lifeStage, date,
+                       locality, none. The headers are placeholders ('NN'), so
+                       neither the key nor the tree can be trusted here — a
+                       header-tree case.
+
+===============================================================================
+B. WHERE THE TREE DISAGREES — tree mistakes (for the tree, not the GT)
+===============================================================================
+      Rank columns read as traits: Cerini2023 'SubOrder', Eckert2023
+        'Suborder', Viza2023 'Suborder', Wallon2024 'Class', 'order'
+        (and Wallon2024 'Class' = Insecta -> none)
+      Guariento2020 #6 'Replacement for' (species names) -> measurementType
+      Cao2024 #7 'Locomotion' (Sprawler, Burrower) -> verbatimIdentification
+      Keller1998 #0 'Queen number' (M; P) -> measurementRemarks
+      Header = trait + statistic, read as a value column:
+        Beyer2021 'mean TL', Orlofsk2014 'DUNDS Min', 'SBREN Max'
+      Kovacs2010 #5 'Feature' (trait names) -> measurementValue
+      Tran2022 'No. bouts' (x2), 'Free-flight chamber', 'Tethered flight mill'
+        -> measurementValue
+      Mirzaee2023 'NOS', 'Ootheca'; Vidal2023 'col.siz' -> none
+      Wilker2022 #6 'Discovery' -> samplingProtocol

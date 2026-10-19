@@ -1,0 +1,539 @@
+{
+ "_columns": [
+  [
+   1,
+   4,
+   "Behavioural guild",
+   [
+    "Rollers",
+    "Tunnelers"
+   ]
+  ],
+  [
+   1,
+   5,
+   "Diel activity",
+   [
+    "Nocturnal",
+    "NA",
+    "Diurnal"
+   ]
+  ],
+  [
+   1,
+   6,
+   "Diet preference",
+   [
+    "Dung",
+    "Mushroom",
+    "Both",
+    "NA",
+    "Unknown"
+   ]
+  ],
+  [
+   1,
+   8,
+   "Habitat preference",
+   [
+    "YR; MR; OR; RF",
+    "RF",
+    "OR; RF",
+    "MR; OR; RF",
+    "MR; OR",
+    "P",
+    "OR",
+    "P; YR",
+    "MR; RF",
+    "MR"
+   ]
+  ]
+ ],
+ "1:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Behavioural guild"
+ },
+ "1:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Diel activity"
+ },
+ "1:6": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u24"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.012,
+    "several": 0.028,
+    "none": 0.96
+   }
+  },
+  "header": "Diet preference"
+ },
+ "1:8": {
+  "cells": {
+   "YR; MR; OR; RF": {
+    "term": "young restoration; mid-age restoration; old restoration; rainforest",
+    "parts": [
+     "YR",
+     "MR",
+     "OR",
+     "RF"
+    ],
+    "options": {
+     "YR": {
+      "evidence": "explicit",
+      "labels": [
+       "young restoration"
+      ]
+     },
+     "MR": {
+      "evidence": "explicit",
+      "labels": [
+       "mid-age restoration"
+      ]
+     },
+     "OR": {
+      "evidence": "explicit",
+      "labels": [
+       "old restoration"
+      ]
+     },
+     "RF": {
+      "evidence": "explicit",
+      "labels": [
+       "rainforest"
+      ]
+     }
+    },
+    "evidence": {
+     "YR": "explicit",
+     "MR": "explicit",
+     "OR": "explicit",
+     "RF": "explicit"
+    },
+    "probs": {
+     "YR | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "YR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "YR | QB": {},
+     "MR | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "MR": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "MR | QB": {},
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "OR | QB": {},
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "RF | QB": {}
+    }
+   },
+   "RF": {
+    "term": "rainforest",
+    "parts": [
+     "RF"
+    ],
+    "options": {
+     "RF": {
+      "evidence": "explicit",
+      "labels": [
+       "rainforest"
+      ]
+     }
+    },
+    "evidence": {
+     "RF": "explicit"
+    },
+    "probs": {
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "RF | QB": {}
+    }
+   },
+   "OR; RF": {
+    "term": "old restoration; rainforest",
+    "parts": [
+     "OR",
+     "RF"
+    ],
+    "options": {
+     "OR": {
+      "evidence": "explicit",
+      "labels": [
+       "old restoration"
+      ]
+     },
+     "RF": {
+      "evidence": "explicit",
+      "labels": [
+       "rainforest"
+      ]
+     }
+    },
+    "evidence": {
+     "OR": "explicit",
+     "RF": "explicit"
+    },
+    "probs": {
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "OR | QB": {},
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "RF | QB": {}
+    }
+   },
+   "MR; OR; RF": {
+    "term": "mid-age restoration; old restoration; rainforest",
+    "parts": [
+     "MR",
+     "OR",
+     "RF"
+    ],
+    "options": {
+     "MR": {
+      "evidence": "explicit",
+      "labels": [
+       "mid-age restoration"
+      ]
+     },
+     "OR": {
+      "evidence": "explicit",
+      "labels": [
+       "old restoration"
+      ]
+     },
+     "RF": {
+      "evidence": "explicit",
+      "labels": [
+       "rainforest"
+      ]
+     }
+    },
+    "evidence": {
+     "MR": "explicit",
+     "OR": "explicit",
+     "RF": "explicit"
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "MR": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "MR | QB": {},
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "OR | QB": {},
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "RF | QB": {}
+    }
+   },
+   "MR; OR": {
+    "term": "mid-age restoration; old restoration",
+    "parts": [
+     "MR",
+     "OR"
+    ],
+    "options": {
+     "MR": {
+      "evidence": "explicit",
+      "labels": [
+       "mid-age restoration"
+      ]
+     },
+     "OR": {
+      "evidence": "explicit",
+      "labels": [
+       "old restoration"
+      ]
+     }
+    },
+    "evidence": {
+     "MR": "explicit",
+     "OR": "explicit"
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "MR": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "MR | QB": {},
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "OR | QB": {}
+    }
+   },
+   "P": {
+    "term": "pasture",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "pasture"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "P": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "P | QB": {}
+    }
+   },
+   "OR": {
+    "term": "old restoration",
+    "parts": [
+     "OR"
+    ],
+    "options": {
+     "OR": {
+      "evidence": "explicit",
+      "labels": [
+       "old restoration"
+      ]
+     }
+    },
+    "evidence": {
+     "OR": "explicit"
+    },
+    "probs": {
+     "OR | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "OR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "OR | QB": {}
+    }
+   },
+   "P; YR": {
+    "term": "pasture; young restoration",
+    "parts": [
+     "P",
+     "YR"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "pasture"
+      ]
+     },
+     "YR": {
+      "evidence": "explicit",
+      "labels": [
+       "young restoration"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit",
+     "YR": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "P": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "P | QB": {},
+     "YR | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "YR": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "YR | QB": {}
+    }
+   },
+   "MR; RF": {
+    "term": "mid-age restoration; rainforest",
+    "parts": [
+     "MR",
+     "RF"
+    ],
+    "options": {
+     "MR": {
+      "evidence": "explicit",
+      "labels": [
+       "mid-age restoration"
+      ]
+     },
+     "RF": {
+      "evidence": "explicit",
+      "labels": [
+       "rainforest"
+      ]
+     }
+    },
+    "evidence": {
+     "MR": "explicit",
+     "RF": "explicit"
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "MR": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "MR | QB": {},
+     "RF | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "RF": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "RF | QB": {}
+    }
+   },
+   "MR": {
+    "term": "mid-age restoration",
+    "parts": [
+     "MR"
+    ],
+    "options": {
+     "MR": {
+      "evidence": "explicit",
+      "labels": [
+       "mid-age restoration"
+      ]
+     }
+    },
+    "evidence": {
+     "MR": "explicit"
+    },
+    "probs": {
+     "MR | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "MR": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "MR | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u12",
+    "u16",
+    "u22"
+   ],
+   "choice": "p2",
+   "probs": {
+    "p0": 0.083,
+    "p1": 0.04,
+    "p2": 0.449,
+    "several": 0.427,
+    "none": 0.001
+   },
+   "chosen": [
+    "u22"
+   ]
+  },
+  "header": "Habitat preference"
+ }
+}

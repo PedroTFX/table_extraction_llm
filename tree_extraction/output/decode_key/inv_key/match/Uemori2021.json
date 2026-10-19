@@ -1,0 +1,139 @@
+{
+ "_columns": [
+  [
+   10,
+   6,
+   "Trophic level",
+   [
+    "1.0",
+    "2.0",
+    "3.0"
+   ]
+  ],
+  [
+   10,
+   10,
+   "Feeding guild",
+   [
+    "Pollinator",
+    "Blood Parasitoid",
+    "Predator",
+    "Parasitoid"
+   ]
+  ]
+ ],
+ "10:6": {
+  "cells": {
+   "1.0": {
+    "term": "herbivores (pollinator bees)",
+    "parts": [
+     "1.0"
+    ],
+    "options": {
+     "1.0": {
+      "evidence": "explicit",
+      "labels": [
+       "SD",
+       "herbivores",
+       "North of Hokkaido"
+      ]
+     }
+    },
+    "evidence": {
+     "1.0": "explicit"
+    },
+    "probs": {
+     "1.0 | QK": {
+      "code": 0.761,
+      "word": 0.239
+     },
+     "1.0": {
+      "e0": 0.003,
+      "e1": 0.774,
+      "e2": 0.001,
+      "keep": 0.222
+     },
+     "1.0 | QB": {
+      "w0": 0.013,
+      "w1": 0.987
+     }
+    }
+   },
+   "2.0": {
+    "term": "primary predators (predators and parasitoids of herbivores)",
+    "parts": [
+     "2.0"
+    ],
+    "options": {
+     "2.0": {
+      "evidence": "explicit",
+      "labels": [
+       "functional traits",
+       "primary predators",
+       "Hokkaido"
+      ]
+     }
+    },
+    "evidence": {
+     "2.0": "explicit"
+    },
+    "probs": {
+     "2.0 | QK": {
+      "code": 0.582,
+      "word": 0.418
+     },
+     "2.0": {
+      "e0": 0.001,
+      "e1": 0.966,
+      "e2": 0.001,
+      "keep": 0.032
+     },
+     "2.0 | QB": {
+      "w0": 0.445,
+      "w1": 0.555
+     }
+    }
+   },
+   "3.0": {
+    "term": "secondary predators (predators and parasitoids of predators)",
+    "parts": [
+     "3.0"
+    ],
+    "options": {
+     "3.0": {
+      "evidence": "explicit",
+      "labels": [
+       "PD",
+       "secondary predators",
+       "East Honshu"
+      ]
+     }
+    },
+    "evidence": {
+     "3.0": "explicit"
+    },
+    "probs": {
+     "3.0 | QK": {
+      "code": 0.652,
+      "word": 0.348
+     },
+     "3.0": {
+      "e0": 0.001,
+      "e1": 0.975,
+      "e2": 0.001,
+      "keep": 0.022
+     },
+     "3.0 | QB": {
+      "w0": 0.403,
+      "w1": 0.597
+     }
+    }
+   }
+  },
+  "header": "Trophic level"
+ },
+ "10:10": {
+  "cells": {},
+  "header": "Feeding guild"
+ }
+}

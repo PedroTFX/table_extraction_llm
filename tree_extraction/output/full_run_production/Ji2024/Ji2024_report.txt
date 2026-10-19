@@ -1,0 +1,92 @@
+  [semantic] matched by values: 'thoraxwidth' -> 'Thorax Width'
+  [semantic] matched by values: 'thoraxlenth' -> 'Thorax Length'
+  [semantic] matched by values: 'leglenth' -> 'Total Length'
+  [semantic] matched by values: 'headwidth' -> 'Head Width'
+  [semantic] matched by values: 'headlenth' -> 'Head Length'
+  [semantic] matched by values: 'elytralenth' -> 'Elytra Length'
+  [semantic] matched by values: 'bodywidth' -> 'Body Width'
+  [semantic] matched by values: 'bodysize' -> 'Body Size'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Ji2024\Ji2024.xlsx  (5616 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Ji2024\Ji2024.csv  (5083 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 12 pair(s))
+  'antenna' -> 'Antenna Length'
+  'bodysize' -> 'Body Size'
+  'bodywidth' -> 'Body Width'
+  'elytralenth' -> 'Elytra Length'
+  'femur' -> 'Femur Length'
+  'headlenth' -> 'Head Length'
+  'headwidth' -> 'Head Width'
+  'hindwing' -> 'Hindwing Length'
+  'leglenth' -> 'Total Length'
+  'thoraxlenth' -> 'Thorax Length'
+  'thoraxwidth' -> 'Thorax Width'
+  'tibia' -> 'Tibia Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 5083
+  missed (FN)         : 533
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 0.905 / 0.950   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.905 / 0.950   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.905   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord              5083   5083  1.000
+  measurementMethod             0      0    n/a   +1627 where GT blank
+  measurementUnit               0   5083  0.000  <-- low
+  measurementStatistic          0   5083  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   5083  0.000  <-- low
+  lifeStage                  5083   5083  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +5083 where GT blank
+  verbatimCoordinates           0   5083  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   5083  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 533 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            432
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Elevation'                        x432
+  -> 1 missing trait explains 432 of 533 misses (81%) — systematic, not scattered
+
+  full miss detail saved -> Ji2024_misses.csv, Ji2024_misses_summary.json (533 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  antenna length                                  432   432   
+  body size                                       432   432   
+  body width                                      432   432   
+  elevation                                       432     0   GT-ONLY
+  elytra length                                   432   432   
+  femur length                                    432   432   
+  head length                                     432   432   
+  head width                                      432   432   
+  hindwing length                                 432   331   Δ-101 (split?)
+  thorax length                                   432   432   
+  tibia length                                    432   432   
+  total length                                    432   432   
+  thorax width                                    432   432   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.905  0.950   5083     0   533   id+type+value
+  tags        0.000  0.000  0.000      0  5083  5616   basis+id+type+value+stat+sex+stage
+             (F1 -0.950 vs previous)

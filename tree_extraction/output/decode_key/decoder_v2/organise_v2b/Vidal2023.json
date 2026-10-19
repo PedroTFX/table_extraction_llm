@@ -1,0 +1,106 @@
+{
+ "calls": 2,
+ "chars": 6872,
+ "passages": [
+  "[prose] because there is an increase in floral resources and boring insect exit holes used by cavity-nesting bees (Galbraith et al., 2019); because bee abundance is negatively related to canopy cover (Grundel et al., 2010); or because floral abundance persisted for longer time in burned sites (Mola and Williams, 2018; Moretti et al., 2009; Potts et al., 2003); in all these cases, the pattern that usually emerges is a rapid recovery with a peak in diversity of both flowers and bees in the first years after a fire. For ants, however, taxonomic responses have been quite variable across the world (New, 2014): in the Brazilian rupestrian complex, the ant fauna of burned areas maintained a constant species diversity along time but greatly changed species assemblage due to the occurrence of several species not found in the unburned area (Anjos et al., 2015); in the Australian pindan savanna woodland, the ant fauna was highly resilient to fire and most of the 84 ant species (except 2) did not show any positive change in abundance over time since fire (Andersen et al., 2014); but after experimental fires in a similar savanna woodland Parr and Andersen (2008) observed a dramatic decline in dominance of the patchily distributed forest-associated species Oecophylla smaragdina and Papyrius sp., although fire had no effect on overall dominance by open savanna species of Iridomyrmex. Yet, relatively little is known about how ants and bees respond functionally to fire over the intermediate and long term. Functional redundancy has been observed in bees: after a fire, bee abundance climbs, and while taxonomic diversity may decrease, functional diversity is maintained (Moretti et al., 2009). In Mediterranean ant communities, fire results in greater functional diversity, mainly due to the presence of rare species that are functionally unique (Arnan et al., 2019). In both cases, such changes could have major consequences for ecosystem processes and services.",
+  "[prose] Given the importance of plant community recovery in ant and bee community recovery, we explored whether vegetation cover formed natural groups based on time since fire. To this end, we performed a cluster analysis using the hclust function (cluster package; Maechler et al., 2022). The dependent variable was the vegetation cover at the burned areas for the three strata found to be significant above. The results revealed the presence of three categories (Fig. S2): category 1—fire occurred 0 to 4 years ago; category 2—fire occurred 7 to 12 years ago; and category 3—fire occurred 15 to 41 years ago. These categories are similar to those used by Peralta et al. (2017) when studying fire's effects on plant-bee networks.",
+  "[prose] Given the regional scale of our study, we gathered information on the environmental characteristics of each study area. The resulting set of variables was used as covariables in the analyses (Dataset S1, spreadsheets data.ants and data.bees). This list comprised latitude, longitude, and elevation (Lat, Long, and Elev) as determined from GPS coordinates; lithological types (igneous, sedimentary, and metamorphic rock) (CSIC-IARA, 1988), as different type of soil affect ant richness and bee nesting for ground-dwelling bees (Angulo et al., 2016; Lybrand et al., 2020; Antoine and Forrest, 2021); pine species (Pine halepensis, P. nigra, P. pinaster, and P. pinea) because pines can differ in their responses to fire (He et al., 2012); and eight bioclimatic variables (WorldClim database v. 2.0— [www.worldclim.org](http://www.worldclim.org); Hijmans et al., 2005). The latter covered the period from 1970 to 2000, and the values had a spatial resolution of about 1 km 2 . Using principal components analysis (PCA), we reduced them to two uncorrelated components that accounted for 92.3 % of the original variation (Clim. 1 and Clim. 2; Table S5).",
+  "[prose] The objective of our study was to assess the effects of fire and time since fire on two taxonomic groups—ants and bees. We conducted our research along a regional gradient in southern Spain in 35 pine forests that had experienced a wildfire at some point in the past (between 0 and 41 years ago). We characterized the forests' geographical and climatic conditions, and we assessed vegetation cover and the diversity and composition of ant and bee communities. Within each study area, we compared a burned area with a nearby unburned area. We tested the following hypotheses: (1) since fire reduces canopy and vegetation cover, and thus reduces vegetation structural complexity and the amount of feeding resources, we expected that, in the short term, fire could decrease taxonomic and functional diversity at burned versus unburned areas; alternatively, the appearance of new ecological niches (open areas in the forest) could boost taxonomic and functional diversity at burned versus unburned areas; (2) since recently burned areas tend to harbor species typical of open habitats but less recently burned areas harbor species with greater ties to vegetation, we expected that taxonomic and functional diversity would decline over time at the burned areas until they reached the values found at the unburned areas; (3) the null hypothesis for hypotheses 1 and 2 was that taxo nomic and functional diversity would be related to environmental variables (i.e. latitude, longitude, elevation, climate, lithology or the pine species present previous to fire) rather than time since fire; and (4) in accordance with the above-noted changes in vegetation, we expected the taxonomic",
+  "[prose] We wanted to compare taxon richness (species/genus) at burned vs unburned areas. First, we calculated the difference in ant and bee occurrence between burned and unburned areas using a habitat use index, modified from Suggitt et al. (2012): $\\mathrm { I _ { h a b i t a t } } = \\: [ ( 2 \\: ^ { \\mathrm { \\scriptsize ~ s ~ } }$ unburned occurrence values)/(unburned occurrence values + burned occurrence values)]–1. The value of the index ranges from −1 to 1, where negative values indicate more frequent association with burned habitats, and positive values denote taxa more associated with unburned habitats.",
+  "[prose] Additionally, when differences in species richness were mapped across the study areas (Fig. 3), the same result was seen. The richness of ant and bee communities was greater at burned than unburned areas (more red vs. blue), a pattern that was seemingly more pronounced in ants. However time since fire did not significantly affect the differences in species richness $( \\mathbb { F } _ { 1 , 2 2 } = 0 . 0 0 , p = 0$ .948 for ants; $\\mathtt { F } _ { 1 , 2 2 } = 1 . 5 6 , p = 0 . 2 2 8$ for bees). Out of all the environmental variables, only latitude was correlated with differences in community richness and only in the case of ants $( \\mathrm { F } _ { 1 , 2 2 } = 5 . 2 6 ,$ $p = 0 . 0 3 )$ (Table S8)."
+ ],
+ "categories": [
+  {
+   "variable": "category 1",
+   "code": "1",
+   "term": "fire occurred 0 to 4 years ago",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "occurred 0 to 4 years ago"
+  },
+  {
+   "variable": "category 2",
+   "code": "2",
+   "term": "fire occurred 7 to 12 years ago",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "occurred 7 to 12 years ago"
+  },
+  {
+   "variable": "category 3",
+   "code": "3",
+   "term": "fire occurred 15 to 41 years ago",
+   "model_label": "fire",
+   "label": "fire",
+   "explanation": "occurred 15 to 41 years ago"
+  },
+  {
+   "variable": "Clim. 1",
+   "code": "Clim. 1",
+   "term": "principal components",
+   "model_label": "principal components",
+   "label": "principal components",
+   "explanation": ""
+  },
+  {
+   "variable": "Clim. 2",
+   "code": "Clim. 2",
+   "term": "principal components",
+   "model_label": "principal components",
+   "label": "principal components",
+   "explanation": ""
+  },
+  {
+   "variable": "positive values denote taxa more associated with unburned habitats",
+   "code": "1",
+   "term": "positive values denote taxa more associated with unburned habitats",
+   "model_label": "positive",
+   "label": "positive",
+   "explanation": "values denote taxa more associated with unburned habitats"
+  },
+  {
+   "variable": "time since fire",
+   "code": "",
+   "label": "fire occurred 0 to 4 years ago",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "time since fire",
+   "code": "",
+   "label": "fire occurred 7 to 12 years ago",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "time since fire",
+   "code": "",
+   "label": "fire occurred 15 to 41 years ago",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "taxon richness",
+   "code": "",
+   "label": "ant",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "taxon richness",
+   "code": "",
+   "label": "bee",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "negative values indicate more frequent association with burned habitats",
+   "code": "-1",
+   "term": "negative values indicate more frequent association with burned habitats",
+   "why": "term not printed near the code"
+  }
+ ],
+ "seconds": 16.0
+}

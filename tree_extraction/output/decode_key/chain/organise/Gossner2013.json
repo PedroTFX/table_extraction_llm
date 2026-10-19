@@ -1,0 +1,351 @@
+{
+ "calls": 2,
+ "chars": 6124,
+ "passages": [
+  "[prose] We compiled information on 4 ecological traits for each species (Supporting Information): mean body size, diameter of dead wood in which a species was recorded, decay stage of the dead wood, and canopy cover of forests in which the species is known to occur. In his compilation, Moller (2009) provides semiquantitative in- ¨ formation on diameter, decay stage, and canopy cover across categories. We first extracted the occurrence of species across the following categories (axes): (1) diameter: 35 cm, and >70 cm; (2) decay stage: 0, alive; 1, freshly dead (1–2 years); 2, initiated decomposition (loose bark, tough sapwood); 3, advanced",
+  "[prose] To visualize the occurrence of saproxylic beetle species along gradients characterizing forest-use intensity in beech forests, we considered the first 2 axes of a canonical correspondence analysis (CCA) with the variables veteran trees, dead wood, tree diversity, and conifers available for both data sets. All these variables characterize aspects of forest-use intensity (Fig. 1). To evaluate which particular trait makes species susceptible to forest-use intensity, we modeled the positions of species along the axes versus their body size and their niche positions (regarding dead-wood diameter and decay stage, and canopy cover). In such an analysis, data points (species) may not be independent, which inflates the degrees of freedom (Garland et al. 1992). Therefore, we constructed a linear generalized least-squares model (GLS) with a correlation structure derived from our phylogenetic tree constructed using Pagel’s λ (Pagel 1999). Pagel’s λ is the degree of phylogenetic constraints from 0 (not constrained) to 1 (fully constrained) and was estimated by maximizing the likelihood of the model (Freckleton et al. 2002).",
+  "[prose] Table 2. Results of a linear model of the relation of the canonical correspondence analysis (CCA) axis positions to body size, and the niche positions (dead-wood diameter, dead-wood decay stage, and canopy cover). a",
+  "[prose] Cross-species analyses are often characterized by large scatter (see $R ^ { 2 }$ values in Table 2). Therefore, we used an assembly-based approach for testing our predictions (Fig. 1). Assembly-based approaches are much more sensitive because they average across minor signals of species (Olalla-Tárraga et al. 2010). Our assembly-based approach based on functional traits revealed that as amount of dead wood increased, large and small species specialized on dead wood of large diameter entered the assemblages. This translated into an increase in bodysize diversity. In contrast, the diversity of the diameter niche decreased as the amount of dead wood increased, which indicates a dominance of species preferring dead wood of large diameter when there is a large amount of dead wood. Body size correlates well with life-history traits (Sibly et al. 2012). Larger species in particular are characterized by a long developmental phase and slow growth rates (Haack & Slansky 1987), which make them dependent on large pieces of dead wood (Brin et al. 2011). Although the volume of branches seems to be sufficient even for large-bodied beetles, the microhabitat requirements of these species may restrict them to large pieces (Stokland et al. 2012). The sensitivity of a few large species to increasing intensity of forest use has been documented (e.g., long-horned beetle [Cerambyx cerdo], a species discussed as an important ecosystem engineer because it produces large galleries) (Buse et al. 2007, 2008).",
+  "[prose] Figure S7-1: Relationship between mean body size and individuals of saproxylic beetles sampled in a particular trap. Mean body sizes decreased with increasing number of individuals sampled per trap. Pearson's product-moment correlation: t = −3.2, df = 1154, p = 0.001, R² = 0.009.",
+  "[table 3] Variable | Mean dead-wood amount \\((m^{3}/ha)\\) (range) | Value (range)\nBody size | 10~400 | 0~25\nDiameter (cm) | 10~400 | 8~85\nDecay stage | 10~400 | 0~3",
+  "[prose] plots in which it occurred was ${ 3 /ha. Most species occurring on average on plots with an amount of dead wood $\\text { > } 6 0 \\text { m } ^ { 3 } / \\text { h a }$ required dead wood of large diameter (approximately 50 cm) (Fig. 3) and in the late stages of decay. These species were either small or large.",
+  "[prose] Figure 3. Correlation between traits of saproxylic beetle species and the position of a single species on an axis of the amount of dead wood (measured with high resolution) on the regional scale (Steigerwald) (gray bars, frequency distribution of dead-wood amount). This axis was calculated as the mean value of log-transformed values of dead-wood amount across the plots on which a species occurred. We estimated niche positions for each beetle species along the diameter and decay stage axes (left-hand axis) on the basis of occurrence of species across categories known from literature (diameter: 35 cm, and >70 cm; decay stage: 0, alive; 1, freshly dead [1–2 years]; 2, initiated decomposition [loose bark, tough sapwood]; 3, advanced decomposition [soft sapwood, partly tough hardwood]; and 4 [extremely decomposed and moldered]) and weighting scores (0.5, very rarely used; 1, rarely used; 2, commonly used; 3, preferred). For illustration, the scales of the original classification of dead-wood diameter niche and dead-wood decay-stage niche are on the right-hand axis. All species that were sampled on at least 3 plots were included (n = 149 species).",
+  "[prose] Niche positions for each species were derived from data published by Möller (2009). Diameter was classified as 35 cm, and > 70 cm. Decay was classified in 5 classes from 0 (alive) to 4 (class 4 equates to class 4/5 in Albrecht 1990). Canopy cover was classified as sunny, semi-sunny, and shady. The increasing occurrence of a species in one or several of this ordinal classes was scored as 0.5 (very rare), 1 (rare), 2 (common), and 3 (preferred). Based on these values, we calculated for each species a weighted score for each niche value. As an example, we provide the calculation of dead-wood decay niche position of the stag beetle Lucanus cervus as follows:"
+ ],
+ "categories": [
+  {
+   "variable": "diameter",
+   "code": "35 cm",
+   "term": "35 cm",
+   "model_label": "35 cm",
+   "label": "35 cm",
+   "explanation": ""
+  },
+  {
+   "variable": "diameter",
+   "code": ">70 cm",
+   "term": ">70 cm",
+   "model_label": ">70 cm",
+   "label": "70 cm",
+   "explanation": ">"
+  },
+  {
+   "variable": "decay stage",
+   "code": "0",
+   "term": "alive",
+   "model_label": "alive",
+   "label": "alive",
+   "explanation": ""
+  },
+  {
+   "variable": "decay stage",
+   "code": "1",
+   "term": "freshly dead (1–2 years)",
+   "model_label": "freshly dead",
+   "label": "freshly dead",
+   "explanation": "1–2 years"
+  },
+  {
+   "variable": "decay stage",
+   "code": "2",
+   "term": "initiated decomposition (loose bark, tough sapwood)",
+   "model_label": "initiated decomposition",
+   "label": "initiated decomposition",
+   "explanation": "loose bark, tough sapwood"
+  },
+  {
+   "variable": "decay stage",
+   "code": "3",
+   "term": "advanced decomposition [soft sapwood, partly tough hardwood]",
+   "model_label": "advanced decomposition",
+   "label": "advanced decomposition",
+   "explanation": "soft sapwood, partly tough hardwood"
+  },
+  {
+   "variable": "decay stage",
+   "code": "4",
+   "term": "[extremely decomposed and moldered]",
+   "model_label": "extremely decomposed",
+   "label": "extremely decomposed",
+   "explanation": "and moldered"
+  },
+  {
+   "variable": "weighting scores",
+   "code": "0.5",
+   "term": "very rarely used",
+   "model_label": "very rarely used",
+   "label": "very rarely used",
+   "explanation": ""
+  },
+  {
+   "variable": "weighting scores",
+   "code": "1",
+   "term": "rarely used",
+   "model_label": "rarely used",
+   "label": "rarely used",
+   "explanation": ""
+  },
+  {
+   "variable": "weighting scores",
+   "code": "2",
+   "term": "commonly used",
+   "model_label": "commonly used",
+   "label": "commonly used",
+   "explanation": ""
+  },
+  {
+   "variable": "weighting scores",
+   "code": "3",
+   "term": "preferred",
+   "model_label": "preferred",
+   "label": "preferred",
+   "explanation": ""
+  },
+  {
+   "variable": "Decay",
+   "code": "0",
+   "term": "alive",
+   "model_label": "alive",
+   "label": "alive",
+   "explanation": ""
+  },
+  {
+   "variable": "Decay",
+   "code": "4",
+   "term": "class 4/5 in Albrecht 1990",
+   "model_label": "class 4/5",
+   "label": "class 4/5",
+   "explanation": "in Albrecht 1990"
+  },
+  {
+   "variable": "increasing occurrence of a species in one or several of this ordinal classes",
+   "code": "0.5",
+   "term": "very rare",
+   "model_label": "very rare",
+   "label": "very rare",
+   "explanation": ""
+  },
+  {
+   "variable": "increasing occurrence of a species in one or several of this ordinal classes",
+   "code": "1",
+   "term": "rare",
+   "model_label": "rare",
+   "label": "rare",
+   "explanation": ""
+  },
+  {
+   "variable": "increasing occurrence of a species in one or several of this ordinal classes",
+   "code": "2",
+   "term": "common",
+   "model_label": "common",
+   "label": "common",
+   "explanation": ""
+  },
+  {
+   "variable": "increasing occurrence of a species in one or several of this ordinal classes",
+   "code": "3",
+   "term": "preferred",
+   "model_label": "preferred",
+   "label": "preferred",
+   "explanation": ""
+  },
+  {
+   "variable": "decay stage",
+   "code": "",
+   "label": "0, alive",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "decay stage",
+   "code": "",
+   "label": "1, freshly dead (1–2 years)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "decay stage",
+   "code": "",
+   "label": "2, initiated decomposition (loose bark, tough sapwood)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "decay stage",
+   "code": "",
+   "label": "3, advanced decomposition (soft sapwood, partly tough hardwood)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "decay stage",
+   "code": "",
+   "label": "4 [extremely decomposed and moldered]",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Decay",
+   "code": "",
+   "label": "0 (alive)",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Canopy cover",
+   "code": "",
+   "label": "sunny",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Canopy cover",
+   "code": "",
+   "label": "semi-sunny",
+   "explanation": "",
+   "evidence": "named"
+  },
+  {
+   "variable": "Canopy cover",
+   "code": "",
+   "label": "shady",
+   "explanation": "",
+   "evidence": "named"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "diameter",
+   "code": "",
+   "term": "35 cm",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "diameter",
+   "code": "",
+   "term": ">70 cm",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Body size",
+   "code": "",
+   "term": "10~400",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Body size",
+   "code": "",
+   "term": "0~25",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Diameter (cm)",
+   "code": "",
+   "term": "10~400",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Diameter (cm)",
+   "code": "",
+   "term": "8~85",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Decay stage",
+   "code": "",
+   "term": "10~400",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Decay stage",
+   "code": "",
+   "term": "0~3",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Diameter",
+   "code": "",
+   "term": "35 cm",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Diameter",
+   "code": "",
+   "term": "> 70 cm",
+   "why": "uncoded label not printed as whole words"
+  },
+  {
+   "variable": "Decay",
+   "code": "",
+   "term": "4 (class 4/5 in Albrecht 1990)",
+   "why": "uncoded label not printed as whole words"
+  }
+ ],
+ "seconds": 58.5,
+ "columns": [
+  [
+   6,
+   2,
+   "Body size",
+   [
+    "2.00",
+    "7.00",
+    "1.00",
+    "4.00",
+    "8.00",
+    "3.00",
+    "6.00",
+    "0.70",
+    "0.90",
+    "0.60",
+    "0.80",
+    "0.50",
+    "5.00",
+    "2.50",
+    "9.00",
+    "19.00",
+    "11.00",
+    "10.00",
+    "12.00",
+    "15.00",
+    "14.00",
+    "13.00",
+    "20.00",
+    "17.00",
+    "18.00"
+   ]
+  ],
+  [
+   6,
+   3,
+   "Diameter",
+   [
+    "2.50",
+    "3.00",
+    "2.29",
+    "3.80",
+    "3.20",
+    "2.80",
+    "4.00",
+    "2.00",
+    "2.71",
+    "3.50",
+    "2.33",
+    "2.60",
+    "3.40",
+    "3.75",
+    "2.67",
+    "1.25",
+    "1.86",
+    "1.20",
+    "1.00",
+    "1.80",
+    "2.20",
+    "1.50",
+    "1.67",
+    "2.15",
+    "1.40"
+   ]
+  ]
+ ]
+}

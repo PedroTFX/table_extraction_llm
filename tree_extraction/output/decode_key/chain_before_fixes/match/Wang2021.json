@@ -1,0 +1,183 @@
+{
+ "1:2": {
+  "cells": {},
+  "header": "Length (mm)"
+ },
+ "1:3": {
+  "cells": {
+   "S": {
+    "term": null,
+    "parts": [
+     "S"
+    ],
+    "options": {
+     "S": {
+      "evidence": "explicit",
+      "labels": [
+       ">15 mm"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "S | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "S": {
+      "e0": 0.047,
+      "keep": 0.953
+     }
+    }
+   },
+   "L": {
+    "term": null,
+    "parts": [
+     "L"
+    ],
+    "options": {
+     "L": {
+      "evidence": "explicit",
+      "labels": [
+       "|0.7"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "L | QK": {
+      "code": 0.941,
+      "word": 0.059
+     },
+     "L": {
+      "e0": 0.018,
+      "keep": 0.982
+     }
+    }
+   }
+  },
+  "header": "Body Size"
+ },
+ "1:4": {
+  "cells": {
+   "C": {
+    "term": "carnivorous",
+    "parts": [
+     "C"
+    ],
+    "options": {
+     "C": {
+      "evidence": "initial",
+      "labels": [
+       "carnivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "C": "initial"
+    },
+    "probs": {
+     "C | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "C": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "C | QB": {}
+    }
+   },
+   "O": {
+    "term": "omnivorous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "initial",
+      "labels": [
+       "omnivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "initial"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.961,
+      "word": 0.039
+     },
+     "O": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "O | QB": {}
+    }
+   }
+  },
+  "header": "Feeding Trait"
+ },
+ "1:5": {
+  "cells": {
+   "M": {
+    "term": "macropterous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "initial",
+      "labels": [
+       "macropterous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "initial"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "M": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "M | QB": {}
+    }
+   },
+   "B": {
+    "term": "brachypterous",
+    "parts": [
+     "B"
+    ],
+    "options": {
+     "B": {
+      "evidence": "initial",
+      "labels": [
+       "brachypterous"
+      ]
+     }
+    },
+    "evidence": {
+     "B": "initial"
+    },
+    "probs": {
+     "B | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "B": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "B | QB": {}
+    }
+   }
+  },
+  "header": "Wing Morphology"
+ }
+}

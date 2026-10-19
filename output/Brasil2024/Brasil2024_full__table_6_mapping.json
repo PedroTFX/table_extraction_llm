@@ -1,27 +1,47 @@
 {
-  "species": {
-    "field": "verbatimIdentification",
-    "value_column": false,
-    "reasoning": "The column contains insect taxon names (binomial names).",
-    "category": "Categorical biological trait",
-    "reasoning_relevance": "The column lists the scientific names of the wild bee species studied."
-  },
-  "Body size x urbanization": {
+  "Functional trait": {
     "field": "measurementType",
     "value_column": true,
-    "reasoning": "The header describes a measured biological property (body size) of the organism.",
-    "category": "Measurement-type key",
-    "reasoning_relevance": "The column contains trait names (e.g., 'Body size x urbanization') alongside numerical measurement values.",
-    "multi_value": false,
-    "value_type": "numeric",
-    "canonicalType": "Body size x urbanization",
-    "basisOfRecord": "PreservedSpecimen",
-    "basisOfRecord_reasoning": "The body size was measured using a stereo microscope on collected bees to determine morphological traits (Intertegular Distance, ITD), which constitutes a measurement on a physical specimen.",
-    "measurementMethod": "Intertegular distance (ITD) measured using a stereo microscope (Nikon SMZ1270)",
-    "measurementMethod_reasoning": "The text explicitly states: 'Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).'",
-    "measurementUnit": "mm",
-    "measurementUnit_reasoning": "The measurement unit used for ITD is millimeters (mm).",
-    "measurementStatistic": "mean ± SE",
-    "measurementStatistic_reasoning": "The results section (Fig. 3 caption) refers to 'Mean Intertegular Distance' and notes that 'Error bars correspond to standard errors,' indicating the mean was the primary statistic reported."
+    "reasoning": "Header names the trait being measured, defining the property of the organism."
+  },
+  "Mean wing wear": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a trait; cells contain the measured numeric value for wing wear."
+  },
+  "SD": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a statistical measure; cells contain the standard deviation."
+  },
+  "t": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a statistical test; cells contain the calculated t-statistic."
+  },
+  "p-value": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a statistical result; cells contain the corresponding p-value."
+  },
+  "Mean ITD": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a trait; cells contain the mean Index of Thermal Summation."
+  },
+  "SD (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a statistical measure; cells contain the standard error (SD)."
+  },
+  "t (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a statistical test; cells contain the calculated t-statistic."
+  },
+  "p-value (1)": {
+    "field": "measurementValue",
+    "value_column": true,
+    "reasoning": "Header names a statistical result; cells contain the corresponding p-value."
   }
 }

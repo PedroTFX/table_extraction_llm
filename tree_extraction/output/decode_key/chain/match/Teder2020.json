@@ -1,0 +1,640 @@
+{
+ "0:1": {
+  "cells": {},
+  "header": "Multivoltine species (%)"
+ },
+ "0:2": {
+  "cells": {},
+  "header": "Univoltine species (%)"
+ },
+ "2:1": {
+  "cells": {},
+  "header": "multivoltine species (Mean size)"
+ },
+ "2:2": {
+  "cells": {},
+  "header": "univoltine species (Mean size)"
+ },
+ "3:0": {
+  "cells": {},
+  "header": "Species"
+ },
+ "3:1": {
+  "cells": {},
+  "header": "OW: adult"
+ },
+ "3:2": {
+  "cells": {},
+  "header": "OW: egg"
+ },
+ "3:3": {
+  "cells": {},
+  "header": "OW: larva"
+ },
+ "3:4": {
+  "cells": {},
+  "header": "OW: pupa"
+ },
+ "3:5": {
+  "cells": {},
+  "header": "grasses"
+ },
+ "3:6": {
+  "cells": {},
+  "header": "forbs"
+ },
+ "3:7": {
+  "cells": {},
+  "header": "lichens"
+ },
+ "3:8": {
+  "cells": {},
+  "header": "woody plants"
+ },
+ "3:9": {
+  "cells": {},
+  "header": "woody / herbs"
+ },
+ "3:10": {
+  "cells": {},
+  "header": "mono-phages"
+ },
+ "3:11": {
+  "cells": {},
+  "header": "oligo-phages"
+ },
+ "3:12": {
+  "cells": {},
+  "header": "poly-phages"
+ },
+ "3:13": {
+  "cells": {},
+  "header": "all species"
+ },
+ "4:0": {
+  "cells": {
+   "pupa": {
+    "term": null,
+    "parts": [
+     "pupa"
+    ],
+    "options": {
+     "pupa": {
+      "evidence": "initial",
+      "labels": [
+       "pupal"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "pupa | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   }
+  },
+  "header": "Overwintering stage"
+ },
+ "4:1": {
+  "cells": {},
+  "header": "univoltine species"
+ },
+ "4:2": {
+  "cells": {},
+  "header": "multivoltine species"
+ },
+ "5:0": {
+  "cells": {
+   "grasses": {
+    "term": null,
+    "parts": [
+     "grasses"
+    ],
+    "options": {
+     "grasses": {
+      "evidence": "explicit",
+      "labels": [
+       "grasses"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "grasses | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "woody plants": {
+    "term": null,
+    "parts": [
+     "woody plants"
+    ],
+    "options": {
+     "woody plants": {
+      "evidence": "explicit",
+      "labels": [
+       "woody plants"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "woody plants | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "forbs": {
+    "term": null,
+    "parts": [
+     "forbs"
+    ],
+    "options": {
+     "forbs": {
+      "evidence": "explicit",
+      "labels": [
+       "forbs"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "forbs | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "header": "Host type"
+ },
+ "5:1": {
+  "cells": {},
+  "header": "univoltine species"
+ },
+ "6:5": {
+  "cells": {},
+  "header": "Size"
+ },
+ "6:6": {
+  "cells": {
+   "E": {
+    "term": "egg",
+    "parts": [
+     "E"
+    ],
+    "options": {
+     "E": {
+      "evidence": "explicit",
+      "labels": [
+       "egg"
+      ]
+     }
+    },
+    "evidence": {
+     "E": "explicit"
+    },
+    "probs": {
+     "E | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "E": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "E | QB": {}
+    }
+   },
+   "P": {
+    "term": "pupa",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "pupa",
+       "polyphagous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "P": {
+      "e0": 0.996,
+      "e1": 0.0,
+      "keep": 0.004
+     },
+     "P | QB": {}
+    }
+   },
+   "L": {
+    "term": "larva",
+    "parts": [
+     "L"
+    ],
+    "options": {
+     "L": {
+      "evidence": "explicit",
+      "labels": [
+       "lichens",
+       "larva"
+      ]
+     }
+    },
+    "evidence": {
+     "L": "explicit"
+    },
+    "probs": {
+     "L | QK": {
+      "code": 0.909,
+      "word": 0.091
+     },
+     "L": {
+      "e0": 0.0,
+      "e1": 0.992,
+      "keep": 0.007
+     },
+     "L | QB": {}
+    }
+   },
+   "A": {
+    "term": "adult",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "explicit",
+      "labels": [
+       "adult"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "explicit"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.943,
+      "word": 0.057
+     },
+     "A": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "A | QB": {}
+    }
+   },
+   "AP": {
+    "term": "adult within pupal case",
+    "parts": [
+     "AP"
+    ],
+    "options": {
+     "AP": {
+      "evidence": "explicit",
+      "labels": [
+       "adult"
+      ]
+     }
+    },
+    "evidence": {
+     "AP": "explicit"
+    },
+    "probs": {
+     "AP | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "AP": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "AP | QB": {
+      "w0": 0.001,
+      "w1": 0.063,
+      "w2": 0.936
+     }
+    }
+   }
+  },
+  "header": "Overwintering stage"
+ },
+ "6:7": {
+  "cells": {
+   "F": {
+    "term": "forbs",
+    "parts": [
+     "F"
+    ],
+    "options": {
+     "F": {
+      "evidence": "explicit",
+      "labels": [
+       "forbs"
+      ]
+     }
+    },
+    "evidence": {
+     "F": "explicit"
+    },
+    "probs": {
+     "F | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "F": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "F | QB": {}
+    }
+   },
+   "G": {
+    "term": "grasses",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "explicit",
+      "labels": [
+       "grasses"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "explicit"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "G": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "G | QB": {}
+    }
+   },
+   "W": {
+    "term": "woody plants",
+    "parts": [
+     "W"
+    ],
+    "options": {
+     "W": {
+      "evidence": "explicit",
+      "labels": [
+       "woody plants"
+      ]
+     }
+    },
+    "evidence": {
+     "W": "explicit"
+    },
+    "probs": {
+     "W | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "W": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "W | QB": {}
+    }
+   },
+   "WH": {
+    "term": "woody + herbaceous plants",
+    "parts": [
+     "WH"
+    ],
+    "options": {
+     "WH": {
+      "evidence": "explicit",
+      "labels": [
+       "woody + herbaceous plants"
+      ]
+     }
+    },
+    "evidence": {
+     "WH": "explicit"
+    },
+    "probs": {
+     "WH | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "WH": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "WH | QB": {}
+    }
+   },
+   "L": {
+    "term": "lichens",
+    "parts": [
+     "L"
+    ],
+    "options": {
+     "L": {
+      "evidence": "explicit",
+      "labels": [
+       "lichens",
+       "larva"
+      ]
+     }
+    },
+    "evidence": {
+     "L": "explicit"
+    },
+    "probs": {
+     "L | QK": {
+      "code": 0.947,
+      "word": 0.053
+     },
+     "L": {
+      "e0": 0.986,
+      "e1": 0.001,
+      "keep": 0.013
+     },
+     "L | QB": {}
+    }
+   }
+  },
+  "header": "Host type"
+ },
+ "6:8": {
+  "cells": {
+   "M": {
+    "term": "monophagous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monophagous",
+       "multivoltine"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "M": {
+      "e0": 0.995,
+      "e1": 0.0,
+      "keep": 0.005
+     },
+     "M | QB": {}
+    }
+   },
+   "O": {
+    "term": "oligophagous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "explicit",
+      "labels": [
+       "oligophagous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "explicit"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "O": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "O | QB": {}
+    }
+   },
+   "P": {
+    "term": "polyphagous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "pupa",
+       "polyphagous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "P": {
+      "e0": 0.0,
+      "e1": 0.994,
+      "keep": 0.006
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "header": "Larval diet breadth"
+ },
+ "6:9": {
+  "cells": {
+   "U": {
+    "term": "univoltine",
+    "parts": [
+     "U"
+    ],
+    "options": {
+     "U": {
+      "evidence": "explicit",
+      "labels": [
+       "univoltine"
+      ]
+     }
+    },
+    "evidence": {
+     "U": "explicit"
+    },
+    "probs": {
+     "U | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "U": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "U | QB": {}
+    }
+   },
+   "M": {
+    "term": "multivoltine",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monophagous",
+       "multivoltine"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "M": {
+      "e0": 0.001,
+      "e1": 0.992,
+      "keep": 0.008
+     },
+     "M | QB": {}
+    }
+   }
+  },
+  "header": "Voltinism"
+ }
+}

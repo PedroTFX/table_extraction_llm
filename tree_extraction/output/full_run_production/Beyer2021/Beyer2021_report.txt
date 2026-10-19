@@ -1,0 +1,145 @@
+  [semantic] left unmatched: 'density' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'mean intertegular distance' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'mean tongue length' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'tongue length category' vs 'Relative Tonghe Length' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Beyer2021\Beyer2021.xlsx  (206 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Beyer2021\Beyer2021.csv  (309 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 42 pair(s))
+  'Andrena chrysosceles' -> 'Andrena chrysosceles (Kirby 1802)'
+  'Andrena cineraria' -> 'Andrena cineraria (Linnaeus 1758)'
+  'Andrena coitana' -> 'Andrena coitana (Kirby 1802)'
+  'Andrena fulva' -> 'Andrena fulva (Müller 1766)'
+  'Andrena haemorrhoa' -> 'Andrena haemorrhoa (Fabricius 1781)'
+  'Andrena helvola' -> 'Andrena helvola (Linnaeus 1758)'
+  'Andrena minutula' -> 'Andrena minutula (Kirby 1802)'
+  'Andrena nigroaenea' -> 'Andrena nigroaenea (Kirby 1802)'
+  'Andrena nitida' -> 'Andrena nitida (Müller 1776)'
+  'Andrena ovatula' -> 'Andrena ovatula (Kirby 1802)'
+  'Andrena proxima' -> 'Andrena proxima (Kirby 1802)'
+  'Anthidium manicatum' -> 'Anthidium manicatum (Linnaeus 1758)'
+  'Anthophora furcata' -> 'Anthophora furcata (Panzer 1798)'
+  'Anthophora plumipes' -> 'Anthophora plumipes (Pallas 1772)'
+  'Bombus hortorum' -> 'Bombus hortorum (Linnaeus 1761)'
+  'Bombus hypnorum' -> 'Bombus hypnorum (Linnaeus 1758)'
+  'Bombus lapidarius' -> 'Bombus lapidarius (Linnaeus 1758)'
+  'Bombus muscorum' -> 'Bombus muscorum (Linnaeus 1758)'
+  'Bombus pascuorum' -> 'Bombus pascuorum (Scopoli 1763)'
+  'Bombus pratorum' -> 'Bombus pratorum (Linnaeus 1761)'
+  'Bombus ruderarius' -> 'Bombus ruderarius (Müller 1765)'
+  'Bombus sylvarum' -> 'Bombus sylvarum (Linnaeus 1761)'
+  'Bombus terrestris complex' -> 'Bombus terrestris (Linnaeus 1758) complex'
+  'Chelostoma campanularum' -> 'Chelostoma campanularum (Kirby 1802)'
+  'Chelostoma florisomne' -> 'Chelostoma florisomne (Linnaeus 1758)'
+  'Chelostoma rapunculi' -> 'Chelostoma rapunculi (Lepeletier 1841)'
+  'Dasypoda hirtipes' -> 'Dasypoda hirtipes (Fabricius 1793)'
+  'Halictus quadricinctus' -> 'Halictus quadricinctus (Fabricius 1776)'
+  'Halictus rubicundus' -> 'Halictus rubicundus (Christ 1791)'
+  'Halictus scabiosae' -> 'Halictus scabiosae (Rossi 1790)'
+  'Halictus tumulorum' -> 'Halictus tumulorum (Linnaeus 1758)'
+  'Lasioglossum calceatum' -> 'Lasioglossum calceatum (Scopoli 1763)'
+  'Lasioglossum fulvicorne' -> 'Lasioglossum fulvicorne (Kirby 1802)'
+  'Lasioglossum leucozonium' -> 'Lasioglossum leucozonium (Schrank 1781)'
+  'Lasioglossum morio' -> 'Lasioglossum morio (Fabricius 1793)'
+  'Lasioglossum pauxillum' -> 'Lasioglossum pauxillum (Schenck 1853)'
+  'Lasioglossum villosulum' -> 'Lasioglossum villosulum (Kirby 1802)'
+  'Megachile centuncularis' -> 'Megachile centuncularis (Linnaeus 1758)'
+  'Melitta haemorrhoidalis' -> 'Melitta haemorrhoidalis (Fabricius 1775)'
+  'Osmia adunca' -> 'Osmia adunca (Panzer 1798)'
+  'Osmia bicolor' -> 'Osmia bicolor (Schrank 1781)'
+  'Osmia bicornis' -> 'Osmia bicornis (Linnaeus 1758)'
+
+TAXON NAMES LEFT UNMAPPED (5)
+  'Bombus bohemicus': no ground-truth name denotes this organism
+  'Bombus rupestris': no ground-truth name denotes this organism
+  'Bombus sylvestris': no ground-truth name denotes this organism
+  'Nomada flavoguttata': no ground-truth name denotes this organism
+  'Nomada furva Panzer 1798': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'foraging preference' -> 'Foraging preference'
+  'intertegular distance' -> 'Intertegular Distance'
+  'mean relative tongue length' -> 'Tongue Length'
+  'sociality' -> 'Sociality'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 145
+  missed (FN)         : 61
+  spurious, in scope  : 62   <- GT covers this trait: real errors
+  spurious, out of scope: 102   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.469 / 0.704 / 0.563   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.700 / 0.704 / 0.702   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.704   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            102
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               145    145  1.000
+  measurementMethod             0      0    n/a   +84 where GT blank
+  measurementUnit              57     57  1.000
+  measurementStatistic        145    145  1.000
+  measurementRemarks            0      0    n/a
+  sex                          61    145  0.421  <-- low
+  lifeStage                    84    145  0.579
+  caste                         0     84  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    145  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    145  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 61 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              9
+  species+trait present, value differs       52
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'species not known to collect pollen from fabaceae' ->  'not known to collect pollen from fabaceae' x34
+     'short'                      ->  '1.2'                        x2
+     'long'                       ->  '1.49'                       x2
+     '8.87'                       ->  '2.15'                       x1
+     '4.3'                        ->  '1.2'                        x1
+     '4.39'                       ->  '1.2'                        x1
+  -> 6 substitutions explain 41 of 61 misses (67%) — systematic, not scattered
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Relative Tonghe Length'           x9
+  -> 1 missing trait explains 9 of 61 misses (15%) — scattered; no single cause
+
+  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (61 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  number of bumblebees                              0     9   PRED-ONLY
+  tongue length category                            0     9   PRED-ONLY
+  density                                           0    66   PRED-ONLY
+  intertegular distance                            57    66   Δ+9 (split?)
+  mean intertegular distance                        0     9   PRED-ONLY
+  foraging preference                              61    66   Δ+5 (split?)
+  mean tongue length                                0     9   PRED-ONLY
+  relative tonghe length                            9     0   GT-ONLY
+  tongue length                                    18     9   Δ-9 (split?)
+  sociality                                        61    66   Δ+5 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'relative tonghe length'           vs pred 'tongue length category'           sim=0.74
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.700  0.704  0.702    145    62    61   id+type+value
+             (102 more spurious row(s) set aside as out-of-scope; strict P would be 0.469)
+  tags        0.000  0.000  0.000      0   207   206   basis+id+type+value+stat+sex+stage
+             (102 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.702 vs previous)

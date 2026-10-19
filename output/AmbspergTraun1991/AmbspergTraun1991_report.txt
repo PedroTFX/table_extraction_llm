@@ -29,8 +29,8 @@ ROW-LEVEL (key match)
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                28     59  0.475  <-- low
-  measurementMethod             0      0    n/a   +15 where GT blank
+  basisOfRecord                43     59  0.729
+  measurementMethod             0      0    n/a   +31 where GT blank
   measurementUnit               0      0    n/a
   measurementStatistic         59     59  1.000
   measurementRemarks            0      0    n/a
@@ -69,5 +69,5 @@ measurementType COVERAGE
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.937  0.983  0.959     59     4     1   id+type+value
-  tags        0.444  0.467  0.455     28    35    32   basis+id+type+value+stat+sex+stage
-             (F1 -0.504 vs previous)
+  tags        0.683  0.717  0.699     43    20    17   basis+id+type+value+stat+sex+stage
+             (F1 -0.260 vs previous)

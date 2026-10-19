@@ -1,0 +1,603 @@
+{
+ "_columns": [
+  [
+   0,
+   1,
+   "Trait type",
+   [
+    "Continuous",
+    "Categorical"
+   ]
+  ],
+  [
+   0,
+   2,
+   "Categories",
+   [
+    "N/A",
+    "Oligolectic (pollen specialist)",
+    "Polylectic (pollen generalist)",
+    "Cleptoparasitic",
+    "Above-ground",
+    "Below-ground",
+    "Mixed*",
+    "Excavate",
+    "Rent",
+    "Social (including multiple forms of sociality)",
+    "Solitary"
+   ]
+  ],
+  [
+   3,
+   2,
+   "NMDS axis 2 (range)",
+   [
+    "-0.3~0.6",
+    "-0.1~0.6",
+    "-0.6~0.5"
+   ]
+  ],
+  [
+   4,
+   4,
+   "Inter-tegular distance (mm)",
+   [
+    "1.98",
+    "1.80",
+    "1.93",
+    "1.38",
+    "1.62",
+    "1.65",
+    "2.65",
+    "1.66",
+    "1.75",
+    "1.24",
+    "2.15",
+    "1.78",
+    "1.70",
+    "1.91",
+    "1.48",
+    "2.01",
+    "1.64",
+    "1.95",
+    "1.44",
+    "1.51",
+    "2.16",
+    "1.56",
+    "2.20",
+    "1.74",
+    "2.39"
+   ]
+  ],
+  [
+   4,
+   5,
+   "Median day of year of flight season",
+   [
+    "189",
+    "92",
+    "72",
+    "98",
+    "99",
+    "127",
+    "113",
+    "113.5",
+    "UK",
+    "91.5",
+    "111",
+    "73",
+    "88",
+    "92.5",
+    "81.5",
+    "128",
+    "115",
+    "89",
+    "NA",
+    "64.5",
+    "116",
+    "102",
+    "150",
+    "230",
+    "134.5"
+   ]
+  ],
+  [
+   4,
+   6,
+   "Flight-season duration",
+   [
+    "133.4",
+    "51.8",
+    "NA",
+    "45.3",
+    "86.6",
+    "82.8",
+    "50.2",
+    "66.5",
+    "47.9",
+    "73.8",
+    "111.0",
+    "116.9",
+    "135.8",
+    "85.8",
+    "102.3",
+    "75.5",
+    "110.2",
+    "148.3",
+    "124.9",
+    "98.5",
+    "96.6",
+    "64.4",
+    "68.0",
+    "36.0",
+    "50.4"
+   ]
+  ],
+  [
+   4,
+   7,
+   "Nest location",
+   [
+    "below",
+    "above",
+    "UK",
+    "mix"
+   ]
+  ],
+  [
+   4,
+   8,
+   "Nesting behaviour",
+   [
+    "excavate",
+    "rent",
+    "NA"
+   ]
+  ],
+  [
+   4,
+   9,
+   "Sociality/ parasitic",
+   [
+    "solitary",
+    "social",
+    "parasite"
+   ]
+  ],
+  [
+   4,
+   10,
+   "Lecty",
+   [
+    "poly",
+    "oligo",
+    "UK",
+    "NA"
+   ]
+  ]
+ ],
+ "0:1": {
+  "cells": {},
+  "header": "Trait type",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "0:2": {
+  "cells": {
+   "N/A": {
+    "term": null,
+    "parts": [
+     "N",
+     "A"
+    ],
+    "options": {
+     "N": {
+      "evidence": "initial",
+      "labels": [
+       "natural habitat"
+      ]
+     },
+     "A": {
+      "evidence": "explicit",
+      "labels": [
+       "oligolectic"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "N | QK": {
+      "code": 0.774,
+      "word": 0.226
+     },
+     "N": {
+      "e0": 0.016,
+      "keep": 0.984
+     },
+     "A | QK": {
+      "code": 0.131,
+      "word": 0.869
+     }
+    }
+   },
+   "Above-ground": {
+    "term": null,
+    "parts": [
+     "Above-ground"
+    ],
+    "options": {
+     "Above-ground": {
+      "evidence": "explicit",
+      "labels": [
+       "Above-ground"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Above-ground | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "Below-ground": {
+    "term": null,
+    "parts": [
+     "Below-ground"
+    ],
+    "options": {
+     "Below-ground": {
+      "evidence": "explicit",
+      "labels": [
+       "Below-ground"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Below-ground | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Excavate": {
+    "term": null,
+    "parts": [
+     "Excavate"
+    ],
+    "options": {
+     "Excavate": {
+      "evidence": "explicit",
+      "labels": [
+       "Excavate"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Excavate | QK": {
+      "code": 0.009,
+      "word": 0.991
+     }
+    }
+   },
+   "Solitary": {
+    "term": null,
+    "parts": [
+     "Solitary"
+    ],
+    "options": {
+     "Solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Solitary"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Solitary | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "header": "Categories",
+  "units": {
+   "from": "inventory run",
+   "was": "several",
+   "offered": 4
+  }
+ },
+ "3:2": {
+  "cells": {},
+  "header": "NMDS axis 2 (range)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "4:4": {
+  "cells": {},
+  "header": "Inter-tegular distance (mm)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "4:5": {
+  "cells": {
+   "UK": {
+    "term": "trait status unknown",
+    "parts": [
+     "UK"
+    ],
+    "options": {
+     "UK": {
+      "evidence": "explicit",
+      "labels": [
+       "trait status unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "UK": "explicit"
+    },
+    "probs": {
+     "UK | QK": {
+      "code": 0.905,
+      "word": 0.095
+     },
+     "UK": {
+      "e0": 0.92,
+      "keep": 0.08
+     },
+     "UK | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u40"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.962,
+    "several": 0.003,
+    "none": 0.034
+   },
+   "chosen": [
+    "u40"
+   ]
+  },
+  "header": "Median day of year of flight season"
+ },
+ "4:6": {
+  "cells": {
+   "NA": {
+    "term": null,
+    "parts": [
+     "NA"
+    ],
+    "options": {
+     "NA": {
+      "evidence": "initial",
+      "labels": [
+       "natural habitat"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "NA | QK": {
+      "code": 0.962,
+      "word": 0.038
+     },
+     "NA": {
+      "e0": 0.002,
+      "keep": 0.998
+     }
+    }
+   }
+  },
+  "header": "Flight-season duration",
+  "units": {
+   "from": "inventory run",
+   "was": "none",
+   "offered": 1
+  }
+ },
+ "4:7": {
+  "cells": {
+   "UK": {
+    "term": "trait status unknown",
+    "parts": [
+     "UK"
+    ],
+    "options": {
+     "UK": {
+      "evidence": "explicit",
+      "labels": [
+       "trait status unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "UK": "explicit"
+    },
+    "probs": {
+     "UK | QK": {
+      "code": 0.782,
+      "word": 0.218
+     },
+     "UK": {
+      "e0": 0.728,
+      "keep": 0.272
+     },
+     "UK | QB": {}
+    }
+   }
+  },
+  "header": "Nest location",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "4:8": {
+  "cells": {
+   "excavate": {
+    "term": null,
+    "parts": [
+     "excavate"
+    ],
+    "options": {
+     "excavate": {
+      "evidence": "explicit",
+      "labels": [
+       "Excavate"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "excavate | QK": {
+      "code": 0.008,
+      "word": 0.992
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u42"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.002,
+    "p1": 0.71,
+    "several": 0.019,
+    "none": 0.269
+   },
+   "chosen": [
+    "u42"
+   ]
+  },
+  "header": "Nesting behaviour"
+ },
+ "4:9": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Solitary"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "social": {
+    "term": null,
+    "parts": [
+     "social"
+    ],
+    "options": {
+     "social": {
+      "evidence": "explicit",
+      "labels": [
+       "including multiple forms of sociality"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "social | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   }
+  },
+  "header": "Sociality/ parasitic",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "4:10": {
+  "cells": {
+   "UK": {
+    "term": "trait status unknown",
+    "parts": [
+     "UK"
+    ],
+    "options": {
+     "UK": {
+      "evidence": "explicit",
+      "labels": [
+       "trait status unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "UK": "explicit"
+    },
+    "probs": {
+     "UK | QK": {
+      "code": 0.915,
+      "word": 0.085
+     },
+     "UK": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "UK | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u40",
+    "u41"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.869,
+    "p2": 0.001,
+    "several": 0.037,
+    "none": 0.093
+   },
+   "chosen": [
+    "u40"
+   ]
+  },
+  "header": "Lecty"
+ }
+}

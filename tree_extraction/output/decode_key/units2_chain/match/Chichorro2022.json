@@ -1,0 +1,702 @@
+{
+ "_columns": [
+  [
+   0,
+   0,
+   "Trait",
+   [
+    "Body size",
+    "Offspring size",
+    "Fecundity",
+    "Generation length",
+    "Diet breadth"
+   ]
+  ],
+  [
+   0,
+   1,
+   "Definition",
+   [
+    "Typical size of an adult organism.",
+    "Typical size of an offspring.",
+    "Reproductive output.",
+    "Typical length of the life cycle, from birth until reproduction.",
+    "Degree of narrowness of diet or of substrate used"
+   ]
+  ],
+  [
+   1,
+   0,
+   "Trait",
+   [
+    "Trophic level",
+    "Dispersal ability",
+    "Microhabitat",
+    "Habitat breadth"
+   ]
+  ],
+  [
+   1,
+   1,
+   "Definition",
+   [
+    "Trophic position",
+    "Capacity to disperse",
+    "Typical vertical stratum occupied in a habitat.",
+    "Range of habitat types occupied."
+   ]
+  ],
+  [
+   2,
+   0,
+   "Trait",
+   [
+    "Altitudinal range"
+   ]
+  ],
+  [
+   2,
+   1,
+   "Definition",
+   [
+    "Range of altitude levels occupied."
+   ]
+  ],
+  [
+   4,
+   0,
+   "Columns",
+   [
+    "IUCNName",
+    "Status",
+    "CRITERIA",
+    "YEAR_PUB",
+    "Realm",
+    "IUCN_RAW_THREATS",
+    "IUCN_THREATS",
+    "IUCN_THREATS_CATEG",
+    "IUCN_N_THREATS"
+   ]
+  ],
+  [
+   6,
+   1,
+   "(no name, column 1)",
+   [
+    "trait value",
+    "proxy for the trait used (body length, body mass as proxy of body size, etc)",
+    "e.g. grams, mm",
+    "whether the trait value is retrieved from species genus, or family level."
+   ]
+  ],
+  [
+   8,
+   0,
+   "Trait",
+   [
+    "BODY_SIZE",
+    "OFFSPRING_SIZE",
+    "RELATIVE_OFFSPRING_SIZE",
+    "FECUNDITY",
+    "GENERATION_LENGTH",
+    "DIET_BREADTH",
+    "TROPHIC_LEVEL",
+    "MICROHABITAT",
+    "DISPERSAL_ABILITY",
+    "HABITAT_BREADTH",
+    "HABITAT_BREADTH_RESIDS",
+    "ALTITUDINAL_RANGE",
+    "RELATIVE_ALTITUDINAL_RANGE",
+    "GEOGRAPHICAL_RANGE_SIZE",
+    "HFP2009",
+    "dHFP",
+    "HUMAN_FOOTPRINT",
+    "HABITAT_CONVERSION"
+   ]
+  ],
+  [
+   8,
+   1,
+   "Mammals",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   2,
+   "Birds",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   3,
+   "Reptiles",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   4,
+   "Amphibians",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   5,
+   "Fishes",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   6,
+   "Dragonflies",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   7,
+   "Butterflies",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   8,
+   "Grasshoppers",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   9,
+   "Spiders",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   10,
+   "Snails",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   11,
+   "Bryophytes",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   12,
+   "Ferns",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   13,
+   "Gymnosperms",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   14,
+   "Monocots",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   8,
+   15,
+   "Legumes",
+   [
+    "True",
+    "False"
+   ]
+  ],
+  [
+   10,
+   1,
+   "(no name, column 1)",
+   [
+    "added dispersal ability from COMBINE dataset to mammals. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * mammals",
+    "added dispersal ability from https://doi.org/10.5281/zenodo.3747657 to birds. Updated bean_plots and log_rules with log = TRUE and bean_plots = TRUE for dispersal ability * birds",
+    "excluded trophic level data for amphibians because it had no contrasts (all carnivores); removed model_taxa and model_traits separator",
+    "changed OFFSPRING_SIZE_RESIDS to RELATIVE_OFFSPRING_SIZE, and ALTITUDINAL_RANGE_RESIDS to RELATIVE_ALTITUDINAL_RANGE",
+    "Replaced assessments that in the 2021 IUCN moved from threatened -> LC or LC -> threatened: Turdus ludoviciae -> Cyanochen cyanoptera; Aspidoscelis inornata -> Pseudemys gorzugi; Enteromius dialonensis -> Alcolapia grahami; Boesemania microlepis -> Ompok weberi; Elaphoglossum kivuense -> Trachypteris drakeana; Asplenium majoricum -> Asplenium aureum. Added an extra bird in \"extra_bird\" in case needed",
+    "Replaced all blank cells with NAs",
+    "Removed old sheets, cleaning"
+   ]
+  ]
+ ],
+ "0:0": {
+  "cells": {},
+  "header": "Trait",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "0:1": {
+  "cells": {},
+  "header": "Definition",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "1:0": {
+  "cells": {},
+  "header": "Trait",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "1:1": {
+  "cells": {},
+  "header": "Definition",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "2:0": {
+  "cells": {},
+  "header": "Trait",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "2:1": {
+  "cells": {},
+  "header": "Definition",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "4:0": {
+  "cells": {
+   "IUCNName": {
+    "term": null,
+    "parts": [
+     "IUCNName"
+    ],
+    "options": {
+     "IUCNName": {
+      "evidence": "explicit",
+      "labels": [
+       "Name of the species following the IUCN"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "IUCNName | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "Status": {
+    "term": null,
+    "parts": [
+     "Status"
+    ],
+    "options": {
+     "Status": {
+      "evidence": "explicit",
+      "labels": [
+       "status"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Status | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   },
+   "CRITERIA": {
+    "term": null,
+    "parts": [
+     "CRITERIA"
+    ],
+    "options": {
+     "CRITERIA": {
+      "evidence": "explicit",
+      "labels": [
+       "criteria"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "CRITERIA | QK": {
+      "code": 0.007,
+      "word": 0.993
+     }
+    }
+   },
+   "YEAR_PUB": {
+    "term": null,
+    "parts": [
+     "YEAR_PUB"
+    ],
+    "options": {
+     "YEAR_PUB": {
+      "evidence": "explicit",
+      "labels": [
+       "YEar in which the IUCN assessment was published"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "YEAR_PUB | QK": {
+      "code": 0.014,
+      "word": 0.986
+     }
+    }
+   },
+   "Realm": {
+    "term": null,
+    "parts": [
+     "Realm"
+    ],
+    "options": {
+     "Realm": {
+      "evidence": "explicit",
+      "labels": [
+       "realm"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Realm | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "IUCN_RAW_THREATS": {
+    "term": null,
+    "parts": [
+     "IUCN_RAW_THREATS"
+    ],
+    "options": {
+     "IUCN_RAW_THREATS": {
+      "evidence": "explicit",
+      "labels": [
+       "Threats for the species listed on the IUCN, including sub-threats"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "IUCN_RAW_THREATS | QK": {
+      "code": 0.159,
+      "word": 0.841
+     }
+    }
+   },
+   "IUCN_THREATS": {
+    "term": "Threats for the species listed on the IUCN, including sub-threats",
+    "parts": [
+     "IUCN_THREATS"
+    ],
+    "options": {
+     "IUCN_THREATS": {
+      "evidence": "explicit",
+      "labels": [
+       "Threats for the species listed on the IUCN, including sub-threats"
+      ]
+     }
+    },
+    "evidence": {
+     "IUCN_THREATS": "explicit"
+    },
+    "probs": {
+     "IUCN_THREATS | QK": {
+      "code": 0.974,
+      "word": 0.026
+     },
+     "IUCN_THREATS": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "IUCN_THREATS | QB": {
+      "w0": 0.979,
+      "w1": 0.021
+     }
+    }
+   },
+   "IUCN_THREATS_CATEG": {
+    "term": "Threats for the species listed on the IUCN, not including sub-threats",
+    "parts": [
+     "IUCN_THREATS_CATEG"
+    ],
+    "options": {
+     "IUCN_THREATS_CATEG": {
+      "evidence": "explicit",
+      "labels": [
+       "Threats for the species listed on the IUCN, not including sub-threats"
+      ]
+     }
+    },
+    "evidence": {
+     "IUCN_THREATS_CATEG": "explicit"
+    },
+    "probs": {
+     "IUCN_THREATS_CATEG | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "IUCN_THREATS_CATEG": {
+      "e0": 0.975,
+      "keep": 0.025
+     },
+     "IUCN_THREATS_CATEG | QB": {
+      "w0": 0.948,
+      "w1": 0.052
+     }
+    }
+   },
+   "IUCN_N_THREATS": {
+    "term": null,
+    "parts": [
+     "IUCN_N_THREATS"
+    ],
+    "options": {
+     "IUCN_N_THREATS": {
+      "evidence": "explicit",
+      "labels": [
+       "Number of threat categories"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "IUCN_N_THREATS | QK": {
+      "code": 0.461,
+      "word": 0.539
+     }
+    }
+   }
+  },
+  "header": "Columns",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "6:1": {
+  "cells": {},
+  "header": "(no name, column 1)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:0": {
+  "cells": {},
+  "header": "Trait",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:1": {
+  "cells": {},
+  "header": "Mammals",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:2": {
+  "cells": {},
+  "header": "Birds",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:3": {
+  "cells": {},
+  "header": "Reptiles",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:4": {
+  "cells": {},
+  "header": "Amphibians",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:5": {
+  "cells": {},
+  "header": "Fishes",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:6": {
+  "cells": {},
+  "header": "Dragonflies",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:7": {
+  "cells": {},
+  "header": "Butterflies",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:8": {
+  "cells": {},
+  "header": "Grasshoppers",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:9": {
+  "cells": {},
+  "header": "Spiders",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:10": {
+  "cells": {},
+  "header": "Snails",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:11": {
+  "cells": {},
+  "header": "Bryophytes",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:12": {
+  "cells": {},
+  "header": "Ferns",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:13": {
+  "cells": {},
+  "header": "Gymnosperms",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:14": {
+  "cells": {},
+  "header": "Monocots",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "8:15": {
+  "cells": {},
+  "header": "Legumes",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ },
+ "10:1": {
+  "cells": {},
+  "header": "(no name, column 1)",
+  "units": {
+   "from": "inventory run",
+   "was": null,
+   "offered": 0
+  }
+ }
+}

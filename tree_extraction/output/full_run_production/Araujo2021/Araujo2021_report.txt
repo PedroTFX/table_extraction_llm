@@ -1,0 +1,119 @@
+  [semantic] matched by values: 'ITS' -> 'Body Size'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Araujo2021\Araujo2021.xlsx  (273 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Araujo2021\Araujo2021.csv  (234 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 31 pair(s))
+  'A. vilhenae' -> 'Andrena vilhenae'
+  'C. analis' -> 'Centris analis'
+  'C. tarsata' -> 'Centris tarsata'
+  'C. trigonoides' -> 'Centris trigonoides'
+  'E. cognata' -> 'Euglossa cognata'
+  'E. despecta' -> 'Euglossa despecta'
+  'E. modestior' -> 'Euglossa modestior'
+  'E. towsendi' -> 'Euglossa towsendi'
+  'M. angulosa' -> 'Monobia angulosa'
+  'M. brasiliensis' -> 'Megachile brasiliensis'
+  'M. chrysosarus' -> 'Megachile chrysosarus'
+  'M. sejuncta' -> 'Megachile sejuncta'
+  'M. turpis' -> 'Megachile turpis'
+  'P. agile' -> 'Polistes agile'
+  'P. alessandroi' -> 'Polistes alessandroi'
+  'P. argentipilis' -> 'Podalonia argentipilis'
+  'P. brevithorax' -> 'Pachodynerus brevithorax'
+  'P. egregium' -> 'Polistes egregium'
+  'P. foxii' -> 'Polistes foxii'
+  'P. gianelli' -> 'Pristaulacus gianelli'
+  'P. goryanum' -> 'Polistes goryanum'
+  'P. grandis' -> 'Pisonia grandis'
+  'P. nasidens' -> 'Polistes nasidens'
+  'P. rufipes' -> 'Polistes rufipes'
+  'P. surinama' -> 'Polistes surinama'
+  'T. nitidum' -> 'Trypoxylon nitidum'
+  'T. punctivertex' -> 'Trypoxylon punctivertex'
+  'T. xanthandrum' -> 'Trypoxylon xanthandrum'
+  'T.lactitarse' -> 'Trypoxylon lactitarse'
+  'Z. proximus' -> 'Zeta proximus'
+  'Z. smithii' -> 'Zeta smithii'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'P. guadulpensis': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'ITS' -> 'Body Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 210
+  missed (FN)         : 63
+  spurious, in scope  : 24   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.897 / 0.769 / 0.828   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.897 / 0.769 / 0.828   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.769   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               210    210  1.000
+  measurementMethod             0      0    n/a   +73 where GT blank
+  measurementUnit             149    149  1.000
+  measurementStatistic         61    210  0.290  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          57    210  0.271  <-- low
+  lifeStage                   153    210  0.729
+  caste                         0    153  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    210  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 63 MISSED ROWS MISSED
+  species not in prediction                   7
+  species present, trait missing             38
+  species+trait present, value differs       18
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'plant parts'                ->  'plant_parts'                x5
+     'abdomen scopa'              ->  'abdomen_scopa'              x5
+     'leg scopa'                  ->  'leg_scopa'                  x5
+     '1.02'                       ->  '1.2'                        x2
+     '8.07'                       ->  '8.7'                        x1
+  -> 5 substitutions explain 18 of 63 misses (29%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Polistes guadeloupensis'           ~0.73~  pred 'Polistes nasidens'   x7
+  -> 1 species mismatch explains 7 of 63 misses (11%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Elevation'                        x38
+  -> 1 missing trait explains 38 of 63 misses (60%) — systematic, not scattered
+
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (63 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        39    39   
+  larval diet                                      25    25   
+  elevation                                        39     0   GT-ONLY
+  left posterior tibia length                      14    14   
+  left wing length                                 39    39   
+  left mandibula                                   25    25   
+  left tibia posterior                             25    25   
+  tongue length                                    14    14   
+  nesting material                                 39    39   
+  pollen transport                                 14    14   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.897  0.769  0.828    210    24    63   id+type+value
+  tags        0.000  0.000  0.000      0   234   273   basis+id+type+value+stat+sex+stage
+             (F1 -0.828 vs previous)

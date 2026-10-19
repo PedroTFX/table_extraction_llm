@@ -1,0 +1,1478 @@
+{
+ "paper": "Zhao2024",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Received: 19 August 2023 / Revised: 31 May 2024 / Accepted: 6 June 2024 / Published online: 15 June 2024 © The Author(s), under exclusive licence to Springer Nature B.V. 2024"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "As a natural boundary between the warm temperate and subtropical zones, the Qinling Mountains, with vast elevational range and remarkably rich biodiversity, provide a unique opportunity to investigate how elevational gradients influence the ant diversity patterns (Hou et al. 2008; Yu et al. 2021). So far, studies conducted in this region have not yet addressed functional and phylogenetic diversity on ants (Wei et al. 2001; He et al. 2003). We performed field research of ant communities in six elevation bands in Ningshan County located in the Qinling Mountains. We tried to determine how the taxonomic, functional and phylogenetic diversity respond to elevations gradients, and analyzed how the functional trait distribution changed at different elevations. We hypothesized that (1) species and functional traits composition of ant communities among different elevations vary, and (2) indices of three aspects diversity decrease with elevations."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "This study was conducted in Ningshan County (108°2′33′′ – 108°56′48′′E, 33°7′11′′ – $3 3 ^ { \\circ } 5 0 ^ { \\prime } 3 8 ^ { \\prime \\prime } \\mathrm { ~ N } )$ located in Shaanxi Province, China, within the central area of the Qinling Mountains (Fig. 1). The Qinling Mountains are a major geographical dividing line in China, separating the northern and southern regions as well as the Palaearctic and the Oriental realms (Wei et al. 2001). It is characterized by a northern subtropical semi-humid climate with an average annual temperature of $\\S { - } 1 0 ~ ^ { \\circ } \\mathrm { C } ,$ an annual rainfall of 900–1200 mm and an average annual evaporation of 800–950 mm in the study area. The soil type mainly concludes mountain brown soil, dark brown soils and mountain meadow soil. The forest type is secondary, and the main dominant species are Pinus armandii, Pinus tabuliformis, Quercus aliena var. acuteserrata, Betula albosinsis, Tsuga chinensis, Picea wilsonii, Picea asperata and Abies fargesii (Hou et al. 2008). The Natural Forest Protection Program (NFPP) has been applied in this region, which prohibits commercial logging of natural forests, implements forest management and mountain closure for the conservation of ecosystem and biodiversity. As parts of the dominant forest species in the region, Pinus species are widely distributed, which are pine forests or pine and oak mixed forests, and have an obvious vertical distribution pattern (Wei et al. 2014)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "We established six study sites at different elevations, ranging from 967 to 2029 m.a.s.l. The elevational difference between adjacent sites was at least 200 m, and these sites consisted of 1000 (ES1), 1200 (ES2), 1400 (ES3), 1600 (ES4), 1800 (ES5) and 2000 m.a.s.l (ES6) (Table S1). Three plots were designed as replicates in each study site, for a total of 18 sampling plots, referred to as EP1–EP18 (Table S1). The sampling plots were spaced at least 300 m apart."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "To collect arboreal ants, we encircled every pine tree trunk with 10 cm wide gauzes baited with tuna and honey at a height of 1.3–1.5 m above the ground (Fig. S1). Trunk traps were left on the tree trunk for about 50 min, and then trunk traps with ant samples were placed into self-sealing bags. After that, two people collected ants by hand at 1.3–1.5 m of the tree trunk for 10 min. Ants collected by hand were transferred into 50 mL centrifuge"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "We performed clustering analysis based on species composition with Jaccard dissimilarity index using an unweighted pair-group method with arithmetic averages (UPGMA) by the R package “vegan” (Oksanen et al. 2022). Additionally, we clustered sampling plots based on the Euclidean matrix of community-weighted mean (CWM) values of functional traits using UPGMA. Furthermore, to analyze the distribution of ant communities and functional traits along elevational gradients, we visualized sample similarity using non-metric multidimensional scaling (NMDS) ordination based on Bray–Curtis dissimilarity distance using ant species composition and CWM values for each plot. We conducted a Permutation Multivariate Analysis of Variance (PERMANOVA) based on 999 permutations to determine statistical differences of ant communities among different elevations using the adonis function. We implemented this part using the “vegan” package."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To analyze the response pattern of ant diversity and functional traits among different elevations, we calculated ant species richness, Chao-1, Rao’s Q, FD_PD, PD, MPD and CWM values. Chao-1, FD_PD and the CWM values of Weber’s length, head width, scape length, mandible length and hind leg length passed the Shapiro–Wilk test for normality and the Bartlett test for variance heterogeneity. Thus, we analyzed them using one-way ANOVA with appropriate post hoc tests (Tukey HSD test) among different elevations. Furthermore, we employed the Kruskal-Wallis test (K-W test) with the Bonferroni method correction for multiple comparisons to compare species richness, Rao’s Q, PD, MPD and eye length CWM values among different elevations."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "The standardized effect sizes (SES) of functional and phylogenetic diversity indices were measured by comparing observed values to expected values generated by null models (SES $= ( \\mathrm { M e a n } _ { \\mathrm { o b s } } \\mathrm { ~ - ~ } \\mathrm { M e a n } { \\mathrm { n u l l } } ) / \\mathrm { s d } { \\mathrm { n u l l } } )$ in the “picante” package (Kembel et al. 2010). Null model communities were generated by randomizing the community matrix through “independent swap” for 1000 times. Positive value represents overdispersion, and negative value indicates clustering. A two-sided Wilcoxon signed-rank test was used to assess the statistical significance of the observed functional and phylogenetic diversity and the expected indices of the null model."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "The rarefaction-extrapolation accumulation curves almost reached their asymptotes for all elevations, suggesting that the sampling was sufficient to analyze ant communities in the study area (Fig. S2a and b). A total of 11,347 ant specimens were collected in the field, which belonged to 42 ant species, 27 genera and 4 subfamilies (Table S2). Most species belonged to Myrmicinae (17 species), followed by Formicine (15 species), Ponerinae (6 species) and Dolichoderinae (4 species)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 2 The abundance of genera (a) and subfamilies (b) of ant communities (lower half circle) at 6 elevations from 1000 m to 2000 m (upper half circle). The width of the links represents the abundance of genera and families at different elevations"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Fig. 3 (a) The heatmap of samples cluster based on Jaccard dissimilarity index of ant community composition using UPGMA; (b) Non-metric multidimensional scaling (NMDS) ordination based on the Bray-Curtis dissimilarity index of ant community composition. EP1–EP18 represents sampling plots, respectively. 1000–2000 m represents sampling sites at elevations of 1000–2000 m, respectively"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:6fa1cab/tier:advanced/page:10/block:3)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Fig. 4 Bar charts showing taxonomic, functional and phylogenetic diversity at low, middle and high elevation. For taxonomic diversity, (a) Species richness and (b) Chso-1; For functional diversity, (c) Rao’s quadratic entropy (Rao’s Q) and (d) Faith’s PD (FD_PD); For phylogenetic diversity, (e) Faith’s PD (PD) and (f) Mean pairwise distance (MPD). Showing mean ± SE, and small letters: a and b indicating statistical significance. Significant level: $p"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Fig. 5 (a) The heatmap of samples cluster based on the euclidean matrix of community weighted mean (CWM) values using UPGMA; (b) Non-metric multidimensional scaling (NMDS) ordination based on the Bray-Curtis dissimilarity index of CWM of functional traits. EP1–EP18 represents sampling plots, respectively. Low elevation represents sampling sites at elevations of 1000 m and 1200 m. Middle elevation represents sampling sites at elevations of 1400 m and 1600 m. High elevation represents sampling sites at elevations of 1800 m and 2000 m"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:6fa1cab/tier:advanced/page:12/block:3)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Fig. 6 Boxplots showing community weighted mean (CWM) values of functional traits at low, middle and high elevation. (a) Weber’s length CWM; (b) Head width CWM; (c) Scape length CWM; (d) Eye length CWM; (e) Mandible length CWM; (f) Hind leg length CWM. The box represents 25–75th percentiles and whiskers extending to 1.5 times the interquartile range. Small letters a, b and c indicate statistical significance. Significant level: $p"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "![Image block](doc:6fa1cab/tier:advanced/page:13/block:3)"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Fig. 7 Violin plots showing kernel probability density of the standardized effect sizes (SES) of functional and phylogenetic diversity at low, middle and high elevation. For SES of functional diversity, (a) SES of $\\mathrm { R a o ^ { \\circ } s }$ quadratic entropy (Rao’s Q SES) and (b) SES of Faith’s PD (FD_PD SES); For SES of phylogenetic diversity, (c) SES of Faith’s PD (PD SES) and (d) SES of mean pairwise distance (MPD SES). The box inside represents 25–75th percentiles and whiskers extending to 1.5 times the interquartile range. Asterisks (*) represents significant and NS representing not significant between the observed and null distribution of phylogenetic and functional diversity. Significant level: $p"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Low-elevation areas, characterized by abundant food resources and diverse habitats, provide numerous niches and facilitate niche specialization (Nooten et al. 2019; Dianzinga et al. 2020). Our results demonstrated the predominant role of stochastic assembly processes in shaping ant communities at low elevation, implying that species with equivalent competitive abilities might have comparable opportunities to occupy available niches (HilleRisLambers et al. 2012). In contrast, Machac et al. (2011) and Liu et al. (2018) considered interspecific competition as the primary factor in structuring ant communities. Interspecific competition is indeed one of the major factors in shaping ant communities (Cerdá et al. 2013). In lowlands, due to limited territories in the canopy, there is intense competition among arboreal ant species which have similar nesting habits, activity periods, and recruitment rates (Camarota et al. 2016). In addition to the arboreal ants, ants in the litter also contribute to low-elevation ant community composition, and the competition among ant colonies is less in the litter than in the canopy (Yanoviak and Kaspari 2000). We collected both arboreal and epigaeic ant species in our study, and this might diminish the competition we observed. Furthermore, although conditions in lowland habitats are not harsh, the attributes of these habitats still affect ant communities. Ribas et al. (2003) found that high diversity and availability of resources in a habitat increase ant species richness for both specialist and generalist species. The mechanism of ant community assembly in low-elevation habitats might be complex and worthy of our further study in the future. The values of six ant functional traits at low elevation were all significantly greater than those at mid elevation, and the functional trait composition of ant communities at low elevation was similar to that at high elevation. This could be attributed to the various niches in low-elevation habitats, where ants with different foraging strategies and dietary preferences are distributed simultaneously and widely. For instance, at low elevation, surface foragers have longer Weber’s length, broader heads, longer scapes, bigger eyes and longer hind legs, whereas litter foragers display contrasting trait characteristics (Weiser and Kaspari 2006; Gibb et al. 2015)."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "![Image block](doc:68c1c36/tier:advanced/page:2/block:1)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "![Image block](doc:68c1c36/tier:advanced/page:3/block:1)"
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "Fig. S2 (a) Species richness and (b) sample coverage of rarefaction and extrapolation (dotted line) curves with 95% confidence intervals (shaded areas) along different elevations; (c) Venn diagram illustrating the number of shared and unique ant species of each site along different elevations."
+  },
+  {
+   "id": "u22",
+   "kind": "table 0",
+   "text": "Elevation Level | Description\nLow elevation, 1000 m | Black circle marker\nLow elevation, 1200 m | Black triangle marker\nMiddle elevation, 1400 m | Red circle marker\nMiddle elevation, 1600 m | Red triangle marker\nHigh elevation, 1800 m | Blue circle marker\nHigh elevation, 2000 m | Blue triangle marker"
+  },
+  {
+   "id": "u23",
+   "kind": "table 1",
+   "text": "Source | Target\nOthers | Nylanderia\nOthers | Polyrhachis\nOthers | Premulopsis\nOthers | Polyrhachis\nOthers | Premulopsis\nOthers | Polyrhachis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u24",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u25",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u26",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u27",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u28",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u29",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u30",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u31",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u32",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u33",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u34",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u35",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u36",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u37",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u38",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u39",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u40",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u41",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u42",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u43",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u44",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u45",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u46",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u47",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u48",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u49",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u50",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u51",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u52",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u53",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u54",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u55",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u56",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u57",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u58",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u59",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u60",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u61",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u62",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u63",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u64",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u65",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u66",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u67",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u68",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u69",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u70",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u71",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u72",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u73",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u74",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u75",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u76",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u77",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u78",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u79",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u80",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u81",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u82",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u83",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u84",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u85",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u86",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u87",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u88",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u89",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u90",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u91",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u92",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u93",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u94",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u95",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u96",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u97",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u98",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u99",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u100",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u101",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u102",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u103",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u104",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u105",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u106",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u107",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u108",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u109",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u110",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u111",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u112",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u113",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u114",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u115",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u116",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u117",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u118",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u119",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u120",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u121",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u122",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u123",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u124",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u125",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u126",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u127",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u128",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u129",
+   "kind": "table 1",
+   "text": "Others | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis\nOthers | Premulopsis"
+  },
+  {
+   "id": "u130",
+   "kind": "table 2",
+   "text": "Source | Target\nFormicinae | Dolichoderinae\nFormicinae | Myrimidine\nFormicinae | Myrimidine\nFormicinae | Ponsitinae\nFormicinae | 0001\nFormicinae | 1200\nFormicinae | 1400\nFormicinae | 1600\nFormicinae | 1800"
+  },
+  {
+   "id": "u131",
+   "kind": "table 2",
+   "text": "Formicinae | 2000\nFormicinae | 2000\nDolichoderinae | 0001\nDolichoderinae | 1200\nDolichoderinae | 1400\nDolichoderinae | 1600\nDolichoderinae | 1800\nDolichoderinae | 2000"
+  },
+  {
+   "id": "u132",
+   "kind": "table 4",
+   "text": "Elevation | NMDS1 (range) | NMDS2 (range)\n1000 m | -2.0~-1.5 | -0.4~0.2\n1200 m | -0.8~-0.7 | -0.1~0.95\n1400 m | -0.6~-0.3 | -0.45~0.7\n1600 m | -0.4~-0.2 | -0.4~0.0\n1800 m | 0.8~1.4 | -0.5~0.2\n2000 m | 1.6~2.1 | -0.1~0.2"
+  },
+  {
+   "id": "u133",
+   "kind": "table 6",
+   "text": "Elevation | NMDS1 (range) | NMDS2 (range)\nLow elevation | -0.28~0.03 | -0.03~0.075\nMiddle elevation | 0.12~0.28 | -0.01~0.02\nHigh elevation | -0.24~-0.07 | -0.03~0.00"
+  },
+  {
+   "id": "u134",
+   "kind": "table 10",
+   "text": "Functional trait | Trait measurement | Functional significance\nWeber's length | The maximum length from the anterior edge of the pronotum to the posterior edge of the propodeum | It is the indicator of whole-body size, which is associated with foraging preference and defense strategies (Weiser & Kaspari, 2006).\nHead width | In full face view across the eyes | Size of interstices through which ants can pass (Sarty et al., 2006); mandibular musculature (Kaspari, 1993).\nScape length | Collar to antennal elbow | It limits the distance ahead of the ant that it receives chemosensory information, for example pheromone trails (Yates et al., 2014). As an indicator of habitat use and foraging efficiency, eye length is related to vision location and food searching (Keller, 2011; Gibb et al., 2015).\nEye length | The maximum length of the eye\nMandible length | From mandibular insertion to most distal point | It is related to the type of food resources consumed by ants (Weiser & Kaspari, 2006).\nHind leg length | The sum of hind femur length and hind tibia length | Longer legged ant species are characterized by efficient locomotion and foraging (Gibb & Parr, 2013)."
+  },
+  {
+   "id": "u135",
+   "kind": "table 16",
+   "text": "Low elevation | Middle elevation | High elevation\nRao' Q SES | 0.5625 | 0.03125 * | 0.03125 *\nFD_PD SES | 0.3125 | 0.3125 | 0.4375\nPD SES | 0.2188 | 0.4375 | 0.03125 *\nMPD SES | 0.1563 | 0.8438 | 0.03125 *"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ],
+  [
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19",
+   "u20",
+   "u21"
+  ],
+  [
+   "u22",
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33",
+   "u34"
+  ],
+  [
+   "u35",
+   "u36",
+   "u37",
+   "u38",
+   "u39",
+   "u40",
+   "u41",
+   "u42",
+   "u43",
+   "u44",
+   "u45",
+   "u46",
+   "u47"
+  ],
+  [
+   "u48",
+   "u49",
+   "u50",
+   "u51",
+   "u52",
+   "u53",
+   "u54",
+   "u55",
+   "u56",
+   "u57",
+   "u58",
+   "u59",
+   "u60"
+  ],
+  [
+   "u61",
+   "u62",
+   "u63",
+   "u64",
+   "u65",
+   "u66",
+   "u67",
+   "u68",
+   "u69",
+   "u70",
+   "u71",
+   "u72",
+   "u73"
+  ],
+  [
+   "u74",
+   "u75",
+   "u76",
+   "u77",
+   "u78",
+   "u79",
+   "u80",
+   "u81",
+   "u82",
+   "u83",
+   "u84",
+   "u85",
+   "u86"
+  ],
+  [
+   "u87",
+   "u88",
+   "u89",
+   "u90",
+   "u91",
+   "u92",
+   "u93",
+   "u94",
+   "u95",
+   "u96",
+   "u97",
+   "u98",
+   "u99"
+  ],
+  [
+   "u100",
+   "u101",
+   "u102",
+   "u103",
+   "u104",
+   "u105",
+   "u106",
+   "u107",
+   "u108",
+   "u109",
+   "u110",
+   "u111",
+   "u112"
+  ],
+  [
+   "u113",
+   "u114",
+   "u115",
+   "u116",
+   "u117",
+   "u118",
+   "u119",
+   "u120",
+   "u121",
+   "u122",
+   "u123",
+   "u124",
+   "u125"
+  ],
+  [
+   "u126",
+   "u127",
+   "u128",
+   "u129",
+   "u130",
+   "u131",
+   "u132",
+   "u133",
+   "u134"
+  ],
+  [
+   "u135"
+  ]
+ ],
+ "calls": 32,
+ "categories": [
+  {
+   "variable": "elevational gradients",
+   "code": "1",
+   "term": "species and functional traits composition of ant communities among different elevations vary",
+   "unit": "u1",
+   "model_label": "species",
+   "label": "species",
+   "explanation": "and functional traits composition of ant communities among different elevations vary"
+  },
+  {
+   "variable": "indices of three aspects diversity",
+   "code": "2",
+   "term": "decrease with elevations",
+   "unit": "u1",
+   "model_label": "decrease",
+   "label": "decrease",
+   "explanation": "with elevations"
+  },
+  {
+   "variable": "elevational difference between adjacent sites",
+   "code": "ES1",
+   "term": "2000 m.a.s.l",
+   "model_term": "1000 m.a.s.l",
+   "unit": "u3",
+   "model_label": "ES1",
+   "label": "2000 m.a.s.l",
+   "explanation": ""
+  },
+  {
+   "variable": "elevational difference between adjacent sites",
+   "code": "ES2",
+   "term": "2000 m.a.s.l",
+   "model_term": "1200 m.a.s.l",
+   "unit": "u3",
+   "model_label": "ES2",
+   "label": "2000 m.a.s.l",
+   "explanation": ""
+  },
+  {
+   "variable": "elevational difference between adjacent sites",
+   "code": "ES6",
+   "term": "2000 m.a.s.l",
+   "unit": "u3",
+   "model_label": "ES6",
+   "label": "2000 m.a.s.l",
+   "explanation": ""
+  },
+  {
+   "variable": "sampling plots",
+   "code": "EP1–EP18",
+   "term": "sampling plots",
+   "unit": "u3",
+   "model_label": "sampling plots",
+   "label": "sampling plots",
+   "explanation": ""
+  },
+  {
+   "variable": "EP1–EP18",
+   "code": "EP1–EP18",
+   "term": "sampling plots",
+   "unit": "u10",
+   "model_label": "sampling plots",
+   "label": "sampling plots",
+   "explanation": ""
+  },
+  {
+   "variable": "1000–2000 m",
+   "code": "1000–2000 m",
+   "term": "sampling sites at elevations of 1000–2000 m",
+   "unit": "u10",
+   "model_label": "sampling sites",
+   "label": "sampling sites",
+   "explanation": "at elevations of 1000–2000 m"
+  },
+  {
+   "variable": "EP1–EP18",
+   "code": "EP1–EP18",
+   "term": "sampling plots, respectively",
+   "unit": "u13",
+   "model_label": "sampling plots",
+   "label": "sampling plots",
+   "explanation": "respectively"
+  },
+  {
+   "variable": "Low elevation",
+   "code": "Low elevation",
+   "term": "sampling sites at elevations of 1000 m and 1200 m",
+   "unit": "u13",
+   "model_label": "Low elevation",
+   "label": "sampling sites at elevations of 1000 m and 1200 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Middle elevation",
+   "code": "Middle elevation",
+   "term": "sampling sites at elevations of 1400 m and 1600 m",
+   "unit": "u13",
+   "model_label": "Middle elevation",
+   "label": "sampling sites at elevations of 1400 m and 1600 m",
+   "explanation": ""
+  },
+  {
+   "variable": "High elevation",
+   "code": "High elevation",
+   "term": "sampling sites at elevations of 1800 m and 2000 m",
+   "unit": "u13",
+   "model_label": "High elevation",
+   "label": "sampling sites at elevations of 1800 m and 2000 m",
+   "explanation": ""
+  },
+  {
+   "variable": "a, b and c",
+   "code": "a, b and c",
+   "term": "indicate statistical significance",
+   "unit": "u15",
+   "model_label": "statistical significance",
+   "label": "statistical significance",
+   "explanation": "indicate"
+  },
+  {
+   "variable": "SES of $\\mathrm { R a o ^ { \\circ } s }$ quadratic entropy",
+   "code": "$\\mathrm { R a o ^ { \\circ } s }",
+   "term": "quadratic entropy (Rao’s Q SES)",
+   "unit": "u17",
+   "model_label": "quadratic entropy",
+   "label": "quadratic entropy",
+   "explanation": "Rao’s Q SES"
+  },
+  {
+   "variable": "SES of Faith’s PD",
+   "code": "FD_PD SES",
+   "term": "Faith’s PD",
+   "unit": "u17",
+   "model_label": "Faith’s PD",
+   "label": "Faith’s PD",
+   "explanation": ""
+  },
+  {
+   "variable": "SES of Faith’s PD",
+   "code": "PD SES",
+   "term": "Faith’s PD",
+   "unit": "u17",
+   "model_label": "Faith’s PD",
+   "label": "Faith’s PD",
+   "explanation": ""
+  },
+  {
+   "variable": "SES of mean pairwise distance",
+   "code": "MPD SES",
+   "term": "mean pairwise distance",
+   "unit": "u17",
+   "model_label": "mean pairwise distance",
+   "label": "mean pairwise distance",
+   "explanation": ""
+  },
+  {
+   "variable": "Asterisks",
+   "code": "*",
+   "term": "represents significant",
+   "unit": "u17",
+   "model_label": "significant",
+   "label": "significant",
+   "explanation": "represents"
+  },
+  {
+   "variable": "NS",
+   "code": "NS",
+   "term": "representing not significant between the observed and null distribution of phylogenetic and functional diversity",
+   "unit": "u17",
+   "model_label": "NS",
+   "label": "representing not significant between the observed and null distribution of phylogenetic and functional diversity",
+   "explanation": ""
+  },
+  {
+   "variable": "Species richness",
+   "code": "(a)",
+   "term": "Species richness",
+   "unit": "u18",
+   "model_label": "Species richness",
+   "label": "Species richness",
+   "explanation": ""
+  },
+  {
+   "variable": "sample coverage of rarefaction and extrapolation",
+   "code": "(b)",
+   "term": "sample coverage of rarefaction and extrapolation",
+   "unit": "u21",
+   "model_label": "sample coverage",
+   "label": "sample coverage",
+   "explanation": "of rarefaction and extrapolation"
+  },
+  {
+   "variable": "Venn diagram illustrating the number of shared and unique ant species of each site along different elevations",
+   "code": "(c)",
+   "term": "Venn diagram illustrating the number of shared and unique ant species of each site along different elevations",
+   "unit": "u21",
+   "model_label": "Venn diagram",
+   "label": "Venn diagram",
+   "explanation": "illustrating the number of shared and unique ant species of each site along different elevations"
+  },
+  {
+   "variable": "Elevation Level",
+   "code": "Black circle marker",
+   "term": "Low elevation, 1000 m",
+   "unit": "u22",
+   "model_label": "Black circle marker",
+   "label": "Low elevation, 1000 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation Level",
+   "code": "Black triangle marker",
+   "term": "Low elevation, 1200 m",
+   "unit": "u22",
+   "model_label": "Black triangle marker",
+   "label": "Low elevation, 1200 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation Level",
+   "code": "Red circle marker",
+   "term": "Middle elevation, 1400 m",
+   "unit": "u22",
+   "model_label": "Red circle marker",
+   "label": "Middle elevation, 1400 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation Level",
+   "code": "Red triangle marker",
+   "term": "Middle elevation, 1600 m",
+   "unit": "u22",
+   "model_label": "Red triangle marker",
+   "label": "Middle elevation, 1600 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation Level",
+   "code": "Blue circle marker",
+   "term": "High elevation, 1800 m",
+   "unit": "u22",
+   "model_label": "Blue circle marker",
+   "label": "High elevation, 1800 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation Level",
+   "code": "Blue triangle marker",
+   "term": "High elevation, 2000 m",
+   "unit": "u22",
+   "model_label": "Blue triangle marker",
+   "label": "High elevation, 2000 m",
+   "explanation": ""
+  },
+  {
+   "variable": "Others",
+   "code": "Others",
+   "term": "Others",
+   "unit": "u35",
+   "model_label": "Others",
+   "label": "Others",
+   "explanation": ""
+  },
+  {
+   "variable": "Premulopsis",
+   "code": "Premulopsis",
+   "term": "Premulopsis",
+   "unit": "u61",
+   "model_label": "Premulopsis",
+   "label": "Premulopsis",
+   "explanation": ""
+  },
+  {
+   "variable": "Others",
+   "code": "Others",
+   "term": "Premulopsis",
+   "unit": "u100",
+   "model_label": "Premulopsis",
+   "label": "Premulopsis",
+   "explanation": ""
+  },
+  {
+   "variable": "Source",
+   "code": "Formicinae",
+   "term": "Formicinae",
+   "unit": "u130",
+   "model_label": "Formicinae",
+   "label": "Formicinae",
+   "explanation": ""
+  },
+  {
+   "variable": "Source",
+   "code": "Dolichoderinae",
+   "term": "Dolichoderinae",
+   "unit": "u130",
+   "model_label": "Dolichoderinae",
+   "label": "Dolichoderinae",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "Myrimidine",
+   "term": "Myrimidine",
+   "unit": "u130",
+   "model_label": "Myrimidine",
+   "label": "Myrimidine",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "Ponsitinae",
+   "term": "Ponsitinae",
+   "unit": "u130",
+   "model_label": "Ponsitinae",
+   "label": "Ponsitinae",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "0001",
+   "term": "0001",
+   "unit": "u130",
+   "model_label": "0001",
+   "label": "0001",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "1200",
+   "term": "1200",
+   "unit": "u130",
+   "model_label": "1200",
+   "label": "1200",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "1400",
+   "term": "1400",
+   "unit": "u130",
+   "model_label": "1400",
+   "label": "1400",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "1600",
+   "term": "1600",
+   "unit": "u130",
+   "model_label": "1600",
+   "label": "1600",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "1800",
+   "term": "1800",
+   "unit": "u130",
+   "model_label": "1800",
+   "label": "1800",
+   "explanation": ""
+  },
+  {
+   "variable": "Target",
+   "code": "2000",
+   "term": "2000",
+   "unit": "u131",
+   "model_label": "2000",
+   "label": "2000",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation",
+   "code": "Low elevation",
+   "term": "Low elevation",
+   "unit": "u133",
+   "model_label": "Low elevation",
+   "label": "Low elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation",
+   "code": "Middle elevation",
+   "term": "Middle elevation",
+   "unit": "u133",
+   "model_label": "Middle elevation",
+   "label": "Middle elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation",
+   "code": "High elevation",
+   "term": "High elevation",
+   "unit": "u133",
+   "model_label": "High elevation",
+   "label": "High elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "Low elevation",
+   "code": "Low elevation",
+   "term": "Low elevation",
+   "unit": "u135",
+   "model_label": "Low elevation",
+   "label": "Low elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "Middle elevation",
+   "code": "Middle elevation",
+   "term": "Middle elevation",
+   "unit": "u135",
+   "model_label": "Middle elevation",
+   "label": "Middle elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "High elevation",
+   "code": "High elevation",
+   "term": "High elevation",
+   "unit": "u135",
+   "model_label": "High elevation",
+   "label": "High elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "soil type",
+   "code": "",
+   "label": "mountain brown soil",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "soil type",
+   "code": "",
+   "label": "dark brown soils",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "soil type",
+   "code": "",
+   "label": "mountain meadow soil",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "forest type",
+   "code": "",
+   "label": "secondary",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "forest type",
+   "code": "",
+   "label": "pine forests",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "forest type",
+   "code": "",
+   "label": "pine and oak mixed forests",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "elevational gradients",
+   "code": "",
+   "label": "different elevations",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxonomic diversity",
+   "code": "",
+   "label": "Chso-1",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "functional diversity",
+   "code": "",
+   "label": "Rao’s quadratic entropy (Rao’s Q)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "functional diversity",
+   "code": "",
+   "label": "Faith’s PD (FD_PD)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "phylogenetic diversity",
+   "code": "",
+   "label": "Faith’s PD (PD)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "phylogenetic diversity",
+   "code": "",
+   "label": "Mean pairwise distance (MPD)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "foraging strategies",
+   "code": "",
+   "label": "surface foragers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "foraging strategies",
+   "code": "",
+   "label": "litter foragers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Target",
+   "code": "",
+   "label": "Nylanderia",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Target",
+   "code": "",
+   "label": "Polyrhachis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Functional trait",
+   "code": "",
+   "label": "Weber's length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u134"
+  },
+  {
+   "variable": "Functional trait",
+   "code": "",
+   "label": "Head width",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u134"
+  },
+  {
+   "variable": "Functional trait",
+   "code": "",
+   "label": "Scape length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u134"
+  },
+  {
+   "variable": "Functional trait",
+   "code": "",
+   "label": "Eye length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u134"
+  },
+  {
+   "variable": "Functional trait",
+   "code": "",
+   "label": "Mandible length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u134"
+  },
+  {
+   "variable": "Functional trait",
+   "code": "",
+   "label": "Hind leg length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u134"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "elevational difference between adjacent sites",
+   "code": "ES3",
+   "term": "1400 m.a.s.l",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "elevational difference between adjacent sites",
+   "code": "ES4",
+   "term": "1600 m.a.s.l",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "elevational difference between adjacent sites",
+   "code": "ES5",
+   "term": "1800 m.a.s.l",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 123.2
+}

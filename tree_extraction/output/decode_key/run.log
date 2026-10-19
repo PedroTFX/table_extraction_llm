@@ -1,0 +1,60 @@
+Decoding answer key, 22 papers: 11 CODED columns (some cell != GT value), 67 PLAIN columns (cells kept as printed)
+
+where the 38 legend pairs of the coded columns live in the paper:
+  definition: CODE: term / CODE = term   12
+  definition: (CODE) term               8
+  not in the paper                      8
+  term only (prose)                     7
+  definition: CODE term                 2
+  definition: term (CODE)               1
+
+production (stored outputs) on coded cells — 1482 species x code cells:
+  left as printed                   1291/1482 (87%)
+  right                             104/1482 (7%)
+  no row                            71/1482 (5%)
+  other value                       16/1482 (1%)
+
+production on plain cells (should be kept as printed) — 2702 cells:
+  right                             1856/2702 (69%)
+  no row                            768/2702 (28%)
+  other value                       78/2702 (3%)
+
+per paper, coded cells: right / all  (left as printed, other value, no row)
+  Graf2021                  0/832 (0%)   (832, 0, 0)
+  Uemori2021                0/107 (0%)   (107, 0, 0)
+  Wang2021                   0/32 (0%)   (0, 0, 32)
+  Cappellari2022            0/325 (0%)   (325, 0, 0)
+  Espinosa2023               0/27 (0%)   (27, 0, 0)
+  Habustova2017              0/16 (0%)   (0, 16, 0)
+  Derhe2016                  0/39 (0%)   (0, 0, 39)
+  Korosi2022            104/104 (100%)   (0, 0, 0)
+
+every legend pair and where it lives:
+  Graf2021 t8 'Social Behaviour': 'SO' -> 'solitary'  [definition: (CODE) term]
+  Graf2021 t8 'Social Behaviour': 'P_E' -> 'primitively eussocial'  [definition: (CODE) term]
+  Graf2021 t8 'Social Behaviour': 'A_E' -> 'highly eussocial'  [term only (prose)]
+  Graf2021 t8 'Social Behaviour': 'CL' -> 'cleptoparasitic'  [definition: (CODE) term]
+  Graf2021 t8 'Nesting site': 'G' -> 'ground'  [definition: (CODE) term]
+  Graf2021 t8 'Nesting site': 'A' -> 'above ground'  [definition: (CODE) term]
+  Graf2021 t8 'Feeding habit': 'GE' -> 'generalist'  [definition: (CODE) term]
+  Graf2021 t8 'Feeding habit': 'S' -> 'specialist'  [definition: (CODE) term]
+  Graf2021 t8 'Feeding habit': 'NA' -> 'not specified'  [definition: (CODE) term]
+  Uemori2021 t10 'Trophic level': '1.0' -> 'herbivorous'  [not in the paper]
+  Uemori2021 t10 'Trophic level': '2.0' -> 'primary predator'  [term only (prose)]
+  Uemori2021 t10 'Trophic level': '3.0' -> 'hyper predator'  [not in the paper]
+  Wang2021 t1 'Feeding Trait': 'C' -> 'Carnivorous'  [term only (prose)]
+  Wang2021 t1 'Feeding Trait': 'O' -> 'Omnivorous'  [term only (prose)]
+  Wang2021 t1 'Wing Morphology': 'M' -> 'Macropterous'  [term only (prose)]
+  Wang2021 t1 'Wing Morphology': 'B' -> 'Brachypterous'  [term only (prose)]
+  Cappellari2022 t3 'Foraging range': 'NC' -> 'non-central-place forager'  [definition: CODE term]
+  Cappellari2022 t3 'Foraging range': 'C' -> 'central-place forager'  [definition: CODE term]
+  Espinosa2023 t7 'Presence of opercular gill': 'og' -> 'opercular gill'  [definition: term (CODE)]
+  Espinosa2023 t7 'Presence of opercular gill': 'nog' -> 'non-opercular gill'  [definition: CODE: term / CODE = term]
+  Korosi2022 t5 'Larval diet': 'M' -> 'Monophagous'  [definition: CODE: term / CODE = term]
+  Korosi2022 t5 'Larval diet': 'O' -> 'Oligophagous'  [definition: CODE: term / CODE = term]
+  Korosi2022 t5 'Larval diet': 'NO' -> 'Narrowly Oligophagous'  [definition: CODE: term / CODE = term]
+  Korosi2022 t5 'Larval diet': 'P' -> 'Polyphagous'  [definition: CODE: term / CODE = term]
+  Habustova2017 t16 'Body size': 'C' -> '6–10.9'  [definition: CODE: term / CODE = term]
+  Habustova2017 t16 'Body size': 'D' -> '˂5.9'  [definition: CODE: term / CODE = term]
+  Habustova2017 t16 'Body size': 'B' -> '11–21.9'  [definition: CODE: term / CODE = term]
+  Habustova2017 t16 'Body size': 'A' -> '˃22'  [definition: CODE: term / CODE = term]

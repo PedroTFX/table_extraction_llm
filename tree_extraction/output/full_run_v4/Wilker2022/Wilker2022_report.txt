@@ -1,0 +1,96 @@
+  [semantic] matched by values: 'Time_r' -> 'Removal time of diaspores'
+  [semantic] matched by values: 'SL' -> 'Scape length'
+  [semantic] matched by values: 'MandL' -> 'Mandible length'
+  [semantic] matched by values: 'ML' -> 'Mesosomal'
+  [semantic] matched by values: 'FL' -> 'Leg length'
+  [semantic] matched by values: 'EL' -> 'Eye length'
+  [semantic] matched by values: 'Diaspore removal' -> 'Artificial diaspores removal by ants'
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Wilker2022\Wilker2022.xlsx  (210 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v4\Wilker2022\Wilker2022.csv  (297 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 8 pair(s))
+  'Diaspore removal' -> 'Artificial diaspores removal by ants'
+  'EL' -> 'Eye length'
+  'FL' -> 'Leg length'
+  'ML' -> 'Mesosomal'
+  'MandL' -> 'Mandible length'
+  'SL' -> 'Scape length'
+  'Strategy' -> 'Foraging strategy'
+  'Time_r' -> 'Removal time of diaspores'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 180
+  missed (FN)         : 30
+  spurious, in scope  : 45   <- GT covers this trait: real errors
+  spurious, out of scope: 72   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.606 / 0.857 / 0.710   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.800 / 0.857 / 0.828   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.857   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             72
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    180  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    120  0.000  <-- low
+  measurementStatistic          0    180  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    180  0.000  <-- low
+  lifeStage                     0    180  0.000  <-- low
+  caste                         0    180  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a   +180 where GT blank
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    180  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 30 MISSED ROWS MISSED
+  species not in prediction                  10
+  species present, trait missing             20
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Pheidole jelski'                   ~0.96~  pred 'Pheidole jelskii'   x10
+  -> 1 species mismatch explains 10 of 30 misses (33%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Discovery time of diaspores'      x20
+  -> 1 missing trait explains 20 of 30 misses (67%) — systematic, not scattered
+
+  full miss detail saved -> Wilker2022_misses.csv, Wilker2022_misses_summary.json (30 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  artificial diaspores removal by ants             21    21   
+  discovery time of diaspores                      21     0   GT-ONLY
+  removal time of diaspores                        21    57   Δ+36 (split?)
+  distance                                         21    21   
+  eye length                                       21    21   
+  foraging strategy                                21    21   
+  leg length                                       21    21   
+  mandible length                                  21    21   
+  scape length                                     21    21   
+  mesosomal                                        21    21   
+  n_removal                                         0    36   PRED-ONLY
+  nest                                              0    36   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.800  0.857  0.828    180    45    30   id+type+value
+             (72 more spurious row(s) set aside as out-of-scope; strict P would be 0.606)
+  tags        0.000  0.000  0.000      0   225   210   basis+id+type+value+stat+sex+stage
+             (72 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.828 vs previous)
+             note: only 0/180 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

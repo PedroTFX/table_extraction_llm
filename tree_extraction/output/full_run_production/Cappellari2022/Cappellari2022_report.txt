@@ -1,0 +1,66 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Cappellari2022\Cappellari2022.xlsx  (975 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Cappellari2022\Cappellari2022.csv  (975 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Body' -> 'Body size'
+  'Foraging' -> 'Foraging range '
+  'Proboscis' -> 'Proboscis length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 650
+  missed (FN)         : 325
+  spurious, in scope  : 325   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.667 / 0.667 / 0.667   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.667 / 0.667 / 0.667   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.667   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               650    650  1.000
+  measurementMethod             0      0    n/a   +650 where GT blank
+  measurementUnit             650    650  1.000
+  measurementStatistic          0    650  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    650  0.000  <-- low
+  lifeStage                   650    650  1.000
+  caste                         0    650  0.000  <-- low
+  sampleSizeValue               0    650  0.000  <-- low
+  sampleSizeUnit                0    650  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    650  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    650  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 325 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      325
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'non-central-place forager'  ->  'nc'                         x177
+     'central-place forager'      ->  'c'                          x148
+  -> 2 substitutions explain 325 of 325 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Cappellari2022_misses.csv, Cappellari2022_misses_summary.json (325 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       325   325   
+  foraging range                                  325   325   
+  proboscis length                                325   325   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.667  0.667  0.667    650   325   325   id+type+value
+  tags        0.000  0.000  0.000      0   975   975   basis+id+type+value+stat+sex+stage
+             (F1 -0.667 vs previous)

@@ -1,0 +1,119 @@
+  [semantic] matched by values: '(no name, column 4)' -> 'Habitat pref'
+  [semantic] left unmatched: 'Habitat preference for' vs 'Larval feeding habit' (llm said different traits)
+  [semantic] left unmatched: 'Habitat preference for' vs 'Overwintering stage' (llm said different traits)
+  [semantic] left unmatched: 'Habitat preference for' vs 'Specialization' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Taillefer2018\Taillefer2018.xlsx  (1765 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v5\Taillefer2018\Taillefer2018.csv  (720 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 7 pair(s))
+  'Homoneura (Tarsohomoneura) americana (Wiedemann)' -> 'Homoneura (Tarsohomoneura) americana(Wiedemann)'
+  'Leptocera erythroceras (Becker)' -> 'Leptocera erythrocera (Becker)'
+  'Lucilia illustris (Meigen)' -> 'Lucilia illustris(Meigen)'
+  'Notiphila (Notiphila) nudipes Cresson' -> 'Notiphila (Notiphila) nudipesCresson'
+  'Notiphila ?pauroura Mathis' -> 'Notiphila (Notiphila) pauroura Mathis'
+  'Pterogramma palliceps (Johnson)' -> 'Pterogramma palliceps (Johson)'
+  'Rainieria antennaeipes (Say)' -> 'Rainieria antennaepes (Say)'
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'Boettcheria cimbici s (Townsend)': no ground-truth name denotes this organism
+  'Dryomyza anili s Fallén': no ground-truth name denotes this organism
+  'Gaurax montanus C oquillett': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  '(no name, column 4)' -> 'Habitat pref'
+  'Specializ' -> 'Specialization'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 93
+  missed (FN)         : 1672
+  spurious, in scope  : 13   <- GT covers this trait: real errors
+  spurious, out of scope: 614   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.129 / 0.053 / 0.075   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.877 / 0.053 / 0.099   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.053   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            614
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     93  0.000  <-- low
+  measurementMethod             0     93  0.000  <-- low
+  measurementUnit               0      8  0.000  <-- low
+  measurementStatistic          0     93  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     93  0.000  <-- low
+  lifeStage                     0     93  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a   +8 where GT blank
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     93  0.000  <-- low
+  samplingProtocol              0     93  0.000  <-- low
+  verbatimLocality              0      0    n/a   +70 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     93  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     93  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1672 MISSED ROWS MISSED
+  species not in prediction                  20
+  species present, trait missing           1647
+  species+trait present, value differs        5
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'amphibious'                 ->  'a'                          x2
+     'generalist'                 ->  'saprophage'                 x1
+     '4.06'                       ->  '4.6'                        x1
+     'univoltine'                 ->  'u'                          x1
+  -> 4 substitutions explain 5 of 1672 misses (0%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'Boettcheria cimbicis (Townsend)'   ~0.88~  pred 'Boettcheria cimbici s (Townsend)'   x8
+     gt 'Gaurax montanus Coquillett'        ~0.88~  pred 'Gaurax montanus C oquillett'   x7
+     gt 'Dryomyza anilis Fallén'            ~0.88~  pred 'Dryomyza anili s Fallén'   x5
+  -> 3 species mismatches explain 20 of 1672 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Voltinism'                        x328
+     'Larval feeding habit'             x283
+     'Size'                             x276
+     'Specialization'                   x227
+     'Feeding'                          x200
+     'Overwintering stage'              x184
+  -> 6 missing traits explain 1498 of 1672 misses (90%) — systematic, not scattered
+
+  full miss detail saved -> Taillefer2018_misses.csv, Taillefer2018_misses_summary.json (1672 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 2)                               0    86   PRED-ONLY
+  (no name, column 3)                               0    75   PRED-ONLY
+  opomyzidae #3                                     0   194   PRED-ONLY
+  (no name, column 5)                               0    86   PRED-ONLY
+  (no name, column 7)                               0    86   PRED-ONLY
+  (no name, column 9)                               0    74   PRED-ONLY
+  feeding                                         204     8   Δ-196 (split?)
+  larval feeding habit                            287     0   GT-ONLY
+  habitat preference for                            0     3   PRED-ONLY
+  spe/gen                                           0     1   PRED-ONLY
+  habitat pref                                    237    86   Δ-151 (split?)
+  overwintering stage                             185     0   GT-ONLY
+  size                                            288     9   Δ-279 (split?)
+  specialization                                  232     2   Δ-230 (split?)
+  type wetland                                      0     9   PRED-ONLY
+  voltinism                                       332     1   Δ-331 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.877  0.053  0.099     93    13  1672   id+type+value
+             (614 more spurious row(s) set aside as out-of-scope; strict P would be 0.129)
+  tags        0.000  0.000  0.000      0   106  1765   basis+id+type+value+stat+sex+stage
+             (614 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.099 vs previous)
+             note: only 0/93 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

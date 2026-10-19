@@ -1,0 +1,88 @@
+  [semantic] left unmatched: 'Mean' vs 'Hair length' (llm said different traits)
+  [semantic] left unmatched: 'Mean' vs 'Body size' (llm said different traits)
+  [semantic] left unmatched: 'Mean' vs 'Altitude' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Cortés-Goméz2023\Cortés-Goméz2023.xlsx  (86 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Cortés-Goméz2023\Cortés-Goméz2023.csv  (64 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Bombus atratus, Bombus hortulanus, Bombus melaleucus': matches 4 different organisms, cannot choose: 'Bombus atratus', 'Bombus atratus, Bombus hortulanus,Bombus melaleucus', 'Bombus hortulanus', 'Bombus melaleucus'
+  'Partamona sp., Para-partamona sp.': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 16
+  missed (FN)         : 70
+  spurious, in scope  : 16   <- GT covers this trait: real errors
+  spurious, out of scope: 32   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.250 / 0.186 / 0.213   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.500 / 0.186 / 0.271   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.186   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             32
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     16  0.000  <-- low
+  measurementMethod             0      0    n/a   +8 where GT blank
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     16  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           8     16  0.500
+  lifeStage                     8     16  0.500
+  caste                         0      8  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     16  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 70 MISSED ROWS MISSED
+  species not in prediction                  57
+  species present, trait missing             13
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (12 distinct), closest predicted name:
+     gt 'Bombus atratus'                    ~0.90~  pred 'Bombus atratus, Bombus hortulanus, Bombus melaleucus'   x6
+     gt 'Bombus hortulanus'                 ~0.91~  pred 'Bombus atratus, Bombus hortulanus, Bombus melaleucus'   x6
+     gt 'Bombus melaleucus'                 ~0.90~  pred 'Bombus atratus, Bombus hortulanus, Bombus melaleucus'   x6
+     gt 'Centris sp.'                       ~0.81~  pred 'Centris sp., Xylocopa lachea'   x6
+     gt 'Eulaema cingulata'                 ~0.92~  pred 'Eulaema cingulata, Eulaema polychroma'   x6
+     gt 'Eulaema polychroma'                ~0.94~  pred 'Eulaema cingulata, Eulaema polychroma'   x6
+  -> 6 species mismatches explain 36 of 70 misses (51%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Altitude'                         x5
+     'Body size'                        x4
+     'Hair length'                      x4
+  -> 3 missing traits explain 13 of 70 misses (19%) — scattered; no single cause
+
+  full miss detail saved -> Cortés-Goméz2023_misses.csv, Cortés-Goméz2023_misses_summary.json (70 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitude                                          8     0   GT-ONLY
+  amount body hair                                 13     8   Δ-5 (split?)
+  social behavior                                  13     8   Δ-5 (split?)
+  body size                                        13     0   GT-ONLY
+  structure carrying pollen                        13     8   Δ-5 (split?)
+  hair length                                      13     0   GT-ONLY
+  nest location                                    13     8   Δ-5 (split?)
+  mean                                              0    32   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.500  0.186  0.271     16    16    70   id+type+value
+             (32 more spurious row(s) set aside as out-of-scope; strict P would be 0.250)
+  tags        0.000  0.000  0.000      0    32    86   basis+id+type+value+stat+sex+stage
+             (32 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.271 vs previous)

@@ -1,0 +1,229 @@
+{
+ "_columns": [
+  [
+   4,
+   7,
+   "Nest location",
+   [
+    "below",
+    "above",
+    "UK",
+    "mix"
+   ]
+  ],
+  [
+   4,
+   8,
+   "Nesting behaviour",
+   [
+    "excavate",
+    "rent",
+    "NA"
+   ]
+  ],
+  [
+   4,
+   9,
+   "Sociality/ parasitic",
+   [
+    "solitary",
+    "social",
+    "parasite"
+   ]
+  ],
+  [
+   4,
+   10,
+   "Lecty",
+   [
+    "poly",
+    "oligo",
+    "UK",
+    "NA"
+   ]
+  ]
+ ],
+ "4:7": {
+  "cells": {
+   "UK": {
+    "term": "trait status unknown",
+    "parts": [
+     "UK"
+    ],
+    "options": {
+     "UK": {
+      "evidence": "explicit",
+      "labels": [
+       "trait status unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "UK": "explicit"
+    },
+    "probs": {
+     "UK | QK": {
+      "code": 0.782,
+      "word": 0.218
+     },
+     "UK": {
+      "e0": 0.728,
+      "keep": 0.272
+     },
+     "UK | QB": {}
+    }
+   }
+  },
+  "header": "Nest location",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "4:8": {
+  "cells": {
+   "excavate": {
+    "term": null,
+    "parts": [
+     "excavate"
+    ],
+    "options": {
+     "excavate": {
+      "evidence": "explicit",
+      "labels": [
+       "Excavate"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "excavate | QK": {
+      "code": 0.007,
+      "word": 0.993
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u42"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.002,
+    "p1": 0.664,
+    "several": 0.031,
+    "none": 0.303
+   },
+   "chosen": [
+    "u42"
+   ]
+  },
+  "header": "Nesting behaviour"
+ },
+ "4:9": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Solitary"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "social": {
+    "term": null,
+    "parts": [
+     "social"
+    ],
+    "options": {
+     "social": {
+      "evidence": "explicit",
+      "labels": [
+       "including multiple forms of sociality"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "social | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   }
+  },
+  "header": "Sociality/ parasitic",
+  "units": {
+   "from": "inventory run",
+   "was": "p0",
+   "offered": 1
+  }
+ },
+ "4:10": {
+  "cells": {
+   "UK": {
+    "term": "trait status unknown",
+    "parts": [
+     "UK"
+    ],
+    "options": {
+     "UK": {
+      "evidence": "explicit",
+      "labels": [
+       "trait status unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "UK": "explicit"
+    },
+    "probs": {
+     "UK | QK": {
+      "code": 0.921,
+      "word": 0.079
+     },
+     "UK": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "UK | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u16",
+    "u40",
+    "u41"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.0,
+    "p1": 0.898,
+    "p2": 0.0,
+    "several": 0.04,
+    "none": 0.061
+   },
+   "chosen": [
+    "u40"
+   ]
+  },
+  "header": "Lecty"
+ }
+}

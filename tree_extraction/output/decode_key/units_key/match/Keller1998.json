@@ -1,0 +1,308 @@
+{
+ "_columns": [
+  [
+   1,
+   4,
+   "Queen number",
+   [
+    "M",
+    "P",
+    "M, P"
+   ]
+  ],
+  [
+   1,
+   6,
+   "Colony founding",
+   [
+    "I",
+    "D",
+    "I, D",
+    "I, D^b"
+   ]
+  ],
+  [
+   3,
+   2,
+   "Mean lifespan",
+   [
+    ">11",
+    "ca. 18",
+    "ca. 16",
+    ">7"
+   ]
+  ]
+ ],
+ "1:4": {
+  "cells": {
+   "M": {
+    "term": "species that are primarily monogynous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "M": {
+      "e0": 0.976,
+      "keep": 0.024
+     },
+     "M | QB": {
+      "w0": 0.012,
+      "w1": 0.988
+     }
+    }
+   },
+   "P": {
+    "term": "species that are primarily polygynous",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "P": {
+      "e0": 0.912,
+      "keep": 0.088
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   },
+   "M, P": {
+    "term": "species that are primarily monogynous; species that are primarily polygynous",
+    "parts": [
+     "M",
+     "P"
+    ],
+    "options": {
+     "M": {
+      "evidence": "explicit",
+      "labels": [
+       "monogynous"
+      ]
+     },
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "polygynous"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "explicit",
+     "P": "explicit"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "M": {
+      "e0": 0.976,
+      "keep": 0.024
+     },
+     "M | QB": {
+      "w0": 0.012,
+      "w1": 0.988
+     },
+     "P | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "P": {
+      "e0": 0.912,
+      "keep": 0.088
+     },
+     "P | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u0"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.986,
+    "several": 0.011,
+    "none": 0.003
+   },
+   "chosen": [
+    "u0"
+   ]
+  },
+  "header": "Queen number"
+ },
+ "1:6": {
+  "cells": {
+   "I": {
+    "term": "species that found new colonies primarily through independent colony founding",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "I": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "I | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "D": {
+    "term": "species that generally use a dependent colony founding",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "D": {
+      "e0": 0.975,
+      "keep": 0.025
+     },
+     "D | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "I, D": {
+    "term": "species that found new colonies primarily through independent colony founding; species that generally use a dependent colony founding",
+    "parts": [
+     "I",
+     "D"
+    ],
+    "options": {
+     "I": {
+      "evidence": "explicit",
+      "labels": [
+       "independent"
+      ]
+     },
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "dependent"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "explicit",
+     "D": "explicit"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "I": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "I | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     },
+     "D | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "D": {
+      "e0": 0.975,
+      "keep": 0.025
+     },
+     "D | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u0"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.98,
+    "several": 0.017,
+    "none": 0.003
+   },
+   "chosen": [
+    "u0"
+   ]
+  },
+  "header": "Colony founding"
+ },
+ "3:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "header": "Mean lifespan"
+ }
+}

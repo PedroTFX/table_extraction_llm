@@ -1,0 +1,146 @@
+{
+ "_columns": [
+  [
+   1,
+   4,
+   "Feeding Trait",
+   [
+    "C",
+    "O"
+   ]
+  ],
+  [
+   1,
+   5,
+   "Wing Morphology",
+   [
+    "M",
+    "B"
+   ]
+  ]
+ ],
+ "1:4": {
+  "cells": {
+   "C": {
+    "term": "carnivorous",
+    "parts": [
+     "C"
+    ],
+    "options": {
+     "C": {
+      "evidence": "initial",
+      "labels": [
+       "carnivorous",
+       "canopy cover"
+      ]
+     }
+    },
+    "evidence": {
+     "C": "initial"
+    },
+    "probs": {
+     "C | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "C": {
+      "e0": 0.986,
+      "e1": 0.001,
+      "keep": 0.013
+     },
+     "C | QB": {}
+    }
+   },
+   "O": {
+    "term": null,
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "initial",
+      "labels": [
+       "overall diversity of vegetation productivity classes",
+       "omnivorous"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "O | QK": {
+      "code": 0.292,
+      "word": 0.708
+     }
+    }
+   }
+  },
+  "header": "Feeding Trait"
+ },
+ "1:5": {
+  "cells": {
+   "M": {
+    "term": "macropterous",
+    "parts": [
+     "M"
+    ],
+    "options": {
+     "M": {
+      "evidence": "initial",
+      "labels": [
+       "macropterous",
+       "Medium-low VP",
+       "Medium VP",
+       "Medium-high VP"
+      ]
+     }
+    },
+    "evidence": {
+     "M": "initial"
+    },
+    "probs": {
+     "M | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "M": {
+      "e0": 0.986,
+      "e1": 0.0,
+      "e2": 0.0,
+      "e3": 0.0,
+      "keep": 0.014
+     },
+     "M | QB": {}
+    }
+   },
+   "B": {
+    "term": "brachypterous",
+    "parts": [
+     "B"
+    ],
+    "options": {
+     "B": {
+      "evidence": "initial",
+      "labels": [
+       "brachypterous"
+      ]
+     }
+    },
+    "evidence": {
+     "B": "initial"
+    },
+    "probs": {
+     "B | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "B": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "B | QB": {}
+    }
+   }
+  },
+  "header": "Wing Morphology"
+ }
+}

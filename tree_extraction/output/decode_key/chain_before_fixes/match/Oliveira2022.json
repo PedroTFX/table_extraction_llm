@@ -1,0 +1,339 @@
+{
+ "2:1": {
+  "cells": {
+   "CL": {
+    "term": "CL = ratio of clypeus length to mesosoma length",
+    "parts": [
+     "CL"
+    ],
+    "options": {
+     "CL": {
+      "evidence": "explicit",
+      "labels": [
+       "clypeus"
+      ]
+     }
+    },
+    "evidence": {
+     "CL": "explicit"
+    },
+    "probs": {
+     "CL | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "CL": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "CL | QB": {
+      "w0": 0.001,
+      "w1": 0.999
+     }
+    }
+   },
+   "LEG": {
+    "term": null,
+    "parts": [
+     "LEG"
+    ],
+    "options": {
+     "LEG": {
+      "evidence": "explicit",
+      "labels": [
+       "LEG"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "LEG | QK": {
+      "code": 0.218,
+      "word": 0.782
+     }
+    }
+   },
+   "EL": {
+    "term": "EL = ratio of eye length to mesosoma length",
+    "parts": [
+     "EL"
+    ],
+    "options": {
+     "EL": {
+      "evidence": "explicit",
+      "labels": [
+       "eye"
+      ]
+     }
+    },
+    "evidence": {
+     "EL": "explicit"
+    },
+    "probs": {
+     "EL | QK": {
+      "code": 0.963,
+      "word": 0.037
+     },
+     "EL": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "EL | QB": {
+      "w0": 0.001,
+      "w1": 0.999
+     }
+    }
+   },
+   "ML": {
+    "term": "ML = ratio of mandible length to mesosoma length",
+    "parts": [
+     "ML"
+    ],
+    "options": {
+     "ML": {
+      "evidence": "explicit",
+      "labels": [
+       "mandible"
+      ]
+     }
+    },
+    "evidence": {
+     "ML": "explicit"
+    },
+    "probs": {
+     "ML | QK": {
+      "code": 0.961,
+      "word": 0.039
+     },
+     "ML": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "ML | QB": {
+      "w0": 0.001,
+      "w1": 0.999
+     }
+    }
+   },
+   "AL": {
+    "term": "AL = ratio of antenna (combined funicle and scape) length to mesosoma length",
+    "parts": [
+     "AL"
+    ],
+    "options": {
+     "AL": {
+      "evidence": "explicit",
+      "labels": [
+       "antenna"
+      ]
+     }
+    },
+    "evidence": {
+     "AL": "explicit"
+    },
+    "probs": {
+     "AL | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "AL": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "AL | QB": {
+      "w0": 0.0,
+      "w1": 0.987,
+      "w2": 0.013
+     }
+    }
+   },
+   "P": {
+    "term": "P = count of hairs crossing mesosoma profile",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "hairs"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.975,
+      "word": 0.025
+     },
+     "P": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "P | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     }
+    }
+   }
+  },
+  "header": "Trait"
+ },
+ "2:2": {
+  "cells": {},
+  "header": "Response variables"
+ },
+ "2:3": {
+  "cells": {
+   "WD": {
+    "term": null,
+    "parts": [
+     "WD"
+    ],
+    "options": {
+     "WD": {
+      "evidence": "explicit",
+      "labels": [
+       "WD"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "WD | QK": {
+      "code": 0.105,
+      "word": 0.895
+     }
+    }
+   },
+   "GMDI+WD": {
+    "term": null,
+    "parts": [
+     "GMDI",
+     "WD"
+    ],
+    "options": {
+     "GMDI": {
+      "evidence": "explicit",
+      "labels": [
+       "GMDI"
+      ]
+     },
+     "WD": {
+      "evidence": "explicit",
+      "labels": [
+       "WD"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "GMDI | QK": {
+      "code": 0.019,
+      "word": 0.981
+     },
+     "WD | QK": {
+      "code": 0.105,
+      "word": 0.895
+     }
+    }
+   },
+   "GMDI": {
+    "term": null,
+    "parts": [
+     "GMDI"
+    ],
+    "options": {
+     "GMDI": {
+      "evidence": "explicit",
+      "labels": [
+       "GMDI"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "GMDI | QK": {
+      "code": 0.019,
+      "word": 0.981
+     }
+    }
+   }
+  },
+  "header": "Explanatory variables"
+ },
+ "14:2": {
+  "cells": {},
+  "header": "GMDI"
+ },
+ "14:3": {
+  "cells": {},
+  "header": "DH"
+ },
+ "14:4": {
+  "cells": {},
+  "header": "Traits CL M"
+ },
+ "14:5": {
+  "cells": {},
+  "header": "Traits CL V"
+ },
+ "14:6": {
+  "cells": {},
+  "header": "Traits ML M"
+ },
+ "14:7": {
+  "cells": {},
+  "header": "Traits ML V"
+ },
+ "14:8": {
+  "cells": {},
+  "header": "Traits WL M"
+ },
+ "14:9": {
+  "cells": {},
+  "header": "Traits WL V"
+ },
+ "14:10": {
+  "cells": {},
+  "header": "Traits IOW M"
+ },
+ "14:11": {
+  "cells": {},
+  "header": "Traits IOW V"
+ },
+ "14:12": {
+  "cells": {},
+  "header": "Traits EL M"
+ },
+ "14:13": {
+  "cells": {},
+  "header": "Traits EL V"
+ },
+ "14:14": {
+  "cells": {},
+  "header": "Traits P M"
+ },
+ "14:15": {
+  "cells": {},
+  "header": "Traits P V"
+ },
+ "14:16": {
+  "cells": {},
+  "header": "Traits LEG M"
+ },
+ "14:17": {
+  "cells": {},
+  "header": "Traits LEG V"
+ },
+ "14:18": {
+  "cells": {},
+  "header": "Traits AL M"
+ },
+ "14:19": {
+  "cells": {},
+  "header": "Traits AL V"
+ }
+}

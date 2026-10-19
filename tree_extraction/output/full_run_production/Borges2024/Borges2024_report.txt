@@ -1,0 +1,123 @@
+  [semantic] left unmatched: 'Fecundity' vs 'Fecundity when fed Aphis fabae' (llm said different traits)
+  [semantic] left unmatched: 'Fecundity' vs 'Fecundity when fed Myzus persicae' (llm said different traits)
+  [semantic] left unmatched: 'Fecundity' vs 'Locality' (llm said different traits)
+  [semantic] left unmatched: 'Female weight' vs 'Female weight when fed Aphis fabae' (llm said different traits)
+  [semantic] left unmatched: 'Female weight' vs 'Female weight when fed Myzus persicae' (llm said different traits)
+  [semantic] left unmatched: 'Female weight' vs 'Male weight when fed Aphis fabae' (llm said different traits)
+  [semantic] left unmatched: 'Fertility' vs 'Fertility when fed Myzus persicae' (llm said different traits)
+  [semantic] left unmatched: 'Fertility' vs 'Fertility when fed Aphis fabae' (llm said different traits)
+  [semantic] left unmatched: 'Fertility' vs 'Locality' (llm said different traits)
+  [semantic] left unmatched: 'Immature development time' vs 'Immature development time when fed Aphis fabae' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Borges2024\Borges2024.xlsx  (23 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_production\Borges2024\Borges2024.csv  (22 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (4)
+  'A. fabae': no ground-truth name denotes this organism
+  'A. fabae 4.2 ± 0.1 a': no ground-truth name denotes this organism
+  'M. persicae': no ground-truth name denotes this organism
+  'M. persicae 4.3 ± 0.1 a': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Pre oviposition time' -> 'Pre-oviposition time when fed Aphis fabae'
+  'Sex ratio' -> 'Sex ratio when fed Myzus persicae'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 23
+  spurious, in scope  : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 18   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             18
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 23 MISSED ROWS MISSED
+  species not in prediction                  23
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Scymnus nubilus'                    (nothing similar in the prediction)   x23
+  -> 1 species mismatch explains 23 of 23 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Borges2024_misses.csv, Borges2024_misses_summary.json (23 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  fecundity when fed aphis fabae                    1     0   GT-ONLY
+  female weight when fed aphis fabae                1     0   GT-ONLY
+  fertility when fed aphis fabae                    1     0   GT-ONLY
+  immature survival when fed aphis fabae            1     0   GT-ONLY
+  immature development time when fed aphis fabae    1     0   GT-ONLY
+  incubation time when fed aphis fabae              1     0   GT-ONLY
+  male weight when fed aphis fabae                  1     0   GT-ONLY
+  oviposition period when fed aphis fabae           1     0   GT-ONLY
+  pre-oviposition time when fed aphis fabae         1     2   Δ+1 (split?)
+  oviposition rate when fed aphis fabae             1     0   GT-ONLY
+  doubling time                                     0     2   PRED-ONLY
+  fecundity                                         0     2   PRED-ONLY
+  fecundity when fed myzus persicae                 1     0   GT-ONLY
+  female weight when fed myzus persicae             1     0   GT-ONLY
+  fertility when fed myzus persicae                 1     0   GT-ONLY
+  immature survival when fed myzus persicae         1     0   GT-ONLY
+  immature development time when fed myzus persicae    1     0   GT-ONLY
+  incubation time when fed myzus persicae           1     0   GT-ONLY
+  male weight when fed myzus persicae               1     0   GT-ONLY
+  oviposition period when fed myzus persicae        1     0   GT-ONLY
+  pre-oviposition time when fed myzus persicae      1     0   GT-ONLY
+  oviposition rate when fed myzus persicae          1     0   GT-ONLY
+  sex ratio when fed myzus persicae                 2     2   
+  female weight                                     0     2   PRED-ONLY
+  fertility                                         0     2   PRED-ONLY
+  immature survival                                 0     2   PRED-ONLY
+  immature development time                         0     2   PRED-ONLY
+  locality                                          1     0   GT-ONLY
+  male weight                                       0     2   PRED-ONLY
+  oviposition period                                0     2   PRED-ONLY
+  oviposition rate                                  0     2   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'female weight when fed aphis fabae' vs pred 'female weight'                    sim=0.80
+    gt 'male weight when fed aphis fabae' vs pred 'male weight'                      sim=0.78
+    gt 'oviposition period when fed myzus persicae' vs pred 'oviposition period'               sim=0.78
+    gt 'oviposition rate when fed aphis fabae' vs pred 'oviposition rate'                 sim=0.77
+    gt 'immature development time when fed aphis fabae' vs pred 'immature development time'        sim=0.76
+    gt 'immature survival when fed myzus persicae' vs pred 'immature survival'                sim=0.75
+    gt 'fecundity when fed aphis fabae'   vs pred 'fecundity'                        sim=0.72
+    gt 'fertility when fed myzus persicae' vs pred 'fertility'                        sim=0.70
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     4    23   id+type+value
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     4    23   basis+id+type+value+stat+sex+stage
+             (18 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

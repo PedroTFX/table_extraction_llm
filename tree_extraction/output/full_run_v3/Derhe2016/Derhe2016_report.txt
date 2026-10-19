@@ -1,0 +1,77 @@
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Derhe2016\Derhe2016.xlsx  (179 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v3\Derhe2016\Derhe2016.csv  (237 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body mass (mg)' -> 'Body mass'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 164
+  missed (FN)         : 15
+  spurious, in scope  : 40   <- GT covers this trait: real errors
+  spurious, out of scope: 33   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.692 / 0.916 / 0.788   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.804 / 0.916 / 0.856   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.916   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             33
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    164  0.000  <-- low
+  measurementMethod             0     72  0.000  <-- low
+  measurementUnit               0     39  0.000  <-- low
+  measurementStatistic          0    164  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    164  0.000  <-- low
+  lifeStage                     0    164  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0     39  0.000  <-- low
+  sampleSizeUnit                0     39  0.000  <-- low
+  sampleTreatment               0     39  0.000  <-- low
+  samplingProtocol              0    164  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    164  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    164  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 15 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       15
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'mid-age restold restorationation old restoration rainforest' ->  'mid-age restoration'        x4
+     'young restold restorationation mid-age restold restorationation old restoration rainforest' ->  'young restoration'          x3
+     'old restoration rainforest' ->  'old restoration'            x3
+     'pasture young restold restorationation' ->  'pasture'                    x2
+     'mid-age restold restorationation old restoration' ->  'mid-age restoration'        x1
+     'mid-age restold restorationation rainforest' ->  'mid-age restoration'        x1
+  -> 6 substitutions explain 14 of 15 misses (93%) — systematic, not scattered
+
+  full miss detail saved -> Derhe2016_misses.csv, Derhe2016_misses_summary.json (15 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  diel activity                                    29    29   
+  behavioural guild                                39    39   
+  body mass                                        39    39   
+  diet breadth                                      0    33   PRED-ONLY
+  diet preference                                  33    34   Δ+1 (split?)
+  habitat preference                               39    63   Δ+24 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.804  0.916  0.856    164    40    15   id+type+value
+             (33 more spurious row(s) set aside as out-of-scope; strict P would be 0.692)
+  tags        0.000  0.000  0.000      0   204   179   basis+id+type+value+stat+sex+stage
+             (33 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.856 vs previous)
+             note: only 0/164 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
