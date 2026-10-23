@@ -563,10 +563,12 @@ def classify_folder(folder):
 
     # results: spreadsheet sharing the main's stem (tolerant of accent/case/space
     # differences, e.g. main 'Araújo2021.pdf' vs results 'Araujo2021.xlsx')
-    main_key = _norm_stem(main.stem)
+    # differences, e.g. main 'Araújo2021.pdf' vs results 'Araujo2021.xlsx'), or named
+    # after the folder when the main isn't ('Araujo_2021 (1).pdf' in folder Araujo2021)
+    keys = {_norm_stem(main.stem), _norm_stem(folder.name)}
     results = next((f for f in files
                     if f.suffix.lower() in {".xlsx", ".xls"}
-                    and _norm_stem(f.stem) == main_key
+                    and _norm_stem(f.stem) in keys
                     and f != main),
                    None)
 

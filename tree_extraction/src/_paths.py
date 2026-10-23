@@ -7,6 +7,7 @@ baseline) but never changes it. Importing this module puts source/ on the import
 path, so `import tables`, `from evaluate import load_xlsx` work from here.
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -14,8 +15,10 @@ SRC = Path(__file__).resolve().parent             # tree_extraction/src
 SUB = SRC.parent                                  # tree_extraction/
 REPO = SUB.parent                                 # the main project
 PIPELINE = REPO / "source"                        # the main extraction code
-PAPERS = REPO / "data" / "un_processed_papers"    # <paper>/<paper>_full.md + GT xlsx
-OUTPUT = SUB / "output"                           # every result of this subproject
+# TREE_PAPERS / TREE_OUTPUT run the whole subproject on another paper set (grit_run.py):
+# every stage caches by paper name, so another set needs its own output root
+PAPERS = Path(os.environ.get("TREE_PAPERS") or REPO / "data" / "un_processed_papers")
+OUTPUT = Path(os.environ.get("TREE_OUTPUT") or SUB / "output")
 
 if str(PIPELINE) not in sys.path:
     sys.path.insert(0, str(PIPELINE))

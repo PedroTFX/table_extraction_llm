@@ -473,6 +473,61 @@
 - Open: CortesGomez t6 (record, no names column), Orlofsk t3, Tran t3; Noriega trait codes
   (EL, HL) still undecoded (the scorer's value match maps them).
 
+## Table-kind and column questions (kind_tree.py, full_run_v7.py, 2026-10-21) — run 2026-10-22, best so far
+
+- From the person's table-by-table review of the 'trait columns mis-tagged' group (Attiwilli,
+  CortesGomez, Figueroa, Melo, Orlofsk; 29 tables): page https://claude.ai/artifact/1yvRVLdYnYJvXKMUQe59qy,
+  answers in output/column_review/reviews/, paper/table context in output/column_review/context.json.
+  ALL FIVE ARE HELD PAPERS: they are development papers now (held minus these = 50 papers).
+- Rules from the review: (1) numbers read off a figure give no rows (13 tables); (2) model /
+  test output gives no rows; (3) sampling, abundance, pollen load, site data are not traits;
+  (4) a column naming each row's statistic (Attiwilli 'Mean' / 'Range') is measurementStatistic;
+  (5) '(n=45)' in the organism label is the sample size; (6) a coded column can be the trait
+  (Melo 'FG', tagged caste 0.30); (7) model terms named after taxa are not organism rows.
+- kind_tree.py: Q-KIND per table (traits / figure / model / sampling / other; not traits >= 0.8
+  -> no rows), Q-COL per measurementValue column of a table read long WITHOUT the structure
+  step's confirmation (statistic / trait / label; applied only when all are sure), Q-ROLE per
+  caste / sex / lifeStage column (context / trait). Code: '(n=45)' split. Organism: a higher-rank
+  column v4's Q-UNITS turned down as 'groups' is taken back when Q-KIND says traits (sure) —
+  the GT records group summaries at that rank (Attiwilli families). Watch it on all papers.
+- Oracle (full_run_v7.py oracle: the review's answers in place of nimble, 6 folders), repeatable
+  scorer: CortesGomez2023 0 -> 0.538, Attiwilli2022 0 -> 0.455, Cortés-Goméz2023 0 -> 0.239
+  (its own GT file); Melo2021 stays 0 until decode + meaning run on 'FG' (inventory has the
+  legend: DCR = dominant arboreal ants…); Figueroa2021 0 (GT from an image table); Orlofsk2014 0
+  (t3 left unsure in the review).
+- Attiwilli mean rows still miss: printed '91.1 (61.29)', GT '91.1 ± 61.29' (a GT convention
+  for mean (SD)); 'Pooled' row is not in the GT (6 extra rows).
+- Run on nimble, all 109 (2026-10-22): mean F1 0.531 -> 0.530 (8 up, 6 down). Almost all of the
+  loss: Q-KIND called species lists 'sampling' (sure) though they print traits beside the counts
+  (Pereira t0, Nunes t2, McCune t0, Kratschmer t10-t13: 0.897/0.830/0.667/0.532 -> 0). First run
+  kept in output/full_run_v7/iter1/.
+- Q-ALSO (kind_tree.ask_also), asked only after a sure 'sampling': does the table also give each
+  organism a characteristic of its own? Sure yes -> kept (column questions then run). 17 tables
+  asked, 7 kept (the 4 papers above), 10 still dropped, none of those papers lost score.
+  Mean F1 0.531 -> 0.556 (repeatable 0.530 -> 0.555, micro 0.582 -> 0.584); 8 up, 3 down
+  (MacDonald 0.142 -> 0.089, Cappellari 1.000 -> 0.985 (+30 rows), Orr -0.001).
+  Caveat: the fix was made after seeing scores on all 109, held included: not a clean held number.
+- Zero-score papers, checked against GT / markdown / stage answers (2026-10-22): 12 have the GT
+  values outside any table (prose, or not in the markdown: Baine, Franzen, Hill, Quicke,
+  Ustjuzhanin, Xia, Xu, Wijas, Tonelli, Harmon, Figueroa, Fondjo mostly). Table data lost in:
+  Chichorro t9 (reader: too big), Brant t8 / Luo t4 (paper gate 'one' sure, per-table species
+  question never >= 0.8 -> no species), Tran t0/t1/t3 (structure 'summary' -> no rows; GT keeps
+  the means), Renoz t1 (sampling), Gomez (group label + abbreviated genus in species cells),
+  Borges (prey species taken as organism), Oliveira t14 (M/V columns, names unexpanded),
+  Orlofsk t3 (SD value read as the trait name), Kovacs2008 (traits-as-rows, LaTeX values),
+  Viza (0/1 codes undecoded).
+
+## GRIT test set (grit_run.py, data/grit_testing, 2026-10-22) — IN PROGRESS
+
+- 150 folders (99 share a name with un_processed_papers), GT xlsx copied in from data/GRITTesting.
+  MinerU done for 148 (Chichorro2022, V.Gomez2022 have no paper PDF). mineru_extract.classify_folder
+  now also takes the spreadsheet named after the folder as the GT (16 folders had a main PDF named
+  otherwise, e.g. 'Araujo_2021 (1).pdf', and the GT would have been converted into the markdown).
+- Whole chain head -> v7 -> score, in its own root (TREE_PAPERS / TREE_OUTPUT -> output_grit/).
+  Blind: the head reader's body check runs on every table (no GT-keyed tables), ~32-50 s per table.
+- Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
+  big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume: python grit_run.py all
+
 ## Open, smaller
 
 - HTML conversion loses colspans: Tsai2020 t1/t2 site labels ('Mt. Hehuan', 'Mt. Lala'…)
@@ -495,6 +550,11 @@
 - README: add head_tree.py, head_view.py, head_tree_exp.py and the `head` bench variant.
 
 ## GT decisions waiting on the user
+
+- Figueroa2021 Table S2 (plant families visited per bee species, with n): not in the GT, but
+  the person says it should have been extracted (2026-10-21) — add it to the GT?
+- Orlofsk2014 Appendix S2: the person is unsure how it should be read (GT: Total block only,
+  Mean and SD joined, Min and Max apart; per-site blocks unused).
 
 - 1,351 life-stage rows recorded as measurementType in 6 papers (GT_REVIEW_CANDIDATES.txt):
   move to lifeStage? what measurementType/value would they get?
