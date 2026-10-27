@@ -1,0 +1,78 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Zhang2022/Zhang_2022.xlsx  (360 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Zhang2022/Zhang2022.csv  (288 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Distance between eyes/mm' -> 'Distance between eyes'
+  'Eye diameter/mm' -> 'Eye diameter'
+  'Femur length/mm' -> 'Femur length'
+  "Weber's length/mm" -> "Weber's length"
+
+ROW-LEVEL (key match)
+  matched (TP)        : 267
+  missed (FN)         : 93
+  spurious, in scope  : 21   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.927 / 0.742 / 0.824   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.927 / 0.742 / 0.824   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.742   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    267  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    267  0.000  <-- low
+  measurementStatistic          0    267  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    267  0.000  <-- low
+  lifeStage                     0    267  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    267  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 93 MISSED ROWS MISSED
+  species not in prediction                  28
+  species present, trait missing             65
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (19 distinct), closest predicted name:
+     gt 'Camponotus parius Emery, 1890'     ~0.94~  pred 'Camponotus parius Emery, 1889'   x4
+     gt 'Acropyga yaeyamensis Terayama & Hashimoto, 1997'  ~0.95~  pred 'Acropyga yaeyamensis Terayama & Hashimoto, 1996'   x2
+     gt 'Aphaenogaster feae Emery, 1890'    ~0.94~  pred 'Aphaenogaster feae Emery, 1889'   x2
+     gt 'Anochetus subcoecus Forel,1910'    ~0.94~  pred 'Anochetus subcoecus Forel,1912'   x2
+     gt 'Aphaenogaster beccarii Emery, 1888'  ~0.94~  pred 'Aphaenogaster beccarii Emery, 1887'   x2
+     gt 'Camponotus albosparsus Bingham, 1904'  ~0.94~  pred 'Camponotus albosparsus Bingham, 1903'   x2
+  -> 6 species mismatches explain 14 of 93 misses (15%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     ''                                 x65
+  -> 1 missing trait explains 65 of 93 misses (70%) — systematic, not scattered
+
+  full miss detail saved -> Zhang2022_misses.csv, Zhang2022_misses_summary.json (93 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   72     0   GT-ONLY
+  distance between eyes                            72    72   
+  eye diameter                                     72    72   
+  femur length                                     72    72   
+  weber's length                                   72    72   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.927  0.742  0.824    267    21    93   id+type+value
+  tags        0.000  0.000  0.000      0   288   360   basis+id+type+value+stat+sex+stage
+             (F1 -0.824 vs previous)
+             note: only 0/267 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

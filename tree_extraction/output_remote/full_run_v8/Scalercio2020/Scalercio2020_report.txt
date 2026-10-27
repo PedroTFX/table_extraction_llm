@@ -1,0 +1,218 @@
+  [semantic] matched by values: 'wingsTSM' -> 'Wingspan'
+  [semantic] matched by values: 'hp' -> 'Number of Hostplant Genera'
+  [semantic] matched by values: 'Volt' -> 'Voltinism'
+  [semantic] matched by values: 'TSD' -> 'Overall Thermal Tolerance'
+  [semantic] matched by values: 'T95L' -> 'Lower Thermal Tolerance'
+  [semantic] matched by values: 'PSD' -> 'Overall Percipitation Tolerance'
+  [semantic] matched by values: 'P95L' -> 'Lower Percipitation Tolerance'
+  [semantic] matched by values: 'P95H' -> 'Higher Percipitation Tolerance'
+  [semantic] matched by values: 'Flight_Months' -> 'Length of the flight period'
+  [semantic] matched by values: 'T95H' -> 'Higher Thermal Tolerance'
+  [semantic] left unmatched: 'Last_Month' vs 'Month when adults fly' (llm said different traits)
+  [semantic] left unmatched: 'Pmean' vs 'Month when adults fly' (llm said different traits)
+  [semantic] left unmatched: 'Tmean' vs 'Month when adults fly' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Scalercio2020/Scalercio2020.xlsx  (1158 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Scalercio2020/Scalercio2020.csv  (2983 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 73 pair(s))
+  'Aglais_urticae' -> 'Aglais urticae'
+  'Anthocharis_cardamines' -> 'Anthocharis cardamines'
+  'Anthocharis_damone' -> 'Anthocharis damone'
+  'Aporia_crataegi' -> 'Aporia crataegi'
+  'Argynnis_adippe' -> 'Argynnis adippe'
+  'Argynnis_pandora' -> 'Argynnis pandora'
+  'Argynnis_paphia' -> 'Argynnis paphia'
+  'Aricia_agestis' -> 'Aricia agestis'
+  'Brenthis_daphne' -> 'Brenthis daphne'
+  'Brintesia_circe' -> 'Brintesia circe'
+  'Callophrys_rubi' -> 'Callophrys rubi'
+  'Carcharodus_alceae' -> 'Carcharodus alceae'
+  'Carcharodus_floccifer' -> 'Carcharodus floccifer'
+  'Celastrina_argiolus' -> 'Celastrina argiolus'
+  'Coenonympha_pamphilus' -> 'Coenonympha pamphilus'
+  'Colias_crocea' -> 'Colias crocea'
+  'Cupido_minimus' -> 'Cupido minimus'
+  'Cyaniris_semiargus' -> 'Cyaniris semiargus'
+  'Euchloe_ausonia' -> 'Euchloe ausonia'
+  'Eumedonia_eumedon' -> 'Eumedonia eumedon'
+  'Favonius_quercus' -> 'Favonius quercus'
+  'Gegenes_pumilio' -> 'Gegenes pumilio'
+  'Glaucopsyche_alexis' -> 'Glaucopsyche alexis'
+  'Gonepteryx_cleopatra' -> 'Gonepteryx cleopatra'
+  'Hesperia_comma' -> 'Hesperia comma'
+  'Hipparchia_fagi' -> 'Hipparchia fagi'
+  'Hipparchia_semele' -> 'Hipparchia semele'
+  'Hipparchia_statilinus' -> 'Hipparchia statilinus'
+  'Hyponephele_lycaon' -> 'Hyponephele lycaon'
+  'Iphiclides_podalirius' -> 'Iphiclides podalirius'
+  'Issoria_lathonia' -> 'Issoria lathonia'
+  'Lampides_boeticus' -> 'Lampides boeticus'
+  'Lasiommata_maera' -> 'Lasiommata maera'
+  'Lasiommata_megera' -> 'Lasiommata megera'
+  'Leptidea_sinapis' -> 'Leptidea sinapis'
+  'Leptotes_pirithous' -> 'Leptotes pirithous'
+  'Libythea_celtis' -> 'Libythea celtis'
+  'Limenitis_reducta' -> 'Limenitis reducta'
+  'Lycaena_alciphron' -> 'Lycaena alciphron'
+  'Lycaena_phlaeas' -> 'Lycaena phlaeas'
+  'Maniola_jurtina' -> 'Maniola jurtina'
+  'Melanargia_galathea' -> 'Melanargia galathea'
+  'Melanargia_russiae' -> 'Melanargia russiae'
+  'Melitaea_cinxia' -> 'Melitaea cinxia'
+  'Melitaea_didyma' -> 'Melitaea didyma'
+  'Melitaea_nevadensis' -> 'Melitaea nevadensis'
+  'Melitaea_phoebe' -> 'Melitaea phoebe'
+  'Muschampia_proto' -> 'Muschampia proto'
+  'Nymphalis_polychloros' -> 'Nymphalis polychloros'
+  'Ochlodes_sylvanus' -> 'Ochlodes sylvanus'
+  'Papilio_machaon' -> 'Papilio machaon'
+  'Pararge_aegeria' -> 'Pararge aegeria'
+  'Parnassius_apollo' -> 'Parnassius apollo'
+  'Parnassius_mnemosyne' -> 'Parnassius mnemosyne'
+  'Pieris_brassicae' -> 'Pieris brassicae'
+  'Pieris_mannii' -> 'Pieris mannii'
+  'Pieris_napi' -> 'Pieris napi'
+  'Pieris_rapae' -> 'Pieris rapae'
+  'Polygonia_c-album' -> 'Polygonia c-album'
+  'Polygonia_egea' -> 'Polygonia egea'
+  'Polyommatus_daphnis' -> 'Polyommatus daphnis'
+  'Pontia_edusa' -> 'Pontia edusa'
+  'Pseudophilotes_baton' -> 'Pseudophilotes baton'
+  'Pyrgus_armoricanus' -> 'Pyrgus armoricanus'
+  'Pyrgus_malvoides' -> 'Pyrgus malvoides'
+  'Pyronia_cecilia' -> 'Pyronia cecilia'
+  'Satyrium_ilicis' -> 'Satyrium ilicis'
+  'Thymelicus_acteon' -> 'Thymelicus acteon'
+  'Thymelicus_lineolus' -> 'Thymelicus lineolus'
+  'Thymelicus_sylvestris' -> 'Thymelicus sylvestris'
+  'Vanessa_atalanta' -> 'Vanessa atalanta'
+  'Vanessa_cardui' -> 'Vanessa cardui'
+  'Zerynthia_cassandra' -> 'Zerynthia cassandra'
+
+SEMANTIC measurementType REMAP (pred -> gt, 11 pair(s))
+  'First_Month' -> 'Month of adult first emergence'
+  'Flight_Months' -> 'Length of the flight period'
+  'P95H' -> 'Higher Percipitation Tolerance'
+  'P95L' -> 'Lower Percipitation Tolerance'
+  'PSD' -> 'Overall Percipitation Tolerance'
+  'T95H' -> 'Higher Thermal Tolerance'
+  'T95L' -> 'Lower Thermal Tolerance'
+  'TSD' -> 'Overall Thermal Tolerance'
+  'Volt' -> 'Voltinism'
+  'hp' -> 'Number of Hostplant Genera'
+  'wingsTSM' -> 'Wingspan'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 725
+  missed (FN)         : 433
+  spurious, in scope  : 78   <- GT covers this trait: real errors
+  spurious, out of scope: 2180   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.243 / 0.626 / 0.350   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.903 / 0.626 / 0.739   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.626   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           2180
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    725  0.000  <-- low
+  measurementMethod             0    725  0.000  <-- low
+  measurementUnit               0    652  0.000  <-- low
+  measurementStatistic          0    725  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    725  0.000  <-- low
+  lifeStage                     0    725  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     73  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    725  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 433 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             73
+  species+trait present, value differs      319
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'may'                        ->  '5'                          x18
+     'april'                      ->  '4'                          x15
+     'june'                       ->  '6'                          x11
+     'march'                      ->  '3'                          x10
+     'february'                   ->  '2'                          x6
+     'june'                       ->  '3'                          x4
+  -> 6 substitutions explain 64 of 433 misses (15%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Month when adults fly'            x73
+  -> 1 missing trait explains 73 of 433 misses (17%) — scattered; no single cause
+
+  full miss detail saved -> Scalercio2020_misses.csv, Scalercio2020_misses_summary.json (433 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  month of adult first emergence                   73    73   
+  month when adults fly                            73     0   GT-ONLY
+  dst diff                                          0    73   PRED-ONLY
+  gst diff                                          0    73   PRED-ONLY
+  hd diff                                           0    73   PRED-ONLY
+  divers                                            0    73   PRED-ONLY
+  dst                                               0    73   PRED-ONLY
+  dsta                                              0    73   PRED-ONLY
+  dstdrunk                                          0    73   PRED-ONLY
+  dstscnt93                                         0    73   PRED-ONLY
+  dstwolf                                           0    73   PRED-ONLY
+  first_emergence                                   0    73   PRED-ONLY
+  length of the flight period                      73    73   
+  number of hostplant genera                       73    73   
+  gst                                               0    73   PRED-ONLY
+  gsta                                              0    73   PRED-ONLY
+  gstscnt93                                         0    73   PRED-ONLY
+  had                                               0    73   PRED-ONLY
+  hd                                                0    73   PRED-ONLY
+  higher percipitation tolerance                   73    73   
+  higher thermal tolerance                         73    73   
+  last_month                                        0    73   PRED-ONLY
+  lower percipitation tolerance                    73    73   
+  lower thermal tolerance                          73    73   
+  overall percipitation tolerance                  73    73   
+  overall thermal tolerance                        73    73   
+  pc1ecop                                           0    73   PRED-ONLY
+  pc1feno                                           0    73   PRED-ONLY
+  pc1mobility                                       0    73   PRED-ONLY
+  pc2ecop                                           0    73   PRED-ONLY
+  pmean                                             0    73   PRED-ONLY
+  species                                           0    73   PRED-ONLY
+  tmean                                             0    73   PRED-ONLY
+  voltinism                                        73    73   
+  windmax                                           0    73   PRED-ONLY
+  windmean                                          0    73   PRED-ONLY
+  windsum                                           0    73   PRED-ONLY
+  winglaf                                           0    69   PRED-ONLY
+  wingshr                                           0    72   PRED-ONLY
+  wingspamp                                         0    68   PRED-ONLY
+  wingspan                                        355    73   Δ-282 (split?)
+  wingstsf                                          0    73   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'month when adults fly'            vs pred 'last_month'                       sim=0.59
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.903  0.626  0.739    725    78   433   id+type+value
+             (2180 more spurious row(s) set aside as out-of-scope; strict P would be 0.243)
+  tags        0.000  0.000  0.000      0   803  1158   basis+id+type+value+stat+sex+stage
+             (2180 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.739 vs previous)
+             note: only 0/725 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

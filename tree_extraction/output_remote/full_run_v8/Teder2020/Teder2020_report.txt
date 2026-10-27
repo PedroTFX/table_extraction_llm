@@ -1,0 +1,69 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Teder2020/Teder2020.xlsx  (3655 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Teder2020/Teder2020.csv  (3655 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Size' -> 'Body Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 3595
+  missed (FN)         : 60
+  spurious, in scope  : 60   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.984 / 0.984 / 0.984   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.984 / 0.984 / 0.984   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.984   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   3595  0.000  <-- low
+  measurementMethod             0    731  0.000  <-- low
+  measurementUnit               0    731  0.000  <-- low
+  measurementStatistic          0   3595  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   3595  0.000  <-- low
+  lifeStage                     0   3595  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   3595  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 60 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       60
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'g(i)'                       ->  'endophagous grass-feeders'  x21
+     'lichens'                    ->  'larva'                      x20
+     'w(c)'                       ->  'species feeding exclusively on coniferous trees' x18
+     'egg larva'                  ->  'el'                         x1
+  -> 4 substitutions explain 60 of 60 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Teder2020_misses.csv, Teder2020_misses_summary.json (60 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       731   731   
+  larval diet breadth                             731   731   
+  host type                                       731   731   
+  overwintering stage                             731   731   
+  voltinism                                       731   731   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.984  0.984  0.984   3595    60    60   id+type+value
+  tags        0.000  0.000  0.000      0  3655  3655   basis+id+type+value+stat+sex+stage
+             (F1 -0.984 vs previous)
+             note: only 0/3595 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

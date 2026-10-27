@@ -1,0 +1,79 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Cawood2026/Cawood_2026.xlsx  (327 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Cawood2026/Cawood2026.csv  (372 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Camponotus sp*.*' -> 'Camponotus sp.'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body length (mm)' -> 'Body length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 306
+  missed (FN)         : 21
+  spurious, in scope  : 21   <- GT covers this trait: real errors
+  spurious, out of scope: 45   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.823 / 0.936 / 0.876   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.936 / 0.936 / 0.936   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.936   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             45
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    306  0.000  <-- low
+  measurementMethod             0    306  0.000  <-- low
+  measurementUnit               0    132  0.000  <-- low
+  measurementStatistic          0    306  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    306  0.000  <-- low
+  lifeStage                     0    306  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    306  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 21 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       21
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'shallow wrinkles'           ->  'new recovery (cleared 10 years ago)' x11
+     'smooth cuticle'             ->  'pine plantations'           x10
+  -> 2 substitutions explain 21 of 21 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Cawood2026_misses.csv, Cawood2026_misses_summary.json (21 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      66    66   
+  spp code                                          0    45   PRED-ONLY
+  colour                                           66    66   
+  dispersal                                        66    66   
+  feeding guild                                    45    45   
+  nesting type                                     21    21   
+  no. of spines                                    21    21   
+  pilosity                                         21    21   
+  sculpturing                                      21    21   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.936  0.936  0.936    306    21    21   id+type+value
+             (45 more spurious row(s) set aside as out-of-scope; strict P would be 0.823)
+  tags        0.000  0.000  0.000      0   327   327   basis+id+type+value+stat+sex+stage
+             (45 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.936 vs previous)
+             note: only 0/306 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

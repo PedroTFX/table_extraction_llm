@@ -1,0 +1,76 @@
+  [semantic] matched by values: 'Weber s length' -> 'Weber’s length'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Leong2023/Leong2023.xlsx  (236 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Leong2023/Leong2023.csv  (236 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Weber s length' -> 'Weber’s length'
+  'relative eye position' -> 'Relative eye position'
+  'relative eye width' -> 'Relative eye width corrected by body size'
+  'relative hind femur' -> 'Relative hind femur length corrected by body size'
+  'relative mandible size' -> 'Relative mandible size'
+  'relative scape length' -> 'Relative scape length corrected by body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 234
+  missed (FN)         : 2
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.992 / 0.992 / 0.992   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.992 / 0.992 / 0.992   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.992   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    234  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    174  0.000  <-- low
+  measurementStatistic          0    234  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    234  0.000  <-- low
+  lifeStage                     0    234  0.000  <-- low
+  caste                         0    234  0.000  <-- low
+  sampleSizeValue              94    234  0.402  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0     60  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    234  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 2 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.99'                       ->  '0.6'                        x1
+     '0.6'                        ->  '0.99'                       x1
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Leong2023_misses.csv, Leong2023_misses_summary.json (2 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  relative eye width corrected by body size        28    28   
+  relative hind femur length corrected by body size   30    30   
+  relative scape length corrected by body size     30    30   
+  critical thermal maximum                         30    30   
+  relative eye position                            28    28   
+  habitat                                          30    30   
+  weber’s length                                   30    30   
+  relative mandible size                           30    30   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.992  0.992  0.992    234     2     2   id+type+value
+  tags        0.000  0.000  0.000      0   236   236   basis+id+type+value+stat+sex+stage
+             (F1 -0.992 vs previous)
+             note: only 0/234 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

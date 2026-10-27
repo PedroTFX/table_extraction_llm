@@ -1,0 +1,103 @@
+{
+ "4": {
+  "candidates": [
+   "Subfamily",
+   "Genus"
+  ],
+  "kinds": {
+   "Subfamily": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.995,
+     "other": 0.004
+    }
+   },
+   "Genus": {
+    "choice": "species",
+    "probs": {
+     "species": 0.564,
+     "part": 0.001,
+     "higher": 0.435,
+     "other": 0.0
+    },
+    "second": {
+     "choice": "yes",
+     "probs": {
+      "yes": 0.953,
+      "no": 0.047
+     }
+    }
+   }
+  },
+  "organism": "Genus",
+  "genus_from": null,
+  "outcome": "species column"
+ },
+ "6": {
+  "candidates": [
+   "Suborder",
+   "Family"
+  ],
+  "kinds": {
+   "Suborder": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.001,
+     "higher": 0.991,
+     "other": 0.008
+    }
+   },
+   "Family": {
+    "choice": "species",
+    "probs": {
+     "species": 0.977,
+     "part": 0.003,
+     "higher": 0.02,
+     "other": 0.001
+    }
+   }
+  },
+  "organism": "Family",
+  "genus_from": null,
+  "outcome": "species column"
+ },
+ "7": {
+  "candidates": [
+   "Taxon",
+   "Reference"
+  ],
+  "kinds": {
+   "Taxon": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.001,
+     "part": 0.001,
+     "higher": 0.998,
+     "other": 0.001
+    }
+   },
+   "Reference": {
+    "choice": "other",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.0,
+     "other": 0.999
+    }
+   }
+  },
+  "organism": null,
+  "genus_from": null,
+  "outcome": "no species column",
+  "units": {
+   "choice": "groups",
+   "probs": {
+    "units": 0.404,
+    "groups": 0.596
+   }
+  }
+ }
+}

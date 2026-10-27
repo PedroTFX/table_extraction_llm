@@ -1,0 +1,73 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/DawesGromadzki2008/Dawes-Gromadzki_2008.xlsx  (63 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/DawesGromadzki2008/DawesGromadzki2008.csv  (63 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 16 pair(s))
+  'Amitermes perelegans(Hill)' -> 'Amitermes perelegans'
+  'Coptotermes acinaciformisFroggatt' -> 'Coptotermes acinaciformis'
+  'Ephelotermes melachoma Miller' -> 'Ephelotermes melachoma'
+  'Ephelotermes taylori(Hill)' -> 'Ephelotermes taylori '
+  'Heterotermes vagus(Hill)' -> 'Heterotermes vagus'
+  'Heterotermes venustus(Hill)' -> 'Heterotermes venustus'
+  'Macrognathotermes errator Miller' -> 'Macrognathotermes errator'
+  'Macrognathotermes sunteri(Hill)' -> 'Macrognathotermes sunteri'
+  'Mastotermes darwiniensisFroggatt' -> 'Mastotermes darwiniensis'
+  'Microcerotermes boreus Hill' -> 'Microcerotermes boreus'
+  'Microcerotermes nervosus Hill' -> 'Microcerotermes nervosus'
+  'Microcerotermes serratus(Froggatt)' -> 'Microcerotermes serratus'
+  'Nasutitermes eucalypti(Mjöberg)' -> 'Nasutitermes eucalypti'
+  'Nasutitermes graveolus(Hill)' -> 'Nasutitermes graveolus'
+  'Nasutitermes longipennis(Hill)' -> 'Nasutitermes longipennis'
+  'Schedorhinotermes actuosus(Hill)' -> 'Schedorhinotermes actuosus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Feeding group†' -> 'Feeding group'
+  'Microhabitat found§' -> 'Microhabitat found'
+  'Nesting group‡' -> 'Nesting group'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 63
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     63  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     63  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     63  0.000  <-- low
+  lifeStage                     0     63  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     63  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  feeding group                                    16    16   
+  microhabitat found                               30    30   
+  nesting group                                    17    17   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     63     0     0   id+type+value
+  tags        0.000  0.000  0.000      0    63    63   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)
+             note: only 0/63 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

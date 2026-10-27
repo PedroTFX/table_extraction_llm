@@ -1,0 +1,96 @@
+{
+ "1": {
+  "labels": [
+   [
+    4,
+    "territories"
+   ],
+   [
+    12,
+    "Traits of adult stage"
+   ],
+   [
+    17,
+    "Traits of early stages"
+   ]
+  ],
+  "answers": {
+   "0": {
+    "choice": "place",
+    "probs": {
+     "higher": 0.0,
+     "genus": 0.0,
+     "organism": 0.009,
+     "trait": 0.001,
+     "place": 0.986,
+     "context": 0.001,
+     "treatment": 0.001,
+     "other": 0.001
+    },
+    "final": "place"
+   },
+   "1": {
+    "choice": "context",
+    "probs": {
+     "higher": 0.0,
+     "genus": 0.0,
+     "organism": 0.003,
+     "trait": 0.005,
+     "place": 0.0,
+     "context": 0.991,
+     "treatment": 0.0,
+     "other": 0.001
+    },
+    "final": "context",
+    "context": {
+     "choice": "lifeStage",
+     "probs": {
+      "caste": 0.001,
+      "sex": 0.007,
+      "lifeStage": 0.992
+     }
+    }
+   },
+   "2": {
+    "choice": "context",
+    "probs": {
+     "higher": 0.0,
+     "genus": 0.0,
+     "organism": 0.004,
+     "trait": 0.002,
+     "place": 0.0,
+     "context": 0.994,
+     "treatment": 0.0,
+     "other": 0.0
+    },
+    "final": "context",
+    "context": {
+     "choice": "lifeStage",
+     "probs": {
+      "caste": 0.0,
+      "sex": 0.0,
+      "lifeStage": 0.999
+     }
+    }
+   }
+  },
+  "series": {
+   "labels": [
+    0,
+    1,
+    2
+   ],
+   "choice": "context",
+   "probs": {
+    "higher": 0.002,
+    "genus": 0.001,
+    "organism": 0.042,
+    "trait": 0.012,
+    "place": 0.325,
+    "context": 0.605,
+    "treatment": 0.006,
+    "other": 0.007
+   }
+  }
+ }
+}

@@ -1,0 +1,100 @@
+  [semantic] matched by values: 'Bodysize (mm)' -> 'Forewing Length'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Eskilden2015/Eskilden2015.xlsx  (553 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Eskilden2015/Eskilden2015.csv  (884 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (15)
+  'Argyronome laodice': no ground-truth name denotes this organism
+  'Colias alfacariensis': no ground-truth name denotes this organism
+  'Colias croceus': no ground-truth name denotes this organism
+  'Colias hyale': no ground-truth name denotes this organism
+  'Colias palaeno': no ground-truth name denotes this organism
+  'Danaus plexippus': no ground-truth name denotes this organism
+  'Erebia ligea': no ground-truth name denotes this organism
+  'Glaucopsyche alexis': no ground-truth name denotes this organism
+  'Lasiommata maera': no ground-truth name denotes this organism
+  'Lasiommata petropolitana': no ground-truth name denotes this organism
+  'Lycaena alciphron': no ground-truth name denotes this organism
+  'Melanargia galathea': no ground-truth name denotes this organism
+  'Nymphalis vaualbum': no ground-truth name denotes this organism
+  'Nymphalis xanthomelas': no ground-truth name denotes this organism
+  'Parnassius apollo': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Bodysize (mm)' -> 'Forewing Length'
+  'Migratory' -> 'Migratory behaviour'
+  'Voltinity (generations/year)' -> 'Voltinity'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 472
+  missed (FN)         : 81
+  spurious, in scope  : 81   <- GT covers this trait: real errors
+  spurious, out of scope: 331   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.534 / 0.854 / 0.657   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.854 / 0.854 / 0.854   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.854   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            331
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    472  0.000  <-- low
+  measurementMethod             0    156  0.000  <-- low
+  measurementUnit               0     77  0.000  <-- low
+  measurementStatistic          0    472  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    472  0.000  <-- low
+  lifeStage                     0    472  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    472  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 81 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       81
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'non-migratory'              ->  'no'                         x71
+     'migratory'                  ->  'yes'                        x8
+     '15.3'                       ->  '15.25'                      x1
+     '15.8'                       ->  '15.833333333333334'         x1
+  -> 4 substitutions explain 81 of 81 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Eskilden2015_misses.csv, Eskilden2015_misses_summary.json (81 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  migratory behaviour                              79    79   
+  cluster                                           0    79   PRED-ONLY
+  hostplant distribution                            0    79   PRED-ONLY
+  species name (english)                            0    94   PRED-ONLY
+  forewing length                                  79    79   
+  habitat openness                                 79    79   
+  habitat specialization                           79    79   
+  hostplant specialization                         79    79   
+  ordination value                                  0    79   PRED-ONLY
+  overwintering strategy                           79    79   
+  voltinity                                        79    79   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.854  0.854  0.854    472    81    81   id+type+value
+             (331 more spurious row(s) set aside as out-of-scope; strict P would be 0.534)
+  tags        0.000  0.000  0.000      0   553   553   basis+id+type+value+stat+sex+stage
+             (331 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.854 vs previous)
+             note: only 0/472 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -1,0 +1,146 @@
+  [semantic] matched by values: 'F 3' -> 'Aquatic stages'
+  [semantic] left unmatched: 'Functional diversity' vs 'Dispersal' (llm said different traits)
+  [semantic] left unmatched: 'Functional diversity' vs 'Reproduction' (llm said different traits)
+  [semantic] left unmatched: 'Functional diversity' vs 'Life cycle duration' (llm said different traits)
+  [semantic] left unmatched: 'Protected' vs 'Reproduction' (llm said different traits)
+  [semantic] left unmatched: 'Protected' vs 'Potential number of reproduction cycles per year' (llm said different traits)
+  [semantic] left unmatched: 'Protected' vs 'Locomotion and substrate relation' (llm said different traits)
+  [semantic] left unmatched: 'Unprotected' vs 'Reproduction' (llm said different traits)
+  [semantic] left unmatched: 'Unprotected' vs 'Potential number of reproduction cycles per year' (llm said different traits)
+  [semantic] left unmatched: 'Unprotected' vs 'Locomotion and substrate relation' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Guareschi2015/Guareschi2015.xlsx  (1738 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Guareschi2015/Guareschi2015.csv  (3200 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Taxonomic diversity': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'F 3' -> 'Aquatic stages'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 73
+  missed (FN)         : 1665
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 3121   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.023 / 0.042 / 0.030   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.924 / 0.042 / 0.080   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.042   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           3121
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     73  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     73  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     73  0.000  <-- low
+  lifeStage                     0     73  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     73  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1665 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           1532
+  species+trait present, value differs      133
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'larva + pupa'               ->  'adult'                      x59
+     'egg'                        ->  'adult'                      x53
+     'adult'                      ->  'larva + pupa'               x11
+     'egg'                        ->  'larva + pupa'               x2
+     'egg'                        ->  '0'                          x2
+     'larva + pupa'               ->  '0'                          x2
+  -> 6 substitutions explain 129 of 1665 misses (8%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Locomotion and substrate relation' x234
+     'Food'                             x202
+     'Respiration'                      x186
+     'Dispersal'                        x181
+     'Feeding habits'                   x166
+     'Life cycle duration'              x139
+  -> 6 missing traits explain 1108 of 1665 misses (67%) — systematic, not scattered
+
+  full miss detail saved -> Guareschi2015_misses.csv, Guareschi2015_misses_summary.json (1665 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  a 1                                               0    79   PRED-ONLY
+  biol 1                                            0    79   PRED-ONLY
+  c 1                                               0    79   PRED-ONLY
+  d 1                                               0    79   PRED-ONLY
+  e 1                                               0    79   PRED-ONLY
+  f 1                                               0    79   PRED-ONLY
+  g 1                                               0    79   PRED-ONLY
+  h 1                                               0    79   PRED-ONLY
+  i 1                                               0    79   PRED-ONLY
+  j 1                                               0    79   PRED-ONLY
+  k 1                                               0    79   PRED-ONLY
+  a 2                                               0    79   PRED-ONLY
+  biol 2                                            0    79   PRED-ONLY
+  c 2                                               0    79   PRED-ONLY
+  d 2                                               0    79   PRED-ONLY
+  e 2                                               0    79   PRED-ONLY
+  f 2                                               0    79   PRED-ONLY
+  g 2                                               0    79   PRED-ONLY
+  h 2                                               0    79   PRED-ONLY
+  i 2                                               0    79   PRED-ONLY
+  j 2                                               0    79   PRED-ONLY
+  k 2                                               0    79   PRED-ONLY
+  a 3                                               0    79   PRED-ONLY
+  d 3                                               0    79   PRED-ONLY
+  e 3                                               0    79   PRED-ONLY
+  h 3                                               0    79   PRED-ONLY
+  i 3                                               0    79   PRED-ONLY
+  j 3                                               0    79   PRED-ONLY
+  k 3                                               0    79   PRED-ONLY
+  a 4                                               0    79   PRED-ONLY
+  h 4                                               0    79   PRED-ONLY
+  i 4                                               0    79   PRED-ONLY
+  j 4                                               0    79   PRED-ONLY
+  k 4                                               0    79   PRED-ONLY
+  h 5                                               0    79   PRED-ONLY
+  j 5                                               0    79   PRED-ONLY
+  j 6                                               0    79   PRED-ONLY
+  j 7                                               0    79   PRED-ONLY
+  j 8                                               0    79   PRED-ONLY
+  aquatic stages                                  206    79   Δ-127 (split?)
+  life cycle duration                             139     0   GT-ONLY
+  potential number of reproduction cycles per year  136     0   GT-ONLY
+  dispersal                                       181     0   GT-ONLY
+  functional diversity                              0    20   PRED-ONLY
+  feeding habits                                  166     0   GT-ONLY
+  food                                            202     0   GT-ONLY
+  resistance form                                 100     0   GT-ONLY
+  locomotion and substrate relation               234     0   GT-ONLY
+  maximal size                                    107     0   GT-ONLY
+  protected                                         0    10   PRED-ONLY
+  reproduction                                     81     0   GT-ONLY
+  respiration                                     186     0   GT-ONLY
+  unprotected                                       0    10   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.924  0.042  0.080     73     6  1665   id+type+value
+             (3121 more spurious row(s) set aside as out-of-scope; strict P would be 0.023)
+  tags        0.000  0.000  0.000      0    79  1738   basis+id+type+value+stat+sex+stage
+             (3121 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.080 vs previous)
+             note: only 0/73 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
