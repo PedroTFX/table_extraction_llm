@@ -1,0 +1,86 @@
+  [semantic] left unmatched: 'Nests in ground?^E' vs 'Body Size' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Lichtenberg2017/Lichtenberg2017.xlsx  (47 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Lichtenberg2017/Lichtenberg2017.csv  (131 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Colony size (# workers)^C' -> 'Colony size'
+  'Diet breadth^z' -> 'Diet breadth'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 15
+  missed (FN)         : 32
+  spurious, in scope  : 14   <- GT covers this trait: real errors
+  spurious, out of scope: 102   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.115 / 0.319 / 0.169   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.517 / 0.319 / 0.395   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.319   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            102
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     15  0.000  <-- low
+  measurementMethod             0     15  0.000  <-- low
+  measurementUnit               0     15  0.000  <-- low
+  measurementStatistic          0     15  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     15  0.000  <-- low
+  lifeStage                     0     15  0.000  <-- low
+  caste                         0     15  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     15  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 32 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             18
+  species+trait present, value differs       14
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '185'                        ->  '185^h'                      x1
+     '1092.84'                    ->  '1092.84^b,h,j,n,o,dd'       x1
+     '5442'                       ->  '5442^h'                     x1
+     '1710'                       ->  '1710^h'                     x1
+     '2950'                       ->  '2950^b,c'                   x1
+     '1500'                       ->  '1500^b,c,f,h'               x1
+  -> 6 substitutions explain 6 of 32 misses (19%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Size'                        x18
+  -> 1 missing trait explains 18 of 32 misses (56%) — scattered; no single cause
+
+  full miss detail saved -> Lichtenberg2017_misses.csv, Lichtenberg2017_misses_summary.json (32 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  name in brosi (2009)^a                            0    18   PRED-ONLY
+  head width (mm)^b                                 0    18   PRED-ONLY
+  body size                                        18     0   GT-ONLY
+  diet breadth                                     15    15   
+  colony size                                      14    14   
+  group foraging?^d                                 0    12   PRED-ONLY
+  nests in ground?^e                                0    18   PRED-ONLY
+  inquiline nesting?^e                              0    18   PRED-ONLY
+  nests in man-made structures?^e                   0    18   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.517  0.319  0.395     15    14    32   id+type+value
+             (102 more spurious row(s) set aside as out-of-scope; strict P would be 0.115)
+  tags        0.000  0.000  0.000      0    29    47   basis+id+type+value+stat+sex+stage
+             (102 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.395 vs previous)
+             note: only 0/15 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

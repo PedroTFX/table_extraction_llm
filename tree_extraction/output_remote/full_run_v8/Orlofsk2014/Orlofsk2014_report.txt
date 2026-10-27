@@ -1,0 +1,96 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Orlofsk2014/Orlofsk2014.xlsx  (198 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Orlofsk2014/Orlofsk2014.csv  (383 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 198
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 383   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            383
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 198 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            198
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Size'                        x198
+  -> 1 missing trait explains 198 of 198 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Orlofsk2014_misses.csv, Orlofsk2014_misses_summary.json (198 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  18427.04                                          0     6   PRED-ONLY
+  6477.05                                           0     8   PRED-ONLY
+  1889.1                                            0     8   PRED-ONLY
+  4499.11                                           0     7   PRED-ONLY
+  1203.82                                           0     5   PRED-ONLY
+  1939.13                                           0     5   PRED-ONLY
+  1372.62                                           0     7   PRED-ONLY
+  15148.23                                          0     2   PRED-ONLY
+  17669.82                                          0     7   PRED-ONLY
+  2697.21                                           0     8   PRED-ONLY
+  4839.21                                           0     8   PRED-ONLY
+  2103.22                                           0     8   PRED-ONLY
+  2250.29                                           0     8   PRED-ONLY
+  2269.27                                           0     8   PRED-ONLY
+  3026.24                                           0     5   PRED-ONLY
+  2801.57                                           0     8   PRED-ONLY
+  2819.31                                           0     8   PRED-ONLY
+  6246.29                                           0     5   PRED-ONLY
+  2934.78                                           0     8   PRED-ONLY
+  2971.6                                            0     5   PRED-ONLY
+  3062.47                                           0     5   PRED-ONLY
+  3534.92                                           0     7   PRED-ONLY
+  3613.94                                           0     8   PRED-ONLY
+  4747.93                                           0     5   PRED-ONLY
+  4789.97                                           0     7   PRED-ONLY
+  5168.9                                            0     2   PRED-ONLY
+  9341.55                                           0     7   PRED-ONLY
+  6233.66                                           0     8   PRED-ONLY
+  6779.65                                           0     2   PRED-ONLY
+  6818.69                                           0     6   PRED-ONLY
+  body size                                       198     0   GT-ONLY
+  q2 (median)                                       0    64   PRED-ONLY
+  q1                                                0    64   PRED-ONLY
+  q3                                                0    64   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   198   id+type+value
+             (383 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0   198   basis+id+type+value+stat+sex+stage
+             (383 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

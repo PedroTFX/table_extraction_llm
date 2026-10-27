@@ -1,0 +1,128 @@
+  [semantic] matched by values: 'net.sit' -> 'Nesting site'
+  [semantic] matched by values: 'col.siz' -> 'Colony size'
+  [semantic] matched by values: 'dom' -> 'Behavioral dominance'
+  [semantic] left unmatched: 'life_form' vs 'Lifestyle' (llm said different traits)
+  [semantic] left unmatched: 'life_form' vs 'Foraging strategy' (llm said different traits)
+  [semantic] left unmatched: 'life_form' vs 'Degree of worker polymorphism' (llm said different traits)
+  [semantic] left unmatched: 'nest_site' vs 'Lifestyle' (llm said different traits)
+  [semantic] left unmatched: 'nest_site' vs 'Foraging strategy' (llm said different traits)
+  [semantic] left unmatched: 'nest_site' vs 'Number of queens' (llm said different traits)
+  [semantic] left unmatched: 'rec' vs 'Degree of worker polymorphism' (llm said different traits)
+  [semantic] left unmatched: 'rec' vs 'Foraging strategy' (llm said different traits)
+  [semantic] left unmatched: 'rec' vs 'Lifestyle' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Vidal2023/Vidal2023.xlsx  (1004 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Vidal2023/Vidal2023.csv  (1100 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 14 pair(s))
+  'body_size' -> 'Body size'
+  'col.fou' -> 'Colony foundation type'
+  'col.siz' -> 'Colony size'
+  'diu' -> 'Diurnality'
+  'dom' -> 'Behavioral dominance'
+  'floral_specialization' -> 'Floral specialization'
+  'insects' -> 'Insects in diet'
+  'intertegular distance' -> 'Intertegular distance'
+  'liquids' -> 'Sugary liquids in diet'
+  'nes.num' -> 'Number of nests'
+  'net.sit' -> 'Nesting site'
+  'que.num' -> 'Number of queens'
+  'seeds' -> 'Seeds in diet'
+  'tongue_length' -> 'Tongue length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 219
+  missed (FN)         : 785
+  spurious, in scope  : 522   <- GT covers this trait: real errors
+  spurious, out of scope: 359   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.199 / 0.218 / 0.208   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.296 / 0.218 / 0.251   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.218   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            359
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    219  0.000  <-- low
+  measurementMethod             0     98  0.000  <-- low
+  measurementUnit               0     37  0.000  <-- low
+  measurementStatistic          0    219  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    219  0.000  <-- low
+  lifeStage                     0    219  0.000  <-- low
+  caste                         0    158  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     37  0.000  <-- low
+  verbatimLocality              0     37  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     37  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    219  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 785 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            256
+  species+trait present, value differs      529
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'no'                         ->  '0'                          x92
+     'yes'                        ->  'fire occurred 0 to 4 years ago' x91
+     'monodomy'                   ->  '0'                          x52
+     'monogyny'                   ->  '0'                          x47
+     'independent colony foundation (icf)' ->  'fire occurred 0 to 4 years ago' x46
+     'non-strictly diurnal (nsd)' ->  'nsd'                        x41
+  -> 6 substitutions explain 369 of 785 misses (47%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body size'                        x61
+     'Degree of worker polymorphism'    x61
+     'Foraging strategy'                x60
+     'Lifestyle'                        x37
+     'Nesting site'                     x37
+  -> 5 missing traits explain 256 of 785 misses (33%) — scattered; no single cause
+
+  full miss detail saved -> Vidal2023_misses.csv, Vidal2023_misses_summary.json (785 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abbr                                              0    98   PRED-ONLY
+  behavioral dominance                             60    60   
+  bod.siz                                           0    61   PRED-ONLY
+  body size                                        98    37   Δ-61 (split?)
+  colony foundation type                           61    61   
+  colony size                                      61    61   
+  degree of worker polymorphism                    61     0   GT-ONLY
+  insects in diet                                  61    61   
+  sugary liquids in diet                           61    61   
+  seeds in diet                                    61    61   
+  intertegular distance                            37    37   
+  diurnality                                       60    60   
+  floral specialization                            23    23   
+  foraging strategy                                60     0   GT-ONLY
+  life_form                                         0    37   PRED-ONLY
+  tongue length                                    37    37   
+  lifestyle                                        37     0   GT-ONLY
+  nest_site                                         0    37   PRED-ONLY
+  nesting site                                     98    61   Δ-37 (split?)
+  number of nests                                  64    60   Δ-4 (split?)
+  number of queens                                 64    61   Δ-3 (split?)
+  pol                                               0    61   PRED-ONLY
+  rec                                               0    60   PRED-ONLY
+  similar species                                   0     5   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.296  0.218  0.251    219   522   785   id+type+value
+             (359 more spurious row(s) set aside as out-of-scope; strict P would be 0.199)
+  tags        0.000  0.000  0.000      0   741  1004   basis+id+type+value+stat+sex+stage
+             (359 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.251 vs previous)
+             note: only 0/219 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

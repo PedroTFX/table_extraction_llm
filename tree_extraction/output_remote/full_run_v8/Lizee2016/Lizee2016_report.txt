@@ -1,0 +1,117 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Lizee2016/Lizee2016.xlsx  (147 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_remote/full_run_v8/Lizee2016/Lizee2016.csv  (364 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 41 pair(s))
+  'Anthocharis cardamines (Linnaeus, 1758)' -> 'Anthocharis cardamines'
+  'Argynnis paphia (Linnaeus, 1758)' -> 'Argynnis paphia'
+  'Aricia agestis (Denis & Schiffermüller, 1775)' -> 'Aricia agestis'
+  'Brintesia circe (Fabricius, 1775)' -> 'Brintesia circe'
+  'Cacyreus marshalli (Butler, 1898)' -> 'Cacyreus marshalli'
+  'Carcharodus alceae (Esper, 1780)' -> 'Carcharodus alceae'
+  'Celastrina argiolus (Linnaeus, 1758)' -> 'Celastrina argiolus'
+  'Charaxes jasius (Linnaeus, 1767)' -> 'Charaxes jasius'
+  'Coenonympha dorus (Esper, 1782)' -> 'Coenonympha dorus'
+  'Colias crocea (Geoffroy, 1785)' -> 'Colias crocea'
+  'Euchloe crameri (Butler, 1869)' -> 'Euchloe crameri'
+  'Everes argiades (Pallas, 1771)' -> 'Everes argiades'
+  'Gonopteryx cleopatra (Linnaeus, 1767)' -> 'Gonopteryx cleopatra'
+  'Iphiclides podalirius (Linnaeus, 1758)' -> 'Iphiclides podalirius'
+  'Lampides boeticus (Linnaeus, 1767)' -> 'Lampides boeticus'
+  'Lasiommata megera (Linnaeus, 1767)' -> 'Lasiommata megera'
+  'Leptotes pirithous (Linnaeus, 1767)' -> 'Leptotes pirithous'
+  'Libythea celtis (Laicharting, 1782)' -> 'Libythea celtis'
+  'Limenitis reducta (Staudinger, 1901)' -> 'Limenitis reducta'
+  'Lycaena phlaeas (Linnaeus, 1761)' -> 'Lycaena phlaeas'
+  'Maniola jurtina (Linnaeus, 1758)' -> 'Maniola jurtina'
+  'Melanargia galathea (Linnaeus, 1758)' -> 'Melanargia galathea'
+  'Melitaea didyma (Esper, 1779)' -> 'Melitaea didyma'
+  'Papilio machaon (Linnaeus, 1758)' -> 'Papilio machaon'
+  'Pararge aegeria (Linnaeus, 1758)' -> 'Pararge aegeria'
+  'Pieris brassicae (Linnaeus, 1758)' -> 'Pieris brassicae'
+  'Pieris mannii (Linnaeus, 1758)' -> 'Pieris mannii'
+  'Pieris napi (Linnaeus, 1758)' -> 'Pieris napi'
+  'Pieris rapae (Linnaeus, 1758)' -> 'Pieris rapae'
+  'Plebejus argus (Linnaeus, 1758)' -> 'Plebejus argus'
+  'Polygonia c-album (Linnaeus, 1758)' -> 'Polygonia c-album'
+  'Polyommatus icarus (Rottemburg, 1775)' -> 'Polyommatus icarus'
+  'Pontia daplidice (Linnaeus, 1758)' -> 'Pontia daplidice'
+  'Pseudophilotes baton (Bergsträsser, 1779)' -> 'Pseudophilotes baton'
+  'Pyrgus cirsii (Rambur, 1839)' -> 'Pyrgus cirsii'
+  'Pyronia bathseba (Fabricius, 1793)' -> 'Pyronia bathseba'
+  'Pyronia cecilia (Vallantin, 1894)' -> 'Pyronia cecilia'
+  'Satyrium esculi (Hübner, 1804)' -> 'Satyrium esculi'
+  'Thymelicus acteon (Rottenburg, 1775)' -> 'Thymelicus acteon'
+  'Vanessa atalanta (Linnaeus, 1758)' -> 'Vanessa atalanta'
+  'Vanessa cardui (Linnaeus, 1758)' -> 'Vanessa cardui'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 105
+  missed (FN)         : 42
+  spurious, in scope  : 54   <- GT covers this trait: real errors
+  spurious, out of scope: 205   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.288 / 0.714 / 0.411   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.660 / 0.714 / 0.686   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.714   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            205
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    105  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    105  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    105  0.000  <-- low
+  lifeStage                     0    105  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a   +73 where GT blank
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    105  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 42 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       42
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'univoltine'                 ->  'uni- or bivoltine'          x18
+     'bivoltine'                  ->  'uni- or bivoltine'          x18
+     'bivoltine'                  ->  'univoltine'                 x5
+     'univoltine'                 ->  'bivoltine'                  x1
+  -> 4 substitutions explain 42 of 42 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Lizee2016_misses.csv, Lizee2016_misses_summary.json (42 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 1)                               0    41   PRED-ONLY
+  larval diet #2                                    0    41   PRED-ONLY
+  functional group #2                               0    41   PRED-ONLY
+  voltinism #2                                      0    41   PRED-ONLY
+  larval diet                                      41    53   Δ+12 (split?)
+  functional group                                 41    53   Δ+12 (split?)
+  specialization rank                               0    41   PRED-ONLY
+  voltinism                                        65    53   Δ-12 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.660  0.714  0.686    105    54    42   id+type+value
+             (205 more spurious row(s) set aside as out-of-scope; strict P would be 0.288)
+  tags        0.000  0.000  0.000      0   159   147   basis+id+type+value+stat+sex+stage
+             (205 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.686 vs previous)
+             note: only 0/105 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

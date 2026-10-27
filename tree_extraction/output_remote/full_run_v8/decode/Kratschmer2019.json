@@ -1,0 +1,1698 @@
+{
+ "0:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "0:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "0:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "0:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:1": {
+  "cells": {
+   "Ground nesting": {
+    "term": null,
+    "parts": [
+     "Ground nesting"
+    ],
+    "options": {
+     "Ground nesting": {
+      "evidence": "explicit",
+      "labels": [
+       "Majority of wild bee species in Europe excavate nest in the ground"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Ground nesting | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Above-ground nesting": {
+    "term": null,
+    "parts": [
+     "Above-ground nesting"
+    ],
+    "options": {
+     "Above-ground nesting": {
+      "evidence": "explicit",
+      "labels": [
+       "Nesting in pre-existing cavities, plant stems, dead wood (incl. Bombus spp.)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Above-ground nesting | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Parasitic": {
+    "term": null,
+    "parts": [
+     "Parasitic"
+    ],
+    "options": {
+     "Parasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "♀ lay their eggs in nests of specific host species",
+       "See above"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Parasitic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Solitary": {
+    "term": null,
+    "parts": [
+     "Solitary"
+    ],
+    "options": {
+     "Solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Eusocial": {
+    "term": null,
+    "parts": [
+     "Eusocial"
+    ],
+    "options": {
+     "Eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Eusocial | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Polylectic": {
+    "term": null,
+    "parts": [
+     "Polylectic"
+    ],
+    "options": {
+     "Polylectic": {
+      "evidence": "explicit",
+      "labels": [
+       "Pollen generalists: Pollen is collected on different plant taxa but species can show a certain degree of flower constancy"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Polylectic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Oligolectic": {
+    "term": null,
+    "parts": [
+     "Oligolectic"
+    ],
+    "options": {
+     "Oligolectic": {
+      "evidence": "explicit",
+      "labels": [
+       "Pollen specialists: Pollen is collected from closely related or single plant taxa"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Oligolectic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u15"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.892,
+    "p1": 0.001,
+    "several": 0.09,
+    "none": 0.017
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "1:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "3:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:2": {
+  "cells": {
+   "A": {
+    "term": "Above-ground nesting",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "initial",
+      "labels": [
+       "Above-ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "initial"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.966,
+      "word": 0.034
+     },
+     "A": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "A | QB": {}
+    }
+   },
+   "G": {
+    "term": "Ground nesting",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "initial",
+      "labels": [
+       "Ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "initial"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.981,
+      "word": 0.019
+     },
+     "G": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "G | QB": {}
+    }
+   },
+   "P": {
+    "term": "Parasitic",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Parasitic"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "initial"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.962,
+      "word": 0.038
+     },
+     "P": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u2",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.846,
+    "several": 0.105,
+    "none": 0.048
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "10:3": {
+  "cells": {
+   "ol": {
+    "term": "Oligolectic",
+    "parts": [
+     "ol"
+    ],
+    "options": {
+     "ol": {
+      "evidence": "initial",
+      "labels": [
+       "Oligolectic"
+      ]
+     }
+    },
+    "evidence": {
+     "ol": "initial"
+    },
+    "probs": {
+     "ol | QK": {
+      "code": 0.927,
+      "word": 0.073
+     },
+     "ol": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "ol | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": null
+  }
+ },
+ "10:4": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "eusocial": {
+    "term": null,
+    "parts": [
+     "eusocial"
+    ],
+    "options": {
+     "eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "eusocial | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "parasitic": {
+    "term": null,
+    "parts": [
+     "parasitic"
+    ],
+    "options": {
+     "parasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "♀ lay their eggs in nests of specific host species",
+       "See above"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "parasitic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u15"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.404,
+    "p1": 0.102,
+    "several": 0.288,
+    "none": 0.206
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "10:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 39, printed whole: 0, table footnote: 0"
+ },
+ "10:75": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:77": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:78": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:79": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:80": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:81": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:82": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:83": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:84": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:85": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "10:86": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:2": {
+  "cells": {
+   "G": {
+    "term": "Ground nesting",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "initial",
+      "labels": [
+       "Ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "initial"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "G": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "G | QB": {}
+    }
+   },
+   "A": {
+    "term": "Above-ground nesting",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "initial",
+      "labels": [
+       "Above-ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "initial"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.935,
+      "word": 0.065
+     },
+     "A": {
+      "e0": 0.99,
+      "keep": 0.01
+     },
+     "A | QB": {}
+    }
+   },
+   "P": {
+    "term": "Parasitic",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Parasitic"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "initial"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.97,
+      "word": 0.03
+     },
+     "P": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u2",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.002,
+    "p1": 0.696,
+    "several": 0.126,
+    "none": 0.175
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "11:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:4": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "eusocial": {
+    "term": null,
+    "parts": [
+     "eusocial"
+    ],
+    "options": {
+     "eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "eusocial | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "parasitic": {
+    "term": null,
+    "parts": [
+     "parasitic"
+    ],
+    "options": {
+     "parasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "♀ lay their eggs in nests of specific host species",
+       "See above"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "parasitic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u15"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.384,
+    "p1": 0.094,
+    "several": 0.375,
+    "none": 0.146
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "11:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:55": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:56": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:57": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:58": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "11:70": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 11, printed whole: 0, table footnote: 0"
+ },
+ "12:2": {
+  "cells": {
+   "G": {
+    "term": "Ground nesting",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "initial",
+      "labels": [
+       "Ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "initial"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.984,
+      "word": 0.016
+     },
+     "G": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "G | QB": {}
+    }
+   },
+   "A": {
+    "term": "Above-ground nesting",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "initial",
+      "labels": [
+       "Above-ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "initial"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.925,
+      "word": 0.075
+     },
+     "A": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "A | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u2",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.003,
+    "p1": 0.814,
+    "several": 0.106,
+    "none": 0.078
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "12:3": {
+  "cells": {
+   "ol": {
+    "term": "Oligolectic",
+    "parts": [
+     "ol"
+    ],
+    "options": {
+     "ol": {
+      "evidence": "initial",
+      "labels": [
+       "Oligolectic"
+      ]
+     }
+    },
+    "evidence": {
+     "ol": "initial"
+    },
+    "probs": {
+     "ol | QK": {
+      "code": 0.873,
+      "word": 0.127
+     },
+     "ol": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "ol | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": null
+  }
+ },
+ "12:4": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "eusocial": {
+    "term": null,
+    "parts": [
+     "eusocial"
+    ],
+    "options": {
+     "eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "eusocial | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u15",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.044,
+    "p1": 0.553,
+    "several": 0.111,
+    "none": 0.292
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "12:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 11, printed whole: 0, table footnote: 0"
+ },
+ "12:8": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:9": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:10": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:16": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:18": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:19": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:20": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:21": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:22": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:23": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:24": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:25": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:26": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:27": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:28": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:29": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:30": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:31": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:32": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:33": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:34": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:35": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:36": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:40": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:42": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:43": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:44": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:45": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:46": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:55": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:56": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:57": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:58": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:61": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:62": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:63": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:64": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:68": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:69": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:70": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:71": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:72": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:73": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:74": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:75": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "12:76": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 14, printed whole: 0, table footnote: 0"
+ },
+ "13:2": {
+  "cells": {
+   "G": {
+    "term": "Ground nesting",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "initial",
+      "labels": [
+       "Ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "initial"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "G": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "G | QB": {}
+    }
+   },
+   "A": {
+    "term": "Above-ground nesting",
+    "parts": [
+     "A"
+    ],
+    "options": {
+     "A": {
+      "evidence": "initial",
+      "labels": [
+       "Above-ground nesting"
+      ]
+     }
+    },
+    "evidence": {
+     "A": "initial"
+    },
+    "probs": {
+     "A | QK": {
+      "code": 0.952,
+      "word": 0.048
+     },
+     "A": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "A | QB": {}
+    }
+   },
+   "P": {
+    "term": "Parasitic",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "initial",
+      "labels": [
+       "Parasitic"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "initial"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "P": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "P | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u2",
+    "u23"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.897,
+    "several": 0.069,
+    "none": 0.033
+   },
+   "chosen": [
+    "u23"
+   ]
+  }
+ },
+ "13:3": {
+  "cells": {
+   "ol": {
+    "term": "Oligolectic",
+    "parts": [
+     "ol"
+    ],
+    "options": {
+     "ol": {
+      "evidence": "initial",
+      "labels": [
+       "Oligolectic"
+      ]
+     }
+    },
+    "evidence": {
+     "ol": "initial"
+    },
+    "probs": {
+     "ol | QK": {
+      "code": 0.927,
+      "word": 0.073
+     },
+     "ol": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "ol | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": null
+  }
+ },
+ "13:4": {
+  "cells": {
+   "solitary": {
+    "term": null,
+    "parts": [
+     "solitary"
+    ],
+    "options": {
+     "solitary": {
+      "evidence": "explicit",
+      "labels": [
+       "solitary species",
+       "Nest establishment and resource collection by each ♀ alone"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "solitary | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "eusocial": {
+    "term": null,
+    "parts": [
+     "eusocial"
+    ],
+    "options": {
+     "eusocial": {
+      "evidence": "explicit",
+      "labels": [
+       "eusocial species",
+       "Division of tasks: egg-laying ♀ and ♀ that collect resources (e.g., bumble bees, some Halictidae species)"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "eusocial | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   },
+   "parasitic": {
+    "term": null,
+    "parts": [
+     "parasitic"
+    ],
+    "options": {
+     "parasitic": {
+      "evidence": "explicit",
+      "labels": [
+       "♀ lay their eggs in nests of specific host species",
+       "See above"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "parasitic | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23",
+    "u15"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.345,
+    "p1": 0.063,
+    "several": 0.186,
+    "none": 0.406
+   }
+  }
+ },
+ "13:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 14, printed whole: 0, table footnote: 0"
+ },
+ "13:22": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:25": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:26": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:28": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:33": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:54": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:58": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:70": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:72": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:73": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:74": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:75": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:76": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "_endings_done": true,
+ "12:52": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:23": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:24": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:27": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:29": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:30": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:31": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:32": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:37": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "13:38": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ }
+}
