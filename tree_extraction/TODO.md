@@ -1,6 +1,6 @@
 # TODO — tree_extraction
 
-## Done (frozen in `src/head_tree.py`, 2026-10-08)
+## Done (frozen in `src/*/head_tree.py`, 2026-10-08)
 
 1. **Head reader frozen** with:
    - Q1 variant B (one first-record question on whole rows) — 49/51 first records held-out
@@ -224,7 +224,7 @@
 - Still open from the list: decoding cell CODES via legends (Graf 'SO', 'G'; coded
   names 1–10), and species in hard places (single-species papers, sections).
 
-## Decoder v1 (`src/decoder.py`, 2026-10-12)
+## Decoder v1 (`src/*/decoder.py`, 2026-10-12)
 
 - gather (code: paragraphs naming the column's code-shaped values in any printed form,
   table footnote rows, small tables) → gemma e4b lists legend entries {variable, code,
@@ -260,7 +260,7 @@
      Guariento): `where` calls it 'same sentence' by accident — score as no legend.
   Outputs: output/decode_key/{all/, decoder_v1/, prod_rerun_all/}.
 
-## Decoder v2 (`src/decoder_v2.py`, FROZEN 2026-10-12 as run v2d) — v1 kept as baseline
+## Decoder v2 (`src/*/decoder_v2.py`, FROZEN 2026-10-12 as run v2d) — v1 kept as baseline
 
 - Key corrected first: a 0/1 code whose GT term is yes/no counts as printed only in a
   definition shape ('1 = yes'), else 'not in the paper (binary convention)' (12 pairs).
@@ -526,7 +526,16 @@
 - Whole chain head -> v7 -> score, in its own root (TREE_PAPERS / TREE_OUTPUT -> output_grit/).
   Blind: the head reader's body check runs on every table (no GT-keyed tables), ~32-50 s per table.
 - Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
-  big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume: python grit_run.py all
+  big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume (from src/v7): python grit_run.py all
+
+## Source layout (2026-10-24)
+
+- src/ split into one folder per version (full_run, v3, v4, v5, v6, v7) plus experiments/: each
+  folder holds its entry file and every module it imports (copies). full_run_v3..v7 are
+  standalone (no version imports another); checked: each version's assemble from its folder
+  gives the saved output/full_run_vN CSVs byte for byte (v3, v4, v6, v7; v5's saved output
+  predates later shared-module changes, the old v5 code gives the same as the new one).
+  A fix to a shared module must be copied into each folder that should get it.
 
 ## Open, smaller
 
