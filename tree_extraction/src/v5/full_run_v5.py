@@ -289,12 +289,16 @@ def base_species_of(t, fields, org, rec):
     return s
 
 
-def assemble_csvs(papers, root, plan_of, species_of, decoded):
+def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None):
     """One CSV row per species x trait, in production's columns, -> root/<paper>/<paper>.csv.
       wide   each column tagged measurementType: type = its name, spelled out by the meaning
              step when it resolved; value = the cell, decoded
       long   a column tagged measurementType holding names + columns tagged measurementValue
-      row fields (sex, place, date, statistic, unit, ...) and the tree's extra tags copied on."""
+      row fields (sex, place, date, statistic, unit, ...) and the tree's extra tags copied on.
+      section_of (v8 only) f(t, rec) -> {"fields": {...}, "trait": label|None}: row fields the
+             section labels above the record fill when the row has none, and a trait label as
+             the type of its wide cells (the column name kept in measurementRemarks when the
+             table has several trait columns)."""
     head = head_runs()
     n_rows = collections.Counter()
     for paper in papers:
@@ -309,6 +313,7 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded):
             long_types = [c for c in t.columns if fields.get(c.name) == "measurementType"]
             long_vals = [c for c in t.columns if fields.get(c.name) == "measurementValue"]
             is_long = bool(long_types and long_vals)
+            n_traits = sum(fields.get(c.name) in TRAITS for c in t.columns)
             for rec in t.records:
                 s = species_of(t, fields, org, rec)
                 if not s:
@@ -320,6 +325,10 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded):
                         v = _clean(rec.get(col.name))
                         if v and not base.get(f):
                             base[f] = v
+                sec_info = section_of(t, rec) if section_of else {}
+                for f, v in (sec_info.get("fields") or {}).items():
+                    if v and not base.get(f):
+                        base[f] = v
                 if is_long:
                     tcol = long_types[0]
                     typ = _clean(rec.get(tcol.name))
@@ -337,9 +346,11 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded):
                     v = _clean(rec.get(col.name))
                     if not v:
                         continue
-                    row = {**base, "measurementType": names.get(col.name) or col.name,
+                    row = {**base, "measurementType": sec_info.get("trait") or names.get(col.name) or col.name,
                            "measurementValue": decoded(dec, t.table_index, col.index, v)}
                     row.update({k: x for k, x in (xtags.get(col.name) or {}).items() if k in CSV_FIELDS})
+                    if sec_info.get("trait") and n_traits > 1 and not row.get("measurementRemarks"):
+                        row["measurementRemarks"] = col.name
                     rows.append(row)
         write_csv(root / paper / f"{paper}.csv", rows)
         n_rows[paper] = len(rows)
@@ -610,7 +621,7 @@ def plan(paper, head, root, *, tags=FULL, species=False, decisions=False, traits
     return out
 
 
-def species_fn(root, decisions=False):
+def species_fn(root, decisions=False, sections=False):
     """f(t, fields, org, rec) -> the record's species, by the same layers as plan():
     the organism decision (v4, tables plan() gave t.paper), else
     the tagged organism column (base); else the species step's name (v3)."""

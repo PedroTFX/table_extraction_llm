@@ -25,6 +25,7 @@ src/
   v5/            full_run_v5.py: + trait-column questions (NOT adopted) — 28
   v6/            full_run_v6.py: v4 + long / wide / no rows per table — 28
   v7/            full_run_v7.py: v6 + table kind, Q-ALSO, doubtful columns; grit_run.py — 30
+  v8/            full_run_v8.py: v7 + section labels (section_tree.py); grit_run.py — 31
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```

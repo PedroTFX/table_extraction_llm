@@ -528,6 +528,19 @@
 - Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
   big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume (from src/v7): python grit_run.py all
 
+## Section step (v8, section_tree.py, 2026-10-27) — BUILT, not run yet
+
+- Design: output/eval_split/DESIGN_sections.md (written before any run). src/v8 = v7 + sections:
+  head_to_table keeps every section label (head cells too) as t.sections and each record's
+  rec['_sections']; Q-SECTION per label (higher / genus / organism / trait / place / context /
+  treatment / other), Q-CONTEXT, Q-SERIES on a clash; applied per record from the nearest label
+  of each kind above it. Replaces the organism step's 12-label genus path.
+- Checked without a model: v8 with no answers gives v7's CSVs byte for byte (109 papers); v3..v7
+  regenerated with the optional assembly hook still give their saved CSVs. 109 papers: 74 tables,
+  231 labels, 3736 records under a label.
+- TO RUN on the remote PC only (the user: not on this PC): grit set, v8:sections, assemble, score;
+  compare with grit v7 (mean F1 0.517).
+
 ## Source layout (2026-10-24)
 
 - src/ split into one folder per version (full_run, v3, v4, v5, v6, v7) plus experiments/: each
