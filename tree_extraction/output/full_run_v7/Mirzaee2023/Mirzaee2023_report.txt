@@ -1,0 +1,106 @@
+  [semantic] left unmatched: 'Category' vs 'Country' (llm said different traits)
+  [semantic] left unmatched: 'Category' vs 'Ootheca incubation duration' (llm said different traits)
+  [semantic] left unmatched: 'Category' vs 'Ootheca SD incubation duration' (llm said different traits)
+  [semantic] left unmatched: 'Description' vs 'Ootheca incubation duration' (llm said different traits)
+  [semantic] left unmatched: 'Description' vs 'Ootheca SD incubation duration' (llm said different traits)
+  [semantic] left unmatched: 'Description' vs 'Country' (llm said different traits)
+  [semantic] left unmatched: 'Length (mm)' vs 'Ootheca length' (llm said different traits)
+  [semantic] left unmatched: 'Length (mm)' vs 'Ootheca SD length' (llm said different traits)
+  [semantic] left unmatched: 'Length (mm)' vs 'Ootheca n eggs' (llm said different traits)
+  [semantic] left unmatched: 'Ootheca' vs 'Ootheca width' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Mirzaee2023\Mirzaee2023.xlsx  (40 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v7\Mirzaee2023\Mirzaee2023.csv  (95 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Incubation duration (days)' -> 'Ootheca incubation duration'
+  'n hatched nymphs' -> 'Ootheca n hatched nymphs'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 10
+  missed (FN)         : 30
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 83   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.105 / 0.250 / 0.148   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.833 / 0.250 / 0.385   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.250   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             83
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     10  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      5  0.000  <-- low
+  measurementStatistic          0     10  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     10  0.000  <-- low
+  lifeStage                     0     10  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     10  0.000  <-- low
+  samplingProtocol              0     10  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      8  0.000  <-- low
+  associatedReferences          0     10  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 30 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             30
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Country'                          x10
+     'Ootheca length'                   x5
+     'Ootheca n eggs'                   x5
+     'Ootheca width'                    x5
+     'Ootheca SD incubation duration'   x1
+     'Ootheca SD length'                x1
+  -> 6 missing traits explain 27 of 30 misses (90%) — systematic, not scattered
+
+  full miss detail saved -> Mirzaee2023_misses.csv, Mirzaee2023_misses_summary.json (30 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  category                                          0    28   PRED-ONLY
+  country                                          10     0   GT-ONLY
+  description                                       0     3   PRED-ONLY
+  ootheca incubation duration                       5     6   Δ+1 (split?)
+  ootheca sd incubation duration                    1     0   GT-ONLY
+  n eggs                                            0     6   PRED-ONLY
+  ootheca n eggs                                    5     0   GT-ONLY
+  ootheca sd n eggs                                 1     0   GT-ONLY
+  ootheca n hatched nymphs                          5     6   Δ+1 (split?)
+  ootheca sd n hatched nymphs                       1     0   GT-ONLY
+  length (mm)                                       0     6   PRED-ONLY
+  ootheca length                                    5     0   GT-ONLY
+  ootheca sd length                                 1     0   GT-ONLY
+  ootheca                                           0     6   PRED-ONLY
+  ootheca sd width                                  1     0   GT-ONLY
+  ootheca width                                     5     0   GT-ONLY
+  value                                             0    28   PRED-ONLY
+  width (mm)                                        0     6   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'ootheca n eggs'                   vs pred 'n eggs'                           sim=0.86
+    gt 'ootheca width'                    vs pred 'width (mm)'                       sim=0.83
+    gt 'ootheca length'                   vs pred 'ootheca'                          sim=0.83
+    gt 'ootheca sd length'                vs pred 'length (mm)'                      sim=0.72
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.833  0.250  0.385     10     2    30   id+type+value
+             (83 more spurious row(s) set aside as out-of-scope; strict P would be 0.105)
+  tags        0.000  0.000  0.000      0    12    40   basis+id+type+value+stat+sex+stage
+             (83 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.385 vs previous)
+             note: only 0/10 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

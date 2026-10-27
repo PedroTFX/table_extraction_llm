@@ -1,0 +1,66 @@
+{
+ "Attiwilli2022": {
+  "title": "Habitat preference and functional traits influence responses of tropical butterflies to varied habitat disturbance",
+  "study": "Butterflies in India: 251 species measured for body mass, wing length and proboscis length, then related to habitat preference (forest, ecotone, open) and to how species respond to a forest road and to the invasive plant Lantana. Most tables in the main text are model results, not trait data.",
+  "gt": "The GT takes one table: SI Table 1 in the supplement (table 6 here). It records the 5 butterfly FAMILIES as the organism, not species, with two values per trait: 'mean ± SD' (e.g. Hesperiidae body mass 91.1 ± 61.29 mg) and 'range' (12.4 - 378.5). Sample size comes from the '(n=45)' printed in the family label. The 'Pooled' row is not in the GT. 3 traits × 5 families × 2 statistics = 30 rows.",
+  "tables": {
+   "0": {"caption": "Table 1. Number of species used for morphological measurements and their habitat associations in different families of butterflies", "what": "Counts of species per family and habitat. Sampling effort, not traits.", "gt": "No GT rows."},
+   "1": {"caption": "Table 2. Results from linear models with logged body mass, wing length and proboscis length as response variables and family and habitat as predictors", "what": "Model output: estimates, t-statistics and p-values. The first column mixes trait names (Body mass) as section rows with model terms (Intercept, Lycaenidae…).", "gt": "No GT rows. Family names appear in the first column, which is why the key calls it an organism column; they are model terms here, not organisms with values."},
+   "2": {"caption": "Fig. 1 (a) body mass by habitat preference, read from a boxplot", "what": "Numbers read off a figure (the '~' marks approximate values). E / F / O are habitat categories, not organisms.", "gt": "No GT rows."},
+   "3": {"caption": "Fig. 1 (b) wing length by habitat preference, read from a boxplot", "what": "Same as table 2, for wing length.", "gt": "No GT rows."},
+   "4": {"caption": "Fig. 1 (c) proboscis length by habitat preference, read from a boxplot", "what": "Same as table 2, for proboscis length.", "gt": "No GT rows."},
+   "5": {"caption": "Table 3. Aversion to road and high lantana areas with respect to body mass, wing length, proboscis length and habitat preference", "what": "Model output again: mean (SE), t-statistic and p per predictor.", "gt": "No GT rows."},
+   "6": {"caption": "SI Table 1. Mean (standard deviation in parentheses) and range in body mass (mg), wing length (mm) and proboscis length (mm) in the pooled dataset and within the five families", "what": "THE GT table. Each family takes two rows: a 'Mean' row and a 'Range' row. The unnamed column 1 holds the words Mean / Range, so it names the statistic of the row. The three trait columns hold the values.", "gt": "All 30 GT rows. Watch: column 1 is tagged measurementValue by the tree, but it holds the statistic name (measurementStatistic). The units are only in the caption (mg, mm)."},
+   "7": {"caption": "SI Table 2. Results from linear models with logged wing length and proboscis length as response variables", "what": "Model output.", "gt": "No GT rows."}
+  }
+ },
+ "CortesGomez2023": {
+  "title": "Functional Traits in Bees: the Role of Body Size and Hairs in the Pollination of a Passiflora Crop",
+  "study": "Bees visiting sweet granadilla (Passiflora ligularis) crops in Colombia. Ten functional traits were recorded (five measured, five from the literature) and related to the pollen each bee carried. Bees were grouped into 8 clusters by their traits.",
+  "gt": "The GT takes Table 1 (table 6 here), one row per CLUSTER. The organism is the species list of the cluster exactly as printed ('Bombus atratus, Bombus hortulanus, Bombus melaleucus'). Traits: Body size and Hair length (mean ± SD), Social behavior, Amount body hair, Nest location, Structure carrying pollen (statistic 'mode'). The GT also has Altitude '800-3000 above sea level' for every cluster; I could not find that value printed in any table the tree read. 7 traits × 8 clusters = 56 rows. The folder Cortés-Goméz2023 is the same paper.",
+  "tables": {
+   "0": {"caption": "Fig. 1 Mean total pollen grains for potential pollinator bees of the granadilla crop, read from a bar chart", "what": "Pollen carried and abundance per species, read off a figure. Pollen load is the study's response variable, not a trait of the bee.", "gt": "No GT rows. The tree made 26 rows from it ('Other pollen', 'Granadilla pollen' as traits): these are false positives."},
+   "1": {"caption": "Fig. 2 (b) amount of body hair vs total pollen, read from a boxplot", "what": "Abundant / Moderate / Scarse are hair categories, not organisms.", "gt": "No GT rows."},
+   "2": {"caption": "Fig. 2 (b) amount of body hair vs granadilla pollen, read from a boxplot", "what": "Same as table 1.", "gt": "No GT rows."},
+   "3": {"caption": "Fig. 2 (c) hair length vs total pollen, read from a scatter plot", "what": "Points of a scatter plot: one row per individual, no organism names.", "gt": "No GT rows."},
+   "4": {"caption": "Fig. 2 (c) hair length vs granadilla pollen, read from a scatter plot", "what": "Same as table 3.", "gt": "No GT rows."},
+   "5": {"caption": "Fig. 4 Grouping of individuals according to the functional traits (cluster plot)", "what": "Coordinates of the 8 clusters on a plot. 'Series' is the cluster number, X / Y are plot axes.", "gt": "No GT rows."},
+   "6": {"caption": "Table 1. Functional trait values and standard deviations included in each cluster showed in Fig. 4. Nest location relative to the ground (above ground, underground)", "what": "THE GT table. 'Cluster' is a group number (1-8), 'Species' lists the species in that cluster, then 6 trait columns, then 2 pollen columns.", "gt": "All 48 table-sourced GT rows (6 traits × 8 clusters). Watch: 'Cluster' is a group number, not a value of anything. 'Granadilla pollen' and 'Total pollen' are the study's response, which the GT does not record as traits. The tags of the 6 trait columns are right, but v6 still reads this table as LONG (the structure step answered 'record'), so the values come out wrong."},
+   "7": {"caption": "Table 2. Influence of bee functional traits on total pollen and sweet granadilla pollen (model estimates)", "what": "Model output: estimates and AIC per trait.", "gt": "No GT rows."}
+  }
+ },
+ "Figueroa2021": {
+  "title": "Functional traits linked to pathogen prevalence in wild bee communities",
+  "study": "Wild bees in New York wildflower plantings, screened for pathogens (trypanosomes, neogregarines, Nosema). Traits: body size (intertegular distance), phenology (peak activity, activity range), nesting location, sociality, foraging choice.",
+  "gt": "The GT's traits (Intertegular Distance, Nesting location, Sociality, Activity range, Peak activity) come from Table S4 in the supplement. Table S4 is an IMAGE in the converted document, so no table here holds it. This paper cannot be fixed by tagging: it needs the image table read.",
+  "tables": {
+   "0": {"caption": "Table S1. Flower species present in wildflower planting and adjacent area where bees were collected", "what": "Two lists of PLANT names, side by side. No bees, no traits.", "gt": "No GT rows. The tree took 'In planting' as the organism column and made 10 rows: false positives."},
+   "1": {"caption": "Table S2. Plant families visited by each bee species across the 11 sampled sites", "what": "Bee species, a plant family each visited, and n = number of visits. One bee spans several rows.", "gt": "No GT rows. The GT does not record plant families visited, although they describe foraging choice. Say whether you think it should."},
+   "2": {"caption": "Table S3. Molecular conditions used for pathogen screening (PCR)", "what": "Lab protocol: primers and thermal cycling.", "gt": "No GT rows."},
+   "3": {"caption": "Table S5. Post-hoc comparison of differences between genera", "what": "Statistical contrasts between genera per pathogen.", "gt": "No GT rows."}
+  }
+ },
+ "Melo2021": {
+  "title": "Influence of Urban Landscape on Ants and Spiders Richness and Composition in Forests",
+  "study": "Ants and spiders in 14 Atlantic Forest remnants in Salvador, Brazil, related to landscape structure (forest proportion, isolation, shape).",
+  "gt": "The GT takes one trait from the ant species list (table 4 here): 'Functional Groups', one row per ant species, with the code in the FG column decoded through the legend printed with the table (DCR = 'Dominant arboreal ants associated with carbohydrate-rich resources'). Statistic 'mode'. 174 rows.",
+  "tables": {
+   "0": {"caption": "Table 1. Results from the linear regressions between communities and landscape structure for ants and spiders", "what": "Model output. 'Group' is Ants / Spiders, not species.", "gt": "No GT rows."},
+   "1": {"caption": "Fig. 2 (a) landscape fractal dimension vs ant species richness, read from a scatter plot", "what": "Points of a plot, one per forest site.", "gt": "No GT rows."},
+   "2": {"caption": "Fig. 2 (b) fractal dimension vs ant community NMDS1", "what": "Points of a plot.", "gt": "No GT rows."},
+   "3": {"caption": "Fig. 2 (c) fractal dimension vs ant community NMDS2", "what": "Points of a plot.", "gt": "No GT rows."},
+   "4": {"caption": "Ant species list with functional group (FG) and occurrence in each forest fragment (Frag.1-14); legend of FG codes printed with the table", "what": "THE GT table. Subfamily names appear as section rows above their species. FG holds a code per species. Frag.1-14 hold occurrence in each forest fragment (sampling data, not traits).", "gt": "All 174 GT rows, from FG only. Watch: FG is tagged 'caste' (0.30) by the tree; it is a trait whose codes need the legend. The Frag columns are rightly 'none'."}
+  }
+ },
+ "Orlofsk2014": {
+  "title": "Incorporating continuous trait variation into biomonitoring assessments by measuring and assigning trait values to individuals or taxa",
+  "study": "Aquatic insects (mayflies, stoneflies, caddisflies, dragonflies) from three river sites in New Brunswick, Canada. Body size measured on each specimen and compared with database size classes.",
+  "gt": "The GT takes Appendix S2 in the supplement (table 3 here), one trait: 'Body Size' in µm per taxon (genus or family). It uses only the TOTAL block (all sites combined), not the per-site blocks: Mean and SD joined into one value 'mean ± SD' (or 'mean' when SD is blank), plus Min and Max as separate rows. CV is not used. 66 taxa × 3 = 198 rows.",
+  "tables": {
+   "0": {"caption": "Table 1. Summary of water chemistry and channel characteristics at three locations in the Miramichi Basin", "what": "Site descriptions. Rows are parameters, columns are sites.", "gt": "No GT rows."},
+   "1": {"caption": "Fig. 2 Boxplot of body size variation for 64 aquatic insect taxa, read from the figure", "what": "Quartiles read off a figure ('~' values). The taxa are real, but the GT does not take figure readings.", "gt": "No GT rows. The tree made 192 rows from it (Q1, Q2, Q3 as traits): false positives."},
+   "2": {"caption": "Fig. 3 Kernel density plot of body size per site, read from the figure", "what": "Density curve points per site.", "gt": "No GT rows."},
+   "3": {"caption": "Appendix S2. Taxon size summary: mean, SD, coefficient of variation (CV), minimum and maximum size by site and all sites combined (total)", "what": "THE GT table. Four blocks of 5 columns: DUNDS, DUNMR, SBREN (the three sites) and Total. Each block has Mean, SD, CV, Min, Max. All values are body size in µm (the unit is only in the paper text).", "gt": "All 198 GT rows, from the Total block only. Watch: the trait is Body Size for every value column; Mean/SD/CV/Min/Max are statistics, and the site blocks are localities. The tree tagged some of these columns measurementType and others measurementValue, so it treated column names like 'DUNDS Min' as trait names. The key's tags on Min/Max per site come from values that match the Total for taxa found at one site only."}
+  }
+ }
+}

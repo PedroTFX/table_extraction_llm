@@ -1,0 +1,152 @@
+  [semantic] left unmatched: 'CI' vs 'Propodeal Spine Length.I' (llm said different traits)
+  [semantic] left unmatched: 'EI' vs 'Propodeal Spine Length.I' (llm said different traits)
+  [semantic] left unmatched: 'EI' vs 'Petiolar Node Height' (llm said different traits)
+  [semantic] left unmatched: 'EI' vs 'Postpetiole Height' (llm said different traits)
+  [semantic] left unmatched: 'EL' vs 'Petiole Index' (llm said different traits)
+  [semantic] left unmatched: 'EL' vs 'Petiole Length' (llm said different traits)
+  [semantic] left unmatched: 'EL' vs 'Eye Index' (llm said different traits)
+  [semantic] left unmatched: 'FI' vs 'Propodeal Spine Length.I' (llm said different traits)
+  [semantic] left unmatched: 'FI' vs 'Petiole Index' (llm said different traits)
+  [semantic] left unmatched: 'FI' vs 'Mandible Index' (llm said different traits)
+================================================================
+GROUND TRUTH : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\data\un_processed_papers\Gomez2022\Gomez2022.xlsx  (1014 rows)
+PREDICTION   : C:\Users\Pedro Trindade\Documents\github\table_extraction_llm\tree_extraction\output\full_run_v7\Gomez2022\Gomez2022.csv  (520 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (20)
+  'Dark species (major workers) P. batrachorum': no ground-truth name denotes this organism
+  'Dark species (major workers) P. darwini': no ground-truth name denotes this organism
+  'Dark species (major workers) P. dea': no ground-truth name denotes this organism
+  'Dark species (major workers) P. glabrella': no ground-truth name denotes this organism
+  'Dark species (major workers) P. rebeccae': no ground-truth name denotes this organism
+  'Dark species (major workers) P. semidea': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. batrachorum': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. darwini': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. dea': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. glabrella': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. rebeccae': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. semidea': no ground-truth name denotes this organism
+  'Dark species (minor workers) P. setosa': no ground-truth name denotes this organism
+  'Yellow species (major workers) P. beliosa': no ground-truth name denotes this organism
+  'Yellow species (major workers) P. klaman': no ground-truth name denotes this organism
+  'Yellow species (major workers) P. pulchella': no ground-truth name denotes this organism
+  'Yellow species (minor workers) P. beliosa': no ground-truth name denotes this organism
+  'Yellow species (minor workers) P. christinae': no ground-truth name denotes this organism
+  'Yellow species (minor workers) P. klaman': no ground-truth name denotes this organism
+  'Yellow species (minor workers) P. pulchella': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 12 pair(s))
+  'CI' -> 'Cephalic Index'
+  'MDI' -> 'Mandible Index'
+  'MDL' -> 'Mandible Length'
+  'PPtH' -> 'Postpetiole Width'
+  'PPtL' -> 'Petiole Length'
+  'PSL' -> 'Postpetiole Length'
+  'PSLI' -> 'Propodeal Spine Length.I'
+  'PWI' -> 'Pronotal Width'
+  'PpLI' -> 'Propodeal Spine Length.'
+  'PpWI' -> 'Pronotal Width Index.'
+  'PtL' -> 'Petiole Index'
+  'SL' -> 'Scape Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 1014
+  spurious, in scope  : 240   <- GT covers this trait: real errors
+  spurious, out of scope: 280   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            280
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 1014 MISSED ROWS MISSED
+  species not in prediction                1014
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (11 distinct), closest predicted name:
+     gt 'Pheidole batrachorum'              ~0.61~  pred 'Dark species (major workers) P. batrachorum'   x104
+     gt 'Pheidole dae'                       (nothing similar in the prediction)   x104
+     gt 'Pheidole darwini'                  ~0.63~  pred 'Dark species (major workers) P. darwini'   x104
+     gt 'Pheidole glabrella'                ~0.60~  pred 'Dark species (minor workers) P. glabrella'   x104
+     gt 'Pheidole klaman'                   ~0.61~  pred 'Yellow species (major workers) P. klaman'   x104
+     gt 'Pheidole pulchella'                ~0.61~  pred 'Yellow species (minor workers) P. pulchella'   x104
+  -> 6 species mismatches explain 624 of 1014 misses (62%) — systematic, not scattered
+
+  full miss detail saved -> Gomez2022_misses.csv, Gomez2022_misses_summary.json (1014 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  cephalic index                                   39    20   Δ-19 (split?)
+  ei                                                0    20   PRED-ONLY
+  el                                                0    20   PRED-ONLY
+  eye index                                        39     0   GT-ONLY
+  eye length                                       39     0   GT-ONLY
+  fi                                                0    20   PRED-ONLY
+  head length                                      39     0   GT-ONLY
+  head width                                       39     0   GT-ONLY
+  petiolar node height                             39     0   GT-ONLY
+  postpetiole height                               39     0   GT-ONLY
+  hl                                                0    20   PRED-ONLY
+  hw                                                0    20   PRED-ONLY
+  propodeal spine length.i                         39    20   Δ-19 (split?)
+  postpetiole length index.                        39     0   GT-ONLY
+  mandible index                                   39    20   Δ-19 (split?)
+  metafemur index                                  39     0   GT-ONLY
+  petiole index                                    39    20   Δ-19 (split?)
+  postpetiole index                                39     0   GT-ONLY
+  pronotal width index.                            39    20   Δ-19 (split?)
+  scape index                                      39     0   GT-ONLY
+  mandible length                                  39    20   Δ-19 (split?)
+  metafemur length                                 39     0   GT-ONLY
+  petiole length                                   39    20   Δ-19 (split?)
+  postpetiole length                               39    20   Δ-19 (split?)
+  propodeal spine length.                          39    20   Δ-19 (split?)
+  weber's length                                   39     0   GT-ONLY
+  scape length                                     39    20   Δ-19 (split?)
+  mfl                                               0    20   PRED-ONLY
+  petiolar node width                              39     0   GT-ONLY
+  pel                                               0    20   PRED-ONLY
+  postpetiole width                                78    20   Δ-58 (split?)
+  ppl                                               0    20   PRED-ONLY
+  pptw                                              0    20   PRED-ONLY
+  pronotal width                                   39    20   Δ-19 (split?)
+  pth                                               0    20   PRED-ONLY
+  ptw                                               0    20   PRED-ONLY
+  pw                                                0    20   PRED-ONLY
+  si                                                0    20   PRED-ONLY
+  wl                                                0    20   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0   240  1014   id+type+value
+             (280 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0   240  1014   basis+id+type+value+stat+sex+stage
+             (280 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)
