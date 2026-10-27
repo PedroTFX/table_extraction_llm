@@ -1,0 +1,1206 @@
+{
+ "paper": "Viza2023",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Among freshwater macroinvertebrates, Odonata (Insecta) are a good model taxon for exploring the effects of climate warming on freshwater biodiversity because (1) they originated in the tropics, which implies tolerance to high temperatures; (2) adults present high morphological differentiation across species, which facilitates capture, identification and recording; (3) they occur with medium to high local abundances and are present in almost all freshwater habitats, with high species turnover due to larval and adult preferences in habitat use and evident niche partition among species; (4) they present high phenotypic variability, both within and between species, in traits pre-sumably involved in adaptation to climate warming, such as emergence and duration of flight season; and (5) there is a large and wellknown body of historical research, including extensive recording and rich historical datasets from citizen science projects (Corser et al., 2014; Hassall & Thompson, 2008; Termaat et al., 2019)."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "F I G U R E 1 (a) Proposed categories of potential range shifts based on differences between current and future species distribution in terms of longitude and latitude; (b) species occurrence map covering the Iberian Peninsula and Northern Morocco from six datasets."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "The study area covered the westernmost Mediterranean region with a total number of 84 species, 25 occurring exclusively in the Iberian Peninsula and 9 restricted to Morocco (Torralba-Burrial & Ocharan, 2013). Occurrence of adults was compiled from six datasets (Figure 1b, see details at ‘Data Availability Statement’): (1) Oxygastra, the Catalan Odonata Study Group; (2) ROLA’s project of the environmental education association ‘El Bosque Animado’; (3) the Arthropod Collection of the University of Oviedo (Torralba-Burrial & Ocharan, 2013); (4) the Valencian Natural History Museum; (5) the"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Asociacion de Naturalistas del Sureste (ANSE); and (6) the Moroccan \u0001 dataset collected by Mohamed El Haissoufi. When combining datasets, only records with taxonomic identification at the species level and observations after 2003, when more data and precise spatial coordinates started to be recorded systematically, were considered. For modelling purposes, in order to homogenise the sample effort and to reduce the spatial autocorrelation associated with environmental variables (see below), the presences of a species in $a 1 - k m ^ { 2 }$ grid cell were brought together and defined as a single detection, whereas the nooccurrence of a species at a given $1 { \\cdot } { \\mathsf { k m } } ^ { 2 }$ cell over several years of sampling was considered as a true absence (Supporting information S1). The data used are currently the main contribution of the Iberian data at [gbif.org](http://gbif.org) and at the Atlas of the European dragonflies and damselflies (Boudot & Kalkman, 2015). However, we avoided using data records directly from GBIF because they were collected following different protocols in each region and also including ‘opportunistic’ species without a harmonised sampling effort or geographical representativeness."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "In order to assess how individual species potential distributions could change in the future based on current occurrences and using climatic conditions as predictors, species distribution models (SDMs) were used. SDM methods have been widely debated because future predictions are frequently over-interpreted (Araújo & Peterson, 2012), especially when limited occurrence data in high-dimensional environmental space are used (Peterson, 2011). While acknowledging this criticism, our intent was not to accurately map the future ranges of species, but to evaluate the models and classify the species into the five proposed range-shift categories. Since model performance decreases with sample size (Stockwell & Peterson, 2002), 10 species were discarded because they had been recorded in less than 20 localities (Supporting information S1)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "To remove the redundant information of bioclimatic variables, Spearman correlation and variance inflation factor (VIF) analyses were performed with all bioclimatic values extracted from all occurrence points. To purge highly correlated bioclimatic variables, the biological and ecological meaning of each variable was considered. Finally, the"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To determine the current species distribution, binary logistic generalised linear models (GLM) and boosted regression trees (BRT) were run for each species because testing for several algorithms is suggested to optimise the predictions for each particular species (Konowalik & Nosol, 2021; Qiao et al., 2015). GLM represents a flexible extension of linear models that allows for response variables that have a non-normal distribution error (binomial in the case of binary responses), whereas BRT combines regression trees for generating large numbers of simple distribution models that are selected for the best prediction by boosting algorithms (Elith et al., 2008; Franklin, 2010; Kienast et al., 2012). To create the input SDM matrix, the current bioclimatic information was extracted for each spatial point. The database created for each species was split into 70% as training set and 30% as testing set by random partition to validate the models. Each model was evaluated independently by three predictors of significance to select the model with the best performance: (1) by means of area under curve (AUC) statistics from a receiver-operating characteristic analysis (ROC), which is a threshold-independent evaluation of model discrimination (Fielding & Bell, 1997); (2) by true skills statistics (TSS), which is a measure of accuracy (Allouche et al., 2006) and (3) by odds ratio skill score (ORSS), which measures skill compared to a random prediction (Stephenson, 2000). AUC and TSS were the two metrics that achieved the highest performance compared to other evaluation models (Konowalik & Nosol, 2021) (Supporting information S2). The widely used logistic regression (fitted with GLM) was selected for the majority of species. However, for some species that had low numbers of occurrences (fewer than 70 grid cells), the BRT models (learning $\\mathsf { r a t e } = 0 . 0 0 1$ , bag fraction = 0.75) performed better than GLM, as previously suggested (Konowalik & Nosol, 2021). All models were performed and evaluated using the R software (R Core Team, 2016) and the package ‘gbm (Ridgeway et al., 2015)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Within this space, the proposed categories of range shifts were operationally defined as: Expanded: Axis X ϵ [10, +∞), axis $Y \\in$ $[ 1 0 , + \\infty ) ;$ Displaced: Axis $X \\in (-10, +10)$ , axis $Y \\succ = 1 0 ;$ Unchanged: Axis $X \\in (-10, +10],$ axis $Y \\in [ 0 , \\; 1 0 ) ;$ Reduced and displaced: Axis $X"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:72ba1f0/tier:advanced/page:7/block:6)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "The first fPCA axis of the functional space (Figure 4a; Supporting information S8) explained 20.85% of the total variability, whereas the second and third axes explained respectively 13.62% and 10.94%. The trait categories most correlated to the first axis were semivoltinism (NC0) together with the opposite patterns of behaviour fliers (FBF) versus perchers (FBP), and the water quality oligotrophic (WO) versus eutrophic (WE). The second axis was mostly related with the opposite directions of absence (DN) versus presence (DY) of egg diapause. The trait categories most correlated with axes (>0.6) were selected (Supporting information S9)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "The four traits flight season (FS), oviposition habitat (O), range margins (R) and habitat type (H) significantly discriminated among the"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:72ba1f0/tier:advanced/page:8/block:8)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "F I G U R E 4 Fuzzy principal component analysis (fPCA). (a) Distribution of species on the generated functional space. Ellipses cluster the species belonging to the same category of range-shift responses, each colour and letters corresponding to a different range-shift response as in Figures 1a and 2; (b) arrows represent the most weighted trait categories for principal components 1 and 2 on fPCA (see trait abbreviation in Supporting information S2); (c) distribution of species by discriminant analysis (DA) space; (d) significant traits that discriminated between the categories of range-shift responses in DA. From left to right and from up to down: flight season (FS); range margins (R); habitat type (H); oviposition habitat (O); river zonation (A); vegetation at the breeding site (V); and voltinism (NC). The categories within a trait are depicted in the same colour."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "axis, and $\\lambda = 0 . 9 2 3 2$ and $\\mathsf { K } = 0 . 0 0 4 2$ on the second). Moreover, the phylogenetic relatedness was unrelated to the defined range-shift categories for the two climatic scenarios $\\left( \\lambda = 0.00 \\right.$ and K = 0.1367, and $\\lambda = 0 . 0 0$ and $K = 0.1209$ , respectively under the RCP 2.6 and the RCP 8.5 scenarios)."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Aida Viza: Conceptualization (equal); data curation (lead); formal analysis (lead); investigation (equal); methodology (equal); writing – original draft (lead); writing – review and editing (lead). Aina Garcia-Raventos: \u0001 Conceptualization (equal); data curation (supporting); formal analysis (supporting); investigation (equal); methodology (equal); supervision (supporting); writing – original draft (supporting); writing – review and editing (supporting). Joan Lluis Riera: Formal analysis (supporting); methodology (equal); supervision (supporting); validation (equal); writing – original draft (supporting); writing – review and editing (supporting). Xavier Maynou: Data curation (supporting); investigation (supporting); resources (lead); supervision (supporting); writing – original draft (supporting); writing – review and editing (supporting). Ricard Martín: Data curation (supporting); investigation (supporting); resources (lead); supervision (supporting); writing – original draft (supporting); writing – review and editing (supporting). Florent Prunier: Resources (lead); writing – original draft (supporting). Mohamed El Haissoufi: Resources (supporting). Cesc Murria: Conceptualization (equal); data curation (supporting); formal analysis (supporting); investigation (equal); methodology (equal); supervision (lead); validation (equal); writing – original draft (supporting); writing – review and editing (supporting)."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Public data of six datasets used are: (1) Oxygastra data, which can be accessed on gbif.org at [https://www.gbif.org/publisher/fa023734-40bb-484a-b6c4-c822ad0d89ad](https://www.gbif.org/publisher/fa023734%E2%80%9040bb%E2%80%90484a%E2%80%90b6c4%E2%80%90c822ad0d89ad); (2) ROLA data, available on their website at [https://aeaelbosqueanimado.org/project_category/boletin-rola/](https://aeaelbosqueanimado.org/project_category/boletin%E2%80%90rola/);(3) the Arthropod Collection of the University of Oviedo, which can be found on their server at [http://digibuo.uniovi.es/dspace/handle/10651/17721](http://digibuo.uniovi.es/dspace/handle/10651/17721); (4) data from the Valencian Natural History Museum, which was compiled by the Biodiversity Databank of the Valencian Community and can be accessed on gbif.org at [https://www.gbif.org/](https://www.gbif.org/publisher/ebda1cab%E2%80%90dda8%E2%80%90418b%E2%80%908f25%E2%80%90df1e71ff5bc2)"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "[publisher/ebda1cab-dda8-418b-8f25-df1e71ff5bc2](https://www.gbif.org/publisher/ebda1cab%E2%80%90dda8%E2%80%90418b%E2%80%908f25%E2%80%90df1e71ff5bc2); and (5) ANSE data, which is available on their website at [https://www.asociacionanse.org/publicaciones/](https://www.asociacionanse.org/publicaciones/)."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Supporting information S7. Species classification in the proposed categories of range shift and their coordinates in the two different scenarios. Categories: Exp = Expanded; Dis = Displaced; NC = Unchanged; R&D = Reduced & Displaced; Red = Reduced."
+  },
+  {
+   "id": "u18",
+   "kind": "table 0",
+   "text": "Category | Status | Status\nExpanded | New distribution | New distribution in 2050\nExpanded | Current distribution | Current distribution conserved in 2050\nReduced & Displaced | New distribution | New distribution in 2050\nReduced & Displaced | Current distribution | Current distribution lost in 2050\nDisplaced | New distribution | New distribution\nDisplaced | Current distribution | Current distribution lost in 2050\nUnchanged | Current distribution | Current distribution conserved in 2050\nUnchanged | New distribution | New distribution in 2050"
+  },
+  {
+   "id": "u19",
+   "kind": "table 1",
+   "text": "Series | X (range) | Y (range)\nUniversity of Oviedo | -8~-2 | 40~43\nOxygastra | 0~2 | 41~43\nM. El Haissoufi | -9~-2 | 30~36\nAEA El Bosque Animado | -7~-2 | 36~39\nANSE | -3~-1 | 39~41\nValencian Natural History Museum | -1~0 | 38~41"
+  },
+  {
+   "id": "u20",
+   "kind": "table 2",
+   "text": "Series | Percentage future new area (range) | Percentage future displaced area (range)\nExpanded (RCP 2.6) | -80~450 | 25~85\nDisplaced (RCP 2.6) | 0~10 | 30~75\nUnchanged (RCP 2.6) | 0~10 | 30~45\nReduced & displaced (RCP 2.6) | -90~-10 | 10~100\nReduced (RCP 8.5) | -80~-10 | 0~10\nUnchanged (RCP 8.5) | 0~10 | 30~45"
+  },
+  {
+   "id": "u21",
+   "kind": "table 3",
+   "text": "Taxon | Species\nA | Lestes viridis, Lestes virens, Lestes numidicus, Lestes macrostigma, Lestes sponsa, Lestes dryas, Lestes barbarus, Sympecma fusca, Platycnemis pennipes, Platycnemis latipes, Platycnemis acutipennis, Ceriagrion tenellum, Pyrrhosoma nymphula\nD | Ephemera orientalis, Ephemera danica, Baetis harrisoni, Callibaetis ferrugineus"
+  },
+  {
+   "id": "u22",
+   "kind": "table 4",
+   "text": "Species | Presences | Absences\nAeshna affinis | 76 | 1669\nAeshna cyanea | 966 | 1399\nAeshna isosceles | 381 | 1685\nAeshna juncea | 298 | 1659\nAeshna mixta | 1010 | 1400\nAnax ephippiger | 311 | 1602\nAnax imperator | 4519 | 977\nAnax parthenope | 1465 | 1388\nBoyeria irene | 2224 | 1328"
+  },
+  {
+   "id": "u23",
+   "kind": "table 4",
+   "text": "Brachythemis impartita | 435 | 1593\nBrachytron pratense | 22 | 1708\nCalopteryx exul | 4 | 1709\nCalopteryx haemorrhoidalis | 3450 | 1166\nCalopteryx virgo | 1481 | 1523\nCalopteryx xanthostoma | 1301 | 1480\nCeriagrion tenellum | 910 | 1496\nCoenagrion caerulescens | 624 | 1479\nCoenagrion hastulatum | 24 | 1706\nCoenagrion mercuriale | 711 | 1474"
+  },
+  {
+   "id": "u24",
+   "kind": "table 4",
+   "text": "Coenagrion puella | 803 | 1531\nCoenagrion scitulum | 252 | 1586\nCordulegaster bidentata | 30 | 1703\nCordulegaster boltonii | 1727 | 1287\nCordulegaster princeps | 24 | 1694\nCordulia aenea | 23 | 1710\nCrocothemis erythraea | 4106 | 1003\nDiplacodes lefebvrii | 269 | 1683\nEnallagma cyathigerum | 1215 | 1432\nEnallagma deserti | 13 | 1701"
+  },
+  {
+   "id": "u25",
+   "kind": "table 4",
+   "text": "Erythromma lindenii | 1856 | 1367\nErythromma viridulum | 402 | 1594\nGomphus graslinii | 176 | 1675\nGomphus pulchellus | 351 | 1576\nGomphus simillimus | 350 | 1556\nGomphus vulgatissimus | 2 | 1711\nIschnura elegans | 2111 | 1497\nIschnura fountaineae | 3 | 1709\nIschnura graellsii | 3335 | 1021\nIschnura pumilio | 514 | 1537"
+  },
+  {
+   "id": "u26",
+   "kind": "table 4",
+   "text": "Ischnura saharensis | 38 | 1686\nLestes barbarus | 463 | 1590\nLestes dryas | 203 | 1653\nLestes macrostigma | 94 | 1692\nLestes sponsa | 185 | 1677\nLestes virens | 589 | 1526\nLestes viridis | 2293 | 1211\nLeucorrhinia dubia | 83 | 1704\nLibellula depressa | 955 | 1421\nLibellula fulva | 264 | 1708"
+  },
+  {
+   "id": "u27",
+   "kind": "table 4",
+   "text": "Libellula quadrimaculata | 385 | 1616\nMacromia splendens | 142 | 1689\nOnychogomphus costae | 212 | 1632\nOnychogomphus forcipatus | 2324 | 1356\nOnychogomphus uncatus | 2196 | 1364\nOrthetrum brunneum | 1400 | 1290\nOrthetrum cancellatum | 2017 | 1312\nOrthetrum chrysostigma | 1493 | 1402\nOrthetrum coerulescens | 2005 | 1219\nOrthetrum nitidinerve | 102 | 1669"
+  },
+  {
+   "id": "u28",
+   "kind": "table 4",
+   "text": "Orthetrum trinacria | 429 | 1654\nOxygastra curtisii | 748 | 1620\nPantala flavescens | 1 | 1711\nParagomphus genei | 55 | 1680\nPlatycnemis acutipennis | 653 | 1571\nPlatycnemis latipes | 2916 | 1203\nPlatycnemis pennipes | 4 | 1708\nPlatycnemis subdilatata | 45 | 1683\nPseudagrion sublacteum | 8 | 1705\nPyrrhosoma nymphula | 1581 | 1331"
+  },
+  {
+   "id": "u29",
+   "kind": "table 4",
+   "text": "Selysiothemis nigra | 312 | 1678\nSomatochlora metallica | 28 | 1706\nSympecma fusca | 847 | 1459\nSympetrum flaveolum | 170 | 1680\nSympetrum fonscolombii | 5154 | 906\nSympetrum meridionale | 204 | 1630\nSympetrum pedemontanum | 43 | 1710\nSympetrum sanguineum | 158 | 1670\nSympetrum sinaiticum | 342 | 1579\nSympetrum striolatum | 2158 | 1215"
+  },
+  {
+   "id": "u30",
+   "kind": "table 4",
+   "text": "Sympetrum vulgatum | 65 | 1698\nTrithemis annulata | 2323 | 1302\nTrithemis arteriosa | 11 | 1704\nTrithemis kirbyi | 902 | 1528\nZygonyx torridus | 193 | 1669\nTable S1. Species records used to each distribution model."
+  },
+  {
+   "id": "u31",
+   "kind": "footnote of table 5",
+   "text": "Table S2. Model performances by each species. Columns of predictor variables showed variables selected and the corresponded distribution for each model. Distribution codes for GLM: x2 + x =: quadratic regression; x =: linear regression. In BRT, variables selected were indicated with a “x”"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13"
+  ],
+  [
+   "u14",
+   "u15",
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24",
+   "u25"
+  ],
+  [
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31"
+  ]
+ ],
+ "calls": 16,
+ "categories": [
+  {
+   "variable": "they originated in the tropics",
+   "code": "(1)",
+   "term": "they originated in the tropics",
+   "unit": "u0",
+   "model_label": "tropics",
+   "label": "tropics",
+   "explanation": "they originated in the"
+  },
+  {
+   "variable": "they occur with medium to high local abundances",
+   "code": "(2)",
+   "term": "they occur with medium to high local abundances",
+   "unit": "u0",
+   "model_label": "abundances",
+   "label": "abundances",
+   "explanation": "they occur with medium to high local"
+  },
+  {
+   "variable": "they present high phenotypic variability",
+   "code": "(3)",
+   "term": "they present high phenotypic variability",
+   "unit": "u0",
+   "model_label": "variability",
+   "label": "variability",
+   "explanation": "they present high phenotypic"
+  },
+  {
+   "variable": "there is a large and wellknown body of historical research",
+   "code": "(4)",
+   "term": "there is a large and wellknown body of historical research",
+   "unit": "u0",
+   "model_label": "research",
+   "label": "research",
+   "explanation": "there is a large and wellknown body of historical"
+  },
+  {
+   "variable": "species occurrence map covering the Iberian Peninsula and Northern Morocco",
+   "code": "(b)",
+   "term": "species occurrence map covering the Iberian Peninsula and Northern Morocco",
+   "unit": "u1",
+   "model_label": "Iberian Peninsula",
+   "label": "Iberian Peninsula",
+   "explanation": "species occurrence map covering the and Northern Morocco"
+  },
+  {
+   "variable": "Occurrence of adults was compiled from six datasets",
+   "code": "(1)",
+   "term": "Oxygastra, the Catalan Odonata Study Group",
+   "unit": "u2",
+   "model_label": "Oxygastra",
+   "label": "Oxygastra",
+   "explanation": "the Catalan Odonata Study Group"
+  },
+  {
+   "variable": "Occurrence of adults was compiled from six datasets",
+   "code": "(2)",
+   "term": "ROLA’s project of the environmental education association ‘El Bosque Animado’",
+   "unit": "u2",
+   "model_label": "ROLA’s project",
+   "label": "ROLA’s project",
+   "explanation": "of the environmental education association ‘El Bosque Animado’"
+  },
+  {
+   "variable": "Occurrence of adults was compiled from six datasets",
+   "code": "(3)",
+   "term": "the Arthropod Collection of the University of Oviedo (Torralba-Burrial & Ocharan, 2013)",
+   "unit": "u2",
+   "model_label": "Arthropod Collection",
+   "label": "Arthropod Collection",
+   "explanation": "the of the University of Oviedo (Torralba-Burrial & Ocharan, 2013"
+  },
+  {
+   "variable": "Occurrence of adults was compiled from six datasets",
+   "code": "(4)",
+   "term": "the Valencian Natural History Museum",
+   "unit": "u2",
+   "model_label": "Valencian Natural History Museum",
+   "label": "Valencian Natural History Museum",
+   "explanation": "the"
+  },
+  {
+   "variable": "Axis X",
+   "code": "X",
+   "term": "Expanded",
+   "unit": "u7",
+   "model_label": "Expanded",
+   "label": "Expanded",
+   "explanation": ""
+  },
+  {
+   "variable": "Axis Y",
+   "code": "Y",
+   "term": "Expanded",
+   "unit": "u7",
+   "model_label": "Expanded",
+   "label": "Expanded",
+   "explanation": ""
+  },
+  {
+   "variable": "Axis X",
+   "code": "X",
+   "term": "Displaced",
+   "unit": "u7",
+   "model_label": "Displaced",
+   "label": "Displaced",
+   "explanation": ""
+  },
+  {
+   "variable": "Axis Y",
+   "code": "Y",
+   "term": "Displaced",
+   "unit": "u7",
+   "model_label": "Displaced",
+   "label": "Displaced",
+   "explanation": ""
+  },
+  {
+   "variable": "Axis X",
+   "code": "X",
+   "term": "Unchanged",
+   "unit": "u7",
+   "model_label": "Unchanged",
+   "label": "Unchanged",
+   "explanation": ""
+  },
+  {
+   "variable": "Axis Y",
+   "code": "Y",
+   "term": "Unchanged",
+   "unit": "u7",
+   "model_label": "Unchanged",
+   "label": "Unchanged",
+   "explanation": ""
+  },
+  {
+   "variable": "Axis X",
+   "code": "X",
+   "term": "Reduced and displaced",
+   "unit": "u7",
+   "model_label": "Reduced and displaced",
+   "label": "Reduced and displaced",
+   "explanation": ""
+  },
+  {
+   "variable": "semivoltinism",
+   "code": "NC0",
+   "term": "semivoltinism",
+   "unit": "u9",
+   "model_label": "semivoltinism",
+   "label": "semivoltinism",
+   "explanation": ""
+  },
+  {
+   "variable": "behaviour",
+   "code": "FBF",
+   "term": "fliers",
+   "unit": "u9",
+   "model_label": "fliers",
+   "label": "fliers",
+   "explanation": ""
+  },
+  {
+   "variable": "behaviour",
+   "code": "FBP",
+   "term": "perchers",
+   "unit": "u9",
+   "model_label": "perchers",
+   "label": "perchers",
+   "explanation": ""
+  },
+  {
+   "variable": "water quality",
+   "code": "WO",
+   "term": "oligotrophic",
+   "unit": "u9",
+   "model_label": "oligotrophic",
+   "label": "oligotrophic",
+   "explanation": ""
+  },
+  {
+   "variable": "water quality",
+   "code": "WE",
+   "term": "eutrophic",
+   "unit": "u9",
+   "model_label": "eutrophic",
+   "label": "eutrophic",
+   "explanation": ""
+  },
+  {
+   "variable": "egg diapause",
+   "code": "DN",
+   "term": "absence",
+   "unit": "u9",
+   "model_label": "absence",
+   "label": "absence",
+   "explanation": ""
+  },
+  {
+   "variable": "egg diapause",
+   "code": "DY",
+   "term": "presence",
+   "unit": "u9",
+   "model_label": "presence",
+   "label": "presence",
+   "explanation": ""
+  },
+  {
+   "variable": "flight season",
+   "code": "FS",
+   "term": "flight season",
+   "unit": "u10",
+   "model_label": "flight season",
+   "label": "flight season",
+   "explanation": ""
+  },
+  {
+   "variable": "oviposition habitat",
+   "code": "O",
+   "term": "oviposition habitat",
+   "unit": "u10",
+   "model_label": "oviposition habitat",
+   "label": "oviposition habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "range margins",
+   "code": "R",
+   "term": "range margins",
+   "unit": "u10",
+   "model_label": "range margins",
+   "label": "range margins",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "H",
+   "term": "habitat type",
+   "unit": "u10",
+   "model_label": "habitat type",
+   "label": "habitat type",
+   "explanation": ""
+  },
+  {
+   "variable": "river zonation",
+   "code": "A",
+   "term": "river zonation",
+   "unit": "u12",
+   "model_label": "river zonation",
+   "label": "river zonation",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation at the breeding site",
+   "code": "V",
+   "term": "vegetation at the breeding site",
+   "unit": "u12",
+   "model_label": "vegetation",
+   "label": "vegetation",
+   "explanation": "at the breeding site"
+  },
+  {
+   "variable": "voltinism",
+   "code": "NC",
+   "term": "voltinism",
+   "unit": "u12",
+   "model_label": "voltinism",
+   "label": "voltinism",
+   "explanation": ""
+  },
+  {
+   "variable": "Categories",
+   "code": "Exp",
+   "term": "Expanded",
+   "unit": "u17",
+   "model_label": "Expanded",
+   "label": "Expanded",
+   "explanation": ""
+  },
+  {
+   "variable": "Categories",
+   "code": "Dis",
+   "term": "Displaced",
+   "unit": "u17",
+   "model_label": "Displaced",
+   "label": "Displaced",
+   "explanation": ""
+  },
+  {
+   "variable": "Categories",
+   "code": "NC",
+   "term": "Unchanged",
+   "unit": "u17",
+   "model_label": "Unchanged",
+   "label": "Unchanged",
+   "explanation": ""
+  },
+  {
+   "variable": "Categories",
+   "code": "R&D",
+   "term": "Reduced & Displaced",
+   "unit": "u17",
+   "model_label": "Reduced & Displaced",
+   "label": "Reduced & Displaced",
+   "explanation": ""
+  },
+  {
+   "variable": "Categories",
+   "code": "Red",
+   "term": "Reduced",
+   "unit": "u17",
+   "model_label": "Reduced",
+   "label": "Reduced",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Expanded",
+   "term": "New distribution",
+   "unit": "u18",
+   "model_label": "Expanded",
+   "label": "New distribution",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Expanded",
+   "term": "Current distribution",
+   "unit": "u18",
+   "model_label": "Expanded",
+   "label": "Current distribution",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Reduced & Displaced",
+   "term": "New distribution",
+   "unit": "u18",
+   "model_label": "Reduced & Displaced",
+   "label": "New distribution",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Reduced & Displaced",
+   "term": "Current distribution",
+   "unit": "u18",
+   "model_label": "Reduced & Displaced",
+   "label": "Current distribution",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Displaced",
+   "term": "New distribution",
+   "unit": "u18",
+   "model_label": "Displaced",
+   "label": "New distribution",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Displaced",
+   "term": "Current distribution",
+   "unit": "u18",
+   "model_label": "Distribution",
+   "label": "distribution",
+   "explanation": "Current"
+  },
+  {
+   "variable": "Category",
+   "code": "Unchanged",
+   "term": "Current distribution",
+   "unit": "u18",
+   "model_label": "Distribution",
+   "label": "distribution",
+   "explanation": "Current"
+  },
+  {
+   "variable": "Category",
+   "code": "Unchanged",
+   "term": "New distribution",
+   "unit": "u18",
+   "model_label": "Distribution",
+   "label": "distribution",
+   "explanation": "New"
+  },
+  {
+   "variable": "Series",
+   "code": "University of Oviedo",
+   "term": "University of Oviedo",
+   "unit": "u19",
+   "model_label": "University of Oviedo",
+   "label": "University of Oviedo",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Oxygastra",
+   "term": "Oxygastra",
+   "unit": "u19",
+   "model_label": "Oxygastra",
+   "label": "Oxygastra",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "M. El Haissoufi",
+   "term": "M. El Haissoufi",
+   "unit": "u19",
+   "model_label": "M. El Haissoufi",
+   "label": "M. El Haissoufi",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "AEA El Bosque Animado",
+   "term": "AEA El Bosque Animado",
+   "unit": "u19",
+   "model_label": "AEA El Bosque Animado",
+   "label": "AEA El Bosque Animado",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "ANSE",
+   "term": "ANSE",
+   "unit": "u19",
+   "model_label": "ANSE",
+   "label": "ANSE",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Valencian Natural History Museum",
+   "term": "Valencian Natural History Museum",
+   "unit": "u19",
+   "model_label": "Valencian Natural History Museum",
+   "label": "Valencian Natural History Museum",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Expanded (RCP 2.6)",
+   "term": "Expanded (RCP 2.6)",
+   "unit": "u20",
+   "model_label": "Expanded (RCP 2.6)",
+   "label": "Expanded (RCP 2.6",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Displaced (RCP 2.6)",
+   "term": "Displaced (RCP 2.6)",
+   "unit": "u20",
+   "model_label": "Displaced (RCP 2.6)",
+   "label": "Displaced (RCP 2.6",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Unchanged (RCP 2.6)",
+   "term": "Unchanged (RCP 2.6)",
+   "unit": "u20",
+   "model_label": "Unchanged (RCP 2.6)",
+   "label": "Unchanged (RCP 2.6",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Reduced & displaced (RCP 2.6)",
+   "term": "Reduced & displaced (RCP 2.6)",
+   "unit": "u20",
+   "model_label": "Reduced & displaced (RCP 2.6)",
+   "label": "Reduced & displaced (RCP 2.6",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Reduced (RCP 8.5)",
+   "term": "Reduced (RCP 8.5)",
+   "unit": "u20",
+   "model_label": "Reduced (RCP 8.5)",
+   "label": "Reduced (RCP 8.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Unchanged (RCP 8.5)",
+   "term": "Unchanged (RCP 8.5)",
+   "unit": "u20",
+   "model_label": "Unchanged (RCP 8.5)",
+   "label": "Unchanged (RCP 8.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Taxon",
+   "code": "A",
+   "term": "Lestes viridis, Lestes virens, Lestes numidicus, Lestes macrostigma, Lestes sponsa, Lestes dryas, Lestes barbarus, Sympecma fusca, Platycnemis pennipes, Platycnemis latipes, Platycnemis acutipennis, Ceriagrion tenellum, Pyrrhosoma nymphula",
+   "unit": "u21",
+   "model_label": "Lestes viridis, Lestes virens, Lestes numidicus, Lestes macrostigma, Lestes sponsa, Lestes dryas, Lestes barbarus, Sympecma fusca, Platycnemis pennipes, Platycnemis latipes, Platycnemis acutipennis, Ceriagrion tenellum, Pyrrhosoma nymphula",
+   "label": "Lestes viridis, Lestes virens, Lestes numidicus, Lestes macrostigma, Lestes sponsa, Lestes dryas, Lestes barbarus, Sympecma fusca, Platycnemis pennipes, Platycnemis latipes, Platycnemis acutipennis, Ceriagrion tenellum, Pyrrhosoma nymphula",
+   "explanation": ""
+  },
+  {
+   "variable": "Taxon",
+   "code": "D",
+   "term": "Ephemera orientalis, Ephemera danica, Baetis harrisoni, Callibaetis ferrugineus",
+   "unit": "u21",
+   "model_label": "Ephemera orientalis, Ephemera danica, Baetis harrisoni, Callibaetis ferrugineus",
+   "label": "Ephemera orientalis, Ephemera danica, Baetis harrisoni, Callibaetis ferrugineus",
+   "explanation": ""
+  },
+  {
+   "variable": "Distribution codes for GLM",
+   "code": "x2 + x",
+   "term": "quadratic regression",
+   "unit": "u31",
+   "model_label": "quadratic regression",
+   "label": "quadratic regression",
+   "explanation": ""
+  },
+  {
+   "variable": "Distribution codes for GLM",
+   "code": "x",
+   "term": "linear regression",
+   "unit": "u31",
+   "model_label": "linear regression",
+   "label": "linear regression",
+   "explanation": ""
+  },
+  {
+   "variable": "In BRT, variables selected",
+   "code": "x",
+   "term": "variables selected",
+   "unit": "u31",
+   "model_label": "variables selected",
+   "label": "variables selected",
+   "explanation": ""
+  },
+  {
+   "variable": "traits pre-sumably involved in adaptation to climate warming",
+   "code": "",
+   "label": "emergence",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "traits pre-sumably involved in adaptation to climate warming",
+   "code": "",
+   "label": "duration of flight season",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "range-shift",
+   "code": "",
+   "label": "five proposed range-shift categories",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "range-shift responses",
+   "code": "",
+   "label": "range-shift responses",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "vegetation at the breeding site",
+   "code": "",
+   "label": "vegetation at the breeding site",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "Percentage future new area (range)",
+   "code": "",
+   "label": "Expanded (RCP 2.6)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Percentage future new area (range)",
+   "code": "",
+   "label": "Displaced (RCP 2.6)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Percentage future new area (range)",
+   "code": "",
+   "label": "Unchanged (RCP 2.6)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Percentage future new area (range)",
+   "code": "",
+   "label": "Reduced & displaced (RCP 2.6)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Percentage future new area (range)",
+   "code": "",
+   "label": "Reduced (RCP 8.5)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Percentage future new area (range)",
+   "code": "",
+   "label": "Unchanged (RCP 8.5)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Ischnura saharensis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Lestes barbarus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Lestes dryas",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Lestes macrostigma",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Lestes sponsa",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Lestes virens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Lestes viridis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Leucorrhinia dubia",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Libellula depressa",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Libellula fulva",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Libellula quadrimaculata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Macromia splendens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Onychogomphus costae",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Onychogomphus forcipatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Onychogomphus uncatus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Orthetrum brunneum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Orthetrum cancellatum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Orthetrum chrysostigma",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Orthetrum coerulescens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Orthetrum nitidinerve",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Orthetrum trinacria",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Oxygastra curtisii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Pantala flavescens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Paragomphus genei",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Platycnemis acutipennis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Platycnemis latipes",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Platycnemis pennipes",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Platycnemis subdilatata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Pseudagrion sublacteum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Pyrrhosoma nymphula",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Selysiothemis nigra",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Somatochlora metallica",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympecma fusca",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum flaveolum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum fonscolombii",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum meridionale",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum pedemontanum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum sanguineum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum sinaiticum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum striolatum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Sympetrum vulgatum",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Trithemis annulata",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Trithemis arteriosa",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Trithemis kirbyi",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "Zygonyx torridus",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  }
+ ],
+ "dropped": [],
+ "seconds": 120.6
+}

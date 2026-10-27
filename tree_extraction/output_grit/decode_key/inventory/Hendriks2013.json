@@ -1,0 +1,308 @@
+{
+ "paper": "Hendriks2013",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Citation: Hendriks RJJ, Carvalheiro LG, Kleukers RMJC, Biesmeijer JC (2013) Temporal-Spatial Dynamics in Orthoptera in Relation to Nutrient Availability and Plant Species Richness. PLoS ONE 8(8): e71736. doi:10.1371/journal.pone.0071736"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Here we studied the influence of excess nutrient availability on plants and Orthoptera species (grasshoppers and crickets). We used Orthoptera as a test herbivore group, as they are particularly susceptible to changes in the C:N ratio of their resources [6–7]. Also this group allows for comparison of herbivorous, omnivorous and carnivorous species. We studied the relationships between Orthoptera species richness, plant species richness and nitrogen deposition levels using data from the Netherlands. As the majority of Orthoptera species in the Netherlands are herbivores [8], and plant resources can be negatively affected by high levels of nitrogen e.g. [9–11] we expected overall changes in Orthoptera species richness to parallel changes in nitrogen deposition and changes in plant species richness both in time and space (hypothesis 1)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "changes due to large range expansions or contractions (which will affect richness values of multiple fine scale cells, and hence have a substantial effect on the mean change value at finer spatial scales, but no effect at country level), or to country-level extinctions of spatially restricted species and species introductions (which will affect coarse scale richness, while only influencing a few fine scale cells). Therefore, we repeated the analyses for variously sized spatial grids (161 km, 10610 km, 20620 km, 40640 km, 80680 km grid cells as well as for the whole country). To deal with the non-standardized nature of this data we followed the methods described in [20] that are based on the probability of species being detected under a given sampling effort. We obtained estimates of relative richness change per grid cell as well as an estimation of the associated error. Techniques from meta-analysis which allowed weighing each cell based on its uncertainty, i.e the inverse of variance [23], were then applied to obtain an overall weighted value of richness (Qw) and assess if such value was significantly different from zero [20]. These calculations were done using rma.uni function of the R package metaphor [24]. To check if the method completely corrected for bias due to differences in sampling efforts, we included the log of the relative difference of number of records as a covariate. To obtain unbiased estimates of richness change for each grid cell, we calculated the partial residuals after removing the effect of sampling effort for each cell (see [20])."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Between 1956–1970 (P1) and 1976–1990 (P2) pronounced plant richness increases were detected at finer scales and no changes were detected at country level (fig. 2)."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Changes in Orthoptera species richness (S) between P1 and P2, were not accentuated i.e. small significant declines being only detected at 20 km scale, while at coarser scales increases were detected (fig. 2). Such increases were positively related with changes in plant richness (table 2a). Between P2 and P3 Orthoptera richness change (%) was significantly positive at all scales, increases being more pronounced at finer scales. Moreover, ammonia levels tended (P = 0.064) to be negatively related with Orthoptera richness changes detected between P2 and P3 (table 2a), but no significant effect of plant richness change on Orthoptera was detected. Therefore, increases of Orthoptera and plants richness were more frequent at low levels of ammonia, while at high levels of ammonia Orthoptera richness increases were much less accentuated (see fig. 3)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "![Image block](doc:14ea267/tier:advanced/page:3/block:15)"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "![Image block](doc:14ea267/tier:advanced/page:4/block:2)"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Figure 2. Trends in species richness change (DS% +295% confidence intervals) for Orthoptera and plant species. Trends at the 10, 20, 40, 80 km grids and all Netherlands. In grey: changes between 1956–1970 and 1976–1990. In black: changes between 1976–1990 and 1996–2010. See table 1 for the numbers of grid cells. Filled symbols indicate change of significantly diffrent from zero; open symbols indicate that change was not significantly different from zero. A pair of results is considered not to be significantly different if the 95% error bars do not overlap. doi:10.1371/journal.pone.0071736.g002"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Although fine scale changes in plant richness were more accentuated during the time period where NHx (ammonia) deposition was increasing, i.e. between P1 and P2, spatially explicit analyses showed that between P1 and P2 patterns of plant richness change are not significantly related to NHx values in 2009 (Table 2a), suggesting that although both plant richness and NHx increased between P1 and P2, no causal relationship exists. It is, however, possible that our assumption regarding the 2009 nitrogen deposition data to also reflect the spatial pattern of the increase of NHx deposition between the first and second period does not fully hold. Furthermore it is likely that plant species with different physiological requirements react differently to ammonia levels. More detailed analyses that take into consideration nitrophily of plants would be required to fully explore the effect of nitrogen on plants. Also the statistical power for the spatial analysis of plant and nitrogen changes between P1 and P2 (n = 7) is considerably lower than for P2 versus P3 (n = 97)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "All variables analysed at the level of 10 km grid cells. Response variables (Plant richness change and Orthoptera richness change) were log transformed to normalize residuals: Orthoptera = log(orthoptera richness in post period/orthoptera richness in pre period); Plants = log (plant richness in post period/plant richness in pre period); Explanatory variables were: NHx (Ammonia deposition), Plants, Interaction NHx*Plants.The two most parsimonious models are listed according to AICc values and the equation of the best model (lowest AICc) is provided for each subset. P-values were obtained from a likelihood ratio test in which deviances with and without that term in the model were compared. n.s., P.0.05. Orthoptera species richness models and Nitrogen deposition models were corrected for spatial autocorrelation of residuals (exponential and spherical correlation structure, respectively). The residuals of plants species richness change models were not significantly spatially correlated. The symbol ‘–’ represents a variable not included in the model. n/a = not applicable. doi:10.1371/journal.pone.0071736.t002"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:14ea267/tier:advanced/page:7/block:11)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:14ea267/tier:advanced/page:8/block:2)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:14ea267/tier:advanced/page:8/block:6)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "2. Noordijk H (2007) Nitrogen in the Netherlands over the past five centuries. In: Monteny GJ, Hartung E, van den Top M, Starmans D, editors. Ammonia"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "conference, abstract book. Wageningen Academic Publishers, Wageningen, Netherlands. 3. Bobbink R, Braun S, Nordin A, Power S, Schütz K, et al. (2011) Review and revision of empirical critical loads and dose-response relationships. Bilthoven: National Institute for Public Health and the Environment (RIVM). 244 p. 4. Walker BH, Langridge JL (1997) Predicting savanna vegetation structure on the basis of plant available moisture (PAM) and plant available nutrients (PAN): A case study from Australia. J Biogeogr 24: 813–825. 5. Aerts R, Chapin FS (2000) The mineral nutrition of wild plants revisited: a reevaluation of processes and patterns. Adv. Ecol. Res. 30: 1–67. 6. Athey LA, Connor EF (1989) The relationship between foliar nitrogen content and feeding by Odontota dorsalis (Thun.) on Robinia pseudoacacia (L.). Oecologia 79: 390–394. 7. Takafumi H, Kawase S, Nakamura M, Hiura T (2010) Herbivory in canopy gaps created by a typhoon varies by understory plant leaf phenology. Ecol Entomol 35: 576–585. 8. Kleukers RMJC, van Nieukerken EJ, Odé B, Willemse LPM, van Wingerden WKRE (2004) De sprinkhanen en krekels van Nederland: (Orthoptera), 2nd edn. Leiden: Nationaal Natuurhistorisch Museum Naturalis, KNNV Uitgeverij & European Invertebrate Survey-Nederland. 415 p. 9. Tamis WLM, Van’t Zelfde M, Van der Meijden R, De Haes HAU (2001) Changes in vascular plant biodiversity in the Netherlands in the 20th century explained by their climatic and other environmental characteristics. Clim Change 72: 37–56. 10. Augustine DJ (2003) Long-term, livestock-mediated redistribution of nitrogen and phosphorus in an East African savanna. J Appl Ecol 40: 137–149. 11. Van der Waal C, Kool A, Meijer SS, Kohi E, Heitkonig IMA, et al. (2011) Large herbivores may alter vegetation structure of semi-arid savannas through soil nutrient mediation. Oecologia 165: 1095–1107. 12. Biesmeijer JC, Roberts SPM, Reemer M, Ohlemüller R, Edwards M, et al. (2006) Parallel Declines in Pollinators and Insect-Pollinated Plants in Britain and the Netherlands. Science 313: 351–354. 13. Hendriks RJJ, Luijten L, van Groenendael JM (2009) Context-dependent defence in terrestrial plants: the effects of light and nutrient availability on plant resistance against herbivory. Entomol Exp Appl 131: 233–242. 14. Smika DE, Haas HJ, Power JF (1965) Effects of moisture and nitrogen fertilizer on growth and water use by native grass. Agron J 57: 483–486. 15. Cohn EJ, van Auken OW, Bush JK (1989) Competitive interactions between Cynodon dactylon and Acacia smallii seedlings at different nutrient levels. Am. Midl. Nat. 121: 265–272. 16. Debain S, Curt T, Lepart J (2005) Indirect effects of grazing on the establishment of Pinus sylvestris and Pinus nigra seedlings in calcareous grasslands in relation to resource level. Ecoscience 12: 192–201. Available: http://www.bioone.org/doi/pdf/10.2980/i1195-6860-12-2-192.1. Accessed: 28 Sep 2012. 17. Van der Waal C, De Kroon H, De Boer F, Heitkönig IMA, Skidmore AK, et al. (2009) Water and nutrients alter herbaceous competitive effects on tree seedlings in a semi-arid savanna. J Ecol 97: 430–439."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "18. Van Wingerden WKRE, Musters JCM, Maaskamp FIM (1991) The influence of temperature on the duration of egg development in West European grasshoppers (Orthoptera: Acrididae). Oecologia 87: 417–423. 19. Keil P, Biesmeijer JC, Barendregt A, Reemer M, Kunin E (2010) Biodiversity change is scale-dependent: an example from Dutch and UK hoverflies (Diptera, Syrphidae). Ecography 33: 1–10. 20. Carvalheiro LG, Kunin WE, Keil P, Aguirre-Gutiérrez J, Ellis WN, et al. (2013) Species richness declines and biotic homogenisation have slowed down for NW-European pollinators and plants. Ecology Letters. DOI: 10.1111/ele.12121. 21. Schaminée JHJ, Hennekens SM, Ozinga WA (2012) The Dutch National Vegetation Database. Biodiversity & Ecology 4: 201–209. 22. Cassey P, Blackburn TM, Lockwood JL, Sax DF (2006) A stochastic model for integrating changes in species richness and community similarity across spatial scales. Oikos 115: 207–218. 23. Hartung J, Knapp G, Sinha BK (2008) Statistical meta-analysis with applications. New York: John Wiley & Sons, Inc. 248 p. 24. Viechtbauer W (2010) Conducting meta-analyses in R with the metafor package. J Stat Software 36: 1–48. 25. Pinheiro JC, Bates DM (2000) Mixed-Effects Models in S and S-PLUS. New York: Springer. 528 p. 26. Zuur AF, Ieno EN, Walker N, Saveliev AA, Smith GM (2009). Mixed Effect Models and Extensions in Ecology With R. New York: Springer. 574 p. 27. R Development Core Team (2009) R: a language and environment for statistical computing. Vienna: R Foundation for Statistical Computing. 28. Schouten MA, Verweij PA, Barendregt A, Kleukers RJM, de Ruiter PC (2007) Nested assemblages of Orthoptera species in the Netherlands: the importance of habitat features and life-history traits. J. Biogeogr. 34: 1938–1946. 29. Kleukers R (2002) Nieuwe waarnemingen aan sprinkhanen en krekels in Nederland (Orthoptera). Nederlandse Faunistische Mededelingen 17, 87–102.Available: http://www.repository.naturalis.nl/document/46315 Accessed: 28 Sep 2012. 30. Walters RJ, Hassall M, Telfer MG, Hewitt GM, Palutikof JP (2006) Modelling dispersal of a temperate insect in a changing climate. Proc Biol Sci 273: 2017–2023. 31. Hochkirch A, Damerau M (2009) Rapid range expansion of a wing-dimorphic bush-cricket after the 2003 climatic anomaly. Biol J Linn Soc Lond 97: 118–127. 32. Kleukers RMJC, Decleer K, Haes ECM, Kolshorn P, Thomas B (1996) recent expansion of Conocephalus discolor (Thunberg) (Orthoptera: Tettigoniidae) in Western Europe. Entomologist’s Gazette 47: 37–49. 33. Grutters M, Versijde R, Bakker WH, Groenendijk D, Bouwman JH (2010) Nieuwkomer op het spoor: de kiezelsprinkhaan Sphingonotus caerulans in Nederland (Orthoptera: Acrididae). Nederlandse Faunistische Mededelingen 34: 1–10.Available: http://www.bureaustadsnatuur.nl/downloads/publicaties/Grutters_et_al_2010_De_Kiezelsprinkhaan_in_Nederland_NFM34.pdf Accessed: 28 Sep 2012."
+  },
+  {
+   "id": "u16",
+   "kind": "table 3",
+   "text": "log(ChangePlants+1) | high Ammonia levels (Nhx=2000) | low Ammonia levels (Nhx=300)\n0.00 | ~0.02 | ~0.20\n0.05 | ~0.01 | ~0.21\n0.10 | ~0.00 | ~0.22\n0.15 | ~-0.01 | ~0.23\n0.20 | ~-0.02 | ~0.24\n0.25 | ~-0.04 | ~0.25\n0.30 | ~-0.06 | ~0.27"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13"
+  ],
+  [
+   "u14"
+  ],
+  [
+   "u15"
+  ],
+  [
+   "u16"
+  ]
+ ],
+ "calls": 13,
+ "categories": [
+  {
+   "variable": "P1",
+   "code": "P1",
+   "term": "1956–1970",
+   "unit": "u3",
+   "model_label": "1956–1970",
+   "label": "1956–1970",
+   "explanation": ""
+  },
+  {
+   "variable": "P2",
+   "code": "P2",
+   "term": "1976–1990",
+   "unit": "u3",
+   "model_label": "1976–1990",
+   "label": "1976–1990",
+   "explanation": ""
+  },
+  {
+   "variable": "Orthoptera species richness",
+   "code": "S",
+   "term": "Orthoptera species richness",
+   "unit": "u4",
+   "model_label": "Orthoptera",
+   "label": "Orthoptera",
+   "explanation": "species richness"
+  },
+  {
+   "variable": "changes between 1956–1970 and 1976–1990",
+   "code": "grey",
+   "term": "changes between 1956–1970 and 1976–1990",
+   "unit": "u7",
+   "model_label": "grey",
+   "label": "changes between 1956–1970 and 1976–1990",
+   "explanation": ""
+  },
+  {
+   "variable": "changes between 1976–1990 and 1996–2010",
+   "code": "black",
+   "term": "changes between 1976–1990 and 1996–2010",
+   "unit": "u7",
+   "model_label": "black",
+   "label": "changes between 1976–1990 and 1996–2010",
+   "explanation": ""
+  },
+  {
+   "variable": "change of significantly diffrent from zero",
+   "code": "Filled symbols",
+   "term": "change of significantly diffrent from zero",
+   "unit": "u7",
+   "model_label": "Filled symbols",
+   "label": "change of significantly diffrent from zero",
+   "explanation": ""
+  },
+  {
+   "variable": "change was not significantly different from zero",
+   "code": "open symbols",
+   "term": "change was not significantly different from zero",
+   "unit": "u7",
+   "model_label": "open symbols",
+   "label": "change was not significantly different from zero",
+   "explanation": ""
+  },
+  {
+   "variable": "The symbol ‘–’",
+   "code": "–",
+   "term": "represents a variable not included in the model",
+   "unit": "u9",
+   "model_label": "variable",
+   "label": "variable",
+   "explanation": "represents a not included in the model"
+  },
+  {
+   "variable": "n/a",
+   "code": "n/a",
+   "term": "not applicable",
+   "unit": "u9",
+   "model_label": "n/a",
+   "label": "not applicable",
+   "explanation": ""
+  },
+  {
+   "variable": "log(ChangePlants+1)",
+   "code": "Nhx=2000",
+   "term": "high Ammonia levels",
+   "unit": "u16",
+   "model_label": "high Ammonia levels",
+   "label": "high Ammonia levels",
+   "explanation": ""
+  },
+  {
+   "variable": "log(ChangePlants+1)",
+   "code": "Nhx=300",
+   "term": "low Ammonia levels",
+   "unit": "u16",
+   "model_label": "low Ammonia levels",
+   "label": "low Ammonia levels",
+   "explanation": ""
+  },
+  {
+   "variable": "Orthoptera species",
+   "code": "",
+   "label": "herbivores",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "plant richness",
+   "code": "",
+   "label": "plant species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "ammonia levels",
+   "code": "",
+   "label": "ammonia",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "nitrophily of plants",
+   "code": "",
+   "label": "nitrophily",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Plant richness change",
+   "code": "",
+   "label": "Plants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "life-history traits",
+   "code": "",
+   "label": "habitat features",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "log(ChangePlants+1)",
+   "code": "",
+   "label": "high Ammonia levels (Nhx=2000)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "log(ChangePlants+1)",
+   "code": "",
+   "label": "low Ammonia levels (Nhx=300)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "None",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "None",
+   "code": "G",
+   "term": "ground nesting",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 31.7
+}

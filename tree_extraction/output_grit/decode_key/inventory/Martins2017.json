@@ -1,0 +1,450 @@
+{
+ "paper": "Martins2017",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:c9e852a/tier:advanced/page:3/block:3)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Fig. 1 Map of study area. Map (a) showing the distribution of garden and semi-natural sites in both rural and suburban landscapes. The solid black line delimits Mont-Saint-Hilaire, the dotted black line Saint-Jean-Baptiste and the white line the Gault Nature Reserve. Inset situates the study region in southern Quebec, Canada. Bipartite networks for bees (top) visiting flower species (bottom) in gardens (b) and semi-natural sites (c); the size of each box is scaled according to the prevalence of a bee"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "or flower species in the network. Bees are connected to the flowers that they visited; line thickness is scaled according to the total number of visits observed across sites. Bees are only labeled according to their taxonomic families (And: Andrenidae, Apid: Apidae, Coll: Colletidae, Hali: Halictidae, Mega: Megachilidae) and only the most visited floral species in either networks are labeled (codes Table S4). See Fig. S6 for full figure with all species labels"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "All sites were sampled for bees twice over the course of three weeks between 9:00 AM – 6:00 PM on rain-free days with temperatures above $2 0 ~ ^ { \\circ } \\mathrm { C }$ and average wind speeds below 2.5 m/s. The time of site visitation was randomized across the two visits to ensure that every study site was surveyed once in the morning and once in the afternoon. Environmental covariates were recorded while at each site using a Kestrel 3500 Pocket Wind Meter® (Kestrel, Montreal, Quebec, Canada), including temperature, time of day, relative humidity and wind speed."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "All bees that were caught were either identified and released while on site - honey bees (Apis mellifera) and most bumble bee (Bombus) species - or frozen and identified later. Captured bees were identified to species using pertinent literature (Mitchell 1960, 1962; Packer et al. 2007; Gibbs 2010) as well as [http://www.Discoverlife.org/](http://www.discoverlife.org/). Specialists John Ascher and Jason Gibbs verified species identifications. Voucher specimens are deposited at the Lyman Entomological Museum, McGill University."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Given that collinearity between pairs of land cover variables was quite high $( r > 0 . 5 )$ , we used a Principal Component Analysis (PCA) to collapse the land cover classes into a set of orthogonal landscape gradients (Oksanen et al. 2015). The first two axes of the PCA collectively explained 84% of the variance in the site by land cover class matrix (PC1: 52%, PC2: 32%), significantly more variance than when assuming a broken-stick distribution (Table S2). We interpreted the nature of each axis using component loadings in an equilibrium circle (Fig. S1). PC1 will hereafter be referred to as an ‘urbanization gradient’ since it clearly polarizes sites with high cash crop cover (negative values) against those in a suburban landscape context (positive values). PC2, on the other hand, situates each site on a ‘deforestation gradient’ since sites with negative values are in forested areas while those with positive values are in more open suburban or agricultural contexts. Both the urbanization and deforestation gradients derived from the PCA were used as proxies for landscape composition in all subsequent analyses. The 95% confidence ellipses around the centroids of semi-natural and garden sites show that the two habitat types are non-independent along the first two axes of the PCA and thus that collinearity between habitat and landscape level effects should not be a concern. Preliminary tests showed that floral abundance was uncorrelated with the urbanization gradient $( R _ { \\mathrm { ~ a d j } } ^ { 2 } = - 0 . 0 2$ $p > 0 . 0 5 )$ and weakly correlated with deforestation gradient $( R _ { \\mathrm { ~ a d j } } ^ { 2 } = 0 . 1 2 , p"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "We began by quantifying the degree to which garden and semi-natural sites differed from each other in floral community composition and in the prevalence of native and exotic species. Community composition across habitat types was examined using non-metric multidimensional scaling (NMDS) of a matrix giving the floral abundance of each flowering species at each site (Oksanen et al. 2015). Using Analysis of Variance (ANOVA), we tested whether plant species richness, native/exotic floral richness and native/exotic floral abundance were higher in either gardens or semi-natural sites. Estimates of floral richness were not rarefied because plant frequency counts were based on the number of floral units as opposed to plant individuals and rarefied and non-rarefied floral richness estimates were highly correlated $( r > 0 . 9 5 )$ (Fig. S2). Plant species were categorized as being exotic (naturalized or horticultural) or native using the PLANTS Database (USDA 2016)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "We used eight separate generalized linear modelling (GLM) analyses to study factors influencing bee species richness, abundance, functional dispersion, generality, mean d’ specialization, floral generality, mean floral d’ specialization and, finally, network-level H2’ specialization. Explanatory variables included those examining local sources of variance (habitat type (semi-natural or garden), floral species richness and Solidago abundance) and landscape level effects (the urbanization and deforestation gradients). Solidago abundance was included in the set of explanatory variables since high numbers of bumble bees and honey bees were observed swarming the flowers of this genus during sampling. Collinearity of model parameters was verified prior to model selection using variation inflation factors (VIF) (Bolker et al. 2009). When conducting the GLM analyses, bee abundance was fit with a negative binomial distribution to control for overdispersion and all remaining response variables with a Gaussian distribution. Floral generality was square root transformed and bee generality box-cox transformed to improve the normality of model residuals."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Table 1 The results of model averaging for each response variable, including the partial regression coefficients for each covariate (β), standard errors (SE), importance values (Imp.), and 95% confidence intervals (CI). Significant values are in bold (see text); model averaging could not be performed for bee richness and floral specialization"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "![Image block](doc:c9e852a/tier:advanced/page:8/block:3)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "the interaction between exotic plants and habitat type $( t = 0 . 5 7 ,$ $p > 0 . 0 5 )$ or when honeybees were removed from the analysis $( t = 0 . 9 4 , p > 0 . 0 5 )$ . Bees foraged from plant species irrespective of plant origin, including the following plant species that had the highest species strength values on average across networks (Table S4; Fig. S6): Solidago $( 6 . 2 7 \\pm 0 . 9 3 )$ , Thymus serpyllum (species strength $4 . 5 7 \\pm 4 . 0 9 )$ , Hypericum kalmianum $(3.97 \\pm 1.18)$ , Eutrochium maculatum $( 2 . 7 7 \\pm 1 . 2 7 )$ and Hydrangea paniculata $( 2 . 3 4 \\pm 0 . 7 5 )$"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "The species strength scores for flowers in semi-natural sites were higher on average than in garden sites $( t = 2 . 0 1$ $p } 1 )$ were not significantly different across garden and semi natural sites (Kruskal-Wallis $\\chi^{2}_{( df =1)} = 2.06, \\; p > 0.05$ Gardens, however, exhibited greater variance in the abundance of these species across sites (Bartlett’s $K ^ { 2 } = 4 . 2 6$ $p"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:c9e852a/tier:advanced/page:9/block:4)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Bee communities in gardens and semi-natural sites were distinct and followed parallel yet divergent pathways of species turnover in response to urbanization. For both habitat types, few bee species persisted in agricultural contexts and those that did were common (e.g. Hylaeus affinis, Lasioglossum versatum) and/or can disperse widely from distant resource rich patches (e.g. Apis mellifera, Bombus impatiens) (Greenleaf et al. 2007; Kwaiser and Hendrix 2008; Geroff et al. 2014). Suburban settings fostered a higher diversity of bees with multiple functional traits (e.g. medium sized parasitic soil nesting bees or small eusocial wood nesting bees) in both habitats. Banaszak-Cibicka and Żmihorski (2012) also showed that certain functional traits prevail in urban areas, such as smaller body size and later emergence dates. But bees did not discriminate between habitats based on functional traits or combinations thereof. Rather specific bee species were found in either setting, such as Augochlora pura and Agapostemon virescens in suburban gardens or Ceratina calcarata and Halictus ligatus in suburban semi-natural sites. Lowenstein et al. (2014) found that A. virescens was prevalent in densely populated areas in Chicago, while (Wojcik and McBride 2012) confirmed that Halictid bees in general persist in Californian urban landscapes. Hylaeus communis, a new exotic bee species, showed the same positive association with urbanization as in its native European range (Geslin et al. 2016; Martins et al. 2017). Bee species distributions mirror in part those of suitable nesting substrates, such that the presence of A. pura in gardens would suggest the availability of woody debris (e.g. fences, logs) within its foraging range. As in both Wojcik and McBride (2012) and Lowenstein et al. (2014), our results indicate that local floral resources also had a profound effect on which bee species were found across the urbanization gradient in either habitat, and thus the structure of pollinator networks."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Table S2 Gives the variance explained by each principal component (PC) in the Principal Component Analysis of the site by land cover type matrix (Fig S1). PC’s that explain a greater amount of variance in the response matrix than with a broken-stick distribution are in bold"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Table S3 List of bee species, species acronyms (Acc), abundance (A), number of sites at which each was present (P) and functional traits (sociality, size class (S: small, M: medium, L: large), nesting preference, seasonality (S1: Spring, S2: Summer, S3: Fall) and mean d’ floral specialization). See text (Section 3.1) for more details"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Table S4 List of floral species inventoried across gardens and semi-natural sites, giving species acronyms (Acc.), exoticness category (H: horticultural, Nr: naturalised, Nv: native), mean species strength values, mean degree (number of visits by different bee species), number of sites at which the flower was visited and the number of sites at which it was sampled."
+  },
+  {
+   "id": "u17",
+   "kind": "table 1",
+   "text": "Site | RDA1 (range) | RDA2 (range)\nBee Species | -0.3~0.5 | -0.3~0.3\nSemi-natural Sites | -0.6~0.4 | -0.2~0.4\nGarden Sites | -0.2~0.4 | -0.4~0.1"
+  },
+  {
+   "id": "u18",
+   "kind": "table 2",
+   "text": "Category | Definition\nCash Crops | Monocultures of corn or soy.\nForest | Treed areas comprising any forest type, including deciduous, mixed or coniferous.\nHedgerow | Linear elements in the landscape comprising drainage ditches between fields that may or may not be covered by some shrubbery. It also includes windbreaks between fields.\nOrchard | Apple orchards of varying tree density, comprising either standard or dwarf trees.\nScrub | Transition area between semi-natural areas and forests. Open areas featuring at least some early-succession woody vegetation, including brambles (Rubus spp.), staghorn sumac (Rhus typhina) or young poplars (Populus spp.).\nSemi-natural Area | Abandoned agricultural lots dominated by a mixture of grasses and forbs with little woody vegetation. Characteristic vegetation included Ageratina altissima, Daucus carota, Lythrum salicaria, Solidago and Trifolium.\nSuburbia | Primarily consisting of low-density residential housing but also including roads, parks, industrial areas and commercial centres. Horticultural flowers commonly found in parks and gardens included Astilbe, Hosta, Echinacea purpurea and Hydrangea."
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ],
+  [
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17",
+   "u18"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "taxonomic families",
+   "code": "And",
+   "term": "Andrenidae",
+   "unit": "u2",
+   "model_label": "Andrenidae",
+   "label": "Andrenidae",
+   "explanation": ""
+  },
+  {
+   "variable": "taxonomic families",
+   "code": "Apid",
+   "term": "Apidae",
+   "unit": "u2",
+   "model_label": "Apidae",
+   "label": "Apidae",
+   "explanation": ""
+  },
+  {
+   "variable": "taxonomic families",
+   "code": "Coll",
+   "term": "Colletidae",
+   "unit": "u2",
+   "model_label": "Colletidae",
+   "label": "Colletidae",
+   "explanation": ""
+  },
+  {
+   "variable": "taxonomic families",
+   "code": "Hali",
+   "term": "Halictidae",
+   "unit": "u2",
+   "model_label": "Halictidae",
+   "label": "Halictidae",
+   "explanation": ""
+  },
+  {
+   "variable": "taxonomic families",
+   "code": "Mega",
+   "term": "Megachilidae",
+   "unit": "u2",
+   "model_label": "Megachilidae",
+   "label": "Megachilidae",
+   "explanation": ""
+  },
+  {
+   "variable": "PC1",
+   "code": "PC1",
+   "term": "urbanization gradient",
+   "unit": "u5",
+   "model_label": "urbanization gradient",
+   "label": "urbanization gradient",
+   "explanation": ""
+  },
+  {
+   "variable": "PC2",
+   "code": "PC2",
+   "term": "deforestation gradient",
+   "unit": "u5",
+   "model_label": "deforestation gradient",
+   "label": "deforestation gradient",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "semi-natural",
+   "term": "semi-natural",
+   "unit": "u7",
+   "model_label": "semi-natural",
+   "label": "semi-natural",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat type",
+   "code": "garden",
+   "term": "garden",
+   "unit": "u7",
+   "model_label": "garden",
+   "label": "garden",
+   "explanation": ""
+  },
+  {
+   "variable": "size class",
+   "code": "S",
+   "term": "small",
+   "unit": "u15",
+   "model_label": "small",
+   "label": "small",
+   "explanation": ""
+  },
+  {
+   "variable": "size class",
+   "code": "M",
+   "term": "medium",
+   "unit": "u15",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": ""
+  },
+  {
+   "variable": "size class",
+   "code": "L",
+   "term": "large",
+   "unit": "u15",
+   "model_label": "large",
+   "label": "large",
+   "explanation": ""
+  },
+  {
+   "variable": "seasonality",
+   "code": "S1",
+   "term": "Spring",
+   "unit": "u15",
+   "model_label": "Spring",
+   "label": "Spring",
+   "explanation": ""
+  },
+  {
+   "variable": "seasonality",
+   "code": "S2",
+   "term": "Summer",
+   "unit": "u15",
+   "model_label": "Summer",
+   "label": "Summer",
+   "explanation": ""
+  },
+  {
+   "variable": "seasonality",
+   "code": "S3",
+   "term": "Fall",
+   "unit": "u15",
+   "model_label": "Fall",
+   "label": "Fall",
+   "explanation": ""
+  },
+  {
+   "variable": "exoticness category",
+   "code": "H",
+   "term": "horticultural",
+   "unit": "u16",
+   "model_label": "horticultural",
+   "label": "horticultural",
+   "explanation": ""
+  },
+  {
+   "variable": "exoticness category",
+   "code": "Nr",
+   "term": "naturalised",
+   "unit": "u16",
+   "model_label": "naturalised",
+   "label": "naturalised",
+   "explanation": ""
+  },
+  {
+   "variable": "exoticness category",
+   "code": "Nv",
+   "term": "native",
+   "unit": "u16",
+   "model_label": "native",
+   "label": "native",
+   "explanation": ""
+  },
+  {
+   "variable": "species origin",
+   "code": "",
+   "label": "exotic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "medium sized parasitic soil nesting bees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "small eusocial wood nesting bees",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "smaller body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "later emergence dates",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "sociality",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "size class",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "nesting preference",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "seasonality",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "floral specialization",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Site",
+   "code": "",
+   "label": "Semi-natural Sites",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Site",
+   "code": "",
+   "label": "Garden Sites",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u17"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Cash Crops",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Forest",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Hedgerow",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Orchard",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Scrub",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Semi-natural Area",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Category",
+   "code": "",
+   "label": "Suburbia",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  }
+ ],
+ "dropped": [],
+ "seconds": 41.8
+}

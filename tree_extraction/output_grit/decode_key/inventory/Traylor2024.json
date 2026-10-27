@@ -1,0 +1,657 @@
+{
+ "paper": "Traylor2024",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:44f6c52/tier:advanced/page:1/block:8)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "The Piedmont region of the southeastern United States has experienced widespread forest regrowth over the past century due to agricultural abandonment. Today’s landscapes are largely characterized by mature forests that are becoming increasingly fragmented by suburbanization. Here, we assessed the filtering effects of forest age, landscape forest cover (LFC), and deadwood volume on saproxylic beetles in northeastern Georgia. Using historic aerial imagery to distinguish forest age (young = regrown after 1938; old = mature in 1938), we sampled beetles in mature forests of both age classes occurring along an LFC gradient. We measured five traits with hypothesized functional roles (body length, body width, body roundness, antenna length, eye length) for the 472 species captured. Using a joint species distribution model (JSDM), we tested trait-niche relationships (i.e., how traits influence species’ responses) and estimated community trait composition (mean and dispersion of trait values) along gradients of environmental filters."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Table 2 Hypothesized trait-niche and community trait composition relationships for five beetle morphological traits and three environmental filters (covariates) used in the joint species distribution model (JSDM). Justifications for each hypothesis are included. Observed relationships supported with > 85 % posterior probability from the JSDM are shown, and sign (positive: +, negative: -) is indicated. Relative support values are +++/— (>95 %), ++/– (>90 %), +/- (>85 %). Detailed summaries of the functional roles of traits are found in Table 1. LFC = Landscape Forest Cover."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "The dominant vegetation in the Piedmont region is oak (Quercus)- pine (Pinus) forest (Spooner et al., 2021). During stand development, forest composition transitions from pine dominance in early years to eventual hardwood (and especially oak) dominance after a century or more (Oosting, 1942; Nicholson and Monk, 1974; Orwig and Abrams, 1994). Other species, such as tuliptree (Liriodendron tulipifera), sweetgum (Liquidambar styraciflua), and red maple (Acer rurbum) can also occur in great numbers locally, especially on mesic sites. Oak-pine ecosystems were historically maintained with occasional, low severity fire (Spooner et al., 2021). However, due to fire suppression, forests developing today may be undergoing alternative successional trajectories favoring more mesic species (Nowacki and Abrams, 2008)."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "![Image block](doc:44f6c52/tier:advanced/page:4/block:3)"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "To determine landscape forest cover, we digitized forest cover in the current landscape by manually creating polygons in ArcMap 10.4 (Esri, Redlands, California) over 1-m satellite imagery from 2017 (U.S. Geological Survey, 2017; Traylor et al., 2023a; Fig. 1A). The proportion of the landscape covered in forest within a 2000 m radius was then measured, hereafter referred to as landscape forest cover (LFC). This radius was chosen because it had the highest correlation with saproxylic beetle species richness out of eight radii (250–2,000 m; Traylor et al., 2023a), indicating it is the appropriate spatial scale based on the recommended procedures in Holland et al. (2004) and Jackson and Fahrig (2015). Both young mature and old mature forests were distributed along this LFC gradient such that mean LFC did not differ between age groups at any spatial scale investigated (Traylor et al., 2023a). The minimum distance between any two sites was >1,000 m."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To assess how traits influence species’ responses to three filters (forest age, LFC, and deadwood volume), we created a joint species distribution model (JSDM) in the hierarchical modelling of species communities (HMSC) package (Tikhonov et al., 2020) in R (R Core Team, 2022). Briefly, this procedure fits a multivariate, hierarchical generalized linear mixed model to a matrix of species occurrence or abundance data using Bayesian inference. The model estimates a niche for each species (β parameters) with respect to each environmental co-variate, and the role of traits in defining species’ niches is also estimated (γ), as is the residual phylogenetic correlation in niches unexplained by traits (ρ). Species’ niches are thus jointly (i.e., non-independently) estimated due to a hierarchical layer in the model which incorporates trait effects and improves estimation for less frequently collected species (Ovaskainen and Abrego, 2020)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "After omitting species present at fewer than five sites, which are too rare to model effectively (Ovaskainen and Abrego, 2020), we fit a presence/absence JSDM on a matrix of 194 species at 40 sites using a probit link function to a Bernoulli distribution. We included five traits (described above) that have well-defined functional relevance and for which we could produce testable hypotheses in relation to covariates (Brousseau et al., 2018). Our model had six fixed-effect covariates: three focal covariates for which we produced hypotheses (forest age (categorical: old, young), LFC, and deadwood volume; Table 2) and three additional covariates that were included to improve predictive power (gap fraction, tree diversity, and Tree Axis 2). These additional covariates are known to be important for saproxylic beetle communities (Lettenmaier et al., 2022; Traylor et al., 2022a), and thus may be relevant to species occurrences as well. Deadwood volume and gap fraction were transformed using $\\log ( \\mathbf { x } + 1 )$ and log(x) to improve linearity, respectively. These traits and covariates had acceptable variance inflation factors less than three, checked using the faraway R package (Faraway, 2016). HMSC scales all covariates and traits to zero mean and unit variance for model fitting. Additionally, because morphological traits are correlated across the Coleoptera phylogeny (Hagge et al., 2021), we included a phylogenetic correlation matrix in the covariance structure of the model. This was done by first creating a tree based on hierarchical taxonomic relationships (using the levels suborder, series, superfamily, family, subfamily, genus, and species) with all branch lengths equal to 1 using the ape package (Paradis and Schliep, 2019). This method underestimates deep divergence $( \\mathbf { e . g . } ,$ between families or superfamilies and higher) and overestimates recent divergence (e.g., between species within a genus), but is still recommended when no phylogeny is available (Ovaskainen and Abrego, 2020). Taxonomic levels followed Beutel and Leschen (2005) and Leschen et al. (2010), except for the newly supported superfamilies in Cai et al. (2022). All tips (species) were kept at equal lengths from the root despite taxonomic levels missing for some groups (e.g., there are no classified subfamilies in Aderidae but a dummy subfamily level was included for consistency, Supplementary Table S4). To account for the spatial layout of our study"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "We sampled the posterior distribution of the JSDM using default priors with four Markov chain Monte Carlo (MCMC) chains, each run for 35,000 iterations with the first $^ { 1 0 , 0 0 0 }$ discarded as burn in. Remaining iterations were thinned by 100 to produce 250 samples per MCMC chain (1,000 total samples). Convergence and sample independence were checked with potential scale reduction factors (Gelman and Rubin, 1992) and effective sample sizes (ESS), respectively. Explanatory power was estimated by averaging across species for the area under the curve (AUC) and Tjur $\\mathtt { R } ^ { 2 }$ . To assess predictive power, we performed 10-fold cross-validation, where sampling sites were randomly assigned into 10 folds, and each fold was used for validation based on predictions from the other nine folds. Mean values of AUC and $\\operatorname { T j u r } \\operatorname { R } ^ { 2 }$ were obtained from the cross-validation procedure. We additionally used variance partitioning to estimate the amount of variance that was explained by each covariate and the amount of variance explained by traits for species responses and occurrences."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Figure S1). Although poor on average, predictive Tjur $\\mathrm { R } ^ { 2 }$ was positive for 98 species and predictive AUC was > 0.5 for 104 species (53–56 % of species, not including nine species that were present in all sites), and these values were not correlated to species’ prevalence (Supplementary Figure S1). Variance partitioning showed that traits altogether explained 13.7 % of the total explained variance in species occurrences. Additionally, 4.6–16.4 % of the explained variance in species niches (β) can be explained by the traits, with forest age having the highest value followed by gap fraction at 12.4 % (Supplementary Table S5). There was very little residual phylogenetic signal in the model (mean ρ-parameter = 0.154, 95 % CI = 0–0.530), and the random spatial effect showed some evidence of spatial autocorrelation at approximately 1,163 m (mean α-parameter, 95 % CI = 0–9,728 m). Overall, many more species responded positively than negatively to forest age $\\mathbf { ( i . e . , }$ β-parameter showed higher probability of occurring in old mature forest), LFC, and deadwood volume at > 95 % and > 85 % posterior probability (pp, Table 3). Species responding with > 95 % pp to any covariate(s) can be found in Table 4. All species responses with > 85 % pp, and 95 % credible intervals of β for all species, can be found in Supplementary Tables S6 & S7, respectively."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "List of saproxylic beetle species with highly supported (>95 % posterior probability) responses (β-parameter) to covariates included in the joint species distribution model. Positive (+) and negative (-) responses indicate higher/lower occurrence probability in old mature forests, with higher landscape forest cover (LFC), with higher deadwood volume, in more mesic tree communities, with higher gap fraction, and with higher tree diversity, respectively. Taxonomy follows GBIF Secretariat (2022). NMDS = non-metric multidimensional scaling."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:44f6c52/tier:advanced/page:9/block:3)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Fig. 3. Community trait composition (mean and dispersion) of five morphological traits of saproxylic beetles along gradients of three environmental filters (covariates). Effects were estimated from a joint species distribution model. Mean estimates are shown with 95 % credible intervals. Relationships supported with >85 % posterior probability (pp) are shown in blue (negative) and red (positive). Grey dots represent values from sampled communities. Trait values of body width, antenna length, and eye length are standardized according to body length, and body length is log transformed (refer to Methods section 2.2). LFC = landscape forest cover; DW = deadwood."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Clayton R. Traylor: Conceptualization, Methodology, Formal analysis, Investigation, Data curation, Writing – original draft, Writing – review & editing, Visualization, Project administration. Michael D."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Ulyshen: Conceptualization, Methodology, Investigation, Resources, Writing – review & editing, Supervision, Funding acquisition. Joseph V. McHugh: Conceptualization, Methodology, Investigation, Resources, Writing – review & editing, Supervision, Funding acquisition. Ryan C. Burner: Conceptualization, Methodology, Formal analysis, Resources, Writing – review & editing, Supervision, Funding acquisition."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "This study was funded by Presidential Early Career Award (PECASE) funds awarded to MD Ulyshen, and by USDA National Institute of Food and Agriculture Hatch project GEO00886 awarded to JV McHugh, and by the U.S. Geological Survey through RC Burner."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "This study was funded by Presidential Early Career Award (PECASE) funds awarded to MD Ulyshen, by USDA National Institute of Food and Agriculture Hatch project GEO00886 awarded to JV McHugh, and by the U.S. Geological Survey through RC Burner."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "![Image block](doc:d15ce8c/tier:flash/page:1/block:14)"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Figure S1. Comparison of predictive power (predicted Tjur R 2 and area under the curve (AUC) from 10-fold cross validation) to saproxylic beetle species prevalence (top row) and explanatory power (bottom row). Dots represent species used in the joint species distribution model (excluding nine species which were present at all sites, and thus were not included in predictive power estimates). Top row: predictive power was not related to species prevalence (i.e., the proportion of sites they occurred at), indicating that predictive power was not stronger for more common species. Mean predictive power (red vertical line) was positive but close to 0 for Tjur R 2 and 0.5 for AUC. Bottom row: Predictive power was always lower than, but strongly correlated to, explanatory power. Diagonal line represents a perfect relationship, horizontal line shows cut off for positive predictive power (0 for Tjur R 2 , 0.5 for AUC)."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "![Image block](doc:d15ce8c/tier:flash/page:2/block:1)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Figure S2. Trait-niche relationships (γ-parameter) between standardized trait values for saproxylic beetles (x-axis) and standardized environmental covariates (y-axis) from the joint species distribution model. Each dot represents a species’ estimated mean niche (β-parameter) for a covariate plotted against its standardized trait value. Species are colored according to having a positive (red) or negative (blue) niche at higher than 85% posterior probability. Black regression lines show post-hoc best-fit relationships between species traits and β estimates; for γ parameter estimates quantifying these relationships, and their posterior support, refer to Fig. 1 in the main text and Table S9."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "![Image block](doc:d15ce8c/tier:flash/page:3/block:3)"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Figure S3. Relationships between community trait mean and dispersion of five morphological traits across all saproxylic beetle species sampled (x axis; n = 472) and the 194 species used in the joint species distribution model (y axis). Each dot represents the beetle community at a single site. Species collected at fewer than five sites (n = 278) were excluded from the model because they were too rare to accurately model. Pearson correlations range from 0.837–0.949 (community trait mean) and 0.807–0.898 (community trait dispersion)"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "Table S1. Trait measurements used in this study for all 472 species of saproxylic beetles (including morphospecies). Morphological traits were measured according to Hagge et al. (2021), and one specimen was used per species. Values are measured in mm (except roundness, which is a proportion), and have not been relativized to body length. Taxon names are according to the Global Biodiversity Information Facility (GBIF) taxonomic backbone (GBIF Secretariat [2022](https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c)) when available, or are noted otherwise with a superscript referring to another reference when not in the GBIF database. Some traits for some species were estimated rather than measured due to damaged specimens; for details, refer to Table S2."
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "2 Taxon name according to: Otto, R.L., Karns, K.D. 2017. New state records for Nearctic flase click beetles (Coleoptera: Eucnemidae). Insecta Mundi: 0582: 1–12. ([https://digitalcommons.unl.edu/insectamundi/1083/](https://digitalcommons.unl.edu/insectamundi/1083/))"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "3 Taxon name according to: Mathison, B.A. 2021. Click beetles (Coleoptera: Elateridae) of the southeastern United States. Occasional Papers of the Florida State Collection of Arthropods 13: 1–414. ([https://418.e25.myftpupload.com/wp-content/uploads/2021/12/occasional-papers-vol-13.pdf](https://418.e25.myftpupload.com/wp-content/uploads/2021/12/occasional-papers-vol-13.pdf))"
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "4 Taxon name according to: Anderson, R.S. 2008. A review of the genus Eubulus Kirsch 1869 in the United States and Canada (Curculionidae: Cryptorhynchinae). The Coleopterists Bulletin 62: 287–296. ([https://www.jstor.org/stable/27571120](https://www.jstor.org/stable/27571120))"
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "Table S2. Information on missing morphological traits for saproxylic beetle species. Missing morphological traits were filled in using other species in the appropriate genus. Each missing data point was calculated by averaging the measurement for all other species in the genus (after standardizing for their body length), then proportionally filling in missing data based on the body length. BW = body width, BH = body height, AN = antennae, EL = eye length"
+  },
+  {
+   "id": "u28",
+   "kind": "prose",
+   "text": "Table S6. Saproxylic beetle species with β posterior probabilities (pp) >85% for forest age, deadwood volume, gap fraction, landscape forest cover (LFC), non-metric multidimensional scaling (NMDS) tree axis 2, and tree diversity. Sign of response (positive: + , negative: - , blank: no relationship) and posterior support for each relationship are shown. Positive responses indicate that species’ occurrence was higher in old forests, at high LFC, or high deadwood volumes, and vice versa for negative responses, for example. Blank cells indicate the β-parameter had"
+  },
+  {
+   "id": "u29",
+   "kind": "prose",
+   "text": "Table S8. Sign of response and posterior probability (pp) for trait niche-relationships (γ) for each covariate from the joint species distribution model of saproxylic beetle species. Values are shown only for those relationships with >85% support. NMDS = non-metric multidimensional scaling."
+  },
+  {
+   "id": "u30",
+   "kind": "prose",
+   "text": "Table S9. Mean estimates of trait-niche relationships (γ) for each covariate from the joint species distribution model of saproxylic beetle species and the 95% credible interval (CI). NMDS = non-metric multidimensional scaling."
+  },
+  {
+   "id": "u31",
+   "kind": "prose",
+   "text": "Otto, R.L., Karns, K.D. 2017. New state records for Nearctic flase click beetles (Coleoptera: Eucnemidae). Insecta Mundi: 0582: 1–12."
+  },
+  {
+   "id": "u32",
+   "kind": "table 0",
+   "text": "Trait | Indicated functional role\nBody length | Larger beetles have longer development times, lower fecundity/ abundance, require larger pieces of deadwood, and may be poorer dispersers (Foit, 2010; Brin et al., 2011; Fountain-Jones et al., 2015; Brin et al., 2016; Gillespie et al., 2017).\nBody width | Wider beetles are thought to rely on resources found outside of the phloem layer, such as decayed wood or tree cavities. Thus, wider species may be poorer dispersers based on habitat stability and have longer development times compared to narrower species (Micó et al., 2020; Hagge et al., 2021).\nRoundness | Rounder beetles are thought to rely on resources found outside of the phloem layer, such as decayed wood or tree cavities. Thus, rounder species may be poorer dispersers based on habitat stability and have longer development times compared to flatter species (Micó et al., 2020; Hagge et al., 2021).\nAntennae length | Longer antennae allow for better resource detection and olfactory communication, and thus longer antenna may be related to better dispersal ability or increased flight activity (Elgar et al., 2018; Javoïs et al., 2019; Neff et al., 2022).\nEye length | Larger eyes allow for better resource detection (Talarico et al., 2007, 2011), but may also be related to preferring more open habitats (e.g., tree hollows) as compared to confined habitats (e.g., under bark; Micó et al., 2020)."
+  },
+  {
+   "id": "u33",
+   "kind": "table 5",
+   "text": "Category | Forest age (old) | Landscape forest cover (LFC) | Deadwood volume\nBody length | 0.881 | 0.885 | 0.595\nBody width | 0.763 | 0.580 | 0.521\nBody roundness | 0.945 | 0.844 | 0.850\nAntennae length | 0.960 | 0.679 | 0.892\nEye length | 0.848 | 0.940 | 0.886"
+  },
+  {
+   "id": "u34",
+   "kind": "table 7",
+   "text": "Species with missing data | Missing body measurement(s) | Species used to fill in missing data\nChoragus sp. | BW, BH, AN, EL | C. zimmermanni\nAgrilus defectus | BH | A. bilineatus, A. obsoletoguttatus, A. olentangyi, Agrilus sp., A. subrobustus\nGraphisurus despectus | BW, BH | G. fasciatus\nAcalles carinatus | AN, EL | A. clavatus\nChramesus hicoriae | BW, BH | Chramesus sp.\nCophes oblongus | AN | C. fallax\nCophes obtentus | AN | C. fallax\nPityophthorus sp. 2 | EL | Pityophthorus sp. 1, 3, 4\nXyleborinus sp. | BH | X. gracilis, X. octiesdentatus, X. saxesenii"
+  },
+  {
+   "id": "u35",
+   "kind": "table 7",
+   "text": "Platysoma leconti | AN | P. aequum, P. aurelianum, P. parallelum\nByrrhodes incomptus | AN | B. fallax, B. intermedius\nByrrhodes sp. 1 | AN | B. fallax, B. intermedius\nByrrhodes tristiatus | AN | B. fallax, B. intermedius\nPetalium debile | AN | P. bistriatum, Pincisum, P. whitei\nPetalium sp. 1 | AN | P. bistriatum, Pincisum, P. whitei\nPetalium sp. 2 | AN | P. bistriatum, Pincisum, P. whitei\nAulonothroscus distans | EL | A. convergens, A. parallelus, A. sp1"
+  },
+  {
+   "id": "u36",
+   "kind": "table 10",
+   "text": "Covariate | % variance explained by traits\nForest age (old) | 16.359\nGap fraction | 12.406\nDeadwood volume | 10.955\nLandscape forest cover | 7.317\nTree diversity | 5.961\nNMDS tree axis 2 | 4.608"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6"
+  ],
+  [
+   "u7"
+  ],
+  [
+   "u8",
+   "u9"
+  ],
+  [
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22"
+  ],
+  [
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28"
+  ],
+  [
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33",
+   "u34"
+  ],
+  [
+   "u35",
+   "u36"
+  ]
+ ],
+ "calls": 19,
+ "categories": [
+  {
+   "variable": "forest age",
+   "code": "young",
+   "term": "regrown after 1938",
+   "unit": "u1",
+   "model_label": "young",
+   "label": "regrown after 1938",
+   "explanation": ""
+  },
+  {
+   "variable": "forest age",
+   "code": "old",
+   "term": "mature in 1938",
+   "unit": "u1",
+   "model_label": "old",
+   "label": "mature in 1938",
+   "explanation": ""
+  },
+  {
+   "variable": "LFC",
+   "code": "LFC",
+   "term": "Landscape Forest Cover",
+   "unit": "u1",
+   "model_label": "Landscape Forest Cover",
+   "label": "Landscape Forest Cover",
+   "explanation": ""
+  },
+  {
+   "variable": "sign",
+   "code": "+",
+   "term": "positive",
+   "unit": "u2",
+   "model_label": "positive",
+   "label": "positive",
+   "explanation": ""
+  },
+  {
+   "variable": "sign",
+   "code": "-",
+   "term": "negative",
+   "unit": "u2",
+   "model_label": "negative",
+   "label": "negative",
+   "explanation": ""
+  },
+  {
+   "variable": "Relative support values",
+   "code": "+++",
+   "term": ">95 %",
+   "unit": "u2",
+   "model_label": ">95 %",
+   "label": "95",
+   "explanation": "> %"
+  },
+  {
+   "variable": "Relative support values",
+   "code": "++",
+   "term": ">90 %",
+   "unit": "u2",
+   "model_label": ">90 %",
+   "label": "90",
+   "explanation": "> %"
+  },
+  {
+   "variable": "Relative support values",
+   "code": "+/-",
+   "term": ">85 %",
+   "unit": "u2",
+   "model_label": ">85 %",
+   "label": "85",
+   "explanation": "> %"
+  },
+  {
+   "variable": "landscape forest cover",
+   "code": "LFC",
+   "term": "landscape forest cover",
+   "unit": "u5",
+   "model_label": "landscape forest cover",
+   "label": "landscape forest cover",
+   "explanation": ""
+  },
+  {
+   "variable": "forest age",
+   "code": "old",
+   "term": "old",
+   "unit": "u7",
+   "model_label": "old",
+   "label": "old",
+   "explanation": ""
+  },
+  {
+   "variable": "forest age",
+   "code": "young",
+   "term": "young",
+   "unit": "u7",
+   "model_label": "young",
+   "label": "young",
+   "explanation": ""
+  },
+  {
+   "variable": "species responses and occurrences",
+   "code": "β",
+   "term": "can be explained by the traits",
+   "unit": "u9",
+   "model_label": "traits",
+   "label": "traits",
+   "explanation": "can be explained by the"
+  },
+  {
+   "variable": "species responses and occurrences",
+   "code": "β-parameter",
+   "term": "showed higher probability of occurring in old mature forest",
+   "unit": "u9",
+   "model_label": "β-parameter",
+   "label": "showed higher probability of occurring in old mature forest",
+   "explanation": ""
+  },
+  {
+   "variable": "responses",
+   "code": "+",
+   "term": "higher/lower occurrence probability in old mature forests, with higher landscape forest cover (LFC), with higher deadwood volume, in more mesic tree communities, with higher gap fraction, and with higher tree diversity, respectively",
+   "model_term": "higher occurrence probability in old mature forests, with higher landscape forest cover (LFC), with higher deadwood volume, in more mesic tree communities, with higher gap fraction, and with higher tree diversity, respectively.",
+   "unit": "u10",
+   "model_label": "positive",
+   "label": "higher/lower occurrence probability in old mature forests, with higher landscape forest cover (LFC), with higher deadwood volume, in more mesic tree communities, with higher gap fraction, and with higher tree diversity, respectively",
+   "explanation": ""
+  },
+  {
+   "variable": "responses",
+   "code": "-",
+   "term": "lower occurrence probability in old mature forests, with higher landscape forest cover (LFC), with higher deadwood volume, in more mesic tree communities, with higher gap fraction, and with higher tree diversity, respectively.",
+   "unit": "u10",
+   "model_label": "negative",
+   "label": "lower occurrence probability in old mature forests, with higher landscape forest cover (LFC), with higher deadwood volume, in more mesic tree communities, with higher gap fraction, and with higher tree diversity, respectively.",
+   "explanation": ""
+  },
+  {
+   "variable": "DW",
+   "code": "DW",
+   "term": "deadwood",
+   "unit": "u12",
+   "model_label": "deadwood",
+   "label": "deadwood",
+   "explanation": ""
+  },
+  {
+   "variable": "Species are colored according to having a negative niche",
+   "code": "blue",
+   "term": "negative (blue) niche at higher than 85% posterior probability",
+   "unit": "u20",
+   "model_label": "blue",
+   "label": "blue",
+   "explanation": "negative ( ) niche at higher than 85% posterior probability"
+  },
+  {
+   "variable": "BW",
+   "code": "BW",
+   "term": "body width",
+   "unit": "u27",
+   "model_label": "body width",
+   "label": "body width",
+   "explanation": ""
+  },
+  {
+   "variable": "BH",
+   "code": "BH",
+   "term": "body height",
+   "unit": "u27",
+   "model_label": "body height",
+   "label": "body height",
+   "explanation": ""
+  },
+  {
+   "variable": "AN",
+   "code": "AN",
+   "term": "antennae",
+   "unit": "u27",
+   "model_label": "antennae",
+   "label": "antennae",
+   "explanation": ""
+  },
+  {
+   "variable": "EL",
+   "code": "EL",
+   "term": "eye length",
+   "unit": "u27",
+   "model_label": "eye length",
+   "label": "eye length",
+   "explanation": ""
+  },
+  {
+   "variable": "positive",
+   "code": "+",
+   "term": "positive",
+   "unit": "u28",
+   "model_label": "positive",
+   "label": "positive",
+   "explanation": ""
+  },
+  {
+   "variable": "negative",
+   "code": "-",
+   "term": "negative",
+   "unit": "u28",
+   "model_label": "negative",
+   "label": "negative",
+   "explanation": ""
+  },
+  {
+   "variable": "body length",
+   "code": "",
+   "label": "body length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "body roundness",
+   "code": "",
+   "label": "body roundness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "antenna length",
+   "code": "",
+   "label": "antenna length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "forest age",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "LFC",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "deadwood volume",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "gap fraction",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "tree diversity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "Tree Axis 2",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "response to covariates",
+   "code": "",
+   "label": "negative (-) responses",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "saproxylic beetle species prevalence",
+   "code": "",
+   "label": "predictive power",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "saproxylic beetle species prevalence",
+   "code": "",
+   "label": "explanatory power",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "community trait mean",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "community trait dispersion",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "Morphological traits",
+   "code": "",
+   "label": "Morphological traits",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "Roundness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "Trait",
+   "code": "",
+   "label": "Antennae length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "Species are colored according to having a positive niche",
+   "code": "red",
+   "term": "positive (red) niche at higher than 85% posterior probability",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "blank",
+   "code": "",
+   "term": "no relationship",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "BW, BH, AN, EL",
+   "term": "Body width, Body height, Antennae length, Eye length",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "BH",
+   "term": "Body height",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "BW, BH",
+   "term": "Body width, Body height",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "AN, EL",
+   "term": "Antennae length, Eye length",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "BW, BH",
+   "term": "Body width, Body height",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "AN",
+   "term": "Antennae length",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "EL",
+   "term": "Eye length",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Missing body measurement(s)",
+   "code": "BH",
+   "term": "Body height",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 56.0
+}

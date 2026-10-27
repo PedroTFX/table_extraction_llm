@@ -1,0 +1,824 @@
+{
+ "paper": "DelToro2015",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:ea7289e/tier:advanced/page:1/block:3)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Two methods are used commonly for assessing effects of climatic change on large-scale biodiversity patterns and to predict effects of climatic change on functional diversity: (1) empirical data collected along environmental gradients, where space is used as a surrogate of time (Lavergne et al., 2010; De Frenne et al., 2013), are used to asses species compositional changes with varying environmental conditions, which may occur in future climates, and (2) species distribution models (SDMs) that describe how suitable habitat for individual species is likely to change in response to future climatic conditions (Franklin, 2009, 2010) are used to infer potential suitable habitat for species in future climates. Both of these approaches have yielded valuable insights into how individual species or entire assemblages are likely to change under gradually changing climatic and environmental conditions (De Frenne et al., 2013). However, it remains difficult to evaluate how changes in species composition will translate to changes in functional diversity: the value and range of those species traits that influence ecosystem functioning (Tilman, 2001)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "We used data from a previous study in which ants were sampled systematically along a latitudinal gradient at 67 sites in the eastern United States (Del Toro, 2013). The extent of this study covered seven of the North American level II ecoregions: (1) Soft Wood Shield, (2) Mixed Wood Shield, (3) Atlantic Highlands, (4) Mixed Wood Plains, (5) south-east USA Plains, (6) Appalachian Forests and (7) south-east USA Coastal Plains (boundaries plotted on Figures 5–8). Although Del Toro (2013) identified 92 species at the 67 sites, we used only those species for which we have distribution, abundance and some trait data (n = 70). Abundance data were extracted from the site 9 species matrix of the 2010 study (data available online: [http://www.plosone.org](http://www.plosone.org); DOI: [10.1371/journal.pone.0067973](http://dx.doi.org/10.1371/journal.pone.0067973)). We used the number of incidences – that is the number of pitfall traps in which a species was collected – as our measure of abundance and not the number of individual ants, as these results were not significantly different (Del Toro, 2013). Each incidence likely corresponded to an independent nest (a unit of abundance for ants as interpreted by colony density: Gotelli et al., 2011) because traps were separated by 10 m – more than the average foraging distance of a single colony in eastern North American forests. In this system, only a very small proportion of ant species (\\~ 2%) have been observed to have foraging distances greater 2 m (Personal communication with K. Stuble). In the 2010, we observed a total of 3721 total species incidences, of those incidences 3673 (\\~ 99%) correspond to the species in this study, suggesting that this study considers the species providing the overwhelming majority of ant-mediated ecosystem services. The maximum abundance per species per site = 40, because there were a total of 40 pitfall traps at each site."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "To classify ants according to functional traits, we used two taxonomic, three morphometric and nine natural history traits for 70 species from eastern North America. The morphometric traits were measured in the laboratory, and the natural history traits were gathered from various published and online sources. Following principles in Petchey & Gaston (2006), we focused on traits that directly influence major ecosystem processes mediated by ants, including (1) soil movement, (2) decomposition, (3) seed dispersal and (4) invertebrate and plant community regulation. Measures for each trait were derived from three main sources: Ellison et al. (2012), [www.antweb.org](http://www.antweb.org), and [www.antwiki.org](http://www.antwiki.org)."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "The three morphometric traits we used – head length, relative eye length and leg length relative to body size – reflect body size (which is correlated with head length), foraging capacity, foraging period and modes of resource acquisition (Bihn et al., 2010). For 3–10 pinned and mounted individuals of each species, we measured head length, eye length and femur length at 509 magnification using a calibrated ocular micrometer attached to Leica microscope. We used the mean for each trait as the trait value for each species. We only measured minor workers to avoid any confounding factors from disproportionately large major workers in polymorphic species."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Secondly, we categorized the feeding preferences of each species as: (1) omnivores, (2) predators, (3) granivores or (4) honeydew (based on Ellison et al., 2012). Most species were categorized as omnivores, which play key roles in mediating decomposition of animal carcasses. The few predators and granivores play significant roles in regulating community structure of other invertebrates or plant communities (see review in Del Toro et al., 2012). Honeydew feeders also may form mutualistic relationships with hemipterans (Way, 1963)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "ogeographic affinity based on the available occurrence records: (1) widespread (distributed throughout the entire extent of the study region), (2) warm climate (distributed only in the southern extent of the study region) or (3) cold climate (distributed only in the northern extent of the study region). We then categorized the primary and secondary habitat where each species is commonly found. Primary habitats included (1) bogs, (2) edge habitat, (3) open habitat, (4) conifer forests, (5) deciduous forests, (6) forests (either conifer or deciduous) or (7) subterranean. Secondary habitat associations were as follows: (1) wet soils, (2) mix of litter and grass, (3) exclusively grassy areas, (4) exclusively leaf litter, (5) rocky soils or (6) sandy soils. For the last natural history habitat trait, we categorized species according to whether they nest in (1) soil, (2) wood, (3) grass or (4) acorns. These nesting preferences also are related to whether a species moves soil, decomposes wood or disperses seeds."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Last, we identified natural history traits related to interspecific interactions with other ants. For all of the species, we noted whether it was known to be a social parasite or a slave-making species. For 33 species, we also were able to classify them based on their behavioural interactions with other ants: (1) competitive dominant, (2) submissive or (3) neutral. These data were derived from previous field observations (Del Toro et al., 2013) and laboratory trials (Wittman & Gotelli, 2011). For the remaining 37 species, the behavioural traits in the matrix were left blank."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "We used the FD package version 1.0 (Lalibert\u0001e & Legendre, 2010) in R version 3.0.3 (R Core Team, 2014) to calculate functional diversity indices and designate functional group classifications. Specifically, we used the ‘dbFD’ function to calculate Rao’s Q, and FEve. Rao’s Q is the appropriate measure for functional diversity in this study as this metric takes into account the sum of the pairwise distances between this suite of commonly distributed species weighted by their relative abundances throughout our sampling sites (Rao, 1982), and FEve is a metric of functional evenness (FEve) that measures the regularity of spacing between species in traits space as well as the evenness in the distribution of species abundances (Vill\u0001eger et al., 2008). We also used this function to visually evaluate a dendrogram that grouped all of the species into functional groups based on trait similarities based on the functional dispersion index ‘FDis’ and the ‘ward’ clustering method. The ‘ward’ method aims to find the minimum number of spherical clusters which we identified as having a cluster dendrogram height of ≤ 1. The ‘FDis’ index is the multivariate analogue of the weighted mean absolute deviation (Lalibert\u0001e & Legendre, 2010). We then grouped the species into ten functional groups based on the similarity of their traits (Table 1; see Appendix S1 for data and dendrogram Figure S1)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "To create a consensus distribution maps for each species, we used four different modelling algorithms to develop SDMs for each species, generalized linear models (GLMs), generalized additive models (GAMs), MAXENT, and boosted regression trees (BRTs). To predict species occurrences, we used data extracted from the eight least correlated and biologically informative of the 19 BioClim variables (annual mean temperature, mean diurnal range, isothermality, maximum temperature of the warmest month, minimum temperature of the coldest month, annual precipitation, precipitation seasonality, precipitation of the driest quarter) (Hijmans et al., 2005). For modelling and prediction, we used the R packages: ‘dismo’ v.1.0-5 (Hijmans et al., 2014), ‘raster’ v.2.3-12 (Hijmans, 2014) and ‘SDMTools’ v1.1-221.0 (VanDerWal et al., 2014). We accounted for sampling bias by creating a sampling bias grid surface as done by Fitzpatrick et al. (2013). We generated a sampling bias surface, by summing the number of ant occurrence records found within each 2-arc-minute grid cell and then extrapolated these data across the study region using kernel density estimation as implemented in the SM package (Bowman & Azzalini, 2014). We then created 10,000 random background points weighted by the sampling bias surface (Elith et al., 2010), which used to evaluate the accuracy of the models."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "The best-fit quadratic regressions suggest that as species richness increased, functional diversity and the number of functional groups also increased in the 67 sampled sites, (Fig. 1a, b; adjusted $R ^ { 2 } = 0 . 4 4$ and 0.49, respectively, P-value 0.05$ . Species distribution models had area under the ROC curve (AUC) values ranging from 0.99 to 0.72; any AUC values"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Figure 2 (a) relationship between observed species richness and predicted species richness from S-SDMs at each sampling site. (b) relationship between observed number of functional groups and the predicted number of functional groups from S-FGMs at each sampling site. Dashed lines show the 1:1 relationship between the x- and y-axes. The black lines show the best-fit linear regression with the 95% confidence intervals shaded grey."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:ea7289e/tier:advanced/page:8/block:2)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "It is important to note that changes in functional group richness may not be apparent from simply looking at the presence/absence maps of each functional group (Figure S3). Although changes in species richness are likely to result in similar changes to functional diversity (see also Fitzpatrick et al., 2011), the persistence of all functional groups at any given point appears to be driven largely by a smaller subset of species. If high functional redundancy occurs in a region and a few species in different functional groups persist through climatic changes, then functional diversity will be preserved. If not, then functional diversity can be lost. Of particular concern are wood decomposers (functional group 2), seed dispersers (7) and leaf-litter community regulators (10). Wood decomposers and leaf-litter community regulators are forecast to have large species range-size contractions; the persistence of these functional groups, especially in the southern ecoregions, will be dependent on the response to climatic change of one or two species within their functional group. For seed dispersers (specifically their function as myrmecochores), not only does the persistence of their function depend on whether particular species keep up with changes in habitat suitability (which applies to all functional groups), but also necessitates the persistence of their associated myrmecochorous plants to track changing climates in similar ways (Stuble et al., 2014)."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Figure S2. (a) AUC values for each distribution model. Blue points show Maxent, black points show BRT, green points show GAM, and red point show GLM AUC values for all 70 species. (b) Histogram of the distribution of unique point localities used to build the SDMs for each of the 70 species considered in this study."
+  },
+  {
+   "id": "u15",
+   "kind": "table 0",
+   "text": "Group | Description | Primary functional role\n1 | Medium body sized, soil dwelling, omnivorous, warm climate and widespread, open and sandy habitat Formicinae species | Soil movers\n2 | Large body sized, omnivorous, wood dwelling, forest and edgeCamponotusspecies | Wood decomposers\n3 | Medium body sized, omnivores, grass and soil dwelling, widespread, edge and forest habitat Dolichoderinae | Invertebrate community regulators\n4 | Large body sized, omnivores, soil dwelling, social parasitic, dominant, forest and edgeFormicaspecies | Ant community regulators\n5 | Large body sized, medium sized colonies, omnivores, submissive forest and edgeFormicaspecies | Soil movers\n6 | Large body sized, omnivores, soil dwelling, non-parasitic, dominantFormicaspecies | Soil movers\n7 | Medium to large body sized, omnivorous, seed dispersing, forest and edge habitat, Myrmicinae (some are behaviourally dominant) | Seed dispersers\n8 | Medium body sized, omnivores, soil dwelling, warm climate/widespread, forest habitat, Myrmicinae | Decomposers\n9 | Small body sized, small colonies, omnivores, soil dwelling, warm climate/widespread, open habitat, Myrmicinae | Decomposers"
+  },
+  {
+   "id": "u16",
+   "kind": "table 0",
+   "text": "10 | Small body sized, small colonies, predators, warm climate/widespread, often litter species | Invertebrate community regulators"
+  },
+  {
+   "id": "u17",
+   "kind": "table 1",
+   "text": "Observed species richness | Predicted species richness (S-SDMs)\n~5 | ~17\n~6 | ~27\n~6 | ~9\n~6 | ~4\n~7 | ~58\n~7 | ~61\n~8 | ~43\n~8 | ~42\n~8 | ~17"
+  },
+  {
+   "id": "u18",
+   "kind": "table 1",
+   "text": "~8 | ~14\n~8 | ~13\n~9 | ~46\n~9 | ~45\n~9 | ~35\n~9 | ~22\n~9 | ~10\n~10 | ~47\n~10 | ~46\n~10 | ~38"
+  },
+  {
+   "id": "u19",
+   "kind": "table 1",
+   "text": "~10 | ~35\n~10 | ~12\n~10 | ~11\n~11 | ~53\n~11 | ~44\n~11 | ~27\n~11 | ~19\n~11 | ~18\n~12 | ~63\n~12 | ~57"
+  },
+  {
+   "id": "u20",
+   "kind": "table 1",
+   "text": "~12 | ~41\n~12 | ~28\n~12 | ~27\n~12 | ~26\n~13 | ~63\n~13 | ~55\n~13 | ~44\n~13 | ~28\n~13 | ~27\n~13 | ~26"
+  },
+  {
+   "id": "u21",
+   "kind": "table 1",
+   "text": "~13 | ~25\n~13 | ~6\n~14 | ~64\n~14 | ~50\n~14 | ~49\n~14 | ~38\n~14 | ~37\n~14 | ~29\n~15 | ~64\n~15 | ~50"
+  },
+  {
+   "id": "u22",
+   "kind": "table 1",
+   "text": "~15 | ~48\n~15 | ~33\n~15 | ~29\n~15 | ~28\n~15 | ~27\n~15 | ~26\n~16 | ~58\n~16 | ~57\n~16 | ~44\n~16 | ~39"
+  },
+  {
+   "id": "u23",
+   "kind": "table 1",
+   "text": "~16 | ~37\n~16 | ~23\n~17 | ~57\n~17 | ~56\n~17 | ~38\n~17 | ~23\n~17 | ~13\n~18 | ~55\n~18 | ~47\n~19 | ~20"
+  },
+  {
+   "id": "u24",
+   "kind": "table 1",
+   "text": "~19 | ~15\n~20 | ~60"
+  },
+  {
+   "id": "u25",
+   "kind": "table 2",
+   "text": "Observed functional group richness | Predicted functional group richness (S-FGMs)\n~4.0 | ~3.0\n~4.1 | ~4.3\n~5.2 | ~3.7\n~5.8 | ~6.0\n~5.9 | ~7.7\n~6.0 | ~7.8\n~6.1 | ~9.3\n~6.2 | ~9.3\n~6.3 | ~9.3"
+  },
+  {
+   "id": "u26",
+   "kind": "table 2",
+   "text": "~6.4 | ~9.3\n~6.5 | ~9.3\n~6.6 | ~9.3\n~6.7 | ~9.3\n~6.8 | ~9.3\n~6.9 | ~9.3\n~7.0 | ~9.3\n~7.1 | ~9.3\n~7.2 | ~9.3\n~7.3 | ~9.3"
+  },
+  {
+   "id": "u27",
+   "kind": "table 2",
+   "text": "~7.4 | ~9.3\n~7.5 | ~9.3\n~7.6 | ~9.3\n~7.7 | ~9.3\n~7.8 | ~9.3\n~7.9 | ~9.3\n~8.0 | ~9.3\n~8.1 | ~9.3\n~8.2 | ~9.3\n~8.3 | ~9.3"
+  },
+  {
+   "id": "u28",
+   "kind": "table 2",
+   "text": "~8.4 | ~9.3\n~8.5 | ~9.3\n~8.6 | ~9.3\n~8.7 | ~9.3\n~8.8 | ~9.3\n~8.9 | ~9.3\n~9.0 | ~9.3\n~9.1 | ~9.3\n~9.2 | ~9.3\n~9.3 | ~9.3"
+  },
+  {
+   "id": "u29",
+   "kind": "table 2",
+   "text": "~9.4 | ~9.3\n~9.5 | ~9.3\n~9.6 | ~9.3\n~9.7 | ~9.3\n~9.8 | ~9.3\n~9.9 | ~9.3\n~10.0 | ~9.3\n~10.1 | ~9.3\n~10.2 | ~9.3\n~10.3 | ~9.3"
+  },
+  {
+   "id": "u30",
+   "kind": "table 2",
+   "text": "~10.4 | ~9.3\n~10.5 | ~9.3\n~10.6 | ~9.3\n~10.7 | ~9.3\n~10.8 | ~9.3\n~10.9 | ~9.3\n~11.0 | ~9.3"
+  },
+  {
+   "id": "u31",
+   "kind": "table 3",
+   "text": "Panel | Condition | Latitude (range) | Change in species and functional group richness per year (range)\n(a) | RCP 2.6 | 37~47 | -0.9~0.7\n(b) | RCP 8.5 | 37~47 | -0.9~0.6\n(c) | RCP 2.6 | 37~47 | -0.1~0.1\n(d) | RCP 8.5 | 37~47 | -0.1~0.1"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6",
+   "u7"
+  ],
+  [
+   "u8",
+   "u9"
+  ],
+  [
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14"
+  ],
+  [
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30"
+  ],
+  [
+   "u31"
+  ]
+ ],
+ "calls": 16,
+ "categories": [
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(1)",
+   "term": "Soft Wood Shield",
+   "unit": "u2",
+   "model_label": "Soft Wood Shield",
+   "label": "Soft Wood Shield",
+   "explanation": ""
+  },
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(2)",
+   "term": "Mixed Wood Shield",
+   "unit": "u2",
+   "model_label": "Mixed Wood Shield",
+   "label": "Mixed Wood Shield",
+   "explanation": ""
+  },
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(3)",
+   "term": "Atlantic Highlands",
+   "unit": "u2",
+   "model_label": "Atlantic Highlands",
+   "label": "Atlantic Highlands",
+   "explanation": ""
+  },
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(4)",
+   "term": "Mixed Wood Plains",
+   "unit": "u2",
+   "model_label": "Mixed Wood Plains",
+   "label": "Mixed Wood Plains",
+   "explanation": ""
+  },
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(5)",
+   "term": "south-east USA Plains",
+   "unit": "u2",
+   "model_label": "south-east USA Plains",
+   "label": "south-east USA Plains",
+   "explanation": ""
+  },
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(6)",
+   "term": "Appalachian Forests",
+   "unit": "u2",
+   "model_label": "Appalachian Forests",
+   "label": "Appalachian Forests",
+   "explanation": ""
+  },
+  {
+   "variable": "North American level II ecoregions",
+   "code": "(7)",
+   "term": "south-east USA Coastal Plains",
+   "unit": "u2",
+   "model_label": "south-east USA Coastal Plains",
+   "label": "south-east USA Coastal Plains",
+   "explanation": ""
+  },
+  {
+   "variable": "major ecosystem processes mediated by ants",
+   "code": "(1)",
+   "term": "soil movement",
+   "unit": "u3",
+   "model_label": "soil movement",
+   "label": "soil movement",
+   "explanation": ""
+  },
+  {
+   "variable": "major ecosystem processes mediated by ants",
+   "code": "(2)",
+   "term": "decomposition",
+   "unit": "u3",
+   "model_label": "decomposition",
+   "label": "decomposition",
+   "explanation": ""
+  },
+  {
+   "variable": "major ecosystem processes mediated by ants",
+   "code": "(3)",
+   "term": "seed dispersal",
+   "unit": "u3",
+   "model_label": "seed dispersal",
+   "label": "seed dispersal",
+   "explanation": ""
+  },
+  {
+   "variable": "major ecosystem processes mediated by ants",
+   "code": "(4)",
+   "term": "invertebrate and plant community regulation",
+   "unit": "u3",
+   "model_label": "invertebrate and plant community regulation",
+   "label": "invertebrate and plant community regulation",
+   "explanation": ""
+  },
+  {
+   "variable": "feeding preferences of each species",
+   "code": "(1)",
+   "term": "omnivores",
+   "unit": "u5",
+   "model_label": "omnivores",
+   "label": "omnivores",
+   "explanation": ""
+  },
+  {
+   "variable": "feeding preferences of each species",
+   "code": "(2)",
+   "term": "predators",
+   "unit": "u5",
+   "model_label": "predators",
+   "label": "predators",
+   "explanation": ""
+  },
+  {
+   "variable": "feeding preferences of each species",
+   "code": "(3)",
+   "term": "granivores",
+   "unit": "u5",
+   "model_label": "granivores",
+   "label": "granivores",
+   "explanation": ""
+  },
+  {
+   "variable": "feeding preferences of each species",
+   "code": "(4)",
+   "term": "honeydew",
+   "unit": "u5",
+   "model_label": "honeydew",
+   "label": "honeydew",
+   "explanation": ""
+  },
+  {
+   "variable": "geographic affinity",
+   "code": "(1)",
+   "term": "widespread (distributed throughout the entire extent of the study region)",
+   "unit": "u6",
+   "model_label": "widespread",
+   "label": "widespread",
+   "explanation": "distributed throughout the entire extent of the study region"
+  },
+  {
+   "variable": "geographic affinity",
+   "code": "(2)",
+   "term": "warm climate (distributed only in the southern extent of the study region)",
+   "unit": "u6",
+   "model_label": "warm climate",
+   "label": "warm climate",
+   "explanation": "distributed only in the southern extent of the study region"
+  },
+  {
+   "variable": "geographic affinity",
+   "code": "(3)",
+   "term": "cold climate (distributed only in the northern extent of the study region)",
+   "unit": "u6",
+   "model_label": "cold climate",
+   "label": "cold climate",
+   "explanation": "distributed only in the northern extent of the study region"
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(1)",
+   "term": "bogs",
+   "unit": "u6",
+   "model_label": "bogs",
+   "label": "bogs",
+   "explanation": ""
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(2)",
+   "term": "edge habitat",
+   "unit": "u6",
+   "model_label": "edge habitat",
+   "label": "edge habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(3)",
+   "term": "open habitat",
+   "unit": "u6",
+   "model_label": "open habitat",
+   "label": "open habitat",
+   "explanation": ""
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(4)",
+   "term": "conifer forests",
+   "unit": "u6",
+   "model_label": "conifer forests",
+   "label": "conifer forests",
+   "explanation": ""
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(5)",
+   "term": "deciduous forests",
+   "unit": "u6",
+   "model_label": "deciduous forests",
+   "label": "deciduous forests",
+   "explanation": ""
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(6)",
+   "term": "forests (either conifer or deciduous",
+   "model_term": "forest (either conifer or deciduous)",
+   "unit": "u6",
+   "model_label": "forest",
+   "label": "forests (either conifer or deciduous",
+   "explanation": ""
+  },
+  {
+   "variable": "Primary habitats",
+   "code": "(7)",
+   "term": "subterranean",
+   "unit": "u6",
+   "model_label": "subterranean",
+   "label": "subterranean",
+   "explanation": ""
+  },
+  {
+   "variable": "Secondary habitat associations",
+   "code": "(1)",
+   "term": "wet soils",
+   "unit": "u6",
+   "model_label": "wet soils",
+   "label": "wet soils",
+   "explanation": ""
+  },
+  {
+   "variable": "Secondary habitat associations",
+   "code": "(2)",
+   "term": "mix of litter and grass",
+   "unit": "u6",
+   "model_label": "mix of litter and grass",
+   "label": "mix of litter and grass",
+   "explanation": ""
+  },
+  {
+   "variable": "Secondary habitat associations",
+   "code": "(3)",
+   "term": "exclusively grassy areas",
+   "unit": "u6",
+   "model_label": "exclusively grassy areas",
+   "label": "exclusively grassy areas",
+   "explanation": ""
+  },
+  {
+   "variable": "Secondary habitat associations",
+   "code": "(4)",
+   "term": "exclusively leaf litter",
+   "unit": "u6",
+   "model_label": "exclusively leaf litter",
+   "label": "exclusively leaf litter",
+   "explanation": ""
+  },
+  {
+   "variable": "Secondary habitat associations",
+   "code": "(5)",
+   "term": "rocky soils",
+   "unit": "u6",
+   "model_label": "rocky soils",
+   "label": "rocky soils",
+   "explanation": ""
+  },
+  {
+   "variable": "Secondary habitat associations",
+   "code": "(6)",
+   "term": "sandy soils",
+   "unit": "u6",
+   "model_label": "sandy soils",
+   "label": "sandy soils",
+   "explanation": ""
+  },
+  {
+   "variable": "nest in",
+   "code": "(1)",
+   "term": "soil",
+   "unit": "u6",
+   "model_label": "soil",
+   "label": "soil",
+   "explanation": ""
+  },
+  {
+   "variable": "nest in",
+   "code": "(2)",
+   "term": "wood",
+   "unit": "u6",
+   "model_label": "wood",
+   "label": "wood",
+   "explanation": ""
+  },
+  {
+   "variable": "nest in",
+   "code": "(3)",
+   "term": "grass",
+   "unit": "u6",
+   "model_label": "grass",
+   "label": "grass",
+   "explanation": ""
+  },
+  {
+   "variable": "nest in",
+   "code": "(4)",
+   "term": "acorns",
+   "unit": "u6",
+   "model_label": "acorns",
+   "label": "acorns",
+   "explanation": ""
+  },
+  {
+   "variable": "behavioural interactions with other ants",
+   "code": "(1)",
+   "term": "competitive dominant",
+   "unit": "u7",
+   "model_label": "competitive dominant",
+   "label": "competitive dominant",
+   "explanation": ""
+  },
+  {
+   "variable": "behavioural interactions with other ants",
+   "code": "(2)",
+   "term": "submissive",
+   "unit": "u7",
+   "model_label": "submissive",
+   "label": "submissive",
+   "explanation": ""
+  },
+  {
+   "variable": "behavioural interactions with other ants",
+   "code": "(3)",
+   "term": "neutral",
+   "unit": "u7",
+   "model_label": "neutral",
+   "label": "neutral",
+   "explanation": ""
+  },
+  {
+   "variable": "functional dispersion index",
+   "code": "FDis",
+   "term": "The ‘FDis’ index is the multivariate analogue of the weighted mean absolute deviation (Lalibert\u0001e & Legendre, 2010",
+   "model_term": "The ‘FDis’ index is the multivariate analogue of the weighted mean absolute deviation (Laliberté & Legendre, 2010).",
+   "unit": "u8",
+   "model_label": "FDis",
+   "label": "FDis",
+   "explanation": "The ‘ ’ index is the multivariate analogue of the weighted mean absolute deviation (Lalibert\u0001e & Legendre, 2010"
+  },
+  {
+   "variable": "functional group",
+   "code": "2",
+   "term": "wood decomposers",
+   "unit": "u13",
+   "model_label": "wood decomposers",
+   "label": "wood decomposers",
+   "explanation": ""
+  },
+  {
+   "variable": "functional group",
+   "code": "7",
+   "term": "seed dispersers",
+   "unit": "u13",
+   "model_label": "seed dispersers",
+   "label": "seed dispersers",
+   "explanation": ""
+  },
+  {
+   "variable": "functional group",
+   "code": "10",
+   "term": "leaf-litter community regulators",
+   "unit": "u13",
+   "model_label": "leaf-litter community regulators",
+   "label": "leaf-litter community regulators",
+   "explanation": ""
+  },
+  {
+   "variable": "distribution model",
+   "code": "Blue points",
+   "term": "Maxent",
+   "unit": "u14",
+   "model_label": "Maxent",
+   "label": "Maxent",
+   "explanation": ""
+  },
+  {
+   "variable": "distribution model",
+   "code": "black points",
+   "term": "BRT",
+   "unit": "u14",
+   "model_label": "BRT",
+   "label": "BRT",
+   "explanation": ""
+  },
+  {
+   "variable": "distribution model",
+   "code": "green points",
+   "term": "GAM",
+   "unit": "u14",
+   "model_label": "GAM",
+   "label": "GAM",
+   "explanation": ""
+  },
+  {
+   "variable": "distribution model",
+   "code": "red point",
+   "term": "GLM",
+   "unit": "u14",
+   "model_label": "GLM",
+   "label": "GLM",
+   "explanation": ""
+  },
+  {
+   "variable": "Group",
+   "code": "1",
+   "term": "Medium body sized, soil dwelling, omnivorous, warm climate and widespread, open and sandy habitat Formicinae species",
+   "unit": "u15",
+   "model_label": "Formicinae",
+   "label": "Formicinae",
+   "explanation": "Medium body sized, soil dwelling, omnivorous, warm climate and widespread, open and sandy habitat species"
+  },
+  {
+   "variable": "Group",
+   "code": "2",
+   "term": "Large body sized, omnivorous, wood dwelling, forest and edgeCamponotusspecies",
+   "unit": "u15",
+   "model_label": "Camponotusspecies",
+   "label": "Large body sized, omnivorous, wood dwelling, forest and edgeCamponotusspecies",
+   "explanation": ""
+  },
+  {
+   "variable": "Group",
+   "code": "3",
+   "term": "Medium body sized, omnivores, grass and soil dwelling, widespread, edge and forest habitat Dolichoderinae",
+   "unit": "u15",
+   "model_label": "Dolichoderinae",
+   "label": "Dolichoderinae",
+   "explanation": "Medium body sized, omnivores, grass and soil dwelling, widespread, edge and forest habitat"
+  },
+  {
+   "variable": "Group",
+   "code": "4",
+   "term": "Large body sized, omnivores, soil dwelling, social parasitic, dominant, forest and edgeFormicaspecies",
+   "unit": "u15",
+   "model_label": "Formicaspecies",
+   "label": "Large body sized, omnivores, soil dwelling, social parasitic, dominant, forest and edgeFormicaspecies",
+   "explanation": ""
+  },
+  {
+   "variable": "Group",
+   "code": "5",
+   "term": "Large body sized, medium sized colonies, omnivores, submissive forest and edgeFormicaspecies",
+   "unit": "u15",
+   "model_label": "Formicaspecies",
+   "label": "Large body sized, medium sized colonies, omnivores, submissive forest and edgeFormicaspecies",
+   "explanation": ""
+  },
+  {
+   "variable": "Group",
+   "code": "6",
+   "term": "Large body sized, omnivores, soil dwelling, non-parasitic, dominantFormicaspecies",
+   "unit": "u15",
+   "model_label": "Formicaspecies",
+   "label": "Large body sized, omnivores, soil dwelling, non-parasitic, dominantFormicaspecies",
+   "explanation": ""
+  },
+  {
+   "variable": "Group",
+   "code": "7",
+   "term": "Medium to large body sized, omnivorous, seed dispersing, forest and edge habitat, Myrmicinae (some are behaviourally dominant)",
+   "unit": "u15",
+   "model_label": "Myrmicinae",
+   "label": "Myrmicinae",
+   "explanation": "Medium to large body sized, omnivorous, seed dispersing, forest and edge habitat, (some are behaviourally dominant"
+  },
+  {
+   "variable": "Group",
+   "code": "8",
+   "term": "Medium body sized, omnivores, soil dwelling, warm climate/widespread, forest habitat, Myrmicinae",
+   "unit": "u15",
+   "model_label": "Myrmicinae",
+   "label": "Myrmicinae",
+   "explanation": "Medium body sized, omnivores, soil dwelling, warm climate/widespread, forest habitat"
+  },
+  {
+   "variable": "Group",
+   "code": "9",
+   "term": "Small body sized, small colonies, omnivores, soil dwelling, warm climate/widespread, open habitat, Myrmicinae",
+   "unit": "u15",
+   "model_label": "Myrmicinae",
+   "label": "Myrmicinae",
+   "explanation": "Small body sized, small colonies, omnivores, soil dwelling, warm climate/widespread, open habitat"
+  },
+  {
+   "variable": "Group",
+   "code": "10",
+   "term": "Small body sized, small colonies, predators, warm climate/widespread, often litter species",
+   "unit": "u16",
+   "model_label": "litter species",
+   "label": "litter species",
+   "explanation": "Small body sized, small colonies, predators, warm climate/widespread, often"
+  },
+  {
+   "variable": "Panel",
+   "code": "(a)",
+   "term": "RCP 2.6",
+   "unit": "u31",
+   "model_label": "RCP 2.6",
+   "label": "RCP 2.6",
+   "explanation": ""
+  },
+  {
+   "variable": "Panel",
+   "code": "(b)",
+   "term": "RCP 8.5",
+   "unit": "u31",
+   "model_label": "RCP 8.5",
+   "label": "RCP 8.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Panel",
+   "code": "(c)",
+   "term": "RCP 2.6",
+   "unit": "u31",
+   "model_label": "RCP 2.6",
+   "label": "RCP 2.6",
+   "explanation": ""
+  },
+  {
+   "variable": "Panel",
+   "code": "(d)",
+   "term": "RCP 8.5",
+   "unit": "u31",
+   "model_label": "RCP 8.5",
+   "label": "RCP 8.5",
+   "explanation": ""
+  },
+  {
+   "variable": "functional diversity",
+   "code": "",
+   "label": "species traits",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "interspecific interactions with other ants",
+   "code": "",
+   "label": "social parasite",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "interspecific interactions with other ants",
+   "code": "",
+   "label": "slave-making species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "functional group classifications",
+   "code": "",
+   "label": "functional groups",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "Group",
+   "code": "",
+   "label": "Soil movers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Group",
+   "code": "",
+   "label": "Invertebrate community regulators",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Group",
+   "code": "",
+   "label": "Ant community regulators",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Group",
+   "code": "",
+   "label": "Decomposers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  }
+ ],
+ "dropped": [],
+ "seconds": 111.4
+}

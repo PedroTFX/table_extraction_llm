@@ -1,0 +1,180 @@
+  [semantic] left unmatched: 'Significant Association' vs 'Specialization' (llm said different traits)
+  [semantic] left unmatched: 'Significant Association' vs 'Larval feeding habit' (llm said different traits)
+  [semantic] left unmatched: 'Significant Association' vs 'Overwintering stage' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Taillefer2018/Taillefer2018.xlsx  (1738 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Taillefer2018/Taillefer2018.csv  (1621 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 22 pair(s))
+  'Athyroglossa granulosa (Cresson) (Ephydridae)' -> 'Athyroglossa granulosa (Cresson)'
+  'Chymomyza amoena (Loew) (Ephydridae)' -> 'Chymomyza amoena (Loew)'
+  'Ditrichophara exigua Cresson (Ephydridae)' -> 'Ditrichophara exigua Cresson'
+  'Drosophila transversa Fallén (Drosophilidae)' -> 'Drosophila transversa Fallén'
+  'Elachiptera nigriceps (Loew) (Chloropidae)' -> 'Elachiptera nigriceps (Loew)'
+  'Euaresta bella (Loew) (Tephritidae)' -> 'Euaresta bella (Loew)'
+  'Homoneura (Tarsohomoneura) americana (Wiedemann)' -> 'Homoneura (Tarsohomoneura) americana(Wiedemann)'
+  'Homoneura sheldoni (Coquillett) (Lauxaniidae)' -> 'Homoneura (Tarsohomoneura) sheldoni (Coquillett)'
+  'Leptocera erythroceras (Becker)' -> 'Leptocera erythrocera (Becker)'
+  'Lucilia illustris (Meigen)' -> 'Lucilia illustris(Meigen)'
+  'Malloewia abdominalis (Becker) (Chloropidae)' -> 'Malloewia abdominalis (Becker)'
+  'Malloewia nigripalpis (Malloch) (Chloropidae)' -> 'Malloewia nigripalpis (Malloch)'
+  'Notiphila (Notiphila) nudipes Cresson' -> 'Notiphila (Notiphila) nudipesCresson'
+  'Notiphila ?pauroura Mathis' -> 'Notiphila (Notiphila) pauroura Mathis'
+  'Notiphila avia Loew (Ephydridae)' -> 'Notiphila (Notiphila) avia Loew'
+  'Notiphila olivacea Cresson (Ephydridae)' -> 'Notiphila (Dichaeta) olivacea Cresson'
+  'Pterogramma paliceps (Johnson) (Sphaeroceridae)' -> 'Pterogramma palliceps (Johson)'
+  'Pterogramma palliceps (Johnson)' -> 'Pterogramma palliceps (Johson)'
+  'Rainieria antennaeipes (Say)' -> 'Rainieria antennaepes (Say)'
+  'Rhopalopterum carbonarium (Loew) (Chloropidae)' -> 'Rhopalopterum carbonarium (Loew)'
+  'Spelobia luteilabris (Rondani) (Sphaeroceridae)' -> 'Spelobia luteilabris (Rondani)'
+  'Spelobia sp.A (Sphaeroceridae)' -> 'Spelobia sp.A'
+
+TAXON NAMES LEFT UNMAPPED (46)
+  '?Calla palustris': no ground-truth name denotes this organism
+  'Abies balsamea': no ground-truth name denotes this organism
+  'Agromyza ?bispinata Spencer': no ground-truth name denotes this organism
+  'Bare soil': no ground-truth name denotes this organism
+  'Betula alleghaniensis': no ground-truth name denotes this organism
+  'Betula populifolia': no ground-truth name denotes this organism
+  'Boettcheria cimbici s (Townsend)': no ground-truth name denotes this organism
+  'Carex oligosperma': no ground-truth name denotes this organism
+  'Carex viridula': no ground-truth name denotes this organism
+  'Cephalanthus occidentalis': no ground-truth name denotes this organism
+  'Chamaedaphne calyculata': no ground-truth name denotes this organism
+  'Cornus stolonifera': no ground-truth name denotes this organism
+  'Dead wood': no ground-truth name denotes this organism
+  'Drosera rotundifolia': no ground-truth name denotes this organism
+  'Dryomyza anili s Fallén': no ground-truth name denotes this organism
+  'Equisetum pratense': no ground-truth name denotes this organism
+  'Eriophorum vaginatum': no ground-truth name denotes this organism
+  'Fraxinus nigra': no ground-truth name denotes this organism
+  'Gaurax ?maculicornis Sabrosky': no ground-truth name denotes this organism
+  'Gaurax montanus C oquillett': no ground-truth name denotes this organism
+  'Hydrellia ?trichaeta Cresson': no ground-truth name denotes this organism
+  'Hydrocharis morsus-ranae': no ground-truth name denotes this organism
+  'Kalmia angustifolia': no ground-truth name denotes this organism
+  'Larix laricina': no ground-truth name denotes this organism
+  'Ledum groenlandicum': no ground-truth name denotes this organism
+  'Litter': no ground-truth name denotes this organism
+  'Lysimachia terrestris': no ground-truth name denotes this organism
+  'Onoclea sensibilis': no ground-truth name denotes this organism
+  'Open pool': no ground-truth name denotes this organism
+  'Osmunda regalis': no ground-truth name denotes this organism
+  'Phalaris arundinacea': no ground-truth name denotes this organism
+  'Phragmites australis': no ground-truth name denotes this organism
+  'Pinus rigida': no ground-truth name denotes this organism
+  'Pleurocarpus moss': no ground-truth name denotes this organism
+  'Polytrichum spp.': no ground-truth name denotes this organism
+  'Sagittaria latifolia': no ground-truth name denotes this organism
+  'Salix pedicellaris': no ground-truth name denotes this organism
+  'Salix pyrifolia': no ground-truth name denotes this organism
+  'Scaptomyza (Hemiscaptomyza) ?trochanterata Collin': no ground-truth name denotes this organism
+  'Sphagnum spp.': no ground-truth name denotes this organism
+  'Spiraea alba': no ground-truth name denotes this organism
+  'Spirodela polyrhiza': no ground-truth name denotes this organism
+  'Toxicodendron radicans': no ground-truth name denotes this organism
+  'Typha angustifolia': no ground-truth name denotes this organism
+  'Vaccinium ?angustifolium': no ground-truth name denotes this organism
+  'Vaccinium myrtilloides': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Habitat preference for' -> 'Habitat Preference'
+  'Specializ' -> 'Specialization'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 10
+  missed (FN)         : 1728
+  spurious, in scope  : 13   <- GT covers this trait: real errors
+  spurious, out of scope: 1598   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.006 / 0.006 / 0.006   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.435 / 0.006 / 0.011   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.006   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1598
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     10  0.000  <-- low
+  measurementMethod             0     10  0.000  <-- low
+  measurementUnit               0      7  0.000  <-- low
+  measurementStatistic          0     10  0.000  <-- low
+  measurementRemarks            0      7  0.000  <-- low
+  sex                           0     10  0.000  <-- low
+  lifeStage                     0     10  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     10  0.000  <-- low
+  samplingProtocol              0     10  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     10  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     10  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1728 MISSED ROWS MISSED
+  species not in prediction                  20
+  species present, trait missing           1702
+  species+trait present, value differs        6
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'amphibious'                 ->  'a'                          x2
+     'generalist'                 ->  'saprophage'                 x1
+     '2026-04-27 00:00:00'        ->  '4.27'                       x1
+     '2026-04-06 00:00:00'        ->  '4.6'                        x1
+     'univoltine'                 ->  'u'                          x1
+  -> 5 substitutions explain 6 of 1728 misses (0%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'Boettcheria cimbicis (Townsend)'   ~0.88~  pred 'Boettcheria cimbici s (Townsend)'   x8
+     gt 'Gaurax montanus Coquillett'        ~0.88~  pred 'Gaurax montanus C oquillett'   x7
+     gt 'Dryomyza anilis Fallén'            ~0.88~  pred 'Dryomyza anili s Fallén'   x5
+  -> 3 species mismatches explain 20 of 1728 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Voltinism'                        x322
+     'Larval feeding habit'             x279
+     'Size'                             x272
+     'Habitat Preference'               x227
+     'Specialization'                   x223
+     'Feeding'                          x198
+  -> 6 missing traits explain 1521 of 1728 misses (88%) — systematic, not scattered
+
+  full miss detail saved -> Taillefer2018_misses.csv, Taillefer2018_misses_summary.json (1728 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 2)                               0   280   PRED-ONLY
+  (no name, column 3)                               0   204   PRED-ONLY
+  (no name, column 4)                               0   235   PRED-ONLY
+  (no name, column 5)                               0   271   PRED-ONLY
+  (no name, column 7)                               0   280   PRED-ONLY
+  (no name, column 9)                               0   186   PRED-ONLY
+  significant association                           0    15   PRED-ONLY
+  feeding                                         202     8   Δ-194 (split?)
+  larval feeding habit                            283     0   GT-ONLY
+  spe/gen                                           0     1   PRED-ONLY
+  habitat preference                              233     3   Δ-230 (split?)
+  overwintering stage                             182     0   GT-ONLY
+  pc2                                               0    39   PRED-ONLY
+  pc3                                               0    39   PRED-ONLY
+  pc4                                               0    39   PRED-ONLY
+  size                                            284     9   Δ-275 (split?)
+  specialization                                  228     2   Δ-226 (split?)
+  type wetland                                      0     9   PRED-ONLY
+  voltinism                                       326     1   Δ-325 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.435  0.006  0.011     10    13  1728   id+type+value
+             (1598 more spurious row(s) set aside as out-of-scope; strict P would be 0.006)
+  tags        0.000  0.000  0.000      0    23  1738   basis+id+type+value+stat+sex+stage
+             (1598 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.011 vs previous)
+             note: only 0/10 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

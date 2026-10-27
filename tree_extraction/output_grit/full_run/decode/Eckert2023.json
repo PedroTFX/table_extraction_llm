@@ -1,0 +1,725 @@
+{
+ "1:2": {
+  "cells": {
+   "Grass": {
+    "term": null,
+    "parts": [
+     "Grass"
+    ],
+    "options": {
+     "Grass": {
+      "evidence": "explicit",
+      "labels": [
+       "grasslands",
+       "grassland"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Grass | QK": {
+      "code": 0.009,
+      "word": 0.991
+     }
+    }
+   },
+   "b": {
+    "term": "Biology of the Springtails (Insecta: Collembola)",
+    "parts": [
+     "b"
+    ],
+    "options": {
+     "b": {
+      "evidence": "initial",
+      "labels": [
+       "Biology of the Springtails (Insecta: Collembola)"
+      ]
+     }
+    },
+    "evidence": {
+     "b": "initial"
+    },
+    "probs": {
+     "b | QK": {
+      "code": 0.957,
+      "word": 0.043
+     },
+     "b": {
+      "e0": 0.855,
+      "keep": 0.145
+     },
+     "b | QB": {
+      "w0": 0.898,
+      "w1": 0.102
+     }
+    }
+   },
+   "a": {
+    "term": "Ant biodiversity and ecosystem services in bioenergy landscapes",
+    "parts": [
+     "a"
+    ],
+    "options": {
+     "a": {
+      "evidence": "initial",
+      "labels": [
+       "Ant biodiversity and ecosystem services in bioenergy landscapes"
+      ]
+     }
+    },
+    "evidence": {
+     "a": "initial"
+    },
+    "probs": {
+     "a | QK": {
+      "code": 0.882,
+      "word": 0.118
+     },
+     "a": {
+      "e0": 0.916,
+      "keep": 0.084
+     },
+     "a | QB": {}
+    }
+   },
+   "n/a": {
+    "term": "n; Ant biodiversity and ecosystem services in bioenergy landscapes",
+    "parts": [
+     "n",
+     "a"
+    ],
+    "options": {
+     "n": {
+      "evidence": "initial",
+      "labels": [
+       "Nesting and foraging habits",
+       "Nesting and food resources",
+       "Ness et al. | 2004"
+      ]
+     },
+     "a": {
+      "evidence": "initial",
+      "labels": [
+       "Ant biodiversity and ecosystem services in bioenergy landscapes"
+      ]
+     }
+    },
+    "evidence": {
+     "a": "initial"
+    },
+    "probs": {
+     "n | QK": {
+      "code": 0.672,
+      "word": 0.328
+     },
+     "n": {
+      "e0": 0.329,
+      "e1": 0.106,
+      "e2": 0.003,
+      "keep": 0.562
+     },
+     "a | QK": {
+      "code": 0.882,
+      "word": 0.118
+     },
+     "a": {
+      "e0": 0.916,
+      "keep": 0.084
+     },
+     "a | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u31",
+    "u6",
+    "u17",
+    "u32",
+    "u33",
+    "u34"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.003,
+    "p1": 0.2,
+    "p2": 0.005,
+    "p3": 0.001,
+    "p4": 0.0,
+    "p5": 0.0,
+    "several": 0.016,
+    "none": 0.775
+   }
+  }
+ },
+ "4:2": {
+  "cells": {
+   "GenForager": {
+    "term": "Generalist forager",
+    "parts": [
+     "GenForager"
+    ],
+    "options": {
+     "GenForager": {
+      "evidence": "explicit",
+      "labels": [
+       "Generalist forager"
+      ]
+     }
+    },
+    "evidence": {
+     "GenForager": "explicit"
+    },
+    "probs": {
+     "GenForager | QK": {
+      "code": 0.906,
+      "word": 0.094
+     },
+     "GenForager": {
+      "e0": 0.996,
+      "keep": 0.004
+     },
+     "GenForager | QB": {}
+    }
+   },
+   "Pred": {
+    "term": "Predator",
+    "parts": [
+     "Pred"
+    ],
+    "options": {
+     "Pred": {
+      "evidence": "explicit",
+      "labels": [
+       "Predator"
+      ]
+     }
+    },
+    "evidence": {
+     "Pred": "explicit"
+    },
+    "probs": {
+     "Pred | QK": {
+      "code": 0.964,
+      "word": 0.036
+     },
+     "Pred": {
+      "e0": 0.973,
+      "keep": 0.027
+     },
+     "Pred | QB": {}
+    }
+   },
+   "Sap": {
+    "term": "Saprovore",
+    "parts": [
+     "Sap"
+    ],
+    "options": {
+     "Sap": {
+      "evidence": "explicit",
+      "labels": [
+       "Saprovore"
+      ]
+     }
+    },
+    "evidence": {
+     "Sap": "explicit"
+    },
+    "probs": {
+     "Sap | QK": {
+      "code": 0.97,
+      "word": 0.03
+     },
+     "Sap": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "Sap | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": null
+  }
+ },
+ "4:3": {
+  "cells": {
+   "Litter": {
+    "term": null,
+    "parts": [
+     "Litter"
+    ],
+    "options": {
+     "Litter": {
+      "evidence": "explicit",
+      "labels": [
+       "litter-dweller"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Litter | QK": {
+      "code": 0.004,
+      "word": 0.996
+     }
+    }
+   },
+   "Soil": {
+    "term": null,
+    "parts": [
+     "Soil"
+    ],
+    "options": {
+     "Soil": {
+      "evidence": "explicit",
+      "labels": [
+       "soil-dweller"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Soil | QK": {
+      "code": 0.009,
+      "word": 0.991
+     }
+    }
+   },
+   "Veg": {
+    "term": "vegetation-dweller",
+    "parts": [
+     "Veg"
+    ],
+    "options": {
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation-dweller"
+      ]
+     }
+    },
+    "evidence": {
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Veg | QK": {
+      "code": 0.971,
+      "word": 0.029
+     },
+     "Veg": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "Veg | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": null
+  }
+ },
+ "4:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:7": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:8": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:9": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:10": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:11": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:5": {
+  "cells": {
+   "Veg": {
+    "term": "vegetation-dweller",
+    "parts": [
+     "Veg"
+    ],
+    "options": {
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation-dweller"
+      ]
+     }
+    },
+    "evidence": {
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Veg | QK": {
+      "code": 0.974,
+      "word": 0.026
+     },
+     "Veg": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "Veg | QB": {}
+    }
+   },
+   "Litter": {
+    "term": null,
+    "parts": [
+     "Litter"
+    ],
+    "options": {
+     "Litter": {
+      "evidence": "explicit",
+      "labels": [
+       "litter-dweller"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Litter | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   },
+   "Soil": {
+    "term": null,
+    "parts": [
+     "Soil"
+    ],
+    "options": {
+     "Soil": {
+      "evidence": "explicit",
+      "labels": [
+       "soil-dweller"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Soil | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u23"
+   ],
+   "choice": null
+  }
+ },
+ "6:6": {
+  "cells": {
+   "Chew": {
+    "term": null,
+    "parts": [
+     "Chew"
+    ],
+    "options": {
+     "Chew": {
+      "evidence": "explicit",
+      "labels": [
+       "chewing"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Chew | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "Suck": {
+    "term": null,
+    "parts": [
+     "Suck"
+    ],
+    "options": {
+     "Suck": {
+      "evidence": "explicit",
+      "labels": [
+       "sucking"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Suck | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u40"
+   ],
+   "choice": null
+  }
+ },
+ "7:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "8:1": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u31"
+   ],
+   "choice": null
+  }
+ },
+ "8:2": {
+  "cells": {
+   "SE": {
+    "term": null,
+    "parts": [
+     "SE"
+    ],
+    "options": {
+     "SE": {
+      "evidence": "initial",
+      "labels": [
+       "Salmon et al.",
+       "Schofield et al."
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "SE | QK": {
+      "code": 0.867,
+      "word": 0.133
+     },
+     "SE": {
+      "e0": 0.052,
+      "e1": 0.025,
+      "keep": 0.923
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u36"
+   ],
+   "choice": null
+  }
+ },
+ "8:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "8:4": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u31"
+   ],
+   "choice": null
+  }
+ },
+ "8:5": {
+  "cells": {
+   "SE": {
+    "term": null,
+    "parts": [
+     "SE"
+    ],
+    "options": {
+     "SE": {
+      "evidence": "initial",
+      "labels": [
+       "Salmon et al.",
+       "Schofield et al."
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "SE | QK": {
+      "code": 0.915,
+      "word": 0.085
+     },
+     "SE": {
+      "e0": 0.103,
+      "e1": 0.061,
+      "keep": 0.836
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u36"
+   ],
+   "choice": null
+  }
+ },
+ "8:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "8:7": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u31"
+   ],
+   "choice": null
+  }
+ },
+ "8:8": {
+  "cells": {
+   "SE": {
+    "term": null,
+    "parts": [
+     "SE"
+    ],
+    "options": {
+     "SE": {
+      "evidence": "initial",
+      "labels": [
+       "Salmon et al.",
+       "Schofield et al."
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "SE | QK": {
+      "code": 0.884,
+      "word": 0.116
+     },
+     "SE": {
+      "e0": 0.093,
+      "e1": 0.06,
+      "keep": 0.847
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u36"
+   ],
+   "choice": null
+  }
+ },
+ "8:9": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "9:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ }
+}

@@ -1,0 +1,662 @@
+{
+ "paper": "Arnan2014",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "We estimated productivity at each site using the remotely sensed normalized difference vegetation index (NDVI), which is commonly used by ecologists as a proxy for vegetation productivity (e.g. Pettorelli et al. 2005). First, we obtained monthly NDVI values from April to September from 2001 to 2009 (the only years for which data were available) from the USGS website (https://lpdaac.usgs.gov/products/modis_products_table/mod13q1). Although it would have been preferable to use NDVI data from the years during which the studies were carried out, these data were not available for most of the ant communities sampled; it is for this reason that we decided to use the average for the 2001–2009 time period for all the sites. We focused on the time period from April to September because (a) it limits large contrasts between sites with and without deciduous vegetation and (b) it corresponds to the season when ants are active and thus reflects conditions outside the nest that might affect them. We computed mean NDVI values from April to June $\\mathrm { ( N D V I _ { s p r i n g } ) }$ and from April to September (NDVI spring +summer) by averaging values across all years. Because the correlation between $\\mathrm { N D V I { s p r i n g } }$ and $\\mathrm { N D V I { s p r i n g } + s u m m e r }$ was very high (Pearson $r = 0 { \\cdot } 9 9 ,$ P 0 . 7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet). Preliminary analyses showed that overall functional diversity (computed taking the 10 traits together) was significantly positively related to species richness $\\left( \\mathrm{B} \\pm \\mathrm{SE} = 0 \\cdot 00 \\pm 0 \\cdot 00; t = 3 \\cdot 3; P = 0 \\cdot 001 \\right);$ sites with higher species richness also have higher functional diversity. However, since species richness only demonstrated a significant association with vegetation type $(F = 3 \\cdot 4; P = 0 \\cdot 006)$ , but not with climate or productivity (all $P \\geq 0 { \\cdot } 0 1$ ; Table S2, Supporting information), it was excluded from further analyses."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "As there was likely to be a substantial amount of spatial auto correlation in the distribution of traits across sites, we tested how the functional composition of ant communities responded to each of the three environmental gradients using GLS models. GLS models use simultaneous autoregression to estimate means. We conducted sets of tests where the functional indices (X\u0004 and FD) for each trait were the response variables and the environmental gradient was the predictor variable. For example, we conducted a set of three models where the trait average for worker size was the response variable: (i) the climate model included annual mean temperature, temperature seasonality, annual precipitation and precip itation seasonality as predictor variables; (ii) the productivity model included $\\mathrm { N D V I _ { s p r i n g } + s u m m e r }$ as the predictor variable; and (iii) the vegetation type model included the vegetation type category as the predictor variable. GLS models were carried out using the gls function in the NLME package in R. Due to the large number of tests we conducted, we applied the Bonferroni correction. The alpha level for test acceptance was thus established at P 0 . 7 )$ at the community level (Table S4, Supporting information)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Table 2. Significant effects of the environmental gradients on the trait average (X\u0004) and dissimilarity (FD) found using the generalized least squares models"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:3eb307e/tier:advanced/page:6/block:3)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Fig. 1. Some examples of significant relationships between functional trait indices and climate and productivity. Relationship between (a) average worker polymorphism and temperature seasonality, (b) dissimilarity in the% of seeds in the diet and precipitation, and (c) the percentage of behaviourally dominant species and productivity."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "of trait composition across the six Mediterranean vegetation types (Fig. 2): (i) dissimilarity in the percentage of seeds, insects and liquid foods in the diet and the number of queens differed between forests (broadleaf, sclerophyllous and conifer) and open habitats (shrubland, dehesa and grassland) (Fig. 2a); (ii) dissimilarity in diurnality and colony foundation type differed somewhat according to forest type (conifer vs. broadleaf and sclerophyllous), but was similar across the three open habitats (Fig. 2b); (iii) the average percentage of collectively foraging species, the average percentage of liquid foods in the diet and average colony size were different in broadleaf forests compared with the other two forest types, but broadleaf forest values resembled those of the three open habitats (Fig. 2c); and (iv) the average percentage of behaviourally dominant species, the average percentage of group foraging species, and trait dissimilarity in nest number differed between shrublands and the other two open habitats, but their values were similar across the three forest types (Fig. 2d). The other trait indices did not differ among vegetation types (Tables 2 and S5, Supporting information)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "![Image block](doc:3eb307e/tier:advanced/page:7/block:3)"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Fig. 2. A comparison of the trait averages and dissimilarities (FD) that differed significantly among the six vegetation types considered. Boxplots are ordered according to the four general patterns (see results; a–d). The different letters above the boxplots indicate the significant differences among vegetation types found using multiple contrasts of the generalized least squares models. Abbreviations on the xaxis are as follows: BR, broadleaf forest; SC, sclerophyllous forest; CO, conifer forest; SH, shrubland; DE, dehesa; and GR, grassland."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "- D\u0001ıaz, S., Lavorel, S., de Bello, F., Qu\u0001etier, F., Grigulis, K. & Robson, T.M. (2007) Incorporating plant functional diversity effects in ecosystem service assessments. Proceedings of the National Academy of Science of the United States of America, 104, 20684–20689. - Dixon, A.F.G. (1975) Aphids and translocation. Transport in plants. I. Phloem transport. Encyclopedia of Plant Physiology 1 (eds M.H. Zimmermann & J.A. Milburn), pp. 154–170. Springer Berlin Heidelberg, Berlin, Germany. - Dunn, R.R., Agosti, D., Andersen, A.N., Arnan, X., Bruhl, C.A., Cerd\u0001a, X. et al. (2009) Climatic drivers of hemispheric asymmetry in global patterns of ant species richness. Ecology Letters, 12, 324–333. - Ellington, C.P. (1999) The novel aerodynamics of insect flight: applications to micro-air vehicles. Journal of Experimental Biology, 202, 3439–3448. - Fewell, J.H. (1988) Variation in foraging patterns of the western harvester ant, Pogonomyrmex occidentalis, in relation to variation in habitat structure. Interindividual Behavioral Variability in Social Insects (ed. R.L. Jeanne), pp. 257–282. Westview Press, Boulder, CO. - Gaston, K.J. (1996) Biodiversity – latitudinal gradients. Progress in Physical Geography, 20, 466–476. - Hawkins, B.A., Diniz-Filho, J.A.F., Bini, L.M., Araujo, M.B., Field, R., Hortal, J. et al. (2007) Metabolic theory and diversity gradients: where do we go from here? Ecology, 88, 1898–1902. - Holldobler, B. & Wilson, E.O. (1990) € The Ants. Springer-Verlag, Berlin-Heidelberg, Germany. - Holldobler, B. & Wilson, E.O. (2009) € The Superorganism: The Beauty, Elegance, and Strangeness of Insect Societies. WW Norton & Company, New York, NY, USA. - Kaspari, M. & Weiser, M. (1999) The size-grain hypothesis and interspecific scaling in ants. Functional Ecology, 13, 530–538. - Keller, L. (1995) Social-life: the paradox of multiple-queen colonies. Trends in Ecology and Evolution, 10, 355–360. - Lach, L., Parr, C.L. & Abbott, K.L. (2010) Ant Ecology. Oxford University Press, Oxford, UK. - McGill, B.J., Enquist, B.J., Weither, E. & Westoby, M. (2006) Rebuilding community ecology from functional traits. Trends in Ecology and Evolution, 21, 178–185. - McGlynn, T.P. (1999) The worldwide transport of ants: geographic distribution and ecological invasions. Journal of Biogeography, 26, 535–548. - Menke, S.B. & Holway, D.A. (2006) Abiotic factors control invasion by argentine ants at the community scale. Journal of Animal Ecology, 75, 368–376. - Mertl, A.L. & Traniello, J.F.A. (2009) Behavioral evolution in the major worker subcaste of twig-nesting Pheidole (Hymenoptera: Formicidae): does morphological specialization influence task plasticity? Behavioral Ecology and Sociobiology, 63, 1411–1426. - Moretti, M., de Bello, F., Roberts, S.P.M. & Potts, S.G. (2009) Taxonomical vs. functional responses of bee communities to fire in two contrasting climatic regions. Journal of Animal Ecology, 78, 98–108. - Pausas, J.G. & Austin, M.P. (2001) Patterns of plant species richness in relation to different environments. Journal of Vegetation Science, 12, 153–166. - Pettorelli, N., Vik, J., Mysterud, A., Gaillard, J.-M., Tucker, C. & Stenseth, N. (2005) Using the satellite-derived NDVI to assess ecological responses to environmental change. Trends in Ecology and Evolution, 20, 503–510. - Pianka, E.R. (1970) On r and K selection. The American Naturalist, 104, 592–597. - Pollock, L.J., Morris, W.K. & Vesk, P.A. (2012) The role of functional traits in species distributions revealed through a hierarchical model. Ecography, 35, 716–725. - R Development Core Team (2010) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. http://www.R-project.org. - Rangel, T.F.L.V.B., Diniz-Filho, J.A.F. & Bini, L.M. (2010) SAM: a comprehensive application for spatial analysis in macroecology. Ecography, 33, 46–50. - Retana, J. & Cerd\u0001a, X. (2000) Patterns of diversity and composition of Mediterranean ant communities tracking spatial and temporal variability of the thermal environment. Oecologia, 123, 436–444. - Reymond, A., Purcell, J., Cherix, D., Guisan, A. & Pellissier, L. (2013) Functional diversity decreases with temperature in high elevation ant fauna. Ecological Entomology, 4, 364–373."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "- Ricotta, C. & Moretti, M. (2011) CWM and Rao’s quadratic diversity: a unified framework for functional ecology. Oecologia, 167, 181–188. - Ross, K.G. & Keller, L. (1995) Ecology and evolution of social organization: insights from fire ants and other highly eusocial insects. Annual Review of Ecology and Systematics, 26, 631–656. - Rosset, H. & Chapuisat, M. (2007) Alternative life-histories in a socially polymorphic ant. Evolutionary Ecology, 21, 577–588. - Sanders, N.J., Lessard, J.P., Fitzpatrick, M.C. & Dunn, R.R. (2007) Temperature, but not productivity or geometry, predicts elevational diversity gradients in ants across spatial grains. Global Ecology and Biogeography, 16, 640–649. - Savolainen, R., Veps€al€ainen, K. & Wuorenrinne, H. (1989) Ant assemblages in the taiga biome: testing the role of territorial wood ants. Oecologia, 81, 481–486. - Silva, R.R. & Brandao, C.R.F. (2010) Morphological patterns and community organization in leaf-litter ant assemblages. Ecological Monographs, 80, 107–124. - Stuble, K.L., Pelini, S.L., Diamond, S.E., Fowler, D.A., Dunn, R.R. & Sanders, N.J. (2013) Foraging by forest ants under experimental climatic warming: a test at two sites. Ecology and Evolution, 3, 482–491. - Swenson, N.G. & Weiser, M.D. (2010) Plant geography upon the basis of functional traits: an example from eastern North American trees. Ecology, 91, 2234–2241. - Swenson, N.G., Enquist, B.J., Pither, J., Kerkhoff, A.J., Boyle, B., Weiser, M.D. et al. (2012) The biogeography and filtering of woody plant functional diversity in North and South America. Global Ecology and Biogeography, 21, 798–808. - Traniello, J.F.A. (1989) Foraging strategies of ants. Annual Review of Entomology, 34, 191–210. - Violle, C., Navas, M.L., Vile, D., Kazakou, E., Fortunel, C., Hummel, I. et al. (2007) Let the concept of trait be functional!. Oikos, 116, 882–892. - Wardle, D.A., Hyodo, F., Bardgett, R.D., Yeates, G.W. & Nilsson, M.-C. (2011) Long-term aboveground and belowground consequences of red wood ant exclusion in boreal forest. Ecology, 92, 645–656. - Weber, N.A. (1938) The biology of the fungus-growing ants. Part 4. Additional new forms. Part 5. The Attini of Bolivia. Revista de Entomologia, 7, 154–206. - Weiher, E. & Keddy, P.A. (1999) Ecological Assembly Rules: Perspectives, Advances, Retreats. Cambridge University Press, Cambridge, UK. - Werner, E.E., Skelly, D.K., Relyea, R.A. & Yurewicz, K.L. (2007) Amphibian species richness across environmental gradients. Oikos, 116, 1697–1712. - Wheeler, W.M. (1913) Ants: Their Structure, Development and Behavior. The University of Columbia press, New York, NY, USA. - Wolff, A. & Debussche, M. (1999) Ants as seed dispersers in a Mediterranean old-field succession. Oikos, 84, 443–452. - Zelikova, T.J., Sanders, N.J. & Dunn, R.R. (2011) The mixed effects of experimental ant removal on seedling distribution, belowground invertebrates, and soil nutrients. Ecosphere, 2, art63."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:3ad3354/tier:flash/page:1/block:1)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Binary (0) Nonstrictly diurnal (1) Strictly diurnal"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Binary (0) Subordinate (1) Dominant"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Traniello (1989) Binary 0–1 (for each of the three categories)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Ordinal (0) Monogyny; (0 5) Both monogyny and"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "foundation (DCF) strategies"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Amor et al. (2011) Ordinal (0) DCF; (0 5) Both DCF"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "We estimated productivity at each site using the remotely sensed normalized difference vegetation index (NDVI), which is com monly used by ecologists as a proxy for vegetation productivity (e.g. Pettorelli et al. 2005). First, we obtained monthly NDVI val ues from April to September from 2001 to 2009 (the only years for which data were available) from the USGS website (https:// lpdaac.usgs.gov/products/modis_products_table/mod13q1). Altho ugh it would have been preferable to use NDVI data from the years during which the studies were carried out, these data were not available for most of the ant communities sampled; it is for this reason that we decided to use the average for the 2001–2009 time period for all the sites. We focused on the time period from April to September because (a) it limits large contrasts between sites with and without deciduous vegetation and (b) it corre sponds to the season when ants are active and thus reflects condi tions outside the nest that might affect them. We computed mean NDVI values from April to June (NDVI spring ) and from April to September (NDVI spring+summer ) by averaging values across all years. Because the correlation between NDVI spring and NDVI spring+summer was very high (Pearson r = 0 99, P sition of a given community: the ‘trait average’ (X ) index reveals the most common traits in a community, and the ‘trait dissimilar ity’ (FD) index indicates the extent to which species within a com munity differ in their traits (D ıaz et al. 2007; Ricotta & Moretti 2011; Arnan et al. 2013). The trait dissimilarity index is defined as the Rao quadratic diversity coefficient, which reflects the probabil ity that two randomly chosen individuals in a community will be different. Rao’s Q ranges from 0 to the maximum value for the Simpson index of diversity, with higher values indicating more trait dissimilarity within the community. The Rao coefficient"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "These indices were computed for each functional trait using the dbFD function in the FD package in R (R Development Core Team 2010). The trait average and trait dissimilarity of a given community might reflect similar information and thus may not be fully independent, particularly in the case of categorical traits (Ricotta & Moretti 2011). Because trait averages and dissimilari ties were highly correlated (r > 0 7) for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet). Preliminary analyses showed that overall functional diversity (computed tak ing the 10 traits together) was significantly positively related to species richness (ß SE = 0 00 0 00; t = 3 3; P = 0 001): sites with higher species richness also have higher functional diversity. However, since species richness only demonstrated a significant association with vegetation type (F = 3 4; P = 0 006), but not with climate or productivity (all P > 0 01; Table S2, Supporting information), it was excluded from further analyses."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "els use simultaneous autoregression to estimate means. We con ducted sets of tests where the functional indices (X and FD) for each trait were the response variables and the environmental gradi ent was the predictor variable. For example, we conducted a set of three models where the trait average for worker size was the response variable: (i) the climate model included annual mean tem perature, temperature seasonality, annual precipitation and precip itation seasonality as predictor variables; (ii) the productivity model included NDVI spring+summer as the predictor variable; and (iii) the vegetation type model included the vegetation type cate gory as the predictor variable. GLS models were carried out using the gls function in the NLME package in R. Due to the large number of tests we conducted, we applied the Bonferroni correction. The alpha level for test acceptance was thus established at P 0 7) at the community level (Table S4, Supporting information)."
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Table 2. Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "![Image block](doc:3ad3354/tier:flash/page:25/block:2)"
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "![Image block](doc:3ad3354/tier:flash/page:25/block:14)"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "of trait composition across the six Mediterranean vegeta tion types (Fig. 2): (i) dissimilarity in the percentage of seeds, insects and liquid foods in the diet and the number of queens differed between forests (broadleaf, sclerophyl lous and conifer) and open habitats (shrubland, dehesa and grassland) (Fig. 2a); (ii) dissimilarity in diurnality and colony foundation type differed somewhat according to forest type (conifer vs. broadleaf and sclerophyllous), but was similar across the three open habitats (Fig. 2b); (iii) the average percentage of collectively foraging species, the average percentage of liquid foods in the diet and average colony size were different in broadleaf forests compared with the other two forest types, but broadleaf forest val ues resembled those of the three open habitats (Fig. 2c); and (iv) the average percentage of behaviourally dominant species, the average percentage of group foraging species, and trait dissimilarity in nest number differed between shrublands and the other two open habitats, but their val ues were similar across the three forest types (Fig. 2d). The other trait indices did not differ among vegetation types (Tables 2 and S5, Supporting information)."
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "![Image block](doc:3ad3354/tier:flash/page:26/block:4)"
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "Fig. 1. Some examples of significant relationships between func tional trait indices and climate and productivity. Relationship between (a) average worker polymorphism and temperature sea sonality, (b) dissimilarity in the% of seeds in the diet and precipi tation, and (c) the percentage of behaviourally dominant species and productivity."
+  },
+  {
+   "id": "u28",
+   "kind": "prose",
+   "text": "Fig. 2. A comparison of the trait averages and dissimilarities (FD) that differed significantly among the six vegetation types considered. Boxplots are ordered according to the four general patterns (see results; a–d). The different letters above the boxplots indicate the signifi cant differences among vegetation types found using multiple contrasts of the generalized least squares models. Abbreviations on the x axis are as follows: BR, broadleaf forest; SC, sclerophyllous forest; CO, conifer forest; SH, shrubland; DE, dehesa; and GR, grassland."
+  },
+  {
+   "id": "u29",
+   "kind": "prose",
+   "text": "Chown, S.L. & Gaston, K.J. (1999) Exploring links between physiology and ecology at macroscales: the role of respiratory metabolism in insects. Biological Reviews, 74, 87–120."
+  },
+  {
+   "id": "u30",
+   "kind": "prose",
+   "text": "Diamond, S.E., Frame, A.M., Martin, R.A. & Buckley, L.B. (2011) Spe cies’ traits predict phenological responses to climate change in butter flies. Ecology, 92, 1005–1012. Diamond, S.E., Nichols, L.M., McCoy, N., Horsch, C., Pelini, S.L., Sand ers, N.J. et al. (2012) A physiological trait-based approach to predicting the responses of species to experimental climate warming. Ecology, 93, 2305–2312."
+  },
+  {
+   "id": "u31",
+   "kind": "prose",
+   "text": "Kaspari, M. & Weiser, M. (1999) The size-grain hypothesis and interspe cific scaling in ants. Functional Ecology, 13, 530–538. Keller, L. (1995) Social-life: the paradox of multiple-queen colonies. Trends in Ecology and Evolution, 10, 355–360."
+  },
+  {
+   "id": "u32",
+   "kind": "prose",
+   "text": "McGlynn, T.P. (1999) The worldwide transport of ants: geographic distri bution and ecological invasions. Journal of Biogeography, 26, 535–548. Menke, S.B. & Holway, D.A. (2006) Abiotic factors control invasion by argentine ants at the community scale. Journal of Animal Ecology, 75, 368–376."
+  },
+  {
+   "id": "u33",
+   "kind": "prose",
+   "text": "Moretti, M., de Bello, F., Roberts, S.P.M. & Potts, S.G. (2009) Taxonom ical vs. functional responses of bee communities to fire in two contrast ing climatic regions. Journal of Animal Ecology, 78, 98–108. Pausas, J.G. & Austin, M.P. (2001) Patterns of plant species richness in relation to different environments. Journal of Vegetation Science, 12, 153–166."
+  },
+  {
+   "id": "u34",
+   "kind": "prose",
+   "text": "R Development Core Team (2010) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. http://www.R-project.org."
+  },
+  {
+   "id": "u35",
+   "kind": "prose",
+   "text": "Rangel, T.F.L.V.B., Diniz-Filho, J.A.F. & Bini, L.M. (2010) SAM: a com prehensive application for spatial analysis in macroecology. Ecography, 33, 46–50."
+  },
+  {
+   "id": "u36",
+   "kind": "prose",
+   "text": "Retana, J. & Cerd a, X. (2000) Patterns of diversity and composition of Mediterranean ant communities tracking spatial and temporal variabil ity of the thermal environment. Oecologia, 123, 436–444. Reymond, A., Purcell, J., Cherix, D., Guisan, A. & Pellissier, L. (2013) Functional diversity decreases with temperature in high elevation ant fauna. Ecological Entomology, 4, 364–373."
+  },
+  {
+   "id": "u37",
+   "kind": "prose",
+   "text": "Ross, K.G. & Keller, L. (1995) Ecology and evolution of social organiza tion: insights from fire ants and other highly eusocial insects. Annual Review of Ecology and Systematics, 26, 631–656."
+  },
+  {
+   "id": "u38",
+   "kind": "prose",
+   "text": "Weiher, E. & Keddy, P.A. (1999) Ecological Assembly Rules: Perspec tives, Advances, Retreats. Cambridge University Press, Cambridge, UK."
+  },
+  {
+   "id": "u39",
+   "kind": "prose",
+   "text": "Wheeler, W.M. (1913) Ants: Their Structure, Development and Behavior. The University of Columbia press, New York, NY, USA."
+  },
+  {
+   "id": "u40",
+   "kind": "prose",
+   "text": "Wolff, A. & Debussche, M. (1999) Ants as seed dispersers in a Mediterra nean old-field succession. Oikos, 84, 443–452. Zelikova, T.J., Sanders, N.J. & Dunn, R.R. (2011) The mixed effects of experimental ant removal on seedling distribution, belowground inverte brates, and soil nutrients. Ecosphere, 2, art63."
+  }
+ ],
+ "batches": [
+  [
+   "u0"
+  ],
+  [
+   "u1",
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7"
+  ],
+  [
+   "u8"
+  ],
+  [
+   "u9"
+  ],
+  [
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19"
+  ],
+  [
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24"
+  ],
+  [
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30"
+  ],
+  [
+   "u31",
+   "u32",
+   "u33",
+   "u34",
+   "u35",
+   "u36",
+   "u37",
+   "u38",
+   "u39",
+   "u40"
+  ]
+ ],
+ "calls": 19,
+ "categories": [
+  {
+   "variable": "diurnality and individual foraging strategy",
+   "code": "binary",
+   "term": "binary",
+   "unit": "u0",
+   "model_label": "binary",
+   "label": "binary",
+   "explanation": ""
+  },
+  {
+   "variable": "number of queens, number of nests and colony foundation type",
+   "code": "ordinal",
+   "term": "ordinal",
+   "unit": "u0",
+   "model_label": "ordinal",
+   "label": "ordinal",
+   "explanation": ""
+  },
+  {
+   "variable": "percentage of seeds in the diet",
+   "code": "fuzzy-coded variable",
+   "term": "fuzzy-coded variable",
+   "unit": "u0",
+   "model_label": "fuzzy-coded variable",
+   "label": "fuzzy-coded variable",
+   "explanation": ""
+  },
+  {
+   "variable": "functional indices",
+   "code": "X",
+   "term": "functional indices",
+   "unit": "u1",
+   "model_label": "functional indices",
+   "label": "functional indices",
+   "explanation": ""
+  },
+  {
+   "variable": "functional indices",
+   "code": "FD",
+   "term": "functional indices",
+   "unit": "u1",
+   "model_label": "functional indices",
+   "label": "functional indices",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation types",
+   "code": "BR",
+   "term": "broadleaf forest",
+   "unit": "u7",
+   "model_label": "broadleaf forest",
+   "label": "broadleaf forest",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation types",
+   "code": "SC",
+   "term": "sclerophyllous forest",
+   "unit": "u7",
+   "model_label": "sclerophyllous forest",
+   "label": "sclerophyllous forest",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation types",
+   "code": "CO",
+   "term": "conifer forest",
+   "unit": "u7",
+   "model_label": "conifer forest",
+   "label": "conifer forest",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation types",
+   "code": "SH",
+   "term": "shrubland",
+   "unit": "u7",
+   "model_label": "shrubland",
+   "label": "shrubland",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation types",
+   "code": "DE",
+   "term": "dehesa",
+   "unit": "u7",
+   "model_label": "dehesa",
+   "label": "dehesa",
+   "explanation": ""
+  },
+  {
+   "variable": "vegetation types",
+   "code": "GR",
+   "term": "grassland",
+   "unit": "u7",
+   "model_label": "grassland",
+   "label": "grassland",
+   "explanation": ""
+  },
+  {
+   "variable": "Binary",
+   "code": "0",
+   "term": "Nonstrictly diurnal",
+   "unit": "u11",
+   "model_label": "Nonstrictly diurnal",
+   "label": "Nonstrictly diurnal",
+   "explanation": ""
+  },
+  {
+   "variable": "Binary",
+   "code": "1",
+   "term": "Strictly diurnal",
+   "unit": "u11",
+   "model_label": "Strictly diurnal",
+   "label": "Strictly diurnal",
+   "explanation": ""
+  },
+  {
+   "variable": "Binary",
+   "code": "0",
+   "term": "Subordinate",
+   "unit": "u12",
+   "model_label": "Subordinate",
+   "label": "Subordinate",
+   "explanation": ""
+  },
+  {
+   "variable": "Binary",
+   "code": "1",
+   "term": "Dominant",
+   "unit": "u12",
+   "model_label": "Dominant",
+   "label": "Dominant",
+   "explanation": ""
+  },
+  {
+   "variable": "Binary",
+   "code": "0",
+   "term": "Monogyny",
+   "unit": "u14",
+   "model_label": "Monogyny",
+   "label": "Monogyny",
+   "explanation": ""
+  },
+  {
+   "variable": "Binary",
+   "code": "5",
+   "term": "Both monogyny and",
+   "unit": "u14",
+   "model_label": "Both monogyny and",
+   "label": "Both monogyny and",
+   "explanation": ""
+  },
+  {
+   "variable": "Ordinal",
+   "code": "0",
+   "term": "Monodomy",
+   "unit": "u17",
+   "model_label": "Monodomy",
+   "label": "Monodomy",
+   "explanation": ""
+  },
+  {
+   "variable": "Ordinal",
+   "code": "5",
+   "term": "Both monodomy",
+   "unit": "u17",
+   "model_label": "Both monodomy",
+   "label": "Both monodomy",
+   "explanation": ""
+  },
+  {
+   "variable": "Ordinal",
+   "code": "0",
+   "term": "DCF",
+   "unit": "u18",
+   "model_label": "DCF",
+   "label": "DCF",
+   "explanation": ""
+  },
+  {
+   "variable": "Ordinal",
+   "code": "5",
+   "term": "Both DCF",
+   "unit": "u18",
+   "model_label": "Both DCF",
+   "label": "Both DCF",
+   "explanation": ""
+  },
+  {
+   "variable": "diurnality",
+   "code": "binary",
+   "term": "diurnality",
+   "unit": "u20",
+   "model_label": "diurnality",
+   "label": "diurnality",
+   "explanation": ""
+  },
+  {
+   "variable": "individual foraging strategy",
+   "code": "binary",
+   "term": "individual foraging strategy",
+   "unit": "u20",
+   "model_label": "individual foraging strategy",
+   "label": "individual foraging strategy",
+   "explanation": ""
+  },
+  {
+   "variable": "number of queens",
+   "code": "ordinal",
+   "term": "number of queens",
+   "unit": "u20",
+   "model_label": "number of queens",
+   "label": "number of queens",
+   "explanation": ""
+  },
+  {
+   "variable": "number of nests",
+   "code": "ordinal",
+   "term": "number of nests",
+   "unit": "u20",
+   "model_label": "number of nests",
+   "label": "number of nests",
+   "explanation": ""
+  },
+  {
+   "variable": "colony foundation type",
+   "code": "ordinal",
+   "term": "colony foundation type",
+   "unit": "u20",
+   "model_label": "colony foundation type",
+   "label": "colony foundation type",
+   "explanation": ""
+  },
+  {
+   "variable": "trait average",
+   "code": "",
+   "label": "worker size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "trait average",
+   "code": "",
+   "label": "average worker polymorphism",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait average",
+   "code": "",
+   "label": "percentage of behaviourally dominant species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "dissimilarity",
+   "code": "",
+   "label": "dissimilarity in the% of seeds in the diet",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait composition",
+   "code": "",
+   "label": "dissimilarity in the percentage of seeds, insects and liquid foods in the diet and the number of queens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait composition",
+   "code": "",
+   "label": "dissimilarity in diurnality and colony foundation type",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait composition",
+   "code": "",
+   "label": "the average percentage of collectively foraging species, the average percentage of liquid foods in the diet and average colony size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "trait composition",
+   "code": "",
+   "label": "the average percentage of behaviourally dominant species, the average percentage of group foraging species, and trait dissimilarity in nest number",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "Colony foundation type",
+   "code": "",
+   "label": "Independent colony foundation (ICF)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Colony foundation type",
+   "code": "",
+   "label": "foundation (DCF)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "diet",
+   "code": "",
+   "label": "percentage of seeds",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "diet",
+   "code": "",
+   "label": "percentage of liquid foods",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "foraging behavior",
+   "code": "",
+   "label": "average percentage of collectively foraging species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "diet",
+   "code": "",
+   "label": "average percentage of liquid foods in the diet",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "colony",
+   "code": "",
+   "label": "average colony size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "species dominance",
+   "code": "",
+   "label": "average percentage of behaviourally dominant species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "foraging behavior",
+   "code": "",
+   "label": "average percentage of group foraging species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "nest number",
+   "code": "",
+   "label": "trait dissimilarity in nest number",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "social organization",
+   "code": "",
+   "label": "highly eusocial",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
+  }
+ ],
+ "dropped": [],
+ "seconds": 70.3
+}

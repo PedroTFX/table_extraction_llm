@@ -1,0 +1,1729 @@
+{
+ "paper": "Braschler2021",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Building on this concept, we aimed to investigate how functional diversity is changing along urbanization gradients and which combination of biological traits is favored in highly urbanized areas. We examined these questions using a multi-taxon approach focusing on native grassland plants and several groups of ground-dwelling invertebrates (snails, slugs, spiders, millipedes, woodlice, ants, and rove beetles). As measures of functional diversity we considered functional dispersion (FDis) and functional evenness (FEve). FDis is a measure of functional richness, which considers the species’ relative abundances by estimating their dispersion in a multi-dimensional trait space (Laliberté & Legendre, 2010). FEve describes the evenness of abundance distribution in a functional trait space."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We surveyed seven groups of ground-dwelling invertebrates (for details of sampling see Braschler et al., 2020). The groups cover a wide range of feeding strategies and included phylogenetically distant taxa: two groups of Gastropoda (snails and slugs), Araneae (spiders), Diplopoda (millipedes), Isopoda (woodlice), Formicidae (ants), and Staphylinidae (rove beetles) excluding the subfamily Pselaphinae. Some years ago, the Pselaphinae was considered a distinct family (Newton & Thayer, 1995), therefore our expert did not determine this group. Members of this group have a very different morphology from other rove beetles. Furthermore, very little information on habitat preferences was available for this subfamily. We used pitfall traps (plastic beakers, 5.8 cm diameter, containing saltwater as a preservative, that were buried flush with the ground) and hay bait traps (moist hay in coarse plastic netting placed in direct contact with the ground; Tuf et al., 2015) to sample all groups. Hay bait traps complement pitfall traps by providing a spot of humid conditions and thus attracting less-mobile, frequently in the leaf-litter or upper soil layers living invertebrates, as well as acting as a food resource attracting many detritivores and their predators (Tuf et al., 2015). We placed five pitfall traps and five hay baits in the grassland of each garden. Pitfall traps and hay baits were operated three times for 7 days each from early to late summer 2018. We employed additional techniques for four groups (snails and slugs (active search and sieving of soil samples), millipedes and ants (active search); see Braschler et al. (2020) for details). Invertebrate surveys were conducted between May 31 and October 18, 2018."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "In the grassland area of the gardens, we recorded a total of 157 native plant species (Braschler et al., 2020). For spiders and woodlice, we only considered adult individuals and for ants, only workers. In the remaining invertebrate groups, we included all individuals that could be determined to the species level (99.4% of all individuals sampled). References for identification keys used and nomenclature followed can be found in Braschler et al. (2020). In all, we considered 1744 snail individuals (34 species), 1671 slug individuals (6 species), 1079 adult spider individuals (52 species), 6864 millipede individuals (21 species), 2582 adult woodlice individuals (9 species), and 1265 individuals of rove beetles (85 species). Furthermore, we found 28 species of ants (abundance data for this group was not considered because of the aggregated nature of ant colonies)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "As measures of functional diversity, we considered functional dispersion (FDis) and functional evenness (FEve). FDis is a measure of functional richness, which considers the species’ relative abundances by estimating their dispersion in a multi-dimensional trait space (Laliberté & Legendre, 2010). FDis has no upper limit, and high values correspond to large numbers of functionally different species. FEve describes the evenness of abundance distribution in a functional trait space. High FEve-values indicate a balanced niche occupancy, which occurs in species communities with balanced trait frequencies (Mason et al., 2005). To calculate FDis and FEve, we used morphological and life-history"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Statistical analyses were performed in R (ver. 3.3.3 and ver. 3.6.1; R Core Team, 2015) and were carried out separately for the different taxonomic groups with the 35 gardens as replicates. We used various traits, depending on the plants or the invertebrate group examined, to calculate FDis and FEve (Table 1) using the FD package in R (Laliberté & Legendre, 2010). For native grassland plants and for ants, we used presence/absence data, and for the remaining groups we used abundance data to calculate FDis and FEve. We applied generalized linear models (GLM) with Gaussian error distribution to examine potential effects of landscape variables, garden size (vegetated garden area) and various local garden characteristics on species richness of different taxonomic groups. The three main variables (distance to city center, percentage sealed area and vegetated garden area) were retained in all models, while a step-wise procedure was followed with the other four garden characteristics (total native plant richness, structural diversity of the vegetation, habitat type richness and index of permeable border) to obtain the mini mal adequate models (Crawley, 2007). Three variables (total native plant richness, structural diversity of the vegetation and habitat type richness) were correlated with total garden area. Therefore, we used residuals of the relationships between the variable and total garden area for the GLM models. Distance to city center and percentage of sealed area were slightly correlated $( r = - 0 . 4 6 , p = . 0 0 6 )$ . However, we retained both in the model because they represent different aspects of urbanization. The same GLM model was used to analyze urbanization-related effects on body size for invertebrate groups."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "In plants, species composition has been reported to be more homogeneous in urban habitats than rural ones (Zeeman et al., 2017), which may result in a decreased functional diversity. We therefore hypothesized that FDis decreases along the rural–urban gradient. However, we recorded higher FDis in plants in highly urbanized areas than in rural ones. This contrasts the findings from other habitat types. Knapp et al. (2012) and Melliger et al. (2018) demonstrated that FDis in plants decreased with increasing degree of urbanization in grassland and forest. Our unexpected result could be explained by species composition not being affected by distance to the city center. However, the higher FDis of native grassland plant species at short distance to the city center may be due to the observed"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "![Image block](doc:5e195e1/tier:advanced/page:8/block:5)"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "For the other invertebrate groups examined we found no effect of urbanization on functional dispersion. Tóth and Hornung (2020) reported decreased FDis with increasing urbanization for millipedes in forests and other types of woodland (e.g., parks) in Budapest, Hungary. The decrease in this other habitat type was mainly due to a reduced number of forest specialist species in highly urbanized areas. This is consistent with the finding of Bogyó et al. (2015) for millipedes in urban forests. Similarly, Nagy et al. (2018) reported that functional diversity (measured as functional richness) in woodlice decreased along the urbanization gradient in forests. However, gardens"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "For the other ground-dwelling invertebrate groups examined we recorded no effects of urbanization on FEve. This matches the few other studies, which for the most part found no changes in invertebrate FEve along urbanization gradients (e.g., Banaszak-Cibicka and Dylewski (2021) for bees and Correa et al. (2021) for dung beetles)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Contrary to our expectations, the proportion of habitat generalists increased in rove beetles in rural gardens, while no change in the proportion of generalists was found in the other groups examined. However, Melliger et al. (2018) reported an increase in the share of habitat generalists with increasing percentage of sealed area in ants and spiders in urban forests in Basel. Similarly, Magura et al. (2013) found that the proportion of forestassociated rove beetles was significantly lower in urban forest, when compared with suburban and rural forest. Forests, which are less intensively managed than private gardens, may show steeper rural–urban gradients for abiotic environmental factors and/or levels of disturbance. Unlike the more frequently studied forests or grasslands, urban gardens may harbor less species with strong habitat bindings. Urban gardens consist of a mosaic of patches of different habitat types. These patches may be too small to harbor certain habitat specialist species. Furthermore, as a result of regular management activity, variation in some environmental conditions may be dampened in gardens independent of the location of the garden. While we could not directly study the effects of management intensity on functional diversity in the examined gardens, because of challenges including heterogeneous management within gardens and imprecise information provided by owners, our observations gave us no reason to expect garden management to change along the rural–urban gradient. The similar environmental conditions in gardens in both rural and urban settings might be more powerful in filtering species composition than other factors such as the composition of the surrounding matrix, which change along the rural–urban gradient (Braschler et al., 2020). For example, repeated watering excludes pronounced periods of drought. This may also explain why—contrary to our expectations—we did not find an increased proportion of xerophilous species in gardens in highly urbanized areas, despite the existing urban heat island effect. Menke et al. (2011) suggested that urban areas may serve as habitat and corridors for dry-adapted and heat-tolerant species, and provided some evidence for this in ants along a rural–urban gradient including different habitat types in Raleight, North Carolina, USA, which is similar in population to the greater Basel area."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "The decrease in millipede body size with decreasing distance to the city center mirrors the findings from other studies (Bogyó et al., 2015; Tóth & Hornung, 2020). Bogyó et al. (2015) hypothesized that the decreased size in millipedes in urban areas is a result of lower food quality, while Tóth and Hornung (2020) suggested that it may be related to a combination of low food quality, deteriorated soils, reduced soil moisture, and increased soil contamination. For example, reduced soil moisture is likely to affect smaller species more because of a disadvantageous surface area to body volume ratio and lower capacity of storing water. Indeed, smaller millipede species usually inhabit colder and less arid places (Enghoff, 1992). In our study, most of the small millipede species recorded live buried in the soil. In this way, they are less influenced by above-ground management activities, but may be strongly negatively affected by soil degradation and soil contaminants."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Brigitte Braschler: Conceptualization (equal); Data curation (lead); Formal analysis (lead); Investigation (equal); Methodology (equal); Project administration (supporting); Visualization (equal); Writingoriginal draft (lead); Writing-review & editing (lead). José D. Gilgado: Conceptualization (equal); Data curation (supporting); Funding acquisition (supporting); Investigation (equal); Methodology (equal); Project administration (supporting); Visualization (lead); Writing-original draft (supporting); Writing-review & editing (supporting). Hans-Peter Rusterholz: Conceptualization (equal); Data curation (supporting); Formal analysis (supporting); Investigation (equal); Methodology (equal); Project administration (supporting); Supervision (equal); Writing-original draft (supporting); Writingreview & editing (supporting). Sascha Buchholz: Conceptualization (equal); Data curation (supporting); Formal analysis (supporting); Investigation (equal); Methodology (equal); Project administration (supporting); Writing-original draft (equal); Writing-review & editing (supporting). Valerie Zwahlen: Conceptualization (equal); Data curation (supporting); Investigation (equal); Methodology (equal); Writing-review & editing (supporting). Bruno Baur: Conceptualization (equal); Data curation (supporting); Formal analysis (supporting); Funding acquisition (lead); Investigation (equal); Methodology (equal); Project administration (lead); Resources (lead); Supervision (equal); Validation (lead); Writing-original draft (lead); Writing-review & editing (lead)."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Building on this concept, we aimed to investigate how functional diversity is changing along urbanization gradients and which combination of biological traits is favored in highly urbanized areas. We examined these questions using a multi-taxon approach focusing on native grassland plants and several groups of ground-dwelling invertebrates (snails, slugs, spiders, millipedes, woodlice, ants, and rove beetles). As measures of functional diversity we considered functional dispersion (FDis) and functional evenness (FEve). FDis is a measure of functional richness, which considers the species’ relative abundances by estimating their dispersion in a multi-dimensional trait space (Laliberté & Legendre, 2010). FEve describes the evenness of abundance distribution in a functional trait space."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "We surveyed seven groups of ground-dwelling invertebrates (for details of sampling see Braschler et al., 2020). The groups cover a wide range of feeding strategies and included phylogenetically distant taxa: two groups of Gastropoda (snails and slugs), Araneae (spiders), Diplopoda (millipedes), Isopoda (woodlice), Formicidae (ants), and Staphylinidae (rove beetles) excluding the subfamily Pselaphinae. Some years ago, the Pselaphinae was considered a distinct family (Newton & Thayer, 1995), therefore our expert did not determine this group. Members of this group have a very different morphology from other rove beetles. Furthermore, very little information on habitat preferences was available for this subfamily. We used pitfall traps (plastic beakers, 5.8 cm diameter, containing saltwater as a preservative, that were buried flush with the ground) and hay bait traps (moist hay in coarse plastic netting placed in direct contact with the ground; Tuf et al., 2015) to sample all groups. Hay bait traps complement pitfall traps by providing a spot of humid conditions and thus attracting less-mobile, frequently in the leaf-litter or upper soil layers living invertebrates, as well as acting as a food resource attracting many detritivores and their predators (Tuf et al., 2015). We placed five pitfall traps and five hay baits in the grassland of each garden. Pitfall traps and hay baits were operated three times for 7 days each from early to late summer 2018. We employed additional techniques for four groups (snails and slugs (active search and sieving of soil samples), millipedes and ants (active search); see Braschler et al. (2020) for details). Invertebrate surveys were conducted between May 31 and October 18, 2018."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "In the grassland area of the gardens, we recorded a total of 157 native plant species (Braschler et al., 2020). For spiders and woodlice, we only considered adult individuals and for ants, only workers. In the remaining invertebrate groups, we included all individuals that could be determined to the species level (99.4% of all individuals sampled). References for identification keys used and nomenclature followed can be found in Braschler et al. (2020). In all, we considered 1744 snail individuals (34 species), 1671 slug individuals (6 species), 1079 adult spider individuals (52 species), 6864 millipede individuals (21 species), 2582 adult woodlice individuals (9 species), and 1265 individuals of rove beetles (85 species). Furthermore, we found 28 species of ants (abundance data for this group was not considered because of the aggregated nature of ant colonies)."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "As measures of functional diversity, we considered functional dispersion (FDis) and functional evenness (FEve). FDis is a measure of functional richness, which considers the species’ relative abundances by estimating their dispersion in a multi-dimensional trait space (Laliberté & Legendre, 2010). FDis has no upper limit, and high values correspond to large numbers of functionally different species. FEve describes the evenness of abundance distribution in a functional trait space. High FEve-values indicate a balanced niche occupancy, which occurs in species communities with balanced trait frequencies (Mason et al., 2005). To calculate FDis and FEve, we used morphological and life-history"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Statistical analyses were performed in R (ver. 3.3.3 and ver. 3.6.1; R Core Team, 2015) and were carried out separately for the different taxonomic groups with the 35 gardens as replicates. We used various traits, depending on the plants or the invertebrate group examined, to calculate FDis and FEve (Table 1) using the FD package in R (Laliberté & Legendre, 2010). For native grassland plants and for ants, we used presence/absence data, and for the remaining groups we used abundance data to calculate FDis and FEve. We applied generalized linear models (GLM) with Gaussian error distribution to examine potential effects of landscape variables, garden size (vegetated garden area) and various local garden characteristics on species richness of different taxonomic groups. The three main variables (distance to city center, percentage sealed area and vegetated garden area) were retained in all models, while a step-wise procedure was followed with the other four garden characteristics (total native plant richness, structural diversity of the vegetation, habitat type richness and index of permeable border) to obtain the mini mal adequate models (Crawley, 2007). Three variables (total native plant richness, structural diversity of the vegetation and habitat type richness) were correlated with total garden area. Therefore, we used residuals of the relationships between the variable and total garden area for the GLM models. Distance to city center and percentage of sealed area were slightly correlated $( r = - 0 . 4 6 , p = . 0 0 6 )$ . However, we retained both in the model because they represent different aspects of urbanization. The same GLM model was used to analyze urbanization-related effects on body size for invertebrate groups."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "In plants, species composition has been reported to be more homogeneous in urban habitats than rural ones (Zeeman et al., 2017), which may result in a decreased functional diversity. We therefore hypothesized that FDis decreases along the rural–urban gradient. However, we recorded higher FDis in plants in highly urbanized areas than in rural ones. This contrasts the findings from other habitat types. Knapp et al. (2012) and Melliger et al. (2018) demonstrated that FDis in plants decreased with increasing degree of urbanization in grassland and forest. Our unexpected result could be explained by species composition not being affected by distance to the city center. However, the higher FDis of native grassland plant species at short distance to the city center may be due to the observed"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "![Image block](doc:5e195e1/tier:advanced/page:8/block:5)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "For the other invertebrate groups examined we found no effect of urbanization on functional dispersion. Tóth and Hornung (2020) reported decreased FDis with increasing urbanization for millipedes in forests and other types of woodland (e.g., parks) in Budapest, Hungary. The decrease in this other habitat type was mainly due to a reduced number of forest specialist species in highly urbanized areas. This is consistent with the finding of Bogyó et al. (2015) for millipedes in urban forests. Similarly, Nagy et al. (2018) reported that functional diversity (measured as functional richness) in woodlice decreased along the urbanization gradient in forests. However, gardens"
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "For the other ground-dwelling invertebrate groups examined we recorded no effects of urbanization on FEve. This matches the few other studies, which for the most part found no changes in invertebrate FEve along urbanization gradients (e.g., Banaszak-Cibicka and Dylewski (2021) for bees and Correa et al. (2021) for dung beetles)."
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "Contrary to our expectations, the proportion of habitat generalists increased in rove beetles in rural gardens, while no change in the proportion of generalists was found in the other groups examined. However, Melliger et al. (2018) reported an increase in the share of habitat generalists with increasing percentage of sealed area in ants and spiders in urban forests in Basel. Similarly, Magura et al. (2013) found that the proportion of forestassociated rove beetles was significantly lower in urban forest, when compared with suburban and rural forest. Forests, which are less intensively managed than private gardens, may show steeper rural–urban gradients for abiotic environmental factors and/or levels of disturbance. Unlike the more frequently studied forests or grasslands, urban gardens may harbor less species with strong habitat bindings. Urban gardens consist of a mosaic of patches of different habitat types. These patches may be too small to harbor certain habitat specialist species. Furthermore, as a result of regular management activity, variation in some environmental conditions may be dampened in gardens independent of the location of the garden. While we could not directly study the effects of management intensity on functional diversity in the examined gardens, because of challenges including heterogeneous management within gardens and imprecise information provided by owners, our observations gave us no reason to expect garden management to change along the rural–urban gradient. The similar environmental conditions in gardens in both rural and urban settings might be more powerful in filtering species composition than other factors such as the composition of the surrounding matrix, which change along the rural–urban gradient (Braschler et al., 2020). For example, repeated watering excludes pronounced periods of drought. This may also explain why—contrary to our expectations—we did not find an increased proportion of xerophilous species in gardens in highly urbanized areas, despite the existing urban heat island effect. Menke et al. (2011) suggested that urban areas may serve as habitat and corridors for dry-adapted and heat-tolerant species, and provided some evidence for this in ants along a rural–urban gradient including different habitat types in Raleight, North Carolina, USA, which is similar in population to the greater Basel area."
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "The decrease in millipede body size with decreasing distance to the city center mirrors the findings from other studies (Bogyó et al., 2015; Tóth & Hornung, 2020). Bogyó et al. (2015) hypothesized that the decreased size in millipedes in urban areas is a result of lower food quality, while Tóth and Hornung (2020) suggested that it may be related to a combination of low food quality, deteriorated soils, reduced soil moisture, and increased soil contamination. For example, reduced soil moisture is likely to affect smaller species more because of a disadvantageous surface area to body volume ratio and lower capacity of storing water. Indeed, smaller millipede species usually inhabit colder and less arid places (Enghoff, 1992). In our study, most of the small millipede species recorded live buried in the soil. In this way, they are less influenced by above-ground management activities, but may be strongly negatively affected by soil degradation and soil contaminants."
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Brigitte Braschler: Conceptualization (equal); Data curation (lead); Formal analysis (lead); Investigation (equal); Methodology (equal); Project administration (supporting); Visualization (equal); Writingoriginal draft (lead); Writing-review & editing (lead). José D. Gilgado: Conceptualization (equal); Data curation (supporting); Funding acquisition (supporting); Investigation (equal); Methodology (equal); Project administration (supporting); Visualization (lead); Writing-original draft (supporting); Writing-review & editing (supporting). Hans-Peter Rusterholz: Conceptualization (equal); Data curation (supporting); Formal analysis (supporting); Investigation (equal); Methodology (equal); Project administration (supporting); Supervision (equal); Writing-original draft (supporting); Writingreview & editing (supporting). Sascha Buchholz: Conceptualization (equal); Data curation (supporting); Formal analysis (supporting); Investigation (equal); Methodology (equal); Project administration (supporting); Writing-original draft (equal); Writing-review & editing (supporting). Valerie Zwahlen: Conceptualization (equal); Data curation (supporting); Investigation (equal); Methodology (equal); Writing-review & editing (supporting). Bruno Baur: Conceptualization (equal); Data curation (supporting); Formal analysis (supporting); Funding acquisition (lead); Investigation (equal); Methodology (equal); Project administration (lead); Resources (lead); Supervision (equal); Validation (lead); Writing-original draft (lead); Writing-review & editing (lead)."
+  },
+  {
+   "id": "u26",
+   "kind": "footnote of table 0",
+   "text": "(a) Traits used to calculate FDis and FEvea"
+  },
+  {
+   "id": "u27",
+   "kind": "footnote of table 0",
+   "text": "(b) Measures for habitat preferences"
+  },
+  {
+   "id": "u28",
+   "kind": "table 0",
+   "text": "Trait | Type | Specification | References\n(a) Traits used to calculate FDis and FEvea\nPlants\nLife form | Categorical | Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte | 1\nReproduction type | Categorical | Sexual; mixed; self-fertilization | 1\nEcological strategy | Categorical | C; CR; CS; CSR; S; SR; R (categories after Grime, 1979) | 1\nPollination syndrome | Categorical | Insects; wind | 1\nSeed dispersal type | Categorical | Zoochory; anemochory; hemerochory; autochory; hydrochory | 2\nSeed mass | Continuous | Mean of seed mass (mg) | 1\nSnails"
+  },
+  {
+   "id": "u29",
+   "kind": "table 0",
+   "text": "Shell size | Continuous | The longer of shell height or shell breadth (mm) | 3\nAge at sexual maturity | Ordinal | <1 year; 1 year; >1 year | 4-6\nLongevity | Ordinal | <1 year; 1-2 years; >2 years | 5, 6\nShell shape (snails) | Categorical | Depressed; globose/conical; oblong | 3\nSpiders\nBody size | Continuous | Mean male body length (mm) | 7\nHunting mode | Categorical | Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other | 8\nShading width | Continuous | Measure for the niche width | 9\nHumidity width | Continuous | Measure for the niche width | 9\nMillipedes"
+  },
+  {
+   "id": "u30",
+   "kind": "table 0",
+   "text": "Body length | Continuous | Mean of male and female body length of first adult stage (mm) | 10-15\nBreadth | Continuous | Maximum body breath at mid length of individual (mm) | 10-15\nEye morphology | Continuous | Number of ocelli | 10-13, 16\nFeeding guild | Categorical | Detritivore; facultative scavenger; algivore | 10-12, 17\nAnts\nBody size | Continuous | Maximum total length of workers, including major workers in species where these forage (mm) | 18-21\nMain food | Categorical | Carbohydrates; animal matter; carbohydrates & animal matter; grains | 18-20\nMain nest stratum | Categorical | Wood & litter; soil & crevices; both | 18-20\nColony founding mode | Categorical | Independent; social parasite | 18-20\nNumber of queens | Categorical | Monogynous; polygynous (species where only some nests have more than one queen are considered polygynous) | 18-20"
+  },
+  {
+   "id": "u31",
+   "kind": "table 0",
+   "text": "Rove beetles\nBody size | Continuous | Mean of mean body length of males and females (mm) | 10, 22-30\nMicrohabitat preference | Categorical | No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous | 31\n(b) Measures for habitat preferences\nNative grassland plants\nHabitat preference | Binominal | Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land) | 32\nPreference for dry conditions | Binominal | Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3) | 33\nSnails"
+  },
+  {
+   "id": "u32",
+   "kind": "table 1",
+   "text": "Trait | Type | Specification | References\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 6\nSpiders\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 34\nHumidity preference | Binominal | Wet or moist preferring; dry preferring | 34\nMillipedes\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 11-13, 35-37\nWoodlice\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 38-42\nHumidity preference | Binominal | Wet or moist preferring; dry tolerant | 38-42"
+  },
+  {
+   "id": "u33",
+   "kind": "table 1",
+   "text": "Ants\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 18\nHumidity preference | Binominal | Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5) | 18\nRove beetles\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 31, 43-45\nHumidity preference | Binominal | Wet or moist preferring; dry tolerant | 43-45"
+  },
+  {
+   "id": "u34",
+   "kind": "table 2",
+   "text": "Unit | Transformation for analyses ^a | Description\nGarden size\nTotal garden area | m^2 | Log | Total garden area excluding buildings\nVegetated garden area | m^2 | Log | Area covered by any type of vegetation, including semi-sealed areas\nGarden habitat diversity\nHabitat richness | count | b | Summed occurrence of nine defined habitat features\nStructural diversity ^c | Shannon index | b | Shannon diversity of height of trees and shrubs, and plants in grassland, flower and vegetable beds\nNaturalness\nTotal native plant species richness ^c | count | b | Number of native plant species in the area with vegetation\nIsolation of gardens"
+  },
+  {
+   "id": "u35",
+   "kind": "table 2",
+   "text": "Index of permeable garden border | % | Not transformed | Index combining weighted length of permeable and semi-permeable garden border expressed as percentage of total border length\nLandscape variables\nPercentage of sealed area | % | Log | Percentage of sealed area in a radius of 200 m around the garden\nDistance to city center | m | Log | Distance from the garden to the town hall of Basel city"
+  },
+  {
+   "id": "u36",
+   "kind": "footnote of table 10",
+   "text": "(a) Traits used to calculate FDis and FEvea"
+  },
+  {
+   "id": "u37",
+   "kind": "footnote of table 10",
+   "text": "(b) Measures for habitat preferences"
+  },
+  {
+   "id": "u38",
+   "kind": "table 10",
+   "text": "Trait | Type | Specification | References\n(a) Traits used to calculate FDis and FEvea\nPlants\nLife form | Categorical | Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte | 1\nReproduction type | Categorical | Sexual; mixed; self-fertilization | 1\nEcological strategy | Categorical | C; CR; CS; CSR; S; SR; R (categories after Grime, 1979) | 1\nPollination syndrome | Categorical | Insects; wind | 1\nSeed dispersal type | Categorical | Zoochory; anemochory; hemerochory; autochory; hydrochory | 2\nSeed mass | Continuous | Mean of seed mass (mg) | 1\nSnails"
+  },
+  {
+   "id": "u39",
+   "kind": "table 10",
+   "text": "Shell size | Continuous | The longer of shell height or shell breadth (mm) | 3\nAge at sexual maturity | Ordinal | <1 year; 1 year; >1 year | 4-6\nLongevity | Ordinal | <1 year; 1-2 years; >2 years | 5, 6\nShell shape (snails) | Categorical | Depressed; globose/conical; oblong | 3\nSpiders\nBody size | Continuous | Mean male body length (mm) | 7\nHunting mode | Categorical | Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other | 8\nShading width | Continuous | Measure for the niche width | 9\nHumidity width | Continuous | Measure for the niche width | 9\nMillipedes"
+  },
+  {
+   "id": "u40",
+   "kind": "table 10",
+   "text": "Body length | Continuous | Mean of male and female body length of first adult stage (mm) | 10-15\nBreadth | Continuous | Maximum body breath at mid length of individual (mm) | 10-15\nEye morphology | Continuous | Number of ocelli | 10-13, 16\nFeeding guild | Categorical | Detritivore; facultative scavenger; algivore | 10-12, 17\nAnts\nBody size | Continuous | Maximum total length of workers, including major workers in species where these forage (mm) | 18-21\nMain food | Categorical | Carbohydrates; animal matter; carbohydrates & animal matter; grains | 18-20\nMain nest stratum | Categorical | Wood & litter; soil & crevices; both | 18-20\nColony founding mode | Categorical | Independent; social parasite | 18-20\nNumber of queens | Categorical | Monogynous; polygynous (species where only some nests have more than one queen are considered polygynous) | 18-20"
+  },
+  {
+   "id": "u41",
+   "kind": "table 10",
+   "text": "Rove beetles\nBody size | Continuous | Mean of mean body length of males and females (mm) | 10, 22-30\nMicrohabitat preference | Categorical | No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous | 31\n(b) Measures for habitat preferences\nNative grassland plants\nHabitat preference | Binominal | Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land) | 32\nPreference for dry conditions | Binominal | Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3) | 33\nSnails"
+  },
+  {
+   "id": "u42",
+   "kind": "table 11",
+   "text": "Trait | Type | Specification | References\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 6\nSpiders\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 34\nHumidity preference | Binominal | Wet or moist preferring; dry preferring | 34\nMillipedes\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 11-13, 35-37\nWoodlice\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 38-42\nHumidity preference | Binominal | Wet or moist preferring; dry tolerant | 38-42"
+  },
+  {
+   "id": "u43",
+   "kind": "table 11",
+   "text": "Ants\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 18\nHumidity preference | Binominal | Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5) | 18\nRove beetles\nHabitat preference | Binominal | Habitat specialist (openland or forest); habitat generalist | 31, 43-45\nHumidity preference | Binominal | Wet or moist preferring; dry tolerant | 43-45"
+  },
+  {
+   "id": "u44",
+   "kind": "table 12",
+   "text": "Unit | Transformation for analyses ^a | Description\nGarden size\nTotal garden area | m^2 | Log | Total garden area excluding buildings\nVegetated garden area | m^2 | Log | Area covered by any type of vegetation, including semi-sealed areas\nGarden habitat diversity\nHabitat richness | count | b | Summed occurrence of nine defined habitat features\nStructural diversity ^c | Shannon index | b | Shannon diversity of height of trees and shrubs, and plants in grassland, flower and vegetable beds\nNaturalness\nTotal native plant species richness ^c | count | b | Number of native plant species in the area with vegetation\nIsolation of gardens"
+  },
+  {
+   "id": "u45",
+   "kind": "table 12",
+   "text": "Index of permeable garden border | % | Not transformed | Index combining weighted length of permeable and semi-permeable garden border expressed as percentage of total border length\nLandscape variables\nPercentage of sealed area | % | Log | Percentage of sealed area in a radius of 200 m around the garden\nDistance to city center | m | Log | Distance from the garden to the town hall of Basel city"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9"
+  ],
+  [
+   "u10"
+  ],
+  [
+   "u11",
+   "u12"
+  ],
+  [
+   "u13",
+   "u14"
+  ],
+  [
+   "u15",
+   "u16"
+  ],
+  [
+   "u17",
+   "u18",
+   "u19"
+  ],
+  [
+   "u20",
+   "u21",
+   "u22"
+  ],
+  [
+   "u23"
+  ],
+  [
+   "u24",
+   "u25",
+   "u26",
+   "u27"
+  ],
+  [
+   "u28",
+   "u29",
+   "u30",
+   "u31"
+  ],
+  [
+   "u32",
+   "u33",
+   "u34",
+   "u35",
+   "u36",
+   "u37",
+   "u38"
+  ],
+  [
+   "u39",
+   "u40",
+   "u41",
+   "u42"
+  ],
+  [
+   "u43",
+   "u44",
+   "u45"
+  ]
+ ],
+ "calls": 35,
+ "categories": [
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "snails",
+   "term": "Gastropoda",
+   "unit": "u1",
+   "model_label": "Gastropoda",
+   "label": "Gastropoda",
+   "explanation": ""
+  },
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "spiders",
+   "term": "Araneae",
+   "unit": "u1",
+   "model_label": "Araneae",
+   "label": "Araneae",
+   "explanation": ""
+  },
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "millipedes",
+   "term": "Diplopoda",
+   "unit": "u1",
+   "model_label": "Diplopoda",
+   "label": "Diplopoda",
+   "explanation": ""
+  },
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "woodlice",
+   "term": "Isopoda",
+   "unit": "u1",
+   "model_label": "Isopoda",
+   "label": "Isopoda",
+   "explanation": ""
+  },
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "ants",
+   "term": "Formicidae",
+   "unit": "u1",
+   "model_label": "Formicidae",
+   "label": "Formicidae",
+   "explanation": ""
+  },
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "rove beetles",
+   "term": "Staphylinidae",
+   "unit": "u1",
+   "model_label": "Staphylinidae",
+   "label": "Staphylinidae",
+   "explanation": ""
+  },
+  {
+   "variable": "garden size",
+   "code": "vegetated garden area",
+   "term": "vegetated garden area",
+   "unit": "u4",
+   "model_label": "vegetated garden area",
+   "label": "vegetated garden area",
+   "explanation": ""
+  },
+  {
+   "variable": "three main variables",
+   "code": "distance to city center",
+   "term": "distance to city center",
+   "unit": "u4",
+   "model_label": "distance to city center",
+   "label": "distance to city center",
+   "explanation": ""
+  },
+  {
+   "variable": "three main variables",
+   "code": "percentage sealed area",
+   "term": "percentage sealed area",
+   "unit": "u4",
+   "model_label": "percentage sealed area",
+   "label": "percentage sealed area",
+   "explanation": ""
+  },
+  {
+   "variable": "three main variables",
+   "code": "vegetated garden area",
+   "term": "vegetated garden area",
+   "unit": "u4",
+   "model_label": "vegetated garden area",
+   "label": "vegetated garden area",
+   "explanation": ""
+  },
+  {
+   "variable": "other four garden characteristics",
+   "code": "total native plant richness",
+   "term": "total native plant richness",
+   "unit": "u4",
+   "model_label": "total native plant richness",
+   "label": "total native plant richness",
+   "explanation": ""
+  },
+  {
+   "variable": "other four garden characteristics",
+   "code": "structural diversity of the vegetation",
+   "term": "structural diversity of the vegetation",
+   "unit": "u4",
+   "model_label": "structural diversity of the vegetation",
+   "label": "structural diversity of the vegetation",
+   "explanation": ""
+  },
+  {
+   "variable": "other four garden characteristics",
+   "code": "habitat type richness",
+   "term": "habitat type richness",
+   "unit": "u4",
+   "model_label": "habitat type richness",
+   "label": "habitat type richness",
+   "explanation": ""
+  },
+  {
+   "variable": "other four garden characteristics",
+   "code": "index of permeable border",
+   "term": "index of permeable border",
+   "unit": "u4",
+   "model_label": "index of permeable border",
+   "label": "index of permeable border",
+   "explanation": ""
+  },
+  {
+   "variable": "three variables",
+   "code": "total native plant richness",
+   "term": "total native plant richness",
+   "unit": "u4",
+   "model_label": "total native plant richness",
+   "label": "total native plant richness",
+   "explanation": ""
+  },
+  {
+   "variable": "three variables",
+   "code": "structural diversity of the vegetation",
+   "term": "structural diversity of the vegetation",
+   "unit": "u4",
+   "model_label": "structural diversity of the vegetation",
+   "label": "structural diversity of the vegetation",
+   "explanation": ""
+  },
+  {
+   "variable": "three variables",
+   "code": "habitat type richness",
+   "term": "habitat type richness",
+   "unit": "u4",
+   "model_label": "habitat type richness",
+   "label": "habitat type richness",
+   "explanation": ""
+  },
+  {
+   "variable": "distance to city center",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "percentage of sealed area in the surroundings",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "garden size",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "total native plant species richness",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "habitat type richness",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "structural diversity of the vegetation",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "index of permeable border on functional dispersion (FDis)",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "functional evenness (FEve) of various organism groups",
+   "code": "TA",
+   "term": "TA B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups",
+   "unit": "u8",
+   "model_label": "TA",
+   "label": "TA",
+   "explanation": "B L E 3 Summary of GLM analyses examining the effects of two measures of urbanization (distance to city center and percentage of sealed area in the surroundings) and garden size (vegetated garden area), total native plant species richness, habitat type richness, structural diversity of the vegetation, index of permeable border on functional dispersion (FDis) and functional evenness (FEve) of various organism groups"
+  },
+  {
+   "variable": "functional dispersion",
+   "code": "FDis",
+   "term": "a measure of functional richness, which considers the species’ relative abundances by estimating their dispersion in a multi-dimensional trait space",
+   "unit": "u13",
+   "model_label": "FDis",
+   "label": "a measure of functional richness, which considers the species’ relative abundances by estimating their dispersion in a multi-dimensional trait space",
+   "explanation": ""
+  },
+  {
+   "variable": "functional evenness",
+   "code": "FEve",
+   "term": "the evenness of abundance distribution in a functional trait space",
+   "unit": "u13",
+   "model_label": "FEve",
+   "label": "the evenness of abundance distribution in a functional trait space",
+   "explanation": ""
+  },
+  {
+   "variable": "adult individuals",
+   "code": "adult",
+   "term": "adult individuals",
+   "unit": "u15",
+   "model_label": "adult",
+   "label": "adult",
+   "explanation": "individuals"
+  },
+  {
+   "variable": "workers",
+   "code": "workers",
+   "term": "workers",
+   "unit": "u15",
+   "model_label": "workers",
+   "label": "workers",
+   "explanation": ""
+  },
+  {
+   "variable": "measures of urbanization",
+   "code": "distance to city center",
+   "term": "distance to city center",
+   "unit": "u21",
+   "model_label": "distance to city center",
+   "label": "distance to city center",
+   "explanation": ""
+  },
+  {
+   "variable": "measures of urbanization",
+   "code": "percentage of sealed area in the surroundings",
+   "term": "percentage of sealed area in the surroundings",
+   "unit": "u21",
+   "model_label": "percentage of sealed area in the surroundings",
+   "label": "percentage of sealed area in the surroundings",
+   "explanation": ""
+  },
+  {
+   "variable": "Traits used to calculate FDis and FEvea",
+   "code": "(a)",
+   "term": "Traits used to calculate FDis and FEvea",
+   "unit": "u26",
+   "model_label": "(a)",
+   "label": "Traits used to calculate FDis and FEvea",
+   "explanation": ""
+  },
+  {
+   "variable": "Measures for habitat preferences",
+   "code": "(b)",
+   "term": "Measures for habitat preferences",
+   "unit": "u27",
+   "model_label": "(b)",
+   "label": "Measures for habitat preferences",
+   "explanation": ""
+  },
+  {
+   "variable": "Life form",
+   "code": "Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte",
+   "term": "1",
+   "unit": "u28",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Reproduction type",
+   "code": "Sexual; mixed; self-fertilization",
+   "term": "1",
+   "unit": "u28",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Ecological strategy",
+   "code": "C; CR; CS; CSR; S; SR; R",
+   "term": "1",
+   "unit": "u28",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Pollination syndrome",
+   "code": "Insects; wind",
+   "term": "1",
+   "unit": "u28",
+   "model_label": "1",
+   "label": "1",
+   "explanation": ""
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "Zoochory; anemochory; hemerochory; autochory; hydrochory",
+   "term": "2",
+   "unit": "u28",
+   "model_label": "2",
+   "label": "2",
+   "explanation": ""
+  },
+  {
+   "variable": "Age at sexual maturity",
+   "code": "<1 year; 1 year; >1 year",
+   "term": "4-6",
+   "unit": "u29",
+   "model_label": "4-6",
+   "label": "4-6",
+   "explanation": ""
+  },
+  {
+   "variable": "Longevity",
+   "code": "<1 year; 1-2 years; >2 years",
+   "term": "5, 6",
+   "unit": "u29",
+   "model_label": "5, 6",
+   "label": "5, 6",
+   "explanation": ""
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "Depressed; globose/conical; oblong",
+   "term": "3",
+   "unit": "u29",
+   "model_label": "Depressed; globose/conical; oblong",
+   "label": "3",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other",
+   "term": "8",
+   "unit": "u29",
+   "model_label": "Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other",
+   "label": "8",
+   "explanation": ""
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "Detritivore; facultative scavenger; algivore",
+   "term": "10-12, 17",
+   "unit": "u30",
+   "model_label": "Detritivore; facultative scavenger; algivore",
+   "label": "10-12, 17",
+   "explanation": ""
+  },
+  {
+   "variable": "Main food",
+   "code": "Carbohydrates; animal matter; carbohydrates & animal matter; grains",
+   "term": "18-20",
+   "unit": "u30",
+   "model_label": "Carbohydrates; animal matter; carbohydrates & animal matter; grains",
+   "label": "18-20",
+   "explanation": ""
+  },
+  {
+   "variable": "Main nest stratum",
+   "code": "Wood & litter; soil & crevices; both",
+   "term": "18-20",
+   "unit": "u30",
+   "model_label": "Wood & litter; soil & crevices; both",
+   "label": "18-20",
+   "explanation": ""
+  },
+  {
+   "variable": "Colony founding mode",
+   "code": "Independent; social parasite",
+   "term": "18-20",
+   "unit": "u30",
+   "model_label": "Independent; social parasite",
+   "label": "18-20",
+   "explanation": ""
+  },
+  {
+   "variable": "Number of queens",
+   "code": "Monogynous; polygynous",
+   "term": "18-20",
+   "unit": "u30",
+   "model_label": "Monogynous; polygynous",
+   "label": "18-20",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous",
+   "term": "31",
+   "unit": "u31",
+   "model_label": "No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous",
+   "label": "31",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "term": "32",
+   "unit": "u31",
+   "model_label": "Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "label": "32",
+   "explanation": ""
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3)",
+   "term": "33",
+   "unit": "u31",
+   "model_label": "Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3)",
+   "label": "33",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "Habitat specialist (openland or forest); habitat generalist",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "unit": "u32",
+   "model_label": "Habitat specialist (openland or forest); habitat generalist",
+   "label": "Habitat specialist (openland or forest); habitat generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "Wet or moist preferring; dry preferring",
+   "term": "Wet or moist preferring; dry preferring",
+   "unit": "u32",
+   "model_label": "Wet or moist preferring; dry preferring",
+   "label": "Wet or moist preferring; dry preferring",
+   "explanation": ""
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "Wet or moist preferring; dry tolerant",
+   "term": "Wet or moist preferring; dry tolerant",
+   "unit": "u32",
+   "model_label": "Wet or moist preferring; dry tolerant",
+   "label": "Wet or moist preferring; dry tolerant",
+   "explanation": ""
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5)",
+   "term": "Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5)",
+   "unit": "u33",
+   "model_label": "Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5)",
+   "label": "Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5",
+   "explanation": ""
+  },
+  {
+   "variable": "Life form",
+   "code": "Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte",
+   "term": "Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte",
+   "unit": "u38",
+   "model_label": "Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte",
+   "label": "Macrophanerophyte; nanophanerophyte; chamaephyte; hemicryptophyte; geophyte; therophyte",
+   "explanation": ""
+  },
+  {
+   "variable": "Reproduction type",
+   "code": "Sexual; mixed; self-fertilization",
+   "term": "Sexual; mixed; self-fertilization",
+   "unit": "u38",
+   "model_label": "Sexual; mixed; self-fertilization",
+   "label": "Sexual; mixed; self-fertilization",
+   "explanation": ""
+  },
+  {
+   "variable": "Ecological strategy",
+   "code": "C; CR; CS; CSR; S; SR; R (categories after Grime, 1979)",
+   "term": "C; CR; CS; CSR; S; SR; R (categories after Grime, 1979)",
+   "unit": "u38",
+   "model_label": "C; CR; CS; CSR; S; SR; R (categories after Grime, 1979)",
+   "label": "C; CR; CS; CSR; S; SR; R (categories after Grime, 1979",
+   "explanation": ""
+  },
+  {
+   "variable": "Pollination syndrome",
+   "code": "Insects; wind",
+   "term": "Insects; wind",
+   "unit": "u38",
+   "model_label": "Insects; wind",
+   "label": "Insects; wind",
+   "explanation": ""
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "Zoochory; anemochory; hemerochory; autochory; hydrochory",
+   "term": "Zoochory; anemochory; hemerochory; autochory; hydrochory",
+   "unit": "u38",
+   "model_label": "Zoochory; anemochory; hemerochory; autochory; hydrochory",
+   "label": "Zoochory; anemochory; hemerochory; autochory; hydrochory",
+   "explanation": ""
+  },
+  {
+   "variable": "Shell size",
+   "code": "3",
+   "term": "Depressed; globose/conical; oblong",
+   "unit": "u39",
+   "model_label": "Depressed; globose/conical; oblong",
+   "label": "Depressed; globose/conical; oblong",
+   "explanation": ""
+  },
+  {
+   "variable": "Age at sexual maturity",
+   "code": "4-6",
+   "term": "<1 year; 1 year; >1 year",
+   "unit": "u39",
+   "model_label": "<1 year; 1 year; >1 year",
+   "label": "1 year; 1 year; >1 year",
+   "explanation": "<"
+  },
+  {
+   "variable": "Longevity",
+   "code": "5, 6",
+   "term": "<1 year; 1-2 years; >2 years",
+   "unit": "u39",
+   "model_label": "<1 year; 1-2 years; >2 years",
+   "label": "1 year; 1-2 years; >2 years",
+   "explanation": "<"
+  },
+  {
+   "variable": "Body size",
+   "code": "7",
+   "term": "Mean male body length (mm)",
+   "unit": "u39",
+   "model_label": "Mean male body length (mm)",
+   "label": "Mean male body length (mm",
+   "explanation": ""
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "8",
+   "term": "Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other",
+   "unit": "u39",
+   "model_label": "Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other",
+   "label": "Ambush; ground hunter; orb web; sensing web; sheet web; space web; specialist; other",
+   "explanation": ""
+  },
+  {
+   "variable": "Shading width",
+   "code": "9",
+   "term": "Measure for the niche width",
+   "unit": "u39",
+   "model_label": "Measure for the niche width",
+   "label": "Measure for the niche width",
+   "explanation": ""
+  },
+  {
+   "variable": "Humidity width",
+   "code": "9",
+   "term": "Measure for the niche width",
+   "unit": "u39",
+   "model_label": "Measure for the niche width",
+   "label": "Measure for the niche width",
+   "explanation": ""
+  },
+  {
+   "variable": "Body length",
+   "code": "10-15",
+   "term": "Mean of male and female body length of first adult stage (mm)",
+   "unit": "u40",
+   "model_label": "Mean of male and female body length of first adult stage (mm)",
+   "label": "Mean of male and female body length of first adult stage (mm",
+   "explanation": ""
+  },
+  {
+   "variable": "Breadth",
+   "code": "10-15",
+   "term": "Maximum body breath at mid length of individual (mm)",
+   "unit": "u40",
+   "model_label": "Maximum body breath at mid length of individual (mm)",
+   "label": "Maximum body breath at mid length of individual (mm",
+   "explanation": ""
+  },
+  {
+   "variable": "Eye morphology",
+   "code": "10-13, 16",
+   "term": "Number of ocelli",
+   "unit": "u40",
+   "model_label": "Number of ocelli",
+   "label": "Number of ocelli",
+   "explanation": ""
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "10-12, 17",
+   "term": "Detritivore; facultative scavenger; algivore",
+   "unit": "u40",
+   "model_label": "Detritivore; facultative scavenger; algivore",
+   "label": "Detritivore; facultative scavenger; algivore",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size",
+   "code": "18-21",
+   "term": "Maximum total length of workers, including major workers in species where these forage (mm)",
+   "unit": "u40",
+   "model_label": "Maximum total length of workers, including major workers in species where these forage (mm)",
+   "label": "Maximum total length of workers, including major workers in species where these forage (mm",
+   "explanation": ""
+  },
+  {
+   "variable": "Main food",
+   "code": "18-20",
+   "term": "Carbohydrates; animal matter; carbohydrates & animal matter; grains",
+   "unit": "u40",
+   "model_label": "Carbohydrates; animal matter; carbohydrates & animal matter; grains",
+   "label": "Carbohydrates; animal matter; carbohydrates & animal matter; grains",
+   "explanation": ""
+  },
+  {
+   "variable": "Main nest stratum",
+   "code": "18-20",
+   "term": "Wood & litter; soil & crevices; both",
+   "unit": "u40",
+   "model_label": "Wood & litter; soil & crevices; both",
+   "label": "Wood & litter; soil & crevices; both",
+   "explanation": ""
+  },
+  {
+   "variable": "Colony founding mode",
+   "code": "18-20",
+   "term": "Independent; social parasite",
+   "unit": "u40",
+   "model_label": "Independent; social parasite",
+   "label": "Independent; social parasite",
+   "explanation": ""
+  },
+  {
+   "variable": "Number of queens",
+   "code": "18-20",
+   "term": "Monogynous; polygynous (species where only some nests have more than one queen are considered polygynous)",
+   "unit": "u40",
+   "model_label": "Monogynous; polygynous",
+   "label": "Monogynous; polygynous",
+   "explanation": "species where only some nests have more than one queen are considered polygynous"
+  },
+  {
+   "variable": "Body size",
+   "code": "10, 22-30",
+   "term": "Mean of mean body length of males and females (mm)",
+   "unit": "u41",
+   "model_label": "Mean of mean body length of males and females (mm)",
+   "label": "Mean of mean body length of males and females (mm",
+   "explanation": ""
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "31",
+   "term": "No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous",
+   "unit": "u41",
+   "model_label": "No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous",
+   "label": "No specific microhabitat preference; saprophilous; coprophilous; thermophilous but no further preference; hygrophilous but no further preference; phytodetricolous",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "32",
+   "term": "Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "unit": "u41",
+   "model_label": "Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "label": "Habitat specialist (grassland); habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land",
+   "explanation": ""
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "33",
+   "term": "Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3)",
+   "unit": "u41",
+   "model_label": "Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3)",
+   "label": "Preference for wet or moist habitats (indicator value above 3); preference for dry habitats (indicator value up to 3",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "6",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "unit": "u42",
+   "model_label": "Habitat specialist (openland or forest); habitat generalist",
+   "label": "Habitat specialist (openland or forest); habitat generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "34",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "unit": "u42",
+   "model_label": "Habitat specialist",
+   "label": "Habitat specialist",
+   "explanation": "openland or forest); habitat generalist"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "34",
+   "term": "Wet or moist preferring; dry preferring",
+   "unit": "u42",
+   "model_label": "Wet or moist",
+   "label": "Wet or moist",
+   "explanation": "preferring; dry preferring"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "11-13, 35-37",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "unit": "u42",
+   "model_label": "Habitat specialist",
+   "label": "Habitat specialist",
+   "explanation": "openland or forest); habitat generalist"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "38-42",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "unit": "u42",
+   "model_label": "Habitat specialist",
+   "label": "Habitat specialist",
+   "explanation": "openland or forest); habitat generalist"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "38-42",
+   "term": "Wet or moist preferring; dry tolerant",
+   "unit": "u42",
+   "model_label": "Wet or moist",
+   "label": "Wet or moist",
+   "explanation": "preferring; dry tolerant"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "31, 43-45",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "unit": "u43",
+   "model_label": "Habitat specialist",
+   "label": "Habitat specialist",
+   "explanation": "openland or forest); habitat generalist"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "18",
+   "term": "Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5)",
+   "unit": "u43",
+   "model_label": "wet or moist",
+   "label": "wet or moist",
+   "explanation": "Preference for habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "43-45",
+   "term": "Wet or moist preferring; dry tolerant",
+   "unit": "u43",
+   "model_label": "Wet or moist",
+   "label": "Wet or moist",
+   "explanation": "preferring; dry tolerant"
+  },
+  {
+   "variable": "functional diversity",
+   "code": "",
+   "label": "functional dispersion",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "functional diversity",
+   "code": "",
+   "label": "functional evenness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "taxonomic groups",
+   "code": "",
+   "label": "native grassland plants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "taxonomic groups",
+   "code": "",
+   "label": "ants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "habitat generalists",
+   "code": "",
+   "label": "habitat generalists",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "forestassociated rove beetles",
+   "code": "",
+   "label": "forestassociated rove beetles",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "xerophilous species",
+   "code": "",
+   "label": "xerophilous species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "soil moisture",
+   "code": "",
+   "label": "reduced soil moisture",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "soil contamination",
+   "code": "",
+   "label": "soil contaminants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "soil degradation",
+   "code": "",
+   "label": "soil degradation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "functional dispersion",
+   "code": "",
+   "label": "functional richness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "functional evenness",
+   "code": "",
+   "label": "evenness of abundance distribution in a functional trait space",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Life form",
+   "code": "",
+   "label": "Macrophanerophyte",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Life form",
+   "code": "",
+   "label": "nanophanerophyte",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Life form",
+   "code": "",
+   "label": "chamaephyte",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Life form",
+   "code": "",
+   "label": "hemicryptophyte",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Life form",
+   "code": "",
+   "label": "geophyte",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Life form",
+   "code": "",
+   "label": "therophyte",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Reproduction type",
+   "code": "",
+   "label": "Sexual",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Reproduction type",
+   "code": "",
+   "label": "mixed",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Reproduction type",
+   "code": "",
+   "label": "self-fertilization",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Ecological strategy",
+   "code": "",
+   "label": "CSR",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Pollination syndrome",
+   "code": "",
+   "label": "Insects",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Pollination syndrome",
+   "code": "",
+   "label": "wind",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "",
+   "label": "Zoochory",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "",
+   "label": "anemochory",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "",
+   "label": "hemerochory",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "",
+   "label": "autochory",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Seed dispersal type",
+   "code": "",
+   "label": "hydrochory",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "",
+   "label": "Depressed",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "",
+   "label": "globose/conical",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Shell shape (snails)",
+   "code": "",
+   "label": "oblong",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "Ambush",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "ground hunter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "orb web",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "sensing web",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "sheet web",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "space web",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "specialist",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Hunting mode",
+   "code": "",
+   "label": "other",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "Detritivore",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "facultative scavenger",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "algivore",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main food",
+   "code": "",
+   "label": "Carbohydrates",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main food",
+   "code": "",
+   "label": "animal matter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main food",
+   "code": "",
+   "label": "carbohydrates & animal matter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main food",
+   "code": "",
+   "label": "grains",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main nest stratum",
+   "code": "",
+   "label": "Wood & litter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main nest stratum",
+   "code": "",
+   "label": "soil & crevices",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Main nest stratum",
+   "code": "",
+   "label": "both",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Colony founding mode",
+   "code": "",
+   "label": "Independent",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Colony founding mode",
+   "code": "",
+   "label": "social parasite",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Number of queens",
+   "code": "",
+   "label": "Monogynous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Number of queens",
+   "code": "",
+   "label": "polygynous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "",
+   "label": "No specific microhabitat preference",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "",
+   "label": "saprophilous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "",
+   "label": "coprophilous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "",
+   "label": "thermophilous but no further preference",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "",
+   "label": "hygrophilous but no further preference",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Microhabitat preference",
+   "code": "",
+   "label": "phytodetricolous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "",
+   "label": "Habitat specialist (grassland)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "",
+   "label": "habitat generalist (occurring in two or more habitat types, e.g., open land, forest or agricultural land)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "",
+   "label": "Preference for wet or moist habitats (indicator value above 3)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Preference for dry conditions",
+   "code": "",
+   "label": "preference for dry habitats (indicator value up to 3)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u31"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "",
+   "label": "Preference for wet or moist habitats (indicator value above 3.5); preference for dry habitats (indicator value up to 3.5)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u33"
+  },
+  {
+   "variable": "Ecological strategy",
+   "code": "",
+   "label": "C; CR; CS; CSR; S; SR; R (categories after Grime, 1979)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u38"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "",
+   "label": "Habitat specialist (openland or forest)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u42"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "",
+   "label": "habitat generalist",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u41"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "",
+   "label": "Wet or moist preferring",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u42"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "",
+   "label": "dry preferring",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u42"
+  },
+  {
+   "variable": "Humidity preference",
+   "code": "",
+   "label": "dry tolerant",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u42"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "ground-dwelling invertebrates",
+   "code": "slug",
+   "term": "Gastropoda",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "prose",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "prose",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "habitat generalists",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "habitat generalists",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "habitat generalists",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "habitat generalists",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat preference",
+   "code": "1",
+   "term": "Habitat specialist (openland or forest); habitat generalist",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 267.0
+}

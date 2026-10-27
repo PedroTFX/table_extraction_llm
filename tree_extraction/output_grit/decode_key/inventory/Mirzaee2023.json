@@ -1,0 +1,701 @@
+{
+ "paper": "Mirzaee2023",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:1/block:14)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Citation: Mirzaee Z, Sadeghi S, Ballarin F, Schmitt T, Simões M, Wiemers M (2023) Life history and biogeography of the enigmatic mantid Nilomantis floweri (Mantodea, Nanomantidae). ZooKeys 1173: 275–295. [https://doi.org/10.3897/zookeys.1173.107204](https://doi.org/10.3897/zookeys.1173.107204)"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Mantids are a fascinating group of animals and have attracted a lot of attention from scientists and laymen with the consequence of good knowledge about the biology, distribution, and taxonomy of many species (Ehrmann 2002). Nevertheless, despite the popularity of this insect group, some species still remain enigmatic due to their difficulty to be found and rarity in the field. One of these examples is Nilomantis floweri Werner, 1907 (Mantodea: Nanomantidae). This mantid is a small, slender species (total body length 15–21 mm) with fully developed wings in both sexes (Fig. 1). Its known distribution extends throughout"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:2/block:2)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Table 1. Known records and the reported number of specimens (NOS) of Nilomantis floweri per country with years of collection, * the collection from 1901 goes back to before the establishment of this genus and species by Werner in 1907. On a trip to Iran, Zarudny collected one male and one female of this species from Makran in Sistan and Baluchistan Province and deposited them at the Zoological Institute of the Russian Academy of Sciences, Saint Petersburg. Evgeny Shcherbakov (Lomonosov Moscow State University, Russia) recently identified them as Nilomantis floweri."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Moreover, limited information is available regarding the distributional boundaries of the species. Scattered records are reported in the literature, but lack exact coordinates, and based on its known distribution, sampling gaps are suspected, especially within the African range of the species. In this context, ecological niche models (ENMs) may help to better understand the species distribution and shed light on potential sampling gaps."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Female specimens were collected alive in the field and kept in glass jars (15 × 15 × 10 cm) in order to increase the number of available oothecae. These samples were preferentially selected based on their large abdomens assuming that they have previously mated in their natural habitat. Laid oothecae were kept at room temperature (25–27 °C) in separate glass jars (15 × 15 × 10 cm). To simulate their natural dry environment, the relative air humidity (RH) was kept at 50–55% by misting the room on a regular basis. RH was measured using an HTC2 digital terrarium hygrometer (Dongguan, China)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:4/block:2)"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Distributional data of N. floweri were assembled through fieldwork, museum collections, publications, and online biodiversity databases. In total, 34 records were obtained from various districts of southern Iran over a five-year survey period (2017–2021); 47 occurrences were obtained from museum collections, including the State Museum of Natural History Karlsruhe, Germany (SMNK), the Swedish Museum of Natural History, Sweden (NRM), and the Insect collections Inventory of the Lund University Biological Museum, Sweden (MZLU) (all museum specimens checked by mantid specialists, i.e., Ehrmann, Roy, Kaltenbach); 35 records were obtained from the Global Biodiversity Information Facility (GBIF; [https://doi.org/10.15468/dl.twk7e4](https://doi.org/10.15468/dl.twk7e4)), 18 from iNaturalist, from which only specimens containing barcode information, or photographs which allowed a proper species identification (confirmed by ZM), were included; 30 additional records were obtained from Roy and Leston (1975) and Kaltenbach (1982)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Environmental data were obtained from WorldClim v. 2.0 ([http://worldclim.org/version2](http://worldclim.org/version2); Fick and Hijmans 2017) at 2.5 arc-minute spatial resolution. World-Clim is based on interpolations of weather station data over the period 1950–2000. Of the 19 available bioclimatic variables, the variables 8, 9, 18, and 19 (namely, the mean temperature of wettest quarter, mean temperature of driest quarter, precipitation of warmest quarter, and precipitation of coldest quarter) were excluded from the analysis due to spatial artifacts between adjacent grid cells in those variables (Escobar et al. 2014; Campbell et al. 2015). To avoid overfitting and inflation of model accuracy with overly dimensional environmental space and collinearity among variables, we performed a jackknife analysis to evaluate the relevance of variables, the Pearson’s correlation coefficient (r) analysis, where variables with a correlation of > 0.8 were excluded, followed by the variance inflation factor (VIF) (USDM R package) (Naimi et al. 2014)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "To test the best set of environmental variables, and create the final ecological niche models (ENMs), three environmental sets were used to calibrate our models, based on fieldwork observations by ZM of potentially biologically meaningful variables related to the N. floweri distribution: ‘set 1’, including the maximum temperature of the warmest month (Bio5), minimum temperature of the coldest month (Bio6), annual precipitation (Bio12), precipitation of driest quarter (bio17); ‘set 2’, containing annual mean temperature (Bio1), the maximum"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "temperature of the warmest month (Bio5), annual precipitation (Bio12), precipitation of driest month (Bio14); and ‘set 3’, containing maximum temperature of the warmest month (Bio5), minimum temperature of the coldest month (Bio6), annual precipitation (Bio12), precipitation of driest month (Bio14)."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "The maximum entropy algorithm in Maxent v. 3.3.3e (Phillips et al. 2006) was used to estimate the climatic suitability for N. floweri. A calibration area (Barve et al. 2011) of 50 km buffer around each distributional record was used to represent areas that this species could potentially exploit. The estimation of a 50-km buffer is based on the observation of this species in its natural habitat, especially for males, which have efficient wings and fly to find females in order to mate. Seeking to adjust model complexity, we first calibrated our models by creating 84 candidate models, with parameter combinations including four regularisation multipliers (0.1, 0.5, 1.0, and 1.5), seven feature classes that represent combinations of linear (L), quadratic (Q), and product (P), and three sets of environmental variables. Selected model parameterisations were the ones that showed statistical significance (partial Receiver Operating Characteristic (ROC)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "c oxidase subunit I (COI) gene was carried out using the primers LepF1 (5′ATTCAACCAATCATAAAGATATTGG-3′), and LepR1 (5′TAAACTTCTGGAT-GTCCAAAAAATCA-3′) (Hebert et al. 2004). This COI barcode region was amplified via polymerase chain reaction (PCR) on a SENSQUEST Lab Cycler. Thermal PCR conditions were as follows: 95 °C for 5 min; 38 cycles of $9 5 ~ ^ { \\circ } \\mathsf { C }$ for $3 0 ~ \\mathrm { s } , 4 9 ~ ^ { \\circ } \\mathrm { C }$ for 90 $\\mathsf { s } , 7 2 ^ { \\circ } \\mathsf { C }$ for 60 $\\mathsf { s } ; 6 8 \\; ^ { \\circ } \\mathsf { C }$ for 30 min. To confirm the correct amplification or detect undesired contaminations, PCR products were visualised using gel electrophoresis. Amplicons were purified with Thermo Scientific Exonuclease I, and FastAP Thermosensitive Alkaline Phosphatase Clean-up Kit. They were sequenced at Macrogen Europe with complements and sufficient overlap with adjacent regions to ensure the accuracy of the sequence data."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:8/block:2)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Figure 3. Male genitalia of Nilomantis floweri and variability of the male apophysis phalloid: a, b Kangan (Iran) c Jam (Iran) d Bandar Lengeh (Iran) e Firooz Abad (Iran) f Chahbahar (Iran) g from right to left; specimens from Mauritania, Niger, Sennaar (Sudan) (type of floweri), Assab (Eritrea) (type of tenella), Eritrea, Jeddah and Mecca (Saudi Arabia). Scale bars: 1 mm (a), 300 µm (b–g). Fig. 2g is from Roy and Leston (1975) courtesy of Roger Roy (MHNN, Paris, France)."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:9/block:2)"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "1: table S3). The spatial distribution model under the current climate condition showed discriminative performance in predicting the distribution of N. floweri (Fig. 5), while the model corresponded to the known distribution of this species from the Sahel zone in North Africa to the Arabian Peninsula and Iran. Partial ROC and area under the curve (AUC) values showed that the final model was significantly better than random expectations (P"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:11/block:5)"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Figure 6. Response curves of the most relevant environmental factors affecting the distribution of Nilomantis floweri; the shown values are an average of ten replicate runs a maximum temperature of the warmest month (Bio5) b minimum temperature of the coldest month (Bio6) c annual precipitation (Bio12) d precipitation of driest month (Bio14)."
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Our haplotype analysis of the 60 sequences resulted in a single network consisting of 28 distinct haplotypes (Suppl. material 1: table S2). Apart from one haplotype (H_05) which was shared among specimens from Oman and Iran, the other were unique for either Oman (20) or Iran (7). The resulting network"
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "![Image block](doc:33a7b8d/tier:advanced/page:12/block:3)"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "The genus Nilomantis and its type species Nilomantis floweri were described by Werner (1907), based on a single male specimen collected in Sennaar, Sudan. The rounded shape of the compound eyes, the keeled pronotum, and the “flattened” head capsule were emphasised as important diagnostic characteristics for this species. Giglio-Tos (1915) described a new genus and species of praying mantis, Cryptomantis tenella Giglio-Tos, 1915, from Katona (East Africa), which externally resembled Nilomantis but was distinct from the latter genus by having conical compound eyes. Beier (1930) described another Nilomantis species, N. arabica Beier, 1930, from Muscat (Oman). He stated that N. arabica was distinguished from the previously described N. floweri and C. tenella by its larger body size and the presence of two reddish brown spots between the ocelli and the compound eyes. Beier (1930) also examined the type of N. floweri claiming that the rounded"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "compound eyes reported by Werner (1907) for this species were actually conical and thus not corresponding to the author’s original description. Since the only generic difference between Nilomantis and Cryptomantis was the shape of the eyes, Beier (1930) transferred Cryptomantis tenella to the genus Nilomantis."
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "In his publication on the Arabian Mantodea, Uvarov (1939) stated that N. floweri was a common species in Saudi Arabia, as evidenced by the specimens collected from various localities in this country (i.e., Jidda, Mecca, Taif, Midakhil, Riyadh, Khamis Mushait). According to his examination, all the specimens collected were uniform in size and coloration and showed no differences in comparison with specimens from Sudan. He also mentioned that N. arabica described by Beier (1930) was noticeably larger than N. floweri, but the two red spots on the vertex that Beier (1930) considered as a distinguishing feature between the two species were sometimes present in N. floweri as well. Due to the discovery of Nilomantis specimens in Ghana, Roy and Leston (1975) described another Nilomantis species, N. edmundsi Roy & Leston, 1975. They examined all type specimens of this genus and, based on the comparison of male genitalia and geographic distribution of the species, they synonymised C. tenella and N. arabica with N. floweri. They also provided a list of known specimens from various countries."
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Kaltenbach (1982) also recorded N. floweri from different localities in Saudi Arabia. In addition, he mentioned the presence of this species in south-eastern Iran (Baluchistan), without providing any proof for Iranian records (i.e., deposition of Iranian specimens). In his book on the Mantodea of the world, Ehrmann (2002) further confirmed the presence of N. floweri in Iran, but again without reporting any detail or information regarding the deposition of the specimens. Thus, prior to this publication, the occurrence of this species in Iran had to be considered uncertain."
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "Copyright notice: This dataset is made available under the Open Database License ([http://opendatacommons.org/licenses/odbl/1.0/](http://opendatacommons.org/licenses/odbl/1.0/)). The Open Database License (ODbL) is a license agreement intended to allow users to freely share, modify, and use this Dataset while maintaining this same freedom for others, provided that the original source and author(s) are credited."
+  },
+  {
+   "id": "u27",
+   "kind": "table 0",
+   "text": "Country | Year | NOS | Reference\nChad | 1958 | 3 | Roy and Leston 1975\nEritrea | 1907, 1931 | 3 | NRM, Roy and Leston 1975\nIran | 1901*-2021 | 35 | This study\nNiger | 1897, 1958 | 4 | Roy and Leston 1975\nOman | 1976, 2000, 2016, 2017, 2020, 2022 | 45 | Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982\nQatar | 2020 | 1 | iNaturalist\nSaudi Arabia | 1930–1932, 1934, 1936, 1938, 1940, 1945, 1948, 1956, 1962, 1975–1980, 2019 | 43 | Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982\nSudan | 1906, 1928, 1931, 1957 | 4 | Roy and Leston 1975, LMZ\nUnited Arab Emirates | 2014, 2015, 2019–2022 | 18 | iNaturalist"
+  },
+  {
+   "id": "u28",
+   "kind": "table 0",
+   "text": "Yemen | 1987, 1988, 1945, 1956, 1996, 1998, 2000 | 50 | SMNK, Roy and Leston 1975"
+  },
+  {
+   "id": "u29",
+   "kind": "table 2",
+   "text": "Category | Description\nPurple dots | Occurrence records\nLight blue area | Climatically unsuitable\nDark blue area | Climatically suitable and non-extrapolative"
+  },
+  {
+   "id": "u30",
+   "kind": "table 3",
+   "text": "Abbreviation | Variable | Units | Percent contribution\nBio 5 | Max temperature of warmest month | °C | 13.2\nBio 6 | Minimum temperature of coldest month | °C | 33.6\nBio 12 | annual precipitation | mm/a | 38.1\nBio 14 | Precipitation of driest month | mm/month | 15.1"
+  },
+  {
+   "id": "u31",
+   "kind": "table 4",
+   "text": "Category | Value\nH_01 | 1\nH_02 | 1\nH_03 | 1\nH_04 | 1\nH_05 | 1\nH_06 | 1\nH_07 | 1\nH_08 | 1\nH_09 | 1"
+  },
+  {
+   "id": "u32",
+   "kind": "table 4",
+   "text": "H_10 | 1\nH_11 | 1\nH_12 | 1\nH_13 | 1\nH_14 | 1\nH_15 | 1\nH_16 | 1\nH_17 | 1\nH_18 | 1\nH_19 | 1"
+  },
+  {
+   "id": "u33",
+   "kind": "table 4",
+   "text": "H_20 | 1\nH_21 | 1\nH_22 | 1\nH_23 | 1\nH_24 | 1\nH_25 | 1\nH_26 | 1\nH_27 | 1\nH_28 | 1"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4",
+   "u5",
+   "u6",
+   "u7"
+  ],
+  [
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16"
+  ],
+  [
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23"
+  ],
+  [
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28"
+  ],
+  [
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33"
+  ]
+ ],
+ "calls": 13,
+ "categories": [
+  {
+   "variable": "NOS",
+   "code": "NOS",
+   "term": "reported number of specimens",
+   "unit": "u4",
+   "model_label": "number of specimens",
+   "label": "number of specimens",
+   "explanation": "reported"
+  },
+  {
+   "variable": "mean temperature of wettest quarter",
+   "code": "8",
+   "term": "mean temperature of wettest quarter",
+   "unit": "u9",
+   "model_label": "mean temperature",
+   "label": "mean temperature",
+   "explanation": "of wettest quarter"
+  },
+  {
+   "variable": "mean temperature of driest quarter",
+   "code": "9",
+   "term": "mean temperature of driest quarter",
+   "unit": "u9",
+   "model_label": "mean temperature",
+   "label": "mean temperature",
+   "explanation": "of driest quarter"
+  },
+  {
+   "variable": "precipitation of warmest quarter",
+   "code": "18",
+   "term": "precipitation of warmest quarter",
+   "unit": "u9",
+   "model_label": "precipitation",
+   "label": "precipitation",
+   "explanation": "of warmest quarter"
+  },
+  {
+   "variable": "precipitation of coldest quarter",
+   "code": "19",
+   "term": "precipitation of coldest quarter",
+   "unit": "u9",
+   "model_label": "precipitation",
+   "label": "precipitation",
+   "explanation": "of coldest quarter"
+  },
+  {
+   "variable": "maximum temperature of the warmest month",
+   "code": "Bio5",
+   "term": "maximum temperature of the warmest month",
+   "unit": "u10",
+   "model_label": "maximum temperature",
+   "label": "maximum temperature",
+   "explanation": "of the warmest month"
+  },
+  {
+   "variable": "minimum temperature of the coldest month",
+   "code": "Bio6",
+   "term": "minimum temperature of the coldest month",
+   "unit": "u10",
+   "model_label": "minimum temperature",
+   "label": "minimum temperature",
+   "explanation": "of the coldest month"
+  },
+  {
+   "variable": "annual precipitation",
+   "code": "Bio12",
+   "term": "annual precipitation",
+   "unit": "u10",
+   "model_label": "annual precipitation",
+   "label": "annual precipitation",
+   "explanation": ""
+  },
+  {
+   "variable": "precipitation of driest quarter",
+   "code": "bio17",
+   "term": "precipitation of driest quarter",
+   "unit": "u10",
+   "model_label": "precipitation",
+   "label": "precipitation",
+   "explanation": "of driest quarter"
+  },
+  {
+   "variable": "annual mean temperature",
+   "code": "Bio1",
+   "term": "annual mean temperature",
+   "unit": "u10",
+   "model_label": "annual mean temperature",
+   "label": "annual mean temperature",
+   "explanation": ""
+  },
+  {
+   "variable": "precipitation of driest month",
+   "code": "Bio14",
+   "term": "precipitation of driest month",
+   "unit": "u11",
+   "model_label": "precipitation",
+   "label": "precipitation",
+   "explanation": "of driest month"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "a",
+   "term": "Kangan (Iran)",
+   "unit": "u15",
+   "model_label": "Kangan",
+   "label": "Kangan",
+   "explanation": "Iran"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "b",
+   "term": "Kangan (Iran)",
+   "unit": "u15",
+   "model_label": "Kangan",
+   "label": "Kangan",
+   "explanation": "Iran"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "c",
+   "term": "Jam (Iran)",
+   "unit": "u15",
+   "model_label": "Jam",
+   "label": "Jam",
+   "explanation": "Iran"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "d",
+   "term": "Bandar Lengeh (Iran)",
+   "unit": "u15",
+   "model_label": "Bandar Lengeh",
+   "label": "Bandar Lengeh",
+   "explanation": "Iran"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "e",
+   "term": "Firooz Abad (Iran)",
+   "unit": "u15",
+   "model_label": "Firooz Abad",
+   "label": "Firooz Abad",
+   "explanation": "Iran"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "f",
+   "term": "Chahbahar (Iran)",
+   "unit": "u15",
+   "model_label": "Chahbahar",
+   "label": "Chahbahar",
+   "explanation": "Iran"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "g",
+   "term": "from right to left",
+   "unit": "u15",
+   "model_label": "right to left",
+   "label": "right to left",
+   "explanation": "from"
+  },
+  {
+   "variable": "NOS",
+   "code": "3",
+   "term": "Roy and Leston 1975",
+   "unit": "u27",
+   "model_label": "Roy and Leston 1975",
+   "label": "Roy and Leston 1975",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "35",
+   "term": "This study",
+   "unit": "u27",
+   "model_label": "This study",
+   "label": "This study",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "4",
+   "term": "Roy and Leston 1975",
+   "unit": "u27",
+   "model_label": "Roy and Leston 1975",
+   "label": "Roy and Leston 1975",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "45",
+   "term": "Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982",
+   "unit": "u27",
+   "model_label": "Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982",
+   "label": "Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "1",
+   "term": "iNaturalist",
+   "unit": "u27",
+   "model_label": "iNaturalist",
+   "label": "iNaturalist",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "43",
+   "term": "Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982",
+   "unit": "u27",
+   "model_label": "Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982",
+   "label": "Roy and Leston 1975, GBIF, iNaturalist, Kaltenbach 1982",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "4",
+   "term": "Roy and Leston 1975, LMZ",
+   "unit": "u27",
+   "model_label": "Roy and Leston 1975, LMZ",
+   "label": "Roy and Leston 1975, LMZ",
+   "explanation": ""
+  },
+  {
+   "variable": "NOS",
+   "code": "50",
+   "term": "SMNK, Roy and Leston 1975",
+   "unit": "u28",
+   "model_label": "SMNK, Roy and Leston 1975",
+   "label": "SMNK, Roy and Leston 1975",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Purple dots",
+   "term": "Occurrence records",
+   "unit": "u29",
+   "model_label": "Occurrence records",
+   "label": "Occurrence records",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Light blue area",
+   "term": "Climatically unsuitable",
+   "unit": "u29",
+   "model_label": "Climatically unsuitable",
+   "label": "Climatically unsuitable",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Dark blue area",
+   "term": "Climatically suitable and non-extrapolative",
+   "unit": "u29",
+   "model_label": "Climatically suitable and non-extrapolative",
+   "label": "Climatically suitable and non-extrapolative",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "Bio 5",
+   "term": "Max temperature of warmest month",
+   "unit": "u30",
+   "model_label": "Max temperature",
+   "label": "Max temperature",
+   "explanation": "of warmest month"
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "Bio 6",
+   "term": "Minimum temperature of coldest month",
+   "unit": "u30",
+   "model_label": "Minimum temperature",
+   "label": "Minimum temperature",
+   "explanation": "of coldest month"
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "Bio 12",
+   "term": "annual precipitation",
+   "unit": "u30",
+   "model_label": "annual precipitation",
+   "label": "annual precipitation",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "Bio 14",
+   "term": "Precipitation of driest month",
+   "unit": "u30",
+   "model_label": "Precipitation",
+   "label": "Precipitation",
+   "explanation": "of driest month"
+  },
+  {
+   "variable": "environmental variables",
+   "code": "",
+   "label": "set 1",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "environmental variables",
+   "code": "",
+   "label": "set 2",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "environmental variables",
+   "code": "",
+   "label": "set 3",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "male apophysis phalloid",
+   "code": "",
+   "label": "variability of the male apophysis phalloid",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "compound eyes",
+   "code": "",
+   "label": "rounded shape",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "compound eyes",
+   "code": "",
+   "label": "conical",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "pronotum",
+   "code": "",
+   "label": "keeled",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "head capsule",
+   "code": "",
+   "label": "flattened",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "larger",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Chad",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Eritrea",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Iran",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Niger",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Oman",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Qatar",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Saudi Arabia",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Sudan",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "United Arab Emirates",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Country",
+   "code": "",
+   "label": "Yemen",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u28"
+  },
+  {
+   "variable": "Occurrence records",
+   "code": "",
+   "label": "Purple dots",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Climatically unsuitable",
+   "code": "",
+   "label": "Light blue area",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Climatically suitable and non-extrapolative",
+   "code": "",
+   "label": "Dark blue area",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  }
+ ],
+ "dropped": [],
+ "seconds": 64.3
+}

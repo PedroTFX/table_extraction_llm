@@ -1,0 +1,903 @@
+{
+ "paper": "Eskilden_2015",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:3ade11b/tier:advanced/page:1/block:5)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "1 Biodiversity & Conservation, Department of Bioscience, Aarhus University, Gren\u0001avej 14, DK-8410 Rønde, Denmark, 2 Ecoinformatics & Biodiversity, Department of Bioscience, Aarhus University, DK-8000 Aarhus C, Denmark, 3 School of Biology, University of Leeds, LS2 9JT Leeds, UK, 4 Naturalis Biodiversity Center, P.O. Box 9517, 2300RA Leiden, The Netherlands, 5 Centre for Ecology, Evolution and Environmental Changes (CE3C), Faculdade de Ciências da Universidade de Lisboa, 1749-016 Lisboa, Portugal, 6 Institute for Biodiversity and Ecosystem Dynamics (IBED), University of Amsterdam, P.O. Box 94248, 1090 GE Amsterdam, The Netherlands, 7 Department of Community Ecology, Helmholtz Centre for Environmental Research – UFZ, Theodor-Lieser-Strasse 4, DE-06210 Halle, Germany, 8 Aarhus Institute of Advanced Studies, Aarhus University, Høegh-Guldbergs Gade 6B, DK-8000 Aarhus C, Denmark, 9 Arctic Research Centre, Aarhus University, DK-8000 Aarhus C, Denmark"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Species with specialized habitat requirements, narrow environmental tolerances and poor dispersal ability are likely to be particularly susceptible to global change (Henle et al., 2004; Poyry € et al., 2009; Ockinger € et al., 2010; Diamond et al., 2011). Also, historical land use changes may define diverging population trajectories for species with different ecological niches (Krauss et al., 2010). Thus, species belonging to separate functional groups might show contrasting responses to global change, and any potential local or regional extinction debt associated with these changes may be ‘paid back’ at different rates (Krauss et al., 2010). Conversely, species with traits that promote establishment under changed conditions may show positive population responses to global change (McKinney & Lockwood, 1999). Research on the relationship between diversity and functional aspects has so far been dominated by studies that focus on the dichotomy between resource specialists and generalists (Men\u0001endez et al., 2006; Stefanescu et al., 2011; Borschig € et al., 2013; but see Dapporto & Dennis, 2013). Often, butterflies are classified as either generalists (broad) or specialists (narrow) in their resource use, typically distinguished by larval dietary breadth (Dennis, 2012). Yet, the environmental responses of species are possibly related to a complex array of different traits, for example host plant or habitat specialization, reproductive rate or mobility (Diamond et al., 2011; Borschig € et al., 2013). Furthermore, a species may be a specialist on one resource, for example larval host plants, but a generalist for another, for example habitat type (Loxdale et al., 2011; Dennis, 2012; Dapporto & Dennis, 2013). So far, it remains largely unclear whether different ecological specializations may lead to different long-term responses to global changes."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Estimates of species richness are highly dependent on sampling effort (e.g. number of records per grid cell and time period). Species accumulation curves (providing estimates of expected richness with increasing number of records) can then be used to estimate species richness for a given sampling effort (Gotelli & Colwell, 2001). This allows comparison of species richness estimates among regions or between time periods with unequal sampling effort. We followed the methods described in Carvalheiro et al. (2013) to deal with such particularities of historical datasets when estimating richness changes. This allowed us to deal with over-representation of rare species and with under-representation of singletons (i.e. species represented by only a single record in a given cell) which could result from collection efforts being concentrated to represent morphological diversity. As in Carvalheiro et al. (2013), we only estimated richness change for cells that were considered well sampled, that is that matched the following selection criteria: (1) cells had more than 15 records per time period, (2) the ratio of records/ number of species was higher than 1.5 in each of the two compared time periods and (3) if number of records was less than fivefold the total number of species in the country, we only considered cells with less than a 10-fold difference in numbers of records between periods. Applying less strict selection criteria would have led to the selection of more grid cells, but also an increased risk of making type II errors (Carvalheiro et al., 2013). An overview of the total number of records and grid cells used per time slice is provided in Table S3 and S4, respectively."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Table 1 Eight species traits of Danish butterflies. Trait categories were subjected to a Hill & Smith principal component analysis and the correlation ratio for each trait category is shown for axes 1 and 2. Traits are ordered according to their importance, with numbers in bold showing the ratios that are higher than the average correlation ratio for that axis (mean correlation ratios: axis 1 = 0.40; axis 2 = 0.31). Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000). Species specific trait values can be found in Table S6."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "separated into functional groups based on the trait states of each trait category (Schweiger et al., 2007). We first applied ordination methods to produce species-specific values on orthogonal trait axes and then used hierarchical clustering to group all butterflies into functional groups based on these species-specific values. For the ordination, we applied a Hill & Smith principal component analysis (Hill & Smith, 1976) which is appropriate for analyses that contain both categorical and continuous species trait states. This was done using the ‘dudi.hillsmith’ function of the R package ‘ADE4’. Based on the Cattell’s scree test (Cattell, 1966), we retained the first two ordination axes in the analysis and applied a hierarchical cluster analysis with the unweighted pair-group method using arithmetic averages (UPGMA) to produce a dendrogram of the trait similarities among species. This was done with the ‘daisy’ function of the R package ‘CALIBRATE’ and the ‘AGNES function of the ‘CLUSTER’ package. The optimal number of clusters in the dendrogram was then determined with the Calinski–Harabasz index (Calinski & Harabasz, 1974) using \u0001 the ‘calinhara’ function of the R package ‘FPC’. Four functional groups (clusters) were identified (Fig. S1). Due to its small size, the fourth functional group had to be excluded from further analyses and the analysis of species richness change was subsequently run only for the three largest functional groups, following the same steps as described above."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "similarity in species composition between each focal grid cell and all other 10 km9 10 km cells. We used similarity due to species replacement (calculated as 1 minus beta-sim, Lennon et al., 2001), a measure that is independent of, but complementary to, our measurements of alpha-diversity (see Baselga, 2010). To correct for the unequal sampling effort, we used an individual-based probabilistic approach using the formulas described in Chao et al. (2005). As species identity is crucial for similarity analyses, we applied selection criteria that were stricter than those of the richness analyses. Thus, only those cells were included that had (1) records per grid cell that were equal to or higher than the maximum number of species possible to find in each cell within a given time period and (2) a ratio of records/number of species higher than 1.5. We analyzed for each time period (and each functional group) how similarity (after logit transformation to standardize residuals) varied with distance between grid cells, that is quantifying the distance decay of similarity (Nekola & White, 1999). We fitted generalized linear mixed models (with focal grid cell as a random factor) using restricted maximum likelihood in the R package ‘NLME’. The statistical analyses followed Carvalheiro et al. (2013) and statistical details of the fitted models are provided in Table S7 for the different time periods and different functional groups."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "![Image block](doc:3ade11b/tier:advanced/page:5/block:7)"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Figure 1 Species richness changes (estimated weighted mean \u0001 95% confidence intervals) for (a) all Danish butterfly species, (b) cluster 1 (sedentary host plant specialists overwintering in the larval stage) (c) cluster 2 (sedentary habitat specialists overwintering in the egg stage) and (d) cluster 3 (mobile generalists with mature overwintering stages). The three functional groups (b–c) correspond to clusters 1–3 in Table 2, which were obtained using hierarchical clustering and species-specific values of eight ecological traits (Table 1). Observed distribution records were initially binned into six time slices (1900–19, 1920–39, 1940–59, 1960–79, 1980–99 and 2000–12) and richness changes were then estimated for each time slice relative to the most recent time slice (i.e. 2000–12). The most recent time slice serves as a baseline for comparison among time slices with its value being set at 100. Richness changes are shown for two different spatial resolutions (10 km9 10 km and all of Denmark)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "![Image block](doc:3ade11b/tier:advanced/page:7/block:2)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Figure 2 Changes in similarity of species composition of butterfly assemblages through space and time for (a) all Danish butterfly species, (b) cluster 1 (sedentary host plant specialists overwintering in the larval stage), (c) cluster 2 (sedentary habitat specialists overwintering in the egg stage) and (d) cluster 3 (mobile generalists with mature overwintering stages). The three functional groups (b–c) correspond to clusters 1–3 in Table 2, which were obtained using hierarchical clustering and species-specific values of eight ecological traits (Table 1). Lines represent the estimated value of similarity between 10 km9 10 km grid cells after removing the effect of sampling effort (see Methods). Statistical details of the fitted models are provided in Table S7. A temporal pattern of increasing intercepts (i.e. adjacent species assemblages becoming more similar) and declining slopes (i.e. distant species assemblages becoming more similar) indicates increasing assemblage similarity at both local and regional scales through time, with the most homogenous butterfly assemblages occurring in the most recent time periods."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "We sincerely thank Michael Stoltze, Gitte Calov, Martin Bjerg, Fugle og Natur, Birdlife Denmark, the Danish Lepidopterological Society and Entomologisk Selskab for Fyn for the use of their butterfly records. We also wish to thank Peder Klith Bøcher for guidance in GIS analyses. AE and TTH acknowledge funding from 15. Juni Fonden, WDK an University of Amsterdam (UvA) starting grant, LGC, OS and JCB support from the EU FP7 project STEP (grant no. 244090) and LGC and OS the EU FP7 project SCALES (Grant no. 226852)."
+  },
+  {
+   "id": "u12",
+   "kind": "table 0",
+   "text": "Trait category | Description of trait states | Axis 1 | Axis 2\nOverwintering stage | ‘Egg’, ‘larvae’, ‘pupae’, ‘adult’ | 0.58 | 0.43\nHabitat openness | Average habitat vegetation openness score for each butterfly species based on an openness scores (1–3) for nine habitat types: rocky outcrop, coastal/dunes, grassland, heath, mire and field margin (score 1), urban (score 2) and forest edges and forest meadows (score 3) | 0.31 | 0.52\nMigratory behaviour | ‘Migratory’, ‘non-migratory’ | 0.67 | 0.13\nHabitat specialization | Species classified as either ‘specialists’ (using only one habitat type), ‘semi-specialists’ (using two different habitat types), or ‘generalists’ (using more than three or more different habitat types), based on the nine habitat types mentioned above | 0.33 | 0.47\nHost plant stribution | The distribution of each butterfly species’ host plant species in Denmark (‘widespread’ or ‘local’). For oligo- or polyphagous butterflies, only the distribution of the most widespread host plant was considered | 0.40 | 0.35\nBody size | Average forewing length of both males and females (measured in mm) | 0.27 | 0.35\nHost plant specialization | Species classified as either ‘monophagous’ (only using one host plant species), ‘oligophagous’ (using several host plant species in the same genus) or ‘polyphagous’ (using host plants in multiple genera) | 0.26 | 0.30\nVoltinity | Number of generations per year | 0.38 | 0.03"
+  },
+  {
+   "id": "u13",
+   "kind": "table 1",
+   "text": "Trait category | Cluster 1(n = 23) | Cluster 2(n = 30) | Cluster 3(n = 22)\nOverwintering stage | Larvae | Egg | Adult/pupa\nMigratory behaviour | No | No | Yes\nHabitat openness | Open | Closed | Intermediate\nHabitat specialization | Intermediate | Specialist | Generalist\nHost plant distribution | Local | Widespread | Widespread\nVoltinity | Few | Few | Many\nBody size | Small | Intermediate | Large\nHost plant specialization | Monophagous | Oligophagous | Polyphagous"
+  },
+  {
+   "id": "u14",
+   "kind": "table 3",
+   "text": "Table S2. Fifteen vagrant species, which have been recorded in Denmark, but have never had stable breeding populations in the country. They were therefore not included in the analysis.\nSpecies name (English) | Specias name (latin) | Records\nApollo | Parnassius apollo | 8\nScarce Tortoiseshell | Nymphalis xanthomelas | 169\nCompton Tortoiseshell | Nymphalis vaualbum | 3\nPallas' Fritillary | Argyronome laodice | 1\nMarbled White | Melanargia galathea | 5\nArran Brown | Erebia ligea | 6\nLarge Wall Brown | Lasiommata maera | 7\nNorthern Wall Brown | Lasiommata petropolitana | 2"
+  },
+  {
+   "id": "u15",
+   "kind": "table 3",
+   "text": "Purple-Shot Copper | Lycaena alciphron | 4\nGreen-Underside Blue | Glaucopsyche alexis | 2\nMoorland Clouded Yellow | Colias palaeno | 136\nPale Clouded Yellow | Colias hyale | 1473\nBerger's Clouded Yellow | Colias alfacariensis | 3\nClouded Yellow | Colias croceus | 523\nMonarch | Danaus plexippus | 1"
+  },
+  {
+   "id": "u16",
+   "kind": "table 4",
+   "text": "Table S3. Number of records from each time slice, which were included in the analysis.\nPeriod | Records\n1900-1919 | 4261\n1920-1939 | 8079\n1940-1959 | 23782\n1960-1979 | 51538\n1980-1999 | 133243\n2000-2012 | 137760"
+  },
+  {
+   "id": "u17",
+   "kind": "footnote of table 7",
+   "text": "Table S6. Overview of all 79 butterfly species and their life history traits used in the analysis. Species numbers correspond to numbers used in Fig S1. The placement of each species within the three functional clusters is indicated, and ordination values are given The life-history traits are (1) migration, where each species is classified as either migratory or non-migratory; (2) body size, indicated as the average forewing length of both males and females (mm); (3) host plant specialization, where each species is classified as either ‘monophagous’ (only using one host plant), ‘oligophagous’ (using several host plants from the same genus) or ‘polyphagous’ (using many different host plants); (4) host plant distribution, classified as either ‘widespread’ or ‘local’. If a butterfly species is oligo- or polyphagous, only the distribution of the most widespread host plant is shown; (5) habitat selection, where species are classified as either ‘specialists’ (using only one habitat type), ‘semi-specialists’ (using two different habitat types) or ‘generalists’ (using three or more different habitat types); (6) habitat openness score, with regards to vegetation, where 1=completely open (e.g. grassland or heath), 2=semi-open and 3=completely closed (i.e. forest). If a species uses several different types of habitat the average openness score is indicated; (7) overwintering strategy, i.e. egg, larvae, pupae or adult (8) Voltinity, ie. each butterfly species’ number of generations per year. Species marked with '*' have gone extinct in Denmark."
+  },
+  {
+   "id": "u18",
+   "kind": "footnote of table 7",
+   "text": "Table S6. Overview of all 79 butterfly species and their life history traits used in the analysis. Species numbers correspond to numbers used in Fig S1. The placement of each species within the three functional clusters is indicated, and ordination values are given The life-history traits are (1) migration, where each species is classified as either migratory or non-migratory; (2) body size, indicated as the average forewing length of both males and females (mm); (3) host plant specialization, where each species is classified as either ‘monophagous’ (only using one host plant), ‘oligophagous’ (using several host plants from the same genus) or ‘polyphagous’ (using many different host plants); (4) host plant distribution, classified as either ‘widespread’ or ‘local’. If a butterfly species is oligo- or polyphagous, only the distribution of the most widespread host plant is shown; (5) habitat selection, where species are classified as either ‘specialists’ (using only one habitat type), ‘semi-specialists’ (using two different habitat types) or ‘generalists’ (using three or more different habitat types); (6) habitat openness score, with regards to vegetation, where 1=completely open (e.g. grassland or heath), 2=semi-open and 3=completely closed (i.e. forest). If a species uses several different types of habitat the average openness score is indicated; (7) overwintering strategy, i.e. egg, larvae, pupae or adult (8) Voltinity, ie. each butterfly species’ number of generations per year. Species marked with '*' have gone extinct in Denmark."
+  },
+  {
+   "id": "u19",
+   "kind": "footnote of table 8",
+   "text": "Table S7. Statistical details of the effect of distance between cells and time period on species assemblage similarity analyses. Similarity values (β-sim) were logit transformed to normalize residuals and analyzed with General Linear Mixed Models (GLMM) with grid cell within time period as random variable, and sampling effort, distance and time period and its interaction as fixed terms. For similarity analyses we selected only 10km grid cells which had record numbers equal to or higher than the maximum number of species possible to find in each cell (instead of 20% of that maximum number), and which had a ratio of records/number of species higher than 1.5. Results are shown for (a) all Danish butterfly species, (b) cluster 1 (sedentary host plant specialists overwintering in the larval stage), (c) cluster 2 (sedentary habitat specialists overwintering in the egg stage), and (d) cluster 3 (high-mobility generalists with mature overwintering stages). The three functional groups correspond to clusters 1–3 in Table 2, which were obtained using hierarchical clustering and species-specific values of eight ecological traits (see Table 1, Fig. S1)."
+  },
+  {
+   "id": "u20",
+   "kind": "footnote of table 8",
+   "text": "Table S7. Statistical details of the effect of distance between cells and time period on species assemblage similarity analyses. Similarity values (β-sim) were logit transformed to normalize residuals and analyzed with General Linear Mixed Models (GLMM) with grid cell within time period as random variable, and sampling effort, distance and time period and its interaction as fixed terms. For similarity analyses we selected only 10km grid cells which had record numbers equal to or higher than the maximum number of species possible to find in each cell (instead of 20% of that maximum number), and which had a ratio of records/number of species higher than 1.5. Results are shown for (a) all Danish butterfly species, (b) cluster 1 (sedentary host plant specialists overwintering in the larval stage), (c) cluster 2 (sedentary habitat specialists overwintering in the egg stage), and (d) cluster 3 (high-mobility generalists with mature overwintering stages). The three functional groups correspond to clusters 1–3 in Table 2, which were obtained using hierarchical clustering and species-specific values of eight ecological traits (see Table 1, Fig. S1)."
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19"
+  ],
+  [
+   "u20"
+  ]
+ ],
+ "calls": 18,
+ "categories": [
+  {
+   "variable": "resource use",
+   "code": "generalists",
+   "term": "generalists (broad)",
+   "unit": "u2",
+   "model_label": "generalists",
+   "label": "generalists",
+   "explanation": "broad"
+  },
+  {
+   "variable": "resource use",
+   "code": "specialists",
+   "term": "specialists (narrow)",
+   "unit": "u2",
+   "model_label": "specialists",
+   "label": "specialists",
+   "explanation": "narrow"
+  },
+  {
+   "variable": "resource use",
+   "code": "specialist",
+   "term": "specialist on one resource",
+   "unit": "u2",
+   "model_label": "specialist",
+   "label": "specialist",
+   "explanation": "on one resource"
+  },
+  {
+   "variable": "resource use",
+   "code": "generalist",
+   "term": "generalist for another",
+   "unit": "u2",
+   "model_label": "generalist",
+   "label": "generalist",
+   "explanation": "for another"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "1",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "2",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "4",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "5",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "6",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "7",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "Trait categories",
+   "code": "8",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000",
+   "model_term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "unit": "u4",
+   "model_label": "Traits",
+   "label": "Traits",
+   "explanation": "1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from Garc\u0001ıa-Barros (2000"
+  },
+  {
+   "variable": "records per grid cell that were equal to or higher than the maximum number of species possible to find in each cell within a given time period",
+   "code": "(1)",
+   "term": "records per grid cell that were equal to or higher than the maximum number of species possible to find in each cell within a given time period",
+   "unit": "u6",
+   "model_label": "records",
+   "label": "records",
+   "explanation": "per grid cell that were equal to or higher than the maximum number of species possible to find in each cell within a given time period"
+  },
+  {
+   "variable": "all Danish butterfly species",
+   "code": "(a)",
+   "term": "all Danish butterfly species",
+   "unit": "u8",
+   "model_label": "butterfly",
+   "label": "butterfly",
+   "explanation": "all Danish species"
+  },
+  {
+   "variable": "cluster 1",
+   "code": "(b)",
+   "term": "cluster 1 (sedentary host plant specialists overwintering in the larval stage)",
+   "unit": "u8",
+   "model_label": "cluster",
+   "label": "cluster",
+   "explanation": "1 (sedentary host plant specialists overwintering in the larval stage"
+  },
+  {
+   "variable": "cluster 2",
+   "code": "(c)",
+   "term": "cluster 2 (sedentary habitat specialists overwintering in the egg stage)",
+   "unit": "u8",
+   "model_label": "cluster",
+   "label": "cluster",
+   "explanation": "2 (sedentary habitat specialists overwintering in the egg stage"
+  },
+  {
+   "variable": "cluster 3",
+   "code": "(d)",
+   "term": "cluster 3 (mobile generalists with mature overwintering stages)",
+   "unit": "u8",
+   "model_label": "cluster",
+   "label": "cluster",
+   "explanation": "3 (mobile generalists with mature overwintering stages"
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "Egg",
+   "term": "Egg",
+   "unit": "u12",
+   "model_label": "Egg",
+   "label": "Egg",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "larvae",
+   "term": "larvae",
+   "unit": "u12",
+   "model_label": "larvae",
+   "label": "larvae",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "pupae",
+   "term": "pupae",
+   "unit": "u12",
+   "model_label": "pupae",
+   "label": "pupae",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "adult",
+   "term": "adult",
+   "unit": "u12",
+   "model_label": "adult",
+   "label": "adult",
+   "explanation": ""
+  },
+  {
+   "variable": "Migratory behaviour",
+   "code": "Migratory",
+   "term": "Migratory",
+   "unit": "u12",
+   "model_label": "Migratory",
+   "label": "Migratory",
+   "explanation": ""
+  },
+  {
+   "variable": "Migratory behaviour",
+   "code": "non-migratory",
+   "term": "non-migratory",
+   "unit": "u12",
+   "model_label": "non-migratory",
+   "label": "non-migratory",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat specialization",
+   "code": "specialists",
+   "term": "specialists",
+   "unit": "u12",
+   "model_label": "specialists",
+   "label": "specialists",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat specialization",
+   "code": "semi-specialists",
+   "term": "semi-specialists",
+   "unit": "u12",
+   "model_label": "semi-specialists",
+   "label": "semi-specialists",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat specialization",
+   "code": "generalists",
+   "term": "generalists",
+   "unit": "u12",
+   "model_label": "generalists",
+   "label": "generalists",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant stribution",
+   "code": "widespread",
+   "term": "widespread",
+   "unit": "u12",
+   "model_label": "widespread",
+   "label": "widespread",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant stribution",
+   "code": "local",
+   "term": "local",
+   "unit": "u12",
+   "model_label": "local",
+   "label": "local",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant specialization",
+   "code": "monophagous",
+   "term": "monophagous",
+   "unit": "u12",
+   "model_label": "monophagous",
+   "label": "monophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant specialization",
+   "code": "oligophagous",
+   "term": "oligophagous",
+   "unit": "u12",
+   "model_label": "oligophagous",
+   "label": "oligophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant specialization",
+   "code": "polyphagous",
+   "term": "polyphagous",
+   "unit": "u12",
+   "model_label": "polyphagous",
+   "label": "polyphagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "Larvae",
+   "term": "Larvae",
+   "unit": "u13",
+   "model_label": "Larvae",
+   "label": "Larvae",
+   "explanation": ""
+  },
+  {
+   "variable": "Overwintering stage",
+   "code": "Adult/pupa",
+   "term": "Adult/pupa",
+   "unit": "u13",
+   "model_label": "Adult/pupa",
+   "label": "Adult/pupa",
+   "explanation": ""
+  },
+  {
+   "variable": "Migratory behaviour",
+   "code": "No",
+   "term": "No",
+   "unit": "u13",
+   "model_label": "No",
+   "label": "No",
+   "explanation": ""
+  },
+  {
+   "variable": "Migratory behaviour",
+   "code": "Yes",
+   "term": "Yes",
+   "unit": "u13",
+   "model_label": "Yes",
+   "label": "Yes",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat openness",
+   "code": "Open",
+   "term": "Open",
+   "unit": "u13",
+   "model_label": "Open",
+   "label": "Open",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat openness",
+   "code": "Closed",
+   "term": "Closed",
+   "unit": "u13",
+   "model_label": "Closed",
+   "label": "Closed",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat openness",
+   "code": "Intermediate",
+   "term": "Intermediate",
+   "unit": "u13",
+   "model_label": "Intermediate",
+   "label": "Intermediate",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat specialization",
+   "code": "Intermediate",
+   "term": "Intermediate",
+   "unit": "u13",
+   "model_label": "Intermediate",
+   "label": "Intermediate",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat specialization",
+   "code": "Specialist",
+   "term": "Specialist",
+   "unit": "u13",
+   "model_label": "Specialist",
+   "label": "Specialist",
+   "explanation": ""
+  },
+  {
+   "variable": "Habitat specialization",
+   "code": "Generalist",
+   "term": "Generalist",
+   "unit": "u13",
+   "model_label": "Generalist",
+   "label": "Generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant distribution",
+   "code": "Local",
+   "term": "Local",
+   "unit": "u13",
+   "model_label": "Local",
+   "label": "Local",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant distribution",
+   "code": "Widespread",
+   "term": "Widespread",
+   "unit": "u13",
+   "model_label": "Widespread",
+   "label": "Widespread",
+   "explanation": ""
+  },
+  {
+   "variable": "Voltinity",
+   "code": "Few",
+   "term": "Few",
+   "unit": "u13",
+   "model_label": "Few",
+   "label": "Few",
+   "explanation": ""
+  },
+  {
+   "variable": "Voltinity",
+   "code": "Many",
+   "term": "Many",
+   "unit": "u13",
+   "model_label": "Many",
+   "label": "Many",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size",
+   "code": "Small",
+   "term": "Small",
+   "unit": "u13",
+   "model_label": "Small",
+   "label": "Small",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size",
+   "code": "Intermediate",
+   "term": "Intermediate",
+   "unit": "u13",
+   "model_label": "Intermediate",
+   "label": "Intermediate",
+   "explanation": ""
+  },
+  {
+   "variable": "Body size",
+   "code": "Large",
+   "term": "Large",
+   "unit": "u13",
+   "model_label": "Large",
+   "label": "Large",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant specialization",
+   "code": "Monophagous",
+   "term": "Monophagous",
+   "unit": "u13",
+   "model_label": "Monophagous",
+   "label": "Monophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant specialization",
+   "code": "Oligophagous",
+   "term": "Oligophagous",
+   "unit": "u13",
+   "model_label": "Oligophagous",
+   "label": "Oligophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Host plant specialization",
+   "code": "Polyphagous",
+   "term": "Polyphagous",
+   "unit": "u13",
+   "model_label": "Polyphagous",
+   "label": "Polyphagous",
+   "explanation": ""
+  },
+  {
+   "variable": "migration",
+   "code": "migratory",
+   "term": "migratory",
+   "unit": "u17",
+   "model_label": "migratory",
+   "label": "migratory",
+   "explanation": ""
+  },
+  {
+   "variable": "migration",
+   "code": "non-migratory",
+   "term": "non-migratory",
+   "unit": "u17",
+   "model_label": "non-migratory",
+   "label": "non-migratory",
+   "explanation": ""
+  },
+  {
+   "variable": "host plant distribution",
+   "code": "widespread",
+   "term": "widespread",
+   "unit": "u17",
+   "model_label": "widespread",
+   "label": "widespread",
+   "explanation": ""
+  },
+  {
+   "variable": "host plant distribution",
+   "code": "local",
+   "term": "local",
+   "unit": "u17",
+   "model_label": "local",
+   "label": "local",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat selection",
+   "code": "specialists",
+   "term": "specialists",
+   "unit": "u17",
+   "model_label": "specialists",
+   "label": "specialists",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat selection",
+   "code": "semi-specialists",
+   "term": "semi-specialists",
+   "unit": "u17",
+   "model_label": "semi-specialists",
+   "label": "semi-specialists",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat selection",
+   "code": "generalists",
+   "term": "generalists",
+   "unit": "u17",
+   "model_label": "generalists",
+   "label": "generalists",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat openness score",
+   "code": "1",
+   "term": "completely open (e.g. grassland or heath)",
+   "unit": "u17",
+   "model_label": "open",
+   "label": "open",
+   "explanation": "completely (e.g. grassland or heath"
+  },
+  {
+   "variable": "habitat openness score",
+   "code": "2",
+   "term": "semi-open",
+   "unit": "u17",
+   "model_label": "semi-open",
+   "label": "semi-open",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat openness score",
+   "code": "3",
+   "term": "completely closed (i.e. forest)",
+   "unit": "u17",
+   "model_label": "closed",
+   "label": "closed",
+   "explanation": "completely (i.e. forest"
+  },
+  {
+   "variable": "overwintering strategy",
+   "code": "egg",
+   "term": "egg",
+   "unit": "u17",
+   "model_label": "egg",
+   "label": "egg",
+   "explanation": ""
+  },
+  {
+   "variable": "overwintering strategy",
+   "code": "larvae",
+   "term": "larvae",
+   "unit": "u17",
+   "model_label": "larvae",
+   "label": "larvae",
+   "explanation": ""
+  },
+  {
+   "variable": "overwintering strategy",
+   "code": "pupae",
+   "term": "pupae",
+   "unit": "u17",
+   "model_label": "pupae",
+   "label": "pupae",
+   "explanation": ""
+  },
+  {
+   "variable": "overwintering strategy",
+   "code": "adult",
+   "term": "adult",
+   "unit": "u17",
+   "model_label": "adult",
+   "label": "adult",
+   "explanation": ""
+  },
+  {
+   "variable": "Voltinity",
+   "code": "8",
+   "term": "Voltinity",
+   "unit": "u18",
+   "model_label": "Voltinity",
+   "label": "Voltinity",
+   "explanation": ""
+  },
+  {
+   "variable": "cluster 1",
+   "code": "1",
+   "term": "cluster 1 (sedentary host plant specialists overwintering in the larval stage)",
+   "unit": "u19",
+   "model_label": "cluster 1",
+   "label": "cluster 1",
+   "explanation": "sedentary host plant specialists overwintering in the larval stage"
+  },
+  {
+   "variable": "cluster 2",
+   "code": "2",
+   "term": "cluster 2 (sedentary habitat specialists overwintering in the egg stage)",
+   "unit": "u19",
+   "model_label": "cluster 2",
+   "label": "cluster 2",
+   "explanation": "sedentary habitat specialists overwintering in the egg stage"
+  },
+  {
+   "variable": "cluster 3",
+   "code": "3",
+   "term": "cluster 3 (high-mobility generalists with mature overwintering stages)",
+   "unit": "u19",
+   "model_label": "cluster 3",
+   "label": "cluster 3",
+   "explanation": "high-mobility generalists with mature overwintering stages"
+  },
+  {
+   "variable": "cluster 1",
+   "code": "1",
+   "term": "sedentary host plant specialists overwintering in the larval stage",
+   "unit": "u20",
+   "model_label": "sedentary host plant specialists",
+   "label": "sedentary host plant specialists",
+   "explanation": "overwintering in the larval stage"
+  },
+  {
+   "variable": "cluster 2",
+   "code": "2",
+   "term": "sedentary habitat specialists overwintering in the egg stage",
+   "unit": "u20",
+   "model_label": "sedentary habitat specialists",
+   "label": "sedentary habitat specialists",
+   "explanation": "overwintering in the egg stage"
+  },
+  {
+   "variable": "cluster 3",
+   "code": "3",
+   "term": "high-mobility generalists with mature overwintering stages",
+   "unit": "u20",
+   "model_label": "high-mobility generalists",
+   "label": "high-mobility generalists",
+   "explanation": "with mature overwintering stages"
+  },
+  {
+   "variable": "resource use",
+   "code": "",
+   "label": "specialist on one resource",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "resource use",
+   "code": "",
+   "label": "generalist for another",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "Eight species traits of Danish butterflies.",
+   "code": "",
+   "label": "Traits 1–4, 6 and 8 are taken from Stoltze (1996)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "Eight species traits of Danish butterflies.",
+   "code": "",
+   "label": "5 from Frederiksen et al. (2006)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait states of each trait category",
+   "code": "",
+   "label": "functional groups",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "functional groups",
+   "code": "",
+   "label": "sedentary host plant specialists overwintering in the larval stage",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "functional groups",
+   "code": "",
+   "label": "sedentary habitat specialists overwintering in the egg stage",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "functional groups",
+   "code": "",
+   "label": "mobile generalists with mature overwintering stages",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u8"
+  },
+  {
+   "variable": "species assemblage similarity analyses",
+   "code": "",
+   "label": "all Danish butterfly species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "species assemblage similarity analyses",
+   "code": "",
+   "label": "cluster 1 (sedentary host plant specialists overwintering in the larval stage)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "species assemblage similarity analyses",
+   "code": "",
+   "label": "cluster 2 (sedentary habitat specialists overwintering in the egg stage)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "species assemblage similarity analyses",
+   "code": "",
+   "label": "cluster 3 (high-mobility generalists with mature overwintering stages)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "Trait categories",
+   "code": "3",
+   "term": "Traits 1–4, 6 and 8 are taken from Stoltze (1996), 5 from Frederiksen et al. (2006) and 7 from García-Barros (2000).",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 154.1
+}

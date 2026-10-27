@@ -1,0 +1,114 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Silva2021/Silva2021.xlsx  (287 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Silva2021/Silva2021.csv  (1020 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Heteragrion_Oxystigma' -> 'Heteragrion Oxystigma'
+  'Mnesarete_Hetaerina' -> 'Mnesarete Hetaerina'
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'Traits Adults preference for habitat forest' -> 'Adults preference for habitat'
+  'Traits Larval behavior' -> 'Larval behavior'
+  'Traits Larval body shape' -> 'Larval body shape'
+  'Traits Larval preference for substrate gravel' -> 'Larval preference for substrate'
+  'Traits Larval respiration' -> 'Larval respiration'
+  'Traits Oviposition thermal conformer' -> 'Oviposition'
+  'Traits Thermoregulation endothermic' -> 'Thermoregulation'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 287
+  spurious, in scope  : 210   <- GT covers this trait: real errors
+  spurious, out of scope: 810   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            810
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 287 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      287
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'forest'                     ->  'maximum affinity'           x26
+     'cylindrical'                ->  '3'                          x22
+     'internal rectal gills'      ->  '3'                          x22
+     'endothermic'                ->  '3'                          x16
+     'open area'                  ->  'maximum affinity'           x15
+     'burrower'                   ->  '0'                          x14
+  -> 6 substitutions explain 115 of 287 misses (40%) — scattered; no single cause
+
+  full miss detail saved -> Silva2021_misses.csv, Silva2021_misses_summary.json (287 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  traits larval behavior #10                        0    30   PRED-ONLY
+  traits larval behavior #2                         0    30   PRED-ONLY
+  traits larval body shape #2                       0    30   PRED-ONLY
+  genera #2                                         0    30   PRED-ONLY
+  traits larval respiration #2                      0    30   PRED-ONLY
+  traits larval behavior #3                         0    30   PRED-ONLY
+  traits larval body shape #3                       0    30   PRED-ONLY
+  traits larval respiration #3                      0    30   PRED-ONLY
+  traits larval behavior #4                         0    30   PRED-ONLY
+  traits larval body shape #4                       0    30   PRED-ONLY
+  traits larval respiration #4                      0    30   PRED-ONLY
+  traits larval behavior #5                         0    30   PRED-ONLY
+  traits larval behavior #6                         0    30   PRED-ONLY
+  traits larval behavior #7                         0    30   PRED-ONLY
+  traits larval behavior #8                         0    30   PRED-ONLY
+  traits larval behavior #9                         0    30   PRED-ONLY
+  traits adults preference for habitat open area    0    30   PRED-ONLY
+  adults preference for habitat                    44    30   Δ-14 (split?)
+  larval behavior                                  48    30   Δ-18 (split?)
+  larval body shape                                30    30   
+  traits endophytic                                 0    30   PRED-ONLY
+  traits epiphytic                                  0    30   PRED-ONLY
+  traits exophytic                                  0    30   PRED-ONLY
+  traits larval preference for substrate litter     0    30   PRED-ONLY
+  traits larval preference for substrate macrophytes    0    30   PRED-ONLY
+  traits larval preference for substrate mud        0    30   PRED-ONLY
+  traits larval preference for substrate roots      0    30   PRED-ONLY
+  traits larval preference for substrate sand       0    30   PRED-ONLY
+  traits larval preference for substrate stone      0    30   PRED-ONLY
+  larval preference for substrate                  59    30   Δ-29 (split?)
+  traits thermoregulation heliothermic              0    30   PRED-ONLY
+  larval respiration                               30    30   
+  oviposition                                      47    30   Δ-17 (split?)
+  thermoregulation                                 29    30   Δ+1 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0   210   287   id+type+value
+             (810 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0   210   287   basis+id+type+value+stat+sex+stage
+             (810 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

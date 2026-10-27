@@ -1,0 +1,867 @@
+{
+ "0:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "2:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "2:1": {
+  "cells": {
+   "Burrower": {
+    "term": null,
+    "parts": [
+     "Burrower"
+    ],
+    "options": {
+     "Burrower": {
+      "evidence": "explicit",
+      "labels": [
+       "Burrower"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Burrower | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Sprawler": {
+    "term": null,
+    "parts": [
+     "Sprawler"
+    ],
+    "options": {
+     "Sprawler": {
+      "evidence": "explicit",
+      "labels": [
+       "Sprawler"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Sprawler | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "Climber": {
+    "term": null,
+    "parts": [
+     "Climber"
+    ],
+    "options": {
+     "Climber": {
+      "evidence": "explicit",
+      "labels": [
+       "Climber"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Climber | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "Clinger": {
+    "term": null,
+    "parts": [
+     "Clinger"
+    ],
+    "options": {
+     "Clinger": {
+      "evidence": "explicit",
+      "labels": [
+       "Clinger"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Clinger | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u50"
+   ],
+   "choice": null
+  },
+  "endings": {
+   "letters": {
+    "choice": "value",
+    "probs": {
+     "mark": 0.0,
+     "value": 1.0
+    },
+    "cells": {
+     "<5 mm": "<5",
+     ">5-10 mm": ">5-10",
+     ">10 mm": ">10"
+    }
+   }
+  }
+ },
+ "2:2": {
+  "cells": {
+   "CG": {
+    "term": "Collector-gatherers",
+    "parts": [
+     "CG"
+    ],
+    "options": {
+     "CG": {
+      "evidence": "explicit",
+      "labels": [
+       "Collector-gatherers"
+      ]
+     }
+    },
+    "evidence": {
+     "CG": "explicit"
+    },
+    "probs": {
+     "CG | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "CG": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "CG | QB": {}
+    }
+   },
+   "CF": {
+    "term": "Collector-filterers",
+    "parts": [
+     "CF"
+    ],
+    "options": {
+     "CF": {
+      "evidence": "explicit",
+      "labels": [
+       "Collector-filterers"
+      ]
+     }
+    },
+    "evidence": {
+     "CF": "explicit"
+    },
+    "probs": {
+     "CF | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "CF": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "CF | QB": {}
+    }
+   },
+   "Shr": {
+    "term": "Shredders",
+    "parts": [
+     "Shr"
+    ],
+    "options": {
+     "Shr": {
+      "evidence": "explicit",
+      "labels": [
+       "Shredders"
+      ]
+     }
+    },
+    "evidence": {
+     "Shr": "explicit"
+    },
+    "probs": {
+     "Shr | QK": {
+      "code": 0.956,
+      "word": 0.044
+     },
+     "Shr": {
+      "e0": 0.973,
+      "keep": 0.027
+     },
+     "Shr | QB": {}
+    }
+   },
+   "Prd": {
+    "term": "Predators",
+    "parts": [
+     "Prd"
+    ],
+    "options": {
+     "Prd": {
+      "evidence": "explicit",
+      "labels": [
+       "Predators"
+      ]
+     }
+    },
+    "evidence": {
+     "Prd": "explicit"
+    },
+    "probs": {
+     "Prd | QK": {
+      "code": 0.973,
+      "word": 0.027
+     },
+     "Prd": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "Prd | QB": {}
+    }
+   },
+   "Scr": {
+    "term": "Scrapers",
+    "parts": [
+     "Scr"
+    ],
+    "options": {
+     "Scr": {
+      "evidence": "explicit",
+      "labels": [
+       "Scrapers"
+      ]
+     }
+    },
+    "evidence": {
+     "Scr": "explicit"
+    },
+    "probs": {
+     "Scr | QK": {
+      "code": 0.943,
+      "word": 0.057
+     },
+     "Scr": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "Scr | QB": {}
+    }
+   },
+   "M1-M16": {
+    "term": "1-16 proposed by Antczak-Orlewska et al. (2021)",
+    "parts": [
+     "M1-M16"
+    ],
+    "options": {
+     "M1-M16": {
+      "evidence": "explicit",
+      "labels": [
+       "1-16 proposed by Antczak-Orlewska et al. (2021"
+      ]
+     }
+    },
+    "evidence": {
+     "M1-M16": "explicit"
+    },
+    "probs": {
+     "M1-M16 | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "M1-M16": {
+      "e0": 0.975,
+      "keep": 0.025
+     },
+     "M1-M16 | QB": {
+      "w0": 0.311,
+      "w1": 0.612,
+      "w2": 0.078
+     }
+    }
+   },
+   "Size 1": {
+    "term": null,
+    "parts": [
+     "Size 1"
+    ],
+    "options": {
+     "Size 1": {
+      "evidence": "explicit",
+      "labels": [
+       "5 mm"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Size 1 | QK": {
+      "code": 0.076,
+      "word": 0.924
+     }
+    }
+   },
+   "Size 2": {
+    "term": null,
+    "parts": [
+     "Size 2"
+    ],
+    "options": {
+     "Size 2": {
+      "evidence": "explicit",
+      "labels": [
+       "5-10 mm"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Size 2 | QK": {
+      "code": 0.107,
+      "word": 0.893
+     }
+    }
+   },
+   "Size 3": {
+    "term": null,
+    "parts": [
+     "Size 3"
+    ],
+    "options": {
+     "Size 3": {
+      "evidence": "explicit",
+      "labels": [
+       "10 mm"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Size 3 | QK": {
+      "code": 0.049,
+      "word": 0.951
+     }
+    }
+   },
+   "Burrower": {
+    "term": null,
+    "parts": [
+     "Burrower"
+    ],
+    "options": {
+     "Burrower": {
+      "evidence": "explicit",
+      "labels": [
+       "Burrower"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Burrower | QK": {
+      "code": 0.004,
+      "word": 0.996
+     }
+    }
+   },
+   "Sprawler": {
+    "term": null,
+    "parts": [
+     "Sprawler"
+    ],
+    "options": {
+     "Sprawler": {
+      "evidence": "explicit",
+      "labels": [
+       "Sprawler"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Sprawler | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   },
+   "Climber": {
+    "term": null,
+    "parts": [
+     "Climber"
+    ],
+    "options": {
+     "Climber": {
+      "evidence": "explicit",
+      "labels": [
+       "Climber"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Climber | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   },
+   "Clinger": {
+    "term": null,
+    "parts": [
+     "Clinger"
+    ],
+    "options": {
+     "Clinger": {
+      "evidence": "explicit",
+      "labels": [
+       "Clinger"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "Clinger | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u49",
+    "u50",
+    "u37"
+   ],
+   "choice": "several",
+   "probs": {
+    "p0": 0.3,
+    "p1": 0.001,
+    "p2": 0.001,
+    "several": 0.697,
+    "none": 0.001
+   }
+  }
+ },
+ "3:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:7": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:8": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:9": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:10": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:11": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:12": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:13": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:14": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:15": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:16": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:17": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:18": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:19": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:20": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:21": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:5": {
+  "cells": {
+   "DWT": {
+    "term": null,
+    "parts": [
+     "DWT"
+    ],
+    "options": {
+     "DWT": {
+      "evidence": "explicit",
+      "labels": [
+       "depth to water table"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "DWT | QK": {
+      "code": 0.02,
+      "word": 0.98
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u1",
+    "u17"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.964,
+    "p1": 0.001,
+    "several": 0.005,
+    "none": 0.031
+   },
+   "chosen": [
+    "u1"
+   ]
+  }
+ },
+ "6:11": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:12": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "6:13": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:2": {
+  "cells": {
+   "Prd": {
+    "term": "Predators",
+    "parts": [
+     "Prd"
+    ],
+    "options": {
+     "Prd": {
+      "evidence": "explicit",
+      "labels": [
+       "Predators"
+      ]
+     }
+    },
+    "evidence": {
+     "Prd": "explicit"
+    },
+    "probs": {
+     "Prd | QK": {
+      "code": 0.998,
+      "word": 0.002
+     },
+     "Prd": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "Prd | QB": {}
+    }
+   },
+   "Shr": {
+    "term": "Shredders",
+    "parts": [
+     "Shr"
+    ],
+    "options": {
+     "Shr": {
+      "evidence": "explicit",
+      "labels": [
+       "Shredders"
+      ]
+     }
+    },
+    "evidence": {
+     "Shr": "explicit"
+    },
+    "probs": {
+     "Shr | QK": {
+      "code": 0.996,
+      "word": 0.004
+     },
+     "Shr": {
+      "e0": 0.998,
+      "keep": 0.002
+     },
+     "Shr | QB": {}
+    }
+   },
+   "CG": {
+    "term": "Collector-gatherers",
+    "parts": [
+     "CG"
+    ],
+    "options": {
+     "CG": {
+      "evidence": "explicit",
+      "labels": [
+       "Collector-gatherers"
+      ]
+     }
+    },
+    "evidence": {
+     "CG": "explicit"
+    },
+    "probs": {
+     "CG | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "CG": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "CG | QB": {}
+    }
+   },
+   "CF": {
+    "term": "Collector-filterers",
+    "parts": [
+     "CF"
+    ],
+    "options": {
+     "CF": {
+      "evidence": "explicit",
+      "labels": [
+       "Collector-filterers"
+      ]
+     }
+    },
+    "evidence": {
+     "CF": "explicit"
+    },
+    "probs": {
+     "CF | QK": {
+      "code": 0.998,
+      "word": 0.002
+     },
+     "CF": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "CF | QB": {}
+    }
+   },
+   "Scr": {
+    "term": "Scrapers",
+    "parts": [
+     "Scr"
+    ],
+    "options": {
+     "Scr": {
+      "evidence": "explicit",
+      "labels": [
+       "Scrapers"
+      ]
+     }
+    },
+    "evidence": {
+     "Scr": "explicit"
+    },
+    "probs": {
+     "Scr | QK": {
+      "code": 0.986,
+      "word": 0.014
+     },
+     "Scr": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "Scr | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u49",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.967,
+    "p1": 0.001,
+    "several": 0.018,
+    "none": 0.014
+   },
+   "chosen": [
+    "u49"
+   ]
+  }
+ },
+ "7:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "_endings_done": true
+}

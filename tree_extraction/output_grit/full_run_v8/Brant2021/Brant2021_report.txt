@@ -1,0 +1,77 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Brant2021/Brant2021.xlsx  (480 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Brant2021/Brant2021.csv  (66 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Head width (cm) (range)' -> 'head width'
+  'Intertegular distance (cm) (range)' -> 'intertegular distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 480
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 60   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             60
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 480 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      480
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.122'                      ->  '0.105~0.16'                 x7
+     '0.127'                      ->  '0.105~0.16'                 x7
+     '0.121'                      ->  '0.105~0.16'                 x7
+     '0.145'                      ->  '0.105~0.16'                 x7
+     '0.146'                      ->  '0.105~0.16'                 x7
+     '0.27'                       ->  '0.18~0.28'                  x6
+  -> 6 substitutions explain 41 of 480 misses (9%) — scattered; no single cause
+
+  full miss detail saved -> Brant2021_misses.csv, Brant2021_misses_summary.json (480 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  intertegular distance                           240     3   Δ-237 (split?)
+  head width                                      240     3   Δ-237 (split?)
+  q2 (median)                                       0    15   PRED-ONLY
+  month                                             0    15   PRED-ONLY
+  q1                                                0    15   PRED-ONLY
+  q3                                                0    15   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     6   480   id+type+value
+             (60 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     6   480   basis+id+type+value+stat+sex+stage
+             (60 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

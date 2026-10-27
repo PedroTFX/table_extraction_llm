@@ -1,0 +1,1031 @@
+{
+ "paper": "Silva2021",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:9a1688b/tier:advanced/page:1/block:10)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Environmental variables at each site were described in terms of catchment land use and cover, local riparian canopy cover, physical habitat structure, and water quality. Land use was characterized through use of satellite images provided by Landsat and fine-resolution images from Google Earth. Physical habitat structure variables included substrate heterogeneity (habitat hydromorphology, substrate size, flow regime, instream habitat cover) (Callisto et al., 2014;. Water quality was assessed by measuring temperature (◦C), electrical conductivity (μ S $\\mathbf { c m } ^ { - 1 } )$ , pH, turbidity (NTU), and total dissolved solids $\\mathrm { ( \\mathfrak { m g } \\; L ^ { - 1 } ) }$ with a multimeter probe (YSI, 650 MDS, model 6920). In addition, the concentrations of total nitrogen $\\mathrm { ( \\mathfrak { m g L } ^ { - 1 } ) }$ and dissolved oxygen (mg $\\mathrm { L } ^ { - 1 } )$ were determined in our laboratory through use of chilled water samples from the sites following APHA (2005). To assess local and catchment anthropogenic disturbances in each site, we calculated the Integrated Disturbance Index (IDI) based on Ligeiro et al. (2013b). The IDI is the Euclidian distance between the site and the origin of the disturbance plane formed by two other indexes, the LDI and CDI, applying the Pythagorean theorem $\\mathrm{(IDI~=~[(LDI/5)^2~+~(CDI/300)^2]^{1/2}}$ The LDI is calculated from eleven observations of the presence and proximity of anthropogenic disturbances (Peck et al., 2006) and the CDI is calculated by adding the % of land uses, weighted by the potential for degradation that each has on aquatic ecosystems (CDI = 4 × % urban + 2 × % agriculture + % pasture) (Ligeiro et al., 2013b)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "To assess the gradient of environmental disturbance in the sites, we first categorized the sites into least-disturbed $( \\mathrm { I D I } \\mathrm{or} = 0.21 \\mathrm{and} ~0.63)}$ as described in Castro et al. (2018). Then we performed a Non-metric Multidimensional Scaling (nMDS) ordination using Euclidean distance matrices followed by an “EnvFit” to show which variables were most related to each axis. In addition, we performed a Permutational Multi-variate Analysis of Variance (PERMANOVA) and a Permutational Analysis of Multivariate Dispersion (PERMIDISP) to confirm the difference between the environmental metrics of disturbance classes. We performed a Principal Coordinate Analysis (PCoA) using the Bray-Curtis distance matrix and the IDI as a bubble variable to assess the variation in genera composition. Finally, we performed a PERMANOVA and a PERMIDISP to confirm the difference between the Odonata genera composition of the disturbance classes. We performed the analyses in R (R Core Development Team, 2016) with ggplot2 (Wickham, 2016), ape (Paradis et al., 2004) and vegan (Oksanen and Guillaume Blanchet, 2017) (Fig. 2)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "To assess associations between trait categories and environmental variables, we applied RLQ and fourth-corner analyses, as recommended by Dray et al., 2014. RLQ produces three tables: an environmental characteristics table (R), a taxa abundance table (L), and a traits table (Q). RLQ aims to identify the main co-structures between traits and environmental characteristics weighted by taxa abundances (Dolédec et al., 1996) and provides classification scores to summarize the joint"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "![Image block](doc:9a1688b/tier:advanced/page:4/block:11)"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Fig. 2. Schematic diagram presenting the methodological design of site selection and statistical analyses used in this study. R = an environmental characteristics table, L = a taxa abundance table, Q = a traits table."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "structure between the three tables. Fourth-corner analysis primarily tests the relationships between individual characteristics and the environment (that is, one characteristic and one environmental variable at a time) (Dray et al., 2014). Local environmental variables were standardized (mean = 0 and standard deviation = 1) before running all analyses. The overall significance was further assessed via a global Monte-Carlo test using 9999 random permutations of the table rows of R (sites, model 2) and the rows of Q (species, model 4). A combination of RLQ and fourth-corner analyses was used to evaluate the significance of associations between traits and combinations of environmental variables identified by RLQ. RLQ analysis summarizes multivariate structures, but it does not provide significance tests, whereas fourth-corner analysis only tests the significance of bivariate associations and does not consider covariations among traits or among environmental variables. Combining the associations between RLQ axes and traits/environmental variables markedly improves the interpretation of RLQ and fourthcorner results (Dray et al., 2014). This complementary approach has been extensively used in previous studies, including for Cerrado headwater streams (e.g. Castro et al., 2018; Firmiano et al., 2021; Martins et al., 2021). Significance was tested using a permutation procedure with model 6, which is a combination of models 2 (permutation of sites) and 4 (permutation of genera ). We used 9999 permutations and the false discovery rate adjustment (FDR) method to correct P-values for multiple-test comparisons (Dray et al., 2014) (Fig. 2). We performed these analyses in R (R Core Development Team, 2016) with vegan (Oksanen and Guillaume Blanchet, 2017) and ade4 (Chessel et al., 2004) packages."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "genera distribution abundance in the filled niche space. Functional divergence indicates how abundance is distributed along a functional trait axis, within the volume of trait niche space occupied by genera, Functional dispersion is defined as the dispersion or spread of the genera in the niche space, Functional specialization is the mean distance of a genus from the rest of the genera pool in niche space. Functional originality indicates the exclusivity of a genus in the functional space occupied by a given assemblage. First, we performed an analysis of variance (ANOVA) for each index between classes of disturbances. Because there was no homogeneity of variances, a Kruskal-Wallis test was carried out for each index."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:9a1688b/tier:advanced/page:7/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 5. Axis 1 and axis 2 of the RLQ analysis of 186 sites in the neotropical savanna. (A) larval Odonata scores; (B) environmental variable scores; (C) trait scores. (D) indicates figure grid scale."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:9a1688b/tier:advanced/page:8/block:3)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Larissa F.R. Silva: Conceptualization, Writing – original draft, Writing – review & editing. Diego M.P. Castro: Conceptualization, Formal analysis, Writing – review & editing. Leandro Juen: Conceptualization, Writing – review & editing. Marcos Callisto: Resources, Conceptualization, Writing – review & editing. Robert M. Hughes: Conceptualization, Writing – review & editing. Marcel G. Hermes: Conceptualization, Writing – review & editing."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "We are grateful for continued funding by Programa Peixe Vivo of the Companhia Energética de Minas Gerais (P&D Aneel-Cemig GT-487, and GT-599) and Coordenaçao ˜ de Aperfeiçoamento de Pessoal de Nível Superior (CAPES) for the Ph.D. scholarship to LS. LJ, MC and MGH were awarded National Council for Scientific & Technological Development (CNPq) research productivity grants 304710/2019-9, 304060/2020-8 and 304102/2018-0, respectively. RMH received a Fulbright Brasil grant. DMPC received a postdoctoral scholarship from P&D Aneel-Cemig GT-611, and MC received a grant (PPM 00104-18) from the Fundaçao ˜ de Amparo a \\` Pesquisa do Estado de Minas Gerais. Carlos B. M. Alves provided logistical support, and Ulisses Neiss supported specimen identification. Colleagues from the Universidade Federal de Minas Gerais (UFMG), Universidade Federal de Lavras (UFLA), Centro Federal de Educaç˜ao Tecnologica ´ de Minas Gerais (CEFET-MG) and Pontifícia Universidade Catolica ´ de Minas Gerais (PUC-MINAS) helped with field sampling. Several colleagues from the Laboratorio ´ de Ecologia de Bentos ICB/UFMG helped with sample processing."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Supplementary Material Table 3: State of traits in each Odonata genera (0 = no affinity, 3 = maximum affinity)."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:2822593/tier:flash/page:4/block:1)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Supplementary Material Figure 1: Odonata genera that occurred in stream sites classified according to disturbance classes (IDI)."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "![Image block](doc:2822593/tier:flash/page:4/block:3)"
+  },
+  {
+   "id": "u17",
+   "kind": "table 0",
+   "text": "Stressor | Trait category | Trait response | Explanation effect/trait\nReduced substrate heterogeneity | Larval body shape (Cylindrical; elongated) | + Cylindrical- Elongated | More robust and cylindrical body shape is favored in microhabitats with higher proportion of stones and gravel substrate.(Pires et al., 2020)\nLarval behavior (Burrower; climber; clinger; sprawler) | - Sprawler- Climber+ Burrower- Clinger | Fine sediments homogenize the substrate, favoring burrower larvae and excluding larvae that depend on other types of substrates.(Dalzochio et al., 2018; Mendes et al., 2020)\nReduced water quality | Larval respiration (Caudal lamellae; rectal gills) | + Rectal gills- Caudal lamellae | Higher water temperature resulting from reduced riparian vegetation decreases dissolved oxygen. Rectal gills allow these larvae to survive because of active water exchange.(Kohnert et al., 2004)\nAlteration of natural land cover to pasture and agriculture | Larval preference for substrate (Gravel; litter; macrophytes; mud; roots; sand; stone) | + Sand+ Gravel+ Stone+ Litter- Macrophytes- Roots+ Mud | Increased sedimentation & substrate homogenization substrates exclude larvae that depend on macrophytes.(Mendes et al., 2020)\nAdult habitat preference (Forest; open area) | - Forest+ Open area | Favor species adapted to open areas.(De Marco and Resende, 2002; Oliveira-Junior and Juen, 2019; Paulson, 2006)\nReduced local riparian canopy cover | Thermoregulation (Endothermic; heliothermic, thermal conformer) | +Endothermic- Heliothermic- Thermal conformer | Endothermic species can control their body temperature.(Corbet and May 2008; May 1976)\nOviposition (Endophytic; epiphytic, exophytic) | - Endophytic+ Exophytic- Epiphytic | Exophytic oviposition does not require riparian vegetation.(Dalzochio et al., 2018; Paulson, 2006)"
+  },
+  {
+   "id": "u18",
+   "kind": "table 1",
+   "text": "River Basin | Location / Feature\nParanaíba River Basin | Upstream of São Simão Hydroelectric Plant\nSão Francisco River Basin | Upstream of Três Marias Hydroelectric Plant\nGrande River Basin | Upstream of Volta Grande Hydroelectric Plant\nAraguari River Basin | Upstream of Nova Ponte Hydroelectric Plant"
+  },
+  {
+   "id": "u19",
+   "kind": "table 2",
+   "text": "Category | nMDS1 (range) | nMDS2 (range)\nDisturbed | ~0.35 ~0.75 | ~0.15 ~0.65\nIntermediate | ~0.15 ~0.85 | ~0.15 ~0.75\nLeast | ~0.15 ~0.95 | ~0.25 ~0.95"
+  },
+  {
+   "id": "u20",
+   "kind": "table 3",
+   "text": "Series | PCoA1 (range) | PCoA2 (range)\nDisturbed | -0.45~0.45 | -0.35~0.55\nIntermediate | -0.50~0.45 | -0.35~0.55\nLeast | -0.45~0.40 | -0.35~0.40"
+  },
+  {
+   "id": "u21",
+   "kind": "table 7",
+   "text": "Acronyms | Environmental metrics’ name\nPasture | Pasture\nNatural_sum | Sum of natural cover (%) = woodland + parkland + grassy_wood + palm_swamp\nDO | Dissolved oxygen (mg/l)\nTurbidity | Water turbidity (NTU)\nTDS | Total dissolved solids (mg/l)\nFLOW | Adjusted water flow (m³/s)\nXVEL | Water velocity (m/s)\nXBKF_D | Mean seasonal talweg depth\nXDEPTH_T | Mean talweg depth (cm)"
+  },
+  {
+   "id": "u22",
+   "kind": "table 7",
+   "text": "XBAR | Mean channel bars widith (m)\nXINC_H | Mean incision height (m)\nXWD_RAT | Stretch widith/depth\nXBKA | Mean margin angle (°)\nSDBKA | Margin angle standard deviation (°)\nXUN | Mean dug distance of the margins (m)\nVEMBED | Total immersion standard error (%)\nPCT_BDRK | Total bedrock (%)\nPCT_BL | Total boulder (%)\nPCT_SA | Sand (%)"
+  },
+  {
+   "id": "u23",
+   "kind": "table 7",
+   "text": "PCT_WD | Wood (%)\nPCT_RT | Roots (%)\nDGM_X | Mean substrate size\nDIV_SUBS | Substrate diversity (1-d)\nPCT_SAFN | Sand + fine sand + fine (%)\nLDMB | Relative bed stability\nDIV_FLUXO | Flow diversity (1-d)\nXSLOPE | Mean stretch elevation\nSINU | Stretch sinuosity\nXGB | Mean exposed soil"
+  },
+  {
+   "id": "u24",
+   "kind": "table 7",
+   "text": "XC | Mean canopy cover\nXCMG | Mean total cover\nXFC_ALG | Mean filamentous algae shelter\nXFC_AQM | Mean macrophyte shelter\nXFC_LEB | Mean leaf litter shelter\nXFC_UCB | Mean dug shelter\nXFC_TOT | Mean total shelter + algae + macrophyte\nXFC_BIG | Mean large shelter\nXFC_WD | Mean large wood + small wood shelter\nW1_hall | Riparian human disturbance index"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14"
+  ],
+  [
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20"
+  ],
+  [
+   "u21",
+   "u22",
+   "u23",
+   "u24"
+  ]
+ ],
+ "calls": 12,
+ "categories": [
+  {
+   "variable": "environmental characteristics table",
+   "code": "R",
+   "term": "an environmental characteristics table",
+   "unit": "u3",
+   "model_label": "environmental characteristics",
+   "label": "environmental characteristics",
+   "explanation": "an table"
+  },
+  {
+   "variable": "taxa abundance table",
+   "code": "L",
+   "term": "a taxa abundance table",
+   "unit": "u3",
+   "model_label": "taxa abundance",
+   "label": "taxa abundance",
+   "explanation": "a table"
+  },
+  {
+   "variable": "traits table",
+   "code": "Q",
+   "term": "a traits table",
+   "unit": "u3",
+   "model_label": "traits",
+   "label": "traits",
+   "explanation": "a table"
+  },
+  {
+   "variable": "sites",
+   "code": "2",
+   "term": "permutation of sites",
+   "unit": "u6",
+   "model_label": "permutation of sites",
+   "label": "permutation of sites",
+   "explanation": ""
+  },
+  {
+   "variable": "genera",
+   "code": "4",
+   "term": "permutation of genera",
+   "unit": "u6",
+   "model_label": "permutation of genera",
+   "label": "permutation of genera",
+   "explanation": ""
+  },
+  {
+   "variable": "State of traits in each Odonata genera",
+   "code": "0",
+   "term": "no affinity",
+   "unit": "u13",
+   "model_label": "no affinity",
+   "label": "no affinity",
+   "explanation": ""
+  },
+  {
+   "variable": "State of traits in each Odonata genera",
+   "code": "3",
+   "term": "maximum affinity",
+   "unit": "u13",
+   "model_label": "maximum affinity",
+   "label": "maximum affinity",
+   "explanation": ""
+  },
+  {
+   "variable": "Stressor",
+   "code": "IDI",
+   "term": "disturbance classes",
+   "unit": "u15",
+   "model_label": "disturbance classes",
+   "label": "disturbance classes",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval body shape",
+   "code": "Cylindrical",
+   "term": "Cylindrical",
+   "unit": "u17",
+   "model_label": "Cylindrical",
+   "label": "Cylindrical",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval body shape",
+   "code": "elongated",
+   "term": "elongated",
+   "unit": "u17",
+   "model_label": "elongated",
+   "label": "elongated",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval behavior",
+   "code": "Burrower",
+   "term": "Burrower",
+   "unit": "u17",
+   "model_label": "Burrower",
+   "label": "Burrower",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval behavior",
+   "code": "climber",
+   "term": "climber",
+   "unit": "u17",
+   "model_label": "climber",
+   "label": "climber",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval behavior",
+   "code": "clinger",
+   "term": "clinger",
+   "unit": "u17",
+   "model_label": "clinger",
+   "label": "clinger",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval behavior",
+   "code": "sprawler",
+   "term": "sprawler",
+   "unit": "u17",
+   "model_label": "sprawler",
+   "label": "sprawler",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval respiration",
+   "code": "Caudal lamellae",
+   "term": "Caudal lamellae",
+   "unit": "u17",
+   "model_label": "Caudal lamellae",
+   "label": "Caudal lamellae",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval respiration",
+   "code": "rectal gills",
+   "term": "rectal gills",
+   "unit": "u17",
+   "model_label": "rectal gills",
+   "label": "rectal gills",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "Gravel",
+   "term": "Gravel",
+   "unit": "u17",
+   "model_label": "Gravel",
+   "label": "Gravel",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "litter",
+   "term": "litter",
+   "unit": "u17",
+   "model_label": "litter",
+   "label": "litter",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "macrophytes",
+   "term": "macrophytes",
+   "unit": "u17",
+   "model_label": "macrophytes",
+   "label": "macrophytes",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "mud",
+   "term": "mud",
+   "unit": "u17",
+   "model_label": "mud",
+   "label": "mud",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "roots",
+   "term": "roots",
+   "unit": "u17",
+   "model_label": "roots",
+   "label": "roots",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "sand",
+   "term": "sand",
+   "unit": "u17",
+   "model_label": "sand",
+   "label": "sand",
+   "explanation": ""
+  },
+  {
+   "variable": "Larval preference for substrate",
+   "code": "stone",
+   "term": "stone",
+   "unit": "u17",
+   "model_label": "stone",
+   "label": "stone",
+   "explanation": ""
+  },
+  {
+   "variable": "Adult habitat preference",
+   "code": "Forest",
+   "term": "Forest",
+   "unit": "u17",
+   "model_label": "Forest",
+   "label": "Forest",
+   "explanation": ""
+  },
+  {
+   "variable": "Adult habitat preference",
+   "code": "open area",
+   "term": "open area",
+   "unit": "u17",
+   "model_label": "open area",
+   "label": "open area",
+   "explanation": ""
+  },
+  {
+   "variable": "Thermoregulation",
+   "code": "Endothermic",
+   "term": "Endothermic",
+   "unit": "u17",
+   "model_label": "Endothermic",
+   "label": "Endothermic",
+   "explanation": ""
+  },
+  {
+   "variable": "Thermoregulation",
+   "code": "heliothermic",
+   "term": "heliothermic",
+   "unit": "u17",
+   "model_label": "heliothermic",
+   "label": "heliothermic",
+   "explanation": ""
+  },
+  {
+   "variable": "Thermoregulation",
+   "code": "thermal conformer",
+   "term": "thermal conformer",
+   "unit": "u17",
+   "model_label": "thermal conformer",
+   "label": "thermal conformer",
+   "explanation": ""
+  },
+  {
+   "variable": "Oviposition",
+   "code": "Endophytic",
+   "term": "Endophytic",
+   "unit": "u17",
+   "model_label": "Endophytic",
+   "label": "Endophytic",
+   "explanation": ""
+  },
+  {
+   "variable": "Oviposition",
+   "code": "epiphytic",
+   "term": "epiphytic",
+   "unit": "u17",
+   "model_label": "epiphytic",
+   "label": "epiphytic",
+   "explanation": ""
+  },
+  {
+   "variable": "Oviposition",
+   "code": "exophytic",
+   "term": "exophytic",
+   "unit": "u17",
+   "model_label": "exophytic",
+   "label": "exophytic",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Disturbed",
+   "term": "Disturbed",
+   "unit": "u19",
+   "model_label": "Disturbed",
+   "label": "Disturbed",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Intermediate",
+   "term": "Intermediate",
+   "unit": "u19",
+   "model_label": "Intermediate",
+   "label": "Intermediate",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Least",
+   "term": "Least",
+   "unit": "u19",
+   "model_label": "Least",
+   "label": "Least",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Disturbed",
+   "term": "Disturbed",
+   "unit": "u19",
+   "model_label": "Disturbed",
+   "label": "Disturbed",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Intermediate",
+   "term": "Intermediate",
+   "unit": "u19",
+   "model_label": "Intermediate",
+   "label": "Intermediate",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Least",
+   "term": "Least",
+   "unit": "u19",
+   "model_label": "Least",
+   "label": "Least",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "Pasture",
+   "term": "Pasture",
+   "unit": "u21",
+   "model_label": "Pasture",
+   "label": "Pasture",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "Natural_sum",
+   "term": "Sum of natural cover (%) = woodland + parkland + grassy_wood + palm_swamp",
+   "unit": "u21",
+   "model_label": "Natural_sum",
+   "label": "Sum of natural cover (%) = woodland + parkland + grassy_wood + palm_swamp",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "DO",
+   "term": "Dissolved oxygen (mg/l)",
+   "unit": "u21",
+   "model_label": "Dissolved oxygen",
+   "label": "Dissolved oxygen",
+   "explanation": "mg/l"
+  },
+  {
+   "variable": "Acronym",
+   "code": "Turbidity",
+   "term": "Water turbidity (NTU)",
+   "unit": "u21",
+   "model_label": "Turbidity",
+   "label": "turbidity",
+   "explanation": "Water (NTU"
+  },
+  {
+   "variable": "Acronym",
+   "code": "TDS",
+   "term": "Total dissolved solids (mg/l)",
+   "unit": "u21",
+   "model_label": "TDS",
+   "label": "Total dissolved solids (mg/l)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "FLOW",
+   "term": "Adjusted water flow (m³/s)",
+   "unit": "u21",
+   "model_label": "FLOW",
+   "label": "flow",
+   "explanation": "Adjusted water (m³/s"
+  },
+  {
+   "variable": "Acronym",
+   "code": "XVEL",
+   "term": "Water velocity (m/s)",
+   "unit": "u21",
+   "model_label": "XVEL",
+   "label": "Water velocity (m/s)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XBKF_D",
+   "term": "Mean seasonal talweg depth",
+   "unit": "u21",
+   "model_label": "XBKF_D",
+   "label": "Mean seasonal talweg depth",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XDEPTH_T",
+   "term": "Mean talweg depth (cm)",
+   "unit": "u21",
+   "model_label": "XDEPTH_T",
+   "label": "Mean talweg depth (cm)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XBAR",
+   "term": "Mean channel bars widith (m)",
+   "unit": "u22",
+   "model_label": "XBAR",
+   "label": "Mean channel bars widith (m)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XINC_H",
+   "term": "Mean incision height (m)",
+   "unit": "u22",
+   "model_label": "XINC_H",
+   "label": "Mean incision height (m)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XWD_RAT",
+   "term": "Stretch widith/depth",
+   "unit": "u22",
+   "model_label": "XWD_RAT",
+   "label": "Stretch widith/depth",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XBKA",
+   "term": "Mean margin angle (°)",
+   "unit": "u22",
+   "model_label": "XBKA",
+   "label": "Mean margin angle (°)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "SDBKA",
+   "term": "Margin angle standard deviation (°)",
+   "unit": "u22",
+   "model_label": "SDBKA",
+   "label": "Margin angle standard deviation (°)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XUN",
+   "term": "Mean dug distance of the margins (m)",
+   "unit": "u22",
+   "model_label": "XUN",
+   "label": "Mean dug distance of the margins (m)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "VEMBED",
+   "term": "Total immersion standard error (%)",
+   "unit": "u22",
+   "model_label": "VEMBED",
+   "label": "Total immersion standard error (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "PCT_BDRK",
+   "term": "Total bedrock (%)",
+   "unit": "u22",
+   "model_label": "PCT_BDRK",
+   "label": "Total bedrock (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "PCT_BL",
+   "term": "Total boulder (%)",
+   "unit": "u22",
+   "model_label": "PCT_BL",
+   "label": "Total boulder (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "PCT_SA",
+   "term": "Sand (%)",
+   "unit": "u22",
+   "model_label": "PCT_SA",
+   "label": "Sand (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "PCT_WD",
+   "term": "Wood (%)",
+   "unit": "u23",
+   "model_label": "PCT_WD",
+   "label": "Wood (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "PCT_RT",
+   "term": "Roots (%)",
+   "unit": "u23",
+   "model_label": "PCT_RT",
+   "label": "Roots (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "DGM_X",
+   "term": "Mean substrate size",
+   "unit": "u23",
+   "model_label": "DGM_X",
+   "label": "Mean substrate size",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "DIV_SUBS",
+   "term": "Substrate diversity (1-d)",
+   "unit": "u23",
+   "model_label": "DIV_SUBS",
+   "label": "Substrate diversity (1-d)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "PCT_SAFN",
+   "term": "Sand + fine sand + fine (%)",
+   "unit": "u23",
+   "model_label": "PCT_SAFN",
+   "label": "Sand + fine sand + fine (%)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "LDMB",
+   "term": "Relative bed stability",
+   "unit": "u23",
+   "model_label": "LDMB",
+   "label": "Relative bed stability",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "DIV_FLUXO",
+   "term": "Flow diversity (1-d)",
+   "unit": "u23",
+   "model_label": "DIV_FLUXO",
+   "label": "Flow diversity (1-d)",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XSLOPE",
+   "term": "Mean stretch elevation",
+   "unit": "u23",
+   "model_label": "XSLOPE",
+   "label": "Mean stretch elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "SINU",
+   "term": "Stretch sinuosity",
+   "unit": "u23",
+   "model_label": "SINU",
+   "label": "Stretch sinuosity",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XGB",
+   "term": "Mean exposed soil",
+   "unit": "u23",
+   "model_label": "XGB",
+   "label": "Mean exposed soil",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XC",
+   "term": "Mean canopy cover",
+   "unit": "u24",
+   "model_label": "XC",
+   "label": "Mean canopy cover",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XCMG",
+   "term": "Mean total cover",
+   "unit": "u24",
+   "model_label": "XCMG",
+   "label": "Mean total cover",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_ALG",
+   "term": "Mean filamentous algae shelter",
+   "unit": "u24",
+   "model_label": "XFC_ALG",
+   "label": "Mean filamentous algae shelter",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_AQM",
+   "term": "Mean macrophyte shelter",
+   "unit": "u24",
+   "model_label": "XFC_AQM",
+   "label": "Mean macrophyte shelter",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_LEB",
+   "term": "Mean leaf litter shelter",
+   "unit": "u24",
+   "model_label": "XFC_LEB",
+   "label": "Mean leaf litter shelter",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_UCB",
+   "term": "Mean dug shelter",
+   "unit": "u24",
+   "model_label": "XFC_UCB",
+   "label": "Mean dug shelter",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_TOT",
+   "term": "Mean total shelter + algae + macrophyte",
+   "unit": "u24",
+   "model_label": "XFC_TOT",
+   "label": "Mean total shelter + algae + macrophyte",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_BIG",
+   "term": "Mean large shelter",
+   "unit": "u24",
+   "model_label": "XFC_BIG",
+   "label": "Mean large shelter",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "XFC_WD",
+   "term": "Mean large wood + small wood shelter",
+   "unit": "u24",
+   "model_label": "XFC_WD",
+   "label": "Mean large wood + small wood shelter",
+   "explanation": ""
+  },
+  {
+   "variable": "Acronym",
+   "code": "W1_hall",
+   "term": "Riparian human disturbance index",
+   "unit": "u24",
+   "model_label": "W1_hall",
+   "label": "Riparian human disturbance index",
+   "explanation": ""
+  },
+  {
+   "variable": "catchment land use and cover",
+   "code": "",
+   "label": "land use",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "physical habitat structure",
+   "code": "",
+   "label": "substrate heterogeneity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "physical habitat structure",
+   "code": "",
+   "label": "habitat hydromorphology",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "physical habitat structure",
+   "code": "",
+   "label": "substrate size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "physical habitat structure",
+   "code": "",
+   "label": "flow regime",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "physical habitat structure",
+   "code": "",
+   "label": "instream habitat cover",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "water quality",
+   "code": "",
+   "label": "temperature",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "water quality",
+   "code": "",
+   "label": "electrical conductivity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "water quality",
+   "code": "",
+   "label": "total dissolved solids",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "water quality",
+   "code": "",
+   "label": "total nitrogen",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "anthropogenic disturbances",
+   "code": "",
+   "label": "Integrated Disturbance Index",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "anthropogenic disturbances",
+   "code": "",
+   "label": "LDI",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "anthropogenic disturbances",
+   "code": "",
+   "label": "CDI",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "environmental disturbance",
+   "code": "",
+   "label": "least-disturbed",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "Functional divergence",
+   "code": "",
+   "label": "Functional divergence",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Functional dispersion",
+   "code": "",
+   "label": "Functional dispersion",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Functional specialization",
+   "code": "",
+   "label": "Functional specialization",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Functional originality",
+   "code": "",
+   "label": "Functional originality",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Environmental metrics’ name",
+   "code": "",
+   "label": "Dissolved oxygen (mg/l)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u21"
+  },
+  {
+   "variable": "Environmental metrics’ name",
+   "code": "",
+   "label": "Water turbidity (NTU)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u21"
+  },
+  {
+   "variable": "Environmental metrics’ name",
+   "code": "",
+   "label": "Adjusted water flow (m³/s)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u21"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "least-disturbed",
+   "code": "IDI=0.21 and 0.63",
+   "term": "",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 138.7
+}

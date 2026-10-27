@@ -1,0 +1,143 @@
+{
+ "paper": "Cerini2023",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "In community ecology, the distribution of the species in assemblages (i.e., metacommunities) is generally explained by three major ecological processes and their interactions: dispersal constrains, environmental (or habitat) filtering, and biotic interactions (Cadotte & Tucker, 2017; Hardy et al., 2012). While investigating the potential role of the latter in structuring bird communities in Melanesia, Diamond (1975) suggested that a high frequency of checkerboards (i.e., avoidance patterns in species × sites 1/0 matrices) would emerge from interspecific competition due high similarity in the ecological niche of the species (e.g., similar resource use). This idea—and the statistical approaches which led Diamond to conclude that the observed frequency of checkerboards diverged substantially from a null expectation— promoted a famous controversy which is yet to be settled (Connor & Simberloff, 1979; Connor et al., 2013; Diamond et al., 2015; Strona et al., 2018)."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "In a simplified view, trait distance and co-occurrence should display a negative relationship if the traits drive primarily environmental filtering, and a positive one if the traits drive patterns of competitive exclusion (Figure 1). Clearly, in the real world (and considering multiple traits), the two processes coexist, making it hard to find a clear association. For instance, Elo et al. (2021) found no relationship between functional species similarity and negative co-occurrence on a large set of stream macroinvertebrate communities. Similarly, Burner et al. (2021) found that the difference in species traits was not a consistent predictor of the spatial associations for forest beetles. Nevertheless, it is important to consider that competitive dynamics (and species interactions in general) might be linked to functional traits in a more complex fashion than that provided by trait similarity."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "![Image block](doc:ae11e86/tier:advanced/page:3/block:8)"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "To assess pairwise species co-occurrence, we fit a latent-variable jSDM using the Hierarchical Modeling of Species Communities (HMSC) Bayesian framework. We fitted the models with a probit link function under the default prior distribution. We devised the following model (Equation 1):"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "We included sites and years as random effects term, and we sampled the posterior distribution using four Markov chain Monte Carlo (MCMC) chains including 1000 samples each, with a thinning of 100 (for a total of 100k iterations), hence a burn-in of 25,000 iterations. We evaluated MCMC convergence by examining the distributions of the potential scale reduction factor over the parameters related to the fixed effects and the random effects (Gelman & Shalizi, 2013). We assessed model discriminatory power via AUC (area under the receiver operating characteristic curve, Pearce & Ferrier, 2000) and Tjur’s $R ^ { 2 }$ (2009)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "![Image block](doc:ae11e86/tier:advanced/page:7/block:3)"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "F I G U R E 6 Model quality assessment for the Random Forest classifiers (models II and III). (A) Model accuracy based on internal out-of-bag validation. (B) Type 1 and 2 error rates for model II (classifier modeling positive co-occurrence) versus different co-occurrence threshold selected to define a significant co-occurrence (e.g., a co-occurrence value >0.5, 0.6 etc., with a statistical support of 0.95 is defined as a 1, i.e., a “positive co-occurrence”). (C) Type 1 and 2 error rates for model III (classifier modeling negative co-occurrence) versus different co-occurrence threshold selected to define a significant co-occurrence."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "![Image block](doc:ae11e86/tier:advanced/page:8/block:3)"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "F I G U R E 7 Importance of the species functional traits in the three Random Forest models to predict co-occurrence. (A) Traits importance calculated as the percentage increment of the mean square error (MSE) when permuting the out-of-bag data and extracting the resulting error increase when one variable is left out. (B) Traits important based on the random forest tree node purity, calculated as the reduction in sum of squared errors whenever a variable is chosen to split. Bars with whiskers show the mean scores ± SEs of the different values for the one-hot encoded traits (i.e., traits with different categorical values like “habitat preference = open versus closed”). Model I: Random Forest and regressor modeling continuous positive and negative Hierarchical Modeling of Species Communities residual co-occurrence versus Odonata functional traits. Model II: Random Forest classifier modeling positive co-occurrence (i.e., co-occurrence >0.5 with a statistical support of 0.95) versus Odonata functional traits. Model III: Random Forest classifier modeling negative co-occurrence (i.e., co-occurrence"
+  },
+  {
+   "id": "u9",
+   "kind": "table 0",
+   "text": "Co-occurrence | Biotic interactions (Functional distance) | Environmental filtering (Functional distance)\n-1.0 | 0.0 | 1.0\n0.0 | 0.5 | 0.5\n1.0 | 1.0 | 0.0"
+  },
+  {
+   "id": "u10",
+   "kind": "table 1",
+   "text": "Co-occurrence (range) | Functional distance (range) | Counts\n-0.8~0.9 | 0.0~1.0 | 1~27"
+  },
+  {
+   "id": "u11",
+   "kind": "table 2",
+   "text": "Slope (Bin) | Frequency\n-0.35~-0.325 | 1\n-0.275~-0.25 | 2\n-0.25~-0.225 | 2\n-0.225~-0.2 | 2\n-0.175~-0.15 | 3\n-0.15~-0.125 | 8\n-0.125~-0.1 | 4\n-0.1~0.075 | 1"
+  },
+  {
+   "id": "u12",
+   "kind": "table 3",
+   "text": "Predicted Co-occurrence (range) | Observed Co-occurrence (range)\n-1.0~1.0 | -1.0~1.0"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ]
+ ],
+ "calls": 5,
+ "categories": [
+  {
+   "variable": "co-occurrence value >0.5, 0.6 etc., with a statistical support of 0.95",
+   "code": "1",
+   "term": "a “positive co-occurrence”",
+   "unit": "u6",
+   "model_label": "positive",
+   "label": "positive",
+   "explanation": "a “ co-occurrence”"
+  },
+  {
+   "variable": "distribution of the species in assemblages (i.e., metacommunities)",
+   "code": "",
+   "label": "dispersal constrains",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "distribution of the species in assemblages (i.e., metacommunities)",
+   "code": "",
+   "label": "environmental (or habitat) filtering",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "distribution of the species in assemblages (i.e., metacommunities)",
+   "code": "",
+   "label": "biotic interactions",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "Co-occurrence",
+   "code": "",
+   "label": "Biotic interactions (Functional distance)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "Co-occurrence",
+   "code": "",
+   "label": "Environmental filtering (Functional distance)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  }
+ ],
+ "dropped": [],
+ "seconds": 8.9
+}

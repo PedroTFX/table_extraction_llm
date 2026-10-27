@@ -1,0 +1,452 @@
+{
+ "paper": "Weber2023",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Received: 9 February 2023 / Accepted: 14 August 2023 / Published online: 3 September 2023"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "In urban areas, impervious surface is the most frequently examined land use, often used as a measure of urbanisation (e.g., Fortel et al. 2014; Geslin et al. 2016; Burdine and McCluney 2019). Mostly it is tested for a linear response (e.g., Geslin et al. 2016; Burdine and McCluney 2019; but see Fortel et al. 2014). In urban habitats, the most complex landscape is at low to intermediate percentage of impervious surface, which suggests a non-linear unimodal response of wild bees (cf., Tscharntke et al. 2012). The findings of Fortel et al. (2014) and Wenzel et al. (2020) support this hypothesis (but see Bates et al. 2011). Interacting effects are also likely, as Burdine and McCluney (2019) found an amplification of the negative effect of impervious surface on wild bee abundance with increasing canopy and a reduction of the negative effect of impervious surface on wild bee diversity with increasing flower abundance."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "The research questions addressed in this study are: (i) At which most important spatial scale do varying urban land uses affect wild bees with different traits? (ii) Do wild bees with different traits respond in a non-linear manner to impervious surface? (iii) How does impervious surface interact with other factors in shaping local bee communities?"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "in 2019 covering their main flight period and minimising impacts on bee populations. Sampling of the sites in each round was split over several days with the most suitable forecasted weather conditions. The first sampling (spring) was run from 16 April to 15 May with a daily maximum temperature of at least 15 °C and a sunshine duration of at least 7 h; the second sampling (early summer) from 13 to 20 June (daily maximum temperature: at least 24 °C, sunshine duration: at least 9 h); and the third sampling (late summer) from 13 to 21 August (daily maximum temperature: at least $2 0 \\; ^ { \\circ } \\mathbf { C } ,$ sunshine duration: at least 5 h) (Deutscher Wetterdienst 2021). Separate weather information for each sampling location could not be estimated."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "the highest flower cover within the quadrants were selected as sub-squares. Within sub-squares, flowering herbs and shrubs were identified to species level, using image-based identification books or the Flora Incognita app (Mäder et al. 2021). In data analyses, two measures based on flowering plant species were included: (i) Species richness of flowering plants (herbs and shrubs) accumulated over the three vegetation surveys as a measure of resource variety, and (ii) percentage of flowering plant species with more than one detection during the three surveys as a measure of resource constancy. Vegetation structure of the investigated study sites varied, e.g., depending on mowing frequency. Therefore, mean percentage of vegetation cover at 50 to 100 cm height estimated in the sub-squares in early summer was also included in analyses."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Landscape data were generated from the vector-based digital basis landscape model (Basis-DLM) of 2019 (Federal Agency for Cartography and Geodesy 2019) and from the High Resolution Layer Imperviousness Density (IMD) of 2018 (Copernicus Land Monitoring Service 2020), a raster layer providing the percentage of imperviousness with a resolution of 10 m."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Information on bee species traits were taken from Westrich (2018) and missing information completed with Amiet et al. (2001, 2010, 2014) (body size), Scheuchl and Willner (2016) (nesting and pollen-collecting behaviour), and Hagen and Aichhorn (2003) (nesting behaviour of bumble bees). As body sizes are usually given as ranges, bees were categorised as it follows: small bee species as always being smaller than 10 mm (4–9 mm), large species as always being larger than at least 10 mm (10–23 mm), and mediumsized bees as species whose individuals can range from smaller than 10 mm up to at least 10 mm (e.g., 6–10 mm or 9–14 mm). Body size of bumble bees varies markedly within species (e.g., Bombus hypnorum worker 8–18 mm, Hagen and Aichhorn 2003), thus they were grouped into their own size category."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Statistical analyses were conducted in R version 3.6.1 (R Core Team 2019). For each response variable (total wild bee abundance, wild bee species richness and abundance within each wild bee group), two to three generalized linear models (GLM) were computed, using the function “glmmTMB” of the package “glmmTMB” version 1.0.2.1 (Brooks et al. 2017) (Fig. 2)."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:7d57088/tier:advanced/page:6/block:4)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "combination of radius and explanatory variables of the GLM with the lowest Akaike information criterion (AIC) was used for setting up the second GLM, which also included the vegetation characteristics. The model was fitted with the same error distribution as in the first model, except of the model examining below-ground nesting bees. Here, overdispersion occurred and the model was refitted with negative binomial error distribution with quadratic parameterisation. Relevant factors were identified via the multimodel inference approach (Burnham and Anderson 2002) as described above (Online Resource ESM2)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:7d57088/tier:advanced/page:10/block:3)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Fig. 3 Effects of the land-use type percentage of flower-rich anthropogenic habitats within different scales (a, b, d–f) and the vegetation characteristic species richness of flowering plants (c) on wild bees with 95% confidence intervals. a Wild bee total abundance within a 250 m radius; b wild bee species richness within a 400 m radius; c abundance of small bees (pale blue); d abundance of medium-sized bees within a 200 m"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:7d57088/tier:advanced/page:11/block:3)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "![Image block](doc:7d57088/tier:advanced/page:12/block:3)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "The most important land-use type supporting the urban wild bee community was proportion of flowerrich anthropogenic habitats, composed of long-term allotments and cemeteries. This factor had a positive effect on almost all investigated bee groups, showing the utmost importance of flower-rich anthropogenic managed habitats for urban wild bees. The positive effect of allotments for bees has been shown before (Baldock et al. 2019) with higher abundance of bees in allotments compared to most other urban land uses, whereas bee species richness was not affected. In the current study, both, bee species richness and total bee abundance, benefited from proportion of flower-rich anthropogenic habitat within a 400 m and 250 m radius, respectively. The difference in scales is presumably showing the difference between the mean dispersal range of the trapped bee species (species richness) and the smaller mean foraging range of the trapped individual bees (abundance). The dispersal distance of solitary wild bees is largely unknown and observations range from sedentary behaviour to several kilometres even for the same species (Franzén et al. 2009). The maximum foraging distance for all bees in this study estimated with the formula of Gathmann and Tscharntke (2002) is 364 m (estimated mean body size among all bee individuals: 10.9 mm). As the formula of Gathmann and Tscharntke (2002) estimates the maximum foraging distance from the nesting site, it is not surprising that the scale of 250 m determined here for total wild bee abundance is lower."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "The largest relevant radius observed for flowerrich anthropogenic habitats was 600 m, within which abundance of parasitic bees increased with proportion of this land-use type. As parasitic bees do not need to forage pollen for their offspring and return to the nest, a larger scale seems realistic. However, previous studies, based on observation of marked individuals, showed varying findings for activity ranges. Sick (1993) assumed a large range of action for Sphecodes females. For Nomada females, Gebhardt and Röhr (1987) observed the same individuals at the same host aggregation on consecutive days."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Tab. ESM1.01: Wild bee species with total abundance and associated traits. Specimens without species identification were not grouped (-).Bumble bees were grouped in their own size class (B). Hylaeus brevicornis and H. gredleri could not be distinguished and were combined to Hyleaus brevicornis agg. Andrena minutula and A. subopaca were combined to Andrena minutula agg. Considering the controversial taxonomic status of some species (Schmidt et al. 2015), it was neither differentiated between Nomada succincta and N. goodeniana nor between Andrena dorsata and A. propinqua."
+  },
+  {
+   "id": "u17",
+   "kind": "table 0",
+   "text": "Species Richness | Color\n1 | Yellow\n5 | Yellow\n10 | Orange\n15 | Orange\n20 | Orange\n23 | Red"
+  },
+  {
+   "id": "u18",
+   "kind": "table 5",
+   "text": "Lasioglossum minutissimum | 7\nLasioglossum monstrificum | 5\nLasioglossum morio | 22\nLasioglossum nitidiusculum | 3\nLasioglossum nitidulum | 3\nLasioglossum pauxillum | 76\nLasioglossum quadrinotatum | 2\nLasioglossum rufitarse | 1\nLasioglossum semilucens | 1\nLasioglossum sexnotatum | 3"
+  },
+  {
+   "id": "u19",
+   "kind": "table 5",
+   "text": "Lasioglossum sexstrigatum | 5\nLasioglossum villosulum | 6\nLasioglossum sp. | 2\nMacropis fulvipes | 1\nMegachile ericetorum | 2\nMegachile ligniseca | 1\nMegachile maritima aff. | 2\nMegachile versicolor | 3\nMegachile willughbiella | 1\nNomada alboguttata | 2"
+  },
+  {
+   "id": "u20",
+   "kind": "table 5",
+   "text": "Nomada fabriciana | 10\nNomada ferruginata | 2\nNomada flava | 1\nNomada flavoguttata | 1\nNomada fucata | 4\nNomada lathburiana | 7\nNomada panzeri | 13\nNomada ruficornis | 6\nNomada succincta | 1\nOsmia bicolor | 17"
+  },
+  {
+   "id": "u21",
+   "kind": "table 5",
+   "text": "Osmia bicornis | 117\nOsmia brevicornis | 1\nOsmia cornuta | 2\nOsmia spinulosa | 2\nPanurgus banksianus | 1\nPanurgus calcaratus | 1\nSphecodes albilabris | 1\nSphecodes crassus | 3\nSphecodes ephippius | 1\nSphecodes puncticeps | 2"
+  },
+  {
+   "id": "u22",
+   "kind": "table 6",
+   "text": "small | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nsmall | polylectic | below-ground\nmedium | polylectic | below-ground\nsmall | polylectic | below-ground"
+  },
+  {
+   "id": "u23",
+   "kind": "table 6",
+   "text": "small | polylectic | below-ground\n- | - | -\nmedium | oligolectic | below-ground\nlarge | oligolectic | above-ground\nlarge | polylectic | above-ground\nlarge | - | -\nlarge | polylectic | above-ground\nlarge | polylectic | both\nmedium | parasitic | parasitic\nmedium | parasitic | parasitic"
+  },
+  {
+   "id": "u24",
+   "kind": "table 6",
+   "text": "medium | parasitic | parasitic\nmedium | parasitic | parasitic\nsmall | parasitic | parasitic\nmedium | parasitic | parasitic\nlarge | parasitic | parasitic\nmedium | parasitic | parasitic\nmedium | parasitic | parasitic\nlarge | parasitic | parasitic\nlarge | polylectic | above-ground\nmedium | polylectic | above-ground"
+  },
+  {
+   "id": "u25",
+   "kind": "table 6",
+   "text": "medium | oligolectic | above-ground\nlarge | polylectic | above-ground\nsmall | oligolectic | above-ground\nlarge | oligolectic | below-ground\nsmall | oligolectic | below-ground\nlarge | parasitic | parasitic\nsmall | parasitic | parasitic\nsmall | parasitic | parasitic\nsmall | parasitic | parasitic"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14"
+  ],
+  [
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23"
+  ],
+  [
+   "u24",
+   "u25"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "bee species",
+   "code": "small",
+   "term": "small bee species as always being smaller than 10 mm (4–9 mm)",
+   "unit": "u6",
+   "model_label": "small",
+   "label": "small",
+   "explanation": "bee species as always being smaller than 10 mm (4–9 mm"
+  },
+  {
+   "variable": "bee species",
+   "code": "large",
+   "term": "large species as always being larger than at least 10 mm (10–23 mm)",
+   "unit": "u6",
+   "model_label": "large",
+   "label": "large",
+   "explanation": "species as always being larger than at least 10 mm (10–23 mm"
+  },
+  {
+   "variable": "land-use type percentage of flower-rich anthropogenic habitats",
+   "code": "a",
+   "term": "Wild bee total abundance within a 250 m radius",
+   "unit": "u11",
+   "model_label": "abundance",
+   "label": "abundance",
+   "explanation": "Wild bee total within a 250 m radius"
+  },
+  {
+   "variable": "land-use type percentage of flower-rich anthropogenic habitats",
+   "code": "b",
+   "term": "wild bee species richness within a 400 m radius",
+   "unit": "u11",
+   "model_label": "richness",
+   "label": "richness",
+   "explanation": "wild bee species within a 400 m radius"
+  },
+  {
+   "variable": "land-use type percentage of flower-rich anthropogenic habitats",
+   "code": "c",
+   "term": "abundance of small bees (pale blue)",
+   "unit": "u11",
+   "model_label": "small",
+   "label": "small",
+   "explanation": "abundance of bees (pale blue"
+  },
+  {
+   "variable": "land-use type percentage of flower-rich anthropogenic habitats",
+   "code": "d",
+   "term": "abundance of medium-sized bees within a 200 m",
+   "unit": "u11",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": "abundance of -sized bees within a 200 m"
+  },
+  {
+   "variable": "land-use type percentage of flower-rich anthropogenic habitats",
+   "code": "f",
+   "term": "abundance of medium-sized bees within a 200 m",
+   "unit": "u11",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": "abundance of -sized bees within a 200 m"
+  },
+  {
+   "variable": "Bumble bees",
+   "code": "B",
+   "term": "Bumble bees",
+   "unit": "u16",
+   "model_label": "Bumble bees",
+   "label": "Bumble bees",
+   "explanation": ""
+  },
+  {
+   "variable": "Species Richness",
+   "code": "1",
+   "term": "Yellow",
+   "unit": "u17",
+   "model_label": "Yellow",
+   "label": "Yellow",
+   "explanation": ""
+  },
+  {
+   "variable": "Species Richness",
+   "code": "5",
+   "term": "Yellow",
+   "unit": "u17",
+   "model_label": "Yellow",
+   "label": "Yellow",
+   "explanation": ""
+  },
+  {
+   "variable": "Species Richness",
+   "code": "10",
+   "term": "Orange",
+   "unit": "u17",
+   "model_label": "Orange",
+   "label": "Orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Species Richness",
+   "code": "15",
+   "term": "Orange",
+   "unit": "u17",
+   "model_label": "Orange",
+   "label": "Orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Species Richness",
+   "code": "20",
+   "term": "Orange",
+   "unit": "u17",
+   "model_label": "Orange",
+   "label": "Orange",
+   "explanation": ""
+  },
+  {
+   "variable": "Species Richness",
+   "code": "23",
+   "term": "Red",
+   "unit": "u17",
+   "model_label": "Red",
+   "label": "Red",
+   "explanation": ""
+  },
+  {
+   "variable": "small",
+   "code": "small",
+   "term": "small",
+   "unit": "u22",
+   "model_label": "small",
+   "label": "small",
+   "explanation": ""
+  },
+  {
+   "variable": "polylectic",
+   "code": "polylectic",
+   "term": "polylectic",
+   "unit": "u22",
+   "model_label": "polylectic",
+   "label": "polylectic",
+   "explanation": ""
+  },
+  {
+   "variable": "below-ground",
+   "code": "below-ground",
+   "term": "below-ground",
+   "unit": "u22",
+   "model_label": "below-ground",
+   "label": "below-ground",
+   "explanation": ""
+  },
+  {
+   "variable": "medium",
+   "code": "medium",
+   "term": "medium",
+   "unit": "u22",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": ""
+  },
+  {
+   "variable": "oligolectic",
+   "code": "oligolectic",
+   "term": "oligolectic",
+   "unit": "u23",
+   "model_label": "oligolectic",
+   "label": "oligolectic",
+   "explanation": ""
+  },
+  {
+   "variable": "large",
+   "code": "large",
+   "term": "large",
+   "unit": "u15",
+   "model_label": "large",
+   "label": "large",
+   "explanation": ""
+  },
+  {
+   "variable": "above-ground",
+   "code": "above-ground",
+   "term": "above-ground",
+   "unit": "u23",
+   "model_label": "above-ground",
+   "label": "above-ground",
+   "explanation": ""
+  },
+  {
+   "variable": "both",
+   "code": "both",
+   "term": "both",
+   "unit": "u23",
+   "model_label": "both",
+   "label": "both",
+   "explanation": ""
+  },
+  {
+   "variable": "parasitic",
+   "code": "parasitic",
+   "term": "parasitic",
+   "unit": "u15",
+   "model_label": "parasitic",
+   "label": "parasitic",
+   "explanation": ""
+  },
+  {
+   "variable": "land use",
+   "code": "",
+   "label": "impervious surface",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "small bee species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "large species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "land-use type",
+   "code": "",
+   "label": "proportion of flowerrich anthropogenic habitats",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "land-use type",
+   "code": "",
+   "label": "long-term allotments",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "land-use type",
+   "code": "",
+   "label": "cemeteries",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "bee species",
+   "code": "medium",
+   "term": "medium sized bees as species whose individuals can range from smaller than 10 mm up to at least 10 mm (e.g., 6–10 mm or 9–14 mm)",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "land-use type percentage of flower-rich anthropogenic habitats",
+   "code": "e",
+   "term": "abundance of medium-sized bees within a 200 m",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Specimens without species identification",
+   "code": "-",
+   "term": "-",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 49.0
+}

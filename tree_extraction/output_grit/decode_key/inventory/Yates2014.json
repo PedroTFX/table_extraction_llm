@@ -1,0 +1,686 @@
+{
+ "paper": "Yates2014",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Here, we examine the relationship between morphology, microhabitat, and macrohabitat within three areas spanning a large 300 km scale. In a previous study (Yates, Gibb & Andrew, 2012), we showed that species assemblages respond strongly to macrohabitat as well as to a range of microhabitat variables. We now extend this research by firstly characterising the assemblage morphospace and then by assessing trait responses to the environment using a new fourth corner model (Brown et al., 2014). Specifically, we asked the following questions: (1) Do morphological traits respond to the environment at macro or micro habitat scales? (2) Are the patterns detected in morphological traits independent of phylogenetic relationships? (3) Do traits related to the environment vary more within complex macrohabitats?"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We assembled a phylogenetic tree for the ant genera sampled in the study using the most recent comprehensive phylogeny to genus (Moreau et al., 2006). Morphospecies within each genus were treated as unresolved soft polytomies at each individual genus tip, meaning we were adjusting for genus-level independence. Phylogenetically independent contrasts were standardized and regressed against Weber’s length to produce residuals using the protocol described by Garland, Harvey & Ives (1992). We used these new phylogenetically adjusted residuals in a Principal Components Analysis (PCA) to see whether the same trait associations were replicated. If there was a strong tendency for closely related genera to share morphologies, the phylogenetic independent contrasts analysis would give a different inference from the initial trait analysis. If there is little difference between phylogenetic independent contrasts and phylogeny-free trait contrasts, it would suggest that the patterns of trait association are similar, regardless of the inherent phylogenetic structure among genera."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "The problem of associating species traits and environmental variables using species abun dance data is known as the fourth-corner problem (Legendre, Galzin & Harmelin-Vivien, 1997). This problem can be thought of as a 3 table problem which takes environmental data (R), species abundances (L), and species traits (Q) and uses these three tables to understand how traits associate to the environment (D). We used the fourth-corner modelling approach to assess the relationship between morphological traits and the environmental measures: microhabitat variables and macrohabitats, using the ‘trait.mod function developed by Brown et al. (2014) for R 2.15.1 (R Development Core Team, 2012)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "For this analysis, we used the matrix of species abundances at each site (L), the matrix of microhabitat variables at each site (R) and the matrix of ant traits for each species (Q). The approach fits a predictive model for abundance of each ant species at each site (L) as a function of the microhabitat variables (R), morphological traits (Q) and the trait–environment interaction terms (the ‘fourth corner’). The environmental variables we used were tall grass cover, herb cover, bare ground cover, short grass cover, leaf litter cover, C:N, P (all microhabitat scale) and macrohabitats."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "In terms of genera and their positions in morpho-space, the residuals of the nine continuous traits (see Table 2), were reduced to four principal components. Principal Components 1, 2, 3 and 4 cumulatively accounted for 80.4% of the variance of genera in morphological trait space. Principal Component 1 (PC1) accounted for 33.7% of the variance, with a large negative coefficient for head length (Table 2). Genera with negative PC1 loadings had shorter heads, relative to body length, e.g., Anillomyrma and Meranoplus (Fig. 1A). Principal Component 2 (PC 2) described 21.4% of the variance, with large negative coefficients for mandible and top tooth length, and positive coefficients for scape length (Table 2), e.g., Myrmecia appeared low on this axis, while Aphaenogaster and Strumigenys appeared high (Fig. 1B). Principal Component 3 (PC 3) described 14.9% of the variance, with large negative coefficients for scape and femur length (Table 2). Amblyopone and Cerapachys were positioned high on this axis, having the shortest scapes and femurs, relative to Weber’s length (Fig. 1B). Lastly, Principal Component 4 (PC 4) accounted for 10.3% of variance, with a large positive coefficient for maximum hair lengths on the thorax and a large negative coefficient for eye width (Table 2). Those genera with"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "![Image block](doc:ad32ec5/tier:advanced/page:9/block:2)"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Figure 1 Ant genera plotted in morpho-space: (A) Weber’s length against PC1; (B) PC2 against PC3. Morphospecies distinguishable in subfamilies by numbers 1–9. 1. Myrmicinae (Adl, Adlerzia; Ani, Anillomyrma; Aph, Aphaenogaster; Car, Cardiocondyla; Cre, Crematogaster; Epo, Epopostruma; Mayr, Mayriella; Mer, Meranoplus; Mon, Monomorium; Phe, Pheidole; Sol, Solenopsis; Str, Strumigenys; Tet, Tetramorium); 2. Amblyoponinae (Amb, Amblyopone); 3. Formicinae (Sti, Stigmacros; Pol, Polyrhachis; Pro, Prolasius; Cam, Camponotus; Mel, Melophorus; Not, Notoncus; Opi, Opisthopsis; Nyl, Nylanderia; Pla, Plagiolepis); 4. Cerapachyinae (Cer, Cerapachys); 5. Dolichoderinae (Tap, Tapinoma; Tec, Technomyrmex; Iri, Iridomyrmex; Dol, Dolichoderus; Och, Ochetellus); 6. Heteroponerinae (Het, Heteroponera); 7. Ponerinae (Hyp, Hypoponera; Lep, Leptogenys; Pac, Pachycondyla; Plat, Platythyrea); 8. Myrmeciinae (Myr, Myrmecia); 9. Ectatomminae (Rhy, Rhytidoponera)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Table 2 Results of Principal Components Analysis (PCA) on average trait values for genera. All traits except Weber’s length are based on residuals with Weber’s length. Principal Components for each trait are represented as eigenvectors. PC1, PC2, PC3 and PC4 together account for 80.4% of the variation in morphological traits. Traits contributing to more than 30% of variation in first two Principal Components are shown in bold (maxillary palps trait removed as this is a categorical trait, not continuous)."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Table 3 Results of Mantel tests and summation of principal components analysis performed (A) residuals of phylogenetically independent contrasts (PICs), and (B), residuals of log-transformed traits regressed against log body length showing the coefficients for each trait and the variation explained by each principle component (PC1, PC2 and PC3). Mantel tests relate a phylogenetic distance matrix to a distance matrix based on each of the respective continuous trait distance matrices. The traits which are significantly correlated to phylogenetic relationships are in bold, and those coefficients which are high are in bold (maxillary palps trait removed as this was a categorical trait)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Figure 2 A graphical representation of the 4th corner interaction coefficients for the abundance model. Significant associations are shown in blue or red, and the relative tone of colour indicates the strength of association. Red represents a positive association, blue represents a negative association. The coefficient values are expressed on a log scale. Along the x axis are the environmental variables (microhabitat variables and macrohabitat): CN, C:N; P, phosphorus; Tall Grass, tall grass cover; ShortGrass, short grass cover; Herb, herb cover; LeafLitter, leaf litter cover; Bare Ground, bareground cover; Average temp, Average ambient daily temperature (◦C); HabitatRT, Remnant habitat type (coefficients of remnants indicate what the mean abundance of traits are in comparison with pastures)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Head length and top tooth length were the only traits out of the nine associated traits whose variability significantly differed between habitat type (F = 6.4712, P (perm) = 0.01; F = 7.01, P (perm) = 0.02, respectively). Average head length was higher and more variable in remnants (Pasture = 0.41 mm, ±0.09 mm; Remnant = 1.03 mm, ±0.22 mm). Top tooth length of ants was on average longer and more variable in pastures (Pastures = 1.06 mm, ±0.24 mm; Remnant = 0.36 mm, ±0.08 mm)."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Thank you to all of the landholders who kindly allowed sampling to be conducted on their farms. Many thanks also to Dr. Saul Cunningham (CSIRO), and Dr. Philip Barton (ANU) for their helpful comments on a previous version of this manuscript."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "The University of New England provided MLY with a student scholarship. NRA received an Australian Research Council (ARC) Discovery grant (DP0769961) and NRA and HG received an ARC Discovery Grant (DP0985886). The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "The following grant information was disclosed by the authors: Australian Research Council (ARC) Discovery grant: DP0769961. ARC Discovery Grant: DP0985886."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "The following information was supplied regarding the deposition of related data: Yates M, Andrew NR & Gibb H (2013) Dataset for Morphological traits: predictable responses to macrohabitats across a 300 km scale. Figshare DOI: [http://dx.doi.org/10.6084/m9.figshare.878459](http://dx.doi.org/10.6084/m9.figshare.878459)."
+  },
+  {
+   "id": "u15",
+   "kind": "table 0",
+   "text": "Morphological trait | Abbrev. | Hypothesised functional significance\nContinuous measures\nWeber's length | Weber's | Indicative of body size (Weber, 1938), correlates to metabolic function and habitat complexity\nMinimum inter-eye distance | MII | May be a function of the habitat in which the ant lives: having eyes further apart may be beneficial in more complex habitats (Gibb & Parr, 2013)\nEye width | EW | Ability to see laterally (Baker, Meese & Georgeson, 2007)\nEye length | EL | Indicates feeding behaviour; predatory ants have smaller eyes (Weiser & Kaspari, 2006)\nHead length | HL | May be indicative of diet; longer head length may indicate herbivory.\nHead Width | HW | Size of spaces through which ant can pass (Sarty, Abbott & Lester, 2006); mandibular musculature (Kaspari, 1993)\nMandible Length | ML | Indicative of diet; longer mandibles could allow predation of larger prey (Fowler et al., 1991)\nTop tooth length | TT | May function to cut and masticate; longer top teeth may increase functional complexity, increasing ability to cut and break down plant material (Santana, Strait & Dumont, 2011)"
+  },
+  {
+   "id": "u16",
+   "kind": "table 0",
+   "text": "Scape Length | SL | Mechano and chemoreception (Schneider, 1964)\nAntenna Length | AL | Mechanoreception; length of antennae inhibits ability to sense surroundings (Schneider, 1964)\nMax. spine length | MSL | Spines may act as anti-predatory mechanisms (Michaud & Grant, 2003)\nMax. hair length (alitrunk) | MHL | Hairs may increase tolerance to dehydration (Cloudsley-Thompson, 1958) they may function in thermo-regulation (Heinrich, 1974) or relate to mechanoreception\nMid-femur length | FEM | Indicative of foraging speed, which reflects habitat complexity (Feener, Lighton & Bartholomew, 1988)\nMid-tibia length | TIB | Indicative of foraging speed, which reflects habitat complexity (Feener, Lighton & Bartholomew, 1988)\nMid tarsus length | TAR | Linked to locomotion and climbing ability (Gladun & Gorb, 2007)\nCount measures\nMaxillary palp segments | MP | Liquid sugar feeding (Eisner, 1953)\nLabial palp segments | LP | Functions in ability to taste (Homberg, Christensen & Hildebrand, 1989)"
+  },
+  {
+   "id": "u17",
+   "kind": "table 0",
+   "text": "Spines (alitrunk) | ST | Spines may act as anti-predatory mechanisms (Michaud & Grant, 2003)\nSpines (petiole) | SP | Spines may act as anti-predatory mechanisms (Michaud & Grant, 2003)\nNumber of Teeth | T | May increase ability to masticate prey or plants (Santana, Strait & Dumont, 2011)"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4",
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16"
+  ],
+  [
+   "u17"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "environmental data",
+   "code": "R",
+   "term": "environmental data",
+   "unit": "u2",
+   "model_label": "environmental",
+   "label": "environmental",
+   "explanation": "data"
+  },
+  {
+   "variable": "species abundances",
+   "code": "L",
+   "term": "species abundances",
+   "unit": "u2",
+   "model_label": "species",
+   "label": "species",
+   "explanation": "abundances"
+  },
+  {
+   "variable": "species traits",
+   "code": "Q",
+   "term": "species traits",
+   "unit": "u2",
+   "model_label": "traits",
+   "label": "traits",
+   "explanation": "species"
+  },
+  {
+   "variable": "how traits associate to the environment",
+   "code": "D",
+   "term": "how traits associate to the environment",
+   "unit": "u2",
+   "model_label": "traits",
+   "label": "traits",
+   "explanation": "how associate to the environment"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "1",
+   "term": "Myrmicinae (Adl, Adlerzia; Ani, Anillomyrma; Aph, Aphaenogaster; Car, Cardiocondyla; Cre, Crematogaster; Epo, Epopostruma; Mayr, Mayriella; Mer, Meranoplus; Mon, Monomorium; Phe, Pheidole; Sol, Solenopsis; Str, Strumigenys; Tet, Tetramorium)",
+   "unit": "u6",
+   "model_label": "Myrmicinae",
+   "label": "Myrmicinae",
+   "explanation": "Adl, Adlerzia; Ani, Anillomyrma; Aph, Aphaenogaster; Car, Cardiocondyla; Cre, Crematogaster; Epo, Epopostruma; Mayr, Mayriella; Mer, Meranoplus; Mon, Monomorium; Phe, Pheidole; Sol, Solenopsis; Str, Strumigenys; Tet, Tetramorium"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "2",
+   "term": "Amblyoponinae (Amb, Amblyopone)",
+   "unit": "u6",
+   "model_label": "Amblyoponinae",
+   "label": "Amblyoponinae",
+   "explanation": "Amb, Amblyopone"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "3",
+   "term": "Formicinae (Sti, Stigmacros; Pol, Polyrhachis; Pro, Prolasius; Cam, Camponotus; Mel, Melophorus; Not, Notoncus; Opi, Opisthopsis; Nyl, Nylanderia; Pla, Plagiolepis)",
+   "unit": "u6",
+   "model_label": "Formicinae",
+   "label": "Formicinae",
+   "explanation": "Sti, Stigmacros; Pol, Polyrhachis; Pro, Prolasius; Cam, Camponotus; Mel, Melophorus; Not, Notoncus; Opi, Opisthopsis; Nyl, Nylanderia; Pla, Plagiolepis"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "4",
+   "term": "Cerapachyinae (Cer, Cerapachys)",
+   "unit": "u6",
+   "model_label": "Cerapachyinae",
+   "label": "Cerapachyinae",
+   "explanation": "Cer, Cerapachys"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "5",
+   "term": "Dolichoderinae (Tap, Tapinoma; Tec, Technomyrmex; Iri, Iridomyrmex; Dol, Dolichoderus; Och, Ochetellus)",
+   "unit": "u6",
+   "model_label": "Dolichoderinae",
+   "label": "Dolichoderinae",
+   "explanation": "Tap, Tapinoma; Tec, Technomyrmex; Iri, Iridomyrmex; Dol, Dolichoderus; Och, Ochetellus"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "6",
+   "term": "Heteroponerinae (Het, Heteroponera)",
+   "unit": "u6",
+   "model_label": "Heteroponerinae",
+   "label": "Heteroponerinae",
+   "explanation": "Het, Heteroponera"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "7",
+   "term": "Ponerinae (Hyp, Hypoponera; Lep, Leptogenys; Pac, Pachycondyla; Plat, Platythyrea)",
+   "unit": "u6",
+   "model_label": "Ponerinae",
+   "label": "Ponerinae",
+   "explanation": "Hyp, Hypoponera; Lep, Leptogenys; Pac, Pachycondyla; Plat, Platythyrea"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "8",
+   "term": "Myrmeciinae (Myr, Myrmecia)",
+   "unit": "u6",
+   "model_label": "Myrmeciinae",
+   "label": "Myrmeciinae",
+   "explanation": "Myr, Myrmecia"
+  },
+  {
+   "variable": "Morphospecies distinguishable in subfamilies by numbers",
+   "code": "9",
+   "term": "Ectatomminae (Rhy, Rhytidoponera)",
+   "unit": "u6",
+   "model_label": "Ectatomminae",
+   "label": "Ectatomminae",
+   "explanation": "Rhy, Rhytidoponera"
+  },
+  {
+   "variable": "Significant associations",
+   "code": "blue",
+   "term": "negative association",
+   "unit": "u9",
+   "model_label": "negative",
+   "label": "negative",
+   "explanation": "association"
+  },
+  {
+   "variable": "Significant associations",
+   "code": "red",
+   "term": "positive association",
+   "unit": "u9",
+   "model_label": "positive",
+   "label": "positive",
+   "explanation": "association"
+  },
+  {
+   "variable": "HabitatRT",
+   "code": "coefficients of remnants",
+   "term": "indicate what the mean abundance of traits are in comparison with pastures",
+   "unit": "u9",
+   "model_label": "coefficients",
+   "label": "indicate what the mean abundance of traits are in comparison with pastures",
+   "explanation": ""
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "Weber's",
+   "term": "Weber's",
+   "unit": "u15",
+   "model_label": "Weber's",
+   "label": "Weber's",
+   "explanation": ""
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "MII",
+   "term": "Minimum inter-eye distance",
+   "unit": "u15",
+   "model_label": "Minimum",
+   "label": "Minimum",
+   "explanation": "inter-eye distance"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "EW",
+   "term": "Eye width",
+   "unit": "u15",
+   "model_label": "Eye",
+   "label": "Eye",
+   "explanation": "width"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "EL",
+   "term": "Eye length",
+   "unit": "u15",
+   "model_label": "Eye",
+   "label": "Eye",
+   "explanation": "length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "HL",
+   "term": "Head length",
+   "unit": "u15",
+   "model_label": "Head",
+   "label": "Head",
+   "explanation": "length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "HW",
+   "term": "Head Width",
+   "unit": "u15",
+   "model_label": "Head",
+   "label": "Head",
+   "explanation": "Width"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "ML",
+   "term": "Mandible Length",
+   "unit": "u15",
+   "model_label": "Mandible",
+   "label": "Mandible",
+   "explanation": "Length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "TT",
+   "term": "Top tooth length",
+   "unit": "u15",
+   "model_label": "Top",
+   "label": "Top",
+   "explanation": "tooth length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "SL",
+   "term": "Scape Length",
+   "unit": "u16",
+   "model_label": "Scape",
+   "label": "Scape",
+   "explanation": "Length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "AL",
+   "term": "Antenna Length",
+   "unit": "u16",
+   "model_label": "Antenna",
+   "label": "Antenna",
+   "explanation": "Length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "MSL",
+   "term": "Max. spine length",
+   "unit": "u16",
+   "model_label": "Max.",
+   "label": "Max",
+   "explanation": ". spine length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "MHL",
+   "term": "Max. hair length (alitrunk)",
+   "unit": "u16",
+   "model_label": "Max.",
+   "label": "Max",
+   "explanation": ". hair length (alitrunk"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "FEM",
+   "term": "Mid-femur length",
+   "unit": "u16",
+   "model_label": "Mid-femur",
+   "label": "Mid-femur",
+   "explanation": "length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "TIB",
+   "term": "Mid-tibia length",
+   "unit": "u16",
+   "model_label": "Mid-tibia",
+   "label": "Mid-tibia",
+   "explanation": "length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "TAR",
+   "term": "Mid tarsus length",
+   "unit": "u16",
+   "model_label": "Mid",
+   "label": "Mid",
+   "explanation": "tarsus length"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "MP",
+   "term": "Maxillary palp segments",
+   "unit": "u16",
+   "model_label": "Maxillary",
+   "label": "Maxillary",
+   "explanation": "palp segments"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "LP",
+   "term": "Labial palp segments",
+   "unit": "u16",
+   "model_label": "Labial",
+   "label": "Labial",
+   "explanation": "palp segments"
+  },
+  {
+   "variable": "Spines (alitrunk)",
+   "code": "ST",
+   "term": "Spines may act as anti-predatory mechanisms (Michaud & Grant, 2003)",
+   "unit": "u17",
+   "model_label": "Spines",
+   "label": "Spines",
+   "explanation": "may act as anti-predatory mechanisms (Michaud & Grant, 2003"
+  },
+  {
+   "variable": "Spines (petiole)",
+   "code": "SP",
+   "term": "Spines may act as anti-predatory mechanisms (Michaud & Grant, 2003)",
+   "unit": "u17",
+   "model_label": "Spines",
+   "label": "Spines",
+   "explanation": "may act as anti-predatory mechanisms (Michaud & Grant, 2003"
+  },
+  {
+   "variable": "Number of Teeth",
+   "code": "T",
+   "term": "May increase ability to masticate prey or plants (Santana, Strait & Dumont, 2011)",
+   "unit": "u17",
+   "model_label": "May",
+   "label": "May",
+   "explanation": "increase ability to masticate prey or plants (Santana, Strait & Dumont, 2011"
+  },
+  {
+   "variable": "morphology",
+   "code": "",
+   "label": "morphological traits",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "microhabitat",
+   "code": "",
+   "label": "microhabitat variables",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "macrohabitat",
+   "code": "",
+   "label": "macrohabitats",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "head length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "top tooth length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "scape length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "femur length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "maximum hair lengths on the thorax",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "morphological traits",
+   "code": "",
+   "label": "eye width",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "Tall Grass",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "ShortGrass",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "Herb",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "LeafLitter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "Bare Ground",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "Average temp",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "microhabitat variables and macrohabitat",
+   "code": "",
+   "label": "HabitatRT",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Weber's length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Minimum inter-eye distance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Eye length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Head Width",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Mandible Length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Antenna Length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Max. spine length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Max. hair length (alitrunk)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Mid-femur length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Mid-tibia length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Mid tarsus length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Maxillary palp segments",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Morphological trait",
+   "code": "",
+   "label": "Labial palp segments",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  }
+ ],
+ "dropped": [],
+ "seconds": 73.3
+}

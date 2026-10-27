@@ -1,0 +1,508 @@
+{
+ "paper": "Gathof2022",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:75b5d94/tier:advanced/page:1/block:4)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Received: 14 October 2021 / Accepted: 19 April 2022 / Published online: 4 May 2022"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Specifically, we aim to answer the following questions: (1) which urban landscape matrix factors and local habitat factors affect the composition of wild bee and hoverfly communities? (2) can species be identified that occur exclusively or more frequently in urban or respectively rural areas, socalled “indicator species”? (3) which urban matrix and local habitat factors relate to the functional traits of wild bee and hoverfly communities?"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "To determine (1) how the species composition of wild bees and hoverflies relates to our set of environmental variables, we used non-metric multidimensional scaling (NMDS). For this purpose, species found only once or twice and sites with less than three individuals were omitted from the data set beforehand to enhance the accuracy of statistical analyses and to reduce statistical noise. Thus, 51 bee species with 875 individuals from 46 sites and 16 hoverfly species with 1228 individuals from 47 sites were each used in the NMDS. The relative abundances of these species were standardised by performing Wisconsin double standardisation and squareroot transformation. The Bray–Curtis dissimilarity matrix of each pollinator group was used for scaling, and a maximum number of 100 random starts was conducted in search of a stable solution. The environmental variables were fit onto the ordination with 99,999 permutations to assess the significance of correlations between species and these factors."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "For (2) identifying indicating pollinator species, we calculated indicator values (IndVal) for the significant variables assessed in the NMDS. For urbanisation, the following levels were defined: low (≤ 20% of impervious surface in a 500-m buffer around the biotope patch in which the plot was located), medium $( > 20 - \\leq 50\\% )$ and high (> 50%). The 3D connectivity was divided into the following levels: low (≤ 0.03 values of Hanski’s connectivity index), medium $( > 0 . 0 3 \\leq 0 . 1 0 )$ and high (> 0.10). Indicator species, characterised by specificity (abundant in a specific type of habitat) and by fidelity (predominantly found in this type of habitat), were calculated as the product of the relative frequency and relative average abundance in cluster with the package labdsv in R (Dufrêne and Legendre 1997; Roberts 2016). Pollinator species with indicator values of≥ 0.3 were defined as indicator species."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "abundances, and each trait distribution among grasslands. We then used the fourth-corner analysis to test for correlations between environmental filters and pollinator traits (Dray and Legendre 2008; Dray et al. 2014). Wild bees and hoverflies were analysed separately. This involved creating three matrices for each pollinator group: an R matrix (environmental variables), an L matrix (wild bee/hoverfly species abundances) and a Q matrix (wild bee/hoverfly species traits). Subsequently, a correspondence analysis (L matrix) and principal components analysis (R, Q matrices) were performed while applying a permutation model using model type 2, that permutes the values of the sites (rows of L matrix). Further regressions, using Poisson GLMs, were applied to determine the direction of the effect. Therefore, we counted the frequency of each trait per species community or study site, respectively, and used these count data as response variable to environmental variables. All analyses were performed in the R Statistical Environment (version 3.3.1, R Core Team 2016), including the packages ade4 (Dray and Dufour 2007), labdsv (Roberts 2016), AER (Kleiber and Zeileis 2008) and vegan (Oksanen et al. 2013)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "In total, 953 specimens of wild bees (Apoidea excluding A. mellifera) from 106 species were collected and 1.246 hoverflies (Syrphidae) from 31 species (Appendix 1). The most abundant wild bee species were Lasioglossum morio (139 individuals), Lasioglossum calceatum (95 individuals), Bombus terrestris (67 individuals) and Lasioglossum laticeps (51 individuals). We found 26 Red-Listed (Berlin) wild bee species (Saure 2005). The most abundant hoverfly species were Helophilus trivittatus (610 individuals), Helophilus pendulus (245 individuals), Eristalis arbustorum (192 individuals), and Episyrphus balteatus (62 individuals). We identified two Red-Listed (Berlin) hoverfly species (Saure 2018)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "The species composition of wild bees was significantly affected by urbanisation $( P = 0.043^{\\ast} )$ . The NMDS plot (Fig. 1) shows a slight grouping of study sites, indicating differences in the distribution of wild bees among three levels of urbanisation. Bee species showed different responses to urbanisation. Certain species, e.g. Dasypoda hirtipes, L. morio, seemed to cope well in highly urban surroundings, whereas others (Bombus rupestris, Lasioglossum pauxillum) showed the opposite pattern. The species composition of hoverflies was significantly affected by urbanisation (P = 0.0064**). The NMDS plot shows that the majority of species (e.g. Chrysotoxum verralli, Dasysyrphus albostriatus) is not aligned to urbanisation, while a few species (e.g. Eristalis similis, Helophilus trivittatus) appear to be more"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:75b5d94/tier:advanced/page:7/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 1 Non-metric multidimensional scaling (NMDS) plots showing A wild bee and B hoverfly community composition in relation to landscape-scale features (urbanisation and connectivity) and local features. Sites are classified according to their degree of urbanisation"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:75b5d94/tier:advanced/page:8/block:4)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Author contribution statement SB: designed the study and supervised the field work. AG, AG, JH and SB: analysed the data. AG, AG and JH: wrote the first draft of the manuscript, and all the authors substantially contributed to the revisions."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Funding Open Access funding enabled and organized by Projekt DEAL. The work was funded by the German Federal Ministry of Education and Research (BMBF) within the Collaborative Project “Bridging in Biodiversity Science—BIBS” (funding number 01LC1501)."
+  },
+  {
+   "id": "u13",
+   "kind": "table 0",
+   "text": "Functional traits | Unit/score/categories | Explanation\nWild bees\n[WB 1] Sociality | Solitary | Nest foundation occurs alone; no division of labour and no storage of food stocks\nEusocial | Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included\nCleptoparasitic | Brood parasitic way of life\n[WB 2] Nesting behaviour | Hypergeic | Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks\nEndogeic | Belowground nesting in self-excavated or existing cavities\nHyper- and endogeic | Combination of the two nesting types\nCleptoparasitic | Penetration into foreign nests and deposition of the eggs therein\n[WB 3] Diet | Oligolectic | Pollen specialisation"
+  },
+  {
+   "id": "u14",
+   "kind": "table 0",
+   "text": "Polylectic | No binding to certain plant species\nCleptoparasitic | No collection of pollen\n[WB 4] Active flight time | # Average number of months | Average flight period of female and male individuals\n[WB 5] body size | # Average size in mm | Average size of female individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen\nHoverflies\n[HF 1] body size | # Average size in mm | Average size of adult individuals from the anterior extremity of the head (excluding the antennae) to the posterior extremity of the abdomen\n[HF 2] active flight time | # Average number of months | Average flight period of female and male individuals\n[HF 3] migratory status | 0/1 (no/yes) | Ability to undertake long-distance movements\n[HF 4] larval food type | Phytophagous | Nutrition through plant components\nZoophagous | Nutrition through animals, especially aphids"
+  },
+  {
+   "id": "u15",
+   "kind": "table 0",
+   "text": "Terrestrial saprophagous | Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)\nAquatic saprophagous | Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)"
+  },
+  {
+   "id": "u16",
+   "kind": "table 2",
+   "text": "Urbanisation | Wild bee indicator species\nhigh | Bombus lapidariusLasioglossum morio (a)\nmedium | Andrena dorsataAndrena flavipes\nlow | Andrena subopaca"
+  },
+  {
+   "id": "u17",
+   "kind": "table 3",
+   "text": "Urbanisation | Hoverfly indicator species\nhigh | -\nmedium | -\nlow | Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b)"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17"
+  ]
+ ],
+ "calls": 9,
+ "categories": [
+  {
+   "variable": "urbanisation",
+   "code": "low",
+   "term": "low (≤ 20% of impervious surface in a 500-m buffer around the biotope patch in which the plot was located)",
+   "unit": "u4",
+   "model_label": "low",
+   "label": "low",
+   "explanation": "≤ 20% of impervious surface in a 500-m buffer around the biotope patch in which the plot was located"
+  },
+  {
+   "variable": "urbanisation",
+   "code": "medium",
+   "term": "medium $( > 0 . 0",
+   "model_term": "medium $( > 20 - ≤ 50% )$",
+   "unit": "u4",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": "$( > 0 . 0"
+  },
+  {
+   "variable": "urbanisation",
+   "code": "high",
+   "term": "high (> 50%)",
+   "unit": "u4",
+   "model_label": "high",
+   "label": "high",
+   "explanation": "> 50%"
+  },
+  {
+   "variable": "3D connectivity",
+   "code": "low",
+   "term": "low (≤ 0.03 values of Hanski’s connectivity index)",
+   "unit": "u4",
+   "model_label": "low",
+   "label": "low",
+   "explanation": "≤ 0.03 values of Hanski’s connectivity index"
+  },
+  {
+   "variable": "3D connectivity",
+   "code": "medium",
+   "term": "medium $( > 0 . 0 3 \\leq 0 . 1 0",
+   "model_term": "medium $( > 0 . 0 3 ≤ 0 . 1 0 )$",
+   "unit": "u4",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": "$( > 0 . 0 3 \\leq 0 . 1 0"
+  },
+  {
+   "variable": "3D connectivity",
+   "code": "high",
+   "term": "high (> 0.10)",
+   "unit": "u4",
+   "model_label": "high",
+   "label": "high",
+   "explanation": "> 0.10"
+  },
+  {
+   "variable": "Sociality",
+   "code": "Solitary",
+   "term": "Nest foundation occurs alone; no division of labour and no storage of food stocks",
+   "unit": "u13",
+   "model_label": "Solitary",
+   "label": "Nest foundation occurs alone; no division of labour and no storage of food stocks",
+   "explanation": ""
+  },
+  {
+   "variable": "Sociality",
+   "code": "Eusocial",
+   "term": "Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included",
+   "unit": "u13",
+   "model_label": "Eusocial",
+   "label": "Organised society, which includes division of labour between the nest founder (queen) and the workers; short-lived (usually one growing season). All levels of social life have been included",
+   "explanation": ""
+  },
+  {
+   "variable": "Sociality",
+   "code": "Cleptoparasitic",
+   "term": "Brood parasitic way of life",
+   "unit": "u13",
+   "model_label": "Cleptoparasitic",
+   "label": "Brood parasitic way of life",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Hypergeic",
+   "term": "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks",
+   "unit": "u13",
+   "model_label": "Hypergeic",
+   "label": "Aboveground nesting; cavities in trees and masonry, plant stems, snail shells and between rocks",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Endogeic",
+   "term": "Belowground nesting in self-excavated or existing cavities",
+   "unit": "u13",
+   "model_label": "Endogeic",
+   "label": "Belowground nesting in self-excavated or existing cavities",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Hyper- and endogeic",
+   "term": "Combination of the two nesting types",
+   "unit": "u13",
+   "model_label": "Hyper- and endogeic",
+   "label": "Combination of the two nesting types",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "Cleptoparasitic",
+   "term": "Penetration into foreign nests and deposition of the eggs therein",
+   "unit": "u13",
+   "model_label": "Cleptoparasitic",
+   "label": "Penetration into foreign nests and deposition of the eggs therein",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "Oligolectic",
+   "term": "Pollen specialisation",
+   "unit": "u13",
+   "model_label": "Oligolectic",
+   "label": "Pollen specialisation",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "Polylectic",
+   "term": "No binding to certain plant species",
+   "unit": "u14",
+   "model_label": "Polylectic",
+   "label": "No binding to certain plant species",
+   "explanation": ""
+  },
+  {
+   "variable": "Diet",
+   "code": "Cleptoparasitic",
+   "term": "No collection of pollen",
+   "unit": "u14",
+   "model_label": "Cleptoparasitic",
+   "label": "No collection of pollen",
+   "explanation": ""
+  },
+  {
+   "variable": "migratory status",
+   "code": "0/1",
+   "term": "no/yes",
+   "unit": "u14",
+   "model_label": "0/1",
+   "label": "no/yes",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food type",
+   "code": "Phytophagous",
+   "term": "Nutrition through plant components",
+   "unit": "u14",
+   "model_label": "Phytophagous",
+   "label": "Nutrition through plant components",
+   "explanation": ""
+  },
+  {
+   "variable": "larval food type",
+   "code": "Zoophagous",
+   "term": "Nutrition through animals, especially aphids",
+   "unit": "u14",
+   "model_label": "Zoophagous",
+   "label": "Nutrition through animals, especially aphids",
+   "explanation": ""
+  },
+  {
+   "variable": "Nutrition",
+   "code": "Terrestrial saprophagous",
+   "term": "Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)",
+   "unit": "u15",
+   "model_label": "Terrestrial saprophagous",
+   "label": "Nutrition through microorganisms in terrestrial substrates (rotting herbaceous plants, dung, tree hollows, sap flows, etc.)",
+   "explanation": ""
+  },
+  {
+   "variable": "Nutrition",
+   "code": "Aquatic saprophagous",
+   "term": "Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)",
+   "unit": "u15",
+   "model_label": "Aquatic saprophagous",
+   "label": "Nutrition through microorganisms in aquatic substrates (puddles, wastewater, liquid manure or mud at the bottom of waters)",
+   "explanation": ""
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "high",
+   "term": "Bombus lapidariusLasioglossum morio (a)",
+   "unit": "u16",
+   "model_label": "high",
+   "label": "Bombus lapidariusLasioglossum morio (a)",
+   "explanation": ""
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "medium",
+   "term": "Andrena dorsataAndrena flavipes",
+   "unit": "u16",
+   "model_label": "medium",
+   "label": "Andrena dorsataAndrena flavipes",
+   "explanation": ""
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "low",
+   "term": "Andrena subopaca",
+   "unit": "u16",
+   "model_label": "low",
+   "label": "Andrena subopaca",
+   "explanation": ""
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "low",
+   "term": "Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b)",
+   "unit": "u17",
+   "model_label": "low",
+   "label": "Episyrphus balteatusEristalis arbustorumHelophilus pendulusHelophilus trivittatus (b)",
+   "explanation": ""
+  },
+  {
+   "variable": "pollinator traits",
+   "code": "",
+   "label": "wild bee",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "pollinator traits",
+   "code": "",
+   "label": "hoverfly",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "Sociality",
+   "code": "",
+   "label": "Solitary",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Sociality",
+   "code": "",
+   "label": "Eusocial",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Sociality",
+   "code": "",
+   "label": "Cleptoparasitic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "",
+   "label": "Hypergeic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "",
+   "label": "Endogeic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Nesting behaviour",
+   "code": "",
+   "label": "Hyper- and endogeic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Diet",
+   "code": "",
+   "label": "Oligolectic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "Diet",
+   "code": "",
+   "label": "Polylectic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "Larval food type",
+   "code": "",
+   "label": "Phytophagous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "Larval food type",
+   "code": "",
+   "label": "Zoophagous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "Nutrition",
+   "code": "",
+   "label": "Terrestrial saprophagous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Nutrition",
+   "code": "",
+   "label": "Aquatic saprophagous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "",
+   "label": "Wild bee indicator species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u16"
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "",
+   "label": "Hoverfly indicator species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u17"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "urbanisation",
+   "code": "P = 0.043*",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "urbanisation",
+   "code": "P = 0.0064**",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "high",
+   "term": "-",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Urbanisation",
+   "code": "medium",
+   "term": "-",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 54.9
+}

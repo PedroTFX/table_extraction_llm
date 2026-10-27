@@ -1,0 +1,103 @@
+  [semantic] matched by values: 'TT' -> 'Top Tooth Length'
+  [semantic] matched by values: 'SL' -> 'Scape Length'
+  [semantic] matched by values: 'ML' -> 'Mandible Length'
+  [semantic] matched by values: 'MII' -> 'Minimum Inter-eye distance'
+  [semantic] matched by values: 'MHLT' -> 'Maximum Hair Length'
+  [semantic] matched by values: 'HL' -> 'Head Length'
+  [semantic] matched by values: 'EW' -> 'Eye Width'
+  [semantic] left unmatched: 'morph.vial' vs 'Maxilary Palp' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Yates2014/Yates2014.xlsx  (2568 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Yates2014/Yates2014.csv  (18709 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 8 pair(s))
+  'EW' -> 'Eye Width'
+  'FEMUR' -> 'Mid-femur Length'
+  'HL' -> 'Head Length'
+  'MHLT' -> 'Maximum Hair Length'
+  'MII' -> 'Minimum Inter-eye distance'
+  'ML' -> 'Mandible Length'
+  'SL' -> 'Scape Length'
+  'TT' -> 'Top Tooth Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 2440
+  missed (FN)         : 128
+  spurious, in scope  : 9600   <- GT covers this trait: real errors
+  spurious, out of scope: 6669   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.130 / 0.950 / 0.229   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.203 / 0.950 / 0.334   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.950   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           6669
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   2440  0.000  <-- low
+  measurementMethod             0   2440  0.000  <-- low
+  measurementUnit               0   2440  0.000  <-- low
+  measurementStatistic          0   2440  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   2440  0.000  <-- low
+  lifeStage                     0   2440  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0   2440  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +2440 where GT blank
+  samplingProtocol              0   2440  0.000  <-- low
+  verbatimLocality              0      0    n/a   +2440 where GT blank
+  verbatimCoordinates           0      0    n/a   +2439 where GT blank
+  verbatimEventDate             0   2440  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   2440  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 128 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            128
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Maxilary Palp'                    x128
+  -> 1 missing trait explains 128 of 128 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Yates2014_misses.csv, Yates2014_misses_summary.json (128 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  average                                           0   305   PRED-ONLY
+  mp- book                                          0   300   PRED-ONLY
+  mp..book                                          0   305   PRED-ONLY
+  cn                                                0   305   PRED-ONLY
+  minimum inter-eye distance                      305  1508   Δ+1203 (split?)
+  eye width                                       305  1507   Δ+1202 (split?)
+  mid-femur length                                305  1511   Δ+1206 (split?)
+  habitat                                           0   302   PRED-ONLY
+  maximum hair length                             305  1472   Δ+1167 (split?)
+  head length                                     305  1513   Δ+1208 (split?)
+  mandible length                                 305  1513   Δ+1208 (split?)
+  scape length                                    305  1512   Δ+1207 (split?)
+  top tooth length                                305  1504   Δ+1199 (split?)
+  maxilary palp                                   128     0   GT-ONLY
+  morph.vial                                        0   305   PRED-ONLY
+  phosphorus                                        0   305   PRED-ONLY
+  polymorphism                                      0   605   PRED-ONLY
+  scul                                              0   908   PRED-ONLY
+  shortgrass                                        0   305   PRED-ONLY
+  species                                           0   906   PRED-ONLY
+  tallgrass                                         0   305   PRED-ONLY
+  thorax                                            0  1513   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.203  0.950  0.334   2440  9600   128   id+type+value
+             (6669 more spurious row(s) set aside as out-of-scope; strict P would be 0.130)
+  tags        0.000  0.000  0.000      0 12040  2568   basis+id+type+value+stat+sex+stage
+             (6669 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.334 vs previous)
+             note: only 0/2440 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

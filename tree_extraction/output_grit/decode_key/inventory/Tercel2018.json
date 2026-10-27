@@ -1,0 +1,336 @@
+{
+ "paper": "Tercel2018",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Abstract. Wingbeat frequency in insects is an important variable in aerodynamic and energetic analyses of insect flight and often is studied on a family- or species-level basis. Meta-analyses of these studies report order-level patterns suggesting that flight strategy is moderately well conserved phylogenetically. Studies incorporated into these meta-analyses, however, use variable methodologies across different temperatures, which may confound results and phylogenetic patterns. In the present study, a high-speed camera is used to measure wingbeat frequency in a wide variety of species (n = 102) under controlled conditions aiming (i) to determine the validity of previous meta-analyses showing phylogenetic clustering of flight strategy and (ii) to identify new evolutionary patterns between wingbeat frequency, body mass, wing area, wing length and wing loading at the order level. All flight-associated morphometrics significantly affect wingbeat frequency. Linear models show that wing area explains the most amount of variation in wingbeat frequency $( r ^ { 2 } = 0 . 5 9 , P \\leq 0 . 0 0 1 )$ , whereas body mass explains the least $( r ^ { 2 } = 0 . 0 9 , P \\leq 0 . 0 1 )$ . A multiple regression model incorporating both body mass and wing area is the best overall predictor of wingbeat frequency $( r ^ { 2 } = 0 . 8 4 , P \\leq 0 . 0 0 1 )$ . Order-level phylogenetic patterns across relationships are consistent with previous studies. Thus, the present study provides experimental validation of previous meta-analyses and provides new insights into phylogenetically conserved flight strategies across insect orders."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Order-level taxonomic relationships with respect to these flight-associated morphometrics are reported elsewhere (Byrne et al., 1988; Dudley, 2000), although meta-analyses suffer from differences with respect to both ambient conditions and methods of measuring wingbeat frequency between studies that may confuse relationships. For example, acoustic methods, stroboscopes and high-speed cameras are used across studies that were incorporated into the meta-analyses of Dudley (2000) and Byrne et al. (1988). The stroboscopic methods suggested by Chadwick (1939) are difficult to use effectively for obtaining kinematic data in insects as a result of the slight variations in wingbeat"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "frequency and movements of the specimen during testing, making visualization of the wing at the frequency of the strobe light challenging. Unwin & Ellington (1979) suggest that it is difficult to pick up the acoustic signals of smaller species even with the use of highly sensitive microphones. Both stroboscopic (Chen et al., 2014) and acoustic (Raman et al., 2007) methods, however, are reported to have been used successfully for measuring wingbeat frequency in insects subsequent to advances in the quality of instruments used to make measurement (i.e. optical tachometers and microphones). Nevertheless, stroboscopic/optical and acoustic methods are not absolute measures of wingbeat frequency. By contrast, high-speed cameras allow the recording of a temporally magnified visual depiction of the motion of insect wings. The reliability of the methods used in studies that are incorporated into important meta-analyses varies because of the problems faced when the technology was less well developed. Furthermore, temperatures vary from 7 to –25 ∘C between the studies used in previous meta-analyses. Insect wingbeat frequency is shown to increase with higher temperatures (Unwin & Corbet, 1984; Oertli, 1989) and therefore meta-analyses of the relationships between measured characteristics may be confounded. An experimental approach using high-speed cameras under controlled conditions recording flight in species across several orders has not been conducted previously. In the present study, using common U.K. species of insect, the relationships between body mass, wing length, wing area, wing loading and wingbeat frequency are investigated to determine whether flight strategies could be broadly characterized between different orders of insect."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:3ae064c/tier:advanced/page:3/block:3)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Fig. 1. (a–k) Showing a complete wingbeat in the beetle Rutpela maculata (Coleoptera: Cerambycidae); t is time (ms) from the start of the wingbeat. (a) End of pronation; (b–e) downstroke translation; (e–g) supination; (h–j) upstroke translation; and (j–k) pronation. [Colour figure can be viewed at [wileyonlinelibrary.com](http://wileyonlinelibrary.com)]."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Statistical analysis was conducted using r, version 3.4.1 ‘Single Candle’ (R Core Team, 2017) with packages MASS (Venables & Ripley, 2002), ggplot2 (Wickham, 2009), caret (Kuhn, 2017), hydroGOF (Zambrano-Bigiarini, 2014), relaimpo (Grömping, 2006) and gridExtra (Auguie, 2016). Both simple and multiple linear regression analyses were conducted to determine the relationships between morphological variables and wingbeat frequency. Data were log-transformed to reduce skew and allow analysis by linear regression. To better measure the level of phylogenetic clustering of flight strategy, a principal component analysis (PCA) was conducted."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Table 1 compiles the range and mean statistics for morphological measurements and wingbeat frequency in each sampled order. Across all 112 specimens, wingbeat frequency covered the range 12.468–557.351 Hz (mean=121.588, SD = 92.679, SE = 8.767), body mass covered the range 0.0003–2.245 g (mean=0.097, SD = 0.256, SE = 0.024), wing length covered the range 0.172–5.214 cm (mean =1.184, SD = 0.919, SE = 0.087), wing area covered the range 0.022–23.362 cm 2"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "(mean=2.022, SD = 4.088, SE = 0.386) and wing loading covered the range 0.0028–0.245 g cm −2 (mean =0.061, SD = 0.059, $\\mathrm { S E } = 0 . 0 0 6 )$ ."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Figure 2 shows the relevant linear relationships between the $\\log _ { 1 0 }$ transformed morphometric data. Of these, wing area (cm 2 ) was the best predictor of wingbeat frequency $( r ^ { 2 } = 0 . 5 9 ,$ $P \\le 0 . 0 0 1 )$ . The strongest overall linear relationship between all morphometric measurements was between wing length (cm) and wing area $( r ^ { 2 } = 0 . 9 3 , P \\leq 0 . 0 0 1 )$ . Body mass explained only 9% of the variation in wingbeat frequency across specimens $( r ^ { 2 } = 0 . 0 9 , P \\leq 0 . 0 1 )$ and represented the poorest predictor of wingbeat frequency across the measured morphometrics. Taxonomic distribution on the graphs (Fig. 2, a–d) shows a diffuse but identifiable clustering of the orders most intensively sampled, suggesting that orders may broadly adhere to a specific strategy, and some new phylogenetic clustering between wingbeat frequency, wing area, wing length and wing loading is revealed where previous meta-analyses focussed solely on taxonomic grouping in relation to wingbeat frequency and body mass. For example, as shown in Fig. 2d, Hymenoptera are quite closely clustered at the higher end of the wing loading range and the upper-middle range of wingbeat frequency, denoting that most hymenopterans sampled have small wings relative to their body mass, which they beat at above average frequencies compared with other orders."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "![Image block](doc:3ae064c/tier:advanced/page:5/block:3)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Fig. 2. Relationships between $\\log _ { 1 0 }$ transformed morphometric variables. (a) wingbeat frequency (Hz) as a function of wing length (cm): wingbeat frequency = −0.764 × wing length $\\stackrel { \\sim } { + } 4 . 4 7 9 , r ^ { 2 } = 0 . 4 2 , P \\leq 0 . 0 0 1 ;$ (b) wingbeat frequency as a function of wing area (cm 2 ): wingbeat frequency = −0.413 × wing area $+ 4 . 3 4 5 , r ^ { 2 } = 0 . 5 9 , P \\leq 0 . 0 0 1 ;$ (c) wingbeat frequency as a function of body mass (g): wingbeat frequency = −0.129 × body mass + 4.04, $r ^ { 2 } = 0 . 0 9 , P \\leq 0 . 0 1 ;$ (d) wingbeat frequency as a function of wing loading $( \\operatorname { g } \\operatorname { c m } ^ { - 2 } ) ;$ wingbeat frequency = 0.385 × wing loading $+ 5 . 7 9 9 , r ^ { 2 } = 0 . 2 9$ $P \\le 0 . 0 0 1$ ; (e) wing area as a function of wing length: wing area = 2.105 × wing length – 0.307, $r ^ { 2 } = 0 . 9 3$ $P \\le 0 . 0 0 1$ ; (f) wing loading as a function of body mass: wing loading = 0.356 × body mass – 1.977, r 2 = 0.34, $P \\le 0 . 0 0 1$ ; (g) wing area as a function of body mass: wing $\\mathrm { a r e a } = 0 . 6 4 4 \\times$ body mass + 1.977, $r ^ { 2 } = 0 . 6 3$ $P \\le 0 . 0 0 1$"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Orders are shown to be clustered when wingbeat frequency is viewed as a function of one of the other measured morphometrics (Fig. 2a–c), supporting the idea that flight strategy can be generally characterized based on evolutionary history. This may be because of a combination of several factors: (i) species inherit a flight apparatus that can only be changed to a certain extent in a given time to fit a new role/niche (e.g. Coleoptera inherit heavy elytra, one pair of functional wings, asynchronous flight muscles and low flight muscle mass ratio relative to body mass) (Marden, 1987; Dudley, 2000), making it unlikely for them to be able to fill the role of an aerial predator but well adapted to infrequent spells of sustained flight; (ii) species may need to fly in the same way even though they have different ecological niches, which may increase the level of intra-order clustering because the existing flight apparatus can be used to fulfil the same aerodynamic needs despite interacting with different organisms [e.g. Syrphidae and Tabanidae need to fly in similar ways: visiting flowers versus visiting vertebrate hosts (female tabanids), ability to hover above resources, ability to change direction rapidly to regularly escape predators or swatting, etc.); and (iii) a specific goal may be achieved in more than one way (e.g. Diptera: Asilidae and Odonata are both aerial predators with a high proportion of relative flight muscle mass) (Marden, 1987), although they probably utilize completely different flight strategies because of their very different inherited flight apparatuses. Combined, these factors suggest that, although an inherited flight apparatus is pre-disposed to certain flight strategies and precludes others, it can be somewhat modified in some instances to fit new ecological niches or maintained if aerodynamic needs do not change with differing ecological interactions. Ultimately, this may improve levels of flight strategy conservation at the order level."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Energetic and ecological costs and benefits of differing flight behaviours are still poorly known in most insect groups, although some have received attention, such as Hymenoptera: Apidae: Euglossini (Casey & May, 1985; Dudley, 1995; Dillon & Dudley, 2004), Lepidoptera: Sphingidae and Saturniidae (Bartholomew & Casey, 1978), Orthoptera: Acrididae (Snelling et al., 2012) and Hymenoptera: Apidae: Bombini (Ellington et al., 1990). Clarification of the ecological pressures leading to the adaptation of specific flight strategies and the associated energetic costs may help illuminate evolutionary trade-offs. These trade-offs are likely to explain the phylogenetic clustering found across flight-associated morphometrics and wingbeat frequency in the present study. Studies that combine quantitative evaluation of insect flight energetics with additional qualitative comparisons between orders will help in revealing why different groups utilize different flight strategies (e.g. between bees, moths and locusts) (Snelling et al., 2012). Further work to reveal ecological pressures and energetic costs of broad flight strategies in different orders is therefore required to infer why insect groups fly the way that they do."
+  },
+  {
+   "id": "u13",
+   "kind": "table 1",
+   "text": "Series | Dim1 (64%) (range) | Dim2 (33.3%) (range)\nColeoptera | -0.5~1.5 | -0.5~1.5\nDiptera | -3.5~-0.5 | -1.5~1.5\nEphemeroptera | -1.5~0.5 | -1.5~0.5\nHemiptera | -1.0~0.5 | -1.0~0.5\nHymenoptera | 0.5~2.0 | 0.5~2.0\nLepidoptera | 1.0~3.5 | -2.0~-1.0\nMecoptera | 1.0~3.5 | -1.5~0.5\nNeuroptera | -2.5~-0.5 | -2.5~-1.5\nOdonata | 2.5~3.0 | -1.5~-1.0"
+  },
+  {
+   "id": "u14",
+   "kind": "table 1",
+   "text": "Trichoptera | 2.5~3.0 | -1.0~-0.5"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8",
+   "u9"
+  ],
+  [
+   "u10"
+  ],
+  [
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14"
+  ]
+ ],
+ "calls": 13,
+ "categories": [
+  {
+   "variable": "n",
+   "code": "n = 102",
+   "term": "102",
+   "unit": "u0",
+   "model_label": null,
+   "label": "102",
+   "explanation": ""
+  },
+  {
+   "variable": "time (ms) from the start of the wingbeat",
+   "code": "t",
+   "term": "time (ms) from the start of the wingbeat",
+   "unit": "u4",
+   "model_label": "time",
+   "label": "time",
+   "explanation": "ms) from the start of the wingbeat"
+  },
+  {
+   "variable": "Taxonomic distribution on the graphs (Fig. 2, a–d)",
+   "code": "Hymenoptera",
+   "term": "Hymenoptera",
+   "unit": "u8",
+   "model_label": "Hymenoptera",
+   "label": "Hymenoptera",
+   "explanation": ""
+  },
+  {
+   "variable": "e.g.",
+   "code": "e.g.",
+   "term": "e.g.",
+   "unit": "u11",
+   "model_label": "e.g.",
+   "label": "e.g",
+   "explanation": "."
+  },
+  {
+   "variable": "Series",
+   "code": "Coleoptera",
+   "term": "Coleoptera",
+   "unit": "u13",
+   "model_label": "Coleoptera",
+   "label": "Coleoptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Diptera",
+   "term": "Diptera",
+   "unit": "u13",
+   "model_label": "Diptera",
+   "label": "Diptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Ephemeroptera",
+   "term": "Ephemeroptera",
+   "unit": "u13",
+   "model_label": "Ephemeroptera",
+   "label": "Ephemeroptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Hemiptera",
+   "term": "Hemiptera",
+   "unit": "u13",
+   "model_label": "Hemiptera",
+   "label": "Hemiptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Hymenoptera",
+   "term": "Hymenoptera",
+   "unit": "u12",
+   "model_label": "Hymenoptera",
+   "label": "Hymenoptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Lepidoptera",
+   "term": "Lepidoptera",
+   "unit": "u12",
+   "model_label": "Lepidoptera",
+   "label": "Lepidoptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Mecoptera",
+   "term": "Mecoptera",
+   "unit": "u13",
+   "model_label": "Mecoptera",
+   "label": "Mecoptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Neuroptera",
+   "term": "Neuroptera",
+   "unit": "u13",
+   "model_label": "Neuroptera",
+   "label": "Neuroptera",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Odonata",
+   "term": "Odonata",
+   "unit": "u13",
+   "model_label": "Odonata",
+   "label": "Odonata",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "Trichoptera",
+   "term": "Trichoptera",
+   "unit": "u14",
+   "model_label": "Trichoptera",
+   "label": "Trichoptera",
+   "explanation": ""
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "flight strategy",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "wingbeat frequency",
+   "code": "",
+   "label": "wingbeat frequency",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "morphological measurements",
+   "code": "",
+   "label": "body mass",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "morphological measurements",
+   "code": "",
+   "label": "wing length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "morphological measurements",
+   "code": "",
+   "label": "wing area",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "morphological measurements",
+   "code": "",
+   "label": "wing loading",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "aerial predator",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "infrequent spells of sustained flight",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "visiting flowers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "visiting vertebrate hosts (female tabanids)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "ability to hover above resources",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "flight strategy",
+   "code": "",
+   "label": "ability to change direction rapidly to regularly escape predators or swatting",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  }
+ ],
+ "dropped": [],
+ "seconds": 39.0
+}

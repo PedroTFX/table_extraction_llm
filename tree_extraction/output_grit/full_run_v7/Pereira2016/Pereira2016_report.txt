@@ -1,0 +1,111 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Pereira2016/Pereira2016.xlsx  (103 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Pereira2016/Pereira2016.csv  (222 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 44 pair(s))
+  'Anochetus diegensis Forel, 1912' -> 'Anochetus diegensis'
+  'Anochetus horridus Kempf, 1964' -> 'Anochetus horridus'
+  'Anochetus mayri Emery, 1884' -> 'Anochetus mayri'
+  'Anochetus targionii Emery, 1894' -> 'Anochetus targionii'
+  'Ectatomma edentatum Roger, 1863' -> 'Ectatomma edentatum'
+  'Ectatomma lugens Emery, 1894' -> 'Ectatomma lugens'
+  'Ectatomma tuberculatum (Olivier, 1791)' -> 'Ectatomma tuberculatum'
+  'Gnamptogeny sacuminata Emery, 1896' -> 'Gnamptogeny sacuminata'
+  'Gnamptogeny sannulata Mayr, 1887' -> 'Gnamptogeny sannulata'
+  'Gnamptogeny sconcinna (Fr. Smith, 1858)' -> 'Gnamptogeny sconcinna'
+  'Gnamptogeny shaenschi Emery, 1902' -> 'Gnamptogeny shaenschi'
+  'Gnamptogeny shorni Santschi, 1929' -> 'Gnamptogeny shorni'
+  'Gnamptogeny slanei Kempf, 1960' -> 'Gnamptogeny slanei'
+  'Gnamptogenys moelleri (Forel, 1912)' -> 'Gnamptogenys moelleri'
+  'Gnamptogenys striatula Mayr, 1883' -> 'Gnamptogenys striatula'
+  'Gnamptogenys sulcata (Fr. Smith, 1858)' -> 'Gnamptogenys sulcata'
+  'Hypoponera argentina (Santschi, 1922)' -> 'Hypoponera argentina'
+  'Hypoponera distinguenda (Emery, 1890)' -> 'Hypoponera distinguenda'
+  'Hypoponera schmalzi (Emery, 1896)' -> 'Hypoponera schmalzi'
+  'Hypoponera trigona (Mayr, 1887)' -> 'Hypoponera trigona'
+  'Leptogenys famelica Emery, 1896' -> 'Leptogenys famelica'
+  'Leptogenys gaigei Wheeler, 1923' -> 'Leptogenys gaigei'
+  'Leptogenys guianensis Wheeler, 1923' -> 'Leptogenys guianensis'
+  'Leptogenys langi Wheeler, 1923' -> 'Leptogenys langi'
+  'Mayaponera constricta (Mayr, 1884)' -> 'Mayaponera constricta'
+  'Neoponera apicalis (Latreille, 1802)' -> 'Neoponera apicalis'
+  'Neoponera commutata (Roger, 1860)' -> 'Neoponera commutata'
+  'Neoponera laevigata (Fr. Smith, 1858)' -> 'Neoponera laevigata'
+  'Neoponera procidua Emery, 1890' -> 'Neoponera procidua'
+  'Neoponera prox. obscuricornis (Emery, 1890)' -> 'Neoponera prox. obscuricornis'
+  'Neoponera unidentata (Mayr, 1862)' -> 'Neoponera unidentata'
+  'Odontoma chus prox. yucatecus Brown Jr., 1976' -> 'Odontoma chus prox. yucatecus'
+  'Odontoma chusbauri Emery, 1891' -> 'Odontoma chusbauri'
+  'Odontoma chusbrunneus (Patton, 1894)' -> 'Odontoma chusbrunneus'
+  'Odontoma chuscaelatus Brown Jr., 1976' -> 'Odontoma chuscaelatus'
+  'Odontoma chushaematodus (Linnaeus, 1758)' -> 'Odontoma chushaematodus'
+  'Odontoma chushastatus (Fabricius, 1804)' -> 'Odontoma chushastatus'
+  'Odontoma chusmeinerti Forel, 1905' -> 'Odontoma chusmeinerti'
+  'Pachycondy lacrassinoda (Latreille, 1802)' -> 'Pachycondy lacrassinoda'
+  'Pachycondy laharpax (Fabricius, 1804)' -> 'Pachycondy laharpax'
+  'Pachycondy lastriata Fr. Smith, 1858' -> 'Pachycondy lastriata'
+  'Rasopone arhuaca (Forel, 1901)' -> 'Rasopone arhuaca'
+  'Rasopone ferruginea (Fr. Smith, 1858)' -> 'Rasopone ferruginea'
+  'Typhlomyrmex pusillus Emery, 1894' -> 'Typhlomyrmex pusillus'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Ectatomma sp. 4': no ground-truth name denotes this organism
+  'Hypoponera sp. 1': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 100
+  missed (FN)         : 3
+  spurious, in scope  : 122   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.450 / 0.971 / 0.615   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.450 / 0.971 / 0.615   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.971   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    100  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    100  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    100  0.000  <-- low
+  lifeStage                     0    100  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    100  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 3 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        3
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'leaf litter nests predator' ->  'leaf litter nests'          x2
+     'detritivorous'              ->  'd'                          x1
+  -> 2 substitutions explain 3 of 3 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Pereira2016_misses.csv, Pereira2016_misses_summary.json (3 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  diet                                             42    92   Δ+50 (split?)
+  nesting                                          61   130   Δ+69 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.450  0.971  0.615    100   122     3   id+type+value
+  tags        0.000  0.000  0.000      0   222   103   basis+id+type+value+stat+sex+stage
+             (F1 -0.615 vs previous)
+             note: only 0/100 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

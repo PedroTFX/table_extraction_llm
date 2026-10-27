@@ -1,0 +1,372 @@
+{
+ "0:0": {
+  "cells": {
+   "T": {
+    "term": null,
+    "parts": [
+     "T"
+    ],
+    "options": {
+     "T": {
+      "evidence": "explicit",
+      "labels": [
+       "temperature"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "T | QK": {
+      "code": 0.67,
+      "word": 0.33
+     },
+     "T": {
+      "e0": 0.011,
+      "keep": 0.989
+     }
+    }
+   },
+   "PES": {
+    "term": null,
+    "parts": [
+     "PES"
+    ],
+    "options": {
+     "PES": {
+      "evidence": "explicit",
+      "labels": [
+       "percentage of exposed soil"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "PES | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "PES": {
+      "e0": 0.014,
+      "keep": 0.986
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u6"
+   ],
+   "choice": null
+  }
+ },
+ "0:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "0:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:0": {
+  "cells": {
+   "PF": {
+    "term": "Primary Forest",
+    "parts": [
+     "PF"
+    ],
+    "options": {
+     "PF": {
+      "evidence": "explicit",
+      "labels": [
+       "Primary Forest",
+       "primary"
+      ]
+     }
+    },
+    "evidence": {
+     "PF": "explicit"
+    },
+    "probs": {
+     "PF | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "PF": {
+      "e0": 0.932,
+      "e1": 0.012,
+      "keep": 0.056
+     },
+     "PF | QB": {}
+    }
+   },
+   "SF-15": {
+    "term": "Secondary forest (15 years of regeneration",
+    "parts": [
+     "SF-15"
+    ],
+    "options": {
+     "SF-15": {
+      "evidence": "explicit",
+      "labels": [
+       "Secondary Forest",
+       "secondary forest with 15 years of regeneration",
+       "Secondary forest (15 years of regeneration",
+       "Secondary forest"
+      ]
+     }
+    },
+    "evidence": {
+     "SF-15": "explicit"
+    },
+    "probs": {
+     "SF-15 | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "SF-15": {
+      "e0": 0.005,
+      "e1": 0.226,
+      "e2": 0.136,
+      "e3": 0.608,
+      "keep": 0.025
+     },
+     "SF-15 | QB": {
+      "w0": 0.003,
+      "w1": 0.997
+     }
+    }
+   },
+   "SF-5": {
+    "term": "Secondary forest (5 years of regeneration",
+    "parts": [
+     "SF-5"
+    ],
+    "options": {
+     "SF-5": {
+      "evidence": "explicit",
+      "labels": [
+       "Secondary Forest",
+       "secondary forest with 5 years of regeneration",
+       "Secondary forest (5 years of regeneration",
+       "Secondary forest"
+      ]
+     }
+    },
+    "evidence": {
+     "SF-5": "explicit"
+    },
+    "probs": {
+     "SF-5 | QK": {
+      "code": 0.973,
+      "word": 0.027
+     },
+     "SF-5": {
+      "e0": 0.011,
+      "e1": 0.228,
+      "e2": 0.334,
+      "e3": 0.385,
+      "keep": 0.042
+     },
+     "SF-5 | QB": {
+      "w0": 0.002,
+      "w1": 0.998
+     }
+    }
+   },
+   "AG": {
+    "term": "Agriculture – AG (cocoa plantations",
+    "parts": [
+     "AG"
+    ],
+    "options": {
+     "AG": {
+      "evidence": "explicit",
+      "labels": [
+       "Agriculture",
+       "Agriculture (Cocoa",
+       "Agriculture"
+      ]
+     }
+    },
+    "evidence": {
+     "AG": "explicit"
+    },
+    "probs": {
+     "AG | QK": {
+      "code": 0.975,
+      "word": 0.025
+     },
+     "AG": {
+      "e0": 0.037,
+      "e1": 0.003,
+      "e2": 0.919,
+      "keep": 0.041
+     },
+     "AG | QB": {
+      "w0": 0.012,
+      "w1": 0.822,
+      "w2": 0.166
+     }
+    }
+   },
+   "PA": {
+    "term": "Pasture for extensive livestock",
+    "parts": [
+     "PA"
+    ],
+    "options": {
+     "PA": {
+      "evidence": "explicit",
+      "labels": [
+       "Pastures",
+       "pasture",
+       "Pasture",
+       "pastures"
+      ]
+     }
+    },
+    "evidence": {
+     "PA": "explicit"
+    },
+    "probs": {
+     "PA | QK": {
+      "code": 0.973,
+      "word": 0.027
+     },
+     "PA": {
+      "e0": 0.174,
+      "e1": 0.038,
+      "e2": 0.586,
+      "e3": 0.048,
+      "keep": 0.155
+     },
+     "PA | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4",
+    "u13",
+    "u26",
+    "u31",
+    "u35",
+    "u38"
+   ],
+   "choice": "several",
+   "probs": {
+    "p0": 0.003,
+    "p1": 0.011,
+    "p2": 0.006,
+    "p3": 0.005,
+    "p4": 0.0,
+    "p5": 0.0,
+    "several": 0.975,
+    "none": 0.0
+   }
+  }
+ },
+ "1:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "1:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:1": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u33"
+   ],
+   "choice": null
+  }
+ },
+ "4:2": {
+  "cells": {},
+  "units": {
+   "offered": [
+    "u24"
+   ],
+   "choice": null
+  }
+ },
+ "5:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 24, printed whole: 0, table footnote: 0"
+ },
+ "5:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 15, printed whole: 0, table footnote: 0"
+ },
+ "5:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 10, printed whole: 0, table footnote: 0"
+ },
+ "5:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 9, printed whole: 0, table footnote: 0"
+ },
+ "5:5": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 8, printed whole: 0, table footnote: 0"
+ },
+ "5:6": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:7": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "_endings_done": true
+}

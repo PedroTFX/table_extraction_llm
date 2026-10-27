@@ -1,0 +1,815 @@
+{
+ "paper": "Steinert2020",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:2580dce/tier:advanced/page:1/block:10)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "The main aim of this study was to assess the potential for adjusting management practices in power-line clearings to improve habitat quality for solitary bees. We assessed whether the effect on bee communities was sustained over three years, giving bee populations time to disperse between and populate the cleared habitat patches created by experimental treatments. We conducted a large-scale field experiment to study effects on bee communities in response to different maintenance clearing practices (treatments): (1) cut, i.e. all trees cut and left to decay in the clearing; (2) cut-remove, i.e. all trees cut and removed from the plot; and (3) uncut. We measured effects of treatments on the bee community for three years post-treatment and studied whether temporal patterns depended on environmental context. We asked the following questions:"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "all trees cut and left to decay in the clearing; (2) cut-remove: all trees cut and removed from the plot, (3) uncut (Fig. 1). The woody debris in the cut-remove treatment was moved and assembled into a pile at one of the edges of the treatment plot. We expected that the initial responses to habitat interventions would occur at the behavioral level of individuals within the bee communities (Wong and Candolin, 2015). Nevertheless, differences in species and individuals among the treatments likely reflect habitat preferences by bees from the local species pool. If one habitat is used more than the other this should be reflected in the collected material and should mirror the suitability of the habitat. The preference or avoidance of species to differently managed habitat patches within the spatial scale of the community can therefore reveal which of the clearing practices may enhance the habitat quality for bees. We assume that improved habitat conditions will ultimately increase bee populations, but in this study, we are only reporting the preference of bees for the different treatments."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "We used flight interception traps to sample the solitary bee communities within the power-line clearings (Moretti et al., 2009; Ulyshen et al., 2010; Rubene et al., 2015), to ensure a collection of representative data of the bee communities (Oertli et al., 2005). This sampling procedure enabled a continuous and consistent sampling intensity throughout the whole foraging activity season of bees in the three subsequent years. Although pan-trapping or vane traps are considered more effective for trapping bees (Westphal et al., 2008; Hall, 2018), pan-traps would be inefficient in our sites, due to large temporal and spatial coverage, and vane traps were not recognized as a standard sampling procedure at the time we started our data collection. We installed three flight interception traps (window traps) within each treatment plot (19 sites, 3 treatments), placed along the northernmost end of the treatment plot, to maximize sun exposure (Fig. 1). The traps consisted of two transparent Plexiglas screens (370 mm \u0004 210 mm), that formed a cross, with a funnel and container attached to it (Fig. A1). The container was filled with 50:50 mixture of water and green propylene glycol and a drop of detergent. Bees were sampled continuously throughout their main foraging-activity season. Traps were installed immediately after snowmelt (April/May) and removed in early autumn (September). We emptied traps four times in 2013 and 2014 and five times in 2015, due to an earlier onset of snowmelt. The collected material was stored in 80% ethanol before pinning and identification. All bees were identified using regional identification keys (Schmid-Egger and Scheuchl 1997; Amiet et al., 1999; 2001; Scheuchl, 2000, 2006; Amiet, 2004). Voucher specimens are preserved in the entomological collection at the Norwegian University of Life Sciences."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Variables in the analyses. Response variables and candidate explanatory variables for the analyses of the full regression models. Measured values (range) of the bees, the functional trait groups and beta diversity components. Spatial scale and measured values (range/levels) of the plant community (floral resources), the environmental conditions and habitat characteristics. Variables in bold were included in the full (most complex) models. For description of the variables, see methods chapter, under ‘Data collection ‘and ‘Data preparation’."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "We compiled trait information for three traits known to influence bee responses to environmental conditions: nesting preference (above vs below-ground nesters), tongue-length and body size (Table A1). The trait values for nesting preference was obtained from the literature (Carreck, 2016; Westrich, 1990). As a measure of species mobility (Greenleaf et al., 2007), we used the intertegular distance (ITD) of the bees (Cane, 1987), hereafter ‘body size’. We obtained measures of female species specific ITDs from Sydenham et al. (2015) and from specimens in our collected material. We supplemented the ITD measures using specimens from the Natural History Museum in Oslo, Norway, to obtain a mean of minimum five specimens per species. The ITD was rounded to the nearest mm to account for the intraspecific variation in sizes. The tongue length was estimated using the BeeIT package in R (Cariveau et al., 2016), which calculates the tongue length based on the taxonomic family and species-specific ITD. For the body size and the tongue length we calculated the community weighted mean (CWM) and functional dispersion (FDis) within each treatment plot. The CWM is a measure of the dominant trait value within a species community and the FDis is a measure of the variation in trait values within a community (Laliberte and Legendre, 2010 \u0001 ). When the FDis is calculated from a single numerical trait, it equals the mean absolute Euclidean distance of trait values found within the species assemblage to the CWM. We used weighted abundances (rarefied) with the dbFD-function of the FD package in R (Laliberte et al., 2014 \u0001 ). Because the treatments were expected to improve the habitat quality for the solitary bees associated with semi-natural environments, we wanted to test the responses on functional trait diversity of bees associated with open habitats. From a previous study we found that forest-dwelling species, such as the Ericacea affiliated bees (i.e. Andrena fuscipes, A. lapponica and Colletes succinctus) showed limited response to the treatments and factors that have been identified as important for structuring bee communities in open habitats (Sydenham et al., 2015). Also, when modeling the effects on the abundance of Ericacea specialists versus the abundance of the other bees, we found that they showed contrasting responses to both forb species richness, elevation and changes over time (Fig. A2). To enable the identification of the effects on the solitary bees that were associated with the expected habitat improvement we excluded the Ericacea affiliated bees before the analyses of the functional traits."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To calculate species richness and functional dispersion (FDis) of forbs we used treatment plots as sampling units in the statistical analyses. Taxa identified only to genus were treated as morphospecies. To quantify floral resource diversity within the plant communities, we assigned nine functional effect traits to each plant species (Table A2). The traits [extracted from Lid and Lid (2005)] were based on morphological characteristics of flowers of known importance for pollinators (Table A3). The FDis of forbs, a measure of the variation in trait values within a community (Laliberte and Legendre, 2010 \u0001 ), were calculated from the abundance, using the dbFD function of the FD package in R (Laliberte et al., 2014 \u0001 ). We used the number of subplots in which a species occurred as a measure of abundance, to account for the dominant species in each treatment plot. When calculating the indices, we used weighted abundances and the Cailliez correction for non-Euclidian distances because of the inclusion of categorical traits (Forrest et al., 2015; Laliberte et al., 2014 \u0001 ). As a measure of light availability in each treatment"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Our measures of biological diversity of bees, i.e. our response variables, were species richness, abundance, proportions of below-ground nesters, FDis and CWM of body size, FDis of tongue length, in addition to turnover and overall beta diversity (Table 1). To assess the underlying patterns of beta diversity, we used the dissimilarity component of turnover (BetaJTU, i.e. species replacement) in addition to the overall beta diversity $( \\mathrm { B e t a } _ { \\mathrm { J A C } }$ , i.e. the turnover and species loss and gain) (Baselga, 2010; 2012). We carried out a preselection of candidate variables $( \\mathrm { P - v a l u e s } \\leq 0 . 1 0 )$ . For each response variable we tested each explanatory variable separately and in a two-way and three-way interaction with the categorical variables; treatment and year. Explanatory variables were elevation, richness forbs, FDis forbs, irradiation index, dead wood, source habitat, and landscape fragmentation. For each model, site identity was used as a random effect to account for the among-sites variation and repeated sampling (i.e. three treatment plots sampled once per year). We scaled all numerical variables. We calculated the generalized variance inflation factor (GVIF) values for all variables in each candidate model (Fox and Monette, 1992; Zuur et al., 2010) using the car package in R (Fox et al., 2019). Only variables with a GVIF value of"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:2580dce/tier:advanced/page:7/block:5)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 2. The effects of treatment (uncut, cut and cut-remove) and forb species richness on (a) species richness, and (b) the proportion of below-ground nesters; (c) the effects of treatment and functional dispersion (FDis) of forbs on the community weighted mean (CWM) of body size; (d) the effects of treatment, year and forb species richness on the abundance (log (yþ1)); (e) the effects of treatment, year and functional dispersion of forbs on the proportion of below-ground nesters. The shaded areas are 95% confidence intervals (CIs). Uncut (solid lines) has blue CIs, cut (dashed line) has green CIs, and cut-remove (dotted line) has yellow CIs. (For interpretation of the references to colour in this figure legend, the reader is referred to the Web version of this article.)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:2580dce/tier:advanced/page:9/block:3)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Fig. 3. (a) The effects of dead wood on the community weighted mean (CWM) of body size; (b) the effects of treatment (uncut, cut and cut-remove) and dead wood on the proportions of below-ground nesters; (c) the effects of treatment and source habitat on functional dispersion (FDis) of tongue length (log (yþ1)); (d) the effects of treatment, year and dead wood on the functional dispersion of tongue length (log). The shaded areas are 95% confidence intervals (CIs). Uncut (solid lines) has blue CIs, cut (dashed line) has green CIs, and cut-remove (dotted line) has yellow CIs. (For interpretation of the references to colour in this figure legend, the reader is referred to the Web version of this article.)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "The species composition changed over the years, but we did not find any effects of the treatments on either the overall beta diversity or the turnover. Both the overall beta diversity $( \\mathrm { B e t a _ { J A C } } )$ and the turnover (BetaJTU) decreased over the years (Table A8). The beta diversity decreased significantly from the first to the third year (by $16\\% \\left( \\mathrm{LRT} = 7.78, \\mathrm{df} = 2, \\mathrm{P} = 0.02, \\mathrm{Fig.4} \\right)$ . The temporal pattern of the turnover $( \\mathrm { B e t a _ { J T U } } )$ was not significant $( LRT = 5.48, df = 2, P = 0.065)$ . Both the overall beta diversity $( LRT = 6.68, df = 1, p = 0.01)$ and turnover $( LRT = 11.22, df = 1, P"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "![Image block](doc:2580dce/tier:advanced/page:10/block:3)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Fig. 4. The effects of year (three-year study period, 2013e2015) on (a) species richness and (b) functional dispersion (FDis) of body size (log (yþ1)); (c) the effects of treatment (uncut, cut and cut-remove) on the FDis of body size (log (yþ1)); (d) the effects of year on overall beta diversity (Beta JAC ). Black dots and whiskers are predicted values and 95% CI limits. (e) Overall beta diversity and (f) turnover (Beta JTU ) in response to forb species richness. The shaded areas are 95% confidence intervals (CIs)."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Table A1: List of solitary bees and the corresponding functional traits; Nesting preference, i.e. below-ground nesters (1) vs. above-ground nesters (0); Mean bee body size, the intertegular distance (ITD), rounded off to nearest mm (1-4); The tongue length (short vs. long), cleptoparasitic (TRUE, FALSE)."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Table A3: List of forb species and the corresponding functional traits; 9 functional traits that were used to calculate the functional diversity indices (i.e. functional dispersion). Nomenclature follows Artsdatabanken (2015). Traits are retained from Lid and Lid (2005)."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Table A4: Likelihood ratio tests of final models attained by backwards elimination of variables from the full models. Response variables were species richness, rarefied richness, abundance, proportions of below-ground nesters, FDis and CWM of the intertegular distance (ITD) (Body size), and FDis of tongue length. For variables in the final models we used p-values JTU and overall beta diversity Beta JAC , in power-line clearings. Final model summary outputs from LMMs, linear mixed-effect models. Variables: year (2013 = reference level, 2014, 2015), treatment (cut-remove = reference level, cut, and cut), richness forbs. SD, standard deviation; SE, standard error."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:20)"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:22)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Figure A2: The final model of ericaceous (ERICA) vs non-ericaceous (NON.E) specialists: Showing how the rarefied abundance of ericaceous affiliated species diverge from the other bees in response to year, forb species richness and elevation. The black dots are the predicted values and the whiskers and the shaded green and red areas are the 95% CI limits."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:24)"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:26)"
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "Figure A4: Boxplot of the raw species richness of bees in each treatment plot level (uncut, cut, cut-remove) in the three years. With mean (diamond) and median (mid-line)."
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:28)"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Figure A5: Rarefied species richness (log) in response to (a) treatment (uncut, cut and cut-remove) and forb species richness, (b) to elevation and (c) year. The shaded areas are 95% confidence intervals (CIs). Uncut (solid lines) has blue CIs, cut (dashed line) has green CIs, and cut-remove (dotted line) has yellow CIs."
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:30)"
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "Figure A5: Boxplot of the (rarefied) abundance of bees in each treatment plot level (uncut, cut, cut-remove), in each year. With mean (diamond) and median (mid-line)."
+  },
+  {
+   "id": "u28",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:32)"
+  },
+  {
+   "id": "u29",
+   "kind": "prose",
+   "text": "Figure A7: Species richness, Abundance (log), FDis body size (log) and FDis tongue length (log) in response to elevation. The shaded areas are 95% confidence intervals (CIs)."
+  },
+  {
+   "id": "u30",
+   "kind": "prose",
+   "text": "![Image block](doc:a67be5d/tier:flash/page:3/block:34)"
+  },
+  {
+   "id": "u31",
+   "kind": "prose",
+   "text": "Figure A8: The community weighted mean (CWM) of body size in response to treatment (uncut, cut and cut-remove) and elevation. The shaded areas are 95% confidence intervals (CIs). Uncut (solid lines) has blue CIs, cut (dashed line) has green CIs, and cut-remove (dotted line) has yellow CIs."
+  },
+  {
+   "id": "u32",
+   "kind": "table 0",
+   "text": "Variables in analysis | Spatial scale | Range/levels (mean)\nResponse variables\nSpecies richness | 0–29.0 (6.2)\nRarefied richness | 0–6.7 (1.3)\nAbundance | 0–112.8 (11.5)\nProp. below-ground nesters | 0–1 (0.65)\nFunctional dispersion (FDis) body size | 0–1 (0.44)\nCommunity weighted mean body size | 1–3.1 (2.0)\nFunctional dispersion (FDis) tongue length | 0–1.65 (0.57)\nTurnover ( Beta_JTU ) | 0.1–0.83 (0.45)"
+  },
+  {
+   "id": "u33",
+   "kind": "table 0",
+   "text": "Jaccard (Beta_JAC) | 0.25–0.75 (0.51)\nExplanatory variables\nYear | Site | 2013– 2014– 2015\nTreatment | Plot | uncut, cut, cut-remove\nDead wood | Site | 0–45 (10.5)\nElevation (m.a.s.l.) | Site | 45–535 (260)\nRichness forbs | Plot | 0–31 (10.8)\nFunctional dispersion (FDis) forbs | Plot | 0.20–0.41 (0.32)\nIrradiation index | Plot | -0.32 – 0.87 (0.39)\nSource habitat area | Site | 0–1 (0.32)"
+  },
+  {
+   "id": "u34",
+   "kind": "table 0",
+   "text": "Landscape fragmentation | Site | 0–1 (0.34)"
+  },
+  {
+   "id": "u35",
+   "kind": "table 2",
+   "text": "No. | Trait | Value/No. categories | Description\nInflorescence | 3 | A: singular flowers B: singular flowers in a group C: multi flowers/pseudanthium\nFlower colors | 16 | color variations\nExposed nectar/pollen | 2 | Exposed / not exposed\nNectar tube | 3 | Short / medium / long\nPollen per flower | 2 | few: less than 4 anthers per flower many: more than 4 anthers per flower\nFlowering period | 4 | vår = spring fso = early summer mso = mid summer sso = late summer\nHeight | 6.5 – 125 | average potential height (cm)\nFloral symmetry | 2 | Actinomorphic / zygomorphic\nLifenastrategy | 3 | Annual / biennial / perennial"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4"
+  ],
+  [
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12",
+   "u13",
+   "u14"
+  ],
+  [
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29"
+  ],
+  [
+   "u30",
+   "u31",
+   "u32",
+   "u33",
+   "u34",
+   "u35"
+  ]
+ ],
+ "calls": 16,
+ "categories": [
+  {
+   "variable": "maintenance clearing practices (treatments)",
+   "code": "(1)",
+   "term": "cut, i.e. all trees cut and left to decay in the clearing",
+   "unit": "u1",
+   "model_label": "cut",
+   "label": "cut",
+   "explanation": "i.e. all trees cut and left to decay in the clearing"
+  },
+  {
+   "variable": "maintenance clearing practices (treatments)",
+   "code": "(2)",
+   "term": "cut-remove, i.e. all trees cut and removed from the plot",
+   "unit": "u1",
+   "model_label": "cut-remove",
+   "label": "cut-remove",
+   "explanation": "i.e. all trees cut and removed from the plot"
+  },
+  {
+   "variable": "maintenance clearing practices (treatments)",
+   "code": "(3)",
+   "term": "uncut",
+   "unit": "u1",
+   "model_label": "uncut",
+   "label": "uncut",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "19",
+   "term": "sites",
+   "unit": "u3",
+   "model_label": "sites",
+   "label": "sites",
+   "explanation": ""
+  },
+  {
+   "variable": "None",
+   "code": "3",
+   "term": "treatments",
+   "unit": "u3",
+   "model_label": "treatments",
+   "label": "treatments",
+   "explanation": ""
+  },
+  {
+   "variable": "nesting preference",
+   "code": "above vs below-ground",
+   "term": "nesting preference",
+   "unit": "u5",
+   "model_label": "nesting preference",
+   "label": "nesting preference",
+   "explanation": ""
+  },
+  {
+   "variable": "Taxa identified only to genus",
+   "code": "morphospecies",
+   "term": "Taxa identified only to genus were treated as morphospecies.",
+   "unit": "u6",
+   "model_label": "morphospecies",
+   "label": "morphospecies",
+   "explanation": "Taxa identified only to genus were treated as ."
+  },
+  {
+   "variable": "treatment",
+   "code": "cut",
+   "term": "dashed line",
+   "unit": "u9",
+   "model_label": "cut",
+   "label": "dashed line",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "cut-remove",
+   "term": "dotted line",
+   "unit": "u9",
+   "model_label": "cut-remove",
+   "label": "dotted line",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "cut",
+   "term": "green CIs",
+   "unit": "u9",
+   "model_label": "cut",
+   "label": "green CIs",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "cut-remove",
+   "term": "yellow CIs",
+   "unit": "u9",
+   "model_label": "cut-remove",
+   "label": "yellow CIs",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting preference",
+   "code": "1",
+   "term": "below-ground nesters",
+   "unit": "u15",
+   "model_label": "below-ground nesters",
+   "label": "below-ground nesters",
+   "explanation": ""
+  },
+  {
+   "variable": "Nesting preference",
+   "code": "0",
+   "term": "above-ground nesters",
+   "unit": "u15",
+   "model_label": "above-ground nesters",
+   "label": "above-ground nesters",
+   "explanation": ""
+  },
+  {
+   "variable": "Tongue length",
+   "code": "TRUE",
+   "term": "cleptoparasitic",
+   "unit": "u15",
+   "model_label": "cleptoparasitic",
+   "label": "cleptoparasitic",
+   "explanation": ""
+  },
+  {
+   "variable": "Tongue length",
+   "code": "FALSE",
+   "term": "cleptoparasitic",
+   "unit": "u15",
+   "model_label": "cleptoparasitic",
+   "label": "cleptoparasitic",
+   "explanation": ""
+  },
+  {
+   "variable": "year",
+   "code": "2013",
+   "term": "reference level",
+   "unit": "u17",
+   "model_label": "reference level",
+   "label": "reference level",
+   "explanation": ""
+  },
+  {
+   "variable": "year",
+   "code": "2014",
+   "term": "year",
+   "unit": "u17",
+   "model_label": "year",
+   "label": "year",
+   "explanation": ""
+  },
+  {
+   "variable": "year",
+   "code": "2015",
+   "term": "year",
+   "unit": "u17",
+   "model_label": "year",
+   "label": "year",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "cut-remove",
+   "term": "reference level",
+   "unit": "u17",
+   "model_label": "reference level",
+   "label": "reference level",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "cut",
+   "term": "cut",
+   "unit": "u17",
+   "model_label": "cut",
+   "label": "cut",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "uncut",
+   "term": "uncut",
+   "unit": "u23",
+   "model_label": "uncut",
+   "label": "uncut",
+   "explanation": ""
+  },
+  {
+   "variable": "treatment",
+   "code": "cut-remove",
+   "term": "cut-remove",
+   "unit": "u17",
+   "model_label": "cut-remove",
+   "label": "cut-remove",
+   "explanation": ""
+  },
+  {
+   "variable": "Uncut",
+   "code": "solid lines",
+   "term": "blue CIs",
+   "unit": "u25",
+   "model_label": "blue CIs",
+   "label": "blue CIs",
+   "explanation": ""
+  },
+  {
+   "variable": "cut",
+   "code": "dashed line",
+   "term": "green CIs",
+   "unit": "u25",
+   "model_label": "green CIs",
+   "label": "green CIs",
+   "explanation": ""
+  },
+  {
+   "variable": "cut-remove",
+   "code": "dotted line",
+   "term": "yellow CIs",
+   "unit": "u25",
+   "model_label": "yellow CIs",
+   "label": "yellow CIs",
+   "explanation": ""
+  },
+  {
+   "variable": "Inflorescence",
+   "code": "A",
+   "term": "singular flowers",
+   "unit": "u35",
+   "model_label": "singular flowers",
+   "label": "singular flowers",
+   "explanation": ""
+  },
+  {
+   "variable": "Inflorescence",
+   "code": "B",
+   "term": "singular flowers in a group",
+   "unit": "u35",
+   "model_label": "singular flowers",
+   "label": "singular flowers",
+   "explanation": "in a group"
+  },
+  {
+   "variable": "Inflorescence",
+   "code": "C",
+   "term": "multi flowers/pseudanthium",
+   "unit": "u35",
+   "model_label": "multi flowers/pseudanthium",
+   "label": "multi flowers/pseudanthium",
+   "explanation": ""
+  },
+  {
+   "variable": "Exposed nectar/pollen",
+   "code": "Exposed",
+   "term": "Exposed",
+   "unit": "u35",
+   "model_label": "Exposed",
+   "label": "Exposed",
+   "explanation": ""
+  },
+  {
+   "variable": "Exposed nectar/pollen",
+   "code": "not exposed",
+   "term": "not exposed",
+   "unit": "u35",
+   "model_label": "not exposed",
+   "label": "not exposed",
+   "explanation": ""
+  },
+  {
+   "variable": "Nectar tube",
+   "code": "Short",
+   "term": "Short",
+   "unit": "u35",
+   "model_label": "Short",
+   "label": "Short",
+   "explanation": ""
+  },
+  {
+   "variable": "Nectar tube",
+   "code": "medium",
+   "term": "medium",
+   "unit": "u35",
+   "model_label": "medium",
+   "label": "medium",
+   "explanation": ""
+  },
+  {
+   "variable": "Nectar tube",
+   "code": "long",
+   "term": "long",
+   "unit": "u35",
+   "model_label": "long",
+   "label": "long",
+   "explanation": ""
+  },
+  {
+   "variable": "Pollen per flower",
+   "code": "few",
+   "term": "less than 4 anthers per flower",
+   "unit": "u35",
+   "model_label": "few",
+   "label": "less than 4 anthers per flower",
+   "explanation": ""
+  },
+  {
+   "variable": "Pollen per flower",
+   "code": "many",
+   "term": "more than 4 anthers per flower",
+   "unit": "u35",
+   "model_label": "many",
+   "label": "more than 4 anthers per flower",
+   "explanation": ""
+  },
+  {
+   "variable": "Flowering period",
+   "code": "vår",
+   "term": "spring",
+   "unit": "u35",
+   "model_label": "spring",
+   "label": "spring",
+   "explanation": ""
+  },
+  {
+   "variable": "Flowering period",
+   "code": "fso",
+   "term": "early summer",
+   "unit": "u35",
+   "model_label": "early summer",
+   "label": "early summer",
+   "explanation": ""
+  },
+  {
+   "variable": "Flowering period",
+   "code": "mso",
+   "term": "mid summer",
+   "unit": "u35",
+   "model_label": "mid summer",
+   "label": "mid summer",
+   "explanation": ""
+  },
+  {
+   "variable": "Flowering period",
+   "code": "sso",
+   "term": "late summer",
+   "unit": "u35",
+   "model_label": "late summer",
+   "label": "late summer",
+   "explanation": ""
+  },
+  {
+   "variable": "Floral symmetry",
+   "code": "Actinomorphic",
+   "term": "Actinomorphic",
+   "unit": "u35",
+   "model_label": "Actinomorphic",
+   "label": "Actinomorphic",
+   "explanation": ""
+  },
+  {
+   "variable": "Floral symmetry",
+   "code": "zygomorphic",
+   "term": "zygomorphic",
+   "unit": "u35",
+   "model_label": "zygomorphic",
+   "label": "zygomorphic",
+   "explanation": ""
+  },
+  {
+   "variable": "Lifenastrategy",
+   "code": "Annual",
+   "term": "Annual",
+   "unit": "u35",
+   "model_label": "Annual",
+   "label": "Annual",
+   "explanation": ""
+  },
+  {
+   "variable": "Lifenastrategy",
+   "code": "biennial",
+   "term": "biennial",
+   "unit": "u35",
+   "model_label": "biennial",
+   "label": "biennial",
+   "explanation": ""
+  },
+  {
+   "variable": "Lifenastrategy",
+   "code": "perennial",
+   "term": "perennial",
+   "unit": "u35",
+   "model_label": "perennial",
+   "label": "perennial",
+   "explanation": ""
+  },
+  {
+   "variable": "bee communities",
+   "code": "",
+   "label": "solitary bee communities",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "plant community",
+   "code": "",
+   "label": "floral resources",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "environmental conditions",
+   "code": "",
+   "label": "environmental conditions",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "habitat characteristics",
+   "code": "",
+   "label": "habitat characteristics",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "nesting preference",
+   "code": "",
+   "label": "above vs below-ground nesters",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "intertegular distance (ITD)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "tongue length",
+   "code": "",
+   "label": "tongue length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "functional effect traits",
+   "code": "",
+   "label": "morphological characteristics of flowers of known importance for pollinators",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "functional dispersion",
+   "code": "",
+   "label": "FDis",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "Specialization",
+   "code": "",
+   "label": "ericaceous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Specialization",
+   "code": "",
+   "label": "non-ericaceous",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Inflorescence",
+   "code": "",
+   "label": "singular flowers in a group",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Flower colors",
+   "code": "",
+   "label": "color variations",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Pollen per flower",
+   "code": "",
+   "label": "few: less than 4 anthers per flower",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Pollen per flower",
+   "code": "",
+   "label": "many: more than 4 anthers per flower",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Flowering period",
+   "code": "",
+   "label": "vår = spring",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Flowering period",
+   "code": "",
+   "label": "fso = early summer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Flowering period",
+   "code": "",
+   "label": "mso = mid summer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  },
+  {
+   "variable": "Flowering period",
+   "code": "",
+   "label": "sso = late summer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u35"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "treatment",
+   "code": "uncut",
+   "term": "solid lines",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "treatment",
+   "code": "uncut",
+   "term": "blue CIs",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "treatment",
+   "code": "uncut",
+   "term": "solid lines",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "treatment",
+   "code": "uncut",
+   "term": "blue CIs",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 90.1
+}

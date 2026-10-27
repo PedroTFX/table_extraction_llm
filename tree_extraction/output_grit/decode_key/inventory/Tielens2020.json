@@ -1,0 +1,589 @@
+{
+ "paper": "Tielens2020",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "In this study, we examine herbivore communities across host plant phenotype, and quantify to what degree this relationship is mediated by their respective traits. We make use of a model system on Hawai‘i Island where the dominant endemic tree in mesic forests, Metrosideros polymorpha Gaud. (Myrtaceae), thrives as polymorphic varieties, or morphotypes, over steep environmental gradients. This provides an opportune system to examine intraspecific variation in host plant traits in relation to herbivore communities. We pursued the following aims: (i) examine the effects of host phenotypic traits on phytophagous insect abundance and diversity, (ii) identify M. polymorpha traits that drive arthropod community composition, and (iii) evaluate the relationship between insect traits and host characteristics. We examined herbivorous insect communities across four hybrid zones on Hawai‘i Island, where M. polymorpha trees of varying phenotype occur in sympatry. First, we compared insect communities across hosts with different phenotypes. We then examined plant phenotype more closely to identify plant traits that drive insect community composition. Lastly, we used a trait-modelling approach to quantify correlations between insect traits and host traits."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We selected four focal sites on the west and southwest side of Hawai‘i Island where multiple varieties and phenotypes co-occur (Fig. 1) (Stacy et al., 2017). We sampled six M. polymorpha trees within each focal site (per year) to ensure within-site replication, allowing comparison across phenotypes with the same local environmental conditions. The sites were located in Hawai‘i Volcanoes National Park (2 sites; Ola’a and Escape Road), in Ka‘u Kaiholena Forest Reserve ¯ (1 site) and Ka‘u Alili Springs Forest Reserve (1 site). Sites ¯ differed in substrate type and substrate age (from 200 to 21 000 years, see Table S1 for site details). We excluded young volcanic substrates with M. polymorpha from our study (substrate age 2 for M. polymorpha in mesic forests located on substrate of similar age on Hawai‘i Island (Asner et al., 2008). Samples were collected only when weather conditions (and leaf surfaces) were predominantly dry. Canopies were accessed using the single-rope technique (Perry, 1978). Nylon bags of 1 m diameter and 2 m deep were attached to a large hoop to access branches in the outer canopy. Samples were collected by quickly bagging multiple branches in the outer canopy, and using a pole pruner to clip branches (Gruner et al., 2005)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "![Image block](doc:a2707da/tier:advanced/page:4/block:3)"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Sampling effort. The analysis included only those taxa and life stages that feed on M. polymorpha: adult and juvenile Hemiptera, and juvenile Lepidoptera and Coleoptera, with predaceous taxa in these orders excluded. We assessed insect abundance and diversity using Hill or species numbers (Hill, 1973; Jost, 2006); estimated asymptotic species richness $( q = 0 )$ , effective estimated Shannon (q = 1), and Simpson (q = 2) diversity, with the package ‘iNext’ (Hsieh et al., 2016) in R software version 3.6.1 (R Core Team, 2017). These metrics"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "To examine whether there were differences between insect species in their response to host plant characteristics, we used generalised linear mixed effect models with species-specific random slopes and intercepts (GLMM). In contrast to the previous section (1), here insect abundance is used as a response variable for each species individually, as opposed to using total abundance for all insects. We used a negative binomial distribution"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "with site as random effect and an offset for sampling effort. We tested Poisson and zero-inflated negative binomial distributions but rejected these due to poor model fit. We tested the models with and without species-specific slopes and intercept using likelihood-ratio testing and did backward model selection using ΔAICc to evaluate plant predictors as fixed effects. We used a cutoff of $\\Delta \\mathrm { A I C c } = 3$ per degree of freedom and used a bobyqa optimiser with tolerance = 0.0002 to speed up processing and increase model convergence (Bates et al., 2015). After evaluating models with and without species-specific slopes and intercepts, we used this to produce a global model containing all leaf traits as possible predictors. We compared the global model to all possible subsets of models using the function $\\mathrm { ^ { \\ast } d r e d g e ^ { \\ast } }$ in package MuMIn (Barton, 2018), and selected the best model ´ based on AICc. We report the full output of this model selection using dredge in the Supplemental material. For the best model, we report estimates and standard errors for the various predictors. We visualised differences between sites in species composition using non-parametric multi-dimensional scaling (NMDS, Bray–Curtis dissimilarity), and analysed differences in multi-variate group mean across sites using the function adonis() in the package ‘vegan’ in R (Bray–Curtis dissimilarity, assessing marginal terms) (Oksanen et al., 2018). We report partial $R ^ { 2 }$ pseudo-F values, and P values based on permutations."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To analyse the interaction between host plant characteristics and insect species traits, we applied a trait-modelling approach as proposed by Brown et al. (2014), and generated generalised linear models with a term for the environment by trait interaction. Using the function traitglm() in the package ‘mvabund’ in R, we fit a generalised linear model for all species and all sites simultaneously, as a function of M. polymorpha host plant characteristics measured for each tree, insect traits at the species level, and the insect trait by plant trait interaction (Wang et al., 2017). We used a negative binomial family and least absolute shrinkage penalty (LASSO) to do model selection and evaluate model predictors, and used manyglm() for resampling-based testing of the host plant characteristics by insect traits interaction term (Wang et al., 2017). LASSO is a method of penalised likelihood that shrinks terms to zero that do not explain variation, improving the predictive performance (Hastie et al., 2009). To deal with the assumption in generalised linear models of independence of samples, we used anova.traitglm() which resamples sites but maintains all species from a site together, as such making the assumption that abundances are independent across sites, though not across species (Warton et al., 2015b; Löbel et al., 2018). We examined residuals of the traitglm model to confirm homogeneity of variance of both models, to test analysis of deviance and variable selection using LASSO (Figures S5 and S6), and to select an appropriate distribution."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Host leaf traits did not influence insect abundance (GLMM; Fig. 2a), Shannon index $( q = 1 )$ , or Simpson index $( q = 2 )$ but did affect insect richness (Fig. 2b). Insect richness was marginally greater on trees without trichomes than on intermediate and high trichome density (q = 0; GLMM: $\\chi ^ { 2 } = 5 . 8 0 9$ ΔAICc likelihood-ratio test = 1.81, $P \\; = \\; 0.055;$ Fig. 2b). Species richness was not correlated with foliar nitrogen content, mean specific leaf area, or leaf water content. Species richness increased with leaf phosphorus content $( \\chi ^ { 2 } = 5 . 6 1 5$ , ΔAICc to null $\\mathrm { m o d e l } = 3 . 6 1 , P"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:a2707da/tier:advanced/page:7/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 2. Herbivore abundance (a) and estimated herbivore species richness [(b), ChaoRichness(), q = 0] as a function of trichome presence, for Hawai‘i hybrid zone sites in 2014 and 2015. Different letters correspond to significant differences between tree pubescence levels (GLMM; richness $\\chi ^ { 2 } { = } 5 . 8 0 8 6$ 𝛥 AICc likelihood-ratio test = 1.81, P = 0.0548; abundance NS)."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "Almost half of the variation in species composition was explained by leaf traits (PERMANOVA cumulative $R ^ { 2 } = 0 . 4 6 ,$ trichomes: $R ^ { 2 } = 0 . 1 7 , P 1 ,12 = 2.57, R 2 = 0.20, P"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:a2707da/tier:advanced/page:8/block:3)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:a2707da/tier:advanced/page:10/block:3)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Fig. 5. Abundance of the 10 most abundant species as a function of (a) foliar phosphorus $( F _ { 1 , 4 2 } = 6 . 8 9 9 , P = 0 . 0 1 3 6 ) ; ( \\mathrm { b } )$ foliar nitrogen $( F _ { 1 , \\; 4 2 } = 2 . 1 8 5 ,$ $P = 0 . 0 2 5 4 ) ;$ (c) mean specific leaf area (not included in best fit model, based on likelihood-ratio test $\\chi^{2}=61.431,\\ \\Delta AICc =47.5,\\ P"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Fig. 6. Interaction coefficients from model output of traitGLM model with LASSO testing. (TraitGLM with LASSO testing, n = 24, P = 0.003). [Colour figure can be viewed at [wileyonlinelibrary.com](http://wileyonlinelibrary.com)]."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "ET and DSG conceived the ideas and designed methodology; ET collected and analysed the data; ET led the writing of the manuscript. All authors contributed critically to the drafts and gave final approval for publication."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Sampling effort was similar across sites (mean dry mass of sampled foliage = 605 g SD 204 g, $F_{2,21} = 1.22,$ $P = 0 . 3 1 5 )$ and across years $F_{I,43}=1.481$ , $P = 0 . 2 3 0 )$ . Sampling effort was not correlated with leaf trichome morphotype, specific leaf area, mean water content or percentage phosphorus, but was correlated positively with foliar nitrogen content $( F _ { I , 2 I } = 1 3$ $P = 0 . 0 0 1 5$ Supplemental Figure S1, Table S3)."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Sites at Hawai‘i Volcanoes National Park (HAVO) and Kau Forest Reserve. Morphotype codes are as following: G-"
+  },
+  {
+   "id": "u18",
+   "kind": "table 0",
+   "text": "Traits | Trait levels\nHerbivore communitySpecies-level variation | Diet breadth | generalist (n = 15)\nspecialist (n = 21)\nFeeding guild | sap feeder (n = 25)\nleaf chewer (n = 9)\nseed feeder (n = 1)\nflower/bud feeder (n = 1)\nLocation juvenile | free living (n = 26)\ngall (n = 4)\nlitter (n = 4)"
+  },
+  {
+   "id": "u19",
+   "kind": "table 0",
+   "text": "shelter (n = 1)\nBody size | in mm, range = 1.0–10.5\nMetrosideros polymorphaIndividual based variation | Leaf trichomes | glabrous (G) (n = 10)\npubescent (P) (n = 8)\nintermediate (H) (n = 6)\nSpecific leaf area | in cm^2 g^-1 , range = 31.4–91.5\nFoliar nitrogen | mean = 1.175%; range = 0.61–1.91%\nFoliar phosphorus | mean = 0.0676%; range = 0.03–0.16%\nLeaf water content | in grams, range = 0.08–0.5 g"
+  },
+  {
+   "id": "u20",
+   "kind": "table 1",
+   "text": "Foliar nitrogen | Foliar phosphorus | Specific leaf area\nFoliar nitrogen content | - | - | -\nFoliar phosphorus content | 0.8052 | - | -\nSpecific leaf area | 0.8377 | 0.8316 | -\nWater content | 0.1344 | 0.2912 | 0.1770"
+  },
+  {
+   "id": "u21",
+   "kind": "table 2",
+   "text": "Taxonomic Group | Glabrous | Intermediate | Pubescent\nPariaconus pyramidalis | ~2.5 | ~-1.8 | ~-2.2\nGeometridae sp. | ~0.8 | ~0.6 | ~-0.3\nKoanoa hawaiiensis | ~0.5 | ~0.4 | ~0.2\nOceanides vulcans | ~0.3 | ~0.3 | ~0.1\nSarona adonias | ~0.2 | ~-1.8 | ~-1.5\nOrthotylus metrosideri | ~-0.2 | ~1.5 | ~0.6\nLeialoha sp. | ~-0.3 | ~0.6 | ~0.4\nTympanococcus tympanistus | ~-0.6 | ~0.8 | ~-0.3\nOpuna sp. | ~-1.2 | ~-1.5 | ~-0.3"
+  },
+  {
+   "id": "u22",
+   "kind": "table 2",
+   "text": "Greenidea psidii | ~-2.8 | ~0.6 | ~2.5"
+  },
+  {
+   "id": "u23",
+   "kind": "table 3",
+   "text": "Greenidea psidii (Aphididae) | Orthotylus metrosideri (Miridae)\nKoanoa hawaiiensis (Miridae) | Pariaconus pyramidalis (Trioizidae)\nLeialoha sp. (Delphacidae) | Sarona adonias (Miridae)\nOceanides vulcans (Lygaeidae) | Tympanococcus tympanistus (Pseudococcidae)\nOpuna sp. (Miridae) | Geometridae sp. (Lepidoptera: Geometridae)"
+  },
+  {
+   "id": "u24",
+   "kind": "table 7",
+   "text": "Leaf trait | F ratio, df | P value\nTrichome presence | F_2,22 = 1.22 | 0.352\nSpecific leaf area | F_1,22 = 2.293 | 0.144\nMean water content | F_1,22 = 2.97 | 0.099\nFoliar phosphorus content | F_1,22 = 2.85 | 0.105\nFoliar nitrogen content | F_1,21 = 13 | 0.0015"
+  },
+  {
+   "id": "u25",
+   "kind": "table 10",
+   "text": "Variable | Estimate | t value | P value\nAbundance | 0.038 ± 0.26 | 0.146 | 0.88\nRichness | -8.07*10^-6 ± 0.0014 | -0.006 | 0.99"
+  },
+  {
+   "id": "u26",
+   "kind": "table 11",
+   "text": "Variable | Sum of squares | R^2 | P value\nSampling Date | 0.60 | 0.037 | 0.06\nResiduals | 15.63 | 0.96"
+  },
+  {
+   "id": "u27",
+   "kind": "table 12",
+   "text": "Bioclim variable | Measured value (30 year average)\nMean annual temperature | 16.8°C\nStandard deviation of temperature (seasonality) | 1.13°C\nTemperature annual range | 12.4°C\nAnnual precipitation | 2268.98 mm\nCoefficient of variation of precipitation (seasonality) | 27.75"
+  },
+  {
+   "id": "u28",
+   "kind": "table 16",
+   "text": "Foliar nitrogen content (%, standardized) | Sampling dry weight (g)\n~-1.5 | ~320\n~-1.3 | ~540\n~-1.1 | ~500\n~-1.0 | ~500\n~-0.9 | ~530\n~-0.9 | ~500\n~-0.8 | ~470\n~-0.8 | ~410\n~-0.6 | ~420"
+  },
+  {
+   "id": "u29",
+   "kind": "table 16",
+   "text": "~-0.4 | ~530\n~-0.2 | ~570\n~0.1 | ~380\n~0.2 | ~600\n~0.3 | ~610\n~0.4 | ~550\n~0.5 | ~1150\n~0.6 | ~940\n~0.8 | ~760\n~0.9 | ~570"
+  },
+  {
+   "id": "u30",
+   "kind": "table 16",
+   "text": "~1.0 | ~940\n~1.1 | ~630\n~1.2 | ~510\n~1.4 | ~920\n~2.1 | ~730"
+  },
+  {
+   "id": "u31",
+   "kind": "table 20",
+   "text": "Linear predictor value (range) | Dunn-Smyth Residuals (range)\n-6~5 | -3.2~2.9"
+  },
+  {
+   "id": "u32",
+   "kind": "table 21",
+   "text": "Linear predictor (range) | Dunn-Smyth residual (range)\n-8~4 | -4~6"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22"
+  ],
+  [
+   "u23",
+   "u24",
+   "u25",
+   "u26",
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "q",
+   "code": "0",
+   "term": "asymptotic species richness",
+   "unit": "u3",
+   "model_label": "asymptotic",
+   "label": "asymptotic",
+   "explanation": "species richness"
+  },
+  {
+   "variable": "q",
+   "code": "1",
+   "term": "effective estimated Shannon",
+   "unit": "u3",
+   "model_label": "Shannon",
+   "label": "Shannon",
+   "explanation": "effective estimated"
+  },
+  {
+   "variable": "q",
+   "code": "2",
+   "term": "Simpson",
+   "unit": "u3",
+   "model_label": "Simpson",
+   "label": "Simpson",
+   "explanation": ""
+  },
+  {
+   "variable": "insect trait by plant trait interaction",
+   "code": "M. polymorpha",
+   "term": "M. polymorpha host plant characteristics",
+   "unit": "u6",
+   "model_label": "M. polymorpha",
+   "label": "M. polymorpha",
+   "explanation": "host plant characteristics"
+  },
+  {
+   "variable": "insect traits",
+   "code": "species level",
+   "term": "insect traits at the species level",
+   "unit": "u6",
+   "model_label": "species",
+   "label": "species",
+   "explanation": "insect traits at the level"
+  },
+  {
+   "variable": "abundance",
+   "code": "q = 1",
+   "term": "Shannon index",
+   "unit": "u7",
+   "model_label": "Shannon",
+   "label": "Shannon",
+   "explanation": "index"
+  },
+  {
+   "variable": "abundance",
+   "code": "q = 2",
+   "term": "Simpson index",
+   "unit": "u7",
+   "model_label": "Simpson",
+   "label": "Simpson",
+   "explanation": "index"
+  },
+  {
+   "variable": "insect richness",
+   "code": "q = 0",
+   "term": "trichome density",
+   "unit": "u7",
+   "model_label": "trichome",
+   "label": "trichome",
+   "explanation": "density"
+  },
+  {
+   "variable": "herbivore species richness",
+   "code": "q = 0",
+   "term": "trichome presence",
+   "unit": "u9",
+   "model_label": "trichome",
+   "label": "trichome",
+   "explanation": "presence"
+  },
+  {
+   "variable": "Leaf trichomes",
+   "code": "G",
+   "term": "glabrous",
+   "unit": "u19",
+   "model_label": "glabrous",
+   "label": "glabrous",
+   "explanation": ""
+  },
+  {
+   "variable": "Leaf trichomes",
+   "code": "P",
+   "term": "pubescent",
+   "unit": "u19",
+   "model_label": "pubescent",
+   "label": "pubescent",
+   "explanation": ""
+  },
+  {
+   "variable": "Leaf trichomes",
+   "code": "H",
+   "term": "intermediate",
+   "unit": "u19",
+   "model_label": "intermediate",
+   "label": "intermediate",
+   "explanation": ""
+  },
+  {
+   "variable": "Leaf trait",
+   "code": "F_2,22",
+   "term": "Trichome presence",
+   "unit": "u24",
+   "model_label": "Trichome",
+   "label": "Trichome",
+   "explanation": "presence"
+  },
+  {
+   "variable": "Leaf trait",
+   "code": "F_1,22",
+   "term": "Specific leaf area",
+   "unit": "u24",
+   "model_label": "Specific leaf area",
+   "label": "Specific leaf area",
+   "explanation": ""
+  },
+  {
+   "variable": "Leaf trait",
+   "code": "F_1,22",
+   "term": "Mean water content",
+   "unit": "u24",
+   "model_label": "Mean water content",
+   "label": "Mean water content",
+   "explanation": ""
+  },
+  {
+   "variable": "Leaf trait",
+   "code": "F_1,22",
+   "term": "Foliar phosphorus content",
+   "unit": "u24",
+   "model_label": "Foliar phosphorus content",
+   "label": "Foliar phosphorus content",
+   "explanation": ""
+  },
+  {
+   "variable": "Leaf trait",
+   "code": "F_1,21",
+   "term": "Foliar nitrogen content",
+   "unit": "u24",
+   "model_label": "Foliar nitrogen content",
+   "label": "Foliar nitrogen content",
+   "explanation": ""
+  },
+  {
+   "variable": "host plant phenotype",
+   "code": "",
+   "label": "polymorphic varieties",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "host plant phenotype",
+   "code": "",
+   "label": "morphotypes",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "insect abundance",
+   "code": "",
+   "label": "insect abundance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "insect traits",
+   "code": "",
+   "label": "insect traits at the species level",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "host plant characteristics",
+   "code": "",
+   "label": "M. polymorpha host plant characteristics",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "insect traits",
+   "code": "",
+   "label": "insect trait by plant trait interaction",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "insect richness",
+   "code": "",
+   "label": "insect richness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "insect richness",
+   "code": "",
+   "label": "Species richness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "leaf traits",
+   "code": "",
+   "label": "trichome presence",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "leaf traits",
+   "code": "",
+   "label": "leaf phosphorus content",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u7"
+  },
+  {
+   "variable": "Herbivore community",
+   "code": "",
+   "label": "generalist",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Herbivore community",
+   "code": "",
+   "label": "specialist",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "sap feeder",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "leaf chewer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "seed feeder",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Feeding guild",
+   "code": "",
+   "label": "flower/bud feeder",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Location",
+   "code": "",
+   "label": "free living",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Location",
+   "code": "",
+   "label": "gall",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Location",
+   "code": "",
+   "label": "litter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "Leaf trichomes",
+   "code": "",
+   "label": "glabrous (G)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Leaf trichomes",
+   "code": "",
+   "label": "pubescent (P)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Leaf trichomes",
+   "code": "",
+   "label": "intermediate (H)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Bioclim variable",
+   "code": "",
+   "label": "Mean annual temperature",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Bioclim variable",
+   "code": "",
+   "label": "Standard deviation of temperature (seasonality)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Bioclim variable",
+   "code": "",
+   "label": "Temperature annual range",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Bioclim variable",
+   "code": "",
+   "label": "Annual precipitation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  },
+  {
+   "variable": "Bioclim variable",
+   "code": "",
+   "label": "Coefficient of variation of precipitation (seasonality)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u27"
+  }
+ ],
+ "dropped": [],
+ "seconds": 41.5
+}

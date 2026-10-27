@@ -1,0 +1,406 @@
+{
+ "paper": "McCune2023",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "![Image block](doc:3707b9f/tier:advanced/page:1/block:4)"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Received: 26 January 2023 / Accepted: 18 June 2023 / Published online: 27 June 2023"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "The objectives of this study were to determine the composition of syrphid fly communities in the Montreal metropolitan area (Canada) and to quantify the impacts of site surface area and heat islands used as a proxy for urbanisation on syrphid fly communities. We analyzed the species richness as well as the occupancy of syrphid fly species at the functional group level. We hypothesised that syrphid flies respond positively to site surface area, but negatively to urban heat islands in the landscape."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:3707b9f/tier:advanced/page:3/block:3)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "mapping of Boulfroy et al. (2013) and Institut national de santé publique du Québec (INSPQ) (2013). The level of predicted heat islands ranges from green (lowest) to dark orange and red (highest levels)"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "We extracted the data on the cover of urban heat islands from spatial databases (Boulfroy et al. 2013; Institut national de santé publique du Québec (INSPQ) 2013) and that of site surface area from Normandin et al. (2017). Site surface area refers to the surface area of each site (m 2 ) and varied from 567 to 147,000 m 2 (average of 19,980.32 m 2 ). We computed the cover of heat islands within 1 km around each sampling site as a proxy for urbanisation at the landscape level. We used the buffer tool in ArcGIS software (ArcMAP 10.5) to create buffers of 1 km around each site. Considering the dispersal ability of syrphid flies, we considered 1 km as a suitable distance to study the environmental variables that can influence syrphid fly communities at the landscape scale (Bates et al. 2011; Kleijn and van Langevelde 2006; Meyer et al. 2009). We calculated the proportion of heat island cover in each buffer zone using a public raster mapping of predicted urban heat islands and cool areas for the Montreal metropolitan area (Boulfroy et al. 2013; Institut national de santé publique du Québec (INSPQ) 2013). This mapping of heat islands was based on different variables including climatic data (surface temperature on multiple days and wind speed), an index of surface imperviousness, the normalized difference vegetation index (NDVI), and a land-use classification. Thus, the proportion of heat island cover reflected information from different variables associated with the degree of urbanisation at the landscape scale. Indeed, the effects of temperature and impervious surfaces are the key features of urbanisation which are expected to impact insect assemblages (Baldock 2020; Hamblin et al. 2018; Levé et al. 2019). The mapping of heat islands uses nine levels of increasing intensity, with levels eight and nine corresponding to heat islands (Boulfroy et al. 2013; Institut national de santé publique du Québec (INSPQ) 2013). Thus, we summed the area for these two levels in each buffer zone of 1,000 m-radius around each site to calculate the"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "We estimated the species richness of syrphids on each site during each trapping period using a hierarchical model based on data augmentation (Kéry and Royle 2016; Royle and Dorazio 2012; Royle et al. 2007). Data augmentation is an approach used to estimate the number of species in a community among an arbitrarily large set of M potential species (Royle and Dorazio 2012). This model was built using the observed detection histories of each species and incorporated the effects of explanatory variables on species richness and detection probability. Specifically, we translated capture data for each species into detected (1) or not detected (0)"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "![Image block](doc:3707b9f/tier:advanced/page:4/block:11)"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Fig. 2 Three examples of the heat island mapping of Boulfroy et al. (2013) and Institut national de santé publique du Québec (INSPQ) (2013) overlayed for our sites and their respective 1 km buffer zone. Sites depicted here have respectively the lowest (2.99%), median"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "We estimated the parameters of the model by adopting a Bayesian approach based on Markov chain Monte Carlo (MCMC) using five chains (Gelman et al. 2014). Each chain consisted of 50,000 iterations, using the first 30,000 iterations as burn-in and a thinning rate of 5. We used vague prior distributions for all parameters. For instance, we considered"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "normal priors with $\\mathrm{N}(\\mu = 0, \\sigma^2 = 100)$ for the fixed effect β parameters, and a uniform prior U(0, 50) for the standard deviation parameter of random intercepts. Model structure and priors are presented in Table S1. This model was implemented in JAGS 4.3.0 within R 4.1.2 with the jagsUI and coda packages (Kellner 2017; Lunn et al. 2013; Plummer et al. 2006; R Core Team 2021). We evaluated convergence based on trace plots, posterior density plots, and the Brooks-Gelman-Rubin statistic. Model fit was assessed with a posterior predictive check comparing the observed number of species detected on site j on date k in trap colour l against the number of expected species detected with a Pearson chisquare (Kéry and Royle 2016). We reported means and 95% Bayesian credible intervals for each parameter of interest, where intervals excluding 0 indicated that the effect of a variable is different from 0."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "We investigated occupancy patterns of three of the four syrphid fly functional groups defined above (insectivores, terrestrial saprophagous, and aquatic saprophagous). The phytophagous functional group was excluded due to very sparse data. We combined the detection data of the species of each functional group for each sampling visit on the 25 sites sampled. Here, we translated capture data for each functional group into detected (1) or not detected (0) for traps of each trap colour during a given trapping period. Much like in the species richness analysis above, data were combined into detection histories."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Our hierarchical model included fixed effects for each functional group and random intercepts, similar to a generalized linear mixed model (Gelman and Hill 2007; Zuur et al. 2009). Parameters were estimated with MCMC and five chains. Each chain was run with 1,000,000 iterations, using 750,000 iterations as burn-in, and a thinning rate of 25. We used normal priors $\\mathrm { N } ( \\mu { = } 0 , \\sigma ^ { 2 } { = } 1 0 )$ for the predictors and uniform priors U(0, 20) for the standard deviation of the site random effects. The complete code using JAGS syntax is presented in Table S2. We used trace plots, posterior density plots, and the Brooks-Gelman-Rubin statistic to assess chain convergence. Model fit was assessed with posterior predictive checks based on a Pearson chi-square aggregated over rows and columns (Kéry and Royle 2016). In addition, we computed the area under the receiver operating characteristic (ROC) curve as a measure of predictive ability (Zipkin et al. 2012). This metric can be used to assess to what extent the discriminatory ability of the model is better than random (i.e., > 0.5)."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "The occupancy analysis focused on three functional groups: insectivores, terrestrial saprophagous, and aquatic saprophagous. The phytophagous functional group was excluded due to very sparse data. Trace plots and other diagnostics for the occupancy model on functional groups suggested that chains mixed well for all parameters and that chains were sufficiently long. There were no indications that the model lacked ${ \\bf f } { \\bf t } ,$ based on the posterior predictive check on either rows or columns $\\chi^{2}{ rows } = 1096.87, P = 0.20;$ $\\chi^{2}{ columns } = 7.26, P = 0.49$ . The area under the ROC curve was 0.64 (95% CRI: [0.54, 0.75]), suggesting an intermediate model performance."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Trapping occurred over 13 periods of sampling, using blue, white, and yellow coloured pan traps. Functional groups consist of insectivores (I), terrestrial saprophagous (TS), aquatic saprophagous (AS), or phytophagous (P) species"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "![Image block](doc:3707b9f/tier:advanced/page:8/block:10)"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Fig. 5 Detection probability of syrphid fly species across Julian day (a) and pan trap colours (b) based on syrphid flies captured in the Montreal metropolitan area, QC, Canada in 2012 and 2013. Error bars denote 95% Bayesian credible intervals. For pan trap colour, letters indicate differences among colours"
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "Surprisingly, our results indicate that urbanisation only marginally affects syrphid flies at the landscape scale. Indeed, we only detected a negative impact of urbanisation on the terrestrial saprophagous syrphids as the occupancy of this group increased with decreasing cover of heat islands within 1,000 m (Fig. 6). Similarly, Rocha et al. (2018) observed no impacts of impervious surface cover, a parameter closely related to heat islands (Hart and Sailor 2009), on the occurrence of syrphid flies. Interestingly, prior studies showed that urbanisation mostly reduces the abundance and diversity of dipterans, including syrphid flies (Deguines et al. 2012, 2016; Persson et al. 2020; Verboven et al. 2014). However, other studies report contradictory results for urban sites. For example, Baldock et al. (2015) found that urban sites in the United Kingdom harboured less abundant syrphid fly populations"
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "![Image block](doc:3707b9f/tier:advanced/page:10/block:4)"
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "Acknowledgements We are grateful to O. Samson-Robert, P. Hamelin, C. Barrette, M. Girard, M. Heiztman, É. Nadeau, J. Hamel, S. Silverman, M.-È. Chagnon, S. Loboda, M. Charrette, Y. Wong, M. St-Laurent, M. Bellanger, D. Le Botlan, G. Guengard, T. Andro, L. Alexandre, A. Boilard, A. Duclos, D. Garrec, N. Rault, and G. Blais for the help with field sampling, lab work, and data transcription. Finally, we are indebted to the managers of cemeteries and community gardens as well as the Management of Large Parks and Greening of the city of Montreal, and the director of the Boucherville Islands National Park for allowing access to their sites. This study was funded by the National Science and Engineering Research Council of Canada (NSERC) Discovery Grant Program, NSERC-CANPOLIN (the Canadian pollinator initiative) and the Fonds de recherche du Québec – Nature et technologies (FRQNT). The Bayesian analyses and goodness of fit tests were conducted on the Beluga and Graham high performance computer clusters of Compute Canada."
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Author contributions FMc: conceptualization, methodology, investigation, writing—original draft; ÉN: conceptualization, methodology, investigation, writing—review & editing; AG: investigation, writing— review & editing; MJM: formal analysis, writing—review & editing, supervision; VF: conceptualization, methodology, resources, writing— review & editing, supervision, funding acquisition."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "Funding This study was funded by the National Science and Engineering Research Council of Canada (NSERC) Discovery Grant Program, NSERC-CANPOLIN (the Canadian pollinator initiative) and the Fonds de recherche du Québec—Nature et technologies (FRQNT)."
+  },
+  {
+   "id": "u22",
+   "kind": "table 1",
+   "text": "Sampling units | Number of species (Median)\n0 | 0\n50 | ~20\n100 | ~30\n150 | ~36\n200 | ~41\n250 | ~45\n300 | ~48"
+  },
+  {
+   "id": "u23",
+   "kind": "table 2",
+   "text": "Site surface area (ha) | Number of species\n0 | ~1\n5 | ~5.5\n10 | ~7.5\n15 | ~8.8"
+  },
+  {
+   "id": "u24",
+   "kind": "table 3",
+   "text": "Proportion of heat island cover within 1000 m | Occupancy probability\n0.0 | 1.00\n0.2 | ~0.85\n0.4 | ~0.50\n0.6 | ~0.30\n0.7 | ~0.25"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7"
+  ],
+  [
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16"
+  ],
+  [
+   "u17",
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23"
+  ],
+  [
+   "u24"
+  ]
+ ],
+ "calls": 13,
+ "categories": [
+  {
+   "variable": "level of predicted heat islands",
+   "code": "green",
+   "term": "lowest",
+   "unit": "u4",
+   "model_label": "lowest",
+   "label": "lowest",
+   "explanation": ""
+  },
+  {
+   "variable": "level of predicted heat islands",
+   "code": "dark orange",
+   "term": "highest levels",
+   "unit": "u4",
+   "model_label": "highest",
+   "label": "highest",
+   "explanation": "levels"
+  },
+  {
+   "variable": "level of predicted heat islands",
+   "code": "red",
+   "term": "highest levels",
+   "unit": "u4",
+   "model_label": "highest",
+   "label": "highest",
+   "explanation": "levels"
+  },
+  {
+   "variable": "heat island cover",
+   "code": "eight and nine",
+   "term": "heat islands",
+   "unit": "u5",
+   "model_label": "heat islands",
+   "label": "heat islands",
+   "explanation": ""
+  },
+  {
+   "variable": "detected",
+   "code": "1",
+   "term": "detected",
+   "unit": "u6",
+   "model_label": "detected",
+   "label": "detected",
+   "explanation": ""
+  },
+  {
+   "variable": "not detected",
+   "code": "0",
+   "term": "not detected",
+   "unit": "u6",
+   "model_label": "not detected",
+   "label": "not detected",
+   "explanation": ""
+  },
+  {
+   "variable": "trap colour",
+   "code": "1",
+   "term": "detected",
+   "unit": "u11",
+   "model_label": "detected",
+   "label": "detected",
+   "explanation": ""
+  },
+  {
+   "variable": "trap colour",
+   "code": "0",
+   "term": "not detected",
+   "unit": "u11",
+   "model_label": "not detected",
+   "label": "not detected",
+   "explanation": ""
+  },
+  {
+   "variable": "Functional groups",
+   "code": "I",
+   "term": "insectivores",
+   "unit": "u14",
+   "model_label": "insectivores",
+   "label": "insectivores",
+   "explanation": ""
+  },
+  {
+   "variable": "Functional groups",
+   "code": "TS",
+   "term": "terrestrial saprophagous",
+   "unit": "u14",
+   "model_label": "terrestrial saprophagous",
+   "label": "terrestrial saprophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Functional groups",
+   "code": "AS",
+   "term": "aquatic saprophagous",
+   "unit": "u14",
+   "model_label": "aquatic saprophagous",
+   "label": "aquatic saprophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "Functional groups",
+   "code": "P",
+   "term": "phytophagous",
+   "unit": "u14",
+   "model_label": "phytophagous",
+   "label": "phytophagous",
+   "explanation": ""
+  },
+  {
+   "variable": "pan trap colours",
+   "code": "letters",
+   "term": "differences among colours",
+   "unit": "u16",
+   "model_label": "differences",
+   "label": "differences",
+   "explanation": "among colours"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "0",
+   "term": "0",
+   "unit": "u22",
+   "model_label": "0",
+   "label": "0",
+   "explanation": ""
+  },
+  {
+   "variable": "Sampling units",
+   "code": "50",
+   "term": "~20",
+   "unit": "u22",
+   "model_label": "~20",
+   "label": "20",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "100",
+   "term": "~30",
+   "unit": "u22",
+   "model_label": "~30",
+   "label": "30",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "150",
+   "term": "~36",
+   "unit": "u22",
+   "model_label": "~36",
+   "label": "36",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "200",
+   "term": "~41",
+   "unit": "u22",
+   "model_label": "~41",
+   "label": "41",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "250",
+   "term": "~45",
+   "unit": "u22",
+   "model_label": "~45",
+   "label": "45",
+   "explanation": "~"
+  },
+  {
+   "variable": "Sampling units",
+   "code": "300",
+   "term": "~48",
+   "unit": "u22",
+   "model_label": "~48",
+   "label": "48",
+   "explanation": "~"
+  },
+  {
+   "variable": "Site surface area (ha)",
+   "code": "0",
+   "term": "~1",
+   "unit": "u22",
+   "model_label": "~1",
+   "label": "1",
+   "explanation": "~"
+  },
+  {
+   "variable": "Site surface area (ha)",
+   "code": "5",
+   "term": "~5.5",
+   "unit": "u23",
+   "model_label": "~5.5",
+   "label": "5.5",
+   "explanation": "~"
+  },
+  {
+   "variable": "Site surface area (ha)",
+   "code": "10",
+   "term": "~7.5",
+   "unit": "u23",
+   "model_label": "~7.5",
+   "label": "7.5",
+   "explanation": "~"
+  },
+  {
+   "variable": "Site surface area (ha)",
+   "code": "15",
+   "term": "~8.8",
+   "unit": "u23",
+   "model_label": "~8.8",
+   "label": "8.8",
+   "explanation": "~"
+  },
+  {
+   "variable": "site surface area",
+   "code": "",
+   "label": "site surface area",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "urban heat islands",
+   "code": "",
+   "label": "urban heat islands",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  }
+ ],
+ "dropped": [],
+ "seconds": 49.0
+}

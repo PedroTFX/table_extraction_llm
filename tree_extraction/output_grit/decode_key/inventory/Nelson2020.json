@@ -1,0 +1,721 @@
+{
+ "paper": "Nelson2020",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "This study was part of the Restoring Function in Grassland Ecosystems (ReFuGE) project and took place at Nachusa Grasslands, a 1,500-ha ecological restoration project consisting largely of restored and remnant tallgrass prairie in Lee and Ogle Counties, Illinois, USA. Restoration activities generally consist of seeding a diverse mix of native forbs and grasses into former agricultural fields (corn–soy rotation). Sites receive pre-scribed fire in early spring or late fall, with most sites burned every 2–3 yr (see Hansen and Gibson [2014] for more details). American bison (Bison bison) were reintroduced to a portion of the site in October 2014. In 2018, when this study took place, there were 132 bison, including calves born in 2018, in the 600 contiguous and connected hectares to which bison had access (0.22 bison/ha, or 0.196 animal units/ha accounting for variation in age and sex)."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We selected 15 restored prairies that ranged from 3 to 31 yr since planting in the study year. We also selected two prairie remnants, sites that were never converted to agricultural fields and maintain prairie plant communities, but were likely grazed prior to the 1980s. We established $2 2 6 0 \\times 6 0$ m research grids for pitfall trapping and/or predator assays in these sites, with some sites having two or three grids (Table 1). Sites were 5.6–20.6 ha in area and were separated from each other by 0.1–5.0 km. Nachusa exists within an agricultural matrix, and most sites are adjacent to both row crops (corn or soybean) and other restored or remnant prairie. Seven of"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Note: Age indicates number of growing seasons since a site was restored, bison indicates the presence (Y) or absence (N) of reintroduced bison, and fire indicates if the site received pre-scribed fire since the previous growing season (i.e., in the spring prior to the 2018 study season)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "included four with bison and prescribed fire in the study year, three with only bison, six with only fire, and five with neither bison nor fire (Table 1). We installed two trap arrays, each consisting of five pitfall traps, at two opposite corners of each research grid, with traps in each array spaced 5 m apart and the center of the arrays separated by 99 m. Traps were 12.1 cm deep and openings were 9.5 cm diameter. We baited the center trap in each array with fresh bison dung as part of a related study of dung beetles (Hosler et al., in press). We half-filled each trap with a 1:1 mixture of propylene glycol and water and covered it with wire mesh (2.5-cm openings) to exclude vertebrates. We opened traps 23 May–12 June, 9–16 July, and 14–21 September and pooled the contents of the 10 traps per site in each sampling session."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "We sorted ground beetles from other arthropods and identified them to species or morphospecies using keys for Carabidae (Ciegler 2000, Arnett et al. 2002, Bousquet 2010). We selected traits related to beetle fecundity, foraging capability, dispersal, and resource usage (Fountain-Jones et al. 2015, Brousseau et al. 2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al. 2001, Kotze et al. 2003, Larochelle and Larivi-ere 2003, Barbaro and Halder 2009, Brooks et al. 2012, Fountain-Jones et al. 2015, Barber et al. 2017b; Appendix S1: Table S1)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "Ground beetle and other ground-dwelling arthropod densities determined from pitfall traps usually are expressed as “activity densities,” which acknowledges that capture rates incorporate both abundance and activity of arthropods in the trap area (Thomas et al. 1998). We calculated activity density and rarefied species richness using ChaoRichness() in the iNEXT package of R (Chao et al. 2014) because species accumulation curves indicated rarefaction was justified (Appendix S1: Fig. S1). To describe functional trait diversity, we calculated four complementary metrics from the trait values of species in each assemblage. These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al. 2005, Vill\u0003eger et al. 2008, Lalibert\u0003e and Legendre 2010, Mouillot et al. 2013). FRic represents the range of functional trait values within the niche space, while FEve describes the distribution of species within that space (Mason et al. 2005). FDiv measures how much of a community is represented by individuals belonging to species with more extreme trait combinations, and FDis reflects how much species in a community differ from the center of multivariate trait space (Mouillot et al. 2013). FEve, FDis, and FDiv were weighted by species abundance (i.e., activity density). For the assemblage at each research grid, we calculated community-weighted means (CWMs) for body size, our only continuous trait, and the proportion of individuals with a trait value for the other categorical traits."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "We determined how restoration characteristics affected ground beetle activity density (total, herbivore/ omnivore, and carnivore), rarefied richness, and functional diversity metrics using linear models with bison (present/absent), prescribed burn (present/absent in study year), and restoration age (years since planting) as"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "We captured 3,214 ground beetles of 40 species or morphospecies in restorations, plus an additional 432 beetles of 21 species in the two remnants (no species were unique to remnants). Five species represented >75% of the individuals captured in restorations: Cyclotrachelus seximpressus, C. sodalist, Chlaenius platyderus, Pterostichus permundus, and Cicindela sexguttata (Table S8). Ground beetle assemblages were primarily shaped by restoration age, with some effects of bison presence and no detected changes due to prescribed burns. Activity density increased with restoration age, and rarefied richness declined with age, but both were unaffected by bison or prescribed burns (Appendix S1: Table S2, Fig. 1). Shannon diversity declined with age but was also reduced in sites with bison present (Fig. 1). Taxonomic composition of beetle assemblages was significantly related to both age and bison presence (Appendix S1: Table S4, Fig. 2). Three of the four metrics of functional diversity (FRic, FEve, and FDis) declined with restoration age, but bison and prescribed burns did not affect functional diversity (Fig. 1)."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Seed and arthropod predation were unaffected by restoration age or bison presence, but predation rates were lower in sites that had received prescribed fire, although the effect was marginally significant in the first arthropod predation assay (Appendix S1: Table S5, Fig. 4A–C). The top-ranked seed predation model was the null model (Appendix S1: Table S6); although $\\Delta \\mathrm { A I C _ { c } }$ was"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "![Image block](doc:e70b76f/tier:advanced/page:6/block:5)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "FIG. 2. Results of distance-based redundancy analysis (dbRDA) of ground beetle assemblages in restored prairies. Circles represent sites with bison, squares are sites without bison, and ellipses are 1 SD. Circles and squares with heavier outline are sites that received prescribed fire. Numbers in each point are the age of the restoration in years. For statistical results, see Appendix S1: Table S4."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:e70b76f/tier:advanced/page:7/block:8)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "FIG. 3. Patterns of individual traits of ground beetle assemblages. Each point represents a site. In panel B, sites that received prescribed fire in the previous year are indicated by open points and the dashed line; in panel E, sites with bison present are indicated by open points and the dashed line. In all figures, triangles are remnant prairie sites for comparison. In panels B–E, lines represent predicted relationships with age based on binomial models, back-transformed from logits to proportions of the assemblage. For statistical results, see Appendix S1: Table S3. CMW, community-weighted mean."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "![Image block](doc:e70b76f/tier:advanced/page:8/block:5)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "FIG. 4. Results of (A) seed and (B) fall arthropod predation assays, and (C, D) relationships with carnivorous beetle activity density. Each point represents a site, and triangles are remnant prairie sites. For statistical results, see Appendix S1: Tables S5–S7 and Results."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "Ground beetles in older prairie restorations are pre-dominantly larger-bodied, flightless, nocturnal carnivores, and they are more likely to be active late in the season or all season long. A lag in colonization by brachypterous, flightless species, is expected due to limited dispersal and previously has been documented here and elsewhere (Holliday 1991, Schirmel et al. 2012, Woodcock et al. 2012, Barber et al. 2017b). Thus there may be a prolonged colonization credit (i.e., the opposite of extinction debt; Cristofoli et al. 2010, Jackson and Sax 2010) for some species as restored prairies become suitable habitat for these beetle species but they have not yet colonized them or established sustained populations. These colonizations partially offset the diversity losses of species that are not maintained in mature prairie restorations. Given that bison reintroduction occurred relatively recently at the study sites (2–3 yr prior to our sampling), a similar process may occur for species adapted to the heterogeneity that bison create through grazing, wallowing, and other activities (Knapp et al. 1999). Poyry et al. (2005) suggest that 5 yr post-initia- € tion might not be long enough for grazing-dependent Lepidoptera species to colonize, and these species generally are better dispersers than many ground beetles. Future monitoring of restorations with bison will be needed to determine if these grazers can support species that would not otherwise be present at this site."
+  },
+  {
+   "id": "u16",
+   "kind": "table 0",
+   "text": "Site | Age (yr) | Bison | Fire\nCrew15† | 3 | N | Y\nHF | 5 | Y | Y\nHPN | 6 | Y | N\nLOW | 7 | Y | N\nSB | 9 | N | N\nSBEE | 9 | N | N\nSBEW | 9 | N | N\nCCW | 10 | N | Y\nCCWE | 10 | N | Y"
+  },
+  {
+   "id": "u17",
+   "kind": "table 0",
+   "text": "HPW | 10 | Y | Y\nFC | 12 | N | Y\nCCE | 11 | N | N\nCCEE | 11 | N | N\nSFW† | 16 | N | Y\nTC | 16 | N | Y\nTCE | 16 | N | Y\nHLP | 17 | Y | Y\nSF | 17 | N | N\nWH | 26 | Y | N"
+  },
+  {
+   "id": "u18",
+   "kind": "table 0",
+   "text": "MU | 31 | Y | Y\nMUR | Remnant | Y | Y\nTCR | Remnant | N | Y"
+  },
+  {
+   "id": "u19",
+   "kind": "table 1",
+   "text": "Point ID | dbRDA axis 1 | dbRDA axis 2\n5 | ~-0.9 | ~0.9\n6 | ~-1.2 | ~0.7\n7 | ~-0.9 | ~0.4\n10 | ~-0.3 | ~0.3\n10 | ~0.1 | ~0.8\n10 | ~0.1 | ~0.9\n16 | ~0.5 | ~0.3\n12 | ~0.6 | ~0.2\n17 | ~0.1 | ~-0.1"
+  },
+  {
+   "id": "u20",
+   "kind": "table 1",
+   "text": "11 | ~0.7 | ~-0.5\n11 | ~0.6 | ~-0.9\n16 | ~1.0 | ~-0.3\n9 | ~-0.6 | ~-0.9\n9 | ~-0.4 | ~-1.0\n31 | ~1.2 | ~-0.1"
+  },
+  {
+   "id": "u21",
+   "kind": "footnote of table 5",
+   "text": "adj. R^2 = 0.417"
+  },
+  {
+   "id": "u22",
+   "kind": "table 13",
+   "text": "F | P\nbison | 1.22 | 0.287\nburn | 4.98 | 0.043\nage | 4.06 | 0.064"
+  },
+  {
+   "id": "u23",
+   "kind": "table 16",
+   "text": "Category | Sample Size | Number of Species\nCCWE | ~70 | ~16\nCCEE | ~120 | ~19\nHPN | ~120 | ~16\nSB | ~130 | ~16\nSF | ~180 | ~17\nL | ~90 | ~13\nSBEW | ~100 | ~13\nFC | ~140 | ~14\nMR | ~150 | ~13"
+  },
+  {
+   "id": "u24",
+   "kind": "table 16",
+   "text": "TC | ~140 | ~12\nTCE | ~220 | ~13\nHLP | ~420 | ~16\nHPW | ~300 | ~17\nTCR | ~280 | ~16\nWH | ~130 | ~10\nMU | ~490 | ~9"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3"
+  ],
+  [
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8",
+   "u9",
+   "u10",
+   "u11"
+  ],
+  [
+   "u12",
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18"
+  ],
+  [
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "bison",
+   "code": "N",
+   "term": "absence (N) of reintroduced bison",
+   "model_term": "absence of reintroduced bison",
+   "unit": "u2",
+   "model_label": "absence",
+   "label": "absence",
+   "explanation": "N) of reintroduced bison"
+  },
+  {
+   "variable": "fire",
+   "code": "Y",
+   "term": "if the site received pre-scribed fire since the previous growing season",
+   "unit": "u2",
+   "model_label": "if the site received pre-scribed fire since the previous growing season",
+   "label": "if the site received pre-scribed fire since the previous growing season",
+   "explanation": ""
+  },
+  {
+   "variable": "fire",
+   "code": "N",
+   "term": "if the site received pre-scribed fire since the previous growing season",
+   "unit": "u2",
+   "model_label": "if the site received pre-scribed fire since the previous growing season",
+   "label": "if the site received pre-scribed fire since the previous growing season",
+   "explanation": ""
+  },
+  {
+   "variable": "wing morphology",
+   "code": "macropterous",
+   "term": "macropterous",
+   "unit": "u4",
+   "model_label": "macropterous",
+   "label": "macropterous",
+   "explanation": ""
+  },
+  {
+   "variable": "wing morphology",
+   "code": "brachypterous",
+   "term": "brachypterous",
+   "unit": "u4",
+   "model_label": "brachypterous",
+   "label": "brachypterous",
+   "explanation": ""
+  },
+  {
+   "variable": "wing morphology",
+   "code": "dimorphic",
+   "term": "dimorphic",
+   "unit": "u4",
+   "model_label": "dimorphic",
+   "label": "dimorphic",
+   "explanation": ""
+  },
+  {
+   "variable": "activity time",
+   "code": "nocturnal",
+   "term": "nocturnal",
+   "unit": "u4",
+   "model_label": "nocturnal",
+   "label": "nocturnal",
+   "explanation": ""
+  },
+  {
+   "variable": "activity time",
+   "code": "diurnal",
+   "term": "diurnal",
+   "unit": "u4",
+   "model_label": "diurnal",
+   "label": "diurnal",
+   "explanation": ""
+  },
+  {
+   "variable": "activity time",
+   "code": "cathemeral",
+   "term": "cathemeral",
+   "unit": "u4",
+   "model_label": "cathemeral",
+   "label": "cathemeral",
+   "explanation": ""
+  },
+  {
+   "variable": "breeding season",
+   "code": "spring",
+   "term": "spring",
+   "unit": "u4",
+   "model_label": "spring",
+   "label": "spring",
+   "explanation": ""
+  },
+  {
+   "variable": "breeding season",
+   "code": "summer",
+   "term": "summer",
+   "unit": "u4",
+   "model_label": "summer",
+   "label": "summer",
+   "explanation": ""
+  },
+  {
+   "variable": "breeding season",
+   "code": "fall",
+   "term": "fall",
+   "unit": "u4",
+   "model_label": "fall",
+   "label": "fall",
+   "explanation": ""
+  },
+  {
+   "variable": "breeding season",
+   "code": "all",
+   "term": "all",
+   "unit": "u4",
+   "model_label": "all",
+   "label": "all",
+   "explanation": ""
+  },
+  {
+   "variable": "adult diet",
+   "code": "herbivorous",
+   "term": "herbivorous",
+   "unit": "u4",
+   "model_label": "herbivorous",
+   "label": "herbivorous",
+   "explanation": ""
+  },
+  {
+   "variable": "adult diet",
+   "code": "carnivorous",
+   "term": "carnivorous",
+   "unit": "u4",
+   "model_label": "carnivorous",
+   "label": "carnivorous",
+   "explanation": ""
+  },
+  {
+   "variable": "adult diet",
+   "code": "omnivorous",
+   "term": "omnivorous",
+   "unit": "u4",
+   "model_label": "omnivorous",
+   "label": "omnivorous",
+   "explanation": ""
+  },
+  {
+   "variable": "bison",
+   "code": "present/absent",
+   "term": "present/absent",
+   "unit": "u6",
+   "model_label": "present/absent",
+   "label": "present/absent",
+   "explanation": ""
+  },
+  {
+   "variable": "prescribed burn",
+   "code": "present/absent in study year",
+   "term": "present/absent in study year",
+   "unit": "u6",
+   "model_label": "present/absent in study year",
+   "label": "present/absent in study year",
+   "explanation": ""
+  },
+  {
+   "variable": "bison",
+   "code": "present",
+   "term": "sites with bison",
+   "unit": "u7",
+   "model_label": "present",
+   "label": "sites with bison",
+   "explanation": ""
+  },
+  {
+   "variable": "bison",
+   "code": "without bison",
+   "term": "sites without bison",
+   "unit": "u10",
+   "model_label": "without bison",
+   "label": "without bison",
+   "explanation": "sites"
+  },
+  {
+   "variable": "prescribed fire",
+   "code": "heavier outline",
+   "term": "sites that received prescribed fire",
+   "unit": "u10",
+   "model_label": "heavier outline",
+   "label": "sites that received prescribed fire",
+   "explanation": ""
+  },
+  {
+   "variable": "Bison",
+   "code": "Y",
+   "term": "Y",
+   "unit": "u16",
+   "model_label": "Y",
+   "label": "Y",
+   "explanation": ""
+  },
+  {
+   "variable": "Bison",
+   "code": "N",
+   "term": "N",
+   "unit": "u16",
+   "model_label": "N",
+   "label": "N",
+   "explanation": ""
+  },
+  {
+   "variable": "Fire",
+   "code": "Y",
+   "term": "Y",
+   "unit": "u16",
+   "model_label": "Y",
+   "label": "Y",
+   "explanation": ""
+  },
+  {
+   "variable": "Fire",
+   "code": "N",
+   "term": "N",
+   "unit": "u16",
+   "model_label": "N",
+   "label": "N",
+   "explanation": ""
+  },
+  {
+   "variable": "bison",
+   "code": "",
+   "label": "bison",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "fire",
+   "code": "",
+   "label": "fire",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "body size",
+   "code": "",
+   "label": "midpoint of body length range listed in literature",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "bison",
+   "code": "",
+   "label": "present",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "bison",
+   "code": "",
+   "label": "absent",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "prescribed burn",
+   "code": "",
+   "label": "absent in study year",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "Age (yr)",
+   "code": "",
+   "label": "Remnant",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "burn",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "age",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u22"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "CCWE",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "CCEE",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "HPN",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "SBEW",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "TCE",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "HLP",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "HPW",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  },
+  {
+   "variable": "",
+   "code": "",
+   "label": "TCR",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u24"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "Age",
+   "code": "yr",
+   "term": "number of growing seasons since a site was restored",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "bison",
+   "code": "Y",
+   "term": "presence of reintroduced bison",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "5",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "6",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "7",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "10",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "16",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "12",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "17",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "11",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "9",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Point ID",
+   "code": "31",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "F",
+   "code": "bison",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "F",
+   "code": "burn",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "F",
+   "code": "age",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "CCWE",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "CCEE",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "HPN",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "SB",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "SF",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "L",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "SBEW",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "FC",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "MR",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "TC",
+   "code": "TC",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "TCE",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "HLP",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "HPW",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "TCR",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "WH",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Category",
+   "code": "MU",
+   "term": "",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 78.1
+}

@@ -1,0 +1,533 @@
+{
+ "paper": "Tingting2023",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "National Science Foundation of China, Grant/Award Number: 32250610207 and 31772495; Program of Ministry of Science and Technology of China, Grant/ Award Number: 2018FY100400; Strategic Priority Research Program of the Chinese Academy of Science, Grant/Award Number: XDB310304; National Science Fund for Distinguished Young Scholars, Grant/Award Number: 31625024; CAS President's International Fellowship Initiative, Grant/Award Number: 2020FSB0001"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "![Image block](doc:13c0434/tier:advanced/page:3/block:6)"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "```mermaid graph TD A[\"query A\"] --> B[\"specimen-level dataset\"] C[\"query B\"] --> B D[\"query C\"] --> B E[\"query D\"] --> B F[\"ITD\"] --> G[\"HL\"] F --> H[\"BL\"] I[\"Query\"] --> J[\"Specimen-level dataset\"] K[\"Trait\"] --> J L[\"Blast Neighborhood (BN)\"] --> M[\"Phylogenetic assignment (PA)\"] N[\"Blast Top Hit (BTH)\"] --> O[\"reference\"] ```"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:13c0434/tier:advanced/page:3/block:8)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "F I G U R E 1 Overview of data and analyses; (a) we assessed the accuracy of three proposed approaches to taxon-independent, DNA-based trait assignment on a unique, specimen-level dataset of COI barcodes and morphometric trait measurements. (b) reflective of a more feasible implementation of trait assignment in the near term, we also conduct a species-level analysis of the rates of Phylogenetic Assignment for some widely studied bee traits on a phylogeny constructed from publically available COI data. Note ‘queries’ in (a) refer only to specimenlevel data from collections reported herein at four sites; while ‘queries’ in (b) include both the specimen-level data and additional data of unidentified bee sequences from 17 other sites in China."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "We built a specimen-level dataset of COI DNA barcodes and functional morphometric traits for comparing different approaches to DNA-based trait assignment. We used bee specimens and COI sequences from four locations in China (Figure S1); specimens were newly collected and sequenced at three locations, while those of Xishuangbanna were collected and sequenced earlier as described in (Liu et al., 2017). To collect a diverse set of bee species, we used blind sweep net and yellow pan traps around flowers (McCravy et al., 2019). Insect legs were stored in absolute ethanol and refrigerated until molecular work was conducted. The COI DNA barcode region (\\~650 bp) was amplified; whole genomic DNA was extracted with DNeasy Blood & Tissue Kits (QIAGEN GmbH, Hilden, Germany) and COI amplified using several universal primer pairs. Polymerase chain reactions (PCR) were performed in $3 0 \\mu \\mathrm { L }$ solutions, following the protocol of (Hajibabaei et al., 2005) with minor adjustments (particularly, we extended annealing time to 1.5 min). Sequencing was conducted at Beijing Tianyi Huiyuan Biotechnology Co., Ltd, and quality was checked in MEGA v7.0 (Kumar et al., 2016)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "methods for taxon-independent assignment of traits to query barcodes or metabarcodes via reference data, (i) Phylogenetic Assignment, (ii) Blast Neighbourhood and (iii) Blast Top Hit. For Phylogenetic Assignment, states of queries were predicted based on a Bayesian model of trait evolution built on a phylogeny (code available at [github.com/dchesters/barcodeFD](http://github.com/dchesters/barcodeFD)), with a single dependency, BayesTraits; (Pagel et al., 2004). In Bayesian modelling of trait evolution on a phylogeny, the rates of transition between states along the branches of the phylogeny are established based on known terminal states (herein, of the references), and then, the posterior probabilities of each state are predicted for unknown nodes (which include terminals, herein applied to ‘queries’). The Bayesian estimations were performed with 2,500,000 generations of MCMC simulations and sampling of every 2500 generations. Phylogenetic Assignment output was parsed with a Perl script (parse_bayestraits_tip_estimates.pl) with the initial 50% of generations discarded as burn-in."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Accuracy of each trait assignment method was assessed through leave-one-out (L1O) cross-validation (Yang et al., 2022; Zhang et al., 2012) on the specimen-level dataset. In each loop of L1O, the known state of a single individual (the ‘query’) is removed from the reference system (and thus the trait model in the case of Phylogenetic Assignment) and then predicted via each approach. This process is looped over all individuals (treating each as a query) and all available traits."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "Assignment accuracy of the three approaches was statistically compared. To test whether there were complementarity and biases between tools, the family-level taxonomic diversity profiles were firstly compared according to the mean quantity of correct assignments of each family, and visualized in network diagrams using ‘network’ (Butts, 2008). Since the quantities of trait records with barcodes used as reference were different among various trait datasets, we considered rate rather than quantity to avoid biases in the metrics used to evaluate the efficiency of tools (Blast Neighbourhood, Phylogenetic Assignment and Blast Top Hit). For this, two different rates were evaluated: (1) correct assignment rate (proportion of correct assignments over all results); and (2) accuracy rate (proportion of correct assignments over all assignments)."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Several factors are likely to affect the efficiency of trait assignment. To test whether the number of barcodes $( \\mathsf { B } _ { \\mathsf { N } } )$ affects performance, the correct assignment rate and $\\mathsf { B } _ { \\mathrm { N } }$ were evaluated by linear and nonlinear regression models in R ‘trendline’ (Mei & Yu, 2022). For the linear models, the data met the model assumption of a normal distribution, and for the nonlinear models, we used an asymptotic regression. The best-fit model was selected by evaluating the second-order AIC (AICc) and residual standard error (RSE) for small samples. To explore the relationship between the assignment rate and sequence similarities, we regressed the assigned states of each tool against the per cent identity to the nearest neighbour. The per cent identity to the nearest neighbour was the value inferred from the method Blast neighbourhood, which indicated sequences similarities. The assignment state (0: incorrect assignment; 1: correct assignment) was considered as the response value, and the similarity to the nearest neighbour was treated as a fixed effect. Different traits were used as random effect and logistic regressions (binomial response) with analyses performed with the R package ‘lme4’ (Bates et al., 2015). As a"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "A total of 2343 bees were newly collected from four sites, from which 1627 barcodes were generated: 237 from Beijing, 294 from Anhui, 742 from Yunnan and 354 from Jiangxi. From these collections, 8218 measurements were made over 1726 bee individuals as follows: Anhui (n = 121), Xishuangbanna (n = 512), Beijing"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "(n = 230), Jiangxi (n = 335) and museum specimens (n = 528) from various localities. We assessed three proposed approaches to trait assignment using the L1O strategy on newly generated specimenlevel trait records. The three tools showed biases for one of the five different bee families involved (Figure S6). Overall, both Phylogenetic Assignment and Blast Top Hit performed better than Blast Neighbourhood for Apidae and Halictidae, which are the two families with the most barcodes available, but this difference dis sipated for the other three families for which fewer barcodes were available. In the best-fit model for Blast Neighbourhood $( \\Delta \\mathrm { A l C c } . 0 5 \\right.$ , Table S3), while the relationships of $\\mathsf { B } _ { \\mathrm { N } }$ to correct assignment rate were unclear for the other two tools (ΔAICc between linear and nonlinear model being .95) for the species-level analysis are given in Table 1."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:13c0434/tier:advanced/page:7/block:4)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "F I G U R E 2 Comparison of assignment rates under low, median and high sequence similarities. Correct assignment rate (proportion of correct assignments over all results) for (a) Blast Neighbourhood; (b) Phylogenetic Assignment; (c) Blast Top Hit; accuracy rate (proportion of correct assignments over all assignments) for (d) Blast Neighbourhood; (e) Phylogenetic Assignment; and (f) Blast Top Hit. L = low similarity ( 94). denotes p ≤ .05, * denotes p ≤ .001, and ns denotes no significance based on t-test and Wilcox test. Circles indicate original data points."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:13c0434/tier:advanced/page:9/block:5)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "F I G U R E 4 Resultant trait prediction in the species-level analysis using Phylogenetic Assignment for an arbitrary segment of the bee phylogeny. The phylogeny comprises both named reference species and subject MOTU. Two traits shown: (a) intertegular distance, classed to quartiles, exemplifying a rather labile morphometric trait with (given the current distribution of known states) a low rate of confident predictions, and (b) sociality, a conservative life-history trait with relatively high rate of successful prediction. Tips of interest for each trait are symbolled; triangles denote tips with known states and circles denote MOTU subject to trait prediction, within which the pie chart proportions denote Bayesian trait probabilities. For each of the two traits, the legend gives states along with assigned colours, as used in pie charts."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Note: Query MOTU includes only those of ‘unestablished species’; sequences within species-level thresholds to references were not included; rates are thus conservative. ‘Queries predicted’ are the number of MOTU for which there is no information for given trait and thus subject to Phylogenetic Assignment. Likely, successful assignments are summed in ‘Trait state predictions with p > 95%’. Traits partitioned by F (Female), M (Male) and U (Sex-Unspecified)."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "This work was supported by grants (No. 32250610207, 31772495) from the National Science Foundation of China to DC; the Program of Ministry of Science and Technology of China (No. 2018FY100400) to QSZ, DC and JSH; the Strategic Priority Research Program of the Chinese Academy of Science (XDB310304) to CDZ and DC; the National Science Fund for Distinguished Young Scholars (31625024) to CDZ; and a grant (No. 2020FSB0001) from CAS President's International Fellowship Initiative (PIFI) for visiting scientists to DC."
+  },
+  {
+   "id": "u18",
+   "kind": "table 0",
+   "text": "Species | Data Points\nLasioglossum | ~100\nColletes | ~80\nHylaeus | ~70\nAndrena | ~60\nOsmia | ~50\nCoelioxys | ~40\nMegachile | ~30\nAnthophorini | ~20\nNomada | ~15"
+  },
+  {
+   "id": "u19",
+   "kind": "table 0",
+   "text": "Bombus | ~10\nApis | ~8\nEucera | ~5\nXylocopa | ~3"
+  },
+  {
+   "id": "u20",
+   "kind": "table 3",
+   "text": "1.0 | Michener CD (2007) The Bees of the World. 2nd Edition, John Hopkins University Press, Baltimore.\n2.0 | Arnett Jr. RH, (2000) American Insects, A Handbook of the Insects of America North of Mexico, Second Edition. CRC Press.\n3.0 | Pane AM, and Harmon-Threatt AN. (2017) An assessment of the efficacy and peak catch rates of emergence tents for measuring bee nesting. Applications in Plant Sciences, 5, 1700007.\n4.0 | Torne-Noguera A, Rodrigo A, Arnan X, et al. (2014) Determinants of spatial distribution in a bee community: nesting resources, flower resources, and body size. Plos one, e97255.\n5.0 | Packer L, Genaro JA, Sheffield CS (2007) The Bee Genera of Eastern Canada. Canadian Journal of Arthropod Identification No. 3, doi: 10.3752/cjai.2007.03.\n6.0 | Packer L (2004) Taxonomic and Behavioural Notes on Patagonian Xeromelissinae with the Description of a New Species (Hymenoptera: Colletidae). Journal of the Kansas Entomological Society, 77, 805-820\n7.0 | Cane JH (2008) Bees (Hymenoptera: Apoidea: Apiformes). Encyclopedia of Entomology. Vol. 2, pages 419-434.\n8.0 | Church SH, Donoughe S, de Medeiros BA, Extavour CG. (2019) A dataset of egg size and shape from more than 6,700 insect species. Scientific data, 6, 1-11.\n9.0 | Rozen Jr J, Yanega D, Byers G, Hagen R, Brooks R. (1999) Nesting biology and immature stages of the South American bee genus Acamptopoeum (Hymenoptera: Andrenidae: Panurginae). University of Kansas Natural History Museum Special Publication. 24, 59-67.\n10.0 | Michener CD. (1973) Size and form of eggs of allodapine bees. Journal of the Entomological Society of Southern Africa. 36, 281-5."
+  },
+  {
+   "id": "u21",
+   "kind": "table 3",
+   "text": "11.0 | Iwata K. (1965) The comparative anatomy of the ovary in Hymenoptera (records on 64 species of Aculeata in Thailand with descriptions of ovarian eggs). Mushi. ;38:101-11.\n12.0 | Alexander B, Rozen Jr JG. (1987) Ovaries, ovarioles, and oocytes in parasitic bees (Hymenoptera: Apoidea). Pan-Pacific Entomologist. 63:155-64.\n13.0 | Rozen JG, ?zbek H. (2003) Oocytes, eggs, and ovarioles of some long-tongued bees (Hymenoptera: Apoidea). American Museum Novitates. 2003(3393).\n14.0 | Jr R, George J. Ovarioles and oocytes of two old world cleptoparasitic bees with biological notes on Ammobatoides (Hymenoptera: Apidae). American Museum Novitates. 2001;2001(3326):1-12.\n15.0 | Straka J, Rozen JG. First observations on nesting and immatures of the bee genus Ancyla (Apoidea: Apidae: Apinae: Ancylaini). American Museum Novitates. 2012;2012(3749):1-24.\n16.0 | Youssef NN, Bohart GE. The nesting habits and immature stages of Andrena (Thysandrena) candida Smith (Hymenoptera, Apoidea). Journal of the Kansas Entomological Society. 1968:442-55.\n17.0 | Iwata K. The comparative anatomy of the ovary in Hymenoptera. Acta Hymenopterologica. 1960:205-11.\n18.0 | Iwata K, Sakagami SHF. Gigantism and dwarfism in bee eggs in relation to the modes of life, with notes on the number of ovarioles. Japanese Journal of ecology. 1966;16(1):4-16.\n19.0 | Rozen Jr JG. (1973) Biology notes on the bee Andrena accepta Viereck (Hymenoptera, Andrenidae). Journal of the New York Entomological Society. 54-61.\n20.0 | Miliczky E. Observations on the nesting biology of Andrena (Plastandrena) prunorum Cockerell in Washington state (Hymenoptera: Andrenidae). Journal of the Kansas Entomological Society. 2008;81(2):110-21."
+  },
+  {
+   "id": "u22",
+   "kind": "table 3",
+   "text": "21.0 | Torchio P F YNN. The biology of Anthophora (Micranthophora) flexipes and its cleptoparasite, Zacosmia maculata, including a description of the immature stages of the parasite (Hymenoptera: Apoidea, Anthophoridae). Journal of the Kansas entomological Society. 1968:289-302.\n22.0 | Rozen JG, ?zbek H. (2005) Notes on the egg and egg deposition of the cleptoparasite Thyreus ramosus (Hymenoptera: Apidae: Melectini). Journal of the Kansas Entomological Society. ;78(1).\n23.0 | Rozen Jr JG. (1969) The biology and description of a new species of African Thyreus, with life history notes on two species of Anthophora (Hymenoptera: Anthophoridae). Journal of the New York Entomological Society. 51-60.\n24.0 | Torchio PF. Late embryogenesis and egg eclosion in Triepeolus and Anthophora with a prospectus of nomadine classification (Hymenoptera: Anthophoridae). Annals of the Entomological Society of America. 1986;79(4):588-96.\n25.0 | Torchio P F TGE. Biological notes on Anthophora urbana urbana and its parasite, Xeromelecta californica (Hymenoptera: Anthophoridae), including descriptions of late embryogenesis and hatching. Annals of the Entomological Society of America. 1986;79(3):434-47.\n26.0 | Rozen Jr JG. (2011) Immatures of exomalopsine bees with notes on nesting biology and a tribal key to mature larvae of noncorbiculate, nonparasitic Apinae (Hymenoptera: Apidae). American Museum Novitates. ;2011(3726).\n27.0 | Ramos K S RJG. Psaenythisca, a new genus of bees from South America (Apoidea: Andrenidae: Protandrenini) with a description of the nesting biology and immature stages of one species. American Museum Novitates. 2014:1-32.\n28.0 | DuPraw EJ. The honeybee embryo1967.\n29.0 | Katzav-Gozansky T, Soroker V, Kamer J, Schulz CM, Francke W, Hefetz A. Ultrastructural and chemical characterization of egg surface of honeybee worker and queen-laid eggs. Chemoecology. 2003;13(3):129-34.\n30.0 | Martins GF, Serr?o JE. A comparative study of the ovaries in some Brazilian bees (Hymenoptera; Apoidea). Papéis Avulsos de Zoologia. 2004;44(3):45-53."
+  },
+  {
+   "id": "u23",
+   "kind": "table 3",
+   "text": "31.0 | Jr R, George J. Mature larvae of calliopsine bees: Spinoliella, Callonychium, and Arhysosage including biological notes, and a larval key to calliopsine genera (Hymenoptera: Apoidea: Andrenidae: Panurginae). American Museum Novitates. 2013;2013(3782):1-27.\n32.0 | Rozen Jr JG, Parker FD. (1987) Nesting biology of the bee Ashmeadiella holtii and its cleptoparasite, a new species of Stelis (Apoidea, Megachilidae). American Museum novitates. .\n33.0 | McGinley RJ, Rozen JG. Nesting Biology, Immature Stages, and Phylogenetic Placement of the Palaearctic Bee Pararhophites (Hymenoptera, Apoidea): American Museum of Natural History; 1987.\n34.0 | Fisher RM, Sampson BJ. Morphological specializations of the bumble bee social parasite Psithyrus ashtoni (Cresson)(Hymenoptera: Apidae). The Canadian Entomologist. 1992;124(1):69-77.\n35.0 | Rozen Jr JG, ?zbek H, Ascher JS, Rightmyer MG. (2009) Biology of the bee Hoplitis (Hoplitis) monstrabilis Tkalc? and descriptions of its egg and larva (Megachilidae: Megachilinae: Osmiini). American Museum Novitates. 2009(3645).\n36.0 | Rozen JG, Straka J, Rezkova K. (2009) Oocytes, larvae, and cleptoparasitic behavior of Biastes emarginatus (Hymenoptera: Apidae: Nomadinae: Biastini). American Museum Novitates. ;2009(3667).\n37.0 | Camargo J, Pedro S, Meliponini L. (2013) Catalogue of bees (Hymenoptera, Apoidea) in the Neotropical region.\n38.0 | Gonzalez VH, Mejia A, Rasmussen C. Ecology and nesting behavior of Bombus atratus Franklin in Andean highlands (Hymenoptera: Apidae). Journal of Hymenoptera Research. 2004;13(2):28-36.\n39.0 | Miliczky ER. Observations on the nesting biology of Tetralonia hamata Bradley with a description of its mature larva (Hymenoptera: Anthophoridae). Journal of the Kansas Entomological Society. 1985:686-700.\n40.0 | Milliron H. Notes on the nesting of Bombus morio (Swederus)(Hymenoptera: Apidae). The Canadian Entomologist. 1961;93(11):1017-9."
+  },
+  {
+   "id": "u24",
+   "kind": "table 3",
+   "text": "41.0 | Rozen Jr JG. Biology and immature stages of some cuckoo bees belonging to Brachynomadini, with descriptions of two new species (Hymenoptera: Apidae: Nomadinae). American Museum novitates. 1994.\n42.0 | Iwata KJN, Asia LS. Egg giantism in subsocial Hymenoptera, with ethological discussion on tropical bamboo carpenter bees. Nature Life SE Asia. 1964;3:399-434.\n43.0 | Rozen Jr JG, Roig-Alsina A. Biology, larvae, and oocytes of the parasitic bee tribe Caenoprosopidini (Hymenoptera, Anthophoridae, Nomadinae). American Museum novitates; no. 3004. American Museum novitates. 1991."
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2",
+   "u3",
+   "u4",
+   "u5"
+  ],
+  [
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ],
+  [
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19"
+  ],
+  [
+   "u20"
+  ],
+  [
+   "u21"
+  ],
+  [
+   "u22"
+  ],
+  [
+   "u23",
+   "u24"
+  ]
+ ],
+ "calls": 17,
+ "categories": [
+  {
+   "variable": "queries in (a)",
+   "code": "four sites",
+   "term": "sites",
+   "unit": "u4",
+   "model_label": "sites",
+   "label": "sites",
+   "explanation": ""
+  },
+  {
+   "variable": "queries in (b)",
+   "code": "17 other sites in China",
+   "term": "sites",
+   "unit": "u4",
+   "model_label": "sites",
+   "label": "sites",
+   "explanation": ""
+  },
+  {
+   "variable": "states of queries",
+   "code": "queries",
+   "term": "queries",
+   "unit": "u6",
+   "model_label": "queries",
+   "label": "queries",
+   "explanation": ""
+  },
+  {
+   "variable": "known state of a single individual",
+   "code": "query",
+   "term": "query",
+   "unit": "u6",
+   "model_label": "query",
+   "label": "query",
+   "explanation": ""
+  },
+  {
+   "variable": "assignment state",
+   "code": "0",
+   "term": "incorrect assignment",
+   "unit": "u9",
+   "model_label": "incorrect assignment",
+   "label": "incorrect assignment",
+   "explanation": ""
+  },
+  {
+   "variable": "assignment state",
+   "code": "1",
+   "term": "correct assignment",
+   "unit": "u9",
+   "model_label": "correct assignment",
+   "label": "correct assignment",
+   "explanation": ""
+  },
+  {
+   "variable": "low similarity",
+   "code": "L",
+   "term": "low similarity ( 94)",
+   "unit": "u13",
+   "model_label": "low similarity",
+   "label": "low similarity",
+   "explanation": "94"
+  },
+  {
+   "variable": "p ≤ .05",
+   "code": "L",
+   "term": "low similarity ( 94)",
+   "model_term_with_code": "L = low similarity ( 94)",
+   "unit": "u13",
+   "model_label": "low similarity",
+   "label": "low similarity",
+   "explanation": "94"
+  },
+  {
+   "variable": "p ≤ .001",
+   "code": "*",
+   "term": "* denotes p ≤ .001",
+   "unit": "u13",
+   "model_label": "*",
+   "label": "* denotes p ≤ .001",
+   "explanation": ""
+  },
+  {
+   "variable": "no significance based on t-test and Wilcox test",
+   "code": "ns",
+   "term": "ns denotes no significance based on t-test and Wilcox test",
+   "unit": "u13",
+   "model_label": "ns",
+   "label": "ns",
+   "explanation": "denotes no significance based on t-test and Wilcox test"
+  },
+  {
+   "variable": "tips with known states",
+   "code": "triangles",
+   "term": "triangles denote tips with known states",
+   "unit": "u15",
+   "model_label": "triangles",
+   "label": "triangles",
+   "explanation": "denote tips with known states"
+  },
+  {
+   "variable": "MOTU subject to trait prediction",
+   "code": "circles",
+   "term": "circles denote MOTU subject to trait prediction",
+   "unit": "u15",
+   "model_label": "circles",
+   "label": "circles",
+   "explanation": "denote MOTU subject to trait prediction"
+  },
+  {
+   "variable": "F",
+   "code": "F",
+   "term": "Female",
+   "unit": "u16",
+   "model_label": "Female",
+   "label": "Female",
+   "explanation": ""
+  },
+  {
+   "variable": "M",
+   "code": "M",
+   "term": "Male",
+   "unit": "u16",
+   "model_label": "Male",
+   "label": "Male",
+   "explanation": ""
+  },
+  {
+   "variable": "Sex-Unspecified",
+   "code": "U",
+   "term": "Sex-Unspecified",
+   "unit": "u16",
+   "model_label": "Sex-Unspecified",
+   "label": "Sex-Unspecified",
+   "explanation": ""
+  },
+  {
+   "variable": "1.0",
+   "code": "1.0",
+   "term": "Michener CD (2007) The Bees of the World. 2nd Edition, John Hopkins University Press, Baltimore.",
+   "unit": "u20",
+   "model_label": "Michener CD (2007) The Bees of the World. 2nd Edition, John Hopkins University Press, Baltimore.",
+   "label": "Michener CD (2007) The Bees of the World. 2nd Edition, John Hopkins University Press, Baltimore",
+   "explanation": "."
+  },
+  {
+   "variable": "2.0",
+   "code": "2.0",
+   "term": "Arnett Jr.RH, (2000) American Insects, A Handbook of the Insects of America North of Mexico, Second Edition. CRC Press.",
+   "unit": "u20",
+   "model_label": "Arnett Jr.RH, (2000) American Insects, A Handbook of the Insects of America North of Mexico, Second Edition. CRC Press.",
+   "label": "Arnett Jr.RH, (2000) American Insects, A Handbook of the Insects of America North of Mexico, Second Edition. CRC Press",
+   "explanation": "."
+  },
+  {
+   "variable": "3.0",
+   "code": "3.0",
+   "term": "Pane AM, and Harmon-Threatt AN. (2017) An assessment of the efficacy and peak catch rates of emergence tents for measuring bee nesting. Applications in Plant Sciences, 5, 1700007.",
+   "unit": "u20",
+   "model_label": "Pane AM, and Harmon-Threatt AN. (2017) An assessment of the efficacy and peak catch rates of emergence tents for measuring bee nesting. Applications in Plant Sciences, 5, 1700007.",
+   "label": "Pane AM, and Harmon-Threatt AN. (2017) An assessment of the efficacy and peak catch rates of emergence tents for measuring bee nesting. Applications in Plant Sciences, 5, 1700007",
+   "explanation": "."
+  },
+  {
+   "variable": "4.0",
+   "code": "4.0",
+   "term": "Torne-Noguera A, Rodrigo A, Arnan X, et al. (2014) Determinants of spatial distribution in a bee community: nesting resources, flower resources, and body size. Plos one, e97255.",
+   "unit": "u20",
+   "model_label": "Torne-Noguera A, Rodrigo A, Arnan X, et al. (2014) Determinants of spatial distribution in a bee community: nesting resources, flower resources, and body size. Plos one, e97255.",
+   "label": "Torne-Noguera A, Rodrigo A, Arnan X, et al. (2014) Determinants of spatial distribution in a bee community: nesting resources, flower resources, and body size. Plos one, e97255",
+   "explanation": "."
+  },
+  {
+   "variable": "5.0",
+   "code": "5.0",
+   "term": "Packer L, Genaro JA, Sheffield CS (2007) The Bee Genera of Eastern Canada. Canadian Journal of Arthropod Identification No. 3, doi: 10.3752/cjai.2007.03.",
+   "unit": "u20",
+   "model_label": "Packer L, Genaro JA, Sheffield CS (2007) The Bee Genera of Eastern Canada. Canadian Journal of Arthropod Identification No. 3, doi: 10.3752/cjai.2007.03.",
+   "label": "Packer L, Genaro JA, Sheffield CS (2007) The Bee Genera of Eastern Canada. Canadian Journal of Arthropod Identification No. 3, doi: 10.3752/cjai.2007.03",
+   "explanation": "."
+  },
+  {
+   "variable": "6.0",
+   "code": "6.0",
+   "term": "Packer L (2004) Taxonomic and Behavioural Notes on Patagonian Xeromelissinae with the Description of a New Species (Hymenoptera: Colletidae). Journal of the Kansas Entomological Society, 77, 805-820",
+   "unit": "u20",
+   "model_label": "Packer L (2004) Taxonomic and Behavioural Notes on Patagonian Xeromelissinae with the Description of a New Species (Hymenoptera: Colletidae). Journal of the Kansas Entomological Society, 77, 805-820",
+   "label": "Packer L (2004) Taxonomic and Behavioural Notes on Patagonian Xeromelissinae with the Description of a New Species (Hymenoptera: Colletidae). Journal of the Kansas Entomological Society, 77, 805-820",
+   "explanation": ""
+  },
+  {
+   "variable": "7.0",
+   "code": "7.0",
+   "term": "Cane JH (2008) Bees (Hymenoptera: Apoidea: Apiformes). Encyclopedia of Entomology. Vol. 2, pages 419-434.",
+   "unit": "u20",
+   "model_label": "Cane JH (2008) Bees (Hymenoptera: Apoidea: Apiformes). Encyclopedia of Entomology. Vol. 2, pages 419-434.",
+   "label": "Cane JH (2008) Bees (Hymenoptera: Apoidea: Apiformes). Encyclopedia of Entomology. Vol. 2, pages 419-434",
+   "explanation": "."
+  },
+  {
+   "variable": "8.0",
+   "code": "8.0",
+   "term": "Church SH, Donoughe S, de Medeiros BA, Extavour CG. (2019) A dataset of egg size and shape from more than 6,700 insect species. Scientific data, 6, 1-11.",
+   "unit": "u20",
+   "model_label": "Church SH, Donoughe S, de Medeiros BA, Extavour CG. (2019) A dataset of egg size and shape from more than 6,700 insect species. Scientific data, 6, 1-11.",
+   "label": "Church SH, Donoughe S, de Medeiros BA, Extavour CG. (2019) A dataset of egg size and shape from more than 6,700 insect species. Scientific data, 6, 1-11",
+   "explanation": "."
+  },
+  {
+   "variable": "9.0",
+   "code": "9.0",
+   "term": "Rozen Jr J, Yanega D, Byers G, Hagen R, Brooks R. (1999) Nesting biology and immature stages of the South American bee genus Acamptopoeum (Hymenoptera: Andrenidae: Panurginae). University of Kansas Natural History Museum Special Publication. 24, 59-67.",
+   "unit": "u20",
+   "model_label": "Rozen Jr J, Yanega D, Byers G, Hagen R, Brooks R. (1999) Nesting biology and immature stages of the South American bee genus Acamptopoeum (Hymenoptera: Andrenidae: Panurginae). University of Kansas Natural History Museum Special Publication. 24, 59-67.",
+   "label": "Rozen Jr J, Yanega D, Byers G, Hagen R, Brooks R. (1999) Nesting biology and immature stages of the South American bee genus Acamptopoeum (Hymenoptera: Andrenidae: Panurginae). University of Kansas Natural History Museum Special Publication. 24, 59-67",
+   "explanation": "."
+  },
+  {
+   "variable": "10.0",
+   "code": "10.0",
+   "term": "Michener CD. (1973) Size and form of eggs of allodapine bees. Journal of the Entomological Society of Southern Africa. 36, 281-5.",
+   "unit": "u20",
+   "model_label": "Michener CD. (1973) Size and form of eggs of allodapine bees. Journal of the Entomological Society of Southern Africa. 36, 281-5.",
+   "label": "Michener CD. (1973) Size and form of eggs of allodapine bees. Journal of the Entomological Society of Southern Africa. 36, 281-5",
+   "explanation": "."
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "morphometric trait",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Phylogenetic Assignment",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Blast Neighbourhood",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "Blast Top Hit",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "intertegular distance",
+   "code": "",
+   "label": "quartiles",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "sociality",
+   "code": "",
+   "label": "sociality",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Nesting biology",
+   "code": "",
+   "label": "Nesting biology and immature stages",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Nesting biology",
+   "code": "",
+   "label": "Nesting biology",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Morphological specializations",
+   "code": "",
+   "label": "Morphological specializations",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  },
+  {
+   "variable": "Nesting behavior",
+   "code": "",
+   "label": "Nesting behavior",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u23"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "N/A",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "G",
+   "term": "ground nesting",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "1",
+   "term": "hundred",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "2",
+   "term": "thousand",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "W",
+   "term": "wood",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "(0)",
+   "term": "absent",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "N/A",
+   "code": "(1)",
+   "term": "present",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 56.2
+}

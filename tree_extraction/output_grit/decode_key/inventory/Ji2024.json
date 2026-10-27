@@ -1,0 +1,347 @@
+{
+ "paper": "Ji2024",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "National Natural Science Foundation of China, Grant/Award Numbers: 42301072, 42071059, 31861133006; China Scholarship Council, Grant/Award Number: 202104910331"
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "Editor: Raphael K. Didham and Associate Editor: Mark Wong"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "1. Filtering processes across environmental gradients can structure patterns of trait variation within communities. The community-weighted mean (CWM) is a metric that is commonly used to indicate the directionality of such filtering processes and the optimal adaptive strategy of taxa within community. Proximity to the CWM indicates higher fitness, and deviations from this optimal value result in changes in the relative abundances of coexisting species. 2. We investigated patterns of intraspecific trait variation in four coexisting carrion beetle species (Coleoptera: Silphidae) across elevational gradients. The study was conducted in temperate forest ecosystems with distinct natural vegetation zones ranging from 950 m to 1700 m above sea level. 3. Of the 12 traits measured, we found that intraspecific variation ranged from 34% (body length) to 100% (ratio of elytra length, head length and head width to body length) and accounted for a larger proportion of variation than interspecific variation in 7 traits. For most traits, trait range, which indicates the niche breadth of species at a given elevation, was positively correlated with relative abundance. The CWMs of traits associated with long-distance dispersal decreased with elevation, whereas those associated with microhabitat use showed the opposite trend. Soil temperature influenced tibia length after controlling for the effects of species identity, but soil water content had no effect on trait variation. Patterns of variation"
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "Traits influence organismal performance and determine how individuals interact with the environment and with each other (McGill et al., 2006). Studying traits rather than species alone provides a mechanistic understanding of how organisms respond to environment and how they will respond to future environmental change (Kellermann & van Heerwaarden, 2019; Weemstra et al., 2021). Community trait variation can be attributed to interspecific and intraspecific variation (Ackerly, 2003). While interspecific trait variation is the product of macroevolutionary processes (Anderegg, 2023), intraspecific trait variation (ITV) is the result of adaptive microevolution, phenotypic plasticity or sexual dimorphism (Anderegg, 2023; Bolnick et al., 2011; Moran et al., 2016). The amount of intraspecific variation has been shown to be comparable to interspecific variation in plants (He et al., 2018; Messier et al., 2010; Siefert et al., 2015) and vertebrates (Mungee et al., 2021; Xavier Jordani et al., 2019). Due to the significant contribution of intraspecific component to overall trait variation, it has been suggested that community ecology should shift its focus from species to traits, with an emphasis on ITV (de Bello et al., 2021; Messier et al., 2010; Westerband et al., 2021)."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "ITV quantifies how different the trait is between coexisting individuals of the same species (Albert et al., 2011). It can be attributed to variation between individuals and between sexes (DeLong et al., 2021). Common measure of ITV are coefficient of variation (CV) and trait niche breadth (range or width). Coefficient of variation is dimensionless, making it comparable across traits, species and studies (Yang et al., 2020). Trait niche breadth compares the trait spectrum of local populations across large environmental gradients and can be used as a proxy for local adaptative potential (Maccagni & Willi, 2022). Populations with higher ITV are considered to be better equipped to thrive in a wider range of environments (Muscarella & Uriarte, 2016). Species exhibiting higher ITV are likely to have higher relative abundance in community due to their ability to adapt to wider environmental conditions. When comparing traits of different functions, those with higher ITV will vary more between communities, particularly for those species adapted to environments across large spatial gradients (Siefert et al., 2015)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "indicates the environmental optimum for that trait (Lisner et al., 2021). The community-weighted mean (CWM) has often been used to indicate the optimal adaptive strategy of taxa in local environmental conditions and the degree of directionality of environmental filtering processes (DeMalach et al., 2022; Muscarella & Uriarte, 2016). In a given community, dominant species tend to occupy core positions in the trait space and vary less around optimal values (Umaña et al., 2015). Species with trait values closest to the CWM values are expected to have the highest fitness, that is, the ‘CWM-optimality’ hypothesis (Muscarella & Uriarte, 2016). Indeed, traits defining multidimensional niche space enable different species to coexist in local communities across extensive geographic or environmental gradients (Lourenço et al., 2020; Wong et al., 2019). Adaptive strategies and environmental filtering of organisms along gradients can be inferred from both CWM and trait variance partitioned across different ecological scales, especially within and between species (Messier et al., 2010; Moran et al., 2016; Umaña & Swenson, 2019)."
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "The study area is located on the northern slope of the Changbai Mountain (127\u000143 0 –128\u000116 0 E; 41\u000141 0 –42\u000151 0 N; Figure 1a), one of the most intact and biodiverse forest ecosystems in temperate regions (Stone, 2006). It experiences a dry and windy spring, a short and wet summer, a cool autumn with widespread fog and a long and cold winter (Zhang et al., 2018). Mean annual temperature ranges from \u00034.17 to 2.71\u0001C across elevations, and mean annual precipitation ranges from 683 to 955 mm (Xie et al., 2022). Vegetation is characterised by a distinctive elevation zonation from mixed coniferous and broadleaved forests below 1100 m, mixed coniferous forests between 1100 and 1500 m, subalpine mixed coniferous forests between 1500 and 1800 m, birch forests between 1800 and 2100 m and alpine tundra with dwarf trees and shrubs above 2100 m (Figure S1) (Bai et al., 2011; Zhang et al., 2016)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Before trait analyses, outlier measurements were removed using the ‘EnvStats’ package (Millard, 2013). Principal component analysis (PCA) was applied to the 12 traits, and the first four PCs were retained in the trait variance partitioning analysis. Variance of each trait and trait PCs was partitioned into five nested hierarchical scales including (1) elevation, (2) plot, (3) species, (4) sex and (5) inter-individual. Inter-individual and sex variations of a species were considered as ITV. To determine which of the nested ecological scales contributed most to the variation in traits with different functions, linear mixed effects models were applied using the packages ‘nlme’ and ‘ape’, with elevation, plot, species and sex as nested random factors as \u00051jElevation/Plot/Species/Sex (Messier et al., 2010) using the function lme."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "F I G U R E 3 Percentage of trait variance explained by nested hierarchical scales: Interindividual (between individuals of one sex within a species), sex (males versus females within a species), species (different species within a plot), plot (seven plots at one elevation) and elevation (six elevations within the study area). According to the contribution of the scales, traits are assigned to different types, I, II, III and IV. Type I: Interspecific variation contributes more than intraspecific variation; Type II: Interspecific and intraspecific variation contribute equally; Type III: Intraspecific variation contributes more than interspecific variation and inter-individual differences than sex differences; Type IV: All variation is caused by intraspecific variation, with sex being a more important factor than inter-individual differences. The plot scale contributed virtually no trait variation. The position of the thick black line between the species- and sex-contributed variation in each bar indicates the summed proportion of intraspecific variation. The niche space of multidimensional morphological traits was constructed using principal component (PC) analysis, and individual scores along the first four axes were used in variance partitioning. Asterisk indicates ratio of trait to body length. Dashed line indicates 50% of trait variance. See text in Results section for details."
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "![Image block](doc:5b882c1/tier:advanced/page:7/block:8)"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:5b882c1/tier:advanced/page:9/block:8)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "Qiao-Qiao Ji: Conceptualization; data curation; investigation; formal analy sis; funding acquisition; methodology; project administration; software; resources; validation; visualization; writing – original draft; writing – review and editing. Zhijing Xie: Writing – original draft; writing – review and editing; formal analysis. Yunga Wu: Writing – review and editing; investigation. Zhuoma Wan: Investigation; writing – review and editing. Caiyi Xu: Project administration; resources; writing – review and editing. Donghui Wu: Conceptualization; funding acquisition; project administration; resources; supervision; writing – review and editing. Ting-Wen Chen: Conceptualization; writing – original draft; methodology; validation; visualization; writing – review and editing; software; formal analysis; data curation; supervision. Alejandro Ordonez: Conceptualization; formal analysis; methodology; software; supervision; writing – original draft; writing – review and editing."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "Figure S1. Elevation zonation of vegetation on Changbai Mountain in July: (a) mixed coniferous and broad-leaved forests below 1100 m, (b) mixed coniferous forests between 1100 and 1500 m, (c) subalpine mixed coniferous forests between 1500 and 1800 m, (d) birch forests between 1800 and 2100 m, (e) alpine tundra with dwarf trees and shrubs above 2100 m, (f) Tianchi crater with volcanic rocks."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Figure S3. Relationship between coefficient of variation (CV) of carrion beetle traits and their relative abundance in Changbai Mountain. Asterisk indicates ratio of trait to body length. Blue solid line indicates significant linear relationship ( p"
+  },
+  {
+   "id": "u14",
+   "kind": "table 1",
+   "text": "Elevation (m) | Value\nHigh | 2740\nLow | 630"
+  },
+  {
+   "id": "u15",
+   "kind": "table 4",
+   "text": "Metric | Series | \\(R^{2}\\) | p-value\n(a) Body size | Nicrophorus maculifrons | 0.75 | 0.02\n(a) Body size | N. quadripunctatus | 0.73 | 0.03\n(b) Head length | Nicrophorus maculifrons | 0.90 | < 0.01\n(c) Head width | Nicrophorus maculifrons | 0.71 | 0.04\n(d) Thorax length | Nicrophorus maculifrons | 0.80 | 0.03\n(e) Thorax width | Nicrophorus maculifrons | 0.77 | 0.03\n(f) Elytra length | Nicrophorus maculifrons | 0.66 | 0.049\n(g) Body width | Nicrophorus maculifrons | 0.72 | 0.03\n(h) Femur | Nicrophorus maculifrons | 0.70 | 0.04"
+  },
+  {
+   "id": "u16",
+   "kind": "table 4",
+   "text": "(i) Tibia | Nicrophorus maculifrons | 0.74 | 0.03\n(j) Antenna | Nicrophorus maculifrons | 0.88 | 0.01\n(k) Hindwing | Nicrophorus maculifrons | 0.74 | 0.03\n(l) Leg length | Nicrophorus maculifrons | 0.86 | 0.048\n(a) Body size | N. quadripunctatus | — | —\n(b) Head length | N. quadripunctatus | — | —\n(c) Head width | N. quadripunctatus | — | —\n(d) Thorax length | N. quadripunctatus | — | —\n(e) Thorax width | N. quadripunctatus | — | —\n(f) Elytra length | N. quadripunctatus | — | —"
+  },
+  {
+   "id": "u17",
+   "kind": "table 4",
+   "text": "(g) Body width | N. quadripunctatus | — | —\n(h) Femur | N. quadripunctatus | — | —\n(i) Tibia | N. quadripunctatus | — | —\n(j) Antenna | N. quadripunctatus | — | —\n(k) Hindwing | N. quadripunctatus | — | —\n(l) Leg length | N. quadripunctatus | — | —\n(a) Body size | N. vespilloides | — | —\n(b) Head length | N. vespilloides | — | —\n(c) Head width | N. vespilloides | — | —\n(d) Thorax length | N. vespilloides | — | —"
+  },
+  {
+   "id": "u18",
+   "kind": "table 4",
+   "text": "(e) Thorax width | N. vespilloides | — | —\n(f) Elytra length | N. vespilloides | — | —\n(g) Body width | N. vespilloides | — | —\n(h) Femur | N. vespilloides | — | —\n(i) Tibia | N. vespilloides | — | —\n(j) Antenna | N. vespilloides | — | —\n(k) Hindwing | N. vespilloides | — | —\n(l) Leg length | N. vespilloides | — | —\n(a) Body size | CWM | — | —\n(b) Head length | CWM | — | —"
+  },
+  {
+   "id": "u19",
+   "kind": "table 4",
+   "text": "(c) Head width | CWM | — | —\n(d) Thorax length | CWM | — | —\n(e) Thorax width | CWM | — | —\n(f) Elytra length | CWM | — | —\n(g) Body width | CWM | — | —\n(h) Femur | CWM | — | —\n(i) Tibia | CWM | — | —\n(j) Antenna | CWM | — | —\n(k) Hindwing | CWM | — | —\n(l) Leg length | CWM | — | —"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7"
+  ],
+  [
+   "u8",
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ],
+  [
+   "u13",
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19"
+  ]
+ ],
+ "calls": 11,
+ "categories": [
+  {
+   "variable": "nested hierarchical scales",
+   "code": "(1)",
+   "term": "elevation",
+   "unit": "u7",
+   "model_label": "elevation",
+   "label": "elevation",
+   "explanation": ""
+  },
+  {
+   "variable": "nested hierarchical scales",
+   "code": "(2)",
+   "term": "plot",
+   "unit": "u7",
+   "model_label": "plot",
+   "label": "plot",
+   "explanation": ""
+  },
+  {
+   "variable": "nested hierarchical scales",
+   "code": "(3)",
+   "term": "species",
+   "unit": "u7",
+   "model_label": "species",
+   "label": "species",
+   "explanation": ""
+  },
+  {
+   "variable": "nested hierarchical scales",
+   "code": "(4)",
+   "term": "sex",
+   "unit": "u7",
+   "model_label": "sex",
+   "label": "sex",
+   "explanation": ""
+  },
+  {
+   "variable": "nested hierarchical scales",
+   "code": "(5)",
+   "term": "inter-individual",
+   "unit": "u7",
+   "model_label": "inter-individual",
+   "label": "inter-individual",
+   "explanation": ""
+  },
+  {
+   "variable": "Percentage of trait variance explained by nested hierarchical scales",
+   "code": "I",
+   "term": "Type I: Interspecific variation contributes more than intraspecific variation",
+   "unit": "u8",
+   "model_label": "Type I",
+   "label": "Type I",
+   "explanation": "Interspecific variation contributes more than intraspecific variation"
+  },
+  {
+   "variable": "Percentage of trait variance explained by nested hierarchical scales",
+   "code": "II",
+   "term": "Type II: Interspecific and intraspecific variation contribute equally",
+   "unit": "u8",
+   "model_label": "Type II",
+   "label": "Type II",
+   "explanation": "Interspecific and intraspecific variation contribute equally"
+  },
+  {
+   "variable": "Percentage of trait variance explained by nested hierarchical scales",
+   "code": "III",
+   "term": "Type III: Intraspecific variation contributes more than interspecific variation and inter-individual differences than sex differences",
+   "unit": "u8",
+   "model_label": "Type III",
+   "label": "Type III",
+   "explanation": "Intraspecific variation contributes more than interspecific variation and inter-individual differences than sex differences"
+  },
+  {
+   "variable": "Percentage of trait variance explained by nested hierarchical scales",
+   "code": "IV",
+   "term": "Type IV: All variation is caused by intraspecific variation, with sex being a more important factor than inter-individual differences",
+   "unit": "u8",
+   "model_label": "Type IV",
+   "label": "Type IV",
+   "explanation": "All variation is caused by intraspecific variation, with sex being a more important factor than inter-individual differences"
+  },
+  {
+   "variable": "ratio of trait to body length",
+   "code": "Asterisk",
+   "term": "ratio of trait to body length",
+   "unit": "u8",
+   "model_label": "ratio",
+   "label": "ratio",
+   "explanation": "of trait to body length"
+  },
+  {
+   "variable": "trait variance",
+   "code": "Dashed line",
+   "term": "50% of trait variance",
+   "unit": "u8",
+   "model_label": "50%",
+   "label": "50",
+   "explanation": "% of trait variance"
+  },
+  {
+   "variable": "Elevation",
+   "code": "High",
+   "term": "2740",
+   "unit": "u14",
+   "model_label": "2740",
+   "label": "2740",
+   "explanation": ""
+  },
+  {
+   "variable": "Elevation",
+   "code": "Low",
+   "term": "630",
+   "unit": "u14",
+   "model_label": "630",
+   "label": "630",
+   "explanation": ""
+  },
+  {
+   "variable": "body length",
+   "code": "",
+   "label": "body length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "ratio of elytra length, head length and head width to body length",
+   "code": "",
+   "label": "ratio of elytra length, head length and head width to body length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "tibia length",
+   "code": "",
+   "label": "tibia length",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "intraspecific variation",
+   "code": "",
+   "label": "variation between individuals",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "mixed coniferous and broadleaved forests",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "mixed coniferous forests",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "subalpine mixed coniferous forests",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "birch forests",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "trait",
+   "code": "",
+   "label": "alpine tundra",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "Elevation (m)",
+   "code": "",
+   "label": "High",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  },
+  {
+   "variable": "Elevation (m)",
+   "code": "",
+   "label": "Low",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u14"
+  }
+ ],
+ "dropped": [],
+ "seconds": 31.2
+}

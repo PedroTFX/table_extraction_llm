@@ -1,0 +1,933 @@
+{
+ "paper": "Cecala2021",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "We conducted this study at 13 plant nurseries in southern California, USA (Table S1). All nurseries were open-air yards with containerised flowering plants grown outside or under shade houses, thus being freely accessible to foraging bees (Fig. S1). From March 2016 to May 2018, we sampled each nursery every 3 months, except in winter: once each in spring (March–May), summer (June–August), and autumn (September–November). Due to the number of nurseries and distance between them, it was not feasible to sample all nurseries simultaneously. Within each season, we sampled nurseries in a semi-randomised order within a period of about 6.5 weeks. We sampled each nursery at least twice, with the exception of one, resulting in 58 sampling events (Table S2). We classified a nursery as a ‘native’ nursery if it met two criteria: (1) it advertised itself as cultivating, mostly or exclusively, plants native to California, and (2) on average, >50% of blooming plant taxa documented in surveys (see below) across sampling events were native to California. All five nurseries that met the second criterion also met the first, with mean (± SEM) percent native richness at these nurseries ranging from 72 ± 4% to 91 ± 2%. Eight nurseries not meeting both criteria were classified as ‘conventional’, with mean percent native richness ranging from 1 ± 0.7% to 45 ± 5%."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "varying radii (500 m and 1 km) around each nursery’s perimeter. These distances encompass the flight ranges of many wild bee species (Greenleaf et al., 2007). We used the 2016 National Land Cover Database ([mrlc.gov](http://mrlc.gov), 30-m resolution) to classify land into cover types. We defined ‘natural’ area as cover classes including forests, shrubland, grassland, and wetlands (classes 41–43, 52, 71, 90, 95) and excluding water or land that is developed, managed for agriculture, or barren (11, 21–24, 31, 81, 92)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "To examine variation in the proportions of species across functional trait categories, we constructed generalised linear mixed models in lme4 (Bates et al., 2015) with binomial error distributions. We created six models, one for each functional trait and collection method. In models, the dependent variable was the proportion of bee species in each category of that functional trait; thus, each sampling event corresponded to three observations in a model. We weighted each set of three proportions by the total number of species collected in that sampling event. We included as fixed effects the corresponding functional trait (factor, $k = 3 )$ , season, and nursery type, and all interactions between these factors, and nursery area and proportional surrounding natural area (1 km). We included nursery and year as random factors. Similarly, we constructed six extra models using proportions of individuals collected in sampling events as dependent variables (Table S4). We excluded average blooming plant richness and floral cover per sampling event from all mixed models, as their inclusion resulted in significantly inferior model fits (Table S5) and these variables had no effects (all $P > 0 . 1 0 )$ on the proportion of species collected in any functional trait category or on functional dispersion (FDis) of bee samples (Table S5)."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "![Image block](doc:3ec7d82/tier:advanced/page:5/block:3)"
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Fig. 1. Diet breadth of collected bee species (a: Sweep netting; b: Vane trapping) at conventional and native plant nurseries. Bars and whiskers represent mean ± SEM. The vertical axis is the proportion of all species collected in a sampling event that fall into each of the three functional categories (adjacent bars). Proportions are averaged across seasons and years. Within each panel, bars not connected by the same letter are significantly different according to post hoc tests."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "![Image block](doc:3ec7d82/tier:advanced/page:5/block:5)"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "Fig. 2. Nesting location of collected bee species (a: Sweep netting; b: Vane trapping) at conventional and native plant nurseries. See Fig. 1 legend for explanation of data."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "(season: $\\chi^{2}_{2}=7.00,P=0.030;$ sociality x season interaction: $\\chi ^ { 2 } { } _ { 4 } = 1 2 . 1 8 , P = 0 . 0 1 6 ; \\mathrm { F i g . ~ S } 4 )$ . In terms of the proportions of individuals vane trapped, the three-way interaction among season, nursery type, and the functional trait of interest was significant for all three functional traits (three-way interaction terms for diet breadth: $\\chi ^ { 2 } { } _ { 4 } = 1 8 7 . 9 , P"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:3ec7d82/tier:advanced/page:6/block:3)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Fig. 3. Social organisation of collected bee species (a: Sweep netting; b: Vane trapping) at conventional and native plant nurseries. See Fig. 1 legend for explanation of data."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:3ec7d82/tier:advanced/page:6/block:5)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:3ec7d82/tier:advanced/page:6/block:7)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:3ec7d82/tier:advanced/page:6/block:9)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Fig. 4. FDis of collected bees (a: Sweep netting; b: Vane trapping) at native and conventional plant nurseries across seasons. Bars and whiskers represent mean ± SEM."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Subnetwork size was not correlated with nursery type $( F _ { 1 , 2 1 } = 0 . 7 6 , \\; P = 0 . 3 9 )$ , season $( \\mathrm { F } _ { 2 , 3 9 } = 1 . 4 6 , \\; P = 0 . 2 4 ) ,$ nursery area $( F _ { 1 , 9 } = 1 . 4 2 , P = 0 . 2 6 )$ , or surrounding natural area $( F _ { \\mathrm { 1 , 8 } } = 0 . 4 9 , P = 0 . 5 0 )$ . Indicator species analysis of our bee-plant network suggested that only the sweat bee Halictus ligatus was significantly associated with native plants $( \\mathrm { s t a t } = 0 . 5 4 , P = 0 . 0 0 7 6 )$ , while no bee species were associated with non-native plants (all P > 0.05)."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "As more specialist bee species were detected at native nurseries, one would expect that bee-plant networks from native nurseries would be more specialised. However, this was not the case: networks from both native and conventional nurseries had lower connectance than null expectations, and only conventional nurseries displayed higher specialisation (H2). The low connectance and high specialisation of our networks may be due to several factors. First, the high numbers of bee and plant species in our dataset, compounded by the fact that most plants were not present at all nurseries, may have resulted in fewer realised links. Second, our collection method prohibited prolonged collection of bees from any one given plant species (Gibson et al., 2010). Previous studies have similarly found specialisation of urban bee-plant networks is positively associated with plant richness (Baldock et al., 2015; Martins et al., 2017), yet native and conventional nurseries did not differ in floral richness. One potential explanation for this is that networks at conventional nurseries were more specialised not because they hosted more specialist bees, but perhaps because non-native plants attracted only small, unique subsets of bee species, constraining certain bees to particular plant taxa (Carman & Jenkins, 2016). More research on the attractiveness of native and non-native ornamental plants (e.g. Sponsler et al., 2020) to specialist and generalist species in nurseries may shed light on such patterns."
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "We conducted this study at 13 plant nurseries in southern California, USA (Table S1). All nurseries were open-air yards with containerised flowering plants grown outside or under shade houses, thus being freely accessible to foraging bees (Fig. S1). From March 2016 to May 2018, we sampled each nursery every 3 months, except in winter: once each in spring (March–May), summer (June–August), and autumn (September–November). Due to the number of nurseries and distance between them, it was not feasible to sample all nurseries simultaneously. Within each season, we sampled nurseries in a semi-randomised order within a period of about 6.5 weeks. We sampled each nursery at least twice, with the exception of one, resulting in 58 sampling events (Table S2). We classified a nursery as a ‘native’ nursery if it met two criteria: (1) it advertised itself as cultivating, mostly or exclusively, plants native to California, and (2) on average, >50% of blooming plant taxa documented in surveys (see below) across sampling events were native to California. All five nurseries that met the second criterion also met the first, with mean (± SEM) percent native richness at these nurseries ranging from 72 ± 4% to 91 ± 2%. Eight nurseries not meeting both criteria were classified as ‘conventional’, with mean percent native richness ranging from 1 ± 0.7% to 45 ± 5%."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "varying radii (500 m and 1 km) around each nursery’s perimeter. These distances encompass the flight ranges of many wild bee species (Greenleaf et al., 2007). We used the 2016 National Land Cover Database ([mrlc.gov](http://mrlc.gov), 30-m resolution) to classify land into cover types. We defined ‘natural’ area as cover classes including forests, shrubland, grassland, and wetlands (classes 41–43, 52, 71, 90, 95) and excluding water or land that is developed, managed for agriculture, or barren (11, 21–24, 31, 81, 92)."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "To examine variation in the proportions of species across functional trait categories, we constructed generalised linear mixed models in lme4 (Bates et al., 2015) with binomial error distributions. We created six models, one for each functional trait and collection method. In models, the dependent variable was the proportion of bee species in each category of that functional trait; thus, each sampling event corresponded to three observations in a model. We weighted each set of three proportions by the total number of species collected in that sampling event. We included as fixed effects the corresponding functional trait (factor, $k = 3 )$ , season, and nursery type, and all interactions between these factors, and nursery area and proportional surrounding natural area (1 km). We included nursery and year as random factors. Similarly, we constructed six extra models using proportions of individuals collected in sampling events as dependent variables (Table S4). We excluded average blooming plant richness and floral cover per sampling event from all mixed models, as their inclusion resulted in significantly inferior model fits (Table S5) and these variables had no effects (all $P > 0 . 1 0 )$ on the proportion of species collected in any functional trait category or on functional dispersion (FDis) of bee samples (Table S5)."
+  },
+  {
+   "id": "u19",
+   "kind": "prose",
+   "text": "![Image block](doc:96af3f4/tier:advanced/page:5/block:3)"
+  },
+  {
+   "id": "u20",
+   "kind": "prose",
+   "text": "Fig. 1. Diet breadth of collected bee species (a: Sweep netting; b: Vane trapping) at conventional and native plant nurseries. Bars and whiskers represent mean ± SEM. The vertical axis is the proportion of all species collected in a sampling event that fall into each of the three functional categories (adjacent bars). Proportions are averaged across seasons and years. Within each panel, bars not connected by the same letter are significantly different according to post hoc tests."
+  },
+  {
+   "id": "u21",
+   "kind": "prose",
+   "text": "![Image block](doc:96af3f4/tier:advanced/page:5/block:5)"
+  },
+  {
+   "id": "u22",
+   "kind": "prose",
+   "text": "Fig. 2. Nesting location of collected bee species (a: Sweep netting; b: Vane trapping) at conventional and native plant nurseries. See Fig. 1 legend for explanation of data."
+  },
+  {
+   "id": "u23",
+   "kind": "prose",
+   "text": "(season: $\\chi^{2}_{2}=7.00,P=0.030;$ sociality x season interaction: $\\chi ^ { 2 } { } _ { 4 } = 1 2 . 1 8 , P = 0 . 0 1 6 ; \\mathrm { F i g . ~ S } 4 )$ . In terms of the proportions of individuals vane trapped, the three-way interaction among season, nursery type, and the functional trait of interest was significant for all three functional traits (three-way interaction terms for diet breadth: $\\chi ^ { 2 } { } _ { 4 } = 1 8 7 . 9 , P"
+  },
+  {
+   "id": "u24",
+   "kind": "prose",
+   "text": "![Image block](doc:96af3f4/tier:advanced/page:6/block:3)"
+  },
+  {
+   "id": "u25",
+   "kind": "prose",
+   "text": "Fig. 3. Social organisation of collected bee species (a: Sweep netting; b: Vane trapping) at conventional and native plant nurseries. See Fig. 1 legend for explanation of data."
+  },
+  {
+   "id": "u26",
+   "kind": "prose",
+   "text": "![Image block](doc:96af3f4/tier:advanced/page:6/block:5)"
+  },
+  {
+   "id": "u27",
+   "kind": "prose",
+   "text": "![Image block](doc:96af3f4/tier:advanced/page:6/block:7)"
+  },
+  {
+   "id": "u28",
+   "kind": "prose",
+   "text": "![Image block](doc:96af3f4/tier:advanced/page:6/block:9)"
+  },
+  {
+   "id": "u29",
+   "kind": "prose",
+   "text": "Fig. 4. FDis of collected bees (a: Sweep netting; b: Vane trapping) at native and conventional plant nurseries across seasons. Bars and whiskers represent mean ± SEM."
+  },
+  {
+   "id": "u30",
+   "kind": "prose",
+   "text": "Subnetwork size was not correlated with nursery type $( F _ { 1 , 2 1 } = 0 . 7 6 , \\; P = 0 . 3 9 )$ , season $( \\mathrm { F } _ { 2 , 3 9 } = 1 . 4 6 , \\; P = 0 . 2 4 ) ,$ nursery area $( F _ { 1 , 9 } = 1 . 4 2 , P = 0 . 2 6 )$ , or surrounding natural area $( F _ { \\mathrm { 1 , 8 } } = 0 . 4 9 , P = 0 . 5 0 )$ . Indicator species analysis of our bee-plant network suggested that only the sweat bee Halictus ligatus was significantly associated with native plants $( \\mathrm { s t a t } = 0 . 5 4 , P = 0 . 0 0 7 6 )$ , while no bee species were associated with non-native plants (all P > 0.05)."
+  },
+  {
+   "id": "u31",
+   "kind": "prose",
+   "text": "As more specialist bee species were detected at native nurseries, one would expect that bee-plant networks from native nurseries would be more specialised. However, this was not the case: networks from both native and conventional nurseries had lower connectance than null expectations, and only conventional nurseries displayed higher specialisation (H2). The low connectance and high specialisation of our networks may be due to several factors. First, the high numbers of bee and plant species in our dataset, compounded by the fact that most plants were not present at all nurseries, may have resulted in fewer realised links. Second, our collection method prohibited prolonged collection of bees from any one given plant species (Gibson et al., 2010). Previous studies have similarly found specialisation of urban bee-plant networks is positively associated with plant richness (Baldock et al., 2015; Martins et al., 2017), yet native and conventional nurseries did not differ in floral richness. One potential explanation for this is that networks at conventional nurseries were more specialised not because they hosted more specialist bees, but perhaps because non-native plants attracted only small, unique subsets of bee species, constraining certain bees to particular plant taxa (Carman & Jenkins, 2016). More research on the attractiveness of native and non-native ornamental plants (e.g. Sponsler et al., 2020) to specialist and generalist species in nurseries may shed light on such patterns."
+  },
+  {
+   "id": "u32",
+   "kind": "prose",
+   "text": "4. Larkin, L. L., Neff, J. L. & Simpson, B. B. 2008 The evolution of a pollen diet: Host choice and diet breadth of Andrena bees (Hymenoptera: Andrenidae). Apidologie 39, 133–145. (doi:10.1051/apido:2007064)"
+  },
+  {
+   "id": "u33",
+   "kind": "prose",
+   "text": "6. Danforth, B. N., Cardinal, S., Praz, C., Almeida, E. A. B. & Michez, D. 2013 The Impact of Molecular Data on Our Understanding of Bee Phylogeny and Evolution. Annual Review of Entomology 58, 57–78. (doi:10.1146/annurev-ento-120811-153633)"
+  },
+  {
+   "id": "u34",
+   "kind": "prose",
+   "text": "27. Albert, J. & Packer, L. 2013 Nesting biology and phenology of a population of Halictus farinosus Smith (Hymenoptera, Halictidae) in northern Utah. Journal of Hymenoptera Research 32, 55–73. (doi:10.3897/jhr.32.4646)"
+  },
+  {
+   "id": "u35",
+   "kind": "prose",
+   "text": "33. Danforth, B. N., Conway, L. & Ji, S. 2003 Phylogeny of Eusocial Lasioglossum Reveals Multiple Losses of Eusociality within a Primitively Eusocial Clade of Bees (Hymenoptera: Halictidae). Systematic Biol. 52, 23–36. (doi:10.1080/10635150390132687)"
+  },
+  {
+   "id": "u36",
+   "kind": "prose",
+   "text": "Table S4. Results of significance tests for fixed effects, including interaction terms, from mixed models with nursery and year as random effects. Symbols in cells indicate the results of that hypothesis test: ***: P ≤ 0.001; **: P ≤ 0.01; *: P ≤ 0.05; ns: P > 0.05. Parentheses around “ns” indicate that, in the identical model with Apis mellifera included, the P-value for that hypothesis test was ≤ 0.05. Functional dispersion (FDis) accounts for multiple functional traits, so the two models for this variable lacked a functional trait effect and associated interactions (“N/A”)."
+  },
+  {
+   "id": "u37",
+   "kind": "prose",
+   "text": "Table S5. Model comparisons using the second-order Akaike Information criterion (AICc), comparing our original models (those described in the text and Table S4) to those which differed in the inclusion of certain predictor variables. The difference in AICc between respective models (ΔAICc) was calculated by subtracting the AICc of the original model from that of the new model; ΔAICc values of –2.00 or below were considered statistically significant."
+  },
+  {
+   "id": "u38",
+   "kind": "prose",
+   "text": "![Image block](doc:b2bfb94/tier:flash/page:8/block:5)"
+  },
+  {
+   "id": "u39",
+   "kind": "prose",
+   "text": "![Image block](doc:b2bfb94/tier:flash/page:8/block:7)"
+  },
+  {
+   "id": "u40",
+   "kind": "prose",
+   "text": "Fig. S2. Diet breadth of bee individuals collected by (A) sweep netting and (B) vane trapping. Proportions represent the fraction of individual bees detected a given sampling that fall into each of three functional categories—generalist, specialist, or cleptoparasite—out of all individuals collected in that given sampling. Bars and whiskers represent mean±SE. Samplings are arranged by season and type of nursery. For sweep netting (A), the two-way interaction between diet breadth and nursery type was statistically significant. For vane trapping (B), the three-way interaction between diet breadth, season, and nursery type was statistically significant (Table S4)."
+  },
+  {
+   "id": "u41",
+   "kind": "prose",
+   "text": "![Image block](doc:b2bfb94/tier:flash/page:8/block:9)"
+  },
+  {
+   "id": "u42",
+   "kind": "prose",
+   "text": "Fig. S3. Nesting location of bee individuals collected by (A) sweep netting and (B) vane trapping. Proportions represent the fraction of individual bees detected a given sampling that fall into each of three functional categories— below ground, cavity, or cleptoparasite—out of all individuals collected in that given sampling. Bars and whiskers represent mean±SE. Samplings are arranged by season and type of nursery. For sweep netting (A), the two-way interaction between nesting location and season was statistically significant. For vane trapping (B), the three-way interaction between diet breadth, season, and nursery type was statistically significant (Table S4)."
+  },
+  {
+   "id": "u43",
+   "kind": "prose",
+   "text": "![Image block](doc:b2bfb94/tier:flash/page:8/block:11)"
+  },
+  {
+   "id": "u44",
+   "kind": "prose",
+   "text": "Fig. S4. Social organization of bee individuals collected by (A) sweep netting and (B) vane trapping. Proportions represent the fraction of individual bees detected a given sampling that fall into each of three functional categories— solitary, eusocial, or cleptoparasite —out of all individuals collected in that given sampling. Bars and whiskers represent mean±SE. Samplings are arranged by season and type of nursery. For sweep netting (A), the two-way interaction between sociality and season was statistically significant. For vane trapping (B), the three-way interaction between diet breadth, season, and nursery type was statistically significant (Table S4)."
+  },
+  {
+   "id": "u45",
+   "kind": "prose",
+   "text": "4. Larkin, L. L., Neff, J. L. & Simpson, B. B. 2008 The evolution of a pollen diet: Host choice and diet breadth of Andrena bees (Hymenoptera: Andrenidae). Apidologie 39, 133–145. (doi:10.1051/apido:2007064)"
+  },
+  {
+   "id": "u46",
+   "kind": "prose",
+   "text": "6. Danforth, B. N., Cardinal, S., Praz, C., Almeida, E. A. B. & Michez, D. 2013 The Impact of Molecular Data on Our Understanding of Bee Phylogeny and Evolution. Annual Review of Entomology 58, 57–78. (doi:10.1146/annurev-ento-120811-153633)"
+  },
+  {
+   "id": "u47",
+   "kind": "prose",
+   "text": "27. Albert, J. & Packer, L. 2013 Nesting biology and phenology of a population of Halictus farinosus Smith (Hymenoptera, Halictidae) in northern Utah. Journal of Hymenoptera Research 32, 55–73. (doi:10.3897/jhr.32.4646)"
+  },
+  {
+   "id": "u48",
+   "kind": "prose",
+   "text": "33. Danforth, B. N., Conway, L. & Ji, S. 2003 Phylogeny of Eusocial Lasioglossum Reveals Multiple Losses of Eusociality within a Primitively Eusocial Clade of Bees (Hymenoptera: Halictidae). Systematic Biol. 52, 23–36. (doi:10.1080/10635150390132687)"
+  },
+  {
+   "id": "u49",
+   "kind": "prose",
+   "text": "Table S4. Results of significance tests for fixed effects, including interaction terms, from mixed models with nursery and year as random effects. Symbols in cells indicate the results of that hypothesis test: ***: P ≤ 0.001; **: P ≤ 0.01; *: P ≤ 0.05; ns: P > 0.05. Parentheses around “ns” indicate that, in the identical model with Apis mellifera included, the P-value for that hypothesis test was ≤ 0.05. Functional dispersion (FDis) accounts for multiple functional traits, so the two models for this variable lacked a functional trait effect and associated interactions (“N/A”)."
+  },
+  {
+   "id": "u50",
+   "kind": "prose",
+   "text": "Table S5. Model comparisons using the second-order Akaike Information criterion (AICc), comparing our original models (those described in the text and Table S4) to those which differed in the inclusion of certain predictor variables. The difference in AICc between respective models (ΔAICc) was calculated by subtracting the AICc of the original model from that of the new model; ΔAICc values of –2.00 or below were considered statistically significant."
+  },
+  {
+   "id": "u51",
+   "kind": "prose",
+   "text": "![Image block](doc:5c63954/tier:flash/page:8/block:5)"
+  },
+  {
+   "id": "u52",
+   "kind": "prose",
+   "text": "![Image block](doc:5c63954/tier:flash/page:8/block:7)"
+  },
+  {
+   "id": "u53",
+   "kind": "prose",
+   "text": "Fig. S2. Diet breadth of bee individuals collected by (A) sweep netting and (B) vane trapping. Proportions represent the fraction of individual bees detected a given sampling that fall into each of three functional categories—generalist, specialist, or cleptoparasite—out of all individuals collected in that given sampling. Bars and whiskers represent mean±SE. Samplings are arranged by season and type of nursery. For sweep netting (A), the two-way interaction between diet breadth and nursery type was statistically significant. For vane trapping (B), the three-way interaction between diet breadth, season, and nursery type was statistically significant (Table S4)."
+  },
+  {
+   "id": "u54",
+   "kind": "prose",
+   "text": "![Image block](doc:5c63954/tier:flash/page:8/block:9)"
+  },
+  {
+   "id": "u55",
+   "kind": "prose",
+   "text": "Fig. S3. Nesting location of bee individuals collected by (A) sweep netting and (B) vane trapping. Proportions represent the fraction of individual bees detected a given sampling that fall into each of three functional categories— below ground, cavity, or cleptoparasite—out of all individuals collected in that given sampling. Bars and whiskers represent mean±SE. Samplings are arranged by season and type of nursery. For sweep netting (A), the two-way interaction between nesting location and season was statistically significant. For vane trapping (B), the three-way interaction between diet breadth, season, and nursery type was statistically significant (Table S4)."
+  },
+  {
+   "id": "u56",
+   "kind": "prose",
+   "text": "![Image block](doc:5c63954/tier:flash/page:8/block:11)"
+  },
+  {
+   "id": "u57",
+   "kind": "prose",
+   "text": "Fig. S4. Social organization of bee individuals collected by (A) sweep netting and (B) vane trapping. Proportions represent the fraction of individual bees detected a given sampling that fall into each of three functional categories— solitary, eusocial, or cleptoparasite —out of all individuals collected in that given sampling. Bars and whiskers represent mean±SE. Samplings are arranged by season and type of nursery. For sweep netting (A), the two-way interaction between sociality and season was statistically significant. For vane trapping (B), the three-way interaction between diet breadth, season, and nursery type was statistically significant (Table S4)."
+  },
+  {
+   "id": "u58",
+   "kind": "table 5",
+   "text": "Sweep netting (92 spp.) | eusocial | solitary\ngeneralist | below ground | 26 | 22\ncavity | 0 | 25\nspecialist | below ground | 0 | 14\ncavity | 0 | 1\ncleptoparasites: 4\nVane trapping (102 spp.) | eusocial | solitary\ngeneralist | below ground | 22 | 22\ncavity | 0 | 20\nspecialist | below ground | 0 | 31"
+  },
+  {
+   "id": "u59",
+   "kind": "table 5",
+   "text": "cavity | 0 | 2\ncleptoparasites: 5"
+  },
+  {
+   "id": "u60",
+   "kind": "table 6",
+   "text": "plant species name | California native status | native nurseries | conventional nurseries\nSalvia clevelandii | native | 5 | 25\nEncelia californica | native | 12 | 8\nBaileya multiradiata | native | 14 | 0\nErigeron glaucus | native | 10 | 3\nEschscholzia californica | native | 13 | 0\nAbutilon palmeri | native | 10 | 1\nEriophyllum confertiflorum | native | 2 | 7\nSalvia mellifera | native | 8 | 1\nCeanothus sp. | native | 8 | 0"
+  },
+  {
+   "id": "u61",
+   "kind": "table 6",
+   "text": "Grindelia camporum | native | 8 | 0\nPenstemon heterophyllus | native | 1 | 6\nBaccharis pilularis | native | 0 | 6\nCorethrogyne filaginifolia | native | 5 | 1\nDendromecon harfordii | native | 6 | 0\nEriogonum fasciculatum | native | 3 | 3\nPenstemon spectabilis | native | 4 | 2\nTrichostema lanatum | native | 6 | 0\nMalosma laurina | native | 5 | 0\nSphaeralcea ambigua | native | 5 | 0"
+  },
+  {
+   "id": "u62",
+   "kind": "table 6",
+   "text": "Baccharis salicifolia | native | 3 | 1\nRosa californica | native | 3 | 1\nEncelia farinosa | native | 0 | 3\nEpilobium canum | native | 3 | 0\nEriogonum parvifolium | native | 3 | 0\nFallugia paradoxa | native | 3 | 0\nHelianthus annuus | native | 3 | 0\nIsocoma menziesii | native | 1 | 2\nAchillea millefolium | native | 0 | 2\nAstragalus trichopodus | native | 2 | 0"
+  },
+  {
+   "id": "u63",
+   "kind": "table 6",
+   "text": "Chilopsis linearis | native | 0 | 2\nClarkia unguiculata | native | 2 | 0\nFrangula californica | native | 0 | 2\nGrindelia stricta | native | 2 | 0\nPhyla nodiflora | native | 0 | 2\nSidalcea malviflora | native | 2 | 0\nTetraneuris acaulis | native | 2 | 0\nBahiopsis laciniata | native | 1 | 0\nCalystegia macrostegia | native | 1 | 0\nDichelostemma capitatum | native | 1 | 0"
+  },
+  {
+   "id": "u64",
+   "kind": "table 6",
+   "text": "Eriogonum grande | native | 1 | 0\nHelianthus californicus | native | 1 | 0\nMalacothamnus clementinus | native | 1 | 0\nMalacothamnus fasciculatus | native | 1 | 0\nMonardella odoratissima | native | 1 | 0\nMonardella villosa | native | 1 | 0\nRomneya coulteri | native | 0 | 1\nSalvia leucophylla | native | 0 | 1\nSalvia pachyphylla | native | 0 | 1\nSambucus mexicana | native | 0 | 1"
+  },
+  {
+   "id": "u65",
+   "kind": "table 6",
+   "text": "Salvia greggii | non-native | 0 | 9\nGaillardia grandiflora | non-native | 0 | 8\nLagerstroemia indica | non-native | 0 | 8\nEremophila hygrophana | non-native | 0 | 6\nSalvia chamaedryoides | non-native | 0 | 6\nCaryopteris clandonensis | non-native | 0 | 5\nMelampodium leucanthum | non-native | 1 | 4\nVitex agnus-castus | non-native | 0 | 5\nBulbine frutescens | non-native | 0 | 4\nLigustrum lucidum | non-native | 0 | 4"
+  },
+  {
+   "id": "u66",
+   "kind": "table 6",
+   "text": "Oenothera cf. biennis | non-native | 0 | 4\nRosmarinus officinalis | non-native | 0 | 4\nBerlandiera lyrata | non-native | 3 | 0\nCistus salviifolius | non-native | 0 | 3\nLamium amplexicaule | non-native | 3 | 0\nOenothera speciosa | non-native | 0 | 3\nPelargonium sidoides | non-native | 0 | 3\nSalvia microphylla | non-native | 1 | 2\nSalvia uliginosa | non-native | 0 | 3\nTecoma capensis | non-native | 0 | 3"
+  },
+  {
+   "id": "u67",
+   "kind": "table 6",
+   "text": "Verbesina encelioides | non-native | 0 | 3\nCalandrinia spectabilis | non-native | 0 | 2\nCoreopsis grandiflora | non-native | 0 | 2\nDuranta erecta | non-native | 0 | 2\nLavandula dentata | non-native | 0 | 2\nLavandula stoechas | non-native | 0 | 2\nLeptospermum scoparium | non-native | 0 | 2\nLeucophyllum frutescens | non-native | 0 | 2\nPerovskia atriplicifolia | non-native | 0 | 2\nAgeratina adenophora | non-native | 0 | 1"
+  },
+  {
+   "id": "u68",
+   "kind": "table 6",
+   "text": "Buddleja davidii | non-native | 0 | 1\nCallistemon viminalis | non-native | 0 | 1\nCeratostigma plumbaginoides | non-native | 0 | 1\nCercidium sp. | non-native | 0 | 1\nCistus purpureus | non-native | 0 | 1\nConvolvulus sabatius | non-native | 0 | 1\nCosmos bipinnatus | non-native | 0 | 1\nFelicia amelloides | non-native | 0 | 1\nGaura lindheimeri | non-native | 0 | 1\nGnaphalieae sp. | non-native | 0 | 1"
+  },
+  {
+   "id": "u69",
+   "kind": "table 6",
+   "text": "Lavandula ginginsii | non-native | 0 | 1\nMonarda sp. | non-native | 0 | 1\nNerium oleander | non-native | 0 | 1\nPallenis maritima | non-native | 0 | 1\nPenstemon cf. cobaea | non-native | 0 | 1\nSagina subulata | non-native | 0 | 1\nSalvia farinacea | non-native | 0 | 1\nVitex trifolia | non-native | 0 | 1"
+  },
+  {
+   "id": "u70",
+   "kind": "table 12",
+   "text": "Sweep netting (92 spp.) | eusocial | solitary\ngeneralist | below ground | 26 | 22\ncavity | 0 | 25\nspecialist | below ground | 0 | 14\ncavity | 0 | 1\ncleptoparasites: 4\nVane trapping (102 spp.) | eusocial | solitary\ngeneralist | below ground | 22 | 22\ncavity | 0 | 20\nspecialist | below ground | 0 | 31"
+  },
+  {
+   "id": "u71",
+   "kind": "table 12",
+   "text": "cavity | 0 | 2\ncleptoparasites: 5"
+  },
+  {
+   "id": "u72",
+   "kind": "table 13",
+   "text": "plant species name | California native status | native nurseries | conventional nurseries\nSalvia clevelandii | native | 5 | 25\nEncelia californica | native | 12 | 8\nBaileya multiradiata | native | 14 | 0\nErigeron glaucus | native | 10 | 3\nEschscholzia californica | native | 13 | 0\nAbutilon palmeri | native | 10 | 1\nEriophyllum confertiflorum | native | 2 | 7\nSalvia mellifera | native | 8 | 1\nCeanothus sp. | native | 8 | 0"
+  },
+  {
+   "id": "u73",
+   "kind": "table 13",
+   "text": "Grindelia camporum | native | 8 | 0\nPenstemon heterophyllus | native | 1 | 6\nBaccharis pilularis | native | 0 | 6\nCorethrogyne filaginifolia | native | 5 | 1\nDendromecon harfordii | native | 6 | 0\nEriogonum fasciculatum | native | 3 | 3\nPenstemon spectabilis | native | 4 | 2\nTrichostema lanatum | native | 6 | 0\nMalosma laurina | native | 5 | 0\nSphaeralcea ambigua | native | 5 | 0"
+  },
+  {
+   "id": "u74",
+   "kind": "table 13",
+   "text": "Baccharis salicifolia | native | 3 | 1\nRosa californica | native | 3 | 1\nEncelia farinosa | native | 0 | 3\nEpilobium canum | native | 3 | 0\nEriogonum parvifolium | native | 3 | 0\nFallugia paradoxa | native | 3 | 0\nHelianthus annuus | native | 3 | 0\nIsocoma menziesii | native | 1 | 2\nAchillea millefolium | native | 0 | 2\nAstragalus trichopodus | native | 2 | 0"
+  },
+  {
+   "id": "u75",
+   "kind": "table 13",
+   "text": "Chilopsis linearis | native | 0 | 2\nClarkia unguiculata | native | 2 | 0\nFrangula californica | native | 0 | 2\nGrindelia stricta | native | 2 | 0\nPhyla nodiflora | native | 0 | 2\nSidalcea malviflora | native | 2 | 0\nTetraneuris acaulis | native | 2 | 0\nBahiopsis laciniata | native | 1 | 0\nCalystegia macrostegia | native | 1 | 0\nDichelostemma capitatum | native | 1 | 0"
+  },
+  {
+   "id": "u76",
+   "kind": "table 13",
+   "text": "Eriogonum grande | native | 1 | 0\nHelianthus californicus | native | 1 | 0\nMalacothamnus clementinus | native | 1 | 0\nMalacothamnus fasciculatus | native | 1 | 0\nMonardella odoratissima | native | 1 | 0\nMonardella villosa | native | 1 | 0\nRomneya coulteri | native | 0 | 1\nSalvia leucophylla | native | 0 | 1\nSalvia pachyphylla | native | 0 | 1\nSambucus mexicana | native | 0 | 1"
+  },
+  {
+   "id": "u77",
+   "kind": "table 13",
+   "text": "Salvia greggii | non-native | 0 | 9\nGaillardia grandiflora | non-native | 0 | 8\nLagerstroemia indica | non-native | 0 | 8\nEremophila hygrophana | non-native | 0 | 6\nSalvia chamaedryoides | non-native | 0 | 6\nCaryopteris clandonensis | non-native | 0 | 5\nMelampodium leucanthum | non-native | 1 | 4\nVitex agnus-castus | non-native | 0 | 5\nBulbine frutescens | non-native | 0 | 4\nLigustrum lucidum | non-native | 0 | 4"
+  },
+  {
+   "id": "u78",
+   "kind": "table 13",
+   "text": "Oenothera cf. biennis | non-native | 0 | 4\nRosmarinus officinalis | non-native | 0 | 4\nBerlandiera lyrata | non-native | 3 | 0\nCistus salviifolius | non-native | 0 | 3\nLamium amplexicaule | non-native | 3 | 0\nOenothera speciosa | non-native | 0 | 3\nPelargonium sidoides | non-native | 0 | 3\nSalvia microphylla | non-native | 1 | 2\nSalvia uliginosa | non-native | 0 | 3\nTecoma capensis | non-native | 0 | 3"
+  },
+  {
+   "id": "u79",
+   "kind": "table 13",
+   "text": "Verbesina encelioides | non-native | 0 | 3\nCalandrinia spectabilis | non-native | 0 | 2\nCoreopsis grandiflora | non-native | 0 | 2\nDuranta erecta | non-native | 0 | 2\nLavandula dentata | non-native | 0 | 2\nLavandula stoechas | non-native | 0 | 2\nLeptospermum scoparium | non-native | 0 | 2\nLeucophyllum frutescens | non-native | 0 | 2\nPerovskia atriplicifolia | non-native | 0 | 2\nAgeratina adenophora | non-native | 0 | 1"
+  },
+  {
+   "id": "u80",
+   "kind": "table 13",
+   "text": "Buddleja davidii | non-native | 0 | 1\nCallistemon viminalis | non-native | 0 | 1\nCeratostigma plumbaginoides | non-native | 0 | 1\nCercidium sp. | non-native | 0 | 1\nCistus purpureus | non-native | 0 | 1\nConvolvulus sabatius | non-native | 0 | 1\nCosmos bipinnatus | non-native | 0 | 1\nFelicia amelloides | non-native | 0 | 1\nGaura lindheimeri | non-native | 0 | 1\nGnaphalieae sp. | non-native | 0 | 1"
+  },
+  {
+   "id": "u81",
+   "kind": "table 13",
+   "text": "Lavandula ginginsii | non-native | 0 | 1\nMonarda sp. | non-native | 0 | 1\nNerium oleander | non-native | 0 | 1\nPallenis maritima | non-native | 0 | 1\nPenstemon cf. cobaea | non-native | 0 | 1\nSagina subulata | non-native | 0 | 1\nSalvia farinacea | non-native | 0 | 1\nVitex trifolia | non-native | 0 | 1"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1"
+  ],
+  [
+   "u2",
+   "u3",
+   "u4",
+   "u5",
+   "u6",
+   "u7",
+   "u8",
+   "u9",
+   "u10"
+  ],
+  [
+   "u11",
+   "u12",
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19",
+   "u20",
+   "u21",
+   "u22",
+   "u23",
+   "u24",
+   "u25",
+   "u26"
+  ],
+  [
+   "u27",
+   "u28",
+   "u29",
+   "u30",
+   "u31",
+   "u32",
+   "u33"
+  ],
+  [
+   "u34",
+   "u35",
+   "u36",
+   "u37",
+   "u38",
+   "u39",
+   "u40",
+   "u41"
+  ],
+  [
+   "u42",
+   "u43",
+   "u44",
+   "u45",
+   "u46",
+   "u47",
+   "u48",
+   "u49"
+  ],
+  [
+   "u50",
+   "u51",
+   "u52",
+   "u53",
+   "u54",
+   "u55",
+   "u56",
+   "u57"
+  ],
+  [
+   "u58",
+   "u59",
+   "u60",
+   "u61",
+   "u62",
+   "u63",
+   "u64",
+   "u65"
+  ],
+  [
+   "u66",
+   "u67",
+   "u68",
+   "u69",
+   "u70",
+   "u71",
+   "u72",
+   "u73"
+  ],
+  [
+   "u74",
+   "u75",
+   "u76",
+   "u77",
+   "u78",
+   "u79",
+   "u80"
+  ],
+  [
+   "u81"
+  ]
+ ],
+ "calls": 27,
+ "categories": [
+  {
+   "variable": "cover classes",
+   "code": "41–43, 52, 71, 90, 95",
+   "term": "natural",
+   "unit": "u1",
+   "model_label": "natural",
+   "label": "natural",
+   "explanation": ""
+  },
+  {
+   "variable": "cover classes",
+   "code": "11, 21–24, 31, 81, 92",
+   "term": "developed, managed for agriculture, or barren",
+   "unit": "u1",
+   "model_label": "developed",
+   "label": "developed",
+   "explanation": "managed for agriculture, or barren"
+  },
+  {
+   "variable": "functional trait",
+   "code": "k = 3",
+   "term": "3",
+   "unit": "u2",
+   "model_label": "3",
+   "label": "3",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting",
+   "code": "a",
+   "term": "Sweep netting",
+   "unit": "u13",
+   "model_label": "Sweep netting",
+   "label": "Sweep netting",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping",
+   "code": "b",
+   "term": "Vane trapping",
+   "unit": "u13",
+   "model_label": "Vane trapping",
+   "label": "Vane trapping",
+   "explanation": ""
+  },
+  {
+   "variable": "a",
+   "code": "a",
+   "term": "Sweep netting",
+   "unit": "u29",
+   "model_label": "Sweep netting",
+   "label": "Sweep netting",
+   "explanation": ""
+  },
+  {
+   "variable": "b",
+   "code": "b",
+   "term": "Vane trapping",
+   "unit": "u29",
+   "model_label": "Vane trapping",
+   "label": "Vane trapping",
+   "explanation": ""
+  },
+  {
+   "variable": "Symbols in cells indicate the results of that hypothesis test:",
+   "code": "***",
+   "term": "P ≤ 0.001",
+   "unit": "u36",
+   "model_label": "P ≤ 0.001",
+   "label": "P ≤ 0.001",
+   "explanation": ""
+  },
+  {
+   "variable": "Symbols in cells indicate the results of that hypothesis test:",
+   "code": "**",
+   "term": "P ≤ 0.01",
+   "unit": "u36",
+   "model_label": "P ≤ 0.01",
+   "label": "P ≤ 0.01",
+   "explanation": ""
+  },
+  {
+   "variable": "Symbols in cells indicate the results of that hypothesis test:",
+   "code": "*",
+   "term": "P ≤ 0.05",
+   "unit": "u36",
+   "model_label": "P ≤ 0.05",
+   "label": "P ≤ 0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "Symbols in cells indicate the results of that hypothesis test:",
+   "code": "ns",
+   "term": "P > 0.05",
+   "unit": "u36",
+   "model_label": "ns",
+   "label": "P > 0.05",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "generalist",
+   "term": "generalist",
+   "unit": "u53",
+   "model_label": "generalist",
+   "label": "generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "specialist",
+   "term": "specialist",
+   "unit": "u53",
+   "model_label": "specialist",
+   "label": "specialist",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "cleptoparasite",
+   "term": "cleptoparasite",
+   "unit": "u53",
+   "model_label": "cleptoparasite",
+   "label": "cleptoparasite",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "below ground",
+   "term": "below ground",
+   "unit": "u55",
+   "model_label": "below ground",
+   "label": "below ground",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "cavity",
+   "term": "cavity",
+   "unit": "u55",
+   "model_label": "cavity",
+   "label": "cavity",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "solitary",
+   "term": "solitary",
+   "unit": "u57",
+   "model_label": "solitary",
+   "label": "solitary",
+   "explanation": ""
+  },
+  {
+   "variable": "functional categories",
+   "code": "eusocial",
+   "term": "eusocial",
+   "unit": "u57",
+   "model_label": "eusocial",
+   "label": "eusocial",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting (92 spp.)",
+   "code": "eusocial",
+   "term": "eusocial",
+   "unit": "u58",
+   "model_label": "eusocial",
+   "label": "eusocial",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting (92 spp.)",
+   "code": "solitary",
+   "term": "solitary",
+   "unit": "u58",
+   "model_label": "solitary",
+   "label": "solitary",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting (92 spp.)",
+   "code": "generalist",
+   "term": "generalist",
+   "unit": "u58",
+   "model_label": "generalist",
+   "label": "generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting (92 spp.)",
+   "code": "below ground",
+   "term": "below ground",
+   "unit": "u58",
+   "model_label": "below ground",
+   "label": "below ground",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting (92 spp.)",
+   "code": "cavity",
+   "term": "cavity",
+   "unit": "u58",
+   "model_label": "cavity",
+   "label": "cavity",
+   "explanation": ""
+  },
+  {
+   "variable": "Sweep netting (92 spp.)",
+   "code": "specialist",
+   "term": "specialist",
+   "unit": "u58",
+   "model_label": "specialist",
+   "label": "specialist",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping (102 spp.)",
+   "code": "eusocial",
+   "term": "eusocial",
+   "unit": "u58",
+   "model_label": "eusocial",
+   "label": "eusocial",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping (102 spp.)",
+   "code": "solitary",
+   "term": "solitary",
+   "unit": "u58",
+   "model_label": "solitary",
+   "label": "solitary",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping (102 spp.)",
+   "code": "generalist",
+   "term": "generalist",
+   "unit": "u58",
+   "model_label": "generalist",
+   "label": "generalist",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping (102 spp.)",
+   "code": "below ground",
+   "term": "below ground",
+   "unit": "u58",
+   "model_label": "below ground",
+   "label": "below ground",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping (102 spp.)",
+   "code": "cavity",
+   "term": "cavity",
+   "unit": "u58",
+   "model_label": "cavity",
+   "label": "cavity",
+   "explanation": ""
+  },
+  {
+   "variable": "Vane trapping (102 spp.)",
+   "code": "specialist",
+   "term": "specialist",
+   "unit": "u58",
+   "model_label": "specialist",
+   "label": "specialist",
+   "explanation": ""
+  },
+  {
+   "variable": "plant species name",
+   "code": "native",
+   "term": "native",
+   "unit": "u60",
+   "model_label": "native",
+   "label": "native",
+   "explanation": ""
+  },
+  {
+   "variable": "plant species name",
+   "code": "non-native",
+   "term": "non-native",
+   "unit": "u65",
+   "model_label": "non-native",
+   "label": "non-native",
+   "explanation": ""
+  },
+  {
+   "variable": "native",
+   "code": "native",
+   "term": "native",
+   "unit": "u74",
+   "model_label": "native",
+   "label": "native",
+   "explanation": ""
+  },
+  {
+   "variable": "non-native",
+   "code": "non-native",
+   "term": "non-native",
+   "unit": "u77",
+   "model_label": "non-native",
+   "label": "non-native",
+   "explanation": ""
+  },
+  {
+   "variable": "nursery classification",
+   "code": "",
+   "label": "conventional",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u0"
+  },
+  {
+   "variable": "functional trait",
+   "code": "",
+   "label": "Diet breadth",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "functional trait",
+   "code": "",
+   "label": "Nesting location",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u6"
+  },
+  {
+   "variable": "functional trait",
+   "code": "",
+   "label": "Social organisation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "specialisation",
+   "code": "",
+   "label": "specialisation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "pollen diet",
+   "code": "",
+   "label": "Host choice",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u32"
+  },
+  {
+   "variable": "plant species name",
+   "code": "",
+   "label": "California native status",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u60"
+  },
+  {
+   "variable": "plant species name",
+   "code": "",
+   "label": "native nurseries",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u60"
+  },
+  {
+   "variable": "plant species name",
+   "code": "",
+   "label": "conventional nurseries",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u60"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "cavity",
+   "code": "0",
+   "term": "absent",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "cavity",
+   "code": "1",
+   "term": "present",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "cavity",
+   "code": "2",
+   "term": "absent",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "cavity",
+   "code": "5",
+   "term": "absent",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 111.1
+}

@@ -1,0 +1,72 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Gossner2013/Gossner2013.xlsx  (3003 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Gossner2013/Gossner2013.csv  (1504 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1412
+  missed (FN)         : 1591
+  spurious, in scope  : 92   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.939 / 0.470 / 0.627   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.939 / 0.470 / 0.627   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.470   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   1412  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    752  0.000  <-- low
+  measurementStatistic          0   1412  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   1412  0.000  <-- low
+  lifeStage                     0   1412  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1412  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1591 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           1499
+  species+trait present, value differs       92
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2025-01-20 00:00:00'        ->  '1.2'                        x52
+     '2025-02-20 00:00:00'        ->  '2.2'                        x19
+     '2025-03-20 00:00:00'        ->  '3.2'                        x16
+     '2025-02-15 00:00:00'        ->  '2.15'                       x2
+     '2025-02-17 00:00:00'        ->  '2.17'                       x2
+     '2025-01-25 00:00:00'        ->  '1.25'                       x1
+  -> 6 substitutions explain 92 of 1591 misses (6%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Dead-wood decay'                  x752
+     'Canopy cover'                     x747
+  -> 2 missing traits explain 1499 of 1591 misses (94%) — systematic, not scattered
+
+  full miss detail saved -> Gossner2013_misses.csv, Gossner2013_misses_summary.json (1591 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       752   752   
+  canopy cover                                    747     0   GT-ONLY
+  dead-wood decay                                 752     0   GT-ONLY
+  diameter                                        752   752   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.939  0.470  0.627   1412    92  1591   id+type+value
+  tags        0.000  0.000  0.000      0  1504  3003   basis+id+type+value+stat+sex+stage
+             (F1 -0.627 vs previous)
+             note: only 0/1412 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

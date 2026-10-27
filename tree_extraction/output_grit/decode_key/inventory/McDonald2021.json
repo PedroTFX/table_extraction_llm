@@ -1,0 +1,639 @@
+{
+ "paper": "McDonald2021",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "Z. G. MacDonald (https://orcid.org/0000-0002-7966-5712) ✉ (zmacdona@ualberta.ca), D. C. Deane (https://orcid.org/0000-0003-2144-624X), F. He (https://orcid.org/0000-0003-0774-4849), J. H. Acorn (https://orcid.org/0000-0001-6570-1949) and S. E. Nielsen (https://orcid.org/0000-0002-9754-0630), Dept of Renewable Resources, Univ. of Alberta, Edmonton, Alberta, Canada. – C. T. Lamb (https://orcid.org/0000-0002-1961-0509), Univ. of British Columbia, Dept of Biology, Kelowna, British Columbia, Canada. – F. A. H. Sperling (https://orcid.org/0000-0001-5148-4226), Dept of Biological Sciences, Univ. of Alberta, Edmonton, Alberta, Canada."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "![Image block](doc:cfca8f8/tier:advanced/page:1/block:14)"
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "The island species area relationship (ISAR) is an important tool for measuring variation in species diversity in variety of insular systems, from true-island archipelagoes to fragmented terrestrial landscapes. However, it suffers from several limitations. For example, due to the sample-area effect, positive relationships between species and area cannot be directly interpreted as evidence for deterministic effects of area per se. Additionally, richness-based analyses may obscure species-level responses to area and isolation that may better inform conservation practice. Here, we use random placement models to control for variation in abundance, occupancy and richness associated with the sample-area effect, allowing deterministic effects of area and isolation, and how they vary with species’ functional traits, to be resolved using linear mixed effects models. We demonstrate the utility of this approach using a butterfly assemblage persisting on a naturally fragmented landscape of lake islands. The ISAR did not significantly deviate from random placement in relation to island area, isolation or habitat diversity, supporting stochastic assembly consistent with the sample-area effect. Such inferences support the habitat amount hypothesis, which prioritizes preserving the maximum amount of habitat irrespective of its degree of fragmentation. However, species-level analyses demonstrated that species’ abundances were significantly lower on both smaller and more isolated islands than what is predicted by the sample-area effect. Moreover, effects of area per se were significantly greater for smaller, less mobile and rare species. Species’ occurrences also significantly deviated from predictions of the sample-area effect in relation to island isolation. Thus, our approach illustrates that richness-based analyses not only result in incorrect inferences on mechanisms underlying ISARs, but also obscure important effects of area per se and isolation on individual species that vary with functional traits. We therefore suggest that these effects should not be solely inferred from richness-based analyses, but rather evaluated on a speciesby-species basis."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "We present random placement models in ascending order of mathematical complexity, from species’ abundances, to species’ occurrences, to species richness. Within random placement models, $a { i }$ is the area of the jth island/fragment, $A { T }$ is the total area of all islands/fragments, $n _ { i }$ is the abundance of species i summed across all islands/fragments and S is the total number of species observed. Islands or fragments that were not surveyed are not included in random placement models. According to the sample-area effect, the expected abundance of species i on island/fragment j is simply proportional to $j s$ area (model 1) and the occurrence probability follows the random placement model (model 2). The random placement model for expected richness on any island/fragment is simply the sum of the expected probabilities of occurrence over all species (model 3). This random placement richness model was first proposed a century ago by Arrhenius (1921) and later reinvented by Coleman (1981) with the inclusion of the variance."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Butterfly abundance data were collected for each of the 30 islands using repeated full-island surveys. Each island was visited four times at intervals between 10 and 14 days during the peak flight season (1 June 2015 to 20 Aug 2015). Sampling effort was standardized to 40 min per ha per survey across all islands, eliminating the need for sampling effort and diversity corrections (e.g. rarefaction or extrapolation, Chao et al. 2014, Fahrig 2020). Care was taken to visit all habitat types during each survey and handheld GPS units were used to ensure uniform coverage of islands. Recording observer tracks and capturing individuals whenever possible (kept as voucher specimens or released at the end of each survey) minimized the possibility of double counts, where individuals are recorded multiple times in single surveys. To ensure optimal and standardized butterfly activity, surveys were restricted to the hours of 10:45 to 15:45 and were not conducted in wind speeds over 15 km $\\mathrm { h } ^ { - 1 }$ or in temperatures below $1 3 ^ { \\circ } \\mathrm { C } .$ If temperatures were below $1 7 ^ { \\circ } \\mathrm { C } ,$ surveys were only conducted in sunny conditions (cloud cover"
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "We calculated values of species’ abundances, species’ probabilities of occurrence and species richness predicted by random placement for each of the 30 study islands using random placement models (1, 2 and 3, respectively). Abundance, occurrence and richness residuals were estimated as observed values minus random placement values. We next used linear mixed effects models to simultaneously: 1) quantify relationships between either abundance residuals or occurrence residuals and island variables, including area, isolation, proportion of suitable habitat and presence/absence of preferred larval host plants; 2) evaluate whether area per se or isolation differentially affects species’ abundances or occurrences contingent on their functional traits. Separate models were built for each isolation buffer size (250, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500 and 5000 m). Each of these models had the same number of parameters (k) and only differed in the buffer size used to measure island isolation. We therefore directly compared models with log likelihood (Lamb et al. 2018), where the model with the maximum log likelihood identified the optimal buffer size. Relationships between log likelihood and buffer sizes were quantified using Pearson’s product moment correlation coefficients. The proportion of suitable habitat for each species was estimated as the total area of suitable habitat types divided by the total area of the island. Habitat types were classified as suitable for a species if we observed at least one individual within them during the repeated full-island surveys. The presence/absence of preferred larval host plants (compiled from Hall et al. 2014, Acorn and Sheldon 2017) for each species on each island was included as a binary variable. We included species’ wingspan (mm; as reported in Burke et al. 2011) in models as a functional trait variable, serving as a measure of both body size and mobility/dispersal ability (Roland and Taylor 1997, Lens et al. 2002, Ewers and Didham 2006, Öckinger et al. 2009, MacDonald et al. 2018a, 2019). Other functional traits predicted to relate to species’ sensitivity to fragmentation (e.g. degree of ecological specialization, trophic position) were either not measured or did not vary substantially among butterfly species and so were not investigated. As an"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "![Image block](doc:cfca8f8/tier:advanced/page:9/block:1)"
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Figure 2. a) Standardized log likelihood values for linear mixed effects (abundance and occurrence) and linear (species richness) models where responding variables were random placement residuals. Explanatory variables for each model are listed in Table 2 and Figure 3. Separate models were built using different island isolation buffer sizes, quantifying using the proportion of open water within 250, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, and 5000 m of island shores. To permit comparisons of relationships between log likelihood values and buffer sizes among abundance, occurrence, and species richness model sets, log likelihood scores were standardized for each model set by subtracting the mean and dividing by standard deviation. Model support significantly declined across increasing isolation buffer sizes in all instances. b) Log-log island species-area relationship (ISAR) for butterflies occurring on 30 study islands. The shaded blue polygon represents 95% confidence intervals for the loglog ISAR linear regression (solid blue line), parameterized using observed richness values for all 30 islands. Random placement richness values were calculated using a random placement model (model 3; see Materials and Methods). The shaded green polygon represents 95% interpolated confidence intervals for random placement values, calculated using Coleman’s (1981) formula for variance."
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "![Image block](doc:cfca8f8/tier:advanced/page:10/block:1)"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "Figure 3. Standardized regression coefficients and 95% confidence intervals from linear models relating random placement residuals to island characteristics and species’ functional traits for (a) species’ abundances, (b) species’ occurrences and (c) species richness. Included in all models were island area, measured in m 2 and island isolation, measured as the proportion of water within the most supported buffer size (250 m for abundance and occurrence; 1500 m for species richness). Within abundance and occurrence models, the proportion suitable habitat (‘suitable habitat’) was measured for each species as the area of suitable habitat on each island divided by the area of the island. Presence/absence of each species’ preferred larval host plants was included as a binary variable. Wingspan was included as a measure of species’ body size and as a proxy of dispersal ability. Each species’ total abundance and prevalence were used as an inverse measure of rarity in abundance and occurrence models, respectively. Species identity was included as a random effect in abundance and occurrence models. Within the species richness model, habitat diversity was estimated as the total number of habitat types recorded on each island. Plant diversity was measured as vascular plant species richness. The shading of each variable’s point estimate (coefficient) and confidence interval is proportional to its p-value, with darker shades indicating greater significance. Coefficients with 95% confidence intervals not overlapping zero were inferred to be significant at α = 0.05."
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "While there seems to be considerable support for the passive sampling/habitat amount hypotheses in the literature (Fahrig 2003, 2013, Martin 2018, Watling et al. 2020), a recent meta-analysis by Fahrig (2020), including 157 SLOSS comparisons from 58 studies, found that several small islands/ fragments contained more species than single large islands/ fragments in 72% of comparisons, equivalent numbers of species in 22% of comparisons and fewer species in 6% of comparisons. Removing studies with biased sampling effort in relation to island/fragment area shifted these figures to 58, 37 and 5%. Regardless, these results suggest that species richness varies with degree of fragmentation more often than it does not. Thus, the sample-area effect implicated in the passive sampling/habitat amount hypotheses cannot consistently account for SLOSS-based richness patterns. Furthermore, methods employed by Fahrig (2020) – specifically, comparisons of Quinn and Harrison (1988) species accumulation curves – suffer from an important limitation: substantial species turnover among several small islands/fragments can inflate their aggregate richness, such that important deviations from random placement (e.g. effects of area per se) are obscured (sensu Simberloff 1976, MacDonald et al. 2018b, Deane et al. 2020). This relationship may explain why several small islands/fragments are generally found to contain more species than single large fragments in the majority of SLOSS-based studies. While results of Fahrig’s (2020) meta-analysis are of great interest to both fundamental and applied ecology, they cannot necessarily be used to distinguish effects of area per se from the sample-area effect and cannot resolve additional effects of isolation or habitat diversity. Future investigations focusing on species richness would benefit from the inclusion of ISAR-based analyses that assess deviations from random placement on an island-by-island or fragment-by-fragment basis, such as those included within the modelling framework presented here."
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "The relative isolation of islands addressed in this study was quantified across multiple scales as the proportion of water within 11 buffer sizes, ranging from 250 to 5000 m. These measures are equal to 1 minus the amount of landmass (habitat) within each buffer distance. Fahrig (2013) suggests that the habitat amount hypothesis would be supported by species’ abundances, species’ occurrences or species richness of equal-area sampling plots (stratified across fragments of varying area and isolation) correlating with the amount of habitat on the surrounding landscape more strongly than with the area of the individual fragments on which the sampling plots are located. This is because landscapes containing less habitat should contain fewer individuals (belonging to fewer species) due to the sample-area effect, meaning fragments within such landscapes will have smaller species pools from which their own diversities are randomly sampled. However, the ‘appropriate distance’ for quantifying the amount of habitat surrounding equal-area sampling plots is undefined and, most problematically, the area of individual fragments on which sampling plots are located becomes increasingly correlated with habitat amount as this distance is reduced. Thus, it may not be possible to decouple fragment area from habitat amount using Fahrig’s (2013) proposed method; particularly, for taxa that respond to habitat amount and configuration at fine spatial scales, including butterflies (Thomas and Abery 1995, MacDonald et al. 2017, 2018a, 2019, Saura 2020)."
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "abundance and occurrence residuals were significantly related to island isolation. Model support significantly declined across increasing isolation buffer sizes for species’ abundances, species’ occurrences and species richness, suggesting that that the amount of habitat immediately surrounding islands, rather than the amount of habitat at broader landscape scales, has the greatest effect on butterflies in this system. Importantly, island area and isolation were effectively decoupled, as indicated by the absence of correlation between island area and isolation (e.g. 250 m buffer; r = 0.082; p = 0.668). Thus, in contrast with mechanisms outlined by the habitat amount hypothesis, isolation effects observed in this study are better attributed to the fact that individual butterflies moving through the open-water matrix are less likely to encounter more isolated islands (Andrén 1994), reducing species’ abundances and probabilities of occurrence, as predicted by the theory of island biogeography. This inference is further corroborated by analyses of MacDonald et al. (2018a), which showed that butterfly species turnover among islands of equal areas – a proxy for variation in species pools if islands indeed randomly sample species – was unrelated to Euclidean distance between islands. This result suggests a uniform species pool throughout the study landscape. Again, the degree to which these findings apply to fragmented terrestrial landscapes, wherein the suitability and permeability of matrices may vary, is unclear. For studies addressing fragmented terrestrial landscapes, isolation measures should not only account for the proportion of suitable habitat within various buffer distances, but also include measures of matrix suitability and permeability, if they are available (MacDonald et al. 2020)."
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "Funding – This work was supported by a Natural Sciences and Engineering Research Council (NSERC) Discovery Grant to SEN (RGPIN-2014-04842) and NSERC Alexander Graham Bell Canada Graduate Scholarships – MSc and PhD (CGS – D and CGS – D) to ZGM"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Zachary MacDonald: Conceptualization (lead); Formal analysis (lead); Funding acquisition (supporting); Methodology (lead); Project administration (equal); Resources (supporting); Software (lead); Validation (equal); Visualization (lead); Writing – original draft (lead); Writing – review and editing (lead). David Dean: Conceptualization (supporting); Formal analysis (supporting); Methodology (supporting); Resources (supporting); Software (supporting); Validation (equal); Visualization (supporting); Writing – original draft (supporting); Writing – review and editing (supporting). Fangliang He: Conceptualization (supporting); Formal analysis (supporting); Methodology (supporting); Software (supporting); Supervision (supporting); Validation (equal); Visualization (supporting); Writing – original draft (supporting); Writing – review and editing (supporting). Clayton Lamb: Conceptualization (supporting); Formal analysis (supporting); Methodology (supporting); Software (supporting); Validation (equal); Visualization (supporting); Writing – original draft (supporting); Writing – review and editing (supporting). Felix Sperling: Conceptualization (supporting); Formal analysis (supporting); Methodology (supporting); Supervision (supporting); Validation (equal); Visualization (supporting); Writing – original draft (supporting); Writing – review and editing (supporting). John Acorn: Conceptualization (supporting); Formal analysis (supporting); Methodology (supporting); Project administration (equal); Resources (supporting); Supervision (equal); Validation (equal); Visualization (supporting); Writing – original draft (supporting); Writing – review and editing (supporting). Scott E. Nielsen: Conceptualization (supporting); Formal analysis (supporting); Funding acquisition (lead); Methodology (supporting); Project administration (equal); Resources (supporting); Software (supporting); Supervision (equal); Validation (equal); Visualization (supporting); Writing – original draft (supporting); Writing – review and editing (supporting)."
+  },
+  {
+   "id": "u15",
+   "kind": "table 0",
+   "text": "Category | Description\nLand | Green area representing land use\nWater | Light blue area representing water usage\nStudy islands | Black cross markers indicating study locations (0.1 to 8 ha)\nIsolation buffer | Yellow circles representing isolation buffers (e.g. 250 m)"
+  },
+  {
+   "id": "u16",
+   "kind": "table 1",
+   "text": "Isolation buffer (m) | Abundance | Occurrence | Species richness\n250 | -1329.83 | -1340.37 | -36.79\n500 | -1330.22 | -1340.71 | -37.45\n1000 | -1330.99 | -1342.89 | -37.67\n1500 | -1332.11 | -1341.77 | -36.61\n2000 | -1332.00 | -1340.52 | -37.02\n2500 | -1332.05 | -1340.72 | -37.79\n3000 | -1332.17 | -1341.71 | -38.12\n3500 | -1332.13 | -1342.61 | -38.36\n4000 | -1332.01 | -1343.28 | -38.45"
+  },
+  {
+   "id": "u17",
+   "kind": "table 1",
+   "text": "4500 | -1331.86 | -1343.60 | -38.48\n5000 | -1331.87 | -1343.53 | -38.44"
+  },
+  {
+   "id": "u18",
+   "kind": "table 3",
+   "text": "MacDonald, Z. G., Deane, D. C., Lamb, C. T., He, F., Acorn, J. H., and Nielsen, S. E. Distinguishing effects of area per se and isolation from the sample-area effect for true islands and habitat fragments. – Ecography."
+  },
+  {
+   "id": "u19",
+   "kind": "table 5",
+   "text": "Habitat class | Vegetation characteristics | Substrate characteristics | # of island occurrences\nSolid rock shoreline | <10% vegetation cover | granite gneiss rock | 29\nBroken rock shoreline | 0 - 75% vegetation cover | mix of cobble and boulder | 23\nBeach shoreline | <10% vegetation cover | course to fine sand | 8\nShoreline meadow | herbaceous angiosperms adjacent to shoreline | some soil development | 25\nInland meadow | herbaceous angiosperms disjunct from shoreline | some soil development | 20\nShort shrubland | woody vegetation ≤ 1 m | some soil development | 27\nTall shrubland | woody vegetation > 1 m | some soil development | 24\nDeciduous woodland | deciduous tree species; ≤ 75% canopy coverage | soil with major organic component | 11\nConiferous woodland | coniferous tree species; ≤ 75% canopy coverage | soil with major organic component | 19"
+  },
+  {
+   "id": "u20",
+   "kind": "table 5",
+   "text": "Mixed woodland | both deciduous and coniferous tree species; ≤ 75% canopy coverage | soil with major organic component | 10\nDeciduous forest | deciduous tree species; > 75% canopy coverage | soil with major organic component | 4\nConiferous forest | coniferous tree species; > 75% canopy coverage | soil with major organic component | 6\nMixed forest | both deciduous and coniferous tree species; > 75% canopy coverage | soil with major organic component | 3\nInland rock outcrops | <10% vegetation cover | granite gneiss rock | 14"
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3",
+   "u4"
+  ],
+  [
+   "u5",
+   "u6"
+  ],
+  [
+   "u7",
+   "u8"
+  ],
+  [
+   "u9"
+  ],
+  [
+   "u10"
+  ],
+  [
+   "u11"
+  ],
+  [
+   "u12",
+   "u13"
+  ],
+  [
+   "u14",
+   "u15",
+   "u16",
+   "u17"
+  ],
+  [
+   "u18",
+   "u19",
+   "u20"
+  ]
+ ],
+ "calls": 21,
+ "categories": [
+  {
+   "variable": "random placement models",
+   "code": "1",
+   "term": "Abundance",
+   "unit": "u5",
+   "model_label": "Abundance",
+   "label": "Abundance",
+   "explanation": ""
+  },
+  {
+   "variable": "random placement models",
+   "code": "2",
+   "term": "occurrence",
+   "unit": "u5",
+   "model_label": "occurrence",
+   "label": "occurrence",
+   "explanation": ""
+  },
+  {
+   "variable": "random placement models",
+   "code": "3",
+   "term": "richness",
+   "unit": "u5",
+   "model_label": "richness",
+   "label": "richness",
+   "explanation": ""
+  },
+  {
+   "variable": "island isolation buffer sizes",
+   "code": "250, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, and 5000 m",
+   "term": "m",
+   "unit": "u7",
+   "model_label": "m",
+   "label": "m",
+   "explanation": ""
+  },
+  {
+   "variable": "Category",
+   "code": "Land",
+   "term": "Green area representing land use",
+   "unit": "u15",
+   "model_label": "Land",
+   "label": "land",
+   "explanation": "Green area representing use"
+  },
+  {
+   "variable": "Category",
+   "code": "Water",
+   "term": "Light blue area representing water usage",
+   "unit": "u15",
+   "model_label": "Water",
+   "label": "water",
+   "explanation": "Light blue area representing usage"
+  },
+  {
+   "variable": "Study islands",
+   "code": "Study islands",
+   "term": "Black cross markers indicating study locations (0.1 to 8 ha)",
+   "unit": "u15",
+   "model_label": "Study islands",
+   "label": "Black cross markers indicating study locations (0.1 to 8 ha)",
+   "explanation": ""
+  },
+  {
+   "variable": "Isolation buffer",
+   "code": "Isolation buffer",
+   "term": "Yellow circles representing isolation buffers (e.g. 250 m)",
+   "unit": "u15",
+   "model_label": "Isolation buffer",
+   "label": "Yellow circles representing isolation buffers (e.g. 250 m)",
+   "explanation": ""
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "smaller",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "less mobile",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "rare",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u2"
+  },
+  {
+   "variable": "occurrence probability",
+   "code": "",
+   "label": "random placement model",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "wingspan (mm)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "degree of ecological specialization",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "trophic position",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "island area",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "island characteristics",
+   "code": "",
+   "label": "island isolation",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "suitable habitat",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "preferred larval host plants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "Wingspan",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "total abundance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "prevalence",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "habitat diversity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species’ functional traits",
+   "code": "",
+   "label": "Plant diversity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u9"
+  },
+  {
+   "variable": "species richness",
+   "code": "",
+   "label": "more species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "species richness",
+   "code": "",
+   "label": "equivalent numbers of species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "species richness",
+   "code": "",
+   "label": "fewer species",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u10"
+  },
+  {
+   "variable": "relative isolation",
+   "code": "",
+   "label": "proportion of water within 11 buffer sizes, ranging from 250 to 5000 m",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u11"
+  },
+  {
+   "variable": "abundance",
+   "code": "",
+   "label": "species’ abundances",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "occurrence",
+   "code": "",
+   "label": "species’ occurrences",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "richness",
+   "code": "",
+   "label": "species richness",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "study locations",
+   "code": "",
+   "label": "Study islands",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "isolation buffers",
+   "code": "",
+   "label": "Isolation buffer",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u15"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Solid rock shoreline",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Broken rock shoreline",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Beach shoreline",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Shoreline meadow",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Inland meadow",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Short shrubland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Tall shrubland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Deciduous woodland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Coniferous woodland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u19"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Mixed woodland",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Deciduous forest",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Coniferous forest",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Mixed forest",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "",
+   "label": "Inland rock outcrops",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u20"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "species’ abundances",
+   "code": "SO",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "species’ abundances",
+   "code": "P_E",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Solid rock shoreline",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Broken rock shoreline",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Beach shoreline",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Shoreline meadow",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Inland meadow",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Short shrubland",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Tall shrubland",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Deciduous woodland",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Coniferous woodland",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Mixed woodland",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Deciduous forest",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Coniferous forest",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Mixed forest",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "Habitat class",
+   "code": "Inland rock outcrops",
+   "term": "",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 52.5
+}

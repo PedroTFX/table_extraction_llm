@@ -1,0 +1,127 @@
+  [semantic] left unmatched: 'Time (s)' vs 'Flight time' (llm said different traits)
+  [semantic] left unmatched: 'Time (s)' vs 'Flight velocity' (llm said different traits)
+  [semantic] left unmatched: 'Velocity (ms-1)' vs 'Flight velocity' (llm said different traits)
+  [semantic] left unmatched: 'Velocity (ms-1)' vs 'Flight time' (llm said different traits)
+  [semantic] left unmatched: 'Wing length' vs 'Flight velocity' (llm said different traits)
+  [semantic] left unmatched: 'Wing length' vs 'Flight time' (llm said different traits)
+  [semantic] left unmatched: 'Wing loading × 104' vs 'Flight velocity' (llm said different traits)
+  [semantic] left unmatched: 'Wing loading × 104' vs 'Flight time' (llm said different traits)
+  [semantic] left unmatched: 'Wing width' vs 'Flight velocity' (llm said different traits)
+  [semantic] left unmatched: 'Wing width' vs 'Flight time' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/OBERDÖRSTER2007/OBERDÖRSTER2007.xlsx  (120 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/OBERDÖRSTER2007/OBERDÖRSTER2007.csv  (207 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 5 pair(s))
+  'M. cassini' -> 'Magicicada cassini'
+  'M. septendecim' -> 'Magicicada septendecim'
+  'T. chloromera' -> 'Tibicen chloromera'
+  'T. linnei' -> 'Tibicen linnei'
+  'T. lyricen' -> 'Tibicen lyricen'
+
+TAXON NAMES LEFT UNMAPPED (7)
+  'Actual slope (confidence range) N M. cassini': no ground-truth name denotes this organism
+  'Actual slope (confidence range) N M. septendecim': no ground-truth name denotes this organism
+  'Actual slope (confidence range) N T. chloromera': no ground-truth name denotes this organism
+  'Actual slope (confidence range) N T. linnei': no ground-truth name denotes this organism
+  'Actual slope (confidence range) N T. lyricen': no ground-truth name denotes this organism
+  'Expected slope': no ground-truth name denotes this organism
+  'x variable': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'Distance (m)' -> 'Flight distance'
+  'Mass (g)' -> 'Mass'
+  'Thorax length (mm)' -> 'Thorax length'
+  'Thorax width (mm)' -> 'Thorax width'
+  'Width × length (mm2)' -> 'Thorax width × length'
+  'Wing loading' -> 'Wing loading x 10^4'
+  'log airspeed (m/s)' -> 'Flight velocity'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 55
+  missed (FN)         : 65
+  spurious, in scope  : 76   <- GT covers this trait: real errors
+  spurious, out of scope: 76   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.266 / 0.458 / 0.336   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.420 / 0.458 / 0.438   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.458   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             76
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     55  0.000  <-- low
+  measurementMethod             0     10  0.000  <-- low
+  measurementUnit               0     55  0.000  <-- low
+  measurementStatistic          0     55  0.000  <-- low
+  measurementRemarks            0     10  0.000  <-- low
+  sex                          37     55  0.673
+  lifeStage                     0     55  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue              45     55  0.818
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     30  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     55  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     55  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 65 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             26
+  species+trait present, value differs       39
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2.41 ± 0.541'               ->  '~0.4'                       x1
+     '2.22 ± 0.731'               ->  '~0.4'                       x1
+     '2.31 ± 0.64'                ->  '~0.4'                       x1
+     '2.5 ± 0.732'                ->  '~0.5'                       x1
+     '2.38 ± 1.067'               ->  '~0.5'                       x1
+     '2.44 ± 0.909'               ->  '~0.5'                       x1
+  -> 6 substitutions explain 6 of 65 misses (9%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Wing loading x 10^4'              x15
+     'Flight time'                      x10
+     'Flight velocity'                  x1
+  -> 3 missing traits explain 26 of 65 misses (40%) — scattered; no single cause
+
+  full miss detail saved -> OBERDÖRSTER2007_misses.csv, OBERDÖRSTER2007_misses_summary.json (65 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  velocity (ms-1)                                   0    11   PRED-ONLY
+  wing loading x 10^4                              15     7   Δ-8 (split?)
+  wing loading × 104                                0    15   PRED-ONLY
+  wing width (2)                                    0     7   PRED-ONLY
+  aspect ratio                                     15    21   Δ+6 (split?)
+  log body length (mm)                              0    18   PRED-ONLY
+  flight distance                                  10    11   Δ+1 (split?)
+  flight time                                      10     0   GT-ONLY
+  flight velocity                                  10    18   Δ+8 (split?)
+  thorax length                                    15    22   Δ+7 (split?)
+  thorax width × length                            15    15   
+  wing length                                       0     7   PRED-ONLY
+  mass                                             15    15   
+  time (s)                                          0    11   PRED-ONLY
+  thorax width                                     15    22   Δ+7 (split?)
+  wing width                                        0     7   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'flight time'                      vs pred 'time (s)'                         sim=0.55
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.420  0.458  0.438     55    76    65   id+type+value
+             (76 more spurious row(s) set aside as out-of-scope; strict P would be 0.266)
+  tags        0.000  0.000  0.000      0   131   120   basis+id+type+value+stat+sex+stage
+             (76 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.438 vs previous)

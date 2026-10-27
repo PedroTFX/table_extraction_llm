@@ -1,0 +1,76 @@
+{
+ "2": {
+  "candidates": [
+   "Plant species"
+  ],
+  "kinds": {
+   "Plant species": {
+    "choice": "species",
+    "probs": {
+     "species": 0.999,
+     "part": 0.0,
+     "higher": 0.001,
+     "other": 0.0
+    }
+   }
+  },
+  "organism": "Plant species",
+  "genus_from": null,
+  "outcome": "species column"
+ },
+ "3": {
+  "candidates": [
+   "Pollinator species",
+   "Family"
+  ],
+  "kinds": {
+   "Pollinator species": {
+    "choice": "species",
+    "probs": {
+     "species": 0.998,
+     "part": 0.0,
+     "higher": 0.001,
+     "other": 0.0
+    }
+   },
+   "Family": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.999,
+     "other": 0.001
+    }
+   }
+  },
+  "organism": "Pollinator species",
+  "genus_from": null,
+  "outcome": "species column"
+ },
+ "4": {
+  "candidates": [
+   "Pollinator family"
+  ],
+  "kinds": {
+   "Pollinator family": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.999,
+     "other": 0.001
+    }
+   }
+  },
+  "organism": null,
+  "genus_from": null,
+  "outcome": "no species column",
+  "units": {
+   "choice": "groups",
+   "probs": {
+    "units": 0.008,
+    "groups": 0.992
+   }
+  }
+ }
+}
