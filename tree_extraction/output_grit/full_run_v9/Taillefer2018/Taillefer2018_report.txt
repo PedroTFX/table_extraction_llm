@@ -3,7 +3,7 @@
   [semantic] left unmatched: 'Significant Association' vs 'Overwintering stage' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Taillefer2018/Taillefer2018.xlsx  (1738 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Taillefer2018/Taillefer2018.csv  (1621 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Taillefer2018/Taillefer2018.csv  (1621 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -85,13 +85,13 @@ SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
   'Specializ' -> 'Specialization'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 10
-  missed (FN)         : 1728
-  spurious, in scope  : 13   <- GT covers this trait: real errors
+  matched (TP)        : 11
+  missed (FN)         : 1727
+  spurious, in scope  : 12   <- GT covers this trait: real errors
   spurious, out of scope: 1598   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.006 / 0.006 / 0.006   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.435 / 0.006 / 0.011   (out-of-scope rows excluded)
+  STRICT  P/R/F1      : 0.007 / 0.006 / 0.007   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.478 / 0.006 / 0.012   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.006   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
@@ -99,43 +99,42 @@ ROW-LEVEL (key match)
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0     10  0.000  <-- low
-  measurementMethod             0     10  0.000  <-- low
-  measurementUnit               0      7  0.000  <-- low
-  measurementStatistic          0     10  0.000  <-- low
-  measurementRemarks            0      7  0.000  <-- low
-  sex                           0     10  0.000  <-- low
-  lifeStage                     0     10  0.000  <-- low
+  basisOfRecord                 0     11  0.000  <-- low
+  measurementMethod             0     11  0.000  <-- low
+  measurementUnit               0      8  0.000  <-- low
+  measurementStatistic          0     11  0.000  <-- low
+  measurementRemarks            0      8  0.000  <-- low
+  sex                           0     11  0.000  <-- low
+  lifeStage                     0     11  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
-  sampleTreatment               0     10  0.000  <-- low
-  samplingProtocol              0     10  0.000  <-- low
+  sampleTreatment               0     11  0.000  <-- low
+  samplingProtocol              0     11  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0     10  0.000  <-- low
+  verbatimEventDate             0     11  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     10  0.000  <-- low
+  associatedReferences          0     11  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 1728 MISSED ROWS MISSED
+WHY THE 1727 MISSED ROWS MISSED
   species not in prediction                  20
   species present, trait missing           1702
-  species+trait present, value differs        6
+  species+trait present, value differs        5
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'amphibious'                 ->  'a'                          x2
      'generalist'                 ->  'saprophage'                 x1
-     '2026-04-27 00:00:00'        ->  '4.27'                       x1
-     '2026-04-06 00:00:00'        ->  '4.6'                        x1
+     '6.04'                       ->  '4.6'                        x1
      'univoltine'                 ->  'u'                          x1
-  -> 5 substitutions explain 6 of 1728 misses (0%) — scattered; no single cause
+  -> 4 substitutions explain 5 of 1727 misses (0%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
      gt 'Boettcheria cimbicis (Townsend)'   ~0.88~  pred 'Boettcheria cimbici s (Townsend)'   x8
      gt 'Gaurax montanus Coquillett'        ~0.88~  pred 'Gaurax montanus C oquillett'   x7
      gt 'Dryomyza anilis Fallén'            ~0.88~  pred 'Dryomyza anili s Fallén'   x5
-  -> 3 species mismatches explain 20 of 1728 misses (1%) — scattered; no single cause
+  -> 3 species mismatches explain 20 of 1727 misses (1%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Voltinism'                        x322
@@ -144,9 +143,9 @@ WHY THE 1728 MISSED ROWS MISSED
      'Habitat Preference'               x227
      'Specialization'                   x223
      'Feeding'                          x198
-  -> 6 missing traits explain 1521 of 1728 misses (88%) — systematic, not scattered
+  -> 6 missing traits explain 1521 of 1727 misses (88%) — systematic, not scattered
 
-  full miss detail saved -> Taillefer2018_misses.csv, Taillefer2018_misses_summary.json (1728 row(s))
+  full miss detail saved -> Taillefer2018_misses.csv, Taillefer2018_misses_summary.json (1727 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -172,9 +171,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.435  0.006  0.011     10    13  1728   id+type+value
-             (1598 more spurious row(s) set aside as out-of-scope; strict P would be 0.006)
+  core        0.478  0.006  0.012     11    12  1727   id+type+value
+             (1598 more spurious row(s) set aside as out-of-scope; strict P would be 0.007)
   tags        0.000  0.000  0.000      0    23  1738   basis+id+type+value+stat+sex+stage
              (1598 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.011 vs previous)
-             note: only 0/10 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.012 vs previous)
+             note: only 0/11 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

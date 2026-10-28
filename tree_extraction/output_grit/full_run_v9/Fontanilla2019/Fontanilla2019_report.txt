@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Fontanilla2019/Fontanilla2019.xlsx  (1315 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Fontanilla2019/Fontanilla2019.csv  (2154 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Fontanilla2019/Fontanilla2019.csv  (2154 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -23,52 +23,43 @@ SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
   'Weber s length' -> "Weber's Length"
 
 ROW-LEVEL (key match)
-  matched (TP)        : 1128
-  missed (FN)         : 187
-  spurious, in scope  : 187   <- GT covers this trait: real errors
+  matched (TP)        : 1310
+  missed (FN)         : 5
+  spurious, in scope  : 5   <- GT covers this trait: real errors
   spurious, out of scope: 839   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.524 / 0.858 / 0.650   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.858 / 0.858 / 0.858   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.858   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.608 / 0.996 / 0.755   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.996 / 0.996 / 0.996   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.996   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            839
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0   1128  0.000  <-- low
-  measurementMethod             0    936  0.000  <-- low
-  measurementUnit               0    936  0.000  <-- low
-  measurementStatistic          0   1128  0.000  <-- low
+  basisOfRecord                 0   1310  0.000  <-- low
+  measurementMethod             0   1048  0.000  <-- low
+  measurementUnit               0   1048  0.000  <-- low
+  measurementStatistic          0   1310  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0   1128  0.000  <-- low
-  lifeStage                     0   1128  0.000  <-- low
-  caste                         0   1128  0.000  <-- low
+  sex                           0   1310  0.000  <-- low
+  lifeStage                     0   1310  0.000  <-- low
+  caste                         0   1310  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0   1128  0.000  <-- low
+  samplingProtocol              0   1310  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0   1128  0.000  <-- low
+  verbatimEventDate             0   1310  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0   1128  0.000  <-- low
+  associatedReferences          0   1310  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 187 MISSED ROWS MISSED
+WHY THE 5 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              5
-  species+trait present, value differs      182
-
-  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2026-01-13 00:00:00'        ->  '1.13'                       x9
-     '2026-01-02 00:00:00'        ->  '1.02'                       x9
-     '2026-01-16 00:00:00'        ->  '1.16'                       x7
-     '2026-01-20 00:00:00'        ->  '1.2'                        x7
-     '2026-01-03 00:00:00'        ->  '1.03'                       x7
-     '2026-01-01 00:00:00'        ->  '1.01'                       x7
-  -> 6 substitutions explain 46 of 187 misses (25%) — scattered; no single cause
+  species+trait present, value differs        0
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Relative Eye Length'              x1
@@ -76,9 +67,9 @@ WHY THE 187 MISSED ROWS MISSED
      'Relative Mandible Length'         x1
      'Relative Scape Length'            x1
      "Weber's Length"                   x1
-  -> 5 missing traits explain 5 of 187 misses (3%) — scattered; no single cause
+  -> 5 missing traits explain 5 of 5 misses (100%) — systematic, not scattered
 
-  full miss detail saved -> Fontanilla2019_misses.csv, Fontanilla2019_misses_summary.json (187 row(s))
+  full miss detail saved -> Fontanilla2019_misses.csv, Fontanilla2019_misses_summary.json (5 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -112,9 +103,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.858  0.858  0.858   1128   187   187   id+type+value
-             (839 more spurious row(s) set aside as out-of-scope; strict P would be 0.524)
+  core        0.996  0.996  0.996   1310     5     5   id+type+value
+             (839 more spurious row(s) set aside as out-of-scope; strict P would be 0.608)
   tags        0.000  0.000  0.000      0  1315  1315   basis+id+type+value+stat+sex+stage
              (839 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.858 vs previous)
-             note: only 0/1128 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.996 vs previous)
+             note: only 0/1310 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

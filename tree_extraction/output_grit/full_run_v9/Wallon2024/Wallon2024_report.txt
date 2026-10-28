@@ -1,4 +1,4 @@
-  [semantic] matched by values: 'bodysize' -> 'Body Size'
+  [semantic] matched by values: '(no name, column 4)' -> 'Body Size'
   [semantic] left unmatched: '(no name, column 11)' vs 'Mode of Ingestion' (llm said different traits)
   [semantic] left unmatched: '(no name, column 11)' vs 'Type of Food' (llm said different traits)
   [semantic] left unmatched: '(no name, column 11)' vs 'Presence of iridescence on beetle cuticle' (llm said different traits)
@@ -21,52 +21,52 @@ TAXON NAMES LEFT UNMAPPED (2)
   'X': no ground-truth name denotes this organism
 
 SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  '(no name, column 4)' -> 'Body Size'
   '(no name, column 5)' -> 'Presence of iridescence on beetle cuticle'
   'Color' -> 'Color of beetle cuticle'
   'Coprophagous (FoodCopro)' -> 'Mode of Ingestion'
   'Dispersal abilities' -> 'Dispersal Abilities'
   'Standardized body size' -> 'Standardized Body SIze'
   'active during twilight' -> 'Diel activity'
-  'bodysize' -> 'Body Size'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 144
-  missed (FN)         : 1085
-  spurious, in scope  : 462   <- GT covers this trait: real errors
-  spurious, out of scope: 2244   <- GT never covers this trait: nothing to score against
+  matched (TP)        : 183
+  missed (FN)         : 1046
+  spurious, in scope  : 454   <- GT covers this trait: real errors
+  spurious, out of scope: 2213   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.051 / 0.117 / 0.071   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.238 / 0.117 / 0.157   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.117   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.064 / 0.149 / 0.090   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.287 / 0.149 / 0.196   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.149   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                           2244
+    measurementType                           2213
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    144  0.000  <-- low
-  measurementMethod             0    144  0.000  <-- low
-  measurementUnit               0    134  0.000  <-- low
-  measurementStatistic          0    144  0.000  <-- low
+  basisOfRecord                 0    183  0.000  <-- low
+  measurementMethod             0    183  0.000  <-- low
+  measurementUnit               0    173  0.000  <-- low
+  measurementStatistic          0    183  0.000  <-- low
   measurementRemarks            0      9  0.000  <-- low
-  sex                           0    144  0.000  <-- low
-  lifeStage                     0    144  0.000  <-- low
+  sex                           0    183  0.000  <-- low
+  lifeStage                     0    183  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    144  0.000  <-- low
+  samplingProtocol              0    183  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    144  0.000  <-- low
+  associatedReferences          0    183  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 1085 MISSED ROWS MISSED
+WHY THE 1046 MISSED ROWS MISSED
   species not in prediction                  26
-  species present, trait missing            542
-  species+trait present, value differs      517
+  species present, trait missing            511
+  species+trait present, value differs      509
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'chewing and cutting'        ->  '0'                          x121
@@ -75,7 +75,7 @@ WHY THE 1085 MISSED ROWS MISSED
      'twilight'                   ->  '1'                          x46
      'night'                      ->  '1'                          x45
      'day'                        ->  '1'                          x43
-  -> 6 substitutions explain 394 of 1085 misses (36%) — scattered; no single cause
+  -> 6 substitutions explain 394 of 1046 misses (38%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
      gt 'Cercyon sp.'                       ~1.00~  pred 'Cercyon .sp'   x7
@@ -83,17 +83,17 @@ WHY THE 1085 MISSED ROWS MISSED
      gt 'Cordalia sp.'                      ~0.75~  pred 'Cordalia sp. (MF 1631)'   x5
      gt 'Oxypoda sp.'                       ~0.75~  pred 'Oxypoda sp. (MF 1705)'   x5
      gt 'Epuraeas sp. (MF 1271'             ~1.00~  pred 'Epuraeas sp. (MF 1271)'   x4
-  -> 5 species mismatches explain 26 of 1085 misses (2%) — scattered; no single cause
+  -> 5 species mismatches explain 26 of 1046 misses (2%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Type of Food'                     x241
      'Dispersal Abilities'              x121
      'Color of beetle cuticle'          x69
-     'Body Size'                        x61
      'Presence of iridescence on beetle cuticle' x50
-  -> 5 missing traits explain 542 of 1085 misses (50%) — scattered; no single cause
+     'Body Size'                        x30
+  -> 5 missing traits explain 511 of 1046 misses (49%) — scattered; no single cause
 
-  full miss detail saved -> Wallon2024_misses.csv, Wallon2024_misses_summary.json (1085 row(s))
+  full miss detail saved -> Wallon2024_misses.csv, Wallon2024_misses_summary.json (1046 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -102,7 +102,6 @@ measurementType COVERAGE
   (no name, column 13)                              0    37   PRED-ONLY
   (no name, column 14)                              0    46   PRED-ONLY
   (no name, column 15)                              0    46   PRED-ONLY
-  (no name, column 4)                               0    41   PRED-ONLY
   (no name, column 6)                               0    46   PRED-ONLY
   (no name, column 7)                               0    46   PRED-ONLY
   (no name, column 8)                               0    46   PRED-ONLY
@@ -111,8 +110,9 @@ measurementType COVERAGE
   diel activity                                   280   191   Δ-89 (split?)
   color of beetle cuticle                          91    20   Δ-71 (split?)
   presence of iridescence on beetle cuticle        99    46   Δ-53 (split?)
-  body size                                        71    10   Δ-61 (split?)
+  body size                                        71    41   Δ-30 (split?)
   standardized body size                          132   132   
+  bodysize                                          0    10   PRED-ONLY
   class                                             0   168   PRED-ONLY
   detritus (fooddet)                                0   191   PRED-ONLY
   dispersaldisp                                     0   125   PRED-ONLY
@@ -132,9 +132,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.238  0.117  0.157    144   462  1085   id+type+value
-             (2244 more spurious row(s) set aside as out-of-scope; strict P would be 0.051)
-  tags        0.000  0.000  0.000      0   606  1229   basis+id+type+value+stat+sex+stage
-             (2244 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.157 vs previous)
-             note: only 0/144 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+  core        0.287  0.149  0.196    183   454  1046   id+type+value
+             (2213 more spurious row(s) set aside as out-of-scope; strict P would be 0.064)
+  tags        0.000  0.000  0.000      0   637  1229   basis+id+type+value+stat+sex+stage
+             (2213 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.196 vs previous)
+             note: only 0/183 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

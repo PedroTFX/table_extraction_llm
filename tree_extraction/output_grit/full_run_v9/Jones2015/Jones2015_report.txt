@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Jones2015/Jones2015.xlsx  (72 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Jones2015/Jones2015.csv  (264 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Jones2015/Jones2015.csv  (264 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -11,49 +11,38 @@ SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
   'Total distance (m)' -> 'Total Distance'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 71
-  missed (FN)         : 1
-  spurious, in scope  : 1   <- GT covers this trait: real errors
+  matched (TP)        : 72
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
   spurious, out of scope: 192   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.269 / 0.986 / 0.423   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.986 / 0.986 / 0.986   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.986   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.273 / 1.000 / 0.429   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            192
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0     71  0.000  <-- low
+  basisOfRecord                 0     72  0.000  <-- low
   measurementMethod             0     24  0.000  <-- low
-  measurementUnit               0     47  0.000  <-- low
-  measurementStatistic          0     71  0.000  <-- low
+  measurementUnit               0     48  0.000  <-- low
+  measurementStatistic          0     72  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0     71  0.000  <-- low
-  lifeStage                     0     71  0.000  <-- low
+  sex                           0     72  0.000  <-- low
+  lifeStage                     0     72  0.000  <-- low
   caste                         0      0    n/a
-  sampleSizeValue              71     71  1.000
-  sampleSizeUnit                0     71  0.000  <-- low
-  sampleTreatment               0     71  0.000  <-- low
-  samplingProtocol              0      0    n/a   +29 where GT blank
-  verbatimLocality              0     71  0.000  <-- low
-  verbatimCoordinates           0     71  0.000  <-- low
-  verbatimEventDate             0     71  0.000  <-- low
+  sampleSizeValue              72     72  1.000
+  sampleSizeUnit                0     72  0.000  <-- low
+  sampleTreatment               0     72  0.000  <-- low
+  samplingProtocol              0      0    n/a   +30 where GT blank
+  verbatimLocality              0     72  0.000  <-- low
+  verbatimCoordinates           0     72  0.000  <-- low
+  verbatimEventDate             0     72  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     71  0.000  <-- low
+  associatedReferences          0     72  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 1 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing              0
-  species+trait present, value differs        1
-
-  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2026-01-17 00:00:00'        ->  '1.17'                       x1
-  -> 1 substitution explains 1 of 1 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Jones2015_misses.csv, Jones2015_misses_summary.json (1 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -71,9 +60,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.986  0.986  0.986     71     1     1   id+type+value
-             (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.269)
+  core        1.000  1.000  1.000     72     0     0   id+type+value
+             (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.273)
   tags        0.000  0.000  0.000      0    72    72   basis+id+type+value+stat+sex+stage
              (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.986 vs previous)
-             note: only 0/71 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -1.000 vs previous)
+             note: only 0/72 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

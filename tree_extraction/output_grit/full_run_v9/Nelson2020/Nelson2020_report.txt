@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Nelson2020/Nelson2020.xlsx  (191 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Nelson2020/Nelson2020.csv  (320 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Nelson2020/Nelson2020.csv  (320 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -14,27 +14,27 @@ SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
   'season' -> 'breeding season'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 160
-  missed (FN)         : 31
-  spurious, in scope  : 40   <- GT covers this trait: real errors
+  matched (TP)        : 189
+  missed (FN)         : 2
+  spurious, in scope  : 11   <- GT covers this trait: real errors
   spurious, out of scope: 120   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.500 / 0.838 / 0.626   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.800 / 0.838 / 0.818   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.838   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.591 / 0.990 / 0.740   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.945 / 0.990 / 0.967   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.990   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            120
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    160  0.000  <-- low
-  measurementMethod             0      9  0.000  <-- low
-  measurementUnit               0      9  0.000  <-- low
-  measurementStatistic          0    160  0.000  <-- low
+  basisOfRecord                 0    189  0.000  <-- low
+  measurementMethod             0     38  0.000  <-- low
+  measurementUnit               0     38  0.000  <-- low
+  measurementStatistic          0    189  0.000  <-- low
   measurementRemarks            0    151  0.000  <-- low
-  sex                           0    160  0.000  <-- low
-  lifeStage                     0    160  0.000  <-- low
+  sex                           0    189  0.000  <-- low
+  lifeStage                     0    189  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -44,24 +44,20 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    160  0.000  <-- low
+  associatedReferences          0    189  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 31 MISSED ROWS MISSED
+WHY THE 2 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              0
-  species+trait present, value differs       31
+  species+trait present, value differs        2
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2025-03-09 00:00:00'        ->  '9.3'                        x2
-     '2025-03-15 00:00:00'        ->  '15.3'                       x2
-     '2025-07-09 00:00:00'        ->  '9.7'                        x2
-     '2025-08-07 00:00:00'        ->  '7.8'                        x2
-     '2025-08-11 00:00:00'        ->  '11.8'                       x2
-     '2025-01-05 00:00:00'        ->  '5.1'                        x1
-  -> 6 substitutions explain 11 of 31 misses (35%) — scattered; no single cause
+     '2025-02-02 00:00:00'        ->  '2.2'                        x1
+     '2025-05-02 00:00:00'        ->  '2.5'                        x1
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
 
-  full miss detail saved -> Nelson2020_misses.csv, Nelson2020_misses_summary.json (31 row(s))
+  full miss detail saved -> Nelson2020_misses.csv, Nelson2020_misses_summary.json (2 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -76,9 +72,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.800  0.838  0.818    160    40    31   id+type+value
-             (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.500)
+  core        0.945  0.990  0.967    189    11     2   id+type+value
+             (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.591)
   tags        0.000  0.000  0.000      0   200   191   basis+id+type+value+stat+sex+stage
              (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.818 vs previous)
-             note: only 0/160 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.967 vs previous)
+             note: only 0/189 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

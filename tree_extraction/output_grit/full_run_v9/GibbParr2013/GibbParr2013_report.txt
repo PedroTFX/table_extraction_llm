@@ -1,7 +1,7 @@
   [semantic] matched by values: 'Morphological trait head with between the eyes' -> 'Head width between the eyes'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/GibbParr2013/GibbParr2013.xlsx  (414 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v8/GibbParr2013/GibbParr2013.csv  (499 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/GibbParr2013/GibbParr2013.csv  (499 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -16,54 +16,54 @@ SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
   'Morphological trait pronotum width' -> 'Pronotum width'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 376
-  missed (FN)         : 38
-  spurious, in scope  : 38   <- GT covers this trait: real errors
+  matched (TP)        : 397
+  missed (FN)         : 17
+  spurious, in scope  : 17   <- GT covers this trait: real errors
   spurious, out of scope: 85   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.754 / 0.908 / 0.824   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.908 / 0.908 / 0.908   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.908   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.796 / 0.959 / 0.870   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.959 / 0.959 / 0.959   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.959   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                             85
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    376  0.000  <-- low
+  basisOfRecord                 0    397  0.000  <-- low
   measurementMethod             0     55  0.000  <-- low
-  measurementUnit               0    376  0.000  <-- low
-  measurementStatistic          0    376  0.000  <-- low
+  measurementUnit               0    397  0.000  <-- low
+  measurementStatistic          0    397  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    376  0.000  <-- low
-  lifeStage                     0    376  0.000  <-- low
-  caste                         0    376  0.000  <-- low
+  sex                           0    397  0.000  <-- low
+  lifeStage                     0    397  0.000  <-- low
+  caste                         0    397  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a   +376 where GT blank
+  verbatimLocality              0      0    n/a   +397 where GT blank
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    376  0.000  <-- low
+  associatedReferences          0    397  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 38 MISSED ROWS MISSED
+WHY THE 17 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              0
-  species+trait present, value differs       38
+  species+trait present, value differs       17
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2026-08-01 00:00:00'        ->  '1.08'                       x4
-     '2026-01-01 00:00:00'        ->  '1.01'                       x4
-     '2026-04-01 00:00:00'        ->  '1.04'                       x3
-     '2026-09-01 00:00:00'        ->  '1.09'                       x3
      '2026-02-01 00:00:00'        ->  '1.2'                        x3
-     '2026-11-01 00:00:00'        ->  '1.11'                       x2
-  -> 6 substitutions explain 19 of 38 misses (50%) — scattered; no single cause
+     '2026-02-02 00:00:00'        ->  '2.2'                        x2
+     '2026-03-01 00:00:00'        ->  '1.3'                        x2
+     '0.11'                       ->  '0.111<'                     x1
+     '2026-07-01 00:00:00'        ->  '1.07'                       x1
+     '2026-05-02 00:00:00'        ->  '2.5'                        x1
+  -> 6 substitutions explain 10 of 17 misses (59%) — scattered; no single cause
 
-  full miss detail saved -> GibbParr2013_misses.csv, GibbParr2013_misses_summary.json (38 row(s))
+  full miss detail saved -> GibbParr2013_misses.csv, GibbParr2013_misses_summary.json (17 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -79,9 +79,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.908  0.908  0.908    376    38    38   id+type+value
-             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.754)
+  core        0.959  0.959  0.959    397    17    17   id+type+value
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.796)
   tags        0.000  0.000  0.000      0   414   414   basis+id+type+value+stat+sex+stage
              (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.908 vs previous)
-             note: only 0/376 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.959 vs previous)
+             note: only 0/397 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

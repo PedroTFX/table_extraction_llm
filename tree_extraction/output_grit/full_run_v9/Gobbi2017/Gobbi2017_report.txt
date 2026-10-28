@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Gobbi2017/Gobbi2017.xlsx  (65 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Gobbi2017/Gobbi2017.csv  (162 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Gobbi2017/Gobbi2017.csv  (162 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -24,52 +24,38 @@ SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
   'Mean body length (mm)' -> 'Mean body length'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 61
-  missed (FN)         : 4
-  spurious, in scope  : 47   <- GT covers this trait: real errors
+  matched (TP)        : 65
+  missed (FN)         : 0
+  spurious, in scope  : 43   <- GT covers this trait: real errors
   spurious, out of scope: 54   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.377 / 0.938 / 0.537   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.565 / 0.938 / 0.705   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.938   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.401 / 1.000 / 0.573   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.602 / 1.000 / 0.751   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                             54
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0     61  0.000  <-- low
+  basisOfRecord                 0     65  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0      9  0.000  <-- low
-  measurementStatistic          0     61  0.000  <-- low
+  measurementUnit               0     13  0.000  <-- low
+  measurementStatistic          0     65  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0     61  0.000  <-- low
-  lifeStage                     0     61  0.000  <-- low
+  sex                           0     65  0.000  <-- low
+  lifeStage                     0     65  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0     61  0.000  <-- low
+  samplingProtocol              0     65  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     61  0.000  <-- low
+  associatedReferences          0     65  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 4 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing              0
-  species+trait present, value differs        4
-
-  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2025-02-07 00:00:00'        ->  '7.2'                        x1
-     '2025-05-22 00:00:00'        ->  '22.5'                       x1
-     '2025-02-12 00:00:00'        ->  '12.2'                       x1
-     '2025-08-08 00:00:00'        ->  '8.8'                        x1
-  -> 4 substitutions explain 4 of 4 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Gobbi2017_misses.csv, Gobbi2017_misses_summary.json (4 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -86,9 +72,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.565  0.938  0.705     61    47     4   id+type+value
-             (54 more spurious row(s) set aside as out-of-scope; strict P would be 0.377)
+  core        0.602  1.000  0.751     65    43     0   id+type+value
+             (54 more spurious row(s) set aside as out-of-scope; strict P would be 0.401)
   tags        0.000  0.000  0.000      0   108    65   basis+id+type+value+stat+sex+stage
              (54 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.705 vs previous)
-             note: only 0/61 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.751 vs previous)
+             note: only 0/65 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

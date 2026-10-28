@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Eckert2023/Eckert2023.xlsx  (1269 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Eckert2023/Eckert2023.csv  (1904 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Eckert2023/Eckert2023.csv  (1904 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -18,27 +18,27 @@ SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
   'Femur length (mm)' -> 'Femur length'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 993
-  missed (FN)         : 276
-  spurious, in scope  : 287   <- GT covers this trait: real errors
+  matched (TP)        : 1007
+  missed (FN)         : 262
+  spurious, in scope  : 273   <- GT covers this trait: real errors
   spurious, out of scope: 624   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.522 / 0.783 / 0.626   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.776 / 0.783 / 0.779   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.783   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.529 / 0.794 / 0.635   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.787 / 0.794 / 0.790   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.794   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            624
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    993  0.000  <-- low
-  measurementMethod             0    694  0.000  <-- low
-  measurementUnit               0    337  0.000  <-- low
-  measurementStatistic          0    993  0.000  <-- low
+  basisOfRecord                 0   1007  0.000  <-- low
+  measurementMethod             0    708  0.000  <-- low
+  measurementUnit               0    351  0.000  <-- low
+  measurementStatistic          0   1007  0.000  <-- low
   measurementRemarks            0    527  0.000  <-- low
-  sex                           0    993  0.000  <-- low
-  lifeStage                     0    993  0.000  <-- low
+  sex                           0   1007  0.000  <-- low
+  lifeStage                     0   1007  0.000  <-- low
   caste                         0    387  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -48,24 +48,24 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    993  0.000  <-- low
+  associatedReferences          0   1007  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 276 MISSED ROWS MISSED
+WHY THE 262 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              0
-  species+trait present, value differs      276
+  species+trait present, value differs      262
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'soil-dweller'               ->  'soil'                       x99
      'chewing mandibles'          ->  'chew'                       x91
      'litter-dweller'             ->  'litter'                     x58
      'sucking mandibles'          ->  'suck'                       x8
-     '2026-01-30 00:00:00'        ->  '1.3'                        x3
      '2026-01-13 00:00:00'        ->  '1.13'                       x3
-  -> 6 substitutions explain 262 of 276 misses (95%) — systematic, not scattered
+     '2026-01-10 00:00:00'        ->  '1.1'                        x2
+  -> 6 substitutions explain 261 of 262 misses (100%) — systematic, not scattered
 
-  full miss detail saved -> Eckert2023_misses.csv, Eckert2023_misses_summary.json (276 row(s))
+  full miss detail saved -> Eckert2023_misses.csv, Eckert2023_misses_summary.json (262 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -87,9 +87,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.776  0.783  0.779    993   287   276   id+type+value
-             (624 more spurious row(s) set aside as out-of-scope; strict P would be 0.522)
+  core        0.787  0.794  0.790   1007   273   262   id+type+value
+             (624 more spurious row(s) set aside as out-of-scope; strict P would be 0.529)
   tags        0.000  0.000  0.000      0  1280  1269   basis+id+type+value+stat+sex+stage
              (624 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.779 vs previous)
-             note: only 0/993 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.790 vs previous)
+             note: only 0/1007 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

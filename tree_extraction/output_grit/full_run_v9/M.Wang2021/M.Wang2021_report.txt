@@ -1,7 +1,7 @@
   [semantic] matched by values: 'trophic level' -> 'Trophic Levels'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/M.Wang2021/M.Wang2021.xlsx  (233 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/M.Wang2021/M.Wang2021.csv  (494 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/M.Wang2021/M.Wang2021.csv  (494 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -112,59 +112,55 @@ SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
   'trophic level' -> 'Trophic Levels'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 141
-  missed (FN)         : 92
-  spurious, in scope  : 19   <- GT covers this trait: real errors
+  matched (TP)        : 155
+  missed (FN)         : 78
+  spurious, in scope  : 5   <- GT covers this trait: real errors
   spurious, out of scope: 334   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.285 / 0.605 / 0.388   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.881 / 0.605 / 0.718   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.605   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.314 / 0.665 / 0.426   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.969 / 0.665 / 0.789   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.665   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            334
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    141  0.000  <-- low
+  basisOfRecord                 0    155  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0     65  0.000  <-- low
-  measurementStatistic          0    141  0.000  <-- low
+  measurementUnit               0     79  0.000  <-- low
+  measurementStatistic          0    155  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    141  0.000  <-- low
-  lifeStage                     0    141  0.000  <-- low
+  sex                           0    155  0.000  <-- low
+  lifeStage                     0    155  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    141  0.000  <-- low
-  verbatimLocality              0    141  0.000  <-- low
-  verbatimCoordinates           0    141  0.000  <-- low
-  verbatimEventDate             0    141  0.000  <-- low
+  samplingProtocol              0    155  0.000  <-- low
+  verbatimLocality              0    155  0.000  <-- low
+  verbatimCoordinates           0    155  0.000  <-- low
+  verbatimEventDate             0    155  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    141  0.000  <-- low
+  associatedReferences          0    155  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 92 MISSED ROWS MISSED
+WHY THE 78 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing             76
-  species+trait present, value differs       16
+  species+trait present, value differs        2
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2026-03-30 00:00:00'        ->  '3.3'                        x2
-     '2026-08-21 00:00:00'        ->  '8.21'                       x2
      '2026-10-02 00:00:00'        ->  '10.02'                      x1
-     '2026-07-20 00:00:00'        ->  '7.2'                        x1
-     '2026-09-14 00:00:00'        ->  '9.14'                       x1
-     '2026-11-30 00:00:00'        ->  '11.3'                       x1
-  -> 6 substitutions explain 8 of 92 misses (9%) — scattered; no single cause
+     '2026-02-10 00:00:00'        ->  '2.1'                        x1
+  -> 2 substitutions explain 2 of 78 misses (3%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Body Size'                        x39
      'Trophic Levels'                   x37
-  -> 2 missing traits explain 76 of 92 misses (83%) — systematic, not scattered
+  -> 2 missing traits explain 76 of 78 misses (97%) — systematic, not scattered
 
-  full miss detail saved -> M.Wang2021_misses.csv, M.Wang2021_misses_summary.json (92 row(s))
+  full miss detail saved -> M.Wang2021_misses.csv, M.Wang2021_misses_summary.json (78 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -179,9 +175,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.881  0.605  0.718    141    19    92   id+type+value
-             (334 more spurious row(s) set aside as out-of-scope; strict P would be 0.285)
+  core        0.969  0.665  0.789    155     5    78   id+type+value
+             (334 more spurious row(s) set aside as out-of-scope; strict P would be 0.314)
   tags        0.000  0.000  0.000      0   160   233   basis+id+type+value+stat+sex+stage
              (334 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.718 vs previous)
-             note: only 0/141 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.789 vs previous)
+             note: only 0/155 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

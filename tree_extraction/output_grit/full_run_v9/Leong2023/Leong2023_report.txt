@@ -1,7 +1,7 @@
   [semantic] matched by values: 'Weber s length' -> 'Weber’s length'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Leong2023/Leong2023.xlsx  (236 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Leong2023/Leong2023.csv  (236 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Leong2023/Leong2023.csv  (236 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -15,26 +15,26 @@ SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
   'relative scape length' -> 'Relative scape length corrected by body size'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 231
-  missed (FN)         : 5
-  spurious, in scope  : 5   <- GT covers this trait: real errors
+  matched (TP)        : 234
+  missed (FN)         : 2
+  spurious, in scope  : 2   <- GT covers this trait: real errors
   spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.979 / 0.979 / 0.979   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.979 / 0.979 / 0.979   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.979   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.992 / 0.992 / 0.992   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.992 / 0.992 / 0.992   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.992   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    231  0.000  <-- low
+  basisOfRecord                 0    234  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0    172  0.000  <-- low
-  measurementStatistic          0    231  0.000  <-- low
+  measurementUnit               0    174  0.000  <-- low
+  measurementStatistic          0    234  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    231  0.000  <-- low
-  lifeStage                     0    231  0.000  <-- low
-  caste                         0    231  0.000  <-- low
-  sampleSizeValue              94    231  0.407  <-- low
+  sex                           0    234  0.000  <-- low
+  lifeStage                     0    234  0.000  <-- low
+  caste                         0    234  0.000  <-- low
+  sampleSizeValue              94    234  0.402  <-- low
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
@@ -42,23 +42,20 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    231  0.000  <-- low
+  associatedReferences          0    234  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 5 MISSED ROWS MISSED
+WHY THE 2 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              0
-  species+trait present, value differs        5
+  species+trait present, value differs        2
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      '0.99'                       ->  '0.6'                        x1
      '0.6'                        ->  '0.99'                       x1
-     '2026-01-12 00:00:00'        ->  '1.12'                       x1
-     '2026-01-10 00:00:00'        ->  '1.1'                        x1
-     '2026-01-21 00:00:00'        ->  '1.21'                       x1
-  -> 5 substitutions explain 5 of 5 misses (100%) — systematic, not scattered
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
 
-  full miss detail saved -> Leong2023_misses.csv, Leong2023_misses_summary.json (5 row(s))
+  full miss detail saved -> Leong2023_misses.csv, Leong2023_misses_summary.json (2 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -73,7 +70,7 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.979  0.979  0.979    231     5     5   id+type+value
+  core        0.992  0.992  0.992    234     2     2   id+type+value
   tags        0.000  0.000  0.000      0   236   236   basis+id+type+value+stat+sex+stage
-             (F1 -0.979 vs previous)
-             note: only 0/231 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.992 vs previous)
+             note: only 0/234 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

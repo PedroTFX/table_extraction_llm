@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Correa2021/Correa2021.xlsx  (66 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Correa2021/Correa2021.csv  (66 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Correa2021/Correa2021.csv  (66 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -46,7 +46,7 @@ WHY THE 2 MISSED ROWS MISSED
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      '0.0293'                     ->  '0.0263'                     x1
-     '3553-10-01 00:00:00'        ->  '10.3553'                    x1
+     '1.1'                        ->  '10.3553'                    x1
   -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
 
   full miss detail saved -> Correa2021_misses.csv, Correa2021_misses_summary.json (2 row(s))
