@@ -300,7 +300,7 @@ def base_species_of(t, fields, org, rec):
     return s
 
 
-def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None):
+def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, cell_names=None):
     """One CSV row per species x trait, in production's columns, -> root/<paper>/<paper>.csv.
       wide   each column tagged measurementType: type = its name, spelled out by the meaning
              step when it resolved; value = the cell, decoded
@@ -309,7 +309,9 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None):
       section_of (v8 only) f(t, rec) -> {"fields": {...}, "trait": label|None}: row fields the
              section labels above the record fill when the row has none, and a trait label as
              the type of its wide cells (the column name kept in measurementRemarks when the
-             table has several trait columns)."""
+             table has several trait columns).
+      cell_names (v9 only) f(paper) -> {printed name: full name}: a long table's trait-name cells
+             spelled out from the paper's legends."""
     head = head_runs()
     n_rows = collections.Counter()
     for paper in papers:
@@ -319,6 +321,7 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None):
         names = json.loads(mf.read_text(encoding="utf-8")) if mf.exists() else {}
         df = root / "decode" / f"{paper}.json"
         dec = json.loads(df.read_text(encoding="utf-8")) if df.exists() else {}
+        cells = cell_names(paper) if cell_names else {}
         rows = []
         for t, fields, org, xtags in plan_of(paper, head):
             long_types = [c for c in t.columns if fields.get(c.name) == "measurementType"]
@@ -343,6 +346,7 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None):
                 if is_long:
                     tcol = long_types[0]
                     typ = _clean(rec.get(tcol.name))
+                    typ = cells.get(typ) or typ
                     for vcol in long_vals:
                         v = _clean(rec.get(vcol.name))
                         if typ and v:
@@ -947,7 +951,8 @@ def stage_assemble(papers):
     install(OUT, decisions=True, structure=True, kind=True, sections=True)
     assemble_csvs(papers, OUT, lambda p, h: plan(p, h, OUT, tags=OUT, decisions=True, structure=True,
                                                  kind=True, sections=True, species=True),
-                  species_fn(OUT, decisions=True, sections=True), decoded, section_of)
+                  species_fn(OUT, decisions=True, sections=True), decoded, section_of,
+                  lambda p: ln.cell_names(OUT, p))
     n = 0
     for p in papers:                     # 'Hesperiidae(n=45)' -> organism + sample size
         rows = read_csv(OUT / p / f"{p}.csv")

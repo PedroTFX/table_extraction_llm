@@ -15,6 +15,10 @@ holds those definitions: entries whose code is the column's name.
            in this paper, or none ('Sprawler' under 'Locomotion' is a category, not a name).
            Sure (p >= SURE) -> the column's name; else it stays as printed.
 
+  cells    a long table's trait names are cells, not headers (Noriega2023 'HW'): the same
+           question per distinct cell of its type column; kept as 'cell:<name>' in the record and
+           applied by v9's assembly to long rows only (cell_names), not to the meaning file.
+
     python full_run_v9.py v9:names <papers>     writes <run>/legend_names/<paper>.json and
                                                 updates <run>/meaning/<paper>.json
 """
@@ -92,6 +96,13 @@ def ask_name(client, name, header_ctx, cands):
     return term, ch, probs
 
 
+def cell_names(run_dir, paper):
+    """{printed trait-name cell: full name} for the long tables of one paper (sure answers)."""
+    f = run_dir / "legend_names" / f"{paper}.json"
+    res = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    return {k[5:]: v["term"] for k, v in res.items() if k.startswith("cell:") and v.get("term")}
+
+
 def run(run_dir, papers):
     """One paper at a time; resumable (run_dir/legend_names/<paper>.json). The trait columns are the
     ones full_run.plan gives (the caller installs its layers)."""
@@ -123,8 +134,25 @@ def run(run_dir, papers):
                 res[c.name] = {"candidates": cands, "choice": ch, "probs": probs, "term": term}
                 if term:
                     names[c.name] = term
-        if res:
+            # a long table: the trait names are cells of its first column tagged measurementType
+            # (Noriega2023's 'HW', 'PH' rows); the same question per distinct cell, kept apart
+            types = [c for c in t.columns if fields.get(c.name) == "measurementType"]
+            if not types or not any(fields.get(c.name) == "measurementValue" for c in t.columns):
+                continue
+            for r in t.records:
+                v = " ".join(str(r.get(types[0].name) or "").split())
+                if not v or f"cell:{v}" in res:
+                    continue
+                cands = candidates(v, cats)
+                if not cands:
+                    continue
+                client = client or ct.DecisionClient(v1.NIMBLE, 1)
+                ctx = f"names in the column '{types[0].name}' of a long table"
+                term, ch, probs = ask_name(client, v, ctx, cands)
+                res[f"cell:{v}"] = {"candidates": cands, "choice": ch, "probs": probs, "term": term}
+        if any(not k.startswith("cell:") for k in res):
             mf.write_text(json.dumps(names, indent=1, ensure_ascii=False), encoding="utf-8")
+        if res:
             print(f"  [names] {p:22s} " + "; ".join(f"{k} -> {v['term'] or '(kept)'}" for k, v in res.items())[:300],
                   flush=True)
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
