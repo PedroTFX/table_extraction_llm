@@ -528,7 +528,16 @@
 - Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
   big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume (from src/v7): python grit_run.py all
 
-## Category columns (v10, category_tree.py, 2026-10-28) — BUILT, to run on the remote
+## Category columns (v10, category_tree.py, 2026-10-28) — RUN on grit, NOT adopted (v9 stays best)
+
+- Grit (remote): mean F1 0.522 -> 0.521. 152 columns asked (had a heading): 77 category, 48 own, 27 unsure;
+  14 groups, 11 of them in dev papers. Changes only in dev papers: Bucher +0.018, Wallon +0.018,
+  Martins -0.079 (its GT keeps 'seasonality - spring/summer/fall' as separate 0/1 types, like Khayati).
+  The 3 held papers that formed groups (Cao, Fiedler, Gutierrez-Chacon) did not change at all.
+  By the design's own rule (only dev improves) the step is dropped as overfit; kept as an experiment.
+- Viza2023 formed 6 groups but stays at F1 0: the category values are the printed column names
+  ('Body size BS'), not the legend's terms, and its GT traits ('Flight Behaviour' = 'Perchers') differ
+  from the table's coded traits altogether.
 
 - Design (before any run): output/eval_split/DESIGN_categories.md. Flag-only wide trait columns
   (0/1, yes/no, x, +/-, fractions) that are categories of one trait: code gives structural headings
