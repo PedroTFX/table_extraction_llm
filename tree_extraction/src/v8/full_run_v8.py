@@ -886,9 +886,12 @@ def compare(papers, prev, out, old, new, name):
 
 
 def det_score(root, p):
-    """evaluate() with the LLM pass off: trait names matched by strings and values only."""
+    """evaluate() with the LLM pass off: trait names matched by strings and values only. Miss-severity
+    grading off too (it asks gemma once per missed GT row: run as its own stage, without score's
+    setting, the scorer took > 4 hours on grit and had not finished)."""
     import evaluate as ev
     from mineru_extract import classify_folder
+    ev.ASSESS_MISS_SEVERITY = False
     pred = root / p / f"{p}.csv"
     if not pred.exists():
         return None
