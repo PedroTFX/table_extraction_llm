@@ -41,6 +41,7 @@ Stages, each resumable (one model at a time):
   v9:names        full trait names from the paper's legends (nimble)
   v11:names       names still printed as codes: header parts, duels (nimble)
   v11:species     open species tables, two options at a time (nimble)
+  v11:redo        papers whose part questions kept a column: ask v11:names again
   assemble        the CSVs -> output/full_run_v11
   score           production scorer vs v9, then the repeatable scorer
   det             repeatable scorer only, v9 vs v11
@@ -1026,7 +1027,8 @@ def stage_score(papers):
 
 
 OWN_STAGES = {"v7:oracle": stage_v7_oracle, "assemble": stage_assemble, "score": stage_score,
-              "det": lambda papers: det_compare(papers, PREV, OUT, "v9", "v11", "COMPARE_V11_repeatable.txt")}
+              "det": lambda papers: det_compare(papers, PREV, OUT, "v9", "v11", "COMPARE_V11_repeatable.txt"),
+              "v11:redo": lambda papers: nps.redo(OUT, PREV, papers)}
 
 
 # === stages =================================================================================

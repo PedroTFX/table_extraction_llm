@@ -25,7 +25,11 @@ anything not sure leaves the name as v9 has it.
              against keeping the definition
   Q-PART     a column's other parts, once per table and part: a statistic, a unit, a heading,
              or something else; Q-STAT names the statistic (measurementStatistic.md's words).
-             Something else, or not sure: the column keeps its v9 name.
+             Something else, or not sure: the column keeps its v9 name. The question quotes the
+             text printed around the table and the meaning step's reading of the column
+             (iteration 2, 2026-10-29: without them nimble called Oliveira's 'M' / 'V' 'something
+             else' at 0.92, sex being a plausible reading of 'M', and all 16 columns kept v9's
+             names although 7 of 8 codes had their paper's names)
   Q-DEF and Q-PRINTED are asked once per code per paper: a code that comes back gets the same
   name.
 
@@ -35,12 +39,14 @@ anything not sure leaves the name as v9 has it.
 import json
 import re
 
+import decoder_v3 as v3
 import duels
 import full_run as fr
 import head_to_table as h2t
 import legend_names as ln
 
 POOL = 8
+AROUND = 600            # characters of the text printed above / below a table
 MARKS = r"[*†‡§¶]+"
 STOP = {"the", "and", "for", "from", "with", "per"}
 STATS = [("mean", "'mean': the average"), ("median", "'median'"), ("mode", "'mode': the most common state"),
@@ -207,11 +213,31 @@ def ask_printed(ask, code, definition, names):
     return rec
 
 
-def ask_part(ask, col, ctx, code, name, role, part):
-    """Q-PART (and Q-STAT): what one more part of a column's name says. -> the record, its
+def around(t, md):
+    """The text printed directly above and below the table (its title, its legend), at most
+    AROUND characters each: layout, from the markdown. md = v3.md_tables(paper)."""
+    flat, spans = md
+    i = v3.locate_table(t, spans) if spans else None
+    if i is None:
+        return "", ""
+    start = spans[i - 1][1] if i > 0 else 0
+    end = spans[i + 1][0] if i + 1 < len(spans) else len(flat)
+    clean = lambda x: _flat(re.sub(r"<[^>]+>|<!--.*?-->", " ", x))
+    return clean(flat[start:spans[i][0]])[-AROUND:], clean(flat[spans[i][1]:end])[:AROUND]
+
+
+def ask_part(ask, col, ctx, code, name, role, part, text=("", ""), reading=None):
+    """Q-PART (and Q-STAT): what one more part of a column's name says, with the text printed
+    around the table and the meaning step's reading of the column as facts. -> the record, its
     "answer" ("statistic" | "unit" | "heading", text) or None."""
     state = (f"A table in a scientific paper has the columns {ctx}. In the column '{col}', '{code}' "
              f"stands for the trait '{name}', and '{part}' is {WHERE_PART[role]}.")
+    if reading:
+        state += f" Reading the paper, the column was spelled out as '{reading}'."
+    if text[0]:
+        state += f" The text printed above the table: '{text[0]}'."
+    if text[1]:
+        state += f" The text printed below the table: '{text[1]}'."
     ch, probs = ask(state, f"What does '{part}' tell about the values of the column '{col}'?", {
         "statistic": (f"a statistic: '{part}' says which statistic of the trait the values are (such "
                       f"as mean, variance, standard deviation)"),
@@ -269,6 +295,7 @@ def run(run_dir, papers):
         plan = fr.plan(p, head)
         known, printed = known_names(names, cells), printed_names(plan, names, cells)
         res = {"codes": {}, "parts": {}, "columns": {}, "cells": {}}
+        md = None
         for t, fields, _o, _x in plan:
             tcol = _long(t, fields)
             if tcol:                            # a long table: its name cells
@@ -282,6 +309,7 @@ def run(run_dir, papers):
                 continue
             parts_of = column_parts(head[p], t)
             heads = [c.name for c in t.columns]
+            text = None
             for col in t.columns:
                 ck = f"{t.table_index}|{col.name}"
                 if fields.get(col.name) != "measurementType" or ck in res["columns"] or col.name in said_none:
@@ -301,7 +329,11 @@ def run(run_dir, papers):
                         continue
                     pk = f"{t.table_index}|{role}|{x}"
                     if pk not in res["parts"]:
-                        res["parts"][pk] = ask_part(ask, col.name, ctx, show(code), name, role, x)
+                        md = md or v3.md_tables(p)
+                        text = text or around(t, md)
+                        reading = names.get(col.name)
+                        res["parts"][pk] = ask_part(ask, col.name, ctx, show(code), name, role, x, text,
+                                                    reading if reading and reading != col.name else None)
                     rec["parts"].append(pk)
                     a = res["parts"][pk]["answer"]
                     if not a:
@@ -322,6 +354,24 @@ def run(run_dir, papers):
             print(f"  [names v11] {p:22s} {len(res['codes'])} code(s) asked; "
                   + ("; ".join(got)[:300] or "nothing changed"), flush=True)
     ask.unload()
+
+
+def redo(run_dir, prev_dir, papers):
+    """Make the papers whose part questions kept a column from its name ask again: their
+    name_parts file is removed and their meaning file restored from prev_dir (the names this
+    step wrote go with it). The other papers keep their answers."""
+    done = []
+    for p in papers:
+        f = run_dir / "name_parts" / f"{p}.json"
+        res = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+        if not any(r.get("answer") is None for r in (res.get("parts") or {}).values()):
+            continue
+        old = prev_dir / "meaning" / f"{p}.json"
+        if old.exists():
+            (run_dir / "meaning" / f"{p}.json").write_text(old.read_text(encoding="utf-8"), encoding="utf-8")
+        f.unlink()
+        done.append(p)
+    print(f"  [names v11] to ask again ({len(done)}): {', '.join(done)}", flush=True)
 
 
 def cell_names(run_dir, paper):
