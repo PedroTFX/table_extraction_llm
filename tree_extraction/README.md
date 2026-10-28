@@ -28,6 +28,8 @@ src/
   v8/            full_run_v8.py: v7 + section labels (section_tree.py); grit_run.py — 31
   v9/            full_run_v9.py: v8 + trait names from the paper's legends (legend_names.py) — 32
   v10/           full_run_v10.py: v9 + flag columns that are categories of one trait (category_tree.py)
+  v11/           full_run_v11.py: v9 + names still printed as codes (name_parts.py) + species
+                 duels (species_duel.py); both ask two options at a time (duels.py) — 35
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```

@@ -544,6 +544,21 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
+## Names still printed as codes + species duels (v11 = v9 + both, 2026-10-28) — BUILT, to run on the remote
+
+- Design (before any run): output/eval_split/DESIGN_names_v11.md. The user's rule for choices with
+  many options: two at a time until one or none is left (duels.py). Not sure anywhere -> v9 as is.
+- name_parts.py (v11:names): only names whose current form still holds the code. The code part of a
+  split header ('Traits AL M' -> 'AL'); Q-DEF duels over the legend's entries plus the names the
+  paper gives the same code elsewhere (Kovacs 'AL', 'GL*' cells); Q-PRINTED duels over the names
+  the paper's other tables print that share a word with the definition ('Antenna length ratio');
+  Q-PART / Q-STAT for the other parts (statistic / unit / heading -> measurementStatistic, unit).
+- species_duel.py (v11:species): tables still open in 'one'-species papers (Luo2023 t4), the
+  gate's names + 'several' in duels, then the one left against 'none'; the clash rule unchanged.
+- Run (grit): cd src/v11; python -u grit_run.py v11:names  (v11:names, v11:species, assemble,
+  score); then python -u full_run_v11.py det all with the grit TREE_PAPERS / TREE_OUTPUT.
+- Dev: Oliveira2022, Kovacs2008, Luo2023; held: every other paper asked. Accept as in the design.
+
 ## Category columns (v10, category_tree.py, 2026-10-28) — RUN on grit, NOT adopted (v9 stays best)
 
 - Grit (remote): mean F1 0.522 -> 0.521. 152 columns asked (had a heading): 77 category, 48 own, 27 unsure;
