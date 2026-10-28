@@ -1,0 +1,77 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Cecala2021/Cecala2021.xlsx  (462 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Cecala2021/Cecala2021.csv  (1848 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Functional traits diet breadth' -> 'Diet breadth'
+  'Functional traits nesting location' -> 'Nesting location'
+  'Functional traits social organization' -> 'Social organization'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 448
+  missed (FN)         : 14
+  spurious, in scope  : 476   <- GT covers this trait: real errors
+  spurious, out of scope: 924   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.242 / 0.970 / 0.388   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.485 / 0.970 / 0.646   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.970   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            924
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    448  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    448  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    448  0.000  <-- low
+  lifeStage                     0    448  0.000  <-- low
+  caste                         0    149  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    448  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    448  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    448  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 14 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       14
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'generalist'                 ->  'specialist'                 x5
+     'cavity'                     ->  'below ground'               x5
+     'below ground'               ->  'cavity'                     x2
+     'eusocial'                   ->  'solitary'                   x2
+  -> 4 substitutions explain 14 of 14 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Cecala2021_misses.csv, Cecala2021_misses_summary.json (14 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  diet breadth                                    154   308   Δ+154 (split?)
+  taxonomy family                                   0   308   PRED-ONLY
+  taxonomy genus                                    0   308   PRED-ONLY
+  nesting location                                154   308   Δ+154 (split?)
+  social organization                             154   308   Δ+154 (split?)
+  taxonomy subgenus                                 0   308   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.485  0.970  0.646    448   476    14   id+type+value
+             (924 more spurious row(s) set aside as out-of-scope; strict P would be 0.242)
+  tags        0.000  0.000  0.000      0   924   462   basis+id+type+value+stat+sex+stage
+             (924 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.646 vs previous)
+             note: only 0/448 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

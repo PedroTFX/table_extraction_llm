@@ -1,0 +1,69 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Weber2023/Weber2023.xlsx  (295 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Weber2023/Weber2023.csv  (189 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Andrena minutula agg.' -> 'Andrena minutula agg'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 180
+  missed (FN)         : 115
+  spurious, in scope  : 9   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.952 / 0.610 / 0.744   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.952 / 0.610 / 0.744   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.610   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    180  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    180  0.000  <-- low
+  measurementRemarks            0     54  0.000  <-- low
+  sex                           0    180  0.000  <-- low
+  lifeStage                     0    180  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    180  0.000  <-- low
+  verbatimLocality              0    180  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    180  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 115 MISSED ROWS MISSED
+  species not in prediction                 115
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (38 distinct), closest predicted name:
+     gt 'Sphecodes albilabris'               (nothing similar in the prediction)   x6
+     gt 'Lasioglossum minutissimum'         ~0.76~  pred 'Lasioglossum intermedium'   x3
+     gt 'Lasioglossum monstrificum'         ~0.72~  pred 'Lasioglossum leucozonium'   x3
+     gt 'Lasioglossum morio'                ~0.67~  pred 'Lasioglossum leucozonium'   x3
+     gt 'Lasioglossum nitidiusculum'        ~0.75~  pred 'Lasioglossum intermedium'   x3
+     gt 'Lasioglossum nitidulum'            ~0.72~  pred 'Lasioglossum intermedium'   x3
+  -> 6 species mismatches explain 21 of 115 misses (18%) — scattered; no single cause
+
+  full miss detail saved -> Weber2023_misses.csv, Weber2023_misses_summary.json (115 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  foraging habit                                  101    63   Δ-38 (split?)
+  size group                                       93    63   Δ-30 (split?)
+  nesting habit                                   101    63   Δ-38 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.952  0.610  0.744    180     9   115   id+type+value
+  tags        0.000  0.000  0.000      0   189   295   basis+id+type+value+stat+sex+stage
+             (F1 -0.744 vs previous)
+             note: only 0/180 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

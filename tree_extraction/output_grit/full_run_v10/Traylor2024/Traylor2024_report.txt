@@ -1,0 +1,149 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Traylor2024/Traylor2024.xlsx  (2832 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Traylor2024/Traylor2024.csv  (3527 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 62 pair(s))
+  'Adelina sp' -> 'Adelina'
+  'Adelothyreus dejeani<sup>2</sup>' -> 'Adelothyreus dejeani'
+  'Agathidium sp.' -> 'Agathidium'
+  'Agrilus sp.' -> 'Agrilus'
+  'Anamorphis sp.' -> 'Anamorphis'
+  'Anisotoma sp.' -> 'Anisotoma'
+  'Aulonothroscus sp. 1' -> 'Aulonothroscus'
+  'Bactridium sp' -> 'Bactridium'
+  'Bactridium sp.' -> 'Bactridium'
+  'Bitoma sp.' -> 'Bitoma'
+  'Byrrhodes sp. 1' -> 'Byrrhodes'
+  'Choragus sp.' -> 'Choragus'
+  'Chramesus sp.' -> 'Chramesus'
+  'Chrysobothris sp.' -> 'Chrysobothris'
+  'Cis sp. 1' -> 'Cis'
+  'Cis sp. 10' -> 'Cis'
+  'Cis sp. 2' -> 'Cis'
+  'Cis sp. 3' -> 'Cis'
+  'Cis sp. 4' -> 'Cis'
+  'Cis sp. 5' -> 'Cis'
+  'Cis sp. 6' -> 'Cis'
+  'Cis sp. 7' -> 'Cis'
+  'Cis sp. 8' -> 'Cis'
+  'Cis sp. 9' -> 'Cis'
+  'Corticotomus cylindricus<sup>1</sup>' -> 'Corticotomus cylindricus'
+  'Corticotomus parallelus<sup>1</sup>' -> 'Corticotomus parallelus'
+  'Dipropus soleatus<sup>3</sup>' -> 'Dipropus soleatus'
+  'Drapetes quadripustulatus<sup>3</sup>' -> 'Drapetes quadripustulatus'
+  'Dromaeolus turnbowi<sup>1</sup>' -> 'Dromaeolus turnbowi'
+  'Enicmus maculatus<sup>1</sup>' -> 'Enicmus maculatus'
+  'Eubulus obliquefasciatus<sup>4</sup>' -> 'Eubulus obliquefasciatus'
+  'Hylastes sp.' -> 'Hylastes'
+  'Hymenorus sp. 1' -> 'Hymenorus'
+  'Hypothenemus sp. 1' -> 'Hypothenemus'
+  'Hypothenemus sp. 2' -> 'Hypothenemus'
+  'Hypothenemus sp. 3' -> 'Hypothenemus'
+  'Hypothenemus sp. 4' -> 'Hypothenemus'
+  'Hypothenemus sp. 5' -> 'Hypothenemus'
+  'Lathropus sp.' -> 'Lathropus'
+  'Melasis pectinicornis<sup>1</sup>' -> 'Melasis pectinicornis'
+  'Nematodes atropos<sup>2</sup>' -> 'Nematodes atropos'
+  'Neomida sp.' -> 'Neomida'
+  'Octotemnus sp.' -> 'Octotemnus'
+  'Ormiscus sp.' -> 'Ormiscus'
+  'Orthocis sp.' -> 'Orthocis'
+  'Petalium sp. 1' -> 'Petalium'
+  'Petalium sp. 2' -> 'Petalium'
+  'Phloiotrya sp.' -> 'Phloiotrya'
+  'Pityophthorus sp. 1' -> 'Pityophthorus'
+  'Pityophthorus sp. 2' -> 'Pityophthorus'
+  'Pityophthorus sp. 3' -> 'Pityophthorus'
+  'Pityophthorus sp. 4' -> 'Pityophthorus'
+  'Pseudothysanoes sp.' -> 'Pseudothysanoes'
+  'Pseudothysanoes sp. 1' -> 'Pseudothysanoes'
+  'Ptilinus sp.' -> 'Ptilinus'
+  'Synchita parvula<sup>1</sup>' -> 'Synchita parvula'
+  'Temnoscheila acuta<sup>1</sup>' -> 'Temnoscheila acuta'
+  'Tenebroides bimaculatus<sup>1</sup>' -> 'Tenebroides bimaculatus'
+  'Tenebroides rugosipennis<sup>1</sup>' -> 'Tenebroides rugosipennis'
+  'Tenebroides semicylindricus<sup>1</sup>' -> 'Tenebroides semicylindricus'
+  'Thysanoes sp.' -> 'Thysanoes'
+  'Xyleborinus sp.' -> 'Xyleborinus'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Hypotheremussp. 2': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 2828
+  missed (FN)         : 4
+  spurious, in scope  : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 695   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.802 / 0.999 / 0.889   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.999 / 0.999 / 0.999   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.999   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            695
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   2828  0.000  <-- low
+  measurementMethod             0    471  0.000  <-- low
+  measurementUnit               0   2828  0.000  <-- low
+  measurementStatistic          0   2828  0.000  <-- low
+  measurementRemarks            0   2357  0.000  <-- low
+  sex                           0   2828  0.000  <-- low
+  lifeStage                     0   2828  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0   2828  0.000  <-- low
+  associatedOccurrences         0   2828  0.000  <-- low
+  associatedReferences          0   2828  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 4 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        4
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2.753'                      ->  '2.752'                      x1
+     '4.259'                      ->  '4.359'                      x1
+     '2.286'                      ->  '2.486'                      x1
+     '0.915'                      ->  '0.951'                      x1
+  -> 4 substitutions explain 4 of 4 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Traylor2024_misses.csv, Traylor2024_misses_summary.json (4 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  non-metric multidimensional scaling tree axis 2    0    12   PRED-ONLY
+  forest age (old)                                  0    30   PRED-ONLY
+  antenna length                                  472   472   
+  body height                                     472   472   
+  body length                                     472   472   
+  missing body measurement(s)                       0    23   PRED-ONLY
+  body width                                      472   472   
+  species used to fill in missing data              0    17   PRED-ONLY
+  deadwood volume                                   0    14   PRED-ONLY
+  tree diversity                                    0    15   PRED-ONLY
+  eye length                                      472   472   
+  gap fraction                                      0     2   PRED-ONLY
+  roundness                                       472   472   
+  series                                            0   194   PRED-ONLY
+  suborder                                          0   194   PRED-ONLY
+  superfamily                                       0   194   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.999  0.999  0.999   2828     4     4   id+type+value
+             (695 more spurious row(s) set aside as out-of-scope; strict P would be 0.802)
+  tags        0.000  0.000  0.000      0  2832  2832   basis+id+type+value+stat+sex+stage
+             (695 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.999 vs previous)
+             note: only 0/2828 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

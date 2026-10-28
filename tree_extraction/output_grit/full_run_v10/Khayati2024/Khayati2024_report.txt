@@ -1,0 +1,87 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Khayati2024/Khayati2024.xlsx  (414 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Khayati2024/Khayati2024.csv  (459 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Colony foundation' -> 'Colony foundation '
+  'Insects' -> 'Food Type: Insects'
+  'Liquid' -> 'Food Type: Liquid'
+  'Seeds' -> 'Food Type: Seeds'
+  'Worker body size' -> 'Worker body size '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 387
+  missed (FN)         : 27
+  spurious, in scope  : 27   <- GT covers this trait: real errors
+  spurious, out of scope: 45   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.843 / 0.935 / 0.887   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.935 / 0.935 / 0.935   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.935   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             45
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    387  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     56  0.000  <-- low
+  measurementStatistic          0    387  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    387  0.000  <-- low
+  lifeStage                     0    387  0.000  <-- low
+  caste                         0    278  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    387  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 27 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       27
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '2025-03-02 00:00:00'        ->  '3.2'                        x4
+     '2025-03-01 00:00:00'        ->  '3.1'                        x2
+     '2025-02-07 00:00:00'        ->  '2.7'                        x2
+     '2025-06-08 00:00:00'        ->  '6.8'                        x1
+     '2025-06-01 00:00:00'        ->  '6.1'                        x1
+     '2025-06-03 00:00:00'        ->  '6.3'                        x1
+  -> 6 substitutions explain 11 of 27 misses (41%) — scattered; no single cause
+
+  full miss detail saved -> Khayati2024_misses.csv, Khayati2024_misses_summary.json (27 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  worker body size                                 43    43   
+  code                                              0    45   PRED-ONLY
+  colony foundation                                33    33   
+  colony size                                      31    31   
+  diurnality                                       33    33   
+  food type: insects                               35    35   
+  food type: liquid                                35    35   
+  food type: seeds                                 35    35   
+  foraging strategy                                43    43   
+  nesting site                                     45    45   
+  number of queens                                 41    41   
+  worker polymorphism                              40    40   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.935  0.935  0.935    387    27    27   id+type+value
+             (45 more spurious row(s) set aside as out-of-scope; strict P would be 0.843)
+  tags        0.000  0.000  0.000      0   414   414   basis+id+type+value+stat+sex+stage
+             (45 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.935 vs previous)
+             note: only 0/387 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

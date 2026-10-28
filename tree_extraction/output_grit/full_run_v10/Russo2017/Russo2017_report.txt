@@ -1,0 +1,86 @@
+  [semantic] matched by values: 'ITD' -> 'Intertegular Distance'
+  [semantic] matched by values: 'Length (mm)' -> 'Body size'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Russo2017/Russo2017.xlsx  (191 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v8/Russo2017/Russo2017.csv  (1105 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Andrena (Melandrena)*': no ground-truth name denotes this organism
+  'Species': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'ITD' -> 'Intertegular Distance'
+  'Length (mm)' -> 'Body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 184
+  missed (FN)         : 7
+  spurious, in scope  : 17   <- GT covers this trait: real errors
+  spurious, out of scope: 904   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.167 / 0.963 / 0.284   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.915 / 0.963 / 0.939   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.963   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            904
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    184  0.000  <-- low
+  measurementMethod             0      0    n/a   +148 where GT blank
+  measurementUnit               0    184  0.000  <-- low
+  measurementStatistic          0    184  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           4    184  0.022  <-- low
+  lifeStage                     0    184  0.000  <-- low
+  caste                         0    132  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +184 where GT blank
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0    184  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    184  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 7 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        7
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '6'                          ->  'small andrena'              x7
+  -> 1 substitution explains 7 of 7 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Russo2017_misses.csv, Russo2017_misses_summary.json (7 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 13)                              0    87   PRED-ONLY
+  (no name, column 14)                              0    87   PRED-ONLY
+  itd #2                                            0   105   PRED-ONLY
+  length (mm) #2                                    0    96   PRED-ONLY
+  pollen purity #2                                  0    96   PRED-ONLY
+  score #2                                          0    96   PRED-ONLY
+  body length (mm)                                  0    17   PRED-ONLY
+  body size                                        91    96   Δ+5 (split?)
+  intertegular distance                           100   105   Δ+5 (split?)
+  flower handling                                   0    15   PRED-ONLY
+  functional group                                  0    96   PRED-ONLY
+  pollen purity                                     0   113   PRED-ONLY
+  score                                             0    96   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.915  0.963  0.939    184    17     7   id+type+value
+             (904 more spurious row(s) set aside as out-of-scope; strict P would be 0.167)
+  tags        0.000  0.000  0.000      0   201   191   basis+id+type+value+stat+sex+stage
+             (904 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.939 vs previous)
+             note: only 4/184 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -1,0 +1,75 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Uemori2021/Uemori2021.xlsx  (321 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Uemori2021/Uemori2021.csv  (749 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 172
+  missed (FN)         : 149
+  spurious, in scope  : 149   <- GT covers this trait: real errors
+  spurious, out of scope: 428   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.230 / 0.536 / 0.321   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.536 / 0.536 / 0.536   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.536   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            428
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    172  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     65  0.000  <-- low
+  measurementStatistic          0    172  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    172  0.000  <-- low
+  lifeStage                     0    172  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    172  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 149 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      149
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'primary predator'           ->  'primary predators'          x43
+     'hyper predator'             ->  'secondary predators (predators and parasitoids of predators)' x39
+     'herbivorous'                ->  '1'                          x24
+     '2025-08-05 00:00:00'        ->  '8.5'                        x5
+     '2025-08-25 00:00:00'        ->  '8.25'                       x4
+     '2025-06-05 00:00:00'        ->  '6.5'                        x4
+  -> 6 substitutions explain 119 of 149 misses (80%) — systematic, not scattered
+
+  full miss detail saved -> Uemori2021_misses.csv, Uemori2021_misses_summary.json (149 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitudinal range                                 0   107   PRED-ONLY
+  mean body size                                  107   107   
+  distribution index                                0   107   PRED-ONLY
+  flight duration                                   0   107   PRED-ONLY
+  feeding guild                                   107   107   
+  trophic level                                   107   107   
+  superfamily                                       0   107   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.536  0.536  0.536    172   149   149   id+type+value
+             (428 more spurious row(s) set aside as out-of-scope; strict P would be 0.230)
+  tags        0.000  0.000  0.000      0   321   321   basis+id+type+value+stat+sex+stage
+             (428 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.536 vs previous)
+             note: only 0/172 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -1,0 +1,39 @@
+{
+  "total_missed": 28,
+  "causes": {
+    "species not in prediction": 6,
+    "species+trait present, value differs": 8,
+    "species present, trait missing": 14
+  },
+  "value_substitutions": [
+    {
+      "gt": "plant parts",
+      "pred": "plant_parts",
+      "count": 5
+    },
+    {
+      "gt": "2025-01-02 00:00:00",
+      "pred": "1.2",
+      "count": 2
+    },
+    {
+      "gt": "2025-08-07 00:00:00",
+      "pred": "8.7",
+      "count": 1
+    }
+  ],
+  "species_absent": [
+    {
+      "gt_species": "Polistes guadeloupensis",
+      "count": 6,
+      "closest_pred_species": "Polistes nasidens",
+      "closest_score": 0.727
+    }
+  ],
+  "traits_missing": [
+    {
+      "measurementType": "Pollen transport",
+      "count": 14
+    }
+  ]
+}

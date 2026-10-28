@@ -1,0 +1,75 @@
+  [semantic] matched by values: 'Inter-tegular distance (mm)' -> 'Intertegular distance'
+  [semantic] matched by values: 'Nest location' -> 'Nesting location '
+  [semantic] matched by values: 'Median day of year of flight season' -> 'Flight season median date'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Forrest2015/Forrest2015.xlsx  (827 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Forrest2015/Forrest2015.csv  (858 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Flight-season duration' -> 'Flight season duration'
+  'Inter-tegular distance (mm)' -> 'Intertegular distance'
+  'Median day of year of flight season' -> 'Flight season median date'
+  'Nest location' -> 'Nesting location '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 707
+  missed (FN)         : 120
+  spurious, in scope  : 151   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.824 / 0.855 / 0.839   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.824 / 0.855 / 0.839   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.855   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    707  0.000  <-- low
+  measurementMethod             0    305  0.000  <-- low
+  measurementUnit               0    305  0.000  <-- low
+  measurementStatistic          0    707  0.000  <-- low
+  measurementRemarks            0    134  0.000  <-- low
+  sex                           0    707  0.000  <-- low
+  lifeStage                     0    707  0.000  <-- low
+  caste                         0    433  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    707  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 120 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      120
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'polylectic'                 ->  'poly'                       x89
+     'oligolectic'                ->  'oligo'                      x31
+  -> 2 substitutions explain 120 of 120 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Forrest2015_misses.csv, Forrest2015_misses_summary.json (120 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  nesting behaviour                               128   128   
+  flight season median date                       120   136   Δ+16 (split?)
+  intertegular distance                           139   140   Δ+1 (split?)
+  flight season duration                           46    46   
+  lecty                                           120   128   Δ+8 (split?)
+  nesting location                                134   140   Δ+6 (split?)
+  sociality/ parasitic                            140   140   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.824  0.855  0.839    707   151   120   id+type+value
+  tags        0.000  0.000  0.000      0   858   827   basis+id+type+value+stat+sex+stage
+             (F1 -0.839 vs previous)
+             note: only 0/707 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

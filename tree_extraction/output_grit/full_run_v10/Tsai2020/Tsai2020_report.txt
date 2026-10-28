@@ -1,0 +1,79 @@
+  [semantic] left unmatched: 'burying' vs 'Bury or Not' (llm said different traits)
+  [semantic] left unmatched: 'burying' vs 'reproductive photoperiod' (llm said different traits)
+  [semantic] left unmatched: 'burying' vs 'reproductive photoperiodism' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tsai2020/Tsai2020.xlsx  (974 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Tsai2020/Tsai2020.csv  (343 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'standardized ovary' -> 'standardized ovary weight'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 97
+  missed (FN)         : 877
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 244   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.283 / 0.100 / 0.147   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.980 / 0.100 / 0.181   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.100   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            244
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     97  0.000  <-- low
+  measurementMethod             0     97  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     97  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     97  0.000  <-- low
+  lifeStage                     0     97  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +97 where GT blank
+  samplingProtocol              0     97  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a   +97 where GT blank
+  associatedOccurrences         0      0    n/a   +97 where GT blank
+  associatedReferences          0     97  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 877 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            876
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Bury or Not'                      x558
+     'reproductive photoperiodism'      x220
+     'reproductive photoperiod'         x98
+  -> 3 missing traits explain 876 of 877 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Tsai2020_misses.csv, Tsai2020_misses_summary.json (877 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  bury or not                                     558     0   GT-ONLY
+  burying                                           0   244   PRED-ONLY
+  standardized ovary weight                        98    99   Δ+1 (split?)
+  reproductive photoperiod                         98     0   GT-ONLY
+  reproductive photoperiodism                     220     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'bury or not'                      vs pred 'burying'                          sim=0.56
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.980  0.100  0.181     97     2   877   id+type+value
+             (244 more spurious row(s) set aside as out-of-scope; strict P would be 0.283)
+  tags        0.000  0.000  0.000      0    99   974   basis+id+type+value+stat+sex+stage
+             (244 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.181 vs previous)
+             note: only 0/97 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
