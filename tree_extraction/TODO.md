@@ -537,6 +537,10 @@
   Q-NAME (which is its full name, or none); sure -> the name. 149 questions on grit, 136 on the 109.
   Guariento2020's GT names ('larval feeding on grasses') are not printed in the paper: not covered.
 - Checked without a model: v9 with no answers = v8's grit CSVs (148 papers).
+- Iteration 1 on grit (remote): mean F1 0.518 -> 0.515 (Martins 0.94 -> 0.64, Yates 0.33 -> 0.18,
+  Bucher 0.25 -> 0.17; Noriega +0.015, Gutierrez-Chacon +0.044): only the entry's variable was offered,
+  and nimble took lone group headings ('HL' -> 'Morphological trait', 'S1' -> 'seasonality').
+  Iteration 2: the entry's term too, the other codes sharing each name, 'none' covers shared headings.
 
 ## Section step (v8, section_tree.py, 2026-10-27) — BUILT, not run yet
 

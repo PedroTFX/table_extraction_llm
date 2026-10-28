@@ -2,11 +2,15 @@
 definition only through text shapes ('term (ABBR)', 'ABBR = term') and only for tokens that look
 abbreviated, so a column the paper defines in a legend table stays as printed (Noriega2023 'HW',
 'PH' -> GT 'head width', 'pronotum height'). The legend inventory (legend_inventory.py) already
-holds those definitions: entries whose code is the column's name and whose variable names it.
+holds those definitions: entries whose code is the column's name.
 
-  code     candidates: for each trait column whose name the meaning step left as printed, the
-           inventory variables whose code is that name (units in brackets ignored, case
-           ignored), each with the entry it comes from. Code never makes a name up.
+  code     candidates: for each trait column whose name the meaning step left as printed, every
+           inventory entry whose code is that name (units in brackets ignored, case ignored)
+           offers both its variable and its term — which one names the column differs by legend
+           ('HW' under 'Head width (mm)'; 'HL' under 'Morphological trait', term 'Head length') —
+           each saying where it comes from and which other codes share it. Code never makes a
+           name up. (Iteration 2, 2026-10-28: iteration 1 offered the variable only, and nimble
+           took lone group headings: Yates 'HL' -> 'Morphological trait', mean F1 0.518 -> 0.515.)
   Q-NAME   one question per column with candidates: which one is the full name of the column
            in this paper, or none ('Sprawler' under 'Locomotion' is a category, not a name).
            Sure (p >= SURE) -> the column's name; else it stays as printed.
@@ -35,25 +39,51 @@ def entries(paper):
     return json.loads(f.read_text(encoding="utf-8")).get("categories") or [] if f.exists() else []
 
 
+def _parsed(term):
+    """Objective parse checks on an inventory field (they drop artefacts such as the joined
+    'S5, S6 | TRAITS'; they judge nothing about meaning): a letter first, three letters, no '|'."""
+    t = str(term or "").strip()
+    return bool(t) and t[0].isalpha() and sum(ch.isalpha() for ch in t) >= 3 and "|" not in t
+
+
 def candidates(name, cats):
-    """[{"term", "entry"}]: the variables the legends give the code `name`."""
+    """[{"term", "entry"}]: for each inventory entry whose code is `name`, both the variable it
+    is listed under and the term it gives the code — which one is the column's name differs by
+    legend ('HW' under 'Head width (mm)'; 'HL' under 'Morphological trait' with term 'Head
+    length'). Each candidate says where it comes from and which other codes share it."""
     base, out, seen = _base(name), [], set()
     if not base:
         return out
+    codes_of = {}                                   # a variable or term -> the codes it is given
     for e in cats:
-        code, var = str(e.get("code") or "").strip(), str(e.get("variable") or "").strip()
-        if not code or not var or code.lower() != base or _base(var) == base or _base(var) in seen:
+        code = str(e.get("code") or "").strip()
+        for k in ("variable", "term"):
+            if code and _parsed(e.get(k)):
+                codes_of.setdefault(_base(e[k]), set()).add(code)
+    for e in cats:
+        code = str(e.get("code") or "").strip()
+        if not code or code.lower() != base:
             continue
-        seen.add(_base(var))
-        what = "; ".join(x for x in (e.get("label"), e.get("explanation")) if x)[:120]
-        out.append({"term": var, "entry": f"code '{code}' under '{var}'" + (f" ({what})" if what else "")})
+        var, term = str(e.get("variable") or "").strip(), str(e.get("term") or "").strip()
+        for kind, x in (("term", term), ("variable", var)):
+            if not _parsed(x) or _base(x) in (base, *seen):
+                continue
+            seen.add(_base(x))
+            others = sorted(codes_of.get(_base(x), set()) - {code})
+            where = (f"the term the legend gives code '{code}' (listed under '{var}')" if kind == "term"
+                     else f"the heading code '{code}' is listed under")
+            if others:
+                where += (f"; the legend gives this same name to {len(others)} other code(s): "
+                          + ", ".join(f"'{o}'" for o in others[:6]))
+            out.append({"term": x, "entry": where})
     return out
 
 
 def ask_name(client, name, header_ctx, cands):
-    crit = {f"c{i}": f"'{c['term']}' — the paper's legend lists {c['entry']}" for i, c in enumerate(cands)}
-    crit["none"] = (f"none of these is the full name of '{name}' (one may be the trait it is a "
-                    f"category of, or an unrelated entry)")
+    crit = {f"c{i}": f"'{c['term']}' — {c['entry']}" for i, c in enumerate(cands)}
+    crit["none"] = (f"none of these is the full name of '{name}': a heading shared by several "
+                    f"columns (a group of traits, or the trait whose categories the columns are), "
+                    f"or an unrelated entry")
     state = (f"A table in a scientific paper has a trait column named '{name}'"
              + (f"; its other columns are {header_ctx}" if header_ctx else "") + ". The options quote "
              "the paper's legends that list the code '" + name + "'.")
