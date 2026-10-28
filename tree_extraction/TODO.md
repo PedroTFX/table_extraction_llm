@@ -544,7 +544,13 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## Continuation tables whose head has no names (v12 = v11 + the join, 2026-10-28) — BUILT, to run on the remote
+## Continuation tables whose head has no names (v12 = v11 + the join, 2026-10-28) — RUN, no paper down
+
+- Results (remote): grit mean F1 0.536 -> 0.539 (production), 0.536 -> 0.538 (repeatable); 109 set
+  0.559 -> 0.560. Only Taillefer2018 changed: grit 0.012 -> 0.324 (TP 11 -> 508), 109 set 0.099 -> 0.143
+  (its head reader joins only t8 there). Chichorro2022 (held) still writes no rows. Every other CSV is
+  byte for byte v11's. Left in Taillefer: Voltinism 'M' / 'U' and Overwintering 'A' / 'L' stay undecoded;
+  the GT's 'Feeding' is the paper's 'Spe/Gen' column and its 'Larval feeding habit' is the paper's 'Feeding'.
 
 - Design: output/eval_split/DESIGN_continuation_v12.md. Taillefer2018 t8 / t11 start with a family label
   the head reader read as a head with no names, so they were not joined to t7 and their columns came
