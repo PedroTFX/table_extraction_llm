@@ -1,0 +1,90 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Buzzone2008/Buzzone2008.xlsx  (140 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Buzzone2008/Buzzone2008.csv  (225 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Sirex noctilio Fabricius' -> 'Sirex noctilio'
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Longest single flight (s)' -> 'Longest single flight'
+  'Mass (mg)' -> 'Mass'
+  'Maximum sustained speed (m s ^-1 )' -> 'Maximum sustained speed'
+  'Total distance flown (m)' -> 'Total distance flown'
+  'Type of flight Pe' -> 'Type of flight'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 112
+  missed (FN)         : 28
+  spurious, in scope  : 16   <- GT covers this trait: real errors
+  spurious, out of scope: 97   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.498 / 0.800 / 0.614   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.875 / 0.800 / 0.836   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.800   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             97
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    112  0.000  <-- low
+  measurementMethod             0     28  0.000  <-- low
+  measurementUnit               0    112  0.000  <-- low
+  measurementStatistic          0    112  0.000  <-- low
+  measurementRemarks            0     28  0.000  <-- low
+  sex                           0    112  0.000  <-- low
+  lifeStage                     0    112  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0    112  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0    112  0.000  <-- low
+  associatedReferences          0    112  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 28 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       28
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'periodical flier'           ->  '+'                          x13
+     'pulsating flier'            ->  '+'                          x10
+     'regular flier'              ->  '+'                          x5
+  -> 3 substitutions explain 28 of 28 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Buzzone2008_misses.csv, Buzzone2008_misses_summary.json (28 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 0)                               0     5   PRED-ONLY
+  acceleration-slowdown                             0     6   PRED-ONLY
+  acceleration–slowdown                             0     6   PRED-ONLY
+  final classification                              0    28   PRED-ONLY
+  total distance flown                             28    28   
+  periodical fliers                                 0     5   PRED-ONLY
+  pulsating fliers                                  0     5   PRED-ONLY
+  regular fliers                                    0     5   PRED-ONLY
+  longest single flight                            28    28   
+  type of flight pu                                 0    25   PRED-ONLY
+  type of flight re                                 0     5   PRED-ONLY
+  type of flight                                   28    16   Δ-12 (split?)
+  mass                                             28    28   
+  maximum sustained speed                          28    28   
+  parameter                                         0     7   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.875  0.800  0.836    112    16    28   id+type+value
+             (97 more spurious row(s) set aside as out-of-scope; strict P would be 0.498)
+  tags        0.000  0.000  0.000      0   128   140   basis+id+type+value+stat+sex+stage
+             (97 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.836 vs previous)
+             note: only 0/112 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

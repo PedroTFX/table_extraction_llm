@@ -1,0 +1,123 @@
+  [semantic] left unmatched: 'Location (Approximate)' vs 'apical portion of mesosternal process morphology' (llm said different traits)
+  [semantic] left unmatched: 'Location (Approximate)' vs 'Anterior angles of pronotum' (llm said different traits)
+  [semantic] left unmatched: 'Location (Approximate)' vs 'terior angles of pronotum' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Xu2024/Xu2024.xlsx  (721 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v8/Xu2024/Xu2024.csv  (11 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 10 pair(s))
+  'L. atrilateralis' -> 'Lilioceris atrilateralis'
+  'L. consentanea' -> 'Lilioceris consentanea'
+  'L. dentifemoralis' -> 'Lilioceris dentifemoralis'
+  'L. discrepens' -> 'Lilioceris discrepens'
+  'L. jianfenglingensis' -> 'Lilioceris jianfenglingensis'
+  'L. latissima' -> 'Lilioceris latissima'
+  'L. lianzhouensis' -> 'Lilioceris lianzhouensis'
+  'L. rondoni' -> 'Lilioceris rondoni'
+  'L. rufometallica' -> 'Lilioceris rufometallica'
+  'L. semipunctata' -> 'Lilioceris semipunctata'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'L. yuanae': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 721
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 11   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             11
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 721 MISSED ROWS MISSED
+  species not in prediction                  21
+  species present, trait missing            700
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Lilioceris yuae'                   ~0.69~  pred 'Lilioceris lianzhouensis'   x21
+  -> 1 species mismatch explains 21 of 721 misses (3%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Altitude'                         x423
+     ''                                 x92
+     'Elytra morphology'                x17
+     'Distribution'                     x10
+     'pronotum morphology'              x10
+     'Body width'                       x9
+  -> 6 missing traits explain 561 of 721 misses (78%) — systematic, not scattered
+
+  full miss detail saved -> Xu2024_misses.csv, Xu2024_misses_summary.json (721 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   96     0   GT-ONLY
+  abdominal sternite morphology                     9     0   GT-ONLY
+  abdominal sternite                                1     0   GT-ONLY
+  altitude                                        423     0   GT-ONLY
+  anterior angles of pronotum                       9     0   GT-ONLY
+  terior angles of pronotum                         1     0   GT-ONLY
+  antennae morphology                               1     0   GT-ONLY
+  antennomeres morphology                           1     0   GT-ONLY
+  apical portion of mesosternal process morphology    1     0   GT-ONLY
+  location (approximate)                            0    11   PRED-ONLY
+  body color                                       12     0   GT-ONLY
+  body length                                      11     0   GT-ONLY
+  body width                                       10     0   GT-ONLY
+  pronotal disc morphology                         10     0   GT-ONLY
+  distribution                                     11     0   GT-ONLY
+  humeral groove of elytra                          1     0   GT-ONLY
+  elytra morphology                                19     0   GT-ONLY
+  elytral punctures morphology                      1     0   GT-ONLY
+  female reproductive organs morphology             9     0   GT-ONLY
+  femora of mid- and hind legs morphology           3     0   GT-ONLY
+  femora of legs morphology                         5     0   GT-ONLY
+  male genitalia morphology                        10     0   GT-ONLY
+  habitat                                          10     0   GT-ONLY
+  head morphology                                  10     0   GT-ONLY
+  host plant                                       11     0   GT-ONLY
+  host plants                                       3     0   GT-ONLY
+  lateral metasternum morphology                    8     0   GT-ONLY
+  leg morphology                                   10     0   GT-ONLY
+  mesosternum pubescent. morphology                10     0   GT-ONLY
+  metasternum morphology                            1     0   GT-ONLY
+  pronotum morphology                              11     0   GT-ONLY
+  punctures morphology                              1     0   GT-ONLY
+  scutellum morphology                              1     0   GT-ONLY
+  size                                              1     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   721   id+type+value
+             (11 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0   721   basis+id+type+value+stat+sex+stage
+             (11 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

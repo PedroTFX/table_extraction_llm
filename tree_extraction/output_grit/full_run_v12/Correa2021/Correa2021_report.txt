@@ -1,0 +1,65 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Correa2021/Correa2021.xlsx  (66 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Correa2021/Correa2021.csv  (66 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Biomass (g)' -> 'Biomass'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 64
+  missed (FN)         : 2
+  spurious, in scope  : 2   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.970 / 0.970 / 0.970   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.970 / 0.970 / 0.970   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.970   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     64  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     22  0.000  <-- low
+  measurementStatistic          0     64  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     64  0.000  <-- low
+  lifeStage                     0     64  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     64  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     64  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     64  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 2 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.0293'                     ->  '0.0263'                     x1
+     '1.1'                        ->  '10.3553'                    x1
+  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Correa2021_misses.csv, Correa2021_misses_summary.json (2 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  food relocation behavior                         23    23   
+  biomass                                          24    24   
+  diet                                             19    19   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.970  0.970  0.970     64     2     2   id+type+value
+  tags        0.000  0.000  0.000      0    66    66   basis+id+type+value+stat+sex+stage
+             (F1 -0.970 vs previous)
+             note: only 0/64 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

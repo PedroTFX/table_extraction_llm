@@ -1,0 +1,96 @@
+  [semantic] matched by values: 'Max. lifespan' -> 'maximum lifespan'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Keller1998/Keller1998.xlsx  (215 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Keller1998/Keller1998.csv  (215 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Cardiocondyla emeryi1' -> 'Cardiocondyla emeryi'
+  'Zootermopsis angusticollis^d' -> 'Zootermopsis angusticollis'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Aphaenogaster rudisc': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Colony founding' -> 'colony founding'
+  'Max. lifespan' -> 'maximum lifespan'
+  'Mean lifespan' -> 'mean lifespan'
+  'Queen number' -> 'queen number'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 69
+  missed (FN)         : 146
+  spurious, in scope  : 137   <- GT covers this trait: real errors
+  spurious, out of scope: 9   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.321 / 0.321 / 0.321   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.335 / 0.321 / 0.328   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.321   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              9
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     69  0.000  <-- low
+  measurementMethod             0      0    n/a   +58 where GT blank
+  measurementUnit               0     67  0.000  <-- low
+  measurementStatistic          0     69  0.000  <-- low
+  measurementRemarks            0     56  0.000  <-- low
+  sex                           0     69  0.000  <-- low
+  lifeStage                     0     69  0.000  <-- low
+  caste                         0     69  0.000  <-- low
+  sampleSizeValue               0     39  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     64  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     69  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 146 MISSED ROWS MISSED
+  species not in prediction                   4
+  species present, trait missing              1
+  species+trait present, value differs      141
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'primarily monogynous'       ->  'species that are primarily monogynous' x37
+     'primarily use independent colony founding' ->  'species that found new colonies primarily through independent colony founding' x36
+     'generally use a dependent colony founding' ->  'species that generally use a dependent colony founding' x8
+     'primarily polygynous'       ->  'species that are primarily polygynous' x7
+     'monogyne colonies'          ->  'species that are primarily monogynous' x6
+     'polygyne colonies'          ->  'species that are primarily monogynous' x6
+  -> 6 substitutions explain 100 of 146 misses (68%) — systematic, not scattered
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Aphaenogaster rudis'               ~0.95~  pred 'Aphaenogaster rudisc'   x4
+  -> 1 species mismatch explains 4 of 146 misses (3%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'minimum lifespan'                 x1
+  -> 1 missing trait explains 1 of 146 misses (1%) — scattered; no single cause
+
+  full miss detail saved -> Keller1998_misses.csv, Keller1998_misses_summary.json (146 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  colony founding                                  63    59   Δ-4 (split?)
+  comments                                          0     9   PRED-ONLY
+  maximum lifespan                                 53    51   Δ-2 (split?)
+  mean lifespan                                    35    34   Δ-1 (split?)
+  minimum lifespan                                  1     0   GT-ONLY
+  queen number                                     63    62   Δ-1 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.335  0.321  0.328     69   137   146   id+type+value
+             (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.321)
+  tags        0.000  0.000  0.000      0   206   215   basis+id+type+value+stat+sex+stage
+             (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.328 vs previous)
+             note: only 0/69 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

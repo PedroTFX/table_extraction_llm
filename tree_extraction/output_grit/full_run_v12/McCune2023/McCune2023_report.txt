@@ -1,0 +1,94 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/McCune2023/McCune2023.xlsx  (48 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/McCune2023/McCune2023.csv  (48 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 44 pair(s))
+  'Allograpta obliqua (Say, 1823)' -> 'Allograpta obliqua '
+  'Anasimyia bilinearis (Williston 1887)' -> 'Anasimyia bilinearis'
+  'Brachyopa vacua Osten Sacken, 1875' -> 'Brachyopa vacua'
+  'Chalcosyrphus nemorum (Fabricius, 1805)' -> 'Chalcosyrphus nemorum'
+  'Chrysotoxum plumeum Johnson, 1924' -> 'Chrysotoxum plumeum'
+  'Didea fuscipes Loew, 1863' -> 'Didea fuscipes'
+  'Epistrophe nitidicollis (Meigen, 1822)' -> 'Epistrophe nitidicollis'
+  'Eristalis anthophorina (Fallen, 1817)' -> 'Eristalis anthophorina'
+  'Eristalis arbustorum (Linnaeus, 1758)' -> 'Eristalis arbustorum'
+  'Eristalis dimidiata (Wiedemann, 1830)' -> 'Eristalis dimidiata'
+  'Eristalis tenax (Linnaeus, 1758)' -> 'Eristalis tenax'
+  'Eristalis transversa (Wiedemann, 1830)' -> 'Eristalis transversa'
+  'Eupeodes americanus (Wiedemann, 1830)' -> 'Eupeodes americanus'
+  'Eurimyia stipata (Walker 1849)' -> 'Eurimyia stipata'
+  'Helophilus fasciatus Walker, 1849' -> 'Helophilus fasciatus'
+  'Helophilus latifrons Loew, 1863' -> 'Helophilus latifrons'
+  'Mallota bautias (Walker, 1849)' -> 'Mallota bautias'
+  'Merodon equestris (Fabricius, 1794)' -> 'Merodon equestris'
+  'Orthonevra pictipennis (Loew, 1863)' -> 'Orthonevra pictipennis'
+  'Parhelophilus laetus (Loew, 1963)' -> 'Parhelophilus laetus'
+  'Pelecinobaccha costata (Say 1829)' -> 'Pelecinobaccha costata'
+  'Rhingia nasica Say, 1823' -> 'Rhingia nasica'
+  'Sericomyia bifasciata Williston, 1887' -> 'Sericomyia bifasciata'
+  'Sericomyia chrysotoxoides Macquart, 1842' -> 'Sericomyia chrysotoxoides'
+  'Sericomyia militaris Walker, 1849' -> 'Sericomyia militaris'
+  'Somula decora Macquart, 1847' -> 'Somula decora'
+  'Spilomyia longicornis Loew, 1872' -> 'Spilomyia longicornis'
+  'Spilomyia sayi (Goot, 1964)' -> 'Spilomyia sayi'
+  'Syritta pipiens (Linnaeus, 1758)' -> 'Syritta pipiens'
+  'Syrphus attenuatus Hine, 1922' -> 'Syrphus attenuatus'
+  'Syrphus knabi Shannon, 1916' -> 'Syrphus knabi'
+  'Syrphus rectus Osten Sacken, 1875' -> 'Syrphus rectus'
+  'Syrphus ribesii Linnaeus' -> 'Syrphus ribesii'
+  'Syrphus torvus Osten Sacken, 1875' -> 'Syrphus torvus'
+  'Temnostoma balyras (Walker 1849)' -> 'Temnostoma balyras'
+  'Temnostoma barberi Curran 1939' -> 'Temnostoma barberi'
+  'Temnostoma excentrica (Harris, 1841)' -> 'Temnostoma excentrica'
+  'Toxomerus geminatus (Say, 1823)' -> 'Toxomerus geminatus '
+  'Toxomerus marginatus (Say, 1823)' -> 'Toxomerus marginatus '
+  'Tropidia quadrata (Say, 1824)' -> 'Tropidia quadrata'
+  'Xylota annulifera Bigot, 1884' -> 'Xylota annulifera'
+  'Xylota quadrimaculata Loew, 1866' -> 'Xylota quadrimaculata'
+  'Xylota segnis (Linnaeus, 1758)' -> 'Xylota segnis'
+  'Xylota subfasciata Loew, 1866' -> 'Xylota subfasciata'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 48
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     48  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     48  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     48  0.000  <-- low
+  lifeStage                     0     48  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     48  0.000  <-- low
+  verbatimLocality              0     48  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     48  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  functional group                                 48    48   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     48     0     0   id+type+value
+  tags        0.000  0.000  0.000      0    48    48   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)
+             note: only 0/48 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
