@@ -14,27 +14,27 @@ SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
   'season' -> 'breeding season'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 189
-  missed (FN)         : 2
-  spurious, in scope  : 11   <- GT covers this trait: real errors
+  matched (TP)        : 191
+  missed (FN)         : 0
+  spurious, in scope  : 9   <- GT covers this trait: real errors
   spurious, out of scope: 120   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.591 / 0.990 / 0.740   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.945 / 0.990 / 0.967   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.990   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.597 / 1.000 / 0.748   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.955 / 1.000 / 0.977   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            120
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    189  0.000  <-- low
-  measurementMethod             0     38  0.000  <-- low
-  measurementUnit               0     38  0.000  <-- low
-  measurementStatistic          0    189  0.000  <-- low
+  basisOfRecord                 0    191  0.000  <-- low
+  measurementMethod             0     40  0.000  <-- low
+  measurementUnit               0     40  0.000  <-- low
+  measurementStatistic          0    191  0.000  <-- low
   measurementRemarks            0    151  0.000  <-- low
-  sex                           0    189  0.000  <-- low
-  lifeStage                     0    189  0.000  <-- low
+  sex                           0    191  0.000  <-- low
+  lifeStage                     0    191  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -44,20 +44,8 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    189  0.000  <-- low
+  associatedReferences          0    191  0.000  <-- low
   externalLink                  0      0    n/a
-
-WHY THE 2 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing              0
-  species+trait present, value differs        2
-
-  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '2025-02-02 00:00:00'        ->  '2.2'                        x1
-     '2025-05-02 00:00:00'        ->  '2.5'                        x1
-  -> 2 substitutions explain 2 of 2 misses (100%) — systematic, not scattered
-
-  full miss detail saved -> Nelson2020_misses.csv, Nelson2020_misses_summary.json (2 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -72,9 +60,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.945  0.990  0.967    189    11     2   id+type+value
-             (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.591)
+  core        0.955  1.000  0.977    191     9     0   id+type+value
+             (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.597)
   tags        0.000  0.000  0.000      0   200   191   basis+id+type+value+stat+sex+stage
              (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.967 vs previous)
-             note: only 0/189 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.977 vs previous)
+             note: only 0/191 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

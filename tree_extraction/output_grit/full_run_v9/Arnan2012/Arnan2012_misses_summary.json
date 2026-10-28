@@ -1,8 +1,7 @@
 {
-  "total_missed": 95,
+  "total_missed": 66,
   "causes": {
-    "species present, trait missing": 31,
-    "species+trait present, value differs": 64
+    "species+trait present, value differs": 66
   },
   "value_substitutions": [
     {
@@ -34,13 +33,18 @@
       "gt": "tens of thousands",
       "pred": "3",
       "count": 3
+    },
+    {
+      "gt": "4.1",
+      "pred": "1.9*/4.1**",
+      "count": 1
+    },
+    {
+      "gt": "1.9",
+      "pred": "1.9*/4.1**",
+      "count": 1
     }
   ],
   "species_absent": [],
-  "traits_missing": [
-    {
-      "measurementType": "Body Length",
-      "count": 31
-    }
-  ]
+  "traits_missing": []
 }

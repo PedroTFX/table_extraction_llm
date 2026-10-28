@@ -31,43 +31,43 @@ SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
   'Mass (mg)' -> 'Mass'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 238
-  missed (FN)         : 12
-  spurious, in scope  : 260   <- GT covers this trait: real errors
+  matched (TP)        : 241
+  missed (FN)         : 9
+  spurious, in scope  : 257   <- GT covers this trait: real errors
   spurious, out of scope: 74   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.416 / 0.952 / 0.579   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.478 / 0.952 / 0.636   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.952   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.421 / 0.964 / 0.586   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.484 / 0.964 / 0.644   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.964   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                             74
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    238  0.000  <-- low
+  basisOfRecord                 0    241  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0    188  0.000  <-- low
-  measurementStatistic          0    238  0.000  <-- low
+  measurementUnit               0    190  0.000  <-- low
+  measurementStatistic          0    241  0.000  <-- low
   measurementRemarks            0     15  0.000  <-- low
-  sex                           0    238  0.000  <-- low
-  lifeStage                     0    238  0.000  <-- low
-  caste                         0    238  0.000  <-- low
+  sex                           0    241  0.000  <-- low
+  lifeStage                     0    241  0.000  <-- low
+  caste                         0    241  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    238  0.000  <-- low
+  samplingProtocol              0    241  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0    238  0.000  <-- low
+  verbatimEventDate             0    241  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    238  0.000  <-- low
+  associatedReferences          0    241  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 12 MISSED ROWS MISSED
+WHY THE 9 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              1
-  species+trait present, value differs       11
+  species+trait present, value differs        8
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      '0.46'                       ->  '0.460*'                     x1
@@ -75,14 +75,14 @@ WHY THE 12 MISSED ROWS MISSED
      '0.1'                        ->  '0.61'                       x1
      '0.43'                       ->  '0.52'                       x1
      '0.04'                       ->  '0.43'                       x1
-     '2026-02-01 00:00:00'        ->  '2.1'                        x1
-  -> 6 substitutions explain 6 of 12 misses (50%) — scattered; no single cause
+     '0.52'                       ->  '1.18'                       x1
+  -> 6 substitutions explain 6 of 9 misses (67%) — systematic, not scattered
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'diurnality index'                 x1
-  -> 1 missing trait explains 1 of 12 misses (8%) — scattered; no single cause
+  -> 1 missing trait explains 1 of 9 misses (11%) — scattered; no single cause
 
-  full miss detail saved -> Wiescher2012_misses.csv, Wiescher2012_misses_summary.json (12 row(s))
+  full miss detail saved -> Wiescher2012_misses.csv, Wiescher2012_misses_summary.json (9 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -99,9 +99,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.478  0.952  0.636    238   260    12   id+type+value
-             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.416)
+  core        0.484  0.964  0.644    241   257     9   id+type+value
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.421)
   tags        0.000  0.000  0.000      0   498   250   basis+id+type+value+stat+sex+stage
              (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.636 vs previous)
-             note: only 0/238 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.644 vs previous)
+             note: only 0/241 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -53,25 +53,25 @@ SEMANTIC measurementType REMAP (pred -> gt, 8 pair(s))
   'Tongue length (mm)' -> 'Tongue length'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 207
-  missed (FN)         : 27
-  spurious, in scope  : 83   <- GT covers this trait: real errors
+  matched (TP)        : 209
+  missed (FN)         : 25
+  spurious, in scope  : 81   <- GT covers this trait: real errors
   spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.714 / 0.885 / 0.790   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.714 / 0.885 / 0.790   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.885   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.721 / 0.893 / 0.798   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.721 / 0.893 / 0.798   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.893   <- 'how much of the GT did we get' — extras cannot affect this
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    207  0.000  <-- low
+  basisOfRecord                 0    209  0.000  <-- low
   measurementMethod             0      0    n/a
-  measurementUnit               0    150  0.000  <-- low
-  measurementStatistic          0    207  0.000  <-- low
+  measurementUnit               0    152  0.000  <-- low
+  measurementStatistic          0    209  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    207  0.000  <-- low
-  lifeStage                     0    207  0.000  <-- low
-  caste                         0    150  0.000  <-- low
+  sex                           0    209  0.000  <-- low
+  lifeStage                     0    209  0.000  <-- low
+  caste                         0    152  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
@@ -80,28 +80,27 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    207  0.000  <-- low
+  associatedReferences          0    209  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 27 MISSED ROWS MISSED
+WHY THE 25 MISSED ROWS MISSED
   species not in prediction                   6
   species present, trait missing             14
-  species+trait present, value differs        7
+  species+trait present, value differs        5
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'plant parts'                ->  'plant_parts'                x5
-     '2025-01-02 00:00:00'        ->  '1.2'                        x2
-  -> 2 substitutions explain 7 of 27 misses (26%) — scattered; no single cause
+  -> 1 substitution explains 5 of 25 misses (20%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
      gt 'Polistes guadeloupensis'           ~0.73~  pred 'Polistes nasidens'   x6
-  -> 1 species mismatch explains 6 of 27 misses (22%) — scattered; no single cause
+  -> 1 species mismatch explains 6 of 25 misses (24%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Pollen transport'                 x14
-  -> 1 missing trait explains 14 of 27 misses (52%) — scattered; no single cause
+  -> 1 missing trait explains 14 of 25 misses (56%) — scattered; no single cause
 
-  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (27 row(s))
+  full miss detail saved -> Araujo2021_misses.csv, Araujo2021_misses_summary.json (25 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -117,7 +116,7 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.714  0.885  0.790    207    83    27   id+type+value
+  core        0.721  0.893  0.798    209    81    25   id+type+value
   tags        0.000  0.000  0.000      0   290   234   basis+id+type+value+stat+sex+stage
-             (F1 -0.790 vs previous)
-             note: only 0/207 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.798 vs previous)
+             note: only 0/209 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
