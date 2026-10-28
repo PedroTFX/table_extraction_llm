@@ -1,10 +1,6 @@
   [semantic] matched by values: 'pTW' -> 'Protibia width'
-  [semantic] matched by values: 'PW' -> 'Pronotum width'
   [semantic] matched by values: 'mTL' -> 'Metatiba length'
   [semantic] matched by values: 'pTL' -> 'Protibia length'
-  [semantic] matched by values: 'HL' -> 'Head length'
-  [semantic] matched by values: 'PL' -> 'Pronotum length'
-  [semantic] matched by values: 'PH' -> 'Pronotum height'
   [semantic] matched by values: 'EL' -> 'Elytra length'
   [semantic] left unmatched: 'Dung relocation strategy' vs 'Relocation Size' (llm said different traits)
   [semantic] left unmatched: 'Dung relocation strategy' vs 'Elytra Length' (llm said different traits)
@@ -323,58 +319,56 @@ TAXON NAMES LEFT UNMAPPED (161)
   'Tiniocellus_spinipes': no ground-truth name denotes this organism
   'Uroxys_sp1': matches 3 different organisms, cannot choose: 'Uroxys sp1', 'Uroxys sp1.COL02', 'Uroxys sp1.ECU02'
 
-SEMANTIC measurementType REMAP (pred -> gt, 12 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 10 pair(s))
   'EL' -> 'Elytra length'
-  'HL' -> 'Head length'
   'Head length (mm)' -> 'Head Length'
   'Head width (mm)' -> 'Head Width'
-  'PH' -> 'Pronotum height'
-  'PL' -> 'Pronotum length'
-  'PW' -> 'Pronotum width'
   'Pronotum height (mm)' -> 'Pronotum Height'
+  'Pronotum length (mm)' -> 'Pronotum Length'
+  'Pronotum width (mm)' -> 'Pronotum Width'
   'mTL' -> 'Metatiba length'
   'pTL' -> 'Protibia length'
   'pTW' -> 'Protibia width'
   'reloc.size behav' -> 'Relocation Size'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 8605
-  missed (FN)         : 26417
-  spurious, in scope  : 21962   <- GT covers this trait: real errors
-  spurious, out of scope: 36350   <- GT never covers this trait: nothing to score against
+  matched (TP)        : 9363
+  missed (FN)         : 25659
+  spurious, in scope  : 24393   <- GT covers this trait: real errors
+  spurious, out of scope: 33161   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.129 / 0.246 / 0.169   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.282 / 0.246 / 0.262   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.246   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.140 / 0.267 / 0.184   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.277 / 0.267 / 0.272   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.267   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                          36350
+    measurementType                          33161
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0   8605  0.000  <-- low
+  basisOfRecord                 0   9363  0.000  <-- low
   measurementMethod             0   1260  0.000  <-- low
-  measurementUnit               0   8605  0.000  <-- low
-  measurementStatistic          0   8605  0.000  <-- low
+  measurementUnit               0   9363  0.000  <-- low
+  measurementStatistic          0   9363  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0   8605  0.000  <-- low
-  lifeStage                     0   8605  0.000  <-- low
+  sex                           0   9363  0.000  <-- low
+  lifeStage                     0   9363  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
-  sampleTreatment               0   8605  0.000  <-- low
+  sampleTreatment               0   9363  0.000  <-- low
   samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a   +8236 where GT blank
+  verbatimLocality              0      0    n/a   +8994 where GT blank
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
-  associatedOccurrences         0      0    n/a   +8236 where GT blank
-  associatedReferences          0   8605  0.000  <-- low
+  associatedOccurrences         0      0    n/a   +8994 where GT blank
+  associatedReferences          0   9363  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 26417 MISSED ROWS MISSED
+WHY THE 25659 MISSED ROWS MISSED
   species not in prediction               20800
-  species present, trait missing            433
-  species+trait present, value differs     5105
+  species present, trait missing            345
+  species+trait present, value differs     4443
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'small endocoprids'          ->  'endo.sma'                   x56
@@ -382,8 +376,8 @@ WHY THE 26417 MISSED ROWS MISSED
      'big paracoprids'            ->  'para.big'                   x22
      'medium paracoprids'         ->  'para.med'                   x20
      'small paracoprids'          ->  'para.sma'                   x19
-     '2026-01-01 00:00:00'        ->  '1.1'                        x11
-  -> 6 substitutions explain 154 of 26417 misses (1%) — scattered; no single cause
+     '2026-01-05 00:00:00'        ->  '1.5'                        x15
+  -> 6 substitutions explain 158 of 25659 misses (1%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (169 distinct), closest predicted name:
      gt 'Digitonthoagus gazla'              ~0.88~  pred 'Digitonthophagus_gazella'   x1081
@@ -392,18 +386,18 @@ WHY THE 26417 MISSED ROWS MISSED
      gt 'Aodius fimetarius'                 ~0.93~  pred 'Aphodius_fimetarius'   x601
      gt 'Euoniticlus intermedius'           ~0.96~  pred 'Euoniticellus_intermedius'   x511
      gt 'Ataenius sp1'                      ~1.00~  pred 'Ataenius_sp1'   x501
-  -> 6 species mismatches explain 4166 of 26417 misses (16%) — scattered; no single cause
+  -> 6 species mismatches explain 4166 of 25659 misses (16%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Metatibia Length'                 x132
      'Body Mass'                        x129
-     'Head width'                       x88
      'Pronotum Length'                  x21
      'Protibia Length'                  x21
      'Protibia Width'                   x21
-  -> 6 missing traits explain 412 of 26417 misses (2%) — scattered; no single cause
+     'Pronotum Width'                   x21
+  -> 6 missing traits explain 345 of 25659 misses (1%) — scattered; no single cause
 
-  full miss detail saved -> Noriega2023_misses.csv, Noriega2023_misses_summary.json (26417 row(s))
+  full miss detail saved -> Noriega2023_misses.csv, Noriega2023_misses_summary.json (25659 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -413,9 +407,8 @@ measurementType COVERAGE
   dung relocation strategy                          0 31890   PRED-ONLY
   elytra length                                  3476  3476   
   head length                                    3476  3476   
-  head width                                     3476   287   Δ-3189 (split?)
+  head width                                     3476  3476   
   pronotum height                                3476  3476   
-  hw                                                0  3189   PRED-ONLY
   metatiba length                                3189  3435   Δ+246 (split?)
   metatibia length                                287     0   GT-ONLY
   pronotum length                                3476  3189   Δ-287 (split?)
@@ -433,9 +426,9 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.282  0.246  0.262   8605 21962 26417   id+type+value
-             (36350 more spurious row(s) set aside as out-of-scope; strict P would be 0.129)
-  tags        0.000  0.000  0.000      0 30567 35022   basis+id+type+value+stat+sex+stage
-             (36350 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.262 vs previous)
-             note: only 0/8605 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+  core        0.277  0.267  0.272   9363 24393 25659   id+type+value
+             (33161 more spurious row(s) set aside as out-of-scope; strict P would be 0.140)
+  tags        0.000  0.000  0.000      0 33756 35022   basis+id+type+value+stat+sex+stage
+             (33161 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.272 vs previous)
+             note: only 0/9363 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
