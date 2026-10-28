@@ -1,0 +1,95 @@
+  [semantic] left unmatched: 'Classification of the degree of specialization Food' vs 'Specialization in larval food selection' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization Food' vs 'Specialization in habitat choice' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization Habitat' vs 'Specialization in habitat choice' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization Habitat' vs 'Specialization in larval food selection' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization North' vs 'Specialization in larval food selection' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization North' vs 'Specialization in habitat choice' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization Total' vs 'Specialization in larval food selection' (llm said different traits)
+  [semantic] left unmatched: 'Classification of the degree of specialization Total' vs 'Specialization in habitat choice' (llm said different traits)
+  [semantic] left unmatched: 'Status' vs 'Specialization in habitat choice' (llm said different traits)
+  [semantic] left unmatched: 'Status' vs 'Specialization in larval food selection' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Wölfling2020/Wölfling2020.xlsx  (900 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v8/Wölfling2020/Wölfling2020.csv  (1800 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 42
+  missed (FN)         : 858
+  spurious, in scope  : 258   <- GT covers this trait: real errors
+  spurious, out of scope: 1500   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.023 / 0.047 / 0.031   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.140 / 0.047 / 0.070   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.047   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1500
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     42  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     42  0.000  <-- low
+  measurementStatistic          0     42  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     42  0.000  <-- low
+  lifeStage                     0     42  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0     42  0.000  <-- low
+  verbatimCoordinates           0     42  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     42  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 858 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            600
+  species+trait present, value differs      258
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '34.9'                       ->  '34.87'                      x6
+     '38'                         ->  '37.95'                      x6
+     '27.4'                       ->  '27.39'                      x6
+     '39.7'                       ->  '39.69'                      x5
+     '35.8'                       ->  '35.78'                      x5
+     '28.5'                       ->  '28.46'                      x5
+  -> 6 substitutions explain 33 of 858 misses (4%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Specialization in larval food selection' x300
+     'Specialization in habitat choice' x300
+  -> 2 missing traits explain 600 of 858 misses (70%) — systematic, not scattered
+
+  full miss detail saved -> Wölfling2020_misses.csv, Wölfling2020_misses_summary.json (858 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  specialization in habitat choice                300     0   GT-ONLY
+  classification of the degree of specialization food    0   300   PRED-ONLY
+  classification of the degree of specialization habitat    0   300   PRED-ONLY
+  classification of the degree of specialization north    0   300   PRED-ONLY
+  classification of the degree of specialization total    0   300   PRED-ONLY
+  specialization in larval food selection         300     0   GT-ONLY
+  status                                            0   300   PRED-ONLY
+  wingspan                                        300   300   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'specialization in habitat choice' vs pred 'classification of the degree of specialization habitat' sim=0.73
+    gt 'specialization in larval food selection' vs pred 'classification of the degree of specialization food' sim=0.72
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.140  0.047  0.070     42   258   858   id+type+value
+             (1500 more spurious row(s) set aside as out-of-scope; strict P would be 0.023)
+  tags        0.000  0.000  0.000      0   300   900   basis+id+type+value+stat+sex+stage
+             (1500 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.070 vs previous)
+             note: only 0/42 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

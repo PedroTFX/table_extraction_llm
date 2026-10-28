@@ -1,6 +1,6 @@
 cause,verbatimIdentification,measurementType,measurementValue,pred_collision_value,closest_pred_species,closest_score,severity,reasoning
-"species+trait present, value differs",Monomorium sp. A,Eye position ,0.11,0.111<,,,,(not assessed)
-"species+trait present, value differs",Notoncus sp. A,Femur length,1.04,1.4,,,,(not assessed)
-"species+trait present, value differs",Myrmicaria natalensis,Head length,1.06,1.6,,,,(not assessed)
-"species+trait present, value differs",Formica lemani,Head width behind the eyes,2026-02-01 00:00:00,1.2,,,,(not assessed)
-"species+trait present, value differs",Formica lemani,Weber’s length,2026-01-02 00:00:00,2.01,,,,(not assessed)
+"species+trait present, value differs",Monomorium sp. A,Eye position ,0.11,0.111<,,,trivial,"Values are nearly identical, representing only a cosmetic difference in precision."
+"species+trait present, value differs",Notoncus sp. A,Femur length,1.04,1.4,,,moderate,The predicted femur length (1.4) is significantly different from the ground truth (1.04).
+"species+trait present, value differs",Myrmicaria natalensis,Head length,1.06,1.6,,,moderate,The predicted head length (1.6) is substantially different from the ground truth (1.06).
+"species+trait present, value differs",Formica lemani,Head width behind the eyes,2026-02-01 00:00:00,1.2,,,severe,"The predicted value is a number, while the ground truth is a date/time string."
+"species+trait present, value differs",Formica lemani,Weber’s length,2026-01-02 00:00:00,2.01,,,severe,"The predicted value is a number, while the ground truth is a date/time string."

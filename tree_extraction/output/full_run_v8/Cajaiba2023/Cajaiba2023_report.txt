@@ -1,0 +1,74 @@
+  [semantic] matched by values: 'Ecosystem specificity' -> 'Ecosystem specifity'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Cajaiba2023/Cajaiba2023.xlsx  (255 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v8/Cajaiba2023/Cajaiba2023.csv  (917 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Ecosystem specificity' -> 'Ecosystem specifity'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 241
+  missed (FN)         : 14
+  spurious, in scope  : 21   <- GT covers this trait: real errors
+  spurious, out of scope: 655   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.263 / 0.945 / 0.411   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.920 / 0.945 / 0.932   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.945   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            655
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    241  0.000  <-- low
+  measurementMethod             0    241  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    241  0.000  <-- low
+  measurementRemarks            0    241  0.000  <-- low
+  sex                           0    241  0.000  <-- low
+  lifeStage                     0    241  0.000  <-- low
+  caste                         0    241  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    241  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    241  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 14 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       14
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'non-leaf-cutting attini'    ->  'non leaf-cutting attini'    x14
+  -> 1 substitution explains 14 of 14 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Cajaiba2023_misses.csv, Cajaiba2023_misses_summary.json (14 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  forest specialists-15                             0   131   PRED-ONLY
+  forest specialists-5                              0   131   PRED-ONLY
+  agriculture                                       0   131   PRED-ONLY
+  ecosystem specifity                             131   131   
+  pastures for livestock                            0   131   PRED-ONLY
+  primary forest                                    0   131   PRED-ONLY
+  trophic type                                    124   131   Δ+7 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.920  0.945  0.932    241    21    14   id+type+value
+             (655 more spurious row(s) set aside as out-of-scope; strict P would be 0.263)
+  tags        0.000  0.000  0.000      0   262   255   basis+id+type+value+stat+sex+stage
+             (655 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.932 vs previous)
+             note: only 0/241 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

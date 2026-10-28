@@ -1,0 +1,114 @@
+  [semantic] matched by values: 'Femur Length: Body Size' -> 'Femur Length'
+  [semantic] matched by values: 'Body Size (mm)' -> 'Body Length'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Rebrina2022/Rebrina2022.xlsx  (252 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v8/Rebrina2022/Rebrina2022.csv  (252 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 39 pair(s))
+  'Aiolopus thalassinus (Fabricius, 1781)' -> 'Aiolopus thalassinus'
+  'Arcyptera brevipennis (Brunner von Wattenwyl, 1861)' -> 'Arcyptera brevipennis'
+  'Barbitistes yersini (Brunner von Wattenwyl, 1878)' -> 'Barbitistes yersini'
+  'Bicolorana bicolor (Philippi, 1830)' -> 'Bicolorana bicolor'
+  'Calliptamus italicus (Linnaeus, 1758)' -> 'Calliptamus italicus'
+  'Chorthippus biguttulus (Linnaeus, 1758)' -> 'Chorthippus biguttulus'
+  'Chorthippus brunneus (Thunberg, 1815)' -> 'Chorthippus brunneus'
+  'Chorthippus dorsatus (Zetterstedt, 1821)' -> 'Chorthippus dorsatus'
+  'Chorthippus mollis (Charpentier, 1825)' -> 'Chorthippus mollis'
+  'Chrysochraon dispar (Germar, 1834)' -> 'Chrysochraon dispar'
+  'Conocephalus fuscus (Fabricius, 1793)' -> 'Conocephalus fuscus'
+  'Decticus verrucivorus (Linnaeus, 1758)' -> 'Decticus verrucivorus'
+  'Ephippiger discoidalis (Fieber, 1853)' -> 'Ephippiger discoidalis'
+  'Ephippiger ephippiger (Fiebig, 1784)' -> 'Ephippiger ephippiger'
+  'Euchorthippus declivus (Brisout de Barneville, 1848)' -> 'Euchorthippus declivus'
+  'Eupholidoptera schmidti (Fieber, 1861)' -> 'Eupholidoptera schmidti'
+  'Euthystira brachyptera (Ocskay, 1826)' -> 'Euthystira brachyptera'
+  'Gryllus campestris Linnaeus, 1758' -> 'Gryllus campestris'
+  'Leptophyes albovittata (Kollar, 1833)' -> 'Leptophyes albovittata'
+  'Leptophyes boscii (Fieber, 1853)' -> 'Leptophyes boscii'
+  'Modestana modesta (Fieber, 1853)' -> 'Modestana modesta'
+  'Odontopodisma schmidtii (Fieber, 1853)' -> 'Odontopodisma schmidtii'
+  'Oecanthus pellucens (Scopoli, 1763)' -> 'Oecanthus pellucens'
+  'Oedipoda caerulescens (Linnaeus, 1758)' -> 'Oedipoda caerulescens'
+  'Omocestus haemorrhoidalis (Charpentier, 1825)' -> 'Omocestus haemorrhoidalis'
+  'Omocestus rufipes (Zetterstedt, 1821)' -> 'Omocestus rufipes'
+  'Pachytrachis gracilis (Brunner von Wattenwyl, 1861)' -> 'Pachytrachis gracilis'
+  'Pachytrachis striolatus (Fieber, 1853)' -> 'Pachytrachis striolatus'
+  'Pezotettix giornae (Rossi, 1794)' -> 'Pezotettix giornae'
+  'Phaneroptera falcata (Poda, 1761)' -> 'Phaneroptera falcata'
+  'Pholidoptera femorata (Fieber, 1853)' -> 'Pholidoptera femorata'
+  'Pholidoptera griseoaptera (De Geer, 1773)' -> 'Pholidoptera griseoaptera'
+  'Pseudochorthippus parallelus (Zetterstedt, 1821)' -> 'Pseudochorthippus parallelus'
+  'Roeseliana roeselii (Hagenbach, 1822)' -> 'Roeseliana roeselii'
+  'Stauroderus scalaris (Fischer von Waldheim, 1846)' -> 'Stauroderus scalaris'
+  'Stenobothrus lineatus (Panzer, 1796)' -> 'Stenobothrus lineatus'
+  'Tetrix subulata (Linnaeus, 1758)' -> 'Tetrix subulata'
+  'Tetrix tenuicornis (Sahlberg, 1891)' -> 'Tetrix tenuicornis'
+  'Tettigonia viridissima (Linnaeus, 1758)' -> 'Tettigonia viridissima'
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body Size (mm)' -> 'Body Length'
+  'Femur Length: Body Size' -> 'Femur Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 219
+  missed (FN)         : 33
+  spurious, in scope  : 33   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.869 / 0.869 / 0.869   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.869 / 0.869 / 0.869   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.869   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    219  0.000  <-- low
+  measurementMethod             0     84  0.000  <-- low
+  measurementUnit               0     84  0.000  <-- low
+  measurementStatistic          0    219  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    219  0.000  <-- low
+  lifeStage                     0    219  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    219  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 33 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       33
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'chortobiont'                ->  'grass-/herb-dwelling'       x18
+     'thamnobiont'                ->  'shrub-dwelling'             x6
+     'geobiont'                   ->  'ground-dwelling'            x5
+     'geo-chortobiont'            ->  'both ground- and grass/herb-dwelling' x4
+  -> 4 substitutions explain 33 of 33 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Rebrina2022_misses.csv, Rebrina2022_misses_summary.json (33 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      42    42   
+  flight capacity                                  42    42   
+  feeding guild                                    42    42   
+  femur length                                     42    42   
+  lifestyle                                        42    42   
+  moisture preference                              42    42   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.869  0.869  0.869    219    33    33   id+type+value
+  tags        0.000  0.000  0.000      0   252   252   basis+id+type+value+stat+sex+stage
+             (F1 -0.869 vs previous)
+             note: only 0/219 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
