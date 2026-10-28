@@ -6,7 +6,8 @@ answer is keyed by). The other papers are not touched.
                 (mineru_extract.combine_paper_to_markdown; MinerU runs only for a source
                 with no .md yet)
   2. purge      every saved answer of the paper in the run: per-paper files of every stage
-                and version, its CSV folders, its head-reader entries, its legend inventory
+                and version, its head-reader entries, its legend inventory, its v9 CSV folder
+                (the earlier versions' CSVs and reports stay: the 'before' score compares with)
   3. stages     the head reader (body check on every table, as grit_run), then every stage
                 of full_run_v9 on these papers only; before each version's stages its answers
                 are copied forward from the version before, as that version's setup does for
@@ -48,12 +49,14 @@ def rebuild_md(paper):
 
 
 def purge(paper):
+    """Every saved answer of the paper; its CSV / report folders only in v9 (the one remade):
+    the earlier versions' results stay as the 'before' that score compares with."""
     n = 0
     for root in sorted(_paths.OUTPUT.glob("full_run*")):
         for f in root.glob(f"*/{paper}.json"):
             f.unlink()
             n += 1
-        if (root / paper).is_dir():
+        if root == r9.V9 and (root / paper).is_dir():
             shutil.rmtree(root / paper)
             n += 1
     for f in (li.OUT / f"{paper}.json", _paths.OUTPUT / "decode_key" / "chain" / "tags_extra" / f"{paper}.json"):
