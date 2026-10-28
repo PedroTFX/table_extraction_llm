@@ -26,6 +26,7 @@ src/
   v6/            full_run_v6.py: v4 + long / wide / no rows per table — 28
   v7/            full_run_v7.py: v6 + table kind, Q-ALSO, doubtful columns; grit_run.py — 30
   v8/            full_run_v8.py: v7 + section labels (section_tree.py); grit_run.py — 31
+  v9/            full_run_v9.py: v8 + trait names from the paper's legends (legend_names.py) — 32
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```

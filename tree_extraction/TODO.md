@@ -528,6 +528,16 @@
 - Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
   big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume (from src/v7): python grit_run.py all
 
+## Trait names from the legends (v9, legend_names.py, 2026-10-28) — BUILT, to run on the remote
+
+- The meaning step finds a name's definition only through text shapes and only for tokens that look
+  abbreviated; names a legend table defines stay as printed (Noriega2023 HW / PH: 3,476 GT rows each
+  missed + 3,476 extra on grit). The legend inventory holds them (code 'HW' under 'Head width (mm)').
+- v9:names: for each trait column left as printed, the inventory variables whose code is its name;
+  Q-NAME (which is its full name, or none); sure -> the name. 149 questions on grit, 136 on the 109.
+  Guariento2020's GT names ('larval feeding on grasses') are not printed in the paper: not covered.
+- Checked without a model: v9 with no answers = v8's grit CSVs (148 papers).
+
 ## Section step (v8, section_tree.py, 2026-10-27) — BUILT, not run yet
 
 - Design: output/eval_split/DESIGN_sections.md (written before any run). src/v8 = v7 + sections:
