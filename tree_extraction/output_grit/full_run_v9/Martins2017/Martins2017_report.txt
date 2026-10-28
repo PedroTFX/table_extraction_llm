@@ -1,10 +1,5 @@
   [semantic] matched by values: 'Nest' -> 'Nesting preference'
   [semantic] matched by values: "d'" -> 'Floral specialization'
-  [semantic] left unmatched: 'Family' vs 'Seasonality - Fall' (llm said different traits)
-  [semantic] left unmatched: 'Family' vs 'Seasonality - Spring' (llm said different traits)
-  [semantic] left unmatched: 'Family' vs 'Seasonality - Summer' (llm said different traits)
-  [semantic] left unmatched: 'x̅ Strength' vs 'Seasonality - Spring' (llm said different traits)
-  [semantic] left unmatched: 'x̅ Strength' vs 'Seasonality - Summer' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Martins2017/Martins2017.xlsx  (600 rows)
 PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Martins2017/Martins2017.csv  (1499 rows)
@@ -282,62 +277,59 @@ TAXON NAMES LEFT UNMAPPED (177)
   'Weigela Thunb.': no ground-truth name denotes this organism
   'Zinnia L.': no ground-truth name denotes this organism
 
-SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Fall' -> 'Seasonality - Fall'
   'Nest' -> 'Nesting preference'
   'Size Class' -> 'Size class'
+  'Spring' -> 'Seasonality - Spring'
+  'Summer' -> 'Seasonality - Summer'
   "d'" -> 'Floral specialization'
-  'seasonality' -> 'Seasonality - Fall'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 384
-  missed (FN)         : 216
-  spurious, in scope  : 216   <- GT covers this trait: real errors
+  matched (TP)        : 566
+  missed (FN)         : 34
+  spurious, in scope  : 34   <- GT covers this trait: real errors
   spurious, out of scope: 899   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.256 / 0.640 / 0.366   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.640 / 0.640 / 0.640   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.640   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.378 / 0.943 / 0.539   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.943 / 0.943 / 0.943   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.943   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                            899
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    384  0.000  <-- low
-  measurementMethod             0    202  0.000  <-- low
-  measurementUnit               0     91  0.000  <-- low
-  measurementStatistic          0    384  0.000  <-- low
+  basisOfRecord                 0    566  0.000  <-- low
+  measurementMethod             0    384  0.000  <-- low
+  measurementUnit               0    273  0.000  <-- low
+  measurementStatistic          0    566  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    384  0.000  <-- low
-  lifeStage                     0    384  0.000  <-- low
+  sex                           0    566  0.000  <-- low
+  lifeStage                     0    566  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
-  samplingProtocol              0    384  0.000  <-- low
+  samplingProtocol              0    566  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0    384  0.000  <-- low
+  verbatimEventDate             0    566  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    384  0.000  <-- low
+  associatedReferences          0    566  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 216 MISSED ROWS MISSED
+WHY THE 34 MISSED ROWS MISSED
   species not in prediction                   0
-  species present, trait missing            182
+  species present, trait missing              0
   species+trait present, value differs       34
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'medium'                     ->  'm'                          x23
      'large'                      ->  'l'                          x11
-  -> 2 substitutions explain 34 of 216 misses (16%) — scattered; no single cause
+  -> 2 substitutions explain 34 of 34 misses (100%) — systematic, not scattered
 
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Seasonality - Spring'             x91
-     'Seasonality - Summer'             x91
-  -> 2 missing traits explain 182 of 216 misses (84%) — systematic, not scattered
-
-  full miss detail saved -> Martins2017_misses.csv, Martins2017_misses_summary.json (216 row(s))
+  full miss detail saved -> Martins2017_misses.csv, Martins2017_misses_summary.json (34 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -346,20 +338,20 @@ measurementType COVERAGE
   cat.                                              0   177   PRED-ONLY
   size class                                       91    91   
   x̅ degree                                         0    93   PRED-ONLY
-  seasonality - fall                               91   273   Δ+182 (split?)
+  seasonality - fall                               91    91   
   family                                            0   268   PRED-ONLY
   floral specialization                            54    54   
   nesting preference                               91    91   
-  seasonality - spring                             91     0   GT-ONLY
-  seasonality - summer                             91     0   GT-ONLY
+  seasonality - spring                             91    91   
+  seasonality - summer                             91    91   
   sociality                                        91    91   
   x̅ strength                                       0    93   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.640  0.640  0.640    384   216   216   id+type+value
-             (899 more spurious row(s) set aside as out-of-scope; strict P would be 0.256)
+  core        0.943  0.943  0.943    566    34    34   id+type+value
+             (899 more spurious row(s) set aside as out-of-scope; strict P would be 0.378)
   tags        0.000  0.000  0.000      0   600   600   basis+id+type+value+stat+sex+stage
              (899 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.640 vs previous)
-             note: only 0/384 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+             (F1 -0.943 vs previous)
+             note: only 0/566 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

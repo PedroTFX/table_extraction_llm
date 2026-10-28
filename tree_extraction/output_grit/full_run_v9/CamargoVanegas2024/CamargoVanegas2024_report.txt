@@ -8,7 +8,7 @@
   [semantic] left unmatched: 'scape length standard deviation' vs 'mandible length' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/CamargoVanegas2024/CamargoVanegas2024.xlsx  (2002 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/CamargoVanegas2024/CamargoVanegas2024.csv  (4442 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/CamargoVanegas2024/CamargoVanegas2024.csv  (4442 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -242,6 +242,7 @@ measurementType COVERAGE
   interocular distance                            250   253   Δ+3 (split?)
   eye length                                      250   253   Δ+3 (split?)
   femur length                                    250   250   
+  tdf fragments                                     0    75   PRED-ONLY
   functional groups                                 0   145   PRED-ONLY
   head length                                     250   284   Δ+34 (split?)
   head width                                      250   253   Δ+3 (split?)
@@ -249,7 +250,6 @@ measurementType COVERAGE
   mandible length mean                              0   253   PRED-ONLY
   scape length                                    250   253   Δ+3 (split?)
   weber length                                    250   253   Δ+3 (split?)
-  n1                                                0    75   PRED-ONLY
   n2                                                0   107   PRED-ONLY
   n3                                                0   118   PRED-ONLY
 

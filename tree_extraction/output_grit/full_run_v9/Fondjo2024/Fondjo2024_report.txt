@@ -1,16 +1,16 @@
-  [semantic] left unmatched: 'FL' vs 'ventral pockets of the vaginal floor' (llm said different traits)
-  [semantic] left unmatched: 'Genetic Distance' vs 'interocular distance' (llm said different traits)
   [semantic] left unmatched: 'Genetic Distance' vs 'distal end' (llm said different traits)
   [semantic] left unmatched: 'Genetic Distance' vs 'recurrent distal trunk of the lateral diverticulum' (llm said different traits)
+  [semantic] left unmatched: 'Genetic Distance' vs 'pronotum disc' (llm said different traits)
   [semantic] left unmatched: 'HeadL' vs 'head' (llm said different traits)
   [semantic] left unmatched: 'HeadL (2)' vs 'head' (llm said different traits)
   [semantic] left unmatched: 'HeadW' vs 'head' (llm said different traits)
   [semantic] left unmatched: 'HeadW' vs 'head and pronotum color' (llm said different traits)
   [semantic] left unmatched: 'HeadW' vs 'lower ectophallic sheath' (llm said different traits)
-  [semantic] left unmatched: 'I.O.D.' vs 'end of the lower tip' (llm said different traits)
+  [semantic] left unmatched: 'I.O.D. (2)' vs 'end of the lower tip' (llm said different traits)
+  [semantic] left unmatched: 'I.O.D. (2)' vs 'Lower side of the body' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Fondjo2024/Fondjo2024.xlsx  (520 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Fondjo2024/Fondjo2024.csv  (175 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Fondjo2024/Fondjo2024.csv  (175 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -35,29 +35,27 @@ TAXON NAMES LEFT UNMAPPED (4)
   'Exopropacris modica': no ground-truth name denotes this organism
   'Parapropacris notatus': no ground-truth name denotes this organism
 
-SEMANTIC measurementType REMAP (pred -> gt, 9 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
   'AntenL' -> 'antenna'
   'AntenL (2)' -> 'antennae'
-  'FL' -> 'Female subgenital plate'
   'HeadL' -> 'width of head'
   'HeadL (2)' -> 'length of head'
   'HeadW (2)' -> 'head'
-  'PronotL' -> 'pronotum'
   'PronotL (2)' -> 'posterior margins of pronotum'
-  'TL' -> 'total length of body'
+  'length of the pronotum in the midline' -> 'Length of the pronotum in the midline'
 
 ROW-LEVEL (key match)
   matched (TP)        : 0
   missed (FN)         : 520
-  spurious, in scope  : 96   <- GT covers this trait: real errors
-  spurious, out of scope: 79   <- GT never covers this trait: nothing to score against
+  spurious, in scope  : 104   <- GT covers this trait: real errors
+  spurious, out of scope: 71   <- GT never covers this trait: nothing to score against
 
   STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
   SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                             79
+    measurementType                             71
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
@@ -82,17 +80,17 @@ FIELD-LEVEL ACCURACY (on matched rows only)
 
 WHY THE 520 MISSED ROWS MISSED
   species not in prediction                  47
-  species present, trait missing            444
-  species+trait present, value differs       29
+  species present, trait missing            423
+  species+trait present, value differs       50
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      '24.52 ± 2.41'               ->  '24.52 ± 2.41 (n = 8)'       x2
+     '12.11 ± 0.55'               ->  '12.11 ± 0.55 (n = 8)'       x2
+     '0.64 ± 0.08'                ->  '0.64 ± 0.08 (n = 8)'        x2
+     '5.06 ± 0.32'                ->  '5.06 ± 0.32 (n = 8)'        x2
      '4.17 ± 0.26'                ->  '4.17 ± 0.26 (n = 8)'        x2
      '25.35 ± 2.2'                ->  '19.92 ± 1.26 (n = 7)'       x1
-     '23.08 ± 1.69'               ->  '18.15 ± 1.71 (n = 20)'      x1
-     '19.92 ± 1.26'               ->  '19.92 ± 1.26 (n = 7)'       x1
-     '18.15 ± 1.71'               ->  '18.15 ± 1.71 (n = 20)'      x1
-  -> 6 substitutions explain 8 of 520 misses (2%) — scattered; no single cause
+  -> 6 substitutions explain 11 of 520 misses (2%) — scattered; no single cause
 
   SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
      gt 'Pteropera augustini'               ~0.69~  pred 'Pteropera matzkei'   x23
@@ -101,13 +99,13 @@ WHY THE 520 MISSED ROWS MISSED
   -> 3 species mismatches explain 47 of 520 misses (9%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'hind tibia length'                x13
-     'interocular distance'             x13
      'length of tegmina'                x13
-     'Length of the pronotum in the midline' x13
-     'maximum length of the hind femur' x13
      'width of hind femur'              x13
-  -> 6 missing traits explain 78 of 520 misses (15%) — scattered; no single cause
+     'length of antenna'                x11
+     'body length'                      x7
+     'hind tibia length'                x7
+     'interocular distance'             x7
+  -> 6 missing traits explain 58 of 520 misses (11%) — scattered; no single cause
 
   full miss detail saved -> Fondjo2024_misses.csv, Fondjo2024_misses_summary.json (520 row(s))
 
@@ -190,7 +188,7 @@ measurementType COVERAGE
   difference between the upper half and lower half of the elytra    1     0   GT-ONLY
   body and legs                                     3     0   GT-ONLY
   body length                                      15    15   
-  total length of body                              6     8   Δ+2 (split?)
+  total length of body                              6     0   GT-ONLY
   lower part of body                                1     0   GT-ONLY
   lower side of the body                            1     0   GT-ONLY
   both diverticula                                  1     0   GT-ONLY
@@ -216,7 +214,6 @@ measurementType COVERAGE
   head and pronotum color                           1     0   GT-ONLY
   hind tibiae color                                 1     0   GT-ONLY
   general coloration                                3     0   GT-ONLY
-  i.o.d.                                            0     8   PRED-ONLY
   pronotum disc                                     4     0   GT-ONLY
   distal trunk, recurrent of the lateral diverticulum of the spermatheca    1     0   GT-ONLY
   distal, recurrent trunk of the spermatheca lateral diverticulum    1     0   GT-ONLY
@@ -225,7 +222,7 @@ measurementType COVERAGE
   distal end                                        1     0   GT-ONLY
   distal half of hind tibiae                        1     0   GT-ONLY
   genetic distance                                  0    12   PRED-ONLY
-  interocular distance                             15     0   GT-ONLY
+  interocular distance                             15     8   Δ-7 (split?)
   lateral spermathecal diverticulum                 1     0   GT-ONLY
   external margins of the dorsal valves             1     0   GT-ONLY
   medio-dorsal pocket                               1     0   GT-ONLY
@@ -249,13 +246,13 @@ measurementType COVERAGE
   subocellar facial spot                            4     0   GT-ONLY
   subocellar facial spots                           1     0   GT-ONLY
   fastigium of vertex                               2     0   GT-ONLY
-  female subgenital plate                           1     8   Δ+7 (split?)
+  female subgenital plate                           1     0   GT-ONLY
   front and middle legs, inner and outer sides of hind femora    1     0   GT-ONLY
   outer and inner sides of hind femora              1     0   GT-ONLY
   upper margins of hind femora                      1     0   GT-ONLY
   hind femur                                        1     0   GT-ONLY
   length of hind femur                              6     0   GT-ONLY
-  maximum length of the hind femur                 15     0   GT-ONLY
+  maximum length of the hind femur                 15     8   Δ-7 (split?)
   width of hind femur                              15     0   GT-ONLY
   ventral pockets of the vaginal floor              1     0   GT-ONLY
   fore and middle legs                              1     0   GT-ONLY
@@ -269,7 +266,7 @@ measurementType COVERAGE
   length of head                                   15     7   Δ-8 (split?)
   width of head                                    15     8   Δ-7 (split?)
   headw                                             0     8   PRED-ONLY
-  hind tibia length                                15     0   GT-ONLY
+  hind tibia length                                15     8   Δ-7 (split?)
   spines on the hind tibiae                         1     0   GT-ONLY
   hind tibiae                                       6     0   GT-ONLY
   integument                                        2     0   GT-ONLY
@@ -286,7 +283,7 @@ measurementType COVERAGE
   latero-ventral sclerite                           3     0   GT-ONLY
   latero-ventral sclerites                          1     0   GT-ONLY
   lateroventral sclerites                           2     0   GT-ONLY
-  length of the pronotum in the midline            15     0   GT-ONLY
+  length of the pronotum in the midline            15     8   Δ-7 (split?)
   length of ovipositor                              3     0   GT-ONLY
   length of pronotum                                6     0   GT-ONLY
   length of tegmina                                15     0   GT-ONLY
@@ -306,7 +303,7 @@ measurementType COVERAGE
   subgenital plate                                  7     0   GT-ONLY
   posterior tibiae                                  1     0   GT-ONLY
   prosternal process                                3     0   GT-ONLY
-  pronotum                                          2     8   Δ+6 (split?)
+  pronotum                                          2     0   GT-ONLY
   pronotum width                                   15    15   
   prosternal tubercle                               2     0   GT-ONLY
   prozona                                           5     0   GT-ONLY
@@ -322,13 +319,13 @@ measurementType COVERAGE
   zygoma                                            3     0   GT-ONLY
 
   UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
-    gt 'interocular distance'             vs pred 'genetic distance'                 sim=0.63
     gt 'head and pronotum color'          vs pred 'headw'                            sim=0.59
+    gt 'distal end'                       vs pred 'genetic distance'                 sim=0.56
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0    96   520   id+type+value
-             (79 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0    96   520   basis+id+type+value+stat+sex+stage
-             (79 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  core        0.000  0.000  0.000      0   104   520   id+type+value
+             (71 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0   104   520   basis+id+type+value+stat+sex+stage
+             (71 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
              (F1 +0.000 vs previous)
