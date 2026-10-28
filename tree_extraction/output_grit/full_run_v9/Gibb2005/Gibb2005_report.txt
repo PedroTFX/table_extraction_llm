@@ -1,0 +1,85 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Gibb2005/Gibb2005.xlsx  (45 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Gibb2005/Gibb2005.csv  (45 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 9 pair(s))
+  'E. angustula' -> 'Epuraea angustula'
+  'E. boreella' -> 'Epuraea boreella'
+  'E. deubeli' -> 'Epuraea deubeli'
+  'E. longipennis' -> 'Epuraea longipennis'
+  'E. pygmaea' -> 'Epuraea pygmaea'
+  'T. elegans' -> 'Tachinus elegans'
+  'T. laticollis' -> 'Tachinus laticollis'
+  'T. pallipes' -> 'Tachinus pallipes'
+  'T. proximus' -> 'Tachinus proximus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Body Length (mm)' -> 'Body length'
+  'Body Width (mm)' -> 'Body wingth'
+  'Body mass (mg)' -> 'Body mass'
+  'Wing Length (mm)' -> 'Wing length'
+  'Wing Width (mm)' -> 'Wing windth'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 45
+  spurious, in scope  : 45   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 45 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       45
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     ''                           ->  '3.06 ± 0.06'                x2
+     ''                           ->  '2.87 ± 0.05'                x1
+     ''                           ->  '3.31 ± 0.08'                x1
+     ''                           ->  '3.65 ± 0.08'                x1
+     ''                           ->  '2.66 ± 0.04'                x1
+     ''                           ->  '7.84 ± 0.13'                x1
+  -> 6 substitutions explain 7 of 45 misses (16%) — scattered; no single cause
+
+  full miss detail saved -> Gibb2005_misses.csv, Gibb2005_misses_summary.json (45 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                       9     9   
+  body mass                                         9     9   
+  body wingth                                       9     9   
+  wing length                                       9     9   
+  wing windth                                       9     9   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0    45    45   id+type+value
+  tags        0.000  0.000  0.000      0    45    45   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

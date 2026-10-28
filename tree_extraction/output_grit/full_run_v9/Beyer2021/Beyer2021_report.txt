@@ -1,0 +1,112 @@
+  [semantic] left unmatched: 'mean intertegular distance' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'mean tongue length' vs 'Relative Tonghe Length' (llm said different traits)
+  [semantic] left unmatched: 'tongue length category' vs 'Relative Tonghe Length' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Beyer2021/Beyer2021.xlsx  (209 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v8/Beyer2021/Beyer2021.csv  (220 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 8 pair(s))
+  'B. hortorum' -> 'Bombus hortorum'
+  'B. hypnorum' -> 'Bombus hypnorum'
+  'B. lapidarius' -> 'Bombus lapidarius'
+  'B. muscorum' -> 'Bombus muscorum'
+  'B. pascuorum' -> 'Bombus pascuorum'
+  'B. pratorum' -> 'Bombus pratorum'
+  'B. ruderarius' -> 'Bombus ruderarius'
+  'B. sylvarum' -> 'Bombus sylvarum'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'B. terrestris/lucorum': no ground-truth name denotes this organism
+  'Functional traits of Bombus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'foraging preference' -> 'Foraging preference'
+  'intertegular distance' -> 'Intertegular Distance'
+  'mean relative tongue length' -> 'Tongue Length'
+  'sociality' -> 'Sociality'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 145
+  missed (FN)         : 64
+  spurious, in scope  : 43   <- GT covers this trait: real errors
+  spurious, out of scope: 32   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.659 / 0.694 / 0.676   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.771 / 0.694 / 0.730   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.694   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             32
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    145  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     57  0.000  <-- low
+  measurementStatistic          0    145  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    145  0.000  <-- low
+  lifeStage                     0    145  0.000  <-- low
+  caste                         0     84  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    145  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    145  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 64 MISSED ROWS MISSED
+  species not in prediction                   6
+  species present, trait missing              8
+  species+trait present, value differs       50
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'species not known to collect pollen from fabaceae' ->  'not known to do so'         x34
+     'short'                      ->  '1.2'                        x2
+     'long'                       ->  '1.49'                       x2
+     '8.87'                       ->  '2.15'                       x1
+     '4.3'                        ->  '1.2'                        x1
+     '4.39'                       ->  '1.2'                        x1
+  -> 6 substitutions explain 41 of 64 misses (64%) — systematic, not scattered
+
+  SPECIES IN GT BUT NOT IN PREDICTION (2 distinct), closest predicted name:
+     gt 'Bombus terrestris'                 ~0.76~  pred 'Bombus terrestris (Linnaeus 1758) complex'   x3
+     gt 'Bombus lucorum'                    ~0.90~  pred 'Bombus muscorum'   x3
+  -> 2 species mismatches explain 6 of 64 misses (9%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Relative Tonghe Length'           x8
+  -> 1 missing trait explains 8 of 64 misses (12%) — scattered; no single cause
+
+  full miss detail saved -> Beyer2021_misses.csv, Beyer2021_misses_summary.json (64 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  functional traits of all wild bees                0     5   PRED-ONLY
+  tongue length category                            0     9   PRED-ONLY
+  intertegular distance                            57    57   
+  mean intertegular distance                        0     9   PRED-ONLY
+  foraging preference                              61    61   
+  mean tongue length                                0     9   PRED-ONLY
+  relative tonghe length                           10     0   GT-ONLY
+  tongue length                                    20     9   Δ-11 (split?)
+  sociality                                        61    61   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'relative tonghe length'           vs pred 'tongue length category'           sim=0.74
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.771  0.694  0.730    145    43    64   id+type+value
+             (32 more spurious row(s) set aside as out-of-scope; strict P would be 0.659)
+  tags        0.000  0.000  0.000      0   188   209   basis+id+type+value+stat+sex+stage
+             (32 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.730 vs previous)
+             note: only 0/145 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

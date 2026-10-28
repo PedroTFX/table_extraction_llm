@@ -1,0 +1,102 @@
+  [semantic] left unmatched: 'AL' vs 'Distal cell length ' (llm said different traits)
+  [semantic] left unmatched: 'AL' vs 'Total body length ' (llm said different traits)
+  [semantic] left unmatched: 'AL' vs 'Antennal length ' (llm said different traits)
+  [semantic] left unmatched: 'TL*' vs 'Antennal length ' (llm said different traits)
+  [semantic] left unmatched: 'TL*' vs 'Head to end of thorax length' (llm said different traits)
+  [semantic] left unmatched: 'TW*' vs 'Head to end of thorax length' (llm said different traits)
+  [semantic] left unmatched: 'TW*' vs 'Gaster length  ' (llm said different traits)
+  [semantic] left unmatched: 'TW*' vs 'Thorax length ' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Kovacs2008/Kovacs2008.xlsx  (81 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Kovacs2008/Kovacs2008.csv  (18 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'CL' -> 'Distal cell length '
+  'HTL*' -> 'Total body length '
+  'Mass' -> 'Mass '
+  'T3L*' -> 'Tergum 3 length'
+  'TL*' -> 'Thorax width  '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 4
+  missed (FN)         : 77
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 8   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.222 / 0.049 / 0.081   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.400 / 0.049 / 0.088   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.049   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              8
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      4  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      4  0.000  <-- low
+  measurementStatistic          0      4  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0      4  0.000  <-- low
+  lifeStage                     0      4  0.000  <-- low
+  caste                         0      4  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      4  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      4  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      4  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 77 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             36
+  species+trait present, value differs       41
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '1.61 ± 0.04'                ->  '2.56^1 ± 0.06'              x2
+     '5.84 ± 0.11'                ->  '5.96 ± 0.09'                x1
+     '5.87 ± 0.09'                ->  '5.96 ± 0.09'                x1
+     '5.76 ± 0.07'                ->  '5.96 ± 0.09'                x1
+     '5.23 ± 0.07'                ->  '5.96 ± 0.09'                x1
+     '5.58 ± 0 .06'               ->  '5.96 ± 0.09'                x1
+  -> 6 substitutions explain 7 of 77 misses (9%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Antennal length '                 x9
+     'Gaster length  '                  x9
+     'Head to end of thorax length'     x9
+     'Thorax length '                   x9
+  -> 4 missing traits explain 36 of 77 misses (47%) — scattered; no single cause
+
+  full miss detail saved -> Kovacs2008_misses.csv, Kovacs2008_misses_summary.json (77 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  tergum 3 length                                   9     2   Δ-7 (split?)
+  al                                                0     2   PRED-ONLY
+  antennal length                                   9     0   GT-ONLY
+  bl*                                               0     2   PRED-ONLY
+  total body length                                 9     2   Δ-7 (split?)
+  distal cell length                                9     2   Δ-7 (split?)
+  head to end of thorax length                      9     0   GT-ONLY
+  gaster length                                     9     0   GT-ONLY
+  gl*                                               0     2   PRED-ONLY
+  thorax length                                     9     0   GT-ONLY
+  mass                                              9     2   Δ-7 (split?)
+  thorax width                                      9     2   Δ-7 (split?)
+  tw*                                               0     2   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.400  0.049  0.088      4     6    77   id+type+value
+             (8 more spurious row(s) set aside as out-of-scope; strict P would be 0.222)
+  tags        0.000  0.000  0.000      0    10    81   basis+id+type+value+stat+sex+stage
+             (8 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.088 vs previous)

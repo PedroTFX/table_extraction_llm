@@ -1,0 +1,95 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Fiedler2021/Fiedler2021.xlsx  (1916 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Fiedler2021/Fiedler2021.csv  (7821 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (9)
+  'Camponotus': no ground-truth name denotes this organism
+  'Crematogaster': no ground-truth name denotes this organism
+  'Formica': no ground-truth name denotes this organism
+  'Lasius': no ground-truth name denotes this organism
+  'Pheidole': no ground-truth name denotes this organism
+  'Polyrhachis': no ground-truth name denotes this organism
+  'Tapinoma': no ground-truth name denotes this organism
+  'Temnothorax': no ground-truth name denotes this organism
+  'Tetramorium': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Associated_ants' -> 'Associated ants'
+  'number_associated_ant_genera' -> 'Number of associated ant genera'
+  'obligate_myrmecophile' -> 'Obligate myrmecophile'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 967
+  missed (FN)         : 949
+  spurious, in scope  : 602   <- GT covers this trait: real errors
+  spurious, out of scope: 6252   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.124 / 0.505 / 0.199   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.616 / 0.505 / 0.555   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.505   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           6252
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    967  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    967  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    967  0.000  <-- low
+  lifeStage                     0    967  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    967  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 949 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      949
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'no'                         ->  'not'                        x313
+     'yes'                        ->  'obligate'                   x210
+     'crematogaster difformis'    ->  'crematogaster difformis, pheidole sp., tetramorium [rhoptromyrmex] wroughtonii, cataulacus sp., tetraponera sp., technomyrmex sp., camponotus sp., anoplolepis gracilipes' x2
+     'pheidole sp.'               ->  'crematogaster difformis, pheidole sp., tetramorium [rhoptromyrmex] wroughtonii, cataulacus sp., tetraponera sp., technomyrmex sp., camponotus sp., anoplolepis gracilipes' x2
+     'cataulacus sp.,'            ->  'crematogaster difformis, pheidole sp., tetramorium [rhoptromyrmex] wroughtonii, cataulacus sp., tetraponera sp., technomyrmex sp., camponotus sp., anoplolepis gracilipes' x2
+     'tetraponera sp.,'           ->  'crematogaster difformis, pheidole sp., tetramorium [rhoptromyrmex] wroughtonii, cataulacus sp., tetraponera sp., technomyrmex sp., camponotus sp., anoplolepis gracilipes' x2
+  -> 6 substitutions explain 531 of 949 misses (56%) — scattered; no single cause
+
+  full miss detail saved -> Fiedler2021_misses.csv, Fiedler2021_misses_summary.json (949 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  cock-amerika                                      0   516   PRED-ONLY
+  s-amerika                                         0   516   PRED-ONLY
+  number of associated ant genera                 523   523   
+  associated ants                                 870   523   Δ-347 (split?)
+  so-asien                                          0   516   PRED-ONLY
+  associated lyc. species                           0    18   PRED-ONLY
+  australien                                        0   516   PRED-ONLY
+  biogeographical regions                           0  3138   PRED-ONLY
+  indien                                            0   516   PRED-ONLY
+  obligate myrmecophile                           523   523   
+  neuguinea                                         0   516   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.616  0.505  0.555    967   602   949   id+type+value
+             (6252 more spurious row(s) set aside as out-of-scope; strict P would be 0.124)
+  tags        0.000  0.000  0.000      0  1569  1916   basis+id+type+value+stat+sex+stage
+             (6252 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.555 vs previous)
+             note: only 0/967 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

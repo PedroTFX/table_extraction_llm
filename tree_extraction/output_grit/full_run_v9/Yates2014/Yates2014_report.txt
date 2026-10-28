@@ -1,0 +1,115 @@
+  [semantic] matched by values: 'MHLT' -> 'Maximum Hair Length'
+  [semantic] left unmatched: 'MP- book' vs 'Top Tooth Length' (llm said different traits)
+  [semantic] left unmatched: 'MP..book' vs 'Top Tooth Length' (llm said different traits)
+  [semantic] left unmatched: 'MP..book' vs 'Scape Length' (llm said different traits)
+  [semantic] left unmatched: 'MP..book' vs 'Mandible Length' (llm said different traits)
+  [semantic] left unmatched: 'THORAX' vs 'Top Tooth Length' (llm said different traits)
+  [semantic] left unmatched: 'THORAX' vs 'Head Length' (llm said different traits)
+  [semantic] left unmatched: 'THORAX' vs 'Mandible Length' (llm said different traits)
+  [semantic] left unmatched: 'morph.vial' vs 'Top Tooth Length' (llm said different traits)
+  [semantic] left unmatched: 'morph.vial' vs 'Mandible Length' (llm said different traits)
+  [semantic] left unmatched: 'morph.vial' vs 'Head Length' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Yates2014/Yates2014.xlsx  (2568 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Yates2014/Yates2014.csv  (18709 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'FEMUR' -> 'Mid-femur Length'
+  'MHLT' -> 'Maximum Hair Length'
+  'MP- book' -> 'Maxilary Palp'
+  'SCUL' -> 'Scape Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 610
+  missed (FN)         : 1958
+  spurious, in scope  : 3581   <- GT covers this trait: real errors
+  spurious, out of scope: 14518   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.033 / 0.238 / 0.057   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.146 / 0.238 / 0.181   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.238   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                          14518
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    610  0.000  <-- low
+  measurementMethod             0    610  0.000  <-- low
+  measurementUnit               0    610  0.000  <-- low
+  measurementStatistic          0    610  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    610  0.000  <-- low
+  lifeStage                     0    610  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0    610  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +610 where GT blank
+  samplingProtocol              0    610  0.000  <-- low
+  verbatimLocality              0      0    n/a   +610 where GT blank
+  verbatimCoordinates           0      0    n/a   +610 where GT blank
+  verbatimEventDate             0    610  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    610  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1958 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           1527
+  species+trait present, value differs      431
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '6'                          ->  'heteroponerinae (het, heteroponera)' x60
+     '5'                          ->  'dolichoderinae (tap, tapinoma; tec, technomyrmex; iri, iridomyrmex; dol, dolichoderus; och, ochetellus)' x28
+     '3'                          ->  'formicinae (sti, stigmacros; pol, polyrhachis; pro, prolasius; cam, camponotus; mel, melophorus; not, notoncus; opi, opisthopsis; nyl, nylanderia; pla, plagiolepis)' x21
+     '4'                          ->  'cerapachyinae (cer, cerapachys)' x13
+     '1.43'                       ->  '0.5'                        x2
+     '1.419145'                   ->  '0.5'                        x2
+  -> 6 substitutions explain 126 of 1958 misses (6%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Minimum Inter-eye distance'       x305
+     'Eye Width'                        x305
+     'Head Length'                      x305
+     'Mandible Length'                  x305
+     'Top Tooth Length'                 x305
+     'Maxilary Palp'                    x2
+  -> 6 missing traits explain 1527 of 1958 misses (78%) — systematic, not scattered
+
+  full miss detail saved -> Yates2014_misses.csv, Yates2014_misses_summary.json (1958 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  average                                           0   305   PRED-ONLY
+  mp..book                                          0   305   PRED-ONLY
+  cn                                                0   305   PRED-ONLY
+  minimum inter-eye distance                      305     0   GT-ONLY
+  eye width                                       305     0   GT-ONLY
+  mid-femur length                                305  1511   Δ+1206 (split?)
+  habitat                                           0   302   PRED-ONLY
+  maximum hair length                             305  1472   Δ+1167 (split?)
+  head length                                     305     0   GT-ONLY
+  mandible length                                 305     0   GT-ONLY
+  scape length                                    305   908   Δ+603 (split?)
+  top tooth length                                305     0   GT-ONLY
+  maxilary palp                                   128   300   Δ+172 (split?)
+  morph.vial                                        0   305   PRED-ONLY
+  morphological trait                               0  9057   PRED-ONLY
+  phosphorus                                        0   305   PRED-ONLY
+  polymorphism                                      0   605   PRED-ONLY
+  shortgrass                                        0   305   PRED-ONLY
+  species                                           0   906   PRED-ONLY
+  tallgrass                                         0   305   PRED-ONLY
+  thorax                                            0  1513   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.146  0.238  0.181    610  3581  1958   id+type+value
+             (14518 more spurious row(s) set aside as out-of-scope; strict P would be 0.033)
+  tags        0.000  0.000  0.000      0  4191  2568   basis+id+type+value+stat+sex+stage
+             (14518 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.181 vs previous)
+             note: only 0/610 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

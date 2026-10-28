@@ -1,0 +1,127 @@
+  [semantic] matched by values: "Functional traits (mm) Weber's length" -> 'Weber’s length'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Zhao2024/Zhao2024.xlsx  (252 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Zhao2024/Zhao2024.csv  (1377 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 39 pair(s))
+  'Aphaenogaster caeciliae' -> 'A. caeciliae'
+  'Brachyponera chinensis' -> 'B. chinensis'
+  'Camponotus herculeanus' -> 'C. herculeanus'
+  'Camponotus japonicus' -> 'C. japonicus'
+  'Camponotus mitis' -> 'C. mitis'
+  'Crematogaster anthracina' -> 'C. anthracina'
+  'Crematogaster osakensis' -> 'C. osakensis'
+  'Dolichoderus sibiricus' -> 'D. sibiricus'
+  'Ectomomyrmex javanus' -> 'E. javanus'
+  'Formica fusca' -> 'F. fusca'
+  'Formica japonica' -> 'F. japonica'
+  'Hypoponera beppin' -> 'H. beppin'
+  'Hypoponera sauteri' -> 'H. sauteri'
+  'Lasius alienus' -> 'L. alienus'
+  'Lasius flavus' -> 'L. flavus'
+  'Lasius fuliginosus' -> 'L. fuliginosus'
+  'Liometopum sinense' -> 'L. sinense'
+  'Lordomyrna bhutanensis' -> 'L. bhutanensis'
+  'Myrmecina pauca' -> 'M. pauca'
+  'Myrmica luteola' -> 'M. luteola'
+  'Myrmica mifui' -> 'M. mifui'
+  'Myrmica sp.' -> 'Myrmica. sp.'
+  'Myrmica taibaiensis' -> 'M. taibaiensis'
+  'Nylanderia pieli' -> 'N. pieli'
+  'Nylanderia sharpii' -> 'N. sharpii'
+  'Odontomachus monticola' -> 'O. monticola'
+  'Perissomyrmex bidentatus' -> 'P. bidentatus'
+  'Pheidole fervida' -> 'P. fervida'
+  'Polyergus samurai' -> 'P. samurai'
+  'Polyerhachis lamellidens' -> 'P. lamellidens'
+  'Ponera paedericera' -> 'P. paedericera'
+  'Prenolepis angularis' -> 'P. angularis'
+  'Pristomyrmex punctatus' -> 'P. punctatus'
+  'Strumigenys lewisi' -> 'S. lewisi'
+  'Tapinoma geei' -> 'T. geei'
+  'Tapinoma indicum' -> 'T. indicum'
+  'Tennothorax argentipes' -> 'T. argentipes'
+  'Tennothorax shannxiensis' -> 'T. shannxiensis'
+  'Tetramorium smithi' -> 'T. smithi'
+
+TAXON NAMES LEFT UNMAPPED (15)
+  '0001': no ground-truth name denotes this organism
+  '1200': no ground-truth name denotes this organism
+  '1400': no ground-truth name denotes this organism
+  '1600': no ground-truth name denotes this organism
+  '1800': no ground-truth name denotes this organism
+  '2000': no ground-truth name denotes this organism
+  'Camponotus sp.': no ground-truth name denotes this organism
+  'Dolichoderinae': no ground-truth name denotes this organism
+  'Myrimidine': no ground-truth name denotes this organism
+  'Nylanderia': no ground-truth name denotes this organism
+  'Nylanderia sp.': no ground-truth name denotes this organism
+  'Polyrhachis': no ground-truth name denotes this organism
+  'Ponsitinae': no ground-truth name denotes this organism
+  'Premulopsis': no ground-truth name denotes this organism
+  'Syllaphopsis sp.': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Functional traits (mm) Eye length' -> 'Eye length'
+  'Functional traits (mm) Head width' -> 'Head width'
+  'Functional traits (mm) Hind leg length' -> 'Hind leg length'
+  'Functional traits (mm) Mandible length' -> 'Mandible length'
+  'Functional traits (mm) Scape length' -> 'Scape length'
+  "Functional traits (mm) Weber's length" -> 'Weber’s length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 252
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 1125   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.183 / 1.000 / 0.309   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1125
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    252  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    252  0.000  <-- low
+  measurementStatistic          0    252  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    252  0.000  <-- low
+  lifeStage                     0    252  0.000  <-- low
+  caste                         0    252  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0    252  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    252  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  ep8                                               0    42   PRED-ONLY
+  eye length                                       42    42   
+  head width                                       42    42   
+  hind leg length                                  42    42   
+  mandible length                                  42    42   
+  scape length                                     42    42   
+  weber’s length                                   42    42   
+  source                                            0  1083   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000    252     0     0   id+type+value
+             (1125 more spurious row(s) set aside as out-of-scope; strict P would be 0.183)
+  tags        0.000  0.000  0.000      0   252   252   basis+id+type+value+stat+sex+stage
+             (1125 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
+             note: only 0/252 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

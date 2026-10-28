@@ -1,0 +1,112 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Liu2024/Liu2024.xlsx  (181 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Liu2024/Liu2024.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 181
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 181 MISSED ROWS MISSED
+  species not in prediction                 181
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (8 distinct), closest predicted name:
+     gt 'Centistidea linearis'               (nothing similar in the prediction)   x44
+     gt 'Centistidea longipedes'             (nothing similar in the prediction)   x43
+     gt 'Centistidea areolaris'              (nothing similar in the prediction)   x41
+     gt 'Centistidea turneri'                (nothing similar in the prediction)   x39
+     gt 'Centistidea tihamica'               (nothing similar in the prediction)   x8
+     gt 'Centistidea leucopterae'            (nothing similar in the prediction)   x2
+  -> 6 species mismatches explain 177 of 181 misses (98%) — systematic, not scattered
+
+  full miss detail saved -> Liu2024_misses.csv, Liu2024_misses_summary.json (181 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1st flagellomere                                  1     0   GT-ONLY
+  1st flagellomeres                                 3     0   GT-ONLY
+  2nd flagellomeres                                 2     0   GT-ONLY
+  first abscissa of the radial sector :first abscissa of the media    4     0   GT-ONLY
+  antenna                                           4     0   GT-ONLY
+  propodeum anterior part                           1     0   GT-ONLY
+  basal fused section of the media and cubitus longitudinal veins:the first section of the media longitudinal vein.: the radio-medial (or medio-radial) crossvein connecting the radius and media systems.    4     0   GT-ONLY
+  length of hind femur:tibia:basitarsus             4     0   GT-ONLY
+  basitarsus of hind leg                            4     0   GT-ONLY
+  distance between fore and a hind ocellus          8     0   GT-ONLY
+  body colour                                       4     0   GT-ONLY
+  body length                                      12     0   GT-ONLY
+  first discal cell of fore wing nearly             1     0   GT-ONLY
+  first discal cell of fore wing                    1     0   GT-ONLY
+  clypeus                                           6     0   GT-ONLY
+  colour                                            4     0   GT-ONLY
+  colouration                                       2     0   GT-ONLY
+  first segment of the first cubitus vein:second segment of the first cubitus vein    4     0   GT-ONLY
+  posterior ocellar line:diameter of lateral ocellus:ocular ocellar line    8     0   GT-ONLY
+  length of eye                                     1     0   GT-ONLY
+  eyes                                              6     0   GT-ONLY
+  eyes length                                       1     0   GT-ONLY
+  face                                              7     0   GT-ONLY
+  hind femur                                        4     0   GT-ONLY
+  penultimate flagellomere                          1     0   GT-ONLY
+  penultimate flagellomeres                         3     0   GT-ONLY
+  ultimate flagellomeres                            3     0   GT-ONLY
+  fore wing length                                  4     0   GT-ONLY
+  vein radius:the second section of the radial sector vein.: the second medial vein of the fore wing    4     0   GT-ONLY
+  head                                             11     0   GT-ONLY
+  mesosoma - length:width:height                    3     0   GT-ONLY
+  mesossoma length:width:height                     1     0   GT-ONLY
+  hind leg                                          2     0   GT-ONLY
+  host                                              1     0   GT-ONLY
+  length of malar space                             3     0   GT-ONLY
+  metasoma length                                   1     0   GT-ONLY
+  mesothorax                                        5     0   GT-ONLY
+  mesothorax triangular part                        2     0   GT-ONLY
+  mesothorax transverse                             1     0   GT-ONLY
+  metacarp                                          6     0   GT-ONLY
+  metasoma                                          1     0   GT-ONLY
+  metasoma width                                    1     0   GT-ONLY
+  metathorax                                        8     0   GT-ONLY
+  ovipositor sheath                                 3     0   GT-ONLY
+  ovipositor sheaths                                1     0   GT-ONLY
+  propodeum                                         2     0   GT-ONLY
+  prothorax                                         8     0   GT-ONLY
+  pterostigma                                       8     0   GT-ONLY
+  vein radius                                       1     0   GT-ONLY
+  variation                                         1     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   181   id+type+value
+  tags        0.000  0.000  0.000      0     0   181   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)
