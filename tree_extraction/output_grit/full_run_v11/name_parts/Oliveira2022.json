@@ -638,10 +638,10 @@
    "part": "Traits",
    "choice": "heading",
    "probs": {
-    "statistic": 0.002,
+    "statistic": 0.023,
     "unit": 0.0,
-    "heading": 0.986,
-    "other": 0.012
+    "heading": 0.971,
+    "other": 0.006
    },
    "answer": [
     "heading",
@@ -651,26 +651,74 @@
   "14|detail|M": {
    "role": "detail",
    "part": "M",
-   "choice": "other",
+   "choice": "statistic",
    "probs": {
-    "statistic": 0.071,
-    "unit": 0.001,
-    "heading": 0.007,
-    "other": 0.922
+    "statistic": 0.978,
+    "unit": 0.0,
+    "heading": 0.0,
+    "other": 0.021
    },
-   "answer": null
+   "answer": [
+    "statistic",
+    "mean"
+   ],
+   "statistic": {
+    "choice": "s0",
+    "probs": {
+     "s0": 0.999,
+     "s1": 0.0,
+     "s2": 0.0,
+     "s3": 0.0,
+     "s4": 0.0,
+     "s5": 0.0,
+     "s6": 0.0,
+     "s7": 0.0,
+     "s8": 0.0,
+     "s9": 0.0,
+     "s10": 0.0,
+     "s11": 0.0,
+     "s12": 0.0,
+     "s13": 0.0,
+     "s14": 0.0,
+     "s15": 0.0
+    }
+   }
   },
   "14|detail|V": {
    "role": "detail",
    "part": "V",
-   "choice": "other",
+   "choice": "statistic",
    "probs": {
-    "statistic": 0.073,
-    "unit": 0.001,
-    "heading": 0.008,
-    "other": 0.918
+    "statistic": 0.986,
+    "unit": 0.0,
+    "heading": 0.0,
+    "other": 0.013
    },
-   "answer": null
+   "answer": [
+    "statistic",
+    "variance"
+   ],
+   "statistic": {
+    "choice": "s10",
+    "probs": {
+     "s0": 0.0,
+     "s1": 0.0,
+     "s2": 0.0,
+     "s3": 0.0,
+     "s4": 0.0,
+     "s5": 0.0,
+     "s6": 0.0,
+     "s7": 0.0,
+     "s8": 0.0,
+     "s9": 0.0,
+     "s10": 0.999,
+     "s11": 0.0,
+     "s12": 0.0,
+     "s13": 0.0,
+     "s14": 0.0,
+     "s15": 0.0
+    }
+   }
   }
  },
  "columns": {
@@ -681,7 +729,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits CL V": {
    "code": "CL",
@@ -690,7 +739,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   },
   "14|Traits ML M": {
    "code": "ML",
@@ -699,7 +749,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits ML V": {
    "code": "ML",
@@ -708,7 +759,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   },
   "14|Traits WL M": {
    "code": "WL",
@@ -717,7 +769,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits WL V": {
    "code": "WL",
@@ -726,7 +779,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   },
   "14|Traits IOW M": {
    "code": "IOW",
@@ -735,7 +789,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits IOW V": {
    "code": "IOW",
@@ -744,7 +799,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   },
   "14|Traits EL M": {
    "code": "EL",
@@ -753,7 +809,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits EL V": {
    "code": "EL",
@@ -762,7 +819,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   },
   "14|Traits P M": {
    "code": "P",
@@ -783,7 +841,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits LEG V": {
    "code": "LEG",
@@ -792,7 +851,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   },
   "14|Traits AL M": {
    "code": "AL",
@@ -801,7 +861,8 @@
     "14|group|Traits",
     "14|detail|M"
    ],
-   "applied": false
+   "statistic": "mean",
+   "applied": true
   },
   "14|Traits AL V": {
    "code": "AL",
@@ -810,7 +871,8 @@
     "14|group|Traits",
     "14|detail|V"
    ],
-   "applied": false
+   "statistic": "variance",
+   "applied": true
   }
  },
  "cells": {}
