@@ -544,7 +544,19 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## Names still printed as codes + species duels (v11 = v9 + both, 2026-10-28) — BUILT, to run on the remote
+## Names still printed as codes + species duels (v11 = v9 + both, 2026-10-28) — ADOPTED, best so far
+
+- Results (remote, 2026-10-28): grit mean F1 0.533 -> 0.536 (production), 0.532 -> 0.536 (repeatable),
+  2 up 0 down; 109 set 0.554 -> 0.559, 1 up 0 down. Oliveira2022 0.000 -> 0.516 (both sets), Kovacs2008
+  0.088 -> 0.121. Gains only in dev papers; no held paper moved (nothing for the step to act on there).
+  The person adopted it (2026-10-28) and judged IOW -> 'ratio of inter-ocular width to mesosoma length'
+  more correct than the GT's 'Eye position ratio'.
+- Iteration 2: Q-PART now quotes the text around the table and the meaning step's reading; in iteration 1
+  nimble called 'M'/'V' 'something else' (0.92) and all 16 Oliveira columns kept v9's names.
+- Left: Oliveira 'P' (0.78 < SURE; GT Pilosity); variance rows count as extra (GT keeps means only);
+  Fondjo HeadL / HeadW / AntenL stop in a duel between two wordings; Luo2023 t4 species duel 0.65 (open).
+- The repeatable scorer as its own stage ('det') asked gemma once per missed row (miss severity left on):
+  > 4 h on grit; fixed in det_score (5f73d2e).
 
 - Design (before any run): output/eval_split/DESIGN_names_v11.md. The user's rule for choices with
   many options: two at a time until one or none is left (duels.py). Not sure anywhere -> v9 as is.
