@@ -283,7 +283,8 @@ def base_species_of(t, fields, org, rec):
     return s
 
 
-def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, cell_names=None):
+def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, cell_names=None,
+                  category_of=None):
     """One CSV row per species x trait, in production's columns, -> root/<paper>/<paper>.csv.
       wide   each column tagged measurementType: type = its name, spelled out by the meaning
              step when it resolved; value = the cell, decoded
@@ -294,7 +295,10 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, c
              the type of its wide cells (the column name kept in measurementRemarks when the
              table has several trait columns).
       cell_names (v9 only) f(paper) -> {printed name: full name}: a long table's trait-name cells
-             spelled out from the paper's legends."""
+             spelled out from the paper's legends.
+      category_of (v10 only) f(t, col) -> {"heading", "has": f(cell)} | None: a column that is a
+             category of one trait gives a row (type = the heading, value = the column's name)
+             only where the organism has the category."""
     head = head_runs()
     n_rows = collections.Counter()
     for paper in papers:
@@ -344,10 +348,17 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, c
                     v = _clean(rec.get(col.name))
                     if not v:
                         continue
-                    row = {**base, "measurementType": sec_info.get("trait") or names.get(col.name) or col.name,
-                           "measurementValue": decoded(dec, t.table_index, col.index, v)}
+                    cat_of = category_of(t, col) if category_of else None
+                    if cat_of:
+                        if not cat_of["has"](v):
+                            continue                  # the organism does not have this category
+                        row = {**base, "measurementType": cat_of["heading"],
+                               "measurementValue": names.get(col.name) or col.name}
+                    else:
+                        row = {**base, "measurementType": sec_info.get("trait") or names.get(col.name) or col.name,
+                               "measurementValue": decoded(dec, t.table_index, col.index, v)}
                     row.update({k: x for k, x in (xtags.get(col.name) or {}).items() if k in CSV_FIELDS})
-                    if sec_info.get("trait") and n_traits > 1 and not row.get("measurementRemarks"):
+                    if not cat_of and sec_info.get("trait") and n_traits > 1 and not row.get("measurementRemarks"):
                         row["measurementRemarks"] = col.name
                     rows.append(row)
         write_csv(root / paper / f"{paper}.csv", rows)

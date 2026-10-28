@@ -528,6 +528,14 @@
 - Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
   big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume (from src/v7): python grit_run.py all
 
+## Category columns (v10, category_tree.py, 2026-10-28) — BUILT, to run on the remote
+
+- Design (before any run): output/eval_split/DESIGN_categories.md. Flag-only wide trait columns
+  (0/1, yes/no, x, +/-, fractions) that are categories of one trait: code gives structural headings
+  only (the header group spanning the column, the legend heading its code is listed under); no
+  name-prefix rule (it fitted the sample). Q-CAT per column, Q-PRESENT per fuzzy group; a sure group
+  of >= 2 columns becomes one row per category the organism has. Dev/held named in the design.
+
 ## Trait names from the legends (v9, legend_names.py, 2026-10-28) — BUILT, to run on the remote
 
 - The meaning step finds a name's definition only through text shapes and only for tokens that look
