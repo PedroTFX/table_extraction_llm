@@ -1,0 +1,116 @@
+  [semantic] left unmatched: 'N. acuta' vs 'antennal scape length' (llm said different traits)
+  [semantic] left unmatched: 'N. acuta' vs 'habitat elevation' (llm said different traits)
+  [semantic] left unmatched: 'N. acuta' vs 'type of habitat' (llm said different traits)
+  [semantic] left unmatched: 'N. metallica' vs 'elytral length' (llm said different traits)
+  [semantic] left unmatched: 'N. metallica' vs 'right metathoracic tibia length' (llm said different traits)
+  [semantic] left unmatched: 'N. metallica' vs 'dorsal-ventral thickness' (llm said different traits)
+  [semantic] left unmatched: '\\(\\delta13C\\) (‰) (range)' vs 'elytral length' (llm said different traits)
+  [semantic] left unmatched: '\\(\\delta13C\\) (‰) (range)' vs 'eye distance' (llm said different traits)
+  [semantic] left unmatched: '\\(\\delta13C\\) (‰) (range)' vs 'elytral width' (llm said different traits)
+  [semantic] left unmatched: '\\(\\delta15N\\) (‰) (range)' vs 'elytral length' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Schat2024/Schat2024.xlsx  (4330 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Schat2024/Schat2024.csv  (153 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 12 pair(s))
+  'N. acuta' -> 'Nebria acuta'
+  'N. crassicornis' -> 'Nebria crassicornis'
+  'N. eschscholtzii' -> 'Nebria eschscholtzii'
+  'N. gebleri' -> 'Nebria gebleri'
+  'N. kincaidi' -> 'Nebria kincaidi'
+  'N. mannerheimii' -> 'Nebria mannerheimii'
+  'N. meanyi' -> 'Nebria meanyi'
+  'N. metallica' -> 'Nebria metallica'
+  'N. paradisi' -> 'Nebria paradisi'
+  'N. piperi' -> 'Nebria piperi'
+  'N. sahlbergii' -> 'Nebria sahlbergii'
+  'N. vandykei' -> 'Nebria vandykei'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 4330
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 153   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            153
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 4330 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           4330
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'antennal scape length'            x433
+     'elytral length'                   x433
+     'elytral width'                    x433
+     'eye distance'                     x433
+     'right metathoracic femur length'  x433
+     'pronotum width ratio'             x433
+  -> 6 missing traits explain 2598 of 4330 misses (60%) — systematic, not scattered
+
+  full miss detail saved -> Schat2024_misses.csv, Schat2024_misses_summary.json (4330 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pc1 (77.1% of variance) (range)                   0    12   PRED-ONLY
+  pc2 (11.5% of variance) (range)                   0    12   PRED-ONLY
+  n. acuta                                          0    11   PRED-ONLY
+  antennal scape length                           433     0   GT-ONLY
+  n. crassicornis                                   0    11   PRED-ONLY
+  \(\delta13c\) (‰) (range)                         0     4   PRED-ONLY
+  \(\delta15n\) (‰) (range)                         0     4   PRED-ONLY
+  eye distance                                    433     0   GT-ONLY
+  dorsal-ventral thickness                        433     0   GT-ONLY
+  habitat elevation                               433     0   GT-ONLY
+  elytral length                                  433     0   GT-ONLY
+  elytral width                                   433     0   GT-ONLY
+  n. eschscholtzii                                  0    11   PRED-ONLY
+  right metathoracic femur length                 433     0   GT-ONLY
+  type of habitat                                 433     0   GT-ONLY
+  n. kincaidi                                       0    11   PRED-ONLY
+  right metathoracic tibia length                 433     0   GT-ONLY
+  n. mannerheimii                                   0    11   PRED-ONLY
+  n. meanyi                                         0    11   PRED-ONLY
+  n. metallica                                      0    11   PRED-ONLY
+  n. paradisi                                       0    11   PRED-ONLY
+  n. piperi                                         0    11   PRED-ONLY
+  n. sahlbergii                                     0    11   PRED-ONLY
+  n. vandykei                                       0    11   PRED-ONLY
+  pronotum width ratio                            433     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0  4330   id+type+value
+             (153 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0  4330   basis+id+type+value+stat+sex+stage
+             (153 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

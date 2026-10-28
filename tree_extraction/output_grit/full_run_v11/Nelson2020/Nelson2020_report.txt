@@ -1,0 +1,68 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Nelson2020/Nelson2020.xlsx  (191 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Nelson2020/Nelson2020.csv  (320 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Bembidion sp. 1' -> 'Bembidion sp.1'
+  'Harpalus herbivagus/somnulentus' -> 'Harpalus herbivagus/ somnulentus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'activity' -> 'activity time'
+  'season' -> 'breeding season'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 191
+  missed (FN)         : 0
+  spurious, in scope  : 9   <- GT covers this trait: real errors
+  spurious, out of scope: 120   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.597 / 1.000 / 0.748   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.955 / 1.000 / 0.977   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            120
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    191  0.000  <-- low
+  measurementMethod             0     40  0.000  <-- low
+  measurementUnit               0     40  0.000  <-- low
+  measurementStatistic          0    191  0.000  <-- low
+  measurementRemarks            0    151  0.000  <-- low
+  sex                           0    191  0.000  <-- low
+  lifeStage                     0    191  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    191  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  mean ± 1 s.d.                                     0    40   PRED-ONLY
+  activity time                                    38    40   Δ+2 (split?)
+  age                                               0    40   PRED-ONLY
+  breeding season                                  40    40   
+  diet                                             33    40   Δ+7 (split?)
+  range                                             0    40   PRED-ONLY
+  size                                             40    40   
+  wingtype                                         40    40   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.955  1.000  0.977    191     9     0   id+type+value
+             (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.597)
+  tags        0.000  0.000  0.000      0   200   191   basis+id+type+value+stat+sex+stage
+             (120 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.977 vs previous)
+             note: only 0/191 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

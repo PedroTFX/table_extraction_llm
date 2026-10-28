@@ -1,0 +1,80 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Gobbi2017/Gobbi2017.xlsx  (65 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Gobbi2017/Gobbi2017.csv  (162 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (13)
+  'Acantholycosa pedestris': no ground-truth name denotes this organism
+  'Agyneta rurestris': no ground-truth name denotes this organism
+  'Arctosa alpigena': no ground-truth name denotes this organism
+  'Coelotes pickardi tirolensis': no ground-truth name denotes this organism
+  'Diplocephalus helleri': no ground-truth name denotes this organism
+  'Drassodex heeri': no ground-truth name denotes this organism
+  'Erigone dentipalpis': no ground-truth name denotes this organism
+  'Mughiphantes handschini': no ground-truth name denotes this organism
+  'Oreonetides glacialis': no ground-truth name denotes this organism
+  'Pardosa nigra': no ground-truth name denotes this organism
+  'Pardosa oreophila': no ground-truth name denotes this organism
+  'Sitticus longipes': no ground-truth name denotes this organism
+  'Tenuiphantes monachus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Mean body length (mm)' -> 'Mean body length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 65
+  missed (FN)         : 0
+  spurious, in scope  : 43   <- GT covers this trait: real errors
+  spurious, out of scope: 54   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.401 / 1.000 / 0.573   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.602 / 1.000 / 0.751   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             54
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     65  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     13  0.000  <-- low
+  measurementStatistic          0     65  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     65  0.000  <-- low
+  lifeStage                     0     65  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     65  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     65  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  class 0                                           0     3   PRED-ONLY
+  class 1                                           0     4   PRED-ONLY
+  class 2                                           0    15   PRED-ONLY
+  class 3                                           0    19   PRED-ONLY
+  class 4                                           0    13   PRED-ONLY
+  dispersal ability                                13    17   Δ+4 (split?)
+  adult hunting strategies                         13    26   Δ+13 (split?)
+  mean body length                                 13    13   
+  diet                                             13    26   Δ+13 (split?)
+  larval hunting strategies                        13    26   Δ+13 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.602  1.000  0.751     65    43     0   id+type+value
+             (54 more spurious row(s) set aside as out-of-scope; strict P would be 0.401)
+  tags        0.000  0.000  0.000      0   108    65   basis+id+type+value+stat+sex+stage
+             (54 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.751 vs previous)
+             note: only 0/65 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

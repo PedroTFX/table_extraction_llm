@@ -1,0 +1,114 @@
+  [semantic] matched by values: 'inter-tegular distance' -> 'Intertegular distance'
+  [semantic] left unmatched: 'land-use types' vs 'Presence in riparian habitat' (llm said different traits)
+  [semantic] left unmatched: 'land-use types' vs 'Presence in pasture habitat' (llm said different traits)
+  [semantic] left unmatched: 'land-use types' vs 'Presence in forest habitat' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Gutiérrez‐Chacón2019/Gutiérrez‐Chacón2019.xlsx  (322 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Gutiérrez‐Chacón2019/Gutiérrez‐Chacón2019.csv  (240 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (13)
+  'Augochlora sp1': no ground-truth name denotes this organism
+  'Augochloropsis sp1': no ground-truth name denotes this organism
+  'Caenaugochlora sp1': no ground-truth name denotes this organism
+  'Caenohalictus sp1': no ground-truth name denotes this organism
+  'Chlerogella sp1': no ground-truth name denotes this organism
+  'Exomalopsis sp1': no ground-truth name denotes this organism
+  'Hylaeus sp1': no ground-truth name denotes this organism
+  'Lasioglossum sp4': no ground-truth name denotes this organism
+  'Megachile sp1': no ground-truth name denotes this organism
+  'Neocorynura sp5': no ground-truth name denotes this organism
+  'Neocorynura sp6': no ground-truth name denotes this organism
+  'Neocorynura sp8': no ground-truth name denotes this organism
+  'Plebeia sp1': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Restored' -> 'Presence in restored habitat'
+  'inter-tegular distance' -> 'Intertegular distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 100
+  missed (FN)         : 222
+  spurious, in scope  : 78   <- GT covers this trait: real errors
+  spurious, out of scope: 62   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.417 / 0.311 / 0.356   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.562 / 0.311 / 0.400   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.311   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             62
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    100  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    100  0.000  <-- low
+  measurementRemarks            0     27  0.000  <-- low
+  sex                           0    100  0.000  <-- low
+  lifeStage                     0    100  0.000  <-- low
+  caste                         0     27  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    100  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    100  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 222 MISSED ROWS MISSED
+  species not in prediction                  99
+  species present, trait missing            102
+  species+trait present, value differs       21
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'true'                       ->  'x'                          x10
+     'solitary'                   ->  'ni^a'                       x6
+     'below'                      ->  'above'                      x3
+     'above'                      ->  'below'                      x2
+  -> 4 substitutions explain 21 of 222 misses (9%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (13 distinct), closest predicted name:
+     gt 'Exomalopsis sp'                    ~0.90~  pred 'Exomalopsis sp1'   x8
+     gt 'Plebeia sp'                        ~0.90~  pred 'Plebeia sp1'   x8
+     gt 'Hylaeus sp'                        ~0.90~  pred 'Hylaeus sp1'   x8
+     gt 'Caenaugochlora sp'                 ~0.90~  pred 'Caenaugochlora sp1'   x8
+     gt 'Caenohalictus sp'                  ~0.90~  pred 'Caenohalictus sp1'   x8
+     gt 'Lasioglossum sp3'                  ~0.83~  pred 'Lasioglossum sp1'   x8
+  -> 6 species mismatches explain 48 of 222 misses (22%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Presence in forest habitat'       x28
+     'Presence in riparian habitat'     x28
+     'Presence in pasture habitat'      x28
+     'Presence in restored habitat'     x18
+  -> 4 missing traits explain 102 of 222 misses (46%) — scattered; no single cause
+
+  full miss detail saved -> Gutiérrez‐Chacón2019_misses.csv, Gutiérrez‐Chacón2019_misses_summary.json (222 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  nest construction                                37    41   Δ+4 (split?)
+  intertegular distance                            41    41   
+  presence in forest habitat                       41     0   GT-ONLY
+  presence in pasture habitat                      41     0   GT-ONLY
+  presence in restored habitat                     41    14   Δ-27 (split?)
+  presence in riparian habitat                     41     0   GT-ONLY
+  land-use types                                    0    62   PRED-ONLY
+  nest location                                    39    41   Δ+2 (split?)
+  sociality                                        41    41   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.562  0.311  0.400    100    78   222   id+type+value
+             (62 more spurious row(s) set aside as out-of-scope; strict P would be 0.417)
+  tags        0.000  0.000  0.000      0   178   322   basis+id+type+value+stat+sex+stage
+             (62 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.400 vs previous)
+             note: only 0/100 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

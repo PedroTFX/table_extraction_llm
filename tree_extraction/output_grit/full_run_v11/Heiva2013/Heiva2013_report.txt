@@ -1,0 +1,86 @@
+  [semantic] left unmatched: 'Herbaceous Crop' vs 'Funtional Group' (llm said different traits)
+  [semantic] left unmatched: 'Herbaceous Crop #2' vs 'Funtional Group' (llm said different traits)
+  [semantic] left unmatched: 'Herbaceous drove roads' vs 'Funtional Group' (llm said different traits)
+  [semantic] left unmatched: 'Vineyard Crop' vs 'Funtional Group' (llm said different traits)
+  [semantic] left unmatched: 'Vineyard Crop #2' vs 'Funtional Group' (llm said different traits)
+  [semantic] left unmatched: 'Vineyard drove roads' vs 'Funtional Group' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Heiva2013/Heiva2013.xlsx  (49 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Heiva2013/Heiva2013.csv  (131 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'functional groups' -> 'Funtional Group'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 3
+  missed (FN)         : 46
+  spurious, in scope  : 23   <- GT covers this trait: real errors
+  spurious, out of scope: 105   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.023 / 0.061 / 0.033   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.115 / 0.061 / 0.080   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.061   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            105
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      3  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      3  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0      3  0.000  <-- low
+  lifeStage                     0      3  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      3  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      3  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 46 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       46
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'generalists'                ->  'generalists and/or opportunistic' x11
+     'opportunistic'              ->  'generalists and/or opportunistic' x11
+     'hot climate specialists'    ->  'hot climate specialists and/or open habitats' x11
+     'open habitats'              ->  'hot climate specialists and/or open habitats' x11
+     'cold-climate specialists'   ->  'cold-climate specialists and/or shade habitats' x1
+     'shade habitats'             ->  'cold-climate specialists and/or shade habitats' x1
+  -> 6 substitutions explain 46 of 46 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Heiva2013_misses.csv, Heiva2013_misses_summary.json (46 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  herbaceous crop #2                                0     9   PRED-ONLY
+  vineyard crop #2                                  0    12   PRED-ONLY
+  herbaceous drove roads #2                         0     9   PRED-ONLY
+  vineyard drove roads #2                           0     8   PRED-ONLY
+  herbaceous crop                                   0    17   PRED-ONLY
+  vineyard crop                                     0    12   PRED-ONLY
+  herbaceous drove roads                            0    21   PRED-ONLY
+  vineyard drove roads                              0    17   PRED-ONLY
+  funtional group                                  49    26   Δ-23 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.115  0.061  0.080      3    23    46   id+type+value
+             (105 more spurious row(s) set aside as out-of-scope; strict P would be 0.023)
+  tags        0.000  0.000  0.000      0    26    49   basis+id+type+value+stat+sex+stage
+             (105 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.080 vs previous)
+             note: only 0/3 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

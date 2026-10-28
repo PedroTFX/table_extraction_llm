@@ -1,0 +1,64 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Wright1999/Wright1999.xlsx  (7 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Wright1999/Wright1999.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 7
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 7 MISSED ROWS MISSED
+  species not in prediction                   7
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Exopthalmus jekelianus'             (nothing similar in the prediction)   x7
+  -> 1 species mismatch explains 7 of 7 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Wright1999_misses.csv, Wright1999_misses_summary.json (7 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  locomotion bouts                                  1     0   GT-ONLY
+  meal durations                                    1     0   GT-ONLY
+  time feeding                                      1     0   GT-ONLY
+  intermeal intervals                               1     0   GT-ONLY
+  time locomoting                                   1     0   GT-ONLY
+  quiescent periods                                 1     0   GT-ONLY
+  time quiescent                                    1     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0     7   id+type+value
+  tags        0.000  0.000  0.000      0     0     7   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

@@ -1,0 +1,107 @@
+  [semantic] matched by values: 'DI' -> 'diurnality index'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Wiescher2012/Wiescher2012.xlsx  (250 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Wiescher2012/Wiescher2012.csv  (572 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 18 pair(s))
+  'Aphaenogaster ashmeadi*' -> 'Aphaenogaster ashmeadi'
+  'Camponotus floridanus*' -> 'Camponotus floridanus'
+  'Dorymyrmex bureni*' -> 'Dorymyrmex bureni'
+  'Dorymyrmex elegans*' -> 'Dorymyrmex elegans'
+  'Dorymyrmex flavopectus*' -> 'Dorymyrmex flavopectus'
+  'Forelius pruinosus*' -> 'Forelius pruinosus'
+  'Formica pallidefulva*' -> 'Formica pallidefulva'
+  'Monomorium viride*' -> 'Monomorium viride'
+  'Odontomachus relictus*' -> 'Odontomachus relictus'
+  'Paratrechina arenivaga*' -> 'Paratrechina arenivaga'
+  'Paratrechina wojciki*' -> 'Paratrechina wojciki'
+  'Pheidole adrianoi*' -> 'Pheidole adrianoi'
+  'Pheidole dentata*' -> 'Pheidole dentata'
+  'Pheidole floridana*' -> 'Pheidole floridana'
+  'Pheidole metallescens*' -> 'Pheidole metallescens'
+  'Pheidole morrisii*' -> 'Pheidole morrisii'
+  'Temnothorax pergandei*' -> 'Temnothorax pergandei'
+  'Temnothorax texanus*' -> 'Temnothorax texanus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'DI' -> 'diurnality index'
+  'Mass (mg)' -> 'Mass'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 241
+  missed (FN)         : 9
+  spurious, in scope  : 257   <- GT covers this trait: real errors
+  spurious, out of scope: 74   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.421 / 0.964 / 0.586   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.484 / 0.964 / 0.644   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.964   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             74
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    241  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    190  0.000  <-- low
+  measurementStatistic          0    241  0.000  <-- low
+  measurementRemarks            0     15  0.000  <-- low
+  sex                           0    241  0.000  <-- low
+  lifeStage                     0    241  0.000  <-- low
+  caste                         0    241  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    241  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    241  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    241  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 9 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              1
+  species+trait present, value differs        8
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.46'                       ->  '0.460*'                     x1
+     '.0.467'                     ->  '0.467'                      x1
+     '0.1'                        ->  '0.61'                       x1
+     '0.43'                       ->  '0.52'                       x1
+     '0.04'                       ->  '0.43'                       x1
+     '0.52'                       ->  '1.18'                       x1
+  -> 6 substitutions explain 6 of 9 misses (67%) — systematic, not scattered
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'diurnality index'                 x1
+  -> 1 missing trait explains 1 of 9 misses (11%) — scattered; no single cause
+
+  full miss detail saved -> Wiescher2012_misses.csv, Wiescher2012_misses_summary.json (9 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  area-independent water loss rates                16    32   Δ+16 (split?)
+  diurnality index                                 17    32   Δ+15 (split?)
+  foraging thermal limit                           16    32   Δ+16 (split?)
+  habitat index                                     0    74   PRED-ONLY
+  head length                                      37    74   Δ+37 (split?)
+  head width                                       37    74   Δ+37 (split?)
+  leg length                                       37    74   Δ+37 (split?)
+  relative leg length                              37    74   Δ+37 (split?)
+  lethal temperature                               16    32   Δ+16 (split?)
+  mass                                             37    74   Δ+37 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.484  0.964  0.644    241   257     9   id+type+value
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.421)
+  tags        0.000  0.000  0.000      0   498   250   basis+id+type+value+stat+sex+stage
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.644 vs previous)
+             note: only 0/241 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

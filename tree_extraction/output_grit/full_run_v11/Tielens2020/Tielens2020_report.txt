@@ -1,0 +1,100 @@
+  [semantic] matched by values: 'Location of nymph' -> 'Location juvenile'
+  [semantic] matched by values: 'Length' -> 'Body size'
+  [semantic] matched by values: 'Generalist / specialist' -> 'Diet breadth'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tielens2020/Tielens2020.xlsx  (142 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Tielens2020/Tielens2020.csv  (216 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (12)
+  'Coleotichus': no ground-truth name denotes this organism
+  'Greenidea': no ground-truth name denotes this organism
+  'Hyalopeplus': no ground-truth name denotes this organism
+  'Iolania': no ground-truth name denotes this organism
+  'Koanoa': no ground-truth name denotes this organism
+  'Nesophrosyne': no ground-truth name denotes this organism
+  'Oceanides': no ground-truth name denotes this organism
+  'Orthotylus': no ground-truth name denotes this organism
+  'Sarona': no ground-truth name denotes this organism
+  'Siphanta': no ground-truth name denotes this organism
+  'Sp': no ground-truth name denotes this organism
+  'Tympanococcus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Generalist / specialist' -> 'Diet breadth'
+  'Length' -> 'Body size'
+  'Location of nymph' -> 'Location juvenile'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 19
+  missed (FN)         : 123
+  spurious, in scope  : 123   <- GT covers this trait: real errors
+  spurious, out of scope: 74   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.088 / 0.134 / 0.106   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.134 / 0.134 / 0.134   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.134   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             74
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     19  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      5  0.000  <-- low
+  measurementStatistic          0     19  0.000  <-- low
+  measurementRemarks            0      5  0.000  <-- low
+  sex                           0     19  0.000  <-- low
+  lifeStage                     0     19  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     19  0.000  <-- low
+  samplingProtocol              0     19  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     19  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     19  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 123 MISSED ROWS MISSED
+  species not in prediction                 122
+  species present, trait missing              0
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'leaf chewer'                ->  'chewer'                     x1
+  -> 1 substitution explains 1 of 123 misses (1%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (27 distinct), closest predicted name:
+     gt 'Lepidoptera'                        (nothing similar in the prediction)   x24
+     gt 'Coleotichus blackburniae'          ~0.82~  pred 'Coleotichus'   x4
+     gt 'Geometridae'                       ~0.55~  pred 'Greenidea'   x4
+     gt 'Greenidea psidii'                  ~0.82~  pred 'Greenidea'   x4
+     gt 'Hyalopeplus pelucidus'             ~0.88~  pred 'Hyalopeplus'   x4
+     gt 'Iolania perkinsi'                  ~0.85~  pred 'Iolania'   x4
+  -> 6 species mismatches explain 44 of 123 misses (36%) — scattered; no single cause
+
+  full miss detail saved -> Tielens2020_misses.csv, Tielens2020_misses_summary.json (123 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        37    37   
+  diet breadth                                     33    33   
+  species code                                      0    37   PRED-ONLY
+  feeding guild                                    37    37   
+  location juvenile                                35    35   
+  species                                           0    37   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.134  0.134  0.134     19   123   123   id+type+value
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.088)
+  tags        0.000  0.000  0.000      0   142   142   basis+id+type+value+stat+sex+stage
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.134 vs previous)
+             note: only 0/19 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

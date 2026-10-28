@@ -1,0 +1,58 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Rocha-Ortega2023/Rocha-Ortega2023.xlsx  (1090 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Rocha-Ortega2023/Rocha-Ortega2023.csv  (1638 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Temnothorax striatulus': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1090
+  missed (FN)         : 0
+  spurious, in scope  : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 547   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.665 / 1.000 / 0.799   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.999 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            547
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   1090  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0   1090  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   1090  0.000  <-- low
+  lifeStage                     0   1090  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1090  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  km                                                0   547   PRED-ONLY
+  niche                                           544   545   Δ+1 (split?)
+  vertical stratum                                546   546   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.999  1.000  1.000   1090     1     0   id+type+value
+             (547 more spurious row(s) set aside as out-of-scope; strict P would be 0.665)
+  tags        0.000  0.000  0.000      0  1091  1090   basis+id+type+value+stat+sex+stage
+             (547 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
+             note: only 0/1090 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

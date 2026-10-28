@@ -1,0 +1,54 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Griffiths2016/Griffiths2016.xlsx  (5300 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Griffiths2016/Griffiths2016.csv  (5300 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Biomass (g)' -> 'Biomass'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 5300
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   5300  0.000  <-- low
+  measurementMethod             0   2650  0.000  <-- low
+  measurementUnit               0   5300  0.000  <-- low
+  measurementStatistic          0   5300  0.000  <-- low
+  measurementRemarks            0   5300  0.000  <-- low
+  sex                           0   5300  0.000  <-- low
+  lifeStage                     0   5300  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0   5300  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0   5300  0.000  <-- low
+  verbatimLocality              0      0    n/a   +5300 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0   5300  0.000  <-- low
+  associatedOccurrences         0   5300  0.000  <-- low
+  associatedReferences          0   5300  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  front leg area                                 1325  1325   
+  back leg length                                1325  1325   
+  biomass                                        1325  1325   
+  pronotum volume                                1325  1325   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000   5300     0     0   id+type+value
+  tags        0.000  0.000  0.000      0  5300  5300   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)
+             note: only 0/5300 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

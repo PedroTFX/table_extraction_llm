@@ -1,0 +1,126 @@
+{
+ "codes": {
+  "pl": {
+   "code": "PL",
+   "definition": {
+    "candidates": [
+     {
+      "term": "Pronotum length (mm)",
+      "entry": "the heading code 'PL' is listed under"
+     }
+    ],
+    "duels": [],
+    "term": "Pronotum length (mm)",
+    "final": {
+     "choice": "yes",
+     "probs": {
+      "yes": 0.974,
+      "none": 0.026
+     }
+    }
+   },
+   "name": "Pronotum length (mm)",
+   "printed": {
+    "pool": [
+     "Head length",
+     "Pronotum height",
+     "Pronotum width"
+    ],
+    "duels": [
+     {
+      "a": "Head length",
+      "b": "Pronotum height",
+      "choice": "b",
+      "probs": {
+       "a": 0.152,
+       "b": 0.848
+      }
+     },
+     {
+      "a": "Pronotum width",
+      "b": "Pronotum height",
+      "choice": "b",
+      "probs": {
+       "a": 0.496,
+       "b": 0.504
+      }
+     }
+    ],
+    "name": null
+   }
+  },
+  "pw": {
+   "code": "PW",
+   "definition": {
+    "candidates": [
+     {
+      "term": "Pronotum width (mm)",
+      "entry": "the heading code 'PW' is listed under"
+     }
+    ],
+    "duels": [],
+    "term": "Pronotum width (mm)",
+    "final": {
+     "choice": "yes",
+     "probs": {
+      "yes": 0.981,
+      "none": 0.019
+     }
+    }
+   },
+   "name": "Pronotum width (mm)",
+   "printed": {
+    "pool": [
+     "Head width",
+     "Pronotum height",
+     "Pronotum length"
+    ],
+    "duels": [
+     {
+      "a": "Head width",
+      "b": "Pronotum height",
+      "choice": "b",
+      "probs": {
+       "a": 0.225,
+       "b": 0.775
+      }
+     }
+    ],
+    "name": null
+   }
+  }
+ },
+ "parts": {
+  "7|detail|morph": {
+   "role": "detail",
+   "part": "morph",
+   "choice": "other",
+   "probs": {
+    "statistic": 0.029,
+    "unit": 0.001,
+    "heading": 0.038,
+    "other": 0.932
+   },
+   "answer": null
+  }
+ },
+ "columns": {
+  "7|PL morph": {
+   "code": "PL",
+   "name": "Pronotum length (mm)",
+   "parts": [
+    "7|detail|morph"
+   ],
+   "applied": false
+  },
+  "7|PW morph": {
+   "code": "PW",
+   "name": "Pronotum width (mm)",
+   "parts": [
+    "7|detail|morph"
+   ],
+   "applied": false
+  }
+ },
+ "cells": {}
+}

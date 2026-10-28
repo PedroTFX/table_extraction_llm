@@ -1,0 +1,100 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Cortés-Goméz2023/Cortés-Goméz2023.xlsx  (78 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Cortés-Goméz2023/Cortés-Goméz2023.csv  (90 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 6 pair(s))
+  'Centris sp., Xylocopa lachea' -> 'Xylocopa lachea'
+  'Epicharis sp' -> 'Epicharis sp.'
+  'Parapartamona sp' -> 'Parapartamona sp.'
+  'Partamona sp' -> 'Partamona sp.'
+  'Thygater sp' -> 'Thygater'
+  'Xylocopa lachnea' -> 'Xylocopa lachea'
+
+TAXON NAMES LEFT UNMAPPED (4)
+  'Bombus atratus, Bombus hortulanus, Bombus melaleucus': matches 3 different organisms, cannot choose: 'Bombus atratus', 'Bombus hortulanus', 'Bombus melaleucus'
+  'Centris sp2': no ground-truth name denotes this organism
+  'Eulaema cingulata, Eulaema polychroma': matches 2 different organisms, cannot choose: 'Eulaema cingulata', 'Eulaema polychroma'
+  'Partamona sp., Para-partamona sp.': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body size Mean (sd)' -> 'Body size'
+  'Hair length Mean (sd)' -> 'Hair length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 20
+  missed (FN)         : 58
+  spurious, in scope  : 28   <- GT covers this trait: real errors
+  spurious, out of scope: 42   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.222 / 0.256 / 0.238   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.417 / 0.256 / 0.317   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.256   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             42
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     20  0.000  <-- low
+  measurementMethod             0      5  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     20  0.000  <-- low
+  measurementRemarks            0      5  0.000  <-- low
+  sex                           0     20  0.000  <-- low
+  lifeStage                     0     20  0.000  <-- low
+  caste                         0     10  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     20  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 58 MISSED ROWS MISSED
+  species not in prediction                   6
+  species present, trait missing             42
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Centris sp.'                       ~0.90~  pred 'Centris sp2'   x6
+  -> 1 species mismatch explains 6 of 58 misses (10%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Amount body hair'                 x7
+     'Body size'                        x7
+     'Hair length'                      x7
+     'Nest location'                    x7
+     'Social behavior'                  x7
+     'Structure carrying pollen'        x7
+  -> 6 missing traits explain 42 of 58 misses (72%) — systematic, not scattered
+
+  full miss detail saved -> Cortés-Goméz2023_misses.csv, Cortés-Goméz2023_misses_summary.json (58 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  amount body hair                                 13     8   Δ-5 (split?)
+  social behavior                                  13     8   Δ-5 (split?)
+  body size                                        13     8   Δ-5 (split?)
+  structure carrying pollen                        13     8   Δ-5 (split?)
+  granadilla pollen mean (sd)                       0     8   PRED-ONLY
+  granadilla pollen                                 0    13   PRED-ONLY
+  hair length                                      13     8   Δ-5 (split?)
+  nest location                                    13     8   Δ-5 (split?)
+  total pollen mean (sd)                            0     8   PRED-ONLY
+  other pollen                                      0    13   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.417  0.256  0.317     20    28    58   id+type+value
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.222)
+  tags        0.000  0.000  0.000      0    48    78   basis+id+type+value+stat+sex+stage
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.317 vs previous)
+             note: only 0/20 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

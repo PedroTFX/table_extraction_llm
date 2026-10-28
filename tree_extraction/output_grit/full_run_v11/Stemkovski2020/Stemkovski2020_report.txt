@@ -1,0 +1,91 @@
+  [semantic] matched by values: 'Nest loc.' -> 'Nest location'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Stemkovski2020/Stemkovski2020.xlsx  (134 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Stemkovski2020/Stemkovski2020.csv  (509 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 11 pair(s))
+  'Dufourea harveyi' -> 'Dufourea harveyi ^\n(Cockerell 1906)\n'
+  'Halictus rubicundus' -> 'Halictus rubicundus \n(Christ 1791)\n'
+  'Halictus virgatellus' -> 'Halictus virgatellus \nCockerell 1901\n'
+  'Hoplitis fulgida' -> 'Hoplitis fulgida \n(Cresson 1864)\n'
+  'Hoplitis robusta' -> 'Hoplitis robusta \n(Nylander 1848)\n'
+  'Hylaeus annulatus' -> 'Hylaeus annulatus \n(L. 1758)\n'
+  'Lasioglossum sedi' -> 'Lasioglossum sedi \n(Sandhouse 1924)\n'
+  'Osmia “torchioi” Griswold ms. name' -> 'Osmia “torchioi"'
+  'Panurginus cressoniellus' -> 'Panurginus cressoniellus\nCockerell 1898\n'
+  'Panurginus ineptus' -> 'Panurginus ineptus \nCockerell 1922\n'
+  'Pseudopanurgus bakeri' -> 'Pseudopanurgus bakeri \n(Cockerell 1906)\n'
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Nest loc.' -> 'Nest location'
+  'intertegular distance' -> 'Intertegular distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 130
+  missed (FN)         : 4
+  spurious, in scope  : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 375   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.255 / 0.970 / 0.404   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.970 / 0.970 / 0.970   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.970   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            375
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    130  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    130  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    130  0.000  <-- low
+  lifeStage                     0    130  0.000  <-- low
+  caste                         0     66  0.000  <-- low
+  sampleSizeValue               0    130  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    130  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 4 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        4
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'bellow'                     ->  'below'                      x3
+     '0.95'                       ->  '0.97'                       x1
+  -> 2 substitutions explain 4 of 4 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Stemkovski2020_misses.csv, Stemkovski2020_misses_summary.json (4 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  phenology shift category                          0    20   PRED-ONLY
+  response to snowmelt (days of phenology shift / days of snowmelt shift)    0    20   PRED-ONLY
+  intertegular distance                            67    67   
+  em. points                                        0    67   PRED-ONLY
+  family                                            0    67   PRED-ONLY
+  nest location                                    67    67   
+  overw. stage                                      0    67   PRED-ONLY
+  peak points                                       0    67   PRED-ONLY
+  sen. points                                       0    67   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.970  0.970  0.970    130     4     4   id+type+value
+             (375 more spurious row(s) set aside as out-of-scope; strict P would be 0.255)
+  tags        0.000  0.000  0.000      0   134   134   basis+id+type+value+stat+sex+stage
+             (375 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.970 vs previous)
+             note: only 0/130 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

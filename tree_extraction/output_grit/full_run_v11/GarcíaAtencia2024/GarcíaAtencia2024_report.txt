@@ -1,0 +1,86 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/GarcíaAtencia2024/GarcíaAtencia2024.xlsx  (544 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/GarcíaAtencia2024/GarcíaAtencia2024.csv  (544 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Eye diameter' -> 'eye diameter'
+  'length to body length ratio' -> 'leg length to body length ratio'
+  'maximum metacoxa length' -> 'Maximum Metacoxa Length'
+  'total length' -> 'Total length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 510
+  missed (FN)         : 34
+  spurious, in scope  : 34   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.938 / 0.938 / 0.938   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.938 / 0.938 / 0.938   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.938   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    510  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    478  0.000  <-- low
+  measurementStatistic          0    510  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    510  0.000  <-- low
+  lifeStage                     0    510  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    510  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 34 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       34
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'phytophagous'               ->  '1'                          x20
+     'meliphagous'                ->  '2'                          x6
+     'frugivores'                 ->  '4'                          x2
+     'stem-feeding'               ->  '3'                          x2
+     'predator'                   ->  '5'                          x2
+     '19.5'                       ->  '10.5'                       x1
+  -> 6 substitutions explain 33 of 34 misses (97%) — systematic, not scattered
+
+  full miss detail saved -> GarcíaAtencia2024_misses.csv, GarcíaAtencia2024_misses_summary.json (34 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  wing area                                        32    32   
+  biomass                                          32    32   
+  leg length to body length ratio                  32    32   
+  eye diameter                                     32    32   
+  interocular distance                             32    32   
+  elytral length                                   32    32   
+  elytral thickness                                32    32   
+  elytral width                                    32    32   
+  trophic group                                    32    32   
+  wing height                                      32    32   
+  maximum metacoxa length                          32    32   
+  pronotum length                                  32    32   
+  total length                                     32    32   
+  wing loading                                     32    32   
+  pronotum width                                   32    32   
+  total thickness                                  32    32   
+  wing width                                       32    32   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.938  0.938  0.938    510    34    34   id+type+value
+  tags        0.000  0.000  0.000      0   544   544   basis+id+type+value+stat+sex+stage
+             (F1 -0.938 vs previous)
+             note: only 0/510 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

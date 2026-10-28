@@ -1,0 +1,103 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/MiddletonWelling2018/MiddletonWelling2018.xlsx  (4273 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/MiddletonWelling2018/MiddletonWelling2018.csv  (6982 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Generations (maximum)' -> 'Maximum generations'
+  'Generations (minimum)' -> 'Minimum generations'
+  'Wingspan (average)' -> 'Wingspan'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 2507
+  missed (FN)         : 1766
+  spurious, in scope  : 713   <- GT covers this trait: real errors
+  spurious, out of scope: 3762   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.359 / 0.587 / 0.445   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.779 / 0.587 / 0.669   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.587   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           3762
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   2507  0.000  <-- low
+  measurementMethod             0   1493  0.000  <-- low
+  measurementUnit               0    167  0.000  <-- low
+  measurementStatistic          0   2507  0.000  <-- low
+  measurementRemarks            0    997  0.000  <-- low
+  sex                           0   2507  0.000  <-- low
+  lifeStage                     0   2507  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a   +2004 where GT blank
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   2507  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1766 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            240
+  species+trait present, value differs     1384
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'mudpuddling behaviour'      ->  '1'                          x230
+     'hilltopping behaviour'      ->  '1'                          x213
+     'hilltopping behaviour absent' ->  '1'                          x117
+     'mudpuddling behaviour absent' ->  '1'                          x76
+     'perching'                   ->  '0'                          x69
+     'ant usage present'          ->  '2'                          x66
+  -> 6 substitutions explain 771 of 1766 misses (44%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Ant usage'                        x240
+  -> 1 missing trait explains 240 of 1766 misses (14%) — scattered; no single cause
+
+  full miss detail saved -> MiddletonWelling2018_misses.csv, MiddletonWelling2018_misses_summary.json (1766 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  ant usage                                       336    96   Δ-240 (split?)
+  b                                                 0   333   PRED-ONLY
+  c                                                 0   333   PRED-ONLY
+  d                                                 0   333   PRED-ONLY
+  e                                                 0   333   PRED-ONLY
+  flight period (end)                             276   276   
+  f                                                 0   333   PRED-ONLY
+  flight period (start)                           276   276   
+  g                                                 0   333   PRED-ONLY
+  maximum generations                             333   333   
+  minimum generations                             333   333   
+  h                                                 0   332   PRED-ONLY
+  habitat total                                   332    56   Δ-276 (split?)
+  hilltopping                                     336   218   Δ-118 (split?)
+  hostplant number                                333   333   
+  hostplant specificity                           333   333   
+  i                                                 0   332   PRED-ONLY
+  j                                                 0   332   PRED-ONLY
+  mate locating strategy                          217   217   
+  wingspan (max)                                    0   167   PRED-ONLY
+  wingspan (min)                                    0   167   PRED-ONLY
+  mudpuddling                                     336   251   Δ-85 (split?)
+  overwintering stage                             331   331   
+  patrolling                                        0   217   PRED-ONLY
+  perching                                          0   217   PRED-ONLY
+  wingspan                                        501   167   Δ-334 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.779  0.587  0.669   2507   713  1766   id+type+value
+             (3762 more spurious row(s) set aside as out-of-scope; strict P would be 0.359)
+  tags        0.000  0.000  0.000      0  3220  4273   basis+id+type+value+stat+sex+stage
+             (3762 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.669 vs previous)
+             note: only 0/2507 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

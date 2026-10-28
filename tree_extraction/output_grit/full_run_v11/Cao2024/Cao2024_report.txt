@@ -1,0 +1,90 @@
+  [semantic] left unmatched: 'Morphological type' vs 'Plate type' (llm said different traits)
+  [semantic] left unmatched: 'Morphological type' vs 'Ventral type' (llm said different traits)
+  [semantic] left unmatched: 'Morphological type' vs 'Teeth type' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Cao2024/Cao2024.xlsx  (421 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Cao2024/Cao2024.csv  (237 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 78
+  missed (FN)         : 343
+  spurious, in scope  : 80   <- GT covers this trait: real errors
+  spurious, out of scope: 79   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.329 / 0.185 / 0.237   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.494 / 0.185 / 0.269   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.185   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             79
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     78  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     78  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     78  0.000  <-- low
+  lifeStage                     0     78  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     78  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 343 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            263
+  species+trait present, value differs       80
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '>5–10'                      ->  'size2'                      x49
+     '>10'                        ->  'size3'                      x19
+     '<5'                         ->  'size1'                      x11
+     'predator'                   ->  'predators'                  x1
+  -> 4 substitutions explain 80 of 343 misses (23%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Locomotion'                       x79
+     'Plate type'                       x62
+     'Teeth type'                       x58
+     'Mentum ratio'                     x52
+     'Ventral type'                     x11
+     'Mentum type'                      x1
+  -> 6 missing traits explain 263 of 343 misses (77%) — systematic, not scattered
+
+  full miss detail saved -> Cao2024_misses.csv, Cao2024_misses_summary.json (343 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        79    79   
+  functional feeding guild                         79    79   
+  locomotion                                       79     0   GT-ONLY
+  mentum ratio                                     52     0   GT-ONLY
+  mentum type                                       1     0   GT-ONLY
+  morphological type                                0    79   PRED-ONLY
+  plate type                                       62     0   GT-ONLY
+  teeth type                                       58     0   GT-ONLY
+  ventral type                                     11     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'plate type'                       vs pred 'morphological type'               sim=0.69
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.494  0.185  0.269     78    80   343   id+type+value
+             (79 more spurious row(s) set aside as out-of-scope; strict P would be 0.329)
+  tags        0.000  0.000  0.000      0   158   421   basis+id+type+value+stat+sex+stage
+             (79 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.269 vs previous)
+             note: only 0/78 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

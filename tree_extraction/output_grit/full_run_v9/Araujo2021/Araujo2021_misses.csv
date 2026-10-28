@@ -1,15 +1,15 @@
 cause,verbatimIdentification,measurementType,measurementValue,pred_collision_value,closest_pred_species,closest_score,severity,reasoning
-species not in prediction,Polistes guadeloupensis,Body Size,2.53,,Polistes nasidens,0.73,,(not assessed)
-species not in prediction,Polistes guadeloupensis,Larval diet,larvae,,Polistes nasidens,0.73,,(not assessed)
-species not in prediction,Polistes guadeloupensis,Left mandibula length,1.37,,Polistes nasidens,0.73,,(not assessed)
-species not in prediction,Polistes guadeloupensis,Left tibia posterior length,2.18,,Polistes nasidens,0.73,,(not assessed)
-species not in prediction,Polistes guadeloupensis,Left wing length,8.11,,Polistes nasidens,0.73,,(not assessed)
-"species+trait present, value differs",Isodontia sp1,Nesting material,plant parts,plant_parts,,,,(not assessed)
-"species+trait present, value differs",Monobia angulosa,Nesting material,plant parts,plant_parts,,,,(not assessed)
-"species+trait present, value differs",Polistes alessandroi,Nesting material,plant parts,plant_parts,,,,(not assessed)
-species not in prediction,Polistes guadeloupensis,Nesting material,mud,,Polistes nasidens,0.73,,(not assessed)
-"species+trait present, value differs",Zeta proximus,Nesting material,plant parts,plant_parts,,,,(not assessed)
-"species+trait present, value differs",Zeta smithii,Nesting material,plant parts,plant_parts,,,,(not assessed)
+species not in prediction,Polistes guadeloupensis,Body Size,2.53,,Polistes nasidens,0.73,severe,The pipeline failed to extract both the species and the body size value.
+species not in prediction,Polistes guadeloupensis,Larval diet,larvae,,Polistes nasidens,0.73,severe,The pipeline failed to extract the larval diet information completely.
+species not in prediction,Polistes guadeloupensis,Left mandibula length,1.37,,Polistes nasidens,0.73,severe,The pipeline failed to extract the left mandibula length value.
+species not in prediction,Polistes guadeloupensis,Left tibia posterior length,2.18,,Polistes nasidens,0.73,severe,The pipeline failed to extract the left tibia posterior length value.
+species not in prediction,Polistes guadeloupensis,Left wing length,8.11,,Polistes nasidens,0.73,severe,The pipeline failed to extract the left wing length value.
+"species+trait present, value differs",Isodontia sp1,Nesting material,plant parts,plant_parts,,,trivial,The predicted nesting material is a cosmetic difference from the ground truth.
+"species+trait present, value differs",Monobia angulosa,Nesting material,plant parts,plant_parts,,,trivial,The predicted nesting material exactly matches the ground truth value.
+"species+trait present, value differs",Polistes alessandroi,Nesting material,plant parts,plant_parts,,,trivial,The predicted nesting material exactly matches the ground truth value.
+species not in prediction,Polistes guadeloupensis,Nesting material,mud,,Polistes nasidens,0.73,severe,The pipeline failed to extract the nesting material (mud) completely.
+"species+trait present, value differs",Zeta proximus,Nesting material,plant parts,plant_parts,,,trivial,The predicted nesting material exactly matches the ground truth value.
+"species+trait present, value differs",Zeta smithii,Nesting material,plant parts,plant_parts,,,trivial,The predicted nesting material exactly matches the ground truth value.
 "species present, trait missing",Andrena vilhenae,Pollen transport,Abdomen scopa,,,,moderate,the trait was not extracted for this species
 "species present, trait missing",Centris analis,Pollen transport,Leg scopa,,,,moderate,the trait was not extracted for this species
 "species present, trait missing",Centris tarsata,Pollen transport,Leg scopa,,,,moderate,the trait was not extracted for this species
