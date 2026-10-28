@@ -536,6 +536,11 @@
   in the paper that fits). 4,582 cells in 28 papers; backups in data/backup/grit_testing/, logs in
   data/grit_gt_date_repairs*.csv (data is not in git). ~5,976 left: mostly Noriega2023 rows whose GT
   species is misspelled ('Onthoagus', 'Sisyus'), so its row is not found and several readings fit.
+- More passes (2026-10-29): misspelled species matched to the printed name (+2,040), Noriega2023 lined up
+  row by row with its per-specimen table (+2,852), loose names / case-blind codes / epithet tie-break
+  (+721): 10,195 of 10,558 date cells repaired; 363 on the review page
+  https://claude.ai/artifact/Ucz5RZoJBpodZ7b7pHDCYz (answers in its db, collection 'answers').
+  Rescored: 0.5314 -> 0.5327 (Nunes +0.054, Arnan2012 +0.049, Noriega +0.029, GibbParr +0.029).
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
