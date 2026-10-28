@@ -30,6 +30,8 @@ src/
   v10/           full_run_v10.py: v9 + flag columns that are categories of one trait (category_tree.py)
   v11/           full_run_v11.py: v9 + names still printed as codes (name_parts.py) + species
                  duels (species_duel.py); both ask two options at a time (duels.py) — 35
+  v12/           full_run_v12.py: v11 + a table whose head has no names continues the previous
+                 one (head_to_table.py); the joined pages' new cells decoded — 35
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```
