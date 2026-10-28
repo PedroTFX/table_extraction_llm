@@ -528,6 +528,17 @@
 - Paused 2026-10-23 17:09 in the head stage: 837 of ~1236 tables saved (102 papers). Skipped as too
   big: Bucher2024 t4, McDonald2021 t4, Noriega2023 t6. Resume (from src/v7): python grit_run.py all
 
+## Grit GT Excel dates repaired (2026-10-28)
+
+- source/repair_gt_excel_dates.py (pass 1: trait verbatim + one candidate in the species' row): 371 cells.
+  Pass 2 (the person's idea: search the paper for the date's possible originals, keep the one that
+  makes sense next to the trait's other values): 4,211 more (one candidate in the species' row, or one
+  in the paper that fits). 4,582 cells in 28 papers; backups in data/backup/grit_testing/, logs in
+  data/grit_gt_date_repairs*.csv (data is not in git). ~5,976 left: mostly Noriega2023 rows whose GT
+  species is misspelled ('Onthoagus', 'Sisyus'), so its row is not found and several readings fit.
+- v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
+  +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
+
 ## Category columns (v10, category_tree.py, 2026-10-28) — RUN on grit, NOT adopted (v9 stays best)
 
 - Grit (remote): mean F1 0.522 -> 0.521. 152 columns asked (had a heading): 77 category, 48 own, 27 unsure;
