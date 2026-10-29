@@ -76,6 +76,20 @@ Not touched: papers without a subject, tables of another organism, tables with a
 column (Borges t1's 'Species' column holds the prey: not in this step), names (Mirzaee's
 'Width (mm)' for the GT's 'Ootheca width'), value marks ('0.104 ± 0.027a').
 
+## Dev iterations (dev papers only)
+
+- **1** (grit dev, repeatable scorer): Grasser 0 -> 0.165, the others unchanged. Subjects right
+  in all 7 (Wright's by duels: the weevil 0.998 over its host tree, then 0.997 over 'several').
+  Wrong: a table with no sure Q-ROWS still got the subject (Wright t0: '(no name, column 0)'
+  rows); Q-COLUMN called correlations, MS columns (Grasser t0, t1) and definitions (Luo t0)
+  'value'; Grasser's 'LAM' unsure between value and group. Not this step: value marks
+  ('0.59a', '0.157 ± 0.077A': the endings shape needs a space and a lower-case letter) and
+  Luo's names ('HW (mm)': the meaning step left it as printed).
+- **2**: a table that gets its species only from this step, or that a clash brings back, needs
+  a sure Q-ROWS answer, and for trait rows a sure names column and values column; Q-COLUMN
+  gains 'test' (a result of a test, model or comparison) and 'label' covers definitions; the
+  value option says its header may name the group it was measured under.
+
 ## Measure
 
 - **Dev (looked at):** Luo2023, Mirzaee2023, Tsai2020 (109 split, dev); TOMBERLIN2002,

@@ -56,13 +56,15 @@ ROWS = [("individual", "one individual, specimen, colony, nest or sample of {}, 
         ("trait", "one trait or measured variable, named in the row, with its values in the other columns")]
 
 COL_Q = "What does the column '{}' give for each row?"
-COLS = [("value", "a value measured on {}: a measurement, count, proportion or category, or a mean with "
-                  "its SD or SE"),
+COLS = [("value", "a value measured on {} (its header may name the group or condition it was measured "
+                  "under): a measurement, count, proportion or category, or a mean with its SD or SE"),
         ("group", "which group of {} the row is about: its treatment, diet, prey, temperature, age, sex, "
                   "caste, line, population, site or time"),
         ("statistic", "which statistic the row gives: minimum, maximum, mean, median, SD or range"),
         ("name", "the name of the trait or measured variable the row is about"),
-        ("label", "an identifier of the row or specimen, a sample size, a test result or a note")]
+        ("test", "a result of a statistical test, model or comparison: F, MS, p, a correlation, or a "
+                 "difference between groups"),
+        ("label", "an identifier of the row or specimen, a sample size, a definition or a note")]
 
 
 def _flat(s):
@@ -123,6 +125,7 @@ def _distinct(t, col, k=8):
 def decide_table(ask, t, fields, subject, sp_rec, kind_dec, struct_dec, above, below):
     """One table of a paper with a subject -> its record; rec["use"] when the answers apply."""
     rec = {"use": False}
+    lifts = False                                       # a dropped table this step would bring back
     state = _table_state(t, subject, above, below)
     yes, own_is = OWN_YES.format(subject), OWN_IS.format(subject)
     if sp_rec.get("species"):
@@ -151,6 +154,7 @@ def decide_table(ask, t, fields, subject, sp_rec, kind_dec, struct_dec, above, b
         rec["kind_clash"] = {"kind": c, "choice": ch, "probs": probs}
         if not duels.sure(ch, probs, "own"):
             return rec
+        lifts = True
     if struct_dec and struct_dec.get("action") in ("long", "wide"):
         rec["use"], rec["rows"] = True, {"choice": None, "kept": struct_dec["action"]}
         return rec                                      # the structure step's sure reading stays
@@ -167,6 +171,10 @@ def decide_table(ask, t, fields, subject, sp_rec, kind_dec, struct_dec, above, b
         rec["structure_clash"] = {"structure": c, "choice": ch, "probs": probs}
         if not duels.sure(ch, probs, "rows"):
             return rec
+        lifts = True
+    new = rec["own"]["by"] == "Q-OWN"                   # the table gets its species from this step
+    if (lifts or new) and held is None:
+        return rec                                      # brought back only with a sure reading
     rec["use"] = True
     if rec["rows"]["choice"] in ("group", "statistic", "trait"):
         cols = [(k, v.format(subject)) for k, v in COLS]
@@ -178,7 +186,15 @@ def decide_table(ask, t, fields, subject, sp_rec, kind_dec, struct_dec, above, b
             held, log = duels.duel(ask, state + f" The column '{col.name}' holds: {vals}.",
                                    COL_Q.format(col.name), cols)
             rec["cols"][col.name] = {"choice": cols[held][0] if held is not None else None, "duels": log}
+        if (lifts or new) and rec["rows"]["choice"] == "trait" and not readable(rec):
+            rec["use"] = False                          # no sure names and values column: stays as it was
     return rec
+
+
+def readable(rec):
+    """A trait-per-row table reads long only with a sure names column and a sure values column."""
+    got = {a.get("choice") for a in (rec.get("cols") or {}).values()}
+    return "name" in got and "value" in got
 
 
 def run(run_dir, papers):
@@ -266,6 +282,6 @@ def apply(d, fields):
             out[c] = "sampleTreatment"
         elif a == "statistic":
             out[c] = "measurementStatistic"
-        elif a == "label" and tag in TRAITS:
+        elif a in ("label", "test") and tag in TRAITS:
             out[c] = "none"
     return out, extra
