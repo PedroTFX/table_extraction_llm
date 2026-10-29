@@ -1,15 +1,76 @@
 {
  "codes": {
+  "dst": {
+   "code": "Dst",
+   "definition": {
+    "candidates": [
+     {
+      "term": "absolute differentiation (Dst)",
+      "entry": "the term the legend gives code 'Dst' (listed under 'indices of genetic differentiation')"
+     },
+     {
+      "term": "indices of genetic differentiation",
+      "entry": "the heading code 'Dst' is listed under; the legend gives this same name to 1 other code(s): 'Gst'"
+     },
+     {
+      "term": "pairwise Gst and Dst among nearby sub-areas",
+      "entry": "the term the legend gives code 'Dst' (listed under 'Gst and Dst'); the legend gives this same name to 1 other code(s): 'Gst'"
+     },
+     {
+      "term": "Gst and Dst",
+      "entry": "the heading code 'Dst' is listed under; the legend gives this same name to 1 other code(s): 'Gst'"
+     }
+    ],
+    "duels": [
+     {
+      "a": "absolute differentiation (Dst)",
+      "b": "indices of genetic differentiation",
+      "choice": "a",
+      "probs": {
+       "a": 0.933,
+       "b": 0.067
+      }
+     },
+     {
+      "a": "pairwise Gst and Dst among nearby sub-areas",
+      "b": "absolute differentiation (Dst)",
+      "choice": "b",
+      "probs": {
+       "a": 0.046,
+       "b": 0.954
+      }
+     },
+     {
+      "a": "absolute differentiation (Dst)",
+      "b": "Gst and Dst",
+      "choice": "a",
+      "probs": {
+       "a": 0.927,
+       "b": 0.073
+      }
+     }
+    ],
+    "term": "absolute differentiation (Dst)",
+    "final": {
+     "choice": "yes",
+     "probs": {
+      "yes": 0.977,
+      "none": 0.023
+     }
+    }
+   },
+   "name": "absolute differentiation (Dst)"
+  },
   "gst": {
    "code": "Gst",
    "definition": {
     "candidates": [
      {
       "term": "standardized differentiation (Gst; Nei, 1987; Appendix S1)",
-      "entry": "the term the legend gives code 'Gst' (listed under 'genetic differentiation')"
+      "entry": "the term the legend gives code 'Gst' (listed under 'indices of genetic differentiation')"
      },
      {
-      "term": "genetic differentiation",
+      "term": "indices of genetic differentiation",
       "entry": "the heading code 'Gst' is listed under; the legend gives this same name to 1 other code(s): 'Dst'"
      },
      {
@@ -24,11 +85,11 @@
     "duels": [
      {
       "a": "standardized differentiation (Gst; Nei, 1987; Appendix S1)",
-      "b": "genetic differentiation",
+      "b": "indices of genetic differentiation",
       "choice": "a",
       "probs": {
-       "a": 0.938,
-       "b": 0.062
+       "a": 0.991,
+       "b": 0.009
       }
      },
      {
@@ -36,8 +97,8 @@
       "b": "standardized differentiation (Gst; Nei, 1987; Appendix S1)",
       "choice": "b",
       "probs": {
-       "a": 0.112,
-       "b": 0.888
+       "a": 0.018,
+       "b": 0.982
       }
      },
      {
@@ -64,6 +125,12 @@
  },
  "parts": {},
  "columns": {
+  "1|Dst": {
+   "code": "Dst",
+   "name": "absolute differentiation (Dst)",
+   "parts": [],
+   "applied": true
+  },
   "1|Gst": {
    "code": "Gst",
    "name": "standardized differentiation (Gst; Nei, 1987; Appendix S1)",

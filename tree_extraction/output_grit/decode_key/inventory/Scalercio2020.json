@@ -135,7 +135,7 @@
  "calls": 15,
  "categories": [
   {
-   "variable": "genetic differentiation",
+   "variable": "indices of genetic differentiation",
    "code": "Gst",
    "term": "standardized differentiation (Gst; Nei, 1987; Appendix S1)",
    "unit": "u2",
@@ -144,7 +144,7 @@
    "explanation": "standardized differentiation ( ; Nei, 1987; Appendix S1"
   },
   {
-   "variable": "genetic differentiation",
+   "variable": "indices of genetic differentiation",
    "code": "Dst",
    "term": "absolute differentiation (Dst)",
    "unit": "u2",
@@ -225,7 +225,7 @@
    "explanation": "the first and the last when adults fly"
   },
   {
-   "variable": "voltinism",
+   "variable": "phenology",
    "code": "(vii)",
    "term": "voltinism",
    "unit": "u4",
@@ -234,85 +234,76 @@
    "explanation": ""
   },
   {
-   "variable": "mean annual temperature",
+   "variable": "mean annual temperature and precipitation",
    "code": "(viii)",
-   "term": "mean annual temperature",
+   "term": "mean annual temperature and precipitation",
    "unit": "u4",
    "model_label": "temperature",
    "label": "temperature",
-   "explanation": "mean annual"
+   "explanation": "mean annual and precipitation"
   },
   {
-   "variable": "precipitation",
+   "variable": "mean annual temperature and precipitation",
    "code": "(ix)",
-   "term": "precipitation",
+   "term": "mean annual temperature and precipitation",
    "unit": "u4",
-   "model_label": "precipitation",
-   "label": "precipitation",
-   "explanation": ""
+   "model_label": "temperature",
+   "label": "temperature",
+   "explanation": "mean annual and precipitation"
   },
   {
-   "variable": "standard deviation of mean temperature",
+   "variable": "standard deviation of mean temperature and precipitation",
    "code": "(x)",
-   "term": "standard deviation of mean temperature",
+   "term": "standard deviation of mean temperature and precipitation",
    "unit": "u4",
    "model_label": "standard deviation",
    "label": "standard deviation",
-   "explanation": "of mean temperature"
+   "explanation": "of mean temperature and precipitation"
   },
   {
-   "variable": "upper 95% confidence limit of temperature mean",
+   "variable": "standard deviation of mean temperature and precipitation",
+   "code": "(xi)",
+   "term": "standard deviation of mean temperature and precipitation",
+   "unit": "u4",
+   "model_label": "standard deviation",
+   "label": "standard deviation",
+   "explanation": "of mean temperature and precipitation"
+  },
+  {
+   "variable": "upper 95% confidence limit of temperature mean and of precipitation mean",
    "code": "(xii)",
-   "term": "upper 95% confidence limit of temperature mean",
+   "term": "upper 95% confidence limit of temperature mean and of precipitation mean",
    "unit": "u4",
    "model_label": "confidence limit",
    "label": "confidence limit",
-   "explanation": "upper 95% of temperature mean"
+   "explanation": "upper 95% of temperature mean and of precipitation mean"
+  },
+  {
+   "variable": "upper 95% confidence limit of temperature mean and of precipitation mean",
+   "code": "(xiii)",
+   "term": "upper 95% confidence limit of temperature mean and of precipitation mean",
+   "unit": "u4",
+   "model_label": "confidence limit",
+   "label": "confidence limit",
+   "explanation": "upper 95% of temperature mean and of precipitation mean"
   },
   {
    "variable": "direction of winds",
    "code": "0",
-   "term": "-9 degrees",
+   "term": "- } 9 degrees",
    "unit": "u6",
-   "model_label": "-9 degrees",
-   "label": "9 degrees",
-   "explanation": ""
-  },
-  {
-   "variable": "direction of winds",
-   "code": "9",
-   "term": "9 degrees",
-   "unit": "u6",
-   "model_label": "9 degrees",
-   "label": "9 degrees",
-   "explanation": ""
+   "model_label": "degrees",
+   "label": "degrees",
+   "explanation": "} 9"
   },
   {
    "variable": "direction of winds",
    "code": "35",
    "term": "350–359 degrees",
    "unit": "u6",
-   "model_label": "350–359 degrees",
-   "label": "350–359 degrees",
-   "explanation": ""
-  },
-  {
-   "variable": "frequency",
-   "code": "freq",
-   "term": "frequency",
-   "unit": "u9",
-   "model_label": "frequency",
-   "label": "frequency",
-   "explanation": ""
-  },
-  {
-   "variable": "angle of the segment tangential to the strait and the angle of the wind blowing from the north",
-   "code": "j",
-   "term": "j",
-   "unit": "u9",
-   "model_label": "j",
-   "label": "j",
-   "explanation": ""
+   "model_label": "degrees",
+   "label": "degrees",
+   "explanation": "350–359"
   },
   {
    "variable": "geographic region",
@@ -337,27 +328,27 @@
    "code": "51.8%",
    "term": "group 2 in Figure 1",
    "unit": "u16",
-   "model_label": "group 2",
-   "label": "group 2",
-   "explanation": "in Figure 1"
+   "model_label": "group",
+   "label": "group",
+   "explanation": "2 in Figure 1"
   },
   {
    "variable": "complete spatial segregation",
    "code": "37.0 + 2.5%",
    "term": "group 2 and 4 in Figure 1",
    "unit": "u16",
-   "model_label": "group 2 and 4",
-   "label": "group 2 and 4",
-   "explanation": "in Figure 1"
+   "model_label": "group",
+   "label": "group",
+   "explanation": "2 and 4 in Figure 1"
   },
   {
    "variable": "incomplete segregation",
    "code": "8.6%",
    "term": "group 3 in Figure 1",
    "unit": "u16",
-   "model_label": "group 3",
-   "label": "group 3",
-   "explanation": "in Figure 1"
+   "model_label": "group",
+   "label": "group",
+   "explanation": "3 in Figure 1"
   },
   {
    "variable": "species traits",
@@ -416,17 +407,17 @@
    "unit": "u4"
   },
   {
-   "variable": "environmental variables",
+   "variable": "relative geographic distances between Sicilian and SIP specimens",
    "code": "",
-   "label": "relative geographic distances between Sicilian and SIP specimens",
+   "label": "wolf distance",
    "explanation": "",
    "evidence": "named",
    "unit": "u5"
   },
   {
-   "variable": "environmental variables",
+   "variable": "relative geographic distances between Sicilian and SIP specimens",
    "code": "",
-   "label": "tendency of winds to facilitate or hamper the crossing of the Messina strait",
+   "label": "drunk distance",
    "explanation": "",
    "evidence": "named",
    "unit": "u5"
@@ -454,22 +445,6 @@
    "explanation": "",
    "evidence": "named",
    "unit": "u13"
-  },
-  {
-   "variable": "traits",
-   "code": "",
-   "label": "dispersive species",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u17"
-  },
-  {
-   "variable": "ecological constraints",
-   "code": "",
-   "label": "weaker ecological constraints",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u17"
   },
   {
    "variable": "traits",
@@ -506,7 +481,7 @@
   {
    "variable": "traits",
    "code": "",
-   "label": "shorter flight period",
+   "label": "flight period",
    "explanation": "",
    "evidence": "named",
    "unit": "u18"
@@ -514,7 +489,7 @@
   {
    "variable": "traits",
    "code": "",
-   "label": "lower number of generations",
+   "label": "number of generations",
    "explanation": "",
    "evidence": "named",
    "unit": "u18"
@@ -522,23 +497,35 @@
  ],
  "dropped": [
   {
-   "variable": "standard deviation of precipitation",
-   "code": "(xi)",
-   "term": "standard deviation of mean precipitation",
+   "variable": "strength",
+   "code": "2–5",
+   "term": "",
    "why": "not printed within one unit"
   },
   {
-   "variable": "upper 95% confidence limit of precipitation mean",
-   "code": "(xiii)",
-   "term": "upper 95% confidence limit of precipitation mean",
+   "variable": "strength",
+   "code": "5–7",
+   "term": "",
    "why": "not printed within one unit"
   },
   {
-   "variable": "strength of a given wind of direction j",
-   "code": "str",
-   "term": "strength of a given wind of direction j",
+   "variable": "strength",
+   "code": "7–10",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "strength",
+   "code": "10–15",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "strength",
+   "code": "15–20",
+   "term": "",
    "why": "not printed within one unit"
   }
  ],
- "seconds": 54.6
+ "seconds": 138.2
 }

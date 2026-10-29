@@ -1,16 +1,13 @@
-  [semantic] left unmatched: 'N. acuta' vs 'antennal scape length' (llm said different traits)
   [semantic] left unmatched: 'N. acuta' vs 'habitat elevation' (llm said different traits)
   [semantic] left unmatched: 'N. acuta' vs 'type of habitat' (llm said different traits)
-  [semantic] left unmatched: 'N. metallica' vs 'elytral length' (llm said different traits)
-  [semantic] left unmatched: 'N. metallica' vs 'right metathoracic tibia length' (llm said different traits)
-  [semantic] left unmatched: 'N. metallica' vs 'dorsal-ventral thickness' (llm said different traits)
-  [semantic] left unmatched: '\\(\\delta13C\\) (‰) (range)' vs 'elytral length' (llm said different traits)
-  [semantic] left unmatched: '\\(\\delta13C\\) (‰) (range)' vs 'eye distance' (llm said different traits)
-  [semantic] left unmatched: '\\(\\delta13C\\) (‰) (range)' vs 'elytral width' (llm said different traits)
-  [semantic] left unmatched: '\\(\\delta15N\\) (‰) (range)' vs 'elytral length' (llm said different traits)
+  [semantic] left unmatched: '\\(\\delta15N\\) (‰) (range)' vs 'habitat elevation' (llm said different traits)
+  [semantic] left unmatched: '\\(\\delta15N\\) (‰) (range)' vs 'type of habitat' (llm said different traits)
+  [semantic] left unmatched: 'habitat' vs 'habitat elevation' (llm said different traits)
+  [semantic] left unmatched: 'habitat' vs 'type of habitat' (llm said different traits)
+  [semantic] left unmatched: 'habitat2' vs 'habitat elevation' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Schat2024/Schat2024.xlsx  (4330 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Schat2024/Schat2024.csv  (153 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/Schat2024/Schat2024.csv  (4916 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -29,18 +26,43 @@ TAXON NAME REMAP (pred -> gt, 12 pair(s))
   'N. sahlbergii' -> 'Nebria sahlbergii'
   'N. vandykei' -> 'Nebria vandykei'
 
+TAXON NAMES LEFT UNMAPPED (12)
+  'acuta': no ground-truth name denotes this organism
+  'crassicornis': no ground-truth name denotes this organism
+  'eschscholtzii': no ground-truth name denotes this organism
+  'gebleri': no ground-truth name denotes this organism
+  'kincaidi': no ground-truth name denotes this organism
+  'mannerheimi': no ground-truth name denotes this organism
+  'meanyi': no ground-truth name denotes this organism
+  'metallica': no ground-truth name denotes this organism
+  'paradisi': no ground-truth name denotes this organism
+  'piperi': no ground-truth name denotes this organism
+  'sahlbergii': no ground-truth name denotes this organism
+  'vandykei': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 9 pair(s))
+  'Elytra_Length' -> 'elytral length'
+  'Elytra_Width' -> 'elytral width'
+  'Eye_distance' -> 'eye distance'
+  'Femur' -> 'right metathoracic femur length'
+  'Pronotum_Width_Ratio' -> 'pronotum width ratio'
+  'Scape' -> 'antennal scape length'
+  'Thickness' -> 'dorsal-ventral thickness'
+  'Tibia' -> 'right metathoracic tibia length'
+  'habitat2' -> 'type of habitat'
+
 ROW-LEVEL (key match)
   matched (TP)        : 0
   missed (FN)         : 4330
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 153   <- GT never covers this trait: nothing to score against
+  spurious, in scope  : 3897   <- GT covers this trait: real errors
+  spurious, out of scope: 1019   <- GT never covers this trait: nothing to score against
 
   STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
   SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                            153
+    measurementType                           1019
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
@@ -84,20 +106,22 @@ measurementType COVERAGE
   pc1 (77.1% of variance) (range)                   0    12   PRED-ONLY
   pc2 (11.5% of variance) (range)                   0    12   PRED-ONLY
   n. acuta                                          0    11   PRED-ONLY
-  antennal scape length                           433     0   GT-ONLY
+  antennal scape length                           433   433   
+  color                                             0   433   PRED-ONLY
   n. crassicornis                                   0    11   PRED-ONLY
   \(\delta13c\) (‰) (range)                         0     4   PRED-ONLY
   \(\delta15n\) (‰) (range)                         0     4   PRED-ONLY
-  eye distance                                    433     0   GT-ONLY
-  dorsal-ventral thickness                        433     0   GT-ONLY
+  eye distance                                    433   433   
+  dorsal-ventral thickness                        433   433   
   habitat elevation                               433     0   GT-ONLY
-  elytral length                                  433     0   GT-ONLY
-  elytral width                                   433     0   GT-ONLY
+  elytral length                                  433   433   
+  elytral width                                   433   433   
   n. eschscholtzii                                  0    11   PRED-ONLY
-  right metathoracic femur length                 433     0   GT-ONLY
-  type of habitat                                 433     0   GT-ONLY
+  right metathoracic femur length                 433   433   
+  habitat                                           0   433   PRED-ONLY
+  type of habitat                                 433   433   
   n. kincaidi                                       0    11   PRED-ONLY
-  right metathoracic tibia length                 433     0   GT-ONLY
+  right metathoracic tibia length                 433   433   
   n. mannerheimii                                   0    11   PRED-ONLY
   n. meanyi                                         0    11   PRED-ONLY
   n. metallica                                      0    11   PRED-ONLY
@@ -105,12 +129,15 @@ measurementType COVERAGE
   n. piperi                                         0    11   PRED-ONLY
   n. sahlbergii                                     0    11   PRED-ONLY
   n. vandykei                                       0    11   PRED-ONLY
-  pronotum width ratio                            433     0   GT-ONLY
+  pronotum width ratio                            433   433   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'habitat elevation'                vs pred 'habitat'                          sim=0.81
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     0  4330   id+type+value
-             (153 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0     0  4330   basis+id+type+value+stat+sex+stage
-             (153 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  core        0.000  0.000  0.000      0  3897  4330   id+type+value
+             (1019 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0  3897  4330   basis+id+type+value+stat+sex+stage
+             (1019 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
              (F1 +0.000 vs previous)

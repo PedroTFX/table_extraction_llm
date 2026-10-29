@@ -10,7 +10,7 @@
   "cells": {},
   "units": {
    "offered": [
-    "u15"
+    "u42"
    ],
    "choice": null
   }
@@ -62,6 +62,1099 @@
   "units": {
    "offered": [],
    "choice": null
+  }
+ },
+ "3:0": {
+  "cells": {
+   "WS": {
+    "term": "Worker size",
+    "parts": [
+     "WS"
+    ],
+    "options": {
+     "WS": {
+      "evidence": "explicit",
+      "labels": [
+       "Worker size"
+      ]
+     }
+    },
+    "evidence": {
+     "WS": "explicit"
+    },
+    "probs": {
+     "WS | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "WS": {
+      "e0": 0.98,
+      "keep": 0.02
+     },
+     "WS | QB": {}
+    }
+   },
+   "WP": {
+    "term": "Worker polymorphism",
+    "parts": [
+     "WP"
+    ],
+    "options": {
+     "WP": {
+      "evidence": "explicit",
+      "labels": [
+       "Worker polymorphism"
+      ]
+     }
+    },
+    "evidence": {
+     "WP": "explicit"
+    },
+    "probs": {
+     "WP | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "WP": {
+      "e0": 0.99,
+      "keep": 0.01
+     },
+     "WP | QB": {}
+    }
+   },
+   "CS": {
+    "term": "Colony size",
+    "parts": [
+     "CS"
+    ],
+    "options": {
+     "CS": {
+      "evidence": "explicit",
+      "labels": [
+       "Colony size"
+      ]
+     }
+    },
+    "evidence": {
+     "CS": "explicit"
+    },
+    "probs": {
+     "CS | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "CS": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "CS | QB": {}
+    }
+   },
+   "LIQFOOD": {
+    "term": "Liquid foods",
+    "parts": [
+     "LIQFOOD"
+    ],
+    "options": {
+     "LIQFOOD": {
+      "evidence": "explicit",
+      "labels": [
+       "Liquid foods"
+      ]
+     }
+    },
+    "evidence": {
+     "LIQFOOD": "explicit"
+    },
+    "probs": {
+     "LIQFOOD | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "LIQFOOD": {
+      "e0": 0.999,
+      "keep": 0.001
+     },
+     "LIQFOOD | QB": {}
+    }
+   },
+   "ICF": {
+    "term": "Independent Colony Foundation",
+    "parts": [
+     "ICF"
+    ],
+    "options": {
+     "ICF": {
+      "evidence": "explicit",
+      "labels": [
+       "Independent Colony Foundation"
+      ]
+     }
+    },
+    "evidence": {
+     "ICF": "explicit"
+    },
+    "probs": {
+     "ICF | QK": {
+      "code": 0.997,
+      "word": 0.003
+     },
+     "ICF": {
+      "e0": 0.993,
+      "keep": 0.007
+     },
+     "ICF | QB": {}
+    }
+   },
+   "FORSTRA": {
+    "term": "Foraging strategy",
+    "parts": [
+     "FORSTRA"
+    ],
+    "options": {
+     "FORSTRA": {
+      "evidence": "explicit",
+      "labels": [
+       "Foraging strategy"
+      ]
+     }
+    },
+    "evidence": {
+     "FORSTRA": "explicit"
+    },
+    "probs": {
+     "FORSTRA | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "FORSTRA": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "FORSTRA | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u42"
+   ],
+   "choice": null
+  }
+ },
+ "3:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "4:1": {
+  "cells": {
+   "5": {
+    "term": null,
+    "parts": [
+     "5"
+    ],
+    "options": {
+     "5": {
+      "evidence": "explicit",
+      "labels": [
+       "Both monogyny and",
+       "Both monodomy",
+       "Both DCF"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "5 | QK": {
+      "code": 0.951,
+      "word": 0.049
+     },
+     "5": {
+      "e0": 0.041,
+      "e1": 0.15,
+      "e2": 0.007,
+      "keep": 0.802
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.011,
+    "p1": 0.015,
+    "p2": 0.008,
+    "several": 0.029,
+    "none": 0.937
+   }
+  },
+  "v3": "cells past 25: 38, printed whole: 0, table footnote: 0"
+ },
+ "4:2": {
+  "cells": {
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal",
+       "Dominant"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.968,
+      "word": 0.032
+     },
+     "1": {
+      "e0": 0.014,
+      "e1": 0.031,
+      "keep": 0.955
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 65, printed whole: 0, table footnote: 0"
+ },
+ "4:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  },
+  "v3": "cells past 25: 15, printed whole: 0, table footnote: 0"
+ },
+ "4:4": {
+  "cells": {
+   "0": {
+    "term": "Monodomy",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Monodomy"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.979,
+      "word": 0.021
+     },
+     "0": {
+      "e0": 0.711,
+      "keep": 0.289
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.02,
+    "p1": 0.008,
+    "p2": 0.16,
+    "p3": 0.335,
+    "p4": 0.009,
+    "several": 0.143,
+    "none": 0.324
+   },
+   "chosen": [
+    "u17"
+   ]
+  }
+ },
+ "4:5": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal",
+       "Subordinate",
+       "Monogyny",
+       "Monodomy",
+       "DCF"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "0": {
+      "e0": 0.008,
+      "e1": 0.004,
+      "e2": 0.001,
+      "e3": 0.004,
+      "e4": 0.005,
+      "keep": 0.977
+     }
+    }
+   },
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal",
+       "Dominant"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "1": {
+      "e0": 0.331,
+      "e1": 0.102,
+      "keep": 0.567
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.233,
+    "p1": 0.006,
+    "p2": 0.001,
+    "p3": 0.004,
+    "p4": 0.0,
+    "several": 0.019,
+    "none": 0.737
+   }
+  }
+ },
+ "4:6": {
+  "cells": {
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal",
+       "Dominant"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "1": {
+      "e0": 0.007,
+      "e1": 0.265,
+      "keep": 0.729
+     }
+    }
+   },
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal",
+       "Subordinate",
+       "Monogyny",
+       "Monodomy",
+       "DCF"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "0": {
+      "e0": 0.01,
+      "e1": 0.005,
+      "e2": 0.001,
+      "e3": 0.004,
+      "e4": 0.008,
+      "keep": 0.972
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.007,
+    "p1": 0.002,
+    "p2": 0.003,
+    "p3": 0.002,
+    "p4": 0.002,
+    "several": 0.021,
+    "none": 0.964
+   }
+  }
+ },
+ "4:7": {
+  "cells": {
+   "1": {
+    "term": "Dominant",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal",
+       "Dominant"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "1": {
+      "e0": 0.237,
+      "e1": 0.41,
+      "keep": 0.354
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal",
+       "Subordinate",
+       "Monogyny",
+       "Monodomy",
+       "DCF"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "0": {
+      "e0": 0.063,
+      "e1": 0.041,
+      "e2": 0.018,
+      "e3": 0.067,
+      "e4": 0.231,
+      "keep": 0.579
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "none",
+   "probs": {
+    "p0": 0.249,
+    "p1": 0.033,
+    "p2": 0.17,
+    "p3": 0.045,
+    "p4": 0.001,
+    "several": 0.117,
+    "none": 0.386
+   }
+  }
+ },
+ "4:8": {
+  "cells": {
+   "0": {
+    "term": "Monogyny",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Monogyny"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "0": {
+      "e0": 0.95,
+      "keep": 0.05
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p2",
+   "probs": {
+    "p0": 0.001,
+    "p1": 0.001,
+    "p2": 0.932,
+    "p3": 0.038,
+    "p4": 0.0,
+    "several": 0.009,
+    "none": 0.02
+   },
+   "chosen": [
+    "u14"
+   ]
+  }
+ },
+ "4:9": {
+  "cells": {
+   "0": {
+    "term": "Monodomy",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Monodomy"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.985,
+      "word": 0.015
+     },
+     "0": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p3",
+   "probs": {
+    "p0": 0.068,
+    "p1": 0.007,
+    "p2": 0.055,
+    "p3": 0.57,
+    "p4": 0.0,
+    "several": 0.05,
+    "none": 0.249
+   },
+   "chosen": [
+    "u17"
+   ]
+  }
+ },
+ "4:10": {
+  "cells": {
+   "0": {
+    "term": "Nonstrictly diurnal",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.971,
+      "word": 0.029
+     },
+     "0": {
+      "e0": 0.99,
+      "keep": 0.01
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "Strictly diurnal",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "1": {
+      "e0": 0.976,
+      "keep": 0.024
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.907,
+    "p1": 0.0,
+    "p2": 0.0,
+    "p3": 0.0,
+    "p4": 0.0,
+    "several": 0.004,
+    "none": 0.088
+   },
+   "chosen": [
+    "u11"
+   ]
+  }
+ },
+ "4:11": {
+  "cells": {
+   "1": {
+    "term": "Dominant",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Dominant"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.966,
+      "word": 0.034
+     },
+     "1": {
+      "e0": 0.899,
+      "keep": 0.101
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": "Subordinate",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Subordinate"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "0": {
+      "e0": 0.986,
+      "keep": 0.014
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p1",
+   "probs": {
+    "p0": 0.014,
+    "p1": 0.956,
+    "p2": 0.0,
+    "p3": 0.0,
+    "p4": 0.0,
+    "several": 0.017,
+    "none": 0.013
+   },
+   "chosen": [
+    "u12"
+   ]
+  }
+ },
+ "4:12": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "0": {
+      "e0": 0.045,
+      "keep": 0.955
+     }
+    }
+   },
+   "1": {
+    "term": "Strictly diurnal",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "1": {
+      "e0": 0.812,
+      "keep": 0.188
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.968,
+    "p1": 0.004,
+    "p2": 0.0,
+    "p3": 0.0,
+    "p4": 0.0,
+    "several": 0.008,
+    "none": 0.019
+   },
+   "chosen": [
+    "u11"
+   ]
+  }
+ },
+ "4:13": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "0": {
+      "e0": 0.06,
+      "keep": 0.94
+     }
+    }
+   },
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "1": {
+      "e0": 0.079,
+      "keep": 0.921
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.809,
+    "p1": 0.104,
+    "p2": 0.001,
+    "p3": 0.001,
+    "p4": 0.0,
+    "several": 0.019,
+    "none": 0.066
+   },
+   "chosen": [
+    "u11"
+   ]
+  }
+ },
+ "4:14": {
+  "cells": {
+   "1": {
+    "term": "Strictly diurnal",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "Strictly diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.994,
+      "word": 0.006
+     },
+     "1": {
+      "e0": 0.906,
+      "keep": 0.094
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": "Nonstrictly diurnal",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "Nonstrictly diurnal"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.987,
+      "word": 0.013
+     },
+     "0": {
+      "e0": 0.911,
+      "keep": 0.089
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11",
+    "u12",
+    "u14",
+    "u17",
+    "u18"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.957,
+    "p1": 0.007,
+    "p2": 0.0,
+    "p3": 0.0,
+    "p4": 0.0,
+    "several": 0.005,
+    "none": 0.03
+   },
+   "chosen": [
+    "u11"
+   ]
   }
  },
  "_endings_done": true

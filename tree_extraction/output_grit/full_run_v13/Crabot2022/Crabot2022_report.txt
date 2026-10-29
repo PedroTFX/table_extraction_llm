@@ -1,29 +1,52 @@
+  [semantic] matched by values: 'Territoriality' -> 'Territorialiaty'
+  [semantic] matched by values: 'Larval Strategy' -> 'Larvar behaviour'
+  [semantic] matched by values: 'Bivoltine' -> 'Biovoltine'
+  [semantic] matched by values: 'Larval Body size' -> 'Larvar Body'
+  [semantic] matched by values: 'Abdo Size' -> 'Abdomen size'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Crabot2022/Crabot2022.xlsx  (722 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Crabot2022/Crabot2022.csv  (0 rows)
+PREDICTION   : ../../output_grit/full_run_v13/Crabot2022/Crabot2022.csv  (800 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 0
-  missed (FN)         : 722
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Calopteryx splendens' -> 'Calopteryx splendes'
 
-  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+TAXON NAMES LEFT UNMAPPED (2)
+  'Coenagrion puella': no ground-truth name denotes this organism
+  'Enallagma cyathigerum': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Abdo Size' -> 'Abdomen size'
+  'Bivoltine' -> 'Biovoltine'
+  'Larval Body size' -> 'Larvar Body'
+  'Larval Strategy' -> 'Larvar behaviour'
+  'Migratory' -> 'Migratory behaviour'
+  'Territoriality' -> 'Territorialiaty'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 639
+  missed (FN)         : 83
+  spurious, in scope  : 121   <- GT covers this trait: real errors
+  spurious, out of scope: 40   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.799 / 0.885 / 0.840   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.841 / 0.885 / 0.862   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.885   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             40
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0      0    n/a
-  measurementMethod             0      0    n/a
-  measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  basisOfRecord                 0    639  0.000  <-- low
+  measurementMethod             0    301  0.000  <-- low
+  measurementUnit               0    110  0.000  <-- low
+  measurementStatistic          0    639  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
+  sex                           0    639  0.000  <-- low
+  lifeStage                     0    639  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
@@ -33,49 +56,53 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
-  externalLink                  0      0    n/a
+  associatedReferences          0    639  0.000  <-- low
+  externalLink                  0    639  0.000  <-- low
 
-WHY THE 722 MISSED ROWS MISSED
-  species not in prediction                 722
+WHY THE 83 MISSED ROWS MISSED
+  species not in prediction                   0
   species present, trait missing              0
-  species+trait present, value differs        0
+  species+trait present, value differs       83
 
-  SPECIES IN GT BUT NOT IN PREDICTION (38 distinct), closest predicted name:
-     gt 'Aeshna affinis'                     (nothing similar in the prediction)   x19
-     gt 'Aeshna cyanea'                      (nothing similar in the prediction)   x19
-     gt 'Aeshna mixta'                       (nothing similar in the prediction)   x19
-     gt 'Anax imperator'                     (nothing similar in the prediction)   x19
-     gt 'Brachytron pratense'                (nothing similar in the prediction)   x19
-     gt 'Calopteryx splendes'                (nothing similar in the prediction)   x19
-  -> 6 species mismatches explain 114 of 722 misses (16%) — scattered; no single cause
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'apma'                       ->  'april-may'                  x25
+     'sepno'                      ->  'september-november'         x22
+     'juau'                       ->  'july-august'                x14
+     'junjul'                     ->  'june-july'                  x11
+     'eggs and larvae'            ->  'both'                       x4
+     '26.5'                       ->  '24'                         x1
+  -> 6 substitutions explain 77 of 83 misses (93%) — systematic, not scattered
 
-  full miss detail saved -> Crabot2022_misses.csv, Crabot2022_misses_summary.json (722 row(s))
+  full miss detail saved -> Crabot2022_misses.csv, Crabot2022_misses_summary.json (83 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  abdomen size                                     38     0   GT-ONLY
-  dispersal ability                                38     0   GT-ONLY
-  larvar behaviour                                 38     0   GT-ONLY
-  migratory behaviour                              38     0   GT-ONLY
-  biovoltine                                       38     0   GT-ONLY
-  larvar body                                      38     0   GT-ONLY
-  body size                                        38     0   GT-ONLY
-  courtship                                        38     0   GT-ONLY
-  flight duration                                  38     0   GT-ONLY
-  flight end                                       38     0   GT-ONLY
-  flight mode                                      38     0   GT-ONLY
-  flight start                                     38     0   GT-ONLY
-  multivoltine                                     38     0   GT-ONLY
-  overwintering stage                              38     0   GT-ONLY
-  oviposition                                      38     0   GT-ONLY
-  partivoltine                                     38     0   GT-ONLY
-  semivoltine                                      38     0   GT-ONLY
-  territorialiaty                                  38     0   GT-ONLY
-  univoltine                                       38     0   GT-ONLY
+  abbreviation                                      0    40   PRED-ONLY
+  abdomen size                                     38    40   Δ+2 (split?)
+  dispersal ability                                38    40   Δ+2 (split?)
+  larvar behaviour                                 38    40   Δ+2 (split?)
+  migratory behaviour                              38    40   Δ+2 (split?)
+  biovoltine                                       38    40   Δ+2 (split?)
+  larvar body                                      38    40   Δ+2 (split?)
+  body size                                        38    40   Δ+2 (split?)
+  courtship                                        38    40   Δ+2 (split?)
+  flight duration                                  38    40   Δ+2 (split?)
+  flight end                                       38    40   Δ+2 (split?)
+  flight mode                                      38    40   Δ+2 (split?)
+  flight start                                     38    40   Δ+2 (split?)
+  multivoltine                                     38    40   Δ+2 (split?)
+  overwintering stage                              38    40   Δ+2 (split?)
+  oviposition                                      38    40   Δ+2 (split?)
+  partivoltine                                     38    40   Δ+2 (split?)
+  semivoltine                                      38    40   Δ+2 (split?)
+  territorialiaty                                  38    40   Δ+2 (split?)
+  univoltine                                       38    40   Δ+2 (split?)
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     0   722   id+type+value
-  tags        0.000  0.000  0.000      0     0   722   basis+id+type+value+stat+sex+stage
-             (F1 +0.000 vs previous)
+  core        0.841  0.885  0.862    639   121    83   id+type+value
+             (40 more spurious row(s) set aside as out-of-scope; strict P would be 0.799)
+  tags        0.000  0.000  0.000      0   760   722   basis+id+type+value+stat+sex+stage
+             (40 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.862 vs previous)
+             note: only 0/639 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

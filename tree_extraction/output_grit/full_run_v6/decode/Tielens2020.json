@@ -138,20 +138,22 @@
       "evidence": "initial",
       "labels": [
        "Species richness",
-       "specialist"
+       "specialist",
+       "spittle"
       ]
      }
     },
     "evidence": {},
     "probs": {
      "sp | QK": {
-      "code": 0.826,
-      "word": 0.174
+      "code": 0.684,
+      "word": 0.316
      },
      "sp": {
-      "e0": 0.14,
-      "e1": 0.009,
-      "keep": 0.85
+      "e0": 0.048,
+      "e1": 0.004,
+      "e2": 0.01,
+      "keep": 0.938
      }
     }
    }
@@ -159,14 +161,16 @@
   "units": {
    "offered": [
     "u7",
-    "u18"
+    "u18",
+    "u36"
    ],
    "choice": "none",
    "probs": {
     "p0": 0.002,
-    "p1": 0.012,
-    "several": 0.053,
-    "none": 0.932
+    "p1": 0.014,
+    "p2": 0.006,
+    "several": 0.031,
+    "none": 0.947
    }
   },
   "v3": "cells past 25: 2, printed whole: 0, table footnote: 0"
@@ -189,12 +193,12 @@
     "evidence": {},
     "probs": {
      "2 | QK": {
-      "code": 0.974,
-      "word": 0.026
+      "code": 0.981,
+      "word": 0.019
      },
      "2": {
-      "e0": 0.145,
-      "keep": 0.855
+      "e0": 0.111,
+      "keep": 0.889
      }
     }
    }
@@ -206,24 +210,179 @@
   "v3": "cells past 25: 7, printed whole: 0, table footnote: 0"
  },
  "8:6": {
-  "cells": {},
+  "cells": {
+   "sap feeder": {
+    "term": null,
+    "parts": [
+     "sap feeder"
+    ],
+    "options": {
+     "sap feeder": {
+      "evidence": "explicit",
+      "labels": [
+       "chewer;sap feeder"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "sap feeder | QK": {
+      "code": 0.007,
+      "word": 0.993
+     }
+    }
+   },
+   "chewer": {
+    "term": null,
+    "parts": [
+     "chewer"
+    ],
+    "options": {
+     "chewer": {
+      "evidence": "explicit",
+      "labels": [
+       "chewer"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "chewer | QK": {
+      "code": 0.004,
+      "word": 0.996
+     }
+    }
+   }
+  },
   "units": {
-   "offered": [],
+   "offered": [
+    "u36"
+   ],
    "choice": null
   }
  },
  "8:7": {
-  "cells": {},
+  "cells": {
+   "free living": {
+    "term": null,
+    "parts": [
+     "free living"
+    ],
+    "options": {
+     "free living": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "free living | QK": {
+      "code": 0.003,
+      "word": 0.997
+     }
+    }
+   },
+   "litter": {
+    "term": null,
+    "parts": [
+     "litter"
+    ],
+    "options": {
+     "litter": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "litter | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "leaf gall": {
+    "term": null,
+    "parts": [
+     "leaf gall"
+    ],
+    "options": {
+     "leaf gall": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "leaf gall | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
   "units": {
-   "offered": [],
-   "choice": null
+   "offered": [
+    "u36",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.933,
+    "p1": 0.001,
+    "several": 0.034,
+    "none": 0.032
+   },
+   "chosen": [
+    "u36"
+   ]
   }
  },
  "8:8": {
-  "cells": {},
+  "cells": {
+   "generalist": {
+    "term": null,
+    "parts": [
+     "generalist"
+    ],
+    "options": {
+     "generalist": {
+      "evidence": "explicit",
+      "labels": [
+       "diet breadth"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "generalist | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   }
+  },
   "units": {
-   "offered": [],
-   "choice": null
+   "offered": [
+    "u36",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.847,
+    "p1": 0.001,
+    "several": 0.031,
+    "none": 0.121
+   },
+   "chosen": [
+    "u36"
+   ]
   }
  },
  "12:1": {
@@ -241,13 +400,6 @@
   }
  },
  "14:11": {
-  "cells": {},
-  "units": {
-   "offered": [],
-   "choice": null
-  }
- },
- "15:9": {
   "cells": {},
   "units": {
    "offered": [],
@@ -344,16 +496,16 @@
     },
     "probs": {
      "-1.0 | QK": {
-      "code": 0.888,
-      "word": 0.112
+      "code": 0.815,
+      "word": 0.185
      },
      "-1.0": {
-      "e0": 0.805,
-      "keep": 0.195
+      "e0": 0.854,
+      "keep": 0.146
      },
      "-1.0 | QB": {
-      "w0": 0.017,
-      "w1": 0.983
+      "w0": 0.022,
+      "w1": 0.978
      }
     }
    }
@@ -392,12 +544,12 @@
     },
     "probs": {
      "2.0 | QK": {
-      "code": 0.728,
-      "word": 0.272
+      "code": 0.783,
+      "word": 0.217
      },
      "2.0": {
-      "e0": 0.778,
-      "keep": 0.222
+      "e0": 0.873,
+      "keep": 0.127
      },
      "2.0 | QB": {}
     }
@@ -422,6 +574,395 @@
   "units": {
    "offered": [],
    "choice": null
+  }
+ },
+ "27:1": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "27:5": {
+  "cells": {
+   "2": {
+    "term": "Simpson",
+    "parts": [
+     "2"
+    ],
+    "options": {
+     "2": {
+      "evidence": "explicit",
+      "labels": [
+       "Simpson"
+      ]
+     }
+    },
+    "evidence": {
+     "2": "explicit"
+    },
+    "probs": {
+     "2 | QK": {
+      "code": 0.988,
+      "word": 0.012
+     },
+     "2": {
+      "e0": 0.959,
+      "keep": 0.041
+     },
+     "2 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u3"
+   ],
+   "choice": null
+  },
+  "v3": "cells past 25: 20, printed whole: 0, table footnote: 0"
+ },
+ "27:6": {
+  "cells": {
+   "sap feeder": {
+    "term": null,
+    "parts": [
+     "sap feeder"
+    ],
+    "options": {
+     "sap feeder": {
+      "evidence": "explicit",
+      "labels": [
+       "chewer;sap feeder"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "sap feeder | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   },
+   "chewer": {
+    "term": null,
+    "parts": [
+     "chewer"
+    ],
+    "options": {
+     "chewer": {
+      "evidence": "explicit",
+      "labels": [
+       "chewer"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "chewer | QK": {
+      "code": 0.002,
+      "word": 0.998
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u36",
+    "u18",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.909,
+    "p1": 0.026,
+    "p2": 0.0,
+    "several": 0.058,
+    "none": 0.007
+   },
+   "chosen": [
+    "u36"
+   ]
+  }
+ },
+ "27:7": {
+  "cells": {
+   "litter": {
+    "term": null,
+    "parts": [
+     "litter"
+    ],
+    "options": {
+     "litter": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "litter | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   },
+   "free living": {
+    "term": null,
+    "parts": [
+     "free living"
+    ],
+    "options": {
+     "free living": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "free living | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "leaf gall": {
+    "term": null,
+    "parts": [
+     "leaf gall"
+    ],
+    "options": {
+     "leaf gall": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "leaf gall | QK": {
+      "code": 0.0,
+      "word": 1.0
+     }
+    }
+   },
+   "spittle": {
+    "term": null,
+    "parts": [
+     "spittle"
+    ],
+    "options": {
+     "spittle": {
+      "evidence": "explicit",
+      "labels": [
+       "stratum where nymph develops"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "spittle | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u36",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.922,
+    "p1": 0.001,
+    "several": 0.034,
+    "none": 0.044
+   },
+   "chosen": [
+    "u36"
+   ]
+  }
+ },
+ "27:8": {
+  "cells": {
+   "generalist": {
+    "term": null,
+    "parts": [
+     "generalist"
+    ],
+    "options": {
+     "generalist": {
+      "evidence": "explicit",
+      "labels": [
+       "diet breadth"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "generalist | QK": {
+      "code": 0.001,
+      "word": 0.999
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u36",
+    "u37"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.957,
+    "p1": 0.0,
+    "several": 0.012,
+    "none": 0.03
+   },
+   "chosen": [
+    "u36"
+   ]
+  }
+ },
+ "28:2": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "28:3": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "28:4": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "28:5": {
+  "cells": {
+   "P": {
+    "term": "pubescent",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "pubescent"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.982,
+      "word": 0.018
+     },
+     "P": {
+      "e0": 0.839,
+      "keep": 0.161
+     },
+     "P | QB": {}
+    }
+   },
+   "G": {
+    "term": "glabrous",
+    "parts": [
+     "G"
+    ],
+    "options": {
+     "G": {
+      "evidence": "explicit",
+      "labels": [
+       "glabrous"
+      ]
+     }
+    },
+    "evidence": {
+     "G": "explicit"
+    },
+    "probs": {
+     "G | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "G": {
+      "e0": 0.986,
+      "keep": 0.014
+     },
+     "G | QB": {}
+    }
+   },
+   "I": {
+    "term": "intermediate (H)",
+    "parts": [
+     "I"
+    ],
+    "options": {
+     "I": {
+      "evidence": "initial",
+      "labels": [
+       "intermediate (H)"
+      ]
+     }
+    },
+    "evidence": {
+     "I": "initial"
+    },
+    "probs": {
+     "I | QK": {
+      "code": 0.983,
+      "word": 0.017
+     },
+     "I": {
+      "e0": 0.971,
+      "keep": 0.029
+     },
+     "I | QB": {
+      "w0": 0.957,
+      "w1": 0.043
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u19",
+    "u3",
+    "u6",
+    "u7",
+    "u36"
+   ],
+   "choice": "p0",
+   "probs": {
+    "p0": 0.942,
+    "p1": 0.001,
+    "p2": 0.001,
+    "p3": 0.001,
+    "p4": 0.0,
+    "several": 0.019,
+    "none": 0.036
+   },
+   "chosen": [
+    "u19"
+   ]
   }
  },
  "_endings_done": true

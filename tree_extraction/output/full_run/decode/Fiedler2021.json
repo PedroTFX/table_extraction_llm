@@ -17,15 +17,15 @@
      "facultative": {
       "evidence": "explicit",
       "labels": [
-       "~3.1"
+       "facultative"
       ]
      }
     },
     "evidence": {},
     "probs": {
      "facultative | QK": {
-      "code": 0.021,
-      "word": 0.979
+      "code": 0.003,
+      "word": 0.997
      }
     }
    },
@@ -38,31 +38,34 @@
      "obligate": {
       "evidence": "explicit",
       "labels": [
-       "~1.1"
+       "obligate"
       ]
      }
     },
     "evidence": {},
     "probs": {
      "obligate | QK": {
-      "code": 0.339,
-      "word": 0.661
+      "code": 0.002,
+      "word": 0.998
      }
     }
    }
   },
   "units": {
    "offered": [
-    "u18"
+    "u5",
+    "u29"
    ],
-   "choice": null
-  }
- },
- "4:1": {
-  "cells": {},
-  "units": {
-   "offered": [],
-   "choice": null
+   "choice": "p0",
+   "probs": {
+    "p0": 0.976,
+    "p1": 0.001,
+    "several": 0.007,
+    "none": 0.016
+   },
+   "chosen": [
+    "u5"
+   ]
   }
  },
  "5:2": {
@@ -75,7 +78,7 @@
  "6:2": {
   "cells": {
    "0": {
-    "term": "not",
+    "term": null,
     "parts": [
      "0"
     ],
@@ -87,19 +90,12 @@
       ]
      }
     },
-    "evidence": {
-     "0": "explicit"
-    },
+    "evidence": {},
     "probs": {
      "0 | QK": {
-      "code": 0.599,
-      "word": 0.401
-     },
-     "0": {
-      "e0": 0.931,
-      "keep": 0.069
-     },
-     "0 | QB": {}
+      "code": 0.388,
+      "word": 0.612
+     }
     }
    },
    "1": {
@@ -120,12 +116,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.991,
-      "word": 0.009
+      "code": 0.992,
+      "word": 0.008
      },
      "1": {
-      "e0": 0.736,
-      "keep": 0.264
+      "e0": 0.692,
+      "keep": 0.308
      },
      "1 | QB": {}
     }
@@ -158,12 +154,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.743,
-      "word": 0.257
+      "code": 0.543,
+      "word": 0.457
      },
      "0": {
-      "e0": 0.973,
-      "keep": 0.027
+      "e0": 0.971,
+      "keep": 0.029
      },
      "0 | QB": {}
     }
@@ -186,8 +182,8 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.994,
-      "word": 0.006
+      "code": 0.995,
+      "word": 0.005
      },
      "1": {
       "e0": 0.983,
@@ -224,18 +220,18 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.925,
-      "word": 0.075
+      "code": 0.697,
+      "word": 0.303
      },
      "0": {
-      "e0": 0.821,
-      "keep": 0.179
+      "e0": 0.733,
+      "keep": 0.267
      },
      "0 | QB": {}
     }
    },
    "1": {
-    "term": null,
+    "term": "obligate",
     "parts": [
      "1"
     ],
@@ -247,16 +243,19 @@
       ]
      }
     },
-    "evidence": {},
+    "evidence": {
+     "1": "explicit"
+    },
     "probs": {
      "1 | QK": {
-      "code": 0.996,
-      "word": 0.004
+      "code": 0.995,
+      "word": 0.005
      },
      "1": {
-      "e0": 0.414,
-      "keep": 0.586
-     }
+      "e0": 0.593,
+      "keep": 0.407
+     },
+     "1 | QB": {}
     }
    }
   },
@@ -287,12 +286,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.947,
-      "word": 0.053
+      "code": 0.957,
+      "word": 0.043
      },
      "0": {
-      "e0": 0.937,
-      "keep": 0.063
+      "e0": 0.928,
+      "keep": 0.072
      },
      "0 | QB": {}
     }
@@ -315,12 +314,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.992,
-      "word": 0.008
+      "code": 0.99,
+      "word": 0.01
      },
      "1": {
-      "e0": 0.97,
-      "keep": 0.03
+      "e0": 0.977,
+      "keep": 0.023
      },
      "1 | QB": {}
     }
@@ -353,12 +352,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.827,
-      "word": 0.173
+      "code": 0.911,
+      "word": 0.089
      },
      "0": {
-      "e0": 0.96,
-      "keep": 0.04
+      "e0": 0.95,
+      "keep": 0.05
      },
      "0 | QB": {}
     }
@@ -419,12 +418,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.687,
-      "word": 0.313
+      "code": 0.894,
+      "word": 0.106
      },
      "0": {
-      "e0": 0.962,
-      "keep": 0.038
+      "e0": 0.967,
+      "keep": 0.033
      },
      "0 | QB": {}
     }
@@ -447,12 +446,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.994,
-      "word": 0.006
+      "code": 0.995,
+      "word": 0.005
      },
      "1": {
-      "e0": 0.976,
-      "keep": 0.024
+      "e0": 0.974,
+      "keep": 0.026
      },
      "1 | QB": {}
     }
@@ -485,8 +484,8 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.867,
-      "word": 0.133
+      "code": 0.835,
+      "word": 0.165
      },
      "0": {
       "e0": 0.968,
@@ -513,12 +512,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.99,
-      "word": 0.01
+      "code": 0.989,
+      "word": 0.011
      },
      "1": {
-      "e0": 0.985,
-      "keep": 0.015
+      "e0": 0.986,
+      "keep": 0.014
      },
      "1 | QB": {}
     }
@@ -555,8 +554,8 @@
       "word": 0.007
      },
      "1": {
-      "e0": 0.986,
-      "keep": 0.014
+      "e0": 0.984,
+      "keep": 0.016
      },
      "1 | QB": {}
     }
@@ -579,12 +578,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.953,
-      "word": 0.047
+      "code": 0.958,
+      "word": 0.042
      },
      "0": {
-      "e0": 0.974,
-      "keep": 0.026
+      "e0": 0.978,
+      "keep": 0.022
      },
      "0 | QB": {}
     }
@@ -617,12 +616,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.692,
-      "word": 0.308
+      "code": 0.841,
+      "word": 0.159
      },
      "0": {
-      "e0": 0.816,
-      "keep": 0.184
+      "e0": 0.692,
+      "keep": 0.308
      },
      "0 | QB": {}
     }
@@ -645,12 +644,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.992,
-      "word": 0.008
+      "code": 0.99,
+      "word": 0.01
      },
      "1": {
-      "e0": 0.967,
-      "keep": 0.033
+      "e0": 0.971,
+      "keep": 0.029
      },
      "1 | QB": {}
     }
@@ -683,12 +682,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.899,
-      "word": 0.101
+      "code": 0.903,
+      "word": 0.097
      },
      "0": {
-      "e0": 0.966,
-      "keep": 0.034
+      "e0": 0.971,
+      "keep": 0.029
      },
      "0 | QB": {}
     }
@@ -711,12 +710,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.989,
-      "word": 0.011
+      "code": 0.991,
+      "word": 0.009
      },
      "1": {
-      "e0": 0.985,
-      "keep": 0.015
+      "e0": 0.981,
+      "keep": 0.019
      },
      "1 | QB": {}
     }
@@ -749,12 +748,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.705,
-      "word": 0.295
+      "code": 0.917,
+      "word": 0.083
      },
      "0": {
-      "e0": 0.957,
-      "keep": 0.043
+      "e0": 0.948,
+      "keep": 0.052
      },
      "0 | QB": {}
     }
@@ -777,8 +776,8 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.99,
-      "word": 0.01
+      "code": 0.993,
+      "word": 0.007
      },
      "1": {
       "e0": 0.985,
@@ -815,12 +814,12 @@
     },
     "probs": {
      "1 | QK": {
-      "code": 0.994,
-      "word": 0.006
+      "code": 0.995,
+      "word": 0.005
      },
      "1": {
-      "e0": 0.989,
-      "keep": 0.011
+      "e0": 0.988,
+      "keep": 0.012
      },
      "1 | QB": {}
     }
@@ -843,12 +842,12 @@
     },
     "probs": {
      "0 | QK": {
-      "code": 0.891,
-      "word": 0.109
+      "code": 0.898,
+      "word": 0.102
      },
      "0": {
-      "e0": 0.975,
-      "keep": 0.025
+      "e0": 0.971,
+      "keep": 0.029
      },
      "0 | QB": {}
     }
@@ -945,12 +944,12 @@
     "evidence": {},
     "probs": {
      "1 | QK": {
-      "code": 0.891,
-      "word": 0.109
+      "code": 0.875,
+      "word": 0.125
      },
      "1": {
-      "e0": 0.006,
-      "keep": 0.994
+      "e0": 0.01,
+      "keep": 0.99
      }
     }
    }
@@ -963,6 +962,899 @@
   }
  },
  "6:16": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "7:2": {
+  "cells": {
+   "0": {
+    "term": null,
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "0 | QK": {
+      "code": 0.388,
+      "word": 0.612
+     }
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "1": {
+      "e0": 0.692,
+      "keep": 0.308
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:3": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.543,
+      "word": 0.457
+     },
+     "0": {
+      "e0": 0.971,
+      "keep": 0.029
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "1": {
+      "e0": 0.983,
+      "keep": 0.017
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:4": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.697,
+      "word": 0.303
+     },
+     "0": {
+      "e0": 0.733,
+      "keep": 0.267
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "1": {
+      "e0": 0.593,
+      "keep": 0.407
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:5": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.957,
+      "word": 0.043
+     },
+     "0": {
+      "e0": 0.928,
+      "keep": 0.072
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "1": {
+      "e0": 0.977,
+      "keep": 0.023
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:6": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.911,
+      "word": 0.089
+     },
+     "0": {
+      "e0": 0.95,
+      "keep": 0.05
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.992,
+      "word": 0.008
+     },
+     "1": {
+      "e0": 0.978,
+      "keep": 0.022
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:7": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.894,
+      "word": 0.106
+     },
+     "0": {
+      "e0": 0.967,
+      "keep": 0.033
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "1": {
+      "e0": 0.974,
+      "keep": 0.026
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:8": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.835,
+      "word": 0.165
+     },
+     "0": {
+      "e0": 0.968,
+      "keep": 0.032
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "1": {
+      "e0": 0.986,
+      "keep": 0.014
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:9": {
+  "cells": {
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "1": {
+      "e0": 0.984,
+      "keep": 0.016
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.958,
+      "word": 0.042
+     },
+     "0": {
+      "e0": 0.978,
+      "keep": 0.022
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:10": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.841,
+      "word": 0.159
+     },
+     "0": {
+      "e0": 0.692,
+      "keep": 0.308
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.99,
+      "word": 0.01
+     },
+     "1": {
+      "e0": 0.971,
+      "keep": 0.029
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:11": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.903,
+      "word": 0.097
+     },
+     "0": {
+      "e0": 0.971,
+      "keep": 0.029
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.991,
+      "word": 0.009
+     },
+     "1": {
+      "e0": 0.981,
+      "keep": 0.019
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:12": {
+  "cells": {
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.917,
+      "word": 0.083
+     },
+     "0": {
+      "e0": 0.948,
+      "keep": 0.052
+     },
+     "0 | QB": {}
+    }
+   },
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "1": {
+      "e0": 0.985,
+      "keep": 0.015
+     },
+     "1 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:13": {
+  "cells": {
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.995,
+      "word": 0.005
+     },
+     "1": {
+      "e0": 0.988,
+      "keep": 0.012
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.898,
+      "word": 0.102
+     },
+     "0": {
+      "e0": 0.971,
+      "keep": 0.029
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:14": {
+  "cells": {
+   "1": {
+    "term": "obligate",
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {
+     "1": "explicit"
+    },
+    "probs": {
+     "1 | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "1": {
+      "e0": 0.992,
+      "keep": 0.008
+     },
+     "1 | QB": {}
+    }
+   },
+   "0": {
+    "term": "not",
+    "parts": [
+     "0"
+    ],
+    "options": {
+     "0": {
+      "evidence": "explicit",
+      "labels": [
+       "not"
+      ]
+     }
+    },
+    "evidence": {
+     "0": "explicit"
+    },
+    "probs": {
+     "0 | QK": {
+      "code": 0.956,
+      "word": 0.044
+     },
+     "0": {
+      "e0": 0.989,
+      "keep": 0.011
+     },
+     "0 | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:15": {
+  "cells": {
+   "1": {
+    "term": null,
+    "parts": [
+     "1"
+    ],
+    "options": {
+     "1": {
+      "evidence": "explicit",
+      "labels": [
+       "obligate"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "1 | QK": {
+      "code": 0.875,
+      "word": 0.125
+     },
+     "1": {
+      "e0": 0.01,
+      "keep": 0.99
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u11"
+   ],
+   "choice": null
+  }
+ },
+ "7:16": {
   "cells": {},
   "units": {
    "offered": [],

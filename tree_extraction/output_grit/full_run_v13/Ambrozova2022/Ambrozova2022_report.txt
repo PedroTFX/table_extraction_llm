@@ -1,71 +1,88 @@
+  [semantic] left unmatched: 'alpine' vs 'dung specialization of adult' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Ambrozova2022/Ambrozova2022.xlsx  (480 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Ambrozova2022/Ambrozova2022.csv  (0 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/Ambrozova2022/Ambrozova2022.csv  (534 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-ROW-LEVEL (key match)
-  matched (TP)        : 0
-  missed (FN)         : 480
-  spurious, in scope  : 0   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'feeding' -> 'feeding '
+  'larval feeding imago adult' -> 'larval feeding'
+  'reproduction' -> 'reproduction type'
+  'size' -> 'Body size'
 
-  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+ROW-LEVEL (key match)
+  matched (TP)        : 434
+  missed (FN)         : 46
+  spurious, in scope  : 19   <- GT covers this trait: real errors
+  spurious, out of scope: 81   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.813 / 0.904 / 0.856   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.958 / 0.904 / 0.930   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.904   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             81
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0      0    n/a
-  measurementMethod             0      0    n/a
-  measurementUnit               0      0    n/a
-  measurementStatistic          0      0    n/a
+  basisOfRecord                 0    434  0.000  <-- low
+  measurementMethod             0     27  0.000  <-- low
+  measurementUnit               0    151  0.000  <-- low
+  measurementStatistic          0    434  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0      0    n/a
-  lifeStage                     0      0    n/a
+  sex                           0    434  0.000  <-- low
+  lifeStage                     0    434  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
-  sampleTreatment               0      0    n/a
-  samplingProtocol              0      0    n/a
+  sampleTreatment               0    151  0.000  <-- low
+  samplingProtocol              0    151  0.000  <-- low
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0      0    n/a
+  verbatimEventDate             0    434  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0      0    n/a
-  externalLink                  0      0    n/a
+  associatedReferences          0    434  0.000  <-- low
+  externalLink                  0    434  0.000  <-- low
 
-WHY THE 480 MISSED ROWS MISSED
-  species not in prediction                 480
-  species present, trait missing              0
-  species+trait present, value differs        0
+WHY THE 46 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             27
+  species+trait present, value differs       19
 
-  SPECIES IN GT BUT NOT IN PREDICTION (126 distinct), closest predicted name:
-     gt 'Aphodius pedellus'                  (nothing similar in the prediction)   x8
-     gt 'Acrossus depressus '                (nothing similar in the prediction)   x7
-     gt 'Acrossus rufipes '                  (nothing similar in the prediction)   x7
-     gt 'Agrilinus ater'                     (nothing similar in the prediction)   x7
-     gt 'Anoplotrupes stercorosus'           (nothing similar in the prediction)   x7
-     gt 'Bodilopsis rufa'                    (nothing similar in the prediction)   x7
-  -> 6 species mismatches explain 43 of 480 misses (9%) — scattered; no single cause
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'ground'                     ->  'g'                          x17
+     '5'                          ->  '6.5'                        x1
+     '4.25'                       ->  '3.25'                       x1
+  -> 3 substitutions explain 19 of 46 misses (41%) — scattered; no single cause
 
-  full miss detail saved -> Ambrozova2022_misses.csv, Ambrozova2022_misses_summary.json (480 row(s))
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'dung specialization of adult'     x27
+  -> 1 missing trait explains 27 of 46 misses (59%) — scattered; no single cause
+
+  full miss detail saved -> Ambrozova2022_misses.csv, Ambrozova2022_misses_summary.json (46 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  active months per year                           27     0   GT-ONLY
+  active months per year                           27    27   
   dung specialization of adult                     27     0   GT-ONLY
-  adult feeding                                    27     0   GT-ONLY
-  body size                                       126     0   GT-ONLY
-  feeding                                          99     0   GT-ONLY
-  feeding habitat                                  99     0   GT-ONLY
-  larval feeding                                   24     0   GT-ONLY
-  relative wing length                             27     0   GT-ONLY
-  reproduction type                                24     0   GT-ONLY
+  adult feeding                                    27    27   
+  alpine                                            0    27   PRED-ONLY
+  body size                                       126   126   
+  feeding                                          99    99   
+  feeding habitat                                  99    99   
+  larval feeding                                   24    24   
+  relative wing length                             27    27   
+  lowland                                           0    27   PRED-ONLY
+  montane                                           0    27   PRED-ONLY
+  reproduction type                                24    24   
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     0   480   id+type+value
-  tags        0.000  0.000  0.000      0     0   480   basis+id+type+value+stat+sex+stage
-             (F1 +0.000 vs previous)
+  core        0.958  0.904  0.930    434    19    46   id+type+value
+             (81 more spurious row(s) set aside as out-of-scope; strict P would be 0.813)
+  tags        0.000  0.000  0.000      0   453   480   basis+id+type+value+stat+sex+stage
+             (81 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.930 vs previous)
+             note: only 0/434 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

@@ -205,6 +205,16 @@
    "id": "u40",
    "kind": "prose",
    "text": "Wolff, A. & Debussche, M. (1999) Ants as seed dispersers in a Mediterra nean old-field succession. Oikos, 84, 443–452. Zelikova, T.J., Sanders, N.J. & Dunn, R.R. (2011) The mixed effects of experimental ant removal on seedling distribution, belowground inverte brates, and soil nutrients. Ecosphere, 2, art63."
+  },
+  {
+   "id": "u41",
+   "kind": "table 2",
+   "text": "Ant functional responses along environmental gradients\nX. Arnan, X. Cerdá, J. Retana\nJournal of Animal Ecology"
+  },
+  {
+   "id": "u42",
+   "kind": "table 3",
+   "text": "Abbreviation | Meaning\nWS | Worker size\nWP | Worker polymorphism\nCS | Colony size\nLIQFOOD | Liquid foods\nICF | Independent Colony Foundation\nFORSTRA | Foraging strategy"
   }
  ],
  "batches": [
@@ -265,7 +275,9 @@
    "u37",
    "u38",
    "u39",
-   "u40"
+   "u40",
+   "u41",
+   "u42"
   ]
  ],
  "calls": 19,
@@ -290,11 +302,11 @@
   },
   {
    "variable": "percentage of seeds in the diet",
-   "code": "fuzzy-coded variable",
-   "term": "fuzzy-coded variable",
+   "code": "fuzzy-coded",
+   "term": "fuzzy-coded",
    "unit": "u0",
-   "model_label": "fuzzy-coded variable",
-   "label": "fuzzy-coded variable",
+   "model_label": "fuzzy-coded",
+   "label": "fuzzy-coded",
    "explanation": ""
   },
   {
@@ -505,12 +517,58 @@
    "explanation": ""
   },
   {
-   "variable": "trait average",
-   "code": "",
-   "label": "worker size",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u1"
+   "variable": "Abbreviation",
+   "code": "WS",
+   "term": "Worker size",
+   "unit": "u42",
+   "model_label": "Worker size",
+   "label": "Worker size",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "WP",
+   "term": "Worker polymorphism",
+   "unit": "u42",
+   "model_label": "Worker polymorphism",
+   "label": "Worker polymorphism",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "CS",
+   "term": "Colony size",
+   "unit": "u42",
+   "model_label": "Colony size",
+   "label": "Colony size",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "LIQFOOD",
+   "term": "Liquid foods",
+   "unit": "u42",
+   "model_label": "Liquid foods",
+   "label": "Liquid foods",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "ICF",
+   "term": "Independent Colony Foundation",
+   "unit": "u42",
+   "model_label": "Independent Colony Foundation",
+   "label": "Independent Colony Foundation",
+   "explanation": ""
+  },
+  {
+   "variable": "Abbreviation",
+   "code": "FORSTRA",
+   "term": "Foraging strategy",
+   "unit": "u42",
+   "model_label": "Foraging strategy",
+   "label": "Foraging strategy",
+   "explanation": ""
   },
   {
    "variable": "trait average",
@@ -587,7 +645,7 @@
   {
    "variable": "diet",
    "code": "",
-   "label": "percentage of seeds",
+   "label": "seeds",
    "explanation": "",
    "evidence": "named",
    "unit": "u25"
@@ -595,15 +653,15 @@
   {
    "variable": "diet",
    "code": "",
-   "label": "percentage of liquid foods",
+   "label": "insects",
    "explanation": "",
    "evidence": "named",
    "unit": "u25"
   },
   {
-   "variable": "foraging behavior",
+   "variable": "foraging",
    "code": "",
-   "label": "average percentage of collectively foraging species",
+   "label": "percentage of collectively foraging species",
    "explanation": "",
    "evidence": "named",
    "unit": "u25"
@@ -625,7 +683,7 @@
    "unit": "u25"
   },
   {
-   "variable": "species dominance",
+   "variable": "species",
    "code": "",
    "label": "average percentage of behaviourally dominant species",
    "explanation": "",
@@ -633,7 +691,7 @@
    "unit": "u25"
   },
   {
-   "variable": "foraging behavior",
+   "variable": "species",
    "code": "",
    "label": "average percentage of group foraging species",
    "explanation": "",
@@ -641,7 +699,7 @@
    "unit": "u25"
   },
   {
-   "variable": "nest number",
+   "variable": "nest",
    "code": "",
    "label": "trait dissimilarity in nest number",
    "explanation": "",
@@ -649,14 +707,27 @@
    "unit": "u25"
   },
   {
-   "variable": "social organization",
+   "variable": "Ant functional responses along environmental gradients",
    "code": "",
-   "label": "highly eusocial",
+   "label": "Ant functional responses along environmental gradients",
    "explanation": "",
    "evidence": "named",
-   "unit": "u37"
+   "unit": "u41"
   }
  ],
- "dropped": [],
- "seconds": 70.3
+ "dropped": [
+  {
+   "variable": "solitary",
+   "code": "(SO)",
+   "term": "solitary",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "primitively eusocial",
+   "code": "(P_E)",
+   "term": "primitively eusocial",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 34.8
 }

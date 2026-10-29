@@ -1,38 +1,39 @@
 {
  "1": {
   "candidates": [
-   "tag",
+   "Species",
    "Species_1"
   ],
   "kinds": {
-   "tag": {
-    "choice": "other",
+   "Species": {
+    "choice": "species",
     "probs": {
-     "species": 0.055,
-     "part": 0.66,
-     "higher": 0.063,
-     "other": 0.222
-    },
-    "second": {
-     "choice": "no",
-     "probs": {
-      "yes": 0.172,
-      "no": 0.828
-     }
+     "species": 0.984,
+     "part": 0.01,
+     "higher": 0.006,
+     "other": 0.001
     }
    },
    "Species_1": {
     "choice": "species",
     "probs": {
-     "species": 0.978,
-     "part": 0.01,
-     "higher": 0.012,
+     "species": 0.979,
+     "part": 0.009,
+     "higher": 0.011,
      "other": 0.001
     }
    }
   },
-  "organism": "Species_1",
+  "organism": "Species",
   "genus_from": null,
-  "outcome": "species column"
+  "outcome": "species column (picked)",
+  "pick": {
+   "choice": "c0",
+   "probs": {
+    "c0": 0.995,
+    "c1": 0.0,
+    "none": 0.005
+   }
+  }
  }
 }

@@ -4,7 +4,7 @@
   {
    "id": "u0",
    "kind": "prose",
-   "text": "![Image block](doc:9163ae4/tier:advanced/page:3/block:10)"
+   "text": "![Image block](doc:00ee893/tier:advanced/page:3/block:10)"
   },
   {
    "id": "u1",
@@ -34,7 +34,7 @@
   {
    "id": "u6",
    "kind": "prose",
-   "text": "![Image block](doc:9163ae4/tier:advanced/page:7/block:8)"
+   "text": "![Image block](doc:00ee893/tier:advanced/page:7/block:8)"
   },
   {
    "id": "u7",
@@ -44,7 +44,7 @@
   {
    "id": "u8",
    "kind": "prose",
-   "text": "![Image block](doc:9163ae4/tier:advanced/page:8/block:5)"
+   "text": "![Image block](doc:00ee893/tier:advanced/page:8/block:5)"
   },
   {
    "id": "u9",
@@ -69,191 +69,91 @@
   {
    "id": "u13",
    "kind": "prose",
-   "text": "![Image block](doc:00ee893/tier:advanced/page:3/block:10)"
+   "text": "Values (if continuous) and modalities (if categorical) for each trait for each species from the literature (abbreviated names, see scientific names in Table S3). Species size (adult abdomen and body sizes, larval body size) are in millimeters. Voltinism traits are boolean. Flight start modalities are April-May (ApMa) or June-July (JunJul) and flight end modalities are July-August (JuAu) or September-November (SepNo). Flight duration is expressed in month. Overwintering stage modalities are eggs (E), larvae (L) or both (EL). Courtship trait takes the value “yes” if species perform tandem during the oviposition and “no” otherwise. Dispersal ability is a score evaluated by experts in the database of Harabiš and Hronková (2020). Other trait modalities are explicit."
   },
   {
    "id": "u14",
    "kind": "prose",
-   "text": "F I G U R E 1 Location of (a) the Marais poitevin in France, showing (b) all transects (red points with labels) within the 11 hydrological units studied (grey zones), and (c) a zoom on the two transects in hydrological unit 1. All of the ditches are indicated with blue lines"
+   "text": "![Image block](doc:0c21794/tier:flash/page:2/block:1)"
   },
   {
    "id": "u15",
    "kind": "prose",
-   "text": "Twenty-two standardised 500-m-long transects (350 m along a ditch and 150 m within its adjacent meadow) were selected among the hydrological units with two transects per unit (Figure 1). On average, the distance to the closest transect was $9 0 0 \\pm 5 8 0$ m (mean $\\pm SD;$ Euclidean distance between the barycentre of transects). Transects were surveyed each year once a month from May to August, in order to detect all Odonata species as a consequence of differences in phenology (Balzan, 2012; Giuliano & Bogliani, 2019; Simaika et al., 2016). Individuals were recorded and identified at the species level while walking the transects at a slow pace for a duration of 60 min, via a visual census within a 5-m width, using binoculars combined with occasional captures of individuals using a hand net. Sampling took place during clement weather conditions (temperature $> 20^{\\circ}C$ , sunny and windless days) between 10:00 and 18:00 hr as recommend by Brooks (1993). The abundances of each species for the four annual visits were pooled into a single record before analysis."
+   "text": "Corbet, P. S., Suhling, F., & Soendgerath, D. (2006). Voltinism of Odonata: a review. International Journal of Odonatology, 9(1), 1–44. https://doi.org/10.1080/13887890.2006.9748261"
   },
   {
    "id": "u16",
    "kind": "prose",
-   "text": "We compiled 15 biological and behavioural traits for all of the sampled Odonata species using existing trait databases (mainly Harabiš and Hronková (2020) and Powney et al. (2014)) together with additional literature for the few missing data (see Table S1). The traits considered were: abdomen size, adult body size, voltinism, flight period (start, end and duration), flight mode, oviposition mode, overwintering stage, territorial behaviour, courtship behaviour, dispersal ability, migratory behaviour, larval body size and larval behaviour."
+   "text": "S2C Correlation between the remaining environmental variables (abbreviated names) after the Variance Inflation Factor (VIF) procedure"
   },
   {
    "id": "u17",
    "kind": "prose",
-   "text": "In order to investigate variables associated with beta diversity, we calculated the Bray–Curtis dissimilarity matrix on the presenceabsence data and used generalised dissimilarity modelling (GDM; Ferrier et al., 2007). GDM is a matrix regression-based method accommodating two typical nonlinearities in ecological datasets: (1) variation in the rate of compositional turnover at different positions along environmental gradients, and (2) the curvilinear relationship between the observed compositional dissimilarity, and increasing ecological and geographical distances between transects. We assessed the significance of each predictor using the default number of permutations (50) and plotted the I-splines only for the significant predictors. To measure the relative importance of each significant predictor in driving species turnover, we summed the three coefficients of the I-splines (see Ferrier et al., 2007, for more details). We ran the GDM models, plotted the I-splines for each predictor and assessed the importance of predictors on the response variables using the “gdm” and “gdm.varImp” functions available in R/gdm (Fitzpatrick"
+   "text": "![Image block](doc:0c21794/tier:flash/page:3/block:14)"
   },
   {
    "id": "u18",
    "kind": "prose",
-   "text": "We used an RLQ analysis combined with a fourth-corner analysis to explore the trait-environment relations (Dray et al., 2014). RLQ is a multivariate technique consisting of a three-table ordination to identify the co-structures between an environmental table (R), a presence-absence species table (L) and a trait table (Q) (Dolédec et al., 1996). We generated a Correspondence Analysis (CA) on the species table. The table of environmental variables was analysed using a principal component analysis (PCA), with the CA transect scores used as the row weight. The table of traits was analysed with a Hill Smith PCA, using the CA species scores as the column weight. Then, the simultaneous ordination plot was computed by combining the independent analyses with RLQ, using the “rlq” function of R/ ade4 (Dray & Dufour, 2007). A global Monte-Carlo test with 10,000 random permutations was performed on the RLQ values to test the relationships under two models. One tested the relationship between the species composition and the environmental conditions (described as Model 2 by Dray and Legendre, 2008) and the other tested the species distribution according to their traits (described as Model 4 as defined in Dray and Legendre, 2008). We will refer to trait syndromes when describing the combination of related traits for each axis of the co-inertia analysis (Dray et al., 2014). To complement the RLQ results, an improved version of the fourth-corner method including adjustments for multiple comparisons was used with 10,000 random permutations (ter Braak et al., 2012; Dray et al., 2014), allowing to test for individual correlations between each trait and each environmental variable, using the “fourthcorner” function of R/ade4 (Dray & Dufour, 2007)."
+   "text": "![Image block](doc:0c21794/tier:flash/page:5/block:1)"
   },
   {
    "id": "u19",
    "kind": "prose",
-   "text": "![Image block](doc:00ee893/tier:advanced/page:7/block:8)"
+   "text": "S4B. Generalized dissimilarity model-fitted I-splines for variables significantly associated with beta diversity for (a) all species, (b) Zygoptera and (c) Anisoptera (abundance data). The first panel of each line shows the relationship between the observed compositional dissimilarity and the linear predictor of the regression equation from Generalized Dissimilarity Modelling (predicted ecological distance between transect pairs). Remaining panels show the fitted functions (partial ecological distance between transect pairs) for each environmental variable significantly associated with compositional turnover. The maximum height reached by each I-spline indicates the total amount of species turnover associated with that variable holding all other variables constant. The slope of the curve indicates the rate of species turnover and how this rate varies along the gradient of a given variable, holding all other variables constant."
   },
   {
    "id": "u20",
    "kind": "prose",
-   "text": "F I G U R E 2 Generalised dissimilarity model-fitted I-splines for variables significantly associated with beta diversity for (a) all species, (b) Zygoptera and (c) Anisoptera (presence–absence data). Panels show the fitted functions (partial ecological distance between transect pairs) for each environmental variable significantly associated with compositional turnover. The maximum height reached by each I-spline indicates the total amount of species turnover associated with that variable, holding all other variables constant. The slope of the curve indicates the rate of species turnover and how this rate varies along the gradient of a given variable, holding all other variables constant"
+   "text": "![Image block](doc:0c21794/tier:flash/page:8/block:1)"
   },
   {
    "id": "u21",
    "kind": "prose",
-   "text": "![Image block](doc:00ee893/tier:advanced/page:8/block:5)"
-  },
-  {
-   "id": "u22",
-   "kind": "prose",
-   "text": "F I G U R E 3 First two axes of the ordination plot resulting from the RLQ analysis with: (a) the transect scores for each year (the labels are the transect names), (b) the species scores, and the projection of the coefficients of the environmental variables (c) and the traits (d). The values of d give the grid size (0.2, 1 or 2). The complete names of the species, traits and environmental variables are available in Tables S1, S2 and S3"
-  },
-  {
-   "id": "u23",
-   "kind": "prose",
-   "text": "F I G U R E 4 Combination of the fourth-corner and RLQ results: relationships between the environmental descriptors and functional traits. (a) Fourth-corner tests between the first two RLQ axes for the environmental gradients (AxcR1 and AxcR2) and traits. (b) Fourth corner tests between the first two RLQ axes for the trait syndromes (AxcQ1 and AxcQ2) and environmental variables. Positive significant relationships are represented by red cells, and negative significant associations by blue cells. Variables with no significant associations are shown in grey. Black lines separate the various variables; white lines separate the different modalities for the categorical variables. The complete names of the traits and environmental variables are available in Tables S1 and S2"
-  },
-  {
-   "id": "u24",
-   "kind": "prose",
-   "text": "We found that the alpha diversity of Odonata assemblages greatly decreased when the duration of drying increased in ditches. This agrees with Piersanti et al. (2007) and Pires, Stenert & Maltchik (2017) who found that drying events in ponds eliminate the larvae of most Odonata species, and therefore have an impact on local populations of adults (McPeek, 2008). Drying duration also was the environmental predictor that best explained the dissimilarities in Odonata assemblage composition between sites. Unlike Bogan et al. (2020), which found that short drying events (i.e., a couple of days) did not impact Odonata assemblages, beta diversity for all species combined increased linearly with drying duration in the present"
-  },
-  {
-   "id": "u25",
-   "kind": "prose",
-   "text": "We are indebted to the LPO (Ligue pour la Protection des Oiseaux) which conducted the Odonata monitoring and to the landowners for allowing us to access to their properties. This research was supported by the EPMP (Établissement Public du Marais Poitevin) and the AELB (Agence de l'Eau Loire-Bretagne). We are grateful to the staff of the EPMP, PNRMP (Parc Naturel Régional du Marais poitevin) and all of the fieldworkers for fruitful discussions on the pre-liminary results. We thank Guillaume Bouger (OSUR) and Olivier Jambon (UMR ECOBIO) for their contribution in setting up the field water level monitoring design and Francoise Le Moal for her help on the database design. Lastly, we thank the UNIMA (Union des Marais de la Charente-Maritime) for providing the water quality data and Cap Pêche Nature for providing crayfish data. A previous version of this article was edited by Sara Mullin."
-  },
-  {
-   "id": "u26",
-   "kind": "prose",
-   "text": "Values (if continuous) and modalities (if categorical) for each trait for each species from the literature (abbreviated names, see scientific names in Table S3). Species size (adult abdomen and body sizes, larval body size) are in millimeters. Voltinism traits are boolean. Flight start modalities are April-May (ApMa) or June-July (JunJul) and flight end modalities are July-August (JuAu) or September-November (SepNo). Flight duration is expressed in month. Overwintering stage modalities are eggs (E), larvae (L) or both (EL). Courtship trait takes the value “yes” if species perform tandem during the oviposition and “no” otherwise. Dispersal ability is a score evaluated by experts in the database of Harabiš and Hronková (2020). Other trait modalities are explicit."
-  },
-  {
-   "id": "u27",
-   "kind": "prose",
-   "text": "![Image block](doc:0c21794/tier:flash/page:2/block:1)"
-  },
-  {
-   "id": "u28",
-   "kind": "prose",
-   "text": "Corbet, P. S., Suhling, F., & Soendgerath, D. (2006). Voltinism of Odonata: a review. International Journal of Odonatology, 9(1), 1–44. https://doi.org/10.1080/13887890.2006.9748261"
-  },
-  {
-   "id": "u29",
-   "kind": "prose",
-   "text": "S2C Correlation between the remaining environmental variables (abbreviated names) after the Variance Inflation Factor (VIF) procedure"
-  },
-  {
-   "id": "u30",
-   "kind": "prose",
-   "text": "![Image block](doc:0c21794/tier:flash/page:3/block:14)"
-  },
-  {
-   "id": "u31",
-   "kind": "prose",
-   "text": "![Image block](doc:0c21794/tier:flash/page:5/block:1)"
-  },
-  {
-   "id": "u32",
-   "kind": "prose",
-   "text": "S4B. Generalized dissimilarity model-fitted I-splines for variables significantly associated with beta diversity for (a) all species, (b) Zygoptera and (c) Anisoptera (abundance data). The first panel of each line shows the relationship between the observed compositional dissimilarity and the linear predictor of the regression equation from Generalized Dissimilarity Modelling (predicted ecological distance between transect pairs). Remaining panels show the fitted functions (partial ecological distance between transect pairs) for each environmental variable significantly associated with compositional turnover. The maximum height reached by each I-spline indicates the total amount of species turnover associated with that variable holding all other variables constant. The slope of the curve indicates the rate of species turnover and how this rate varies along the gradient of a given variable, holding all other variables constant."
-  },
-  {
-   "id": "u33",
-   "kind": "prose",
-   "text": "![Image block](doc:0c21794/tier:flash/page:8/block:1)"
-  },
-  {
-   "id": "u34",
-   "kind": "prose",
    "text": "![Image block](doc:0c21794/tier:flash/page:10/block:1)"
   },
   {
-   "id": "u35",
+   "id": "u22",
    "kind": "table 1",
    "text": "Predictor | Explained deviance (%) | Relative importance\nAll species | Geographical distance | 45 | 2.133\nDrying duration | 24 | 1.342\nHedge index | 5 | 0.430\nZygoptera | Geographical distance | 50 | 2.371\nDrying duration | 20 | 1.001\nHedge index | 4 | 0.387\nAnisoptera | Nitrite | 18 | 1.078\nGeographical distance | 45 | 0.793\nVegetation density (upper banks) | 24 | 0.761"
   },
   {
-   "id": "u36",
+   "id": "u23",
    "kind": "table 2",
    "text": "Marker | AxcR1 | AxcR2\nAbdo_size | — | —\nlarval_body | — | —\nSemivoltine | — | —\nBivoltine | — | —\nUnivoltine | Blue | —\nPartivoltine | — | —\nMultivoltine | — | —\nbody_size | — | —\nF_mod.flier | — | —"
   },
   {
-   "id": "u37",
+   "id": "u24",
    "kind": "table 2",
    "text": "F_mod.percher | — | —\nF_sta.ApMa | Red | —\nF_sta.JunJul | Blue | —\nF_end.JuAu | — | —\nF_end.SepNo | — | —\nFlight_duration | — | —\nOverw.E | — | —\nOverw.EL | — | —\nOverw.L | — | —\nDispersal_ability | Blue | Red"
   },
   {
-   "id": "u38",
+   "id": "u25",
    "kind": "table 2",
    "text": "Court.no | — | —\nCourt.yes | — | —\nMigra.no | — | —\nMigra.yes | — | —\nTerit.no | — | —\nTerit.yes | — | —\nLarva.burrower | — | —\nLarva.claspers | — | —\nLarva.sprawler | — | —\nOvipo.Endophytic | — | —"
   },
   {
-   "id": "u39",
+   "id": "u26",
    "kind": "table 2",
    "text": "Ovipo.Exophytic | — | —"
   },
   {
-   "id": "u40",
+   "id": "u27",
    "kind": "table 3",
    "text": "Category | Value\nditch | Red\nmeadow | Blue\nwood | Red\nhedge_index | —\ncond | —\nnh4 | —\nno2 | —\nno3 | —\northop | —"
   },
   {
-   "id": "u41",
+   "id": "u28",
    "kind": "table 3",
    "text": "sato2 | —\nph | —\nveg_aqua | Blue\nalgae | —\nwaterdepth7 | —\ndrying | —\ncrayfish | —\nveg_low | Red\nveg_up | —\nflood_spr | —"
   },
   {
-   "id": "u42",
+   "id": "u29",
    "kind": "table 5",
-   "text": "Predictor | Explained deviance (%) | Relative importance\nAll species | Geographical distance | 45 | 2.133\nDrying duration | 24 | 1.342\nHedge index | 5 | 0.430\nZygoptera | Geographical distance | 50 | 2.371\nDrying duration | 20 | 1.001\nHedge index | 4 | 0.387\nAnisoptera | Nitrite | 18 | 1.078\nGeographical distance | 45 | 0.793\nVegetation density (upper banks) | 24 | 0.761"
-  },
-  {
-   "id": "u43",
-   "kind": "table 6",
-   "text": "Marker | AxcR1 | AxcR2\nAbdo_size | — | —\nlarval_body | — | —\nSemivoltine | — | —\nBivoltine | — | —\nUnivoltine | Blue | —\nPartivoltine | — | —\nMultivoltine | — | —\nbody_size | — | —\nF_mod.flier | — | —"
-  },
-  {
-   "id": "u44",
-   "kind": "table 6",
-   "text": "F_mod.percher | — | —\nF_sta.ApMa | Red | —\nF_sta.JunJul | Blue | —\nF_end.JuAu | — | —\nF_end.SepNo | — | —\nFlight_duration | — | —\nOverw.E | — | —\nOverw.EL | — | —\nOverw.L | — | —\nDispersal_ability | Blue | Red"
-  },
-  {
-   "id": "u45",
-   "kind": "table 6",
-   "text": "Court.no | — | —\nCourt.yes | — | —\nMigra.no | — | —\nMigra.yes | — | —\nTerit.no | — | —\nTerit.yes | — | —\nLarva.burrower | — | —\nLarva.claspers | — | —\nLarva.sprawler | — | —\nOvipo.Endophytic | — | —"
-  },
-  {
-   "id": "u46",
-   "kind": "table 6",
-   "text": "Ovipo.Exophytic | — | —"
-  },
-  {
-   "id": "u47",
-   "kind": "table 7",
-   "text": "Category | Value\nditch | Red\nmeadow | Blue\nwood | Red\nhedge_index | —\ncond | —\nnh4 | —\nno2 | —\nno3 | —\northop | —"
-  },
-  {
-   "id": "u48",
-   "kind": "table 7",
-   "text": "sato2 | —\nph | —\nveg_aqua | Blue\nalgae | —\nwaterdepth7 | —\ndrying | —\ncrayfish | —\nveg_low | Red\nveg_up | —\nflood_spr | —"
-  },
-  {
-   "id": "u49",
-   "kind": "table 9",
    "text": "Predictor | Explained deviance (%) | Relative importance\nAll species | Geographic distance | 39 | 2.044\nDrying duration | 9 | 1.062\nVegetation density (lower banks) | 7 | 0.582\nWater depth in July | 3 | 0.571\nHedge index | 4 | 0.397\nZygoptera | Geographic distance | 43 | 2.291\nDrying duration | 6 | 0.729\nVegetation density (lower banks) | 7 | 0.562\nWater depth in July | 2 | 0.531"
   },
   {
-   "id": "u50",
-   "kind": "table 9",
+   "id": "u30",
+   "kind": "table 5",
    "text": "Hedge index | 3 | 0.353\nAquatic vegetation cover | 2 | 0.301\nAnisoptera | Nitrite | 16 | 1.062\nGeographic distance | 36 | 0.773\nWater depth in July | 16 | 0.765\nVegetation density (upper banks) | 16 | 0.685"
   }
  ],
@@ -281,81 +181,55 @@
    "u13",
    "u14",
    "u15",
-   "u16"
-  ],
-  [
+   "u16",
    "u17",
-   "u18",
-   "u19"
+   "u18"
   ],
   [
+   "u19",
    "u20",
    "u21",
    "u22",
    "u23",
-   "u24"
-  ],
-  [
+   "u24",
    "u25",
    "u26",
    "u27",
    "u28",
-   "u29",
-   "u30",
-   "u31"
+   "u29"
   ],
   [
-   "u32",
-   "u33",
-   "u34",
-   "u35",
-   "u36",
-   "u37",
-   "u38",
-   "u39",
-   "u40",
-   "u41",
-   "u42"
-  ],
-  [
-   "u43",
-   "u44",
-   "u45",
-   "u46",
-   "u47",
-   "u48",
-   "u49",
-   "u50"
+   "u30"
   ]
  ],
- "calls": 20,
+ "calls": 13,
  "categories": [
   {
    "variable": "environmental table",
    "code": "R",
    "term": "environmental table",
    "unit": "u5",
-   "model_label": "environmental table",
-   "label": "environmental table",
-   "explanation": ""
+   "model_label": "environmental",
+   "label": "environmental",
+   "explanation": "table"
   },
   {
    "variable": "presence-absence species table",
    "code": "L",
    "term": "presence-absence species table",
    "unit": "u5",
-   "model_label": "presence-absence species table",
-   "label": "presence-absence species table",
-   "explanation": ""
+   "model_label": "presence-absence",
+   "label": "presence-absence",
+   "explanation": "species table"
   },
   {
    "variable": "trait table",
    "code": "Q",
    "term": "trait table",
    "unit": "u5",
-   "model_label": "trait table",
-   "label": "trait table",
-   "explanation": ""
+   "model_label": "trait",
+   "label": "trait",
+   "explanation": "table"
   },
   {
    "variable": "species composition",
@@ -380,9 +254,9 @@
    "code": "(a)",
    "term": "all species",
    "unit": "u7",
-   "model_label": "all species",
-   "label": "all species",
-   "explanation": ""
+   "model_label": "species",
+   "label": "species",
+   "explanation": "all"
   },
   {
    "variable": "Zygoptera",
@@ -403,173 +277,83 @@
    "explanation": ""
   },
   {
-   "variable": "d",
-   "code": "0.2, 1 or 2",
-   "term": "grid size",
+   "variable": "the transect scores for each year",
+   "code": "(a)",
+   "term": "the transect scores for each year",
    "unit": "u9",
-   "model_label": "grid size",
-   "label": "grid size",
-   "explanation": ""
+   "model_label": "transect",
+   "label": "transect",
+   "explanation": "the scores for each year"
   },
   {
-   "variable": "Positive significant relationships",
-   "code": "red cells",
-   "term": "Positive significant relationships are represented by red cells",
+   "variable": "the species scores",
+   "code": "(b)",
+   "term": "the species scores",
+   "unit": "u9",
+   "model_label": "species",
+   "label": "species",
+   "explanation": "the scores"
+  },
+  {
+   "variable": "the projection of the coefficients of the environmental variables",
+   "code": "(c)",
+   "term": "the projection of the coefficients of the environmental variables",
+   "unit": "u9",
+   "model_label": "projection",
+   "label": "projection",
+   "explanation": "the of the coefficients of the environmental variables"
+  },
+  {
+   "variable": "the traits",
+   "code": "(d)",
+   "term": "the traits",
+   "unit": "u9",
+   "model_label": "traits",
+   "label": "traits",
+   "explanation": "the"
+  },
+  {
+   "variable": "environmental gradients",
+   "code": "AxcR1",
+   "term": "AxcR1",
    "unit": "u10",
-   "model_label": "red cells",
-   "label": "red cells",
-   "explanation": "Positive significant relationships are represented by"
+   "model_label": "AxcR1",
+   "label": "AxcR1",
+   "explanation": ""
   },
   {
-   "variable": "negative significant associations",
-   "code": "blue cells",
-   "term": "negative significant associations by blue cells",
+   "variable": "environmental gradients",
+   "code": "AxcR2",
+   "term": "AxcR2",
    "unit": "u10",
-   "model_label": "blue cells",
-   "label": "blue cells",
-   "explanation": "negative significant associations by"
+   "model_label": "AxcR2",
+   "label": "AxcR2",
+   "explanation": ""
   },
   {
-   "variable": "Variables with no significant associations",
-   "code": "grey",
-   "term": "Variables with no significant associations are shown in grey",
+   "variable": "trait syndromes",
+   "code": "AxcQ1",
+   "term": "AxcQ1",
    "unit": "u10",
-   "model_label": "grey",
-   "label": "grey",
-   "explanation": "Variables with no significant associations are shown in"
-  },
-  {
-   "variable": "Odonata monitoring",
-   "code": "LPO",
-   "term": "Ligue pour la Protection des Oiseaux",
-   "unit": "u12",
-   "model_label": "LPO",
-   "label": "Ligue pour la Protection des Oiseaux",
+   "model_label": "AxcQ1",
+   "label": "AxcQ1",
    "explanation": ""
   },
   {
-   "variable": "Research support",
-   "code": "EPMP",
-   "term": "Établissement Public du Marais Poitevin",
-   "unit": "u12",
-   "model_label": "EPMP",
-   "label": "Établissement Public du Marais Poitevin",
-   "explanation": ""
-  },
-  {
-   "variable": "Research support",
-   "code": "AELB",
-   "term": "Agence de l'Eau Loire-Bretagne",
-   "unit": "u12",
-   "model_label": "AELB",
-   "label": "Agence de l'Eau Loire-Bretagne",
-   "explanation": ""
-  },
-  {
-   "variable": "Fieldworkers discussion",
-   "code": "PNRMP",
-   "term": "Parc Naturel Régional du Marais poitevin",
-   "unit": "u12",
-   "model_label": "PNRMP",
-   "label": "Parc Naturel Régional du Marais poitevin",
-   "explanation": ""
-  },
-  {
-   "variable": "Database design help",
-   "code": "OSUR",
-   "term": "OSUR",
-   "unit": "u12",
-   "model_label": "OSUR",
-   "label": "OSUR",
-   "explanation": ""
-  },
-  {
-   "variable": "Database design help",
-   "code": "UMR ECOBIO",
-   "term": "UMR ECOBIO",
-   "unit": "u12",
-   "model_label": "UMR ECOBIO",
-   "label": "UMR ECOBIO",
-   "explanation": ""
-  },
-  {
-   "variable": "Water quality data provision",
-   "code": "UNIMA",
-   "term": "Union des Marais de la Charente-Maritime",
-   "unit": "u12",
-   "model_label": "UNIMA",
-   "label": "Union des Marais de la Charente-Maritime",
-   "explanation": ""
-  },
-  {
-   "variable": "GDM",
-   "code": "GDM",
-   "term": "generalised dissimilarity modelling",
-   "unit": "u17",
-   "model_label": "generalised dissimilarity modelling",
-   "label": "generalised dissimilarity modelling",
-   "explanation": ""
-  },
-  {
-   "variable": "R",
-   "code": "R",
-   "term": "environmental table",
-   "unit": "u18",
-   "model_label": "environmental table",
-   "label": "environmental table",
-   "explanation": ""
-  },
-  {
-   "variable": "L",
-   "code": "L",
-   "term": "presence-absence species table",
-   "unit": "u18",
-   "model_label": "presence-absence species table",
-   "label": "presence-absence species table",
-   "explanation": ""
-  },
-  {
-   "variable": "Q",
-   "code": "Q",
-   "term": "trait table",
-   "unit": "u18",
-   "model_label": "trait table",
-   "label": "trait table",
-   "explanation": ""
-  },
-  {
-   "variable": "Model 2",
-   "code": "Model 2",
-   "term": "the relationship between the species composition and the environmental conditions",
-   "unit": "u18",
-   "model_label": "Model 2",
-   "label": "the relationship between the species composition and the environmental conditions",
-   "explanation": ""
-  },
-  {
-   "variable": "Model 4",
-   "code": "Model 4",
-   "term": "the species distribution according to their traits",
-   "unit": "u18",
-   "model_label": "Model 4",
-   "label": "the species distribution according to their traits",
-   "explanation": ""
-  },
-  {
-   "variable": "the values of d",
-   "code": "0.2, 1 or 2",
-   "term": "grid size",
-   "unit": "u22",
-   "model_label": "grid size",
-   "label": "grid size",
+   "variable": "trait syndromes",
+   "code": "AxcQ2",
+   "term": "AxcQ2",
+   "unit": "u10",
+   "model_label": "AxcQ2",
+   "label": "AxcQ2",
    "explanation": ""
   },
   {
    "variable": "Flight start modalities",
    "code": "ApMa",
    "term": "April-May",
-   "unit": "u26",
-   "model_label": "ApMa",
+   "unit": "u13",
+   "model_label": "April-May",
    "label": "April-May",
    "explanation": ""
   },
@@ -577,8 +361,8 @@
    "variable": "Flight start modalities",
    "code": "JunJul",
    "term": "June-July",
-   "unit": "u26",
-   "model_label": "JunJul",
+   "unit": "u13",
+   "model_label": "June-July",
    "label": "June-July",
    "explanation": ""
   },
@@ -586,8 +370,8 @@
    "variable": "Flight end modalities",
    "code": "JuAu",
    "term": "July-August",
-   "unit": "u26",
-   "model_label": "JuAu",
+   "unit": "u13",
+   "model_label": "July-August",
    "label": "July-August",
    "explanation": ""
   },
@@ -595,8 +379,8 @@
    "variable": "Flight end modalities",
    "code": "SepNo",
    "term": "September-November",
-   "unit": "u26",
-   "model_label": "SepNo",
+   "unit": "u13",
+   "model_label": "September-November",
    "label": "September-November",
    "explanation": ""
   },
@@ -604,7 +388,7 @@
    "variable": "Overwintering stage modalities",
    "code": "E",
    "term": "eggs",
-   "unit": "u26",
+   "unit": "u13",
    "model_label": "eggs",
    "label": "eggs",
    "explanation": ""
@@ -613,7 +397,7 @@
    "variable": "Overwintering stage modalities",
    "code": "L",
    "term": "larvae",
-   "unit": "u26",
+   "unit": "u13",
    "model_label": "larvae",
    "label": "larvae",
    "explanation": ""
@@ -622,7 +406,7 @@
    "variable": "Overwintering stage modalities",
    "code": "EL",
    "term": "both",
-   "unit": "u26",
+   "unit": "u13",
    "model_label": "both",
    "label": "both",
    "explanation": ""
@@ -631,7 +415,7 @@
    "variable": "All species",
    "code": "All species",
    "term": "All species",
-   "unit": "u35",
+   "unit": "u22",
    "model_label": "All species",
    "label": "All species",
    "explanation": ""
@@ -640,7 +424,7 @@
    "variable": "Zygoptera",
    "code": "Zygoptera",
    "term": "Zygoptera",
-   "unit": "u32",
+   "unit": "u19",
    "model_label": "Zygoptera",
    "label": "Zygoptera",
    "explanation": ""
@@ -649,7 +433,7 @@
    "variable": "Anisoptera",
    "code": "Anisoptera",
    "term": "Anisoptera",
-   "unit": "u32",
+   "unit": "u19",
    "model_label": "Anisoptera",
    "label": "Anisoptera",
    "explanation": ""
@@ -658,7 +442,7 @@
    "variable": "ditch",
    "code": "ditch",
    "term": "ditch",
-   "unit": "u40",
+   "unit": "u27",
    "model_label": "ditch",
    "label": "ditch",
    "explanation": ""
@@ -667,7 +451,7 @@
    "variable": "meadow",
    "code": "meadow",
    "term": "meadow",
-   "unit": "u40",
+   "unit": "u27",
    "model_label": "meadow",
    "label": "meadow",
    "explanation": ""
@@ -676,7 +460,7 @@
    "variable": "wood",
    "code": "wood",
    "term": "wood",
-   "unit": "u40",
+   "unit": "u27",
    "model_label": "wood",
    "label": "wood",
    "explanation": ""
@@ -685,7 +469,7 @@
    "variable": "veg_aqua",
    "code": "veg_aqua",
    "term": "veg_aqua",
-   "unit": "u41",
+   "unit": "u28",
    "model_label": "veg_aqua",
    "label": "veg_aqua",
    "explanation": ""
@@ -694,7 +478,7 @@
    "variable": "veg_low",
    "code": "veg_low",
    "term": "veg_low",
-   "unit": "u41",
+   "unit": "u28",
    "model_label": "veg_low",
    "label": "veg_low",
    "explanation": ""
@@ -703,90 +487,63 @@
    "variable": "veg_up",
    "code": "veg_up",
    "term": "veg_up",
-   "unit": "u41",
+   "unit": "u28",
    "model_label": "veg_up",
    "label": "veg_up",
    "explanation": ""
   },
   {
-   "variable": "F_sta.ApMa",
-   "code": "Red",
-   "term": "Red",
-   "unit": "u44",
-   "model_label": "Red",
-   "label": "Red",
+   "variable": "Hedge index",
+   "code": "3",
+   "term": "3",
+   "unit": "u30",
+   "model_label": "3",
+   "label": "3",
    "explanation": ""
   },
   {
-   "variable": "F_sta.JunJul",
-   "code": "Blue",
-   "term": "Blue",
-   "unit": "u43",
-   "model_label": "Blue",
-   "label": "Blue",
+   "variable": "Aquatic vegetation cover",
+   "code": "2",
+   "term": "2",
+   "unit": "u30",
+   "model_label": "2",
+   "label": "2",
    "explanation": ""
   },
   {
-   "variable": "Dispersal_ability",
-   "code": "Blue",
-   "term": "Blue",
-   "unit": "u43",
-   "model_label": "Blue",
-   "label": "Blue",
+   "variable": "Anisoptera",
+   "code": "16",
+   "term": "16",
+   "unit": "u30",
+   "model_label": "16",
+   "label": "16",
    "explanation": ""
   },
   {
-   "variable": "Dispersal_ability",
-   "code": "Red",
-   "term": "Red",
-   "unit": "u44",
-   "model_label": "Red",
-   "label": "Red",
+   "variable": "Geographic distance",
+   "code": "36",
+   "term": "36",
+   "unit": "u30",
+   "model_label": "36",
+   "label": "36",
    "explanation": ""
   },
   {
-   "variable": "ditch",
-   "code": "Red",
-   "term": "Red",
-   "unit": "u44",
-   "model_label": "Red",
-   "label": "Red",
+   "variable": "Water depth in July",
+   "code": "16",
+   "term": "16",
+   "unit": "u30",
+   "model_label": "16",
+   "label": "16",
    "explanation": ""
   },
   {
-   "variable": "meadow",
-   "code": "Blue",
-   "term": "Blue",
-   "unit": "u43",
-   "model_label": "Blue",
-   "label": "Blue",
-   "explanation": ""
-  },
-  {
-   "variable": "wood",
-   "code": "Red",
-   "term": "Red",
-   "unit": "u44",
-   "model_label": "Red",
-   "label": "Red",
-   "explanation": ""
-  },
-  {
-   "variable": "veg_aqua",
-   "code": "Blue",
-   "term": "Blue",
-   "unit": "u43",
-   "model_label": "Blue",
-   "label": "Blue",
-   "explanation": ""
-  },
-  {
-   "variable": "veg_low",
-   "code": "Red",
-   "term": "Red",
-   "unit": "u44",
-   "model_label": "Red",
-   "label": "Red",
+   "variable": "Vegetation density (upper banks)",
+   "code": "16",
+   "term": "16",
+   "unit": "u30",
+   "model_label": "16",
+   "label": "16",
    "explanation": ""
   },
   {
@@ -907,7 +664,7 @@
    "label": "drying duration",
    "explanation": "",
    "evidence": "named",
-   "unit": "u24"
+   "unit": "u11"
   },
   {
    "variable": "Species size",
@@ -915,7 +672,7 @@
    "label": "adult abdomen",
    "explanation": "",
    "evidence": "named",
-   "unit": "u26"
+   "unit": "u13"
   },
   {
    "variable": "Species size",
@@ -923,7 +680,7 @@
    "label": "body sizes",
    "explanation": "",
    "evidence": "named",
-   "unit": "u26"
+   "unit": "u13"
   },
   {
    "variable": "Predictor",
@@ -931,7 +688,7 @@
    "label": "Geographical distance",
    "explanation": "",
    "evidence": "named",
-   "unit": "u35"
+   "unit": "u22"
   },
   {
    "variable": "Predictor",
@@ -939,7 +696,7 @@
    "label": "Hedge index",
    "explanation": "",
    "evidence": "named",
-   "unit": "u35"
+   "unit": "u22"
   },
   {
    "variable": "Predictor",
@@ -947,7 +704,7 @@
    "label": "Nitrite",
    "explanation": "",
    "evidence": "named",
-   "unit": "u35"
+   "unit": "u22"
   },
   {
    "variable": "Predictor",
@@ -955,7 +712,7 @@
    "label": "Vegetation density (upper banks)",
    "explanation": "",
    "evidence": "named",
-   "unit": "u35"
+   "unit": "u22"
   },
   {
    "variable": "Marker",
@@ -963,39 +720,7 @@
    "label": "Univoltine",
    "explanation": "",
    "evidence": "named",
-   "unit": "u36"
-  },
-  {
-   "variable": "Marker",
-   "code": "",
-   "label": "Semivoltine",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u36"
-  },
-  {
-   "variable": "Marker",
-   "code": "",
-   "label": "Bivoltine",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u36"
-  },
-  {
-   "variable": "Marker",
-   "code": "",
-   "label": "Multivoltine",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u36"
-  },
-  {
-   "variable": "Marker",
-   "code": "",
-   "label": "Partivoltine",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u36"
+   "unit": "u23"
   },
   {
    "variable": "Marker",
@@ -1003,7 +728,7 @@
    "label": "F_sta.ApMa",
    "explanation": "",
    "evidence": "named",
-   "unit": "u37"
+   "unit": "u24"
   },
   {
    "variable": "Marker",
@@ -1011,7 +736,7 @@
    "label": "F_sta.JunJul",
    "explanation": "",
    "evidence": "named",
-   "unit": "u37"
+   "unit": "u24"
   },
   {
    "variable": "Marker",
@@ -1019,41 +744,97 @@
    "label": "Dispersal_ability",
    "explanation": "",
    "evidence": "named",
-   "unit": "u37"
+   "unit": "u24"
   },
   {
-   "variable": "Marker",
+   "variable": "Court.no",
    "code": "",
    "label": "Migra.yes",
    "explanation": "",
    "evidence": "named",
-   "unit": "u38"
+   "unit": "u25"
   },
   {
-   "variable": "Marker",
+   "variable": "Court.no",
    "code": "",
    "label": "Terit.yes",
    "explanation": "",
    "evidence": "named",
-   "unit": "u38"
+   "unit": "u25"
   },
   {
-   "variable": "Marker",
+   "variable": "Court.no",
+   "code": "",
+   "label": "Larva.burrower",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Court.no",
+   "code": "",
+   "label": "Larva.claspers",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u25"
+  },
+  {
+   "variable": "Court.no",
    "code": "",
    "label": "Larva.sprawler",
    "explanation": "",
    "evidence": "named",
-   "unit": "u38"
+   "unit": "u25"
   },
   {
-   "variable": "Marker",
+   "variable": "Court.no",
    "code": "",
    "label": "Ovipo.Endophytic",
    "explanation": "",
    "evidence": "named",
-   "unit": "u38"
+   "unit": "u25"
+  },
+  {
+   "variable": "Court.no",
+   "code": "",
+   "label": "Ovipo.Exophytic",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u26"
+  },
+  {
+   "variable": "Predictor",
+   "code": "",
+   "label": "Geographic distance",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Predictor",
+   "code": "",
+   "label": "Water depth in July",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Predictor",
+   "code": "",
+   "label": "Vegetation density (lower banks)",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u29"
+  },
+  {
+   "variable": "Aquatic vegetation cover",
+   "code": "",
+   "label": "Aquatic vegetation cover",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u30"
   }
  ],
  "dropped": [],
- "seconds": 111.7
+ "seconds": 32.7
 }

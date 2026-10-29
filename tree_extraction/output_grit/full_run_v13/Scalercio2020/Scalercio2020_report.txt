@@ -13,7 +13,7 @@
   [semantic] left unmatched: 'Tmean' vs 'Month when adults fly' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Scalercio2020/Scalercio2020.xlsx  (1158 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v11/Scalercio2020/Scalercio2020.csv  (2983 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/Scalercio2020/Scalercio2020.csv  (2910 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -110,14 +110,14 @@ ROW-LEVEL (key match)
   matched (TP)        : 729
   missed (FN)         : 429
   spurious, in scope  : 74   <- GT covers this trait: real errors
-  spurious, out of scope: 2180   <- GT never covers this trait: nothing to score against
+  spurious, out of scope: 2107   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.244 / 0.630 / 0.352   (every extra row counts against precision)
+  STRICT  P/R/F1      : 0.251 / 0.630 / 0.358   (every extra row counts against precision)
   SCOPED  P/R/F1      : 0.908 / 0.630 / 0.743   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.630   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                           2180
+    measurementType                           2107
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
@@ -193,7 +193,6 @@ measurementType COVERAGE
   pc1mobility                                       0    73   PRED-ONLY
   pc2ecop                                           0    73   PRED-ONLY
   pmean                                             0    73   PRED-ONLY
-  species                                           0    73   PRED-ONLY
   tmean                                             0    73   PRED-ONLY
   voltinism                                        73    73   
   windmax                                           0    73   PRED-ONLY
@@ -211,8 +210,8 @@ measurementType COVERAGE
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.908  0.630  0.743    729    74   429   id+type+value
-             (2180 more spurious row(s) set aside as out-of-scope; strict P would be 0.244)
+             (2107 more spurious row(s) set aside as out-of-scope; strict P would be 0.251)
   tags        0.000  0.000  0.000      0   803  1158   basis+id+type+value+stat+sex+stage
-             (2180 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (2107 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
              (F1 -0.743 vs previous)
              note: only 0/729 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

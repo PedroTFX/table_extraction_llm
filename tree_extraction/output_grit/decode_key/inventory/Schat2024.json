@@ -63,16 +63,41 @@
   },
   {
    "id": "u12",
+   "kind": "prose",
+   "text": "![Image block](doc:427bd0d/tier:advanced/page:3/block:1)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "![Image block](doc:427bd0d/tier:advanced/page:4/block:1)"
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "Figure S2 Histograms indicating null distributions of adjusted $\\mathbb { R } ^ { 2 }$ values from regression models of habitat characteristics and traits. These null models were made by randomizing trait values and habitat features across individuals. Red lines indicate the $\\mathbb { R } ^ { 2 }$ values calculated using the observed survey data (ambient temperature: $\\mathrm{R}^{2}=0.118,\\mathrm{~p}=0.001$ ; substrate temperature: $\\mathbf { \\tilde { R } } ^ { 2 } =$ $0.188, p = 0;$ substrate type: $\\mathbb{R}^2 = 0.145, \\; \\mathbb{p} = 0;$ distance from river’s edge: $\\mathbb{R}^2 = 0.0286, \\; \\mathbb{p} =$ 0.353)."
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "![Image block](doc:427bd0d/tier:advanced/page:5/block:1)"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "Figure S3 Histograms indicating null distributions of $\\beta { \\mathrm { S i m } }$ (left) and $\\beta { \\mathrm { N e s } }$ (right) values across sites (top), substrates (middle), and peaks (bottom). Null β values were computed from 1000 randomized matrices of species compositions across locations, maintaining the total number of occurrences for each species. Red lines indicate the β values calculated using the observed survey data $( \\beta _ { \\mathrm { S i m } } )$ site = 0.798, $\\mathtt { p } = 0 . 1 2 1$ ; substrate = 0.269, $\\mathbf { p } = 0 ;$ peak = 0.525, $\\mathtt { p } = 0 . 0 6 4$ ; $\\beta _ { \\mathrm { N e s } } ;$ site = 0.0894, $\\mathtt { p } = 0 . 1 2 1$ ; substrate = 0.299, p = 0; peak = 0.189, $p = 0 . 0 6 4 )$"
+  },
+  {
+   "id": "u17",
    "kind": "table 2",
    "text": "Series | PC1 (77.1% of Variance) (range) | PC2 (11.5% of Variance) (range)\nN. acuta | -6~0 | -0.5~2.0\nN. crassicornis | -1~3 | -0.5~1.5\nN. eschscholtzii | -3~-1 | 0.0~4.0\nN. gebleri | -3~-1 | -2.5~0.0\nN. kincaidi | 0~4 | -3.0~-1.0\nN. mannerheimii | -1~1 | -1.0~3.2\nN. meanyi | 1~3 | 0.0~1.5\nN. metallica | -1~1 | -0.5~1.0\nN. paradisi | -1~4 | -2.5~0.0"
   },
   {
-   "id": "u13",
+   "id": "u18",
    "kind": "table 2",
    "text": "N. piperi | 0~6 | 0.5~1.8\nN. sahlbergii | -5~-1 | -0.5~1.5\nN. vandykei | 3~8 | 0.5~1.5"
   },
   {
-   "id": "u14",
+   "id": "u19",
    "kind": "table 4",
    "text": "Series | \\(\\delta13C\\) (‰) (range) | \\(\\delta15N\\) (‰) (range)\nN. acuta | -1.2~5.4 | 4.3~9.1\nN. mannerheimii | -0.2~2.2 | 6.0~7.9\nN. piperi | 1.3~5.8 | 5.7~8.7\nN. sahlbergii | 1.3~4.2 | 5.0~8.2"
   }
@@ -96,32 +121,46 @@
    "u8",
    "u9",
    "u10",
-   "u11"
+   "u11",
+   "u12",
+   "u13"
   ],
   [
-   "u12",
-   "u13",
-   "u14"
+   "u14",
+   "u15",
+   "u16",
+   "u17",
+   "u18",
+   "u19"
   ]
  ],
- "calls": 11,
+ "calls": 12,
  "categories": [
   {
    "variable": "habitat",
-   "code": "[gravel, rocks 10 cm–50 cm in diameter]",
-   "term": "gravel, rocks 10 cm–50 cm in diameter",
+   "code": "gravel",
+   "term": "gravel",
    "unit": "u0",
-   "model_label": "gravel, rocks 10 cm–50 cm in diameter",
-   "label": "gravel, rocks 10 cm–50 cm in diameter",
+   "model_label": "gravel",
+   "label": "gravel",
    "explanation": ""
   },
   {
    "variable": "habitat",
-   "code": "large rocks [>50 cm in diameter]",
-   "term": "large rocks [>50 cm in diameter]",
+   "code": "rocks 10 cm–50 cm in diameter",
+   "term": "rocks 10 cm–50 cm in diameter",
    "unit": "u0",
-   "model_label": "large rocks [>50 cm in diameter]",
-   "label": "large rocks [>50 cm in diameter",
+   "model_label": "rocks 10 cm–50 cm in diameter",
+   "label": "rocks 10 cm–50 cm in diameter",
+   "explanation": ""
+  },
+  {
+   "variable": "habitat",
+   "code": "large rocks",
+   "term": "large rocks",
+   "unit": "u0",
+   "model_label": "large rocks",
+   "label": "large rocks",
    "explanation": ""
   },
   {
@@ -136,11 +175,11 @@
   {
    "variable": "habitat",
    "code": "alpine",
-   "term": "alpine [snowfields and talus]",
+   "term": "alpine",
    "unit": "u0",
    "model_label": "alpine",
    "label": "alpine",
-   "explanation": "snowfields and talus"
+   "explanation": ""
   },
   {
    "variable": "substrate type",
@@ -188,8 +227,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. acuta",
-   "code": "N. acuta",
+   "variable": "n",
+   "code": "n = 1 2",
    "term": "N. acuta",
    "unit": "u5",
    "model_label": "N. acuta",
@@ -197,8 +236,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. crassicornis",
-   "code": "N. crassicornis",
+   "variable": "n",
+   "code": "n = 1 5",
    "term": "N. crassicornis",
    "unit": "u5",
    "model_label": "N. crassicornis",
@@ -206,8 +245,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. eschscholtzii",
-   "code": "N. eschscholtzii",
+   "variable": "n",
+   "code": "n = 1 6",
    "term": "N. eschscholtzii",
    "unit": "u5",
    "model_label": "N. eschscholtzii",
@@ -215,8 +254,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. gebleri",
-   "code": "N. gebleri",
+   "variable": "n",
+   "code": "n = 7",
    "term": "N. gebleri",
    "unit": "u5",
    "model_label": "N. gebleri",
@@ -224,8 +263,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. mannerheimii",
-   "code": "N. mannerheimii",
+   "variable": "n",
+   "code": "n = 1 9",
    "term": "N. mannerheimii",
    "unit": "u5",
    "model_label": "N. mannerheimii",
@@ -233,8 +272,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. metallica",
-   "code": "N. metallica",
+   "variable": "n",
+   "code": "n = 1 9",
    "term": "N. metallica",
    "unit": "u5",
    "model_label": "N. metallica",
@@ -242,8 +281,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. paradisi",
-   "code": "N. paradisi",
+   "variable": "n",
+   "code": "n = 2 8",
    "term": "N. paradisi",
    "unit": "u5",
    "model_label": "N. paradisi",
@@ -251,8 +290,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. piperi",
-   "code": "N. piperi",
+   "variable": "n",
+   "code": "n = 2 7",
    "term": "N. piperi",
    "unit": "u5",
    "model_label": "N. piperi",
@@ -260,8 +299,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. sahlbergii",
-   "code": "N. sahlbergii",
+   "variable": "n",
+   "code": "n = 7",
    "term": "N. sahlbergii",
    "unit": "u5",
    "model_label": "N. sahlbergii",
@@ -269,8 +308,8 @@
    "explanation": ""
   },
   {
-   "variable": "N. vandykei",
-   "code": "N. vandykei",
+   "variable": "n",
+   "code": "n = 3",
    "term": "N. vandykei",
    "unit": "u5",
    "model_label": "N. vandykei",
@@ -278,8 +317,35 @@
    "explanation": ""
   },
   {
-   "variable": "N. kincaidi",
-   "code": "N. kincaidi",
+   "variable": "n",
+   "code": "n = 1 7 9",
+   "term": "N. acuta",
+   "unit": "u6",
+   "model_label": "N. acuta",
+   "label": "N. acuta",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 5",
+   "term": "N. crassicornis",
+   "unit": "u6",
+   "model_label": "N. crassicornis",
+   "label": "N. crassicornis",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 3",
+   "term": "N. eschscholtzii",
+   "unit": "u5",
+   "model_label": "N. eschscholtzii",
+   "label": "N. eschscholtzii",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 6",
    "term": "N. kincaidi",
    "unit": "u6",
    "model_label": "N. kincaidi",
@@ -287,12 +353,66 @@
    "explanation": ""
   },
   {
-   "variable": "N. meanyi",
-   "code": "N. meanyi",
+   "variable": "n",
+   "code": "n = 4 7",
+   "term": "N. mannerheimii",
+   "unit": "u6",
+   "model_label": "N. mannerheimii",
+   "label": "N. mannerheimii",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 3 4",
    "term": "N. meanyi",
    "unit": "u6",
    "model_label": "N. meanyi",
    "label": "N. meanyi",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 1 4",
+   "term": "N. metallica",
+   "unit": "u6",
+   "model_label": "N. metallica",
+   "label": "N. metallica",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 5",
+   "term": "N. paradisi",
+   "unit": "u6",
+   "model_label": "N. paradisi",
+   "label": "N. paradisi",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 3 5",
+   "term": "N. piperi",
+   "unit": "u6",
+   "model_label": "N. piperi",
+   "label": "N. piperi",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 1 0",
+   "term": "N. sahlbergii",
+   "unit": "u6",
+   "model_label": "N. sahlbergii",
+   "label": "N. sahlbergii",
+   "explanation": ""
+  },
+  {
+   "variable": "n",
+   "code": "n = 5",
+   "term": "N. vandykei",
+   "unit": "u6",
+   "model_label": "N. vandykei",
+   "label": "N. vandykei",
    "explanation": ""
   },
   {
@@ -311,6 +431,114 @@
    "unit": "u8",
    "model_label": "species",
    "label": "species",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. acuta",
+   "term": "N. acuta",
+   "unit": "u17",
+   "model_label": "N. acuta",
+   "label": "N. acuta",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. crassicornis",
+   "term": "N. crassicornis",
+   "unit": "u17",
+   "model_label": "N. crassicornis",
+   "label": "N. crassicornis",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. eschscholtzii",
+   "term": "N. eschscholtzii",
+   "unit": "u17",
+   "model_label": "N. eschscholtzii",
+   "label": "N. eschscholtzii",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. gebleri",
+   "term": "N. gebleri",
+   "unit": "u17",
+   "model_label": "N. gebleri",
+   "label": "N. gebleri",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. kincaidi",
+   "term": "N. kincaidi",
+   "unit": "u17",
+   "model_label": "N. kincaidi",
+   "label": "N. kincaidi",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. mannerheimii",
+   "term": "N. mannerheimii",
+   "unit": "u17",
+   "model_label": "N. mannerheimii",
+   "label": "N. mannerheimii",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. meanyi",
+   "term": "N. meanyi",
+   "unit": "u17",
+   "model_label": "N. meanyi",
+   "label": "N. meanyi",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. metallica",
+   "term": "N. metallica",
+   "unit": "u17",
+   "model_label": "N. metallica",
+   "label": "N. metallica",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. paradisi",
+   "term": "N. paradisi",
+   "unit": "u17",
+   "model_label": "N. paradisi",
+   "label": "N. paradisi",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. piperi",
+   "term": "N. piperi",
+   "unit": "u18",
+   "model_label": "N. piperi",
+   "label": "N. piperi",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. sahlbergii",
+   "term": "N. sahlbergii",
+   "unit": "u18",
+   "model_label": "N. sahlbergii",
+   "label": "N. sahlbergii",
+   "explanation": ""
+  },
+  {
+   "variable": "Series",
+   "code": "N. vandykei",
+   "term": "N. vandykei",
+   "unit": "u18",
+   "model_label": "N. vandykei",
+   "label": "N. vandykei",
    "explanation": ""
   },
   {
@@ -364,20 +592,12 @@
   {
    "variable": "ambient temperature",
    "code": "",
-   "label": "warmer temperatures",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u9"
-  },
-  {
-   "variable": "substrate type",
-   "code": "",
-   "label": "substrates typically found at lower elevations",
+   "label": "warmer ambient temperatures",
    "explanation": "",
    "evidence": "named",
    "unit": "u9"
   }
  ],
  "dropped": [],
- "seconds": 52.2
+ "seconds": 32.4
 }

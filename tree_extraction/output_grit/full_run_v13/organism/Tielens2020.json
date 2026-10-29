@@ -8,9 +8,9 @@
     "choice": "other",
     "probs": {
      "species": 0.023,
-     "part": 0.006,
+     "part": 0.008,
      "higher": 0.006,
-     "other": 0.965
+     "other": 0.964
     }
    }
   },
@@ -26,9 +26,9 @@
    "Taxonomic Group": {
     "choice": "species",
     "probs": {
-     "species": 0.97,
+     "species": 0.973,
      "part": 0.001,
-     "higher": 0.028,
+     "higher": 0.025,
      "other": 0.001
     }
    }
@@ -66,9 +66,9 @@
    "Genus": {
     "choice": "higher",
     "probs": {
-     "species": 0.019,
-     "part": 0.013,
-     "higher": 0.968,
+     "species": 0.016,
+     "part": 0.011,
+     "higher": 0.973,
      "other": 0.001
     }
    },
@@ -78,7 +78,7 @@
      "species": 0.001,
      "part": 0.003,
      "higher": 0.002,
-     "other": 0.994
+     "other": 0.995
     }
    }
   },
@@ -88,17 +88,72 @@
   "units": {
    "choice": "units",
    "probs": {
-    "units": 0.89,
-    "groups": 0.11
+    "units": 0.888,
+    "groups": 0.112
    }
   },
   "pick": {
    "choice": "c2",
    "probs": {
     "c0": 0.005,
-    "c1": 0.041,
-    "c2": 0.593,
-    "none": 0.361
+    "c1": 0.044,
+    "c2": 0.655,
+    "none": 0.296
+   }
+  }
+ },
+ "27": {
+  "candidates": [
+   "family",
+   "genus",
+   "species"
+  ],
+  "kinds": {
+   "family": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.999,
+     "other": 0.001
+    }
+   },
+   "genus": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.005,
+     "part": 0.003,
+     "higher": 0.991,
+     "other": 0.001
+    }
+   },
+   "species": {
+    "choice": "part",
+    "probs": {
+     "species": 0.046,
+     "part": 0.944,
+     "higher": 0.004,
+     "other": 0.006
+    }
+   }
+  },
+  "organism": "species",
+  "genus_from": {
+   "column": "genus"
+  },
+  "outcome": "part + genus column",
+  "genus": {
+   "choice": "c3",
+   "probs": {
+    "c0": 0.0,
+    "c1": 0.0,
+    "c2": 0.0,
+    "c3": 0.998,
+    "c4": 0.0,
+    "c5": 0.0,
+    "c6": 0.0,
+    "c7": 0.0,
+    "nowhere": 0.001
    }
   }
  }

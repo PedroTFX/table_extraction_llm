@@ -165,6 +165,31 @@
    "id": "u32",
    "kind": "table 21",
    "text": "Linear predictor (range) | Dunn-Smyth residual (range)\n-8~4 | -4~6"
+  },
+  {
+   "id": "u33",
+   "kind": "table 22",
+   "text": "SHEETS:\nspecies_site\nsite_characteristics\nspecies_traits\nenv_traits"
+  },
+  {
+   "id": "u34",
+   "kind": "table 23",
+   "text": "specimens with order, family, genus and abundance for every sample\ninformation on sampling site and sample, including tree height, sampling date, site precipitation and elevation\ninsect trait information for every species\nmetrosideros polymorpha/host tree leaf traits"
+  },
+  {
+   "id": "u35",
+   "kind": "table 24",
+   "text": "SHEET:VARIABLE | CLASS | DESCRIPTION\nsite_characteristics: vialID | factor | unique identifier for each branch clipping field sample\nsite_characteristics: site | factor | forest or natural reserve, containing several smaller sampling units (plots)\nsite_characteristics: plot | factor | identifier for each plot centered on branch clipped tree\nsite_characteristics: foliage_sample_dryweight | numeric | foliage dry weight of the sample in grams\nsite_characteristics: tree_height | integer | estimated height of sampled tree in meters\nsite_characteristics: sampleyear | ordered | year sample was taken, 2014 or 2015\nsite_characteristics: elevation | numeric | plot elevation in meters\nsite_characteristics: precipitation | integer | mean annual precipitation at the site in mm\nspecies_traits: spec_code | factor | Code for taxonomic species or morphospecies"
+  },
+  {
+   "id": "u36",
+   "kind": "table 24",
+   "text": "species_traits: length | numeric | length from head to end of abdomen, in millimeter\nspecies_traits: feeding_guild | factor | functional herbivorous feeding guild: chewer;sap feeder; seed feeder; flower feeder;\nspecies_traits: location_nymph | factor | stratum where nymph develops; options are free living, litter, leaf gall, spittle or in a constructed shelter.\nspecies_traits: generalist_specialist | factor | diet breadth; can be single species specialist or generalist (2 or more)\nenv_traits: viallID | factor | unique identifier for each branch clipping field sample\nenv_traits: %N | numeric | foliar nitrogen content by mass\nenv_traits: %P | numeric | foliar phosphorus content by mass\nenv_traits: mean_SLA | numeric | mean specific leaf area in cm2 per gram\nenv_traits: mean_water_content | numeric | mean water content in grams\nenv_traits: morphotype | factor | metrosideros polymorpha morphotype; glabrous, intermediate, pubescent"
+  },
+  {
+   "id": "u37",
+   "kind": "table 24",
+   "text": "species_site: vialID | factor | unique identifier for each branch clipping field sample\nspecies_site: site | factor | forest or natural reserve, containing several smaller sampling units (plots)\nspecies_site: plot | factor | identifier for each plot centered on branch clipped tree\nspecies_site: foliage_sample_dryweight | numeric | foliage dry weight of the sample, in grams\nspecies_site: species_code | factor | Code for taxonomic species or morphospecies\nspecies_site: order | factor | Taxonomic Order of sampled specimen(s)\nspecies_site: family | factor | Taxonomic Family of sampled specimen(s)\nspecies_site: genus | factor | Taxonomic Genus of sampled specimen(s)\nspecies_site: species_code | factor | specific epithet or morphospecies name\nspecies_site: abundance | integer | total abundance in the tree sample of the single insect species"
   }
  ],
  "batches": [
@@ -209,10 +234,17 @@
    "u29",
    "u30",
    "u31",
-   "u32"
+   "u32",
+   "u33",
+   "u34",
+   "u35"
+  ],
+  [
+   "u36",
+   "u37"
   ]
  ],
- "calls": 11,
+ "calls": 13,
  "categories": [
   {
    "variable": "q",
@@ -244,56 +276,65 @@
   {
    "variable": "insect trait by plant trait interaction",
    "code": "M. polymorpha",
-   "term": "M. polymorpha host plant characteristics",
+   "term": "host plant characteristics",
    "unit": "u6",
-   "model_label": "M. polymorpha",
-   "label": "M. polymorpha",
-   "explanation": "host plant characteristics"
+   "model_label": "host plant characteristics",
+   "label": "host plant characteristics",
+   "explanation": ""
   },
   {
    "variable": "insect traits",
    "code": "species level",
-   "term": "insect traits at the species level",
+   "term": "insect traits",
    "unit": "u6",
-   "model_label": "species",
-   "label": "species",
-   "explanation": "insect traits at the level"
+   "model_label": "insect traits",
+   "label": "insect traits",
+   "explanation": ""
   },
   {
-   "variable": "abundance",
+   "variable": "insect trait by plant trait interaction",
+   "code": "insect trait by plant trait interaction",
+   "term": "insect trait by plant trait interaction",
+   "unit": "u6",
+   "model_label": "insect trait by plant trait interaction",
+   "label": "insect trait by plant trait interaction",
+   "explanation": ""
+  },
+  {
+   "variable": "insect abundance",
    "code": "q = 1",
    "term": "Shannon index",
    "unit": "u7",
-   "model_label": "Shannon",
-   "label": "Shannon",
-   "explanation": "index"
+   "model_label": "Shannon index",
+   "label": "Shannon index",
+   "explanation": ""
   },
   {
-   "variable": "abundance",
+   "variable": "insect abundance",
    "code": "q = 2",
    "term": "Simpson index",
    "unit": "u7",
-   "model_label": "Simpson",
-   "label": "Simpson",
-   "explanation": "index"
+   "model_label": "Simpson index",
+   "label": "Simpson index",
+   "explanation": ""
   },
   {
    "variable": "insect richness",
    "code": "q = 0",
    "term": "trichome density",
    "unit": "u7",
-   "model_label": "trichome",
-   "label": "trichome",
-   "explanation": "density"
+   "model_label": "trichome density",
+   "label": "trichome density",
+   "explanation": ""
   },
   {
    "variable": "herbivore species richness",
    "code": "q = 0",
    "term": "trichome presence",
    "unit": "u9",
-   "model_label": "trichome",
-   "label": "trichome",
-   "explanation": "presence"
+   "model_label": "trichome presence",
+   "label": "trichome presence",
+   "explanation": ""
   },
   {
    "variable": "Leaf trichomes",
@@ -323,49 +364,132 @@
    "explanation": ""
   },
   {
-   "variable": "Leaf trait",
-   "code": "F_2,22",
-   "term": "Trichome presence",
-   "unit": "u24",
-   "model_label": "Trichome",
-   "label": "Trichome",
-   "explanation": "presence"
-  },
-  {
-   "variable": "Leaf trait",
-   "code": "F_1,22",
-   "term": "Specific leaf area",
-   "unit": "u24",
-   "model_label": "Specific leaf area",
-   "label": "Specific leaf area",
+   "variable": "species_traits",
+   "code": "spec_code",
+   "term": "Code for taxonomic species or morphospecies",
+   "unit": "u35",
+   "model_label": "Code for taxonomic species or morphospecies",
+   "label": "Code for taxonomic species or morphospecies",
    "explanation": ""
   },
   {
-   "variable": "Leaf trait",
-   "code": "F_1,22",
-   "term": "Mean water content",
-   "unit": "u24",
-   "model_label": "Mean water content",
-   "label": "Mean water content",
-   "explanation": ""
+   "variable": "feeding_guild",
+   "code": "chewer",
+   "term": "functional herbivorous feeding guild: chewer",
+   "unit": "u36",
+   "model_label": "chewer",
+   "label": "chewer",
+   "explanation": "functional herbivorous feeding guild"
   },
   {
-   "variable": "Leaf trait",
-   "code": "F_1,22",
-   "term": "Foliar phosphorus content",
-   "unit": "u24",
-   "model_label": "Foliar phosphorus content",
-   "label": "Foliar phosphorus content",
-   "explanation": ""
+   "variable": "feeding_guild",
+   "code": "sap feeder",
+   "term": "functional herbivorous feeding guild: chewer;sap feeder",
+   "model_term": "functional herbivorous feeding guild: sap feeder",
+   "unit": "u36",
+   "model_label": "chewer;sap feeder",
+   "label": "chewer;sap feeder",
+   "explanation": "functional herbivorous feeding guild"
   },
   {
-   "variable": "Leaf trait",
-   "code": "F_1,21",
-   "term": "Foliar nitrogen content",
-   "unit": "u24",
-   "model_label": "Foliar nitrogen content",
-   "label": "Foliar nitrogen content",
-   "explanation": ""
+   "variable": "feeding_guild",
+   "code": "flower feeder",
+   "term": "functional herbivorous feeding guild: chewer;sap feeder",
+   "model_term": "functional herbivorous feeding guild: flower feeder",
+   "unit": "u36",
+   "model_label": "chewer;sap feeder",
+   "label": "chewer;sap feeder",
+   "explanation": "functional herbivorous feeding guild"
+  },
+  {
+   "variable": "location_nymph",
+   "code": "free living",
+   "term": "stratum where nymph develops; options are free living, litter, leaf gall, spittle or in a constructed shelter.",
+   "unit": "u36",
+   "model_label": "stratum where nymph develops",
+   "label": "stratum where nymph develops",
+   "explanation": "options are free living, litter, leaf gall, spittle or in a constructed shelter."
+  },
+  {
+   "variable": "location_nymph",
+   "code": "litter",
+   "term": "stratum where nymph develops; options are free living, litter, leaf gall, spittle or in a constructed shelter.",
+   "unit": "u36",
+   "model_label": "stratum where nymph develops",
+   "label": "stratum where nymph develops",
+   "explanation": "options are free living, litter, leaf gall, spittle or in a constructed shelter."
+  },
+  {
+   "variable": "location_nymph",
+   "code": "leaf gall",
+   "term": "stratum where nymph develops; options are free living, litter, leaf gall, spittle or in a constructed shelter.",
+   "unit": "u36",
+   "model_label": "stratum where nymph develops",
+   "label": "stratum where nymph develops",
+   "explanation": "options are free living, litter, leaf gall, spittle or in a constructed shelter."
+  },
+  {
+   "variable": "location_nymph",
+   "code": "spittle",
+   "term": "stratum where nymph develops; options are free living, litter, leaf gall, spittle or in a constructed shelter.",
+   "unit": "u36",
+   "model_label": "stratum where nymph develops",
+   "label": "stratum where nymph develops",
+   "explanation": "options are free living, litter, leaf gall, spittle or in a constructed shelter."
+  },
+  {
+   "variable": "location_nymph",
+   "code": "in a constructed shelter",
+   "term": "stratum where nymph develops; options are free living, litter, leaf gall, spittle or in a constructed shelter.",
+   "unit": "u36",
+   "model_label": "stratum where nymph develops",
+   "label": "stratum where nymph develops",
+   "explanation": "options are free living, litter, leaf gall, spittle or in a constructed shelter."
+  },
+  {
+   "variable": "generalist_specialist",
+   "code": "single species specialist",
+   "term": "diet breadth; can be single species specialist or generalist (2 or more)",
+   "unit": "u36",
+   "model_label": "diet breadth",
+   "label": "diet breadth",
+   "explanation": "can be single species specialist or generalist (2 or more"
+  },
+  {
+   "variable": "generalist_specialist",
+   "code": "generalist",
+   "term": "diet breadth; can be single species specialist or generalist (2 or more)",
+   "unit": "u36",
+   "model_label": "diet breadth",
+   "label": "diet breadth",
+   "explanation": "can be single species specialist or generalist (2 or more"
+  },
+  {
+   "variable": "morphotype",
+   "code": "glabrous",
+   "term": "metrosideros polymorpha morphotype; glabrous, intermediate, pubescent",
+   "unit": "u36",
+   "model_label": "glabrous",
+   "label": "glabrous",
+   "explanation": "metrosideros polymorpha morphotype; , intermediate, pubescent"
+  },
+  {
+   "variable": "morphotype",
+   "code": "intermediate",
+   "term": "metrosideros polymorpha morphotype; glabrous, intermediate, pubescent",
+   "unit": "u36",
+   "model_label": "intermediate",
+   "label": "intermediate",
+   "explanation": "metrosideros polymorpha morphotype; glabrous, , pubescent"
+  },
+  {
+   "variable": "morphotype",
+   "code": "pubescent",
+   "term": "metrosideros polymorpha morphotype; glabrous, intermediate, pubescent",
+   "unit": "u36",
+   "model_label": "pubescent",
+   "label": "pubescent",
+   "explanation": "metrosideros polymorpha morphotype; glabrous, intermediate"
   },
   {
    "variable": "host plant phenotype",
@@ -408,14 +532,6 @@
    "unit": "u6"
   },
   {
-   "variable": "insect traits",
-   "code": "",
-   "label": "insect trait by plant trait interaction",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u6"
-  },
-  {
    "variable": "insect richness",
    "code": "",
    "label": "insect richness",
@@ -430,14 +546,6 @@
    "explanation": "",
    "evidence": "named",
    "unit": "u7"
-  },
-  {
-   "variable": "leaf traits",
-   "code": "",
-   "label": "trichome presence",
-   "explanation": "",
-   "evidence": "named",
-   "unit": "u9"
   },
   {
    "variable": "leaf traits",
@@ -544,46 +652,117 @@
    "unit": "u19"
   },
   {
-   "variable": "Bioclim variable",
+   "variable": "pollen specialization",
    "code": "",
-   "label": "Mean annual temperature",
+   "label": "Greenidea psidii (Aphididae) | Orthotylus metrosideri (Miridae)",
    "explanation": "",
    "evidence": "named",
-   "unit": "u27"
+   "unit": "u23"
   },
   {
-   "variable": "Bioclim variable",
+   "variable": "pollen specialization",
    "code": "",
-   "label": "Standard deviation of temperature (seasonality)",
+   "label": "Koanoa hawaiiensis (Miridae) | Pariaconus pyramidalis (Trioizidae)",
    "explanation": "",
    "evidence": "named",
-   "unit": "u27"
+   "unit": "u23"
   },
   {
-   "variable": "Bioclim variable",
+   "variable": "pollen specialization",
    "code": "",
-   "label": "Temperature annual range",
+   "label": "Leialoha sp. (Delphacidae) | Sarona adonias (Miridae)",
    "explanation": "",
    "evidence": "named",
-   "unit": "u27"
+   "unit": "u23"
   },
   {
-   "variable": "Bioclim variable",
+   "variable": "pollen specialization",
    "code": "",
-   "label": "Annual precipitation",
+   "label": "Oceanides vulcans (Lygaeidae) | Tympanococcus tympanistus (Pseudococcidae)",
    "explanation": "",
    "evidence": "named",
-   "unit": "u27"
+   "unit": "u23"
   },
   {
-   "variable": "Bioclim variable",
+   "variable": "pollen specialization",
    "code": "",
-   "label": "Coefficient of variation of precipitation (seasonality)",
+   "label": "Opuna sp. (Miridae) | Geometridae sp. (Lepidoptera: Geometridae)",
    "explanation": "",
    "evidence": "named",
-   "unit": "u27"
+   "unit": "u23"
+  },
+  {
+   "variable": "length",
+   "code": "",
+   "label": "length from head to end of abdomen",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u36"
+  },
+  {
+   "variable": "feeding_guild",
+   "code": "",
+   "label": "flower feeder",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u36"
+  },
+  {
+   "variable": "location_nymph",
+   "code": "",
+   "label": "leaf gall",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u36"
+  },
+  {
+   "variable": "location_nymph",
+   "code": "",
+   "label": "spittle",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u36"
+  },
+  {
+   "variable": "location_nymph",
+   "code": "",
+   "label": "in a constructed shelter",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u36"
+  },
+  {
+   "variable": "generalist_specialist",
+   "code": "",
+   "label": "single species specialist",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u36"
+  },
+  {
+   "variable": "site",
+   "code": "",
+   "label": "forest",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
+  },
+  {
+   "variable": "site",
+   "code": "",
+   "label": "natural reserve",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u37"
   }
  ],
- "dropped": [],
- "seconds": 41.5
+ "dropped": [
+  {
+   "variable": "feeding_guild",
+   "code": "seed feeder",
+   "term": "functional herbivorous feeding guild: seed feeder",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 29.9
 }
