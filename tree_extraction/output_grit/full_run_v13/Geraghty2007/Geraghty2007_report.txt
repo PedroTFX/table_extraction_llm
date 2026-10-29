@@ -1,0 +1,100 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Geraghty2007/Geraghty2007.xlsx  (70 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/Geraghty2007/Geraghty2007.csv  (280 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 35 pair(s))
+  'Amblyopone pallipes (HALDEMAN, 1844)' -> 'Amblyopone pallipes'
+  'Aphaenogaster fulva ROGER, 1863' -> 'Aphaenogaster fulva'
+  'Aphaenogaster rudis ENZMANN, 1947' -> 'Aphaenogaster rudis'
+  'Brachymyrmex depilis EMERY, 1893' -> 'Brachymyrmex depilis'
+  'Camponotus americanus MAYR, 1862' -> 'Camponotus americanus'
+  'Camponotus chromaiodes BOLTON, 2000' -> 'Camponotus chromaiodes'
+  'Camponotus nearcticus EMERY, 1893' -> 'Camponotus nearcticus'
+  'Camponotus pennsylvanicus (DEGEER, 1773)' -> 'Camponotus pennsylvanicus'
+  'Camponotus subbarbatus EMERY, 1893' -> 'Camponotus subbarbatus'
+  'Crematogaster minutissima MAYR, 1870' -> 'Crematogaster minutissima'
+  'Formica subsericea SAY, 1836' -> 'Formica subsericea'
+  'Lasius alienus (FOERSTER, 1850)' -> 'Lasius alienus'
+  'Lasius umbratus (NYLANDER, 1846)' -> 'Lasius umbratus'
+  'Monomorium minimum (BUCKLEY, 1867)' -> 'Monomorium minimum'
+  'Myrmecina americana EMERY, 1895' -> 'Myrmecina americana'
+  'Myrmica latifrons STÄRCKE, 1927' -> 'Myrmica latifrons'
+  'Myrmica pinetorum WHEELER, 1905' -> 'Myrmica pinetorum'
+  'Myrmica punctiventris ROGER, 1863' -> 'Myrmica punctiventris'
+  'Myrmica spatulata SMITH, 1930' -> 'Myrmica spatulata'
+  'Paratrechina faisonensis (FOREL, 1922)' -> 'Paratrechina faisonensis'
+  'Ponera pennsylvanica BUCKLEY, 1866' -> 'Ponera pennsylvanica'
+  'Prenolepis imparis (SAY, 1836)' -> 'Prenolepis imparis'
+  'Proceratium pergandei (EMERY, 1895)' -> 'Proceratium pergandei'
+  'Pyramica clypeata (ROGER, 1863)' -> 'Pyramica clypeata'
+  'Pyramica ohioensis (KENNEDY & SCHRAMM, 1933)' -> 'Pyramica ohioensis'
+  'Pyramica ornata (MAYR, 1887)' -> 'Pyramica ornata'
+  'Pyramica rostrata (EMERY, 1895)' -> 'Pyramica rostrata'
+  'Stenamma brevicorne (MAYR, 1886)' -> 'Stenamma brevicorne'
+  'Stenamma diecki EMERY, 1895' -> 'Stenamma diecki'
+  'Stenamma impar FOREL, 1901' -> 'Stenamma impar'
+  'Stenamma meridionale SMITH, 1957' -> 'Stenamma meridionale'
+  'Stenamma schmitti WHEELER, 1903' -> 'Stenamma schmitti'
+  'Tapinoma sessile (SAY, 1836)' -> 'Tapinoma sessile'
+  'Temnothorax curvispinosus (MAYR, 1866)' -> 'Temnothorax curvispinosus'
+  'Temnothorax longispinosus (ROGER, 1863)' -> 'Temnothorax longispinosus'
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body size (mm)' -> 'Body size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 70
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 210   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.250 / 1.000 / 0.400   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            210
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     70  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     35  0.000  <-- low
+  measurementStatistic          0     70  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     70  0.000  <-- low
+  lifeStage                     0     70  0.000  <-- low
+  caste                         0     70  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     70  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                        35    35   
+  colony size                                      35    35   
+  elevation maximum                                 0    35   PRED-ONLY
+  elevation minimum                                 0    35   PRED-ONLY
+  elevation range                                   0    35   PRED-ONLY
+  latitude maximum                                  0    35   PRED-ONLY
+  latitude minimum                                  0    35   PRED-ONLY
+  latitude range                                    0    35   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     70     0     0   id+type+value
+             (210 more spurious row(s) set aside as out-of-scope; strict P would be 0.250)
+  tags        0.000  0.000  0.000      0    70    70   basis+id+type+value+stat+sex+stage
+             (210 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
+             note: only 0/70 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

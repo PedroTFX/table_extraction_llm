@@ -1,0 +1,107 @@
+  [semantic] left unmatched: 'Adult weight Male' vs 'Longevity with water provided' (llm said different traits)
+  [semantic] left unmatched: 'Adult weight Male' vs 'Longevity without water provided' (llm said different traits)
+  [semantic] left unmatched: 'Constituent' vs 'Longevity without water provided' (llm said different traits)
+  [semantic] left unmatched: 'Constituent' vs 'Longevity with water provided' (llm said different traits)
+  [semantic] left unmatched: 'Development from egg to adult, d Male' vs 'Longevity without water provided' (llm said different traits)
+  [semantic] left unmatched: 'Development from egg to adult, d Male' vs 'Longevity with water provided' (llm said different traits)
+  [semantic] left unmatched: 'Gainesville diet' vs 'Longevity with water provided' (llm said different traits)
+  [semantic] left unmatched: 'Gainesville diet' vs 'Longevity without water provided' (llm said different traits)
+  [semantic] left unmatched: 'Layer hen ration' vs 'Longevity with water provided' (llm said different traits)
+  [semantic] left unmatched: 'Layer hen ration' vs 'Longevity without water provided' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/TOMBERLIN2002/TOMBERLIN2002.xlsx  (59 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/TOMBERLIN2002/TOMBERLIN2002.csv  (115 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'Adult weight Female' -> 'Adult weight'
+  'Caloric content/mg' -> 'Caloric content'
+  'Development from egg to adult, d Female' -> 'Development from egg to adult'
+  'Development, d from egg to prepupa' -> 'Development from egg to prepupa'
+  'Longevity, d adults not provided water Female' -> 'Longevity with water provided'
+  'Longevity, d adults not provided water Male' -> 'Longevity without water provided'
+  'Sex ratio (% female)' -> 'Sex ratio'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 29
+  missed (FN)         : 30
+  spurious, in scope  : 34   <- GT covers this trait: real errors
+  spurious, out of scope: 52   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.252 / 0.492 / 0.333   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.460 / 0.492 / 0.475   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.492   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             52
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     29  0.000  <-- low
+  measurementMethod             0      4  0.000  <-- low
+  measurementUnit               0     29  0.000  <-- low
+  measurementStatistic          0     29  0.000  <-- low
+  measurementRemarks            0     29  0.000  <-- low
+  sex                           0     29  0.000  <-- low
+  lifeStage                     0     29  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue              11     29  0.379  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +29 where GT blank
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     29  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     29  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 30 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       30
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '9.3 ± 0.4'                  ->  'b6.1 ± 0.1a,an = 160'       x2
+     '0.157 ± 0.007'              ->  '0.157 ± 0.077'              x1
+     '0.046 ± 0.005'              ->  '0.056 ± 0.005'              x1
+     '0.044 ± 0.005'              ->  '0.056 ± 0.005'              x1
+     '0.053 ± 0.007'              ->  '0.056 ± 0.005'              x1
+     '0.085 ± 0.016'              ->  '0.056 ± 0.005'              x1
+  -> 6 substitutions explain 7 of 30 misses (23%) — scattered; no single cause
+
+  full miss detail saved -> TOMBERLIN2002_misses.csv, TOMBERLIN2002_misses_summary.json (30 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  development from egg to adult, d male             0     3   PRED-ONLY
+  development from egg to adult                     6     3   Δ-3 (split?)
+  adult emergence from prepupae                     4     4   
+  adult weight male                                 0     8   PRED-ONLY
+  adult weight                                      8     8   
+  longevity, d adults provided water female         0     4   PRED-ONLY
+  longevity, d adults provided water male           0     4   PRED-ONLY
+  caloric content                                   4     8   Δ+4 (split?)
+  constituent                                       0     9   PRED-ONLY
+  csma                                              0     8   PRED-ONLY
+  gainesville diet                                  0     8   PRED-ONLY
+  development from egg to prepupa                   3     3   
+  final larval weight                               3     6   Δ+3 (split?)
+  layer hen ration                                  0     8   PRED-ONLY
+  larval survivorship to prepupae                   3     3   
+  longevity with water provided                     8     4   Δ-4 (split?)
+  longevity without water provided                  8     4   Δ-4 (split?)
+  prepupal weight                                   4     8   Δ+4 (split?)
+  pupal skin weight                                 4     8   Δ+4 (split?)
+  sex ratio                                         4     4   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.460  0.492  0.475     29    34    30   id+type+value
+             (52 more spurious row(s) set aside as out-of-scope; strict P would be 0.252)
+  tags        0.000  0.000  0.000      0    63    59   basis+id+type+value+stat+sex+stage
+             (52 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.475 vs previous)
+             note: only 0/29 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

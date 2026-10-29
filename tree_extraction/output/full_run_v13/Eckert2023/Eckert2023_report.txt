@@ -1,0 +1,93 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Eckert2023/Eckert2023.xlsx  (1269 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v8/Eckert2023/Eckert2023.csv  (1904 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (4)
+  'Collembola': no ground-truth name denotes this organism
+  'Family': no ground-truth name denotes this organism
+  'Formicidae': no ground-truth name denotes this organism
+  'Genus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Body length (mm)' -> 'Body length'
+  'Colour value (V)' -> 'Colour value'
+  'Eye Size' -> 'Eye size'
+  'Femur length (mm)' -> 'Femur length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1013
+  missed (FN)         : 256
+  spurious, in scope  : 267   <- GT covers this trait: real errors
+  spurious, out of scope: 624   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.532 / 0.798 / 0.639   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.791 / 0.798 / 0.795   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.798   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            624
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   1013  0.000  <-- low
+  measurementMethod             0   1013  0.000  <-- low
+  measurementUnit               0    357  0.000  <-- low
+  measurementStatistic          0   1013  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   1013  0.000  <-- low
+  lifeStage                     0   1013  0.000  <-- low
+  caste                         0    387  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1013  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 256 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      256
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'soil-dweller'               ->  'soil'                       x99
+     'chewing mandibles'          ->  'chew'                       x91
+     'litter-dweller'             ->  'litter'                     x58
+     'sucking mandibles'          ->  'suck'                       x8
+  -> 4 substitutions explain 256 of 256 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Eckert2023_misses.csv, Eckert2023_misses_summary.json (256 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length (mm) #2                               0   130   PRED-ONLY
+  colour value (v) #2                               0   130   PRED-ONLY
+  femur length (mm) #2                              0   130   PRED-ONLY
+  femur length (mm) #3                              0   130   PRED-ONLY
+  body length                                     228   230   Δ+2 (split?)
+  colour value                                    129   130   Δ+1 (split?)
+  eye size                                        228   230   Δ+2 (split?)
+  feeding strategy                                 99   100   Δ+1 (split?)
+  femur length                                    129   130   Δ+1 (split?)
+  forage strategy                                 129   130   Δ+1 (split?)
+  furca development                                99   100   Δ+1 (split?)
+  habitat position                                228   230   Δ+2 (split?)
+  measurement                                       0     2   PRED-ONLY
+  suborder                                          0   100   PRED-ONLY
+  trait                                             0     2   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.791  0.798  0.795   1013   267   256   id+type+value
+             (624 more spurious row(s) set aside as out-of-scope; strict P would be 0.532)
+  tags        0.000  0.000  0.000      0  1280  1269   basis+id+type+value+stat+sex+stage
+             (624 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.795 vs previous)
+             note: only 0/1013 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

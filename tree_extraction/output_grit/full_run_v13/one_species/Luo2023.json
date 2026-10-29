@@ -1,0 +1,270 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Pheidole nodus"
+ },
+ "tables": {
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "trait",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.837,
+       "b": 0.163
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.063,
+       "b": 0.937
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.015,
+       "b": 0.985
+      }
+     },
+     {
+      "a": "definition",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.046,
+       "b": 0.954
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Trait": {
+     "choice": "name",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.003,
+        "b": 0.997
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "test",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "name",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Indicator of function": {
+     "choice": null,
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.982,
+        "b": 0.018
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.035,
+        "b": 0.965
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.269,
+        "b": 0.731
+       }
+      }
+     ]
+    },
+    "Measure": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.99,
+        "b": 0.01
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.983,
+        "b": 0.017
+       }
+      }
+     ]
+    }
+   }
+  },
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.945,
+     "own": 0.055
+    }
+   }
+  },
+  "2": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.98,
+     "own": 0.02
+    }
+   }
+  },
+  "4": {
+   "use": true,
+   "own": {
+    "by": "Q-OWN",
+    "choice": "yes",
+    "probs": {
+     "yes": 0.88,
+     "no": 0.12
+    }
+   },
+   "rows": {
+    "choice": "individual",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.983,
+       "b": 0.017
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.001,
+       "b": 0.999
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.999,
+       "b": 0.001
+      }
+     },
+     {
+      "a": "definition",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   }
+  }
+ },
+ "endings": 0
+}

@@ -1,0 +1,573 @@
+{
+ "subject": {
+  "how": "gate one, its tables named one",
+  "name": "Anastatus disparis"
+ },
+ "tables": {
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "group",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.002,
+       "b": 0.998
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.998,
+       "b": 0.002
+      }
+     },
+     {
+      "a": "definition",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Age (d)": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.14,
+        "b": 0.86
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.99,
+        "b": 0.01
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      }
+     ]
+    },
+    "Mated Status": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.017,
+        "b": 0.983
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    },
+    "Proportion of Successful Oviposition*": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "Proportion of Successful Adult Eclosion*": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    }
+   },
+   "endings": {
+    "Proportion of Successful Oviposition*": {
+     "choice": "mark",
+     "probs": {
+      "mark": 0.998,
+      "value": 0.002
+     },
+     "cells": 5
+    },
+    "Proportion of Successful Adult Eclosion*": {
+     "choice": "mark",
+     "probs": {
+      "mark": 0.998,
+      "value": 0.002
+     },
+     "cells": 6
+    }
+   }
+  },
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.838,
+     "own": 0.162
+    }
+   }
+  },
+  "2": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "own",
+    "probs": {
+     "kind": 0.012,
+     "own": 0.988
+    }
+   },
+   "rows": {
+    "choice": "group",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.004,
+       "b": 0.996
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.002,
+       "b": 0.998
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.99,
+       "b": 0.01
+      }
+     },
+     {
+      "a": "definition",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Oviposition Order": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.025,
+        "b": 0.975
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.987,
+        "b": 0.013
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    },
+    "Oviposition Period (s)*": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.006,
+        "b": 0.994
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 1.0,
+        "b": 0.0
+       }
+      }
+     ]
+    },
+    "Proportion of Successful Adult Eclosion*": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.108,
+        "b": 0.892
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Egg Size (mm)*": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.004,
+        "b": 0.996
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 1.0,
+        "b": 0.0
+       }
+      }
+     ]
+    }
+   },
+   "endings": {
+    "Oviposition Period (s)*": {
+     "choice": "mark",
+     "probs": {
+      "mark": 0.998,
+      "value": 0.002
+     },
+     "cells": 4
+    },
+    "Proportion of Successful Adult Eclosion*": {
+     "choice": "mark",
+     "probs": {
+      "mark": 0.998,
+      "value": 0.002
+     },
+     "cells": 4
+    },
+    "Egg Size (mm)*": {
+     "choice": "mark",
+     "probs": {
+      "mark": 0.999,
+      "value": 0.001
+     },
+     "cells": 4
+    }
+   }
+  }
+ },
+ "endings": 5
+}

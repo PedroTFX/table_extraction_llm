@@ -1,0 +1,98 @@
+  [semantic] matched by values: 'Mean length (mm) ± standard deviation' -> 'Body Length'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Ibarra2021/Ibarra2021.xlsx  (368 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Ibarra2021/Ibarra2021.csv  (425 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Anthaxia cupiceps' -> 'Anthaxia cupriceps'
+
+TAXON NAMES LEFT UNMAPPED (6)
+  'Cylydrorhinus carini-collis': no ground-truth name denotes this organism
+  'Enneboeus baeck-stroemi': no ground-truth name denotes this organism
+  'Otiorhynchus rugoso-stratus': no ground-truth name denotes this organism
+  'Otiorhynchus subglo-bosus': no ground-truth name denotes this organism
+  'Smicronyx argentin-ensis': no ground-truth name denotes this organism
+  'Trirammatus unis-triatus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body weight (mg)a' -> 'Body weight'
+  'Mean length (mm) ± standard deviation' -> 'Body Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 288
+  missed (FN)         : 80
+  spurious, in scope  : 52   <- GT covers this trait: real errors
+  spurious, out of scope: 85   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.678 / 0.783 / 0.726   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.847 / 0.783 / 0.814   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.783   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             85
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    288  0.000  <-- low
+  measurementMethod             0     79  0.000  <-- low
+  measurementUnit               0    158  0.000  <-- low
+  measurementStatistic          0    288  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    288  0.000  <-- low
+  lifeStage                     0    288  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    288  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 80 MISSED ROWS MISSED
+  species not in prediction                  24
+  species present, trait missing              0
+  species+trait present, value differs       56
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'geophilous'                 ->  'arboreal/ geophilous'       x11
+     'arboreal'                   ->  'arboreal/ geophilous'       x11
+     'pollinivorous'              ->  'pollinivorous/ saprophagous' x4
+     'saprophagous'               ->  'pollinivorous/ saprophagous' x4
+     'flower'                     ->  'arboreal/flower'            x4
+     'arboreal'                   ->  'arboreal/flower'            x4
+  -> 6 substitutions explain 38 of 80 misses (48%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (6 distinct), closest predicted name:
+     gt 'Enneboeus baeckstroemi'            ~0.82~  pred 'Enneboeus baeck-stroemi'   x4
+     gt 'Trirammatus unistriatus'           ~0.83~  pred 'Trirammatus unis-triatus'   x4
+     gt 'Cylydrorhinus carinicollis'        ~0.81~  pred 'Cylydrorhinus carini-collis'   x4
+     gt 'Otiorhynchus subglobosus'          ~0.81~  pred 'Otiorhynchus subglo-bosus'   x4
+     gt 'Smicronyx argentinensis'           ~0.83~  pred 'Smicronyx argentin-ensis'   x4
+     gt 'Otiorhynchus rugosostratus'        ~0.81~  pred 'Otiorhynchus rugoso-stratus'   x4
+  -> 6 species mismatches explain 24 of 80 misses (30%) — scattered; no single cause
+
+  full miss detail saved -> Ibarra2021_misses.csv, Ibarra2021_misses_summary.json (80 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      85    85   
+  body weight                                      85    85   
+  family                                            0    85   PRED-ONLY
+  main foraging guild                              93    85   Δ-8 (split?)
+  habitat-use guild                               105    85   Δ-20 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.847  0.783  0.814    288    52    80   id+type+value
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.678)
+  tags        0.000  0.000  0.000      0   340   368   basis+id+type+value+stat+sex+stage
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.814 vs previous)
+             note: only 0/288 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

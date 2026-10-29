@@ -1,0 +1,91 @@
+  [semantic] left unmatched: 'Free-flight chamber' vs 'Duration of first flight in free flight chamber' (llm said different traits)
+  [semantic] left unmatched: 'Free-flight chamber' vs 'Total Flight Time in free flight chamber' (llm said different traits)
+  [semantic] left unmatched: 'Free-flight chamber' vs 'Nº of Bouts in free flight chamber' (llm said different traits)
+  [semantic] left unmatched: 'Tethered flight mill' vs 'Velocity in the tethered flight mill' (llm said different traits)
+  [semantic] left unmatched: 'Tethered flight mill' vs 'Distance in the tethered flight mill' (llm said different traits)
+  [semantic] left unmatched: 'Tethered flight mill' vs 'Duration of first flight in flight tethered mill' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Tran2022/Tran2022.xlsx  (32 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Tran2022/Tran2022.csv  (16 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'No. bouts' -> 'Nº of Bouts in free flight chamber'
+  'Total flight time (s)' -> 'Total Flight Time in free flight chamber'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 8
+  missed (FN)         : 24
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 8   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.500 / 0.250 / 0.333   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.250 / 0.400   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.250   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              8
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      8  0.000  <-- low
+  measurementMethod             0      8  0.000  <-- low
+  measurementUnit               0      8  0.000  <-- low
+  measurementStatistic          2      8  0.250  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0      8  0.000  <-- low
+  lifeStage                     0      8  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      8  0.000  <-- low
+  sampleSizeUnit                0      8  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      8  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 24 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             24
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Distance in the tethered flight mill' x4
+     'Duration of first flight in flight tethered mill' x4
+     'Duration of first flight in free flight chamber' x4
+     'No. of Bouts in the tethered flight mill' x4
+     'Total Flight Time in the tethered flight mill' x4
+     'Velocity in the tethered flight mill' x4
+  -> 6 missing traits explain 24 of 24 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Tran2022_misses.csv, Tran2022_misses_summary.json (24 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  no of bouts in free flight chamber                4     4   
+  no. of bouts in the tethered flight mill          4     0   GT-ONLY
+  duration of first flight in free flight chamber    4     0   GT-ONLY
+  total flight time in free flight chamber          4     4   
+  free-flight chamber                               0     4   PRED-ONLY
+  distance in the tethered flight mill              4     0   GT-ONLY
+  duration of first flight in flight tethered mill    4     0   GT-ONLY
+  total flight time in the tethered flight mill     4     0   GT-ONLY
+  tethered flight mill                              0     4   PRED-ONLY
+  velocity in the tethered flight mill              4     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'velocity in the tethered flight mill' vs pred 'tethered flight mill'             sim=0.93
+    gt 'duration of first flight in free flight chamber' vs pred 'free-flight chamber'              sim=0.89
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.250  0.400      8     0    24   id+type+value
+             (8 more spurious row(s) set aside as out-of-scope; strict P would be 0.500)
+  tags        0.000  0.000  0.000      0     8    32   basis+id+type+value+stat+sex+stage
+             (8 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.400 vs previous)

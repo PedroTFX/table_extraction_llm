@@ -1,0 +1,86 @@
+  [semantic] matched by values: 'Morphological trait head with between the eyes' -> 'Head width between the eyes'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/GibbParr2013/GibbParr2013.xlsx  (414 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v9/GibbParr2013/GibbParr2013.csv  (499 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'Morphological trait Weber’s length' -> 'Weber’s length'
+  'Morphological trait eye position' -> 'Eye position '
+  'Morphological trait femur length' -> 'Femur length'
+  'Morphological trait head length' -> 'Head length'
+  'Morphological trait head width behind the eyes' -> 'Head width behind the eyes'
+  'Morphological trait head with between the eyes' -> 'Head width between the eyes'
+  'Morphological trait pronotum width' -> 'Pronotum width'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 409
+  missed (FN)         : 5
+  spurious, in scope  : 5   <- GT covers this trait: real errors
+  spurious, out of scope: 85   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.820 / 0.988 / 0.896   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.988 / 0.988 / 0.988   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.988   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             85
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    409  0.000  <-- low
+  measurementMethod             0     56  0.000  <-- low
+  measurementUnit               0    409  0.000  <-- low
+  measurementStatistic          0    409  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    409  0.000  <-- low
+  lifeStage                     0    409  0.000  <-- low
+  caste                         0    409  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +409 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    409  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 5 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        5
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.11'                       ->  '0.111<'                     x1
+     '1.04'                       ->  '1.4'                        x1
+     '1.06'                       ->  '1.6'                        x1
+     '2026-02-01 00:00:00'        ->  '1.2'                        x1
+     '2026-01-02 00:00:00'        ->  '2.01'                       x1
+  -> 5 substitutions explain 5 of 5 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> GibbParr2013_misses.csv, GibbParr2013_misses_summary.json (5 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  head width behind the eyes                       60    60   
+  head width between the eyes                      57    57   
+  habitat complex                                   0    48   PRED-ONLY
+  eye position                                     57    57   
+  femur length                                     60    60   
+  habitat simple                                    0    37   PRED-ONLY
+  head length                                      60    60   
+  weber’s length                                   60    60   
+  pronotum width                                   60    60   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.988  0.988  0.988    409     5     5   id+type+value
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.820)
+  tags        0.000  0.000  0.000      0   414   414   basis+id+type+value+stat+sex+stage
+             (85 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.988 vs previous)
+             note: only 0/409 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

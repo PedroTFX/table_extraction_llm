@@ -1,0 +1,104 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Stemkovski2020/Stemkovski2020.xlsx  (134 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/Stemkovski2020/Stemkovski2020.csv  (533 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 11 pair(s))
+  'Dufourea harveyi' -> 'Dufourea harveyi ^\n(Cockerell 1906)\n'
+  'Halictus rubicundus' -> 'Halictus rubicundus \n(Christ 1791)\n'
+  'Halictus virgatellus' -> 'Halictus virgatellus \nCockerell 1901\n'
+  'Hoplitis fulgida' -> 'Hoplitis fulgida \n(Cresson 1864)\n'
+  'Hoplitis robusta' -> 'Hoplitis robusta \n(Nylander 1848)\n'
+  'Hylaeus annulatus' -> 'Hylaeus annulatus \n(L. 1758)\n'
+  'Lasioglossum sedi' -> 'Lasioglossum sedi \n(Sandhouse 1924)\n'
+  'Osmia “torchioi” Griswold ms. name' -> 'Osmia “torchioi"'
+  'Panurginus cressoniellus' -> 'Panurginus cressoniellus\nCockerell 1898\n'
+  'Panurginus ineptus' -> 'Panurginus ineptus \nCockerell 1922\n'
+  'Pseudopanurgus bakeri' -> 'Pseudopanurgus bakeri \n(Cockerell 1906)\n'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  '67 bee species': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Nest location (below ground)' -> 'Nest location'
+  'intertegular distance' -> 'Intertegular distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 66
+  missed (FN)         : 68
+  spurious, in scope  : 4   <- GT covers this trait: real errors
+  spurious, out of scope: 463   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.124 / 0.493 / 0.198   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.943 / 0.493 / 0.647   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.493   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            463
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     66  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0     66  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     66  0.000  <-- low
+  lifeStage                     0     66  0.000  <-- low
+  caste                         0     66  0.000  <-- low
+  sampleSizeValue               0     66  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     66  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 68 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             67
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.95'                       ->  '0.97'                       x1
+  -> 1 substitution explains 1 of 68 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Nest location'                    x67
+  -> 1 missing trait explains 67 of 68 misses (99%) — systematic, not scattered
+
+  full miss detail saved -> Stemkovski2020_misses.csv, Stemkovski2020_misses_summary.json (68 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body mass                                         0     3   PRED-ONLY
+  phenology shift category                          0    20   PRED-ONLY
+  snowmelt date                                     0     3   PRED-ONLY
+  response to snowmelt (days of phenology shift / days of snowmelt shift)    0    20   PRED-ONLY
+  intertegular distance                            67    67   
+  elevation                                         0     3   PRED-ONLY
+  em. points                                        0    67   PRED-ONLY
+  family                                            0    67   PRED-ONLY
+  solar incidence                                   0     3   PRED-ONLY
+  nest loc.                                         0    67   PRED-ONLY
+  nest location                                    67     3   Δ-64 (split?)
+  maximum temperature                               0     3   PRED-ONLY
+  overw. stage                                      0    67   PRED-ONLY
+  overwintering (prepupae)                          0     3   PRED-ONLY
+  peak points                                       0    67   PRED-ONLY
+  sen. points                                       0    67   PRED-ONLY
+  summer rainfall                                   0     3   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.943  0.493  0.647     66     4    68   id+type+value
+             (463 more spurious row(s) set aside as out-of-scope; strict P would be 0.124)
+  tags        0.000  0.000  0.000      0    70   134   basis+id+type+value+stat+sex+stage
+             (463 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.647 vs previous)
+             note: only 0/66 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

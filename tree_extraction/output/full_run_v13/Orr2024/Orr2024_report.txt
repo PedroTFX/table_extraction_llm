@@ -1,0 +1,130 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Orr2024/Orr2024.xlsx  (12838 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Orr2024/Orr2024.csv  (38070 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 14 pair(s))
+  'antenna length' -> 'Antenna length'
+  'body length' -> 'Body Length'
+  'femur length' -> 'Femur length'
+  'forewing length' -> 'Forewing length'
+  'gaster segment length' -> 'Gaster segment length'
+  'head width' -> 'Head width'
+  'mass' -> 'Body mass'
+  'maximum interorbital distance' -> 'Interorbital distance maximum'
+  'minimum interorbital distance' -> 'Interorbital distance minimum'
+  'pronotum width' -> 'Pronotum width'
+  'reslin joint area length' -> 'Reslin joint area length'
+  'submarginal cell 1 length' -> 'Submarginal cell 1 length'
+  'tarsus length' -> 'Tarsus length'
+  'tibia length' -> 'Tibia length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 81
+  missed (FN)         : 12757
+  spurious, in scope  : 12757   <- GT covers this trait: real errors
+  spurious, out of scope: 25232   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.002 / 0.006 / 0.003   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.006 / 0.006 / 0.006   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.006   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                          25232
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     81  0.000  <-- low
+  measurementMethod             0      0    n/a   +81 where GT blank
+  measurementUnit               0     81  0.000  <-- low
+  measurementStatistic          0     81  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     81  0.000  <-- low
+  lifeStage                     0     81  0.000  <-- low
+  caste                        53     81  0.654
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     81  0.000  <-- low
+  samplingProtocol              0     81  0.000  <-- low
+  verbatimLocality              0     81  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     81  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     81  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 12757 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs    12757
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '6.01'                       ->  '2644.6800000354374'         x20
+     '9.01'                       ->  '2644.6800000354374'         x20
+     '7.01'                       ->  '2644.6800000354374'         x20
+     '7.01'                       ->  '2852.769999802341'          x20
+     '9.01'                       ->  '2759.6600007807538'         x20
+     '2.01'                       ->  '2644.6800000354374'         x18
+  -> 6 substitutions explain 118 of 12757 misses (1%) — scattered; no single cause
+
+  full miss detail saved -> Orr2024_misses.csv, Orr2024_misses_summary.json (12757 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  an                                                0     2   PRED-ONLY
+  submarginal cell 1 length                       921   921   
+  (no name, column 10)                              0  1453   PRED-ONLY
+  (no name, column 11)                              0  1453   PRED-ONLY
+  list2003 #2                                       0  1439   PRED-ONLY
+  list2004 #2                                       0  1461   PRED-ONLY
+  list2013 #2                                       0  1448   PRED-ONLY
+  list2020 #2                                       0  1359   PRED-ONLY
+  vma6 #2                                           0  1441   PRED-ONLY
+  antenna length                                  913   913   
+  reslin joint area length                        918   918   
+  bl                                                0     2   PRED-ONLY
+  body length                                     915   915   
+  body mass                                       920   920   
+  colony                                            0  1473   PRED-ONLY
+  interorbital distance maximum                   917   917   
+  interorbital distance minimum                   915   915   
+  femur length                                    917   917   
+  fl                                                0     2   PRED-ONLY
+  forewing length                                 918   918   
+  fw                                                0     2   PRED-ONLY
+  gaster segment length                           919   919   
+  gl                                                0     2   PRED-ONLY
+  head width                                      918   918   
+  hw                                                0     2   PRED-ONLY
+  idm                                               0     2   PRED-ONLY
+  idx                                               0     2   PRED-ONLY
+  individual                                        0  1473   PRED-ONLY
+  tarsus length                                   912   912   
+  tibia length                                    916   916   
+  list2003                                          0  1441   PRED-ONLY
+  list2004                                          0  1463   PRED-ONLY
+  list2013                                          0  1449   PRED-ONLY
+  list2020                                          0  1359   PRED-ONLY
+  m                                                 0     2   PRED-ONLY
+  patriline                                         0  2391   PRED-ONLY
+  pc1                                               0   886   PRED-ONLY
+  pc2                                               0   886   PRED-ONLY
+  pc3                                               0   886   PRED-ONLY
+  pronotum width                                  919   919   
+  pw                                                0     2   PRED-ONLY
+  rja                                               0     2   PRED-ONLY
+  sc1                                               0     2   PRED-ONLY
+  tl                                                0     2   PRED-ONLY
+  tr                                                0     2   PRED-ONLY
+  vma6                                              0  1443   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.006  0.006  0.006     81 12757 12757   id+type+value
+             (25232 more spurious row(s) set aside as out-of-scope; strict P would be 0.002)
+  tags        0.000  0.000  0.000      0 12838 12838   basis+id+type+value+stat+sex+stage
+             (25232 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.006 vs previous)
+             note: only 0/81 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

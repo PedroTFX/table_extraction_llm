@@ -1,0 +1,63 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Brant2021/Brant2021.xlsx  (480 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Brant2021/Brant2021.csv  (1029 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Head.w' -> 'head width'
+  'Intertegular.d' -> 'intertegular distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 480
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 549   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.466 / 1.000 / 0.636   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            549
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    480  0.000  <-- low
+  measurementMethod             0    480  0.000  <-- low
+  measurementUnit               0    480  0.000  <-- low
+  measurementStatistic          0    480  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    480  0.000  <-- low
+  lifeStage                     0    480  0.000  <-- low
+  caste                         0    480  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    480  0.000  <-- low
+  verbatimLocality              0      0    n/a   +480 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate           478    480  0.996
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    480  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  cv_15                                             0   240   PRED-ONLY
+  cv_16                                             0   240   PRED-ONLY
+  intertegular distance                           240   240   
+  head width                                      240   240   
+  q2 (median)                                       0    15   PRED-ONLY
+  q1                                                0    27   PRED-ONLY
+  q3                                                0    27   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000    480     0     0   id+type+value
+             (549 more spurious row(s) set aside as out-of-scope; strict P would be 0.466)
+  tags        0.000  0.000  0.000      0   480   480   basis+id+type+value+stat+sex+stage
+             (549 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
+             note: only 0/480 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
