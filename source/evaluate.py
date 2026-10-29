@@ -51,7 +51,7 @@ try:
 except Exception:                       # evaluator must run even without Ollama deps
     invoke_sized = None
     loads_salvaging = None
-from decimal import Decimal, InvalidOperation
+from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
 
 import openpyxl
 
@@ -378,6 +378,20 @@ def normalize_header(h):
     return h.strip()
 
 
+_FLOAT_NOISE = re.compile(r"-?\d+\.(\d*?)(?:0{3,}|9{3,})\d*")
+
+
+def _drop_float_noise(s, d):
+    """A number a spreadsheet stored as a float: '220.8099999486709' is the 220.81 the person
+    typed (Orr2024's supplement; its GT has '3465.920001' for 3465.92). With 8 or more digits
+    and a run of 0s or 9s after the decimals, it is rounded before the run, so both spellings
+    of the value meet. Short numbers ('1.0001', '2.000') are left as they are."""
+    m = _FLOAT_NOISE.fullmatch(s)
+    if not m or sum(ch.isdigit() for ch in s) < 8:
+        return d
+    return d.quantize(Decimal(1).scaleb(-len(m.group(1))), rounding=ROUND_HALF_UP)
+
+
 def canonical_number(s):
     """Canonical spelling of a numeric string, or None if it isn't a number.
 
@@ -403,6 +417,7 @@ def canonical_number(s):
         return None
     if not d.is_finite():
         return None
+    d = _drop_float_noise(s.strip(), d)     # 220.8099999486709 -> 220.81 (Orr2024)
     d = d.normalize()                       # 4.0 -> 4, 2.40 -> 2.4
     if d.as_tuple().exponent > 0:           # 1E+7 -> 10000000, never exponential
         d = d.quantize(Decimal(1))
