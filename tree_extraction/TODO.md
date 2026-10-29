@@ -544,6 +544,20 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
+## One-species papers (v13 = v12 + the subject step, one_species.py, 2026-10-29) — RUN, NOT adopted yet
+
+- Design: output/eval_split/DESIGN_one_species_v13.md (3 dev iterations, then 2 full runs).
+- Run 2 (gate-'several' branch dropped by the design's rule; unanswered trait columns kept):
+  grit production 0.539 -> 0.554 (6 up / 4 down), repeatable 0.538 -> 0.546; 109 set
+  0.560 -> 0.576 (4 up / 1 down), repeatable 0.559 -> 0.558.
+- Up: Brant2021 0 -> 1.000 (held, production only), Tran2022 0 -> 0.400 (held), Zhang2025 0 -> 0.745,
+  TOMBERLIN2002 0 -> 0.475, Grasser2000 0 -> 0.384, Luo2023 (109) 0 -> 0.466, Kovacs2008 small.
+- Down: kovacs2010 1.0 -> 0.667 (grit), Kovacs2010 0.667 -> 0.500 (109, dev), PascacioVillafan2022
+  0.80 -> 0.50, Buzzone2008 -0.03, Bucher2024 -0.007. Causes: a structure 'summary' table of slopes
+  lifted by the clash duel (kovacs t4, Bucher t2); tables v12 already read re-read as trait rows.
+- Open: restrict the re-reading to tables v12 gave no rows (or groups only), and the structure clash.
+- Also: output/SUPPLEMENTS_NEEDED.md lists papers whose GT is not in the paper's markdown.
+
 ## Continuation tables whose head has no names (v12 = v11 + the join, 2026-10-28) — RUN, no paper down
 
 - Results (remote): grit mean F1 0.536 -> 0.539 (production), 0.536 -> 0.538 (repeatable); 109 set
