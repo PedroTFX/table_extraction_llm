@@ -1,0 +1,531 @@
+{
+ "paper": "Scalercio2020",
+ "units": [
+  {
+   "id": "u0",
+   "kind": "prose",
+   "text": "We hypothesized that: (a) a fraction of the species occurring on Sicily could represent different genetic lineages compared to the nearest Italian mainland, and (b) the genetic differentiation and the occurrence of endemic lineages could correlate with a series of species traits and environmental constraints to dispersal. With the aim of testing these main hypotheses, we sequenced a fragment of the COI region of 84 butterfly species living in Sicily and quantified their genetic structure across the Messina channel, as well as along the entire Palearctic region."
+  },
+  {
+   "id": "u1",
+   "kind": "prose",
+   "text": "We set three main goals to: (a) determine if a fraction of the Sicilian populations represent different lineages compared to the Italian Peninsula and/or endemic lineages; (b) test if the genetic contrasts are correlated with functional traits determining dispersal capabilities and with contemporary environmental constraints to dispersal (winds and climatic conditions); (c) determine to what extent Sicilian lineages are genetically closer to populations occurring on the Italian Peninsula, or if some of them likely represent relict populations having their closest relatives in distant Palaearctic areas as shown for several butterfly populations in the Mediterranean islands (Dapporto & Bruschini, 2012; Dapporto et al., 2017; Vodă et al., 2015b)."
+  },
+  {
+   "id": "u2",
+   "kind": "prose",
+   "text": "Recent studies indicate that uncorrected p-distances are the best option for analysing COI data (Collins, Boykin, Cruickshank, & Armstrong, 2012; Srivathsan & Meier, 2012). We thus calculated the genetic p-distances among specimens for each of the 84 species of the Sicily barcoding dataset. We also verified if the indices of genetic differentiation (Gst and Dst, see below) showed considerable differences when genetic distances were computed with different substitution models. For this reason, we estimated the best substitution model by using MEGA X, recomputed the differentiation indices and correlated the values obtained with p-distances with those obtained by the selected substitution model. For each species, we also calculated pairwise differentiation among the six sub-areas (Appendix S1). We applied principal coordinates analysis (PCoA) to these matrices and projected the configuration in Red–Green–Blue graphs using the r package recluster (Appendix S1). In these plots, the most similar specimens (dots) are closer to each other and they are visualized with similar colours. The colour resemblance among dots facilitated mapping the genetic differentiation of each species in the study area. For the 73 species belonging to the comparative dataset we also calculated haplotype diversity (Hd) as the average distances among haplotypes using the nuc.div function of the pegas r package, the absolute differentiation (Dst) and the standardized differentiation (Gst; Nei, 1987; Appendix S1) between Sicily and SIP."
+  },
+  {
+   "id": "u3",
+   "kind": "prose",
+   "text": "the configuration in the Red–Green–Blue space to map the overall differentiation among sub-areas. Moreover, for each species, we extrapolated pairwise Gst and Dst among nearby sub-areas. By using the glmer function of the lme4 r package, we carried out two generalized linear mixed models (GLMMs) comparing pairwise Gst and Dst between the pairs of connected sub-areas, including species as random factor. This was done to detect if the two areas facing the Messina strait showed higher Gst and Dst compared to other pairs of areas. We calculated ANOVA tables with the ANOVA function of the car r package and obtained pairwise comparisons by using Tukey’s test, as implemented in the glht function of the multcomp r package."
+  },
+  {
+   "id": "u4",
+   "kind": "prose",
+   "text": "Moretti et al. (2017) identified 29 functional traits covering the primary functions of invertebrates, divided into five major groups: morphology, feeding, life history, physiology and behaviour. We assessed 13 species traits representing four groups: morphology, feeding, life history and physiology. We excluded behavioural traits because they are unavailable for most European butterfly species. We formulated functional hypotheses for each group of traits (Dapporto et al., 2017; Table S4): (a) We measured trophic generalism as (i) the number of host plant genera reported in two literature sources (feeding trait); (b) Mobility was represented by (ii) wingspan (Sekar, 2012; morphological trait), obtained as the average between minimum and maximum wingspan reported in four literature sources. For each studied species wingspan was available in at least three sources and we imputed the missing values by using the mice function of the mice r package. The algorithm assigns an incomplete variable by generating plausible values based on other variables in the dataset by multivariate imputations by chained equations (MICE). Then we applied a principal component analysis (PCA) using the values from different sources to obtain a single (PC1) measure of size (Figure S2); (c) We assessed phenology as (iii) the number of months during which adults occur in the study area, (iv) the first month when adults emerge, (v) and (vi) the first and the last month when adults fly, and (vii) voltinism (life-history traits). Data belong to LD, AB and SS personal observations collected from 2009 to 2018 and from the database of the Butterfly Diversity and Evolution Lab. Finally, (d) we included a series of variables describing climate experienced by each species in its area of distribution in Europe (Schweiger, Harpke, Wiemers, & Settele, 2014). These features have been obtained by modelling species distribution in Europe based on occurrence data, and then by averaging temperature and precipitation among the spatial cells where each species is predicted to occur. Although these indices cannot be considered as functional traits (Moretti et al., 2017), they are widely used to describe climatic preference and tolerance and are considered proxies for physiological traits (Dapporto et al., 2017; Devictor et al., 2012). The variables included were: mean annual temperature and precipitation (viii, ix); standard deviation of mean temperature and precipitation (x, xi); upper 95% confidence limit of temperature mean and of precipitation mean (xii, xiii)."
+  },
+  {
+   "id": "u5",
+   "kind": "prose",
+   "text": "For each species, we calculated two kinds of environmental variables as: (a) the relative geographic distances between Sicilian and SIP specimens and (b) the tendency of winds to facilitate or hamper the crossing of the Messina strait. The first measure has been obtained for two distances, (a) the length of the shortest path over land (wolf distance) and (b) the total cost of a random walk between pairs of points based on species-specific landscape permeability (drunk distance; van Etten, 2017; Appendices S1 and S2). Then, we applied the same formula used to obtain Dst:"
+  },
+  {
+   "id": "u6",
+   "kind": "prose",
+   "text": "To calculate the winds experienced by each species we downloaded the monthly data of winds for Reggio Calabria and Messina (the closest areas to the strait) from [http://mesonet.agron.iastate.edu/sites/locate.php?network=IT__ASOS](http://mesonet.agron.iastate.edu/sites/locate.php?network=IT__ASOS). For each month, we used the direction of winds (with 36 classes of 10 degree intervals; from class $0 , 0 { - } 9$ degrees to class 35, 350–359 degrees), their average frequencies between 2010 and 2017 and their strength divided into five classes (2–5, 5–7, 7–10, 10–15, 15–20, over 20 miles per hour)."
+  },
+  {
+   "id": "u7",
+   "kind": "prose",
+   "text": "Using a high-resolution geographic layer (30s) we obtained a series of 23 points, each 2 km apart and located at the same minimum distances from the two sides of the strait (Figure 3c). Each pair of successive points identified a mid-point located along the strait and the segment connecting them identified a direction locally tangential to the strait (Figure 3a). Therefore, for any butterfly crossing the strait over any of these points, a direction of winds parallel to the segment had the most negative impact in reaching one of the two landmasses, while an orthogonal wind had the highest potential to facilitate dispersal. The resultant effect of winds for each month and each segment (WRm), has been calculated as:"
+  },
+  {
+   "id": "u8",
+   "kind": "prose",
+   "text": "$$ \\text {WRm} = - \\sum_ {j = 0} ^ {3 5} \\sum_ {i = 1} ^ {6} \\text {freq}{ij} \\text {str}{ij} \\cos \\left(2\\alpha + j\\frac{\\pi}{9}\\right), $$"
+  },
+  {
+   "id": "u9",
+   "kind": "prose",
+   "text": "where freq is the frequency and $\\mathsf { s t r } _ { \\dot { \\boldsymbol { \\jmath } } \\dot { \\boldsymbol { \\jmath } } }$ the strength of a given wind of direction j (0–35 each representing 10 degrees) and strength of the ith class. We scored strength as the central value for each of the six strength classes, evaluated as 25 mph for the strongest; α is the difference between the angle of the segment tangential to the strait and the angle of the wind blowing from the north $( j = 0 ) .$ A wind with angle j having the same direction of the segment $\\left( \\alpha = 0 \\right.$ or π) is scored $- \\mathsf { f r e q } _ { \\boldsymbol { \\ddot { \\jmath } } \\boldsymbol { j } } \\times \\mathsf { s t r } _ { \\boldsymbol { \\ddot { \\jmath } } \\boldsymbol { j } }$ (the most negative effect), while an orthogonal wind $( \\alpha = \\pi / 2 \\mathrm { o r } 3 \\pi / 2 )$ will score the most positive effect of $+ \\mathsf { f r e q } { \\vec { j } \\vec { j } } \\times \\mathsf { s t r } { \\vec { j } \\vec { j } }$ Winds with intermediate directions will score a zero contribution to WRm (Figure 3a). For each month, we averaged the wind data for Reggio Calabria and Messina. We recorded, for each month, the average WRm value among the 22 segments along the strait. The potential effect of winds on each butterfly species has been finally obtained by scoring the average values for the months included in their flight"
+  },
+  {
+   "id": "u10",
+   "kind": "prose",
+   "text": "![Image block](doc:161397c/tier:advanced/page:6/block:4)"
+  },
+  {
+   "id": "u11",
+   "kind": "prose",
+   "text": "![Image block](doc:161397c/tier:advanced/page:8/block:4)"
+  },
+  {
+   "id": "u12",
+   "kind": "prose",
+   "text": "F I G U R E 3 The method used to evaluate the effects of winds over the Messina strait. (a) Winds tangential to the direction of each segment (dotted line) have a coefficient of −1 (most negative value) to be multiplied by frequency and wind speed; winds orthogonal to the segment have a maximum favourable coefficient of 1. (b) The average wind rose measured for Messina and Reggio Calabria. (c) The values of wind suitability for dispersal over the 22 points identified along the Messina channel. (d) The average values of overall wind suitability in different months (WRm)"
+  },
+  {
+   "id": "u13",
+   "kind": "prose",
+   "text": "$( R ^ { 2 }$ of the full model = 0.238, F-statistic = 2.493 on 8 and 64 DF, $p = 0.020$ only phenology PC1 had a negative significant effect (species flying for shorter periods had higher haplotype diversity; Table 1). When the spatial structure was included in the indices (Dsta and Gsta), more variables significantly entered the models. In individual regressions, drunk distances were positively correlated with Gsta and Dsta explaining more variance than the analogous wolf distances (Table 1); similarly, mean wind experienced at the strait explained more variance for both indices than the correlated phenology PC1 (Table 1). In both indices, smaller species showed a higher genetic differentiation (Table 1). Species exploiting a lower number of host plants also had a higher Gsta. In the multiple model for Dsta $R ^ { 2 } = 0 . 3 5 7 ,$ F-statistic = 4.447 on 8 and 64 DF, p = 0.0003) drunk distances, wingspan and mean wind had a significant effect, while for Gsta $R ^ { 2 } = 0 . 3 6 2$ , F-statistic = 4.551 on 8 and 64 DF, $p = 0 . 0 0 0 2 )$ a significant effect was found for mean wind, host plants and wingspan (Table 1). Similar results were obtained for the observed indices (Hd, Gst and Dst; Table S8)."
+  },
+  {
+   "id": "u14",
+   "kind": "prose",
+   "text": "![Image block](doc:161397c/tier:advanced/page:10/block:4)"
+  },
+  {
+   "id": "u15",
+   "kind": "prose",
+   "text": "F I G U R E 4 The relationships of Gst between Sicily and SIP and the ground distance to the genetically closest population from SIP (a) and Sicily (b). The radius of the circles represents the overall p-distance between the populations from Sicily (a) or SIP (b) and the genetically closest populations. The colours of the dots in (a) and (b) indicate the geographic region (d,e) of the genetically closest population. Haplotype networks for 11 species (c), the colours of the sectors indicate the geographic region of specimens described in panels (d) and (e). The numbers in graphs (a) and (b) correspond to the numbers indicated in the haplotype networks in (c). The red dots on the map (d) indicate the sites from which COI sequences were available. [Correction added on 29 June 2020 after first online publication: Caption changed from \". . . from Sicily (a) and SIP (b)\" to \". . . from SIP (a) and Sicily (b).]"
+  },
+  {
+   "id": "u16",
+   "kind": "prose",
+   "text": "We rule out that a larger sample size would have drastically changed the results for the following reasons: (a) the rarefaction curves indicate that a higher number of sequences would only slightly change the observed Gst, Dst and Hd values, (b) the absence of negative correlations between the three indices and sample size indicates that the observed differentiation also occurs in well-sampled species and is not likely due to incomplete sampling of lineages across the two areas, (c) the observed genetic structure was rather dichotomic, with 89.3% of species showing either an almost complete admixture of haplotypes (51.8%, group 2 in Figure 1) or a complete spatial segregation (37.0 + 2.5%, group 2 and 4 in Figure 1). In the case of a few species showing an incomplete segregation (8.6%, group 3 in Figure 1) the pattern was never caused by a single specimen typical of one side of the strait being detected in the other one. As for the comparison with other Palaearctic regions, (d) butterflies are probably the best-studied model organisms for mtDNA and the extensive spatial coverage currently available makes it unlikely that further increasing the data would render a considerable number of Sicilian lineages as non-endemic."
+  },
+  {
+   "id": "u17",
+   "kind": "prose",
+   "text": "regressions indicated that this genetic pattern had a deterministic relationship with some functional traits and current ecological constraints. It is not surprising that lineages of more dispersive species and of species subjected to weaker ecological constraints can more easily admix across a barrier (Burney & Brumfield, 2009; Dapporto et al., 2017). Nevertheless, the three indices (Hd, Dst and Gst) showed correlations with different traits and constraints. Moving from the index measuring the overall genetic variation among haplotypes (Hd) to the indices determined by their distribution across the strait (Dst and Gst), the influence of intrinsic species traits became weaker in favour of extrinsic environmental constraints and of traits determining the interaction with the local environment."
+  },
+  {
+   "id": "u18",
+   "kind": "prose",
+   "text": "Comparative studies indicate that different species attributes (e.g. population size, fecundity, body size, dispersal capability) explain mtDNA polymorphism and its spatial differentiation (Allio et al., 2017; Burney & Brumfield, 2009; Dapporto et al., 2017, 2019; Fujisawa et al., 2015; Nabholz et al., 2008). Adult is the most mobile life stage in butterflies and the length of the flight period largely determines the potential dispersal events and the consequent gene flow. Accordingly, in our study area, species with a shorter flight period and lower number of generations have accumulated a higher mtDNA polymorphism (Hd) in historical times."
+  }
+ ],
+ "batches": [
+  [
+   "u0",
+   "u1",
+   "u2"
+  ],
+  [
+   "u3"
+  ],
+  [
+   "u4"
+  ],
+  [
+   "u5",
+   "u6",
+   "u7",
+   "u8"
+  ],
+  [
+   "u9",
+   "u10",
+   "u11",
+   "u12"
+  ],
+  [
+   "u13",
+   "u14",
+   "u15"
+  ],
+  [
+   "u16",
+   "u17",
+   "u18"
+  ]
+ ],
+ "calls": 15,
+ "categories": [
+  {
+   "variable": "indices of genetic differentiation",
+   "code": "Gst",
+   "term": "standardized differentiation (Gst; Nei, 1987; Appendix S1)",
+   "unit": "u2",
+   "model_label": "Gst",
+   "label": "Gst",
+   "explanation": "standardized differentiation ( ; Nei, 1987; Appendix S1"
+  },
+  {
+   "variable": "indices of genetic differentiation",
+   "code": "Dst",
+   "term": "absolute differentiation (Dst)",
+   "unit": "u2",
+   "model_label": "Dst",
+   "label": "Dst",
+   "explanation": "absolute differentiation"
+  },
+  {
+   "variable": "Gst and Dst",
+   "code": "Gst",
+   "term": "pairwise Gst and Dst among nearby sub-areas",
+   "unit": "u3",
+   "model_label": "Gst",
+   "label": "Gst",
+   "explanation": "pairwise and Dst among nearby sub-areas"
+  },
+  {
+   "variable": "Gst and Dst",
+   "code": "Dst",
+   "term": "pairwise Gst and Dst among nearby sub-areas",
+   "unit": "u3",
+   "model_label": "Dst",
+   "label": "Dst",
+   "explanation": "pairwise Gst and among nearby sub-areas"
+  },
+  {
+   "variable": "trophic generalism",
+   "code": "(i)",
+   "term": "the number of host plant genera reported in two literature sources",
+   "unit": "u4",
+   "model_label": "number",
+   "label": "number",
+   "explanation": "the of host plant genera reported in two literature sources"
+  },
+  {
+   "variable": "Mobility",
+   "code": "(ii)",
+   "term": "wingspan",
+   "unit": "u4",
+   "model_label": "wingspan",
+   "label": "wingspan",
+   "explanation": ""
+  },
+  {
+   "variable": "phenology",
+   "code": "(iii)",
+   "term": "the number of months during which adults occur in the study area",
+   "unit": "u4",
+   "model_label": "months",
+   "label": "months",
+   "explanation": "the number of during which adults occur in the study area"
+  },
+  {
+   "variable": "phenology",
+   "code": "(iv)",
+   "term": "the first month when adults emerge",
+   "unit": "u4",
+   "model_label": "month",
+   "label": "month",
+   "explanation": "the first when adults emerge"
+  },
+  {
+   "variable": "phenology",
+   "code": "(v)",
+   "term": "the first and the last month when adults fly",
+   "unit": "u4",
+   "model_label": "month",
+   "label": "month",
+   "explanation": "the first and the last when adults fly"
+  },
+  {
+   "variable": "phenology",
+   "code": "(vi)",
+   "term": "the first and the last month when adults fly",
+   "unit": "u4",
+   "model_label": "month",
+   "label": "month",
+   "explanation": "the first and the last when adults fly"
+  },
+  {
+   "variable": "phenology",
+   "code": "(vii)",
+   "term": "voltinism",
+   "unit": "u4",
+   "model_label": "voltinism",
+   "label": "voltinism",
+   "explanation": ""
+  },
+  {
+   "variable": "mean annual temperature and precipitation",
+   "code": "(viii)",
+   "term": "mean annual temperature and precipitation",
+   "unit": "u4",
+   "model_label": "temperature",
+   "label": "temperature",
+   "explanation": "mean annual and precipitation"
+  },
+  {
+   "variable": "mean annual temperature and precipitation",
+   "code": "(ix)",
+   "term": "mean annual temperature and precipitation",
+   "unit": "u4",
+   "model_label": "temperature",
+   "label": "temperature",
+   "explanation": "mean annual and precipitation"
+  },
+  {
+   "variable": "standard deviation of mean temperature and precipitation",
+   "code": "(x)",
+   "term": "standard deviation of mean temperature and precipitation",
+   "unit": "u4",
+   "model_label": "standard deviation",
+   "label": "standard deviation",
+   "explanation": "of mean temperature and precipitation"
+  },
+  {
+   "variable": "standard deviation of mean temperature and precipitation",
+   "code": "(xi)",
+   "term": "standard deviation of mean temperature and precipitation",
+   "unit": "u4",
+   "model_label": "standard deviation",
+   "label": "standard deviation",
+   "explanation": "of mean temperature and precipitation"
+  },
+  {
+   "variable": "upper 95% confidence limit of temperature mean and of precipitation mean",
+   "code": "(xii)",
+   "term": "upper 95% confidence limit of temperature mean and of precipitation mean",
+   "unit": "u4",
+   "model_label": "confidence limit",
+   "label": "confidence limit",
+   "explanation": "upper 95% of temperature mean and of precipitation mean"
+  },
+  {
+   "variable": "upper 95% confidence limit of temperature mean and of precipitation mean",
+   "code": "(xiii)",
+   "term": "upper 95% confidence limit of temperature mean and of precipitation mean",
+   "unit": "u4",
+   "model_label": "confidence limit",
+   "label": "confidence limit",
+   "explanation": "upper 95% of temperature mean and of precipitation mean"
+  },
+  {
+   "variable": "direction of winds",
+   "code": "0",
+   "term": "- } 9 degrees",
+   "unit": "u6",
+   "model_label": "degrees",
+   "label": "degrees",
+   "explanation": "} 9"
+  },
+  {
+   "variable": "direction of winds",
+   "code": "35",
+   "term": "350–359 degrees",
+   "unit": "u6",
+   "model_label": "degrees",
+   "label": "degrees",
+   "explanation": "350–359"
+  },
+  {
+   "variable": "geographic region",
+   "code": "d",
+   "term": "geographic region",
+   "unit": "u15",
+   "model_label": "region",
+   "label": "region",
+   "explanation": "geographic"
+  },
+  {
+   "variable": "geographic region",
+   "code": "e",
+   "term": "geographic region",
+   "unit": "u15",
+   "model_label": "region",
+   "label": "region",
+   "explanation": "geographic"
+  },
+  {
+   "variable": "almost complete admixture of haplotypes",
+   "code": "51.8%",
+   "term": "group 2 in Figure 1",
+   "unit": "u16",
+   "model_label": "group",
+   "label": "group",
+   "explanation": "2 in Figure 1"
+  },
+  {
+   "variable": "complete spatial segregation",
+   "code": "37.0 + 2.5%",
+   "term": "group 2 and 4 in Figure 1",
+   "unit": "u16",
+   "model_label": "group",
+   "label": "group",
+   "explanation": "2 and 4 in Figure 1"
+  },
+  {
+   "variable": "incomplete segregation",
+   "code": "8.6%",
+   "term": "group 3 in Figure 1",
+   "unit": "u16",
+   "model_label": "group",
+   "label": "group",
+   "explanation": "3 in Figure 1"
+  },
+  {
+   "variable": "species traits",
+   "code": "",
+   "label": "functional traits determining dispersal capabilities",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u1"
+  },
+  {
+   "variable": "overall differentiation among sub-areas",
+   "code": "",
+   "label": "configuration in the Red–Green–Blue space",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u3"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "morphology",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "feeding",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "life history",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "physiology",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "functional traits",
+   "code": "",
+   "label": "behaviour",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u4"
+  },
+  {
+   "variable": "environmental variables",
+   "code": "",
+   "label": "relative geographic distances between Sicilian and SIP specimens",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "environmental variables",
+   "code": "",
+   "label": "tendency of winds to facilitate or hamper the crossing of the Messina strait",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u5"
+  },
+  {
+   "variable": "wind direction",
+   "code": "",
+   "label": "tangential to the direction of each segment",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "wind direction",
+   "code": "",
+   "label": "orthogonal to the segment",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u12"
+  },
+  {
+   "variable": "pollen specialization",
+   "code": "",
+   "label": "Species exploiting a lower number of host plants",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u13"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "population size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "fecundity",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "body size",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "dispersal capability",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "flight period",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  },
+  {
+   "variable": "traits",
+   "code": "",
+   "label": "number of generations",
+   "explanation": "",
+   "evidence": "named",
+   "unit": "u18"
+  }
+ ],
+ "dropped": [
+  {
+   "variable": "strength",
+   "code": "2–5",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "strength",
+   "code": "5–7",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "strength",
+   "code": "7–10",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "strength",
+   "code": "10–15",
+   "term": "",
+   "why": "not printed within one unit"
+  },
+  {
+   "variable": "strength",
+   "code": "15–20",
+   "term": "",
+   "why": "not printed within one unit"
+  }
+ ],
+ "seconds": 135.8
+}
