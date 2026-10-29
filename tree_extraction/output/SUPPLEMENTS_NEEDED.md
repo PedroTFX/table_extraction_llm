@@ -10,7 +10,6 @@ the paper itself names (counted mentions). Read-only check, no model.
 | Paper | Set | GT rows | Not in the paper | F1 now (grit / 109) | The paper cites |
 |---|---|---|---|---|---|
 | Arnan2014 | grit | 1,352 | 100% | 0.00 | Supporting Information: Appendix S1, S2; Tables S2, S4 |
-| Harmon2013 | both | 84 | 100% | 0.00 / 0.00 | Table S1 (supplementary table) |
 | Wijas2021 | both | 487 | 100% | 0.00 / 0.00 | Supporting Information; Dryad (10.5061/…) |
 | DelToro2015 | grit | 701 | 99% | 0.00 | Appendix S1, S2 |
 | Orr2024 | 109 | 12,838 | 99% | — / 0.01 | Supplementary tables; Dryad |
@@ -32,6 +31,9 @@ the paper itself names (counted mentions). Read-only check, no model.
 
 - **Noriega2023** (60% flagged): the GT's species names have typos ('Digitonthoagus gazla' for
   the printed 'Digitonthophagus_gazella'); the values are in the paper.
+- **Harmon2013** (100% flagged): Table S1 is already in its markdown (Harmon2013_S1.docx). Species are
+  printed as epithets under subgenus labels ('*ardens*'), so the check missed them; the GT's tongue
+  lengths (8.602045…) look computed from the printed ln(tongue length).
 - **McCravy2019** (76%): genus and epithet are printed in separate cells; no supplement cited.
 - **B.Wang2021 / Wang2021, Gonzalez2016, Gutiérrez‐Chacón2019** (31–42%): names printed with a
   subgenus or as 'sp1' where the GT writes 'sp'; B.Wang and Gonzalez already score 0.94–1.00.
