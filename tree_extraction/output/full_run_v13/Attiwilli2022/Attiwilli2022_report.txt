@@ -1,12 +1,11 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Attiwilli2022/Attiwilli2022.xlsx  (30 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Attiwilli2022/Attiwilli2022.csv  (70 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v8/Attiwilli2022/Attiwilli2022.csv  (36 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-TAXON NAMES LEFT UNMAPPED (2)
-  '251 tropical butterfly species': no ground-truth name denotes this organism
+TAXON NAMES LEFT UNMAPPED (1)
   'Pooled': no ground-truth name denotes this organism
 
 SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
@@ -17,15 +16,12 @@ SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
 ROW-LEVEL (key match)
   matched (TP)        : 15
   missed (FN)         : 15
-  spurious, in scope  : 27   <- GT covers this trait: real errors
-  spurious, out of scope: 28   <- GT never covers this trait: nothing to score against
+  spurious, in scope  : 21   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.214 / 0.500 / 0.300   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.357 / 0.500 / 0.417   (out-of-scope rows excluded)
+  STRICT  P/R/F1      : 0.417 / 0.500 / 0.455   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.417 / 0.500 / 0.455   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
-
-  out-of-scope rows by uncovered field:
-    measurementType                             28
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
@@ -66,24 +62,12 @@ WHY THE 15 MISSED ROWS MISSED
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  habitat associations                              0     2   PRED-ONLY
-  log (body mass)                                   0     2   PRED-ONLY
-  body mass                                        10    14   Δ+4 (split?)
-  habitat                                           0     2   PRED-ONLY
-  intercept                                         0     8   PRED-ONLY
-  iqr                                               0     3   PRED-ONLY
-  log (proboscis length)                            0     2   PRED-ONLY
-  log (wing length)                                 0     2   PRED-ONLY
-  proboscis length                                 10    14   Δ+4 (split?)
-  wing length                                      10    14   Δ+4 (split?)
-  open                                              0     1   PRED-ONLY
-  q1                                                0     3   PRED-ONLY
-  q3                                                0     3   PRED-ONLY
+  body mass                                        10    12   Δ+2 (split?)
+  proboscis length                                 10    12   Δ+2 (split?)
+  wing length                                      10    12   Δ+2 (split?)
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.357  0.500  0.417     15    27    15   id+type+value
-             (28 more spurious row(s) set aside as out-of-scope; strict P would be 0.214)
-  tags        0.000  0.000  0.000      0    42    30   basis+id+type+value+stat+sex+stage
-             (28 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.417 vs previous)
+  core        0.417  0.500  0.455     15    21    15   id+type+value
+  tags        0.000  0.000  0.000      0    36    30   basis+id+type+value+stat+sex+stage
+             (F1 -0.455 vs previous)

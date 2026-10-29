@@ -1,6 +1,3 @@
-  [semantic] left unmatched: 'ML (mm)' vs 'Mandible length' (llm said different traits)
-  [semantic] left unmatched: 'ML (mm)' vs 'Scape length' (llm said different traits)
-  [semantic] left unmatched: 'ML (mm)' vs 'Weber’s length' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Luo2023/Luo2023.xlsx  (979 rows)
 PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Luo2023/Luo2023.csv  (990 rows)
@@ -8,67 +5,67 @@ KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']
 SCOPE        : measurementType
 ================================================================
 
-SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
   'EW (mm)' -> 'Eye width'
   'HLG (mm)' -> 'Hindleg length'
+  'ML (mm)' -> 'Mandible length'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 219
-  missed (FN)         : 760
-  spurious, in scope  : 107   <- GT covers this trait: real errors
-  spurious, out of scope: 664   <- GT never covers this trait: nothing to score against
+  matched (TP)        : 342
+  missed (FN)         : 637
+  spurious, in scope  : 147   <- GT covers this trait: real errors
+  spurious, out of scope: 501   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.221 / 0.224 / 0.222   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.672 / 0.224 / 0.336   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.224   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.345 / 0.349 / 0.347   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.699 / 0.349 / 0.466   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.349   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                            664
+    measurementType                            501
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0    219  0.000  <-- low
-  measurementMethod             0    219  0.000  <-- low
-  measurementUnit               0    219  0.000  <-- low
-  measurementStatistic          0    219  0.000  <-- low
+  basisOfRecord                 0    342  0.000  <-- low
+  measurementMethod             0    342  0.000  <-- low
+  measurementUnit               0    342  0.000  <-- low
+  measurementStatistic          0    342  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0    219  0.000  <-- low
-  lifeStage                     0    219  0.000  <-- low
-  caste                         0    219  0.000  <-- low
+  sex                           0    342  0.000  <-- low
+  lifeStage                     0    342  0.000  <-- low
+  caste                         0    342  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
   samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a   +219 where GT blank
-  verbatimCoordinates           0    219  0.000  <-- low
+  verbatimLocality              0      0    n/a   +342 where GT blank
+  verbatimCoordinates           0    342  0.000  <-- low
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0    219  0.000  <-- low
+  associatedReferences          0    342  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 760 MISSED ROWS MISSED
+WHY THE 637 MISSED ROWS MISSED
   species not in prediction                   0
-  species present, trait missing            653
-  species+trait present, value differs      106
+  species present, trait missing            490
+  species+trait present, value differs      146
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '0.13265'                    ->  '0.1344'                     x1
-     '0.13556'                    ->  '0.1344'                     x1
-     '0.12807'                    ->  '0.1344'                     x1
-     '0.13534'                    ->  '0.1344'                     x1
-     '0.13842'                    ->  '0.1344'                     x1
-     '0.11965'                    ->  '0.1344'                     x1
-  -> 6 substitutions explain 6 of 760 misses (1%) — scattered; no single cause
+     '0.19574'                    ->  '0.19779'                    x1
+     '0.17188'                    ->  '0.19779'                    x1
+     '0.2411'                     ->  '0.19779'                    x1
+     '0.20374'                    ->  '0.19779'                    x1
+     '0.16698'                    ->  '0.19779'                    x1
+     '0.2088'                     ->  '0.19779'                    x1
+  -> 6 substitutions explain 6 of 637 misses (1%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Head width'                       x163
-     'Mandible length'                  x163
      'Scape length'                     x163
      'Weber’s length'                   x163
      ''                                 x1
-  -> 5 missing traits explain 653 of 760 misses (86%) — systematic, not scattered
+  -> 4 missing traits explain 490 of 637 misses (77%) — systematic, not scattered
 
-  full miss detail saved -> Luo2023_misses.csv, Luo2023_misses_summary.json (760 row(s))
+  full miss detail saved -> Luo2023_misses.csv, Luo2023_misses_summary.json (637 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -78,19 +75,18 @@ measurementType COVERAGE
   head width                                      163     0   GT-ONLY
   hindleg length                                  163   163   
   hw (mm)                                           0   163   PRED-ONLY
-  mandible length                                 163     0   GT-ONLY
+  mandible length                                 163   163   
   scape length                                    163     0   GT-ONLY
   weber’s length                                  163     0   GT-ONLY
   measure                                           0     6   PRED-ONLY
-  ml (mm)                                           0   163   PRED-ONLY
   sl (mm)                                           0   163   PRED-ONLY
   wl (mm)                                           0   163   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.672  0.224  0.336    219   107   760   id+type+value
-             (664 more spurious row(s) set aside as out-of-scope; strict P would be 0.221)
-  tags        0.000  0.000  0.000      0   326   979   basis+id+type+value+stat+sex+stage
-             (664 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.336 vs previous)
-             note: only 0/219 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
+  core        0.699  0.349  0.466    342   147   637   id+type+value
+             (501 more spurious row(s) set aside as out-of-scope; strict P would be 0.345)
+  tags        0.000  0.000  0.000      0   489   979   basis+id+type+value+stat+sex+stage
+             (501 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.466 vs previous)
+             note: only 0/342 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

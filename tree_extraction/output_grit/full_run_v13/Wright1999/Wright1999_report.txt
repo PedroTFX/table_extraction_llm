@@ -1,35 +1,19 @@
-  [semantic] left unmatched: 'Postprandial Locomote' vs 'time locomoting' (llm said different traits)
-  [semantic] left unmatched: 'Postprandial Locomote' vs 'locomotion bouts' (llm said different traits)
-  [semantic] left unmatched: 'Postprandial Locomote' vs 'intermeal intervals' (llm said different traits)
-  [semantic] left unmatched: 'Postprandial Total interval' vs 'intermeal intervals' (llm said different traits)
-  [semantic] left unmatched: 'Postprandial Total interval' vs 'meal durations' (llm said different traits)
-  [semantic] left unmatched: 'Postprandial Total interval' vs 'time quiescent' (llm said different traits)
-  [semantic] left unmatched: 'Preprandial Locomote' vs 'time locomoting' (llm said different traits)
-  [semantic] left unmatched: 'Preprandial Locomote' vs 'locomotion bouts' (llm said different traits)
-  [semantic] left unmatched: 'Preprandial Locomote' vs 'time feeding' (llm said different traits)
-  [semantic] left unmatched: 'Preprandial Quiescent' vs 'time quiescent' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Wright1999/Wright1999.xlsx  (7 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/Wright1999/Wright1999.csv  (24 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Wright1999/Wright1999.csv  (0 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
-  'Postprandial Quiescent' -> 'quiescent periods'
-
 ROW-LEVEL (key match)
   matched (TP)        : 0
   missed (FN)         : 7
-  spurious, in scope  : 4   <- GT covers this trait: real errors
-  spurious, out of scope: 20   <- GT never covers this trait: nothing to score against
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
 
   STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
   SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
-
-  out-of-scope rows by uncovered field:
-    measurementType                             20
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
@@ -53,22 +37,13 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   externalLink                  0      0    n/a
 
 WHY THE 7 MISSED ROWS MISSED
-  species not in prediction                   0
-  species present, trait missing              6
-  species+trait present, value differs        1
+  species not in prediction                   7
+  species present, trait missing              0
+  species+trait present, value differs        0
 
-  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '78 ± 3.3'                   ->  '0.544'                      x1
-  -> 1 substitution explains 1 of 7 misses (14%) — scattered; no single cause
-
-  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'time quiescent'                   x1
-     'time feeding'                     x1
-     'time locomoting'                  x1
-     'meal durations'                   x1
-     'locomotion bouts'                 x1
-     'intermeal intervals'              x1
-  -> 6 missing traits explain 6 of 7 misses (86%) — systematic, not scattered
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Exopthalmus jekelianus'             (nothing similar in the prediction)   x7
+  -> 1 species mismatch explains 7 of 7 misses (100%) — systematic, not scattered
 
   full miss detail saved -> Wright1999_misses.csv, Wright1999_misses_summary.json (7 row(s))
 
@@ -78,23 +53,12 @@ measurementType COVERAGE
   meal durations                                    1     0   GT-ONLY
   time feeding                                      1     0   GT-ONLY
   intermeal intervals                               1     0   GT-ONLY
-  postprandial total interval                       0     4   PRED-ONLY
-  preprandial total interval                        0     4   PRED-ONLY
-  postprandial locomote                             0     4   PRED-ONLY
-  preprandial locomote                              0     4   PRED-ONLY
   time locomoting                                   1     0   GT-ONLY
-  quiescent periods                                 1     4   Δ+3 (split?)
-  preprandial quiescent                             0     4   PRED-ONLY
+  quiescent periods                                 1     0   GT-ONLY
   time quiescent                                    1     0   GT-ONLY
-
-  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
-    gt 'intermeal intervals'              vs pred 'preprandial total interval'       sim=0.74
-    gt 'time quiescent'                   vs pred 'preprandial quiescent'            sim=0.59
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.000  0.000  0.000      0     4     7   id+type+value
-             (20 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-  tags        0.000  0.000  0.000      0     4     7   basis+id+type+value+stat+sex+stage
-             (20 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  core        0.000  0.000  0.000      0     0     7   id+type+value
+  tags        0.000  0.000  0.000      0     0     7   basis+id+type+value+stat+sex+stage
              (F1 +0.000 vs previous)

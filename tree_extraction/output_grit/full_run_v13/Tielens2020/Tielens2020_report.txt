@@ -3,18 +3,17 @@
   [semantic] matched by values: 'Generalist / specialist' -> 'Diet breadth'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tielens2020/Tielens2020.xlsx  (142 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/Tielens2020/Tielens2020.csv  (400 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v7/Tielens2020/Tielens2020.csv  (216 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-TAXON NAMES LEFT UNMAPPED (13)
+TAXON NAMES LEFT UNMAPPED (12)
   'Coleotichus': no ground-truth name denotes this organism
   'Greenidea': no ground-truth name denotes this organism
   'Hyalopeplus': no ground-truth name denotes this organism
   'Iolania': no ground-truth name denotes this organism
   'Koanoa': no ground-truth name denotes this organism
-  'Metrosideros polymorpha': no ground-truth name denotes this organism
   'Nesophrosyne': no ground-truth name denotes this organism
   'Oceanides': no ground-truth name denotes this organism
   'Orthotylus': no ground-truth name denotes this organism
@@ -32,14 +31,14 @@ ROW-LEVEL (key match)
   matched (TP)        : 19
   missed (FN)         : 123
   spurious, in scope  : 123   <- GT covers this trait: real errors
-  spurious, out of scope: 258   <- GT never covers this trait: nothing to score against
+  spurious, out of scope: 74   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.048 / 0.134 / 0.070   (every extra row counts against precision)
+  STRICT  P/R/F1      : 0.088 / 0.134 / 0.106   (every extra row counts against precision)
   SCOPED  P/R/F1      : 0.134 / 0.134 / 0.134   (out-of-scope rows excluded)
   RECALL (GT coverage): 0.134   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
-    measurementType                            258
+    measurementType                             74
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
@@ -74,7 +73,7 @@ WHY THE 123 MISSED ROWS MISSED
   SPECIES IN GT BUT NOT IN PREDICTION (27 distinct), closest predicted name:
      gt 'Lepidoptera'                        (nothing similar in the prediction)   x24
      gt 'Coleotichus blackburniae'          ~0.82~  pred 'Coleotichus'   x4
-     gt 'Geometridae'                       ~0.55~  pred 'Metrosideros polymorpha'   x4
+     gt 'Geometridae'                       ~0.55~  pred 'Greenidea'   x4
      gt 'Greenidea psidii'                  ~0.82~  pred 'Greenidea'   x4
      gt 'Hyalopeplus pelucidus'             ~0.88~  pred 'Hyalopeplus'   x4
      gt 'Iolania perkinsi'                  ~0.85~  pred 'Iolania'   x4
@@ -84,33 +83,18 @@ WHY THE 123 MISSED ROWS MISSED
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  (no name, column 11)                              0    26   PRED-ONLY
-  specific leaf area                                0    14   PRED-ONLY
   body size                                        37    37   
   diet breadth                                     33    33   
   species code                                      0    37   PRED-ONLY
-  foliar nitrogen content (%, standardized)         0    24   PRED-ONLY
-  water content                                     0    14   PRED-ONLY
-  sampling dry weight (g)                           0    24   PRED-ONLY
   feeding guild                                    37    37   
-  foliar nitrogen                                   0     4   PRED-ONLY
-  foliar phosphorus                                 0     4   PRED-ONLY
-  trichomes -glabrous                               0    10   PRED-ONLY
-  trichomes -intermediate                           0    10   PRED-ONLY
-  iqr                                               0     8   PRED-ONLY
   location juvenile                                35    35   
-  % nitrogen                                        0    10   PRED-ONLY
-  % phosphorus                                      0    10   PRED-ONLY
-  trichomes -pubescent                              0    10   PRED-ONLY
-  q1                                                0     8   PRED-ONLY
-  q3                                                0     8   PRED-ONLY
   species                                           0    37   PRED-ONLY
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.134  0.134  0.134     19   123   123   id+type+value
-             (258 more spurious row(s) set aside as out-of-scope; strict P would be 0.048)
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.088)
   tags        0.000  0.000  0.000      0   142   142   basis+id+type+value+stat+sex+stage
-             (258 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (74 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
              (F1 -0.134 vs previous)
              note: only 0/19 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

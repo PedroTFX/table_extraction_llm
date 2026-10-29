@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/kovacs2010/kovacs2010.xlsx  (20 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/kovacs2010/kovacs2010.csv  (24 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v13/kovacs2010/kovacs2010.csv  (29 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -13,69 +13,67 @@ SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
   'Thorax width' -> 'Thorax width '
 
 ROW-LEVEL (key match)
-  matched (TP)        : 10
-  missed (FN)         : 10
+  matched (TP)        : 15
+  missed (FN)         : 5
   spurious, in scope  : 10   <- GT covers this trait: real errors
   spurious, out of scope: 4   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.417 / 0.500 / 0.455   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.500 / 0.500 / 0.500   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.517 / 0.750 / 0.612   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.600 / 0.750 / 0.667   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.750   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                              4
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0     10  0.000  <-- low
+  basisOfRecord                 0     15  0.000  <-- low
   measurementMethod             0      0    n/a
   measurementUnit               0     10  0.000  <-- low
-  measurementStatistic         10     10  1.000
+  measurementStatistic         10     15  0.667
   measurementRemarks            0      0    n/a
-  sex                           0     10  0.000  <-- low
-  lifeStage                     0     10  0.000  <-- low
-  caste                         0     10  0.000  <-- low
-  sampleSizeValue               5     10  0.500
-  sampleSizeUnit                0     10  0.000  <-- low
-  sampleTreatment               0      0    n/a   +10 where GT blank
+  sex                           0     15  0.000  <-- low
+  lifeStage                     0     15  0.000  <-- low
+  caste                         0     15  0.000  <-- low
+  sampleSizeValue              10     15  0.667
+  sampleSizeUnit                0     15  0.000  <-- low
+  sampleTreatment               0      0    n/a   +15 where GT blank
   samplingProtocol              0      0    n/a
   verbatimLocality              0      0    n/a
   verbatimCoordinates           0      0    n/a
-  verbatimEventDate             0     10  0.000  <-- low
+  verbatimEventDate             0     15  0.000  <-- low
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     10  0.000  <-- low
+  associatedReferences          0     15  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 10 MISSED ROWS MISSED
+WHY THE 5 MISSED ROWS MISSED
   species not in prediction                   0
   species present, trait missing              0
-  species+trait present, value differs       10
+  species+trait present, value differs        4
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
-     '0.14'                       ->  '5.65 ± 0.77'                x2
-     '0.1'                        ->  '2.31 ± 0.24'                x1
-     '0.1'                        ->  '3.65 ± 0.37'                x1
-     '0.11'                       ->  '1.66 ± 0.22'                x1
-     '0.22'                       ->  '14.68 ± 3.16'               x1
      '0.05'                       ->  '2.31 ± 0.24'                x1
-  -> 6 substitutions explain 7 of 10 misses (70%) — systematic, not scattered
+     '0.06'                       ->  '3.65 ± 0.37'                x1
+     '0.12'                       ->  '1.66 ± 0.22'                x1
+     '0.28'                       ->  '14.68 ± 3.16'               x1
+  -> 4 substitutions explain 4 of 5 misses (80%) — systematic, not scattered
 
-  full miss detail saved -> kovacs2010_misses.csv, kovacs2010_misses_summary.json (10 row(s))
+  full miss detail saved -> kovacs2010_misses.csv, kovacs2010_misses_summary.json (5 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   log body length (range)                           0     2   PRED-ONLY
-  gaster length                                     4     4   
-  third tergum length                               4     4   
-  thorax length                                     4     4   
+  gaster length                                     4     5   Δ+1 (split?)
+  third tergum length                               4     5   Δ+1 (split?)
+  thorax length                                     4     5   Δ+1 (split?)
   log thorax width (range)                          0     2   PRED-ONLY
-  mass                                              4     4   
-  thorax width                                      4     4   
+  mass                                              4     5   Δ+1 (split?)
+  thorax width                                      4     5   Δ+1 (split?)
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.500  0.500  0.500     10    10    10   id+type+value
-             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.417)
-  tags        0.000  0.000  0.000      0    20    20   basis+id+type+value+stat+sex+stage
+  core        0.600  0.750  0.667     15    10     5   id+type+value
+             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.517)
+  tags        0.000  0.000  0.000      0    25    20   basis+id+type+value+stat+sex+stage
              (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.500 vs previous)
+             (F1 -0.667 vs previous)

@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Kovacs2010/kovacs2010.xlsx  (10 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Kovacs2010/Kovacs2010.csv  (24 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v13/Kovacs2010/Kovacs2010.csv  (34 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -15,11 +15,11 @@ SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
 ROW-LEVEL (key match)
   matched (TP)        : 10
   missed (FN)         : 0
-  spurious, in scope  : 10   <- GT covers this trait: real errors
+  spurious, in scope  : 20   <- GT covers this trait: real errors
   spurious, out of scope: 4   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.417 / 1.000 / 0.588   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.500 / 1.000 / 0.667   (out-of-scope rows excluded)
+  STRICT  P/R/F1      : 0.294 / 1.000 / 0.455   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.333 / 1.000 / 0.500   (out-of-scope rows excluded)
   RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
@@ -49,18 +49,18 @@ FIELD-LEVEL ACCURACY (on matched rows only)
 measurementType COVERAGE
   measurementType                                  gt  pred   note
   log body length (range)                           0     2   PRED-ONLY
-  gaster length                                     2     4   Δ+2 (split?)
-  third tergum length                               2     4   Δ+2 (split?)
-  thorax length                                     2     4   Δ+2 (split?)
+  gaster length                                     2     6   Δ+4 (split?)
+  third tergum length                               2     6   Δ+4 (split?)
+  thorax length                                     2     6   Δ+4 (split?)
   log thorax width (range)                          0     2   PRED-ONLY
-  mass                                              2     4   Δ+2 (split?)
-  thorax width                                      2     4   Δ+2 (split?)
+  mass                                              2     6   Δ+4 (split?)
+  thorax width                                      2     6   Δ+4 (split?)
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.500  1.000  0.667     10    10     0   id+type+value
-             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.417)
-  tags        0.000  0.000  0.000      0    20    10   basis+id+type+value+stat+sex+stage
+  core        0.333  1.000  0.500     10    20     0   id+type+value
+             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.294)
+  tags        0.000  0.000  0.000      0    30    10   basis+id+type+value+stat+sex+stage
              (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.667 vs previous)
+             (F1 -0.500 vs previous)
              note: only 0/10 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
