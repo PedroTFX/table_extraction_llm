@@ -51,9 +51,8 @@ LISTS = {
         "MaterialSample": "samples taken from organisms (tissue, DNA, gut contents)",
         "MaterialCitation": "data taken from published literature, databases or other studies",
         "Occurrence": "records of where and when the organisms occurred",
-        "Taxon": "a description of the taxon itself, not of particular specimens",
-        "Event": "a sampling event", "FossilSpecimen": "fossils",
-        "MaterialEntity": "a physical object of unspecified kind"},
+        "Taxon": "a description of the taxon itself, not of particular specimens"},
+        # the template also lists Event, FossilSpecimen and MaterialEntity; no GT of either set uses them
     "lifeStage": {"adult": "adults (imagines)", "larva": "larvae", "mature larva": "mature (last stage) larvae",
                   "nymph": "nymphs", "caterpillar": "caterpillars", "pupa": "pupae", "egg": "eggs",
                   "instar": "a numbered larval or nymphal instar", "all": "all life stages together",
