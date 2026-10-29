@@ -13,9 +13,13 @@ picks the questions and applies the sure answers.
             measurements of the subject? A sure 'none' / 'several' from the species step meets a
             sure yes in one duel
   clash     a table the kind step dropped (sure): the kind's own option against Q-OWN's yes
-  Q-ROWS    individual / group / statistic / trait (duels)
+  Q-ROWS    individual / group / statistic / trait / definition (duels); a definitions table
+            gives no rows
   clash     a table the structure step dropped (sure): its row option against the Q-ROWS answer
-  Q-COLUMN  (group / statistic / trait rows) per column: value / group / statistic / name / label
+  Q-COLUMN  (group / statistic / trait rows) per column: value / group / statistic / name / test /
+            label
+  endings   v3's mark-or-value question for trait columns whose cells end in letters stuck to the
+            value ('0.59a': significance letters of treatment comparisons)
 
 The tables are read with the tags the species step saw (no kind, no structure). Only sure answers
 count; anything else leaves the table as v12 reads it.
@@ -23,6 +27,7 @@ count; anything else leaves the table as v12 reads it.
     python full_run_v13.py v13:subject <papers>     writes <run>/one_species/<paper>.json
 """
 import json
+import re
 
 import decoder_v3 as v3
 import duels
@@ -53,7 +58,8 @@ ROWS = [("individual", "one individual, specimen, colony, nest or sample of {}, 
         ("group", "one group of {} under one condition: a treatment, diet, prey, temperature, age, sex, caste, "
                   "line, population, site or time, with the values measured on that group"),
         ("statistic", "one summary statistic of the measurements: minimum, maximum, mean, median, SD or range"),
-        ("trait", "one trait or measured variable, named in the row, with its values in the other columns")]
+        ("trait", "one trait or measured variable, named in the row, with its values in the other columns"),
+        ("definition", "one trait or variable with its definition, method or description, and no measured value")]
 
 COL_Q = "What does the column '{}' give for each row?"
 COLS = [("value", "a value measured on {} (its header may name the group or condition it was measured "
@@ -161,6 +167,10 @@ def decide_table(ask, t, fields, subject, sp_rec, kind_dec, struct_dec, above, b
     rows = [(k, v.format(subject)) for k, v in ROWS]
     held, log = duels.duel(ask, state, ROWS_Q, rows)
     rec["rows"] = {"choice": rows[held][0] if held is not None else None, "duels": log}
+    new = rec["own"]["by"] == "Q-OWN"                   # the table gets its species from this step
+    if rec["rows"]["choice"] == "definition":           # nothing measured: no rows
+        rec["use"] = not (lifts or new)
+        return rec
     if struct_dec and struct_dec.get("action") == "no rows":
         c = (struct_dec.get("row") or {}).get("choice")
         if held is None or c not in st.ROW_OPTIONS:
@@ -172,7 +182,6 @@ def decide_table(ask, t, fields, subject, sp_rec, kind_dec, struct_dec, above, b
         if not duels.sure(ch, probs, "rows"):
             return rec
         lifts = True
-    new = rec["own"]["by"] == "Q-OWN"                   # the table gets its species from this step
     if (lifts or new) and held is None:
         return rec                                      # brought back only with a sure reading
     rec["use"] = True
@@ -195,6 +204,52 @@ def readable(rec):
     """A trait-per-row table reads long only with a sure names column and a sure values column."""
     got = {a.get("choice") for a in (rec.get("cols") or {}).values()}
     return "name" in got and "value" in got
+
+
+ATTACHED = re.compile(r"^(.*?\d[^a-zA-Z]*?)\s*([a-zA-Z]{1,3}(?:,\s?[a-zA-Z]{1,3})*)$")
+
+
+def attached(values):
+    """{cell: (value, ending)} for cells ending in letters stuck to the value ('0.59a',
+    '0.157 ± 0.077A'), which decoder_v3's shapes (a space before lower-case letters) miss."""
+    out = {}
+    for v in values:
+        if any(rx.match(v) for _n, rx in v3.ENDINGS):
+            continue
+        m = ATTACHED.match(v)
+        if m and m.group(1).strip():
+            out[v] = (m.group(1).strip(), m.group(2))
+    return out
+
+
+def ask_endings(ask, run_dir, p, plan, res):
+    """v3's ending question (mark or part of the value) for the trait columns of the tables of
+    the subject whose cells end in attached letters; a sure 'mark' goes to the column's decode
+    record as v3:endings writes it, so assemble drops the mark."""
+    f = run_dir / "decode" / f"{p}.json"
+    dec = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    n = 0
+    for k, d in res["tables"].items():
+        if not d.get("use") or k not in plan:
+            continue
+        t, fields = plan[k]
+        tags, _x = apply(d, fields)
+        for col in t.columns:
+            if tags.get(col.name) not in TRAITS:
+                continue
+            vals = list(dict.fromkeys(_flat(r.get(col.name)) for r in t.records if _flat(r.get(col.name))))
+            cells = attached(vals)
+            if len(cells) < 2:
+                continue                                # one cell is not a column's habit
+            ch, probs = v3.ask_ending(ask.get(), col.name, vals, "letters", cells, p)
+            sure = duels.sure(ch, probs, "mark", "value")
+            dec.setdefault(f"{k}:{col.index}", {"cells": {}}).setdefault("endings", {})["letters, attached"] = {
+                "choice": sure, "probs": probs, "cells": {v: val for v, (val, _e) in cells.items()}, "by": "v13"}
+            d.setdefault("endings", {})[col.name] = {"choice": ch, "probs": probs, "cells": len(cells)}
+            n += 1
+    if n:
+        f.write_text(json.dumps(dec, indent=1, ensure_ascii=False), encoding="utf-8")
+    return n
 
 
 def run(run_dir, papers):
@@ -224,6 +279,7 @@ def run(run_dir, papers):
                 t, fields = plan[k]
                 res["tables"][k] = decide_table(ask, t, fields, subject, sp_rec, kinds.get(k), structs.get(k),
                                                 sp.caption_above(t, flat, spans), kt.caption_below(t, flat, spans))
+            res["endings"] = ask_endings(ask, run_dir, p, plan, res)
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
         used = [f"t{k}:{d['rows']['choice'] or '?'}" for k, d in res["tables"].items() if d.get("use")]
         print(f"  [subject] {p:22s} {subject or '-'} ({srec['how']}) | {len(res['tables'])} tables asked; "
@@ -261,6 +317,8 @@ def apply(d, fields):
     out, extra = dict(fields), {}
     if rows is None:
         return out, extra
+    if rows == "definition":
+        return {c: ("none" if v in TRAITS else v) for c, v in out.items()}, extra
     if rows == "trait":
         names = [c for c, a in cols.items() if a == "name"]
         values = [c for c, a in cols.items() if a == "value"]

@@ -89,6 +89,15 @@ column (Borges t1's 'Species' column holds the prey: not in this step), names (M
   a sure Q-ROWS answer, and for trait rows a sure names column and values column; Q-COLUMN
   gains 'test' (a result of a test, model or comparison) and 'label' covers definitions; the
   value option says its header may name the group it was measured under.
+  Result (grit dev, production scorer): Grasser 0 -> 0.384, the others 0. Zhang's names now
+  match the GT ('Egg Size (mm)*' -> 'Egg size'); only the marks differ ('1.31 ± 0.04a' vs
+  '1.31 ± 0.04'). Luo's definitions table (t0: Trait / Indicator of function / Measure) is read
+  as trait rows, and its 'Head width' row takes the GT name the scorer would give 'HW (mm)'.
+- **3**: Q-ROWS gains 'definition' (a trait with its definition or method, no measured value):
+  such a table gives no rows. For the tables of the subject, v3's ending question (mark or part
+  of the value) is asked for trait columns whose cells end in letters stuck to the value
+  ('0.59a', '0.077A'; decoder_v3's shape wants a space and lower case); a sure 'mark' is written
+  to the column's decode record as v3:endings does. Treatment comparisons print these letters.
 
 ## Measure
 
