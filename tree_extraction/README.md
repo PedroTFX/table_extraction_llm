@@ -32,6 +32,8 @@ src/
                  duels (species_duel.py); both ask two options at a time (duels.py) — 35
   v12/           full_run_v12.py: v11 + a table whose head has no names continues the previous
                  one (head_to_table.py); the joined pages' new cells decoded — 35
+  v13/           full_run_v13.py: v12 + one-species papers: the paper's subject and its tables
+                 (individuals, groups, statistics or traits per row; one_species.py) — 36
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```
