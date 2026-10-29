@@ -6,9 +6,9 @@ different steps. nimble decides, two options at a time where there are more (due
 picks the questions and applies the sure answers.
 
   subject   the paper's one organism: the species step's own answer when it gave one (gate 'one'
-            with one name, or every table it named got the same name); else Q-SUBJECT duels over
-            the names (gate 'one'; or 'several' / 'undecided' with at most MAX_NAMES names), the
-            one left against 'several species'
+            with one name, or every table it named got the same name); else (gate 'one') Q-SUBJECT
+            duels over the names, the one left against 'several species'. Gate-'several' papers
+            are not asked: that branch named '67 bee species' a subject and was dropped
   Q-OWN     per table the species step looked at that it did not name: are its values
             measurements of the subject? A sure 'none' / 'several' from the species step meets a
             sure yes in one duel
@@ -36,7 +36,6 @@ import kind_tree as kt
 import species_tree as sp
 import structure_tree as st
 
-MAX_NAMES = 3            # a gate-'several' paper is asked only with this many names or fewer
 MAX_COLS = 14
 TRAITS = {"measurementType", "measurementValue"}
 CONTEXT = {"sex", "lifeStage", "caste"}
@@ -106,7 +105,7 @@ def subject_of(ask, state_sp):
         return names[0], {"how": "gate one, one name"}
     if a == "one" and len(named) == 1:
         return named[0], {"how": "gate one, its tables named one"}
-    if not names or a not in ("one", "several", "undecided") or (a != "one" and len(names) > MAX_NAMES):
+    if not names or a != "one":          # the gate-'several' branch was dropped (design: it put right papers down)
         return None, {"how": "not asked", "gate": a, "names": len(names)}
     state = _paper_state(reads, names)
     options = [(n, SUBJECT.format(n)) for n in names]
@@ -324,11 +323,13 @@ def apply(d, fields):
         values = [c for c, a in cols.items() if a == "value"]
         if not (names and values):
             return out, extra
-        out = {c: ("none" if v in TRAITS else v) for c, v in out.items()}
+        kept = [c for c, v in out.items() if v in TRAITS and c != names[0] and c not in cols]
+        out = {c: ("none" if v in TRAITS and cols.get(c) in ("group", "statistic", "label", "test", "name")
+                   else v) for c, v in out.items()}
         out[names[0]] = "measurementType"
-        for c in values:
+        for c in values + kept:                          # a trait column not answered stays one: a values column
             out[c] = "measurementValue"
-            if len(values) > 1:
+            if len(values) + len(kept) > 1:
                 extra[c] = {"sampleTreatment": c}
         return out, extra
     out = {c: ("measurementType" if v == "measurementValue" else v) for c, v in out.items()}   # wide

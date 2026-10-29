@@ -99,6 +99,22 @@ column (Borges t1's 'Species' column holds the prey: not in this step), names (M
   ('0.59a', '0.077A'; decoder_v3's shape wants a space and lower case); a sure 'mark' is written
   to the column's decode record as v3:endings does. Treatment comparisons print these letters.
 
+## Full run 1 (iteration 3 code, both sets) and what follows from the rules above
+
+- Grit (production) 0.539 -> 0.551, 6 up / 4 down; repeatable 0.538 -> 0.542. 109 set 0.560 ->
+  0.576, 4 up / 1 down. Held: Brant2021 0 -> 1.000 (production), Tran2022 0 -> 0.400, Borges
+  unchanged. Down: kovacs2010 1.0 -> 0.5, Stemkovski2020 0.97 -> 0.65, PascacioVillafan2022
+  0.80 -> 0.50, Buzzone2008 -0.03, Bucher2024 -0.005 (grit); Attiwilli2022 -0.04 (109).
+- The gate-'several' branch named '67 bee species' (Stemkovski) and '251 tropical butterfly
+  species' (Attiwilli) a paper's one subject: by the rule above it is **dropped** (it gained
+  nothing: Borges and Wright did not move).
+- The code did not follow this design for trait-per-row tables: it cleared every trait column
+  the model was not sure about (kovacs2010's CV columns hold GT values). **Fixed to the design:**
+  a trait column not answered stays a trait column (a values column of the long reading).
+- Not changed (it would tune on the full run): a structure 'summary' lifted by the clash duel on
+  tables of slopes or coefficients (kovacs2010 t4, Bucher2024 t2), and the trait re-reading of
+  tables v12 already read (PascacioVillafan2022, Buzzone2008).
+
 ## Measure
 
 - **Dev (looked at):** Luo2023, Mirzaee2023, Tsai2020 (109 split, dev); TOMBERLIN2002,
