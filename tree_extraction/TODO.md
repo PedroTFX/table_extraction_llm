@@ -544,7 +544,7 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## One-species papers (v13 = v12 + the subject step, one_species.py, 2026-10-29) — RUN, NOT adopted yet
+## One-species papers (v13 = v12 + the subject step, one_species.py, 2026-10-29) — ADOPTED: the new baseline
 
 - Design: output/eval_split/DESIGN_one_species_v13.md (3 dev iterations, then 2 full runs).
 - Run 2 (gate-'several' branch dropped by the design's rule; unanswered trait columns kept):
@@ -557,6 +557,20 @@
   lifted by the clash duel (kovacs t4, Bucher t2); tables v12 already read re-read as trait rows.
 - Open: restrict the re-reading to tables v12 gave no rows (or groups only), and the structure clash.
 - Also: output/SUPPLEMENTS_NEEDED.md lists papers whose GT is not in the paper's markdown.
+
+- **Baseline from 2026-10-29: v13 with the supplements the user found** (production scorer, mean F1):
+  grit 0.577 (v12 0.539), 109 set 0.582 (v12 0.568, Orr2024 re-scored under the float-noise fold).
+  Supplements added (grit folders; data/grit_testing is not in git, kept in sync by hand on both
+  machines): Arnan2014_S1.xlsx (0.644), Wijas2021_S1.csv (0.442), Ambrozova2022_S1.docx (0.930),
+  Crabot2022_S2.xlsx (0.862, with the GT fix below), Tielens2020_S2.xlsx (0.397), Tonelli2021_S1.pdf +
+  _S2.xlsx (0.154), Schat2024_S1.csv (still 0: species printed as epithets). 109 set: Fiedler2021_S2.xlsx
+  and _S2.pdf kept (0.667 -> 0.444: S2.xlsx repeats S1's table).
+- GT fix: data/grit_testing/Crabot2022/Crabot2022.xlsx, 52 measurementValue cells Excel had turned into
+  dates restored as typed ('4.5', '3.06'); the original kept as Crabot2022.xlsx.before_date_fix.
+  Four differ from the trait data file (Coenagrion scitulum E10/E200/E390, Lestes virens E98): to check.
+- Scorer (source/evaluate.py): spreadsheet float noise folded (220.8099999486709 == 220.81).
+- Open: v13's drops (kovacs2010, PascacioVillafan2022, Buzzone2008, Bucher2024); Schat2024 genus join;
+  Wijas list cells; Tonelli numeric codes; Scalercio 'Wingspan' (five columns, one GT name).
 
 ## Continuation tables whose head has no names (v12 = v11 + the join, 2026-10-28) — RUN, no paper down
 

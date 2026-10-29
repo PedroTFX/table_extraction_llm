@@ -5,6 +5,14 @@ anywhere, and is a numeric value printed anywhere (a table cell or the text)? A 
 in the paper can only come from material the markdown does not hold. "The paper cites" lists what
 the paper itself names (counted mentions). Read-only check, no model.
 
+## Found and added (2026-10-29; F1 after the rerun, grit)
+
+Arnan2014 (S1.xlsx, 0.644), Wijas2021 (S1.csv, 0.442), Ambrozova2022 (S1.docx, 0.930), Crabot2022
+(S2.xlsx from the data repository, 0.862), Tielens2020 (S2.xlsx, 0.397), Tonelli2021 (S1.pdf + S2.xlsx,
+0.154), Schat2024 (S1.csv, still 0). Orr2024 needed no supplement: its S1 was in the paper, the scorer
+missed the values (float noise, fixed: 0.919). Fiedler2021 and Scalercio2020: the files found repeat
+what the paper already had.
+
 ## Mostly in a supplement (half or more of the GT rows)
 
 | Paper | Set | GT rows | Not in the paper | F1 now (grit / 109) | The paper cites |
