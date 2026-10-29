@@ -45,7 +45,7 @@ LISTS = {
               "soldier": "soldiers"},
     "basisOfRecord": {
         "PreservedSpecimen": "specimens collected and preserved (pinned, dried, in ethanol, in a collection)",
-        "LivingSpecimen": "living organisms kept or reared (a laboratory culture, rearing, an experiment on live animals)",
+        "LivingSpecimen": "organisms kept alive or reared during the study (a laboratory culture, rearing, experiments on live animals), not ones collected and killed for measuring",
         "HumanObservation": "organisms observed in the field or a video, not collected",
         "MachineObservation": "organisms recorded by a device (camera trap, sensor, acoustic recorder)",
         "MaterialSample": "samples taken from organisms (tissue, DNA, gut contents)",
@@ -293,6 +293,22 @@ def ask_text(ask, kind, quotes):
     return out
 
 
+ORIGIN_Q = "Where do the trait data of this paper come from?"
+ORIGIN = {"own": "the authors collected, observed or reared the organisms themselves for this study and measured them",
+          "compiled": "the trait data were compiled from published literature, databases or other studies"}
+
+
+def ask_origin(ask, secs, quotes):
+    """Own data or compiled from the literature (-> MaterialCitation): the abstract and the quotes about
+    how the data were obtained. -> (choice or None, record)."""
+    st = ("A scientific paper about insect traits. Its title and abstract: '"
+          + secs.get("title and abstract", "")[:1500] + "'.")
+    if quotes:
+        st += " It also says: " + " ".join(f"'{q}'" for q in quotes[:MAX_QUOTES])
+    ch, probs = ask(st, ORIGIN_Q, dict(ORIGIN))
+    return duels.sure(ch, probs, *ORIGIN), {"choice": ch, "probs": probs}
+
+
 def settle(ask, tag, found):
     """The sure answers of one tag so far -> (value or None, record). One value: it. Several: all
     their quotes asked together, with 'different values for different parts of the study'."""
@@ -345,6 +361,13 @@ def run(run_dir, papers):
                 continue
             quotes = read_round(kind, text)
             v1.unload(v1.GEMMA)
+            if "basisOfRecord" in todo and "origin" not in res:     # own data, or compiled (MaterialCitation)
+                got, rec = ask_origin(ask, secs, quotes["basisOfRecord"])
+                res["origin"] = dict(rec, value=got)
+                if got == "compiled":
+                    res["text"]["basisOfRecord"] = {"value": "MaterialCitation", "round": kind,
+                                                    "settle": {"by": "origin"}}
+                    todo = [t for t in todo if t != "basisOfRecord"]
             got = ask_text(ask, kind, {tag: quotes[tag] for tag in todo})
             for tag in todo:
                 found[tag] += got.get(tag, [])
@@ -393,12 +416,16 @@ def apply(dec, t, fields, xtags, defaults=None):
     stat = (dec.get("statistic") or {}).get(k) or {}
     cap = (dec.get("captions") or {}).get(k) or {}
     text = dec.get("text") or {}
+    compiled = ((text.get("basisOfRecord") or {}).get("settle") or {}).get("by") == "origin"
     for col in trait_columns(t, out):
         tags = x.setdefault(col, {})
         if "measurementStatistic" not in have and (stat.get(col) or {}).get("value"):
             tags["measurementStatistic"] = stat[col]["value"]
         for tag in ("sex", "caste", "basisOfRecord", "lifeStage", "measurementStatistic"):
             if tag in have or tags.get(tag):
+                continue
+            if tag == "basisOfRecord" and compiled:      # compiled data: the paper-level answer wins
+                tags[tag] = "MaterialCitation"
                 continue
             value = (cap.get(tag) or {}).get("value") or (text.get(tag) or {}).get("value") \
                 or (defaults or {}).get(tag)
