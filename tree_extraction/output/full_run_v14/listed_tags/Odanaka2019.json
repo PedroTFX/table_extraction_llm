@@ -1,0 +1,794 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "6": {},
+  "7": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "6": {},
+  "7": {}
+ },
+ "statistic": {
+  "0": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.008,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.979,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Types": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Definition": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.012,
+     "mean": 0.046,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.003,
+     "mode": 0.911,
+     "single observation": 0.003,
+     "unknown": 0.016
+    },
+    "value": "mode"
+   }
+  },
+  "1": {
+   "Mean nearest taxon distance": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.993,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   }
+  },
+  "2": {
+   "Mean pairwise distance": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.994,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   }
+  },
+  "6": {
+   "PC1 (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "PC2 (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 1.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   }
+  },
+  "7": {
+   "Nesting biology": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Behavior": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Un-grazed landscapes": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.014,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.958,
+     "single observation": 0.008,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Low management intensity": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.006,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.956,
+     "single observation": 0.016,
+     "unknown": 0.003
+    },
+    "value": "mode"
+   },
+   "Moderate management intensity": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.008,
+     "mean": 0.01,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.005,
+     "range": 0.003,
+     "min": 0.003,
+     "max": 0.01,
+     "median": 0.009,
+     "count": 0.013,
+     "mode": 0.851,
+     "single observation": 0.07,
+     "unknown": 0.004
+    },
+    "value": "mode"
+   },
+   "High management intensity": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.008,
+     "mean": 0.015,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.003,
+     "max": 0.014,
+     "median": 0.024,
+     "count": 0.011,
+     "mode": 0.873,
+     "single observation": 0.036,
+     "unknown": 0.003
+    },
+    "value": "mode"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.019,
+     "female": 0.004,
+     "male": 0.001,
+     "unknown": 0.003,
+     "not": 0.973
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.001,
+     "worker": 0.033,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.963
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.021,
+     "LivingSpecimen": 0.014,
+     "HumanObservation": 0.015,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.023,
+     "Occurrence": 0.02,
+     "Taxon": 0.036,
+     "not": 0.87
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.699,
+     "larva": 0.002,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.003,
+     "not": 0.294
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.836,
+       "b": 0.164
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.024,
+       "b": 0.976
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.14,
+      "not": 0.86
+     }
+    },
+    "value": null
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.117,
+     "female": 0.003,
+     "male": 0.002,
+     "unknown": 0.003,
+     "not": 0.875
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.004,
+     "worker": 0.031,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.962
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.061,
+     "LivingSpecimen": 0.036,
+     "HumanObservation": 0.18,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.006,
+     "MaterialCitation": 0.022,
+     "Occurrence": 0.067,
+     "Taxon": 0.0,
+     "not": 0.626
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o6",
+      "choice": "b",
+      "probs": {
+       "a": 0.08,
+       "b": 0.92
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.596,
+       "b": 0.404
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.316,
+     "larva": 0.003,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.004,
+     "unknown": 0.007,
+     "not": 0.667
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.804,
+       "b": 0.196
+      }
+     },
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.111,
+       "b": 0.889
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.082,
+      "not": 0.918
+     }
+    },
+    "value": null
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.037,
+     "female": 0.001,
+     "male": 0.002,
+     "unknown": 0.005,
+     "not": 0.955
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.007,
+     "minor worker": 0.0,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.99
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.017,
+     "HumanObservation": 0.174,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.008,
+     "Occurrence": 0.379,
+     "Taxon": 0.0,
+     "not": 0.417
+    },
+    "duels": [
+     {
+      "a": "o6",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.384,
+       "b": 0.616
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.003,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.016,
+     "unknown": 0.023,
+     "not": 0.954
+    },
+    "value": null
+   }
+  },
+  "6": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.038,
+     "female": 0.004,
+     "male": 0.002,
+     "unknown": 0.003,
+     "not": 0.953
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.005,
+     "worker": 0.035,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.953
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.006,
+     "LivingSpecimen": 0.007,
+     "HumanObservation": 0.005,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.923,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.056
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.34,
+     "larva": 0.002,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.01,
+     "unknown": 0.016,
+     "not": 0.631
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.771,
+       "b": 0.229
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "7": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.078,
+     "female": 0.023,
+     "male": 0.002,
+     "unknown": 0.003,
+     "not": 0.894
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.012,
+     "male alate": 0.003,
+     "worker": 0.021,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.963
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.004,
+     "HumanObservation": 0.02,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.883,
+     "Occurrence": 0.007,
+     "Taxon": 0.0,
+     "not": 0.081
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.766,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.001,
+     "not": 0.23
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.974,
+       "b": 0.026
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.007,
+       "b": 0.993
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.43,
+      "not": 0.57
+     }
+    },
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.953,
+   "compiled": 0.047
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.992,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.004,
+     "Taxon": 0.0,
+     "not": 0.002
+    },
+    "quote": "Wild bee samples were collected every two weeks from the same six landscapes over three years (2015–2017).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.981,
+     "LivingSpecimen": 0.003,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.009,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "Bees were sampled consistently every other week starting in April through to October using a combined method of pan traps and sweep netting (Tucker and Rehan, 2018, 2017).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.999,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "Collected bee specimens were prepared following the protocols in Droege (2015) and then pinned and labeled with relevant location i",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.975,
+     "LivingSpecimen": 0.011,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.011
+    },
+    "quote": "all specimens are stored in the Rehan Lab at UNH",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.984,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "community weighted means of each examined trait",
+    "value": "mean"
+   }
+  ]
+ }
+}

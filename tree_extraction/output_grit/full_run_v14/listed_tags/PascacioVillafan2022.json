@@ -1,0 +1,1141 @@
+{
+ "cells": {
+  "0": {},
+  "1": {
+   "(no name, column 0)": {
+    "tag": "lifeStage",
+    "values": {
+     "Larval density (larvae/60 g of diet)": {
+      "choice": "larva",
+      "probs": {
+       "adult": 0.0,
+       "larva": 0.993,
+       "mature larva": 0.001,
+       "nymph": 0.0,
+       "caterpillar": 0.001,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.0,
+       "unknown": 0.0,
+       "not": 0.004
+      },
+      "value": "larva"
+     },
+     "Macronutrient content (%)": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.003,
+       "larva": 0.337,
+       "mature larva": 0.001,
+       "nymph": 0.001,
+       "caterpillar": 0.011,
+       "pupa": 0.001,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.011,
+       "unknown": 0.006,
+       "not": 0.628
+      },
+      "duels": [
+       {
+        "a": "o1",
+        "b": "o4",
+        "choice": "a",
+        "probs": {
+         "a": 0.866,
+         "b": 0.134
+        }
+       },
+       {
+        "a": "o8",
+        "b": "o1",
+        "choice": "b",
+        "probs": {
+         "a": 0.287,
+         "b": 0.713
+        }
+       }
+      ],
+      "value": null
+     },
+     "Carbohydrate (%)": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.002,
+       "larva": 0.1,
+       "mature larva": 0.001,
+       "nymph": 0.001,
+       "caterpillar": 0.002,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.001,
+       "unknown": 0.002,
+       "not": 0.891
+      },
+      "value": "not"
+     },
+     "Protein (%)": {
+      "choice": "larva",
+      "probs": {
+       "adult": 0.005,
+       "larva": 0.713,
+       "mature larva": 0.004,
+       "nymph": 0.002,
+       "caterpillar": 0.016,
+       "pupa": 0.001,
+       "egg": 0.001,
+       "instar": 0.003,
+       "all": 0.012,
+       "unknown": 0.033,
+       "not": 0.211
+      },
+      "duels": [
+       {
+        "a": "o1",
+        "b": "o9",
+        "choice": "a",
+        "probs": {
+         "a": 0.926,
+         "b": 0.074
+        }
+       },
+       {
+        "a": "o4",
+        "b": "o1",
+        "choice": "b",
+        "probs": {
+         "a": 0.016,
+         "b": 0.984
+        }
+       }
+      ],
+      "final": {
+       "choice": "not",
+       "probs": {
+        "pick": 0.032,
+        "not": 0.968
+       }
+      },
+      "value": "not"
+     }
+    }
+   }
+  },
+  "3": {},
+  "4": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "3": {},
+  "4": {}
+ },
+ "statistic": {
+  "0": {
+   "600": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.013,
+     "mean": 0.953,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.004,
+     "single observation": 0.019,
+     "unknown": 0.002
+    },
+    "value": "mean"
+   },
+   "465": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.016,
+     "mean": 0.939,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.003,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.019,
+     "unknown": 0.004
+    },
+    "value": "mean"
+   },
+   "330": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.013,
+     "mean": 0.956,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.006,
+     "range": 0.001,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.003,
+     "count": 0.0,
+     "mode": 0.002,
+     "single observation": 0.009,
+     "unknown": 0.002
+    },
+    "value": "mean"
+   }
+  },
+  "1": {
+   "(no name, column 1)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.031,
+     "mean": 0.873,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.009,
+     "range": 0.002,
+     "min": 0.005,
+     "max": 0.001,
+     "median": 0.003,
+     "count": 0.004,
+     "mode": 0.005,
+     "single observation": 0.035,
+     "unknown": 0.004
+    },
+    "value": "mean"
+   },
+   "(no name, column 2)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.016,
+     "mean": 0.867,
+     "mean ± SD": 0.054,
+     "mean ± SE": 0.018,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.013,
+     "median": 0.002,
+     "count": 0.011,
+     "mode": 0.001,
+     "single observation": 0.013,
+     "unknown": 0.002
+    },
+    "value": "mean"
+   },
+   "(no name, column 3)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.013,
+     "mean": 0.87,
+     "mean ± SD": 0.039,
+     "mean ± SE": 0.056,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.004,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.01,
+     "unknown": 0.002
+    },
+    "value": "mean"
+   },
+   "(no name, column 4)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.019,
+     "mean": 0.875,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.008,
+     "range": 0.003,
+     "min": 0.013,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.049,
+     "unknown": 0.002
+    },
+    "value": "mean"
+   },
+   "(no name, column 5)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.899,
+     "mean ± SD": 0.06,
+     "mean ± SE": 0.008,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.004,
+     "median": 0.002,
+     "count": 0.002,
+     "mode": 0.001,
+     "single observation": 0.011,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "(no name, column 6)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.024,
+     "mean": 0.605,
+     "mean ± SD": 0.256,
+     "mean ± SE": 0.02,
+     "range": 0.003,
+     "min": 0.002,
+     "max": 0.067,
+     "median": 0.002,
+     "count": 0.008,
+     "mode": 0.001,
+     "single observation": 0.012,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.193,
+       "b": 0.807
+      }
+     },
+     {
+      "a": "o6",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.538,
+       "b": 0.462
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 7)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.01,
+     "mean": 0.784,
+     "mean ± SD": 0.137,
+     "mean ± SE": 0.016,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.029,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.002,
+     "single observation": 0.014,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.284,
+       "b": 0.716
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "3": {
+   "Criteria^a": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.015,
+     "mean": 0.822,
+     "mean ± SD": 0.031,
+     "mean ± SE": 0.013,
+     "range": 0.012,
+     "min": 0.042,
+     "max": 0.036,
+     "median": 0.003,
+     "count": 0.002,
+     "mode": 0.008,
+     "single observation": 0.004,
+     "unknown": 0.011
+    },
+    "value": "mean"
+   }
+  },
+  "4": {
+   "MacronutrientContent(%)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.969,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.002,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "LarvalDensity(larvae/60 g of diet)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.877,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.11,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   },
+   "Number of pupating larvae": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.991,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count"
+   },
+   "Proportion of survival larva-pupa": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.975,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.005,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "Larval development time(d)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.973,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.003,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.002,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   },
+   "PupalWeight(mg)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.017,
+     "mean": 0.967,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.004,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   },
+   "Proportion of adult emergence": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.959,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.01,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "Proportion of survival larva-adult": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.985,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.083,
+     "female": 0.004,
+     "male": 0.006,
+     "unknown": 0.003,
+     "not": 0.904
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.004,
+     "male alate": 0.004,
+     "worker": 0.019,
+     "minor worker": 0.004,
+     "major worker": 0.005,
+     "soldier": 0.0,
+     "not": 0.965
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.006,
+     "LivingSpecimen": 0.587,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.298,
+     "MaterialCitation": 0.008,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.097
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o4",
+      "choice": "a",
+      "probs": {
+       "a": 0.51,
+       "b": 0.49
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.019,
+     "larva": 0.016,
+     "mature larva": 0.01,
+     "nymph": 0.005,
+     "caterpillar": 0.003,
+     "pupa": 0.002,
+     "egg": 0.001,
+     "instar": 0.024,
+     "all": 0.006,
+     "unknown": 0.045,
+     "not": 0.871
+    },
+    "value": null
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.365,
+     "female": 0.035,
+     "male": 0.038,
+     "unknown": 0.04,
+     "not": 0.522
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.876,
+       "b": 0.124
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.063,
+       "b": 0.937
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.234,
+      "not": 0.766
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.006,
+     "male alate": 0.012,
+     "worker": 0.017,
+     "minor worker": 0.004,
+     "major worker": 0.002,
+     "soldier": 0.0,
+     "not": 0.958
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.953,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.039
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "larva",
+    "probs": {
+     "adult": 0.044,
+     "larva": 0.403,
+     "mature larva": 0.113,
+     "nymph": 0.007,
+     "caterpillar": 0.082,
+     "pupa": 0.289,
+     "egg": 0.002,
+     "instar": 0.013,
+     "all": 0.007,
+     "unknown": 0.026,
+     "not": 0.014
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.538,
+       "b": 0.462
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.281,
+     "female": 0.017,
+     "male": 0.003,
+     "unknown": 0.003,
+     "not": 0.696
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.873,
+       "b": 0.127
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.03,
+       "b": 0.97
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.285,
+      "not": 0.715
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.004,
+     "male alate": 0.001,
+     "worker": 0.004,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.99
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.97,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.025
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "larva",
+    "probs": {
+     "adult": 0.014,
+     "larva": 0.693,
+     "mature larva": 0.049,
+     "nymph": 0.003,
+     "caterpillar": 0.056,
+     "pupa": 0.141,
+     "egg": 0.001,
+     "instar": 0.008,
+     "all": 0.033,
+     "unknown": 0.0,
+     "not": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.887,
+       "b": 0.113
+      }
+     },
+     {
+      "a": "o4",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.026,
+       "b": 0.974
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.976,
+      "not": 0.024
+     }
+    },
+    "value": "larva"
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.385,
+     "female": 0.008,
+     "male": 0.005,
+     "unknown": 0.023,
+     "not": 0.578
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.951,
+       "b": 0.049
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.021,
+       "b": 0.979
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.25,
+      "not": 0.75
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.032,
+     "worker": 0.02,
+     "minor worker": 0.002,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.941
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.956,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.025,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.015
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "pupa",
+    "probs": {
+     "adult": 0.009,
+     "larva": 0.216,
+     "mature larva": 0.088,
+     "nymph": 0.004,
+     "caterpillar": 0.084,
+     "pupa": 0.578,
+     "egg": 0.001,
+     "instar": 0.006,
+     "all": 0.016,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.8,
+       "b": 0.2
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.052,
+       "b": 0.948
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.958,
+      "not": 0.042
+     }
+    },
+    "value": "pupa"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "LivingSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "sex": {
+   "value": "female",
+   "round": "introduction",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "range",
+   "round": "introduction",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.995,
+   "compiled": 0.005
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "not",
+    "probs": {
+     "both": 0.138,
+     "female": 0.004,
+     "male": 0.002,
+     "unknown": 0.003,
+     "not": 0.854
+    },
+    "quote": "Adult flies were kept in 60 cm long × 30 cm tall × 30 cm wide Plexiglass cages at a density of 0.414 flies per cm 2 and provided ad libitum access to food (3:1 mixture of sugar:hydrolysed protein) and water.",
+    "value": null
+   },
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.999,
+     "male": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "Anastrepha ludens females lay eggs in clutches (1–45 eggs per clutch) and tend to oviposit in mature-green fruit with relatively low nutritional content (Aluja et al., 2019).",
+    "value": "female"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.994,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "We experimentally examined how multiple immature and adult traits of the polyphagous tephritid fruit fly, Anastrepha ludens, vary as a function of the quality of its larval diet (protein + carbohydrate [P + C] content of 8.0%–12.6% w/w, and protein-to-carbohydrate [P/C] ratio of 1.8–0.11) across extreme levels of conspecific larval densities (60–600 larvae/60 g of diet).",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.0,
+     "LivingSpecimen": 0.999,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "Anastrepha ludens were obtained from a laboratory colony maintained as described in Aluja et al. (2009).",
+    "value": "LivingSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "all",
+    "probs": {
+     "adult": 0.136,
+     "larva": 0.014,
+     "mature larva": 0.029,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.82,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "We experimentally examined how multiple immature and adult traits of the polyphagous tephritid fruit fly, Anastrepha ludens, vary as a function of the quality of its larval diet (protein + carbohydrate [P + C] content of 8.0%–12.6% w/w, and protein-to-carbohydrate [P/C] ratio of 1.8–0.11) across extreme levels of conspecific larval densities (60–600 larvae/60 g of diet).",
+    "value": "all"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.999,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Adult flies were kept in 60 cm long × 30 cm tall × 30 cm wide Plexiglass cages at a density of 0.414 flies per cm 2 and provided ad libitum access to food (3:1 mixture of sugar:hydrolysed protein) and water.",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.711,
+     "larva": 0.005,
+     "mature larva": 0.002,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.036,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.002,
+     "not": 0.241
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.752,
+       "b": 0.248
+      }
+     }
+    ],
+    "quote": "Anastrepha ludens females lay eggs in clutches (1–45 eggs per clutch) and tend to oviposit in mature-green fruit with relatively low nutritional content (Aluja et al., 2019).",
+    "value": null
+   },
+   {
+    "choice": "larva",
+    "probs": {
+     "adult": 0.001,
+     "larva": 0.986,
+     "mature larva": 0.004,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.007
+    },
+    "quote": "larval feeding substrate",
+    "value": "larva"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.195,
+     "mean ± SD": 0.037,
+     "mean ± SE": 0.018,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.007,
+     "not": 0.734
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.662,
+       "b": 0.338
+      }
+     }
+    ],
+    "quote": "Overall, we found positive effects on survival of immature and adult stages, the duration of the larval stage, pupal weight and adult emergence of flies, as dietary P + C content increased, followed by negative effects when the diet had extremely high carbohydrate-biased macronutrient content.",
+    "value": null
+   },
+   {
+    "choice": "range",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.998,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "the number of larvae per fruit ranges from one to three (Emilio Acosta, pers. comm.; Aluja et al., 2000a; Plummer et al., 1941).",
+    "value": "range"
+   }
+  ]
+ }
+}

@@ -1,0 +1,772 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "3": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "3": {}
+ },
+ "statistic": {
+  "0": {
+   "Max. lifespan": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.996,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "max"
+   },
+   "Mean lifespan": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.976,
+     "mean ± SD": 0.01,
+     "mean ± SE": 0.006,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.002
+    },
+    "value": "mean"
+   },
+   "Queen number": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.028,
+     "mode": 0.968,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Colony founding": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.015,
+     "mode": 0.964,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   }
+  },
+  "1": {
+   "Max. lifespan": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.996,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "max"
+   },
+   "Mean lifespan": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.023,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.964,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Queen number": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.003,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.003,
+     "median": 0.001,
+     "count": 0.894,
+     "mode": 0.093,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "count"
+   },
+   "Colony founding": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.022,
+     "mode": 0.949,
+     "single observation": 0.004,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   }
+  },
+  "2": {
+   "Max. lifespan": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.994,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "max"
+   },
+   "Mean lifespan": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.015,
+     "mean": 0.644,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.005,
+     "range": 0.326,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o4",
+      "choice": "a",
+      "probs": {
+       "a": 0.94,
+       "b": 0.06
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.032,
+       "b": 0.968
+      }
+     }
+    ],
+    "value": "mean"
+   },
+   "Queen number": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.011,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.003,
+     "median": 0.0,
+     "count": 0.964,
+     "mode": 0.011,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "count"
+   },
+   "Colony founding": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.024,
+     "mean": 0.01,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.007,
+     "range": 0.004,
+     "min": 0.004,
+     "max": 0.004,
+     "median": 0.001,
+     "count": 0.066,
+     "mode": 0.821,
+     "single observation": 0.05,
+     "unknown": 0.005
+    },
+    "value": "mode"
+   }
+  },
+  "3": {
+   "Max. lifespan": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.996,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "max"
+   },
+   "Mean lifespan": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.988,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.006,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "Comments": {
+    "choice": "unknown",
+    "probs": {
+     "individual": 0.058,
+     "mean": 0.019,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.002,
+     "range": 0.006,
+     "min": 0.002,
+     "max": 0.005,
+     "median": 0.002,
+     "count": 0.044,
+     "mode": 0.243,
+     "single observation": 0.038,
+     "unknown": 0.577
+    },
+    "duels": [
+     {
+      "a": "o11",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.983,
+       "b": 0.017
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.588,
+       "b": 0.412
+      }
+     }
+    ],
+    "value": null
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.06,
+     "female": 0.857,
+     "male": 0.005,
+     "unknown": 0.002,
+     "not": 0.077
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.99,
+     "male alate": 0.0,
+     "worker": 0.002,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.007
+    },
+    "value": "queen"
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.885,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.088,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.022
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.943,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.002,
+     "not": 0.048
+    },
+    "value": "adult"
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.04,
+     "female": 0.889,
+     "male": 0.016,
+     "unknown": 0.004,
+     "not": 0.051
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.981,
+     "male alate": 0.001,
+     "worker": 0.006,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.012
+    },
+    "value": "queen"
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.923,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.058,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.015
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.93,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.001,
+     "not": 0.062
+    },
+    "value": "adult"
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.029,
+     "female": 0.892,
+     "male": 0.016,
+     "unknown": 0.007,
+     "not": 0.056
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.984,
+     "male alate": 0.0,
+     "worker": 0.005,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.001,
+     "not": 0.009
+    },
+    "value": "queen"
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.972,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.013,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.01
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.907,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.002,
+     "not": 0.084
+    },
+    "value": "adult"
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.018,
+     "female": 0.965,
+     "male": 0.002,
+     "unknown": 0.004,
+     "not": 0.01
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.994,
+     "male alate": 0.0,
+     "worker": 0.0,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.004
+    },
+    "value": "queen"
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.843,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.121,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.031
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.929,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.029,
+     "not": 0.036
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "MaterialCitation",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "origin"
+   }
+  },
+  "caste": {
+   "value": "queen",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "range",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "compiled",
+  "probs": {
+   "own": 0.01,
+   "compiled": 0.99
+  },
+  "value": "compiled"
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [
+   {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.998,
+     "male alate": 0.0,
+     "worker": 0.0,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.001
+    },
+    "quote": "The most striking pattern emerging from these Tables is the very long lifespan of queens, with values higher than 20 years in some species.",
+    "value": "queen"
+   },
+   {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.999,
+     "male alate": 0.0,
+     "worker": 0.0,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.001
+    },
+    "quote": "An inspection of Tables 1 and 2 reveals that most data come from queens reared in the laboratory, typically with only few colonies studied.",
+    "value": "queen"
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "queen": 0.014,
+     "male alate": 0.002,
+     "worker": 0.117,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.866
+    },
+    "quote": "There are no morphological castes in this species.",
+    "value": null
+   },
+   {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.996,
+     "male alate": 0.0,
+     "worker": 0.0,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.004
+    },
+    "quote": "The queen died when she was between 7–17 years old.",
+    "value": "queen"
+   }
+  ],
+  "basisOfRecord": [],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.946,
+     "larva": 0.003,
+     "mature larva": 0.005,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.002,
+     "egg": 0.002,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.002,
+     "not": 0.035
+    },
+    "quote": "An inspection of Tables 1 and 2 reveals that most data come from queens reared in the laboratory, typically with only few colonies studied.",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.033,
+     "mean": 0.306,
+     "mean ± SD": 0.115,
+     "mean ± SE": 0.035,
+     "range": 0.003,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.504
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.5,
+       "b": 0.5
+      }
+     }
+    ],
+    "quote": "An inspection of Tables 1 and 2 reveals that most data come from queens reared in the laboratory, typically with only few colonies studied.",
+    "value": null
+   },
+   {
+    "choice": "range",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.993,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.003
+    },
+    "quote": "The queen died when she was between 7–17 years old.",
+    "value": "range"
+   },
+   {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.706,
+     "mean": 0.008,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.003,
+     "max": 0.102,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.001,
+     "single observation": 0.138,
+     "unknown": 0.001,
+     "not": 0.034
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.53,
+       "b": 0.47
+      }
+     }
+    ],
+    "quote": "The male lived more than 17 years.",
+    "value": null
+   }
+  ]
+ }
+}

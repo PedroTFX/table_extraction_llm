@@ -1,0 +1,186 @@
+{
+ "subject": {
+  "how": "gate one, its tables named one",
+  "name": "Ants"
+ },
+ "tables": {
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "trait",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.042,
+       "b": 0.958
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.012,
+       "b": 0.988
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.001,
+       "b": 0.999
+      }
+     },
+     {
+      "a": "definition",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.044,
+       "b": 0.956
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Trait": {
+     "choice": "name",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "test",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "name",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Justification": {
+     "choice": null,
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.928,
+        "b": 0.072
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.041,
+        "b": 0.959
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.033,
+        "b": 0.967
+       }
+      },
+      {
+       "a": "test",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.05,
+        "b": 0.95
+       }
+      },
+      {
+       "a": "name",
+       "b": "label",
+       "choice": "b",
+       "probs": {
+        "a": 0.385,
+        "b": 0.615
+       }
+      }
+     ]
+    },
+    "References": {
+     "choice": null,
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.467,
+        "b": 0.533
+       }
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.985,
+     "own": 0.015
+    }
+   }
+  }
+ },
+ "endings": 0
+}

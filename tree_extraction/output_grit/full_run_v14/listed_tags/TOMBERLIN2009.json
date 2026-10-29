@@ -1,0 +1,607 @@
+{
+ "cells": {
+  "0": {
+   "Sex": {
+    "tag": "sex",
+    "values": {
+     "Female": {
+      "choice": "female",
+      "probs": {
+       "both": 0.001,
+       "female": 0.998,
+       "male": 0.001,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "female"
+     },
+     "Male": {
+      "choice": "male",
+      "probs": {
+       "both": 0.0,
+       "female": 0.0,
+       "male": 0.999,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "male"
+     },
+     "Combined^b": {
+      "choice": "both",
+      "probs": {
+       "both": 0.989,
+       "female": 0.0,
+       "male": 0.0,
+       "unknown": 0.0,
+       "not": 0.011
+      },
+      "value": "both"
+     }
+    }
+   }
+  }
+ },
+ "labels": {
+  "0": {}
+ },
+ "statistic": {
+  "0": {
+   "Larval development^a(d)": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.998,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SE"
+   },
+   "Prepupal weight (g)": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.999,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SE"
+   },
+   "Pupal development (d)": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.999,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SE"
+   },
+   "Adult weight (g)": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.999,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SE"
+   },
+   "Adult longevity (d)": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.999,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SE"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.977,
+     "female": 0.018,
+     "male": 0.001,
+     "unknown": 0.001,
+     "not": 0.003
+    },
+    "value": "both"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.004,
+     "worker": 0.002,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.006,
+     "not": 0.984
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.981,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.014,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "all",
+    "probs": {
+     "adult": 0.13,
+     "larva": 0.022,
+     "mature larva": 0.038,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.806,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "value": "all"
+   }
+  }
+ },
+ "text": {
+  "sex": {
+   "value": "both",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "LivingSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.021,
+     "LivingSpecimen": 0.94,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "mixed": 0.038
+    },
+    "by": "clash",
+    "values": [
+     "LivingSpecimen",
+     "PreservedSpecimen"
+    ]
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.999,
+   "compiled": 0.001
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.451,
+     "female": 0.501,
+     "male": 0.01,
+     "unknown": 0.004,
+     "not": 0.034
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.556,
+       "b": 0.444
+      }
+     }
+    ],
+    "quote": "At 27 and 30°C, females weighed an average of 17–19% more than males but required an average of 0.6 – 0.8 d (3.0 – 4.3%) longer to complete larval development.",
+    "value": null
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.981,
+     "female": 0.01,
+     "male": 0.002,
+     "unknown": 0.001,
+     "not": 0.006
+    },
+    "quote": "At both temperatures, adult females lived an average of -3.5 d less than adult males.",
+    "value": "both"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.931,
+     "female": 0.001,
+     "male": 0.001,
+     "unknown": 0.01,
+     "not": 0.057
+    },
+    "quote": "sex was determined at adult emergence.",
+    "value": "both"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.996,
+     "female": 0.0,
+     "male": 0.0,
+     "unknown": 0.0,
+     "not": 0.003
+    },
+    "quote": "The sex and live weight of each adult were recorded on the day of emergence.",
+    "value": "both"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.0,
+     "LivingSpecimen": 0.998,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "The black soldier ²y, Hermetia illucens L., was reared on a grain-based diet at 27, 30, and 36°C.",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.99,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "Voucher specimens (larvae and adults) from each replicate were deposited in the Texas A&M University Insect Collection, College Station, TX.",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "larva",
+    "probs": {
+     "adult": 0.001,
+     "larva": 0.963,
+     "mature larva": 0.023,
+     "nymph": 0.0,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.011,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Survival of 4- to 6-d-old larvae to adults averaged 74 –97% at 27 and 30°C but was only 0.1% at 36°.",
+    "value": "larva"
+   },
+   {
+    "choice": "pupa",
+    "probs": {
+     "adult": 0.006,
+     "larva": 0.131,
+     "mature larva": 0.046,
+     "nymph": 0.003,
+     "caterpillar": 0.002,
+     "pupa": 0.409,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.391,
+     "unknown": 0.001,
+     "not": 0.01
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.098,
+       "b": 0.902
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.228,
+       "b": 0.772
+      }
+     }
+    ],
+    "quote": "Flies required a mean of -4 d (11%) longer to complete larval and pupal development at 27°C than at 30°C.",
+    "value": null
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.368,
+     "larva": 0.267,
+     "mature larva": 0.34,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.013,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.008
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.492,
+       "b": 0.508
+      }
+     }
+    ],
+    "quote": "At 27 and 30°C, females weighed an average of 17–19% more than males but required an average of 0.6 – 0.8 d (3.0 – 4.3%) longer to complete larval development.",
+    "value": null
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.995,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.003
+    },
+    "quote": "At both temperatures, adult females lived an average of -3.5 d less than adult males.",
+    "value": "adult"
+   },
+   {
+    "choice": "larva",
+    "probs": {
+     "adult": 0.04,
+     "larva": 0.666,
+     "mature larva": 0.274,
+     "nymph": 0.003,
+     "caterpillar": 0.004,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.005,
+     "all": 0.003,
+     "unknown": 0.0,
+     "not": 0.003
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.26,
+       "b": 0.74
+      }
+     }
+    ],
+    "quote": "Larval development time was not a signiÞcant $(P > 0.05)$ predictor of adult weight.",
+    "value": null
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.704,
+     "larva": 0.018,
+     "mature larva": 0.016,
+     "nymph": 0.003,
+     "caterpillar": 0.001,
+     "pupa": 0.256,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.829,
+       "b": 0.171
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.02,
+       "b": 0.98
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.912,
+      "not": 0.088
+     }
+    },
+    "quote": "Both males and females in our study had a higher rate of emergence from prepupae, weighed more, and lived longer than ßies in the study of Tomberlin et al. (2002).",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.968,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.025,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.002
+    },
+    "quote": "Survival of 4- to 6-d-old larvae to adults averaged 74 –97% at 27 and 30°C but was only 0.1% at 36°.",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.989,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.002
+    },
+    "quote": "Flies required a mean of -4 d (11%) longer to complete larval and pupal development at 27°C than at 30°C.",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.985,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.006,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.004
+    },
+    "quote": "At 27 and 30°C, females weighed an average of 17–19% more than males but required an average of 0.6 – 0.8 d (3.0 – 4.3%) longer to complete larval development.",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.99,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.004,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.004
+    },
+    "quote": "At both temperatures, adult females lived an average of -3.5 d less than adult males.",
+    "value": "mean"
+   }
+  ]
+ }
+}

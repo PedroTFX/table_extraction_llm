@@ -1,0 +1,932 @@
+{
+ "cells": {
+  "1": {},
+  "2": {},
+  "4": {
+   "Gender": {
+    "tag": "sex",
+    "values": {
+     "female": {
+      "choice": "female",
+      "probs": {
+       "both": 0.001,
+       "female": 0.995,
+       "male": 0.003,
+       "unknown": 0.001,
+       "not": 0.001
+      },
+      "value": "female"
+     },
+     "male": {
+      "choice": "male",
+      "probs": {
+       "both": 0.0,
+       "female": 0.001,
+       "male": 0.997,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "male"
+     },
+     "Female": {
+      "choice": "female",
+      "probs": {
+       "both": 0.001,
+       "female": 0.992,
+       "male": 0.005,
+       "unknown": 0.001,
+       "not": 0.001
+      },
+      "value": "female"
+     }
+    }
+   }
+  }
+ },
+ "labels": {
+  "1": {},
+  "2": {},
+  "4": {}
+ },
+ "statistic": {
+  "1": {
+   "Trait state predictions with p>95% F": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.916,
+     "mode": 0.073,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count"
+   },
+   "Trait state predictions with p>95% M": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.002,
+     "max": 0.004,
+     "median": 0.001,
+     "count": 0.131,
+     "mode": 0.85,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Trait state predictions with p>95% U": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.001,
+     "max": 0.003,
+     "median": 0.001,
+     "count": 0.898,
+     "mode": 0.092,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count"
+   }
+  },
+  "2": {
+   "reference": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.029,
+     "mean": 0.111,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.006,
+     "range": 0.013,
+     "min": 0.002,
+     "max": 0.004,
+     "median": 0.003,
+     "count": 0.054,
+     "mode": 0.491,
+     "single observation": 0.271,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.492,
+       "b": 0.508
+      }
+     }
+    ],
+    "value": null
+   },
+   "Lecty": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.977,
+     "single observation": 0.002,
+     "unknown": 0.007
+    },
+    "value": "mode"
+   },
+   "Parasitism": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.989,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Sociality": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.996,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Nest_location": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.01,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.974,
+     "single observation": 0.002,
+     "unknown": 0.004
+    },
+    "value": "mode"
+   }
+  },
+  "4": {
+   "ITD": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.934,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.002,
+     "single observation": 0.053,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "HW": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.961,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.029,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "HL": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.961,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.032,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
+   "fWL": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.97,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.022,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "BL": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.942,
+     "mean": 0.009,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.002,
+     "single observation": 0.042,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "HLL": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.665,
+     "mean": 0.022,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.005,
+     "single observation": 0.284,
+     "unknown": 0.014
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.959,
+       "b": 0.041
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "barcode": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.953,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.039,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   }
+  }
+ },
+ "captions": {
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.136,
+     "female": 0.009,
+     "male": 0.005,
+     "unknown": 0.014,
+     "not": 0.837
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.004,
+     "worker": 0.014,
+     "minor worker": 0.003,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.974
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.274,
+     "LivingSpecimen": 0.02,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.004,
+     "MaterialCitation": 0.244,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.45
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.226,
+       "b": 0.774
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.455,
+     "larva": 0.004,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.01,
+     "unknown": 0.016,
+     "not": 0.513
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.763,
+       "b": 0.237
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.325,
+     "female": 0.006,
+     "male": 0.01,
+     "unknown": 0.087,
+     "not": 0.572
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.834,
+       "b": 0.166
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.031,
+       "b": 0.969
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.073,
+      "not": 0.927
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.011,
+     "male alate": 0.003,
+     "worker": 0.007,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.977
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.989,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.005
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.098,
+     "larva": 0.007,
+     "mature larva": 0.002,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.005,
+     "unknown": 0.431,
+     "not": 0.454
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.658,
+       "b": 0.342
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.999,
+     "male": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.039,
+     "male alate": 0.001,
+     "worker": 0.375,
+     "minor worker": 0.021,
+     "major worker": 0.01,
+     "soldier": 0.0,
+     "not": 0.553
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.313,
+       "b": 0.687
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.93,
+     "LivingSpecimen": 0.013,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.036,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.02
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "mature larva",
+    "probs": {
+     "adult": 0.078,
+     "larva": 0.221,
+     "mature larva": 0.357,
+     "nymph": 0.023,
+     "caterpillar": 0.14,
+     "pupa": 0.005,
+     "egg": 0.001,
+     "instar": 0.114,
+     "all": 0.002,
+     "unknown": 0.036,
+     "not": 0.023
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.306,
+       "b": 0.694
+      }
+     }
+    ],
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "sex": {
+   "value": "female",
+   "round": "results and discussion",
+   "settle": {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.997,
+     "male": 0.0,
+     "unknown": 0.001,
+     "mixed": 0.002
+    },
+    "by": "clash",
+    "values": [
+     "female",
+     "both"
+    ]
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.638,
+   "compiled": 0.362
+  },
+  "value": null
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.0,
+     "female": 0.999,
+     "male": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Anthophora villosula Female HW",
+    "value": "female"
+   },
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.0,
+     "female": 0.999,
+     "male": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Apis florea Female intertegular distance",
+    "value": "female"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.943,
+     "female": 0.012,
+     "male": 0.002,
+     "unknown": 0.035,
+     "not": 0.008
+    },
+    "quote": "Traits partitioned by F (Female), M (Male) and U (Sex-Unspecified).",
+    "value": "both"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.983,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.01
+    },
+    "quote": "We built a novel dataset of traits and DNA barcodes for wild bees in China.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.998,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "For Phylogenetic Assignment, we additionally conducted a species-level analysis of publically available bee trait data.",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.988,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.007,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.002
+    },
+    "quote": "We used bee specimens and COI sequences from four locations in China (Figure S1); specimens were newly collected and sequenced at three locations, while those of Xishuangbanna were collected and sequenced earlier as described in (Liu et al., 2017).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.983,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.005,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.003,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "To collect a diverse set of bee species, we used blind sweep net and yellow pan traps around flowers (McCravy et al., 2019).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.985,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.012
+    },
+    "quote": "We built one of the first specimen-level insect datasets that comprise both DNA barcodes and traits and use it to assess three proposed approaches to taxon-independent assignment of functional traits to query DNA barcodes (overview in Figure 1).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.993,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "We also collated species-level trait data from the literature and used this to practically estimate levels of state assignment for a wide range of informative traits, given the structural characteristics of each.",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.693,
+     "LivingSpecimen": 0.004,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.188,
+     "MaterialCitation": 0.005,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.103
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o4",
+      "choice": "b",
+      "probs": {
+       "a": 0.248,
+       "b": 0.752
+      }
+     }
+    ],
+    "quote": "Phylogeny includes reference species derived from mined DNA barcodes, and queries which are denoted by red circles at tips.",
+    "value": null
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.397,
+     "LivingSpecimen": 0.008,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.071,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.52
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.724,
+       "b": 0.276
+      }
+     }
+    ],
+    "quote": "TA B L E 1 Phylogenetic prediction for a wide range of traits (including both those newly measured herein and collated from the literature) conducted on a collated set of bee MOTU.",
+    "value": null
+   }
+  ],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.3,
+     "mean": 0.01,
+     "mean ± SD": 0.035,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.65
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.697,
+       "b": 0.303
+      }
+     }
+    ],
+    "quote": "Morphometric traits of bee individuals were measured using either a Motic SMZ-161-BLED stereomicroscope with an eyepiece ruler or a Zeiss Discovery V20 stereomicroscope (Figure S2).",
+    "value": null
+   },
+   {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.159,
+     "mean": 0.253,
+     "mean ± SD": 0.279,
+     "mean ± SE": 0.027,
+     "range": 0.005,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.007,
+     "not": 0.264
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.492,
+       "b": 0.508
+      }
+     }
+    ],
+    "quote": "Body length was measured as the distance between the antennal socket and metasomal apex in lateral view; head width was the widest point between the outer margins of compound eyes in frontal view; tongue length was the distance between the prementum base and glossa tip; hind leg length was the sum of the lengths of coxa, trochanter, femur, tibia and tarsus including the distitarsus; intertegular distance was the distance between the nearest inner edges of the tegulae in dorsal view; for hair length, we used the hairs on the mesonotum; and forewing length was the distance between wing base and anal angle.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.012,
+     "mean": 0.913,
+     "mean ± SD": 0.023,
+     "mean ± SE": 0.008,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.006,
+     "mode": 0.002,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.034
+    },
+    "quote": "To test whether there were complementarity and biases between tools, the family-level taxonomic diversity profiles were firstly compared according to the mean quantity of correct assignments of each family, and visualized in network diagrams using ‘network’ (Butts, 2008).",
+    "value": "mean"
+   }
+  ]
+ }
+}

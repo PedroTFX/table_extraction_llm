@@ -1,0 +1,2033 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "6": {
+   "Stage": {
+    "tag": "lifeStage",
+    "values": {
+     "ADULTS": {
+      "choice": "adult",
+      "probs": {
+       "adult": 0.995,
+       "larva": 0.0,
+       "mature larva": 0.001,
+       "nymph": 0.0,
+       "caterpillar": 0.0,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.001,
+       "unknown": 0.0,
+       "not": 0.001
+      },
+      "value": "adult"
+     },
+     "ALL": {
+      "choice": "all",
+      "probs": {
+       "adult": 0.0,
+       "larva": 0.0,
+       "mature larva": 0.0,
+       "nymph": 0.0,
+       "caterpillar": 0.0,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.998,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "all"
+     },
+     "LARVAE": {
+      "choice": "larva",
+      "probs": {
+       "adult": 0.0,
+       "larva": 0.995,
+       "mature larva": 0.001,
+       "nymph": 0.0,
+       "caterpillar": 0.0,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.002,
+       "all": 0.001,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "larva"
+     },
+     "EGG": {
+      "choice": "egg",
+      "probs": {
+       "adult": 0.0,
+       "larva": 0.0,
+       "mature larva": 0.0,
+       "nymph": 0.0,
+       "caterpillar": 0.0,
+       "pupa": 0.0,
+       "egg": 0.999,
+       "instar": 0.0,
+       "all": 0.0,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "egg"
+     },
+     "Table S3. Codes and abbreviations of traits and categories selected.": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.002,
+       "larva": 0.001,
+       "mature larva": 0.0,
+       "nymph": 0.0,
+       "caterpillar": 0.0,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.007,
+       "unknown": 0.0,
+       "not": 0.99
+      },
+      "value": "not"
+     }
+    }
+   }
+  },
+  "7": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "6": {},
+  "7": {}
+ },
+ "statistic": {
+  "0": {
+   "Category": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.998,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "1": {
+   "X (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Y (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 1.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   }
+  },
+  "2": {
+   "Species": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.819,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.178,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Expanded (RCP 2.6)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 1.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Displaced (RCP 2.6)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Unchanged (RCP 2.6)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Reduced & displaced (RCP 2.6)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Reduced (RCP 8.5)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Unchanged (RCP 8.5)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   }
+  },
+  "6": {
+   "CODE": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.037,
+     "mean": 0.109,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.01,
+     "range": 0.005,
+     "min": 0.004,
+     "max": 0.002,
+     "median": 0.01,
+     "count": 0.019,
+     "mode": 0.787,
+     "single observation": 0.003,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.796,
+       "b": 0.204
+      }
+     }
+    ],
+    "value": null
+   },
+   "CATEGORIES": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.005,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.986,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "CODE #2": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.003,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.986,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "7": {
+   "Suborder": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.011,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.976,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Sp Code": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.994,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Body size BS": {
+    "choice": "min",
+    "probs": {
+     "individual": 0.103,
+     "mean": 0.16,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.005,
+     "range": 0.051,
+     "min": 0.457,
+     "max": 0.018,
+     "median": 0.012,
+     "count": 0.059,
+     "mode": 0.052,
+     "single observation": 0.063,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.618,
+       "b": 0.382
+      }
+     }
+    ],
+    "value": null
+   },
+   "Body size BM": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.054,
+     "mean": 0.837,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.008,
+     "max": 0.005,
+     "median": 0.012,
+     "count": 0.025,
+     "mode": 0.015,
+     "single observation": 0.025,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "Iberian Peninsula Range RU": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.031,
+     "mean": 0.204,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.021,
+     "min": 0.09,
+     "max": 0.035,
+     "median": 0.005,
+     "count": 0.332,
+     "mode": 0.263,
+     "single observation": 0.008,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.452,
+       "b": 0.548
+      }
+     }
+    ],
+    "value": null
+   },
+   "Iberian Peninsula Range RC": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.006,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.005,
+     "min": 0.01,
+     "max": 0.026,
+     "median": 0.002,
+     "count": 0.901,
+     "mode": 0.038,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "count"
+   },
+   "Iberian Peninsula Range RL": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.015,
+     "mean": 0.021,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.003,
+     "range": 0.029,
+     "min": 0.055,
+     "max": 0.103,
+     "median": 0.003,
+     "count": 0.739,
+     "mode": 0.023,
+     "single observation": 0.003,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.859,
+       "b": 0.141
+      }
+     },
+     {
+      "a": "o5",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.077,
+       "b": 0.923
+      }
+     }
+    ],
+    "value": "count"
+   },
+   "Altitudinal distribution AL": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.054,
+     "mean": 0.452,
+     "mean ± SD": 0.042,
+     "mean ± SE": 0.011,
+     "range": 0.109,
+     "min": 0.094,
+     "max": 0.011,
+     "median": 0.1,
+     "count": 0.024,
+     "mode": 0.095,
+     "single observation": 0.006,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o4",
+      "choice": "a",
+      "probs": {
+       "a": 0.608,
+       "b": 0.392
+      }
+     }
+    ],
+    "value": null
+   },
+   "Altitudinal distribution AM": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.043,
+     "mean": 0.368,
+     "mean ± SD": 0.04,
+     "mean ± SE": 0.009,
+     "range": 0.101,
+     "min": 0.041,
+     "max": 0.016,
+     "median": 0.241,
+     "count": 0.015,
+     "mode": 0.119,
+     "single observation": 0.005,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o7",
+      "choice": "b",
+      "probs": {
+       "a": 0.263,
+       "b": 0.737
+      }
+     }
+    ],
+    "value": null
+   },
+   "Altitudinal distribution AH": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.034,
+     "mean": 0.486,
+     "mean ± SD": 0.029,
+     "mean ± SE": 0.01,
+     "range": 0.102,
+     "min": 0.034,
+     "max": 0.012,
+     "median": 0.178,
+     "count": 0.014,
+     "mode": 0.095,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o7",
+      "choice": "b",
+      "probs": {
+       "a": 0.388,
+       "b": 0.612
+      }
+     }
+    ],
+    "value": null
+   },
+   "Habitat HL": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.035,
+     "mean": 0.086,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.004,
+     "range": 0.004,
+     "min": 0.008,
+     "max": 0.003,
+     "median": 0.009,
+     "count": 0.032,
+     "mode": 0.81,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "value": "mode"
+   },
+   "Habitat Hpd": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.037,
+     "mean": 0.101,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.005,
+     "range": 0.008,
+     "min": 0.011,
+     "max": 0.005,
+     "median": 0.018,
+     "count": 0.028,
+     "mode": 0.769,
+     "single observation": 0.005,
+     "unknown": 0.005
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.807,
+       "b": 0.193
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.078,
+       "b": 0.922
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "Habitat Hpl": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.064,
+     "mean": 0.292,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.006,
+     "range": 0.004,
+     "min": 0.013,
+     "max": 0.006,
+     "median": 0.029,
+     "count": 0.073,
+     "mode": 0.486,
+     "single observation": 0.01,
+     "unknown": 0.003
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.714,
+       "b": 0.286
+      }
+     }
+    ],
+    "value": null
+   },
+   "Habitat HA": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.023,
+     "mean": 0.034,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.002,
+     "range": 0.004,
+     "min": 0.005,
+     "max": 0.002,
+     "median": 0.005,
+     "count": 0.022,
+     "mode": 0.896,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Seasonality ST": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.038,
+     "mean": 0.107,
+     "mean ± SD": 0.019,
+     "mean ± SE": 0.003,
+     "range": 0.007,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.01,
+     "count": 0.024,
+     "mode": 0.783,
+     "single observation": 0.003,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.741,
+       "b": 0.259
+      }
+     }
+    ],
+    "value": null
+   },
+   "Seasonality SP": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.029,
+     "mean": 0.264,
+     "mean ± SD": 0.017,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.006,
+     "count": 0.016,
+     "mode": 0.659,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.716,
+       "b": 0.284
+      }
+     }
+    ],
+    "value": null
+   },
+   "Vegetation VS": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.063,
+     "mean": 0.453,
+     "mean ± SD": 0.053,
+     "mean ± SE": 0.011,
+     "range": 0.021,
+     "min": 0.02,
+     "max": 0.011,
+     "median": 0.079,
+     "count": 0.072,
+     "mode": 0.21,
+     "single observation": 0.003,
+     "unknown": 0.003
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.201,
+       "b": 0.799
+      }
+     }
+    ],
+    "value": null
+   },
+   "Vegetation VHy": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.079,
+     "mean": 0.353,
+     "mean ± SD": 0.033,
+     "mean ± SE": 0.007,
+     "range": 0.024,
+     "min": 0.023,
+     "max": 0.011,
+     "median": 0.065,
+     "count": 0.117,
+     "mode": 0.285,
+     "single observation": 0.003,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.168,
+       "b": 0.832
+      }
+     },
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.222,
+       "b": 0.778
+      }
+     }
+    ],
+    "value": null
+   },
+   "Vegetation VHe": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.036,
+     "mean": 0.577,
+     "mean ± SD": 0.06,
+     "mean ± SE": 0.008,
+     "range": 0.01,
+     "min": 0.008,
+     "max": 0.007,
+     "median": 0.028,
+     "count": 0.032,
+     "mode": 0.232,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.16,
+       "b": 0.84
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.12,
+       "b": 0.88
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "Water Quality WE": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.073,
+     "mean": 0.334,
+     "mean ± SD": 0.052,
+     "mean ± SE": 0.01,
+     "range": 0.013,
+     "min": 0.013,
+     "max": 0.005,
+     "median": 0.016,
+     "count": 0.042,
+     "mode": 0.422,
+     "single observation": 0.017,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.62,
+       "b": 0.38
+      }
+     }
+    ],
+    "value": null
+   },
+   "Flight Season FSW": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.058,
+     "mean": 0.393,
+     "mean ± SD": 0.031,
+     "mean ± SE": 0.014,
+     "range": 0.055,
+     "min": 0.034,
+     "max": 0.013,
+     "median": 0.056,
+     "count": 0.021,
+     "mode": 0.319,
+     "single observation": 0.005,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.369,
+       "b": 0.631
+      }
+     }
+    ],
+    "value": null
+   },
+   "Flight Season FSp": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.044,
+     "mean": 0.523,
+     "mean ± SD": 0.029,
+     "mean ± SE": 0.019,
+     "range": 0.026,
+     "min": 0.036,
+     "max": 0.011,
+     "median": 0.039,
+     "count": 0.032,
+     "mode": 0.224,
+     "single observation": 0.01,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.628,
+       "b": 0.372
+      }
+     }
+    ],
+    "value": null
+   },
+   "Flight Season FSu": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.033,
+     "mean": 0.604,
+     "mean ± SD": 0.044,
+     "mean ± SE": 0.021,
+     "range": 0.035,
+     "min": 0.021,
+     "max": 0.014,
+     "median": 0.05,
+     "count": 0.032,
+     "mode": 0.139,
+     "single observation": 0.003,
+     "unknown": 0.004
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.635,
+       "b": 0.365
+      }
+     }
+    ],
+    "value": null
+   },
+   "Flight Season FSA": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.052,
+     "mean": 0.406,
+     "mean ± SD": 0.034,
+     "mean ± SE": 0.015,
+     "range": 0.029,
+     "min": 0.024,
+     "max": 0.01,
+     "median": 0.065,
+     "count": 0.053,
+     "mode": 0.305,
+     "single observation": 0.004,
+     "unknown": 0.003
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.397,
+       "b": 0.603
+      }
+     }
+    ],
+    "value": null
+   },
+   "Flight behaviour FBP": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.062,
+     "mean": 0.181,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.004,
+     "range": 0.011,
+     "min": 0.01,
+     "max": 0.003,
+     "median": 0.001,
+     "count": 0.021,
+     "mode": 0.67,
+     "single observation": 0.018,
+     "unknown": 0.006
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.806,
+       "b": 0.194
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.095,
+       "b": 0.905
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "Flight behaviour FBF": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.09,
+     "mean": 0.06,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.004,
+     "range": 0.015,
+     "min": 0.013,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.039,
+     "mode": 0.743,
+     "single observation": 0.017,
+     "unknown": 0.006
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.864,
+       "b": 0.136
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.039,
+       "b": 0.961
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "Dispersion behaviour DBM": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.034,
+     "mean": 0.341,
+     "mean ± SD": 0.045,
+     "mean ± SE": 0.013,
+     "range": 0.038,
+     "min": 0.017,
+     "max": 0.008,
+     "median": 0.028,
+     "count": 0.065,
+     "mode": 0.375,
+     "single observation": 0.024,
+     "unknown": 0.013
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.627,
+       "b": 0.373
+      }
+     }
+    ],
+    "value": null
+   },
+   "Dispersion behaviour DBP": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.063,
+     "mean": 0.215,
+     "mean ± SD": 0.081,
+     "mean ± SE": 0.014,
+     "range": 0.044,
+     "min": 0.012,
+     "max": 0.005,
+     "median": 0.008,
+     "count": 0.06,
+     "mode": 0.463,
+     "single observation": 0.018,
+     "unknown": 0.019
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.602,
+       "b": 0.398
+      }
+     }
+    ],
+    "value": null
+   },
+   "Dispersion behaviour DBD": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.042,
+     "mean": 0.434,
+     "mean ± SD": 0.068,
+     "mean ± SE": 0.025,
+     "range": 0.028,
+     "min": 0.017,
+     "max": 0.01,
+     "median": 0.025,
+     "count": 0.071,
+     "mode": 0.157,
+     "single observation": 0.092,
+     "unknown": 0.03
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.266,
+       "b": 0.734
+      }
+     }
+    ],
+    "value": null
+   },
+   "Dispersion behaviour DBE": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.044,
+     "mean": 0.428,
+     "mean ± SD": 0.056,
+     "mean ± SE": 0.019,
+     "range": 0.04,
+     "min": 0.015,
+     "max": 0.01,
+     "median": 0.029,
+     "count": 0.059,
+     "mode": 0.24,
+     "single observation": 0.041,
+     "unknown": 0.02
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.222,
+       "b": 0.778
+      }
+     }
+    ],
+    "value": null
+   },
+   "Voltinism NC0": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.041,
+     "mean": 0.29,
+     "mean ± SD": 0.029,
+     "mean ± SE": 0.009,
+     "range": 0.01,
+     "min": 0.006,
+     "max": 0.005,
+     "median": 0.039,
+     "count": 0.26,
+     "mode": 0.3,
+     "single observation": 0.007,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.64,
+       "b": 0.36
+      }
+     }
+    ],
+    "value": null
+   },
+   "Voltinism NC1": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.034,
+     "mean": 0.442,
+     "mean ± SD": 0.053,
+     "mean ± SE": 0.019,
+     "range": 0.01,
+     "min": 0.004,
+     "max": 0.007,
+     "median": 0.062,
+     "count": 0.137,
+     "mode": 0.218,
+     "single observation": 0.007,
+     "unknown": 0.006
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.362,
+       "b": 0.638
+      }
+     }
+    ],
+    "value": null
+   },
+   "Voltinism NC2": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.035,
+     "mean": 0.348,
+     "mean ± SD": 0.042,
+     "mean ± SE": 0.013,
+     "range": 0.014,
+     "min": 0.006,
+     "max": 0.008,
+     "median": 0.084,
+     "count": 0.153,
+     "mode": 0.286,
+     "single observation": 0.006,
+     "unknown": 0.005
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.29,
+       "b": 0.71
+      }
+     }
+    ],
+    "value": null
+   },
+   "Resistance DRL": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.035,
+     "mean": 0.374,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.008,
+     "range": 0.008,
+     "min": 0.019,
+     "max": 0.046,
+     "median": 0.018,
+     "count": 0.132,
+     "mode": 0.299,
+     "single observation": 0.047,
+     "unknown": 0.003
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.378,
+       "b": 0.622
+      }
+     }
+    ],
+    "value": null
+   },
+   "Oviposition habitat OF": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.066,
+     "mean": 0.175,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.007,
+     "range": 0.005,
+     "min": 0.01,
+     "max": 0.007,
+     "median": 0.021,
+     "count": 0.195,
+     "mode": 0.482,
+     "single observation": 0.015,
+     "unknown": 0.004
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.772,
+       "b": 0.228
+      }
+     }
+    ],
+    "value": null
+   },
+   "Oviposition habitat Osm": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.072,
+     "mean": 0.269,
+     "mean ± SD": 0.039,
+     "mean ± SE": 0.01,
+     "range": 0.004,
+     "min": 0.004,
+     "max": 0.003,
+     "median": 0.008,
+     "count": 0.027,
+     "mode": 0.559,
+     "single observation": 0.003,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.786,
+       "b": 0.214
+      }
+     }
+    ],
+    "value": null
+   },
+   "Oviposition habitat OA": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.089,
+     "mean": 0.157,
+     "mean ± SD": 0.018,
+     "mean ± SE": 0.007,
+     "range": 0.004,
+     "min": 0.006,
+     "max": 0.005,
+     "median": 0.024,
+     "count": 0.166,
+     "mode": 0.516,
+     "single observation": 0.006,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.802,
+       "b": 0.198
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.242,
+       "b": 0.758
+      }
+     }
+    ],
+    "value": null
+   },
+   "Diapause DN": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.027,
+     "mean": 0.395,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.003,
+     "max": 0.003,
+     "median": 0.048,
+     "count": 0.025,
+     "mode": 0.468,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.706,
+       "b": 0.294
+      }
+     }
+    ],
+    "value": null
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.017,
+     "female": 0.003,
+     "male": 0.004,
+     "unknown": 0.004,
+     "not": 0.971
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.004,
+     "worker": 0.009,
+     "minor worker": 0.002,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.98
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.016,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.052,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.008,
+     "Occurrence": 0.577,
+     "Taxon": 0.0,
+     "not": 0.343
+    },
+    "duels": [
+     {
+      "a": "o6",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.958,
+       "b": 0.042
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "b",
+      "probs": {
+       "a": 0.067,
+       "b": 0.933
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.347,
+      "not": 0.653
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.011,
+     "larva": 0.004,
+     "mature larva": 0.001,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.023,
+     "unknown": 0.01,
+     "not": 0.949
+    },
+    "value": null
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.054,
+     "female": 0.002,
+     "male": 0.003,
+     "unknown": 0.004,
+     "not": 0.938
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.006,
+     "male alate": 0.003,
+     "worker": 0.005,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.985
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.013,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.071,
+     "Occurrence": 0.897,
+     "Taxon": 0.0,
+     "not": 0.013
+    },
+    "value": "Occurrence"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.231,
+     "larva": 0.004,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.003,
+     "unknown": 0.014,
+     "not": 0.746
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.727,
+       "b": 0.273
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.021,
+     "female": 0.001,
+     "male": 0.001,
+     "unknown": 0.004,
+     "not": 0.973
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.002,
+     "worker": 0.007,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.989
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.008,
+     "HumanObservation": 0.026,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.288,
+     "Occurrence": 0.21,
+     "Taxon": 0.0,
+     "not": 0.464
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.937,
+       "b": 0.063
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.012,
+       "b": 0.988
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.906,
+      "not": 0.094
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.003,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.034,
+     "unknown": 0.03,
+     "not": 0.93
+    },
+    "value": null
+   }
+  },
+  "6": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.428,
+     "female": 0.028,
+     "male": 0.233,
+     "unknown": 0.01,
+     "not": 0.302
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.313,
+       "b": 0.687
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.092,
+     "male alate": 0.207,
+     "worker": 0.054,
+     "minor worker": 0.004,
+     "major worker": 0.002,
+     "soldier": 0.001,
+     "not": 0.641
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.685,
+       "b": 0.315
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.727,
+     "LivingSpecimen": 0.018,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.247
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.857,
+       "b": 0.143
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.056,
+       "b": 0.944
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.229,
+      "not": 0.771
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.993,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.003,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "value": "adult"
+   }
+  },
+  "7": {
+   "sex": {
+    "choice": "male",
+    "probs": {
+     "both": 0.114,
+     "female": 0.091,
+     "male": 0.738,
+     "unknown": 0.003,
+     "not": 0.055
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.629,
+       "b": 0.371
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.054,
+     "male alate": 0.017,
+     "worker": 0.003,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.924
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.628,
+     "LivingSpecimen": 0.008,
+     "HumanObservation": 0.031,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.078,
+     "Occurrence": 0.071,
+     "Taxon": 0.0,
+     "not": 0.183
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.506,
+       "b": 0.494
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.874,
+     "larva": 0.039,
+     "mature larva": 0.028,
+     "nymph": 0.014,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.005,
+     "not": 0.039
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "Occurrence",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.015,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.057,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.911,
+     "Taxon": 0.0,
+     "mixed": 0.015
+    },
+    "by": "clash",
+    "values": [
+     "Occurrence",
+     "MaterialCitation"
+    ]
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "compiled",
+  "probs": {
+   "own": 0.232,
+   "compiled": 0.768
+  },
+  "value": null
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.399,
+     "LivingSpecimen": 0.003,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.261,
+     "Occurrence": 0.01,
+     "Taxon": 0.0,
+     "not": 0.32
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.266,
+       "b": 0.734
+      }
+     }
+    ],
+    "quote": "We compiled a comprehensive dataset of functional traits of 84 Iberian and Moroccan odonates species and built a phylogenetic tree to determine if dissimilarity of traits and phylogenetic relatedness are relevant to better discriminate species range-shift responses to climate change.",
+    "value": null
+   },
+   {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.039,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.016,
+     "Occurrence": 0.935,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "Occurrence of adults was compiled from six datasets (Figure 1b, see details at ‘Data Availability Statement’): (1) Oxygastra, the Catalan Odonata Study Group; (2) ROLA’s project of the environmental education association ‘El Bosque Animado’; (3) the Arthropod Collection of the University of Oviedo (Torralba-Burrial & Ocharan, 2013); (4) the Valencian Natural History Museum; (5) the 17524598, 2023, 5, Downloaded from https://resjournals.onlinelibrary.wiley.com/doi/10.1111/icad.12647 by Faculdade Medicina De Lisboa, Wiley Online Library on [31/10/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License FUNCTIONAL TRAITS DRIVE RESPONSE TO CLIMATE CHANGE Insect Conservation and Diversity Rntamotogical Society 577 Asociacion de Naturalistas del Sureste (ANSE); and (6) the Moroccan • dataset collected by Mohamed El Haissoufi.",
+    "value": "Occurrence"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.009,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.956,
+     "Occurrence": 0.026,
+     "Taxon": 0.0,
+     "not": 0.006
+    },
+    "quote": "The data used are currently the main contribution of the Iberian data at [gbif.org](http://gbif.org) and at the Atlas of the European dragonflies and damselflies (Boudot & Kalkman, 2015).",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.994,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "These variables were downloaded from [worldclim.org](http://worldclim.org) at 30 arc-second resolution based on monthly averages for the period 1970–2000.",
+    "value": "MaterialCitation"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.999,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Occurrence of adults was compiled from six datasets (Figure 1b, see details at ‘Data Availability Statement’): (1) Oxygastra, the Catalan Odonata Study Group; (2) ROLA’s project of the environmental education association ‘El Bosque Animado’; (3) the Arthropod Collection of the University of Oviedo (Torralba-Burrial & Ocharan, 2013); (4) the Valencian Natural History Museum; (5) the 17524598, 2023, 5, Downloaded from https://resjournals.onlinelibrary.wiley.com/doi/10.1111/icad.12647 by Faculdade Medicina De Lisboa, Wiley Online Library on [31/10/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License FUNCTIONAL TRAITS DRIVE RESPONSE TO CLIMATE CHANGE Insect Conservation and Diversity Rntamotogical Society 577 Asociacion de Naturalistas del Sureste (ANSE); and (6) the Moroccan • dataset collected by Mohamed El Haissoufi.",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": []
+ }
+}

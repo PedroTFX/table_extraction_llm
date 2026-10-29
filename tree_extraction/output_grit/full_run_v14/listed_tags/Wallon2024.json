@@ -1,0 +1,4619 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "3": {},
+  "4": {},
+  "5": {},
+  "6": {},
+  "7": {},
+  "8": {},
+  "9": {},
+  "10": {},
+  "11": {},
+  "12": {},
+  "13": {},
+  "14": {},
+  "15": {},
+  "16": {},
+  "17": {},
+  "18": {},
+  "19": {},
+  "20": {},
+  "21": {},
+  "22": {},
+  "23": {},
+  "24": {},
+  "30": {},
+  "33": {
+   "(no name, column 1)": {
+    "tag": "sex",
+    "values": {
+     "0": {
+      "choice": "not",
+      "probs": {
+       "both": 0.427,
+       "female": 0.077,
+       "male": 0.043,
+       "unknown": 0.001,
+       "not": 0.452
+      },
+      "duels": [
+       {
+        "a": "o0",
+        "b": "o1",
+        "choice": "b",
+        "probs": {
+         "a": 0.171,
+         "b": 0.829
+        }
+       },
+       {
+        "a": "o2",
+        "b": "o1",
+        "choice": "b",
+        "probs": {
+         "a": 0.058,
+         "b": 0.942
+        }
+       }
+      ],
+      "final": {
+       "choice": "not",
+       "probs": {
+        "pick": 0.047,
+        "not": 0.953
+       }
+      },
+      "value": "not"
+     },
+     "1": {
+      "choice": "not",
+      "probs": {
+       "both": 0.007,
+       "female": 0.036,
+       "male": 0.345,
+       "unknown": 0.001,
+       "not": 0.611
+      },
+      "duels": [
+       {
+        "a": "o2",
+        "b": "o1",
+        "choice": "a",
+        "probs": {
+         "a": 0.696,
+         "b": 0.304
+        }
+       }
+      ],
+      "value": null
+     }
+    }
+   },
+   "(no name, column 9)": {
+    "tag": "lifeStage",
+    "values": {
+     "Hdsip": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.038,
+       "larva": 0.054,
+       "mature larva": 0.013,
+       "nymph": 0.019,
+       "caterpillar": 0.002,
+       "pupa": 0.002,
+       "egg": 0.004,
+       "instar": 0.035,
+       "all": 0.003,
+       "unknown": 0.061,
+       "not": 0.77
+      },
+      "duels": [
+       {
+        "a": "o9",
+        "b": "o1",
+        "choice": "a",
+        "probs": {
+         "a": 0.695,
+         "b": 0.305
+        }
+       }
+      ],
+      "value": null
+     },
+     "Ldisp": {
+      "choice": "larva",
+      "probs": {
+       "adult": 0.016,
+       "larva": 0.411,
+       "mature larva": 0.193,
+       "nymph": 0.043,
+       "caterpillar": 0.004,
+       "pupa": 0.002,
+       "egg": 0.002,
+       "instar": 0.055,
+       "all": 0.001,
+       "unknown": 0.006,
+       "not": 0.269
+      },
+      "duels": [
+       {
+        "a": "o1",
+        "b": "o2",
+        "choice": "a",
+        "probs": {
+         "a": 0.523,
+         "b": 0.477
+        }
+       }
+      ],
+      "value": null
+     },
+     "NA": {
+      "choice": "unknown",
+      "probs": {
+       "adult": 0.001,
+       "larva": 0.001,
+       "mature larva": 0.001,
+       "nymph": 0.001,
+       "caterpillar": 0.0,
+       "pupa": 0.0,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.0,
+       "unknown": 0.988,
+       "not": 0.008
+      },
+      "value": "unknown"
+     }
+    }
+   }
+  },
+  "34": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "2": {},
+  "3": {},
+  "4": {},
+  "5": {},
+  "6": {},
+  "7": {},
+  "8": {},
+  "9": {},
+  "10": {},
+  "11": {},
+  "12": {},
+  "13": {},
+  "14": {},
+  "15": {},
+  "16": {},
+  "17": {},
+  "18": {},
+  "19": {},
+  "20": {},
+  "21": {},
+  "22": {},
+  "23": {},
+  "24": {},
+  "30": {},
+  "33": {},
+  "34": {}
+ },
+ "statistic": {
+  "0": {
+   "Data Type": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   }
+  },
+  "1": {
+   "Data Type": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.021,
+     "mean": 0.09,
+     "mean ± SD": 0.034,
+     "mean ± SE": 0.007,
+     "range": 0.019,
+     "min": 0.002,
+     "max": 0.003,
+     "median": 0.004,
+     "count": 0.013,
+     "mode": 0.646,
+     "single observation": 0.058,
+     "unknown": 0.103
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.903,
+       "b": 0.097
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.098,
+       "b": 0.902
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "2": {
+   "Treatment::Control (Q1~Median ~Q3)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.011,
+     "mean": 0.011,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.01,
+     "range": 0.919,
+     "min": 0.007,
+     "max": 0.005,
+     "median": 0.023,
+     "count": 0.002,
+     "mode": 0.003,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "range"
+   },
+   "Treatment::OTC (Q1~Median ~Q3)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.023,
+     "mean": 0.018,
+     "mean ± SD": 0.02,
+     "mean ± SE": 0.012,
+     "range": 0.871,
+     "min": 0.007,
+     "max": 0.007,
+     "median": 0.038,
+     "count": 0.002,
+     "mode": 0.002,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "range"
+   }
+  },
+  "3": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.005,
+     "count": 0.0,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "4": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.022,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.973,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "5": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.024,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.97,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "6": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.39,
+     "mean ± SD": 0.021,
+     "mean ± SE": 0.01,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.566,
+     "single observation": 0.001,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.964,
+       "b": 0.036
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.028,
+       "b": 0.972
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "7": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.119,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.105,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.003,
+     "mode": 0.756,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.975,
+       "b": 0.025
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.004,
+       "b": 0.996
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "8": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.022,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.025,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.948,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "9": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.148,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.104,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.737,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.973,
+       "b": 0.027
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "10": {
+   "Trait": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.645,
+     "mean ± SD": 0.016,
+     "mean ± SE": 0.292,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.03,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o3",
+      "choice": "b",
+      "probs": {
+       "a": 0.452,
+       "b": 0.548
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "11": {
+   "Trait": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.479,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.487,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.022,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o3",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.022,
+       "b": 0.978
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.937,
+       "b": 0.063
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "12": {
+   "Trait": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.491,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.301,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.001,
+     "mode": 0.184,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o3",
+      "choice": "b",
+      "probs": {
+       "a": 0.363,
+       "b": 0.637
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "13": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.011,
+     "mean": 0.324,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.208,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.421,
+     "single observation": 0.003,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.972,
+       "b": 0.028
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.052,
+       "b": 0.948
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "14": {
+   "Trophic Guild": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.009,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.986,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "15": {
+   "Trophic Guild": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.994,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "16": {
+   "Trophic Guild": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.004,
+     "mode": 0.99,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "17": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.045,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.052,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.895,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "18": {
+   "Trait": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.699,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.257,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.026,
+     "single observation": 0.001,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o3",
+      "choice": "b",
+      "probs": {
+       "a": 0.466,
+       "b": 0.534
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "19": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.248,
+     "mean ± SD": 0.042,
+     "mean ± SE": 0.201,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.494,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.857,
+       "b": 0.143
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.056,
+       "b": 0.944
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "20": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.185,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.085,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.713,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.974,
+       "b": 0.026
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "21": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.203,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.051,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.732,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.919,
+       "b": 0.081
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.003,
+       "b": 0.997
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "22": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.22,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.066,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.707,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.979,
+       "b": 0.021
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.003,
+       "b": 0.997
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "23": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.275,
+     "mean ± SD": 0.02,
+     "mean ± SE": 0.122,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.008,
+     "mode": 0.559,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.975,
+       "b": 0.025
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.008,
+       "b": 0.992
+      }
+     }
+    ],
+    "value": "mode"
+   }
+  },
+  "24": {
+   "Class": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.01,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.981,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Family": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.006,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.991,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Stand. body size": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.201,
+     "mean": 0.704,
+     "mean ± SD": 0.023,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.017,
+     "count": 0.001,
+     "mode": 0.008,
+     "single observation": 0.039,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.076,
+       "b": 0.924
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.037,
+       "b": 0.963
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "FoodPI": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.242,
+     "mean": 0.431,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.046,
+     "mode": 0.124,
+     "single observation": 0.138,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.141,
+       "b": 0.859
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.159,
+       "b": 0.841
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "FoodAni": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.608,
+     "mean": 0.104,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.175,
+     "mode": 0.083,
+     "single observation": 0.023,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.749,
+       "b": 0.251
+      }
+     }
+    ],
+    "value": null
+   },
+   "FoodFg": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.562,
+     "mean": 0.066,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.03,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.118,
+     "mode": 0.125,
+     "single observation": 0.085,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.367,
+       "b": 0.633
+      }
+     }
+    ],
+    "value": null
+   },
+   "FoodDet": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.185,
+     "mean": 0.103,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.004,
+     "range": 0.027,
+     "min": 0.003,
+     "max": 0.003,
+     "median": 0.003,
+     "count": 0.254,
+     "mode": 0.152,
+     "single observation": 0.257,
+     "unknown": 0.005
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.284,
+       "b": 0.716
+      }
+     }
+    ],
+    "value": null
+   },
+   "FoodCopro": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.637,
+     "mean": 0.029,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.002,
+     "range": 0.005,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.222,
+     "mode": 0.015,
+     "single observation": 0.085,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.58,
+       "b": 0.42
+      }
+     }
+    ],
+    "value": null
+   },
+   "IngestFood": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.187,
+     "mean": 0.114,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.003,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.027,
+     "mode": 0.544,
+     "single observation": 0.112,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.636,
+       "b": 0.364
+      }
+     }
+    ],
+    "value": null
+   },
+   "ActDay": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.844,
+     "mean": 0.045,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.006,
+     "mode": 0.028,
+     "single observation": 0.069,
+     "unknown": 0.002
+    },
+    "value": "individual"
+   },
+   "ActNig": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.618,
+     "mean": 0.119,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.099,
+     "mode": 0.036,
+     "single observation": 0.115,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.599,
+       "b": 0.401
+      }
+     }
+    ],
+    "value": null
+   },
+   "ActTwi": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.505,
+     "mean": 0.203,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.008,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.004,
+     "count": 0.037,
+     "mode": 0.054,
+     "single observation": 0.177,
+     "unknown": 0.003
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.495,
+       "b": 0.505
+      }
+     }
+    ],
+    "value": null
+   },
+   "Dispersaldisp": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.036,
+     "mean": 0.084,
+     "mean ± SD": 0.017,
+     "mean ± SE": 0.006,
+     "range": 0.014,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.005,
+     "count": 0.008,
+     "mode": 0.574,
+     "single observation": 0.016,
+     "unknown": 0.236
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.762,
+       "b": 0.238
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "30": {
+   "bodysize": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.117,
+     "mean": 0.805,
+     "mean ± SD": 0.058,
+     "mean ± SE": 0.006,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.003,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.006,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "FoodPI": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.087,
+     "mean": 0.401,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.004,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.042,
+     "mode": 0.428,
+     "single observation": 0.028,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.931,
+       "b": 0.069
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.094,
+       "b": 0.906
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "FoodAni": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.076,
+     "mean": 0.12,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.678,
+     "mode": 0.115,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.728,
+       "b": 0.272
+      }
+     }
+    ],
+    "value": null
+   },
+   "FoodFg": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.103,
+     "mean": 0.087,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.131,
+     "mode": 0.663,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.914,
+       "b": 0.086
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.039,
+       "b": 0.961
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "FoodDet": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.045,
+     "mean": 0.262,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.271,
+     "mode": 0.383,
+     "single observation": 0.028,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.861,
+       "b": 0.139
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.076,
+       "b": 0.924
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "FoodCopro": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.343,
+     "mean": 0.091,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.215,
+     "mode": 0.338,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.119,
+       "b": 0.881
+      }
+     },
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.057,
+       "b": 0.943
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "ActDay": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.175,
+     "mean": 0.364,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.003,
+     "mode": 0.443,
+     "single observation": 0.004,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.976,
+       "b": 0.024
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.162,
+       "b": 0.838
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "ActNig": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.602,
+     "mean": 0.092,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.16,
+     "mode": 0.122,
+     "single observation": 0.009,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.349,
+       "b": 0.651
+      }
+     }
+    ],
+    "value": null
+   },
+   "ActTwi": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.144,
+     "mean": 0.51,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.005,
+     "range": 0.014,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.004,
+     "count": 0.017,
+     "mode": 0.285,
+     "single observation": 0.008,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.295,
+       "b": 0.705
+      }
+     }
+    ],
+    "value": null
+   },
+   "Dispersal": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Iridescence": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.074,
+     "mean": 0.03,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.006,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.876,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "value": "mode"
+   },
+   "Color": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.015,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.972,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   }
+  },
+  "33": {
+   "(no name, column 0)": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.436,
+     "mean": 0.032,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.006,
+     "range": 0.001,
+     "min": 0.003,
+     "max": 0.001,
+     "median": 0.005,
+     "count": 0.004,
+     "mode": 0.011,
+     "single observation": 0.49,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.049,
+       "b": 0.951
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.053,
+       "b": 0.947
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "(no name, column 2)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.432,
+     "mean": 0.055,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.005,
+     "range": 0.004,
+     "min": 0.013,
+     "max": 0.003,
+     "median": 0.005,
+     "count": 0.044,
+     "mode": 0.331,
+     "single observation": 0.086,
+     "unknown": 0.016
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.351,
+       "b": 0.649
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 4)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.154,
+     "mean": 0.048,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.007,
+     "range": 0.011,
+     "min": 0.125,
+     "max": 0.006,
+     "median": 0.007,
+     "count": 0.043,
+     "mode": 0.452,
+     "single observation": 0.053,
+     "unknown": 0.09
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.512,
+       "b": 0.488
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 7)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.312,
+     "mean": 0.019,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.029,
+     "mode": 0.607,
+     "single observation": 0.014,
+     "unknown": 0.004
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.507,
+       "b": 0.493
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 8)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.31,
+     "mean": 0.026,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.005,
+     "range": 0.005,
+     "min": 0.069,
+     "max": 0.004,
+     "median": 0.007,
+     "count": 0.232,
+     "mode": 0.293,
+     "single observation": 0.021,
+     "unknown": 0.022
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.353,
+       "b": 0.647
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 10)": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.112,
+     "mean": 0.021,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.005,
+     "range": 0.002,
+     "min": 0.009,
+     "max": 0.003,
+     "median": 0.004,
+     "count": 0.229,
+     "mode": 0.029,
+     "single observation": 0.576,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.103,
+       "b": 0.897
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.295,
+       "b": 0.705
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 11)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.343,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.629,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.647,
+       "b": 0.353
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "34": {
+   "(no name, column 4)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.445,
+     "mean": 0.339,
+     "mean ± SD": 0.024,
+     "mean ± SE": 0.079,
+     "range": 0.001,
+     "min": 0.009,
+     "max": 0.002,
+     "median": 0.026,
+     "count": 0.002,
+     "mode": 0.001,
+     "single observation": 0.071,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.315,
+       "b": 0.685
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 5)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.105,
+     "mean": 0.039,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.006,
+     "max": 0.003,
+     "median": 0.008,
+     "count": 0.81,
+     "mode": 0.009,
+     "single observation": 0.011,
+     "unknown": 0.001
+    },
+    "value": "count"
+   },
+   "(no name, column 6)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.067,
+     "mean": 0.019,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.005,
+     "max": 0.004,
+     "median": 0.004,
+     "count": 0.868,
+     "mode": 0.009,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "value": "count"
+   },
+   "(no name, column 7)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.145,
+     "mean": 0.051,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.006,
+     "range": 0.004,
+     "min": 0.072,
+     "max": 0.017,
+     "median": 0.03,
+     "count": 0.505,
+     "mode": 0.119,
+     "single observation": 0.038,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.818,
+       "b": 0.182
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.206,
+       "b": 0.794
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 8)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.073,
+     "mean": 0.022,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.014,
+     "max": 0.006,
+     "median": 0.006,
+     "count": 0.834,
+     "mode": 0.02,
+     "single observation": 0.012,
+     "unknown": 0.004
+    },
+    "value": "count"
+   },
+   "(no name, column 9)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.166,
+     "mean": 0.032,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.041,
+     "max": 0.008,
+     "median": 0.005,
+     "count": 0.45,
+     "mode": 0.245,
+     "single observation": 0.037,
+     "unknown": 0.006
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.832,
+       "b": 0.168
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.232,
+       "b": 0.768
+      }
+     }
+    ],
+    "value": null
+   },
+   "(no name, column 11)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.19,
+     "mean": 0.079,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.01,
+     "range": 0.007,
+     "min": 0.046,
+     "max": 0.028,
+     "median": 0.013,
+     "count": 0.475,
+     "mode": 0.072,
+     "single observation": 0.06,
+     "unknown": 0.013
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.822,
+       "b": 0.178
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.05,
+       "b": 0.95
+      }
+     }
+    ],
+    "value": "count"
+   },
+   "(no name, column 12)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.093,
+     "mean": 0.033,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.021,
+     "max": 0.02,
+     "median": 0.003,
+     "count": 0.784,
+     "mode": 0.018,
+     "single observation": 0.016,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.903,
+       "b": 0.097
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.018,
+       "b": 0.982
+      }
+     }
+    ],
+    "value": "count"
+   },
+   "(no name, column 13)": {
+    "choice": "unknown",
+    "probs": {
+     "individual": 0.031,
+     "mean": 0.081,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.007,
+     "range": 0.014,
+     "min": 0.013,
+     "max": 0.006,
+     "median": 0.007,
+     "count": 0.035,
+     "mode": 0.252,
+     "single observation": 0.006,
+     "unknown": 0.522
+    },
+    "duels": [
+     {
+      "a": "o11",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.912,
+       "b": 0.088
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o11",
+      "choice": "b",
+      "probs": {
+       "a": 0.111,
+       "b": 0.889
+      }
+     }
+    ],
+    "value": "unknown"
+   },
+   "(no name, column 14)": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.07,
+     "mean": 0.033,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.004,
+     "range": 0.002,
+     "min": 0.011,
+     "max": 0.014,
+     "median": 0.002,
+     "count": 0.825,
+     "mode": 0.019,
+     "single observation": 0.016,
+     "unknown": 0.001
+    },
+    "value": "count"
+   },
+   "(no name, column 15)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.016,
+     "mean": 0.006,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.974,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.04,
+     "female": 0.001,
+     "male": 0.001,
+     "unknown": 0.002,
+     "not": 0.956
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.003,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.996
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.056,
+     "LivingSpecimen": 0.014,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.012,
+     "Occurrence": 0.002,
+     "Taxon": 0.005,
+     "not": 0.906
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.937,
+     "larva": 0.011,
+     "mature larva": 0.015,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.013,
+     "unknown": 0.001,
+     "not": 0.022
+    },
+    "value": "adult"
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.091,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.005,
+     "not": 0.902
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.003,
+     "worker": 0.004,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.991
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.997,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.449,
+     "larva": 0.002,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.003,
+     "unknown": 0.013,
+     "not": 0.531
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.736,
+       "b": 0.264
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.192,
+     "female": 0.001,
+     "male": 0.001,
+     "unknown": 0.002,
+     "not": 0.804
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.0,
+     "worker": 0.009,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.988
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.015,
+     "LivingSpecimen": 0.775,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.007,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.191
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.517,
+       "b": 0.483
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "all",
+    "probs": {
+     "adult": 0.006,
+     "larva": 0.003,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.933,
+     "unknown": 0.001,
+     "not": 0.05
+    },
+    "value": "all"
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.166,
+     "female": 0.002,
+     "male": 0.004,
+     "unknown": 0.006,
+     "not": 0.822
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.006,
+     "worker": 0.027,
+     "minor worker": 0.002,
+     "major worker": 0.001,
+     "soldier": 0.001,
+     "not": 0.96
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.006,
+     "LivingSpecimen": 0.892,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.089
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.183,
+     "larva": 0.03,
+     "mature larva": 0.005,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.011,
+     "unknown": 0.075,
+     "not": 0.692
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.459,
+       "b": 0.541
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.116,
+     "female": 0.001,
+     "male": 0.002,
+     "unknown": 0.002,
+     "not": 0.879
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.002,
+     "worker": 0.016,
+     "minor worker": 0.002,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.975
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.365,
+     "LivingSpecimen": 0.278,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.003,
+     "Taxon": 0.0,
+     "not": 0.342
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.317,
+       "b": 0.683
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.057,
+     "larva": 0.016,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.002,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.049,
+     "unknown": 0.051,
+     "not": 0.819
+    },
+    "value": null
+   }
+  },
+  "5": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.079,
+     "female": 0.004,
+     "male": 0.008,
+     "unknown": 0.004,
+     "not": 0.906
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.011,
+     "worker": 0.019,
+     "minor worker": 0.003,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.96
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.045,
+     "LivingSpecimen": 0.461,
+     "HumanObservation": 0.009,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.479
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.742,
+       "b": 0.258
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.038,
+     "larva": 0.01,
+     "mature larva": 0.001,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.01,
+     "unknown": 0.044,
+     "not": 0.893
+    },
+    "value": null
+   }
+  },
+  "6": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.108,
+     "female": 0.003,
+     "male": 0.006,
+     "unknown": 0.003,
+     "not": 0.88
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.001,
+     "worker": 0.063,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.93
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.039,
+     "LivingSpecimen": 0.639,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.008,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.302
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.87,
+       "b": 0.13
+      }
+     },
+     {
+      "a": "o4",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.033,
+       "b": 0.967
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.494,
+      "not": 0.506
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.019,
+     "larva": 0.011,
+     "mature larva": 0.002,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.117,
+     "unknown": 0.02,
+     "not": 0.828
+    },
+    "value": null
+   }
+  },
+  "7": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.428,
+     "female": 0.004,
+     "male": 0.006,
+     "unknown": 0.002,
+     "not": 0.56
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.97,
+       "b": 0.03
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.025,
+       "b": 0.975
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.464,
+      "not": 0.536
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.005,
+     "worker": 0.04,
+     "minor worker": 0.002,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.95
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.012,
+     "LivingSpecimen": 0.539,
+     "HumanObservation": 0.049,
+     "MachineObservation": 0.005,
+     "MaterialSample": 0.009,
+     "MaterialCitation": 0.024,
+     "Occurrence": 0.01,
+     "Taxon": 0.0,
+     "not": 0.351
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.518,
+       "b": 0.482
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.035,
+     "larva": 0.051,
+     "mature larva": 0.017,
+     "nymph": 0.003,
+     "caterpillar": 0.004,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.004,
+     "all": 0.274,
+     "unknown": 0.021,
+     "not": 0.59
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.81,
+       "b": 0.19
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.318,
+       "b": 0.682
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "8": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.164,
+     "female": 0.005,
+     "male": 0.012,
+     "unknown": 0.003,
+     "not": 0.816
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.004,
+     "worker": 0.054,
+     "minor worker": 0.006,
+     "major worker": 0.002,
+     "soldier": 0.001,
+     "not": 0.928
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.009,
+     "LivingSpecimen": 0.804,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.171
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.026,
+     "larva": 0.015,
+     "mature larva": 0.003,
+     "nymph": 0.003,
+     "caterpillar": 0.001,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.026,
+     "unknown": 0.014,
+     "not": 0.909
+    },
+    "value": null
+   }
+  },
+  "9": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.149,
+     "female": 0.003,
+     "male": 0.009,
+     "unknown": 0.001,
+     "not": 0.838
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.003,
+     "worker": 0.255,
+     "minor worker": 0.008,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.73
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o3",
+      "choice": "b",
+      "probs": {
+       "a": 0.465,
+       "b": 0.535
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.035,
+     "LivingSpecimen": 0.053,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.009,
+     "Taxon": 0.0,
+     "not": 0.889
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.023,
+     "larva": 0.013,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.019,
+     "unknown": 0.013,
+     "not": 0.924
+    },
+    "value": null
+   }
+  },
+  "10": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.262,
+     "female": 0.009,
+     "male": 0.014,
+     "unknown": 0.002,
+     "not": 0.713
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.939,
+       "b": 0.061
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.058,
+       "b": 0.942
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.319,
+      "not": 0.681
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.008,
+     "male alate": 0.002,
+     "worker": 0.368,
+     "minor worker": 0.01,
+     "major worker": 0.003,
+     "soldier": 0.0,
+     "not": 0.608
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.648,
+       "b": 0.352
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.005,
+     "LivingSpecimen": 0.929,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.007,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.05
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.033,
+     "larva": 0.033,
+     "mature larva": 0.007,
+     "nymph": 0.004,
+     "caterpillar": 0.012,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.045,
+     "unknown": 0.017,
+     "not": 0.847
+    },
+    "value": null
+   }
+  },
+  "11": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.261,
+     "female": 0.005,
+     "male": 0.014,
+     "unknown": 0.002,
+     "not": 0.718
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.931,
+       "b": 0.069
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.07,
+       "b": 0.93
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.402,
+      "not": 0.598
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.007,
+     "male alate": 0.002,
+     "worker": 0.128,
+     "minor worker": 0.007,
+     "major worker": 0.003,
+     "soldier": 0.0,
+     "not": 0.853
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.033,
+     "LivingSpecimen": 0.656,
+     "HumanObservation": 0.009,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.009,
+     "MaterialCitation": 0.004,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.284
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.796,
+       "b": 0.204
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.029,
+     "larva": 0.032,
+     "mature larva": 0.008,
+     "nymph": 0.005,
+     "caterpillar": 0.007,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.076,
+     "unknown": 0.016,
+     "not": 0.824
+    },
+    "value": null
+   }
+  },
+  "12": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.239,
+     "female": 0.005,
+     "male": 0.017,
+     "unknown": 0.002,
+     "not": 0.737
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.934,
+       "b": 0.066
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.047,
+       "b": 0.953
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.287,
+      "not": 0.713
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.006,
+     "male alate": 0.01,
+     "worker": 0.015,
+     "minor worker": 0.003,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.966
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.042,
+     "LivingSpecimen": 0.05,
+     "HumanObservation": 0.01,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.003,
+     "Taxon": 0.0,
+     "not": 0.886
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.035,
+     "larva": 0.01,
+     "mature larva": 0.001,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.006,
+     "all": 0.023,
+     "unknown": 0.013,
+     "not": 0.908
+    },
+    "value": null
+   }
+  },
+  "13": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.226,
+     "female": 0.004,
+     "male": 0.011,
+     "unknown": 0.001,
+     "not": 0.759
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.951,
+       "b": 0.049
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.032,
+       "b": 0.968
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.329,
+      "not": 0.671
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.016,
+     "worker": 0.041,
+     "minor worker": 0.003,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.936
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.02,
+     "LivingSpecimen": 0.308,
+     "HumanObservation": 0.023,
+     "MachineObservation": 0.004,
+     "MaterialSample": 0.004,
+     "MaterialCitation": 0.006,
+     "Occurrence": 0.003,
+     "Taxon": 0.0,
+     "not": 0.632
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.763,
+       "b": 0.237
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.052,
+     "larva": 0.032,
+     "mature larva": 0.001,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.03,
+     "unknown": 0.009,
+     "not": 0.874
+    },
+    "value": null
+   }
+  },
+  "14": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.109,
+     "female": 0.001,
+     "male": 0.002,
+     "unknown": 0.002,
+     "not": 0.885
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.002,
+     "worker": 0.01,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.985
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.129,
+     "LivingSpecimen": 0.497,
+     "HumanObservation": 0.015,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.035,
+     "Occurrence": 0.013,
+     "Taxon": 0.0,
+     "not": 0.307
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.225,
+       "b": 0.775
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.328,
+     "larva": 0.005,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.007,
+     "unknown": 0.045,
+     "not": 0.612
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.669,
+       "b": 0.331
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "15": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.119,
+     "female": 0.003,
+     "male": 0.007,
+     "unknown": 0.002,
+     "not": 0.868
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.012,
+     "worker": 0.012,
+     "minor worker": 0.002,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.971
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.03,
+     "LivingSpecimen": 0.344,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.612
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.374,
+       "b": 0.626
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.017,
+     "larva": 0.005,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.002,
+     "all": 0.01,
+     "unknown": 0.016,
+     "not": 0.947
+    },
+    "value": null
+   }
+  },
+  "16": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.092,
+     "female": 0.007,
+     "male": 0.018,
+     "unknown": 0.002,
+     "not": 0.88
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.008,
+     "male alate": 0.007,
+     "worker": 0.012,
+     "minor worker": 0.002,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.971
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.018,
+     "LivingSpecimen": 0.685,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.284
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.645,
+       "b": 0.355
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.078,
+     "larva": 0.009,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.03,
+     "unknown": 0.017,
+     "not": 0.863
+    },
+    "value": null
+   }
+  },
+  "17": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.214,
+     "female": 0.003,
+     "male": 0.004,
+     "unknown": 0.002,
+     "not": 0.777
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.978,
+       "b": 0.022
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.019,
+       "b": 0.981
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.337,
+      "not": 0.663
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.004,
+     "worker": 0.045,
+     "minor worker": 0.003,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.945
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.01,
+     "LivingSpecimen": 0.66,
+     "HumanObservation": 0.04,
+     "MachineObservation": 0.005,
+     "MaterialSample": 0.006,
+     "MaterialCitation": 0.019,
+     "Occurrence": 0.006,
+     "Taxon": 0.0,
+     "not": 0.254
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.355,
+       "b": 0.645
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "all",
+    "probs": {
+     "adult": 0.025,
+     "larva": 0.094,
+     "mature larva": 0.029,
+     "nymph": 0.006,
+     "caterpillar": 0.009,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.012,
+     "all": 0.417,
+     "unknown": 0.013,
+     "not": 0.394
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.776,
+       "b": 0.224
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "18": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.181,
+     "female": 0.005,
+     "male": 0.016,
+     "unknown": 0.002,
+     "not": 0.796
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.93,
+       "b": 0.07
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.044,
+       "b": 0.956
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.188,
+      "not": 0.812
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.005,
+     "worker": 0.024,
+     "minor worker": 0.003,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.962
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.226,
+     "LivingSpecimen": 0.081,
+     "HumanObservation": 0.008,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.678
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.413,
+       "b": 0.587
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.042,
+     "larva": 0.024,
+     "mature larva": 0.004,
+     "nymph": 0.004,
+     "caterpillar": 0.003,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.023,
+     "unknown": 0.053,
+     "not": 0.845
+    },
+    "value": null
+   }
+  },
+  "19": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.148,
+     "female": 0.013,
+     "male": 0.043,
+     "unknown": 0.003,
+     "not": 0.793
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.829,
+       "b": 0.171
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.103,
+       "b": 0.897
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.282,
+      "not": 0.718
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.011,
+     "male alate": 0.003,
+     "worker": 0.083,
+     "minor worker": 0.008,
+     "major worker": 0.003,
+     "soldier": 0.0,
+     "not": 0.892
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.007,
+     "LivingSpecimen": 0.851,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.132
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.017,
+     "larva": 0.015,
+     "mature larva": 0.008,
+     "nymph": 0.004,
+     "caterpillar": 0.002,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.002,
+     "all": 0.012,
+     "unknown": 0.027,
+     "not": 0.911
+    },
+    "value": null
+   }
+  },
+  "20": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.101,
+     "female": 0.008,
+     "male": 0.028,
+     "unknown": 0.003,
+     "not": 0.86
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.006,
+     "male alate": 0.003,
+     "worker": 0.204,
+     "minor worker": 0.01,
+     "major worker": 0.003,
+     "soldier": 0.0,
+     "not": 0.773
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o3",
+      "choice": "b",
+      "probs": {
+       "a": 0.466,
+       "b": 0.534
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.011,
+     "LivingSpecimen": 0.902,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.006,
+     "MaterialSample": 0.006,
+     "MaterialCitation": 0.005,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.062
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.059,
+     "larva": 0.011,
+     "mature larva": 0.006,
+     "nymph": 0.003,
+     "caterpillar": 0.001,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.046,
+     "unknown": 0.034,
+     "not": 0.837
+    },
+    "value": null
+   }
+  },
+  "21": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.141,
+     "female": 0.01,
+     "male": 0.037,
+     "unknown": 0.003,
+     "not": 0.809
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.008,
+     "male alate": 0.002,
+     "worker": 0.085,
+     "minor worker": 0.009,
+     "major worker": 0.003,
+     "soldier": 0.0,
+     "not": 0.893
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.011,
+     "LivingSpecimen": 0.906,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.073
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.039,
+     "larva": 0.023,
+     "mature larva": 0.006,
+     "nymph": 0.005,
+     "caterpillar": 0.004,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.029,
+     "unknown": 0.015,
+     "not": 0.875
+    },
+    "value": null
+   }
+  },
+  "22": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.09,
+     "female": 0.009,
+     "male": 0.021,
+     "unknown": 0.002,
+     "not": 0.877
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.006,
+     "male alate": 0.003,
+     "worker": 0.104,
+     "minor worker": 0.01,
+     "major worker": 0.002,
+     "soldier": 0.0,
+     "not": 0.874
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.078,
+     "LivingSpecimen": 0.074,
+     "HumanObservation": 0.031,
+     "MachineObservation": 0.004,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.018,
+     "Taxon": 0.0,
+     "not": 0.789
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.26,
+       "b": 0.74
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.034,
+     "larva": 0.018,
+     "mature larva": 0.006,
+     "nymph": 0.005,
+     "caterpillar": 0.005,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.023,
+     "unknown": 0.024,
+     "not": 0.882
+    },
+    "value": null
+   }
+  },
+  "23": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.128,
+     "female": 0.01,
+     "male": 0.03,
+     "unknown": 0.003,
+     "not": 0.828
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.005,
+     "worker": 0.011,
+     "minor worker": 0.003,
+     "major worker": 0.002,
+     "soldier": 0.0,
+     "not": 0.976
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.009,
+     "LivingSpecimen": 0.872,
+     "HumanObservation": 0.005,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.007,
+     "MaterialCitation": 0.019,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.084
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.05,
+     "larva": 0.013,
+     "mature larva": 0.002,
+     "nymph": 0.002,
+     "caterpillar": 0.002,
+     "pupa": 0.002,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.04,
+     "unknown": 0.026,
+     "not": 0.863
+    },
+    "value": null
+   }
+  },
+  "24": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.551,
+     "female": 0.066,
+     "male": 0.11,
+     "unknown": 0.027,
+     "not": 0.246
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.796,
+       "b": 0.204
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.0,
+     "worker": 0.003,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.994
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.318,
+     "LivingSpecimen": 0.155,
+     "HumanObservation": 0.053,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.167,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.3
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.284,
+       "b": 0.716
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.877,
+     "larva": 0.003,
+     "mature larva": 0.002,
+     "nymph": 0.003,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.001,
+     "unknown": 0.017,
+     "not": 0.096
+    },
+    "value": "adult"
+   }
+  },
+  "30": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.519,
+     "female": 0.005,
+     "male": 0.037,
+     "unknown": 0.015,
+     "not": 0.423
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.887,
+       "b": 0.113
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.12,
+       "b": 0.88
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.364,
+      "not": 0.636
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.007,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.99
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.826,
+     "LivingSpecimen": 0.011,
+     "HumanObservation": 0.008,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.01,
+     "Occurrence": 0.005,
+     "Taxon": 0.0,
+     "not": 0.139
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.909,
+     "larva": 0.01,
+     "mature larva": 0.003,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.021,
+     "not": 0.055
+    },
+    "value": "adult"
+   }
+  },
+  "33": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.613,
+     "female": 0.029,
+     "male": 0.084,
+     "unknown": 0.036,
+     "not": 0.238
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.618,
+       "b": 0.382
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.017,
+     "male alate": 0.034,
+     "worker": 0.086,
+     "minor worker": 0.036,
+     "major worker": 0.015,
+     "soldier": 0.011,
+     "not": 0.802
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.331,
+     "LivingSpecimen": 0.064,
+     "HumanObservation": 0.017,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.009,
+     "Occurrence": 0.01,
+     "Taxon": 0.001,
+     "not": 0.561
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.614,
+       "b": 0.386
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "unknown",
+    "probs": {
+     "adult": 0.076,
+     "larva": 0.124,
+     "mature larva": 0.098,
+     "nymph": 0.048,
+     "caterpillar": 0.014,
+     "pupa": 0.017,
+     "egg": 0.012,
+     "instar": 0.093,
+     "all": 0.024,
+     "unknown": 0.277,
+     "not": 0.217
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.256,
+       "b": 0.744
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "34": {
+   "sex": {
+    "choice": "male",
+    "probs": {
+     "both": 0.283,
+     "female": 0.074,
+     "male": 0.458,
+     "unknown": 0.042,
+     "not": 0.143
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.553,
+       "b": 0.447
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.007,
+     "male alate": 0.017,
+     "worker": 0.028,
+     "minor worker": 0.005,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.943
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.887,
+     "LivingSpecimen": 0.009,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.094
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.829,
+     "larva": 0.024,
+     "mature larva": 0.006,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.0,
+     "unknown": 0.027,
+     "not": 0.11
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.994,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "mixed": 0.005
+    },
+    "by": "clash",
+    "values": [
+     "HumanObservation",
+     "LivingSpecimen",
+     "PreservedSpecimen"
+    ]
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.994,
+   "compiled": 0.006
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "HumanObservation",
+    "probs": {
+     "PreservedSpecimen": 0.061,
+     "LivingSpecimen": 0.016,
+     "HumanObservation": 0.849,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.04,
+     "Taxon": 0.0,
+     "not": 0.031
+    },
+    "quote": "This in situ study examines the responses of arthropod communities to rising temperatures in intensively managed pastures on the volcanic island of Terceira (Azores, Portugal), employing a functional trait approach.",
+    "value": "HumanObservation"
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.006,
+     "LivingSpecimen": 0.94,
+     "HumanObservation": 0.039,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.012
+    },
+    "quote": "A field experiment was established using Open Top Chambers (OTCs).",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.999,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "The collected specimens were preserved in 96% ethanol.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.99,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.005
+    },
+    "quote": "All collected arthropods were sorted and identified to the species level when feasible, covering target groups such as Arachnida (Araneae, Opiliones, Pseudoscorpiones), Diplopoda, Chilopoda, and most Insecta groups, including Formicidae and Lepidoptera, but excluding Diptera and Hymenoptera.",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.999,
+     "larva": 0.0,
+     "mature larva": 0.001,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Functional traits for each species were determined based on the characteristics of the adult stage.",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.096,
+     "mean": 0.021,
+     "mean ± SD": 0.041,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.004,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.831
+    },
+    "quote": "We gathered data on body size and dispersal ability for each arthropod species studied.",
+    "value": null
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.026,
+     "mean": 0.033,
+     "mean ± SD": 0.058,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.87
+    },
+    "quote": "We also compiled a collection of functional traits related to resource use.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.98,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.009
+    },
+    "quote": "Data from the four traps in each plot were grouped into a single value for analysis.",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.95,
+     "mean ± SD": 0.039,
+     "mean ± SE": 0.005,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.002
+    },
+    "quote": "For each trait, we calculated the community weighted means (CWM) using the “functcomp” function from the FD package [48].",
+    "value": "mean"
+   }
+  ]
+ }
+}

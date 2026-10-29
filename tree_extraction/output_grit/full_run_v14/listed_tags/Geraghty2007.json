@@ -1,0 +1,638 @@
+{
+ "cells": {
+  "0": {},
+  "1": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {}
+ },
+ "statistic": {
+  "0": {
+   "Body size (mm)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.913,
+     "mean": 0.045,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.008,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.02,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   }
+  },
+  "1": {
+   "Latitude maximum": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.998,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "max"
+   },
+   "Latitude minimum": {
+    "choice": "min",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.998,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "min"
+   },
+   "Latitude range": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Elevation maximum": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.999,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "max"
+   },
+   "Elevation minimum": {
+    "choice": "min",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.999,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "min"
+   },
+   "Elevation range": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range"
+   },
+   "Body size (mm)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.074,
+     "mean": 0.91,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   },
+   "Colony size": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.041,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.945,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.412,
+     "female": 0.037,
+     "male": 0.002,
+     "unknown": 0.01,
+     "not": 0.54
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.869,
+       "b": 0.131
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.057,
+       "b": 0.943
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.245,
+      "not": 0.755
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.013,
+     "male alate": 0.001,
+     "worker": 0.641,
+     "minor worker": 0.013,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.331
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.952,
+       "b": 0.048
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.08,
+       "b": 0.92
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.736,
+      "not": 0.264
+     }
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.692,
+     "LivingSpecimen": 0.012,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.032,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.259
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.169,
+       "b": 0.831
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.074,
+       "b": 0.926
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.976,
+      "not": 0.024
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.825,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.014,
+     "not": 0.155
+    },
+    "value": "adult"
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.636,
+     "female": 0.083,
+     "male": 0.005,
+     "unknown": 0.007,
+     "not": 0.269
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.753,
+       "b": 0.247
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.036,
+     "male alate": 0.001,
+     "worker": 0.846,
+     "minor worker": 0.006,
+     "major worker": 0.003,
+     "soldier": 0.0,
+     "not": 0.108
+    },
+    "value": "worker"
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.0,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.998,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.874,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.006,
+     "not": 0.117
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "caste": {
+   "value": "worker",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.86,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.041,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "mixed": 0.097
+    },
+    "by": "clash",
+    "values": [
+     "PreservedSpecimen",
+     "MaterialCitation"
+    ]
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.973,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "mixed": 0.01
+    },
+    "by": "clash",
+    "values": [
+     "mean",
+     "range",
+     "individual"
+    ]
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.958,
+   "compiled": 0.042
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [
+   {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.999,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.0
+    },
+    "quote": "All worker ants were extracted from 16 1-m plots at each of the 22 sites and then identified and enumerated.",
+    "value": "worker"
+   },
+   {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.994,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.005
+    },
+    "quote": "We used the average number of workers as an estimate of colony size.",
+    "value": "worker"
+   }
+  ],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.796,
+     "LivingSpecimen": 0.008,
+     "HumanObservation": 0.058,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.124,
+     "Taxon": 0.0,
+     "not": 0.012
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.927,
+       "b": 0.073
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.3,
+       "b": 0.7
+      }
+     }
+    ],
+    "quote": "We sampled ant assemblages at 22 sites in Great Smoky Mountains National Park (GSMNP), USA in 2004 and 2005 during periods of peak ant activity (June - September).",
+    "value": null
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.997,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "Voucher specimens are stored in N. Sanders's ant collection at the University of Tennessee.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.0,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.998,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "We assessed latitudinal range sizes and positions of species by searching for community-level studies of ant diversity in the eastern US and Canada (DUNN & al. 2007b).",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.005,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.991,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "In addition, we obtained data on latitudinal ranges from the Global Biodiversity Information Facility (www.gbif.org, 2.VII.2007; most of the data were supplied by the California Academy of Sciences and the Ohio State University Collection).",
+    "value": "MaterialCitation"
+   }
+  ],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.99,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.002
+    },
+    "quote": "We used the average number of workers as an estimate of colony size.",
+    "value": "mean"
+   },
+   {
+    "choice": "range",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.996,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "The total ranged from 2 - 8 nests per species.",
+    "value": "range"
+   },
+   {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.975,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.006,
+     "unknown": 0.0,
+     "not": 0.009
+    },
+    "quote": "In the figure, each symbol represents a single species, and the line is the best-fit regression line.",
+    "value": "individual"
+   }
+  ]
+ }
+}

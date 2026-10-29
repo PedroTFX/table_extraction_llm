@@ -1,0 +1,1006 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Acyrthosiphon pisum"
+ },
+ "tables": {
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.989,
+     "own": 0.011
+    }
+   }
+  },
+  "2": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "trait",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.011,
+       "b": 0.989
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.012,
+       "b": 0.988
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     },
+     {
+      "a": "definition",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "structure_clash": {
+    "structure": "summary",
+    "choice": "rows",
+    "probs": {
+     "structure": 0.003,
+     "rows": 0.997
+    }
+   },
+   "cols": {
+    "Trait": {
+     "choice": "name",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.985,
+        "b": 0.015
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "test",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "name",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Coef. land-use": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.009,
+        "b": 0.991
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Coef. arable %": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.004,
+        "b": 0.996
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "Coef. pest control": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Coef. yield": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.016,
+        "b": 0.984
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    }
+   }
+  },
+  "6": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "group",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.001,
+       "b": 0.999
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.994,
+       "b": 0.006
+      }
+     },
+     {
+      "a": "definition",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.001,
+       "b": 0.999
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Country_name": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.066,
+        "b": 0.934
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.011,
+        "b": 0.989
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.902,
+        "b": 0.098
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.035,
+        "b": 0.965
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.964,
+        "b": 0.036
+       }
+      }
+     ]
+    },
+    "Country_ID": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.064,
+        "b": 0.936
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.012,
+        "b": 0.988
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.958,
+        "b": 0.042
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.095,
+        "b": 0.905
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.869,
+        "b": 0.131
+       }
+      }
+     ]
+    },
+    "Farm_ID": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.022,
+        "b": 0.978
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.004,
+        "b": 0.996
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.987,
+        "b": 0.013
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.012,
+        "b": 0.988
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.981,
+        "b": 0.019
+       }
+      }
+     ]
+    },
+    "FD (Rao Quadratic Entropy)": {
+     "choice": null,
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.956,
+        "b": 0.044
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.437,
+        "b": 0.563
+       }
+      }
+     ]
+    },
+    "CWM_Size": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.977,
+        "b": 0.023
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.965,
+        "b": 0.035
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.003,
+        "b": 0.997
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.992,
+        "b": 0.008
+       }
+      }
+     ]
+    },
+    "CWM_Spring": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.906,
+        "b": 0.094
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.984,
+        "b": 0.016
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.003,
+        "b": 0.997
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "CWM_Macropterous": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.982,
+        "b": 0.018
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.973,
+        "b": 0.027
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "CWM_Predator": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.976,
+        "b": 0.024
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.972,
+        "b": 0.028
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "CWM_Vegetation": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.987,
+        "b": 0.013
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.939,
+        "b": 0.061
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.003,
+        "b": 0.997
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    }
+   }
+  },
+  "7": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "sampling",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.982,
+     "own": 0.018
+    }
+   }
+  },
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "trait",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.02,
+       "b": 0.98
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.021,
+       "b": 0.979
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.004,
+       "b": 0.996
+      }
+     },
+     {
+      "a": "definition",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.002,
+       "b": 0.998
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Trait": {
+     "choice": "name",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.981,
+        "b": 0.019
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "test",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "name",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Variable quality": {
+     "choice": null,
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.976,
+        "b": 0.024
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "a",
+       "probs": {
+        "a": 0.564,
+        "b": 0.436
+       }
+      }
+     ]
+    },
+    "Trait value/levels": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.003,
+        "b": 0.997
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "endings": 0
+}

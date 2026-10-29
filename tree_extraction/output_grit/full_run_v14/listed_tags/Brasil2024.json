@@ -1,0 +1,674 @@
+{
+ "cells": {
+  "3": {},
+  "6": {}
+ },
+ "labels": {
+  "3": {},
+  "6": {}
+ },
+ "statistic": {
+  "3": {
+   "Functional traits Diet": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.012,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.979,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Functional traits Nesting": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.99,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Functional traits Sociality": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.99,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Functional traits Voltinism": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.015,
+     "mean": 0.019,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.96,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Functional traits Body size": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.013,
+     "mean": 0.035,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.947,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "6": {
+   "SD": {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.998,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SD"
+   },
+   "SD #2": {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.003,
+     "mean ± SD": 0.984,
+     "mean ± SE": 0.009,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SD"
+   }
+  }
+ },
+ "captions": {
+  "3": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.25,
+     "female": 0.233,
+     "male": 0.007,
+     "unknown": 0.007,
+     "not": 0.503
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.567,
+       "b": 0.433
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.107,
+     "male alate": 0.002,
+     "worker": 0.03,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.859
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.054,
+     "LivingSpecimen": 0.043,
+     "HumanObservation": 0.041,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.088,
+     "Occurrence": 0.014,
+     "Taxon": 0.0,
+     "not": 0.759
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.96,
+       "b": 0.04
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.176,
+       "b": 0.824
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.417,
+      "not": 0.583
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.74,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.009,
+     "not": 0.247
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.948,
+       "b": 0.052
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.025,
+       "b": 0.975
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.549,
+      "not": 0.451
+     }
+    },
+    "value": null
+   }
+  },
+  "6": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.162,
+     "female": 0.02,
+     "male": 0.069,
+     "unknown": 0.007,
+     "not": 0.742
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.609,
+       "b": 0.391
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.01,
+     "male alate": 0.041,
+     "worker": 0.157,
+     "minor worker": 0.006,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.786
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.48,
+       "b": 0.52
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.296,
+     "LivingSpecimen": 0.378,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.32
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.303,
+       "b": 0.697
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.187,
+     "larva": 0.012,
+     "mature larva": 0.019,
+     "nymph": 0.008,
+     "caterpillar": 0.001,
+     "pupa": 0.005,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.13,
+     "unknown": 0.242,
+     "not": 0.395
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.04,
+       "b": 0.96
+      }
+     },
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.187,
+       "b": 0.813
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.196,
+      "not": 0.804
+     }
+    },
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "MaterialCitation",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "origin"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "sex": {
+   "value": "female",
+   "round": "results and discussion",
+   "settle": {
+    "choice": "female",
+    "probs": {
+     "both": 0.008,
+     "female": 0.968,
+     "male": 0.007,
+     "unknown": 0.003,
+     "mixed": 0.014
+    },
+    "by": "clash",
+    "values": [
+     "both",
+     "male",
+     "female"
+    ]
+   }
+  }
+ },
+ "origin": {
+  "choice": "compiled",
+  "probs": {
+   "own": 0.004,
+   "compiled": 0.996
+  },
+  "value": "compiled"
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.77,
+     "female": 0.034,
+     "male": 0.001,
+     "unknown": 0.002,
+     "not": 0.193
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.935,
+       "b": 0.065
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.013,
+       "b": 0.987
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.942,
+      "not": 0.058
+     }
+    },
+    "quote": "We investigate the effect of urbanization on bee demography and morphology as measured by abundance, sex ratio, body size, and foraging efforts.",
+    "value": "both"
+   },
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.007,
+     "female": 0.002,
+     "male": 0.974,
+     "unknown": 0.003,
+     "not": 0.013
+    },
+    "quote": "Only males and workers were collected and included in this study.",
+    "value": "male"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.976,
+     "female": 0.01,
+     "male": 0.001,
+     "unknown": 0.001,
+     "not": 0.012
+    },
+    "quote": "We also recorded the sex for each bee.",
+    "value": "both"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.739,
+     "female": 0.051,
+     "male": 0.002,
+     "unknown": 0.002,
+     "not": 0.206
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.859,
+       "b": 0.141
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.038,
+       "b": 0.962
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.857,
+      "not": 0.143
+     }
+    },
+    "quote": "to investigate if different levels of urbanization (low, medium, and high) affect wild bee demography as measured by abundance and sex ratio;",
+    "value": "both"
+   },
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.0,
+     "female": 0.998,
+     "male": 0.001,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "(a) Female mean body size in low, medium and high urbanization.",
+    "value": "female"
+   },
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.0,
+     "female": 0.0,
+     "male": 0.999,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "(b) Male mean body size in low, medium and high urbanization.",
+    "value": "male"
+   },
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.0,
+     "female": 0.999,
+     "male": 0.001,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "(a) Female mean wing wear in low, medium and high urbanization.",
+    "value": "female"
+   },
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.0,
+     "female": 0.0,
+     "male": 1.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "(b) Male mean wing wear in low, medium and high urbanization.",
+    "value": "male"
+   }
+  ],
+  "caste": [
+   {
+    "choice": "not",
+    "probs": {
+     "queen": 0.025,
+     "male alate": 0.005,
+     "worker": 0.006,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.963
+    },
+    "quote": "Both Bombus species present eusocial castes (queen, worker, and males) with body size differentiation.",
+    "value": null
+   }
+  ],
+  "basisOfRecord": [],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.02,
+     "mean": 0.091,
+     "mean ± SD": 0.275,
+     "mean ± SE": 0.017,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.006,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.588
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.412,
+       "b": 0.588
+      }
+     }
+    ],
+    "quote": "We investigate the effect of urbanization on bee demography and morphology as measured by abundance, sex ratio, body size, and foraging efforts.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.978,
+     "mean ± SD": 0.01,
+     "mean ± SE": 0.006,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.003
+    },
+    "quote": "Agapostemon sericeus Foster (Halictidae), the silky-striped sweat bee, is a small (average body length, x̄ = 9 mm) solitary ground-nester bee, with a single adult bee per nest and a bivoltine phenology, where two generations are produced by year.",
+    "value": "mean"
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.068,
+     "mean": 0.019,
+     "mean ± SD": 0.032,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.002,
+     "not": 0.876
+    },
+    "quote": "Body size was measured according to the distance between each tegulae in millimeters (intertegular distance, ITD, Cane 1987) using a stereo microscope (Nikon SMZ1270).",
+    "value": null
+   }
+  ]
+ }
+}

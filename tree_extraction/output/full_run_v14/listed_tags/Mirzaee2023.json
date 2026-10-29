@@ -1,0 +1,927 @@
+{
+ "cells": {
+  "1": {},
+  "2": {},
+  "4": {}
+ },
+ "labels": {
+  "1": {},
+  "2": {},
+  "4": {}
+ },
+ "statistic": {
+  "1": {
+   "Ootheca": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.906,
+     "mean": 0.002,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.008,
+     "mode": 0.079,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
+   "Width (mm)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.971,
+     "mean": 0.005,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.012,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "Length (mm)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.95,
+     "mean": 0.024,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.014,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "Incubation duration (days)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.153,
+     "mean": 0.596,
+     "mean ± SD": 0.049,
+     "mean ± SE": 0.009,
+     "range": 0.008,
+     "min": 0.005,
+     "max": 0.003,
+     "median": 0.023,
+     "count": 0.007,
+     "mode": 0.005,
+     "single observation": 0.139,
+     "unknown": 0.004
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.021,
+       "b": 0.979
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.117,
+       "b": 0.883
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "n eggs": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.003,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.989,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count"
+   },
+   "n hatched nymphs": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.989,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count"
+   }
+  },
+  "2": {
+   "Description": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.006,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.009,
+     "mode": 0.502,
+     "single observation": 0.004,
+     "unknown": 0.461
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o11",
+      "choice": "b",
+      "probs": {
+       "a": 0.461,
+       "b": 0.539
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "4": {
+   "Category": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.03,
+     "mean": 0.011,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.004,
+     "max": 0.001,
+     "median": 0.012,
+     "count": 0.121,
+     "mode": 0.807,
+     "single observation": 0.006,
+     "unknown": 0.002
+    },
+    "value": "mode"
+   },
+   "Value": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.039,
+     "mean": 0.021,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.004,
+     "count": 0.917,
+     "mode": 0.007,
+     "single observation": 0.004,
+     "unknown": 0.0
+    },
+    "value": "count"
+   }
+  }
+ },
+ "captions": {
+  "1": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.053,
+     "female": 0.81,
+     "male": 0.001,
+     "unknown": 0.009,
+     "not": 0.127
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.012,
+     "male alate": 0.001,
+     "worker": 0.024,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.961
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.038,
+     "LivingSpecimen": 0.756,
+     "HumanObservation": 0.008,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.001,
+     "Taxon": 0.001,
+     "not": 0.19
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.817,
+       "b": 0.183
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.055,
+       "b": 0.945
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.442,
+      "not": 0.558
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "egg",
+    "probs": {
+     "adult": 0.007,
+     "larva": 0.073,
+     "mature larva": 0.02,
+     "nymph": 0.005,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.882,
+     "instar": 0.003,
+     "all": 0.001,
+     "unknown": 0.002,
+     "not": 0.006
+    },
+    "value": "egg"
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.014,
+     "female": 0.002,
+     "male": 0.003,
+     "unknown": 0.003,
+     "not": 0.979
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.005,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.992
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.014,
+     "Occurrence": 0.967,
+     "Taxon": 0.0,
+     "not": 0.01
+    },
+    "value": "Occurrence"
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.032,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.005,
+     "unknown": 0.003,
+     "not": 0.958
+    },
+    "value": null
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.376,
+     "female": 0.009,
+     "male": 0.028,
+     "unknown": 0.034,
+     "not": 0.553
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.82,
+       "b": 0.18
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.103,
+       "b": 0.897
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.28,
+      "not": 0.72
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.007,
+     "male alate": 0.008,
+     "worker": 0.009,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.975
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.093,
+     "LivingSpecimen": 0.016,
+     "HumanObservation": 0.01,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.028,
+     "MaterialCitation": 0.278,
+     "Occurrence": 0.383,
+     "Taxon": 0.036,
+     "not": 0.153
+    },
+    "duels": [
+     {
+      "a": "o6",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.061,
+       "b": 0.939
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.297,
+       "b": 0.703
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.686,
+     "larva": 0.009,
+     "mature larva": 0.004,
+     "nymph": 0.006,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.007,
+     "unknown": 0.014,
+     "not": 0.271
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.915,
+       "b": 0.085
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.043,
+       "b": 0.957
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.136,
+      "not": 0.864
+     }
+    },
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "lifeStage": {
+   "value": "nymph",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "nymph",
+    "probs": {
+     "adult": 0.001,
+     "larva": 0.014,
+     "mature larva": 0.001,
+     "nymph": 0.958,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.002,
+     "instar": 0.012,
+     "all": 0.0,
+     "unknown": 0.0,
+     "mixed": 0.011
+    },
+    "by": "clash",
+    "values": [
+     "egg",
+     "nymph"
+    ]
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.939,
+   "compiled": 0.061
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.997,
+     "male": 0.001,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "Female specimens were collected alive in the field and kept in glass jars (15 × 15 × 10 cm) in order to increase the number of available oothecae.",
+    "value": "female"
+   },
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.0,
+     "female": 0.0,
+     "male": 1.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "We dissected the ultimate segments of the male abdomen under the microscope, separated genitalia from terminalia, and macerated the genitalia in 10% KOH solution for 12 hours.",
+    "value": "male"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.989,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.001,
+     "not": 0.008
+    },
+    "quote": "This mantid is a small, slender species (total body length 15–21 mm) with fully developed wings in both sexes (Fig. 1).",
+    "value": "both"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.947,
+     "female": 0.002,
+     "male": 0.011,
+     "unknown": 0.001,
+     "not": 0.039
+    },
+    "quote": "On a trip to Iran, Zarudny collected one male and one female of this species from Makran in Sistan and Baluchistan Province and deposited them at the Zoological Institute of the Russian Academy of Sciences, Saint Petersburg.",
+    "value": "both"
+   },
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.0,
+     "female": 0.0,
+     "male": 1.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "We examined the male genitalia of the specimens that were collected from various districts of Iran’s provinces (four males from Bandar-e Lengeh 27°13'26\"N, 56°21'10\"E, Hormozgan province; two males from Kangan 27°43'36\"N, 52°12'34\"E, two males from Jam 27°53'01\"N, 52°21'16\"E, Bushehr province; one male from Firuzabad 28°53'20\"N, 52°33'07\"E, Fars province; one male from Chabahar 25°17'40\"N, 60°37'17\"E, Sistan and Balochistan province).",
+    "value": "male"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.994,
+     "female": 0.001,
+     "male": 0.003,
+     "unknown": 0.0,
+     "not": 0.002
+    },
+    "quote": "The oldest record from these areas belong to a male and a female documented in 1901 from Iran",
+    "value": "both"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.015,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.108,
+     "Occurrence": 0.848,
+     "Taxon": 0.0,
+     "not": 0.026
+    },
+    "quote": "Records are compiled from the Sahel zone of North Africa, the Arabian Peninsula, and Iran.",
+    "value": "Occurrence"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.997,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "Nine specimens were collected at night by searching the leaves of Conocarpus trees that were planted in urban parks near the sea (Iran: Bandar Bushehr, Bandar-e Lengeh, Kangan, Chahbahar).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "HumanObservation",
+    "probs": {
+     "PreservedSpecimen": 0.008,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.989,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "Six specimens were observed in paddy fields, urban parks, or in mountains with natural springs during day excursions (Firuzabad, Meymand, Jam, Tonbak) (Figs 2, 8).",
+    "value": "HumanObservation"
+   },
+   {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.034,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.262,
+     "Occurrence": 0.608,
+     "Taxon": 0.0,
+     "not": 0.088
+    },
+    "duels": [
+     {
+      "a": "o6",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.065,
+       "b": 0.935
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.044,
+       "b": 0.956
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.995,
+      "not": 0.005
+     }
+    },
+    "quote": "Distributional data of N. floweri were assembled through fieldwork, museum collections, publications, and online biodiversity databases.",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.999,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "On a trip to Iran, Zarudny collected one male and one female of this species from Makran in Sistan and Baluchistan Province and deposited them at the Zoological Institute of the Russian Academy of Sciences, Saint Petersburg.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.019,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.019,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.658,
+     "Occurrence": 0.184,
+     "Taxon": 0.0,
+     "not": 0.116
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.933,
+       "b": 0.067
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.034,
+       "b": 0.966
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.974,
+      "not": 0.026
+     }
+    },
+    "quote": "Scattered records are reported in the literature, but lack exact coordinates, and based on its known distribution, sampling gaps are suspected, especially within the African range of the species.",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.995,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "In doing so, we analysed newly collected material from Iran, confirming its presence in this country, and explored the intraspecific morphological and genetic diversity among southwestern Asian populations to improve the general knowledge about this species.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.767,
+     "HumanObservation": 0.139,
+     "MachineObservation": 0.004,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.083
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.945,
+       "b": 0.055
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.018,
+       "b": 0.982
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.987,
+      "not": 0.013
+     }
+    },
+    "quote": "During our observations, two adults in their natural habitat, as well as three adults and two juveniles in captivity, preyed on small ants.",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.194,
+     "LivingSpecimen": 0.738,
+     "HumanObservation": 0.013,
+     "MachineObservation": 0.004,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.047
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.849,
+       "b": 0.151
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.031,
+       "b": 0.969
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.928,
+      "not": 0.072
+     }
+    },
+    "quote": "Oothecae one and two were collected from their natural habitat, and three and four were laid in the lab, n = Number.",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.969,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.014,
+     "Taxon": 0.0,
+     "not": 0.013
+    },
+    "quote": "A total of 206 specimens from 164 locations with different coordinates of N. floweri was examined, with distribution records obtained from countries in North Africa (Mauritania, Niger, Chad, Sudan, and Eritrea), Saudi Arabia, Yemen, Oman, the United Arab Emirates, and Iran (Table 1).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.939,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.027,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.029
+    },
+    "quote": "They also provided a list of known specimens from various countries.",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "egg",
+    "probs": {
+     "adult": 0.003,
+     "larva": 0.001,
+     "mature larva": 0.002,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.981,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.011
+    },
+    "quote": "Oothecae were collected searching in the vegetation during both night and day time.",
+    "value": "egg"
+   },
+   {
+    "choice": "nymph",
+    "probs": {
+     "adult": 0.001,
+     "larva": 0.01,
+     "mature larva": 0.001,
+     "nymph": 0.935,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.052,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Newly hatched nymphs were housed in separate glass jars (6 × 6 × 4 cm) aiming to obtain information on their life cycle and the number of instars of the species.",
+    "value": "nymph"
+   }
+  ],
+  "measurementStatistic": []
+ }
+}

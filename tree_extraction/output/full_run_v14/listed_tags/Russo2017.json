@@ -1,0 +1,1126 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "3": {
+   "(no name, column 0)": {
+    "tag": "sex",
+    "values": {
+     "Female": {
+      "choice": "female",
+      "probs": {
+       "both": 0.001,
+       "female": 0.995,
+       "male": 0.001,
+       "unknown": 0.001,
+       "not": 0.002
+      },
+      "value": "female"
+     },
+     "Male": {
+      "choice": "male",
+      "probs": {
+       "both": 0.001,
+       "female": 0.001,
+       "male": 0.996,
+       "unknown": 0.0,
+       "not": 0.001
+      },
+      "value": "male"
+     }
+    }
+   }
+  }
+ },
+ "labels": {
+  "0": {},
+  "1": {
+   "0": {
+    "choice": "female",
+    "probs": {
+     "both": 0.058,
+     "female": 0.602,
+     "male": 0.005,
+     "unknown": 0.002,
+     "not": 0.334
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.075,
+       "b": 0.925
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.036,
+       "b": 0.964
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.083,
+      "not": 0.917
+     }
+    },
+    "tag": "sex",
+    "label": "Female",
+    "value": "not"
+   },
+   "1": {
+    "choice": "not",
+    "probs": {
+     "both": 0.065,
+     "female": 0.005,
+     "male": 0.133,
+     "unknown": 0.003,
+     "not": 0.793
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.05,
+       "b": 0.95
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.029,
+       "b": 0.971
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.038,
+      "not": 0.962
+     }
+    },
+    "tag": "sex",
+    "label": "Male",
+    "value": "not"
+   }
+  },
+  "3": {}
+ },
+ "statistic": {
+  "0": {
+   "Category": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.996,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Proportion of pollination services from wild bees": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.964,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.0,
+     "mode": 0.02,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   }
+  },
+  "1": {
+   "Flower Handling": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.058,
+     "mean": 0.808,
+     "mean ± SD": 0.037,
+     "mean ± SE": 0.033,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.059,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   },
+   "Pollen Purity": {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.0,
+     "mean ± SD": 0.878,
+     "mean ± SE": 0.12,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SD"
+   },
+   "Body Length (mm)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.451,
+     "mean": 0.524,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.015,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.051,
+       "b": 0.949
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.025,
+       "b": 0.975
+      }
+     }
+    ],
+    "value": "individual"
+   }
+  },
+  "3": {
+   "Functional Group": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.985,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Pollen Purity": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.819,
+     "mean": 0.095,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.033,
+     "count": 0.001,
+     "mode": 0.004,
+     "single observation": 0.033,
+     "unknown": 0.002
+    },
+    "value": "individual"
+   },
+   "Pollen Purity #2": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.735,
+     "mean": 0.169,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.006,
+     "range": 0.001,
+     "min": 0.004,
+     "max": 0.003,
+     "median": 0.036,
+     "count": 0.002,
+     "mode": 0.004,
+     "single observation": 0.03,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.663,
+       "b": 0.337
+      }
+     }
+    ],
+    "value": null
+   },
+   "Score": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.73,
+     "mean": 0.096,
+     "mean ± SD": 0.019,
+     "mean ± SE": 0.005,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.12,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o7",
+      "choice": "a",
+      "probs": {
+       "a": 0.828,
+       "b": 0.172
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.02,
+       "b": 0.98
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "Score #2": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.833,
+     "mean": 0.071,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.007,
+     "max": 0.032,
+     "median": 0.024,
+     "count": 0.002,
+     "mode": 0.002,
+     "single observation": 0.016,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "Length (mm)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.941,
+     "mean": 0.018,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.032,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.002,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
+   "Length (mm) #2": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.904,
+     "mean": 0.03,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.002,
+     "max": 0.003,
+     "median": 0.054,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.002,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
+   "(no name, column 13)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.434,
+     "mean": 0.047,
+     "mean ± SD": 0.02,
+     "mean ± SE": 0.004,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.004,
+     "median": 0.032,
+     "count": 0.004,
+     "mode": 0.406,
+     "single observation": 0.036,
+     "unknown": 0.009
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.828,
+       "b": 0.172
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.051,
+       "b": 0.949
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "(no name, column 14)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.627,
+     "mean": 0.051,
+     "mean ± SD": 0.016,
+     "mean ± SE": 0.005,
+     "range": 0.002,
+     "min": 0.003,
+     "max": 0.003,
+     "median": 0.043,
+     "count": 0.005,
+     "mode": 0.174,
+     "single observation": 0.064,
+     "unknown": 0.007
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.844,
+       "b": 0.156
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.086,
+       "b": 0.914
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "ITD": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.918,
+     "mean": 0.018,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.034,
+     "count": 0.001,
+     "mode": 0.005,
+     "single observation": 0.01,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "ITD #2": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.925,
+     "mean": 0.025,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.027,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.007,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.055,
+     "female": 0.013,
+     "male": 0.001,
+     "unknown": 0.005,
+     "not": 0.926
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.002,
+     "worker": 0.171,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.824
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.018,
+     "HumanObservation": 0.024,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.773,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.18
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.978,
+       "b": 0.022
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.958,
+      "not": 0.042
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.83,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.004,
+     "not": 0.162
+    },
+    "value": "adult"
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.154,
+     "female": 0.144,
+     "male": 0.061,
+     "unknown": 0.01,
+     "not": 0.63
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.666,
+       "b": 0.334
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.02,
+     "male alate": 0.001,
+     "worker": 0.148,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.83
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.376,
+     "LivingSpecimen": 0.019,
+     "HumanObservation": 0.008,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.564,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.029
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.907,
+       "b": 0.093
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.033,
+       "b": 0.967
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.981,
+      "not": 0.019
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.972,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.004,
+     "not": 0.02
+    },
+    "value": "adult"
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.995,
+     "male": 0.003,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.026,
+     "male alate": 0.001,
+     "worker": 0.903,
+     "minor worker": 0.002,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.067
+    },
+    "value": "worker"
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.881,
+     "LivingSpecimen": 0.014,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.022,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.075
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.974,
+     "larva": 0.003,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.005,
+     "not": 0.015
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "sex": {
+   "value": "male",
+   "round": "supplementary material",
+   "settle": {
+    "choice": "male",
+    "probs": {
+     "both": 0.0,
+     "female": 0.0,
+     "male": 0.996,
+     "unknown": 0.0,
+     "mixed": 0.003
+    },
+    "by": "clash",
+    "values": [
+     "both",
+     "male"
+    ]
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "supplementary material",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "caste": {
+   "value": "worker",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.984,
+   "compiled": 0.016
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.886,
+     "female": 0.024,
+     "male": 0.058,
+     "unknown": 0.002,
+     "not": 0.03
+    },
+    "quote": "Male bees comprised approximately 12% of the overall bee abundance in the study.",
+    "value": "both"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.837,
+     "female": 0.041,
+     "male": 0.021,
+     "unknown": 0.004,
+     "not": 0.097
+    },
+    "quote": "For most of the species, females outnumber males, but males outnumbered females significantly in *Andrena crataegi*, *A. imitatrix*, and *Xylocopa virginica* (Table S1).",
+    "value": "both"
+   },
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.004,
+     "female": 0.001,
+     "male": 0.993,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "For this reason, we also counted pollen grains on male *A. crataegi* and *X. virginica* (these two species alone comprise 62% of male abundance).",
+    "value": "male"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.984,
+     "female": 0.001,
+     "male": 0.012,
+     "unknown": 0.001,
+     "not": 0.003
+    },
+    "quote": "While carrying less pollen, males of both *Xylocopa virginica* and *Andrena crataegi* had higher average pollen purity than their female counterparts.",
+    "value": "both"
+   }
+  ],
+  "caste": [
+   {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.998,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.0
+    },
+    "quote": "honeybee workers",
+    "value": "worker"
+   }
+  ],
+  "basisOfRecord": [
+   {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.179,
+     "LivingSpecimen": 0.029,
+     "HumanObservation": 0.01,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.05,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.727
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.652,
+       "b": 0.348
+      }
+     }
+    ],
+    "quote": "We use an empirical dataset to identify which of three functional traits (body size, pollen load purity, and flower handling behavior) contribute significantly to seed set.",
+    "value": null
+   },
+   {
+    "choice": "HumanObservation",
+    "probs": {
+     "PreservedSpecimen": 0.027,
+     "LivingSpecimen": 0.07,
+     "HumanObservation": 0.488,
+     "MachineObservation": 0.005,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.114,
+     "Taxon": 0.0,
+     "not": 0.292
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.756,
+       "b": 0.244
+      }
+     }
+    ],
+    "quote": "To quantitatively compare pollination services of wild bees to that of honeybees in NY apple orchards, we calculated the summed contribution to seed set of the entire wild bee community relative to that of the honeybee.",
+    "value": null
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.101,
+     "LivingSpecimen": 0.466,
+     "HumanObservation": 0.242,
+     "MachineObservation": 0.005,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.179
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.28,
+       "b": 0.72
+      }
+     }
+    ],
+    "quote": "Measures of per-visit pollen deposition have been obtained for a small fraction of the bee diversity in apple orchards.",
+    "value": null
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.986,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.005,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.003,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "Bees were net collected in apple orchards during bloom at 28 orchards from 2008 to 2013 (see Russo et al., 2015 for a full description).",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.984,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.014
+    },
+    "quote": "The pollen was washed off of bee specimens onto microscope slides, where we counted at least 300 pollen grains from ten randomly selected individuals of each of 14 bee species.",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.519,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.006,
+     "not": 0.469
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.658,
+       "b": 0.342
+      }
+     }
+    ],
+    "quote": "The length of bees in this study varied between 4 and 22 mm, with an average size of 9.93 mm.",
+    "value": null
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.076,
+     "mean": 0.17,
+     "mean ± SD": 0.233,
+     "mean ± SE": 0.013,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.504
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.246,
+       "b": 0.754
+      }
+     }
+    ],
+    "quote": "We used functional traits as a proxy for per-visit effectiveness and then multiplied these trait values by the abundance of the bees.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.994,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "All functional traits are averaged across bees collected during 15-min transects in 23 apple orchards from 2011 to 2013.",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.963,
+     "mean ± SD": 0.017,
+     "mean ± SE": 0.006,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.006
+    },
+    "quote": "For each orchard, this value is summed for all bee species in a given 15-min transect and then averaged across transects.",
+    "value": "mean"
+   },
+   {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.432,
+     "mean": 0.162,
+     "mean ± SD": 0.06,
+     "mean ± SE": 0.011,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.099,
+     "mode": 0.005,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.227
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.542,
+       "b": 0.458
+      }
+     }
+    ],
+    "quote": "We quantified the proportion of Malus pollen carried by 170 bees of 14 species representing 99% of total functional group diversity (Table S1).",
+    "value": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,145 @@
+{
+ "0": {
+  "candidates": [
+   "Head size",
+   "Head size (2)",
+   "Clypeus",
+   "Mandible size",
+   "Eye position"
+  ],
+  "kinds": {
+   "Head size": {
+    "choice": "other",
+    "probs": {
+     "species": 0.001,
+     "part": 0.001,
+     "higher": 0.001,
+     "other": 0.996
+    }
+   },
+   "Head size (2)": {
+    "choice": "other",
+    "probs": {
+     "species": 0.002,
+     "part": 0.001,
+     "higher": 0.002,
+     "other": 0.995
+    }
+   },
+   "Clypeus": {
+    "choice": "other",
+    "probs": {
+     "species": 0.001,
+     "part": 0.001,
+     "higher": 0.001,
+     "other": 0.997
+    }
+   },
+   "Mandible size": {
+    "choice": "other",
+    "probs": {
+     "species": 0.001,
+     "part": 0.002,
+     "higher": 0.001,
+     "other": 0.996
+    }
+   },
+   "Eye position": {
+    "choice": "other",
+    "probs": {
+     "species": 0.002,
+     "part": 0.0,
+     "higher": 0.003,
+     "other": 0.994
+    }
+   }
+  },
+  "organism": null,
+  "genus_from": null,
+  "outcome": "no species column"
+ },
+ "9": {
+  "candidates": [
+   "Subfamily",
+   "Genus"
+  ],
+  "kinds": {
+   "Subfamily": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.998,
+     "other": 0.002
+    }
+   },
+   "Genus": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.001,
+     "higher": 0.998,
+     "other": 0.001
+    }
+   }
+  },
+  "organism": "Genus",
+  "genus_from": null,
+  "outcome": "identified above species (picked)",
+  "units": {
+   "choice": "units",
+   "probs": {
+    "units": 0.981,
+    "groups": 0.019
+   }
+  },
+  "pick": {
+   "choice": "c1",
+   "probs": {
+    "c0": 0.006,
+    "c1": 0.971,
+    "none": 0.023
+   }
+  }
+ },
+ "22": {
+  "candidates": [
+   "Genus",
+   "Species"
+  ],
+  "kinds": {
+   "Genus": {
+    "choice": "higher",
+    "probs": {
+     "species": 0.0,
+     "part": 0.0,
+     "higher": 0.999,
+     "other": 0.0
+    }
+   },
+   "Species": {
+    "choice": "part",
+    "probs": {
+     "species": 0.004,
+     "part": 0.992,
+     "higher": 0.003,
+     "other": 0.002
+    }
+   }
+  },
+  "organism": "Species",
+  "genus_from": {
+   "column": "Genus"
+  },
+  "outcome": "part + genus column",
+  "genus": {
+   "choice": "c0",
+   "probs": {
+    "c0": 0.998,
+    "c1": 0.0,
+    "c2": 0.0,
+    "nowhere": 0.002
+   }
+  }
+ }
+}

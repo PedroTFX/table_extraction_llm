@@ -1,0 +1,574 @@
+{
+ "cells": {
+  "0": {}
+ },
+ "labels": {
+  "0": {}
+ },
+ "statistic": {
+  "0": {
+   "ITD": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.012,
+     "mean": 0.939,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.014,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.002,
+     "count": 0.001,
+     "mode": 0.004,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean"
+   },
+   "Sociality": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Nest location": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.006,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.991,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Nest construction": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.009,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.987,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Forest": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.032,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.954,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Riparian": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.042,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.94,
+     "single observation": 0.001,
+     "unknown": 0.007
+    },
+    "value": "mode"
+   },
+   "Restored": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.016,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.972,
+     "single observation": 0.001,
+     "unknown": 0.004
+    },
+    "value": "mode"
+   },
+   "Pasture": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.033,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.955,
+     "single observation": 0.0,
+     "unknown": 0.002
+    },
+    "value": "mode"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.388,
+     "female": 0.017,
+     "male": 0.004,
+     "unknown": 0.026,
+     "not": 0.567
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.942,
+       "b": 0.058
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.048,
+       "b": 0.952
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.207,
+      "not": 0.793
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.007,
+     "male alate": 0.017,
+     "worker": 0.062,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.911
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.043,
+     "LivingSpecimen": 0.074,
+     "HumanObservation": 0.166,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.174,
+     "Occurrence": 0.109,
+     "Taxon": 0.0,
+     "not": 0.43
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.983,
+       "b": 0.017
+      }
+     },
+     {
+      "a": "o6",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.012,
+       "b": 0.988
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.97,
+      "not": 0.03
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.889,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.013,
+     "not": 0.095
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "mixed",
+    "probs": {
+     "PreservedSpecimen": 0.216,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.011,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "mixed": 0.771
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.838,
+       "b": 0.162
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.012,
+       "b": 0.988
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.85,
+      "mixed": 0.15
+     }
+    },
+    "by": "clash",
+    "values": [
+     "PreservedSpecimen",
+     "MaterialCitation"
+    ]
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.892,
+   "compiled": 0.108
+  },
+  "value": "own"
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.402,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.104,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.172,
+     "Taxon": 0.0,
+     "not": 0.314
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.861,
+       "b": 0.139
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.41,
+       "b": 0.59
+      }
+     }
+    ],
+    "quote": "We assessed the habitat value for bees of four biological corridors in the Colombian Andes by comparing bee species richness, community composition and functional diversity between corridors (which had two land-cover sections: riparian forest and restored forest), forest patches being connected by corridors and surrounding pastures.",
+    "value": null
+   },
+   {
+    "choice": "HumanObservation",
+    "probs": {
+     "PreservedSpecimen": 0.048,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.721,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.217,
+     "Taxon": 0.0,
+     "not": 0.008
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.805,
+       "b": 0.195
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.584,
+       "b": 0.416
+      }
+     }
+    ],
+    "quote": "Bees were surveyed in four sites within each land-use type, i.e. forest, pasture, riparian and restored sections of corridors, for a total of 16 sampling sites (Fig. 1).",
+    "value": null
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.998,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "Collected bees were pinned for reference collection and voucher specimens of each species will be deposited in the Alexander von Humboldt Institute (Colombia) according to the research permit, and the ICESI University (Colombia).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.01,
+     "HumanObservation": 0.083,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.882,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.015
+    },
+    "quote": "Information on sociality, nest location and construction method were mostly obtained from the primary literature and complemented with direct observations in the field, particularly on nesting behavior.",
+    "value": "MaterialCitation"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.846,
+     "larva": 0.004,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.004,
+     "not": 0.14
+    },
+    "quote": "ITD was measured from pinned specimens and averaged by species from 10 individuals, or the maximum number available.",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.024,
+     "mean": 0.057,
+     "mean ± SD": 0.03,
+     "mean ± SE": 0.009,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.314,
+     "mode": 0.141,
+     "single observation": 0.0,
+     "unknown": 0.01,
+     "not": 0.412
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.83,
+       "b": 0.17
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.091,
+       "b": 0.909
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.559,
+      "not": 0.441
+     }
+    },
+    "quote": "We found a higher species richness in riparian than in restored sections of corridors, which was comparable to that in forest and higher than in pasture.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.99,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "ITD was measured from pinned specimens and averaged by species from 10 individuals, or the maximum number available.",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.031,
+     "mean": 0.46,
+     "mean ± SD": 0.147,
+     "mean ± SE": 0.009,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.005,
+     "single observation": 0.0,
+     "unknown": 0.002,
+     "not": 0.343
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.489,
+       "b": 0.511
+      }
+     }
+    ],
+    "quote": "Traits were given equal weight and species were weighted by their relative abundance.",
+    "value": null
+   }
+  ]
+ }
+}
