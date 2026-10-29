@@ -34,6 +34,8 @@ src/
                  one (head_to_table.py); the joined pages' new cells decoded — 35
   v13/           full_run_v13.py: v12 + one-species papers: the paper's subject and its tables
                  (individuals, groups, statistics or traits per row; one_species.py) — 36
+  v14/           full_run_v14.py: v13 + the five listed tags (sex, caste, basisOfRecord, lifeStage,
+                 statistic) from the template's lists (listed_tags.py); the per-tag measure (tag_score.py) — 38
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```
