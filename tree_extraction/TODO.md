@@ -544,7 +544,17 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## Listed tags (v14 = v13 + listed_tags.py, 2026-10-29/30) — ADOPTED with four tags: the new baseline
+## Statistic read again (v15 = v14 + listed_tags.restat / restat_columns, 2026-10-30) — ADOPTED: the new baseline
+
+- Design and runs: output/eval_split/DESIGN_listed_tags_v14.md (v15 sections); split output/eval_split/split_v15.json
+  (tune dev + held_a, test held_b once; grit-only papers not looked at).
+- measurementStatistic applied: paper text read for it alone with sentences about the analysis left out
+  (CWM, diversity indices, models), each trait column asked with the sentences naming its trait.
+  Accuracy: dev 94.3%, held_a 82.3%, tuning 90.5%; held_b test 82.3% (coverage 100%): passes.
+- Not yet run on grit (first: basisOfRecord, held_b 47.7%, grit-only 44.9%). grit_run.py and
+  rerun_paper.py are not in src/v15 yet.
+
+## Listed tags (v14 = v13 + listed_tags.py, 2026-10-29/30) — ADOPTED with four tags (was the baseline)
 
 - Design and every run: output/eval_split/DESIGN_listed_tags_v14.md; measure tag_score.py (TAGS_V14.txt).
 - Fills sex, caste, basisOfRecord, lifeStage from the template's lists (cells, section labels, captions,
