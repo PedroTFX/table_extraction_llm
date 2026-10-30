@@ -246,3 +246,12 @@ Up: Guariento2020 +3,475 rows (now all right), Ji2024 +1,728, CamargoVanegas2024
 GibbParr2013 -216, Fontanilla2019 -206, Wallon2024 -132, Oliveira2022 -114, Gathof2022 -106,
 Eckert2023 -99. 78 dev rows v13 had right are now wrong (overwrites). Core rows unchanged.
 held_a coverage stays at 40.3%: Noriega2023 prints no statistic (the defaults layer's job).
+
+## v15 test: held_b run once (2026-10-30, questions frozen at d7568cfa; totals only)
+
+measurementStatistic on held_b (27 papers, 2,212 GT rows): accuracy **82.3%**, coverage 100%.
+Accept rule: tuning papers 90.5%, held_b 0.082 below -> **passes** (limit 0.10). For reference, v14's
+statistic (recorded, not applied) gave held_b 85.6% at 97.2% coverage: v15 is 3.3 points lower there,
+2.8 points more covered. Core rows unchanged. Other tags on held_b (v14's answers, first seen as this
+half's totals): sex 59.4% (18.9%), caste 100% (86.0%), basisOfRecord 47.7% (93.8%), lifeStage 84.6%
+(78.0%) — a small set (2,212 rows), held as a whole was basisOfRecord 93.1%.
