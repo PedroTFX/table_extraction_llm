@@ -213,3 +213,18 @@ First fix planned (v15): statistic sentences about the analysis (community weigh
 indices, model results, site averages) dropped from the evidence; the user's example, Guariento2020:
 "The community weighted means of nearly all individual functional traits showed significant ecological
 patterns" was classified mean 0.85 and became the paper's value. 38 such quotes in the 109 set.
+
+## v15 run 1 (2026-10-30, code c62811d9): analysis sentences left out — tuning papers only
+
+gemma read the text for the statistic alone; nimble judged 104 of 305 quotes to be about the analysis.
+measurementStatistic accuracy (coverage): dev 93.6% -> 92.9% (99.6%), held_a 61.1% -> 67.5% (40.3%);
+dev + held_a together 83.4% -> 84.9%. Other tags and core rows unchanged. 11 papers up, 12 down.
+- Up: Guariento2020 +1,996 rows (the user's CWM example no longer used), CamargoVanegas2024 +276,
+  Normandin2017 +197, Eckert2023 +129, Leong2023 +116, Korosi2022 +102.
+- Down: Teder2020 -731, Scalercio2020 -219, GibbParr2013 -161, Wallon2024 -142. Teder2020's numeric
+  column (wingspan) lost its sentence "Average wingspan ... an average of mean male and female": with two
+  sentences per chunk, gemma now quotes the class traits (voltinism, overwintering stage) and the paper
+  value turned mode. Papers mix numeric traits (GT mean) and class traits (GT mode): one paper value
+  cannot fit both, and sentences about one kind steer the other kind's columns.
+- The paper-level value changed in 35 more papers with no row changed: it is unstable.
+Next: give each column the sentences that name its trait (as the basisOfRecord source question).
