@@ -46,3 +46,9 @@ table is a figure's Source/Target network data that gives no scored rows). No pa
 Mean F1: dev 0.564 -> 0.578, held_a 0.757 -> 0.765, tuning 0.630 -> **0.642**. Repeatable scorer:
 micro F1 0.660 -> 0.705, false positives 49,283 -> 30,413, true positives unchanged (99,062).
 First attempt caught before scoring: Noriega2023 t8 matched itself as a copy (plan() gives it twice).
+
+## Test: held_b run once (2026-10-30, fddaadac; totals only)
+
+The rules fired in 0 of the 27 held_b papers: mean F1 0.462 -> 0.462, none up, none down. The
+accept rule is met, but held_b says nothing about the step (it holds no duplicated data). The
+repeatable scorer's micro F1 0.439 -> 0.447 there is v15's statistic column (v16 vs v14's CSVs).
