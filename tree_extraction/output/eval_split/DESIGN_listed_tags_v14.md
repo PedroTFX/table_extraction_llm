@@ -176,3 +176,12 @@ Dev result (code 03a1fad9): basisOfRecord 62.2% -> 88.0% accuracy, coverage 98.5
 Orr2024 right (specimen question: "euthanized ... stored at -20 °C" -> PreservedSpecimen 0.98), Raine2018
 kept. Left on dev: the three GT cases above (2.2k rows), Graf2021 and Cappellari2022 (the paper does not
 say these traits came from the literature), Wallon2024, Uemori2021. Other tags unchanged; core rows none.
+
+## measurementStatistic fix (dev only)
+
+Dev losses: GT mean / ours individual 1,724 rows (Gossner2013, Eckert2023: "Body length" called individual
+at 0.99 while the methods say "an average body length" per species), mean / mode 633, mean / mean ± SD 488
+(CamargoVanegas2024 splits Mean and SD columns: GT mean and sd). The column question saw only the table.
+Now it is asked after the text rounds, with two more facts: what one row is (code counts the species of
+the rows as assembly reads them: one species per row, or species over several rows) and the paper's sure
+sentences about the statistic. nimble still decides; the column answer still comes before the paper's.

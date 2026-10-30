@@ -190,13 +190,27 @@ def trait_columns(t, fields):
     return values if names and values else names + values
 
 
-def ask_statistic(ask, t, fields, state):
+def grain(t, fields, org):
+    """What one row of the table is, as the rows will be read: one species per row, or species
+    repeating over rows (single specimens or groups). -> sentence or ''."""
+    sps = [s for s in (fr.species_of(t, fields, org, r) for r in t.records) if s]
+    if len(sps) < 3:
+        return ""
+    n = len(set(sps))
+    return (f" Each of its {n} species takes one row." if n == len(sps)
+            else f" Its {len(sps)} rows hold {n} species, so a species takes several rows.")
+
+
+def ask_statistic(ask, t, fields, state, rows="", quotes=()):
+    """Per trait column: which statistic its values are. The table, what one row is, and the paper's
+    sure sentences about the statistic (Eckert2023: 'an average body length' per species)."""
     out = {}
     if any(fields.get(c.name) == "measurementStatistic" for c in t.columns):
         return out                                   # the table prints it per row
+    said = (" The paper says about its values: " + " ".join(f"'{q}'" for q in quotes[:MAX_QUOTES])) if quotes else ""
     for name in trait_columns(t, fields)[:MAX_COLS]:
         vals = _distinct(t, name, 8)
-        st = state + f" The column '{name}' holds: {', '.join(repr(v) for v in vals)}."
+        st = state + rows + said + f" The column '{name}' holds: {', '.join(repr(v) for v in vals)}."
         got, rec = classify(ask, st, f"What are the values in the column '{name}'?", "measurementStatistic")
         out[name] = dict(rec, value=got)
     return out
@@ -414,16 +428,15 @@ def run(run_dir, papers):
         res = {"cells": {}, "labels": {}, "statistic": {}, "captions": {}, "text": {}, "source": {}}
         flat, spans = v3.md_tables(p)
         traits = {}
-        for t, fields, _o, _x in fr.plan(p, head):
+        for t, fields, org, _x in fr.plan(p, head):
             if not t.records or not trait_columns(t, fields):
                 continue
             k = str(t.table_index)
             state = _table_state(t, sp.caption_above(t, flat, spans), kt.caption_below(t, flat, spans))
             res["cells"][k] = ask_cells(ask, t, fields, state)
             res["labels"][k] = ask_labels(ask, t, state)
-            res["statistic"][k] = ask_statistic(ask, t, fields, state)
             res["captions"][k] = ask_caption(ask, t, state)
-            traits[k] = (state, trait_items(t, fields))
+            traits[k] = (state, trait_items(t, fields), t, fields, grain(t, fields, org))
         ask.unload()
         secs = sections(p)
         found = {tag: [] for tag in TAGS}
@@ -455,8 +468,11 @@ def run(run_dir, papers):
             res["specimen"] = dict(rec, value=got, was=b["value"])
             if got:
                 res["text"]["basisOfRecord"] = dict(b, value=got, settle={"by": "specimen"})
-        for k, (state, (long_, items)) in traits.items():
+        stat_quotes = [f["quote"] for f in found["measurementStatistic"] if f.get("value")]
+        for k, (state, (long_, items), t, fields, rows) in traits.items():
             res["source"][k] = {"long": long_, "traits": ask_source(ask, state, items, secs)}
+            res["statistic"][k] = ask_statistic(ask, t, fields, state, rows, stat_quotes)
+            res["rows"] = dict(res.get("rows") or {}, **{k: rows})
         ask.unload()
         res["text_found"] = found
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
