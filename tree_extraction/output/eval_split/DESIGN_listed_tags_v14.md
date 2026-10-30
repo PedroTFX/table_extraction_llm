@@ -185,3 +185,7 @@ at 0.99 while the methods say "an average body length" per species), mean / mode
 Now it is asked after the text rounds, with two more facts: what one row is (code counts the species of
 the rows as assembly reads them: one species per row, or species over several rows) and the paper's sure
 sentences about the statistic. nimble still decides; the column answer still comes before the paper's.
+Dev result (code 6b633ca6): measurementStatistic 90.9% -> 93.6% accuracy, coverage 99.3% -> 99.8%; mean /
+individual 1,724 -> 745 rows (Gossner2013 right). Left: CamargoVanegas2024 Mean / SD columns (GT mean and
+sd; 'sd' is not on the template list), Korosi2022 (GT mean for class traits), Cerini2023, Khayati2024.
+basisOfRecord 87.8% in this run (88.0% before; same questions), other tags unchanged, core rows none.
