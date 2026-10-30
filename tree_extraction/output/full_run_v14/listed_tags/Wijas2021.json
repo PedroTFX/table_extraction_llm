@@ -8,7 +8,8 @@
   "7": {},
   "8": {},
   "9": {},
-  "10": {}
+  "10": {},
+  "12": {}
  },
  "labels": {
   "0": {},
@@ -19,7 +20,8 @@
   "7": {},
   "8": {},
   "9": {},
-  "10": {}
+  "10": {},
+  "12": {}
  },
  "statistic": {
   "0": {
@@ -270,6 +272,24 @@
      }
     ],
     "value": "range"
+   },
+   "Color Representation": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.014,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.973,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode"
    }
   },
   "8": {
@@ -357,6 +377,44 @@
      "mode": 0.988,
      "single observation": 0.0,
      "unknown": 0.001
+    },
+    "value": "mode"
+   }
+  },
+  "12": {
+   "Feeding_group soil_grass_wood_litter_lichen_dung_carton": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.991,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Nest_location aboveground_belowground_outsideTree_insideTree_otherTermiteNests_aboreal": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.008,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.985,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mode"
    }
@@ -1002,6 +1060,91 @@
     ],
     "value": null
    }
+  },
+  "12": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.127,
+     "female": 0.005,
+     "male": 0.008,
+     "unknown": 0.03,
+     "not": 0.829
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.001,
+     "worker": 0.15,
+     "minor worker": 0.006,
+     "major worker": 0.0,
+     "soldier": 0.001,
+     "not": 0.84
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.003,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.003,
+     "MaterialCitation": 0.963,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.025
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.561,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.002,
+     "unknown": 0.015,
+     "not": 0.418
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.882,
+       "b": 0.118
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.052,
+       "b": 0.948
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.258,
+      "not": 0.742
+     }
+    },
+    "value": null
+   }
   }
  },
  "text": {
@@ -1131,21 +1274,13 @@
    }
   },
   "7": {
-   "long": true,
+   "long": false,
    "traits": {
-    "Light Yellow/Orange": {
+    "Probability Range": {
      "said": [],
      "value": null
     },
-    "Orange-Red": {
-     "said": [],
-     "value": null
-    },
-    "Red-Pink": {
-     "said": [],
-     "value": null
-    },
-    "Dark Purple/Black": {
+    "Color Representation": {
      "said": [],
      "value": null
     }
@@ -1189,6 +1324,19 @@
      "value": null
     }
    }
+  },
+  "12": {
+   "long": false,
+   "traits": {
+    "Feeding_group soil_grass_wood_litter_lichen_dung_carton": {
+     "said": [],
+     "value": null
+    },
+    "Nest_location aboveground_belowground_outsideTree_insideTree_otherTermiteNests_aboreal": {
+     "said": [],
+     "value": null
+    }
+   }
   }
  },
  "origin": {
@@ -1208,7 +1356,8 @@
   "7": "",
   "8": "",
   "9": "",
-  "10": ""
+  "10": "",
+  "12": " Each of its 275 species takes one row."
  },
  "text_found": {
   "sex": [],

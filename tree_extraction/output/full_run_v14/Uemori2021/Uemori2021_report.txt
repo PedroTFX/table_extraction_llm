@@ -1,0 +1,74 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Uemori2021/Uemori2021.xlsx  (428 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Uemori2021/Uemori2021.csv  (856 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 320
+  missed (FN)         : 108
+  spurious, in scope  : 108   <- GT covers this trait: real errors
+  spurious, out of scope: 428   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.374 / 0.748 / 0.498   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.748 / 0.748 / 0.748   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.748   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            428
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    320  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0    213  0.000  <-- low
+  measurementStatistic          0    320  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    320  0.000  <-- low
+  lifeStage                   213    320  0.666
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    320  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 108 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      108
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'primary predator'           ->  'primary predators (predators and parasitoids of herbivores)' x43
+     'hyper predator'             ->  'secondary predators (predators and parasitoids of predators)' x39
+     'herbivorous'                ->  '1'                          x24
+     '4'                          ->  '3'                          x1
+     'viza'                       ->  'secondary predators (predators and parasitoids of predators)' x1
+  -> 5 substitutions explain 108 of 108 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Uemori2021_misses.csv, Uemori2021_misses_summary.json (108 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  altitudinal range                               107   107   
+  mean body size                                  107   107   
+  distribution index                                0   107   PRED-ONLY
+  flight duration                                   0   107   PRED-ONLY
+  family                                            0   107   PRED-ONLY
+  feeding guild                                   107   107   
+  trophic level                                   107   107   
+  superfamily                                       0   107   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.748  0.748  0.748    320   108   108   id+type+value
+             (428 more spurious row(s) set aside as out-of-scope; strict P would be 0.374)
+  tags        0.000  0.000  0.000      0   428   428   basis+id+type+value+stat+sex+stage
+             (428 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.748 vs previous)

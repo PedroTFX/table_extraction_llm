@@ -1,0 +1,131 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/McCravy2019/McCravy2019.xlsx  (232 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/McCravy2019/McCravy2019.csv  (232 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 22 pair(s))
+  'Agapostemon sericeus (Förster)' -> 'Agapostemon sericeus'
+  'Agapostemon virescens (F.)' -> 'Agapostemon virescens'
+  'Andrena commoda Smith' -> 'Andrena commoda'
+  'Andrena imitatrix Cresson' -> 'Andrena imitatrix'
+  'Andrena wilkella (Kirby)' -> 'Andrena wilkella'
+  'Anthophora abrupta Say' -> 'Anthophora abrupta'
+  'Anthophora terminalis Cresson' -> 'Anthophora terminalis'
+  'Apis mellifera L.' -> 'Apis mellifera'
+  'Augochlora pura (Say)' -> 'Augochlora pura'
+  'Augochlorella aurata (Smith)' -> 'Augochlorella aurata'
+  'Augochloropsis metallica (F.)' -> 'Augochloropsis metallica'
+  'Bombus auricomus (Robertson)' -> 'Bombus auricomus'
+  'Bombus bimaculatus Cresson' -> 'Bombus bimaculatus'
+  'Bombus griseocollis (DeGeer)' -> 'Bombus griseocollis'
+  'Bombus impatiens Cresson' -> 'Bombus impatiens'
+  'Calliopsis andreniformis Smith' -> 'Calliopsis andreniformis'
+  'Ceratina calcarata Robertson' -> 'Ceratina calcarata'
+  'Ceratina dupla Say' -> 'Ceratina dupla'
+  'Ceratina mikmaqi Rehan & Sheffield' -> 'Ceratina mikmaqi'
+  'Ceratina strenua Smith' -> 'Ceratina strenua'
+  'Eucera hamata (Bradley)' -> 'Eucera hamata'
+  'Halictus ligatus Say' -> 'Halictus ligatus'
+
+TAXON NAMES LEFT UNMAPPED (36)
+  'Andrena cressonii Robertson': no ground-truth name denotes this organism
+  'Andrena robertsonii Dalla Torre': no ground-truth name denotes this organism
+  'Halictus affinis (Smith)': no ground-truth name denotes this organism
+  'Halictus birkmanni (Crawford)': no ground-truth name denotes this organism
+  'Halictus carinata Cresson': no ground-truth name denotes this organism
+  'Halictus cattellae (Ellis)': no ground-truth name denotes this organism
+  'Halictus cinctipes (Provancher)': no ground-truth name denotes this organism
+  'Halictus coeruleum (Robertson)': no ground-truth name denotes this organism
+  'Halictus coriaceum (Smith)': no ground-truth name denotes this organism
+  'Halictus cressonii (Robertson)': no ground-truth name denotes this organism
+  'Halictus fuscipenne (Smith)': no ground-truth name denotes this organism
+  'Halictus hitchensi Gibbs': no ground-truth name denotes this organism
+  'Halictus illinoense (Robertson)': no ground-truth name denotes this organism
+  'Halictus imitatum (Smith)': no ground-truth name denotes this organism
+  'Halictus mesillae (Cockerell)': no ground-truth name denotes this organism
+  'Halictus obscurum (Robertson)': no ground-truth name denotes this organism
+  'Halictus oceanicum (Cockerell)': no ground-truth name denotes this organism
+  'Halictus pilosifrons (Cresson)': no ground-truth name denotes this organism
+  'Halictus producta (Cresson)': no ground-truth name denotes this organism
+  'Halictus smilacinae (Robertson)': no ground-truth name denotes this organism
+  'Halictus spoliata (Provancher)': no ground-truth name denotes this organism
+  'Halictus variolosa (Cresson)': no ground-truth name denotes this organism
+  'agilis Cresson': no ground-truth name denotes this organism
+  'bimaculatus (Lepeletier)': no ground-truth name denotes this organism
+  'comptoides Robertson': no ground-truth name denotes this organism
+  'desponsus Smith': no ground-truth name denotes this organism
+  'gemula Cresson': no ground-truth name denotes this organism
+  'mendica Cresson': no ground-truth name denotes this organism
+  'obliqua (Say)': no ground-truth name denotes this organism
+  'pruinosa (Say)': no ground-truth name denotes this organism
+  'subviridatum (Cockerell)': no ground-truth name denotes this organism
+  'timothyi Gibbs': no ground-truth name denotes this organism
+  'trinodis Robertson': no ground-truth name denotes this organism
+  'truncatum (Robertson)': no ground-truth name denotes this organism
+  'versatum (Robertson)': no ground-truth name denotes this organism
+  'weemsi (Mitchell)': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body length (mm)' -> 'Body length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 88
+  missed (FN)         : 144
+  spurious, in scope  : 144   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.379 / 0.379 / 0.379   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.379 / 0.379 / 0.379   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.379   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     88  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     22  0.000  <-- low
+  measurementStatistic          0     88  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          44     88  0.500
+  lifeStage                    44     88  0.500
+  caste                         0     88  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     88  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 144 MISSED ROWS MISSED
+  species not in prediction                 144
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (35 distinct), closest predicted name:
+     gt 'Andrenaii'                         ~0.73~  pred 'Andrena cressonii Robertson'   x8
+     gt 'Heriades carinata'                 ~0.65~  pred 'Halictus carinata Cresson'   x4
+     gt 'Heriades variolosa'                ~0.65~  pred 'Halictus variolosa (Cresson)'   x4
+     gt 'Hoplitis pilosifrons'              ~0.73~  pred 'Halictus pilosifrons (Cresson)'   x4
+     gt 'Hoplitis producta'                 ~0.70~  pred 'Halictus producta (Cresson)'   x4
+     gt 'Hoplitis spoliata'                 ~0.73~  pred 'Halictus spoliata (Provancher)'   x4
+  -> 6 species mismatches explain 28 of 144 misses (19%) — scattered; no single cause
+
+  full miss detail saved -> McCravy2019_misses.csv, McCravy2019_misses_summary.json (144 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      58    58   
+  lecty                                            58    58   
+  nest location                                    58    58   
+  sociality                                        58    58   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.379  0.379  0.379     88   144   144   id+type+value
+  tags        0.000  0.000  0.000      0   232   232   basis+id+type+value+stat+sex+stage
+             (F1 -0.379 vs previous)

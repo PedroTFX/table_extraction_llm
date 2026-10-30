@@ -1,0 +1,136 @@
+  [semantic] matched by values: 'IngestFood' -> 'Mode of Ingestion'
+  [semantic] matched by values: 'bodysize' -> 'Body Size'
+  [semantic] left unmatched: 'Dispersaldisp' vs 'Diel activity' (llm said different traits)
+  [semantic] left unmatched: 'Dispersaldisp' vs 'Presence of iridescence on beetle cuticle' (llm said different traits)
+  [semantic] left unmatched: 'Family' vs 'Diel activity' (llm said different traits)
+  [semantic] left unmatched: 'Family' vs 'Presence of iridescence on beetle cuticle' (llm said different traits)
+  [semantic] left unmatched: 'Traits presented' vs 'Presence of iridescence on beetle cuticle' (llm said different traits)
+  [semantic] left unmatched: 'Traits presented' vs 'Diel activity' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Wallon2024/Wallon2024.xlsx  (1229 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Wallon2024/Wallon2024.csv  (2896 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Epuraeas sp. (MF 1271)': no ground-truth name denotes this organism
+  'X': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'Color' -> 'Color of beetle cuticle'
+  'Dispersal abilities' -> 'Dispersal Abilities'
+  'IngestFood' -> 'Mode of Ingestion'
+  'Standardized body size' -> 'Standardized Body SIze'
+  'Type of food ingested' -> 'Type of Food'
+  'active during twilight' -> 'Diel activity'
+  'bodysize' -> 'Body Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 333
+  missed (FN)         : 896
+  spurious, in scope  : 395   <- GT covers this trait: real errors
+  spurious, out of scope: 2168   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.115 / 0.271 / 0.161   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.457 / 0.271 / 0.340   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.271   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           2168
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                19    333  0.057  <-- low
+  measurementMethod             0    333  0.000  <-- low
+  measurementUnit               0    142  0.000  <-- low
+  measurementStatistic          0    333  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    333  0.000  <-- low
+  lifeStage                   330    333  0.991
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    333  0.000  <-- low
+  verbatimLocality              0    333  0.000  <-- low
+  verbatimCoordinates           0    333  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    333  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 896 MISSED ROWS MISSED
+  species not in prediction                  26
+  species present, trait missing            346
+  species+trait present, value differs      524
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'animals'                    ->  'absence'                    x95
+     'night'                      ->  'absence'                    x91
+     'plants'                     ->  'absence'                    x49
+     'day'                        ->  'absence'                    x48
+     'twilight'                   ->  '1'                          x46
+     'night'                      ->  '1'                          x45
+  -> 6 substitutions explain 374 of 896 misses (42%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
+     gt 'Cercyon sp.'                       ~1.00~  pred 'Cercyon .sp'   x7
+     gt 'Carpophilus sp.'                   ~1.00~  pred 'Carpophilus .sp'   x5
+     gt 'Cordalia sp.'                      ~0.75~  pred 'Cordalia sp. (MF 1631)'   x5
+     gt 'Oxypoda sp.'                       ~0.75~  pred 'Oxypoda sp. (MF 1705)'   x5
+     gt 'Epuraeas sp. (MF 1271'             ~1.00~  pred 'Epuraeas sp. (MF 1271)'   x4
+  -> 5 species mismatches explain 26 of 896 misses (3%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Dispersal Abilities'              x121
+     'Presence of iridescence on beetle cuticle' x95
+     'Color of beetle cuticle'          x69
+     'Body Size'                        x61
+  -> 4 missing traits explain 346 of 896 misses (39%) — scattered; no single cause
+
+  full miss detail saved -> Wallon2024_misses.csv, Wallon2024_misses_summary.json (896 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 10)                              0    46   PRED-ONLY
+  (no name, column 11)                              0    46   PRED-ONLY
+  (no name, column 12)                              0    46   PRED-ONLY
+  (no name, column 13)                              0    37   PRED-ONLY
+  (no name, column 14)                              0    46   PRED-ONLY
+  (no name, column 15)                              0    46   PRED-ONLY
+  (no name, column 4)                               0    41   PRED-ONLY
+  (no name, column 5)                               0    46   PRED-ONLY
+  (no name, column 6)                               0    46   PRED-ONLY
+  (no name, column 7)                               0    46   PRED-ONLY
+  (no name, column 8)                               0    46   PRED-ONLY
+  (no name, column 9)                               0    46   PRED-ONLY
+  dispersal abilities                             142    16   Δ-126 (split?)
+  diel activity                                   280   191   Δ-89 (split?)
+  animals                                           0   191   PRED-ONLY
+  color of beetle cuticle                          91    20   Δ-71 (split?)
+  presence of iridescence on beetle cuticle        99     0   GT-ONLY
+  body size                                        71    10   Δ-61 (split?)
+  standardized body size                          132   132   
+  class                                             0   168   PRED-ONLY
+  coprophagous                                      0   191   PRED-ONLY
+  dispersaldisp                                     0   125   PRED-ONLY
+  diurnal                                           0   191   PRED-ONLY
+  family                                            0   168   PRED-ONLY
+  type of food                                    246   191   Δ-55 (split?)
+  foodpi                                            0   191   PRED-ONLY
+  fungi                                             0   191   PRED-ONLY
+  mode of ingestion                               168   168   
+  nocturnal                                         0   191   PRED-ONLY
+  traits presented                                  0    23   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'presence of iridescence on beetle cuticle' vs pred 'traits presented'                 sim=0.58
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.457  0.271  0.340    333   395   896   id+type+value
+             (2168 more spurious row(s) set aside as out-of-scope; strict P would be 0.115)
+  tags        0.000  0.000  0.000      0   728  1229   basis+id+type+value+stat+sex+stage
+             (2168 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.340 vs previous)

@@ -1,0 +1,100 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Gossner2013/Gossner2013.xlsx  (3008 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Gossner2013/Gossner2013.csv  (1528 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Scolytus' -> 'Scolytus scolytus'
+
+TAXON NAMES LEFT UNMAPPED (23)
+  'Bostrichiformia': no ground-truth name denotes this organism
+  'Chrysomelidae': no ground-truth name denotes this organism
+  'Cryphalus': no ground-truth name denotes this organism
+  'Cryptophagidae': no ground-truth name denotes this organism
+  'Dryoecoetus': no ground-truth name denotes this organism
+  'Elateridae': no ground-truth name denotes this organism
+  'Gnathotrichus': no ground-truth name denotes this organism
+  'Hylastes': no ground-truth name denotes this organism
+  'Hylesinus': no ground-truth name denotes this organism
+  'Hylurgops': no ground-truth name denotes this organism
+  'Ips': no ground-truth name denotes this organism
+  'Mordellidae': no ground-truth name denotes this organism
+  'Oldest Ripihoridae': no ground-truth name denotes this organism
+  'Oldest beetle': no ground-truth name denotes this organism
+  'Pitophterus': no ground-truth name denotes this organism
+  'Scarabaeoidea': no ground-truth name denotes this organism
+  'Scolytinae': no ground-truth name denotes this organism
+  'Staphylinidae': no ground-truth name denotes this organism
+  'Taphrorychus': no ground-truth name denotes this organism
+  'Tenebrionoidea': no ground-truth name denotes this organism
+  'Tomicus': no ground-truth name denotes this organism
+  'Xyleborus': no ground-truth name denotes this organism
+  'Xylechinus': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1494
+  missed (FN)         : 1514
+  spurious, in scope  : 10   <- GT covers this trait: real errors
+  spurious, out of scope: 24   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.978 / 0.497 / 0.659   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.993 / 0.497 / 0.662   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.497   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             24
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord              1494   1494  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0    752  0.000  <-- low
+  measurementStatistic          0   1494  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   1494  0.000  <-- low
+  lifeStage                  1494   1494  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1494  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1514 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           1504
+  species+trait present, value differs       10
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '4'                          ->  'extremely decomposed and moldered' x10
+  -> 1 substitution explains 10 of 1514 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Canopy cover'                     x752
+     'Dead-wood decay'                  x752
+  -> 2 missing traits explain 1504 of 1514 misses (99%) — systematic, not scattered
+
+  full miss detail saved -> Gossner2013_misses.csv, Gossner2013_misses_summary.json (1514 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  age (million years)                               0    24   PRED-ONLY
+  body size                                       752   752   
+  canopy cover                                    752     0   GT-ONLY
+  dead-wood decay                                 752     0   GT-ONLY
+  diameter                                        752   752   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.993  0.497  0.662   1494    10  1514   id+type+value
+             (24 more spurious row(s) set aside as out-of-scope; strict P would be 0.978)
+  tags        0.000  0.000  0.000      0  1504  3008   basis+id+type+value+stat+sex+stage
+             (24 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.662 vs previous)

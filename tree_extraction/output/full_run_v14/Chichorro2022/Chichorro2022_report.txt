@@ -1,0 +1,70 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Chichorro2022/Chichorro2022.xlsx  (620 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Chichorro2022/Chichorro2022.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 620
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 620 MISSED ROWS MISSED
+  species not in prediction                 620
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (180 distinct), closest predicted name:
+     gt 'Isophya bureschi'                   (nothing similar in the prediction)   x6
+     gt 'Isophya longicaudata'               (nothing similar in the prediction)   x6
+     gt 'Psorodonotus ebneri'                (nothing similar in the prediction)   x6
+     gt 'Erebia lefebvrei'                   (nothing similar in the prediction)   x6
+     gt 'Erebia styx'                        (nothing similar in the prediction)   x6
+     gt 'Erebia zapateri'                    (nothing similar in the prediction)   x6
+  -> 6 species mismatches explain 36 of 620 misses (6%) — scattered; no single cause
+
+  full miss detail saved -> Chichorro2022_misses.csv, Chichorro2022_misses_summary.json (620 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  dispersal ability                               120     0   GT-ONLY
+  altitude                                        177     0   GT-ONLY
+  body size                                       177     0   GT-ONLY
+  diet breadth                                     17     0   GT-ONLY
+  fecundity                                         1     0   GT-ONLY
+  generation length                                16     0   GT-ONLY
+  microhabitat                                     60     0   GT-ONLY
+  offspring size                                   52     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   620   id+type+value
+  tags        0.000  0.000  0.000      0     0   620   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)
