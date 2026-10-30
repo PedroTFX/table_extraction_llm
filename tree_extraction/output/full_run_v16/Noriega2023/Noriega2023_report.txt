@@ -7,14 +7,25 @@
   [semantic] matched by values: 'HW morph' -> 'Head Width'
   [semantic] matched by values: 'HL morph' -> 'Head Length'
   [semantic] matched by values: 'EL morph' -> 'Elytra Length'
+  [semantic] matched by values: 'Biomass morph' -> 'Body Mass'
+  [semantic] matched by values: 'PW' -> 'Pronotum width'
+  [semantic] matched by values: 'PL' -> 'Pronotum length'
+  [semantic] matched by values: 'PH' -> 'Pronotum height'
+  [semantic] matched by values: 'HW' -> 'Head width'
+  [semantic] matched by values: 'EL' -> 'Elytra length'
+  [semantic] matched by values: 'pTW' -> 'Protibia width'
+  [semantic] matched by values: 'pTL' -> 'Protibia length'
+  [semantic] matched by values: 'mTL' -> 'Metatiba length'
+  [semantic] matched by values: 'HL' -> 'Head length'
+  [semantic] left unmatched: 'Dung relocation strategy' vs 'Relocation Size' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Noriega2023/Noriega2023.xlsx  (35037 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Noriega2023/Noriega2023.csv  (3157 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Noriega2023/Noriega2023.csv  (66917 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-TAXON NAME REMAP (pred -> gt, 287 pair(s))
+TAXON NAME REMAP (pred -> gt, 298 pair(s))
   'Acanthobodilus_immundus' -> 'Acanthobodilus immundus'
   'Acrossus_luridus' -> 'Acrossus luridus'
   'Agamopus_viridis' -> 'Agamopus viridis'
@@ -47,6 +58,7 @@ TAXON NAME REMAP (pred -> gt, 287 pair(s))
   'Aphodius_pusillus' -> 'Aphodius pusillus'
   'Aphodius_russatus' -> 'Aphodius russatus'
   'Aphodius_satellitius' -> 'Aphodius satellitius'
+  'Aphodius_sp' -> 'Aphodius sp'
   'Aphodius_sp1.AUS01' -> 'Aphodius sp1.AUS01'
   'Aphodius_sp1.COL01' -> 'Aphodius sp1.COL01'
   'Aphodius_sp1.COL02' -> 'Aphodius sp1.COL02'
@@ -63,6 +75,7 @@ TAXON NAME REMAP (pred -> gt, 287 pair(s))
   'Ataenius_gracilis' -> 'Ataenius gracilis'
   'Ataenius_punctipennis' -> 'Ataenius punctipennis'
   'Ataenius_sculptor' -> 'Ataenius sculptor'
+  'Ataenius_sp' -> 'Ataenius sp'
   'Ataenius_sp1.COL03' -> 'Ataenius sp1.COL03'
   'Ataenius_sp1.MEX01' -> 'Ataenius sp1.MEX01'
   'Ataenius_sp1.MEX02' -> 'Ataenius sp1.MEX02'
@@ -76,11 +89,17 @@ TAXON NAME REMAP (pred -> gt, 287 pair(s))
   'Ataenius_sp2.MEX04' -> 'Ataenius sp2.MEX04'
   'Ataenius_sp2.MEX05' -> 'Ataenius sp2.MEX05'
   'Ataenius_sp2.MEX06' -> 'Ataenius sp2.MEX06'
+  'Ataenius_sp3' -> 'Ataenius sp3'
   'Ataenius_sp3.MEX02' -> 'Ataenius sp3.MEX02'
+  'Ataenius_sp4' -> 'Ataenius sp4'
   'Ataenius_sp4.MEX02' -> 'Ataenius sp4.MEX02'
+  'Ataenius_sp5' -> 'Ataenius sp5'
   'Ataenius_sp5.MEX02' -> 'Ataenius sp5.MEX02'
+  'Ataenius_sp6' -> 'Ataenius sp6'
   'Ataenius_sp6.MEX02' -> 'Ataenius sp6.MEX02'
   'Ataenius_spretulus' -> 'Ataenius spretulus'
+  'Atenius_sp1' -> 'Atenius sp1'
+  'Atenius_sp2' -> 'Atenius sp2'
   'Ateuchetus_armeniacus' -> 'Ateuchetus armeniacus'
   'Blackburneus_stercorosus' -> 'Blackburneus stercorosus'
   'Bodilopsis_rufa' -> 'Bodilopsis rufa'
@@ -96,6 +115,7 @@ TAXON NAME REMAP (pred -> gt, 287 pair(s))
   'Caccobius_sp1' -> 'Caccobius sp1'
   'Canthidium_barbacenicum' -> 'Canthidium barbacenicum'
   'Canthidium_lucidum' -> 'Canthidium lucidum'
+  'Canthidium_pseudopuncticole' -> 'Canthidium pseudopuncticole'
   'Canthidium_pseudopuncticolle' -> 'Canthidium pseudopuncticolle'
   'Canthidium_sp2' -> 'Canthidium sp2'
   'Canthidium_trinodosum' -> 'Canthidium trinodosum'
@@ -119,6 +139,7 @@ TAXON NAME REMAP (pred -> gt, 287 pair(s))
   'Copris_lunaris' -> 'Copris lunaris'
   'Copris_obesus' -> 'Copris obesus'
   'Copris_sierrensis' -> 'Copris sierrensis'
+  'Copris_sp' -> 'Copris sp'
   'Copris_sp1' -> 'Copris sp1'
   'Copris_sp2' -> 'Copris sp2'
   'Deltochilum_lobipes' -> 'Deltochilum lobipes'
@@ -300,103 +321,127 @@ TAXON NAME REMAP (pred -> gt, 287 pair(s))
   'Tiniocellus_spinipes' -> 'Tiniocellus spinipes'
   'Trichillum_externepunctatum' -> 'Trichillum externepunctatum'
   'Trypocopris_vernalis' -> 'Trypocopris vernalis'
+  'Uroxys_sp' -> 'Uroxys sp'
   'Uroxys_sp1.COL02' -> 'Uroxys sp1.COL02'
   'Uroxys_sp1.ECU02' -> 'Uroxys sp1.ECU02'
 
-SEMANTIC measurementType REMAP (pred -> gt, 11 pair(s))
-  'Biomass morph' -> 'Biomass'
+TAXON NAMES LEFT UNMAPPED (5)
+  'Aphodius_sp1': matches 6 different organisms, cannot choose: 'Aphodius sp1', 'Aphodius sp1.AUS01', 'Aphodius sp1.COL01', 'Aphodius sp1.COL02'
+  'Aphodius_sp2': matches 5 different organisms, cannot choose: 'Aphodius sp2', 'Aphodius sp2.COL01', 'Aphodius sp2.ECU02', 'Aphodius sp2.GER01'
+  'Ataenius_sp1': matches 10 different organisms, cannot choose: 'Ataenius sp1', 'Ataenius sp1.COL03', 'Ataenius sp1.MEX01', 'Ataenius sp1.MEX02'
+  'Ataenius_sp2': matches 7 different organisms, cannot choose: 'Ataenius sp2', 'Ataenius sp2.MEX01', 'Ataenius sp2.MEX02', 'Ataenius sp2.MEX04'
+  'Uroxys_sp1': matches 3 different organisms, cannot choose: 'Uroxys sp1', 'Uroxys sp1.COL02', 'Uroxys sp1.ECU02'
+
+SEMANTIC measurementType REMAP (pred -> gt, 20 pair(s))
+  'Biomass morph' -> 'Body Mass'
+  'EL' -> 'Elytra length'
   'EL morph' -> 'Elytra Length'
+  'HL' -> 'Head length'
   'HL morph' -> 'Head Length'
+  'HW' -> 'Head width'
   'HW morph' -> 'Head Width'
+  'PH' -> 'Pronotum height'
   'PH morph' -> 'Pronotum Height'
+  'PL' -> 'Pronotum length'
   'PL morph' -> 'Pronotum Length'
+  'PW' -> 'Pronotum width'
   'PW morph' -> 'Pronotum Width'
+  'mTL' -> 'Metatiba length'
   'mTL morph' -> 'Metatibia Length'
+  'pTL' -> 'Protibia length'
   'pTL morph' -> 'Protibia Length'
+  'pTW' -> 'Protibia width'
   'pTW morph' -> 'Protibia Width'
   'reloc.size behav' -> 'Relocation Size'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 2647
-  missed (FN)         : 32390
-  spurious, in scope  : 510   <- GT covers this trait: real errors
-  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+  matched (TP)        : 33396
+  missed (FN)         : 1641
+  spurious, in scope  : 1508   <- GT covers this trait: real errors
+  spurious, out of scope: 32013   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.838 / 0.076 / 0.139   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.838 / 0.076 / 0.139   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.076   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.499 / 0.953 / 0.655   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.957 / 0.953 / 0.955   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.953   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                          32013
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord              2647   2647  1.000
-  measurementMethod             0     64  0.000  <-- low
-  measurementUnit               0   2647  0.000  <-- low
-  measurementStatistic       2006   2647  0.758
+  basisOfRecord             33396  33396  1.000
+  measurementMethod             0   3330  0.000  <-- low
+  measurementUnit               0  33396  0.000  <-- low
+  measurementStatistic          0  33396  0.000  <-- low
   measurementRemarks            0      0    n/a
-  sex                           0   2647  0.000  <-- low
-  lifeStage                     0   2647  0.000  <-- low
+  sex                           0  33396  0.000  <-- low
+  lifeStage                     0  33396  0.000  <-- low
   caste                         0      0    n/a
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
-  sampleTreatment               0   2647  0.000  <-- low
+  sampleTreatment               0  33396  0.000  <-- low
   samplingProtocol              0      0    n/a
-  verbatimLocality              0      0    n/a
+  verbatimLocality              0      0    n/a   +30526 where GT blank
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
-  associatedOccurrences         0      0    n/a
-  associatedReferences          0   2647  0.000  <-- low
+  associatedOccurrences         0      0    n/a   +30526 where GT blank
+  associatedReferences          0  33396  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 32390 MISSED ROWS MISSED
-  species not in prediction                2330
-  species present, trait missing           3244
-  species+trait present, value differs    26261
+WHY THE 1641 MISSED ROWS MISSED
+  species not in prediction                1252
+  species present, trait missing              5
+  species+trait present, value differs      384
 
   VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
      'small endocoprids'          ->  'endo.sma'                   x99
      'small paracoprids'          ->  'para.sma'                   x96
      'medium paracoprids'         ->  'para.med'                   x32
      'big paracoprids'            ->  'para.big'                   x29
-     '2.2'                        ->  '2.28'                       x16
-     '0.002'                      ->  '0.0023666667'               x14
-  -> 6 substitutions explain 286 of 32390 misses (1%) — scattered; no single cause
+     'small telecoprids'          ->  'tele.sma'                   x9
+     'medium endocoprids'         ->  'endo.med'                   x7
+  -> 6 substitutions explain 272 of 1641 misses (17%) — scattered; no single cause
 
-  SPECIES IN GT BUT NOT IN PREDICTION (16 distinct), closest predicted name:
-     gt 'Ataenius sp1'                      ~0.88~  pred 'Ataenius sp1.VEN01'   x501
-     gt 'Aphodius sp1'                      ~0.92~  pred 'Aphodius sp1.AUS01'   x450
-     gt 'Ataenius sp3'                      ~0.86~  pred 'Ataenius sp3.MEX02'   x270
-     gt 'Aphodius sp'                       ~0.90~  pred 'Aphodius sp3'   x200
-     gt 'Uroxys sp'                         ~0.78~  pred 'Uroxys sp1.COL02'   x200
-     gt 'Aphodius sp2'                      ~0.88~  pred 'Pleuraphodius sp2'   x120
-  -> 6 species mismatches explain 1741 of 32390 misses (5%) — scattered; no single cause
+  SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
+     gt 'Ataenius sp1'                      ~1.00~  pred 'Ataenius_sp1'   x501
+     gt 'Aphodius sp1'                      ~1.00~  pred 'Aphodius_sp1'   x450
+     gt 'Aphodius sp2'                      ~1.00~  pred 'Aphodius_sp2'   x120
+     gt 'Uroxys sp1'                        ~1.00~  pred 'Uroxys_sp1'   x100
+     gt 'Ataenius sp2'                      ~1.00~  pred 'Ataenius_sp2'   x81
+  -> 5 species mismatches explain 1252 of 1641 misses (76%) — systematic, not scattered
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
-     'Metatiba length'                  x2956
-     'Body Mass'                        x287
-     'Biomas'                           x1
-  -> 3 missing traits explain 3244 of 32390 misses (10%) — scattered; no single cause
+     'Biomass'                          x4
+     'Metatiba length'                  x1
+  -> 2 missing traits explain 5 of 1641 misses (0%) — scattered; no single cause
 
-  full miss detail saved -> Noriega2023_misses.csv, Noriega2023_misses_summary.json (32390 row(s))
+  full miss detail saved -> Noriega2023_misses.csv, Noriega2023_misses_summary.json (1641 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  biomas                                           10     0   GT-ONLY
-  biomass                                        3169   287   Δ-2882 (split?)
-  body mass                                       287     0   GT-ONLY
-  elytra length                                  3476   287   Δ-3189 (split?)
-  head length                                    3476   287   Δ-3189 (split?)
-  head width                                     3476   287   Δ-3189 (split?)
-  pronotum height                                3476   287   Δ-3189 (split?)
-  metatiba length                                3189     0   GT-ONLY
+  biomas                                           10    10   
+  biomass                                        3169  3159   Δ-10 (split?)
+  body mass                                       287   287   
+  dung relocation strategy                          0 31890   PRED-ONLY
+  elytra length                                  3476  3476   
+  head length                                    3476  3476   
+  head width                                     3476  3476   
+  pronotum height                                3476  3476   
+  metatiba length                                3189  3148   Δ-41 (split?)
   metatibia length                                287   287   
-  pronotum length                                3476   287   Δ-3189 (split?)
-  protibia length                                3476   287   Δ-3189 (split?)
-  pronotum width                                 3476   287   Δ-3189 (split?)
-  protibia width                                 3476   287   Δ-3189 (split?)
+  pronotum length                                3476  3476   
+  protibia length                                3476  3435   Δ-41 (split?)
+  mtl                                               0    41   PRED-ONLY
+  pronotum width                                 3476  3476   
+  protibia width                                 3476  3435   Δ-41 (split?)
+  ptl                                               0    41   PRED-ONLY
+  ptw                                               0    41   PRED-ONLY
   relocation size                                 287   287   
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.838  0.076  0.139   2647   510 32390   id+type+value
-  tags        0.000  0.000  0.000      0  3157 35037   basis+id+type+value+stat+sex+stage
-             (F1 -0.139 vs previous)
+  core        0.957  0.953  0.955  33396  1508  1641   id+type+value
+             (32013 more spurious row(s) set aside as out-of-scope; strict P would be 0.499)
+  tags        0.000  0.000  0.000      0 34904 35037   basis+id+type+value+stat+sex+stage
+             (32013 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.955 vs previous)
