@@ -333,19 +333,20 @@ def trait_items(t, fields):
     return False, trait_columns(t, fields)[:MAX_COLS]
 
 
-def ask_source(ask, state, items, secs, quotes):
-    """Per trait: measured in this study or taken from the literature (-> MaterialCitation). The table,
-    the paper's sentences that name the trait, and its quotes about how the data were obtained.
-    -> {name: record with value 'measured' / 'literature' / None}."""
+def ask_source(ask, state, items, secs):
+    """Per trait the paper names in a sentence: measured in this study or taken from the literature
+    (-> MaterialCitation). The table and those sentences only; a trait no sentence names is not asked
+    and keeps the paper's answer (with the paper-wide quotes, Raine2018's measured traits became
+    'literature'). -> {name: record with value 'measured' / 'literature' / None}."""
     pool = _sentences(secs, ("methods", "title and abstract", "supplements", "results"))
     out = {}
     for name in items:
         w = [x for x in _words(name) if len(x) >= 3 and not x.isdigit()]
         said = [s for s in pool if w and all(x in _words(s) for x in w)][:2]
-        st = state + (" The paper says about how its data were obtained: " + " ".join(f"'{q}'" for q in quotes[:MAX_QUOTES])
-                      if quotes else "")
-        if said:
-            st += f" About '{name}' it says: " + " ".join(f"'{s[:400]}'" for s in said)
+        if not said:
+            out[name] = {"said": [], "value": None}
+            continue
+        st = state + f" About '{name}' the paper says: " + " ".join(f"'{s[:400]}'" for s in said)
         ch, probs = ask(st, SOURCE_Q.format(name=name), dict(SOURCE))
         out[name] = {"choice": ch, "probs": probs, "said": said, "value": ch if duels.sure(ch, probs, *SOURCE) else None}
     return out
@@ -454,9 +455,8 @@ def run(run_dir, papers):
             res["specimen"] = dict(rec, value=got, was=b["value"])
             if got:
                 res["text"]["basisOfRecord"] = dict(b, value=got, settle={"by": "specimen"})
-        quotes = [f["quote"] for f in found["basisOfRecord"]]
         for k, (state, (long_, items)) in traits.items():
-            res["source"][k] = {"long": long_, "traits": ask_source(ask, state, items, secs, quotes)}
+            res["source"][k] = {"long": long_, "traits": ask_source(ask, state, items, secs)}
         ask.unload()
         res["text_found"] = found
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")

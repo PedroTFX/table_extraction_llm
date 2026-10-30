@@ -161,7 +161,9 @@ traits measured by the authors take the specimens' kind (Cappellari2022 foraging
 Eckert2023 eye size / feeding strategy vs body length, Graf2021 nesting site, social behaviour). Two questions:
 - **source** (per trait column, or per trait name of a long table, answered only when every trait agrees):
   "Where do the values of the trait 'X' come from?" measured in this study / taken from the literature.
-  Evidence: the table, the paper's sentences naming the trait, its quotes on how the data were obtained.
+  Evidence: the table and the paper's sentences naming the trait; a trait no sentence names is not asked.
+  (First try also gave the paper-wide quotes: Raine2018's measured traits became 'literature', 10.6k rows;
+  dev 62.2% -> 65.7% with Orr2024 fixed.)
   Literature -> MaterialCitation for that trait; measured -> the caption's or the paper's specimen value
   (never the origin's MaterialCitation; empty if there is none). Before the paper-level answer.
 - **specimen** (only when the paper's value rests on quotes nimble gave it under 0.95): the methods'
