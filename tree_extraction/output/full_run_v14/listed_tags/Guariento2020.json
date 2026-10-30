@@ -14,16 +14,16 @@
    "Diurnal_activity": {
     "choice": "mode",
     "probs": {
-     "individual": 0.008,
-     "mean": 0.013,
-     "mean ± SD": 0.001,
+     "individual": 0.01,
+     "mean": 0.005,
+     "mean ± SD": 0.0,
      "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.975,
+     "count": 0.0,
+     "mode": 0.982,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -32,189 +32,135 @@
    "EU_territories": {
     "choice": "count",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.004,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.974,
-     "mode": 0.017,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "count"
-   },
-   "Range_Latitude": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.02,
-     "mean": 0.816,
-     "mean ± SD": 0.03,
-     "mean ± SE": 0.007,
-     "range": 0.097,
-     "min": 0.009,
-     "max": 0.003,
-     "median": 0.002,
-     "count": 0.001,
-     "mode": 0.013,
-     "single observation": 0.002,
-     "unknown": 0.0
-    },
-    "value": "mean"
-   },
-   "Wingspan": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.027,
-     "mean": 0.912,
-     "mean ± SD": 0.051,
-     "mean ± SE": 0.004,
-     "range": 0.002,
-     "min": 0.0,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.001,
-     "unknown": 0.0
-    },
-    "value": "mean"
-   },
-   "Female_flightless": {
-    "choice": "mode",
-    "probs": {
      "individual": 0.013,
-     "mean": 0.013,
+     "mean": 0.005,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.713,
+     "mode": 0.263,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.904,
+       "b": 0.096
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.019,
+       "b": 0.981
+      }
+     }
+    ],
+    "value": "count"
+   },
+   "Range_Latitude": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.476,
+     "mean": 0.171,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.008,
+     "range": 0.119,
+     "min": 0.008,
+     "max": 0.006,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.089,
+     "single observation": 0.107,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.175,
+       "b": 0.825
+      }
+     },
+     {
+      "a": "o4",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.441,
+       "b": 0.559
+      }
+     }
+    ],
+    "value": null
+   },
+   "Wingspan": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.876,
+     "mean": 0.076,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.006,
+     "single observation": 0.028,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
+   "Female_flightless": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.006,
-     "mode": 0.964,
+     "count": 0.0,
+     "mode": 0.99,
      "single observation": 0.0,
      "unknown": 0.0
     },
     "value": "mode"
    },
    "Voltinism": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.023,
-     "mean": 0.739,
-     "mean ± SD": 0.039,
-     "mean ± SE": 0.005,
-     "range": 0.009,
-     "min": 0.001,
-     "max": 0.002,
-     "median": 0.011,
-     "count": 0.032,
-     "mode": 0.138,
-     "single observation": 0.001,
-     "unknown": 0.001
-    },
-    "duels": [
-     {
-      "a": "o1",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.49,
-       "b": 0.51
-      }
-     }
-    ],
-    "value": null
-   },
-   "Hibernation_Larva": {
     "choice": "mode",
     "probs": {
-     "individual": 0.064,
-     "mean": 0.095,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.002,
-     "range": 0.007,
-     "min": 0.002,
+     "individual": 0.224,
+     "mean": 0.346,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.004,
+     "range": 0.004,
+     "min": 0.001,
      "max": 0.001,
-     "median": 0.002,
-     "count": 0.014,
-     "mode": 0.797,
-     "single observation": 0.013,
-     "unknown": 0.001
+     "median": 0.001,
+     "count": 0.011,
+     "mode": 0.369,
+     "single observation": 0.026,
+     "unknown": 0.0
     },
     "duels": [
      {
       "a": "o9",
       "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.891,
-       "b": 0.109
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.08,
-       "b": 0.92
-      }
-     }
-    ],
-    "value": "mode"
-   },
-   "Hibernation_Pupa": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.031,
-     "mean": 0.077,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.002,
-     "count": 0.022,
-     "mode": 0.856,
-     "single observation": 0.003,
-     "unknown": 0.001
-    },
-    "value": "mode"
-   },
-   "Hibernation_Egg": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.071,
-     "mean": 0.066,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.003,
-     "range": 0.008,
-     "min": 0.002,
-     "max": 0.002,
-     "median": 0.003,
-     "count": 0.029,
-     "mode": 0.755,
-     "single observation": 0.057,
-     "unknown": 0.002
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.875,
-       "b": 0.125
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o9",
       "choice": "b",
       "probs": {
        "a": 0.206,
@@ -224,77 +170,111 @@
     ],
     "value": null
    },
+   "Hibernation_Larva": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.073,
+     "mean": 0.011,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.901,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Hibernation_Pupa": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.054,
+     "mean": 0.011,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.922,
+     "single observation": 0.005,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Hibernation_Egg": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.07,
+     "mean": 0.015,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.888,
+     "single observation": 0.014,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
    "Hibernation_Imago": {
     "choice": "mode",
     "probs": {
-     "individual": 0.114,
-     "mean": 0.126,
-     "mean ± SD": 0.005,
-     "mean ± SE": 0.005,
-     "range": 0.025,
-     "min": 0.005,
-     "max": 0.003,
-     "median": 0.005,
-     "count": 0.056,
-     "mode": 0.6,
-     "single observation": 0.054,
-     "unknown": 0.002
+     "individual": 0.096,
+     "mean": 0.052,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.003,
+     "range": 0.011,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.815,
+     "single observation": 0.011,
+     "unknown": 0.001
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.869,
-       "b": 0.131
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.073,
-       "b": 0.927
-      }
-     }
-    ],
     "value": "mode"
    },
    "Larvae_endophagous": {
     "choice": "mode",
     "probs": {
-     "individual": 0.044,
-     "mean": 0.15,
-     "mean ± SD": 0.011,
+     "individual": 0.262,
+     "mean": 0.031,
+     "mean ± SD": 0.004,
      "mean ± SE": 0.002,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.003,
-     "median": 0.004,
-     "count": 0.023,
-     "mode": 0.755,
-     "single observation": 0.001,
-     "unknown": 0.001
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.687,
+     "single observation": 0.009,
+     "unknown": 0.0
     },
     "duels": [
      {
       "a": "o9",
-      "b": "o1",
+      "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.926,
-       "b": 0.074
+       "a": 0.911,
+       "b": 0.089
       }
      },
      {
-      "a": "o0",
+      "a": "o1",
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.073,
-       "b": 0.927
+       "a": 0.084,
+       "b": 0.916
       }
      }
     ],
@@ -303,65 +283,63 @@
    "Larvae_social": {
     "choice": "mode",
     "probs": {
-     "individual": 0.046,
-     "mean": 0.31,
-     "mean ± SD": 0.055,
-     "mean ± SE": 0.006,
-     "range": 0.096,
-     "min": 0.003,
-     "max": 0.006,
-     "median": 0.043,
-     "count": 0.069,
-     "mode": 0.361,
-     "single observation": 0.002,
-     "unknown": 0.002
+     "individual": 0.116,
+     "mean": 0.044,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.824,
+     "single observation": 0.001,
+     "unknown": 0.0
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.913,
-       "b": 0.087
-      }
-     },
-     {
-      "a": "o4",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.209,
-       "b": 0.791
-      }
-     }
-    ],
-    "value": null
+    "value": "mode"
    },
    "Pupa_in_on_ground": {
     "choice": "mode",
     "probs": {
-     "individual": 0.052,
-     "mean": 0.11,
-     "mean ± SD": 0.016,
-     "mean ± SE": 0.003,
-     "range": 0.05,
-     "min": 0.003,
-     "max": 0.003,
-     "median": 0.006,
-     "count": 0.134,
-     "mode": 0.607,
-     "single observation": 0.016,
-     "unknown": 0.001
+     "individual": 0.165,
+     "mean": 0.019,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.801,
+     "single observation": 0.005,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Egg_larvae_arboreal": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.277,
+     "mean": 0.176,
+     "mean ± SD": 0.09,
+     "mean ± SE": 0.006,
+     "range": 0.032,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.395,
+     "single observation": 0.011,
+     "unknown": 0.004
     },
     "duels": [
      {
       "a": "o9",
-      "b": "o8",
+      "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.831,
-       "b": 0.169
+       "a": 0.897,
+       "b": 0.103
       }
      },
      {
@@ -369,28 +347,28 @@
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.167,
-       "b": 0.833
+       "a": 0.27,
+       "b": 0.73
       }
      }
     ],
-    "value": "mode"
+    "value": null
    },
-   "Egg_larvae_arboreal": {
+   "Larval_host-plant_families": {
     "choice": "mode",
     "probs": {
-     "individual": 0.058,
-     "mean": 0.094,
-     "mean ± SD": 0.034,
-     "mean ± SE": 0.004,
-     "range": 0.033,
-     "min": 0.003,
-     "max": 0.004,
-     "median": 0.002,
-     "count": 0.021,
-     "mode": 0.725,
-     "single observation": 0.008,
-     "unknown": 0.016
+     "individual": 0.072,
+     "mean": 0.194,
+     "mean ± SD": 0.017,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.099,
+     "mode": 0.609,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "duels": [
      {
@@ -398,46 +376,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.894,
-       "b": 0.106
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.133,
-       "b": 0.867
-      }
-     }
-    ],
-    "value": "mode"
-   },
-   "Larval_host-plant_families": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.041,
-     "mean": 0.117,
-     "mean ± SD": 0.015,
-     "mean ± SE": 0.003,
-     "range": 0.003,
-     "min": 0.001,
-     "max": 0.003,
-     "median": 0.003,
-     "count": 0.362,
-     "mode": 0.45,
-     "single observation": 0.001,
-     "unknown": 0.001
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o8",
-      "choice": "a",
-      "probs": {
-       "a": 0.633,
-       "b": 0.367
+       "a": 0.549,
+       "b": 0.451
       }
      }
     ],
@@ -446,16 +386,197 @@
    "Functional_proboscis": {
     "choice": "mode",
     "probs": {
-     "individual": 0.028,
-     "mean": 0.134,
-     "mean ± SD": 0.02,
+     "individual": 0.066,
+     "mean": 0.078,
+     "mean ± SD": 0.012,
      "mean ± SE": 0.004,
-     "range": 0.004,
+     "range": 0.002,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.004,
-     "mode": 0.796,
+     "count": 0.002,
+     "mode": 0.831,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Imago_on_non-nectar_food-sources": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.03,
+     "mean": 0.029,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.004,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.926,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Larvae_on_dead_plant_matter": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.195,
+     "mean": 0.28,
+     "mean ± SD": 0.087,
+     "mean ± SE": 0.007,
+     "range": 0.025,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.007,
+     "mode": 0.374,
+     "single observation": 0.017,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.395,
+       "b": 0.605
+      }
+     }
+    ],
+    "value": null
+   },
+   "Larvae_on_mosses-lichens": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.156,
+     "mean": 0.408,
+     "mean ± SD": 0.075,
+     "mean ± SE": 0.006,
+     "range": 0.032,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.007,
+     "mode": 0.299,
+     "single observation": 0.011,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.272,
+       "b": 0.728
+      }
+     }
+    ],
+    "value": null
+   },
+   "Larvae_on_reed_aquatic": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.142,
+     "mean": 0.185,
+     "mean ± SD": 0.035,
+     "mean ± SE": 0.005,
+     "range": 0.015,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.006,
+     "mode": 0.588,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.547,
+       "b": 0.453
+      }
+     }
+    ],
+    "value": null
+   },
+   "Larvae_on_herbs": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.051,
+     "mean": 0.479,
+     "mean ± SD": 0.068,
+     "mean ± SE": 0.006,
+     "range": 0.008,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.007,
+     "mode": 0.369,
+     "single observation": 0.006,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.341,
+       "b": 0.659
+      }
+     }
+    ],
+    "value": null
+   },
+   "Larvae_on_grasses": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.182,
+     "mean": 0.284,
+     "mean ± SD": 0.07,
+     "mean ± SE": 0.006,
+     "range": 0.027,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.009,
+     "mode": 0.407,
+     "single observation": 0.007,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.498,
+       "b": 0.502
+      }
+     }
+    ],
+    "value": null
+   },
+   "Larvae_on_softwood_trees": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.088,
+     "mean": 0.335,
+     "mean ± SD": 0.089,
+     "mean ± SE": 0.006,
+     "range": 0.025,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.005,
+     "mode": 0.44,
      "single observation": 0.005,
      "unknown": 0.002
     },
@@ -465,312 +586,37 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.901,
-       "b": 0.099
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.099,
-       "b": 0.901
-      }
-     }
-    ],
-    "value": "mode"
-   },
-   "Imago_on_non-nectar_food-sources": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.102,
-     "mean": 0.105,
-     "mean ± SD": 0.007,
-     "mean ± SE": 0.004,
-     "range": 0.013,
-     "min": 0.003,
-     "max": 0.002,
-     "median": 0.001,
-     "count": 0.097,
-     "mode": 0.543,
-     "single observation": 0.054,
-     "unknown": 0.068
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.925,
-       "b": 0.075
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.101,
-       "b": 0.899
-      }
-     }
-    ],
-    "value": "mode"
-   },
-   "Larvae_on_dead_plant_matter": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.085,
-     "mean": 0.274,
-     "mean ± SD": 0.045,
-     "mean ± SE": 0.006,
-     "range": 0.057,
-     "min": 0.004,
-     "max": 0.004,
-     "median": 0.007,
-     "count": 0.067,
-     "mode": 0.429,
-     "single observation": 0.012,
-     "unknown": 0.009
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.905,
-       "b": 0.095
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.124,
-       "b": 0.876
-      }
-     }
-    ],
-    "value": "mode"
-   },
-   "Larvae_on_mosses-lichens": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.057,
-     "mean": 0.27,
-     "mean ± SD": 0.062,
-     "mean ± SE": 0.005,
-     "range": 0.059,
-     "min": 0.002,
-     "max": 0.003,
-     "median": 0.008,
-     "count": 0.093,
-     "mode": 0.434,
-     "single observation": 0.003,
-     "unknown": 0.003
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.928,
-       "b": 0.072
-      }
-     },
-     {
-      "a": "o8",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.158,
-       "b": 0.842
-      }
-     }
-    ],
-    "value": "mode"
-   },
-   "Larvae_on_reed_aquatic": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.087,
-     "mean": 0.188,
-     "mean ± SD": 0.021,
-     "mean ± SE": 0.005,
-     "range": 0.07,
-     "min": 0.005,
-     "max": 0.005,
-     "median": 0.005,
-     "count": 0.116,
-     "mode": 0.478,
-     "single observation": 0.013,
-     "unknown": 0.007
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.919,
-       "b": 0.081
-      }
-     },
-     {
-      "a": "o8",
-      "b": "o9",
-      "choice": "a",
-      "probs": {
-       "a": 0.577,
-       "b": 0.423
-      }
-     }
-    ],
-    "value": null
-   },
-   "Larvae_on_herbs": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.027,
-     "mean": 0.378,
-     "mean ± SD": 0.027,
-     "mean ± SE": 0.004,
-     "range": 0.009,
-     "min": 0.001,
-     "max": 0.003,
-     "median": 0.004,
-     "count": 0.043,
-     "mode": 0.495,
-     "single observation": 0.004,
-     "unknown": 0.004
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.88,
-       "b": 0.12
-      }
-     },
-     {
-      "a": "o8",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.222,
-       "b": 0.778
-      }
-     }
-    ],
-    "value": null
-   },
-   "Larvae_on_grasses": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.089,
-     "mean": 0.162,
-     "mean ± SD": 0.06,
-     "mean ± SE": 0.007,
-     "range": 0.069,
-     "min": 0.007,
-     "max": 0.006,
-     "median": 0.007,
-     "count": 0.098,
-     "mode": 0.453,
-     "single observation": 0.015,
-     "unknown": 0.027
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.903,
-       "b": 0.097
-      }
-     },
-     {
-      "a": "o8",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.459,
-       "b": 0.541
-      }
-     }
-    ],
-    "value": null
-   },
-   "Larvae_on_softwood_trees": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.09,
-     "mean": 0.163,
-     "mean ± SD": 0.048,
-     "mean ± SE": 0.006,
-     "range": 0.1,
-     "min": 0.004,
-     "max": 0.006,
-     "median": 0.01,
-     "count": 0.045,
-     "mode": 0.495,
-     "single observation": 0.016,
-     "unknown": 0.016
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.916,
-       "b": 0.084
-      }
-     },
-     {
-      "a": "o4",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.261,
-       "b": 0.739
+       "a": 0.583,
+       "b": 0.417
       }
      }
     ],
     "value": null
    },
    "Larvae_on_lianas": {
-    "choice": "mean",
+    "choice": "mode",
     "probs": {
-     "individual": 0.081,
-     "mean": 0.368,
-     "mean ± SD": 0.043,
+     "individual": 0.109,
+     "mean": 0.332,
+     "mean ± SD": 0.088,
      "mean ± SE": 0.006,
-     "range": 0.077,
-     "min": 0.003,
-     "max": 0.005,
-     "median": 0.01,
-     "count": 0.088,
-     "mode": 0.28,
-     "single observation": 0.016,
-     "unknown": 0.023
+     "range": 0.035,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.008,
+     "mode": 0.41,
+     "single observation": 0.006,
+     "unknown": 0.001
     },
     "duels": [
      {
-      "a": "o1",
-      "b": "o9",
-      "choice": "b",
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
       "probs": {
-       "a": 0.47,
-       "b": 0.53
+       "a": 0.626,
+       "b": 0.374
       }
      }
     ],
@@ -779,18 +625,18 @@
    "Larvae_on_broadleaved_trees_shrubs": {
     "choice": "mode",
     "probs": {
-     "individual": 0.06,
-     "mean": 0.165,
-     "mean ± SD": 0.039,
-     "mean ± SE": 0.005,
-     "range": 0.029,
-     "min": 0.003,
-     "max": 0.004,
-     "median": 0.008,
-     "count": 0.026,
-     "mode": 0.656,
+     "individual": 0.116,
+     "mean": 0.204,
+     "mean ± SD": 0.092,
+     "mean ± SE": 0.006,
+     "range": 0.032,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.535,
      "single observation": 0.003,
-     "unknown": 0.004
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -798,37 +644,28 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.926,
-       "b": 0.074
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.11,
-       "b": 0.89
+       "a": 0.515,
+       "b": 0.485
       }
      }
     ],
-    "value": "mode"
+    "value": null
    },
    "Larvae_subterraneous": {
     "choice": "mode",
     "probs": {
-     "individual": 0.059,
-     "mean": 0.169,
-     "mean ± SD": 0.031,
-     "mean ± SE": 0.005,
-     "range": 0.055,
-     "min": 0.005,
-     "max": 0.004,
-     "median": 0.004,
-     "count": 0.023,
-     "mode": 0.621,
-     "single observation": 0.003,
-     "unknown": 0.022
+     "individual": 0.101,
+     "mean": 0.152,
+     "mean ± SD": 0.053,
+     "mean ± SE": 0.004,
+     "range": 0.017,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.662,
+     "single observation": 0.001,
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -836,37 +673,28 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.929,
-       "b": 0.071
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.086,
-       "b": 0.914
+       "a": 0.737,
+       "b": 0.263
       }
      }
     ],
-    "value": "mode"
+    "value": null
    },
    "Migratory_species": {
     "choice": "mode",
     "probs": {
-     "individual": 0.009,
-     "mean": 0.012,
+     "individual": 0.006,
+     "mean": 0.004,
      "mean ± SD": 0.001,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
      "max": 0.0,
-     "median": 0.001,
-     "count": 0.002,
-     "mode": 0.968,
-     "single observation": 0.001,
-     "unknown": 0.002
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.984,
+     "single observation": 0.0,
+     "unknown": 0.001
     },
     "value": "mode"
    }
@@ -875,103 +703,112 @@
    "DN1": {
     "choice": "individual",
     "probs": {
-     "individual": 0.247,
-     "mean": 0.126,
-     "mean ± SD": 0.025,
-     "mean ± SE": 0.015,
-     "range": 0.013,
-     "min": 0.176,
-     "max": 0.058,
-     "median": 0.031,
-     "count": 0.183,
-     "mode": 0.022,
-     "single observation": 0.101,
-     "unknown": 0.003
-    },
-    "duels": [
-     {
-      "a": "o0",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.116,
-       "b": 0.884
-      }
-     },
-     {
-      "a": "o5",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.071,
-       "b": 0.929
-      }
-     }
-    ],
-    "value": "count"
-   },
-   "DN2": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.381,
-     "mean": 0.208,
-     "mean ± SD": 0.023,
-     "mean ± SE": 0.01,
-     "range": 0.006,
-     "min": 0.012,
-     "max": 0.006,
-     "median": 0.021,
-     "count": 0.224,
-     "mode": 0.027,
-     "single observation": 0.079,
+     "individual": 0.515,
+     "mean": 0.077,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.006,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.003,
+     "median": 0.002,
+     "count": 0.128,
+     "mode": 0.069,
+     "single observation": 0.191,
      "unknown": 0.001
     },
     "duels": [
      {
       "a": "o0",
-      "b": "o8",
-      "choice": "b",
+      "b": "o10",
+      "choice": "a",
       "probs": {
-       "a": 0.077,
-       "b": 0.923
+       "a": 0.86,
+       "b": 0.14
       }
      },
      {
-      "a": "o1",
-      "b": "o8",
-      "choice": "b",
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
       "probs": {
-       "a": 0.058,
-       "b": 0.942
+       "a": 0.681,
+       "b": 0.319
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
-   "DN3": {
+   "DN2": {
     "choice": "individual",
     "probs": {
-     "individual": 0.352,
-     "mean": 0.222,
-     "mean ± SD": 0.024,
-     "mean ± SE": 0.009,
-     "range": 0.006,
-     "min": 0.021,
-     "max": 0.023,
-     "median": 0.049,
-     "count": 0.148,
-     "mode": 0.043,
-     "single observation": 0.099,
-     "unknown": 0.002
+     "individual": 0.695,
+     "mean": 0.023,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.068,
+     "mode": 0.074,
+     "single observation": 0.132,
+     "unknown": 0.001
     },
     "duels": [
      {
       "a": "o0",
-      "b": "o1",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.932,
+       "b": 0.068
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.233,
-       "b": 0.767
+       "a": 0.493,
+       "b": 0.507
+      }
+     }
+    ],
+    "value": null
+   },
+   "DN3": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.654,
+     "mean": 0.037,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.014,
+     "mode": 0.072,
+     "single observation": 0.214,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.904,
+       "b": 0.096
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.483,
+       "b": 0.517
       }
      }
     ],
@@ -980,94 +817,94 @@
    "DN4": {
     "choice": "individual",
     "probs": {
-     "individual": 0.246,
-     "mean": 0.192,
-     "mean ± SD": 0.015,
-     "mean ± SE": 0.01,
-     "range": 0.015,
-     "min": 0.142,
-     "max": 0.016,
-     "median": 0.017,
-     "count": 0.132,
-     "mode": 0.046,
-     "single observation": 0.168,
-     "unknown": 0.002
+     "individual": 0.709,
+     "mean": 0.02,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.064,
+     "mode": 0.098,
+     "single observation": 0.098,
+     "unknown": 0.001
     },
     "duels": [
      {
       "a": "o0",
-      "b": "o1",
-      "choice": "b",
+      "b": "o9",
+      "choice": "a",
       "probs": {
-       "a": 0.297,
-       "b": 0.703
+       "a": 0.78,
+       "b": 0.22
       }
      }
     ],
     "value": null
    },
    "DN5": {
-    "choice": "individual",
+    "choice": "single observation",
     "probs": {
-     "individual": 0.3,
-     "mean": 0.071,
-     "mean ± SD": 0.007,
-     "mean ± SE": 0.006,
-     "range": 0.004,
-     "min": 0.025,
-     "max": 0.044,
-     "median": 0.02,
-     "count": 0.263,
-     "mode": 0.014,
-     "single observation": 0.244,
-     "unknown": 0.002
+     "individual": 0.32,
+     "mean": 0.03,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.186,
+     "mode": 0.048,
+     "single observation": 0.403,
+     "unknown": 0.001
     },
     "duels": [
      {
-      "a": "o0",
-      "b": "o8",
+      "a": "o10",
+      "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.099,
-       "b": 0.901
+       "a": 0.074,
+       "b": 0.926
       }
      },
      {
-      "a": "o10",
-      "b": "o8",
-      "choice": "b",
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
       "probs": {
-       "a": 0.028,
-       "b": 0.972
+       "a": 0.613,
+       "b": 0.387
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "DF1": {
     "choice": "count",
     "probs": {
-     "individual": 0.177,
-     "mean": 0.276,
-     "mean ± SD": 0.041,
-     "mean ± SE": 0.014,
-     "range": 0.004,
-     "min": 0.064,
-     "max": 0.021,
-     "median": 0.008,
-     "count": 0.278,
-     "mode": 0.038,
-     "single observation": 0.078,
+     "individual": 0.257,
+     "mean": 0.09,
+     "mean ± SD": 0.01,
+     "mean ± SE": 0.008,
+     "range": 0.002,
+     "min": 0.009,
+     "max": 0.009,
+     "median": 0.001,
+     "count": 0.491,
+     "mode": 0.059,
+     "single observation": 0.063,
      "unknown": 0.001
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o1",
+      "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.782,
-       "b": 0.218
+       "a": 0.608,
+       "b": 0.392
       }
      }
     ],
@@ -1076,18 +913,18 @@
    "DF2": {
     "choice": "individual",
     "probs": {
-     "individual": 0.51,
-     "mean": 0.115,
-     "mean ± SD": 0.021,
-     "mean ± SE": 0.008,
-     "range": 0.005,
-     "min": 0.009,
-     "max": 0.02,
-     "median": 0.009,
-     "count": 0.184,
-     "mode": 0.033,
-     "single observation": 0.084,
-     "unknown": 0.002
+     "individual": 0.39,
+     "mean": 0.038,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.007,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.004,
+     "median": 0.001,
+     "count": 0.379,
+     "mode": 0.114,
+     "single observation": 0.056,
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -1095,93 +932,93 @@
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.11,
-       "b": 0.89
+       "a": 0.144,
+       "b": 0.856
       }
      },
      {
-      "a": "o1",
+      "a": "o9",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.058,
-       "b": 0.942
+       "a": 0.111,
+       "b": 0.889
       }
      }
     ],
     "value": "count"
    },
    "DF3": {
-    "choice": "count",
+    "choice": "individual",
     "probs": {
-     "individual": 0.136,
-     "mean": 0.203,
-     "mean ± SD": 0.034,
-     "mean ± SE": 0.009,
-     "range": 0.003,
-     "min": 0.007,
-     "max": 0.04,
-     "median": 0.036,
-     "count": 0.422,
-     "mode": 0.036,
-     "single observation": 0.072,
-     "unknown": 0.003
-    },
-    "duels": [
-     {
-      "a": "o8",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.856,
-       "b": 0.144
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.063,
-       "b": 0.937
-      }
-     }
-    ],
-    "value": "count"
-   },
-   "DF4": {
-    "choice": "count",
-    "probs": {
-     "individual": 0.146,
-     "mean": 0.122,
-     "mean ± SD": 0.02,
-     "mean ± SE": 0.014,
-     "range": 0.026,
-     "min": 0.031,
-     "max": 0.152,
-     "median": 0.01,
-     "count": 0.342,
-     "mode": 0.052,
-     "single observation": 0.083,
+     "individual": 0.497,
+     "mean": 0.035,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.078,
+     "mode": 0.101,
+     "single observation": 0.277,
      "unknown": 0.001
     },
     "duels": [
      {
-      "a": "o8",
-      "b": "o6",
+      "a": "o0",
+      "b": "o10",
       "choice": "a",
       "probs": {
-       "a": 0.9,
-       "b": 0.1
+       "a": 0.845,
+       "b": 0.155
       }
      },
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.522,
+       "b": 0.478
+      }
+     }
+    ],
+    "value": null
+   },
+   "DF4": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.323,
+     "mean": 0.039,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.005,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.004,
+     "median": 0.001,
+     "count": 0.262,
+     "mode": 0.175,
+     "single observation": 0.18,
+     "unknown": 0.001
+    },
+    "duels": [
      {
       "a": "o0",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.089,
-       "b": 0.911
+       "a": 0.148,
+       "b": 0.852
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.031,
+       "b": 0.969
       }
      }
     ],
@@ -1190,103 +1027,94 @@
    "DF5": {
     "choice": "count",
     "probs": {
-     "individual": 0.055,
-     "mean": 0.081,
-     "mean ± SD": 0.027,
-     "mean ± SE": 0.008,
+     "individual": 0.107,
+     "mean": 0.065,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.009,
      "range": 0.003,
-     "min": 0.005,
-     "max": 0.072,
-     "median": 0.019,
-     "count": 0.666,
-     "mode": 0.005,
-     "single observation": 0.059,
+     "min": 0.001,
+     "max": 0.015,
+     "median": 0.002,
+     "count": 0.52,
+     "mode": 0.083,
+     "single observation": 0.182,
      "unknown": 0.001
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o1",
+      "b": "o10",
       "choice": "a",
       "probs": {
-       "a": 0.819,
-       "b": 0.181
+       "a": 0.87,
+       "b": 0.13
       }
      },
      {
-      "a": "o6",
+      "a": "o0",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.045,
-       "b": 0.955
+       "a": 0.124,
+       "b": 0.876
       }
      }
     ],
     "value": "count"
    },
    "LN3": {
-    "choice": "count",
+    "choice": "single observation",
     "probs": {
-     "individual": 0.138,
-     "mean": 0.096,
-     "mean ± SD": 0.024,
-     "mean ± SE": 0.01,
-     "range": 0.016,
-     "min": 0.077,
-     "max": 0.122,
-     "median": 0.042,
-     "count": 0.297,
-     "mode": 0.065,
-     "single observation": 0.108,
-     "unknown": 0.004
+     "individual": 0.153,
+     "mean": 0.066,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.006,
+     "range": 0.003,
+     "min": 0.003,
+     "max": 0.02,
+     "median": 0.008,
+     "count": 0.137,
+     "mode": 0.261,
+     "single observation": 0.333,
+     "unknown": 0.002
     },
     "duels": [
      {
-      "a": "o8",
-      "b": "o0",
+      "a": "o10",
+      "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.804,
-       "b": 0.196
-      }
-     },
-     {
-      "a": "o6",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.072,
-       "b": 0.928
+       "a": 0.6,
+       "b": 0.4
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "LN4": {
-    "choice": "count",
+    "choice": "mode",
     "probs": {
-     "individual": 0.122,
-     "mean": 0.074,
-     "mean ± SD": 0.013,
+     "individual": 0.242,
+     "mean": 0.083,
+     "mean ± SD": 0.01,
      "mean ± SE": 0.011,
-     "range": 0.02,
-     "min": 0.044,
-     "max": 0.058,
-     "median": 0.041,
-     "count": 0.435,
-     "mode": 0.072,
-     "single observation": 0.107,
-     "unknown": 0.004
+     "range": 0.012,
+     "min": 0.005,
+     "max": 0.036,
+     "median": 0.004,
+     "count": 0.111,
+     "mode": 0.348,
+     "single observation": 0.134,
+     "unknown": 0.002
     },
     "duels": [
      {
-      "a": "o8",
+      "a": "o9",
       "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.759,
-       "b": 0.241
+       "a": 0.623,
+       "b": 0.377
       }
      }
     ],
@@ -1295,45 +1123,45 @@
    "LF1": {
     "choice": "count",
     "probs": {
-     "individual": 0.044,
-     "mean": 0.034,
-     "mean ± SD": 0.012,
-     "mean ± SE": 0.006,
-     "range": 0.003,
-     "min": 0.008,
-     "max": 0.028,
-     "median": 0.007,
-     "count": 0.821,
-     "mode": 0.009,
-     "single observation": 0.027,
-     "unknown": 0.002
+     "individual": 0.014,
+     "mean": 0.02,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.004,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.02,
+     "median": 0.001,
+     "count": 0.902,
+     "mode": 0.026,
+     "single observation": 0.002,
+     "unknown": 0.001
     },
     "value": "count"
    },
    "LF2": {
     "choice": "count",
     "probs": {
-     "individual": 0.078,
-     "mean": 0.103,
-     "mean ± SD": 0.035,
-     "mean ± SE": 0.007,
-     "range": 0.003,
-     "min": 0.005,
-     "max": 0.048,
-     "median": 0.04,
-     "count": 0.597,
-     "mode": 0.043,
-     "single observation": 0.038,
-     "unknown": 0.003
+     "individual": 0.082,
+     "mean": 0.131,
+     "mean ± SD": 0.063,
+     "mean ± SE": 0.014,
+     "range": 0.009,
+     "min": 0.003,
+     "max": 0.018,
+     "median": 0.013,
+     "count": 0.365,
+     "mode": 0.267,
+     "single observation": 0.028,
+     "unknown": 0.006
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o1",
+      "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.796,
-       "b": 0.204
+       "a": 0.726,
+       "b": 0.274
       }
      }
     ],
@@ -1342,36 +1170,36 @@
    "LF3": {
     "choice": "count",
     "probs": {
-     "individual": 0.05,
-     "mean": 0.124,
-     "mean ± SD": 0.058,
+     "individual": 0.064,
+     "mean": 0.079,
+     "mean ± SD": 0.054,
      "mean ± SE": 0.009,
-     "range": 0.003,
-     "min": 0.005,
-     "max": 0.063,
-     "median": 0.026,
-     "count": 0.59,
-     "mode": 0.034,
-     "single observation": 0.035,
-     "unknown": 0.003
+     "range": 0.006,
+     "min": 0.003,
+     "max": 0.015,
+     "median": 0.007,
+     "count": 0.614,
+     "mode": 0.13,
+     "single observation": 0.018,
+     "unknown": 0.002
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o1",
+      "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.82,
-       "b": 0.18
+       "a": 0.89,
+       "b": 0.11
       }
      },
      {
-      "a": "o6",
+      "a": "o1",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.043,
-       "b": 0.957
+       "a": 0.095,
+       "b": 0.905
       }
      }
     ],
@@ -1380,17 +1208,17 @@
    "LF4": {
     "choice": "count",
     "probs": {
-     "individual": 0.057,
-     "mean": 0.069,
-     "mean ± SD": 0.017,
-     "mean ± SE": 0.007,
-     "range": 0.005,
-     "min": 0.013,
-     "max": 0.096,
-     "median": 0.011,
-     "count": 0.67,
-     "mode": 0.014,
-     "single observation": 0.04,
+     "individual": 0.046,
+     "mean": 0.034,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.005,
+     "range": 0.004,
+     "min": 0.002,
+     "max": 0.057,
+     "median": 0.003,
+     "count": 0.794,
+     "mode": 0.032,
+     "single observation": 0.007,
      "unknown": 0.002
     },
     "duels": [
@@ -1399,17 +1227,17 @@
       "b": "o6",
       "choice": "a",
       "probs": {
-       "a": 0.923,
-       "b": 0.077
+       "a": 0.924,
+       "b": 0.076
       }
      },
      {
-      "a": "o1",
+      "a": "o0",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.039,
-       "b": 0.961
+       "a": 0.102,
+       "b": 0.898
       }
      }
     ],
@@ -1418,179 +1246,152 @@
    "MN1": {
     "choice": "count",
     "probs": {
-     "individual": 0.075,
-     "mean": 0.068,
-     "mean ± SD": 0.022,
+     "individual": 0.028,
+     "mean": 0.103,
+     "mean ± SD": 0.019,
      "mean ± SE": 0.008,
-     "range": 0.003,
-     "min": 0.012,
-     "max": 0.035,
-     "median": 0.048,
-     "count": 0.712,
-     "mode": 0.006,
-     "single observation": 0.01,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.022,
+     "median": 0.016,
+     "count": 0.775,
+     "mode": 0.023,
+     "single observation": 0.001,
      "unknown": 0.001
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o0",
+      "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.9,
-       "b": 0.1
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.03,
-       "b": 0.97
+       "a": 0.731,
+       "b": 0.269
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "MN2": {
     "choice": "count",
     "probs": {
-     "individual": 0.115,
-     "mean": 0.067,
-     "mean ± SD": 0.06,
-     "mean ± SE": 0.008,
-     "range": 0.005,
-     "min": 0.015,
-     "max": 0.088,
-     "median": 0.046,
-     "count": 0.561,
-     "mode": 0.016,
-     "single observation": 0.017,
-     "unknown": 0.001
+     "individual": 0.055,
+     "mean": 0.225,
+     "mean ± SD": 0.054,
+     "mean ± SE": 0.013,
+     "range": 0.009,
+     "min": 0.003,
+     "max": 0.08,
+     "median": 0.056,
+     "count": 0.46,
+     "mode": 0.041,
+     "single observation": 0.003,
+     "unknown": 0.002
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.894,
-       "b": 0.106
-      }
-     },
-     {
-      "a": "o6",
-      "b": "o8",
+      "b": "o1",
       "choice": "b",
       "probs": {
-       "a": 0.068,
-       "b": 0.932
+       "a": 0.465,
+       "b": 0.535
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "MN3": {
-    "choice": "count",
+    "choice": "mean",
     "probs": {
-     "individual": 0.142,
-     "mean": 0.126,
-     "mean ± SD": 0.056,
-     "mean ± SE": 0.012,
-     "range": 0.011,
-     "min": 0.027,
-     "max": 0.06,
+     "individual": 0.089,
+     "mean": 0.404,
+     "mean ± SD": 0.055,
+     "mean ± SE": 0.014,
+     "range": 0.008,
+     "min": 0.007,
+     "max": 0.039,
      "median": 0.066,
-     "count": 0.394,
-     "mode": 0.027,
-     "single observation": 0.076,
-     "unknown": 0.004
+     "count": 0.179,
+     "mode": 0.094,
+     "single observation": 0.039,
+     "unknown": 0.007
     },
     "duels": [
-     {
-      "a": "o8",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.846,
-       "b": 0.154
-      }
-     },
      {
       "a": "o1",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.045,
-       "b": 0.955
+       "a": 0.217,
+       "b": 0.783
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "MN4": {
     "choice": "max",
     "probs": {
-     "individual": 0.12,
-     "mean": 0.119,
-     "mean ± SD": 0.037,
-     "mean ± SE": 0.009,
-     "range": 0.014,
-     "min": 0.037,
-     "max": 0.349,
-     "median": 0.022,
-     "count": 0.255,
-     "mode": 0.017,
-     "single observation": 0.017,
-     "unknown": 0.002
+     "individual": 0.083,
+     "mean": 0.253,
+     "mean ± SD": 0.05,
+     "mean ± SE": 0.018,
+     "range": 0.041,
+     "min": 0.017,
+     "max": 0.347,
+     "median": 0.016,
+     "count": 0.083,
+     "mode": 0.071,
+     "single observation": 0.016,
+     "unknown": 0.005
     },
     "duels": [
      {
       "a": "o6",
-      "b": "o8",
+      "b": "o1",
       "choice": "b",
       "probs": {
-       "a": 0.11,
-       "b": 0.89
+       "a": 0.16,
+       "b": 0.84
       }
      },
      {
       "a": "o0",
-      "b": "o8",
+      "b": "o1",
       "choice": "b",
       "probs": {
-       "a": 0.114,
-       "b": 0.886
+       "a": 0.051,
+       "b": 0.949
       }
      }
     ],
-    "value": "count"
+    "value": "mean"
    },
    "MN5": {
     "choice": "count",
     "probs": {
-     "individual": 0.082,
-     "mean": 0.071,
-     "mean ± SD": 0.026,
+     "individual": 0.032,
+     "mean": 0.106,
+     "mean ± SD": 0.027,
      "mean ± SE": 0.007,
      "range": 0.004,
-     "min": 0.02,
-     "max": 0.133,
-     "median": 0.02,
-     "count": 0.606,
-     "mode": 0.005,
-     "single observation": 0.024,
+     "min": 0.005,
+     "max": 0.068,
+     "median": 0.017,
+     "count": 0.717,
+     "mode": 0.01,
+     "single observation": 0.006,
      "unknown": 0.001
     },
     "duels": [
      {
       "a": "o8",
-      "b": "o6",
+      "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.732,
-       "b": 0.268
+       "a": 0.667,
+       "b": 0.333
       }
      }
     ],
@@ -1599,18 +1400,18 @@
    "MF1": {
     "choice": "count",
     "probs": {
-     "individual": 0.099,
-     "mean": 0.141,
-     "mean ± SD": 0.082,
-     "mean ± SE": 0.014,
-     "range": 0.004,
-     "min": 0.009,
-     "max": 0.077,
-     "median": 0.015,
-     "count": 0.51,
-     "mode": 0.027,
-     "single observation": 0.019,
-     "unknown": 0.003
+     "individual": 0.046,
+     "mean": 0.112,
+     "mean ± SD": 0.051,
+     "mean ± SE": 0.023,
+     "range": 0.003,
+     "min": 0.003,
+     "max": 0.054,
+     "median": 0.004,
+     "count": 0.682,
+     "mode": 0.018,
+     "single observation": 0.004,
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -1618,46 +1419,37 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.809,
-       "b": 0.191
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.112,
-       "b": 0.888
+       "a": 0.579,
+       "b": 0.421
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "MF2": {
-    "choice": "count",
+    "choice": "max",
     "probs": {
-     "individual": 0.115,
-     "mean": 0.098,
-     "mean ± SD": 0.095,
-     "mean ± SE": 0.01,
-     "range": 0.006,
+     "individual": 0.112,
+     "mean": 0.154,
+     "mean ± SD": 0.143,
+     "mean ± SE": 0.017,
+     "range": 0.012,
      "min": 0.008,
-     "max": 0.181,
-     "median": 0.018,
-     "count": 0.403,
-     "mode": 0.036,
-     "single observation": 0.025,
-     "unknown": 0.005
+     "max": 0.303,
+     "median": 0.014,
+     "count": 0.149,
+     "mode": 0.069,
+     "single observation": 0.013,
+     "unknown": 0.006
     },
     "duels": [
      {
-      "a": "o8",
-      "b": "o6",
-      "choice": "a",
+      "a": "o6",
+      "b": "o1",
+      "choice": "b",
       "probs": {
-       "a": 0.763,
-       "b": 0.237
+       "a": 0.208,
+       "b": 0.792
       }
      }
     ],
@@ -1668,56 +1460,36 @@
    "Name in Truxa 2012": {
     "choice": "mode",
     "probs": {
-     "individual": 0.247,
-     "mean": 0.008,
+     "individual": 0.103,
+     "mean": 0.019,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.739,
+     "count": 0.0,
+     "mode": 0.873,
      "single observation": 0.002,
-     "unknown": 0.001
+     "unknown": 0.0
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.122,
-       "b": 0.878
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.009,
-       "b": 0.991
-      }
-     }
-    ],
-    "value": "individual"
+    "value": "mode"
    },
    "Replacement for": {
     "choice": "mode",
     "probs": {
-     "individual": 0.039,
-     "mean": 0.009,
+     "individual": 0.036,
+     "mean": 0.045,
      "mean ± SD": 0.005,
      "mean ± SE": 0.002,
-     "range": 0.003,
+     "range": 0.002,
      "min": 0.001,
-     "max": 0.002,
-     "median": 0.001,
-     "count": 0.004,
-     "mode": 0.887,
-     "single observation": 0.005,
-     "unknown": 0.043
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.886,
+     "single observation": 0.003,
+     "unknown": 0.017
     },
     "value": "mode"
    }
@@ -1920,11 +1692,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.08,
+     "both": 0.084,
      "female": 0.006,
-     "male": 0.017,
-     "unknown": 0.022,
-     "not": 0.876
+     "male": 0.02,
+     "unknown": 0.018,
+     "not": 0.872
     },
     "value": null
    },
@@ -1933,43 +1705,43 @@
     "probs": {
      "queen": 0.001,
      "male alate": 0.001,
-     "worker": 0.002,
+     "worker": 0.001,
      "minor worker": 0.0,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.997
+     "not": 0.996
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "PreservedSpecimen",
     "probs": {
-     "PreservedSpecimen": 0.93,
+     "PreservedSpecimen": 0.944,
      "LivingSpecimen": 0.001,
      "HumanObservation": 0.002,
      "MachineObservation": 0.001,
      "MaterialSample": 0.001,
      "MaterialCitation": 0.009,
-     "Occurrence": 0.006,
+     "Occurrence": 0.005,
      "Taxon": 0.0,
-     "not": 0.05
+     "not": 0.038
     },
     "value": "PreservedSpecimen"
    },
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.495,
-     "larva": 0.031,
-     "mature larva": 0.004,
+     "adult": 0.535,
+     "larva": 0.026,
+     "mature larva": 0.003,
      "nymph": 0.001,
-     "caterpillar": 0.003,
+     "caterpillar": 0.006,
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
      "all": 0.001,
-     "unknown": 0.017,
-     "not": 0.447
+     "unknown": 0.013,
+     "not": 0.413
     },
     "duels": [
      {
@@ -1977,8 +1749,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.903,
-       "b": 0.097
+       "a": 0.914,
+       "b": 0.086
       }
      },
      {
@@ -1986,16 +1758,16 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.047,
-       "b": 0.953
+       "a": 0.046,
+       "b": 0.954
       }
      }
     ],
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.355,
-      "not": 0.645
+      "pick": 0.36,
+      "not": 0.64
      }
     },
     "value": null
@@ -2025,6 +1797,415 @@
    }
   }
  },
+ "source": {
+  "4": {
+   "long": false,
+   "traits": {
+    "Diurnal_activity": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.044,
+      "literature": 0.956
+     },
+     "said": [
+      "Trusted web-sites : [http://www.lepiforum.de/](http://www.lepiforum.de/) [https://ukmoths.org.uk/](https://ukmoths.org.uk/) [http://www.pyrgus.de/](http://www.pyrgus.de/) [http://www.euroleps.ch/](http://www.euroleps.ch/) Definition and scoring of traits : Diurnal\\_activity: 0 – strictly nocturnal; 1 – adults at least partially flying during daytime EU\\_territories: number of European territories (sensu Karsholt & Razowski 1996) from which a species is known."
+     ],
+     "value": "literature"
+    },
+    "EU_territories": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.012,
+      "literature": 0.988
+     },
+     "said": [
+      "Trusted web-sites : [http://www.lepiforum.de/](http://www.lepiforum.de/) [https://ukmoths.org.uk/](https://ukmoths.org.uk/) [http://www.pyrgus.de/](http://www.pyrgus.de/) [http://www.euroleps.ch/](http://www.euroleps.ch/) Definition and scoring of traits : Diurnal\\_activity: 0 – strictly nocturnal; 1 – adults at least partially flying during daytime EU\\_territories: number of European territories (sensu Karsholt & Razowski 1996) from which a species is known."
+     ],
+     "value": "literature"
+    },
+    "Range_Latitude": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.002,
+      "literature": 0.998
+     },
+     "said": [
+      "Range\\_Latitude: difference (in degrees latitude) between northernmost and southernmost records within Europe, taken from the GBIF repository: [https://www.gbif.org/](https://www.gbif.org/)."
+     ],
+     "value": "literature"
+    },
+    "Wingspan": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.0,
+      "literature": 1.0
+     },
+     "said": [
+      "Wingspan: geometric mean of minimum and maximum wingspan, extracted from literature."
+     ],
+     "value": "literature"
+    },
+    "Female_flightless": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.072,
+      "literature": 0.928
+     },
+     "said": [
+      "Female\\_flightless: 0 – females with wings well developed; 1 – females with reduced wings, unable to fly."
+     ],
+     "value": "literature"
+    },
+    "Voltinism": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.201,
+      "literature": 0.799
+     },
+     "said": [
+      "## Trait data For all 448 moth species recorded in light-traps, we assembled a wide range of 27 traits that describe various aspects of the larval and adult ecological niche occupied, including body size, geographic range size, resource use during adult and larval stages, voltinism, hibernation stage, and micro-habitat use.",
+      "Voltinism: 0.5 – individuals usually take two years to complete development; 1 – one generation per year; 1.5 – at least a partial second generation develops in eastern Austria; 2 – two generations occur regularly in eastern Austria; 2.5 – under favourable climatic conditions a partial third generation occurs; 3 – three (or more) generations per year regularly seen in eastern Austria."
+     ],
+     "value": null
+    },
+    "Hibernation_Larva": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.046,
+      "literature": 0.954
+     },
+     "said": [
+      "Hibernation\\_Larva: 0 – no hibernation in larval stage recorded; 1 – hibernation in larval stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Pupa": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.111,
+      "literature": 0.889
+     },
+     "said": [
+      "Hibernation\\_Pupa: 0 – no hibernation in pupal stage recorded; 1 – hibernation in pupal stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Egg": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.063,
+      "literature": 0.937
+     },
+     "said": [
+      "Hibernation\\_Egg: 0 – no hibernation in egg stage recorded; 1 – hibernation in egg stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Imago": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.077,
+      "literature": 0.923
+     },
+     "said": [
+      "Hibernation\\_Imago: 0 – no hibernation as adult recorded; 1 – hibernation in adult stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Larvae_endophagous": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.093,
+      "literature": 0.907
+     },
+     "said": [
+      "Larvae\\_endophagous: 0 – larvae are external feeders throughout their life; 0.5 – larva construct closed shelters (from leaf rolls, leaves spun together or alike; viz."
+     ],
+     "value": "literature"
+    },
+    "Larvae_social": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.047,
+      "literature": 0.953
+     },
+     "said": [
+      "Larvae\\_social: 0 – larvae feed solitarily; 0.5 – larvae form aggregations in earlier instars, sometimes in loose webs; 1 – larvae are highly social, in communal webs."
+     ],
+     "value": "literature"
+    },
+    "Pupa_in_on_ground": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.088,
+      "literature": 0.912
+     },
+     "said": [
+      "Pupa\\_in\\_on\\_ground: 0 – pupation site distinctly above ground, in higher vegetation; 1 – pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events."
+     ],
+     "value": "literature"
+    },
+    "Egg_larvae_arboreal": {
+     "said": [],
+     "value": null
+    },
+    "Larval_host-plant_families": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.02,
+      "literature": 0.98
+     },
+     "said": [
+      "Larval\\_host-plant\\_families: number of host families recorded in evaluated sources."
+     ],
+     "value": "literature"
+    },
+    "Functional_proboscis": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.204,
+      "literature": 0.796
+     },
+     "said": [
+      "Functional\\_proboscis: 0 – proboscis reduced an non-functional; 0.5 – proboscis reduced, but can be used to access at least water and very open nutrient sources; 1 – proboscis well developed."
+     ],
+     "value": null
+    },
+    "Imago_on_non-nectar_food-sources": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.067,
+      "literature": 0.933
+     },
+     "said": [
+      "Imago\\_on\\_non-nectar\\_food-sources: 0 – adults feed on flower nectar; 1 – adult moths known to regularly visit rotting fruits an related non-floral nutrient sources."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_dead_plant_matter": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.076,
+      "literature": 0.924
+     },
+     "said": [
+      "Larvae\\_on\\_dead\\_plant\\_matter: 0 – larvae feed on living plant tissues; 1 – larvae feed on withered plants or on leaf litter and alike."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_mosses-lichens": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.079,
+      "literature": 0.921
+     },
+     "said": [
+      "Larvae\\_on\\_mosses-lichens: 0 – larvae feed on vascular plants; 1 – larvae feed on lichens, mosses, or algal biofilms."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_reed_aquatic": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.063,
+      "literature": 0.937
+     },
+     "said": [
+      "Larvae\\_on\\_reed\\_aquatic: 0 – larva on terrestrial plants; 1 – larvae feed on reed (*Phragmites australis*), other reed plants (e.g."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_herbs": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.066,
+      "literature": 0.934
+     },
+     "said": [
+      "Larvae\\_on\\_herbs: 0 – larvae exclusively feed on woody plants; 0.5 – larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_grasses": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.082,
+      "literature": 0.918
+     },
+     "said": [
+      "Larvae\\_on\\_grasses: 0 – larvae never feed on graminoid plants (Poaceae, Cyperaceae, Juncaceae); 0.5 – larval host range includes graminoid plants, but moth species is not specific to that resource; 1 – larvae exclusively known to feed on graminoid plants in nature."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_softwood_trees": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.087,
+      "literature": 0.913
+     },
+     "said": [
+      "Larvae\\_on\\_softwood\\_trees: 0 – larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz.",
+      "Populus, Salix, Alnus); 0.5 – larval host range does include softwood trees; 1 – larvae exclusively feed on softwood trees in nature."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_lianas": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.056,
+      "literature": 0.944
+     },
+     "said": [
+      "Larvae\\_on\\_lianas: 0 – larvae not known to feed on the few lianas native to Central Europe (*Clematis vitalba, Hedera helix*) which are common in floodplain forests; 0.5 – larval host range does include lianas; 1 – larvae exclusively feed on these lianas."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_broadleaved_trees_shrubs": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.079,
+      "literature": 0.921
+     },
+     "said": [
+      "Larvae\\_on\\_broadleaved\\_trees\\_shrubs: 0 – caterpillars do not feed on woody deciduous plants in nature; 0.5 – host range includes broadleaved trees and shrubs; 1 – larvae only feed on trees and shrubs."
+     ],
+     "value": "literature"
+    },
+    "Larvae_subterraneous": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.043,
+      "literature": 0.957
+     },
+     "said": [
+      "Larvae\\_subterraneous: 0 – larvae live above ground (except perhaps for pupation); 0.5 – larvae in uppermost litter layer, e.g."
+     ],
+     "value": "literature"
+    },
+    "Migratory_species": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.033,
+      "literature": 0.967
+     },
+     "said": [
+      "Migratory\\_species: 0 – species not migratory, even though dispersive adults may show up far away from their breeding grounds; 1 – species known to perform (seasonal) long-distance migrations from southern Europe (Mediterranean) into central Europe (and back)."
+     ],
+     "value": "literature"
+    }
+   }
+  },
+  "5": {
+   "long": false,
+   "traits": {
+    "DN1": {
+     "said": [],
+     "value": null
+    },
+    "DN2": {
+     "said": [],
+     "value": null
+    },
+    "DN3": {
+     "said": [],
+     "value": null
+    },
+    "DN4": {
+     "said": [],
+     "value": null
+    },
+    "DN5": {
+     "said": [],
+     "value": null
+    },
+    "DF1": {
+     "said": [],
+     "value": null
+    },
+    "DF2": {
+     "said": [],
+     "value": null
+    },
+    "DF3": {
+     "said": [],
+     "value": null
+    },
+    "DF4": {
+     "said": [],
+     "value": null
+    },
+    "DF5": {
+     "said": [],
+     "value": null
+    },
+    "LN3": {
+     "said": [],
+     "value": null
+    },
+    "LN4": {
+     "said": [],
+     "value": null
+    },
+    "LF1": {
+     "said": [],
+     "value": null
+    },
+    "LF2": {
+     "said": [],
+     "value": null
+    },
+    "LF3": {
+     "said": [],
+     "value": null
+    },
+    "LF4": {
+     "said": [],
+     "value": null
+    },
+    "MN1": {
+     "said": [],
+     "value": null
+    },
+    "MN2": {
+     "said": [],
+     "value": null
+    },
+    "MN3": {
+     "said": [],
+     "value": null
+    },
+    "MN4": {
+     "said": [],
+     "value": null
+    },
+    "MN5": {
+     "said": [],
+     "value": null
+    },
+    "MF1": {
+     "said": [],
+     "value": null
+    },
+    "MF2": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "6": {
+   "long": false,
+   "traits": {
+    "Name in Truxa 2012": {
+     "said": [],
+     "value": null
+    },
+    "Replacement for": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -2032,6 +2213,11 @@
    "compiled": 0.086
   },
   "value": "own"
+ },
+ "rows": {
+  "4": " Each of its 447 species takes one row.",
+  "5": " Each of its 447 species takes one row.",
+  "6": " Each of its 441 species takes one row."
  },
  "text_found": {
   "sex": [

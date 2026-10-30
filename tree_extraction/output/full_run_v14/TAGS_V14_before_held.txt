@@ -1,0 +1,25 @@
+listed tags of full_run_v14 vs full_run_v13 on the GT rows matched on species + trait + value
+core rows (species, trait, value) changed vs full_run_v13: none
+
+== all
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        47558   35330   34674     656   12228       0  74.3%  98.1%    100% (30327) /   87% (5003)   17824 (17824 / 0)
+  caste                      16781   33199   13492     350    2939   19357  82.5%  97.5%     97% (13842) /    0% (0)   4121 (4121 / 0)
+  basisOfRecord              47558   47081   41345    5736     477       0  99.0%  87.8%     91% (44152) /   36% (2772)   0 (0 / 0)
+  lifeStage                  29734   45577   22496    5548    1690   17533  94.3%  80.2%     60% (6605) /  100% (18150)   0 (0 / 0)
+  measurementStatistic       47558   47460   44430    3030      98       0  99.8%  93.6%     93% (37883) /    0% (0)   0 (0 / 0)
+
+== dev
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        47558   35330   34674     656   12228       0  74.3%  98.1%    100% (30327) /   87% (5003)   17824 (17824 / 0)
+  caste                      16781   33199   13492     350    2939   19357  82.5%  97.5%     97% (13842) /    0% (0)   4121 (4121 / 0)
+  basisOfRecord              47558   47081   41345    5736     477       0  99.0%  87.8%     91% (44152) /   36% (2772)   0 (0 / 0)
+  lifeStage                  29734   45577   22496    5548    1690   17533  94.3%  80.2%     60% (6605) /  100% (18150)   0 (0 / 0)
+  measurementStatistic       47558   47460   44430    3030      98       0  99.8%  93.6%     93% (37883) /    0% (0)   0 (0 / 0)
+
+the step's answers (captions and quotes) vs the paper's GT value, by the model's probability:
+  sex                    0.8–0.95: 10/16 right; via duels: 0/2 right; ≥ 0.95: 17/28 right
+  caste                  0.8–0.95: 5/5 right; via duels: 5/8 right; ≥ 0.95: 33/36 right
+  basisOfRecord          0.8–0.95: 69/106 right; via duels: 21/42 right; ≥ 0.95: 39/76 right
+  lifeStage              0.8–0.95: 64/74 right; via duels: 0/3 right; ≥ 0.95: 53/67 right
+  measurementStatistic   0.8–0.95: 2/9 right; via duels: 1/9 right; ≥ 0.95: 9/46 right

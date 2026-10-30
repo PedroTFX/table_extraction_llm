@@ -14,20 +14,31 @@
    "Host spider(s)": {
     "choice": "mode",
     "probs": {
-     "individual": 0.074,
-     "mean": 0.002,
+     "individual": 0.051,
+     "mean": 0.001,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
-     "range": 0.003,
+     "range": 0.002,
      "min": 0.001,
      "max": 0.001,
-     "median": 0.001,
-     "count": 0.008,
-     "mode": 0.84,
-     "single observation": 0.063,
+     "median": 0.0,
+     "count": 0.011,
+     "mode": 0.75,
+     "single observation": 0.176,
      "unknown": 0.004
     },
-    "value": "mode"
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.685,
+       "b": 0.315
+      }
+     }
+    ],
+    "value": null
    }
   },
   "1": {
@@ -55,7 +66,7 @@
     "choice": "mean",
     "probs": {
      "individual": 0.001,
-     "mean": 0.995,
+     "mean": 0.993,
      "mean ± SD": 0.001,
      "mean ± SE": 0.002,
      "range": 0.0,
@@ -152,11 +163,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.073,
+     "both": 0.085,
      "female": 0.004,
      "male": 0.003,
-     "unknown": 0.019,
-     "not": 0.901
+     "unknown": 0.024,
+     "not": 0.883
     },
     "value": null
    },
@@ -165,11 +176,11 @@
     "probs": {
      "queen": 0.005,
      "male alate": 0.002,
-     "worker": 0.007,
+     "worker": 0.008,
      "minor worker": 0.001,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.985
+     "not": 0.984
     },
     "value": null
    },
@@ -177,14 +188,14 @@
     "choice": "LivingSpecimen",
     "probs": {
      "PreservedSpecimen": 0.002,
-     "LivingSpecimen": 0.873,
+     "LivingSpecimen": 0.863,
      "HumanObservation": 0.003,
      "MachineObservation": 0.003,
      "MaterialSample": 0.002,
-     "MaterialCitation": 0.105,
+     "MaterialCitation": 0.118,
      "Occurrence": 0.002,
      "Taxon": 0.001,
-     "not": 0.009
+     "not": 0.007
     },
     "value": "LivingSpecimen"
    },
@@ -210,24 +221,24 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.057,
-     "female": 0.005,
-     "male": 0.005,
-     "unknown": 0.026,
-     "not": 0.907
+     "both": 0.071,
+     "female": 0.008,
+     "male": 0.006,
+     "unknown": 0.033,
+     "not": 0.882
     },
     "value": null
    },
    "caste": {
     "choice": "not",
     "probs": {
-     "queen": 0.012,
-     "male alate": 0.002,
-     "worker": 0.004,
+     "queen": 0.015,
+     "male alate": 0.003,
+     "worker": 0.006,
      "minor worker": 0.001,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.98
+     "not": 0.974
     },
     "value": null
    },
@@ -235,14 +246,14 @@
     "choice": "LivingSpecimen",
     "probs": {
      "PreservedSpecimen": 0.005,
-     "LivingSpecimen": 0.937,
+     "LivingSpecimen": 0.931,
      "HumanObservation": 0.002,
      "MachineObservation": 0.001,
      "MaterialSample": 0.001,
-     "MaterialCitation": 0.013,
+     "MaterialCitation": 0.015,
      "Occurrence": 0.0,
      "Taxon": 0.0,
-     "not": 0.041
+     "not": 0.046
     },
     "value": "LivingSpecimen"
    },
@@ -250,16 +261,16 @@
     "choice": "pupa",
     "probs": {
      "adult": 0.001,
-     "larva": 0.002,
-     "mature larva": 0.003,
+     "larva": 0.003,
+     "mature larva": 0.002,
      "nymph": 0.0,
      "caterpillar": 0.0,
-     "pupa": 0.992,
+     "pupa": 0.993,
      "egg": 0.0,
      "instar": 0.0,
      "all": 0.0,
      "unknown": 0.0,
-     "not": 0.001
+     "not": 0.0
     },
     "value": "pupa"
    }
@@ -274,6 +285,47 @@
    }
   }
  },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "Host spider(s)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.586,
+      "literature": 0.414
+     },
+     "said": [
+      "Summary of information on acrocerid parasitoids, host spiders, location, date, collector data, notes on range extensions, and laboratory or field rearings ## Localities and Hosts The distributions and hosts for the six acrocerid fly species and their spider hosts are summarized and annotated in Table 1.",
+      "## Observations of Fly and Host Spider Behaviors Behavior and Appearance of Parasitized Hosts."
+     ],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Pupation duration (mean days ± SEM)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "Mean Temperature \\(({}^{\\circ}C)\\)": {
+     "said": [],
+     "value": null
+    },
+    "Mean Pupation Duration (Days)": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -281,6 +333,11 @@
    "compiled": 0.056
   },
   "value": "own"
+ },
+ "rows": {
+  "0": " Its 8 rows hold 6 species, so a species takes several rows.",
+  "1": " Its 8 rows hold 7 species, so a species takes several rows.",
+  "2": ""
  },
  "text_found": {
   "sex": [],
