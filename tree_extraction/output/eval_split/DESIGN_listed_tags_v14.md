@@ -172,3 +172,7 @@ Eckert2023 eye size / feeding strategy vs body length, Graf2021 nesting site, so
 GT cases that contradict their paper (left as they are, for the user to check by eye): Korosi2022 (traits
 from a database, GT HumanObservation), Cecala2021 (traits from the literature, GT LivingSpecimen),
 CamargoVanegas2024 (Winkler samples measured under a micrometer, GT LivingSpecimen).
+Dev result (code 03a1fad9): basisOfRecord 62.2% -> 88.0% accuracy, coverage 98.5%; reported values 92%.
+Orr2024 right (specimen question: "euthanized ... stored at -20 °C" -> PreservedSpecimen 0.98), Raine2018
+kept. Left on dev: the three GT cases above (2.2k rows), Graf2021 and Cappellari2022 (the paper does not
+say these traits came from the literature), Wallon2024, Uemori2021. Other tags unchanged; core rows none.
