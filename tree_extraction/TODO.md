@@ -544,7 +544,18 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## Statistic read again (v15 = v14 + listed_tags.restat / restat_columns, 2026-10-30) — ADOPTED: the new baseline
+## Duplicate rows (v16 = v15 + dup_rows.py, 2026-10-30) — ADOPTED: the new baseline
+
+- Design and runs: output/eval_split/DESIGN_duplicate_rows_v16.md. Code only (the user: "why not straight code?"):
+  a table whose repeated species' rows are all identical keeps one copy; a table printed twice (same columns,
+  rows, first column, >= 80% cells) gives no rows.
+- Tuning mean F1 0.630 -> 0.642 (Cerini2023 0.129 -> 0.894, Fiedler2021 0.444 -> 0.667), no paper down;
+  false positives 49,283 -> 30,413, true positives unchanged. held_b test: no paper touched (0.462 -> 0.462).
+- Next F1 families (tuning diagnosis 2026-10-30): non-trait columns read as traits, SD columns as traits,
+  yes/no written as legend wording, trait names not matching, tables giving no rows, code tables
+  (output/eval_split/DESIGN_code_tables.md).
+
+## Statistic read again (v15 = v14 + listed_tags.restat / restat_columns, 2026-10-30) — ADOPTED (was the baseline)
 
 - Design and runs: output/eval_split/DESIGN_listed_tags_v14.md (v15 sections); split output/eval_split/split_v15.json
   (tune dev + held_a, test held_b once; grit-only papers not looked at).
