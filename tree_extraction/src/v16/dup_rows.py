@@ -45,6 +45,8 @@ def repeats(t, fields, org):
 
 
 def is_copy(a, b):
+    if a.table_index == b.table_index:          # one table plan() gives twice (Noriega2023 t8), not a copy
+        return False
     if [c.name for c in a.columns] != [c.name for c in b.columns] or len(a.records) != len(b.records) or not a.records:
         return False
     first = a.columns[0].name
