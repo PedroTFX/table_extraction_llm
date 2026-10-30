@@ -504,7 +504,8 @@ def apply(dec, t, fields, xtags, defaults=None):
     per = {n: a.get("value") for n, a in (src.get("traits") or {}).items()}
     if src.get("long"):                              # one answer for all value columns, only when every trait agrees
         vals = set(per.values())
-        per = {c: vals.pop() for c in trait_columns(t, out)} if len(vals) == 1 and None not in vals else {}
+        one = next(iter(vals)) if len(vals) == 1 else None
+        per = {c: one for c in trait_columns(t, out)} if one else {}
     measured = (cap.get("basisOfRecord") or {}).get("value") or \
         (None if compiled else (text.get("basisOfRecord") or {}).get("value"))
     own = {"literature": "MaterialCitation",         # the trait's own source before the paper's answer;
