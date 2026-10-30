@@ -16,36 +16,56 @@
    "Trait": {
     "choice": "mode",
     "probs": {
-     "individual": 0.017,
-     "mean": 0.085,
-     "mean ± SD": 0.01,
-     "mean ± SE": 0.003,
-     "range": 0.006,
+     "individual": 0.182,
+     "mean": 0.207,
+     "mean ± SD": 0.021,
+     "mean ± SE": 0.005,
+     "range": 0.004,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.003,
-     "mode": 0.871,
-     "single observation": 0.001,
-     "unknown": 0.003
+     "count": 0.006,
+     "mode": 0.561,
+     "single observation": 0.009,
+     "unknown": 0.004
     },
-    "value": "mode"
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.943,
+       "b": 0.057
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.523,
+       "b": 0.477
+      }
+     }
+    ],
+    "value": null
    },
    "States": {
     "choice": "individual",
     "probs": {
-     "individual": 0.744,
-     "mean": 0.074,
-     "mean ± SD": 0.002,
+     "individual": 0.762,
+     "mean": 0.05,
+     "mean ± SD": 0.003,
      "mean ± SE": 0.002,
-     "range": 0.012,
+     "range": 0.017,
      "min": 0.001,
-     "max": 0.001,
+     "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.115,
-     "single observation": 0.045,
-     "unknown": 0.003
+     "count": 0.001,
+     "mode": 0.147,
+     "single observation": 0.016,
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -53,8 +73,8 @@
       "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.844,
-       "b": 0.156
+       "a": 0.803,
+       "b": 0.197
       }
      },
      {
@@ -62,30 +82,30 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.244,
-       "b": 0.756
+       "a": 0.062,
+       "b": 0.938
       }
      }
     ],
-    "value": null
+    "value": "individual"
    }
   },
   "1": {
    "Climate gradient Mean temperature": {
     "choice": "mean",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.607,
-     "mean ± SD": 0.01,
-     "mean ± SE": 0.01,
-     "range": 0.002,
-     "min": 0.0,
+     "individual": 0.007,
+     "mean": 0.533,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.024,
+     "range": 0.003,
+     "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.005,
-     "mode": 0.024,
-     "single observation": 0.004,
-     "unknown": 0.331
+     "count": 0.007,
+     "mode": 0.025,
+     "single observation": 0.006,
+     "unknown": 0.38
     },
     "duels": [
      {
@@ -93,8 +113,8 @@
       "b": "o11",
       "choice": "b",
       "probs": {
-       "a": 0.015,
-       "b": 0.985
+       "a": 0.027,
+       "b": 0.973
       }
      },
      {
@@ -102,8 +122,8 @@
       "b": "o11",
       "choice": "b",
       "probs": {
-       "a": 0.005,
-       "b": 0.995
+       "a": 0.008,
+       "b": 0.992
       }
      }
     ],
@@ -112,18 +132,38 @@
    "Climate gradient Temperature seasonality": {
     "choice": "mean",
     "probs": {
-     "individual": 0.012,
-     "mean": 0.508,
-     "mean ± SD": 0.036,
-     "mean ± SE": 0.043,
+     "individual": 0.007,
+     "mean": 0.843,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.023,
      "range": 0.006,
      "min": 0.001,
-     "max": 0.003,
-     "median": 0.002,
-     "count": 0.005,
-     "mode": 0.368,
-     "single observation": 0.008,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.003,
+     "mode": 0.086,
+     "single observation": 0.009,
      "unknown": 0.008
+    },
+    "value": "mean"
+   }
+  },
+  "3": {
+   "Abbreviation": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.119,
+     "mean": 0.349,
+     "mean ± SD": 0.055,
+     "mean ± SE": 0.012,
+     "range": 0.004,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.01,
+     "mode": 0.228,
+     "single observation": 0.042,
+     "unknown": 0.177
     },
     "duels": [
      {
@@ -131,93 +171,205 @@
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.231,
-       "b": 0.769
+       "a": 0.084,
+       "b": 0.916
+      }
+     },
+     {
+      "a": "o11",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.267,
+       "b": 0.733
+      }
+     }
+    ],
+    "value": null
+   },
+   "Meaning": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.407,
+     "mean": 0.147,
+     "mean ± SD": 0.036,
+     "mean ± SE": 0.006,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.319,
+     "single observation": 0.056,
+     "unknown": 0.025
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.772,
+       "b": 0.228
       }
      }
     ],
     "value": null
    }
   },
-  "3": {
-   "Abbreviation": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.016,
-     "mean": 0.034,
-     "mean ± SD": 0.008,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.005,
-     "mode": 0.82,
-     "single observation": 0.009,
-     "unknown": 0.101
-    },
-    "value": "mode"
-   },
-   "Meaning": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.014,
-     "mean": 0.049,
-     "mean ± SD": 0.016,
-     "mean ± SE": 0.004,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.0,
-     "count": 0.002,
-     "mode": 0.789,
-     "single observation": 0.009,
-     "unknown": 0.114
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o11",
-      "choice": "a",
-      "probs": {
-       "a": 0.936,
-       "b": 0.064
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.063,
-       "b": 0.937
-      }
-     }
-    ],
-    "value": "mode"
-   }
-  },
   "4": {
    "WS": {
-    "choice": "individual",
+    "choice": "mean",
     "probs": {
-     "individual": 0.71,
-     "mean": 0.124,
-     "mean ± SD": 0.014,
-     "mean ± SE": 0.009,
-     "range": 0.004,
-     "min": 0.003,
-     "max": 0.006,
-     "median": 0.01,
-     "count": 0.002,
-     "mode": 0.009,
-     "single observation": 0.108,
+     "individual": 0.192,
+     "mean": 0.723,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.008,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.004,
+     "count": 0.001,
+     "mode": 0.006,
+     "single observation": 0.05,
      "unknown": 0.001
     },
     "duels": [
      {
-      "a": "o0",
-      "b": "o1",
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.23,
+       "b": 0.77
+      }
+     }
+    ],
+    "value": null
+   },
+   "WP": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.066,
+     "mean": 0.83,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.022,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.007,
+     "count": 0.001,
+     "mode": 0.015,
+     "single observation": 0.046,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   },
+   "CS": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.165,
+     "mean": 0.16,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.002,
+     "median": 0.005,
+     "count": 0.644,
+     "mode": 0.001,
+     "single observation": 0.014,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.876,
+       "b": 0.124
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.066,
+       "b": 0.934
+      }
+     }
+    ],
+    "value": "count"
+   },
+   "SEEDS": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.265,
+     "mean": 0.198,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.007,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.002,
+     "count": 0.115,
+     "mode": 0.1,
+     "single observation": 0.295,
+     "unknown": 0.004
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.073,
+       "b": 0.927
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.086,
+       "b": 0.914
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "INSECTS": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.17,
+     "mean": 0.625,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.007,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.004,
+     "count": 0.006,
+     "mode": 0.091,
+     "single observation": 0.081,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.18,
+       "b": 0.82
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o0",
       "choice": "a",
       "probs": {
        "a": 0.656,
@@ -227,182 +379,30 @@
     ],
     "value": null
    },
-   "WP": {
-    "choice": "mean",
+   "LIQFOOD": {
+    "choice": "individual",
     "probs": {
-     "individual": 0.197,
-     "mean": 0.572,
-     "mean ± SD": 0.021,
-     "mean ± SE": 0.026,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.006,
-     "median": 0.013,
-     "count": 0.01,
-     "mode": 0.072,
-     "single observation": 0.075,
-     "unknown": 0.002
-    },
-    "duels": [
-     {
-      "a": "o1",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.187,
-       "b": 0.813
-      }
-     },
-     {
-      "a": "o10",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.212,
-       "b": 0.788
-      }
-     }
-    ],
-    "value": null
-   },
-   "CS": {
-    "choice": "count",
-    "probs": {
-     "individual": 0.328,
-     "mean": 0.064,
-     "mean ± SD": 0.005,
+     "individual": 0.651,
+     "mean": 0.152,
+     "mean ± SD": 0.003,
      "mean ± SE": 0.003,
      "range": 0.001,
-     "min": 0.001,
-     "max": 0.003,
-     "median": 0.005,
-     "count": 0.551,
-     "mode": 0.008,
-     "single observation": 0.03,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.075,
+     "single observation": 0.109,
      "unknown": 0.001
     },
     "duels": [
      {
-      "a": "o8",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.87,
-       "b": 0.13
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o8",
+      "a": "o0",
+      "b": "o1",
       "choice": "b",
       "probs": {
-       "a": 0.03,
-       "b": 0.97
-      }
-     }
-    ],
-    "value": "count"
-   },
-   "SEEDS": {
-    "choice": "count",
-    "probs": {
-     "individual": 0.079,
-     "mean": 0.043,
-     "mean ± SD": 0.005,
-     "mean ± SE": 0.004,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.002,
-     "median": 0.003,
-     "count": 0.768,
-     "mode": 0.055,
-     "single observation": 0.038,
-     "unknown": 0.002
-    },
-    "duels": [
-     {
-      "a": "o8",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.891,
-       "b": 0.109
-      }
-     },
-     {
-      "a": "o9",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.086,
-       "b": 0.914
-      }
-     }
-    ],
-    "value": "count"
-   },
-   "INSECTS": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.217,
-     "mean": 0.437,
-     "mean ± SD": 0.013,
-     "mean ± SE": 0.011,
-     "range": 0.005,
-     "min": 0.002,
-     "max": 0.004,
-     "median": 0.008,
-     "count": 0.096,
-     "mode": 0.132,
-     "single observation": 0.073,
-     "unknown": 0.002
-    },
-    "duels": [
-     {
-      "a": "o1",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.191,
-       "b": 0.809
-      }
-     },
-     {
-      "a": "o9",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.674,
-       "b": 0.326
-      }
-     }
-    ],
-    "value": null
-   },
-   "LIQFOOD": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.157,
-     "mean": 0.433,
-     "mean ± SD": 0.01,
-     "mean ± SE": 0.008,
-     "range": 0.003,
-     "min": 0.002,
-     "max": 0.002,
-     "median": 0.002,
-     "count": 0.013,
-     "mode": 0.243,
-     "single observation": 0.122,
-     "unknown": 0.005
-    },
-    "duels": [
-     {
-      "a": "o1",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.325,
-       "b": 0.675
+       "a": 0.445,
+       "b": 0.555
       }
      }
     ],
@@ -411,27 +411,27 @@
    "ICF": {
     "choice": "mode",
     "probs": {
-     "individual": 0.109,
-     "mean": 0.146,
-     "mean ± SD": 0.005,
-     "mean ± SE": 0.003,
+     "individual": 0.164,
+     "mean": 0.294,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.006,
      "range": 0.001,
-     "min": 0.001,
-     "max": 0.002,
-     "median": 0.002,
-     "count": 0.165,
-     "mode": 0.437,
-     "single observation": 0.125,
-     "unknown": 0.002
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.036,
+     "mode": 0.314,
+     "single observation": 0.176,
+     "unknown": 0.001
     },
     "duels": [
      {
       "a": "o9",
-      "b": "o8",
+      "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.74,
-       "b": 0.26
+       "a": 0.718,
+       "b": 0.282
       }
      }
     ],
@@ -440,17 +440,17 @@
    "Polygyny": {
     "choice": "mode",
     "probs": {
-     "individual": 0.082,
-     "mean": 0.063,
+     "individual": 0.068,
+     "mean": 0.075,
      "mean ± SD": 0.004,
      "mean ± SE": 0.003,
      "range": 0.001,
      "min": 0.001,
-     "max": 0.002,
-     "median": 0.001,
-     "count": 0.008,
-     "mode": 0.829,
-     "single observation": 0.004,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.004,
+     "mode": 0.84,
+     "single observation": 0.003,
      "unknown": 0.001
     },
     "value": "mode"
@@ -458,18 +458,18 @@
    "Polydomy": {
     "choice": "mode",
     "probs": {
-     "individual": 0.115,
-     "mean": 0.321,
-     "mean ± SD": 0.018,
-     "mean ± SE": 0.009,
-     "range": 0.019,
-     "min": 0.005,
-     "max": 0.007,
-     "median": 0.007,
-     "count": 0.02,
-     "mode": 0.417,
-     "single observation": 0.059,
-     "unknown": 0.004
+     "individual": 0.118,
+     "mean": 0.235,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.005,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.009,
+     "mode": 0.595,
+     "single observation": 0.027,
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -477,8 +477,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.769,
-       "b": 0.231
+       "a": 0.589,
+       "b": 0.411
       }
      }
     ],
@@ -487,26 +487,8 @@
    "Strictly diurnal": {
     "choice": "mode",
     "probs": {
-     "individual": 0.07,
-     "mean": 0.057,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.003,
-     "mode": 0.84,
-     "single observation": 0.018,
-     "unknown": 0.004
-    },
-    "value": "mode"
-   },
-   "Dominant": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.018,
-     "mean": 0.014,
+     "individual": 0.037,
+     "mean": 0.032,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.0,
@@ -514,82 +496,100 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.963,
-     "single observation": 0.0,
+     "mode": 0.919,
+     "single observation": 0.007,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Dominant": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.013,
+     "mean": 0.017,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.964,
+     "single observation": 0.001,
      "unknown": 0.0
     },
     "value": "mode"
    },
    "FORSTRA_individual": {
-    "choice": "mode",
+    "choice": "individual",
     "probs": {
-     "individual": 0.412,
-     "mean": 0.022,
-     "mean ± SD": 0.002,
+     "individual": 0.653,
+     "mean": 0.02,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.002,
      "range": 0.001,
-     "min": 0.002,
-     "max": 0.001,
+     "min": 0.0,
+     "max": 0.0,
      "median": 0.0,
-     "count": 0.041,
-     "mode": 0.446,
-     "single observation": 0.07,
-     "unknown": 0.001
+     "count": 0.002,
+     "mode": 0.08,
+     "single observation": 0.239,
+     "unknown": 0.0
     },
     "duels": [
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.944,
+       "b": 0.056
+      }
+     },
      {
       "a": "o9",
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.019,
-       "b": 0.981
-      }
-     },
-     {
-      "a": "o10",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.028,
-       "b": 0.972
+       "a": 0.042,
+       "b": 0.958
       }
      }
     ],
     "value": "individual"
    },
    "FORSTRA_collective": {
-    "choice": "mode",
+    "choice": "mean",
     "probs": {
-     "individual": 0.048,
-     "mean": 0.042,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.001,
+     "individual": 0.005,
+     "mean": 0.817,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.006,
+     "range": 0.002,
      "min": 0.001,
      "max": 0.001,
-     "median": 0.0,
-     "count": 0.024,
-     "mode": 0.874,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.157,
      "single observation": 0.004,
      "unknown": 0.0
     },
-    "value": "mode"
+    "value": "mean"
    },
    "FORSTRA_group": {
     "choice": "mode",
     "probs": {
-     "individual": 0.029,
-     "mean": 0.01,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.048,
+     "mean": 0.066,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.003,
      "range": 0.001,
      "min": 0.001,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.005,
-     "mode": 0.95,
-     "single observation": 0.001,
+     "count": 0.003,
+     "mode": 0.869,
+     "single observation": 0.004,
      "unknown": 0.001
     },
     "value": "mode"
@@ -1035,6 +1035,358 @@
    }
   }
  },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "Trait": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.051,
+      "literature": 0.949
+     },
+     "said": [
+      "## ant trait data We described each of the 124 species used in our analyses in terms of functional traits that have been recognized as being important in ant autecology and/or relating to ecosystem functioning (e.g.",
+      "If such variation exists, then its omission from analyses would likely result in a bias towards weaker trait–climate relationships."
+     ],
+     "value": "literature"
+    },
+    "States": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.397,
+      "literature": 0.603
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Proceedings of the National Academy of Science of the United States of America, 104, 20684–20689."
+     ],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": true,
+   "traits": {
+    "Worker size": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.726,
+      "literature": 0.274
+     },
+     "said": [
+      "For example, we conducted a set of three models where the trait average for worker size was the response variable: (i) the climate model included annual mean temperature, temperature seasonality, annual precipitation and precip itation seasonality as predictor variables; (ii) the productivity model included $\\mathrm { N D V I _ { s p r i n g } + s u m m e r }$ as the predictor variable; and (iii) the vegetation type model included the vegetation type category as the predictor variable.",
+      "Key-words: biomes, climate, diet, foraging strategy, Formicidae, functional composition, functional traits, productivity, worker size"
+     ],
+     "value": null
+    },
+    "Worker polymorphism": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.636,
+      "literature": 0.364
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Behavioural dominance (dominants)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.92,
+      "literature": 0.08
+     },
+     "said": [
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": "measured"
+    },
+    "Food resources – insects": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.711,
+      "literature": 0.289
+     },
+     "said": [
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Food resources – liquid food": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.282,
+      "literature": 0.718
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Foraging strategy – group": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.395,
+      "literature": 0.605
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Foraging strategy – collective": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.304,
+      "literature": 0.696
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Colony size": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.302,
+      "literature": 0.698
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Trait dissimilarity": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.901,
+      "literature": 0.099
+     },
+     "said": [
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet).",
+      "We calculated two complementary functional trait community indices (‘trait average’ and ‘trait dissimilarity’) for each trait, and we analysed how they varied along the three different gradients using generalized least squares models that accounted for spatial autocorrelation."
+     ],
+     "value": "measured"
+    },
+    "Diurnality^a": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.494,
+      "literature": 0.506
+     },
+     "said": [
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet).",
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": null
+    },
+    "Behavioural dominance": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.462,
+      "literature": 0.538
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "Food resources – seeds^a": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.857,
+      "literature": 0.143
+     },
+     "said": [
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": "measured"
+    },
+    "Foraging strategy – individual^a": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.71,
+      "literature": 0.29
+     },
+     "said": [
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet).",
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": null
+    },
+    "Number of queens^a": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.624,
+      "literature": 0.376
+     },
+     "said": [
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet).",
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": null
+    },
+    "Number of nests^a": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.041,
+      "literature": 0.959
+     },
+     "said": [
+      "number of nests, individuals at baits or individuals in pitfall traps) in different studies and were thus difficult to compare.",
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet)."
+     ],
+     "value": "literature"
+    },
+    "Colony foundation type^a": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.945,
+      "literature": 0.055
+     },
+     "said": [
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet).",
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Abbreviation": {
+     "said": [],
+     "value": null
+    },
+    "Meaning": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "WS": {
+     "said": [],
+     "value": null
+    },
+    "WP": {
+     "said": [],
+     "value": null
+    },
+    "CS": {
+     "said": [],
+     "value": null
+    },
+    "SEEDS": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.846,
+      "literature": 0.154
+     },
+     "said": [
+      "7 )$ for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet).",
+      "Because trait averages and dissimilari ties were highly correlated (r > 0 7) for several traits (Table S3, Supporting information), we conducted further analyses using only the trait dissimilarity index for two binary traits (diurnality and individual foraging strategy), three ordinal traits (number of queens, number of nests and colony foundation type) and one fuzzy-coded variable (percentage of seeds in the diet)."
+     ],
+     "value": "measured"
+    },
+    "INSECTS": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.307,
+      "literature": 0.693
+     },
+     "said": [
+      "We believe that, to date, this data base is the largest compiled for animals (or at least for insects) that includes a large number of spe cies-specific functional traits from different communities across broad environmental gradients.",
+      "Significant effects of the environmental gradients on the trait average (X ) and dissimilarity (FD) found using the generalized least squares models Climate gradient Productivity gradient Vegetation Functional trait Mean Temperature Precipitation Normalized difference type gradient Trait average temperature seasonality Precipitation seasonality vegetation index Biome Worker size – ↗ ––– – Worker polymorphism – ↗ – ↘ – – Behavioural dominance (dominants) –– – – ↘ Significant Food resources – insects –– – – – – Food resources – liquid food –– – – – Significant Foraging strategy – group –– – ↘ ↗ Significant Foraging strategy – collective –– – – ↘ Significant Colony size –– – – – Significant Trait dissimilarity Worker size –– – – – – Worker polymorphism –– – – – – Diurnality a –– – – – Significant Behavioural dominance –– – – – – Food resources – seeds a – – ↘ – ↘ Significant Food resources – insects –– – – ↘ Significant Food resources – liquid food – ↗ – – ↘ Significant Foraging strategy – individual a –– – ↗ ↘ – Foraging strategy – group –– – – – – Foraging strategy – collective –– – – – – Colony size –– – – – – Number of queens a –– – ↗ ↘ Significant Number of nests a –– – ↗ ↘ Significant Colony foundation type a –– – ↗ ↘ Significant Arrows indicate the direction of the effects."
+     ],
+     "value": null
+    },
+    "LIQFOOD": {
+     "said": [],
+     "value": null
+    },
+    "ICF": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.75,
+      "literature": 0.25
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "(2011) Ordinal (0) DCF; (0 5) Both DCF and ICF; (1) ICF a Variable categories were coded using a fuzzy-coding technique."
+     ],
+     "value": null
+    },
+    "Polygyny": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.482,
+      "literature": 0.518
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": null
+    },
+    "Polydomy": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.626,
+      "literature": 0.374
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": null
+    },
+    "Strictly diurnal": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.501,
+      "literature": 0.499
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al."
+     ],
+     "value": null
+    },
+    "Dominant": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.683,
+      "literature": 0.317
+     },
+     "said": [
+      "Description of the ant traits examined in this study and their functional significance Trait Functional significance Source Data type States Worker size Strongly correlates with many physiological, ecological, and life-history traits such as resource use Worker polymorphism Relates to the breath of functional roles performed by colony Kaspari & Weiser (1999) Continuous Worker body size from the tip of mandibles to tip of the gaster (mm) Mertl & Traniello (2009) Continuous Mean worker size divided by the range of worker size Diurnality Indicates when individuals are actively foraging Holldobler & € Wilson (1990) Binary (0) Nonstrictly diurnal (1) Strictly diurnal Behavioural dominance Diet: Seed-eating, insect-eating, and liquid food eating Refers to the influence of one species on another when acquiring food resources and thus the ability to gain access to food resources Refers to the type and quantity of food resources a species exploits Arnan, Cerd a & Retana (2012) Holldobler & € Wilson (1990) Binary (0) Subordinate (1) Dominant Fuzzy-coded a 0–1 (for each of the three categories) Foraging strategy: Individual, group, and collective b Refers to how a species searches for and exploits food resources, which plays an important role in the ability to survive and reproduce Traniello (1989) Binary 0–1 (for each of the three categories) Colony size The ecological advantages of large colony size include increased defence, homoeostasis, work efficiency and a greater ability to modify the surrounding environment Bourke (1999) Continuous Mean number of workers per colony Number of queens Influences a wide range of species characteristics, including group size, worker size, growth rate, competitive ability and efficiency Keller (1995), Ross & Keller (1995) and Rosset & Chapuisat (2007) Ordinal (0) Monogyny; (0 5) Both monogyny and polygyny; (1) Polygyny Number of nests Polydomy confers a great competitive advantage relative to monodomy Colony foundation type Independent colony foundation (ICF) strategies provide long-distance dispersal advantages relative to dependent colony foundation (DCF) strategies McGlynn (1999) Ordinal (0) Monodomy; (0 5) Both monodomy and polydomy (1) Polydomy Amor et al.",
+      "ant functional responses to climate Among the trait indices that were explained by at least one of the environmental gradients, the averages of four traits (the percentage of behaviourally dominant species in the community, the percentage of liquid food in the diet, the percentage of collectively foraging species and colony size) and dissimilarity in diurnality and the per centage of insects in the diet were not predicted by any of the climate variables (Tables 2 and S5, Supporting information)."
+     ],
+     "value": null
+    },
+    "FORSTRA_individual": {
+     "said": [],
+     "value": null
+    },
+    "FORSTRA_collective": {
+     "said": [],
+     "value": null
+    },
+    "FORSTRA_group": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "compiled",
   "probs": {
@@ -1042,6 +1394,12 @@
    "compiled": 0.998
   },
   "value": "compiled"
+ },
+ "rows": {
+  "0": "",
+  "1": "",
+  "3": "",
+  "4": " Each of its 113 species takes one row."
  },
  "text_found": {
   "sex": [],

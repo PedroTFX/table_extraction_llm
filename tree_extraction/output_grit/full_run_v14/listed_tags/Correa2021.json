@@ -10,42 +10,22 @@
  "statistic": {
   "3": {
    "(no name, column 0)": {
-    "choice": "mode",
+    "choice": "mean",
     "probs": {
-     "individual": 0.003,
-     "mean": 0.27,
-     "mean ± SD": 0.011,
-     "mean ± SE": 0.005,
-     "range": 0.001,
+     "individual": 0.002,
+     "mean": 0.875,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.008,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.708,
+     "mode": 0.107,
      "single observation": 0.0,
-     "unknown": 0.001
+     "unknown": 0.0
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.86,
-       "b": 0.14
-      }
-     },
-     {
-      "a": "o2",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.033,
-       "b": 0.967
-      }
-     }
-    ],
-    "value": "mode"
+    "value": "mean"
    }
   },
   "4": {
@@ -53,8 +33,8 @@
     "choice": "mean",
     "probs": {
      "individual": 0.001,
-     "mean": 0.995,
-     "mean ± SD": 0.002,
+     "mean": 0.997,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
@@ -71,9 +51,9 @@
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.018,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "mean": 0.019,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -89,15 +69,15 @@
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.067,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "mean": 0.041,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.929,
+     "mode": 0.957,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -288,6 +268,58 @@
    }
   }
  },
+ "source": {
+  "3": {
+   "long": false,
+   "traits": {
+    "(no name, column 0)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Biomass (g)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.996,
+      "literature": 0.004
+     },
+     "said": [
+      "To record the biomass of species, all individuals collected were dried $( 4 0 \\pm 5 ^ { \\circ } \\mathrm { C } )$ until we got a constant weight and weighed on a 0.0001 g precision scale.",
+      "Dung beetle traits We analyzed three functional traits that are directly related to the ecosystem functions performed by dung beetles (Slade et al., 2007; Barr´agan et al., 2011): biomass, food relocation behavior, and diet (Table S1)."
+     ],
+     "value": "measured"
+    },
+    "Food relocation behavior": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.001,
+      "literature": 0.999
+     },
+     "said": [
+      "Dung beetle traits We analyzed three functional traits that are directly related to the ecosystem functions performed by dung beetles (Slade et al., 2007; Barr´agan et al., 2011): biomass, food relocation behavior, and diet (Table S1).",
+      "Food relocation behavior was assigned for each species according to the literature (Halffter and Edmonds, 1982; Hanski and Cambefort, 1991)."
+     ],
+     "value": "literature"
+    },
+    "Diet": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.771,
+      "literature": 0.229
+     },
+     "said": [
+      "Dung beetle traits We analyzed three functional traits that are directly related to the ecosystem functions performed by dung beetles (Slade et al., 2007; Barr´agan et al., 2011): biomass, food relocation behavior, and diet (Table S1).",
+      "To analyze the diet, we used the proportion of individuals of each species attracted to a certain bait to determine bait specificity."
+     ],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -295,6 +327,10 @@
    "compiled": 0.008
   },
   "value": "own"
+ },
+ "rows": {
+  "3": "",
+  "4": " Each of its 24 species takes one row."
  },
  "text_found": {
   "sex": [],

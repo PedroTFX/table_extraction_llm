@@ -14,30 +14,50 @@
  "statistic": {
   "0": {
    "(no name, column 0)": {
-    "choice": "mode",
+    "choice": "range",
     "probs": {
-     "individual": 0.01,
-     "mean": 0.004,
-     "mean ± SD": 0.009,
-     "mean ± SE": 0.004,
-     "range": 0.05,
-     "min": 0.002,
-     "max": 0.005,
-     "median": 0.003,
-     "count": 0.031,
-     "mode": 0.865,
-     "single observation": 0.014,
-     "unknown": 0.003
+     "individual": 0.021,
+     "mean": 0.027,
+     "mean ± SD": 0.045,
+     "mean ± SE": 0.013,
+     "range": 0.755,
+     "min": 0.003,
+     "max": 0.004,
+     "median": 0.002,
+     "count": 0.062,
+     "mode": 0.056,
+     "single observation": 0.006,
+     "unknown": 0.006
     },
-    "value": "mode"
+    "duels": [
+     {
+      "a": "o4",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.139,
+       "b": 0.861
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.113,
+       "b": 0.887
+      }
+     }
+    ],
+    "value": "count"
    }
   },
   "1": {
    "Family": {
     "choice": "mode",
     "probs": {
-     "individual": 0.001,
-     "mean": 0.006,
+     "individual": 0.002,
+     "mean": 0.001,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -45,7 +65,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.992,
+     "mode": 0.996,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -54,16 +74,16 @@
    "Short": {
     "choice": "mode",
     "probs": {
-     "individual": 0.011,
-     "mean": 0.016,
-     "mean ± SD": 0.001,
+     "individual": 0.066,
+     "mean": 0.009,
+     "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.971,
+     "mode": 0.923,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -72,82 +92,82 @@
    "Nesting preference": {
     "choice": "mode",
     "probs": {
-     "individual": 0.024,
-     "mean": 0.055,
-     "mean ± SD": 0.002,
+     "individual": 0.013,
+     "mean": 0.013,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.001,
-     "range": 0.001,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.913,
-     "single observation": 0.001,
-     "unknown": 0.001
+     "count": 0.001,
+     "mode": 0.971,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mode"
    },
    "ITD (mm)": {
-    "choice": "mean",
+    "choice": "individual",
     "probs": {
-     "individual": 0.045,
-     "mean": 0.931,
+     "individual": 0.662,
+     "mean": 0.25,
      "mean ± SD": 0.003,
-     "mean ± SE": 0.001,
+     "mean ± SE": 0.003,
      "range": 0.002,
-     "min": 0.0,
+     "min": 0.001,
      "max": 0.0,
      "median": 0.001,
      "count": 0.001,
-     "mode": 0.007,
-     "single observation": 0.009,
-     "unknown": 0.0
-    },
-    "value": "mean"
-   },
-   "Tongue-length": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.628,
-     "mean": 0.306,
-     "mean ± SD": 0.007,
-     "mean ± SE": 0.003,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.005,
-     "single observation": 0.046,
-     "unknown": 0.0
+     "mode": 0.022,
+     "single observation": 0.052,
+     "unknown": 0.003
     },
     "duels": [
      {
       "a": "o0",
       "b": "o1",
-      "choice": "b",
+      "choice": "a",
       "probs": {
-       "a": 0.417,
-       "b": 0.583
+       "a": 0.653,
+       "b": 0.347
       }
      }
     ],
     "value": null
    },
-   "Cleptoparasite": {
-    "choice": "mode",
+   "Tongue-length": {
+    "choice": "individual",
     "probs": {
-     "individual": 0.068,
-     "mean": 0.027,
+     "individual": 0.97,
+     "mean": 0.011,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
-     "min": 0.001,
+     "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.899,
-     "single observation": 0.001,
+     "count": 0.0,
+     "mode": 0.009,
+     "single observation": 0.007,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "Cleptoparasite": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.04,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.954,
+     "single observation": 0.0,
      "unknown": 0.0
     },
     "value": "mode"
@@ -157,9 +177,65 @@
    "Trait": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
+     "individual": 0.003,
      "mean": 0.005,
      "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.989,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Value/No. categories": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.01,
+     "mode": 0.985,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "3": {
+   "Family": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.996,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Functional traits Flower colors": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.006,
+     "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
@@ -172,67 +248,11 @@
     },
     "value": "mode"
    },
-   "Value/No. categories": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.006,
-     "mean": 0.004,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.005,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.033,
-     "mode": 0.949,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
-   }
-  },
-  "3": {
-   "Family": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.002,
-     "mean": 0.005,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.99,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
-   },
-   "Functional traits Flower colors": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.003,
-     "mean": 0.015,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.979,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
-   },
    "Functional traits Life-strategy": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.007,
+     "individual": 0.001,
+     "mean": 0.002,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -240,7 +260,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.99,
+     "mode": 0.996,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -249,16 +269,16 @@
    "Functional traits Symmetry": {
     "choice": "mode",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.04,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.003,
+     "mean": 0.005,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.949,
+     "count": 0.0,
+     "mode": 0.99,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -267,130 +287,90 @@
    "Functional traits nectar/ pollen": {
     "choice": "mode",
     "probs": {
-     "individual": 0.013,
-     "mean": 0.039,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.003,
-     "mode": 0.936,
-     "single observation": 0.001,
-     "unknown": 0.001
+     "individual": 0.004,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.989,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mode"
    },
    "Functional traits Nectar tube": {
     "choice": "mode",
     "probs": {
-     "individual": 0.022,
-     "mean": 0.136,
-     "mean ± SD": 0.005,
-     "mean ± SE": 0.004,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.005,
-     "mode": 0.818,
-     "single observation": 0.001,
-     "unknown": 0.002
+     "individual": 0.007,
+     "mean": 0.016,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.971,
+     "single observation": 0.0,
+     "unknown": 0.001
     },
     "value": "mode"
    },
    "Functional traits Pollen per flower": {
     "choice": "mode",
     "probs": {
-     "individual": 0.027,
-     "mean": 0.259,
-     "mean ± SD": 0.007,
-     "mean ± SE": 0.003,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.002,
-     "median": 0.002,
-     "count": 0.159,
-     "mode": 0.533,
+     "individual": 0.029,
+     "mean": 0.069,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.065,
+     "mode": 0.823,
      "single observation": 0.002,
      "unknown": 0.001
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.947,
-       "b": 0.053
-      }
-     },
-     {
-      "a": "o8",
-      "b": "o9",
-      "choice": "a",
-      "probs": {
-       "a": 0.709,
-       "b": 0.291
-      }
-     }
-    ],
-    "value": null
+    "value": "mode"
    },
    "Functional traits First flowering": {
     "choice": "mode",
     "probs": {
-     "individual": 0.038,
-     "mean": 0.156,
-     "mean ± SD": 0.006,
-     "mean ± SE": 0.005,
-     "range": 0.007,
-     "min": 0.02,
-     "max": 0.003,
+     "individual": 0.025,
+     "mean": 0.058,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.003,
+     "range": 0.003,
+     "min": 0.007,
+     "max": 0.002,
      "median": 0.002,
-     "count": 0.004,
-     "mode": 0.757,
+     "count": 0.002,
+     "mode": 0.894,
      "single observation": 0.001,
      "unknown": 0.001
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.958,
-       "b": 0.042
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.036,
-       "b": 0.964
-      }
-     }
-    ],
     "value": "mode"
    },
    "Functional traits Average height (cm)": {
     "choice": "mean",
     "probs": {
-     "individual": 0.034,
-     "mean": 0.942,
-     "mean ± SD": 0.012,
-     "mean ± SE": 0.003,
+     "individual": 0.095,
+     "mean": 0.883,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.002,
      "range": 0.001,
      "min": 0.001,
      "max": 0.001,
-     "median": 0.002,
-     "count": 0.0,
-     "mode": 0.003,
-     "single observation": 0.001,
-     "unknown": 0.0
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.007,
+     "single observation": 0.002,
+     "unknown": 0.001
     },
     "value": "mean"
    }
@@ -694,11 +674,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.069,
+     "both": 0.063,
      "female": 0.005,
-     "male": 0.002,
+     "male": 0.003,
      "unknown": 0.005,
-     "not": 0.919
+     "not": 0.924
     },
     "value": null
    },
@@ -711,29 +691,29 @@
      "minor worker": 0.0,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.992
+     "not": 0.993
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "MaterialCitation",
     "probs": {
-     "PreservedSpecimen": 0.005,
+     "PreservedSpecimen": 0.004,
      "LivingSpecimen": 0.002,
-     "HumanObservation": 0.005,
+     "HumanObservation": 0.006,
      "MachineObservation": 0.001,
      "MaterialSample": 0.001,
-     "MaterialCitation": 0.956,
-     "Occurrence": 0.0,
-     "Taxon": 0.006,
-     "not": 0.024
+     "MaterialCitation": 0.963,
+     "Occurrence": 0.001,
+     "Taxon": 0.007,
+     "not": 0.016
     },
     "value": "MaterialCitation"
    },
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.904,
+     "adult": 0.887,
      "larva": 0.001,
      "mature larva": 0.0,
      "nymph": 0.0,
@@ -743,7 +723,7 @@
      "instar": 0.0,
      "all": 0.001,
      "unknown": 0.002,
-     "not": 0.091
+     "not": 0.109
     },
     "value": "adult"
    }
@@ -772,6 +752,154 @@
    }
   }
  },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "(no name, column 0)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Family": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.231,
+      "literature": 0.769
+     },
+     "said": [
+      "The tongue length was estimated using the BeeIT package in R (Cariveau et al., 2016), which calculates the tongue length based on the taxonomic family and species-specific ITD."
+     ],
+     "value": null
+    },
+    "Short": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.114,
+      "literature": 0.886
+     },
+     "said": [
+      "Moe 1 1 *Faculty of Environmental Sciences and Natural Resource Management, Norwegian University of Life Sciences, 1432-Ås, Norway.* 2 *The Norwegian Institute for Nature Research, 0349-Oslo, Norway* Table of contents: **Tables:** Table A1: List of solitary bees and the corresponding functional traits Table A2: Description functional traits of forbs Table A3: List of forb species and the corresponding functional traits Table A4: Likelihood ratio tests of final models Table A5: Species richness and rarefied abundance of bees in each treatment in each year Table A6: Summary output from the final models of richness and abundance Table A7: Summary output from the final models of proportions of below-ground nesters, short-tongued bees and functional dispersion of body size Table A8: Summary output from the final models of beta diversity and turnover **Figures:** Figure A1: Photo of a flight-interception trap at one of the sites Figure A2: Erica species – output exploratory analyses Figure A3: Abundance in treatments and years Figure A4: Species richness in each treatment per year Figure A5: Rarefied species richness in response to treatment and forb species richness, elevation and year Figure A6: Abundance in each treatment per year Figure A7: Species richness, abundance, FDis body size and FDis tongue length in response to elevation Figure A8: The community weighted mean of body size in response to treatment and elevation **Table A1:** List of solitary bees and the corresponding functional traits; Nesting preference, i.e.",
+      "above-ground nesters (0); Mean bee body size, the intertegular distance (ITD), rounded off to nearest mm (1-4); The tongue length (short vs."
+     ],
+     "value": "literature"
+    },
+    "Nesting preference": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.0,
+      "literature": 1.0
+     },
+     "said": [
+      "We compiled trait information for three traits known to influence bee responses to environmental conditions: nesting preference (above vs below-ground nesters), tongue-length and body size (Table A1).",
+      "The trait values for nesting preference was obtained from the literature (Carreck, 2016; Westrich, 1990)."
+     ],
+     "value": "literature"
+    },
+    "ITD (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.807,
+      "literature": 0.193
+     },
+     "said": [
+      "As a measure of species mobility (Greenleaf et al., 2007), we used the intertegular distance (ITD) of the bees (Cane, 1987), hereafter ‘body size’.",
+      "We supplemented the ITD measures using specimens from the Natural History Museum in Oslo, Norway, to obtain a mean of minimum five specimens per species."
+     ],
+     "value": "measured"
+    },
+    "Tongue-length": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.101,
+      "literature": 0.899
+     },
+     "said": [
+      "We compiled trait information for three traits known to influence bee responses to environmental conditions: nesting preference (above vs below-ground nesters), tongue-length and body size (Table A1).",
+      "The tongue length was estimated using the BeeIT package in R (Cariveau et al., 2016), which calculates the tongue length based on the taxonomic family and species-specific ITD."
+     ],
+     "value": "literature"
+    },
+    "Cleptoparasite": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "Trait": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.027,
+      "literature": 0.973
+     },
+     "said": [
+      "Measured values (range) of the bees, the functional trait groups and beta diversity components.",
+      "We compiled trait information for three traits known to influence bee responses to environmental conditions: nesting preference (above vs below-ground nesters), tongue-length and body size (Table A1)."
+     ],
+     "value": "literature"
+    },
+    "Value/No. categories": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Family": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.033,
+      "literature": 0.967
+     },
+     "said": [
+      "The tongue length was estimated using the BeeIT package in R (Cariveau et al., 2016), which calculates the tongue length based on the taxonomic family and species-specific ITD."
+     ],
+     "value": "literature"
+    },
+    "Functional traits Flower colors": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits Life-strategy": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits Symmetry": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits nectar/ pollen": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits Nectar tube": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits Pollen per flower": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits First flowering": {
+     "said": [],
+     "value": null
+    },
+    "Functional traits Average height (cm)": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "compiled",
   "probs": {
@@ -779,6 +907,12 @@
    "compiled": 0.998
   },
   "value": "compiled"
+ },
+ "rows": {
+  "0": "",
+  "1": " Each of its 91 species takes one row.",
+  "2": "",
+  "3": " Each of its 134 species takes one row."
  },
  "text_found": {
   "sex": [

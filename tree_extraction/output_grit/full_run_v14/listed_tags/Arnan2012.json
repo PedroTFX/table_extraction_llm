@@ -102,33 +102,42 @@
  "statistic": {
   "1": {
    "Statistical test": {
-    "choice": "unknown",
+    "choice": "mode",
     "probs": {
-     "individual": 0.008,
-     "mean": 0.004,
-     "mean ± SD": 0.007,
-     "mean ± SE": 0.003,
-     "range": 0.004,
+     "individual": 0.015,
+     "mean": 0.008,
+     "mean ± SD": 0.02,
+     "mean ± SE": 0.005,
+     "range": 0.005,
      "min": 0.003,
      "max": 0.003,
-     "median": 0.034,
-     "count": 0.03,
-     "mode": 0.299,
-     "single observation": 0.019,
-     "unknown": 0.586
+     "median": 0.035,
+     "count": 0.034,
+     "mode": 0.659,
+     "single observation": 0.015,
+     "unknown": 0.197
     },
     "duels": [
      {
-      "a": "o11",
-      "b": "o9",
-      "choice": "a",
+      "a": "o9",
+      "b": "o11",
+      "choice": "b",
       "probs": {
-       "a": 0.621,
-       "b": 0.379
+       "a": 0.143,
+       "b": 0.857
+      }
+     },
+     {
+      "a": "o7",
+      "b": "o11",
+      "choice": "b",
+      "probs": {
+       "a": 0.085,
+       "b": 0.915
       }
      }
     ],
-    "value": null
+    "value": "unknown"
    }
   },
   "2": {
@@ -136,7 +145,7 @@
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.002,
+     "mean": 0.0,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -144,7 +153,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.996,
+     "mode": 0.998,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -155,18 +164,18 @@
    "Variable": {
     "choice": "mean",
     "probs": {
-     "individual": 0.023,
-     "mean": 0.533,
-     "mean ± SD": 0.052,
-     "mean ± SE": 0.013,
-     "range": 0.008,
-     "min": 0.005,
-     "max": 0.005,
-     "median": 0.005,
-     "count": 0.007,
-     "mode": 0.256,
-     "single observation": 0.08,
-     "unknown": 0.014
+     "individual": 0.007,
+     "mean": 0.721,
+     "mean ± SD": 0.022,
+     "mean ± SE": 0.004,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.002,
+     "mode": 0.225,
+     "single observation": 0.008,
+     "unknown": 0.003
     },
     "duels": [
      {
@@ -174,48 +183,79 @@
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.218,
-       "b": 0.782
+       "a": 0.045,
+       "b": 0.955
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.06,
+       "b": 0.94
+      }
+     }
+    ],
+    "value": "mode"
+   },
+   "Axis I: 50.3% of variance": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.136,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.002,
+     "mode": 0.791,
+     "single observation": 0.044,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.552,
+       "b": 0.448
       }
      }
     ],
     "value": null
    },
-   "Axis I: 50.3% of variance": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.011,
-     "mean": 0.813,
-     "mean ± SD": 0.02,
-     "mean ± SE": 0.009,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.004,
-     "median": 0.009,
-     "count": 0.004,
-     "mode": 0.054,
-     "single observation": 0.059,
-     "unknown": 0.01
-    },
-    "value": "mean"
-   },
    "Axis I: 29.5% of variance": {
-    "choice": "mean",
+    "choice": "mode",
     "probs": {
-     "individual": 0.016,
-     "mean": 0.84,
-     "mean ± SD": 0.017,
-     "mean ± SE": 0.008,
-     "range": 0.003,
-     "min": 0.002,
-     "max": 0.004,
+     "individual": 0.015,
+     "mean": 0.139,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.007,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.002,
      "median": 0.012,
      "count": 0.002,
-     "mode": 0.044,
-     "single observation": 0.05,
-     "unknown": 0.003
+     "mode": 0.752,
+     "single observation": 0.053,
+     "unknown": 0.002
     },
-    "value": "mean"
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.576,
+       "b": 0.424
+      }
+     }
+    ],
+    "value": null
    }
   },
   "4": {
@@ -240,7 +280,7 @@
    "Our ant groups classification": {
     "choice": "mode",
     "probs": {
-     "individual": 0.001,
+     "individual": 0.0,
      "mean": 0.001,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
@@ -249,7 +289,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.997,
+     "mode": 0.998,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -261,9 +301,9 @@
     "choice": "mean",
     "probs": {
      "individual": 0.001,
-     "mean": 0.993,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.002,
+     "mean": 0.995,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -278,16 +318,16 @@
    "Polymorphism": {
     "choice": "mode",
     "probs": {
-     "individual": 0.007,
-     "mean": 0.034,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.002,
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.005,
-     "mode": 0.944,
+     "count": 0.0,
+     "mode": 0.995,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -297,15 +337,15 @@
     "choice": "count",
     "probs": {
      "individual": 0.001,
-     "mean": 0.005,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.989,
-     "mode": 0.001,
+     "count": 0.958,
+     "mode": 0.037,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -314,45 +354,34 @@
    "Brood cycle": {
     "choice": "mode",
     "probs": {
-     "individual": 0.01,
-     "mean": 0.232,
-     "mean ± SD": 0.014,
-     "mean ± SE": 0.004,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.033,
-     "mode": 0.702,
-     "single observation": 0.001,
-     "unknown": 0.001
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.515,
-       "b": 0.485
-      }
-     }
-    ],
-    "value": null
-   },
-   "N queens per colony": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.002,
-     "mean": 0.002,
+     "individual": 0.003,
+     "mean": 0.048,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.057,
-     "mode": 0.936,
+     "count": 0.004,
+     "mode": 0.941,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "N queens per colony": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.994,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -361,54 +390,34 @@
    "N nests per colony": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.008,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.306,
-     "mode": 0.681,
+     "count": 0.005,
+     "mode": 0.989,
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.159,
-       "b": 0.841
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.005,
-       "b": 0.995
-      }
-     }
-    ],
-    "value": "count"
+    "value": "mode"
    },
    "Main food resource": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.02,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.0,
+     "mean": 0.005,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.974,
+     "mode": 0.994,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -419,16 +428,16 @@
    "Defense of resources": {
     "choice": "mode",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.13,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
+     "individual": 0.002,
+     "mean": 0.019,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
      "median": 0.0,
-     "count": 0.003,
-     "mode": 0.853,
+     "count": 0.004,
+     "mode": 0.972,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -438,15 +447,15 @@
     "choice": "mean",
     "probs": {
      "individual": 0.001,
-     "mean": 0.974,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
+     "mean": 0.989,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.02,
-     "mode": 0.0,
+     "count": 0.005,
+     "mode": 0.001,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -455,16 +464,16 @@
    "Daily rhythm": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.017,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.001,
+     "mean": 0.005,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.977,
+     "count": 0.0,
+     "mode": 0.993,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -473,55 +482,35 @@
    "Month of peak activity": {
     "choice": "mode",
     "probs": {
-     "individual": 0.009,
-     "mean": 0.301,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.003,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.002,
-     "mode": 0.673,
-     "single observation": 0.002,
-     "unknown": 0.001
+     "individual": 0.001,
+     "mean": 0.013,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.983,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.944,
-       "b": 0.056
-      }
-     },
-     {
-      "a": "o0",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.017,
-       "b": 0.983
-      }
-     }
-    ],
     "value": "mode"
    },
    "CTM (ºC)": {
     "choice": "mean",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.958,
-     "mean ± SD": 0.009,
-     "mean ± SE": 0.006,
-     "range": 0.006,
-     "min": 0.002,
-     "max": 0.003,
+     "individual": 0.007,
+     "mean": 0.852,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
      "median": 0.001,
      "count": 0.001,
-     "mode": 0.008,
-     "single observation": 0.001,
+     "mode": 0.126,
+     "single observation": 0.003,
      "unknown": 0.0
     },
     "value": "mean"
@@ -529,34 +518,54 @@
    "MAT (ºC)": {
     "choice": "mean",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.988,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.002,
+     "individual": 0.005,
+     "mean": 0.74,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.0,
-     "mode": 0.001,
+     "count": 0.001,
+     "mode": 0.247,
      "single observation": 0.0,
      "unknown": 0.0
     },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.803,
+       "b": 0.197
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.008,
+       "b": 0.992
+      }
+     }
+    ],
     "value": "mean"
    },
    "Phylogeny code": {
     "choice": "mode",
     "probs": {
-     "individual": 0.003,
-     "mean": 0.011,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.984,
+     "mode": 0.993,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -1336,6 +1345,361 @@
    }
   }
  },
+ "source": {
+  "1": {
+   "long": true,
+   "traits": {
+    "Worker size (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.972,
+      "literature": 0.028
+     },
+     "said": [
+      "Neither worker size nor polymorphism of the worker caste presented significant differences between the two groups.",
+      "Thus, species included in the different groups significantly differed in the five quantitative variables: worker size (Kruskal–Wallis test, H = 23.2, P = 0.0001); number of workers at baits (H = 9.3, P = 0.0500); CTM (H = 20.0, $P = 0 ."
+     ],
+     "value": "measured"
+    },
+    "Polymorphism": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.969,
+      "literature": 0.031
+     },
+     "said": [
+      "Worker polymorphism: 1, monomorphism (e.g.",
+      "Linepithema humile); 2, low polymorphism (e.g."
+     ],
+     "value": "measured"
+    },
+    "Defence of resources": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.983,
+      "literature": 0.017
+     },
+     "said": [
+      "Defence of resources: 1, none (only defence of the nest); 2, defence of food or territory (foraging area).",
+      "Defence of resources: 1, none; 2, food and/or territory."
+     ],
+     "value": "measured"
+    },
+    "Number of workers per bait": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.969,
+      "literature": 0.031
+     },
+     "said": [
+      "The number of workers per bait was largest for species of group 2 and 3a (Fig."
+     ],
+     "value": "measured"
+    },
+    "Colony population": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.905,
+      "literature": 0.095
+     },
+     "said": [
+      "Colony population: 1, hundreds of workers; 2, thousands of workers; 3, tens of thousands of workers.",
+      "Colony population: 1, hundreds; 2, thousands; 3, tens of thousands."
+     ],
+     "value": "measured"
+    },
+    "Brood cycle index": {
+     "said": [],
+     "value": null
+    },
+    "Number of queens per colony": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.962,
+      "literature": 0.038
+     },
+     "said": [
+      "Number of queens per colony: 1, only one queen (monogyny); 2, more than one queen (polygyny).",
+      "There were also differences in colony size, with dominants having more populated colonies than subordinates, but not in colony composition (number of queens or number of nests per colony)."
+     ],
+     "value": "measured"
+    },
+    "Number of nests per colony": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.963,
+      "literature": 0.037
+     },
+     "said": [
+      "Number of nests per colony: 1, only one nest (monodomy); 2, more than one nest (polydomy).",
+      "There were also differences in colony size, with dominants having more populated colonies than subordinates, but not in colony composition (number of queens or number of nests per colony)."
+     ],
+     "value": "measured"
+    },
+    "Main food resources": {
+     "said": [],
+     "value": null
+    },
+    "Daily activity rhythm": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.979,
+      "literature": 0.021
+     },
+     "said": [
+      "Daily activity rhythm: 1, strictly diurnal; 2, diurnal in spring and continuous throughout the day or with a midday drop in summer; 3, continuous in spring and nocturnal in summer; 4, always nocturnal.",
+      "Differences in three cardinal variables (main food resource, month of maximum activity, daily activity rhythm) were tested with Chi-squared tests where counts were the different ant species."
+     ],
+     "value": "measured"
+    },
+    "Month of maximum activity": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.986,
+      "literature": 0.014
+     },
+     "said": [
+      "Differences in three cardinal variables (main food resource, month of maximum activity, daily activity rhythm) were tested with Chi-squared tests where counts were the different ant species."
+     ],
+     "value": "measured"
+    },
+    "Critical thermal maximum (CTM)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.856,
+      "literature": 0.144
+     },
+     "said": [
+      "Critical thermal maximum (CTM).",
+      "CTM, critical thermal maximum (in ºC)."
+     ],
+     "value": "measured"
+    },
+    "Maximal activity temperature (MAT)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.963,
+      "literature": 0.037
+     },
+     "said": [
+      "Maximal activity temperature (MAT)."
+     ],
+     "value": "measured"
+    },
+    "Difference CTM-MAT": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.786,
+      "literature": 0.214
+     },
+     "said": [
+      "Difference between CTM and MAT temperatures (CTM–MAT).",
+      "0 \\; \\mathrm { ^ \\circ C }$ for dominant and subordinate species, respectively) and the difference between MAT and the critical physiological thermal maximum (CTM) was also significant $( 1 7 ."
+     ],
+     "value": null
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "Dom": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.673,
+      "literature": 0.327
+     },
+     "said": [
+      "Dominance groups (dom): (?) dominant, (-) subordinate variables."
+     ],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Variable": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.231,
+      "literature": 0.769
+     },
+     "said": [
+      "This variable represents the maximum physiological thermal limit of each species.",
+      "This variable represents the temperature at which the mean foraging activity value was greatest in field conditions; it is the optimal (or preferred) ground temperature of the species to forage."
+     ],
+     "value": null
+    },
+    "Axis I: 50.3% of variance": {
+     "said": [],
+     "value": null
+    },
+    "Axis I: 29.5% of variance": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Andersen's functional groups": {
+     "said": [],
+     "value": null
+    },
+    "Our ant groups classification": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "5": {
+   "long": false,
+   "traits": {
+    "Mean Worker length (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.864,
+      "literature": 0.136
+     },
+     "said": [
+      "2 Mean (SD) values of a worker size (length, in mm); b numberb of workers at baits; c critical thermal maximum (CTM, in ${ } ^ { \\circ } \\mathbf { C } ) ;$ d maximum activity temperature (MAT, in\u0003C); ande difference between CTM and MAT (CTM–MAT) of the seven groups of species identified in the dendrogram of Fig."
+     ],
+     "value": "measured"
+    },
+    "Polymorphism": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.797,
+      "literature": 0.203
+     },
+     "said": [
+      "Worker polymorphism: 1, monomorphism (e.g.",
+      "Linepithema humile); 2, low polymorphism (e.g."
+     ],
+     "value": null
+    },
+    "Colony population": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.443,
+      "literature": 0.557
+     },
+     "said": [
+      "Colony population: 1, hundreds of workers; 2, thousands of workers; 3, tens of thousands of workers.",
+      "Colony population: 1, hundreds; 2, thousands; 3, tens of thousands."
+     ],
+     "value": null
+    },
+    "Brood cycle": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.441,
+      "literature": 0.559
+     },
+     "said": [
+      "Brood cycle: 1, larvae within the nests from March to September (foraging activity season); 2, larvae within the nests during the whole year (also in winter).",
+      "Brood cycle: 1, larvae in the nests from March to September; 2, larvae in the nests during the whole year."
+     ],
+     "value": null
+    },
+    "N queens per colony": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.921,
+      "literature": 0.079
+     },
+     "said": [
+      "Number of queens per colony: 1, only one queen (monogyny); 2, more than one queen (polygyny).",
+      "There were also differences in colony size, with dominants having more populated colonies than subordinates, but not in colony composition (number of queens or number of nests per colony)."
+     ],
+     "value": "measured"
+    },
+    "N nests per colony": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.923,
+      "literature": 0.077
+     },
+     "said": [
+      "Number of nests per colony: 1, only one nest (monodomy); 2, more than one nest (polydomy).",
+      "There were also differences in colony size, with dominants having more populated colonies than subordinates, but not in colony composition (number of queens or number of nests per colony)."
+     ],
+     "value": "measured"
+    },
+    "Main food resource": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.85,
+      "literature": 0.15
+     },
+     "said": [
+      "Diet (main food resource): 1, arthropod corpses (scavenger species); 2, nectar (nectar-eating species); 3, seeds (granivorous species); 4, honeydew (aphidtender species).",
+      "Differences in three cardinal variables (main food resource, month of maximum activity, daily activity rhythm) were tested with Chi-squared tests where counts were the different ant species."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "6": {
+   "long": false,
+   "traits": {
+    "Defense of resources": {
+     "said": [],
+     "value": null
+    },
+    "Mean Number workers/bait": {
+     "said": [],
+     "value": null
+    },
+    "Daily rhythm": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.719,
+      "literature": 0.281
+     },
+     "said": [
+      "Daily activity rhythm: 1, strictly diurnal; 2, diurnal in spring and continuous throughout the day or with a midday drop in summer; 3, continuous in spring and nocturnal in summer; 4, always nocturnal.",
+      "Differences in three cardinal variables (main food resource, month of maximum activity, daily activity rhythm) were tested with Chi-squared tests where counts were the different ant species."
+     ],
+     "value": null
+    },
+    "Month of peak activity": {
+     "said": [],
+     "value": null
+    },
+    "CTM (ºC)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.93,
+      "literature": 0.07
+     },
+     "said": [
+      "Critical thermal maximum (CTM).",
+      "The CTM of each species was considered to be the temperature at which at least 50 % of workers died or lost muscular coordination after 10 min of exposure."
+     ],
+     "value": "measured"
+    },
+    "MAT (ºC)": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.424,
+      "literature": 0.576
+     },
+     "said": [
+      "Maximal activity temperature (MAT).",
+      "Difference between CTM and MAT temperatures (CTM–MAT)."
+     ],
+     "value": null
+    },
+    "Phylogeny code": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -1343,6 +1707,14 @@
    "compiled": 0.117
   },
   "value": "own"
+ },
+ "rows": {
+  "1": "",
+  "2": " Each of its 30 species takes one row.",
+  "3": "",
+  "4": "",
+  "5": " Each of its 30 species takes one row.",
+  "6": " Each of its 30 species takes one row."
  },
  "text_found": {
   "sex": [],

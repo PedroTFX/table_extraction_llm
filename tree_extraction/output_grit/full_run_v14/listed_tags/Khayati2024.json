@@ -18,16 +18,16 @@
    "Strates": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.024,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.009,
-     "range": 0.001,
+     "individual": 0.008,
+     "mean": 0.032,
+     "mean ± SD": 0.015,
+     "mean ± SE": 0.017,
+     "range": 0.003,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.957,
+     "mode": 0.922,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -58,16 +58,16 @@
    "Strates": {
     "choice": "mode",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.033,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.01,
-     "range": 0.001,
+     "individual": 0.008,
+     "mean": 0.028,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.022,
+     "range": 0.004,
      "min": 0.0,
-     "max": 0.0,
+     "max": 0.001,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.944,
+     "mode": 0.922,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -101,13 +101,13 @@
      "individual": 0.001,
      "mean": 0.002,
      "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.996,
+     "mode": 0.994,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -116,45 +116,65 @@
    "Worker body size": {
     "choice": "mean",
     "probs": {
-     "individual": 0.029,
-     "mean": 0.94,
-     "mean ± SD": 0.013,
-     "mean ± SE": 0.006,
-     "range": 0.003,
-     "min": 0.002,
+     "individual": 0.016,
+     "mean": 0.43,
+     "mean ± SD": 0.153,
+     "mean ± SE": 0.357,
+     "range": 0.001,
+     "min": 0.0,
      "max": 0.001,
-     "median": 0.003,
+     "median": 0.041,
      "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.002,
+     "mode": 0.0,
+     "single observation": 0.0,
      "unknown": 0.0
-    },
-    "value": "mean"
-   },
-   "Worker polymorphism": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.019,
-     "mean": 0.395,
-     "mean ± SD": 0.214,
-     "mean ± SE": 0.036,
-     "range": 0.054,
-     "min": 0.005,
-     "max": 0.009,
-     "median": 0.008,
-     "count": 0.007,
-     "mode": 0.133,
-     "single observation": 0.01,
-     "unknown": 0.112
     },
     "duels": [
      {
       "a": "o1",
-      "b": "o2",
+      "b": "o3",
       "choice": "b",
       "probs": {
-       "a": 0.454,
-       "b": 0.546
+       "a": 0.484,
+       "b": 0.516
+      }
+     }
+    ],
+    "value": null
+   },
+   "Worker polymorphism": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.014,
+     "mean": 0.258,
+     "mean ± SD": 0.129,
+     "mean ± SE": 0.459,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.011,
+     "count": 0.002,
+     "mode": 0.024,
+     "single observation": 0.001,
+     "unknown": 0.097
+    },
+    "duels": [
+     {
+      "a": "o3",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.068,
+       "b": 0.932
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.238,
+       "b": 0.762
       }
      }
     ],
@@ -163,36 +183,47 @@
    "Colony size": {
     "choice": "mean",
     "probs": {
-     "individual": 0.011,
-     "mean": 0.803,
-     "mean ± SD": 0.014,
-     "mean ± SE": 0.004,
-     "range": 0.005,
-     "min": 0.005,
-     "max": 0.003,
-     "median": 0.008,
-     "count": 0.026,
-     "mode": 0.018,
-     "single observation": 0.067,
-     "unknown": 0.037
+     "individual": 0.007,
+     "mean": 0.648,
+     "mean ± SD": 0.028,
+     "mean ± SE": 0.232,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.015,
+     "count": 0.048,
+     "mode": 0.002,
+     "single observation": 0.002,
+     "unknown": 0.015
     },
-    "value": "mean"
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o3",
+      "choice": "b",
+      "probs": {
+       "a": 0.387,
+       "b": 0.613
+      }
+     }
+    ],
+    "value": null
    },
    "Seeds": {
     "choice": "count",
     "probs": {
-     "individual": 0.024,
-     "mean": 0.263,
-     "mean ± SD": 0.009,
-     "mean ± SE": 0.004,
-     "range": 0.004,
-     "min": 0.003,
-     "max": 0.003,
-     "median": 0.004,
-     "count": 0.34,
-     "mode": 0.08,
-     "single observation": 0.211,
-     "unknown": 0.055
+     "individual": 0.011,
+     "mean": 0.126,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.085,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.005,
+     "count": 0.611,
+     "mode": 0.092,
+     "single observation": 0.047,
+     "unknown": 0.006
     },
     "duels": [
      {
@@ -200,17 +231,17 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.931,
-       "b": 0.069
+       "a": 0.9,
+       "b": 0.1
       }
      },
      {
-      "a": "o10",
+      "a": "o9",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.045,
-       "b": 0.955
+       "a": 0.071,
+       "b": 0.929
       }
      }
     ],
@@ -219,17 +250,84 @@
    "Insects": {
     "choice": "count",
     "probs": {
-     "individual": 0.018,
-     "mean": 0.176,
-     "mean ± SD": 0.005,
-     "mean ± SE": 0.003,
+     "individual": 0.008,
+     "mean": 0.117,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.033,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.488,
+     "mode": 0.309,
+     "single observation": 0.032,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.922,
+       "b": 0.078
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.137,
+       "b": 0.863
+      }
+     }
+    ],
+    "value": "count"
+   },
+   "Liquid": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.281,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.091,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.139,
+     "mode": 0.267,
+     "single observation": 0.194,
+     "unknown": 0.003
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.227,
+       "b": 0.773
+      }
+     }
+    ],
+    "value": null
+   },
+   "Colony foundation": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.01,
+     "mean": 0.029,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.026,
      "range": 0.001,
      "min": 0.001,
      "max": 0.001,
-     "median": 0.001,
-     "count": 0.394,
-     "mode": 0.278,
-     "single observation": 0.12,
+     "median": 0.003,
+     "count": 0.523,
+     "mode": 0.381,
+     "single observation": 0.011,
      "unknown": 0.003
     },
     "duels": [
@@ -238,84 +336,8 @@
       "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.867,
-       "b": 0.133
-      }
-     },
-     {
-      "a": "o1",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.029,
-       "b": 0.971
-      }
-     }
-    ],
-    "value": "count"
-   },
-   "Liquid": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.022,
-     "mean": 0.269,
-     "mean ± SD": 0.012,
-     "mean ± SE": 0.005,
-     "range": 0.003,
-     "min": 0.002,
-     "max": 0.003,
-     "median": 0.003,
-     "count": 0.079,
-     "mode": 0.318,
-     "single observation": 0.251,
-     "unknown": 0.034
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.911,
-       "b": 0.089
-      }
-     },
-     {
-      "a": "o10",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.461,
-       "b": 0.539
-      }
-     }
-    ],
-    "value": null
-   },
-   "Colony foundation": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.028,
-     "mean": 0.032,
-     "mean ± SD": 0.006,
-     "mean ± SE": 0.004,
-     "range": 0.005,
-     "min": 0.004,
-     "max": 0.003,
-     "median": 0.002,
-     "count": 0.226,
-     "mode": 0.578,
-     "single observation": 0.097,
-     "unknown": 0.014
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.249,
-       "b": 0.751
+       "a": 0.776,
+       "b": 0.224
       }
      }
     ],
@@ -324,17 +346,17 @@
    "Number of queens": {
     "choice": "count",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.024,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
+     "individual": 0.004,
+     "mean": 0.064,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.011,
      "range": 0.001,
-     "min": 0.002,
-     "max": 0.001,
-     "median": 0.003,
-     "count": 0.948,
-     "mode": 0.004,
-     "single observation": 0.005,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.004,
+     "count": 0.907,
+     "mode": 0.002,
+     "single observation": 0.001,
      "unknown": 0.001
     },
     "value": "count"
@@ -342,54 +364,54 @@
    "Diurnality": {
     "choice": "mode",
     "probs": {
-     "individual": 0.009,
-     "mean": 0.023,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.001,
-     "min": 0.001,
+     "individual": 0.004,
+     "mean": 0.03,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.011,
+     "range": 0.0,
+     "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.956,
+     "mode": 0.942,
      "single observation": 0.001,
-     "unknown": 0.005
+     "unknown": 0.002
     },
     "value": "mode"
    },
    "Foraging strategy": {
     "choice": "mode",
     "probs": {
-     "individual": 0.023,
-     "mean": 0.009,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.004,
-     "mode": 0.934,
-     "single observation": 0.002,
-     "unknown": 0.019
+     "individual": 0.003,
+     "mean": 0.001,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.004,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.989,
+     "single observation": 0.0,
+     "unknown": 0.001
     },
     "value": "mode"
    },
    "Nesting site": {
     "choice": "mode",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.015,
-     "mean ± SD": 0.003,
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.002,
-     "range": 0.006,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.005,
-     "count": 0.002,
-     "mode": 0.922,
-     "single observation": 0.002,
-     "unknown": 0.034
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mode"
    }
@@ -592,11 +614,11 @@
    "sex": {
     "choice": "both",
     "probs": {
-     "both": 0.566,
-     "female": 0.042,
-     "male": 0.02,
+     "both": 0.532,
+     "female": 0.043,
+     "male": 0.01,
      "unknown": 0.002,
-     "not": 0.37
+     "not": 0.413
     },
     "duels": [
      {
@@ -604,8 +626,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.91,
-       "b": 0.09
+       "a": 0.912,
+       "b": 0.088
       }
      },
      {
@@ -621,8 +643,8 @@
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.459,
-      "not": 0.541
+      "pick": 0.478,
+      "not": 0.522
      }
     },
     "value": null
@@ -643,13 +665,13 @@
    "basisOfRecord": {
     "choice": "Occurrence",
     "probs": {
-     "PreservedSpecimen": 0.076,
-     "LivingSpecimen": 0.045,
-     "HumanObservation": 0.189,
+     "PreservedSpecimen": 0.022,
+     "LivingSpecimen": 0.042,
+     "HumanObservation": 0.287,
      "MachineObservation": 0.004,
-     "MaterialSample": 0.005,
-     "MaterialCitation": 0.005,
-     "Occurrence": 0.39,
+     "MaterialSample": 0.004,
+     "MaterialCitation": 0.008,
+     "Occurrence": 0.347,
      "Taxon": 0.0,
      "not": 0.286
     },
@@ -659,8 +681,8 @@
       "b": "o2",
       "choice": "b",
       "probs": {
-       "a": 0.39,
-       "b": 0.61
+       "a": 0.342,
+       "b": 0.658
       }
      }
     ],
@@ -669,17 +691,17 @@
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.895,
-     "larva": 0.003,
-     "mature larva": 0.003,
+     "adult": 0.904,
+     "larva": 0.002,
+     "mature larva": 0.002,
      "nymph": 0.001,
      "caterpillar": 0.0,
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
-     "all": 0.004,
-     "unknown": 0.006,
-     "not": 0.087
+     "all": 0.003,
+     "unknown": 0.005,
+     "not": 0.08
     },
     "value": "adult"
    }
@@ -688,39 +710,39 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.04,
+     "both": 0.048,
      "female": 0.001,
      "male": 0.001,
      "unknown": 0.002,
-     "not": 0.957
+     "not": 0.949
     },
     "value": null
    },
    "caste": {
     "choice": "not",
     "probs": {
-     "queen": 0.0,
-     "male alate": 0.0,
-     "worker": 0.059,
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.07,
      "minor worker": 0.002,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.938
+     "not": 0.926
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "MaterialCitation",
     "probs": {
-     "PreservedSpecimen": 0.004,
-     "LivingSpecimen": 0.032,
-     "HumanObservation": 0.008,
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.033,
+     "HumanObservation": 0.007,
      "MachineObservation": 0.001,
      "MaterialSample": 0.002,
-     "MaterialCitation": 0.705,
+     "MaterialCitation": 0.67,
      "Occurrence": 0.009,
      "Taxon": 0.0,
-     "not": 0.238
+     "not": 0.275
     },
     "duels": [
      {
@@ -728,8 +750,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.988,
-       "b": 0.012
+       "a": 0.986,
+       "b": 0.014
       }
      },
      {
@@ -737,8 +759,8 @@
       "b": "o5",
       "choice": "b",
       "probs": {
-       "a": 0.009,
-       "b": 0.991
+       "a": 0.01,
+       "b": 0.99
       }
      }
     ],
@@ -754,7 +776,7 @@
    "lifeStage": {
     "choice": "not",
     "probs": {
-     "adult": 0.01,
+     "adult": 0.014,
      "larva": 0.001,
      "mature larva": 0.0,
      "nymph": 0.0,
@@ -762,10 +784,21 @@
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
-     "all": 0.164,
-     "unknown": 0.003,
-     "not": 0.821
+     "all": 0.203,
+     "unknown": 0.004,
+     "not": 0.778
     },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.672,
+       "b": 0.328
+      }
+     }
+    ],
     "value": null
    }
   },
@@ -773,39 +806,39 @@
    "sex": {
     "choice": "female",
     "probs": {
-     "both": 0.044,
-     "female": 0.873,
-     "male": 0.038,
+     "both": 0.042,
+     "female": 0.875,
+     "male": 0.039,
      "unknown": 0.01,
-     "not": 0.035
+     "not": 0.034
     },
     "value": "female"
    },
    "caste": {
     "choice": "worker",
     "probs": {
-     "queen": 0.0,
+     "queen": 0.001,
      "male alate": 0.0,
-     "worker": 0.992,
+     "worker": 0.993,
      "minor worker": 0.003,
      "major worker": 0.001,
      "soldier": 0.0,
-     "not": 0.003
+     "not": 0.002
     },
     "value": "worker"
    },
    "basisOfRecord": {
     "choice": "MaterialCitation",
     "probs": {
-     "PreservedSpecimen": 0.005,
-     "LivingSpecimen": 0.249,
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.082,
      "HumanObservation": 0.006,
      "MachineObservation": 0.001,
      "MaterialSample": 0.001,
-     "MaterialCitation": 0.601,
+     "MaterialCitation": 0.79,
      "Occurrence": 0.0,
      "Taxon": 0.0,
-     "not": 0.137
+     "not": 0.116
     },
     "duels": [
      {
@@ -813,8 +846,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.985,
-       "b": 0.015
+       "a": 0.987,
+       "b": 0.013
       }
      },
      {
@@ -822,16 +855,16 @@
       "b": "o5",
       "choice": "b",
       "probs": {
-       "a": 0.007,
-       "b": 0.993
+       "a": 0.006,
+       "b": 0.994
       }
      }
     ],
     "final": {
      "choice": "pick",
      "probs": {
-      "pick": 0.985,
-      "not": 0.015
+      "pick": 0.986,
+      "not": 0.014
      }
     },
     "value": "MaterialCitation"
@@ -839,9 +872,9 @@
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.943,
-     "larva": 0.003,
-     "mature larva": 0.002,
+     "adult": 0.946,
+     "larva": 0.002,
+     "mature larva": 0.001,
      "nymph": 0.001,
      "caterpillar": 0.0,
      "pupa": 0.0,
@@ -849,7 +882,7 @@
      "instar": 0.0,
      "all": 0.0,
      "unknown": 0.008,
-     "not": 0.042
+     "not": 0.04
     },
     "value": "adult"
    }
@@ -898,6 +931,153 @@
    }
   }
  },
+ "source": {
+  "1": {
+   "long": false,
+   "traits": {
+    "Strates": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "Fire condition Std. Error": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "7": {
+   "long": false,
+   "traits": {
+    "Strates": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "8": {
+   "long": false,
+   "traits": {
+    "Fire condition Std. Error": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "12": {
+   "long": false,
+   "traits": {
+    "Code": {
+     "said": [],
+     "value": null
+    },
+    "Worker body size": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.465,
+      "literature": 0.535
+     },
+     "said": [
+      "Functional results Of the 25 ant functional classes, nine showed positive responses to fire (Table 2), including hypogaeic-nesting species, species that are strictly diurnal, species with medium worker polymorphism, polygynous species, species that display dependent colony foundation, species with small body size, species that use individual and collective foraging, and species that consumed seed-based diet.",
+      "In contrast, four functional classes showed negative responses, including species with larger body size, species with greater worker polymorphism, species that display independent colony foundation, and arboreal nesting species (Table 2; Fig."
+     ],
+     "value": null
+    },
+    "Worker polymorphism": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.339,
+      "literature": 0.661
+     },
+     "said": [
+      "Functional results Of the 25 ant functional classes, nine showed positive responses to fire (Table 2), including hypogaeic-nesting species, species that are strictly diurnal, species with medium worker polymorphism, polygynous species, species that display dependent colony foundation, species with small body size, species that use individual and collective foraging, and species that consumed seed-based diet.",
+      "In contrast, four functional classes showed negative responses, including species with larger body size, species with greater worker polymorphism, species that display independent colony foundation, and arboreal nesting species (Table 2; Fig."
+     ],
+     "value": null
+    },
+    "Colony size": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.525,
+      "literature": 0.475
+     },
+     "said": [
+      "Although ant abundance data were also collected, they can be influenced by variation in colony size within a species, making comparisons between plots difficult.",
+      "Functional results Of the 25 ant functional classes, nine showed positive responses to fire (Table 2), including hypogaeic-nesting species, species that are strictly diurnal, species with medium worker polymorphism, polygynous species, species that display dependent colony foundation, species with small body size, species that use individual and collective foraging, and species that consumed seed-based diet."
+     ],
+     "value": null
+    },
+    "Seeds": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.714,
+      "literature": 0.286
+     },
+     "said": [
+      "Burnt areas harbored a greater abundance of ant species adapted to open habitats, characterized by ground nesting habits, ground foraging, and a preference for readily available resources like seeds.",
+      "Burnt areas harbored a greater abundance of ant species adapted to open habitats, characterized by ground nesting habits, ground foraging, and a preference for readily available resources like seeds."
+     ],
+     "value": null
+    },
+    "Insects": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.725,
+      "literature": 0.275
+     },
+     "said": [
+      "In pine plantations, the increased plant richness and diversity following a fire (EL Khayati et al., 2023a) can provide ants with a broader range of resources, including nectar, pollen, seeds, and insects.",
+      "Additionally, the flowering of plants after a fire can attract pollinators, providing a food source for ants that specialize in preying on insects (Lamont and Downes, 2011)."
+     ],
+     "value": null
+    },
+    "Liquid": {
+     "said": [],
+     "value": null
+    },
+    "Colony foundation": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.397,
+      "literature": 0.603
+     },
+     "said": [
+      "Functional results Of the 25 ant functional classes, nine showed positive responses to fire (Table 2), including hypogaeic-nesting species, species that are strictly diurnal, species with medium worker polymorphism, polygynous species, species that display dependent colony foundation, species with small body size, species that use individual and collective foraging, and species that consumed seed-based diet.",
+      "In contrast, four functional classes showed negative responses, including species with larger body size, species with greater worker polymorphism, species that display independent colony foundation, and arboreal nesting species (Table 2; Fig."
+     ],
+     "value": null
+    },
+    "Number of queens": {
+     "said": [],
+     "value": null
+    },
+    "Diurnality": {
+     "said": [],
+     "value": null
+    },
+    "Foraging strategy": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.298,
+      "literature": 0.702
+     },
+     "said": [
+      "This aligns with our previous study in which obligate seeders appeared to be more abundant than resprouters in afforested plots (Vidal-Cordero et al., 2022; EL Khayati et al., 2023a), which may explain the finding of ants that use a collective foraging strategy, as this strategy prevails in more open areas (Arnan et al., 2014).",
+      "Collective foraging strategy enables the recruitment of many workers for concentrated sources of food (Cerda ´ et al., 1997, Arnan et al., 2012)."
+     ],
+     "value": null
+    },
+    "Nesting site": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "compiled",
   "probs": {
@@ -905,6 +1085,13 @@
    "compiled": 0.559
   },
   "value": null
+ },
+ "rows": {
+  "1": "",
+  "2": "",
+  "7": "",
+  "8": "",
+  "12": " Each of its 45 species takes one row."
  },
  "text_found": {
   "sex": [],

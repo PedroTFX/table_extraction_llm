@@ -14,9 +14,9 @@
    "Re (N=5)": {
     "choice": "mean ± SD",
     "probs": {
-     "individual": 0.0,
+     "individual": 0.001,
      "mean": 0.0,
-     "mean ± SD": 0.999,
+     "mean ± SD": 0.998,
      "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
@@ -50,10 +50,10 @@
    "Pu (N=10)": {
     "choice": "mean ± SD",
     "probs": {
-     "individual": 0.0,
+     "individual": 0.001,
      "mean": 0.0,
-     "mean ± SD": 0.999,
-     "mean ± SE": 0.0,
+     "mean ± SD": 0.998,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -70,45 +70,56 @@
    "AS": {
     "choice": "mode",
     "probs": {
-     "individual": 0.036,
-     "mean": 0.04,
-     "mean ± SD": 0.023,
-     "mean ± SE": 0.013,
-     "range": 0.015,
-     "min": 0.002,
-     "max": 0.002,
-     "median": 0.001,
-     "count": 0.01,
-     "mode": 0.844,
-     "single observation": 0.006,
-     "unknown": 0.007
+     "individual": 0.178,
+     "mean": 0.007,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.004,
+     "mode": 0.805,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mode"
    },
    "acceleration–slowdown": {
     "choice": "mode",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.016,
-     "mean ± SD": 0.007,
-     "mean ± SE": 0.002,
-     "range": 0.003,
-     "min": 0.0,
-     "max": 0.0,
+     "individual": 0.097,
+     "mean": 0.047,
+     "mean ± SD": 0.093,
+     "mean ± SE": 0.004,
+     "range": 0.008,
+     "min": 0.001,
+     "max": 0.001,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.962,
-     "single observation": 0.0,
-     "unknown": 0.001
+     "count": 0.008,
+     "mode": 0.737,
+     "single observation": 0.002,
+     "unknown": 0.003
     },
-    "value": "mode"
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.327,
+       "b": 0.673
+      }
+     }
+    ],
+    "value": null
    }
   },
   "3": {
    "Total distance flown (m)": {
     "choice": "individual",
     "probs": {
-     "individual": 0.994,
+     "individual": 0.996,
      "mean": 0.001,
      "mean ± SD": 0.001,
      "mean ± SE": 0.0,
@@ -117,58 +128,22 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.001,
-     "unknown": 0.001
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "individual"
    },
    "Longest single flight (s)": {
     "choice": "individual",
     "probs": {
-     "individual": 0.991,
+     "individual": 0.99,
      "mean": 0.002,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.002,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.002,
-     "unknown": 0.001
-    },
-    "value": "individual"
-   },
-   "Maximum sustained speed (m s ^-1 )": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.992,
-     "mean": 0.003,
      "mean ± SD": 0.001,
      "mean ± SE": 0.0,
      "range": 0.001,
-     "min": 0.0,
-     "max": 0.001,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.001,
-     "unknown": 0.0
-    },
-    "value": "individual"
-   },
-   "Mass (mg)": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.996,
-     "mean": 0.001,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
+     "min": 0.001,
+     "max": 0.003,
      "median": 0.0,
      "count": 0.0,
      "mode": 0.0,
@@ -177,73 +152,129 @@
     },
     "value": "individual"
    },
+   "Maximum sustained speed (m s ^-1 )": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.994,
+     "mean": 0.002,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
+   "Mass (mg)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.997,
+     "mean": 0.001,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "individual"
+   },
    "Type of flight Re": {
     "choice": "mode",
     "probs": {
-     "individual": 0.045,
-     "mean": 0.009,
-     "mean ± SD": 0.008,
-     "mean ± SE": 0.002,
-     "range": 0.004,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.0,
-     "count": 0.006,
-     "mode": 0.918,
-     "single observation": 0.003,
-     "unknown": 0.001
-    },
-    "value": "mode"
-   },
-   "Type of flight Pe": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.098,
-     "mean": 0.02,
-     "mean ± SD": 0.013,
-     "mean ± SE": 0.003,
-     "range": 0.006,
-     "min": 0.002,
-     "max": 0.003,
-     "median": 0.001,
-     "count": 0.007,
-     "mode": 0.835,
-     "single observation": 0.01,
-     "unknown": 0.002
-    },
-    "value": "mode"
-   },
-   "Type of flight Pu": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.048,
-     "mean": 0.007,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.003,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.002,
-     "median": 0.001,
-     "count": 0.004,
-     "mode": 0.894,
-     "single observation": 0.031,
-     "unknown": 0.003
-    },
-    "value": "mode"
-   },
-   "Final classification": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.007,
-     "mean": 0.001,
-     "mean ± SD": 0.0,
+     "individual": 0.461,
+     "mean": 0.002,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.989,
+     "mode": 0.532,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.068,
+       "b": 0.932
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.002,
+       "b": 0.998
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "Type of flight Pe": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.153,
+     "mean": 0.003,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.841,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
+   "Type of flight Pu": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.154,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.831,
+     "single observation": 0.004,
+     "unknown": 0.001
+    },
+    "value": "mode"
+   },
+   "Final classification": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.054,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.939,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -448,13 +479,13 @@
    "caste": {
     "choice": "queen",
     "probs": {
-     "queen": 0.965,
+     "queen": 0.962,
      "male alate": 0.001,
      "worker": 0.005,
      "minor worker": 0.001,
      "major worker": 0.001,
      "soldier": 0.0,
-     "not": 0.029
+     "not": 0.03
     },
     "value": "queen"
    },
@@ -462,11 +493,11 @@
     "choice": "LivingSpecimen",
     "probs": {
      "PreservedSpecimen": 0.001,
-     "LivingSpecimen": 0.957,
+     "LivingSpecimen": 0.967,
      "HumanObservation": 0.001,
      "MachineObservation": 0.001,
      "MaterialSample": 0.0,
-     "MaterialCitation": 0.03,
+     "MaterialCitation": 0.02,
      "Occurrence": 0.0,
      "Taxon": 0.0,
      "not": 0.009
@@ -476,7 +507,7 @@
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.962,
+     "adult": 0.965,
      "larva": 0.002,
      "mature larva": 0.001,
      "nymph": 0.001,
@@ -486,7 +517,7 @@
      "instar": 0.0,
      "all": 0.0,
      "unknown": 0.001,
-     "not": 0.018
+     "not": 0.016
     },
     "value": "adult"
    }
@@ -543,6 +574,146 @@
    }
   }
  },
+ "source": {
+  "1": {
+   "long": true,
+   "traits": {
+    "Total distance flown (m)": {
+     "said": [],
+     "value": null
+    },
+    "Longest single flight (s)": {
+     "said": [],
+     "value": null
+    },
+    "Maximum flight speed* (m s-1)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.994,
+      "literature": 0.006
+     },
+     "said": [
+      "flight, and a steady slowdown after reaching the maximum flight speed (Fig."
+     ],
+     "value": "measured"
+    },
+    "Mass (mg)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.973,
+      "literature": 0.027
+     },
+     "said": [
+      "noctilio mass was strongly correlated with all the other measures of size (J.M.V., unpublished data), we used the wasp mass as the estimator of body size.",
+      "We performed two one-way ANOVAs with a posteriori Tukey contrasts to test for differences in mass, and mass loss between wasps that performed different flight patterns."
+     ],
+     "value": "measured"
+    },
+    "Mass loss (%)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.967,
+      "literature": 0.033
+     },
+     "said": [
+      "We performed two one-way ANOVAs with a posteriori Tukey contrasts to test for differences in mass, and mass loss between wasps that performed different flight patterns.",
+      "All wasps lost weight during flight (mean weight loss of 10.0% of initial body mass)."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "AS": {
+     "said": [],
+     "value": null
+    },
+    "acceleration–slowdown": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.965,
+      "literature": 0.035
+     },
+     "said": [
+      "To describe these patterns, we divided the frequency domain (y axis) into four different sections (of different period, from longer to shorter) as follows: acceleration–slowdown (deceleration) at the beginning of the flight (AS; lasting longer than 1 h), interflight periods (IE; longer than 30 min), intra-flight periods (IA; periodic variation of speed without resting, with a period between 4 s and 30 min), and noise (NO; less than 4 s).",
+      "The regular flight pattern was characterized by the presence of significant coefficients only in the acceleration–slowdown domain, representing a single, long sustained flight with a changing (but slowing) speed, with slight acceleration only at the beginning of THE JOURNAL OF EXPERIMENTAL BIOLOGY 734 O."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Total distance flown (m)": {
+     "said": [],
+     "value": null
+    },
+    "Longest single flight (s)": {
+     "said": [],
+     "value": null
+    },
+    "Maximum sustained speed (m s ^-1 )": {
+     "said": [],
+     "value": null
+    },
+    "Mass (mg)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.993,
+      "literature": 0.007
+     },
+     "said": [
+      "noctilio mass was strongly correlated with all the other measures of size (J.M.V., unpublished data), we used the wasp mass as the estimator of body size.",
+      "We performed two one-way ANOVAs with a posteriori Tukey contrasts to test for differences in mass, and mass loss between wasps that performed different flight patterns."
+     ],
+     "value": "measured"
+    },
+    "Type of flight Re": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.98,
+      "literature": 0.02
+     },
+     "said": [
+      "In individuals that only performed this type of flight, the EFP pattern was less clear.",
+      "In those cases where regular fliers also displayed another type of flight, the regular type was performed always first, and encompassed more than 40% of the total flight time."
+     ],
+     "value": "measured"
+    },
+    "Type of flight Pe": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.986,
+      "literature": 0.014
+     },
+     "said": [
+      "In individuals that only performed this type of flight, the EFP pattern was less clear.",
+      "In those cases where regular fliers also displayed another type of flight, the regular type was performed always first, and encompassed more than 40% of the total flight time."
+     ],
+     "value": "measured"
+    },
+    "Type of flight Pu": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.985,
+      "literature": 0.015
+     },
+     "said": [
+      "In individuals that only performed this type of flight, the EFP pattern was less clear.",
+      "In those cases where regular fliers also displayed another type of flight, the regular type was performed always first, and encompassed more than 40% of the total flight time."
+     ],
+     "value": "measured"
+    },
+    "Final classification": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -550,6 +721,11 @@
    "compiled": 0.006
   },
   "value": "own"
+ },
+ "rows": {
+  "1": "",
+  "2": "",
+  "3": ""
  },
  "text_found": {
   "sex": [

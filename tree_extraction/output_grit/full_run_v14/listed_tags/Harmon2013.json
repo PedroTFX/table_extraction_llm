@@ -15,57 +15,6 @@
     "choice": "mode",
     "probs": {
      "individual": 0.0,
-     "mean": 0.0,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.999,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
-   }
-  },
-  "2": {
-   "(no name, column 0)": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.028,
-     "mean": 0.389,
-     "mean ± SD": 0.042,
-     "mean ± SE": 0.011,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.004,
-     "median": 0.002,
-     "count": 0.014,
-     "mode": 0.469,
-     "single observation": 0.009,
-     "unknown": 0.025
-    },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "b",
-      "probs": {
-       "a": 0.423,
-       "b": 0.577
-      }
-     }
-    ],
-    "value": null
-   }
-  },
-  "3": {
-   "subgenus": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.0,
      "mean": 0.004,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
@@ -79,21 +28,61 @@
      "unknown": 0.0
     },
     "value": "mode"
+   }
+  },
+  "2": {
+   "(no name, column 0)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.969,
+     "mean ± SD": 0.014,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.008,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   }
+  },
+  "3": {
+   "subgenus": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.006,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
    },
    "ln(tongue length)": {
     "choice": "mean",
     "probs": {
-     "individual": 0.103,
-     "mean": 0.847,
-     "mean ± SD": 0.009,
-     "mean ± SE": 0.008,
-     "range": 0.001,
-     "min": 0.001,
+     "individual": 0.008,
+     "mean": 0.981,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
      "max": 0.0,
-     "median": 0.001,
+     "median": 0.0,
      "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.028,
+     "mode": 0.0,
+     "single observation": 0.005,
      "unknown": 0.001
     },
     "value": "mean"
@@ -201,11 +190,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.08,
-     "female": 0.002,
+     "both": 0.073,
+     "female": 0.001,
      "male": 0.001,
      "unknown": 0.003,
-     "not": 0.913
+     "not": 0.92
     },
     "value": null
    },
@@ -214,26 +203,26 @@
     "probs": {
      "queen": 0.001,
      "male alate": 0.001,
-     "worker": 0.008,
+     "worker": 0.007,
      "minor worker": 0.001,
      "major worker": 0.001,
      "soldier": 0.0,
-     "not": 0.989
+     "not": 0.99
     },
     "value": null
    },
    "basisOfRecord": {
-    "choice": "Occurrence",
+    "choice": "not",
     "probs": {
-     "PreservedSpecimen": 0.006,
+     "PreservedSpecimen": 0.007,
      "LivingSpecimen": 0.002,
      "HumanObservation": 0.019,
      "MachineObservation": 0.001,
-     "MaterialSample": 0.001,
-     "MaterialCitation": 0.113,
-     "Occurrence": 0.516,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.149,
+     "Occurrence": 0.309,
      "Taxon": 0.0,
-     "not": 0.341
+     "not": 0.511
     },
     "duels": [
      {
@@ -241,8 +230,8 @@
       "b": "o5",
       "choice": "b",
       "probs": {
-       "a": 0.077,
-       "b": 0.923
+       "a": 0.097,
+       "b": 0.903
       }
      },
      {
@@ -250,16 +239,16 @@
       "b": "o5",
       "choice": "b",
       "probs": {
-       "a": 0.06,
-       "b": 0.94
+       "a": 0.049,
+       "b": 0.951
       }
      }
     ],
     "final": {
      "choice": "pick",
      "probs": {
-      "pick": 0.979,
-      "not": 0.021
+      "pick": 0.977,
+      "not": 0.023
      }
     },
     "value": "MaterialCitation"
@@ -267,7 +256,7 @@
    "lifeStage": {
     "choice": "not",
     "probs": {
-     "adult": 0.003,
+     "adult": 0.002,
      "larva": 0.001,
      "mature larva": 0.0,
      "nymph": 0.001,
@@ -276,8 +265,8 @@
      "egg": 0.0,
      "instar": 0.0,
      "all": 0.013,
-     "unknown": 0.011,
-     "not": 0.97
+     "unknown": 0.008,
+     "not": 0.975
     },
     "value": null
    }
@@ -286,11 +275,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.214,
+     "both": 0.254,
      "female": 0.023,
-     "male": 0.018,
-     "unknown": 0.011,
-     "not": 0.734
+     "male": 0.015,
+     "unknown": 0.012,
+     "not": 0.696
     },
     "duels": [
      {
@@ -298,8 +287,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.811,
-       "b": 0.189
+       "a": 0.815,
+       "b": 0.185
       }
      },
      {
@@ -307,16 +296,16 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.065,
-       "b": 0.935
+       "a": 0.06,
+       "b": 0.94
       }
      }
     ],
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.126,
-      "not": 0.874
+      "pick": 0.117,
+      "not": 0.883
      }
     },
     "value": null
@@ -324,13 +313,13 @@
    "caste": {
     "choice": "not",
     "probs": {
-     "queen": 0.024,
+     "queen": 0.026,
      "male alate": 0.003,
-     "worker": 0.031,
-     "minor worker": 0.002,
+     "worker": 0.034,
+     "minor worker": 0.003,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.939
+     "not": 0.934
     },
     "value": null
    },
@@ -342,17 +331,17 @@
      "HumanObservation": 0.0,
      "MachineObservation": 0.0,
      "MaterialSample": 0.0,
-     "MaterialCitation": 0.995,
+     "MaterialCitation": 0.994,
      "Occurrence": 0.0,
      "Taxon": 0.0,
-     "not": 0.002
+     "not": 0.003
     },
     "value": "MaterialCitation"
    },
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.6,
+     "adult": 0.547,
      "larva": 0.002,
      "mature larva": 0.0,
      "nymph": 0.001,
@@ -361,8 +350,8 @@
      "egg": 0.0,
      "instar": 0.0,
      "all": 0.0,
-     "unknown": 0.01,
-     "not": 0.386
+     "unknown": 0.007,
+     "not": 0.442
     },
     "duels": [
      {
@@ -370,8 +359,8 @@
       "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.886,
-       "b": 0.114
+       "a": 0.901,
+       "b": 0.099
       }
      },
      {
@@ -379,16 +368,16 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.011,
-       "b": 0.989
+       "a": 0.01,
+       "b": 0.99
       }
      }
     ],
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.143,
-      "not": 0.857
+      "pick": 0.171,
+      "not": 0.829
      }
     },
     "value": null
@@ -418,6 +407,47 @@
    }
   }
  },
+ "source": {
+  "1": {
+   "long": false,
+   "traits": {
+    "Cluster": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "(no name, column 0)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "subgenus": {
+     "said": [],
+     "value": null
+    },
+    "ln(tongue length)": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.0,
+      "literature": 1.0
+     },
+     "said": [
+      "## Data collection Bombus tongue length data were collected through literature searches in ISI Web of Science during the spring of 2009 using search terms: (Bombus or bumble\\*) and (proboscis or tongue).",
+      "Species for which we did not have tongue length data were removed from the phylogeny."
+     ],
+     "value": "literature"
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "compiled",
   "probs": {
@@ -425,6 +455,11 @@
    "compiled": 0.999
   },
   "value": "compiled"
+ },
+ "rows": {
+  "1": " Each of its 79 species takes one row.",
+  "2": "",
+  "3": " Each of its 84 species takes one row."
  },
  "text_found": {
   "sex": [],

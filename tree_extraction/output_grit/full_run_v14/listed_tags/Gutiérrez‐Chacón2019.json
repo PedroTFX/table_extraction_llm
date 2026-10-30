@@ -10,16 +10,16 @@
    "ITD": {
     "choice": "mean",
     "probs": {
-     "individual": 0.012,
-     "mean": 0.939,
-     "mean ± SD": 0.026,
-     "mean ± SE": 0.014,
-     "range": 0.001,
+     "individual": 0.0,
+     "mean": 0.997,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
-     "median": 0.002,
-     "count": 0.001,
-     "mode": 0.004,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -28,8 +28,8 @@
    "Sociality": {
     "choice": "mode",
     "probs": {
-     "individual": 0.001,
-     "mean": 0.002,
+     "individual": 0.0,
+     "mean": 0.004,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -37,7 +37,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.995,
+     "mode": 0.994,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -47,27 +47,9 @@
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.006,
+     "mean": 0.011,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.991,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
-   },
-   "Nest construction": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.001,
-     "mean": 0.009,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -79,75 +61,93 @@
     },
     "value": "mode"
    },
+   "Nest construction": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.007,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.99,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   },
    "Forest": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.032,
+     "individual": 0.003,
+     "mean": 0.026,
      "mean ± SD": 0.002,
-     "mean ± SE": 0.002,
+     "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.954,
-     "single observation": 0.0,
-     "unknown": 0.001
+     "count": 0.001,
+     "mode": 0.963,
+     "single observation": 0.001,
+     "unknown": 0.002
     },
     "value": "mode"
    },
    "Riparian": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.042,
+     "individual": 0.002,
+     "mean": 0.041,
      "mean ± SD": 0.002,
      "mean ± SE": 0.001,
-     "range": 0.001,
-     "min": 0.001,
+     "range": 0.0,
+     "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.94,
+     "count": 0.001,
+     "mode": 0.949,
      "single observation": 0.001,
-     "unknown": 0.007
+     "unknown": 0.002
     },
     "value": "mode"
    },
    "Restored": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.016,
+     "individual": 0.001,
+     "mean": 0.013,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.972,
-     "single observation": 0.001,
-     "unknown": 0.004
+     "count": 0.001,
+     "mode": 0.983,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mode"
    },
    "Pasture": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.033,
+     "individual": 0.001,
+     "mean": 0.019,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
-     "range": 0.001,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.002,
-     "mode": 0.955,
+     "count": 0.001,
+     "mode": 0.976,
      "single observation": 0.0,
-     "unknown": 0.002
+     "unknown": 0.001
     },
     "value": "mode"
    }
@@ -333,6 +333,109 @@
    }
   }
  },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "ITD": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.702,
+      "literature": 0.298
+     },
+     "said": [
+      "inter-tegular distance (ITD)).",
+      "ITD is an indicator of the flight musculature (Cane 1987) and it is a strong predictor of foraging ranges (Greenleaf et al."
+     ],
+     "value": null
+    },
+    "Sociality": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.068,
+      "literature": 0.932
+     },
+     "said": [
+      "## Trait assignment For each species, we assigned information on four traits that have been extensively used in previous studies, as they are known to respond to disturbance, extinction sensitivity and ecological interactions: body size, nest location, method of nest construction and sociality (Bommarco et al.",
+      "Information on sociality, nest location and construction method were mostly obtained from the primary literature and complemented with direct observations in the field, particularly on nesting behavior."
+     ],
+     "value": "literature"
+    },
+    "Nest location": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.088,
+      "literature": 0.912
+     },
+     "said": [
+      "## Trait assignment For each species, we assigned information on four traits that have been extensively used in previous studies, as they are known to respond to disturbance, extinction sensitivity and ecological interactions: body size, nest location, method of nest construction and sociality (Bommarco et al.",
+      "Information on sociality, nest location and construction method were mostly obtained from the primary literature and complemented with direct observations in the field, particularly on nesting behavior."
+     ],
+     "value": "literature"
+    },
+    "Nest construction": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.053,
+      "literature": 0.947
+     },
+     "said": [
+      "## Trait assignment For each species, we assigned information on four traits that have been extensively used in previous studies, as they are known to respond to disturbance, extinction sensitivity and ecological interactions: body size, nest location, method of nest construction and sociality (Bommarco et al.",
+      "Third, in terms of method of nest construction, we use the term ‘rent’ for species that nest in existing holes or cavities either above or below ground; ‘construct’ for species that build the nest exterior using collected materials, and ‘excavate’ for species that drill the tunnel/cavity in which the brood cells are constructed (following Williams et al."
+     ],
+     "value": "literature"
+    },
+    "Forest": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.631,
+      "literature": 0.369
+     },
+     "said": [
+      "The vegetation is sub-Andean forest sensu (Cuatrecasas 1958); mean annual rainfall is 2817 mm and mean monthly temperature ranges between 16 and $2 4 \\; ^ { \\circ } \\mathbf { C }$ (Fagua et al.",
+      "Length of corridors connecting the Barbas river canyon and the Bremen-La Popa Forest Reserve vary between 800 and 2500 m, and 50–100 m wide."
+     ],
+     "value": null
+    },
+    "Riparian": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.735,
+      "literature": 0.265
+     },
+     "said": [
+      "Restored sections of corridors connecting riparian forest strips were previously covered with grass (Pennisetum clandestinum Hochst.",
+      "In 2010, restored sections had not reached similar conditions in terms of canopy cover as compared to riparian forest strips, showing lowers values 1 3 Journal of Insect Conservation (2020) 24:187–197 189 of canopy cover (Herrera-Rangel et al."
+     ],
+     "value": null
+    },
+    "Restored": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.867,
+      "literature": 0.133
+     },
+     "said": [
+      "Restored sections of corridors connecting riparian forest strips were previously covered with grass (Pennisetum clandestinum Hochst.",
+      "In 2010, restored sections had not reached similar conditions in terms of canopy cover as compared to riparian forest strips, showing lowers values 1 3 Journal of Insect Conservation (2020) 24:187–197 189 of canopy cover (Herrera-Rangel et al."
+     ],
+     "value": "measured"
+    },
+    "Pasture": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.692,
+      "literature": 0.308
+     },
+     "said": [
+      "forest, pasture, riparian and restored sections of corridors, for a total of 16 sampling sites (Fig.",
+      "Sites in pasture were distanced at least 100 m from any forest area."
+     ],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -340,6 +443,9 @@
    "compiled": 0.108
   },
   "value": "own"
+ },
+ "rows": {
+  "0": " Each of its 41 species takes one row."
  },
  "text_found": {
   "sex": [],

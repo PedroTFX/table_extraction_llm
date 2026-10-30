@@ -16,7 +16,7 @@
      "mean": 0.0,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
-     "range": 1.0,
+     "range": 0.999,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
@@ -34,7 +34,7 @@
      "mean": 0.0,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
-     "range": 1.0,
+     "range": 0.999,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
@@ -50,17 +50,17 @@
    "Length (mm)": {
     "choice": "individual",
     "probs": {
-     "individual": 0.977,
-     "mean": 0.012,
+     "individual": 0.928,
+     "mean": 0.017,
      "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.002,
+     "mean ± SE": 0.05,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.005,
+     "mode": 0.0,
+     "single observation": 0.002,
      "unknown": 0.0
     },
     "value": "individual"
@@ -68,142 +68,215 @@
    "Width (mm)": {
     "choice": "individual",
     "probs": {
-     "individual": 0.969,
-     "mean": 0.013,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.002,
-     "min": 0.001,
+     "individual": 0.942,
+     "mean": 0.024,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.024,
+     "range": 0.001,
+     "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.002,
-     "single observation": 0.009,
-     "unknown": 0.001
+     "mode": 0.0,
+     "single observation": 0.003,
+     "unknown": 0.0
     },
     "value": "individual"
    },
    "Hind tibia length (mm)": {
     "choice": "individual",
     "probs": {
-     "individual": 0.972,
-     "mean": 0.015,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.598,
+     "mean": 0.223,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.16,
      "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
      "mode": 0.001,
-     "single observation": 0.007,
+     "single observation": 0.01,
      "unknown": 0.0
     },
-    "value": "individual"
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.593,
+       "b": 0.407
+      }
+     }
+    ],
+    "value": null
    },
    "Fore tibia area (mm2)": {
-    "choice": "individual",
+    "choice": "mean ± SE",
     "probs": {
-     "individual": 0.962,
-     "mean": 0.021,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.001,
+     "individual": 0.281,
+     "mean": 0.317,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.374,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.002,
+     "mode": 0.0,
+     "single observation": 0.021,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o3",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.033,
+       "b": 0.967
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.312,
+       "b": 0.688
+      }
+     }
+    ],
+    "value": null
+   },
+   "Head area (mm2)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.654,
+     "mean": 0.23,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.101,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.01,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.523,
+       "b": 0.477
+      }
+     }
+    ],
+    "value": null
+   },
+   "Wing area (mm2)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.394,
+     "mean": 0.258,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.335,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.005,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.714,
+       "b": 0.286
+      }
+     }
+    ],
+    "value": null
+   },
+   "Dry weight (g)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.917,
+     "mean": 0.032,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.038,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
      "single observation": 0.01,
      "unknown": 0.0
     },
     "value": "individual"
    },
-   "Head area (mm2)": {
-    "choice": "individual",
+   "Wing load (kg/mm2)": {
+    "choice": "mean ± SE",
     "probs": {
-     "individual": 0.956,
-     "mean": 0.03,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.001,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.002,
-     "single observation": 0.007,
-     "unknown": 0.0
-    },
-    "value": "individual"
-   },
-   "Wing area (mm2)": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.972,
-     "mean": 0.013,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.001,
-     "min": 0.001,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.001,
-     "mode": 0.002,
-     "single observation": 0.007,
-     "unknown": 0.001
-    },
-    "value": "individual"
-   },
-   "Dry weight (g)": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.972,
-     "mean": 0.016,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "individual": 0.08,
+     "mean": 0.402,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.513,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.009,
+     "mode": 0.0,
+     "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "individual"
-   },
-   "Wing load (kg/mm2)": {
-    "choice": "individual",
-    "probs": {
-     "individual": 0.93,
-     "mean": 0.048,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.001,
-     "range": 0.001,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.004,
-     "single observation": 0.011,
-     "unknown": 0.0
-    },
-    "value": "individual"
+    "duels": [
+     {
+      "a": "o3",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.06,
+       "b": 0.94
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.089,
+       "b": 0.911
+      }
+     }
+    ],
+    "value": "mean"
    },
    "Activity": {
     "choice": "mode",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.005,
+     "individual": 0.001,
+     "mean": 0.006,
      "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
+     "mean ± SE": 0.004,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.988,
+     "mode": 0.989,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -212,16 +285,16 @@
    "Food breadth": {
     "choice": "mode",
     "probs": {
-     "individual": 0.046,
-     "mean": 0.013,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.001,
+     "individual": 0.009,
+     "mean": 0.032,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.014,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.937,
+     "mode": 0.941,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -230,16 +303,16 @@
    "Phenology": {
     "choice": "mode",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.017,
+     "individual": 0.001,
+     "mean": 0.014,
      "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.008,
+     "mean ± SE": 0.007,
+     "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.966,
+     "count": 0.0,
+     "mode": 0.975,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -248,16 +321,16 @@
    "Nesting type": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.004,
+     "individual": 0.0,
+     "mean": 0.003,
      "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
+     "mean ± SE": 0.004,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.992,
+     "mode": 0.993,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -426,6 +499,112 @@
    }
   }
  },
+ "source": {
+  "4": {
+   "long": false,
+   "traits": {
+    "CAP1 (range)": {
+     "said": [],
+     "value": null
+    },
+    "CAP2 (range)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "6": {
+   "long": false,
+   "traits": {
+    "Length (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.996,
+      "literature": 0.004
+     },
+     "said": [
+      "In addition to (1) nesting strategy (dung relocation behaviour) and (2) dry mass (as proxy for the dung mass needed for normal larval development) we also measured (3) the total length of the beetle (using digital callipers) from the tip of the abdomen to the tip of the clypeus, as larger beetles can manipulate more dung than smaller individuals (Nervo et al., 2014).",
+      "We therefore measured (8) hind tibia length (mm) using digital callipers."
+     ],
+     "value": "measured"
+    },
+    "Width (mm)": {
+     "said": [],
+     "value": null
+    },
+    "Hind tibia length (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.996,
+      "literature": 0.004
+     },
+     "said": [
+      "We therefore measured (8) hind tibia length (mm) using digital callipers."
+     ],
+     "value": "measured"
+    },
+    "Fore tibia area (mm2)": {
+     "said": [],
+     "value": null
+    },
+    "Head area (mm2)": {
+     "said": [],
+     "value": null
+    },
+    "Wing area (mm2)": {
+     "said": [],
+     "value": null
+    },
+    "Dry weight (g)": {
+     "said": [],
+     "value": null
+    },
+    "Wing load (kg/mm2)": {
+     "said": [],
+     "value": null
+    },
+    "Activity": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.005,
+      "literature": 0.995
+     },
+     "said": [
+      "(4) Activity was recorded from the literature (Davis et al., 2020) as nocturnal or diurnal (coded as 1—diurnal or 0—nocturnal for analyses).",
+      "Therefore, the final trait included was (10) phenology (seasonal activity)."
+     ],
+     "value": "literature"
+    },
+    "Food breadth": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.72,
+      "literature": 0.28
+     },
+     "said": [
+      "Food breadth = Score based on number of dung types utilised (carrion, ruminal dung, omnivorous dung, and non-ruminant dung) according to literature (Davies et al., 2020) and own observations."
+     ],
+     "value": null
+    },
+    "Phenology": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.215,
+      "literature": 0.785
+     },
+     "said": [
+      "Therefore, the final trait included was (10) phenology (seasonal activity).",
+      "Phenology information was sourced from the literature (Davis et al., 2020) and according to our own collections and coded as outlined by Tonelli et al."
+     ],
+     "value": null
+    },
+    "Nesting type": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "compiled",
   "probs": {
@@ -433,6 +612,10 @@
    "compiled": 0.646
   },
   "value": null
+ },
+ "rows": {
+  "4": "",
+  "6": " Each of its 15 species takes one row."
  },
  "text_found": {
   "sex": [],

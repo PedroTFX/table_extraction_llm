@@ -14,7 +14,7 @@
     "probs": {
      "individual": 0.0,
      "mean": 0.0,
-     "mean ± SD": 0.0,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.999,
      "range": 0.0,
      "min": 0.0,
@@ -32,7 +32,7 @@
     "probs": {
      "individual": 0.0,
      "mean": 0.0,
-     "mean ± SD": 0.0,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.999,
      "range": 0.0,
      "min": 0.0,
@@ -70,7 +70,7 @@
     "probs": {
      "individual": 0.0,
      "mean": 0.003,
-     "mean ± SD": 0.0,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.996,
      "range": 0.0,
      "min": 0.0,
@@ -87,9 +87,9 @@
     "choice": "mean ± SE",
     "probs": {
      "individual": 0.0,
-     "mean": 0.004,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.995,
+     "mean": 0.009,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.99,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -238,11 +238,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.302,
-     "female": 0.017,
-     "male": 0.021,
-     "unknown": 0.011,
-     "not": 0.648
+     "both": 0.238,
+     "female": 0.015,
+     "male": 0.022,
+     "unknown": 0.015,
+     "not": 0.71
     },
     "duels": [
      {
@@ -250,8 +250,8 @@
       "b": "o2",
       "choice": "a",
       "probs": {
-       "a": 0.862,
-       "b": 0.138
+       "a": 0.845,
+       "b": 0.155
       }
      },
      {
@@ -259,8 +259,8 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.227,
-       "b": 0.773
+       "a": 0.202,
+       "b": 0.798
       }
      }
     ],
@@ -269,13 +269,13 @@
    "caste": {
     "choice": "not",
     "probs": {
-     "queen": 0.033,
+     "queen": 0.025,
      "male alate": 0.001,
-     "worker": 0.043,
-     "minor worker": 0.035,
+     "worker": 0.034,
+     "minor worker": 0.025,
      "major worker": 0.014,
-     "soldier": 0.001,
-     "not": 0.873
+     "soldier": 0.0,
+     "not": 0.9
     },
     "value": null
    },
@@ -297,26 +297,26 @@
    "lifeStage": {
     "choice": "not",
     "probs": {
-     "adult": 0.137,
-     "larva": 0.013,
-     "mature larva": 0.042,
+     "adult": 0.172,
+     "larva": 0.008,
+     "mature larva": 0.049,
      "nymph": 0.001,
      "caterpillar": 0.0,
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.003,
-     "all": 0.004,
-     "unknown": 0.135,
-     "not": 0.664
+     "all": 0.003,
+     "unknown": 0.13,
+     "not": 0.634
     },
     "duels": [
      {
       "a": "o0",
       "b": "o9",
-      "choice": "a",
+      "choice": "b",
       "probs": {
-       "a": 0.515,
-       "b": 0.485
+       "a": 0.468,
+       "b": 0.532
       }
      }
     ],
@@ -370,6 +370,42 @@
    }
   }
  },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "(no name, column 0)": {
+     "said": [],
+     "value": null
+    },
+    "(no name, column 1)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Preprandial Locomote": {
+     "said": [],
+     "value": null
+    },
+    "Preprandial Quiescent": {
+     "said": [],
+     "value": null
+    },
+    "Preprandial Total interval": {
+     "said": [],
+     "value": null
+    },
+    "Postprandial Locomote": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -377,6 +413,10 @@
    "compiled": 0.004
   },
   "value": "own"
+ },
+ "rows": {
+  "0": "",
+  "1": ""
  },
  "text_found": {
   "sex": [

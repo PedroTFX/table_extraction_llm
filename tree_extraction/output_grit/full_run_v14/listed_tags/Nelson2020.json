@@ -19,15 +19,15 @@
     "choice": "mode",
     "probs": {
      "individual": 0.002,
-     "mean": 0.008,
-     "mean ± SD": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.987,
+     "count": 0.0,
+     "mode": 0.993,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -37,15 +37,15 @@
     "choice": "mode",
     "probs": {
      "individual": 0.003,
-     "mean": 0.013,
-     "mean ± SD": 0.003,
+     "mean": 0.026,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.977,
+     "mode": 0.967,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -54,8 +54,8 @@
    "diet": {
     "choice": "mode",
     "probs": {
-     "individual": 0.003,
-     "mean": 0.008,
+     "individual": 0.002,
+     "mean": 0.01,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -63,7 +63,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.988,
+     "mode": 0.986,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -72,16 +72,16 @@
    "activity": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.009,
+     "individual": 0.001,
+     "mean": 0.014,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.986,
+     "count": 0.0,
+     "mode": 0.983,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -90,27 +90,27 @@
    "size": {
     "choice": "individual",
     "probs": {
-     "individual": 0.674,
-     "mean": 0.285,
+     "individual": 0.635,
+     "mean": 0.349,
      "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
+     "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.0,
      "max": 0.0,
-     "median": 0.0,
-     "count": 0.001,
+     "median": 0.006,
+     "count": 0.0,
      "mode": 0.001,
-     "single observation": 0.033,
+     "single observation": 0.003,
      "unknown": 0.0
     },
     "duels": [
      {
       "a": "o0",
       "b": "o1",
-      "choice": "a",
+      "choice": "b",
       "probs": {
-       "a": 0.636,
-       "b": 0.364
+       "a": 0.379,
+       "b": 0.621
       }
      }
     ],
@@ -121,121 +121,141 @@
    "FRic F": {
     "choice": "mean",
     "probs": {
-     "individual": 0.075,
-     "mean": 0.263,
-     "mean ± SD": 0.057,
-     "mean ± SE": 0.132,
-     "range": 0.007,
-     "min": 0.009,
-     "max": 0.003,
-     "median": 0.006,
-     "count": 0.011,
-     "mode": 0.049,
-     "single observation": 0.241,
-     "unknown": 0.146
+     "individual": 0.085,
+     "mean": 0.31,
+     "mean ± SD": 0.07,
+     "mean ± SE": 0.21,
+     "range": 0.008,
+     "min": 0.022,
+     "max": 0.005,
+     "median": 0.005,
+     "count": 0.021,
+     "mode": 0.1,
+     "single observation": 0.067,
+     "unknown": 0.098
     },
     "duels": [
      {
       "a": "o1",
-      "b": "o10",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.814,
+       "b": 0.186
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o1",
       "choice": "b",
       "probs": {
-       "a": 0.402,
-       "b": 0.598
+       "a": 0.433,
+       "b": 0.567
       }
      }
     ],
     "value": null
    },
    "FEve P": {
-    "choice": "unknown",
-    "probs": {
-     "individual": 0.02,
-     "mean": 0.157,
-     "mean ± SD": 0.013,
-     "mean ± SE": 0.006,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.003,
-     "median": 0.005,
-     "count": 0.01,
-     "mode": 0.048,
-     "single observation": 0.018,
-     "unknown": 0.715
-    },
-    "duels": [
-     {
-      "a": "o11",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.901,
-       "b": 0.099
-      }
-     },
-     {
-      "a": "o9",
-      "b": "o11",
-      "choice": "b",
-      "probs": {
-       "a": 0.104,
-       "b": 0.896
-      }
-     }
-    ],
-    "value": "unknown"
-   },
-   "FDiv F": {
     "choice": "mean",
     "probs": {
-     "individual": 0.013,
-     "mean": 0.837,
-     "mean ± SD": 0.102,
-     "mean ± SE": 0.017,
-     "range": 0.003,
-     "min": 0.008,
-     "max": 0.002,
-     "median": 0.002,
-     "count": 0.002,
-     "mode": 0.004,
-     "single observation": 0.006,
-     "unknown": 0.005
-    },
-    "value": "mean"
-   },
-   "FDiv P": {
-    "choice": "unknown",
-    "probs": {
-     "individual": 0.035,
-     "mean": 0.25,
-     "mean ± SD": 0.013,
-     "mean ± SE": 0.008,
+     "individual": 0.03,
+     "mean": 0.37,
+     "mean ± SD": 0.023,
+     "mean ± SE": 0.026,
      "range": 0.008,
-     "min": 0.007,
-     "max": 0.007,
-     "median": 0.01,
-     "count": 0.021,
-     "mode": 0.263,
-     "single observation": 0.028,
-     "unknown": 0.35
+     "min": 0.005,
+     "max": 0.005,
+     "median": 0.004,
+     "count": 0.026,
+     "mode": 0.145,
+     "single observation": 0.029,
+     "unknown": 0.329
     },
     "duels": [
-     {
-      "a": "o11",
-      "b": "o9",
-      "choice": "a",
-      "probs": {
-       "a": 0.93,
-       "b": 0.07
-      }
-     },
      {
       "a": "o1",
       "b": "o11",
       "choice": "a",
       "probs": {
-       "a": 0.647,
-       "b": 0.353
+       "a": 0.725,
+       "b": 0.275
+      }
+     }
+    ],
+    "value": null
+   },
+   "FDiv F": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.041,
+     "mean": 0.537,
+     "mean ± SD": 0.072,
+     "mean ± SE": 0.056,
+     "range": 0.007,
+     "min": 0.024,
+     "max": 0.004,
+     "median": 0.004,
+     "count": 0.024,
+     "mode": 0.108,
+     "single observation": 0.038,
+     "unknown": 0.084
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.842,
+       "b": 0.158
+      }
+     },
+     {
+      "a": "o11",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.462,
+       "b": 0.538
+      }
+     }
+    ],
+    "value": null
+   },
+   "FDiv P": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.025,
+     "mean": 0.426,
+     "mean ± SD": 0.016,
+     "mean ± SE": 0.012,
+     "range": 0.007,
+     "min": 0.008,
+     "max": 0.004,
+     "median": 0.004,
+     "count": 0.016,
+     "mode": 0.218,
+     "single observation": 0.02,
+     "unknown": 0.243
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.811,
+       "b": 0.189
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.259,
+       "b": 0.741
       }
      }
     ],
@@ -244,18 +264,18 @@
    "FDis F": {
     "choice": "mean",
     "probs": {
-     "individual": 0.05,
-     "mean": 0.511,
-     "mean ± SD": 0.177,
-     "mean ± SE": 0.131,
-     "range": 0.006,
-     "min": 0.013,
-     "max": 0.002,
-     "median": 0.004,
+     "individual": 0.046,
+     "mean": 0.791,
+     "mean ± SD": 0.059,
+     "mean ± SE": 0.039,
+     "range": 0.003,
+     "min": 0.01,
+     "max": 0.001,
+     "median": 0.001,
      "count": 0.006,
-     "mode": 0.015,
-     "single observation": 0.059,
-     "unknown": 0.025
+     "mode": 0.009,
+     "single observation": 0.024,
+     "unknown": 0.011
     },
     "duels": [
      {
@@ -263,8 +283,8 @@
       "b": "o2",
       "choice": "b",
       "probs": {
-       "a": 0.432,
-       "b": 0.568
+       "a": 0.465,
+       "b": 0.535
       }
      }
     ],
@@ -276,9 +296,9 @@
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.01,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.005,
+     "mean": 0.012,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.004,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -293,48 +313,37 @@
    "bison": {
     "choice": "mean",
     "probs": {
-     "individual": 0.022,
-     "mean": 0.434,
-     "mean ± SD": 0.017,
-     "mean ± SE": 0.396,
-     "range": 0.004,
-     "min": 0.003,
-     "max": 0.002,
-     "median": 0.001,
-     "count": 0.007,
-     "mode": 0.082,
-     "single observation": 0.018,
-     "unknown": 0.012
+     "individual": 0.004,
+     "mean": 0.958,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.023,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.002,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
-    "duels": [
-     {
-      "a": "o1",
-      "b": "o3",
-      "choice": "a",
-      "probs": {
-       "a": 0.541,
-       "b": 0.459
-      }
-     }
-    ],
-    "value": null
+    "value": "mean"
    }
   },
   "6": {
    "Species": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.059,
+     "individual": 0.006,
+     "mean": 0.09,
      "mean ± SD": 0.005,
-     "mean ± SE": 0.003,
-     "range": 0.0,
+     "mean ± SE": 0.005,
+     "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.924,
-     "single observation": 0.001,
+     "mode": 0.891,
+     "single observation": 0.0,
      "unknown": 0.0
     },
     "value": "mode"
@@ -342,18 +351,18 @@
    "bison": {
     "choice": "mean",
     "probs": {
-     "individual": 0.007,
-     "mean": 0.898,
-     "mean ± SD": 0.027,
-     "mean ± SE": 0.051,
+     "individual": 0.004,
+     "mean": 0.959,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.015,
      "range": 0.001,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.001,
-     "mode": 0.011,
-     "single observation": 0.001,
-     "unknown": 0.001
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.003,
+     "count": 0.002,
+     "mode": 0.005,
+     "single observation": 0.0,
+     "unknown": 0.0
     },
     "value": "mean"
    }
@@ -365,7 +374,7 @@
      "individual": 0.0,
      "mean": 0.0,
      "mean ± SD": 0.999,
-     "mean ± SE": 0.0,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -384,7 +393,7 @@
      "mean": 0.0,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
-     "range": 1.0,
+     "range": 0.999,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
@@ -396,38 +405,29 @@
     "value": "range"
    },
    "Age": {
-    "choice": "mode",
+    "choice": "mean ± SD",
     "probs": {
-     "individual": 0.076,
-     "mean": 0.106,
-     "mean ± SD": 0.123,
+     "individual": 0.02,
+     "mean": 0.17,
+     "mean ± SD": 0.542,
      "mean ± SE": 0.008,
-     "range": 0.024,
-     "min": 0.003,
-     "max": 0.005,
-     "median": 0.004,
-     "count": 0.016,
-     "mode": 0.613,
-     "single observation": 0.018,
-     "unknown": 0.004
+     "range": 0.031,
+     "min": 0.002,
+     "max": 0.003,
+     "median": 0.003,
+     "count": 0.004,
+     "mode": 0.21,
+     "single observation": 0.004,
+     "unknown": 0.002
     },
     "duels": [
      {
-      "a": "o9",
-      "b": "o2",
-      "choice": "a",
-      "probs": {
-       "a": 0.91,
-       "b": 0.09
-      }
-     },
-     {
-      "a": "o1",
+      "a": "o2",
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.411,
-       "b": 0.589
+       "a": 0.29,
+       "b": 0.71
       }
      }
     ],
@@ -525,11 +525,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.12,
-     "female": 0.003,
+     "both": 0.084,
+     "female": 0.002,
      "male": 0.003,
-     "unknown": 0.003,
-     "not": 0.871
+     "unknown": 0.005,
+     "not": 0.905
     },
     "value": null
    },
@@ -538,26 +538,26 @@
     "probs": {
      "queen": 0.001,
      "male alate": 0.001,
-     "worker": 0.011,
+     "worker": 0.009,
      "minor worker": 0.001,
      "major worker": 0.001,
      "soldier": 0.0,
-     "not": 0.984
+     "not": 0.987
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "not",
     "probs": {
-     "PreservedSpecimen": 0.005,
-     "LivingSpecimen": 0.013,
-     "HumanObservation": 0.01,
-     "MachineObservation": 0.001,
+     "PreservedSpecimen": 0.006,
+     "LivingSpecimen": 0.018,
+     "HumanObservation": 0.014,
+     "MachineObservation": 0.002,
      "MaterialSample": 0.001,
-     "MaterialCitation": 0.135,
+     "MaterialCitation": 0.153,
      "Occurrence": 0.003,
      "Taxon": 0.0,
-     "not": 0.831
+     "not": 0.803
     },
     "value": null
    },
@@ -572,9 +572,9 @@
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
-     "all": 0.063,
-     "unknown": 0.012,
-     "not": 0.919
+     "all": 0.053,
+     "unknown": 0.018,
+     "not": 0.923
     },
     "value": null
    }
@@ -583,11 +583,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.245,
+     "both": 0.328,
      "female": 0.002,
-     "male": 0.004,
+     "male": 0.003,
      "unknown": 0.002,
-     "not": 0.747
+     "not": 0.666
     },
     "duels": [
      {
@@ -595,8 +595,8 @@
       "b": "o2",
       "choice": "a",
       "probs": {
-       "a": 0.977,
-       "b": 0.023
+       "a": 0.976,
+       "b": 0.024
       }
      },
      {
@@ -612,8 +612,8 @@
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.384,
-      "not": 0.616
+      "pick": 0.432,
+      "not": 0.568
      }
     },
     "value": null
@@ -622,34 +622,34 @@
     "choice": "not",
     "probs": {
      "queen": 0.001,
-     "male alate": 0.007,
+     "male alate": 0.004,
      "worker": 0.008,
      "minor worker": 0.001,
      "major worker": 0.001,
      "soldier": 0.0,
-     "not": 0.981
+     "not": 0.984
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "not",
     "probs": {
-     "PreservedSpecimen": 0.032,
-     "LivingSpecimen": 0.088,
+     "PreservedSpecimen": 0.04,
+     "LivingSpecimen": 0.07,
      "HumanObservation": 0.011,
      "MachineObservation": 0.002,
      "MaterialSample": 0.002,
-     "MaterialCitation": 0.006,
+     "MaterialCitation": 0.005,
      "Occurrence": 0.001,
      "Taxon": 0.0,
-     "not": 0.858
+     "not": 0.869
     },
     "value": null
    },
    "lifeStage": {
     "choice": "not",
     "probs": {
-     "adult": 0.004,
+     "adult": 0.005,
      "larva": 0.001,
      "mature larva": 0.0,
      "nymph": 0.0,
@@ -657,9 +657,9 @@
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
-     "all": 0.034,
-     "unknown": 0.007,
-     "not": 0.952
+     "all": 0.024,
+     "unknown": 0.008,
+     "not": 0.96
     },
     "value": null
    }
@@ -668,11 +668,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.103,
+     "both": 0.123,
      "female": 0.315,
-     "male": 0.003,
+     "male": 0.004,
      "unknown": 0.002,
-     "not": 0.576
+     "not": 0.556
     },
     "duels": [
      {
@@ -680,8 +680,8 @@
       "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.867,
-       "b": 0.133
+       "a": 0.816,
+       "b": 0.184
       }
      },
      {
@@ -689,16 +689,16 @@
       "b": "o1",
       "choice": "b",
       "probs": {
-       "a": 0.065,
-       "b": 0.935
+       "a": 0.083,
+       "b": 0.917
       }
      }
     ],
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.211,
-      "not": 0.789
+      "pick": 0.209,
+      "not": 0.791
      }
     },
     "value": null
@@ -708,38 +708,54 @@
     "probs": {
      "queen": 0.001,
      "male alate": 0.001,
-     "worker": 0.03,
+     "worker": 0.027,
      "minor worker": 0.001,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.967
+     "not": 0.969
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "not",
     "probs": {
-     "PreservedSpecimen": 0.017,
-     "LivingSpecimen": 0.054,
-     "HumanObservation": 0.083,
-     "MachineObservation": 0.011,
-     "MaterialSample": 0.006,
-     "MaterialCitation": 0.016,
-     "Occurrence": 0.116,
+     "PreservedSpecimen": 0.014,
+     "LivingSpecimen": 0.045,
+     "HumanObservation": 0.036,
+     "MachineObservation": 0.013,
+     "MaterialSample": 0.005,
+     "MaterialCitation": 0.019,
+     "Occurrence": 0.07,
      "Taxon": 0.0,
-     "not": 0.697
+     "not": 0.799
     },
     "duels": [
      {
       "a": "o6",
-      "b": "o2",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.815,
+       "b": 0.185
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o6",
       "choice": "b",
       "probs": {
-       "a": 0.3,
-       "b": 0.7
+       "a": 0.031,
+       "b": 0.969
       }
      }
     ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.022,
+      "not": 0.978
+     }
+    },
     "value": null
    },
    "lifeStage": {
@@ -753,9 +769,9 @@
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
-     "all": 0.074,
-     "unknown": 0.013,
-     "not": 0.903
+     "all": 0.048,
+     "unknown": 0.016,
+     "not": 0.926
     },
     "value": null
    }
@@ -764,37 +780,37 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.389,
-     "female": 0.008,
-     "male": 0.018,
-     "unknown": 0.02,
-     "not": 0.565
+     "both": 0.333,
+     "female": 0.009,
+     "male": 0.02,
+     "unknown": 0.016,
+     "not": 0.622
     },
     "duels": [
      {
       "a": "o0",
-      "b": "o3",
+      "b": "o2",
       "choice": "a",
       "probs": {
-       "a": 0.901,
-       "b": 0.099
+       "a": 0.935,
+       "b": 0.065
       }
      },
      {
-      "a": "o2",
+      "a": "o3",
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.027,
-       "b": 0.973
+       "a": 0.041,
+       "b": 0.959
       }
      }
     ],
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.255,
-      "not": 0.745
+      "pick": 0.249,
+      "not": 0.751
      }
     },
     "value": null
@@ -804,70 +820,43 @@
     "probs": {
      "queen": 0.002,
      "male alate": 0.006,
-     "worker": 0.023,
+     "worker": 0.024,
      "minor worker": 0.002,
      "major worker": 0.0,
      "soldier": 0.0,
-     "not": 0.967
+     "not": 0.965
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "PreservedSpecimen",
     "probs": {
-     "PreservedSpecimen": 0.795,
+     "PreservedSpecimen": 0.844,
      "LivingSpecimen": 0.007,
-     "HumanObservation": 0.026,
-     "MachineObservation": 0.053,
-     "MaterialSample": 0.003,
+     "HumanObservation": 0.015,
+     "MachineObservation": 0.035,
+     "MaterialSample": 0.002,
      "MaterialCitation": 0.0,
-     "Occurrence": 0.036,
+     "Occurrence": 0.026,
      "Taxon": 0.0,
-     "not": 0.079
+     "not": 0.071
     },
-    "duels": [
-     {
-      "a": "o0",
-      "b": "o3",
-      "choice": "a",
-      "probs": {
-       "a": 0.81,
-       "b": 0.19
-      }
-     },
-     {
-      "a": "o6",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.2,
-       "b": 0.8
-      }
-     }
-    ],
-    "final": {
-     "choice": "pick",
-     "probs": {
-      "pick": 0.546,
-      "not": 0.454
-     }
-    },
-    "value": null
+    "value": "PreservedSpecimen"
    },
    "lifeStage": {
     "choice": "not",
     "probs": {
-     "adult": 0.251,
+     "adult": 0.255,
      "larva": 0.014,
      "mature larva": 0.002,
      "nymph": 0.002,
-     "caterpillar": 0.0,
+     "caterpillar": 0.001,
      "pupa": 0.0,
      "egg": 0.0,
      "instar": 0.0,
-     "all": 0.012,
-     "unknown": 0.027,
-     "not": 0.69
+     "all": 0.013,
+     "unknown": 0.034,
+     "not": 0.679
     },
     "duels": [
      {
@@ -875,8 +864,8 @@
       "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.719,
-       "b": 0.281
+       "a": 0.685,
+       "b": 0.315
       }
      }
     ],
@@ -961,6 +950,228 @@
    }
   }
  },
+ "source": {
+  "2": {
+   "long": false,
+   "traits": {
+    "wingtype": {
+     "said": [],
+     "value": null
+    },
+    "season": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.876,
+      "literature": 0.124
+     },
+     "said": [
+      "Note: Age indicates number of growing seasons since a site was restored, bison indicates the presence (Y) or absence (N) of reintroduced bison, and fire indicates if the site received pre-scribed fire since the previous growing season (i.e., in the spring prior to the 2018 study season).",
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al."
+     ],
+     "value": "measured"
+    },
+    "diet": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.434,
+      "literature": 0.566
+     },
+     "said": [
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al.",
+      "To understand how restoration characteristics affected the individual traits of each community, we analyzed body size CWM (a continuous trait), and the proportion of individuals in each community with particular categorical trait values: brachypterous wing morphology, carnivorous diet, spring phenology, and diurnal activity."
+     ],
+     "value": null
+    },
+    "activity": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.361,
+      "literature": 0.639
+     },
+     "said": [
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al.",
+      "## Taxonomic and functional trait community metrics Ground beetle and other ground-dwelling arthropod densities determined from pitfall traps usually are expressed as “activity densities,” which acknowledges that capture rates incorporate both abundance and activity of arthropods in the trap area (Thomas et al."
+     ],
+     "value": null
+    },
+    "size": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.077,
+      "literature": 0.923
+     },
+     "said": [
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al.",
+      "For the assemblage at each research grid, we calculated community-weighted means (CWMs) for body size, our only continuous trait, and the proportion of individuals with a trait value for the other categorical traits."
+     ],
+     "value": "literature"
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "FRic F": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.435,
+      "literature": 0.565
+     },
+     "said": [
+      "These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al.",
+      "FRic represents the range of functional trait values within the niche space, while FEve describes the distribution of species within that space (Mason et al."
+     ],
+     "value": null
+    },
+    "FEve P": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.121,
+      "literature": 0.879
+     },
+     "said": [
+      "These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al.",
+      "FRic represents the range of functional trait values within the niche space, while FEve describes the distribution of species within that space (Mason et al."
+     ],
+     "value": "literature"
+    },
+    "FDiv F": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.158,
+      "literature": 0.842
+     },
+     "said": [
+      "These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al.",
+      "FDiv measures how much of a community is represented by individuals belonging to species with more extreme trait combinations, and FDis reflects how much species in a community differ from the center of multivariate trait space (Mouillot et al."
+     ],
+     "value": "literature"
+    },
+    "FDiv P": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.064,
+      "literature": 0.936
+     },
+     "said": [
+      "These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al.",
+      "FDiv measures how much of a community is represented by individuals belonging to species with more extreme trait combinations, and FDis reflects how much species in a community differ from the center of multivariate trait space (Mouillot et al."
+     ],
+     "value": "literature"
+    },
+    "FDis F": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.432,
+      "literature": 0.568
+     },
+     "said": [
+      "These metrics were functional richness (FRic), functional evenness (FEve), functional dispersion (FDis), and functional divergence (FDiv; Mason et al.",
+      "FDiv measures how much of a community is represented by individuals belonging to species with more extreme trait combinations, and FDis reflects how much species in a community differ from the center of multivariate trait space (Mouillot et al."
+     ],
+     "value": null
+    }
+   }
+  },
+  "5": {
+   "long": false,
+   "traits": {
+    "Species": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.596,
+      "literature": 0.404
+     },
+     "said": [
+      "We sorted ground beetles from other arthropods and identified them to species or morphospecies using keys for Carabidae (Ciegler 2000, Arnett et al.",
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al."
+     ],
+     "value": null
+    },
+    "bison": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.528,
+      "literature": 0.472
+     },
+     "said": [
+      "American bison (Bison bison) were reintroduced to a portion of the site in October 2014.",
+      "In 2018, when this study took place, there were 132 bison, including calves born in 2018, in the 600 contiguous and connected hectares to which bison had access (0.22 bison/ha, or 0.196 animal units/ha accounting for variation in age and sex)."
+     ],
+     "value": null
+    }
+   }
+  },
+  "6": {
+   "long": false,
+   "traits": {
+    "Species": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.926,
+      "literature": 0.074
+     },
+     "said": [
+      "We sorted ground beetles from other arthropods and identified them to species or morphospecies using keys for Carabidae (Ciegler 2000, Arnett et al.",
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al."
+     ],
+     "value": "measured"
+    },
+    "bison": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.886,
+      "literature": 0.114
+     },
+     "said": [
+      "American bison (Bison bison) were reintroduced to a portion of the site in October 2014.",
+      "In 2018, when this study took place, there were 132 bison, including calves born in 2018, in the 600 contiguous and connected hectares to which bison had access (0.22 bison/ha, or 0.196 animal units/ha accounting for variation in age and sex)."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "14": {
+   "long": false,
+   "traits": {
+    "Mean ± 1 s.d.": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.966,
+      "literature": 0.034
+     },
+     "said": [
+      "Mean is average activity density per 100 trapdays, range is minimum and maximum activity densities per 100 trapdays."
+     ],
+     "value": "measured"
+    },
+    "Range": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.375,
+      "literature": 0.625
+     },
+     "said": [
+      "2018) that determine community membership, density, and ecological roles: body size (midpoint of body length range listed in literature) relates to response to land management intensity or disturbance, fecundity rates, and food consumption rates; wing morphology (macropterous, brachypterous, or dimorphic) determines dispersal ability, with flighted species colonizing habitats more rapidly and responding more positively to management intensity; activity time (nocturnal, diurnal, or cathemeral) affects prey and predator species encountered; breeding season (spring, summer, fall, or all) can mediate responses to changes in plant community structure and composition or to habitat heterogeneity; and adult diet (herbivorous, carnivorous, or omnivorous) directly relates to seed- and arthropod-predator function (Ribera et al.",
+      "FRic represents the range of functional trait values within the niche space, while FEve describes the distribution of species within that space (Mason et al."
+     ],
+     "value": null
+    },
+    "Age": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.708,
+      "literature": 0.292
+     },
+     "said": [
+      "In 2018, when this study took place, there were 132 bison, including calves born in 2018, in the 600 contiguous and connected hectares to which bison had access (0.22 bison/ha, or 0.196 animal units/ha accounting for variation in age and sex).",
+      "Note: Age indicates number of growing seasons since a site was restored, bison indicates the presence (Y) or absence (N) of reintroduced bison, and fire indicates if the site received pre-scribed fire since the previous growing season (i.e., in the spring prior to the 2018 study season)."
+     ],
+     "value": null
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -968,6 +1179,13 @@
    "compiled": 0.079
   },
   "value": "own"
+ },
+ "rows": {
+  "2": " Each of its 40 species takes one row.",
+  "4": "",
+  "5": "",
+  "6": "",
+  "14": " Each of its 40 species takes one row."
  },
  "text_found": {
   "sex": [],

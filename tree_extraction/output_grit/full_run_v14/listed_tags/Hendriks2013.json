@@ -68,17 +68,17 @@
    "Development rate (year)": {
     "choice": "mean",
     "probs": {
-     "individual": 0.012,
-     "mean": 0.734,
+     "individual": 0.02,
+     "mean": 0.481,
      "mean ± SD": 0.002,
      "mean ± SE": 0.003,
-     "range": 0.011,
+     "range": 0.02,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.003,
-     "mode": 0.162,
-     "single observation": 0.068,
+     "count": 0.004,
+     "mode": 0.393,
+     "single observation": 0.073,
      "unknown": 0.001
     },
     "duels": [
@@ -87,8 +87,17 @@
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.203,
-       "b": 0.797
+       "a": 0.12,
+       "b": 0.88
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.752,
+       "b": 0.248
       }
      }
     ],
@@ -98,15 +107,15 @@
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.013,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
-     "median": 0.001,
-     "count": 0.001,
-     "mode": 0.981,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.993,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -115,17 +124,17 @@
    "Dispersal capacity": {
     "choice": "mode",
     "probs": {
-     "individual": 0.003,
-     "mean": 0.028,
-     "mean ± SD": 0.001,
+     "individual": 0.002,
+     "mean": 0.009,
+     "mean ± SD": 0.0,
      "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.962,
-     "single observation": 0.001,
+     "mode": 0.985,
+     "single observation": 0.0,
      "unknown": 0.0
     },
     "value": "mode"
@@ -133,8 +142,8 @@
    "Herbivore in all life stages": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.003,
+     "individual": 0.001,
+     "mean": 0.001,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -142,7 +151,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.994,
+     "mode": 0.995,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -151,8 +160,8 @@
    "Food specifity": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.012,
+     "individual": 0.003,
+     "mean": 0.008,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -160,7 +169,7 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.983,
+     "mode": 0.987,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -169,18 +178,18 @@
    "Egg deposition": {
     "choice": "mode",
     "probs": {
-     "individual": 0.009,
-     "mean": 0.043,
-     "mean ± SD": 0.002,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.004,
-     "mode": 0.915,
-     "single observation": 0.018,
-     "unknown": 0.002
+     "individual": 0.003,
+     "mean": 0.011,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.979,
+     "single observation": 0.003,
+     "unknown": 0.0
     },
     "value": "mode"
    }
@@ -412,6 +421,76 @@
    }
   }
  },
+ "source": {
+  "3": {
+   "long": false,
+   "traits": {
+    "log(ChangePlants+1)": {
+     "said": [],
+     "value": null
+    },
+    "high Ammonia levels (Nhx=2000)": {
+     "said": [],
+     "value": null
+    },
+    "low Ammonia levels (Nhx=300)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Development rate (year)": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.096,
+      "literature": 0.904
+     },
+     "said": [
+      "Species with a development rate of two years had a higher increase in species richness at the country level than species with a one year development rate.",
+      "At finer scales increases in richness were only detected for the group with one year development, changes of assemblages with a two year development rate being dependent on plant species richness increases (table 2b)."
+     ],
+     "value": "literature"
+    },
+    "Habitat specifity": {
+     "said": [],
+     "value": null
+    },
+    "Dispersal capacity": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.108,
+      "literature": 0.892
+     },
+     "said": [
+      "However we found that species with low habitat specificity, limited dispersal capacity and egg deposition in the soil were more negativly affected by nitrogen deposition levels."
+     ],
+     "value": "literature"
+    },
+    "Herbivore in all life stages": {
+     "said": [],
+     "value": null
+    },
+    "Food specifity": {
+     "said": [],
+     "value": null
+    },
+    "Egg deposition": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.154,
+      "literature": 0.846
+     },
+     "said": [
+      "However we found that species with low habitat specificity, limited dispersal capacity and egg deposition in the soil were more negativly affected by nitrogen deposition levels."
+     ],
+     "value": "literature"
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "compiled",
   "probs": {
@@ -419,6 +498,10 @@
    "compiled": 0.865
   },
   "value": "compiled"
+ },
+ "rows": {
+  "3": "",
+  "4": " Each of its 47 species takes one row."
  },
  "text_found": {
   "sex": [],

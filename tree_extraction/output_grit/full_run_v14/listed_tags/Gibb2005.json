@@ -105,9 +105,9 @@
     "choice": "mean ± SE",
     "probs": {
      "individual": 0.0,
-     "mean": 0.0,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.999,
+     "mean": 0.001,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.996,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -123,9 +123,9 @@
     "choice": "mean ± SE",
     "probs": {
      "individual": 0.0,
-     "mean": 0.0,
+     "mean": 0.001,
      "mean ± SD": 0.001,
-     "mean ± SE": 0.998,
+     "mean ± SE": 0.996,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -140,16 +140,16 @@
    "E. deubeli": {
     "choice": "mean ± SE",
     "probs": {
-     "individual": 0.0,
-     "mean": 0.0,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.998,
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.993,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.0,
+     "mode": 0.001,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -160,8 +160,8 @@
     "probs": {
      "individual": 0.0,
      "mean": 0.0,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.999,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.998,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -179,7 +179,7 @@
      "individual": 0.0,
      "mean": 0.0,
      "mean ± SD": 0.001,
-     "mean ± SE": 0.999,
+     "mean ± SE": 0.998,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -283,11 +283,11 @@
    "sex": {
     "choice": "not",
     "probs": {
-     "both": 0.136,
-     "female": 0.006,
-     "male": 0.011,
-     "unknown": 0.005,
-     "not": 0.842
+     "both": 0.097,
+     "female": 0.005,
+     "male": 0.01,
+     "unknown": 0.004,
+     "not": 0.884
     },
     "value": null
    },
@@ -300,22 +300,22 @@
      "minor worker": 0.001,
      "major worker": 0.002,
      "soldier": 0.0,
-     "not": 0.99
+     "not": 0.989
     },
     "value": null
    },
    "basisOfRecord": {
     "choice": "LivingSpecimen",
     "probs": {
-     "PreservedSpecimen": 0.035,
-     "LivingSpecimen": 0.586,
-     "HumanObservation": 0.048,
+     "PreservedSpecimen": 0.022,
+     "LivingSpecimen": 0.593,
+     "HumanObservation": 0.047,
      "MachineObservation": 0.002,
      "MaterialSample": 0.002,
-     "MaterialCitation": 0.005,
-     "Occurrence": 0.065,
+     "MaterialCitation": 0.007,
+     "Occurrence": 0.08,
      "Taxon": 0.0,
-     "not": 0.255
+     "not": 0.247
     },
     "duels": [
      {
@@ -323,18 +323,34 @@
       "b": "o6",
       "choice": "b",
       "probs": {
-       "a": 0.22,
-       "b": 0.78
+       "a": 0.174,
+       "b": 0.826
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o6",
+      "choice": "b",
+      "probs": {
+       "a": 0.063,
+       "b": 0.937
       }
      }
     ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.043,
+      "not": 0.957
+     }
+    },
     "value": null
    },
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.721,
-     "larva": 0.004,
+     "adult": 0.633,
+     "larva": 0.005,
      "mature larva": 0.001,
      "nymph": 0.001,
      "caterpillar": 0.0,
@@ -342,34 +358,34 @@
      "egg": 0.0,
      "instar": 0.0,
      "all": 0.001,
-     "unknown": 0.004,
-     "not": 0.267
+     "unknown": 0.007,
+     "not": 0.351
     },
     "duels": [
      {
       "a": "o0",
-      "b": "o1",
+      "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.905,
-       "b": 0.095
+       "a": 0.939,
+       "b": 0.061
       }
      },
      {
-      "a": "o9",
+      "a": "o1",
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.011,
-       "b": 0.989
+       "a": 0.062,
+       "b": 0.938
       }
      }
     ],
     "final": {
      "choice": "not",
      "probs": {
-      "pick": 0.321,
-      "not": 0.679
+      "pick": 0.272,
+      "not": 0.728
      }
     },
     "value": null
@@ -422,6 +438,129 @@
    }
   }
  },
+ "source": {
+  "1": {
+   "long": false,
+   "traits": {
+    "Body Length (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.996,
+      "literature": 0.004
+     },
+     "said": [
+      "Body length and width, wing length and width, wing area and body mass were measured for 20 males of each species.",
+      "Body length and width were measured to the nearest 0.1 mm at the longest and widest points of the insects using a measuring slide (Carl Zeiss, Germany) under a dissecting microscope."
+     ],
+     "value": "measured"
+    },
+    "Body Width (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.997,
+      "literature": 0.003
+     },
+     "said": [
+      "Body length and width, wing length and width, wing area and body mass were measured for 20 males of each species.",
+      "Body length and width were measured to the nearest 0.1 mm at the longest and widest points of the insects using a measuring slide (Carl Zeiss, Germany) under a dissecting microscope."
+     ],
+     "value": "measured"
+    },
+    "Wing Length (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.997,
+      "literature": 0.003
+     },
+     "said": [
+      "Body length and width, wing length and width, wing area and body mass were measured for 20 males of each species.",
+      "Aspect ratios for wings are calculated by dividing wing length by wing width, while wing loading is calculated by dividing the dry mass by the total wing area (Vogel, 1981)."
+     ],
+     "value": "measured"
+    },
+    "Wing Width (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.997,
+      "literature": 0.003
+     },
+     "said": [
+      "Body length and width, wing length and width, wing area and body mass were measured for 20 males of each species.",
+      "Aspect ratios for wings are calculated by dividing wing length by wing width, while wing loading is calculated by dividing the dry mass by the total wing area (Vogel, 1981)."
+     ],
+     "value": "measured"
+    },
+    "Body mass (mg)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.996,
+      "literature": 0.004
+     },
+     "said": [
+      "Body length and width, wing length and width, wing area and body mass were measured for 20 males of each species.",
+      "Differences between the six morphometric measures: body length and width, wing length, width and area and body mass of species within the genera Epuraea and Tachinus were tested separately for each genus using MANOVA, followed by ANO-VAs on subgroups, when the initial MANOVA was significant."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "E. angustula": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.9,
+      "literature": 0.1
+     },
+     "said": [
+      "angustula (Sturm 1844), Epuraea boreella (Zetterstedt 1828) and Epuraea pygmaea (Gyllenhal 1828) and the red-listed T."
+     ],
+     "value": "measured"
+    },
+    "E. borella": {
+     "said": [],
+     "value": null
+    },
+    "E. deubeli": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.946,
+      "literature": 0.054
+     },
+     "said": [
+      "Epuraea deubeli (Reitter 1898) (Nitidulidae) is thought to live in the tracks of the bark beetles Trypodendron lineatum (Olivier 1795) and Ips typographus (Linneaus 1958).",
+      "deubeli were compared with E."
+     ],
+     "value": "measured"
+    },
+    "E. longipennis": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.945,
+      "literature": 0.055
+     },
+     "said": [
+      "All red-listed species considered in this study are categorised as ‘‘near-threatened’’, except for Epuraea longipennis (Sjöberg 1939), which is categorised as ‘‘data deficient’’ because it has previously been found in very few localities.",
+      "Epuraea longipennis had previously been found only in a total of three locations in the Jämtland and Å ngermanland provinces."
+     ],
+     "value": "measured"
+    },
+    "E. pygmaea": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.953,
+      "literature": 0.047
+     },
+     "said": [
+      "angustula (Sturm 1844), Epuraea boreella (Zetterstedt 1828) and Epuraea pygmaea (Gyllenhal 1828) and the red-listed T.",
+      "pygmaea from the window traps were also measured, in order to determine the difference in weight resulting from the individuals caught in window traps having expended considerable amounts of energy flying."
+     ],
+     "value": "measured"
+    }
+   }
+  }
+ },
  "origin": {
   "choice": "own",
   "probs": {
@@ -429,6 +568,10 @@
    "compiled": 0.009
   },
   "value": "own"
+ },
+ "rows": {
+  "1": " Each of its 9 species takes one row.",
+  "4": ""
  },
  "text_found": {
   "sex": [
