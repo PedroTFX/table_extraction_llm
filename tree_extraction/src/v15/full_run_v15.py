@@ -1193,8 +1193,9 @@ def stage_assemble(papers):
 
 
 def stage_tagscore(papers):
-    """The tag measure (no model), v15 against v14 (the same species, trait and value rows)."""
-    ts.report(papers, OUT, PREV, "TAGS_V15.txt")
+    """The tag measure (no model), v15 against v14 (the same species, trait and value rows); v13's
+    scorer reports give the name remaps (v14 has none, its rows are v13's)."""
+    ts.report(papers, OUT, PREV, "TAGS_V15.txt", remap_dir=V13)
 
 
 def stage_score(papers):

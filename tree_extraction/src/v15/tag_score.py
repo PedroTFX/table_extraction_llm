@@ -103,19 +103,20 @@ def groups():
     return json.loads(f.read_text(encoding="utf-8"))["assign"] if f.exists() else {}
 
 
-def measure(papers, run_dir, prev_dir=None):
-    """-> {group: {tag: Counter}}, plus calibration bins."""
+def measure(papers, run_dir, prev_dir=None, remap_dir=None):
+    """-> {group: {tag: Counter}}, plus calibration bins. remap_dir: the run whose scorer reports give
+    the name remaps for both runs (v15: v13's; v14 has no production report), else prev_dir's."""
     ev = _ev()
     grp = groups()
     stats = collections.defaultdict(lambda: {t: collections.Counter() for t in TAGS})
     calib = {t: collections.Counter() for t in TAGS}
     for p in papers:
-        pairs = matched(p, run_dir, prev_dir)
+        pairs = matched(p, run_dir, remap_dir or prev_dir)
         if not pairs:
             continue
         prev_by_key = {}
         if prev_dir:                                  # the same GT rows, matched in the previous run
-            for g, r in matched(p, prev_dir):
+            for g, r in matched(p, prev_dir, remap_dir):
                 prev_by_key.setdefault(tuple(sorted(g.items())), []).append(r)
         text = _paper_text(p)
         cls = {}
@@ -174,8 +175,8 @@ def core_same(papers, run_dir, prev_dir):
     return out
 
 
-def report(papers, run_dir, prev_dir, name):
-    stats, calib = measure(papers, run_dir, prev_dir)
+def report(papers, run_dir, prev_dir, name, remap_dir=None):
+    stats, calib = measure(papers, run_dir, prev_dir, remap_dir)
     L = [f"listed tags of {run_dir.name}" + (f" vs {prev_dir.name}" if prev_dir else "") +
          " on the GT rows matched on species + trait + value"]
     if prev_dir:
