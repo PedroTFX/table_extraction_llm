@@ -51,6 +51,7 @@ Stages, each resumable (one model at a time):
   v13:subject     one-species papers: the subject, its tables, rows and columns (nimble)
   v14:tags        the five listed tags: cells, labels, statistic, captions, text (gemma + nimble)
   v15:stat        the statistic read again, sentences about the analysis left out (gemma + nimble)
+  v15:cols        each trait column's statistic with the sentences naming its trait (nimble)
   assemble        the CSVs -> output/full_run_v15
   score           production scorer vs v14, the repeatable scorer, the tag measure
   det             repeatable scorer only, v14 vs v15
@@ -932,6 +933,13 @@ def stage_v15_stat(papers):
     lt.restat(V15, V14, papers)
 
 
+def stage_v15_cols(papers):
+    """Run 2: every trait column's statistic asked again with the sentences that name its trait."""
+    v15_setup()
+    install(V15, decisions=True, structure=True, kind=True, sections=True, parts=True, subjects=True)
+    lt.restat_columns(V15, papers)
+
+
 # === the plan: every layer applied in order ===================================================
 
 _CACHE = {}
@@ -1235,9 +1243,10 @@ PIPELINE = {
     "v13:subject": stage_v13_subject,
     "v14:tags": stage_v14_tags,
     "v15:stat": stage_v15_stat,
+    "v15:cols": stage_v15_cols,
 }
 # the stage names this file had before it was made standalone (callers still use them)
-ALIASES = {"stat": "v15:stat"}
+ALIASES = {"stat": "v15:stat", "cols": "v15:cols"}
 STAGES = {**PIPELINE, **OWN_STAGES}
 STAGES.update({a: STAGES[b] for a, b in ALIASES.items()})
 

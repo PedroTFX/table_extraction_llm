@@ -576,6 +576,65 @@ def restat(run_dir, prev_dir, papers):
     ask.unload()
 
 
+STAT_WORDS = {"mean", "means", "average", "sd", "se", "std", "error", "range", "min", "max", "median",
+              "total", "value", "values", "number", "per", "and", "the", "of"}
+
+
+def trait_sentences(pool, name, k=2):
+    """The sentences that name the trait (every word of the column name, its statistic words and
+    units left out); none when nothing but those is left."""
+    w = [x for x in _words(name) if len(x) >= 3 and not x.isdigit() and x not in STAT_WORDS]
+    return [s for s in pool if w and all(x in _words(s) for x in w)][:k] if w else []
+
+
+def ask_statistic_named(ask, t, fields, state, rows, pool):
+    """Per trait column: which statistic its values are, with the sentences that name this trait only
+    (v15 run 2: one paper value cannot fit a paper's numeric and class traits; Teder2020's wingspan
+    column needs 'Average wingspan ...', its voltinism column the voltinism sentence)."""
+    out = {}
+    if any(fields.get(c.name) == "measurementStatistic" for c in t.columns):
+        return out                                   # the table prints it per row
+    for name in trait_columns(t, fields)[:MAX_COLS]:
+        vals = _distinct(t, name, 8)
+        said = trait_sentences(pool, name)
+        st = state + rows + (f" About '{name}' the paper says: " + " ".join(f"'{s[:400]}'" for s in said) if said else "") \
+            + f" The column '{name}' holds: {', '.join(repr(v) for v in vals)}."
+        got, rec = classify(ask, st, f"What are the values in the column '{name}'?", "measurementStatistic")
+        out[name] = dict(rec, value=got, said=said)
+    return out
+
+
+def restat_columns(run_dir, papers):
+    """Run 2 on restat's decisions: every trait column asked again with the methods' and supplements'
+    sentences that name its trait, instead of the paper-wide quotes; the paper value is kept.
+    Resumable ('v15_cols': 2)."""
+    head = fr.head_runs()
+    ask = duels.Nimble()
+    for p in papers:
+        f = run_dir / "listed_tags" / f"{p}.json"
+        if not f.exists() or p not in head:
+            continue
+        res = json.loads(f.read_text(encoding="utf-8"))
+        if res.get("v15_cols") == 2:
+            continue
+        t0 = time.time()
+        pool = _sentences(sections(p), ("methods", "supplements"))
+        flat, spans = v3.md_tables(p)
+        res["statistic"] = {}
+        for t, fields, org, _x in fr.plan(p, head):
+            if not t.records or not trait_columns(t, fields):
+                continue
+            k = str(t.table_index)
+            state = _table_state(t, sp.caption_above(t, flat, spans), kt.caption_below(t, flat, spans))
+            res["statistic"][k] = ask_statistic_named(ask, t, fields, state, (res.get("rows") or {}).get(k, ""), pool)
+        res["v15_cols"] = 2
+        f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+        n = sum(1 for s in res["statistic"].values() for a in s.values() if a.get("said"))
+        m = sum(len(s) for s in res["statistic"].values())
+        print(f"  [cols] {p:22s} {m} columns, {n} with a sentence naming the trait ({time.time() - t0:.0f}s)", flush=True)
+    ask.unload()
+
+
 # --- applying the answers (the v14 layer of plan()) -------------------------------------------------
 
 def apply(dec, t, fields, xtags, defaults=None):
