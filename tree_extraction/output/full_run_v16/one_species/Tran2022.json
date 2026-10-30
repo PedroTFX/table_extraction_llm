@@ -1,0 +1,489 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Drosophila suzukii"
+ },
+ "tables": {
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "statistic",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.015,
+       "b": 0.985
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.995,
+       "b": 0.005
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.94,
+       "b": 0.06
+      }
+     },
+     {
+      "a": "definition",
+      "b": "statistic",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "structure_clash": {
+    "structure": "summary",
+    "choice": "rows",
+    "probs": {
+     "structure": 0.001,
+     "rows": 0.999
+    }
+   },
+   "cols": {
+    "Parameter": {
+     "choice": "statistic",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.993,
+        "b": 0.007
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "test",
+       "b": "statistic",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Total flight time (s)": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.008,
+        "b": 0.992
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.993,
+        "b": 0.007
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "No. bouts": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.02,
+        "b": 0.98
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.987,
+        "b": 0.013
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.979,
+        "b": 0.021
+       }
+      }
+     ]
+    }
+   }
+  },
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": null,
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.33,
+       "b": 0.67
+      }
+     }
+    ]
+   },
+   "structure_clash": {
+    "structure": "summary",
+    "choice": null
+   }
+  },
+  "2": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.861,
+     "own": 0.139
+    }
+   }
+  },
+  "3": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "statistic",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.996,
+       "b": 0.004
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.861,
+       "b": 0.139
+      }
+     },
+     {
+      "a": "definition",
+      "b": "statistic",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "structure_clash": {
+    "structure": "summary",
+    "choice": "rows",
+    "probs": {
+     "structure": 0.001,
+     "rows": 0.999
+    }
+   },
+   "cols": {
+    "Parameter": {
+     "choice": "statistic",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.992,
+        "b": 0.008
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "test",
+       "b": "statistic",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Free-flight chamber": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.014,
+        "b": 0.986
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.99,
+        "b": 0.01
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    },
+    "Tethered flight mill": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.012,
+        "b": 0.988
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.991,
+        "b": 0.009
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.961,
+     "own": 0.039
+    }
+   }
+  },
+  "5": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.928,
+     "own": 0.072
+    }
+   }
+  }
+ },
+ "endings": 0
+}

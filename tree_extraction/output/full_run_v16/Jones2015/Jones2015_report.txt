@@ -1,0 +1,67 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Jones2015/Jones2015.xlsx  (72 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Jones2015/Jones2015.csv  (264 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Maximum speed (m/sec)' -> 'Maximum Speed'
+  'Mobility category' -> 'Mobility Category'
+  'Total distance (m)' -> 'Total Distance'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 72
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 192   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.273 / 1.000 / 0.429   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            192
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                72     72  1.000
+  measurementMethod             0     24  0.000  <-- low
+  measurementUnit               0     48  0.000  <-- low
+  measurementStatistic          0     72  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                          72     72  1.000
+  lifeStage                    72     72  1.000
+  caste                         0      0    n/a
+  sampleSizeValue              72     72  1.000
+  sampleSizeUnit                0     72  0.000  <-- low
+  sampleTreatment               0     72  0.000  <-- low
+  samplingProtocol              0      0    n/a   +30 where GT blank
+  verbatimLocality              0     72  0.000  <-- low
+  verbatimCoordinates           0     72  0.000  <-- low
+  verbatimEventDate             0     72  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     72  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  expert 1                                          0    24   PRED-ONLY
+  expert 2                                          0    24   PRED-ONLY
+  expert 3                                          0    24   PRED-ONLY
+  expert 4                                          0    24   PRED-ONLY
+  expert 5                                          0    24   PRED-ONLY
+  mobility category                                24    24   
+  total distance                                   24    24   
+  expert opinion                                    0    24   PRED-ONLY
+  maximum speed                                    24    24   
+  mean points                                       0    24   PRED-ONLY
+  score                                             0    24   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     72     0     0   id+type+value
+             (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.273)
+  tags        0.000  0.000  0.000      0    72    72   basis+id+type+value+stat+sex+stage
+             (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)

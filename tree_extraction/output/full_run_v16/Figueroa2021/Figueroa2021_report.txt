@@ -1,0 +1,106 @@
+  [semantic] left unmatched: 'Adjacent' vs 'Intertegular Distance' (llm said different traits)
+  [semantic] left unmatched: 'Adjacent' vs 'Activity range' (llm said different traits)
+  [semantic] left unmatched: 'Adjacent' vs 'Peak activity ' (llm said different traits)
+  [semantic] left unmatched: 'Plant Family' vs 'Peak activity ' (llm said different traits)
+  [semantic] left unmatched: 'Plant Family' vs 'Activity range' (llm said different traits)
+  [semantic] left unmatched: 'Plant Family' vs 'Nesting location' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Figueroa2021/Figueroa2021.xlsx  (246 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Figueroa2021/Figueroa2021.csv  (115 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 9 pair(s))
+  'Andrena spp.' -> 'Andrena sp'
+  'Ceratina spp.' -> 'Ceratina sp'
+  'Halictus rubicundis' -> 'Halictus rubicundus'
+  'Hoplitis spp.' -> 'Hoplitis sp'
+  'Hylaeus spp.' -> 'Hylaeus sp'
+  'Lasioglossum pilosum' -> 'Lasioglossum piosum'
+  'Lasioglossum spp.' -> 'Lasioglossum sp'
+  'Megachile spp.' -> 'Megachile sp'
+  'Melissodes spp.' -> 'Melissodes sp'
+
+TAXON NAMES LEFT UNMAPPED (10)
+  'Agastache nepetoides': no ground-truth name denotes this organism
+  'Cirsium arvense': no ground-truth name denotes this organism
+  'Coreopsis lanceolata': no ground-truth name denotes this organism
+  'Daucus carota': no ground-truth name denotes this organism
+  'Erigeron annuus': no ground-truth name denotes this organism
+  'Lobelia siphilitica': no ground-truth name denotes this organism
+  'Medicago sativa': no ground-truth name denotes this organism
+  'Penstemon digitalis': no ground-truth name denotes this organism
+  'Silphium perfoliatum': no ground-truth name denotes this organism
+  'Solidago juncea': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 246
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 115   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            115
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 246 MISSED ROWS MISSED
+  species not in prediction                   3
+  species present, trait missing            243
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Lasioglossum inconditum'           ~0.78~  pred 'Lasioglossum imitatum'   x3
+  -> 1 species mismatch explains 3 of 246 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Intertegular Distance'            x63
+     'Nesting location'                 x55
+     'Sociality'                        x53
+     'Activity range'                   x36
+     'Peak activity '                   x36
+  -> 5 missing traits explain 243 of 246 misses (99%) — systematic, not scattered
+
+  full miss detail saved -> Figueroa2021_misses.csv, Figueroa2021_misses_summary.json (246 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  peak activity                                    36     0   GT-ONLY
+  activity range                                   36     0   GT-ONLY
+  adjacent                                          0    10   PRED-ONLY
+  intertegular distance                            64     0   GT-ONLY
+  plant family                                      0   105   PRED-ONLY
+  nesting location                                 56     0   GT-ONLY
+  sociality                                        54     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   246   id+type+value
+             (115 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0   246   basis+id+type+value+stat+sex+stage
+             (115 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

@@ -1,0 +1,73 @@
+  [semantic] matched by values: 'Overw. stage' -> 'Overwintering stage'
+  [semantic] matched by values: 'number of used habitat types' -> 'Number of Habitats'
+  [semantic] matched by values: 'number of used habitat subtypes' -> 'Number of Subhabitats'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Korosi2022/Korosi2022.xlsx  (624 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Korosi2022/Korosi2022.csv  (624 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Overw. stage' -> 'Overwintering stage'
+  'number of used habitat subtypes' -> 'Number of Subhabitats'
+  'number of used habitat types' -> 'Number of Habitats'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 618
+  missed (FN)         : 6
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.990 / 0.990 / 0.990   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.990 / 0.990 / 0.990   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.990   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    618  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0    618  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    618  0.000  <-- low
+  lifeStage                   410    618  0.663
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a   +618 where GT blank
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    618  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 6 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        6
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '3'                          ->  '2'                          x2
+     '2'                          ->  '1'                          x2
+     '1.05'                       ->  '1'                          x2
+  -> 3 substitutions explain 6 of 6 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Korosi2022_misses.csv, Korosi2022_misses_summary.json (6 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  larval diet                                     104   104   
+  number of habitats                              104   104   
+  mobility                                        104   104   
+  number of subhabitats                           104   104   
+  overwintering stage                             104   104   
+  voltinism                                       104   104   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.990  0.990  0.990    618     6     6   id+type+value
+  tags        0.000  0.000  0.000      0   624   624   basis+id+type+value+stat+sex+stage
+             (F1 -0.990 vs previous)

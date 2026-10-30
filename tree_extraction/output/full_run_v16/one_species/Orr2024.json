@@ -1,0 +1,338 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Vespula maculifrons"
+ },
+ "tables": {
+  "0": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.982,
+     "own": 0.018
+    }
+   }
+  },
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.992,
+     "own": 0.008
+    }
+   }
+  },
+  "2": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "trait",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.008,
+       "b": 0.992
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     },
+     {
+      "a": "definition",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "structure_clash": {
+    "structure": "summary",
+    "choice": "rows",
+    "probs": {
+     "structure": 0.006,
+     "rows": 0.994
+    }
+   },
+   "cols": {
+    "Trait": {
+     "choice": "name",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "test",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "name",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Queens (Heritability)": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.994,
+        "b": 0.006
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      }
+     ]
+    },
+    "Workers (Heritability)": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    }
+   }
+  },
+  "3": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "individual",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.991,
+       "b": 0.009
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.003,
+       "b": 0.997
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.999,
+       "b": 0.001
+      }
+     },
+     {
+      "a": "definition",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   }
+  },
+  "4": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "individual",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.995,
+       "b": 0.005
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.999,
+       "b": 0.001
+      }
+     },
+     {
+      "a": "definition",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   }
+  }
+ },
+ "endings": 0
+}

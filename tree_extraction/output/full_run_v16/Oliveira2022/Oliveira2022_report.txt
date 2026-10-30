@@ -1,0 +1,96 @@
+  [semantic] left unmatched: 'Traits P mean' vs 'Eye position ratio' (llm said different traits)
+  [semantic] left unmatched: 'ratio of inter-ocular width to mesosoma length' vs 'Eye position ratio' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Oliveira2022/Oliveira2022.xlsx  (390 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Oliveira2022/Oliveira2022.csv  (899 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Dorymyrmex thoracicus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  "Mesosoma or Weber's length" -> 'Mesosoma length'
+  'Traits P mean' -> 'Pilosity'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 268
+  missed (FN)         : 122
+  spurious, in scope  : 381   <- GT covers this trait: real errors
+  spurious, out of scope: 250   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.298 / 0.687 / 0.416   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.413 / 0.687 / 0.516   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.687   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            250
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               230    268  0.858
+  measurementMethod             0    268  0.000  <-- low
+  measurementUnit               0    194  0.000  <-- low
+  measurementStatistic        232    268  0.866
+  measurementRemarks            0      0    n/a
+  sex                           0    268  0.000  <-- low
+  lifeStage                   268    268  1.000
+  caste                        83    268  0.310  <-- low
+  sampleSizeValue               0    268  0.000  <-- low
+  sampleSizeUnit                0    268  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    268  0.000  <-- low
+  verbatimLocality              0    113  0.000  <-- low   +155 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    268  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 122 MISSED ROWS MISSED
+  species not in prediction                  70
+  species present, trait missing             40
+  species+trait present, value differs       12
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '1.711'                      ->  '2.24'                       x1
+     '2'                          ->  '2.24'                       x1
+     '1.704'                      ->  '0.181'                      x1
+     '2.258'                      ->  '1.669'                      x1
+     '2.25'                       ->  '1.669'                      x1
+     '0.25'                       ->  '0.425'                      x1
+  -> 6 substitutions explain 6 of 122 misses (5%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Dorymyrex goeldii'                 ~0.59~  pred 'Dorymyrmex thoracicus'   x70
+  -> 1 species mismatch explains 70 of 122 misses (57%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Eye position ratio'               x40
+  -> 1 missing trait explains 40 of 122 misses (33%) — scattered; no single cause
+
+  full miss detail saved -> Oliveira2022_misses.csv, Oliveira2022_misses_summary.json (122 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  antenna length ratio                             50    99   Δ+49 (split?)
+  clypeus length ratio                             50   100   Δ+50 (split?)
+  dh                                                0    50   PRED-ONLY
+  global multimeric disturbance index               0    50   PRED-ONLY
+  eye length ratio                                 50   100   Δ+50 (split?)
+  eye position ratio                               50     0   GT-ONLY
+  ratio of inter-ocular width to mesosoma length    0   100   PRED-ONLY
+  leg length ratio                                 50   100   Δ+50 (split?)
+  mandible length ratio                            50   100   Δ+50 (split?)
+  mesosoma length                                  50   100   Δ+50 (split?)
+  traits p variance                                 0    50   PRED-ONLY
+  pilosity                                         40    50   Δ+10 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.413  0.687  0.516    268   381   122   id+type+value
+             (250 more spurious row(s) set aside as out-of-scope; strict P would be 0.298)
+  tags        0.000  0.000  0.000      0   649   390   basis+id+type+value+stat+sex+stage
+             (250 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.516 vs previous)
