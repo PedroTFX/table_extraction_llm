@@ -14,16 +14,16 @@
    "Strates": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.024,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.009,
-     "range": 0.001,
+     "individual": 0.008,
+     "mean": 0.032,
+     "mean ± SD": 0.015,
+     "mean ± SE": 0.017,
+     "range": 0.003,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.957,
+     "mode": 0.922,
      "single observation": 0.0,
      "unknown": 0.0
     },
@@ -57,98 +57,138 @@
      "individual": 0.001,
      "mean": 0.002,
      "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.996,
+     "mode": 0.995,
      "single observation": 0.0,
      "unknown": 0.0
     },
     "value": "mode"
    },
    "Worker body size": {
-    "choice": "mean",
+    "choice": "mean ± SE",
     "probs": {
-     "individual": 0.026,
-     "mean": 0.946,
-     "mean ± SD": 0.012,
-     "mean ± SE": 0.005,
-     "range": 0.003,
-     "min": 0.001,
+     "individual": 0.017,
+     "mean": 0.33,
+     "mean ± SD": 0.175,
+     "mean ± SE": 0.435,
+     "range": 0.001,
+     "min": 0.0,
      "max": 0.001,
-     "median": 0.004,
+     "median": 0.041,
      "count": 0.0,
-     "mode": 0.001,
-     "single observation": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
      "unknown": 0.0
     },
+    "duels": [
+     {
+      "a": "o3",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.074,
+       "b": 0.926
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.099,
+       "b": 0.901
+      }
+     }
+    ],
     "value": "mean"
    },
    "Worker polymorphism": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.012,
+     "mean": 0.183,
+     "mean ± SD": 0.119,
+     "mean ± SE": 0.588,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.011,
+     "count": 0.002,
+     "mode": 0.01,
+     "single observation": 0.001,
+     "unknown": 0.069
+    },
+    "duels": [
+     {
+      "a": "o3",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.053,
+       "b": 0.947
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.178,
+       "b": 0.822
+      }
+     }
+    ],
+    "value": "mean"
+   },
+   "Colony size": {
     "choice": "mean",
     "probs": {
-     "individual": 0.017,
-     "mean": 0.431,
-     "mean ± SD": 0.24,
-     "mean ± SE": 0.027,
-     "range": 0.037,
-     "min": 0.005,
-     "max": 0.008,
-     "median": 0.011,
-     "count": 0.007,
-     "mode": 0.106,
-     "single observation": 0.007,
-     "unknown": 0.104
+     "individual": 0.008,
+     "mean": 0.533,
+     "mean ± SD": 0.038,
+     "mean ± SE": 0.327,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.021,
+     "count": 0.051,
+     "mode": 0.001,
+     "single observation": 0.002,
+     "unknown": 0.014
     },
     "duels": [
      {
       "a": "o1",
-      "b": "o2",
-      "choice": "a",
+      "b": "o3",
+      "choice": "b",
       "probs": {
-       "a": 0.503,
-       "b": 0.497
+       "a": 0.41,
+       "b": 0.59
       }
      }
     ],
     "value": null
    },
-   "Colony size": {
-    "choice": "mean",
-    "probs": {
-     "individual": 0.011,
-     "mean": 0.836,
-     "mean ± SD": 0.015,
-     "mean ± SE": 0.004,
-     "range": 0.005,
-     "min": 0.004,
-     "max": 0.003,
-     "median": 0.008,
-     "count": 0.038,
-     "mode": 0.019,
-     "single observation": 0.041,
-     "unknown": 0.016
-    },
-    "value": "mean"
-   },
    "Seeds": {
     "choice": "count",
     "probs": {
-     "individual": 0.026,
-     "mean": 0.257,
-     "mean ± SD": 0.011,
-     "mean ± SE": 0.005,
-     "range": 0.004,
-     "min": 0.003,
-     "max": 0.002,
+     "individual": 0.011,
+     "mean": 0.101,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.064,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
      "median": 0.003,
-     "count": 0.389,
+     "count": 0.7,
      "mode": 0.062,
-     "single observation": 0.181,
-     "unknown": 0.056
+     "single observation": 0.035,
+     "unknown": 0.008
     },
     "duels": [
      {
@@ -156,17 +196,17 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.931,
-       "b": 0.069
+       "a": 0.898,
+       "b": 0.102
       }
      },
      {
-      "a": "o10",
+      "a": "o3",
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.033,
-       "b": 0.967
+       "a": 0.013,
+       "b": 0.987
       }
      }
     ],
@@ -175,18 +215,18 @@
    "Insects": {
     "choice": "count",
     "probs": {
-     "individual": 0.018,
-     "mean": 0.162,
-     "mean ± SD": 0.006,
-     "mean ± SE": 0.003,
+     "individual": 0.007,
+     "mean": 0.094,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.029,
      "range": 0.001,
-     "min": 0.001,
+     "min": 0.0,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.466,
-     "mode": 0.284,
-     "single observation": 0.055,
-     "unknown": 0.002
+     "count": 0.543,
+     "mode": 0.29,
+     "single observation": 0.023,
+     "unknown": 0.001
     },
     "duels": [
      {
@@ -194,8 +234,8 @@
       "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.862,
-       "b": 0.138
+       "a": 0.882,
+       "b": 0.118
       }
      },
      {
@@ -203,8 +243,8 @@
       "b": "o8",
       "choice": "b",
       "probs": {
-       "a": 0.032,
-       "b": 0.968
+       "a": 0.097,
+       "b": 0.903
       }
      }
     ],
@@ -213,36 +253,27 @@
    "Liquid": {
     "choice": "mode",
     "probs": {
-     "individual": 0.022,
-     "mean": 0.282,
-     "mean ± SD": 0.017,
-     "mean ± SE": 0.006,
-     "range": 0.004,
-     "min": 0.002,
-     "max": 0.004,
-     "median": 0.003,
-     "count": 0.082,
-     "mode": 0.33,
-     "single observation": 0.228,
-     "unknown": 0.021
+     "individual": 0.007,
+     "mean": 0.132,
+     "mean ± SD": 0.015,
+     "mean ± SE": 0.064,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.114,
+     "mode": 0.484,
+     "single observation": 0.176,
+     "unknown": 0.004
     },
     "duels": [
      {
       "a": "o9",
-      "b": "o1",
+      "b": "o10",
       "choice": "a",
       "probs": {
-       "a": 0.924,
-       "b": 0.076
-      }
-     },
-     {
-      "a": "o10",
-      "b": "o9",
-      "choice": "b",
-      "probs": {
-       "a": 0.482,
-       "b": 0.518
+       "a": 0.793,
+       "b": 0.207
       }
      }
     ],
@@ -251,18 +282,18 @@
    "Colony foundation": {
     "choice": "count",
     "probs": {
-     "individual": 0.021,
-     "mean": 0.03,
-     "mean ± SD": 0.004,
-     "mean ± SE": 0.003,
-     "range": 0.003,
-     "min": 0.003,
-     "max": 0.003,
-     "median": 0.003,
-     "count": 0.463,
-     "mode": 0.396,
-     "single observation": 0.064,
-     "unknown": 0.007
+     "individual": 0.008,
+     "mean": 0.023,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.019,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.629,
+     "mode": 0.295,
+     "single observation": 0.009,
+     "unknown": 0.003
     },
     "duels": [
      {
@@ -270,36 +301,27 @@
       "b": "o9",
       "choice": "a",
       "probs": {
-       "a": 0.844,
-       "b": 0.156
-      }
-     },
-     {
-      "a": "o10",
-      "b": "o8",
-      "choice": "b",
-      "probs": {
-       "a": 0.109,
-       "b": 0.891
+       "a": 0.753,
+       "b": 0.247
       }
      }
     ],
-    "value": "count"
+    "value": null
    },
    "Number of queens": {
     "choice": "count",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.022,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.001,
-     "min": 0.002,
-     "max": 0.001,
-     "median": 0.003,
-     "count": 0.951,
-     "mode": 0.004,
-     "single observation": 0.004,
+     "individual": 0.003,
+     "mean": 0.062,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.01,
+     "range": 0.0,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.004,
+     "count": 0.911,
+     "mode": 0.001,
+     "single observation": 0.001,
      "unknown": 0.001
     },
     "value": "count"
@@ -307,16 +329,16 @@
    "Diurnality": {
     "choice": "mode",
     "probs": {
-     "individual": 0.007,
-     "mean": 0.021,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.001,
+     "individual": 0.005,
+     "mean": 0.033,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.016,
+     "range": 0.0,
      "min": 0.0,
      "max": 0.0,
-     "median": 0.0,
-     "count": 0.001,
-     "mode": 0.963,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.93,
      "single observation": 0.001,
      "unknown": 0.003
     },
@@ -325,36 +347,36 @@
    "Foraging strategy": {
     "choice": "mode",
     "probs": {
-     "individual": 0.027,
-     "mean": 0.009,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.005,
-     "mode": 0.925,
-     "single observation": 0.001,
-     "unknown": 0.023
+     "individual": 0.003,
+     "mean": 0.001,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.004,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.989,
+     "single observation": 0.0,
+     "unknown": 0.001
     },
     "value": "mode"
    },
    "Nesting site": {
     "choice": "mode",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.009,
-     "mean ± SD": 0.003,
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.001,
      "mean ± SE": 0.002,
-     "range": 0.004,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.004,
-     "count": 0.001,
-     "mode": 0.949,
-     "single observation": 0.001,
-     "unknown": 0.02
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.001
     },
     "value": "mode"
    }
@@ -557,21 +579,21 @@
    "sex": {
     "choice": "female",
     "probs": {
-     "both": 0.041,
-     "female": 0.864,
-     "male": 0.043,
-     "unknown": 0.008,
-     "not": 0.043
+     "both": 0.042,
+     "female": 0.875,
+     "male": 0.039,
+     "unknown": 0.01,
+     "not": 0.034
     },
     "value": "female"
    },
    "caste": {
     "choice": "worker",
     "probs": {
-     "queen": 0.0,
+     "queen": 0.001,
      "male alate": 0.0,
-     "worker": 0.994,
-     "minor worker": 0.002,
+     "worker": 0.993,
+     "minor worker": 0.003,
      "major worker": 0.001,
      "soldier": 0.0,
      "not": 0.002
@@ -581,15 +603,15 @@
    "basisOfRecord": {
     "choice": "MaterialCitation",
     "probs": {
-     "PreservedSpecimen": 0.005,
-     "LivingSpecimen": 0.186,
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.082,
      "HumanObservation": 0.006,
      "MachineObservation": 0.001,
      "MaterialSample": 0.001,
-     "MaterialCitation": 0.663,
+     "MaterialCitation": 0.79,
      "Occurrence": 0.0,
      "Taxon": 0.0,
-     "not": 0.137
+     "not": 0.116
     },
     "duels": [
      {
@@ -597,8 +619,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.985,
-       "b": 0.015
+       "a": 0.987,
+       "b": 0.013
       }
      },
      {
@@ -614,8 +636,8 @@
     "final": {
      "choice": "pick",
      "probs": {
-      "pick": 0.985,
-      "not": 0.015
+      "pick": 0.986,
+      "not": 0.014
      }
     },
     "value": "MaterialCitation"
@@ -623,8 +645,8 @@
    "lifeStage": {
     "choice": "adult",
     "probs": {
-     "adult": 0.944,
-     "larva": 0.003,
+     "adult": 0.946,
+     "larva": 0.002,
      "mature larva": 0.001,
      "nymph": 0.001,
      "caterpillar": 0.0,
@@ -633,7 +655,7 @@
      "instar": 0.0,
      "all": 0.0,
      "unknown": 0.008,
-     "not": 0.041
+     "not": 0.04
     },
     "value": "adult"
    }
@@ -801,6 +823,11 @@
    "compiled": 0.559
   },
   "value": null
+ },
+ "rows": {
+  "1": "",
+  "2": "",
+  "6": " Each of its 45 species takes one row."
  },
  "text_found": {
   "sex": [],
