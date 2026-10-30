@@ -37,3 +37,12 @@ Recorded per paper in full_run_v16/dup_rows/<paper>.json; applied in plan() afte
 Production and repeatable F1 against v15 on dev + held_a; held_b once with the questions frozen;
 grit-only papers as totals only (split_v15.json). Adopt when the tuning F1 rises, no tuning paper
 falls by more than noise (0.01), and held_b does not fall.
+
+## Tuning run (2026-10-30, code ca87d4c1)
+
+Fired on 7 tuning papers; species / trait / value rows changed in 3. Production F1:
+Cerini2023 0.129 -> **0.894**, Fiedler2021 0.444 -> **0.667**, Zhao2024 1.0 -> 1.0 (its repeated
+table is a figure's Source/Target network data that gives no scored rows). No paper fell.
+Mean F1: dev 0.564 -> 0.578, held_a 0.757 -> 0.765, tuning 0.630 -> **0.642**. Repeatable scorer:
+micro F1 0.660 -> 0.705, false positives 49,283 -> 30,413, true positives unchanged (99,062).
+First attempt caught before scoring: Noriega2023 t8 matched itself as a copy (plan() gives it twice).
