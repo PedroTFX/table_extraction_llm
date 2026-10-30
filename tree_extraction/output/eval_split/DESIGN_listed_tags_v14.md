@@ -203,3 +203,13 @@ basisOfRecord 87.8% in this run (88.0% before; same questions), other tags uncha
 Core rows changed vs v13: none; overwrites fixed only. Per the rule, measurementStatistic is left out of
 v14 and not tuned on held. Held coverage stays low because most of its empty values are ones the paper
 never prints (Noriega2023 alone, see above): the defaults layer, still off.
+
+## Split for the statistic work from v15 on (2026-10-30, the user's rule)
+
+output/eval_split/split_v15.json (seed 20261030): tune on **dev** (54) + **held_a** (28), test once on
+**held_b** (27). held_a = the 24 held papers already named in loss lists, quotes or logs, plus 4 drawn.
+Grit-only papers (not in the 109 split) are not looked at: no per-paper views, only totals at test time.
+First fix planned (v15): statistic sentences about the analysis (community weighted means, diversity
+indices, model results, site averages) dropped from the evidence; the user's example, Guariento2020:
+"The community weighted means of nearly all individual functional traits showed significant ecological
+patterns" was classified mean 0.85 and became the paper's value. 38 such quotes in the 109 set.
