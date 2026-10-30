@@ -123,3 +123,50 @@ mapped codes. A tag that fails is left out of v14, not tuned on held.
 measurementUnit (no list; mostly in column headers, the table side), the free-text tags
 (samplingProtocol, sampleTreatment, verbatimLocality, dates, measurementMethod), and prose-only trait
 records (Baine2024, Liu2024, RamosGonzalez2024, Ustjuzhanin2024, Xia2022, Xu2024).
+
+## Results, all papers (2026-10-29, code 9700a883; TAGS_V14.txt in each set's full_run_v14)
+
+Core rows (species, trait, value) changed vs v13: none on either set. Overwrites: all fixed, none broken
+(109: sex 23,008, caste 4,121, statistic 2).
+
+109 set, coverage / accuracy on the matched GT rows (v13 filled almost none of these):
+
+| tag | dev | held | accept rule |
+|---|---|---|---|
+| sex | 74.3% / 98.1% | 23.3% / 94.9% | passes |
+| caste | 82.5% / 97.5% | 52.4% / 100% | passes |
+| lifeStage | 94.3% / 80.2% | 32.9% / 75.5% | passes (dev just at 0.8) |
+| basisOfRecord | 98.6% / 62.2% | 99.7% / 92.5% | fails: dev accuracy < 0.8 |
+| measurementStatistic | 99.3% / 90.9% | 42.9% / 60.7% | fails: held falls 0.30 below dev |
+
+Grit (all 148): sex 33.6% / 76.1%, caste 42.3% / 92.6%, basisOfRecord 98.6% / 57.0%, lifeStage
+59.0% / 71.1%, statistic 82.3% / 67.7%. Grit-only papers are weakest (sex 30.8%, basisOfRecord 35.5%).
+
+Where the losses sit (tag_losses.py, scratch):
+- Missing values are mostly defaults the paper never prints: Noriega2023 alone is 34.6k of the 109
+  set's sex / lifeStage / statistic misses (GT unknown / adult / individual; no quote found). Caste
+  misses are "worker" on ant papers that never say it (Normandin2017, CamargoVanegas2024, Cappellari2022).
+- basisOfRecord wrong both ways on the origin question: own data called compiled (Tingting2023,
+  Griffiths2016, MiddletonWelling2018, Korosi2022, Arnan2014, Gathof2022, Brant2021) and compiled not
+  seen (Guariento2020, Graf2021, Eckert2023, Cappellari2022); Orr2024 Living vs Preserved is 11.8k rows.
+- Statistic: whole-paper answers that fit only some tables (Ji2024 individual vs mean, Guariento2020
+  mean vs mode / count, Fiedler2021).
+- Calibration: probability is not a sureness signal for basisOfRecord (≥ 0.95 right 53%) or statistic
+  (≥ 0.95 right 27%); it is for caste (90%) and lifeStage (0.8–0.95 right 81%).
+
+## basisOfRecord fix (dev only; held is not used for tuning from here on)
+
+The GT sets basisOfRecord per trait: the traits taken from the literature are MaterialCitation and the
+traits measured by the authors take the specimens' kind (Cappellari2022 foraging range vs body size,
+Eckert2023 eye size / feeding strategy vs body length, Graf2021 nesting site, social behaviour). Two questions:
+- **source** (per trait column, or per trait name of a long table, answered only when every trait agrees):
+  "Where do the values of the trait 'X' come from?" measured in this study / taken from the literature.
+  Evidence: the table, the paper's sentences naming the trait, its quotes on how the data were obtained.
+  Literature -> MaterialCitation for that trait; measured -> the caption's or the paper's specimen value
+  (never the origin's MaterialCitation; empty if there is none). Before the paper-level answer.
+- **specimen** (only when the paper's value rests on quotes nimble gave it under 0.95): the methods'
+  sentences on collecting, keeping and storing the organisms -> alive / preserved / observed (Orr2024's
+  "wet mass of each individual" gave LivingSpecimen at 0.82; its wasps were collected and stored).
+GT cases that contradict their paper (left as they are, for the user to check by eye): Korosi2022 (traits
+from a database, GT HumanObservation), Cecala2021 (traits from the literature, GT LivingSpecimen),
+CamargoVanegas2024 (Winkler samples measured under a micrometer, GT LivingSpecimen).

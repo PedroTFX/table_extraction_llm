@@ -14,6 +14,11 @@ picks the questions and applies the sure answers at the level the evidence came 
              tag, code keeps the quotes printed in the paper, nimble classifies each; differing sure
              answers are asked again together; a round with no sure answer reads the next
                                                                                        (paper level)
+  specimen   basisOfRecord resting on quotes nimble gave it under 0.95 only: the methods' sentences on
+             collecting and keeping the organisms asked again (alive / preserved / observed)
+  source     per trait (column, or trait name of a long table): measured in this study or taken from
+             the literature; the literature -> MaterialCitation for that trait, before the paper's answer
+                                                                                     (column level)
 
     python full_run_v14.py v14:tags <papers>     writes <run>/listed_tags/<paper>.json
 """
@@ -309,6 +314,71 @@ def ask_origin(ask, secs, quotes):
     return duels.sure(ch, probs, *ORIGIN), {"choice": ch, "probs": probs}
 
 
+def _sentences(secs, parts):
+    return [s for x in parts for s in re.split(r"(?<=[.!?])\s+", secs.get(x, "")) if len(s) > 20]
+
+
+SOURCE_Q = "Where do the values of the trait '{name}' in this table come from?"
+SOURCE = {"measured": "the authors measured, scored or observed it on the organisms of this study",
+          "literature": "it was taken from published literature, databases or other studies"}
+
+
+def trait_items(t, fields):
+    """The traits of a table as the source question names them: the trait columns of a wide reading,
+    the trait names a long reading prints. -> (long?, [name])."""
+    names = [c.name for c in t.columns if fields.get(c.name) == "measurementType"]
+    values = [c.name for c in t.columns if fields.get(c.name) == "measurementValue"]
+    if names and values:
+        return True, _distinct(t, names[0])
+    return False, trait_columns(t, fields)[:MAX_COLS]
+
+
+def ask_source(ask, state, items, secs, quotes):
+    """Per trait: measured in this study or taken from the literature (-> MaterialCitation). The table,
+    the paper's sentences that name the trait, and its quotes about how the data were obtained.
+    -> {name: record with value 'measured' / 'literature' / None}."""
+    pool = _sentences(secs, ("methods", "title and abstract", "supplements", "results"))
+    out = {}
+    for name in items:
+        w = [x for x in _words(name) if len(x) >= 3 and not x.isdigit()]
+        said = [s for s in pool if w and all(x in _words(s) for x in w)][:2]
+        st = state + (" The paper says about how its data were obtained: " + " ".join(f"'{q}'" for q in quotes[:MAX_QUOTES])
+                      if quotes else "")
+        if said:
+            st += f" About '{name}' it says: " + " ".join(f"'{s[:400]}'" for s in said)
+        ch, probs = ask(st, SOURCE_Q.format(name=name), dict(SOURCE))
+        out[name] = {"choice": ch, "probs": probs, "said": said, "value": ch if duels.sure(ch, probs, *SOURCE) else None}
+    return out
+
+
+SPECIMEN_Q = "In what state were the organisms when the paper's traits were measured on them?"
+SPECIMEN = {"LivingSpecimen": "alive: kept alive, reared or used in experiments on live animals during the study",
+            "PreservedSpecimen": "collected and killed, then preserved (pinned, dried, frozen, in ethanol) or kept in a collection",
+            "HumanObservation": "not collected: observed or counted in the field",
+            "not": "the text does not say"}
+SPECIMEN_WORDS = re.compile(r"collect|sampl|preserv|ethanol|alcohol|pinn|frozen|freez|dried|alive|live\b|living|"
+                            r"rear|laborator|kept|killed|stored|museum|specimen|captur|trap|observ", re.I)
+WEAK = 0.95                                          # one quote under this is asked again with the methods
+
+
+def ask_specimen(ask, secs):
+    """The methods' sentences about collecting, keeping and storing the organisms -> one value of
+    SPECIMEN (or None), and the record."""
+    said = [s for s in _sentences(secs, ("methods",)) if SPECIMEN_WORDS.search(s)][:8]
+    if not said:
+        return None, {"said": []}
+    st = "The methods of a scientific paper about insect traits say: " + " ".join(f"'{s[:400]}'" for s in said)
+    ch, probs = ask(st, SPECIMEN_Q, dict(SPECIMEN))
+    ok = duels.sure(ch, probs, *SPECIMEN) and ch != "not"
+    return (ch if ok else None), {"choice": ch, "probs": probs, "said": said}
+
+
+def _weak(tag, found, value):
+    """The settled value rests only on quotes nimble gave it under WEAK."""
+    ps = [(f.get("probs") or {}).get(value) for f in found if f.get("value") == value]
+    return bool(ps) and all(p is not None and p < WEAK for p in ps)
+
+
 def settle(ask, tag, found):
     """The sure answers of one tag so far -> (value or None, record). One value: it. Several: all
     their quotes asked together, with 'different values for different parts of the study'."""
@@ -340,8 +410,9 @@ def run(run_dir, papers):
         if f.exists() or p not in head:
             continue
         t0 = time.time()
-        res = {"cells": {}, "labels": {}, "statistic": {}, "captions": {}, "text": {}}
+        res = {"cells": {}, "labels": {}, "statistic": {}, "captions": {}, "text": {}, "source": {}}
         flat, spans = v3.md_tables(p)
+        traits = {}
         for t, fields, _o, _x in fr.plan(p, head):
             if not t.records or not trait_columns(t, fields):
                 continue
@@ -351,6 +422,7 @@ def run(run_dir, papers):
             res["labels"][k] = ask_labels(ask, t, state)
             res["statistic"][k] = ask_statistic(ask, t, fields, state)
             res["captions"][k] = ask_caption(ask, t, state)
+            traits[k] = (state, trait_items(t, fields))
         ask.unload()
         secs = sections(p)
         found = {tag: [] for tag in TAGS}
@@ -375,6 +447,17 @@ def run(run_dir, papers):
                 if value:
                     res["text"][tag] = {"value": value, "round": kind, "settle": rec}
             ask.unload()
+        b = res["text"].get("basisOfRecord") or {}
+        if b.get("value") in SPECIMEN and (b.get("settle") or {}).get("by") == "one value" \
+                and _weak("basisOfRecord", found["basisOfRecord"], b["value"]):
+            got, rec = ask_specimen(ask, secs)       # one weak quote: the methods asked again
+            res["specimen"] = dict(rec, value=got, was=b["value"])
+            if got:
+                res["text"]["basisOfRecord"] = dict(b, value=got, settle={"by": "specimen"})
+        quotes = [f["quote"] for f in found["basisOfRecord"]]
+        for k, (state, (long_, items)) in traits.items():
+            res["source"][k] = {"long": long_, "traits": ask_source(ask, state, items, secs, quotes)}
+        ask.unload()
         res["text_found"] = found
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"  [tags] {p:22s} " + "; ".join(f"{tag} {res['text'][tag]['value']}" for tag in res["text"])
@@ -417,12 +500,25 @@ def apply(dec, t, fields, xtags, defaults=None):
     cap = (dec.get("captions") or {}).get(k) or {}
     text = dec.get("text") or {}
     compiled = ((text.get("basisOfRecord") or {}).get("settle") or {}).get("by") == "origin"
+    src = (dec.get("source") or {}).get(k) or {}
+    per = {n: a.get("value") for n, a in (src.get("traits") or {}).items()}
+    if src.get("long"):                              # one answer for all value columns, only when every trait agrees
+        vals = set(per.values())
+        per = {c: vals.pop() for c in trait_columns(t, out)} if len(vals) == 1 and None not in vals else {}
+    measured = (cap.get("basisOfRecord") or {}).get("value") or \
+        (None if compiled else (text.get("basisOfRecord") or {}).get("value"))
+    own = {"literature": "MaterialCitation",         # the trait's own source before the paper's answer;
+           "measured": measured if measured != "MaterialCitation" else ""}   # measured here: the specimens' kind
     for col in trait_columns(t, out):
         tags = x.setdefault(col, {})
         if "measurementStatistic" not in have and (stat.get(col) or {}).get("value"):
             tags["measurementStatistic"] = stat[col]["value"]
         for tag in ("sex", "caste", "basisOfRecord", "lifeStage", "measurementStatistic"):
             if tag in have or tags.get(tag):
+                continue
+            if tag == "basisOfRecord" and per.get(col):
+                if own[per[col]]:
+                    tags[tag] = own[per[col]]
                 continue
             if tag == "basisOfRecord" and compiled:      # compiled data: the paper-level answer wins
                 tags[tag] = "MaterialCitation"
