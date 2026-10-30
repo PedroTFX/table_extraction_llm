@@ -39,6 +39,9 @@ import species_tree as sp
 
 SURE = duels.SURE
 TAGS = ["sex", "caste", "basisOfRecord", "lifeStage", "measurementStatistic"]
+# the tags apply() fills: those that passed the accept rule on held (2026-10-30). measurementStatistic
+# is still asked and recorded, but left as v13 had it (held 63.2% vs dev 93.6%; design note)
+ADOPTED = ["sex", "caste", "basisOfRecord", "lifeStage"]
 NAME = {"sex": "sex", "caste": "caste", "basisOfRecord": "kind of record", "lifeStage": "life stage",
         "measurementStatistic": "statistic"}
 # the template's lists (Excel dropdowns of the GT spreadsheets), each with what it means
@@ -494,6 +497,8 @@ def apply(dec, t, fields, xtags, defaults=None):
     out, x = dict(fields), {c: dict(v) for c, v in xtags.items()}
     have = set()
     for col, d in ((dec.get("cells") or {}).get(k) or {}).items():
+        if d["tag"] not in ADOPTED:                  # left as printed (v13)
+            continue
         answers = {v: a.get("value") for v, a in d["values"].items()}
         if answers and all(a == "not" for a in answers.values()):
             out[col] = "none"                        # not this tag at all (Luo2023's group numbers)
@@ -528,9 +533,9 @@ def apply(dec, t, fields, xtags, defaults=None):
            "measured": measured if measured != "MaterialCitation" else ""}   # measured here: the specimens' kind
     for col in trait_columns(t, out):
         tags = x.setdefault(col, {})
-        if "measurementStatistic" not in have and (stat.get(col) or {}).get("value"):
+        if "measurementStatistic" in ADOPTED and "measurementStatistic" not in have and (stat.get(col) or {}).get("value"):
             tags["measurementStatistic"] = stat[col]["value"]
-        for tag in ("sex", "caste", "basisOfRecord", "lifeStage", "measurementStatistic"):
+        for tag in ADOPTED:
             if tag in have or tags.get(tag):
                 continue
             if tag == "basisOfRecord" and per.get(col):
