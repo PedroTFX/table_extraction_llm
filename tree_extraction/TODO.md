@@ -551,6 +551,9 @@
 - measurementStatistic applied: paper text read for it alone with sentences about the analysis left out
   (CWM, diversity indices, models), each trait column asked with the sentences naming its trait.
   Accuracy: dev 94.3%, held_a 82.3%, tuning 90.5%; held_b test 82.3% (coverage 100%): passes.
+- 109 set supplements synced from the grit copies (2026-10-30): Tonelli2021 (S1.pdf, S2.xlsx) 0 -> 0.154,
+  Wijas2021 (S1.csv) 0 -> 0.442; 109 mean F1 0.582 -> 0.586. Next F1 step: output/eval_split/DESIGN_code_tables.md
+  (key tables for coded columns: Guareschi2015, Viza2023). basisOfRecord paused (asking the data person).
 - Not yet run on grit (first: basisOfRecord, held_b 47.7%, grit-only 44.9%). grit_run.py and
   rerun_paper.py are not in src/v15 yet.
 
