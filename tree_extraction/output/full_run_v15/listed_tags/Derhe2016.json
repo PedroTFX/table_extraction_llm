@@ -25,7 +25,8 @@
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "range"
+    "value": "range",
+    "said": []
    },
    "MDS axis 2 (range)": {
     "choice": "range",
@@ -43,35 +44,104 @@
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "range"
+    "value": "range",
+    "said": []
    }
   },
   "1": {
    "Body mass (mg)": {
     "choice": "mean",
     "probs": {
-     "individual": 0.101,
-     "mean": 0.869,
-     "mean ± SD": 0.004,
+     "individual": 0.297,
+     "mean": 0.662,
+     "mean ± SD": 0.003,
      "mean ± SE": 0.002,
      "range": 0.001,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
      "count": 0.001,
-     "mode": 0.008,
-     "single observation": 0.012,
-     "unknown": 0.0
+     "mode": 0.005,
+     "single observation": 0.028,
+     "unknown": 0.001
     },
-    "value": "mean"
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.04,
+       "b": 0.96
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.116,
+       "b": 0.884
+      }
+     }
+    ],
+    "value": "individual",
+    "said": [
+     "## DUNG BEETLE FUNCTIONAL TRAITS Five main functional traits that could directly influence the measured functions were examined: behavioural guild (tunnelers or rollers), diel activity (nocturnal or diurnal), body mass, diet preference (dung, mushroom or both) and diet breadth (number of bait types a species is attracted to).",
+     "*Behavioural guild, diel activity and body mass* Information on species’ behavioural guilds and diel activity was obtained from the literature (Matthews 1972, 1974, 1976, Storey and Weir 1989, Storey and Monteith 2000) and from observations conducted by the authors (MD, GM and RM)."
+    ]
    },
    "Behavioural guild": {
     "choice": "mode",
     "probs": {
      "individual": 0.001,
-     "mean": 0.003,
+     "mean": 0.001,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.998,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "## DUNG BEETLE FUNCTIONAL TRAITS Five main functional traits that could directly influence the measured functions were examined: behavioural guild (tunnelers or rollers), diel activity (nocturnal or diurnal), body mass, diet preference (dung, mushroom or both) and diet breadth (number of bait types a species is attracted to).",
+     "This was necessary for eight species for diet preference and breadth, and for ten species for diel activity and behavioural guild."
+    ]
+   },
+   "Diel activity": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.009,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.984,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "## DUNG BEETLE FUNCTIONAL TRAITS Five main functional traits that could directly influence the measured functions were examined: behavioural guild (tunnelers or rollers), diel activity (nocturnal or diurnal), body mass, diet preference (dung, mushroom or both) and diet breadth (number of bait types a species is attracted to).",
+     "This was necessary for eight species for diet preference and breadth, and for ten species for diel activity and behavioural guild."
+    ]
+   },
+   "Diet preference": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
@@ -81,99 +151,54 @@
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "mode"
-   },
-   "Diel activity": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.003,
-     "mean": 0.012,
-     "mean ± SD": 0.001,
-     "mean ± SE": 0.001,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.001,
-     "mode": 0.981,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
-   },
-   "Diet preference": {
-    "choice": "mode",
-    "probs": {
-     "individual": 0.001,
-     "mean": 0.007,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.001,
-     "range": 0.0,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.001,
-     "mode": 0.989,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "mode"
+    "value": "mode",
+    "said": [
+     "## DUNG BEETLE FUNCTIONAL TRAITS Five main functional traits that could directly influence the measured functions were examined: behavioural guild (tunnelers or rollers), diel activity (nocturnal or diurnal), body mass, diet preference (dung, mushroom or both) and diet breadth (number of bait types a species is attracted to).",
+     "This was necessary for eight species for diet preference and breadth, and for ten species for diel activity and behavioural guild."
+    ]
    },
    "Diet breadth": {
     "choice": "mode",
     "probs": {
-     "individual": 0.01,
-     "mean": 0.213,
+     "individual": 0.018,
+     "mean": 0.086,
      "mean ± SD": 0.004,
-     "mean ± SE": 0.002,
-     "range": 0.009,
+     "mean ± SE": 0.003,
+     "range": 0.008,
      "min": 0.001,
      "max": 0.002,
-     "median": 0.002,
-     "count": 0.014,
-     "mode": 0.74,
-     "single observation": 0.002,
+     "median": 0.001,
+     "count": 0.046,
+     "mode": 0.825,
+     "single observation": 0.004,
      "unknown": 0.001
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o1",
-      "choice": "a",
-      "probs": {
-       "a": 0.957,
-       "b": 0.043
-      }
-     },
-     {
-      "a": "o8",
-      "b": "o9",
-      "choice": "a",
-      "probs": {
-       "a": 0.833,
-       "b": 0.167
-      }
-     }
-    ],
-    "value": "count"
+    "value": "mode",
+    "said": [
+     "## DUNG BEETLE FUNCTIONAL TRAITS Five main functional traits that could directly influence the measured functions were examined: behavioural guild (tunnelers or rollers), diel activity (nocturnal or diurnal), body mass, diet preference (dung, mushroom or both) and diet breadth (number of bait types a species is attracted to).",
+     "This was necessary for eight species for diet preference and breadth, and for ten species for diel activity and behavioural guild."
+    ]
    },
    "Habitat preference": {
     "choice": "mode",
     "probs": {
      "individual": 0.002,
-     "mean": 0.009,
+     "mean": 0.011,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
-     "range": 0.004,
+     "range": 0.002,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.983,
+     "mode": 0.982,
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "mode"
+    "value": "mode",
+    "said": [
+     "**Table S1** Abundance of each species and their assigned functional trait values, including the habitat category within which the majority of individuals were recorded (‘habitat preference’): P= pasture; YR= young restoration; MR= mid-age restoration; OR= old restoration; RF = rainforest."
+    ]
    }
   }
  },
@@ -629,5 +654,6 @@
    }
   ]
  },
- "v15": "statistic read again; sentences about the analysis left out"
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
 }

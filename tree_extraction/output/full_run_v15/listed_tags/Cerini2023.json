@@ -19,34 +19,38 @@
     "choice": "mode",
     "probs": {
      "individual": 0.003,
-     "mean": 0.013,
+     "mean": 0.011,
      "mean ± SD": 0.002,
      "mean ± SE": 0.002,
      "range": 0.001,
-     "min": 0.0,
+     "min": 0.001,
      "max": 0.0,
-     "median": 0.0,
+     "median": 0.001,
      "count": 0.001,
-     "mode": 0.977,
-     "single observation": 0.0,
-     "unknown": 0.0
+     "mode": 0.976,
+     "single observation": 0.001,
+     "unknown": 0.001
     },
-    "value": "mode"
+    "value": "mode",
+    "said": [
+     "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+     "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+    ]
    },
    "-1.0": {
     "choice": "mean",
     "probs": {
-     "individual": 0.043,
-     "mean": 0.348,
-     "mean ± SD": 0.092,
-     "mean ± SE": 0.057,
-     "range": 0.023,
-     "min": 0.052,
-     "max": 0.031,
-     "median": 0.023,
-     "count": 0.056,
-     "mode": 0.107,
-     "single observation": 0.162,
+     "individual": 0.041,
+     "mean": 0.422,
+     "mean ± SD": 0.073,
+     "mean ± SE": 0.049,
+     "range": 0.029,
+     "min": 0.063,
+     "max": 0.036,
+     "median": 0.019,
+     "count": 0.037,
+     "mode": 0.102,
+     "single observation": 0.12,
      "unknown": 0.008
     },
     "duels": [
@@ -55,8 +59,8 @@
       "b": "o10",
       "choice": "b",
       "probs": {
-       "a": 0.054,
-       "b": 0.946
+       "a": 0.057,
+       "b": 0.943
       }
      },
      {
@@ -64,46 +68,48 @@
       "b": "o10",
       "choice": "b",
       "probs": {
-       "a": 0.075,
-       "b": 0.925
+       "a": 0.104,
+       "b": 0.896
       }
      }
     ],
-    "value": "single observation"
+    "value": "single observation",
+    "said": []
    },
    "0.0": {
     "choice": "mean",
     "probs": {
-     "individual": 0.009,
-     "mean": 0.8,
-     "mean ± SD": 0.047,
-     "mean ± SE": 0.024,
-     "range": 0.003,
+     "individual": 0.005,
+     "mean": 0.858,
+     "mean ± SD": 0.022,
+     "mean ± SE": 0.009,
+     "range": 0.002,
      "min": 0.001,
-     "max": 0.002,
-     "median": 0.078,
-     "count": 0.003,
-     "mode": 0.01,
-     "single observation": 0.018,
-     "unknown": 0.005
+     "max": 0.001,
+     "median": 0.077,
+     "count": 0.001,
+     "mode": 0.005,
+     "single observation": 0.015,
+     "unknown": 0.003
     },
-    "value": "mean"
+    "value": "mean",
+    "said": []
    },
    "1.0": {
     "choice": "mean",
     "probs": {
-     "individual": 0.024,
-     "mean": 0.599,
-     "mean ± SD": 0.067,
-     "mean ± SE": 0.032,
-     "range": 0.009,
-     "min": 0.004,
-     "max": 0.053,
-     "median": 0.019,
-     "count": 0.018,
-     "mode": 0.031,
-     "single observation": 0.138,
-     "unknown": 0.006
+     "individual": 0.021,
+     "mean": 0.61,
+     "mean ± SD": 0.055,
+     "mean ± SE": 0.027,
+     "range": 0.008,
+     "min": 0.006,
+     "max": 0.048,
+     "median": 0.017,
+     "count": 0.023,
+     "mode": 0.032,
+     "single observation": 0.145,
+     "unknown": 0.009
     },
     "duels": [
      {
@@ -111,8 +117,8 @@
       "b": "o10",
       "choice": "b",
       "probs": {
-       "a": 0.029,
-       "b": 0.971
+       "a": 0.033,
+       "b": 0.967
       }
      },
      {
@@ -120,12 +126,13 @@
       "b": "o10",
       "choice": "b",
       "probs": {
-       "a": 0.059,
-       "b": 0.941
+       "a": 0.055,
+       "b": 0.945
       }
      }
     ],
-    "value": "single observation"
+    "value": "single observation",
+    "said": []
    }
   },
   "1": {
@@ -145,29 +152,13 @@
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "range"
+    "value": "range",
+    "said": [
+     "The final dataset includes 4995 species occurrence records for 131 species across 917 sites and 86 years (1663 combinations of sites and years).",
+     "We excluded all sites hosting only 1 species (i.e., not hosting an Odonata multispecies community), ![Image block](doc:ae11e86/tier:advanced/page:3/block:8) flowchart ```mermaid graph TD A[\"Functional Traits\"] --> B[\"Machine Learning\"] C[\"Biotic Interactions\"] --> D[\"Residual Co-occurrence\"] E[\"Occurrences\"] --> F[\"Co-occurrences\"] G[\"Environmental Factors\"] --> H[\"Joint Species Distribution Models\"] I[\"Data\"] --> J[\"Statistical tool\"] K[\"Influences\"] --> L[\"Predicts\"] ``` F I G U R E 2 Diagram showing the logic behind our analytical framework."
+    ]
    },
    "Functional distance (range)": {
-    "choice": "range",
-    "probs": {
-     "individual": 0.0,
-     "mean": 0.0,
-     "mean ± SD": 0.0,
-     "mean ± SE": 0.0,
-     "range": 0.999,
-     "min": 0.0,
-     "max": 0.0,
-     "median": 0.0,
-     "count": 0.0,
-     "mode": 0.0,
-     "single observation": 0.0,
-     "unknown": 0.0
-    },
-    "value": "range"
-   }
-  },
-  "3": {
-   "Observed Co-occurrence (range)": {
     "choice": "range",
     "probs": {
      "individual": 0.0,
@@ -183,53 +174,72 @@
      "single observation": 0.0,
      "unknown": 0.0
     },
-    "value": "range"
+    "value": "range",
+    "said": [
+     "For each species pair, we assessed trait dissimilarity as the Mahalanobis distance (De Maesschalck et al., 2000) between their functional traits (using one-hot encoding of categorical variables with more levels), and we regressed such distances against the corresponding pairwise residual co-occurrence values derived from the HMSC analysis."
+    ]
+   }
+  },
+  "3": {
+   "Observed Co-occurrence (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": [
+     "We quantified the overall goodness of fit as the squared Pearson correlation coefficient between all the observed and the predicted co-occurrence values across the 100 simulations."
+    ]
    }
   },
   "4": {
    "Species": {
     "choice": "mode",
     "probs": {
-     "individual": 0.19,
-     "mean": 0.02,
-     "mean ± SD": 0.004,
+     "individual": 0.097,
+     "mean": 0.011,
+     "mean ± SD": 0.003,
      "mean ± SE": 0.002,
-     "range": 0.005,
+     "range": 0.003,
      "min": 0.001,
      "max": 0.002,
      "median": 0.001,
      "count": 0.004,
-     "mode": 0.72,
-     "single observation": 0.042,
-     "unknown": 0.007
+     "mode": 0.853,
+     "single observation": 0.016,
+     "unknown": 0.006
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o0",
-      "choice": "a",
-      "probs": {
-       "a": 0.537,
-       "b": 0.463
-      }
-     }
-    ],
-    "value": null
+    "value": "mode",
+    "said": [
+     "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+     "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+    ]
    },
    "Flight_season_start": {
     "choice": "single observation",
     "probs": {
-     "individual": 0.083,
-     "mean": 0.179,
+     "individual": 0.102,
+     "mean": 0.152,
      "mean ± SD": 0.002,
      "mean ± SE": 0.004,
-     "range": 0.081,
-     "min": 0.192,
+     "range": 0.092,
+     "min": 0.235,
      "max": 0.004,
      "median": 0.003,
      "count": 0.002,
-     "mode": 0.063,
-     "single observation": 0.387,
+     "mode": 0.053,
+     "single observation": 0.349,
      "unknown": 0.002
     },
     "duels": [
@@ -238,71 +248,75 @@
       "b": "o5",
       "choice": "a",
       "probs": {
-       "a": 0.688,
-       "b": 0.312
+       "a": 0.675,
+       "b": 0.325
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "Flight_season_end": {
     "choice": "max",
     "probs": {
-     "individual": 0.011,
-     "mean": 0.046,
+     "individual": 0.009,
+     "mean": 0.054,
      "mean ± SD": 0.002,
      "mean ± SE": 0.002,
      "range": 0.005,
      "min": 0.002,
-     "max": 0.895,
+     "max": 0.881,
      "median": 0.001,
      "count": 0.001,
-     "mode": 0.002,
-     "single observation": 0.033,
+     "mode": 0.003,
+     "single observation": 0.038,
      "unknown": 0.001
     },
-    "value": "max"
+    "value": "max",
+    "said": []
    },
    "body_colors": {
     "choice": "mode",
     "probs": {
-     "individual": 0.029,
-     "mean": 0.034,
+     "individual": 0.039,
+     "mean": 0.058,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.001,
-     "mode": 0.916,
-     "single observation": 0.013,
-     "unknown": 0.002
+     "count": 0.002,
+     "mode": 0.877,
+     "single observation": 0.016,
+     "unknown": 0.003
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "body_colortypes": {
     "choice": "mode",
     "probs": {
-     "individual": 0.003,
-     "mean": 0.022,
+     "individual": 0.004,
+     "mean": 0.024,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
      "min": 0.001,
      "max": 0.0,
-     "median": 0.0,
+     "median": 0.001,
      "count": 0.002,
-     "mode": 0.96,
-     "single observation": 0.002,
-     "unknown": 0.007
+     "mode": 0.936,
+     "single observation": 0.003,
+     "unknown": 0.025
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "body_patterns": {
     "choice": "mode",
     "probs": {
-     "individual": 0.007,
+     "individual": 0.009,
      "mean": 0.013,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
@@ -315,67 +329,71 @@
      "single observation": 0.004,
      "unknown": 0.002
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "mate_guarding": {
     "choice": "mode",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.005,
+     "individual": 0.004,
+     "mean": 0.004,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
-     "range": 0.002,
-     "min": 0.001,
-     "max": 0.001,
-     "median": 0.001,
-     "count": 0.003,
-     "mode": 0.966,
-     "single observation": 0.004,
-     "unknown": 0.012
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.976,
+     "single observation": 0.002,
+     "unknown": 0.009
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "flight_mode": {
     "choice": "mode",
     "probs": {
-     "individual": 0.003,
-     "mean": 0.009,
+     "individual": 0.002,
+     "mean": 0.005,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
-     "min": 0.001,
+     "min": 0.0,
      "max": 0.0,
-     "median": 0.001,
-     "count": 0.002,
-     "mode": 0.966,
-     "single observation": 0.007,
-     "unknown": 0.009
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.982,
+     "single observation": 0.004,
+     "unknown": 0.003
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "territoriality": {
     "choice": "mode",
     "probs": {
-     "individual": 0.002,
-     "mean": 0.005,
+     "individual": 0.001,
+     "mean": 0.004,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
-     "count": 0.001,
-     "mode": 0.99,
+     "count": 0.0,
+     "mode": 0.991,
      "single observation": 0.0,
-     "unknown": 0.001
+     "unknown": 0.002
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "aquatic_habitats": {
     "choice": "mode",
     "probs": {
      "individual": 0.003,
-     "mean": 0.004,
+     "mean": 0.003,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.002,
@@ -383,55 +401,57 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.986,
-     "single observation": 0.001,
+     "mode": 0.987,
+     "single observation": 0.002,
      "unknown": 0.002
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "habitat_openness": {
     "choice": "mode",
     "probs": {
      "individual": 0.014,
-     "mean": 0.011,
-     "mean ± SD": 0.001,
+     "mean": 0.014,
+     "mean ± SD": 0.002,
      "mean ± SE": 0.002,
-     "range": 0.005,
+     "range": 0.006,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
      "count": 0.004,
-     "mode": 0.736,
-     "single observation": 0.005,
-     "unknown": 0.218
+     "mode": 0.739,
+     "single observation": 0.006,
+     "unknown": 0.21
     },
     "duels": [
      {
       "a": "o9",
       "b": "o11",
-      "choice": "b",
+      "choice": "a",
       "probs": {
-       "a": 0.446,
-       "b": 0.554
+       "a": 0.529,
+       "b": 0.471
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "body_lengths": {
     "choice": "mean",
     "probs": {
-     "individual": 0.148,
-     "mean": 0.715,
-     "mean ± SD": 0.021,
-     "mean ± SE": 0.006,
+     "individual": 0.162,
+     "mean": 0.698,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.005,
      "range": 0.003,
-     "min": 0.002,
-     "max": 0.003,
-     "median": 0.022,
+     "min": 0.003,
+     "max": 0.004,
+     "median": 0.024,
      "count": 0.001,
-     "mode": 0.01,
-     "single observation": 0.065,
+     "mode": 0.009,
+     "single observation": 0.073,
      "unknown": 0.005
     },
     "duels": [
@@ -440,8 +460,8 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.053,
-       "b": 0.947
+       "a": 0.057,
+       "b": 0.943
       }
      },
      {
@@ -454,23 +474,24 @@
       }
      }
     ],
-    "value": "individual"
+    "value": "individual",
+    "said": []
    },
    "hindwing_lengths": {
     "choice": "mean",
     "probs": {
-     "individual": 0.166,
+     "individual": 0.153,
      "mean": 0.622,
-     "mean ± SD": 0.017,
+     "mean ± SD": 0.018,
      "mean ± SE": 0.005,
      "range": 0.006,
-     "min": 0.008,
-     "max": 0.009,
-     "median": 0.043,
-     "count": 0.002,
+     "min": 0.009,
+     "max": 0.011,
+     "median": 0.033,
+     "count": 0.003,
      "mode": 0.018,
-     "single observation": 0.095,
-     "unknown": 0.009
+     "single observation": 0.111,
+     "unknown": 0.013
     },
     "duels": [
      {
@@ -478,8 +499,8 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.06,
-       "b": 0.94
+       "a": 0.055,
+       "b": 0.945
       }
      },
      {
@@ -487,46 +508,48 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.076,
-       "b": 0.924
+       "a": 0.064,
+       "b": 0.936
       }
      }
     ],
-    "value": "individual"
+    "value": "individual",
+    "said": []
    },
    "has_wing_pigment": {
     "choice": "mode",
     "probs": {
      "individual": 0.034,
-     "mean": 0.01,
+     "mean": 0.008,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.002,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.01,
-     "mode": 0.876,
-     "single observation": 0.016,
-     "unknown": 0.047
+     "count": 0.007,
+     "mode": 0.87,
+     "single observation": 0.014,
+     "unknown": 0.062
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "wing_pigment_extent_discrete": {
     "choice": "mode",
     "probs": {
-     "individual": 0.034,
-     "mean": 0.07,
-     "mean ± SD": 0.002,
+     "individual": 0.029,
+     "mean": 0.069,
+     "mean ± SD": 0.003,
      "mean ± SE": 0.003,
-     "range": 0.007,
+     "range": 0.005,
      "min": 0.003,
      "max": 0.003,
-     "median": 0.004,
-     "count": 0.014,
-     "mode": 0.695,
-     "single observation": 0.146,
-     "unknown": 0.019
+     "median": 0.009,
+     "count": 0.015,
+     "mode": 0.728,
+     "single observation": 0.116,
+     "unknown": 0.016
     },
     "duels": [
      {
@@ -534,8 +557,8 @@
       "b": "o10",
       "choice": "a",
       "probs": {
-       "a": 0.877,
-       "b": 0.123
+       "a": 0.884,
+       "b": 0.116
       }
      },
      {
@@ -543,28 +566,29 @@
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.116,
-       "b": 0.884
+       "a": 0.102,
+       "b": 0.898
       }
      }
     ],
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "wing_pigment_extent_continuous": {
     "choice": "single observation",
     "probs": {
-     "individual": 0.105,
+     "individual": 0.075,
      "mean": 0.18,
-     "mean ± SD": 0.004,
+     "mean ± SD": 0.002,
      "mean ± SE": 0.004,
-     "range": 0.006,
-     "min": 0.008,
+     "range": 0.005,
+     "min": 0.005,
      "max": 0.003,
      "median": 0.005,
-     "count": 0.008,
-     "mode": 0.124,
-     "single observation": 0.502,
-     "unknown": 0.052
+     "count": 0.006,
+     "mode": 0.094,
+     "single observation": 0.593,
+     "unknown": 0.029
     },
     "duels": [
      {
@@ -572,8 +596,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.967,
-       "b": 0.033
+       "a": 0.965,
+       "b": 0.035
       }
      },
      {
@@ -581,18 +605,19 @@
       "b": "o10",
       "choice": "b",
       "probs": {
-       "a": 0.477,
-       "b": 0.523
+       "a": 0.494,
+       "b": 0.506
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "wing_pigment_symmetry": {
     "choice": "mode",
     "probs": {
-     "individual": 0.024,
-     "mean": 0.029,
+     "individual": 0.027,
+     "mean": 0.031,
      "mean ± SD": 0.002,
      "mean ± SE": 0.001,
      "range": 0.002,
@@ -600,26 +625,27 @@
      "max": 0.001,
      "median": 0.001,
      "count": 0.004,
-     "mode": 0.803,
-     "single observation": 0.013,
-     "unknown": 0.12
+     "mode": 0.814,
+     "single observation": 0.015,
+     "unknown": 0.102
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "wing_pigment_color": {
     "choice": "mode",
     "probs": {
-     "individual": 0.065,
-     "mean": 0.046,
-     "mean ± SD": 0.002,
+     "individual": 0.081,
+     "mean": 0.063,
+     "mean ± SD": 0.003,
      "mean ± SE": 0.002,
-     "range": 0.007,
+     "range": 0.009,
      "min": 0.002,
      "max": 0.001,
-     "median": 0.001,
-     "count": 0.005,
-     "mode": 0.782,
-     "single observation": 0.039,
+     "median": 0.002,
+     "count": 0.006,
+     "mode": 0.732,
+     "single observation": 0.05,
      "unknown": 0.048
     },
     "duels": [
@@ -628,37 +654,38 @@
       "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.893,
-       "b": 0.107
+       "a": 0.921,
+       "b": 0.079
       }
      },
      {
-      "a": "o11",
+      "a": "o1",
       "b": "o9",
-      "choice": "a",
+      "choice": "b",
       "probs": {
-       "a": 0.575,
-       "b": 0.425
+       "a": 0.059,
+       "b": 0.941
       }
      }
     ],
-    "value": null
+    "value": "mode",
+    "said": []
    },
    "wing_pigment_placement": {
     "choice": "mode",
     "probs": {
-     "individual": 0.015,
-     "mean": 0.019,
+     "individual": 0.018,
+     "mean": 0.02,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
-     "range": 0.003,
+     "range": 0.005,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.005,
-     "mode": 0.754,
-     "single observation": 0.032,
-     "unknown": 0.168
+     "count": 0.004,
+     "mode": 0.784,
+     "single observation": 0.033,
+     "unknown": 0.131
     },
     "duels": [
      {
@@ -666,96 +693,82 @@
       "b": "o11",
       "choice": "a",
       "probs": {
-       "a": 0.644,
-       "b": 0.356
+       "a": 0.689,
+       "b": 0.311
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    }
   },
   "5": {
    "Species": {
     "choice": "mode",
     "probs": {
-     "individual": 0.19,
-     "mean": 0.015,
-     "mean ± SD": 0.003,
-     "mean ± SE": 0.002,
-     "range": 0.003,
+     "individual": 0.089,
+     "mean": 0.006,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
      "min": 0.001,
-     "max": 0.001,
-     "median": 0.0,
-     "count": 0.002,
-     "mode": 0.765,
-     "single observation": 0.015,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.003,
+     "mode": 0.886,
+     "single observation": 0.005,
      "unknown": 0.003
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o0",
-      "choice": "b",
-      "probs": {
-       "a": 0.484,
-       "b": 0.516
-      }
-     }
-    ],
-    "value": null
+    "value": "mode",
+    "said": [
+     "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+     "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+    ]
    },
    "Flight_season_start": {
     "choice": "single observation",
     "probs": {
-     "individual": 0.147,
-     "mean": 0.191,
-     "mean ± SD": 0.011,
-     "mean ± SE": 0.007,
-     "range": 0.034,
-     "min": 0.191,
-     "max": 0.006,
-     "median": 0.01,
-     "count": 0.004,
-     "mode": 0.037,
-     "single observation": 0.36,
+     "individual": 0.131,
+     "mean": 0.169,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.006,
+     "range": 0.025,
+     "min": 0.195,
+     "max": 0.005,
+     "median": 0.009,
+     "count": 0.005,
+     "mode": 0.038,
+     "single observation": 0.409,
      "unknown": 0.002
     },
     "duels": [
      {
       "a": "o10",
-      "b": "o1",
+      "b": "o5",
       "choice": "a",
       "probs": {
-       "a": 0.953,
-       "b": 0.047
-      }
-     },
-     {
-      "a": "o5",
-      "b": "o10",
-      "choice": "b",
-      "probs": {
-       "a": 0.313,
-       "b": 0.687
+       "a": 0.648,
+       "b": 0.352
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "Flight_season_end": {
     "choice": "max",
     "probs": {
-     "individual": 0.047,
-     "mean": 0.206,
+     "individual": 0.056,
+     "mean": 0.195,
      "mean ± SD": 0.003,
-     "mean ± SE": 0.004,
-     "range": 0.046,
-     "min": 0.006,
-     "max": 0.457,
-     "median": 0.002,
+     "mean ± SE": 0.005,
+     "range": 0.054,
+     "min": 0.01,
+     "max": 0.435,
+     "median": 0.001,
      "count": 0.002,
-     "mode": 0.006,
-     "single observation": 0.22,
+     "mode": 0.011,
+     "single observation": 0.224,
      "unknown": 0.002
     },
     "duels": [
@@ -764,18 +777,19 @@
       "b": "o10",
       "choice": "b",
       "probs": {
-       "a": 0.455,
-       "b": 0.545
+       "a": 0.461,
+       "b": 0.539
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "body_colors": {
     "choice": "mode",
     "probs": {
-     "individual": 0.083,
-     "mean": 0.063,
+     "individual": 0.086,
+     "mean": 0.065,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
@@ -783,17 +797,18 @@
      "max": 0.001,
      "median": 0.001,
      "count": 0.002,
-     "mode": 0.812,
-     "single observation": 0.026,
-     "unknown": 0.008
+     "mode": 0.804,
+     "single observation": 0.03,
+     "unknown": 0.007
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "body_colortypes": {
     "choice": "mode",
     "probs": {
-     "individual": 0.005,
-     "mean": 0.022,
+     "individual": 0.004,
+     "mean": 0.028,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
@@ -801,16 +816,17 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.955,
-     "single observation": 0.001,
-     "unknown": 0.012
+     "mode": 0.947,
+     "single observation": 0.002,
+     "unknown": 0.013
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "body_patterns": {
     "choice": "mode",
     "probs": {
-     "individual": 0.034,
+     "individual": 0.023,
      "mean": 0.028,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
@@ -819,17 +835,18 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.002,
-     "mode": 0.917,
-     "single observation": 0.011,
-     "unknown": 0.003
+     "mode": 0.931,
+     "single observation": 0.007,
+     "unknown": 0.004
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "mate_guarding": {
     "choice": "mode",
     "probs": {
-     "individual": 0.006,
-     "mean": 0.006,
+     "individual": 0.007,
+     "mean": 0.008,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
@@ -837,17 +854,18 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.974,
+     "mode": 0.97,
      "single observation": 0.001,
-     "unknown": 0.009
+     "unknown": 0.01
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "flight_mode": {
     "choice": "mode",
     "probs": {
-     "individual": 0.004,
-     "mean": 0.01,
+     "individual": 0.003,
+     "mean": 0.009,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.001,
@@ -855,17 +873,18 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.002,
-     "mode": 0.972,
-     "single observation": 0.003,
-     "unknown": 0.006
+     "mode": 0.973,
+     "single observation": 0.004,
+     "unknown": 0.005
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "territoriality": {
     "choice": "mode",
     "probs": {
      "individual": 0.002,
-     "mean": 0.004,
+     "mean": 0.005,
      "mean ± SD": 0.0,
      "mean ± SE": 0.0,
      "range": 0.0,
@@ -873,62 +892,65 @@
      "max": 0.0,
      "median": 0.0,
      "count": 0.0,
-     "mode": 0.991,
+     "mode": 0.989,
      "single observation": 0.0,
-     "unknown": 0.001
+     "unknown": 0.002
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "aquatic_habitats": {
     "choice": "mode",
     "probs": {
-     "individual": 0.007,
-     "mean": 0.008,
-     "mean ± SD": 0.001,
+     "individual": 0.005,
+     "mean": 0.007,
+     "mean ± SD": 0.0,
      "mean ± SE": 0.001,
-     "range": 0.002,
+     "range": 0.001,
      "min": 0.0,
      "max": 0.0,
      "median": 0.0,
      "count": 0.001,
-     "mode": 0.972,
+     "mode": 0.977,
      "single observation": 0.002,
-     "unknown": 0.006
+     "unknown": 0.005
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "habitat_openness": {
     "choice": "mode",
     "probs": {
      "individual": 0.012,
-     "mean": 0.013,
+     "mean": 0.014,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
      "range": 0.003,
      "min": 0.001,
-     "max": 0.0,
-     "median": 0.0,
+     "max": 0.001,
+     "median": 0.001,
      "count": 0.002,
      "mode": 0.934,
      "single observation": 0.002,
      "unknown": 0.028
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "body_lengths": {
     "choice": "mean",
     "probs": {
-     "individual": 0.338,
-     "mean": 0.522,
-     "mean ± SD": 0.013,
+     "individual": 0.243,
+     "mean": 0.604,
+     "mean ± SD": 0.012,
      "mean ± SE": 0.004,
-     "range": 0.005,
-     "min": 0.007,
-     "max": 0.005,
-     "median": 0.02,
+     "range": 0.004,
+     "min": 0.008,
+     "max": 0.006,
+     "median": 0.028,
      "count": 0.001,
-     "mode": 0.005,
-     "single observation": 0.073,
+     "mode": 0.006,
+     "single observation": 0.079,
      "unknown": 0.005
     },
     "duels": [
@@ -937,8 +959,8 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.041,
-       "b": 0.959
+       "a": 0.039,
+       "b": 0.961
       }
      },
      {
@@ -946,28 +968,29 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.04,
-       "b": 0.96
+       "a": 0.045,
+       "b": 0.955
       }
      }
     ],
-    "value": "individual"
+    "value": "individual",
+    "said": []
    },
    "hindwing_lengths": {
     "choice": "mean",
     "probs": {
-     "individual": 0.3,
-     "mean": 0.523,
-     "mean ± SD": 0.01,
-     "mean ± SE": 0.005,
-     "range": 0.005,
+     "individual": 0.337,
+     "mean": 0.466,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.006,
+     "range": 0.008,
      "min": 0.012,
-     "max": 0.008,
-     "median": 0.015,
+     "max": 0.013,
+     "median": 0.018,
      "count": 0.003,
-     "mode": 0.023,
-     "single observation": 0.082,
-     "unknown": 0.014
+     "mode": 0.026,
+     "single observation": 0.085,
+     "unknown": 0.013
     },
     "duels": [
      {
@@ -984,17 +1007,18 @@
       "b": "o0",
       "choice": "b",
       "probs": {
-       "a": 0.069,
-       "b": 0.931
+       "a": 0.064,
+       "b": 0.936
       }
      }
     ],
-    "value": "individual"
+    "value": "individual",
+    "said": []
    },
    "has_wing_pigment": {
     "choice": "mode",
     "probs": {
-     "individual": 0.059,
+     "individual": 0.048,
      "mean": 0.011,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
@@ -1002,28 +1026,29 @@
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.007,
-     "mode": 0.84,
-     "single observation": 0.011,
-     "unknown": 0.068
+     "count": 0.005,
+     "mode": 0.857,
+     "single observation": 0.006,
+     "unknown": 0.069
     },
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "wing_pigment_extent_discrete": {
     "choice": "mode",
     "probs": {
-     "individual": 0.052,
-     "mean": 0.089,
+     "individual": 0.044,
+     "mean": 0.094,
      "mean ± SD": 0.003,
      "mean ± SE": 0.003,
      "range": 0.011,
      "min": 0.008,
      "max": 0.006,
-     "median": 0.01,
-     "count": 0.014,
-     "mode": 0.636,
-     "single observation": 0.131,
-     "unknown": 0.037
+     "median": 0.014,
+     "count": 0.012,
+     "mode": 0.61,
+     "single observation": 0.167,
+     "unknown": 0.028
     },
     "duels": [
      {
@@ -1031,8 +1056,8 @@
       "b": "o10",
       "choice": "a",
       "probs": {
-       "a": 0.817,
-       "b": 0.183
+       "a": 0.841,
+       "b": 0.159
       }
      },
      {
@@ -1040,28 +1065,29 @@
       "b": "o9",
       "choice": "b",
       "probs": {
-       "a": 0.131,
-       "b": 0.869
+       "a": 0.105,
+       "b": 0.895
       }
      }
     ],
-    "value": "mode"
+    "value": "mode",
+    "said": []
    },
    "wing_pigment_extent_continuous": {
     "choice": "single observation",
     "probs": {
-     "individual": 0.124,
-     "mean": 0.196,
-     "mean ± SD": 0.005,
-     "mean ± SE": 0.005,
+     "individual": 0.118,
+     "mean": 0.19,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
      "range": 0.009,
-     "min": 0.014,
-     "max": 0.005,
-     "median": 0.011,
-     "count": 0.008,
-     "mode": 0.112,
-     "single observation": 0.449,
-     "unknown": 0.062
+     "min": 0.013,
+     "max": 0.004,
+     "median": 0.006,
+     "count": 0.006,
+     "mode": 0.088,
+     "single observation": 0.52,
+     "unknown": 0.039
     },
     "duels": [
      {
@@ -1069,8 +1095,8 @@
       "b": "o1",
       "choice": "a",
       "probs": {
-       "a": 0.955,
-       "b": 0.045
+       "a": 0.956,
+       "b": 0.044
       }
      },
      {
@@ -1078,17 +1104,18 @@
       "b": "o10",
       "choice": "a",
       "probs": {
-       "a": 0.793,
-       "b": 0.207
+       "a": 0.763,
+       "b": 0.237
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "wing_pigment_symmetry": {
     "choice": "mode",
     "probs": {
-     "individual": 0.055,
+     "individual": 0.06,
      "mean": 0.027,
      "mean ± SD": 0.002,
      "mean ± SE": 0.001,
@@ -1097,9 +1124,9 @@
      "max": 0.001,
      "median": 0.001,
      "count": 0.004,
-     "mode": 0.73,
-     "single observation": 0.029,
-     "unknown": 0.146
+     "mode": 0.69,
+     "single observation": 0.037,
+     "unknown": 0.174
     },
     "duels": [
      {
@@ -1107,28 +1134,29 @@
       "b": "o11",
       "choice": "b",
       "probs": {
-       "a": 0.421,
-       "b": 0.579
+       "a": 0.278,
+       "b": 0.722
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "wing_pigment_color": {
     "choice": "mode",
     "probs": {
-     "individual": 0.145,
-     "mean": 0.052,
+     "individual": 0.14,
+     "mean": 0.065,
      "mean ± SD": 0.002,
      "mean ± SE": 0.002,
      "range": 0.007,
      "min": 0.003,
      "max": 0.001,
      "median": 0.001,
-     "count": 0.006,
-     "mode": 0.634,
-     "single observation": 0.072,
-     "unknown": 0.074
+     "count": 0.005,
+     "mode": 0.627,
+     "single observation": 0.067,
+     "unknown": 0.079
     },
     "duels": [
      {
@@ -1136,41 +1164,41 @@
       "b": "o0",
       "choice": "a",
       "probs": {
-       "a": 0.796,
-       "b": 0.204
+       "a": 0.835,
+       "b": 0.165
+      }
+     },
+     {
+      "a": "o11",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.564,
+       "b": 0.436
       }
      }
     ],
-    "value": null
+    "value": null,
+    "said": []
    },
    "wing_pigment_placement": {
     "choice": "mode",
     "probs": {
-     "individual": 0.044,
-     "mean": 0.017,
+     "individual": 0.024,
+     "mean": 0.021,
      "mean ± SD": 0.001,
      "mean ± SE": 0.001,
-     "range": 0.002,
+     "range": 0.003,
      "min": 0.001,
      "max": 0.001,
      "median": 0.001,
      "count": 0.003,
-     "mode": 0.797,
-     "single observation": 0.031,
-     "unknown": 0.102
+     "mode": 0.809,
+     "single observation": 0.032,
+     "unknown": 0.103
     },
-    "duels": [
-     {
-      "a": "o9",
-      "b": "o11",
-      "choice": "b",
-      "probs": {
-       "a": 0.377,
-       "b": 0.623
-      }
-     }
-    ],
-    "value": null
+    "value": "mode",
+    "said": []
    }
   }
  },
@@ -1946,5 +1974,6 @@
    }
   ]
  },
- "v15": "statistic read again; sentences about the analysis left out"
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
 }
