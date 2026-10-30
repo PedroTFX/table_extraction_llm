@@ -1,0 +1,632 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "3": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "3": {}
+ },
+ "statistic": {
+  "0": {
+   "Functional group": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode"
+   }
+  },
+  "1": {
+   "Number of species (Median)": {
+    "choice": "median",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.999,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "median"
+   }
+  },
+  "3": {
+   "Occupancy probability": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.902,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.029,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.05,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.362,
+     "female": 0.001,
+     "male": 0.001,
+     "unknown": 0.009,
+     "not": 0.627
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.96,
+       "b": 0.04
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.008,
+       "b": 0.992
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.354,
+      "not": 0.646
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.005,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.994
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.949,
+     "LivingSpecimen": 0.007,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.015,
+     "Taxon": 0.0,
+     "not": 0.022
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.949,
+     "larva": 0.003,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.001,
+     "not": 0.043
+    },
+    "value": "adult"
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.097,
+     "female": 0.001,
+     "male": 0.002,
+     "unknown": 0.002,
+     "not": 0.898
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.002,
+     "worker": 0.01,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.986
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.522,
+     "LivingSpecimen": 0.036,
+     "HumanObservation": 0.191,
+     "MachineObservation": 0.011,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.009,
+     "Occurrence": 0.025,
+     "Taxon": 0.0,
+     "not": 0.205
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.809,
+       "b": 0.191
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.048,
+       "b": 0.952
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.379,
+      "not": 0.621
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.757,
+     "larva": 0.009,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.009,
+     "unknown": 0.007,
+     "not": 0.215
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.943,
+       "b": 0.057
+      }
+     },
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.034,
+       "b": 0.966
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.478,
+      "not": 0.522
+     }
+    },
+    "value": null
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.192,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.002,
+     "not": 0.803
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.009,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.989
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.015,
+     "LivingSpecimen": 0.011,
+     "HumanObservation": 0.144,
+     "MachineObservation": 0.01,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.027,
+     "Occurrence": 0.761,
+     "Taxon": 0.0,
+     "not": 0.032
+    },
+    "duels": [
+     {
+      "a": "o6",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.782,
+       "b": 0.218
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.92,
+     "larva": 0.013,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.005,
+     "unknown": 0.004,
+     "not": 0.054
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "sex": {
+   "value": "male",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "MaterialCitation",
+   "round": "abstract and methods",
+   "settle": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.007,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.695,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "mixed": 0.29
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.974,
+       "b": 0.026
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.101,
+       "b": 0.899
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.906,
+      "mixed": 0.094
+     }
+    },
+    "by": "clash",
+    "values": [
+     "PreservedSpecimen",
+     "MaterialCitation"
+    ]
+   }
+  },
+  "lifeStage": {
+   "value": "larva",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mode",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "Functional group": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.743,
+      "literature": 0.257
+     },
+     "said": [
+      "## Functional group occupancy We investigated occupancy patterns of three of the four syrphid fly functional groups defined above (insectivores, terrestrial saprophagous, and aquatic saprophagous).",
+      "The phytophagous functional group was excluded due to very sparse data."
+     ],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Number of species (Median)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Occupancy probability": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.771,
+      "literature": 0.229
+     },
+     "said": [
+      "A few design modifications enable accounting for imperfect detection probability when estimating state variables such as species richness or occupancy from field studies (Kéry and Royle 2016; Mazerolle et al.",
+      "Detection histories form the raw data to estimate the occupancy and detection probability of a given species or group with the classic occupancy model (MacKenzie et al."
+     ],
+     "value": null
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "compiled",
+  "probs": {
+   "own": 0.402,
+   "compiled": 0.598
+  },
+  "value": null
+ },
+ "rows": {
+  "0": " Each of its 49 species takes one row.",
+  "1": "",
+  "3": ""
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "male",
+    "probs": {
+     "both": 0.003,
+     "female": 0.001,
+     "male": 0.991,
+     "unknown": 0.001,
+     "not": 0.005
+    },
+    "quote": "some male specimens of the genus Sphaerophoria could be identified to the species level",
+    "value": "male"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.933,
+     "LivingSpecimen": 0.007,
+     "HumanObservation": 0.019,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.029,
+     "Taxon": 0.0,
+     "not": 0.011
+    },
+    "quote": "We used pan traps in community gardens, cemeteries, and parks in Montreal, Canada, to investigate syrphid fly communities in an urban landscape and describe how site surface area and heat island cover shape these communities.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.998,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "We captured 1,791 specimens from 48 species.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.0,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.999,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "We extracted the data on the cover of urban heat islands from spatial databases (Boulfroy et al. 2013; Institut national de santé publique du Québec (INSPQ) 2013) and that of site surface area from Normandin et al. (2017).",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.009,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.847,
+     "Occurrence": 0.01,
+     "Taxon": 0.0,
+     "not": 0.122
+    },
+    "quote": "We calculated the proportion of heat island cover in each buffer zone using a public raster mapping of predicted urban heat islands and cool areas for the Montreal metropolitan area (Boulfroy et al. 2013; Institut national de santé publique du Québec (INSPQ) 2013).",
+    "value": "MaterialCitation"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "larva",
+    "probs": {
+     "adult": 0.002,
+     "larva": 0.963,
+     "mature larva": 0.028,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.004
+    },
+    "quote": "Species or genera were characterised according to the larval functional groups.",
+    "value": "larva"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.033,
+     "mean": 0.096,
+     "mean ± SD": 0.077,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.186,
+     "single observation": 0.0,
+     "unknown": 0.002,
+     "not": 0.51,
+     "analysis": 0.088
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.455,
+       "b": 0.545
+      }
+     }
+    ],
+    "quote": "Larval functional traits were determined according to the habitat and nutritional needs of every syrphid species.",
+    "value": null
+   },
+   {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.003,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.976,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001,
+     "analysis": 0.014
+    },
+    "quote": "Namely, we categorized species in four functional groups: zoophagous larvae (insectivores), terrestrial saprophagous or coprophagous larvae (terrestrial saprophagous), aquatic or semiaqua",
+    "value": "mode"
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out"
+}

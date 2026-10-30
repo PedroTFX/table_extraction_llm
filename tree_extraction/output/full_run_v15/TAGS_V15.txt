@@ -1,0 +1,33 @@
+listed tags of full_run_v15 vs full_run_v14 on the GT rows matched on species + trait + value
+core rows (species, trait, value) changed vs full_run_v14: none
+
+== all
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        26470   14410   13995     415   12060       0  54.4%  97.1%    100% (10078) /   92% (4332)   0 (0 / 0)
+  caste                      12076   12658   10776     272    1028    1610  91.5%  97.5%     98% (11048) /    0% (0)   0 (0 / 0)
+  basisOfRecord              26470   26307   22121    4186     163       0  99.4%  84.1%     85% (25204) /   81% (914)   0 (0 / 0)
+  lifeStage                  26022   21283   16108    5017    4897     158  81.2%  76.3%     59% (5002) /  100% (13091)   0 (0 / 0)
+  measurementStatistic       26470   23253   22031    1222    3217       0  87.8%  94.7%     95% (14298) /    0% (0)   0 (0 / 0)
+
+== dev
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        19071   13279   12912     367    5792       0  69.6%  97.2%    100% (9831) /   89% (3448)   0 (0 / 0)
+  caste                      10048   11251    9610     272     166    1369  98.3%  97.2%     97% (9882) /    0% (0)   0 (0 / 0)
+  basisOfRecord              19071   18908   16063    2845     163       0  99.1%  85.0%     85% (17969) /   86% (828)   0 (0 / 0)
+  lifeStage                  18623   18442   13802    4482     339     158  98.2%  75.5%     43% (3320) /  100% (12275)   0 (0 / 0)
+  measurementStatistic       19071   19023   18439     584      48       0  99.7%  96.9%     96% (12544) /    0% (0)   0 (0 / 0)
+
+== held_a
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                         7399    1131    1083      48    6268       0  15.3%  95.8%     81% (247) /  100% (884)   0 (0 / 0)
+  caste                       2028    1407    1166       0     862     241  57.5% 100.0%    100% (1166) /    0% (0)   0 (0 / 0)
+  basisOfRecord               7399    7399    6058    1341       0       0 100.0%  81.9%     83% (7235) /   35% (86)   0 (0 / 0)
+  lifeStage                   7399    2841    2306     535    4558       0  38.4%  81.2%     91% (1682) /   96% (816)   0 (0 / 0)
+  measurementStatistic        7399    4230    3592     638    3169       0  57.2%  84.9%     89% (1754) /    0% (0)   0 (0 / 0)
+
+the step's answers (captions and quotes) vs the paper's GT value, by the model's probability:
+  sex                    0.8–0.95: 9/13 right; via duels: 0/2 right; ≥ 0.95: 13/23 right
+  caste                  0.8–0.95: 2/4 right; via duels: 6/9 right; ≥ 0.95: 24/30 right
+  basisOfRecord          0.8–0.95: 70/112 right; via duels: 25/54 right; ≥ 0.95: 31/84 right
+  lifeStage              0.8–0.95: 63/80 right; via duels: 0/3 right; ≥ 0.95: 55/69 right
+  measurementStatistic   0.8–0.95: 6/16 right; via duels: 3/12 right; ≥ 0.95: 19/44 right

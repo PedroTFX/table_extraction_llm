@@ -1,0 +1,1325 @@
+{
+ "cells": {
+  "0": {},
+  "3": {
+   "Sex": {
+    "tag": "sex",
+    "values": {
+     "~0.01": {
+      "choice": "both",
+      "probs": {
+       "both": 0.897,
+       "female": 0.001,
+       "male": 0.004,
+       "unknown": 0.0,
+       "not": 0.098
+      },
+      "value": "both"
+     },
+     "~0.07": {
+      "choice": "not",
+      "probs": {
+       "both": 0.005,
+       "female": 0.005,
+       "male": 0.007,
+       "unknown": 0.001,
+       "not": 0.983
+      },
+      "value": "not"
+     },
+     "~0.09": {
+      "choice": "not",
+      "probs": {
+       "both": 0.006,
+       "female": 0.003,
+       "male": 0.006,
+       "unknown": 0.001,
+       "not": 0.985
+      },
+      "value": "not"
+     },
+     "~0.03": {
+      "choice": "both",
+      "probs": {
+       "both": 0.916,
+       "female": 0.002,
+       "male": 0.008,
+       "unknown": 0.001,
+       "not": 0.072
+      },
+      "value": "both"
+     },
+     "~0.13": {
+      "choice": "not",
+      "probs": {
+       "both": 0.007,
+       "female": 0.009,
+       "male": 0.011,
+       "unknown": 0.001,
+       "not": 0.972
+      },
+      "value": "not"
+     },
+     "~0.11": {
+      "choice": "not",
+      "probs": {
+       "both": 0.004,
+       "female": 0.003,
+       "male": 0.005,
+       "unknown": 0.001,
+       "not": 0.988
+      },
+      "value": "not"
+     },
+     "~0.45": {
+      "choice": "not",
+      "probs": {
+       "both": 0.009,
+       "female": 0.01,
+       "male": 0.011,
+       "unknown": 0.001,
+       "not": 0.969
+      },
+      "value": "not"
+     },
+     "~0.73": {
+      "choice": "not",
+      "probs": {
+       "both": 0.01,
+       "female": 0.039,
+       "male": 0.07,
+       "unknown": 0.003,
+       "not": 0.878
+      },
+      "value": "not"
+     },
+     "~0.34": {
+      "choice": "not",
+      "probs": {
+       "both": 0.137,
+       "female": 0.001,
+       "male": 0.003,
+       "unknown": 0.002,
+       "not": 0.858
+      },
+      "value": "not"
+     },
+     "~0.78": {
+      "choice": "not",
+      "probs": {
+       "both": 0.007,
+       "female": 0.02,
+       "male": 0.024,
+       "unknown": 0.002,
+       "not": 0.947
+      },
+      "value": "not"
+     },
+     "~0.21": {
+      "choice": "not",
+      "probs": {
+       "both": 0.021,
+       "female": 0.007,
+       "male": 0.008,
+       "unknown": 0.002,
+       "not": 0.962
+      },
+      "value": "not"
+     }
+    }
+   }
+  },
+  "5": {
+   "sex": {
+    "tag": "sex",
+    "values": {
+     "1": {
+      "choice": "male",
+      "probs": {
+       "both": 0.002,
+       "female": 0.103,
+       "male": 0.891,
+       "unknown": 0.001,
+       "not": 0.004
+      },
+      "value": "male"
+     },
+     "0": {
+      "choice": "female",
+      "probs": {
+       "both": 0.002,
+       "female": 0.988,
+       "male": 0.009,
+       "unknown": 0.0,
+       "not": 0.001
+      },
+      "value": "female"
+     }
+    }
+   }
+  }
+ },
+ "labels": {
+  "0": {},
+  "3": {},
+  "5": {}
+ },
+ "statistic": {
+  "0": {
+   "Ecological functions": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.921,
+     "mean ± SD": 0.027,
+     "mean ± SE": 0.008,
+     "range": 0.003,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.029,
+     "single observation": 0.001,
+     "unknown": 0.004
+    },
+    "value": "mean"
+   },
+   "Effect (E)/ response (R) trait": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.959,
+     "mean ± SD": 0.031,
+     "mean ± SE": 0.004,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   }
+  },
+  "3": {
+   "Trait": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.042,
+     "mean": 0.759,
+     "mean ± SD": 0.019,
+     "mean ± SE": 0.007,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.166,
+     "single observation": 0.003,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.705,
+       "b": 0.295
+      }
+     }
+    ],
+    "value": null
+   },
+   "Elevation": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.904,
+     "mean ± SD": 0.049,
+     "mean ± SE": 0.03,
+     "range": 0.004,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.006,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mean"
+   }
+  },
+  "5": {
+   "bodysize": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.7,
+     "mean": 0.262,
+     "mean ± SD": 0.025,
+     "mean ± SE": 0.007,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.004,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.798,
+       "b": 0.202
+      }
+     }
+    ],
+    "value": null
+   },
+   "headlenth": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.919,
+     "mean": 0.034,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.038,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "headwidth": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.905,
+     "mean": 0.06,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.025,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "thoraxlenth": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.953,
+     "mean": 0.025,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.012,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "thoraxwidth": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.896,
+     "mean": 0.065,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.028,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "elytralenth": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.919,
+     "mean": 0.043,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.028,
+     "unknown": 0.001
+    },
+    "value": "individual"
+   },
+   "bodywidth": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.268,
+     "mean": 0.682,
+     "mean ± SD": 0.031,
+     "mean ± SE": 0.007,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.008,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.382,
+       "b": 0.618
+      }
+     }
+    ],
+    "value": null
+   },
+   "femur": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.753,
+     "mean": 0.172,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.008,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.052,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.711,
+       "b": 0.289
+      }
+     }
+    ],
+    "value": null
+   },
+   "tibia": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.713,
+     "mean": 0.24,
+     "mean ± SD": 0.015,
+     "mean ± SE": 0.005,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.025,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.728,
+       "b": 0.272
+      }
+     }
+    ],
+    "value": null
+   },
+   "antenna": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.174,
+     "mean": 0.779,
+     "mean ± SD": 0.031,
+     "mean ± SE": 0.013,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.569,
+       "b": 0.431
+      }
+     }
+    ],
+    "value": null
+   },
+   "hindwing": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.356,
+     "mean": 0.542,
+     "mean ± SD": 0.041,
+     "mean ± SE": 0.011,
+     "range": 0.003,
+     "min": 0.002,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.006,
+     "single observation": 0.03,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.184,
+       "b": 0.816
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.091,
+       "b": 0.909
+      }
+     }
+    ],
+    "value": "individual"
+   },
+   "leglenth": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.144,
+     "mean": 0.792,
+     "mean ± SD": 0.045,
+     "mean ± SE": 0.013,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.003,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.48,
+       "b": 0.52
+      }
+     }
+    ],
+    "value": null
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.436,
+     "female": 0.007,
+     "male": 0.011,
+     "unknown": 0.003,
+     "not": 0.543
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.936,
+       "b": 0.064
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.039,
+       "b": 0.961
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.387,
+      "not": 0.613
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.004,
+     "male alate": 0.001,
+     "worker": 0.008,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.986
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.089,
+     "LivingSpecimen": 0.715,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.013,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.175
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.745,
+       "b": 0.255
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.656,
+     "larva": 0.008,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.002,
+     "unknown": 0.012,
+     "not": 0.316
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.857,
+       "b": 0.143
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.037,
+       "b": 0.963
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.216,
+      "not": 0.784
+     }
+    },
+    "value": null
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.93,
+     "female": 0.002,
+     "male": 0.019,
+     "unknown": 0.005,
+     "not": 0.044
+    },
+    "value": "both"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.002,
+     "male alate": 0.011,
+     "worker": 0.004,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.982
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.594,
+     "LivingSpecimen": 0.038,
+     "HumanObservation": 0.008,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.352
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.768,
+       "b": 0.232
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.25,
+     "larva": 0.002,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.047,
+     "not": 0.698
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.574,
+       "b": 0.426
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "5": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.837,
+     "female": 0.023,
+     "male": 0.124,
+     "unknown": 0.002,
+     "not": 0.013
+    },
+    "value": "both"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.009,
+     "worker": 0.026,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.959
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.869,
+     "LivingSpecimen": 0.013,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.005,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.106
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.931,
+     "larva": 0.003,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.003,
+     "not": 0.059
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "sex": {
+   "value": "both",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "0": {
+   "long": true,
+   "traits": {
+    "Body length": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.988,
+      "literature": 0.012
+     },
+     "said": [
+      "Except for body length, the other traits were calculated as a ratio to body length due to potential isometric scaling effects.",
+      "Of the 12 traits measured, we found that intraspecific variation ranged from 34% (body length) to 100% (ratio of elytra length, head length and head width to body length) and accounted for a larger proportion of variation than interspecific variation in 7 traits."
+     ],
+     "value": "measured"
+    },
+    "Body width": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.987,
+      "literature": 0.013
+     },
+     "said": [
+      "Of the 12 traits measured, we found that intraspecific variation ranged from 34% (body length) to 100% (ratio of elytra length, head length and head width to body length) and accounted for a larger proportion of variation than interspecific variation in 7 traits.",
+      "in body width and thorax width of two beetle species supported the CWM-optimality hypothesis; however, patterns of trait variation in body width and thorax length of another species showed an opposite trend."
+     ],
+     "value": "measured"
+    },
+    "Antenna length": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.992,
+      "literature": 0.008
+     },
+     "said": [
+      "Antenna and thorax length were also largely contributed by ITV, but within-sex variation was greater than between-sex variation, while species and elevation were less important (Type III).",
+      "Of the traits examined, elevation alone contributed little to variation and was only found in five traits: body length, body width, tibia, antenna and hindwing, while plots of the same elevation did not contribute to any of the traits examined (Figure 3)."
+     ],
+     "value": "measured"
+    },
+    "Head (width and length)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.991,
+      "literature": 0.009
+     },
+     "said": [
+      "Of the 12 traits measured, we found that intraspecific variation ranged from 34% (body length) to 100% (ratio of elytra length, head length and head width to body length) and accounted for a larger proportion of variation than interspecific variation in 7 traits.",
+      "## Trait variation at different scales The PC1 axis of the trait space (Figure S2) was mainly associated to head width, leg length and thorax length."
+     ],
+     "value": "measured"
+    },
+    "Thorax (width and length)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.984,
+      "literature": 0.016
+     },
+     "said": [
+      "in body width and thorax width of two beetle species supported the CWM-optimality hypothesis; however, patterns of trait variation in body width and thorax length of another species showed an opposite trend.",
+      "## Trait variation at different scales The PC1 axis of the trait space (Figure S2) was mainly associated to head width, leg length and thorax length."
+     ],
+     "value": "measured"
+    },
+    "Elytra length": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.995,
+      "literature": 0.005
+     },
+     "said": [
+      "Of the 12 traits measured, we found that intraspecific variation ranged from 34% (body length) to 100% (ratio of elytra length, head length and head width to body length) and accounted for a larger proportion of variation than interspecific variation in 7 traits.",
+      "Variation in elytra length, head length and head width was almost entirely contributed by ITV, and traits differed more between sexes than within sex (Type IV)."
+     ],
+     "value": "measured"
+    },
+    "Hindwing (maximal length)": {
+     "said": [],
+     "value": null
+    },
+    "Leg (femur length, tibia length and total length)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Trait": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.993,
+      "literature": 0.007
+     },
+     "said": [
+      "## Collection of species and trait data Beetle samples were collected at 10 elevations: 800, 950, 1100 , 1250, 1400, 1550, 1700, 1850, 2150 and 2600 m a.s.l.",
+      "A maximum of five males and five females of each Silphidae species collected from each plot were randomly selected for morphological trait measurements."
+     ],
+     "value": "measured"
+    },
+    "Elevation": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.63,
+      "literature": 0.37
+     },
+     "said": [
+      "Vegetation is characterised by a distinctive elevation zonation from mixed coniferous and broadleaved forests below 1100 m, mixed coniferous forests between 1100 and 1500 m, subalpine mixed coniferous forests between 1500 and 1800 m, birch forests between 1800 and 2100 m and alpine tundra with dwarf trees and shrubs above 2100 m (Figure S1) (Bai et al., 2011; Zhang et al., 2016).",
+      "At each elevation, seven plots were selected between 100 and 200 m apart to reduce spatial autocorrelation between communities (Gao et al., 2018)."
+     ],
+     "value": null
+    }
+   }
+  },
+  "5": {
+   "long": false,
+   "traits": {
+    "bodysize": {
+     "said": [],
+     "value": null
+    },
+    "headlenth": {
+     "said": [],
+     "value": null
+    },
+    "headwidth": {
+     "said": [],
+     "value": null
+    },
+    "thoraxlenth": {
+     "said": [],
+     "value": null
+    },
+    "thoraxwidth": {
+     "said": [],
+     "value": null
+    },
+    "elytralenth": {
+     "said": [],
+     "value": null
+    },
+    "bodywidth": {
+     "said": [],
+     "value": null
+    },
+    "femur": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.877,
+      "literature": 0.123
+     },
+     "said": [
+      "Intraspecific variation in femur and tibia length contributed about 50%, with some species variation (Type II).",
+      "tenuipes, femur of N."
+     ],
+     "value": "measured"
+    },
+    "tibia": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.971,
+      "literature": 0.029
+     },
+     "said": [
+      "Soil temperature influenced tibia length after controlling for the effects of species identity, but soil water content had no effect on trait variation.",
+      "Intraspecific variation in femur and tibia length contributed about 50%, with some species variation (Type II)."
+     ],
+     "value": "measured"
+    },
+    "antenna": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.948,
+      "literature": 0.052
+     },
+     "said": [
+      "Antenna and thorax length were also largely contributed by ITV, but within-sex variation was greater than between-sex variation, while species and elevation were less important (Type III).",
+      "Of the traits examined, elevation alone contributed little to variation and was only found in five traits: body length, body width, tibia, antenna and hindwing, while plots of the same elevation did not contribute to any of the traits examined (Figure 3)."
+     ],
+     "value": "measured"
+    },
+    "hindwing": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.129,
+      "literature": 0.871
+     },
+     "said": [
+      "maculifrons had the highest scores, with body length and hindwing being longer than that of the other three species.",
+      "By contrast, for body length, hindwing, leg length, body width and thorax width, interspecific variation contributed more than ITV (Type I)."
+     ],
+     "value": "literature"
+    },
+    "leglenth": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.997,
+   "compiled": 0.003
+  },
+  "value": "own"
+ },
+ "rows": {
+  "0": "",
+  "3": "",
+  "5": " Its 432 rows hold 8 species, so a species takes several rows."
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.993,
+     "female": 0.0,
+     "male": 0.005,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "A maximum of five males and five females of each Silphidae species collected from each plot were randomly selected for morphological trait measurements.",
+    "value": "both"
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "both": 0.089,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.001,
+     "not": 0.907
+    },
+    "quote": "Variance of each trait and trait PCs was partitioned into five nested hierarchical scales including (1) elevation, (2) plot, (3) species, (4) sex and (5) inter-individual.",
+    "value": null
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "both": 0.193,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.002,
+     "not": 0.802
+    },
+    "quote": "To determine which of the nested ecological scales contributed most to the variation in traits with different functions, linear mixed effects models were applied using the packages ‘nlme’ and ‘ape’, with elevation, plot, species and sex as nested random factors as 1jElevation/Plot/Species/Sex (Messier et al., 2010) using the function lme.",
+    "value": null
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.946,
+     "LivingSpecimen": 0.008,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.005,
+     "Taxon": 0.0,
+     "not": 0.034
+    },
+    "quote": "We investigated patterns of intraspecific trait variation in four coexisting carrion beetle species (Coleoptera: Silphidae) across elevational gradients.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.993,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "Beetle samples were collected at 10 elevations: 800, 950, 1100 , 1250, 1400, 1550, 1700, 1850, 2150 and 2600 m a.s.l. (Figure 1b) in July 2020, as adult activity in the mountains typically begins in late June, persists throughout July, and declines by late August (Smith et al., 2000).",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.658,
+     "LivingSpecimen": 0.011,
+     "HumanObservation": 0.17,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.118,
+     "Taxon": 0.0,
+     "not": 0.039
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.737,
+       "b": 0.263
+      }
+     }
+    ],
+    "quote": "At each elevation, seven plots were selected between 100 and 200 m apart to reduce spatial autocorrelation between communities",
+    "value": null
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.992,
+     "LivingSpecimen": 0.004,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "Individuals of Silphidae were collected using carrion-baited pitfall traps (Baz et al., 2007) constructed from 450 mL plastic cups (9 cm high, 7.5 cm diameter).",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.998,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "Beetle samples were collected at 10 elevations: 800, 950, 1100 , 1250, 1400, 1550, 1700, 1850, 2150 and 2600 m a.s.l. (Figure 1b) in July 2020, as adult activity in the mountains typically begins in late June, persists throughout July, and declines by late August (Smith et al., 2000).",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.02,
+     "mean": 0.055,
+     "mean ± SD": 0.02,
+     "mean ± SE": 0.002,
+     "range": 0.012,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.244,
+     "analysis": 0.643
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.751,
+       "b": 0.249
+      }
+     }
+    ],
+    "quote": "Of the 12 traits measured, we found that intraspecific variation ranged from 34% (body length) to 100% (ratio of elytra length, head length and head width to body length) and accounted for a larger proportion of variation than interspecific variation in 7 traits.",
+    "value": null
+   },
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.037,
+     "mean ± SD": 0.019,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.138,
+     "analysis": 0.793
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.575,
+       "b": 0.425
+      }
+     }
+    ],
+    "quote": "in body width and thorax width of two beetle species supported the CWM-optimality hypothesis; however, patterns of trait variation in body width and thorax length of another species showed an opposite trend.",
+    "value": null
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.033,
+     "mean": 0.113,
+     "mean ± SD": 0.374,
+     "mean ± SE": 0.01,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.415,
+     "analysis": 0.051
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.614,
+       "b": 0.386
+      }
+     }
+    ],
+    "quote": "A maximum of five males and five females of each Silphidae species collected from each plot were randomly selected for morphological trait measurements.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.989,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001,
+     "analysis": 0.005
+    },
+    "quote": "Species trait means were also calculated for each elevation.",
+    "value": "mean"
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out"
+}

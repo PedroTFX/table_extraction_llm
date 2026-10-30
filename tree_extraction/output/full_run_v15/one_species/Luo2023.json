@@ -1,0 +1,220 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Pheidole nodus"
+ },
+ "tables": {
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.939,
+     "own": 0.061
+    }
+   }
+  },
+  "2": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.98,
+     "own": 0.02
+    }
+   }
+  },
+  "4": {
+   "use": true,
+   "own": {
+    "by": "Q-OWN",
+    "choice": "yes",
+    "probs": {
+     "yes": 0.917,
+     "no": 0.083
+    }
+   },
+   "rows": {
+    "choice": "individual",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.985,
+       "b": 0.015
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.001,
+       "b": 0.999
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.999,
+       "b": 0.001
+      }
+     },
+     {
+      "a": "definition",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   }
+  },
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "trait",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.813,
+       "b": 0.187
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.065,
+       "b": 0.935
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.017,
+       "b": 0.983
+      }
+     },
+     {
+      "a": "definition",
+      "b": "trait",
+      "choice": "b",
+      "probs": {
+       "a": 0.026,
+       "b": 0.974
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Indicator of function": {
+     "choice": null,
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.98,
+        "b": 0.02
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.037,
+        "b": 0.963
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "b",
+       "probs": {
+        "a": 0.33,
+        "b": 0.67
+       }
+      }
+     ]
+    },
+    "Measure": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.989,
+        "b": 0.011
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.981,
+        "b": 0.019
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "endings": 0
+}
