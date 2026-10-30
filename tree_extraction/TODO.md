@@ -544,7 +544,21 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## One-species papers (v13 = v12 + the subject step, one_species.py, 2026-10-29) — ADOPTED: the new baseline
+## Listed tags (v14 = v13 + listed_tags.py, 2026-10-29/30) — ADOPTED with four tags: the new baseline
+
+- Design and every run: output/eval_split/DESIGN_listed_tags_v14.md; measure tag_score.py (TAGS_V14.txt).
+- Fills sex, caste, basisOfRecord, lifeStage from the template's lists (cells, section labels, captions,
+  paper text in rounds; basisOfRecord also per trait: literature -> MaterialCitation, and the methods
+  re-asked when the specimen value rests on quotes under 0.95). Core rows unchanged: F1 = v13's.
+- Accept rule on the 109 split, held run once (questions frozen at 6b633ca6): accuracy dev / held
+  sex 98.1 / 94.9, caste 97.5 / 100, basisOfRecord 87.8 / 93.1, lifeStage 80.2 / 74.0.
+- measurementStatistic FAILED held (dev 93.6, held 63.2): still asked and recorded, not applied
+  (listed_tags.ADOPTED). Not to be tuned on the 109 held papers.
+- Open: the defaults layer (TAG_DEFAULTS, off) for values the paper never prints (Noriega2023 alone is
+  most of held's empty sex / lifeStage); GT cases to check by eye: Korosi2022, Cecala2021,
+  CamargoVanegas2024 (basisOfRecord contradicts the paper); 'sd' is not on the template's statistic list.
+
+## One-species papers (v13 = v12 + the subject step, one_species.py, 2026-10-29) — ADOPTED (was the baseline)
 
 - Design: output/eval_split/DESIGN_one_species_v13.md (3 dev iterations, then 2 full runs).
 - Run 2 (gate-'several' branch dropped by the design's rule; unanswered trait columns kept):
