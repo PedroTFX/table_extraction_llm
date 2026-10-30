@@ -189,3 +189,17 @@ Dev result (code 6b633ca6): measurementStatistic 90.9% -> 93.6% accuracy, covera
 individual 1,724 -> 745 rows (Gossner2013 right). Left: CamargoVanegas2024 Mean / SD columns (GT mean and
 sd; 'sd' is not on the template list), Korosi2022 (GT mean for class traits), Cerini2023, Khayati2024.
 basisOfRecord 87.8% in this run (88.0% before; same questions), other tags unchanged, core rows none.
+
+## Held, run once (2026-10-30, questions frozen at 6b633ca6) and the accept rule
+
+| tag | dev acc | held acc | held cover | rule |
+|---|---|---|---|---|
+| sex | 98.1% | 94.9% | 23.3% | passes |
+| caste | 97.5% | 100% | 52.4% | passes |
+| basisOfRecord | 87.8% | 93.1% | 97.5% | passes (was 62.2% on dev) |
+| lifeStage | 80.2% | 74.0% | 33.8% | passes (0.06 below dev) |
+| measurementStatistic | 93.6% | 63.2% | 42.6% | fails: 0.30 below dev (was 60.7% held) |
+
+Core rows changed vs v13: none; overwrites fixed only. Per the rule, measurementStatistic is left out of
+v14 and not tuned on held. Held coverage stays low because most of its empty values are ones the paper
+never prints (Noriega2023 alone, see above): the defaults layer, still off.
