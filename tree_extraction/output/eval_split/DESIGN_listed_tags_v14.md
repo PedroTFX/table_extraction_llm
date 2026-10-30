@@ -228,3 +228,21 @@ dev + held_a together 83.4% -> 84.9%. Other tags and core rows unchanged. 11 pap
   cannot fit both, and sentences about one kind steer the other kind's columns.
 - The paper-level value changed in 35 more papers with no row changed: it is unstable.
 Next: give each column the sentences that name its trait (as the basisOfRecord source question).
+
+## v15 run 2 (2026-10-30, code 62598875): each column with the sentences naming its trait
+
+Every trait column's statistic asked again with the methods' and supplements' sentences that name its
+trait (statistic words and units left out of the match), not the paper-wide quotes; paper value kept.
+measurementStatistic accuracy (coverage):
+
+| | v14 | run 1 | run 2 |
+|---|---|---|---|
+| dev | 93.6% | 92.9% | **94.3%** (99.5%) |
+| held_a | 61.1% | 67.5% | **82.3%** (40.3%) |
+| dev + held_a | 83.4% | 84.9% | **90.5%** |
+
+Up: Guariento2020 +3,475 rows (now all right), Ji2024 +1,728, CamargoVanegas2024 +535, Normandin2017
++197, Leong2023 +176; Teder2020 back to all right. Down, small: Noriega2023 -287, Scalercio2020 -219,
+GibbParr2013 -216, Fontanilla2019 -206, Wallon2024 -132, Oliveira2022 -114, Gathof2022 -106,
+Eckert2023 -99. 78 dev rows v13 had right are now wrong (overwrites). Core rows unchanged.
+held_a coverage stays at 40.3%: Noriega2023 prints no statistic (the defaults layer's job).
