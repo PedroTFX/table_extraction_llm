@@ -552,6 +552,10 @@
   re-asked when the specimen value rests on quotes under 0.95). Core rows unchanged: F1 = v13's.
 - Accept rule on the 109 split, held run once (questions frozen at 6b633ca6): accuracy dev / held
   sex 98.1 / 94.9, caste 97.5 / 100, basisOfRecord 87.8 / 93.1, lifeStage 80.2 / 74.0.
+- Baseline tag accuracy (coverage), v14 adopted, 2026-10-30 run: 109 set sex 97.3% (46.7%), caste 97.9%
+  (75.6%), basisOfRecord 90.7% (98.2%), lifeStage 77.7% (54.8%); grit sex 76.1% (33.6%), caste 92.6%
+  (42.4%), basisOfRecord 71.4% (90.1%; was 57.0%), lifeStage 70.7% (59.8%). Grit-only papers (totals
+  only): basisOfRecord 44.9% (was 35.5%), sex 30.8% (its misses are values the papers never print).
 - measurementStatistic FAILED held (dev 93.6, held 63.2): still asked and recorded, not applied
   (listed_tags.ADOPTED). Not to be tuned on the 109 held papers.
 - Open: the defaults layer (TAG_DEFAULTS, off) for values the paper never prints (Noriega2023 alone is
