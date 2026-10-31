@@ -1,0 +1,96 @@
+<title>Marked-Column Categories</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: the verdict up top, how the step decides, then one card per paper with one row per group of marked columns */
+:root{
+  --bg:#f5f5f2; --panel:#ffffff; --fg:#20221d; --muted:#62665b; --line:#dcdfd6; --chip:#eff1ea;
+  --accent:#5a6b1f; --match:#2f7d4f; --miss:#8a8e83; --warn:#a26b12;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141612; --panel:#1c1f19; --fg:#e4e7dd; --muted:#9ca290; --line:#2e3229; --chip:#242820;
+  --accent:#b3c86a; --match:#66c08d; --miss:#8f9585; --warn:#dba54a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141612; --panel:#1c1f19; --fg:#e4e7dd; --muted:#9ca290; --line:#2e3229; --chip:#242820;
+  --accent:#b3c86a; --match:#66c08d; --miss:#8f9585; --warn:#dba54a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--sans)}
+.wrap{max-width:1080px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1{font-size:1.6rem;margin:0;font-weight:700;text-wrap:balance}
+h2{font-size:1.05rem;margin:0}
+p{margin:0;max-width:74ch}
+.muted{color:var(--muted)} .small{font-size:.82rem}
+.verdict{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:10px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .72rem var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.up{color:var(--match);font-weight:600}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.how div{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;gap:4px;min-width:0}
+.how .k{font:600 .7rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.paper{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.paper h2{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.f1{font:.82rem var(--mono);color:var(--muted)}
+.grp{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1.2fr);gap:10px 16px;padding:12px 14px;border-top:1px solid var(--line)}
+.paper .grp:first-of-type{border-top:0}
+.grp > div{min-width:0;display:grid;gap:4px;align-content:start}
+.k2{font:600 .7rem var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.cells{display:flex;flex-wrap:wrap;gap:5px}
+.cell{font-family:var(--mono);font-size:.82rem;background:var(--chip);border-radius:4px;padding:1px 6px;overflow-wrap:anywhere}
+.name{font-weight:600;overflow-wrap:anywhere}
+.pill{font:600 .74rem var(--sans);padding:2px 9px;border-radius:999px;border:1px solid currentColor;white-space:nowrap;justify-self:start}
+.p-match{color:var(--match)} .p-miss{color:var(--miss)} .p-sep{color:var(--miss)} .p-cat{color:var(--warn)}
+.n{font:.78rem var(--mono);color:var(--muted)}
+@media (max-width:760px){.grp{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:8px">
+    <h1>Marked-column categories</h1>
+    <p class="muted">v20 tried to read columns marked with one sign (an X) and blank elsewhere as categories of one property: trait = a name for the group, value = the marked column's name. This page shows each group on the tuning papers, the name gemma proposed, what nimble decided, and, from a what-if run that applied every group regardless, whether the scorer counted our name as the same as a GT trait.</p>
+  </header>
+
+  <section class="verdict">
+    <h2>How it went</h2>
+    <p class="small">Nimble read none of the 10 groups as categories, so v20 changed no row and every score stayed at v18's. For sampling sites (Heiva2013), plots by elevation (Fontanilla2019) and the other non-trait tables that was right. It also turned down Odanaka2019's management-intensity columns (0.99 "separate"), the one group the GT scores as a trait. In the what-if, the scorer matched gemma's name "Habitat/Condition" to the GT's "Management intensity" and Odanaka2019 rose from 0.786 to 0.912. No other paper's F1 moved, because their extra rows are outside what the GT scores.</p>
+    <div class="tbl"><table id="sum"><thead><tr><th>Paper</th><th>Groups</th><th>F1 v18 = v20</th><th>F1 what-if</th><th>Scorer matched our name</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="how">
+    <div><span class="k">1 · Code</span><b>Finds the groups</b><span class="small muted">Two or more trait columns of a wide table holding the same single mark, blank elsewhere.</span></div>
+    <div><span class="k">2 · Gemma</span><b>Proposes a name</b><span class="small muted">From the caption, the text below the table and the column names.</span></div>
+    <div><span class="k">3 · Nimble</span><b>Decides</b><span class="small muted">Categories of one property, or separate things (places, sites, plots, samples)? Then: does the name fit?</span></div>
+    <div><span class="k">4 · Scorer</span><b>Matches names by meaning</b><span class="small muted">Its report says which of our trait names it took as a GT trait, even when the words differ.</span></div>
+  </section>
+
+  <main id="list" style="display:grid;gap:14px"></main>
+</div>
+
+<script>
+const DATA = [{"paper": "Braschler2021", "f1_v18": 1.0, "f1_whatif": 1.0, "groups": [{"table": "5", "mark": "-", "columns": ["Structural diversity", "Index of permeable garden border"], "proposed": "Vegetation/Habitat Characteristics", "cat": {"choice": "separate", "probs": {"categories": 0.077, "separate": 0.923}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}]}, {"paper": "Dejean2019", "f1_v18": 1.0, "f1_whatif": 1.0, "groups": [{"table": "2", "mark": "0", "columns": ["4", "5"], "proposed": "Association type", "cat": {"choice": "separate", "probs": {"categories": 0.054, "separate": 0.946}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}]}, {"paper": "Espinosa2023", "f1_v18": 1.0, "f1_whatif": 1.0, "groups": [{"table": "6", "mark": "x", "columns": ["Qualitative", "Binary"], "proposed": "Trait Category", "cat": {"choice": "categories", "probs": {"categories": 0.631, "separate": 0.369}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}]}, {"paper": "Fontanilla2019", "f1_v18": 0.996, "f1_whatif": 0.996, "groups": [{"table": "19", "mark": "x", "columns": ["1000 #3", "1000 #4", "1000 #5", "1200", "1400", "1400 #3"], "proposed": "Morphospecies/Sample ID", "cat": {"choice": "separate", "probs": {"categories": 0.01, "separate": 0.99}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}, {"table": "20", "mark": "x", "columns": ["(no name, column 1)", "(no name, column 2)", "(no name, column 3)", "(no name, column 4)", "(no name, column 5)", "(no name, column 6)", "(no name, column 7)", "(no name, column 8)", "(no name, column 9)", "(no name, column 10)", "(no name, column 11)", "(no name, column 12)", "(no name, column 14)", "(no name, column 15)", "(no name, column 16)", "(no name, column 17)", "(no name, column 18)", "(no name, column 19)"], "proposed": "Morphological traits", "cat": {"choice": "categories", "probs": {"categories": 0.516, "separate": 0.484}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}, {"table": "21", "mark": "x", "columns": ["(no name, column 1)", "(no name, column 2)", "(no name, column 3)", "(no name, column 4)", "(no name, column 5)", "(no name, column 6)", "(no name, column 7)", "(no name, column 8)", "(no name, column 9)", "(no name, column 10)", "(no name, column 11)", "(no name, column 12)", "(no name, column 13)", "(no name, column 14)", "(no name, column 15)", "(no name, column 16)", "(no name, column 17)", "(no name, column 18)", "(no name, column 19)"], "proposed": "Morphological traits", "cat": {"choice": "categories", "probs": {"categories": 0.682, "separate": 0.318}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}, {"table": "22", "mark": "x", "columns": ["(no name, column 2)", "(no name, column 3)", "(no name, column 4)", "(no name, column 5)", "(no name, column 6)", "(no name, column 7)", "(no name, column 8)", "(no name, column 9)", "(no name, column 10)", "(no name, column 11)", "(no name, column 12)", "(no name, column 13)", "(no name, column 14)", "(no name, column 15)", "(no name, column 16)", "(no name, column 17)", "(no name, column 18)"], "proposed": "Morphological traits", "cat": {"choice": "categories", "probs": {"categories": 0.518, "separate": 0.482}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}, {"table": "23", "mark": "x", "columns": ["(no name, column 1)", "(no name, column 2)", "(no name, column 3)", "(no name, column 4)", "(no name, column 5)", "(no name, column 6)", "(no name, column 7)", "(no name, column 8)", "(no name, column 9)", "(no name, column 10)", "(no name, column 11)", "(no name, column 12)", "(no name, column 13)", "(no name, column 14)", "(no name, column 15)"], "proposed": "Morphological traits", "cat": {"choice": "separate", "probs": {"categories": 0.403, "separate": 0.597}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}]}, {"paper": "Heiva2013", "f1_v18": 1.0, "f1_whatif": 1.0, "groups": [{"table": "0", "mark": "x", "columns": ["Herbaceous DR", "Herbaceous Crop", "Vineyard DR", "Vineyard Crop", "Herbaceous DR #2", "Herbaceous Crop #2", "Vineyard DR #2"], "proposed": "Habitat/Resource Association", "cat": {"choice": "separate", "probs": {"categories": 0.018, "separate": 0.982}}, "scorer_name": null, "same_name": false, "gt_values": {}, "rows_matched": 0}]}, {"paper": "Odanaka2019", "f1_v18": 0.786, "f1_whatif": 0.912, "groups": [{"table": "7", "mark": "x", "columns": ["Un-grazed landscapes", "Low management intensity", "Moderate management intensity", "High management intensity"], "proposed": "Habitat/Condition", "cat": {"choice": "separate", "probs": {"categories": 0.011, "separate": 0.989}}, "scorer_name": "Management intensity", "same_name": true, "gt_values": {"Un-grazed landscapes": 8, "Low management intensity; Moderate management inte": 1, "Moderate management intensity": 1, "Low management intensity; High management intensit": 1}, "rows_matched": 9}]}];
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const f = x => x == null ? "–" : x.toFixed(3);
+document.querySelector("#sum tbody").innerHTML = DATA.map(d => {
+  const m = d.groups.filter(g => g.scorer_name).map(g => `${esc(g.proposed)} → ${esc(g.scorer_name)}`).join("<br>") || `<span class="muted">none</span>`;
+  const w = d.f1_whatif, up = w != null && d.f1_v18 != null && w > d.f1_v18 + 1e-9;
+  return `<tr><td>${esc(d.paper)}</td><td class="num">${d.groups.length}</td><td class="num">${f(d.f1_v18)}</td><td class="num${up ? " up" : ""}">${f(w)}</td><td>${m}</td></tr>`;
+}).join("");
+document.getElementById("list").innerHTML = DATA.map(d => `<section class="paper"><h2>${esc(d.paper)} <span class="f1">F1 ${f(d.f1_v18)} · what-if ${f(d.f1_whatif)}</span></h2>` +
+  d.groups.map(g => {
+    const pc = g.cat.probs.categories ?? 0, ps = g.cat.probs.separate ?? 0;
+    const said = g.cat.choice === "categories"
+      ? `<span class="pill p-cat">leaned categories, not sure (${pc.toFixed(2)})</span>`
+      : `<span class="pill p-sep">separate things (${ps.toFixed(2)})</span>`;
+    const scorer = g.scorer_name
+      ? `<span class="pill p-match">scorer: same as "${esc(g.scorer_name)}"</span><span class="n">${g.rows_matched} rows matched in the what-if</span>
+         <div class="cells">${Object.entries(g.gt_values).map(([v, n]) => `<span class="cell">${esc(v)}</span><span class="n">${n}</span>`).join("")}</div>`
+      : `<span class="pill p-miss">scorer: no GT trait matched</span>`;
+    return `<div class="grp">
+      <div><span class="k2">Table ${esc(g.table)} · mark "${esc(g.mark)}"</span><div class="cells">${g.columns.map(c => `<span class="cell">${esc(c)}</span>`).join("")}</div></div>
+      <div><span class="k2">Gemma's name · nimble</span><span class="name">${esc(g.proposed) || "–"}</span>${said}</div>
+      <div><span class="k2">What-if: the scorer</span>${scorer}</div></div>`;
+  }).join("") + `</section>`).join("");
+</script>

@@ -30,3 +30,14 @@ name matching by meaning decides whether ours counts.
 
 Production and repeatable F1 against v18 on dev + held_a; the scorer's report shows whether it
 matched our name to a GT trait. held_b once if adopted; grit-only papers as totals only.
+
+## Tuning run (2026-10-31, code 4bb89324) and a what-if
+
+10 groups on 6 tuning papers; nimble read none as categories, so v20 changed no row (tuning mean F1
+0.651, as v18). Right for sampling sites (Heiva2013), plots by elevation (Fontanilla2019) and tables
+describing traits (Espinosa2023); wrong for Odanaka2019 t7 (management intensity), called 'separate'
+at 0.99, gemma's name 'Habitat/Condition'.
+What-if (every group applied with gemma's name, nimble ignored; output/full_run_v20_whatif on the
+remote, 6 papers scored): the scorer matched 'Habitat/Condition' to the GT's 'Management intensity'
+(9 rows), Odanaka2019 0.786 -> 0.912; the other 5 papers unchanged (their extra rows are outside what
+the GT scores). Page: output/eval_split/MARK_COLUMNS_v20.html. Not adopted (no change).
