@@ -544,7 +544,15 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
-## Underscores and a closing full stop (v17 = v16 + clean_text.py; scorer, 2026-10-31) — RUN, not yet adopted
+## Yes / no columns (v18 = v17 + yes_no.py, 2026-10-31) — ADOPTED with v17: the new baseline
+
+- Design and runs: output/eval_split/DESIGN_yes_no_v18.md. Code picks two-valued trait columns of wide tables;
+  nimble says which are yes / no answers and which value means 'has it'; those cells become Yes / No.
+- Tuning mean F1 0.644 -> 0.651 (Fiedler2021 0.667 -> 1.000, Guariento2020 0.674 -> 0.795, Vidal2023,
+  Gathof2022, Wallon2024 up), no paper down; held_b test 0.494 -> 0.494 (4 of 37 columns, none scored).
+- Open: long tables, and an X with blank cells (does the GT write 'No' for the blanks?).
+
+## Underscores and a closing full stop (v17 = v16 + clean_text.py; scorer, 2026-10-31) — ADOPTED (with v18)
 
 - From the user's review of near-miss pairs (output/eval_split/CHEATSHEET_review.html, published page):
   the scorer (source/evaluate.py normalize_value) drops a closing full stop; v17 writes an underscore
