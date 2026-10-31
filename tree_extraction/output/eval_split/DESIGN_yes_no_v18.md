@@ -49,3 +49,11 @@ Cao2024 10) did not change their score.
 37 two-valued columns asked, 4 called yes / no; mean F1 0.494 -> 0.494, none up, none down
 (repeatable scorer unchanged too). The accept rule is met; the 4 columns are not among held_b's
 scored GT rows, so held_b does not test the step.
+
+## v19: unsure columns beside sure siblings (the user: "everything on Fiedler is yes or no")
+
+Fiedler2021: the model leaned 'yes / no' on all 26 two-valued columns but was sure on 12; the 14
+others (Nearctic 0.56, Neuguinea 0.60 ...) sit beside Palaearctic (0.91) with the same 0 / 1. On the
+tuning papers 29 such columns in 7 papers. v19 asks each of them once more, naming the sure columns of
+its table with the same two values and the value that means 'has it' there; a sure 'same' writes
+it Yes / No. (Fiedler2021's region columns are not in its GT, which is at F1 1.0 already.)
