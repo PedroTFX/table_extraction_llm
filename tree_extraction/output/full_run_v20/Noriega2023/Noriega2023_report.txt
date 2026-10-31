@@ -1,0 +1,137 @@
+  [semantic] matched by values: 'pTW morph' -> 'Protibia Width'
+  [semantic] matched by values: 'pTL morph' -> 'Protibia Length'
+  [semantic] matched by values: 'mTL morph' -> 'Metatibia Length'
+  [semantic] matched by values: 'PW morph' -> 'Pronotum Width'
+  [semantic] matched by values: 'PL morph' -> 'Pronotum Length'
+  [semantic] matched by values: 'PH morph' -> 'Pronotum Height'
+  [semantic] matched by values: 'HW morph' -> 'Head Width'
+  [semantic] matched by values: 'HL morph' -> 'Head Length'
+  [semantic] matched by values: 'EL morph' -> 'Elytra Length'
+  [semantic] matched by values: 'Biomass morph' -> 'Body Mass'
+  [semantic] matched by values: 'PW' -> 'Pronotum width'
+  [semantic] matched by values: 'PL' -> 'Pronotum length'
+  [semantic] matched by values: 'PH' -> 'Pronotum height'
+  [semantic] matched by values: 'HW' -> 'Head width'
+  [semantic] matched by values: 'EL' -> 'Elytra length'
+  [semantic] matched by values: 'pTW' -> 'Protibia width'
+  [semantic] matched by values: 'pTL' -> 'Protibia length'
+  [semantic] matched by values: 'mTL' -> 'Metatiba length'
+  [semantic] matched by values: 'HL' -> 'Head length'
+  [semantic] left unmatched: 'Dung relocation strategy' vs 'Relocation Size' (llm said different traits)
+  [semantic] left unmatched: 'reloc.size behav' vs 'Relocation Size' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Noriega2023/Noriega2023.xlsx  (35037 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v17/Noriega2023/Noriega2023.csv  (66917 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 19 pair(s))
+  'Biomass morph' -> 'Body Mass'
+  'EL' -> 'Elytra length'
+  'EL morph' -> 'Elytra Length'
+  'HL' -> 'Head length'
+  'HL morph' -> 'Head Length'
+  'HW' -> 'Head width'
+  'HW morph' -> 'Head Width'
+  'PH' -> 'Pronotum height'
+  'PH morph' -> 'Pronotum Height'
+  'PL' -> 'Pronotum length'
+  'PL morph' -> 'Pronotum Length'
+  'PW' -> 'Pronotum width'
+  'PW morph' -> 'Pronotum Width'
+  'mTL' -> 'Metatiba length'
+  'mTL morph' -> 'Metatibia Length'
+  'pTL' -> 'Protibia length'
+  'pTL morph' -> 'Protibia Length'
+  'pTW' -> 'Protibia width'
+  'pTW morph' -> 'Protibia Width'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 34617
+  missed (FN)         : 420
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 32300   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.517 / 0.988 / 0.679   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.988 / 0.994   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.988   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                          32300
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord             34617  34617  1.000
+  measurementMethod             0   3456  0.000  <-- low
+  measurementUnit               0  34617  0.000  <-- low
+  measurementStatistic       1942  34617  0.056  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0  34617  0.000  <-- low
+  lifeStage                     0  34617  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0  34617  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +31747 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a   +31747 where GT blank
+  associatedReferences          0  34617  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 420 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            292
+  species+trait present, value differs      128
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0,45'                       ->  '0.5548888889'               x6
+     '0,30'                       ->  '0.38'                       x6
+     '0,50'                       ->  '0.5316666667'               x6
+     '0,45'                       ->  '0.6'                        x5
+     '1,25'                       ->  '1.4858333333'               x5
+     '0,25'                       ->  '0.2933703704'               x5
+  -> 6 substitutions explain 33 of 420 misses (8%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Relocation Size'                  x287
+     'Biomass'                          x4
+     'Metatiba length'                  x1
+  -> 3 missing traits explain 292 of 420 misses (70%) — systematic, not scattered
+
+  full miss detail saved -> Noriega2023_misses.csv, Noriega2023_misses_summary.json (420 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  reloc.size behav                                  0   287   PRED-ONLY
+  biomas                                           10    10   
+  biomass                                        3169  3159   Δ-10 (split?)
+  body mass                                       287   287   
+  dung relocation strategy                          0 31890   PRED-ONLY
+  elytra length                                  3476  3476   
+  head length                                    3476  3476   
+  head width                                     3476  3476   
+  pronotum height                                3476  3476   
+  metatiba length                                3189  3148   Δ-41 (split?)
+  metatibia length                                287   287   
+  pronotum length                                3476  3476   
+  protibia length                                3476  3435   Δ-41 (split?)
+  mtl                                               0    41   PRED-ONLY
+  pronotum width                                 3476  3476   
+  protibia width                                 3476  3435   Δ-41 (split?)
+  ptl                                               0    41   PRED-ONLY
+  ptw                                               0    41   PRED-ONLY
+  relocation size                                 287     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'relocation size'                  vs pred 'reloc.size behav'                 sim=0.74
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.988  0.994  34617     0   420   id+type+value
+             (32300 more spurious row(s) set aside as out-of-scope; strict P would be 0.517)
+  tags        0.000  0.000  0.000      0 34617 35037   basis+id+type+value+stat+sex+stage
+             (32300 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.994 vs previous)

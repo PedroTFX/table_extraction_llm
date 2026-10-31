@@ -1,0 +1,150 @@
+  [semantic] left unmatched: 'Dispersal predictor Abdomen length' vs 'Head width: length' (llm said different traits)
+  [semantic] left unmatched: 'Dispersal predictor Abdomen length' vs 'Thorax Roundness' (llm said different traits)
+  [semantic] left unmatched: 'Dispersal predictor Abdomen length' vs 'Thoax size' (llm said different traits)
+  [semantic] left unmatched: 'Dispersal predictor Body length' vs 'Head width: length' (llm said different traits)
+  [semantic] left unmatched: 'Dispersal predictor Body length' vs 'Thorax Roundness' (llm said different traits)
+  [semantic] left unmatched: 'Dispersal predictor Body length' vs 'Thoax size' (llm said different traits)
+  [semantic] left unmatched: 'Functional group: activity' vs 'Thorax Roundness' (llm said different traits)
+  [semantic] left unmatched: 'Functional group: activity' vs 'Thoax size' (llm said different traits)
+  [semantic] left unmatched: 'Functional group: activity' vs 'Head width: length' (llm said different traits)
+  [semantic] left unmatched: 'Functional group: habit' vs 'Thorax Roundness' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Raine2018/Raine2018.xlsx  (41135 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Raine2018/Raine2018.csv  (44517 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 23 pair(s))
+  'Body size (Body/ Largest beetle)' -> 'Body size'
+  'Body size (body/ max body length)' -> 'Body length'
+  'Dispersal predictor Left Wing length' -> 'Left Wing length '
+  'Dispersal predictor Left Wing width' -> 'Left Wing width'
+  'Dispersal predictor Thorax length' -> 'Thorax length'
+  'Dispersal predictor Thorax width' -> 'Thorax width'
+  'Dispersal predictor Wing area (mm²)' -> 'Wing area (mm²)'
+  'Eye roundness (width: length)' -> 'Eye roundness'
+  'Eye size (eye length :body)' -> 'Eye size'
+  'Guild predictor Head length' -> 'Head length'
+  'Guild predictor Head width' -> 'Head width'
+  'Guild predictor Left Hind leg length' -> 'Left Hind leg length'
+  'Guild predictor Left Hind leg width' -> 'Left Hind leg width'
+  'Guild predictor Left eye length' -> 'Left eye length'
+  'Guild predictor Left eye width' -> 'Left eye width'
+  'Head width: length' -> 'Head width :length'
+  'Hind leg robustness (width: length)' -> 'Hind leg robustness'
+  'Hind leg size (Hind leg: body)' -> 'Hind leg size'
+  'Reproductive capactiy: Thorax:abdomen' -> 'Reproductive capactiy'
+  'Thoax size (thorax length: body)' -> 'Thoax size'
+  'Thorax Roundness (width:length)' -> 'Thorax roundness (width :length)'
+  'Thorax size (thorax length: body length)' -> 'Thorax size'
+  'Wing loading (wing area: body area)' -> 'Wing loading'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 17824
+  missed (FN)         : 23311
+  spurious, in scope  : 19929   <- GT covers this trait: real errors
+  spurious, out of scope: 6764   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.400 / 0.433 / 0.416   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.472 / 0.433 / 0.452   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.433   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           6764
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord             17824  17824  1.000
+  measurementMethod             0    154  0.000  <-- low
+  measurementUnit               0  17824  0.000  <-- low
+  measurementStatistic      17824  17824  1.000
+  measurementRemarks            0      0    n/a
+  sex                       17824  17824  1.000
+  lifeStage                     0  17533  0.000  <-- low
+  caste                         0  17824  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +17824 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a   +17533 where GT blank
+  associatedReferences          0  17824  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 23311 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           3469
+  species+trait present, value differs    18447
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.0374'                     ->  '0.03723560061'              x2
+     '0.0325'                     ->  '0.03723560061'              x2
+     '0.2969'                     ->  '0.2753703589'               x2
+     '0.2711'                     ->  '0.2753703589'               x2
+     '0.8301350853841579'         ->  '0.8792699159'               x2
+     '0.2101469796947127'         ->  '0.2324714678'               x2
+  -> 6 substitutions explain 12 of 23311 misses (0%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body length'                      x1691
+     'Abdomen length'                   x1691
+     'Thorax Roundness'                 x29
+     'Head width: length'               x29
+     'Body size'                        x29
+  -> 5 missing traits explain 3469 of 23311 misses (15%) — scattered; no single cause
+
+  full miss detail saved -> Raine2018_misses.csv, Raine2018_misses_summary.json (23311 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  repoductive capacity (thorax:abdomen)          1691  1691   
+  dispersal predictor abdomen length                0  1691   PRED-ONLY
+  abdomen length                                 1720    29   Δ-1691 (split?)
+  functional group: activity                        0  1691   PRED-ONLY
+  wing area (mm2)                                1691  1691   
+  wing aspect ratio (wing width: length)         1691  1691   
+  dispersal predictor body length                   0  1691   PRED-ONLY
+  eye length: body length                          29    29   
+  hind leg to body ratio                           29    29   
+  body length                                    1720    58   Δ-1662 (split?)
+  body size                                      1720  1691   Δ-29 (split?)
+  reproductive capactiy                            29    29   
+  left eye length                                1691  1691   
+  left eye width                                 1691  1691   
+  eye length                                       29    29   
+  eye width: length                                29    29   
+  eye roundness                                  1691  1691   
+  eye size                                       1691  1691   
+  eye width                                        29    29   
+  functional group: habit                           0  1691   PRED-ONLY
+  head length                                    1720  1720   
+  head width :length                             1691  1720   Δ+29 (split?)
+  head width: length                               29     0   GT-ONLY
+  head width                                     1720  1720   
+  left hind leg length                           1691  1691   
+  left hind leg width                            1691  1691   
+  hind leg robustness (leg width :length)        1691  1691   
+  hind leg length                                  29    29   
+  hind leg robustness                              29    29   
+  hind leg size                                  1691  1691   
+  hind leg width                                   29    29   
+  left wing length                                296  1691   Δ+1395 (split?)
+  left wing width                                3086  1691   Δ-1395 (split?)
+  thorax roundness (width :length)               1691  1720   Δ+29 (split?)
+  thorax length                                  1720  1720   
+  wing loading                                   1691  1691   
+  thorax roundness                                 29     0   GT-ONLY
+  thoax size                                       29    29   
+  thorax size                                    1691  1691   
+  thorax width                                   1720  1720   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.472  0.433  0.452  17824 19929 23311   id+type+value
+             (6764 more spurious row(s) set aside as out-of-scope; strict P would be 0.400)
+  tags        0.008  0.007  0.007    291 37462 40844   basis+id+type+value+stat+sex+stage
+             (6764 more spurious row(s) set aside as out-of-scope; strict P would be 0.007)
+             (F1 -0.445 vs previous)
