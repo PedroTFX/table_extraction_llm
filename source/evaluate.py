@@ -428,7 +428,8 @@ def normalize_value(v, decode=False):
     """Normalize a cell value for comparison.
 
     Always: strip footnote markers / replacement chars, collapse whitespace,
-    NFKC-normalize unicode, lowercase, and fold numeric spelling ('4.0' == '4').
+    NFKC-normalize unicode, lowercase, drop a closing full stop, and fold
+    numeric spelling ('4.0' == '4').
     Optionally decode legend codes.
 
     Comparison only — the value written to the CSV stays verbatim. Anything that
@@ -441,6 +442,9 @@ def normalize_value(v, decode=False):
     s = re.sub(r"[†‡§¶\uFFFD]", "", s)
     s = s.replace("\xa0", " ")
     s = re.sub(r"\s+", " ", s).strip().lower()
+    # a full stop closing the text is punctuation, not part of the value
+    # ('proboscis well developed.' == 'proboscis well developed'; the user, 2026-10-31)
+    s = re.sub(r"\s*\.+$", "", s)
     if decode and s in VALUE_DECODE:
         s = VALUE_DECODE[s]
     n = canonical_number(s)
