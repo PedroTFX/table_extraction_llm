@@ -1,0 +1,83 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Nilomantis floweri"
+ },
+ "tables": {
+  "1": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": null,
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.696,
+       "b": 0.304
+      }
+     }
+    ]
+   }
+  },
+  "2": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": null,
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.21,
+       "b": 0.79
+      }
+     }
+    ]
+   }
+  },
+  "3": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "model",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.986,
+     "own": 0.014
+    }
+   }
+  },
+  "4": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": null,
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.418,
+       "b": 0.582
+      }
+     }
+    ]
+   }
+  }
+ },
+ "endings": 0
+}

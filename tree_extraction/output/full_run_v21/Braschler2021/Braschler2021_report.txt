@@ -1,0 +1,83 @@
+  [semantic] matched by values: 'Dry tolerant' -> 'Drought Resistance'
+  [semantic] matched by values: 'Micro-habitat preference' -> 'Microhabitat Preference'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Braschler2021/Braschler2021.xlsx  (511 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v18/Braschler2021/Braschler2021.csv  (526 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (6)
+  'Ants': no ground-truth name denotes this organism
+  'Millipedes': no ground-truth name denotes this organism
+  'Rove beetles': no ground-truth name denotes this organism
+  'Slugs': no ground-truth name denotes this organism
+  'Spiders': no ground-truth name denotes this organism
+  'Woodlice': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 8 pair(s))
+  'Body size (mm)' -> 'Body size '
+  'Colony founding mode' -> 'Colony Founding Mode'
+  'Dry tolerant' -> 'Drought Resistance'
+  'Habitat generalist' -> 'Habitat Generalist'
+  'Main food' -> 'Main Food'
+  'Main nest stratum' -> 'Main Nest Stratum'
+  'Micro-habitat preference' -> 'Microhabitat Preference'
+  'Number of queens' -> 'Number of the Queens'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 511
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 15   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.971 / 1.000 / 0.986   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             15
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               426    511  0.834
+  measurementMethod             0      0    n/a
+  measurementUnit               0    113  0.000  <-- low
+  measurementStatistic        398    511  0.779
+  measurementRemarks            0      0    n/a
+  sex                           0    511  0.000  <-- low
+  lifeStage                   426    511  0.834
+  caste                        84    511  0.164  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    511  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                       113   113   
+  index of permeable garden border                  0     2   PRED-ONLY
+  distance to city center                           0     2   PRED-ONLY
+  colony founding mode                             28    28   
+  structural diversity                              0     5   PRED-ONLY
+  drought resistance                               88    88   
+  main food                                        28    28   
+  habitat generalist                              113   113   
+  habitat richness                                  0     6   PRED-ONLY
+  main nest stratum                                28    28   
+  microhabitat preference                          85    85   
+  number of the queens                             28    28   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000    511     0     0   id+type+value
+             (15 more spurious row(s) set aside as out-of-scope; strict P would be 0.971)
+  tags        0.000  0.000  0.000      0   511   511   basis+id+type+value+stat+sex+stage
+             (15 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)
