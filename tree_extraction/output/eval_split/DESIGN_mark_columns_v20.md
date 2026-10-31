@@ -55,3 +55,15 @@ a headless piece to the table before it only when both have the same number of c
 drops empty cells at the end of rows, so the pieces come out 21, 20, 19 and 17 columns wide. None is
 joined, each becomes its own headless table, and 828 rows are named '(no name, column N)'. The GT does
 not score these tables (the paper is at F1 0.996), so no F1 is lost; the rows are wrong output.
+
+## v21: the join fix (2026-10-31, code 3fe14b93) — runs, not adopted
+
+head_to_table._narrower: a headless page piece narrower than the table before it joins it when it
+lost at most a quarter of the columns and its columns line up (most cells of each column are values
+the same column above holds). On the 109 set it changes only Fontanilla2019 (t18 -> t17, t20-t24 ->
+t19); Gossner2013 t5 (another table) and Torok2022 t8 (cells one column off) stay apart; held_b none.
+Result: '(no name, column N)' rows 828 -> 0, F1 0.996 -> 0.996, tuning mean unchanged (0.651). But X
+rows 873 -> 359 of the 1,312 printed X marks: the column tags were decided per piece before any join
+(saved for t22 and t24, not for t17 or t19), and the joined table now goes by t19's reading, which
+takes only 6 of its plot columns as traits. Doing it right needs this paper's tag stage and every
+later stage rerun on the joined table; the GT does not score these tables either way.
