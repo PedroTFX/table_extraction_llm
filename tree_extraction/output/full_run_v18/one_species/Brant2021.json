@@ -1,0 +1,830 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Halictus ligatus"
+ },
+ "tables": {
+  "0": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "group",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.002,
+       "b": 0.998
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.004,
+       "b": 0.996
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.995,
+       "b": 0.005
+      }
+     },
+     {
+      "a": "definition",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Series": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.005,
+        "b": 0.995
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "Head width (cm) (range)": {
+     "choice": "statistic",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.99,
+        "b": 0.01
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "a",
+       "probs": {
+        "a": 0.985,
+        "b": 0.015
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.991,
+        "b": 0.009
+       }
+      },
+      {
+       "a": "test",
+       "b": "statistic",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    },
+    "Intertegular distance (cm) (range)": {
+     "choice": "statistic",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.992,
+        "b": 0.008
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "a",
+       "probs": {
+        "a": 0.959,
+        "b": 0.041
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.987,
+        "b": 0.013
+       }
+      },
+      {
+       "a": "test",
+       "b": "statistic",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.999,
+        "b": 0.001
+       }
+      }
+     ]
+    }
+   }
+  },
+  "4": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "own",
+    "probs": {
+     "kind": 0.125,
+     "own": 0.875
+    }
+   },
+   "rows": {
+    "choice": "group",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.008,
+       "b": 0.992
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.018,
+       "b": 0.982
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.965,
+       "b": 0.035
+      }
+     },
+     {
+      "a": "definition",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Month": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.006,
+        "b": 0.994
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.994,
+        "b": 0.006
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "Q1": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.993,
+        "b": 0.007
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.169,
+        "b": 0.831
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.982,
+        "b": 0.018
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.02,
+        "b": 0.98
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.988,
+        "b": 0.012
+       }
+      }
+     ]
+    },
+    "Q2 (Median)": {
+     "choice": "statistic",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.991,
+        "b": 0.009
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "a",
+       "probs": {
+        "a": 0.922,
+        "b": 0.078
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.99,
+        "b": 0.01
+       }
+      },
+      {
+       "a": "test",
+       "b": "statistic",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    },
+    "Q3": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.043,
+        "b": 0.957
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.989,
+        "b": 0.011
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.003,
+        "b": 0.997
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      }
+     ]
+    }
+   }
+  },
+  "5": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "figure",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.97,
+     "own": 0.03
+    }
+   }
+  },
+  "7": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "group",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.008,
+       "b": 0.992
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.005,
+       "b": 0.995
+      }
+     },
+     {
+      "a": "group",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.994,
+       "b": 0.006
+      }
+     },
+     {
+      "a": "definition",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   },
+   "cols": {
+    "Month": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.006,
+        "b": 0.994
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "City": {
+     "choice": "group",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.009,
+        "b": 0.991
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.0,
+        "b": 1.0
+       }
+      },
+      {
+       "a": "group",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.996,
+        "b": 0.004
+       }
+      },
+      {
+       "a": "test",
+       "b": "group",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "group",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.998,
+        "b": 0.002
+       }
+      }
+     ]
+    },
+    "Q1": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.021,
+        "b": 0.979
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.991,
+        "b": 0.009
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.005,
+        "b": 0.995
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.995,
+        "b": 0.005
+       }
+      }
+     ]
+    },
+    "Q2 (Median)": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.158,
+        "b": 0.842
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.991,
+        "b": 0.009
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.001,
+        "b": 0.999
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    },
+    "Q3": {
+     "choice": "value",
+     "duels": [
+      {
+       "a": "value",
+       "b": "group",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      },
+      {
+       "a": "statistic",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.005,
+        "b": 0.995
+       }
+      },
+      {
+       "a": "value",
+       "b": "name",
+       "choice": "a",
+       "probs": {
+        "a": 0.99,
+        "b": 0.01
+       }
+      },
+      {
+       "a": "test",
+       "b": "value",
+       "choice": "b",
+       "probs": {
+        "a": 0.002,
+        "b": 0.998
+       }
+      },
+      {
+       "a": "value",
+       "b": "label",
+       "choice": "a",
+       "probs": {
+        "a": 0.997,
+        "b": 0.003
+       }
+      }
+     ]
+    }
+   }
+  },
+  "8": {
+   "use": true,
+   "own": {
+    "by": "Q-OWN",
+    "choice": "yes",
+    "probs": {
+     "yes": 0.991,
+     "no": 0.009
+    }
+   },
+   "rows": {
+    "choice": "individual",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.994,
+       "b": 0.006
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 1.0,
+       "b": 0.0
+      }
+     },
+     {
+      "a": "definition",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   }
+  }
+ },
+ "endings": 0
+}

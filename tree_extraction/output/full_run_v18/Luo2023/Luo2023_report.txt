@@ -1,0 +1,86 @@
+  [semantic] left unmatched: 'ML (mm)' vs 'Mandible length' (llm said different traits)
+  [semantic] left unmatched: 'ML (mm)' vs 'Scape length' (llm said different traits)
+  [semantic] left unmatched: 'ML (mm)' vs 'Weber’s length' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Luo2023/Luo2023.xlsx  (979 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Luo2023/Luo2023.csv  (990 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'EW (mm)' -> 'Eye width'
+  'HLG (mm)' -> 'Hindleg length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 326
+  missed (FN)         : 653
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 664   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.329 / 0.333 / 0.331   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.333 / 0.500   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.333   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            664
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               326    326  1.000
+  measurementMethod             0    326  0.000  <-- low
+  measurementUnit               0    326  0.000  <-- low
+  measurementStatistic        326    326  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0    326  0.000  <-- low
+  lifeStage                   326    326  1.000
+  caste                       326    326  1.000
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +326 where GT blank
+  verbatimCoordinates           0    326  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    326  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 653 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            653
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Head width'                       x163
+     'Mandible length'                  x163
+     'Scape length'                     x163
+     'Weber’s length'                   x163
+     ''                                 x1
+  -> 5 missing traits explain 653 of 653 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Luo2023_misses.csv, Luo2023_misses_summary.json (653 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                    1     0   GT-ONLY
+  eye width                                       163   163   
+  indicator of function                             0     6   PRED-ONLY
+  head width                                      163     0   GT-ONLY
+  hindleg length                                  163   163   
+  hw (mm)                                           0   163   PRED-ONLY
+  mandible length                                 163     0   GT-ONLY
+  scape length                                    163     0   GT-ONLY
+  weber’s length                                  163     0   GT-ONLY
+  measure                                           0     6   PRED-ONLY
+  ml (mm)                                           0   163   PRED-ONLY
+  sl (mm)                                           0   163   PRED-ONLY
+  wl (mm)                                           0   163   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.333  0.500    326     0   653   id+type+value
+             (664 more spurious row(s) set aside as out-of-scope; strict P would be 0.329)
+  tags        0.000  0.000  0.000      0   326   979   basis+id+type+value+stat+sex+stage
+             (664 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.500 vs previous)

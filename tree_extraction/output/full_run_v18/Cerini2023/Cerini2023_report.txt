@@ -1,0 +1,228 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Cerini2023/Cerini2023.xlsx  (1439 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v17/Cerini2023/Cerini2023.csv  (1737 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 127 pair(s))
+  'Aeshna.canadensis' -> 'Aeshna canadensis'
+  'Aeshna.clepsydra' -> 'Aeshna clepsydra'
+  'Aeshna.constricta' -> 'Aeshna constricta'
+  'Aeshna.eremita' -> 'Aeshna eremita'
+  'Aeshna.interrupta' -> 'Aeshna interrupta'
+  'Aeshna.tuberculifera' -> 'Aeshna tuberculifera'
+  'Aeshna.umbrosa' -> 'Aeshna umbrosa'
+  'Aeshna.verticalis' -> 'Aeshna verticalis'
+  'Amphiagrion.saucium.' -> 'Amphiagrion saucium '
+  'Anax.junius' -> 'Anax junius'
+  'Argia.apicalis' -> 'Argia apicalis'
+  'Argia.fumipennis' -> 'Argia fumipennis'
+  'Argia.moesta' -> 'Argia moesta'
+  'Arigomphus.furcifer' -> 'Arigomphus furcifer'
+  'Arigomphus.villosipes' -> 'Arigomphus villosipes'
+  'Basiaeschna.janata' -> 'Basiaeschna janata'
+  'Boyeria.grafiana' -> 'Boyeria grafiana'
+  'Boyeria.vinosa' -> 'Boyeria vinosa'
+  'Calopteryx.aequabilis' -> 'Calopteryx aequabilis'
+  'Calopteryx.amata' -> 'Calopteryx amata'
+  'Calopteryx.maculata' -> 'Calopteryx maculata'
+  'Celithemis.elisa' -> 'Celithemis elisa'
+  'Celithemis.eponina' -> 'Celithemis eponina'
+  'Chromagrion.conditum' -> 'Chromagrion conditum'
+  'Coenagrion.resolutum' -> 'Coenagrion resolutum'
+  'Cordulegaster.diastatops' -> 'Cordulegaster diastatops'
+  'Cordulia.shurtleffii' -> 'Cordulia shurtleffii'
+  'Didymops.transversa' -> 'Didymops transversa'
+  'Dorocordulia.lepida' -> 'Dorocordulia lepida'
+  'Dorocordulia.libera' -> 'Dorocordulia libera'
+  'Dromogomphus.spinosus' -> 'Dromogomphus spinosus'
+  'Enallagma.annexum' -> 'Enallagma annexum'
+  'Enallagma.antennatum' -> 'Enallagma antennatum'
+  'Enallagma.aspersum' -> 'Enallagma aspersum'
+  'Enallagma.boreale' -> 'Enallagma boreale'
+  'Enallagma.carunculatum' -> 'Enallagma carunculatum'
+  'Enallagma.civile' -> 'Enallagma civile'
+  'Enallagma.durum' -> 'Enallagma durum'
+  'Enallagma.ebrium' -> 'Enallagma ebrium'
+  'Enallagma.exsulans' -> 'Enallagma exsulans'
+  'Enallagma.geminatum' -> 'Enallagma geminatum'
+  'Enallagma.hageni' -> 'Enallagma hageni'
+  'Enallagma.laterale' -> 'Enallagma laterale'
+  'Enallagma.signatum' -> 'Enallagma signatum'
+  'Enallagma.traviatum' -> 'Enallagma traviatum'
+  'Enallagma.vernale' -> 'Enallagma vernale'
+  'Enallagma.vesperum' -> 'Enallagma vesperum'
+  'Epiaeschna.heros' -> 'Epiaeschna heros'
+  'Epitheca.canis' -> 'Epitheca canis'
+  'Epitheca.cynosura' -> 'Epitheca cynosura'
+  'Epitheca.princeps' -> 'Epitheca princeps'
+  'Epitheca.spinigera' -> 'Epitheca spinigera'
+  'Erythemis.simplicicollis' -> 'Erythemis simplicicollis'
+  'Gomphaeschna.furcillata' -> 'Gomphaeschna furcillata'
+  'Gomphus.abbreviatus' -> 'Gomphus abbreviatus'
+  'Gomphus.adelphus' -> 'Gomphus adelphus'
+  'Gomphus.borealis' -> 'Gomphus borealis'
+  'Gomphus.descriptus' -> 'Gomphus descriptus'
+  'Gomphus.exilis' -> 'Gomphus exilis'
+  'Gomphus.lividus' -> 'Gomphus lividus'
+  'Gomphus.quadricolor' -> 'Gomphus quadricolor'
+  'Gomphus.spicatus' -> 'Gomphus spicatus'
+  'Hagenius.brevistylus' -> 'Hagenius brevistylus'
+  'Helocordulia.uhleri' -> 'Helocordulia uhleri'
+  'Hetaerina.americana' -> 'Hetaerina americana'
+  'Ischnura.hastata' -> 'Ischnura hastata'
+  'Ischnura.kellicotti' -> 'Ischnura kellicotti'
+  'Ischnura.posita' -> 'Ischnura posita'
+  'Ischnura.verticalis' -> 'Ischnura verticalis'
+  'Ladona.julia' -> 'Ladona julia'
+  'Lanthus.parvulus' -> 'Lanthus parvulus'
+  'Lanthus.vernalis' -> 'Lanthus vernalis'
+  'Lestes.congener' -> 'Lestes congener'
+  'Lestes.disjunctus' -> 'Lestes disjunctus'
+  'Lestes.dryas' -> 'Lestes dryas'
+  'Lestes.eurinus' -> 'Lestes eurinus'
+  'Lestes.forcipatus' -> 'Lestes forcipatus'
+  'Lestes.inaequalis' -> 'Lestes inaequalis'
+  'Lestes.rectangularis' -> 'Lestes rectangularis'
+  'Lestes.unguiculatus' -> 'Lestes unguiculatus'
+  'Lestes.vigilax' -> 'Lestes vigilax'
+  'Leucorrhinia.frigida' -> 'Leucorrhinia frigida'
+  'Leucorrhinia.glacialis' -> 'Leucorrhinia glacialis'
+  'Leucorrhinia.hudsonica' -> 'Leucorrhinia hudsonica'
+  'Leucorrhinia.intacta' -> 'Leucorrhinia intacta'
+  'Leucorrhinia.proxima' -> 'Leucorrhinia proxima'
+  'Libellula.cyanea' -> 'Libellula cyanea'
+  'Libellula.incesta' -> 'Libellula incesta'
+  'Libellula.luctuosa' -> 'Libellula luctuosa'
+  'Libellula.pulchella' -> 'Libellula pulchella'
+  'Libellula.quadrimaculata' -> 'Libellula quadrimaculata'
+  'Macromia.illinoiensis' -> 'Macromia illinoiensis'
+  'Nannothemis.bella' -> 'Nannothemis bella'
+  'Nehalennia.gracilis' -> 'Nehalennia gracilis'
+  'Nehalennia.irene' -> 'Nehalennia irene'
+  'Neurocordulia.yamaskanensis' -> 'Neurocordulia yamaskanensis'
+  'Ophiogomphus.aspersus' -> 'Ophiogomphus aspersus'
+  'Ophiogomphus.carolus' -> 'Ophiogomphus carolus'
+  'Ophiogomphus.mainensis' -> 'Ophiogomphus mainensis'
+  'Ophiogomphus.rupinsulensis' -> 'Ophiogomphus rupinsulensis'
+  'Pachydiplax.longipennis' -> 'Pachydiplax longipennis'
+  'Pantala.flavescens' -> 'Pantala flavescens'
+  'Pantala.hymenaea' -> 'Pantala hymenaea'
+  'Perithemis.tenera' -> 'Perithemis tenera'
+  'Plathemis.lydia' -> 'Plathemis lydia'
+  'Rhionaeschna.mutata' -> 'Rhionaeschna mutata'
+  'Somatochlora.albicincta' -> 'Somatochlora albicincta'
+  'Somatochlora.cingulata' -> 'Somatochlora cingulata'
+  'Somatochlora.elongata' -> 'Somatochlora elongata'
+  'Somatochlora.forcipata' -> 'Somatochlora forcipata'
+  'Somatochlora.franklini' -> 'Somatochlora franklini'
+  'Somatochlora.kennedyi' -> 'Somatochlora kennedyi'
+  'Somatochlora.minor' -> 'Somatochlora minor'
+  'Somatochlora.tenebrosa' -> 'Somatochlora tenebrosa'
+  'Somatochlora.walshii' -> 'Somatochlora walshii'
+  'Stylogomphus.albistylus' -> 'Stylogomphus albistylus'
+  'Stylurus.scudderi' -> 'Stylurus scudderi'
+  'Stylurus.spiniceps' -> 'Stylurus spiniceps'
+  'Sympetrum.costiferum' -> 'Sympetrum costiferum'
+  'Sympetrum.danae' -> 'Sympetrum danae'
+  'Sympetrum.internum' -> 'Sympetrum internum'
+  'Sympetrum.obtrusum' -> 'Sympetrum obtrusum'
+  'Sympetrum.semicinctum' -> 'Sympetrum semicinctum'
+  'Sympetrum.vicinum' -> 'Sympetrum vicinum'
+  'Tramea.carolina' -> 'Tramea carolina'
+  'Tramea.lacerata' -> 'Tramea lacerata'
+  'Williamsonia.fletcheri' -> 'Williamsonia fletcheri'
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'Cordulegaster.maculata': no ground-truth name denotes this organism
+  'Libellula.semifasciata': no ground-truth name denotes this organism
+  'Somatochlora.williamsoni': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Flight season end' -> 'flight season'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1305
+  missed (FN)         : 134
+  spurious, in scope  : 174   <- GT covers this trait: real errors
+  spurious, out of scope: 258   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.751 / 0.907 / 0.822   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.882 / 0.907 / 0.894   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.907   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            258
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord              1305   1305  1.000
+  measurementMethod             0   1051  0.000  <-- low
+  measurementUnit               0    236  0.000  <-- low
+  measurementStatistic        907   1305  0.695
+  measurementRemarks            0      0    n/a
+  sex                           0   1305  0.000  <-- low
+  lifeStage                  1305   1305  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1305  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 134 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              2
+  species+trait present, value differs      132
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '31/8-7/9'                   ->  '31/8'                       x3
+     '17/7-5/11'                  ->  '17/7'                       x2
+     '9/6-31/5'                   ->  '9/6'                        x2
+     'lake'                       ->  'ephemeral'                  x1
+     'brown'                      ->  'black'                      x1
+     'pigment'                    ->  'pruinescence'               x1
+  -> 6 substitutions explain 10 of 134 misses (7%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'body lengths'                     x1
+     'hindwing lengths'                 x1
+  -> 2 missing traits explain 2 of 134 misses (1%) — scattered; no single cause
+
+  full miss detail saved -> Cerini2023_misses.csv, Cerini2023_misses_summary.json (134 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  aquatic habitats                                119   122   Δ+3 (split?)
+  body colors                                     118   122   Δ+4 (split?)
+  body colortypes                                 118   122   Δ+4 (split?)
+  body lengths                                    120   123   Δ+3 (split?)
+  body patterns                                   119   122   Δ+3 (split?)
+  wing pigment color                               31    32   Δ+1 (split?)
+  wing pigment extent continuous                   28    29   Δ+1 (split?)
+  wing pigment extent discrete                     30    31   Δ+1 (split?)
+  flight mode                                     120   123   Δ+3 (split?)
+  flight season                                   126   129   Δ+3 (split?)
+  flight season start                               0   129   PRED-ONLY
+  mate guarding                                    69    70   Δ+1 (split?)
+  habitat openness                                105   108   Δ+3 (split?)
+  has wing pigment                                120   123   Δ+3 (split?)
+  hindwing lengths                                120   123   Δ+3 (split?)
+  wing pigment placement                           30    31   Δ+1 (split?)
+  wing pigment symmetry                            30    31   Δ+1 (split?)
+  species                                           0   129   PRED-ONLY
+  territoriality                                   36    38   Δ+2 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.882  0.907  0.894   1305   174   134   id+type+value
+             (258 more spurious row(s) set aside as out-of-scope; strict P would be 0.751)
+  tags        0.000  0.000  0.000      0  1479  1439   basis+id+type+value+stat+sex+stage
+             (258 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.894 vs previous)

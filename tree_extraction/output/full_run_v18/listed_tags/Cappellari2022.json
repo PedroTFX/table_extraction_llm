@@ -1,0 +1,979 @@
+{
+ "cells": {
+  "2": {},
+  "3": {},
+  "4": {},
+  "8": {}
+ },
+ "labels": {
+  "2": {},
+  "3": {},
+  "4": {},
+  "8": {}
+ },
+ "statistic": {
+  "2": {
+   "Flower color": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "Flower type": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models."
+    ]
+   },
+   "Corolla (mm)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.335,
+     "mean": 0.481,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.012,
+     "single observation": 0.165,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.262,
+       "b": 0.738
+      }
+     }
+    ],
+    "value": null,
+    "said": [
+     "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models."
+    ]
+   }
+  },
+  "3": {
+   "Proboscis (mm)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.014,
+     "mean": 0.983,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean",
+    "said": [
+     "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models.",
+     "Abbreviated explanatory variables are honeybee abundance (*Apis*, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), proboscis length category (Prob), body size category (Body), type of foraging range (For), and taxonomic family (Fam)."
+    ]
+   },
+   "Body (mm)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.04,
+     "mean": 0.957,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean",
+    "said": [
+     "Body size categories for wild pollinators were: smaller than the honey bee 15 mm.",
+     "For each network, we calculated the CWM resource overlap between wild pollinators and the honeybee for each trait category, e.g., for body size, we had one value of CWM resource overlap for wild pollinators smaller than the honeybee, one for wild pollinators similar in size, and one for wild pollinators larger than the honeybee."
+    ]
+   },
+   "Foraging": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.03,
+     "mean": 0.01,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.959,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models.",
+     "Abbreviated explanatory variables are honeybee abundance (*Apis*, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), proboscis length category (Prob), body size category (Body), type of foraging range (For), and taxonomic family (Fam)."
+    ]
+   }
+  },
+  "4": {
+   "Proboscis (mm)": {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.998,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SD",
+    "said": [
+     "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models.",
+     "Abbreviated explanatory variables are honeybee abundance (*Apis*, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), proboscis length category (Prob), body size category (Body), type of foraging range (For), and taxonomic family (Fam)."
+    ]
+   },
+   "Body (mm)": {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.999,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SD",
+    "said": [
+     "Body size categories for wild pollinators were: smaller than the honey bee 15 mm.",
+     "For each network, we calculated the CWM resource overlap between wild pollinators and the honeybee for each trait category, e.g., for body size, we had one value of CWM resource overlap for wild pollinators smaller than the honeybee, one for wild pollinators similar in size, and one for wild pollinators larger than the honeybee."
+    ]
+   },
+   "C species (%)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.017,
+     "mean": 0.071,
+     "mean ± SD": 0.102,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.016,
+     "mode": 0.783,
+     "single observation": 0.0,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.902,
+       "b": 0.098
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.261,
+       "b": 0.739
+      }
+     }
+    ],
+    "value": null,
+    "said": [
+     "However, this operation can potentially create artificial species assemblages, i.e., cumulative communities composed of species observed in different days, weeks or seasons, often with non-overlapping phenology (CaraDonna et al.",
+     "Using single visit networks, we aimed at exploring the realized interactions between co-occurring individuals of honeybees and wild pollinators, rather than achieving high sampling completeness of pollinator species or interactions."
+    ]
+   },
+   "NC species (%)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.01,
+     "mean": 0.043,
+     "mean ± SD": 0.068,
+     "mean ± SE": 0.004,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.225,
+     "mode": 0.634,
+     "single observation": 0.001,
+     "unknown": 0.009
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.086,
+       "b": 0.914
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.078,
+       "b": 0.922
+      }
+     }
+    ],
+    "value": "count",
+    "said": [
+     "However, this operation can potentially create artificial species assemblages, i.e., cumulative communities composed of species observed in different days, weeks or seasons, often with non-overlapping phenology (CaraDonna et al.",
+     "Using single visit networks, we aimed at exploring the realized interactions between co-occurring individuals of honeybees and wild pollinators, rather than achieving high sampling completeness of pollinator species or interactions."
+    ]
+   }
+  },
+  "8": {
+   "Prob": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.996,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Abbreviated explanatory variables are honeybee abundance (*Apis*, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), proboscis length category (Prob), body size category (Body), type of foraging range (For), and taxonomic family (Fam)."
+    ]
+   }
+  }
+ },
+ "captions": {
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.036,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.009,
+     "not": 0.953
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.0,
+     "worker": 0.003,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.996
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.032,
+     "LivingSpecimen": 0.023,
+     "HumanObservation": 0.012,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.003,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.928
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.038,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.003,
+     "not": 0.957
+    },
+    "value": null
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.206,
+     "female": 0.03,
+     "male": 0.003,
+     "unknown": 0.008,
+     "not": 0.753
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.856,
+       "b": 0.144
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.081,
+       "b": 0.919
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.115,
+      "not": 0.885
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.001,
+     "worker": 0.045,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.95
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.934,
+     "LivingSpecimen": 0.011,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.048
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.877,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.004,
+     "not": 0.118
+    },
+    "value": "adult"
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.334,
+     "female": 0.007,
+     "male": 0.001,
+     "unknown": 0.009,
+     "not": 0.65
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.932,
+       "b": 0.068
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.042,
+       "b": 0.958
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.259,
+      "not": 0.741
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.362,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.635
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.931,
+       "b": 0.069
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.01,
+       "b": 0.99
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.188,
+      "not": 0.812
+     }
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.974,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.019
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.905,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.003,
+     "not": 0.089
+    },
+    "value": "adult"
+   }
+  },
+  "8": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.084,
+     "female": 0.005,
+     "male": 0.006,
+     "unknown": 0.007,
+     "not": 0.898
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.011,
+     "worker": 0.012,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.97
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.032,
+     "HumanObservation": 0.032,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.007,
+     "Taxon": 0.0,
+     "not": 0.923
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.246,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.034,
+     "not": 0.717
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.682,
+       "b": 0.318
+      }
+     }
+    ],
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "HumanObservation",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "supplementary material",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "2": {
+   "long": false,
+   "traits": {
+    "Flower color": {
+     "said": [],
+     "value": null
+    },
+    "Flower type": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.917,
+      "literature": 0.083
+     },
+     "said": [
+      "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models."
+     ],
+     "value": "measured"
+    },
+    "Corolla (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.94,
+      "literature": 0.06
+     },
+     "said": [
+      "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models.",
+      "Flower corolla length ranged from 0.05 mm of open disc flowers to 33 mm of Calystegia sepium (L.) R."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Proboscis (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.99,
+      "literature": 0.01
+     },
+     "said": [
+      "In particular, central-place foragers of family Apidae with proboscis length similar to the honeybee exhibited the highest resource overlap.",
+      "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models."
+     ],
+     "value": "measured"
+    },
+    "Body (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.993,
+      "literature": 0.007
+     },
+     "said": [
+      "Body size categories for wild pollinators were: smaller than the honey bee 15 mm.",
+      "For each network, we calculated the CWM resource overlap between wild pollinators and the honeybee for each trait category, e.g., for body size, we had one value of CWM resource overlap for wild pollinators smaller than the honeybee, one for wild pollinators similar in size, and one for wild pollinators larger than the honeybee."
+     ],
+     "value": "measured"
+    },
+    "Foraging": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.952,
+      "literature": 0.048
+     },
+     "said": [
+      "**Keywords** Apis mellifera · Competition · Foraging behaviour · Plant–pollinator networks · Trait similarity",
+      "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Proboscis (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.987,
+      "literature": 0.013
+     },
+     "said": [
+      "In particular, central-place foragers of family Apidae with proboscis length similar to the honeybee exhibited the highest resource overlap.",
+      "**Table S1** Latitude, longitude, elevation (m a.s.l.), recorded air temperature (°C), number of flowering plant species (Plant rich), number of pollinator species (Poll rich), abundance of honeybees (Honeybee ab), and abundance of wild pollinators (Wild poll ab) for each sampling site **Table S2** Functional traits of flowering plant species: flower colour (six classes: blue, brown, pink/purple, red, white, yellow/orange), flower type (nine classes: bell/funnel/lip, brush, hidden disc, open disc, flag, flower head, NA, pollen, and stalk disc flower), and flower corolla length in mm **Table S3** Traits of pollinator species: taxonomic family, proboscis length in mm (mean value of the measured specimens), body size in mm (mean value of the measured specimens), and type of foraging range (*C* central-place forager, *NC* non-central-place forager) **Table S4** Traits of pollinator families: number of collected specimens (N), proboscis length in mm (mean and SD values of the measured specimens), body size in mm (mean and SD values of the measured specimens), and percentage of central and non-central forager species (*C* central-place foragers, *NC* non-central-place foragers) **Table S5** Summary of the six global models."
+     ],
+     "value": "measured"
+    },
+    "Body (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.99,
+      "literature": 0.01
+     },
+     "said": [
+      "Body size categories for wild pollinators were: smaller than the honey bee 15 mm.",
+      "For each network, we calculated the CWM resource overlap between wild pollinators and the honeybee for each trait category, e.g., for body size, we had one value of CWM resource overlap for wild pollinators smaller than the honeybee, one for wild pollinators similar in size, and one for wild pollinators larger than the honeybee."
+     ],
+     "value": "measured"
+    },
+    "C species (%)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.97,
+      "literature": 0.03
+     },
+     "said": [
+      "However, this operation can potentially create artificial species assemblages, i.e., cumulative communities composed of species observed in different days, weeks or seasons, often with non-overlapping phenology (CaraDonna et al.",
+      "Using single visit networks, we aimed at exploring the realized interactions between co-occurring individuals of honeybees and wild pollinators, rather than achieving high sampling completeness of pollinator species or interactions."
+     ],
+     "value": "measured"
+    },
+    "NC species (%)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.981,
+      "literature": 0.019
+     },
+     "said": [
+      "However, this operation can potentially create artificial species assemblages, i.e., cumulative communities composed of species observed in different days, weeks or seasons, often with non-overlapping phenology (CaraDonna et al.",
+      "Using single visit networks, we aimed at exploring the realized interactions between co-occurring individuals of honeybees and wild pollinators, rather than achieving high sampling completeness of pollinator species or interactions."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "8": {
+   "long": false,
+   "traits": {
+    "Prob": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.94,
+      "literature": 0.06
+     },
+     "said": [
+      "Abbreviated explanatory variables are honeybee abundance (*Apis*, ln-transformed), temperature (Temp), standardized functional richness of plant community (FRic), functional dispersion of plant community (FDis), trait similarity between wild pollinator community and the honeybee (TSim), proboscis length category (Prob), body size category (Body), type of foraging range (For), and taxonomic family (Fam)."
+     ],
+     "value": "measured"
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.985,
+   "compiled": 0.015
+  },
+  "value": "own"
+ },
+ "rows": {
+  "2": " Each of its 262 species takes one row.",
+  "3": " Each of its 325 species takes one row.",
+  "4": " Each of its 15 species takes one row.",
+  "8": ""
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [
+   {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.001,
+     "worker": 0.563,
+     "minor worker": 0.003,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.43
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.97,
+       "b": 0.03
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.03,
+       "b": 0.97
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.161,
+      "not": 0.839
+     }
+    },
+    "quote": "central-place foragers of family Apidae with proboscis length similar to the honeybee exhibited the highest resource overlap.",
+    "value": null
+   }
+  ],
+  "basisOfRecord": [
+   {
+    "choice": "HumanObservation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.986,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.005
+    },
+    "quote": "Here, we observed plant–pollinator interactions in 51 grasslands, and we measured functional traits of both plants and pollinators.",
+    "value": "HumanObservation"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.798,
+     "LivingSpecimen": 0.009,
+     "HumanObservation": 0.061,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.092,
+     "Taxon": 0.0,
+     "not": 0.036
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.945,
+       "b": 0.055
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.545,
+       "b": 0.455
+      }
+     }
+    ],
+    "quote": "Sampling occurred between 9:00 and 17:00 only with air temperature > 15 °C, low wind, no rain, and cloud coverage 7 mm.",
+    "value": null
+   }
+  ],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.013,
+     "mean": 0.057,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.017,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.084,
+     "analysis": 0.811
+    },
+    "quote": "In particular, central-place foragers of family Apidae with proboscis length similar to the honeybee exhibited the highest resource overlap.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.997,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.0,
+     "analysis": 0.0
+    },
+    "quote": "proboscis length in mm (mean value of the measured specimens)",
+    "value": "mean"
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.997,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.0,
+     "analysis": 0.0
+    },
+    "quote": "body size in mm (mean value of the measured specimens)",
+    "value": "mean"
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
+}
