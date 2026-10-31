@@ -1,0 +1,174 @@
+  [semantic] left unmatched: 'Cornus spp. and Ceanothus americanus (Southern ON)' vs 'larval host plant' (llm said different traits)
+  [semantic] left unmatched: 'Various Asteraceae' vs 'larval host plant' (llm said different traits)
+  [semantic] left unmatched: 'Viburnum spp., Cornus spp., Prunus spp., Spiraea alba, Vaccinium spp., Rhododendron groenlandicum, Celastrus scandens' vs 'larval host plant' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/McDonald2021/McDonald2021.xlsx  (446 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/McDonald2021/McDonald2021.csv  (9374 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (69)
+  'Aceraceae': no ground-truth name denotes this organism
+  'Alismataceae': no ground-truth name denotes this organism
+  'Anacardiaceae': no ground-truth name denotes this organism
+  'Apiaceae': no ground-truth name denotes this organism
+  'Apocynaceae': no ground-truth name denotes this organism
+  'Araliaceae': no ground-truth name denotes this organism
+  'Asteraceae': no ground-truth name denotes this organism
+  'Balsaminaceae': no ground-truth name denotes this organism
+  'Betulaceae': no ground-truth name denotes this organism
+  'Boraginaceae': no ground-truth name denotes this organism
+  'Brassicaceae': no ground-truth name denotes this organism
+  'Campanulaceae': no ground-truth name denotes this organism
+  'Caprifoliaceae': no ground-truth name denotes this organism
+  'Caryophyllaceae': no ground-truth name denotes this organism
+  'Celastraceae': no ground-truth name denotes this organism
+  'Chenopodiaceae': no ground-truth name denotes this organism
+  'Convolvulaceae': no ground-truth name denotes this organism
+  'Cornaceae': no ground-truth name denotes this organism
+  'Cupressaceae': no ground-truth name denotes this organism
+  'Cuscutaceae': no ground-truth name denotes this organism
+  'Cyperaceae': no ground-truth name denotes this organism
+  'Dennstaedtiaceae': no ground-truth name denotes this organism
+  'Dryopteridaceae': no ground-truth name denotes this organism
+  'Equisetaceae': no ground-truth name denotes this organism
+  'Ericaceae': no ground-truth name denotes this organism
+  'Fabaceae': no ground-truth name denotes this organism
+  'Fagaceae': no ground-truth name denotes this organism
+  'Fumariaceae': no ground-truth name denotes this organism
+  'Geraniaceae': no ground-truth name denotes this organism
+  'Grossulariaceae': no ground-truth name denotes this organism
+  'Hypericaceae': no ground-truth name denotes this organism
+  'Juncaceae': no ground-truth name denotes this organism
+  'Lamiaceae': no ground-truth name denotes this organism
+  'Liliaceae': no ground-truth name denotes this organism
+  'Lycopodiaceae': no ground-truth name denotes this organism
+  'Oleaceae': no ground-truth name denotes this organism
+  'Onagraceae': no ground-truth name denotes this organism
+  'Ophioglossaceae': no ground-truth name denotes this organism
+  'Orchidaceae': no ground-truth name denotes this organism
+  'Oxalidaceae': no ground-truth name denotes this organism
+  'Pinaceae': no ground-truth name denotes this organism
+  'Plantaginaceae': no ground-truth name denotes this organism
+  'Poaceae': no ground-truth name denotes this organism
+  'Polemoniaceae': no ground-truth name denotes this organism
+  'Polygonaceae': no ground-truth name denotes this organism
+  'Polypodiaceae': no ground-truth name denotes this organism
+  'Portulacaceae': no ground-truth name denotes this organism
+  'Primulaceae': no ground-truth name denotes this organism
+  'Pyrolaceae': no ground-truth name denotes this organism
+  'Ranunculaceae': no ground-truth name denotes this organism
+  'Rosaceae': no ground-truth name denotes this organism
+  'Rubiaceae': no ground-truth name denotes this organism
+  'Salicaceae': no ground-truth name denotes this organism
+  'Santalaceae': no ground-truth name denotes this organism
+  'Saxifragaceae': no ground-truth name denotes this organism
+  'Scrophulariaceae': no ground-truth name denotes this organism
+  'Selaginellaceae': no ground-truth name denotes this organism
+  'Smilacaceae': no ground-truth name denotes this organism
+  'Solanaceae': no ground-truth name denotes this organism
+  'Sparganiaceae': no ground-truth name denotes this organism
+  'Taxaceae': no ground-truth name denotes this organism
+  'Tiliaceae': no ground-truth name denotes this organism
+  'Typhaceae': no ground-truth name denotes this organism
+  'Ulmaceae': no ground-truth name denotes this organism
+  'Urticaceae': no ground-truth name denotes this organism
+  'Verbenaceae': no ground-truth name denotes this organism
+  'Violaceae': no ground-truth name denotes this organism
+  'Vitaceae': no ground-truth name denotes this organism
+  'family': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'larval host plants ( Acorn & Sheldon, 2017): larval host plants (Hall et al., 2014;):' -> 'larval host plant'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 34
+  missed (FN)         : 412
+  spurious, in scope  : 282   <- GT covers this trait: real errors
+  spurious, out of scope: 9058   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.004 / 0.076 / 0.007   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.108 / 0.076 / 0.089   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.076   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           9058
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                34     34  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0     34  0.000  <-- low
+  measurementStatistic         34     34  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     34  0.000  <-- low
+  lifeStage                     0     34  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a   +34 where GT blank
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     34  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 412 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            412
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'larval host plant'                x412
+  -> 1 missing trait explains 412 of 412 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> McDonald2021_misses.csv, McDonald2021_misses_summary.json (412 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  carex spp. #2                                     0   282   PRED-ONLY
+  (no name, column 2)                               0   282   PRED-ONLY
+  poaceae #2                                        0   282   PRED-ONLY
+  ribes spp. #2                                     0   282   PRED-ONLY
+  (no name, column 23)                              0   282   PRED-ONLY
+  (no name, column 29)                              0   282   PRED-ONLY
+  (no name, column 3)                               0   282   PRED-ONLY
+  poaceae #3                                        0   282   PRED-ONLY
+  (no name, column 4)                               0   282   PRED-ONLY
+  poaceae #4                                        0   282   PRED-ONLY
+  (no name, column 5)                               0   282   PRED-ONLY
+  poaceae #5                                        0   282   PRED-ONLY
+  (no name, column 6)                               0   282   PRED-ONLY
+  poaceae #6                                        0   282   PRED-ONLY
+  poaceae #7                                        0   282   PRED-ONLY
+  (no name, column 8)                               0   282   PRED-ONLY
+  poaceae #8                                        0   282   PRED-ONLY
+  (no name, column 9)                               0   282   PRED-ONLY
+  viburnum spp., cornus spp., prunus spp., spiraea alba, vaccinium spp., rhododendron groenlandicum, celastrus scandens    0   282   PRED-ONLY
+  prunus spp., amelanchier alnifolia, quercus spp., salix spp., populus spp., vaccinium spp. rosaceae, including prunus spp., crataegus spp., and vaccinium spp    0   282   PRED-ONLY
+  cornus spp. and ceanothus americanus (southern on)    0   282   PRED-ONLY
+  our only carnivorous butterfly--feeds on aphids    0   282   PRED-ONLY
+  asclepias spp. asclepias spp                      0   282   PRED-ONLY
+  various asteraceae                                0   282   PRED-ONLY
+  populus spp., salix spp., and betula spp          0   282   PRED-ONLY
+  salix spp., populus spp., and betula spp          0   282   PRED-ONLY
+  cirsium spp. and carduus spp                      0   282   PRED-ONLY
+  carex spp                                         0   282   PRED-ONLY
+  larval host plant                               412   282   Δ-130 (split?)
+  poaceae                                           0   282   PRED-ONLY
+  species                                           0    34   PRED-ONLY
+  urtica spp                                        0   282   PRED-ONLY
+  viola spp                                         0   282   PRED-ONLY
+  urticaceae                                        0   282   PRED-ONLY
+  wingspan                                         34    34   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.108  0.076  0.089     34   282   412   id+type+value
+             (9058 more spurious row(s) set aside as out-of-scope; strict P would be 0.004)
+  tags        0.000  0.000  0.000      0   316   446   basis+id+type+value+stat+sex+stage
+             (9058 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.089 vs previous)

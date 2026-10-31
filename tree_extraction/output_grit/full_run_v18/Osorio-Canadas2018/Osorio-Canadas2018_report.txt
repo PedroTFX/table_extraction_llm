@@ -1,0 +1,95 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Osorio-Canadas2018/Osorio-Canadas2018.xlsx  (234 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Osorio-Canadas2018/Osorio-Canadas2018.csv  (230 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Passaloecus spp (mostly corniger, some eremita & gracilis)' -> 'Passaloecus spp'
+  'Trypoxylon spp (mostly clavicerum, some minus)' -> 'Trypoxylon spp'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Hybomischos (=Perithous) septemcinctorius': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body size length (mm)' -> 'Body Length'
+  'Parasitic behaviour' -> 'Parasitic behavior'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 94
+  missed (FN)         : 140
+  spurious, in scope  : 109   <- GT covers this trait: real errors
+  spurious, out of scope: 27   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.409 / 0.402 / 0.405   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.463 / 0.402 / 0.430   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.402   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             27
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                72     94  0.766
+  measurementMethod             0     27  0.000  <-- low
+  measurementUnit               0      4  0.000  <-- low
+  measurementStatistic         94     94  1.000
+  measurementRemarks            0     90  0.000  <-- low
+  sex                           0     94  0.000  <-- low
+  lifeStage                    36     94  0.383  <-- low
+  caste                         0      4  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     94  0.000  <-- low
+  samplingProtocol              0     94  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     94  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 140 MISSED ROWS MISSED
+  species not in prediction                   5
+  species present, trait missing             27
+  species+trait present, value differs      108
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'immature'                   ->  'inmature'                   x14
+     'prepupa'                    ->  'prepupa [2]'                x6
+     'prepupa'                    ->  'prepupa [2,10-12]'          x5
+     'scavanger'                  ->  'pred/scavenger'             x4
+     'predator'                   ->  'pred/scavenger'             x4
+     'univoltine'                 ->  'univoltinev [4]'            x4
+  -> 6 substitutions explain 37 of 140 misses (26%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Hybomischos (=Perithous)'          ~0.90~  pred 'Hybomischos (=Perithous) septemcinctorius'   x5
+  -> 1 species mismatch explains 5 of 140 misses (4%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Intertegular Span'                x27
+  -> 1 missing trait explains 27 of 140 misses (19%) — scattered; no single cause
+
+  full miss detail saved -> Osorio-Canadas2018_misses.csv, Osorio-Canadas2018_misses_summary.json (140 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  parasitic behavior                               23    19   Δ-4 (split?)
+  body length                                      19    19   
+  body size (intertegular span,mm)                  0    27   PRED-ONLY
+  nest-building material                           27    27   
+  larval diet                                      27    27   
+  gregariousness                                   19    19   
+  intertegular span                                27     0   GT-ONLY
+  voltinism                                        46    46   
+  wintering stage                                  46    46   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.463  0.402  0.430     94   109   140   id+type+value
+             (27 more spurious row(s) set aside as out-of-scope; strict P would be 0.409)
+  tags        0.000  0.000  0.000      0   203   234   basis+id+type+value+stat+sex+stage
+             (27 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.430 vs previous)

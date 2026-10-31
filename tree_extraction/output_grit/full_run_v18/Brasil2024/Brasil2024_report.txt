@@ -1,0 +1,58 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Brasil2024/Brasil2024.xlsx  (25 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Brasil2024/Brasil2024.csv  (25 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Functional traits Body size' -> 'Body size'
+  'Functional traits Diet' -> 'Diet'
+  'Functional traits Nesting' -> 'Nesting'
+  'Functional traits Sociality' -> 'Sociality'
+  'Functional traits Voltinism' -> 'Voltinism'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 25
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                25     25  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic         25     25  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     25  0.000  <-- low
+  lifeStage                     0     25  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     25  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     25  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     25  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body size                                         5     5   
+  diet                                              5     5   
+  nesting                                           5     5   
+  sociality                                         5     5   
+  voltinism                                         5     5   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     25     0     0   id+type+value
+  tags        0.000  0.000  0.000      0    25    25   basis+id+type+value+stat+sex+stage
+             (F1 -1.000 vs previous)

@@ -1,0 +1,178 @@
+  [semantic] left unmatched: 'Activity, early (counts)' vs 'Activity, ealy (counts)' (llm said different traits)
+  [semantic] left unmatched: 'Activity, early (counts)' vs 'Number of nonfunctional ovarioles, early ' (llm said different traits)
+  [semantic] left unmatched: 'Activity, early (counts)' vs 'Number of ovarioles, early ' (llm said different traits)
+  [semantic] left unmatched: 'Difference HAM vs. low adult mortality young females/ old females' vs 'Activity, ealy (counts)' (llm said different traits)
+  [semantic] left unmatched: 'Difference HAM vs. low adult mortality young females/ old females' vs 'Mass-specific metabolic rate, early' (llm said different traits)
+  [semantic] left unmatched: 'Difference HAM vs. low adult mortality young females/ old females' vs 'Mass-specific metabolic rate, late' (llm said different traits)
+  [semantic] left unmatched: 'Effect of experimental evolution' vs 'Fate weight desiccation, early' (llm said different traits)
+  [semantic] left unmatched: 'Effect of experimental evolution' vs 'Fate weight desiccation, late' (llm said different traits)
+  [semantic] left unmatched: 'Effect of experimental evolution' vs 'Number of functional ovarioles, early' (llm said different traits)
+  [semantic] left unmatched: 'Fat weight desiccation, early (μg)' vs 'Fate weight desiccation, early' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Grasser2000/Grasser2000.xlsx  (82 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Grasser2000/Grasser2000.csv  (394 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 33 pair(s))
+  'Desiccation time, early (min)' -> 'Desiccation time, early'
+  'Desiccation time, late (min)' -> 'Desiccation time, late '
+  'Development time (h)' -> 'Development time '
+  'Dry weight desiccation, early (μg)' -> 'Dry weight desiccation, early '
+  'Dry weight desiccation, late (μg)' -> 'Dry weight desiccation, late'
+  'Dry weight starvation, early (μg)' -> 'Dry weight starvation, early'
+  'Dry weight, early (μg)' -> 'Dry weight, early '
+  'Dry weight, larvae (μg)' -> 'Dry weight, larvae '
+  'Dry weight, late (μg)' -> 'Dry weight, late '
+  'Early fecundity (no./eggs)' -> 'Early fecundity'
+  'Fat weight starvation, early (μg)' -> 'Fat weight starvation, early'
+  'Fat weight, early (μg)' -> 'Fat weight, early'
+  'Fat weight, late (μg)' -> 'Fat weight, late'
+  'Fresh weight (μg)' -> 'Fresh-weight'
+  'Fresh-weight (μg)' -> 'Fresh-weight'
+  'Late fecundity (no./eggs)' -> 'Late fecundity'
+  'MSM' -> 'Mass-specific metabolic rate'
+  'MSM, early' -> 'Mass-specific metabolic rate, early'
+  'MSM, late' -> 'Mass-specific metabolic rate, late'
+  'No. functional, early' -> 'Number of functional ovarioles, early'
+  'No. functional, late' -> 'Number of functional ovarioles, late '
+  'No. ovarioles, early' -> 'Number of ovarioles, early '
+  'No. ovarioles, late' -> 'Number of ovarioles, late '
+  'Relative fat content desiccation, early' -> 'Relative fat content, desiccation, early'
+  'Relative fat content desiccation, late' -> 'Relative fat content, desiccation, late'
+  'Relative fat content starvation, early' -> 'Relative fat content, starvation, early'
+  'Residual weight desiccation, early (μg)' -> 'Residual weight desiccation, early '
+  'Residual weight desiccation, late (μg)' -> 'Residual weight desiccation, late '
+  'Residual weight starvation, early (μg)' -> 'Residual weight starvation, early '
+  'Residual weight, early (μg)' -> 'Residual weight, early '
+  'Residual weight, late (μg)' -> 'Residual weight, late'
+  'Starvation time, early (h)' -> 'Starvation time, early '
+  'dryweight HAM (mg)' -> 'Fate weight desiccation, late'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 70
+  missed (FN)         : 12
+  spurious, in scope  : 213   <- GT covers this trait: real errors
+  spurious, out of scope: 111   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.178 / 0.854 / 0.294   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.247 / 0.854 / 0.384   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.854   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            111
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                70     70  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0     42  0.000  <-- low
+  measurementStatistic          0     70  0.000  <-- low
+  measurementRemarks            0     66  0.000  <-- low
+  sex                          68     70  0.971
+  lifeStage                    68     70  0.971
+  caste                         0      0    n/a
+  sampleSizeValue              70     70  1.000
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     70  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     70  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 12 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             10
+  species+trait present, value differs        2
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '40 ± 5'                     ->  '0.37'                       x1
+     '50 ± 5'                     ->  '0.37'                       x1
+  -> 2 substitutions explain 2 of 12 misses (17%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Activity, ealy (counts)'          x2
+     'Fate weight desiccation, early'   x2
+     'Number of nonfunctional ovarioles, early ' x2
+     'Number of nonfunctional ovarioles, late ' x2
+     'Starvattion time, late'           x2
+  -> 5 missing traits explain 10 of 12 misses (83%) — systematic, not scattered
+
+  full miss detail saved -> Grasser2000_misses.csv, Grasser2000_misses_summary.json (12 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  activity, ealy (counts)                           2     0   GT-ONLY
+  activity, early (counts)                          0     8   PRED-ONLY
+  activity, late (counts)                           2     8   Δ+6 (split?)
+  difference ham vs. low adult mortality young females/ old females    0    16   PRED-ONLY
+  dryweight low adult mortality (mg)                0     3   PRED-ONLY
+  fatweight low adult mortality (mg)                0     3   PRED-ONLY
+  residual weight low adult mortality (mg)          0     3   PRED-ONLY
+  relative fat content, desiccation, early          2     8   Δ+6 (split?)
+  relative fat content, desiccation, late           2     8   Δ+6 (split?)
+  relative fat content, early                       2     8   Δ+6 (split?)
+  relative fat content, starvation, early           2     8   Δ+6 (split?)
+  relative fat content, late                        2     8   Δ+6 (split?)
+  dry weight desiccation, early                     2     8   Δ+6 (split?)
+  dry weight desiccation, late                      2     8   Δ+6 (split?)
+  fat weight desiccation, early (μg)                0     8   PRED-ONLY
+  fate weight desiccation, early                    2     0   GT-ONLY
+  residual weight desiccation, early                2     8   Δ+6 (split?)
+  desiccation time, early                           2     8   Δ+6 (split?)
+  fat weight desiccation, late (μg)                 0     8   PRED-ONLY
+  fate weight desiccation, late                     2     3   Δ+1 (split?)
+  residual weight desiccation, late                 2     8   Δ+6 (split?)
+  desiccation time, late                            2     8   Δ+6 (split?)
+  dry weight starvation, early                      2     8   Δ+6 (split?)
+  dry weight, early                                 2     8   Δ+6 (split?)
+  dry weight, larvae                                2     8   Δ+6 (split?)
+  dry weight, late                                  2     8   Δ+6 (split?)
+  fat weight starvation, early                      2     8   Δ+6 (split?)
+  fat weight, early                                 2     8   Δ+6 (split?)
+  early fecundity                                   2     8   Δ+6 (split?)
+  number of functional ovarioles, early             2     8   Δ+6 (split?)
+  mass-specific metabolic rate, early               2     8   Δ+6 (split?)
+  no. nonfunctional, early                          0     8   PRED-ONLY
+  number of nonfunctional ovarioles, early          2     0   GT-ONLY
+  number of ovarioles, early                        2     8   Δ+6 (split?)
+  residual weight starvation, early                 2     8   Δ+6 (split?)
+  residual weight, early                            2     8   Δ+6 (split?)
+  starvation time, early                            2     8   Δ+6 (split?)
+  effect of experimental evolution                  0    16   PRED-ONLY
+  fat weight, late                                  2     8   Δ+6 (split?)
+  fatweight ham (mg)                                0     3   PRED-ONLY
+  late fecundity                                    2     8   Δ+6 (split?)
+  fresh-weight                                      2     8   Δ+6 (split?)
+  number of functional ovarioles, late              2     8   Δ+6 (split?)
+  starvation time, late (h)                         0     8   PRED-ONLY
+  residual weight ham (mg)                          0     3   PRED-ONLY
+  mass-specific metabolic rate, late                2     8   Δ+6 (split?)
+  no. nonfunctional, late                           0     8   PRED-ONLY
+  number of nonfunctional ovarioles, late           2     0   GT-ONLY
+  number of ovarioles, late                         2     8   Δ+6 (split?)
+  residual weight, late                             2     8   Δ+6 (split?)
+  starvattion time, late                            2     0   GT-ONLY
+  mass-specific metabolic rate                      2     8   Δ+6 (split?)
+  development time                                  2     8   Δ+6 (split?)
+  trait                                             0    16   PRED-ONLY
+  viability (%)                                     2     8   Δ+6 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'fate weight desiccation, early'   vs pred 'fat weight desiccation, early (μg)' sim=0.96
+    gt 'activity, ealy (counts)'          vs pred 'activity, early (counts)'         sim=0.96
+    gt 'starvattion time, late'           vs pred 'starvation time, late (h)'        sim=0.86
+    gt 'number of nonfunctional ovarioles, early' vs pred 'no. nonfunctional, early'         sim=0.73
+    gt 'number of nonfunctional ovarioles, late' vs pred 'no. nonfunctional, late'          sim=0.70
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.247  0.854  0.384     70   213    12   id+type+value
+             (111 more spurious row(s) set aside as out-of-scope; strict P would be 0.178)
+  tags        0.000  0.000  0.000      0   283    82   basis+id+type+value+stat+sex+stage
+             (111 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.384 vs previous)

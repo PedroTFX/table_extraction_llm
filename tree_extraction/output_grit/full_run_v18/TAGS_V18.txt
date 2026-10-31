@@ -1,0 +1,49 @@
+listed tags of full_run_v18 vs full_run_v14 on the GT rows matched on species + trait + value
+core rows (species, trait, value) changed vs full_run_v14: Ambrozova2022, Araujo2021, Arnan2012, Arnan2014, Banaszak-Cibicka2018, Borges2021, Brant2021, Braschler2021, Bucher2024, Cecala2021, Cerini2023, Crabot2022, Dejean2019, Fiedler2021, Gathof2022, Guariento2020, Hendriks2013, Khayati2024, Kratschmer2019, McDonald2021, MiddletonWelling2018, Mirzaee2023, Noriega2023, Osorio-Canadas2018, Penick2017, Pereira2016, Pessoa2017, Scalercio2020, Schat2024, Silva2021, Steinert2020, Tielens2020, Tingting2023, Traylor2024, Vidal2023, Viza2023, Wallon2024, Wiescher2012, Wijas2021, Wilker2022, Zhao2024
+
+== all
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        82445   29014   23028    5986   53431       0  35.2%  79.4%     98% (10061) /   69% (18953)   0 (0 / 0)
+  caste                      11413    9817    4479     361    6573    4977  42.4%  92.5%     93% (4840) /    0% (0)   0 (0 / 0)
+  basisOfRecord              82445   74560   54085   20475    7885       0  90.4%  72.5%     75% (70107) /   37% (4028)   0 (0 / 0)
+  lifeStage                  82445   50362   34489   15873   32083       0  61.1%  68.5%     66% (31255) /   99% (13426)   0 (0 / 0)
+  measurementStatistic       82445   68801   56089   12712   13644       0  83.5%  81.5%     68% (33492) /   91% (597)   328 (18 / 115)
+
+== dev
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        17839    5215    4618     597   12624       0  29.2%  88.6%     99% (659) /   87% (4556)   0 (0 / 0)
+  caste                       4533    3129    1240     356    2937    1533  35.2%  77.7%     78% (1596) /    0% (0)   0 (0 / 0)
+  basisOfRecord              17839   17012   11546    5466     827       0  95.4%  67.9%     74% (14180) /   35% (2782)   0 (0 / 0)
+  lifeStage                  17839   15463   10104    5359    2376       0  86.7%  65.3%     60% (6607) /   99% (5736)   0 (0 / 0)
+  measurementStatistic       17839   17556   14835    2721     283       0  98.4%  84.5%     70% (7910) /    0% (0)   115 (0 / 115)
+
+== held_a
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        35566   15981   15933      48   19585       0  44.9%  99.7%     99% (6808) /  100% (9173)   0 (0 / 0)
+  caste                       4328    2521    2278       0    2050     243  52.6% 100.0%    100% (2278) /    0% (0)   0 (0 / 0)
+  basisOfRecord              35566   34397   31946    2451    1169       0  96.7%  92.9%     93% (34177) /   21% (142)   0 (0 / 0)
+  lifeStage                  35566   20486   13156    7330   15080       0  57.6%  64.2%     62% (17286) /   97% (2567)   0 (0 / 0)
+  measurementStatistic       35566   22535   20221    2314   13031       0  63.4%  89.7%     80% (10249) /  100% (396)   2 (2 / 0)
+
+== held_b
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                         1721     452     282     170    1269       0  26.3%  62.4%    100% (282) /    0% (170)   0 (0 / 0)
+  caste                        427     570     395       0      32     175  92.5% 100.0%    100% (395) /    0% (0)   0 (0 / 0)
+  basisOfRecord               1721    1583     938     645     138       0  92.0%  59.3%     61% (1548) /    0% (35)   0 (0 / 0)
+  lifeStage                   1721    1592    1466     126     129       0  92.5%  92.1%     99% (500) /  100% (973)   0 (0 / 0)
+  measurementStatistic        1721    1721    1463     258       0       0 100.0%  85.0%     72% (751) /    0% (0)   0 (0 / 0)
+
+== other
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        27319    7366    2195    5171   19953       0  27.0%  29.8%     95% (2312) /    0% (5054)   0 (0 / 0)
+  caste                       2125    3597     566       5    1554    3026  26.9%  99.1%     99% (571) /    0% (0)   0 (0 / 0)
+  basisOfRecord              27319   21568    9655   11913    5751       0  78.9%  44.8%     45% (20202) /   45% (1069)   0 (0 / 0)
+  lifeStage                  27319   12821    9763    3058   14498       0  46.9%  76.1%     82% (6862) /   99% (4150)   0 (0 / 0)
+  measurementStatistic       27319   26989   19570    7419     330       0  98.8%  72.5%     58% (14582) /   75% (201)   211 (16 / 0)
+
+the step's answers (captions and quotes) vs the paper's GT value, by the model's probability:
+  sex                    0.8–0.95: 12/24 right; via duels: 3/6 right; ≥ 0.95: 41/74 right
+  caste                  0.8–0.95: 10/11 right; via duels: 5/8 right; ≥ 0.95: 44/49 right
+  basisOfRecord          0.8–0.95: 112/204 right; via duels: 43/117 right; ≥ 0.95: 130/242 right
+  lifeStage              0.8–0.95: 144/179 right; via duels: 6/13 right; ≥ 0.95: 110/153 right
+  measurementStatistic   0.8–0.95: 13/43 right; via duels: 7/26 right; ≥ 0.95: 40/117 right

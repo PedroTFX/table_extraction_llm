@@ -1,0 +1,59 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Dejean2019/Dejean2019.xlsx  (16 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Dejean2019/Dejean2019.csv  (27 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Crematogaster stolli' -> 'Crematogaster stollii'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 16
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 11   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.593 / 1.000 / 0.744   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             11
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                16     16  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic         16     16  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     16  0.000  <-- low
+  lifeStage                    16     16  1.000
+  caste                         0     16  0.000  <-- low
+  sampleSizeValue              16     16  1.000
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     16  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     16  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1                                                 0     5   PRED-ONLY
+  3                                                 0     3   PRED-ONLY
+  4                                                 0     2   PRED-ONLY
+  5                                                 0     1   PRED-ONLY
+  nesting habits                                   16    16   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     16     0     0   id+type+value
+             (11 more spurious row(s) set aside as out-of-scope; strict P would be 0.593)
+  tags        0.000  0.000  0.000      0    16    16   basis+id+type+value+stat+sex+stage
+             (11 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)

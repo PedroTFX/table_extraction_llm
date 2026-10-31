@@ -1,0 +1,82 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Penick2017/Penick2017.xlsx  (76 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Penick2017/Penick2017.csv  (76 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Activity seasonLength (days)IQR (Julian date range)' -> 'Activity season length'
+  'Pupal development time (days) 20°C' -> 'Pupal development'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 14
+  missed (FN)         : 62
+  spurious, in scope  : 6   <- GT covers this trait: real errors
+  spurious, out of scope: 56   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.184 / 0.184 / 0.184   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.700 / 0.184 / 0.292   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.184   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             56
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                14     14  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0     14  0.000  <-- low
+  measurementStatistic         14     14  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     14  0.000  <-- low
+  lifeStage                    14     14  1.000
+  caste                         0     14  0.000  <-- low
+  sampleSizeValue               0      2  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     14  0.000  <-- low
+  samplingProtocol              0     14  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     14  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 62 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             14
+  species+trait present, value differs       48
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '11'                         ->  '27'                         x2
+     '12'                         ->  '30'                         x2
+     '9'                          ->  '29'                         x2
+     '12'                         ->  '32'                         x2
+     '95.5'                       ->  '95.5127.5-223'              x1
+     '101'                        ->  '101167-268'                 x1
+  -> 6 substitutions explain 10 of 62 misses (16%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Maximum critical temperature'     x14
+  -> 1 missing trait explains 14 of 62 misses (23%) — scattered; no single cause
+
+  full miss detail saved -> Penick2017_misses.csv, Penick2017_misses_summary.json (62 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  pupal development time (days) 23°c                0    14   PRED-ONLY
+  pupal development time (days) 26°c                0    14   PRED-ONLY
+  pupal development time (days) 29°c                0    14   PRED-ONLY
+  activity season length                            6     6   
+  ct max (°c)sd, n                                  0    14   PRED-ONLY
+  maximum critical temperature                     14     0   GT-ONLY
+  pupal development                                56    14   Δ-42 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.700  0.184  0.292     14     6    62   id+type+value
+             (56 more spurious row(s) set aside as out-of-scope; strict P would be 0.184)
+  tags        0.000  0.000  0.000      0    20    76   basis+id+type+value+stat+sex+stage
+             (56 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.292 vs previous)

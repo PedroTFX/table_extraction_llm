@@ -1,0 +1,118 @@
+{
+ "subject": {
+  "how": "gate one, one name",
+  "name": "Nicrophorus nepalensis"
+ },
+ "tables": {
+  "1": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "sampling",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.527,
+     "own": 0.473
+    }
+   }
+  },
+  "2": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "sampling",
+    "choice": "kind",
+    "probs": {
+     "kind": 0.896,
+     "own": 0.104
+    }
+   }
+  },
+  "5": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": "individual",
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "a",
+      "probs": {
+       "a": 0.995,
+       "b": 0.005
+      }
+     },
+     {
+      "a": "statistic",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     },
+     {
+      "a": "individual",
+      "b": "trait",
+      "choice": "a",
+      "probs": {
+       "a": 0.999,
+       "b": 0.001
+      }
+     },
+     {
+      "a": "definition",
+      "b": "individual",
+      "choice": "b",
+      "probs": {
+       "a": 0.0,
+       "b": 1.0
+      }
+     }
+    ]
+   }
+  },
+  "6": {
+   "use": true,
+   "own": {
+    "by": "species step"
+   },
+   "rows": {
+    "choice": null,
+    "duels": [
+     {
+      "a": "individual",
+      "b": "group",
+      "choice": "b",
+      "probs": {
+       "a": 0.266,
+       "b": 0.734
+      }
+     }
+    ]
+   }
+  },
+  "7": {
+   "use": false,
+   "own": {
+    "by": "species step"
+   },
+   "kind_clash": {
+    "kind": "sampling",
+    "choice": "own",
+    "probs": {
+     "kind": 0.353,
+     "own": 0.647
+    }
+   }
+  }
+ },
+ "endings": 0
+}

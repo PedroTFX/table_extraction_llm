@@ -1,0 +1,141 @@
+  [semantic] matched by values: 'wingsTSM' -> 'Wingspan'
+  [semantic] matched by values: 'hp' -> 'Number of Hostplant Genera'
+  [semantic] matched by values: 'Volt' -> 'Voltinism'
+  [semantic] matched by values: 'TSD' -> 'Overall Thermal Tolerance'
+  [semantic] matched by values: 'T95L' -> 'Lower Thermal Tolerance'
+  [semantic] matched by values: 'PSD' -> 'Overall Percipitation Tolerance'
+  [semantic] matched by values: 'P95L' -> 'Lower Percipitation Tolerance'
+  [semantic] matched by values: 'P95H' -> 'Higher Percipitation Tolerance'
+  [semantic] matched by values: 'Flight Months' -> 'Length of the flight period'
+  [semantic] matched by values: 'T95H' -> 'Higher Thermal Tolerance'
+  [semantic] left unmatched: 'Last Month' vs 'Month when adults fly' (llm said different traits)
+  [semantic] left unmatched: 'Pmean' vs 'Month when adults fly' (llm said different traits)
+  [semantic] left unmatched: 'Tmean' vs 'Month when adults fly' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Scalercio2020/Scalercio2020.xlsx  (1158 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Scalercio2020/Scalercio2020.csv  (2910 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 11 pair(s))
+  'First Month' -> 'Month of adult first emergence'
+  'Flight Months' -> 'Length of the flight period'
+  'P95H' -> 'Higher Percipitation Tolerance'
+  'P95L' -> 'Lower Percipitation Tolerance'
+  'PSD' -> 'Overall Percipitation Tolerance'
+  'T95H' -> 'Higher Thermal Tolerance'
+  'T95L' -> 'Lower Thermal Tolerance'
+  'TSD' -> 'Overall Thermal Tolerance'
+  'Volt' -> 'Voltinism'
+  'hp' -> 'Number of Hostplant Genera'
+  'wingsTSM' -> 'Wingspan'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 729
+  missed (FN)         : 429
+  spurious, in scope  : 74   <- GT covers this trait: real errors
+  spurious, out of scope: 2107   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.251 / 0.630 / 0.358   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.908 / 0.630 / 0.743   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.630   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           2107
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               583    729  0.800
+  measurementMethod             0    729  0.000  <-- low
+  measurementUnit               0    656  0.000  <-- low
+  measurementStatistic        291    729  0.399  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    729  0.000  <-- low
+  lifeStage                   146    729  0.200  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     73  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    729  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 429 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             73
+  species+trait present, value differs      315
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'may'                        ->  '5'                          x18
+     'april'                      ->  '4'                          x15
+     'june'                       ->  '6'                          x11
+     'march'                      ->  '3'                          x10
+     'february'                   ->  '2'                          x6
+     'june'                       ->  '3'                          x4
+  -> 6 substitutions explain 64 of 429 misses (15%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Month when adults fly'            x73
+  -> 1 missing trait explains 73 of 429 misses (17%) — scattered; no single cause
+
+  full miss detail saved -> Scalercio2020_misses.csv, Scalercio2020_misses_summary.json (429 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  standardized differentiation (gst; nei, 1987; appendix s1)    0    73   PRED-ONLY
+  absolute differentiation (dst)                    0    73   PRED-ONLY
+  month of adult first emergence                   73    73   
+  month when adults fly                            73     0   GT-ONLY
+  dst diff                                          0    73   PRED-ONLY
+  gst diff                                          0    73   PRED-ONLY
+  hd diff                                           0    73   PRED-ONLY
+  divers                                            0    73   PRED-ONLY
+  dsta                                              0    73   PRED-ONLY
+  dstdrunk                                          0    73   PRED-ONLY
+  dstscnt93                                         0    73   PRED-ONLY
+  dstwolf                                           0    73   PRED-ONLY
+  first emergence                                   0    73   PRED-ONLY
+  length of the flight period                      73    73   
+  number of hostplant genera                       73    73   
+  gsta                                              0    73   PRED-ONLY
+  gstscnt93                                         0    73   PRED-ONLY
+  had                                               0    73   PRED-ONLY
+  hd                                                0    73   PRED-ONLY
+  higher percipitation tolerance                   73    73   
+  higher thermal tolerance                         73    73   
+  last month                                        0    73   PRED-ONLY
+  lower percipitation tolerance                    73    73   
+  lower thermal tolerance                          73    73   
+  overall percipitation tolerance                  73    73   
+  overall thermal tolerance                        73    73   
+  pc1ecop                                           0    73   PRED-ONLY
+  pc1feno                                           0    73   PRED-ONLY
+  pc1mobility                                       0    73   PRED-ONLY
+  pc2ecop                                           0    73   PRED-ONLY
+  pmean                                             0    73   PRED-ONLY
+  tmean                                             0    73   PRED-ONLY
+  voltinism                                        73    73   
+  windmax                                           0    73   PRED-ONLY
+  windmean                                          0    73   PRED-ONLY
+  windsum                                           0    73   PRED-ONLY
+  winglaf                                           0    69   PRED-ONLY
+  wingshr                                           0    72   PRED-ONLY
+  wingspamp                                         0    68   PRED-ONLY
+  wingspan                                        355    73   Δ-282 (split?)
+  wingstsf                                          0    73   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'month when adults fly'            vs pred 'last month'                       sim=0.59
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.908  0.630  0.743    729    74   429   id+type+value
+             (2107 more spurious row(s) set aside as out-of-scope; strict P would be 0.251)
+  tags        0.000  0.000  0.000      0   803  1158   basis+id+type+value+stat+sex+stage
+             (2107 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.743 vs previous)

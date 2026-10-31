@@ -1,0 +1,1468 @@
+{
+ "cells": {
+  "1": {},
+  "4": {}
+ },
+ "labels": {
+  "1": {
+   "1": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.952,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.0,
+     "not": 0.045
+    },
+    "tag": "lifeStage",
+    "label": "Traits of adult stage",
+    "value": "adult"
+   },
+   "2": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.012,
+     "larva": 0.024,
+     "mature larva": 0.002,
+     "nymph": 0.001,
+     "caterpillar": 0.001,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.072,
+     "unknown": 0.001,
+     "not": 0.884
+    },
+    "tag": "lifeStage",
+    "label": "Traits of early stages",
+    "value": "not"
+   }
+  },
+  "4": {}
+ },
+ "statistic": {
+  "1": {
+   "Trait": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.183,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.797,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.955,
+       "b": 0.045
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.057,
+       "b": 0.943
+      }
+     }
+    ],
+    "value": "mode",
+    "said": [
+     "## Trait data For all 448 moth species recorded in light-traps, we assembled a wide range of 27 traits that describe various aspects of the larval and adult ecological niche occupied, including body size, geographic range size, resource use during adult and larval stages, voltinism, hibernation stage, and micro-habitat use.",
+     "Two additional spreadsheet files contain a full list of the traits per species (see Additional file 4) and their scaling and the sources used to assemble the trait matrix (see Additional file 5)."
+    ]
+   }
+  },
+  "4": {
+   "Diurnal_activity": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Trusted web-sites : [http://www.lepiforum.de/](http://www.lepiforum.de/) [https://ukmoths.org.uk/](https://ukmoths.org.uk/) [http://www.pyrgus.de/](http://www.pyrgus.de/) [http://www.euroleps.ch/](http://www.euroleps.ch/) Definition and scoring of traits : Diurnal\\_activity: 0 – strictly nocturnal; 1 – adults at least partially flying during daytime EU\\_territories: number of European territories (sensu Karsholt & Razowski 1996) from which a species is known."
+    ]
+   },
+   "EU_territories": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.954,
+     "mode": 0.032,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count",
+    "said": [
+     "Trusted web-sites : [http://www.lepiforum.de/](http://www.lepiforum.de/) [https://ukmoths.org.uk/](https://ukmoths.org.uk/) [http://www.pyrgus.de/](http://www.pyrgus.de/) [http://www.euroleps.ch/](http://www.euroleps.ch/) Definition and scoring of traits : Diurnal\\_activity: 0 – strictly nocturnal; 1 – adults at least partially flying during daytime EU\\_territories: number of European territories (sensu Karsholt & Razowski 1996) from which a species is known."
+    ]
+   },
+   "Range_Latitude": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": [
+     "Range\\_Latitude: difference (in degrees latitude) between northernmost and southernmost records within Europe, taken from the GBIF repository: [https://www.gbif.org/](https://www.gbif.org/)."
+    ]
+   },
+   "Wingspan": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.989,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.009,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean",
+    "said": [
+     "Wingspan: geometric mean of minimum and maximum wingspan, extracted from literature."
+    ]
+   },
+   "Female_flightless": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Female\\_flightless: 0 – females with wings well developed; 1 – females with reduced wings, unable to fly."
+    ]
+   },
+   "Voltinism": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.977,
+     "single observation": 0.001,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "## Trait data For all 448 moth species recorded in light-traps, we assembled a wide range of 27 traits that describe various aspects of the larval and adult ecological niche occupied, including body size, geographic range size, resource use during adult and larval stages, voltinism, hibernation stage, and micro-habitat use.",
+     "Voltinism: 0.5 – individuals usually take two years to complete development; 1 – one generation per year; 1.5 – at least a partial second generation develops in eastern Austria; 2 – two generations occur regularly in eastern Austria; 2.5 – under favourable climatic conditions a partial third generation occurs; 3 – three (or more) generations per year regularly seen in eastern Austria."
+    ]
+   },
+   "Hibernation_Larva": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Hibernation\\_Larva: 0 – no hibernation in larval stage recorded; 1 – hibernation in larval stage recorded."
+    ]
+   },
+   "Hibernation_Pupa": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.995,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Hibernation\\_Pupa: 0 – no hibernation in pupal stage recorded; 1 – hibernation in pupal stage recorded."
+    ]
+   },
+   "Hibernation_Egg": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.006,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.987,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Hibernation\\_Egg: 0 – no hibernation in egg stage recorded; 1 – hibernation in egg stage recorded."
+    ]
+   },
+   "Hibernation_Imago": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Hibernation\\_Imago: 0 – no hibernation as adult recorded; 1 – hibernation in adult stage recorded."
+    ]
+   },
+   "Larvae_endophagous": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.997,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_endophagous: 0 – larvae are external feeders throughout their life; 0.5 – larva construct closed shelters (from leaf rolls, leaves spun together or alike; viz."
+    ]
+   },
+   "Larvae_social": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_social: 0 – larvae feed solitarily; 0.5 – larvae form aggregations in earlier instars, sometimes in loose webs; 1 – larvae are highly social, in communal webs."
+    ]
+   },
+   "Pupa_in_on_ground": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.008,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.978,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Pupa\\_in\\_on\\_ground: 0 – pupation site distinctly above ground, in higher vegetation; 1 – pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events."
+    ]
+   },
+   "Egg_larvae_arboreal": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.045,
+     "mean ± SD": 0.01,
+     "mean ± SE": 0.002,
+     "range": 0.017,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.912,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mode",
+    "said": []
+   },
+   "Larval_host-plant_families": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.984,
+     "mode": 0.006,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "count",
+    "said": [
+     "Larval\\_host-plant\\_families: number of host families recorded in evaluated sources."
+    ]
+   },
+   "Functional_proboscis": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.983,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Functional\\_proboscis: 0 – proboscis reduced an non-functional; 0.5 – proboscis reduced, but can be used to access at least water and very open nutrient sources; 1 – proboscis well developed."
+    ]
+   },
+   "Imago_on_non-nectar_food-sources": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.996,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Imago\\_on\\_non-nectar\\_food-sources: 0 – adults feed on flower nectar; 1 – adult moths known to regularly visit rotting fruits an related non-floral nutrient sources."
+    ]
+   },
+   "Larvae_on_dead_plant_matter": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.009,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.003,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.977,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_dead\\_plant\\_matter: 0 – larvae feed on living plant tissues; 1 – larvae feed on withered plants or on leaf litter and alike."
+    ]
+   },
+   "Larvae_on_mosses-lichens": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.012,
+     "mean": 0.022,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.009,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.002,
+     "mode": 0.946,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_mosses-lichens: 0 – larvae feed on vascular plants; 1 – larvae feed on lichens, mosses, or algal biofilms."
+    ]
+   },
+   "Larvae_on_reed_aquatic": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.01,
+     "mean": 0.014,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.967,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_reed\\_aquatic: 0 – larva on terrestrial plants; 1 – larvae feed on reed (*Phragmites australis*), other reed plants (e.g."
+    ]
+   },
+   "Larvae_on_herbs": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.987,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_herbs: 0 – larvae exclusively feed on woody plants; 0.5 – larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants."
+    ]
+   },
+   "Larvae_on_grasses": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_grasses: 0 – larvae never feed on graminoid plants (Poaceae, Cyperaceae, Juncaceae); 0.5 – larval host range includes graminoid plants, but moth species is not specific to that resource; 1 – larvae exclusively known to feed on graminoid plants in nature."
+    ]
+   },
+   "Larvae_on_softwood_trees": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_softwood\\_trees: 0 – larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz.",
+     "Populus, Salix, Alnus); 0.5 – larval host range does include softwood trees; 1 – larvae exclusively feed on softwood trees in nature."
+    ]
+   },
+   "Larvae_on_lianas": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.988,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_lianas: 0 – larvae not known to feed on the few lianas native to Central Europe (*Clematis vitalba, Hedera helix*) which are common in floodplain forests; 0.5 – larval host range does include lianas; 1 – larvae exclusively feed on these lianas."
+    ]
+   },
+   "Larvae_on_broadleaved_trees_shrubs": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.993,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_on\\_broadleaved\\_trees\\_shrubs: 0 – caterpillars do not feed on woody deciduous plants in nature; 0.5 – host range includes broadleaved trees and shrubs; 1 – larvae only feed on trees and shrubs."
+    ]
+   },
+   "Larvae_subterraneous": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.988,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Larvae\\_subterraneous: 0 – larvae live above ground (except perhaps for pupation); 0.5 – larvae in uppermost litter layer, e.g."
+    ]
+   },
+   "Migratory_species": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "Migratory\\_species: 0 – species not migratory, even though dispersive adults may show up far away from their breeding grounds; 1 – species known to perform (seasonal) long-distance migrations from southern Europe (Mediterranean) into central Europe (and back)."
+    ]
+   }
+  }
+ },
+ "captions": {
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.288,
+     "female": 0.002,
+     "male": 0.004,
+     "unknown": 0.001,
+     "not": 0.704
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.959,
+       "b": 0.041
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.021,
+       "b": 0.979
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.312,
+      "not": 0.688
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.0,
+     "male alate": 0.003,
+     "worker": 0.001,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.995
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.498,
+     "LivingSpecimen": 0.01,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.002,
+     "MaterialCitation": 0.02,
+     "Occurrence": 0.007,
+     "Taxon": 0.0,
+     "not": 0.457
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.668,
+       "b": 0.332
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.837,
+     "larva": 0.002,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.003,
+     "unknown": 0.002,
+     "not": 0.154
+    },
+    "value": "adult"
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.814,
+     "female": 0.036,
+     "male": 0.024,
+     "unknown": 0.004,
+     "not": 0.122
+    },
+    "value": "both"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.0,
+     "worker": 0.001,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.998
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.011,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.734,
+     "Occurrence": 0.001,
+     "Taxon": 0.001,
+     "not": 0.244
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.989,
+       "b": 0.011
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.017,
+       "b": 0.983
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.747,
+      "not": 0.253
+     }
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.945,
+     "larva": 0.006,
+     "mature larva": 0.005,
+     "nymph": 0.001,
+     "caterpillar": 0.001,
+     "pupa": 0.013,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.001,
+     "unknown": 0.001,
+     "not": 0.027
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "sex": {
+   "value": "both",
+   "round": "supplementary material",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "supplementary material",
+   "settle": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.043,
+     "mean": 0.782,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.007,
+     "range": 0.115,
+     "min": 0.002,
+     "max": 0.003,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.028,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "mixed": 0.007
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o4",
+      "choice": "a",
+      "probs": {
+       "a": 0.813,
+       "b": 0.187
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.05,
+       "b": 0.95
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.973,
+      "mixed": 0.027
+     }
+    },
+    "by": "clash",
+    "values": [
+     "mean",
+     "individual",
+     "mode"
+    ]
+   }
+  }
+ },
+ "source": {
+  "1": {
+   "long": false,
+   "traits": {
+    "Trait": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.256,
+      "literature": 0.744
+     },
+     "said": [
+      "## Trait data For all 448 moth species recorded in light-traps, we assembled a wide range of 27 traits that describe various aspects of the larval and adult ecological niche occupied, including body size, geographic range size, resource use during adult and larval stages, voltinism, hibernation stage, and micro-habitat use.",
+      "Two additional spreadsheet files contain a full list of the traits per species (see Additional file 4) and their scaling and the sources used to assemble the trait matrix (see Additional file 5)."
+     ],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Diurnal_activity": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.028,
+      "literature": 0.972
+     },
+     "said": [
+      "Trusted web-sites : [http://www.lepiforum.de/](http://www.lepiforum.de/) [https://ukmoths.org.uk/](https://ukmoths.org.uk/) [http://www.pyrgus.de/](http://www.pyrgus.de/) [http://www.euroleps.ch/](http://www.euroleps.ch/) Definition and scoring of traits : Diurnal\\_activity: 0 – strictly nocturnal; 1 – adults at least partially flying during daytime EU\\_territories: number of European territories (sensu Karsholt & Razowski 1996) from which a species is known."
+     ],
+     "value": "literature"
+    },
+    "EU_territories": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.008,
+      "literature": 0.992
+     },
+     "said": [
+      "Trusted web-sites : [http://www.lepiforum.de/](http://www.lepiforum.de/) [https://ukmoths.org.uk/](https://ukmoths.org.uk/) [http://www.pyrgus.de/](http://www.pyrgus.de/) [http://www.euroleps.ch/](http://www.euroleps.ch/) Definition and scoring of traits : Diurnal\\_activity: 0 – strictly nocturnal; 1 – adults at least partially flying during daytime EU\\_territories: number of European territories (sensu Karsholt & Razowski 1996) from which a species is known."
+     ],
+     "value": "literature"
+    },
+    "Range_Latitude": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.002,
+      "literature": 0.998
+     },
+     "said": [
+      "Range\\_Latitude: difference (in degrees latitude) between northernmost and southernmost records within Europe, taken from the GBIF repository: [https://www.gbif.org/](https://www.gbif.org/)."
+     ],
+     "value": "literature"
+    },
+    "Wingspan": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.0,
+      "literature": 1.0
+     },
+     "said": [
+      "Wingspan: geometric mean of minimum and maximum wingspan, extracted from literature."
+     ],
+     "value": "literature"
+    },
+    "Female_flightless": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.073,
+      "literature": 0.927
+     },
+     "said": [
+      "Female\\_flightless: 0 – females with wings well developed; 1 – females with reduced wings, unable to fly."
+     ],
+     "value": "literature"
+    },
+    "Voltinism": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.085,
+      "literature": 0.915
+     },
+     "said": [
+      "## Trait data For all 448 moth species recorded in light-traps, we assembled a wide range of 27 traits that describe various aspects of the larval and adult ecological niche occupied, including body size, geographic range size, resource use during adult and larval stages, voltinism, hibernation stage, and micro-habitat use.",
+      "Voltinism: 0.5 – individuals usually take two years to complete development; 1 – one generation per year; 1.5 – at least a partial second generation develops in eastern Austria; 2 – two generations occur regularly in eastern Austria; 2.5 – under favourable climatic conditions a partial third generation occurs; 3 – three (or more) generations per year regularly seen in eastern Austria."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Larva": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.048,
+      "literature": 0.952
+     },
+     "said": [
+      "Hibernation\\_Larva: 0 – no hibernation in larval stage recorded; 1 – hibernation in larval stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Pupa": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.096,
+      "literature": 0.904
+     },
+     "said": [
+      "Hibernation\\_Pupa: 0 – no hibernation in pupal stage recorded; 1 – hibernation in pupal stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Egg": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.061,
+      "literature": 0.939
+     },
+     "said": [
+      "Hibernation\\_Egg: 0 – no hibernation in egg stage recorded; 1 – hibernation in egg stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Hibernation_Imago": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.059,
+      "literature": 0.941
+     },
+     "said": [
+      "Hibernation\\_Imago: 0 – no hibernation as adult recorded; 1 – hibernation in adult stage recorded."
+     ],
+     "value": "literature"
+    },
+    "Larvae_endophagous": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.055,
+      "literature": 0.945
+     },
+     "said": [
+      "Larvae\\_endophagous: 0 – larvae are external feeders throughout their life; 0.5 – larva construct closed shelters (from leaf rolls, leaves spun together or alike; viz."
+     ],
+     "value": "literature"
+    },
+    "Larvae_social": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.056,
+      "literature": 0.944
+     },
+     "said": [
+      "Larvae\\_social: 0 – larvae feed solitarily; 0.5 – larvae form aggregations in earlier instars, sometimes in loose webs; 1 – larvae are highly social, in communal webs."
+     ],
+     "value": "literature"
+    },
+    "Pupa_in_on_ground": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.064,
+      "literature": 0.936
+     },
+     "said": [
+      "Pupa\\_in\\_on\\_ground: 0 – pupation site distinctly above ground, in higher vegetation; 1 – pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events."
+     ],
+     "value": "literature"
+    },
+    "Egg_larvae_arboreal": {
+     "said": [],
+     "value": null
+    },
+    "Larval_host-plant_families": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.015,
+      "literature": 0.985
+     },
+     "said": [
+      "Larval\\_host-plant\\_families: number of host families recorded in evaluated sources."
+     ],
+     "value": "literature"
+    },
+    "Functional_proboscis": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.159,
+      "literature": 0.841
+     },
+     "said": [
+      "Functional\\_proboscis: 0 – proboscis reduced an non-functional; 0.5 – proboscis reduced, but can be used to access at least water and very open nutrient sources; 1 – proboscis well developed."
+     ],
+     "value": "literature"
+    },
+    "Imago_on_non-nectar_food-sources": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.065,
+      "literature": 0.935
+     },
+     "said": [
+      "Imago\\_on\\_non-nectar\\_food-sources: 0 – adults feed on flower nectar; 1 – adult moths known to regularly visit rotting fruits an related non-floral nutrient sources."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_dead_plant_matter": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.072,
+      "literature": 0.928
+     },
+     "said": [
+      "Larvae\\_on\\_dead\\_plant\\_matter: 0 – larvae feed on living plant tissues; 1 – larvae feed on withered plants or on leaf litter and alike."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_mosses-lichens": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.079,
+      "literature": 0.921
+     },
+     "said": [
+      "Larvae\\_on\\_mosses-lichens: 0 – larvae feed on vascular plants; 1 – larvae feed on lichens, mosses, or algal biofilms."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_reed_aquatic": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.05,
+      "literature": 0.95
+     },
+     "said": [
+      "Larvae\\_on\\_reed\\_aquatic: 0 – larva on terrestrial plants; 1 – larvae feed on reed (*Phragmites australis*), other reed plants (e.g."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_herbs": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.08,
+      "literature": 0.92
+     },
+     "said": [
+      "Larvae\\_on\\_herbs: 0 – larvae exclusively feed on woody plants; 0.5 – larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_grasses": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.075,
+      "literature": 0.925
+     },
+     "said": [
+      "Larvae\\_on\\_grasses: 0 – larvae never feed on graminoid plants (Poaceae, Cyperaceae, Juncaceae); 0.5 – larval host range includes graminoid plants, but moth species is not specific to that resource; 1 – larvae exclusively known to feed on graminoid plants in nature."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_softwood_trees": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.089,
+      "literature": 0.911
+     },
+     "said": [
+      "Larvae\\_on\\_softwood\\_trees: 0 – larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz.",
+      "Populus, Salix, Alnus); 0.5 – larval host range does include softwood trees; 1 – larvae exclusively feed on softwood trees in nature."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_lianas": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.058,
+      "literature": 0.942
+     },
+     "said": [
+      "Larvae\\_on\\_lianas: 0 – larvae not known to feed on the few lianas native to Central Europe (*Clematis vitalba, Hedera helix*) which are common in floodplain forests; 0.5 – larval host range does include lianas; 1 – larvae exclusively feed on these lianas."
+     ],
+     "value": "literature"
+    },
+    "Larvae_on_broadleaved_trees_shrubs": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.082,
+      "literature": 0.918
+     },
+     "said": [
+      "Larvae\\_on\\_broadleaved\\_trees\\_shrubs: 0 – caterpillars do not feed on woody deciduous plants in nature; 0.5 – host range includes broadleaved trees and shrubs; 1 – larvae only feed on trees and shrubs."
+     ],
+     "value": "literature"
+    },
+    "Larvae_subterraneous": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.06,
+      "literature": 0.94
+     },
+     "said": [
+      "Larvae\\_subterraneous: 0 – larvae live above ground (except perhaps for pupation); 0.5 – larvae in uppermost litter layer, e.g."
+     ],
+     "value": "literature"
+    },
+    "Migratory_species": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.054,
+      "literature": 0.946
+     },
+     "said": [
+      "Migratory\\_species: 0 – species not migratory, even though dispersive adults may show up far away from their breeding grounds; 1 – species known to perform (seasonal) long-distance migrations from southern Europe (Mediterranean) into central Europe (and back)."
+     ],
+     "value": "literature"
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.914,
+   "compiled": 0.086
+  },
+  "value": "own"
+ },
+ "rows": {
+  "1": "",
+  "4": " Each of its 447 species takes one row."
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.991,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.001,
+     "not": 0.005
+    },
+    "quote": "If relevant, values for both sexes and multiple generations were aggregated.",
+    "value": "both"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.787,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.009,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.005,
+     "Occurrence": 0.114,
+     "Taxon": 0.0,
+     "not": 0.08
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "b",
+      "probs": {
+       "a": 0.451,
+       "b": 0.549
+      }
+     }
+    ],
+    "quote": "data on species-rich riparian moth communities under different flood regimes and from three different rivers has been used to compare the power of various diversity measures to uncover ecological contrasts.",
+    "value": null
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.996,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "Moths were collected using light-traps at 28 sites situated in lowland forest stands along the three rivers Danube, Morava and Leitha in easternmost Austria.",
+    "value": "PreservedSpecimen"
+   }
+  ],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.066,
+     "mean": 0.042,
+     "mean ± SD": 0.032,
+     "mean ± SE": 0.003,
+     "range": 0.005,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.016,
+     "single observation": 0.0,
+     "unknown": 0.002,
+     "not": 0.697,
+     "analysis": 0.133
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.448,
+       "b": 0.552
+      }
+     }
+    ],
+    "quote": "For all 448 moth species recorded in light-traps, we assembled a wide range of 27 traits that describe various aspects of the larval and adult ecological niche occupied, including body size, geographic range size, resource use during adult and larval stages, voltinism, hibernation stage, and micro-habitat use.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.984,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.001,
+     "range": 0.003,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.002,
+     "analysis": 0.003
+    },
+    "quote": "Wingspan: geometric mean of minimum and maximum wingspan, extracted from literature.",
+    "value": "mean"
+   },
+   {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.083,
+     "mean": 0.042,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.004,
+     "range": 0.138,
+     "min": 0.003,
+     "max": 0.003,
+     "median": 0.002,
+     "count": 0.007,
+     "mode": 0.53,
+     "single observation": 0.003,
+     "unknown": 0.003,
+     "not": 0.02,
+     "analysis": 0.155
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o4",
+      "choice": "a",
+      "probs": {
+       "a": 0.577,
+       "b": 0.423
+      }
+     }
+    ],
+    "quote": "0.5 – individuals usually take two years to complete development; 1 – one generation per year; 1.5 – at least a partial second generation develops in eastern Austria; 2 – two generations occur regularly in eastern Austria; 2.5 – under favourable climatic conditions a partial third generation occurs; 3 – three (or more) generations per year regularly seen in eastern Austria.",
+    "value": null
+   },
+   {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.871,
+     "mean": 0.027,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.04,
+     "single observation": 0.001,
+     "unknown": 0.001,
+     "not": 0.005,
+     "analysis": 0.045
+    },
+    "quote": "0 – larval host range does not include softwood trees, which are characteristic elements of floodplain forest vegetation (viz. Populus, Salix, Alnus); 0.5 – larval host range does include softwood trees; 1 – larvae exclusively feed on softwood trees in nature.",
+    "value": "individual"
+   },
+   {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.261,
+     "mean": 0.016,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.006,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.686,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.002,
+     "analysis": 0.021
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.907,
+       "b": 0.093
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.031,
+       "b": 0.969
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.895,
+      "not": 0.014,
+      "analysis": 0.091
+     }
+    },
+    "quote": "0 – larvae not known to feed on the few lianas native to Central Europe (*Clematis vitalba, Hedera helix*) which are common in floodplain forests; 0.5 – larval host range does include lianas; 1 – larvae exclusively feed on these lianas.",
+    "value": "mode"
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
+}

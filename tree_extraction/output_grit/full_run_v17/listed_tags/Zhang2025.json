@@ -1,0 +1,773 @@
+{
+ "cells": {
+  "0": {},
+  "2": {}
+ },
+ "labels": {
+  "0": {},
+  "2": {}
+ },
+ "statistic": {
+  "0": {
+   "Proportion of Successful Oviposition*": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.995,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean",
+    "said": [
+     "Proportion of successful oviposition ¼ number of female successfully laid eggs/all tested female number."
+    ]
+   },
+   "Proportion of Successful Adult Eclosion*": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.991,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.004,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean",
+    "said": [
+     "Proportion of successful adult eclosion ¼ number of successful adult eclosion/ (number of dead individual in host þ number of successful adult eclosion)."
+    ]
+   }
+  },
+  "2": {
+   "Oviposition Period (s)*": {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.004,
+     "mean ± SD": 0.144,
+     "mean ± SE": 0.847,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean ± SE",
+    "said": [
+     "On the basis of a review of the video, both the latency period before oviposition and the period of oviposition were determined.",
+     "A generalized linear mixed model (GLMM) with the multcomp package was applied to analyze the effects of female status and age on outcomes of offspring successfully produced and eclosion, offspring number produced/emerged per female, period of oviposition, and egg size."
+    ]
+   },
+   "Proportion of Successful Adult Eclosion*": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.023,
+     "mean": 0.894,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.035,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.012,
+     "count": 0.005,
+     "mode": 0.003,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean",
+    "said": [
+     "Proportion of successful adult eclosion ¼ number of successful adult eclosion/ (number of dead individual in host þ number of successful adult eclosion)."
+    ]
+   },
+   "Egg Size (mm)*": {
+    "choice": "mean ± SD",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.001,
+     "mean ± SD": 0.579,
+     "mean ± SE": 0.418,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.717,
+       "b": 0.283
+      }
+     }
+    ],
+    "value": null,
+    "said": [
+     "disparis is long and elliptical, and the long-axis diameter was measured by digital microscopy system (Keyens VHX-5000, Japan) as the egg size.",
+     "A generalized linear mixed model (GLMM) with the multcomp package was applied to analyze the effects of female status and age on outcomes of offspring successfully produced and eclosion, offspring number produced/emerged per female, period of oviposition, and egg size."
+    ]
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.989,
+     "male": 0.001,
+     "unknown": 0.001,
+     "not": 0.008
+    },
+    "value": "female"
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.014,
+     "male alate": 0.0,
+     "worker": 0.003,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.981
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.985,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.012
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.981,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.009,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.001,
+     "not": 0.005
+    },
+    "value": "adult"
+   }
+  },
+  "2": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.05,
+     "female": 0.443,
+     "male": 0.003,
+     "unknown": 0.004,
+     "not": 0.5
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.731,
+       "b": 0.269
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.043,
+     "male alate": 0.003,
+     "worker": 0.008,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.944
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.978,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.002,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.017
+    },
+    "value": "LivingSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.513,
+     "larva": 0.005,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.01,
+     "egg": 0.46,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.001,
+     "not": 0.006
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.507,
+       "b": 0.493
+      }
+     }
+    ],
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "sex": {
+   "value": "female",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "LivingSpecimen",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean ± SE",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "Proportion of Successful Oviposition*": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.996,
+      "literature": 0.004
+     },
+     "said": [
+      "Proportion of successful oviposition ¼ number of female successfully laid eggs/all tested female number."
+     ],
+     "value": "measured"
+    },
+    "Proportion of Successful Adult Eclosion*": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.997,
+      "literature": 0.003
+     },
+     "said": [
+      "Proportion of successful adult eclosion ¼ number of successful adult eclosion/ (number of dead individual in host þ number of successful adult eclosion).",
+      "Proportion of successful adult eclosion ¼ number of successful adult eclosion/(number of dead individual in host þ number of successful adult eclosion)."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "2": {
+   "long": false,
+   "traits": {
+    "Oviposition Period (s)*": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.997,
+      "literature": 0.003
+     },
+     "said": [
+      "On the basis of a review of the video, both the latency period before oviposition and the period of oviposition were determined.",
+      "A generalized linear mixed model (GLMM) with the multcomp package was applied to analyze the effects of female status and age on outcomes of offspring successfully produced and eclosion, offspring number produced/emerged per female, period of oviposition, and egg size."
+     ],
+     "value": "measured"
+    },
+    "Proportion of Successful Adult Eclosion*": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.992,
+      "literature": 0.008
+     },
+     "said": [
+      "Proportion of successful adult eclosion ¼ number of successful adult eclosion/ (number of dead individual in host þ number of successful adult eclosion).",
+      "Proportion of successful adult eclosion ¼ number of successful adult eclosion/(number of dead individual in host þ number of successful adult eclosion)."
+     ],
+     "value": "measured"
+    },
+    "Egg Size (mm)*": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.997,
+      "literature": 0.003
+     },
+     "said": [
+      "disparis is long and elliptical, and the long-axis diameter was measured by digital microscopy system (Keyens VHX-5000, Japan) as the egg size.",
+      "A generalized linear mixed model (GLMM) with the multcomp package was applied to analyze the effects of female status and age on outcomes of offspring successfully produced and eclosion, offspring number produced/emerged per female, period of oviposition, and egg size."
+     ],
+     "value": "measured"
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.99,
+   "compiled": 0.01
+  },
+  "value": "own"
+ },
+ "rows": {
+  "0": "",
+  "2": ""
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.001,
+     "female": 0.998,
+     "male": 0.001,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "Our results showed that reproductive performance mainly involving in eclosion ratio in A. disparis significantly increased with female age.",
+    "value": "female"
+   },
+   {
+    "choice": "female",
+    "probs": {
+     "both": 0.12,
+     "female": 0.457,
+     "male": 0.003,
+     "unknown": 0.005,
+     "not": 0.414
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.543,
+       "b": 0.457
+      }
+     }
+    ],
+    "quote": "In many parasitoid species, age-specific reproduction performance mainly focuses on fecundity and sex ratios (Ehteshami et al. 2023, King 1987, Liu et al. 2020, Mu et al. 2023, Pandey et al. 2009, Santolamazza-Carbone et al. 2007, Shen et al. 2023, Tabebordbar et al. 2023, Wang et al. 2014)",
+    "value": null
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.619,
+     "female": 0.136,
+     "male": 0.003,
+     "unknown": 0.004,
+     "not": 0.237
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.704,
+       "b": 0.296
+      }
+     }
+    ],
+    "quote": "Here, we tested the role of age in terms of reproductive success including the parasitism ratio, eclosion ratio, and sex ratio in Anastatus disparis.",
+    "value": null
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.522,
+     "female": 0.1,
+     "male": 0.018,
+     "unknown": 0.009,
+     "not": 0.351
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.623,
+       "b": 0.377
+      }
+     }
+    ],
+    "quote": "Parasitoids have haplodiploid sex determination; haploid males develop from unfertilized eggs, whereas diploid females develop from fertilized eggs (Cook 1993, Heimpel and de Boer 2008).",
+    "value": null
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.98,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.014
+    },
+    "quote": "Here, we tested agespecific reproductive performance in the important egg parasitoid Anastatus disparis Ruschka (Hymenoptera: Eupelmidae) as potential biological control agents of many forest pests including Lymantria dispar L.",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.015,
+     "LivingSpecimen": 0.009,
+     "HumanObservation": 0.171,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.75,
+     "Occurrence": 0.005,
+     "Taxon": 0.0,
+     "not": 0.048
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.606,
+       "b": 0.394
+      }
+     }
+    ],
+    "quote": "Field investigation reveals that, together with Ooencyrtus kuvanae (Howard) (Hymenoptera: Encrytidae), which is also the main egg parasitoid of L. dispar, their parasitism rates may reach 20–40% (Brown 1984, Brown and Cameron 1982, Hoy 1976, Reardon 1981).",
+    "value": null
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.93,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.048,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.017
+    },
+    "quote": "Besides Lymantria dispar, great efforts have been made to mass rear Anastatus disparis to control Dictyoploca japonica Moore in China, with the eggs of Antheraea pernyi serving as suitable factitious hosts (Yan et al. 1989).",
+    "value": "LivingSpecimen"
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.994,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "quote": "An Anastatus disparis colony was established from a population reared on egg masses of L. dispar collected i",
+    "value": "LivingSpecimen"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.972,
+     "larva": 0.003,
+     "mature larva": 0.002,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.009,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.012
+    },
+    "quote": "Our results showed that reproductive performance mainly involving in eclosion ratio in A. disparis significantly increased with female age.",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.997,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "Adult females can lay hundreds of eggs over their lifetime and live approximately 1 mo in the wild, whereas males live approximately 1 wk (Liu et al. 2015, Yan et al. 1989).",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.521,
+     "larva": 0.006,
+     "mature larva": 0.005,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.002,
+     "egg": 0.458,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.0,
+     "not": 0.006
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o6",
+      "choice": "a",
+      "probs": {
+       "a": 0.568,
+       "b": 0.432
+      }
+     }
+    ],
+    "quote": "Before the adult A. pernyi females mated, they were killed and dissected, and the eggs were removed from their abdomens.",
+    "value": null
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.884,
+     "larva": 0.003,
+     "mature larva": 0.004,
+     "nymph": 0.001,
+     "caterpillar": 0.001,
+     "pupa": 0.007,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.094,
+     "unknown": 0.0,
+     "not": 0.005
+    },
+    "quote": "All hosts were incubated for 60 d to ensure that the developing parasitoids had the opportunity to undergo full development from egg to larva to pupa in the host and finally emerge as adults (Liu et al. 2015).",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.028,
+     "mean": 0.142,
+     "mean ± SD": 0.054,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.002,
+     "not": 0.747,
+     "analysis": 0.02
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.46,
+       "b": 0.54
+      }
+     }
+    ],
+    "quote": "The wasp egg of A. disparis is long and elliptical, and the long-axis diameter was measured by digital microscopy system (Keyens VHX-5000, Japan) as the egg size.",
+    "value": null
+   },
+   {
+    "choice": "count",
+    "probs": {
+     "individual": 0.074,
+     "mean": 0.103,
+     "mean ± SD": 0.04,
+     "mean ± SE": 0.005,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.386,
+     "mode": 0.002,
+     "single observation": 0.0,
+     "unknown": 0.003,
+     "not": 0.094,
+     "analysis": 0.289
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.942,
+       "b": 0.058
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.105,
+       "b": 0.895
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.701,
+      "not": 0.034,
+      "analysis": 0.265
+     }
+    },
+    "quote": "Each treatment had 16–20 females for laying eggs.",
+    "value": null
+   },
+   {
+    "choice": "mean ± SE",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.995,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.0,
+     "analysis": 0.0
+    },
+    "quote": "mean 6 SE 1,122 6 86 s",
+    "value": "mean ± SE"
+   },
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.085,
+     "mean ± SD": 0.025,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.005,
+     "not": 0.155,
+     "analysis": 0.718
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.704,
+       "b": 0.296
+      }
+     }
+    ],
+    "quote": "Our findings demonstrate that female A. disparis exhibit increased reproductive performance with age, primarily manifested through enhanced eclosion success and larger egg size.",
+    "value": null
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
+}

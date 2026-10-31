@@ -1,0 +1,156 @@
+  [semantic] left unmatched: '(no name, column 0)' vs 'Eye-ocellum distance' (llm said different traits)
+  [semantic] left unmatched: '(no name, column 0)' vs 'Labrum length' (llm said different traits)
+  [semantic] left unmatched: '(no name, column 0)' vs 'Labium length distance' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Costa2017/Costa2017.xlsx  (306 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Costa2017/Costa2017.csv  (324 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (16)
+  'Cicada barbara': no ground-truth name denotes this organism
+  'Cicada orni': no ground-truth name denotes this organism
+  'Euryphara contentei': no ground-truth name denotes this organism
+  'Hilaphura varipes': no ground-truth name denotes this organism
+  'T. helianthemi galantei': no ground-truth name denotes this organism
+  'T. helianthemi helianthemi': no ground-truth name denotes this organism
+  'Tettigettacula baenai': no ground-truth name denotes this organism
+  'Tettigettalna aneabi': no ground-truth name denotes this organism
+  'Tettigettalna argentata': no ground-truth name denotes this organism
+  'Tettigettalna armandi': no ground-truth name denotes this organism
+  'Tettigettalna boulardi': no ground-truth name denotes this organism
+  'Tettigettalna defauti': no ground-truth name denotes this organism
+  'Tettigettalna estrelae': no ground-truth name denotes this organism
+  'Tettigettalna josei': no ground-truth name denotes this organism
+  'Tettigettalna mariae': no ground-truth name denotes this organism
+  'Tympanistalna gastrica': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 306
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 324   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            324
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 306 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            306
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Basal cell length'                x10
+     'Forewing length'                  x10
+     'Forewing width'                   x10
+     'Head and thorax total length'     x10
+     'Length of M+CuA vein'             x10
+     'Radial cell length'               x10
+  -> 6 missing traits explain 60 of 306 misses (20%) — scattered; no single cause
+
+  full miss detail saved -> Costa2017_misses.csv, Costa2017_misses_summary.json (306 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 0)                               0    18   PRED-ONLY
+  1                                                 0    17   PRED-ONLY
+  10                                                0    17   PRED-ONLY
+  11                                                0    17   PRED-ONLY
+  12                                                0    17   PRED-ONLY
+  13                                                0    17   PRED-ONLY
+  14                                                0    17   PRED-ONLY
+  15                                                0    17   PRED-ONLY
+  16                                                0    17   PRED-ONLY
+  17                                                0    17   PRED-ONLY
+  18                                                0    17   PRED-ONLY
+  2                                                 0    17   PRED-ONLY
+  3                                                 0    17   PRED-ONLY
+  4                                                 0    17   PRED-ONLY
+  5                                                 0    17   PRED-ONLY
+  6                                                 0    17   PRED-ONLY
+  7                                                 0    17   PRED-ONLY
+  8                                                 0    17   PRED-ONLY
+  9                                                 0    17   PRED-ONLY
+  bandwidth of part acd                             3     0   GT-ONLY
+  maximum frequency of part acd                     3     0   GT-ONLY
+  minimum frequency of part acd                     3     0   GT-ONLY
+  peak frequency of part acd                        3     0   GT-ONLY
+  bandwidth of part b                               3     0   GT-ONLY
+  echeme duration of part b of phrase               6     0   GT-ONLY
+  duration of part b of phrase                      6     0   GT-ONLY
+  echeme rate of part b                             6     0   GT-ONLY
+  maximum frequency of part b                       3     0   GT-ONLY
+  minimum frequency of part b                       3     0   GT-ONLY
+  peak frequency of part b                          3     0   GT-ONLY
+  interval of part b                                6     0   GT-ONLY
+  bandwidth                                         3     0   GT-ONLY
+  basal cell length                                10     0   GT-ONLY
+  echeme duration of part c of phrase               3     0   GT-ONLY
+  duration of part c of phrase                      3     0   GT-ONLY
+  echeme rate of part c                             3     0   GT-ONLY
+  interval of part c                                3     0   GT-ONLY
+  radial cell length                               10     0   GT-ONLY
+  length of m+cua vein                             10     0   GT-ONLY
+  echeme duration of part d of phrase               3     0   GT-ONLY
+  duration of part d of phrase                      3     0   GT-ONLY
+  dorsal ocelli distance                            9     0   GT-ONLY
+  eye-ocellum distance                              9     0   GT-ONLY
+  labium length distance                            9     0   GT-ONLY
+  echeme duration of part a of phrase               6     0   GT-ONLY
+  duration of part a of phrase                      6     0   GT-ONLY
+  phrase duration                                   6     0   GT-ONLY
+  forewing length                                  10     0   GT-ONLY
+  forewing width                                   10     0   GT-ONLY
+  maximum frequency                                 3     0   GT-ONLY
+  minimum frequency                                 3     0   GT-ONLY
+  peak frequency                                    3     0   GT-ONLY
+  front length                                      9     0   GT-ONLY
+  greatest width of operculum                       9     0   GT-ONLY
+  head length                                       9     0   GT-ONLY
+  head and thorax total length                     10     0   GT-ONLY
+  head width                                        9     0   GT-ONLY
+  phrase interval                                   6     0   GT-ONLY
+  labrum length                                     9     0   GT-ONLY
+  mesonotum length                                  9     0   GT-ONLY
+  postclypeus length                                9     0   GT-ONLY
+  profemur length                                   9     0   GT-ONLY
+  pronotum length                                   9     0   GT-ONLY
+  sternite vii length                               6     0   GT-ONLY
+  tymbal length                                     6     0   GT-ONLY
+  pronotal width                                    9     0   GT-ONLY
+  tymbal width                                      6     0   GT-ONLY
+  vertex width                                      9     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   306   id+type+value
+             (324 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0   306   basis+id+type+value+stat+sex+stage
+             (324 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

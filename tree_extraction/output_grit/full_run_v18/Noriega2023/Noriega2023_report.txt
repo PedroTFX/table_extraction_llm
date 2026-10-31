@@ -1,0 +1,291 @@
+  [semantic] matched by values: 'pTL' -> 'Protibia length'
+  [semantic] matched by values: 'pTW' -> 'Protibia width'
+  [semantic] matched by values: 'mTL' -> 'Metatiba length'
+  [semantic] matched by values: 'EL' -> 'Elytra length'
+  [semantic] left unmatched: 'Dung relocation strategy' vs 'Relocation Size' (llm said different traits)
+  [semantic] left unmatched: 'Dung relocation strategy' vs 'Elytra Length' (llm said different traits)
+  [semantic] left unmatched: 'Dung relocation strategy' vs 'Metatibia Length' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Noriega2023/Noriega2023.xlsx  (35022 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Noriega2023/Noriega2023.csv  (66917 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 3 pair(s))
+  'Aphodiinae sp1' -> 'Aodiinae sp1'
+  'Aphodiinae sp2' -> 'Aodiinae sp2'
+  'Aphodiinae sp3' -> 'Aodiinae sp3'
+
+TAXON NAMES LEFT UNMAPPED (158)
+  'Anoplotrupes stercorosus': no ground-truth name denotes this organism
+  'Aphodius amoenas': no ground-truth name denotes this organism
+  'Aphodius brasiliensis': no ground-truth name denotes this organism
+  'Aphodius constans': no ground-truth name denotes this organism
+  'Aphodius depressus': no ground-truth name denotes this organism
+  'Aphodius dimidiatus': no ground-truth name denotes this organism
+  'Aphodius dorsalis': no ground-truth name denotes this organism
+  'Aphodius equestris': no ground-truth name denotes this organism
+  'Aphodius fimetarius': no ground-truth name denotes this organism
+  'Aphodius foetens': no ground-truth name denotes this organism
+  'Aphodius foetidus': no ground-truth name denotes this organism
+  'Aphodius granarius': no ground-truth name denotes this organism
+  'Aphodius impurus': no ground-truth name denotes this organism
+  'Aphodius inmundus': no ground-truth name denotes this organism
+  'Aphodius lineolatus': no ground-truth name denotes this organism
+  'Aphodius moestus': no ground-truth name denotes this organism
+  'Aphodius pedellus': no ground-truth name denotes this organism
+  'Aphodius plagiatus': no ground-truth name denotes this organism
+  'Aphodius prodromus': no ground-truth name denotes this organism
+  'Aphodius pusillus': no ground-truth name denotes this organism
+  'Aphodius russatus': no ground-truth name denotes this organism
+  'Aphodius satellitius': no ground-truth name denotes this organism
+  'Aphodius sp': no ground-truth name denotes this organism
+  'Aphodius sp1': no ground-truth name denotes this organism
+  'Aphodius sp1.AUS01': no ground-truth name denotes this organism
+  'Aphodius sp1.COL01': no ground-truth name denotes this organism
+  'Aphodius sp1.COL02': no ground-truth name denotes this organism
+  'Aphodius sp1.ECU02': no ground-truth name denotes this organism
+  'Aphodius sp1.SOU01': no ground-truth name denotes this organism
+  'Aphodius sp2': no ground-truth name denotes this organism
+  'Aphodius sp2.COL01': no ground-truth name denotes this organism
+  'Aphodius sp2.ECU02': no ground-truth name denotes this organism
+  'Aphodius sp2.GER01': no ground-truth name denotes this organism
+  'Aphodius sp2.SOU01': no ground-truth name denotes this organism
+  'Aphodius sp3': no ground-truth name denotes this organism
+  'Aphodius sphacelatus': no ground-truth name denotes this organism
+  'Aphodius tersus': no ground-truth name denotes this organism
+  'Aphodius vitellinus': no ground-truth name denotes this organism
+  'Canthon cyanellus': no ground-truth name denotes this organism
+  'Coprimorphus scrutator': no ground-truth name denotes this organism
+  'Deltochilum lobipes': no ground-truth name denotes this organism
+  'Deltochilum loperae': no ground-truth name denotes this organism
+  'Deltochilum panamensis': no ground-truth name denotes this organism
+  'Deltochilum scabriusculum': no ground-truth name denotes this organism
+  'Dichotomius amplicollis': no ground-truth name denotes this organism
+  'Digitonthophagus gazella': no ground-truth name denotes this organism
+  'Digitonthophagus sp1': no ground-truth name denotes this organism
+  'Euoniticellus africanus': no ground-truth name denotes this organism
+  'Euoniticellus fulvus': no ground-truth name denotes this organism
+  'Euoniticellus intermedius': no ground-truth name denotes this organism
+  'Euoniticellus pallipes': no ground-truth name denotes this organism
+  'Euoniticellus triangulatus': no ground-truth name denotes this organism
+  'Euonthophagus amyntas': no ground-truth name denotes this organism
+  'Euonthophagus atramentarius': no ground-truth name denotes this organism
+  'Euonthophagus gibbosus': no ground-truth name denotes this organism
+  'Euonthophagus mostafatsairi': no ground-truth name denotes this organism
+  'Euonthophagus sp2': no ground-truth name denotes this organism
+  'Eupleurus subterraneus': no ground-truth name denotes this organism
+  'Gromphas inermis': no ground-truth name denotes this organism
+  'Gymnopleurus mopsus': no ground-truth name denotes this organism
+  'Gymnopleurus qurosh': no ground-truth name denotes this organism
+  'Hamonthophagus depressus': no ground-truth name denotes this organism
+  'Heliocopris bucephalus': no ground-truth name denotes this organism
+  'Loraphodius suarius': no ground-truth name denotes this organism
+  'Melinopterus consputus': no ground-truth name denotes this organism
+  'Neosisyphus ruber': no ground-truth name denotes this organism
+  'Nialaphodius nigrita': no ground-truth name denotes this organism
+  'Oniticellus cinctus': no ground-truth name denotes this organism
+  'Onitis belial': no ground-truth name denotes this organism
+  'Onthophagus acuminatus': no ground-truth name denotes this organism
+  'Onthophagus aeruginosus': no ground-truth name denotes this organism
+  'Onthophagus agnus': no ground-truth name denotes this organism
+  'Onthophagus aleppensis': no ground-truth name denotes this organism
+  'Onthophagus australis': no ground-truth name denotes this organism
+  'Onthophagus binodis': no ground-truth name denotes this organism
+  'Onthophagus buculus': no ground-truth name denotes this organism
+  'Onthophagus centricornis': no ground-truth name denotes this organism
+  'Onthophagus cervus': no ground-truth name denotes this organism
+  'Onthophagus coenobita': no ground-truth name denotes this organism
+  'Onthophagus corrosus': no ground-truth name denotes this organism
+  'Onthophagus cruciatus': no ground-truth name denotes this organism
+  'Onthophagus curvicornis': no ground-truth name denotes this organism
+  'Onthophagus dama': no ground-truth name denotes this organism
+  'Onthophagus dandalu': no ground-truth name denotes this organism
+  'Onthophagus dorsosignatus': no ground-truth name denotes this organism
+  'Onthophagus ephippioderus': no ground-truth name denotes this organism
+  'Onthophagus fimetarius': no ground-truth name denotes this organism
+  'Onthophagus fissicornis': no ground-truth name denotes this organism
+  'Onthophagus fracticornis': no ground-truth name denotes this organism
+  'Onthophagus fugitivus': no ground-truth name denotes this organism
+  'Onthophagus furcatus': no ground-truth name denotes this organism
+  'Onthophagus gibbulus': no ground-truth name denotes this organism
+  'Onthophagus granulatus': no ground-truth name denotes this organism
+  'Onthophagus grossepunctatus': no ground-truth name denotes this organism
+  'Onthophagus hecate': no ground-truth name denotes this organism
+  'Onthophagus histerix': no ground-truth name denotes this organism
+  'Onthophagus hopfneri': no ground-truth name denotes this organism
+  'Onthophagus illyricus': no ground-truth name denotes this organism
+  'Onthophagus incensus': no ground-truth name denotes this organism
+  'Onthophagus joannae': no ground-truth name denotes this organism
+  'Onthophagus knulli': no ground-truth name denotes this organism
+  'Onthophagus landolti': no ground-truth name denotes this organism
+  'Onthophagus lebasi': no ground-truth name denotes this organism
+  'Onthophagus lecontei': no ground-truth name denotes this organism
+  'Onthophagus lemuroides': no ground-truth name denotes this organism
+  'Onthophagus lucidus': no ground-truth name denotes this organism
+  'Onthophagus marginicollis': no ground-truth name denotes this organism
+  'Onthophagus medius': no ground-truth name denotes this organism
+  'Onthophagus nearsagillatus': no ground-truth name denotes this organism
+  'Onthophagus nearvagillatus': no ground-truth name denotes this organism
+  'Onthophagus negligens': no ground-truth name denotes this organism
+  'Onthophagus nuchicornis': no ground-truth name denotes this organism
+  'Onthophagus opacicollis': no ground-truth name denotes this organism
+  'Onthophagus ovatus': no ground-truth name denotes this organism
+  'Onthophagus pennsylvanicus': no ground-truth name denotes this organism
+  'Onthophagus punctatus': no ground-truth name denotes this organism
+  'Onthophagus puxilus': no ground-truth name denotes this organism
+  'Onthophagus quadridentatus': no ground-truth name denotes this organism
+  'Onthophagus ruficapillus': no ground-truth name denotes this organism
+  'Onthophagus similis': no ground-truth name denotes this organism
+  'Onthophagus sp1': no ground-truth name denotes this organism
+  'Onthophagus sp1.IRA01': no ground-truth name denotes this organism
+  'Onthophagus sp10': no ground-truth name denotes this organism
+  'Onthophagus sp11': no ground-truth name denotes this organism
+  'Onthophagus sp12': no ground-truth name denotes this organism
+  'Onthophagus sp13': no ground-truth name denotes this organism
+  'Onthophagus sp14': no ground-truth name denotes this organism
+  'Onthophagus sp2': no ground-truth name denotes this organism
+  'Onthophagus sp3': no ground-truth name denotes this organism
+  'Onthophagus sp4': no ground-truth name denotes this organism
+  'Onthophagus sp5': no ground-truth name denotes this organism
+  'Onthophagus sp6': no ground-truth name denotes this organism
+  'Onthophagus sp7': no ground-truth name denotes this organism
+  'Onthophagus sp8': no ground-truth name denotes this organism
+  'Onthophagus sp9': no ground-truth name denotes this organism
+  'Onthophagus stockwelli': no ground-truth name denotes this organism
+  'Onthophagus tamworthi': no ground-truth name denotes this organism
+  'Onthophagus taurus': no ground-truth name denotes this organism
+  'Onthophagus truchmenus': no ground-truth name denotes this organism
+  'Onthophagus vacca': no ground-truth name denotes this organism
+  'Onthophagus vinctus': no ground-truth name denotes this organism
+  'Otophorus haemorrhoidalis': no ground-truth name denotes this organism
+  'Phalops sp1': no ground-truth name denotes this organism
+  'Phanaeus amithaon': no ground-truth name denotes this organism
+  'Phanaeus haroldi': no ground-truth name denotes this organism
+  'Phanaeus scutifer': no ground-truth name denotes this organism
+  'Phanaeus tridens': no ground-truth name denotes this organism
+  'Phanaeus vindex': no ground-truth name denotes this organism
+  'Planolinus fasciatus': no ground-truth name denotes this organism
+  'Pleuraphodius sp1': no ground-truth name denotes this organism
+  'Pleuraphodius sp2': no ground-truth name denotes this organism
+  'Pleuraphodius sp3': no ground-truth name denotes this organism
+  'Sisyphus caffer': no ground-truth name denotes this organism
+  'Sisyphus schaefferi': no ground-truth name denotes this organism
+  'Sisyphus sp1': no ground-truth name denotes this organism
+  'Sisyphus sp2': no ground-truth name denotes this organism
+  'Sisyphus sp3': no ground-truth name denotes this organism
+  'Tiniocellus spinipes': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 10 pair(s))
+  'EL' -> 'Elytra length'
+  'Head length (mm)' -> 'Head Length'
+  'Head width (mm)' -> 'Head Width'
+  'Pronotum height (mm)' -> 'Pronotum Height'
+  'Pronotum length (mm)' -> 'Pronotum Length'
+  'Pronotum width (mm)' -> 'Pronotum Width'
+  'mTL' -> 'Metatiba length'
+  'pTL' -> 'Protibia length'
+  'pTW' -> 'Protibia width'
+  'reloc.size behav' -> 'Relocation Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 13424
+  missed (FN)         : 21598
+  spurious, in scope  : 20332   <- GT covers this trait: real errors
+  spurious, out of scope: 33161   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.201 / 0.383 / 0.263   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.398 / 0.383 / 0.390   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.383   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                          33161
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord             13424  13424  1.000
+  measurementMethod             0   1332  0.000  <-- low
+  measurementUnit               0  13424  0.000  <-- low
+  measurementStatistic        142  13424  0.011  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0  13424  0.000  <-- low
+  lifeStage                     0  13424  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0  13424  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +13047 where GT blank
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a   +13047 where GT blank
+  associatedReferences          0  13424  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 21598 MISSED ROWS MISSED
+  species not in prediction               20118
+  species present, trait missing            345
+  species+trait present, value differs      957
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'small endocoprids'          ->  'endo.sma'                   x56
+     'big paracoprids'            ->  'para.big'                   x22
+     'medium paracoprids'         ->  'para.med'                   x20
+     'small paracoprids'          ->  'para.sma'                   x19
+     '0.45'                       ->  '0.6'                        x11
+     '1.5'                        ->  '1.2'                        x8
+  -> 6 substitutions explain 136 of 21598 misses (1%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (166 distinct), closest predicted name:
+     gt 'Digitonthoagus gazla'              ~0.88~  pred 'Digitonthophagus gazella'   x1081
+     gt 'Euoniticlus fulvus'                ~0.96~  pred 'Euoniticellus fulvus'   x801
+     gt 'Onthoagus taurus'                  ~0.95~  pred 'Onthophagus taurus'   x671
+     gt 'Aodius fimetarius'                 ~0.93~  pred 'Aphodius fimetarius'   x601
+     gt 'Euoniticlus intermedius'           ~0.96~  pred 'Euoniticellus intermedius'   x511
+     gt 'Aodius sp1'                        ~0.93~  pred 'Aphodius sp1'   x450
+  -> 6 species mismatches explain 4115 of 21598 misses (19%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Metatibia Length'                 x132
+     'Body Mass'                        x129
+     'Pronotum Length'                  x21
+     'Protibia Length'                  x21
+     'Protibia Width'                   x21
+     'Pronotum Width'                   x21
+  -> 6 missing traits explain 345 of 21598 misses (2%) — scattered; no single cause
+
+  full miss detail saved -> Noriega2023_misses.csv, Noriega2023_misses_summary.json (21598 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  biomas                                           10    10   
+  biomass                                        3159  3446   Δ+287 (split?)
+  body mass                                       282     0   GT-ONLY
+  dung relocation strategy                          0 31890   PRED-ONLY
+  elytra length                                  3476  3476   
+  head length                                    3476  3476   
+  head width                                     3476  3476   
+  pronotum height                                3476  3476   
+  metatiba length                                3189  3435   Δ+246 (split?)
+  metatibia length                                287     0   GT-ONLY
+  pronotum length                                3476  3189   Δ-287 (split?)
+  protibia length                                3476  3148   Δ-328 (split?)
+  pl morph                                          0   287   PRED-ONLY
+  ptl morph                                         0   287   PRED-ONLY
+  ptw morph                                         0   287   PRED-ONLY
+  pw morph                                          0   287   PRED-ONLY
+  mtl                                               0    41   PRED-ONLY
+  pronotum width                                 3476  3189   Δ-287 (split?)
+  protibia width                                 3476  3148   Δ-328 (split?)
+  ptl                                               0    41   PRED-ONLY
+  ptw                                               0    41   PRED-ONLY
+  relocation size                                 287   287   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.398  0.383  0.390  13424 20332 21598   id+type+value
+             (33161 more spurious row(s) set aside as out-of-scope; strict P would be 0.201)
+  tags        0.000  0.000  0.000      0 33756 35022   basis+id+type+value+stat+sex+stage
+             (33161 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.390 vs previous)

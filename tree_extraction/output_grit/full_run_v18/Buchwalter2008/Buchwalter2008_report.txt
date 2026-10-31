@@ -1,0 +1,81 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Buchwalter2008/Buchwalter2008.xlsx  (42 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Buchwalter2008/Buchwalter2008.csv  (42 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 3 pair(s))
+  'Doroneuria baumannii' -> 'Doroneuria baumanni'
+  'Isogenoides hansonni' -> 'Isogenoides hansoni'
+  'Maccaffertium ithaca' -> 'Mccaffertium ithaca'
+
+TAXON NAMES LEFT UNMAPPED (2)
+  'Claassinea': no ground-truth name denotes this organism
+  'Isonychia sp2.': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 42
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 42   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             42
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 42 MISSED ROWS MISSED
+  species not in prediction                   4
+  species present, trait missing             38
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (2 distinct), closest predicted name:
+     gt 'Isonychia sp.'                     ~0.90~  pred 'Isonychia sp2.'   x2
+     gt 'Claassinea sabulosa'               ~0.81~  pred 'Claassinea'   x2
+  -> 2 species mismatches explain 4 of 42 misses (10%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Weight'                      x19
+     'Feeding'                          x19
+  -> 2 missing traits explain 38 of 42 misses (90%) — systematic, not scattered
+
+  full miss detail saved -> Buchwalter2008_misses.csv, Buchwalter2008_misses_summary.json (42 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  ke (d^-1)                                         0    21   PRED-ONLY
+  body weight                                      21     0   GT-ONLY
+  feeding                                          21     0   GT-ONLY
+  ku (l g^-1 d^-1)                                  0    21   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0    42   id+type+value
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0     0    42   basis+id+type+value+stat+sex+stage
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

@@ -1,0 +1,159 @@
+  [semantic] matched by values: 'location of nymph' -> 'Location juvenile'
+  [semantic] matched by values: 'generalist specialist' -> 'Diet breadth'
+  [semantic] matched by values: 'Length' -> 'Body size'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tielens2020/Tielens2020.xlsx  (142 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Tielens2020/Tielens2020.csv  (2598 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 6 pair(s))
+  'HYPOSMOCOMA SP' -> 'Hyposmocoma'
+  'LEIALOHA SP' -> 'Leialoha'
+  'OPUNA SP' -> 'Opuna'
+  'ORTHOTYLUS METROSIDERI' -> 'Orthotylus metrosiderii'
+  'PARIACONUS SP' -> 'Pariaconus'
+  'TYMPANOCOCCUS TYMPANISIUS' -> 'Tympanococcus tympanistus'
+
+TAXON NAMES LEFT UNMAPPED (39)
+  'Coleotichus': no ground-truth name denotes this organism
+  'DARKHEAD SP': no ground-truth name denotes this organism
+  'DARKMORPH SP': no ground-truth name denotes this organism
+  'FLATCURVE SP': no ground-truth name denotes this organism
+  'GLYPTONYSIUS NEWSP': no ground-truth name denotes this organism
+  'Greenidea': no ground-truth name denotes this organism
+  'HYPOSMOCOMA GIANT': no ground-truth name denotes this organism
+  'Hemiptera': no ground-truth name denotes this organism
+  'Hyalopeplus': no ground-truth name denotes this organism
+  'Iolania': no ground-truth name denotes this organism
+  'Koanoa': no ground-truth name denotes this organism
+  'LEIALOHA SCAEVOLAE': no ground-truth name denotes this organism
+  'LEIALOHA SP3': no ground-truth name denotes this organism
+  'LIGHTMORPH SP': no ground-truth name denotes this organism
+  'Metrosideros polymorpha': no ground-truth name denotes this organism
+  'Nesophrosyne': no ground-truth name denotes this organism
+  'OLIARUS FILICICOLA': no ground-truth name denotes this organism
+  'Oceanides': no ground-truth name denotes this organism
+  'Orthotylus': no ground-truth name denotes this organism
+  'PARIACONUS GRACILIS': no ground-truth name denotes this organism
+  'PARIACONUS HINA': no ground-truth name denotes this organism
+  'PARIACONUS LONA': no ground-truth name denotes this organism
+  'PHILAENUS SPUMARIUS': no ground-truth name denotes this organism
+  'RED MORPH': no ground-truth name denotes this organism
+  'SHIELDHEAD SP': no ground-truth name denotes this organism
+  'SOPHONIA RUFOFASCIA': no ground-truth name denotes this organism
+  'SP SP': no ground-truth name denotes this organism
+  'SP SP1': no ground-truth name denotes this organism
+  'SP SP3': no ground-truth name denotes this organism
+  'SP SP4': no ground-truth name denotes this organism
+  'SPOTTY HEAD': no ground-truth name denotes this organism
+  'SPOTTYBODY SP': no ground-truth name denotes this organism
+  'STRIPEY MORPH': no ground-truth name denotes this organism
+  'Sarona': no ground-truth name denotes this organism
+  'Siphanta': no ground-truth name denotes this organism
+  'Sp': no ground-truth name denotes this organism
+  'TINYMORPH SP': no ground-truth name denotes this organism
+  'TOXOPTERA AURANTII': no ground-truth name denotes this organism
+  'Tympanococcus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Length' -> 'Body size'
+  'feeding guild' -> 'Feeding guild'
+  'generalist specialist' -> 'Diet breadth'
+  'location of nymph' -> 'Location juvenile'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 73
+  missed (FN)         : 69
+  spurious, in scope  : 153   <- GT covers this trait: real errors
+  spurious, out of scope: 2372   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.028 / 0.514 / 0.053   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.323 / 0.514 / 0.397   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.514   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           2372
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     73  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      5  0.000  <-- low
+  measurementStatistic         68     73  0.932
+  measurementRemarks            0      5  0.000  <-- low
+  sex                           0     73  0.000  <-- low
+  lifeStage                     0     73  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     73  0.000  <-- low
+  samplingProtocol              0     73  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     73  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     73  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 69 MISSED ROWS MISSED
+  species not in prediction                  16
+  species present, trait missing             50
+  species+trait present, value differs        3
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'flower/bud feeder'          ->  'flower feeder/ bud feeding' x1
+     'leaf chewer'                ->  'chewer'                     x1
+     'seed feeder'                ->  'seed'                       x1
+  -> 3 substitutions explain 3 of 69 misses (4%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (5 distinct), closest predicted name:
+     gt 'Geometridae'                       ~0.55~  pred 'Metrosideros polymorpha'   x4
+     gt 'Oliarus filicola'                  ~0.94~  pred 'OLIARUS FILICICOLA'   x4
+     gt 'Opuna sharpianus'                  ~0.78~  pred 'Opuna'   x4
+     gt 'Cicadellidae'                       (nothing similar in the prediction)   x2
+     gt 'Miridae'                            (nothing similar in the prediction)   x2
+  -> 5 species mismatches explain 16 of 69 misses (23%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body size'                        x27
+     'Location juvenile'                x8
+     'Diet breadth'                     x8
+     'Feeding guild'                    x7
+  -> 4 missing traits explain 50 of 69 misses (72%) — systematic, not scattered
+
+  full miss detail saved -> Tielens2020_misses.csv, Tielens2020_misses_summary.json (69 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 11)                              0    26   PRED-ONLY
+  specific leaf area                                0     4   PRED-ONLY
+  body size                                        37    37   
+  diet breadth                                     33    45   Δ+12 (split?)
+  species code                                      0    37   PRED-ONLY
+  mean water content                                0    24   PRED-ONLY
+  water content                                     0     4   PRED-ONLY
+  feeding guild                                    37    94   Δ+57 (split?)
+  foliar nitrogen                                   0     4   PRED-ONLY
+  foliar phosphorus                                 0     4   PRED-ONLY
+  generalist / specialist                           0    33   PRED-ONLY
+  location juvenile                                35    50   Δ+15 (split?)
+  length                                            0    60   PRED-ONLY
+  location of nymph                                 0    35   PRED-ONLY
+  max                                               0     4   PRED-ONLY
+  mean sla                                          0    24   PRED-ONLY
+  morphotype                                        0    24   PRED-ONLY
+  order                                             0    60   PRED-ONLY
+  %pubescent                                        0    24   PRED-ONLY
+  q1                                                0     4   PRED-ONLY
+  q3                                                0     4   PRED-ONLY
+  species                                           0  1997   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.323  0.514  0.397     73   153    69   id+type+value
+             (2372 more spurious row(s) set aside as out-of-scope; strict P would be 0.028)
+  tags        0.000  0.000  0.000      0   226   142   basis+id+type+value+stat+sex+stage
+             (2372 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.397 vs previous)

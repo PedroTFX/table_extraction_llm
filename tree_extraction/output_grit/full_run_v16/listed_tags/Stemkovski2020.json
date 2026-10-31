@@ -1,0 +1,1736 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "3": {
+   "Stage": {
+    "tag": "lifeStage",
+    "values": {
+     "Emergence": {
+      "choice": "adult",
+      "probs": {
+       "adult": 0.456,
+       "larva": 0.089,
+       "mature larva": 0.011,
+       "nymph": 0.005,
+       "caterpillar": 0.002,
+       "pupa": 0.008,
+       "egg": 0.189,
+       "instar": 0.002,
+       "all": 0.017,
+       "unknown": 0.043,
+       "not": 0.178
+      },
+      "duels": [
+       {
+        "a": "o0",
+        "b": "o6",
+        "choice": "a",
+        "probs": {
+         "a": 0.934,
+         "b": 0.066
+        }
+       },
+       {
+        "a": "o1",
+        "b": "o0",
+        "choice": "b",
+        "probs": {
+         "a": 0.018,
+         "b": 0.982
+        }
+       }
+      ],
+      "final": {
+       "choice": "pick",
+       "probs": {
+        "pick": 0.891,
+        "not": 0.109
+       }
+      },
+      "value": "adult"
+     },
+     "Peak": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.03,
+       "larva": 0.022,
+       "mature larva": 0.005,
+       "nymph": 0.003,
+       "caterpillar": 0.001,
+       "pupa": 0.002,
+       "egg": 0.005,
+       "instar": 0.001,
+       "all": 0.003,
+       "unknown": 0.015,
+       "not": 0.913
+      },
+      "value": "not"
+     },
+     "Senescence": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.045,
+       "larva": 0.031,
+       "mature larva": 0.064,
+       "nymph": 0.004,
+       "caterpillar": 0.002,
+       "pupa": 0.019,
+       "egg": 0.007,
+       "instar": 0.001,
+       "all": 0.009,
+       "unknown": 0.023,
+       "not": 0.796
+      },
+      "duels": [
+       {
+        "a": "o2",
+        "b": "o0",
+        "choice": "b",
+        "probs": {
+         "a": 0.087,
+         "b": 0.913
+        }
+       },
+       {
+        "a": "o1",
+        "b": "o0",
+        "choice": "b",
+        "probs": {
+         "a": 0.013,
+         "b": 0.987
+        }
+       }
+      ],
+      "final": {
+       "choice": "not",
+       "probs": {
+        "pick": 0.313,
+        "not": 0.687
+       }
+      },
+      "value": null
+     }
+    }
+   },
+   "Group": {
+    "tag": "lifeStage",
+    "values": {
+     "Above ground": {
+      "choice": "not",
+      "probs": {
+       "adult": 0.038,
+       "larva": 0.015,
+       "mature larva": 0.002,
+       "nymph": 0.003,
+       "caterpillar": 0.002,
+       "pupa": 0.001,
+       "egg": 0.002,
+       "instar": 0.001,
+       "all": 0.009,
+       "unknown": 0.018,
+       "not": 0.91
+      },
+      "value": "not"
+     },
+     "Below ground": {
+      "choice": "larva",
+      "probs": {
+       "adult": 0.004,
+       "larva": 0.905,
+       "mature larva": 0.017,
+       "nymph": 0.004,
+       "caterpillar": 0.001,
+       "pupa": 0.008,
+       "egg": 0.001,
+       "instar": 0.002,
+       "all": 0.002,
+       "unknown": 0.001,
+       "not": 0.054
+      },
+      "value": "larva"
+     },
+     "Adults": {
+      "choice": "adult",
+      "probs": {
+       "adult": 0.97,
+       "larva": 0.001,
+       "mature larva": 0.003,
+       "nymph": 0.001,
+       "caterpillar": 0.0,
+       "pupa": 0.001,
+       "egg": 0.001,
+       "instar": 0.0,
+       "all": 0.001,
+       "unknown": 0.0,
+       "not": 0.022
+      },
+      "value": "adult"
+     },
+     "Pupae/Prepupae": {
+      "choice": "pupa",
+      "probs": {
+       "adult": 0.003,
+       "larva": 0.035,
+       "mature larva": 0.017,
+       "nymph": 0.002,
+       "caterpillar": 0.001,
+       "pupa": 0.94,
+       "egg": 0.0,
+       "instar": 0.0,
+       "all": 0.0,
+       "unknown": 0.0,
+       "not": 0.001
+      },
+      "value": "pupa"
+     }
+    }
+   }
+  },
+  "4": {},
+  "6": {},
+  "9": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "3": {},
+  "4": {},
+  "6": {},
+  "9": {}
+ },
+ "statistic": {
+  "0": {
+   "Phenology Shift Category": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.985,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "Response to snowmelt (Days of phenology shift / Days of snowmelt shift)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.011,
+     "mean": 0.791,
+     "mean ± SD": 0.023,
+     "mean ± SE": 0.013,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.127,
+     "count": 0.001,
+     "mode": 0.029,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o7",
+      "choice": "a",
+      "probs": {
+       "a": 0.525,
+       "b": 0.475
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   }
+  },
+  "1": {
+   "Emergence (Standardized effect size)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.952,
+     "mean ± SD": 0.016,
+     "mean ± SE": 0.006,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.015,
+     "count": 0.0,
+     "mode": 0.006,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean",
+    "said": []
+   },
+   "Peak (Standardized effect size)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.973,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.004,
+     "median": 0.005,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean",
+    "said": []
+   },
+   "Senescence (Standardized effect size)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.978,
+     "mean ± SD": 0.006,
+     "mean ± SE": 0.004,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.004,
+     "count": 0.0,
+     "mode": 0.002,
+     "single observation": 0.0,
+     "unknown": 0.001
+    },
+    "value": "mean",
+    "said": []
+   }
+  },
+  "3": {
+   "Estimated phenology (DOY)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.959,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.021,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean",
+    "said": []
+   }
+  },
+  "4": {
+   "Phenophase": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.047,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.934,
+     "single observation": 0.002,
+     "unknown": 0.001
+    },
+    "value": "mode",
+    "said": [
+     "## Phenophase estimation To bypass the problems of first-occurrence measures of sparse time-series data for many taxa including bees, take into account variable uncertainty, and estimate emergence, peak, and senescence dates from distributions of unknown form, we developed a novel application (validated in Supporting Information 2) of Generalized Additive Models (GAMs; Wood 2017).",
+     "To investigate whether certain traits influence the phenological responsiveness of species to climate, we modelled phenophase estimates as functions of snowmelt (for other climatic variables, see Supporting Information 3) interacting with nest location and overwintering stage, with variable intercepts and slopes, holding all else equal, modelled as $D O Y _ { p h a s e } { \\sim } \\Theta _ { s n o w m e l t } { * } \\Theta _ { t r a i t } { + } e _ { s p } { + } e _ { s i t e }$ ."
+    ]
+   },
+   "Year variance": {
+    "choice": "unknown",
+    "probs": {
+     "individual": 0.101,
+     "mean": 0.092,
+     "mean ± SD": 0.051,
+     "mean ± SE": 0.019,
+     "range": 0.016,
+     "min": 0.014,
+     "max": 0.033,
+     "median": 0.026,
+     "count": 0.04,
+     "mode": 0.076,
+     "single observation": 0.159,
+     "unknown": 0.374
+    },
+    "duels": [
+     {
+      "a": "o11",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.06,
+       "b": 0.94
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.464,
+       "b": 0.536
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "Site variance": {
+    "choice": "unknown",
+    "probs": {
+     "individual": 0.142,
+     "mean": 0.029,
+     "mean ± SD": 0.047,
+     "mean ± SE": 0.015,
+     "range": 0.011,
+     "min": 0.012,
+     "max": 0.031,
+     "median": 0.024,
+     "count": 0.033,
+     "mode": 0.103,
+     "single observation": 0.17,
+     "unknown": 0.382
+    },
+    "duels": [
+     {
+      "a": "o11",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.037,
+       "b": 0.963
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.413,
+       "b": 0.587
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "Species variance": {
+    "choice": "unknown",
+    "probs": {
+     "individual": 0.112,
+     "mean": 0.064,
+     "mean ± SD": 0.035,
+     "mean ± SE": 0.016,
+     "range": 0.016,
+     "min": 0.013,
+     "max": 0.06,
+     "median": 0.021,
+     "count": 0.04,
+     "mode": 0.121,
+     "single observation": 0.113,
+     "unknown": 0.39
+    },
+    "duels": [
+     {
+      "a": "o11",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.598,
+       "b": 0.402
+      }
+     }
+    ],
+    "value": null,
+    "said": [
+     "We found that the variance attributed to years and sites was highest for emergence and decreased with later phenophases, while the variance attributed to species was highest for senescence.",
+     "The proportion of variance attributed to years and sites decreases across phenophases, while it increases across phenophases for species."
+    ]
+   },
+   "Residual variance": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.031,
+     "mean": 0.005,
+     "mean ± SD": 0.019,
+     "mean ± SE": 0.005,
+     "range": 0.007,
+     "min": 0.005,
+     "max": 0.007,
+     "median": 0.01,
+     "count": 0.014,
+     "mode": 0.047,
+     "single observation": 0.487,
+     "unknown": 0.362
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.982,
+       "b": 0.018
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.032,
+       "b": 0.968
+      }
+     }
+    ],
+    "value": "single observation",
+    "said": [
+     "Upon fitting the model, we calculated the proportion of the variance attributed to each random effect by dividing the variance (the square of the standard deviation) by the sum of the variances of the other random effects including the residual variance.",
+     "The variance attributed to each random effect and residual variance."
+    ]
+   }
+  },
+  "6": {
+   "Family": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.998,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": [
+     "For each species/site/year combination, we fit a GAM with day-of-year as the explanatory variable and abundance as the response using a cubic spline smoothing basis with a Gaussian distribution family and performed generalised cross-validation to avoid over-fitting."
+    ]
+   },
+   "ITD (mm)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.983,
+     "mean ± SD": 0.005,
+     "mean ± SE": 0.002,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.003,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mean",
+    "said": [
+     "We calculated body mass by measuring intertegular distance (ITD) for up to ten individuals of each species and scaling the measurements according to an established ITD-to-mass relationship (Cane 1987).",
+     "Abbreviations are as follows: ITD is intertegular distance, Em."
+    ]
+   },
+   "Nest loc.": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.017,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.979,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "Overw. stage": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.005,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.992,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "Em. points": {
+    "choice": "count",
+    "probs": {
+     "individual": 0.355,
+     "mean": 0.126,
+     "mean ± SD": 0.026,
+     "mean ± SE": 0.003,
+     "range": 0.001,
+     "min": 0.003,
+     "max": 0.001,
+     "median": 0.003,
+     "count": 0.466,
+     "mode": 0.012,
+     "single observation": 0.005,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.579,
+       "b": 0.421
+      }
+     }
+    ],
+    "value": null,
+    "said": [
+     "The mean was selected from a uniform distribution ranging from 50 to 200 days of the year, the standard deviation was varied by ten intervals from 7 to 50 days, and points were drawn every 14 days to mirror the actual bee monitoring protocol.",
+     "The red lines represent one-to-one relationships, and all points fall very close to these lines."
+    ]
+   },
+   "Peak points": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.037,
+     "mean": 0.534,
+     "mean ± SD": 0.008,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.024,
+     "median": 0.015,
+     "count": 0.291,
+     "mode": 0.084,
+     "single observation": 0.002,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.061,
+       "b": 0.939
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.604,
+       "b": 0.396
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "Sen. points": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.042,
+     "mean": 0.623,
+     "mean ± SD": 0.011,
+     "mean ± SE": 0.003,
+     "range": 0.003,
+     "min": 0.008,
+     "max": 0.017,
+     "median": 0.026,
+     "count": 0.14,
+     "mode": 0.127,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.049,
+       "b": 0.951
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "a",
+      "probs": {
+       "a": 0.6,
+       "b": 0.4
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   }
+  },
+  "9": {
+   "Phenophase": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.008,
+     "mean": 0.084,
+     "mean ± SD": 0.01,
+     "mean ± SE": 0.005,
+     "range": 0.005,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.002,
+     "mode": 0.877,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "value": "mode",
+    "said": [
+     "## Phenophase estimation To bypass the problems of first-occurrence measures of sparse time-series data for many taxa including bees, take into account variable uncertainty, and estimate emergence, peak, and senescence dates from distributions of unknown form, we developed a novel application (validated in Supporting Information 2) of Generalized Additive Models (GAMs; Wood 2017).",
+     "To investigate whether certain traits influence the phenological responsiveness of species to climate, we modelled phenophase estimates as functions of snowmelt (for other climatic variables, see Supporting Information 3) interacting with nest location and overwintering stage, with variable intercepts and slopes, holding all else equal, modelled as $D O Y _ { p h a s e } { \\sim } \\Theta _ { s n o w m e l t } { * } \\Theta _ { t r a i t } { + } e _ { s p } { + } e _ { s i t e }$ ."
+    ]
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.095,
+     "female": 0.004,
+     "male": 0.002,
+     "unknown": 0.01,
+     "not": 0.89
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.003,
+     "male alate": 0.002,
+     "worker": 0.039,
+     "minor worker": 0.002,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.954
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.007,
+     "LivingSpecimen": 0.107,
+     "HumanObservation": 0.055,
+     "MachineObservation": 0.003,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.043,
+     "Occurrence": 0.013,
+     "Taxon": 0.0,
+     "not": 0.771
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.373,
+       "b": 0.627
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.417,
+     "larva": 0.003,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.062,
+     "unknown": 0.033,
+     "not": 0.482
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.296,
+       "b": 0.704
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.031,
+     "female": 0.002,
+     "male": 0.001,
+     "unknown": 0.002,
+     "not": 0.965
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.004,
+     "worker": 0.011,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.984
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.006,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.93,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.06
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "all",
+    "probs": {
+     "adult": 0.004,
+     "larva": 0.003,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.498,
+     "unknown": 0.008,
+     "not": 0.485
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.99,
+       "b": 0.01
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.059,
+       "b": 0.941
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.987,
+      "not": 0.013
+     }
+    },
+    "value": "all"
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.056,
+     "female": 0.003,
+     "male": 0.001,
+     "unknown": 0.009,
+     "not": 0.931
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.008,
+     "male alate": 0.025,
+     "worker": 0.073,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.892
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.024,
+     "HumanObservation": 0.018,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.583,
+     "Occurrence": 0.009,
+     "Taxon": 0.0,
+     "not": 0.361
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.966,
+       "b": 0.034
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.006,
+       "b": 0.994
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.967,
+      "not": 0.033
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.859,
+     "larva": 0.056,
+     "mature larva": 0.02,
+     "nymph": 0.004,
+     "caterpillar": 0.003,
+     "pupa": 0.012,
+     "egg": 0.013,
+     "instar": 0.006,
+     "all": 0.007,
+     "unknown": 0.005,
+     "not": 0.016
+    },
+    "value": "adult"
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.198,
+     "female": 0.002,
+     "male": 0.015,
+     "unknown": 0.001,
+     "not": 0.784
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.952,
+       "b": 0.048
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.014,
+       "b": 0.986
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.165,
+      "not": 0.835
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.014,
+     "male alate": 0.021,
+     "worker": 0.002,
+     "minor worker": 0.0,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.961
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.001,
+     "LivingSpecimen": 0.007,
+     "HumanObservation": 0.009,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.954,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.025
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.985,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.003,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.0,
+     "not": 0.009
+    },
+    "value": "adult"
+   }
+  },
+  "6": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.342,
+     "female": 0.272,
+     "male": 0.019,
+     "unknown": 0.007,
+     "not": 0.36
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.54,
+       "b": 0.46
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "queen",
+    "probs": {
+     "queen": 0.652,
+     "male alate": 0.003,
+     "worker": 0.214,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.128
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.708,
+       "b": 0.292
+      }
+     }
+    ],
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.005,
+     "LivingSpecimen": 0.003,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.989,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.002
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.99,
+     "larva": 0.007,
+     "mature larva": 0.001,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.001,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "value": "adult"
+   }
+  },
+  "9": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.069,
+     "female": 0.003,
+     "male": 0.002,
+     "unknown": 0.002,
+     "not": 0.924
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.004,
+     "male alate": 0.005,
+     "worker": 0.005,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.984
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.002,
+     "LivingSpecimen": 0.021,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.055,
+     "Occurrence": 0.002,
+     "Taxon": 0.0,
+     "not": 0.915
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.015,
+     "larva": 0.003,
+     "mature larva": 0.001,
+     "nymph": 0.001,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.001,
+     "instar": 0.0,
+     "all": 0.111,
+     "unknown": 0.013,
+     "not": 0.853
+    },
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "sex": {
+   "value": "both",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "Occurrence",
+   "round": "supplementary material",
+   "settle": {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.017,
+     "HumanObservation": 0.018,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.903,
+     "Taxon": 0.0,
+     "mixed": 0.056
+    },
+    "by": "clash",
+    "values": [
+     "PreservedSpecimen",
+     "HumanObservation",
+     "Occurrence",
+     "MaterialCitation"
+    ]
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "measurementStatistic": {
+   "value": "mode",
+   "round": "supplementary material",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "Phenology Shift Category": {
+     "said": [],
+     "value": null
+    },
+    "Response to snowmelt (Days of phenology shift / Days of snowmelt shift)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Emergence (Standardized effect size)": {
+     "said": [],
+     "value": null
+    },
+    "Peak (Standardized effect size)": {
+     "said": [],
+     "value": null
+    },
+    "Senescence (Standardized effect size)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Estimated phenology (DOY)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Phenophase": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.933,
+      "literature": 0.067
+     },
+     "said": [
+      "## Phenophase estimation To bypass the problems of first-occurrence measures of sparse time-series data for many taxa including bees, take into account variable uncertainty, and estimate emergence, peak, and senescence dates from distributions of unknown form, we developed a novel application (validated in Supporting Information 2) of Generalized Additive Models (GAMs; Wood 2017).",
+      "To investigate whether certain traits influence the phenological responsiveness of species to climate, we modelled phenophase estimates as functions of snowmelt (for other climatic variables, see Supporting Information 3) interacting with nest location and overwintering stage, with variable intercepts and slopes, holding all else equal, modelled as $D O Y _ { p h a s e } { \\sim } \\Theta _ { s n o w m e l t } { * } \\Theta _ { t r a i t } { + } e _ { s p } { + } e _ { s i t e }$ ."
+     ],
+     "value": "measured"
+    },
+    "Year variance": {
+     "said": [],
+     "value": null
+    },
+    "Site variance": {
+     "said": [],
+     "value": null
+    },
+    "Species variance": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.76,
+      "literature": 0.24
+     },
+     "said": [
+      "We found that the variance attributed to years and sites was highest for emergence and decreased with later phenophases, while the variance attributed to species was highest for senescence.",
+      "The proportion of variance attributed to years and sites decreases across phenophases, while it increases across phenophases for species."
+     ],
+     "value": null
+    },
+    "Residual variance": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.613,
+      "literature": 0.387
+     },
+     "said": [
+      "Upon fitting the model, we calculated the proportion of the variance attributed to each random effect by dividing the variance (the square of the standard deviation) by the sum of the variances of the other random effects including the residual variance.",
+      "The variance attributed to each random effect and residual variance."
+     ],
+     "value": null
+    }
+   }
+  },
+  "6": {
+   "long": false,
+   "traits": {
+    "Family": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.096,
+      "literature": 0.904
+     },
+     "said": [
+      "For each species/site/year combination, we fit a GAM with day-of-year as the explanatory variable and abundance as the response using a cubic spline smoothing basis with a Gaussian distribution family and performed generalised cross-validation to avoid over-fitting."
+     ],
+     "value": "literature"
+    },
+    "ITD (mm)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.878,
+      "literature": 0.122
+     },
+     "said": [
+      "We calculated body mass by measuring intertegular distance (ITD) for up to ten individuals of each species and scaling the measurements according to an established ITD-to-mass relationship (Cane 1987).",
+      "Abbreviations are as follows: ITD is intertegular distance, Em."
+     ],
+     "value": "measured"
+    },
+    "Nest loc.": {
+     "said": [],
+     "value": null
+    },
+    "Overw. stage": {
+     "said": [],
+     "value": null
+    },
+    "Em. points": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.089,
+      "literature": 0.911
+     },
+     "said": [
+      "The mean was selected from a uniform distribution ranging from 50 to 200 days of the year, the standard deviation was varied by ten intervals from 7 to 50 days, and points were drawn every 14 days to mirror the actual bee monitoring protocol.",
+      "The red lines represent one-to-one relationships, and all points fall very close to these lines."
+     ],
+     "value": "literature"
+    },
+    "Peak points": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.167,
+      "literature": 0.833
+     },
+     "said": [
+      "Blue points represent emergence shifts, green points represent peak, and brown points represent senescence."
+     ],
+     "value": "literature"
+    },
+    "Sen. points": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "9": {
+   "long": false,
+   "traits": {
+    "Phenophase": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.911,
+      "literature": 0.089
+     },
+     "said": [
+      "## Phenophase estimation To bypass the problems of first-occurrence measures of sparse time-series data for many taxa including bees, take into account variable uncertainty, and estimate emergence, peak, and senescence dates from distributions of unknown form, we developed a novel application (validated in Supporting Information 2) of Generalized Additive Models (GAMs; Wood 2017).",
+      "To investigate whether certain traits influence the phenological responsiveness of species to climate, we modelled phenophase estimates as functions of snowmelt (for other climatic variables, see Supporting Information 3) interacting with nest location and overwintering stage, with variable intercepts and slopes, holding all else equal, modelled as $D O Y _ { p h a s e } { \\sim } \\Theta _ { s n o w m e l t } { * } \\Theta _ { t r a i t } { + } e _ { s p } { + } e _ { s i t e }$ ."
+     ],
+     "value": "measured"
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.819,
+   "compiled": 0.181
+  },
+  "value": "own"
+ },
+ "rows": {
+  "0": " Its 20 rows hold 10 species, so a species takes several rows.",
+  "1": "",
+  "3": "",
+  "4": "",
+  "6": " Each of its 67 species takes one row.",
+  "9": ""
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.97,
+     "female": 0.025,
+     "male": 0.002,
+     "unknown": 0.002,
+     "not": 0.001
+    },
+    "quote": "including females and males (with the exception of Lasioglossum spp. for which we were only able to identify females)",
+    "value": "both"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.807,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.181,
+     "Taxon": 0.0,
+     "not": 0.005
+    },
+    "quote": "Using generalised additive models, we analyzed time-series data representing 67 bee species collected over 9 years in the Colorado Rocky Mountains to perform the first community-wide quantification of the drivers of bee phenology.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "HumanObservation",
+    "probs": {
+     "PreservedSpecimen": 0.356,
+     "LivingSpecimen": 0.038,
+     "HumanObservation": 0.498,
+     "MachineObservation": 0.016,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.087,
+     "Taxon": 0.0,
+     "not": 0.003
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.831,
+       "b": 0.169
+      }
+     },
+     {
+      "a": "o6",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.08,
+       "b": 0.92
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.918,
+      "not": 0.082
+     }
+    },
+    "quote": "We conducted biweekly bee abundance surveys at each site using pan traps (following LeBuhn et al., 2003).",
+    "value": "HumanObservation"
+   },
+   {
+    "choice": "Occurrence",
+    "probs": {
+     "PreservedSpecimen": 0.007,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.014,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.953,
+     "Taxon": 0.0,
+     "not": 0.019
+    },
+    "quote": "Here, we present findings on the drivers of bee phenology using 9 years of time-series data from a study of solitary bees along an elevation gradient.",
+    "value": "Occurrence"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.0,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.998,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.001
+    },
+    "quote": "We obtained nest location (above ground vs. below ground) and overwintering stage (adult vs. prepupae) for each species by compiling existing trait information from primary resources (Pardee 2018; Table S3).",
+    "value": "MaterialCitation"
+   }
+  ],
+  "lifeStage": [
+   {
+    "choice": "all",
+    "probs": {
+     "adult": 0.147,
+     "larva": 0.023,
+     "mature larva": 0.028,
+     "nymph": 0.003,
+     "caterpillar": 0.001,
+     "pupa": 0.008,
+     "egg": 0.001,
+     "instar": 0.001,
+     "all": 0.785,
+     "unknown": 0.001,
+     "not": 0.002
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.765,
+       "b": 0.235
+      }
+     }
+    ],
+    "quote": "We obtained nest location (above ground vs. below ground) and overwintering stage (adult vs. prepupae) for each species by compiling existing trait information from primary resources (Pardee 2018; Table S3).",
+    "value": null
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.997,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "adult-overwintering species",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.994,
+     "larva": 0.001,
+     "mature larva": 0.001,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.003,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "adult bee emergence",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.998,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.001
+    },
+    "quote": "adult-overwintering bees",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.745,
+     "larva": 0.004,
+     "mature larva": 0.002,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.001,
+     "unknown": 0.002,
+     "not": 0.244
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.945,
+       "b": 0.055
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.078,
+       "b": 0.922
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.369,
+      "not": 0.631
+     }
+    },
+    "quote": "ground-nesting bee species",
+    "value": null
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.041,
+     "mean": 0.09,
+     "mean ± SD": 0.061,
+     "mean ± SE": 0.006,
+     "range": 0.012,
+     "min": 0.012,
+     "max": 0.002,
+     "median": 0.005,
+     "count": 0.003,
+     "mode": 0.001,
+     "single observation": 0.001,
+     "unknown": 0.002,
+     "not": 0.355,
+     "analysis": 0.408
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.524,
+       "b": 0.476
+      }
+     }
+    ],
+    "quote": "first 5%, middle, and last 5% of a distribution (van Strein et al., 2008), corresponding to the three phenophases of foraging bee populations.",
+    "value": null
+   },
+   {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.988,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001,
+     "analysis": 0.005
+    },
+    "quote": "We obtained nest location (above ground vs. below ground) and overwintering stage (adult vs. prepupae) for each species by compiling existing trait information from primary resources (Pardee 2018; Table S3).",
+    "value": "mode"
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
+}

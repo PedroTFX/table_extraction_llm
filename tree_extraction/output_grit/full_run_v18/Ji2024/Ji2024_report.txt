@@ -1,0 +1,80 @@
+  [semantic] matched by values: 'thoraxwidth' -> 'Thorax Width'
+  [semantic] matched by values: 'thoraxlenth' -> 'Thorax Length'
+  [semantic] matched by values: 'leglenth' -> 'Total Length'
+  [semantic] matched by values: 'headwidth' -> 'Head Width'
+  [semantic] matched by values: 'headlenth' -> 'Head Length'
+  [semantic] matched by values: 'elytralenth' -> 'Elytra Length'
+  [semantic] matched by values: 'bodywidth' -> 'Body Width'
+  [semantic] matched by values: 'bodysize' -> 'Body Size'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Ji2024/Ji2024.xlsx  (5184 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Ji2024/Ji2024.csv  (5184 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 12 pair(s))
+  'antenna' -> 'Antenna Length'
+  'bodysize' -> 'Body Size'
+  'bodywidth' -> 'Body Width'
+  'elytralenth' -> 'Elytra Length'
+  'femur' -> 'Femur Length'
+  'headlenth' -> 'Head Length'
+  'headwidth' -> 'Head Width'
+  'hindwing' -> 'Hindwing Length'
+  'leglenth' -> 'Total Length'
+  'thoraxlenth' -> 'Thorax Length'
+  'thoraxwidth' -> 'Thorax Width'
+  'tibia' -> 'Tibia Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 5184
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 1.000 / 1.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord              4752   5184  0.917
+  measurementMethod             0      0    n/a
+  measurementUnit               0   5184  0.000  <-- low
+  measurementStatistic       4752   5184  0.917
+  measurementRemarks            0      0    n/a
+  sex                        5184   5184  1.000
+  lifeStage                  5184   5184  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +5184 where GT blank
+  verbatimCoordinates           0   5184  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   5184  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  antenna length                                  432   432   
+  body size                                       432   432   
+  body width                                      432   432   
+  elytra length                                   432   432   
+  femur length                                    432   432   
+  head length                                     432   432   
+  head width                                      432   432   
+  hindwing length                                 432   432   
+  thorax length                                   432   432   
+  tibia length                                    432   432   
+  total length                                    432   432   
+  thorax width                                    432   432   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000   5184     0     0   id+type+value
+  tags        0.833  0.833  0.833   4320   864   864   basis+id+type+value+stat+sex+stage
+             (F1 -0.167 vs previous)

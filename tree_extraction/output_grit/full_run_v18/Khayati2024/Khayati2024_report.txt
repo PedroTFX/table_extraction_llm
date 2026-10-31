@@ -1,0 +1,81 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Khayati2024/Khayati2024.xlsx  (414 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Khayati2024/Khayati2024.csv  (459 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Colony foundation' -> 'Colony foundation '
+  'Insects' -> 'Food Type: Insects'
+  'Liquid' -> 'Food Type: Liquid'
+  'Seeds' -> 'Food Type: Seeds'
+  'Worker body size' -> 'Worker body size '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 413
+  missed (FN)         : 1
+  spurious, in scope  : 1   <- GT covers this trait: real errors
+  spurious, out of scope: 45   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.900 / 0.998 / 0.946   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.998 / 0.998 / 0.998   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.998   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             45
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               413    413  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0     82  0.000  <-- low
+  measurementStatistic        337    413  0.816
+  measurementRemarks            0      0    n/a
+  sex                         304    413  0.736
+  lifeStage                   337    413  0.816
+  caste                       230    413  0.557
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    413  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 1 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '5.192'                      ->  '5193'                       x1
+  -> 1 substitution explains 1 of 1 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Khayati2024_misses.csv, Khayati2024_misses_summary.json (1 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  worker body size                                 43    43   
+  code                                              0    45   PRED-ONLY
+  colony foundation                                33    33   
+  colony size                                      31    31   
+  diurnality                                       33    33   
+  food type: insects                               35    35   
+  food type: liquid                                35    35   
+  food type: seeds                                 35    35   
+  foraging strategy                                43    43   
+  nesting site                                     45    45   
+  number of queens                                 41    41   
+  worker polymorphism                              40    40   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.998  0.998  0.998    413     1     1   id+type+value
+             (45 more spurious row(s) set aside as out-of-scope; strict P would be 0.900)
+  tags        0.551  0.551  0.551    228   186   186   basis+id+type+value+stat+sex+stage
+             (45 more spurious row(s) set aside as out-of-scope; strict P would be 0.497)
+             (F1 -0.447 vs previous)

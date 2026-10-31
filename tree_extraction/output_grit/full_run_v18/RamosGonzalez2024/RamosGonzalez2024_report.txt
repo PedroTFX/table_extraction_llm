@@ -1,0 +1,134 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/RamosGonzalez2024/RamosGonzalez2024.xlsx  (209 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/RamosGonzalez2024/RamosGonzalez2024.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 209
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 209 MISSED ROWS MISSED
+  species not in prediction                 209
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (9 distinct), closest predicted name:
+     gt 'Digonis cervinaria (Blanchard, 1852)'   (nothing similar in the prediction)   x36
+     gt 'Gugnelve butleri Ramos-González & Parra'   (nothing similar in the prediction)   x31
+     gt 'Digonis gungnir Ramos-González & Parra'   (nothing similar in the prediction)   x29
+     gt 'Phasmadigonis alba (Butler, 1882)'   (nothing similar in the prediction)   x27
+     gt 'Digonis apocrypha Ramos-González & Parra'   (nothing similar in the prediction)   x26
+     gt 'Digonis punctifera Butler, 1882'    (nothing similar in the prediction)   x23
+  -> 6 species mismatches explain 172 of 209 misses (82%) — systematic, not scattered
+
+  full miss detail saved -> RamosGonzalez2024_misses.csv, RamosGonzalez2024_misses_summary.json (209 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abdomen                                           1     0   GT-ONLY
+  thorax and abdomen                                1     0   GT-ONLY
+  aedeagus                                          5     0   GT-ONLY
+  anellus                                           1     0   GT-ONLY
+  anellus sclerite                                  4     0   GT-ONLY
+  antemedial band                                   2     0   GT-ONLY
+  forewings: antemedial band                        5     0   GT-ONLY
+  antennae                                         13     0   GT-ONLY
+  first branch of cubitus anterior                  2     0   GT-ONLY
+  second branch of cubitus anterior                 2     0   GT-ONLY
+  lamella antevaginalis                             2     0   GT-ONLY
+  antrum                                            1     0   GT-ONLY
+  posterior apophyses                               3     0   GT-ONLY
+  forewings: background color                       3     0   GT-ONLY
+  hind-wings: background color                      1     0   GT-ONLY
+  hindwings: background color                       1     0   GT-ONLY
+  hindwings:background color                        1     0   GT-ONLY
+  forewings: background                             1     0   GT-ONLY
+  hindwings: background                             1     0   GT-ONLY
+  forewings: medial band                            3     0   GT-ONLY
+  forewings: postmedial band                        4     0   GT-ONLY
+  forewings: subterminal band                       3     0   GT-ONLY
+  hind-wings: postmedial band                       1     0   GT-ONLY
+  hindwings: postmedial band                        2     0   GT-ONLY
+  subterminal band                                  1     0   GT-ONLY
+  forewings: bands                                  1     0   GT-ONLY
+  hindwings: bands                                  1     0   GT-ONLY
+  fused section of the subcostal vein and the first branch of the radial vein    1     0   GT-ONLY
+  second branch of the medial vein                  1     0   GT-ONLY
+  radial sector (branch of the radial vein)         1     0   GT-ONLY
+  corpus bursae                                     3     0   GT-ONLY
+  ductus bursae                                     3     0   GT-ONLY
+  caecum                                            2     0   GT-ONLY
+  forewings: ground color                           1     0   GT-ONLY
+  hindwings: ground color                           1     0   GT-ONLY
+  forewings: coloration                             1     0   GT-ONLY
+  costa                                             3     0   GT-ONLY
+  costa margin                                      1     0   GT-ONLY
+  valvula and cucullus                              1     0   GT-ONLY
+  forewings: discal spot                            5     0   GT-ONLY
+  hind-wings: discal spot                           1     0   GT-ONLY
+  hindwings: discal spot                            5     0   GT-ONLY
+  falcate forewings                                 1     0   GT-ONLY
+  fused section of the subcostal vein and the first radial vein    1     0   GT-ONLY
+  flight period                                     7     0   GT-ONLY
+  forewings                                         8     0   GT-ONLY
+  forewings: fovea                                  6     0   GT-ONLY
+  tibial spur formula                               6     0   GT-ONLY
+  frons and vertex                                  5     0   GT-ONLY
+  furca                                             1     0   GT-ONLY
+  genitalia                                         2     0   GT-ONLY
+  gnathos                                           7     0   GT-ONLY
+  hind-wings                                        1     0   GT-ONLY
+  hindwings                                         7     0   GT-ONLY
+  subrectangular hindwings                          1     0   GT-ONLY
+  juxta                                             6     0   GT-ONLY
+  outer margin                                      1     0   GT-ONLY
+  second medial vein                                2     0   GT-ONLY
+  palpi                                             6     0   GT-ONLY
+  patagia                                           6     0   GT-ONLY
+  saccus                                            5     0   GT-ONLY
+  socii                                             1     0   GT-ONLY
+  subcosta                                          1     0   GT-ONLY
+  wing venation: subcosta                           1     0   GT-ONLY
+  valvae subrectangular                             1     0   GT-ONLY
+  tegulae                                           6     0   GT-ONLY
+  thorax                                            1     0   GT-ONLY
+  transtilla                                        6     0   GT-ONLY
+  uncus                                             5     0   GT-ONLY
+  valvae                                            5     0   GT-ONLY
+  wing venation                                     2     0   GT-ONLY
+  vesica                                            5     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   209   id+type+value
+  tags        0.000  0.000  0.000      0     0   209   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

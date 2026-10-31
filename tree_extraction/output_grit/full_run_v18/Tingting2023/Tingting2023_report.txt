@@ -1,0 +1,121 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tingting2023/Tingting2023.xlsx  (6665 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Tingting2023/Tingting2023.csv  (10580 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 17 pair(s))
+  'Andrena illiNoiensis' -> 'Andrena illiNoensis'
+  'Andrena sp._1' -> 'Andrena'
+  'Ceratina sp.' -> 'Ceratina'
+  'Dufourea sp._2' -> 'Dufourea'
+  'Lasioglossum cf._Novascotiae' -> 'Lasioglossum cf. Novascotiae'
+  'Lasioglossum cf._ephialtum' -> 'Lasioglossum ephialtum'
+  'Lasioglossum_(Dialictus)_incompletum' -> 'Lasioglossum incompletum'
+  'Lasioglossum_(Dialictus)_sp._K' -> 'Lasioglossum (Evylaeus) kincaidii'
+  'Lasioglossum_(Dialictus)_tegulariforme' -> 'Lasioglossum tegulariforme'
+  'Lasioglossum_(Evylaeus)_kincaidii' -> 'Lasioglossum (Evylaeus) kincaidii'
+  'Nomada sp._1' -> 'Nomada'
+  'Nomada sp._2' -> 'Nomada'
+  'Nomada sp._3' -> 'Nomada'
+  'Nomada sp._4' -> 'Nomada'
+  'Nomada sp._5' -> 'Nomada'
+  'Nomada sp._7' -> 'Nomada'
+  'Triepeolus sp._1' -> 'Triepeolus'
+
+TAXON NAMES LEFT UNMAPPED (21)
+  'Lasioglossum sp._"red abd."': no ground-truth name denotes this organism
+  'Lasioglossum sp._A': matches 11 different organisms, cannot choose: 'Lasioglossum aNomalum', 'Lasioglossum acuminatum', 'Lasioglossum admirandum', 'Lasioglossum aegyptiellum'
+  'Lasioglossum sp._B': matches 6 different organisms, cannot choose: 'Lasioglossum bicolor', 'Lasioglossum birkmanni', 'Lasioglossum bluethgeni', 'Lasioglossum brevicorne'
+  'Lasioglossum sp._C': matches 16 different organisms, cannot choose: 'Lasioglossum calceatum', 'Lasioglossum cambagei', 'Lasioglossum cattellae', 'Lasioglossum cinctipes'
+  'Lasioglossum sp._D': matches 4 different organisms, cannot choose: 'Lasioglossum deliensis', 'Lasioglossum discum', 'Lasioglossum divergens', 'Lasioglossum duponti'
+  'Lasioglossum sp._E': matches 8 different organisms, cannot choose: 'Lasioglossum cf. ephialtum', 'Lasioglossum ebeneum', 'Lasioglossum elegans', 'Lasioglossum ephialtum'
+  'Lasioglossum sp._F': matches 5 different organisms, cannot choose: 'Lasioglossum florale', 'Lasioglossum foxii', 'Lasioglossum fratellum', 'Lasioglossum fulvicorne'
+  'Lasioglossum sp._G': matches 4 different organisms, cannot choose: 'Lasioglossum georgeickworti', 'Lasioglossum glabriusculum', 'Lasioglossum globosum', 'Lasioglossum griseolum'
+  'Lasioglossum sp._I': matches 6 different organisms, cannot choose: 'Lasioglossum illiNoense', 'Lasioglossum imitator', 'Lasioglossum imitatum', 'Lasioglossum incompletum'
+  'Lasioglossum_(Dialictus)_sp._B': matches 6 different organisms, cannot choose: 'Lasioglossum bicolor', 'Lasioglossum birkmanni', 'Lasioglossum bluethgeni', 'Lasioglossum brevicorne'
+  'Lasioglossum_(Dialictus)_sp._B-1': matches 6 different organisms, cannot choose: 'Lasioglossum bicolor', 'Lasioglossum birkmanni', 'Lasioglossum bluethgeni', 'Lasioglossum brevicorne'
+  'Lasioglossum_(Dialictus)_sp._C': matches 16 different organisms, cannot choose: 'Lasioglossum calceatum', 'Lasioglossum cambagei', 'Lasioglossum cattellae', 'Lasioglossum cinctipes'
+  'Lasioglossum_(Dialictus)_sp._D': matches 4 different organisms, cannot choose: 'Lasioglossum deliensis', 'Lasioglossum discum', 'Lasioglossum divergens', 'Lasioglossum duponti'
+  'Lasioglossum_(Dialictus)_sp._E': matches 8 different organisms, cannot choose: 'Lasioglossum cf. ephialtum', 'Lasioglossum ebeneum', 'Lasioglossum elegans', 'Lasioglossum ephialtum'
+  'Lasioglossum_(Dialictus)_sp._F': matches 5 different organisms, cannot choose: 'Lasioglossum florale', 'Lasioglossum foxii', 'Lasioglossum fratellum', 'Lasioglossum fulvicorne'
+  'Lasioglossum_(Dialictus)_sp._H': matches 6 different organisms, cannot choose: 'Lasioglossum halictioides', 'Lasioglossum helichrysi', 'Lasioglossum hemichalceum', 'Lasioglossum heterognathum'
+  'Lasioglossum_(Evylaeus)_sp._F': matches 5 different organisms, cannot choose: 'Lasioglossum florale', 'Lasioglossum foxii', 'Lasioglossum fratellum', 'Lasioglossum fulvicorne'
+  'Nomada sp._A': matches 9 different organisms, cannot choose: 'Nomada agrestis', 'Nomada alboguttata', 'Nomada argentata', 'Nomada armata'
+  'Osmia sp._"FA"': no ground-truth name denotes this organism
+  'Osmia sp._"FC"': no ground-truth name denotes this organism
+  'Sphecodes sp._B': no ground-truth name denotes this organism
+
+ROW-LEVEL (key match)
+  matched (TP)        : 6012
+  missed (FN)         : 653
+  spurious, in scope  : 690   <- GT covers this trait: real errors
+  spurious, out of scope: 3878   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.568 / 0.902 / 0.697   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.897 / 0.902 / 0.900   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.902   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           3878
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0   6012  0.000  <-- low
+  measurementMethod             0   1246  0.000  <-- low
+  measurementUnit               0      0    n/a
+  measurementStatistic       6012   6012  1.000
+  measurementRemarks            0   4423  0.000  <-- low
+  sex                        1246   6012  0.207  <-- low
+  lifeStage                     0   6012  0.000  <-- low
+  caste                         0   1246  0.000  <-- low
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0   6012  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   6012  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 653 MISSED ROWS MISSED
+  species not in prediction                  57
+  species present, trait missing              0
+  species+trait present, value differs      594
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'not parasitic'              ->  'no'                         x559
+     'social parasitism'          ->  'social para'                x32
+     'no parasitism'              ->  'no'                         x2
+     'polylectic'                 ->  'oligolectic'                x1
+  -> 4 substitutions explain 594 of 653 misses (91%) — systematic, not scattered
+
+  SPECIES IN GT BUT NOT IN PREDICTION (6 distinct), closest predicted name:
+     gt 'Lasioglossum'                      ~0.91~  pred 'Lasioglossum pilosum'   x42
+     gt 'Sphecodes'                         ~0.88~  pred 'Sphecodes cephalotes'   x5
+     gt 'Osmia'                             ~0.90~  pred 'Osmia opima'   x4
+     gt 'Lasioglossum cf. ephialtum'        ~0.83~  pred 'Lasioglossum ephialtum'   x2
+     gt 'Lasioglossum (Dialictus) tegulariforme'  ~0.88~  pred 'Lasioglossum tegulariforme'   x2
+     gt 'Lasioglossum (Evylaeus)'           ~0.85~  pred 'Lasioglossum (Evylaeus) kincaidii'   x2
+  -> 6 species mismatches explain 57 of 653 misses (9%) — scattered; no single cause
+
+  full miss detail saved -> Tingting2023_misses.csv, Tingting2023_misses_summary.json (653 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  lecty                                          1258  1259   Δ+1 (split?)
+  nest location                                  1222  1250   Δ+28 (split?)
+  parasitism                                      991   991   
+  reference                                         0  3878   PRED-ONLY
+  sociality                                      3194  3202   Δ+8 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.897  0.902  0.900   6012   690   653   id+type+value
+             (3878 more spurious row(s) set aside as out-of-scope; strict P would be 0.568)
+  tags        0.000  0.000  0.000      0  6702  6665   basis+id+type+value+stat+sex+stage
+             (3878 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.900 vs previous)

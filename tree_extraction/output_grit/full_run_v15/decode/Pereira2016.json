@@ -1,0 +1,863 @@
+{
+ "0:6": {
+  "cells": {
+   "Sub": {
+    "term": "subterraneous nests",
+    "parts": [
+     "Sub"
+    ],
+    "options": {
+     "Sub": {
+      "evidence": "explicit",
+      "labels": [
+       "subterraneous"
+      ]
+     }
+    },
+    "evidence": {
+     "Sub": "explicit"
+    },
+    "probs": {
+     "Sub | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "Sub": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "Sub | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   },
+   "Lit": {
+    "term": "leaf litter nests",
+    "parts": [
+     "Lit"
+    ],
+    "options": {
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     }
+    },
+    "evidence": {
+     "Lit": "explicit"
+    },
+    "probs": {
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     }
+    }
+   },
+   "Lit/Veg": {
+    "term": "leaf litter nests; nests on live vegetation",
+    "parts": [
+     "Lit",
+     "Veg"
+    ],
+    "options": {
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     },
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation"
+      ]
+     }
+    },
+    "evidence": {
+     "Lit": "explicit",
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     },
+     "Veg | QK": {
+      "code": 0.902,
+      "word": 0.098
+     },
+     "Veg": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "Veg | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "Veg": {
+    "term": "nests on live vegetation",
+    "parts": [
+     "Veg"
+    ],
+    "options": {
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation"
+      ]
+     }
+    },
+    "evidence": {
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Veg | QK": {
+      "code": 0.902,
+      "word": 0.098
+     },
+     "Veg": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "Veg | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "Sub/Lit": {
+    "term": "subterraneous nests; leaf litter nests",
+    "parts": [
+     "Sub",
+     "Lit"
+    ],
+    "options": {
+     "Sub": {
+      "evidence": "explicit",
+      "labels": [
+       "subterraneous"
+      ]
+     },
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     }
+    },
+    "evidence": {
+     "Sub": "explicit",
+     "Lit": "explicit"
+    },
+    "probs": {
+     "Sub | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "Sub": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "Sub | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     },
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     }
+    }
+   },
+   "Sub/Lit/Veg": {
+    "term": "subterraneous nests; leaf litter nests; nests on live vegetation",
+    "parts": [
+     "Sub",
+     "Lit",
+     "Veg"
+    ],
+    "options": {
+     "Sub": {
+      "evidence": "explicit",
+      "labels": [
+       "subterraneous"
+      ]
+     },
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     },
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation"
+      ]
+     }
+    },
+    "evidence": {
+     "Sub": "explicit",
+     "Lit": "explicit",
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Sub | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "Sub": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "Sub | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     },
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     },
+     "Veg | QK": {
+      "code": 0.902,
+      "word": 0.098
+     },
+     "Veg": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "Veg | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "D": {
+    "term": null,
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "detritivorous"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "D | QK": {
+      "code": 0.936,
+      "word": 0.064
+     },
+     "D": {
+      "e0": 0.015,
+      "keep": 0.985
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": null
+  }
+ },
+ "0:7": {
+  "cells": {
+   "O": {
+    "term": "omnivorous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "explicit",
+      "labels": [
+       "omnivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "explicit"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "O": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "O | QB": {}
+    }
+   },
+   "P": {
+    "term": "predator",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "predator"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "P": {
+      "e0": 0.969,
+      "keep": 0.031
+     },
+     "P | QB": {}
+    }
+   },
+   "D": {
+    "term": "detritivorous",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "detritivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "D": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "D | QB": {}
+    }
+   },
+   "U": {
+    "term": "unknown",
+    "parts": [
+     "U"
+    ],
+    "options": {
+     "U": {
+      "evidence": "explicit",
+      "labels": [
+       "unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "U": "explicit"
+    },
+    "probs": {
+     "U | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "U": {
+      "e0": 0.596,
+      "keep": 0.404
+     },
+     "U | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": null
+  }
+ },
+ "3:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "5:6": {
+  "cells": {
+   "Sub": {
+    "term": "subterraneous nests",
+    "parts": [
+     "Sub"
+    ],
+    "options": {
+     "Sub": {
+      "evidence": "explicit",
+      "labels": [
+       "subterraneous"
+      ]
+     }
+    },
+    "evidence": {
+     "Sub": "explicit"
+    },
+    "probs": {
+     "Sub | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "Sub": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "Sub | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     }
+    }
+   },
+   "Lit": {
+    "term": "leaf litter nests",
+    "parts": [
+     "Lit"
+    ],
+    "options": {
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     }
+    },
+    "evidence": {
+     "Lit": "explicit"
+    },
+    "probs": {
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     }
+    }
+   },
+   "Lit/Veg": {
+    "term": "leaf litter nests; nests on live vegetation",
+    "parts": [
+     "Lit",
+     "Veg"
+    ],
+    "options": {
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     },
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation"
+      ]
+     }
+    },
+    "evidence": {
+     "Lit": "explicit",
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     },
+     "Veg | QK": {
+      "code": 0.902,
+      "word": 0.098
+     },
+     "Veg": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "Veg | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "Veg": {
+    "term": "nests on live vegetation",
+    "parts": [
+     "Veg"
+    ],
+    "options": {
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation"
+      ]
+     }
+    },
+    "evidence": {
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Veg | QK": {
+      "code": 0.902,
+      "word": 0.098
+     },
+     "Veg": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "Veg | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "Sub/Lit": {
+    "term": "subterraneous nests; leaf litter nests",
+    "parts": [
+     "Sub",
+     "Lit"
+    ],
+    "options": {
+     "Sub": {
+      "evidence": "explicit",
+      "labels": [
+       "subterraneous"
+      ]
+     },
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     }
+    },
+    "evidence": {
+     "Sub": "explicit",
+     "Lit": "explicit"
+    },
+    "probs": {
+     "Sub | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "Sub": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "Sub | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     },
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     }
+    }
+   },
+   "Sub/Lit/Veg": {
+    "term": "subterraneous nests; leaf litter nests; nests on live vegetation",
+    "parts": [
+     "Sub",
+     "Lit",
+     "Veg"
+    ],
+    "options": {
+     "Sub": {
+      "evidence": "explicit",
+      "labels": [
+       "subterraneous"
+      ]
+     },
+     "Lit": {
+      "evidence": "explicit",
+      "labels": [
+       "leaf litter"
+      ]
+     },
+     "Veg": {
+      "evidence": "explicit",
+      "labels": [
+       "vegetation"
+      ]
+     }
+    },
+    "evidence": {
+     "Sub": "explicit",
+     "Lit": "explicit",
+     "Veg": "explicit"
+    },
+    "probs": {
+     "Sub | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "Sub": {
+      "e0": 0.995,
+      "keep": 0.005
+     },
+     "Sub | QB": {
+      "w0": 0.01,
+      "w1": 0.99
+     },
+     "Lit | QK": {
+      "code": 0.955,
+      "word": 0.045
+     },
+     "Lit": {
+      "e0": 0.991,
+      "keep": 0.009
+     },
+     "Lit | QB": {
+      "w0": 0.006,
+      "w1": 0.994
+     },
+     "Veg | QK": {
+      "code": 0.902,
+      "word": 0.098
+     },
+     "Veg": {
+      "e0": 0.994,
+      "keep": 0.006
+     },
+     "Veg | QB": {
+      "w0": 0.008,
+      "w1": 0.992
+     }
+    }
+   },
+   "D": {
+    "term": null,
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "detritivorous"
+      ]
+     }
+    },
+    "evidence": {},
+    "probs": {
+     "D | QK": {
+      "code": 0.936,
+      "word": 0.064
+     },
+     "D": {
+      "e0": 0.015,
+      "keep": 0.985
+     }
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": null
+  }
+ },
+ "5:7": {
+  "cells": {
+   "O": {
+    "term": "omnivorous",
+    "parts": [
+     "O"
+    ],
+    "options": {
+     "O": {
+      "evidence": "explicit",
+      "labels": [
+       "omnivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "O": "explicit"
+    },
+    "probs": {
+     "O | QK": {
+      "code": 0.98,
+      "word": 0.02
+     },
+     "O": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "O | QB": {}
+    }
+   },
+   "P": {
+    "term": "predator",
+    "parts": [
+     "P"
+    ],
+    "options": {
+     "P": {
+      "evidence": "explicit",
+      "labels": [
+       "predator"
+      ]
+     }
+    },
+    "evidence": {
+     "P": "explicit"
+    },
+    "probs": {
+     "P | QK": {
+      "code": 0.993,
+      "word": 0.007
+     },
+     "P": {
+      "e0": 0.969,
+      "keep": 0.031
+     },
+     "P | QB": {}
+    }
+   },
+   "D": {
+    "term": "detritivorous",
+    "parts": [
+     "D"
+    ],
+    "options": {
+     "D": {
+      "evidence": "explicit",
+      "labels": [
+       "detritivorous"
+      ]
+     }
+    },
+    "evidence": {
+     "D": "explicit"
+    },
+    "probs": {
+     "D | QK": {
+      "code": 0.989,
+      "word": 0.011
+     },
+     "D": {
+      "e0": 0.997,
+      "keep": 0.003
+     },
+     "D | QB": {}
+    }
+   },
+   "U": {
+    "term": "unknown",
+    "parts": [
+     "U"
+    ],
+    "options": {
+     "U": {
+      "evidence": "explicit",
+      "labels": [
+       "unknown"
+      ]
+     }
+    },
+    "evidence": {
+     "U": "explicit"
+    },
+    "probs": {
+     "U | QK": {
+      "code": 0.976,
+      "word": 0.024
+     },
+     "U": {
+      "e0": 0.596,
+      "keep": 0.404
+     },
+     "U | QB": {}
+    }
+   }
+  },
+  "units": {
+   "offered": [
+    "u4"
+   ],
+   "choice": null
+  }
+ },
+ "8:0": {
+  "cells": {},
+  "units": {
+   "offered": [],
+   "choice": null
+  }
+ },
+ "_endings_done": true
+}

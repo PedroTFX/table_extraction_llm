@@ -1,0 +1,78 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Zhang2025/Zhang2025.xlsx  (27 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Zhang2025/Zhang2025.csv  (24 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Egg Size (mm)*' -> 'Egg size'
+  'Oviposition Period (s)*' -> 'Oviposition period'
+  'Proportion of Successful Adult Eclosion*' -> 'Proportion of successful adult eclosion'
+  'Proportion of Successful Oviposition*' -> 'Proportion of successful oviposition'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 19
+  missed (FN)         : 8
+  spurious, in scope  : 5   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.792 / 0.704 / 0.745   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.792 / 0.704 / 0.745   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.704   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                19     19  1.000
+  measurementMethod             0     16  0.000  <-- low
+  measurementUnit               0     19  0.000  <-- low
+  measurementStatistic         19     19  1.000
+  measurementRemarks            0     19  0.000  <-- low
+  sex                          16     19  0.842
+  lifeStage                    16     19  0.842
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +19 where GT blank
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     19  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 8 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              2
+  species+trait present, value differs        5
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '1.28 ± 0.02'                ->  '1.31 ± 0.04'                x1
+     '1421 ± 91'                  ->  '1,421 ± 91'                 x1
+     '1099 ± 76'                  ->  '1,421 ± 91'                 x1
+     '1122 ± 86'                  ->  '1,421 ± 91'                 x1
+     '1054 ± 66'                  ->  '1,421 ± 91'                 x1
+  -> 5 substitutions explain 5 of 8 misses (62%) — systematic, not scattered
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'First successful oviposition time' x1
+     'Number of offspring'              x1
+  -> 2 missing traits explain 2 of 8 misses (25%) — scattered; no single cause
+
+  full miss detail saved -> Zhang2025_misses.csv, Zhang2025_misses_summary.json (8 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  proportion of successful adult eclosion          10    10   
+  egg size                                          5     4   Δ-1 (split?)
+  first successful oviposition time                 1     0   GT-ONLY
+  number of offspring                               1     0   GT-ONLY
+  oviposition period                                4     4   
+  proportion of successful oviposition              6     6   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.792  0.704  0.745     19     5     8   id+type+value
+  tags        0.667  0.593  0.627     16     8    11   basis+id+type+value+stat+sex+stage
+             (F1 -0.118 vs previous)

@@ -1,0 +1,107 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tercel2018/Tercel2018.xlsx  (560 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Tercel2018/Tercel2018.csv  (693 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 2 pair(s))
+  'Bombus terrestris ♀' -> 'Bombus terrestris '
+  'Bombus terrestris ♂' -> 'Bombus terrestris '
+
+TAXON NAMES LEFT UNMAPPED (6)
+  '-': no ground-truth name denotes this organism
+  'Coleoptera': no ground-truth name denotes this organism
+  'Hymenoptera': no ground-truth name denotes this organism
+  'Lepidoptera': no ground-truth name denotes this organism
+  'Neuroptera': no ground-truth name denotes this organism
+  'Odonata': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Bodymass (g)' -> 'Bodymass'
+  'Wing area (cm<sup>2</sup>)' -> 'Wing area'
+  'Wing length (cm)' -> 'Wing length'
+  'Wing loading (g/cm<sup>2</sup>)' -> 'Wing loading'
+  'Wingbeat frequency (mean Hz)' -> 'Wingbeat frequency'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 385
+  missed (FN)         : 175
+  spurious, in scope  : 175   <- GT covers this trait: real errors
+  spurious, out of scope: 133   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.556 / 0.688 / 0.615   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.688 / 0.688 / 0.688   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.688   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            133
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    385  0.000  <-- low
+  measurementMethod             0    231  0.000  <-- low
+  measurementUnit               0    385  0.000  <-- low
+  measurementStatistic        385    385  1.000
+  measurementRemarks            0      0    n/a
+  sex                         345    385  0.896
+  lifeStage                   385    385  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     77  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    385  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    385  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 175 MISSED ROWS MISSED
+  species not in prediction                 145
+  species present, trait missing             30
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (22 distinct), closest predicted name:
+     gt 'Miridae'                           ~0.57~  pred 'Idaea aversata'   x15
+     gt 'Chironomidae'                      ~0.56~  pred 'Acherontia atropos'   x10
+     gt 'Braconidae'                         (nothing similar in the prediction)   x10
+     gt 'Syrphidae'                         ~0.56~  pred 'Syrphus ribesii'   x10
+     gt 'Andrena'                           ~0.57~  pred 'Aeshna grandis'   x10
+     gt 'Aphodius'                          ~0.61~  pred 'Bombus lapidarius'   x10
+  -> 6 species mismatches explain 65 of 175 misses (37%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Wingbeat frequency'               x6
+     'Bodymass'                         x6
+     'Wing length'                      x6
+     'Wing area'                        x6
+     'Wing loading'                     x6
+  -> 5 missing traits explain 30 of 175 misses (17%) — scattered; no single cause
+
+  full miss detail saved -> Tercel2018_misses.csv, Tercel2018_misses_summary.json (175 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  12.468–64.566                                     0     3   PRED-ONLY
+  87.129–230.987                                    0     3   PRED-ONLY
+  17.847–40.665                                     0     3   PRED-ONLY
+  90.222–152.247                                    0     3   PRED-ONLY
+  25–923–94.413                                     0     3   PRED-ONLY
+  59.567–557.351                                    0     3   PRED-ONLY
+  79–123.396                                        0     3   PRED-ONLY
+  wing area                                       112   112   
+  bodymass                                        112   112   
+  wingbeat frequency                              112   112   
+  wing length                                     112   112   
+  wing loading                                    112   112   
+  order                                             0   112   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.688  0.688  0.688    385   175   175   id+type+value
+             (133 more spurious row(s) set aside as out-of-scope; strict P would be 0.556)
+  tags        0.000  0.000  0.000      0   560   560   basis+id+type+value+stat+sex+stage
+             (133 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.688 vs previous)

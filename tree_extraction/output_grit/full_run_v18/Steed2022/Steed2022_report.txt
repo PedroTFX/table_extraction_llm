@@ -1,0 +1,82 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Steed2022/Steed2022.xlsx  (180 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Steed2022/Steed2022.csv  (180 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 8 pair(s))
+  'Dry weight (g)' -> 'Dry weight'
+  'Fore tibia area (mm2)' -> 'Fore tibia area'
+  'Head area (mm2)' -> 'Head area'
+  'Hind tibia length (mm)' -> 'Hind tibia length '
+  'Length (mm)' -> 'Body Length'
+  'Width (mm)' -> 'Body Width'
+  'Wing area (mm2)' -> 'Wing area'
+  'Wing load (kg/mm2)' -> 'Wing load'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 165
+  missed (FN)         : 15
+  spurious, in scope  : 15   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.917 / 0.917 / 0.917   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.917 / 0.917 / 0.917   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.917   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord               120    165  0.727
+  measurementMethod             0     15  0.000  <-- low
+  measurementUnit               0    120  0.000  <-- low
+  measurementStatistic         30    165  0.182  <-- low
+  measurementRemarks            0     30  0.000  <-- low
+  sex                           0    165  0.000  <-- low
+  lifeStage                    30    165  0.182  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    165  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    165  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 15 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       15
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'summer active'              ->  'grazed'                     x7
+     'spring active'              ->  'b'                          x4
+     'autumnal active'            ->  'a'                          x2
+     'nocturno-hibernal'          ->  'n'                          x2
+  -> 4 substitutions explain 15 of 15 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Steed2022_misses.csv, Steed2022_misses_summary.json (15 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  activity                                         15    15   
+  fore tibia area                                  15    15   
+  head area                                        15    15   
+  wing area                                        15    15   
+  body length                                      15    15   
+  body width                                       15    15   
+  food breadth                                     15    15   
+  dry weight                                       15    15   
+  hind tibia length                                15    15   
+  wing load                                        15    15   
+  nesting type                                     15    15   
+  phenology                                        15    15   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.917  0.917  0.917    165    15    15   id+type+value
+  tags        0.000  0.000  0.000      0   180   180   basis+id+type+value+stat+sex+stage
+             (F1 -0.917 vs previous)

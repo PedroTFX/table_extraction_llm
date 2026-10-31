@@ -1,0 +1,82 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Sultaire_2021/Sultaire_2021.xlsx  (86 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Sultaire_2021/Sultaire_2021.csv  (138 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (3)
+  'Unknown1': no ground-truth name denotes this organism
+  'Unknown2': no ground-truth name denotes this organism
+  'Unknown3': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body length (mm)' -> 'Body length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 83
+  missed (FN)         : 3
+  spurious, in scope  : 7   <- GT covers this trait: real errors
+  spurious, out of scope: 48   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.601 / 0.965 / 0.741   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.922 / 0.965 / 0.943   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.965   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             48
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                83     83  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0     83  0.000  <-- low
+  measurementStatistic         83     83  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     83  0.000  <-- low
+  lifeStage                     0     83  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a   +83 where GT blank
+  verbatimCoordinates           0     83  0.000  <-- low
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     83  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 3 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              2
+  species+trait present, value differs        1
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.98'                       ->  '11.65'                      x1
+  -> 1 substitution explains 1 of 3 misses (33%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body length'                      x1
+     'Mandible Length/Width'            x1
+  -> 2 missing traits explain 2 of 3 misses (67%) — systematic, not scattered
+
+  full miss detail saved -> Sultaire_2021_misses.csv, Sultaire_2021_misses_summary.json (3 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  1 #3                                              0     1   PRED-ONLY
+  (no name, column 2)                               0     1   PRED-ONLY
+  (no name, column 3)                               0     1   PRED-ONLY
+  (no name, column 4)                               0     1   PRED-ONLY
+  body length                                      43    45   Δ+2 (split?)
+  disp pcoa                                         0    44   PRED-ONLY
+  mandible length/width                            43    45   Δ+2 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.922  0.965  0.943     83     7     3   id+type+value
+             (48 more spurious row(s) set aside as out-of-scope; strict P would be 0.601)
+  tags        0.000  0.000  0.000      0    90    86   basis+id+type+value+stat+sex+stage
+             (48 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.943 vs previous)

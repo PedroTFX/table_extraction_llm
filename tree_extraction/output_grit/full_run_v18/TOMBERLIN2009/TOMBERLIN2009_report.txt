@@ -1,0 +1,62 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/TOMBERLIN2009/TOMBERLIN2009.xlsx  (18 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/TOMBERLIN2009/TOMBERLIN2009.csv  (22 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 4 pair(s))
+  'Adult weight (g)' -> 'Adult weight'
+  'Larval development^a(d)' -> 'Larval development'
+  'Prepupal weight (g)' -> 'Prepupal weight'
+  'Pupal development (d)' -> 'Pupal development'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 18
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 4   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.818 / 1.000 / 0.900   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                              4
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                18     18  1.000
+  measurementMethod             0      5  0.000  <-- low
+  measurementUnit               0     18  0.000  <-- low
+  measurementStatistic          0     18  0.000  <-- low
+  measurementRemarks            0     18  0.000  <-- low
+  sex                          18     18  1.000
+  lifeStage                     0     18  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a   +18 where GT blank
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     18  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  adult longevity (d)                               0     4   PRED-ONLY
+  adult weight                                      4     4   
+  larval development                                5     5   
+  prepupal weight                                   5     5   
+  pupal development                                 4     4   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     18     0     0   id+type+value
+             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.818)
+  tags        0.000  0.000  0.000      0    18    18   basis+id+type+value+stat+sex+stage
+             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)

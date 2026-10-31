@@ -1,0 +1,115 @@
+  [semantic] left unmatched: '% Filtering molar area' vs 'climate of the area' (llm said different traits)
+  [semantic] left unmatched: '% Filtering molar area' vs 'Abdomen Length' (llm said different traits)
+  [semantic] left unmatched: '% Filtering molar area' vs 'feeding habit' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Tonelli2021/Tonelli2021.xlsx  (1106 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Tonelli2021/Tonelli2021.csv  (1044 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 14 pair(s))
+  'Abdomen lenght (mm)' -> 'Abdomen Length'
+  'Area conjunctive/total mandible area (mm<strong><sup>2)</sup></strong>' -> 'Area conjunctive/total mandible area'
+  'Biomass (fw, mg)' -> 'Biomass'
+  'Daily activity (1: diurnal; 2: crepuscolar/nocturnal)' -> 'Daily Activity'
+  'Head area/Area total' -> 'Head Area/Total Area '
+  'Hind tibiae lenght (mm)' -> 'Hind Tibiae Length'
+  'Horizontal nest distance (0=within trophic source; 1=starting within food source but with a horizontal extension; 2=short distance; 3=great distance)' -> 'Horizontal Nest Distance'
+  'Metamesosternal area (mm<strong><sup>2</sup></strong>)' -> 'Metamesosternal Area'
+  'Nest depth (0=within excrement; 1=dung soil interphase; 2=little depth; 3=great depth)' -> 'Nest Depth'
+  'Nest type (see supplementary material Rationale of selected and measured func-tional traits for details)' -> 'Nesting Type'
+  'Nesting patterns (see supplementary material Rationale of selected and measured func-tional traits for details)' -> 'Nesting Patterns'
+  'Trophic diversity' -> 'Trophic Diversity'
+  'Wing load (mg/mm<strong><sup>2</sup></strong>)' -> 'Wing Load'
+  'Zigum (1: underdeveloped; 2: developed 3: epizygum)' -> 'Zigum Development'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 161
+  missed (FN)         : 945
+  spurious, in scope  : 825   <- GT covers this trait: real errors
+  spurious, out of scope: 58   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.154 / 0.146 / 0.150   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.163 / 0.146 / 0.154   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.146   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             58
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    161  0.000  <-- low
+  measurementMethod             0    116  0.000  <-- low
+  measurementUnit               0     58  0.000  <-- low
+  measurementStatistic          0    161  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    161  0.000  <-- low
+  lifeStage                   161    161  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    161  0.000  <-- low
+  verbatimLocality              0    103  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    161  0.000  <-- low
+  externalLink                  0    161  0.000  <-- low
+
+WHY THE 945 MISSED ROWS MISSED
+  species not in prediction                   4
+  species present, trait missing              0
+  species+trait present, value differs      941
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'within food source'         ->  '0'                          x53
+     'diurnal'                    ->  '1'                          x49
+     'developed'                  ->  '2'                          x41
+     'no-nester'                  ->  '0'                          x34
+     'no-nest building: eggs are laid within dung pat without brood ball construction (i.e., aphodius, trichillum, pedaridium, etc.)' ->  '11'                         x33
+     'within excrement'           ->  '0'                          x33
+  -> 6 substitutions explain 243 of 945 misses (26%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Dung beetles (Scarabaeidae: Scarabaeinae, Aphodiinae; Geotrupidae) '   (nothing similar in the prediction)   x4
+  -> 1 species mismatch explains 4 of 945 misses (0%) — scattered; no single cause
+
+  full miss detail saved -> Tonelli2021_misses.csv, Tonelli2021_misses_summary.json (945 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abdomen length                                   58    58   
+  daily activity                                   58    58   
+  altitudinal range                                 1     0   GT-ONLY
+  area conjunctive/total mandible area             58    58   
+  head area/total area                             58    58   
+  climate of the area                               1     0   GT-ONLY
+  % filtering molar area                            0    58   PRED-ONLY
+  metamesosternal area                             58    58   
+  biomass                                          58    58   
+  nest depth                                       58    58   
+  horizontal nest distance                         58    58   
+  trophic diversity                                58    58   
+  feeding habit                                     1     0   GT-ONLY
+  habitat                                           1     0   GT-ONLY
+  hind tibiae length                               58    58   
+  wing load                                        58    58   
+  number of teeth in the mandibles profile        174    58   Δ-116 (split?)
+  nesting patterns                                 58    58   
+  nesting type                                     58    58   
+  phenology                                        58    58   
+  sphericity                                       58    58   
+  zigum development                                58    58   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'climate of the area'              vs pred '% filtering molar area'           sim=0.65
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.163  0.146  0.154    161   825   945   id+type+value
+             (58 more spurious row(s) set aside as out-of-scope; strict P would be 0.154)
+  tags        0.000  0.000  0.000      0   986  1106   basis+id+type+value+stat+sex+stage
+             (58 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.154 vs previous)

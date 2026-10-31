@@ -1,0 +1,41 @@
+listed tags of full_run_v18 vs full_run_v14 on the GT rows matched on species + trait + value
+core rows (species, trait, value) changed vs full_run_v14: Araujo2021, Arnan2012, Borges2024, Brant2021, Braschler2021, Brasil2024, Cerini2023, Dejean2019, Fiedler2021, Gathof2022, Guariento2020, Hendriks2013, Khayati2024, Kratschmer2019, MacDonald2021, Mirzaee2023, Noriega2023, Penick2017, Pessoa2017, Scalercio2020, Vidal2023, Viza2023, Wallon2024, Wijas2021, Wilker2022, Zhao2024
+
+== all
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                       106419   50639   49604    1035   55780       0  47.6%  98.0%    100% (37487) /   92% (13152)   0 (0 / 0)
+  caste                      21778   36250   16060     350    5368   19840  75.4%  97.9%     98% (16410) /    0% (0)   0 (0 / 0)
+  basisOfRecord             106419  104472   94630    9842    1947       0  98.2%  90.6%     93% (101007) /   36% (3099)   0 (0 / 0)
+  lifeStage                  88595   67264   37529   12202   38864   17533  56.1%  75.5%     66% (23516) /   99% (21761)   0 (0 / 0)
+  measurementStatistic      106419   74028   66999    7029   32391       0  69.6%  90.5%     89% (51331) /  100% (398)   80 (2 / 78)
+
+== dev
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        47843   35491   34674     817   12352       0  74.2%  97.7%    100% (30327) /   84% (5164)   0 (0 / 0)
+  caste                      16679   33097   13390     350    2939   19357  82.4%  97.5%     97% (13740) /    0% (0)   0 (0 / 0)
+  basisOfRecord              47843   47306   41248    6058     537       0  98.9%  87.2%     91% (44377) /   36% (2772)   0 (0 / 0)
+  lifeStage                  30019   45686   22600    5553    1866   17533  93.8%  80.3%     61% (6811) /  100% (18048)   0 (0 / 0)
+  measurementStatistic       47843   47486   44672    2814     357       0  99.3%  94.1%     94% (37845) /    0% (0)   78 (0 / 78)
+
+== held_a
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                        56364   14729   14681      48   41635       0  26.1%  99.7%     99% (6911) /  100% (7818)   0 (0 / 0)
+  caste                       4643    2519    2278       0    2365     241  49.1% 100.0%    100% (2278) /    0% (0)   0 (0 / 0)
+  basisOfRecord              56364   55092   52392    2700    1272       0  97.7%  95.1%     96% (54741) /   21% (142)   0 (0 / 0)
+  lifeStage                  56364   19852   13469    6383   36512       0  35.2%  67.8%     67% (16211) /   96% (2713)   0 (0 / 0)
+  measurementStatistic       56364   24330   20506    3824   32034       0  43.2%  84.3%     76% (12528) /  100% (398)   2 (2 / 0)
+
+== held_b
+  tag                    GT filled    ours   equal  differ   empty   extra  cover    acc   reported acc / defaulted acc   overwritten (fixed / broken)
+  sex                         2212     419     249     170    1793       0  18.9%  59.4%    100% (249) /    0% (170)   0 (0 / 0)
+  caste                        456     634     392       0      64     242  86.0% 100.0%    100% (392) /    0% (0)   0 (0 / 0)
+  basisOfRecord               2212    2074     990    1084     138       0  93.8%  47.7%     48% (1889) /   43% (185)   0 (0 / 0)
+  lifeStage                   2212    1726    1460     266     486       0  78.0%  84.6%     93% (494) /  100% (1000)   0 (0 / 0)
+  measurementStatistic        2212    2212    1821     391       0       0 100.0%  82.3%     64% (958) /    0% (0)   0 (0 / 0)
+
+the step's answers (captions and quotes) vs the paper's GT value, by the model's probability:
+  sex                    0.8–0.95: 11/20 right; via duels: 3/6 right; ≥ 0.95: 28/48 right
+  caste                  0.8–0.95: 7/8 right; via duels: 6/9 right; ≥ 0.95: 45/49 right
+  basisOfRecord          0.8–0.95: 91/163 right; via duels: 39/86 right; ≥ 0.95: 84/168 right
+  lifeStage              0.8–0.95: 119/141 right; via duels: 0/3 right; ≥ 0.95: 77/101 right
+  measurementStatistic   0.8–0.95: 10/36 right; via duels: 6/20 right; ≥ 0.95: 33/85 right

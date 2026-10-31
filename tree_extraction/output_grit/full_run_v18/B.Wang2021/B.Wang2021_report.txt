@@ -1,0 +1,58 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/B.Wang2021/B.Wang2021.xlsx  (48 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/B.Wang2021/B.Wang2021.csv  (64 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Length (mm)' -> 'Body Length'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 48
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 16   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.750 / 1.000 / 0.857   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             16
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                32     48  0.667
+  measurementMethod             0     32  0.000  <-- low
+  measurementUnit               0     16  0.000  <-- low
+  measurementStatistic         32     48  0.667
+  measurementRemarks            0     16  0.000  <-- low
+  sex                           0     48  0.000  <-- low
+  lifeStage                    48     48  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     48  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     48  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                      16    16   
+  body size                                         0    16   PRED-ONLY
+  feeding trait                                    16    16   
+  wing morphology                                  16    16   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     48     0     0   id+type+value
+             (16 more spurious row(s) set aside as out-of-scope; strict P would be 0.750)
+  tags        0.000  0.000  0.000      0    48    48   basis+id+type+value+stat+sex+stage
+             (16 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -1.000 vs previous)

@@ -1,0 +1,95 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Bucher2024/Bucher2024.xlsx  (553 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Bucher2024/Bucher2024.csv  (2129 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'Acyrthosiphon pisum': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 1 pair(s))
+  'Body size' -> 'Body size '
+
+ROW-LEVEL (key match)
+  matched (TP)        : 92
+  missed (FN)         : 461
+  spurious, in scope  : 506   <- GT covers this trait: real errors
+  spurious, out of scope: 1531   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.043 / 0.166 / 0.069   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.154 / 0.166 / 0.160   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.166   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           1531
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     92  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0     92  0.000  <-- low
+  measurementStatistic          0     92  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0     92  0.000  <-- low
+  lifeStage                    92     92  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     92  0.000  <-- low
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0     92  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     92  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 461 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            116
+  species+trait present, value differs      345
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'epigeic'                    ->  '0'                          x78
+     'macropterous'               ->  '0'                          x54
+     'predator'                   ->  '1'                          x39
+     'brachypterous'              ->  '0.5'                        x28
+     'macropterous'               ->  '0.5'                        x28
+     'herbivore'                  ->  '0.5'                        x18
+  -> 6 substitutions explain 245 of 461 misses (53%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Phenology'                        x116
+  -> 1 missing trait explains 116 of 461 misses (25%) — scattered; no single cause
+
+  full miss detail saved -> Bucher2024_misses.csv, Bucher2024_misses_summary.json (461 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  autumn breeding                                   0    92   PRED-ONLY
+  binary                                            0    92   PRED-ONLY
+  body size                                        92   104   Δ+12 (split?)
+  spring breeding                                   0    92   PRED-ONLY
+  community-weighted mean macropterous              0   159   PRED-ONLY
+  community-weighted mean predator                  0   159   PRED-ONLY
+  community-weighted mean size                      0   159   PRED-ONLY
+  community-weighted mean spring                    0   159   PRED-ONLY
+  community-weighted mean vegetation                0   159   PRED-ONLY
+  size large                                        0    92   PRED-ONLY
+  size medium                                       0    92   PRED-ONLY
+  mobility                                        120   192   Δ+72 (split?)
+  phenology                                       116     8   Δ-108 (split?)
+  trophic position                                110   192   Δ+82 (split?)
+  size small                                        0    92   PRED-ONLY
+  species                                           0    92   PRED-ONLY
+  stratum                                         115   102   Δ-13 (split?)
+  vegetation                                        0    92   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.154  0.166  0.160     92   506   461   id+type+value
+             (1531 more spurious row(s) set aside as out-of-scope; strict P would be 0.043)
+  tags        0.000  0.000  0.000      0   598   553   basis+id+type+value+stat+sex+stage
+             (1531 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.160 vs previous)

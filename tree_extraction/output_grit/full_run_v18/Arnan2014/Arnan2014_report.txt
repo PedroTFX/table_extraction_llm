@@ -1,0 +1,122 @@
+  [semantic] matched by values: 'Liquid foods' -> 'Diet: liquid food eating'
+  [semantic] matched by values: 'INSECTS' -> 'Diet: Insect-eating'
+  [semantic] matched by values: 'Dominant' -> 'Behavioural dominance'
+  [semantic] matched by values: 'Polydomy' -> 'Number of nests'
+  [semantic] matched by values: 'Worker size' -> 'Body Size'
+  [semantic] left unmatched: 'FORSTRA collective' vs 'Foraging strategy' (llm said different traits)
+  [semantic] left unmatched: 'FORSTRA collective' vs 'Colony foundation type' (llm said different traits)
+  [semantic] left unmatched: 'FORSTRA collective' vs 'Diet: Seed-eating' (llm said different traits)
+  [semantic] left unmatched: 'FORSTRA group' vs 'Foraging strategy' (llm said different traits)
+  [semantic] left unmatched: 'FORSTRA group' vs 'Colony foundation type' (llm said different traits)
+  [semantic] left unmatched: 'FORSTRA group' vs 'Diurnality' (llm said different traits)
+  [semantic] left unmatched: 'Independent colony foundation' vs 'Colony foundation type' (llm said different traits)
+  [semantic] left unmatched: 'Independent colony foundation' vs 'Diet: Seed-eating' (llm said different traits)
+  [semantic] left unmatched: 'Independent colony foundation' vs 'Diurnality' (llm said different traits)
+  [semantic] left unmatched: 'Polygyny' vs 'Colony foundation type' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/grit_testing/Arnan2014/Arnan2014.xlsx  (1352 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output_grit/full_run_v18/Arnan2014/Arnan2014.csv  (1578 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Temnothorax sp' -> 'Temnothorax '
+
+SEMANTIC measurementType REMAP (pred -> gt, 8 pair(s))
+  'Dominant' -> 'Behavioural dominance'
+  'FORSTRA individual' -> 'Foraging strategy'
+  'INSECTS' -> 'Diet: Insect-eating'
+  'Liquid foods' -> 'Diet: liquid food eating'
+  'Polydomy' -> 'Number of nests'
+  'Strictly diurnal' -> 'Diurnality'
+  'Worker polymorphism' -> 'Polymorphism'
+  'Worker size' -> 'Body Size'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 650
+  missed (FN)         : 702
+  spurious, in scope  : 365   <- GT covers this trait: real errors
+  spurious, out of scope: 563   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.412 / 0.481 / 0.444   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.640 / 0.481 / 0.549   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.481   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            563
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    650  0.000  <-- low
+  measurementMethod             0    556  0.000  <-- low
+  measurementUnit               0    107  0.000  <-- low
+  measurementStatistic        207    650  0.318  <-- low
+  measurementRemarks            0    226  0.000  <-- low
+  sex                           0    650  0.000  <-- low
+  lifeStage                   556    650  0.855
+  caste                       556    650  0.855
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    650  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 702 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            337
+  species+trait present, value differs      365
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'nonstrictly diurnal'        ->  'no'                         x84
+     'group'                      ->  'no'                         x60
+     'collective'                 ->  'no'                         x36
+     'strictly diurnal'           ->  'yes'                        x28
+     'individual'                 ->  'yes'                        x17
+     'polydomy'                   ->  '1'                          x13
+  -> 6 substitutions explain 238 of 702 misses (34%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Diet: Seed-eating'                x113
+     'Number of queens'                 x113
+     'Colony foundation type'           x111
+  -> 3 missing traits explain 337 of 702 misses (48%) — scattered; no single cause
+
+  full miss detail saved -> Arnan2014_misses.csv, Arnan2014_misses_summary.json (702 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  behavioural dominance                           113   113   
+  body size                                       113   113   
+  forstra collective                                0   113   PRED-ONLY
+  independent colony foundation                     0   111   PRED-ONLY
+  colony foundation type                          111     0   GT-ONLY
+  colony size                                     111   111   
+  diet: liquid food eating                        113   113   
+  diet: insect-eating                             113   113   
+  diet: seed-eating                               113     0   GT-ONLY
+  diurnality                                      113   113   
+  foraging strategy                               113   113   
+  forstra group                                     0   113   PRED-ONLY
+  number of nests                                 113   113   
+  number of queens                                113     0   GT-ONLY
+  polygyny                                          0   113   PRED-ONLY
+  polymorphism                                    113   113   
+  seeds                                             0   113   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'colony foundation type'           vs pred 'independent colony foundation'    sim=0.76
+    gt 'diet: seed-eating'                vs pred 'seeds'                            sim=0.66
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.640  0.481  0.549    650   365   702   id+type+value
+             (563 more spurious row(s) set aside as out-of-scope; strict P would be 0.412)
+  tags        0.000  0.000  0.000      0  1015  1352   basis+id+type+value+stat+sex+stage
+             (563 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.549 vs previous)
