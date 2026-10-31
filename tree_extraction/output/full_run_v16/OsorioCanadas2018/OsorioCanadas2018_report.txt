@@ -3,7 +3,7 @@
   [semantic] left unmatched: 'Body size (ITS,mm)' vs 'Altitude' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/OsorioCanadas2018/OsorioCanadas2018.xlsx  (280 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/OsorioCanadas2018/OsorioCanadas2018.csv  (235 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/OsorioCanadas2018/OsorioCanadas2018.csv  (235 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -33,7 +33,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                32     54  0.593
   measurementMethod             0     54  0.000  <-- low
   measurementUnit               0      0    n/a
-  measurementStatistic          0     54  0.000  <-- low
+  measurementStatistic         54     54  1.000
   measurementRemarks            0      0    n/a
   sex                           0     54  0.000  <-- low
   lifeStage                     0     54  0.000  <-- low

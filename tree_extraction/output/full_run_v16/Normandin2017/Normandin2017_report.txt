@@ -3,7 +3,7 @@
   [semantic] left unmatched: 'Pollen specificity' vs 'Sociality' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Normandin2017/Normandin2017.xlsx  (1389 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Normandin2017/Normandin2017.csv  (1591 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Normandin2017/Normandin2017.csv  (1591 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -237,7 +237,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord               399   1191  0.335  <-- low
   measurementMethod             0    994  0.000  <-- low
   measurementUnit               0    197  0.000  <-- low
-  measurementStatistic          0   1191  0.000  <-- low
+  measurementStatistic       1191   1191  1.000
   measurementRemarks            0      0    n/a
   sex                        1191   1191  1.000
   lifeStage                  1191   1191  1.000
@@ -280,6 +280,6 @@ SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        1.000  0.857  0.923   1191     0   198   id+type+value
              (400 more spurious row(s) set aside as out-of-scope; strict P would be 0.749)
-  tags        0.000  0.000  0.000      0  1191  1389   basis+id+type+value+stat+sex+stage
-             (400 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.923 vs previous)
+  tags        0.335  0.287  0.309    399   792   990   basis+id+type+value+stat+sex+stage
+             (400 more spurious row(s) set aside as out-of-scope; strict P would be 0.251)
+             (F1 -0.614 vs previous)

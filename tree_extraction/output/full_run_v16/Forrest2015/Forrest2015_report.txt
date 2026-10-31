@@ -3,7 +3,7 @@
   [semantic] matched by values: 'Median day of year of flight season' -> 'Flight season median date'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Forrest2015/Forrest2015.xlsx  (827 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Forrest2015/Forrest2015.csv  (858 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Forrest2015/Forrest2015.csv  (858 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -29,7 +29,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord               402    707  0.569
   measurementMethod             0    567  0.000  <-- low
   measurementUnit               0    305  0.000  <-- low
-  measurementStatistic          0    707  0.000  <-- low
+  measurementStatistic        661    707  0.935
   measurementRemarks            0      0    n/a
   sex                         433    707  0.612
   lifeStage                   433    707  0.612
@@ -70,5 +70,5 @@ measurementType COVERAGE
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.824  0.855  0.839    707   151   120   id+type+value
-  tags        0.000  0.000  0.000      0   858   827   basis+id+type+value+stat+sex+stage
-             (F1 -0.839 vs previous)
+  tags        0.149  0.155  0.152    128   730   699   basis+id+type+value+stat+sex+stage
+             (F1 -0.687 vs previous)

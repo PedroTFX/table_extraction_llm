@@ -1,12 +1,9 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Weber2023/Weber2023.xlsx  (304 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Weber2023/Weber2023.csv  (189 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Weber2023/Weber2023.csv  (189 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
-
-TAXON NAME REMAP (pred -> gt, 1 pair(s))
-  'Andrena minutula agg.' -> 'Andrena minutula agg'
 
 ROW-LEVEL (key match)
   matched (TP)        : 180
@@ -23,7 +20,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                54    180  0.300  <-- low
   measurementMethod             0      3  0.000  <-- low
   measurementUnit               0      0    n/a
-  measurementStatistic          0    180  0.000  <-- low
+  measurementStatistic        180    180  1.000
   measurementRemarks            0      0    n/a
   sex                           0    180  0.000  <-- low
   lifeStage                   180    180  1.000

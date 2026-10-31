@@ -3,7 +3,7 @@
   [semantic] left unmatched: 'Significant Association' vs 'Larval feeding habit' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Taillefer2018/Taillefer2018.xlsx  (1765 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Taillefer2018/Taillefer2018.csv  (1664 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Taillefer2018/Taillefer2018.csv  (1664 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -99,7 +99,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                 0    163  0.000  <-- low
   measurementMethod             0    163  0.000  <-- low
   measurementUnit               0     75  0.000  <-- low
-  measurementStatistic          0    163  0.000  <-- low
+  measurementStatistic        163    163  1.000
   measurementRemarks            0      0    n/a
   sex                          88    163  0.540
   lifeStage                   163    163  1.000

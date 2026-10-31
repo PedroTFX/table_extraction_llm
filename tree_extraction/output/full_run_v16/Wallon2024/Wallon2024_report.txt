@@ -8,7 +8,7 @@
   [semantic] left unmatched: 'Traits presented' vs 'Diel activity' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Wallon2024/Wallon2024.xlsx  (1229 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Wallon2024/Wallon2024.csv  (2896 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Wallon2024/Wallon2024.csv  (2896 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -44,7 +44,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                19    333  0.057  <-- low
   measurementMethod             0    333  0.000  <-- low
   measurementUnit               0    142  0.000  <-- low
-  measurementStatistic          0    333  0.000  <-- low
+  measurementStatistic        201    333  0.604
   measurementRemarks            0      0    n/a
   sex                           0    333  0.000  <-- low
   lifeStage                   330    333  0.991

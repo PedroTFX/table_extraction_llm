@@ -1,0 +1,91 @@
+  [semantic] matched by values: 'Mean Worker length (mm)' -> 'Body Length'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Arnan2012/Arnan2012.xlsx  (361 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Arnan2012/Arnan2012.csv  (430 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Tapinoma nigerrimum' -> 'Tapinoma nigerimum'
+
+SEMANTIC measurementType REMAP (pred -> gt, 3 pair(s))
+  'Critical thermal maximum' -> 'Critical Thermal Maximum'
+  'Mean Worker length (mm)' -> 'Body Length'
+  'maximum activity temperature' -> 'Maximum Activity Temperature'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 284
+  missed (FN)         : 77
+  spurious, in scope  : 76   <- GT covers this trait: real errors
+  spurious, out of scope: 70   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.660 / 0.787 / 0.718   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.789 / 0.787 / 0.788   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.787   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             70
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                60    284  0.211  <-- low
+  measurementMethod             0     90  0.000  <-- low
+  measurementUnit               0     89  0.000  <-- low
+  measurementStatistic        284    284  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0    284  0.000  <-- low
+  lifeStage                   224    284  0.789
+  caste                        44    284  0.155  <-- low
+  sampleSizeValue               0     30  0.000  <-- low
+  sampleSizeUnit                0     30  0.000  <-- low
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    284  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 77 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs       77
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'hundreds'                   ->  '1'                          x17
+     'none'                       ->  'none (only defence of the nest)' x16
+     'monomorphism'               ->  '1'                          x15
+     'food and/or territory'      ->  'defence of food or territory' x14
+     'thousands'                  ->  '2'                          x10
+     'tens of thousands'          ->  '3'                          x3
+  -> 6 substitutions explain 75 of 77 misses (97%) — systematic, not scattered
+
+  full miss detail saved -> Arnan2012_misses.csv, Arnan2012_misses_summary.json (77 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  maximum activity temperature                     30    30   
+  month of peak activity                           30    30   
+  mean number workers/bait                          0    30   PRED-ONLY
+  body length                                      31    30   Δ-1 (split?)
+  brood cycle                                      30    30   
+  phylogeny code                                    0    30   PRED-ONLY
+  n nests per colony                               30    30   
+  n queens per colony                              30    30   
+  colony population                                30    30   
+  critical thermal maximum                         30    30   
+  daily rhythm                                     30    30   
+  defense of resources                             30    30   
+  dom                                               0    10   PRED-ONLY
+  main food resource                               30    30   
+  polymorphism                                     30    30   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.789  0.787  0.788    284    76    77   id+type+value
+             (70 more spurious row(s) set aside as out-of-scope; strict P would be 0.660)
+  tags        0.000  0.000  0.000      0   360   361   basis+id+type+value+stat+sex+stage
+             (70 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.788 vs previous)

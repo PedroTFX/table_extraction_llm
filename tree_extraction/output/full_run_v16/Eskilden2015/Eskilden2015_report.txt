@@ -1,7 +1,7 @@
   [semantic] matched by values: 'Bodysize (mm)' -> 'Forewing Length'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Eskilden2015/Eskilden2015.xlsx  (553 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Eskilden2015/Eskilden2015.csv  (963 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Eskilden2015/Eskilden2015.csv  (963 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -45,7 +45,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord               472    472  1.000
   measurementMethod             0    156  0.000  <-- low
   measurementUnit               0     77  0.000  <-- low
-  measurementStatistic          0    472  0.000  <-- low
+  measurementStatistic        393    472  0.833
   measurementRemarks            0      0    n/a
   sex                           0    472  0.000  <-- low
   lifeStage                    77    472  0.163  <-- low

@@ -20,7 +20,7 @@
   [semantic] left unmatched: 'Dung relocation strategy' vs 'Relocation Size' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Noriega2023/Noriega2023.xlsx  (35037 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Noriega2023/Noriega2023.csv  (66917 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Noriega2023/Noriega2023.csv  (66917 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -372,7 +372,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord             33396  33396  1.000
   measurementMethod             0   3330  0.000  <-- low
   measurementUnit               0  33396  0.000  <-- low
-  measurementStatistic          0  33396  0.000  <-- low
+  measurementStatistic       1942  33396  0.058  <-- low
   measurementRemarks            0      0    n/a
   sex                           0  33396  0.000  <-- low
   lifeStage                     0  33396  0.000  <-- low

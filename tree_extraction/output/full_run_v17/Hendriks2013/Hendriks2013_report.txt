@@ -1,0 +1,73 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Hendriks2013/Hendriks2013.xlsx  (282 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Hendriks2013/Hendriks2013.csv  (282 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+SEMANTIC measurementType REMAP (pred -> gt, 6 pair(s))
+  'Development rate (year)' -> 'Development\nrate (year)'
+  'Dispersal capacity' -> 'Dispersal\ncapacity'
+  'Egg deposition' -> 'Egg\ndeposition'
+  'Food specifity' -> 'Food\nspecifity'
+  'Habitat specifity' -> 'Habitat\nspecifity'
+  'Herbivore in all life stages' -> 'Herbivore\nin all life\nstages'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 279
+  missed (FN)         : 3
+  spurious, in scope  : 3   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.989 / 0.989 / 0.989   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.989 / 0.989 / 0.989   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.989   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    279  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic        232    279  0.832
+  measurementRemarks            0      0    n/a
+  sex                           0    279  0.000  <-- low
+  lifeStage                     0    279  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    279  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 3 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs        3
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'narrow'                     ->  'arrow'                      x1
+     'specialist'                 ->  'wide'                       x1
+     'limited'                    ->  'no'                         x1
+  -> 3 substitutions explain 3 of 3 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Hendriks2013_misses.csv, Hendriks2013_misses_summary.json (3 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  herbivore in all life stages                     47    47   
+  dispersal capacity                               47    47   
+  egg deposition                                   47    47   
+  food specifity                                   47    47   
+  habitat specifity                                47    47   
+  development rate (year)                          47    47   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.989  0.989  0.989    279     3     3   id+type+value
+  tags        0.000  0.000  0.000      0   282   282   basis+id+type+value+stat+sex+stage
+             (F1 -0.989 vs previous)

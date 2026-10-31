@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Kovacs2010/kovacs2010.xlsx  (10 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Kovacs2010/Kovacs2010.csv  (34 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Kovacs2010/Kovacs2010.csv  (34 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -30,7 +30,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                10     10  1.000
   measurementMethod             0      0    n/a
   measurementUnit               0     10  0.000  <-- low
-  measurementStatistic          0     10  0.000  <-- low
+  measurementStatistic         10     10  1.000
   measurementRemarks            0      0    n/a
   sex                          10     10  1.000
   lifeStage                    10     10  1.000
@@ -60,6 +60,6 @@ SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.333  1.000  0.500     10    20     0   id+type+value
              (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.294)
-  tags        0.000  0.000  0.000      0    30    10   basis+id+type+value+stat+sex+stage
-             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.500 vs previous)
+  tags        0.333  1.000  0.500     10    20     0   basis+id+type+value+stat+sex+stage
+             (4 more spurious row(s) set aside as out-of-scope; strict P would be 0.294)
+             (F1 +0.000 vs previous)

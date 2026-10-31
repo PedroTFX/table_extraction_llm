@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Nelson2020/Nelson2020.xlsx  (191 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Nelson2020/Nelson2020.csv  (320 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Nelson2020/Nelson2020.csv  (320 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -30,7 +30,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord               151    160  0.944
   measurementMethod             0    120  0.000  <-- low
   measurementUnit               0      9  0.000  <-- low
-  measurementStatistic          0    160  0.000  <-- low
+  measurementStatistic        151    160  0.944
   measurementRemarks            0      0    n/a
   sex                           0    160  0.000  <-- low
   lifeStage                   160    160  1.000
@@ -64,7 +64,7 @@ WHY THE 31 MISSED ROWS MISSED
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
-  mean ± 1 s.d.                                     0    40   PRED-ONLY
+  mean ± 1 s.d                                      0    40   PRED-ONLY
   activity                                         38    40   Δ+2 (split?)
   age                                               0    40   PRED-ONLY
   breeding season                                  40    40   

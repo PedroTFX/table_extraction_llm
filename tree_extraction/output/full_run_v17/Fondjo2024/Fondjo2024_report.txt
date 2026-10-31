@@ -1,0 +1,333 @@
+  [semantic] left unmatched: 'Genetic Distance' vs 'distal end' (llm said different traits)
+  [semantic] left unmatched: 'Genetic Distance' vs 'recurrent distal trunk of the lateral diverticulum' (llm said different traits)
+  [semantic] left unmatched: 'Genetic Distance' vs 'pronotum disc' (llm said different traits)
+  [semantic] left unmatched: 'HeadL' vs 'head' (llm said different traits)
+  [semantic] left unmatched: 'HeadL (2)' vs 'head' (llm said different traits)
+  [semantic] left unmatched: 'HeadW' vs 'head' (llm said different traits)
+  [semantic] left unmatched: 'HeadW' vs 'head and pronotum color' (llm said different traits)
+  [semantic] left unmatched: 'HeadW' vs 'lower ectophallic sheath' (llm said different traits)
+  [semantic] left unmatched: 'PronotL (2)' vs 'pronotum' (llm said different traits)
+  [semantic] left unmatched: 'Species (1)' vs 'eyes' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Fondjo2024/Fondjo2024.xlsx  (542 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Fondjo2024/Fondjo2024.csv  (183 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 12 pair(s))
+  'Pteropera carnapi CM-Deng-Deng' -> 'Pteropera carnapi'
+  'Pteropera carnapi Ramme, 1929' -> 'Pteropera carnapi'
+  'Pteropera descampsi CM-Ongot' -> 'Pteropera descampsi'
+  'Pteropera descampsi Donskoff, 1981' -> 'Pteropera descampsi'
+  'Pteropera karschi zenkeri CM-Koukoue' -> 'Pteropera karschi zenkeri'
+  'Pteropera karschi zenkeri Ramme, 1929' -> 'Pteropera karschi zenkeri'
+  'Pteropera kennei sp. nov.' -> 'Pteropera kennei'
+  'Pteropera kennei sp. nov. CM-Somalomo (Dja)' -> 'Pteropera kennei'
+  'Pteropera matzkei sp. nov. CM-Somalomo (Dja)' -> 'Pteropera matzkei'
+  'Pteropera missoupi sp. nov. CM-Ongot' -> 'Pteropera missoupi'
+  'Pteropera uniformis CM-Ongot' -> 'Pteropera uniformis'
+  'Pteropera verrucigena CM-Sohock' -> 'Pteropera verrucigena'
+
+TAXON NAMES LEFT UNMAPPED (4)
+  'CM-Iboti': no ground-truth name denotes this organism
+  'Catantops stramineus': no ground-truth name denotes this organism
+  'Exopropacris modica': no ground-truth name denotes this organism
+  'Parapropacris notatus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 7 pair(s))
+  'AntenL' -> 'antenna'
+  'AntenL (2)' -> 'antennae'
+  'HeadL' -> 'width of head'
+  'HeadL (2)' -> 'length of head'
+  'HeadW (2)' -> 'head'
+  'PronotL (2)' -> 'posterior margins of pronotum'
+  'length of the pronotum in the midline' -> 'Length of the pronotum in the midline'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 542
+  spurious, in scope  : 111   <- GT covers this trait: real errors
+  spurious, out of scope: 72   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             72
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 542 MISSED ROWS MISSED
+  species not in prediction                  49
+  species present, trait missing            443
+  species+trait present, value differs       50
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '24.52 ± 2.41'               ->  '24.52 ± 2.41 (n = 8)'       x2
+     '12.11 ± 0.55'               ->  '12.11 ± 0.55 (n = 8)'       x2
+     '0.64 ± 0.08'                ->  '0.64 ± 0.08 (n = 8)'        x2
+     '5.06 ± 0.32'                ->  '5.06 ± 0.32 (n = 8)'        x2
+     '4.17 ± 0.26'                ->  '4.17 ± 0.26 (n = 8)'        x2
+     '25.35 ± 2.2'                ->  '19.92 ± 1.26 (n = 7)'       x1
+  -> 6 substitutions explain 11 of 542 misses (2%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (3 distinct), closest predicted name:
+     gt 'Pteropera augustini'               ~0.69~  pred 'Pteropera matzkei'   x25
+     gt 'karschi zenkeri'                   ~0.88~  pred 'Pteropera karschi zenkeri'   x22
+     gt 'Pteropera sp.'                     ~0.70~  pred 'Pteropera missoupi'   x2
+  -> 3 species mismatches explain 49 of 542 misses (9%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'length of antenna'                x14
+     'length of tegmina'                x14
+     'width of hind femur'              x13
+     'body length'                      x8
+     'hind tibia length'                x8
+     'interocular distance'             x8
+  -> 6 missing traits explain 65 of 542 misses (12%) — scattered; no single cause
+
+  full miss detail saved -> Fondjo2024_misses.csv, Fondjo2024_misses_summary.json (542 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  species (1)                                       0     8   PRED-ONLY
+  fl (2)                                            0     7   PRED-ONLY
+  fw (2)                                            0     7   PRED-ONLY
+  tegl (2)                                          0     7   PRED-ONLY
+  tl (2)                                            0     7   PRED-ONLY
+  dorsal and ventral area of abdomen                1     0   GT-ONLY
+  aedeagus                                          4     0   GT-ONLY
+  apex of aedeagus                                  1     0   GT-ONLY
+  membranous apex of aedeagus                       4     0   GT-ONLY
+  free end of the aedeagus                          1     0   GT-ONLY
+  upper aedeagus valve                              1     0   GT-ONLY
+  aedeagus valves                                   1     0   GT-ONLY
+  line along the lower margin                       1     0   GT-ONLY
+  spermatheca ampulla                               2     0   GT-ONLY
+  spermathecal ampulla                              3     0   GT-ONLY
+  middle area of male supra-anal plate              1     0   GT-ONLY
+  male pallium and supra-anal plate                 1     0   GT-ONLY
+  pallium and supra-anal plate of male              2     0   GT-ONLY
+  the pallium and supra-anal plate of male          1     0   GT-ONLY
+  present; supra-anal plate                         1     0   GT-ONLY
+  supra-anal plate                                  1     0   GT-ONLY
+  ancorae                                           7     0   GT-ONLY
+  angle formed by the two basivalvar sclerites      1     0   GT-ONLY
+  antenna                                           1     8   Δ+7 (split?)
+  length of antenna                                16     0   GT-ONLY
+  antennae                                          3     5   Δ+2 (split?)
+  anterior apodemes                                 5     0   GT-ONLY
+  anterior margin of lateral lobes of pronotum      1     0   GT-ONLY
+  anterior projections and lateral plates           1     0   GT-ONLY
+  anterior margin                                   1     0   GT-ONLY
+  anterior margin of mesosternum                    1     0   GT-ONLY
+  anterior and posterior projections                1     0   GT-ONLY
+  anterior projections                              4     0   GT-ONLY
+  external apical spines of hind tibiae             1     0   GT-ONLY
+  external apical spines of the hind tibiae         1     0   GT-ONLY
+  apodemes                                          2     0   GT-ONLY
+  apodemes of the cingulum                          2     0   GT-ONLY
+  endophallic apodemes                              1     0   GT-ONLY
+  apodemes slender                                  1     0   GT-ONLY
+  dorsal arch of cingulum                           5     0   GT-ONLY
+  dorsal arch of the cingulum                       2     0   GT-ONLY
+  dorsal area of the body and upper areas of hind femora color    1     0   GT-ONLY
+  basal area                                        1     0   GT-ONLY
+  lower basal half of the inner area                1     0   GT-ONLY
+  front legs, ventral area of hind femora color     1     0   GT-ONLY
+  dorsal area of pronotum                           1     0   GT-ONLY
+  external upper area of hind femur                 1     0   GT-ONLY
+  inner area of hind femora                         1     0   GT-ONLY
+  outer area of hind femora                         2     0   GT-ONLY
+  outer area of the hind femora                     1     0   GT-ONLY
+  lower inner area                                  1     0   GT-ONLY
+  fore- and middle legs, external and upper inner areas of hind femur    1     0   GT-ONLY
+  inner and outer areas of posterior female hind femora    1     0   GT-ONLY
+  inner and lower areas of hind femora, hind tibiae    1     0   GT-ONLY
+  inner areas of hind femora                        1     0   GT-ONLY
+  lower outer areas of hind femora                  1     0   GT-ONLY
+  median and lower inner areas of hind femur        1     0   GT-ONLY
+  arolium                                           1     0   GT-ONLY
+  axial diverticle of the spermatheca               1     0   GT-ONLY
+  dark longitudinal median band on pronotum disc    1     0   GT-ONLY
+  longitudinal median band of the pronotal disc     1     0   GT-ONLY
+  longitudinal median band of pronotum disc         1     0   GT-ONLY
+  median longitudinal band on the pronotum disc     1     0   GT-ONLY
+  longitudinal median band                          1     0   GT-ONLY
+  the two contiguous pale bands                     1     0   GT-ONLY
+  dorsal basal lobes of hind femora                 1     0   GT-ONLY
+  basal posterior spots on the lateral lobes of the pronotum    1     0   GT-ONLY
+  posterior basal spot                              1     0   GT-ONLY
+  basal spot                                        1     0   GT-ONLY
+  the base of the copulatory bursa                  1     0   GT-ONLY
+  base of spermathecal duct                         1     0   GT-ONLY
+  base of the spermathecal duct                     2     0   GT-ONLY
+  the base of the spermathecal duct                 1     0   GT-ONLY
+  basivalvar sclerites                              2     0   GT-ONLY
+  difference between the upper half and lower half of the elytra    1     0   GT-ONLY
+  body and legs                                     3     0   GT-ONLY
+  body length                                      16    15   Δ-1 (split?)
+  total length of body                              6     0   GT-ONLY
+  lower part of body                                1     0   GT-ONLY
+  lower side of the body                            1     0   GT-ONLY
+  both diverticula                                  1     0   GT-ONLY
+  bottom of the copulatory bursa                    1     0   GT-ONLY
+  bridge                                            5     0   GT-ONLY
+  copulatory bursa                                  4     0   GT-ONLY
+  end of the copulatory bursa                       1     0   GT-ONLY
+  internal sclerite of the copulatory bursa         1     0   GT-ONLY
+  dorsal carina of hind femora                      1     0   GT-ONLY
+  dorsal carina of hind femur                       1     0   GT-ONLY
+  median carina                                     3     0   GT-ONLY
+  upper carina                                      1     0   GT-ONLY
+  dorsal carinae of hind femora                     1     0   GT-ONLY
+  lateral carinae                                   3     0   GT-ONLY
+  cerci                                             4     0   GT-ONLY
+  male cerci                                        6     0   GT-ONLY
+  the male cerci                                    1     0   GT-ONLY
+  cercus                                            1     0   GT-ONLY
+  rami of cingulum                                  1     0   GT-ONLY
+  color                                             1     0   GT-ONLY
+  lower margin of elytra color                      1     0   GT-ONLY
+  meso- and metathoracic episternites color         1     0   GT-ONLY
+  head and pronotum color                           1     0   GT-ONLY
+  hind tibiae color                                 1     0   GT-ONLY
+  general coloration                                3     0   GT-ONLY
+  pronotum disc                                     4     0   GT-ONLY
+  distal trunk, recurrent of the lateral diverticulum of the spermatheca    1     0   GT-ONLY
+  distal, recurrent trunk of the spermatheca lateral diverticulum    1     0   GT-ONLY
+  recurrent distal trunk of the lateral spermathecal diverticulum    1     0   GT-ONLY
+  recurrent distal trunk of the lateral diverticulum    1     0   GT-ONLY
+  distal end                                        1     0   GT-ONLY
+  distal half of hind tibiae                        1     0   GT-ONLY
+  genetic distance                                  0    12   PRED-ONLY
+  interocular distance                             16    15   Δ-1 (split?)
+  distribuition                                     1     0   GT-ONLY
+  distribution                                      9     0   GT-ONLY
+  lateral spermathecal diverticulum                 1     0   GT-ONLY
+  external margins of the dorsal valves             1     0   GT-ONLY
+  medio-dorsal pocket                               1     0   GT-ONLY
+  dorsal valves of the ovipositor                   1     0   GT-ONLY
+  spermathecal duct                                 2     0   GT-ONLY
+  upper eadeagus valve                              1     0   GT-ONLY
+  lower ectophallic sheath                          7     0   GT-ONLY
+  upper ectophallic sheath                          7     0   GT-ONLY
+  posterior edge of the subgenital plate            1     0   GT-ONLY
+  egg-guide                                         5     0   GT-ONLY
+  elytra                                            1     0   GT-ONLY
+  lower half of elytra                              2     0   GT-ONLY
+  length of elytra                                  6     0   GT-ONLY
+  end of the lower tip                              1     0   GT-ONLY
+  epiphallus                                        3     0   GT-ONLY
+  metathoracic episternite                          1     0   GT-ONLY
+  meso- and metathoracic episternites               4     0   GT-ONLY
+  metathoracic episternites                         1     0   GT-ONLY
+  eyes                                              4     0   GT-ONLY
+  median subocellar facial spot                     1     0   GT-ONLY
+  subocellar facial spot                            4     0   GT-ONLY
+  subocellar facial spots                           1     0   GT-ONLY
+  fastigium of vertex                               2     0   GT-ONLY
+  female subgenital plate                           1     0   GT-ONLY
+  front and middle legs, inner and outer sides of hind femora    1     0   GT-ONLY
+  outer and inner sides of hind femora              1     0   GT-ONLY
+  upper margins of hind femora                      1     0   GT-ONLY
+  hind femur                                        1     0   GT-ONLY
+  length of hind femur                              6     0   GT-ONLY
+  maximum length of the hind femur                 16     8   Δ-8 (split?)
+  width of hind femur                              15     0   GT-ONLY
+  ventral pockets of the vaginal floor              1     0   GT-ONLY
+  fore and middle legs                              1     0   GT-ONLY
+  frons                                             1     0   GT-ONLY
+  front and middle legs                             2     0   GT-ONLY
+  frontal ridge                                     1     0   GT-ONLY
+  fw                                                0     8   PRED-ONLY
+  habiat                                            1     0   GT-ONLY
+  habitat                                           7     0   GT-ONLY
+  head                                              2     7   Δ+5 (split?)
+  length of head                                   16     7   Δ-9 (split?)
+  width of head                                    16     8   Δ-8 (split?)
+  headw                                             0     8   PRED-ONLY
+  hind tibia length                                16     8   Δ-8 (split?)
+  spines on the hind tibiae                         1     0   GT-ONLY
+  hind tibiae                                       6     0   GT-ONLY
+  integument                                        2     0   GT-ONLY
+  interocular space                                 1     0   GT-ONLY
+  mesosternal interspace                            2     0   GT-ONLY
+  knee                                              2     0   GT-ONLY
+  knees                                             2     0   GT-ONLY
+  lateral lobes                                     1     0   GT-ONLY
+  lateral lobes of pronotum narrowed                1     0   GT-ONLY
+  lateral lobes of pronotum                         2     0   GT-ONLY
+  lateral margins                                   2     0   GT-ONLY
+  lateral plates                                    3     0   GT-ONLY
+  latero-ventral sclerite in profile                1     0   GT-ONLY
+  latero-ventral sclerite                           3     0   GT-ONLY
+  latero-ventral sclerites                          1     0   GT-ONLY
+  lateroventral sclerites                           2     0   GT-ONLY
+  length of the pronotum in the midline            16     8   Δ-8 (split?)
+  length of ovipositor                              3     0   GT-ONLY
+  length of pronotum                                6     0   GT-ONLY
+  length of tegmina                                16     0   GT-ONLY
+  lophi                                             2     0   GT-ONLY
+  male subgenital plate                             3     0   GT-ONLY
+  medio-superior margin                             1     0   GT-ONLY
+  posterior margin of the pronotum slightly         1     0   GT-ONLY
+  posterior margins of pronotum                     1     7   Δ+6 (split?)
+  median spot                                       1     0   GT-ONLY
+  membranous tips                                   1     0   GT-ONLY
+  mesosternal                                       1     0   GT-ONLY
+  mesosternal space                                 2     0   GT-ONLY
+  oval sclerite                                     1     0   GT-ONLY
+  oval sclerites                                    1     0   GT-ONLY
+  valves of ovipositor                              2     0   GT-ONLY
+  pale spot                                         1     0   GT-ONLY
+  subgenital plate                                  7     0   GT-ONLY
+  posterior tibiae                                  1     0   GT-ONLY
+  prosternal process                                3     0   GT-ONLY
+  pronotum                                          2     0   GT-ONLY
+  pronotum width                                   16    15   Δ-1 (split?)
+  prosternal tubercle                               2     0   GT-ONLY
+  prozona                                           5     0   GT-ONLY
+  rami                                              6     0   GT-ONLY
+  the recurrent                                     1     0   GT-ONLY
+  size                                              7     0   GT-ONLY
+  spermatheca                                       1     0   GT-ONLY
+  tegl                                              0     8   PRED-ONLY
+  tegmina                                           3     0   GT-ONLY
+  tegument                                          1     0   GT-ONLY
+  vertex                                            1     0   GT-ONLY
+  wings                                             1     0   GT-ONLY
+  zygoma                                            3     0   GT-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'head and pronotum color'          vs pred 'headw'                            sim=0.59
+    gt 'distal end'                       vs pred 'genetic distance'                 sim=0.56
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0   111   542   id+type+value
+             (72 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+  tags        0.000  0.000  0.000      0   111   542   basis+id+type+value+stat+sex+stage
+             (72 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 +0.000 vs previous)

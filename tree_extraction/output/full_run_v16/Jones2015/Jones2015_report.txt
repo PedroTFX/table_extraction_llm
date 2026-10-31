@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Jones2015/Jones2015.xlsx  (72 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Jones2015/Jones2015.csv  (264 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Jones2015/Jones2015.csv  (264 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -28,7 +28,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                72     72  1.000
   measurementMethod             0     24  0.000  <-- low
   measurementUnit               0     48  0.000  <-- low
-  measurementStatistic          0     72  0.000  <-- low
+  measurementStatistic         24     72  0.333  <-- low
   measurementRemarks            0      0    n/a
   sex                          72     72  1.000
   lifeStage                    72     72  1.000
@@ -62,6 +62,6 @@ SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        1.000  1.000  1.000     72     0     0   id+type+value
              (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.273)
-  tags        0.000  0.000  0.000      0    72    72   basis+id+type+value+stat+sex+stage
-             (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -1.000 vs previous)
+  tags        0.333  0.333  0.333     24    48    48   basis+id+type+value+stat+sex+stage
+             (192 more spurious row(s) set aside as out-of-scope; strict P would be 0.091)
+             (F1 -0.667 vs previous)

@@ -1,7 +1,7 @@
   [semantic] matched by values: '(no name, column 5)' -> 'Feeding group'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Espinosa2023/Espinosa2023.xlsx  (135 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Espinosa2023/Espinosa2023.csv  (135 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Espinosa2023/Espinosa2023.csv  (135 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -27,7 +27,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                81    135  0.600
   measurementMethod             0      0    n/a
   measurementUnit               0     81  0.000  <-- low
-  measurementStatistic          0    135  0.000  <-- low
+  measurementStatistic         54    135  0.400  <-- low
   measurementRemarks            0      0    n/a
   sex                           0    135  0.000  <-- low
   lifeStage                     0    135  0.000  <-- low

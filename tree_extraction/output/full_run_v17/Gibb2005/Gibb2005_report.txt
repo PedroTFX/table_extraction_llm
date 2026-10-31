@@ -1,0 +1,78 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Gibb2005/Gibb2005.xlsx  (45 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Gibb2005/Gibb2005.csv  (135 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 9 pair(s))
+  'E. angustula' -> 'Epuraea angustula'
+  'E. boreella' -> 'Epuraea boreella'
+  'E. deubeli' -> 'Epuraea deubeli'
+  'E. longipennis' -> 'Epuraea longipennis'
+  'E. pygmaea' -> 'Epuraea pygmaea'
+  'T. elegans' -> 'Tachinus elegans'
+  'T. laticollis' -> 'Tachinus laticollis'
+  'T. pallipes' -> 'Tachinus pallipes'
+  'T. proximus' -> 'Tachinus proximus'
+
+TAXON NAMES LEFT UNMAPPED (1)
+  'T. elongatus': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 5 pair(s))
+  'Body Length (mm)' -> 'Body length'
+  'Body Width (mm)' -> 'Body width'
+  'Body mass (mg)' -> 'Body mass'
+  'Wing Length (mm)' -> 'Wing length'
+  'Wing Width (mm)' -> 'Wing width'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 45
+  missed (FN)         : 0
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 90   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.333 / 1.000 / 0.500   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 1.000 / 1.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 1.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                             90
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                45     45  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0     45  0.000  <-- low
+  measurementStatistic         45     45  1.000
+  measurementRemarks            0     45  0.000  <-- low
+  sex                          45     45  1.000
+  lifeStage                    45     45  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0     45  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0     17  0.000  <-- low
+  samplingProtocol              0     45  0.000  <-- low
+  verbatimLocality              0     45  0.000  <-- low
+  verbatimCoordinates           0     45  0.000  <-- low
+  verbatimEventDate             0     45  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     45  0.000  <-- low
+  externalLink                  0      0    n/a
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  body length                                       9     9   
+  body mass                                         9     9   
+  body width                                        9     9   
+  wing length                                       9     9   
+  proportion of total per site                      0    90   PRED-ONLY
+  wing width                                        9     9   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  1.000  1.000     45     0     0   id+type+value
+             (90 more spurious row(s) set aside as out-of-scope; strict P would be 0.333)
+  tags        1.000  1.000  1.000     45     0     0   basis+id+type+value+stat+sex+stage
+             (90 more spurious row(s) set aside as out-of-scope; strict P would be 0.333)
+             (F1 +0.000 vs previous)

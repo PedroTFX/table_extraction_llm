@@ -8,7 +8,7 @@
   [semantic] matched by values: 'bodysize' -> 'Body Size'
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Ji2024/Ji2024.xlsx  (5616 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Ji2024/Ji2024.csv  (5184 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Ji2024/Ji2024.csv  (5184 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -42,7 +42,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord              4752   5184  0.917
   measurementMethod             0      0    n/a
   measurementUnit               0   5184  0.000  <-- low
-  measurementStatistic          0   5184  0.000  <-- low
+  measurementStatistic       4320   5184  0.833
   measurementRemarks            0      0    n/a
   sex                        5184   5184  1.000
   lifeStage                  5184   5184  1.000
@@ -88,5 +88,5 @@ measurementType COVERAGE
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        1.000  0.923  0.960   5184     0   432   id+type+value
-  tags        0.000  0.000  0.000      0  5184  5616   basis+id+type+value+stat+sex+stage
-             (F1 -0.960 vs previous)
+  tags        0.750  0.692  0.720   3888  1296  1728   basis+id+type+value+stat+sex+stage
+             (F1 -0.240 vs previous)

@@ -1,7 +1,7 @@
   [semantic] left unmatched: 'Nests in ground?^E' vs 'Body Size' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Lichtenberg2017/Lichtenberg2017.xlsx  (47 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Lichtenberg2017/Lichtenberg2017.csv  (131 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Lichtenberg2017/Lichtenberg2017.csv  (131 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -28,7 +28,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                15     15  1.000
   measurementMethod             0     15  0.000  <-- low
   measurementUnit               0     15  0.000  <-- low
-  measurementStatistic          0     15  0.000  <-- low
+  measurementStatistic         15     15  1.000
   measurementRemarks            0      0    n/a
   sex                           0     15  0.000  <-- low
   lifeStage                    15     15  1.000

@@ -1,0 +1,59 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/McCune2023/McCune2023.xlsx  (96 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/McCune2023/McCune2023.csv  (48 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 48
+  missed (FN)         : 48
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 1.000 / 0.500 / 0.667   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 1.000 / 0.500 / 0.667   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     48  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic         48     48  1.000
+  measurementRemarks            0      0    n/a
+  sex                           0     48  0.000  <-- low
+  lifeStage                     0     48  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0     48  0.000  <-- low
+  verbatimLocality              0     48  0.000  <-- low
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     48  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 48 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             48
+  species+trait present, value differs        0
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     ''                                 x48
+  -> 1 missing trait explains 48 of 48 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> McCune2023_misses.csv, McCune2023_misses_summary.json (48 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   48     0   GT-ONLY
+  functional group                                 48    48   
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        1.000  0.500  0.667     48     0    48   id+type+value
+  tags        0.000  0.000  0.000      0    48    96   basis+id+type+value+stat+sex+stage
+             (F1 -0.667 vs previous)

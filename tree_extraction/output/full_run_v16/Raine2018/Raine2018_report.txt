@@ -10,7 +10,7 @@
   [semantic] left unmatched: 'Functional group: habit' vs 'Thorax Roundness' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Raine2018/Raine2018.xlsx  (41135 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Raine2018/Raine2018.csv  (44517 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Raine2018/Raine2018.csv  (44517 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -58,7 +58,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord             17824  17824  1.000
   measurementMethod             0    154  0.000  <-- low
   measurementUnit               0  17824  0.000  <-- low
-  measurementStatistic          0  17824  0.000  <-- low
+  measurementStatistic      17824  17824  1.000
   measurementRemarks            0      0    n/a
   sex                       17824  17824  1.000
   lifeStage                     0  17533  0.000  <-- low
@@ -145,6 +145,6 @@ SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.472  0.433  0.452  17824 19929 23311   id+type+value
              (6764 more spurious row(s) set aside as out-of-scope; strict P would be 0.400)
-  tags        0.000  0.000  0.000      0 37753 41135   basis+id+type+value+stat+sex+stage
-             (6764 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.452 vs previous)
+  tags        0.008  0.007  0.007    291 37462 40844   basis+id+type+value+stat+sex+stage
+             (6764 more spurious row(s) set aside as out-of-scope; strict P would be 0.007)
+             (F1 -0.445 vs previous)

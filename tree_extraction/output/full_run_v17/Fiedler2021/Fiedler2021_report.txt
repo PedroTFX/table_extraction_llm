@@ -1,0 +1,93 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Fiedler2021/Fiedler2021.xlsx  (1569 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v17/Fiedler2021/Fiedler2021.csv  (7840 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (12)
+  'Anonychomyrma': no ground-truth name denotes this organism
+  'Camponotus': no ground-truth name denotes this organism
+  'Crematogaster': no ground-truth name denotes this organism
+  'Formica': no ground-truth name denotes this organism
+  'Iridomyrmex': no ground-truth name denotes this organism
+  'Lasius': no ground-truth name denotes this organism
+  'Oecophylla': no ground-truth name denotes this organism
+  'Pheidole': no ground-truth name denotes this organism
+  'Polyrhachis': no ground-truth name denotes this organism
+  'Tapinoma': no ground-truth name denotes this organism
+  'Temnothorax': no ground-truth name denotes this organism
+  'Tetramorium': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'number associated ant genera' -> 'Number of associated ant genera'
+  'obligate myrmecophile' -> 'Obligate myrmecophile'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 1046
+  missed (FN)         : 523
+  spurious, in scope  : 523   <- GT covers this trait: real errors
+  spurious, out of scope: 6271   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.133 / 0.667 / 0.222   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.667 / 0.667 / 0.667   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.667   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                           6271
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord              1046   1046  1.000
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0   1046  0.000  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0   1046  0.000  <-- low
+  lifeStage                  1046   1046  1.000
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   1046  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 523 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing              0
+  species+trait present, value differs      523
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'no'                         ->  'not'                        x313
+     'yes'                        ->  'obligate'                   x210
+  -> 2 substitutions explain 523 of 523 misses (100%) — systematic, not scattered
+
+  full miss detail saved -> Fiedler2021_misses.csv, Fiedler2021_misses_summary.json (523 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  cock-amerika                                      0   516   PRED-ONLY
+  s-amerika                                         0   516   PRED-ONLY
+  number of associated ant genera                 523   523   
+  associated ants                                 523   523   
+  so-asien                                          0   516   PRED-ONLY
+  associated lyc. species                           0     9   PRED-ONLY
+  # obligate associations                           0    28   PRED-ONLY
+  australien                                        0   516   PRED-ONLY
+  biogeographical regions                           0  3138   PRED-ONLY
+  indien                                            0   516   PRED-ONLY
+  obligate myrmecophile                           523   523   
+  neuguinea                                         0   516   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.667  0.667  0.667   1046   523   523   id+type+value
+             (6271 more spurious row(s) set aside as out-of-scope; strict P would be 0.133)
+  tags        0.000  0.000  0.000      0  1569  1569   basis+id+type+value+stat+sex+stage
+             (6271 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.667 vs previous)

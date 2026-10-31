@@ -3,7 +3,7 @@
   [semantic] left unmatched: 'Viburnum spp., Cornus spp., Prunus spp., Spiraea alba, Vaccinium spp., Rhododendron groenlandicum, Celastrus scandens' vs 'larval host plant' (llm said different traits)
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/MacDonald2021/MacDonald2021.xlsx  (446 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/MacDonald2021/MacDonald2021.csv  (8528 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/MacDonald2021/MacDonald2021.csv  (8528 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -100,7 +100,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                34     34  1.000
   measurementMethod             0      0    n/a
   measurementUnit               0     34  0.000  <-- low
-  measurementStatistic          0     34  0.000  <-- low
+  measurementStatistic         34     34  1.000
   measurementRemarks            0      0    n/a
   sex                           0     34  0.000  <-- low
   lifeStage                     0     34  0.000  <-- low
@@ -147,18 +147,18 @@ measurementType COVERAGE
   (no name, column 8)                               0   282   PRED-ONLY
   (no name, column 9)                               0   282   PRED-ONLY
   viburnum spp., cornus spp., prunus spp., spiraea alba, vaccinium spp., rhododendron groenlandicum, celastrus scandens    0   282   PRED-ONLY
-  prunus spp., amelanchier alnifolia, quercus spp., salix spp., populus spp., vaccinium spp. rosaceae, including prunus spp., crataegus spp., and vaccinium spp.    0   282   PRED-ONLY
+  prunus spp., amelanchier alnifolia, quercus spp., salix spp., populus spp., vaccinium spp. rosaceae, including prunus spp., crataegus spp., and vaccinium spp    0   282   PRED-ONLY
   cornus spp. and ceanothus americanus (southern on)    0   282   PRED-ONLY
   our only carnivorous butterfly--feeds on aphids    0   282   PRED-ONLY
-  asclepias spp. asclepias spp.                     0   282   PRED-ONLY
+  asclepias spp. asclepias spp                      0   282   PRED-ONLY
   various asteraceae                                0   282   PRED-ONLY
-  salix spp., populus spp., and betula spp.         0   282   PRED-ONLY
-  cirsium spp. and carduus spp.                     0   282   PRED-ONLY
+  salix spp., populus spp., and betula spp          0   282   PRED-ONLY
+  cirsium spp. and carduus spp                      0   282   PRED-ONLY
   larval host plant                               412   282   Δ-130 (split?)
   poaceae                                           0   282   PRED-ONLY
   species                                           0    34   PRED-ONLY
-  urtica spp.                                       0   282   PRED-ONLY
-  viola spp.                                        0   282   PRED-ONLY
+  urtica spp                                        0   282   PRED-ONLY
+  viola spp                                         0   282   PRED-ONLY
   urticaceae                                        0   282   PRED-ONLY
   wingspan                                         34    34   
 

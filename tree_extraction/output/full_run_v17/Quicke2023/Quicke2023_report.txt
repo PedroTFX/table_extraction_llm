@@ -1,0 +1,140 @@
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Quicke2023/Quicke2023.xlsx  (131 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Quicke2023/Quicke2023.csv  (0 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+ROW-LEVEL (key match)
+  matched (TP)        : 0
+  missed (FN)         : 131
+  spurious, in scope  : 0   <- GT covers this trait: real errors
+  spurious, out of scope: 0   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.000 / 0.000 / 0.000   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.000 / 0.000 / 0.000   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.000   <- 'how much of the GT did we get' — extras cannot affect this
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0      0    n/a
+  measurementMethod             0      0    n/a
+  measurementUnit               0      0    n/a
+  measurementStatistic          0      0    n/a
+  measurementRemarks            0      0    n/a
+  sex                           0      0    n/a
+  lifeStage                     0      0    n/a
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0      0    n/a
+  externalLink                  0      0    n/a
+
+WHY THE 131 MISSED ROWS MISSED
+  species not in prediction                 131
+  species present, trait missing              0
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (27 distinct), closest predicted name:
+     gt 'Crenuladesha narendrani'            (nothing similar in the prediction)   x46
+     gt 'Protadesha intermedia'              (nothing similar in the prediction)   x32
+     gt 'Protadesha'                         (nothing similar in the prediction)   x21
+     gt 'Adeshini van Achterberg'            (nothing similar in the prediction)   x8
+     gt 'Africadesha tobiasi'                (nothing similar in the prediction)   x2
+     gt 'Adesha acuta'                       (nothing similar in the prediction)   x1
+  -> 6 species mismatches explain 110 of 131 misses (84%) — systematic, not scattered
+
+  full miss detail saved -> Quicke2023_misses.csv, Quicke2023_misses_summary.json (131 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  flagellomeres 1–3 length                          1     0   GT-ONLY
+  metasomal tergites 1–5 morphology                 1     0   GT-ONLY
+  hind wing vein 1m morphology                      1     0   GT-ONLY
+  hind wing vein 1r-m morphology                    2     0   GT-ONLY
+  lengths of 2-sr: 3-sr                             1     0   GT-ONLY
+  vein 2-sr morphology                              1     0   GT-ONLY
+  first abscissa morphology of fore wing vein 2cu size    1     0   GT-ONLY
+  vein 2cu-a presence                               1     0   GT-ONLY
+  fore wing vein 2cua morphology                    1     0   GT-ONLY
+  fore wing vein 2cub morphology                    1     0   GT-ONLY
+  lengths of veins 2rs: 3rsa: rs-m                  1     0   GT-ONLY
+  length of fore wing veins sr1: 3-sr               1     0   GT-ONLY
+  metasomal tergites 3–5 morphology                 1     0   GT-ONLY
+  lengths of veins r-rs: 3rsa: 3rsb                 1     0   GT-ONLY
+  antennae number of flagellomeres                  1     0   GT-ONLY
+  antennae morphology                               1     0   GT-ONLY
+  median area of metanotum carina                   1     0   GT-ONLY
+  basal cell morphology                             1     0   GT-ONLY
+  base of hind wing morphology                      1     0   GT-ONLY
+  length of fore femur: tibia: basitarsus           1     0   GT-ONLY
+  length of hind femur: tibia: basitarsus           1     0   GT-ONLY
+  length of head behind eye                         1     0   GT-ONLY
+  shortest distance between posterior ocelli: transverse diameter of posterior ocellus: shortest distance between posterior ocellus and eye    1     0   GT-ONLY
+  length of body                                    2     0   GT-ONLY
+  propodeum carina                                  1     0   GT-ONLY
+  fore wing second submarginal cell morphology      1     0   GT-ONLY
+  second submarginal cell morphology                1     0   GT-ONLY
+  tarsal claws morphology                           1     0   GT-ONLY
+  coloration                                        2     0   GT-ONLY
+  inter-tentorial distance                          1     0   GT-ONLY
+  distribution                                     26     0   GT-ONLY
+  width of head: width of face: height of eye       1     0   GT-ONLY
+  face morphology                                   1     0   GT-ONLY
+  lengths of fore femur: tibia: tarsus              2     0   GT-ONLY
+  fifth metasomal tergite morphology                1     0   GT-ONLY
+  first flagellomere morphology                     1     0   GT-ONLY
+  first metasomal tergite morphology                2     0   GT-ONLY
+  first metasomal tergite                           1     0   GT-ONLY
+  terminal flagellomere morphology                  2     0   GT-ONLY
+  third flagellomere morphology                     1     0   GT-ONLY
+  length fore wing                                  1     0   GT-ONLY
+  length of fore wing                               1     0   GT-ONLY
+  fore wings morphology                             1     0   GT-ONLY
+  frons                                             1     0   GT-ONLY
+  frons morphology                                  1     0   GT-ONLY
+  head and mesosoma morphology                      1     0   GT-ONLY
+  head morphology                                   3     0   GT-ONLY
+  top of head morphology                            1     0   GT-ONLY
+  posterior margin of hind wing morphology          2     0   GT-ONLY
+  hind wing vein r morphology                       2     0   GT-ONLY
+  hind wing vein sc+r1 morphology                   1     0   GT-ONLY
+  host                                              1     0   GT-ONLY
+  length of ovipositor                              2     0   GT-ONLY
+  malar space                                       2     0   GT-ONLY
+  malar suture                                      1     0   GT-ONLY
+  mesonotum                                         1     0   GT-ONLY
+  mesonotum morphology                              1     0   GT-ONLY
+  mesopleuron morphology                            2     0   GT-ONLY
+  mesoscutum morphology                             1     0   GT-ONLY
+  mesosoma morphology                               3     0   GT-ONLY
+  mesosternum morphology                            1     0   GT-ONLY
+  metasoma morphology                               2     0   GT-ONLY
+  second metasomal tergite morphology               3     0   GT-ONLY
+  second metasomal suture                           2     0   GT-ONLY
+  metasternum morphology                            1     0   GT-ONLY
+  notauli morphology                                3     0   GT-ONLY
+  ovipositor morphology                             4     0   GT-ONLY
+  ovipositor sheathes morphology                    1     0   GT-ONLY
+  pleural suture morphology                         1     0   GT-ONLY
+  propodeum morphology                              2     0   GT-ONLY
+  vein r morphology                                 1     0   GT-ONLY
+  scapus morphology                                 3     0   GT-ONLY
+  scutellar sulcus morphology                       2     0   GT-ONLY
+  scutellum morphology                              1     0   GT-ONLY
+  wings morphology                                  1     0   GT-ONLY
+  ool                                               1     0   GT-ONLY
+  pol                                               1     0   GT-ONLY
+  precoxal sulcus presence                          1     0   GT-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.000  0.000  0.000      0     0   131   id+type+value
+  tags        0.000  0.000  0.000      0     0   131   basis+id+type+value+stat+sex+stage
+             (F1 +0.000 vs previous)

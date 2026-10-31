@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Eckert2023/Eckert2023.xlsx  (1269 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Eckert2023/Eckert2023.csv  (1904 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Eckert2023/Eckert2023.csv  (1904 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -35,7 +35,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord               714   1013  0.705
   measurementMethod             0   1013  0.000  <-- low
   measurementUnit               0    357  0.000  <-- low
-  measurementStatistic          0   1013  0.000  <-- low
+  measurementStatistic        785   1013  0.775
   measurementRemarks            0      0    n/a
   sex                           0   1013  0.000  <-- low
   lifeStage                   645   1013  0.637
@@ -90,4 +90,3 @@ SCORES BY CATEGORY
   tags        0.000  0.000  0.000      0  1280  1269   basis+id+type+value+stat+sex+stage
              (624 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
              (F1 -0.795 vs previous)
-             note: only 844/1013 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty

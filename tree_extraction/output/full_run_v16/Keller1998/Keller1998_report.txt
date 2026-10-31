@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Keller1998/Keller1998.xlsx  (197 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Keller1998/Keller1998.csv  (215 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Keller1998/Keller1998.csv  (215 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -36,7 +36,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord                55     55  1.000
   measurementMethod             0      0    n/a
   measurementUnit               0     53  0.000  <-- low
-  measurementStatistic          0     55  0.000  <-- low
+  measurementStatistic         47     55  0.855
   measurementRemarks            0     46  0.000  <-- low
   sex                          55     55  1.000
   lifeStage                    55     55  1.000
@@ -89,6 +89,6 @@ SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.267  0.279  0.273     55   151   142   id+type+value
              (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.256)
-  tags        0.000  0.000  0.000      0   206   197   basis+id+type+value+stat+sex+stage
-             (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.273 vs previous)
+  tags        0.228  0.239  0.233     47   159   150   basis+id+type+value+stat+sex+stage
+             (9 more spurious row(s) set aside as out-of-scope; strict P would be 0.219)
+             (F1 -0.040 vs previous)

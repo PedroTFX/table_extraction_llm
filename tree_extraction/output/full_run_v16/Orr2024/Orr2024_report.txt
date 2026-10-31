@@ -1,6 +1,6 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Orr2024/Orr2024.xlsx  (12838 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/Orr2024/Orr2024.csv  (38070 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Orr2024/Orr2024.csv  (38070 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
@@ -39,7 +39,7 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   basisOfRecord             11798  11798  1.000
   measurementMethod             0      0    n/a   +11798 where GT blank
   measurementUnit               0  11798  0.000  <-- low
-  measurementStatistic          0  11798  0.000  <-- low
+  measurementStatistic      11798  11798  1.000
   measurementRemarks            0      0    n/a
   sex                       11798  11798  1.000
   lifeStage                 11798  11798  1.000
@@ -124,6 +124,6 @@ SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
   core        0.919  0.919  0.919  11798  1040  1040   id+type+value
              (25232 more spurious row(s) set aside as out-of-scope; strict P would be 0.310)
-  tags        0.000  0.000  0.000      0 12838 12838   basis+id+type+value+stat+sex+stage
-             (25232 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.919 vs previous)
+  tags        0.919  0.919  0.919  11798  1040  1040   basis+id+type+value+stat+sex+stage
+             (25232 more spurious row(s) set aside as out-of-scope; strict P would be 0.310)
+             (F1 +0.000 vs previous)

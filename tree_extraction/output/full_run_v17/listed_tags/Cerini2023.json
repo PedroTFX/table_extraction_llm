@@ -1,0 +1,1979 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "3": {},
+  "4": {},
+  "5": {}
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "3": {},
+  "4": {},
+  "5": {}
+ },
+ "statistic": {
+  "0": {
+   "Species": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.011,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.976,
+     "single observation": 0.001,
+     "unknown": 0.001
+    },
+    "value": "mode",
+    "said": [
+     "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+     "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+    ]
+   },
+   "-1.0": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.041,
+     "mean": 0.422,
+     "mean ± SD": 0.073,
+     "mean ± SE": 0.049,
+     "range": 0.029,
+     "min": 0.063,
+     "max": 0.036,
+     "median": 0.019,
+     "count": 0.037,
+     "mode": 0.102,
+     "single observation": 0.12,
+     "unknown": 0.008
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.057,
+       "b": 0.943
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.104,
+       "b": 0.896
+      }
+     }
+    ],
+    "value": "single observation",
+    "said": []
+   },
+   "0.0": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.858,
+     "mean ± SD": 0.022,
+     "mean ± SE": 0.009,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.077,
+     "count": 0.001,
+     "mode": 0.005,
+     "single observation": 0.015,
+     "unknown": 0.003
+    },
+    "value": "mean",
+    "said": []
+   },
+   "1.0": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.021,
+     "mean": 0.61,
+     "mean ± SD": 0.055,
+     "mean ± SE": 0.027,
+     "range": 0.008,
+     "min": 0.006,
+     "max": 0.048,
+     "median": 0.017,
+     "count": 0.023,
+     "mode": 0.032,
+     "single observation": 0.145,
+     "unknown": 0.009
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.033,
+       "b": 0.967
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.055,
+       "b": 0.945
+      }
+     }
+    ],
+    "value": "single observation",
+    "said": []
+   }
+  },
+  "1": {
+   "Co-occurrence (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 1.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": [
+     "The final dataset includes 4995 species occurrence records for 131 species across 917 sites and 86 years (1663 combinations of sites and years).",
+     "We excluded all sites hosting only 1 species (i.e., not hosting an Odonata multispecies community), ![Image block](doc:ae11e86/tier:advanced/page:3/block:8) flowchart ```mermaid graph TD A[\"Functional Traits\"] --> B[\"Machine Learning\"] C[\"Biotic Interactions\"] --> D[\"Residual Co-occurrence\"] E[\"Occurrences\"] --> F[\"Co-occurrences\"] G[\"Environmental Factors\"] --> H[\"Joint Species Distribution Models\"] I[\"Data\"] --> J[\"Statistical tool\"] K[\"Influences\"] --> L[\"Predicts\"] ``` F I G U R E 2 Diagram showing the logic behind our analytical framework."
+    ]
+   },
+   "Functional distance (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 1.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": [
+     "For each species pair, we assessed trait dissimilarity as the Mahalanobis distance (De Maesschalck et al., 2000) between their functional traits (using one-hot encoding of categorical variables with more levels), and we regressed such distances against the corresponding pairwise residual co-occurrence values derived from the HMSC analysis."
+    ]
+   }
+  },
+  "3": {
+   "Observed Co-occurrence (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.999,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": [
+     "We quantified the overall goodness of fit as the squared Pearson correlation coefficient between all the observed and the predicted co-occurrence values across the 100 simulations."
+    ]
+   }
+  },
+  "4": {
+   "Species": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.097,
+     "mean": 0.011,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.853,
+     "single observation": 0.016,
+     "unknown": 0.006
+    },
+    "value": "mode",
+    "said": [
+     "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+     "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+    ]
+   },
+   "Flight_season_start": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.102,
+     "mean": 0.152,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.004,
+     "range": 0.092,
+     "min": 0.235,
+     "max": 0.004,
+     "median": 0.003,
+     "count": 0.002,
+     "mode": 0.053,
+     "single observation": 0.349,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.675,
+       "b": 0.325
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "Flight_season_end": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.054,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.005,
+     "min": 0.002,
+     "max": 0.881,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.038,
+     "unknown": 0.001
+    },
+    "value": "max",
+    "said": []
+   },
+   "body_colors": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.039,
+     "mean": 0.058,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.877,
+     "single observation": 0.016,
+     "unknown": 0.003
+    },
+    "value": "mode",
+    "said": []
+   },
+   "body_colortypes": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.024,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.936,
+     "single observation": 0.003,
+     "unknown": 0.025
+    },
+    "value": "mode",
+    "said": []
+   },
+   "body_patterns": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.009,
+     "mean": 0.013,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.968,
+     "single observation": 0.004,
+     "unknown": 0.002
+    },
+    "value": "mode",
+    "said": []
+   },
+   "mate_guarding": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.976,
+     "single observation": 0.002,
+     "unknown": 0.009
+    },
+    "value": "mode",
+    "said": []
+   },
+   "flight_mode": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.982,
+     "single observation": 0.004,
+     "unknown": 0.003
+    },
+    "value": "mode",
+    "said": []
+   },
+   "territoriality": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.991,
+     "single observation": 0.0,
+     "unknown": 0.002
+    },
+    "value": "mode",
+    "said": []
+   },
+   "aquatic_habitats": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.987,
+     "single observation": 0.002,
+     "unknown": 0.002
+    },
+    "value": "mode",
+    "said": []
+   },
+   "habitat_openness": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.014,
+     "mean": 0.014,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.006,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.739,
+     "single observation": 0.006,
+     "unknown": 0.21
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.529,
+       "b": 0.471
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "body_lengths": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.162,
+     "mean": 0.698,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.005,
+     "range": 0.003,
+     "min": 0.003,
+     "max": 0.004,
+     "median": 0.024,
+     "count": 0.001,
+     "mode": 0.009,
+     "single observation": 0.073,
+     "unknown": 0.005
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.057,
+       "b": 0.943
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.052,
+       "b": 0.948
+      }
+     }
+    ],
+    "value": "individual",
+    "said": []
+   },
+   "hindwing_lengths": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.153,
+     "mean": 0.622,
+     "mean ± SD": 0.018,
+     "mean ± SE": 0.005,
+     "range": 0.006,
+     "min": 0.009,
+     "max": 0.011,
+     "median": 0.033,
+     "count": 0.003,
+     "mode": 0.018,
+     "single observation": 0.111,
+     "unknown": 0.013
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.055,
+       "b": 0.945
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.064,
+       "b": 0.936
+      }
+     }
+    ],
+    "value": "individual",
+    "said": []
+   },
+   "has_wing_pigment": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.034,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.007,
+     "mode": 0.87,
+     "single observation": 0.014,
+     "unknown": 0.062
+    },
+    "value": "mode",
+    "said": []
+   },
+   "wing_pigment_extent_discrete": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.029,
+     "mean": 0.069,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.005,
+     "min": 0.003,
+     "max": 0.003,
+     "median": 0.009,
+     "count": 0.015,
+     "mode": 0.728,
+     "single observation": 0.116,
+     "unknown": 0.016
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.884,
+       "b": 0.116
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.102,
+       "b": 0.898
+      }
+     }
+    ],
+    "value": "mode",
+    "said": []
+   },
+   "wing_pigment_extent_continuous": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.075,
+     "mean": 0.18,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.004,
+     "range": 0.005,
+     "min": 0.005,
+     "max": 0.003,
+     "median": 0.005,
+     "count": 0.006,
+     "mode": 0.094,
+     "single observation": 0.593,
+     "unknown": 0.029
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.965,
+       "b": 0.035
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.494,
+       "b": 0.506
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "wing_pigment_symmetry": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.027,
+     "mean": 0.031,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.814,
+     "single observation": 0.015,
+     "unknown": 0.102
+    },
+    "value": "mode",
+    "said": []
+   },
+   "wing_pigment_color": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.081,
+     "mean": 0.063,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.002,
+     "range": 0.009,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.006,
+     "mode": 0.732,
+     "single observation": 0.05,
+     "unknown": 0.048
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.921,
+       "b": 0.079
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.059,
+       "b": 0.941
+      }
+     }
+    ],
+    "value": "mode",
+    "said": []
+   },
+   "wing_pigment_placement": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.018,
+     "mean": 0.02,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.005,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.784,
+     "single observation": 0.033,
+     "unknown": 0.131
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o11",
+      "choice": "a",
+      "probs": {
+       "a": 0.689,
+       "b": 0.311
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   }
+  },
+  "5": {
+   "Species": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.089,
+     "mean": 0.006,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.003,
+     "mode": 0.886,
+     "single observation": 0.005,
+     "unknown": 0.003
+    },
+    "value": "mode",
+    "said": [
+     "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+     "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+    ]
+   },
+   "Flight_season_start": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.131,
+     "mean": 0.169,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.006,
+     "range": 0.025,
+     "min": 0.195,
+     "max": 0.005,
+     "median": 0.009,
+     "count": 0.005,
+     "mode": 0.038,
+     "single observation": 0.409,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o5",
+      "choice": "a",
+      "probs": {
+       "a": 0.648,
+       "b": 0.352
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "Flight_season_end": {
+    "choice": "max",
+    "probs": {
+     "individual": 0.056,
+     "mean": 0.195,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.005,
+     "range": 0.054,
+     "min": 0.01,
+     "max": 0.435,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.011,
+     "single observation": 0.224,
+     "unknown": 0.002
+    },
+    "duels": [
+     {
+      "a": "o6",
+      "b": "o10",
+      "choice": "b",
+      "probs": {
+       "a": 0.461,
+       "b": 0.539
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "body_colors": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.086,
+     "mean": 0.065,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.804,
+     "single observation": 0.03,
+     "unknown": 0.007
+    },
+    "value": "mode",
+    "said": []
+   },
+   "body_colortypes": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.004,
+     "mean": 0.028,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.947,
+     "single observation": 0.002,
+     "unknown": 0.013
+    },
+    "value": "mode",
+    "said": []
+   },
+   "body_patterns": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.023,
+     "mean": 0.028,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.931,
+     "single observation": 0.007,
+     "unknown": 0.004
+    },
+    "value": "mode",
+    "said": []
+   },
+   "mate_guarding": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.007,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.97,
+     "single observation": 0.001,
+     "unknown": 0.01
+    },
+    "value": "mode",
+    "said": []
+   },
+   "flight_mode": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.003,
+     "mean": 0.009,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.973,
+     "single observation": 0.004,
+     "unknown": 0.005
+    },
+    "value": "mode",
+    "said": []
+   },
+   "territoriality": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.002,
+     "mean": 0.005,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.989,
+     "single observation": 0.0,
+     "unknown": 0.002
+    },
+    "value": "mode",
+    "said": []
+   },
+   "aquatic_habitats": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.005,
+     "mean": 0.007,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.977,
+     "single observation": 0.002,
+     "unknown": 0.005
+    },
+    "value": "mode",
+    "said": []
+   },
+   "habitat_openness": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.012,
+     "mean": 0.014,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.934,
+     "single observation": 0.002,
+     "unknown": 0.028
+    },
+    "value": "mode",
+    "said": []
+   },
+   "body_lengths": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.243,
+     "mean": 0.604,
+     "mean ± SD": 0.012,
+     "mean ± SE": 0.004,
+     "range": 0.004,
+     "min": 0.008,
+     "max": 0.006,
+     "median": 0.028,
+     "count": 0.001,
+     "mode": 0.006,
+     "single observation": 0.079,
+     "unknown": 0.005
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.039,
+       "b": 0.961
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.045,
+       "b": 0.955
+      }
+     }
+    ],
+    "value": "individual",
+    "said": []
+   },
+   "hindwing_lengths": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.337,
+     "mean": 0.466,
+     "mean ± SD": 0.013,
+     "mean ± SE": 0.006,
+     "range": 0.008,
+     "min": 0.012,
+     "max": 0.013,
+     "median": 0.018,
+     "count": 0.003,
+     "mode": 0.026,
+     "single observation": 0.085,
+     "unknown": 0.013
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.046,
+       "b": 0.954
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.064,
+       "b": 0.936
+      }
+     }
+    ],
+    "value": "individual",
+    "said": []
+   },
+   "has_wing_pigment": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.048,
+     "mean": 0.011,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.857,
+     "single observation": 0.006,
+     "unknown": 0.069
+    },
+    "value": "mode",
+    "said": []
+   },
+   "wing_pigment_extent_discrete": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.044,
+     "mean": 0.094,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.003,
+     "range": 0.011,
+     "min": 0.008,
+     "max": 0.006,
+     "median": 0.014,
+     "count": 0.012,
+     "mode": 0.61,
+     "single observation": 0.167,
+     "unknown": 0.028
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.841,
+       "b": 0.159
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.105,
+       "b": 0.895
+      }
+     }
+    ],
+    "value": "mode",
+    "said": []
+   },
+   "wing_pigment_extent_continuous": {
+    "choice": "single observation",
+    "probs": {
+     "individual": 0.118,
+     "mean": 0.19,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.004,
+     "range": 0.009,
+     "min": 0.013,
+     "max": 0.004,
+     "median": 0.006,
+     "count": 0.006,
+     "mode": 0.088,
+     "single observation": 0.52,
+     "unknown": 0.039
+    },
+    "duels": [
+     {
+      "a": "o10",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.956,
+       "b": 0.044
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o10",
+      "choice": "a",
+      "probs": {
+       "a": 0.763,
+       "b": 0.237
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "wing_pigment_symmetry": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.06,
+     "mean": 0.027,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.004,
+     "mode": 0.69,
+     "single observation": 0.037,
+     "unknown": 0.174
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o11",
+      "choice": "b",
+      "probs": {
+       "a": 0.278,
+       "b": 0.722
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "wing_pigment_color": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.14,
+     "mean": 0.065,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.002,
+     "range": 0.007,
+     "min": 0.003,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.005,
+     "mode": 0.627,
+     "single observation": 0.067,
+     "unknown": 0.079
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.835,
+       "b": 0.165
+      }
+     },
+     {
+      "a": "o11",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.564,
+       "b": 0.436
+      }
+     }
+    ],
+    "value": null,
+    "said": []
+   },
+   "wing_pigment_placement": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.024,
+     "mean": 0.021,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.003,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.003,
+     "mode": 0.809,
+     "single observation": 0.032,
+     "unknown": 0.103
+    },
+    "value": "mode",
+    "said": []
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.011,
+     "female": 0.001,
+     "male": 0.002,
+     "unknown": 0.005,
+     "not": 0.981
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.002,
+     "worker": 0.004,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.991
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.003,
+     "LivingSpecimen": 0.01,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.092,
+     "Occurrence": 0.004,
+     "Taxon": 0.004,
+     "not": 0.881
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.004,
+     "larva": 0.002,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.003,
+     "unknown": 0.04,
+     "not": 0.95
+    },
+    "value": null
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.037,
+     "female": 0.001,
+     "male": 0.001,
+     "unknown": 0.003,
+     "not": 0.959
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.006,
+     "minor worker": 0.001,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.989
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.004,
+     "LivingSpecimen": 0.003,
+     "HumanObservation": 0.01,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.063,
+     "Occurrence": 0.038,
+     "Taxon": 0.0,
+     "not": 0.879
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.003,
+     "larva": 0.001,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.05,
+     "unknown": 0.014,
+     "not": 0.93
+    },
+    "value": null
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.62,
+     "female": 0.008,
+     "male": 0.009,
+     "unknown": 0.006,
+     "not": 0.357
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.942,
+       "b": 0.058
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.04,
+       "b": 0.96
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.663,
+      "not": 0.337
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.01,
+     "male alate": 0.009,
+     "worker": 0.023,
+     "minor worker": 0.007,
+     "major worker": 0.002,
+     "soldier": 0.0,
+     "not": 0.948
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "not",
+    "probs": {
+     "PreservedSpecimen": 0.014,
+     "LivingSpecimen": 0.004,
+     "HumanObservation": 0.029,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.018,
+     "Occurrence": 0.112,
+     "Taxon": 0.0,
+     "not": 0.822
+    },
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.044,
+     "larva": 0.014,
+     "mature larva": 0.02,
+     "nymph": 0.005,
+     "caterpillar": 0.003,
+     "pupa": 0.001,
+     "egg": 0.001,
+     "instar": 0.004,
+     "all": 0.148,
+     "unknown": 0.063,
+     "not": 0.697
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.326,
+       "b": 0.674
+      }
+     }
+    ],
+    "value": null
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.225,
+     "female": 0.008,
+     "male": 0.05,
+     "unknown": 0.041,
+     "not": 0.676
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.856,
+       "b": 0.144
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.284,
+       "b": 0.716
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.005,
+     "male alate": 0.002,
+     "worker": 0.001,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.991
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.005,
+     "LivingSpecimen": 0.002,
+     "HumanObservation": 0.03,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.825,
+     "Occurrence": 0.002,
+     "Taxon": 0.001,
+     "not": 0.133
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.872,
+     "larva": 0.005,
+     "mature larva": 0.001,
+     "nymph": 0.005,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.022,
+     "not": 0.094
+    },
+    "value": "adult"
+   }
+  },
+  "5": {
+   "sex": {
+    "choice": "both",
+    "probs": {
+     "both": 0.423,
+     "female": 0.013,
+     "male": 0.121,
+     "unknown": 0.075,
+     "not": 0.368
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.817,
+       "b": 0.183
+      }
+     },
+     {
+      "a": "o3",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.257,
+       "b": 0.743
+      }
+     }
+    ],
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.011,
+     "male alate": 0.002,
+     "worker": 0.001,
+     "minor worker": 0.0,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.986
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.025,
+     "LivingSpecimen": 0.004,
+     "HumanObservation": 0.036,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.53,
+     "Occurrence": 0.004,
+     "Taxon": 0.003,
+     "not": 0.397
+    },
+    "duels": [
+     {
+      "a": "o5",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.974,
+       "b": 0.026
+      }
+     },
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.028,
+       "b": 0.972
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.933,
+      "not": 0.067
+     }
+    },
+    "value": "MaterialCitation"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.951,
+     "larva": 0.005,
+     "mature larva": 0.002,
+     "nymph": 0.007,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.01,
+     "not": 0.023
+    },
+    "value": "adult"
+   }
+  }
+ },
+ "text": {
+  "basisOfRecord": {
+   "value": "MaterialCitation",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "origin"
+   }
+  },
+  "lifeStage": {
+   "value": "adult",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "Species": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.016,
+      "literature": 0.984
+     },
+     "said": [
+      "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+      "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+     ],
+     "value": "literature"
+    },
+    "-1.0": {
+     "said": [],
+     "value": null
+    },
+    "0.0": {
+     "said": [],
+     "value": null
+    },
+    "1.0": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Co-occurrence (range)": {
+     "said": [],
+     "value": null
+    },
+    "Functional distance (range)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.957,
+      "literature": 0.043
+     },
+     "said": [
+      "In most cases, however, functional distance fell into an average range."
+     ],
+     "value": "measured"
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Observed Co-occurrence (range)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Species": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.026,
+      "literature": 0.974
+     },
+     "said": [
+      "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+      "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+     ],
+     "value": "literature"
+    },
+    "Flight_season_start": {
+     "said": [],
+     "value": null
+    },
+    "Flight_season_end": {
+     "said": [],
+     "value": null
+    },
+    "body_colors": {
+     "said": [],
+     "value": null
+    },
+    "body_colortypes": {
+     "said": [],
+     "value": null
+    },
+    "body_patterns": {
+     "said": [],
+     "value": null
+    },
+    "mate_guarding": {
+     "said": [],
+     "value": null
+    },
+    "flight_mode": {
+     "said": [],
+     "value": null
+    },
+    "territoriality": {
+     "said": [],
+     "value": null
+    },
+    "aquatic_habitats": {
+     "said": [],
+     "value": null
+    },
+    "habitat_openness": {
+     "said": [],
+     "value": null
+    },
+    "body_lengths": {
+     "said": [],
+     "value": null
+    },
+    "hindwing_lengths": {
+     "said": [],
+     "value": null
+    },
+    "has_wing_pigment": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_extent_discrete": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_extent_continuous": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_symmetry": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_color": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_placement": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "5": {
+   "long": false,
+   "traits": {
+    "Species": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.02,
+      "literature": 0.98
+     },
+     "said": [
+      "First, Odonata are among the most well-known insects in terms of biology, ecology, and distribution, thanks to years of scientific research (Corbet, 1999) and amateur collections and observations that contributed to build large datasets on species detailed distribution (e.g., “OdonataCentral,” Abbott, 2006–2022).",
+      "We cleaned the dataset by removing species with uncertain or missing taxonomical information."
+     ],
+     "value": "literature"
+    },
+    "Flight_season_start": {
+     "said": [],
+     "value": null
+    },
+    "Flight_season_end": {
+     "said": [],
+     "value": null
+    },
+    "body_colors": {
+     "said": [],
+     "value": null
+    },
+    "body_colortypes": {
+     "said": [],
+     "value": null
+    },
+    "body_patterns": {
+     "said": [],
+     "value": null
+    },
+    "mate_guarding": {
+     "said": [],
+     "value": null
+    },
+    "flight_mode": {
+     "said": [],
+     "value": null
+    },
+    "territoriality": {
+     "said": [],
+     "value": null
+    },
+    "aquatic_habitats": {
+     "said": [],
+     "value": null
+    },
+    "habitat_openness": {
+     "said": [],
+     "value": null
+    },
+    "body_lengths": {
+     "said": [],
+     "value": null
+    },
+    "hindwing_lengths": {
+     "said": [],
+     "value": null
+    },
+    "has_wing_pigment": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_extent_discrete": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_extent_continuous": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_symmetry": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_color": {
+     "said": [],
+     "value": null
+    },
+    "wing_pigment_placement": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "compiled",
+  "probs": {
+   "own": 0.0,
+   "compiled": 1.0
+  },
+  "value": "compiled"
+ },
+ "rows": {
+  "0": "",
+  "1": "",
+  "3": "",
+  "4": " Its 757 rows hold 131 species, so a species takes several rows.",
+  "5": " Its 757 rows hold 131 species, so a species takes several rows."
+ },
+ "text_found": {
+  "sex": [],
+  "caste": [],
+  "basisOfRecord": [],
+  "lifeStage": [
+   {
+    "choice": "all",
+    "probs": {
+     "adult": 0.021,
+     "larva": 0.343,
+     "mature larva": 0.005,
+     "nymph": 0.002,
+     "caterpillar": 0.001,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.624,
+     "unknown": 0.001,
+     "not": 0.002
+    },
+    "duels": [
+     {
+      "a": "o8",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.307,
+       "b": 0.693
+      }
+     }
+    ],
+    "quote": "Presence data represent sampling of adults and/or larvae.",
+    "value": null
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.941,
+     "larva": 0.003,
+     "mature larva": 0.002,
+     "nymph": 0.004,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.001,
+     "not": 0.048
+    },
+    "quote": "For each site/year combination, we identified and obtained information on the most important abiotic factors known to shape Odonata communities (Bried & Siepielski, 2018) and to play a fundamental role in the phenology and the beginning of adult stage for Odonata (Corbet, 1999; Flenner et al., 2010), namely, temperature, precipitation, habitat type (lotic or lentic water body), elevation, and land cover.",
+    "value": "adult"
+   },
+   {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.999,
+     "larva": 0.0,
+     "mature larva": 0.0,
+     "nymph": 0.0,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "quote": "These traits are measured on the adult stage of the species.",
+    "value": "adult"
+   }
+  ],
+  "measurementStatistic": [
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.026,
+     "mean": 0.091,
+     "mean ± SD": 0.051,
+     "mean ± SE": 0.006,
+     "range": 0.002,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.337,
+     "analysis": 0.483
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o2",
+      "choice": "b",
+      "probs": {
+       "a": 0.4,
+       "b": 0.6
+      }
+     }
+    ],
+    "quote": "In both Anisoptera and Zygoptera, the body and hindwings lengths are good representation of species thermoregulatory capacity and flight potential (i.e., proxies for dispersal, competition, and predation capacities; Corbet, 1999; De Marco & Resende, 2002) and are easily linkable to negative interspecific interactions.",
+    "value": null
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
+}

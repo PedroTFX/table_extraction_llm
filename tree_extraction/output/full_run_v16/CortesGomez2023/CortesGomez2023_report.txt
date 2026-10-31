@@ -1,16 +1,15 @@
 ================================================================
 GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/CortesGomez2023/CortesGomez2023.xlsx  (56 rows)
-PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v14/CortesGomez2023/CortesGomez2023.csv  (90 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/CortesGomez2023/CortesGomez2023.csv  (90 rows)
 KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
 SCOPE        : measurementType
 ================================================================
 
-TAXON NAME REMAP (pred -> gt, 9 pair(s))
+TAXON NAME REMAP (pred -> gt, 8 pair(s))
   'Bombus atratus' -> 'Bombus atratus, Bombus hortulanus,Bombus melaleucus'
   'Bombus atratus, Bombus hortulanus, Bombus melaleucus' -> 'Bombus atratus, Bombus hortulanus,Bombus melaleucus'
   'Bombus hortulanus' -> 'Bombus atratus, Bombus hortulanus,Bombus melaleucus'
   'Bombus melaleucus' -> 'Bombus atratus, Bombus hortulanus,Bombus melaleucus'
-  'Epicharis sp' -> 'Epicharis sp.'
   'Eulaema cingulata' -> 'Eulaema cingulata, Eulaema polychroma'
   'Eulaema polychroma' -> 'Eulaema cingulata, Eulaema polychroma'
   'Thygater sp' -> 'Thygater'
@@ -28,28 +27,28 @@ SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
   'Hair length Mean (sd)' -> 'Hair length'
 
 ROW-LEVEL (key match)
-  matched (TP)        : 28
-  missed (FN)         : 28
-  spurious, in scope  : 20   <- GT covers this trait: real errors
+  matched (TP)        : 42
+  missed (FN)         : 14
+  spurious, in scope  : 6   <- GT covers this trait: real errors
   spurious, out of scope: 42   <- GT never covers this trait: nothing to score against
 
-  STRICT  P/R/F1      : 0.311 / 0.500 / 0.384   (every extra row counts against precision)
-  SCOPED  P/R/F1      : 0.583 / 0.500 / 0.538   (out-of-scope rows excluded)
-  RECALL (GT coverage): 0.500   <- 'how much of the GT did we get' — extras cannot affect this
+  STRICT  P/R/F1      : 0.467 / 0.750 / 0.575   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.875 / 0.750 / 0.808   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.750   <- 'how much of the GT did we get' — extras cannot affect this
 
   out-of-scope rows by uncovered field:
     measurementType                             42
 
 FIELD-LEVEL ACCURACY (on matched rows only)
   column                    agree  total    acc   extra finds
-  basisOfRecord                 0     28  0.000  <-- low
+  basisOfRecord                 0     42  0.000  <-- low
   measurementMethod             0      2  0.000  <-- low
   measurementUnit               0      0    n/a
-  measurementStatistic          0     28  0.000  <-- low
+  measurementStatistic         42     42  1.000
   measurementRemarks            0      0    n/a
-  sex                           0     28  0.000  <-- low
-  lifeStage                    14     28  0.500
-  caste                         0     14  0.000  <-- low
+  sex                           0     42  0.000  <-- low
+  lifeStage                    28     42  0.667
+  caste                         0     28  0.000  <-- low
   sampleSizeValue               0      0    n/a
   sampleSizeUnit                0      0    n/a
   sampleTreatment               0      0    n/a
@@ -58,23 +57,23 @@ FIELD-LEVEL ACCURACY (on matched rows only)
   verbatimCoordinates           0      0    n/a
   verbatimEventDate             0      0    n/a
   associatedOccurrences         0      0    n/a
-  associatedReferences          0     28  0.000  <-- low
+  associatedReferences          0     42  0.000  <-- low
   externalLink                  0      0    n/a
 
-WHY THE 28 MISSED ROWS MISSED
+WHY THE 14 MISSED ROWS MISSED
   species not in prediction                   7
   species present, trait missing              7
   species+trait present, value differs        0
 
   SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
      gt 'Partamona sp., Parapartamona sp.'  ~0.98~  pred 'Parapartamona sp'   x7
-  -> 1 species mismatch explains 7 of 28 misses (25%) — scattered; no single cause
+  -> 1 species mismatch explains 7 of 14 misses (50%) — scattered; no single cause
 
   TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
      'Altitude'                         x7
-  -> 1 missing trait explains 7 of 28 misses (25%) — scattered; no single cause
+  -> 1 missing trait explains 7 of 14 misses (50%) — scattered; no single cause
 
-  full miss detail saved -> CortesGomez2023_misses.csv, CortesGomez2023_misses_summary.json (28 row(s))
+  full miss detail saved -> CortesGomez2023_misses.csv, CortesGomez2023_misses_summary.json (14 row(s))
 
 measurementType COVERAGE
   measurementType                                  gt  pred   note
@@ -92,8 +91,8 @@ measurementType COVERAGE
 
 SCORES BY CATEGORY
   category        P      R     F1     TP    FP    FN   key
-  core        0.583  0.500  0.538     28    20    28   id+type+value
-             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.311)
+  core        0.875  0.750  0.808     42     6    14   id+type+value
+             (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.467)
   tags        0.000  0.000  0.000      0    48    56   basis+id+type+value+stat+sex+stage
              (42 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
-             (F1 -0.538 vs previous)
+             (F1 -0.808 vs previous)

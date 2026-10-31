@@ -1,0 +1,2265 @@
+{
+ "cells": {
+  "0": {},
+  "1": {},
+  "3": {
+   "Sex (F, Maj M, Min M)": {
+    "tag": "sex",
+    "values": {
+     "Maj M": {
+      "choice": "male",
+      "probs": {
+       "both": 0.019,
+       "female": 0.002,
+       "male": 0.971,
+       "unknown": 0.001,
+       "not": 0.007
+      },
+      "value": "male"
+     },
+     "Min M": {
+      "choice": "male",
+      "probs": {
+       "both": 0.011,
+       "female": 0.048,
+       "male": 0.924,
+       "unknown": 0.004,
+       "not": 0.013
+      },
+      "value": "male"
+     },
+     "F": {
+      "choice": "female",
+      "probs": {
+       "both": 0.001,
+       "female": 0.992,
+       "male": 0.004,
+       "unknown": 0.001,
+       "not": 0.002
+      },
+      "value": "female"
+     }
+    }
+   }
+  },
+  "4": {
+   "Sex": {
+    "tag": "sex",
+    "values": {
+     "M": {
+      "choice": "male",
+      "probs": {
+       "both": 0.0,
+       "female": 0.0,
+       "male": 1.0,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "male"
+     },
+     "F": {
+      "choice": "female",
+      "probs": {
+       "both": 0.0,
+       "female": 0.998,
+       "male": 0.001,
+       "unknown": 0.0,
+       "not": 0.0
+      },
+      "value": "female"
+     }
+    }
+   }
+  }
+ },
+ "labels": {
+  "0": {},
+  "1": {},
+  "3": {},
+  "4": {}
+ },
+ "statistic": {
+  "0": {
+   "(no name, column 0)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.008,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.985,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "(no name, column 1)": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.006,
+     "mean": 0.088,
+     "mean ± SD": 0.009,
+     "mean ± SE": 0.003,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.878,
+     "single observation": 0.004,
+     "unknown": 0.006
+    },
+    "value": "mode",
+    "said": []
+   },
+   "(no name, column 2)": {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.044,
+     "mean": 0.647,
+     "mean ± SD": 0.071,
+     "mean ± SE": 0.024,
+     "range": 0.005,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.002,
+     "count": 0.004,
+     "mode": 0.025,
+     "single observation": 0.045,
+     "unknown": 0.129
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o11",
+      "choice": "b",
+      "probs": {
+       "a": 0.08,
+       "b": 0.92
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o11",
+      "choice": "b",
+      "probs": {
+       "a": 0.074,
+       "b": 0.926
+      }
+     }
+    ],
+    "value": "unknown",
+    "said": []
+   }
+  },
+  "1": {
+   "Series": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.004,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.044,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.947,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "PC1 (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 1.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": []
+   },
+   "PC2 (range)": {
+    "choice": "range",
+    "probs": {
+     "individual": 0.0,
+     "mean": 0.0,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.998,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0
+    },
+    "value": "range",
+    "said": []
+   }
+  },
+  "3": {
+   "Functional group: habit": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.088,
+     "mean": 0.002,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.902,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "value": "mode",
+    "said": []
+   },
+   "Functional group: activity": {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.341,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.002,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.563,
+     "single observation": 0.084,
+     "unknown": 0.001
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.1,
+       "b": 0.9
+      }
+     },
+     {
+      "a": "o10",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.114,
+       "b": 0.886
+      }
+     }
+    ],
+    "value": "individual",
+    "said": []
+   },
+   "Dispersal predictor Body length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.981,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.011,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Dispersal predictor Thorax width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.986,
+     "mean": 0.002,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.009,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Dispersal predictor Thorax length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.989,
+     "mean": 0.003,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Thorax roundness (width :length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.966,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.022,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Thorax size (thorax length: body length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.975,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.015,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Guild predictor Head width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.969,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.004,
+     "single observation": 0.015,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Guild predictor Head length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.968,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.003,
+     "single observation": 0.016,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Head width :length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.941,
+     "mean": 0.011,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.007,
+     "single observation": 0.034,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Guild predictor Left eye width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.967,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.018,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Guild predictor Left eye length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.948,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.004,
+     "single observation": 0.034,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Eye roundness (width: length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.937,
+     "mean": 0.013,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.006,
+     "single observation": 0.032,
+     "unknown": 0.003
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Eye size (eye length :body)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.975,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.013,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Dispersal predictor Abdomen length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.953,
+     "mean": 0.012,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.027,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Guild predictor Left Hind leg length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.958,
+     "mean": 0.009,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.023,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Guild predictor Left Hind leg width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.961,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.004,
+     "single observation": 0.021,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Hind leg robustness (Leg width :length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.971,
+     "mean": 0.006,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Dispersal predictor Left Wing length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.969,
+     "mean": 0.009,
+     "mean ± SD": 0.003,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.013,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Dispersal predictor Left Wing width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.96,
+     "mean": 0.011,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.019,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Wing aspect ratio (wing width: length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.97,
+     "mean": 0.007,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.015,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Wing loading (wing area: body area)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.969,
+     "mean": 0.013,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.008,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": [
+     "For each individual beetle, we measured 13 linear dimensions and one area (details given in Supporting information Table S2 and Figure S1) using a LEICA M165 stereo microscope and morphometric software Leica Application Suite (version 3.0), from which we calculated a set of six morphological traits of potential importance for ecological functioning: relative body size, abdomen size, wing aspect ratio, wing loading, eye size, and hind leg size (description of each measurement given in Table 1)."
+    ]
+   },
+   "Dispersal predictor Wing area (mm²)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.912,
+     "mean": 0.025,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.002,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.002,
+     "single observation": 0.04,
+     "unknown": 0.006
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Hind leg size (Hind leg: body)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.984,
+     "mean": 0.006,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.001,
+     "single observation": 0.003,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": [
+     "For each individual beetle, we measured 13 linear dimensions and one area (details given in Supporting information Table S2 and Figure S1) using a LEICA M165 stereo microscope and morphometric software Leica Application Suite (version 3.0), from which we calculated a set of six morphological traits of potential importance for ecological functioning: relative body size, abdomen size, wing aspect ratio, wing loading, eye size, and hind leg size (description of each measurement given in Table 1)."
+    ]
+   },
+   "Repoductive capacity (Thorax:abdomen)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.962,
+     "mean": 0.008,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.003,
+     "single observation": 0.019,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Body size (Body/ Largest beetle)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.952,
+     "mean": 0.016,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.003,
+     "single observation": 0.022,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   }
+  },
+  "4": {
+   "Body Length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.995,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.002,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Thorax Width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.985,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.011,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Thorax Length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.991,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Thorax Roundness (width:length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.99,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Thoax size (thorax length: body)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.987,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.01,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Head Width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.991,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.006,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Head Length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.991,
+     "mean": 0.001,
+     "mean ± SD": 0.0,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.007,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Head width: length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.97,
+     "mean": 0.008,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.002,
+     "single observation": 0.014,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Eye width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.978,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.014,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Eye length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.981,
+     "mean": 0.003,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.0,
+     "range": 0.0,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.011,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Eye width: length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.965,
+     "mean": 0.009,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.015,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Eye length: body length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.927,
+     "mean": 0.016,
+     "mean ± SD": 0.004,
+     "mean ± SE": 0.002,
+     "range": 0.004,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.002,
+     "single observation": 0.031,
+     "unknown": 0.005
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Abdomen length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.961,
+     "mean": 0.007,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.001,
+     "single observation": 0.021,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Hind leg length": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.97,
+     "mean": 0.008,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.012,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Hind leg width": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.964,
+     "mean": 0.009,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.002,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.017,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Hind leg robustness (width: length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.963,
+     "mean": 0.008,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.001,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.018,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Hind leg to body ratio": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.989,
+     "mean": 0.005,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.002,
+     "unknown": 0.0
+    },
+    "value": "individual",
+    "said": [
+     "For each individual beetle, we measured 13 linear dimensions and one area (details given in Supporting information Table S2 and Figure S1) using a LEICA M165 stereo microscope and morphometric software Leica Application Suite (version 3.0), from which we calculated a set of six morphological traits of potential importance for ecological functioning: relative body size, abdomen size, wing aspect ratio, wing loading, eye size, and hind leg size (description of each measurement given in Table 1)."
+    ]
+   },
+   "Reproductive capactiy: Thorax:abdomen": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.982,
+     "mean": 0.004,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.001,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.003,
+     "mode": 0.001,
+     "single observation": 0.006,
+     "unknown": 0.001
+    },
+    "value": "individual",
+    "said": []
+   },
+   "Body size (body/ max body length)": {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.962,
+     "mean": 0.01,
+     "mean ± SD": 0.002,
+     "mean ± SE": 0.001,
+     "range": 0.002,
+     "min": 0.003,
+     "max": 0.002,
+     "median": 0.001,
+     "count": 0.002,
+     "mode": 0.001,
+     "single observation": 0.011,
+     "unknown": 0.002
+    },
+    "value": "individual",
+    "said": []
+   }
+  }
+ },
+ "captions": {
+  "0": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.293,
+     "female": 0.014,
+     "male": 0.017,
+     "unknown": 0.009,
+     "not": 0.666
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.883,
+       "b": 0.117
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.071,
+       "b": 0.929
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.319,
+      "not": 0.681
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "not",
+    "probs": {
+     "queen": 0.008,
+     "male alate": 0.006,
+     "worker": 0.023,
+     "minor worker": 0.004,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.959
+    },
+    "value": null
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.526,
+     "LivingSpecimen": 0.155,
+     "HumanObservation": 0.009,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.049,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.257
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.502,
+       "b": 0.498
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.613,
+     "larva": 0.004,
+     "mature larva": 0.003,
+     "nymph": 0.003,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.002,
+     "unknown": 0.037,
+     "not": 0.336
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.811,
+       "b": 0.189
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.037,
+       "b": 0.963
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.142,
+      "not": 0.858
+     }
+    },
+    "value": null
+   }
+  },
+  "1": {
+   "sex": {
+    "choice": "not",
+    "probs": {
+     "both": 0.202,
+     "female": 0.004,
+     "male": 0.013,
+     "unknown": 0.003,
+     "not": 0.778
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.923,
+       "b": 0.077
+      }
+     },
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.041,
+       "b": 0.959
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.261,
+      "not": 0.739
+     }
+    },
+    "value": null
+   },
+   "caste": {
+    "choice": "worker",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.001,
+     "worker": 0.842,
+     "minor worker": 0.002,
+     "major worker": 0.001,
+     "soldier": 0.0,
+     "not": 0.154
+    },
+    "value": "worker"
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.774,
+     "LivingSpecimen": 0.028,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.192
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.721,
+       "b": 0.279
+      }
+     }
+    ],
+    "value": null
+   },
+   "lifeStage": {
+    "choice": "not",
+    "probs": {
+     "adult": 0.47,
+     "larva": 0.006,
+     "mature larva": 0.002,
+     "nymph": 0.001,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.0,
+     "all": 0.012,
+     "unknown": 0.018,
+     "not": 0.491
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o9",
+      "choice": "a",
+      "probs": {
+       "a": 0.899,
+       "b": 0.101
+      }
+     },
+     {
+      "a": "o8",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.058,
+       "b": 0.942
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.211,
+      "not": 0.789
+     }
+    },
+    "value": null
+   }
+  },
+  "3": {
+   "sex": {
+    "choice": "male",
+    "probs": {
+     "both": 0.003,
+     "female": 0.002,
+     "male": 0.993,
+     "unknown": 0.001,
+     "not": 0.001
+    },
+    "value": "male"
+   },
+   "caste": {
+    "choice": "major worker",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.009,
+     "worker": 0.003,
+     "minor worker": 0.001,
+     "major worker": 0.981,
+     "soldier": 0.001,
+     "not": 0.004
+    },
+    "value": "major worker"
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.851,
+     "LivingSpecimen": 0.012,
+     "HumanObservation": 0.008,
+     "MachineObservation": 0.002,
+     "MaterialSample": 0.001,
+     "MaterialCitation": 0.007,
+     "Occurrence": 0.001,
+     "Taxon": 0.0,
+     "not": 0.117
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.902,
+     "larva": 0.006,
+     "mature larva": 0.003,
+     "nymph": 0.002,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.0,
+     "unknown": 0.004,
+     "not": 0.079
+    },
+    "value": "adult"
+   }
+  },
+  "4": {
+   "sex": {
+    "choice": "male",
+    "probs": {
+     "both": 0.0,
+     "female": 0.0,
+     "male": 1.0,
+     "unknown": 0.0,
+     "not": 0.0
+    },
+    "value": "male"
+   },
+   "caste": {
+    "choice": "male alate",
+    "probs": {
+     "queen": 0.001,
+     "male alate": 0.958,
+     "worker": 0.002,
+     "minor worker": 0.001,
+     "major worker": 0.0,
+     "soldier": 0.0,
+     "not": 0.038
+    },
+    "value": "male alate"
+   },
+   "basisOfRecord": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.936,
+     "LivingSpecimen": 0.005,
+     "HumanObservation": 0.003,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.001,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.054
+    },
+    "value": "PreservedSpecimen"
+   },
+   "lifeStage": {
+    "choice": "adult",
+    "probs": {
+     "adult": 0.757,
+     "larva": 0.011,
+     "mature larva": 0.009,
+     "nymph": 0.029,
+     "caterpillar": 0.0,
+     "pupa": 0.0,
+     "egg": 0.0,
+     "instar": 0.001,
+     "all": 0.001,
+     "unknown": 0.022,
+     "not": 0.168
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o3",
+      "choice": "a",
+      "probs": {
+       "a": 0.833,
+       "b": 0.167
+      }
+     },
+     {
+      "a": "o9",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.046,
+       "b": 0.954
+      }
+     }
+    ],
+    "final": {
+     "choice": "not",
+     "probs": {
+      "pick": 0.489,
+      "not": 0.511
+     }
+    },
+    "value": null
+   }
+  }
+ },
+ "text": {
+  "sex": {
+   "value": "both",
+   "round": "abstract and methods",
+   "settle": {
+    "by": "one value"
+   }
+  },
+  "basisOfRecord": {
+   "value": "PreservedSpecimen",
+   "round": "introduction",
+   "settle": {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.938,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "mixed": 0.061
+    },
+    "by": "clash",
+    "values": [
+     "PreservedSpecimen",
+     "MaterialCitation",
+     "LivingSpecimen"
+    ]
+   }
+  },
+  "measurementStatistic": {
+   "value": "mean",
+   "round": "results and discussion",
+   "settle": {
+    "by": "one value"
+   }
+  }
+ },
+ "source": {
+  "0": {
+   "long": false,
+   "traits": {
+    "(no name, column 0)": {
+     "said": [],
+     "value": null
+    },
+    "(no name, column 1)": {
+     "said": [],
+     "value": null
+    },
+    "(no name, column 2)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "1": {
+   "long": false,
+   "traits": {
+    "Series": {
+     "said": [],
+     "value": null
+    },
+    "PC1 (range)": {
+     "said": [],
+     "value": null
+    },
+    "PC2 (range)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "3": {
+   "long": false,
+   "traits": {
+    "Functional group: habit": {
+     "said": [],
+     "value": null
+    },
+    "Functional group: activity": {
+     "said": [],
+     "value": null
+    },
+    "Dispersal predictor Body length": {
+     "said": [],
+     "value": null
+    },
+    "Dispersal predictor Thorax width": {
+     "said": [],
+     "value": null
+    },
+    "Dispersal predictor Thorax length": {
+     "said": [],
+     "value": null
+    },
+    "Thorax roundness (width :length)": {
+     "said": [],
+     "value": null
+    },
+    "Thorax size (thorax length: body length)": {
+     "said": [],
+     "value": null
+    },
+    "Guild predictor Head width": {
+     "said": [],
+     "value": null
+    },
+    "Guild predictor Head length": {
+     "said": [],
+     "value": null
+    },
+    "Head width :length": {
+     "said": [],
+     "value": null
+    },
+    "Guild predictor Left eye width": {
+     "said": [],
+     "value": null
+    },
+    "Guild predictor Left eye length": {
+     "said": [],
+     "value": null
+    },
+    "Eye roundness (width: length)": {
+     "said": [],
+     "value": null
+    },
+    "Eye size (eye length :body)": {
+     "said": [],
+     "value": null
+    },
+    "Dispersal predictor Abdomen length": {
+     "said": [],
+     "value": null
+    },
+    "Guild predictor Left Hind leg length": {
+     "said": [],
+     "value": null
+    },
+    "Guild predictor Left Hind leg width": {
+     "said": [],
+     "value": null
+    },
+    "Hind leg robustness (Leg width :length)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.626,
+      "literature": 0.374
+     },
+     "said": [
+      "The tunneller and roller species separated into clusters with the rollers having greater hind leg size (relative to body size) and the tunnellers greater leg robustness (i.e., greater width for any given leg length)."
+     ],
+     "value": null
+    },
+    "Dispersal predictor Left Wing length": {
+     "said": [],
+     "value": null
+    },
+    "Dispersal predictor Left Wing width": {
+     "said": [],
+     "value": null
+    },
+    "Wing aspect ratio (wing width: length)": {
+     "said": [],
+     "value": null
+    },
+    "Wing loading (wing area: body area)": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.362,
+      "literature": 0.638
+     },
+     "said": [
+      "For each individual beetle, we measured 13 linear dimensions and one area (details given in Supporting information Table S2 and Figure S1) using a LEICA M165 stereo microscope and morphometric software Leica Application Suite (version 3.0), from which we calculated a set of six morphological traits of potential importance for ecological functioning: relative body size, abdomen size, wing aspect ratio, wing loading, eye size, and hind leg size (description of each measurement given in Table 1)."
+     ],
+     "value": null
+    },
+    "Dispersal predictor Wing area (mm²)": {
+     "said": [],
+     "value": null
+    },
+    "Hind leg size (Hind leg: body)": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.286,
+      "literature": 0.714
+     },
+     "said": [
+      "For each individual beetle, we measured 13 linear dimensions and one area (details given in Supporting information Table S2 and Figure S1) using a LEICA M165 stereo microscope and morphometric software Leica Application Suite (version 3.0), from which we calculated a set of six morphological traits of potential importance for ecological functioning: relative body size, abdomen size, wing aspect ratio, wing loading, eye size, and hind leg size (description of each measurement given in Table 1).",
+      "The tunneller and roller species separated into clusters with the rollers having greater hind leg size (relative to body size) and the tunnellers greater leg robustness (i.e., greater width for any given leg length)."
+     ],
+     "value": null
+    },
+    "Repoductive capacity (Thorax:abdomen)": {
+     "said": [],
+     "value": null
+    },
+    "Body size (Body/ Largest beetle)": {
+     "said": [],
+     "value": null
+    }
+   }
+  },
+  "4": {
+   "long": false,
+   "traits": {
+    "Body Length": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.985,
+      "literature": 0.015
+     },
+     "said": [
+      "The tunneller and roller species separated into clusters with the rollers having greater hind leg size (relative to body size) and the tunnellers greater leg robustness (i.e., greater width for any given leg length)."
+     ],
+     "value": "measured"
+    },
+    "Thorax Width": {
+     "said": [],
+     "value": null
+    },
+    "Thorax Length": {
+     "said": [],
+     "value": null
+    },
+    "Thorax Roundness (width:length)": {
+     "said": [],
+     "value": null
+    },
+    "Thoax size (thorax length: body)": {
+     "said": [],
+     "value": null
+    },
+    "Head Width": {
+     "said": [],
+     "value": null
+    },
+    "Head Length": {
+     "said": [],
+     "value": null
+    },
+    "Head width: length": {
+     "said": [],
+     "value": null
+    },
+    "Eye width": {
+     "said": [],
+     "value": null
+    },
+    "Eye length": {
+     "said": [],
+     "value": null
+    },
+    "Eye width: length": {
+     "said": [],
+     "value": null
+    },
+    "Eye length: body length": {
+     "said": [],
+     "value": null
+    },
+    "Abdomen length": {
+     "said": [],
+     "value": null
+    },
+    "Hind leg length": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.486,
+      "literature": 0.514
+     },
+     "said": [
+      "The tunneller and roller species separated into clusters with the rollers having greater hind leg size (relative to body size) and the tunnellers greater leg robustness (i.e., greater width for any given leg length)."
+     ],
+     "value": null
+    },
+    "Hind leg width": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.755,
+      "literature": 0.245
+     },
+     "said": [
+      "The tunneller and roller species separated into clusters with the rollers having greater hind leg size (relative to body size) and the tunnellers greater leg robustness (i.e., greater width for any given leg length)."
+     ],
+     "value": null
+    },
+    "Hind leg robustness (width: length)": {
+     "choice": "measured",
+     "probs": {
+      "measured": 0.544,
+      "literature": 0.456
+     },
+     "said": [
+      "The tunneller and roller species separated into clusters with the rollers having greater hind leg size (relative to body size) and the tunnellers greater leg robustness (i.e., greater width for any given leg length)."
+     ],
+     "value": null
+    },
+    "Hind leg to body ratio": {
+     "choice": "literature",
+     "probs": {
+      "measured": 0.235,
+      "literature": 0.765
+     },
+     "said": [
+      "For each individual beetle, we measured 13 linear dimensions and one area (details given in Supporting information Table S2 and Figure S1) using a LEICA M165 stereo microscope and morphometric software Leica Application Suite (version 3.0), from which we calculated a set of six morphological traits of potential importance for ecological functioning: relative body size, abdomen size, wing aspect ratio, wing loading, eye size, and hind leg size (description of each measurement given in Table 1).",
+      "The Land use:Species term was significant for all morphological traits apart from wing aspect ratio, suggesting that there are intraspecific differences in body size, abdomen size, wing loading, hind leg size, and eye size among land uses."
+     ],
+     "value": null
+    },
+    "Reproductive capactiy: Thorax:abdomen": {
+     "said": [],
+     "value": null
+    },
+    "Body size (body/ max body length)": {
+     "said": [],
+     "value": null
+    }
+   }
+  }
+ },
+ "origin": {
+  "choice": "own",
+  "probs": {
+   "own": 0.987,
+   "compiled": 0.013
+  },
+  "value": "own"
+ },
+ "rows": {
+  "0": "",
+  "1": "",
+  "3": " Its 1691 rows hold 12 species, so a species takes several rows.",
+  "4": " Its 29 rows hold 1 species, so a species takes several rows."
+ },
+ "text_found": {
+  "sex": [
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.972,
+     "female": 0.005,
+     "male": 0.007,
+     "unknown": 0.001,
+     "not": 0.015
+    },
+    "quote": "We therefore recorded the sex and phenotype of the beetles (female, major male, minor male).",
+    "value": "both"
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.569,
+     "female": 0.416,
+     "male": 0.009,
+     "unknown": 0.002,
+     "not": 0.004
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.222,
+       "b": 0.778
+      }
+     }
+    ],
+    "quote": "We specified land use (old-growth, logged, oil palm), species, sex (female, major male), and the two-way interactions Land use:Species and Land use:Sex as fixed effects, and set site as a random factor.",
+    "value": null
+   },
+   {
+    "choice": "both",
+    "probs": {
+     "both": 0.934,
+     "female": 0.005,
+     "male": 0.039,
+     "unknown": 0.003,
+     "not": 0.019
+    },
+    "quote": "sex as a three-level factor (female, major male, minor male)",
+    "value": "both"
+   }
+  ],
+  "caste": [],
+  "basisOfRecord": [
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.979,
+     "LivingSpecimen": 0.018,
+     "HumanObservation": 0.002,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.002
+    },
+    "quote": "We collected morphometric data from over 1,700 individuals of 12 species of dung beetle to establish whether morphological measurements can be used as predictors of behavioral traits.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.994,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.004
+    },
+    "quote": "We also compared morphology among individuals collected from different land uses (primary forest, logged forest, and oil palm plantation) to identify whether intraspecific differences in morphology vary among land use types.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.999,
+     "LivingSpecimen": 0.001,
+     "HumanObservation": 0.0,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "Trap contents were collected after 48 hours and stored in 75% ethanol in a freezer until beetles were identified and measurements taken.",
+    "value": "PreservedSpecimen"
+   },
+   {
+    "choice": "MaterialCitation",
+    "probs": {
+     "PreservedSpecimen": 0.061,
+     "LivingSpecimen": 0.0,
+     "HumanObservation": 0.001,
+     "MachineObservation": 0.0,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.937,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.0
+    },
+    "quote": "As no individuals were collected from pitfall trap contents in this study, 29 mounted specimens from earlier work at nearby locations in Sabah, Borneo (Slade et al., 2011), were measured to address this question.",
+    "value": "MaterialCitation"
+   },
+   {
+    "choice": "PreservedSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.725,
+     "LivingSpecimen": 0.006,
+     "HumanObservation": 0.007,
+     "MachineObservation": 0.005,
+     "MaterialSample": 0.004,
+     "MaterialCitation": 0.206,
+     "Occurrence": 0.005,
+     "Taxon": 0.001,
+     "not": 0.041
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o5",
+      "choice": "b",
+      "probs": {
+       "a": 0.372,
+       "b": 0.628
+      }
+     }
+    ],
+    "quote": "These morphological traits are measured on individuals caught in the field (e.g., Edwards et al., 2014; Yates & Andrew, 2011), housed in museum collections (Bregman, Sekercioglu, & Tobias, 2014; Matthews, Sheard, & Cottee-Jones, 2015), or taken from existing literature (e.g., Edwards, Edwards, Hamer, & Davies, 2013; Flynn & Gogol-Prokurat, 2009).",
+    "value": null
+   },
+   {
+    "choice": "LivingSpecimen",
+    "probs": {
+     "PreservedSpecimen": 0.025,
+     "LivingSpecimen": 0.932,
+     "HumanObservation": 0.004,
+     "MachineObservation": 0.001,
+     "MaterialSample": 0.0,
+     "MaterialCitation": 0.0,
+     "Occurrence": 0.0,
+     "Taxon": 0.0,
+     "not": 0.038
+    },
+    "quote": "In contrast, behavioral characteristics that relate to an animal’s function generally need to be observed directly from living individuals and can be more difficult to obtain.",
+    "value": "LivingSpecimen"
+   }
+  ],
+  "lifeStage": [],
+  "measurementStatistic": [
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.107,
+     "mean": 0.035,
+     "mean ± SD": 0.121,
+     "mean ± SE": 0.005,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.001,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.626,
+     "analysis": 0.101
+    },
+    "duels": [
+     {
+      "a": "o2",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.44,
+       "b": 0.56
+      }
+     }
+    ],
+    "quote": "We collected morphometric data from over 1,700 individuals of 12 species of dung beetle to establish whether morphological measurements can be used as predictors of behavioral traits.",
+    "value": null
+   },
+   {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.658,
+     "mean": 0.037,
+     "mean ± SD": 0.081,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.159,
+     "analysis": 0.059
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o2",
+      "choice": "a",
+      "probs": {
+       "a": 0.653,
+       "b": 0.347
+      }
+     }
+    ],
+    "quote": "We measured as many randomly selected individuals as possible in the available time (n = 25–36 individuals per species per site).",
+    "value": null
+   },
+   {
+    "choice": "mode",
+    "probs": {
+     "individual": 0.171,
+     "mean": 0.039,
+     "mean ± SD": 0.01,
+     "mean ± SE": 0.001,
+     "range": 0.001,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.259,
+     "mode": 0.352,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.073,
+     "analysis": 0.091
+    },
+    "duels": [
+     {
+      "a": "o9",
+      "b": "o8",
+      "choice": "b",
+      "probs": {
+       "a": 0.28,
+       "b": 0.72
+      }
+     }
+    ],
+    "quote": "Species names, functional groups (as identified by Slade et al., 2007), and the number of individuals measured per species are given in Supporting information Table S1.",
+    "value": null
+   },
+   {
+    "choice": "analysis",
+    "probs": {
+     "individual": 0.066,
+     "mean": 0.14,
+     "mean ± SD": 0.077,
+     "mean ± SE": 0.011,
+     "range": 0.002,
+     "min": 0.001,
+     "max": 0.001,
+     "median": 0.0,
+     "count": 0.002,
+     "mode": 0.096,
+     "single observation": 0.0,
+     "unknown": 0.002,
+     "not": 0.262,
+     "analysis": 0.34
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.189,
+       "b": 0.811
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o9",
+      "choice": "b",
+      "probs": {
+       "a": 0.102,
+       "b": 0.898
+      }
+     }
+    ],
+    "final": {
+     "choice": "analysis",
+     "probs": {
+      "pick": 0.207,
+      "not": 0.035,
+      "analysis": 0.757
+     }
+    },
+    "quote": "The tunneller and facultative roller Synapsis ritsemae (■) falls between the tunneller and roller functional groups 20457758, 2018, 17, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/ece3.4218 by Faculdade Medicina De Lisboa, Wiley Online Library on [31/10/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License 8690 -WILEY—Ecology and Evolution RAINE et al. total variation.",
+    "value": null
+   },
+   {
+    "choice": "individual",
+    "probs": {
+     "individual": 0.637,
+     "mean": 0.02,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.004,
+     "range": 0.013,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.001,
+     "mode": 0.002,
+     "single observation": 0.002,
+     "unknown": 0.001,
+     "not": 0.267,
+     "analysis": 0.047
+    },
+    "duels": [
+     {
+      "a": "o0",
+      "b": "o1",
+      "choice": "a",
+      "probs": {
+       "a": 0.814,
+       "b": 0.186
+      }
+     },
+     {
+      "a": "o4",
+      "b": "o0",
+      "choice": "b",
+      "probs": {
+       "a": 0.09,
+       "b": 0.91
+      }
+     }
+    ],
+    "final": {
+     "choice": "pick",
+     "probs": {
+      "pick": 0.571,
+      "not": 0.179,
+      "analysis": 0.25
+     }
+    },
+    "quote": "Individuals of this species had larger, less round eyes than many of the diurnal rollers, but still fell within the overall range of values for diurnal rollers.",
+    "value": null
+   },
+   {
+    "choice": "mean",
+    "probs": {
+     "individual": 0.001,
+     "mean": 0.975,
+     "mean ± SD": 0.001,
+     "mean ± SE": 0.001,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.0,
+     "not": 0.001,
+     "analysis": 0.021
+    },
+    "quote": "the mean abdomen size of individuals was 16% larger in old-growth compared to logged forest.",
+    "value": "mean"
+   },
+   {
+    "choice": "not",
+    "probs": {
+     "individual": 0.017,
+     "mean": 0.164,
+     "mean ± SD": 0.007,
+     "mean ± SE": 0.003,
+     "range": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "median": 0.0,
+     "count": 0.0,
+     "mode": 0.0,
+     "single observation": 0.0,
+     "unknown": 0.001,
+     "not": 0.51,
+     "analysis": 0.298
+    },
+    "duels": [
+     {
+      "a": "o1",
+      "b": "o0",
+      "choice": "a",
+      "probs": {
+       "a": 0.939,
+       "b": 0.061
+      }
+     },
+     {
+      "a": "o2",
+      "b": "o1",
+      "choice": "b",
+      "probs": {
+       "a": 0.07,
+       "b": 0.93
+      }
+     }
+    ],
+    "final": {
+     "choice": "analysis",
+     "probs": {
+      "pick": 0.078,
+      "not": 0.061,
+      "analysis": 0.86
+     }
+    },
+    "quote": "Onthophagus rugicollis, that had larger hind leg size and abdomen size in oil palm compared to logged forest.",
+    "value": null
+   }
+  ]
+ },
+ "v15": "statistic read again; sentences about the analysis left out",
+ "v15_cols": 2
+}
