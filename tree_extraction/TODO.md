@@ -544,6 +544,14 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
+## Not adopted after v18 (2026-10-31): v19, v20, v21 — experiments, v18 stays the baseline
+
+- v19 (yes / no follow-up beside sure siblings): Guariento2020 down on a GT inconsistency (Migration keeps
+  the legend's words). v20 (marked columns as categories): nimble read no group as categories; a what-if
+  lifted Odanaka2019 0.786 -> 0.912 only. v21 (narrower page pieces joined): names right but the joined
+  table keeps the first piece's column tags (Fontanilla2019 X rows 873 -> 359); dropped by the user.
+  Designs: output/eval_split/DESIGN_yes_no_v18.md, DESIGN_mark_columns_v20.md.
+
 ## Yes / no columns (v18 = v17 + yes_no.py, 2026-10-31) — ADOPTED with v17: the new baseline
 
 - Design and runs: output/eval_split/DESIGN_yes_no_v18.md. Code picks two-valued trait columns of wide tables;
