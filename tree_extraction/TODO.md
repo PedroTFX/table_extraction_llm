@@ -544,6 +544,15 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
+## Underscores and a closing full stop (v17 = v16 + clean_text.py; scorer, 2026-10-31) — RUN, not yet adopted
+
+- From the user's review of near-miss pairs (output/eval_split/CHEATSHEET_review.html, published page):
+  the scorer (source/evaluate.py normalize_value) drops a closing full stop; v17 writes an underscore
+  between two letters or digits as a space in species, trait and value (88,049 rows changed). Code only.
+- Mean F1, 109 set (production scorer): tuning 0.642 (v16) -> 0.643 (v16, full-stop rule) -> 0.644 (v17),
+  no paper down; Guariento2020 0.577 -> 0.647 -> 0.674, Noriega2023 0.955 -> 0.994, Araujo2021 0.732 -> 0.750.
+  held_b totals: 0.462 -> 0.494 (full-stop rule, 3 papers up) -> 0.494 (v17, none changed).
+
 ## Duplicate rows (v16 = v15 + dup_rows.py, 2026-10-30) — ADOPTED: the new baseline
 
 - Design and runs: output/eval_split/DESIGN_duplicate_rows_v16.md. Code only (the user: "why not straight code?"):
