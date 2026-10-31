@@ -57,3 +57,14 @@ others (Nearctic 0.56, Neuguinea 0.60 ...) sit beside Palaearctic (0.91) with th
 tuning papers 29 such columns in 7 papers. v19 asks each of them once more, naming the sure columns of
 its table with the same two values and the value that means 'has it' there; a sure 'same' writes
 it Yes / No. (Fiedler2021's region columns are not in its GT, which is at F1 1.0 already.)
+
+### v19 tuning run (2026-10-31, code 8d6f755f) — fails the accept rule
+
+All 29 asked columns came back 'same' (Fiedler2021 14, Wallon2024 5, Viza2023 4, Kratschmer2019 3,
+Braschler2021, Guariento2020, Vidal2023 1 each). Rows changed in 7 papers; score changed in 2:
+Vidal2023 0.333 -> 0.405, Guariento2020 0.795 -> **0.767**. Tuning mean 0.651 -> 0.652; repeatable
+micro F1 0.731 -> 0.729 (true positives -386). Guariento2020's flipped column is 'Migratory_species'
+(0 / 1, legend 'species not migratory ...' / 'species known to perform (seasonal) long-distance
+migrations ...'): its GT trait 'Migration' keeps the legend's wording, while the same paper's
+hibernation columns are Yes / No in the GT. The model's reading is right by meaning; the GT is not
+consistent within the paper. By the rule (no tuning paper down by more than 0.01) v19 is not adopted.
