@@ -34,3 +34,12 @@ writes 'No' for the blanks is not known yet).
 Production and repeatable F1 against v17 on dev + held_a; held_b once with the questions frozen;
 grit-only papers as totals only (split_v15.json). Adopt when the tuning F1 rises, no tuning paper falls
 by more than 0.01, and held_b does not fall.
+
+## Tuning run (2026-10-31, code 230292d9)
+
+Two-valued columns asked on 42 tuning papers; rows changed in 13, score changed in 5, none fell.
+Production F1: Fiedler2021 0.667 -> **1.000**, Guariento2020 0.674 -> **0.795**, Vidal2023 0.260 ->
+0.333, Gathof2022 0.818 -> 0.870, Wallon2024 0.340 -> 0.377. Tuning mean 0.644 -> **0.651**.
+Repeatable scorer: micro F1 0.719 -> 0.731, true positives 101,245 -> 103,246, false positives
+28,677 -> 27,616. Papers with many columns called yes / no (Kratschmer2019 26, Chichorro2022 15,
+Cao2024 10) did not change their score.
