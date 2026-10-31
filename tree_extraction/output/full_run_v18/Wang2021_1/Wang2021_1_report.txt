@@ -1,0 +1,91 @@
+  [semantic] matched by values: 'trophic level' -> 'Trophic Levels'
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Wang2021_1/Wang2021_1.xlsx  (233 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v16/Wang2021_1/Wang2021_1.csv  (586 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAMES LEFT UNMAPPED (6)
+  'Amaranthus retroflexus, Humulus scandens, Digitaria sanguinalis, Pennisetum alopecuroides, Artemisia scoparia, Kochia scoparia, Chenopodium glaucum, Salsola collina, Artemisia argyi, Hibiscus trionum': no ground-truth name denotes this organism
+  'Armeniaca vulgaris, Juglans regia, Malus asiatica, Amygdalus persica, Malus domestica, Prunus salicina, Pyrus sorotina': no ground-truth name denotes this organism
+  'Artemisia capillaris, Carex humilis, Cynodon dactylon, Chenopodium glaucum, Humulus scandens, Carex duriuscula, Digitaria sanguinalis, Artemisia annua, Eremochloa ophiuroides, Cyperus rotundus': no ground-truth name denotes this organism
+  'Larix principis-rupprechtii, Populus × beijingensis, Populus cathayana, Robinia pseudoacacia, Ulmus pumila, Populus tomentosa, Ulmus davidiana, Juglans mandshurica, Metasequoia glyptostroboides': no ground-truth name denotes this organism
+  'Vitex negundo, Wikstroemia chamaedaphne, Spiraea trilobata, Cayratia japonica, Lespedeza inschanica, Clerodendrum bungei': no ground-truth name denotes this organism
+  'Zea mays, Arachis hypogaea, Digitaria sanguinalis, Glycine max, Brassica pekinensis, Echinochloa crusgalli, Acalypha australis, Triticum aestivum, Gossypium hirsutum, Solanum tuberosum': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 2 pair(s))
+  'Body size (mm)' -> 'Body Size'
+  'trophic level' -> 'Trophic Levels'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 157
+  missed (FN)         : 76
+  spurious, in scope  : 3   <- GT covers this trait: real errors
+  spurious, out of scope: 426   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.268 / 0.674 / 0.383   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.981 / 0.674 / 0.799   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.674   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            426
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                80    157  0.510
+  measurementMethod             0      0    n/a
+  measurementUnit               0     81  0.000  <-- low
+  measurementStatistic         77    157  0.490  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           0    157  0.000  <-- low
+  lifeStage                     0    157  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0    157  0.000  <-- low
+  verbatimLocality              0    157  0.000  <-- low
+  verbatimCoordinates           0    157  0.000  <-- low
+  verbatimEventDate             0    157  0.000  <-- low
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0    157  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 76 MISSED ROWS MISSED
+  species not in prediction                   1
+  species present, trait missing             75
+  species+trait present, value differs        0
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Pterostichus acutidens Fairmaires, 1888'  ~1.00~  pred 'Pterostichus acutidens Fairmaires,1888'   x1
+  -> 1 species mismatch explains 1 of 76 misses (1%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Body Size'                        x38
+     'Trophic Levels'                   x37
+  -> 2 missing traits explain 75 of 76 misses (99%) — systematic, not scattered
+
+  full miss detail saved -> Wang2021_1_misses.csv, Wang2021_1_misses_summary.json (76 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  (no name, column 0)                               0    57   PRED-ONLY
+  (no name, column 1)                               0    39   PRED-ONLY
+  (no name, column 4)                               0    39   PRED-ONLY
+  (no name, column 5)                               0    39   PRED-ONLY
+  body size                                       119    80   Δ-39 (split?)
+  community structure                               0     6   PRED-ONLY
+  perennial crops                                   0    80   PRED-ONLY
+  habitat type                                      0     6   PRED-ONLY
+  semi-natural habitats                             0    80   PRED-ONLY
+  land use types                                    0    80   PRED-ONLY
+  trophic levels                                  114    80   Δ-34 (split?)
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.981  0.674  0.799    157     3    76   id+type+value
+             (426 more spurious row(s) set aside as out-of-scope; strict P would be 0.268)
+  tags        0.000  0.000  0.000      0   160   233   basis+id+type+value+stat+sex+stage
+             (426 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.799 vs previous)
