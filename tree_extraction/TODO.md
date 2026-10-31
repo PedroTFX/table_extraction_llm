@@ -544,6 +544,16 @@
 - v9 rescored on the repaired GT: grit mean F1 0.5215 -> 0.5314 (24 papers up, none down; Scalercio
   +0.163, Nelson +0.149, Fontanilla +0.138, Uemori2021 +0.121, Noriega +0.073).
 
+## Where we are: v18 on every paper (2026-10-31, current scorer)
+
+- Mean F1 (production): 109 set 0.612 (dev 0.580, held_a 0.788, held_b 0.494); grit 0.594 (dev 0.566,
+  held_a 0.751, held_b 0.569, grit-only 0.560). Repeatable micro F1 v14 -> v18: 109 0.659 -> 0.721,
+  grit 0.561 -> 0.615 (false positives -21k / -20k, true positives +3.3k / +2.2k).
+- Tags, accuracy (coverage), 109 set: sex 98.0% (47.6%), caste 97.9% (75.4%), basisOfRecord 90.6% (98.2%),
+  lifeStage 75.5% (56.1%), statistic 90.5% (69.6%); grit: sex 79.4% (35.2%), caste 92.5% (42.4%),
+  basisOfRecord 72.5% (90.4%), lifeStage 68.5% (61.1%), statistic 81.5% (83.5%). Grit-only (totals):
+  basisOfRecord 44.8%, sex 29.8% (values the papers never print).
+
 ## Not adopted after v18 (2026-10-31): v19, v20, v21 — experiments, v18 stays the baseline
 
 - v19 (yes / no follow-up beside sure siblings): Guariento2020 down on a GT inconsistency (Migration keeps
