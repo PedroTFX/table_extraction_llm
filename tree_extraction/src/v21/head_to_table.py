@@ -113,6 +113,26 @@ def _labels(grid, full):
     return out
 
 
+def _narrower(t, grid, rows):
+    """v21: a headless page piece narrower than the table before it (MinerU drops empty cells at the
+    ends of rows: Fontanilla2019's incidence pages are 21, 20, 19, 17 columns wide) continues it when
+    it lost at most a quarter of the columns and its columns line up: in each of its columns past the
+    first, most cells are values the same column of the table above holds. A piece whose cells sit one
+    column off (Torok2022 t8: number and name merged into one cell) or a different table
+    (Gossner2013 t5) does not line up and stays apart."""
+    n = len(t.columns)
+    if not (0.75 * n <= grid.ncols < n) or not t.records:
+        return False
+    shares = []
+    for c in range(1, grid.ncols):
+        vals = [_cell(grid, r, c) for r in rows if _cell(grid, r, c)]
+        if not vals:
+            continue
+        seen = {rec.get(t.columns[c].name) for rec in t.records} - {"", None}
+        shares.append(sum(v in seen for v in vals) / len(vals))
+    return bool(shares) and sum(shares) / len(shares) >= 0.5
+
+
 def build_tables(paper, entries, grids, context=False):
     """entries: header_tree_bench 'head' entries of one paper (each with 'full');
     grids: {table index: Grid}. -> [(Table, [context lines])] in document order."""
@@ -127,7 +147,7 @@ def build_tables(paper, entries, grids, context=False):
         labels = _labels(grid, full)
         named = any(c.get("name") for c in full["columns"])
         if (full["head_end"] == 0 or not named) and out and out[-1][0].columns and \
-                len(out[-1][0].columns) == grid.ncols:   # a continuation: join the previous
+                (len(out[-1][0].columns) == grid.ncols or _narrower(out[-1][0], grid, rows)):   # a continuation: join the previous
             t, ctx, rows_prev = out[-1]
             t.joined = [*getattr(t, "joined", []), k]
             before = len(t.sections)
