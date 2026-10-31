@@ -41,3 +41,17 @@ What-if (every group applied with gemma's name, nimble ignored; output/full_run_
 remote, 6 papers scored): the scorer matched 'Habitat/Condition' to the GT's 'Management intensity'
 (9 rows), Odanaka2019 0.786 -> 0.912; the other 5 papers unchanged (their extra rows are outside what
 the GT scores). Page: output/eval_split/MARK_COLUMNS_v20.html. Not adopted (no change).
+
+## Test: held_b run once (2026-10-31; totals only)
+
+0 marked-column groups in the 27 held_b papers; mean F1 0.494 -> 0.494, none up or down. held_b
+holds no case of this layout, so it cannot test the step.
+
+## Side finding: Fontanilla2019's '(no name, column N)' rows
+
+Its tables 5 and 6 (species incidence per study plot, plots grouped by elevation) span several pages;
+MinerU split them into page pieces, and only the first piece (t17, t19) has the header rows. v12 joins
+a headless piece to the table before it only when both have the same number of columns, but MinerU
+drops empty cells at the end of rows, so the pieces come out 21, 20, 19 and 17 columns wide. None is
+joined, each becomes its own headless table, and 828 rows are named '(no name, column N)'. The GT does
+not score these tables (the paper is at F1 0.996), so no F1 is lost; the rows are wrong output.
