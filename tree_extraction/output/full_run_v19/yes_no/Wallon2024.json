@@ -1,0 +1,823 @@
+{
+ "7:Trait": {
+  "values": [
+   [
+    "Herbivore",
+    22
+   ],
+   [
+    "Predator",
+    3
+   ]
+  ],
+  "terms": {
+   "Herbivore": "Herbivore",
+   "Predator": "Predator"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.006,
+   "value": 0.994
+  },
+  "yes": null
+ },
+ "10:Trait": {
+  "values": [
+   [
+    "IngestEDS",
+    18
+   ],
+   [
+    "IngestPS",
+    16
+   ]
+  ],
+  "terms": {
+   "IngestEDS": "IngestEDS",
+   "IngestPS": "IngestPS"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.001,
+   "value": 0.999
+  },
+  "yes": null
+ },
+ "13:Trait": {
+  "values": [
+   [
+    "ActivTwi",
+    7
+   ],
+   [
+    "ActivNight",
+    6
+   ]
+  ],
+  "terms": {
+   "ActivTwi": "ActivTwi",
+   "ActivNight": "ActivNight"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.025,
+   "value": 0.975
+  },
+  "yes": null
+ },
+ "19:Trait": {
+  "values": [
+   [
+    "ActivDay",
+    19
+   ],
+   [
+    "ActivNight",
+    7
+   ]
+  ],
+  "terms": {
+   "ActivDay": "ActivDay",
+   "ActivNight": "ActivNight"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.006,
+   "value": 0.994
+  },
+  "yes": null
+ },
+ "22:Trait": {
+  "values": [
+   [
+    "Reddish brown",
+    20
+   ],
+   [
+    "Iridescence",
+    8
+   ]
+  ],
+  "terms": {
+   "Reddish brown": "Reddish brown",
+   "Iridescence": "Iridescence"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.014,
+   "value": 0.986
+  },
+  "yes": null
+ },
+ "24:FoodPI": {
+  "values": [
+   [
+    "0",
+    106
+   ],
+   [
+    "1",
+    62
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.857,
+   "value": 0.143
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "24:FoodAni": {
+  "values": [
+   [
+    "1",
+    98
+   ],
+   [
+    "0",
+    70
+   ]
+  ],
+  "terms": {
+   "1": "1",
+   "0": "absence"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.878,
+   "value": 0.122
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "24:FoodFg": {
+  "values": [
+   [
+    "0",
+    144
+   ],
+   [
+    "1",
+    24
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.814,
+   "value": 0.186
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "24:FoodDet": {
+  "values": [
+   [
+    "0",
+    139
+   ],
+   [
+    "1",
+    29
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.706,
+   "value": 0.294
+  },
+  "yes": "1",
+  "siblings": {
+   "named": [
+    "FoodPI",
+    "FoodAni",
+    "FoodFg",
+    "FoodCopro"
+   ],
+   "choice": "same",
+   "probs": {
+    "same": 0.996,
+    "other": 0.004
+   }
+  },
+  "by": "siblings"
+ },
+ "24:FoodCopro": {
+  "values": [
+   [
+    "0",
+    157
+   ],
+   [
+    "1",
+    11
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.95,
+   "value": 0.05
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "24:ActDay": {
+  "values": [
+   [
+    "0",
+    85
+   ],
+   [
+    "1",
+    83
+   ]
+  ],
+  "terms": {
+   "0": "0",
+   "1": "1"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.086,
+   "value": 0.914
+  },
+  "yes": null
+ },
+ "24:ActNig": {
+  "values": [
+   [
+    "1",
+    125
+   ],
+   [
+    "0",
+    43
+   ]
+  ],
+  "terms": {
+   "1": "1",
+   "0": "absence"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.771,
+   "value": 0.229
+  },
+  "yes": "1",
+  "siblings": {
+   "named": [
+    "FoodPI",
+    "FoodAni",
+    "FoodFg",
+    "FoodCopro"
+   ],
+   "choice": "same",
+   "probs": {
+    "same": 0.991,
+    "other": 0.009
+   }
+  },
+  "by": "siblings"
+ },
+ "24:ActTwi": {
+  "values": [
+   [
+    "0",
+    126
+   ],
+   [
+    "1",
+    42
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.248,
+   "value": 0.752
+  },
+  "yes": null
+ },
+ "30:FoodPI": {
+  "values": [
+   [
+    "0",
+    19
+   ],
+   [
+    "1",
+    4
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.725,
+   "value": 0.275
+  },
+  "yes": "1",
+  "siblings": {
+   "named": [
+    "FoodAni",
+    "FoodFg",
+    "FoodCopro",
+    "Iridescence"
+   ],
+   "choice": "same",
+   "probs": {
+    "same": 0.983,
+    "other": 0.017
+   }
+  },
+  "by": "siblings"
+ },
+ "30:FoodAni": {
+  "values": [
+   [
+    "0",
+    16
+   ],
+   [
+    "1",
+    7
+   ]
+  ],
+  "terms": {
+   "0": "0",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.961,
+   "value": 0.039
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "30:FoodFg": {
+  "values": [
+   [
+    "0",
+    20
+   ],
+   [
+    "1",
+    3
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.886,
+   "value": 0.114
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "30:FoodDet": {
+  "values": [
+   [
+    "0",
+    14
+   ],
+   [
+    "1",
+    9
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.728,
+   "value": 0.272
+  },
+  "yes": "1",
+  "siblings": {
+   "named": [
+    "FoodAni",
+    "FoodFg",
+    "FoodCopro",
+    "Iridescence"
+   ],
+   "choice": "same",
+   "probs": {
+    "same": 0.994,
+    "other": 0.006
+   }
+  },
+  "by": "siblings"
+ },
+ "30:FoodCopro": {
+  "values": [
+   [
+    "0",
+    21
+   ],
+   [
+    "1",
+    2
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.935,
+   "value": 0.065
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "30:ActDay": {
+  "values": [
+   [
+    "1",
+    15
+   ],
+   [
+    "0",
+    8
+   ]
+  ],
+  "terms": {
+   "1": "1",
+   "0": "0"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.23,
+   "value": 0.77
+  },
+  "yes": null
+ },
+ "30:ActNig": {
+  "values": [
+   [
+    "1",
+    16
+   ],
+   [
+    "0",
+    7
+   ]
+  ],
+  "terms": {
+   "1": "1",
+   "0": "absence"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.713,
+   "value": 0.287
+  },
+  "yes": "1",
+  "siblings": {
+   "named": [
+    "FoodAni",
+    "FoodFg",
+    "FoodCopro",
+    "Iridescence"
+   ],
+   "choice": "same",
+   "probs": {
+    "same": 0.978,
+    "other": 0.022
+   }
+  },
+  "by": "siblings"
+ },
+ "30:ActTwi": {
+  "values": [
+   [
+    "0",
+    15
+   ],
+   [
+    "1",
+    8
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.155,
+   "value": 0.845
+  },
+  "yes": null
+ },
+ "30:Iridescence": {
+  "values": [
+   [
+    "0",
+    21
+   ],
+   [
+    "1",
+    2
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.814,
+   "value": 0.186
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 5)": {
+  "values": [
+   [
+    "0",
+    32
+   ],
+   [
+    "1",
+    14
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.956,
+   "value": 0.044
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 6)": {
+  "values": [
+   [
+    "1",
+    30
+   ],
+   [
+    "0",
+    16
+   ]
+  ],
+  "terms": {
+   "1": "1",
+   "0": "absence"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.964,
+   "value": 0.036
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 7)": {
+  "values": [
+   [
+    "0",
+    37
+   ],
+   [
+    "1",
+    9
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.981,
+   "value": 0.019
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 8)": {
+  "values": [
+   [
+    "0",
+    45
+   ],
+   [
+    "1",
+    1
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.976,
+   "value": 0.024
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 9)": {
+  "values": [
+   [
+    "0",
+    45
+   ],
+   [
+    "1",
+    1
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.961,
+   "value": 0.039
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 10)": {
+  "values": [
+   [
+    "0",
+    27
+   ],
+   [
+    "1",
+    19
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.924,
+   "value": 0.076
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 11)": {
+  "values": [
+   [
+    "1",
+    33
+   ],
+   [
+    "0",
+    13
+   ]
+  ],
+  "terms": {
+   "1": "1",
+   "0": "absence"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.941,
+   "value": 0.059
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 12)": {
+  "values": [
+   [
+    "0",
+    38
+   ],
+   [
+    "1",
+    8
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.926,
+   "value": 0.074
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "34:(no name, column 14)": {
+  "values": [
+   [
+    "0",
+    40
+   ],
+   [
+    "1",
+    6
+   ]
+  ],
+  "terms": {
+   "0": "absence",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.955,
+   "value": 0.045
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "_followup": true
+}

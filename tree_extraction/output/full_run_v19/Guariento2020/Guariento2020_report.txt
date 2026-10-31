@@ -1,0 +1,198 @@
+  [semantic] matched by values: 'Larvae social' -> 'Larval socialization'
+  [semantic] matched by values: 'Larvae on broadleaved trees shrubs' -> 'Larval feeding on broadleaved trees and shrubs'
+  [semantic] matched by values: 'Larvae endophagous' -> 'Larva Feeding Place'
+  [semantic] matched by values: 'Hibernation Pupa' -> 'Hibernation in pupal stage rceorded'
+  [semantic] matched by values: 'Hibernation Larva' -> 'Hibernation in larval state recorded'
+  [semantic] matched by values: 'Hibernation Imago' -> 'Hibernation as an adult recorded'
+  [semantic] matched by values: 'Larvae on reed aquatic' -> 'Larval feeding on aquatic reed'
+  [semantic] matched by values: 'Larvae on dead plant matter' -> 'Larval Feeding on dead plant matter'
+  [semantic] matched by values: 'Larvae on mosses-lichens' -> 'Larval Feeding on mosses and lychens'
+  [semantic] matched by values: 'Larvae subterraneous' -> 'Larval habitat (above or below ground)'
+  [semantic] matched by values: 'Larval host-plant families' -> 'Number of host plant families recorded in evaluated sources. '
+  [semantic] left unmatched: 'DN1' vs 'Adult feeding' (llm said different traits)
+  [semantic] left unmatched: 'DN1' vs 'Larval feeding on lianas' (llm said different traits)
+  [semantic] left unmatched: 'DN1' vs 'Oviposition and larval feeding location' (llm said different traits)
+  [semantic] left unmatched: 'DN2' vs 'Adult feeding' (llm said different traits)
+  [semantic] left unmatched: 'DN2' vs 'Larval feeding on lianas' (llm said different traits)
+  [semantic] left unmatched: 'DN2' vs 'Oviposition and larval feeding location' (llm said different traits)
+  [semantic] left unmatched: 'DN3' vs 'Adult feeding' (llm said different traits)
+  [semantic] left unmatched: 'DN3' vs 'Larval feeding on lianas' (llm said different traits)
+  [semantic] left unmatched: 'DN3' vs 'Oviposition and larval feeding location' (llm said different traits)
+  [semantic] left unmatched: 'DN4' vs 'Adult feeding' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Guariento2020/Guariento2020.xlsx  (11170 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/full_run_v19/Guariento2020/Guariento2020.csv  (22794 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 1 pair(s))
+  'Ephestia woodiella' -> 'Ephestia unicolorella woodiella'
+
+TAXON NAMES LEFT UNMAPPED (12)
+  'Anaplectoides prasina': no ground-truth name denotes this organism
+  'Cadra cautella': no ground-truth name denotes this organism
+  'Cilix glaucata': no ground-truth name denotes this organism
+  'Episema glaucina': no ground-truth name denotes this organism
+  'Hydriomena ruberata': no ground-truth name denotes this organism
+  'Lithophane socia': no ground-truth name denotes this organism
+  'Parastichtis ypsillon': no ground-truth name denotes this organism
+  'Patania ruralis': no ground-truth name denotes this organism
+  'Sclerocona acutella': no ground-truth name denotes this organism
+  'Stegania trimaculata': no ground-truth name denotes this organism
+  'Tiliacea aurago': no ground-truth name denotes this organism
+  'Xestia stigmatica': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 16 pair(s))
+  'Diurnal activity' -> 'Diurnal Activity'
+  'Functional proboscis' -> 'Proboscis development'
+  'Hibernation Egg' -> 'Hibernation in egg stage recorded'
+  'Hibernation Imago' -> 'Hibernation as an adult recorded'
+  'Hibernation Larva' -> 'Hibernation in larval state recorded'
+  'Hibernation Pupa' -> 'Hibernation in pupal stage rceorded'
+  'Larvae endophagous' -> 'Larva Feeding Place'
+  'Larvae on broadleaved trees shrubs' -> 'Larval feeding on broadleaved trees and shrubs'
+  'Larvae on dead plant matter' -> 'Larval Feeding on dead plant matter'
+  'Larvae on herbs' -> 'Larval feeding on herbs'
+  'Larvae on mosses-lichens' -> 'Larval Feeding on mosses and lychens'
+  'Larvae on reed aquatic' -> 'Larval feeding on aquatic reed'
+  'Larvae social' -> 'Larval socialization'
+  'Larvae subterraneous' -> 'Larval habitat (above or below ground)'
+  'Larval host-plant families' -> 'Number of host plant families recorded in evaluated sources. '
+  'Pupa in on ground' -> 'Pupation Site'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 7371
+  missed (FN)         : 3799
+  spurious, in scope  : 675   <- GT covers this trait: real errors
+  spurious, out of scope: 14748   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.323 / 0.660 / 0.434   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.916 / 0.660 / 0.767   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.660   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                          14748
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord              7371   7371  1.000
+  measurementMethod             0    447  0.000  <-- low
+  measurementUnit               0    447  0.000  <-- low
+  measurementStatistic       7371   7371  1.000
+  measurementRemarks            0      0    n/a
+  sex                        7371   7371  1.000
+  lifeStage                  2181   7371  0.296  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0   7371  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 3799 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing           3127
+  species+trait present, value differs      672
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     'pupation site in or close to ground in low vegetation (<30 cm), thus prone to flood events' ->  'pupation site in or close to ground in low vegetation ( 100cm), thus hardly threatened by flood events' x303
+     'larvae only feed on herbaceous plants' ->  '1'                          x198
+     'proboscis reduced and non-functional;' ->  'proboscis reduced an non-functional' x54
+     '1 genus'                    ->  '0.5'                        x49
+     'pupation site distinctly above ground, in higher vegetation.5' ->  '0.5'                        x30
+     'larvae mainly on woody plants, but also recorded from herbaceous plants' ->  'larvae mainly on woody plants, but also recorded from herbaceous plants; larvae only feed on herbaceous plants' x16
+  -> 6 substitutions explain 650 of 3799 misses (17%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Adult feeding'                    x447
+     'Development of female wings'      x447
+     'Larval Feeding on grasses'        x447
+     'Larval feeding on lianas'         x447
+     'Larval Feeding on softwood trees' x447
+     'Migration'                        x447
+  -> 6 missing traits explain 2682 of 3799 misses (71%) — systematic, not scattered
+
+  full miss detail saved -> Guariento2020_misses.csv, Guariento2020_misses_summary.json (3799 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  name in truxa 2012                                0   441   PRED-ONLY
+  larval habitat (above or below ground)          447   447   
+  diurnal activity                                447   447   
+  adult feeding                                   447     0   GT-ONLY
+  hibernation as an adult recorded                447   447   
+  larval feeding on aquatic reed                  446   447   Δ+1 (split?)
+  egg larvae arboreal                               0   447   PRED-ONLY
+  larval feeding on broadleaved trees and shrubs  447   447   
+  larval feeding on dead plant matter             446   447   Δ+1 (split?)
+  df1                                               0   447   PRED-ONLY
+  df2                                               0   447   PRED-ONLY
+  df3                                               0   447   PRED-ONLY
+  df4                                               0   447   PRED-ONLY
+  df5                                               0   447   PRED-ONLY
+  dn1                                               0   447   PRED-ONLY
+  dn2                                               0   447   PRED-ONLY
+  dn3                                               0   447   PRED-ONLY
+  dn4                                               0   447   PRED-ONLY
+  dn5                                               0   447   PRED-ONLY
+  hibernation in egg stage recorded               447   447   
+  eu territories                                    0   447   PRED-ONLY
+  number of host plant families recorded in evaluated sources  447   447   
+  larval feeding on grasses                       447     0   GT-ONLY
+  larval feeding on herbs                         447   447   
+  larva feeding place                             447   447   
+  larval feeding on lianas                        447     0   GT-ONLY
+  oviposition and larval feeding location         445     0   GT-ONLY
+  larval feeding on mosses and lychens            446   447   Δ+1 (split?)
+  larval feeding on softwood trees                447     0   GT-ONLY
+  female flightless                                 0   447   PRED-ONLY
+  development of female wings                     447     0   GT-ONLY
+  imago on non-nectar food-sources                  0   447   PRED-ONLY
+  replacement for                                   0     3   PRED-ONLY
+  larvae on grasses                                 0   447   PRED-ONLY
+  hibernation in larval state recorded            447   447   
+  hibernation in pupal stage rceorded             447   447   
+  larvae on lianas                                  0   447   PRED-ONLY
+  larvae on softwood trees                          0   447   PRED-ONLY
+  larval socialization                            447   447   
+  range latitude                                    0   447   PRED-ONLY
+  lf1                                               0   447   PRED-ONLY
+  lf2                                               0   447   PRED-ONLY
+  lf3                                               0   447   PRED-ONLY
+  lf4                                               0   447   PRED-ONLY
+  ln3                                               0   447   PRED-ONLY
+  ln4                                               0   447   PRED-ONLY
+  mf1                                               0   447   PRED-ONLY
+  mf2                                               0   447   PRED-ONLY
+  migration                                       447     0   GT-ONLY
+  migratory species                                 0   447   PRED-ONLY
+  mn1                                               0   447   PRED-ONLY
+  mn2                                               0   447   PRED-ONLY
+  mn3                                               0   447   PRED-ONLY
+  mn4                                               0   447   PRED-ONLY
+  mn5                                               0   447   PRED-ONLY
+  proboscis development                           447   447   
+  pupation site                                   447   447   
+  voltinism                                       447   447   
+  wingspan                                        447   447   
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'larval feeding on softwood trees' vs pred 'larvae on softwood trees'         sim=0.87
+    gt 'larval feeding on lianas'         vs pred 'larvae on lianas'                 sim=0.82
+    gt 'larval feeding on grasses'        vs pred 'larvae on grasses'                sim=0.79
+    gt 'development of female wings'      vs pred 'female flightless'                sim=0.70
+    gt 'migration'                        vs pred 'migratory species'                sim=0.61
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.916  0.660  0.767   7371   675  3799   id+type+value
+             (14748 more spurious row(s) set aside as out-of-scope; strict P would be 0.323)
+  tags        0.271  0.195  0.227   2181  5865  8989   basis+id+type+value+stat+sex+stage
+             (14748 more spurious row(s) set aside as out-of-scope; strict P would be 0.096)
+             (F1 -0.540 vs previous)

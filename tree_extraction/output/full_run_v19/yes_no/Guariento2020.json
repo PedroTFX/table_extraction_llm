@@ -1,0 +1,219 @@
+{
+ "4:Diurnal_activity": {
+  "values": [
+   [
+    "0",
+    409
+   ],
+   [
+    "1",
+    38
+   ]
+  ],
+  "terms": {
+   "0": "strictly nocturnal",
+   "1": "adults at least partially flying during daytime"
+  },
+  "choice": "value",
+  "probs": {
+   "flag": 0.053,
+   "value": 0.947
+  },
+  "yes": null
+ },
+ "4:Female_flightless": {
+  "values": [
+   [
+    "0",
+    440
+   ],
+   [
+    "1",
+    7
+   ]
+  ],
+  "terms": {
+   "0": "females with wings well developed",
+   "1": "females with reduced wings, unable to fly"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.844,
+   "value": 0.156
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "4:Hibernation_Larva": {
+  "values": [
+   [
+    "0",
+    224
+   ],
+   [
+    "1",
+    223
+   ]
+  ],
+  "terms": {
+   "0": "no hibernation in larval stage recorded",
+   "1": "hibernation in larval stage recorded"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.948,
+   "value": 0.052
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "4:Hibernation_Pupa": {
+  "values": [
+   [
+    "0",
+    274
+   ],
+   [
+    "1",
+    173
+   ]
+  ],
+  "terms": {
+   "0": "0",
+   "1": "1"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.944,
+   "value": 0.056
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "4:Hibernation_Egg": {
+  "values": [
+   [
+    "0",
+    391
+   ],
+   [
+    "1",
+    56
+   ]
+  ],
+  "terms": {
+   "0": "no hibernation in egg stage recorded",
+   "1": "hibernation in egg stage recorded"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.962,
+   "value": 0.038
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "4:Hibernation_Imago": {
+  "values": [
+   [
+    "0",
+    439
+   ],
+   [
+    "1",
+    8
+   ]
+  ],
+  "terms": {
+   "0": "no hibernation as adult recorded",
+   "1": "hibernation in adult stage recorded"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.943,
+   "value": 0.057
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "4:Imago_on_non-nectar_food-sources": {
+  "values": [
+   [
+    "0",
+    378
+   ],
+   [
+    "1",
+    69
+   ]
+  ],
+  "terms": {
+   "0": "0",
+   "1": "adult moths known to regularly visit rotting fruits an related non-floral nutrient sources"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.97,
+   "value": 0.03
+  },
+  "yes_asked": [
+   "1",
+   "1"
+  ],
+  "yes": "1"
+ },
+ "4:Migratory_species": {
+  "values": [
+   [
+    "0",
+    439
+   ],
+   [
+    "1",
+    8
+   ]
+  ],
+  "terms": {
+   "0": "species not migratory, even though dispersive adults may show up far away from their breeding grounds",
+   "1": "species known to perform (seasonal) long-distance migrations from southern Europe (Mediterranean) into central Europe (and back)"
+  },
+  "choice": "flag",
+  "probs": {
+   "flag": 0.747,
+   "value": 0.253
+  },
+  "yes": "1",
+  "siblings": {
+   "named": [
+    "Female_flightless",
+    "Hibernation_Larva",
+    "Hibernation_Pupa",
+    "Hibernation_Egg",
+    "Hibernation_Imago",
+    "Imago_on_non-nectar_food-sources"
+   ],
+   "choice": "same",
+   "probs": {
+    "same": 0.997,
+    "other": 0.003
+   }
+  },
+  "by": "siblings"
+ },
+ "_followup": true
+}
