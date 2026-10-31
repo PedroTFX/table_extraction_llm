@@ -43,3 +43,9 @@ Production F1: Fiedler2021 0.667 -> **1.000**, Guariento2020 0.674 -> **0.795**,
 Repeatable scorer: micro F1 0.719 -> 0.731, true positives 101,245 -> 103,246, false positives
 28,677 -> 27,616. Papers with many columns called yes / no (Kratschmer2019 26, Chichorro2022 15,
 Cao2024 10) did not change their score.
+
+## Test: held_b run once (2026-10-31, dca7871c; totals only)
+
+37 two-valued columns asked, 4 called yes / no; mean F1 0.494 -> 0.494, none up, none down
+(repeatable scorer unchanged too). The accept rule is met; the 4 columns are not among held_b's
+scored GT rows, so held_b does not test the step.
