@@ -30,7 +30,9 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                                 (only a sure 'characteristic' is kept)
   names    (gemma)   v2: each name part split into the trait and how it was measured ('length of
                      head along the midline' -> 'length of head' + method 'along the midline'),
-                     kept when both are printed in the name
+                     kept when both are printed in the name and nimble (Q-METHOD, in facts) says the
+                     split-off words tell how it was measured, not which body part it is ('in the
+                     aedeagus' stays in the name)
            (nimble)  v2, in facts: Q-LABEL per bold label a paragraph starts with ('**Elytra**'): a
                      part of the body, or a section / sex / statement
   assemble (code)    one row per kept fact: species = the owner, type = has what (a defined
@@ -330,6 +332,11 @@ LABEL = {"part": "a part of the organism's body: the structures described in the
                  "(for example 'Elytra', 'Head', 'Male genitalia', 'Pronotum', 'Leg')",
          "other": "something else: a section of the description (diagnosis, description, measurements, material "
                   "examined, type material, distribution, habitat, remarks, etymology), a sex, or a statement"}
+Q_METHOD = "In the name '{n}', what does '{m}' say?"
+METHOD = {"how": "how, where or under which condition the measurement of '{t}' was taken (for example "
+                 "'along the midline', 'at the widest point', 'of the holotype', 'in dorsal view')",
+          "part": "which part of the body '{t}' is or sits on, so it belongs to the characteristic's name "
+                  "(for example 'in the aedeagus', 'on the fore wing', 'of the elytra')"}
 Q_TRAIT = "What does '{what}' tell about an organism?"
 TRAIT = {"trait": "a characteristic of the organism: its body, size, measurements, colour, structures or genitalia, "
                   "its life, behaviour, habitat, food or hosts, its distribution, or the places or altitudes where it lives or was found",
@@ -494,8 +501,15 @@ def stage_facts(papers):
                   f"\"\"\"{u['text'][:500]}\"\"\"")
             ch, pr = ask(st, Q_LABEL.format(label=lab), dict(LABEL))
             labels[lab] = {"choice": ch, "probs": pr, "part": duels.sure(ch, pr, "part") == "part"}
-        f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait, "labels": labels},
-                                indent=1, ensure_ascii=False), encoding="utf-8")
+        methods = {}                                       # v2: Q-METHOD per split gemma proposed
+        split = json.loads((OUT / "names" / f"{p}.json").read_text(encoding="utf-8"))["split"]
+        for n, sp in split.items():
+            st = f"A scientific paper names a characteristic of an organism '{n}'."
+            crit = {k: v.format(m=sp["method"], t=sp["trait"]) for k, v in METHOD.items()}
+            ch, pr = ask(st, Q_METHOD.format(m=sp["method"], n=n), crit)
+            methods[n] = {"choice": ch, "probs": pr, "keep": duels.sure(ch, pr, "how") == "how"}
+        f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait, "labels": labels,
+                                 "methods": methods}, indent=1, ensure_ascii=False), encoding="utf-8")
         kept = sum(1 for x in facts if x["owner"] and not x["why"])
         print(f"  [facts] {p:20s} {len(facts)} facts, {len(owners) // 2} owner questions, {len(trait)} names asked: "
               f"{kept} kept; labels naming a body part: {[k for k, v in labels.items() if v['part']]} "
@@ -614,7 +628,8 @@ def stage_assemble(papers):
     for p in papers:
         fx = json.loads((OUT / "facts" / f"{p}.json").read_text(encoding="utf-8"))
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
-        split = json.loads((OUT / "names" / f"{p}.json").read_text(encoding="utf-8"))["split"]
+        split = {n: s for n, s in json.loads((OUT / "names" / f"{p}.json").read_text(encoding="utf-8"))["split"].items()
+                 if fx.get("methods", {}).get(n, {}).get("keep")}     # only splits nimble calls 'how measured'
         span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
         ps = passages(p)
         by_id = {u["id"]: u for u in ps}
