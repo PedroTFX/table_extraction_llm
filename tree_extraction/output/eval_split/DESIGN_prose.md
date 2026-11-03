@@ -136,3 +136,21 @@ Judged side by side, not by the scorer (the user: GT and prose extraction can di
   fore wing'). Wrongly kept: Xu2024 'middle of' (pronotal disc), a locality.
 - Negations kept: of the GT's negated values (Xu2024 49, Ustjuzhanin2024 4, Xia2022 2) only 3 'not X /
   without X' phrases are missing from ours.
+
+## Prose reader v3: species tracking (2026-11-03, output/prose_v3; abbreviations, reading and name splits from v2)
+
+v1's Q-SAME ended accounts with a sure 'no' at synonymy lines ('Ontholestes birmanus: Bernhauer &
+Schubert, 1914: 392.', 'T. baoxingensis ... syn. nov.'), figure captions printed inside another account
+and comparisons ('resembles Alucita longipenis'); rewording its 'yes' (other names of S, comparisons,
+captions) and asking it in both orders did not change those answers. The three papers start accounts
+under a heading or at a bold name ('**Alucita fako ... sp. nov.**'), never at a plain paragraph, so v3:
+- with an account open, asks only at a break: a heading, or a paragraph whose bold opening holds a name;
+  a plain paragraph naming another organism stays in the account (Q-OWNER still decides each fact's
+  owner); with no account open, any passage naming an organism is asked, as before;
+- Q-RANK once per name: only a Latin species / subspecies name can open an account (genus names,
+  'Alucitidae', 'many-plumed moths' and Xia2022's Chinese name now say no);
+- a heading's own names are its candidates; 'none' also names key couplets and figure captions.
+Accounts: Xia2022 29 -> 16 (T. acerosus 13 -> 65 rows; the synonym T. baoxingensis and the Chinese name
+gone), Xu2024 22 -> 11, Ustjuzhanin2024 25 -> 16. Left: L. consentanea and L. semipunctata open a few
+passages late (their headings' start question was not sure); a key couplet opens 'A. potockyi' (20 rows);
+facts in differential diagnoses go to the compared species through Q-OWNER (A. megaphimus 8, A. chloracta 7).
