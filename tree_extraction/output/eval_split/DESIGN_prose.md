@@ -90,3 +90,33 @@ almost nothing.
 
 Upper bound: the three dev papers are 3 of 109 (+0.028 to the mean F1 if read perfectly); held_b
 holds three more.
+
+## Prose reader v1: built and run on the three dev papers (2026-11-03, src/prose/prose_reader.py)
+
+The code cuts the text into passages; gemma reads who / has what / value per passage; nimble walks the
+paper in order holding whose account the text is in (Q-SAME at each heading and at each passage naming
+an organism, Q-START two names at a time, then against 'none'), then checks the owner of each fact that
+names another organism (Q-OWNER, both orders) and which 'has what' are characteristics (Q-TRAIT).
+Output: output/prose_v1. Page: output/eval_split/PROSE_SIDE_BY_SIDE_v1.html (each species once, GT
+beside ours, no scorer).
+
+Production scorer, prose rows only: Ustjuzhanin2024 0 -> 0.226, Xia2022 0 -> 0.127, Xu2024 0 -> 0.304.
+
+Where it misses (side by side, no scorer):
+- **Accounts opened at the wrong place.** The Chinese common name under each Xia2022 heading
+  ('台湾钝胸隐翅虫黄足亚种', 50 rows) and a compared species (T. baoxingensis, 56 rows) took a species'
+  rows. Synonyms in the synonymy lists (Leistotrophus birmanus, Crioceris consentanea), genus names
+  in the introduction (Thoracostrongylus, Alucita) and compared species (A. bakingili, Alucita jana)
+  opened accounts too.
+- **Trait names at another level than the GT's.** Xia2022: abbreviations written out with the methods'
+  full definitions ('length of head along the midline' for GT 'Head Length'); 185 rows have the GT's
+  value under such a name. Xu2024: the GT keeps one row per labelled field ('Elytra morphology' = the
+  whole paragraph); we split it into parts ('Humeral groove of elytra', 'Vertex').
+- **Clause cuts.** Ustjuzhanin2024: the GT keeps the verb ('is tubulate and sclerotised', 'are long
+  and thin', 'There are two …'); we start at the description ('tubulate and sclerotised').
+- **Records under-read.** Xu2024: 255 GT altitude rows have nothing of ours beside them (one row per
+  specimen record; gemma lists fewer records than a long 'Material examined' passage holds).
+  Ustjuzhanin2024: habitat type (26), altitude (23) and distribution (12) from Type material not read.
+- GT gaps: 96 Xu2024 GT rows have no trait name.
+- Bug fixed during the run: gemma writes the heading's species as who even when the passage does not
+  name it; such facts were dropped (Xia2022 556, Ustjuzhanin2024 346) and are now the account's.
