@@ -1,0 +1,225 @@
+  [semantic] left unmatched: 'Aedeagus' vs 'Diagnosis' (llm said different traits)
+  [semantic] left unmatched: 'Aedeagus' vs 'head width' (llm said different traits)
+  [semantic] left unmatched: 'Aedeagus' vs 'Microhabitat' (llm said different traits)
+  [semantic] left unmatched: 'aedeagal median lobe' vs 'Diagnosis' (llm said different traits)
+  [semantic] left unmatched: 'aedeagal median lobe' vs 'head width' (llm said different traits)
+  [semantic] left unmatched: 'aedeagal median lobe' vs 'Microhabitat' (llm said different traits)
+  [semantic] left unmatched: 'aedeagus' vs 'Diagnosis' (llm said different traits)
+  [semantic] left unmatched: 'aedeagus' vs 'head width' (llm said different traits)
+  [semantic] left unmatched: 'aedeagus' vs 'Microhabitat' (llm said different traits)
+  [semantic] left unmatched: 'aedeagus, ventral' vs 'Diagnosis' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Xia2022/Xia2022.xlsx  (399 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/prose_v2/prose/Xia2022/Xia2022.csv  (488 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 24 pair(s))
+  'T. acerosus' -> 'Thoracostrongylus acerosus Yang, Zhou & Schillhammer, 2011'
+  'T. baishanzuensis' -> 'Thoracostrongylus baishanzuensis'
+  'T. bicolor' -> 'Thoracostrongylus bicolor'
+  'T. birmanus' -> 'Thoracostrongylus birmanus (Fauvel, 1895)'
+  'T. brachypterus' -> 'Thoracostrongylus brachypterus'
+  'T. chrysites' -> 'Thoracostrongylus chrysites'
+  'T. diaoluoensis' -> 'Thoracostrongylus diaoluoensis Yang, Zhou & Schillhammer, 2011'
+  'T. formosanus flavipes' -> 'Thoracostrongylus formosanus flavipes'
+  'T. fujianensis' -> 'Thoracostrongylus fujianensis Yang, Zhou & Schillhammer, 2011'
+  'T. malaisei' -> 'Thoracostrongylus malaisei Scheerpeltz, 1965'
+  'T. miyakei' -> 'Thoracostrongylus miyakei Bernhauer, 1943'
+  'T. sarawakensis' -> 'Thoracostrongylus sarawakensis (Bernhauer, 1915)'
+  'T. velutinus' -> 'Thoracostrongylus velutinus Scheerpeltz, 1965'
+  'Thoracostrongylus aduncatus' -> 'Thoracostrongylus aduncatus Yang, Zhou & Schillhammer, 2011'
+  'Thoracostrongylus baishanzuensis sp. nov.' -> 'Thoracostrongylus baishanzuensis'
+  'Thoracostrongylus bicolor sp. nov.' -> 'Thoracostrongylus bicolor'
+  'Thoracostrongylus birmanus' -> 'Thoracostrongylus birmanus (Fauvel, 1895)'
+  'Thoracostrongylus brachypterus sp. nov.' -> 'Thoracostrongylus brachypterus'
+  'Thoracostrongylus chrysites sp. nov.' -> 'Thoracostrongylus chrysites'
+  'Thoracostrongylus diaoluoensis' -> 'Thoracostrongylus diaoluoensis Yang, Zhou & Schillhammer, 2011'
+  'Thoracostrongylus fujianensis' -> 'Thoracostrongylus fujianensis Yang, Zhou & Schillhammer, 2011'
+  'Thoracostrongylus malaisei' -> 'Thoracostrongylus malaisei Scheerpeltz, 1965'
+  'Thoracostrongylus miyakei' -> 'Thoracostrongylus miyakei Bernhauer, 1943'
+  'Thoracostrongylus velutinus' -> 'Thoracostrongylus velutinus Scheerpeltz, 1965'
+
+TAXON NAMES LEFT UNMAPPED (9)
+  'Aedeagal variation': no ground-truth name denotes this organism
+  'T. baoxingensis': no ground-truth name denotes this organism
+  'T. formosanus': matches 2 different organisms, cannot choose: 'Thoracostrongylus formosanus flavipes', 'Thoracostrongylus formosanus formosanus Shibata, 1982'
+  'Thoracostrongylus': no ground-truth name denotes this organism
+  'Thoracostrongylus baoxingensis': no ground-truth name denotes this organism
+  'Thoracostrongylus formosanus formosanus': matches 2 different organisms, cannot choose: 'Thoracostrongylus formosanus flavipes', 'Thoracostrongylus formosanus formosanus Shibata, 1982'
+  'apex of the median lobe and paramere': no ground-truth name denotes this organism
+  'other species from east and southeast China': no ground-truth name denotes this organism
+  '台湾钝胸隐翅虫黄足亚种': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 20 pair(s))
+  'antennae' -> 'Antennae'
+  'body length' -> 'Body Length'
+  'distribution' -> 'Distribution'
+  'forebody length' -> 'Forebody Length'
+  'legs' -> 'legs coloration'
+  'length of elytra' -> 'Elytra Length'
+  'length of elytra/width of elytra' -> 'Elytra Length/Elytra Width'
+  'length of eye' -> 'Eye Length'
+  'length of eye/length of post-ocular region' -> 'Eye Length/Post-ocular Region Length'
+  'length of head' -> 'Head Length'
+  'length of head/width of head' -> 'Head Length/Head Width'
+  'length of post-ocular region' -> 'Post-ocular Region Length'
+  'length of pronotum' -> 'Pronotum Length'
+  'length of pronotum/width of pronotum' -> 'Pronotum Length/Pronotum Width'
+  'width of elytra' -> 'Elytra Width'
+  'width of head' -> 'Head Width'
+  'width of head/width of elytra' -> 'Head Width/Elytra Width'
+  'width of head/width of pronotum' -> 'Head Width/Pronotum Width'
+  'width of pronotum' -> 'Pronotum Width'
+  'width of pronotum/width of elytra' -> 'Pronotum Width/Elytra Width'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 48
+  missed (FN)         : 351
+  spurious, in scope  : 267   <- GT covers this trait: real errors
+  spurious, out of scope: 173   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.098 / 0.120 / 0.108   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.152 / 0.120 / 0.134   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.120   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            173
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     48  0.000  <-- low
+  measurementMethod             0     24  0.000  <-- low   +14 where GT blank
+  measurementUnit              24     24  1.000
+  measurementStatistic         35     48  0.729
+  measurementRemarks            0      0    n/a
+  sex                          41     48  0.854
+  lifeStage                     0     48  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     48  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 351 MISSED ROWS MISSED
+  species not in prediction                  16
+  species present, trait missing            158
+  species+trait present, value differs      177
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '0.22-0.28'                  ->  '0.22–0.28'                  x5
+     '0.95-1.00'                  ->  '0.95–1.00'                  x4
+     '0.83-0.95'                  ->  '0.83–0.95'                  x2
+     '1.78-2.11'                  ->  '1.78–2.11'                  x2
+     '1.67-1.78'                  ->  '1.67–1.78'                  x2
+     '1.67-1.89'                  ->  '1.67–1.78'                  x2
+  -> 6 substitutions explain 17 of 351 misses (5%) — scattered; no single cause
+
+  SPECIES IN GT BUT NOT IN PREDICTION (1 distinct), closest predicted name:
+     gt 'Thoracostrongylus formosanus formosanus Shibata, 1982'  ~0.82~  pred 'Thoracostrongylus formosanus formosanus'   x16
+  -> 1 species mismatch explains 16 of 351 misses (5%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'Head Length/Head Width'           x19
+     'Body Length'                      x8
+     'Forebody Length'                  x8
+     'Head Length'                      x8
+     'Head Width'                       x8
+     'Eye Length'                       x8
+  -> 6 missing traits explain 59 of 351 misses (17%) — scattered; no single cause
+
+  full miss detail saved -> Xia2022_misses.csv, Xia2022_misses_summary.json (351 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  abdomen                                           0     1   PRED-ONLY
+  abdominal tergites iii–vi                         0     2   PRED-ONLY
+  abdominal tergites iii–vii                        0     1   PRED-ONLY
+  abdominal segments                                0     1   PRED-ONLY
+  abdominal tergite vi                              0     1   PRED-ONLY
+  abdominal tergite vii                             0     2   PRED-ONLY
+  aedeagal median lobe                              0     1   PRED-ONLY
+  aedeagus                                          0    18   PRED-ONLY
+  median lobe of the aedeagus                       0     1   PRED-ONLY
+  shape of the paramere and median lobe of the aedeagus    0     1   PRED-ONLY
+  aedeagus, ventral                                 0     2   PRED-ONLY
+  altitude                                          0    58   PRED-ONLY
+  antennae                                          1     3   Δ+2 (split?)
+  antennae and legs                                 0     1   PRED-ONLY
+  apex of median lobe                               0     2   PRED-ONLY
+  apical dark markings of the forelegs              0     1   PRED-ONLY
+  apical portion of median lobe                     0     1   PRED-ONLY
+  apical portion of the median lobe                 0     2   PRED-ONLY
+  appearance                                        0     1   PRED-ONLY
+  general appearance                                0     4   PRED-ONLY
+  scale bar                                         0     2   PRED-ONLY
+  scale bars                                        0     4   PRED-ONLY
+  can be distinguished from lesonthotes             0     1   PRED-ONLY
+  can be distinguished from ontholestes             0     1   PRED-ONLY
+  can be easily recognized                          0     2   PRED-ONLY
+  body length                                      22    18   Δ-4 (split?)
+  body size                                         0     1   PRED-ONLY
+  brachypterous species                             0     1   PRED-ONLY
+  coloration                                        1     1   
+  legs coloration                                   1     1   
+  diagnosis                                         1     0   GT-ONLY
+  ratio of eye longitudinal diameter to temple length    0     1   PRED-ONLY
+  distinguishing feature                            0     1   PRED-ONLY
+  distribution                                     15    17   Δ+2 (split?)
+  elytra                                            0     1   PRED-ONLY
+  elytra length/elytra width                       22    18   Δ-4 (split?)
+  head width/elytra width                          22    18   Δ-4 (split?)
+  elytra length                                    22    18   Δ-4 (split?)
+  pronotum width/elytra width                      19    15   Δ-4 (split?)
+  elytra width                                     22    18   Δ-4 (split?)
+  eye length                                       22    19   Δ-3 (split?)
+  eye length/post-ocular region length             22    18   Δ-4 (split?)
+  femora                                            0     2   PRED-ONLY
+  forebody length                                  22    18   Δ-4 (split?)
+  palisade fringe on tergite vii                    0     3   PRED-ONLY
+  recorded from                                     0    14   PRED-ONLY
+  habitat                                           6     5   Δ-1 (split?)
+  habitus                                           0     3   PRED-ONLY
+  has                                               0     1   PRED-ONLY
+  head length/head width                           22     1   Δ-21 (split?)
+  head length                                      22    18   Δ-4 (split?)
+  head width/pronotum width                        19    15   Δ-4 (split?)
+  head width                                       23    18   Δ-5 (split?)
+  mid and hind legs                                 0     1   PRED-ONLY
+  mid and hind tibiae and tarsi                     0     1   PRED-ONLY
+  hind wings                                        0     1   PRED-ONLY
+  is                                                0     2   PRED-ONLY
+  labrum                                            0     2   PRED-ONLY
+  post-ocular region length                        22    19   Δ-3 (split?)
+  pronotum length                                  22    18   Δ-4 (split?)
+  pronotum length/pronotum width                   22    18   Δ-4 (split?)
+  median lobe                                       0     2   PRED-ONLY
+  location                                          0     5   PRED-ONLY
+  margin of tergite                                 0     1   PRED-ONLY
+  microhabitat                                      1     0   GT-ONLY
+  occurs in                                         0     1   PRED-ONLY
+  paramere                                          0     4   PRED-ONLY
+  pronotum                                          0     2   PRED-ONLY
+  pronotum width                                   22    18   Δ-4 (split?)
+  sex                                               0     8   PRED-ONLY
+  shape                                             0     1   PRED-ONLY
+  sternite viii                                     4     3   Δ-1 (split?)
+  tarsi                                             0     1   PRED-ONLY
+  tempora                                           0     1   PRED-ONLY
+  tibiae                                            0     1   PRED-ONLY
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.152  0.120  0.134     48   267   351   id+type+value
+             (173 more spurious row(s) set aside as out-of-scope; strict P would be 0.098)
+  tags        0.000  0.000  0.000      0   315   399   basis+id+type+value+stat+sex+stage
+             (173 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.134 vs previous)
+             note: only 41/48 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
