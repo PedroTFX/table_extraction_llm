@@ -12,7 +12,8 @@ Code cuts the text into passages and keeps the paper's order; the models read an
   read     (gemma)   per passage: the organisms it names, and every fact it states as
                      who / has what / with what value (+ sex): who as the passage names it, or
                      empty when the passage goes on about the organism above without naming it.
-                     Code keeps a name or value only when it is printed in the passage.
+                     Code keeps a name or value only when it is printed in the passage; a who
+                     not printed there is taken as unnamed (gemma fills in the heading's species).
   walk     (nimble)  the paper read in order, holding whose account the text is in. At each
                      heading, and at each passage that names an organism, nimble is asked:
                        Q-SAME   is this part still about S? (a comparison with another species,
@@ -420,7 +421,11 @@ def stage_facts(papers):
         facts, owners = [], []
         for pid, r in rd["read"].items():
             s = span.get(pid)
-            for fa in r["facts"]:
+            # gemma often writes the account's species as who although the passage does not name it
+            # (Ustjuzhanin2024: 346 of 624 facts): such a fact is unnamed, so it is the account's
+            unnamed = [dict({k: v for k, v in x.items() if k != "why"}, who="", who_read=x["who"])
+                       for x in r["dropped"] if x["why"] == "who not printed in the passage"]
+            for fa in r["facts"] + unnamed:
                 x = dict(fa, passage=pid, account=s)
                 if not fa["who"] or (s and same_name(fa["who"], s)):
                     x["owner"] = s
