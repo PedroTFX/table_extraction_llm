@@ -120,3 +120,19 @@ Where it misses (side by side, no scorer):
 - GT gaps: 96 Xu2024 GT rows have no trait name.
 - Bug fixed during the run: gemma writes the heading's species as who even when the passage does not
   name it; such facts were dropped (Xia2022 556, Ustjuzhanin2024 346) and are now the account's.
+
+## Prose reader v2 (2026-11-03, output/prose_v2; abbreviations, reading and species tracking reused from v1)
+
+Judged side by side, not by the scorer (the user: GT and prose extraction can diverge a lot by nature).
+- Body-part labels as context: nimble (Q-LABEL) calls a paragraph's bold label a body part or not;
+  under a body-part label each part gets the label in front ('Humeri' under **Elytra** -> 'Elytra humeri').
+  Xu2024: Head, Pronotum, Elytra, Leg, Abdominal sternite, Male genitalia, Female reproductive organs,
+  'Mesosternum pubescent' (a statement, read as a part); Ustjuzhanin2024: Male / Female genitalia
+  ('External characters' left out, right); Xia2022: none (its labels are Description, Measurements, Male).
+- Whole-field rows: one per body-part field, type = the label, value = the paragraph (Xu2024 80, Ustjuzhanin2024 8).
+- Trait / method: gemma proposes a split, nimble (Q-METHOD) keeps it only when the split-off words tell
+  how it was measured. Xia2022 23 of 31 kept ('length of head' + 'along the midline', 'width of pronotum'
+  + 'at the widest point'); body-part locations rejected ('cornuti in the aedeagus', 'distal band on the
+  fore wing'). Wrongly kept: Xu2024 'middle of' (pronotal disc), a locality.
+- Negations kept: of the GT's negated values (Xu2024 49, Ustjuzhanin2024 4, Xia2022 2) only 3 'not X /
+  without X' phrases are missing from ours.
