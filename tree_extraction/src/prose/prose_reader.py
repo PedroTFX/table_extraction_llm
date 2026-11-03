@@ -28,7 +28,8 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                                 characteristic of the organism, or something about the
                                 specimens' handling, people, dates, names or literature
                                 (only a sure 'characteristic' is kept)
-  assemble (code)    one row per kept fact: species = the owner, type = has what, value as
+  assemble (code)    one row per kept fact: species = the owner, type = has what (a defined
+                     abbreviation written out with the paper's meaning), value as
                      printed (a trailing unit moved to measurementUnit), sex as read
   score              the production scorer on prose rows only and on v18's rows + prose rows
   page     (gemma)   the scorer's matching (species and trait-name remaps) saved for the page
@@ -489,13 +490,23 @@ def _write(f, rows):
         w.writerows(rows)
 
 
+def spelled(what, abbr):
+    """A has-what that is one of the paper's defined abbreviations, or a ratio of them ('HL/HW'),
+    written with the paper's own meanings (gemma often keeps the abbreviation)."""
+    parts = [x.strip() for x in what.split("/")]
+    if parts and all(x in abbr for x in parts):
+        return "/".join(abbr[x] for x in parts)
+    return what
+
+
 def stage_assemble(papers):
     for p in papers:
         facts = json.loads((OUT / "facts" / f"{p}.json").read_text(encoding="utf-8"))["facts"]
+        abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
         rows, seen = [], set()
         for x in facts:
             if x["owner"] and not x["why"]:
-                r = _row(x)
+                r = _row(dict(x, what=spelled(x["what"], abbr)))
                 k = tuple(r.values())
                 if k not in seen:
                     seen.add(k)
