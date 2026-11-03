@@ -16,11 +16,18 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                      not printed there is taken as unnamed (gemma fills in the heading's species).
   walk     (nimble)  the paper read in order, holding whose account the text is in. At each
                      heading, and at each passage that names an organism, nimble is asked:
-                       Q-SAME   is this part still about S? (a comparison with another species,
-                                or its host or food, keeps S); not sure keeps S
-                       Q-START  after a sure 'no', or with no account open: which organism named
-                                here does the text from here on describe (two at a time), and
-                                that one against 'none'; not sure opens no account
+                       Q-SAME   does the account of S go on through this part? Another name of S
+                                (synonym, older combination, citation, name in another language),
+                                a compared species, its host or food, or a figure caption inside the
+                                account keep S. v3: asked in both orders; S ends only on two sure 'no'
+                       Q-RANK   (v3) once per name: the scientific name of one species or
+                                subspecies, or a genus / family / group / common name? Only a sure
+                                species opens an account (Xia2022's Chinese name, 'Alucitidae',
+                                'many-plumed moths' and genus names opened accounts in v1)
+                       Q-START  after S ends, or with no account open: which species named here
+                                does the text from here on describe (two at a time), and that one
+                                against 'none' (the study, several organisms, a key couplet, a
+                                figure caption); not sure opens no account
                      A passage that names no organism and is not a heading stays in the account.
   facts    (nimble)  Q-OWNER  a fact whose who names another organism than the account's:
                                 whose is it (both orders; not sure drops it)
@@ -64,9 +71,9 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-PROSE_V1 = _paths.OUTPUT / "prose_v1"
-OUT = _paths.OUTPUT / "prose_v2"      # v2: field labels as context, whole-field rows, trait / method split
-REUSED = ("abbrev", "read", "walk")   # v2 changes nothing before the facts: these come from v1
+PREV_OUT = _paths.OUTPUT / "prose_v2"
+OUT = _paths.OUTPUT / "prose_v3"      # v3: species tracking (Q-SAME both orders, Q-RANK, wider 'none')
+REUSED = ("abbrev", "read", "names")  # v3 changes nothing before the walk: these come from v2
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -316,15 +323,23 @@ def stage_read(papers):
 STATE_IN = "A scientific paper about organisms is read part by part, in order. The text read so far ended inside the account of {s}: there the paper describes {s}."
 STATE_OUT = "A scientific paper about organisms is read part by part, in order. The text read so far is not the account of one organism."
 STATE_PART = " The next part of the text{under} reads:\n\"\"\"{text}\"\"\""
-Q_SAME = "Is this part of the text still about {s}?"
-SAME = {"yes": "yes: it goes on describing {s}: its specimens or records, body, measurements, sexes, distribution, "
-               "habitat or hosts, even where it names other organisms to compare them with {s} or as its food, host or partner",
-        "no": "no: here the text turns to something else: the account of another organism starts, or the text is about "
-              "several organisms together, a key to identify species, or the study itself (its methods, results or discussion)"}
+Q_SAME = "Does the account of {s} go on through this part of the text?"
+SAME = {"yes": "yes: this part still belongs to the account of {s}, even where it names other organisms: another name "
+               "of {s} (a synonym, an older combination, a citation of where {s} was named or described, its name in "
+               "another language), an organism compared with {s}, its host, food or partner, or a figure caption "
+               "printed inside the account",
+        "no": "no: the account of {s} ends here: the account of another species starts (usually under its own heading "
+              "or a bold name, often with 'sp. nov.'), or the text turns to several organisms together, a key to "
+              "identify species, or the study itself (its methods, results or discussion)"}
+Q_RANK = "What is '{n}'?"
+RANK = {"yes": "the scientific name of one species or subspecies (a genus and an epithet, possibly abbreviated "
+               "as in 'T. acerosus')",
+        "no": "something else: a genus, family or larger group, a common or vernacular name, a name in another "
+              "language, or not an organism"}
 Q_START = "Which organism does the text from this part on describe?"
 START = "{n}: from here on the text describes {n} (its specimens, body, measurements, distribution)"
-NONE = ("none: no single organism's account starts here; the text is about the study, several organisms together "
-        "or a key, or it names {n} only in passing")
+NONE = ("none: no single organism's account starts here; the text is about the study, several organisms together, "
+        "a key couplet that leads to a species, or a figure caption, or it names {n} only in passing")
 Q_OWNER = "Whose characteristic does the text give as '{what}: {value}'?"
 OWNER = "{n}'s: the text says this about {n}"
 Q_LABEL = "What does the label '{label}' name?"
@@ -418,7 +433,15 @@ def stage_walk(papers):
         t0 = time.time()
         rd = json.loads((OUT / "read" / f"{p}.json").read_text(encoding="utf-8"))
         ps, read = rd["passages"], rd["read"]
-        cur, span, log = None, {}, []
+        cur, span, log, rank = None, {}, [], {}
+
+        def species(n):
+            """Q-RANK, once per name of the paper: only a species or subspecies name opens an account."""
+            if n not in rank:
+                ch, pr = ask(f"A scientific paper about organisms names '{n}'.", Q_RANK.format(n=n), dict(RANK))
+                rank[n] = {"choice": ch, "probs": pr, "species": duels.sure(ch, pr, "yes") == "yes"}
+            return rank[n]["species"]
+
         for i, u in enumerate(ps):
             nxt = ps[i + 1] if i + 1 < len(ps) else None
             names = list(read.get(u["id"], {}).get("names", []))
@@ -428,18 +451,23 @@ def stage_walk(papers):
                 rec = {"id": u["id"], "before": cur, "names": names}
                 if cur:
                     st = _state(STATE_IN.format(s=cur), u, nxt)
-                    ch, pr = ask(st, Q_SAME.format(s=cur), {k: v.format(s=cur) for k, v in SAME.items()})
-                    rec["same"] = [ch, pr]
-                    if duels.sure(ch, pr, "no"):
-                        new, l = pick_start(ask, _state(STATE_OUT, u, nxt), [n for n in names if not same_name(n, cur)])
+                    sames = []
+                    for a, b in (("yes", "no"), ("no", "yes")):          # both orders; ends only on two sure 'no'
+                        crit = {"a": SAME[a].format(s=cur), "b": SAME[b].format(s=cur)}
+                        ch, pr = ask(st, Q_SAME.format(s=cur), crit)
+                        sames.append([{"a": a, "b": b}.get(ch), pr])
+                    rec["same"] = sames
+                    if all(x == "no" and max(pr.values() or [0]) >= duels.SURE for x, pr in sames):
+                        cands = [n for n in names if not same_name(n, cur) and species(n)]
+                        new, l = pick_start(ask, _state(STATE_OUT, u, nxt), cands)
                         cur, rec["start"] = new, l
                 else:
-                    new, l = pick_start(ask, _state(STATE_OUT, u, nxt), names)
+                    new, l = pick_start(ask, _state(STATE_OUT, u, nxt), [n for n in names if species(n)])
                     cur, rec["start"] = new, l
                 rec["after"] = cur
                 log.append(rec)
             span[u["id"]] = cur
-        f.write_text(json.dumps({"span": span, "log": log}, indent=1, ensure_ascii=False), encoding="utf-8")
+        f.write_text(json.dumps({"span": span, "log": log, "rank": rank}, indent=1, ensure_ascii=False), encoding="utf-8")
         accounts = [x["after"] for x in log if x["after"] != x["before"] and x["after"]]
         print(f"  [walk] {p:20s} {len(log)} questions asked, {len(accounts)} accounts opened: "
               f"{', '.join(accounts)[:300]} ({time.time() - t0:.0f}s)", flush=True)
@@ -666,11 +694,11 @@ def stage_assemble(papers):
 
 
 def setup():
-    """v2 reuses v1's abbreviations, reading and species tracking (unchanged code paths)."""
+    """v3 reuses v2's abbreviations, reading and name splits (unchanged code paths)."""
     import shutil
     for d in REUSED:
-        if not (OUT / d).exists() and (PROSE_V1 / d).exists():
-            shutil.copytree(PROSE_V1 / d, OUT / d)
+        if not (OUT / d).exists() and (PREV_OUT / d).exists():
+            shutil.copytree(PREV_OUT / d, OUT / d)
 
 
 def stage_score(papers):
