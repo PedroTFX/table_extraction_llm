@@ -1,0 +1,315 @@
+  [semantic] left unmatched: 'Abdominal sternites 1–4' vs 'apical portion of mesosternal process morphology' (llm said different traits)
+  [semantic] left unmatched: 'Abdominal sternites 1–4' vs 'terior angles of pronotum' (llm said different traits)
+  [semantic] left unmatched: 'Abdominal sternites 1–4' vs 'Mesosternum pubescent. Morphology' (llm said different traits)
+  [semantic] left unmatched: 'Abdominal sternites 1–4 other areas' vs 'terior angles of pronotum' (llm said different traits)
+  [semantic] left unmatched: 'Abdominal sternites 1–4 other areas' vs 'apical portion of mesosternal process morphology' (llm said different traits)
+  [semantic] left unmatched: 'Abdominal sternites 1–4 other areas' vs 'Mesosternum pubescent. Morphology' (llm said different traits)
+  [semantic] left unmatched: 'Antenna' vs 'terior angles of pronotum' (llm said different traits)
+  [semantic] left unmatched: 'Antenna' vs 'Host plants' (llm said different traits)
+  [semantic] left unmatched: 'Antenna' vs 'host plants' (llm said different traits)
+  [semantic] left unmatched: 'Body' vs 'body color' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Xu2024/Xu2024.xlsx  (721 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/prose_v1/combined/Xu2024/Xu2024.csv  (803 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 11 pair(s))
+  'L. atrilateralis' -> 'Lilioceris atrilateralis'
+  'L. consentanea' -> 'Lilioceris consentanea'
+  'L. dentifemoralis' -> 'Lilioceris dentifemoralis'
+  'L. discrepens' -> 'Lilioceris discrepens'
+  'L. jianfenglingensis' -> 'Lilioceris jianfenglingensis'
+  'L. latissima' -> 'Lilioceris latissima'
+  'L. lianzhouensis' -> 'Lilioceris lianzhouensis'
+  'L. rondoni' -> 'Lilioceris rondoni'
+  'L. rufometallica' -> 'Lilioceris rufometallica'
+  'L. semipunctata' -> 'Lilioceris semipunctata'
+  'L. yuae' -> 'Lilioceris yuae'
+
+TAXON NAMES LEFT UNMAPPED (12)
+  'Crioceris consentanea': no ground-truth name denotes this organism
+  'Crioceris discrepens': no ground-truth name denotes this organism
+  'Crioceris latissimus': no ground-truth name denotes this organism
+  'Crioceris rufometallica': no ground-truth name denotes this organism
+  'L. cyanicollis': no ground-truth name denotes this organism
+  'L. discre pens': no ground-truth name denotes this organism
+  'L. yuanae': no ground-truth name denotes this organism
+  'Lilioceris': no ground-truth name denotes this organism
+  'Lilioceris rufimembris': no ground-truth name denotes this organism
+  'Lilioceris spp.': no ground-truth name denotes this organism
+  'This species': no ground-truth name denotes this organism
+  'two specimens with a glabrous metasternum': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 33 pair(s))
+  'Abdominal sternite lateral transverse impressions' -> 'Abdominal sternite morphology'
+  'Antennomeres' -> 'Antennomeres morphology'
+  'Anterior angles' -> 'terior angles of pronotum'
+  'Anterior angles of Pronotum' -> 'Anterior angles of pronotum'
+  'Disc' -> 'pronotal disc morphology'
+  'Elytra' -> 'Elytra morphology'
+  'Female reproductive organs' -> 'Female reproductive organs morphology'
+  'Femora of mid- and hind legs' -> 'Femora of mid- and hind legs morphology'
+  'Habitat characteristic' -> 'habitat'
+  'Head' -> 'Head morphology'
+  'Host plant and habitat' -> 'host plant'
+  'Lateral metasternum' -> 'Lateral metasternum morphology'
+  'Leg' -> 'Leg morphology'
+  'Lilioceris spiculum gastrale' -> 'elytral punctures morphology'
+  'Male genitalia' -> 'Male genitalia morphology'
+  'Mesosternum' -> 'Mesosternum pubescent. Morphology'
+  'Metasternum' -> 'Metasternum morphology'
+  'Metepisternum' -> 'apical portion of mesosternal process morphology'
+  'Pronotum' -> 'pronotum morphology'
+  'Pronotum anterior angles' -> 'Anterior angles of pronotum'
+  'Scutellum' -> 'scutellum morphology'
+  'altitude' -> 'Altitude'
+  'antennae' -> 'antennae morphology'
+  'anterior angles of the pronotum' -> 'Anterior angles of pronotum'
+  'body color' -> 'Body color'
+  'body length' -> 'Body length'
+  'body size' -> 'size'
+  'body width' -> 'Body width'
+  'distribution' -> 'Distribution'
+  'femora' -> 'Femora of legs morphology'
+  'habitat' -> 'Habitat'
+  'host plant' -> 'Host plant'
+  'pubescence on the metasternum' -> 'Mesosternum pubescent. morphology'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 170
+  missed (FN)         : 551
+  spurious, in scope  : 227   <- GT covers this trait: real errors
+  spurious, out of scope: 406   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.212 / 0.236 / 0.223   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.428 / 0.236 / 0.304   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.236   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            406
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0    170  0.000  <-- low
+  measurementMethod             0    108  0.000  <-- low
+  measurementUnit             128    128  1.000
+  measurementStatistic        100    170  0.588
+  measurementRemarks            0      0    n/a
+  sex                           0    170  0.000  <-- low
+  lifeStage                     0    170  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0    109  0.000  <-- low
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      9  0.000  <-- low
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0    108  0.000  <-- low
+  associatedOccurrences         0    109  0.000  <-- low
+  associatedReferences          0      0    n/a
+  externalLink                  0    170  0.000  <-- low
+
+WHY THE 551 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing            192
+  species+trait present, value differs       98
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '340'                        ->  '1000 m'                     x6
+     '1050– 1080'                 ->  '1200–1400'                  x4
+     '1000'                       ->  '1954 m'                     x3
+     '1050–1080'                  ->  '1954 m'                     x3
+     '620– 650'                   ->  '620–650'                    x2
+     '360'                        ->  '1954 m'                     x2
+  -> 6 substitutions explain 20 of 551 misses (4%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     ''                                 x96
+     'Head morphology'                  x9
+     'pronotal disc morphology'         x9
+     'Abdominal sternite morphology'    x8
+     'Altitude'                         x8
+     'Body color'                       x8
+  -> 6 missing traits explain 138 of 551 misses (25%) — scattered; no single cause
+
+  full miss detail saved -> Xu2024_misses.csv, Xu2024_misses_summary.json (551 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+                                                   96     0   GT-ONLY
+  antennomere 11                                    0     8   PRED-ONLY
+  other areas of sternites 1–4 and all of sternite 5    0     1   PRED-ONLY
+  abdominal sternites 1–4 other areas               0     1   PRED-ONLY
+  lateral transverse impressions on abdominal sternites 1–4    0     1   PRED-ONLY
+  abdominal sternites 1–4                           0     2   PRED-ONLY
+  antennomeres 1–4                                  0     9   PRED-ONLY
+  other areas of sternites 1–4                      0     2   PRED-ONLY
+  antennomere 2                                     0     9   PRED-ONLY
+  antennomeres 5–10                                 0    12   PRED-ONLY
+  antennomeres 7–10                                 0     2   PRED-ONLY
+  lilioceris posterior areas of tergite 8, sternite 8, and apodemes    0     1   PRED-ONLY
+  posterior areas of tergite 8, sternite 8, and apodemes    0     7   PRED-ONLY
+  female reproductive organs sternites 8 and 9      0     1   PRED-ONLY
+  female reproductive organs tergites 8 and 9       0     1   PRED-ONLY
+  sternites 8 and 9                                 0     7   PRED-ONLY
+  tergites 8 and 9                                  0     7   PRED-ONLY
+  elytra and abdomen                                0     1   PRED-ONLY
+  abdomen and legs                                  0     2   PRED-ONLY
+  sides of the abdomen                              0     2   PRED-ONLY
+  middle of first abdominal sternite                0     1   PRED-ONLY
+  first abdominal sternite                          0     1   PRED-ONLY
+  lateral transverse impressions on abdominal sternite    0     1   PRED-ONLY
+  middle of the abdominal sternites                 0     1   PRED-ONLY
+  middle of these abdominal sternites               0     1   PRED-ONLY
+  abdominal sternite morphology                     9     1   Δ-8 (split?)
+  abdominal sternite                                1     8   Δ+7 (split?)
+  abdominal sternites                               0     5   PRED-ONLY
+  altitude                                        423   168   Δ-255 (split?)
+  altitudes                                         0     1   PRED-ONLY
+  anterior angles of pronotum                       9    14   Δ+5 (split?)
+  posterior angles                                  0     2   PRED-ONLY
+  posterior angles of pronotum                      0     4   PRED-ONLY
+  pronotum posterior angles                         0     1   PRED-ONLY
+  terior angles of pronotum                         1     2   Δ+1 (split?)
+  antenna                                           0     5   PRED-ONLY
+  head, antenna, legs and lateral metasternum       0     2   PRED-ONLY
+  antennae, legs, mesoepisternum, mesoepimeron, and lateral metaepisternum    0     1   PRED-ONLY
+  antennae morphology                               1     7   Δ+6 (split?)
+  antennomeres morphology                           1     1   
+  apex                                              0     2   PRED-ONLY
+  male genitalia apex                               0     1   PRED-ONLY
+  apical portion of mesosternal process morphology    1     7   Δ+6 (split?)
+  location (approximate)                            0    11   PRED-ONLY
+  frontoclypeal area                                0    10   PRED-ONLY
+  other areas                                       0     1   PRED-ONLY
+  other areas of sternite                           0     1   PRED-ONLY
+  scale bars                                        0     1   PRED-ONLY
+  elytra humeral groove and basal impression        0     1   PRED-ONLY
+  humeral groove and basal impression of elytra     0     2   PRED-ONLY
+  male genitalia basal piece of tegmen              0     1   PRED-ONLY
+  humeral groove and basal impression               0     1   PRED-ONLY
+  basal piece of tegmen                             0     4   PRED-ONLY
+  body                                              0    11   PRED-ONLY
+  body color                                       12     1   Δ-11 (split?)
+  body length                                      11    10   Δ-1 (split?)
+  body width                                       10    10   
+  collecting place                                  0     1   PRED-ONLY
+  forest composition                                0     1   PRED-ONLY
+  lateroposterior corner of metepisternum           0     1   PRED-ONLY
+  strong cupreous metallic luster                   0     1   PRED-ONLY
+  difference from the lectotype                     0     1   PRED-ONLY
+  morphological differences                         0     1   PRED-ONLY
+  disc                                              0     1   PRED-ONLY
+  lateral disc                                      0     3   PRED-ONLY
+  middle of disc                                    0     5   PRED-ONLY
+  middle of pronotal disc                           0     1   PRED-ONLY
+  middle of disc of pronotum                        0     4   PRED-ONLY
+  pronotum middle of disc                           0     1   PRED-ONLY
+  pronotal disc morphology                         10     1   Δ-9 (split?)
+  pronotal disc                                     0    13   PRED-ONLY
+  disc of pronotum                                  0     5   PRED-ONLY
+  disc of the pronotum                              0     3   PRED-ONLY
+  pronotum disc                                     0     1   PRED-ONLY
+  lilioceris distal part of ovipositor              0     1   PRED-ONLY
+  distal part of ovipositor                         0     7   PRED-ONLY
+  distinguishing feature                            0     1   PRED-ONLY
+  distribution                                     11    30   Δ+19 (split?)
+  leg femora dorsal surface                         0     1   PRED-ONLY
+  dorsal sclerite of the male genitalia             0     1   PRED-ONLY
+  posterior part of dorsal sclerite                 0     3   PRED-ONLY
+  posterior part of the dorsal sclerite             0     2   PRED-ONLY
+  dorsal sclerite                                   0     3   PRED-ONLY
+  locality in maku village (yunnan, gongshan, dulongjiang)    0     1   PRED-ONLY
+  elytra                                            0     4   PRED-ONLY
+  humeral groove of elytra                          1    10   Δ+9 (split?)
+  elytra humeri                                     0     1   PRED-ONLY
+  humeri of elytra                                  0     2   PRED-ONLY
+  elytra intervals                                  0     1   PRED-ONLY
+  intervals of elytra                               0     2   PRED-ONLY
+  elytra morphology                                19    14   Δ-5 (split?)
+  elytra punctures                                  0     1   PRED-ONLY
+  punctures of elytra                               0     8   PRED-ONLY
+  punctures on elytra                               0     1   PRED-ONLY
+  elytra striae                                     0     1   PRED-ONLY
+  elytral punctures morphology                      1     1   
+  epipleura                                         0     9   PRED-ONLY
+  female reproductive organs morphology             9     1   Δ-8 (split?)
+  femora of mid- and hind legs morphology           3     3   
+  femora of leg                                     0     2   PRED-ONLY
+  leg femora                                        0     4   PRED-ONLY
+  leg femora ventral surface                        0     1   PRED-ONLY
+  femora of legs                                    0     3   PRED-ONLY
+  femora of legs morphology                         5     3   Δ-2 (split?)
+  mesoand meta-femora                               0     1   PRED-ONLY
+  spiculum gastrale                                 0     7   PRED-ONLY
+  genitalia                                         0     1   PRED-ONLY
+  male genitalia internal sac                       0     1   PRED-ONLY
+  male genitalia lateral lobes                      0     1   PRED-ONLY
+  male genitalia                                    0     3   PRED-ONLY
+  male genitalia morphology                        10    25   Δ+15 (split?)
+  male genitalia ostium                             0     1   PRED-ONLY
+  ventral sclerite of male genitalia                0     1   PRED-ONLY
+  male genitalia tegmen                             0     1   PRED-ONLY
+  habitat                                          10    10   
+  head                                              0     1   PRED-ONLY
+  head morphology                                  10     1   Δ-9 (split?)
+  head vertex                                       0     1   PRED-ONLY
+  host plant                                       11    11   
+  host plants                                       3     0   GT-ONLY
+  humeri                                            0     1   PRED-ONLY
+  lateral transverse impressions                    0     2   PRED-ONLY
+  internal sac                                      0     6   PRED-ONLY
+  interval                                          0     1   PRED-ONLY
+  intervals                                         0     3   PRED-ONLY
+  labrum                                            0    10   PRED-ONLY
+  lateral lobes                                     0     4   PRED-ONLY
+  lateral metasternum                               0     5   PRED-ONLY
+  lateral metasternum morphology                    8    18   Δ+10 (split?)
+  leg                                               0     1   PRED-ONLY
+  leg morphology                                   10    10   
+  lilioceris ovipositor                             0     1   PRED-ONLY
+  lilioceris spermatheca                            0     1   PRED-ONLY
+  lives together with                               0     1   PRED-ONLY
+  locality                                          0     1   PRED-ONLY
+  locality in menghai (yunnan, xishuangbanna)       0     1   PRED-ONLY
+  type locality (tianchi)                           0     1   PRED-ONLY
+  location                                          0    31   PRED-ONLY
+  record location                                   0     1   PRED-ONLY
+  median sclerite                                   0     4   PRED-ONLY
+  mesosternum pubescent. morphology                10    11   Δ+1 (split?)
+  metasternum                                       0     1   PRED-ONLY
+  metasternum morphology                            1     1   
+  metepisternum                                     0     4   PRED-ONLY
+  pronotum morphology                              11     9   Δ-2 (split?)
+  punctures morphology                              1     0   GT-ONLY
+  scutellum morphology                              1     8   Δ+7 (split?)
+  reproductive organs                               0     1   PRED-ONLY
+  ostium                                            0     2   PRED-ONLY
+  ovipositor                                        0     7   PRED-ONLY
+  pronotal punctures                                0     1   PRED-ONLY
+  pronotum                                          0     3   PRED-ONLY
+  pronotum sides                                    0     1   PRED-ONLY
+  sides of pronotum                                 0     4   PRED-ONLY
+  punctures                                         0     5   PRED-ONLY
+  strial punctures                                  0     1   PRED-ONLY
+  ventral sclerite                                  0     5   PRED-ONLY
+  sides                                             0     2   PRED-ONLY
+  size                                              1     1   
+  spermatheca                                       0     7   PRED-ONLY
+  ventral surface                                   0     1   PRED-ONLY
+  tegmen                                            0     5   PRED-ONLY
+  vertex                                            0    10   PRED-ONLY
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'punctures morphology'             vs pred 'punctures'                        sim=0.78
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.428  0.236  0.304    170   227   551   id+type+value
+             (406 more spurious row(s) set aside as out-of-scope; strict P would be 0.212)
+  tags        0.000  0.000  0.000      0   397   721   basis+id+type+value+stat+sex+stage
+             (406 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.304 vs previous)
+             note: only 128/170 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
