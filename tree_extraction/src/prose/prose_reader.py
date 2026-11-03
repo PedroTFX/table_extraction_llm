@@ -16,6 +16,9 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                      not printed there is taken as unnamed (gemma fills in the heading's species).
   walk     (nimble)  the paper read in order, holding whose account the text is in. At each
                      heading, and at each passage that names an organism, nimble is asked:
+                     v3: with an account open, asked only at a break: a heading, or a paragraph whose
+                     bold opening holds a name ('**Alucita fako ... sp. nov.**'); a plain paragraph that
+                     names another organism (synonymy line, caption, comparison) stays in the account.
                        Q-SAME   does the account of S go on through this part? Another name of S
                                 (synonym, older combination, citation, name in another language),
                                 a compared species, its host or food, or a figure caption inside the
@@ -332,8 +335,8 @@ SAME = {"yes": "yes: this part still belongs to the account of {s}, even where i
               "or a bold name, often with 'sp. nov.'), or the text turns to several organisms together, a key to "
               "identify species, or the study itself (its methods, results or discussion)"}
 Q_RANK = "What is '{n}'?"
-RANK = {"yes": "the scientific name of one species or subspecies (a genus and an epithet, possibly abbreviated "
-               "as in 'T. acerosus')",
+RANK = {"yes": "the scientific (Latin) name of one species or subspecies, written as a genus and an epithet "
+               "(possibly abbreviated, as in 'T. acerosus')",
         "no": "something else: a genus, family or larger group, a common or vernacular name, a name in another "
               "language, or not an organism"}
 Q_START = "Which organism does the text from this part on describe?"
@@ -365,8 +368,8 @@ def _state(intro, u, nxt=None):
         n = STATE_CHARS[size]
         if u["kind"] == "heading":
             text = f"(heading) {u['text']}" + (f"\n{nxt['text'][:n]}" if nxt else "")
-        else:
-            text = u["text"][:n]
+        else:                            # v3: a bold-name line is shown with what follows, as a heading is
+            text = u["text"][:n] + (f"\n{nxt['text'][:n // 2]}" if nxt and len(u["text"]) < 300 else "")
         under = f", under the heading '{u['heading'][:100]}'," if u["kind"] == "para" and u["heading"] else ""
         return intro + STATE_PART.format(under=under, text=text)
     return at
@@ -445,9 +448,14 @@ def stage_walk(papers):
         for i, u in enumerate(ps):
             nxt = ps[i + 1] if i + 1 < len(ps) else None
             names = list(read.get(u["id"], {}).get("names", []))
-            if u["kind"] == "heading" and nxt:
-                names += [n for n in read.get(nxt["id"], {}).get("names", []) if n not in names]
-            if u["kind"] == "heading" or names:
+            if u["kind"] == "heading" and nxt and not names:        # v3: a heading's own names first
+                names = list(read.get(nxt["id"], {}).get("names", []))
+            bold = re.match(r"\s*\*\*(.+?)\*\*", u["text"]) if u["kind"] == "para" else None
+            brk = u["kind"] == "heading" or bool(bold and any(printed(n, bold.group(1)) for n in names))
+            # v3: with an account open, only a break (a heading, or a bold opening that holds a name) is
+            # asked; a plain paragraph naming another organism (a synonymy line, a caption, a comparison)
+            # stays in the account. With none open, any passage naming an organism is asked.
+            if (cur and brk) or (not cur and (u["kind"] == "heading" or names)):
                 rec = {"id": u["id"], "before": cur, "names": names}
                 if cur:
                     st = _state(STATE_IN.format(s=cur), u, nxt)
