@@ -358,17 +358,92 @@ def office_to_markdown(path, backend="vlm", lang="en", force=False,
     return target
 
 
+_IMAGE_BLOCK = re.compile(r"^!\[[^\]]*\]\([^)]*\)\s*$")
+_FILLED_MARK = "<!-- image tables: filled from the PDF render -->"
+_TABLE_RE = re.compile(r"<table.*?</table>", re.S)
+
+
+def _md_blocks(text):
+    return [b for b in re.split(r"\n\s*\n", text) if b.strip()]
+
+
+def _words(s):
+    return " ".join(re.findall(r"[^\W_]+", re.sub(r"<[^>]+>", " ", s or "").lower()))
+
+
+def fill_image_tables(path, md_path, backend="vlm", lang="en", force=False, **_ignored):
+    """Second pass for Word files: MinerU's native docx reading leaves a table pasted into
+    the document as a picture as an '![Image block](...)' line (Figueroa2021_S1 Table S4,
+    the species x traits table). Render the docx to PDF, let MinerU's advanced tier read
+    that PDF (it reads tables inside images), and replace an image block with the PDF's
+    table when
+      - the caption next to the image (the block before it, else the one after) is a
+        table's caption ('Table S4: ...'; a figure's chart would come back as invented
+        cells), it is printed in the PDF's markdown, and a <table> follows it there
+        within two blocks, and
+      - that table is new: its text is not already in one of the docx markdown's tables.
+    Images that stay figures in the PDF too are left as they are. Writes the docx
+    markdown back with a marker line, so the pass runs once per file (unless force)."""
+    md_path = Path(md_path)
+    text = md_path.read_text(encoding="utf-8", errors="replace")
+    if (_FILLED_MARK in text and not force) or not any(_IMAGE_BLOCK.match(b.strip()) for b in _md_blocks(text)):
+        return md_path
+    with tempfile.TemporaryDirectory() as tmp:
+        pdf = _office_to_pdf(Path(path).resolve(), Path(tmp))
+        if pdf is None:
+            print(f"  [image tables] {Path(path).name}: no PDF render (Word / LibreOffice missing); left as is")
+            return md_path
+        print(f"  [image tables] {Path(path).name}: reading the PDF render for tables kept as images")
+        pdf_md = _mineru_markdown_for(pdf, backend=backend, lang=lang, force=force)
+    pdf_blocks = _md_blocks(pdf_md)
+    known = {_words(t) for t in _TABLE_RE.findall(text)}
+    blocks = _md_blocks(text)
+    used, n = set(), 0
+    for i, b in enumerate(blocks):
+        if not _IMAGE_BLOCK.match(b.strip()):
+            continue
+        for j in (i - 1, i + 1):
+            if not (0 <= j < len(blocks)) or _IMAGE_BLOCK.match(blocks[j].strip()) or "<table" in blocks[j]:
+                continue
+            cap = _words(blocks[j])[:80]
+            if len(cap) < 12 or not cap.startswith("table"):
+                continue                  # only a table's caption: a chart read as a table
+                                          # (Figueroa2021_S1 Figure S1 histogram) is not data
+            k = next((k for k, pb in enumerate(pdf_blocks) if _words(pb).startswith(cap)), None)
+            if k is None:
+                continue
+            t = next((x for x in pdf_blocks[k + 1:k + 3] if "<table" in x), None)
+            tw = _words(t) if t else ""
+            if t and k not in used and tw and not any(tw in kt or kt in tw for kt in known if kt):
+                blocks[i] = _TABLE_RE.search(t).group(0)
+                used.add(k)
+                known.add(tw)
+                n += 1
+                break
+    text = "\n\n".join(blocks) + f"\n\n{_FILLED_MARK}\n"
+    md_path.write_text(text, encoding="utf-8")
+    print(f"  [image tables] {Path(path).name}: {n} image block(s) replaced by the PDF's tables")
+    return md_path
+
+
 def ensure_markdown(path, **kw):
     """pdf/pptx/image/doc/docx/xlsx/xls -> .md via MinerU 4.x; csv/md/html ->
     unchanged. Set DOCX_VIA_PDF=True to route Word via render-to-PDF, or
-    XLSX_VIA_MINERU=False to keep spreadsheets as the openpyxl HTML embed."""
+    XLSX_VIA_MINERU=False to keep spreadsheets as the openpyxl HTML embed.
+    Word files read natively get a second pass (fill_image_tables): tables kept as
+    pictures are read from a PDF render and put where the picture was."""
     p = Path(path)
     ext = p.suffix.lower()
     if ext in WORD_EXTS:
         if DOCX_VIA_PDF:
             return office_to_markdown(p, **kw)
         try:
-            return doc_to_markdown(p, **kw)     # MinerU 4.x reads Word natively
+            md = doc_to_markdown(p, **kw)     # MinerU 4.x reads Word natively
+            try:
+                return fill_image_tables(p, md, **kw)
+            except Exception as e:            # the second pass never loses the first
+                print(f"  [image tables] {p.name}: second pass failed ({type(e).__name__}: {e}); kept the docx reading")
+                return md
         except Exception as e:
             # MinerU can choke on some .docx (e.g. Google-Docs heading anchors).
             # Fall back to rendering the doc to PDF and running MinerU's advanced
