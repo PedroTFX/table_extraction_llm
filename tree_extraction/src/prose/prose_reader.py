@@ -28,15 +28,23 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                                 characteristic of the organism, or something about the
                                 specimens' handling, people, dates, names or literature
                                 (only a sure 'characteristic' is kept)
+  names    (gemma)   v2: each name part split into the trait and how it was measured ('length of
+                     head along the midline' -> 'length of head' + method 'along the midline'),
+                     kept when both are printed in the name
+           (nimble)  v2, in facts: Q-LABEL per bold label a paragraph starts with ('**Elytra**'): a
+                     part of the body, or a section / sex / statement
   assemble (code)    one row per kept fact: species = the owner, type = has what (a defined
-                     abbreviation written out with the paper's meaning), value as
-                     printed (a trailing unit moved to measurementUnit), sex as read
+                     abbreviation written out with the paper's meaning; v2: the method split off,
+                     and a body-part label put in front: 'Humeri' under **Elytra** -> 'Elytra
+                     humeri'), value as printed (a trailing unit moved to measurementUnit), sex as
+                     read; v2: plus one row per body-part field, type = the label, value = its
+                     whole text (the level the GT uses: 'Elytra morphology' = the paragraph)
   score              the production scorer on prose rows only and on v18's rows + prose rows
   page     (gemma)   the scorer's matching (species and trait-name remaps) saved for the page
 
 The models never run together: gemma stages first, then nimble, then the scorer.
 
-    python prose_reader.py <stage> dev|<paper ...>      stages: abbrev read walk facts assemble score page all
+    python prose_reader.py <stage> dev|<paper ...>      stages: abbrev read names walk facts assemble score page all
 """
 import collections
 import contextlib
@@ -54,7 +62,9 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-OUT = _paths.OUTPUT / "prose_v1"
+PROSE_V1 = _paths.OUTPUT / "prose_v1"
+OUT = _paths.OUTPUT / "prose_v2"      # v2: field labels as context, whole-field rows, trait / method split
+REUSED = ("abbrev", "read", "walk")   # v2 changes nothing before the facts: these come from v1
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -121,19 +131,36 @@ def passages(paper):
             para.append(s)
     flush()
     out, zone, heading = [], "keep", ""
-    for kind, t in blocks:
+    for b, (kind, t) in enumerate(blocks):
         if kind == "heading":
             hh = re.sub(r"[*_\d.\s]+", " ", t).strip()
             zone = "refs" if REF_H.match(hh) else "back" if BACK_H.match(hh) else "keep"
             if zone == "keep":
                 heading = t
-                out.append({"id": f"P{len(out)}", "kind": "heading", "text": t, "heading": t})
+                out.append({"id": f"P{len(out)}", "kind": "heading", "text": t, "heading": t, "block": b, "label": ""})
             continue
         if zone != "keep" or _ref_like(t):
             continue
+        lab, rest = label_of(t)
         for piece in _split_long(t):
-            out.append({"id": f"P{len(out)}", "kind": "para", "text": piece, "heading": heading})
+            out.append({"id": f"P{len(out)}", "kind": "para", "text": piece, "heading": heading, "block": b,
+                        "label": lab, "field": rest})
     return out
+
+
+FIGS = re.compile(r"^\s*[(\[]\s*(?:figs?\.?|figures?|pl\.?|plates?)\b[^)\]]*[)\]]\s*[.:]?\s*", re.I)
+
+
+def label_of(t):
+    """(label, text after it) of a paragraph that starts with a bold label ('**Elytra** (Figs 11, 30B).
+    Humeri protruding, ...' -> ('Elytra', 'Humeri protruding, ...')); ('', t) when it has none. The label
+    ends at its first '.' or ':' ('**Measurements. Male:**' -> 'Measurements'). Geometry only."""
+    m = re.match(r"\s*\*\*(.+?)\*\*\s*", t)
+    if not m:
+        return "", t
+    lab = re.split(r"[.:]", m.group(1))[0].strip(" *")
+    rest = FIGS.sub("", t[m.end():]).strip()
+    return lab[:60], rest
 
 
 # === gemma =====================================================================================
@@ -298,6 +325,11 @@ NONE = ("none: no single organism's account starts here; the text is about the s
         "or a key, or it names {n} only in passing")
 Q_OWNER = "Whose characteristic does the text give as '{what}: {value}'?"
 OWNER = "{n}'s: the text says this about {n}"
+Q_LABEL = "What does the label '{label}' name?"
+LABEL = {"part": "a part of the organism's body: the structures described in the paragraph belong to it "
+                 "(for example 'Elytra', 'Head', 'Male genitalia', 'Pronotum', 'Leg')",
+         "other": "something else: a section of the description (diagnosis, description, measurements, material "
+                  "examined, type material, distribution, habitat, remarks, etymology), a sex, or a statement"}
 Q_TRAIT = "What does '{what}' tell about an organism?"
 TRAIT = {"trait": "a characteristic of the organism: its body, size, measurements, colour, structures or genitalia, "
                   "its life, behaviour, habitat, food or hosts, its distribution, or the places or altitudes where it lives or was found",
@@ -420,31 +452,26 @@ def stage_facts(papers):
         span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
         by_id = {u["id"]: u for u in rd["passages"]}
         facts, owners = [], []
-        for pid, r in rd["read"].items():
+        for pid, fa in read_facts(rd):
             s = span.get(pid)
-            # gemma often writes the account's species as who although the passage does not name it
-            # (Ustjuzhanin2024: 346 of 624 facts): such a fact is unnamed, so it is the account's
-            unnamed = [dict({k: v for k, v in x.items() if k != "why"}, who="", who_read=x["who"])
-                       for x in r["dropped"] if x["why"] == "who not printed in the passage"]
-            for fa in r["facts"] + unnamed:
-                x = dict(fa, passage=pid, account=s)
-                if not fa["who"] or (s and same_name(fa["who"], s)):
-                    x["owner"] = s
-                    x["why"] = "no account" if not s else ""
-                elif not s:
-                    x["owner"], x["why"] = None, "names another organism, outside any account"
-                else:
-                    u = by_id[pid]
-                    st = (f"This part of a scientific paper is in the account of {s}:\n\"\"\"{u['text'][:1200]}\"\"\"")
-                    picks = []
-                    for a, b in (("a", "b"), ("b", "a")):
-                        crit = {a: OWNER.format(n=s), b: OWNER.format(n=fa["who"])}
-                        ch, pr = ask(st, Q_OWNER.format(what=fa["what"], value=fa["value"][:150]), crit)
-                        picks.append(s if duels.sure(ch, pr, a) else fa["who"] if duels.sure(ch, pr, b) else None)
-                        owners.append({"passage": pid, "fact": fa, "choice": ch, "probs": pr})
-                    x["owner"] = picks[0] if picks[0] and picks[0] == picks[1] else None
-                    x["why"] = "" if x["owner"] else "owner not sure"
-                facts.append(x)
+            x = dict(fa, passage=pid, account=s)
+            if not fa["who"] or (s and same_name(fa["who"], s)):
+                x["owner"] = s
+                x["why"] = "no account" if not s else ""
+            elif not s:
+                x["owner"], x["why"] = None, "names another organism, outside any account"
+            else:
+                u = by_id[pid]
+                st = (f"This part of a scientific paper is in the account of {s}:\n\"\"\"{u['text'][:1200]}\"\"\"")
+                picks = []
+                for a, b in (("a", "b"), ("b", "a")):
+                    crit = {a: OWNER.format(n=s), b: OWNER.format(n=fa["who"])}
+                    ch, pr = ask(st, Q_OWNER.format(what=fa["what"], value=fa["value"][:150]), crit)
+                    picks.append(s if duels.sure(ch, pr, a) else fa["who"] if duels.sure(ch, pr, b) else None)
+                    owners.append({"passage": pid, "fact": fa, "choice": ch, "probs": pr})
+                x["owner"] = picks[0] if picks[0] and picks[0] == picks[1] else None
+                x["why"] = "" if x["owner"] else "owner not sure"
+            facts.append(x)
         whats = collections.defaultdict(list)
         for x in facts:
             if x["owner"]:
@@ -458,12 +485,77 @@ def stage_facts(papers):
         for x in facts:
             if x["owner"] and not trait.get(x["what"].lower(), {}).get("keep"):
                 x["why"] = "not a characteristic (Q-TRAIT)"
-        f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait}, indent=1, ensure_ascii=False),
-                     encoding="utf-8")
+        labels = {}                                        # v2: Q-LABEL once per label of the paper
+        for u in passages(p):
+            lab = u.get("label")
+            if u["kind"] != "para" or not lab or lab in labels:
+                continue
+            st = (f"In a paper that describes species, a paragraph starts with the label '{lab}' and reads:\n"
+                  f"\"\"\"{u['text'][:500]}\"\"\"")
+            ch, pr = ask(st, Q_LABEL.format(label=lab), dict(LABEL))
+            labels[lab] = {"choice": ch, "probs": pr, "part": duels.sure(ch, pr, "part") == "part"}
+        f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait, "labels": labels},
+                                indent=1, ensure_ascii=False), encoding="utf-8")
         kept = sum(1 for x in facts if x["owner"] and not x["why"])
         print(f"  [facts] {p:20s} {len(facts)} facts, {len(owners) // 2} owner questions, {len(trait)} names asked: "
-              f"{kept} kept ({time.time() - t0:.0f}s)", flush=True)
+              f"{kept} kept; labels naming a body part: {[k for k, v in labels.items() if v['part']]} "
+              f"({time.time() - t0:.0f}s)", flush=True)
     ask.unload()
+
+
+def read_facts(rd):
+    """(passage id, fact) for every fact the read kept. gemma often writes the account's species as who
+    although the passage does not name it (Ustjuzhanin2024: 346 of 624 facts): such a fact is unnamed,
+    so it is the account's."""
+    for pid, r in rd["read"].items():
+        unnamed = [dict({k: v for k, v in x.items() if k != "why"}, who="", who_read=x["who"])
+                   for x in r["dropped"] if x["why"] == "who not printed in the passage"]
+        for fa in r["facts"] + unnamed:
+            yield pid, fa
+
+
+NAMES = """Each line below is the name a scientific paper gives to a characteristic of an organism. Some names also say HOW, WHERE or UNDER WHICH CONDITION it was measured, for example
+  "length of head along the midline"        -> trait "length of head", method "along the midline"
+  "width of pronotum at the widest point"   -> trait "width of pronotum", method "at the widest point"
+  "wingspan of the holotype"                -> trait "wingspan", method "of the holotype"
+For each name give trait and method, both COPIED from the name, no words added. When the name says nothing about how it was measured, method is "" and trait is the whole name.
+
+Names:
+{names}
+
+Reply with JSON only."""
+NAMES_SCHEMA = {"type": "object", "required": ["names"], "properties": {"names": {"type": "array", "items": {
+    "type": "object", "required": ["name", "trait", "method"],
+    "properties": {"name": {"type": "string"}, "trait": {"type": "string"}, "method": {"type": "string"}}}}}}
+
+
+def stage_names(papers):
+    """v2 (gemma): each name part ('length of head along the midline') split into the trait and how it was
+    measured; kept only when both are printed in the name and the trait is not the whole name."""
+    d = OUT / "names"
+    d.mkdir(parents=True, exist_ok=True)
+    for p in papers:
+        f = d / f"{p}.json"
+        if f.exists():
+            continue
+        t0 = time.time()
+        rd = json.loads((OUT / "read" / f"{p}.json").read_text(encoding="utf-8"))
+        abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
+        parts = list(dict.fromkeys(x.strip() for _pid, fa in read_facts(rd)
+                                   for x in spelled(fa["what"], abbr).split("/") if x.strip()))
+        split, calls = {}, 0
+        for i in range(0, len(parts), 40):
+            calls += 1
+            got = gemma(NAMES.format(names="\n".join(parts[i:i + 40])), NAMES_SCHEMA).get("names", [])
+            for e in got:
+                n, t, m = (" ".join(str(e.get(k) or "").split()) for k in ("name", "trait", "method"))
+                if n in parts and t and m and printed(t, n) and printed(m, n) and t.lower() != n.lower():
+                    split[n] = {"trait": t, "method": m}
+        f.write_text(json.dumps({"split": split, "asked": len(parts), "calls": calls}, indent=1, ensure_ascii=False),
+                     encoding="utf-8")
+        print(f"  [names] {p:20s} {len(split)} of {len(parts)} names carry a method: "
+              f"{list(split.items())[:4]} ({time.time() - t0:.0f}s)", flush=True)
+    v1.unload(v1.GEMMA)
 
 
 # === assemble, score, page ==========================================================================
@@ -499,23 +591,71 @@ def spelled(what, abbr):
     return what
 
 
+_words = lambda s: set(re.findall(r"[a-z0-9]+", str(s or "").lower()))
+
+
+def named(what, abbr, split, label):
+    """(trait, method): abbreviations written out, each part's method split off ('length of head along
+    the midline' -> 'length of head' + 'along the midline'), and the body-part label the passage starts
+    with put in front when the name does not already say it ('Humeri' under **Elytra** -> 'Elytra humeri')."""
+    traits, methods = [], []
+    for part in (x.strip() for x in spelled(what, abbr).split("/")):
+        sp = split.get(part)
+        traits.append(sp["trait"] if sp else part)
+        if sp:
+            methods.append(sp["method"])
+    trait = "/".join(traits)
+    if label and not _words(label) <= _words(trait):
+        trait = f"{label} {trait[:1].lower() + trait[1:]}"
+    return trait, "; ".join(methods)
+
+
 def stage_assemble(papers):
     for p in papers:
-        facts = json.loads((OUT / "facts" / f"{p}.json").read_text(encoding="utf-8"))["facts"]
+        fx = json.loads((OUT / "facts" / f"{p}.json").read_text(encoding="utf-8"))
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
+        split = json.loads((OUT / "names" / f"{p}.json").read_text(encoding="utf-8"))["split"]
+        span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
+        ps = passages(p)
+        by_id = {u["id"]: u for u in ps}
+        part = {k for k, v in fx.get("labels", {}).items() if v["part"]}
         rows, seen = [], set()
-        for x in facts:
+
+        def add(r):
+            k = tuple(r.values())
+            if k not in seen:
+                seen.add(k)
+                rows.append(r)
+
+        n_field = 0
+        for x in fx["facts"]:
             if x["owner"] and not x["why"]:
-                r = _row(dict(x, what=spelled(x["what"], abbr)))
-                k = tuple(r.values())
-                if k not in seen:
-                    seen.add(k)
-                    rows.append(r)
+                lab = by_id[x["passage"]].get("label")
+                trait, method = named(x["what"], abbr, split, lab if lab in part else "")
+                add(dict(_row(dict(x, what=trait)), measurementMethod=method))
+        done = set()                                       # v2: one row per body-part field, the whole text
+        for u in ps:
+            b = u["block"]
+            if u["kind"] != "para" or u.get("label") not in part or b in done or not span.get(u["id"]):
+                continue
+            done.add(b)
+            if u.get("field"):
+                add({"verbatimIdentification": span[u["id"]], "measurementType": u["label"],
+                     "measurementValue": u["field"], "measurementUnit": "", "measurementStatistic": "", "sex": ""})
+                n_field += 1
         _write(OUT / "prose" / p / f"{p}.csv", rows)
         old = V18 / p / f"{p}.csv"
         prev = list(csv.DictReader(open(old, encoding="utf-8", newline=""))) if old.exists() else []
         _write(OUT / "combined" / p / f"{p}.csv", prev + rows)
-        print(f"  [assemble] {p:20s} prose rows {len(rows)}, v18 rows {len(prev)}", flush=True)
+        print(f"  [assemble] {p:20s} prose rows {len(rows)} ({n_field} whole fields), v18 rows {len(prev)}", flush=True)
+
+
+def setup():
+    """v2 reuses v1's abbreviations, reading and species tracking (unchanged code paths)."""
+    import shutil
+    for d in REUSED:
+        if not (OUT / d).exists() and (PROSE_V1 / d).exists():
+            shutil.copytree(PROSE_V1 / d, OUT / d)
 
 
 def stage_score(papers):
@@ -557,8 +697,9 @@ def stage_page(papers):
               f"+ {len(outs)} out of scope", flush=True)
 
 
-STAGES = {"abbrev": stage_abbrev, "read": stage_read, "walk": stage_walk, "facts": stage_facts,
-          "assemble": stage_assemble, "score": stage_score, "page": stage_page}
+STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "walk": stage_walk,
+          "facts": stage_facts, "assemble": stage_assemble, "score": stage_score, "page": stage_page}
+ALL = ["abbrev", "read", "names", "walk", "facts", "assemble", "score"]
 
 
 def papers_of(args):
@@ -571,6 +712,7 @@ def papers_of(args):
 if __name__ == "__main__":
     stage, *rest = sys.argv[1:]
     papers = papers_of(rest)
-    for name in (list(STAGES) if stage == "all" else [stage]):
+    setup()
+    for name in (ALL if stage == "all" else [stage]):
         print(f"=== {name} on {len(papers)} papers", flush=True)
         STAGES[name](papers)
