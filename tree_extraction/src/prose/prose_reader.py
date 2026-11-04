@@ -41,6 +41,9 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                      of them in none of its facts, is read again in two halves (cut at the '; ' / '. '
                      nearest its middle) and the new facts added. No section name or separator is
                      written into code: the model says what is a list and where its items are.
+  heads    (gemma)   v4: a heading the reading left without names is asked on its own (Xu2024's
+                     'Lilioceris consentanea (Lacordaire, 1845)' had none, so its account opened
+                     late and 18 altitude records were dropped); the walk then runs on these names
   facts    (nimble)  Q-OWNER  a fact whose who names another organism than the account's:
                                 whose is it (both orders; not sure drops it)
                      Q-TRAIT  per 'has what' of the paper, with three of its values: a
@@ -65,7 +68,7 @@ Code cuts the text into passages and keeps the paper's order; the models read an
 
 The models never run together: gemma stages first, then nimble, then the scorer.
 
-    python prose_reader.py <stage> dev|<paper ...>      stages: abbrev read names walk shape items facts assemble score page all
+    python prose_reader.py <stage> dev|<paper ...>      stages: abbrev read names shape items heads walk facts assemble score page all
 """
 import collections
 import contextlib
@@ -85,7 +88,7 @@ import duels                         # noqa: E402
 
 PREV_OUT = _paths.OUTPUT / "prose_v3"
 OUT = _paths.OUTPUT / "prose_v4"      # v4: captions, lists read item by item, re-reads, lead-word context
-REUSED = ("abbrev", "read", "names", "walk")   # v4 adds stages after the walk: these come from v3
+REUSED = ("abbrev", "read", "names")   # v4 reruns the walk on the heading names it adds
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -453,7 +456,7 @@ def stage_walk(papers):
         if f.exists():
             continue
         t0 = time.time()
-        rd = json.loads((OUT / "read" / f"{p}.json").read_text(encoding="utf-8"))
+        rd = load_read(p)                                  # v4: with the heading names added (heads)
         ps, read = rd["passages"], rd["read"]
         cur, span, log, rank = None, {}, [], {}
 
@@ -744,6 +747,40 @@ def stage_items(papers):
     v1.unload(v1.GEMMA)
 
 
+HEADS = """Below is a heading from a scientific paper about organisms. List the scientific names of organisms it names, copied as printed, without author and year (for example "Lilioceris consentanea"). An empty list when it names none.
+
+Heading: {text}
+
+Reply with JSON only."""
+HEADS_SCHEMA = {"type": "object", "required": ["names"], "properties": {"names": {"type": "array", "items": {"type": "string"}}}}
+
+
+def stage_heads(papers):
+    """v4 (gemma): a heading the reading left without names asked on its own (Xu2024 'Lilioceris
+    consentanea (Lacordaire, 1845)' came back with none, so its account opened late and its records
+    were dropped); each name checked printed. Updates OUT/read2."""
+    d = OUT / "read2"
+    d.mkdir(parents=True, exist_ok=True)
+    for p in papers:
+        rd = load_read(p)
+        if rd.get("heads_done"):
+            continue
+        t0, added = time.time(), {}
+        for u in rd["passages"]:
+            if u["kind"] != "heading" or rd["read"].get(u["id"], {}).get("names"):
+                continue
+            names = [" ".join(str(n).split()) for n in gemma(HEADS.format(text=u["text"]), HEADS_SCHEMA).get("names", [])]
+            names = [n for n in dict.fromkeys(names) if n and printed(n, u["text"])]
+            if names:
+                rd["read"].setdefault(u["id"], {"names": [], "facts": [], "dropped": []})["names"] = names
+                added[u["id"]] = names
+        rd["heads_done"], rd["heads"] = True, added
+        (d / f"{p}.json").write_text(json.dumps(rd, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"  [heads] {p:20s} {len(added)} headings given names: {list(added.values())[:8]} "
+              f"({time.time() - t0:.0f}s)", flush=True)
+    v1.unload(v1.GEMMA)
+
+
 def lead_of(u):
     """The first word of a paragraph without a bold label ('Head slightly wider ...' -> 'Head'), offered to
     Q-LABEL as its context; geometry only."""
@@ -872,12 +909,18 @@ def stage_assemble(papers):
                 rows.append(r)
 
         n_field = 0
+        sf = OUT / "shape" / f"{p}.json"
+        shape = json.loads(sf.read_text(encoding="utf-8"))["shape"] if sf.exists() else {}
         for x in fx["facts"]:
             if x["owner"] and not x["why"]:
                 u = by_id[x["passage"]]
                 lab = u.get("label") or lead_of(u)          # v4: the lead word when there is no bold label
                 trait, method = named(x["what"], abbr, split, lab if lab in part else "")
-                add(dict(_row(dict(x, what=trait)), measurementMethod=method))
+                r = dict(_row(dict(x, what=trait)), measurementMethod=method)
+                if shape.get(x["passage"]) == "list":       # v4: each item is its own record: 17 records
+                    rows.append(r)                          # at '920 m' are 17 rows, not one
+                else:
+                    add(r)
         done = set()                                       # v2: one row per body-part field, the whole text
         for u in ps:
             b = u["block"]
@@ -943,9 +986,10 @@ def stage_page(papers):
 
 
 STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "walk": stage_walk,
-          "shape": stage_shape, "items": stage_items, "facts": stage_facts, "assemble": stage_assemble,
+          "shape": stage_shape, "items": stage_items, "heads": stage_heads, "facts": stage_facts,
+          "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
-ALL = ["abbrev", "read", "names", "walk", "shape", "items", "facts", "assemble"]
+ALL = ["abbrev", "read", "names", "shape", "items", "heads", "walk", "facts", "assemble"]
 
 
 def papers_of(args):
