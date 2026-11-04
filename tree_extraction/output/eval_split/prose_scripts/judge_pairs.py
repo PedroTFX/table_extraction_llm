@@ -24,7 +24,7 @@ out = {}
 for p in ["Xia2022", "Xu2024", "Ustjuzhanin2024"]:
     gt = gt_rows(p)
     us = [{"sp": r["verbatimIdentification"], "t": r["measurementType"], "v": r["measurementValue"]}
-          for r in csv.DictReader(open(f"{N}/ours3/{p}.csv", encoding="utf-8"))]
+          for r in csv.DictReader(open(f"{N}/{__import__('os').environ.get('OURS', 'ours3')}/{p}.csv", encoding="utf-8"))]
     idx = collections.defaultdict(list)
     for r in us: idx[(key(r["sp"]), nv(r["v"]))].append(r["t"])
     pairs = collections.Counter()

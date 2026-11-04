@@ -15,7 +15,7 @@ REJECT = {
    ("Anterior angles of pronotum","posterior angles of Pronotum"),("Femora of legs morphology","Female reproductive organs"),
    ("scutellum morphology","Mesosternum pubescent metepisternum"),
    ("scutellum morphology","Abdominal sternite other areas of sternites 1–4 and all of s"),
-   ("terior angles of pronotum","Elytra humeri")},
+   ("terior angles of pronotum","Elytra humeri"),("Body color","antenna")},
  "Ustjuzhanin2024": {("antennae","fringe on the wings"),("antennae","hind legs"),("fringe on the wings","antennae"),
    ("fringe on the wings","hind legs"),("head, thorax, and tegulae","hind legs"),("head, thorax, and tegulae","wings"),
    ("hind legs","antennae"),("hind legs","fringe on the wings"),("hind legs","tegulae"),("hind legs","thorax"),("hind legs","head")}}
@@ -30,7 +30,7 @@ res = {}
 for p in ["Xia2022", "Xu2024", "Ustjuzhanin2024"]:
     gt = gt_rows(p)
     us = [{"sp": r["verbatimIdentification"], "t": r["measurementType"], "v": r["measurementValue"]}
-          for r in csv.DictReader(open(f"{N}/ours3/{p}.csv", encoding="utf-8"))]
+          for r in csv.DictReader(open(f"{N}/{__import__('os').environ.get('OURS', 'ours3')}/{p}.csv", encoding="utf-8"))]
     used, exact, near, missed = set(), [], [], []
     pool = collections.defaultdict(list)
     for i, r in enumerate(us): pool[key(r["sp"])].append(i)
@@ -54,4 +54,4 @@ for p in ["Xia2022", "Xu2024", "Ustjuzhanin2024"]:
     extra = [us[i] for i in range(len(us)) if i not in used]
     res[p] = {"exact": exact, "near": near, "missed": missed, "extra": extra}
     print(f"== {p}: GT {len(gt)}, ours {len(us)}: equal {len(exact)}, near {len(near)}, GT unmatched {len(missed)}, ours unmatched {len(extra)}")
-json.dump({p: {k: v for k, v in d.items()} for p, d in res.items()}, open(f"{N}/judge_res.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+json.dump({p: {k: v for k, v in d.items()} for p, d in res.items()}, open(f"{N}/judge_res_{__import__('os').environ.get('OURS', 'ours3')}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)

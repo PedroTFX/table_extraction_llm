@@ -178,3 +178,29 @@ rows with no trait name (also altitudes): the under-read 'Other material examine
 habitat type (26), altitude (14) and distribution (9) from Type material. Precision on Xu2024 and
 Ustjuzhanin2024 is understated: our part rows ('Elytra humeri') count against the GT's whole-field rows
 ('Elytra morphology') of the same body part.
+
+## Prose reader v4 (2026-11-04, output/prose_v4): captions, lists, re-reads, heading names
+
+- shape (nimble): Q-CAPTION, then Q-LIST per paragraph. Captions: Ustjuzhanin2024 22, Xia2022 35, Xu2024 42
+  (no more 'aedeagus = 17–20' or 'Scale bars = 1 mm'); lists: 18 / 25 / 46.
+- items (gemma): list items copied out as printed (checked), read 8 at a time: 109 / 118 / 511 items.
+  Passages with >= 3 printed numbers, 30% of them unused, read again in halves: 38 / 28 / 56, facts added 61 / 19 / 103.
+- heads (gemma): Xu2024's headings 'Lilioceris consentanea (Lacordaire, 1845)' and L. semipunctata had
+  come back from the reading without names, so their accounts opened late and their records were
+  dropped ('no account', 18 altitudes of L. consentanea); now asked on their own, the walk rerun.
+- Assembly no longer merges the rows of separate list items (17 records at '920 m' are 17 rows).
+- Lead word as context: only a paragraph's first piece, asked in both orders ('Peng', 'Yan' from a split
+  record paragraph were first accepted as body parts; both orders also drop 'Wings', 'Sacculus').
+
+Judged (same rules as v3; one new coincidence rejected: 'Body color' vs 'antenna', both 'black'):
+
+| paper | v3 judged F1 | v4 judged R / P / F1 | v4 lenient F1 |
+|---|---|---|---|
+| Xia2022 | 0.918 | 0.910 / 0.926 / 0.918 | 0.925 |
+| Xu2024 | 0.408 | 0.775 / 0.506 / **0.613** | 0.652 |
+| Ustjuzhanin2024 | 0.481 | 0.609 / 0.381 / 0.469 | 0.609 |
+
+Left: Xia2022's HL/HW ratios (21; 2 numbers of ~32 per Measurements passage, under the re-read
+threshold). Ustjuzhanin2024's habitat type from Type material (26). Xu2024 altitudes of L. semipunctata
+(37 GT unmatched, 15 of ours unmatched). Precision counts our part rows ('Head labrum', 'Head vertex')
+and record locations against the GT's whole-field rows, so it is understated.
