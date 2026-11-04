@@ -15,7 +15,7 @@ REJECT = {
    ("Anterior angles of pronotum","posterior angles of Pronotum"),("Femora of legs morphology","Female reproductive organs"),
    ("scutellum morphology","Mesosternum pubescent metepisternum"),
    ("scutellum morphology","Abdominal sternite other areas of sternites 1–4 and all of s"),
-   ("terior angles of pronotum","Elytra humeri"),("Body color","antenna"),("Anterior angles of pronotum","Humeri (Elytra)")},
+   ("terior angles of pronotum","Elytra humeri"),("Body color","antenna"),("Anterior angles of pronotum","Humeri (Elytra)"),("Anterior angles of pronotum","Humeri (of Elytra)"),("Body color","antennomeres 5–10"),("Body color","femora"),("Body color","sides of the abdomen"),("Metasternum morphology","lateral metasternum (L. latissima)")},
  "Ustjuzhanin2024": {("antennae","fringe on the wings"),("antennae","hind legs"),("fringe on the wings","antennae"),
    ("fringe on the wings","hind legs"),("head, thorax, and tegulae","hind legs"),("head, thorax, and tegulae","wings"),
    ("thorax and tegulae","Wings"),("holotype wingspan","holotype"),("hind legs","antennae"),("hind legs","fringe on the wings"),("hind legs","tegulae"),("hind legs","thorax"),("hind legs","head")}}

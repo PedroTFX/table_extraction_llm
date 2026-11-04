@@ -267,3 +267,29 @@ Queued (2026-11-04, one after another, each one change on the one before; logs ~
 the remote): v7b full clauses + sex always answered; v7c list items cut from start words (pointers;
 log: starts, not found, fall-backs); v7d format retry (malformed answers asked again once) apart from
 the re-reads. To judge each against v6 and v7a by hand rules, with times and tokens.
+
+## The v7 line judged (2026-11-04, 3 dev papers, one gemma request at a time)
+
+Each adds one change to the one before (src/prose/prose_reader.py, PROSE_VARIANT); the names-first, tracking and
+Q-FIELD stages are reused from v7, so ~200 s are added below for a full run.
+
+| | v6 | v7a named fields | v7b + full clauses, sex always | v7c + list items from start words | v7d + format retry |
+|---|---|---|---|---|---|
+| judged F1 Xia2022 | 0.947 | 0.945 | 0.954 | 0.955 | **0.955** |
+| judged F1 Xu2024 | 0.626 | 0.594 | 0.563 | 0.624 | **0.702** |
+| judged F1 Ustjuzhanin2024 (lenient) | 0.480 (0.605) | 0.443 (0.644) | 0.498 (0.689) | 0.500 (0.689) | 0.489 (0.688) |
+| automatic judged micro F1 | 0.680 | 0.658 | 0.657 | 0.687 | **0.726** |
+| production micro F1 | 0.447 | 0.389 | 0.381 | 0.410 | 0.452 |
+| full run, 3 papers | 46 min | ~27 min | ~31 min | ~33 min | ~35 min |
+| reading output tokens | – | 153,606 | 179,330 | 190,886 | 204,908 |
+
+- v7d's format retry is the largest single gain: 59 retries (of 467 calls) recovered 236 passages / items that gemma's
+  answer had left out. The empty-item re-read T3 fell from 175 fired to 50: most "empty" items were missing answers.
+  Xu2024's unmatched GT altitudes: v7b 163, v7c 109, v7d 22.
+- Pointers did not save time (tokens and time rose), their gain is completeness on Xu2024 (605 items, 511 copied) and
+  Xia2022 (169, 113), while Ustjuzhanin2024 got fewer (73, 104). 48 of 806 starts not found; 13 of 89 lists fell back.
+  Item boundaries were not checked one by one.
+- Re-reads in v7d: T1 never fired; T2 fired 15, added 6 (all Ustjuzhanin2024); T3 fired 50, added 48. Whether these
+  added facts are GT facts is not yet measured.
+- Sex still below v6: rows with sex Xia 387 (433), Xu 107 (235), Ustjuzhanin 108 (189).
+- 5-8 min per paper not reached: v7d ~12 min per paper, Xu2024's reading alone 946 s.
