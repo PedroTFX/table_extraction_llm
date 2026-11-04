@@ -116,11 +116,13 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-PREV_OUT = _paths.OUTPUT / "prose_v6"
-OUT = _paths.OUTPUT / "prose_v7"      # v7 (speed by asking less): names first, species tracking before the
-                                      #     reading, facts read only inside accounts with a focused question
-                                      #     and a short answer, re-reads only on evidence
-REUSED = ("abbrev", "shape")          # v6's abbreviations and passage shapes (unchanged code paths)
+PREV_OUT = _paths.OUTPUT / "prose_v7"
+OUT = _paths.OUTPUT / "prose_v7a"     # v7a: v7 with one change: the reading's answers as named fields
+                                      #     ({what, value} + sex / who only when stated) with one worked
+                                      #     example per prompt, instead of [who, sex, what, value] by position
+REUSED = ("abbrev", "shape", "read", "walk", "field")   # v7's names, species tracking and Q-FIELD
+# v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
+# accounts with a focused question and a short answer, re-reads only on evidence (prose_v7)
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -221,6 +223,9 @@ def label_of(t):
 
 # === gemma =====================================================================================
 
+GEN = collections.Counter()           # gemma calls, tokens and seconds, printed per stage (v7a)
+
+
 def gemma(prompt, schema, timeout=900):
     body = {"model": v1.GEMMA, "stream": False, "format": schema, "think": False,
             "messages": [{"role": "user", "content": prompt}],
@@ -230,7 +235,13 @@ def gemma(prompt, schema, timeout=900):
             req = _rq.Request("http://127.0.0.1:11434/api/chat", data=json.dumps(body).encode(),
                               headers={"Content-Type": "application/json"})
             with _rq.urlopen(req, timeout=timeout) as r:
-                msg = json.loads(r.read()).get("message", {}).get("content", "")
+                resp = json.loads(r.read())
+            msg = resp.get("message", {}).get("content", "")
+            GEN["calls"] += 1                              # v7a: what gemma is asked and writes, per stage
+            GEN["output tokens"] += resp.get("eval_count", 0)
+            GEN["input tokens"] += resp.get("prompt_eval_count", 0)
+            GEN["generating s"] += resp.get("eval_duration", 0) / 1e9
+            GEN["total s"] += resp.get("total_duration", 0) / 1e9
             got = json.loads(msg)
             return got if isinstance(got, dict) else {}
         except json.JSONDecodeError:
@@ -1054,32 +1065,40 @@ def stage_field(papers):
 
 READ7_HEAD = """Below are numbered {what} from the account of {s} in a scientific paper{where}.
 {abbrevs}"""
-WHO7 = """- who: "" when it is {s}'s; the organism's name, as printed, only when the text says it of another organism
-- sex: "male" or "female" when the text says it is of males or of females (for example 'Male:', '♂', '♀'), else \"\""""
-MEASURE7 = READ7_HEAD + """They give measurements. For EACH passage list every measurement as [who, sex, what, value]:
+WHO7 = """Give each fact as an object with named fields:
+- "what" and "value": always
+- "sex": "male" or "female" only when the text says it is of males or of females (for example 'Male:', '♂', '♀'); leave it out otherwise
+- "who": leave it out when it is {s}'s; the organism's name, as printed, only when the text says it of another organism"""
+MEASURE7 = READ7_HEAD + """They give measurements. For EACH passage list every measurement.
 """ + WHO7 + """
 - what: the label or abbreviation, as printed
 - value: the number or range COPIED exactly, with its unit
+Example: a passage "[P1] Male: TL 5.2–5.9 mm, WL 3.1 mm. Female: TL 6.0 mm" gives
+{{"id": "P1", "facts": [{{"sex": "male", "what": "TL", "value": "5.2–5.9 mm"}}, {{"sex": "male", "what": "WL", "value": "3.1 mm"}}, {{"sex": "female", "what": "TL", "value": "6.0 mm"}}]}}
 
 Passages:
 {passages}
 
 Reply with JSON only."""
-DESCRIBE7 = READ7_HEAD + """For EACH passage list every characteristic it states as [who, sex, what, value]:
+DESCRIBE7 = READ7_HEAD + """For EACH passage list every characteristic it states.
 """ + WHO7 + """
 - what: the part or property described, as the text names it (a body part or structure, colour, size, distribution, habitat, host plant, ...)
 - value: what the text says about it, COPIED exactly
 One entry per part or property. Only characteristics of organisms: not who collected specimens, dates, where specimens are kept, figure numbers, or the name's origin.
+Example: a passage "[P1] Pronotum black, shining; legs yellow. Unlike X. other, the tibiae are spined" gives
+{{"id": "P1", "facts": [{{"what": "pronotum", "value": "black, shining"}}, {{"what": "legs", "value": "yellow"}}, {{"what": "tibiae", "value": "spined"}}]}}
 
 Passages:
 {passages}
 
 Reply with JSON only."""
-ITEM7 = READ7_HEAD + """Each item is one record or entry of a list. For EACH item list its characteristics as [who, sex, what, value]:
+ITEM7 = READ7_HEAD + """Each item is one record or entry of a list. For EACH item list what it gives.
 """ + WHO7 + """
 - what: what the item gives (altitude, locality, habitat, host plant, ...)
 - value: COPIED exactly
 Not who collected or identified specimens, dates, specimen numbers or where specimens are kept.
+Example: an item "[P1#0] 2♂, 1♀, Mount Kora, forest edge, 1200 m, 12.V.2015, J. Smith leg." gives
+{{"id": "P1#0", "facts": [{{"sex": "male", "what": "altitude", "value": "1200 m"}}, {{"what": "locality", "value": "Mount Kora"}}, {{"what": "habitat", "value": "forest edge"}}]}}
 
 Items:
 {passages}
@@ -1087,8 +1106,9 @@ Items:
 Reply with JSON only."""
 READ7_SCHEMA = {"type": "object", "required": ["passages"], "properties": {"passages": {"type": "array", "items": {
     "type": "object", "required": ["id", "facts"],
-    "properties": {"id": {"type": "string"}, "facts": {"type": "array", "items": {
-        "type": "array", "items": {"type": "string"}, "minItems": 4, "maxItems": 4}}}}}}}
+    "properties": {"id": {"type": "string"}, "facts": {"type": "array", "items": {   # v7a: named keys
+        "type": "object", "required": ["what", "value"],
+        "properties": {k: {"type": "string"} for k in ("what", "value", "sex", "who")}}}}}}}}
 
 
 def read7(prompt_tpl, units, s, abbr, where, what="passages"):
@@ -1104,10 +1124,13 @@ def read7(prompt_tpl, units, s, abbr, where, what="passages"):
         if i not in by_id:
             continue
         for row in x.get("facts") or []:
-            if not isinstance(row, list) or len(row) != 4:
+            if not isinstance(row, dict):                  # v7a: named keys; anything else is a format failure,
+                GEN["malformed facts"] += 1                # never read by position
                 continue
-            fa = dict(zip(("who", "sex", "what", "value"), (" ".join(str(v or "").split()) for v in row)), unit="")
+            fa = {k: " ".join(str(row.get(k) or "").split()) for k in ("who", "sex", "what", "value")}
+            fa["unit"] = ""
             if not fa["what"] or not fa["value"]:
+                GEN["malformed facts"] += 1
                 continue
             if not printed(fa["value"], by_id[i]):
                 res[i][1].append(dict(fa, why="value not printed in the passage"))
@@ -1375,7 +1398,7 @@ def stage_assemble(papers):
 
 
 def setup():
-    """v7 reuses v6's abbreviations and passage shapes (unchanged code paths)."""
+    """v7a reuses v7's abbreviations, shapes, names, species tracking and Q-FIELD (unchanged code paths)."""
     import shutil
     for d in REUSED:
         if not (OUT / d).exists() and (PREV_OUT / d).exists():
@@ -1445,4 +1468,7 @@ if __name__ == "__main__":
     setup()
     for name in (ALL if stage == "all" else [stage]):
         print(f"=== {name} on {len(papers)} papers", flush=True)
+        GEN.clear()
         STAGES[name](papers)
+        if GEN["calls"]:
+            print(f"  [gemma] {name}: " + ", ".join(f"{k} {v:.0f}" for k, v in GEN.items()), flush=True)
