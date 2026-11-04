@@ -227,3 +227,19 @@ Judged (same rules; one new coincidence rejected: 'Pronotum Width/Elytra Width' 
 | Xia2022 | 0.918 | 0.960 / 0.927 / **0.943** | 0.951 |
 | Xu2024 | 0.613 | 0.775 / 0.506 / 0.613 | 0.652 |
 | Ustjuzhanin2024 | 0.469 | 0.691 / 0.403 / **0.509** | 0.645 |
+
+## Test: prose reader v5 run once on the 3 held_b prose papers (2026-11-04; totals only, prose_test.py)
+
+Frozen v5 code (6ea673ce), all stages from scratch, run once; the reader's own log (paper names) not read.
+The automatic judging cannot read name pairs by hand: a pair whose names share no word never counts, so
+it is stricter than the hand-judged dev numbers; dev run the same way for reference.
+
+| group | v18 mean F1 | production mean F1 (micro) | judged automatic micro R / P / F1 | lenient F1 |
+|---|---|---|---|---|
+| dev (3) | 0.000 | 0.381 (0.449) | 0.813 / 0.578 / 0.676 | 0.726 |
+| held_b (3) | 0.000 | 0.443 (0.477) | 0.702 / 0.772 / 0.735 | 0.782 |
+
+Sanity (held_b, summed): 604 passages, 96 captions, 54 lists, 274 list items, 46 accounts opened, 1,437
+facts kept, 0 place joins, 1,383 rows; no paper without rows or without an account.
+It holds on the test papers: recall a little lower than dev (0.70 vs 0.81), precision higher (0.77 vs
+0.58: fewer part rows against whole-field GT rows), F1 above dev. Nothing was tuned on these numbers.
