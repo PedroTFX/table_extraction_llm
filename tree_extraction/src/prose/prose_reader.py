@@ -1127,6 +1127,8 @@ def papers_of(args):
     if args == ["dev"]:
         s = json.loads(SET.read_text(encoding="utf-8"))["109"]
         return s["dev"] + s["held_a"]          # tuning papers only; held_b and grit-only are the test
+    if args == ["held_b"]:                     # the test, run once: names read from the set, never printed;
+        return json.loads(SET.read_text(encoding="utf-8"))["109"]["held_b"]   # report with prose_test.py
     return args
 
 
