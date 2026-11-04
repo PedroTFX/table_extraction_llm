@@ -32,6 +32,17 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                                 against 'none' (the study, several organisms, a key couplet, a
                                 figure caption); not sure opens no account
                      A passage that names no organism and is not a heading stays in the account.
+  v7 (speed by asking less; it must also run on the local PC, one request at a time): the time follows
+           how much gemma writes, not the number of calls (v6: Xia2022 27 calls instead of 46, only 22%
+           faster). Order: abbrev shape nm heads walk field read7 names places facts assemble.
+             nm     (gemma) only the names each passage gives (short answers), captions left out
+             walk   (nimble) the species tracking, now before any fact is read
+             field  (nimble) Q-FIELD per text passage inside an account: measurements, or anything else
+             read7  (gemma) facts read only inside accounts (v5 dropped the rest), one question per kind:
+                    measurements, descriptions / other text, list items (copied out first); answers as
+                    [who, sex, what, value] with who empty for the account's species; re-reads only on
+                    evidence (T1 unused numbers in a measurement passage, T2 a text passage with no fact,
+                    T3 list items with no fact), each logged with what it recovered
   v6 (speed): shape runs before the reading, which leaves out captions (they give no facts) and list
            passages (read only item by item in the items stage, their names taken from the items);
            gemma requests go out GEMMA_PARALLEL at a time (in order, the same answers); a re-read's
@@ -105,10 +116,11 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-PREV_OUT = _paths.OUTPUT / "prose_v5"
-OUT = _paths.OUTPUT / "prose_v6"      # v6 (speed): shape first, so captions are not read and lists are read
-                                      #     only item by item; gemma requests in parallel (GEMMA_PARALLEL)
-REUSED = ("abbrev",)                  # the abbreviations' code path is unchanged; everything else reruns
+PREV_OUT = _paths.OUTPUT / "prose_v6"
+OUT = _paths.OUTPUT / "prose_v7"      # v7 (speed by asking less): names first, species tracking before the
+                                      #     reading, facts read only inside accounts with a focused question
+                                      #     and a short answer, re-reads only on evidence
+REUSED = ("abbrev", "shape")          # v6's abbreviations and passage shapes (unchanged code paths)
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -951,6 +963,256 @@ def stage_places(papers):
     v1.unload(v1.GEMMA)
 
 
+# === v7: names first, species tracking before the reading, focused short reading =================
+
+NAMES_ONLY = """Below are numbered passages of a scientific paper about organisms. For EACH passage list the scientific names of organisms it names, copied as printed, without author and year (for example "Lilioceris yuae", "L. latissima"). An empty list when it names none.
+
+Passages:
+{passages}
+
+Reply with JSON only."""
+NAMES_ONLY_SCHEMA = {"type": "object", "required": ["passages"], "properties": {"passages": {"type": "array", "items": {
+    "type": "object", "required": ["id", "names"],
+    "properties": {"id": {"type": "string"}, "names": {"type": "array", "items": {"type": "string"}}}}}}}
+NAMES_CHARS = 4000
+
+
+def stage_nm(papers):
+    """v7 (gemma): only which organisms each passage names (short answers), so the species tracking can run
+    before any fact is read. Captions are left out (they never open or keep an account).
+    -> OUT/read/<paper>.json with names and no facts."""
+    d = OUT / "read"
+    d.mkdir(parents=True, exist_ok=True)
+    for p in papers:
+        f = d / f"{p}.json"
+        if f.exists():
+            continue
+        t0 = time.time()
+        ps = passages(p)
+        shape = json.loads((OUT / "shape" / f"{p}.json").read_text(encoding="utf-8"))["shape"]
+        todo = [u for u in ps if shape.get(u["id"]) != "caption"]
+        groups, cur = [], []
+        for u in todo:
+            if cur and sum(len(x["text"]) for x in cur) + len(u["text"]) > NAMES_CHARS:
+                groups.append(cur)
+                cur = []
+            cur.append(u)
+        groups += [cur] if cur else []
+        prompts = [NAMES_ONLY.format(passages="\n\n".join(
+            f"[{u['id']}] " + ("(heading) " if u["kind"] == "heading" else "") + u["text"] for u in g)) for g in groups]
+        res = {}
+        for g, out in zip(groups, gemma_many(prompts, NAMES_ONLY_SCHEMA)):
+            by_id = {u["id"]: u for u in g}
+            for x in out.get("passages", []):
+                u = by_id.get(str(x.get("id") or "").strip("[] "))
+                if not u:
+                    continue
+                names = [n for n in dict.fromkeys(" ".join(str(n).split()) for n in x.get("names") or [])
+                         if n and printed(n, u["text"])]
+                res[u["id"]] = {"names": names, "facts": [], "dropped": []}
+        f.write_text(json.dumps({"passages": ps, "read": res, "calls": len(groups)}, indent=1, ensure_ascii=False),
+                     encoding="utf-8")
+        print(f"  [nm] {p:20s} {len(todo)} passages, {len(groups)} calls: "
+              f"{sum(1 for r in res.values() if r['names'])} name organisms ({time.time() - t0:.0f}s)", flush=True)
+    v1.unload(v1.GEMMA)
+
+
+Q_FIELD = "What does this passage give?"
+FIELD = {"measure": "measurements: labels or abbreviations, each with a number or a range (for example 'BL: 7.8–8.6 mm, "
+                    "HW: 1.72 mm', 'wingspan 14 mm')",
+         "other": "anything else: a description of the body or its parts in words, distribution, habitat, hosts, "
+                  "biology, a diagnosis or remarks"}
+
+
+def stage_field(papers):
+    """v7 (nimble), per running-text passage inside an account: Q-FIELD, a measurement list or anything else;
+    it picks which reading question gemma gets (not sure: the description question)."""
+    d = OUT / "field"
+    d.mkdir(parents=True, exist_ok=True)
+    ask = Ask()
+    for p in papers:
+        f = d / f"{p}.json"
+        if f.exists():
+            continue
+        t0 = time.time()
+        rd = load_read(p)
+        span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
+        shape = json.loads((OUT / "shape" / f"{p}.json").read_text(encoding="utf-8"))["shape"]
+        field, log = {}, {}
+        for u in rd["passages"]:
+            if u["kind"] != "para" or not span.get(u["id"]) or shape.get(u["id"]) != "text":
+                continue
+            under = f", under the heading '{u['heading'][:100]}'," if u["heading"] else ""
+            st = lambda size, u=u, under=under: STATE_PASSAGE.format(under=under, text=u["text"][:STATE_CHARS[size]])
+            ch, pr = ask(st, Q_FIELD, dict(FIELD))
+            log[u["id"]] = [ch, pr]
+            field[u["id"]] = "measure" if duels.sure(ch, pr, "measure") == "measure" else "other"
+        f.write_text(json.dumps({"field": field, "log": log}, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"  [field] {p:20s} {dict(collections.Counter(field.values()))} ({time.time() - t0:.0f}s)", flush=True)
+    ask.unload()
+
+
+READ7_HEAD = """Below are numbered {what} from the account of {s} in a scientific paper{where}.
+{abbrevs}"""
+WHO7 = """- who: "" when it is {s}'s; the organism's name, as printed, only when the text says it of another organism
+- sex: "male" or "female" when the text says it is of males or of females (for example 'Male:', '♂', '♀'), else \"\""""
+MEASURE7 = READ7_HEAD + """They give measurements. For EACH passage list every measurement as [who, sex, what, value]:
+""" + WHO7 + """
+- what: the label or abbreviation, as printed
+- value: the number or range COPIED exactly, with its unit
+
+Passages:
+{passages}
+
+Reply with JSON only."""
+DESCRIBE7 = READ7_HEAD + """For EACH passage list every characteristic it states as [who, sex, what, value]:
+""" + WHO7 + """
+- what: the part or property described, as the text names it (a body part or structure, colour, size, distribution, habitat, host plant, ...)
+- value: what the text says about it, COPIED exactly
+One entry per part or property. Only characteristics of organisms: not who collected specimens, dates, where specimens are kept, figure numbers, or the name's origin.
+
+Passages:
+{passages}
+
+Reply with JSON only."""
+ITEM7 = READ7_HEAD + """Each item is one record or entry of a list. For EACH item list its characteristics as [who, sex, what, value]:
+""" + WHO7 + """
+- what: what the item gives (altitude, locality, habitat, host plant, ...)
+- value: COPIED exactly
+Not who collected or identified specimens, dates, specimen numbers or where specimens are kept.
+
+Items:
+{passages}
+
+Reply with JSON only."""
+READ7_SCHEMA = {"type": "object", "required": ["passages"], "properties": {"passages": {"type": "array", "items": {
+    "type": "object", "required": ["id", "facts"],
+    "properties": {"id": {"type": "string"}, "facts": {"type": "array", "items": {
+        "type": "array", "items": {"type": "string"}, "minItems": 4, "maxItems": 4}}}}}}}
+
+
+def read7(prompt_tpl, units, s, abbr, where, what="passages"):
+    """gemma on [(id, text)] with a compact answer ([who, sex, what, value] per fact) -> {id: (facts, dropped)};
+    values and names checked printed in their own unit (as stage_read does), the unit split off later."""
+    text = "\n\n".join(f"[{i}] {t}" for i, t in units)
+    used = {a: m for a, m in abbr.items() if re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", text)}
+    ab = ("The paper defines these abbreviations: " + "; ".join(f"{a} = {m}" for a, m in used.items()) + ".\n") if used else ""
+    got = gemma(prompt_tpl.format(what=what, s=s, where=where, abbrevs=ab, passages=text), READ7_SCHEMA).get("passages", [])
+    by_id, res = dict(units), {i: ([], []) for i, _t in units}
+    for x in got:
+        i = str(x.get("id") or "").strip("[] ")
+        if i not in by_id:
+            continue
+        for row in x.get("facts") or []:
+            if not isinstance(row, list) or len(row) != 4:
+                continue
+            fa = dict(zip(("who", "sex", "what", "value"), (" ".join(str(v or "").split()) for v in row)), unit="")
+            if not fa["what"] or not fa["value"]:
+                continue
+            if not printed(fa["value"], by_id[i]):
+                res[i][1].append(dict(fa, why="value not printed in the passage"))
+            elif fa["who"] and not printed(fa["who"], by_id[i]):
+                res[i][1].append(dict(fa, why="who not printed in the passage"))
+            else:
+                res[i][0].append(fa)
+    return res
+
+
+def stage_read7(papers):
+    """v7 (gemma): facts read only from passages inside an account (the walk ran first; v5 dropped every fact
+    outside an account anyway), with the question the passage type calls for: measurements (Q-FIELD),
+    descriptions and other text, or a list's items (copied out first, as in v4). Re-reads only on evidence,
+    each logged with what it recovered:
+      T1  a measurement passage with 2+ printed numbers in none of its facts: read again alone
+      T2  a running-text passage of 200+ characters that gave no fact: read again alone
+      T3  list items that gave no fact: read again, those items only
+    -> OUT/read2/<paper>.json (names from the names-first stage and heads, facts from here)."""
+    d = OUT / "read2"
+    d.mkdir(parents=True, exist_ok=True)
+    for p in papers:
+        rd = load_read(p)
+        if rd.get("read7_done"):
+            continue
+        t0 = time.time()
+        abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
+        span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
+        shape = json.loads((OUT / "shape" / f"{p}.json").read_text(encoding="utf-8"))["shape"]
+        field = json.loads((OUT / "field" / f"{p}.json").read_text(encoding="utf-8"))["field"]
+        read, log = rd["read"], {}
+        trig = collections.Counter()
+        inside = [u for u in rd["passages"] if u["kind"] == "para" and span.get(u["id"])
+                  and shape.get(u["id"]) in ("text", "list")]
+        under = lambda u: f", under the heading '{u['heading'][:120]}'" if u["heading"] else ""
+
+        def put(pid, facts, dropped, tag=None):
+            r = read.setdefault(pid, {"names": [], "facts": [], "dropped": []})
+            have = {(x["what"].lower(), x["value"]) for x in r["facts"] + r["dropped"]}
+            n = 0
+            for fa, dest in [(x, "facts") for x in facts] + [(x, "dropped") for x in dropped]:
+                if tag and (fa["what"].lower(), fa["value"]) in have:
+                    continue
+                r[dest].append(dict(fa, reread=tag) if tag else fa)
+                n += dest == "facts" or fa.get("why") == "who not printed in the passage"
+            return n
+
+        groups, cur = [], []                               # running text: same account, same question
+        for u in (x for x in inside if shape.get(x["id"]) == "text"):
+            k = (span[u["id"]], field.get(u["id"], "other"))
+            if cur and (cur[0][1] != k or sum(len(x["text"]) for x, _k in cur) + len(u["text"]) > READ_CHARS):
+                groups.append(cur)
+                cur = []
+            cur.append((u, k))
+        groups += [cur] if cur else []
+        for g in groups:
+            (s, kind) = g[0][1]
+            tpl = MEASURE7 if kind == "measure" else DESCRIBE7
+            got = read7(tpl, [(u["id"], u["text"]) for u, _k in g], s, abbr, under(g[0][0]))
+            for u, _k in g:
+                facts, dropped = got[u["id"]]
+                put(u["id"], facts, dropped)
+                if kind == "measure":                      # T1
+                    nums = [_num(x) for x in NUMS.findall(u["text"])]
+                    vals = " | ".join(_num(x["value"]) for x in facts + dropped)
+                    if sum(1 for x in nums if x not in vals) >= 2:
+                        again = read7(tpl, [(u["id"], u["text"])], s, abbr, under(u))[u["id"]]
+                        trig["T1 fired"] += 1
+                        trig["T1 added"] += put(u["id"], again[0], again[1], "T1")
+                elif len(u["text"]) >= 200 and not facts and not dropped:   # T2
+                    again = read7(tpl, [(u["id"], u["text"])], s, abbr, under(u))[u["id"]]
+                    trig["T2 fired"] += 1
+                    trig["T2 added"] += put(u["id"], again[0], again[1], "T2")
+        n_items = 0
+        for u in (x for x in inside if shape.get(x["id"]) == "list"):
+            s, pid = span[u["id"]], u["id"]
+            items = [" ".join(str(x).split()) for x in gemma(ITEMS.format(text=u["text"]), ITEMS_SCHEMA).get("items", [])]
+            items = [x for x in dict.fromkeys(items) if x and printed(x, u["text"])]
+            if len(items) < 2:
+                got = read7(DESCRIBE7, [(pid, u["text"])], s, abbr, under(u))[pid]
+                put(pid, *got)
+                log[pid] = {"items": len(items), "kept": "passage reading"}
+                continue
+            empty = []
+            for k in range(0, len(items), ITEMS_PER_CALL):
+                units = [(f"{pid}#{k + j}", t) for j, t in enumerate(items[k:k + ITEMS_PER_CALL])]
+                got = read7(ITEM7, units, s, abbr, under(u), what="items of one list")
+                for i, t in units:
+                    put(pid, *got[i])
+                    if not got[i][0] and not got[i][1]:
+                        empty.append((i, t))
+            if empty:                                      # T3
+                got = read7(ITEM7, empty, s, abbr, under(u), what="items of one list")
+                trig["T3 fired"] += len(empty)
+                trig["T3 added"] += sum(put(pid, *got[i], "T3") for i, _t in empty)
+            log[pid] = {"items": len(items)}
+            n_items += len(items)
+        rd.update(read=read, log=log, triggers=dict(trig), read7_done=True)
+        (d / f"{p}.json").write_text(json.dumps(rd, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"  [read7] {p:20s} {len(inside)} passages inside accounts ({len(groups)} text calls), {n_items} list "
+              f"items; re-reads {dict(trig)}; {sum(len(r['facts']) for r in read.values())} facts "
+              f"({time.time() - t0:.0f}s)", flush=True)
+    v1.unload(v1.GEMMA)
+
+
 def lead_of(u):
     """The first word of a paragraph without a bold label ('Head slightly wider ...' -> 'Head'), offered to
     Q-LABEL as its context; geometry only."""
@@ -1113,7 +1375,7 @@ def stage_assemble(papers):
 
 
 def setup():
-    """v6 reuses v5's abbreviations (unchanged code path)."""
+    """v7 reuses v6's abbreviations and passage shapes (unchanged code paths)."""
     import shutil
     for d in REUSED:
         if not (OUT / d).exists() and (PREV_OUT / d).exists():
@@ -1161,10 +1423,11 @@ def stage_page(papers):
 
 STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "walk": stage_walk,
           "shape": stage_shape, "items": stage_items, "heads": stage_heads, "places": stage_places,
+          "nm": stage_nm, "field": stage_field, "read7": stage_read7,
           "facts": stage_facts,
           "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
-ALL = ["abbrev", "shape", "read", "items", "names", "heads", "walk", "places", "facts", "assemble"]
+ALL = ["abbrev", "shape", "nm", "heads", "walk", "field", "read7", "names", "places", "facts", "assemble"]
 
 
 def papers_of(args):
