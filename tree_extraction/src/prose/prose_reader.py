@@ -163,9 +163,9 @@ def passages(paper):
         if zone != "keep" or _ref_like(t):
             continue
         lab, rest = label_of(t)
-        for piece in _split_long(t):
+        for k, piece in enumerate(_split_long(t)):
             out.append({"id": f"P{len(out)}", "kind": "para", "text": piece, "heading": heading, "block": b,
-                        "label": lab, "field": rest})
+                        "label": lab, "field": rest, "first": k == 0})
     return out
 
 
@@ -562,6 +562,10 @@ def stage_facts(papers):
                   f"\"\"\"{u['text'][:500]}\"\"\"")
             ch, pr = ask(st, Q_LABEL.format(label=lab), dict(LABEL))
             labels[lab] = {"choice": ch, "probs": pr, "part": duels.sure(ch, pr, "part") == "part"}
+            if labels[lab]["part"] and not u.get("label"):  # v4: a lead word asked again, options swapped
+                crit = {"a": LABEL["other"], "b": LABEL["part"]}
+                ch2, pr2 = ask(st, Q_LABEL.format(label=lab), crit)
+                labels[lab].update(swapped=[ch2, pr2], part=duels.sure(ch2, pr2, "b") == "b")
         methods = {}                                       # v2: Q-METHOD per split gemma proposed
         split = json.loads((OUT / "names" / f"{p}.json").read_text(encoding="utf-8"))["split"]
         for n, sp in split.items():
@@ -743,7 +747,8 @@ def stage_items(papers):
 def lead_of(u):
     """The first word of a paragraph without a bold label ('Head slightly wider ...' -> 'Head'), offered to
     Q-LABEL as its context; geometry only."""
-    if u["kind"] != "para" or u.get("label"):
+    if u["kind"] != "para" or u.get("label") or not u.get("first", True):   # a paragraph's start only:
+        # Xia2022's split record paragraph went on with 'Peng, Song, Yan & Yu leg.', read as body parts
         return ""
     m = re.match(r"\s*([A-Z][a-z]{2,})\b", u["text"])
     return m.group(1) if m else ""
