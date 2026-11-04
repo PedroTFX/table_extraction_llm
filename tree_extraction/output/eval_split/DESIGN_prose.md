@@ -204,3 +204,26 @@ Left: Xia2022's HL/HW ratios (21; 2 numbers of ~32 per Measurements passage, und
 threshold). Ustjuzhanin2024's habitat type from Type material (26). Xu2024 altitudes of L. semipunctata
 (37 GT unmatched, 15 of ours unmatched). Precision counts our part rows ('Head labrum', 'Head vertex')
 and record locations against the GT's whole-field rows, so it is understated.
+
+## Prose reader v5 (2026-11-04, output/prose_v5): described places, written-out trait names
+
+- HL/HW: read all along, then dropped by Q-TRAIT on the bare name 'hl/hw' ('other' 0.75). Q-TRAIT is now
+  asked on the name written out with the paper's abbreviations; Xia2022's 21 HL/HW rows are back.
+- places (gemma): places the paper describes outside the species accounts. Ustjuzhanin2024's GT 'habitat
+  type' comes from the study sites in Materials and methods ('- Bamboo Camp. ... a lowland rainforest
+  ...'), which the records inside the accounts name only. Q-PLACE (nimble): does a passage in an account
+  give records of S from a described place it names; a sure yes adds the place's characteristics once per
+  mention, except what the record itself gives.
+- A first run joined everything (Mount Cameroon 'hosts / harbour / endemism', provinces, 'China': 340
+  junk rows), so two checks come before a join: Q-SITE per place (one described site, or a country /
+  province / mountain / museum) and Q-ENV per place fact (conditions there, or species, records, history).
+  Left: Mount Cameroon passed Q-SITE and its 'presence: of diverse habitats along its elevational ...'
+  passed Q-ENV (36 rows of a general statement).
+
+Judged (same rules; one new coincidence rejected: 'Pronotum Width/Elytra Width' vs 'length of head/width of head'):
+
+| paper | v4 judged F1 | v5 judged R / P / F1 | v5 lenient F1 |
+|---|---|---|---|
+| Xia2022 | 0.918 | 0.960 / 0.927 / **0.943** | 0.951 |
+| Xu2024 | 0.613 | 0.775 / 0.506 / 0.613 | 0.652 |
+| Ustjuzhanin2024 | 0.469 | 0.691 / 0.403 / **0.509** | 0.645 |

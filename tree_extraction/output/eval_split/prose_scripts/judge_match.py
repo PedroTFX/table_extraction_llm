@@ -10,7 +10,7 @@ REJECT = {
    ("Elytra Width","length of elytra"),("Elytra Width","width of head"),("Head Length","width of pronotum"),
    ("Head Length/Head Width","width of pronotum/width of elytra"),("Head Width","length of elytra"),
    ("Head Width","width of elytra"),("Head Width/Elytra Width","length of elytra/width of elytra"),
-   ("Pronotum Width","length of head")},
+   ("Pronotum Width","length of head"),("Pronotum Width/Elytra Width","length of head/width of head")},
  "Xu2024": {("Anterior angles of pronotum","Humeri of Elytra"),("Anterior angles of pronotum","Elytra humeri"),
    ("Anterior angles of pronotum","posterior angles of Pronotum"),("Femora of legs morphology","Female reproductive organs"),
    ("scutellum morphology","Mesosternum pubescent metepisternum"),
