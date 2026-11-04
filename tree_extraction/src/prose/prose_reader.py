@@ -44,6 +44,14 @@ Code cuts the text into passages and keeps the paper's order; the models read an
   heads    (gemma)   v4: a heading the reading left without names is asked on its own (Xu2024's
                      'Lilioceris consentanea (Lacordaire, 1845)' had none, so its account opened
                      late and 18 altitude records were dropped); the walk then runs on these names
+  places   (gemma)   v5: the places the paper describes outside the species accounts (study sites in
+                     Materials and methods: name, habitat, altitude, coordinates), each checked printed
+           (nimble)  v5, in facts: Q-PLACE, does a passage in an account give records of S from a
+                     described place it names? A sure yes adds the place's characteristics to S once
+                     per mention (one per record), except what the record itself gives (its altitude).
+                     Ustjuzhanin2024's GT 'habitat type' comes from these site descriptions.
+                     v5: Q-TRAIT is asked on the name written out with the paper's abbreviations
+                     ('hl/hw' alone was 'not a characteristic'; 21 HL/HW rows were dropped)
   facts    (nimble)  Q-OWNER  a fact whose who names another organism than the account's:
                                 whose is it (both orders; not sure drops it)
                      Q-TRAIT  per 'has what' of the paper, with three of its values: a
@@ -68,7 +76,7 @@ Code cuts the text into passages and keeps the paper's order; the models read an
 
 The models never run together: gemma stages first, then nimble, then the scorer.
 
-    python prose_reader.py <stage> dev|<paper ...>      stages: abbrev read names shape items heads walk facts assemble score page all
+    python prose_reader.py <stage> dev|<paper ...>      stages: abbrev read names shape items heads walk places facts assemble score page all
 """
 import collections
 import contextlib
@@ -86,9 +94,10 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-PREV_OUT = _paths.OUTPUT / "prose_v3"
-OUT = _paths.OUTPUT / "prose_v4"      # v4: captions, lists read item by item, re-reads, lead-word context
-REUSED = ("abbrev", "read", "names")   # v4 reruns the walk on the heading names it adds
+PREV_OUT = _paths.OUTPUT / "prose_v4"
+OUT = _paths.OUTPUT / "prose_v5"      # v5: places the paper describes joined to the records naming them;
+                                      #     Q-TRAIT asked on the written-out name
+REUSED = ("abbrev", "read", "names", "shape", "read2", "walk")   # from v4 (reading, lists, heads, walk)
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -377,6 +386,9 @@ Q_LIST = "How is this passage written?"
 LISTED = {"list": "as a list of separate items one after another, each with its own values: specimens or records "
                   "(place, altitude, date, collector), localities, sites, host plants or other entries",
           "prose": "as running description or discussion: sentences about characteristics, not a list of entries"}
+Q_PLACE = "Does this passage give records of {s} from the place '{n}' that the paper describes?"
+PLACE = {"yes": "yes: specimens or observations of {s} come from '{n}' (the passage names it as where they were found)",
+         "no": "no: '{n}' is named here for something else, or it is another place with a similar name"}
 Q_TRAIT = "What does '{what}' tell about an organism?"
 TRAIT = {"trait": "a characteristic of the organism: its body, size, measurements, colour, structures or genitalia, "
                   "its life, behaviour, habitat, food or hosts, its distribution, or the places or altitudes where it lives or was found",
@@ -541,6 +553,34 @@ def stage_facts(papers):
                 x["owner"] = picks[0] if picks[0] and picks[0] == picks[1] else None
                 x["why"] = "" if x["owner"] else "owner not sure"
             facts.append(x)
+        abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
+        pf = OUT / "places" / f"{p}.json"
+        places = json.loads(pf.read_text(encoding="utf-8"))["places"] if pf.exists() else {}
+        joins = []                                         # v5: Q-PLACE, records joined to described places
+        for u in rd["passages"]:
+            s = span.get(u["id"])
+            if u["kind"] != "para" or not s or shape.get(u["id"]) == "caption":
+                continue
+            own = {x["what"].lower() for x in facts if x["passage"] == u["id"]}
+            for name, pfacts in places.items():
+                k = len(re.findall(r"(?<![\w])" + re.escape(name) + r"(?![\w])", u["text"]))
+                if not k:
+                    continue
+                desc = "; ".join(f"{f['what']}: {f['value']}" for f in pfacts)[:400]
+                st = (f"In the account of {s}, a passage of a scientific paper reads:\n\"\"\"{u['text'][:1000]}\"\"\"\n"
+                      f"Elsewhere the paper describes the place '{name}': {desc}.")
+                ch, pr = ask(st, Q_PLACE.format(s=s, n=name), {k2: v.format(s=s, n=name) for k2, v in PLACE.items()})
+                ok = duels.sure(ch, pr, "yes") == "yes"
+                joins.append({"passage": u["id"], "place": name, "mentions": k, "choice": ch, "probs": pr, "join": ok})
+                if not ok:
+                    continue
+                for _ in range(k):                         # one set per mention: one per record
+                    for f in pfacts:
+                        if f["what"].lower() in own:       # the record's own value (its altitude) wins
+                            continue
+                        facts.append({"who": "", "sex": "", "what": f["what"], "value": f["value"], "unit": "",
+                                      "passage": u["id"], "account": s, "owner": s, "why": "", "place": name,
+                                      "record": True})
         whats = collections.defaultdict(list)
         for x in facts:
             if x["owner"]:
@@ -548,8 +588,9 @@ def stage_facts(papers):
         trait = {}
         for w, vals in whats.items():
             ex = "; ".join(f"'{v[:100]}'" for v in list(dict.fromkeys(vals))[:3])
-            st = f"A scientific paper describing organisms gives '{w}' for them, for example: {ex}."
-            ch, pr = ask(st, Q_TRAIT.format(what=w), dict(TRAIT))
+            wn = spelled(w, {a.lower(): m for a, m in abbr.items()})   # v5: 'hl/hw' asked as the paper's words
+            st = f"A scientific paper describing organisms gives '{wn}' for them, for example: {ex}."
+            ch, pr = ask(st, Q_TRAIT.format(what=wn), dict(TRAIT))
             trait[w] = {"choice": ch, "probs": pr, "keep": duels.sure(ch, pr, "trait") == "trait"}
         for x in facts:
             if x["owner"] and not trait.get(x["what"].lower(), {}).get("keep"):
@@ -577,7 +618,7 @@ def stage_facts(papers):
             ch, pr = ask(st, Q_METHOD.format(m=sp["method"], n=n), crit)
             methods[n] = {"choice": ch, "probs": pr, "keep": duels.sure(ch, pr, "how") == "how"}
         f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait, "labels": labels,
-                                 "methods": methods}, indent=1, ensure_ascii=False), encoding="utf-8")
+                                 "methods": methods, "joins": joins}, indent=1, ensure_ascii=False), encoding="utf-8")
         kept = sum(1 for x in facts if x["owner"] and not x["why"])
         print(f"  [facts] {p:20s} {len(facts)} facts, {len(owners) // 2} owner questions, {len(trait)} names asked: "
               f"{kept} kept; labels naming a body part: {[k for k, v in labels.items() if v['part']]} "
@@ -781,6 +822,64 @@ def stage_heads(papers):
     v1.unload(v1.GEMMA)
 
 
+PLACES = """Below are passages of a scientific paper about organisms. List each PLACE (a site, station, locality or area where organisms were collected or observed) that the passages DESCRIBE, with what they say about it:
+- place: its name, copied exactly as printed (the short name the paper uses for it, e.g. "Bamboo Camp")
+- facts: each thing the passages give for that place, as what / value, the value COPIED exactly (habitat or vegetation, altitude, coordinates, ...)
+Only places the passages describe; not a place that is merely named.
+
+Passages:
+{text}
+
+Reply with JSON only."""
+PLACES_SCHEMA = {"type": "object", "required": ["places"], "properties": {"places": {"type": "array", "items": {
+    "type": "object", "required": ["place", "facts"],
+    "properties": {"place": {"type": "string"}, "facts": {"type": "array", "items": {
+        "type": "object", "required": ["what", "value"],
+        "properties": {"what": {"type": "string"}, "value": {"type": "string"}}}}}}}}}
+PLACES_CHARS = 3000
+
+
+def stage_places(papers):
+    """v5 (gemma): the places the paper describes outside the species accounts (Ustjuzhanin2024's
+    Materials and methods: '- Bamboo Camp. Bamboo Camp (350 m a.s.l.), ...; a lowland rainforest with
+    historical disturbances ...'), each name and value checked printed. The records inside the accounts
+    name the place only; Q-PLACE (facts) joins them."""
+    d = OUT / "places"
+    d.mkdir(parents=True, exist_ok=True)
+    for p in papers:
+        f = d / f"{p}.json"
+        if f.exists():
+            continue
+        t0 = time.time()
+        rd = load_read(p)
+        span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
+        sf = OUT / "shape" / f"{p}.json"
+        shape = json.loads(sf.read_text(encoding="utf-8"))["shape"] if sf.exists() else {}
+        outside = [u for u in rd["passages"] if u["kind"] == "para" and not span.get(u["id"])
+                   and shape.get(u["id"]) != "caption"]
+        chunks, cur = [], ""
+        for u in outside:
+            if cur and len(cur) + len(u["text"]) > PLACES_CHARS:
+                chunks.append(cur)
+                cur = ""
+            cur += u["text"] + "\n\n"
+        chunks += [cur] if cur else []
+        places = {}
+        for ch in chunks:
+            for e in gemma(PLACES.format(text=ch), PLACES_SCHEMA).get("places", []):
+                name = " ".join(str(e.get("place") or "").split())
+                if len(name) < 3 or not re.search(r"(?<![\w])" + re.escape(name) + r"(?![\w])", ch):
+                    continue
+                for fa in e.get("facts") or []:
+                    w, v = (" ".join(str(fa.get(k) or "").split()) for k in ("what", "value"))
+                    if w and v and printed(v, ch) and {"what": w, "value": v} not in places.setdefault(name, []):
+                        places[name].append({"what": w, "value": v})
+        places = {k: v for k, v in places.items() if v}
+        f.write_text(json.dumps({"places": places, "calls": len(chunks)}, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"  [places] {p:20s} {len(places)} places described: {list(places)[:10]} ({time.time() - t0:.0f}s)", flush=True)
+    v1.unload(v1.GEMMA)
+
+
 def lead_of(u):
     """The first word of a paragraph without a bold label ('Head slightly wider ...' -> 'Head'), offered to
     Q-LABEL as its context; geometry only."""
@@ -917,7 +1016,7 @@ def stage_assemble(papers):
                 lab = u.get("label") or lead_of(u)          # v4: the lead word when there is no bold label
                 trait, method = named(x["what"], abbr, split, lab if lab in part else "")
                 r = dict(_row(dict(x, what=trait)), measurementMethod=method)
-                if shape.get(x["passage"]) == "list":       # v4: each item is its own record: 17 records
+                if shape.get(x["passage"]) == "list" or x.get("record"):   # v4: each item is its own record: 17 records
                     rows.append(r)                          # at '920 m' are 17 rows, not one
                 else:
                     add(r)
@@ -939,7 +1038,7 @@ def stage_assemble(papers):
 
 
 def setup():
-    """v4 reuses v3's abbreviations, reading, name splits and species tracking (unchanged code paths)."""
+    """v5 reuses v4's abbreviations, reading, name splits, shapes, list items, heading names and walk."""
     import shutil
     for d in REUSED:
         if not (OUT / d).exists() and (PREV_OUT / d).exists():
@@ -986,10 +1085,11 @@ def stage_page(papers):
 
 
 STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "walk": stage_walk,
-          "shape": stage_shape, "items": stage_items, "heads": stage_heads, "facts": stage_facts,
+          "shape": stage_shape, "items": stage_items, "heads": stage_heads, "places": stage_places,
+          "facts": stage_facts,
           "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
-ALL = ["abbrev", "read", "names", "shape", "items", "heads", "walk", "facts", "assemble"]
+ALL = ["abbrev", "read", "names", "shape", "items", "heads", "walk", "places", "facts", "assemble"]
 
 
 def papers_of(args):
