@@ -243,3 +243,27 @@ Sanity (held_b, summed): 604 passages, 96 captions, 54 lists, 274 list items, 46
 facts kept, 0 place joins, 1,383 rows; no paper without rows or without an account.
 It holds on the test papers: recall a little lower than dev (0.70 vs 0.81), precision higher (0.77 vs
 0.58: fewer part rows against whole-field GT rows), F1 above dev. Nothing was tuned on these numbers.
+
+## Speed line v6 / v7 / v7a (2026-11-04, dev papers, one gemma request at a time)
+
+The time follows how much gemma writes, not the number of calls (v7a: 1,122 of 1,220 gemma seconds in
+the reading were generation; ~55 output tokens per fact). Parallel requests were dropped: the reader
+must also run on the local PC when the remote is down (memory: local-fallback-design).
+
+| | v6 | v7 | v7a |
+|---|---|---|---|
+| change | shape before reading (captions not read, lists only item by item) | names first, species tracking before reading, facts only inside accounts, Q-FIELD, answers [who, sex, what, value] by position, re-reads on evidence | v7 with answers as named fields + one worked example per prompt |
+| all stages, 3 papers | 2,760 s | 1,976 s | ~1,640 s (1,442 s + ~200 s reused) |
+| judged F1 (hand rules) Xia / Xu / Ustjuzhanin | 0.947 / 0.626 / 0.480 | 0.937 / 0.269 / 0.312 | 0.945 / 0.594 / 0.443 |
+| automatic judged micro F1 (prose_test) | 0.680 | 0.441 | 0.658 |
+
+v7's Xu2024 collapse was the positional answer: records came back with the record itself as "what"
+('Xishuangbanna, Mengla, 620–650 m', 43 rows); named fields bring the altitudes back (359 rows, v6 444).
+New in v7a: with "sex" optional gemma leaves it out of every record (Xu2024 0 of 1,945 facts,
+Ustjuzhanin2024 0 rows; v6 235 / 189). Re-reads (v7a): T1 never fired; T2 fired 12, added 1; T3 fired
+116, added 103.
+
+Queued (2026-11-04, one after another, each one change on the one before; logs ~/run_prose_<v>.log on
+the remote): v7b full clauses + sex always answered; v7c list items cut from start words (pointers;
+log: starts, not found, fall-backs); v7d format retry (malformed answers asked again once) apart from
+the re-reads. To judge each against v6 and v7a by hand rules, with times and tokens.

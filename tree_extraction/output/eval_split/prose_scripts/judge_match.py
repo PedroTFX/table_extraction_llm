@@ -15,10 +15,10 @@ REJECT = {
    ("Anterior angles of pronotum","posterior angles of Pronotum"),("Femora of legs morphology","Female reproductive organs"),
    ("scutellum morphology","Mesosternum pubescent metepisternum"),
    ("scutellum morphology","Abdominal sternite other areas of sternites 1–4 and all of s"),
-   ("terior angles of pronotum","Elytra humeri"),("Body color","antenna")},
+   ("terior angles of pronotum","Elytra humeri"),("Body color","antenna"),("Anterior angles of pronotum","Humeri (Elytra)")},
  "Ustjuzhanin2024": {("antennae","fringe on the wings"),("antennae","hind legs"),("fringe on the wings","antennae"),
    ("fringe on the wings","hind legs"),("head, thorax, and tegulae","hind legs"),("head, thorax, and tegulae","wings"),
-   ("hind legs","antennae"),("hind legs","fringe on the wings"),("hind legs","tegulae"),("hind legs","thorax"),("hind legs","head")}}
+   ("thorax and tegulae","Wings"),("holotype wingspan","holotype"),("hind legs","antennae"),("hind legs","fringe on the wings"),("hind legs","tegulae"),("hind legs","thorax"),("hind legs","head")}}
 STOP = {"morphology", "of", "the", "male", "female", "genitalia", "a", "and"}
 toks = lambda s: set(re.findall(r"[a-z0-9]+", str(s).lower())) - STOP
 def same_trait(p, a, b):
