@@ -1,0 +1,284 @@
+  [semantic] left unmatched: 'Apices of valves' vs 'fringe on all lobes of the wings' (llm said different traits)
+  [semantic] left unmatched: 'Apices of valves' vs 'fringe on the lobes of all wings' (llm said different traits)
+  [semantic] left unmatched: 'Apices of valves' vs 'ductus widens' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia' vs 'ductus between the ductus seminalis and antrum' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia' vs 'fringe on all lobes of the wings' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia' vs 'fringe on the lobes of all wings' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia antrum' vs 'ductus between the ductus seminalis and antrum' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia antrum' vs 'fringe on all lobes of the wings' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia antrum' vs 'fringe on the lobes of all wings' (llm said different traits)
+  [semantic] left unmatched: 'Female genitalia bursa copulatrix' vs 'ductus between the ductus seminalis and antrum' (llm said different traits)
+================================================================
+GROUND TRUTH : /home/ptrindade/table_extraction_llm/data/un_processed_papers/Ustjuzhanin2024/Ustjuzhanin2024.xlsx  (243 rows)
+PREDICTION   : /home/ptrindade/table_extraction_llm/tree_extraction/output/prose_v3/prose/Ustjuzhanin2024/Ustjuzhanin2024.csv  (432 rows)
+KEY          : ['verbatimIdentification', 'measurementType', 'measurementValue']   decode=False  semantic=True
+SCOPE        : measurementType
+================================================================
+
+TAXON NAME REMAP (pred -> gt, 14 pair(s))
+  'A. potockyi' -> 'Alucita potockyi Ustjuzhanin & Kovtunovich'
+  'A. rhaptica' -> 'Alucita rhaptica (Meyrick, 1920)'
+  'Alucita agassizi' -> 'Alucita agassizi Ustjuzhanin & Kovtunovich, 2018'
+  'Alucita dohertyi' -> 'Alucita dohertyi (Walsingham, 1909)'
+  'Alucita erzayi Ustjuzhanin & Kovtunovich, sp. nov.' -> 'Alucita erzayi Ustjuzhanin & Kovtunovich'
+  'Alucita fako Ustjuzhanin & Kovtunovich, sp. nov.' -> 'Alucita fako Ustjuzhanin & Kovtunovich'
+  'Alucita hirsuta' -> 'Alucita hirsuta Ustjuzhanin & Kovtunovich'
+  'Alucita plumigera' -> 'Alucita plumigera (Strand, 1913)'
+  'Alucita potockyi Ustjuzhanin & Kovtunovich, sp. nov.' -> 'Alucita potockyi Ustjuzhanin & Kovtunovich'
+  'Alucita pyrczi' -> 'Alucita pyrczi Ustjuzhanin & Kovtunovich'
+  'Alucita rhaptica' -> 'Alucita rhaptica (Meyrick, 1920)'
+  'Alucita sedlaceki Ustjuzhanin & Kovtunovich, sp. nov.' -> 'Alucita sedlaceki Ustjuzhanin & Kovtunovich'
+  'Alucita sokolovi Ustjuzhanin & Kovtunovich, sp. nov.' -> 'Alucita sokolovi Ustjuzhanin & Kovtunovich'
+  'Alucita tonda' -> 'Alucita tonda Ustjuzhanin & Kovtunovich'
+
+TAXON NAMES LEFT UNMAPPED (22)
+  'A. acalyptra': no ground-truth name denotes this organism
+  'A. bakingili': no ground-truth name denotes this organism
+  'A. besongi': no ground-truth name denotes this organism
+  'A. chloracta': no ground-truth name denotes this organism
+  'A. lidiya': no ground-truth name denotes this organism
+  'A. megaphimus': no ground-truth name denotes this organism
+  'A. olga': no ground-truth name denotes this organism
+  'A. spicifera': no ground-truth name denotes this organism
+  'Alucita besongi Ustjuzhanin & Kovtunovich': no ground-truth name denotes this organism
+  'Alucita bokwango': no ground-truth name denotes this organism
+  'Alucita escobari Ustjuzhanin & Kovtunovich': no ground-truth name denotes this organism
+  'Alucita jana': no ground-truth name denotes this organism
+  'Alucita janeceki Ustjuzhanin & Kovtunovich': no ground-truth name denotes this organism
+  'Alucita longipenis': no ground-truth name denotes this organism
+  'Alucita megaphimus': no ground-truth name denotes this organism
+  'Alucita mischenini': no ground-truth name denotes this organism
+  'Alucita molliflua': no ground-truth name denotes this organism
+  'Alucita tesserata': no ground-truth name denotes this organism
+  'Holotype': no ground-truth name denotes this organism
+  'Orneodes decaryella': no ground-truth name denotes this organism
+  'Orneodes dohertyi': no ground-truth name denotes this organism
+  'Orneodes plumigera': no ground-truth name denotes this organism
+
+SEMANTIC measurementType REMAP (pred -> gt, 34 pair(s))
+  'Aedeagus' -> 'aedeagus'
+  'All wing lobes' -> 'lobes of all wings'
+  'Anellus arms' -> 'anellus arms'
+  'Female genitalia anterior apophyses' -> 'apophyses'
+  'Female genitalia bursa' -> 'bursa'
+  'Female genitalia ductus' -> 'ductus between the ductus seminalis and antrum'
+  'Female genitalia ductus seminalis' -> 'ductus seminalis'
+  'Female genitalia lower portion of the antrum' -> 'lower portion of the antrum'
+  'Female genitalia medium portion of the antrum' -> 'medium portion of the antrum'
+  'Female genitalia papillae anales' -> 'papillae anales'
+  'Gnathos' -> 'gnathos'
+  'Gnathos arms' -> 'gnathos arms'
+  'Hind wings' -> 'hind wings'
+  'Male genitalia basal portion of the sacculus' -> 'basal portion of the sacculus'
+  'Male genitalia cornuti' -> 'cornuti'
+  'Male genitalia cornutus' -> 'cornutus'
+  'Male genitalia distal portion of the sacculus' -> 'distal portion'
+  'Male genitalia inner portion of the fork' -> 'inner portion of the fork'
+  'Male genitalia outer portion of this fork' -> 'outer portion of this fork'
+  'Saccus' -> 'saccus'
+  'The fringe on all lobes of the wings' -> 'The fringe on the lobes of all wings'
+  'Uncus' -> 'uncus'
+  'Valves' -> 'valves'
+  'Wings' -> 'wings'
+  'Wingspan' -> 'wingspan'
+  'altitude' -> 'Altitude'
+  'basal areas of wings' -> 'wings’ basal areas'
+  'distribution' -> 'Distribution'
+  'fore wing (first lobe)' -> 'first lobe on the fore wing'
+  'fringe on the lobes of all wings' -> 'The fringe on the lobes of all wings'
+  'labial palpi' -> 'Labial palpi'
+  'lobes of all wings' -> 'All lobes of the wings'
+  'third segment of labial palpi' -> 'labial palpi'
+  'type' -> 'habitat type'
+
+ROW-LEVEL (key match)
+  matched (TP)        : 70
+  missed (FN)         : 173
+  spurious, in scope  : 188   <- GT covers this trait: real errors
+  spurious, out of scope: 174   <- GT never covers this trait: nothing to score against
+
+  STRICT  P/R/F1      : 0.162 / 0.288 / 0.207   (every extra row counts against precision)
+  SCOPED  P/R/F1      : 0.271 / 0.288 / 0.279   (out-of-scope rows excluded)
+  RECALL (GT coverage): 0.288   <- 'how much of the GT did we get' — extras cannot affect this
+
+  out-of-scope rows by uncovered field:
+    measurementType                            174
+
+FIELD-LEVEL ACCURACY (on matched rows only)
+  column                    agree  total    acc   extra finds
+  basisOfRecord                 0     70  0.000  <-- low
+  measurementMethod             0      0    n/a
+  measurementUnit               6     35  0.171  <-- low
+  measurementStatistic          1     70  0.014  <-- low
+  measurementRemarks            0      0    n/a
+  sex                           6     70  0.086  <-- low
+  lifeStage                     0     70  0.000  <-- low
+  caste                         0      0    n/a
+  sampleSizeValue               0      0    n/a
+  sampleSizeUnit                0      0    n/a
+  sampleTreatment               0      0    n/a
+  samplingProtocol              0      0    n/a
+  verbatimLocality              0      0    n/a
+  verbatimCoordinates           0      0    n/a
+  verbatimEventDate             0      0    n/a
+  associatedOccurrences         0      0    n/a
+  associatedReferences          0     70  0.000  <-- low
+  externalLink                  0      0    n/a
+
+WHY THE 173 MISSED ROWS MISSED
+  species not in prediction                   0
+  species present, trait missing             89
+  species+trait present, value differs       75
+
+  VALUE SUBSTITUTIONS (gt -> pred), most frequent first:
+     '~ 4 × longer than the entire genital structure, forming two arched curves in the medium part' ->  'very long, but it is slightly shorter, has fewer curves, and is straight for the distal portion' x1
+     'is almost straight, obliquely cut apically, and without cornuti' ->  'almost straight, obliquely cut apically, and without cornuti' x1
+     'is long, slightly longer than the genital structure, and bears a series of tiny transverse spiky cornuti distally, along with two big needle-like cornuti positioned along the aedeagus medially' ->  'narrow, elongated, longer than the entire genital structure, with 1 distinct long cornutus and a cluster of tiny needle-like cornuti distally' x1
+     'is slightly concave medially and almost equal in length to the entire genital structure (excluding the uncus). the aedeagus large needle-like cornuti distally arranged in an orderly array' ->  'has an ordered arrangement of needle-like cornuti distally' x1
+     'have a dark brown subterminal band that is broken in the fifth lobe of the forewing and the third lobe of the hindwing, with the small dark spots of scales subapically on all lobes of all wings' ->  'have a dark brown subterminal band that is broken in the fifth lobe of the forewing and the third lobe of the hindwing, with the small dark spots of scales subapically' x1
+     'are wide, straight, and equal in length to the gnathos' ->  'wide, straight, and equal in length to the gnathos' x1
+  -> 6 substitutions explain 6 of 173 misses (3%) — scattered; no single cause
+
+  TRAITS THE SPECIES HAS IN GT BUT NOT IN PREDICTION:
+     'habitat type'                     x26
+     'Distribution'                     x9
+     'anellus arms'                     x5
+     'gnathos'                          x5
+     'Altitude'                         x5
+     'head, thorax, and tegulae'        x4
+  -> 6 missing traits explain 54 of 173 misses (31%) — scattered; no single cause
+
+  full miss detail saved -> Ustjuzhanin2024_misses.csv, Ustjuzhanin2024_misses_summary.json (173 row(s))
+
+measurementType COVERAGE
+  measurementType                                  gt  pred   note
+  male genitalia and structures of the segment viii of the male abdomen    0     1   PRED-ONLY
+  genitalia and structures of the segment viii of the male abdomen    0     1   PRED-ONLY
+  adult                                             0     6   PRED-ONLY
+  appearance of the adult moth                      0     1   PRED-ONLY
+  aedeagus                                          6    12   Δ+6 (split?)
+  cornuti in the aedeagus                           0     1   PRED-ONLY
+  male genitalia aedeagus                           0     8   PRED-ONLY
+  fringe on all lobes of the wings                  1     0   GT-ONLY
+  fringe on the lobes of all wings                  1     0   GT-ONLY
+  the fringe on the lobes of all wings              1     3   Δ+2 (split?)
+  fringe on all wings                               2     2   
+  all lobes of the wings                            1     3   Δ+2 (split?)
+  lobes of all wings                                1     1   
+  all wings                                         1     1   
+  altitude                                         41    27   Δ-14 (split?)
+  papillae anales                                   5     4   Δ-1 (split?)
+  anellus arms                                      6     5   Δ-1 (split?)
+  male genitalia anellus arms                       0     8   PRED-ONLY
+  antenna                                           1     1   
+  antennae                                          8     8   
+  basal area of antennae                            0     1   PRED-ONLY
+  antrum                                            5     5   
+  ductus between the ductus seminalis and antrum    1     4   Δ+3 (split?)
+  female genitalia antrum                           0     5   PRED-ONLY
+  lower portion of the antrum                       1     1   
+  medium portion of the antrum                      1     1   
+  length of the apical dark-brown portion of scales on the first and second lobes of the fore wing    0     2   PRED-ONLY
+  apical dark brown portion on the first lobe       0     1   PRED-ONLY
+  apices of valves                                  0     1   PRED-ONLY
+  valves’ apices                                    0     1   PRED-ONLY
+  apophyses                                         1     1   
+  female genitalia posterior apophyses              0     5   PRED-ONLY
+  posterior apophyses                               4     1   Δ-3 (split?)
+  appearance                                        0     1   PRED-ONLY
+  external appearance                               0     1   PRED-ONLY
+  wings’ basal areas                                1     1   
+  male genitalia gnathos arms                       0     5   PRED-ONLY
+  gnathos arms                                      4     1   Δ-3 (split?)
+  distal band on the fore wing                      0     2   PRED-ONLY
+  medial band                                       1     1   
+  band in the medial portion of the wing            0     1   PRED-ONLY
+  basal portion of the sacculus                     1     1   
+  small dark brown patches                          0     1   PRED-ONLY
+  indistinct pale brown regions of scales           0     1   PRED-ONLY
+  bursa                                             1     1   
+  bursa copulatrix                                  3     8   Δ+5 (split?)
+  female genitalia bursa copulatrix                 0     2   PRED-ONLY
+  small signa in bursa copulatrix                   0     1   PRED-ONLY
+  surface of bursa copulatrix                       0     1   PRED-ONLY
+  wing colour                                       0     2   PRED-ONLY
+  wing colouration                                  0     1   PRED-ONLY
+  colouration of the wings                          0     1   PRED-ONLY
+  cornuti                                           1     1   
+  cornutus                                          1     1   
+  distal half of the costa of the first lobe of the hindwing    0     1   PRED-ONLY
+  distal half of the fore wings                     0     1   PRED-ONLY
+  distal portion                                    1     1   
+  distinguishing feature                            0     1   PRED-ONLY
+  distribution                                     13     8   Δ-5 (split?)
+  ductus                                            4     5   Δ+1 (split?)
+  ductus seminalis                                  2     3   Δ+1 (split?)
+  ductus widens                                     1     0   GT-ONLY
+  female genitalia                                  0     8   PRED-ONLY
+  female genitalia signa                            0     1   PRED-ONLY
+  female genitalia signum                           0     2   PRED-ONLY
+  first lobe on the fore wing                       1     2   Δ+1 (split?)
+  first lobe of fore wings                          0     1   PRED-ONLY
+  flight period                                     0     7   PRED-ONLY
+  fore wing                                         2     2   
+  fore wings                                        3     4   Δ+1 (split?)
+  forehead                                          1     1   
+  inner portion of the fork                         1     1   
+  outer portion of this fork                        1     1   
+  fringe on the wings                               2     2   
+  fringes on the hind wings                         1     1   
+  male genital structure                            0     4   PRED-ONLY
+  genital structures                                0     1   PRED-ONLY
+  genitalia                                         0     9   PRED-ONLY
+  male genitalia gnathos                            0     7   PRED-ONLY
+  male genitalia                                    0     7   PRED-ONLY
+  male genitalia saccus                             0     6   PRED-ONLY
+  male genitalia uncus                              0     8   PRED-ONLY
+  male genitalia valves                             0     8   PRED-ONLY
+  gnathos                                           6    10   Δ+4 (split?)
+  habitat type                                     26     2   Δ-24 (split?)
+  head                                              1     5   Δ+4 (split?)
+  head, thorax, and tegulae                         5     1   Δ-4 (split?)
+  head and thorax                                   2     2   
+  hind legs                                         8     8   
+  lobes of the hind wings                           1     1   
+  hind wing                                         0     1   PRED-ONLY
+  hind wings                                        4    11   Δ+7 (split?)
+  holotype wingspan                                 4     0   GT-ONLY
+  labial palpi                                     10    16   Δ+6 (split?)
+  latitude                                          0     3   PRED-ONLY
+  lobes                                             0     2   PRED-ONLY
+  type locality                                     0     4   PRED-ONLY
+  location                                          0     7   PRED-ONLY
+  longitude                                         0     3   PRED-ONLY
+  nape                                              0     1   PRED-ONLY
+  notch in the top of the uncus                     0     1   PRED-ONLY
+  notch on the top of the uncus                     0     1   PRED-ONLY
+  paratypes                                         0     2   PRED-ONLY
+  saccus                                            6    11   Δ+5 (split?)
+  scape                                             0     1   PRED-ONLY
+  third segment                                     4     5   Δ+1 (split?)
+  segment viii                                      0     1   PRED-ONLY
+  signa                                             0     2   PRED-ONLY
+  signum                                            0     1   PRED-ONLY
+  tegulae                                           0     6   PRED-ONLY
+  thorax and tegulae                                2     2   
+  thorax                                            0     4   PRED-ONLY
+  uncus                                             6     5   Δ-1 (split?)
+  valves                                            6    10   Δ+4 (split?)
+  wings                                             9    21   Δ+12 (split?)
+  wingspan                                          9    22   Δ+13 (split?)
+
+  UNRESOLVED NEAR-MISSES (similar wording, NOT credited — these cost you both a miss and a spurious row)
+    gt 'fringe on the lobes of all wings' vs pred 'first lobe of fore wings'         sim=0.71
+    gt 'fringe on all lobes of the wings' vs pred 'lobes'                            sim=0.70
+    gt 'holotype wingspan'                vs pred 'colouration of the wings'         sim=0.60
+
+SCORES BY CATEGORY
+  category        P      R     F1     TP    FP    FN   key
+  core        0.271  0.288  0.279     70   188   173   id+type+value
+             (174 more spurious row(s) set aside as out-of-scope; strict P would be 0.162)
+  tags        0.000  0.000  0.000      0   258   243   basis+id+type+value+stat+sex+stage
+             (174 more spurious row(s) set aside as out-of-scope; strict P would be 0.000)
+             (F1 -0.279 vs previous)
+             note: only 39/70 matched row(s) had any of basis/stat/sex/stage populated on both sides — the rest agree by being empty
