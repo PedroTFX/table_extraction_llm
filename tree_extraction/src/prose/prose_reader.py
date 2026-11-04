@@ -50,6 +50,11 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                      described place it names? A sure yes adds the place's characteristics to S once
                      per mention (one per record), except what the record itself gives (its altitude).
                      Ustjuzhanin2024's GT 'habitat type' comes from these site descriptions.
+                     Before joining: Q-SITE per place (one described site, or a country / province /
+                     mountain / museum: only a sure site joins) and Q-ENV per place fact (the
+                     conditions there, or which species live there, records, history: only sure
+                     conditions are carried). Without them the first run joined 'Mount Cameroon hosts
+                     ...' (211 rows), provinces and 'China'.
                      v5: Q-TRAIT is asked on the name written out with the paper's abbreviations
                      ('hl/hw' alone was 'not a characteristic'; 21 HL/HW rows were dropped)
   facts    (nimble)  Q-OWNER  a fact whose who names another organism than the account's:
@@ -389,6 +394,15 @@ LISTED = {"list": "as a list of separate items one after another, each with its 
 Q_PLACE = "Does this passage give records of {s} from the place '{n}' that the paper describes?"
 PLACE = {"yes": "yes: specimens or observations of {s} come from '{n}' (the passage names it as where they were found)",
          "no": "no: '{n}' is named here for something else, or it is another place with a similar name"}
+Q_SITE = "What is '{n}' in this paper?"
+SITE = {"site": "one collecting or observation site the paper describes: a camp, station, plot, trail or locality "
+                "with its own habitat, altitude or coordinates",
+        "area": "something larger or different: a country, province, region, island or mountain as a whole, a "
+                "museum or collection, or a place the paper only names"}
+Q_ENV = "What does '{what}: {value}' say about the place '{n}'?"
+ENV = {"env": "the conditions at the place: its habitat, vegetation, forest type, altitude, coordinates or climate",
+       "other": "something else: which organisms live or were found there, records, history, its size or "
+                "importance, or where it lies within a larger area"}
 Q_TRAIT = "What does '{what}' tell about an organism?"
 TRAIT = {"trait": "a characteristic of the organism: its body, size, measurements, colour, structures or genitalia, "
                   "its life, behaviour, habitat, food or hosts, its distribution, or the places or altitudes where it lives or was found",
@@ -556,7 +570,23 @@ def stage_facts(papers):
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
         pf = OUT / "places" / f"{p}.json"
         places = json.loads(pf.read_text(encoding="utf-8"))["places"] if pf.exists() else {}
-        joins = []                                         # v5: Q-PLACE, records joined to described places
+        joins, sites = [], {}                              # v5: Q-PLACE, records joined to described places
+        for name, pfacts in list(places.items()):          # Q-SITE per place, Q-ENV per place fact
+            desc = "; ".join(f"{x['what']}: {x['value']}" for x in pfacts)[:500]
+            st = f"A scientific paper about organisms describes the place '{name}': {desc}."
+            ch, pr = ask(st, Q_SITE.format(n=name), dict(SITE))
+            sites[name] = {"choice": ch, "probs": pr, "site": duels.sure(ch, pr, "site") == "site", "env": {}}
+            if not sites[name]["site"]:
+                places.pop(name)
+                continue
+            keep = []
+            for x in pfacts:
+                ch, pr = ask(st, Q_ENV.format(what=x["what"], value=x["value"][:150], n=name), dict(ENV))
+                sites[name]["env"][f"{x['what']}: {x['value'][:60]}"] = [ch, pr]
+                if duels.sure(ch, pr, "env") == "env":
+                    keep.append(x)
+            places[name] = keep
+        places = {k: v for k, v in places.items() if v}
         for u in rd["passages"]:
             s = span.get(u["id"])
             if u["kind"] != "para" or not s or shape.get(u["id"]) == "caption":
@@ -618,7 +648,8 @@ def stage_facts(papers):
             ch, pr = ask(st, Q_METHOD.format(m=sp["method"], n=n), crit)
             methods[n] = {"choice": ch, "probs": pr, "keep": duels.sure(ch, pr, "how") == "how"}
         f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait, "labels": labels,
-                                 "methods": methods, "joins": joins}, indent=1, ensure_ascii=False), encoding="utf-8")
+                                 "methods": methods, "joins": joins, "sites": sites}, indent=1, ensure_ascii=False),
+                     encoding="utf-8")
         kept = sum(1 for x in facts if x["owner"] and not x["why"])
         print(f"  [facts] {p:20s} {len(facts)} facts, {len(owners) // 2} owner questions, {len(trait)} names asked: "
               f"{kept} kept; labels naming a body part: {[k for k, v in labels.items() if v['part']]} "
