@@ -32,6 +32,11 @@ Code cuts the text into passages and keeps the paper's order; the models read an
                                 against 'none' (the study, several organisms, a key couplet, a
                                 figure caption); not sure opens no account
                      A passage that names no organism and is not a heading stays in the account.
+  v6 (speed): shape runs before the reading, which leaves out captions (they give no facts) and list
+           passages (read only item by item in the items stage, their names taken from the items);
+           gemma requests go out GEMMA_PARALLEL at a time (in order, the same answers); a re-read's
+           new facts are tagged, and assembly also writes prose_no_reread/ to measure what they add.
+           Stage order: abbrev shape read items names heads walk places facts assemble.
   shape    (nimble)  v4, per paragraph: Q-CAPTION (a figure / table caption gives no facts: v3 read
                      'aedeagus = 17–20' from 'Figures 15–20 ... 17–20 aedeagus'), then Q-LIST (running
                      description, or a list of separate items: records, localities, sites, hosts)
@@ -88,6 +93,7 @@ import contextlib
 import csv
 import io
 import json
+import os
 import re
 import sys
 import time
@@ -99,10 +105,10 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-PREV_OUT = _paths.OUTPUT / "prose_v4"
-OUT = _paths.OUTPUT / "prose_v5"      # v5: places the paper describes joined to the records naming them;
-                                      #     Q-TRAIT asked on the written-out name
-REUSED = ("abbrev", "read", "names", "shape", "read2", "walk")   # from v4 (reading, lists, heads, walk)
+PREV_OUT = _paths.OUTPUT / "prose_v5"
+OUT = _paths.OUTPUT / "prose_v6"      # v6 (speed): shape first, so captions are not read and lists are read
+                                      #     only item by item; gemma requests in parallel (GEMMA_PARALLEL)
+REUSED = ("abbrev",)                  # the abbreviations' code path is unchanged; everything else reruns
 V18 = _paths.OUTPUT / "full_run_v18"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
@@ -223,6 +229,20 @@ def gemma(prompt, schema, timeout=900):
             time.sleep(10 * (attempt + 1))
 
 
+GEMMA_PARALLEL = int(os.environ.get("GEMMA_PARALLEL", "1"))   # v6: requests sent to the one gemma at once
+
+
+def gemma_many(prompts, schema):
+    """gemma on independent prompts, answers in the prompts' order. With GEMMA_PARALLEL > 1 they are sent
+    together to the same model (Ollama serves them in parallel only when OLLAMA_NUM_PARALLEL allows it;
+    otherwise it queues them and nothing changes)."""
+    if GEMMA_PARALLEL <= 1 or len(prompts) < 2:
+        return [gemma(q, schema) for q in prompts]
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(GEMMA_PARALLEL) as ex:
+        return list(ex.map(lambda q: gemma(q, schema), prompts))
+
+
 def printed(phrase, text):
     """The phrase's words printed in this order, anything but letters / digits between them."""
     return bool(v1._printed(str(phrase or ""), text))
@@ -256,8 +276,8 @@ def stage_abbrev(papers):
             cur += u["text"] + "\n\n"
         chunks += [cur] if cur else []
         kept, dropped = {}, []
-        for ch in chunks:
-            for e in gemma(ABBREV.format(text=ch), ABBREV_SCHEMA).get("abbreviations", []):
+        for ch, got in zip(chunks, gemma_many([ABBREV.format(text=c) for c in chunks], ABBREV_SCHEMA)):
+            for e in got.get("abbreviations", []):
                 a, m = " ".join(str(e.get("abbreviation") or "").split()), " ".join(str(e.get("meaning") or "").split())
                 if a and m and re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", ch) and printed(m, ch) \
                         and a.lower() != m.lower():
@@ -304,20 +324,25 @@ def stage_read(papers):
         t0 = time.time()
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
         ps = passages(p)
+        sf = OUT / "shape" / f"{p}.json"                   # v6: shape decided first; a caption gives no facts
+        shape = json.loads(sf.read_text(encoding="utf-8"))["shape"] if sf.exists() else {}   # and a list is
+        todo = [u for u in ps if shape.get(u["id"]) not in ("caption", "list")]               # read item by item
         groups, cur = [], []
-        for u in ps:
+        for u in todo:
             if cur and sum(len(x["text"]) for x in cur) + len(u["text"]) > READ_CHARS:
                 groups.append(cur)
                 cur = []
             cur.append(u)
         groups += [cur] if cur else []
-        res = {}
+        res, prompts = {}, []
         for g in groups:
             text = "\n\n".join(f"[{u['id']}] " + ("(heading) " if u["kind"] == "heading" else "") + u["text"] for u in g)
             used = {a: m for a, m in abbr.items() if re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", text)}
             where = f"They follow the heading '{g[0]['heading'][:120]}'." if g[0]["kind"] == "para" and g[0]["heading"] else ""
             ab = ("The paper defines these abbreviations: " + "; ".join(f"{a} = {m}" for a, m in used.items()) + ".\n") if used else ""
-            got = gemma(READ.format(where=where, abbrevs=ab, passages=text), READ_SCHEMA).get("passages", [])
+            prompts.append(READ.format(where=where, abbrevs=ab, passages=text))
+        for g, out in zip(groups, gemma_many(prompts, READ_SCHEMA)):
+            got = out.get("passages", [])
             by_id = {u["id"]: u for u in g}
             for x in got:
                 u = by_id.get(str(x.get("id") or "").strip("[] "))
@@ -685,9 +710,8 @@ def stage_shape(papers):
         if f.exists():
             continue
         t0 = time.time()
-        rd = json.loads((OUT / "read" / f"{p}.json").read_text(encoding="utf-8"))
         shape, log = {}, {}
-        for u in rd["passages"]:
+        for u in passages(p):                              # v6: before the reading, so it can skip captions
             if u["kind"] != "para":
                 continue
             under = f", under the heading '{u['heading'][:100]}'," if u["heading"] else ""
@@ -775,43 +799,59 @@ def stage_items(papers):
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
         read, log = rd["read"], {}
         n_items = n_reread = n_added = 0
-        for u in rd["passages"]:
+
+        def work(u):
+            """One passage's gemma work -> (new read entry or None, log entry or None); shared state only read."""
             pid, kind = u["id"], shape.get(u["id"])
             where = f"They follow the heading '{u['heading'][:120]}'." if u["heading"] else ""
             if kind == "list":
                 items = [" ".join(str(x).split()) for x in gemma(ITEMS.format(text=u["text"]), ITEMS_SCHEMA).get("items", [])]
                 items = [x for x in dict.fromkeys(items) if x and printed(x, u["text"])]
-                if len(items) < 2:
-                    log[pid] = {"items": len(items), "kept": "passage reading"}
-                    continue
-                new = {"names": list(read.get(pid, {}).get("names", [])), "facts": [], "dropped": []}
+                if len(items) < 2:                          # v6: lists are not in the passage reading, so
+                    r = read_units([(pid, u["text"])], abbr, where).get(pid)   # read it whole here
+                    return (r or {"names": [], "facts": [], "dropped": []}), {"items": len(items), "kept": "passage reading"}
+                new = {"names": [], "facts": [], "dropped": []}
                 for k in range(0, len(items), ITEMS_PER_CALL):
                     units = [(f"{pid}#{k + j}", t) for j, t in enumerate(items[k:k + ITEMS_PER_CALL])]
                     for r in read_units(units, abbr, where + " They are items of one list in the paper.").values():
+                        new["names"] += [n for n in r["names"] if n not in new["names"]]
                         new["facts"] += r["facts"]
                         new["dropped"] += r["dropped"]
-                log[pid] = {"items": len(items), "facts_before": len(read.get(pid, {}).get("facts", [])),
-                            "facts_after": len(new["facts"])}
-                read[pid] = new
-                n_items += len(items)
-            elif kind == "text" and pid in read:
-                nums = [_num(x) for x in NUMS.findall(u["text"])]
-                vals = " | ".join(_num(fa["value"]) for fa in read[pid]["facts"] + read[pid]["dropped"])
-                unused = [x for x in nums if x not in vals]
-                if len(unused) < 3 or len(unused) < 0.3 * len(nums):
-                    continue
-                have = {(fa["what"].lower(), fa["value"]) for fa in read[pid]["facts"]}
-                added = 0
-                for r in read_units([(f"{pid}h{j}", t) for j, t in enumerate(_halves(u["text"]))], abbr, where).values():
-                    for fa in r["facts"]:
-                        if (fa["what"].lower(), fa["value"]) not in have:
-                            have.add((fa["what"].lower(), fa["value"]))
-                            read[pid]["facts"].append(fa)
-                            added += 1
-                    read[pid]["dropped"] += [x for x in r["dropped"] if x["why"] == "who not printed in the passage"]
-                log[pid] = {"reread": True, "unused_numbers": len(unused), "of": len(nums), "added": added}
-                n_reread += 1
-                n_added += added
+                return new, {"items": len(items), "facts_after": len(new["facts"])}
+            if kind != "text" or pid not in read:
+                return None, None
+            nums = [_num(x) for x in NUMS.findall(u["text"])]
+            vals = " | ".join(_num(fa["value"]) for fa in read[pid]["facts"] + read[pid]["dropped"])
+            unused = [x for x in nums if x not in vals]
+            if len(unused) < 3 or len(unused) < 0.3 * len(nums):
+                return None, None
+            have = {(fa["what"].lower(), fa["value"]) for fa in read[pid]["facts"] + read[pid]["dropped"]}
+            new = {"names": list(read[pid]["names"]), "facts": list(read[pid]["facts"]), "dropped": list(read[pid]["dropped"])}
+            added = 0
+            for r in read_units([(f"{pid}h{j}", t) for j, t in enumerate(_halves(u["text"]))], abbr, where).values():
+                for fa in r["facts"] + [x for x in r["dropped"] if x["why"] == "who not printed in the passage"]:
+                    if (fa["what"].lower(), fa["value"]) not in have:
+                        have.add((fa["what"].lower(), fa["value"]))
+                        (new["facts"] if fa in r["facts"] else new["dropped"]).append(dict(fa, reread=True))
+                        added += 1                          # v6: tagged, so what re-reads recover can be measured
+            return new, {"reread": True, "unused_numbers": len(unused), "of": len(nums), "added": added}
+
+        todo = [u for u in rd["passages"] if shape.get(u["id"]) in ("list", "text")]
+        if GEMMA_PARALLEL > 1:
+            from concurrent.futures import ThreadPoolExecutor
+            with ThreadPoolExecutor(GEMMA_PARALLEL) as ex:
+                done = list(ex.map(work, todo))
+        else:
+            done = [work(u) for u in todo]
+        for u, (new, lg) in zip(todo, done):              # applied in the passages' order
+            if new is not None:
+                read[u["id"]] = new
+            if lg:
+                log[u["id"]] = lg
+                n_items += lg.get("items", 0) if "facts_after" in lg else 0
+                if lg.get("reread"):
+                    n_reread += 1
+                    n_added += lg["added"]
         f.write_text(json.dumps({"passages": rd["passages"], "read": read, "log": log}, indent=1, ensure_ascii=False),
                      encoding="utf-8")
         print(f"  [items] {p:20s} {sum(1 for v in shape.values() if v == 'list')} list passages, {n_items} items; "
@@ -946,14 +986,15 @@ def stage_names(papers):
         if f.exists():
             continue
         t0 = time.time()
-        rd = json.loads((OUT / "read" / f"{p}.json").read_text(encoding="utf-8"))
+        rd = load_read(p)                                  # v6: after the items stage (list items' facts)
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
         parts = list(dict.fromkeys(x.strip() for _pid, fa in read_facts(rd)
                                    for x in spelled(fa["what"], abbr).split("/") if x.strip()))
         split, calls = {}, 0
-        for i in range(0, len(parts), 40):
+        batches = [parts[i:i + 40] for i in range(0, len(parts), 40)]
+        for out in gemma_many([NAMES.format(names="\n".join(b)) for b in batches], NAMES_SCHEMA):
             calls += 1
-            got = gemma(NAMES.format(names="\n".join(parts[i:i + 40])), NAMES_SCHEMA).get("names", [])
+            got = out.get("names", [])
             for e in got:
                 n, t, m = (" ".join(str(e.get(k) or "").split()) for k in ("name", "trait", "method"))
                 if n in parts and t and m and printed(t, n) and printed(m, n) and t.lower() != n.lower():
@@ -1030,13 +1071,14 @@ def stage_assemble(papers):
         ps = passages(p)
         by_id = {u["id"]: u for u in ps}
         part = {k for k, v in fx.get("labels", {}).items() if v["part"]}
-        rows, seen = [], set()
+        rows, seen, reread = [], set(), []                 # reread[i]: row i came only from a re-read (v6)
 
-        def add(r):
+        def add(r, rr=False):
             k = tuple(r.values())
             if k not in seen:
                 seen.add(k)
                 rows.append(r)
+                reread.append(rr)
 
         n_field = 0
         sf = OUT / "shape" / f"{p}.json"
@@ -1049,8 +1091,9 @@ def stage_assemble(papers):
                 r = dict(_row(dict(x, what=trait)), measurementMethod=method)
                 if shape.get(x["passage"]) == "list" or x.get("record"):   # v4: each item is its own record: 17 records
                     rows.append(r)                          # at '920 m' are 17 rows, not one
+                    reread.append(bool(x.get("reread")))
                 else:
-                    add(r)
+                    add(r, bool(x.get("reread")))
         done = set()                                       # v2: one row per body-part field, the whole text
         for u in ps:
             b = u["block"]
@@ -1062,6 +1105,7 @@ def stage_assemble(papers):
                      "measurementValue": u["field"], "measurementUnit": "", "measurementStatistic": "", "sex": ""})
                 n_field += 1
         _write(OUT / "prose" / p / f"{p}.csv", rows)
+        _write(OUT / "prose_no_reread" / p / f"{p}.csv", [r for r, rr in zip(rows, reread) if not rr])   # v6
         old = V18 / p / f"{p}.csv"
         prev = list(csv.DictReader(open(old, encoding="utf-8", newline=""))) if old.exists() else []
         _write(OUT / "combined" / p / f"{p}.csv", prev + rows)
@@ -1069,7 +1113,7 @@ def stage_assemble(papers):
 
 
 def setup():
-    """v5 reuses v4's abbreviations, reading, name splits, shapes, list items, heading names and walk."""
+    """v6 reuses v5's abbreviations (unchanged code path)."""
     import shutil
     for d in REUSED:
         if not (OUT / d).exists() and (PREV_OUT / d).exists():
@@ -1120,7 +1164,7 @@ STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "wal
           "facts": stage_facts,
           "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
-ALL = ["abbrev", "read", "names", "shape", "items", "heads", "walk", "places", "facts", "assemble"]
+ALL = ["abbrev", "shape", "read", "items", "names", "heads", "walk", "places", "facts", "assemble"]
 
 
 def papers_of(args):
