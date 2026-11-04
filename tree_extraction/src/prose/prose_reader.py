@@ -116,10 +116,21 @@ sys.path.insert(1, str(Path(__file__).resolve().parent.parent / "v18"))
 import decoder as v1                 # noqa: E402  (GEMMA, NIMBLE, unload, _printed)
 import duels                         # noqa: E402
 
-PREV_OUT = _paths.OUTPUT / "prose_v7"
-OUT = _paths.OUTPUT / "prose_v7a"     # v7a: v7 with one change: the reading's answers as named fields
-                                      #     ({what, value} + sex / who only when stated) with one worked
-                                      #     example per prompt, instead of [who, sex, what, value] by position
+# The v7 line, one change at a time (PROSE_VARIANT; each in output/prose_<variant>):
+#   v7a  the reading's answers as named fields ({what, value} + sex / who only when stated) with one
+#        worked example per prompt, instead of [who, sex, what, value] by position
+#   v7b  + descriptions copied in full (the whole clause with its qualifiers) and sex always answered
+#        ("" when not stated: v7a's optional sex was left out of every Xu2024 / Ustjuzhanin2024 record)
+#   v7c  + a list's items cut from their start words (gemma gives each item's first six words, code cuts
+#        in order) instead of gemma copying every item out
+#   v7d  + a malformed answer (a fact without what / value, a passage id missing) asked again once with
+#        a format reminder, kept apart from the evidence re-reads T1-T3
+VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "pointers"),
+            "v7d": ("clauses", "sex", "pointers", "retry")}
+VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
+FL = set(VARIANTS[VARIANT])
+PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v7a")
+OUT = _paths.OUTPUT / f"prose_{VARIANT}"
 REUSED = ("abbrev", "shape", "read", "walk", "field")   # v7's names, species tracking and Q-FIELD
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
 # accounts with a focused question and a short answer, re-reads only on evidence (prose_v7)
@@ -1111,34 +1122,124 @@ READ7_SCHEMA = {"type": "object", "required": ["passages"], "properties": {"pass
         "properties": {k: {"type": "string"} for k in ("what", "value", "sex", "who")}}}}}}}}
 
 
+def tpl7(t):
+    """The v7a prompt with this variant's changes (v7b: sex always answered, descriptions in full)."""
+    if "sex" in FL:
+        t = (t.replace('"sex": "male" or "female" only when', '"sex": "male" or "female" when')
+              .replace("; leave it out otherwise", ', "" when it does not say (always give it)')
+              .replace('{{"what": "', '{{"sex": "", "what": "'))
+    if "clauses" in FL:
+        t = t.replace("- value: what the text says about it, COPIED exactly\n",
+                      "- value: what the text says about it, COPIED exactly and in full: the whole clause with its "
+                      "qualifiers, not a shortened part\n")
+    return t
+
+
+def schema7():
+    if "sex" not in FL:
+        return READ7_SCHEMA
+    s = json.loads(json.dumps(READ7_SCHEMA))
+    s["properties"]["passages"]["items"]["properties"]["facts"]["items"]["required"] = ["what", "value", "sex"]
+    return s
+
+
+RETRY_NOTE = ("\nYour previous answer to this was not valid. Give every passage or item id listed, and every fact "
+              "as an object with \"what\" and \"value\".")
+
+
 def read7(prompt_tpl, units, s, abbr, where, what="passages"):
-    """gemma on [(id, text)] with a compact answer ([who, sex, what, value] per fact) -> {id: (facts, dropped)};
-    values and names checked printed in their own unit (as stage_read does), the unit split off later."""
+    """gemma on [(id, text)] with named fields per fact -> {id: (facts, dropped)}; values and names checked
+    printed in their own unit (as stage_read does), the unit split off later. v7d: units whose answer was
+    malformed or missing are asked again once with a format reminder (a format failure, not a re-read)."""
     text = "\n\n".join(f"[{i}] {t}" for i, t in units)
     used = {a: m for a, m in abbr.items() if re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", text)}
     ab = ("The paper defines these abbreviations: " + "; ".join(f"{a} = {m}" for a, m in used.items()) + ".\n") if used else ""
-    got = gemma(prompt_tpl.format(what=what, s=s, where=where, abbrevs=ab, passages=text), READ7_SCHEMA).get("passages", [])
-    by_id, res = dict(units), {i: ([], []) for i, _t in units}
-    for x in got:
-        i = str(x.get("id") or "").strip("[] ")
-        if i not in by_id:
+    by_id = dict(units)
+
+    def parse(got):
+        res, bad = {}, set()
+        for x in got:
+            i = str(x.get("id") or "").strip("[] ")
+            if i not in by_id:
+                continue
+            r = res.setdefault(i, ([], []))
+            for row in x.get("facts") or []:
+                if not isinstance(row, dict):              # v7a: named keys; anything else is a format failure,
+                    GEN["malformed facts"] += 1            # never read by position
+                    bad.add(i)
+                    continue
+                fa = {k: " ".join(str(row.get(k) or "").split()) for k in ("who", "sex", "what", "value")}
+                fa["unit"] = ""
+                if not fa["what"] or not fa["value"]:
+                    GEN["malformed facts"] += 1
+                    bad.add(i)
+                    continue
+                if not printed(fa["value"], by_id[i]):
+                    r[1].append(dict(fa, why="value not printed in the passage"))
+                elif fa["who"] and not printed(fa["who"], by_id[i]):
+                    r[1].append(dict(fa, why="who not printed in the passage"))
+                else:
+                    r[0].append(fa)
+        return res, bad | (set(by_id) - set(res))
+
+    prompt = tpl7(prompt_tpl).format(what=what, s=s, where=where, abbrevs=ab, passages=text)
+    res, bad = parse(gemma(prompt, schema7()).get("passages", []))
+    if "retry" in FL and bad:                              # v7d: format retry, only the failed units
+        GEN["format retries"] += 1
+        sub = [(i, t) for i, t in units if i in bad]
+        sub_text = "\n\n".join(f"[{i}] {t}" for i, t in sub)
+        again, _bad2 = parse(gemma(tpl7(prompt_tpl).format(what=what, s=s, where=where, abbrevs=ab, passages=sub_text)
+                                   + RETRY_NOTE, schema7()).get("passages", []))
+        for i, r in again.items():
+            if r[0] or r[1]:
+                GEN["format retry units recovered"] += 1
+                res[i] = r
+    return {i: res.get(i, ([], [])) for i, _t in units}
+
+
+STARTS = """The passage below, from a scientific paper about organisms, lists separate items one after another (for example specimens or records, localities, entries). For EACH item give its first six words, copied exactly as printed, in order. Leave none out and do not merge items.
+
+Passage:
+{text}
+
+Reply with JSON only."""
+STARTS_SCHEMA = {"type": "object", "required": ["starts"], "properties": {"starts": {"type": "array", "items": {"type": "string"}}}}
+
+
+def list_items(u):
+    """A list passage's items -> (items, log). v7c: gemma gives each item's first six words; code finds them
+    in order (each searched from the end of the one before, so repeated starts such as '1♂, Lingshui, ...'
+    resolve one by one) and cuts the passage there; an item runs to the next item's start. A start not
+    found is logged, never matched loosely; fewer than 2 found falls back to gemma copying the items out.
+    Earlier variants: gemma copies every item out (as v4)."""
+    text, log = u["text"], collections.Counter()
+
+    def copied():
+        items = [" ".join(str(x).split()) for x in gemma(ITEMS.format(text=text), ITEMS_SCHEMA).get("items", [])]
+        return [x for x in dict.fromkeys(items) if x and printed(x, text)]
+
+    if "pointers" not in FL:
+        return copied(), log
+    starts = [" ".join(str(x).split()) for x in gemma(STARTS.format(text=text), STARTS_SCHEMA).get("starts", [])]
+    pos, cuts = 0, []
+    for a in starts:
+        words = re.findall(r"[^\W_]+", a)
+        log["starts"] += 1
+        if not words:
+            log["empty starts"] += 1
             continue
-        for row in x.get("facts") or []:
-            if not isinstance(row, dict):                  # v7a: named keys; anything else is a format failure,
-                GEN["malformed facts"] += 1                # never read by position
-                continue
-            fa = {k: " ".join(str(row.get(k) or "").split()) for k in ("who", "sex", "what", "value")}
-            fa["unit"] = ""
-            if not fa["what"] or not fa["value"]:
-                GEN["malformed facts"] += 1
-                continue
-            if not printed(fa["value"], by_id[i]):
-                res[i][1].append(dict(fa, why="value not printed in the passage"))
-            elif fa["who"] and not printed(fa["who"], by_id[i]):
-                res[i][1].append(dict(fa, why="who not printed in the passage"))
-            else:
-                res[i][0].append(fa)
-    return res
+        m = re.compile(r"[\W_]+".join(map(re.escape, words)), re.I).search(text, pos)
+        if not m:
+            log["starts not found"] += 1
+            continue
+        cuts.append(m.start())
+        pos = m.end()
+    if len(cuts) < 2:
+        log["fell back to copying"] += 1
+        return copied(), log
+    log["intro characters"] += cuts[0]
+    items = [text[a:b].strip(" ;,•\n") for a, b in zip(cuts, cuts[1:] + [len(text)])]
+    return [x for x in items if x], log
 
 
 def stage_read7(papers):
@@ -1207,8 +1308,8 @@ def stage_read7(papers):
         n_items = 0
         for u in (x for x in inside if shape.get(x["id"]) == "list"):
             s, pid = span[u["id"]], u["id"]
-            items = [" ".join(str(x).split()) for x in gemma(ITEMS.format(text=u["text"]), ITEMS_SCHEMA).get("items", [])]
-            items = [x for x in dict.fromkeys(items) if x and printed(x, u["text"])]
+            items, plog = list_items(u)                    # v7c: cut from start words, or copied out
+            trig.update({f"pointers: {k}": v for k, v in plog.items()})
             if len(items) < 2:
                 got = read7(DESCRIBE7, [(pid, u["text"])], s, abbr, under(u))[pid]
                 put(pid, *got)
@@ -1398,7 +1499,8 @@ def stage_assemble(papers):
 
 
 def setup():
-    """v7a reuses v7's abbreviations, shapes, names, species tracking and Q-FIELD (unchanged code paths)."""
+    """Each v7 variant reuses the abbreviations, shapes, names, species tracking and Q-FIELD (unchanged code
+    paths): v7a from v7, v7b-v7d from v7a."""
     import shutil
     for d in REUSED:
         if not (OUT / d).exists() and (PREV_OUT / d).exists():
