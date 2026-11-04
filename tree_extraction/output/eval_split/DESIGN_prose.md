@@ -154,3 +154,27 @@ Accounts: Xia2022 29 -> 16 (T. acerosus 13 -> 65 rows; the synonym T. baoxingens
 gone), Xu2024 22 -> 11, Ustjuzhanin2024 25 -> 16. Left: L. consentanea and L. semipunctata open a few
 passages late (their headings' start question was not sure); a key couplet opens 'A. potockyi' (20 rows);
 facts in differential diagnoses go to the compared species through Q-OWNER (A. megaphimus 8, A. chloracta 7).
+
+## Judged evaluation of v3 (2026-11-04, prose_scripts/judge_pairs.py + judge_match.py)
+
+The production scorer misses irregularities (dash styles, units, a leading 'is / are', trait names in
+other words), so the rows were also matched by judgement: same species (genus initial + epithet), value
+equal once format is set aside, and trait names judged the same. Every (GT name, our name) pair that
+shares a value was read by hand: 148 pairs, about 30 rejected as coincidences (e.g. 'Elytra Length' vs
+'width of elytra' with equal numbers, 'antennae' vs 'hind legs' both 'pale yellow'). Then near values
+for the same trait: GT typos in numbers (Xia2022 '9.02' printed '9.2', '1.95-.39' printed '1.95–2.39')
+count as matches; a value that is part of the other ('antennae = yellow' vs GT 'are yellow, with only the
+basal area ...') counts only in the lenient line. Precision counts only our extra rows whose trait the GT
+also has (as the scorer's scope does).
+
+| paper | scorer F1 | judged R / P / F1 | lenient (parts count) R / P / F1 |
+|---|---|---|---|
+| Xia2022 | 0.144 | 0.910 / 0.926 / **0.918** | 0.917 / 0.934 / 0.925 |
+| Xu2024 | 0.365 | 0.406 / 0.409 / **0.408** | 0.459 / 0.462 / 0.461 |
+| Ustjuzhanin2024 | 0.279 | 0.584 / 0.409 / **0.481** | 0.757 / 0.530 / 0.624 |
+
+What is left: Xia2022 misses HL/HW (21 rows, never read). Xu2024 misses 295 altitude records plus 66 GT
+rows with no trait name (also altitudes): the under-read 'Other material examined'. Ustjuzhanin2024 misses
+habitat type (26), altitude (14) and distribution (9) from Type material. Precision on Xu2024 and
+Ustjuzhanin2024 is understated: our part rows ('Elytra humeri') count against the GT's whole-field rows
+('Elytra morphology') of the same body part.
