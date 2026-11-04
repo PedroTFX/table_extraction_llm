@@ -575,10 +575,10 @@ def stage_facts(papers):
                 if not ok:
                     continue
                 for _ in range(k):                         # one set per mention: one per record
-                    for f in pfacts:
-                        if f["what"].lower() in own:       # the record's own value (its altitude) wins
+                    for pfa in pfacts:
+                        if pfa["what"].lower() in own:     # the record's own value (its altitude) wins
                             continue
-                        facts.append({"who": "", "sex": "", "what": f["what"], "value": f["value"], "unit": "",
+                        facts.append({"who": "", "sex": "", "what": pfa["what"], "value": pfa["value"], "unit": "",
                                       "passage": u["id"], "account": s, "owner": s, "why": "", "place": name,
                                       "record": True})
         whats = collections.defaultdict(list)
