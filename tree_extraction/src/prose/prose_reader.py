@@ -658,6 +658,12 @@ def stage_facts(papers):
             ch2, pr2 = ask(st, q, flip)
             return duels.sure(ch2, pr2, yes) == yes, ch2, pr2
 
+        if "clean" in FL:                                  # v8c: a place named inside another's description is the
+            for name in list(places):                      # larger area, not a site ('Bamboo Camp: Mount Cameroon (SW slope)')
+                if any(o != name and printed(name, " ".join(x["value"] for x in v)) for o, v in places.items()):
+                    sites[name] = {"site": False, "why": "named inside another place's description", "env": {}}
+            for name, v in sites.items():
+                places.pop(name, None)
         for name, pfacts in list(places.items()):          # Q-SITE per place, Q-ENV per place fact
             desc = "; ".join(f"{x['what']}: {x['value']}" for x in pfacts)[:500]
             st = f"A scientific paper about organisms describes the place '{name}': {desc}."
@@ -721,7 +727,7 @@ def stage_facts(papers):
             rank = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8")).get("rank", {})
             spk = {_key(n) for n, v in rank.items() if v.get("species")}
             for x in facts:
-                if x["owner"] and not x["why"] and _key(x["what"]) in spk:
+                if x["owner"] and not x["why"] and _key(x["what"]) in spk and len(x["what"].split()) == 2:
                     x["why"] = "the trait is a species name"
                     factq["species-name traits"] += 1
             # v8c: Q-COMP, facts from a sentence nimble called a comparison: only sure in both orders drops
@@ -736,8 +742,8 @@ def stage_facts(papers):
                 src = next((t for t in comp.get(x["passage"], []) if printed(x["value"], t)), None)
                 if not src:
                     continue
-                st = f"In the account of {x['owner']}, a scientific paper says:\n\"\"\"{src[:800]}\"\"\""
-                crit = {k: v.format(s=x["owner"]) for k, v in COMP.items()}
+                st = f"A scientific paper says about {x['owner']}: '{x['what']}: {x['value'][:200]}'."   # the fact alone:
+                crit = dict(COMP)                          # with its comparison sentence, real traits read as comparisons
                 factq["comparison facts asked"] += 1
                 ok, _ch, _pr = twice(st, Q_FACT.format(what=x["what"], value=x["value"][:150]), crit, "compare")
                 if ok:
