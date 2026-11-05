@@ -434,7 +434,7 @@ def view(t):
                     out.append(f"        ({fid} is of {fa['owner']})")
                     continue
                 pad = "        "
-                note = f"  <-- no row: {fa['why'] or fa['check']}" if fa.get("why") or fa["check"] == "not printed" else ""
+                note = f"  <-- no row: {fa.get('why') or fa['check']}" if fa.get("why") or fa["check"] == "not printed" else ""
                 for role in ROLES:
                     nid = fa["parts"].get(role)
                     if not nid:
@@ -457,6 +457,9 @@ def stage_treefinal(papers):
     for p in papers:
         f = OUT / "tree" / f"{p}.json"
         t = json.loads(f.read_text(encoding="utf-8"))
+        if t.get("count_final") is not None:               # decisions already written: only the view is left
+            (OUT / "tree_view" / f"{p}.txt").write_text(view(t), encoding="utf-8")
+            continue
         tr = Tree()
         tr.species, tr.phrases, tr.nodes, tr.facts = t["species"], t["phrases"], t["nodes"], t["facts"]
         c = collections.Counter()
