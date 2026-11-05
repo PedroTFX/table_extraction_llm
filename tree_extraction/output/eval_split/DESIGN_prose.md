@@ -435,3 +435,19 @@ beside it. No paper, row or value was looked at, and no model question changed.
 Micro rose past v5 while mean F1 did not (judged level, production lower): the gain weighs towards the papers with more rows, and the papers
 are not all better. Which one is not looked at. List items stayed below v5 (182 against 274), not explained here. The judged numbers
 use the automatic pairing, which is stricter than by hand.
+
+## The information tree: v9, v9b, t1 (2026-11-05, 3 dev papers)
+
+species (from the tracking) -> phrases (kept sentences, list items) -> nodes (type, unit, value, sex, ...), no fixed order, each node checked
+by itself. v9 / v9b (prose_tree.py) and t1 (prose_tree_t1.py, gemma reads the whole passage, code places the nodes) were built apart.
+
+| dev | v8d | v9 | v9b | t1 |
+|---|---|---|---|---|
+| automatic judged micro R / P / F1 | 0.855 / 0.664 / 0.747 | 0.825 / 0.659 / 0.733 | 0.836 / 0.653 / 0.733 | 0.834 / 0.651 / 0.731 |
+| lenient F1 | 0.788 | 0.774 | 0.774 | 0.775 |
+| production micro F1 | 0.475 | 0.443 | 0.442 | 0.453 |
+| rows | 2,083 | 2,034 | 2,075 | 2,134 |
+
+No tree beats v8d yet. GT values v8d has and they lack: t1 40, v9b 37, mostly Xu2024 record altitudes plus some Ustjuzhanin2024 description
+and habitat clauses; cause not yet traced. Known t1 bug: an item's place and coords nodes keep only the last one (latitude lost). Not hand-judged.
+Commit 6ed31abf overwrote v9 by mistake and crashed v9b at facts; restored in 3cb86290, v9b resumed from saved reading.
