@@ -127,7 +127,11 @@ import duels                         # noqa: E402
 #        a format reminder, kept apart from the evidence re-reads T1-T3
 VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "pointers"),
             "v7d": ("clauses", "sex", "pointers", "retry"),
-            "v8": ("clauses", "sex", "pointers", "retry", "sent")}
+            "v8": ("clauses", "sex", "pointers", "retry", "sent"),
+            "v8b": ("clauses", "sex", "pointers", "retry", "drop", "symbols")}
+#   v8b  v7d + only what worked in v8: passages read without the sentences nimble dropped (output/prose_sent), sex
+#        from an item's ♂ / ♀ (code); + a record's locality and coordinates on its rows, not rows of their own.
+#        Stages after the v7a reuse: heads read7 names facts assemble
 #   v8   + nimble sorts the sentences first (sentence_test.py, output/prose_sent): gemma reads only kept sentences
 #        in runs, a question per kind (read8); nimble checks each text fact against its source (Q-FACT);
 #        sex from an item's ♂ / ♀; rows keep their source in measurementRemarks. Order after the v7a reuse:
@@ -1263,6 +1267,10 @@ def list_items(u):
     return [x for x in items if x], log
 
 
+RECORD_LOC = {"locality", "location"}                  # names the model gives a record's place fields (v8b)
+RECORD_COORD = {"coordinates", "latitude", "longitude"}
+
+
 def stage_read7(papers):
     """v7 (gemma): facts read only from passages inside an account (the walk ran first; v5 dropped every fact
     outside an account anyway), with the question the passage type calls for: measurements (Q-FIELD),
@@ -1300,8 +1308,48 @@ def stage_read7(papers):
                 n += dest == "facts" or fa.get("why") == "who not printed in the passage"
             return n
 
+        texts = [x for x in inside if shape.get(x["id"]) == "text"]
+        if "drop" in FL:                                   # v8b: only the sentences nimble kept, read as v7d reads
+            kept = collections.defaultdict(list)           # a passage (same questions, 'Male:' stays in place)
+            sort = json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]
+            for r in sort:
+                if r.get("cat") != "record list" and r["kept"]:
+                    kept[r["passage"]].append(r["text"])
+            texts = [dict(x, text=" ".join(kept[x["id"]])) for x in texts if kept.get(x["id"])]
+        record_only = []
+
+        def rec(t, res):
+            """A list item's facts (v8b, code only): ♂ alone / ♀ alone in the item gives the sex to facts with none,
+            a 'sex' fact is no row; what the model named locality or coordinates goes on the item's other facts
+            (verbatimLocality, verbatimCoordinates), and an item with nothing else is logged, not a row."""
+            if "symbols" not in FL:
+                return res
+            sx = "male" if "♂" in t and "♀" not in t else "female" if "♀" in t and "♂" not in t else ""
+            name = lambda fa: fa["what"].strip().lower().replace("_", " ")
+            usable = lambda j, fa: j == 0 or fa.get("why") == "who not printed in the passage"
+            loc, coord, out = [], [], ([], [])
+            for j in (0, 1):
+                for fa in res[j]:
+                    if name(fa) == "sex":
+                        continue
+                    if usable(j, fa) and name(fa) in RECORD_LOC:
+                        loc.append(fa["value"])
+                    elif usable(j, fa) and name(fa) in RECORD_COORD:
+                        coord.append(fa["value"])
+                    else:
+                        out[j].append(dict(fa, sex=fa["sex"] or sx))
+            if not out[0] and not out[1] and (loc or coord):
+                record_only.append({"item": t[:200], "locality": loc, "coordinates": coord})
+            for j in (0, 1):
+                for fa in out[j]:
+                    if loc:
+                        fa["locality"] = "; ".join(loc)
+                    if coord:
+                        fa["coordinates"] = ", ".join(coord)
+            return out
+
         groups, cur = [], []                               # running text: same account, same question
-        for u in (x for x in inside if shape.get(x["id"]) == "text"):
+        for u in texts:
             k = (span[u["id"]], field.get(u["id"], "other"))
             if cur and (cur[0][1] != k or sum(len(x["text"]) for x, _k in cur) + len(u["text"]) > READ_CHARS):
                 groups.append(cur)
@@ -1341,16 +1389,17 @@ def stage_read7(papers):
                 units = [(f"{pid}#{k + j}", t) for j, t in enumerate(items[k:k + ITEMS_PER_CALL])]
                 got = read7(ITEM7, units, s, abbr, under(u), what="items of one list")
                 for i, t in units:
-                    put(pid, *got[i])
+                    put(pid, *rec(t, got[i]))
                     if not got[i][0] and not got[i][1]:
                         empty.append((i, t))
             if empty:                                      # T3
                 got = read7(ITEM7, empty, s, abbr, under(u), what="items of one list")
                 trig["T3 fired"] += len(empty)
-                trig["T3 added"] += sum(put(pid, *got[i], "T3") for i, _t in empty)
+                trig["T3 added"] += sum(put(pid, *rec(t, got[i]), "T3") for i, t in empty)
             log[pid] = {"items": len(items)}
             n_items += len(items)
-        rd.update(read=read, log=log, triggers=dict(trig), read7_done=True)
+        trig["items with only place fields (no row)"] = len(record_only)
+        rd.update(read=read, log=log, triggers=dict(trig), read7_done=True, record_only=record_only)
         (d / f"{p}.json").write_text(json.dumps(rd, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"  [read7] {p:20s} {len(inside)} passages inside accounts ({len(groups)} text calls), {n_items} list "
               f"items; re-reads {dict(trig)}; {sum(len(r['facts']) for r in read.values())} facts "
@@ -1573,9 +1622,14 @@ def _row(x):
     if m:
         v, unit = m.group(1), m.group(2)
     stat = "range" if RANGE.match(v) else "individual" if NUM.match(v) else ""
-    return {"verbatimIdentification": x["owner"], "measurementType": x["what"], "measurementValue": v,
-            "measurementUnit": unit, "measurementStatistic": stat,
-            "sex": x["sex"] if x["sex"] in ("male", "female") else ""}
+    r = {"verbatimIdentification": x["owner"], "measurementType": x["what"], "measurementValue": v,
+         "measurementUnit": unit, "measurementStatistic": stat,
+         "sex": x["sex"] if x["sex"] in ("male", "female") else ""}
+    if x.get("locality"):                                  # v8b: the record's place, on its rows
+        r["verbatimLocality"] = x["locality"]
+    if x.get("coordinates"):
+        r["verbatimCoordinates"] = x["coordinates"]
+    return r
 
 
 def _write(f, rows):
