@@ -357,3 +357,24 @@ Same quality with a third fewer rows and the records whole (altitude + sex + loc
 only place fields, so they give no row; they are logged in read2 ('record_only'), several are fragments from the pointers.
 Still wrong: rows whose trait is a species name (20), the 36 Mount Cameroon 'presence' rows and 34 coordinates from place joins,
 comparisons kept as values. Nimble's sentence sort exists only for dev (output/prose_sent); held_b needs that stage before its test.
+
+## v8c: cleanup on v8b's reading (2026-11-05, dev papers; decisions only, 74 s + totals)
+
+A trait that is exactly a species name gives no row; facts from a sentence nimble called a comparison asked Q-COMP on the fact
+alone (with the whole sentence it dropped real traits such as 'antenna = brownish red ...'); a place named inside another place's
+description is the larger area, not a site (Mount Cameroon, Cameroon: asking Q-SITE and Q-ENV in both orders did not stop them, this
+did); a place's coordinates give no row; '350 m a.s.l.' split into value and unit.
+
+| | v8b | v8c |
+|---|---|---|
+| judged F1 Xia / Xu / Ustjuzhanin | 0.956 / 0.699 / 0.493 | 0.956 / 0.699 / **0.606** |
+| judged lenient F1 | 0.961 / 0.738 / 0.696 | 0.961 / 0.738 / 0.702 |
+| automatic judged micro F1 | 0.726 | **0.747** |
+| production micro F1 | 0.452 | **0.475** |
+| rows | 2,175 | 2,083 |
+
+Ustjuzhanin2024's jump is the altitude unit (GT writes '350', we wrote '350 m a.s.l.'), not the junk removal: the removed rows were
+mostly outside the traits the GT scores. Removed: 36 'presence' rows, 34 place coordinates, 22 comparisons (nearly all right; 'tempora =
+slightly shorter' is debatable). Earlier count of 20 'species-name traits' was wrong (pattern also caught 'Lateral metasternum'): 5
+real; the rule removes 0 now, 'Thoracostrongylus miyakei = also has ...' remains because its name is cut down after the rule runs.
+Left: literature values (7), 104 records without a row (logged). Still dev only.
