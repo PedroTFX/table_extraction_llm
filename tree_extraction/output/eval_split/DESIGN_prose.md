@@ -432,6 +432,6 @@ beside it. No paper, row or value was looked at, and no model question changed.
 | list items | 274 | 182 | 182 |
 | accounts opened | 46 | 43 | 43 |
 
-Micro rose past v5 while mean F1 did not (judged level, production lower): the gain is in the paper with the most rows, and the papers
+Micro rose past v5 while mean F1 did not (judged level, production lower): the gain weighs towards the papers with more rows, and the papers
 are not all better. Which one is not looked at. List items stayed below v5 (182 against 274), not explained here. The judged numbers
 use the automatic pairing, which is stricter than by hand.
