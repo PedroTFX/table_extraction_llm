@@ -128,7 +128,11 @@ import duels                         # noqa: E402
 VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "pointers"),
             "v7d": ("clauses", "sex", "pointers", "retry"),
             "v8": ("clauses", "sex", "pointers", "retry", "sent"),
-            "v8b": ("clauses", "sex", "pointers", "retry", "drop", "symbols")}
+            "v8b": ("clauses", "sex", "pointers", "retry", "drop", "symbols"),
+            "v8c": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean")}
+#   v8c  v8b's reading + cleanup in the fact stage only: a trait that is a species name is no row; facts from a
+#        comparison sentence asked Q-COMP; Q-SITE and Q-ENV in both orders; a place's coordinates no row;
+#        '350 m a.s.l.' split into value and unit. Stages: facts assemble
 #   v8b  v7d + only what worked in v8: passages read without the sentences nimble dropped (output/prose_sent), sex
 #        from an item's ♂ / ♀ (code); + a record's locality and coordinates on its rows, not rows of their own.
 #        Stages after the v7a reuse: heads read7 names facts assemble
@@ -138,9 +142,11 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 #        heads read8 names facts assemble
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
-PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v7a")
+PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c" else "prose_v7a")
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
 REUSED = ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+if VARIANT == "v8c":
+    REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
 # accounts with a focused question and a short answer, re-reads only on evidence (prose_v7)
 V18 = _paths.OUTPUT / "full_run_v18"
@@ -639,19 +645,34 @@ def stage_facts(papers):
         pf = OUT / "places" / f"{p}.json"
         places = json.loads(pf.read_text(encoding="utf-8"))["places"] if pf.exists() else {}
         joins, sites = [], {}                              # v5: Q-PLACE, records joined to described places
+
+        def twice(st, q, crit, yes):
+            """v8c: a yes only when sure in both orders (one order before; a lean to the first option decided
+            'Mount Cameroon is one site' and 'presence: of diverse habitats ... is a condition there')."""
+            ch, pr = ask(st, q, crit)
+            if duels.sure(ch, pr, yes) != yes:
+                return False, ch, pr
+            if "clean" not in FL:
+                return True, ch, pr
+            flip = {k: crit[k] for k in reversed(list(crit))}
+            ch2, pr2 = ask(st, q, flip)
+            return duels.sure(ch2, pr2, yes) == yes, ch2, pr2
+
         for name, pfacts in list(places.items()):          # Q-SITE per place, Q-ENV per place fact
             desc = "; ".join(f"{x['what']}: {x['value']}" for x in pfacts)[:500]
             st = f"A scientific paper about organisms describes the place '{name}': {desc}."
-            ch, pr = ask(st, Q_SITE.format(n=name), dict(SITE))
-            sites[name] = {"choice": ch, "probs": pr, "site": duels.sure(ch, pr, "site") == "site", "env": {}}
+            ok, ch, pr = twice(st, Q_SITE.format(n=name), dict(SITE), "site")
+            sites[name] = {"choice": ch, "probs": pr, "site": ok, "env": {}}
             if not sites[name]["site"]:
                 places.pop(name)
                 continue
             keep = []
             for x in pfacts:
-                ch, pr = ask(st, Q_ENV.format(what=x["what"], value=x["value"][:150], n=name), dict(ENV))
+                if "clean" in FL and x["what"].strip().lower().replace("_", " ") in RECORD_LOC | RECORD_COORD:
+                    continue                               # v8c: a place's own coordinates are no row of the organism
+                ok, ch, pr = twice(st, Q_ENV.format(what=x["what"], value=x["value"][:150], n=name), dict(ENV), "env")
                 sites[name]["env"][f"{x['what']}: {x['value'][:60]}"] = [ch, pr]
-                if duels.sure(ch, pr, "env") == "env":
+                if ok:
                     keep.append(x)
             places[name] = keep
         places = {k: v for k, v in places.items() if v}
@@ -694,6 +715,34 @@ def stage_facts(papers):
             if x["owner"] and not trait.get(x["what"].lower(), {}).get("keep"):
                 x["why"] = "not a characteristic (Q-TRAIT)"
         factq = collections.Counter()                      # v8: Q-FACT, each text fact against its source
+        if "clean" in FL:
+            # v8c: a 'trait' that is a species name is no trait ('Thoracostrongylus miyakei = also has ...'); code,
+            # against the names Q-RANK called species
+            rank = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8")).get("rank", {})
+            spk = {_key(n) for n, v in rank.items() if v.get("species")}
+            for x in facts:
+                if x["owner"] and not x["why"] and _key(x["what"]) in spk:
+                    x["why"] = "the trait is a species name"
+                    factq["species-name traits"] += 1
+            # v8c: Q-COMP, facts from a sentence nimble called a comparison: only sure in both orders drops
+            sort = json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]
+            comp = collections.defaultdict(list)
+            for r in sort:
+                if r["kept"] and r.get("cat") == "comparison":
+                    comp[r["passage"]].append(r["text"])
+            for x in facts:
+                if not x["owner"] or x["why"] or x.get("place"):
+                    continue
+                src = next((t for t in comp.get(x["passage"], []) if printed(x["value"], t)), None)
+                if not src:
+                    continue
+                st = f"In the account of {x['owner']}, a scientific paper says:\n\"\"\"{src[:800]}\"\"\""
+                crit = {k: v.format(s=x["owner"]) for k, v in COMP.items()}
+                factq["comparison facts asked"] += 1
+                ok, _ch, _pr = twice(st, Q_FACT.format(what=x["what"], value=x["value"][:150]), crit, "compare")
+                if ok:
+                    x["why"] = "only a comparison (Q-COMP)"
+                    factq["comparison facts dropped"] += 1
         if "sent" in FL:
             for x in facts:
                 if not x["owner"] or x["why"] or not x.get("src") or not re.search(r"[A-Za-z]{3}", x["value"]):
@@ -1422,6 +1471,9 @@ Passages:
 Reply with JSON only."""
 KIND8 = {"measurement": "measure", "distribution": "field", "habitat": "field", "host_food": "field"}
 TPL8 = {"measure": MEASURE7, "field": FIELD8, "describe": DESCRIBE7}
+COMP = {"own": "a characteristic the organism has, stated by itself: readable without knowing the other species",
+        "compare": "only a comparison: that it resembles, is similar to, differs from, or is larger or smaller than "
+                   "another species, without saying what it is like"}
 Q_FACT = "What does the text say with '{what}: {value}'?"
 FACT = {"trait": "something about {s} itself: its body, size, colour, structures, sexes, life, behaviour, food, hosts, "
                  "habitat, or where it lives or was found",
@@ -1618,7 +1670,7 @@ def _row(x):
     v, unit = x["value"], x["unit"]
     if unit and v.endswith(unit) and len(v) > len(unit):
         v = v[: -len(unit)].strip()
-    m = re.fullmatch(r"(.*\d)\s*(mm|cm|µm|μm|m)", v) if not unit else None   # v4: '850 m' read without a unit
+    m = re.fullmatch(r"(.*\d)\s*(mm|cm|µm|μm|m)(?:\s*a\.\s*s\.\s*l\.?)?", v) if not unit else None   # v4: '850 m' without a unit
     if m:
         v, unit = m.group(1), m.group(2)
     stat = "range" if RANGE.match(v) else "individual" if NUM.match(v) else ""
