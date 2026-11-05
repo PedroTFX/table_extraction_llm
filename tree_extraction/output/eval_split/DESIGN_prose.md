@@ -407,3 +407,31 @@ Proposed fix (not made): in the check, a value ending in a unit whose number is 
 unit to its own field; code only, no model question changes. Dev should not move (0 such drops). The saved reading holds these dropped
 facts, so held_b would not need gemma's reading again, only names, facts and assembly. A rerun would be a second look at held_b, with
 the fault found on held_b's totals, so it must be reported as that, next to this result, not in place of it.
+
+## v8d: the unit fix, and a second look at held_b (2026-11-05; totals only)
+
+The printed check now sets a trailing unit aside: the number must be printed, and the unit goes to its own field only when printed in
+the same text. No model question changed. v8d starts from v8c's saved reading: the `units` stage rescues the saved drops with no model,
+then names (only where facts were rescued), facts and assembly run again. Dev: 75 s; held_b: 82 s (plus totals).
+
+Dev did not move: every total equals v8c's (the run was set to stop before held_b otherwise).
+
+**This is not a clean test.** The fault was found from held_b's totals, so v8c's 0.365 stays the one clean run and v8d is a second look
+beside it. No paper, row or value was looked at, and no model question changed.
+
+| held_b | v5 | v8c (clean test) | v8d (second look) |
+|---|---|---|---|
+| automatic judged micro R / P / F1 | 0.702 / 0.772 / 0.735 | 0.255 / 0.644 / 0.365 | **0.775 / 0.839 / 0.805** |
+| automatic judged mean F1 | 0.557 | 0.368 | 0.553 |
+| lenient micro F1 | 0.782 | 0.413 | 0.840 |
+| production micro F1 | 0.477 | 0.246 | 0.531 |
+| production mean F1 | 0.443 | 0.295 | 0.417 |
+| rows | 1,383 | 608 | 1,147 |
+| GT values lost at reading | 18 | 550 | 27 |
+| GT values lost at the decisions | 24 | 4 | 4 |
+| list items | 274 | 182 | 182 |
+| accounts opened | 46 | 43 | 43 |
+
+Micro rose past v5 while mean F1 did not (judged level, production lower): the gain is in the paper with the most rows, and the papers
+are not all better. Which one is not looked at. List items stayed below v5 (182 against 274), not explained here. The judged numbers
+use the automatic pairing, which is stricter than by hand.
