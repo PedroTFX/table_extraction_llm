@@ -293,3 +293,25 @@ Q-FIELD stages are reused from v7, so ~200 s are added below for a full run.
   added facts are GT facts is not yet measured.
 - Sex still below v6: rows with sex Xia 387 (433), Xu 107 (235), Ustjuzhanin 108 (189).
 - 5-8 min per paper not reached: v7d ~12 min per paper, Xu2024's reading alone 946 s.
+
+## Sentence sorting by nimble, tested without gemma (2026-11-05, src/prose/sentence_test.py, output/prose_sent)
+
+Sources for the idea (filter or classify, then a narrow question): Marcos et al. 2024, Domazetoski et al. 2025, Brinner &
+Zarrieß 2025 (a selector can lose data: Marcos's recall fell 0.95 -> 0.55 on outside data; an LLM selector that kept
+literature-review sentences made results worse). So the selection was measured before any reading.
+
+Each sentence inside an account: Q-ABOUT (the organism, or records, literature, names, the study; dropped only on a sure
+'other' in both orders) and Q-CAT (measurement, description, distribution, habitat, host / food, life, comparison).
+
+| paper | sentences | dropped | characters kept | GT rows found in the account | lost | also in a dropped sentence | time |
+|---|---|---|---|---|---|---|---|
+| Xia2022 | 187 | 31 | 93% | 376 | 0 | 0 | 37 s |
+| Xu2024 | 341 | 55 | 93% | 700 | 0 | 0 | 60 s |
+| Ustjuzhanin2024 | 328 | 35 | 92% | 201 | 0 | 0 | 57 s |
+
+Dropped: synonymy and citation lines, type-specimen labels, etymology, what the literature recorded (the T. miyakei sentence
+'a male ... not mentioned in Yang et al. (2011)' at 0.968). 80 GT rows are in no sentence of their account (a ceiling this
+test cannot see past). Categories are clean where it counts: Xia2022's measurements all 'measurement'; Altitude all 'record
+list'; morphology 'description'. Left in: some Etymology and Remarks sentences ('This species seems to be very rare' as
+distribution; '... named after Fako' as habitat) and 55 comparison sentences, for a per-fact check. It cuts wrong rows more
+than time: only 7-8% of the characters go. Tested on 3 dev papers from one journal; not yet read through by gemma.
