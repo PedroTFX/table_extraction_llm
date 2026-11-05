@@ -336,3 +336,24 @@ than time: only 7-8% of the characters go. Tested on 3 dev papers from one journ
   ('locality = Xinglong', a Wings description).
 - Still wrong after both checks: rows whose trait is a species name (Xu 10, Ustjuzhanin 7), a few literature values (7).
 - Xu2024 GT writes sex 'both' on the altitude rows, so sex from the record's own ♂ / ♀ will not agree with those GT rows.
+
+## v8b: v7d + only what worked in v8 (2026-11-05, dev papers)
+
+Passages read without the sentences nimble dropped (same questions as v7d, 'Male:' stays in place); sex from a record's own
+♂ / ♀ (code); a record's locality and coordinates on its rows (verbatimLocality, verbatimCoordinates), not rows of their own.
+
+| | v7d | v8b |
+|---|---|---|
+| judged F1 Xia / Xu / Ustjuzhanin | 0.955 / 0.702 / 0.489 | 0.956 / 0.699 / 0.493 |
+| judged lenient F1 | 0.960 / 0.741 / 0.688 | 0.961 / 0.738 / 0.696 |
+| rows | 3,136 | 2,175 |
+| locality + coordinates as rows | 799 + 178 | 3 + 34 (the 34 come from the place joins) |
+| rows with verbatimLocality / verbatimCoordinates | 0 / 0 | 607 / 111 |
+| rows with sex | 602 | 1,117 |
+| trait is a sex or specimen word | 19 | 1 |
+| full run | ~35 min | ~36 min |
+
+Same quality with a third fewer rows and the records whole (altitude + sex + locality + coordinates on one row). 104 records held
+only place fields, so they give no row; they are logged in read2 ('record_only'), several are fragments from the pointers.
+Still wrong: rows whose trait is a species name (20), the 36 Mount Cameroon 'presence' rows and 34 coordinates from place joins,
+comparisons kept as values. Nimble's sentence sort exists only for dev (output/prose_sent); held_b needs that stage before its test.
