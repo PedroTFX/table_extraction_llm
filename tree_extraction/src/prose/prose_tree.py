@@ -12,14 +12,17 @@ printed in links them. So a value is checked by itself, not side by side with it
     printed     the value is printed in its phrase (or in another phrase gemma was shown: the fact moves there)
     words       every word and number of the value is in its phrase, not side by side
     otherwise   rejected: kept on the leaf with the reason, no row
-A phrase giving only a unit stays open on its leaf; a later number with no unit in the same passage asks nimble if that
-unit is its own (Q-UNIT). Reused from prose_v8d: abbreviations, shape, species tracking, Q-FIELD, places; prose_sent is the
+A phrase giving only a unit stays open on its leaf; a later number with no unit in the same paragraph asks nimble if that
+unit is its own (Q-UNIT). A sex carries the same way, phrase by phrase, until another is named (Q-SEX). Reused from prose_v8d: abbreviations, shape, species tracking, Q-FIELD, places; prose_sent is the
 sentence sort. nimble's decisions (prose_reader.stage_facts) are unchanged and written back on the facts; rows are read from
 the tree.
 
     python prose_tree.py all dev          tree leaves links names facts decide rows
     python prose_tree.py show Xia2022     prints a paper's tree
-Output: output/prose_v9/tree/<paper>.json, output/prose_v9/prose/<paper>/<paper>.csv
+Output: output/prose_<variant>/tree/<paper>.json, output/prose_<variant>/prose/<paper>/<paper>.csv
+v9b: v9 + Q-SEX; a type with no value is a format failure, asked again; 'sex' and 'who' answers are no facts (an item answered
+only with them is read again); kept sentences that gave nothing are read again in small groups; Q-COMP by phrase; a part links
+to the value by the distance from the value's edges.
 """
 import collections
 import json
@@ -28,7 +31,7 @@ import re
 import sys
 import time
 
-os.environ["PROSE_VARIANT"] = "v9"
+os.environ.setdefault("PROSE_VARIANT", "v9b")
 
 import prose_reader as pr            # noqa: E402
 from prose_reader import v1          # noqa: E402
@@ -98,6 +101,9 @@ OF = {"yes": "yes: the sentence says this of {o}", "no": "no: the sentence says 
 Q_UNIT = "Is the value {value} of '{what}' given in {unit}?"
 UNIT = {"yes": "yes: the text before says values like this one are in {unit}",
         "no": "no: it is a count, a ratio, or in another unit, or the text before is about something else"}
+Q_SEX = "Does the last part still give what the {sex} has?"
+SEX_ON = {"yes": "yes: it goes on with the {sex}, what it gives is of the {sex}",
+          "no": "no: it is about both sexes, the species in general, or something else"}
 
 
 # === geometry: where each part is printed =========================================================================
@@ -166,25 +172,28 @@ def node(kind, text, at, where):
     return {"kind": kind, "text": text, "at": at, "where": where}
 
 
-def closest(sp, near):
-    return min(sp, key=lambda a: abs(a[0] - near))[0] if sp else None
+def closest(sp, v):
+    """The printed place nearest the value, measured from the value's edges ('HW: 1.72 mm': the 'mm' after it, not the one
+    before 'HW')."""
+    return min(sp, key=lambda a: a[0] - v[1] if a[0] >= v[1] else max(v[0] - a[1], 0))[0] if sp else None
 
 
 def make_chain(fa, value, unit, text, around, start, check):
     """A fact's parts, each found in its phrase, linked in printed order."""
-    nodes, vat = [], None
+    nodes, vat, edges = [], None, (0, 0)
     if value:
         sp = spans(value, text)
         if sp:
-            vat = next((a for a, _b in sp if a >= start), sp[0][0])
+            edges = next((x for x in sp if x[0] >= start), sp[0])
+            vat = edges[0]
         nodes.append(node("value", value, vat, "phrase" if sp else "words"))
-    near = vat if vat is not None else 0
+    near = edges[0]
     if fa["type"]:
-        at = closest(spans(fa["type"], text), near)
+        at = closest(spans(fa["type"], text), edges)
         nodes.append(node("type", fa["type"], at, "phrase" if at is not None else "not printed as such"))
     chain = {"who": fa.get("who", ""), "check": check}
     if unit:
-        at = closest(spans(unit, text), near)
+        at = closest(spans(unit, text), edges)
         if at is not None:
             nodes.append(node("unit", unit, at, "phrase"))
         elif spans(unit, around):
@@ -314,7 +323,12 @@ def ask_gemma(tpl, units, s, abbr, where, what):
                     bad.add(i)
                     continue
                 fa = {k: " ".join(str(row.get(k) or "").split()) for k in ("type", "value", "unit", "sex", "who")}
-                if any(fa[k] for k in ("type", "value", "unit", "sex")):
+                if fa["type"].lower() in ("sex", "who"):   # a field given as a fact: no fact (an item's sex is its ♂ / ♀)
+                    pr.GEN["sex or who as a fact"] += 1
+                elif fa["type"] and not (fa["value"] or fa["unit"] or fa["sex"]):
+                    pr.GEN["type with no value"] += 1      # it names what it read but gives nothing: asked again
+                    bad.add(i)
+                elif any(fa[k] for k in ("type", "value", "unit", "sex")):
                     res[i].append(fa)
         return res, bad, not got
 
@@ -322,7 +336,7 @@ def ask_gemma(tpl, units, s, abbr, where, what):
     if bad or none:
         pr.GEN["format retries"] += 1
         sub = "\n".join(f"[{i}] {t}" for i, t in units if none or i in bad)
-        note = "\nYour previous answer to this was not valid. Give every id listed, and every fact as an object with all its named fields."
+        note = "\nYour previous answer to this was not valid. Give every id listed, and every fact as an object with all its named fields, the value with what the text says about the type."
         again, _b, _n = parse(pr.gemma(tpl.format(what=what, s=s, where=where, abbrevs=ab, passages=sub) + note, SCHEMA).get("phrases", []))
         for i, r in again.items():
             if r:
@@ -333,7 +347,7 @@ def ask_gemma(tpl, units, s, abbr, where, what):
 def stage_leaves(papers):
     """gemma reads the phrases in passage order, with the same question per kind of passage as v8d (a passage's sentences
     stay together, so 'Male:' stays in place), and each answer is stored on its phrase as a linked list. Re-reads on evidence
-    only: a phrase of 200+ characters that gave nothing, items that gave nothing."""
+    only: sentences nimble kept that gave nothing, items that gave nothing, each in small groups."""
     for p in papers:
         t = load(p)
         if t.get("leaves_done"):
@@ -385,18 +399,22 @@ def stage_leaves(papers):
         for ids in calls:
             first = ph[ids[0]]
             run(MEASURE if first["field"] == "measure" else DESCRIBE, ids, first["account"], under(first["passage"]), "sentences")
-        for ids in calls:                                  # a long phrase that gave nothing: alone
+        again = collections.defaultdict(list)              # kept by nimble, nothing read: again, by account and question
+        for ids in calls:
             for i in ids:
-                if len(ph[i]["text"]) >= 200 and not (ph[i]["chains"] or ph[i]["open"] or ph[i]["rejected"]):
-                    run(DESCRIBE, [i], ph[i]["account"], under(ph[i]["passage"]), "sentences")
-                    count["long phrases read again"] += 1
+                if ph[i]["cat"] != "comparison" and not (ph[i]["chains"] or ph[i]["open"] or ph[i]["rejected"]):
+                    again[(ph[i]["account"], ph[i]["field"])].append(i)
+        for (s, fld), ids in again.items():
+            count["sentences read again"] += len(ids)
+            for a in range(0, len(ids), pr.ITEMS_PER_CALL):
+                run(MEASURE if fld == "measure" else DESCRIBE, ids[a:a + pr.ITEMS_PER_CALL], s, "", "sentences")
         for pid, ids in groups.items():
             if ph[ids[0]]["kind"] != "item":
                 continue
             s = ph[ids[0]]["account"]
             for a in range(0, len(ids), pr.ITEMS_PER_CALL):
                 run(ITEM, ids[a:a + pr.ITEMS_PER_CALL], s, under(pid), "items of one list")
-            empty = [i for i in ids if not (ph[i]["chains"] or ph[i]["open"] or ph[i]["rejected"])]
+            empty = [i for i in ids if not (ph[i]["chains"] or ph[i]["open"])]
             if empty:
                 run(ITEM, empty, s, under(pid), "items of one list")
                 count["items read again"] += len(empty)
@@ -438,19 +456,36 @@ def record(r, count):
 
 
 def stage_links(papers):
-    """Q-UNIT: a number with no unit, after a phrase of its passage that gave only a unit: nimble says if that unit is its
-    own. Then the tree is written out in the form the fact decisions read (read2)."""
+    """Parts that carry down a paragraph, nimble deciding. Q-UNIT: a number with no unit, after a phrase that gave only a
+    unit. Q-SEX: a phrase with no sex, after a phrase whose facts all say one sex (asked once per phrase, until another is
+    named). Then the tree is written out in the form the fact decisions read (read2)."""
     for p in papers:
         t = load(p)
         if t.get("links_done"):
             continue
         t0 = time.time()
         ph, ask, n = t["phrases"], pr.Ask(), collections.Counter()
+        rd = json.loads((BASE / "read2" / f"{p}.json").read_text(encoding="utf-8"))
+        ps = {u["id"]: u for u in rd["passages"]}
+        blocks = collections.defaultdict(list)             # a paragraph cut into pieces is still one paragraph
         for pid, ids in by_passage(t).items():
+            blocks[ps[pid]["block"]] += ids
+        for ids in blocks.values():
             if ph[ids[0]]["kind"] == "item":
                 continue
-            opened = []
+            opened, sexed = [], None
             for i in ids:
+                said = {parts(c)["sex"] for c in ph[i]["chains"] if "sex" in parts(c)}
+                if said:
+                    sexed = (i, said.pop()) if len(said) == 1 else None
+                elif sexed and ph[i]["chains"]:
+                    st = (f"A passage of a scientific paper says:\n\"\"\"{ph[sexed[0]]['text'][:500]}\"\"\"\n"
+                          f"and then:\n\"\"\"{ph[i]['text'][:500]}\"\"\"")
+                    n["sex asked"] += 1
+                    if twice(ask, st, Q_SEX.format(sex=sexed[1]), {k: v.format(sex=sexed[1]) for k, v in SEX_ON.items()}):
+                        n["sex linked"] += 1
+                        for c in ph[i]["chains"]:
+                            c["first"] = nest(flat(c["first"]) + [node("sex", sexed[1], None, sexed[0])])
                 here = [(i, x["at"], x["text"]) for c in ph[i]["open"] for x in flat(c["first"])
                         if x["kind"] == "unit" and x["at"] is not None and "value" not in parts(c)]
                 opened += here
@@ -471,8 +506,6 @@ def stage_links(papers):
                         c["first"] = nest(flat(c["first"]) + [node("unit", unit, None, src)])
                         n["linked"] += 1
         ask.unload()
-        rd = json.loads((BASE / "read2" / f"{p}.json").read_text(encoding="utf-8"))
-        ps = {u["id"]: u for u in rd["passages"]}
         rd["read"] = {k: {"names": v.get("names", []), "facts": [], "dropped": []} for k, v in rd["read"].items()}
         rd["log"] = {}
         for i, r in ph.items():
@@ -484,7 +517,8 @@ def stage_links(papers):
                 who = c["who"] if c["who"] and pr.printed(c["who"], ps[r["passage"]]["text"]) else ""
                 e["facts"].append({"who": who, "who_read": c["who"], "sex": d.get("sex", ""), "what": d["type"],
                                    "value": d["value"], "unit": d.get("unit", ""), "locality": d.get("locality", ""),
-                                   "coordinates": d.get("coordinates", ""), "phrase": i, "chain": k})
+                                   "coordinates": d.get("coordinates", ""), "phrase": i, "chain": k,
+                                   **({"comparison_phrase": r["text"]} if r["cat"] == "comparison" else {})})
         (OUT / "read2").mkdir(parents=True, exist_ok=True)
         (OUT / "read2" / f"{p}.json").write_text(json.dumps(rd, indent=1, ensure_ascii=False), encoding="utf-8")
         t["links_done"] = True

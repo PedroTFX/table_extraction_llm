@@ -131,7 +131,8 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v8b": ("clauses", "sex", "pointers", "retry", "drop", "symbols"),
             "v8c": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean"),
             "v8d": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
-            "v9": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units")}
+            "v9": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
+            "v9b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units")}
 #   v9   the information tree (prose_tree.py): this file gives it the stages it reuses and the decisions
 #   v8d  v8c + the printed check sets a trailing unit aside: the prompt asks for the value 'with its unit', and when a
 #        paper prints the unit away from the number gemma adds it, so a right number failed the check (v8c's test on
@@ -150,7 +151,7 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
-                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT == "v9" else "prose_v7a")
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b") else "prose_v7a")
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
 REUSED = ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
@@ -747,7 +748,7 @@ def stage_facts(papers):
             for x in facts:
                 if not x["owner"] or x["why"] or x.get("place"):
                     continue
-                src = next((t for t in comp.get(x["passage"], []) if printed(x["value"], t)), None)
+                src = x.get("comparison_phrase") or next((t for t in comp.get(x["passage"], []) if printed(x["value"], t)), None)
                 if not src:
                     continue
                 st = f"A scientific paper says about {x['owner']}: '{x['what']}: {x['value'][:200]}'."   # the fact alone:
