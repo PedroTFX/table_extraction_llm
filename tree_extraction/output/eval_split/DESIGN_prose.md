@@ -315,3 +315,24 @@ test cannot see past). Categories are clean where it counts: Xia2022's measureme
 list'; morphology 'description'. Left in: some Etymology and Remarks sentences ('This species seems to be very rare' as
 distribution; '... named after Fako' as habitat) and 55 comparison sentences, for a per-fact check. It cuts wrong rows more
 than time: only 7-8% of the characters go. Tested on 3 dev papers from one journal; not yet read through by gemma.
+
+## v8: sentences sorted by nimble, read by kind, each text fact checked (2026-11-05, dev papers; not adopted as built)
+
+| | v7d | v8 |
+|---|---|---|
+| judged F1 Xia / Xu / Ustjuzhanin | 0.955 / 0.702 / 0.489 | 0.943 / 0.687 / 0.468 |
+| judged recall Xia / Xu / Ustjuzhanin | 0.975 / 0.834 / 0.597 | 0.972 / 0.838 / 0.580 |
+| judged precision Xia / Xu / Ustjuzhanin | 0.935 / 0.606 / 0.414 | 0.915 / 0.582 / 0.393 |
+| rows with sex Xia / Xu / Ustjuzhanin | 387 / 107 / 108 | 587 / 1,118 / 164 |
+| trait is a sex or specimen word (all) | 19 | 4 |
+| full run | ~35 min | ~39 min |
+
+- Works: dropping sentences (the T. miyakei 'male' row is gone, sex-word rows 19 -> 4), and sex from an item's ♂ / ♀ by code.
+- Hurts: the question per kind. FIELD8 ('what: distribution, habitat, ...') turns kept sentences that only name places into
+  rows: 'distribution' extras Xia 1 -> 10, Xu 1 -> 20, Ustjuzhanin 0 -> 9 ('distribution = Wuyishan City, Guadun Vill. ...',
+  'distribution = mainland of east China' for T. miyakei). Sentence runs also bring coarser names (Xu 'Head = frontoclypeal
+  area triangular' against 'Head frontoclypeal area = ...'), which count against precision.
+- Q-FACT barely acts: 1,823 asked, 11 dropped; mostly collectors and museums read as localities, at least 2 of the 11 wrong
+  ('locality = Xinglong', a Wings description).
+- Still wrong after both checks: rows whose trait is a species name (Xu 10, Ustjuzhanin 7), a few literature values (7).
+- Xu2024 GT writes sex 'both' on the altitude rows, so sex from the record's own ♂ / ♀ will not agree with those GT rows.
