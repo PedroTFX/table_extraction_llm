@@ -129,7 +129,12 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v7d": ("clauses", "sex", "pointers", "retry"),
             "v8": ("clauses", "sex", "pointers", "retry", "sent"),
             "v8b": ("clauses", "sex", "pointers", "retry", "drop", "symbols"),
-            "v8c": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean")}
+            "v8c": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean"),
+            "v8d": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units")}
+#   v8d  v8c + the printed check sets a trailing unit aside: the prompt asks for the value 'with its unit', and when a
+#        paper prints the unit away from the number gemma adds it, so a right number failed the check (v8c's test on
+#        held_b lost 564 facts this way, 0 on dev). The number must be printed; the unit goes to its own field, only
+#        when printed in the same text. Stages: units (the saved dropped facts, no reading again) names facts assemble
 #   v8c  v8b's reading + cleanup in the fact stage only: a trait that is a species name is no row; facts from a
 #        comparison sentence asked Q-COMP; Q-SITE and Q-ENV in both orders; a place's coordinates no row;
 #        '350 m a.s.l.' split into value and unit. Stages: facts assemble
@@ -142,10 +147,11 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 #        heads read8 names facts assemble
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
-PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c" else "prose_v7a")
+PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v7a")
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
 REUSED = ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
-if VARIANT == "v8c":
+if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
 # accounts with a focused question and a short answer, re-reads only on evidence (prose_v7)
@@ -1227,6 +1233,56 @@ RETRY_NOTE = ("\nYour previous answer to this was not valid. Give every passage 
               "as an object with \"what\" and \"value\".")
 
 
+UNIT_END = re.compile(r"^(.*\d[^A-Za-z]*?)\s*(mm|cm|µm|μm|um|m|km|g|mg|kg|ml|°c)\.?$", re.I)
+
+
+def number_and_unit(value, text):
+    """v8d, geometry only: a value ending in a unit whose number is printed in this text -> (number, unit), the unit
+    only when it is printed in the same text too ('5.2–5.9 mm' where the paper prints 'in mm: TL 5.2–5.9'). Else None."""
+    m = UNIT_END.match(value.strip())
+    if not m or not printed(m.group(1), text):
+        return None
+    return m.group(1).strip(), m.group(2) if printed(m.group(2), text) else ""
+
+
+def stage_units(papers):
+    """v8d (no model): the saved reading's facts dropped as 'value not printed', asked the new check against the text
+    gemma read (kept sentences, or the list passage). A paper with rescued facts has its name splits asked again,
+    since their names were not there. Updates OUT/read2."""
+    for p in papers:
+        f = OUT / "read2" / f"{p}.json"
+        rd = json.loads(f.read_text(encoding="utf-8"))
+        if rd.get("units_done"):
+            continue
+        by_id = {u["id"]: u for u in rd["passages"]}
+        kept = collections.defaultdict(list)
+        for r in json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]:
+            if r.get("cat") != "record list" and r["kept"]:
+                kept[r["passage"]].append(r["text"])
+        n = 0
+        for pid, r in rd["read"].items():
+            text = " ".join(kept[pid]) if kept.get(pid) else by_id[pid]["text"]
+            left = []
+            for x in r["dropped"]:
+                apart = number_and_unit(x["value"], text) if x.get("why") == "value not printed in the passage" else None
+                if not apart:
+                    left.append(x)
+                    continue
+                n += 1
+                fa = {k: v for k, v in x.items() if k != "why"}
+                fa.update(value=apart[0], unit=apart[1], unit_rescued=True)
+                if fa["who"] and not printed(fa["who"], text):
+                    left.append(dict(fa, why="who not printed in the passage"))
+                else:
+                    r["facts"].append(fa)
+            r["dropped"] = left
+        rd["units_done"] = True
+        f.write_text(json.dumps(rd, indent=1, ensure_ascii=False), encoding="utf-8")
+        if n:
+            (OUT / "names" / f"{p}.json").unlink(missing_ok=True)
+        print(f"  [units] {p:20s} {n} facts rescued", flush=True)
+
+
 def read7(prompt_tpl, units, s, abbr, where, what="passages"):
     """gemma on [(id, text)] with named fields per fact -> {id: (facts, dropped)}; values and names checked
     printed in their own unit (as stage_read does), the unit split off later. v7d: units whose answer was
@@ -1254,6 +1310,10 @@ def read7(prompt_tpl, units, s, abbr, where, what="passages"):
                     GEN["malformed facts"] += 1
                     bad.add(i)
                     continue
+                if "units" in FL and not printed(fa["value"], by_id[i]):
+                    apart = number_and_unit(fa["value"], by_id[i])
+                    if apart:
+                        fa["value"], fa["unit"] = apart
                 if not printed(fa["value"], by_id[i]):
                     r[1].append(dict(fa, why="value not printed in the passage"))
                 elif fa["who"] and not printed(fa["who"], by_id[i]):
@@ -1830,7 +1890,7 @@ def stage_page(papers):
 STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "walk": stage_walk,
           "shape": stage_shape, "items": stage_items, "heads": stage_heads, "places": stage_places,
           "nm": stage_nm, "field": stage_field, "read7": stage_read7, "read8": stage_read8,
-          "facts": stage_facts,
+          "facts": stage_facts, "units": stage_units,
           "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
 ALL = ["abbrev", "shape", "nm", "heads", "walk", "field", "read7", "names", "places", "facts", "assemble"]
