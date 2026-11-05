@@ -126,12 +126,17 @@ import duels                         # noqa: E402
 #   v7d  + a malformed answer (a fact without what / value, a passage id missing) asked again once with
 #        a format reminder, kept apart from the evidence re-reads T1-T3
 VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "pointers"),
-            "v7d": ("clauses", "sex", "pointers", "retry")}
+            "v7d": ("clauses", "sex", "pointers", "retry"),
+            "v8": ("clauses", "sex", "pointers", "retry", "sent")}
+#   v8   + nimble sorts the sentences first (sentence_test.py, output/prose_sent): gemma reads only kept sentences
+#        in runs, a question per kind (read8); nimble checks each text fact against its source (Q-FACT);
+#        sex from an item's ♂ / ♀; rows keep their source in measurementRemarks. Order after the v7a reuse:
+#        heads read8 names facts assemble
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v7a")
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = ("abbrev", "shape", "read", "walk", "field")   # v7's names, species tracking and Q-FIELD
+REUSED = ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
 # accounts with a focused question and a short answer, re-reads only on evidence (prose_v7)
 V18 = _paths.OUTPUT / "full_run_v18"
@@ -684,6 +689,21 @@ def stage_facts(papers):
         for x in facts:
             if x["owner"] and not trait.get(x["what"].lower(), {}).get("keep"):
                 x["why"] = "not a characteristic (Q-TRAIT)"
+        factq = collections.Counter()                      # v8: Q-FACT, each text fact against its source
+        if "sent" in FL:
+            for x in facts:
+                if not x["owner"] or x["why"] or not x.get("src") or not re.search(r"[A-Za-z]{3}", x["value"]):
+                    continue                               # a number is not asked; only sure twice drops
+                st = f"In the account of {x['owner']}, a scientific paper says:\n\"\"\"{x['src']}\"\"\""
+                q = Q_FACT.format(what=x["what"], value=x["value"][:150])
+                crit = {k: v.format(s=x["owner"]) for k, v in FACT.items()}
+                ch, pr = ask(st, q, crit)
+                factq["asked"] += 1
+                if duels.sure(ch, pr, "other") == "other":
+                    ch2, pr2 = ask(st, q, {"b": crit["other"], "a": crit["trait"]})
+                    if duels.sure(ch2, pr2, "b") == "b":
+                        x["why"] = "not a characteristic (Q-FACT)"
+                        factq["dropped"] += 1
         labels = {}                                        # v2: Q-LABEL once per label of the paper
         with_facts = {x["passage"] for x in facts}
         for u in passages(p):
@@ -707,7 +727,8 @@ def stage_facts(papers):
             ch, pr = ask(st, Q_METHOD.format(m=sp["method"], n=n), crit)
             methods[n] = {"choice": ch, "probs": pr, "keep": duels.sure(ch, pr, "how") == "how"}
         f.write_text(json.dumps({"facts": facts, "owners": owners, "trait": trait, "labels": labels,
-                                 "methods": methods, "joins": joins, "sites": sites}, indent=1, ensure_ascii=False),
+                                 "methods": methods, "joins": joins, "sites": sites, "q_fact": factq},
+                                indent=1, ensure_ascii=False),
                      encoding="utf-8")
         kept = sum(1 for x in facts if x["owner"] and not x["why"])
         print(f"  [facts] {p:20s} {len(facts)} facts, {len(owners) // 2} owner questions, {len(trait)} names asked: "
@@ -1337,6 +1358,152 @@ def stage_read7(papers):
     v1.unload(v1.GEMMA)
 
 
+# === v8: nimble sorts the sentences, gemma reads only what is kept, nimble checks each text fact ==
+
+FIELD8 = READ7_HEAD + """They say where the organism occurs, its habitat, or its food or hosts. For EACH passage list every such fact.
+""" + WHO7 + """
+- what: distribution, habitat, host plant, food or prey, as the text says
+- value: what the text says about it, COPIED exactly
+Example: a passage "[P1] Known from Kenya and Uganda; in montane forest, on Acacia" gives
+{{"id": "P1", "facts": [{{"what": "distribution", "value": "Kenya and Uganda"}}, {{"what": "habitat", "value": "montane forest"}}, {{"what": "host plant", "value": "Acacia"}}]}}
+
+Passages:
+{passages}
+
+Reply with JSON only."""
+KIND8 = {"measurement": "measure", "distribution": "field", "habitat": "field", "host_food": "field"}
+TPL8 = {"measure": MEASURE7, "field": FIELD8, "describe": DESCRIBE7}
+Q_FACT = "What does the text say with '{what}: {value}'?"
+FACT = {"trait": "something about {s} itself: its body, size, colour, structures, sexes, life, behaviour, food, hosts, "
+                 "habitat, or where it lives or was found",
+        "other": "something else: a specimen as a record (its label, number, or where it is kept), who collected or "
+                 "published it, what the literature says, the species' name or its origin"}
+
+
+def source_of(value, sents, whole):
+    """The sentence a fact's value is printed in, else the whole unit: the row keeps its source."""
+    for x in sents:
+        if printed(value, x):
+            return x[:400]
+    return whole[:400]
+
+
+def stage_read8(papers):
+    """v8 (gemma). Sentences nimble kept (sentence_test.py: Q-ABOUT, Q-CAT; output/prose_sent) are read in runs:
+    consecutive kept sentences of a passage with the same kind of question stay together, so 'Male:' stays with
+    its numbers. measurement -> MEASURE7; distribution, habitat, host_food -> FIELD8; the rest -> DESCRIBE7.
+    Lists as v7d, item by item from start words. An item printing only ♂ or only ♀ gives that sex to its facts
+    with none (the symbol says it; code only), and a 'sex' fact of an item is no row. Facts keep their source.
+    Re-reads: T2 (a run of 200+ characters with no fact), T3 (items with no fact); T1 never fired in v7, dropped."""
+    d = OUT / "read2"
+    d.mkdir(parents=True, exist_ok=True)
+    for p in papers:
+        rd = load_read(p)
+        if rd.get("read8_done"):
+            continue
+        t0 = time.time()
+        abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
+        span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
+        shape = json.loads((OUT / "shape" / f"{p}.json").read_text(encoding="utf-8"))["shape"]
+        units = json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]
+        by_pid = collections.defaultdict(list)
+        for r in units:
+            by_pid[r["passage"]].append(r)
+        read, log, trig = rd["read"], {}, collections.Counter()
+        inside = [u for u in rd["passages"] if u["kind"] == "para" and span.get(u["id"])
+                  and shape.get(u["id"]) in ("text", "list")]
+        under = lambda u: f", under the heading '{u['heading'][:120]}'" if u["heading"] else ""
+
+        def put(pid, facts, dropped, tag=None):
+            r = read.setdefault(pid, {"names": [], "facts": [], "dropped": []})
+            have = {(x["what"].lower(), x["value"]) for x in r["facts"] + r["dropped"]}
+            n = 0
+            for fa, dest in [(x, "facts") for x in facts] + [(x, "dropped") for x in dropped]:
+                if tag and (fa["what"].lower(), fa["value"]) in have:
+                    continue
+                r[dest].append(dict(fa, reread=tag) if tag else fa)
+                n += dest == "facts" or fa.get("why") == "who not printed in the passage"
+            return n
+
+        runs = []                                          # (passage, account, kind, sentences)
+        for u in (x for x in inside if shape.get(x["id"]) == "text"):
+            cur, kind = [], None
+            for r in by_pid.get(u["id"], []):
+                k = None if not r["kept"] else KIND8.get(r.get("cat"), "describe")
+                if cur and k != kind:
+                    runs.append((u, span[u["id"]], kind, cur))
+                    cur = []
+                if k:
+                    cur.append(r["text"])
+                kind = k
+            if cur:
+                runs.append((u, span[u["id"]], kind, cur))
+        groups, g = [], []                                 # calls: same account, same question
+        for run in runs:
+            size = sum(len(" ".join(x[3])) for x in g)
+            if g and (g[0][1:3] != run[1:3] or size + len(" ".join(run[3])) > READ_CHARS):
+                groups.append(g)
+                g = []
+            g.append(run)
+        groups += [g] if g else []
+        nrun = 0
+        for g in groups:
+            s, kind = g[0][1], g[0][2]
+            items = []
+            for u, _s, _k, sents in g:
+                nrun += 1
+                items.append((f"{u['id']}~{nrun}", " ".join(sents), u, sents))
+            got = read7(TPL8[kind], [(i, t) for i, t, _u, _x in items], s, abbr, under(g[0][0]))
+            for i, t, u, sents in items:
+                facts, dropped = got[i]
+                src = lambda fa: dict(fa, src=source_of(fa["value"], sents, t))
+                put(u["id"], [src(x) for x in facts], [src(x) for x in dropped])
+                if len(t) >= 200 and not facts and not dropped:   # T2
+                    again = read7(TPL8[kind], [(i, t)], s, abbr, under(u))[i]
+                    trig["T2 fired"] += 1
+                    trig["T2 added"] += put(u["id"], [src(x) for x in again[0]], [src(x) for x in again[1]], "T2")
+        n_items = 0
+        for u in (x for x in inside if shape.get(x["id"]) == "list"):
+            s, pid = span[u["id"]], u["id"]
+            items, plog = list_items(u)
+            trig.update({f"pointers: {k}": v for k, v in plog.items()})
+            if len(items) < 2:
+                got = read7(DESCRIBE7, [(pid, u["text"])], s, abbr, under(u))[pid]
+                put(pid, [dict(x, src=u["text"][:400]) for x in got[0]], [dict(x, src=u["text"][:400]) for x in got[1]])
+                log[pid] = {"items": len(items), "kept": "passage reading"}
+                continue
+
+            def item_facts(i, t, res):
+                """Code only: ♂ alone / ♀ alone in the item gives the sex; a 'sex' fact is no row."""
+                sx = "male" if "♂" in t and "♀" not in t else "female" if "♀" in t and "♂" not in t else ""
+                out = ([], [])
+                for j in (0, 1):
+                    for fa in res[j]:
+                        if fa["what"].strip().lower() != "sex":
+                            out[j].append(dict(fa, src=t[:400], sex=fa["sex"] or sx))
+                return out
+
+            empty = []
+            for k in range(0, len(items), ITEMS_PER_CALL):
+                units_ = [(f"{pid}#{k + j}", t) for j, t in enumerate(items[k:k + ITEMS_PER_CALL])]
+                got = read7(ITEM7, units_, s, abbr, under(u), what="items of one list")
+                for i, t in units_:
+                    put(pid, *item_facts(i, t, got[i]))
+                    if not got[i][0] and not got[i][1]:
+                        empty.append((i, t))
+            if empty:                                      # T3
+                got = read7(ITEM7, empty, s, abbr, under(u), what="items of one list")
+                trig["T3 fired"] += len(empty)
+                trig["T3 added"] += sum(put(pid, *item_facts(i, t, got[i]), "T3") for i, t in empty)
+            log[pid] = {"items": len(items)}
+            n_items += len(items)
+        rd.update(read=read, log=log, triggers=dict(trig), read8_done=True)
+        (d / f"{p}.json").write_text(json.dumps(rd, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"  [read8] {p:20s} {len(runs)} runs in {len(groups)} calls, {n_items} list items; re-reads {dict(trig)}; "
+              f"{sum(len(r['facts']) for r in read.values())} facts ({time.time() - t0:.0f}s)", flush=True)
+    v1.unload(v1.GEMMA)
+
+
 def lead_of(u):
     """The first word of a paragraph without a bold label ('Head slightly wider ...' -> 'Head'), offered to
     Q-LABEL as its context; geometry only."""
@@ -1475,6 +1642,8 @@ def stage_assemble(papers):
                 lab = u.get("label") or lead_of(u)          # v4: the lead word when there is no bold label
                 trait, method = named(x["what"], abbr, split, lab if lab in part else "")
                 r = dict(_row(dict(x, what=trait)), measurementMethod=method)
+                if x.get("src"):                            # v8: the sentence it came from
+                    r["measurementRemarks"] = x["src"]
                 if shape.get(x["passage"]) == "list" or x.get("record"):   # v4: each item is its own record: 17 records
                     rows.append(r)                          # at '920 m' are 17 rows, not one
                     reread.append(bool(x.get("reread")))
@@ -1548,7 +1717,7 @@ def stage_page(papers):
 
 STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "walk": stage_walk,
           "shape": stage_shape, "items": stage_items, "heads": stage_heads, "places": stage_places,
-          "nm": stage_nm, "field": stage_field, "read7": stage_read7,
+          "nm": stage_nm, "field": stage_field, "read7": stage_read7, "read8": stage_read8,
           "facts": stage_facts,
           "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
