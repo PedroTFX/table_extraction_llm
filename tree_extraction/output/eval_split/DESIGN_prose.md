@@ -378,3 +378,32 @@ mostly outside the traits the GT scores. Removed: 36 'presence' rows, 34 place c
 slightly shorter' is debatable). Earlier count of 20 'species-name traits' was wrong (pattern also caught 'Lateral metasternum'): 5
 real; the rule removes 0 now, 'Thoracostrongylus miyakei = also has ...' remains because its name is cut down after the rule runs.
 Left: literature values (7), 104 records without a row (logged). Still dev only.
+
+## Test: v8c run once on the 3 held_b prose papers (2026-11-05; totals only, prose_test.py)
+
+| | v5 held_b | v8c held_b | v8c dev |
+|---|---|---|---|
+| automatic judged micro R / P / F1 | 0.702 / 0.772 / 0.735 | **0.255 / 0.644 / 0.365** | 0.855 / 0.664 / 0.747 |
+| lenient F1 | 0.782 | 0.413 | 0.788 |
+| production micro F1 | 0.477 | 0.246 | 0.475 |
+| production mean F1 | 0.443 | 0.295 | 0.401 |
+| rows | 1,383 | 608 | 2,083 |
+| facts kept | 1,437 | 627 | 1,994 |
+| stages | | 1,283 s | |
+
+The score is what the run gave and it stands as v8c's test. The drop is a fault in the reading's check, not the model missing the text
+(found with summed counts only, prose_scripts/prose_funnel.py, prose_dropped.py, prose_unit_check.py; no paper, row or value looked at):
+
+- GT values printed in their species' account: 908 of 983 for v8c, 910 for v5. Species tracking and the sentence sort lost almost
+  nothing (sort: 906 of 907 kept).
+- Lost at reading: 550 GT values (v5 18). Lost at the decisions: 4 (v5 24). So the loss is one step.
+- Dropped as 'value not printed in the passage': 607 (v5 44, dev 82). 564 of them end in a unit, and in all 564 the number alone IS
+  printed in its passage. 531 GT values that no read fact holds would be held by these numbers. On dev the same count is 0.
+- Why: v5 asked for the unit in its own field. Since v7a the measurement prompt asks for the value 'with its unit'. When a paper prints
+  the unit away from the number, gemma adds it, the words are no longer side by side, and the printed check drops a right number.
+  Nearly all of it sits in one paper (papers with 50+ such drops: 1). No dev paper prints units that way, so tuning could not show it.
+
+Proposed fix (not made): in the check, a value ending in a unit whose number is printed in the passage keeps the number and moves the
+unit to its own field; code only, no model question changes. Dev should not move (0 such drops). The saved reading holds these dropped
+facts, so held_b would not need gemma's reading again, only names, facts and assembly. A rerun would be a second look at held_b, with
+the fault found on held_b's totals, so it must be reported as that, next to this result, not in place of it.
