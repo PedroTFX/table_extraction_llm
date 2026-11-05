@@ -130,7 +130,9 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v8": ("clauses", "sex", "pointers", "retry", "sent"),
             "v8b": ("clauses", "sex", "pointers", "retry", "drop", "symbols"),
             "v8c": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean"),
-            "v8d": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units")}
+            "v8d": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
+            "v9": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units")}
+#   v9   the information tree (prose_tree.py): this file gives it the stages it reuses and the decisions
 #   v8d  v8c + the printed check sets a trailing unit aside: the prompt asks for the value 'with its unit', and when a
 #        paper prints the unit away from the number gemma adds it, so a right number failed the check (v8c's test on
 #        held_b lost 564 facts this way, 0 on dev). The number must be printed; the unit goes to its own field, only
@@ -148,7 +150,7 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
-                            else "prose_v8c" if VARIANT == "v8d" else "prose_v7a")
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT == "v9" else "prose_v7a")
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
 REUSED = ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
