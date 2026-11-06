@@ -1932,6 +1932,10 @@ def papers_of(args):
         return s["dev"] + s["held_a"]          # tuning papers only; held_b and grit-only are the test
     if args == ["held_b"]:                     # the test, run once: names read from the set, never printed;
         return json.loads(SET.read_text(encoding="utf-8"))["109"]["held_b"]   # report with prose_test.py
+    if args and args[0] in ("grit", "grit_test", "grit_only"):   # the grit set; names read from the set, never printed
+        g = json.loads(SET.read_text(encoding="utf-8"))["grit"]
+        keep = {"grit": ("dev", "held_a", "held_b", "grit-only"), "grit_test": ("held_b", "grit-only"), "grit_only": ("grit-only",)}[args[0]]
+        return sum((g[k] for k in keep), [])
     return args
 
 
