@@ -51,7 +51,7 @@ try:
 except Exception:                       # evaluator must run even without Ollama deps
     invoke_sized = None
     loads_salvaging = None
-from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
+from decimal import ROUND_HALF_EVEN, ROUND_HALF_UP, Decimal, InvalidOperation
 
 import openpyxl
 
@@ -644,7 +644,53 @@ def match_rows(gt_rows, pred_rows, key_fields, decode):
         for i in range(used[k], len(bucket)):
             missing.append(bucket[i])
 
+    if ROUND_MATCH and "measurementValue" in key_fields and missing and extra:
+        matched, missing, extra = _match_rounded(matched, missing, extra, key_fields, decode)
     return matched, missing, extra
+
+
+# A number printed with fewer digits is the same number: GT 2.093220338983051 against the
+# paper's 2.093220339 (Raine2018, 18,246 rows), GT 0.084 against 0.08368375 (Tonelli2021).
+# Second pass, so exact matches are untouched; same species and trait only. The shorter side must
+# keep at least ROUND_MIN_PLACES decimals, so 3 never matches 3.4 and 1.02 never matches 1.03.
+# EVAL_ROUND_MATCH=0 gives the old exact scoring back.
+ROUND_MATCH = os.environ.get("EVAL_ROUND_MATCH", "1") != "0"
+ROUND_MIN_PLACES = 2
+_PLAIN_NUMBER_RE = re.compile(r"-?\d+(?:\.(\d+))?")
+
+
+def same_at_shorter_precision(a, b):
+    """Two normalized values: is the longer number, rounded to the shorter's decimals, the shorter?"""
+    ma, mb = _PLAIN_NUMBER_RE.fullmatch(a), _PLAIN_NUMBER_RE.fullmatch(b)
+    if not ma or not mb:
+        return False
+    pa, pb = len(ma.group(1) or ""), len(mb.group(1) or "")
+    if pa == pb or min(pa, pb) < ROUND_MIN_PLACES:
+        return False
+    short, long_, places = (a, b, pa) if pa < pb else (b, a, pb)
+    step = Decimal(1).scaleb(-places)
+    return any(Decimal(long_).quantize(step, rounding=mode) == Decimal(short)
+               for mode in (ROUND_HALF_UP, ROUND_HALF_EVEN))
+
+
+def _match_rounded(matched, missing, extra, key_fields, decode):
+    """The rows the exact pass left: pair them where only the printed precision differs."""
+    vi = list(key_fields).index("measurementValue")
+    rest = lambda k: k[:vi] + k[vi + 1:]
+    left = defaultdict(list)
+    for g in missing:
+        k = row_key(g, key_fields, decode)
+        left[rest(k)].append((k[vi], g))
+    still_extra = []
+    for p in extra:
+        k = row_key(p, key_fields, decode)
+        cands = left.get(rest(k))
+        j = next((i for i, (v, _g) in enumerate(cands) if same_at_shorter_precision(v, k[vi])), None) if cands else None
+        if j is None:
+            still_extra.append(p)
+        else:
+            matched.append((cands.pop(j)[1], p))
+    return matched, [g for c in left.values() for _v, g in c], still_extra
 
 
 # --- scoping -------------------------------------------------------------
