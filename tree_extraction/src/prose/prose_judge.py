@@ -30,9 +30,9 @@ import json
 import re
 import sys
 
-import duels
-import prose_reader as pr
+import prose_reader as pr                                  # first: it sets up the paths
 import prose_test as pt
+import duels
 
 WORD = re.compile(r"[a-z0-9]+(?:[.,][0-9]+)?")
 FIG = re.compile(r"\(\s*figs?\.?[^)]*\)|\bfigs?\.?\s*\d+[a-z]?\b", re.I)
