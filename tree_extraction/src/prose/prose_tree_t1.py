@@ -285,7 +285,7 @@ def stage_treeread(papers):
         if f.exists():
             continue
         t0 = time.time()
-        rd = json.loads((pr.PREV_OUT / "read2" / f"{p}.json").read_text(encoding="utf-8"))
+        rd = pr.load_read(p) if "route" in pr.FL else json.loads((pr.PREV_OUT / "read2" / f"{p}.json").read_text(encoding="utf-8"))
         for k in ("read7_done", "units_done", "log", "triggers", "record_only"):
             rd.pop(k, None)
         for r in rd["read"].values():
@@ -294,7 +294,7 @@ def stage_treeread(papers):
         abbr, span, shape, field = (load("abbrev")["abbreviations"], load("walk")["span"], load("shape")["shape"],
                                     load("field")["field"])
         kept = collections.defaultdict(list)
-        for r in json.loads((pr._paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]:
+        for r in json.loads((pr.SENT_DIR / f"{p}.json").read_text(encoding="utf-8"))["units"]:
             if r.get("cat") != "record list" and r["kept"]:
                 kept[r["passage"]].append(r)
         under = lambda u: f", under the heading '{u['heading'][:120]}'" if u["heading"] else ""
@@ -364,6 +364,18 @@ def stage_treeread(papers):
                 if kind != "measure" and len(x["text"]) >= 200 and not got[x["id"]]:
                     trig["T2 fired"] += 1
                     trig["T2 answers"] += len(text_read([x], tpl, s, under(x["u"]), "T2")[x["id"]])
+            if "route" in pr.FL and kind == "measure":     # t2: the question goes by sentence, not by paragraph
+                for x in us:
+                    rest = [(q, t) for q, t in x["sents"] if tr.phrases[q]["cat"] not in ("measurement", "unsure")]
+                    if not rest:
+                        continue
+                    pos, phr = 0, []
+                    for q, t in rest:
+                        phr.append((q, pos, pos + len(t) + 1))
+                        pos += len(t) + 1
+                    sub = dict(x, id=f"{x['id']}~d", text=" ".join(t for _q, t in rest), phrases=phr, sents=rest)
+                    trig["routed sentences"] += len(rest)
+                    text_read([sub], DESCRIBE, s, under(x["u"]))
         for pid, us in list_units.items():
             s, where = us[0]["s"], under(us[0]["u"])
             if not us[0].get("item"):
@@ -382,8 +394,10 @@ def stage_treeread(papers):
                             continue
                         role = "place" if name(r) in pr.RECORD_LOC else "coords" if name(r) in pr.RECORD_COORD else ""
                         if role and printed(r["value"], t):
-                            extra[role] = tr.node(role, r["value"], ph, pr.v1._printed(r["value"], t)[0][0], "printed")
                             (loc if role == "place" else coord).append(r["value"])
+                            joined = "; ".join(loc) if role == "place" else ", ".join(coord)
+                            at0 = pr.v1._printed((loc if role == "place" else coord)[0], t)[0][0]
+                            extra[role] = tr.node(role, joined, ph, at0, "printed")
                         else:
                             others.append(r)
                     if not others and extra:

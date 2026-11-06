@@ -24,7 +24,7 @@ import prose_reader as pr
 import prose_test as pt
 import duels
 
-OUT = pr._paths.OUTPUT / "prose_sent"
+OUT = pr.SENT_DIR
 ABBR = {"fig", "figs", "alt", "sp", "spp", "nov", "coll", "leg", "det", "cf", "ca", "vs", "al", "prov", "vill", "mt",
         "st", "nat", "res", "no", "dr", "prof", "var", "ssp", "subsp", "tab", "e.g", "i.e", "approx"}
 END = re.compile(r"[.!?]\**\s+(?=[*\"“(\[]*[A-Z♂♀])")

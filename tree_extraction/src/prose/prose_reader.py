@@ -133,7 +133,11 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v8d": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
             "v9": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
             "v9b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
-            "t1": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree")}
+            "t1": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree"),
+            "t2": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route")}
+#   t2   t1 + three general fixes, from the fresh paper text up: a repeated line that is a sentence or starts with a bold
+#        label is kept (page noise was eating real ones); an identification key gives no facts (Q-KEY, as a caption);
+#        non-measurement sentences of a measurement paragraph also get the description question. No stage reused.
 #   t1   a second tree (prose_tree_t1.py), built apart from v9: gemma reads the whole passage, code places each node.
 #        Stages: prose_tree_t1.py treeread, names, facts, prose_tree_t1.py treefinal, assemble
 #   v9   the information tree (prose_tree.py): this file gives it the stages it reuses and the decisions
@@ -155,8 +159,9 @@ VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
                             else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_v7a")
+SENT_DIR = (_paths.OUTPUT / f"prose_{VARIANT}" / "sent") if "route" in FL else _paths.OUTPUT / "prose_sent"
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
@@ -200,6 +205,12 @@ def _split_long(t):
     return out + ([t] if t else [])
 
 
+def real_line(s):
+    """t2, layout only: a repeated line that starts with a bold label or ends like a sentence is the paper's text
+    ('**Distribution.** The species was found in Cameroon only.'), not a running head."""
+    return "keeprep" in FL and (s.startswith("**") or (s.endswith(".") and len(s.split()) >= 4))
+
+
 def passages(paper):
     """[{"id", "kind": heading|para, "text", "heading"}] in the paper's order, after the cut."""
     raw = (_paths.PAPERS / paper / f"{paper}_full.md").read_text(encoding="utf-8", errors="ignore")
@@ -221,7 +232,7 @@ def passages(paper):
             flush()
             blocks.append(("heading", s.lstrip("#").strip()))
         elif s == "@@TABLE@@" or s.startswith("|") or s.startswith("<!--") or s.startswith("![") \
-                or re.fullmatch(r"\d{1,4}", s) or (count[s] >= 3 and len(s) < 150):
+                or re.fullmatch(r"\d{1,4}", s) or (count[s] >= 3 and len(s) < 150 and not real_line(s)):
             flush()                       # tables, page markers, images, page numbers, running heads
         else:
             para.append(s)
@@ -473,6 +484,10 @@ CAPTION = {"caption": "a caption of a figure or a table: it says what the figure
                       "views, scale bars)",
            "text": "text of the paper: a description, a list of material or records, a key, a discussion, or any "
                    "other running text"}
+Q_KEY = "What is this passage of the paper?"
+KEYED = {"key": "part of an identification key: numbered or paired alternatives of characters, each leading to a further "
+                "number or to a species name",
+         "text": "anything else: a description, material or records, a diagnosis, a comparison in sentences, a discussion"}
 Q_LIST = "How is this passage written?"
 LISTED = {"list": "as a list of separate items one after another, each with its own values: specimens or records "
                   "(place, altitude, date, collector), localities, sites, host plants or other entries",
@@ -743,7 +758,7 @@ def stage_facts(papers):
                     x["why"] = "the trait is a species name"
                     factq["species-name traits"] += 1
             # v8c: Q-COMP, facts from a sentence nimble called a comparison: only sure in both orders drops
-            sort = json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]
+            sort = json.loads((SENT_DIR / f"{p}.json").read_text(encoding="utf-8"))["units"]
             comp = collections.defaultdict(list)
             for r in sort:
                 if r["kept"] and r.get("cat") == "comparison":
@@ -847,6 +862,15 @@ def stage_shape(papers):
             if duels.sure(ch, pr, "caption") == "caption":
                 shape[u["id"]] = "caption"
                 continue
+            if "keys" in FL:                               # t2: a key's lines are no facts of the account they sit in
+                ch, pr = ask(st, Q_KEY, dict(KEYED))
+                log[u["id"]]["key"] = [ch, pr]
+                if duels.sure(ch, pr, "key") == "key":
+                    ch2, pr2 = ask(st, Q_KEY, {"b": KEYED["key"], "a": KEYED["text"]})
+                    log[u["id"]]["key2"] = [ch2, pr2]
+                    if duels.sure(ch2, pr2, "b") == "b":
+                        shape[u["id"]] = "caption"
+                        continue
             ch, pr = ask(st, Q_LIST, dict(LISTED))
             log[u["id"]]["list"] = [ch, pr]
             shape[u["id"]] = "list" if duels.sure(ch, pr, "list") == "list" else "text"
@@ -1262,7 +1286,7 @@ def stage_units(papers):
             continue
         by_id = {u["id"]: u for u in rd["passages"]}
         kept = collections.defaultdict(list)
-        for r in json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]:
+        for r in json.loads((SENT_DIR / f"{p}.json").read_text(encoding="utf-8"))["units"]:
             if r.get("cat") != "record list" and r["kept"]:
                 kept[r["passage"]].append(r["text"])
         n = 0
@@ -1432,7 +1456,7 @@ def stage_read7(papers):
         texts = [x for x in inside if shape.get(x["id"]) == "text"]
         if "drop" in FL:                                   # v8b: only the sentences nimble kept, read as v7d reads
             kept = collections.defaultdict(list)           # a passage (same questions, 'Male:' stays in place)
-            sort = json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]
+            sort = json.loads((SENT_DIR / f"{p}.json").read_text(encoding="utf-8"))["units"]
             for r in sort:
                 if r.get("cat") != "record list" and r["kept"]:
                     kept[r["passage"]].append(r["text"])
@@ -1578,7 +1602,7 @@ def stage_read8(papers):
         abbr = json.loads((OUT / "abbrev" / f"{p}.json").read_text(encoding="utf-8"))["abbreviations"]
         span = json.loads((OUT / "walk" / f"{p}.json").read_text(encoding="utf-8"))["span"]
         shape = json.loads((OUT / "shape" / f"{p}.json").read_text(encoding="utf-8"))["shape"]
-        units = json.loads((_paths.OUTPUT / "prose_sent" / f"{p}.json").read_text(encoding="utf-8"))["units"]
+        units = json.loads((SENT_DIR / f"{p}.json").read_text(encoding="utf-8"))["units"]
         by_pid = collections.defaultdict(list)
         for r in units:
             by_pid[r["passage"]].append(r)
