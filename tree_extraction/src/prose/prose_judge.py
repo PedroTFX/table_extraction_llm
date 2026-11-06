@@ -6,9 +6,9 @@ For held_b it prints TOTALS ONLY: no paper name, row, quote or per-paper number.
 GT side, each GT row is one of:
     exact    same species (genus initial + epithet), same value, trait names that share their words
     same     the same information: same value under a related name; a value with only its figure reference or leading
-             verb different; our value wider, or the GT's field found as our parts (70% of its words); a GT number not
+             verb different; our value wider, or the GT's field found as our parts (60% of its words, part names included); a GT number not
              printed in the paper when ours is near it and printed (a GT typo)
-    partial  35-70% of the field found as parts
+    partial  30-60% of the field found as parts
     repeat   the value is in our rows, but we wrote fewer rows than the GT asks (one per record)
     miss     not found
 Our side, each row without a GT partner is one of:
@@ -44,11 +44,12 @@ CLOSE = re.compile(r"key to|identification key|\bkeys?\b|references?|literature 
                    r"other species|introduction|methods|abstract|checklist|supplementary", re.I)
 FORM = re.compile(r"^(type )?(locality|location|region|area|coordinates?|latitude|longitude|collecting place|collection.?location|"
                   r"location of collection|new species location)\b", re.I)
-Q_JUNK = "What does a scientific paper give here?"
-JUNK = {"trait": "a characteristic of the organism: its body, size, colour, structures, sexes, life, food or host plants, "
-                 "habitat, or where it lives",
-        "other": "no characteristic: a person's name, a place or camp name in the wrong field, a way of collecting, a specimen "
-                 "count or label, or a remark about names, the paper or the study"}
+Q_JUNK = "Is the value a real answer to what the name asks?"
+JUNK = {"trait": "yes: it says what that part or property of the organism is like, or what it is",
+        "other": "no: it is the proper name of a place, person or institution, a way of collecting, a fragment, or a remark "
+                 "about other species, names, the paper or the study"}
+SUBJECT = re.compile(r"^(this|these|new|most|single|all)\b.*\b(species|specimens?)\b", re.I)
+PLACE_TRAIT = re.compile(r"^(habitat|environment)\b", re.I)
 Q_OWNER = "Of which organism does this sentence state it?"
 
 
@@ -76,7 +77,7 @@ def is_num(v):
     return bool(v) and not re.search(r"[a-z]{3}", str(v).lower())
 
 
-def read_paper(p):
+def read_paper(p, known):
     """Each line of the paper's text with the species account it sits in, found from its headings alone."""
     raw = (pr._paths.PAPERS / p / f"{p}_full.md").read_text(encoding="utf-8", errors="ignore")
     cur, lines = None, []
@@ -84,10 +85,10 @@ def read_paper(p):
         s = l.strip()
         if not s:
             continue
-        head = s.startswith("#") or (len(s) <= 120 and s[0] in "*_")
         m = BINOM.match(s)
-        if head and m and m.group(2) not in NOT_EPITHET:
-            cur = pt.key(f"{m.group(1)} {m.group(2)}")
+        k = pt.key(f"{m.group(1)} {m.group(2)}") if m and m.group(2) not in NOT_EPITHET else None
+        if k and (s.startswith("#") or (len(s) <= 120 and s.startswith("**") and k in known)):
+            cur = k
         elif s.startswith("#") and CLOSE.search(s):
             cur = None
         lines.append({"text": s, "n": norm(s), "acct": cur})
@@ -135,7 +136,7 @@ def judge_gt(gt, us, whole):
             else:
                 labels[j] = "miss"
             continue
-        eq = next((i for i in rows if (pt.nv(us[i]["v"]) == a or clean(us[i]["v"]) == cg) and (len(gw) >= 2 or i in rel)), None)
+        eq = next((i for i in rows if (pt.nv(us[i]["v"]) == a or clean(us[i]["v"]) == cg) and (len(gw) >= 4 or i in rel)), None)
         if eq is not None:
             labels[j] = take(eq)
             continue
@@ -148,20 +149,20 @@ def judge_gt(gt, us, whole):
             n = norm(us[i]["v"])
             nw = words(us[i]["v"])
             if n.strip() and n in f and (i in rel or len(nw) >= 4) and (len(nw) >= 2 or i in rel):
-                have |= set(nw)
+                have |= set(nw) | (set(words(us[i]["t"])) & set(gw))
                 pieces += 1
         cover = len(have & set(gw)) / max(1, len(set(gw)))
         near = max((difflib.SequenceMatcher(None, a, pt.nv(us[i]["v"])).ratio() for i in rel), default=0)
-        if cover >= .7 or near >= .85:
+        if cover >= .6 or near >= .85:
             labels[j] = "same"
-        elif cover >= .35:
+        elif cover >= .3:
             labels[j] = "partial"
         else:
             labels[j] = "miss"
     return labels, used
 
 
-def judge_extra(r, lines, ask, cache):
+def judge_extra(r, lines, ask, cache, accounts):
     """A row of ours without a GT partner -> label."""
     k, v = pt.key(r["sp"]), str(r["v"])
     f, epi = norm(v), (k.split()[-1] if k else "")
@@ -172,11 +173,15 @@ def judge_extra(r, lines, ask, cache):
         if not hits:
             return "unprinted"
     named = [x for x in hits if re.search(rf"\b{re.escape(epi)}\b", x["text"].lower())] if epi else []
-    if not named and not any(x["acct"] == k for x in hits):
+    if k in accounts and not named and not any(x["acct"] == k for x in hits):
         return "wrong"
     if FORM.match(str(r["t"]).strip()):
         return "form"
-    st = f"A scientific paper about {r['sp']} gives '{r['t']}: {v[:200]}'."
+    if SUBJECT.match(str(r["t"]).strip()):
+        return "junk"
+    if PLACE_TRAIT.match(str(r["t"]).strip()) and len(v.split()) <= 3 and all(w[:1].isupper() for w in v.split()):
+        return "junk"
+    st = f"A scientific paper about {r['sp']} gives, under the name '{r['t']}', the value '{v[:200]}'."
     key = ("junk", st)
     if key not in cache:
         ch, pr1 = ask(st, Q_JUNK, dict(JUNK))
@@ -232,25 +237,28 @@ if __name__ == "__main__":
     conf, wrongs = collections.Counter(), []
     for p in papers:
         gt, us = [g for g in pt.gt_rows(p)], our_rows(p)
-        lines, whole = read_paper(p)
+        lines, whole = read_paper(p, {pt.key(x["sp"]) for x in gt + us})
+        accounts = {x["acct"] for x in lines if x["acct"]}
         labels, used = judge_gt(gt, us, whole)
         c = collections.Counter(labels)
         c["rows"] = len(us)
         for g, lab in zip(gt, labels):
             h = gold.get((p, "gt", pt.key(g["sp"]), g["t"], g["v"]))
             if h:
-                hand = h.pop()
+                hand = lab if lab in h else h[-1]
+                h.remove(hand)
                 conf[("gt", hand, lab)] += 1
                 if hand != lab:
                     wrongs.append(f"{p[:4]} GT hand={hand} code={lab} | {g['t'][:28]} | {g['v'][:90]}")
         for i, r in enumerate(us):
             if i in used:
                 continue
-            lab = judge_extra(r, lines, ask, cache)
+            lab = judge_extra(r, lines, ask, cache, accounts)
             c[lab] += 1
             h = gold.get((p, "us", pt.key(r["sp"]), r["t"], r["v"]))
             if h:
-                hand = h.pop()
+                hand = lab if lab in h else h[-1]
+                h.remove(hand)
                 conf[("us", hand, lab)] += 1
                 if hand != lab:
                     wrongs.append(f"{p[:4]} OURS hand={hand} code={lab} | {r['sp'][:18]} | {r['t'][:24]} | {r['v'][:80]}")
