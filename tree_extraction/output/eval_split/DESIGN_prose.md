@@ -481,3 +481,22 @@ so its precision runs high. 'ok' means printed where it belongs, not proved true
 
 t2 held_b, run once, totals only: production micro 0.528 (v8d 0.531), mean 0.422 (0.417); automatic judged micro 0.803 (0.805), mean 0.580 (0.553). Stages 1,471 s.
 Recall is 9 points lower on held_b than dev, so the dev number is not what to expect on new papers. Fixes moved held_b little: precision up, recall flat.
+
+## t2 run once on the 7 grit prose papers (2026-11-06; totals only; output in output_grit, not in git)
+
+Five of the 7 are also 109-set prose papers (3 dev, 2 held_b), so only the 2 grit-only papers had never been read. Stages 4,865 s.
+
+| group | papers | prose_judge R / P / F1 | exact | same | partial | repeat | miss | production micro / mean | automatic micro |
+|---|---|---|---|---|---|---|---|---|---|
+| all grit | 7 | 0.813 / 0.964 / 0.882 | 1,452 | 220 | 16 | 169 | 200 | 0.357 / 0.291 | 0.648 |
+| held_b + grit-only | 4 | 0.762 / 0.962 / 0.850 | 831 | 132 | 11 | 145 | 145 | | |
+| **grit-only (unseen)** | 2 | **0.546 / 0.933 / 0.689** | 113 | 100 | 9 | 62 | 106 | 0.214 / 0.216 | 0.283 |
+
+0.689 is the only unseen number and is the one to expect on new papers, on 2 papers only. 100 of its 213 credited rows are 'same', the evaluator's looser class, tuned on dev and unchecked here, so it may run high.
+Production here used the new precision match; earlier prose production scores did not. Dev and held_b were not re-scored.
+
+## Scorer and GT (2026-11-06)
+
+source/evaluate.py: second pass, a number printed with fewer digits is the same number (same species and trait, shorter side keeps 2+ decimals; EVAL_ROUND_MATCH=0 for old).
+Repeatable scorer on v18's saved rows, 109: mean 0.594 -> 0.602, micro 0.722 -> 0.850, no paper down (Raine2018 0.452 -> 0.919). Grit: mean 0.589 -> 0.592, micro 0.753 -> 0.759. Held_b, grit-only: unchanged. Production not re-run.
+Noriega2023 grit GT: 172 name spellings repaired on 20,450 rows (ph, el, pl, Ph, Pl deleted); production F1 0.39 -> 0.937. Left: 278 of its values are Excel dates. Tags re-scored: basisOfRecord 90.6% -> 92.2% (109), 72.5% -> 74.7% (grit).
