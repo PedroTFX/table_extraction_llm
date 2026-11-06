@@ -460,3 +460,24 @@ GT rows 1,326: exact 1,107; same information 105 (parts, wording, GT typos); par
 Misses: sentence sent the measurement question 16; habitat owed per record or to other species 16; repeated line cut as page noise 9; group diagnosis outside the account 8; records unread 9; other 5.
 Our rows 2,134: clear junk about 32; wrong owner about 30 (identification key under A. potockyi, comparisons); coordinates and localities as trait rows 49 (true, wrong form). Precision about 95%, F1 about 0.93 (automatic 0.73, production 0.45).
 GT errors seen: 9.02, 5.06, 3.08, 1.95-.39, 9.5-1.00, 0.22--0.28, 1.83-2.341.83-2.39, 0.78-0.70, 'terior angles'; Elytra Length 1.33-1.72 is printed as PW.
+
+## t2 and the new evaluator (2026-11-06)
+
+t2 = t1 + three general fixes, all stages fresh: a repeated line that starts with a bold label or ends like a sentence is kept; an
+identification key gives no facts (Q-KEY, both orders, treated as a caption; 15 passages on dev, all key text by their openings); non-measurement sentences of a
+measurement paragraph also get the description question (16 sentences on dev).
+
+src/prose/prose_judge.py is the hand judgement as a program, using only our rows, the GT and the paper's text, plus nimble. Totals only on held_b. Tested against
+prose_judged_t1_dev.json (my labels, line by line; wrong-owner count corrected to 38 on reading the key): agreement 97.5% on GT rows, 96.1% on our unpaired rows.
+Rules were adjusted once after reading the disagreements on these same rows, so the agreement is not an independent test. It is lenient: it caught 17 of 32 junk rows and 26 of 38 wrong-owner rows,
+so its precision runs high. 'ok' means printed where it belongs, not proved true. On t1 it gives F1 0.923 against about 0.929 by hand.
+
+| prose_judge | recall | precision | F1 | exact | same | repeat | miss | rows |
+|---|---|---|---|---|---|---|---|---|
+| t1 dev | 0.896 | 0.952 | 0.923 | 1,107 | 81 | 60 | 70 | 2,134 |
+| t2 dev | 0.910 | 0.965 | 0.936 | 1,122 | 84 | 61 | 52 | 2,123 |
+| v8d held_b | 0.821 | 0.944 | 0.878 | 783 | 54 | 71 | 107 | 1,147 |
+| t2 held_b | 0.823 | 0.962 | 0.887 | 794 | 45 | 77 | 99 | 1,178 |
+
+t2 held_b, run once, totals only: production micro 0.528 (v8d 0.531), mean 0.422 (0.417); automatic judged micro 0.803 (0.805), mean 0.580 (0.553). Stages 1,471 s.
+Recall is 9 points lower on held_b than dev, so the dev number is not what to expect on new papers. Fixes moved held_b little: precision up, recall flat.
