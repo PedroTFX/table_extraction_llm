@@ -451,3 +451,12 @@ by itself. v9 / v9b (prose_tree.py) and t1 (prose_tree_t1.py, gemma reads the wh
 No tree beats v8d yet. GT values v8d has and they lack: t1 40, v9b 37, mostly Xu2024 record altitudes plus some Ustjuzhanin2024 description
 and habitat clauses; cause not yet traced. Known t1 bug: an item's place and coords nodes keep only the last one (latitude lost). Not hand-judged.
 Commit 6ed31abf overwrote v9 by mistake and crashed v9b at facts; restored in 3cb86290, v9b resumed from saved reading.
+
+## t1 judged by reading (2026-11-06, 3 dev papers, corrected Xu2024 GT)
+
+Every unmatched GT row and extra row read by hand; the disputed values checked in the papers. Extras were judged from species, trait and value, not each against the text.
+
+GT rows 1,326: exact 1,107; same information 105 (parts, wording, GT typos); partial 5; repeats short 46 (value found, fewer record rows); missed 63. Recall 91%.
+Misses: sentence sent the measurement question 16; habitat owed per record or to other species 16; repeated line cut as page noise 9; group diagnosis outside the account 8; records unread 9; other 5.
+Our rows 2,134: clear junk about 32; wrong owner about 30 (identification key under A. potockyi, comparisons); coordinates and localities as trait rows 49 (true, wrong form). Precision about 95%, F1 about 0.93 (automatic 0.73, production 0.45).
+GT errors seen: 9.02, 5.06, 3.08, 1.95-.39, 9.5-1.00, 0.22--0.28, 1.83-2.341.83-2.39, 0.78-0.70, 'terior angles'; Elytra Length 1.33-1.72 is printed as PW.
