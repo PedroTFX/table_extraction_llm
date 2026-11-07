@@ -119,6 +119,9 @@ def decide(papers, status, how, min_rows):
         if how == "rows":
             s["route"], s["why"] = ("prose" if n < min_rows else "tables"), f"rows < {min_rows}"
             continue
+        if not (_paths.PAPERS / p / f"{p}_full.md").exists():
+            s["route"], s["why"] = "tables", "no paper text"
+            continue
         tt = traits_table(p)
         if tt is not False:
             s["route"], s["why"] = "tables", ("a traits table" if tt else "tables without a kind record")
