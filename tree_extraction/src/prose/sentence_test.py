@@ -115,7 +115,7 @@ def run(papers):
         by_sp = collections.defaultdict(list)
         for r in units:
             by_sp[pt.key(r["account"])].append(r)
-        gt = pt.gt_rows(p)
+        gt = pt.gt_rows(p) if (pr._paths.PAPERS / p / f"{p}.xlsx").exists() else []   # a new paper has no GT
         lost, seen = [], collections.Counter()
         cross = collections.defaultdict(collections.Counter)
         for g in gt:
