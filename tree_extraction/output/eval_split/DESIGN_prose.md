@@ -439,7 +439,7 @@ use the automatic pairing, which is stricter than by hand.
 ## The information tree: v9, v9b, t1 (2026-11-05, 3 dev papers)
 
 species (from the tracking) -> phrases (kept sentences, list items) -> nodes (type, unit, value, sex, ...), no fixed order, each node checked
-by itself. v9 / v9b (prose_tree.py) and t1 (prose_tree_t1.py, gemma reads the whole passage, code places the nodes) were built apart.
+by itself. v9 / v9b (prose_tree.py) and t1 (prose_tree_t2.py, gemma reads the whole passage, code places the nodes) were built apart.
 
 | dev | v8d | v9 | v9b | t1 |
 |---|---|---|---|---|
@@ -500,3 +500,22 @@ Production here used the new precision match; earlier prose production scores di
 source/evaluate.py: second pass, a number printed with fewer digits is the same number (same species and trait, shorter side keeps 2+ decimals; EVAL_ROUND_MATCH=0 for old).
 Repeatable scorer on v18's saved rows, 109: mean 0.594 -> 0.602, micro 0.722 -> 0.850, no paper down (Raine2018 0.452 -> 0.919). Grit: mean 0.589 -> 0.592, micro 0.753 -> 0.759. Held_b, grit-only: unchanged. Production not re-run.
 Noriega2023 grit GT: 172 name spellings repaired on 20,450 rows (ph, el, pl, Ph, Pl deleted); production F1 0.39 -> 0.937. Left: 278 of its values are Excel dates. Tags re-scored: basisOfRecord 90.6% -> 92.2% (109), 72.5% -> 74.7% (grit).
+
+## Two-step routing by table kind + Q-TEXT (2026-11-07, the user's rule)
+
+Prose runs when no table is a traits table (Q-KIND: statistical results, figure numbers, sampling, other or none) AND nimble does not
+say, sure in both orders, that the text reports a study (Q-TEXT on title, abstract, headings). Replaces "under 20 table rows", which
+gave Tran2022 (experiment, figure tables) 58 prose rows of methods and results text, none matching (0.400 -> 0.381).
+On tuning papers Q-TEXT was sure every time (0.94-1.0): prose for Xia2022, Xu2024, Ustjuzhanin2024 only; Tran2022, Chichorro2022,
+Renoz2020, Kratschmer2019, Figueroa2021 and the other study papers stay tables only.
+
+| production mean F1 | tables only | + prose, < 20 rows | + prose, kind + Q-TEXT |
+|---|---|---|---|
+| 109 all | 0.621 | 0.640 (down 2) | **0.644 (down 0)** |
+| 109 held_b | 0.494 | 0.524 | 0.541 |
+| grit all | 0.601 | 0.605 (down 3) | **0.608 (down 1)** |
+| grit held_b | 0.569 | 0.584 | 0.606 |
+| grit-only | 0.562 | 0.551 | 0.551 |
+
+Grit-only still loses 0.011 to prose: the paper(s) behind it are routed by the new rule too and can't be looked at.
+The results file's 'prose done' count still includes papers routed away (status kept from the earlier run); routing counts are right.
