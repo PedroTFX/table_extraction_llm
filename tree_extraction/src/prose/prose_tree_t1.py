@@ -114,6 +114,14 @@ def read_raw(tpl, units, s, abbr, where, what="passages"):
             if rows:
                 GEN["format retry units recovered"] += 1
                 res[i] = rows
+                bad.discard(i)
+        if "finish" in pr.FL:                              # t3: gemma often answers only the first unit of a batch
+            for u in [u for u in units if u["id"] in bad]:
+                GEN["units asked alone"] += 1
+                alone, _ = ask([u])
+                if alone.get(u["id"]):
+                    GEN["units asked alone, answered"] += 1
+                    res[u["id"]] = alone[u["id"]]
     return {u["id"]: res.get(u["id"], []) for u in units}
 
 
@@ -320,6 +328,11 @@ def stage_treeread(papers):
             else:
                 items, plog = pr.list_items(u)
                 trig.update({f"pointers: {k}": v for k, v in plog.items()})
+                if "finish" in pr.FL and len(items) < 2:   # t3: layout only; the description question leaves out records
+                    pieces = [x.strip() for x in re.split(r";\s+", u["text"]) if x.strip()]
+                    if len(pieces) >= 2:
+                        items = pieces
+                        trig["lists cut at semicolons"] += 1
                 if len(items) < 2:
                     q = f"{pid}.s0"
                     tr.leaf(q, u["text"], pid, s, "record list")

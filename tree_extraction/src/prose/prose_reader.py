@@ -134,7 +134,11 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v9": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
             "v9b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
             "t1": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree"),
-            "t2": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route")}
+            "t2": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route"),
+            "t3": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "finish")}
+#   t3   t2 + the reading finishes its calls: gemma often answers only the first unit of a batch, so units left after the retry
+#        are asked alone; a list that could not be cut is cut at its semicolons (layout) and read as items. Reuses t2's
+#        abbreviations, shapes, tracking, Q-FIELD, sort and places. Stages: treeread names facts treefinal assemble
 #   t2   t1 + three general fixes, from the fresh paper text up: a repeated line that is a sentence or starts with a bold
 #        label is kept (page noise was eating real ones); an identification key gives no facts (Q-KEY, as a caption);
 #        non-measurement sentences of a measurement paragraph also get the description question. No stage reused.
@@ -158,10 +162,10 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
-                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_v7a")
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT == "t3" else "prose_v7a")
 SENT_DIR = (_paths.OUTPUT / f"prose_{VARIANT}" / "sent") if "route" in FL else _paths.OUTPUT / "prose_sent"
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT == "t3" else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
