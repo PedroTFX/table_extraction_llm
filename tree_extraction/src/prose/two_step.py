@@ -124,8 +124,8 @@ def decide(papers, status, how, min_rows):
             s["route"], s["why"] = "tables", ("a traits table" if tt else "tables without a kind record")
             continue
         if ask is None:
+            import prose_reader as pr                 # first: it sets up the paths
             import duels
-            import prose_reader as pr
             ask = pr.Ask()
         st = paper_view(p)
         ch, pr1 = ask(st, Q_TEXT, dict(TEXT))
