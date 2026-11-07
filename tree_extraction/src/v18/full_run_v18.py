@@ -987,6 +987,7 @@ V18 = _paths.OUTPUT / "full_run_v18"
 
 
 def v18_setup():
+    v17_setup()          # v17 is code only and has no stage: in a fresh root nothing else makes its folders
     V18.mkdir(parents=True, exist_ok=True)
     for d in ("tags", "meaning", "decode", "species", "organism", "structure", "kind", "sections",
               "legend_names", "name_parts", "one_species", "listed_tags", "dup_rows"):
