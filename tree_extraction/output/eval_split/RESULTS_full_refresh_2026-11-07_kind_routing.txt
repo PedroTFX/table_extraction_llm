@@ -1,0 +1,38 @@
+##### 109 set, prose routed by table kind + Q-TEXT
+old baseline, summary.csv: mean F1 0.612, 109 papers
+tables only (v18 rows, current scorer and GT); reports 109 of 109
+  all                109 papers  mean F1 0.621  micro F1 0.849  R 0.793  P 0.913  zero 17, under .5 21, .5-.9 33, .9+ 38
+  dev                 54 papers  mean F1 0.597  micro F1 0.814  R 0.754  P 0.885  zero 8, under .5 12, .5-.9 17, .9+ 17
+  held_a              28 papers  mean F1 0.788  micro F1 0.930  R 0.899  P 0.963  zero 1, under .5 4, .5-.9 8, .9+ 15
+  held_b              27 papers  mean F1 0.494  micro F1 0.438  R 0.324  P 0.672  zero 8, under .5 5, .5-.9 8, .9+ 6
+  against the old baseline: up 5, down 0
+  tuning papers moved most: Raine2018 0.452->0.920, Tonelli2021 0.154->0.495, Pessoa2017 0.740->0.790, Kratschmer2019 0.569->0.608, Orr2024 0.919->0.926
+tables + prose (two_step); reports 109 of 109
+  all                109 papers  mean F1 0.644  micro F1 0.850  R 0.801  P 0.906  zero 11, under .5 25, .5-.9 35, .9+ 38
+  dev                 54 papers  mean F1 0.621  micro F1 0.816  R 0.762  P 0.877  zero 5, under .5 14, .5-.9 18, .9+ 17
+  held_a              28 papers  mean F1 0.788  micro F1 0.930  R 0.899  P 0.963  zero 1, under .5 4, .5-.9 8, .9+ 15
+  held_b              27 papers  mean F1 0.541  micro F1 0.495  R 0.400  P 0.647  zero 5, under .5 7, .5-.9 9, .9+ 6
+  against the old baseline: up 11, down 0
+  tuning papers moved most: Xu2024 0.000->0.749, Raine2018 0.452->0.920, Ustjuzhanin2024 0.000->0.375, Tonelli2021 0.154->0.495, Xia2022 0.000->0.156, Pessoa2017 0.740->0.790, Kratschmer2019 0.569->0.608, Orr2024 0.919->0.926
+routing: 109 papers, sent to prose 6, prose done 11, failed 0, prose rows 3459
+
+##### grit set, prose routed by table kind + Q-TEXT
+old baseline, summary.csv: mean F1 0.594, 148 papers
+tables only (v18 rows, current scorer and GT); reports 148 of 148
+  all                148 papers  mean F1 0.601  micro F1 0.754  R 0.729  P 0.781  zero 26, under .5 33, .5-.9 38, .9+ 51
+  dev                 50 papers  mean F1 0.573  micro F1 0.633  R 0.557  P 0.733  zero 9, under .5 12, .5-.9 15, .9+ 14
+  held_a              24 papers  mean F1 0.774  micro F1 0.918  R 0.890  P 0.949  zero 1, under .5 4, .5-.9 8, .9+ 11
+  held_b              20 papers  mean F1 0.569  micro F1 0.577  R 0.446  P 0.815  zero 6, under .5 3, .5-.9 3, .9+ 8
+  grit-only           54 papers  mean F1 0.562  micro F1 0.623  R 0.655  P 0.595  zero 10, under .5 14, .5-.9 12, .9+ 18
+  against the old baseline: up 4, down 0
+  tuning papers moved most: Noriega2023 0.390->0.944, Tonelli2021 0.154->0.495, Pessoa2017 0.740->0.790, Kratschmer2019 0.530->0.567
+tables + prose (two_step); reports 147 of 148
+  all                148 papers  mean F1 0.608  micro F1 0.754  R 0.734  P 0.774  zero 20, under .5 39, .5-.9 39, .9+ 50
+  dev                 50 papers  mean F1 0.590  micro F1 0.631  R 0.564  P 0.716  zero 6, under .5 15, .5-.9 15, .9+ 14
+  held_a              24 papers  mean F1 0.774  micro F1 0.918  R 0.890  P 0.949  zero 1, under .5 4, .5-.9 8, .9+ 11
+  held_b              20 papers  mean F1 0.606  micro F1 0.643  R 0.563  P 0.750  zero 4, under .5 4, .5-.9 4, .9+ 8
+  grit-only           54 papers  mean F1 0.551  micro F1 0.622  R 0.657  P 0.590  zero 9, under .5 16, .5-.9 12, .9+ 17
+  against the old baseline: up 11, down 1
+  tuning papers moved most: Noriega2023 0.390->0.944, Xu2024 0.000->0.442, Tonelli2021 0.154->0.495, Ustjuzhanin2024 0.000->0.282, Xia2022 0.000->0.129, Pessoa2017 0.740->0.790, Kratschmer2019 0.530->0.567
+routing: 147 papers, sent to prose 8, prose done 16, failed 0, prose rows 4249
+
