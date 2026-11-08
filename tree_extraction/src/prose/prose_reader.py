@@ -135,15 +135,22 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v9b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
             "t1": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree"),
             "t2": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route"),
-            "t3": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "finish")}
+            "t3": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "finish"),
+            "t4": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "fullname")}
+#   t4   t2 + a measurement's name holds every word the passage uses to say what the number measures (the part's label,
+#        a word beside the number that qualifies it, the heading it falls under), each copied as printed: 'Carapace
+#        4.14 long, 4.05 wide' gave 'Carapace' twice, 'Leg measurements: I 4.69' gave 'I' (Jakub newPDF: 758 matched rows
+#        with the dimension or the leg lost). The prompt gives the shape, no words. The name's check: printed as one
+#        string, else every word of it printed in the passage. Q-TRAIT unchanged: it is asked on that name. Reuses t2's
+#        abbreviations, shapes, tracking, Q-FIELD, sort and places. Stages: treeread names facts treefinal assemble
 #   t3   t2 + the reading finishes its calls: gemma often answers only the first unit of a batch, so units left after the retry
 #        are asked alone; a list that could not be cut is cut at its semicolons (layout) and read as items. Reuses t2's
 #        abbreviations, shapes, tracking, Q-FIELD, sort and places. Stages: treeread names facts treefinal assemble
 #   t2   t1 + three general fixes, from the fresh paper text up: a repeated line that is a sentence or starts with a bold
 #        label is kept (page noise was eating real ones); an identification key gives no facts (Q-KEY, as a caption);
 #        non-measurement sentences of a measurement paragraph also get the description question. No stage reused.
-#   t1   a second tree (prose_tree_t1.py), built apart from v9: gemma reads the whole passage, code places each node.
-#        Stages: prose_tree_t1.py treeread, names, facts, prose_tree_t1.py treefinal, assemble
+#   t1   a second tree (prose_tree_t2.py), built apart from v9: gemma reads the whole passage, code places each node.
+#        Stages: prose_tree_t2.py treeread, names, facts, prose_tree_t2.py treefinal, assemble
 #   v9   the information tree (prose_tree.py): this file gives it the stages it reuses and the decisions
 #   v8d  v8c + the printed check sets a trailing unit aside: the prompt asks for the value 'with its unit', and when a
 #        paper prints the unit away from the number gemma adds it, so a right number failed the check (v8c's test on
@@ -162,10 +169,10 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
-                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT == "t3" else "prose_v7a")
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT in ("t3", "t4") else "prose_v7a")
 SENT_DIR = (_paths.OUTPUT / f"prose_{VARIANT}" / "sent") if "route" in FL else _paths.OUTPUT / "prose_sent"
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT == "t3" else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside

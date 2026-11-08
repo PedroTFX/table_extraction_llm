@@ -1,5 +1,5 @@
 """
-prose_tree_t1.py — a second information tree, built apart from v9 (prose_tree.py) (2026-11-05; PROSE_VARIANT=t1).
+prose_tree_t2.py — a second information tree, built apart from v9 (prose_tree.py) (2026-11-05; PROSE_VARIANT=t1 or t2).
 
     species (from the species tracking)
         phrase (a sentence nimble kept, or a list item; can hang under more than one species)
@@ -19,8 +19,8 @@ The value check is per node. value: printed in the passage (a trailing unit set 
 same reading call, or 'loose': all its words in one sentence in any order, every number exact. Anything else stays on
 the tree as 'not printed' and gives no row. unit: printed in the passage, else the nearest phrase of the species.
 
-    python prose_tree_t1.py treeread dev     (then prose_reader.py names, facts)
-    python prose_tree_t1.py treefinal dev    (then prose_reader.py assemble)
+    python prose_tree_t2.py treeread dev     (then prose_reader.py names, facts)
+    python prose_tree_t2.py treefinal dev    (then prose_reader.py assemble)
 -> OUT/tree/<paper>.json, OUT/tree_view/<paper>.txt, OUT/read2/<paper>.json for the stages after it
 """
 import collections
@@ -76,6 +76,16 @@ Items:
 {passages}
 
 Reply with JSON only."""
+FULLNAME = ('- "what": what the number measures, named with every word the passage uses for it, each copied as printed (an '
+            'abbreviation as printed): the label of the part, a word printed beside the number that qualifies it (before or '
+            'after the number), and the heading or lead-in the number falls under. When one label covers several numbers, '
+            'each with its own qualifier, each number gets the label together with its own qualifier: a passage of the shape '
+            '(a part, a number, a qualifier; a number, a qualifier) gives two facts, each named by the part and that number\'s '
+            'qualifier; a passage of the shape (a heading: a label, a number; a label, a number) gives each number the heading '
+            'and its own label\n')
+if "fullname" in pr.FL:                                    # t4: the shape only, no words of any paper
+    assert '- "what": the label or abbreviation, as printed\n' in MEASURE
+    MEASURE = MEASURE.replace('- "what": the label or abbreviation, as printed\n', FULLNAME)
 SCHEMA = {"type": "object", "required": ["passages"], "properties": {"passages": {"type": "array", "items": {
     "type": "object", "required": ["id", "facts"],
     "properties": {"id": {"type": "string"}, "facts": {"type": "array", "items": {
@@ -223,9 +233,15 @@ def place(tr, unit, group, s, row, cursor, sx="", extra=None, reread=None):
         parts["value"] = tr.node("value", val, phrase, start, check)
     if row["what"]:
         sp = pr.v1._printed(row["what"], un["text"])
+        words = WORD.findall(row["what"]) if "fullname" in pr.FL and not sp else []
+        wsp = [pr.v1._printed(w, un["text"]) for w in words]
         if sp:
             ph, st = at(un, nearest(sp, pos)[0])
             parts["type"] = tr.node("type", row["what"], ph, st, "printed")
+        elif words and all(wsp):                           # t4: a name put together from words printed apart
+            ph, st = at(un, nearest(wsp[0], pos)[0])
+            parts["type"] = tr.node("type", row["what"], ph, st, "its words printed")
+            tr.count["name: its words printed apart"] += 1
         else:                                              # the model's own name ('altitude' for '1200 m')
             parts["type"] = tr.node("type", row["what"], phrase, None, "named by the model")
     unit_text = row["unit"] or ut

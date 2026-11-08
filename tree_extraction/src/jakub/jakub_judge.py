@@ -17,8 +17,9 @@ length', 'opisthosoma' with 'Abdomen', 'длина карапакса' or '头�
 Out of scope: rows of ours whose name means no database trait or whose value is not a number. In scope and
 unmatched: a false positive.
 
-    python jakub_judge.py <set> [<set> ...]      TREE_OUTPUT not needed: reads output_jakub_<set>/two_step
--> output_jakub_<set>/jakub_judge.csv per paper, totals on screen, and a sample of matches to check by eye.
+    python jakub_judge.py <set> [<set> ...] [--rows prose_t4/combined] [--group tune|test]
+rows: under output_jakub_<set> (default two_step; a variant's folder falls back to two_step for papers it did not run).
+-> output_jakub_<set>/jakub_judge[_<rows>_<group>].csv per paper, totals on screen, a sample of matches to check by eye.
 """
 import collections
 import csv
@@ -220,18 +221,28 @@ def prf(tp, fp, fn):
     return p, r, 2 * p * r / max(1e-9, p + r)
 
 
-def main(sets):
+def main(sets, rows="two_step", group=None):
     random.seed(20261108)
+    assign = {}
+    if group:
+        import json
+        assign = json.loads((REPO / "tree_extraction/output/eval_split/split_jakub.json").read_text(encoding="utf-8"))["assign"]
     for s in sets:
         base = REPO / "data" / "Jakub_papers" / s
         out = REPO / "tree_extraction" / f"output_jakub_{s}"
         res, allm, allfp = [], [], []
         for d in sorted(x for x in base.iterdir() if x.is_dir() and (x / f"{x.name}_full.md").exists()):
-            r, m, fp = judge(d, out / "two_step" / d.name / f"{d.name}.csv")
+            if group and assign.get(d.name) != group:
+                continue
+            f = out / rows / d.name / f"{d.name}.csv"
+            if rows != "two_step" and not f.exists():          # a variant run only on prose papers: the others keep two_step's
+                f = out / "two_step" / d.name / f"{d.name}.csv"
+            r, m, fp = judge(d, f)
             res.append(r)
             allm += [(d.name, *x) for x in m]
             allfp += [(d.name, x) for x in fp]
-        with open(out / "jakub_judge.csv", "w", newline="", encoding="utf-8") as fh:
+        tag = "" if rows == "two_step" and not group else "_" + "_".join(x for x in (rows.split("/")[0], group) if x)
+        with open(out / f"jakub_judge{tag}.csv", "w", newline="", encoding="utf-8") as fh:
             w = csv.writer(fh)
             w.writerow(["paper", "gt_rows", "our_rows", "tp_exact", "tp_vague", "fp", "out_of_scope", "f1_exact", "f1_with_vague"])
             for r in res:
@@ -244,7 +255,9 @@ def main(sets):
         gt, te, tv, fp = T("gt"), T("tp_exact"), T("tp_vague"), T("fp")
         miss = sum((r["missed"] for r in res), collections.Counter())
         n = max(1, len(res))
-        print(f"################ {s}: {len(res)} papers, {gt} GT rows")
+        if not res:
+            continue
+        print(f"################ {s} ({rows}{', ' + group if group else ''}): {len(res)} papers, {gt} GT rows")
         print("exact names only: P %.3f R %.3f F1 %.3f" % prf(te, fp + tv, gt - te))
         print("exact + vague:    P %.3f R %.3f F1 %.3f" % prf(te + tv, fp, gt - te - tv))
         print(f"TP exact {te}, TP vague {tv}, FP in scope {fp}, out of scope {T('out_of_scope')}; "
@@ -263,4 +276,10 @@ def main(sets):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("sets", nargs="+")
+    ap.add_argument("--rows", default="two_step", help="rows under output_jakub_<set>: two_step, prose_t4/combined ...")
+    ap.add_argument("--group", choices=("tune", "test"), help="only the papers of this group (split_jakub.json)")
+    a = ap.parse_args()
+    main(a.sets, a.rows, a.group)
