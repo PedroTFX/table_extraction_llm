@@ -39,6 +39,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import time
 import unicodedata
 from pathlib import Path
 
@@ -166,10 +167,16 @@ def _mineru_markdown_for(doc_path, backend="vlm", lang="en", force=False) -> str
     for attempt in range(1, 4):
         with tempfile.TemporaryDirectory() as td:
             out = Path(td) / "out.md"
-            r = subprocess.run(
-                [exe, "parse", str(Path(doc_path).resolve()), "--tier", tier, *page_args,
-                 *(["--force"] if force else []), "--wait", "1800", "-o", str(out)],
-                capture_output=True, text=True, timeout=2400, cwd=_mineru_workdir())
+            # a server just started is "not ready" while its models load (~1 min): the first
+            # parse after `server start` failed so on the local PC and the remote alike; ask again
+            for _wait in range(20):
+                r = subprocess.run(
+                    [exe, "parse", str(Path(doc_path).resolve()), "--tier", tier, *page_args,
+                     *(["--force"] if force else []), "--wait", "1800", "-o", str(out)],
+                    capture_output=True, text=True, timeout=2400, cwd=_mineru_workdir())
+                if "not ready" not in (r.stderr or "") + (r.stdout or ""):
+                    break
+                time.sleep(15)
             if r.returncode != 0 or not out.exists():
                 raise RuntimeError(
                     f"local MinerU failed for {Path(doc_path).name}: "
