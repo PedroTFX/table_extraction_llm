@@ -66,7 +66,7 @@ def candidates(text: str, name: str) -> list:
     out, seen = [], set()
     for tok in tokens_of(name):
         lookups = [tok, tok.rstrip(".")] if tok.endswith(".") else [tok]
-        for look in lookups:
+        for look in [x for x in lookups if x]:
             for shape, fn in _ABBREV_SHAPES:
                 try:
                     term = fn(look, text)
@@ -171,7 +171,7 @@ def _quote2(text, term, token):
 def token_candidates(text: str, token: str) -> list:
     out, seen = [], set()
     looks = [token, token.rstrip(".")] if token.endswith(".") else [token]
-    for look in looks:
+    for look in [x for x in looks if x]:      # a header '.' strips to '': the shapes index its first letter
         for shape, fn in _ABBREV_SHAPES:
             try:
                 term = fn(look, text)
