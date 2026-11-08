@@ -148,6 +148,109 @@ def same(a, b):
     return round(a[0], d) == round(b[0], d)
 
 
+# --- names read by their parts (the same judgement as the lists above, for names not in them) -----------------------
+# A name is read for the part it names, the dimension, the leg and the leg segment, in the languages of the three sets;
+# the database trait follows. Two parts, or a word of a ratio, distance or count: no trait. A part without its
+# dimension, a leg without its segment: vague.
+_W = lambda *ws: re.compile(r"(?<![^\W\d_])(" + "|".join(ws) + r")(?![^\W\d_])", re.I)
+_C = lambda *ws: re.compile("|".join(ws))                     # CJK: no word boundaries
+NOT_TRAIT = _W(r"ratio", r"index", r"indices", r"distance", r"between", r"interval", r"formula", r"number", r"spines?",
+               r"teeth", r"trichobothria", r"rapport", r"отношение", r"positions?", r"altitude", r"elevation", r"immature",
+               r"individuals", r"bundle", r"segments", r"spiracle", r"spiracule", r"stigma", r"furrow", r"quadrangle",
+               r"moq", r"moa", r"ocular", r"area", r"row", r"interdistances", r"apophysis", r"embolus", r"bulbus", r"bulb",
+               r"cymbium", r"claws?", r"scutum", r"tergite", r"tubercle", r"sex", r"male", r"female", r"femina")
+PARTS = {   # part -> (its length trait, its width trait)
+    "ceph": (_W(r"carapace", r"carapa", r"prosoma", r"cephalothorax", r"céphalothorax", r"cphth", r"головогруд\w*",
+                r"карапакс\w*", r"cephalothorax-\w+"), _C("头胸部", "背甲"), (CL, CW)),
+    "abd": (_W(r"abdomen", r"opisthosoma", r"abdomen-\w+", r"брюшк\w*", r"абдомен\w*"), _C("腹部"), (AL, AW)),
+    "stern": (_W(r"sternum"), _C("腹甲", "胸甲"), (SL, SW)),
+    "lab": (_W(r"labium"), _C("下唇"), ("Labium length", "Labium width")),
+    "end": (_W(r"endites?", r"maxillae"), _C("颚叶"), ("Endite length", "Endite width")),
+    "chel": (_W(r"chelicera", r"chelicerae", r"chélicères"), _C("螯肢"), ("Chelicerae basal part length", "Chelicerae width")),
+}
+CLYPEUS = _W(r"clypeus", r"clypeus-\w+")
+BODY = _W(r"total", r"totale", r"body", r"gesamtlänge", r"complessiva", r"общая", r"size", r"typical specimen")
+BODY_C = _C("总长", "体长")
+LEN = _W(r"length", r"lengths", r"long", r"longus", r"longa", r"long\.", r"länge", r"\w+-länge", r"lunghezza", r"longueur",
+         r"lg", r"длина", r"длины", r"plus long")
+WID = _W(r"width", r"wide", r"breite", r"\w+-breite", r"larghezza", r"largeur", r"large", r"ширина")
+LEN_C, WID_C = _C("长"), _C("宽")
+LEG = _W(r"legs?", r"bacak", r"beine?", r"pattes?", r"ног\w*", r"leg lengths")
+LEG_C = _C("步足")
+NUM = {"I": _W(r"i", r"first", r"1", r"1\."), "II": _W(r"ii", r"second", r"2", r"2\."), "III": _W(r"iii", r"third", r"3", r"3\."),
+       "IV": _W(r"iv", r"fourth", r"4", r"4\.")}
+SEGS = [   # most specific first
+    ("Pt+Ti", _W(r"patella-tibia", r"tibia-patella", r"tibia and patella", r"patella and tibia", r"patella \+ tibia",
+                 r"tibia\+patella", r"pt\+ti"), _C("膝、胫节")),
+    ("Femur", _W(r"femur", r"femora", r"fémur", r"fe", r"femore"), _C("腿节")),
+    ("Patella", _W(r"patella", r"patela", r"patelle", r"pa"), _C("膝节")),
+    ("Metatarsus", _W(r"metatarsus", r"metatarso", r"métatarse", r"mt"), _C("后跗节", "后附节")),
+    ("Tibia", _W(r"tibia", r"tibiae", r"ti"), _C("胫节")),
+    ("Tarsus", _W(r"tarsus", r"tarso", r"tarse", r"ta"), _C("跗节")),
+]
+PALP = _W(r"palp", r"pedipalp", r"palpal")
+EYES = [("AME", _W(r"anterior median eyes?", r"vordere mittelaugen")), ("ALE", _W(r"anterior lateral eyes?")),
+        ("PME", _W(r"posterior median eyes?", r"hinteren mittelaugen")), ("PLE", _W(r"posterior lateral eyes?", r"hinteren seitenaugen"))]
+SPIN = [("Spinneret PLS", _W(r"posterior lateral spinnerets?", r"posterior laterals")),
+        ("Spinneret PMS", _W(r"posterior median spinnerets?", r"posterior medians")),
+        ("Spinneret ALS", _W(r"anterior lateral spinnerets?", r"anterior laterals"))]
+
+
+def by_parts(name):
+    """(targets, 'exact' | 'vague') for a name read by its parts, or ([], None)."""
+    n = name.lower()
+    if NOT_TRAIT.search(n) or re.search(r"\w/\w|/", n):
+        return [], None
+    if re.search(r"\b(basal|apical|median joint|sub-?apical)\b", n):       # a joint of a spinneret
+        return [], None
+    for t, pat in SPIN:
+        if pat.search(n):
+            return [t], "exact"
+    for t, pat in EYES:
+        if pat.search(n) and not LEN.search(n.replace("diameter", "")):
+            return [t], "exact"
+    legs = [r for r, pat in NUM.items() if pat.search(n)]
+    leg = len(legs) == 1 and legs[0]
+    seg = next((s for s, w, c in SEGS if w.search(n) or c.search(name)), None)
+    if seg:
+        if PALP.search(n):
+            return ([f"Palpal {seg.lower()}"] if seg != "Pt+Ti" else []), ("exact" if seg != "Pt+Ti" else None)
+        if leg:
+            return [f"{seg} {leg} length"], "exact"
+        return [f"{seg} {r} length" for r in LEGS.values()], "vague"
+    if LEG.search(n) or LEG_C.search(name) or re.fullmatch(r"(i|ii|iii|iv)( \.+)?", n):
+        if leg:
+            if BODY.search(n) or (LEN.search(n) and not WID.search(n)) or LEN_C.search(name):
+                return [f"Leg {leg} length"], "exact"
+            return leg_traits(leg), "vague"
+        return ALL_LEGS, "vague"
+    parts = [k for k, (w, c, _t) in PARTS.items() if w.search(n) or c.search(name)]
+    if CLYPEUS.search(n):
+        parts.append("clyp")
+    if len(parts) > 1:
+        return [], None                                    # two parts named: which one is measured is not said
+    if parts == ["clyp"]:
+        return ["Clypeus height"], "exact"
+    if parts:
+        tl, tw = PARTS[parts[0]][2]
+        isl, isw = bool(LEN.search(n) or LEN_C.search(name)), bool(WID.search(n) or WID_C.search(name))
+        if isl != isw:
+            return [tl if isl else tw], "exact"
+        return [tl, tw], "vague"
+    if BODY.search(n) or BODY_C.search(name):
+        return [BL], ("exact" if LEN.search(n) or BODY_C.search(name) or "total" in n else "vague")
+    return [], None
+
+
+def verdict(k):
+    """The hand verdicts first, then the name read by its parts."""
+    if k in EXACT:
+        return [EXACT[k]], "exact"
+    if k in VAGUE:
+        return VAGUE[k], "vague"
+    return by_parts(k)
+
+
 def clean_sp(s):
     s = re.sub(r"\([^)]*\)", " ", str(s or ""))
     s = re.sub(r"\b(sp|n|nov|spec|comb)\.?(?=\s|$)", " ", s)
@@ -155,14 +258,20 @@ def clean_sp(s):
     return [t for t in re.findall(r"[A-Za-z][A-Za-z.\-]*", s) if t not in (".",)]
 
 
+def epithet(t):
+    """The epithet: the first lower-case word after the genus (an author and year after it are left out)."""
+    low = [w for w in t[1:] if w[:1].islower()]
+    return (low[0] if low else t[-1]).lower().strip(".")
+
+
 def species_of(ours, gts):
     """The GT species a printed name of ours is, or None."""
     t = clean_sp(ours)
     if not t:
         return None
-    ep = t[-1].lower().strip(".")
+    ep = epithet(t) if len(t) > 1 else t[0].lower().strip(".")
     gen = t[0] if len(t) > 1 else ""
-    hits = [g for g in gts if clean_sp(g) and clean_sp(g)[-1].lower() == ep]
+    hits = [g for g in gts if clean_sp(g) and epithet(clean_sp(g)) == ep]
     if gen:
         full = [g for g in hits if clean_sp(g)[0].lower() == gen.lower()]
         if full:
@@ -186,7 +295,7 @@ def judge(paper_dir, csv_file):
     oos = 0
     for i, r in enumerate(ours):
         k, ns = key(r.get("measurementType")), nums(r.get("measurementValue"))
-        to, kind = ([EXACT[k]], "exact") if k in EXACT else (VAGUE[k], "vague") if k in VAGUE else ([], None)
+        to, kind = verdict(k)
         to = [t for t in to if t in traits]
         if not ns or not to:
             oos += 1
