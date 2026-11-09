@@ -139,7 +139,8 @@ def run(run_dir, papers, dry=False, named_elsewhere=lambda p: set()):
         if dry:
             acc = [r for r in res.values() if r["account"]]
             print(f"  [account dry] {p:12s} {len(res)} candidate tables, {len(acc)} inside an account: "
-                  + "; ".join(f"t{k} -> {r['account']} ({r['heading'][:60]})" for k, r in list(res.items())[:4]), flush=True)
+                  + "; ".join(f"t{k} -> {r['account']} ({r['heading'][:60]})" for k, r in list(res.items()) if r["account"])[:600],
+                  flush=True)
             continue
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
         got = sum(1 for r in res.values() if r.get("species"))
