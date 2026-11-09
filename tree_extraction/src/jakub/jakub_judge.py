@@ -279,9 +279,19 @@ def species_of(ours, gts):
             return full[0]
         if gen.endswith(".") and len(gen.rstrip(".")) <= 2:
             hits = [g for g in hits if clean_sp(g)[0].lower().startswith(gen.rstrip(".").lower())]
-        else:
-            hits = []
+        else:                                          # an OCR slip in the genus ('Cieurina' for Cicurina): one letter
+            hits = [g for g in hits if one_off(clean_sp(g)[0].lower(), gen.lower())]
     return hits[0] if len(hits) == 1 else None
+
+
+def one_off(a, b):
+    """Same first letter and at most one letter changed, added or left out."""
+    if not a or not b or a[0] != b[0] or abs(len(a) - len(b)) > 1 or min(len(a), len(b)) < 4:
+        return False
+    if len(a) == len(b):
+        return sum(x != y for x, y in zip(a, b)) <= 1
+    s, l = (a, b) if len(a) < len(b) else (b, a)
+    return any(l[:i] + l[i + 1:] == s for i in range(len(l)))
 
 
 def judge(paper_dir, csv_file):
