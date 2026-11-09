@@ -133,11 +133,12 @@ def key(name):
 
 def nums(v):
     """The numbers a cell holds: one, or the two ends of a range ('4.2-5.1', '0,6–0,8'). -> [(value, decimals)]"""
-    s = str(v or "").strip()
+    s = str(v or "").strip().replace("·", ".")             # '1·564': a raised decimal point (older papers)
+    s = re.sub(r"(?<![\d])\.(\d)", r"0.\1", s)               # '.32' = 0.32
     parts = re.split(r"\s*[-–—]\s*", s) if re.fullmatch(r"\d+([.,]\d+)?\s*[-–—]\s*\d+([.,]\d+)?", s) else [s]
     out = []
     for p in parts:
-        p = re.sub(r"\s*(mm|µm|um)$", "", p).replace(",", ".")
+        p = re.sub(r"\s*(mm|µm|um)\.?$", "", p).replace(",", ".")
         if re.fullmatch(r"\d+(\.\d+)?", p):
             out.append((float(p), len(p.split(".")[1]) if "." in p else 0))
     return out
