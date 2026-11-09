@@ -23,6 +23,7 @@ import json
 import re
 import time
 
+import _paths
 import column_tree as ct
 import decoder as v1
 import duels
@@ -111,6 +112,12 @@ def run(run_dir, papers, dry=False, named_elsewhere=lambda p: set()):
             continue
         t0 = time.time()
         flat, spans = v3.md_tables(p)
+        mdf = _paths.PAPERS / p / f"{p}_full.md"
+        raw = mdf.read_text(encoding="utf-8", errors="replace") if mdf.exists() else ""
+        raw_at = [m.start() for m in re.finditer(r"<table.*?</table>", raw, re.S)]   # the same tables, in order, with
+        if len(raw_at) != len(spans):                                                # the lines kept (md_tables flattens)
+            print(f"  [account] {p}: {len(raw_at)} tables in the markdown, {len(spans)} flattened: skipped", flush=True)
+            continue
         res = {}
         for t, fields, org, _x in fr.plan(p, head):
             if not needs_account(t, fields, org, step_named):
@@ -118,7 +125,7 @@ def run(run_dir, papers, dry=False, named_elsewhere=lambda p: set()):
             i = v3.locate_table(t, spans)
             if i is None:
                 continue
-            s, heading, hpos = account_of(flat, spans[i][0])
+            s, heading, hpos = account_of(raw, raw_at[i])
             rec = {"account": s, "heading": heading}
             if dry:
                 res[str(t.table_index)] = rec
@@ -131,7 +138,7 @@ def run(run_dir, papers, dry=False, named_elsewhere=lambda p: set()):
                 if duels.sure(ch, probs, *kt.KIND_OPTIONS) not in (None, "traits"):
                     rec["species"] = None
                 else:
-                    before = _flat(flat[hpos:spans[i][0]])[-400:]
+                    before = _flat(raw[hpos:raw_at[i]])[-400:]
                     c2, p2 = ask_account(client, t, s, heading, before)
                     rec["q_account"] = {"choice": c2, "probs": p2}
                     rec["species"] = s if duels.sure(c2, p2, "this") == "this" else None
