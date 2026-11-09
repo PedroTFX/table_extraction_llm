@@ -108,8 +108,21 @@ EXAMPLES_T5 = """Examples (made-up passages):
 "[P5] Appendage measurements: I 6.0 (1.8, 0.9, 1.5)." (the text does not say which part each number in brackets is) gives
 {{"id": "P5", "facts": [{{"what": "Appendage measurements I", "value": "6.0", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage measurements I", "value": "1.8", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage measurements I", "value": "0.9", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage measurements I", "value": "1.5", "unit": "", "sex": "", "who": ""}}]}}
 """
+# t5b (2026-11-09): a heading is context that may fill several fields, not part of the name by itself (t5 put 'Male:' into
+# the name: 'BL Male', the abbreviation no longer written out, values lost on Xia2022). The reviewer's wording; one more
+# made-up example with a mixed heading; a field for the subject / specimen context, so nothing is dropped.
+ALLOCATE = """Treat a heading or lead-in as context that may contribute information to more than one output field. Separate information identifying the measured characteristic, anatomical structure or dimension from information identifying the subject, sex or specimen being measured. Put only measurement-identifying information in the measurement name; put subject and specimen information in their appropriate fields. Preserve the scope of the heading for the facts it governs. Do not discard information or copy subject context into the measurement name merely because it appears in a heading.
+"""
+CONTEXT_FIELD = ('- "context": what the text says of the subject or specimen measured, other than its sex (a type specimen, a '
+                 'specimen\'s label, a life stage), as printed, else ""\n')
+EXAMPLE_T5B = """"[P6] Specimen K, female: Structure A 2.1 long; Structure B 0.8." gives
+{{"id": "P6", "facts": [{{"what": "Structure A length", "value": "2.1", "unit": "", "sex": "female", "who": "", "context": "Specimen K"}}, {{"what": "Structure B", "value": "0.8", "unit": "", "sex": "female", "who": "", "context": "Specimen K"}}]}}
+"""
 if "qmeasure" in pr.FL:                                    # t5: Q-MEASUREMENT instead of the label-as-printed line
+    if "allocate" in pr.FL:                                # t5b: the allocation rule, the context field, the mixed example
+        Q_MEASUREMENT, EXAMPLES_T5 = Q_MEASUREMENT + ALLOCATE, EXAMPLES_T5 + EXAMPLE_T5B
     MEASURE = (HEAD + "They give measurements. For EACH passage:\n" + Q_MEASUREMENT + FIELDS
+               + (CONTEXT_FIELD if "allocate" in pr.FL else "")
                + '- "what": the measurement\'s name, as described above, in the words of the passage (an abbreviation as printed)\n'
                + '- "value": the number or range COPIED exactly as printed, without its unit\n'
                + 'Example: a passage "[P1] Measurements in mm. Male: TL 5.2–5.9, WL 3.1. Female: TL 6.0" gives\n'
@@ -121,7 +134,8 @@ SCHEMA ={"type": "object", "required": ["passages"], "properties": {"passages": 
     "type": "object", "required": ["id", "facts"],
     "properties": {"id": {"type": "string"}, "facts": {"type": "array", "items": {
         "type": "object", "required": ["what", "value", "unit", "sex"],
-        "properties": {k: {"type": "string"} for k in ("what", "value", "unit", "sex", "who")}}}}}}}}
+        "properties": {k: {"type": "string"} for k in ("what", "value", "unit", "sex", "who")
+                       + (("context",) if "allocate" in pr.FL else ())}}}}}}}}
 
 
 def read_raw(tpl, units, s, abbr, where, what="passages"):
@@ -142,7 +156,8 @@ def read_raw(tpl, units, s, abbr, where, what="passages"):
                     GEN["malformed facts"] += 1
                     bad.add(i)
                     continue
-                fa = {k: " ".join(str(row.get(k) or "").split()) for k in ("what", "value", "unit", "sex", "who")}
+                fa = {k: " ".join(str(row.get(k) or "").split()) for k in ("what", "value", "unit", "sex", "who")
+                      + (("context",) if "allocate" in pr.FL else ())}
                 if fa["what"] or fa["value"] or fa["unit"]:
                     rows.append(fa)
         return res, bad | (ids - set(res))
@@ -315,6 +330,8 @@ def place(tr, unit, group, s, row, cursor, sx="", extra=None, reread=None):
     unit_ok = "unit" in parts and tr.nodes[parts["unit"]]["check"] != "not printed"
     flat = {"who": row["who"], "sex": sex if sex in SEX else "", "what": row["what"], "value": val,
             "unit": unit_text if unit_ok else "", "fact_id": fid, "phrase": phrase, "check": check}
+    if row.get("context"):                                 # t5b: the subject / specimen context the heading gave
+        flat["context"] = row["context"]
     if reread:
         flat["reread"] = reread
     why = ("value not printed in the passage" if check == "not printed"
