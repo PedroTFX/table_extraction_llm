@@ -136,7 +136,12 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "t1": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree"),
             "t2": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route"),
             "t3": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "finish"),
-            "t4": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "fullname")}
+            "t4": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "fullname"),
+            "t5": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "qmeasure")}
+#   t5   t2 + Q-MEASUREMENT (iteration 3 of the 2026-11-09 review): every distinction the paper makes between measurements
+#        kept in the name (structure, component, numbered position, dimension, qualifier, an applying heading); a total
+#        and its components separate facts; no component from an assumed order. Synthetic examples only (made-up
+#        structures and numbers). Q-TRAIT unchanged, so a gain is the reading's. Reuses t2's stages before the reading.
 #   t4   t2 + a measurement's name holds every word the passage uses to say what the number measures (the part's label,
 #        a word beside the number that qualifies it, the heading it falls under), each copied as printed: 'Carapace
 #        4.14 long, 4.05 wide' gave 'Carapace' twice, 'Leg measurements: I 4.69' gave 'I' (Jakub newPDF: 758 matched rows
@@ -169,10 +174,10 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
-                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT in ("t3", "t4") else "prose_v7a")
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT in ("t3", "t4", "t5") else "prose_v7a")
 SENT_DIR = (_paths.OUTPUT / f"prose_{VARIANT}" / "sent") if "route" in FL else _paths.OUTPUT / "prose_sent"
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4", "t5") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside

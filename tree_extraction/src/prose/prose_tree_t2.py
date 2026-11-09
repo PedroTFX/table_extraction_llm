@@ -86,7 +86,38 @@ FULLNAME = ('- "what": what the number measures, named with every word the passa
 if "fullname" in pr.FL:                                    # t4: the shape only, no words of any paper
     assert '- "what": the label or abbreviation, as printed\n' in MEASURE
     MEASURE = MEASURE.replace('- "what": the label or abbreviation, as printed\n', FULLNAME)
-SCHEMA = {"type": "object", "required": ["passages"], "properties": {"passages": {"type": "array", "items": {
+# t5 (iteration 3, 2026-11-09): Q-MEASUREMENT, the reviewer's wording; synthetic examples (made-up structures and
+# numbers, no paper's words) for dimensions, component labels, numbered structures, and a total with components whose
+# order the text does not give (nothing invented: those numbers keep only the names the text gives them)
+Q_MEASUREMENT = """For every separate numerical measurement in the passage, identify what the number measures.
+Give each distinct measurement its own fact. Its name must preserve all information needed to distinguish it from other measurements, including: the anatomical structure or body region; the particular component or segment; the numbered structure, side or position, where applicable; the measured dimension or property, such as length, width, height or diameter; any qualifier that specifies the measurement.
+A dimension or qualifier printed before or after a number belongs in that measurement's name.
+Carry a heading, group label or introductory phrase into the name when it applies to the measurement. Do not omit information that distinguishes one measurement from another.
+When a passage gives a total measurement and component measurements, identify them as separate facts. When a group contains several numbered structures, preserve the number or position in each relevant measurement name.
+Do not invent a relationship between a number and a component based on an assumed ordering or convention. If the text does not establish what a number measures, name it only with what the text does say.
+"""
+EXAMPLES_T5 = """Examples (made-up passages):
+"[P1] Structure A 2.1 long, 1.7 wide." gives
+{{"id": "P1", "facts": [{{"what": "Structure A length", "value": "2.1", "unit": "", "sex": "", "who": ""}}, {{"what": "Structure A width", "value": "1.7", "unit": "", "sex": "", "who": ""}}]}}
+"[P2] Appendage II: total 6.0; part P 1.8; part Q 0.9." gives
+{{"id": "P2", "facts": [{{"what": "Appendage II total", "value": "6.0", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage II part P", "value": "1.8", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage II part Q", "value": "0.9", "unit": "", "sex": "", "who": ""}}]}}
+"[P3] Process measurements: 1 3.2; 2 2.8." gives
+{{"id": "P3", "facts": [{{"what": "Process measurements 1", "value": "3.2", "unit": "", "sex": "", "who": ""}}, {{"what": "Process measurements 2", "value": "2.8", "unit": "", "sex": "", "who": ""}}]}}
+"[P4] Appendage measurements (total; part P, part Q, part R): I 6.0 (1.8, 0.9, 1.5)." gives
+{{"id": "P4", "facts": [{{"what": "Appendage I total", "value": "6.0", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage I part P", "value": "1.8", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage I part Q", "value": "0.9", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage I part R", "value": "1.5", "unit": "", "sex": "", "who": ""}}]}}
+"[P5] Appendage measurements: I 6.0 (1.8, 0.9, 1.5)." (the text does not say which part each number in brackets is) gives
+{{"id": "P5", "facts": [{{"what": "Appendage measurements I", "value": "6.0", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage measurements I", "value": "1.8", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage measurements I", "value": "0.9", "unit": "", "sex": "", "who": ""}}, {{"what": "Appendage measurements I", "value": "1.5", "unit": "", "sex": "", "who": ""}}]}}
+"""
+if "qmeasure" in pr.FL:                                    # t5: Q-MEASUREMENT instead of the label-as-printed line
+    MEASURE = (HEAD + "They give measurements. For EACH passage:\n" + Q_MEASUREMENT + FIELDS
+               + '- "what": the measurement\'s name, as described above, in the words of the passage (an abbreviation as printed)\n'
+               + '- "value": the number or range COPIED exactly as printed, without its unit\n'
+               + 'Example: a passage "[P1] Measurements in mm. Male: TL 5.2–5.9, WL 3.1. Female: TL 6.0" gives\n'
+               + '{{"id": "P1", "facts": [{{"what": "TL", "value": "5.2–5.9", "unit": "mm", "sex": "male", "who": ""}}, '
+               + '{{"what": "WL", "value": "3.1", "unit": "mm", "sex": "male", "who": ""}}, '
+               + '{{"what": "TL", "value": "6.0", "unit": "mm", "sex": "female", "who": ""}}]}}\n'
+               + EXAMPLES_T5 + "\nPassages:\n{passages}\n\nReply with JSON only.")
+SCHEMA ={"type": "object", "required": ["passages"], "properties": {"passages": {"type": "array", "items": {
     "type": "object", "required": ["id", "facts"],
     "properties": {"id": {"type": "string"}, "facts": {"type": "array", "items": {
         "type": "object", "required": ["what", "value", "unit", "sex"],
