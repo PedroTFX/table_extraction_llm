@@ -159,7 +159,9 @@ NOT_TRAIT = _W(r"ratio", r"index", r"indices", r"distance", r"between", r"interv
                r"teeth", r"trichobothria", r"rapport", r"отношение", r"positions?", r"altitude", r"elevation", r"immature",
                r"individuals", r"bundle", r"segments", r"spiracle", r"spiracule", r"stigma", r"furrow", r"quadrangle",
                r"moq", r"moa", r"ocular", r"area", r"row", r"interdistances", r"apophysis", r"embolus", r"bulbus", r"bulb",
-               r"cymbium", r"claws?", r"scutum", r"tergite", r"tubercle", r"sex", r"male", r"female", r"femina")
+               r"cymbium", r"claws?", r"scutum", r"tergite", r"tubercle")
+# who the measurement is of (sex, type specimen) belongs to other fields: set aside before the name is read
+WHO = re.compile(r"(?<![^\W\d_])(males?|females?|femina|sex|holotype|paratypes?|allotype)(?![^\W\d_])|[♂♀]|\([^)]*\)", re.I)
 PARTS = {   # part -> (its length trait, its width trait)
     "ceph": (_W(r"carapace", r"carapa", r"prosoma", r"cephalothorax", r"céphalothorax", r"cphth", r"головогруд\w*",
                 r"карапакс\w*", r"cephalothorax-\w+"), _C("头胸部", "背甲"), (CL, CW)),
@@ -192,17 +194,18 @@ SEGS = [   # most specific first
 PALP = _W(r"palp", r"pedipalp", r"palpal")
 EYES = [("AME", _W(r"anterior median eyes?", r"vordere mittelaugen")), ("ALE", _W(r"anterior lateral eyes?")),
         ("PME", _W(r"posterior median eyes?", r"hinteren mittelaugen")), ("PLE", _W(r"posterior lateral eyes?", r"hinteren seitenaugen"))]
-SPIN = [("Spinneret PLS", _W(r"posterior lateral spinnerets?", r"posterior laterals")),
-        ("Spinneret PMS", _W(r"posterior median spinnerets?", r"posterior medians")),
-        ("Spinneret ALS", _W(r"anterior lateral spinnerets?", r"anterior laterals"))]
+SPIN = [("Spinneret PLS", _W(r"posterior lateral spinnerets?", r"posterior laterals", r"pls")),
+        ("Spinneret PMS", _W(r"posterior median spinnerets?", r"posterior medians", r"pms")),
+        ("Spinneret ALS", _W(r"anterior lateral spinnerets?", r"anterior laterals", r"als"))]
+EYE_ABBR = re.compile(r"(?<![^\W\d_])(ame|ale|pme|ple)(?![^\W\d_])")
 
 
 def by_parts(name):
     """(targets, 'exact' | 'vague') for a name read by its parts, or ([], None)."""
-    n = name.lower()
-    if NOT_TRAIT.search(n) or re.search(r"\w/\w|/", n):
+    n = " ".join(WHO.sub(" ", name.lower()).split())
+    if not n or NOT_TRAIT.search(n) or re.search(r"\w/\w|/", n):
         return [], None
-    if re.search(r"\b(basal|apical|median joint|sub-?apical)\b", n):       # a joint of a spinneret
+    if re.search(r"\b(basal|apical|median joint|sub-?apical|median length|segment)\b", n):   # a joint of a spinneret
         return [], None
     for t, pat in SPIN:
         if pat.search(n):
@@ -210,8 +213,13 @@ def by_parts(name):
     for t, pat in EYES:
         if pat.search(n) and not LEN.search(n.replace("diameter", "")):
             return [t], "exact"
+    eyes = EYE_ABBR.findall(n)
+    if len(eyes) == 1 and not re.search(r"\b(ame|ale|pme|ple)\s*[-–]", n) and not re.search(r"[-–]\s*(ame|ale|pme|ple)\b", n):
+        return [eyes[0].upper()], "exact"
     legs = [r for r, pat in NUM.items() if pat.search(n)]
     leg = len(legs) == 1 and legs[0]
+    if leg and LEG.search(n) and re.search(r"\btotal\b", n):           # 'Leg I total length (tarsus + ... + femur)'
+        return [f"Leg {leg} length"], "exact"
     seg = next((s for s, w, c in SEGS if w.search(n) or c.search(name)), None)
     if seg:
         if PALP.search(n):
