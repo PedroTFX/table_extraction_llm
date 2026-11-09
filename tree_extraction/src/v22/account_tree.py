@@ -32,7 +32,10 @@ import kind_tree as kt
 
 SURE = 0.8
 HEAD_LINE = re.compile(r"^\s*(#{1,6}\s*|\*\*)?\**\s*([A-Z][a-z]{2,})\s+(?:\([A-Z][a-z]+\)\s+)?([a-z][a-z-]{2,})\b(.*)$")
-MARK = re.compile(r"\b(sp|n|nov|spec|new|species)\b|\(|\b1[6-9]\d\d\b|\b20\d\d\b", re.I)
+# what follows the name in an account heading (layout of nomenclature, no paper's words): a new-taxon mark, an author
+# (a capital, an initial), a year or a bracket; a colon right after the name is a citation line, not a heading
+MARK = re.compile(r"^\W{0,3}?(\(|sp\.?\s*n|sp\.?\s*nov|n\.\s*sp|nov\.|new\b|spec\.|comb\.|[A-Z][\w'’-]+|[A-Z]\.|1[6-9]\d\d|20\d\d|\*\*)")
+RANK_WORDS = {"species", "subspecies", "genus", "group", "spp", "sp", "family", "and", "the", "van", "von", "der", "den", "del"}
 NAMED = re.compile(r"\b[A-Z][a-z]*\.?\s+(\([A-Z][a-z]+\)\s+)?[a-z]{3,}")
 
 Q_ACCOUNT = ("Considering its heading, columns, first rows and the surrounding text, which statement best describes "
@@ -61,22 +64,35 @@ def looks_named(v):
     return bool(NAMED.search(v) or re.fullmatch(r"[a-z]{3,}", v))
 
 
-def account_of(flat, start):
-    """(species as printed in the heading, the heading line, its offset) of the nearest account heading above, or Nones."""
-    lo = max(0, start - 40000)
-    pos = start
-    for ln in reversed(flat[lo:start].split("\n")):
+def account_of(raw, start):
+    """(species as printed in the heading, the heading line, its offset) of the account heading above, or Nones.
+    Layout only: a line that starts with a genus and an epithet followed by a nomenclature mark. A markdown or bold
+    heading within NEAR characters above wins over a plain line (a synonymy citation printed inside the account)."""
+    lo, pos = max(0, start - 40000), start
+    plain = heading = None
+    for ln in reversed(raw[lo:start].split("\n")):
         pos -= len(ln) + 1
         m = HEAD_LINE.match(ln)
-        if not m:
-            continue
-        if not (m.group(1) or (len(ln.strip()) <= 140 and MARK.search(m.group(4) or ""))):
+        rest = m.group(4) or "" if m else ""
+        if not m or m.group(3) in RANK_WORDS or len(ln.strip()) > 160 or rest.lstrip().startswith(":") \
+                or not MARK.match(rest):
             continue
         genus = m.group(2)
-        if re.search(r"(?<![^\W\d_])" + re.escape(genus.lower()) + r"(?![^\W\d_])", flat):
+        if re.search(r"(?<![^\W\d_])" + re.escape(genus.lower()) + r"(?![^\W\d_])", raw):
             continue                                  # printed in lower case too: a word, not a genus
-        return f"{genus} {m.group(3)}", _flat(ln)[:200], max(lo, pos)
-    return None, None, None
+        hit = (f"{genus} {m.group(3)}", _flat(ln)[:200], max(lo, pos))
+        if m.group(1):
+            heading = hit
+            break
+        plain = plain or hit
+        if start - pos > NEAR and plain:
+            break
+    if heading and (not plain or start - heading[2] <= NEAR):
+        return heading
+    return plain or heading or (None, None, None)
+
+
+NEAR = 4000
 
 
 def needs_account(t, fields, org, step_named):
