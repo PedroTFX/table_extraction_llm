@@ -177,7 +177,7 @@ if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
 # accounts with a focused question and a short answer, re-reads only on evidence (prose_v7)
-V18 = _paths.OUTPUT / "full_run_v18"
+V18 = _paths.OUTPUT / f"full_run_{os.environ.get('TREE_TABLES', 'v18')}"   # the table rows prose adds to (two_step's TREE_TABLES)
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
 MAX_UNIT = 1500            # characters per passage
 READ_CHARS = 1500          # passage text per gemma read call

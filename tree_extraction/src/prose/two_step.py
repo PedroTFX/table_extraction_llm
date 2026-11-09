@@ -11,6 +11,8 @@ step: every table is statistical results, figure numbers, sampling or other, or 
 both orders, that the paper's text reports a study rather than describing organisms (Q-TEXT, on the title, abstract and
 headings). Tran2022, an experiment whose tables are figure numbers, got 58 prose rows of methods and results text and none
 matched. --route rows is the old rule: fewer than --min-rows table rows. Never the GT, so it works on new papers.
+--route both (2026-11-09): both readers on every paper with text; a prose paper's rows hold its table rows too.
+TREE_TABLES=v22 runs and reads full_run_v22 (tables inside a species' account) instead of full_run_v18.
     --step 0        decide the routes only (status.json), no prose run
 
     python two_step.py [papers]                       both steps, every paper when none is named
@@ -34,8 +36,9 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import _paths
 
-V18_DIR = HERE.parent / "v18"
-RUN = _paths.OUTPUT / "full_run_v18"
+TABLES = os.environ.get("TREE_TABLES", "v18")     # the table run: v18 (the baseline) or v22 (tables inside accounts)
+V18_DIR = HERE.parent / TABLES
+RUN = _paths.OUTPUT / f"full_run_{TABLES}"
 OUT = _paths.OUTPUT / "two_step"
 LOGS = OUT / "logs"
 
@@ -122,6 +125,9 @@ def decide(papers, status, how, min_rows):
         if not (_paths.PAPERS / p / f"{p}_full.md").exists():
             s["route"], s["why"] = "tables", "no paper text"
             continue
+        if how == "both":                              # 2026-11-09: both readers on every paper (prose keeps the table rows)
+            s["route"], s["why"] = "prose", "both readers"
+            continue
         tt = traits_table(p)
         if tt is not False:
             s["route"], s["why"] = "tables", ("a traits table" if tt else "tables without a kind record")
@@ -154,7 +160,7 @@ def decide(papers, status, how, min_rows):
 
 def step_tables(papers, min_rows, how="kind"):
     t0 = time.time()
-    ok = call("full_run_v18.py", ["run", *papers], V18_DIR, LOGS / "tables.log")
+    ok = call(f"full_run_{TABLES}.py", ["run", *papers], V18_DIR, LOGS / "tables.log")
     status = load()
     for p in papers:
         publish(p, RUN / p / f"{p}.csv")
@@ -199,7 +205,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("papers", nargs="*")
     ap.add_argument("--step", type=int, choices=(0, 1, 2))
-    ap.add_argument("--route", choices=("kind", "rows"), default="kind")
+    ap.add_argument("--route", choices=("kind", "rows", "both"), default="kind")
     ap.add_argument("--variant", default="t2")
     ap.add_argument("--min-rows", type=int, default=20)
     a = ap.parse_args()
