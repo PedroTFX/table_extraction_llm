@@ -12,7 +12,12 @@ both orders, that the paper's text reports a study rather than describing organi
 headings). Tran2022, an experiment whose tables are figure numbers, got 58 prose rows of methods and results text and none
 matched. --route rows is the old rule: fewer than --min-rows table rows. Never the GT, so it works on new papers.
 --route both (2026-11-09): both readers on every paper with text; a prose paper's rows hold its table rows too.
-TREE_TABLES=v22 runs and reads full_run_v22 (tables inside a species' account) instead of full_run_v18.
+--route text (2026-11-10, plans/03_accounts_and_routing.md): prose on every paper whose text nimble does not call, sure in
+both orders, the report of a study (Q-TEXT), whether or not it has a traits table: a paper with tables and accounts gets both
+readers, a paper that only reports a study keeps its tables.
+--once (same plan): one fact once. A prose row with the same species and value as a table row of the paper, and a name
+whose words are all in the table row's name (or the other way round), is the same fact: the table row is kept. Code only.
+TREE_TABLES=v22 | v24 runs and reads full_run_v22 / full_run_v24 instead of full_run_v18.
     --step 0        decide the routes only (status.json), no prose run
 
     python two_step.py [papers]                       both steps, every paper when none is named
@@ -75,6 +80,47 @@ def load():
     return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
 
 
+def _key_words(s):
+    import re
+    return set(re.findall(r"[^\W_]+", str(s or "").lower()))
+
+
+def one_fact_once(table_rows, prose_rows):
+    """The prose rows that are not a table row's fact again -> (rows kept, number left out). Same fact: equal species
+    (case and spaces aside), equal value as printed, and every word of one name in the other."""
+    flat = lambda v: " ".join(str(v or "").lower().split())
+    by = {}
+    for r in table_rows:
+        by.setdefault((flat(r.get("verbatimIdentification")), flat(r.get("measurementValue"))), []).append(
+            _key_words(r.get("measurementType")))
+    kept = []
+    for r in prose_rows:
+        w = _key_words(r.get("measurementType"))
+        names = by.get((flat(r.get("verbatimIdentification")), flat(r.get("measurementValue"))), [])
+        if w and any(x and (w <= x or x <= w) for x in names):
+            continue
+        kept.append(r)
+    return kept, len(prose_rows) - len(kept)
+
+
+def publish_once(p, table_csv, prose_csv):
+    """two_step's rows of a prose paper with --once: the table rows, then the prose rows that are not the same fact."""
+    read = lambda f: list(csv.DictReader(open(f, encoding="utf-8", newline=""))) if f.exists() else []
+    tab, prose = read(table_csv), read(prose_csv)
+    kept, n = one_fact_once(tab, prose)
+    rows = tab + kept
+    fields = list(tab[0] if tab else prose[0] if prose else {"verbatimIdentification": ""})
+    for r in rows:
+        fields += [k for k in r if k not in fields]
+    d = OUT / p
+    d.mkdir(parents=True, exist_ok=True)
+    with open(d / f"{p}.csv", "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=fields)
+        w.writeheader()
+        w.writerows(rows)
+    return n
+
+
 def publish(p, src):
     d = OUT / p
     d.mkdir(parents=True, exist_ok=True)
@@ -128,7 +174,7 @@ def decide(papers, status, how, min_rows):
         if how == "both":                              # 2026-11-09: both readers on every paper (prose keeps the table rows)
             s["route"], s["why"] = "prose", "both readers"
             continue
-        tt = traits_table(p)
+        tt = False if how == "text" else traits_table(p)     # 'text': the tables do not decide, only Q-TEXT
         if tt is not False:
             s["route"], s["why"] = "tables", ("a traits table" if tt else "tables without a kind record")
             continue
@@ -145,7 +191,8 @@ def decide(papers, status, how, min_rows):
             log["b"] = [ch2, pr2]
             reports = duels.sure(ch2, pr2, "b") == "b"
         s["q_text"] = log
-        s["route"], s["why"] = ("tables", "no traits table; text reports a study") if reports else ("prose", "no traits table; text not a report")
+        pre = "" if how == "text" else "no traits table; "
+        s["route"], s["why"] = ("tables", pre + "text reports a study") if reports else ("prose", pre + "text not a report")
         if s["route"] == "tables":
             publish(p, RUN / p / f"{p}.csv")          # a paper routed away from prose gets its table rows back
     if ask is not None:
@@ -173,7 +220,7 @@ def step_tables(papers, min_rows, how="kind"):
     return ok
 
 
-def step_prose(papers, variant, min_rows):
+def step_prose(papers, variant, min_rows, once=False):
     status = load()
     for p in papers:
         if p not in status or "why" not in status[p]:
@@ -195,9 +242,12 @@ def step_prose(papers, variant, min_rows):
             done += 1
             publish(p, prose_out / "combined" / p / f"{p}.csv")
             status[p]["prose_rows"] = rows_in(prose_out / "prose" / p / f"{p}.csv")
+            if once:
+                status[p]["same_fact_left_out"] = publish_once(p, RUN / p / f"{p}.csv", prose_out / "prose" / p / f"{p}.csv")
         save(status)
         print(f"  prose {i}/{len(todo)}: {done} done, {failed} failed ({(time.time() - t0) / 60:.0f} min)", flush=True)
-    print(f"step 2 prose ({variant}): {done} done, {failed} failed; {sum(status[p].get('prose_rows', 0) for p in todo)} prose rows", flush=True)
+    print(f"step 2 prose ({variant}): {done} done, {failed} failed; {sum(status[p].get('prose_rows', 0) for p in todo)} prose rows"
+          + (f"; {sum(status[p].get('same_fact_left_out', 0) for p in todo)} left out as a table row's fact" if once else ""), flush=True)
     return not failed
 
 
@@ -205,7 +255,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("papers", nargs="*")
     ap.add_argument("--step", type=int, choices=(0, 1, 2))
-    ap.add_argument("--route", choices=("kind", "rows", "both"), default="kind")
+    ap.add_argument("--route", choices=("kind", "rows", "both", "text"), default="kind")
+    ap.add_argument("--once", action="store_true", help="a prose row that repeats a table row's fact is left out")
     ap.add_argument("--variant", default="t2")
     ap.add_argument("--min-rows", type=int, default=20)
     a = ap.parse_args()
@@ -220,7 +271,7 @@ def main():
     if a.step != 2:
         ok = step_tables(papers, a.min_rows, a.route)
     if a.step != 1 and ok:
-        ok = step_prose(papers, a.variant, a.min_rows)
+        ok = step_prose(papers, a.variant, a.min_rows, a.once)
     sys.exit(0 if ok else 1)
 
 

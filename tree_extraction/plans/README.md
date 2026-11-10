@@ -1,6 +1,30 @@
-# Fix plan (2026-11-10): for your review, nothing built yet
+# Fix plan (2026-11-10)
 
 The goal is extraction that works on papers we have never seen, not only the 109, grit and Jakub sets. So every fix here is a general rule about how papers print data, decided by the model, with no paper names and no domain words in code or prompts.
+
+## Built 2026-11-10, not run yet
+
+You said to follow the plans, all but fix 5 (Viza2023 is too much its own case). Everything below is written and compiles; none of it has run, so the first remote run of each stage is also its first test.
+
+| Fix | Where | State |
+|---|---|---|
+| 1 units | `src/v23/unit_tree.py`; also the `units` layer of `src/v24` | built |
+| 2 names from context | `src/v24/row_label.py` (layer `rowlabel`): Q-ROWLABEL, Q-HEADER, Q-OBJECT | built |
+| 3 accounts, routing | layer `account` of v24 (v22's step); `two_step.py --route text` and `--once` | built |
+| 4 prose names | t5b: only its test run is left; positional lists: variant `t6` (`prose_tree_t2.py`) | built; wrong owner: not started, diagnostics first |
+| 5 category groups | | held back |
+| 6 relevance | `src/v24/relevance.py` (layer `relevance`): Q-ALSO2, Q-ORG, Q-COL, Q-LEVEL | built |
+| 7 big tables | `src/v24/head_wide.py`, then `src/reread_paper.sh keep <paper>` | built |
+| 8 evaluation | A done; D: `src/reread_paper.sh`, README note; B (a fresh set) and C (GT decisions) are yours | partly |
+
+`full_run_v24.py` holds the four table layers. The model stages write their answers once (`output/full_run_v24`); `V24_LAYERS` picks the layers that assemble and score use, so each layer is measured alone against v18 from the same answers. Runner: `src/v24/run_v24.sh` (smoke, stages, score); Jakub: `src/jakub/run_v24.sh`.
+
+Where the build differs from the plan text:
+
+- Fix 2: the caption question is asked when every trait column's printed name is one word (layout), not when code judges it "a bare dimension".
+- Fix 3: "one fact once" asks that every word of one name is in the other, not only a shared word.
+- Fix 6: the repeats rule asks nimble per column (same value on every row of a species: of the species, or of each specimen?) instead of naming a source table. An identifier column is taken out; it does not fill another field yet.
+- Fix 7: each window is read by the frozen head reader as a table of its own and all windows must agree on the first record, instead of reusing the first window's answer.
 
 ## Where we stand
 

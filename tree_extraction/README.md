@@ -36,6 +36,17 @@ src/
                  (individuals, groups, statistics or traits per row; one_species.py) — 36
   v14/           full_run_v14.py: v13 + the five listed tags (sex, caste, basisOfRecord, lifeStage,
                  statistic) from the template's lists (listed_tags.py); the per-tag measure (tag_score.py) — 38
+  v15 ... v18    as their docstrings say; v18 (yes / no columns) is the adopted table run
+  v19, v20, v21  not adopted (v20's category groups are plan 5, held back); folders kept
+  v22/           full_run_v22.py: v18 + tables inside a species' account (account_tree.py); not adopted alone
+  v23/           full_run_v23.py: v18 + units (unit_tree.py; plans/01_units.md)
+  v24/           full_run_v24.py: v18 + the fix plans of 2026-11-10 as switchable layers (V24_LAYERS):
+                 units, account, relevance (relevance.py), rowlabel (row_label.py); head_wide.py (tables
+                 too wide for the head reader); score_v24.py, run_v24.sh
+  prose/         the prose reader (t2 adopted; t5b, t6 variants) and two_step.py (tables, then prose)
+  jakub/         Jakub's spider sets: GT translation, judge, run scripts
+  stats/         statistics scripts behind the plans
+  reread_paper.sh  a paper read again in a root of its own (changed markdown, a too-wide table)
   experiments/   benches, audits, comparisons and one-off fixes no version runs, with
                  copies of what they import — 49
 ```

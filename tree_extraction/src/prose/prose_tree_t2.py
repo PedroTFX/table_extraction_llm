@@ -138,12 +138,50 @@ SCHEMA ={"type": "object", "required": ["passages"], "properties": {"passages": 
                        + (("context",) if "allocate" in pr.FL else ())}}}}}}}}
 
 
-def read_raw(tpl, units, s, abbr, where, what="passages"):
+# t6 (2026-11-10): positional lists. Layout only: a sentence that states an order (three or more names joined by '+',
+# or listed in a bracket) and holds an order word; a number list is three or more numbers in a row.
+KEY_NAME = r"[^\W\d_][\w.'’-]*(?:\s+[^\W\d_][\w.'’-]*){0,2}"
+KEY_PLUS = re.compile(KEY_NAME + r"(?:\s*\+\s*" + KEY_NAME + r"){2,}")
+KEY_BRACKET = re.compile(r"[(\[]([^()\[\]\d]{5,200})[)\]]")
+KEY_CUE = re.compile(r"\b(?:order|sequence|given as|as follows|following|respectively|format|formula|measurements?)\b", re.I)
+NUM = r"\d+(?:[.,·]\d+)?"
+SEP = r"(?:\s*[+/;]\s*|,\s+)"
+NUM_LIST = re.compile(NUM + r"(?:" + SEP + NUM + r"){2,}")
+KEYNOTE = ("The paper states the order in which it prints the numbers of a list: {keys}. Where a list in a passage has "
+           "exactly as many numbers as that order has names, name each number by the name at its place in the order, "
+           "together with the label the list is printed under. A sum of the shape (a + b + c = total) is read the same "
+           "way: the parts by the order, the result as the total. Where the counts differ, or the order is about "
+           "something else, name a number only with what the passage itself says.\n")
+
+
+def keys_in(text):
+    """[(sentence, {number of names})] for the sentences of a text that state an order."""
+    out = []
+    for sent in re.split(r"(?<=[.!?])\s+(?=[A-Z(\[])", " ".join(str(text or "").split())):
+        if not KEY_CUE.search(sent):
+            continue
+        ns = {m.group(0).count("+") + 1 for m in KEY_PLUS.finditer(sent)}
+        for m in KEY_BRACKET.finditer(sent):
+            items = [x.strip() for x in re.split(r"[,;]", m.group(1)) if x.strip()]
+            if len(items) >= 3 and all(len(x.split()) <= 3 for x in items):
+                ns.add(len(items))
+        if ns:
+            out.append((sent[:300], ns))
+    return out
+
+
+def list_counts(text):
+    """The numbers of numbers in the number lists of a text."""
+    return {len(re.split(SEP, m.group(0))) for m in NUM_LIST.finditer(text)}
+
+
+def read_raw(tpl, units, s, abbr, where, what="passages", keynote=""):
     """gemma on units -> {unit id: [answers]}, nothing checked; units answered badly asked once more."""
     def ask(us, note=""):
         text = "\n\n".join(f"[{u['id']}] {u['text']}" for u in us)
         used = {a: m for a, m in abbr.items() if re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", text)}
         ab = ("The paper defines these abbreviations: " + "; ".join(f"{a} = {m}" for a, m in used.items()) + ".\n") if used else ""
+        ab += keynote                                      # t6: the order the paper states for its number lists
         got = pr.gemma(tpl.format(what=what, s=s, where=where, abbrevs=ab, passages=text) + note, SCHEMA).get("passages", [])
         ids, res, bad = {u["id"] for u in us}, {}, set()
         for x in got:
@@ -423,8 +461,26 @@ def stage_treeread(papers):
             cur.append((x, k))
         groups += [cur] if cur else []
 
-        def text_read(g_units, tpl, s, where, tag=None):
-            got = read_raw(tpl, g_units, s, abbr, where)
+        keys_free, keys_of = [], collections.defaultdict(list)   # t6: stated orders, outside accounts / per account
+        if "keyed" in pr.FL:
+            for u in rd["passages"]:
+                if u["kind"] == "para":
+                    (keys_of[span[u["id"]]] if span.get(u["id"]) else keys_free).extend(keys_in(u["text"]))
+
+        def keynote_for(g_units, s):
+            """The stated orders (same account first, then outside every account) whose count of names equals the
+            count of numbers of a list in these passages; '' when there is none."""
+            if "keyed" not in pr.FL:
+                return ""
+            counts = set().union(*[list_counts(x["text"]) for x in g_units]) if g_units else set()
+            hit = [k for k, ns in keys_of.get(s, []) + keys_free if ns & counts][:2]
+            if not hit:
+                return ""
+            trig["groups read with a stated order"] += 1
+            return KEYNOTE.format(keys="; ".join(f"'{k}'" for k in dict.fromkeys(hit)))
+
+        def text_read(g_units, tpl, s, where, tag=None, keynote=""):
+            got = read_raw(tpl, g_units, s, abbr, where, keynote=keynote)
             for x in g_units:
                 cursor = 0
                 for row in got[x["id"]]:
@@ -436,7 +492,7 @@ def stage_treeread(papers):
             us = [x for x, _k in g]
             s, kind = g[0][1]
             tpl = MEASURE if kind == "measure" else DESCRIBE
-            got = text_read(us, tpl, s, under(us[0]["u"]))
+            got = text_read(us, tpl, s, under(us[0]["u"]), keynote=keynote_for(us, s) if kind == "measure" else "")
             for x in us:                                   # T2: a long run that gave nothing is read again alone
                 if kind != "measure" and len(x["text"]) >= 200 and not got[x["id"]]:
                     trig["T2 fired"] += 1

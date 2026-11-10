@@ -138,7 +138,13 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "t3": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "finish"),
             "t4": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "fullname"),
             "t5": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "qmeasure"),
-            "t5b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "qmeasure", "allocate")}
+            "t5b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "qmeasure", "allocate"),
+            "t6": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "qmeasure", "allocate", "keyed")}
+#   t6   t5b + positional lists (plans/04_prose_names.md, 2026-11-10): a paper states an order once ('given as total
+#        (a, b, c)', 'a + b + c + d') and then prints bare numbers. Code finds the sentences that state an order (layout:
+#        three or more names joined by '+' or listed in a bracket, in a sentence with an order word) in the same account
+#        or outside every account; a measurement passage with a number list of the same count is read with that sentence
+#        shown, and gemma names each number by its place. No stated order, or another count: nothing is guessed.
 #   t5b  t5 + a heading is context that may fill several fields: only what identifies the measured characteristic, structure
 #        or dimension goes into the name; sex into sex, other subject / specimen context into a context field (kept in
 #        measurementRemarks). t5 put 'Male:' into the name ('BL Male'), the abbreviation was no longer written out and
@@ -179,10 +185,10 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
 VARIANT = os.environ.get("PROSE_VARIANT", "v7a")
 FL = set(VARIANTS[VARIANT])
 PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if VARIANT == "v8c"
-                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT in ("t3", "t4", "t5", "t5b") else "prose_v7a")
+                            else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT in ("t3", "t4", "t5", "t5b", "t6") else "prose_v7a")
 SENT_DIR = (_paths.OUTPUT / f"prose_{VARIANT}" / "sent") if "route" in FL else _paths.OUTPUT / "prose_sent"
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4", "t5", "t5b") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4", "t5", "t5b", "t6") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
