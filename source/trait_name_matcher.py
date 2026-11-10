@@ -30,33 +30,63 @@ from urllib import request as _rq
 OLLAMA_URL = "http://127.0.0.1:11434/api/chat"   # 127.0.0.1, not localhost (IPv6 ::1 refuses)
 OLLAMA_MODEL = "gemma4:e2b"
 
-_UNIT_PAREN = re.compile(r"\((?:[^()]*\b(?:mm|cm|m|km|g|kg|mg|mm2|°c|%|count|n|df)\b[^()]*)\)", re.I)
+# A bracket holding a unit (after the ascii fold: 'µm' -> 'm', '°C' -> 'c'). Time units added 2026-11-10
+# ('Incubation duration (days)' kept 'days' as a word and never paired).
+_UNIT_PAREN = re.compile(r"\((?:[^()]*\b(?:mm|cm|m|km|g|kg|mg|mm2|mm3|cm2|ml|c|°c|%|count|n|df|"
+                         r"s|sec|h|hrs?|hours?|d|days?|weeks?|months?|yrs?|years?)\b[^()]*)\)", re.I)
+# (not 'min': 'Body length (min)' / '(max)' would read as one name)
 _NONALNUM = re.compile(r"[^a-z0-9]+")
+_APOSTROPHE = re.compile(r"[’‘`´ʼ]")             # folded to "'" before the ascii fold, which drops them:
+                                                 # 'Weber’s' and "Weber's" read the same
+# A ' #2' (the head reader's mark for a repeated header) is kept: tried 2026-11-10, Eckert2023 'Femur length (mm) #2'
+# and '#3' are other legs under a heading the name lost, and pairing them with 'Femur length' cost 0.795 -> 0.689
 _STOP = {"recorded", "the", "of", "in", "on", "a", "an", "as", "at", "and",
          "stage", "state", "development", "evaluated", "sources"}
 
+# EVAL_NAME_NORM=0 gives the normaliser as it was before 2026-11-10 (no apostrophe fold, no time units, no joined
+# compounds), for comparing scores.
+_NEW = __import__("os").environ.get("EVAL_NAME_NORM", "1") != "0"
+if not _NEW:
+    _UNIT_PAREN = re.compile(r"\((?:[^()]*\b(?:mm|cm|m|km|g|kg|mg|mm2|°c|%|count|n|df)\b[^()]*)\)", re.I)
 
-def normalize(name: str) -> str:
-    """Aggressive canonical form for cheap matching: lowercase, strip accents,
-    drop unit parentheticals, split snake/camel, remove punctuation & stopwords,
-    sort tokens so word-order differences collapse."""
-    s = unicodedata.normalize("NFKD", str(name)).encode("ascii", "ignore").decode()
+
+def _tokens(name: str):
+    """The name's words in printed order: lowercase, accents and unit brackets dropped, snake / camel split,
+    punctuation and stopwords removed."""
+    s = str(name)
+    if _NEW:
+        s = _APOSTROPHE.sub("'", s)
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     s = s.lower().strip()
     s = _UNIT_PAREN.sub(" ", s)
     s = re.sub(r"([a-z])([A-Z])", r"\1 \2", s)     # camelCase -> words (pre-lower would've caught; safe)
     s = _NONALNUM.sub(" ", s)
-    toks = [t for t in s.split() if t and t not in _STOP]
-    return " ".join(sorted(toks))
+    return [t for t in s.split() if t and t not in _STOP]
+
+
+def normalize(name: str) -> str:
+    """Aggressive canonical form for cheap matching: the words of _tokens, sorted so word-order differences
+    collapse."""
+    return " ".join(sorted(_tokens(name)))
+
+
+def joined(name: str) -> str:
+    """The words run together in printed order: 'Bodysize' and 'Body size', 'fore wing' and 'forewing' agree."""
+    return "".join(_tokens(name))
 
 
 def deterministic_match(gt_names, pred_names):
     """Return (mapping pred->gt, unmatched_pred, unmatched_gt) using normalize()."""
-    gt_by_norm = {}
+    gt_by_norm, gt_by_joined = {}, {}
     for g in gt_names:
         gt_by_norm.setdefault(normalize(g), g)
+        if _NEW and joined(g):
+            gt_by_joined.setdefault(joined(g), []).append(g)
     mapping, unmatched_pred = {}, []
     for p in pred_names:
         g = gt_by_norm.get(normalize(p))
+        if g is None and _NEW and len(gt_by_joined.get(joined(p), [])) == 1:
+            g = gt_by_joined[joined(p)][0]          # the same letters, spaces aside; one GT name only
         if g is not None:
             mapping[p] = g
         else:
