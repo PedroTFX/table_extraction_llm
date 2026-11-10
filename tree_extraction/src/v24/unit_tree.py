@@ -257,10 +257,13 @@ def apply(dec, out):
             r = by_name.get(col.name)
             if r and not ((dec.get("columns") or {}).get(k) or {}).get("unit") and fields.get(col.name) in fr.TRAITS:
                 dec.setdefault("columns", {})[k] = dict(r, source="same name in another table")
+    renamed = {}                                   # a printed name -> its name without the unit, from any table: run()
+    for k, r in (dec.get("columns") or {}).items():  # keeps the first table's only (the later ones saw it stripped)
+        if r.get("unit") and r.get("name"):
+            renamed.setdefault(k.split("|", 1)[1], r["name"])
     for t, _fields, _org, _x in out:
         t.col_units = {k.split("|", 1)[1]: r["unit"] for k, r in (dec.get("columns") or {}).items()
                        if r.get("unit") and k.split("|", 1)[0] == str(t.table_index)}
         t.cell_units = {c: (r["unit"], r.get("name") or c) for c, r in (dec.get("cells") or {}).items() if r.get("unit")}
-        t.col_names = {k.split("|", 1)[1]: r["name"] for k, r in (dec.get("columns") or {}).items()
-                       if r.get("name") and k.split("|", 1)[0] == str(t.table_index)}       # v24: the name without its unit
+        t.col_names = {c: renamed[c] for c in t.col_units if c in renamed}       # v24: the name without its unit
     return out
