@@ -241,9 +241,22 @@ def run(run_dir, papers, write_names=True):
 
 
 def apply(dec, out):
-    """plan()'s list with t.col_units {column: unit} and t.cell_units {name cell: (unit, name)} from the saved answers."""
+    """plan()'s list with t.col_units {column: unit} and t.cell_units {name cell: (unit, name)} from the saved answers.
+    v24: a printed name whose bracket nimble surely called the unit in one table gets the same unit and name wherever
+    the paper prints that same name (Ibarra2021, Barber2017, Araujo2021 print a column in two tables; the unit left
+    one copy's name only, so the same trait was written two ways)."""
     if not dec:
         return out
+    by_name = {}
+    for k, r in (dec.get("columns") or {}).items():
+        if r.get("unit"):
+            by_name.setdefault(k.split("|", 1)[1], r)
+    for t, fields, _org, _x in out:
+        for col in t.columns:
+            k = f"{t.table_index}|{col.name}"
+            r = by_name.get(col.name)
+            if r and not ((dec.get("columns") or {}).get(k) or {}).get("unit") and fields.get(col.name) in fr.TRAITS:
+                dec.setdefault("columns", {})[k] = dict(r, source="same name in another table")
     for t, _fields, _org, _x in out:
         t.col_units = {k.split("|", 1)[1]: r["unit"] for k, r in (dec.get("columns") or {}).items()
                        if r.get("unit") and k.split("|", 1)[0] == str(t.table_index)}

@@ -241,6 +241,48 @@ def run(run_dir, papers, plan_lifted, skip=lambda p: set()):
     ask.unload()
 
 
+Q_COUNT = "The column '{col}' gives a number for each row. What is that number?"
+COUNT = {"site": "a count of the organism at a site, on a date or in a sample: how many were caught, seen or present there",
+         "own": "a number belonging to the organism itself: of its members, parts, broods, generations or offspring, or "
+                "the months, days or places of its life"}
+
+
+def recheck_counts(run_dir, papers):
+    """Q-COUNT on a column Q-COL took out as 'count' (Khayati2024 'Number of queens', Scalercio2020 'Flight_Months'):
+    a count at a site, date or sample, or a number of the organism's own? The column stays out only with 'site'
+    sure in both orders. Asked on the saved records; resumable (rec['count2'])."""
+    head = fr.head_runs()
+    ask = duels.Nimble()
+    for p in papers:
+        f = run_dir / "relevance" / f"{p}.json"
+        if not f.exists() or p not in head:
+            continue
+        res = json.loads(f.read_text(encoding="utf-8"))
+        todo = {k: d for k, d in res["columns"].items()
+                if not d.get("keep") and d.get("choice") == "count" and "count2" not in d}
+        if not todo:
+            continue
+        flat, spans = v3.md_tables(p)
+        tables = {str(t.table_index): t for t, _f, _o, _x in fr.plan(p, head)}
+        back = 0
+        for key, d in todo.items():
+            k, col = key.split("|", 1)
+            t = tables.get(k)
+            if t is None:
+                continue
+            st = (table_state(t, sp.caption_above(t, flat, spans))
+                  + f" The column '{col}' holds values such as {', '.join(repr(v) for v in d.get('values', []))}.")
+            ok, log = both(ask, st, Q_COUNT.format(col=col), COUNT, "site")
+            d["count2"] = {"site": ok, "asked": log}
+            if not ok:
+                d["keep"] = True
+                back += 1
+        f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
+        print(f"  [relevance counts] {p:22s} {back} of {len(todo)} count columns kept as a number of the organism's own",
+              flush=True)
+    ask.unload()
+
+
 def lifts(dec):
     """The tables whose sampling drop Q-ALSO2 lifted."""
     return {int(k) for k, d in ((dec or {}).get("also") or {}).items() if d.get("lift")}

@@ -38,7 +38,7 @@ SHOW='^\s+\[|Traceback|Error'
 [ "$MODE" = smoke ] || SHOW='Traceback|Error'
 
 stages() {
-  for st in v23:units v22:account v24:relevance v24:rowlabel; do
+  for st in v23:units v22:account v24:relevance v24:counts v24:rowlabel; do
     echo "=== $st on $N papers $(date +%T)"
     $PY -u full_run_v24.py $st $PAPERS > $LOG/${st//:/_}.log 2>&1 || echo "    FAILED: tail $LOG/${st//:/_}.log"
     grep -E "$SHOW" $LOG/${st//:/_}.log | cut -c1-220 || true

@@ -1096,6 +1096,13 @@ def stage_v24_relevance(papers):
            skip=_subject_tables)
 
 
+def stage_v24_counts(papers):
+    """Plan 6, after the tuning run: Q-COUNT on the columns Q-COL took out as counts."""
+    v24_setup()
+    install24(account=True)
+    rv.recheck_counts(V24, papers)
+
+
 def stage_v24_rowlabel(papers):
     """Plan 2. On the plan with the account tables and without the columns relevance took out: Q-ROWLABEL, Q-HEADER,
     Q-OBJECT."""
@@ -1454,6 +1461,7 @@ PIPELINE = {
     "v23:units": stage_v23_units,
     "v22:account": stage_v22_account,
     "v24:relevance": stage_v24_relevance,
+    "v24:counts": stage_v24_counts,
     "v24:rowlabel": stage_v24_rowlabel,
 }
 # the stage names this file had before it was made standalone (callers still use them)
