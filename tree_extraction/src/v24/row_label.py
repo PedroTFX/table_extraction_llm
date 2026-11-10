@@ -226,7 +226,7 @@ def decide_object(ask, t, cols, above):
 
 def run(run_dir, papers, skip=lambda p: set()):
     """One paper at a time; resumable (run_dir/row_label/<paper>.json). skip(paper): tables another step reads row by
-    row (v13's tables of the paper's one subject). The tables are the ones full_run.plan gives."""
+    row (v13's tables of the paper's one subject): asked Q-OBJECT only. The tables are the ones full_run.plan gives."""
     out = run_dir / "row_label"
     out.mkdir(parents=True, exist_ok=True)
     head = fr.head_runs()
@@ -240,12 +240,12 @@ def run(run_dir, papers, skip=lambda p: set()):
         left = skip(p)
         for t, fields, org, _x in fr.plan(p, head):
             k = str(t.table_index)
-            if k in seen or t.table_index in left or not t.records:
+            if k in seen or not t.records:
                 continue
             seen.add(k)
             rec = {}
             above = sp.caption_above(t, flat, spans)
-            got = label_column(t, fields, org)
+            got = None if t.table_index in left else label_column(t, fields, org)   # the subject step reads those rows
             if got:
                 col, labels, own = got
                 rec["labels"] = dict(decide_labels(ask, t, col, labels, above), own=own)

@@ -13,7 +13,7 @@ the sure answers.
   Q-COL     every trait column of a wide table, with its header, the paper's legend for it and five values: a
             characteristic of the organism / an identifier or label / a genetic marker / a count or presence at a
             site, date or sample / a statistic of an analysis / something else. Only a sure answer other than the
-            first takes the column out. Asked once per header and values per paper.
+            first takes the column out, and 'something else' never does. Asked once per header and values per paper.
   Q-LEVEL   a table where a species takes several rows, a trait column that never differs inside a species while
             another trait column does: is it a characteristic of the species printed again on each row, or a value
             of each row's own specimen? Sure 'species' in both orders: one row per species, trait and value
@@ -53,6 +53,8 @@ COL = {"trait": "a characteristic of the organism: of its body, life history, be
        "count": "a count, an abundance or a presence at a site, on a date or in a sample",
        "statistic": "a statistic of an analysis: a score, a loading, a test value or a p-value",
        "other": "something else"}
+# the answers that take a column out ('other' does not: on Noriega2023 a behaviour category was 'other' at 0.91)
+DROP = ("identifier", "genetic", "count", "statistic")
 Q_LEVEL = ("In this table one species takes several rows, and the column '{col}' has the same value on every row of a "
            "species. What does the column give?")
 LEVEL = {"species": "a characteristic of the species as a whole, printed again on each of its rows",
@@ -217,7 +219,7 @@ def run(run_dir, papers, plan_lifted, skip=lambda p: set()):
                     ch, probs = ask(st, Q_COL.format(col=c.name), dict(COL))
                     n_q += 1
                     cache[ck] = {"choice": ch, "probs": probs,
-                                 "keep": duels.sure(ch, probs, *[x for x in COL if x != "trait"]) is None}
+                                 "keep": duels.sure(ch, probs, *DROP) is None}
                 res["columns"][key] = dict(cache[ck], values=vals)
                 if cache[ck]["keep"]:
                     kept.append(c)

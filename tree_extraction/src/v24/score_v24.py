@@ -64,6 +64,12 @@ def read(rep):
 def main(argv):
     every = sorted(d.name for d in V24.iterdir() if (d / f"{d.name}.csv").exists())
     papers = changed(argv or every)
+    if not papers:                       # the layers changed no row: nothing to score
+        L = [f"v24 {TAG} vs v18: no paper's rows differ (of {len(every)})"]
+        ROOT.mkdir(parents=True, exist_ok=True)
+        (ROOT / f"V24_{TAG}_TOTALS.txt").write_text(L[0] + "\n", encoding="utf-8")
+        print(L[0])
+        return
     for name, src in (("v18", V18), (TAG, V24)):
         for p in papers:
             (ROOT / name / p).mkdir(parents=True, exist_ok=True)
