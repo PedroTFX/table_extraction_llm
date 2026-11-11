@@ -2,13 +2,13 @@
 
 The goal is extraction that works on papers we have never seen, not only the 109, grit and Jakub sets. So every fix here is a general rule about how papers print data, decided by the model, with no paper names and no domain words in code or prompts.
 
-## Built 2026-11-10, not run yet
+## Built 2026-11-10, run 2026-11-10 / 11
 
 You said to follow the plans, all but fix 5 (Viza2023 is too much its own case). Everything below is written and compiles; none of it has run, so the first remote run of each stage is also its first test.
 
 | Fix | Where | State |
 |---|---|---|
-| 1 units | `src/v23/unit_tree.py`; also the `units` layer of `src/v24` | built |
+| 1 units | the `units` layer of `src/v24` (`unit_tree.py`) | **adopted 2026-11-11** (your call): no paper down more than 0.01 on any group; unit agrees on matched rows 0 → 31% dev, ~50% held_b and grit-only. Pass 2 (long-table legend, methods text, markup) built, run pending |
 | 2 names from context | `src/v24/row_label.py` (layer `rowlabel`): Q-ROWLABEL, Q-HEADER, Q-OBJECT | built |
 | 3 accounts, routing | layer `account` of v24 (v22's step); `two_step.py --route text` and `--once` | built |
 | 4 prose names | t5b: only its test run is left; positional lists: variant `t6` (`prose_tree_t2.py`) | built; wrong owner: not started, diagnostics first |
@@ -18,6 +18,14 @@ You said to follow the plans, all but fix 5 (Viza2023 is too much its own case).
 | 8 evaluation | A done; D: `src/reread_paper.sh`, README note; B (a fresh set) and C (GT decisions) are yours | partly |
 
 `full_run_v24.py` holds the four table layers. The model stages write their answers once (`output/full_run_v24`); `V24_LAYERS` picks the layers that assemble and score use, so each layer is measured alone against v18 from the same answers. Runner: `src/v24/run_v24.sh` (smoke, stages, score); Jakub: `src/jakub/run_v24.sh`.
+
+Results, mean F1 over the papers a layer changed, vs v18 (test groups totals only):
+
+| Layers | dev | held_a | held_b | grit-only | Jakub test exact |
+|---|---|---|---|---|---|
+| units | 0.753 → 0.765 | 0.817 → 0.817 | 0.616 → 0.616 | 0.662 → 0.667 | not scored (the judge skips units) |
+| account + row labels | no change | no change | no change | 0.073 → 0.076 | 530 → 696 (FP in scope 668 → 1,020) |
+| relevance | 0.618 → 0.618 | 0.795 → 0.801 | 0.591 → 0.560 (one paper down) | 0.522 → 0.528 | |
 
 Where the build differs from the plan text:
 
