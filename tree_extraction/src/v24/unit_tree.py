@@ -24,6 +24,9 @@ Where the paper prints it (output/eval_split/stats/units_gt.json, tuning papers)
             and the text with the table; every column and cell still without a unit gets the methods' sentences that
             say what was measured and print a unit ('All measurements were accurate to ±0.005 mm'); markup inside a
             header is read as text ('mg/mm<sup>2</sup>'). Q-TEXT decides each, as for a caption.
+  pass 3    (v24) a code's row in any table of the paper: a short cell that is the code, another cell with a bracket
+            ('EL | Elytra length (mm)'), asked as Q-PART. The legend inventory had stored Noriega2023's legend table
+            under the code 'S5, S6'.
 
     python full_run_v23.py v23:units <papers>     writes <run>/units/<paper>.json
 """
@@ -58,7 +61,8 @@ WHERE = {"header": "is printed in the column's header",
          "heading": "is printed in the heading '{h}' above the column",
          "legend": "is printed in the paper's legend for '{code}': '{h}'",
          "cell": "is printed in the trait name '{h}' of this row",
-         "cell legend": "is printed in the paper's legend for the trait name '{code}' of this row: '{h}'"}
+         "cell legend": "is printed in the paper's legend for the trait name '{code}' of this row: '{h}'",
+         "row": "is printed beside '{code}' in a row of a table of the paper: '{h}'"}
 Q_PART = "What does '{part}' tell about the values of the column '{col}'?"
 PART = {"unit": "the unit the values are in",
         "statistic": "which statistic the values are (such as mean, standard deviation, range, sample size)",
@@ -102,6 +106,35 @@ def part_candidates(parts):
         got = [m[1] for m in BRACKET.finditer(x)] or ([x] if len(x) <= 12 and not re.search(r"\d", x) else [])
         out += [("heading", g, x) for g in got]
     return out
+
+
+def legend_rows(paper):
+    """{code: [(bracket, the row's text)]} from every table the paper prints (v24 pass 3, layout only): a row with a
+    short cell that is the code and another cell holding a bracket. The legend inventory can miss a legend printed as a
+    table (Noriega2023: 'S5, S6 | TRAITS | EL | Elytra length (mm)' was stored under the code 'S5, S6')."""
+    import header_tree as ht
+    import header_tree_bench as hb
+    out = {}
+    for html in hb.html_tables(paper):
+        g = ht.grid_from_html(html)
+        for r in range(g.nrows):
+            cells = [_plain(g.text(r, c)) for c in range(g.ncols) if g.origin(r, c)]
+            for code in {x for x in cells if x and len(x) <= 20 and re.search(r"[^\W\d_]", x)}:
+                for x in cells:
+                    if x == code:
+                        continue
+                    for m in BRACKET.finditer(x):
+                        row = " | ".join(y for y in cells if y)[:200]
+                        if (m[1], row) not in out.get(code, []):
+                            out.setdefault(code, []).append((m[1], row))
+    return out
+
+
+def row_candidates(code, rows):
+    """[(source, text, row)] for a code from legend_rows: at most 3, and none when the code is printed beside more
+    than 3 different brackets (a word printed in many rows is no code)."""
+    got = (rows or {}).get(code) or []
+    return [("row", b, row) for b, row in got[:3]] if len({b for b, _r in got}) <= 3 else []
 
 
 def legend_candidates(code, cats):
@@ -187,7 +220,7 @@ def text_unit(ask, st, col, text, methods, rec):
     return rec
 
 
-def column_unit(ask, t, col, values, parts, code, cats, text, seen, methods=(), rec=None):
+def column_unit(ask, t, col, values, parts, code, cats, text, seen, methods=(), rec=None, rows=None):
     """-> record: the questions asked, in order, and the first sure unit (or None). seen: the table's answers about a
     heading, asked once for all the columns under it (the text with the table is asked per column: a caption's unit
     may be some columns' only). rec: an earlier pass's record without a unit; only questions it lacks are asked."""
@@ -196,6 +229,7 @@ def column_unit(ask, t, col, values, parts, code, cats, text, seen, methods=(), 
     cands = [(s, x, WHERE[s]) for s, x in header_candidates(col.name)]
     cands += [(s, x, WHERE[s].format(h=h)) for s, x, h in part_candidates(parts)]
     cands += [(s, x, WHERE[s].format(code=code, h=h)) for s, x, h in legend_candidates(code, cats)]
+    cands += [(s, x, WHERE[s].format(code=code, h=h)) for s, x, h in row_candidates(code, rows)]
     for s, x, where in cands:
         if _asked(rec, x, where):
             continue
@@ -213,13 +247,14 @@ def column_unit(ask, t, col, values, parts, code, cats, text, seen, methods=(), 
     return text_unit(ask, st, col.name, text, methods, rec)
 
 
-def cell_unit(ask, t, vcol, shown, cell, cats, text, methods, rec=None):
+def cell_unit(ask, t, vcol, shown, cell, cats, text, methods, rec=None, rows=None):
     """A long table's trait-name cell: a bracket in the cell; (v24) the paper's legend for the cell's code, then the
     text with the table and the methods."""
     st = state_of(t, vcol, shown)
     rec = rec or {"asked": [], "unit": None}
     cands = [(x, WHERE["cell"].format(h=cell)) for _s, x in header_candidates(cell)]
     cands += [(x, WHERE["cell legend"].format(code=cell, h=h)) for _s, x, h in legend_candidates(nps.show(cell), cats)]
+    cands += [(x, WHERE["row"].format(code=cell, h=h)) for _s, x, h in row_candidates(cell, rows)]
     for x, where in cands:
         if _asked(rec, x, where):
             continue
@@ -235,7 +270,8 @@ def cell_unit(ask, t, vcol, shown, cell, cats, text, methods, rec=None):
     return rec
 
 
-PASS = 2          # v24 pass 2: long-table cells get the legend, every column and cell the methods text; markup ignored
+PASS = 3          # v24 pass 2: long-table cells get the legend, every column and cell the methods text; markup ignored
+                  # pass 3: legend rows read by layout (legend_rows)
 
 
 def run(run_dir, papers, write_names=True):
@@ -259,6 +295,7 @@ def run(run_dir, papers, write_names=True):
         printed = dict(names)                         # the names before any unit left them
         cats = ln.entries(p)
         methods = methods_units(sp.sections(p))
+        rows = legend_rows(p)
         md = None
         res = {"columns": {}, "cells": {}, "pass": PASS, "methods": methods}
 
@@ -290,7 +327,7 @@ def run(run_dir, papers, write_names=True):
                     shown = [_flat(r.get(vals_col[0].name)) for r in t.records if _flat(r.get(tcol.name)) == cell]
                     base = again(prev)
                     n0 = len((base or {}).get("asked") or [])
-                    rec = cell_unit(ask, t, vals_col[0].name, shown, cell, cats, text, methods, base)
+                    rec = cell_unit(ask, t, vals_col[0].name, shown, cell, cats, text, methods, base, rows)
                     n_q += len(rec["asked"]) - n0
                     if rec["asked"]:
                         res["cells"][cell] = rec
@@ -316,7 +353,7 @@ def run(run_dir, papers, write_names=True):
                 code = nps.show(next((x for r, x in parts if r == "name"), col.name))
                 base = again(prev)
                 n0 = len((base or {}).get("asked") or [])
-                rec = column_unit(ask, t, col, vals, parts, code, cats, text, seen, methods, base)
+                rec = column_unit(ask, t, col, vals, parts, code, cats, text, seen, methods, base, rows)
                 n_q += sum(not a.get("reused") for a in rec["asked"][n0:])
                 if rec["unit"]:
                     shown = printed.get(col.name) or col.name
