@@ -15,6 +15,9 @@
             columns whose path went through the node
 
     python prompt_ab.py run [variant ...]       resumable: output/prompt_ab/results.json (per paper)
+    python prompt_ab.py run node:kind.2 table_kind.2 node:organism_name.2 all.2
+                                                revision 2, compared with 'old.2' (the old wording read again in the
+                                                same session; 'old' against 'old.2' is the drift between sessions)
     python prompt_ab.py score                   -> output/prompt_ab/SCORE.txt
     python prompt_ab.py run --group held_b ...  another group (default: tuning); held_b only as totals, run once
 """
@@ -42,7 +45,14 @@ OLD_INTRO = ("A table from a scientific paper about insects is being mapped, col
              "template.")
 MODEL = ("nimble:9b-q4-gpu", 6)
 # the cheap variants first (one node's questions), the full re-readings last
-ORDER = [v for v in pv.VARIANTS if v.startswith("node:")] + ["organism_column", "table_kind", "intro"]
+ORDER = ([v for v in pv.VARIANTS if v.startswith("node:") and "." not in v] + ["organism_column", "table_kind", "intro"]
+         + [v for v in pv.VARIANTS if "." in v and v != "all.2"] + ["all.2"])
+
+
+def base_of(v):
+    """The old wording read in the same session as variant v: 'old' for the first session's variants, 'old.2' for
+    those named '<x>.2'. nimble's answers drift between model loads, so a variant is compared with its own session."""
+    return f"old.{v.rsplit('.', 1)[1]}" if "." in v.rsplit(":", 1)[-1] else "old"
 
 
 class Memo:
@@ -71,6 +81,12 @@ def applied(name):
     kind, val = pv.VARIANTS[name]
     saved = (ct.TABLE_KIND, ct.ORGANISM_COLUMN, ct.NODES, ct.table_state)
     try:
+        if kind == "combined":                      # every listed variant at once
+            with contextlib.ExitStack() as stack:
+                for v in val:
+                    stack.enter_context(applied(v))
+                yield
+            return
         if kind == "intro":
             orig = ct.table_state
             assert OLD_INTRO in orig(_Probe(), "", (), 0), "the old intro line is not where expected"
@@ -115,7 +131,7 @@ def tables_of(paper, head):
     return gt, text, out
 
 
-def run(variants, papers):
+def run(variants, papers, base="old"):
     OUT.mkdir(parents=True, exist_ok=True)
     f = OUT / "results.json"
     res = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
@@ -133,9 +149,9 @@ def run(variants, papers):
         for t, ctx, labels in tables:
             tid = f"{p}#{t.table_index}"
             e = entries.get(tid) or {"table": tid, "labels": labels, "pred": {}, "paths": {}}
-            todo = [v for v in ["old"] + variants if v not in e["pred"]]
+            todo = [v for v in [base] + variants if v not in e["pred"]]
             for v in todo:
-                with (applied(v) if v != "old" else contextlib.nullcontext()):
+                with (applied(v) if not v.startswith("old") else contextlib.nullcontext()):
                     r = ct.classify_table(t, text, client, table_context=True, seed=tid, extra_context=ctx)
                 e["pred"][v] = r["greedy"]
                 e["paths"][v] = r.get("paths", {})
@@ -156,9 +172,12 @@ def right(pred, lab):
 def score():
     res = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
     variants = [v for v in ORDER if any(v in e["pred"] for r in res.values() for e in r["tables"])]
+    if any("old.2" in e["pred"] for r in res.values() for e in r["tables"]):
+        variants = ["old.2"] + variants             # drift: the old wording read again in a later session
     L = ["Base column tree: old wording against new, one variant at a time. Key: column_role_bench.derive_labels.",
          "Columns the GT draws on ('used') and columns it does not use ('none'); per group; flips listed for tuning "
-         "papers.", ""]
+         "papers. Each variant is compared with the old wording read in its own session ('old' or 'old.2'); the",
+         "'old.2' block is the drift between the two sessions: the noise floor for every other block.", ""]
     flips_all = []
     for v in variants:
         node = v.split(":", 1)[1] if v.startswith("node:") else None
@@ -171,13 +190,16 @@ def score():
                 for h, (lab, _ev) in e["labels"].items():
                     if lab == "unsure":
                         continue
-                    old = (e["pred"]["old"].get(h) or [None])[0]
+                    b = "old" if v == "old.2" else base_of(v)
+                    if b not in e["pred"]:
+                        continue
+                    old = (e["pred"][b].get(h) or [None])[0]
                     new = (e["pred"][v].get(h) or [None])[0]
                     if old is None or new is None:
                         continue
                     side = "used" if lab != "none" else "none"
-                    via = node is None or any(node + ":" in (e["paths"].get(w, {}).get(h) or "")
-                                              for w in ("old", v))
+                    via = node is None or any(node.split(".")[0] + ":" in (e["paths"].get(w, {}).get(h) or "")
+                                              for w in (b, v))
                     c[(g, side, "n")] += 1
                     c[(g, side, "old")] += right(old, lab)
                     c[(g, side, "new")] += right(new, lab)
@@ -214,8 +236,10 @@ def main(argv):
     variants = args or ORDER
     bad = [v for v in variants if v not in pv.VARIANTS]
     assert not bad, f"unknown variants {bad}; known: {list(pv.VARIANTS)}"
+    bases = {base_of(v) for v in variants}
+    assert len(bases) == 1, f"one session at a time: {bases}"
     want = ("dev", "held_a") if group == "tuning" else (group,)
-    run(variants, sorted(p for p, g in SPLIT.items() if g in want))
+    run(variants, sorted(p for p, g in SPLIT.items() if g in want), bases.pop())
 
 
 if __name__ == "__main__":

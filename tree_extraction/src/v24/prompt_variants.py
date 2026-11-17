@@ -281,10 +281,72 @@ NODES = {
     },
 }
 
+# --- revision 2 (2026-11-17), after the first old-against-new run; each a general ambiguity, written as a definition ---
+#   organism_name  7 rank columns ('Family', 'Subfamily') went from the organism's identity to a trait: the 'different
+#                  organism' option said 'or that organism's group', which read as the row's own group
+#   table_kind     rank columns read as traits in every column question: the 'one organism per row' option said the
+#                  other columns give 'its categories', with no word for its classification
+#   kind           presence at the study's own elevation plots read as a characteristic: 'its geographic or
+#                  altitudinal range' did not separate the range an organism is known from from where the study found it
+TABLE_KIND_2 = {"question": TABLE_KIND["question"], "options": {
+    **TABLE_KIND["options"],
+    "organism_traits": "One organism per row: a species or another taxon (a genus, a morphospecies). The other columns "
+                       "either name groups the organism belongs to (its family, its order) or give its characteristics "
+                       "(its measurements, its categories, what it does or where it lives).",
+}}
+ORGANISM_NAME_2 = {**NODES["organism_name"], "options": {
+    **NODES["organism_name"]["options"],
+    "row_organism": {
+        "description": "The organism the row is about, the one the other columns describe: its full scientific name, "
+                       "or one part of that name when it is split over columns (the genus in one column, the species "
+                       "epithet in another).",
+        "field": "verbatimIdentification"},
+    "higher_rank": {
+        "description": "A group that the row's own organism belongs to: its family, its order, or another rank above "
+                       "the genus. The organism of every row belongs to the group named in that row's cell, and several "
+                       "rows can share one group. Also the author and year of the organism's name.",
+        "field": "verbatimIdentification"},
+    "associated_organism": {
+        "description": "A DIFFERENT organism, neither the row's organism nor a group it belongs to: one that the row's "
+                       "organism lives on or in, feeds on, carries, is eaten or parasitised by, or depends on (a host, a "
+                       "prey, a food plant, a partner). The cell may give that other organism's own family; it is still "
+                       "a different organism.",
+        "field": "measurementType"},
+}}
+KIND_2 = {**NODES["kind"], "options": {
+    **NODES["kind"]["options"],
+    "organism_property": {
+        "description": "A characteristic of the organism itself: what it is like, what it does, or where and when it "
+                       "lives. Measurements of its body or parts, its diet, behaviour, social life or reproduction, its "
+                       "number of generations a year, its season of activity, the stage in which it passes an "
+                       "unfavourable season, the habitats where it lives, breeds or shelters, the hosts or foods it "
+                       "uses, the geographic or altitudinal range it is known from. As numbers, categories, yes / no or "
+                       "codes. Still a characteristic when the cells are stages, sexes, months or places, if the header "
+                       "names something about the organism ('Dormant stage' = seed, 'Breeding months' = Mar-Jun). Not a "
+                       "characteristic: whether, or how often, the organism was found at the study's own sites, plots, "
+                       "dates or samples (that is about the sampling), and its classification (family, order), which is "
+                       "a name.",
+        "next": "organism_property"},
+    "counts_or_statistics": {
+        "description": "About the numbers rather than the organism: how many individuals were found, or whether they "
+                       "were found at all, at each of the study's sites, plots, dates or samples (abundance, presence, "
+                       "frequency, occurrences, totals per site), sample sizes, the unit of the values, a statistic of a "
+                       "characteristic named elsewhere (a header such as 'Mean ± SD', 'Median', 'Q1', 'CV'), or results "
+                       "of tests or models (estimates, test statistics, p-values, indices).",
+        "next": "counts_or_statistics"},
+}}
+
 # one variant per name: what it replaces
 VARIANTS = {"intro": ("intro", INTRO), "table_kind": ("table_kind", TABLE_KIND),
             "organism_column": ("organism_column", ORGANISM_COLUMN)}
 VARIANTS.update({f"node:{k}": ("node", (k, v)) for k, v in NODES.items()})
+VARIANTS.update({"table_kind.2": ("table_kind", TABLE_KIND_2),
+                 "node:organism_name.2": ("node", ("organism_name", ORGANISM_NAME_2)),
+                 "node:kind.2": ("node", ("kind", KIND_2))})
+# every new text at once: the eight kept from revision 1 and the three of revision 2
+ALL_2 = ["intro", "table_kind.2", "organism_column", "node:cell_shape", "node:is_taxon", "node:organism_name.2",
+         "node:kind.2", "node:organism_property", "node:record_context", "node:counts_or_statistics", "node:other"]
+VARIANTS["all.2"] = ("combined", ALL_2)
 
 # the made-up examples, checked against every paper (prompt_ab.py --check)
 EXAMPLES = ["Velora brevis", "Velora sp", "Velora", "Tamnidae", "ORSIFORMES", "Halvorsen", "Duprat", "EVERGREEN", "fledgling",
