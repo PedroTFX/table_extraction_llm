@@ -325,11 +325,11 @@ def main():
                 if not tcol:
                     continue
                 sub = [(rid, r) for rid, r in zip(row_ids, t.records) if _flat(r.get(tcol)) == cell]
-                ev = column_evidence_rows(sub, vcols, by)
-                g = gt_traits(*ev[:3])
+                evd = column_evidence_rows(sub, vcols, by)
+                g = gt_traits(*evd[:3])
                 if not g:
                     continue
-                want, why = unit_key(g, ev[3], [cell])
+                want, why = unit_key(g, evd[3], [cell])
                 if want is None:
                     DROPPED["units: GT traits with different units, none named like the cell"] += 1
                     continue
