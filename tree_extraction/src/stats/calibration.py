@@ -61,6 +61,17 @@ def same_unit(a, b):
     return bool(a) and k(a) == k(b)
 
 
+def chosen(probs):
+    """The probability of the answer given, for each question in a (possibly nested) {question: {option: p}}."""
+    for v in probs.values():
+        if isinstance(v, dict) and v:
+            nums = [x for x in v.values() if isinstance(x, (int, float))]
+            if nums:
+                yield max(nums)
+            else:
+                yield from chosen(v)
+
+
 def main():
     head = f24.head_runs()
     key = load(OUT / "decode_key/all/key.json")
@@ -172,7 +183,7 @@ def main():
                 c = (r.get("cells") or {}).get(cell)
                 if not c:
                     continue
-                ps = [max(v.values()) for v in (c.get("probs") or {}).values() if isinstance(v, dict) and v]
+                ps = list(chosen(c.get("probs") or {}))
                 if not ps:
                     continue
                 term = c.get("term") or cell
