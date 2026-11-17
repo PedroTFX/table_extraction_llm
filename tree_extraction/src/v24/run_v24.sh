@@ -7,7 +7,7 @@
 #     bash run_v24.sh score  <group>                   assemble + score_v24.py for each layer set below
 # <group>: tuning (dev + held_a of split_v15.json) | held_b | all (every paper of the root's split.json) | paper names.
 # Nothing but counts and totals goes to the screen for a group (held_b and grit-only names stay in the logs).
-# Layer sets scored: units | account+rowlabel | relevance | all four.
+# Layer sets scored: units | account+rowlabel | relevance | legend | all five.
 set -e
 MODE=$1; shift
 R=$HOME/table_extraction_llm
@@ -16,7 +16,7 @@ OUT=${TREE_OUTPUT:-$R/tree_extraction/output}
 cd $R/tree_extraction/src/v24
 LOG=$OUT/full_run_v24_logs
 mkdir -p $LOG
-SETS="units account,rowlabel relevance units,account,relevance,rowlabel"
+SETS="units account,rowlabel relevance legend units,account,relevance,rowlabel,legend"
 
 PAPERS=$($PY - "$OUT" "$R" "$@" <<'PY'
 import json, sys
@@ -38,7 +38,7 @@ SHOW='^\s+\[|Traceback|Error'
 [ "$MODE" = smoke ] || SHOW='Traceback|Error'
 
 stages() {
-  for st in v23:units v22:account v24:relevance v24:counts v24:rowlabel; do
+  for st in v23:units v22:account v24:relevance v24:counts v24:stats v24:rowlabel v24:legend; do
     echo "=== $st on $N papers $(date +%T)"
     $PY -u full_run_v24.py $st $PAPERS > $LOG/${st//:/_}.log 2>&1 || echo "    FAILED: tail $LOG/${st//:/_}.log"
     grep -E "$SHOW" $LOG/${st//:/_}.log | cut -c1-220 || true
@@ -56,6 +56,8 @@ score() {
     V24_LAYERS=$L $PY -u score_v24.py $PAPERS > $LOG/score_${L//,/+}.log 2>&1 || echo "    FAILED: tail $LOG/score_${L//,/+}.log"
     grep -E "^v24|^  (dev|held_a|held_b|grit) |^      " $LOG/score_${L//,/+}.log || true
   done
+  $PY -u fires.py $PAPERS > $LOG/fires.log 2>&1 || echo "    fires.py FAILED: tail $LOG/fires.log"
+  echo "where each layer acted: $OUT/full_run_v24_logs/FIRES.txt"
 }
 
 case $MODE in

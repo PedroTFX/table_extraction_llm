@@ -11,7 +11,7 @@ SETS=${@:-newPDF imagePDF ocrPDF}
 R=$HOME/table_extraction_llm
 PY=$R/.venv/bin/python
 SRC=$R/tree_extraction/src
-LAYERSETS="account account,rowlabel units,account,relevance,rowlabel"
+LAYERSETS="account account,rowlabel units,account,relevance,rowlabel,legend"
 for S in $SETS; do
   export TREE_PAPERS=$R/data/Jakub_papers/$S TREE_OUTPUT=$R/tree_extraction/output_jakub_$S
   ALL=$($PY - <<PY
@@ -24,7 +24,7 @@ PY
   echo "=== $S $G: $(echo $ALL | wc -w) papers $(date +%T)"
   cd $SRC/v24
   mkdir -p $TREE_OUTPUT/full_run_v24_logs
-  for st in v23:units v22:account v24:relevance v24:rowlabel; do
+  for st in v23:units v22:account v24:relevance v24:counts v24:stats v24:rowlabel v24:legend; do
     $PY -u full_run_v24.py $st $ALL > $TREE_OUTPUT/full_run_v24_logs/${st//:/_}_$G.log 2>&1 || echo "  FAILED $st: see full_run_v24_logs"
     echo "  $st: $(grep -cE '^\s+\[' $TREE_OUTPUT/full_run_v24_logs/${st//:/_}_$G.log || true) papers answered $(date +%T)"
   done
@@ -36,7 +36,7 @@ import csv, json
 from pathlib import Path
 O = Path("$TREE_OUTPUT")
 tag = "$T"
-src = O / ("full_run_v24" if tag == "units+account+relevance+rowlabel" else "full_run_v24_" + tag)
+src = O / ("full_run_v24" if tag == "units+account+relevance+rowlabel+legend" else "full_run_v24_" + tag)
 st = json.load(open(O / "two_step/status.json", encoding="utf-8"))
 def rows(f):
     return list(csv.DictReader(open(f, encoding="utf-8", newline=""))) if f.exists() else []

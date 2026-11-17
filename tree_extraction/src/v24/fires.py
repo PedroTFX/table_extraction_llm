@@ -22,7 +22,8 @@ SPLIT = json.loads((_paths.SUB / "output/eval_split/split_v15.json").read_text(e
 GROUPS = ("dev", "held_a", "held_b", "grit-only")
 VERSIONS = ["full_run", "full_run_v3", "full_run_v4", "full_run_v6", "full_run_v7", "full_run_v8", "full_run_v9",
             "full_run_v11", "full_run_v12", "full_run_v13", "full_run_v14", "full_run_v15", "full_run_v16", "full_run_v17",
-            "full_run_v18", "full_run_v24_units", "full_run_v24_account+rowlabel", "full_run_v24_relevance", "full_run_v24"]
+            "full_run_v18", "full_run_v24_units", "full_run_v24_account+rowlabel", "full_run_v24_relevance",
+            "full_run_v24_legend", "full_run_v24"]
 KEY = ("verbatimIdentification", "measurementType", "measurementValue", "measurementUnit", "measurementStatistic")
 DROP = ("identifier", "genetic", "count", "statistic")
 
@@ -68,6 +69,9 @@ def layer_counts(p):
     objs = [k for k, d in rl.items() if (d.get("object") or {}).get("object")]
     out["rowlabel: row labels used"] = (len(roles), 0)
     out["rowlabel: measured object"] = (len(objs), 0)
+    lc = load("legend_check", p)
+    rej = [k for k, d in lc.items() if d.get("reject")]
+    out["legend: columns not decoded"] = (len({k.split(":")[0] for k in rej}), len(rej))
     return out
 
 

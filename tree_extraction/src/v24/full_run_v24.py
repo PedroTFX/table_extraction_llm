@@ -3,6 +3,8 @@ layer that can be switched on alone. v19, v20, v21 were not adopted; nor v5 and 
   units      (plan 1, v23) the unit of each numeric trait column in measurementUnit, out of the trait name (unit_tree.py)
   account    (plan 3, v22) a table with no organism column inside one species' account takes that species (account_tree.py)
   rowlabel   (plan 2) row labels that complete the column's name or are statistics; the caption's object (row_label.py)
+  legend     (2026-11-17, the calibration audit) a column whose legend passage does not explain it is not decoded
+             (legend_check.py)
   relevance  (plan 6) sampling tables asked again, tables of other organisms, columns that are no trait, species-level
              values written once (relevance.py)
 The model stages write their answers in output/full_run_v24, made once with every layer before them in the plan.
@@ -119,6 +121,7 @@ import unit_tree as ut
 import account_tree as at
 import relevance as rv
 import row_label as rl
+import legend_check as lc
 import yes_no as yn
 
 
@@ -346,7 +349,7 @@ def base_species_of(t, fields, org, rec):
 
 
 def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, cell_names=None,
-                  category_of=None, out_root=None):
+                  category_of=None, out_root=None, dec_filter=None):
     """One CSV row per species x trait, in production's columns, -> root/<paper>/<paper>.csv.
       wide   each column tagged measurementType: type = its name, spelled out by the meaning
              step when it resolved; value = the cell, decoded
@@ -371,6 +374,8 @@ def assemble_csvs(papers, root, plan_of, species_of, decoded, section_of=None, c
         names = json.loads(mf.read_text(encoding="utf-8")) if mf.exists() else {}
         df = root / "decode" / f"{paper}.json"
         dec = json.loads(df.read_text(encoding="utf-8")) if df.exists() else {}
+        if dec_filter:                       # v24 legend: columns whose legend passage does not explain them
+            dec = dec_filter(paper, dec)
         cells = cell_names(paper) if cell_names else {}
         rows = []
         for t, fields, org, xtags in plan_of(paper, head):
@@ -1042,7 +1047,7 @@ def stage_v18_flags(papers):
 
 V24 = _paths.OUTPUT / "full_run_v24"
 V22, V23 = _paths.OUTPUT / "full_run_v22", _paths.OUTPUT / "full_run_v23"
-ALL_LAYERS = ("units", "account", "relevance", "rowlabel")
+ALL_LAYERS = ("units", "account", "relevance", "rowlabel", "legend")
 LAYERS = tuple(x for x in ALL_LAYERS
                if x in (os.environ.get("V24_LAYERS") or ",".join(ALL_LAYERS)).replace("+", ",").split(","))
 BASE = dict(decisions=True, structure=True, kind=True, sections=True, parts=True, subjects=True, listed=True,
@@ -1101,6 +1106,21 @@ def stage_v24_counts(papers):
     v24_setup()
     install24(account=True)
     rv.recheck_counts(V24, papers)
+
+
+def stage_v24_legend(papers):
+    """After the calibration audit (2026-11-17): a column whose legend passage does not explain it is not decoded
+    (QL's saved 'none'; QL asked now where only one passage was offered)."""
+    v24_setup()
+    install(V24, **BASE)
+    lc.run(V24, papers)
+
+
+def stage_v24_stats(papers):
+    """Plan 6, after the calibration audit (2026-11-17): Q-STAT on the columns Q-COL took out as statistics."""
+    v24_setup()
+    install24(account=True)
+    rv.recheck_statistics(V24, papers)
 
 
 def stage_v24_rowlabel(papers):
@@ -1385,9 +1405,11 @@ def stage_assemble(papers):
     """The rows with the layers of V24_LAYERS, from the answers in output/full_run_v24 (code only)."""
     v24_setup()
     install(V24, **BASE)
-    assemble_csvs(papers, V24, lambda p, h: plan(p, h, V24, tags=V24, **BASE, species=True, **ON),
+    plan_on = {k: v for k, v in ON.items() if k != "legend"}
+    dec_filter = (lambda p, d: lc.apply(d, _load(V24 / "legend_check" / f"{p}.json"))) if ON["legend"] else None
+    assemble_csvs(papers, V24, lambda p, h: plan(p, h, V24, tags=V24, **BASE, species=True, **plan_on),
                   species_fn(V24, decisions=True, sections=True), decoded, section_of,
-                  lambda p: {**ln.cell_names(V24, p), **nps.cell_names(V24, p)}, out_root=OUT)
+                  lambda p: {**ln.cell_names(V24, p), **nps.cell_names(V24, p)}, out_root=OUT, dec_filter=dec_filter)
     n = m = 0
     for p in papers:                     # 'Hesperiidae(n=45)' -> organism + sample size; then the clean-up
         rows = read_csv(OUT / p / f"{p}.csv")
@@ -1462,6 +1484,8 @@ PIPELINE = {
     "v22:account": stage_v22_account,
     "v24:relevance": stage_v24_relevance,
     "v24:counts": stage_v24_counts,
+    "v24:stats": stage_v24_stats,
+    "v24:legend": stage_v24_legend,
     "v24:rowlabel": stage_v24_rowlabel,
 }
 # the stage names this file had before it was made standalone (callers still use them)

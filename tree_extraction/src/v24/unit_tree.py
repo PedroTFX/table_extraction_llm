@@ -111,13 +111,14 @@ def part_candidates(parts):
 
 
 def legend_rows(paper):
-    """{code: [(bracket, the row's text)]} from every table the paper prints (v24 pass 3, layout only): a row with a
-    short cell that is the code and another cell holding a bracket. The legend inventory can miss a legend printed as a
-    table (Noriega2023: 'S5, S6 | TRAITS | EL | Elytra length (mm)' was stored under the code 'S5, S6')."""
+    """{code: [(bracket, the row's text, table index)]} from every table the paper prints (v24 pass 3, layout only): a
+    row with a short cell that is the code and another cell holding a bracket. The legend inventory can miss a legend
+    printed as a table (Noriega2023: 'S5, S6 | TRAITS | EL | Elytra length (mm)' was stored under the code 'S5, S6').
+    Pass 5: only rows of tables nimble calls a key count (KeyRows)."""
     import header_tree as ht
     import header_tree_bench as hb
     out = {}
-    for html in hb.html_tables(paper):
+    for k, html in enumerate(hb.html_tables(paper)):
         g = ht.grid_from_html(html)
         for r in range(g.nrows):
             cells = [_plain(g.text(r, c)) for c in range(g.ncols) if g.origin(r, c)]
@@ -127,16 +128,65 @@ def legend_rows(paper):
                         continue
                     for m in BRACKET.finditer(x):
                         row = " | ".join(y for y in cells if y)[:200]
-                        if (m[1], row) not in out.get(code, []):
-                            out.setdefault(code, []).append((m[1], row))
+                        if (m[1], row) not in [(b, w) for b, w, _k in out.get(code, [])]:
+                            out.setdefault(code, []).append((m[1], row, k))
     return out
 
 
+Q_KEY = "What does this table of the paper do?"
+KEY_OPTIONS = {"key": "it is a key or a legend: each row explains a code, an abbreviation, a variable or a category used "
+                      "elsewhere in the paper (its meaning, its unit or its classes)",
+               "data": "it holds data: each row is an organism, a specimen, a sample, a site or a result, with its values"}
+
+
+def table_preview(paper, k, n=8):
+    """The table's first rows as text, cells joined by ' | ' (layout only)."""
+    import header_tree as ht
+    import header_tree_bench as hb
+    g = ht.grid_from_html(hb.html_tables(paper)[k])
+    lines = []
+    for r in range(min(n, g.nrows)):
+        cells = [_plain(g.text(r, c))[:40] for c in range(g.ncols) if g.origin(r, c)]
+        lines.append(f"row {r + 1}: " + " | ".join(x for x in cells if x)[:300])
+    return f"A table of a scientific paper ({g.nrows} rows, {g.ncols} columns) begins: " + " / ".join(lines)
+
+
+class KeyRows:
+    """legend_rows filtered to the tables nimble calls a key, sure in both option orders (pass 5, 2026-11-17: the
+    calibration audit found 6 of 17 sure units from legend rows wrong, every one a row of a data table: Gathof2022
+    'Bodysize' was given 'number of months'). Each table is asked once per paper, only when one of its rows is a
+    candidate; the answers are kept in the paper's record (key_tables)."""
+
+    def __init__(self, ask, paper, rows, saved=None):
+        self.ask, self.paper, self.rows = ask, paper, rows
+        self.answers = dict(saved or {})
+        self.table_of_row = {w: k for got in rows.values() for _b, w, k in got}
+
+    def is_key(self, k):
+        key = str(k)
+        if key not in self.answers:
+            state = table_preview(self.paper, k)
+            log = []
+            ok = True
+            for crit in (KEY_OPTIONS, dict(reversed(list(KEY_OPTIONS.items())))):
+                ch, probs = self.ask(state, Q_KEY, crit)
+                log.append({"choice": ch, "probs": probs})
+                if duels.sure(ch, probs, "key") != "key":
+                    ok = False
+                    break
+            self.answers[key] = {"key": ok, "asked": log}
+        return self.answers[key]["key"]
+
+    def get(self, code, default=None):
+        got = [(b, w, k) for b, w, k in self.rows.get(code) or [] if self.is_key(k)]
+        return got or default
+
+
 def row_candidates(code, rows):
-    """[(source, text, row)] for a code from legend_rows: at most 3, and none when the code is printed beside more
-    than 3 different brackets (a word printed in many rows is no code)."""
+    """[(source, text, row)] for a code from legend_rows (or KeyRows): at most 3, and none when the code is printed
+    beside more than 3 different brackets (a word printed in many rows is no code)."""
     got = (rows or {}).get(code) or []
-    return [("row", b, row) for b, row in got[:3]] if len({b for b, _r in got}) <= 3 else []
+    return [("row", b, row) for b, row, _k in got[:3]] if len({b for b, _r, _k in got}) <= 3 else []
 
 
 def legend_candidates(code, cats):
@@ -272,10 +322,13 @@ def cell_unit(ask, t, vcol, shown, cell, cats, text, methods, rec=None, rows=Non
     return rec
 
 
-PASS = 4          # v24 pass 2: long-table cells get the legend, every column and cell the methods text; markup ignored
+PASS = 5          # v24 pass 2: long-table cells get the legend, every column and cell the methods text; markup ignored
                   # pass 3: legend rows read by layout (legend_rows)
                   # pass 4: unit words matched case-sensitively; a unit from the text or the methods that the words no
                   # longer offer is asked again (2026-11-17, the calibration audit)
+                  # pass 5: legend rows only from tables nimble calls a key (KeyRows); a unit from a row of any other
+                  # table is asked again (2026-11-17, the calibration audit)
+ROW_WHERE = re.compile(r"in a row of a table of the paper: '(.*)'$")
 
 
 def run(run_dir, papers, write_names=True):
@@ -299,13 +352,24 @@ def run(run_dir, papers, write_names=True):
         printed = dict(names)                         # the names before any unit left them
         cats = ln.entries(p)
         methods = methods_units(sp.sections(p))
-        rows = legend_rows(p)
+        rows = KeyRows(ask, p, legend_rows(p), old.get("key_tables"))
         md = None
         res = {"columns": {}, "cells": {}, "pass": PASS, "methods": methods}
 
+        def off_key(a):
+            """A question asked about a row of a table that is not a key (pass 5)."""
+            m = ROW_WHERE.search(a.get("where") or "")
+            k = rows.table_of_row.get(m.group(1)) if m else None
+            return k is not None and not rows.is_key(k)
+
         def stale(r, text):
-            """A unit taken from the text or the methods that the current unit words no longer offer (pass 4)."""
-            if not (r and r.get("unit") and r.get("source") in ("text", "methods")):
+            """A unit taken from the text or the methods that the current unit words no longer offer (pass 4), or from
+            a row of a table that is not a key (pass 5)."""
+            if not (r and r.get("unit")):
+                return False
+            if any(a.get("unit") and off_key(a) for a in r.get("asked") or []):
+                return True
+            if r.get("source") not in ("text", "methods"):
                 return False
             offered = {u for u, _w in methods} | {u for part in text for u, _w in text_units(part)}
             return r["unit"] not in offered
@@ -315,11 +379,13 @@ def run(run_dir, papers, write_names=True):
 
         def again(r, text):
             """An earlier record without a unit: the base for the questions it lacks. A stale unit's text and methods
-            questions are dropped, so they are asked again from the current candidates."""
+            questions, and its questions about rows of tables that are not keys, are dropped, so it is asked again from
+            the current candidates."""
             if not r:
                 return None
             if stale(r, text):
-                return {"asked": [a for a in r.get("asked") or [] if a.get("source") not in ("text", "methods")],
+                return {"asked": [a for a in r.get("asked") or []
+                                  if a.get("source") not in ("text", "methods") and not off_key(a)],
                         "unit": None, "source": None}
             return {**r, "asked": list(r.get("asked") or [])}
 
@@ -381,6 +447,7 @@ def run(run_dir, papers, write_names=True):
                 res["columns"][key] = rec
         if write_names and any(r.get("name") for r in res["columns"].values()):
             mf.write_text(json.dumps(names, indent=1, ensure_ascii=False), encoding="utf-8")
+        res["key_tables"] = rows.answers
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
         got = sum(bool(r["unit"]) for r in [*res["columns"].values(), *res["cells"].values()])
         by = collections.Counter(r.get("source") for r in [*res["columns"].values(), *res["cells"].values()] if r["unit"])

@@ -247,10 +247,26 @@ COUNT = {"site": "a count of the organism at a site, on a date or in a sample: h
                 "the months, days or places of its life"}
 
 
-def recheck_counts(run_dir, papers):
-    """Q-COUNT on a column Q-COL took out as 'count' (Khayati2024 'Number of queens', Scalercio2020 'Flight_Months'):
-    a count at a site, date or sample, or a number of the organism's own? The column stays out only with 'site'
-    sure in both orders. Asked on the saved records; resumable (rec['count2'])."""
+Q_STAT = "The column '{col}' gives a statistic. What is it a statistic of?"
+STAT = {"analysis": "a result of an analysis across the data: a score or loading of an ordination, a test statistic, a "
+                    "p-value, a model estimate, or an index computed from many organisms or samples",
+        "spread": "the organism's own measured values: a standard deviation, standard error, variance, range, minimum, "
+                  "maximum or sample size of one of its characteristics"}
+# the follow-up question per Q-COL answer that takes a column out: (record key, question, options, the option that
+# keeps the column out)
+FOLLOW = {"count": ("count2", Q_COUNT, COUNT, "site"),
+          "statistic": ("stat2", Q_STAT, STAT, "analysis")}
+
+
+def recheck(run_dir, papers, choice):
+    """The follow-up question on a column Q-COL took out as `choice`. The column stays out only when the follow-up says
+    so, sure in both orders. Asked on the saved records; resumable (rec[<follow-up key>]).
+      count      Q-COUNT: a count at a site, date or sample, or a number of the organism's own (Khayati2024 'Number
+                 of queens', Scalercio2020 'Flight_Months' were counts at 0.99 and 0.93)
+      statistic  Q-STAT: a result of an analysis, or a summary of the organism's own values (the calibration audit,
+                 2026-11-17: CamargoVanegas2024's SD columns of six traits were 'statistic of an analysis' at 0.81 to
+                 0.93; the GT keeps each SD as rows of its own)"""
+    rk, q, opts, out_key = FOLLOW[choice]
     head = fr.head_runs()
     ask = duels.Nimble()
     for p in papers:
@@ -259,7 +275,7 @@ def recheck_counts(run_dir, papers):
             continue
         res = json.loads(f.read_text(encoding="utf-8"))
         todo = {k: d for k, d in res["columns"].items()
-                if not d.get("keep") and d.get("choice") == "count" and "count2" not in d}
+                if not d.get("keep") and d.get("choice") == choice and rk not in d}
         if not todo:
             continue
         flat, spans = v3.md_tables(p)
@@ -272,15 +288,22 @@ def recheck_counts(run_dir, papers):
                 continue
             st = (table_state(t, sp.caption_above(t, flat, spans))
                   + f" The column '{col}' holds values such as {', '.join(repr(v) for v in d.get('values', []))}.")
-            ok, log = both(ask, st, Q_COUNT.format(col=col), COUNT, "site")
-            d["count2"] = {"site": ok, "asked": log}
+            ok, log = both(ask, st, q.format(col=col), opts, out_key)
+            d[rk] = {out_key: ok, "asked": log}
             if not ok:
                 d["keep"] = True
                 back += 1
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
-        print(f"  [relevance counts] {p:22s} {back} of {len(todo)} count columns kept as a number of the organism's own",
-              flush=True)
+        print(f"  [relevance {choice}] {p:22s} {back} of {len(todo)} '{choice}' columns kept", flush=True)
     ask.unload()
+
+
+def recheck_counts(run_dir, papers):
+    recheck(run_dir, papers, "count")
+
+
+def recheck_statistics(run_dir, papers):
+    recheck(run_dir, papers, "statistic")
 
 
 def lifts(dec):

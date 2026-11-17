@@ -326,6 +326,10 @@ def main():
                     asked = a["count2"]["asked"][0]
                     add("relevance Q-COUNT, a GT trait column", (asked.get("probs") or {}).get(asked.get("choice")),
                         not a["count2"]["site"], f"{p} t{k} '{h}': site={a['count2']['site']} (GT {g or lab.get(h)})")
+                if "stat2" in a:
+                    asked = a["stat2"]["asked"][0]
+                    add("relevance Q-STAT, a GT trait column", (asked.get("probs") or {}).get(asked.get("choice")),
+                        not a["stat2"]["analysis"], f"{p} t{k} '{h}': analysis={a['stat2']['analysis']} (GT {g or lab.get(h)})")
             # units, wide columns: the GT unit of the GT trait the column is
             for ck, u in (units.get("columns") or {}).items():
                 kk, h = ck.split("|", 1)
@@ -357,9 +361,11 @@ def main():
                 if not sub:
                     continue
                 unit_answers(u, want, f"{p} t{k} cell '{cell}'", why)
-        # decoder: every coded cell of the key that the run decoded
+        # decoder: every coded cell of the key that the run decoded; the legend check's reverted columns apart
+        check = load(V24 / "legend_check" / f"{p}.json")
         for trait, e in (key.get(p) or {}).items():
             r = dec.get(f"{e['table']}:{e['col']}") or {}
+            rejected = (check.get(f"{e['table']}:{e['col']}") or {}).get("reject")
             for cell, want in (e.get("coded") or {}).items():
                 if "binary convention" in str((e.get("where") or {}).get(cell, "")):
                     continue                                   # 0 / 1 -> No / Yes is the GT's, not printed
@@ -372,6 +378,9 @@ def main():
                 term = c.get("term") or cell
                 add("decoder (weakest of QK / QV / QB)", min(ps), same_term(term, want),
                     f"{p} '{trait}': '{cell}' -> '{term}' (key '{want}')")
+                if rejected and c.get("term"):                 # 'right' = the decode it reverts was wrong
+                    add("legend check: decodes it reverts (right = a wrong decode reverted)", min(ps),
+                        not same_term(term, want), f"{p} '{trait}': '{cell}' -> '{term}' reverted (key '{want}')")
 
     L = [f"Calibration audit, full_run_v24 answers on {n_papers} tuning papers (dev + held_a). Bins by the probability of "
          f"the answer given; 'right' = agrees with a key that does not come from the model.", ""]
