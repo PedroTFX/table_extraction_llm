@@ -75,9 +75,10 @@ def same_unit(a, b):
 
 
 DROPPED = collections.Counter()           # keys left out, by reason
-SKEY = {}                                 # (paper, table) -> 'GT long' | 'GT wide' | 'no GT rows' (structure_key.py)
-for _e in json.loads((OUT / "eval_split/structure_key.json").read_text(encoding="utf-8")):
+SKEY, SKINFO = {}, {}                     # (paper, table) -> 'GT long' | 'GT wide' | 'no GT rows' (structure_key.py),
+for _e in json.loads((OUT / "eval_split/structure_key.json").read_text(encoding="utf-8")):   # and its names / values
     SKEY[(_e["paper"], int(_e["table"]))] = _e.get("gt")
+    SKINFO[(_e["paper"], int(_e["table"]))] = _e.get("info") or {}
 # spelled units and their symbols, so a printed 'grams' agrees with a GT 'g'
 UNIT_SYN = {"gram": "g", "milligram": "mg", "kilogram": "kg", "microgram": "µg", "millimetre": "mm", "millimeter": "mm",
             "centimetre": "cm", "centimeter": "cm", "micrometre": "µm", "micrometer": "µm", "micron": "µm", "um": "µm",
@@ -88,12 +89,25 @@ def _flat(s):
     return " ".join(str(s or "").split())
 
 
+def trait_names(rows):
+    """{GT trait name: the name its spelling variants are counted under}: names the scorer's own name similarity calls
+    the same (>= 0.85, case and small typos: Noriega2023 'Biomass' / 'Biomas') are one trait. Different names for one
+    thing ('Body Mass' / 'Biomass') stay apart: that is a GT inconsistency, not a spelling."""
+    canon = {}
+    for name in sorted({r["measurementType"].strip() for r in rows if r["measurementType"].strip()}, key=len, reverse=True):
+        canon[name] = next((c for c in dict.fromkeys(canon.values())
+                            if ev._type_key(c) == ev._type_key(name) or ev._type_sim(c, name) >= 0.85), name)
+    return canon
+
+
 def gt_index(rows):
-    """(species, value) -> [(GT trait, GT unit)] for every GT row."""
+    """(species, value) -> [(GT trait, GT unit)] for every GT row, the trait under its canonical spelling."""
+    canon = trait_names(rows)
     by = collections.defaultdict(list)
     for r in rows:
+        tr = r["measurementType"].strip()
         by[(r["verbatimIdentification"].strip(), crb.norm(r["measurementValue"]))].append(
-            (r["measurementType"].strip(), (r.get("measurementUnit") or "").strip()))
+            (canon.get(tr, tr), (r.get("measurementUnit") or "").strip()))
     return by
 
 
@@ -117,9 +131,10 @@ def row_ids_of(t, gt, ids):
 
 
 def column_evidence_rows(pairs, cols, by):
-    """(cells with a species, cells matching a GT row, {GT trait: cells}, {GT trait: Counter(units)})."""
+    """(cells with a species, cells matching a GT row, {GT trait: cells}, {GT trait: Counter(units)}, the distinct
+    values among the matched cells)."""
     n = m = 0
-    traits, units = collections.Counter(), collections.defaultdict(collections.Counter)
+    traits, units, vals = collections.Counter(), collections.defaultdict(collections.Counter), set()
     for rid, r in pairs:
         for h in cols:
             v = crb.norm(r.get(h))
@@ -130,21 +145,27 @@ def column_evidence_rows(pairs, cols, by):
             if not hits:
                 continue
             m += 1
+            vals.add(v)
             for tr in {x for x, _u in hits}:
                 traits[tr] += 1
             for tr, u in hits:
                 units[tr][u] += 1
-    return n, m, traits, units
+    return n, m, traits, units, vals
 
 
 def column_evidence(t, h, row_ids, by):
     return column_evidence_rows(list(zip(row_ids, t.records)), [h], by)
 
 
-def gt_traits(n, m, traits):
-    """The GT traits a column is: its cells match GT rows for 40% or more, and one GT trait holds half the matches or
-    more (a 0 / 1 or small-number column matches many GT traits by coincidence). [] when not."""
-    if not n or m < 0.4 * n or not traits:
+MIN_VALUES = 4                            # distinct matched values before a column is attributed by its values
+
+
+def gt_traits(n, m, traits, units=None, vals=None):
+    """The GT traits a column is: its cells match GT rows for 40% or more, with 4 or more distinct values among them, and
+    one GT trait holds half the matches or more. A 0 / 1 or small-number column matches many GT traits by
+    coincidence (Tsai2020 'NN' matched 'Bury or Not' and 'standardized ovary weight'); it is attributed only by a
+    header that names a GT trait. [] when not."""
+    if not n or m < 0.4 * n or not traits or (vals is not None and len(vals) < MIN_VALUES):
         return []
     return [tr for tr, c in traits.items() if c >= 0.5 * m]
 
@@ -240,15 +261,16 @@ def main():
             lab = {h: L for h, (L, _e) in labels.items()}
             ids = id_columns(t, gt)
             row_ids = row_ids_of(t, gt, ids)
-            skey = SKEY.get((p, k))
+            skey, sinfo = SKEY.get((p, k)), SKINFO.get((p, k)) or {}
+            long_vals = set(sinfo.get("values") or []) if skey == "GT long" else set()
             ev_of = {c.name: column_evidence(t, c.name, row_ids, by) for c in t.columns}
 
             def gt_col(h):
                 """The GT traits the column is (a list), [] for a long table's value column or a header naming a GT
                 trait, None when the GT does not draw on it (or only by coincidence)."""
-                if lab.get(h) == "measurementValue" and skey == "GT long":
+                if h in long_vals or (lab.get(h) == "measurementValue" and skey == "GT long"):
                     return []
-                got = gt_traits(*ev_of[h][:3])
+                got = gt_traits(*ev_of[h])
                 if got:
                     return got
                 if lab.get(h) == "measurementType" and crb.header_names_trait(h, gt):
@@ -318,20 +340,21 @@ def main():
                     continue
                 unit_answers(u, want, f"{p} t{k} '{h}'", why)
             # units, a long table's name cells: the rows printing that name, their value columns
-            vcols = [h for h, L in lab.items() if L == "measurementValue"] if skey == "GT long" else []
+            vcols = [h for h in long_vals if h in ev_of]
             for cell, u in ((units.get("cells") or {}).items() if vcols else ()):
-                tcol = next((c.name for c in t.columns if c.name not in vcols
-                             and any(_flat(r.get(c.name)) == cell for r in t.records)), None)
+                tcol = sinfo.get("names") if sinfo.get("names") in ev_of else None
                 if not tcol:
                     continue
                 sub = [(rid, r) for rid, r in zip(row_ids, t.records) if _flat(r.get(tcol)) == cell]
                 evd = column_evidence_rows(sub, vcols, by)
-                g = gt_traits(*evd[:3])
+                g = gt_traits(*evd)
                 if not g:
                     continue
                 want, why = unit_key(g, evd[3], [cell])
                 if want is None:
                     DROPPED["units: GT traits with different units, none named like the cell"] += 1
+                    continue
+                if not sub:
                     continue
                 unit_answers(u, want, f"{p} t{k} cell '{cell}'", why)
         # decoder: every coded cell of the key that the run decoded
