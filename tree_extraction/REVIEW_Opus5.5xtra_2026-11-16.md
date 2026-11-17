@@ -177,6 +177,8 @@ Each fix is measured by rerunning the audit, which takes minutes.
 
 **Verdict: Confirm, at Fable's priority** (your decision, 2026-11-17). I first proposed lowering it, because the audit shows no cost on tuning. That misses the point. The tuning papers are exactly where copied examples would not show a cost, since the examples come from them, so the audit cannot clear them. Wording copied from the dataset is the overfitting the project means to prevent, whether or not today's scores reveal it. The decoder notes still apply: rewording a tested question moves results by itself. So the rewrite is done one node at a time, old against new, on the synthetic suite and the decision keys.
 
+**Scope** (your decision, 2026-11-17): trait data for any organism group. New wording is generic to organisms, and its examples are made up (invented species names, traits of other groups) and checked against every paper before use. The first rewrite, of the base column tree, is in `src/v24/prompt_variants.py`, and its old-against-new test is `src/v24/prompt_ab.py`.
+
 ## 8. Viza2023 and the category tables
 
 **Fable said.** Viza2023's habitat and body-size tables are categories of a trait with fuzzy scores. We write 3,192 rows, zeros included, and score 0. The key table S3 is itself read as data. Three attempts asked one question for four decisions; the template mapping should be a separate policy.
