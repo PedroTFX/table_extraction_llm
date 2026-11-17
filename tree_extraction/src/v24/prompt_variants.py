@@ -24,7 +24,7 @@ TABLE_KIND = {
         "specimens": "One individual per row: a single collected, observed or measured individual, with the values "
                      "recorded on it. Several rows can belong to the same species.",
         "long_format": "One characteristic per row (a long layout): one column names the characteristic (its cells "
-                       "read, for example, 'stem height', 'leaf width') and other columns give its value; the "
+                       "read, for example, 'frond length', 'leaf width') and other columns give its value; the "
                        "organism repeats over several rows, or is named in the caption or the header.",
         "counts": "Counts per row: how many individuals of an organism were found at a site, in a sample, on a date "
                   "or under a treatment (abundance, occurrence, presence at sites).",
@@ -161,12 +161,12 @@ NODES = {
                     "say?",
         "options": {
             "header_names_property": {
-                "description": "The header is the NAME of one characteristic ('Stem height (cm)', 'Diet', 'Broods per "
+                "description": "The header is the NAME of one characteristic ('Frond length (cm)', 'Diet', 'Broods per "
                                "year') and the cells are its values.",
                 "field": "measurementType"},
             "cells_name_property": {
                 "description": "The header is a general word ('Trait', 'Variable', 'Character') and the cells are the "
-                               "NAMES of characteristics, changing from row to row ('stem height', 'diet').",
+                               "NAMES of characteristics, changing from row to row ('frond length', 'nest material').",
                 "field": "measurementType"},
             "cells_are_values": {
                 "description": "The header is general or only a statistic ('Value', 'Measurement', 'Mean ± SD', "
@@ -238,7 +238,7 @@ NODES = {
                 "description": "The cells are WORDS naming which statistic each row's value is ('mean', 'SD', 'SE').",
                 "field": "measurementStatistic"},
             "property_spread": {
-                "description": "The header names a characteristic AND a statistic of it ('Stem height SD', 'Leaf "
+                "description": "The header names a characteristic AND a statistic of it ('Frond length SD', 'Leaf "
                                "width range'): the cells are values of that characteristic.",
                 "field": "measurementType"},
             "sample_size": {
@@ -288,6 +288,6 @@ VARIANTS.update({f"node:{k}": ("node", (k, v)) for k, v in NODES.items()})
 
 # the made-up examples, checked against every paper (prompt_ab.py --check)
 EXAMPLES = ["Velora brevis", "Velora sp", "Velora", "Tamnidae", "ORSIFORMES", "Halvorsen", "Duprat", "EVERGREEN", "fledgling",
-            "shaded slope", "Mar-Jun", "Rk/Sd", "Vel.bre", "Q4", "stem height", "leaf width", "Dormant stage",
-            "Breeding months", "Broods per year", "Stem height SD", "Leaf width range", "Fledglings Mean", "dial gauge",
+            "shaded slope", "Mar-Jun", "Rk/Sd", "Vel.bre", "Q4", "frond length", "leaf width", "Dormant stage",
+            "Breeding months", "Broods per year", "Frond length SD", "Leaf width range", "Fledglings Mean", "dial gauge",
             "water displacement", "mist net", "quadrat survey", "Halvorsen et al. 1997"]
