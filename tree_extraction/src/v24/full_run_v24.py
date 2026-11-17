@@ -1047,8 +1047,12 @@ def stage_v18_flags(papers):
 
 V24 = _paths.OUTPUT / "full_run_v24"
 V22, V23 = _paths.OUTPUT / "full_run_v22", _paths.OUTPUT / "full_run_v23"
-ALL_LAYERS = ("units", "account", "relevance", "rowlabel", "legend")
-LAYERS = tuple(x for x in ALL_LAYERS
+ALL_LAYERS = ("units", "account", "relevance", "rowlabel")
+# 'legend' (legend_check.py) is off: on tuning it lost right decodes (Teder2020 0.984 -> 0.788, Guariento2020
+# 0.795 -> 0.621, Wallon2024 0.377 -> 0.230; the right passage was not among those offered, or the quote showed
+# another part of the passage). V24_LAYERS=legend still assembles it alone.
+OPTIONAL_LAYERS = ("legend",)
+LAYERS = tuple(x for x in ALL_LAYERS + OPTIONAL_LAYERS
                if x in (os.environ.get("V24_LAYERS") or ",".join(ALL_LAYERS)).replace("+", ",").split(","))
 BASE = dict(decisions=True, structure=True, kind=True, sections=True, parts=True, subjects=True, listed=True,
             dups=True, yesno=True)
@@ -1397,7 +1401,7 @@ def det_compare(papers, prev, out, old, new, name):
 
 OUT = V24 if LAYERS == ALL_LAYERS else _paths.OUTPUT / ("full_run_v24_" + "+".join(LAYERS))
 PREV = V18
-ON = {x: x in LAYERS for x in ALL_LAYERS}
+ON = {x: x in LAYERS for x in ALL_LAYERS + OPTIONAL_LAYERS}
 NAME = "v24" if LAYERS == ALL_LAYERS else "v24 " + "+".join(LAYERS)
 
 

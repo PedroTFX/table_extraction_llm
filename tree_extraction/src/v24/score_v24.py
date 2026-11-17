@@ -21,8 +21,9 @@ import _paths
 import evaluate as ev
 
 ev.ASSESS_MISS_SEVERITY = False
-ALL_LAYERS = ("units", "account", "relevance", "rowlabel", "legend")
-LAYERS = tuple(x for x in ALL_LAYERS
+ALL_LAYERS = ("units", "account", "relevance", "rowlabel")
+OPTIONAL_LAYERS = ("legend",)
+LAYERS = tuple(x for x in ALL_LAYERS + OPTIONAL_LAYERS
                if x in (os.environ.get("V24_LAYERS") or ",".join(ALL_LAYERS)).replace("+", ",").split(","))
 TAG = "all" if LAYERS == ALL_LAYERS else "+".join(LAYERS)
 V18 = _paths.OUTPUT / "full_run_v18"
