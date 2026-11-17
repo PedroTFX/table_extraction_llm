@@ -161,7 +161,7 @@ NODES = {
                     "say?",
         "options": {
             "header_names_property": {
-                "description": "The header is the NAME of one characteristic ('Frond length (cm)', 'Diet', 'Broods per "
+                "description": "The header is the NAME of one characteristic ('Frond length (cm)', 'Nest material', 'Broods per "
                                "year') and the cells are its values.",
                 "field": "measurementType"},
             "cells_name_property": {
