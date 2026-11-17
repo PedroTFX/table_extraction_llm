@@ -47,13 +47,15 @@ BRACKET = re.compile(r"[\(\[]\s*([^()\[\]]{1,24}?)\s*[\)\]]")
 COMMA = re.compile(r",\s*([^,]{1,10})\s*$")
 COPY = re.compile(r"\s#\d+$")
 # unit words looked for in the text around a table only (a header's or a legend's bracket is asked whatever it holds)
-UNIT_WORD = (r"(?:[µμu]m|mm|cm|km|nm|m|mg|µg|μg|kg|g|ml|µl|μl|l|mm²|mm2|mm³|mm3|cm²|cm2|m²|°C|ºC|%|s|sec|min|h|hrs?|"
-             r"days?|weeks?|months?|years?|millimet(?:re|er)s?|micromet(?:re|er)s?|microns?|centimet(?:re|er)s?|"
-             r"milligrams?|grams?|seconds?|minutes?|hours?)")
-TEXT_UNIT = re.compile(r"(?:\(\s*|\bin\s+|\bas\s+)(" + UNIT_WORD + r")(?![\w²³])", re.I)
+# abbreviations are matched case-sensitively ('M' is a mean, not metres: Oliveira2022 'Traits LEG M' was given 'M'
+# from its caption, found by the calibration audit 2026-11-17); spelled-out words in any case
+UNIT_WORD = (r"(?:(?i:days?|weeks?|months?|years?|millimet(?:re|er)s?|micromet(?:re|er)s?|microns?|centimet(?:re|er)s?|"
+             r"milligrams?|grams?|seconds?|minutes?|hours?)|"
+             r"[µμu]m|mm|cm|km|nm|m|mg|µg|μg|kg|g|ml|mL|µl|μl|µL|μL|l|mm²|mm2|mm³|mm3|cm²|cm2|m²|°C|ºC|%|s|sec|min|h|hrs?)")
+TEXT_UNIT = re.compile(r"(?:\(\s*|\b[Ii]n\s+|\b[Aa]s\s+)(" + UNIT_WORD + r")(?![\w²³])")
 # v24, the methods text (plans/01_units.md, 'not in v23'): a unit word after a number or a preposition, in a sentence
 # that says something was measured (generic words only)
-METHOD_UNIT = re.compile(r"(?:\d\s*|\b(?:in|to|of|nearest|as)\s+)(" + UNIT_WORD + r")(?![\w²³])", re.I)
+METHOD_UNIT = re.compile(r"(?:\d\s*|\b(?i:in|to|of|nearest|as)\s+)(" + UNIT_WORD + r")(?![\w²³])")
 MEASURED = re.compile(r"measur|accura|precisi|nearest|calip|microscop|micromet|ocular|balance|weigh", re.I)
 TAGS = re.compile(r"<[^>]+>")              # v24: markup inside a header ('mg/mm<sup>2</sup>' is 'mg/mm2')
 WHERE = {"header": "is printed in the column's header",
@@ -270,8 +272,10 @@ def cell_unit(ask, t, vcol, shown, cell, cats, text, methods, rec=None, rows=Non
     return rec
 
 
-PASS = 3          # v24 pass 2: long-table cells get the legend, every column and cell the methods text; markup ignored
+PASS = 4          # v24 pass 2: long-table cells get the legend, every column and cell the methods text; markup ignored
                   # pass 3: legend rows read by layout (legend_rows)
+                  # pass 4: unit words matched case-sensitively; a unit from the text or the methods that the words no
+                  # longer offer is asked again (2026-11-17, the calibration audit)
 
 
 def run(run_dir, papers, write_names=True):
@@ -299,11 +303,25 @@ def run(run_dir, papers, write_names=True):
         md = None
         res = {"columns": {}, "cells": {}, "pass": PASS, "methods": methods}
 
-        def again(r):
-            """An earlier record: kept when it has a unit, else the base for the questions it lacks."""
-            if r and r.get("unit"):
+        def stale(r, text):
+            """A unit taken from the text or the methods that the current unit words no longer offer (pass 4)."""
+            if not (r and r.get("unit") and r.get("source") in ("text", "methods")):
+                return False
+            offered = {u for u, _w in methods} | {u for part in text for u, _w in text_units(part)}
+            return r["unit"] not in offered
+
+        def kept(r, text):
+            return bool(r and r.get("unit")) and not stale(r, text)
+
+        def again(r, text):
+            """An earlier record without a unit: the base for the questions it lacks. A stale unit's text and methods
+            questions are dropped, so they are asked again from the current candidates."""
+            if not r:
                 return None
-            return {**r, "asked": list(r.get("asked") or [])} if r else None
+            if stale(r, text):
+                return {"asked": [a for a in r.get("asked") or [] if a.get("source") not in ("text", "methods")],
+                        "unit": None, "source": None}
+            return {**r, "asked": list(r.get("asked") or [])}
 
         for t, fields, _o, _x in fr.plan(p, head):
             names_col = [c for c in t.columns if fields.get(c.name) == "measurementType"]
@@ -313,19 +331,17 @@ def run(run_dir, papers, write_names=True):
                 vals = [_flat(r.get(vals_col[0].name)) for r in t.records]
                 if not numeric(vals):
                     continue
-                text = None
+                md = md or v3.md_tables(p)
+                text = nps.around(t, md)
                 for cell in dict.fromkeys(_flat(r.get(tcol.name)) for r in t.records):
                     if not cell or cell in res["cells"]:
                         continue
                     prev = old["cells"].get(cell)
-                    if prev and prev.get("unit"):
+                    if kept(prev, text):
                         res["cells"][cell] = prev
                         continue
-                    if text is None:
-                        md = md or v3.md_tables(p)
-                        text = nps.around(t, md)
                     shown = [_flat(r.get(vals_col[0].name)) for r in t.records if _flat(r.get(tcol.name)) == cell]
-                    base = again(prev)
+                    base = again(prev, text)
                     n0 = len((base or {}).get("asked") or [])
                     rec = cell_unit(ask, t, vals_col[0].name, shown, cell, cats, text, methods, base, rows)
                     n_q += len(rec["asked"]) - n0
@@ -342,16 +358,16 @@ def run(run_dir, papers, write_names=True):
                 vals = list(dict.fromkeys(_flat(r.get(col.name)) for r in t.records if _flat(r.get(col.name))))
                 if key in res["columns"] or not numeric(vals):
                     continue
-                prev = old["columns"].get(key)
-                if prev and prev.get("unit"):
-                    res["columns"][key] = prev
-                    continue
                 if text is None:
                     md = md or v3.md_tables(p)
                     text = nps.around(t, md)
+                prev = old["columns"].get(key)
+                if kept(prev, text):
+                    res["columns"][key] = prev
+                    continue
                 parts = parts_of.get(col.name) or [("name", col.name)]
                 code = nps.show(next((x for r, x in parts if r == "name"), col.name))
-                base = again(prev)
+                base = again(prev, text)
                 n0 = len((base or {}).get("asked") or [])
                 rec = column_unit(ask, t, col, vals, parts, code, cats, text, seen, methods, base, rows)
                 n_q += sum(not a.get("reused") for a in rec["asked"][n0:])

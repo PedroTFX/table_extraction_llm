@@ -57,8 +57,20 @@ def words(s):
 
 
 def same_unit(a, b):
-    k = lambda s: re.sub(r"[\s.]", "", str(s or "").lower().replace("μ", "µ").replace("um", "µm"))
+    def k(s):
+        s = str(s or "").lower().replace("μ", "µ").replace("²", "2").replace("³", "3")
+        s = re.sub(r"[\s.]", "", s)
+        return re.sub(r"(?<=[a-z]{3})s$", "", s)               # 'days' = 'day'
     return bool(a) and k(a) == k(b)
+
+
+def same_term(a, b):
+    """The decoded term against the key's: equal words, one inside the other, or close (the key keeps the GT's
+    typos: 'highly eussocial')."""
+    import difflib
+    x, y = words(a), words(b)
+    return bool(x) and (x == y or (len(y) > 3 and (x in y or y in x))
+                        or difflib.SequenceMatcher(None, x, y).ratio() >= 0.85)
 
 
 def chosen(probs):
@@ -134,7 +146,9 @@ def main():
                 add("Q-KIND (table kind)", pr.get(ch), ch == "traits", f"{p} t{k}: {ch}")
             # Q-ROW
             d = struct.get(str(k))
-            if gt_table and d and d.get("row"):
+            several = len({gt.match_id(r.get(h)) for h, (L, e) in labels.items()
+                           if L == "verbatimIdentification" and "GT species" in e for r in t.records} - {None}) >= 2
+            if gt_table and several and d and d.get("row"):          # one-species tables: rows are not organisms
                 want = "record" if any(L == "measurementValue" for L in lab.values()) else "wide"
                 ch, pr = d["row"]["choice"], d["row"]["probs"]
                 add("Q-ROW (structure)", pr.get(ch), ch == want, f"{p} t{k}: {ch} (GT {want})")
@@ -144,8 +158,9 @@ def main():
             for h, a in (d.get("kinds") or {}).items():
                 if a.get("choice") == "part" or h not in lab:
                     continue
+                names = a.get("choice") in ("species", "higher") if h in ids else a.get("choice") == "species"
                 add("organism column Q-KIND", (a.get("probs") or {}).get(a.get("choice")),
-                    (a.get("choice") == "species") == (h in ids), f"{p} t{k} '{h}': {a.get('choice')}")
+                    names == (h in ids), f"{p} t{k} '{h}': {a.get('choice')}")   # a genus column names GT genera
             # relevance Q-COL on the columns the GT draws on
             for ck, a in (relev.get("columns") or {}).items():
                 kk, h = ck.split("|", 1)
@@ -173,13 +188,15 @@ def main():
                 want = got.most_common(1)[0][0]
                 for a in u.get("asked") or []:
                     pr = a.get("probs") or {}
-                    q = f"units: {a.get('source')} candidate"
+                    q = f"units: {a.get('source')} candidate, " + ("said: the unit" if a.get("unit") else "said: not the unit")
                     right = bool(a.get("unit")) == same_unit(a.get("part"), want)
                     add(q, pr.get(a.get("choice")), right, f"{p} t{k} '{h}': '{a.get('part')}' -> {a.get('choice')} (GT '{want}')")
         # decoder: every coded cell of the key that the run decoded
         for trait, e in (key.get(p) or {}).items():
             r = dec.get(f"{e['table']}:{e['col']}") or {}
             for cell, want in (e.get("coded") or {}).items():
+                if "binary convention" in str((e.get("where") or {}).get(cell, "")):
+                    continue                                   # 0 / 1 -> No / Yes is the GT's, not printed
                 c = (r.get("cells") or {}).get(cell)
                 if not c:
                     continue
@@ -187,7 +204,7 @@ def main():
                 if not ps:
                     continue
                 term = c.get("term") or cell
-                add("decoder (weakest of QK / QV / QB)", min(ps), words(term) == words(want),
+                add("decoder (weakest of QK / QV / QB)", min(ps), same_term(term, want),
                     f"{p} '{trait}': '{cell}' -> '{term}' (key '{want}')")
 
     L = [f"Calibration audit, full_run_v24 answers on {n_papers} tuning papers (dev + held_a). Bins by the probability of "
@@ -196,6 +213,8 @@ def main():
     for q in sorted(rec):
         xs = rec[q]
         L.append(f"{q}: {len(xs)} answers")
+        if "does not use" in q:
+            L.append("    (no key: the GT may simply not annotate these columns; listed for scale, not calibration)")
         L.append(f"    {'p':>11s} {'n':>6s} {'right':>7s}")
         js[q] = []
         for lo, hi in BINS:
