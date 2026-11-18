@@ -179,14 +179,14 @@ def gather(paras, header, values):
 ORGANISE = """Below are passages from a scientific paper: prose paragraphs, footnotes of tables, and small tables (cells separated by ' | ').
 
 Find every LEGEND ENTRY: a place where the paper says what a short code, abbreviation, letter, symbol or number stands for when it classifies species or samples into categories. Examples of how papers write them:
-  "solitary (SO), primitively eusocial (P_E)"   "G = ground nesting"   "1, hundreds; 2, thousands"   a table row "W | wood"   "(0) absent, (1) present"
+  "mat-forming (MF), cushion-forming (CF)"   "R = rock ledges"   "1, tens; 2, hundreds"   a table row "Lc | lichen"   "(0) absent, (1) present"
 
 For each entry give:
 - variable: the trait, characteristic or table column the codes classify, in the paper's own words ("" if the passage does not say)
 - code: the code exactly as printed
 - term: what the code stands for, COPIED EXACTLY from the passage — no paraphrase, no added or changed words, the paper's spelling
 
-Include only entries the passages actually print. One item per code; the same code under two variables is two items. Ignore abbreviations of statistics, methods or units (SD, ANOVA, mm), and definitions of ordinary words ("Hygrophilous: preferring moist places" explains a word; it is not a code).
+Include only entries the passages actually print. One item per code; the same code under two variables is two items. Ignore abbreviations of statistics, methods or units (SD, ANOVA, mm), and definitions of ordinary words ("Saxicolous: growing on rocks" explains a word; it is not a code).
 
 Passages:
 {passages}

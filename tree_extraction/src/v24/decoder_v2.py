@@ -236,9 +236,9 @@ def _chat(prompt, schema, field, timeout=900):
 LABELS = """Each numbered line is a legend entry from a scientific paper: a code and the printed words the paper gives for it.
 
 For each entry, give the category's NAME: the shortest part of the printed words that names the category, copied exactly. Leave out explanations, examples and remarks (in brackets, after a colon or comma, or around the name such as "species that ..."). If the printed words are already just a name, give them unchanged.
-  "SO" = "solitary species nesting alone"      -> "solitary"
-  "2" = "thousands of workers per colony"       -> "thousands"
-  "P" = "polyphagous"                          -> "polyphagous"
+  "MF" = "mat-forming species spreading by runners" -> "mat-forming"
+  "2" = "tens of fruits per stem"                    -> "tens"
+  "P" = "planktonic"                                 -> "planktonic"
 
 Entries:
 {entries}
@@ -252,7 +252,7 @@ LABELS_SCHEMA = {"type": "object", "required": ["labels"],
 
 UNCODED = """Below are passages from a scientific paper: prose paragraphs, footnotes of tables, and small tables (cells separated by ' | ').
 
-List the CATEGORIES the passages name for a trait WITHOUT giving them any code, abbreviation or number — for example "pollen specialization (oligolectic, polylectic)" names two categories, 'oligolectic' and 'polylectic', of 'pollen specialization'; a table row "Ground nesting | Majority of species nest in the soil" names the category 'Ground nesting'.
+List the CATEGORIES the passages name for a trait WITHOUT giving them any code, abbreviation or number — for example "growth habit (mat-forming, cushion-forming)" names two categories, 'mat-forming' and 'cushion-forming', of 'growth habit'; a table row "Ledge roosting | Most species roost on rock ledges" names the category 'Ledge roosting'.
 
 For each category give:
 - variable: the trait it belongs to, in the paper's words ("" if not said)

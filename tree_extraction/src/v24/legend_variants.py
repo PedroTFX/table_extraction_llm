@@ -10,13 +10,20 @@ Only the examples change: each keeps the shape it teaches (code in brackets, 'co
 row, a defined word; a name with an explanation, a number, a bare name) with made-up content from plants, lichens
 and rock habitats. Every new phrase was checked against the 271 papers (109, grit, Jakub): none prints it. The texts
 are built from the current prompts by replacing the examples, so everything else stays word for word.
+
+Adopted 2026-11-18 (the user): decoder.py and decoder_v2.py now carry these examples (legend_ab SCORE.txt, tuning:
+captured rows 89.0% -> 96.2%, names 76.2% -> 83.6%; the one pair lost, Kratschmer2019 'G', was the copied
+'G = ground nesting'). The texts here then equal the modules' own; the old ones are in git before that commit.
 """
 import decoder as v1
 import decoder_v2 as v2
 
 
 def _swap(text, pairs):
+    """Old examples replaced by new; a prompt that already carries the new ones (adopted 2026-11-18) is kept."""
     for old, new in pairs:
+        if text.count(new) == 1 and old not in text:
+            continue
         assert text.count(old) == 1, f"example not found once: {old[:60]}"
         text = text.replace(old, new)
     return text
@@ -38,7 +45,7 @@ def _labels():
            '"P" =': '  "P" = "planktonic"                                 -> "planktonic"'}
     out, hit = [], set()
     for line in lines:
-        k = next((k for k in new if line.strip().startswith(k)), None)
+        k = next((k for k in new if line.strip().startswith(k) or line == new[k]), None)
         out.append(new[k] if k else line)
         if k:
             hit.add(k)
