@@ -44,8 +44,8 @@ TREE = {
                  ('"what": "legs", "value": "yellow"', '"what": "foot", "value": "pale"'),
                  ('"what": "tibiae", "value": "spined"', '"what": "lip", "value": "toothed"')],
     "ITEM": [('"[P1#0] 2♂, 1♀, Mount Kora, forest edge, 1200 m, 12.V.2015, J. Smith leg."',
-              '"[P1#0] 2♂, 1♀, Mount Velan, lava field, 1890 m, 14.VI.2011, A. Brook leg."'),
-             ('"value": "1200"', '"value": "1890"'),
+              '"[P1#0] 2♂, 1♀, Mount Velan, lava field, 2140 m, 14.VI.2011, A. Brook leg."'),
+             ('"value": "1200"', '"value": "2140"'),
              ('"value": "Mount Kora"', '"value": "Mount Velan"'),
              ('"value": "forest edge"', '"value": "lava field"')],
 }
@@ -56,7 +56,7 @@ EXAMPLES = ["V. brevis", "Velora brevis", "V. tenuis", "Leaf blade", "Shell aper
             "AH, aperture height", "aperture height", "CD: 4.6", "4.6–5.3", "FW: 2.47", "2.47 mm", "frond length 31 mm",
             "length of shell across the rim", "length of shell", "width of frond when fully unfurled", "width of frond",
             "cap diameter of the largest specimen", "Shell brown", "brown, glossy", "foot pale", "lip is toothed",
-            "Mount Velan", "lava field", "1890 m", "14.VI.2011", "A. Brook"]
+            "Mount Velan", "lava field", "2140 m", "14.VI.2011", "A. Brook"]
 
 
 def _swap(text, pairs, name):
