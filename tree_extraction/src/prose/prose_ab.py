@@ -9,13 +9,14 @@ rows are judged by reading, not by the scorer's F1 (the user, 2026-11-03).
 import collections
 import csv
 import json
+import os
 import sys
 
 import _paths
 
 OUT = _paths.OUTPUT / "prose_ab"
 SET = _paths.SUB / "output" / "eval_split" / "prose_set.json"
-A, B = "t2o", "t2n"
+A, B = "t2o", os.environ.get("PROSE_AB_B", "t2n")     # PROSE_AB_B=t2i: the insect revision -> COMPARE_t2i.txt
 
 
 def rows(variant, p):
@@ -34,7 +35,7 @@ def key(r):
 def main(argv):
     s = json.loads(SET.read_text(encoding="utf-8"))["109"]
     papers = argv or s["dev"] + s["held_a"]
-    L = [f"Prose rows: {A} (the old examples) against {B} (made-up examples), t2 both, one session.", ""]
+    L = [f"Prose rows: {A} (the old examples) against {B} (made-up examples), t2 both, run afresh.", ""]
     for p in papers:
         ra, rb = rows(A, p), rows(B, p)
         if ra is None or rb is None:
@@ -56,7 +57,7 @@ def main(argv):
                          f"{' x' + str(n) if n > 1 else ''}  [{src.get(k, '')}]")
         L.append("")
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "COMPARE.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
+    (OUT / ("COMPARE.txt" if B == "t2n" else f"COMPARE_{B}.txt")).write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L[:2] + [x for x in L if x.startswith("==") or x.startswith("   species")]))
 
 

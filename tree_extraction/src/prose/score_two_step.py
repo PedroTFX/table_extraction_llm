@@ -12,22 +12,29 @@ import collections
 import csv
 import filecmp
 import json
+import os
 import re
 import shutil
 import sys
+from pathlib import Path
 
 import _paths
 import evaluate as ev
 
 ev.ASSESS_MISS_SEVERITY = False                  # asks gemma once per missed row: hours, and not part of the score
-V18 = _paths.OUTPUT / "full_run_v18"
-RES = _paths.OUTPUT / "rescore_v18"
+# TREE_TABLES=v24 (as two_step.py): the table rows of full_run_v24, scored into rescore_v24. SCORE_BASELINE: the summary.csv
+# that lists the papers and holds the old baseline (default: the table run's own), e.g. the main root's full_run_v18 one
+# when a fresh root is scored (2026-11-18: the adopted prompts run from scratch on both sets)
+TABLES = os.environ.get("TREE_TABLES", "v18")
+V18 = _paths.OUTPUT / f"full_run_{TABLES}"
+RES = _paths.OUTPUT / f"rescore_{TABLES}"
+BASELINE = Path(os.environ.get("SCORE_BASELINE") or V18 / "summary.csv")
 TWO = _paths.OUTPUT / "two_step"
 ASSIGN = json.loads((_paths.SUB / "output/eval_split/split_v15.json").read_text(encoding="utf-8"))["assign"]
 
 
 def base():
-    with open(V18 / "summary.csv", encoding="utf-8") as fh:
+    with open(BASELINE, encoding="utf-8") as fh:
         return {r["paper"]: r for r in csv.DictReader(fh)}
 
 
@@ -84,7 +91,7 @@ def results():
     for p in b:
         groups[ASSIGN.get(p, "grit-only")].append(p)
     print(f"old baseline, summary.csv: mean F1 {sum(float(r['f1'] or 0) for r in b.values()) / max(1, len(b)):.3f}, {len(b)} papers")
-    for label, root in (("tables only (v18 rows, current scorer and GT)", RES), ("tables + prose (two_step)", TWO)):
+    for label, root in ((f"tables only ({TABLES} rows, current scorer and GT)", RES), ("tables + prose (two_step)", TWO)):
         d = read(root)
         print(label + f"; reports {sum(x['ok'] for x in d.values())} of {len(d)}")
         print(line("all", list(b), d))

@@ -50,6 +50,60 @@ TREE = {
              ('"value": "forest edge"', '"value": "lava field"')],
 }
 
+# t2i, the user's revision of the above (2026-11-18): the prose route reads insect traits and phenotypes only, so leaf
+# blades, shells and fins "could lead to interesting errors"; the examples are made up but insect-like, and where a list
+# of parts would do (LABEL, METHOD) a description stands instead. t2n's test also showed three kinds of new errors, each
+# answered here: places and collectors read as habitat (ITEM: a two-part place, a plain habitat), "Body" read as an
+# abbreviation of "brownish red" (ABBREV: a described part is not an abbreviation), label and part split apart (LABEL).
+READER_I = {
+    "RANK": READER["RANK"],
+    "LABEL": [("(for example 'Elytra', 'Head', 'Male genitalia', 'Pronotum', 'Leg')",
+               "(a body region, an organ or an appendage, named by the label as the paper prints it; the paragraph then "
+               "describes that part or the smaller structures that belong to it)")],
+    "METHOD": [("(for example 'along the midline', 'at the widest point', 'of the holotype', 'in dorsal view')",
+                "(a direction, a position, a view, or which specimen was measured, such as 'along the <axis>', "
+                "'at the <point>', 'in <direction> view', 'of the <specimen>')"),
+               ("(for example 'in the aedeagus', 'on the fore wing', 'of the elytra')",
+                "(a phrase that names a body part, such as 'on the <part>' or 'of the <part>')")],
+    "HEADS": READER["HEADS"],
+    "NAMES_ONLY": READER["NAMES_ONLY"],
+    "PLACES": READER["PLACES"],
+    "ABBREV": [('such as "BL = body length", "HW (head width)", "abbreviations used: FL, forebody length"',
+                'such as "TCL = tarsal claw length", "SW (scutum width)", "abbreviations used: GL, gena length". A word '
+                'followed by what is said about it defines nothing ("Scutum dark brown, matt" is a description, not an '
+                'abbreviation)')],
+    "FIELD": [("(for example 'BL: 7.8–8.6 mm, HW: 1.72 mm', 'wingspan 14 mm')",
+               "(for example 'SW: 2.14–2.39 mm, GL: 1.47 mm', 'hind femur length 3.9 mm')")],
+    "NAMES": [('"length of head along the midline"', '"length of scutellum along its axis"'),
+              ('trait "length of head", method "along the midline"', 'trait "length of scutellum", method "along its axis"'),
+              ('"width of pronotum at the widest point"', '"width of gena below the eye"'),
+              ('trait "width of pronotum", method "at the widest point"', 'trait "width of gena", method "below the eye"'),
+              ('"wingspan of the holotype"', '"fore wing length of the smallest paratype"'),
+              ('trait "wingspan", method "of the holotype"',
+               'trait "fore wing length", method "of the smallest paratype"')],
+}
+
+TREE_I = {
+    "DESCRIBE": [('"[P1] Pronotum black, shining; legs yellow. Unlike X. other, the tibiae are spined"',
+                  '"[P1] Scutum dark brown, matt; tarsi pale. Unlike X. other, the claws are bifid"'),
+                 ('"what": "pronotum", "value": "black, shining"', '"what": "scutum", "value": "dark brown, matt"'),
+                 ('"what": "legs", "value": "yellow"', '"what": "tarsi", "value": "pale"'),
+                 ('"what": "tibiae", "value": "spined"', '"what": "claws", "value": "bifid"')],
+    "ITEM": [('"[P1#0] 2♂, 1♀, Mount Kora, forest edge, 1200 m, 12.V.2015, J. Smith leg."',
+              '"[P1#0] 2♂, 1♀, Mount Velan, North Camp, on mossy boulders, 2140 m, 14.VI.2011, A. Brook leg."'),
+             ('"value": "1200"', '"value": "2140"'),
+             ('"value": "Mount Kora"', '"value": "Mount Velan, North Camp"'),
+             ('"value": "forest edge"', '"value": "on mossy boulders"')],
+}
+
+# checked against the 271 papers 2026-11-18 (legend_examples.py): none prints any of these
+EXAMPLES_I = ["TCL = tarsal claw length", "tarsal claw length", "SW (scutum width)", "scutum width", "GL, gena length",
+              "gena length", "SW: 2.14–2.39 mm", "GL: 1.47 mm", "hind femur length 3.9 mm",
+              "length of scutellum along its axis", "along its axis", "width of gena below the eye", "below the eye",
+              "fore wing length of the smallest paratype", "of the smallest paratype", "Scutum dark brown, matt",
+              "dark brown, matt", "tarsi pale", "claws are bifid", "Mount Velan, North Camp", "North Camp",
+              "on mossy boulders"]
+
 EXAMPLES = ["V. brevis", "Velora brevis", "V. tenuis", "Leaf blade", "Shell aperture", "Dorsal fin", "across the rim",
             "when fully unfurled", "of the largest specimen", "in apical view", "on the shell lip", "of the leaf blade",
             "on the dorsal fin", "Heron Ridge", "CD = cap diameter", "cap diameter", "FW (frond width)", "frond width",

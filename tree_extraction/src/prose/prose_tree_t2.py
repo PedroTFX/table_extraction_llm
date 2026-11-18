@@ -139,6 +139,9 @@ SCHEMA ={"type": "object", "required": ["passages"], "properties": {"passages": 
 if "neutral" in pr.FL:                                     # t2n: made-up examples (prose_variants.py)
     import prose_variants as _pv
     _pv.swap_into(globals(), _pv.TREE)
+if "insect" in pr.FL:                                      # t2i: insect-like made-up examples (prose_variants.py)
+    import prose_variants as _pv
+    _pv.swap_into(globals(), _pv.TREE_I)
 
 
 # t6 (2026-11-10): positional lists. Layout only: a sentence that states an order (three or more names joined by '+',
