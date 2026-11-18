@@ -58,32 +58,31 @@ MAX_COLS = 40           # columns asked per table; wider tables are sampled
 TABLE_KIND = {
     "question": "What does each row of this table hold?",
     "options": {
-        "organism_traits": "Each row is one organism (a species, genus or "
-                           "morphospecies) and the columns describe its traits "
-                           "or properties.",
-        "specimens": "Each row is one collected or measured individual (a "
-                     "specimen) with its measurements.",
-        "long_format": "Long table: one column's cells NAME the property "
-                       "measured (body length, thorax width) and other columns "
-                       "hold its values, e.g. one property per row for a "
-                       "species named in the caption or the header.",
-        "counts": "Each row gives how many individuals of an organism were found "
-                  "per site, sample, date or treatment (abundance or occurrence "
-                  "data).",
-        "statistics": "Each row is a result of a statistical test or model "
-                      "(estimates, t, F, p, AIC), not raw data about organisms.",
-        "other": "Study sites, environmental variables, definitions of codes or "
-                 "abbreviations, or anything else.",
+        "organism_traits": "One organism per row: a species or another taxon (a genus, a morphospecies). The other "
+                           "columns either name groups the organism belongs to (its family, its order) or give its "
+                           "characteristics (its measurements, its categories, what it does or where it lives).",
+        "specimens": "One individual per row: a single collected, observed or measured individual, with the values "
+                     "recorded on it. Several rows can belong to the same species.",
+        "long_format": "One characteristic per row (a long layout): one column names the characteristic (its cells "
+                       "read, for example, 'frond length', 'leaf width') and other columns give its value; the "
+                       "organism repeats over several rows, or is named in the caption or the header.",
+        "counts": "Counts per row: how many individuals of an organism were found at a site, in a sample, on a date "
+                  "or under a treatment (abundance, occurrence, presence at sites).",
+        "statistics": "A result of an analysis per row: the output of a statistical test or model (estimates, test "
+                      "statistics, p-values, correlations, information criteria), not values describing organisms.",
+        "other": "Anything else: descriptions of sites or environments, definitions of codes or abbreviations, "
+                 "methods, or lists of names without values.",
     },
 }
 
 ORGANISM_COLUMN = {
-    "question": "Which column names the organism that each row is about, the "
-                "organism the table's other columns describe? Only a column "
-                "whose values are taxon names (Latin species or genus names) "
-                "qualifies.",
-    "none": "No column names it: the whole table is about one organism named "
-            "elsewhere, or its rows are not organisms.",
+    "question": "Which column names the organism that each row is about, the organism the table's other columns "
+                "describe? It is the column whose cells are the scientific names of those organisms: species names, "
+                "or genus names when the organisms are identified only to genus ('Velora brevis', 'Velora sp. 2'). "
+                "A column of their families or orders does not qualify, nor a column naming another organism they "
+                "use, such as a host, a prey or a food plant.",
+    "none": "No column names it: the whole table is about one organism named in the caption or the text, or its "
+            "rows are not organisms (sites, samples, results).",
 }
 
 # --- column level ------------------------------------------------------------------
@@ -101,59 +100,60 @@ NUMERIC_MIN = 0.8        # share of cells that are numbers once peeled
 
 NODES = {
     "cell_shape": {
-        "question": "Column '{h}' (values: {values}).{facts} What do the cells "
-                    "look like?",
+        "question": "Column '{h}' (values: {values}).{facts} What do the cells look like?",
         "options": {
             "latin_binomials": {
-                "description": "Two-word Latin names, a genus and a species "
-                               "('Osmia cornuta', 'Formica sp.', 'Sarcophagidae "
-                               "sp.1').",
-                "next": "organism_name"},
+                "description": "Scientific names of two words: a genus followed by a species epithet or by a "
+                               "placeholder for an unnamed species ('Velora brevis', 'Velora sp.', 'Tamnidae sp. "
+                               "3').",
+                "next": "organism_name",
+            },
             "single_latin_words": {
-                "description": "Single Latin words or group names, often "
-                               "capitalised or in capitals ('Osmia', 'Formicinae', "
-                               "'Pterostichini', COLLETIDAE, DIPTERA).",
-                "next": "is_taxon"},
+                "description": "Single scientific names of one word, often capitalised or in capitals: a genus, or "
+                               "a group above it such as a family or an order ('Velora', 'Tamnidae', 'ORSIFORMES').",
+                "next": "is_taxon",
+            },
             "author_year": {
-                "description": "Person names with a year ('Matthews (1974)', "
-                               "'Linnaeus, 1758'): the author of a name.",
-                "field": "verbatimIdentification"},
+                "description": "The name of a person with a year: who described an organism's name, and when "
+                               "('Halvorsen (1931)', 'Duprat, 1888').",
+                "field": "verbatimIdentification",
+            },
             "everyday_words": {
-                "description": "Ordinary words, categories or phrases, "
-                               "capitalised or not ('POLLENIVOROUS', 'Larva', "
-                               "'Adult', 'solitary', 'leaf litter', 'yes', "
-                               "'May-Aug').",
-                "next": "kind"},
+                "description": "Ordinary words or short phrases, in any case: categories, states, habitats, periods "
+                               "or yes / no ('EVERGREEN', 'fledgling', 'shaded slope', 'yes', 'Mar-Jun').",
+                "next": "kind",
+            },
             "codes": {
-                "description": "Short codes, abbreviations or symbols ('W/S', "
-                               "'Ads.ger', 'A', '+', 'S7').",
-                "next": "kind"},
+                "description": "Short codes, abbreviations or symbols whose meaning is given elsewhere ('Rk/Sd', "
+                               "'Vel.bre', 'B', '+', 'Q4').",
+                "next": "kind",
+            },
             "numbers_with_text": {
-                "description": "Numbers with extra text around them: units, a "
-                               "spread, a range, a citation in brackets.",
-                "next": "kind"},
+                "description": "Numbers with something around them: a unit, a spread, a range or a reference in "
+                               "brackets ('12.4 cm', '3.1 ± 0.2', '4–7', '0.8 [12]').",
+                "next": "kind",
+            },
         },
     },
     "is_taxon": {
-        "question": "Column '{h}' (values: {values}).{facts} Are these NAMES "
-                    "of organisms or taxonomic groups? Test: read a cell as "
-                    "'<the row's organism> has {h} = <cell>'. If that states a "
-                    "fact about the organism, the cells are values of a property, "
-                    "not names.",
+        "question": "Column '{h}' (values: {values}).{facts} Are these the NAMES of organisms or of groups of "
+                    "organisms? Test: read a cell as '<the row's organism> has {h} = <cell>'. If that states a fact "
+                    "about the organism (what it is like or what it does), the cells are values of a "
+                    "characteristic, not names.",
         "options": {
             "yes": {
-                "description": "Yes, each cell names a taxon: a genus, or the "
-                               "family, subfamily, tribe or order the organism "
-                               "belongs to (Latin endings: -idae family, -inae "
-                               "subfamily, -ini tribe, -oidea superfamily, -ptera "
-                               "order), or a host, prey or plant taxon.",
-                "next": "organism_name"},
+                "description": "Yes: each cell names a taxon. The organism's genus, a group it belongs to (a "
+                               "family, an order or another rank, often recognisable by its ending, such as -idae "
+                               "for a family of animals or -aceae for a family of plants), or another organism "
+                               "linked to it such as a host or a prey.",
+                "next": "organism_name",
+            },
             "no": {
-                "description": "No, the cells are values of a property, state or "
-                               "category of the organism (an amount, a guild, a "
-                               "habit, a body structure, a stage, yes/no), even "
-                               "when capitalised or Latin-looking.",
-                "next": "kind"},
+                "description": "No: the cells are values of a characteristic of the organism (a category, a state, "
+                               "an amount, a habit, a part of the body, a stage, yes / no), even when they are "
+                               "capitalised or look Latin.",
+                "next": "kind",
+            },
         },
     },
     "organism_name": {
@@ -161,75 +161,77 @@ NODES = {
         # walk drops 'row_organism' here: a second column cannot be the row's
         # organism (tev1 sent 10 category columns of held-out papers this way).
         "drop_if_organism_column_full": ["row_organism"],
-        "question": "Column '{h}' (values: {values}).{facts} It names organisms. "
-                    "Which ones?",
+        "question": "Column '{h}' (values: {values}).{facts} It names organisms. Which ones?",
         "options": {
             "row_organism": {
-                "description": "The organism the row is about, the one the table's "
-                               "other columns describe: its full name, or one part "
-                               "of a name split over columns (genus, species "
-                               "epithet).",
-                "field": "verbatimIdentification"},
+                "description": "The organism the row is about, the one the other columns describe: its full "
+                               "scientific name, or one part of that name when it is split over columns (the genus "
+                               "in one column, the species epithet in another).",
+                "field": "verbatimIdentification",
+            },
             "higher_rank": {
-                "description": "A higher taxonomic rank of the row's organism "
-                               "(family, subfamily, tribe, order) or the author and "
-                               "year of its name.",
-                "field": "verbatimIdentification"},
+                "description": "A group that the row's own organism belongs to: its family, its order, or another "
+                               "rank above the genus. The organism of every row belongs to the group named in that "
+                               "row's cell, and several rows can share one group. Also the author and year of the "
+                               "organism's name.",
+                "field": "verbatimIdentification",
+            },
             "associated_organism": {
-                "description": "A DIFFERENT organism linked to the row's organism: "
-                               "its host, prey, parasite or parasitoid, food or "
-                               "host plant (or the plant's family), or partner.",
-                "field": "measurementType"},
+                "description": "A DIFFERENT organism, neither the row's organism nor a group it belongs to: one "
+                               "that the row's organism lives on or in, feeds on, carries, is eaten or parasitised "
+                               "by, or depends on (a host, a prey, a food plant, a partner). The cell may give that "
+                               "other organism's own family; it is still a different organism.",
+                "field": "measurementType",
+            },
             "taxon_code": {
-                "description": "A short code or abbreviation standing for the "
-                               "row's organism (e.g. 'Ads.ger'), not its name.",
-                "field": None},
+                "description": "A short code standing for the row's organism instead of its name (for example "
+                               "'Vel.bre' for Velora brevis).",
+                "field": None,
+            },
             "not_a_name": {
-                "description": "Not organism names after all: a property, "
-                               "category, place or code.",
-                "next": "kind"},
+                "description": "Not names of organisms after all: a characteristic, a category, a place or a code.",
+                "next": "kind",
+            },
         },
     },
     "kind": {
-        "question": "Column '{h}' (values: {values}).{facts} What do its cells "
-                    "record?",
+        "question": "Column '{h}' (values: {values}).{facts} What do its cells record?",
         "options": {
             "organism_property": {
-                "description": "A property of the organism itself, what it has, "
-                               "does or where it lives: body size or other "
-                               "measurements, diet, behaviour, sociality, "
-                               "phenology or flight period, voltinism, "
-                               "overwintering stage, nesting, habitat preference, "
-                               "host range, geographic or elevation range. As "
-                               "numbers, categories, yes/no or codes. Still a "
-                               "property when its cells are stages, sexes, months "
-                               "or places, if the header names something about "
-                               "the species ('Overwintering stage' = larva, "
-                               "'Flight period' = May-Aug). Its classification "
-                               "(family, order, tribe) is a name, not a property.",
-                "next": "organism_property"},
+                "description": "A characteristic of the organism itself: what it is like, what it does, or where "
+                               "and when it lives. Measurements of its body or parts, its diet, behaviour, social "
+                               "life or reproduction, its number of generations a year, its season of activity, the "
+                               "stage in which it passes an unfavourable season, the habitats where it lives, "
+                               "breeds or shelters, the hosts or foods it uses, the geographic or altitudinal range "
+                               "it is known from. As numbers, categories, yes / no or codes. Still a characteristic "
+                               "when the cells are stages, sexes, months or places, if the header names something "
+                               "about the organism ('Dormant stage' = seed, 'Breeding months' = Mar-Jun). Not a "
+                               "characteristic: whether, or how often, the organism was found at the study's own "
+                               "sites, plots, dates or samples (that is about the sampling), and its classification "
+                               "(family, order), which is a name.",
+                "next": "organism_property",
+            },
             "record_context": {
-                "description": "About the recorded individuals or the sampling, "
-                               "not the species' biology: the sex, life stage or "
-                               "caste of the specimens measured; the place, "
-                               "coordinates or date of sampling; the conditions of "
-                               "the site; how specimens were sampled, treated or "
-                               "measured.",
-                "next": "record_context"},
+                "description": "About the recorded individuals or the sampling, not about the organism's biology: "
+                               "the sex, life stage or social role of the individuals measured; the place, "
+                               "coordinates or date of sampling; the conditions at the site; how the individuals "
+                               "were collected, treated or measured.",
+                "next": "record_context",
+            },
             "counts_or_statistics": {
-                "description": "About the numbers rather than the organism: how "
-                               "many individuals were found (abundance, number of "
-                               "specimens, frequency, occurrences, totals per "
-                               "site), sample sizes, the unit of the values, a "
-                               "statistic of a property named elsewhere (header "
-                               "'Mean ± SD', 'Median', 'Q1', 'CV'), or test results "
-                               "(estimate, t, F, p, AIC, index).",
-                "next": "counts_or_statistics"},
+                "description": "About the numbers rather than the organism: how many individuals were found, or "
+                               "whether they were found at all, at each of the study's sites, plots, dates or "
+                               "samples (abundance, presence, frequency, occurrences, totals per site), sample "
+                               "sizes, the unit of the values, a statistic of a characteristic named elsewhere (a "
+                               "header such as 'Mean ± SD', 'Median', 'Q1', 'CV'), or results of tests or models "
+                               "(estimates, test statistics, p-values, indices).",
+                "next": "counts_or_statistics",
+            },
             "other": {
-                "description": "Notes or remarks, references or citations, links, "
-                               "record or specimen numbers, row numbers, glossary "
-                               "terms or their definitions, or anything else.",
-                "next": "other"},
+                "description": "Notes or remarks, references to publications, links, record or specimen numbers, "
+                               "row numbers, glossary terms or their definitions, or anything else.",
+                "next": "other",
+            },
         },
     },
     "organism_property": {
@@ -239,146 +241,153 @@ NODES = {
         # 'cells_are_values' for every wide trait column of Osorio.)
         "only_if_table_kind": ["long_format"],
         "otherwise": "measurementType",
-        "question": "Column '{h}' (values: {values}) records a property of the "
-                    "organism. What does its HEADER say?",
+        "question": "Column '{h}' (values: {values}) records a characteristic of the organism. What does its HEADER "
+                    "say?",
         "options": {
             "header_names_property": {
-                "description": "The header is the NAME of one property ('Body "
-                               "length (mm)', 'Diet', 'Voltinism') and the cells "
-                               "are its values.",
-                "field": "measurementType"},
+                "description": "The header is the NAME of one characteristic ('Frond length (cm)', 'Nest material', "
+                               "'Broods per year') and the cells are its values.",
+                "field": "measurementType",
+            },
             "cells_name_property": {
-                "description": "The header is generic ('Trait', 'Variable', "
-                               "'Character') and the cells are property NAMES "
-                               "that change from row to row ('body length', "
-                               "'diet').",
-                "field": "measurementType"},
+                "description": "The header is a general word ('Trait', 'Variable', 'Character') and the cells are "
+                               "the NAMES of characteristics, changing from row to row ('frond length', 'nest "
+                               "material').",
+                "field": "measurementType",
+            },
             "cells_are_values": {
-                "description": "The header is generic or only a statistic "
-                               "('Value', 'Measurement', 'Mean ± SD', 'Median') "
-                               "and the cells are values whose property is named "
-                               "in ANOTHER column of the row.",
+                "description": "The header is general or only a statistic ('Value', 'Measurement', 'Mean ± SD', "
+                               "'Median') and the cells are values of a characteristic named in ANOTHER column of "
+                               "the row.",
                 "field": "measurementValue",
-                "tag_from_header": "measurementStatistic"},
+                "tag_from_header": "measurementStatistic",
+            },
         },
     },
     "record_context": {
-        "question": "Column '{h}' (values: {values}) describes the records or the "
-                    "sampling. What exactly?",
+        "question": "Column '{h}' (values: {values}) describes the records or the sampling. What exactly?",
         "options": {
             "sex": {
-                "description": "The sex of the recorded individuals: male, female, "
-                               "both. Not a sex ratio.",
-                "field": "sex"},
+                "description": "The sex of the individuals recorded: male, female, both, or hermaphrodite. Not a "
+                               "ratio of the sexes.",
+                "field": "sex",
+            },
             "life_stage": {
-                "description": "The developmental stage of the recorded "
-                               "individuals: egg, larva, pupa, nymph, adult. Not "
-                               "the stage the species overwinters in.",
-                "field": "lifeStage"},
+                "description": "The developmental stage of the individuals recorded (for example egg, larva, adult, "
+                               "seedling). Not the stage in which the organism passes an unfavourable season, which "
+                               "is a characteristic of the organism.",
+                "field": "lifeStage",
+            },
             "caste": {
-                "description": "The caste of the recorded social insects: worker, "
-                               "queen, soldier, male.",
-                "field": "caste"},
+                "description": "The social role of the individuals recorded, in a species living in colonies with "
+                               "divided roles (for example a reproductive female, a worker, a soldier).",
+                "field": "caste",
+            },
             "sampling_place": {
-                "description": "Where the sampling happened, as a place: country, "
-                               "region, named site, plot or site code, or the "
-                               "habitat that was sampled.",
-                "field": "verbatimLocality"},
+                "description": "Where the sampling happened, as a place: a country, a region, a named site, a plot "
+                               "or site code, or the habitat sampled.",
+                "field": "verbatimLocality",
+            },
             "coordinates": {
-                "description": "Where the sampling happened, as coordinates: "
-                               "latitude/longitude, degrees or decimals.",
-                "field": "verbatimCoordinates"},
+                "description": "Where the sampling happened, as coordinates: latitude and longitude, in degrees or "
+                               "decimals.",
+                "field": "verbatimCoordinates",
+            },
             "sampling_time": {
-                "description": "When the sampling happened: a date, month, year, "
-                               "season or date range.",
-                "field": "verbatimEventDate"},
+                "description": "When the sampling happened: a date, month, year, season or date range.",
+                "field": "verbatimEventDate",
+            },
             "measurement_method": {
-                "description": "How the VALUE was measured: method, instrument, "
-                               "formula (e.g. 'ocular micrometer', 'dry weight').",
-                "field": "measurementMethod"},
+                "description": "How the VALUE was measured: the method, instrument or formula (for example 'dial "
+                               "gauge', 'water displacement').",
+                "field": "measurementMethod",
+            },
             "sampling_protocol": {
-                "description": "How the specimens were COLLECTED: trap type or "
-                               "sampling protocol (e.g. 'pitfall trap', 'sweep "
-                               "net', 'light trap').",
-                "field": "samplingProtocol"},
+                "description": "How the individuals were COLLECTED or observed: the trap, net, transect or survey "
+                               "protocol (for example 'mist net', 'quadrat survey').",
+                "field": "samplingProtocol",
+            },
             "treatment": {
-                "description": "What was done to specimens BEFORE analysis or "
-                               "storage: preserved in ethanol, dried, fixed.",
-                "field": "sampleTreatment"},
+                "description": "What was done to the individuals BEFORE they were measured or stored: preserved, "
+                               "dried, frozen, fixed.",
+                "field": "sampleTreatment",
+            },
             "site_conditions": {
-                "description": "Conditions of the sampling site: temperature, "
-                               "rainfall, vegetation, land use, distance.",
-                "field": None},
+                "description": "Conditions of the sampling site, not of the organism: temperature, rainfall, "
+                               "vegetation, land use, distance.",
+                "field": None,
+            },
         },
     },
     "counts_or_statistics": {
-        "question": "Column '{h}' (values: {values}).{facts} It is about the "
-                    "numbers. Which?",
+        "question": "Column '{h}' (values: {values}).{facts} It is about the numbers. Which?",
         "options": {
             "abundance": {
-                "description": "How many individuals were found per site, "
-                               "sample or date: abundance, number of specimens "
-                               "collected, totals, counts per site.",
-                "field": None},
+                "description": "How many individuals were found per site, sample or date: abundance, number of "
+                               "individuals collected, totals, counts per site.",
+                "field": None,
+            },
             "statistic_header": {
-                "description": "The HEADER names only a statistic, maybe after a "
-                               "group ('Mean ± SD', 'Workers Mean ± SD', 'Median', "
-                               "'Q1', 'CV') and the cells are its values; the "
-                               "property itself is named elsewhere (a trait "
-                               "column, the caption).",
+                "description": "The HEADER names only a statistic, perhaps after a group ('Mean ± SD', 'Fledglings "
+                               "Mean ± SD', 'Median', 'Q1', 'CV'), and the cells are its values; the characteristic "
+                               "itself is named elsewhere (in another column, or in the caption).",
                 "field": "measurementValue",
-                "tag_from_header": "measurementStatistic"},
+                "tag_from_header": "measurementStatistic",
+            },
             "statistic_name": {
-                "description": "The cells are WORDS naming which statistic each "
-                               "row's value is ('mean', 'SD', 'SE').",
-                "field": "measurementStatistic"},
+                "description": "The cells are WORDS naming which statistic each row's value is ('mean', 'SD', 'SE').",
+                "field": "measurementStatistic",
+            },
             "property_spread": {
-                "description": "The header names a property AND a statistic of it "
-                               "('Body length SD', 'Wing length range'): values of "
-                               "that property.",
-                "field": "measurementType"},
+                "description": "The header names a characteristic AND a statistic of it ('Frond length SD', 'Leaf "
+                               "width range'): the cells are values of that characteristic.",
+                "field": "measurementType",
+            },
             "sample_size": {
-                "description": "The size of the sample behind a value: how many "
-                               "individuals, records or occurrences it rests on "
-                               "(n, 'Occurrences'), or a length, area or time "
-                               "sampled.",
-                "field": "sampleSizeValue"},
+                "description": "The size of the sample behind a value: how many individuals, records or occurrences "
+                               "it rests on ('n', 'Occurrences'), or the length, area or time sampled.",
+                "field": "sampleSizeValue",
+            },
             "unit": {
-                "description": "The unit the values are in: mm, mg, %, days.",
-                "field": "measurementUnit"},
+                "description": "The unit the values are in: mm, g, %, days.",
+                "field": "measurementUnit",
+            },
             "test_result": {
-                "description": "Results of a statistical test or model: estimate, "
-                               "t, F, chi-square, p-value, AIC, R2, a diversity or "
-                               "other index.",
-                "field": None},
+                "description": "Results of a statistical test or model: an estimate, a test statistic (t, F, "
+                               "chi-square), a p-value, AIC, R², a diversity or other index.",
+                "field": None,
+            },
         },
     },
     "other": {
         "question": "Column '{h}' (values: {values}). Which of these is it?",
         "options": {
             "remarks": {
-                "description": "Notes or remarks about a record or measurement "
-                               "('specimen damaged', 'estimated').",
-                "field": "measurementRemarks"},
+                "description": "Notes or remarks about a record or a measurement ('damaged', 'estimated').",
+                "field": "measurementRemarks",
+            },
             "references": {
-                "description": "References or citations of other publications "
-                               "('Smith et al. 2005', a DOI).",
-                "field": "associatedReferences"},
+                "description": "References to other publications ('Halvorsen et al. 1997', a DOI).",
+                "field": "associatedReferences",
+            },
             "links": {
                 "description": "Web links (URLs) to external resources.",
-                "field": "externalLink"},
+                "field": "externalLink",
+            },
             "record_ids": {
-                "description": "Identifiers of other records of the same "
-                               "specimens: museum or occurrence numbers.",
-                "field": "associatedOccurrences"},
+                "description": "Identifiers of other records of the same individuals: museum, herbarium or database "
+                               "numbers.",
+                "field": "associatedOccurrences",
+            },
             "taxon_code": {
-                "description": "A short code or abbreviation standing for the "
-                               "row's organism (e.g. 'Ads.ger').",
-                "field": None},
+                "description": "A short code standing for the row's organism instead of its name (for example "
+                               "'Vel.bre').",
+                "field": None,
+            },
             "bookkeeping": {
-                "description": "Row numbers, glossary terms or definitions, or "
-                               "anything else.",
-                "field": None},
+                "description": "Row numbers, glossary terms or their definitions, or anything else.",
+                "field": None,
+            },
         },
     },
 }
@@ -692,8 +701,8 @@ def table_state(table, paper_text, context=(), size=0) -> str:
         heads += f" | ... (+{len(headers) - n_heads} more)"
     grid = "\n".join(" | ".join(_clip(r.get(h, ""), width) for h in shown)
                      for r in table.data_records()[:n_rows])
-    parts = ["A table from a scientific paper about insects is being mapped, column "
-             "by column, to a species-trait template."]
+    parts = ["A table from a scientific paper is being mapped, column by column, to a template that records "
+             "organisms and their characteristics (traits)."]
     if intro_len:
         parts.append("Paper start: " + _clip(paper_text, intro_len))
     parts.append(f"Headers: {heads}")

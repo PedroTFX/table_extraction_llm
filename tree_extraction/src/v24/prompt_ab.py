@@ -20,6 +20,10 @@
                                                 same session; 'old' against 'old.2' is the drift between sessions)
     python prompt_ab.py score                   -> output/prompt_ab/SCORE.txt
     python prompt_ab.py run --group held_b ...  another group (default: tuning); held_b only as totals, run once
+
+Adopted 2026-11-18 (the user): column_tree.py now carries 'all.2' (SCORE.txt: every block within the drift between
+sessions). From then on 'old' in this file means that adopted wording; results.json keeps the readings of the
+earlier wording, and the 'intro' variant asserts on the earlier intro line, so it cannot be run against the new tree.
 """
 import collections
 import contextlib
