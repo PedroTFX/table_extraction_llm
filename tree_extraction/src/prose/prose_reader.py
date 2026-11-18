@@ -135,6 +135,10 @@ VARIANTS = {"v7a": (), "v7b": ("clauses", "sex"), "v7c": ("clauses", "sex", "poi
             "v9b": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units"),
             "t1": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree"),
             "t2": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route"),
+            # 2026-11-18, prose_variants.py: t2 read again in a fresh folder (t2o), and t2 with made-up examples (t2n)
+            "t2o": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route"),
+            "t2n": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route",
+                    "neutral"),
             "t3": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "finish"),
             "t4": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "fullname"),
             "t5": ("clauses", "sex", "pointers", "retry", "drop", "symbols", "clean", "units", "tree", "keeprep", "keys", "route", "qmeasure"),
@@ -188,7 +192,7 @@ PREV_OUT = _paths.OUTPUT / ("prose_v7" if VARIANT == "v7a" else "prose_v8b" if V
                             else "prose_v8c" if VARIANT == "v8d" else "prose_v8d" if VARIANT in ("v9", "v9b", "t1") else "prose_t2" if VARIANT in ("t3", "t4", "t5", "t5b", "t6") else "prose_v7a")
 SENT_DIR = (_paths.OUTPUT / f"prose_{VARIANT}" / "sent") if "route" in FL else _paths.OUTPUT / "prose_sent"
 OUT = _paths.OUTPUT / f"prose_{VARIANT}"
-REUSED = () if VARIANT == "t2" else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4", "t5", "t5b", "t6") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
+REUSED = () if VARIANT in ("t2", "t2o", "t2n") else ("abbrev", "shape", "read", "read2", "walk", "field", "places", "sent") if VARIANT in ("t3", "t4", "t5", "t5b", "t6") else ("abbrev", "shape", "read", "walk", "field", "places")   # v7's names, tracking, Q-FIELD and v7a's places
 if VARIANT in ("v8c", "v8d"):
     REUSED += ("read2", "names")                       # v8b's reading and name splits: only the decisions change
 # v7 (speed by asking less): names first, species tracking before the reading, facts read only inside
@@ -1953,6 +1957,10 @@ STAGES = {"abbrev": stage_abbrev, "read": stage_read, "names": stage_names, "wal
           "assemble": stage_assemble,
           "score": stage_score, "page": stage_page}
 ALL = ["abbrev", "shape", "nm", "heads", "walk", "field", "read7", "names", "places", "facts", "assemble"]
+
+if "neutral" in FL:                         # t2n: the prompts with made-up examples (prose_variants.py)
+    import prose_variants as _pv
+    _pv.swap_into(globals(), _pv.READER)
 
 
 def papers_of(args):

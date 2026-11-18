@@ -136,6 +136,9 @@ SCHEMA ={"type": "object", "required": ["passages"], "properties": {"passages": 
         "type": "object", "required": ["what", "value", "unit", "sex"],
         "properties": {k: {"type": "string"} for k in ("what", "value", "unit", "sex", "who")
                        + (("context",) if "allocate" in pr.FL else ())}}}}}}}}
+if "neutral" in pr.FL:                                     # t2n: made-up examples (prose_variants.py)
+    import prose_variants as _pv
+    _pv.swap_into(globals(), _pv.TREE)
 
 
 # t6 (2026-11-10): positional lists. Layout only: a sentence that states an order (three or more names joined by '+',
