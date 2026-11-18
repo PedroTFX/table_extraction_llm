@@ -6,6 +6,9 @@ single-species papers this step was built on), and the group names 'beetles' (79
 Only the examples change, each keeping what it teaches (an abbreviated name; group names: a common group, another
 common group, a genus with 'spp.'), with made-up names ('Velora', as in the column tree) and groups of other
 organisms. Every new phrase was checked against the 271 papers (109, grit, Jakub): none prints it.
+
+Adopted 2026-11-18 (the user): species_tree.py now carries these examples (species_ab SCORE.txt, tuning: one-species
+tables right 36/37 as before; tables wrongly named in several-species papers 3 -> 0, Kratschmer2019 'honey bees').
 """
 import species_tree as sp
 

@@ -50,7 +50,7 @@ KIND = [("title and abstract", re.compile(r"abstract|summary", re.I)),
 
 READ = """Below is the {kind} of a scientific paper.
 
-List every species whose traits or measurements this paper's own study is about (not species from the studies it cites), named at species level. Write each one as its scientific name exactly as printed at its fullest mention: genus and species (and subspecies if printed), not an abbreviation such as 'V. maculifrons' when the full name is printed, and without the common name or the author. Leave out group names (such as 'beetles', 'wild bees', 'Bombus spp.', a family or an order). Then summarise in one or two sentences what the whole study measured: which organism or organisms, and whether its measurements cover one species or many. Describe this paper's own study, not a single passing mention and not the studies it cites. If this text does not say what the study measured, leave the summary empty.
+List every species whose traits or measurements this paper's own study is about (not species from the studies it cites), named at species level. Write each one as its scientific name exactly as printed at its fullest mention: genus and species (and subspecies if printed), not an abbreviation such as 'V. brevis' when the full name is printed, and without the common name or the author. Leave out group names (such as 'sea anemones', 'freshwater mussels', 'Velora spp.', a family or an order). Then summarise in one or two sentences what the whole study measured: which organism or organisms, and whether its measurements cover one species or many. Describe this paper's own study, not a single passing mention and not the studies it cites. If this text does not say what the study measured, leave the summary empty.
 
 Text:
 {text}"""
