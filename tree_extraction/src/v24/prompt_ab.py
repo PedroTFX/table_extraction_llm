@@ -24,13 +24,21 @@
 Adopted 2026-11-18 (the user): column_tree.py now carries 'all.2' (SCORE.txt: every block within the drift between
 sessions). From then on 'old' in this file means that adopted wording; results.json keeps the readings of the
 earlier wording, and the 'intro' variant asserts on the earlier intro line, so it cannot be run against the new tree.
+The test group compares the two trees whole, in one session: 'earlier' (column_tree.py at EARLIER, read from git)
+is the base and 'adopted' (the tree as it is now) the variant:
+
+    python prompt_ab.py run --group held_b adopted     once; SCORE.txt shows held_b as totals, no flips
 """
 import collections
 import contextlib
 import copy
+import functools
+import importlib.util
 import json
+import subprocess
 import sys
 import time
+from pathlib import Path
 
 import _paths
 import column_role_bench as crb
@@ -48,15 +56,34 @@ TRAITS = {"measurementType", "measurementValue"}
 OLD_INTRO = ("A table from a scientific paper about insects is being mapped, column by column, to a species-trait "
              "template.")
 MODEL = ("nimble:9b-q4-gpu", 6)
+EARLIER = "90033813"        # the last commit with the earlier wording in column_tree.py
+VARIANTS = {**pv.VARIANTS, "earlier": ("tree_at", EARLIER), "adopted": ("current", None)}
 # the cheap variants first (one node's questions), the full re-readings last
 ORDER = ([v for v in pv.VARIANTS if v.startswith("node:") and "." not in v] + ["organism_column", "table_kind", "intro"]
-         + [v for v in pv.VARIANTS if "." in v and v != "all.2"] + ["all.2"])
+         + [v for v in pv.VARIANTS if "." in v and v != "all.2"] + ["all.2", "adopted"])
 
 
 def base_of(v):
-    """The old wording read in the same session as variant v: 'old' for the first session's variants, 'old.2' for
-    those named '<x>.2'. nimble's answers drift between model loads, so a variant is compared with its own session."""
+    """The base read in the same session as variant v: 'old' for the first session's variants, 'old.2' for those
+    named '<x>.2', 'earlier' for 'adopted'. nimble's answers drift between model loads, so a variant is compared with
+    its own session."""
+    if v == "adopted":
+        return "earlier"
     return f"old.{v.rsplit('.', 1)[1]}" if "." in v.rsplit(":", 1)[-1] else "old"
+
+
+@functools.lru_cache(maxsize=None)
+def tree_at(commit):
+    """column_tree.py as it was at a commit, loaded as its own module (for its texts only)."""
+    here = Path(__file__).resolve().parent
+    src = subprocess.run(["git", "show", f"{commit}:./column_tree.py"], cwd=here, capture_output=True, text=True,
+                         check=True).stdout
+    path = OUT / f"column_tree_{commit}.py"
+    path.write_text(src, encoding="utf-8")
+    spec = importlib.util.spec_from_file_location(f"column_tree_{commit}", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
 class Memo:
@@ -82,9 +109,20 @@ class Memo:
 @contextlib.contextmanager
 def applied(name):
     """column_tree with one variant in place; everything restored after."""
-    kind, val = pv.VARIANTS[name]
+    kind, val = VARIANTS[name]
     saved = (ct.TABLE_KIND, ct.ORGANISM_COLUMN, ct.NODES, ct.table_state)
     try:
+        if kind == "current":                       # the tree as it is
+            yield
+            return
+        if kind == "tree_at":                       # the texts of an earlier commit, the code of now
+            old = tree_at(val)
+            orig = ct.table_state
+            assert pv.INTRO in orig(_Probe(), "", (), 0), "the adopted intro line is not where expected"
+            ct.TABLE_KIND, ct.ORGANISM_COLUMN, ct.NODES = old.TABLE_KIND, old.ORGANISM_COLUMN, old.NODES
+            ct.table_state = lambda *a, **k: orig(*a, **k).replace(pv.INTRO, OLD_INTRO)
+            yield
+            return
         if kind == "combined":                      # every listed variant at once
             with contextlib.ExitStack() as stack:
                 for v in val:
@@ -238,8 +276,8 @@ def main(argv):
     if args[:1] == ["--group"]:
         group, args = args[1], args[2:]
     variants = args or ORDER
-    bad = [v for v in variants if v not in pv.VARIANTS]
-    assert not bad, f"unknown variants {bad}; known: {list(pv.VARIANTS)}"
+    bad = [v for v in variants if v not in VARIANTS]
+    assert not bad, f"unknown variants {bad}; known: {list(VARIANTS)}"
     bases = {base_of(v) for v in variants}
     assert len(bases) == 1, f"one session at a time: {bases}"
     want = ("dev", "held_a") if group == "tuning" else (group,)
