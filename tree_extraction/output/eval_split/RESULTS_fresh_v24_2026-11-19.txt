@@ -1,0 +1,68 @@
+##### 109, from scratch with the adopted prompts (v24 tables, t2 prose)
+old baseline, summary.csv: mean F1 0.621, 109 papers
+tables only (v24 rows, current scorer and GT); reports 109 of 109
+  all                109 papers  mean F1 0.622  micro F1 0.836  R 0.786  P 0.894  zero 17, under .5 22, .5-.9 30, .9+ 40
+  dev                 54 papers  mean F1 0.596  micro F1 0.794  R 0.743  P 0.853  zero 8, under .5 13, .5-.9 16, .9+ 17
+  held_a              28 papers  mean F1 0.825  micro F1 0.928  R 0.897  P 0.961  zero 0, under .5 4, .5-.9 7, .9+ 17
+  held_b              27 papers  mean F1 0.462  micro F1 0.412  R 0.303  P 0.643  zero 9, under .5 5, .5-.9 7, .9+ 6
+  against the old baseline: up 17, down 7
+tables + prose (two_step); reports 109 of 109
+  all                109 papers  mean F1 0.645  micro F1 0.838  R 0.793  P 0.887  zero 11, under .5 26, .5-.9 32, .9+ 40
+  dev                 54 papers  mean F1 0.620  micro F1 0.796  R 0.751  P 0.847  zero 5, under .5 15, .5-.9 17, .9+ 17
+  held_a              28 papers  mean F1 0.825  micro F1 0.928  R 0.897  P 0.961  zero 0, under .5 4, .5-.9 7, .9+ 17
+  held_b              27 papers  mean F1 0.511  micro F1 0.473  R 0.380  P 0.626  zero 6, under .5 7, .5-.9 8, .9+ 6
+  against the old baseline: up 23, down 7
+routing: 109 papers, sent to prose 6, prose done 6, failed 0, prose rows 3291
+
+##### 109, the main root as it stands (v18 tables, t2 prose), the same scorer today
+old baseline, summary.csv: mean F1 0.621, 109 papers
+tables only (v18 rows, current scorer and GT); reports 109 of 109
+  all                109 papers  mean F1 0.629  micro F1 0.850  R 0.795  P 0.913  zero 16, under .5 21, .5-.9 33, .9+ 39
+  dev                 54 papers  mean F1 0.597  micro F1 0.814  R 0.754  P 0.885  zero 8, under .5 12, .5-.9 17, .9+ 17
+  held_a              28 papers  mean F1 0.822  micro F1 0.932  R 0.903  P 0.963  zero 0, under .5 4, .5-.9 8, .9+ 16
+  held_b              27 papers  mean F1 0.494  micro F1 0.438  R 0.324  P 0.672  zero 8, under .5 5, .5-.9 8, .9+ 6
+  against the old baseline: up 5, down 0
+tables + prose (two_step); reports 109 of 109
+  all                109 papers  mean F1 0.653  micro F1 0.851  R 0.802  P 0.907  zero 10, under .5 25, .5-.9 35, .9+ 39
+  dev                 54 papers  mean F1 0.621  micro F1 0.816  R 0.762  P 0.877  zero 5, under .5 14, .5-.9 18, .9+ 17
+  held_a              28 papers  mean F1 0.822  micro F1 0.932  R 0.903  P 0.963  zero 0, under .5 4, .5-.9 8, .9+ 16
+  held_b              27 papers  mean F1 0.541  micro F1 0.495  R 0.400  P 0.647  zero 5, under .5 7, .5-.9 9, .9+ 6
+  against the old baseline: up 11, down 0
+routing: 109 papers, sent to prose 6, prose done 11, failed 0, prose rows 3459
+
+##### grit, from scratch with the adopted prompts (v24 tables, t2 prose)
+old baseline, summary.csv: mean F1 0.604, 148 papers
+tables only (v24 rows, current scorer and GT); reports 0 of 148
+  all                148 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 148, under .5 0, .5-.9 0, .9+ 0
+  dev                 50 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 50, under .5 0, .5-.9 0, .9+ 0
+  held_a              24 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 24, under .5 0, .5-.9 0, .9+ 0
+  held_b              20 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 20, under .5 0, .5-.9 0, .9+ 0
+  grit-only           54 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 54, under .5 0, .5-.9 0, .9+ 0
+  against the old baseline: up 0, down 123
+tables + prose (two_step); reports 3 of 148
+  all                148 papers  mean F1 0.004  micro F1 0.190  R 0.188  P 0.193  zero 145, under .5 3, .5-.9 0, .9+ 0
+  dev                 50 papers  mean F1 0.008  micro F1 0.178  R 0.174  P 0.182  zero 48, under .5 2, .5-.9 0, .9+ 0
+  held_a              24 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 24, under .5 0, .5-.9 0, .9+ 0
+  held_b              20 papers  mean F1 0.000  micro F1 0.000  R 0.000  P 0.000  zero 20, under .5 0, .5-.9 0, .9+ 0
+  grit-only           54 papers  mean F1 0.004  micro F1 0.230  R 0.232  P 0.227  zero 53, under .5 1, .5-.9 0, .9+ 0
+  against the old baseline: up 3, down 123
+routing: 147 papers, sent to prose 3, prose done 3, failed 0, prose rows 1449
+
+##### grit, the main root as it stands (v18 tables, t2 prose), the same scorer today
+old baseline, summary.csv: mean F1 0.604, 148 papers
+tables only (v18 rows, current scorer and GT); reports 148 of 148
+  all                148 papers  mean F1 0.607  micro F1 0.755  R 0.731  P 0.781  zero 25, under .5 33, .5-.9 38, .9+ 52
+  dev                 50 papers  mean F1 0.573  micro F1 0.633  R 0.557  P 0.733  zero 9, under .5 12, .5-.9 15, .9+ 14
+  held_a              24 papers  mean F1 0.814  micro F1 0.920  R 0.893  P 0.949  zero 0, under .5 4, .5-.9 8, .9+ 12
+  held_b              20 papers  mean F1 0.569  micro F1 0.577  R 0.446  P 0.815  zero 6, under .5 3, .5-.9 3, .9+ 8
+  grit-only           54 papers  mean F1 0.562  micro F1 0.623  R 0.655  P 0.595  zero 10, under .5 14, .5-.9 12, .9+ 18
+  against the old baseline: up 3, down 0
+tables + prose (two_step); reports 147 of 148
+  all                148 papers  mean F1 0.614  micro F1 0.755  R 0.736  P 0.774  zero 19, under .5 39, .5-.9 39, .9+ 51
+  dev                 50 papers  mean F1 0.590  micro F1 0.631  R 0.564  P 0.716  zero 6, under .5 15, .5-.9 15, .9+ 14
+  held_a              24 papers  mean F1 0.814  micro F1 0.920  R 0.893  P 0.949  zero 0, under .5 4, .5-.9 8, .9+ 12
+  held_b              20 papers  mean F1 0.606  micro F1 0.643  R 0.563  P 0.750  zero 4, under .5 4, .5-.9 4, .9+ 8
+  grit-only           54 papers  mean F1 0.551  micro F1 0.622  R 0.657  P 0.590  zero 9, under .5 16, .5-.9 12, .9+ 17
+  against the old baseline: up 10, down 1
+routing: 147 papers, sent to prose 8, prose done 16, failed 0, prose rows 4249
+
