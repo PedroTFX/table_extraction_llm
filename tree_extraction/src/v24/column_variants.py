@@ -102,7 +102,7 @@ COUNT_PURPOSE = {
         },
         "characteristic": {
             "description": "A number that describes the organism itself: how many of something it has, makes or "
-                           "forms (individuals in a colony, eggs in a clutch, body segments, generations a year), "
+                           "forms (individuals in a colony, eggs in a clutch, teeth on a jaw, generations a year), "
                            "or its abundance or rarity reported as data about the species rather than as a result of "
                            "the study's own sampling.",
             "field": "measurementType",
@@ -118,8 +118,8 @@ def scope(record_field):
         "options": {
             "organism": {
                 "description": "The organism itself: where or when the species is known to live or occur (the "
-                               "countries, regions, coordinates or altitudes of its known range, its season of "
-                               "activity), or the conditions it needs or tolerates, reported as a characteristic of "
+                               "countries, regions, coordinates or altitudes it is known from, the months or "
+                               "seasons when it is active), or the conditions it needs or tolerates, reported as a characteristic of "
                                "the species.",
                 "field": "measurementType",
             },
@@ -223,5 +223,8 @@ VARIANTS = {f"tree:{c}.3": ("nodes", (c,)) for c in ALL}
 VARIANTS["tree:all.3"] = ("nodes", ALL)
 
 # example phrases new in this revision, checked against the 271 papers before the test
-EXAMPLES = ["individuals in a colony", "eggs in a clutch", "body segments", "generations a year",
-            "the way it was scored", "known range", "season of activity", "Halvorsen, 1931"]
+EXAMPLES = ["individuals in a colony", "eggs in a clutch", "teeth on a jaw", "generations a year",
+            "the way it was scored", "altitudes it is known from", "months or seasons when it is active",
+            "Halvorsen, 1931", "including a tribe", "how many individuals a value rests on"]
+# replaced after the check: "body segments", "known range" (each printed in a Jakub paper), "season of activity"
+# (printed in Figueroa2021, a tuning paper; the adopted kind text carries it too, left as it is for this test)
