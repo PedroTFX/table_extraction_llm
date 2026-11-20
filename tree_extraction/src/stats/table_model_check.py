@@ -22,8 +22,8 @@ import relevance as rv  # noqa: E402
 import table_model as tm  # noqa: E402
 
 SURE = 0.8
-DROP_PURPOSE = {"places", "analysis", "key", "methods", "figure"}
-DROP_ROW = {"statistic", "other"}
+DROP_PURPOSE = tm.CLOSES                  # key, methods, figure
+DROP_ROW = {"other"}
 
 
 def old_reading(k, kind, struct, own, relev):
@@ -40,14 +40,14 @@ def old_reading(k, kind, struct, own, relev):
 
 def new_reading(d, old):
     """The table model's reading; a node that is not sure leaves today's decision of that kind standing."""
-    pu, ro = d["purpose"]["choice"], (d.get("row") or {}).get("choice")
+    pu, ro = d["purpose"]["choice"], d["rows"]["choice"]
     if pu in DROP_PURPOSE:
         return f"dropped by N1 '{pu}'"
     if pu is None and old.startswith("dropped by Q-KIND"):
         return old + " (N1 not sure)"
     if ro in DROP_ROW:
         return f"dropped by N2 '{ro}'"
-    if "row" in d and ro is None and old.startswith("dropped by Q-ROW"):
+    if ro is None and old.startswith("dropped by Q-ROW"):
         return old + " (N2 not sure)"
     return "read"
 
@@ -104,7 +104,8 @@ def main():
                 return None
             gt_table = bool(labels) and any(gt_col(c.name) is not None for c in t.columns)
             pu = d["purpose"]["choice"] or "not sure"
-            ro = (d.get("row") or {}).get("choice") or ("not sure" if "row" in d else "not asked")
+            ro = tm.leaf(d)
+            top = d["rows"]["choice"] or "not sure"
             old = old_reading(k, kind, struct, own, relev)
             new = new_reading(d, old)
             where = f"{p} t{k} ({len(t.records)} rows; columns {[c.name for c in t.columns][:6]})"
@@ -113,6 +114,7 @@ def main():
             grp = "GT draws on it" if gt_table else "GT does not draw on it"
             T[f"{grp}: tables"] += 1
             T[f"{grp}: N1 {pu}"] += 1
+            T[f"{grp}: N2 {ro}"] += 1
             T[f"{grp}: today {old.split(' ')[0]}"] += 1
             T[f"{grp}: table model {new.split(' ')[0]}"] += 1
             if gt_table and (old != "read" or new != "read"):
@@ -125,16 +127,16 @@ def main():
             # N2 against the structure key, tables of several GT species
             several = len(set(row_ids) - {None}) >= 2
             if skey in ("GT long", "GT wide") and several:
-                want = {"measurement"} if skey == "GT long" else {"organism", "part"}
+                right = ro == "measurement" if skey == "GT long" else (top in ("organisms", "parts") and ro != "measurement")
                 T[f"structure key {skey}: tables"] += 1
-                T[f"structure key {skey}: N2 " + ("right" if ro in want else ro)] += 1
+                T[f"structure key {skey}: N2 " + ("right" if right else ro)] += 1
                 s = struct.get(str(k))
                 if s and s.get("row"):
                     w_old = "record" if skey == "GT long" else "wide"
                     o = sure_choice(s["row"])
                     T[f"structure key {skey}: Q-ROW asked"] += 1
                     T[f"structure key {skey}: Q-ROW " + ("right" if o == w_old else str(o))] += 1
-                if ro not in want:
+                if not right:
                     C["N2 against the structure key"].append(f"{where}: N2 {ro} ({skey}); Q-ROW "
                                                              f"{sure_choice((struct.get(str(k)) or {}).get('row'))}")
 
@@ -143,21 +145,23 @@ def main():
             if kd and kd.get("kind"):
                 X["N1 x Q-KIND"][(pu, sure_choice(kd["kind"]))] += 1
             sd = struct.get(str(k))
-            if sd and sd.get("row") and "row" in d:
+            if sd and sd.get("row"):
                 X["N2 x Q-ROW"][(ro, sure_choice(sd["row"]))] += 1
             od = subj.table(own, k)
-            if od and od.get("rows") and "who" in d:
-                X["N2b x one_species rows"][((d["who"]["choice"] or "not sure"), od["rows"].get("choice") or "not sure")] += 1
+            if od and od.get("rows") and "how" in d:
+                X["N2b x one_species rows"][((d["how"]["choice"] or "not sure"), od["rows"].get("choice") or "not sure")] += 1
             rd = (rlab.get(str(k)) or {}).get("labels") or {}
-            if rd.get("whole") and "row" in d:
-                X["N2 x row_label (first labels column)"][(ro, sure_choice(rd["whole"]))] += 1
+            if rd.get("whole"):
+                X["N2 x row_label (first labels column)"][(top, sure_choice(rd["whole"]))] += 1
 
-    L = [f"Table model phase 1 (N1 purpose, N2 row) on {n_papers} tuning papers, {T['tables asked']} tables, against "
+    L = [f"Table model phase 1, version 2 (N2 rows first, N1 purpose; both option orders) on {n_papers} tuning papers, {T['tables asked']} tables, against "
          "keys that do not come from the model and against today's answers (full_run_v24, main root).", ""]
     for grp in ("GT draws on it", "GT does not draw on it"):
         L.append(f"{grp}: {T[f'{grp}: tables']} tables")
         L.append("  N1: " + ", ".join(f"{k.split(': N1 ')[1]} {v}" for k, v in sorted(T.items())
                                        if k.startswith(f"{grp}: N1 ")))
+        L.append("  N2: " + ", ".join(f"{k.split(': N2 ')[1]} {v}" for k, v in sorted(T.items())
+                                       if k.startswith(f"{grp}: N2 ")))
         L.append(f"  read: today {T[f'{grp}: today read']}, table model {T[f'{grp}: table model read']}; "
                  f"dropped: today {T[f'{grp}: today dropped']}, table model {T[f'{grp}: table model dropped']}")
         L.append("")
