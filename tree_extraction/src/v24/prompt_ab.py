@@ -28,6 +28,11 @@ The test group compares the two trees whole, in one session: 'earlier' (column_t
 is the base and 'adopted' (the tree as it is now) the variant:
 
     python prompt_ab.py run --group held_b adopted     once; SCORE.txt shows held_b as totals, no flips
+
+Session 3 (2026-11-20): the structural revision of column_variants.py (A, B, C, D, F alone, then all), each against
+'old.3', the adopted tree read again in the same session; tree_ab_report.py keeps the old and new path of every column.
+
+    python prompt_ab.py run tree:A.3 tree:B.3 tree:C.3 tree:D.3 tree:F.3 tree:all.3
 """
 import collections
 import contextlib
@@ -46,6 +51,7 @@ import column_tree as ct
 import column_tree_bench as ctb
 import head_to_table as h2t
 import header_tree_bench as hb
+import column_variants as cv
 import prompt_variants as pv
 from evaluate import load_xlsx
 
@@ -57,10 +63,10 @@ OLD_INTRO = ("A table from a scientific paper about insects is being mapped, col
              "template.")
 MODEL = ("nimble:9b-q4-gpu", 6)
 EARLIER = "90033813"        # the last commit with the earlier wording in column_tree.py
-VARIANTS = {**pv.VARIANTS, "earlier": ("tree_at", EARLIER), "adopted": ("current", None)}
+VARIANTS = {**pv.VARIANTS, **cv.VARIANTS, "earlier": ("tree_at", EARLIER), "adopted": ("current", None)}
 # the cheap variants first (one node's questions), the full re-readings last
 ORDER = ([v for v in pv.VARIANTS if v.startswith("node:") and "." not in v] + ["organism_column", "table_kind", "intro"]
-         + [v for v in pv.VARIANTS if "." in v and v != "all.2"] + ["all.2", "adopted"])
+         + [v for v in pv.VARIANTS if "." in v and v != "all.2"] + ["all.2", "adopted"] + list(cv.VARIANTS))
 
 
 def base_of(v):
@@ -137,6 +143,8 @@ def applied(name):
             ct.TABLE_KIND = val
         elif kind == "organism_column":
             ct.ORGANISM_COLUMN = val
+        elif kind == "nodes":                       # column_variants.py: nodes added or reshaped, the tree checked
+            ct.NODES = cv.build(set(val))
         else:
             node, text = val
             assert set(text["options"]) == set(ct.NODES[node]["options"]), f"{node}: options differ"

@@ -535,7 +535,10 @@ def validate():
             if "next" in opt:
                 todo.append(opt["next"])
         if "only_if_table_kind" in NODES[n]:
-            assert "otherwise" in NODES[n], f"{n}: only_if_table_kind needs otherwise"
+            assert ("otherwise" in NODES[n]) != ("otherwise_next" in NODES[n]), \
+                f"{n}: only_if_table_kind needs otherwise XOR otherwise_next"
+            if "otherwise_next" in NODES[n]:
+                todo.append(NODES[n]["otherwise_next"])
             bad = set(NODES[n]["only_if_table_kind"]) - set(TABLE_KIND["options"])
             assert not bad, f"{n}: unknown table kinds {bad}"
     unused = set(NODES) - seen
@@ -564,9 +567,10 @@ def render() -> str:
         shown.add(node)
         lines.append(f"{pad}[{node}] {NODES[node]['question']}")
         if "only_if_table_kind" in NODES[node]:
+            other = NODES[node].get("otherwise") or f"[{NODES[node]['otherwise_next']}]"
             lines.append(f"{pad}  (asked only when table_kind is "
                          f"{'/'.join(NODES[node]['only_if_table_kind'])}; otherwise "
-                         f"-> {NODES[node]['otherwise']})")
+                         f"-> {other})")
         for name, opt in NODES[node]["options"].items():
             leaf = (f" -> {opt['field'] or 'none'}" if "field" in opt else "")
             if opt.get("tag_from_header"):
@@ -574,6 +578,9 @@ def render() -> str:
             lines.append(f"{pad}  - {name}{leaf}: {opt['description']}")
             if "next" in opt:
                 walk(opt["next"], depth + 2)
+        if "otherwise_next" in NODES[node]:
+            lines.append(f"{pad}  (other table kinds:)")
+            walk(NODES[node]["otherwise_next"], depth + 1)
     walk(ROOT, 1)
     return "\n".join(lines)
 
@@ -587,6 +594,8 @@ def reachable_fields(node, _seen=None) -> set:
     out = set()
     if "otherwise" in NODES[node]:
         out.add(NODES[node]["otherwise"])
+    if "otherwise_next" in NODES[node]:
+        out |= reachable_fields(NODES[node]["otherwise_next"], seen)
     for opt in NODES[node]["options"].values():
         if "field" in opt:
             out.add(opt["field"] or "none")
@@ -862,6 +871,13 @@ def classify_table(table, paper_text, client: DecisionClient, table_context=True
                     is_greedy = it.greedy and opt == best
                     nxt = NODES.get(o.get("next"), {})
                     if ("only_if_table_kind" in nxt and kind_ans is not None
+                            and kind_ans[0] not in nxt["only_if_table_kind"] and "otherwise_next" in nxt):
+                        # another table kind: a node of its own asks instead (2026-11-20, plan A: the table kind is
+                        # context, not the column's final answer)
+                        frontier.append(Item(it.h, nxt["otherwise_next"], it.prob * p,
+                                             it.path + [step, f"{o['next']}:by table kind {kind_ans[0]}"],
+                                             is_greedy))
+                    elif ("only_if_table_kind" in nxt and kind_ans is not None
                             and kind_ans[0] not in nxt["only_if_table_kind"]):
                         # decided at the table level: not asked per column
                         leaves[it.h].append((nxt["otherwise"], it.prob * p,
