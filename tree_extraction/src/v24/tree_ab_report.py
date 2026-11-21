@@ -32,7 +32,9 @@ TRACK = [("Gathof2022#5", "Caught individuals"), ("Gathof2022#6", "Caught indivi
          ("Viza2023#7", "Suborder"), ("Luo2023#0", "Measure"), ("Cao2024#7", "Locomotion"),
          ("Normandin2017#12", "Social"), ("Torok2022#8", "(no name, column 1)"), ("Dejean2019#1", "Occurrences"),
          ("Viza2023#8", "Suborder"), ("Wallon2024#24", "Class"), ("Wallon2024#30", "Class"),
-         ("Brant2021#0", "Intertegular distance"), ("Heiva2013#0", "FG")]
+         ("Brant2021#0", "Intertegular distance"), ("Heiva2013#0", "FG"),
+         # round 6: non-name columns that B0's wider higher_rank took (letters, a sentence; weak key)
+         ("Taillefer2018#11", "Opomyzidae"), ("Lizee2016#6", "(no name, column 0)")]
 # a cell that is only a mark: presence or absence, a tick, a dash (one or two characters, no other letter than x)
 MARK = re.compile(r"[xX+✓✔●•○◦*?\-–—]{1,2}")
 HIGHER = "organism_name:higher_rank"

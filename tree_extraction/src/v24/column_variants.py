@@ -39,6 +39,11 @@ def _opt(nodes, node, opt):
 # values themselves, at the one decision point; cell_shape's misreading stays a diagnostic of its own.
 HIGHER_RANK_GUARD = ("The cell values themselves must be names of taxa at such a rank: presence or absence marks and "
                      "other symbols (such as X, + or ✓) are not names of taxa.")
+# round 6 (the user, 2026-11-21): the guard changed none of the 8 mark columns; not_a_name, the only exit from
+# organism_name, named no place for a mark. The exit names it; 'or a phrase' left out so one clause is tested at a time.
+NOT_A_NAME_ADOPTED = "Not names of organisms after all: a characteristic, a category, a place or a code."
+NOT_A_NAME_MARKS = ("Not names of organisms after all: the cells hold something else, such as a characteristic, a "
+                    "category, a place, a code, or a mark indicating presence or absence (e.g. X, + or ✓).")
 
 METHOD = ("How the VALUE was measured or obtained: the method, the instrument, the formula or the way it was scored "
           "(for example 'dial gauge', 'water displacement').")
@@ -225,11 +230,12 @@ def build(changes):
     """NODES with the listed changes applied to a copy of the adopted tree. Round 3's codes: A, B (= Bk + Bn), C, D,
     F. Round 4's: Bk (kind's classification sentence alone), Bn (the names part of B), Bt (Bn plus one sentence on
     names inside a table of characteristics), C4 (count_purpose narrowed), A4 (property_check for the shortcut only).
-    Round 5's: Bg (Bn plus the guard on higher_rank: the cell values must be names of taxa, marks are not)."""
+    Round 5's: Bg (Bn plus the guard on higher_rank: the cell values must be names of taxa, marks are not).
+    Round 6's: Bx (Bn plus not_a_name naming a mark of presence or absence)."""
     changes = set(changes)
     if "B" in changes:
         changes |= {"Bk", "Bn"}
-    if "Bg" in changes:                         # round 5: the guard is tested on top of B0's names part
+    if "Bg" in changes or "Bx" in changes:      # rounds 5 and 6: tested on top of B0's names part
         changes |= {"Bn"}
     n = copy.deepcopy(ct.NODES)
     kind = _opt(n, "kind", "organism_property")
@@ -300,6 +306,10 @@ def build(changes):
         if "Bg" in changes:
             hr["description"] = _sub(hr["description"], "an order or a class).",
                                      "an order or a class). " + HIGHER_RANK_GUARD, "Bg higher_rank")
+        if "Bx" in changes:
+            nn = _opt(n, "organism_name", "not_a_name")
+            assert nn["description"] == NOT_A_NAME_ADOPTED, nn["description"]
+            nn["description"] = NOT_A_NAME_MARKS
     if "A4" in changes:
         op = n["organism_property"]
         assert op.get("otherwise") == "measurementType" and op.get("only_if_table_kind") == ["long_format"]
@@ -356,7 +366,12 @@ ROUND4 = ["tree:K.4", "tree:B0.4", "tree:B.4", "tree:C.4", "tree:BC.4", "tree:A.
 # B0 alone and the adopted tree ('old.5'), all in one session, with the neutral -ptera fact of column_tree.py
 VARIANTS.update({"tree:B0.5": ("nodes", ("Bn",)), "tree:B0g.5": ("nodes", ("Bg",))})
 ROUND5 = ["tree:B0.5", "tree:B0g.5"]
-CONTROL = {"tree:B0g.5": "tree:B0.5"}           # the guard's own effect: read against B0 in the same session
+# round 6 (the user, 2026-11-21): the exit of organism_name names a mark of presence or absence; the last round on this
+# case: if the marks stay, B0.4 is frozen and cell_shape's misreading kept as a diagnostic
+VARIANTS.update({"tree:B0.6": ("nodes", ("Bn",)), "tree:B0x.6": ("nodes", ("Bx",))})
+ROUND6 = ["tree:B0.6", "tree:B0x.6"]
+CONTROL = {"tree:B0g.5": "tree:B0.5",           # a change's own effect: read against B0 in the same session
+           "tree:B0x.6": "tree:B0.6"}
 
 # example phrases new in this revision, checked against the 271 papers before the test
 EXAMPLES = ["individuals in a colony", "eggs in a clutch", "teeth on a jaw", "generations a year",
