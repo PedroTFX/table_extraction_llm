@@ -153,16 +153,21 @@ PROPERTY_ROLE_4 = {
                            "role, or the place, date, protocol or conditions of the sampling.",
             "next": "record_context",
         },
-        "other_or_unclear": {
-            "description": "Another role, or the table does not make its role clear: none of the above.",
+        "other_role": {
+            "description": "Another role, none of the above: the table shows what the column is, and it is not a "
+                           "characteristic of the organism.",
+            "field": None,
+        },
+        "unclear": {
+            "description": "Unclear: the table does not show what role the column plays.",
             "field": "(set by build: the shortcut's own answer)",
         },
     },
 }
 
 COUNT_PURPOSE_4 = {
-    "question": "Column '{h}' (values: {values}).{facts} The column gives counts. What role does the count play in "
-                "this table?",
+    "question": "Column '{h}' (values: {values}).{facts} The column gives a number of individuals or records, or "
+                "another sampling quantity. What does that quantity represent in this table?",
     "options": {
         "sampling_outcome": {
             "description": "A result of the sampling: the count itself is reported as what the study's sampling "
@@ -173,6 +178,11 @@ COUNT_PURPOSE_4 = {
         "sample_size": {
             "description": "A sample size: the count tells how many individuals, observations or records support "
                            "another value or measurement reported in the same row.",
+            "field": "sampleSizeValue",
+        },
+        "sampling_effort": {
+            "description": "The sampling effort: how much was sampled rather than what was found, such as the length, "
+                           "area or time sampled, or the number of traps, visits or samples.",
             "field": "sampleSizeValue",
         },
         "characteristic": {
@@ -285,7 +295,13 @@ def build(changes):
         op["otherwise_next"] = "property_check"
         n["property_check"] = copy.deepcopy(PROPERTY_CHECK_4)
         n["property_role"] = copy.deepcopy(PROPERTY_ROLE_4)
-        n["property_role"]["options"]["other_or_unclear"]["field"] = previous
+        n["property_role"]["options"]["unclear"]["field"] = previous
+        # one route to measurementMethod: the direct 'method' answer; the records reached from here go to a copy of
+        # record_context without its measurement_method option (the user, 2026-11-21)
+        rc4 = copy.deepcopy(n["record_context"])
+        del rc4["options"]["measurement_method"]
+        n["record_context_a4"] = rc4
+        n["property_role"]["options"]["records"]["next"] = "record_context_a4"
     if "C4" in changes:
         cs = n["counts_or_statistics"]["options"]
         for o in ("abundance", "sample_size"):

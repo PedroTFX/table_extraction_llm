@@ -26,7 +26,9 @@ LOOK = ("Gathof2022", "Ji2024", "Luo2023", "Viza2023", "Wallon2024")
 # (table, header start): unresolved after round 3, followed in every round from 4 on (the user, 2026-11-21)
 TRACK = [("Gathof2022#5", "Caught individuals"), ("Gathof2022#6", "Caught individuals"), ("Tsai2020#1", "amount"),
          ("Viza2023#7", "Suborder"), ("Luo2023#0", "Measure"), ("Cao2024#7", "Locomotion"),
-         ("Normandin2017#12", "Social"), ("Torok2022#8", "(no name, column 1)"), ("Dejean2019#1", "Occurrences")]
+         ("Normandin2017#12", "Social"), ("Torok2022#8", "(no name, column 1)"), ("Dejean2019#1", "Occurrences"),
+         ("Viza2023#8", "Suborder"), ("Wallon2024#24", "Class"), ("Wallon2024#30", "Class"),
+         ("Brant2021#0", "Intertegular distance"), ("Heiva2013#0", "FG")]
 
 
 def right(tag, lab):
