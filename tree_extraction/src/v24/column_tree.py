@@ -412,8 +412,11 @@ _BINOMIAL = re.compile(r"^[A-Z][a-z]+(?:\s*\(=?[^)]*\))?\s+(?:[a-z-]*(?:us|um|a|
 _SINGLE_LATIN = re.compile(r"^(?:[A-Z][a-z]+|[A-Z]{3,})(?:\s*\([^)]*\))?$")
 _AUTHOR_YEAR = re.compile(r"^[A-Z][A-Za-z'\-]+.*\b(1[7-9]\d\d|20\d\d)\b")
 _YEAR = re.compile(r"\b(1[7-9]\d\d|20\d\d)\b")
+# Endings the naming codes fix to one rank (zoology: -oidea, -idae, -inae, -ini; botany: -aceae). '-ptera' ends insect
+# orders and suborders alike (Hemiptera, Zygoptera), so it is reported without a rank (2026-11-21: 'the Latin order
+# ending' under a 'Suborder' header contradicted the header; Viza2023 t7 / t8).
 _RANK_ENDINGS = [("idae", "family"), ("inae", "subfamily"), ("ini", "tribe"),
-                 ("oidea", "superfamily"), ("ptera", "order"), ("aceae", "plant family")]
+                 ("oidea", "superfamily"), ("ptera", None), ("aceae", "plant family")]
 
 
 def peel(cell: str):
@@ -514,7 +517,7 @@ def facts_text(f) -> str:
         bits.append(f"{f['single_latin']:.0%} are single capitalised words")
     for (end, rank), c in f["endings"].most_common(1):
         if c / n >= 0.3:
-            bits.append(f"{c} of {n} end in -{end} (the Latin {rank} ending)")
+            bits.append(f"{c} of {n} end in -{end}" + (f" (the Latin {rank} ending)" if rank else ""))
     if f["author_year"] >= 0.3:
         bits.append(f"{f['author_year']:.0%} look like a name with a year")
     return (" Cell facts (measured): " + "; ".join(bits) + ".") if bits else ""
