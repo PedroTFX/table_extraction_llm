@@ -135,9 +135,8 @@ PROPERTY_ROLE_4 = {
     "options": {
         "classification": {
             "description": "Its taxonomic classification: the organism's position in biological taxonomy, such as its "
-                           "genus, family, order, class or another formal taxonomic rank. Functional groups, feeding "
-                           "guilds and ecological categories are not taxonomic ranks; they describe characteristics or "
-                           "ways of life.",
+                           "genus, family, order, class or another formal taxonomic rank. Groups defined by how it "
+                           "lives or feeds are not taxonomic ranks: they describe characteristics, its ways of life.",
             "field": "verbatimIdentification",
         },
         "sample_size": {
