@@ -111,6 +111,80 @@ COUNT_PURPOSE = {
 }
 
 
+PROPERTY_CHECK_4 = {
+    "question": "Column '{h}' (values: {values}).{facts} In this table, is the column a characteristic of the row's "
+                "organism, with each cell giving that organism's value?",
+    "options": {
+        "characteristic": {
+            "description": "Yes: the header names something the organism is like, does or uses, or where and when it "
+                           "lives, and each cell gives the row's organism's value of it (a number, a category, a group "
+                           "defined by how it lives or feeds, yes / no or a code).",
+            "field": "measurementType",
+        },
+        "another_role": {
+            "description": "No: the column plays another role in the table: it gives the organism's taxonomic "
+                           "classification, counts the individuals behind the values, says how the values were "
+                           "measured, describes the records or the sampling, or does something else.",
+            "next": "property_role",
+        },
+    },
+}
+
+PROPERTY_ROLE_4 = {
+    "question": "Column '{h}' (values: {values}).{facts} What role does it play in the table?",
+    "options": {
+        "classification": {
+            "description": "Its taxonomic classification: the organism's position in biological taxonomy, such as its "
+                           "genus, family, order, class or another formal taxonomic rank. Functional groups, feeding "
+                           "guilds and ecological categories are not taxonomic ranks; they describe characteristics or "
+                           "ways of life.",
+            "field": "verbatimIdentification",
+        },
+        "sample_size": {
+            "description": "How many individuals, records or measurements another value of the row rests on.",
+            "field": "sampleSizeValue",
+        },
+        "method": {
+            "description": "How a value of the row was measured or obtained: the method, the instrument, the formula "
+                           "or the way it was scored.",
+            "field": "measurementMethod",
+        },
+        "records": {
+            "description": "Something about the individuals recorded or the sampling: their sex, stage or social "
+                           "role, or the place, date, protocol or conditions of the sampling.",
+            "next": "record_context",
+        },
+        "other_or_unclear": {
+            "description": "Another role, or the table does not make its role clear: none of the above.",
+            "field": "(set by build: the shortcut's own answer)",
+        },
+    },
+}
+
+COUNT_PURPOSE_4 = {
+    "question": "Column '{h}' (values: {values}).{facts} The column gives counts. What role does the count play in "
+                "this table?",
+    "options": {
+        "sampling_outcome": {
+            "description": "A result of the sampling: the count itself is reported as what the study's sampling "
+                           "found: how many individuals or occurrences of the organism were found, caught or seen at "
+                           "its sites, plots, samples or dates, or in total.",
+            "field": None,
+        },
+        "sample_size": {
+            "description": "A sample size: the count tells how many individuals, observations or records support "
+                           "another value or measurement reported in the same row.",
+            "field": "sampleSizeValue",
+        },
+        "characteristic": {
+            "description": "A characteristic of the organism given as a number: how many of something it has, makes "
+                           "or forms (individuals in a colony, eggs in a clutch, teeth on a jaw, generations a year).",
+            "field": "measurementType",
+        },
+    },
+}
+
+
 def scope(record_field):
     return {
         "question": "Column '{h}' (values: {values}).{facts} The column gives a place, coordinates, a time or "
@@ -133,7 +207,12 @@ def scope(record_field):
 
 
 def build(changes):
-    """NODES with the listed changes applied to a copy of the adopted tree."""
+    """NODES with the listed changes applied to a copy of the adopted tree. Round 3's codes: A, B (= Bk + Bn), C, D,
+    F. Round 4's: Bk (kind's classification sentence alone), Bn (the names part of B), Bt (Bn plus one sentence on
+    names inside a table of characteristics), C4 (count_purpose narrowed), A4 (property_check for the shortcut only)."""
+    changes = set(changes)
+    if "B" in changes:
+        changes |= {"Bk", "Bn"}
     n = copy.deepcopy(ct.NODES)
     kind = _opt(n, "kind", "organism_property")
     anchor = "(that is about the sampling)"
@@ -158,10 +237,11 @@ def build(changes):
         mm = _opt(n, "record_context", "measurement_method")
         assert mm["description"].startswith("How the VALUE was measured"), mm["description"][:60]
         mm["description"] = METHOD
-    if "B" in changes:
+    if "Bk" in changes:
         kind["description"] = _sub(kind["description"], "and its classification (family, order), which is a name.",
                                    "and its classification at any rank (including genus, family, order and class), "
                                    "which is a name.", "B kind")
+    if "Bn" in changes or "Bt" in changes:
         hr = _opt(n, "organism_name", "higher_rank")
         hr["description"] = _sub(hr["description"], "A group that the row's own organism belongs to: its family, its "
                                  "order, or another rank above the genus.",
@@ -196,6 +276,24 @@ def build(changes):
             "A characteristic: the cells are values of something the organism is like, does or uses (a category, a "
             "state, a habit, a group defined by how it lives or feeds, a part of the body, a stage, yes / no), even "
             "when they are capitalised or look Latin.")
+        if "Bt" in changes:
+            it["question"] += (" A column that names the group each row's organism belongs to is a column of names "
+                               "even when the table's other columns give characteristics.")
+    if "A4" in changes:
+        op = n["organism_property"]
+        assert op.get("otherwise") == "measurementType" and op.get("only_if_table_kind") == ["long_format"]
+        previous = op.pop("otherwise")          # what the shortcut gave: kept when the role stays unclear
+        op["otherwise_next"] = "property_check"
+        n["property_check"] = copy.deepcopy(PROPERTY_CHECK_4)
+        n["property_role"] = copy.deepcopy(PROPERTY_ROLE_4)
+        n["property_role"]["options"]["other_or_unclear"]["field"] = previous
+    if "C4" in changes:
+        cs = n["counts_or_statistics"]["options"]
+        for o in ("abundance", "sample_size"):
+            assert "field" in cs[o], o
+            del cs[o]["field"]
+            cs[o]["next"] = "count_purpose"
+        n["count_purpose"] = copy.deepcopy(COUNT_PURPOSE_4)
     if "C" in changes:
         cs = n["counts_or_statistics"]["options"]
         for o in ("abundance", "sample_size"):
@@ -221,6 +319,12 @@ def build(changes):
 ALL = ("A", "B", "C", "D", "F")
 VARIANTS = {f"tree:{c}.3": ("nodes", (c,)) for c in ALL}
 VARIANTS["tree:all.3"] = ("nodes", ALL)
+# round 4 (the user, 2026-11-21): B kept with its kind sentence tracked apart, C narrowed, A as a check of the shortcut
+# only; D and F dropped. BCA.4 is run only if A.4 earns it alone.
+VARIANTS.update({"tree:K.4": ("nodes", ("Bk",)), "tree:B0.4": ("nodes", ("Bn",)), "tree:B.4": ("nodes", ("Bt",)),
+                 "tree:C.4": ("nodes", ("C4",)), "tree:BC.4": ("nodes", ("Bt", "C4")), "tree:A.4": ("nodes", ("A4",)),
+                 "tree:BCA.4": ("nodes", ("Bt", "C4", "A4"))})
+ROUND4 = ["tree:K.4", "tree:B0.4", "tree:B.4", "tree:C.4", "tree:BC.4", "tree:A.4"]
 
 # example phrases new in this revision, checked against the 271 papers before the test
 EXAMPLES = ["individuals in a colony", "eggs in a clutch", "teeth on a jaw", "generations a year",

@@ -8,11 +8,13 @@ variant against 'old.3' (the adopted tree read again in the same session), tunin
   papers         Gathof2022, Ji2024, Luo2023, Viza2023, Wallon2024: every column whose path changed (the user's list)
   cost           questions on each column's chosen path, old and new (the explored runner-up branches come on top)
 
-    python tree_ab_report.py      -> output/prompt_ab/TREE_AB_3.txt
+    python tree_ab_report.py [round]      (default 3) -> output/prompt_ab/TREE_AB_<round>.txt
+Round 4 adds the cases the user keeps in view (TRACK), whatever they did.
 """
 import collections
 import json
 import random
+import sys
 
 import _paths
 import column_variants as cv
@@ -20,8 +22,11 @@ import column_variants as cv
 OUT = _paths.OUTPUT / "prompt_ab"
 SPLIT = json.loads((_paths.SUB / "output/eval_split/split_v15.json").read_text(encoding="utf-8"))["assign"]
 TRAITS = {"measurementType", "measurementValue"}
-BASE = "old.3"
 LOOK = ("Gathof2022", "Ji2024", "Luo2023", "Viza2023", "Wallon2024")
+# (table, header start): unresolved after round 3, followed in every round from 4 on (the user, 2026-11-21)
+TRACK = [("Gathof2022#5", "Caught individuals"), ("Gathof2022#6", "Caught individuals"), ("Tsai2020#1", "amount"),
+         ("Viza2023#7", "Suborder"), ("Luo2023#0", "Measure"), ("Cao2024#7", "Locomotion"),
+         ("Normandin2017#12", "Social"), ("Torok2022#8", "(no name, column 1)"), ("Dejean2019#1", "Occurrences")]
 
 
 def right(tag, lab):
@@ -32,14 +37,15 @@ def asked(path):
     return sum(1 for s in (path or "").split(" > ") if s and not s.startswith("code:") and ":by table kind" not in s)
 
 
-def main():
+def main(rnd="3"):
+    BASE = f"old.{rnd}"
     res = json.loads((OUT / "results.json").read_text(encoding="utf-8"))
-    L = ["Column tree, structural revision (column_variants.py), each variant against old.3 (the adopted tree read "
+    L = [f"Column tree, structural revision (column_variants.py), round {rnd}: each variant against {BASE} (the adopted tree read "
          "again in the same session). Tuning papers only. 'used' = the GT draws on the column (reliable key); 'none' "
          "= the GT does not use it (weak key, never the score).", ""]
     D = []
-    for v in cv.VARIANTS:
-        c, used_flips, wrong_before, none_flips, look = collections.Counter(), [], [], [], []
+    for v in [x for x in cv.VARIANTS if x.endswith(f".{rnd}")]:
+        c, used_flips, wrong_before, none_flips, look, track = collections.Counter(), [], [], [], [], []
         for p, r in sorted(res.items()):
             if SPLIT.get(p) not in ("dev", "held_a"):
                 continue
@@ -68,6 +74,8 @@ def main():
                         wrong_before.append(row)
                     if p in LOOK and a != b:
                         look.append(row)
+                    if any(e["table"] == tt and h.startswith(hh) for tt, hh in TRACK):
+                        track.append(row)
         L.append(f"== {v}")
         for side in ("used", "none"):
             n = c[(side, "n")]
@@ -82,10 +90,11 @@ def main():
         sample = random.Random(20261120).sample(none_flips, min(40, len(none_flips)))
         D += [f"## none columns that changed: {len(none_flips)}; a fixed sample of {len(sample)} for reading by hand"]
         D += sample
-        D += [f"## {', '.join(LOOK)}: every column whose path changed: {len(look)}"] + look + [""]
-    (OUT / "TREE_AB_3.txt").write_text("\n".join(L + ["", "DETAIL", ""] + D) + "\n", encoding="utf-8")
+        D += [f"## {', '.join(LOOK)}: every column whose path changed: {len(look)}"] + look
+        D += [f"## tracked cases (unresolved after round 3), changed or not: {len(track)}"] + track + [""]
+    (OUT / f"TREE_AB_{rnd}.txt").write_text("\n".join(L + ["", "DETAIL", ""] + D) + "\n", encoding="utf-8")
     print("\n".join(L))
 
 
 if __name__ == "__main__":
-    main()
+    main(*sys.argv[1:2])
