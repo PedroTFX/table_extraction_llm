@@ -34,6 +34,12 @@ def _opt(nodes, node, opt):
     return nodes[node]["options"][opt]
 
 
+# round 5 (the user, 2026-11-21): under B0.4 the wider higher_rank took Fontanilla2019's site columns of presence marks
+# ('X' under '3600 3605') as group names once cell_shape had misread them as Latin names. The guard tests the cell
+# values themselves, at the one decision point; cell_shape's misreading stays a diagnostic of its own.
+HIGHER_RANK_GUARD = ("The cell values themselves must be names of taxa at such a rank: presence or absence marks and "
+                     "other symbols (such as X, + or ✓) are not names of taxa.")
+
 METHOD = ("How the VALUE was measured or obtained: the method, the instrument, the formula or the way it was scored "
           "(for example 'dial gauge', 'water displacement').")
 
@@ -218,10 +224,13 @@ def scope(record_field):
 def build(changes):
     """NODES with the listed changes applied to a copy of the adopted tree. Round 3's codes: A, B (= Bk + Bn), C, D,
     F. Round 4's: Bk (kind's classification sentence alone), Bn (the names part of B), Bt (Bn plus one sentence on
-    names inside a table of characteristics), C4 (count_purpose narrowed), A4 (property_check for the shortcut only)."""
+    names inside a table of characteristics), C4 (count_purpose narrowed), A4 (property_check for the shortcut only).
+    Round 5's: Bg (Bn plus the guard on higher_rank: the cell values must be names of taxa, marks are not)."""
     changes = set(changes)
     if "B" in changes:
         changes |= {"Bk", "Bn"}
+    if "Bg" in changes:                         # round 5: the guard is tested on top of B0's names part
+        changes |= {"Bn"}
     n = copy.deepcopy(ct.NODES)
     kind = _opt(n, "kind", "organism_property")
     anchor = "(that is about the sampling)"
@@ -288,6 +297,9 @@ def build(changes):
         if "Bt" in changes:
             it["question"] += (" A column that names the group each row's organism belongs to is a column of names "
                                "even when the table's other columns give characteristics.")
+        if "Bg" in changes:
+            hr["description"] = _sub(hr["description"], "an order or a class).",
+                                     "an order or a class). " + HIGHER_RANK_GUARD, "Bg higher_rank")
     if "A4" in changes:
         op = n["organism_property"]
         assert op.get("otherwise") == "measurementType" and op.get("only_if_table_kind") == ["long_format"]
@@ -340,6 +352,11 @@ VARIANTS.update({"tree:K.4": ("nodes", ("Bk",)), "tree:B0.4": ("nodes", ("Bn",))
                  "tree:C.4": ("nodes", ("C4",)), "tree:BC.4": ("nodes", ("Bt", "C4")), "tree:A.4": ("nodes", ("A4",)),
                  "tree:BCA.4": ("nodes", ("Bt", "C4", "A4"))})
 ROUND4 = ["tree:K.4", "tree:B0.4", "tree:B.4", "tree:C.4", "tree:BC.4", "tree:A.4"]
+# round 5 (the user, 2026-11-21): B0.4 is the candidate; its guard against marks read as group names is tested against
+# B0 alone and the adopted tree ('old.5'), all in one session, with the neutral -ptera fact of column_tree.py
+VARIANTS.update({"tree:B0.5": ("nodes", ("Bn",)), "tree:B0g.5": ("nodes", ("Bg",))})
+ROUND5 = ["tree:B0.5", "tree:B0g.5"]
+CONTROL = {"tree:B0g.5": "tree:B0.5"}           # the guard's own effect: read against B0 in the same session
 
 # example phrases new in this revision, checked against the 271 papers before the test
 EXAMPLES = ["individuals in a colony", "eggs in a clutch", "teeth on a jaw", "generations a year",
