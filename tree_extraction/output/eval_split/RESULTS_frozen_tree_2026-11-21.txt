@@ -1,0 +1,19 @@
+##### the frozen column tree (8007174e) against all.2 (output_fresh_109, 2026-11-19): the 109 set, tuning papers (dev + held_a), tables only, the same scorer
+reports: new 82 of 82, old 82 of 82
+dev:
+  new 54 papers  mean F1 0.609  micro F1 0.824  R 0.771  P 0.884  zero 8, under .5 12, .5-.9 16, .9+ 18
+  old 54 papers  mean F1 0.596  micro F1 0.794  R 0.743  P 0.853  zero 8, under .5 13, .5-.9 16, .9+ 17
+held_a:
+  new 28 papers  mean F1 0.826  micro F1 0.928  R 0.897  P 0.960  zero 0, under .5 4, .5-.9 7, .9+ 17
+  old 28 papers  mean F1 0.825  micro F1 0.928  R 0.897  P 0.961  zero 0, under .5 4, .5-.9 7, .9+ 17
+tuning:
+  new 82 papers  mean F1 0.683  micro F1 0.867  R 0.823  P 0.917  zero 8, under .5 16, .5-.9 23, .9+ 35
+  old 82 papers  mean F1 0.674  micro F1 0.851  R 0.807  P 0.899  zero 8, under .5 17, .5-.9 23, .9+ 34
+papers up 3, down 0, the same 79
+  TP 122350 -> 124795
+  FP 13690 -> 11322
+  FN 29247 -> 26802
+tuning papers that moved (F1 old -> new; TP, FP, FN change):
+  Odanaka2019                held_a  0.772 -> 0.800   TP +0  FP -2  FN +0
+  Guareschi2015              dev     0.080 -> 0.141   TP +61  FP +18  FN -61
+  Teder2020                  dev     0.327 -> 0.984   TP +2401  FP -2401  FN -2401
