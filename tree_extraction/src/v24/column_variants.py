@@ -329,5 +329,8 @@ ROUND4 = ["tree:K.4", "tree:B0.4", "tree:B.4", "tree:C.4", "tree:BC.4", "tree:A.
 EXAMPLES = ["individuals in a colony", "eggs in a clutch", "teeth on a jaw", "generations a year",
             "the way it was scored", "altitudes it is known from", "months or seasons when it is active",
             "Halvorsen, 1931", "including a tribe", "how many individuals a value rests on"]
+# round 4 (checked 2026-11-21): "formal taxonomic rank", "position in biological taxonomy", "ways of life", "a column of
+# names", "support another value", "groups defined by how it lives or feeds": none printed. "feeding guilds" (12
+# papers) and "functional groups" (65) are the field's own words and were not used.
 # replaced after the check: "body segments", "known range" (each printed in a Jakub paper), "season of activity"
 # (printed in Figueroa2021, a tuning paper; the adopted kind text carries it too, left as it is for this test)
