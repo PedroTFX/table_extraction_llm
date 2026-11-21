@@ -22,7 +22,8 @@ sending the whole template every time.
                         words | author + year | everyday words | codes | numbers
       is_taxon          (single Latin words only) organisms/groups or not?
       organism_name     the row's organism / a higher rank / an associated
-                        organism / a code / not a name after all
+                        organism / a code / the name's author and year /
+                        not a name after all
       kind              organism property | record or sampling context |
                         about the numbers | other
       <kind>            the specific field, e.g. record context -> sex / life
@@ -110,7 +111,8 @@ NODES = {
             },
             "single_latin_words": {
                 "description": "Single scientific names of one word, often capitalised or in capitals: a genus, or "
-                               "a group above it such as a family or an order ('Velora', 'Tamnidae', 'ORSIFORMES').",
+                               "a group above it at any rank, such as a family, an order or a class ('Velora', "
+                               "'Tamnidae', 'ORSIFORMES').",
                 "next": "is_taxon",
             },
             "author_year": {
@@ -135,23 +137,25 @@ NODES = {
             },
         },
     },
+    # is_taxon, organism_name and single_latin_words as revised 2026-11-21 (column_variants.py B0 + the not_a_name
+    # mark: prompt_ab rounds 4-6, tuning 96.3% -> 96.7% on the reliable key, Class x2 and Suborder t8 fixed, no loss)
     "is_taxon": {
-        "question": "Column '{h}' (values: {values}).{facts} Are these the NAMES of organisms or of groups of "
-                    "organisms? Test: read a cell as '<the row's organism> has {h} = <cell>'. If that states a fact "
-                    "about the organism (what it is like or what it does), the cells are values of a "
-                    "characteristic, not names.",
+        "question": "Column '{h}' (values: {values}).{facts} Do the cells contain scientific names rather than values "
+                    "of a characteristic of the organism? A name may identify the row's organism, a group it belongs "
+                    "to at any rank, or a different organism linked to it, such as a host or a prey. A taxonomic "
+                    "group stays a name even though belonging to it is also true of the organism.",
         "options": {
             "yes": {
-                "description": "Yes: each cell names a taxon. The organism's genus, a group it belongs to (a "
-                               "family, an order or another rank, often recognisable by its ending, such as -idae "
-                               "for a family of animals or -aceae for a family of plants), or another organism "
-                               "linked to it such as a host or a prey.",
+                "description": "Names: each cell is a scientific name: the organism's genus, a group it belongs to "
+                               "at any rank above the genus (including a tribe, a family, a suborder, an order or a "
+                               "class; family names often end in -idae for animals or -aceae for plants), or another "
+                               "organism linked to it, such as a host or a prey.",
                 "next": "organism_name",
             },
             "no": {
-                "description": "No: the cells are values of a characteristic of the organism (a category, a state, "
-                               "an amount, a habit, a part of the body, a stage, yes / no), even when they are "
-                               "capitalised or look Latin.",
+                "description": "A characteristic: the cells are values of something the organism is like, does or "
+                               "uses (a category, a state, a habit, a group defined by how it lives or feeds, a part "
+                               "of the body, a stage, yes / no), even when they are capitalised or look Latin.",
                 "next": "kind",
             },
         },
@@ -170,10 +174,10 @@ NODES = {
                 "field": "verbatimIdentification",
             },
             "higher_rank": {
-                "description": "A group that the row's own organism belongs to: its family, its order, or another "
-                               "rank above the genus. The organism of every row belongs to the group named in that "
-                               "row's cell, and several rows can share one group. Also the author and year of the "
-                               "organism's name.",
+                "description": "A group that the row's own organism belongs to, at any rank above the genus "
+                               "(including a tribe, a subfamily, a family, a suborder, an order or a class). The "
+                               "organism of every row belongs to the group named in that row's cell, and several "
+                               "rows can share one group.",
                 "field": "verbatimIdentification",
             },
             "associated_organism": {
@@ -188,8 +192,17 @@ NODES = {
                                "'Vel.bre' for Velora brevis).",
                 "field": None,
             },
+            "name_author": {
+                "description": "The author and year of the organism's name ('Halvorsen, 1931'), not a name of an "
+                               "organism.",
+                "field": "verbatimIdentification",
+            },
+            # the only exit from here: with a wider higher_rank, a column cell_shape misread as names (presence marks
+            # under site headers) had nowhere else to go until a mark was named (round 6, 2026-11-21)
             "not_a_name": {
-                "description": "Not names of organisms after all: a characteristic, a category, a place or a code.",
+                "description": "Not names of organisms after all: the cells hold something else, such as a "
+                               "characteristic, a category, a place, a code, or a mark indicating presence or absence "
+                               "(e.g. X, + or ✓).",
                 "next": "kind",
             },
         },

@@ -18,6 +18,10 @@ output/column_tree_bench/tree_proposed_2026-11-20.txt). Each change is built on 
   F  how a value was measured or obtained, named the same way in kind, record_context and property_role
 The table-level organism check (E) is not part of this test (the user, 2026-11-20).
 
+Frozen 2026-11-21 (the user's decision rule after round 6): Bn + Bx are now column_tree.py's own texts. Every change
+here was built on the tree as it stood before that (commit 77ea6456); build() with a B code now fails its text checks
+by design, since the texts it replaces are gone.
+
     build({"A", "B"}) -> NODES          VARIANTS: the prompt_ab.py entries, session 3
 """
 import copy
