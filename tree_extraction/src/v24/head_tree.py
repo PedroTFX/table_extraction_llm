@@ -73,6 +73,8 @@ HEAD_ROWS = 12
 MAX_WINDOWS = 3
 CHUNK_COLS = 10
 CELL_W = (40, 20, 12)              # cell width by state size (smaller when a prompt is too long)
+ROW_VIEW_COLS = None               # head_wide.py only: the whole-row view shows the first N columns, for a table too
+                                   # wide for nimble's context; None = every column (every table read before)
 BODY_ASK_MAX = 40
 OUT = _paths.OUTPUT / "head_tree"
 # experiment switches, one change per run (main: --empty, --spec-labels, --row-label-v2)
@@ -217,16 +219,17 @@ def render_row(grid, r, cols, w=CELL_W[0]):
     return " | ".join(p for p in parts if p is not None)
 
 
-def compact_row(grid, r, w=CELL_W[0]):
+def compact_row(grid, r, w=CELL_W[0], ncols=None):
     """Whole-row view: only the filled cells, each with its column number(s);
-    with EMPTY_STRETCHES the empty columns too, as ranges ('c1-11 empty')."""
+    with EMPTY_STRETCHES the empty columns too, as ranges ('c1-11 empty').
+    ncols: only the first ncols columns (head_wide.py); None = all."""
     parts, gap = [], []
 
     def flush():
         if gap:
             parts.append(f"c{gap[0]}" + (f"-{gap[-1]}" if len(gap) > 1 else "") + " empty")
             gap.clear()
-    for c in range(grid.ncols):
+    for c in range(grid.ncols if ncols is None else ncols):
         x = grid.at(r, c)
         if not x or not str(x.text or "").strip():
             if EMPTY_STRETCHES:
@@ -254,8 +257,12 @@ def rows_state(grid, rows, marks=None, tail=""):
     def state(width):
         intro = (INTRO_ROWS_EMPTY if EMPTY_STRETCHES else INTRO_ROWS).format(
             n=grid.ncols, last=grid.ncols - 1)
+        shown = grid.ncols if ROW_VIEW_COLS is None else min(grid.ncols, ROW_VIEW_COLS)
+        if shown < grid.ncols:
+            intro += (f" The table is too wide to show whole: only columns c0 to c{shown - 1} are "
+                      f"shown; the columns after c{shown - 1} are left out, not empty.")
         lines = [f"row {r}" + (f" ({marks[r]})" if r in marks else "")
-                 + f": {compact_row(grid, r, width)}" for r in rows]
+                 + f": {compact_row(grid, r, width, shown)}" for r in rows]
         return intro + "\n\n" + "\n".join(lines) + (f"\n\n{tail}" if tail else "")
     return state
 
