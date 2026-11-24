@@ -1,0 +1,460 @@
+Legend calibration: gemma4:e4b-it-qat, run 2026-11-24_2345, gold v3 frozen 2026-11-24
+59 source units, 91 gold mappings, 165 candidate associations.
+The set is stratified and holds positive controls: these are calibration and failure-analysis numbers, not estimates of corpus-wide precision. Each unit counts once (repeated copies of a legend count apart).
+
+====================================================================================================
+A. RAW: the model's entries as returned
+====================================================================================================
+1. UNIT RECOGNITION (does the unit define codes?)
+  all units: precision 0.55 (22/40), recall 0.96 (22/23); true negatives 18
+  code legend            recognised 16/17
+  variable abbreviation  recognised 2/2
+  figure key             recognised 5/5
+  none                   wrongly recognised 18/36
+  by structure (TP FP FN TN):
+    prose            2   9   0   5
+    caption          7   1   0   4
+    numbered list    4   0   0   3
+    head cell        4   1   1   1
+    footnote         3   0   0   0
+    table row        2   7   0   5
+
+2. MAPPING EXTRACTION (each gold code -> term pair; exact = the wording of the unit the model got, up to case, spacing and surrounding punctuation; wrong pairing = the term of another code)
+  all                     91 pairs: exact 68, cross-source equivalent 0, other wording 7, wrong pairing 3, missing 13
+  code legend             68 pairs: exact 58, cross-source equivalent 0, other wording 2, wrong pairing 3, missing 5
+  variable abbreviation   10 pairs: exact 5, cross-source equivalent 0, other wording 0, wrong pairing 0, missing 5
+  figure key              13 pairs: exact 5, cross-source equivalent 0, other wording 5, wrong pairing 0, missing 3
+  repeated legends: 17/17 codes read alike (exact or adjudicated equivalent) in every copy
+  kind of the matched pairs: same kind 60, code legend -> variable abbreviation 14, figure key -> variable abbreviation 4
+
+3. VARIABLE ATTRIBUTION (matched pairs; 'shares a word' is a first pass, the rest listed for reading)
+  shares a word 40, differs 38
+
+4. TARGET ASSOCIATION (each candidate column the selector proposed: does the unit decode it? code set = the model's codes that the column holds)
+  with the disputed-header cases: precision 0.34 (27/79), recall 0.87 (27/31); true negatives 82; right code set on 15/27 true positives
+    code legend            TP  23 FP  10 FN   4 TN  12
+    variable abbreviation  TP   4 FP   0 FN   0 TN   0
+    figure key             TP   0 FP  10 FN   0 TN   7
+    none                   TP   0 FP  32 FN   0 TN  63
+  without the disputed-header cases: precision 0.33 (26/78), recall 0.87 (26/30); true negatives 82; right code set on 15/26 true positives
+    code legend            TP  23 FP  10 FN   4 TN  12
+    variable abbreviation  TP   3 FP   0 FN   0 TN   0
+    figure key             TP   0 FP  10 FN   0 TN   7
+    none                   TP   0 FP  32 FN   0 TN  63
+
+6. UNSUPPORTED EXTRACTION (pairs the model returned that are not gold mappings of the unit; 'printed' = code and term both printed in the unit)
+  98 pairs: definition unit / not printed 9, definition unit / printed 16, non-definition unit / not printed 7, non-definition unit / printed 66; of all of them, term = code 54
+
+====================================================================================================
+B. INVENTORY CHECKS: strip_own_code + verify_a (code and term printed within the unit), as the inventory already applies
+====================================================================================================
+1. UNIT RECOGNITION (does the unit define codes?)
+  all units: precision 0.55 (22/40), recall 0.96 (22/23); true negatives 18
+  code legend            recognised 16/17
+  variable abbreviation  recognised 2/2
+  figure key             recognised 5/5
+  none                   wrongly recognised 18/36
+  by structure (TP FP FN TN):
+    prose            2   9   0   5
+    caption          7   1   0   4
+    numbered list    4   0   0   3
+    head cell        4   1   1   1
+    footnote         3   0   0   0
+    table row        2   7   0   5
+
+2. MAPPING EXTRACTION (each gold code -> term pair; exact = the wording of the unit the model got, up to case, spacing and surrounding punctuation; wrong pairing = the term of another code)
+  all                     91 pairs: exact 61, cross-source equivalent 0, other wording 7, wrong pairing 3, missing 20
+  code legend             68 pairs: exact 56, cross-source equivalent 0, other wording 2, wrong pairing 3, missing 7
+  variable abbreviation   10 pairs: exact 0, cross-source equivalent 0, other wording 0, wrong pairing 0, missing 10
+  figure key              13 pairs: exact 5, cross-source equivalent 0, other wording 5, wrong pairing 0, missing 3
+  repeated legends: 17/17 codes read alike (exact or adjudicated equivalent) in every copy
+  kind of the matched pairs: same kind 53, code legend -> variable abbreviation 14, figure key -> variable abbreviation 4
+
+3. VARIABLE ATTRIBUTION (matched pairs; 'shares a word' is a first pass, the rest listed for reading)
+  shares a word 38, differs 33
+
+4. TARGET ASSOCIATION (each candidate column the selector proposed: does the unit decode it? code set = the model's codes that the column holds)
+  with the disputed-header cases: precision 0.35 (27/77), recall 0.87 (27/31); true negatives 84; right code set on 15/27 true positives
+    code legend            TP  23 FP   8 FN   4 TN  14
+    variable abbreviation  TP   4 FP   0 FN   0 TN   0
+    figure key             TP   0 FP  10 FN   0 TN   7
+    none                   TP   0 FP  32 FN   0 TN  63
+  without the disputed-header cases: precision 0.34 (26/76), recall 0.87 (26/30); true negatives 84; right code set on 15/26 true positives
+    code legend            TP  23 FP   8 FN   4 TN  14
+    variable abbreviation  TP   3 FP   0 FN   0 TN   0
+    figure key             TP   0 FP  10 FN   0 TN   7
+    none                   TP   0 FP  32 FN   0 TN  63
+
+6. UNSUPPORTED EXTRACTION (pairs the model returned that are not gold mappings of the unit; 'printed' = code and term both printed in the unit)
+  85 pairs: definition unit / printed 16, non-definition unit / not printed 1, non-definition unit / printed 68; of all of them, term = code 54
+
+====================================================================================================
+C. B + TERM IS NOT THE CODE (a candidate check: drops 'PA' = 'PA')
+====================================================================================================
+1. UNIT RECOGNITION (does the unit define codes?)
+  all units: precision 0.73 (22/30), recall 0.96 (22/23); true negatives 28
+  code legend            recognised 16/17
+  variable abbreviation  recognised 2/2
+  figure key             recognised 5/5
+  none                   wrongly recognised 8/36
+  by structure (TP FP FN TN):
+    prose            2   5   0   9
+    caption          7   0   0   5
+    numbered list    4   0   0   3
+    head cell        4   1   1   1
+    footnote         3   0   0   0
+    table row        2   2   0  10
+
+2. MAPPING EXTRACTION (each gold code -> term pair; exact = the wording of the unit the model got, up to case, spacing and surrounding punctuation; wrong pairing = the term of another code)
+  all                     91 pairs: exact 61, cross-source equivalent 0, other wording 7, wrong pairing 3, missing 20
+  code legend             68 pairs: exact 56, cross-source equivalent 0, other wording 2, wrong pairing 3, missing 7
+  variable abbreviation   10 pairs: exact 0, cross-source equivalent 0, other wording 0, wrong pairing 0, missing 10
+  figure key              13 pairs: exact 5, cross-source equivalent 0, other wording 5, wrong pairing 0, missing 3
+  repeated legends: 17/17 codes read alike (exact or adjudicated equivalent) in every copy
+  kind of the matched pairs: same kind 53, code legend -> variable abbreviation 14, figure key -> variable abbreviation 4
+
+3. VARIABLE ATTRIBUTION (matched pairs; 'shares a word' is a first pass, the rest listed for reading)
+  shares a word 38, differs 33
+
+4. TARGET ASSOCIATION (each candidate column the selector proposed: does the unit decode it? code set = the model's codes that the column holds)
+  with the disputed-header cases: precision 0.48 (27/56), recall 0.87 (27/31); true negatives 105; right code set on 15/27 true positives
+    code legend            TP  23 FP   8 FN   4 TN  14
+    variable abbreviation  TP   4 FP   0 FN   0 TN   0
+    figure key             TP   0 FP  10 FN   0 TN   7
+    none                   TP   0 FP  11 FN   0 TN  84
+  without the disputed-header cases: precision 0.47 (26/55), recall 0.87 (26/30); true negatives 105; right code set on 15/26 true positives
+    code legend            TP  23 FP   8 FN   4 TN  14
+    variable abbreviation  TP   3 FP   0 FN   0 TN   0
+    figure key             TP   0 FP  10 FN   0 TN   7
+    none                   TP   0 FP  11 FN   0 TN  84
+
+6. UNSUPPORTED EXTRACTION (pairs the model returned that are not gold mappings of the unit; 'printed' = code and term both printed in the unit)
+  31 pairs: definition unit / printed 15, non-definition unit / not printed 1, non-definition unit / printed 15; of all of them, term = code 0
+
+====================================================================================================
+5. SELECTOR RECALL (from the gold; the model never received these)
+  target columns: 31 decoded columns proposed, 15 missed -> 0.67
+  definition units: 23 proposed, 2 never proposed -> 0.92
+  missed target: Cappellari2022#p63 -> t0c0 'Category' (a column of variable names)
+  unit boundary: Cappellari2022#p63: the PDF reader splits the Fig. 4 caption at a page break: the unit ends at 'Apid' and the rest ('Apidae, Coll Colletidae, Cono Conopidae, ...') is a separate paragraph after a body sentence; gold restricted to the supplied text ('Apid' has no term in it)
+  missed target: Cecala2021#p134 -> t1c1 '2016 / Spring' (season column of the schedule (Table S2))
+  missed target: Cecala2021#p134 -> t1c2 '2016 / Summer' (season column of the schedule (Table S2))
+  missed target: Cecala2021#p134 -> t1c3 '2016 / Autumn' (season column of the schedule (Table S2))
+  missed target: Cecala2021#p134 -> t1c4 '2017 / Spring' (season column of the schedule (Table S2))
+  missed target: Cecala2021#p134 -> t1c5 '2017 / Summer' (season column of the schedule (Table S2))
+  missed target: Cecala2021#p134 -> t1c6 '2017 / Autumn' (season column of the schedule (Table S2))
+  missed target: Cecala2021#p134 -> t1c7 '2018 / Spring' (season column of the schedule (Table S2))
+  missed target: Eckert2023#t4r134 -> t4c3 'Habitat position' (the habitat column of the same table; header words not in the footnote and the c)
+  missed target: Eckert2023#t4r70 -> t4c3 'Habitat position' (the habitat column of the same table; header words not in the footnote and the c)
+  missed target: Viza2023#t5r87 -> t5c3 'Predictor Variables / Bio3' (a predictor column of the table; the codes are symbols R3abc does not read as co)
+  missed target: Viza2023#t5r87 -> t5c4 'Predictor Variables / Bio4' (a predictor column of the table; the codes are symbols R3abc does not read as co)
+  missed target: Viza2023#t5r87 -> t5c5 'Predictor Variables / Bio8' (a predictor column of the table; the codes are symbols R3abc does not read as co)
+  missed target: Viza2023#t5r87 -> t5c6 'Predictor Variables / Bio9' (a predictor column of the table; the codes are symbols R3abc does not read as co)
+  missed target: Viza2023#t5r87 -> t5c7 'Predictor Variables / Bio15' (a predictor column of the table; the codes are symbols R3abc does not read as co)
+  unit never proposed: Cao2024 [caption] 'Fig. 3. Percentage abundance of chironomid taxa'
+  unit never proposed: Espinosa2023 [caption] 'Fig. 6 Results of the Fourth-corner analysis'
+
+====================================================================================================
+DETAIL, view A (raw)
+====================================================================================================
+  unit missed: Ji2024#t0r0c3 [head cell] code legend
+
+2. wording and pairing (for reading)
+  other wording: Cappellari2022#p63 'a': gold 'proboscis length (Model 3)' / model 'proboscis length'
+  other wording: Cappellari2022#p63 'b': gold 'body size (Model 4)' / model 'body size'
+  other wording: Cappellari2022#p63 'c': gold 'type of foraging range (Model 5)' / model 'type of foraging range'
+  other wording: Cappellari2022#p63 'd': gold 'taxonomic family (Model 6)' / model 'taxonomic family'
+  other wording: Cecala2021#p134 '1': gold 'nursery was sampled' / model 'indicates that nursery was sampled'
+  other wording: Cecala2021#p134 '0': gold 'not sampled due to logistical reasons' / model 'indicates it was not sampled due to logistical reasons'
+  other wording: Eckert2023#p47 'b': gold 'Zululand' / model 'Zululand, KwaZulu-Natal, South Africa'
+  wrong pairing: Tonelli2021#p143 '1': gold 'Nest composed of a single brood mass located within the excrement' / model 'Nest composed of several brood masses located within the excrement' (the term of '2')
+  wrong pairing: Tonelli2021#p143 '2': gold 'Nest composed of several brood masses located within the excrement' / model 'Nest composed of a single brood mass located underground in a simple n' (the term of '3')
+  wrong pairing: Tonelli2021#p143 '3': gold 'Nest composed of a single brood mass located underground in a simple n' / model 'Nest composed of several brood masses located underground in a simple ' (the term of '4')
+
+2. missing pairs
+  Cappellari2022#p63 'Apis' = 'honeybee abundance'
+  Cappellari2022#p63 'Temp' = 'temperature'
+  Ji2024#t0r0c3 'E' = 'Effect'
+  Ji2024#t0r0c3 'R' = 'response'
+  Nelson2020#p73 'FRic' = 'functional richness'
+  Nelson2020#p73 'FEve' = 'functional evenness'
+  Nelson2020#p73 'FDis' = 'functional dispersion'
+  Pessoa2017#p51 'Area 1' = 'Conceicão Farm'
+  Pessoa2017#p51 'Area 2' = 'Alvorada Farm'
+  Pessoa2017#p51 'Area 3' = 'RPPN SESC Pantanal'
+  Tonelli2021#p143 '4' = 'Nest composed of several brood masses located underground in a simple '
+  Tonelli2021#p143 '6' = 'Nest composed of several brood masses per chamber, located underground'
+  Viza2023#t5r87 'x' = 'variables selected'
+
+3. variables that differ or are not given
+  Cappellari2022#p63 'ProbS': gold 'trait category level' / model 'proboscis similar to the honeybee'
+  Cappellari2022#p63 'ProbL': gold 'trait category level' / model 'proboscis longer than the honeybee'
+  Cappellari2022#p63 'BodyS': gold 'trait category level' / model 'body size similar to the honeybee'
+  Cappellari2022#p63 'BodyL': gold 'trait category level' / model 'body size larger than the honeybee'
+  Cappellari2022#p63 'For_NC': gold 'trait category level' / model 'non-central forager'
+  Cappellari2022#p63 'a': gold 'figure panel' / model 'proboscis length'
+  Cappellari2022#p63 'b': gold 'figure panel' / model 'body size'
+  Cappellari2022#p63 'c': gold 'figure panel' / model 'type of foraging range'
+  Cappellari2022#p63 'd': gold 'figure panel' / model 'taxonomic family'
+  Cecala2021#p134 '1': gold 'sampling schedule' / model 'nursery'
+  Cecala2021#p134 '0': gold 'sampling schedule' / model 'nursery'
+  Eckert2023#p47 'a': gold 'figure panel' / model 'focal plantation estates'
+  Eckert2023#p47 'b': gold 'figure panel' / model 'focal plantation estates'
+  Eckert2023#t4r134 'Soil': gold 'habitat position' / model 'Forage strategy'
+  Eckert2023#t4r134 'Litter': gold 'habitat position' / model 'Forage strategy'
+  Eckert2023#t4r134 'Veg': gold 'habitat position' / model 'Forage strategy'
+  Eckert2023#t4r70 'Soil': gold 'habitat position' / model 'Forage strategy'
+  Eckert2023#t4r70 'Litter': gold 'habitat position' / model 'Forage strategy'
+  Eckert2023#t4r70 'Veg': gold 'habitat position' / model 'Forage strategy'
+  Guareschi2015#p122 'A': gold 'figure panel' / model 'grid cells where “gap species” occur'
+  Guareschi2015#p122 'B': gold 'figure panel' / model 'grid cells where “gap species” occur'
+  Jones2015#p67 '0': gold 'mobility points' / model 'species'
+  Jones2015#p67 '1': gold 'mobility points' / model 'species'
+  Jones2015#p67 '2': gold 'mobility points' / model 'species'
+  Tonelli2021#p125 '1': gold 'zygum' / model 'setae'
+  Tonelli2021#p125 '2': gold 'zygum' / model 'setae'
+  Tonelli2021#p125 '3': gold 'zygum' / model 'setae'
+  Tonelli2021#p145 '0': gold 'nest depth' / model 'species'
+  Tonelli2021#p145 '1': gold 'nest depth' / model 'species'
+  Tonelli2021#p145 '2': gold 'nest depth' / model 'species'
+  Tonelli2021#p145 '3': gold 'nest depth' / model 'species'
+  Tonelli2021#p147 '0': gold 'horizontal nest distance' / model 'four categories'
+  Tonelli2021#p147 '1': gold 'horizontal nest distance' / model 'four categories'
+  Tonelli2021#p147 '2': gold 'horizontal nest distance' / model 'four categories'
+  Tonelli2021#p147 '3': gold 'horizontal nest distance' / model 'four categories'
+  Tonelli2021#t7r0c11 '1': gold 'zygum' / model 'Zigum'
+  Tonelli2021#t7r0c11 '2': gold 'zygum' / model 'Zigum'
+  Tonelli2021#t7r0c11 '3': gold 'zygum' / model 'Zigum'
+
+4. association errors and code-set differences (with the disputed cases)
+  FP Araujo2021#p72 -> t1c0 'Category': gold [] model ['MR', 'NR', 'PA', 'TR'] (in the column: ['MR', 'NR', 'PA', 'TR'])
+  TP Cajaiba2023#p113 -> t1c0 'Series': gold ['AG', 'PA', 'PF'] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  TP Cajaiba2023#p113 -> t2c0 'Category': gold ['AG', 'PA', 'PF'] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  TP Cajaiba2023#p113 -> t3c0 'Category': gold ['AG', 'PA', 'PF'] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  TP Cajaiba2023#p113 -> t4c0 'Category': gold ['AG', 'PA', 'PF'] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  TP Cajaiba2023#p113 -> t9c1 'Table A - Comparisons for Abundance and Richness o': gold ['AG', 'PA', 'PF'] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  TP Cajaiba2023#p113 -> t10c0 'ES_FT: Ecosystem specificity': gold ['AG', 'PA', 'PF'] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  FP Cajaiba2023#p113 -> t10c1 'ES_FT: Ecosystem specificity / PF': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['PF'])
+  FP Cajaiba2023#p113 -> t10c4 'ES_FT: Ecosystem specificity / AG': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG'])
+  FP Cajaiba2023#p113 -> t10c5 'ES_FT: Ecosystem specificity / PA': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['PA'])
+  FP Cajaiba2023#t10r8 -> t1c0 'Series': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  FP Cajaiba2023#t10r8 -> t2c0 'Category': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  FP Cajaiba2023#t10r8 -> t3c0 'Category': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  FP Cajaiba2023#t10r8 -> t4c0 'Category': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  FP Cajaiba2023#t10r8 -> t9c1 'Table A - Comparisons for Abundance and Richness o': gold [] model ['AG', 'PA', 'PF', 'SF-15', 'SF-5'] (in the column: ['AG', 'PA', 'PF', 'SF-15', 'SF-5'])
+  FP CamargoVanegas2024#p96 -> t3c0 'Category': gold [] model ['N1', 'N2', 'N3'] (in the column: ['N1', 'N2', 'N3'])
+  FP CamargoVanegas2024#p96 -> t5c0 'Series': gold [] model ['N1', 'N2', 'N3'] (in the column: ['N1', 'N2', 'N3'])
+  FP CamargoVanegas2024#p96 -> t18c0 'Region': gold [] model ['N1', 'N2', 'N3'] (in the column: ['N1', 'N2', 'N3'])
+  FP CamargoVanegas2024#p96 -> t19c0 'TDF Fragments': gold [] model ['N1', 'N2', 'N3'] (in the column: ['N1', 'N2', 'N3'])
+  FP CamargoVanegas2024#p96 -> t29c0 'TDF fragments': gold [] model ['N1', 'N2', 'N3'] (in the column: ['N1', 'N2', 'N3'])
+  FP Cao2024#p312 -> t6c0 '': gold [] model ['Ca2+', 'DWT', 'K+', 'LOI', 'Mg2+', 'pH'] (in the column: ['DWT', 'LOI', 'pH'])
+  FP Cao2024#p312 -> t6c5 'DWT': gold [] model ['DWT'] (in the column: ['DWT'])
+  FP Cao2024#p385 -> t6c0 '': gold [] model ['DOC', 'DWT', 'K', 'LOI', 'TOC'] (in the column: ['DWT', 'K', 'LOI', 'TOC'])
+  FP Cao2024#p53 -> t6c0 '': gold [] model ['LOI', 'TN', 'TOC', 'pH'] (in the column: ['LOI', 'TN', 'TOC', 'pH'])
+  TP Cappellari2022#p63 -> t5c3 'Explanatory variables': gold ['Apis', 'Temp'] model ['Apid', 'BodyL', 'BodyS', 'ForNC', 'ProbL', 'ProbS', 'a', 'b', 'c', 'd'] (in the column: [])
+  FP Cecala2021#p134 -> t1c0 'Nursery': gold [] model ['0', '1'] (in the column: [])
+  FP Eckert2023#p135 -> t1c2 'Formicidae / Midlands': gold [] model ['a', 'b'] (in the column: ['a', 'b'])
+  FP Eckert2023#p135 -> t1c3 'Formicidae / Midlands': gold [] model ['a', 'b'] (in the column: ['a', 'b'])
+  FP Eckert2023#p135 -> t1c8 'Collembola / Midlands': gold [] model ['a', 'b'] (in the column: ['a', 'b'])
+  FP Eckert2023#p135 -> t1c9 'Collembola / Midlands': gold [] model ['b'] (in the column: ['b'])
+  FP Eckert2023#p47 -> t1c2 'Formicidae / Midlands': gold [] model ['a', 'b'] (in the column: ['a', 'b'])
+  FP Eckert2023#p47 -> t1c3 'Formicidae / Midlands': gold [] model ['a', 'b'] (in the column: ['a', 'b'])
+  FP Eckert2023#p47 -> t1c8 'Collembola / Midlands': gold [] model ['a', 'b'] (in the column: ['a', 'b'])
+  FP Eckert2023#p47 -> t1c9 'Collembola / Midlands': gold [] model ['b'] (in the column: ['b'])
+  FP Eskilden2015#t5r0c0 -> t6c4 'Table S5. Comparison of species richness change be': gold [] model ['a', 'b', 'c'] (in the column: ['a', 'b', 'c'])
+  FP Eskilden2015#t5r0c0 -> t6c5 'Table S5. Comparison of species richness change be': gold [] model ['a', 'b', 'c'] (in the column: ['a', 'b', 'c'])
+  FP Eskilden2015#t5r0c0 -> t6c8 'Table S5. Comparison of species richness change be': gold [] model ['a', 'b', 'c'] (in the column: ['a', 'b', 'c'])
+  FP Eskilden2015#t5r0c0 -> t6c11 'Table S5. Comparison of species richness change be': gold [] model ['a', 'b', 'c'] (in the column: ['a', 'b', 'c'])
+  FP Eskilden2015#t7r5 -> t5c7 'Table S4. Number of cells included in species rich': gold [] model ['local'] (in the column: [])
+  FP Ji2024#p138 -> t4c1 'Series': gold [] model ['CWM'] (in the column: ['CWM'])
+  FN Ji2024#t0r0c3 -> t0c3 'Effect (E)/ response (R) trait': gold ['E', 'R'] model [] (in the column: [])
+  FN Jones2015#p67 -> t1c1 'Expert 1': gold ['1', '2'] model [] (in the column: [])
+  FN Jones2015#p67 -> t1c2 'Expert 2': gold ['1', '2'] model [] (in the column: [])
+  FN Jones2015#p67 -> t1c4 'Expert 4': gold ['1', '2'] model [] (in the column: [])
+  TP Kratschmer2019#t8r11 -> t12c2 'Nesting type': gold ['A', 'G'] model ['A'] (in the column: ['A'])
+  FP Lizee2016#p101 -> t2c0 'Metric': gold [] model ['BR', 'NODF', 'T'] (in the column: ['BR', 'NODF'])
+  FP Lizee2016#p101 -> t3c0 'Metric': gold [] model ['BR', 'NODF', 'T'] (in the column: ['BR', 'NODF'])
+  FP Lizee2016#p69 -> t2c0 'Metric': gold [] model ['BR', 'NODF', 'T'] (in the column: ['BR', 'NODF'])
+  FP Lizee2016#p69 -> t3c0 'Metric': gold [] model ['BR', 'NODF', 'T'] (in the column: ['BR', 'NODF'])
+  TP Nelson2020#p73 -> t9c0 'Model': gold ['FDis', 'FRic'] model ['E'] (in the column: [])
+  TP Nelson2020#p73 -> t10c0 'Model': gold ['FEve', 'FRic'] model ['E'] (in the column: [])
+  TP Nelson2020#p73 -> t12c0 'Proportion carnivore': gold ['FDis', 'FEve', 'FRic'] model ['E'] (in the column: [])
+  FP Pessoa2017#p51 -> t0c5 'Area 3 / FL': gold [] model ['Circles', 'Triangles'] (in the column: [])
+  FP Pessoa2017#p51 -> t0c6 'Area 3 / NF': gold [] model ['Squares', 'Triangles'] (in the column: [])
+  FP Tonelli2021#p143 -> t7c13 'Nesting patterns (see supplementary material S1 fo': gold [] model ['0', '1', '10', '11', '2', '3', '5', '7', '8', '9'] (in the column: ['10', '11', '2', '5', '7', '8'])
+  TP Tonelli2021#p143 -> t7c14 'Nest type (see supplementary material S1 for detai': gold ['1', '3', '5', '7', '9'] model ['0', '1', '3', '5', '7', '9'] (in the column: ['0', '1', '3', '5', '7', '9'])
+  FP Tonelli2021#p143 -> t7c15 'Nest depth (0=within excrement; 1=dung soil interp': gold [] model ['0', '1', '2', '3'] (in the column: ['0', '1', '2', '3'])
+  FP Tonelli2021#p143 -> t7c16 'Horizontal nest distance (0=within trophic source;': gold [] model ['0', '1', '3'] (in the column: ['0', '1', '3'])
+  FP Tonelli2021#p147 -> t7c14 'Nest type (see supplementary material S1 for detai': gold [] model ['0', '1', '3'] (in the column: ['0', '1', '3'])
+  FP Tonelli2021#t7r0c16 -> t7c14 'Nest type (see supplementary material S1 for detai': gold [] model ['0', '1', '3'] (in the column: ['0', '1', '3'])
+  FP Vidal2023#p91 -> t0c4 'S / F': gold [] model ['A', 'FEve', 'S'] (in the column: ['FEve', 'S'])
+  FP Viza2023#t5r87 -> t5c1 'Model selected': gold [] model ['x', 'x2+x'] (in the column: [])
+  FP Wallon2024#p51 -> t3c2 'Treatment': gold [] model ['Control', 'OTCs'] (in the column: ['Control'])
+  FP Wallon2024#t12r21 -> t3c2 'Treatment': gold [] model ['LOWOTC'] (in the column: [])
+  FP Wallon2024#t19r27 -> t13c1 'Trait': gold [] model ['ActivNight', 'Elevation', 'LOW', 'LOW-MID', 'MID', 'Winter'] (in the column: ['ActivNight'])
+  FP Wallon2024#t20r15 -> t3c2 'Treatment': gold [] model ['MIDOTC-HIGHOTC'] (in the column: [])
+  FP Wallon2024#t9r25 -> t3c2 'Treatment': gold [] model ['MID', 'OTC', 'OTC-HIGH'] (in the column: ['OTC'])
+  FP Wallon2024#t9r30 -> t10c1 'Trait': gold [] model ['LOW'] (in the column: [])
+
+6. unsupported pairs
+  Araujo2021#p72 [none, printed] code legend: 'PA' = 'PA' ('treatments') cols ['t1c0']
+  Araujo2021#p72 [none, printed] code legend: 'TR' = 'TR' ('treatments') cols ['t1c0']
+  Araujo2021#p72 [none, printed] code legend: 'MR' = 'MR' ('treatments') cols ['t1c0']
+  Araujo2021#p72 [none, printed] code legend: 'NR' = 'NR' ('treatments') cols ['t1c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'AG' = 'AG' ('Series') cols ['t1c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'PA' = 'PA' ('Series') cols ['t1c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'PF' = 'PF' ('Series') cols ['t1c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'SF-15' = 'SF-15' ('Series') cols ['t1c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'SF-5' = 'SF-5' ('Series') cols ['t1c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'AG' = 'AG' ('Category') cols ['t2c0', 't3c0', 't4c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'PA' = 'PA' ('Category') cols ['t2c0', 't3c0', 't4c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'PF' = 'PF' ('Category') cols ['t2c0', 't3c0', 't4c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'SF-15' = 'SF-15' ('Category') cols ['t2c0', 't3c0', 't4c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'SF-5' = 'SF-5' ('Category') cols ['t2c0', 't3c0', 't4c0']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'AG' = 'AG' ('Table A - Comparisons for Abundance and Richness of "Ecosyst') cols ['t9c1']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'PA' = 'PA' ('Table A - Comparisons for Abundance and Richness of "Ecosyst') cols ['t9c1']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'PF' = 'PF' ('Table A - Comparisons for Abundance and Richness of "Ecosyst') cols ['t9c1']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'SF-15' = 'SF-15' ('Table A - Comparisons for Abundance and Richness of "Ecosyst') cols ['t9c1']
+  Cajaiba2023#t10r8 [none, printed] code legend: 'SF-5' = 'SF-5' ('Table A - Comparisons for Abundance and Richness of "Ecosyst') cols ['t9c1']
+  CamargoVanegas2024#p96 [none, printed] code legend: 'N1' = 'N1' ('TDF fragments') cols ['t18c0', 't19c0', 't29c0', 't3c0', 't5c0']
+  CamargoVanegas2024#p96 [none, printed] code legend: 'N2' = 'N2' ('TDF fragments') cols ['t18c0', 't19c0', 't29c0', 't3c0', 't5c0']
+  CamargoVanegas2024#p96 [none, printed] code legend: 'N3' = 'N3' ('TDF fragments') cols ['t18c0', 't19c0', 't29c0', 't3c0', 't5c0']
+  Cao2024#p312 [none, printed] variable abbreviation: 'pH' = 'water pH' ('water pH') cols ['t6c0']
+  Cao2024#p312 [none, printed] variable abbreviation: 'Mg 2+' = 'Mg 2+' ('cations') cols ['t6c0']
+  Cao2024#p312 [none, printed] variable abbreviation: 'Ca 2+' = 'Ca 2+' ('cations') cols ['t6c0']
+  Cao2024#p312 [none, printed] variable abbreviation: 'LOI' = 'LOI' ('LOI') cols ['t6c0']
+  Cao2024#p312 [none, printed] variable abbreviation: 'DWT' = 'DWT' ('DWT') cols ['t6c0', 't6c5']
+  Cao2024#p312 [none, printed] variable abbreviation: 'Na +' = 'Na +' ('Na +') cols []
+  Cao2024#p312 [none, printed] variable abbreviation: 'K +' = 'K +' ('K +') cols ['t6c0']
+  Cao2024#p385 [none, printed] variable abbreviation: 'LOI' = 'organic content' ('taxonomic composition') cols ['t6c0']
+  Cao2024#p385 [none, printed] variable abbreviation: 'LOI' = 'organic content' ('environmental factors controlling chironomid communities') cols ['t6c0']
+  Cao2024#p385 [none, NOT printed] variable abbreviation: 'DWT' = 'environmental factors controlling chironomid communities' ('environmental factors controlling chironomid communities') cols ['t6c0']
+  Cao2024#p385 [none, NOT printed] variable abbreviation: 'K' = 'environmental factors controlling chironomid communities' ('environmental factors controlling chironomid communities') cols ['t6c0']
+  Cao2024#p385 [none, printed] variable abbreviation: 'DOC' = 'organic matter' ('measured as') cols ['t6c0']
+  Cao2024#p385 [none, printed] variable abbreviation: 'TOC' = 'organic matter' ('measured as') cols ['t6c0']
+  Cao2024#p385 [none, printed] variable abbreviation: 'LOI' = 'organic matter' ('measured as') cols ['t6c0']
+  Cao2024#p53 [none, NOT printed] variable abbreviation: 'LOI' = 'Loss on Ignition' ('LOI') cols ['t6c0']
+  Cao2024#p53 [none, NOT printed] variable abbreviation: 'TOC' = 'Total Organic Carbon' ('TOC') cols ['t6c0']
+  Cao2024#p53 [none, NOT printed] variable abbreviation: 'TN' = 'Total Nitrogen' ('TN') cols ['t6c0']
+  Cao2024#p53 [none, printed] variable abbreviation: 'pH' = 'acidity' ('pH') cols ['t6c0']
+  Cappellari2022#p63 [def, printed] variable abbreviation: 'Apid' = 'Apid' ('Apid') cols ['t5c3']
+  Eckert2023#p47 [def, printed] figure key: 'stars' = 'indigenous forests' ('study sites within indigenous forests') cols []
+  Eckert2023#p47 [def, printed] figure key: 'diamonds' = 'grasslands' ('study sites within grasslands') cols []
+  Eckert2023#p47 [def, printed] figure key: 'circles' = 'eucalypt compartments' ('study sites within eucalypt compartments') cols []
+  Eckert2023#p47 [def, printed] figure key: 'grey' = 'Plantation compartments' ('Plantation compartments') cols []
+  Eckert2023#p47 [def, printed] figure key: 'white' = 'non-plantation areas' ('non-plantation areas') cols []
+  Eskilden2015#t5r0c0 [none, printed] code legend: 'a' = 'at least 15 records per period' ('grid cells') cols ['t6c11', 't6c4', 't6c5', 't6c8']
+  Eskilden2015#t5r0c0 [none, printed] code legend: 'b' = 'a records-to-species ratio of at least 1.5 in each of the two time periods' ('grid cells') cols ['t6c11', 't6c4', 't6c5', 't6c8']
+  Eskilden2015#t5r0c0 [none, printed] code legend: 'c' = 'for locations with low sampling effort in one of the periods (i.e. less than fiv' ('grid cells') cols ['t6c11', 't6c4', 't6c5', 't6c8']
+  Eskilden2015#t7r5 [none, printed] code legend: 'local' = 'local' ('local') cols ['t5c7']
+  Ji2024#p138 [none, printed] variable abbreviation: 'CWM' = 'CWM-optimality hypothesis' ('CWM') cols ['t4c1']
+  Lizee2016#p101 [none, printed] variable abbreviation: 'BR' = 'BR' ('observed and simulated values of') cols ['t2c0', 't3c0']
+  Lizee2016#p101 [none, printed] variable abbreviation: 'NODF' = 'NODF' ('observed and simulated values of') cols ['t2c0', 't3c0']
+  Lizee2016#p101 [none, printed] variable abbreviation: 'T' = 'T' ('observed and simulated values of') cols ['t2c0', 't3c0']
+  Lizee2016#p69 [none, printed] variable abbreviation: 'BR' = 'BR' ('calculated metrics') cols ['t2c0', 't3c0']
+  Lizee2016#p69 [none, printed] variable abbreviation: 'NODF' = 'NODF' ('calculated metrics') cols ['t2c0', 't3c0']
+  Lizee2016#p69 [none, printed] variable abbreviation: 'T' = 'T' ('calculated metrics') cols ['t2c0', 't3c0']
+  Nelson2020#p73 [def, printed] figure key: 'E' = 'sites with bison present are indicated by open points' ('site') cols ['t10c0', 't12c0', 't9c0']
+  Nelson2020#p73 [def, printed] figure key: 'triangles' = 'remnant prairie sites for comparison' ('site') cols []
+  Pessoa2017#p51 [def, printed] figure key: 'Circles' = 'Area 1, Conceicão Farm' ('localities') cols ['t0c5']
+  Pessoa2017#p51 [def, printed] figure key: 'Squares' = 'Area 2, Alvo- ¸ rada Farm' ('localities') cols ['t0c6']
+  Pessoa2017#p51 [def, printed] figure key: 'Triangles' = 'Area 3 in RPPN SESC Pantanal' ('localities') cols ['t0c5', 't0c6']
+  Tonelli2021#p143 [def, NOT printed] code legend: '0' = 'Nest composed of a single brood mass located within the excrement' ('Nest') cols ['t7c13']
+  Tonelli2021#p143 [def, NOT printed] code legend: '0' = 'Nest composed of a single brood mass located within the excrement' ('Nest type') cols ['t7c14']
+  Tonelli2021#p143 [def, printed] code legend: '1' = 'Nest composed of several brood masses located within the excrement' ('Nest type') cols ['t7c14']
+  Tonelli2021#p143 [def, printed] code legend: '3' = 'Nest composed of several brood masses located underground in a simple nest' ('Nest type') cols ['t7c14']
+  Tonelli2021#p143 [def, printed] code legend: '5' = 'Nest composed of several isolated brood masses located underground in a compound' ('Nest type') cols ['t7c14']
+  Tonelli2021#p143 [def, printed] code legend: '7' = 'Nest composed of a single brood ball located underground in a simple nest' ('Nest type') cols ['t7c14']
+  Tonelli2021#p143 [def, printed] code legend: '9' = 'Nest composed of several brood balls per chamber located underground in a simple' ('Nest type') cols ['t7c14']
+  Tonelli2021#p143 [def, NOT printed] code legend: '0' = 'within excrement' ('Nest depth') cols ['t7c15']
+  Tonelli2021#p143 [def, NOT printed] code legend: '1' = 'dung soil interphase' ('Nest depth') cols ['t7c15']
+  Tonelli2021#p143 [def, NOT printed] code legend: '2' = 'little depth' ('Nest depth') cols ['t7c15']
+  Tonelli2021#p143 [def, NOT printed] code legend: '3' = 'great depth' ('Nest depth') cols ['t7c15']
+  Tonelli2021#p143 [def, NOT printed] code legend: '0' = 'within trophic source' ('Horizontal nest distance') cols ['t7c16']
+  Tonelli2021#p143 [def, NOT printed] code legend: '1' = 'starting within food source but with a horizontal extension' ('Horizontal nest distance') cols ['t7c16']
+  Tonelli2021#p143 [def, NOT printed] code legend: '3' = 'shor' ('Horizontal nest distance') cols ['t7c16']
+  Vidal2023#p91 [none, printed] variable abbreviation: 'A' = 'A' ('taxonomic and functional community structure indexes') cols ['t0c4']
+  Vidal2023#p91 [none, printed] variable abbreviation: 'S' = 'S' ('taxonomic and functional community structure indexes') cols ['t0c4']
+  Vidal2023#p91 [none, printed] variable abbreviation: 'H' = 'H' ('taxonomic and functional community structure indexes') cols []
+  Vidal2023#p91 [none, printed] variable abbreviation: 'J' = 'J' ('taxonomic and functional community structure indexes') cols []
+  Vidal2023#p91 [none, printed] variable abbreviation: 'FRic' = 'FRic' ('taxonomic and functional community structure indexes') cols []
+  Vidal2023#p91 [none, printed] variable abbreviation: 'FEve' = 'FEve' ('taxonomic and functional community structure indexes') cols ['t0c4']
+  Vidal2023#p91 [none, printed] variable abbreviation: 'FDis' = 'FDis' ('taxonomic and functional community structure indexes') cols []
+  Vidal2023#p91 [none, printed] variable abbreviation: 'FDiv' = 'FDiv' ('taxonomic and functional community structure indexes') cols []
+  Wallon2024#p51 [none, NOT printed] code legend: 'Control' = 'control plots' ('Treatment') cols ['t3c2']
+  Wallon2024#p51 [none, NOT printed] code legend: 'OTCs' = 'enclosed by OTC' ('Treatment') cols ['t3c2']
+  Wallon2024#t12r21 [none, printed] variable abbreviation: 'LOW OTC' = 'LOW OTC = MID OTC' ('Treatment') cols ['t3c2']
+  Wallon2024#t19r27 [none, printed] code legend: 'Winter' = 'Winter' ('Winter') cols ['t13c1']
+  Wallon2024#t19r27 [none, printed] code legend: 'ActivNight' = 'ActivNight' ('ActivNight') cols ['t13c1']
+  Wallon2024#t19r27 [none, printed] code legend: 'Elevation' = 'Elevation' ('Elevation') cols ['t13c1']
+  Wallon2024#t19r27 [none, printed] code legend: 'LOW-MID' = 'LOW-MID' ('LOW-MID') cols ['t13c1']
+  Wallon2024#t19r27 [none, printed] code legend: 'LOW' = 'LOW' ('LOW') cols ['t13c1']
+  Wallon2024#t19r27 [none, printed] code legend: 'MID' = 'MID' ('MID') cols ['t13c1']
+  Wallon2024#t20r15 [none, printed] code legend: 'MID OTC-HIGH OTC' = 'MID OTC-HIGH OTC' ('Treatment') cols ['t3c2']
+  Wallon2024#t9r25 [none, printed] code legend: 'MID' = 'MID' ('Treatment') cols ['t3c2']
+  Wallon2024#t9r25 [none, printed] code legend: 'OTC-HIGH' = 'OTC-HIGH' ('Treatment') cols ['t3c2']
+  Wallon2024#t9r25 [none, printed] code legend: 'OTC' = 'OTC' ('Treatment') cols ['t3c2']
+  Wallon2024#t9r30 [none, printed] code legend: 'LOW' = 'LOW = MID' ('N/A') cols ['t10c1']
+
+====================================================================================================
+PER UNIT (gold subtype; raw model entries)
+====================================================================================================
+  Araujo2021#p72               [prose] none                     PA=PA; TR=TR; MR=MR; NR=NR
+  Cajaiba2022#t7r8             [table row] none                     
+  Cajaiba2023#p113             [prose] code legend              PF=Primary Forest; SF-15=Secondary forest with 15 years of regene; SF-5=Secondary forest with 5 years of regener; AG=Agriculture; PA=Pasture
+  Cajaiba2023#t10r8            [table row] none                     AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5; AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5; AG=AG; PA=PA; PF=PF; SF-15=SF-15; SF-5=SF-5
+  CamargoVanegas2024#p96       [prose] none                     N1=N1; N2=N2; N3=N3
+  Cao2024#p312                 [prose] none                     pH=water pH; Mg 2+=Mg 2+; Ca 2+=Ca 2+; LOI=LOI; DWT=DWT; Na +=Na +; K +=K +
+  Cao2024#p385                 [prose] none                     LOI=organic content; LOI=organic content; DWT=environmental factors controlling chiron; K=environmental factors controlling chiron; DOC=organic matter; TOC=organic matter; LOI=organic matter
+  Cao2024#p53                  [prose] none                     LOI=Loss on Ignition; TOC=Total Organic Carbon; TN=Total Nitrogen; pH=acidity
+  Cappellari2022#p63           [caption] variable abbreviation/figure key a=proboscis length; b=body size; c=type of foraging range; d=taxonomic family; Prob{S}=proboscis similar to the honeybee; Prob{L}=proboscis longer than the honeybee; Body{S}=body size similar to the honeybee; Body{L}=body size larger than the honeybee; For_NC=non-central forager; Apid=Apid
+  Cecala2021#p105              [caption] none                     
+  Cecala2021#p106              [caption] none                     
+  Cecala2021#p133              [caption] none                     
+  Cecala2021#p134              [caption] code legend              1=indicates that nursery was sampled; 0=indicates it was not sampled due to logi
+  Cecala2021#p8                [prose] none                     
+  Eckert2023#p135              [caption] figure key               a=Collembola and Formicidae in the Midland; b=Collembola and Formicidae in Zululand
+  Eckert2023#p47               [caption] figure key               a=the Midlands; b=Zululand, KwaZulu-Natal, South Africa; stars=indigenous forests; diamonds=grasslands; circles=eucalypt compartments; grey=Plantation compartments; white=non-plantation areas
+  Eckert2023#t4r134            [footnote] code legend              GenForager=Generalist forager; Pred=Predator; Sap=Saprovore; Soil=soil-dweller; Litter=litter-dweller; Veg=vegetation-dweller
+  Eckert2023#t4r70             [footnote] code legend              GenForager=Generalist forager; Pred=Predator; Sap=Saprovore; Soil=soil-dweller; Litter=litter-dweller; Veg=vegetation-dweller
+  Eskilden2015#p64             [caption] none                     
+  Eskilden2015#t5r0c0          [head cell] none                     a=at least 15 records per period; b=a records-to-species ratio of at least 1; c=for locations with low sampling effort i
+  Eskilden2015#t6r0c0          [head cell] none                     
+  Eskilden2015#t7r5            [table row] none                     local=local
+  Guareschi2015#p122           [prose] figure key               A=All species; B=vulnerable species
+  Ji2024#p138                  [prose] none                     CWM=CWM-optimality hypothesis
+  Ji2024#t0r0c3                [head cell] code legend              
+  Jones2015#p67                [caption] code legend              0=relatively sedentary; 1=mobile; 2=very mobile
+  Kratschmer2019#p51           [prose] none                     
+  Kratschmer2019#t8r11         [table row] code legend              G=Ground-nesting; A=Above-ground nesting; P=Parasitic
+  Lizee2016#p101               [caption] none                     BR=BR; NODF=NODF; T=T
+  Lizee2016#p69                [prose] none                     BR=BR; NODF=NODF; T=T
+  MacDonald2021#p21            [numbered list] none                     
+  MacDonald2021#p35            [numbered list] none                     
+  MacDonald2021#p88            [prose] none                     
+  Mirzaee2023#p72              [prose] none                     
+  Nelson2020#p73               [caption] variable abbreviation    E=sites with bison present are indicated b; triangles=remnant prairie sites for comparison
+  Pessoa2017#p51               [caption] figure key               Circles=Area 1, Conceicão Farm; Squares=Area 2, Alvo- ¸ rada Farm; Triangles=Area 3 in RPPN SESC Pantanal
+  Scalercio2020#p23            [numbered list] none                     
+  Schirmel2012#p86             [prose] none                     
+  Tonelli2021#p125             [numbered list] code legend              1=underdeveloped; 2=developed; 3=strong prolongation of spatula-shaped ep
+  Tonelli2021#p143             [numbered list] code legend              0=Nest composed of a single brood mass loc; 1=Nest composed of several brood masses lo; 2=Nest composed of a single brood mass loc; 3=Nest composed of several brood masses lo; 5=Nest composed of several isolated brood ; 7=Nest composed of a single brood ball loc; 8=Nest composed of several isolated brood ; 9=Nest composed of several brood balls per; 10=Nest composed of several isolated brood ; 11=Nest composed of several brood balls per; 0=Nest composed of a single brood mass loc; 1=Nest composed of several brood masses lo; 3=Nest composed of several brood masses lo; 5=Nest composed of several isolated brood ; 7=Nest composed of a single brood ball loc; 9=Nest composed of several brood balls per; 0=within excrement; 1=dung soil interphase; 2=little depth; 3=great depth; 0=within trophic source; 1=starting within food source but with a h; 3=shor
+  Tonelli2021#p145             [numbered list] code legend              0=within excrement; 1=dungsoil interphase; 2=little depth; 3=great depth
+  Tonelli2021#p147             [numbered list] code legend              0)=within food source; 1)=starting within food source but with a h; 2)=a short distance out from the food sourc; 3)=a great distance out from the food sourc
+  Tonelli2021#t7r0c11          [head cell] code legend              1=underdeveloped; 2=developed; 3=epizygum
+  Tonelli2021#t7r0c15          [head cell] code legend              0=within excrement; 1=dung soil interphase; 2=little depth; 3=great depth
+  Tonelli2021#t7r0c16          [head cell] code legend              0=within trophic source; 1=starting within food source but with a h; 2=short distance; 3=great distance
+  Tonelli2021#t7r0c17          [head cell] code legend              1=diurnal; 2=crepuscolar/nocturnal
+  Tsai2020#t2r27               [table row] none                     
+  Uemori2022#t1r1              [table row] code legend              1=herbivorous; 2=primary predators; 3=hyper predators
+  Vidal2023#p91                [prose] none                     A=A; S=S; H=H; J=J; FRic=FRic; FEve=FEve; FDis=FDis; FDiv=FDiv
+  Viza2023#t5r87               [footnote] code legend              x2 + x=quadratic regression; x=linear regression
+  Wallon2024#p51               [prose] none                     Control=control plots; OTCs=enclosed by OTC
+  Wallon2024#t12r21            [table row] none                     LOW OTC=LOW OTC = MID OTC
+  Wallon2024#t12r28            [table row] none                     
+  Wallon2024#t19r27            [table row] none                     Winter=Winter; ActivNight=ActivNight; Elevation=Elevation; LOW-MID=LOW-MID; LOW=LOW; MID=MID
+  Wallon2024#t20r15            [table row] none                     MID OTC-HIGH OTC=MID OTC-HIGH OTC
+  Wallon2024#t23r15            [table row] none                     
+  Wallon2024#t5r33             [table row] none                     
+  Wallon2024#t9r25             [table row] none                     MID=MID; OTC-HIGH=OTC-HIGH; OTC=OTC
+  Wallon2024#t9r30             [table row] none                     LOW=LOW = MID

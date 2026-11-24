@@ -1,0 +1,3919 @@
+{
+ "model": "gemma4:e4b-it-qat",
+ "date": "2026-11-24_2345",
+ "prompt": "Below is one passage from a scientific paper (a {structure}) and some table columns of the same paper.\n\nFind every place where the passage says what a code stands for: a short code, abbreviation, letter, symbol or number printed together with its meaning. Three kinds:\n- \"code legend\": codes that sort species, samples or sites into categories, e.g. \"W = wetland; S = scrub\", \"(0) absent, (1) present\"\n- \"variable abbreviation\": a short name of a measured variable or index, e.g. \"shell thickness (ST)\", \"WL, wing load\"\n- \"figure key\": letters or symbols naming the panels, areas or symbols of a figure, e.g. \"(a) first visit, (b) second visit\"\n\nFor each one give:\n- kind: one of the three kinds above\n- variable: what the codes classify, or what the abbreviation measures, in the passage's words (\"\" if the passage does not say)\n- code: the code exactly as printed\n- term: what the code stands for, COPIED EXACTLY from the passage, the paper's spelling, no paraphrase\n- columns: the ids of the columns below whose cells use this code with this meaning ([] if no column does)\n\nGive nothing for codes the passage mentions without saying what they mean, for numbered sentences, hypotheses or list items, for statistics, units, references, or table and figure numbers. If the passage defines no code, reply with an empty list.\n\nPassage:\n{text}\n\nColumns (id | header | cell values):\n{columns}\n\nReply with JSON only.",
+ "units": [
+  {
+   "uid": "Araujo2021#p72",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "TR",
+     "term": "TR",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "MR",
+     "term": "MR",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "NR",
+     "term": "NR",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "TR",
+     "term": "TR",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "MR",
+     "term": "MR",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "treatments",
+     "code": "NR",
+     "term": "NR",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 3.2
+  },
+  {
+   "uid": "Cajaiba2022#t7r8",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Cajaiba2023#p113",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "PF",
+     "term": "Primary Forest",
+     "columns": [
+      "t10c0",
+      "t10c1",
+      "t10c4",
+      "t10c5",
+      "t1c0",
+      "t2c0",
+      "t3c0",
+      "t4c0",
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "SF-15",
+     "term": "Secondary forest with 15 years of regeneration",
+     "columns": [
+      "t10c0",
+      "t10c1",
+      "t10c4",
+      "t10c5",
+      "t1c0",
+      "t2c0",
+      "t3c0",
+      "t4c0",
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "SF-5",
+     "term": "Secondary forest with 5 years of regeneration",
+     "columns": [
+      "t10c0",
+      "t10c1",
+      "t10c4",
+      "t10c5",
+      "t1c0",
+      "t2c0",
+      "t3c0",
+      "t4c0",
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "AG",
+     "term": "Agriculture",
+     "columns": [
+      "t10c0",
+      "t10c1",
+      "t10c4",
+      "t10c5",
+      "t1c0",
+      "t2c0",
+      "t3c0",
+      "t4c0",
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "PA",
+     "term": "Pasture",
+     "columns": [
+      "t10c0",
+      "t10c1",
+      "t10c4",
+      "t10c5",
+      "t1c0",
+      "t2c0",
+      "t3c0",
+      "t4c0",
+      "t9c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "PF",
+     "term": "Primary Forest",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "SF-15",
+     "term": "Secondary forest with 15 years of regeneration",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "SF-5",
+     "term": "Secondary forest with 5 years of regeneration",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "AG",
+     "term": "Agriculture",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Location of the sampling sites per ecosystem",
+     "code": "PA",
+     "term": "Pasture",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9"
+     ]
+    }
+   ],
+   "seconds": 3.8
+  },
+  {
+   "uid": "Cajaiba2023#t10r8",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "AG",
+     "term": "AG",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "PF",
+     "term": "PF",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "SF-15",
+     "term": "SF-15",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "SF-5",
+     "term": "SF-5",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "AG",
+     "term": "AG",
+     "columns": [
+      "t2c0",
+      "t3c0",
+      "t4c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "t2c0",
+      "t3c0",
+      "t4c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "PF",
+     "term": "PF",
+     "columns": [
+      "t2c0",
+      "t3c0",
+      "t4c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "SF-15",
+     "term": "SF-15",
+     "columns": [
+      "t2c0",
+      "t3c0",
+      "t4c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "SF-5",
+     "term": "SF-5",
+     "columns": [
+      "t2c0",
+      "t3c0",
+      "t4c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "AG",
+     "term": "AG",
+     "columns": [
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "PF",
+     "term": "PF",
+     "columns": [
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "SF-15",
+     "term": "SF-15",
+     "columns": [
+      "t9c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "SF-5",
+     "term": "SF-5",
+     "columns": [
+      "t9c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "AG",
+     "term": "AG",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "PF",
+     "term": "PF",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "SF-15",
+     "term": "SF-15",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Series",
+     "code": "SF-5",
+     "term": "SF-5",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "AG",
+     "term": "AG",
+     "columns": [
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "PF",
+     "term": "PF",
+     "columns": [
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "SF-15",
+     "term": "SF-15",
+     "columns": [
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Category",
+     "code": "SF-5",
+     "term": "SF-5",
+     "columns": [
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "AG",
+     "term": "AG",
+     "columns": [
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "PA",
+     "term": "PA",
+     "columns": [
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "PF",
+     "term": "PF",
+     "columns": [
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "SF-15",
+     "term": "SF-15",
+     "columns": [
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Table A - Comparisons for Abundance and Richness of \"Ecosystem specificity\" functional traits / Abundance / Forest gener",
+     "code": "SF-5",
+     "term": "SF-5",
+     "columns": [
+      "C5"
+     ]
+    }
+   ],
+   "seconds": 5.1
+  },
+  {
+   "uid": "CamargoVanegas2024#p96",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "TDF fragments",
+     "code": "N1",
+     "term": "N1",
+     "columns": [
+      "t18c0",
+      "t19c0",
+      "t29c0",
+      "t3c0",
+      "t5c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "TDF fragments",
+     "code": "N2",
+     "term": "N2",
+     "columns": [
+      "t18c0",
+      "t19c0",
+      "t29c0",
+      "t3c0",
+      "t5c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "TDF fragments",
+     "code": "N3",
+     "term": "N3",
+     "columns": [
+      "t18c0",
+      "t19c0",
+      "t29c0",
+      "t3c0",
+      "t5c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "TDF fragments",
+     "code": "N1",
+     "term": "N1",
+     "columns": [
+      "C1",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "TDF fragments",
+     "code": "N2",
+     "term": "N2",
+     "columns": [
+      "C1",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "TDF fragments",
+     "code": "N3",
+     "term": "N3",
+     "columns": [
+      "C1",
+      "C3",
+      "C4",
+      "C5",
+      "C6"
+     ]
+    }
+   ],
+   "seconds": 1.3
+  },
+  {
+   "uid": "Cao2024#p53",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "LOI",
+     "code": "LOI",
+     "term": "Loss on Ignition",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "TOC",
+     "code": "TOC",
+     "term": "Total Organic Carbon",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "TN",
+     "code": "TN",
+     "term": "Total Nitrogen",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "pH",
+     "code": "pH",
+     "term": "acidity",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "LOI",
+     "code": "LOI",
+     "term": "Loss on Ignition",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "TOC",
+     "code": "TOC",
+     "term": "Total Organic Carbon",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "TN",
+     "code": "TN",
+     "term": "Total Nitrogen",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "pH",
+     "code": "pH",
+     "term": "acidity",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 1.5
+  },
+  {
+   "uid": "Cao2024#p312",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "water pH",
+     "code": "pH",
+     "term": "water pH",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "cations",
+     "code": "Mg 2+",
+     "term": "Mg 2+",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "cations",
+     "code": "Ca 2+",
+     "term": "Ca 2+",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "LOI",
+     "code": "LOI",
+     "term": "LOI",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "DWT",
+     "code": "DWT",
+     "term": "DWT",
+     "columns": [
+      "t6c0",
+      "t6c5"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Na +",
+     "code": "Na +",
+     "term": "Na +",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "K +",
+     "code": "K +",
+     "term": "K +",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "water pH",
+     "code": "pH",
+     "term": "water pH",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "cations",
+     "code": "Mg 2+",
+     "term": "Mg 2+",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "cations",
+     "code": "Ca 2+",
+     "term": "Ca 2+",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "LOI",
+     "code": "LOI",
+     "term": "LOI",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "DWT",
+     "code": "DWT",
+     "term": "DWT",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Na +",
+     "code": "Na +",
+     "term": "Na +",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "K +",
+     "code": "K +",
+     "term": "K +",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 2.5
+  },
+  {
+   "uid": "Cao2024#p385",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic composition",
+     "code": "LOI",
+     "term": "organic content",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "environmental factors controlling chironomid communities",
+     "code": "LOI",
+     "term": "organic content",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "environmental factors controlling chironomid communities",
+     "code": "DWT",
+     "term": "environmental factors controlling chironomid communities",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "environmental factors controlling chironomid communities",
+     "code": "K",
+     "term": "environmental factors controlling chironomid communities",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "measured as",
+     "code": "DOC",
+     "term": "organic matter",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "measured as",
+     "code": "TOC",
+     "term": "organic matter",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "measured as",
+     "code": "LOI",
+     "term": "organic matter",
+     "columns": [
+      "t6c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic composition",
+     "code": "LOI",
+     "term": "organic content",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "environmental factors controlling chironomid communities",
+     "code": "LOI",
+     "term": "organic content",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "environmental factors controlling chironomid communities",
+     "code": "DWT",
+     "term": "environmental factors controlling chironomid communities",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "environmental factors controlling chironomid communities",
+     "code": "K",
+     "term": "environmental factors controlling chironomid communities",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "measured as",
+     "code": "DOC",
+     "term": "organic matter",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "measured as",
+     "code": "TOC",
+     "term": "organic matter",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "measured as",
+     "code": "LOI",
+     "term": "organic matter",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 3.0
+  },
+  {
+   "uid": "Cappellari2022#p63",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "proboscis length",
+     "code": "a",
+     "term": "proboscis length",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "body size",
+     "code": "b",
+     "term": "body size",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "type of foraging range",
+     "code": "c",
+     "term": "type of foraging range",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic family",
+     "code": "d",
+     "term": "taxonomic family",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "proboscis similar to the honeybee",
+     "code": "Prob{S}",
+     "term": "proboscis similar to the honeybee",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "proboscis longer than the honeybee",
+     "code": "Prob{L}",
+     "term": "proboscis longer than the honeybee",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "body size similar to the honeybee",
+     "code": "Body{S}",
+     "term": "body size similar to the honeybee",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "body size larger than the honeybee",
+     "code": "Body{L}",
+     "term": "body size larger than the honeybee",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "non-central forager",
+     "code": "For_NC",
+     "term": "non-central forager",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Apid",
+     "code": "Apid",
+     "term": "Apid",
+     "columns": [
+      "t5c3"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "proboscis length",
+     "code": "a",
+     "term": "proboscis length",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "body size",
+     "code": "b",
+     "term": "body size",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "type of foraging range",
+     "code": "c",
+     "term": "type of foraging range",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic family",
+     "code": "d",
+     "term": "taxonomic family",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "proboscis similar to the honeybee",
+     "code": "Prob{S}",
+     "term": "proboscis similar to the honeybee",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "proboscis longer than the honeybee",
+     "code": "Prob{L}",
+     "term": "proboscis longer than the honeybee",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "body size similar to the honeybee",
+     "code": "Body{S}",
+     "term": "body size similar to the honeybee",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "body size larger than the honeybee",
+     "code": "Body{L}",
+     "term": "body size larger than the honeybee",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "non-central forager",
+     "code": "For_NC",
+     "term": "non-central forager",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Apid",
+     "code": "Apid",
+     "term": "Apid",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 4.6
+  },
+  {
+   "uid": "Cecala2021#p8",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.3
+  },
+  {
+   "uid": "Cecala2021#p105",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Cecala2021#p106",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Cecala2021#p133",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Cecala2021#p134",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "nursery",
+     "code": "1",
+     "term": "indicates that nursery was sampled",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "nursery",
+     "code": "0",
+     "term": "indicates it was not sampled due to logistical reasons",
+     "columns": [
+      "t1c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "nursery",
+     "code": "1",
+     "term": "indicates that nursery was sampled",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "nursery",
+     "code": "0",
+     "term": "indicates it was not sampled due to logistical reasons",
+     "columns": [
+      "C2"
+     ]
+    }
+   ],
+   "seconds": 0.8
+  },
+  {
+   "uid": "Eckert2023#p47",
+   "entries": [
+    {
+     "kind": "figure key",
+     "variable": "focal plantation estates",
+     "code": "a",
+     "term": "the Midlands",
+     "columns": [
+      "t1c2",
+      "t1c3",
+      "t1c8"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "focal plantation estates",
+     "code": "b",
+     "term": "Zululand, KwaZulu-Natal, South Africa",
+     "columns": [
+      "t1c2",
+      "t1c3",
+      "t1c8",
+      "t1c9"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "study sites within indigenous forests",
+     "code": "stars",
+     "term": "indigenous forests",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "study sites within grasslands",
+     "code": "diamonds",
+     "term": "grasslands",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "study sites within eucalypt compartments",
+     "code": "circles",
+     "term": "eucalypt compartments",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "Plantation compartments",
+     "code": "grey",
+     "term": "Plantation compartments",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "non-plantation areas",
+     "code": "white",
+     "term": "non-plantation areas",
+     "columns": [],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "figure key",
+     "variable": "focal plantation estates",
+     "code": "a",
+     "term": "the Midlands",
+     "columns": [
+      "C1",
+      "C2",
+      "C3"
+     ]
+    },
+    {
+     "kind": "figure key",
+     "variable": "focal plantation estates",
+     "code": "b",
+     "term": "Zululand, KwaZulu-Natal, South Africa",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "figure key",
+     "variable": "study sites within indigenous forests",
+     "code": "stars",
+     "term": "indigenous forests",
+     "columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "study sites within grasslands",
+     "code": "diamonds",
+     "term": "grasslands",
+     "columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "study sites within eucalypt compartments",
+     "code": "circles",
+     "term": "eucalypt compartments",
+     "columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "Plantation compartments",
+     "code": "grey",
+     "term": "Plantation compartments",
+     "columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "non-plantation areas",
+     "code": "white",
+     "term": "non-plantation areas",
+     "columns": []
+    }
+   ],
+   "seconds": 3.1
+  },
+  {
+   "uid": "Eckert2023#p135",
+   "entries": [
+    {
+     "kind": "figure key",
+     "variable": "panels",
+     "code": "a",
+     "term": "Collembola and Formicidae in the Midlands",
+     "columns": [
+      "t1c2",
+      "t1c3",
+      "t1c8"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "panels",
+     "code": "b",
+     "term": "Collembola and Formicidae in Zululand",
+     "columns": [
+      "t1c2",
+      "t1c3",
+      "t1c8",
+      "t1c9"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "figure key",
+     "variable": "panels",
+     "code": "a",
+     "term": "Collembola and Formicidae in the Midlands",
+     "columns": [
+      "C1",
+      "C2",
+      "C3"
+     ]
+    },
+    {
+     "kind": "figure key",
+     "variable": "panels",
+     "code": "b",
+     "term": "Collembola and Formicidae in Zululand",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+     ]
+    }
+   ],
+   "seconds": 1.7
+  },
+  {
+   "uid": "Eckert2023#t4r70",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "columns": [
+      "t4c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Pred",
+     "term": "Predator",
+     "columns": [
+      "t4c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Sap",
+     "term": "Saprovore",
+     "columns": [
+      "t4c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Soil",
+     "term": "soil-dweller",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Litter",
+     "term": "litter-dweller",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "columns": [],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Pred",
+     "term": "Predator",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Sap",
+     "term": "Saprovore",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Soil",
+     "term": "soil-dweller",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Litter",
+     "term": "litter-dweller",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "columns": []
+    }
+   ],
+   "seconds": 2.5
+  },
+  {
+   "uid": "Eckert2023#t4r134",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "columns": [
+      "t4c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Pred",
+     "term": "Predator",
+     "columns": [
+      "t4c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Sap",
+     "term": "Saprovore",
+     "columns": [
+      "t4c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Soil",
+     "term": "soil-dweller",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Litter",
+     "term": "litter-dweller",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "columns": [],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Pred",
+     "term": "Predator",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Sap",
+     "term": "Saprovore",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Soil",
+     "term": "soil-dweller",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Litter",
+     "term": "litter-dweller",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Forage strategy",
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "columns": []
+    }
+   ],
+   "seconds": 2.4
+  },
+  {
+   "uid": "Eskilden2015#p64",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Eskilden2015#t5r0c0",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "grid cells",
+     "code": "a",
+     "term": "at least 15 records per period",
+     "columns": [
+      "t6c11",
+      "t6c4",
+      "t6c5",
+      "t6c8"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "grid cells",
+     "code": "b",
+     "term": "a records-to-species ratio of at least 1.5 in each of the two time periods",
+     "columns": [
+      "t6c11",
+      "t6c4",
+      "t6c5",
+      "t6c8"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "grid cells",
+     "code": "c",
+     "term": "for locations with low sampling effort in one of the periods (i.e. less than five times the maximum number of species in the country), a less than 10-fold difference in numbers of records between periods was required.",
+     "columns": [
+      "t6c11",
+      "t6c4",
+      "t6c5",
+      "t6c8"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "grid cells",
+     "code": "a",
+     "term": "at least 15 records per period",
+     "columns": [
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "grid cells",
+     "code": "b",
+     "term": "a records-to-species ratio of at least 1.5 in each of the two time periods",
+     "columns": [
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "grid cells",
+     "code": "c",
+     "term": "for locations with low sampling effort in one of the periods (i.e. less than five times the maximum number of species in the country), a less than 10-fold difference in numbers of records between periods was required.",
+     "columns": [
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+     ]
+    }
+   ],
+   "seconds": 1.6
+  },
+  {
+   "uid": "Eskilden2015#t6r0c0",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.6
+  },
+  {
+   "uid": "Eskilden2015#t7r5",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "local",
+     "code": "local",
+     "term": "local",
+     "columns": [
+      "t5c7"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "local",
+     "code": "local",
+     "term": "local",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.9
+  },
+  {
+   "uid": "Guareschi2015#p122",
+   "entries": [
+    {
+     "kind": "figure key",
+     "variable": "grid cells where “gap species” occur",
+     "code": "A",
+     "term": "All species",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "grid cells where “gap species” occur",
+     "code": "B",
+     "term": "vulnerable species",
+     "columns": [],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "figure key",
+     "variable": "grid cells where “gap species” occur",
+     "code": "A",
+     "term": "All species",
+     "columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "grid cells where “gap species” occur",
+     "code": "B",
+     "term": "vulnerable species",
+     "columns": []
+    }
+   ],
+   "seconds": 0.8
+  },
+  {
+   "uid": "Ji2024#p138",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "CWM",
+     "code": "CWM",
+     "term": "CWM-optimality hypothesis",
+     "columns": [
+      "t4c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "CWM",
+     "code": "CWM",
+     "term": "CWM-optimality hypothesis",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 1.3
+  },
+  {
+   "uid": "Ji2024#t0r0c3",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Jones2015#p67",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "0",
+     "term": "relatively sedentary",
+     "columns": [
+      "t1c3",
+      "t1c5"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "1",
+     "term": "mobile",
+     "columns": [
+      "t1c3",
+      "t1c5"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "2",
+     "term": "very mobile",
+     "columns": [
+      "t1c3",
+      "t1c5"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "0",
+     "term": "relatively sedentary",
+     "columns": [
+      "C3",
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "1",
+     "term": "mobile",
+     "columns": [
+      "C3",
+      "C5"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "2",
+     "term": "very mobile",
+     "columns": [
+      "C3",
+      "C5"
+     ]
+    }
+   ],
+   "seconds": 0.8
+  },
+  {
+   "uid": "Kratschmer2019#p51",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.9
+  },
+  {
+   "uid": "Kratschmer2019#t8r11",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Nesting type",
+     "code": "G",
+     "term": "Ground-nesting",
+     "columns": [
+      "t10c2",
+      "t11c2",
+      "t13c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nesting type",
+     "code": "A",
+     "term": "Above-ground nesting",
+     "columns": [
+      "t10c2",
+      "t11c2",
+      "t12c2",
+      "t13c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nesting type",
+     "code": "P",
+     "term": "Parasitic",
+     "columns": [
+      "t10c2",
+      "t11c2",
+      "t13c2"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Nesting type",
+     "code": "G",
+     "term": "Ground-nesting",
+     "columns": [
+      "C1",
+      "C2",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nesting type",
+     "code": "A",
+     "term": "Above-ground nesting",
+     "columns": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nesting type",
+     "code": "P",
+     "term": "Parasitic",
+     "columns": [
+      "C1",
+      "C2",
+      "C4"
+     ]
+    }
+   ],
+   "seconds": 1.5
+  },
+  {
+   "uid": "Lizee2016#p69",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "calculated metrics",
+     "code": "BR",
+     "term": "BR",
+     "columns": [
+      "t2c0",
+      "t3c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "calculated metrics",
+     "code": "NODF",
+     "term": "NODF",
+     "columns": [
+      "t2c0",
+      "t3c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "calculated metrics",
+     "code": "T",
+     "term": "T",
+     "columns": [
+      "t2c0",
+      "t3c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "calculated metrics",
+     "code": "BR",
+     "term": "BR",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "calculated metrics",
+     "code": "NODF",
+     "term": "NODF",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "calculated metrics",
+     "code": "T",
+     "term": "T",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    }
+   ],
+   "seconds": 1.5
+  },
+  {
+   "uid": "Lizee2016#p101",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "observed and simulated values of",
+     "code": "BR",
+     "term": "BR",
+     "columns": [
+      "t2c0",
+      "t3c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "observed and simulated values of",
+     "code": "NODF",
+     "term": "NODF",
+     "columns": [
+      "t2c0",
+      "t3c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "observed and simulated values of",
+     "code": "T",
+     "term": "T",
+     "columns": [
+      "t2c0",
+      "t3c0"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "observed and simulated values of",
+     "code": "BR",
+     "term": "BR",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "observed and simulated values of",
+     "code": "NODF",
+     "term": "NODF",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "observed and simulated values of",
+     "code": "T",
+     "term": "T",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    }
+   ],
+   "seconds": 1.6
+  },
+  {
+   "uid": "MacDonald2021#p21",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "MacDonald2021#p35",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "MacDonald2021#p88",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.3
+  },
+  {
+   "uid": "Mirzaee2023#p72",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Nelson2020#p73",
+   "entries": [
+    {
+     "kind": "figure key",
+     "variable": "site",
+     "code": "E",
+     "term": "sites with bison present are indicated by open points",
+     "columns": [
+      "t10c0",
+      "t12c0",
+      "t9c0"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "site",
+     "code": "triangles",
+     "term": "remnant prairie sites for comparison",
+     "columns": [],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "figure key",
+     "variable": "site",
+     "code": "E",
+     "term": "sites with bison present are indicated by open points",
+     "columns": [
+      "C1",
+      "C2",
+      "C3"
+     ]
+    },
+    {
+     "kind": "figure key",
+     "variable": "site",
+     "code": "triangles",
+     "term": "remnant prairie sites for comparison",
+     "columns": []
+    }
+   ],
+   "seconds": 1.2
+  },
+  {
+   "uid": "Pessoa2017#p51",
+   "entries": [
+    {
+     "kind": "figure key",
+     "variable": "localities",
+     "code": "Circles",
+     "term": "Area 1, Conceicão Farm",
+     "columns": [
+      "t0c5"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "localities",
+     "code": "Squares",
+     "term": "Area 2, Alvo- ¸ rada Farm",
+     "columns": [
+      "t0c6"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "figure key",
+     "variable": "localities",
+     "code": "Triangles",
+     "term": "Area 3 in RPPN SESC Pantanal",
+     "columns": [
+      "t0c5",
+      "t0c6"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "figure key",
+     "variable": "localities",
+     "code": "Circles",
+     "term": "Area 1, Conceicão Farm",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "figure key",
+     "variable": "localities",
+     "code": "Squares",
+     "term": "Area 2, Alvo- ¸ rada Farm",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "figure key",
+     "variable": "localities",
+     "code": "Triangles",
+     "term": "Area 3 in RPPN SESC Pantanal",
+     "columns": [
+      "C1",
+      "C2"
+     ]
+    }
+   ],
+   "seconds": 0.9
+  },
+  {
+   "uid": "Scalercio2020#p23",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Schirmel2012#p86",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Tonelli2021#p125",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "setae",
+     "code": "1",
+     "term": "underdeveloped",
+     "columns": [
+      "t7c11"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "setae",
+     "code": "2",
+     "term": "developed",
+     "columns": [
+      "t7c11"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "setae",
+     "code": "3",
+     "term": "strong prolongation of spatula-shaped epizygum",
+     "columns": [
+      "t7c11"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "setae",
+     "code": "1",
+     "term": "underdeveloped",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "setae",
+     "code": "2",
+     "term": "developed",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "setae",
+     "code": "3",
+     "term": "strong prolongation of spatula-shaped epizygum",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.8
+  },
+  {
+   "uid": "Tonelli2021#p143",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "0",
+     "term": "Nest composed of a single brood mass located within the excrement",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "1",
+     "term": "Nest composed of several brood masses located within the excrement",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "2",
+     "term": "Nest composed of a single brood mass located underground in a simple nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "3",
+     "term": "Nest composed of several brood masses located underground in a simple nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "5",
+     "term": "Nest composed of several isolated brood masses located underground in a compound nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "7",
+     "term": "Nest composed of a single brood ball located underground in a simple nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "8",
+     "term": "Nest composed of several isolated brood balls located underground in a simple nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "9",
+     "term": "Nest composed of several brood balls per chamber located underground in a simple nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "10",
+     "term": "Nest composed of several isolated brood balls located underground in a compound nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "11",
+     "term": "Nest composed of several brood balls per chamber located underground in a compound nest",
+     "columns": [
+      "t7c13"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "0",
+     "term": "Nest composed of a single brood mass located within the excrement",
+     "columns": [
+      "t7c14"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "1",
+     "term": "Nest composed of several brood masses located within the excrement",
+     "columns": [
+      "t7c14"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "3",
+     "term": "Nest composed of several brood masses located underground in a simple nest",
+     "columns": [
+      "t7c14"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "5",
+     "term": "Nest composed of several isolated brood masses located underground in a compound nest",
+     "columns": [
+      "t7c14"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "7",
+     "term": "Nest composed of a single brood ball located underground in a simple nest",
+     "columns": [
+      "t7c14"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "9",
+     "term": "Nest composed of several brood balls per chamber located underground in a simple nest",
+     "columns": [
+      "t7c14"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "0",
+     "term": "within excrement",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "1",
+     "term": "dung soil interphase",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "2",
+     "term": "little depth",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "3",
+     "term": "great depth",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "0",
+     "term": "within trophic source",
+     "columns": [
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "columns": [
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "3",
+     "term": "shor",
+     "columns": [
+      "t7c16"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "0",
+     "term": "Nest composed of a single brood mass located within the excrement",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "1",
+     "term": "Nest composed of several brood masses located within the excrement",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "2",
+     "term": "Nest composed of a single brood mass located underground in a simple nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "3",
+     "term": "Nest composed of several brood masses located underground in a simple nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "5",
+     "term": "Nest composed of several isolated brood masses located underground in a compound nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "7",
+     "term": "Nest composed of a single brood ball located underground in a simple nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "8",
+     "term": "Nest composed of several isolated brood balls located underground in a simple nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "9",
+     "term": "Nest composed of several brood balls per chamber located underground in a simple nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "10",
+     "term": "Nest composed of several isolated brood balls located underground in a compound nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest",
+     "code": "11",
+     "term": "Nest composed of several brood balls per chamber located underground in a compound nest",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "0",
+     "term": "Nest composed of a single brood mass located within the excrement",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "1",
+     "term": "Nest composed of several brood masses located within the excrement",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "3",
+     "term": "Nest composed of several brood masses located underground in a simple nest",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "5",
+     "term": "Nest composed of several isolated brood masses located underground in a compound nest",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "7",
+     "term": "Nest composed of a single brood ball located underground in a simple nest",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest type",
+     "code": "9",
+     "term": "Nest composed of several brood balls per chamber located underground in a simple nest",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "0",
+     "term": "within excrement",
+     "columns": [
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "1",
+     "term": "dung soil interphase",
+     "columns": [
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "2",
+     "term": "little depth",
+     "columns": [
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "3",
+     "term": "great depth",
+     "columns": [
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "0",
+     "term": "within trophic source",
+     "columns": [
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "columns": [
+      "C4"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "3",
+     "term": "shor",
+     "columns": [
+      "C4"
+     ]
+    }
+   ],
+   "seconds": 7.1
+  },
+  {
+   "uid": "Tonelli2021#p145",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "0",
+     "term": "within excrement",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "1",
+     "term": "dungsoil interphase",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "2",
+     "term": "little depth",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "3",
+     "term": "great depth",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "0",
+     "term": "within excrement",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "1",
+     "term": "dungsoil interphase",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "2",
+     "term": "little depth",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "species",
+     "code": "3",
+     "term": "great depth",
+     "columns": [
+      "C2"
+     ]
+    }
+   ],
+   "seconds": 0.9
+  },
+  {
+   "uid": "Tonelli2021#p147",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "0)",
+     "term": "within food source",
+     "columns": [
+      "t7c14",
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "1)",
+     "term": "starting within food source but with a horizontal extension",
+     "columns": [
+      "t7c14",
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "2)",
+     "term": "a short distance out from the food source",
+     "columns": [
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "3)",
+     "term": "a great distance out from the food source",
+     "columns": [
+      "t7c14",
+      "t7c16"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "0)",
+     "term": "within food source",
+     "columns": [
+      "C1",
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "1)",
+     "term": "starting within food source but with a horizontal extension",
+     "columns": [
+      "C1",
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "2)",
+     "term": "a short distance out from the food source",
+     "columns": [
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "four categories",
+     "code": "3)",
+     "term": "a great distance out from the food source",
+     "columns": [
+      "C1",
+      "C3"
+     ]
+    }
+   ],
+   "seconds": 1.2
+  },
+  {
+   "uid": "Tonelli2021#t7r0c11",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Zigum",
+     "code": "1",
+     "term": "underdeveloped",
+     "columns": [
+      "t7c11"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Zigum",
+     "code": "2",
+     "term": "developed",
+     "columns": [
+      "t7c11"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Zigum",
+     "code": "3",
+     "term": "epizygum",
+     "columns": [
+      "t7c11"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Zigum",
+     "code": "1",
+     "term": "underdeveloped",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Zigum",
+     "code": "2",
+     "term": "developed",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Zigum",
+     "code": "3",
+     "term": "epizygum",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 1.4
+  },
+  {
+   "uid": "Tonelli2021#t7r0c15",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "0",
+     "term": "within excrement",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "1",
+     "term": "dung soil interphase",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "2",
+     "term": "little depth",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "3",
+     "term": "great depth",
+     "columns": [
+      "t7c15"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "0",
+     "term": "within excrement",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "1",
+     "term": "dung soil interphase",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "2",
+     "term": "little depth",
+     "columns": [
+      "C2"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Nest depth",
+     "code": "3",
+     "term": "great depth",
+     "columns": [
+      "C2"
+     ]
+    }
+   ],
+   "seconds": 1.5
+  },
+  {
+   "uid": "Tonelli2021#t7r0c16",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "0",
+     "term": "within trophic source",
+     "columns": [
+      "t7c14",
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "columns": [
+      "t7c14",
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "2",
+     "term": "short distance",
+     "columns": [
+      "t7c16"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "3",
+     "term": "great distance",
+     "columns": [
+      "t7c14",
+      "t7c16"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "0",
+     "term": "within trophic source",
+     "columns": [
+      "C1",
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "1",
+     "term": "starting within food source but with a horizontal extension",
+     "columns": [
+      "C1",
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "2",
+     "term": "short distance",
+     "columns": [
+      "C3"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Horizontal nest distance",
+     "code": "3",
+     "term": "great distance",
+     "columns": [
+      "C1",
+      "C3"
+     ]
+    }
+   ],
+   "seconds": 2.3
+  },
+  {
+   "uid": "Tonelli2021#t7r0c17",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Daily activity",
+     "code": "1",
+     "term": "diurnal",
+     "columns": [
+      "t7c17"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Daily activity",
+     "code": "2",
+     "term": "crepuscolar/nocturnal",
+     "columns": [
+      "t7c17"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Daily activity",
+     "code": "1",
+     "term": "diurnal",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Daily activity",
+     "code": "2",
+     "term": "crepuscolar/nocturnal",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.6
+  },
+  {
+   "uid": "Tsai2020#t2r27",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Uemori2022#t1r1",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Trophic level",
+     "code": "1",
+     "term": "herbivorous",
+     "columns": [
+      "t3c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Trophic level",
+     "code": "2",
+     "term": "primary predators",
+     "columns": [
+      "t3c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Trophic level",
+     "code": "3",
+     "term": "hyper predators",
+     "columns": [
+      "t3c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Trophic level",
+     "code": "1",
+     "term": "herbivorous",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Trophic level",
+     "code": "2",
+     "term": "primary predators",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Trophic level",
+     "code": "3",
+     "term": "hyper predators",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.9
+  },
+  {
+   "uid": "Vidal2023#p91",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "A",
+     "term": "A",
+     "columns": [
+      "t0c4"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "S",
+     "term": "S",
+     "columns": [
+      "t0c4"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "H",
+     "term": "H",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "J",
+     "term": "J",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FRic",
+     "term": "FRic",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FEve",
+     "term": "FEve",
+     "columns": [
+      "t0c4"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FDis",
+     "term": "FDis",
+     "columns": [],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FDiv",
+     "term": "FDiv",
+     "columns": [],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "A",
+     "term": "A",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "S",
+     "term": "S",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "H",
+     "term": "H",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "J",
+     "term": "J",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FRic",
+     "term": "FRic",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FEve",
+     "term": "FEve",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FDis",
+     "term": "FDis",
+     "columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "taxonomic and functional community structure indexes",
+     "code": "FDiv",
+     "term": "FDiv",
+     "columns": []
+    }
+   ],
+   "seconds": 3.2
+  },
+  {
+   "uid": "Viza2023#t5r87",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Distribution codes for GLM",
+     "code": "x2 + x",
+     "term": "quadratic regression",
+     "columns": [
+      "t5c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Distribution codes for GLM",
+     "code": "x",
+     "term": "linear regression",
+     "columns": [
+      "t5c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Distribution codes for GLM",
+     "code": "x2 + x",
+     "term": "quadratic regression",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "variable abbreviation",
+     "variable": "Distribution codes for GLM",
+     "code": "x",
+     "term": "linear regression",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.6
+  },
+  {
+   "uid": "Wallon2024#p51",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "Control",
+     "term": "control plots",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "OTCs",
+     "term": "enclosed by OTC",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "Control",
+     "term": "control plots",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "OTCs",
+     "term": "enclosed by OTC",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 1.6
+  },
+  {
+   "uid": "Wallon2024#t5r33",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Wallon2024#t9r25",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "MID",
+     "term": "MID",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "OTC-HIGH",
+     "term": "OTC-HIGH",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "OTC",
+     "term": "OTC",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "MID",
+     "term": "MID",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "OTC-HIGH",
+     "term": "OTC-HIGH",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "OTC",
+     "term": "OTC",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 1.5
+  },
+  {
+   "uid": "Wallon2024#t9r30",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "N/A",
+     "code": "LOW",
+     "term": "LOW = MID",
+     "columns": [
+      "t10c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "N/A",
+     "code": "LOW",
+     "term": "LOW = MID",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.4
+  },
+  {
+   "uid": "Wallon2024#t12r21",
+   "entries": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Treatment",
+     "code": "LOW OTC",
+     "term": "LOW OTC = MID OTC",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "variable abbreviation",
+     "variable": "Treatment",
+     "code": "LOW OTC",
+     "term": "LOW OTC = MID OTC",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.4
+  },
+  {
+   "uid": "Wallon2024#t12r28",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  },
+  {
+   "uid": "Wallon2024#t19r27",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Winter",
+     "code": "Winter",
+     "term": "Winter",
+     "columns": [
+      "t13c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "ActivNight",
+     "code": "ActivNight",
+     "term": "ActivNight",
+     "columns": [
+      "t13c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "Elevation",
+     "code": "Elevation",
+     "term": "Elevation",
+     "columns": [
+      "t13c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "LOW-MID",
+     "code": "LOW-MID",
+     "term": "LOW-MID",
+     "columns": [
+      "t13c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "LOW",
+     "code": "LOW",
+     "term": "LOW",
+     "columns": [
+      "t13c1"
+     ],
+     "bad_columns": []
+    },
+    {
+     "kind": "code legend",
+     "variable": "MID",
+     "code": "MID",
+     "term": "MID",
+     "columns": [
+      "t13c1"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Winter",
+     "code": "Winter",
+     "term": "Winter",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "ActivNight",
+     "code": "ActivNight",
+     "term": "ActivNight",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "Elevation",
+     "code": "Elevation",
+     "term": "Elevation",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "LOW-MID",
+     "code": "LOW-MID",
+     "term": "LOW-MID",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "LOW",
+     "code": "LOW",
+     "term": "LOW",
+     "columns": [
+      "C1"
+     ]
+    },
+    {
+     "kind": "code legend",
+     "variable": "MID",
+     "code": "MID",
+     "term": "MID",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 1.7
+  },
+  {
+   "uid": "Wallon2024#t20r15",
+   "entries": [
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "MID OTC-HIGH OTC",
+     "term": "MID OTC-HIGH OTC",
+     "columns": [
+      "t3c2"
+     ],
+     "bad_columns": []
+    }
+   ],
+   "raw": [
+    {
+     "kind": "code legend",
+     "variable": "Treatment",
+     "code": "MID OTC-HIGH OTC",
+     "term": "MID OTC-HIGH OTC",
+     "columns": [
+      "C1"
+     ]
+    }
+   ],
+   "seconds": 0.5
+  },
+  {
+   "uid": "Wallon2024#t23r15",
+   "entries": [],
+   "raw": [],
+   "seconds": 0.2
+  }
+ ]
+}
