@@ -7,9 +7,10 @@ Uemori2022) therefore loses entries gemma listed right: '3' follows the 's' of '
 The rescue, nothing else changed: a NUMERIC code printed as an enumeration mark directly before the term
 ('3. hyper predators', '3) …', '3: …'), with no digit, point or comma before it, counts as printed. Gemma is not
 run: the entries the check dropped are in each inventory's 'dropped' list and are checked again against the paper's
-units (an entry's batch is not recorded, so every unit of the paper is tried; only the enumeration rule can pass
-an entry here, so nothing the old check would reach in another batch is added). A rescued entry gets the fields a
-kept one has, its label the whole term (decoder_v2.label_of without gemma's pass B).
+units (an entry's batch is not recorded, so every unit of the paper is tried: an entry gemma listed from one batch
+can be grounded in a unit of another, but only through the enumeration rule — Uemori2022's '(3) East Honshu' in
+prose). A rescued entry gets the fields a kept one has, its label the whole term (decoder_v2.label_of without
+gemma's pass B).
 
   inventory  (code only) on the tuning papers (dev + held_a): every entry the rescue adds, with the unit text, and
              the decoding key's printed pairs it recovers  -> output/boundary_ab/INVENTORY.txt, added.json
