@@ -60,15 +60,17 @@ def head_units(paper, head):
     return out
 
 
-def inventory():
-    OUT.mkdir(parents=True, exist_ok=True)
+def inventory(unit_fn=None, out=OUT, name="experiment B, head cells of wide tables as units", tag="head cell"):
+    """unit_fn(paper, head) -> a paper's new units (default head_units; experiment C passes its own)."""
+    unit_fn = unit_fn or head_units
+    out.mkdir(parents=True, exist_ok=True)
     head = fr.head_runs()
     added, new_units, L = {}, {}, []
     tot = collections.Counter()
     for p in ls.tuning_papers():
         if p not in head or not (li.OUT / f"{p}.json").exists():
             continue
-        us = head_units(p, head)
+        us = unit_fn(p, head)
         if not us:
             continue
         saved = li.units
@@ -80,7 +82,7 @@ def inventory():
         old = json.loads((li.OUT / f"{p}.json").read_text(encoding="utf-8"))["categories"]
         have = {(e.get("variable", "").lower(), e.get("code"), (e.get("term") or e.get("label") or "").lower())
                 for e in old}
-        extra = [dict(e, added="head cell") for e in inv["categories"]
+        extra = [dict(e, added=tag) for e in inv["categories"]
                  if (e.get("variable", "").lower(), e.get("code"), (e.get("term") or e.get("label") or "").lower())
                  not in have]
         new_units[p] = us
@@ -102,7 +104,7 @@ def inventory():
                     tot["rows"] += weight.get((T, code), 1)
         tot["units"] += len(us)
         tot["entries"] += len(extra)
-        L.append(f"{p} [{ls.SPLIT[p]}]: {len(us)} head-cell units, {len(extra)} entries added "
+        L.append(f"{p} [{ls.SPLIT[p]}]: {len(us)} new units, {len(extra)} entries added "
                  f"({len(inv['dropped'])} dropped by the boundary check); key pairs recovered: {', '.join(rec) or 'none'}")
         for u in us:
             L.append(f"    unit {u['id']} ({u['kind']}): {u['text'][:200]}")
@@ -112,12 +114,12 @@ def inventory():
         for d in inv["dropped"]:
             L.append(f"      - dropped '{d.get('code')}' = '{d.get('term')}'  ({d.get('why')})")
     v1.unload(v1.GEMMA)
-    top = [f"experiment B, head cells of wide tables as units: {tot['units']} units in {len(new_units)} tuning papers, "
+    top = [f"{name}: {tot['units']} units in {len(new_units)} tuning papers, "
            f"{tot['entries']} entries added in {len(added)} papers; key pairs recovered {tot['pairs']} "
            f"({tot['rows']} species rows)", ""]
-    (OUT / "added.json").write_text(json.dumps(added, indent=1, ensure_ascii=False), encoding="utf-8")
-    (OUT / "units.json").write_text(json.dumps(new_units, indent=1, ensure_ascii=False), encoding="utf-8")
-    (OUT / "INVENTORY.txt").write_text("\n".join(top + L) + "\n", encoding="utf-8")
+    (out / "added.json").write_text(json.dumps(added, indent=1, ensure_ascii=False), encoding="utf-8")
+    (out / "units.json").write_text(json.dumps(new_units, indent=1, ensure_ascii=False), encoding="utf-8")
+    (out / "INVENTORY.txt").write_text("\n".join(top + L) + "\n", encoding="utf-8")
     print("\n".join(top + L))
 
 
