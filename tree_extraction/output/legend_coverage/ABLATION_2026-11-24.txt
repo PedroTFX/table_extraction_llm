@@ -1,0 +1,90 @@
+R3 feature ablation, 82 papers, 86478 units; no model calls
+
+  variant  units    new   assoc batches   by structure (units)
+  R3        1368    670    4765     116   prose 526, caption 121, numbered list 24, head cell 340, footnote 5, table row 352
+  R3a        491    196    1762      54   prose 270, caption 92, numbered list 23, head cell 10, footnote 3, table row 93
+  R3b       1313    623    4473     111   prose 507, caption 115, numbered list 24, head cell 321, footnote 5, table row 341
+  R3c       1212    521    4433     109   prose 515, caption 118, numbered list 24, head cell 321, footnote 5, table row 229
+  R3abc      477    190    1708      52   prose 261, caption 87, numbered list 23, head cell 10, footnote 3, table row 93
+
+R3: associations by why they survived: codes + header word 1729, distinctive code 1328, 1 explicit 866, >= 2 explicit 842; papers with candidates 69
+  positives: Uemori2022 'herbivorous2.': kept, right target kept; Tonelli2021 'Zigum (1:': kept, right target kept; Tonelli2021 'zygum is the central': kept, right target kept; Kratschmer2019 'G= Ground-nesting': kept, right target kept
+  negatives: Vidal2023 'between 0 and 41': dropped; Noriega2023 'Ataenius_sp1.MEX02': KEPT; MacDonald2021 'Three hypotheses, each': KEPT; Scalercio2020 'Populations inhabiting Mediterranean': KEPT; Uemori2021 'Department of Agro-environmental': KEPT
+
+R3a: associations by why they survived: 1 explicit 920, >= 2 explicit 842; papers with candidates 60
+  positives: Uemori2022 'herbivorous2.': kept, right target kept; Tonelli2021 'Zigum (1:': kept, right target kept; Tonelli2021 'zygum is the central': kept, right target kept; Kratschmer2019 'G= Ground-nesting': kept, right target kept
+  negatives: Vidal2023 'between 0 and 41': dropped; Noriega2023 'Ataenius_sp1.MEX02': dropped; MacDonald2021 'Three hypotheses, each': KEPT; Scalercio2020 'Populations inhabiting Mediterranean': KEPT; Uemori2021 'Department of Agro-environmental': dropped
+
+R3b: associations by why they survived: codes + header word 1464, distinctive code 1328, >= 2 explicit 842, 1 explicit 839; papers with candidates 69
+  positives: Uemori2022 'herbivorous2.': kept, right target kept; Tonelli2021 'Zigum (1:': kept, right target kept; Tonelli2021 'zygum is the central': kept, right target kept; Kratschmer2019 'G= Ground-nesting': kept, right target kept
+  negatives: Vidal2023 'between 0 and 41': dropped; Noriega2023 'Ataenius_sp1.MEX02': dropped; MacDonald2021 'Three hypotheses, each': KEPT; Scalercio2020 'Populations inhabiting Mediterranean': KEPT; Uemori2021 'Department of Agro-environmental': KEPT
+
+R3c: associations by why they survived: codes + header word 1409, distinctive code 1328, 1 explicit 860, >= 2 explicit 836; papers with candidates 69
+  positives: Uemori2022 'herbivorous2.': kept, right target kept; Tonelli2021 'Zigum (1:': kept, right target kept; Tonelli2021 'zygum is the central': kept, right target kept; Kratschmer2019 'G= Ground-nesting': kept, right target kept
+  negatives: Vidal2023 'between 0 and 41': dropped; Noriega2023 'Ataenius_sp1.MEX02': dropped; MacDonald2021 'Three hypotheses, each': KEPT; Scalercio2020 'Populations inhabiting Mediterranean': KEPT; Uemori2021 'Department of Agro-environmental': KEPT
+
+R3abc: associations by why they survived: 1 explicit 872, >= 2 explicit 836; papers with candidates 60
+  positives: Uemori2022 'herbivorous2.': kept, right target kept; Tonelli2021 'Zigum (1:': kept, right target kept; Tonelli2021 'zygum is the central': kept, right target kept; Kratschmer2019 'G= Ground-nesting': kept, right target kept
+  negatives: Vidal2023 'between 0 and 41': dropped; Noriega2023 'Ataenius_sp1.MEX02': dropped; MacDonald2021 'Three hypotheses, each': KEPT; Scalercio2020 'Populations inhabiting Mediterranean': KEPT; Uemori2021 'Department of Agro-environmental': dropped
+
+R3abc by paper (units, new, associations):
+  Wallon2024             [dev]    58    54    122
+  Cao2024                [held_a]    21    10     33
+  Guariento2020          [held_a]    21     0    152
+  CamargoVanegas2024     [dev]    20     9    107
+  Cajaiba2022            [held_a]    19     3     98
+  Cajaiba2023            [held_a]    19     3    152
+  Kratschmer2019         [dev]    19     8    140
+  Tonelli2021            [dev]    19     9     37
+  Eskilden2015           [held_a]    18     8    101
+  Cecala2021             [dev]    16    12     42
+  Ji2024                 [held_a]    13    10     13
+  Derhe2016              [held_a]    12     2     24
+  Espinosa2023           [dev]    12     2     35
+  Guareschi2015          [dev]    12     8     98
+  Uemori2022             [dev]    12     4     34
+  Harmon2013             [dev]    11     2     11
+  Tsai2020               [dev]    10     5     75
+  Arnan2012              [dev]     9     1     18
+  Araujo2021             [dev]     8     1      8
+  Eckert2023             [dev]     8     2     28
+  MacDonald2021          [held_a]     8     5     40
+  Orr2024                [dev]     8     4     16
+  Schirmel2012           [held_a]     7     2      7
+  Vidal2023              [dev]     7     1      9
+  Viza2023               [dev]     7     1      7
+  Cappellari2022         [dev]     6     1     13
+  Laha2020               [dev]     6     0     12
+  Leong2023              [held_a]     6     1     11
+  Pessoa2017             [dev]     6     4     10
+  Uemori2021             [dev]     6     0     95
+  Graf2021               [dev]     5     2     10
+  Korosi2022             [dev]     5     0      9
+  McCravy2019            [dev]     5     0     11
+  Nelson2020             [dev]     5     2     14
+  Wang2021               [held_a]     5     0     15
+  Fiedler2021            [held_a]     4     0     10
+  Lizee2016              [dev]     4     3      8
+  Zhao2024               [held_a]     4     1      4
+  Brant2021              [held_a]     3     2      4
+  Jones2015              [dev]     3     1     17
+  Noriega2023            [held_a]     3     2      3
+  Oliveira2022           [dev]     3     0      4
+  Fontanilla2019         [held_a]     2     0      2
+  Kovacs2008             [dev]     2     1      4
+  Mirzaee2023            [dev]     2     1      2
+  Scalercio2020          [held_a]     2     2      2
+  Taillefer2018          [dev]     2     0     18
+  Teder2020              [dev]     2     0      6
+  AmbspergTraun1991      [held_a]     1     0      1
+  Chichorro2022          [dev]     1     1      1
+  Gonzalez2016           [dev]     1     0      1
+  Gossner2013            [dev]     1     0      1
+  Heiva2013              [held_a]     1     0      1
+  Hendriks2013           [dev]     1     0      1
+  Keller1998             [dev]     1     0      6
+  Lichtenberg2017        [dev]     1     0      1
+  Luo2023                [dev]     1     0      1
+  McCune2023             [held_a]     1     0      1
+  Torok2022              [dev]     1     0      1
+  Wijas2021              [dev]     1     0      1
