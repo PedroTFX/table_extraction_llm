@@ -24,6 +24,9 @@ A unit-to-column association (codes matched in the unit as whole tokens; a digit
 enumeration 'predators3.' counts, but not inside a longer number):
   R1   a distinctive code of the column, or a code of the column + an informative word of its header
   R2   a distinctive code, or >= 2 distinct codes of the column + an informative word of its header
+  R3   R2, except table rows repeated: when more than MAX_REPEAT rows of one table are R2 candidates for the same
+       column, those rows are data (a definition is stated once, a pattern row after row is a data table; found in
+       the first run: Noriega2023's other data tables gave 26,772 candidate rows). Other structures as R2
 A body row of the column's own table is data, never a candidate for that column (Chichorro2022's in-row key); its
 head cells and footnote rows stay candidates. Tables are not excluded whole.
 
@@ -57,6 +60,7 @@ import legend_scope as ls
 
 OUT = _paths.OUTPUT / "legend_coverage"
 MAX_DISTINCT = 15
+MAX_REPEAT = 3
 BATCH = li.BATCH_CHARS
 SAMPLE_PER_STRUCTURE = 12
 SEED = 20261124
@@ -224,7 +228,13 @@ def audit(papers):
         per_paper[p] = {"units": len(us), "columns": len(cols)}
         print(f"  {p:22s} {len(us)} units, {len(cols)} coded-looking columns, "
               f"{len({r['unit'] for r in rows if r['paper'] == p})} candidate units", flush=True)
-    (OUT / "candidates.json").write_text(json.dumps(rows, indent=1, ensure_ascii=False), encoding="utf-8")
+    rep = collections.Counter((r["paper"], r["unit_table"], r["table"], r["col"]) for r in rows
+                              if r["r2"] and r["structure"] == "table row")
+    for r in rows:
+        r["r3"] = r["r2"] and not (r["structure"] == "table row"
+                                   and rep[(r["paper"], r["unit_table"], r["table"], r["col"])] > MAX_REPEAT)
+    (OUT / "candidates.json").write_text(json.dumps([r for r in rows if r["r3"]], indent=1, ensure_ascii=False),
+                                         encoding="utf-8")
     report(rows, per_paper, n_units, n_cols)
     sample(rows)
 
@@ -243,23 +253,24 @@ def report(rows, per_paper, n_units, n_cols):
     L = [f"legend coverage audit (code-anchored candidates), {len(per_paper)} papers; no model calls", "",
          f"units enumerated {sum(n_units.values())} (" + ", ".join(f"{k} {v}" for k, v in n_units.most_common())
          + f"); columns with code-like values {n_cols}", ""]
-    for name, rs in (("R1", rows), ("R2", [r for r in rows if r["r2"]])):
+    for name, rs in (("R1", rows), ("R2", [r for r in rows if r["r2"]]), ("R3", [r for r in rows if r["r3"]])):
         u, a, new, b = summary(rs)
         L.append(f"{name}: {u} unique candidate units, {a} unit-to-column associations; {u - new} already read by the "
                  f"inventory, {new} new -> about {b} gemma batches (~{2 * b} calls + labels)")
-    L += ["", "by structure (unique units: R1 / R2; R2 new to the inventory):"]
+    L += ["", "by structure (unique units: R1 / R2 / R3; R3 new to the inventory):"]
     for s in ("prose", "caption", "numbered list", "head cell", "footnote", "table row"):
         r1 = {(r["paper"], r["unit"]) for r in rows if r["structure"] == s}
         r2 = {(r["paper"], r["unit"]) for r in rows if r["structure"] == s and r["r2"]}
-        r2n = {(r["paper"], r["unit"]) for r in rows if r["structure"] == s and r["r2"] and not r["in_inventory"]}
-        L.append(f"  {s:14s} {len(r1):6d} / {len(r2):6d}   new {len(r2n):6d}   (of {n_units[s]} units)")
-    L += ["", "how R2 associations were made: "
+        r3 = {(r["paper"], r["unit"]) for r in rows if r["structure"] == s and r["r3"]}
+        r3n = {(r["paper"], r["unit"]) for r in rows if r["structure"] == s and r["r3"] and not r["in_inventory"]}
+        L.append(f"  {s:14s} {len(r1):6d} / {len(r2):6d} / {len(r3):6d}   new {len(r3n):6d}   (of {n_units[s]} units)")
+    L += ["", "how R3 associations were made: "
           + ", ".join(f"{k} {v}" for k, v in collections.Counter(
-              "distinctive code" if r["distinctive"] else "codes + header word" for r in rows if r["r2"]).items())]
-    L += ["", "by paper (R2: unique candidate units, new to the inventory, associations; units enumerated):"]
+              "distinctive code" if r["distinctive"] else "codes + header word" for r in rows if r["r3"]).items())]
+    L += ["", "by paper (R3: unique candidate units, new to the inventory, associations; units enumerated):"]
     pp = collections.defaultdict(lambda: [set(), set(), 0])
     for r in rows:
-        if r["r2"]:
+        if r["r3"]:
             pp[r["paper"]][0].add(r["unit"])
             if not r["in_inventory"]:
                 pp[r["paper"]][1].add(r["unit"])
@@ -271,17 +282,18 @@ def report(rows, per_paper, n_units, n_cols):
     for name, needle in (("Uemori2022 glued numbered cell", "herbivorous2."), ("Tonelli2021 head cell", "Zigum (1:"),
                          ("Kratschmer2019 codebook row", "G= Ground-nesting"), ("Vidal2023 year range", "between 0 and 41")):
         hits = [r for r in rows if needle in r["text"]]
-        L.append(f"  {name:32s} R1 {'yes' if hits else 'no'}, R2 {'yes' if any(r['r2'] for r in hits) else 'no'}")
+        L.append(f"  {name:32s} R1 {'yes' if hits else 'no'}, R2 {'yes' if any(r['r2'] for r in hits) else 'no'}, "
+                 f"R3 {'yes' if any(r['r3'] for r in hits) else 'no'}")
     (OUT / "COVERAGE.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L))
 
 
 def sample(rows):
-    """Seeded: per structure, SAMPLE_PER_STRUCTURE R2 associations new to the inventory, for labelling by eye."""
+    """Seeded: per structure, SAMPLE_PER_STRUCTURE R3 associations new to the inventory, for labelling by eye."""
     rnd = random.Random(SEED)
     out = []
     for s in ("prose", "caption", "numbered list", "head cell", "footnote", "table row"):
-        pool = [r for r in rows if r["structure"] == s and r["r2"] and not r["in_inventory"]]
+        pool = [r for r in rows if r["structure"] == s and r["r3"] and not r["in_inventory"]]
         out += rnd.sample(pool, min(SAMPLE_PER_STRUCTURE, len(pool)))
     with open(OUT / "verification_sample.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh)
