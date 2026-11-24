@@ -14,7 +14,9 @@ to; the gold labels (written by hand into calib_gold.json) have three levels:
   calibrate  (gemma) each unit ONCE, with all its candidate columns; gemma names every code -> term pair the unit
              prints (kind, variable, code, term) and the columns each pair decodes
              -> TREE_OUTPUT/legend_coverage/calib_run_<stamp>.json
-  score      (code) the run against the FROZEN gold; every level reported apart, each subtype and structure apart:
+  score      (code) the run against the FROZEN gold, in three views (the raw entries; after the inventory's own
+             checks strip_own_code + verify_a; and also dropping entries whose term is only the code); every level
+             reported apart, each subtype and structure apart:
              unit recognition, mapping extraction (source-faithful exact / adjudicated cross-source equivalent /
              other wording), variable attribution, target association (with and without the disputed-header
              cases), unsupported extraction, and the selector's own recall (from the gold only: the model never
@@ -263,64 +265,76 @@ def pr(tp, fp, fn):
     return f"precision {p} ({tp}/{tp + fp}), recall {r} ({tp}/{tp + fn})"
 
 
-def score(gold_file, run_file):
-    gold = json.loads(open(gold_file, encoding="utf-8").read())
-    if "frozen" not in gold.get("version", ""):
-        raise SystemExit("the gold is not frozen")
-    G = {u["uid"]: u for u in gold["units"]}
-    R = json.loads(open(run_file, encoding="utf-8").read())
-    run = {u["uid"]: u for u in R["units"]}
-    assert set(G) == set(run), (set(G) ^ set(run))
-    equiv = {}
-    for a in gold["wording_adjudication"]:
-        if a["equivalent"]:
-            ws = {nterm(w) for w in a["wordings"].values()}
-            for w in ws:
-                equiv[(a["legend_id"], ncode(a["code"]), w)] = ws
+def checked(entries, text, identity):
+    """The inventory's own checks on one unit's entries (strip_own_code, then verify_a: code and term printed
+    within one unit, a near-miss term repaired to the printed phrase); with identity, also drop an entry whose
+    term is only its code ('PA' = 'PA'). -> the entries kept"""
+    import copy
+    import decoder_v2 as v2
+    keep = []
+    for e in entries:
+        e = v2.strip_own_code(copy.deepcopy(e))
+        if v2.verify_a(e, text):
+            continue
+        if identity and ncode(e["term"]) == ncode(e["code"]):
+            continue
+        keep.append(e)
+    return keep
+
+
+def column_codes(values):
+    out = set()
+    for v in values:
+        out.add(ncode(v))
+        out |= {ncode(x) for x in re.split(r"\s*[,;/]\s*|\s+", v) if x}
+    return out
+
+
+def evaluate(G, run, equiv, cols):
+    """All the measures for one set of model entries per unit. -> (summary lines, detail lines)"""
     sub = lambda u: u.get("subtypes") or ([u["subtype"]] if u["is_definition"] else [])
-
-    L = [f"Legend calibration: {R['model']}, run {R['date']}, gold {gold['version']}",
-         f"{len(G)} source units, {sum(len(u['mappings']) for u in G.values())} gold mappings, "
-         f"{sum(len(u['targets']) for u in G.values())} candidate associations.",
-         "The set is stratified and holds positive controls: these are calibration and failure-analysis numbers, "
-         "not estimates of corpus-wide precision.", ""]
-
+    S, D = [], []
     # 1 unit recognition
     conf = collections.Counter()
     by_struct = collections.defaultdict(collections.Counter)
     by_sub = collections.defaultdict(collections.Counter)
     for k, u in G.items():
-        pos, got = u["is_definition"], bool(run[k]["entries"])
+        pos, got = u["is_definition"], bool(run[k])
         cell = ("TP" if got else "FN") if pos else ("FP" if got else "TN")
         conf[cell] += 1
         by_struct[u["structure"]][cell] += 1
         for s in sub(u) or ["none"]:
             by_sub[s][cell] += 1
-    L += ["1. UNIT RECOGNITION (does the unit define codes?)",
+    S += ["1. UNIT RECOGNITION (does the unit define codes?)",
           f"  all units: {pr(conf['TP'], conf['FP'], conf['FN'])}; true negatives {conf['TN']}"]
     for s in KINDS:
         c = by_sub[s]
-        L.append(f"  {s:22s} recognised {c['TP']}/{c['TP'] + c['FN']}")
-    L.append(f"  {'none':22s} wrongly recognised {by_sub['none']['FP']}/{by_sub['none']['FP'] + by_sub['none']['TN']}")
-    L.append("  by structure (TP FP FN TN):")
+        S.append(f"  {s:22s} recognised {c['TP']}/{c['TP'] + c['FN']}")
+    S.append(f"  {'none':22s} wrongly recognised {by_sub['none']['FP']}/{by_sub['none']['FP'] + by_sub['none']['TN']}")
+    S.append("  by structure (TP FP FN TN):")
     for s in STRUCTURES:
         c = by_struct[s]
-        L.append(f"    {s:14s} {c['TP']:3d} {c['FP']:3d} {c['FN']:3d} {c['TN']:3d}")
+        S.append(f"    {s:14s} {c['TP']:3d} {c['FP']:3d} {c['FN']:3d} {c['TN']:3d}")
+    for k, u in G.items():
+        if u["is_definition"] and not run[k]:
+            D.append(f"  unit missed: {k} [{u['structure']}] {'/'.join(sub(u))}")
 
     # 2 mapping extraction, 3 variable attribution, 6 unsupported
     status = collections.defaultdict(collections.Counter)
     kinds, var = collections.Counter(), collections.Counter()
-    var_diff, wording, unsupported = [], [], []
-    found = {}                                               # (legend_id, code) -> {uid: status}
+    var_diff, wording, missing, unsupported = [], [], [], []
+    found = {}
     for k, u in G.items():
-        P = run[k]["entries"]
+        P = run[k]
         used = set()
+        terms = {nterm(m["term"]): m["code"] for m in u["mappings"]}
         for m in u["mappings"]:
             kind = m.get("kind") or u["subtype"]
             c = ncode(m["code"])
             same = [i for i, p in enumerate(P) if ncode(p["code"]) == c and i not in used]
             if not same:
                 st = "missing"
+                missing.append(f"  {k} {m['code']!r} = {m['term'][:70]!r}")
             else:
                 own = {nterm(m["term"]), nterm(m.get("printed_as", m["term"]))}
                 ex = [i for i in same if nterm(P[i]["term"]) in own]
@@ -328,9 +342,12 @@ def score(gold_file, run_file):
                 cr = [i for i in same if nterm(P[i]["term"]) in eq]
                 i = (ex or cr or same)[0]
                 used.add(i)
-                st = "exact" if ex else "cross-source equivalent" if cr else "other wording"
-                if st == "other wording":
-                    wording.append(f"  {k} {m['code']!r}: gold {m['term']!r} / model {P[i]['term']!r}")
+                other = terms.get(nterm(P[i]["term"]))
+                st = ("exact" if ex else "cross-source equivalent" if cr
+                      else "wrong pairing" if other is not None and ncode(other) != c else "other wording")
+                if st in ("other wording", "wrong pairing"):
+                    wording.append(f"  {st}: {k} {m['code']!r}: gold {m['term'][:70]!r} / model {P[i]['term'][:70]!r}"
+                                   + (f" (the term of {other!r})" if st == "wrong pairing" else ""))
                 kinds["same kind" if P[i]["kind"] == kind else f"{kind} -> {P[i]['kind']}"] += 1
                 gv, pv = words(m["variable"]), words(P[i]["variable"])
                 v = "not given" if not pv else "shares a word" if gv & pv else "differs"
@@ -343,21 +360,21 @@ def score(gold_file, run_file):
         for i, p in enumerate(P):
             if i not in used:
                 unsupported.append((k, u["is_definition"], printed(p, u["text"]), p))
-    L += ["", "2. MAPPING EXTRACTION (each gold code -> term pair; exact = the wording of the unit the model got, "
-              "up to case, spacing and surrounding punctuation)"]
+    S += ["", "2. MAPPING EXTRACTION (each gold code -> term pair; exact = the wording of the unit the model got, "
+              "up to case, spacing and surrounding punctuation; wrong pairing = the term of another code)"]
+    ST = ("exact", "cross-source equivalent", "other wording", "wrong pairing", "missing")
     for s in ["all"] + KINDS:
         c = status[s]
-        n = sum(c.values())
-        L.append(f"  {s:22s} {n:3d} pairs: exact {c['exact']}, cross-source equivalent {c['cross-source equivalent']}, "
-                 f"other wording {c['other wording']}, missing {c['missing']}")
+        S.append(f"  {s:22s} {sum(c.values()):3d} pairs: " + ", ".join(f"{x} {c[x]}" for x in ST))
     multi = {key: v for key, v in found.items() if len(v) >= 2}
     agree = sum(all(s in ("exact", "cross-source equivalent") for s in v.values()) for v in multi.values())
-    L.append(f"  repeated legends: {agree}/{len(multi)} codes read alike (exact or adjudicated equivalent) in every copy")
-    L.append("  kind of the matched pairs: " + ", ".join(f"{a} {b}" for a, b in kinds.most_common()))
-    if wording:
-        L += ["  other wording (for reading):"] + wording
-    L += ["", "3. VARIABLE ATTRIBUTION (matched pairs; 'shares a word' is a first pass, the differences are listed "
-              "for reading)", "  " + ", ".join(f"{a} {b}" for a, b in var.most_common())] + var_diff
+    S.append(f"  repeated legends: {agree}/{len(multi)} codes read alike (exact or adjudicated equivalent) in "
+             f"every copy")
+    S.append("  kind of the matched pairs: " + ", ".join(f"{a} {b}" for a, b in kinds.most_common()))
+    D += ["", "2. wording and pairing (for reading)"] + wording + ["", "2. missing pairs"] + missing
+    S += ["", "3. VARIABLE ATTRIBUTION (matched pairs; 'shares a word' is a first pass, the rest listed for reading)",
+          "  " + ", ".join(f"{a} {b}" for a, b in var.most_common())]
+    D += ["", "3. variables that differ or are not given"] + var_diff
 
     # 4 target association
     def assoc(skip_disputed):
@@ -365,61 +382,106 @@ def score(gold_file, run_file):
         per = collections.defaultdict(collections.Counter)
         codes_ok, detail = 0, []
         for k, u in G.items():
-            P = run[k]["entries"]
+            P = run[k]
             for t in u["targets"]:
                 if skip_disputed and t.get("disputed_header"):
                     continue
                 col = f"t{t['table']}c{t['col']}"
+                held = column_codes(cols[(k, t["table"], t["col"])])
                 pc = {ncode(p["code"]) for p in P if col in p["columns"]}
                 g, got = bool(t["decoded_by"]), bool(pc)
                 cell = ("TP" if got else "FN") if g else ("FP" if got else "TN")
                 c[cell] += 1
                 per[u["subtype"] if u["is_definition"] else "none"][cell] += 1
-                if cell == "TP" and pc == {ncode(x) for x in t["decoded_by"]}:
-                    codes_ok += 1
-                if cell in ("FP", "FN") or (cell == "TP" and pc != {ncode(x) for x in t["decoded_by"]}):
+                right = cell == "TP" and (pc & held) == {ncode(x) for x in t["decoded_by"]}
+                codes_ok += right
+                if cell in ("FP", "FN") or (cell == "TP" and not right):
                     detail.append(f"  {cell} {k} -> {col} {t['header'][:50]!r}: gold {sorted(t['decoded_by'])} "
-                                  f"model {sorted(pc)}")
+                                  f"model {sorted(pc)} (in the column: {sorted(pc & held)})")
         return c, per, codes_ok, detail
-    L += ["", "4. TARGET ASSOCIATION (each candidate column the selector proposed: does the unit decode it?)"]
+    S += ["", "4. TARGET ASSOCIATION (each candidate column the selector proposed: does the unit decode it? "
+              "code set = the model's codes that the column holds)"]
     for skip in (False, True):
         c, per, ok, detail = assoc(skip)
-        L.append(f"  {'without' if skip else 'with'} the disputed-header cases: {pr(c['TP'], c['FP'], c['FN'])}; "
+        S.append(f"  {'without' if skip else 'with'} the disputed-header cases: {pr(c['TP'], c['FP'], c['FN'])}; "
                  f"true negatives {c['TN']}; right code set on {ok}/{c['TP']} true positives")
         for s in KINDS + ["none"]:
             x = per[s]
-            L.append(f"    {s:22s} TP {x['TP']:3d} FP {x['FP']:3d} FN {x['FN']:3d} TN {x['TN']:3d}")
-    L += ["  errors and code-set differences (with the disputed cases):"] + assoc(False)[3]
-
-    # 5 selector recall (gold only)
-    linked = sum(bool(t["decoded_by"]) for u in G.values() for t in u["targets"])
-    missed = sum(len(u.get("missed_targets", [])) for u in G.values())
-    defs = sum(u["is_definition"] for u in G.values())
-    L += ["", "5. SELECTOR RECALL (from the gold; the model never received these)",
-          f"  target columns: {linked} decoded columns proposed, {missed} missed -> {linked / (linked + missed):.2f}",
-          f"  definition units: {defs} proposed, {len(gold['selector_unit_misses'])} never proposed -> "
-          f"{defs / (defs + len(gold['selector_unit_misses'])):.2f}"]
-    for u in G.values():
-        if u.get("truncated"):
-            L.append(f"  unit boundary: {u['uid']}: {u['truncated']}")
+            S.append(f"    {s:22s} TP {x['TP']:3d} FP {x['FP']:3d} FN {x['FN']:3d} TN {x['TN']:3d}")
+    D += ["", "4. association errors and code-set differences (with the disputed cases)"] + assoc(False)[3]
 
     # 6 unsupported extraction
     up = collections.Counter(("definition unit" if d else "non-definition unit", "printed" if pt else "not printed")
                              for _k, d, pt, _p in unsupported)
-    L += ["", "6. UNSUPPORTED EXTRACTION (pairs the model returned that are not gold mappings of the unit; "
+    ident = sum(ncode(p["term"]) == ncode(p["code"]) for *_x, p in unsupported)
+    S += ["", "6. UNSUPPORTED EXTRACTION (pairs the model returned that are not gold mappings of the unit; "
               "'printed' = code and term both printed in the unit)",
-          "  " + ", ".join(f"{a} / {b}: {n}" for (a, b), n in sorted(up.items()))]
+          f"  {len(unsupported)} pairs: " + ", ".join(f"{a} / {b} {n}" for (a, b), n in sorted(up.items()))
+          + f"; of all of them, term = code {ident}"]
+    D += ["", "6. unsupported pairs"]
     for k, d, pt, p in unsupported:
-        L.append(f"  {k} [{'def' if d else 'none'}, {'printed' if pt else 'NOT printed'}] {p['kind']}: "
-                 f"{p['code']!r} = {p['term']!r} ({p['variable']!r}) cols {p['columns']}")
+        D.append(f"  {k} [{'def' if d else 'none'}, {'printed' if pt else 'NOT printed'}] {p['kind']}: "
+                 f"{p['code']!r} = {p['term'][:80]!r} ({p['variable'][:60]!r}) cols {p['columns']}")
+    return S, D
 
-    L += ["", "PER UNIT (gold subtype; model entries)"]
+
+def score(gold_file, run_file):
+    import pathlib
+    gold = json.loads(open(gold_file, encoding="utf-8").read())
+    if "frozen" not in gold.get("version", ""):
+        raise SystemExit("the gold is not frozen")
+    G = {u["uid"]: u for u in gold["units"]}
+    R = json.loads(open(run_file, encoding="utf-8").read())
+    raw = {u["uid"]: u["entries"] for u in R["units"]}
+    assert set(G) == set(raw), (set(G) ^ set(raw))
+    cols = {(x["uid"], c["table"], c["col"]): c["values"]
+            for x in json.loads((pathlib.Path(gold_file).parent / "calib_units.json").read_text(encoding="utf-8"))
+            for c in x["candidate_columns"]}
+    equiv = {}
+    for a in gold["wording_adjudication"]:
+        if a["equivalent"]:
+            ws = {nterm(w) for w in a["wordings"].values()}
+            for w in ws:
+                equiv[(a["legend_id"], ncode(a["code"]), w)] = ws
+    L = [f"Legend calibration: {R['model']}, run {R['date']}, gold {gold['version']}",
+         f"{len(G)} source units, {sum(len(u['mappings']) for u in G.values())} gold mappings, "
+         f"{sum(len(u['targets']) for u in G.values())} candidate associations.",
+         "The set is stratified and holds positive controls: these are calibration and failure-analysis numbers, "
+         "not estimates of corpus-wide precision. Each unit counts once (repeated copies of a legend count apart).",
+         ""]
+    views = [("A. RAW: the model's entries as returned", raw),
+             ("B. INVENTORY CHECKS: strip_own_code + verify_a (code and term printed within the unit), as the "
+              "inventory already applies", {k: checked(v, G[k]["text"], False) for k, v in raw.items()}),
+             ("C. B + TERM IS NOT THE CODE (a candidate check: drops 'PA' = 'PA')",
+              {k: checked(v, G[k]["text"], True) for k, v in raw.items()})]
+    details = {}
+    for name, entries in views:
+        S, D = evaluate(G, entries, equiv, cols)
+        L += ["=" * 100, name, "=" * 100] + S + [""]
+        details[name] = D
+    linked = sum(bool(t["decoded_by"]) for u in G.values() for t in u["targets"])
+    missed = sum(len(u.get("missed_targets", [])) for u in G.values())
+    defs = sum(u["is_definition"] for u in G.values())
+    L += ["=" * 100, "5. SELECTOR RECALL (from the gold; the model never received these)",
+          f"  target columns: {linked} decoded columns proposed, {missed} missed -> {linked / (linked + missed):.2f}",
+          f"  definition units: {defs} proposed, {len(gold['selector_unit_misses'])} never proposed -> "
+          f"{defs / (defs + len(gold['selector_unit_misses'])):.2f}"]
+    for u in G.values():
+        for t in u.get("missed_targets", []):
+            L.append(f"  missed target: {u['uid']} -> t{t['table']}c{t['col']} {t['header'][:50]!r} ({t['note'][:80]})")
+        if u.get("truncated"):
+            L.append(f"  unit boundary: {u['uid']}: {u['truncated']}")
+    for x in gold["selector_unit_misses"]:
+        L.append(f"  unit never proposed: {x['paper']} [{x['structure']}] {x['text_starts']!r}")
+    L += ["", "=" * 100, "DETAIL, view A (raw)", "=" * 100] + details[views[0][0]]
+    L += ["", "=" * 100, "PER UNIT (gold subtype; raw model entries)", "=" * 100]
+    sub = lambda u: u.get("subtypes") or ([u["subtype"]] if u["is_definition"] else [])
     for k, u in G.items():
         L.append(f"  {k:28s} [{u['structure']}] {'/'.join(sub(u)) or 'none':24s} "
-                 + "; ".join(f"{p['code']}={p['term'][:40]}" for p in run[k]["entries"])[:300])
+                 + "; ".join(f"{p['code']}={p['term'][:40]}" for p in raw[k]))
     f = OUT / f"CALIB_REPORT_{R['date']}.txt"
     f.write_text("\n".join(L) + "\n", encoding="utf-8")
-    print("\n".join(L))
+    print("\n".join(L[:L.index("DETAIL, view A (raw)") - 1]))
     print(f"-> {f}")
 
 
