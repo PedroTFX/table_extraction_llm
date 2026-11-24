@@ -122,12 +122,14 @@ def inventory():
     print("\n".join(head + L))
 
 
-def decode():
-    added = json.loads((OUT / "added.json").read_text(encoding="utf-8"))
+def decode(out=OUT, name="experiment A"):
+    """out/added.json: {paper: [entries]}; out/units.json (if any): {paper: [units the entries were grounded in]}."""
+    added = json.loads((out / "added.json").read_text(encoding="utf-8"))
+    more_units = json.loads((out / "units.json").read_text(encoding="utf-8")) if (out / "units.json").exists() else {}
     head = fr.head_runs()
     client = None
     for p, extra in added.items():
-        f = OUT / f"{p}.json"
+        f = out / f"{p}.json"
         if f.exists() or p not in head:
             continue
         found = ls.key_of(p)
@@ -136,23 +138,23 @@ def decode():
         cats = di.inventory(p) or []
         more = cats + [v2.strip_own_code(dict(e)) for e in extra]
         cols = ls.columns(p, head, found)
-        units = du.unit_texts(p)
+        units = {**du.unit_texts(p), **{u["id"]: u for u in more_units.get(p, [])}}
         client = client or ls.Memo(ct.DecisionClient(v1.NIMBLE, 1))
         res, t0 = {"_columns": {k: list(v) for k, v in cols.items()}}, time.time()
-        for name, pool in (("control", cats), ("rescued", more)):
-            res[name] = {k: fr._retry(lambda: ls.decode_column(client, h, vals, pool, units, set()))
+        for variant, pool in (("control", cats), ("rescued", more)):
+            res[variant] = {k: fr._retry(lambda: ls.decode_column(client, h, vals, pool, units, set()))
                          for k, (h, vals) in cols.items()}
         f.write_text(json.dumps(res, indent=1, ensure_ascii=False), encoding="utf-8")
         print(f"  {p:22s} {len(cols)} columns ({time.time() - t0:.0f}s)", flush=True)
     if client:
         v1.unload(v1.NIMBLE)
-    report()
+    report(out, name)
 
 
-def report():
+def report(out=OUT, name="experiment A"):
     rows = {"control": [], "rescued": []}
-    for f in sorted(OUT.glob("*.json")):
-        if f.stem == "added":
+    for f in sorted(out.glob("*.json")):
+        if f.stem in ("added", "units"):
             continue
         res = json.loads(f.read_text(encoding="utf-8"))
         found = ls.key_of(f.stem)
@@ -160,8 +162,8 @@ def report():
             dec = res[n]
             rows[n] += v2.score_dir_from(f.stem, found, lambda e: dc.lookup(dec, e["table"], e["col"]))
     ok = ls.RIGHT + ls.WORDING
-    L = [f"experiment A, decode: {len({r['paper'] for r in rows['control']})} papers with added entries, "
-         f"the inventory as it is (control) and with the rescued entries", ""]
+    L = [f"{name}, decode: {len({r['paper'] for r in rows['control']})} papers with added entries, "
+         f"the inventory as it is (control) and with the added entries", ""]
     for n, rs in rows.items():
         coded = [r for r in rs if r["kind"] == "coded" and r["out"] not in ("no legend printed", "GT error")]
         kept = [r for r in rs if r["kind"] == "kept"]
@@ -180,13 +182,13 @@ def report():
                 f"'{b['have'][:28]}' -> '{r['have'][:28]}'  (x{r['w']}, {b['out']} -> {r['out']})")
         a, z = b["out"] in ok, r["out"] in ok
         (gains if z and not a else losses if a and not z else moved).append((r["w"], line))
-    L += ["", f"rescued against control: right gained {sum(w for w, _ in gains)} rows, lost {sum(w for w, _ in losses)}, "
+    L += ["", f"added entries against control: right gained {sum(w for w, _ in gains)} rows, lost {sum(w for w, _ in losses)}, "
               f"other changes {sum(w for w, _ in moved)}"]
     for title, xs in (("gained", gains), ("lost", losses), ("changed, neither right", moved)):
         if xs:
             L.append(f"  {title}:")
             L += [x for _w, x in sorted(xs, key=lambda t: -t[0])]
-    (OUT / "DECODE.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
+    (out / "DECODE.txt").write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L))
 
 
