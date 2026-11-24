@@ -322,7 +322,8 @@ def score(gold_file, run_file):
             if not same:
                 st = "missing"
             else:
-                ex = [i for i in same if nterm(P[i]["term"]) == nterm(m["term"])]
+                own = {nterm(m["term"]), nterm(m.get("printed_as", m["term"]))}
+                ex = [i for i in same if nterm(P[i]["term"]) in own]
                 eq = equiv.get((u["legend_id"], c, nterm(m["term"])), set())
                 cr = [i for i in same if nterm(P[i]["term"]) in eq]
                 i = (ex or cr or same)[0]

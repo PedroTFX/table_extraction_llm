@@ -1,5 +1,5 @@
 {
- "version": "v2, 2026-11-24, not frozen (to be checked)",
+ "version": "v3 frozen 2026-11-24",
  "units": [
   {
    "uid": "Araujo2021#p72",
@@ -260,26 +260,6 @@
    "missed_targets": []
   },
   {
-   "uid": "Cao2024#p53",
-   "paper": "Cao2024",
-   "structure": "prose",
-   "is_definition": false,
-   "subtype": "none",
-   "mappings": [],
-   "targets": [
-    {
-     "table": 6,
-     "col": 0,
-     "header": "",
-     "decoded_by": []
-    }
-   ],
-   "note": "results; variable names mentioned",
-   "text": "ranged from 4.6 % to 88.7 % with the mean values ranging from 12.2 % to 67.8 % from pools to arid Sphagnum hummocks respectively. Among peatland samples, three sites showed unexpectedly low LOI values: one sample from a Sphagnum moss hummock (29.6 % of LOI) and two from hollows (20 % and 8 % of LOI, respectively). TOC and TN, which also represent primary production, changed in a similar trend to LOI across different habitats. Sphagnum hollows in the peatland showed the highest acidity (mean pH of 5.58), but lowest ion concentrations (mean conductivity of 25.74 μS cm− ). The details of ranges and averages for major environmental parameters in different habitats are given in Table 1.",
-   "legend_id": null,
-   "missed_targets": []
-  },
-  {
    "uid": "Cao2024#p312",
    "paper": "Cao2024",
    "structure": "prose",
@@ -326,6 +306,26 @@
    "missed_targets": []
   },
   {
+   "uid": "Cao2024#p53",
+   "paper": "Cao2024",
+   "structure": "prose",
+   "is_definition": false,
+   "subtype": "none",
+   "mappings": [],
+   "targets": [
+    {
+     "table": 6,
+     "col": 0,
+     "header": "",
+     "decoded_by": []
+    }
+   ],
+   "note": "results; variable names mentioned",
+   "text": "ranged from 4.6 % to 88.7 % with the mean values ranging from 12.2 % to 67.8 % from pools to arid Sphagnum hummocks respectively. Among peatland samples, three sites showed unexpectedly low LOI values: one sample from a Sphagnum moss hummock (29.6 % of LOI) and two from hollows (20 % and 8 % of LOI, respectively). TOC and TN, which also represent primary production, changed in a similar trend to LOI across different habitats. Sphagnum hollows in the peatland showed the highest acidity (mean pH of 5.58), but lowest ion concentrations (mean conductivity of 25.74 μS cm− ). The details of ranges and averages for major environmental parameters in different habitats are given in Table 1.",
+   "legend_id": null,
+   "missed_targets": []
+  },
+  {
    "uid": "Cappellari2022#p63",
    "paper": "Cappellari2022",
    "structure": "caption",
@@ -341,6 +341,55 @@
      "code": "Temp",
      "term": "temperature",
      "variable": "explanatory variable"
+    },
+    {
+     "code": "ProbS",
+     "term": "proboscis similar to the honeybee",
+     "variable": "trait category level"
+    },
+    {
+     "code": "ProbL",
+     "term": "proboscis longer than the honeybee",
+     "variable": "trait category level"
+    },
+    {
+     "code": "BodyS",
+     "term": "body size similar to the honeybee",
+     "variable": "trait category level"
+    },
+    {
+     "code": "BodyL",
+     "term": "body size larger than the honeybee",
+     "variable": "trait category level"
+    },
+    {
+     "code": "For_NC",
+     "term": "non-central forager",
+     "variable": "trait category level"
+    },
+    {
+     "code": "a",
+     "term": "proboscis length (Model 3)",
+     "variable": "figure panel",
+     "kind": "figure key"
+    },
+    {
+     "code": "b",
+     "term": "body size (Model 4)",
+     "variable": "figure panel",
+     "kind": "figure key"
+    },
+    {
+     "code": "c",
+     "term": "type of foraging range (Model 5)",
+     "variable": "figure panel",
+     "kind": "figure key"
+    },
+    {
+     "code": "d",
+     "term": "taxonomic family (Model 6)",
+     "variable": "figure panel",
+     "kind": "figure key"
     }
    ],
    "targets": [
@@ -354,7 +403,7 @@
      ]
     }
    ],
-   "note": "also panel letters a-d for models and trait levels (ProbS, ProbL, BodyS, BodyL, For_NC) in garbled LaTeX",
+   "note": "variable abbreviations (Apis, Temp; trait levels printed in garbled LaTeX, '$P r o b {S}$' = ProbS) and a panel key a-d; Apis/Temp decode t5c3; the trait levels decode no candidate column (t5 prints 'Prob', 'Body')",
    "text": "Fig. 4 Model estimates from the model-averaging procedure based on the four sets of models considering single traits of pollinators, i.e., a proboscis length (Model 3), b body size (Model 4), c type of foraging range (Model 5), and d taxonomic family (Model 6). Explanatory variables of the four global models are honeybee abundance (Apis, lntransformed), temperature (Temp), the levels of the four trait categories $( P r o b { S }$ proboscis similar to the honeybee, $P r o b { L }$ proboscis longer than the honeybee, $B o d y { S }$ body size similar to the honeybee, $B o d y { L }$ body size larger than the honeybee, $F o r _ { N C }$ non-central forager, Apid",
    "legend_id": "Cappellari2022/explanatory variables",
    "missed_targets": [
@@ -368,69 +417,12 @@
      ],
      "note": "a column of variable names"
     }
-   ]
-  },
-  {
-   "uid": "Cecala2021#p8",
-   "paper": "Cecala2021",
-   "structure": "prose",
-   "is_definition": false,
-   "subtype": "none",
-   "mappings": [],
-   "targets": [
-    {
-     "table": 0,
-     "col": 0,
-     "header": "Nursery",
-     "decoded_by": []
-    },
-    {
-     "table": 0,
-     "col": 4,
-     "header": "Number of plots",
-     "decoded_by": []
-    },
-    {
-     "table": 1,
-     "col": 0,
-     "header": "Nursery",
-     "decoded_by": []
-    },
-    {
-     "table": 1,
-     "col": 8,
-     "header": "samplings per nursery",
-     "decoded_by": []
-    },
-    {
-     "table": 2,
-     "col": 7,
-     "header": "sweep netting / females",
-     "decoded_by": []
-    },
-    {
-     "table": 2,
-     "col": 8,
-     "header": "sweep netting / males",
-     "decoded_by": []
-    },
-    {
-     "table": 6,
-     "col": 2,
-     "header": "native nurseries",
-     "decoded_by": []
-    },
-    {
-     "table": 6,
-     "col": 3,
-     "header": "conventional nurseries",
-     "decoded_by": []
-    }
    ],
-   "note": "numbered abstract",
-   "text": "2. However, no such approach has yet been applied in horticultural plant nurseries, which represent intensively managed artificial flowering plant assemblages. Certain nurseries mostly cultivate regionally native flowering plants, allowing one to test how differences between local plant assemblages may correlate with bee functional traits. 3. We surveyed bee assemblages at native and conventional plant nurseries in southern California from spring through autumn over 2 years, while also documenting the native status of blooming plants in sampling plots. Bees were classified into different functional categories based on their diet breadth, nesting location, and social organisation. 4. At native plant nurseries, we netted proportionally more specialist bee species and fewer generalist species than at conventional nurseries. Nesting location and social organisation of bee samples did not differ between nursery types. Meanwhile, landscape-level features were not associated with any observed functional trait metrics of bee collections. Furthermore, network-level specialisation of bee-plant interactions was higher at conventional nurseries. 5. Our results suggest that a horticultural cultivation practice is quantifiably correlated with the functional distribution of resident bee assemblages. These results are important and encouraging to pollinator conservation efforts in nursery systems and other human-modified landscapes dominated by ornamental plants.",
-   "legend_id": null,
-   "missed_targets": []
+   "subtypes": [
+    "variable abbreviation",
+    "figure key"
+   ],
+   "truncated": "the PDF reader splits the Fig. 4 caption at a page break: the unit ends at 'Apid' and the rest ('Apidae, Coll Colletidae, Cono Conopidae, ...') is a separate paragraph after a body sentence; gold restricted to the supplied text ('Apid' has no term in it)"
   },
   {
    "uid": "Cecala2021#p105",
@@ -631,52 +623,65 @@
    ]
   },
   {
-   "uid": "Eckert2023#p47",
-   "paper": "Eckert2023",
-   "structure": "caption",
-   "is_definition": true,
-   "subtype": "figure key",
-   "mappings": [
-    {
-     "code": "a",
-     "term": "the Midlands",
-     "variable": "figure panel"
-    },
-    {
-     "code": "b",
-     "term": "Zululand",
-     "variable": "figure panel"
-    }
-   ],
+   "uid": "Cecala2021#p8",
+   "paper": "Cecala2021",
+   "structure": "prose",
+   "is_definition": false,
+   "subtype": "none",
+   "mappings": [],
    "targets": [
     {
-     "table": 1,
-     "col": 2,
-     "header": "Formicidae / Midlands",
+     "table": 0,
+     "col": 0,
+     "header": "Nursery",
+     "decoded_by": []
+    },
+    {
+     "table": 0,
+     "col": 4,
+     "header": "Number of plots",
      "decoded_by": []
     },
     {
      "table": 1,
-     "col": 3,
-     "header": "Formicidae / Midlands",
+     "col": 0,
+     "header": "Nursery",
      "decoded_by": []
     },
     {
      "table": 1,
      "col": 8,
-     "header": "Collembola / Midlands",
+     "header": "samplings per nursery",
      "decoded_by": []
     },
     {
-     "table": 1,
-     "col": 9,
-     "header": "Collembola / Midlands",
+     "table": 2,
+     "col": 7,
+     "header": "sweep netting / females",
+     "decoded_by": []
+    },
+    {
+     "table": 2,
+     "col": 8,
+     "header": "sweep netting / males",
+     "decoded_by": []
+    },
+    {
+     "table": 6,
+     "col": 2,
+     "header": "native nurseries",
+     "decoded_by": []
+    },
+    {
+     "table": 6,
+     "col": 3,
+     "header": "conventional nurseries",
      "decoded_by": []
     }
    ],
-   "note": "panels; the columns' a/b are significance letters",
-   "text": "Fig. 1. The focal plantation estates in a) the Midlands and b) Zululand, KwaZulu-Natal, South Africa. Illustrated are the study sites within indigenous forests (stars), grasslands (diamonds) and eucalypt compartments (circles). Plantation compartments (grey), non-plantation areas (white) and estate names indicated.",
-   "legend_id": "Eckert2023/Fig. 1 panels",
+   "note": "numbered abstract",
+   "text": "2. However, no such approach has yet been applied in horticultural plant nurseries, which represent intensively managed artificial flowering plant assemblages. Certain nurseries mostly cultivate regionally native flowering plants, allowing one to test how differences between local plant assemblages may correlate with bee functional traits. 3. We surveyed bee assemblages at native and conventional plant nurseries in southern California from spring through autumn over 2 years, while also documenting the native status of blooming plants in sampling plots. Bees were classified into different functional categories based on their diet breadth, nesting location, and social organisation. 4. At native plant nurseries, we netted proportionally more specialist bee species and fewer generalist species than at conventional nurseries. Nesting location and social organisation of bee samples did not differ between nursery types. Meanwhile, landscape-level features were not associated with any observed functional trait metrics of bee collections. Furthermore, network-level specialisation of bee-plant interactions was higher at conventional nurseries. 5. Our results suggest that a horticultural cultivation practice is quantifiably correlated with the functional distribution of resident bee assemblages. These results are important and encouraging to pollinator conservation efforts in nursery systems and other human-modified landscapes dominated by ornamental plants.",
+   "legend_id": null,
    "missed_targets": []
   },
   {
@@ -727,6 +732,189 @@
    "text": "Figure S1 Species accumulation curves of all species collected across all biotopes (indigenous forest, grassland, pine and eucalypt compartments) in the Midlands and Zululand. Illustrated is a) Collembola and Formicidae in the Midlands, and b) Collembola and Formicidae in Zululand.",
    "legend_id": "Eckert2023/Fig. S1 panels",
    "missed_targets": []
+  },
+  {
+   "uid": "Eckert2023#p47",
+   "paper": "Eckert2023",
+   "structure": "caption",
+   "is_definition": true,
+   "subtype": "figure key",
+   "mappings": [
+    {
+     "code": "a",
+     "term": "the Midlands",
+     "variable": "figure panel"
+    },
+    {
+     "code": "b",
+     "term": "Zululand",
+     "variable": "figure panel"
+    }
+   ],
+   "targets": [
+    {
+     "table": 1,
+     "col": 2,
+     "header": "Formicidae / Midlands",
+     "decoded_by": []
+    },
+    {
+     "table": 1,
+     "col": 3,
+     "header": "Formicidae / Midlands",
+     "decoded_by": []
+    },
+    {
+     "table": 1,
+     "col": 8,
+     "header": "Collembola / Midlands",
+     "decoded_by": []
+    },
+    {
+     "table": 1,
+     "col": 9,
+     "header": "Collembola / Midlands",
+     "decoded_by": []
+    }
+   ],
+   "note": "panels; the columns' a/b are significance letters",
+   "text": "Fig. 1. The focal plantation estates in a) the Midlands and b) Zululand, KwaZulu-Natal, South Africa. Illustrated are the study sites within indigenous forests (stars), grasslands (diamonds) and eucalypt compartments (circles). Plantation compartments (grey), non-plantation areas (white) and estate names indicated.",
+   "legend_id": "Eckert2023/Fig. 1 panels",
+   "missed_targets": []
+  },
+  {
+   "uid": "Eckert2023#t4r134",
+   "paper": "Eckert2023",
+   "structure": "footnote",
+   "is_definition": true,
+   "subtype": "code legend",
+   "mappings": [
+    {
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "variable": "forage strategy"
+    },
+    {
+     "code": "Pred",
+     "term": "Predator",
+     "variable": "forage strategy"
+    },
+    {
+     "code": "Sap",
+     "term": "Saprovore",
+     "variable": "forage strategy"
+    },
+    {
+     "code": "Soil",
+     "term": "soil-dweller",
+     "variable": "habitat position"
+    },
+    {
+     "code": "Litter",
+     "term": "litter-dweller",
+     "variable": "habitat position"
+    },
+    {
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "variable": "habitat position"
+    }
+   ],
+   "targets": [
+    {
+     "table": 4,
+     "col": 2,
+     "header": "Forage strategy",
+     "decoded_by": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ]
+    }
+   ],
+   "note": "the same footnote as t4r70, repeated",
+   "text": "Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore, Soil = soil-dweller, Litter = litter-dweller, Veg = vegetation-dweller.",
+   "legend_id": "Eckert2023/Table S2 abbreviations",
+   "missed_targets": [
+    {
+     "table": 4,
+     "col": 3,
+     "header": "Habitat position",
+     "decoded_by": [
+      "Soil",
+      "Litter",
+      "Veg"
+     ],
+     "note": "the habitat column of the same table; header words not in the footnote and the codes not distinctive, so R3abc did not link it"
+    }
+   ]
+  },
+  {
+   "uid": "Eckert2023#t4r70",
+   "paper": "Eckert2023",
+   "structure": "footnote",
+   "is_definition": true,
+   "subtype": "code legend",
+   "mappings": [
+    {
+     "code": "GenForager",
+     "term": "Generalist forager",
+     "variable": "forage strategy"
+    },
+    {
+     "code": "Pred",
+     "term": "Predator",
+     "variable": "forage strategy"
+    },
+    {
+     "code": "Sap",
+     "term": "Saprovore",
+     "variable": "forage strategy"
+    },
+    {
+     "code": "Soil",
+     "term": "soil-dweller",
+     "variable": "habitat position"
+    },
+    {
+     "code": "Litter",
+     "term": "litter-dweller",
+     "variable": "habitat position"
+    },
+    {
+     "code": "Veg",
+     "term": "vegetation-dweller",
+     "variable": "habitat position"
+    }
+   ],
+   "targets": [
+    {
+     "table": 4,
+     "col": 2,
+     "header": "Forage strategy",
+     "decoded_by": [
+      "GenForager",
+      "Pred",
+      "Sap"
+     ]
+    }
+   ],
+   "note": "the table's abbreviations footnote (repeated at the table's end as t4r134); the passage names no variable (gold variables from the column headers)",
+   "text": "Abbreviations: GenForager = Generalist forager, Pred = Predator, Sap = Saprovore, Soil = soil-dweller, Litter = litter-dweller, Veg = vegetation-dweller.",
+   "legend_id": "Eckert2023/Table S2 abbreviations",
+   "missed_targets": [
+    {
+     "table": 4,
+     "col": 3,
+     "header": "Habitat position",
+     "decoded_by": [
+      "Soil",
+      "Litter",
+      "Veg"
+     ],
+     "note": "the habitat column of the same table; header words not in the footnote and the codes not distinctive, so R3abc did not link it"
+    }
+   ]
   },
   {
    "uid": "Eskilden2015#p64",
@@ -1222,32 +1410,6 @@
    "missed_targets": []
   },
   {
-   "uid": "Lizee2016#p69",
-   "paper": "Lizee2016",
-   "structure": "prose",
-   "is_definition": false,
-   "subtype": "none",
-   "mappings": [],
-   "targets": [
-    {
-     "table": 2,
-     "col": 0,
-     "header": "Metric",
-     "decoded_by": []
-    },
-    {
-     "table": 3,
-     "col": 0,
-     "header": "Metric",
-     "decoded_by": []
-    }
-   ],
-   "note": "index names listed",
-   "text": "The second step of nestedness analysis is to compare the calculated metrics with appropriate null model or randomization test in order to assess their statistical significance (Ulrich et al. 2009). Thus, to test whether the obtained values of BR, NODF and T differ from what may be expected on a random basis, we compare these values with those obtained from null distributions using the Bequiprobable row and fixed column totals constraint model^. This null model has been proved to represent a",
-   "legend_id": null,
-   "missed_targets": []
-  },
-  {
    "uid": "Lizee2016#p101",
    "paper": "Lizee2016",
    "structure": "caption",
@@ -1270,6 +1432,32 @@
    ],
    "note": "index names listed",
    "text": "Table 4 Results of nestedness analysis of habitat composition showing observed and simulated values of BR, NODF and T with 95 % confidence interval and associated probabilities",
+   "legend_id": null,
+   "missed_targets": []
+  },
+  {
+   "uid": "Lizee2016#p69",
+   "paper": "Lizee2016",
+   "structure": "prose",
+   "is_definition": false,
+   "subtype": "none",
+   "mappings": [],
+   "targets": [
+    {
+     "table": 2,
+     "col": 0,
+     "header": "Metric",
+     "decoded_by": []
+    },
+    {
+     "table": 3,
+     "col": 0,
+     "header": "Metric",
+     "decoded_by": []
+    }
+   ],
+   "note": "index names listed",
+   "text": "The second step of nestedness analysis is to compare the calculated metrics with appropriate null model or randomization test in order to assess their statistical significance (Ulrich et al. 2009). Thus, to test whether the obtained values of BR, NODF and T differ from what may be expected on a random basis, we compare these values with those obtained from null distributions using the Bequiprobable row and fixed column totals constraint model^. This null model has been proved to represent a",
    "legend_id": null,
    "missed_targets": []
   },
@@ -1487,7 +1675,8 @@
       "FEve",
       "FDis",
       "FRic"
-     ]
+     ],
+     "disputed_header": "the header is a misread first data row; the cells are index names (decoded here); the review read it as another variable: scored with and without"
     }
    ],
    "note": "t12c0's cells are index names too (its 'header' is a misread first data row); the review had it as another variable: kept visible as a disagreement",
@@ -1510,7 +1699,8 @@
     {
      "code": "Area 2",
      "term": "Alvorada Farm",
-     "variable": "sampling area"
+     "variable": "sampling area",
+     "printed_as": "Alvo- ¸ rada Farm"
     },
     {
      "code": "Area 3",
@@ -2100,6 +2290,93 @@
    "missed_targets": []
   },
   {
+   "uid": "Viza2023#t5r87",
+   "paper": "Viza2023",
+   "structure": "footnote",
+   "is_definition": true,
+   "subtype": "code legend",
+   "mappings": [
+    {
+     "code": "x2 + x",
+     "term": "quadratic regression",
+     "variable": "distribution code for GLM"
+    },
+    {
+     "code": "x",
+     "term": "linear regression",
+     "variable": "distribution code for GLM"
+    },
+    {
+     "code": "x",
+     "term": "variables selected",
+     "variable": "variable selected in BRT"
+    }
+   ],
+   "targets": [
+    {
+     "table": 5,
+     "col": 1,
+     "header": "Model selected",
+     "decoded_by": []
+    }
+   ],
+   "note": "the linked column 'Model selected' holds BRT/GLM, which the footnote does not expand; 'x' means 'linear regression' in GLM rows and 'selected' in BRT rows",
+   "text": "Table S2. Model performances by each species. Columns of predictor variables showed variables selected and the corresponded distribution for each model. Distribution codes for GLM: x2 + x =: quadratic regression; x =: linear regression. In BRT, variables selected were indicated with a “x”",
+   "legend_id": "Viza2023/Table S2 distribution codes",
+   "missed_targets": [
+    {
+     "table": 5,
+     "col": 3,
+     "header": "Predictor Variables / Bio3",
+     "decoded_by": [
+      "x2 + x",
+      "x"
+     ],
+     "note": "a predictor column of the table; the codes are symbols R3abc does not read as codes of a header word"
+    },
+    {
+     "table": 5,
+     "col": 4,
+     "header": "Predictor Variables / Bio4",
+     "decoded_by": [
+      "x2 + x",
+      "x"
+     ],
+     "note": "a predictor column of the table; the codes are symbols R3abc does not read as codes of a header word"
+    },
+    {
+     "table": 5,
+     "col": 5,
+     "header": "Predictor Variables / Bio8",
+     "decoded_by": [
+      "x2 + x",
+      "x"
+     ],
+     "note": "a predictor column of the table; the codes are symbols R3abc does not read as codes of a header word"
+    },
+    {
+     "table": 5,
+     "col": 6,
+     "header": "Predictor Variables / Bio9",
+     "decoded_by": [
+      "x2 + x",
+      "x"
+     ],
+     "note": "a predictor column of the table; the codes are symbols R3abc does not read as codes of a header word"
+    },
+    {
+     "table": 5,
+     "col": 7,
+     "header": "Predictor Variables / Bio15",
+     "decoded_by": [
+      "x2 + x",
+      "x"
+     ],
+     "note": "a predictor column of the table; the codes are symbols R3abc does not read as codes of a header word"
+    }
+   ]
+  },
+  {
    "uid": "Wallon2024#p51",
    "paper": "Wallon2024",
    "structure": "prose",
@@ -2116,66 +2393,6 @@
    ],
    "note": "OTC used, not expanded in this unit",
    "text": "g y . , p - p gWithin each field, twenty plots measuring 1 × 1 m were arranged in a grid layout, aronsand air to circulate freely, resulting in the creation of small air vortices owhile maintaining a distance of 1.5 m between them. Half of these plots, selected at (Hollister et al. 2022). random, served as a control group, while the remaining ten were enclosed by OTCs. To Within each field, twenty plots measuring 1 × 1 m were arranged in a monitor temperature variations, data loggers (Easy Log: EL-USB-2) were installed both hil i t i i di t f 1.5 b t th . H lf f th l t , linside the OTCs and within the control plots. On average, temperatures within the OTC-enclosed plots were found to be 1.2 ◦C higher than those in the control plots. The OTCs were designed to encompass the 1 × 1 m plots, as well as an additional 25 cm border p , gg ( y garound each plot. This buffer area allowed for easy access to the plots for maintenance and the OTCs and within the control plots. On average, temperatures within the Omonitoring without causing damage and facilitated the placement of pitfall traps at each plots were found to be 1.2 °C higher than those in the control plots. The OTouter corner of the plot, still within the boundaries of the OTCs. Additionally, the OTCs signed to encompass the 1 × 1 m plots, as well as an additional 25 cm border were elevated approximately 5 cm off the ground to permit the unimpeded movement of l t. Thi b ff ll d f t thcrawling arthropods throughout the entire sampling area.",
-   "legend_id": null,
-   "missed_targets": []
-  },
-  {
-   "uid": "Wallon2024#t5r33",
-   "paper": "Wallon2024",
-   "structure": "table row",
-   "is_definition": false,
-   "subtype": "none",
-   "mappings": [],
-   "targets": [
-    {
-     "table": 10,
-     "col": 1,
-     "header": "Trait",
-     "decoded_by": []
-    }
-   ],
-   "note": "statistics row",
-   "text": "Summer | IngestEDS | Elevation | 2 | 0.212 | 0.106 | 81.22 | <0.001 | <0.001",
-   "legend_id": null,
-   "missed_targets": []
-  },
-  {
-   "uid": "Wallon2024#t9r25",
-   "paper": "Wallon2024",
-   "structure": "table row",
-   "is_definition": false,
-   "subtype": "none",
-   "mappings": [],
-   "targets": [
-    {
-     "table": 3,
-     "col": 2,
-     "header": "Treatment",
-     "decoded_by": []
-    }
-   ],
-   "note": "statistics row",
-   "text": "MID OTC-HIGH OTC | 0.071 | 0.018 | 54 | 4.001 | 0.003 | MID OTC > HIGH OTC",
-   "legend_id": null,
-   "missed_targets": []
-  },
-  {
-   "uid": "Wallon2024#t9r30",
-   "paper": "Wallon2024",
-   "structure": "table row",
-   "is_definition": false,
-   "subtype": "none",
-   "mappings": [],
-   "targets": [
-    {
-     "table": 10,
-     "col": 1,
-     "header": "Trait",
-     "decoded_by": []
-    }
-   ],
-   "note": "statistics row",
-   "text": "Summer | IngestEDS | Elevation | LOW-MID | 0.016 | 0.011 | 54 | 1.413 | 0.341 | LOW = MID",
    "legend_id": null,
    "missed_targets": []
   },
@@ -2302,6 +2519,66 @@
    "text": "MID OTC-HIGH OTC | 0.112 | 0.023 | 54 | 4.963 | <0.001 | MID OTC > HIGH OTC",
    "legend_id": null,
    "missed_targets": []
+  },
+  {
+   "uid": "Wallon2024#t5r33",
+   "paper": "Wallon2024",
+   "structure": "table row",
+   "is_definition": false,
+   "subtype": "none",
+   "mappings": [],
+   "targets": [
+    {
+     "table": 10,
+     "col": 1,
+     "header": "Trait",
+     "decoded_by": []
+    }
+   ],
+   "note": "statistics row",
+   "text": "Summer | IngestEDS | Elevation | 2 | 0.212 | 0.106 | 81.22 | <0.001 | <0.001",
+   "legend_id": null,
+   "missed_targets": []
+  },
+  {
+   "uid": "Wallon2024#t9r25",
+   "paper": "Wallon2024",
+   "structure": "table row",
+   "is_definition": false,
+   "subtype": "none",
+   "mappings": [],
+   "targets": [
+    {
+     "table": 3,
+     "col": 2,
+     "header": "Treatment",
+     "decoded_by": []
+    }
+   ],
+   "note": "statistics row",
+   "text": "MID OTC-HIGH OTC | 0.071 | 0.018 | 54 | 4.001 | 0.003 | MID OTC > HIGH OTC",
+   "legend_id": null,
+   "missed_targets": []
+  },
+  {
+   "uid": "Wallon2024#t9r30",
+   "paper": "Wallon2024",
+   "structure": "table row",
+   "is_definition": false,
+   "subtype": "none",
+   "mappings": [],
+   "targets": [
+    {
+     "table": 10,
+     "col": 1,
+     "header": "Trait",
+     "decoded_by": []
+    }
+   ],
+   "note": "statistics row",
+   "text": "Summer | IngestEDS | Elevation | LOW-MID | 0.016 | 0.011 | 54 | 1.413 | 0.341 | LOW = MID",
+   "legend_id": null,
+   "missed_targets": []
   }
  ],
  "selector_unit_misses": [
@@ -2320,5 +2597,63 @@
    "note": "environmental variables abbreviated (Cond-electrical conductivity, …); not an R3abc candidate"
   }
  ],
- "rejected_unlinked_columns": "Unlinked columns that share codes but are not decoded (judged): Cappellari t8c2/t8c3 (numbers under an 'Apis'/'Temp' head), Cecala t2c7/t2c8 (counts), Guareschi t2c0 (region letters), Jones t2c4 (decimal scores), Tonelli's neighbouring columns for each legend, Uemori2022 t3c2/c5/c6/c7 (other traits)."
+ "rejected_unlinked_columns": "Unlinked columns that share codes but are not decoded (judged): Cappellari t8c2/t8c3 (numbers under an 'Apis'/'Temp' head), Cecala t2c7/t2c8 (counts), Guareschi t2c0 (region letters), Jones t2c4 (decimal scores), Tonelli's neighbouring columns for each legend, Uemori2022 t3c2/c5/c6/c7 (other traits).",
+ "wording_adjudication": [
+  {
+   "legend_id": "Tonelli2021/horizontal nest distance",
+   "code": "0",
+   "wordings": {
+    "Tonelli2021#p147": "within food source",
+    "Tonelli2021#t7r0c16": "within trophic source"
+   },
+   "equivalent": true,
+   "reason": "synonyms: trophic source = food source"
+  },
+  {
+   "legend_id": "Tonelli2021/horizontal nest distance",
+   "code": "2",
+   "wordings": {
+    "Tonelli2021#p147": "a short distance out from the food source",
+    "Tonelli2021#t7r0c16": "short distance"
+   },
+   "equivalent": true,
+   "reason": "the head cell gives the short name of the same category"
+  },
+  {
+   "legend_id": "Tonelli2021/horizontal nest distance",
+   "code": "3",
+   "wordings": {
+    "Tonelli2021#p147": "a great distance out from the food source",
+    "Tonelli2021#t7r0c16": "great distance"
+   },
+   "equivalent": true,
+   "reason": "the head cell gives the short name of the same category (not in the review's list; found by the same comparison)"
+  },
+  {
+   "legend_id": "Tonelli2021/nest depth",
+   "code": "1",
+   "wordings": {
+    "Tonelli2021#p145": "dungsoil interphase",
+    "Tonelli2021#t7r0c15": "dung soil interphase"
+   },
+   "equivalent": true,
+   "reason": "the same words; the PDF reader dropped the space in one copy"
+  },
+  {
+   "legend_id": "Tonelli2021/zygum",
+   "code": "3",
+   "wordings": {
+    "Tonelli2021#p125": "strong prolongation of spatula-shaped epizygum",
+    "Tonelli2021#t7r0c11": "epizygum"
+   },
+   "equivalent": true,
+   "reason": "the head cell gives the short name of the same category (same code, same column)"
+  }
+ ],
+ "rules": {
+  "exact": "the wording of the unit the model received, up to case, spacing and surrounding punctuation; codes up to spacing and LaTeX markup",
+  "cross-source equivalent": "a wording of the same code in another copy of the same logical legend that wording_adjudication accepts",
+  "printed_as": "where the PDF reader broke a word, the gold term is the paper's word and printed_as the unit's characters; either is exact",
+  "truncated units": "gold restricted to the supplied text"
+ }
 }
