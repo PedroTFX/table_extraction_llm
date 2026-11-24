@@ -138,7 +138,8 @@ def columns(paper, grids, first):
                     if t and t not in head:
                         head.append(t)
             header = " / ".join(head)
-            out.append({"table": k, "col": c, "header": header, "words": informative(header), "codes": codes})
+            out.append({"table": k, "col": c, "header": header, "words": informative(header), "codes": codes,
+                        "values": sorted(vals)})
     return out
 
 
