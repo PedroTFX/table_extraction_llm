@@ -385,30 +385,35 @@ def stage2_eval(G, assoc, cols):
     return S, D
 
 
-def score(gold_file, run_file, v3_file=None):
+def score(gold_file, run_file, v3_file=None, codes="read"):
+    """codes='read' reads a stage 2 code written with its term as that code; codes='raw' scores the codes as the
+    model wrote them (the scorer before 44a290f8), so the parser fix is measured on its own."""
     import pathlib
+    assert codes in ("read", "raw"), codes
     gold = json.loads(open(gold_file, encoding="utf-8").read())
     if "frozen" not in gold.get("version", ""):
         raise SystemExit("the gold is not frozen")
+    gv = gold["version"].split()[0]
     G = {u["uid"]: u for u in gold["units"]}
     R = json.loads(open(run_file, encoding="utf-8").read())
     run_ = {u["uid"]: u for u in R["units"]}
     assert set(G) == set(run_), set(G) ^ set(run_)
-    cols = {(x["uid"], c["table"], c["col"]): c["values"]
-            for x in json.loads((pathlib.Path(gold_file).parent / "calib_units.json").read_text(encoding="utf-8"))
-            for c in x["candidate_columns"]}
+    units = json.loads((pathlib.Path(gold_file).parent / "calib_units.json").read_text(encoding="utf-8"))
+    texts = {x["uid"]: x["text"] for x in units}
+    cols = {(x["uid"], c["table"], c["col"]): c["values"] for x in units for c in x["candidate_columns"]}
     equiv = {}
     for a in gold["wording_adjudication"]:
         if a["equivalent"]:
             ws = {cal.nterm(w) for w in a["wordings"].values()}
             for w in ws:
                 equiv[(a["legend_id"], cal.ncode(a["code"]), w)] = ws
-    L = [f"Two-stage legend calibration: {R['model']}, run {R['date']}, gold {gold['version']}, GAP {R['gap']}",
+    L = [f"Two-stage legend calibration: {R['model']}, run {R['date']}, gold {gold['version']}, GAP {R['gap']}, "
+         f"stage 2 codes {'read (a code written with its term is read as the code)' if codes == 'read' else 'raw (as the model wrote them)'}",
          f"{len(G)} units, {sum(len(u['mappings']) for u in G.values())} gold mappings, "
          f"{sum(len(u['targets']) for u in G.values())} candidate associations.",
          "A stratified set with positive controls: calibration and failure analysis, not corpus-wide precision. "
-         "Each unit counts once. Gold v4 differs from v3: v3 scores are not comparable to these; the v3 run "
-         "rescored on gold v4 is at the end.", ""]
+         f"Each unit counts once. Gold {gv} differs from v3: the v3 run's scores on gold v3 are not comparable to "
+         f"these; the v3 run rescored on this same gold {gv} is at the end.", ""]
     details = []
     raw = {k: v["stage1"] for k, v in run_.items()}
     kept = {k: [e for e in v["stage1"] if not e["check"]] for k, v in run_.items()}
@@ -435,7 +440,20 @@ def score(gold_file, run_file, v3_file=None):
     L += ["=" * 100, "EVIDENCE CHECK (exact gold pairs vs the rest of stage 1's entries)", "=" * 100,
           f"  exact gold pairs: kept {acc[(True, True)]}, rejected {acc[(True, False)]}",
           f"  other entries: removed {acc[(False, False)]}, kept {acc[(False, True)]}",
-          "  reasons: " + ", ".join(f"{a} {b}" for a, b in why.most_common())] + lost + [""]
+          "  reasons: " + ", ".join(f"{a} {b}" for a, b in why.most_common())] + lost
+    # diagnostic only (the run's check is unchanged): an entry whose quoted evidence is not printed, checked
+    # against the whole unit instead of the quote
+    alt = collections.Counter()
+    for k, u in G.items():
+        gm = {(cal.ncode(m["code"]), cal.nterm(m["term"])) for m in u["mappings"]} | \
+             {(cal.ncode(m["code"]), cal.nterm(m.get("printed_as", ""))) for m in u["mappings"]}
+        for e in run_[k]["stage1"]:
+            if e["check"] == "evidence not printed in the unit":
+                right = (cal.ncode(e["code"]), cal.nterm(e["term"])) in gm
+                alt[(right, not check(dict(e, evidence=texts[k]), texts[k]))] += 1
+    L += ["  diagnostic, entries whose quoted evidence is not printed, checked against the whole unit instead: "
+          f"exact gold pairs would pass {alt[(True, True)]} of {alt[(True, True)] + alt[(True, False)]}, "
+          f"other entries would pass {alt[(False, True)]} of {alt[(False, True)] + alt[(False, False)]}", ""]
 
     repaired = collections.Counter()
 
@@ -448,7 +466,8 @@ def score(gold_file, run_file, v3_file=None):
             m = re.match(r"\s*([^\s:=)]+)\s*[:=)]", s)
             if cal.ncode(s) not in ln and m and cal.ncode(m.group(1)) in ln:
                 repaired[which] += 1
-                s = m.group(1)
+                if codes == "read":
+                    s = m.group(1)
             out.append(s)
         return out
 
@@ -457,8 +476,8 @@ def score(gold_file, run_file, v3_file=None):
     e2e = {k: {c: read_codes(v["codes"], [e["code"] for e in r["stage1"] if not e["check"] and e["kind"] in CELL_KINDS],
                              "end to end")
                for c, v in r["stage2"].items() if v["decodes"]} for k, r in run_.items()}
-    L.append(f"  stage 2 codes written with their terms, read as their code: oracle {repaired['oracle']}, "
-             f"end to end {repaired['end to end']}")
+    L.append(f"  stage 2 codes written with their terms ({'read as their code' if codes == 'read' else 'left as written'}): "
+             f"oracle {repaired['oracle']}, end to end {repaired['end to end']}")
     L.append("")
     for name, a in (("STAGE 2, oracle input (the gold's cell-code mappings): association alone", orc),
                     ("STAGE 2, end to end (stage 1's checked cell-code entries)", e2e)):
@@ -477,11 +496,11 @@ def score(gold_file, run_file, v3_file=None):
                 for c in p["columns"]:
                     a3.setdefault(k, {}).setdefault(c, []).append(p["code"])
         S2, D2 = stage2_eval(G, a3, cols)
-        L += ["=" * 100, "REFERENCE: the v3 single-call run (2026-11-24_2345) scored on gold v4, raw entries",
+        L += ["=" * 100, f"REFERENCE: the v3 single-call run (2026-11-24_2345) scored on gold {gv}, raw entries",
               "=" * 100] + S1 + ["  association:"] + S2 + [""]
-        details += ["", "--- v3 run on gold v4"] + D1 + D2
+        details += ["", f"--- v3 run on gold {gv}"] + D1 + D2
     L += ["=" * 100, "DETAIL", "=" * 100] + details
-    f = OUT / f"CALIB2_REPORT_{R['date']}_gold{gold['version'].split()[0]}.txt"
+    f = OUT / f"CALIB2_REPORT_{R['date']}_gold{gv}{'_rawcodes' if codes == 'raw' else ''}.txt"
     f.write_text("\n".join(L) + "\n", encoding="utf-8")
     print("\n".join(L[:L.index("DETAIL") - 1]))
     print(f"-> {f}")
