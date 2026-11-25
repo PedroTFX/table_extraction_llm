@@ -75,7 +75,7 @@ NEEDLES = [
     ("Ji2024", "Number of individuals (Ind; measured/collected)"),
     ("Ji2024", "six elevations (Elev.)"),
     ("Cajaiba2022", "Epigaeic predators (EP) and Epigaeic omnivores (EO)"),
-    ("Viza2023", "Reduced: Axis X ≤ 10"),
+    ("Viza2023", "axis Y ≥ 10; and Reduced: Axis X ≤"),      # the paper prints a control character U+0003 after '≤ '
 ]
 
 
@@ -178,15 +178,21 @@ _R3 = {}
 
 
 def r3abc_links(paper, safe):
-    """{unit id: [columns]} the frozen R3abc selector links (a prose unit's id is its paragraph's index)."""
+    """({unit id: [columns]} the frozen R3abc selector links, {unit id: [R2 candidates with their features]}); a
+    prose unit's id is its paragraph's index."""
     if (paper, safe) not in _R3:
         with strip(safe), contextlib.redirect_stdout(io.StringIO()):
             rows, _pp, _texts = la.features([paper])
-        links = {}
+        links, cand = {}, {}
         for r in la.variant(rows, "abc"):
             if r["unit_table"] is None:
                 links.setdefault(r["unit"], []).append(f"t{r['table']}c{r['col']} {r['header'][:40]!r}")
-        _R3[(paper, safe)] = links
+        for r in rows:
+            if r["unit_table"] is None:
+                cand.setdefault(r["unit"], []).append(
+                    f"t{r['table']}c{r['col']} {r['header'][:30]!r} hit {r['hit'][:6]} explicit {r['explicit'][:6]}"
+                    f"{' taxon header' if r['taxon'] else ''}")
+        _R3[(paper, safe)] = links, cand
     return _R3[(paper, safe)]
 
 
@@ -202,12 +208,14 @@ def needles():
         L.append(f"  {'ok ' if safe else 'BAD'} {p:15s} {n!r}: old cut {len(old)} paragraphs, safe cut {len(safe)}")
         for i in safe[:1]:
             x = paras[i]
-            r3, r3o = r3abc_links(p, True).get(i), [r3abc_links(p, False).get(k) for k in old]
+            r3, r3o = r3abc_links(p, True)[0].get(i), [r3abc_links(p, False)[0].get(k) for k in old]
             L.append(f"        safe p{i} ({len(x)} chars, {li.shape_hits(x)} definition shapes: "
                      f"{'an inventory unit' if li.shape_hits(x) >= 2 else 'no inventory unit'}; "
                      f"{'a numbered list' if lc.numbered(x) else 'caption' if lc.CAPTION.match(x) else 'prose'})")
             L.append(f"        R3abc (frozen) links: safe cut {r3 or 'none'}; old cut "
                      f"{[v for v in r3o if v] or 'none'}")
+            for c in r3abc_links(p, True)[1].get(i, [])[:6]:
+                L.append(f"          R2 candidate (safe cut): {c}")
             k = x.find(n)
             L.append(f"        ...{x[max(0, k - 120):k + len(n) + 120]!r}...")
     return L + [""], bad
